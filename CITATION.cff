@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this framework or its calculations, cite this repository and the primary sources for the established physics you rely on."
+title: "Nested-Space Cosmology"
+type: software
+version: 0.1.0
+date-released: 2026-09-07
+authors:
+  - given-names: "Douglas"
+    family-names: "Ek"
+license: MIT
+repository-code: "https://github.com/kodareken/nested-space-cosmology"
+keywords:
+  - nested-space cosmology
+  - black holes
+  - spectral geometry
+  - recursive geometry
+  - computational physics
+preferred-citation:
+  type: report
+  title: "Nested-Space Cosmology: One Recursive Spectral Gradient-Boundary Equation Across Scales"
+  authors:
+    - given-names: "Douglas"
+      family-names: "Ek"
+  year: 2026
+  notes: "Working preprint; not peer reviewed. ChatGPT/Codex materially assisted with mathematical formulation, software, computation, drafting, comparison, and auditing; Douglas Ek retains scientific and publication responsibility."

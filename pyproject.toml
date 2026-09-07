@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=78"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nested-space-cosmology"
+version = "0.1.0"
+description = "A reproducible recursive spectral gradient-boundary framework"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Douglas Ek" }]
+keywords = [
+  "cosmology",
+  "black holes",
+  "spectral geometry",
+  "recursive geometry",
+  "computational physics",
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  "mpmath==1.3.0",
+  "numpy==2.5.1",
+  "scipy==1.17.1",
+  "sympy==1.14.0",
+]
+
+[project.optional-dependencies]
+paper = ["matplotlib==3.11.1", "reportlab==4.4.9"]
+dev = ["matplotlib==3.11.1", "reportlab==4.4.9"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
