@@ -1,0 +1,1366 @@
+{
+  "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
+  "frontier_output": "results/nsc-2-zeta1-recursion-map.json",
+  "measured_reference_runtime_seconds": 246.73,
+  "result_count": 58,
+  "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
+  "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
+  "steps": [
+    {
+      "artifact_id": "NSC-1-BPS-SELF-EQUAL-ENERGY",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "kind": "exact"
+      },
+      "dependencies": [],
+      "generator": "scripts/run_bps_self_equal_energy.py",
+      "generator_sha256": "f8f52c321f38251d66dbaf40944b06255ca310ac1edca7d64c8f41538a4b8dae",
+      "headline_observables": [],
+      "order": 1,
+      "output": "results/nsc-1-bps-self-equal-energy.json",
+      "output_sha256": "2dbc0ee428cfbd0205c41af6f7641723d30f304379742c2280117513d14f29e0",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-EXACT-BLACK-UNIVERSE-DEFOCUSING",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "generator": "scripts/run_exact_black_universe_defocusing.py",
+      "generator_sha256": "c7e3e6086028bd092fd87b86933f4523534d634319f3068b640c37655c4ca1e8",
+      "headline_observables": [],
+      "order": 2,
+      "output": "results/nsc-1-exact-black-universe-defocusing.json",
+      "output_sha256": "285a3c657ca70547ec3ad92b776f122572725f2ac9772861ec03e0392ab65fe2",
+      "paper_claim_ids": [
+        "imported-black-universe"
+      ],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-GRAVITATING-BPS-OBSERVATION-LINK",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "kind": "exact"
+      },
+      "dependencies": [],
+      "generator": "scripts/run_gravitating_bps_observation_link.py",
+      "generator_sha256": "d8629f3f16f8e509918af2e8e9d7039c22bb7bdce65a52b16e86af7067a5a12a",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 0.0,
+          "pointer": "/self_gravitating_predictions/full_field_maximum_mass_solar",
+          "relative_tolerance": 0.0
+        }
+      ],
+      "order": 3,
+      "output": "results/nsc-1-gravitating-bps-observation-link.json",
+      "output_sha256": "04054b5cc6bed8fe49c75922ad39e9306f49d3d158368fbc94885ec8616f9ec3",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-CONSTANT-DICTIONARY",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "kind": "exact"
+      },
+      "dependencies": [],
+      "generator": "scripts/run_s_one_constant_dictionary.py",
+      "generator_sha256": "0bf46b2f73a34dbfab45eae7cd8cc2a8ee18c5541b186d35fe422f8b658c4c7d",
+      "headline_observables": [],
+      "order": 4,
+      "output": "results/nsc-1-s-one-constant-dictionary.json",
+      "output_sha256": "0dbb3d47aa9ef74b6fb898da5441d673a254ecf7ca5c7ccbde4f0c756a6ced1c",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-NESTED-PAIR-CLOSURE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "kind": "exact"
+      },
+      "dependencies": [],
+      "generator": "scripts/run_s_one_nested_pair_closure.py",
+      "generator_sha256": "b923466c1c8d3d35cd728959bcc9a07b7c9592b58045b8b9a2b1510acdf4b186",
+      "headline_observables": [],
+      "order": 5,
+      "output": "results/nsc-1-s-one-nested-pair-closure.json",
+      "output_sha256": "494995c310b6b44e82f5724b8d815d81804a6fb4ded4a6e267776e1f1851c654",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-PARTICLE-WAVE-IDENTITY",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "generator": "scripts/run_s_one_particle_wave_identity.py",
+      "generator_sha256": "3b7be193638073657580fee84a71586a3c97e11eca879c98d697dd7600f6b31d",
+      "headline_observables": [],
+      "order": 6,
+      "output": "results/nsc-1-s-one-particle-wave-identity.json",
+      "output_sha256": "6dffd874d93d5bcce867af845d205adeb7f7455d7c9020d5c456522c200e31c0",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-RECIPROCAL-CLOSURE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "kind": "exact"
+      },
+      "dependencies": [],
+      "generator": "scripts/run_s_one_reciprocal_closure.py",
+      "generator_sha256": "097570a607a3a67e048f91672bb77f0da8acbc462b26ac0c1c900a3117491f4c",
+      "headline_observables": [],
+      "order": 7,
+      "output": "results/nsc-1-s-one-reciprocal-closure.json",
+      "output_sha256": "9f52811ad1b85af1d93a20cdff5f8ee00e59bb98114afd7c6870218654b18b59",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-RECURSIVE-OUTSIDE-KERNEL",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "generator": "scripts/run_s_one_recursive_outside_kernel.py",
+      "generator_sha256": "08270f5db9b39a1733ea4ea4621036823454dae40ded2a537be8101fa3b6c85f",
+      "headline_observables": [],
+      "order": 8,
+      "output": "results/nsc-1-s-one-recursive-outside-kernel.json",
+      "output_sha256": "bf1063999658e9d9a43aacc9baa6b221d539466bf09eae164765460f5de20dae",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-UNIFIED-GRADIENT-BOUNDARY-DEV3",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "generator": "scripts/run_unified_gradient_boundary_dev3.py",
+      "generator_sha256": "e95ddc0eb9a4771c420bf79700c9c624dc0d23614a6ef313ab3608bab13acad7",
+      "headline_observables": [],
+      "order": 9,
+      "output": "results/nsc-1-unified-gradient-boundary-dev3.json",
+      "output_sha256": "f8259c836993c928df1afeba79b7dc9c83dedb3c98f8e24fc926015f32096e93",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-INVARIANT-CLOSURE-BIND",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-bps-self-equal-energy.json",
+        "results/nsc-1-exact-black-universe-defocusing.json",
+        "results/nsc-1-gravitating-bps-observation-link.json",
+        "results/nsc-1-s-one-constant-dictionary.json",
+        "results/nsc-1-s-one-nested-pair-closure.json",
+        "results/nsc-1-s-one-particle-wave-identity.json",
+        "results/nsc-1-s-one-reciprocal-closure.json",
+        "results/nsc-1-unified-gradient-boundary-dev3.json"
+      ],
+      "generator": "scripts/run_s_one_invariant_closure_bind.py",
+      "generator_sha256": "5cf8a25f53f229c94f9e4558dc1510ab6749f001c12eb714320766be6799b13d",
+      "headline_observables": [],
+      "order": 10,
+      "output": "results/nsc-1-s-one-invariant-closure-bind.json",
+      "output_sha256": "77edf049951f12c525c3cde2dbf29ccb9d7d6e3a537204ecc7d445c3ad2ea5ac",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-RELEVANT-DIRECTION-COUNT",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "kind": "exact"
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-nested-pair-closure.json",
+        "results/nsc-1-s-one-reciprocal-closure.json"
+      ],
+      "generator": "scripts/run_s_one_relevant_direction_count.py",
+      "generator_sha256": "6cdfdc42523eeb7cf6644c21fcab88dd60fcc3f00fe145232882cc3645a3c098",
+      "headline_observables": [],
+      "order": 11,
+      "output": "results/nsc-1-s-one-relevant-direction-count.json",
+      "output_sha256": "9afeabf93a804204b97e5e96a87281608cc87d01ff4fad6e726bb1d7fd42e1d7",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-OUTSIDE-BLACK-BIND",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-exact-black-universe-defocusing.json",
+        "results/nsc-1-s-one-invariant-closure-bind.json"
+      ],
+      "generator": "scripts/run_s_one_outside_black_bind.py",
+      "generator_sha256": "5c34be517679cb9bdc82308ba34727b73d32edbafcf7cd9bf5268c60c798e112",
+      "headline_observables": [],
+      "order": 12,
+      "output": "results/nsc-1-s-one-outside-black-bind.json",
+      "output_sha256": "31948f9c7a1229e314e62931f0d152856e604fa5e967f78baf13d6653033656b",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-SHADOW-MATTER-BIND",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-outside-black-bind.json",
+        "results/nsc-1-s-one-recursive-outside-kernel.json"
+      ],
+      "generator": "scripts/run_s_one_shadow_matter_bind.py",
+      "generator_sha256": "81d1e04f65f96ea4020004bf164f50bd29907998e9850814dee538a0a58266f0",
+      "headline_observables": [],
+      "order": 13,
+      "output": "results/nsc-1-s-one-shadow-matter-bind.json",
+      "output_sha256": "b6789d6eb7e8609a1592e3e5bdd581e817eee062fc9b5e08a2c9ddfe4b656fcd",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-SHADOW-LENSING-OBSERVATION",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-shadow-matter-bind.json"
+      ],
+      "generator": "scripts/run_s_one_shadow_lensing_observation.py",
+      "generator_sha256": "3cf79c77819dde65563304d27fb0b94216bea353abfe191199507e1f2dfedb3a",
+      "headline_observables": [],
+      "order": 14,
+      "output": "results/nsc-1-s-one-shadow-lensing-observation.json",
+      "output_sha256": "520cada50d6c1fd7f2b8b5fe176ce5f2b4d43f6f1dd54240507d367e96f840c3",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-RESOLUTION-CHANNEL-CLOSURE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-shadow-lensing-observation.json"
+      ],
+      "generator": "scripts/run_s_one_resolution_channel_closure.py",
+      "generator_sha256": "f8c9b5cbb8c9ad9e99bd7bdfa01d54565fbbbaa14648ef9c82c26228965b9620",
+      "headline_observables": [],
+      "order": 15,
+      "output": "results/nsc-1-s-one-resolution-channel-closure.json",
+      "output_sha256": "2d517ae3a957f93706becc33da8844d2d009a8f8f34050b4c0fc2f3fd2fd9406",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-TRANSITION-LINK-COEFFICIENT",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-resolution-channel-closure.json",
+        "results/nsc-1-unified-gradient-boundary-dev3.json"
+      ],
+      "generator": "scripts/run_s_one_transition_link_coefficient.py",
+      "generator_sha256": "0b92b4ae4a4fb5bd8c46ee079de31a221c6fbbe155e1a5b03d8855d68df6e25e",
+      "headline_observables": [],
+      "order": 16,
+      "output": "results/nsc-1-s-one-transition-link-coefficient.json",
+      "output_sha256": "798c486efb5f4fde5da16616f9e228693ce131aa137652e4976e1e09909c93e0",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_unified_gradient_boundary_dev3.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-WARPED-RESOLUTION-BIND",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-recursive-outside-kernel.json",
+        "results/nsc-1-s-one-resolution-channel-closure.json",
+        "results/nsc-1-s-one-transition-link-coefficient.json"
+      ],
+      "generator": "scripts/run_s_one_warped_resolution_bind.py",
+      "generator_sha256": "eeb89f8fa1ca3d54a1d6397068c8fecaec89b611bd08bbfab59a39c57e43bf65",
+      "headline_observables": [],
+      "order": 17,
+      "output": "results/nsc-1-s-one-warped-resolution-bind.json",
+      "output_sha256": "404edddbffa0273f1215ff8225a0f328929dc50b4c0d964ec87851c84a882dbf",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-SPECTRAL-ROOM-BIND",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-invariant-closure-bind.json",
+        "results/nsc-1-s-one-relevant-direction-count.json",
+        "results/nsc-1-s-one-warped-resolution-bind.json"
+      ],
+      "generator": "scripts/run_s_one_spectral_room_bind.py",
+      "generator_sha256": "2b8e62aae1c7a0717849074524547308cdce0bf09d305344d02f7e4f01421bb1",
+      "headline_observables": [],
+      "order": 18,
+      "output": "results/nsc-1-s-one-spectral-room-bind.json",
+      "output_sha256": "ffda536a4a090ae9000f09c7775a2424d1a1ef76de6818e226746317e64766f8",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-SPECTRAL-BOUNDARY-CONSTRAINT",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-spectral-room-bind.json",
+        "results/nsc-1-s-one-transition-link-coefficient.json"
+      ],
+      "generator": "scripts/run_s_one_spectral_boundary_constraint.py",
+      "generator_sha256": "f14cacc56f144a77aaacdf6cc904ecb1c64a461cded1b9867d5da18357b2548a",
+      "headline_observables": [],
+      "order": 19,
+      "output": "results/nsc-1-s-one-spectral-boundary-constraint.json",
+      "output_sha256": "802af6cfdd4f6e084f9fd20513e67d34ea67dc90b639b80aa455e8eb85001a4f",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-TWO-SHEET-BLACK-GEOMETRY",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-exact-black-universe-defocusing.json",
+        "results/nsc-1-s-one-recursive-outside-kernel.json",
+        "results/nsc-1-s-one-spectral-room-bind.json"
+      ],
+      "generator": "scripts/run_s_one_two_sheet_black_geometry.py",
+      "generator_sha256": "e9bd7e8e6f8adc496838fc966dd69cc28bf71cbb6c2cee0de9c1fb602f3ebdbb",
+      "headline_observables": [],
+      "order": 20,
+      "output": "results/nsc-1-s-one-two-sheet-black-geometry.json",
+      "output_sha256": "90a9d8b3e8a33edbc5e87b48fff71f91f0c113cff600dc635632264d15aa2778",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-ONE-OPERATOR-BIND",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-recursive-outside-kernel.json",
+        "results/nsc-1-s-one-resolution-channel-closure.json",
+        "results/nsc-1-s-one-spectral-boundary-constraint.json",
+        "results/nsc-1-s-one-spectral-room-bind.json",
+        "results/nsc-1-s-one-transition-link-coefficient.json",
+        "results/nsc-1-s-one-two-sheet-black-geometry.json"
+      ],
+      "generator": "scripts/run_s_one_one_operator_bind.py",
+      "generator_sha256": "faf437002a8b46e64d558971ce3363b0955e99614eabd2f576762e5cfa3121f7",
+      "headline_observables": [],
+      "order": 21,
+      "output": "results/nsc-1-s-one-one-operator-bind.json",
+      "output_sha256": "a8a2a22a41f05e1d317f8da49d396d6a15cbb65a161553b76c000dad1250b8e4",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-TWO-SHEET-5D-GEOMETRY",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-transition-link-coefficient.json",
+        "results/nsc-1-s-one-two-sheet-black-geometry.json"
+      ],
+      "generator": "scripts/run_s_one_two_sheet_5d_geometry.py",
+      "generator_sha256": "d413cadf8a569e9a3558b9f2569fd228081a8c5ca2833732ffc88c1d253a4b3b",
+      "headline_observables": [],
+      "order": 22,
+      "output": "results/nsc-1-s-one-two-sheet-5d-geometry.json",
+      "output_sha256": "08adb805bf70d37de22e8dadf53886bd0c127f00aa9d052450c6ba49dacc9563",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-TWO-SHEET-5D-NULL-SOURCE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-spectral-room-bind.json",
+        "results/nsc-1-s-one-two-sheet-5d-geometry.json"
+      ],
+      "generator": "scripts/run_s_one_two_sheet_5d_null_source.py",
+      "generator_sha256": "2be8d5be19c8be9023cc521326f1015a7845a8a903d4d0aff8e9efaaa9e512dc",
+      "headline_observables": [],
+      "order": 23,
+      "output": "results/nsc-1-s-one-two-sheet-5d-null-source.json",
+      "output_sha256": "ee3e09df3d74e78397a061a523359682d7a491d6f37a75eb425ab75bf8cfad57",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-GAUSS-BONNET-NULL-CLOSURE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-transition-link-coefficient.json",
+        "results/nsc-1-s-one-two-sheet-5d-geometry.json",
+        "results/nsc-1-s-one-two-sheet-5d-null-source.json"
+      ],
+      "generator": "scripts/run_s_one_gauss_bonnet_null_closure.py",
+      "generator_sha256": "f39188ebd032f4473cd17e5401582321b75b5ecb140fcd7e5f64a957123eb7b8",
+      "headline_observables": [],
+      "order": 24,
+      "output": "results/nsc-1-s-one-gauss-bonnet-null-closure.json",
+      "output_sha256": "79ad1f29b9be355fe6858119bb00aef8a413f78c8343818ffe7c6d70b2df08ab",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-GAUSS-BONNET-COMPONENT-CLOSURE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-gauss-bonnet-null-closure.json",
+        "results/nsc-1-s-one-one-operator-bind.json"
+      ],
+      "generator": "scripts/run_s_one_gauss_bonnet_component_closure.py",
+      "generator_sha256": "7a4124be9160a7774b3bf05e5dda61505820e386ce1dca64319dd12a5e661fd5",
+      "headline_observables": [],
+      "order": 25,
+      "output": "results/nsc-1-s-one-gauss-bonnet-component-closure.json",
+      "output_sha256": "76ba23b812d2a703b86c625f1408a291e63cbee65d0e85ae57800d445e02b9ea",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-DARK-BLACK-INVARIANT",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-gauss-bonnet-component-closure.json",
+        "results/nsc-1-s-one-gauss-bonnet-null-closure.json",
+        "results/nsc-1-s-one-transition-link-coefficient.json"
+      ],
+      "generator": "scripts/run_s_one_dark_black_invariant.py",
+      "generator_sha256": "ec2f3810d61d3c54abadaa449262061b3b83cd947f163c62b33e3dd2a3238eb8",
+      "headline_observables": [],
+      "order": 26,
+      "output": "results/nsc-1-s-one-dark-black-invariant.json",
+      "output_sha256": "1e20a7ca0259790359eabdc697cc6025adc69581035b5bf361ae2e6a2f5f333d",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-GAUSS-BONNET-CRITICALITY",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-dark-black-invariant.json",
+        "results/nsc-1-s-one-gauss-bonnet-component-closure.json"
+      ],
+      "generator": "scripts/run_s_one_gauss_bonnet_criticality.py",
+      "generator_sha256": "6e16409368f5aeeddbc2821c9d39762761c93b94fa90df0e1fec0919be83dc7b",
+      "headline_observables": [],
+      "order": 27,
+      "output": "results/nsc-1-s-one-gauss-bonnet-criticality.json",
+      "output_sha256": "fa69cd5c600dc68d8c0c00811fc21dca60a78a3903d9c4de9a953445125cff0d",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-GAUSS-BONNET-KINETIC-RANK",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-gauss-bonnet-criticality.json",
+        "results/nsc-1-s-one-two-sheet-5d-geometry.json"
+      ],
+      "generator": "scripts/run_s_one_gauss_bonnet_kinetic_rank.py",
+      "generator_sha256": "4239057dbfad4dfa95fa8a4c6cd2da13aa5abf654825f52b0e00030ab431b0cd",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 0.0,
+          "pointer": "/result/critical_local_rank_all_samples/0",
+          "relative_tolerance": 0.0
+        }
+      ],
+      "order": 28,
+      "output": "results/nsc-1-s-one-gauss-bonnet-kinetic-rank.json",
+      "output_sha256": "4558792032532344faa682929aa7d35eb1b08370f4fba62459f52c0be639a1b3",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-INDUCED-INTERFACE-RANK",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-gauss-bonnet-kinetic-rank.json",
+        "results/nsc-1-s-one-spectral-boundary-constraint.json"
+      ],
+      "generator": "scripts/run_s_one_induced_interface_rank.py",
+      "generator_sha256": "f11250545236c4dc9116a3c76b3eaf49a18ea3b99ac1e1df38f5742aa51bcebe",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 0.0,
+          "pointer": "/result/combined_interface_ranks/0",
+          "relative_tolerance": 0.0
+        }
+      ],
+      "order": 29,
+      "output": "results/nsc-1-s-one-induced-interface-rank.json",
+      "output_sha256": "f37cdfd56975c40b5a02679273a7c3c946d51574061ca6ac6d3d3dfabd2d60d9",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_s_one_gauss_bonnet_kinetic_rank.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-INTERFACE-CHARACTERISTIC-SCAN",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-gauss-bonnet-criticality.json",
+        "results/nsc-1-s-one-induced-interface-rank.json"
+      ],
+      "generator": "scripts/run_s_one_interface_characteristic_scan.py",
+      "generator_sha256": "6afba8af249bbff7bc851f825f5d6dae38efea50aeaf11ce126abde05114ea21",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 0.0,
+          "pointer": "/method/normalization_grid/count",
+          "relative_tolerance": 0.0
+        }
+      ],
+      "order": 30,
+      "output": "results/nsc-1-s-one-interface-characteristic-scan.json",
+      "output_sha256": "967af0ee446f5cd3c8021062009e4fffde4d1a86fbef645832358759b9bc518a",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_s_one_gauss_bonnet_kinetic_rank.py",
+        "scripts/run_s_one_induced_interface_rank.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-SPECTRAL-RESOLUTION-WALL-BIND",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-interface-characteristic-scan.json",
+        "results/nsc-1-s-one-one-operator-bind.json",
+        "results/nsc-1-s-one-spectral-room-bind.json"
+      ],
+      "generator": "scripts/run_s_one_spectral_resolution_wall_bind.py",
+      "generator_sha256": "9004798272ce4266fb14806c8b15f9ddf5440ed5ff7effd421a9892580e18d4b",
+      "headline_observables": [],
+      "order": 31,
+      "output": "results/nsc-1-s-one-spectral-resolution-wall-bind.json",
+      "output_sha256": "36bb0bb6f990c13a7724cb1b51c80723277228c3cba98dfb70e7cca89bfb6435",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-SPECTRAL-PROFILE-CLOSURE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-one-operator-bind.json",
+        "results/nsc-1-s-one-spectral-resolution-wall-bind.json"
+      ],
+      "generator": "scripts/run_s_one_spectral_profile_closure.py",
+      "generator_sha256": "5f5fddbed7964d5f7e935bfa9c590dc324e46194e307af3fa8666ea917c20b0a",
+      "headline_observables": [],
+      "order": 32,
+      "output": "results/nsc-1-s-one-spectral-profile-closure.json",
+      "output_sha256": "94d6134079caff00d9a8a662c75b836ce48b489324392aaf2c4c3096c094a3be",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-FINITE-MOMENTUM-GRAVITON",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-spectral-profile-closure.json",
+        "results/nsc-1-s-one-spectral-resolution-wall-bind.json"
+      ],
+      "generator": "scripts/run_s_one_finite_momentum_graviton.py",
+      "generator_sha256": "ef0a3e2ad11507df225f0ad8d7aed08cd978bcd96e1a81ffef845818afab9257",
+      "headline_observables": [],
+      "order": 33,
+      "output": "results/nsc-1-s-one-finite-momentum-graviton.json",
+      "output_sha256": "6851dc74c16cab50fc11dd2ee0800498d7e8d48482868972943bac8c415cb11b",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-FLAT-SPECTRAL-POLES",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-finite-momentum-graviton.json"
+      ],
+      "generator": "scripts/run_s_one_flat_spectral_poles.py",
+      "generator_sha256": "ef33e48afdd51af04f629cc3dfc1dc5bd95b4b88bddd3d881bdadd4de5108d11",
+      "headline_observables": [],
+      "order": 34,
+      "output": "results/nsc-1-s-one-flat-spectral-poles.json",
+      "output_sha256": "0bd0d95d507263d9632e6a0b47b253ed713de29703fa3a0019351500e53db47c",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-BACKGROUND-ADJUSTED-GRAVITON",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-finite-momentum-graviton.json",
+        "results/nsc-1-s-one-flat-spectral-poles.json",
+        "results/nsc-1-s-one-gauss-bonnet-component-closure.json"
+      ],
+      "generator": "scripts/run_s_one_background_adjusted_graviton.py",
+      "generator_sha256": "c9610a2503148b0ee9b40f3aee7e4a20ba7dde793f573c1ee8ea3c802046748a",
+      "headline_observables": [],
+      "order": 35,
+      "output": "results/nsc-1-s-one-background-adjusted-graviton.json",
+      "output_sha256": "629ad9e11671ecef8719dcfefb3ec9a98022c7f374495f7401451723cd91ad4c",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-REFLECTION-POSITIVITY-OBSTRUCTION",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-background-adjusted-graviton.json",
+        "results/nsc-1-s-one-spectral-room-bind.json"
+      ],
+      "generator": "scripts/run_s_one_reflection_positivity_obstruction.py",
+      "generator_sha256": "fa1bb7744692f1bd1b204b39f7ab722f343863bc0b1dc36b4fffe01ae96539dc",
+      "headline_observables": [],
+      "order": 36,
+      "output": "results/nsc-1-s-one-reflection-positivity-obstruction.json",
+      "output_sha256": "8dd1ba9c8629504deb963e0ce64b586f64b59fc4ce09f1e0324c45658b4c40bb",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-FERMIONIC-GEOMETRY-BIND",
+      "category": "imported_benchmark_reproduction",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-reflection-positivity-obstruction.json",
+        "results/nsc-1-s-one-spectral-profile-closure.json",
+        "results/nsc-1-s-one-spectral-room-bind.json"
+      ],
+      "generator": "scripts/run_s_one_fermionic_geometry_bind.py",
+      "generator_sha256": "e2324f043a9921d5bc81ce017f65c9c11353eb5d55ab8748873a5f4cbc691753",
+      "headline_observables": [],
+      "order": 37,
+      "output": "results/nsc-1-s-one-fermionic-geometry-bind.json",
+      "output_sha256": "8c567f1070c181369995ad76bc6049f417381bcb0de986c887645ebe698ce4d3",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-INVARIANT-PARTITION-BIND",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-fermionic-geometry-bind.json",
+        "results/nsc-1-s-one-one-operator-bind.json",
+        "results/nsc-1-s-one-reflection-positivity-obstruction.json"
+      ],
+      "generator": "scripts/run_s_one_invariant_partition_bind.py",
+      "generator_sha256": "f95f53326deb1de7bbc1047ebd4800b49fe44e8e85ebc7e4e6fd4d64ebf4a4fa",
+      "headline_observables": [],
+      "order": 38,
+      "output": "results/nsc-1-s-one-invariant-partition-bind.json",
+      "output_sha256": "59bf475d3bef3d1e42cfb0beee62ae7cfe8fbb827b8ede25dc3acc5c942cd996",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-LOCAL-TWO-SHEET-ANOMALY",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-invariant-partition-bind.json",
+        "results/nsc-1-s-one-one-operator-bind.json",
+        "results/nsc-1-s-one-transition-link-coefficient.json"
+      ],
+      "generator": "scripts/run_s_one_local_two_sheet_anomaly.py",
+      "generator_sha256": "2f002712bd3150321ac165e421fcb2a1a6fad54cea62320cbc59fff92683a120",
+      "headline_observables": [],
+      "order": 39,
+      "output": "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+      "output_sha256": "d3d3bdfe2a5421ef7a522ac32c9fbd0117bca4f395cdb5b1be4288ba26a77ba7",
+      "paper_claim_ids": [
+        "shared-phi-identity"
+      ],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-DOUBLED-FLRW-CLOSURE",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-invariant-partition-bind.json",
+        "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+        "results/nsc-1-s-one-spectral-profile-closure.json"
+      ],
+      "generator": "scripts/run_s_one_doubled_flrw_closure.py",
+      "generator_sha256": "63175194ff1b911ec7cf72e77c0372d39498f5414a0e614b60ec102360324624",
+      "headline_observables": [],
+      "order": 40,
+      "output": "results/nsc-1-s-one-doubled-flrw-closure.json",
+      "output_sha256": "6d22ec7d1b876aea1af327861414252b7629370899412bb51326a9643e55f3d0",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-FULL-EXPONENTIAL-RELATIVE-KERNEL",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-doubled-flrw-closure.json",
+        "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+        "results/nsc-1-s-one-spectral-profile-closure.json"
+      ],
+      "generator": "scripts/run_s_one_full_exponential_relative_kernel.py",
+      "generator_sha256": "1ef610c2885b9d1e3c66bd0d512a4b0bd291beaee64c4dae726001d88a30e452",
+      "headline_observables": [],
+      "order": 41,
+      "output": "results/nsc-1-s-one-full-exponential-relative-kernel.json",
+      "output_sha256": "1b9cd7106bd0377ed2a80f8ffdb67ddf0228b49a8a29765a7602e9dc1d56aae8",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-GAP-TRANSITION-CLOSURE",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-dark-black-invariant.json",
+        "results/nsc-1-s-one-doubled-flrw-closure.json",
+        "results/nsc-1-s-one-full-exponential-relative-kernel.json",
+        "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+        "results/nsc-1-s-one-warped-resolution-bind.json"
+      ],
+      "generator": "scripts/run_s_one_gap_transition_closure.py",
+      "generator_sha256": "399be28ba5cbdc344d5d4b138c76f9a79478a9f74fa2cdd5afdb2be804c2968b",
+      "headline_observables": [],
+      "order": 42,
+      "output": "results/nsc-1-s-one-gap-transition-closure.json",
+      "output_sha256": "f13159e86bf024961332f59e61a568dda16c5060a6f84b32096f69fc157cb738",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_s_one_full_exponential_relative_kernel.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-CHILD-ORIENTATION",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-exact-black-universe-defocusing.json",
+        "results/nsc-1-s-one-doubled-flrw-closure.json",
+        "results/nsc-1-s-one-gap-transition-closure.json",
+        "results/nsc-1-s-one-gauss-bonnet-component-closure.json"
+      ],
+      "generator": "scripts/run_s_one_child_orientation.py",
+      "generator_sha256": "429866b151c66688cb51b662a52eeb094983d84959206bd5141925e650ce3917",
+      "headline_observables": [],
+      "order": 43,
+      "output": "results/nsc-1-s-one-child-orientation.json",
+      "output_sha256": "82e3b32d49c42f4ba29bc5ddd8df55d67b41617efa72661742641b5279abbb62",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-BOUNDARY-RETARDED-POLE",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-child-orientation.json",
+        "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+        "results/nsc-1-s-one-spectral-resolution-wall-bind.json",
+        "results/nsc-1-s-one-transition-link-coefficient.json"
+      ],
+      "generator": "scripts/run_s_one_boundary_retarded_pole.py",
+      "generator_sha256": "71ba00ab097849204d02e81541cc4ac29f2c8d11c3d6414e05003d6137990625",
+      "headline_observables": [],
+      "order": 44,
+      "output": "results/nsc-1-s-one-boundary-retarded-pole.json",
+      "output_sha256": "d45114887d2507ed2a7280446194f0c264867d362e740dc29b3a20661ae82e7a",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-RELATIVE-REFLECTION-TEST",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-boundary-retarded-pole.json",
+        "results/nsc-1-s-one-child-orientation.json",
+        "results/nsc-1-s-one-full-exponential-relative-kernel.json"
+      ],
+      "generator": "scripts/run_s_one_relative_reflection_test.py",
+      "generator_sha256": "7d9af527f2b1e8190c37297bcadc9b4b2067aa9c1939b3f9578b80095f03a499",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 0.0001,
+          "pointer": "/reflection_spectra/3/minimum_eigenvalue",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 45,
+      "output": "results/nsc-1-s-one-relative-reflection-test.json",
+      "output_sha256": "d12756930ed3ce225d439d9f294955b36c39f14c3f2e66e14049ae20bfe83ade",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_s_one_full_exponential_relative_kernel.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-FERMIONIC-RELATIVE-OBSERVABLE",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-boundary-retarded-pole.json",
+        "results/nsc-1-s-one-fermionic-geometry-bind.json",
+        "results/nsc-1-s-one-invariant-partition-bind.json",
+        "results/nsc-1-s-one-relative-reflection-test.json"
+      ],
+      "generator": "scripts/run_s_one_fermionic_relative_observable.py",
+      "generator_sha256": "cc54c80fa71b1d65e30e6d3f001d214f8304483163df31228032cc58709a0a3e",
+      "headline_observables": [],
+      "order": 46,
+      "output": "results/nsc-1-s-one-fermionic-relative-observable.json",
+      "output_sha256": "6a5fff0ff2d781ee92b71ca3960be244c2a3a05874a2c7442250c27ffe32c318",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-1-S-ONE-CHILD-SCALE-CORRECTION",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-exact-black-universe-defocusing.json",
+        "results/nsc-1-s-one-boundary-retarded-pole.json",
+        "results/nsc-1-s-one-child-orientation.json",
+        "results/nsc-1-s-one-dark-black-invariant.json",
+        "results/nsc-1-s-one-doubled-flrw-closure.json",
+        "results/nsc-1-s-one-fermionic-relative-observable.json",
+        "results/nsc-1-s-one-gap-transition-closure.json"
+      ],
+      "generator": "scripts/run_s_one_child_scale_correction.py",
+      "generator_sha256": "17ae5753b6de7b9da621d896c60c45e4d05fd0d6c64a9b91b2c32da605c9da3d",
+      "headline_observables": [],
+      "order": 47,
+      "output": "results/nsc-1-s-one-child-scale-correction.json",
+      "output_sha256": "19c50a14a9902b372a1868c147dd1506570b40a1ac3bd1f1200d03cfe5b8763b",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-FOLIATION",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-exact-black-universe-defocusing.json",
+        "results/nsc-1-s-one-child-scale-correction.json",
+        "results/nsc-1-s-one-two-sheet-5d-geometry.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_foliation.py",
+      "generator_sha256": "0d0b9637ea37a95d33b6a029420da006ad9e8cf2bd073c29381948e195610baf",
+      "headline_observables": [],
+      "order": 48,
+      "output": "results/nsc-2-zeta1-foliation.json",
+      "output_sha256": "39bd1c160c8b72a740f8f26b62c8c202b6f90d357949737981a4e35e1a9d30a1",
+      "paper_claim_ids": [
+        "global-spectral-foliation"
+      ],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-SELF-ADJOINT-DOMAIN",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-child-scale-correction.json",
+        "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+        "results/nsc-2-zeta1-foliation.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_self_adjoint_domain.py",
+      "generator_sha256": "921d6b9f5157668a28433525285567a5e0dc51c73f92bf6a5fcd74a916569165",
+      "headline_observables": [],
+      "order": 49,
+      "output": "results/nsc-2-zeta1-self-adjoint-domain.json",
+      "output_sha256": "77167b67ef6b9f2260a76a6fcc5782eeb6f4e61507a83992222acf1980825263",
+      "paper_claim_ids": [
+        "self-adjoint-throat"
+      ],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-LOWEST-MODE",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-child-scale-correction.json",
+        "results/nsc-2-zeta1-foliation.json",
+        "results/nsc-2-zeta1-self-adjoint-domain.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_lowest_mode.py",
+      "generator_sha256": "542bfd0546a251eaaff1c775a9c62b2c41b2af016013e4702bdf38c75a075f06",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 2e-05,
+          "pointer": "/first_scale_estimate/zeta",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 2e-05,
+          "pointer": "/first_scale_estimate/mu",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 50,
+      "output": "results/nsc-2-zeta1-lowest-mode.json",
+      "output_sha256": "37e19c2b611cc6ff31f0f866e2ac9a07e4dd0c8d9a21f21c6b1a08b79d7238e0",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-ANGULAR-TOWER",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-child-scale-correction.json",
+        "results/nsc-2-zeta1-lowest-mode.json",
+        "results/nsc-2-zeta1-self-adjoint-domain.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_angular_tower.py",
+      "generator_sha256": "97f92f614e69a2904ebc0e1316f9b183afa9a61fb3ee63301415be2eb1f7cdff",
+      "headline_observables": [],
+      "order": 51,
+      "output": "results/nsc-2-zeta1-angular-tower.json",
+      "output_sha256": "1246bee679d33bdefa6e18efddc62bc7f59439e805ea1485847d86211a65e0ad",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-REGULATED-DETERMINANT",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-invariant-partition-bind.json",
+        "results/nsc-1-s-one-spectral-profile-closure.json",
+        "results/nsc-2-zeta1-angular-tower.json",
+        "results/nsc-2-zeta1-self-adjoint-domain.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_regulated_determinant.py",
+      "generator_sha256": "01caf3d6061b1411a82ab030cdfe17fc8b0c5a9aa076d73ce8dbe589ff67276b",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 2e-05,
+          "pointer": "/current_scale_candidate/zeta",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 2e-05,
+          "pointer": "/current_scale_candidate/mu",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 52,
+      "output": "results/nsc-2-zeta1-regulated-determinant.json",
+      "output_sha256": "5dc40ccbc5f5e27cc40dc5c6be574b3713d0bbc91f5a97c74bcb4b10ad27ff10",
+      "paper_claim_ids": [],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-Y-BOUNDARY-SENSITIVITY",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-warped-resolution-bind.json",
+        "results/nsc-2-zeta1-regulated-determinant.json",
+        "results/nsc-2-zeta1-self-adjoint-domain.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_y_boundary_sensitivity.py",
+      "generator_sha256": "026d9d43d471ae4e780ef2ea3b08e0c2348f9eaa62c7c622413db074a9e4f3df",
+      "headline_observables": [],
+      "order": 53,
+      "output": "results/nsc-2-zeta1-y-boundary-sensitivity.json",
+      "output_sha256": "970a9e26a8f70cde46a67cb3a48f97255d2ff0b246a7818e9e06601f6078b01e",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_nsc_zeta1_regulated_determinant.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-ORBIFOLD-PARITY",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-warped-resolution-bind.json",
+        "results/nsc-2-zeta1-regulated-determinant.json",
+        "results/nsc-2-zeta1-y-boundary-sensitivity.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_orbifold_parity.py",
+      "generator_sha256": "cfa94ae447e10299ae7422e6793d3f88b88dc20ef159030b37d06112ccaffbb2",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 2e-06,
+          "pointer": "/current_unwarped_orbifold_candidate/zeta",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 2e-05,
+          "pointer": "/current_unwarped_orbifold_candidate/mu",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 54,
+      "output": "results/nsc-2-zeta1-orbifold-parity.json",
+      "output_sha256": "79871e46cde9ba3e7f6b05df2b20074db0ca07cfbf84cb6b274bf7e743d8c747",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_nsc_zeta1_regulated_determinant.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-WARPED-Y",
+      "category": "superseded_candidate",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-2-zeta1-foliation.json",
+        "results/nsc-2-zeta1-orbifold-parity.json",
+        "results/nsc-2-zeta1-regulated-determinant.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_warped_y.py",
+      "generator_sha256": "2206e30f746e3c6c0e04a65c9cead46122c6b97d9fd745b591f3243b43fab67b",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 5e-06,
+          "pointer": "/current_warped_y_candidate/zeta",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 5e-05,
+          "pointer": "/current_warped_y_candidate/mu",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 55,
+      "output": "results/nsc-2-zeta1-warped-y.json",
+      "output_sha256": "243dbdc8d6085815c588ced0280ad05b9b2e7437ce59e4962e560b3945fb90e5",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/run_nsc_zeta1_regulated_determinant.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-ANOMALY-DECOMPOSITION",
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-fermionic-geometry-bind.json",
+        "results/nsc-1-s-one-invariant-partition-bind.json",
+        "results/nsc-2-zeta1-regulated-determinant.json",
+        "results/nsc-2-zeta1-warped-y.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_anomaly_decomposition.py",
+      "generator_sha256": "11842e1ed8ab0a2c4ce5f9416f605323442206f2437277eaabef91e2faaaf67a",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 5e-06,
+          "pointer": "/prior_determinant_candidate/zeta",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 0.0001,
+          "pointer": "/prior_determinant_candidate/anomaly_compensated_child_link_derivative",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 0.0001,
+          "pointer": "/scan/minimum_physical_derivative",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 1e-05,
+          "pointer": "/scan/maximum_physical_derivative",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 56,
+      "output": "results/nsc-2-zeta1-anomaly-decomposition.json",
+      "output_sha256": "052750d49e969a1d82b683f6405a1568aff5f56352183eb9da948a6a2ab0b750",
+      "paper_claim_ids": [
+        "anomaly-removes-root"
+      ],
+      "source_dependencies": [
+        "scripts/run_nsc_zeta1_regulated_determinant.py",
+        "scripts/run_nsc_zeta1_warped_y.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-ANOMALY-OWNER-CORRECTION",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-fermionic-geometry-bind.json",
+        "results/nsc-1-s-one-invariant-partition-bind.json",
+        "results/nsc-1-s-one-recursive-outside-kernel.json",
+        "results/nsc-2-zeta1-anomaly-decomposition.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_anomaly_owner_correction.py",
+      "generator_sha256": "893c25c55b6dc83ae1122ec2874e69a266bc967d375b1dbd1afe3b1dd7561830",
+      "headline_observables": [],
+      "order": 57,
+      "output": "results/nsc-2-zeta1-anomaly-owner-correction.json",
+      "output_sha256": "02a40da4985f572fe3c535b6b31329b25da017b85e9ce4fcb7870edd6b13c65c",
+      "paper_claim_ids": [
+        "recursive-tail-owner"
+      ],
+      "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
+      "category": "current_frontier",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-10,
+        "kind": "portable_numeric",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-1-s-one-child-scale-correction.json",
+        "results/nsc-1-s-one-recursive-outside-kernel.json",
+        "results/nsc-2-zeta1-anomaly-owner-correction.json"
+      ],
+      "generator": "scripts/run_nsc_zeta1_recursion_map.py",
+      "generator_sha256": "68cb0e287e226154b4653678571127d167c25eabd06d878ff813681ae0d7a0be",
+      "headline_observables": [],
+      "order": 58,
+      "output": "results/nsc-2-zeta1-recursion-map.json",
+      "output_sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
+      "paper_claim_ids": [
+        "unitary-recursion-map"
+      ],
+      "source_dependencies": []
+    }
+  ]
+}
