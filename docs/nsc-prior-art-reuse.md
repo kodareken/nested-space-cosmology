@@ -38,6 +38,10 @@ action, boundary conditions or perturbations requires it.
 
 ## The next useful compatibility comparison
 
+The [action/source comparison](nsc-torsion-source-compatibility.md) now records
+the coefficient conversion and the remaining domain/state conditions. Reuse
+that comparison rather than restarting the same literature derivation.
+
 Torsion in spectral geometry is also prior art.
 [Iochum, Levy and Vassilevich](https://arxiv.org/abs/1008.3630) give bulk and
 boundary spectral-action terms with skew torsion and chiral bag conditions.
