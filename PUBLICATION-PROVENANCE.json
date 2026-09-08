@@ -61,14 +61,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 1297,
+      "bytes": 1514,
       "path": "Makefile",
-      "sha256": "3eba33e5d36361800da6a269600d4900a4ba89a1abf380581e6dc2007e6459ff"
+      "sha256": "01f9e326dcc3140f53468623496e6741edf0122fa35481e4f0275e1301ccc7d4"
     },
     {
-      "bytes": 7598,
+      "bytes": 8012,
       "path": "README.md",
-      "sha256": "f62fb3a48048a42b1023d162f03e98dfa18d21122e9ebf6324f3f757ffb7b6c6"
+      "sha256": "0d0b7d2eaba48e9cb9dc12e5cda8bad89f19b80cddd41d0d03b8bd578bc5526a"
     },
     {
       "bytes": 629,
@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 10828,
+      "bytes": 11583,
       "path": "docs/current-result.md",
-      "sha256": "8f88735a72fabe69a9cef61171659361fd680e54d757c1229db5e2549ab79a53"
+      "sha256": "aa0914cee359d1cde8d4f11d5e08b7b42857ebc9f52a51e8975c6b6f4e8b9f1e"
     },
     {
       "bytes": 10991,
@@ -104,6 +104,11 @@
       "bytes": 13455,
       "path": "docs/nsc-closure-verification-2026-09-07.md",
       "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
+    },
+    {
+      "bytes": 7859,
+      "path": "docs/nsc-compact-interaction.md",
+      "sha256": "b291198489c4704b0ee006356ab52fd5ecd2bc80a753b8ea5ec92374e50c6083"
     },
     {
       "bytes": 9160,
@@ -171,9 +176,9 @@
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
     },
     {
-      "bytes": 6644,
+      "bytes": 6947,
       "path": "docs/nsc-prior-art-reuse.md",
-      "sha256": "43c1bb123106485a454c494de074bb61ff664438965a80e0745d3c60380216c8"
+      "sha256": "ec438276d16ccaec6ea21ca91e6047d0bde1a95c63d81b7834c6c94cda64921d"
     },
     {
       "bytes": 2394,
@@ -231,9 +236,9 @@
       "sha256": "27d5c5ecd2e7b0f1d7cf88230f00c39652f257943ea0b8da3084c07a331d0a19"
     },
     {
-      "bytes": 7497,
+      "bytes": 7935,
       "path": "docs/reproducing.md",
-      "sha256": "69931c58fd21ee1f991379cb02cd6c24069626b8c1e3eaa06beed26b657b0481"
+      "sha256": "8835a8cf0055f62b48720be1ded2fbf33f6b7a577e79beeb6a2f25605e2cb187"
     },
     {
       "bytes": 948,
@@ -274,6 +279,11 @@
       "bytes": 3344,
       "path": "results/README.md",
       "sha256": "2466ab9caf15ef40b7192afc7343503beb2ccb65dc0de7970c5ebf4b534eaf43"
+    },
+    {
+      "bytes": 7424,
+      "path": "results/development/compact-interaction.json",
+      "sha256": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f"
     },
     {
       "bytes": 101081,
@@ -721,6 +731,11 @@
       "sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1"
     },
     {
+      "bytes": 8501,
+      "path": "scripts/check_nsc_compact_interaction.py",
+      "sha256": "782a0b633bf05f438a48aa5127bf60ad289a204309ea51a822ae014296e58621"
+    },
+    {
       "bytes": 3346,
       "path": "scripts/check_nsc_compact_mass_map.py",
       "sha256": "7209fcc9985a54a34a56def08af04fe726393000cbd45f0cacf59f219bb18e33"
@@ -1154,6 +1169,11 @@
       "bytes": 22423,
       "path": "src/recursive_horizons/nsc_chiral_boundary.py",
       "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
+    },
+    {
+      "bytes": 5232,
+      "path": "src/recursive_horizons/nsc_compact_interaction.py",
+      "sha256": "e53b5b937539bd78e7d4946a86cd0e321633231ab0aff6d10e2edb837ca51bd7"
     },
     {
       "bytes": 13527,

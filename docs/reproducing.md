@@ -4,6 +4,13 @@ This repository publishes the original 58 v0.1.0 compact JSON records, preserved
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
+Subsequent [compact-interaction development evidence](nsc-compact-interaction.md)
+is stored separately in `results/development/`. It does not change the
+immutable v0.3.0 release or its 81-record count. Run
+`make reproduce-development` to authenticate its inputs and compare every
+recorded field. The ordinary `make reproduce` and `make verify` routes include
+this focused check; `make reproduce-exact` refers to the released collection.
+
 ## Requirements
 
 - Python 3.12 or newer
