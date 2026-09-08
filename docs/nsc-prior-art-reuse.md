@@ -39,6 +39,11 @@ and18–20. Their higher-dimensional torsion contact and Clifford decomposition
 are reusable; their chosen zero-mode profiles, truncation and effective
 coupling do not determine the NSC massive tower's overlap coefficients.
 
+That [overlap calculation](nsc-compact-interaction.md) is now evaluated.
+Reuse its full fermionic vertex and the nonzero 3111 coupling. An imported
+single-field axial-source equation needs a controlled reduction of this
+tower; repeating the known KK or Einstein–Cartan derivation does not supply it.
+
 ## Black-hole interiors and child expansion
 
 | Existing formulation | Reuse | NSC interface |

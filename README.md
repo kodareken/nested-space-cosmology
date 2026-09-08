@@ -55,6 +55,8 @@ The current frontier is the full spinor boundary interaction and the remaining f
 
 The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This supplies the free mass operator for the next interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
 
+The [compact interaction map](docs/nsc-compact-interaction.md) evaluates the candidate bulk contact on those modes. Nonzero couplings between levels survive fermionic antisymmetrization, so the source requires a coupled-mode treatment or a controlled truncation. Its development record has a focused all-field reproducer; the global coupling, compact boundary action and quantum state remain inputs to determine.
+
 ## Read and reproduce
 
 1. [Working preprint PDF](paper/nested-space-cosmology.pdf) — main argument, six targets and technical appendices.

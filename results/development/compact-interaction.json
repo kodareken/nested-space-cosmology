@@ -1,0 +1,277 @@
+{
+  "comparison": {
+    "atol": 3e-12,
+    "exact": "keys, types, source/input hashes; authenticate dependencies before reproduction",
+    "exceptions": [],
+    "fields": "all",
+    "rtol": 3e-12
+  },
+  "conclusions": {
+    "current_sign_determines_stress_or_cosmic_acceleration": false,
+    "generic_single_massive_mode_exact_truncation": false,
+    "mode_sum_odd_vertex_vanishes_for_this_symmetric_bulk": true,
+    "odd_bilinear_implies_zero_contact_square": false
+  },
+  "domain": {
+    "boundary": "P_R chi=0 at both endpoints; chosen fundamental interval",
+    "coordinate_interval": [
+      -1.0,
+      1.0
+    ],
+    "dimensional_coordinate": "Y=L_star*y",
+    "sigma": "coefficient*y^2",
+    "sigma_coefficient": -0.017733990147783252,
+    "state": "not specified; this is an action vertex"
+  },
+  "input_hashes": {
+    "docs/nsc-compact-mass-map.md": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073"
+  },
+  "left_current_witness_axes_a_b_c_d": [
+    2,
+    0,
+    3,
+    1
+  ],
+  "normalization": {
+    "I3": "integral exp(3*sigma) dY",
+    "I3_over_L_star": 1.9650910124372598,
+    "fermionic_projection": "minus one quarter times antisymmetrization in barred and unbarred mode/spin legs",
+    "kappa4_bulk_squared": "kappa5_squared/I3",
+    "overlap": "I3*integral exp(-3*sigma)*f_i*f_j*f_k*f_l dY",
+    "overlap_units": "dimensionless",
+    "s_T": null,
+    "s_T_meaning": "five-dimensional torsion stiffness relative to Einstein-Cartan; EC is1; NSC value not selected",
+    "vertex_prefactor_omitted": "kappa4_bulk_squared/(32*s_T)"
+  },
+  "overlaps": [
+    {
+      "adaptive": 1.000251622655487,
+      "chiralities": "LLLL",
+      "fixed_minus_adaptive": -2.220446049250313e-16,
+      "flat_exact": 1.0,
+      "flat_quadrature": 0.9999999999999996,
+      "levels": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warped": 1.0002516226554867
+    },
+    {
+      "adaptive": 1.5233960875503572,
+      "chiralities": "LLLL",
+      "fixed_minus_adaptive": -1.3322676295501878e-14,
+      "flat_exact": 1.5,
+      "flat_quadrature": 1.4999999999999873,
+      "levels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "warped": 1.5233960875503438
+    },
+    {
+      "adaptive": 1.4801286204956028,
+      "chiralities": "RRRR",
+      "fixed_minus_adaptive": 6.661338147750939e-15,
+      "flat_exact": 1.5,
+      "flat_quadrature": 1.500000000000007,
+      "levels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "warped": 1.4801286204956094
+    },
+    {
+      "adaptive": 0.49874089128799465,
+      "chiralities": "LLRR",
+      "fixed_minus_adaptive": 2.942091015256665e-15,
+      "flat_exact": 0.5,
+      "flat_quadrature": 0.5000000000000028,
+      "levels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "warped": 0.4987408912879976
+    },
+    {
+      "adaptive": 1.0110684894191757,
+      "chiralities": "LLLL",
+      "fixed_minus_adaptive": -5.329070518200751e-15,
+      "flat_exact": 1.0,
+      "flat_quadrature": 0.9999999999999949,
+      "levels": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "warped": 1.0110684894191704
+    },
+    {
+      "adaptive": 0.9894347558917985,
+      "chiralities": "LLRR",
+      "fixed_minus_adaptive": 4.773959005888173e-15,
+      "flat_exact": 1.0,
+      "flat_quadrature": 1.0000000000000044,
+      "levels": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "warped": 0.9894347558918033
+    },
+    {
+      "adaptive": 0.5211242215745295,
+      "chiralities": "LLLL",
+      "fixed_minus_adaptive": -1.942890293094024e-14,
+      "flat_exact": 0.5,
+      "flat_quadrature": 0.4999999999999811,
+      "levels": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "warped": 0.5211242215745101
+    },
+    {
+      "adaptive": -0.4874369213194512,
+      "chiralities": "RRRR",
+      "fixed_minus_adaptive": -1.8318679906315083e-15,
+      "flat_exact": -0.5,
+      "flat_quadrature": -0.500000000000002,
+      "levels": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "warped": -0.48743692131945304
+    }
+  ],
+  "quadrature_convergence": [
+    {
+      "overlap_1111_LLRR": 0.4987408912879961,
+      "overlap_3111_LLLL": 0.5211242215745204,
+      "points": 32
+    },
+    {
+      "overlap_1111_LLRR": 0.4987408912879976,
+      "overlap_3111_LLLL": 0.5211242215745101,
+      "points": 64
+    },
+    {
+      "overlap_1111_LLRR": 0.49874089128799737,
+      "overlap_3111_LLLL": 0.5211242215745103,
+      "points": 96
+    }
+  ],
+  "schema": "NSC-COMPACT-INTERACTION-MAP-v1",
+  "source_hashes": {
+    "docs/nsc-compact-interaction.md": "b291198489c4704b0ee006356ab52fd5ecd2bc80a753b8ea5ec92374e50c6083",
+    "scripts/check_nsc_compact_interaction.py": "782a0b633bf05f438a48aa5127bf60ad289a204309ea51a822ae014296e58621",
+    "src/recursive_horizons/nsc_boundary.py": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e",
+    "src/recursive_horizons/nsc_compact_interaction.py": "e53b5b937539bd78e7d4946a86cd0e321633231ab0aff6d10e2edb837ca51bd7",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "sources": [
+    "https://arxiv.org/html/1405.0397v1",
+    "https://arxiv.org/html/1512.06074v1"
+  ],
+  "status": "development calculation; not part of the v0.3.0 release collection",
+  "tensor_witness_axes_a_b_c_d": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "unresolved": [
+    "five-dimensional common-functional stiffness and derivative terms",
+    "compact boundary action and total gravitational normalization",
+    "physical compact size and species",
+    "state and contour propagators",
+    "renormalized absolute stress and metric backreaction"
+  ],
+  "vertex_witnesses": [
+    {
+      "direct_minus_decomposed_max": 0.0,
+      "fermionic_left_current_component": -12.003019471865846,
+      "fermionic_max_absolute": 12.003019471865846,
+      "fermionic_tensor_component": 0.0,
+      "levels": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "direct_minus_decomposed_max": 0.0,
+      "fermionic_left_current_component": -18.28075305060413,
+      "fermionic_max_absolute": 18.28075305060413,
+      "fermionic_tensor_component": -8.977336043183957,
+      "levels": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "direct_minus_decomposed_max": 0.0,
+      "fermionic_left_current_component": -6.2534906588941235,
+      "fermionic_max_absolute": 9.063557544381052,
+      "fermionic_tensor_component": -9.063557544381052,
+      "levels": [
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "direct_minus_decomposed_max": 0.0,
+      "fermionic_left_current_component": -12.132821873030045,
+      "fermionic_max_absolute": 12.132821873030045,
+      "fermionic_tensor_component": 0.0,
+      "levels": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "direct_minus_decomposed_max": 0.0,
+      "fermionic_left_current_component": -12.132821873030045,
+      "fermionic_max_absolute": 17.80982560605246,
+      "fermionic_tensor_component": 0.0,
+      "levels": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "direct_minus_decomposed_max": 0.0,
+      "fermionic_left_current_component": -1.124100812432971e-15,
+      "fermionic_max_absolute": 1.124100812432971e-15,
+      "fermionic_tensor_component": 0.0,
+      "levels": [
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

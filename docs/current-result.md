@@ -36,6 +36,8 @@ The [compact mass map](nsc-compact-mass-map.md) now supplies the free mass opera
 
 ## Latest computed physical structure
 
+The subsequent [compact interaction map](nsc-compact-interaction.md) evaluates the published torsion contact on the actual compact profiles and bulk gravitational normalization. Its 3111 coupling remains nonzero after fermionic antisymmetrization; a single massive level is not an exact interacting sector. The geometric warp changes the overlap coefficients even though it cancels from free evolution. The [authenticated development record](../results/development/compact-interaction.json) fixes the conditional mode structure, while the five-dimensional stiffness, boundary terms, physical state and absolute stress remain open. Use its mode-matrix vertex for the next source calculation; do not substitute the earlier single-field coupling unchanged.
+
 The [full-spinor boundary result](../results/nsc-8-chiral-boundary.json) gives a nonzero, energy-dependent four-component spatial response with direct/Schur/continuum agreement. It preserves physical chirality in the declared domain. Its action kernel occupies the vector/axial Clifford subspace, so the scalar mass mechanism requires a derived additional interaction or domain selection. Opposite normal or frame conventions cannot supply this by themselves.
 
 The [finite metric-response result](../results/nsc-8-finite-terms.json) identifies four independent bulk coefficient channels on the actual smooth profile. Euler and total-divergence terms have zero closed-cell bulk variation. The exact lapse/radius/shape sensitivities now specify which independent ultraviolet matching conditions the common functional must supply before solving self-sourcing.
