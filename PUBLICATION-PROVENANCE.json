@@ -196,9 +196,9 @@
       "sha256": "7d6f37fa397fad4dc9f85d7698abfba77de4e5a6aa2baf7257b120337a75bdad"
     },
     {
-      "bytes": 5152,
+      "bytes": 7282,
       "path": "docs/reproducing.md",
-      "sha256": "a63fba2aaee141fdfd7bcef8ef96c4df1c23b11f2cf5be63c4f5627cfd45cb23"
+      "sha256": "3c5db20abe3af835362dd843aec4d9d641b5f397a1f5d9bec2c166852668917c"
     },
     {
       "bytes": 948,
@@ -241,9 +241,9 @@
       "sha256": "149adfbbda066f5de76b5eb835ae50cb1c9588116ade5e0e3eac7ba94a8aed50"
     },
     {
-      "bytes": 91378,
+      "bytes": 91761,
       "path": "results/manifest.json",
-      "sha256": "2359a617d8d29b44dd1e229714ff38f1f059256325830c0a0a14147f08bce6eb"
+      "sha256": "ccd6d16c385355a1205e02d6667d4d5e9fe4c46d9165ec71dc4714c78d151614"
     },
     {
       "bytes": 7369,
@@ -631,9 +631,9 @@
       "sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c"
     },
     {
-      "bytes": 74950,
+      "bytes": 75333,
       "path": "results/release-spec.json",
-      "sha256": "9629f86854a31a6968143873bcd09d337defcd1c4c257ab1e0073878c19211ff"
+      "sha256": "a9d43693fbc347be75debc7e0a1c06853619210b184048617ca0d8b3cfc7e42d"
     },
     {
       "bytes": 41402,
@@ -756,9 +756,9 @@
       "sha256": "8ac8a2893a2297e16e2de7574d8983fbc449c74f3c9f32e9d229ef9b0fb4ff24"
     },
     {
-      "bytes": 26272,
+      "bytes": 32427,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "4bae560a64fa32308090259b9e5011548f64c933987aab8eb7644e33a61de2cd"
+      "sha256": "abe2c804de3ec687a8b0af868a7cd7bab4659dd534e8972f51993a5d40b433fb"
     },
     {
       "bytes": 7793,
@@ -1141,6 +1141,11 @@
       "sha256": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
     },
     {
+      "bytes": 5643,
+      "path": "tests/test_derived_portability.py",
+      "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
+    },
+    {
       "bytes": 10617,
       "path": "tests/test_nsc_boundary.py",
       "sha256": "127fe20da377d4c115131381f71df479e7ea46229c0cee93103edfd0dd9d6d67"
@@ -1205,7 +1210,7 @@
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.2.0",
   "release_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
-  "release_spec_sha256": "9629f86854a31a6968143873bcd09d337defcd1c4c257ab1e0073878c19211ff",
+  "release_spec_sha256": "a9d43693fbc347be75debc7e0a1c06853619210b184048617ca0d8b3cfc7e42d",
   "schema": "NSC-PUBLICATION-PROVENANCE-v1",
   "source_branch": "codex/nsc-closure-verification",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",

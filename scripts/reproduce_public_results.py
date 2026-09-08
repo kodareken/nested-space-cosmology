@@ -368,7 +368,10 @@ def compare_portable(
     relative_tolerance: float,
     absolute_tolerance: float,
     compare_numbers: bool,
+    numeric_overrides: dict[str, tuple[float, float]] | None = None,
 ) -> None:
+    if numeric_overrides and path in numeric_overrides:
+        relative_tolerance, absolute_tolerance = numeric_overrides[path]
     if isinstance(expected, bool) or isinstance(actual, bool):
         if expected is not actual:
             raise ReproductionError(f"portable mismatch at {path}: {actual!r} != {expected!r}")
@@ -405,6 +408,7 @@ def compare_portable(
                 relative_tolerance=relative_tolerance,
                 absolute_tolerance=absolute_tolerance,
                 compare_numbers=compare_numbers,
+                numeric_overrides=numeric_overrides,
             )
         return
     if isinstance(expected, list):
@@ -418,6 +422,7 @@ def compare_portable(
                 relative_tolerance=relative_tolerance,
                 absolute_tolerance=absolute_tolerance,
                 compare_numbers=compare_numbers,
+                numeric_overrides=numeric_overrides,
             )
         return
     if expected != actual:
@@ -437,6 +442,93 @@ def resolve_pointer(value: Any, pointer: str) -> Any:
         else:
             raise ReproductionError(f"JSON pointer leaves a container: {pointer}")
     return current
+
+
+def derived_numeric_overrides(
+    expected: dict[str, Any], actual: dict[str, Any], policy: dict[str, Any]
+) -> dict[str, tuple[float, float]]:
+    """Propagate declared raw-error budgets through authenticated log-ratio identities.
+
+    The budget is a release acceptance threshold, not a solver error estimate.
+    Every error and order is recomputed independently within its own record;
+    the asymmetric order interval follows monotonically from e +/- budget.
+    """
+    overrides: dict[str, tuple[float, float]] = {}
+
+    def finite_number(value: Any, pointer: str) -> float:
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
+            raise ReproductionError(f"non-finite or non-numeric derived input at {pointer}")
+        return float(value)
+
+    def rounding_allowance(left: float, right: float, ulps: int) -> float:
+        return ulps * max(math.ulp(left), math.ulp(right))
+
+    for rule in policy.get("derived_quantities", []):
+        if rule.get("kind") != "log2_absolute_error_ratio":
+            raise ReproductionError("unknown derived-quantity comparison policy")
+        budget = finite_number(rule["input_absolute_tolerance"], "/input_absolute_tolerance")
+        identity_ulps = rule["identity_ulps"]
+        interval_ulps = rule["interval_rounding_ulps"]
+        if (budget <= 0 or type(identity_ulps) is not int or identity_ulps < 1
+                or type(interval_ulps) is not int or interval_ulps < identity_ulps):
+            raise ReproductionError("invalid derived-quantity error or rounding budget")
+        for pointer in rule["family_pointers"]:
+            records = []
+            for label, value in (("expected", expected), ("actual", actual)):
+                try:
+                    family = resolve_pointer(value, pointer)
+                    errors = family["absolute_errors"]
+                    orders = family["observed_orders"]
+                    lattice = family["lattice"]
+                    continuum = finite_number(family["continuum"]["band_edge"], pointer + "/continuum/band_edge")
+                except (KeyError, IndexError, TypeError) as exc:
+                    raise ReproductionError(f"malformed derived family at {pointer}") from exc
+                if (not isinstance(errors, list) or not isinstance(orders, list)
+                        or not isinstance(lattice, list) or len(errors) < 2
+                        or len(lattice) != len(errors) or len(orders) != len(errors) - 1):
+                    raise ReproductionError(f"inconsistent derived family lengths at {pointer}")
+                numeric_errors, numeric_orders = [], []
+                for index, error in enumerate(errors):
+                    error_pointer = f"{pointer}/absolute_errors/{index}"
+                    error = finite_number(error, error_pointer)
+                    if error <= budget:
+                        raise ReproductionError(f"derived error is unresolved at the declared budget: {error_pointer}")
+                    try:
+                        gap = finite_number(lattice[index]["minimum_sampled_bloch_gap"], f"{pointer}/lattice/{index}/minimum_sampled_bloch_gap")
+                    except (KeyError, TypeError) as exc:
+                        raise ReproductionError(f"missing lattice gap at {pointer}") from exc
+                    recomputed = abs(gap - continuum)
+                    if abs(error - recomputed) > rounding_allowance(error, recomputed, identity_ulps):
+                        raise ReproductionError(f"{label} error does not match its raw gap subtraction: {error_pointer}")
+                    numeric_errors.append(error)
+                for index, order in enumerate(orders):
+                    order_pointer = f"{pointer}/observed_orders/{index}"
+                    order = finite_number(order, order_pointer)
+                    recomputed = math.log2(numeric_errors[index] / numeric_errors[index + 1])
+                    if abs(order - recomputed) > rounding_allowance(order, recomputed, identity_ulps):
+                        raise ReproductionError(f"{label} order does not match its error ratio: {order_pointer}")
+                    numeric_orders.append(order)
+                records.append((numeric_errors, numeric_orders))
+            expected_errors, expected_orders = records[0]
+            actual_errors, actual_orders = records[1]
+            if len(expected_errors) != len(actual_errors):
+                raise ReproductionError(f"derived family length changed at {pointer}")
+            for index, (left, right) in enumerate(zip(expected_errors, actual_errors)):
+                if abs(right - left) > budget:
+                    raise ReproductionError(f"raw error exceeds its absolute portability budget: {pointer}/absolute_errors/{index}")
+                overrides[f"{pointer}/absolute_errors/{index}"] = (0.0, budget)
+            for index, order in enumerate(actual_orders):
+                left, right = expected_errors[index:index + 2]
+                lower = math.log2((left - budget) / (right + budget))
+                upper = math.log2((left + budget) / (right - budget))
+                cushion = interval_ulps * max(math.ulp(lower), math.ulp(upper),
+                                             math.ulp(order), math.ulp(expected_orders[index]))
+                if not lower - cushion <= order <= upper + cushion:
+                    raise ReproductionError(f"order leaves its propagated log-ratio interval: {pointer}/observed_orders/{index}")
+                allowed = max(abs(expected_orders[index] - lower),
+                              abs(upper - expected_orders[index])) + cushion
+                overrides[f"{pointer}/observed_orders/{index}"] = (0.0, allowed)
+    return overrides
 
 
 def validate_result(
@@ -469,6 +561,7 @@ def validate_result(
         relative_tolerance=relative,
         absolute_tolerance=absolute,
         compare_numbers=policy_kind in {"exact", "all_fields"},
+        numeric_overrides=derived_numeric_overrides(expected_value, actual_value, policy),
     )
     for observable in step.get("headline_observables", []):
         pointer = str(observable["pointer"])
