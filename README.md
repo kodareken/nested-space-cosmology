@@ -53,6 +53,8 @@ The loop is the physical objective. Its present executable links are:
 
 The current frontier is the full spinor boundary interaction and the remaining finite completion of the specified covariant source. These calculations test the missing connection directly. Physical inheritance scale, particle species, nuclear predictions and a cosmological fit remain open.
 
+The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This supplies the free mass operator for the next interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
+
 ## Read and reproduce
 
 1. [Working preprint PDF](paper/nested-space-cosmology.pdf) — main argument, six targets and technical appendices.

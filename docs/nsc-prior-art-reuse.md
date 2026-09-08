@@ -23,6 +23,22 @@ Delegated work follows the same rule. Each brief identifies the prior result,
 the new gap, owned files and bounded verification. Parallel workers must not
 repeat the same literature survey, baseline derivation or full test suite.
 
+## Compact geometry to mass: reuse the dimensional reduction
+
+The [compact mass map](nsc-compact-mass-map.md) applies conformal Dirac
+covariance and the established KK reduction to the actual free carrier.
+The full spacetime warp cancels in its classical canonical field, yielding
+m_n=n pi/(2 L_star) and one chiral zero mode for the declared interval domain.
+The remaining interface is its interacting, state-defined realization and
+physical compact size. Do not repeat intrinsic spatial spectrum scans or
+the generic KK derivation to answer those questions.
+
+For the next interaction map, use
+[Castillo-Felisola et al.](https://arxiv.org/html/1405.0397v1), equations13
+and18–20. Their higher-dimensional torsion contact and Clifford decomposition
+are reusable; their chosen zero-mode profiles, truncation and effective
+coupling do not determine the NSC massive tower's overlap coefficients.
+
 ## Black-hole interiors and child expansion
 
 | Existing formulation | Reuse | NSC interface |
