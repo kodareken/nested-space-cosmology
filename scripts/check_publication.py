@@ -98,8 +98,8 @@ def check_manifest(errors: list[str]) -> None:
     steps = manifest.get("steps", [])
     if manifest.get("schema") != "NSC-PUBLIC-RESULT-MANIFEST-v1":
         errors.append("unexpected result manifest schema")
-    if len(steps) != 62 or manifest.get("result_count") != 62:
-        errors.append("result manifest does not contain exactly 62 steps")
+    if len(steps) != 64 or manifest.get("result_count") != 64:
+        errors.append("result manifest does not contain exactly 64 steps")
     if manifest.get("historical_result_count") != 58:
         errors.append("historical result count must remain 58")
     if manifest.get("source_commit") != "ff2cf2722b966589b98a61accdbb6cee819a58c7":
@@ -121,6 +121,8 @@ def check_manifest(errors: list[str]) -> None:
         "results/nsc-3-regulated-recursion.json",
         "results/nsc-3-radial-spectrum.json",
         "results/nsc-3-geometric-chain.json",
+        "results/nsc-3-threshold-response.json",
+        "results/nsc-3-boundary-response.json",
     ]
     if manifest.get("scoped_follow_up_outputs") != expected_scoped:
         errors.append("scoped follow-up outputs are incorrect")
@@ -269,7 +271,7 @@ def main() -> int:
             print(f"ERROR: {error}", file=sys.stderr)
         print(f"publication check failed with {len(errors)} finding(s)", file=sys.stderr)
         return 1
-    print(f"publication check passed: {len(files)} curated files, 62 result steps")
+    print(f"publication check passed: {len(files)} curated files, 64 result steps")
     return 0
 
 

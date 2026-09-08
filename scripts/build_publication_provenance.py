@@ -50,6 +50,7 @@ def main() -> int:
         "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
         "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
         "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
+        "boundary_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
         "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
         "source_branch": "doug/commit-branch",
         "export_timestamp_utc": "2026-09-07T00:00:00Z",

@@ -74,8 +74,8 @@ def load_manifest() -> dict[str, Any]:
         raise ReproductionError("unexpected result manifest schema")
     steps = value.get("steps")
     historical = value.get("historical_result_count", 58)
-    if not isinstance(steps, list) or len(steps) != 62:
-        raise ReproductionError("public result manifest must contain 62 steps")
+    if not isinstance(steps, list) or len(steps) != 64:
+        raise ReproductionError("public result manifest must contain 64 steps")
     if historical != 58:
         raise ReproductionError("historical result count must remain 58")
     return value

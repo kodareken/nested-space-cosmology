@@ -622,6 +622,8 @@ def build_pdf(
                 label=f"R={family['radius']:g}",
             )
         right.set_xlabel("intervals per motif")
+        right.set_xticks([32, 64, 128], labels=["32", "64", "128"])
+        right.minorticks_off()
         right.set_ylabel("absolute lattice error")
         right.set_title("Second-order lattice agreement")
         right.grid(True, which="both", alpha=0.3, linewidth=0.4)

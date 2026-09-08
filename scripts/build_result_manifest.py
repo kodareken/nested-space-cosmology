@@ -14,6 +14,7 @@ OUTPUT = ROOT / "results" / "manifest.json"
 SOURCE_COMMIT = "ff2cf2722b966589b98a61accdbb6cee819a58c7"
 FOLLOW_UP_SOURCE_COMMIT = "5f38712ca01ddd71e715fd265088925a73369aba"
 NSC3_SOURCE_COMMIT = "445d5b069adea8b5641384b0ee02f07fe9cfcc0a"
+BOUNDARY_SOURCE_COMMIT = "76975387b9b03e323c1832237e0270dc9d49a382"
 NSC3_INTRODUCED_COMMIT = "3490f19164eb9303915db41b8c90eca0f40a836e"
 FRONTIER_PATH = "results/nsc-2-zeta1-recursion-map.json"
 FOLLOW_UP_PATH = "results/nsc-2-zeta1-unit-closure-check.json"
@@ -23,6 +24,8 @@ SCOPED_FOLLOW_UP_PATHS = (
     "results/nsc-3-regulated-recursion.json",
     "results/nsc-3-radial-spectrum.json",
     "results/nsc-3-geometric-chain.json",
+    "results/nsc-3-threshold-response.json",
+    "results/nsc-3-boundary-response.json",
 )
 
 IMPORTED = {
@@ -154,6 +157,12 @@ def discover() -> tuple[dict[str, Path], dict[str, list[str]], dict[str, list[st
     source_dependencies: dict[str, list[str]] = {}
     for path in sorted((ROOT / "scripts").glob("*.py")):
         source = path.read_text(encoding="utf-8")
+        if path.name == "check_nsc_boundary_response.py":
+            output = "results/nsc-3-boundary-response.json"
+            generators[output] = path
+            dependencies[output] = []
+            source_dependencies[output] = []
+            continue
         match = OUTPUT_RE.search(source)
         if match is None:
             continue
@@ -199,6 +208,8 @@ def order_outputs(paths: set[str], dependencies: dict[str, list[str]]) -> list[s
 
 
 def category(artifact_id: str, generator_source: str) -> str:
+    if artifact_id == "NSC-3-BOUNDARY-RESPONSE":
+        return "repository_derived_numerical_result"
     if artifact_id == "NSC-2-ZETA1-RECURSION-MAP":
         return "current_frontier"
     if artifact_id in IMPORTED:
@@ -213,6 +224,11 @@ def category(artifact_id: str, generator_source: str) -> str:
 
 
 SCOPED_SOURCE_DEPENDENCIES = {
+    "results/nsc-3-threshold-response.json": ["scripts/check_nsc_scale_closure.py"],
+    "results/nsc-3-boundary-response.json": [
+        "src/recursive_horizons/nsc_boundary.py", "tests/test_nsc_boundary.py",
+        "docs/nsc-boundary-response.md",
+    ],
     "results/nsc-3-regulated-recursion.json": [
         "scripts/check_nsc_scale_closure.py",
         "src/recursive_horizons/nsc_regulated.py",
@@ -368,7 +384,13 @@ def build() -> dict[str, object]:
             else:
                 step["json_format"] = "pretty"
                 step["generator_args"] = ["--output", output]
-                step["follow_up_source_commit"] = NSC3_SOURCE_COMMIT
+                step["follow_up_source_commit"] = (
+                    BOUNDARY_SOURCE_COMMIT if output in {
+                        "results/nsc-3-threshold-response.json", "results/nsc-3-boundary-response.json"
+                    } else NSC3_SOURCE_COMMIT
+                )
+                if output == "results/nsc-3-boundary-response.json":
+                    step["json_format"] = "compact"
         steps.append(step)
 
     return {
@@ -376,6 +398,7 @@ def build() -> dict[str, object]:
         "source_commit": SOURCE_COMMIT,
         "follow_up_source_commit": FOLLOW_UP_SOURCE_COMMIT,
         "nsc3_source_commit": NSC3_SOURCE_COMMIT,
+        "boundary_source_commit": BOUNDARY_SOURCE_COMMIT,
         "nsc3_introduced_commit": NSC3_INTRODUCED_COMMIT,
         "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
         "frontier_output": FRONTIER_PATH,

@@ -1,4 +1,5 @@
 {
+  "boundary_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
   "follow_up_output": "results/nsc-2-zeta1-unit-closure-check.json",
   "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
@@ -8,13 +9,15 @@
   "measured_reference_runtime_seconds": 246.73,
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "result_count": 62,
+  "result_count": 64,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
   "scoped_follow_up_outputs": [
     "results/nsc-2-zeta1-unit-closure-check.json",
     "results/nsc-3-regulated-recursion.json",
     "results/nsc-3-radial-spectrum.json",
-    "results/nsc-3-geometric-chain.json"
+    "results/nsc-3-geometric-chain.json",
+    "results/nsc-3-threshold-response.json",
+    "results/nsc-3-boundary-response.json"
   ],
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "steps": [
@@ -1542,6 +1545,60 @@
         "scripts/check_nsc_scale_closure.py",
         "src/recursive_horizons/nsc_geometric_chain.py",
         "src/recursive_horizons/nsc_regulated.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-3-THRESHOLD-RESPONSE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
+      "generator": "scripts/check_nsc_threshold_response.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-3-threshold-response.json"
+      ],
+      "generator_sha256": "f2066aacd9a0893fd255ce1d9fd822b14ebd785aa7a836b215db29edd86e9834",
+      "headline_observables": [],
+      "json_format": "pretty",
+      "order": 63,
+      "output": "results/nsc-3-threshold-response.json",
+      "output_sha256": "23940638d19b073ab9ca2386dbbb60d1326ab71839a338b149a9b35cd58d2ca9",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-3-BOUNDARY-RESPONSE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
+      "generator": "scripts/check_nsc_boundary_response.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-3-boundary-response.json"
+      ],
+      "generator_sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e",
+      "headline_observables": [],
+      "json_format": "compact",
+      "order": 64,
+      "output": "results/nsc-3-boundary-response.json",
+      "output_sha256": "20bda4d3600724466354084cffcaad0d63debde19020b71708926667b746c767",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-boundary-response.md",
+        "src/recursive_horizons/nsc_boundary.py",
+        "tests/test_nsc_boundary.py"
       ]
     }
   ]
