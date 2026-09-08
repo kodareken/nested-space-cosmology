@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 4594,
+      "bytes": 5734,
       "path": "AGENTS.md",
-      "sha256": "7cebb650a4c59dcbd7a8a1763f4c769d286b4b6745b6818aac3953d73c43e730"
+      "sha256": "28402c3fbda0c53b6babf37b5c4008e75591eb67699cec7b7af3d46c1bd83e30"
     },
     {
       "bytes": 964,
@@ -51,9 +51,9 @@
       "sha256": "1e599cb6b5a94dbae5d85446377268b4270adbe2b98873c777bd02aa1a9a712d"
     },
     {
-      "bytes": 3749,
+      "bytes": 4438,
       "path": "CONTRIBUTING.md",
-      "sha256": "53c65d4118fd87c95ea116465d14e6e3d6cfa44130014f70d87b4caec28250d5"
+      "sha256": "3531cdc73114baf85770cf19888f49d02c57415c324ccb7a14ee4de6c6ba0a29"
     },
     {
       "bytes": 1853,
@@ -66,9 +66,9 @@
       "sha256": "3eba33e5d36361800da6a269600d4900a4ba89a1abf380581e6dc2007e6459ff"
     },
     {
-      "bytes": 6889,
+      "bytes": 7148,
       "path": "README.md",
-      "sha256": "b8269e1a17a92cef50c0211a3bc2c3c8267517c3931a63c2c7ab4ae4d375a9c2"
+      "sha256": "1e51606d94d88821f7837fc32be07ad12c9b6d53592602819ee3a0f328cd133f"
     },
     {
       "bytes": 629,
@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 8646,
+      "bytes": 9003,
       "path": "docs/current-result.md",
-      "sha256": "0eedd5a1b537ef2f46eedef5fe636a3d6a98754729f3d9ea796d2b14f1261824"
+      "sha256": "7959c55598f12584e6a4ef49a3d898e0c12a823f722cff66a03c2be6a7b8b014"
     },
     {
       "bytes": 10991,
@@ -164,6 +164,11 @@
       "bytes": 7962,
       "path": "docs/nsc-plateau-conditions.md",
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
+    },
+    {
+      "bytes": 5295,
+      "path": "docs/nsc-prior-art-reuse.md",
+      "sha256": "8c10febf15c5ca68c7deb12b38a0be9066eda129872964509ff57804d7ded414"
     },
     {
       "bytes": 2394,

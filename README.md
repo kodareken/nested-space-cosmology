@@ -2,6 +2,11 @@
 
 **One recursive law. Connected geometry, matter and boundary response.**
 
+Research proceeds by [reusing existing formulations](docs/nsc-prior-art-reuse.md)
+and computing the missing connections. Published black-universe and
+collapse/bounce models are starting points; their compatibility with the
+common NSC action is the new task.
+
 Nested-Space Cosmology develops Douglas Ek's proposal that finite spaces form inside other spaces through collapse, localization and renewed expansion. The same operator should describe what is locally resolved as matter, what arrives through an unresolved boundary, and how a parent collapse continues into a child domain:
 
 $$

@@ -6,6 +6,11 @@ Nested-Space Cosmology welcomes criticism, calculations, counterexamples, and cl
 
 ## Before opening a change
 
+Use the [prior-art reuse map](docs/nsc-prior-art-reuse.md). State the published
+equation or existing implementation being reused, its assumptions, and the
+specific NSC connection left to calculate. A change that merely repeats known
+mathematics or adds another passing baseline does not establish new physics.
+
 1. Read [README.md](README.md), [THEORY.md](THEORY.md), and [AGENTS.md](AGENTS.md).
 2. Read [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md) and [docs/current-result.md](docs/current-result.md).
 3. State whether the change is a postulate, an imported result, a repository derivation, a numerical diagnostic, an open prediction, or an interpretive hypothesis.
@@ -26,6 +31,12 @@ $$
 Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is \(q_j=\lambda_j/\zeta+\mu^2\). Do not promote the controlled periodic-throat gap to a derived \(R\), a Lorentzian nested cosmology, or an electron.
 
 ## Verification
+
+Match verification to the change. Execution-guidance or navigation edits need
+link/provenance checks (`make check`), not fresh numerical derivations. For
+scientific changes, use focused checks while developing and one integrated
+verification pass at a coherent boundary. Repeat an expensive run only after
+a relevant change, failure or unresolved concern makes it informative.
 
 From the repository root:
 

@@ -2,6 +2,24 @@
 
 This file is the short public orientation for the one-equation thesis. It is not evidence, not a compact result, and not a completed theory. Preserve the central thesis when editing the public documents. Do not present imported literature as novelty, and do not promote a JSON nonclaim into a proof.
 
+**Execution priority: reuse first.** Consult the [reuse map](docs/nsc-prior-art-reuse.md)
+and current result before allocating scientific compute. Historical derivations
+are reference material, not a queue to repeat.
+
+Before a new derivation or run, identify the closest primary formulation and
+existing implementation, what can be reused, and the exact missing NSC
+connection. Compute only what can resolve that gap. Small convention/domain
+checks may be needed for integration; rebuilding an established theory is not.
+
+**Stop a repetition loop:** if further work only reconfirms a known result and
+leaves the named physical gap unchanged, stop expanding it and return to the
+missing connection or input. More tests, records or precision do not themselves
+advance closure. Reuse completed verification unless relevant inputs/code
+changed, a failure occurred, or a new concern makes another check informative.
+Apply this rule to all six targets and delegation briefs; workers must not
+duplicate baseline derivations or broad verification. Keep settled work in
+references and compact notes rather than reconstructing it each continuation.
+
 **Douglas Ek** is the accountable author. **ChatGPT** and **OpenAI Codex** assisted with formulation, code, computation, drafting, and audit. Treat every AI contribution as candidate work until it matches explicit mathematics, committed compact JSON, cited sources, and stated nonclaims.
 
 ## Central thesis

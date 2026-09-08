@@ -4,6 +4,12 @@ Version 0.3.0 presents an 81-record working collection: the original 58 historic
 
 ## The strongest completed chain
 
+Execution follows the [prior-art reuse map](nsc-prior-art-reuse.md). Existing
+black-universe geometries and source-specific collapse/bounce formulations
+are imported starting points. The NSC task is matching its action, state and
+source to those constructions, with new calculation limited to the missing
+interface or consequences of an identified change.
+
 | Connection | Reproducible result | Physical meaning and domain |
 |---|---|---|
 | Geometry to boundary response | [Finite radial maps](../results/nsc-3-boundary-response.json) | Oriented first-order maps, direct/Schur agreement and independent ODE checks |
