@@ -20,16 +20,21 @@ class ReleaseInfrastructureTests(unittest.TestCase):
         cls.steps = {row['artifact_id']: row for row in cls.manifest['steps']}
 
     def test_all_64_existing_scientific_files_and_pinned_imports_preserved(self):
-        for entry in (self.release['preserved_64_scientific_files']
-                      + self.release.get('preserved_75_scientific_files', [])
-                      + self.release.get('preserved_77_scientific_files', [])
-                      + self.release['import_files']
+        preserved = [
+            entry
+            for key, value in self.release.items()
+            if key.startswith('preserved_') and key.endswith('_scientific_files')
+            for entry in value
+        ]
+        for entry in (preserved + self.release['import_files']
                       + self.release['retained_byte_identical_files']):
             self.assertEqual(entry['sha256'], hashlib.sha256((ROOT / entry['path']).read_bytes()).hexdigest())
-        preserved_count = sum(entry['path'].startswith('results/')
-                              for entry in self.release['preserved_64_scientific_files'])
-        self.assertEqual(len(self.manifest['steps']) - preserved_count,
-                         sum(entry['path'].startswith('results/') for entry in self.release['import_files']))
+        result_paths = {
+            entry['path']
+            for entry in preserved + self.release['import_files']
+            if entry['path'].startswith('results/') and entry['path'].endswith('.json')
+        }
+        self.assertEqual({row['output'] for row in self.manifest['steps']}, result_paths)
 
     def test_explicit_smooth_module_generator_and_full_source_closure(self):
         smooth = self.steps['NSC-4-SMOOTH-GEOMETRY']
@@ -203,15 +208,21 @@ class ReleaseInfrastructureTests(unittest.TestCase):
 
     def test_nsc9_through_nsc11_are_appended_terminal_all_field_records(self):
         outputs = [row['output'] for row in self.manifest['steps']]
-        self.assertEqual(outputs[-4:], [
+        self.assertEqual(outputs[77:81], [
             'results/nsc-9-covariant-source.json',
             'results/nsc-10-measure-normalization.json',
             'results/nsc-10-influence.json',
             'results/nsc-11-response-matching.json',
         ])
-        self.assertEqual(81, len(self.manifest['steps']))
-        self.assertEqual(23, len(self.release['scoped_follow_ups']))
-        self.assertEqual('14fddc92f13f6feaa0e6a1a3fd81567280212a59', self.release['source_commit'])
+        self.assertEqual(outputs[-4:], [
+            'results/development/compact-interaction.json',
+            'results/development/torsion-uv-map.json',
+            'results/development/flow-compatibility.json',
+            'results/development/charged-sector.json',
+        ])
+        self.assertEqual(85, len(self.manifest['steps']))
+        self.assertEqual(27, len(self.release['scoped_follow_ups']))
+        self.assertEqual('95b96be312feb667377cdbc3bbfe453697a458dd', self.release['source_commit'])
         self.assertEqual('3a747cc17e33a6a3d6cc58634eaa40dd69e30a26',
                          self.steps['NSC-9-COVARIANT-SOURCE']['follow_up_source_commit'])
         for artifact in ('NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION', 'NSC-10-INFLUENCE', 'NSC-11-RESPONSE-MATCHING'):
@@ -236,6 +247,10 @@ class ReleaseInfrastructureTests(unittest.TestCase):
                      'docs/.private.md', 'scripts/tool.sh'):
             with self.assertRaises(ValueError):
                 self.importer.safe_relative(path)
+        self.assertEqual(
+            'results/development/charged-sector.json',
+            self.importer.safe_relative('results/development/charged-sector.json'),
+        )
 
 
 if __name__ == '__main__':

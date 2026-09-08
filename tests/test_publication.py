@@ -203,9 +203,13 @@ class PublicationManifestTests(unittest.TestCase):
         for step in self.steps:
             result = json.loads((ROOT / step["output"]).read_text(encoding="utf-8"))
             load_script("reproduce_public_results.py").validate_identity(result, step)
-            if step.get("identity_policy", {}).get("kind") == "schema_gate":
+            kind = step.get("identity_policy", {}).get("kind")
+            if kind in {"schema_gate", "schema_status"}:
                 self.assertNotIn("artifact_id", result)
+                self.assertNotIn("terminal", result)
                 self.assertEqual(step["identity_policy"]["schema"], result["schema"])
+                if kind == "schema_status":
+                    self.assertEqual(step["identity_policy"]["status"], result["status"])
             else:
                 self.assertEqual(step["artifact_id"], result["artifact_id"])
 
