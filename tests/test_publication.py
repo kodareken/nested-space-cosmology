@@ -90,8 +90,8 @@ class PublicationManifestTests(unittest.TestCase):
     }
 
     def test_exact_frontier_and_count(self) -> None:
-        self.assertEqual(59, self.manifest["result_count"])
-        self.assertEqual(59, len(self.steps))
+        self.assertEqual(62, self.manifest["result_count"])
+        self.assertEqual(62, len(self.steps))
         self.assertEqual(58, self.manifest["historical_result_count"])
         self.assertEqual(
             "NSC-2-ZETA1-RECURSION-MAP", self.manifest["frontier_artifact_id"]
@@ -99,6 +99,19 @@ class PublicationManifestTests(unittest.TestCase):
         self.assertEqual(
             "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
             self.manifest["follow_up_artifact_id"],
+        )
+        self.assertEqual(
+            [
+                "results/nsc-2-zeta1-unit-closure-check.json",
+                "results/nsc-3-regulated-recursion.json",
+                "results/nsc-3-radial-spectrum.json",
+                "results/nsc-3-geometric-chain.json",
+            ],
+            self.manifest["scoped_follow_up_outputs"],
+        )
+        self.assertEqual(
+            "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
+            self.manifest["nsc3_source_commit"],
         )
         current = [
             step["artifact_id"]
@@ -146,7 +159,11 @@ class PublicationManifestTests(unittest.TestCase):
             self.assertEqual(previous["generator"], step["generator"])
 
     def test_unit_closure_follow_up_is_all_fields(self) -> None:
-        follow_up = self.steps[-1]
+        follow_up = next(
+            step
+            for step in self.steps
+            if step["artifact_id"] == "NSC-2-ZETA1-UNIT-CLOSURE-CHECK"
+        )
         self.assertEqual("NSC-2-ZETA1-UNIT-CLOSURE-CHECK", follow_up["artifact_id"])
         self.assertEqual("diagnostic_nonpass", follow_up["category"])
         self.assertEqual("all_fields", follow_up["comparison_policy"]["kind"])
@@ -247,6 +264,54 @@ class PublicationManifestTests(unittest.TestCase):
         self.assertEqual(
             "all_fields",
             policies["NSC-2-ZETA1-UNIT-CLOSURE-CHECK"],
+        )
+        self.assertEqual("all_fields", policies["NSC-3-REGULATED-RECURSION"])
+        self.assertEqual("all_fields", policies["NSC-3-RADIAL-SPECTRUM"])
+        self.assertEqual("all_fields", policies["NSC-3-GEOMETRIC-CHAIN"])
+
+    def test_nsc3_scoped_records_are_terminal_follow_ups(self) -> None:
+        by_id = {step["artifact_id"]: step for step in self.steps}
+        regulated = by_id["NSC-3-REGULATED-RECURSION"]
+        radial = by_id["NSC-3-RADIAL-SPECTRUM"]
+        geometric = by_id["NSC-3-GEOMETRIC-CHAIN"]
+        self.assertEqual([], regulated["dependencies"])
+        self.assertEqual([], radial["dependencies"])
+        self.assertEqual([], geometric["dependencies"])
+        self.assertEqual("pretty", regulated["json_format"])
+        self.assertEqual(
+            ["--output", "results/nsc-3-geometric-chain.json"],
+            geometric["generator_args"],
+        )
+        self.assertEqual(
+            "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+            regulated["output_sha256"],
+        )
+        self.assertEqual(
+            "b0c24ee00a4f4ef5191599692dd20c59a5c0db06d53f40f57178004552abfc21",
+            radial["output_sha256"],
+        )
+        self.assertEqual(
+            "a5b5061372fef19817d8abd8a6833be020b54806607101338029e7177bfd0615",
+            geometric["output_sha256"],
+        )
+        geometric_record = json.loads(
+            (ROOT / geometric["output"]).read_text(encoding="utf-8")
+        )
+        self.assertAlmostEqual(
+            0.7034881641,
+            geometric_record["gap_families"][0]["continuum"]["band_edge"],
+            places=9,
+        )
+        self.assertIs(
+            False,
+            geometric_record["nonclaims"][
+                "periodic_spatial_array_is_a_Lorentzian_nested_cosmology"
+            ],
+        )
+        self.assertNotIn("auxiliary_inputs", regulated)
+        self.assertEqual(
+            "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
+            by_id["NSC-2-ZETA1-UNIT-CLOSURE-CHECK"]["output_sha256"],
         )
 
     def test_reproduction_validator_accepts_frozen_checkout(self) -> None:

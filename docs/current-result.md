@@ -4,7 +4,7 @@
 
 This page is the public checkpoint for the committed compact JSON chain. It is not a proof of Nested-Space Cosmology, not a final \(\zeta\), not a particle spectrum, not a dark-sector fit, and not an identification of our universe with a black-hole interior. Labels follow [THEORY.md](../THEORY.md). Imported launch surfaces are in [docs/prior-art-and-open-claim.md](prior-art-and-open-claim.md). Regeneration is in [docs/reproducing.md](reproducing.md).
 
-The live compact record for the unsolved tail is `results/nsc-2-zeta1-recursion-map.json` (`NSC-2-ZETA1-RECURSION-MAP`). The latest follow-up is `results/nsc-2-zeta1-unit-closure-check.json` (`NSC-2-ZETA1-UNIT-CLOSURE-CHECK`). The recursion-map classification is that norm preservation and first-order Dirac scaling fix a minimal parent/child dilation and the energy-resolved recursive tail. Dilation alone does not derive \(\zeta=\Omega^2\). Its `nonclaims` are all `false`:
+The live compact record for the unsolved tail is `results/nsc-2-zeta1-recursion-map.json` (`NSC-2-ZETA1-RECURSION-MAP`). Scoped follow-ups are `results/nsc-2-zeta1-unit-closure-check.json` and the nsc-3 triple `nsc-3-regulated-recursion.json`, `nsc-3-radial-spectrum.json`, `nsc-3-geometric-chain.json`. The accepted closure plan is not completed. The recursion-map classification is that norm preservation and first-order Dirac scaling fix a minimal parent/child dilation and the energy-resolved recursive tail. Dilation alone does not derive \(\zeta=\Omega^2\). Its `nonclaims` are all `false`:
 
 - `Omega_value_selected`
 - `functional_tail_solution_computed`
@@ -32,6 +32,12 @@ $$
 The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) absorbs the factor into a symmetric link convention. At vanishing argument this recovers the earlier quadratic fixed point \(\Gamma=K-B^2/\Gamma\) on the branch continuous with \(\Gamma\to K\) as \(B\to 0\). An implementation fixture with \(\Omega=2\) then \(\Omega=3\) composes to \(\Omega=6\); that fixture does not select nature’s \(\Omega\).
 
 This map removes an undefined symbol from the one equation. It does not compute the mode-resolved tail.
+
+**Repository derivation.** An explicit finite proper-time matrix calculus supplies noncommuting first and second variations and a finite scale cocycle (`results/nsc-3-regulated-recursion.json`). An ultrastatic frequency factor differs from a spatial heat trace. The trapped coordinate-time Hamiltonian is not elliptic; that general phenomenon is documented by Finster and Röken, arXiv:1512.00761. Along common-scale dilation at fixed cutoff the finite action is strictly monotone, so that family has no isolated stationary scale.
+
+**Repository derivation.** A Weyl sequence proves that the isolated unwarped radial throat has essential spectrum \(\mathbb{R}\) (`results/nsc-3-radial-spectrum.json`). Smooth gluing alone does not supply a mass gap.
+
+**Repository derivation.** Periodic repetition of \(\rho\in[-R,R]\) with \(w=1/\sqrt{1+\rho^2}\) produces a band gap without inserted mass (`results/nsc-3-geometric-chain.json`). Continuum first band edges are \(0.7034881641\), \(0.4552655377\), and \(0.2479700183\) at \(R=2,4,8\), with second-order lattice agreement. The link is a stencil entry. \(R\) and \(\Omega\) are inputs; seams have unproved gravitational stress. This is a controlled project realization, not a Lorentzian nested cosmology, not an electron, and not a new-to-world Floquet discovery.
 
 ## What the anomaly invalidated
 
@@ -72,7 +78,7 @@ The child-scale correction also supersedes reading \(54/503\) as a child cosmolo
 
 ## Other compact closures, with their nonclaims
 
-The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte, plus the 59th unit-closure follow-up. The following are the principal closures and the statements they explicitly do not make.
+The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte, plus scoped follow-ups 59–62. The following are the principal closures and the statements they explicitly do not make.
 
 **Imported bindings, not novelty**
 
@@ -93,6 +99,9 @@ The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte,
 - Local identity that one \(\Phi\) is mass gap, Schur self-energy, and relative-metric link.
 - Global spectral foliation; throat Neumann-jump maps remain unevaluated declarations.
 - Unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a finite, fixed-geometry sign theorem.
+- Finite regulated variations and \(1/\Omega\) chain controls; ultrastatic frequency factor; nonelliptic trapped coordinate-time Hamiltonian.
+- Isolated radial throat gapless by Weyl sequence.
+- Controlled periodic-throat geometric gap with stencil-derived link. \(R\) and \(\Omega\) remain inputs.
 
 **Invalidated truncations**
 
@@ -110,6 +119,6 @@ $$
 \Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}
 $$
 
-on the warped parent/child mode spectrum, with consistent mass units and one regulated operator, then recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, inserting a dark function, or refining the finite additive-gap family.
+on the warped parent/child mode spectrum, with consistent mass units and one regulated operator, then recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, inserting a dark function, or refining the finite additive-gap family. The full covariant measure, physical stationarity, metric health, and nuclear or cosmological predictions remain open. The periodic-throat gap does not close those equations.
 
 Until that tail is solved, public documents must keep every earlier \(\zeta\) candidate, \(1006/1015\), \(54/503\), and every particle or cosmological reading in the diagnostic column.

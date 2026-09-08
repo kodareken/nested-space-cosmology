@@ -1,0 +1,557 @@
+{
+  "artifact_id": "NSC-3-REGULATED-RECURSION",
+  "classification": "finite_regulated_variations_and_normalized_chain_closure_with_spatial_spacetime_obstruction",
+  "coordinate_time_symbol": {
+    "consequence": "spatial H with lapse/shift is not elliptic in trapped region; elliptic spatial heat calculus cannot be imported as the full spacetime determinant",
+    "determinant": "beta**2*kr**2 - kr**2 - kt**2",
+    "exact_null_residual": "0",
+    "numerical_witness": {
+      "A": -3.7123889803846897,
+      "beta": 2.1708037636748028,
+      "covariant_Lorentzian_Dirac_ill_posed_inferred": false,
+      "covector": [
+        1.0,
+        1.9267560770332837
+      ],
+      "principal_eigenvalues": [
+        -4.3416075273496055,
+        0.0
+      ],
+      "rho": 0.0,
+      "spatial_Hamiltonian_elliptic": false
+    }
+  },
+  "finite_scale_cocycle": {
+    "definition": "C(t)=Gamma_reg(D_t)-Gamma_reg(D_0)-t Tr Sigma",
+    "derivative": "Tr Sigma[exp(-D_t\u00b2/Lambda\u00b2)-I]",
+    "endpoint": -0.013648654647658687,
+    "independent_integral": -0.013648654647658891,
+    "physical_relative_compensator_derived": false,
+    "quadrature_error": 1.7918311869873734e-16
+  },
+  "finite_stationarity_obstruction": {
+    "derivative_identity": "dGamma/dt=Tr exp(-D(t)^2/Lambda\u00b2)>0",
+    "family": "D(t)=exp(-t)D with fixed cutoff, normalization and finite domain",
+    "gradient": 1.107772205859312,
+    "hessian": 1.2744854835295905,
+    "independent_heat_trace": 1.107772205859312,
+    "isolated_stationary_common_scale_in_this_family": false,
+    "scope": "finite prescribed determinant; excludes a separately derived continuum field measure and constrained metric variation"
+  },
+  "finite_variations": {
+    "centered_differences": [
+      {
+        "first": 0.46563303414748347,
+        "second": 0.6484164106201895,
+        "step": 0.002
+      },
+      {
+        "first": 0.4656333141689617,
+        "second": 0.6484164529196867,
+        "step": 0.001
+      },
+      {
+        "first": 0.4656333841746574,
+        "second": 0.6484164642994728,
+        "step": 0.0005
+      }
+    ],
+    "cutoff_finite_difference": -0.8922277941525446,
+    "cutoff_gradient": -0.892227794140688,
+    "gradient": 0.4656334075099279,
+    "hessian": 0.6484164667724093,
+    "relative_hessian": 0.8666782058956137,
+    "relative_hessian_exact_formula": 0.8666782058956131,
+    "unwrapped_negative_logdet_phase": -3.141592653589793
+  },
+  "frequency_reduction": {
+    "action_per_time_formula": "sum[Lambda*exp(-e\u00b2/Lambda\u00b2)/(2sqrt(pi))-|e|*erfc(|e|/Lambda)/2]",
+    "closed_value": 0.13426650282276753,
+    "heat_trace_per_time": "Tr_sp exp(-t H\u00b2)/sqrt(4*pi*t)",
+    "hypothesis": "ultrastatic Euclidean product D_E\u00b2=-partial_tau\u00b2+H\u00b2",
+    "independent_integral": 0.13426650282276764,
+    "quadrature_error": 2.8769252600327133e-15,
+    "valid_for_shifted_black_universe_without_further_derivation": false
+  },
+  "nonclaims": {
+    "full_covariant_action_derived": false,
+    "healthy_metric_or_child_transition_established": false,
+    "new_to_world_priority_established": false,
+    "physical_gap_or_cosmological_scale_predicted": false,
+    "physical_stationarity_solved": false
+  },
+  "normalization": {
+    "L_star": 2.0,
+    "M": 0.7,
+    "Omega": 1.6,
+    "action": "1/2 Tr E1(D\u00b2/Lambda\u00b2)+N[log(M/Lambda)+gamma_E/2]",
+    "cutoff": 1.3,
+    "measure_scope": "explicit finite orthonormal matrix basis; not continuum gravitational measure",
+    "zeta": 6.760000000000001,
+    "zeta_equals_Omega_squared_assumed": false
+  },
+  "normalized_recursion": {
+    "controls": [
+      {
+        "depth": 2,
+        "direct_reduced_error": 6.96972517025319e-17,
+        "minimum_imaginary_eigenvalue": 0.20645026698435973,
+        "omega": 1.0,
+        "previous_depth_change": null,
+        "response_imag": [
+          [
+            0.26075,
+            0.014999999999999993
+          ],
+          [
+            0.00499999999999999,
+            0.20833333333333334
+          ]
+        ],
+        "response_real": [
+          [
+            -0.07450000000000007,
+            -0.0935
+          ],
+          [
+            -0.0905,
+            -0.4806666666666667
+          ]
+        ]
+      },
+      {
+        "depth": 4,
+        "direct_reduced_error": 1.0238175709375394e-16,
+        "minimum_imaginary_eigenvalue": 0.207143509290009,
+        "omega": 1.0,
+        "previous_depth_change": 0.01321257222119881,
+        "response_imag": [
+          [
+            0.2532454046186842,
+            0.014100129850767718
+          ],
+          [
+            0.00430419921703534,
+            0.2090858646727757
+          ]
+        ],
+        "response_real": [
+          [
+            -0.084405823341302,
+            -0.09712548621886437
+          ],
+          [
+            -0.09271348783336342,
+            -0.48113983645704483
+          ]
+        ]
+      },
+      {
+        "depth": 8,
+        "direct_reduced_error": 6.548437517301134e-17,
+        "minimum_imaginary_eigenvalue": 0.20714062111307707,
+        "omega": 1.0,
+        "previous_depth_change": 0.0004502512901440019,
+        "response_imag": [
+          [
+            0.25337961211307175,
+            0.014199180503616859
+          ],
+          [
+            0.004392107947489886,
+            0.20911372991702026
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08480614578182728,
+            -0.09717075147900286
+          ],
+          [
+            -0.0927773206285311,
+            -0.4811356533640097
+          ]
+        ]
+      },
+      {
+        "depth": 16,
+        "direct_reduced_error": 2.42861286636753e-17,
+        "minimum_imaginary_eigenvalue": 0.20714061433807918,
+        "omega": 1.0,
+        "previous_depth_change": 5.619387523597901e-07,
+        "response_imag": [
+          [
+            0.2533800434007092,
+            0.014199206686342739
+          ],
+          [
+            0.004392146575883788,
+            0.20911371746972374
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08480583446581198,
+            -0.09717062938517067
+          ],
+          [
+            -0.09277719871713626,
+            -0.48113562604078475
+          ]
+        ]
+      },
+      {
+        "depth": 32,
+        "direct_reduced_error": 1.178208043058552e-16,
+        "minimum_imaginary_eigenvalue": 0.20714061433808081,
+        "omega": 1.0,
+        "previous_depth_change": 8.923066504250454e-13,
+        "response_imag": [
+          [
+            0.25338004340044895,
+            0.014199206686425273
+          ],
+          [
+            0.004392146575948977,
+            0.20911371746976568
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08480583446661534,
+            -0.09717062938535129
+          ],
+          [
+            -0.09277719871732895,
+            -0.4811356260408078
+          ]
+        ]
+      },
+      {
+        "depth": 2,
+        "direct_reduced_error": 7.893952348459264e-17,
+        "minimum_imaginary_eigenvalue": 0.20242264179310943,
+        "omega": 1.3,
+        "previous_depth_change": null,
+        "response_imag": [
+          [
+            0.22056399132321042,
+            0.006524945770065072
+          ],
+          [
+            0.00037827618460068563,
+            0.20309817110788275
+          ]
+        ],
+        "response_real": [
+          [
+            -0.06707158351409988,
+            -0.09319739696312365
+          ],
+          [
+            -0.09202881649386058,
+            -0.4872932529337234
+          ]
+        ]
+      },
+      {
+        "depth": 4,
+        "direct_reduced_error": 5.017408396494161e-17,
+        "minimum_imaginary_eigenvalue": 0.2025271983641478,
+        "omega": 1.3,
+        "previous_depth_change": 0.004388858956408823,
+        "response_imag": [
+          [
+            0.2246137414841739,
+            0.007751668181895422
+          ],
+          [
+            0.0013465966355800953,
+            0.203487180537214
+          ]
+        ],
+        "response_real": [
+          [
+            -0.0669002490457541,
+            -0.09306931615878788
+          ],
+          [
+            -0.09164371875747504,
+            -0.4870217287057182
+          ]
+        ]
+      },
+      {
+        "depth": 8,
+        "direct_reduced_error": 8.596759286596193e-17,
+        "minimum_imaginary_eigenvalue": 0.20252743633730722,
+        "omega": 1.3,
+        "previous_depth_change": 1.2040962909660388e-05,
+        "response_imag": [
+          [
+            0.22462039431594147,
+            0.007754646796019513
+          ],
+          [
+            0.0013495013546674904,
+            0.20348836734168269
+          ]
+        ],
+        "response_real": [
+          [
+            -0.06690872468589093,
+            -0.09307177814720928
+          ],
+          [
+            -0.09164569271831641,
+            -0.4870221893500725
+          ]
+        ]
+      },
+      {
+        "depth": 16,
+        "direct_reduced_error": 7.502177651680286e-17,
+        "minimum_imaginary_eigenvalue": 0.2025274363374657,
+        "omega": 1.3,
+        "previous_depth_change": 6.4140431452816485e-12,
+        "response_imag": [
+          [
+            0.22462039431633224,
+            0.007754646796696257
+          ],
+          [
+            0.0013495013554357597,
+            0.20348836734213693
+          ]
+        ],
+        "response_real": [
+          [
+            -0.0669087246915398,
+            -0.09307177814926174
+          ],
+          [
+            -0.09164569272012094,
+            -0.48702218935066754
+          ]
+        ]
+      },
+      {
+        "depth": 32,
+        "direct_reduced_error": 7.502177651680286e-17,
+        "minimum_imaginary_eigenvalue": 0.2025274363374657,
+        "omega": 1.3,
+        "previous_depth_change": 0.0,
+        "response_imag": [
+          [
+            0.22462039431633224,
+            0.007754646796696257
+          ],
+          [
+            0.0013495013554357597,
+            0.20348836734213693
+          ]
+        ],
+        "response_real": [
+          [
+            -0.0669087246915398,
+            -0.09307177814926174
+          ],
+          [
+            -0.09164569272012094,
+            -0.48702218935066754
+          ]
+        ]
+      },
+      {
+        "depth": 2,
+        "direct_reduced_error": 3.7527963264433556e-17,
+        "minimum_imaginary_eigenvalue": 0.20063970059659145,
+        "omega": 2.0,
+        "previous_depth_change": null,
+        "response_imag": [
+          [
+            0.20367221543259303,
+            0.002310337561633444
+          ],
+          [
+            -0.0009590796072316581,
+            0.20080003371402083
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08387555312065414,
+            -0.09644232795313752
+          ],
+          [
+            -0.09609743352016521,
+            -0.493307598297442
+          ]
+        ]
+      },
+      {
+        "depth": 4,
+        "direct_reduced_error": 1.2817837751487956e-16,
+        "minimum_imaginary_eigenvalue": 0.20064905789174828,
+        "omega": 2.0,
+        "previous_depth_change": 0.0004947678314527785,
+        "response_imag": [
+          [
+            0.2038978216658875,
+            0.0024047957852920006
+          ],
+          [
+            -0.0009271380771436126,
+            0.2008274187638499
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08349423251107341,
+            -0.09632704457174517
+          ],
+          [
+            -0.09596052437096628,
+            -0.49323167270377766
+          ]
+        ]
+      },
+      {
+        "depth": 8,
+        "direct_reduced_error": 8.030308639435004e-17,
+        "minimum_imaginary_eigenvalue": 0.2006490593657971,
+        "omega": 2.0,
+        "previous_depth_change": 1.1733804628909437e-07,
+        "response_imag": [
+          [
+            0.2038978861898173,
+            0.0024048248411541817
+          ],
+          [
+            -0.0009271182404561581,
+            0.2008274281574239
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08349415695622722,
+            -0.09632701294297266
+          ],
+          [
+            -0.09596048809869324,
+            -0.4932316567566388
+          ]
+        ]
+      },
+      {
+        "depth": 16,
+        "direct_reduced_error": 1.3054266910740096e-16,
+        "minimum_imaginary_eigenvalue": 0.20064905936579716,
+        "omega": 2.0,
+        "previous_depth_change": 2.183957263074544e-15,
+        "response_imag": [
+          [
+            0.20389788618981852,
+            0.0024048248411547863
+          ],
+          [
+            -0.0009271182404557375,
+            0.20082742815742413
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08349415695622592,
+            -0.09632701294297205
+          ],
+          [
+            -0.09596048809869254,
+            -0.4932316567566385
+          ]
+        ]
+      },
+      {
+        "depth": 32,
+        "direct_reduced_error": 1.3054266910740096e-16,
+        "minimum_imaginary_eigenvalue": 0.20064905936579716,
+        "omega": 2.0,
+        "previous_depth_change": 0.0,
+        "response_imag": [
+          [
+            0.20389788618981852,
+            0.0024048248411547863
+          ],
+          [
+            -0.0009271182404557375,
+            0.20082742815742413
+          ]
+        ],
+        "response_real": [
+          [
+            -0.08349415695622592,
+            -0.09632701294297205
+          ],
+          [
+            -0.09596048809869254,
+            -0.4932316567566385
+          ]
+        ]
+      }
+    ],
+    "convention": "H_n=Omega^n H; B_n=Omega^n b; fixed dimensional E",
+    "energy": [
+      0.7,
+      0.2
+    ],
+    "equation": "Gamma_n(x)=x I-H-(1/Omega)b Gamma_(n+1)(x/Omega)^-1 b_dagger",
+    "link_derived_from_throat_in_this_control": false,
+    "link_imag": [
+      [
+        0.0,
+        0.03
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "link_real": [
+      [
+        0.12,
+        0.0
+      ],
+      [
+        0.04,
+        0.1
+      ]
+    ],
+    "local_matrix": [
+      [
+        0.8,
+        0.1
+      ],
+      [
+        0.1,
+        1.2
+      ]
+    ],
+    "tail_error_bound_proved": false
+  },
+  "schema": "nsc-regulated-recursion-v1",
+  "source_hashes": {
+    "scripts/check_nsc_regulated_recursion.py": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+  },
+  "terminal": true,
+  "unit_change": {
+    "action_residual": 5.551115123125783e-17,
+    "factor": 2.3,
+    "zeta_residual": 0.0
+  },
+  "unresolved_equations": [
+    "covariant field measure and relative compensator",
+    "stationary curved geometry and link",
+    "finite internal Dirac spectrum",
+    "state-dependent retarded metric response"
+  ]
+}

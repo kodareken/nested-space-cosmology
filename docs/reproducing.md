@@ -1,6 +1,6 @@
 # Reproducing the compact results
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus a 59th unit-closure follow-up. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–62. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -42,7 +42,7 @@ make verify
 
 - `make check` validates manifests, claims, paths, and links.
 - `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and the 59th follow-up by comparing every recorded field.
+- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–62 by comparing every recorded field.
 - `make reproduce-exact` requires byte-identical recomputation.
 - `make paper` rebuilds the tracked paper PDF.
 - `make verify` runs check, test, reproduce, and the paper byte check.
@@ -54,12 +54,15 @@ Incidental coordinates of a numerically flat diagnostic argmin are not public
 observables and may vary between LAPACK implementations. Exact mode remains
 the stronger same-environment check and compares every output byte.
 
-Committed JSON can be inspected without regeneration. The original 58 generators in `scripts/run_*.py` are the historical per-artifact writers; their bytes are frozen. The 59th follow-up is `scripts/check_nsc_scale_closure.py`. Use an individual writer only to create a *new* compact record; they refuse to overwrite a file that already exists.
+Committed JSON can be inspected without regeneration. The original 58 generators in `scripts/run_*.py` are the historical per-artifact writers; their bytes are frozen. Scoped follow-up checkers are `scripts/check_nsc_scale_closure.py`, `scripts/check_nsc_regulated_recursion.py`, `scripts/check_nsc_radial_spectrum.py`, and `scripts/check_nsc_geometric_chain.py`. Use an individual writer only to create a *new* compact record; they refuse to overwrite a file that already exists.
 
-The follow-up authenticates selected v0.1.0 scripts and JSON by SHA-256. Isolated reproduction copies those committed files as auxiliary provenance inputs; it does not add them as extra steps of the historical 58-record chain and does not repin the original laboratory import commit. Direct all-field verification of the follow-up is:
+The unit-closure follow-up authenticates selected v0.1.0 scripts and JSON by SHA-256. Isolated reproduction copies those committed files as auxiliary provenance inputs; it does not add them as extra steps of the historical 58-record chain and does not repin the original laboratory import commit. Direct all-field verification is:
 
 ```bash
 python3 scripts/check_nsc_scale_closure.py --check
+python3 scripts/check_nsc_regulated_recursion.py --check
+python3 scripts/check_nsc_radial_spectrum.py --check
+python3 scripts/check_nsc_geometric_chain.py --check
 ```
 
 ## Committed JSON is the public result

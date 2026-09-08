@@ -12,7 +12,7 @@ Nested-Space Cosmology proposes that particles, waves, local constants, unresolv
 
 The construction uses established physics as a launch surface: spectral action and scale anomaly, Skyrme/BPS nuclear structure, Randall–Sundrum outside geometry, two-wall shadow matter, Wetterich flow, and the exact regular black-universe four-geometry. Binding those ingredients is not novelty. What this repository derives is a concrete operator, a two-sheet representation of a noninjective areal-radius chart, Gauss–Bonnet identities of that carrier, a scalar recursive outside kernel, a global horizon-penetrating spectral foliation, a proposed throat Neumann-jump operator whose energy-dependent maps remain unevaluated, and a unitary dilation that makes the recursion map executable.
 
-A ZETA1 numerical chain then produced determinant-only inheritance-scale roots. Those historical numbers used the inconsistent mass conversion \((\lambda_j+\mu^2)/\zeta\). The declared additive-gap operator requires \(q_j=\lambda_j/\zeta+\mu^2\). Compensating the pure cutoff anomaly, and then correcting the units, removes those roots: in the finite, fixed-geometry family the subtracted derivative is strictly negative for every \(\zeta>3\pi/2\). Adding an independently weighted geometric action is forbidden double-counting. The missing owner is the child’s own next-child response. With explicit parent normalization the derived, still unsolved, energy-resolved equation is \(\Gamma_p(x)=K_p(x)-(1/\Omega)\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}\). \(\Omega\) is not selected. Dilation alone does not derive \(\zeta=\Omega^2\). Physical \(\zeta\), a particle spectrum, a dark-sector fit, and identification of our universe with a black-hole interior remain open.
+A ZETA1 numerical chain then produced determinant-only inheritance-scale roots. Those historical numbers used the inconsistent mass conversion \((\lambda_j+\mu^2)/\zeta\). The declared additive-gap operator requires \(q_j=\lambda_j/\zeta+\mu^2\). Compensating the pure cutoff anomaly, and then correcting the units, removes those roots: in the finite, fixed-geometry family the subtracted derivative is strictly negative for every \(\zeta>3\pi/2\). Adding an independently weighted geometric action is forbidden double-counting. The missing owner is the child’s own next-child response. With explicit parent normalization the derived, still unsolved, energy-resolved equation is \(\Gamma_p(x)=K_p(x)-(1/\Omega)\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}\). \(\Omega\) is not selected. Dilation alone does not derive \(\zeta=\Omega^2\). Finite regulated variations and a normalized chain are derived in an explicit matrix calculus; an ultrastatic frequency factor differs from a spatial trace, and the trapped coordinate-time Hamiltonian is not elliptic. The isolated radial throat is gapless. Periodic repetition of that throat produces a geometric band gap without an inserted mass, with continuum edges \(0.7034881641\), \(0.4552655377\), and \(0.2479700183\) at \(R=2,4,8\). That gap is a controlled project realization, not a Lorentzian nested cosmology, not an electron, and not a completed plan. Physical \(\zeta\), a particle spectrum, a dark-sector fit, and identification of our universe with a black-hole interior remain open.
 
 > **Status.** This is a working preprint of a conjectural research programme, not a completed theory and not a peer-reviewed result. It does not prove Nested-Space Cosmology, a final inheritance scale \(\zeta\), a particle spectrum, a dark-sector fit, or that our universe is the interior of a black hole. Numerical values below are copied from committed compact JSON under [`results/`](../results/manifest.json). If a JSON `nonclaims` flag is `false`, the corresponding statement is not claimed.
 
@@ -362,7 +362,50 @@ The gate records `mode_resolved_tail_solved: false` and `zeta_derived: false`. A
 
 The recorded next result is to solve the functional tail on the warped parent/child mode spectrum and recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, or inserting a dark function.
 
-## 12. Predictions available only after \(\zeta\)
+## 12. Finite regulated variations and a spacetime obstruction
+
+**Repository derivation.** For a Hermitian finite Dirac matrix with no unresolved zeros, one explicit proper-time prescription is ([`nsc-3-regulated-recursion.json`](../results/nsc-3-regulated-recursion.json); [`docs/nsc-regulated-recursion.md`](../docs/nsc-regulated-recursion.md))
+
+$$
+\Gamma_{\Lambda,M}(D)
+=
+\frac{1}{2}\operatorname{Tr}E_1(D^2/\Lambda^2)
++N[\log(M/\Lambda)+\gamma_E/2].
+$$
+
+Its first and second variations retain noncommuting perturbations through divided differences. A finite scale cocycle \(C(t)=\Gamma_{\mathrm{reg}}(D_t)-\Gamma_{\mathrm{reg}}(D)-t\operatorname{Tr}\Sigma\) is derived rather than discarded; its endpoint matches an independent integral of \(C'(t)\). Normalization \(M\) and cutoff \(\Lambda\) remain distinct. This finite orthonormal-basis calculus is not a derived continuum gravitational measure.
+
+**Repository derivation.** An ultrastatic Euclidean product \(D_E^2=-\partial_\tau^2+H^2\) produces a frequency factor \(\operatorname{Tr}_{\mathrm{sp}}e^{-tH^2}/\sqrt{4\pi t}\). That factor changes the variational functional; a spatial heat trace cannot silently inherit a four-spacetime anomaly.
+
+**Imported result / repository witness.** The recorded horizon-penetrating coordinate-time Hamiltonian is not elliptic in the trapped region: at the throat \(\beta^2=3\pi/2>1\), and a nonzero spatial covector makes one principal eigenvalue exactly zero. Elliptic spatial heat calculus therefore cannot be imported as the full spacetime determinant. The general loss of ellipticity at horizons is documented by Finster and Röken ([arXiv:1512.00761](https://arxiv.org/abs/1512.00761)); the project contribution is the explicit witness for this carrier, not discovery of the phenomenon.
+
+Along \(D(t)=e^{-t}D\) at fixed cutoff, normalization, and finite domain, \(d\Gamma/dt=\operatorname{Tr}e^{-D(t)^2/\Lambda^2}>0\). No isolated common-scale extremum exists in that finite family. Normalized finite recursion with \(1/\Omega\) agrees with direct chain inversion in declared-matrix controls. \(H\) and \(b\) there are not yet computed throat maps. The compact `nonclaims` include `full_covariant_action_derived: false` and `physical_stationarity_solved: false`.
+
+## 13. The isolated radial throat is gapless
+
+**Repository derivation.** The unwarped spatial radial Dirac operator already declared by the project,
+
+$$
+D=-i\sigma_2\partial_\rho+\sigma_1\frac{\kappa}{\sqrt{1+\rho^2}},
+$$
+
+has essential spectrum equal to \(\mathbb{R}\) ([`nsc-3-radial-spectrum.json`](../results/nsc-3-radial-spectrum.json); [`docs/nsc-radial-spectrum.md`](../docs/nsc-radial-spectrum.md)). A constructive Weyl sequence of compactly supported \(H^1\) bumps escaping to infinity shows that every real energy belongs to the essential spectrum. Smooth radial geometry and current-conserving gluing alone do not generate a nonzero spectral mass gap. Finite-box levels are not physical masses. There is no global \(L^2\) zero mode. The result does not cover the compact warped, interacting, recursive, or Lorentzian operator, and it does not reject Nested-Space Cosmology.
+
+## 14. A controlled geometric gap from repeated throat geometry
+
+**Repository derivation.** Repeating the finite segment \(\rho\in[-R,R]\) with \(w=1/\sqrt{1+\rho^2}\), instead of two asymptotically widening ends, produces an open spectral gap without an inserted constant mass ([`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json); [`docs/nsc-geometric-chain.md`](../docs/nsc-geometric-chain.md)). At zero energy the exact motif transfer multipliers are \(\exp(\pm 2\operatorname{asinh} R)\); neither has modulus one, so zero is absent from every real Bloch fibre. Continuum first band edges and second-order lattice agreement are
+
+| \(R\) | Continuum first band edge | Finest-lattice absolute error |
+|---|---:|---:|
+| 2 | \(0.7034881641\) | \(6.88\times 10^{-6}\) |
+| 4 | \(0.4552655377\) | \(6.20\times 10^{-6}\) |
+| 8 | \(0.2479700183\) | \(2.43\times 10^{-6}\) |
+
+<!-- nsc-figure:geometric-gap -->
+
+The next-room link is the staggered stencil entry \(B_{\mathrm{last\,edge},\mathrm{first\,node}}=1/h+w_{\mathrm{last}}/2\), not a fitted mass. Normalized finite recursion with that geometric \(B\) agrees with direct multi-motif inversion. \(R\) and \(\Omega\) remain declared inputs. Seams are periodic in \(w\) but gravitational junction equations are unproved. This is a positive project-level controlled realization of geometric confinement, not a new-to-world Floquet discovery and not a Lorentzian nested cosmology or an electron.
+
+## 15. Predictions available only after \(\zeta\)
 
 Until the energy-resolved tail is solved and a physical \(\zeta\) is derived without using the later compared datum, the following remain **open predictions**. They are not present results.
 
@@ -374,15 +417,18 @@ Until the energy-resolved tail is solved and a physical \(\zeta\) is derived wit
 
 **Open prediction**, restated as a restriction. Solving \(\Gamma_p(x)=K_p(x)-(1/\Omega)\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}\) on the warped transition spectrum could restore a physical scale root. The compact record states that the recursive tail is **not** known to restore a root. Failure of one truncation, coordinate chart, or numerical method is not rejection of Nested-Space Cosmology; neither is survival of a diagnostic root promotion of the theory. Refining the finite additive-gap family cannot close its scale equation.
 
-## 13. Reproducibility
+## 16. Reproducibility
 
-This repository publishes the original \(58\) v0.1.0 compact JSON records, preserved byte-for-byte, plus the 59th unit-closure follow-up and the scripts that generated them. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole. Inspection and regeneration are described in [`docs/reproducing.md`](../docs/reproducing.md). The follow-up itself is reproduced by
+This repository publishes the original \(58\) v0.1.0 compact JSON records, preserved byte-for-byte, the 59th unit-closure follow-up, and three scoped nsc-3 records. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole. Inspection and regeneration are described in [`docs/reproducing.md`](../docs/reproducing.md). All-field follow-up checks are
 
 ```text
 python3 scripts/check_nsc_scale_closure.py --check
+python3 scripts/check_nsc_regulated_recursion.py --check
+python3 scripts/check_nsc_radial_spectrum.py --check
+python3 scripts/check_nsc_geometric_chain.py --check
 ```
 
-which compares every exact and numeric field. Isolated public reproduction copies the authenticated v0.1.0 inputs as auxiliary provenance files; it does not add them as extra steps of the historical 58-record chain.
+Isolated public reproduction copies authenticated v0.1.0 inputs as auxiliary provenance files; it does not add them as extra steps of the historical 58-record chain.
 
 Pinned dependencies are `mpmath==1.3.0`, `numpy==2.5.1`, `scipy==1.17.1`, and `sympy==1.14.0`. From the repository root:
 
@@ -394,15 +440,17 @@ make paper
 make verify
 ```
 
-The live frontier record is [`results/nsc-2-zeta1-recursion-map.json`](../results/nsc-2-zeta1-recursion-map.json) (`NSC-2-ZETA1-RECURSION-MAP`). The unit-closure follow-up is [`results/nsc-2-zeta1-unit-closure-check.json`](../results/nsc-2-zeta1-unit-closure-check.json). Committed JSON is the public scientific object. Typical runners refuse to overwrite an existing file. Portable reproduction requires exact generator hashes, graph, schemas, formulas, classifications, gates, and nonclaims, plus the declared headline numerical observables within their manifest tolerances. The follow-up compares every recorded field. Platform-dependent coordinates of an otherwise identical diagnostic argmin are not promoted observables. Same-environment exact mode compares every output byte. Passing either mode does not promote a numerical diagnostic or convert an imported black-universe, Skyrme, spectral-action, or shadow-matter result into Nested-Space novelty.
+The live frontier record is [`results/nsc-2-zeta1-recursion-map.json`](../results/nsc-2-zeta1-recursion-map.json) (`NSC-2-ZETA1-RECURSION-MAP`). Scoped follow-ups are the unit-closure check and [`nsc-3-regulated-recursion.json`](../results/nsc-3-regulated-recursion.json), [`nsc-3-radial-spectrum.json`](../results/nsc-3-radial-spectrum.json), [`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json). Committed JSON is the public scientific object. Typical runners refuse to overwrite an existing file. Portable reproduction requires exact generator hashes, graph, schemas, formulas, classifications, gates, and nonclaims, plus the declared headline numerical observables within their manifest tolerances. Follow-ups compare every recorded field. Platform-dependent coordinates of an otherwise identical diagnostic argmin are not promoted observables. Same-environment exact mode compares every output byte. Passing either mode does not promote a numerical diagnostic or convert an imported black-universe, Skyrme, spectral-action, or shadow-matter result into Nested-Space novelty. The accepted closure plan is not completed by these records.
 
-## 14. Limitations and open claims
+## 17. Limitations and open claims
 
 The programme is one equation plus a closure test. The present limitations are structural, not cosmetic.
 
 - \(\Omega\) is not selected. The energy-resolved tail is not solved on the warped transition spectrum. Physical \(\zeta\) is not derived. Dilation alone does not derive \(\zeta=\Omega^2\).
 - Throat maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), and \(\Phi_{\mathrm{throat}}=R(E)\) are unevaluated declarations. Flux cancellation is not a computed boundary response.
-- Raw finite-determinant invariance does not remove the regulated relative Hessian. Full-exponential positivity is a heat diagnostic, not the complete anomaly.
+- The full covariant field measure, physical stationarity, metric health, and nuclear or cosmological predictions remain open. A finite regulated matrix calculus is not that measure.
+- The isolated radial throat is gapless. The periodic finite-throat gap uses declared \(R\) and \(\Omega\); seams have unproved gravitational stress. It is not a Lorentzian nested cosmology or an electron.
+- Raw finite-determinant invariance does not remove the regulated relative Hessian. Full-exponential positivity is a heat diagnostic, not the complete anomaly. The ultrastatic frequency factor differs from a spatial trace. The trapped coordinate-time Hamiltonian is not elliptic.
 - Electron, proton, and neutron stationary sectors are not solved. Standard-Model mass ratios are not predicted. The finite Dirac/Yukawa spectrum remains imported input.
 - The exact black-universe four-geometry is prior art. This repository does not identify our universe with that interior, prove phantom microscopic stability, or couple Skyrme matter to the transition.
 - \(108/1015\) is an on-room vacuum-form component, not the observed cosmological constant. \(1006/1015\) and \(54/503\) are superseded one-scale diagnostics.
@@ -437,5 +485,7 @@ Primary sources support only the established ingredient named in the citing sent
 18. Z.-Y. Fan, B. Chen, and H. Lü, “Criticality in Einstein-Gauss-Bonnet gravity: gravity without graviton,” *Eur. Phys. J. C* **76**, 512 (2016), [arXiv:1606.02728](https://arxiv.org/abs/1606.02728).
 19. Y. Lee, “Burghelea–Friedlander–Kappeler’s gluing formula and the adiabatic limit of the spectral \(\zeta\)-determinant of a Dirac Laplacian,” [arXiv:math/0304347](https://arxiv.org/abs/math/0304347).
 20. J. Nemec, D. Tománek, and G. Cuniberti, surface Green-function recursion, Appendix A.3 of [arXiv:0711.1088](https://arxiv.org/abs/0711.1088).
+21. F. Finster and C. Röken, “Self-adjointness of the Dirac Hamiltonian for a class of non-uniformly elliptic boundary value problems,” [arXiv:1512.00761](https://arxiv.org/abs/1512.00761).
+22. G. Teschl, *Ordinary Differential Equations and Dynamical Systems*, Graduate Studies in Mathematics **140**, American Mathematical Society (2012), [author PDF](https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode).
 
 Repository records cited in the text live under [`results/`](../results/manifest.json). The labeled theory is [`THEORY.md`](../THEORY.md). The current compact checkpoint is [`docs/current-result.md`](../docs/current-result.md).

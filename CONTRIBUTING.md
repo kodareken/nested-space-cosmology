@@ -23,7 +23,7 @@ $$
 \Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
 $$
 
-Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is \(q_j=\lambda_j/\zeta+\mu^2\).
+Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is \(q_j=\lambda_j/\zeta+\mu^2\). Do not promote the controlled periodic-throat gap to a derived \(R\), a Lorentzian nested cosmology, or an electron.
 
 ## Verification
 

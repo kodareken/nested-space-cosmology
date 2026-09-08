@@ -36,6 +36,9 @@ REQUIRED = {
     "docs/prior-art-and-open-claim.md",
     "docs/reproducing.md",
     "docs/nsc-closure-verification-2026-09-07.md",
+    "docs/nsc-regulated-recursion.md",
+    "docs/nsc-radial-spectrum.md",
+    "docs/nsc-geometric-chain.md",
     "paper/nested-space-cosmology.md",
     "paper/nested-space-cosmology.pdf",
     "paper/build-manifest.json",
@@ -95,8 +98,8 @@ def check_manifest(errors: list[str]) -> None:
     steps = manifest.get("steps", [])
     if manifest.get("schema") != "NSC-PUBLIC-RESULT-MANIFEST-v1":
         errors.append("unexpected result manifest schema")
-    if len(steps) != 59 or manifest.get("result_count") != 59:
-        errors.append("result manifest does not contain exactly 59 steps")
+    if len(steps) != 62 or manifest.get("result_count") != 62:
+        errors.append("result manifest does not contain exactly 62 steps")
     if manifest.get("historical_result_count") != 58:
         errors.append("historical result count must remain 58")
     if manifest.get("source_commit") != "ff2cf2722b966589b98a61accdbb6cee819a58c7":
@@ -108,6 +111,19 @@ def check_manifest(errors: list[str]) -> None:
         errors.append("result manifest has the wrong follow-up source commit")
     if manifest.get("follow_up_artifact_id") != "NSC-2-ZETA1-UNIT-CLOSURE-CHECK":
         errors.append("follow-up identity is incorrect")
+    if (
+        manifest.get("nsc3_source_commit")
+        != "445d5b069adea8b5641384b0ee02f07fe9cfcc0a"
+    ):
+        errors.append("result manifest has the wrong nsc-3 source commit")
+    expected_scoped = [
+        "results/nsc-2-zeta1-unit-closure-check.json",
+        "results/nsc-3-regulated-recursion.json",
+        "results/nsc-3-radial-spectrum.json",
+        "results/nsc-3-geometric-chain.json",
+    ]
+    if manifest.get("scoped_follow_up_outputs") != expected_scoped:
+        errors.append("scoped follow-up outputs are incorrect")
     outputs: set[str] = set()
     current = []
     for step in steps:
@@ -253,7 +269,7 @@ def main() -> int:
             print(f"ERROR: {error}", file=sys.stderr)
         print(f"publication check failed with {len(errors)} finding(s)", file=sys.stderr)
         return 1
-    print(f"publication check passed: {len(files)} curated files, 59 result steps")
+    print(f"publication check passed: {len(files)} curated files, 62 result steps")
     return 0
 
 
