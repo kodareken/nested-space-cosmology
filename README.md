@@ -8,7 +8,7 @@ $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-The project makes this connection concrete through reproducible operator calculations. The current working preprint joins evaluated throat maps, smooth geometric spectra, causal Dirac transport, quantum vacuum response, energy/work accounting, and an exact sheet–chirality reduction in one narrative.
+The project makes this connection concrete through reproducible operator calculations. The current working preprint joins evaluated throat maps, smooth geometric spectra, causal Dirac transport, quantum vacuum response, energy/work accounting, an exact sheet–chirality reduction, a specified ultraviolet-subtracted determinant source, and a finite noise–pair relation in one narrative.
 
 **The research target is a self-sourced physical solution:** the same action and state must determine the geometry, its matter and its observable consequences. The strongest verified milestones and remaining equations are presented together in the [working preprint](paper/nested-space-cosmology.pdf).
 
@@ -16,12 +16,12 @@ The project makes this connection concrete through reproducible operator calcula
 
 | Research question | Current mathematical connection | Next physical link |
 |---|---|---|
-| Where do local constants and thermal limits come from? | Characteristic cones, scale identities and covariant measure | Derived gravitational coupling and physical thermal state |
+| Where do local constants and thermal limits come from? | Characteristic cones, scale identities, covariant measure and normalization profiles | Derived gravitational coupling and physical thermal state |
 | Can collapse continue into an expanding room? | Smooth geometry, horizon Dirac transport and clock/affine tests | Self-sourced dynamics and complete continuation |
-| Can adjacent rooms explain dark response? | Boundary self-energy, vacuum stress and source conservation | Joint expansion, clustering and lensing prediction |
-| Can one state explain particles, waves and detection? | Field excitations and collective-coordinate controls | Identified interactions and a detector/statistics calculation |
+| Can adjacent rooms explain dark response? | Boundary self-energy, ultraviolet-subtracted source and energy transfer | Joint expansion, clustering and lensing prediction |
+| Can one state explain particles, waves and detection? | Field excitations, collective-coordinate controls and a finite Gaussian state functional | Identified interactions and a detector/statistics calculation |
 | Can sheet coupling generate mass and encode chirality? | Exact invariant Dirac sector and charge-conjugation algebra | Actual boundary coupling and physical sector selection |
-| Can recursive generation define infinity and probability? | Endpoint bounds and clock-transfer conditions | Consistent recursive state measure and causal duration |
+| Can recursive generation define infinity and probability? | Endpoint bounds, clock-transfer conditions and a specified determinant remainder | Consistent recursive state measure and causal duration |
 
 ## Follow the evidence
 
@@ -40,11 +40,13 @@ The loop is the physical objective. Its present executable links are:
 - **Boundary response:** direct inversion and elimination give the same full-spinor spatial response, checked against radial integration. Its chirality and Clifford channels are evaluated in an explicit domain.
 - **Geometry and spectra:** smooth periodic confinement creates a band gap without a manually inserted constant mass. A radial band gap still needs a physical pole and spinor interpretation.
 - **Finite action:** smooth-geometry metric variations identify four independent bulk response coefficients for ultraviolet matching.
-- **Vacuum and energy:** the static vacuum supplies no continuing regional injection. A changing radius creates Dirac pairs, and the supplied geometric work accounts for their energy.
+- **Vacuum and energy:** the static vacuum supplies no continuing regional injection. A changing radius creates Dirac pairs, and the supplied geometric work accounts for their energy. The same smeared fluctuation weight is recovered from the normalized state functional.
 - **Mass and chirality:** a scalar sheet coupling has an invariant four-component sector equal to the massive Dirac Hamiltonian. The actual throat must derive that coupling and select the physical sector.
+- **Covariant source:** a specified ultraviolet-subtracted determinant supplies explicit metric projections on the smooth neck. Finite coefficients, compensator, physical state and link remain open.
+- **Static and causal response:** independent Euclidean frequency integration and Hamiltonian response agree in the radius channel. The relative continuum calculation retains the required coordinate contact and controls its numerical limits.
 - **Observable source:** internal conversion, external supply, pressure and perturbation response have separate, explicit roles in cosmological evolution.
 
-The current frontier is the full spinor boundary interaction and the common covariant state/stress functional. These calculations test the missing connection directly. Physical inheritance scale, particle species, nuclear predictions and a cosmological fit remain open.
+The current frontier is the full spinor boundary interaction and the remaining finite completion of the specified covariant source. These calculations test the missing connection directly. Physical inheritance scale, particle species, nuclear predictions and a cosmological fit remain open.
 
 ## Read and reproduce
 
@@ -60,7 +62,7 @@ make demonstrate
 make verify
 ```
 
-Version 0.2.0 contains **77 records: 58 frozen historical records and 19 scoped follow-ups**. The original v0.1.0 evidence remains byte-for-byte. The short demonstration follows the computed boundary, vacuum-work and spinor reductions; the integrated gate verifies the complete collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
+Version 0.3.0 contains **81 records: 58 frozen historical records and 23 scoped follow-ups**. The original v0.1.0 and v0.2.0 evidence remains byte-for-byte. Five demonstrations follow boundary response, vacuum work, the spinor reduction, normalized quantum histories and static-to-causal matching. The integrated gate verifies the complete collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
 
 ## Scientific attribution and responsibility
 

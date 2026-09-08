@@ -2,7 +2,7 @@
 
 This directory contains the original 58-artifact v0.1.0 dependency closure that
 ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus scoped
-follow-ups 59–64. The machine-readable order, hashes, categories, dependencies,
+follow-ups 59–81. The machine-readable order, hashes, categories, dependencies,
 and paper claim links are in [manifest.json](manifest.json).
 
 The categories are intentionally different:
@@ -25,6 +25,11 @@ There is exactly one current frontier:
 
 Scoped follow-ups are not a second frontier:
 
+- [nsc-11-response-matching.json](nsc-11-response-matching.json)
+  matches the Euclidean and causal Dirac radius response in a relative
+  continuum control, retaining the coordinate contact and separate
+  regulator limits. Absolute metric backreaction remains open.
+
 - [nsc-2-zeta1-unit-closure-check.json](nsc-2-zeta1-unit-closure-check.json)
   corrects the additive-gap units to \(q_j=\lambda_j/\zeta+\mu^2\) and proves
   that the inherited subtracted derivative is strictly negative on this finite,
@@ -37,6 +42,15 @@ Scoped follow-ups are not a second frontier:
 - [nsc-3-geometric-chain.json](nsc-3-geometric-chain.json)
   produces a controlled periodic-throat gap without inserted mass. \(R\) and
   \(\Omega\) remain inputs; this is not a Lorentzian nested cosmology.
+- [nsc-9-covariant-source.json](nsc-9-covariant-source.json)
+  evaluates the specified ultraviolet-subtracted determinant source. Finite
+  coefficients, compensator, physical state and link remain open.
+- [nsc-10-measure-normalization.json](nsc-10-measure-normalization.json)
+  compares exact normalization profiles of that modulus. It does not complete
+  \(\Gamma_{\mathrm{one}}\).
+- [nsc-10-influence.json](nsc-10-influence.json)
+  supplies a normalized finite Gaussian state functional whose smeared noise
+  equals the pair-production weight. \(Z=1\) does not fix the absolute source.
 
 For the scientific interpretation, including the determinant roots invalidated
 by anomaly compensation, read [the current-result document](../docs/current-result.md).

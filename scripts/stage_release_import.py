@@ -65,7 +65,10 @@ def stage(source: Path, destination: Path, spec: dict, *, check: bool = False) -
     for data in (comparator_path.read_bytes(), blob(comparator['path'])):
         if digest(function_source(data, comparator['function'])) != comparator['function_sha256']:
             raise ValueError('public and laboratory compare functions are not byte-identical')
-    for entry in spec['preserved_64_scientific_files'] + spec.get('preserved_75_scientific_files', []):
+    preserved = (spec['preserved_64_scientific_files']
+                 + spec.get('preserved_75_scientific_files', [])
+                 + spec.get('preserved_77_scientific_files', []))
+    for entry in preserved:
         if digest((destination / safe_relative(entry['path'])).read_bytes()) != entry['sha256']:
             raise ValueError(f'previous scientific bytes changed: {entry["path"]}')
     # Validate the entire transaction before performing its reversible writes.

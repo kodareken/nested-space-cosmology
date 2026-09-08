@@ -9,11 +9,11 @@
   "measured_reference_runtime_seconds": 246.73,
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "release_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
+  "release_source_commit": "14fddc92f13f6feaa0e6a1a3fd81567280212a59",
   "release_spec": "results/release-spec.json",
-  "release_spec_sha256": "a9d43693fbc347be75debc7e0a1c06853619210b184048617ca0d8b3cfc7e42d",
-  "release_version": "0.2.0",
-  "result_count": 77,
+  "release_spec_sha256": "6cbc038c2de468995610f5c5b102dc7f5ed9590b9fe21a0a00eef9bd3b29953e",
+  "release_version": "0.3.0",
+  "result_count": 81,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
   "scoped_follow_up_outputs": [
     "results/nsc-2-zeta1-unit-closure-check.json",
@@ -34,7 +34,11 @@
     "results/nsc-6-energy-transfer.json",
     "results/nsc-7-observable-bridge.json",
     "results/nsc-8-chiral-boundary.json",
-    "results/nsc-8-finite-terms.json"
+    "results/nsc-8-finite-terms.json",
+    "results/nsc-9-covariant-source.json",
+    "results/nsc-10-measure-normalization.json",
+    "results/nsc-10-influence.json",
+    "results/nsc-11-response-matching.json"
   ],
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "steps": [
@@ -2211,6 +2215,194 @@
         "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
         "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
         "tests/test_nsc_finite_terms.py": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
+      }
+    },
+    {
+      "artifact_id": "NSC-9-COVARIANT-SOURCE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-4-covariant-measure.json",
+        "results/nsc-8-finite-terms.json"
+      ],
+      "follow_up_source_commit": "3a747cc17e33a6a3d6cc58634eaa40dd69e30a26",
+      "generator": "scripts/check_nsc_covariant_source.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "generator_sha256": "11112370061ae826ee92b666662d63a7b8417138ad55fed7b11d9ad288c0e393",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-covariant-source-v1"
+      },
+      "json_format": "pretty",
+      "order": 78,
+      "output": "results/nsc-9-covariant-source.json",
+      "output_sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-covariant-source.md",
+        "src/recursive_horizons/nsc_covariant_identities.py",
+        "src/recursive_horizons/nsc_covariant_measure.py",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_energy_transfer.py",
+        "src/recursive_horizons/nsc_finite_terms.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/nsc_shape_response.py",
+        "tests/test_nsc_covariant_identities.py",
+        "tests/test_nsc_covariant_source.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-covariant-source.md": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6",
+        "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1",
+        "src/recursive_horizons/nsc_covariant_measure.py": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5",
+        "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "src/recursive_horizons/nsc_energy_transfer.py": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+        "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "tests/test_nsc_covariant_identities.py": "564562d792eea5f9b03183f942155f782c427664056956720a876be22e66dbcd",
+        "tests/test_nsc_covariant_source.py": "0b66e4a5a080b4d0bbf45c847bc4acbeecfece6d57f13b17eea9bed738e58e8c"
+      }
+    },
+    {
+      "artifact_id": "NSC-10-MEASURE-NORMALIZATION",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "b87f7e4c73a505f97ed1ae3f012158389491a2a5",
+      "generator": "scripts/check_nsc_measure_normalization.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-10-measure-normalization.json"
+      ],
+      "generator_sha256": "31c9bccba28d39d32f5a1084f575780902b11dc9eafc1c5e728322ba803755ee",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-measure-normalization-v1"
+      },
+      "json_format": "pretty",
+      "order": 79,
+      "output": "results/nsc-10-measure-normalization.json",
+      "output_sha256": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-measure-normalization.md",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_measure_normalization.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "tests/test_nsc_measure_normalization.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-measure-normalization.md": "649a4cb1a1bb44e134432062b576f840dee17068592d23a0c324e44503d16e2d",
+        "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "src/recursive_horizons/nsc_measure_normalization.py": "e3ac23d660287765580689cd965eecf72552a813e24fb2b641942adc703a9b9f",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "tests/test_nsc_measure_normalization.py": "a165f079525e527c14290f2b5e0a901e3069bc7020f3428e4a44f7f37761440e"
+      }
+    },
+    {
+      "artifact_id": "NSC-10-INFLUENCE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-6-vacuum-work.json",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "b87f7e4c73a505f97ed1ae3f012158389491a2a5",
+      "generator": "scripts/check_nsc_influence.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-10-influence.json"
+      ],
+      "generator_sha256": "c4faa0aa1bb73c73274cf51c282cc25bc8ffb7b63f0bb2a95405084a5666c91d",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-influence-v1"
+      },
+      "json_format": "pretty",
+      "order": 80,
+      "output": "results/nsc-10-influence.json",
+      "output_sha256": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-influence.md",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_influence.py",
+        "src/recursive_horizons/nsc_vacuum_work.py",
+        "tests/test_nsc_influence.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-influence.md": "eb05623cc61a068d28faecfa32ffc726b6a8b3593e24322de1d37550b3c03f77",
+        "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+        "src/recursive_horizons/nsc_vacuum_work.py": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c",
+        "tests/test_nsc_influence.py": "1cd14a4241975dbdee752df616ef94fa19931d6fd248503d005dd5160c911c28"
+      }
+    },
+    {
+      "artifact_id": "NSC-11-RESPONSE-MATCHING",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-10-influence.json",
+        "results/nsc-10-measure-normalization.json",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "14fddc92f13f6feaa0e6a1a3fd81567280212a59",
+      "generator": "scripts/check_nsc_response_matching.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-11-response-matching.json"
+      ],
+      "generator_sha256": "5c16e9fe30b211ab0bcb0361213469f19ff03bc1f2d203ca279fb6efcb82a90c",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-response-matching-v1"
+      },
+      "json_format": "pretty",
+      "order": 81,
+      "output": "results/nsc-11-response-matching.json",
+      "output_sha256": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-response-matching.md",
+        "src/recursive_horizons/nsc_covariant_identities.py",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_influence.py",
+        "src/recursive_horizons/nsc_response_matching.py",
+        "tests/test_nsc_response_matching.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-response-matching.md": "90dabe580da596f709cd79876bd5f621c768aefcd12c4b4c6e2a3ecd6d045e99",
+        "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1",
+        "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+        "src/recursive_horizons/nsc_response_matching.py": "d762d8923ad47e9475310469a698444a1d03c76e5091305cf741a9d8fa2ee132",
+        "tests/test_nsc_response_matching.py": "f11db61f650a4a84cd5b5f665f296f16e5d9ee9ffb26a03c2ce3cc84c9beb8c7"
       }
     }
   ]

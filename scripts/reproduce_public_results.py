@@ -110,7 +110,8 @@ def validate_checkout(manifest: dict[str, Any]) -> None:
                 raise ReproductionError(f"manifest {key} differs from release specification: {step['output']}")
     for item in (spec["import_files"] + spec["retained_byte_identical_files"]
                  + spec["preserved_64_scientific_files"]
-                 + spec.get("preserved_75_scientific_files", []) + [spec["retained_comparator"]]):
+                 + spec.get("preserved_75_scientific_files", [])
+                 + spec.get("preserved_77_scientific_files", []) + [spec["retained_comparator"]]):
         relative = item["path"]
         if not (ROOT / relative).is_file() or sha256(ROOT / relative) != item["sha256"]:
             raise ReproductionError(f"pinned release input mismatch: {relative}")

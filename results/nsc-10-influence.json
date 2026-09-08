@@ -1,0 +1,2834 @@
+{
+  "Fock_trace_control": {
+    "Fock_dimension": 8,
+    "covariance_reconstruction_error": 9.105827745500761e-16,
+    "determinant": {
+      "imag": -0.18774612894238965,
+      "real": 0.9762172612607374
+    },
+    "direct_Fock_trace": {
+      "imag": -0.18774612894238935,
+      "real": 0.9762172612607374
+    },
+    "mixed_state_error": 3.0531133177191805e-16,
+    "occupations": [
+      0.2,
+      0.6,
+      0.8
+    ],
+    "one_particle_modes": 3,
+    "pure_orbital_Fock_trace": {
+      "imag": -0.08486736438125939,
+      "real": 0.9960717651836108
+    },
+    "pure_orbital_determinant": {
+      "imag": -0.08486736438125937,
+      "real": 0.9960717651836103
+    }
+  },
+  "artifact_id": "NSC-10-INFLUENCE",
+  "causal_contour_controls": [
+    {
+      "minus_retarded_response": -0.24644149730731302,
+      "mixed_CTP_derivative": -0.2464415000397852,
+      "observation_time": 0.7,
+      "source_time": 0.2
+    },
+    {
+      "minus_retarded_response": -0.0,
+      "mixed_CTP_derivative": -1.236159883222926e-09,
+      "observation_time": 0.7,
+      "source_time": 1.1
+    }
+  ],
+  "classification": "normalized_finite_Gaussian_Dirac_state_functional_with_causal_response_and_smeared_geometric_noise",
+  "conventions": {
+    "Hamiltonian_source": "H_int=+J(t)V, radius r=r0/(1+J s), s from the same smooth profile",
+    "branch": "principal local log branch near equal histories; zero overlap valid but log undefined",
+    "comparison": "all fields; float atol2e-7 rtol2e-8; exact remaining types/keys/hashes",
+    "covariance": "Cij=<c_j dagger c_i>, 0<=C<=I",
+    "cutoff": "finite spatial regulator; bare mean/equal-time noise are not renormalized sources",
+    "first_difference_derivative": "-<V>",
+    "geometry": "smooth R=2 AP axial cell, canonical H from the NSC9 covariant operator",
+    "influence": "Z=det(I-C+C U_minus dagger U_plus), Gamma_IF=-i logZ",
+    "noise": "Re Tr C A(t)(I-C)B(s)",
+    "positive_frequency_FDT": "N(omega)=-coth(beta omega/2) Im chi_R(omega); elastic zero-frequency part separately retained",
+    "probe": "source impulses test functional derivatives; not finite delta-function geometries",
+    "pulse": "interaction-picture unitary for stationary initial vacuum, window +/-7 width; smooth-history time refinement separate",
+    "retarded": "chi_AB=-i theta(t-s) Tr C[A(t),B(s)], Fourier exp(+i omega t)",
+    "units": "hbar=c=a=1; one representative kappa=1 channel unless explicitly stated"
+  },
+  "covariant_to_canonical_operator_residual": 8.881784197001252e-16,
+  "equal_history": {
+    "amplitude": {
+      "imag": -1.3877787807814426e-17,
+      "real": 1.0000000000000013
+    },
+    "amplitude_underflow": false,
+    "log_modulus": 1.2212453270876712e-15,
+    "principal_action": {
+      "imag": -1.2212453270876712e-15,
+      "real": -1.3877787807814407e-17
+    },
+    "principal_phase": -1.3877787807814407e-17
+  },
+  "input_hashes": {
+    "results/nsc-6-vacuum-work.json": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "local_real_phase_control": {
+    "alpha": 0.37,
+    "equal_history_after_phase": {
+      "imag": 0.0,
+      "real": 1.0
+    },
+    "mean_source_shift": "alpha for F(J)=alpha J; illustrative, not selected physical coefficient",
+    "original_overlap": {
+      "imag": 0.02368826627774069,
+      "real": 0.9997124059705063
+    },
+    "shifted_overlap": {
+      "imag": 0.03108542198242632,
+      "real": 0.9995097423991214
+    }
+  },
+  "noise_matrix": {
+    "eigenvalues": [
+      1.3071134302837435,
+      1.896476767013782,
+      2.27699968081417,
+      2.8822720450694
+    ],
+    "times": [
+      0.0,
+      0.2,
+      0.6,
+      1.0
+    ],
+    "values": [
+      [
+        2.090715480795273,
+        -0.7288052671929666,
+        0.022121984606755685,
+        -0.10317543954658231
+      ],
+      [
+        -0.7288052671929666,
+        2.0907154807952724,
+        -0.2387207193424757,
+        -0.015664924391428272
+      ],
+      [
+        0.022121984606755678,
+        -0.23872071934247574,
+        2.0907154807952746,
+        -0.2387207193424754
+      ],
+      [
+        -0.10317543954658234,
+        -0.01566492439142827,
+        -0.2387207193424754,
+        2.090715480795276
+      ]
+    ]
+  },
+  "nonclaims": {
+    "Born_rule_derived": false,
+    "absolute_source_fixed_by_Z_equal_one": false,
+    "full_covariant_renormalized_in_in_action": false,
+    "invariant_finite_completion_fixed": false,
+    "metric_constraints_or_graviton_health": false,
+    "new_to_world_Gaussian_trace_identity": false,
+    "physical_self_sourcing": false
+  },
+  "opposite_pulse_small_amplitude_controls": [
+    {
+      "branch_amplitudes": [
+        0.02,
+        -0.02
+      ],
+      "negative_log_modulus_over_2epsilon_squared": 0.03533306715292244
+    },
+    {
+      "branch_amplitudes": [
+        0.01,
+        -0.01
+      ],
+      "negative_log_modulus_over_2epsilon_squared": 0.035334210675124045
+    }
+  ],
+  "schema": "nsc-influence-v1",
+  "smeared_generator": {
+    "local_log_derivatives": [
+      {
+        "delta": 0.008,
+        "first_difference_derivative": {
+          "imag": 0.0,
+          "real": 1.1803267574413563
+        },
+        "overlap_modulus": 0.9999988692954557,
+        "second_difference_derivative": {
+          "imag": 0.035334536990272586,
+          "real": 0.0
+        }
+      },
+      {
+        "delta": 0.004,
+        "first_difference_derivative": {
+          "imag": 0.0,
+          "real": 1.18032659789124
+        },
+        "overlap_modulus": 0.9999997173234124,
+        "second_difference_derivative": {
+          "imag": 0.035334578438383224,
+          "real": 0.0
+        }
+      },
+      {
+        "delta": 0.002,
+        "first_difference_derivative": {
+          "imag": 0.0,
+          "real": 1.1803265580036872
+        },
+        "overlap_modulus": 0.9999999293308228,
+        "second_difference_derivative": {
+          "imag": 0.03533458987422376,
+          "real": 0.0
+        }
+      }
+    ],
+    "mean": -1.1803265447078342,
+    "variance": 0.03533459210044132,
+    "width": 0.5
+  },
+  "source_hashes": {
+    "docs/nsc-influence.md": "eb05623cc61a068d28faecfa32ffc726b6a8b3593e24322de1d37550b3c03f77",
+    "scripts/check_nsc_influence.py": "c4faa0aa1bb73c73274cf51c282cc25bc8ffb7b63f0bb2a95405084a5666c91d",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_vacuum_work.py": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c",
+    "tests/test_nsc_influence.py": "1cd14a4241975dbdee752df616ef94fa19931d6fd248503d005dd5160c911c28"
+  },
+  "spatial_and_time_smearing_refinement": [
+    {
+      "bare_mean_vertex": -0.8591434757509323,
+      "energy_coefficient": 0.08753737903527187,
+      "equal_time_variance": 1.475403760157344,
+      "pair_number_coefficient": 0.03533458697443775,
+      "points": 12,
+      "smeared_variance": 0.0353345869744376
+    },
+    {
+      "bare_mean_vertex": -0.9417643267281735,
+      "energy_coefficient": 0.08753739029516967,
+      "equal_time_variance": 2.090715480795273,
+      "pair_number_coefficient": 0.035334592100441535,
+      "points": 16,
+      "smeared_variance": 0.03533459210044132
+    },
+    {
+      "bare_mean_vertex": -1.0582506681919355,
+      "energy_coefficient": 0.0875373903185706,
+      "equal_time_variance": 3.3262176817734765,
+      "pair_number_coefficient": 0.035334592111643026,
+      "points": 24,
+      "smeared_variance": 0.03533459211164311
+    },
+    {
+      "bare_mean_vertex": -1.1408777490952176,
+      "energy_coefficient": 0.08753739031857062,
+      "equal_time_variance": 4.564026244473909,
+      "pair_number_coefficient": 0.03533459211164297,
+      "points": 32,
+      "smeared_variance": 0.03533459211164264
+    }
+  ],
+  "static_susceptibility": {
+    "finite_energy_variations": [
+      {
+        "ground_energy_second_difference": -0.4437638487786444,
+        "step": 0.004
+      },
+      {
+        "ground_energy_second_difference": -0.4437638168042213,
+        "step": 0.002
+      }
+    ],
+    "retarded_zero_frequency": -0.44376382089721483
+  },
+  "terminal": true,
+  "thermal_FDT": {
+    "inverse_temperature": 1.7,
+    "maximum_cross_multiplied_residual": 1.0668549377257364e-16,
+    "positive_frequency_weights": [
+      {
+        "frequency": 0.18466216410506497,
+        "minus_im_chi_plus": 1.1929704315468084e-11,
+        "noise_plus": 7.662643840358458e-11
+      },
+      {
+        "frequency": 1.6560110693729477,
+        "minus_im_chi_plus": 3.368447576386271e-14,
+        "noise_plus": 3.7976358319353865e-14
+      },
+      {
+        "frequency": 1.6622357541564075,
+        "minus_im_chi_plus": 2.41510475179807e-10,
+        "noise_plus": 2.7193803808633347e-10
+      },
+      {
+        "frequency": 3.2241379480883,
+        "minus_im_chi_plus": 1.656703579985572e-10,
+        "noise_plus": 1.6705617014398388e-10
+      },
+      {
+        "frequency": 3.224404271767199,
+        "minus_im_chi_plus": 2.470864166832743e-10,
+        "noise_plus": 2.491523246753052e-10
+      },
+      {
+        "frequency": 4.78715881753229,
+        "minus_im_chi_plus": 3.7977425678781964e-10,
+        "noise_plus": 3.7999623997685526e-10
+      },
+      {
+        "frequency": 4.787171954169988,
+        "minus_im_chi_plus": 2.4238716497534347e-11,
+        "noise_plus": 2.425288403863108e-11
+      },
+      {
+        "frequency": 6.34558164472665,
+        "minus_im_chi_plus": 2.3913426267377136e-10,
+        "noise_plus": 2.3914414214941305e-10
+      },
+      {
+        "frequency": 6.345598915897365,
+        "minus_im_chi_plus": 2.007175011948971e-11,
+        "noise_plus": 2.0072579329582416e-11
+      },
+      {
+        "frequency": 7.894093502183652,
+        "minus_im_chi_plus": 7.729654682722568e-11,
+        "noise_plus": 7.729677642971518e-11
+      },
+      {
+        "frequency": 7.894458383957455,
+        "minus_im_chi_plus": 4.408144289885006e-11,
+        "noise_plus": 4.408157375764268e-11
+      },
+      {
+        "frequency": 9.410208402786662,
+        "minus_im_chi_plus": 2.46723811867122e-11,
+        "noise_plus": 2.46723867544452e-11
+      },
+      {
+        "frequency": 9.41885070779168,
+        "minus_im_chi_plus": 2.663285652753663e-11,
+        "noise_plus": 2.6632862450028372e-11
+      },
+      {
+        "frequency": 10.705320822716766,
+        "minus_im_chi_plus": 5.43975008777398e-12,
+        "noise_plus": 5.439750223562777e-12
+      },
+      {
+        "frequency": 10.887462230723257,
+        "minus_im_chi_plus": 1.1833870558139604e-11,
+        "noise_plus": 1.1833870774878416e-11
+      },
+      {
+        "frequency": 12.91121554593899,
+        "minus_im_chi_plus": 6.719795574129395e-11,
+        "noise_plus": 6.719795578074219e-11
+      },
+      {
+        "frequency": 13.093356953945477,
+        "minus_im_chi_plus": 3.563993193494671e-11,
+        "noise_plus": 3.563993195029759e-11
+      },
+      {
+        "frequency": 14.379827068870565,
+        "minus_im_chi_plus": 2.9729611198131795e-10,
+        "noise_plus": 2.9729611199569217e-10
+      },
+      {
+        "frequency": 14.388469373875587,
+        "minus_im_chi_plus": 2.79676959083651e-08,
+        "noise_plus": 2.7967695909697607e-08
+      },
+      {
+        "frequency": 15.904219392704789,
+        "minus_im_chi_plus": 7.891498890153565e-07,
+        "noise_plus": 7.891498890182147e-07
+      },
+      {
+        "frequency": 15.90458427447859,
+        "minus_im_chi_plus": 7.328332203071071e-07,
+        "noise_plus": 7.328332203097595e-07
+      },
+      {
+        "frequency": 17.453078860764876,
+        "minus_im_chi_plus": 4.401549175497908e-05,
+        "noise_plus": 4.401549175499054e-05
+      },
+      {
+        "frequency": 17.453096131935595,
+        "minus_im_chi_plus": 1.0289222269504545e-07,
+        "noise_plus": 1.0289222269507224e-07
+      },
+      {
+        "frequency": 19.011505822492257,
+        "minus_im_chi_plus": 0.00043443576288998604,
+        "noise_plus": 0.00043443576288999407
+      },
+      {
+        "frequency": 19.01151895912996,
+        "minus_im_chi_plus": 0.00031722750106092626,
+        "noise_plus": 0.0003172275010609321
+      },
+      {
+        "frequency": 20.574273504895054,
+        "minus_im_chi_plus": 3.768820807020171e-05,
+        "noise_plus": 3.768820807020176e-05
+      },
+      {
+        "frequency": 20.574539828573954,
+        "minus_im_chi_plus": 0.0072324089784073335,
+        "noise_plus": 0.007232408978407343
+      },
+      {
+        "frequency": 22.13644202250584,
+        "minus_im_chi_plus": 0.016860229453351486,
+        "noise_plus": 0.016860229453351486
+      },
+      {
+        "frequency": 22.1426667072893,
+        "minus_im_chi_plus": 0.019294413302426015,
+        "noise_plus": 0.019294413302426015
+      },
+      {
+        "frequency": 23.614015612557182,
+        "minus_im_chi_plus": 0.06832753119297692,
+        "noise_plus": 0.06832753119297692
+      },
+      {
+        "frequency": 23.79867777666225,
+        "minus_im_chi_plus": 2.5190757063364923e-29,
+        "noise_plus": 2.5190757063364923e-29
+      },
+      {
+        "frequency": 1.4713489052678828,
+        "minus_im_chi_plus": 1.3268510503224843e-10,
+        "noise_plus": 1.5638256665192676e-10
+      },
+      {
+        "frequency": 1.4775735900513425,
+        "minus_im_chi_plus": 8.220548135176287e-12,
+        "noise_plus": 9.671913287881725e-12
+      },
+      {
+        "frequency": 3.039475783983235,
+        "minus_im_chi_plus": 3.126875410615526e-11,
+        "noise_plus": 3.1627326500793476e-11
+      },
+      {
+        "frequency": 3.039742107662134,
+        "minus_im_chi_plus": 1.8613698416293892e-10,
+        "noise_plus": 1.882705261524114e-10
+      },
+      {
+        "frequency": 4.602496653427225,
+        "minus_im_chi_plus": 5.436932630956905e-11,
+        "noise_plus": 5.4412830556991133e-11
+      },
+      {
+        "frequency": 4.602509790064923,
+        "minus_im_chi_plus": 1.3038017129864006e-10,
+        "noise_plus": 1.3048449417506478e-10
+      },
+      {
+        "frequency": 6.160919480621585,
+        "minus_im_chi_plus": 1.1432958533047333e-10,
+        "noise_plus": 1.1433605065545596e-10
+      },
+      {
+        "frequency": 6.1609367517923,
+        "minus_im_chi_plus": 5.432308523587847e-14,
+        "noise_plus": 5.432615710994232e-14
+      },
+      {
+        "frequency": 7.709431338078587,
+        "minus_im_chi_plus": 1.6051737661034882e-11,
+        "noise_plus": 1.605180292525082e-11
+      },
+      {
+        "frequency": 7.70979621985239,
+        "minus_im_chi_plus": 5.0206768458204114e-11,
+        "noise_plus": 5.020697246561667e-11
+      },
+      {
+        "frequency": 9.225546238681595,
+        "minus_im_chi_plus": 6.145879266208878e-12,
+        "noise_plus": 6.1458811646088125e-12
+      },
+      {
+        "frequency": 9.234188543686615,
+        "minus_im_chi_plus": 3.201167749929676e-11,
+        "noise_plus": 3.201168724316715e-11
+      },
+      {
+        "frequency": 10.520658658611701,
+        "minus_im_chi_plus": 1.0386761408859483e-11,
+        "noise_plus": 1.0386761763755791e-11
+      },
+      {
+        "frequency": 10.702800066618192,
+        "minus_im_chi_plus": 1.8838562488797582e-12,
+        "noise_plus": 1.883856296107151e-12
+      },
+      {
+        "frequency": 12.726553381833925,
+        "minus_im_chi_plus": 6.320756934475511e-11,
+        "noise_plus": 6.320756939554497e-11
+      },
+      {
+        "frequency": 12.90869478984041,
+        "minus_im_chi_plus": 2.042433022642114e-10,
+        "noise_plus": 2.0424330238462639e-10
+      },
+      {
+        "frequency": 14.195164904765502,
+        "minus_im_chi_plus": 2.683995503176811e-08,
+        "noise_plus": 2.6839955033544394e-08
+      },
+      {
+        "frequency": 14.20380720977052,
+        "minus_im_chi_plus": 8.947108454146462e-11,
+        "noise_plus": 8.947108454729951e-11
+      },
+      {
+        "frequency": 15.719557228599724,
+        "minus_im_chi_plus": 8.574608416147111e-07,
+        "noise_plus": 8.574608416189619e-07
+      },
+      {
+        "frequency": 15.719922110373528,
+        "minus_im_chi_plus": 5.879116874947837e-07,
+        "noise_plus": 5.879116874976965e-07
+      },
+      {
+        "frequency": 17.268416696659813,
+        "minus_im_chi_plus": 7.435736549933508e-07,
+        "noise_plus": 7.435736549936156e-07
+      },
+      {
+        "frequency": 17.26843396783053,
+        "minus_im_chi_plus": 4.150949349353537e-05,
+        "noise_plus": 4.1509493493550154e-05
+      },
+      {
+        "frequency": 18.826843658387194,
+        "minus_im_chi_plus": 0.00026239929234878393,
+        "noise_plus": 0.00026239929234879054
+      },
+      {
+        "frequency": 18.826856795024895,
+        "minus_im_chi_plus": 0.000466235820566756,
+        "noise_plus": 0.0004662358205667677
+      },
+      {
+        "frequency": 20.38961134078999,
+        "minus_im_chi_plus": 0.007019170683352672,
+        "noise_plus": 0.007019170683352685
+      },
+      {
+        "frequency": 20.38987766446889,
+        "minus_im_chi_plus": 0.00010567068912512713,
+        "noise_plus": 0.00010567068912512732
+      },
+      {
+        "frequency": 21.951779858400773,
+        "minus_im_chi_plus": 0.01993420892570137,
+        "noise_plus": 0.019934208925701375
+      },
+      {
+        "frequency": 21.958004543184234,
+        "minus_im_chi_plus": 0.014355279490272327,
+        "noise_plus": 0.014355279490272328
+      },
+      {
+        "frequency": 23.42935344845212,
+        "minus_im_chi_plus": 2.469720867788674e-29,
+        "noise_plus": 2.469720867788674e-29
+      },
+      {
+        "frequency": 23.614015612557182,
+        "minus_im_chi_plus": 0.06832753119297696,
+        "noise_plus": 0.06832753119297696
+      },
+      {
+        "frequency": 0.006224684783459722,
+        "minus_im_chi_plus": 7.978214907976246e-14,
+        "noise_plus": 1.5078988487348947e-11
+      },
+      {
+        "frequency": 1.5681268787153524,
+        "minus_im_chi_plus": 1.6569772157399925e-11,
+        "noise_plus": 1.9046629567856602e-11
+      },
+      {
+        "frequency": 1.568393202394251,
+        "minus_im_chi_plus": 4.733463243479359e-11,
+        "noise_plus": 5.440679377471638e-11
+      },
+      {
+        "frequency": 3.131147748159342,
+        "minus_im_chi_plus": 1.2118529881813488e-13,
+        "noise_plus": 1.2237346022888217e-13
+      },
+      {
+        "frequency": 3.1311608847970405,
+        "minus_im_chi_plus": 4.113999747445857e-10,
+        "noise_plus": 4.1543345578074984e-10
+      },
+      {
+        "frequency": 4.689570575353702,
+        "minus_im_chi_plus": 3.502479376101216e-10,
+        "noise_plus": 3.504896186308174e-10
+      },
+      {
+        "frequency": 4.689587846524417,
+        "minus_im_chi_plus": 7.108222414209509e-10,
+        "noise_plus": 7.113127145422357e-10
+      },
+      {
+        "frequency": 6.238082432810704,
+        "minus_im_chi_plus": 1.4352209537463234e-09,
+        "noise_plus": 1.435292137259901e-09
+      },
+      {
+        "frequency": 6.238447314584508,
+        "minus_im_chi_plus": 1.8512629775762262e-10,
+        "noise_plus": 1.8513547388368492e-10
+      },
+      {
+        "frequency": 7.754197333413713,
+        "minus_im_chi_plus": 1.6289466520241112e-09,
+        "noise_plus": 1.628952789771274e-09
+      },
+      {
+        "frequency": 7.762839638418733,
+        "minus_im_chi_plus": 9.579237150805806e-11,
+        "noise_plus": 9.579272718231007e-11
+      },
+      {
+        "frequency": 9.049309753343818,
+        "minus_im_chi_plus": 3.0385406969902607e-10,
+        "noise_plus": 3.038541963428925e-10
+      },
+      {
+        "frequency": 9.231451161350309,
+        "minus_im_chi_plus": 5.338362912783345e-10,
+        "noise_plus": 5.338364545279097e-10
+      },
+      {
+        "frequency": 11.255204476566043,
+        "minus_im_chi_plus": 6.374469079817592e-11,
+        "noise_plus": 6.374469142298826e-11
+      },
+      {
+        "frequency": 11.43734588457253,
+        "minus_im_chi_plus": 1.7733718727198483e-08,
+        "noise_plus": 1.7733718854733745e-08
+      },
+      {
+        "frequency": 12.723815999497617,
+        "minus_im_chi_plus": 5.955325095115169e-07,
+        "noise_plus": 5.955325099922835e-07
+      },
+      {
+        "frequency": 12.73245830450264,
+        "minus_im_chi_plus": 8.02011728753915e-07,
+        "noise_plus": 8.02011729391927e-07
+      },
+      {
+        "frequency": 14.248208323331841,
+        "minus_im_chi_plus": 4.1837225514385784e-05,
+        "noise_plus": 4.1837225516915844e-05
+      },
+      {
+        "frequency": 14.248573205105643,
+        "minus_im_chi_plus": 3.968834746801058e-07,
+        "noise_plus": 3.9688347470409205e-07
+      },
+      {
+        "frequency": 15.79706779139193,
+        "minus_im_chi_plus": 0.00044478101395067866,
+        "noise_plus": 0.00044478101395261147
+      },
+      {
+        "frequency": 15.797085062562646,
+        "minus_im_chi_plus": 0.00028741421033628013,
+        "noise_plus": 0.00028741421033752913
+      },
+      {
+        "frequency": 17.35549475311931,
+        "minus_im_chi_plus": 6.121306360212122e-05,
+        "noise_plus": 6.121306360214003e-05
+      },
+      {
+        "frequency": 17.35550788975701,
+        "minus_im_chi_plus": 0.007081486644823367,
+        "noise_plus": 0.007081486644825543
+      },
+      {
+        "frequency": 18.91826243552211,
+        "minus_im_chi_plus": 0.015647320622437743,
+        "noise_plus": 0.01564732062243808
+      },
+      {
+        "frequency": 18.918528759201006,
+        "minus_im_chi_plus": 0.019297260453349174,
+        "noise_plus": 0.01929726045334959
+      },
+      {
+        "frequency": 20.48043095313289,
+        "minus_im_chi_plus": 0.06786894301240214,
+        "noise_plus": 0.06786894301240223
+      },
+      {
+        "frequency": 20.48665563791635,
+        "minus_im_chi_plus": 3.324935354600968e-27,
+        "noise_plus": 3.324935354600973e-27
+      },
+      {
+        "frequency": 21.958004543184234,
+        "minus_im_chi_plus": 0.014355279490280393,
+        "noise_plus": 0.014355279490280395
+      },
+      {
+        "frequency": 22.1426667072893,
+        "minus_im_chi_plus": 0.019294413302417362,
+        "noise_plus": 0.019294413302417362
+      },
+      {
+        "frequency": 1.5619021939318927,
+        "minus_im_chi_plus": 6.021483671432931e-11,
+        "noise_plus": 6.931877131138558e-11
+      },
+      {
+        "frequency": 1.5621685176107913,
+        "minus_im_chi_plus": 1.4254174627457324e-10,
+        "noise_plus": 1.6408226735288054e-10
+      },
+      {
+        "frequency": 3.124923063375882,
+        "minus_im_chi_plus": 6.038186384649174e-10,
+        "noise_plus": 6.098020706251999e-10
+      },
+      {
+        "frequency": 3.1249362000135807,
+        "minus_im_chi_plus": 1.7259143410337564e-11,
+        "noise_plus": 1.743016594841232e-11
+      },
+      {
+        "frequency": 4.6833458905702425,
+        "minus_im_chi_plus": 8.779108255714436e-10,
+        "noise_plus": 8.78523055647029e-10
+      },
+      {
+        "frequency": 4.6833631617409575,
+        "minus_im_chi_plus": 3.473447373427516e-10,
+        "noise_plus": 3.4758695858295016e-10
+      },
+      {
+        "frequency": 6.231857748027244,
+        "minus_im_chi_plus": 2.0282619334099425e-10,
+        "noise_plus": 2.0283636005275842e-10
+      },
+      {
+        "frequency": 6.232222629801048,
+        "minus_im_chi_plus": 1.4766725197787522e-09,
+        "noise_plus": 1.476746492443705e-09
+      },
+      {
+        "frequency": 7.747972648630253,
+        "minus_im_chi_plus": 1.1094924138405428e-10,
+        "noise_plus": 1.1094966387964495e-10
+      },
+      {
+        "frequency": 7.756614953635273,
+        "minus_im_chi_plus": 1.6183669616292176e-09,
+        "noise_plus": 1.6183730345024619e-09
+      },
+      {
+        "frequency": 9.043085068560359,
+        "minus_im_chi_plus": 9.246358876230075e-10,
+        "noise_plus": 9.246362771033582e-10
+      },
+      {
+        "frequency": 9.22522647656685,
+        "minus_im_chi_plus": 6.0186158310235e-10,
+        "noise_plus": 6.018617691123493e-10
+      },
+      {
+        "frequency": 11.248979791782583,
+        "minus_im_chi_plus": 1.77900865298593e-08,
+        "noise_plus": 1.7790086706089097e-08
+      },
+      {
+        "frequency": 11.431121199789068,
+        "minus_im_chi_plus": 3.273669764548046e-09,
+        "noise_plus": 3.2736697883416936e-09
+      },
+      {
+        "frequency": 12.71759131471416,
+        "minus_im_chi_plus": 7.981141248987188e-07,
+        "noise_plus": 7.981141255498814e-07
+      },
+      {
+        "frequency": 12.726233619719178,
+        "minus_im_chi_plus": 5.707076877104077e-07,
+        "noise_plus": 5.707076881692439e-07
+      },
+      {
+        "frequency": 14.241983638548382,
+        "minus_im_chi_plus": 4.5100636358589184e-07,
+        "noise_plus": 4.5100636361345615e-07
+      },
+      {
+        "frequency": 14.242348520322185,
+        "minus_im_chi_plus": 4.195866681535241e-05,
+        "noise_plus": 4.195866681791522e-05
+      },
+      {
+        "frequency": 15.79084310660847,
+        "minus_im_chi_plus": 0.0002839953734513331,
+        "noise_plus": 0.0002839953734525804
+      },
+      {
+        "frequency": 15.790860377779186,
+        "minus_im_chi_plus": 0.00045244393620098703,
+        "noise_plus": 0.00045244393620297405
+      },
+      {
+        "frequency": 17.34927006833585,
+        "minus_im_chi_plus": 0.007120730992382318,
+        "noise_plus": 0.007120730992384528
+      },
+      {
+        "frequency": 17.349283204973553,
+        "minus_im_chi_plus": 7.286834403188929e-05,
+        "noise_plus": 7.286834403191191e-05
+      },
+      {
+        "frequency": 18.912037750738648,
+        "minus_im_chi_plus": 0.01974749997587075,
+        "noise_plus": 0.01974749997587118
+      },
+      {
+        "frequency": 18.91230407441755,
+        "minus_im_chi_plus": 0.015402486948701031,
+        "noise_plus": 0.015402486948701366
+      },
+      {
+        "frequency": 20.47420626834943,
+        "minus_im_chi_plus": 3.322234710237289e-27,
+        "noise_plus": 3.322234710237294e-27
+      },
+      {
+        "frequency": 20.480430953132892,
+        "minus_im_chi_plus": 0.0678689430124021,
+        "noise_plus": 0.0678689430124022
+      },
+      {
+        "frequency": 21.951779858400776,
+        "minus_im_chi_plus": 0.019934208925693128,
+        "noise_plus": 0.019934208925693135
+      },
+      {
+        "frequency": 22.13644202250584,
+        "minus_im_chi_plus": 0.016860229453360142,
+        "noise_plus": 0.016860229453360142
+      },
+      {
+        "frequency": 0.00026632367889867226,
+        "minus_im_chi_plus": 1.4718476621757721e-16,
+        "noise_plus": 6.501847157583161e-13
+      },
+      {
+        "frequency": 1.5630208694439895,
+        "minus_im_chi_plus": 1.2669657861367833e-09,
+        "noise_plus": 1.4581280606906047e-09
+      },
+      {
+        "frequency": 1.563034006081688,
+        "minus_im_chi_plus": 1.0938084493375939e-09,
+        "noise_plus": 1.258840442752516e-09
+      },
+      {
+        "frequency": 3.12144369663835,
+        "minus_im_chi_plus": 8.666160479293315e-11,
+        "noise_plus": 8.752548225613664e-11
+      },
+      {
+        "frequency": 3.121460967809065,
+        "minus_im_chi_plus": 1.0825223958830906e-08,
+        "noise_plus": 1.0933130927503482e-08
+      },
+      {
+        "frequency": 4.669955554095352,
+        "minus_im_chi_plus": 8.702702295911115e-09,
+        "noise_plus": 8.708911099767468e-09
+      },
+      {
+        "frequency": 4.670320435869155,
+        "minus_im_chi_plus": 1.8178732196606155e-08,
+        "noise_plus": 1.8191693477305693e-08
+      },
+      {
+        "frequency": 6.186070454698361,
+        "minus_im_chi_plus": 4.1460549172724293e-08,
+        "noise_plus": 4.1462795624841544e-08
+      },
+      {
+        "frequency": 6.19471275970338,
+        "minus_im_chi_plus": 4.1923138045127065e-09,
+        "noise_plus": 4.192537643178348e-09
+      },
+      {
+        "frequency": 7.481182874628465,
+        "minus_im_chi_plus": 4.159669878212559e-08,
+        "noise_plus": 4.159694808553361e-08
+      },
+      {
+        "frequency": 7.663324282634956,
+        "minus_im_chi_plus": 1.3792679297413497e-09,
+        "noise_plus": 1.379273994905056e-09
+      },
+      {
+        "frequency": 9.68707759785069,
+        "minus_im_chi_plus": 3.352107376947461e-07,
+        "noise_plus": 3.352107849415636e-07
+      },
+      {
+        "frequency": 9.869219005857175,
+        "minus_im_chi_plus": 8.488428406902846e-07,
+        "noise_plus": 8.488429284725546e-07
+      },
+      {
+        "frequency": 11.155689120782267,
+        "minus_im_chi_plus": 3.899885207299035e-05,
+        "noise_plus": 3.899885252571031e-05
+      },
+      {
+        "frequency": 11.164331425787285,
+        "minus_im_chi_plus": 7.362636305055596e-07,
+        "noise_plus": 7.362636389278564e-07
+      },
+      {
+        "frequency": 12.680081444616489,
+        "minus_im_chi_plus": 0.0004456001273263456,
+        "noise_plus": 0.0004456001277138381
+      },
+      {
+        "frequency": 12.680446326390292,
+        "minus_im_chi_plus": 0.0002748045484474224,
+        "noise_plus": 0.00027480454868624343
+      },
+      {
+        "frequency": 14.228940912676578,
+        "minus_im_chi_plus": 6.895923492510557e-05,
+        "noise_plus": 6.895923492941468e-05
+      },
+      {
+        "frequency": 14.228958183847293,
+        "minus_im_chi_plus": 0.00704560994116654,
+        "noise_plus": 0.007045609941606791
+      },
+      {
+        "frequency": 15.787367874403959,
+        "minus_im_chi_plus": 0.015466818523509255,
+        "noise_plus": 0.015466818523577584
+      },
+      {
+        "frequency": 15.787381011041658,
+        "minus_im_chi_plus": 0.019448694574064007,
+        "noise_plus": 0.019448694574149925
+      },
+      {
+        "frequency": 17.350135556806755,
+        "minus_im_chi_plus": 0.06766052299450967,
+        "noise_plus": 0.06766052299453064
+      },
+      {
+        "frequency": 17.350401880485656,
+        "minus_im_chi_plus": 7.455542801357712e-23,
+        "noise_plus": 7.455542801360023e-23
+      },
+      {
+        "frequency": 18.912304074417538,
+        "minus_im_chi_plus": 0.015402486949866501,
+        "noise_plus": 0.015402486949866836
+      },
+      {
+        "frequency": 18.918528759201,
+        "minus_im_chi_plus": 0.019297260452187846,
+        "noise_plus": 0.019297260452188263
+      },
+      {
+        "frequency": 20.389877664468884,
+        "minus_im_chi_plus": 0.00010567068906791615,
+        "noise_plus": 0.00010567068906791634
+      },
+      {
+        "frequency": 20.574539828573947,
+        "minus_im_chi_plus": 0.007232408978442041,
+        "noise_plus": 0.0072324089784420505
+      },
+      {
+        "frequency": 1.5627545457650909,
+        "minus_im_chi_plus": 1.1468578342363457e-09,
+        "noise_plus": 1.3199822619835524e-09
+      },
+      {
+        "frequency": 1.5627676824027894,
+        "minus_im_chi_plus": 1.2711281947822522e-09,
+        "noise_plus": 1.4630073007270453e-09
+      },
+      {
+        "frequency": 3.121177372959451,
+        "minus_im_chi_plus": 1.0875475740886589e-08,
+        "noise_plus": 1.098393616224206e-08
+      },
+      {
+        "frequency": 3.121194644130166,
+        "minus_im_chi_plus": 8.405711482923132e-11,
+        "noise_plus": 8.48953863033602e-11
+      },
+      {
+        "frequency": 4.669689230416453,
+        "minus_im_chi_plus": 1.813764328825121e-08,
+        "noise_plus": 1.8150589161934693e-08
+      },
+      {
+        "frequency": 4.670054112190257,
+        "minus_im_chi_plus": 8.675277311108919e-09,
+        "noise_plus": 8.681465511749364e-09
+      },
+      {
+        "frequency": 6.185804131019462,
+        "minus_im_chi_plus": 3.3548741421935865e-09,
+        "noise_plus": 3.355056001269173e-09
+      },
+      {
+        "frequency": 6.1944464360244815,
+        "minus_im_chi_plus": 4.142696827448121e-08,
+        "noise_plus": 4.142918117101141e-08
+      },
+      {
+        "frequency": 7.4809165509495665,
+        "minus_im_chi_plus": 2.2646202689001135e-08,
+        "noise_plus": 2.2646338476993255e-08
+      },
+      {
+        "frequency": 7.663057958956057,
+        "minus_im_chi_plus": 4.533633316799537e-08,
+        "noise_plus": 4.533653261931158e-08
+      },
+      {
+        "frequency": 9.686811274171792,
+        "minus_im_chi_plus": 5.347828762550963e-07,
+        "noise_plus": 5.347829516650645e-07
+      },
+      {
+        "frequency": 9.868952682178278,
+        "minus_im_chi_plus": 1.4537258017023173e-07,
+        "noise_plus": 1.453725952106059e-07
+      },
+      {
+        "frequency": 11.155422797103366,
+        "minus_im_chi_plus": 6.203645185430458e-07,
+        "noise_plus": 6.203645257478369e-07
+      },
+      {
+        "frequency": 11.164065102108388,
+        "minus_im_chi_plus": 3.884625493891385e-05,
+        "noise_plus": 3.8846255383486745e-05
+      },
+      {
+        "frequency": 12.67981512093759,
+        "minus_im_chi_plus": 0.000274915623932156,
+        "noise_plus": 0.00027491562417133
+      },
+      {
+        "frequency": 12.680180002711392,
+        "minus_im_chi_plus": 0.00044630643354258187,
+        "noise_plus": 0.0004463064339306235
+      },
+      {
+        "frequency": 14.228674588997679,
+        "minus_im_chi_plus": 0.007045929249468333,
+        "noise_plus": 0.007045929249908816
+      },
+      {
+        "frequency": 14.228691860168395,
+        "minus_im_chi_plus": 6.970397890348826e-05,
+        "noise_plus": 6.970397890784574e-05
+      },
+      {
+        "frequency": 15.787101550725058,
+        "minus_im_chi_plus": 0.01946775415539546,
+        "noise_plus": 0.019467754155481503
+      },
+      {
+        "frequency": 15.78711468736276,
+        "minus_im_chi_plus": 0.015445033039024673,
+        "noise_plus": 0.015445033039092934
+      },
+      {
+        "frequency": 17.349869233127855,
+        "minus_im_chi_plus": 7.454617564057859e-23,
+        "noise_plus": 7.454617564060171e-23
+      },
+      {
+        "frequency": 17.350135556806755,
+        "minus_im_chi_plus": 0.06766052299450995,
+        "noise_plus": 0.06766052299453092
+      },
+      {
+        "frequency": 18.91203775073864,
+        "minus_im_chi_plus": 0.019747499974705297,
+        "noise_plus": 0.019747499974705728
+      },
+      {
+        "frequency": 18.918262435522102,
+        "minus_im_chi_plus": 0.015647320623599123,
+        "noise_plus": 0.015647320623599463
+      },
+      {
+        "frequency": 20.389611340789983,
+        "minus_im_chi_plus": 0.007019170683409888,
+        "noise_plus": 0.007019170683409901
+      },
+      {
+        "frequency": 20.57427350489505,
+        "minus_im_chi_plus": 3.76882080355215e-05,
+        "noise_plus": 3.7688208035521544e-05
+      },
+      {
+        "frequency": 1.3136637698529796e-05,
+        "minus_im_chi_plus": 2.4269889473872312e-20,
+        "noise_plus": 2.173504368919285e-15
+      },
+      {
+        "frequency": 1.5584228271943603,
+        "minus_im_chi_plus": 2.805544155994353e-08,
+        "noise_plus": 3.232424667028485e-08
+      },
+      {
+        "frequency": 1.5584400983650752,
+        "minus_im_chi_plus": 2.4975858747875266e-08,
+        "noise_plus": 2.8775966643198113e-08
+      },
+      {
+        "frequency": 3.106934684651362,
+        "minus_im_chi_plus": 1.6324760577072528e-09,
+        "noise_plus": 1.6491576808739597e-09
+      },
+      {
+        "frequency": 3.1072995664251657,
+        "minus_im_chi_plus": 2.626395127540427e-07,
+        "noise_plus": 2.653216486682637e-07
+      },
+      {
+        "frequency": 4.623049585254371,
+        "minus_im_chi_plus": 2.847221373759061e-07,
+        "noise_plus": 2.849421353144219e-07
+      },
+      {
+        "frequency": 4.63169189025939,
+        "minus_im_chi_plus": 5.19079546778829e-07,
+        "noise_plus": 5.194747752538714e-07
+      },
+      {
+        "frequency": 5.918162005184476,
+        "minus_im_chi_plus": 2.0036748350113518e-06,
+        "noise_plus": 2.003846030816571e-06
+      },
+      {
+        "frequency": 6.100303413190966,
+        "minus_im_chi_plus": 3.059531197478927e-07,
+        "noise_plus": 3.059722993991632e-07
+      },
+      {
+        "frequency": 8.1240567284067,
+        "minus_im_chi_plus": 2.411143239382708e-05,
+        "noise_plus": 2.4111480839760725e-05
+      },
+      {
+        "frequency": 8.306198136413187,
+        "minus_im_chi_plus": 3.7941047286502397e-06,
+        "noise_plus": 3.7941103219539627e-06
+      },
+      {
+        "frequency": 9.592668251338276,
+        "minus_im_chi_plus": 0.0004293748667224109,
+        "noise_plus": 0.00042937493777726323
+      },
+      {
+        "frequency": 9.601310556343297,
+        "minus_im_chi_plus": 0.00024052918257488928,
+        "noise_plus": 0.0002405292217982026
+      },
+      {
+        "frequency": 11.117060575172498,
+        "minus_im_chi_plus": 7.471210436421823e-05,
+        "noise_plus": 7.471210529038302e-05
+      },
+      {
+        "frequency": 11.117425456946302,
+        "minus_im_chi_plus": 0.006923794331122842,
+        "noise_plus": 0.00692379441690008
+      },
+      {
+        "frequency": 12.665920043232589,
+        "minus_im_chi_plus": 0.015317189353444255,
+        "noise_plus": 0.015317189367088594
+      },
+      {
+        "frequency": 12.665937314403305,
+        "minus_im_chi_plus": 0.019363467364774248,
+        "noise_plus": 0.019363467382022447
+      },
+      {
+        "frequency": 14.224347004959968,
+        "minus_im_chi_plus": 0.06738710853549017,
+        "noise_plus": 0.06738710853973404
+      },
+      {
+        "frequency": 14.224360141597668,
+        "minus_im_chi_plus": 7.478981050985916e-22,
+        "noise_plus": 7.478981051456913e-22
+      },
+      {
+        "frequency": 15.787114687362767,
+        "minus_im_chi_plus": 0.015445033036563036,
+        "noise_plus": 0.015445033036631297
+      },
+      {
+        "frequency": 15.787381011041663,
+        "minus_im_chi_plus": 0.01944869457652634,
+        "noise_plus": 0.019448694576612257
+      },
+      {
+        "frequency": 17.34928320497355,
+        "minus_im_chi_plus": 7.286834418162634e-05,
+        "noise_plus": 7.286834418164896e-05
+      },
+      {
+        "frequency": 17.35550788975701,
+        "minus_im_chi_plus": 0.007081486644686536,
+        "noise_plus": 0.007081486644688712
+      },
+      {
+        "frequency": 18.82685679502489,
+        "minus_im_chi_plus": 0.00046623582063960885,
+        "noise_plus": 0.0004662358206396205
+      },
+      {
+        "frequency": 19.01151895912996,
+        "minus_im_chi_plus": 0.00031722750098361847,
+        "noise_plus": 0.00031722750098362427
+      },
+      {
+        "frequency": 1.5584096905566618,
+        "minus_im_chi_plus": 2.497549650425596e-08,
+        "noise_plus": 2.877576067218294e-08
+      },
+      {
+        "frequency": 1.5584269617273767,
+        "minus_im_chi_plus": 2.8071740499301396e-08,
+        "noise_plus": 3.234299328734931e-08
+      },
+      {
+        "frequency": 3.1069215480136636,
+        "minus_im_chi_plus": 2.6138630790454557e-07,
+        "noise_plus": 2.6405737051823793e-07
+      },
+      {
+        "frequency": 3.107286429787467,
+        "minus_im_chi_plus": 1.680608778284109e-09,
+        "noise_plus": 1.6977719320545114e-09
+      },
+      {
+        "frequency": 4.623036448616673,
+        "minus_im_chi_plus": 4.477611747670499e-07,
+        "noise_plus": 4.481071567727886e-07
+      },
+      {
+        "frequency": 4.631678753621692,
+        "minus_im_chi_plus": 2.581347345945884e-07,
+        "noise_plus": 2.583312834230784e-07
+      },
+      {
+        "frequency": 5.918148868546777,
+        "minus_im_chi_plus": 8.525328035283358e-09,
+        "noise_plus": 8.526056463353774e-09
+      },
+      {
+        "frequency": 6.100290276553268,
+        "minus_im_chi_plus": 8.56866576059674e-07,
+        "noise_plus": 8.569202926851641e-07
+      },
+      {
+        "frequency": 8.124043591769002,
+        "minus_im_chi_plus": 4.1314376498088035e-07,
+        "noise_plus": 4.1314459510918175e-07
+      },
+      {
+        "frequency": 8.306184999775489,
+        "minus_im_chi_plus": 2.479543791715911e-05,
+        "noise_plus": 2.4795474471635706e-05
+      },
+      {
+        "frequency": 9.592655114700577,
+        "minus_im_chi_plus": 0.0002486588365372831,
+        "noise_plus": 0.00024865887768736627
+      },
+      {
+        "frequency": 9.601297419705599,
+        "minus_im_chi_plus": 0.000437271261415629,
+        "noise_plus": 0.0004372713327234451
+      },
+      {
+        "frequency": 11.1170474385348,
+        "minus_im_chi_plus": 0.006925277571143621,
+        "noise_plus": 0.006925277656994387
+      },
+      {
+        "frequency": 11.117412320308603,
+        "minus_im_chi_plus": 7.552444288227064e-05,
+        "noise_plus": 7.552444381794587e-05
+      },
+      {
+        "frequency": 12.66590690659489,
+        "minus_im_chi_plus": 0.01936338203631988,
+        "noise_plus": 0.019363382053568894
+      },
+      {
+        "frequency": 12.665924177765605,
+        "minus_im_chi_plus": 0.015314831509321758,
+        "noise_plus": 0.015314831522963897
+      },
+      {
+        "frequency": 14.224333868322269,
+        "minus_im_chi_plus": 7.479302770853404e-22,
+        "noise_plus": 7.479302771324443e-22
+      },
+      {
+        "frequency": 14.22434700495997,
+        "minus_im_chi_plus": 0.06738710853549024,
+        "noise_plus": 0.06738710853973412
+      },
+      {
+        "frequency": 15.787101550725067,
+        "minus_im_chi_plus": 0.019467754157855708,
+        "noise_plus": 0.01946775415794175
+      },
+      {
+        "frequency": 15.787367874403966,
+        "minus_im_chi_plus": 0.015466818521048257,
+        "noise_plus": 0.015466818521116588
+      },
+      {
+        "frequency": 17.349270068335848,
+        "minus_im_chi_plus": 0.007120730992232587,
+        "noise_plus": 0.007120730992234797
+      },
+      {
+        "frequency": 17.35549475311931,
+        "minus_im_chi_plus": 6.121306373898624e-05,
+        "noise_plus": 6.121306373900505e-05
+      },
+      {
+        "frequency": 18.826843658387194,
+        "minus_im_chi_plus": 0.00026239929227593264,
+        "noise_plus": 0.0002623992922759392
+      },
+      {
+        "frequency": 19.01150582249226,
+        "minus_im_chi_plus": 0.0004344357629673092,
+        "noise_plus": 0.0004344357629673172
+      },
+      {
+        "frequency": 1.7271170714927564e-05,
+        "minus_im_chi_plus": 4.617133370011793e-19,
+        "noise_plus": 3.1450799914053745e-14
+      },
+      {
+        "frequency": 1.5485118574570018,
+        "minus_im_chi_plus": 6.906071206184578e-07,
+        "noise_plus": 7.976109473909537e-07
+      },
+      {
+        "frequency": 1.5488767392308054,
+        "minus_im_chi_plus": 6.380683709934648e-07,
+        "noise_plus": 7.368657036021221e-07
+      },
+      {
+        "frequency": 3.064626758060011,
+        "minus_im_chi_plus": 5.7546930530296685e-11,
+        "noise_plus": 5.817907322459077e-11
+      },
+      {
+        "frequency": 3.07326906306503,
+        "minus_im_chi_plus": 8.107000874857831e-06,
+        "noise_plus": 8.194748985168184e-06
+      },
+      {
+        "frequency": 4.359739177990115,
+        "minus_im_chi_plus": 2.7465979129354718e-05,
+        "noise_plus": 2.749919070187995e-05
+      },
+      {
+        "frequency": 4.541880585996606,
+        "minus_im_chi_plus": 1.7247061694004227e-05,
+        "noise_plus": 1.726236074321912e-05
+      },
+      {
+        "frequency": 6.56563390121234,
+        "minus_im_chi_plus": 0.0002504987442516064,
+        "noise_plus": 0.0002505058634344162
+      },
+      {
+        "frequency": 6.747775309218826,
+        "minus_im_chi_plus": 9.521489575057297e-05,
+        "noise_plus": 9.521688117211897e-05
+      },
+      {
+        "frequency": 8.034245424143915,
+        "minus_im_chi_plus": 8.016021603415357e-05,
+        "noise_plus": 8.0160403663606e-05
+      },
+      {
+        "frequency": 8.042887729148937,
+        "minus_im_chi_plus": 0.00650273478103205,
+        "noise_plus": 0.006502749779867722
+      },
+      {
+        "frequency": 9.558637747978139,
+        "minus_im_chi_plus": 0.01500736606374557,
+        "noise_plus": 0.015007368695142366
+      },
+      {
+        "frequency": 9.55900262975194,
+        "minus_im_chi_plus": 0.01914485123067812,
+        "noise_plus": 0.01914485458546139
+      },
+      {
+        "frequency": 11.107497216038228,
+        "minus_im_chi_plus": 0.06684092501233212,
+        "noise_plus": 0.06684092585450331
+      },
+      {
+        "frequency": 11.107514487208944,
+        "minus_im_chi_plus": 2.2509969252028635e-21,
+        "noise_plus": 2.2509969535637682e-21
+      },
+      {
+        "frequency": 12.665924177765607,
+        "minus_im_chi_plus": 0.015314831499414578,
+        "noise_plus": 0.015314831513056718
+      },
+      {
+        "frequency": 12.665937314403308,
+        "minus_im_chi_plus": 0.019363467374682093,
+        "noise_plus": 0.019363467391930293
+      },
+      {
+        "frequency": 14.228691860168405,
+        "minus_im_chi_plus": 6.970397911416165e-05,
+        "noise_plus": 6.970397911851912e-05
+      },
+      {
+        "frequency": 14.228958183847304,
+        "minus_im_chi_plus": 0.007045609940957313,
+        "noise_plus": 0.0070456099413975645
+      },
+      {
+        "frequency": 15.790860377779188,
+        "minus_im_chi_plus": 0.0004524439363323889,
+        "noise_plus": 0.00045244393633437594
+      },
+      {
+        "frequency": 15.79708506256265,
+        "minus_im_chi_plus": 0.0002874142102052238,
+        "noise_plus": 0.0002874142102064727
+      },
+      {
+        "frequency": 17.268433967830532,
+        "minus_im_chi_plus": 4.150949349149876e-05,
+        "noise_plus": 4.150949349151355e-05
+      },
+      {
+        "frequency": 17.4530961319356,
+        "minus_im_chi_plus": 1.0289222347580102e-07,
+        "noise_plus": 1.028922234758278e-07
+      },
+      {
+        "frequency": 1.548494586286287,
+        "minus_im_chi_plus": 6.218628020058251e-07,
+        "noise_plus": 7.182183168542698e-07
+      },
+      {
+        "frequency": 1.5488594680600904,
+        "minus_im_chi_plus": 7.011640770170504e-07,
+        "noise_plus": 8.097344671345412e-07
+      },
+      {
+        "frequency": 3.064609486889296,
+        "minus_im_chi_plus": 7.112879054151141e-06,
+        "noise_plus": 7.191015059539015e-06
+      },
+      {
+        "frequency": 3.073251791894315,
+        "minus_im_chi_plus": 9.430657899059932e-08,
+        "noise_plus": 9.53273594877682e-08
+      },
+      {
+        "frequency": 4.3597219068194,
+        "minus_im_chi_plus": 1.2037837803796743e-05,
+        "noise_plus": 1.2052394258057756e-05
+      },
+      {
+        "frequency": 4.541863314825891,
+        "minus_im_chi_plus": 8.289114108808116e-07,
+        "noise_plus": 8.296467204198242e-07
+      },
+      {
+        "frequency": 6.565616630041625,
+        "minus_im_chi_plus": 0.00016338769355884355,
+        "noise_plus": 0.00016339233717897866
+      },
+      {
+        "frequency": 6.7477580380481115,
+        "minus_im_chi_plus": 0.00040544531502735315,
+        "noise_plus": 0.00040545376962359495
+      },
+      {
+        "frequency": 8.034228152973201,
+        "minus_im_chi_plus": 0.006531649070079728,
+        "noise_plus": 0.00653166435903206
+      },
+      {
+        "frequency": 8.042870457978221,
+        "minus_im_chi_plus": 0.00010217865449262924,
+        "noise_plus": 0.0001021788901789824
+      },
+      {
+        "frequency": 9.558620476807423,
+        "minus_im_chi_plus": 0.019132293863919216,
+        "noise_plus": 0.019132297218680785
+      },
+      {
+        "frequency": 9.558985358581227,
+        "minus_im_chi_plus": 0.014980576577653977,
+        "noise_plus": 0.014980579202801736
+      },
+      {
+        "frequency": 11.107479944867514,
+        "minus_im_chi_plus": 2.2510314319576185e-21,
+        "noise_plus": 2.2510314603206233e-21
+      },
+      {
+        "frequency": 11.10749721603823,
+        "minus_im_chi_plus": 0.06684092501233184,
+        "noise_plus": 0.06684092585450303
+      },
+      {
+        "frequency": 12.665906906594893,
+        "minus_im_chi_plus": 0.01936338204622755,
+        "noise_plus": 0.019363382063476566
+      },
+      {
+        "frequency": 12.665920043232592,
+        "minus_im_chi_plus": 0.015317189343536288,
+        "noise_plus": 0.015317189357180627
+      },
+      {
+        "frequency": 14.228674588997691,
+        "minus_im_chi_plus": 0.007045929249257366,
+        "noise_plus": 0.007045929249697848
+      },
+      {
+        "frequency": 14.228940912676588,
+        "minus_im_chi_plus": 6.895923513464875e-05,
+        "noise_plus": 6.895923513895785e-05
+      },
+      {
+        "frequency": 15.790843106608474,
+        "minus_im_chi_plus": 0.00028399537331993556,
+        "noise_plus": 0.00028399537332118277
+      },
+      {
+        "frequency": 15.797067791391935,
+        "minus_im_chi_plus": 0.0004447810140817396,
+        "noise_plus": 0.00044478101408367243
+      },
+      {
+        "frequency": 17.268416696659816,
+        "minus_im_chi_plus": 7.435736570321122e-07,
+        "noise_plus": 7.43573657032377e-07
+      },
+      {
+        "frequency": 17.453078860764883,
+        "minus_im_chi_plus": 4.401549175419935e-05,
+        "noise_plus": 4.40154917542108e-05
+      },
+      {
+        "frequency": 0.00036488177380356035,
+        "minus_im_chi_plus": 2.7330529876196224e-13,
+        "noise_plus": 8.812050339707055e-10
+      },
+      {
+        "frequency": 1.516114900603009,
+        "minus_im_chi_plus": 1.3420573085682385e-05,
+        "noise_plus": 1.5627394454723115e-05
+      },
+      {
+        "frequency": 1.524757205608028,
+        "minus_im_chi_plus": 1.8584176927964094e-05,
+        "noise_plus": 2.1591903672531848e-05
+      },
+      {
+        "frequency": 2.8112273205331135,
+        "minus_im_chi_plus": 3.750108914718107e-05,
+        "noise_plus": 3.813672457592276e-05
+      },
+      {
+        "frequency": 2.993368728539604,
+        "minus_im_chi_plus": 9.861520236983979e-05,
+        "noise_plus": 9.983884323044425e-05
+      },
+      {
+        "frequency": 5.0171220437553385,
+        "minus_im_chi_plus": 8.778030119518185e-06,
+        "noise_plus": 8.781500432056155e-06
+      },
+      {
+        "frequency": 5.199263451761825,
+        "minus_im_chi_plus": 0.0045930241509011,
+        "noise_plus": 0.004594356359638747
+      },
+      {
+        "frequency": 6.485733566686914,
+        "minus_im_chi_plus": 0.014199443441117607,
+        "noise_plus": 0.014199905702143205
+      },
+      {
+        "frequency": 6.494375871691934,
+        "minus_im_chi_plus": 0.01849068939871996,
+        "noise_plus": 0.018491282581230273
+      },
+      {
+        "frequency": 8.010125890521138,
+        "minus_im_chi_plus": 0.06542995914656925,
+        "noise_plus": 0.06543011870739282
+      },
+      {
+        "frequency": 8.01049077229494,
+        "minus_im_chi_plus": 1.456522688010748e-24,
+        "noise_plus": 1.4565262377584056e-24
+      },
+      {
+        "frequency": 9.558985358581225,
+        "minus_im_chi_plus": 0.014980576571278976,
+        "noise_plus": 0.014980579196426733
+      },
+      {
+        "frequency": 9.55900262975194,
+        "minus_im_chi_plus": 0.019144851237053225,
+        "noise_plus": 0.0191448545918365
+      },
+      {
+        "frequency": 11.117412320308606,
+        "minus_im_chi_plus": 7.552444303973447e-05,
+        "noise_plus": 7.55244439754097e-05
+      },
+      {
+        "frequency": 11.117425456946307,
+        "minus_im_chi_plus": 0.006923794330965475,
+        "noise_plus": 0.006923794416742713
+      },
+      {
+        "frequency": 12.680180002711403,
+        "minus_im_chi_plus": 0.0004463064335226325,
+        "noise_plus": 0.00044630643391067415
+      },
+      {
+        "frequency": 12.680446326390303,
+        "minus_im_chi_plus": 0.00027480454846736573,
+        "noise_plus": 0.0002748045487061868
+      },
+      {
+        "frequency": 14.242348520322185,
+        "minus_im_chi_plus": 4.195866681531243e-05,
+        "noise_plus": 4.195866681787524e-05
+      },
+      {
+        "frequency": 14.248573205105647,
+        "minus_im_chi_plus": 3.9688347471678876e-07,
+        "noise_plus": 3.9688347474077504e-07
+      },
+      {
+        "frequency": 15.719922110373531,
+        "minus_im_chi_plus": 5.879116874880737e-07,
+        "noise_plus": 5.879116874909865e-07
+      },
+      {
+        "frequency": 15.904584274478598,
+        "minus_im_chi_plus": 7.328332203140566e-07,
+        "noise_plus": 7.328332203167092e-07
+      },
+      {
+        "frequency": 1.5157500188292055,
+        "minus_im_chi_plus": 2.095542311871683e-05,
+        "noise_plus": 2.4403556859219984e-05
+      },
+      {
+        "frequency": 1.5243923238342245,
+        "minus_im_chi_plus": 2.9255100740732302e-05,
+        "noise_plus": 3.399302205143713e-05
+      },
+      {
+        "frequency": 2.81086243875931,
+        "minus_im_chi_plus": 0.0004413658032902939,
+        "noise_plus": 0.00044885154041617
+      },
+      {
+        "frequency": 2.9930038467658004,
+        "minus_im_chi_plus": 7.291114618606904e-05,
+        "noise_plus": 7.381640985340176e-05
+      },
+      {
+        "frequency": 5.016757161981535,
+        "minus_im_chi_plus": 0.003943318776296207,
+        "noise_plus": 0.003944878698195417
+      },
+      {
+        "frequency": 5.198898569988021,
+        "minus_im_chi_plus": 0.0003776563981395502,
+        "noise_plus": 0.00037776600552720584
+      },
+      {
+        "frequency": 6.4853686849131105,
+        "minus_im_chi_plus": 0.018054209679998018,
+        "noise_plus": 0.01805479779713607
+      },
+      {
+        "frequency": 6.494010989918131,
+        "minus_im_chi_plus": 0.013569758516832491,
+        "noise_plus": 0.013570194105678128
+      },
+      {
+        "frequency": 8.009761008747333,
+        "minus_im_chi_plus": 1.4576196016729524e-24,
+        "noise_plus": 1.457623158503807e-24
+      },
+      {
+        "frequency": 8.010125890521136,
+        "minus_im_chi_plus": 0.06542995914656886,
+        "noise_plus": 0.06543011870739243
+      },
+      {
+        "frequency": 9.558620476807423,
+        "minus_im_chi_plus": 0.019132293870297724,
+        "noise_plus": 0.019132297225059297
+      },
+      {
+        "frequency": 9.558637747978139,
+        "minus_im_chi_plus": 0.015007366057366679,
+        "noise_plus": 0.015007368688763473
+      },
+      {
+        "frequency": 11.117047438534803,
+        "minus_im_chi_plus": 0.006925277570986897,
+        "noise_plus": 0.006925277656837664
+      },
+      {
+        "frequency": 11.117060575172502,
+        "minus_im_chi_plus": 7.47121045208416e-05,
+        "noise_plus": 7.471210544700638e-05
+      },
+      {
+        "frequency": 12.6798151209376,
+        "minus_im_chi_plus": 0.0002749156239520725,
+        "noise_plus": 0.0002749156241912465
+      },
+      {
+        "frequency": 12.680081444616498,
+        "minus_im_chi_plus": 0.0004456001273064011,
+        "noise_plus": 0.00044560012769389364
+      },
+      {
+        "frequency": 14.241983638548383,
+        "minus_im_chi_plus": 4.510063636249306e-07,
+        "noise_plus": 4.5100636365249484e-07
+      },
+      {
+        "frequency": 14.248208323331845,
+        "minus_im_chi_plus": 4.183722551434347e-05,
+        "noise_plus": 4.183722551687353e-05
+      },
+      {
+        "frequency": 15.719557228599726,
+        "minus_im_chi_plus": 8.57460841621426e-07,
+        "noise_plus": 8.574608416256769e-07
+      },
+      {
+        "frequency": 15.904219392704793,
+        "minus_im_chi_plus": 7.891498890082068e-07,
+        "noise_plus": 7.891498890110651e-07
+      },
+      {
+        "frequency": 0.008642305005019058,
+        "minus_im_chi_plus": 1.2613072715092644e-07,
+        "noise_plus": 1.717039144645768e-05
+      },
+      {
+        "frequency": 1.2951124199301047,
+        "minus_im_chi_plus": 0.0006359281667568352,
+        "noise_plus": 0.0007941135721620313
+      },
+      {
+        "frequency": 1.4772538279365952,
+        "minus_im_chi_plus": 3.524005479770335e-05,
+        "noise_plus": 4.146548416213205e-05
+      },
+      {
+        "frequency": 3.5010071431523295,
+        "minus_im_chi_plus": 0.009942831036644686,
+        "noise_plus": 0.009994696176275563
+      },
+      {
+        "frequency": 3.6831485511588156,
+        "minus_im_chi_plus": 0.015866796647908542,
+        "noise_plus": 0.015927481194167
+      },
+      {
+        "frequency": 4.969618666083905,
+        "minus_im_chi_plus": 0.05943720132248494,
+        "noise_plus": 0.05946267601015168
+      },
+      {
+        "frequency": 4.978260971088925,
+        "minus_im_chi_plus": 7.617706584353898e-28,
+        "noise_plus": 7.620923893401579e-28
+      },
+      {
+        "frequency": 6.494010989918128,
+        "minus_im_chi_plus": 0.01356975851668661,
+        "noise_plus": 0.013570194105532243
+      },
+      {
+        "frequency": 6.494375871691931,
+        "minus_im_chi_plus": 0.018490689398865646,
+        "noise_plus": 0.018491282581375966
+      },
+      {
+        "frequency": 8.042870457978218,
+        "minus_im_chi_plus": 0.00010217865479160498,
+        "noise_plus": 0.00010217889047795884
+      },
+      {
+        "frequency": 8.042887729148934,
+        "minus_im_chi_plus": 0.00650273478073302,
+        "noise_plus": 0.006502749779568691
+      },
+      {
+        "frequency": 9.601297419705597,
+        "minus_im_chi_plus": 0.0004372712614831177,
+        "noise_plus": 0.0004372713327909338
+      },
+      {
+        "frequency": 9.601310556343297,
+        "minus_im_chi_plus": 0.00024052918250741252,
+        "noise_plus": 0.0002405292217307258
+      },
+      {
+        "frequency": 11.164065102108395,
+        "minus_im_chi_plus": 3.8846254939267444e-05,
+        "noise_plus": 3.884625538384034e-05
+      },
+      {
+        "frequency": 11.164331425787292,
+        "minus_im_chi_plus": 7.362636301492472e-07,
+        "noise_plus": 7.362636385715441e-07
+      },
+      {
+        "frequency": 12.726233619719178,
+        "minus_im_chi_plus": 5.707076877109697e-07,
+        "noise_plus": 5.707076881698059e-07
+      },
+      {
+        "frequency": 12.73245830450264,
+        "minus_im_chi_plus": 8.020117287531282e-07,
+        "noise_plus": 8.020117293911402e-07
+      },
+      {
+        "frequency": 14.20380720977052,
+        "minus_im_chi_plus": 8.947108454077154e-11,
+        "noise_plus": 8.947108454660644e-11
+      },
+      {
+        "frequency": 14.388469373875587,
+        "minus_im_chi_plus": 2.796769590837585e-08,
+        "noise_plus": 2.7967695909708358e-08
+      },
+      {
+        "frequency": 1.2864701149250857,
+        "minus_im_chi_plus": 0.0025164314813089137,
+        "noise_plus": 0.0031528228125845535
+      },
+      {
+        "frequency": 1.4686115229315762,
+        "minus_im_chi_plus": 0.0008978610425782591,
+        "noise_plus": 0.001059033418128907
+      },
+      {
+        "frequency": 3.49236483814731,
+        "minus_im_chi_plus": 0.008683202374790477,
+        "noise_plus": 0.008729169018989702
+      },
+      {
+        "frequency": 3.6745062461537965,
+        "minus_im_chi_plus": 0.006686962508245106,
+        "noise_plus": 0.006712916887872688
+      },
+      {
+        "frequency": 4.960976361078886,
+        "minus_im_chi_plus": 7.624003026100927e-28,
+        "noise_plus": 7.627319034124479e-28
+      },
+      {
+        "frequency": 4.969618666083907,
+        "minus_im_chi_plus": 0.059437201322484985,
+        "noise_plus": 0.059462676010151726
+      },
+      {
+        "frequency": 6.485368684913109,
+        "minus_im_chi_plus": 0.018054209680145664,
+        "noise_plus": 0.01805479779728372
+      },
+      {
+        "frequency": 6.485733566686912,
+        "minus_im_chi_plus": 0.01419944344097023,
+        "noise_plus": 0.014199905701995823
+      },
+      {
+        "frequency": 8.034228152973197,
+        "minus_im_chi_plus": 0.00653164906981436,
+        "noise_plus": 0.00653166435876669
+      },
+      {
+        "frequency": 8.034245424143913,
+        "minus_im_chi_plus": 8.016021629954569e-05,
+        "noise_plus": 8.016040392899873e-05
+      },
+      {
+        "frequency": 9.592655114700579,
+        "minus_im_chi_plus": 0.00024865883646928784,
+        "noise_plus": 0.000248658877619371
+      },
+      {
+        "frequency": 9.592668251338278,
+        "minus_im_chi_plus": 0.0004293748667903951,
+        "noise_plus": 0.0004293749378452475
+      },
+      {
+        "frequency": 11.155422797103375,
+        "minus_im_chi_plus": 6.203645182154018e-07,
+        "noise_plus": 6.203645254201929e-07
+      },
+      {
+        "frequency": 11.155689120782274,
+        "minus_im_chi_plus": 3.899885207331396e-05,
+        "noise_plus": 3.8998852526033914e-05
+      },
+      {
+        "frequency": 12.717591314714157,
+        "minus_im_chi_plus": 7.981141248979597e-07,
+        "noise_plus": 7.981141255491223e-07
+      },
+      {
+        "frequency": 12.723815999497619,
+        "minus_im_chi_plus": 5.955325095117227e-07,
+        "noise_plus": 5.955325099924892e-07
+      },
+      {
+        "frequency": 14.195164904765502,
+        "minus_im_chi_plus": 2.6839955031780752e-08,
+        "noise_plus": 2.6839955033557036e-08
+      },
+      {
+        "frequency": 14.379827068870568,
+        "minus_im_chi_plus": 2.9729611198546605e-10,
+        "noise_plus": 2.972961119998403e-10
+      },
+      {
+        "frequency": 0.18214140800649048,
+        "minus_im_chi_plus": 0.0006677248788522064,
+        "noise_plus": 0.0043473096639129
+      },
+      {
+        "frequency": 2.2058947232222246,
+        "minus_im_chi_plus": 0.022671082760900838,
+        "noise_plus": 0.02376308679503615
+      },
+      {
+        "frequency": 2.388036131228711,
+        "minus_im_chi_plus": 5.582858844845458e-31,
+        "noise_plus": 5.77890448296194e-31
+      },
+      {
+        "frequency": 3.6745062461538005,
+        "minus_im_chi_plus": 0.006686962508247376,
+        "noise_plus": 0.0067129168878749665
+      },
+      {
+        "frequency": 3.683148551158821,
+        "minus_im_chi_plus": 0.01586679664790647,
+        "noise_plus": 0.015927481194164917
+      },
+      {
+        "frequency": 5.198898569988024,
+        "minus_im_chi_plus": 0.00037765639815200944,
+        "noise_plus": 0.00037776600553966863
+      },
+      {
+        "frequency": 5.199263451761826,
+        "minus_im_chi_plus": 0.004593024150888661,
+        "noise_plus": 0.004594356359626304
+      },
+      {
+        "frequency": 6.747758038048112,
+        "minus_im_chi_plus": 0.00040544531509947385,
+        "noise_plus": 0.0004054537696957173
+      },
+      {
+        "frequency": 6.747775309218828,
+        "minus_im_chi_plus": 9.521489567845922e-05,
+        "noise_plus": 9.521688110000373e-05
+      },
+      {
+        "frequency": 8.306184999775493,
+        "minus_im_chi_plus": 2.479543791513817e-05,
+        "noise_plus": 2.4795474469614763e-05
+      },
+      {
+        "frequency": 8.306198136413192,
+        "minus_im_chi_plus": 3.794104730670194e-06,
+        "noise_plus": 3.7941103239739203e-06
+      },
+      {
+        "frequency": 9.86895268217829,
+        "minus_im_chi_plus": 1.453725801935233e-07,
+        "noise_plus": 1.4537259523389748e-07
+      },
+      {
+        "frequency": 9.869219005857188,
+        "minus_im_chi_plus": 8.488428406665945e-07,
+        "noise_plus": 8.488429284488639e-07
+      },
+      {
+        "frequency": 11.431121199789072,
+        "minus_im_chi_plus": 3.2736697645327104e-09,
+        "noise_plus": 3.2736697883263564e-09
+      },
+      {
+        "frequency": 11.437345884572533,
+        "minus_im_chi_plus": 1.7733718727187418e-08,
+        "noise_plus": 1.7733718854722674e-08
+      },
+      {
+        "frequency": 12.908694789840416,
+        "minus_im_chi_plus": 2.0424330226551553e-10,
+        "noise_plus": 2.042433023859305e-10
+      },
+      {
+        "frequency": 13.093356953945483,
+        "minus_im_chi_plus": 3.563993193573474e-11,
+        "noise_plus": 3.5639931951085617e-11
+      },
+      {
+        "frequency": 2.023753315215734,
+        "minus_im_chi_plus": 6.7285846425330315e-31,
+        "noise_plus": 7.174203519309472e-31
+      },
+      {
+        "frequency": 2.2058947232222206,
+        "minus_im_chi_plus": 0.02267108276090072,
+        "noise_plus": 0.023763086795036043
+      },
+      {
+        "frequency": 3.49236483814731,
+        "minus_im_chi_plus": 0.008683202374788455,
+        "noise_plus": 0.00872916901898767
+      },
+      {
+        "frequency": 3.5010071431523304,
+        "minus_im_chi_plus": 0.009942831036646636,
+        "noise_plus": 0.00999469617627752
+      },
+      {
+        "frequency": 5.016757161981533,
+        "minus_im_chi_plus": 0.003943318776294448,
+        "noise_plus": 0.003944878698193657
+      },
+      {
+        "frequency": 5.017122043755336,
+        "minus_im_chi_plus": 8.778030121275445e-06,
+        "noise_plus": 8.781500433814111e-06
+      },
+      {
+        "frequency": 6.565616630041622,
+        "minus_im_chi_plus": 0.00016338769348458882,
+        "noise_plus": 0.00016339233710472182
+      },
+      {
+        "frequency": 6.565633901212338,
+        "minus_im_chi_plus": 0.0002504987443258478,
+        "noise_plus": 0.00025050586350865975
+      },
+      {
+        "frequency": 8.124043591769002,
+        "minus_im_chi_plus": 4.1314376563833955e-07,
+        "noise_plus": 4.1314459576664216e-07
+      },
+      {
+        "frequency": 8.124056728406702,
+        "minus_im_chi_plus": 2.411143239316813e-05,
+        "noise_plus": 2.4111480839101778e-05
+      },
+      {
+        "frequency": 9.686811274171799,
+        "minus_im_chi_plus": 5.34782876226749e-07,
+        "noise_plus": 5.347829516367171e-07
+      },
+      {
+        "frequency": 9.687077597850697,
+        "minus_im_chi_plus": 3.3521073772280166e-07,
+        "noise_plus": 3.3521078496961903e-07
+      },
+      {
+        "frequency": 11.248979791782581,
+        "minus_im_chi_plus": 1.779008652983661e-08,
+        "noise_plus": 1.7790086706066396e-08
+      },
+      {
+        "frequency": 11.255204476566043,
+        "minus_im_chi_plus": 6.374469079651475e-11,
+        "noise_plus": 6.374469142132707e-11
+      },
+      {
+        "frequency": 12.726553381833925,
+        "minus_im_chi_plus": 6.320756934424562e-11,
+        "noise_plus": 6.320756939503545e-11
+      },
+      {
+        "frequency": 12.911215545938992,
+        "minus_im_chi_plus": 6.71979557397803e-11,
+        "noise_plus": 6.719795577922853e-11
+      },
+      {
+        "frequency": 0.18214140800648626,
+        "minus_im_chi_plus": 0.00066772487885219,
+        "noise_plus": 0.004347309663913004
+      },
+      {
+        "frequency": 1.4686115229315757,
+        "minus_im_chi_plus": 0.0008978610425782378,
+        "noise_plus": 0.001059033418128882
+      },
+      {
+        "frequency": 1.477253827936596,
+        "minus_im_chi_plus": 3.52400547977456e-05,
+        "noise_plus": 4.14654841621815e-05
+      },
+      {
+        "frequency": 2.9930038467657987,
+        "minus_im_chi_plus": 7.29111461852712e-05,
+        "noise_plus": 7.38164098525939e-05
+      },
+      {
+        "frequency": 2.9933687285396013,
+        "minus_im_chi_plus": 9.861520237063983e-05,
+        "noise_plus": 9.983884323125422e-05
+      },
+      {
+        "frequency": 4.541863314825887,
+        "minus_im_chi_plus": 8.289114122685154e-07,
+        "noise_plus": 8.29646721808764e-07
+      },
+      {
+        "frequency": 4.541880585996603,
+        "minus_im_chi_plus": 1.7247061692616557e-05,
+        "noise_plus": 1.7262360741830354e-05
+      },
+      {
+        "frequency": 6.100290276553268,
+        "minus_im_chi_plus": 8.568665761664036e-07,
+        "noise_plus": 8.569202927918967e-07
+      },
+      {
+        "frequency": 6.100303413190968,
+        "minus_im_chi_plus": 3.059531196412624e-07,
+        "noise_plus": 3.0597229929252887e-07
+      },
+      {
+        "frequency": 7.663057958956065,
+        "minus_im_chi_plus": 4.5336333168515114e-08,
+        "noise_plus": 4.533653261983096e-08
+      },
+      {
+        "frequency": 7.663324282634964,
+        "minus_im_chi_plus": 1.3792679292148185e-09,
+        "noise_plus": 1.3792739943784933e-09
+      },
+      {
+        "frequency": 9.225226476566847,
+        "minus_im_chi_plus": 6.018615831029774e-10,
+        "noise_plus": 6.018617691129658e-10
+      },
+      {
+        "frequency": 9.231451161350309,
+        "minus_im_chi_plus": 5.338362912758956e-10,
+        "noise_plus": 5.33836454525466e-10
+      },
+      {
+        "frequency": 10.702800066618192,
+        "minus_im_chi_plus": 1.8838562489235075e-12,
+        "noise_plus": 1.883856296150886e-12
+      },
+      {
+        "frequency": 10.887462230723258,
+        "minus_im_chi_plus": 1.1833870558183431e-11,
+        "noise_plus": 1.1833870774922247e-11
+      },
+      {
+        "frequency": 1.2864701149250894,
+        "minus_im_chi_plus": 0.0025164314813086496,
+        "noise_plus": 0.0031528228125842117
+      },
+      {
+        "frequency": 1.2951124199301098,
+        "minus_im_chi_plus": 0.000635928166757137,
+        "noise_plus": 0.0007941135721623986
+      },
+      {
+        "frequency": 2.8108624387593126,
+        "minus_im_chi_plus": 0.00044136580328908546,
+        "noise_plus": 0.00044885154041494
+      },
+      {
+        "frequency": 2.8112273205331153,
+        "minus_im_chi_plus": 3.7501089148393175e-05,
+        "noise_plus": 3.81367245771554e-05
+      },
+      {
+        "frequency": 4.359721906819401,
+        "minus_im_chi_plus": 1.2037837797123035e-05,
+        "noise_plus": 1.2052394251376075e-05
+      },
+      {
+        "frequency": 4.359739177990117,
+        "minus_im_chi_plus": 2.7465979136027183e-05,
+        "noise_plus": 2.749919070856078e-05
+      },
+      {
+        "frequency": 5.918148868546782,
+        "minus_im_chi_plus": 8.525328062512948e-09,
+        "noise_plus": 8.526056490585635e-09
+      },
+      {
+        "frequency": 5.918162005184482,
+        "minus_im_chi_plus": 2.0036748349841692e-06,
+        "noise_plus": 2.0038460307894107e-06
+      },
+      {
+        "frequency": 7.480916550949579,
+        "minus_im_chi_plus": 2.264620268694703e-08,
+        "noise_plus": 2.2646338474938886e-08
+      },
+      {
+        "frequency": 7.481182874628478,
+        "minus_im_chi_plus": 4.15966987841664e-08,
+        "noise_plus": 4.159694808757325e-08
+      },
+      {
+        "frequency": 9.043085068560362,
+        "minus_im_chi_plus": 9.246358876178635e-10,
+        "noise_plus": 9.246362770981911e-10
+      },
+      {
+        "frequency": 9.049309753343824,
+        "minus_im_chi_plus": 3.0385406969930374e-10,
+        "noise_plus": 3.038541963431665e-10
+      },
+      {
+        "frequency": 10.520658658611705,
+        "minus_im_chi_plus": 1.0386761408520274e-11,
+        "noise_plus": 1.0386761763416478e-11
+      },
+      {
+        "frequency": 10.705320822716772,
+        "minus_im_chi_plus": 5.4397500877954725e-12,
+        "noise_plus": 5.43975022358427e-12
+      },
+      {
+        "frequency": 0.00864230500502039,
+        "minus_im_chi_plus": 1.2613072715131264e-07,
+        "noise_plus": 1.7170391446463487e-05
+      },
+      {
+        "frequency": 1.5243923238342232,
+        "minus_im_chi_plus": 2.9255100740506933e-05,
+        "noise_plus": 3.399302205117469e-05
+      },
+      {
+        "frequency": 1.5247572056080259,
+        "minus_im_chi_plus": 1.8584176928187454e-05,
+        "noise_plus": 2.1591903672791325e-05
+      },
+      {
+        "frequency": 3.073251791894312,
+        "minus_im_chi_plus": 9.430657866949885e-08,
+        "noise_plus": 9.532735916319906e-08
+      },
+      {
+        "frequency": 3.0732690630650277,
+        "minus_im_chi_plus": 8.107000875178242e-06,
+        "noise_plus": 8.194748985492847e-06
+      },
+      {
+        "frequency": 4.631678753621692,
+        "minus_im_chi_plus": 2.581347346709392e-07,
+        "noise_plus": 2.5833128349947294e-07
+      },
+      {
+        "frequency": 4.631691890259392,
+        "minus_im_chi_plus": 5.190795467024806e-07,
+        "noise_plus": 5.194747751775198e-07
+      },
+      {
+        "frequency": 6.1944464360244895,
+        "minus_im_chi_plus": 4.1426968273607286e-08,
+        "noise_plus": 4.142918117013342e-08
+      },
+      {
+        "frequency": 6.194712759703388,
+        "minus_im_chi_plus": 4.192313805385124e-09,
+        "noise_plus": 4.192537644049748e-09
+      },
+      {
+        "frequency": 7.756614953635272,
+        "minus_im_chi_plus": 1.618366961628677e-09,
+        "noise_plus": 1.6183730345015631e-09
+      },
+      {
+        "frequency": 7.7628396384187335,
+        "minus_im_chi_plus": 9.579237150791378e-11,
+        "noise_plus": 9.579272718215554e-11
+      },
+      {
+        "frequency": 9.234188543686617,
+        "minus_im_chi_plus": 3.201167749916067e-11,
+        "noise_plus": 3.2011687243028216e-11
+      },
+      {
+        "frequency": 9.418850707791684,
+        "minus_im_chi_plus": 2.6632856527561474e-11,
+        "noise_plus": 2.6632862450053278e-11
+      },
+      {
+        "frequency": 1.5157500188292028,
+        "minus_im_chi_plus": 2.0955423118880036e-05,
+        "noise_plus": 2.4403556859409777e-05
+      },
+      {
+        "frequency": 1.5161149006030055,
+        "minus_im_chi_plus": 1.3420573085520168e-05,
+        "noise_plus": 1.5627394454534294e-05
+      },
+      {
+        "frequency": 3.0646094868892915,
+        "minus_im_chi_plus": 7.112879054143403e-06,
+        "noise_plus": 7.191015059531728e-06
+      },
+      {
+        "frequency": 3.0646267580600073,
+        "minus_im_chi_plus": 5.754693796023791e-11,
+        "noise_plus": 5.817908073615424e-11
+      },
+      {
+        "frequency": 4.623036448616672,
+        "minus_im_chi_plus": 4.4776117469261265e-07,
+        "noise_plus": 4.481071566982683e-07
+      },
+      {
+        "frequency": 4.623049585254372,
+        "minus_im_chi_plus": 2.847221374503678e-07,
+        "noise_plus": 2.849421353889717e-07
+      },
+      {
+        "frequency": 6.185804131019469,
+        "minus_im_chi_plus": 3.3548741429740115e-09,
+        "noise_plus": 3.3550560020493095e-09
+      },
+      {
+        "frequency": 6.186070454698368,
+        "minus_im_chi_plus": 4.1460549171957834e-08,
+        "noise_plus": 4.146279562406438e-08
+      },
+      {
+        "frequency": 7.747972648630252,
+        "minus_im_chi_plus": 1.1094924138419159e-10,
+        "noise_plus": 1.1094966387975733e-10
+      },
+      {
+        "frequency": 7.754197333413713,
+        "minus_im_chi_plus": 1.6289466520241945e-09,
+        "noise_plus": 1.6289527897711802e-09
+      },
+      {
+        "frequency": 9.225546238681595,
+        "minus_im_chi_plus": 6.14587926628005e-12,
+        "noise_plus": 6.1458811646794314e-12
+      },
+      {
+        "frequency": 9.410208402786662,
+        "minus_im_chi_plus": 2.467238118666544e-11,
+        "noise_plus": 2.4672386754398494e-11
+      },
+      {
+        "frequency": 0.00036488177380267217,
+        "minus_im_chi_plus": 2.733052987275968e-13,
+        "noise_plus": 8.812050340013216e-10
+      },
+      {
+        "frequency": 1.5488594680600887,
+        "minus_im_chi_plus": 7.011640767773437e-07,
+        "noise_plus": 8.097344668585228e-07
+      },
+      {
+        "frequency": 1.5488767392308045,
+        "minus_im_chi_plus": 6.380683712321666e-07,
+        "noise_plus": 7.368657038787435e-07
+      },
+      {
+        "frequency": 3.107286429787469,
+        "minus_im_chi_plus": 1.6806087741054402e-09,
+        "noise_plus": 1.6977719278318994e-09
+      },
+      {
+        "frequency": 3.1072995664251692,
+        "minus_im_chi_plus": 2.6263951275801085e-07,
+        "noise_plus": 2.653216486726479e-07
+      },
+      {
+        "frequency": 4.670054112190266,
+        "minus_im_chi_plus": 8.675277310161632e-09,
+        "noise_plus": 8.681465510790142e-09
+      },
+      {
+        "frequency": 4.670320435869165,
+        "minus_im_chi_plus": 1.817873219758651e-08,
+        "noise_plus": 1.8191693478225137e-08
+      },
+      {
+        "frequency": 6.232222629801049,
+        "minus_im_chi_plus": 1.4766725197754863e-09,
+        "noise_plus": 1.4767464924360762e-09
+      },
+      {
+        "frequency": 6.23844731458451,
+        "minus_im_chi_plus": 1.8512629776272436e-10,
+        "noise_plus": 1.8513547388852178e-10
+      },
+      {
+        "frequency": 7.709796219852393,
+        "minus_im_chi_plus": 5.020676845796572e-11,
+        "noise_plus": 5.0206972465318773e-11
+      },
+      {
+        "frequency": 7.89445838395746,
+        "minus_im_chi_plus": 4.4081442898322174e-11,
+        "noise_plus": 4.4081573757116115e-11
+      },
+      {
+        "frequency": 1.548494586286286,
+        "minus_im_chi_plus": 6.218628022397655e-07,
+        "noise_plus": 7.182183171251628e-07
+      },
+      {
+        "frequency": 1.5485118574570018,
+        "minus_im_chi_plus": 6.906071203837159e-07,
+        "noise_plus": 7.97610947120868e-07
+      },
+      {
+        "frequency": 3.1069215480136663,
+        "minus_im_chi_plus": 2.613863079087446e-07,
+        "noise_plus": 2.640573705222822e-07
+      },
+      {
+        "frequency": 3.1069346846513666,
+        "minus_im_chi_plus": 1.63247605359863e-09,
+        "noise_plus": 1.6491576767256865e-09
+      },
+      {
+        "frequency": 4.669689230416464,
+        "minus_im_chi_plus": 1.813764328921391e-08,
+        "noise_plus": 1.8150589162874526e-08
+      },
+      {
+        "frequency": 4.669955554095362,
+        "minus_im_chi_plus": 8.702702294972876e-09,
+        "noise_plus": 8.708911098799045e-09
+      },
+      {
+        "frequency": 6.231857748027246,
+        "minus_im_chi_plus": 2.028261933465829e-10,
+        "noise_plus": 2.0283636005774774e-10
+      },
+      {
+        "frequency": 6.238082432810708,
+        "minus_im_chi_plus": 1.4352209537418632e-09,
+        "noise_plus": 1.435292137253384e-09
+      },
+      {
+        "frequency": 7.70943133807859,
+        "minus_im_chi_plus": 1.6051737661295512e-11,
+        "noise_plus": 1.6051802925492416e-11
+      },
+      {
+        "frequency": 7.894093502183657,
+        "minus_im_chi_plus": 7.729654682775047e-11,
+        "noise_plus": 7.729677643024226e-11
+      },
+      {
+        "frequency": 1.7271170715815742e-05,
+        "minus_im_chi_plus": 4.617133036408765e-19,
+        "noise_plus": 3.145079992247201e-14
+      },
+      {
+        "frequency": 1.5584269617273803,
+        "minus_im_chi_plus": 2.807174050386566e-08,
+        "noise_plus": 3.2342993292238366e-08
+      },
+      {
+        "frequency": 1.5584400983650806,
+        "minus_im_chi_plus": 2.4975858743593663e-08,
+        "noise_plus": 2.8775966638806495e-08
+      },
+      {
+        "frequency": 3.1211946441301777,
+        "minus_im_chi_plus": 8.405711524478973e-11,
+        "noise_plus": 8.489538672152515e-11
+      },
+      {
+        "frequency": 3.1214609678090763,
+        "minus_im_chi_plus": 1.0825223958742309e-08,
+        "noise_plus": 1.0933130926897973e-08
+      },
+      {
+        "frequency": 4.68336316174096,
+        "minus_im_chi_plus": 3.473447371494125e-10,
+        "noise_plus": 3.475869583751841e-10
+      },
+      {
+        "frequency": 4.689587846524422,
+        "minus_im_chi_plus": 7.108222416161782e-10,
+        "noise_plus": 7.113127147234175e-10
+      },
+      {
+        "frequency": 6.160936751792304,
+        "minus_im_chi_plus": 5.432308432261602e-14,
+        "noise_plus": 5.432615619573232e-14
+      },
+      {
+        "frequency": 6.345598915897371,
+        "minus_im_chi_plus": 2.007175009419744e-11,
+        "noise_plus": 2.0072579304297463e-11
+      },
+      {
+        "frequency": 1.5584096905566645,
+        "minus_im_chi_plus": 2.4975496500431846e-08,
+        "noise_plus": 2.8775760667439323e-08
+      },
+      {
+        "frequency": 1.5584228271943648,
+        "minus_im_chi_plus": 2.8055441564116307e-08,
+        "noise_plus": 3.232424667569097e-08
+      },
+      {
+        "frequency": 3.121177372959462,
+        "minus_im_chi_plus": 1.0875475740667126e-08,
+        "noise_plus": 1.0983936161821225e-08
+      },
+      {
+        "frequency": 3.1214436966383605,
+        "minus_im_chi_plus": 8.666160521567024e-11,
+        "noise_plus": 8.752548267895472e-11
+      },
+      {
+        "frequency": 4.683345890570244,
+        "minus_im_chi_plus": 8.77910825800229e-10,
+        "noise_plus": 8.785230558398484e-10
+      },
+      {
+        "frequency": 4.689570575353706,
+        "minus_im_chi_plus": 3.502479374333792e-10,
+        "noise_plus": 3.5048961844696536e-10
+      },
+      {
+        "frequency": 6.160919480621589,
+        "minus_im_chi_plus": 1.1432958533336433e-10,
+        "noise_plus": 1.1433605065646148e-10
+      },
+      {
+        "frequency": 6.345581644726655,
+        "minus_im_chi_plus": 2.3913426270125816e-10,
+        "noise_plus": 2.391441421770006e-10
+      },
+      {
+        "frequency": 1.3136637700306153e-05,
+        "minus_im_chi_plus": 2.426965817842945e-20,
+        "noise_plus": 2.173504369400913e-15
+      },
+      {
+        "frequency": 1.5627676824027974,
+        "minus_im_chi_plus": 1.2711281951858026e-09,
+        "noise_plus": 1.4630073008314512e-09
+      },
+      {
+        "frequency": 1.563034006081696,
+        "minus_im_chi_plus": 1.0938084493195444e-09,
+        "noise_plus": 1.2588404419014846e-09
+      },
+      {
+        "frequency": 3.12493620001358,
+        "minus_im_chi_plus": 1.7259143435404474e-11,
+        "noise_plus": 1.7430165963603892e-11
+      },
+      {
+        "frequency": 3.1311608847970414,
+        "minus_im_chi_plus": 4.113999747709009e-10,
+        "noise_plus": 4.1543345569050625e-10
+      },
+      {
+        "frequency": 4.602509790064924,
+        "minus_im_chi_plus": 1.3038017132178644e-10,
+        "noise_plus": 1.3048449416780095e-10
+      },
+      {
+        "frequency": 4.787171954169991,
+        "minus_im_chi_plus": 2.4238716515662343e-11,
+        "noise_plus": 2.42528840569137e-11
+      },
+      {
+        "frequency": 1.562754545765097,
+        "minus_im_chi_plus": 1.1468578342338853e-09,
+        "noise_plus": 1.3199822616162238e-09
+      },
+      {
+        "frequency": 1.5630208694439958,
+        "minus_im_chi_plus": 1.2669657871058345e-09,
+        "noise_plus": 1.458128060800393e-09
+      },
+      {
+        "frequency": 3.1249230633758796,
+        "minus_im_chi_plus": 6.038186387045476e-10,
+        "noise_plus": 6.098020705117338e-10
+      },
+      {
+        "frequency": 3.131147748159341,
+        "minus_im_chi_plus": 1.2118530032671047e-13,
+        "noise_plus": 1.2237346171758318e-13
+      },
+      {
+        "frequency": 4.602496653427224,
+        "minus_im_chi_plus": 5.436932630595054e-11,
+        "noise_plus": 5.441283054067122e-11
+      },
+      {
+        "frequency": 4.7871588175322906,
+        "minus_im_chi_plus": 3.7977425681958394e-10,
+        "noise_plus": 3.799962400108475e-10
+      },
+      {
+        "frequency": 0.00026632367889867226,
+        "minus_im_chi_plus": 1.4718571930761298e-16,
+        "noise_plus": 6.501847137016384e-13
+      },
+      {
+        "frequency": 1.5621685176107825,
+        "minus_im_chi_plus": 1.4254174662486352e-10,
+        "noise_plus": 1.640822664318485e-10
+      },
+      {
+        "frequency": 1.568393202394244,
+        "minus_im_chi_plus": 4.7334632446283507e-11,
+        "noise_plus": 5.440679358213456e-11
+      },
+      {
+        "frequency": 3.0397421076621267,
+        "minus_im_chi_plus": 1.8613698413869705e-10,
+        "noise_plus": 1.8827052550601174e-10
+      },
+      {
+        "frequency": 3.2244042717671935,
+        "minus_im_chi_plus": 2.4708641620821456e-10,
+        "noise_plus": 2.491523242209765e-10
+      },
+      {
+        "frequency": 1.5619021939318838,
+        "minus_im_chi_plus": 6.021483668117819e-11,
+        "noise_plus": 6.931877074223826e-11
+      },
+      {
+        "frequency": 1.5681268787153453,
+        "minus_im_chi_plus": 1.6569772106720052e-11,
+        "noise_plus": 1.9046629445334177e-11
+      },
+      {
+        "frequency": 3.039475783983228,
+        "minus_im_chi_plus": 3.126875400394496e-11,
+        "noise_plus": 3.162732629395275e-11
+      },
+      {
+        "frequency": 3.224137948088295,
+        "minus_im_chi_plus": 1.6567035721449985e-10,
+        "noise_plus": 1.6705616937402067e-10
+      },
+      {
+        "frequency": 0.006224684783461498,
+        "minus_im_chi_plus": 7.978191876419719e-14,
+        "noise_plus": 1.5078987823626736e-11
+      },
+      {
+        "frequency": 1.4775735900513443,
+        "minus_im_chi_plus": 8.22054781920416e-12,
+        "noise_plus": 9.671912548643322e-12
+      },
+      {
+        "frequency": 1.662235754156411,
+        "minus_im_chi_plus": 2.415104598854527e-10,
+        "noise_plus": 2.7193802309897024e-10
+      },
+      {
+        "frequency": 1.4713489052678828,
+        "minus_im_chi_plus": 1.3268510431155507e-10,
+        "noise_plus": 1.5638255902021732e-10
+      },
+      {
+        "frequency": 1.6560110693729495,
+        "minus_im_chi_plus": 3.368447470558783e-14,
+        "noise_plus": 3.7976357304210935e-14
+      },
+      {
+        "frequency": 0.18466216410506675,
+        "minus_im_chi_plus": 1.19296910760548e-11,
+        "noise_plus": 7.662642581691687e-11
+      }
+    ],
+    "zero_frequency_elastic_noise": 0.020602110145524932
+  },
+  "time_ordered_pulse_histories": [
+    {
+      "Slater_overlap": {
+        "imag": 0.023678288661076467,
+        "real": 0.9997126420200846
+      },
+      "created_holes": 1.3972080126455122e-05,
+      "created_particles": 1.3972080114409203e-05,
+      "epsilon": 0.02,
+      "excitation_energy": 3.458490692587302e-05,
+      "influence": {
+        "amplitude": {
+          "imag": 0.023678288661076467,
+          "real": 0.9997126420200843
+        },
+        "amplitude_underflow": false,
+        "log_modulus": -6.986064457720538e-06,
+        "principal_action": {
+          "imag": 6.986064457720538e-06,
+          "real": 0.023680667268075967
+        },
+        "principal_phase": 0.023680667268075967
+      },
+      "steps": 64,
+      "unitarity_error": 1.7763568394002505e-15,
+      "width": 0.5
+    },
+    {
+      "Slater_overlap": {
+        "imag": 0.023686370100734048,
+        "real": 0.9997124508346907
+      },
+      "created_holes": 1.3971566363810734e-05,
+      "created_particles": 1.3971566353124838e-05,
+      "epsilon": 0.02,
+      "excitation_energy": 3.458346151454252e-05,
+      "influence": {
+        "amplitude": {
+          "imag": 0.023686370100734027,
+          "real": 0.9997124508346895
+        },
+        "amplitude_underflow": false,
+        "log_modulus": -6.9858075761207035e-06,
+        "principal_action": {
+          "imag": 6.9858075761207035e-06,
+          "real": 0.023688751025354837
+        },
+        "principal_phase": 0.023688751025354837
+      },
+      "steps": 128,
+      "unitarity_error": 3.1086244689504383e-15,
+      "width": 0.5
+    },
+    {
+      "Slater_overlap": {
+        "imag": 0.02368826627774069,
+        "real": 0.9997124059705068
+      },
+      "created_holes": 1.3971438232040787e-05,
+      "created_particles": 1.3971438242199327e-05,
+      "epsilon": 0.02,
+      "excitation_energy": 3.458310105002591e-05,
+      "influence": {
+        "amplitude": {
+          "imag": 0.02368826627774069,
+          "real": 0.9997124059705063
+        },
+        "amplitude_underflow": false,
+        "log_modulus": -6.985743508628615e-06,
+        "principal_action": {
+          "imag": 6.985743508628615e-06,
+          "real": 0.023690647746286982
+        },
+        "principal_phase": 0.023690647746286982
+      },
+      "steps": 256,
+      "unitarity_error": 3.9968028886505635e-15,
+      "width": 0.5
+    }
+  ],
+  "zero_overlap_control": {
+    "amplitude": {
+      "imag": 0.0,
+      "real": 0.0
+    },
+    "log_action_defined": false
+  }
+}

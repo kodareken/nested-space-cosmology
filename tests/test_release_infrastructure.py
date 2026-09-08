@@ -22,6 +22,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
     def test_all_64_existing_scientific_files_and_pinned_imports_preserved(self):
         for entry in (self.release['preserved_64_scientific_files']
                       + self.release.get('preserved_75_scientific_files', [])
+                      + self.release.get('preserved_77_scientific_files', [])
                       + self.release['import_files']
                       + self.release['retained_byte_identical_files']):
             self.assertEqual(entry['sha256'], hashlib.sha256((ROOT / entry['path']).read_bytes()).hexdigest())
@@ -70,7 +71,9 @@ class ReleaseInfrastructureTests(unittest.TestCase):
     def test_all_hash_schemas_reject_tampering_before_normalization(self):
         for artifact in ('NSC-4-SHAPE-RESPONSE', 'NSC-4-LORENTZIAN-TRANSPORT',
                          'NSC-6-ENERGY-TRANSFER', 'NSC-4-COVARIANT-MEASURE',
-                         'NSC-8-CHIRAL-BOUNDARY', 'NSC-8-FINITE-TERMS'):
+                         'NSC-8-CHIRAL-BOUNDARY', 'NSC-8-FINITE-TERMS',
+                         'NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION',
+                         'NSC-10-INFLUENCE'):
             step = self.steps[artifact]
             original = json.loads((ROOT / step['output']).read_text())
             locations = self.reproducer.validate_authenticated_inputs(ROOT, original, step)
@@ -138,6 +141,10 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             'NSC-6-VACUUM-WORK': (1e-7, 5e-10),
             'NSC-8-FINITE-TERMS': (2e-8, 2e-6),
             'NSC-8-CHIRAL-BOUNDARY': (1e-8, 1e-8),
+            'NSC-9-COVARIANT-SOURCE': (2e-8, 2e-7),
+            'NSC-10-MEASURE-NORMALIZATION': (2e-8, 2e-7),
+            'NSC-10-INFLUENCE': (2e-8, 2e-7),
+            'NSC-11-RESPONSE-MATCHING': (2e-8, 2e-8),
         }
         for artifact, (relative, absolute) in specifications.items():
             policy = self.steps[artifact]['comparison_policy']
@@ -193,6 +200,35 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             row[mutation] = {} if mutation != 'dependencies' else []
             with self.assertRaises(self.reproducer.ReproductionError):
                 self.reproducer.validate_checkout(manifest)
+
+    def test_nsc9_through_nsc11_are_appended_terminal_all_field_records(self):
+        outputs = [row['output'] for row in self.manifest['steps']]
+        self.assertEqual(outputs[-4:], [
+            'results/nsc-9-covariant-source.json',
+            'results/nsc-10-measure-normalization.json',
+            'results/nsc-10-influence.json',
+            'results/nsc-11-response-matching.json',
+        ])
+        self.assertEqual(81, len(self.manifest['steps']))
+        self.assertEqual(23, len(self.release['scoped_follow_ups']))
+        self.assertEqual('14fddc92f13f6feaa0e6a1a3fd81567280212a59', self.release['source_commit'])
+        self.assertEqual('3a747cc17e33a6a3d6cc58634eaa40dd69e30a26',
+                         self.steps['NSC-9-COVARIANT-SOURCE']['follow_up_source_commit'])
+        for artifact in ('NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION', 'NSC-10-INFLUENCE', 'NSC-11-RESPONSE-MATCHING'):
+            step = self.steps[artifact]
+            value = json.loads((ROOT / step['output']).read_text())
+            self.reproducer.validate_identity(value, step)
+            self.assertTrue(value['terminal'])
+            self.assertEqual('all_fields', step['comparison_policy']['kind'])
+            absolute = 2e-8 if artifact == 'NSC-11-RESPONSE-MATCHING' else 2e-7
+            self.assertEqual((2e-8, absolute), (step['comparison_policy']['relative_tolerance'],
+                                            step['comparison_policy']['absolute_tolerance']))
+            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            normalized = self.reproducer.normalize_dynamic_hashes(value, locations)
+            self.assertEqual(value['source_hashes'], normalized['source_hashes'])
+            for path, digest in value['input_hashes'].items():
+                actual = normalized['input_hashes'][path]
+                self.assertEqual('<validated-generated-result>' if path.startswith('results/') else digest, actual)
 
     def test_importer_rejects_root_copy_private_and_escape_paths(self):
         for path in ('.', 'README.md', '../results/x.json', '/tmp/x.json',

@@ -43,7 +43,7 @@
     {
       "bytes": 964,
       "path": "CITATION.cff",
-      "sha256": "4e6bb5d94f51180678f2e4e45e1cb0af2048e19bbc8af6a76ae1e835fa7a6fe6"
+      "sha256": "bfb7850dfa2c6561f564cf9a35bf2d10b81ad3fd3eacb4265167fba479a65571"
     },
     {
       "bytes": 606,
@@ -63,12 +63,12 @@
     {
       "bytes": 1297,
       "path": "Makefile",
-      "sha256": "06c51dbbeb8f4c386c192616e8c066d76366a8f802743a968b52586d5bfa76dc"
+      "sha256": "3eba33e5d36361800da6a269600d4900a4ba89a1abf380581e6dc2007e6459ff"
     },
     {
-      "bytes": 6084,
+      "bytes": 6889,
       "path": "README.md",
-      "sha256": "004079cf1cc83c7c83ad5c05232fa769a0f58cf64ad8a7938200cbfe32297433"
+      "sha256": "b8269e1a17a92cef50c0211a3bc2c3c8267517c3931a63c2c7ab4ae4d375a9c2"
     },
     {
       "bytes": 629,
@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 6383,
+      "bytes": 8646,
       "path": "docs/current-result.md",
-      "sha256": "2d510a531d7c6b7998e42e9ae5907e6d7f4ae8cbaafc49ce55dd6117a23ce7a6"
+      "sha256": "0eedd5a1b537ef2f46eedef5fe636a3d6a98754729f3d9ea796d2b14f1261824"
     },
     {
       "bytes": 10991,
@@ -111,6 +111,11 @@
       "sha256": "9848ab71783af5dce121e06a1718de5b5877f288daa15c45603e49d2a26c309e"
     },
     {
+      "bytes": 11539,
+      "path": "docs/nsc-covariant-source.md",
+      "sha256": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6"
+    },
+    {
       "bytes": 8854,
       "path": "docs/nsc-dirac-tetrad.md",
       "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
@@ -131,9 +136,19 @@
       "sha256": "288be5e077d41dbd7481729b57aad064181cecfb83eba80eb44328fd7e0d7ea1"
     },
     {
+      "bytes": 8135,
+      "path": "docs/nsc-influence.md",
+      "sha256": "eb05623cc61a068d28faecfa32ffc726b6a8b3593e24322de1d37550b3c03f77"
+    },
+    {
       "bytes": 4039,
       "path": "docs/nsc-lorentzian-transport.md",
       "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
+    },
+    {
+      "bytes": 15106,
+      "path": "docs/nsc-measure-normalization.md",
+      "sha256": "649a4cb1a1bb44e134432062b576f840dee17068592d23a0c324e44503d16e2d"
     },
     {
       "bytes": 11598,
@@ -159,6 +174,11 @@
       "bytes": 7381,
       "path": "docs/nsc-regulated-recursion.md",
       "sha256": "9eceb09e6c125073650afb1f4481122dc6044e92222d969b14608056adc96b93"
+    },
+    {
+      "bytes": 6697,
+      "path": "docs/nsc-response-matching.md",
+      "sha256": "90dabe580da596f709cd79876bd5f621c768aefcd12c4b4c6e2a3ecd6d045e99"
     },
     {
       "bytes": 5911,
@@ -191,39 +211,39 @@
       "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
     },
     {
-      "bytes": 10212,
+      "bytes": 11055,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "7d6f37fa397fad4dc9f85d7698abfba77de4e5a6aa2baf7257b120337a75bdad"
+      "sha256": "27d5c5ecd2e7b0f1d7cf88230f00c39652f257943ea0b8da3084c07a331d0a19"
     },
     {
-      "bytes": 7282,
+      "bytes": 7497,
       "path": "docs/reproducing.md",
-      "sha256": "3c5db20abe3af835362dd843aec4d9d641b5f397a1f5d9bec2c166852668917c"
+      "sha256": "69931c58fd21ee1f991379cb02cd6c24069626b8c1e3eaa06beed26b657b0481"
     },
     {
       "bytes": 948,
       "path": "paper/build-manifest.json",
-      "sha256": "7ae304e71e3fdd62e0e3b4f13e15792b71f1a2c07d24f8289537589c4cefbf19"
+      "sha256": "eb065c87fb285d3c2af5caf2a453e26e821f7fba16614410fbe158fcadf30592"
     },
     {
       "bytes": 363,
       "path": "paper/metadata.json",
-      "sha256": "676d4afacae4a6c173e8f8ffd10a295d6cb56d44eaeccfaa227ae5b98da23f4e"
+      "sha256": "f771d9be19e1895a55764f80631c2afd392a5f26a6616070c4997d82de5f6216"
     },
     {
-      "bytes": 47881,
+      "bytes": 55230,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "96d15a26bd1929208fe653b8c8a6fc368b6e2665474c46c842f83f7472ae5860"
+      "sha256": "f99774c87f9394d0e1a7e68ed33ebfd49b3eecdd6ae74cca75cc4745633cc5f6"
     },
     {
-      "bytes": 615934,
+      "bytes": 740854,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "384d74a537edeb67c59ab68a802c002c93dfc78e9e88df6775396ceb307532b4"
+      "sha256": "f9bce51d41e6b229780d3b40cea9723be1241d0e9f18c020cefc3d220d506bf8"
     },
     {
       "bytes": 1064,
       "path": "pyproject.toml",
-      "sha256": "69c1c7fd4a389c27790492089600671379d45a67116a25541188ed6caa370938"
+      "sha256": "6a284e90c750d3da686bc13558bd99952dd778a6d229767f344d52a757faf6c4"
     },
     {
       "bytes": 36,
@@ -236,14 +256,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 2489,
+      "bytes": 3344,
       "path": "results/README.md",
-      "sha256": "149adfbbda066f5de76b5eb835ae50cb1c9588116ade5e0e3eac7ba94a8aed50"
+      "sha256": "2466ab9caf15ef40b7192afc7343503beb2ccb65dc0de7970c5ebf4b534eaf43"
     },
     {
-      "bytes": 91761,
+      "bytes": 101081,
       "path": "results/manifest.json",
-      "sha256": "ccd6d16c385355a1205e02d6667d4d5e9fe4c46d9165ec71dc4714c78d151614"
+      "sha256": "c37e97442fa295eea7034fff7649e3c9f1f579e9fd711e4092bd682c14df9a1b"
     },
     {
       "bytes": 7369,
@@ -481,6 +501,21 @@
       "sha256": "f8259c836993c928df1afeba79b7dc9c83dedb3c98f8e24fc926015f32096e93"
     },
     {
+      "bytes": 87170,
+      "path": "results/nsc-10-influence.json",
+      "sha256": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1"
+    },
+    {
+      "bytes": 26759,
+      "path": "results/nsc-10-measure-normalization.json",
+      "sha256": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f"
+    },
+    {
+      "bytes": 42985,
+      "path": "results/nsc-11-response-matching.json",
+      "sha256": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4"
+    },
+    {
       "bytes": 6908,
       "path": "results/nsc-2-zeta1-angular-tower.json",
       "sha256": "1246bee679d33bdefa6e18efddc62bc7f59439e805ea1485847d86211a65e0ad"
@@ -631,9 +666,14 @@
       "sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c"
     },
     {
-      "bytes": 75333,
+      "bytes": 122960,
+      "path": "results/nsc-9-covariant-source.json",
+      "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+    },
+    {
+      "bytes": 92840,
       "path": "results/release-spec.json",
-      "sha256": "a9d43693fbc347be75debc7e0a1c06853619210b184048617ca0d8b3cfc7e42d"
+      "sha256": "6cbc038c2de468995610f5c5b102dc7f5ed9590b9fe21a0a00eef9bd3b29953e"
     },
     {
       "bytes": 41402,
@@ -671,6 +711,11 @@
       "sha256": "6c0f49d5ae39313f82c6298b7526e8fa1f7c56cb1ab94ed354e0ec5de6a64e01"
     },
     {
+      "bytes": 19680,
+      "path": "scripts/check_nsc_covariant_source.py",
+      "sha256": "11112370061ae826ee92b666662d63a7b8417138ad55fed7b11d9ad288c0e393"
+    },
+    {
       "bytes": 15148,
       "path": "scripts/check_nsc_dirac_tetrad.py",
       "sha256": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae"
@@ -691,9 +736,19 @@
       "sha256": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b"
     },
     {
+      "bytes": 13271,
+      "path": "scripts/check_nsc_influence.py",
+      "sha256": "c4faa0aa1bb73c73274cf51c282cc25bc8ffb7b63f0bb2a95405084a5666c91d"
+    },
+    {
       "bytes": 7014,
       "path": "scripts/check_nsc_lorentzian.py",
       "sha256": "ed0edaa53326e6f312bbb21d1e6ec01ddf501190d6b2f6e0a1baef8044480bce"
+    },
+    {
+      "bytes": 2451,
+      "path": "scripts/check_nsc_measure_normalization.py",
+      "sha256": "31c9bccba28d39d32f5a1084f575780902b11dc9eafc1c5e728322ba803755ee"
     },
     {
       "bytes": 7357,
@@ -714,6 +769,11 @@
       "bytes": 10741,
       "path": "scripts/check_nsc_regulated_recursion.py",
       "sha256": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6"
+    },
+    {
+      "bytes": 10792,
+      "path": "scripts/check_nsc_response_matching.py",
+      "sha256": "5c16e9fe30b211ab0bcb0361213469f19ff03bc1f2d203ca279fb6efcb82a90c"
     },
     {
       "bytes": 19106,
@@ -751,14 +811,14 @@
       "sha256": "5d72fd1644248ac275f3ec22d79cd6367f89f26871b1ed6b6fe2cfaa3ffe8a5d"
     },
     {
-      "bytes": 1524,
+      "bytes": 1931,
       "path": "scripts/demonstrate.py",
-      "sha256": "8ac8a2893a2297e16e2de7574d8983fbc449c74f3c9f32e9d229ef9b0fb4ff24"
+      "sha256": "773a9006f6265c30a2997f9957013a5d7fbe6a6e87c1ca60b382877f8ea82a9e"
     },
     {
-      "bytes": 32427,
+      "bytes": 32492,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "abe2c804de3ec687a8b0af868a7cd7bab4659dd534e8972f51993a5d40b433fb"
+      "sha256": "716110f89c5a4f7e86beb39114ecd9f26ec7503a9bde95708a619a1c6119a44c"
     },
     {
       "bytes": 7793,
@@ -1051,9 +1111,9 @@
       "sha256": "e95ddc0eb9a4771c420bf79700c9c624dc0d23614a6ef313ab3608bab13acad7"
     },
     {
-      "bytes": 4432,
+      "bytes": 4542,
       "path": "scripts/stage_release_import.py",
-      "sha256": "a259c6af8c103a30d23831906f854ab9ce08bbe758dcce20931e02ed21e0a072"
+      "sha256": "ca36c55cf07045484871438d1b503d10c44cacf49bf85aef31ba4f249f36ea7c"
     },
     {
       "bytes": 281,
@@ -1076,9 +1136,19 @@
       "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
     },
     {
+      "bytes": 13527,
+      "path": "src/recursive_horizons/nsc_covariant_identities.py",
+      "sha256": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1"
+    },
+    {
       "bytes": 16422,
       "path": "src/recursive_horizons/nsc_covariant_measure.py",
       "sha256": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5"
+    },
+    {
+      "bytes": 17589,
+      "path": "src/recursive_horizons/nsc_covariant_operator.py",
+      "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
     },
     {
       "bytes": 5654,
@@ -1096,14 +1166,29 @@
       "sha256": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d"
     },
     {
+      "bytes": 10903,
+      "path": "src/recursive_horizons/nsc_influence.py",
+      "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8"
+    },
+    {
       "bytes": 7554,
       "path": "src/recursive_horizons/nsc_lorentzian.py",
       "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
     },
     {
+      "bytes": 42567,
+      "path": "src/recursive_horizons/nsc_measure_normalization.py",
+      "sha256": "e3ac23d660287765580689cd965eecf72552a813e24fb2b641942adc703a9b9f"
+    },
+    {
       "bytes": 9463,
       "path": "src/recursive_horizons/nsc_regulated.py",
       "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+    },
+    {
+      "bytes": 6466,
+      "path": "src/recursive_horizons/nsc_response_matching.py",
+      "sha256": "d762d8923ad47e9475310469a698444a1d03c76e5091305cf741a9d8fa2ee132"
     },
     {
       "bytes": 11005,
@@ -1156,9 +1241,19 @@
       "sha256": "83f4c011d441d37012ef3aa02e0c8b00a44d9e9906021704efcd68e092cd0cda"
     },
     {
+      "bytes": 3684,
+      "path": "tests/test_nsc_covariant_identities.py",
+      "sha256": "564562d792eea5f9b03183f942155f782c427664056956720a876be22e66dbcd"
+    },
+    {
       "bytes": 11063,
       "path": "tests/test_nsc_covariant_measure.py",
       "sha256": "fd6c12910efd8b28a8dfc129eed19e8660d45f02bf3bdd662a697b4930cbf95d"
+    },
+    {
+      "bytes": 6434,
+      "path": "tests/test_nsc_covariant_source.py",
+      "sha256": "0b66e4a5a080b4d0bbf45c847bc4acbeecfece6d57f13b17eea9bed738e58e8c"
     },
     {
       "bytes": 6263,
@@ -1171,9 +1266,24 @@
       "sha256": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
     },
     {
+      "bytes": 4992,
+      "path": "tests/test_nsc_influence.py",
+      "sha256": "1cd14a4241975dbdee752df616ef94fa19931d6fd248503d005dd5160c911c28"
+    },
+    {
       "bytes": 1052,
       "path": "tests/test_nsc_lorentzian.py",
       "sha256": "d2cd33889552058171a5d4a0c9168496779ea55c51c7aa8e6bf96649ba5153f8"
+    },
+    {
+      "bytes": 10654,
+      "path": "tests/test_nsc_measure_normalization.py",
+      "sha256": "a165f079525e527c14290f2b5e0a901e3069bc7020f3428e4a44f7f37761440e"
+    },
+    {
+      "bytes": 3862,
+      "path": "tests/test_nsc_response_matching.py",
+      "sha256": "f11db61f650a4a84cd5b5f665f296f16e5d9ee9ffb26a03c2ce3cc84c9beb8c7"
     },
     {
       "bytes": 6641,
@@ -1201,16 +1311,16 @@
       "sha256": "8ee483eca506fee952a2d0b8214525e864353754ab0593d155d591a3353b580d"
     },
     {
-      "bytes": 11922,
+      "bytes": 14317,
       "path": "tests/test_release_infrastructure.py",
-      "sha256": "8f94ef07f9d0e0dfddd83f1a03d8aacccb9db6dec2f2cfae95c43a4f59844a01"
+      "sha256": "5880e99429a1bd7f73c6076457d936e9042b77b3116fc081cfb62f2e1c989910"
     }
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.2.0",
-  "release_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
-  "release_spec_sha256": "a9d43693fbc347be75debc7e0a1c06853619210b184048617ca0d8b3cfc7e42d",
+  "public_version": "0.3.0",
+  "release_source_commit": "14fddc92f13f6feaa0e6a1a3fd81567280212a59",
+  "release_spec_sha256": "6cbc038c2de468995610f5c5b102dc7f5ed9590b9fe21a0a00eef9bd3b29953e",
   "schema": "NSC-PUBLICATION-PROVENANCE-v1",
   "source_branch": "codex/nsc-closure-verification",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",

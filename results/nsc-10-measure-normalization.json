@@ -1,0 +1,776 @@
+{
+  "artifact_id": "NSC-10-MEASURE-NORMALIZATION",
+  "classification": "exact_finite_profile_identity_and_covariant_metric_response_of_normalization_prescriptions",
+  "conclusion": {
+    "finite_action_changes_by_Tr_h": true,
+    "g_PT_is_calculated_determinant_modulus_not_complete_Gamma_one": true,
+    "general_hard_log_is_physical_stress": false,
+    "hard_cylinder_gauss_quadrature_resolved_by_closed_form": true,
+    "heat_covariantization_of_old_rank_is_exact": false,
+    "identity_forced_into_Gamma_one": false,
+    "old_rank_equals_heat_trace_on_unrestricted_frequency": false,
+    "primary_hard_projector_equals_weighted_log": false,
+    "real_time_Gaussian_influence_functional_computed": false,
+    "throat_root_fitted": false,
+    "unknown_finite_compensator_explicit": true
+  },
+  "conventions": {
+    "Gamma_one": "g_PT is the calculated E_Lambda=0.5 Tr E1 modulus, not a completed Gamma_one; the identity is not inserted",
+    "M": "normalization mass, not a fermion mass; not selected physically",
+    "comparison": "all fields; float atol 2e-7 rtol 2e-8; keys integers booleans strings hashes exact",
+    "compensator": "unknown finite/anomaly completion remains explicit; AGENTS 20.28-29 keep det and induced heat as one regulated object",
+    "g_PT": "0.5 E1(x); calculated determinant modulus per eigenvalue, not complete Gamma_one",
+    "g_log": "-0.5 exp(-x) log(d^2/M^2); declared smooth weighted-log, not Theta(1-x)",
+    "h": "-0.5[exp(-x)(log x + gamma_E) + E1(x)]",
+    "hard_cylinder": "exact product formula with explicit interior Hellmann-Feynman and cutoff-wall shell; Gauss values are coarse diagnostics",
+    "heat_covariantization": "replace N by Tr exp(-D^2/Lambda^2); this is not g_log and is not the old rank term",
+    "identity": "g_log = g_PT + [log(M/Lambda)+gamma_E/2] exp(-x) + h(x)",
+    "old_finite_rank": "N[log(M/Lambda)+gamma_E/2] is a finite-matrix convention and cannot be integrated as Tr 1",
+    "primary_Andrianov_1106_3263": "P_N=Theta(1-D^2/Lambda^2); log Z=sum_{|lambda|<=Lambda} log(lambda/mu); factorization of invariant/anomalous parts is not unique",
+    "state": "static compact axial P/AP vacuum of NSC-9; no trapped continuation, no in-in Gaussian influence functional",
+    "x": "d^2/Lambda^2"
+  },
+  "cylinder": {
+    "clock_control": {
+      "all_spectral_profiles_clock_identity": "E_f[c N]=c E_f[N] by omega=c nu with fixed proper scales M and Lambda; discontinuous quadrature may obscure it",
+      "base": {
+        "hard_log": -2.841515236464148,
+        "heat_rank": -7.888676203741531,
+        "proper_time": 4.603085860503167,
+        "remainder": -14.864141722456047,
+        "weighted_log": -18.1497320656944
+      },
+      "changed": {
+        "hard_log": -3.4098182837569766,
+        "heat_rank": -9.466411444489832,
+        "proper_time": 5.523703032603799,
+        "remainder": -17.83697006694724,
+        "weighted_log": -21.77967847883328
+      },
+      "changed_minus_factor_times_base": {
+        "hard_log": 8.881784197001252e-16,
+        "heat_rank": 3.552713678800501e-15,
+        "proper_time": -8.881784197001252e-16,
+        "remainder": 1.4210854715202004e-14,
+        "weighted_log": 0.0
+      },
+      "factor": 1.2,
+      "proper_time_clock_identity": "E_PT[c N]=c E_PT[N] at fixed proper-time cutoff",
+      "smooth_profile_max_clock_residual": 1.4210854715202004e-14
+    },
+    "energy": {
+      "hard_log": -2.841515236464148,
+      "heat_rank": -7.888676203741531,
+      "proper_time": 4.603085860503167,
+      "remainder": -14.864141722456047,
+      "weighted_log": -18.1497320656944
+    },
+    "eta": 0.5,
+    "existing_cutoff_response_energy": 4.603085860503168,
+    "existing_proper_time_Weyl": -7.081645519695799e-17,
+    "frequency_extent": 16.0,
+    "hard_log_coarse_minus_exact": 0.4563294878112649,
+    "hard_log_energy_is_coarse_gauss_not_exact": true,
+    "heat_trace": 19.50039283103927,
+    "independent_kappa1_proper_time_quadrature": {
+      "error": 2.6031695147587586e-08,
+      "one_kappa_energy": 2.605184859988552,
+      "value": 2.6051848599968572
+    },
+    "independent_metric_variations": {
+      "analytic_variation": {
+        "hard_log": -1.3877787807814457e-16,
+        "heat_rank": -2.220446049250313e-16,
+        "proper_time": -1.1102230246251565e-16,
+        "remainder": -6.661338147750939e-16,
+        "weighted_log": -1.7763568394002505e-15
+      },
+      "direction": "mixed_Nqr",
+      "hard_log_spectral_gradient_omits_cutoff_wall": true,
+      "independent_controls": [
+        {
+          "absolute_error": {
+            "hard_log": 6.101962746210554e-05,
+            "heat_rank": 9.777289866619299e-09,
+            "proper_time": 1.2440271146552107e-08,
+            "remainder": 9.313882332051548e-09,
+            "weighted_log": 6.646237338259198e-09
+          },
+          "finite_derivative": {
+            "hard_log": 6.101962746196676e-05,
+            "heat_rank": -9.777290088663904e-09,
+            "proper_time": 1.2440271035529804e-08,
+            "remainder": -9.313882998185363e-09,
+            "weighted_log": -6.646239114616037e-09
+          },
+          "smooth_absolute_error": {
+            "heat_rank": 9.777289866619299e-09,
+            "proper_time": 1.2440271146552107e-08,
+            "remainder": 9.313882332051548e-09,
+            "weighted_log": 6.646237338259198e-09
+          },
+          "step": 0.002
+        },
+        {
+          "absolute_error": {
+            "hard_log": 3.0489412994466614e-05,
+            "heat_rank": 2.4442667889701397e-09,
+            "proper_time": 3.110845026021991e-09,
+            "remainder": 2.325250436641113e-09,
+            "weighted_log": 1.6573391548035943e-09
+          },
+          "finite_derivative": {
+            "hard_log": 3.0489412994327836e-05,
+            "heat_rank": -2.4442670110147446e-09,
+            "proper_time": 3.1108449149996886e-09,
+            "remainder": -2.325251102774928e-09,
+            "weighted_log": -1.6573409311604337e-09
+          },
+          "smooth_absolute_error": {
+            "heat_rank": 2.4442667889701397e-09,
+            "proper_time": 3.110845026021991e-09,
+            "remainder": 2.325250436641113e-09,
+            "weighted_log": 1.6573391548035943e-09
+          },
+          "step": 0.001
+        }
+      ]
+    },
+    "lapse_homogeneity": {
+      "hard_log": 4.6001536232596045,
+      "heat_rank": 7.72715225139109e-14,
+      "proper_time": 7.37845340381682e-11,
+      "remainder": 8.411049634560186e-12,
+      "weighted_log": 8.22772960873408e-11
+    },
+    "length": 4.0,
+    "metric_Weyl": {
+      "hard_log": -2.7755575615628914e-16,
+      "heat_rank": 0.0,
+      "proper_time": 2.220446049250313e-16,
+      "remainder": -4.440892098500626e-16,
+      "weighted_log": -4.440892098500626e-16
+    },
+    "neck_null": {
+      "hard_log": -0.006336991287628532,
+      "heat_rank": 1.1303231879922215e-06,
+      "proper_time": -0.0038041433382910994,
+      "remainder": -0.0012361669100516837,
+      "weighted_log": -0.005039179925154347
+    },
+    "normalization_log_derivative": {
+      "hard_log_is_projected_rank_not_heat": true,
+      "observed": {
+        "hard_log": 7.203190370907109,
+        "heat_rank": 19.500392831039992,
+        "proper_time": 0.0,
+        "remainder": 0.0,
+        "weighted_log": 19.500392831060864
+      },
+      "predicted_smooth": {
+        "heat_rank": 19.50039283103927,
+        "proper_time": 0.0,
+        "remainder": 0.0,
+        "weighted_log": 19.50039283103927
+      },
+      "weighted_log_matches_heat_not_hard_projector": true
+    },
+    "points": 16,
+    "proper_time_Weyl_minus_existing": 2.928610601219893e-16,
+    "proper_time_minus_existing_cutoff_response": -1.7763568394002505e-15,
+    "rank_trace": 23468.35128855851
+  },
+  "exact_identity": {
+    "hard_log": [
+      0.8047189562170501,
+      0.45814536593707744,
+      -0.0,
+      -0.34657359027997264,
+      -0.5815754049028404,
+      -0.6931471805599453,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "hard_minus_weighted": [
+      0.03924660660989021,
+      0.043598295937432474,
+      0.0,
+      -0.13636608192848493,
+      -0.32025673066179344,
+      -0.43815258312599176,
+      0.19989778865816077,
+      0.14071090500860958,
+      0.06185810863037746,
+      0.010092542641328297,
+      0.0005813124367846402
+    ],
+    "heat_rank": [
+      -0.38480973128978824,
+      -0.3660423392370596,
+      -0.31505556109062416,
+      -0.24536551768837891,
+      -0.18177124623055343,
+      -0.1488217093142643,
+      -0.09026492952994247,
+      -0.05474844725671038,
+      -0.020140828181802798,
+      -0.0027257646866042325,
+      -0.00013570783280667417
+    ],
+    "log_M_over_Lambda": -0.6931471805599453,
+    "max_abs_residual": 1.1102230246251565e-16,
+    "primary_hard_projector_equals_weighted_log": false,
+    "proper_time": [
+      1.233949244254987,
+      0.9114619792096953,
+      0.5221413172218691,
+      0.2798867973880804,
+      0.1552982892727715,
+      0.10969196719776025,
+      0.05000979120331633,
+      0.024450255354030562,
+      0.006524190547098519,
+      0.0005741477956376629,
+      1.8832811421962453e-05
+    ],
+    "reconstructed": [
+      0.7654723496071598,
+      0.41454706999964497,
+      0.0,
+      -0.21020750835148774,
+      -0.26131867424104704,
+      -0.25499459743395353,
+      -0.19989778865816074,
+      -0.14071090500860958,
+      -0.06185810863037747,
+      -0.010092542641328299,
+      -0.0005813124367846402
+    ],
+    "remainder": [
+      -0.08366716335803903,
+      -0.13087256997299068,
+      -0.2070857561312449,
+      -0.24472878805118925,
+      -0.2348457172832651,
+      -0.21586485531744948,
+      -0.1596426503315346,
+      -0.11041271310592976,
+      -0.048241470995673184,
+      -0.007940925750361729,
+      -0.00046443741539992854
+    ],
+    "residual": [
+      1.1102230246251565e-16,
+      0.0,
+      -0.0,
+      2.7755575615628914e-17,
+      5.551115123125783e-17,
+      0.0,
+      -2.7755575615628914e-17,
+      0.0,
+      6.938893903907228e-18,
+      1.734723475976807e-18,
+      0.0
+    ],
+    "weighted_log": [
+      0.7654723496071599,
+      0.41454706999964497,
+      -0.0,
+      -0.21020750835148772,
+      -0.261318674241047,
+      -0.25499459743395353,
+      -0.19989778865816077,
+      -0.14071090500860958,
+      -0.06185810863037746,
+      -0.010092542641328297,
+      -0.0005813124367846402
+    ],
+    "x": [
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      0.8,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      5.0,
+      8.0
+    ]
+  },
+  "fiber_controls": {
+    "cylinder": {
+      "analytic_cylinder_eigenvalue_error": 1.2434497875801753e-14,
+      "analytic_weighted_log_radius_variation": -4.8026967957139094e-17,
+      "eigenvalues_used_in_analytic_sort": [
+        -11.970017205097037,
+        -11.970017205097037,
+        -10.427736882301277,
+        -10.427736882301277,
+        -8.895441713778931,
+        -8.895441713778931,
+        -7.3793544623168,
+        -7.3793544623168,
+        -5.8919999557311735,
+        -5.8919999557311735,
+        -4.462203141577278,
+        -4.462203141577278,
+        -3.1688566511618608,
+        -3.1688566511618608,
+        -2.2598341255649905,
+        -2.2598341255649905,
+        2.2598341255649905,
+        2.2598341255649905,
+        3.1688566511618608,
+        3.1688566511618608,
+        4.462203141577278,
+        4.462203141577278,
+        5.8919999557311735,
+        5.8919999557311735,
+        7.3793544623168,
+        7.3793544623168,
+        8.895441713778931,
+        8.895441713778931,
+        10.427736882301277,
+        10.427736882301277,
+        11.970017205097037,
+        11.970017205097037
+      ],
+      "hard_minus_weighted": 1.3269175738286085,
+      "heat_expm_versus_eigh_error": 4.440892098500626e-16,
+      "heat_rank_term": -0.594265019936334,
+      "identity_on_fiber": 0.0,
+      "kappa": 2,
+      "old_minus_heat_rank": -12.35099411955739,
+      "old_rank_term": -12.945259139493723,
+      "omega": 0.7,
+      "points": 16,
+      "proper_time_plus_old_rank": -12.612844979969353,
+      "regulated_action": -12.612844979969353,
+      "remainder_is_nonzero": true,
+      "weighted_log_gradient_controls": [
+        {
+          "absolute_error": 8.88183222396921e-12,
+          "finite_derivative": 8.881784197001252e-12,
+          "step": 0.0001
+        },
+        {
+          "absolute_error": 8.88183222396921e-12,
+          "finite_derivative": 8.881784197001252e-12,
+          "step": 5e-05
+        }
+      ]
+    },
+    "general": {
+      "analytic_cylinder_eigenvalue_error": null,
+      "analytic_weighted_log_radius_variation": -0.34890585651212763,
+      "eigenvalues_used_in_analytic_sort": null,
+      "hard_minus_weighted": 0.5187520185632579,
+      "heat_expm_versus_eigh_error": 4.884981308350689e-15,
+      "heat_rank_term": -0.8909429252382295,
+      "identity_on_fiber": 0.0,
+      "kappa": 2,
+      "old_minus_heat_rank": -12.054316214255493,
+      "old_rank_term": -12.945259139493723,
+      "omega": 0.7,
+      "points": 16,
+      "proper_time_plus_old_rank": -12.293477546058345,
+      "regulated_action": -12.293477546058353,
+      "remainder_is_nonzero": true,
+      "weighted_log_gradient_controls": [
+        {
+          "absolute_error": 1.4222849009648542e-09,
+          "finite_derivative": -0.34890585508984273,
+          "step": 0.0001
+        },
+        {
+          "absolute_error": 3.631321354724548e-10,
+          "finite_derivative": -0.3489058561489955,
+          "step": 5e-05
+        }
+      ]
+    }
+  },
+  "general_metric": {
+    "clock_control": {
+      "all_spectral_profiles_clock_identity": "E_f[c N]=c E_f[N] by omega=c nu with fixed proper scales M and Lambda; discontinuous quadrature may obscure it",
+      "base": {
+        "hard_log": -8.32849502376175,
+        "heat_rank": -14.323647014747939,
+        "proper_time": 8.52748280335184,
+        "remainder": -26.803003706342647,
+        "weighted_log": -32.599167917738725
+      },
+      "changed": {
+        "hard_log": -9.994194028514107,
+        "heat_rank": -17.188376417697533,
+        "proper_time": 10.232979364022201,
+        "remainder": -32.16360444761119,
+        "weighted_log": -39.119001501286455
+      },
+      "changed_minus_factor_times_base": {
+        "hard_log": -7.105427357601002e-15,
+        "heat_rank": -7.105427357601002e-15,
+        "proper_time": -5.329070518200751e-15,
+        "remainder": -1.4210854715202004e-14,
+        "weighted_log": 1.4210854715202004e-14
+      },
+      "factor": 1.2,
+      "proper_time_clock_identity": "E_PT[c N]=c E_PT[N] at fixed proper-time cutoff",
+      "smooth_profile_max_clock_residual": 1.4210854715202004e-14
+    },
+    "energy": {
+      "hard_log": -8.32849502376175,
+      "heat_rank": -14.323647014747939,
+      "proper_time": 8.52748280335184,
+      "remainder": -26.803003706342647,
+      "weighted_log": -32.599167917738725
+    },
+    "eta": 0.5,
+    "existing_cutoff_response_energy": 8.527482803351841,
+    "existing_proper_time_Weyl": -0.9069490479438244,
+    "frequency_extent": 18.276931201649404,
+    "hard_log_status": {
+      "convergence_not_assumed": true,
+      "exact_hard_formula_is_cylinder_product_only": true,
+      "physical_stress_comparison": false,
+      "unresolved_coarse_quadrature_and_interior_derivative_diagnostic": true
+    },
+    "heat_trace": 35.407302359329975,
+    "independent_metric_variations": {
+      "analytic_variation": {
+        "hard_log": -0.2268281089585632,
+        "heat_rank": 0.7368785294193865,
+        "proper_time": -0.4149390981466643,
+        "remainder": 1.4190822715466416,
+        "weighted_log": 1.7410217028193653
+      },
+      "direction": "mixed_Nqr",
+      "hard_log_spectral_gradient_omits_cutoff_wall": true,
+      "independent_controls": [
+        {
+          "absolute_error": {
+            "hard_log": 7.255459065218752,
+            "heat_rank": 7.343093511025245e-08,
+            "proper_time": 2.046923364140696e-08,
+            "remainder": 1.7246703354345527e-07,
+            "weighted_log": 2.2543095390403778e-07
+          },
+          "finite_derivative": {
+            "hard_log": -7.482287174177316,
+            "heat_rank": 0.7368786028503216,
+            "proper_time": -0.41493911861589794,
+            "remainder": 1.4190824440136751,
+            "weighted_log": 1.7410219282503192
+          },
+          "smooth_absolute_error": {
+            "heat_rank": 7.343093511025245e-08,
+            "proper_time": 2.046923364140696e-08,
+            "remainder": 1.7246703354345527e-07,
+            "weighted_log": 2.2543095390403778e-07
+          },
+          "step": 0.002
+        },
+        {
+          "absolute_error": {
+            "hard_log": 7.255454683601017,
+            "heat_rank": 1.8356323572277233e-08,
+            "proper_time": 7.440544402825822e-09,
+            "remainder": 4.313848567250034e-08,
+            "weighted_log": 5.404449332502281e-08
+          },
+          "finite_derivative": {
+            "hard_log": -7.48228279255958,
+            "heat_rank": 0.73687854777571,
+            "proper_time": -0.4149391055872087,
+            "remainder": 1.4190823146851272,
+            "weighted_log": 1.7410217568638586
+          },
+          "smooth_absolute_error": {
+            "heat_rank": 1.8356323572277233e-08,
+            "proper_time": 7.440544402825822e-09,
+            "remainder": 4.313848567250034e-08,
+            "weighted_log": 5.404449332502281e-08
+          },
+          "step": 0.001
+        }
+      ]
+    },
+    "lapse_homogeneity": {
+      "hard_log": 12.13062748746602,
+      "heat_rank": 1.652011860642233e-13,
+      "proper_time": 5.182529960734428e-09,
+      "remainder": -2.879474436667806e-11,
+      "weighted_log": 5.1538719958443835e-09
+    },
+    "length": 4.0,
+    "metric_Weyl": {
+      "hard_log": -0.2996766466489891,
+      "heat_rank": 1.5200347798563962,
+      "proper_time": -0.9069490479439049,
+      "remainder": 2.8421868707171676,
+      "weighted_log": 3.455272602629659
+    },
+    "neck_null": {
+      "hard_log": -0.0009375558228413294,
+      "heat_rank": -0.012003049523357928,
+      "proper_time": 0.003978152861119064,
+      "remainder": -0.018598459963098835,
+      "weighted_log": -0.0266233566253386
+    },
+    "normalization_log_derivative": {
+      "hard_log_is_projected_rank_not_heat": true,
+      "observed": {
+        "hard_log": 17.944044185850494,
+        "heat_rank": 35.4073023593271,
+        "proper_time": 0.0,
+        "remainder": 0.0,
+        "weighted_log": 35.40730235932088
+      },
+      "predicted_smooth": {
+        "heat_rank": 35.407302359329975,
+        "proper_time": 0.0,
+        "remainder": 0.0,
+        "weighted_log": 35.407302359329975
+      },
+      "weighted_log_matches_heat_not_hard_projector": true
+    },
+    "points": 16,
+    "proper_time_Weyl_minus_existing": -8.049116928532385e-14,
+    "proper_time_minus_existing_cutoff_response": -1.7763568394002505e-15,
+    "rank_trace": 26808.090119820245
+  },
+  "hard_cylinder_exact": {
+    "coarse_gauss": [
+      {
+        "energy": -2.8415152364641427,
+        "error_versus_exact_energy": 0.45632948781127025,
+        "error_versus_exact_normalization_derivative": -0.6590401673891924,
+        "frequency_extent": 16.0,
+        "frequency_points": 32,
+        "normalization_log_derivative": 7.203190370906884
+      },
+      {
+        "energy": -3.52616849620696,
+        "error_versus_exact_energy": -0.22832377193154718,
+        "error_versus_exact_normalization_derivative": 0.3299070700263158,
+        "frequency_extent": 16.0,
+        "frequency_points": 64,
+        "normalization_log_derivative": 8.192137608322392
+      },
+      {
+        "energy": -3.4677846506653047,
+        "error_versus_exact_energy": -0.16993992638989175,
+        "error_versus_exact_normalization_derivative": 0.24354552405283947,
+        "frequency_extent": 16.0,
+        "frequency_points": 128,
+        "normalization_log_derivative": 8.105776062348916
+      }
+    ],
+    "coarse_operator_hard_log": -2.841515236464148,
+    "convergence_not_assumed": true,
+    "energy": -3.297844724275413,
+    "formula": "for E<Lambda, (4 kappa/pi)[(2-ln(Lambda^2/M^2))W-2 E atan(W/E)]; d/dlogM=(8 kappa/pi)W",
+    "independent_adaptive_quadrature": {
+      "energy": -3.2978447242754125,
+      "energy_minus_exact": 4.440892098500626e-16,
+      "interior": 2.1518382062568135,
+      "interior_minus_exact": 0.0,
+      "interior_plus_wall": -3.297844724275413,
+      "maximum_quadrature_error_estimate": 1.4378060906405216e-14,
+      "split": "adaptive integral of -log((omega^2+E^2)/Lambda^2) on [0,W] plus shell -ln(Lambda^2/M^2) W",
+      "wall": -5.4496829305322265,
+      "wall_minus_exact": 0.0
+    },
+    "interior": 2.1518382062568135,
+    "interior_plus_wall": -3.297844724275413,
+    "normalization_log_derivative": 7.862230538296076,
+    "retained_modes": [
+      {
+        "W": 1.5437453562462673,
+        "energy": -1.6489223621377065,
+        "interior": 1.0759191031284068,
+        "kappa": 1,
+        "momentum": -0.7853981633974483,
+        "normalization_log_derivative": 3.931115269148038,
+        "spatial_energy": 1.2715542753135176,
+        "wall": -2.7248414652661133
+      },
+      {
+        "W": 1.5437453562462673,
+        "energy": -1.6489223621377065,
+        "interior": 1.0759191031284068,
+        "kappa": 1,
+        "momentum": 0.7853981633974483,
+        "normalization_log_derivative": 3.931115269148038,
+        "spatial_energy": 1.2715542753135176,
+        "wall": -2.7248414652661133
+      }
+    ],
+    "uniform_lapse_derivative_equals_interior_plus_wall": true,
+    "wall": -5.4496829305322265
+  },
+  "input_hashes": {
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "lab_continued": "3a747cc",
+  "low_x_limit": {
+    "g_log_and_PT_plus_heat_agree_for_fixed_modes_as_cutoff_removed_or_below_cutoff": true,
+    "h_0_plus": 0.0,
+    "h_vanishes_as_x_to_0": true,
+    "leading": "0.5 x (log x + gamma_E - 1)",
+    "series": "sum_{n>=1} (-1)^{n+1} x^n (log x + gamma_E - 1/n) / (2 n!)",
+    "series_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "x_to_0_is_not_ultraviolet_of_each_mode": true
+  },
+  "moments": {
+    "a4_seeley_weight_h0": 0.0,
+    "exact_integral_h": -0.5,
+    "exact_integral_x_h": -0.75,
+    "h_at_zero_plus": 0.0,
+    "integral_h": -0.49999999999999944,
+    "integral_x_h": -0.7499999999992039,
+    "logarithmic_a4_shared_by_weighted_log_and_PT_plus_heat": true,
+    "power_divergent_moments_changed_by_h": true,
+    "quadrature_errors": [
+      1.0755274448825958e-10,
+      9.705239691204442e-09
+    ]
+  },
+  "nonclaims": {
+    "Andrianov_factorization_uniqueness": false,
+    "coarse_hard_log_stress_is_physical": false,
+    "complete_invariant_functional_fixed": false,
+    "finite_coefficients_selected_by_anomaly": false,
+    "full_physical_closure": false,
+    "in_in_or_real_time_influence_functional": false,
+    "physical_Phi_or_Omega_derived": false,
+    "self_sourced_stationary_metric": false,
+    "weighted_log_is_the_physical_measure": false
+  },
+  "profile_derivative_controls": {
+    "h_vanishes_as_x_to_0": true,
+    "hard_differs_from_weighted_at_x_gt_1": true,
+    "identity_max_residual": 2.7755575615628914e-17,
+    "identity_sample_x": [
+      0.2,
+      0.5,
+      1.3,
+      2.7
+    ],
+    "independent_e1_quadrature": [
+      {
+        "absolute_error": 6.661338147750939e-16,
+        "independent_integral": 1.464461670520277,
+        "quadrature_error": 1.224587225670035e-09,
+        "scipy_exp1": 1.4644616705202764,
+        "x": 0.15
+      },
+      {
+        "absolute_error": 5.551115123125783e-17,
+        "independent_integral": 0.31059657854554307,
+        "quadrature_error": 5.997343925802827e-11,
+        "scipy_exp1": 0.310596578545543,
+        "x": 0.8
+      },
+      {
+        "absolute_error": 3.469446951953614e-18,
+        "independent_integral": 0.028440260935795672,
+        "quadrature_error": 2.8147194735320574e-14,
+        "scipy_exp1": 0.028440260935795676,
+        "x": 2.4
+      }
+    ],
+    "low_x_series_absolute_error": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "x_derivative_absolute_errors": {
+      "heat_rank": [
+        2.27045049427943e-11,
+        2.088282324841373e-11,
+        1.2330414467243145e-12,
+        5.900675781322917e-12
+      ],
+      "proper_time": [
+        1.1788348075469912e-11,
+        1.2079892641736478e-11,
+        1.459707354989348e-12,
+        2.7969345589573535e-12
+      ],
+      "remainder": [
+        2.078032190766521e-11,
+        2.8609059565809503e-13,
+        5.442854500437022e-12,
+        7.87941933921843e-12
+      ],
+      "weighted_log": [
+        1.3712142532540383e-11,
+        8.516798377655732e-12,
+        1.1966955204556484e-12,
+        9.24843535088371e-12
+      ]
+    }
+  },
+  "schema": "nsc-measure-normalization-v1",
+  "source_hashes": {
+    "docs/nsc-measure-normalization.md": "649a4cb1a1bb44e134432062b576f840dee17068592d23a0c324e44503d16e2d",
+    "scripts/check_nsc_measure_normalization.py": "31c9bccba28d39d32f5a1084f575780902b11dc9eafc1c5e728322ba803755ee",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_measure_normalization.py": "e3ac23d660287765580689cd965eecf72552a813e24fb2b641942adc703a9b9f",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "tests/test_nsc_measure_normalization.py": "a165f079525e527c14290f2b5e0a901e3069bc7020f3428e4a44f7f37761440e"
+  },
+  "terminal": true,
+  "unrestricted_trace_one": {
+    "heat_does_not_scale_with_extent": true,
+    "old_rank_cannot_be_integrated_as_Tr1": true,
+    "rank_grows_with_unrestricted_frequency": true,
+    "rank_over_extent": [
+      407.43665431525204,
+      407.43665431525216,
+      407.43665431525204
+    ],
+    "rank_to_extent_ratio_stable": true,
+    "samples": [
+      {
+        "extent_factor": 1.0,
+        "frequency_extent": 16.0,
+        "heat_trace": 19.394183025639386,
+        "proper_time": 4.596614662349281,
+        "rank_trace": 6518.986469044033,
+        "remainder": -14.720922947837419,
+        "weighted_log": -17.970018443790384
+      },
+      {
+        "extent_factor": 1.5,
+        "frequency_extent": 24.0,
+        "heat_trace": 19.394183026244786,
+        "proper_time": 4.596614954336199,
+        "rank_trace": 9778.479703566052,
+        "remainder": -14.720922921925888,
+        "weighted_log": -17.970018126136857
+      },
+      {
+        "extent_factor": 2.0,
+        "frequency_extent": 32.0,
+        "heat_trace": 19.394183393004237,
+        "proper_time": 4.5966110398069056,
+        "rank_trace": 13037.972938088065,
+        "remainder": -14.720924091378718,
+        "weighted_log": -17.970023358487612
+      }
+    ]
+  }
+}
