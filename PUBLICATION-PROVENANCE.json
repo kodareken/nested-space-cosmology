@@ -61,14 +61,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 1569,
+      "bytes": 1628,
       "path": "Makefile",
-      "sha256": "e0ebf5f18ad17639c59cfdc5124d2f72334e0617c2f9ee4639482455389f446a"
+      "sha256": "de91dafb4cea86eec54bcc77004b98195ffda57fb1e6384ee441e99d50a9f50b"
     },
     {
-      "bytes": 8369,
+      "bytes": 8701,
       "path": "README.md",
-      "sha256": "cde25df18fa0a064a9f56aea8d167cb6b7139cb3943f7db8cb7558c0033e446c"
+      "sha256": "d1a9f3064ff17b1084355687ae909c2f3902ebac1fefc7fbf45db4896b1b44e9"
     },
     {
       "bytes": 629,
@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 12143,
+      "bytes": 12757,
       "path": "docs/current-result.md",
-      "sha256": "2172f86e7053908d4f262687bf6e7559cf1b8c17e11cc707f5102292852ebdcc"
+      "sha256": "7f2c82fcf6abc80e07dfe5124438857f7ff4751528caafff17f1c362c26425af"
     },
     {
       "bytes": 10991,
@@ -141,6 +141,11 @@
       "sha256": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135"
     },
     {
+      "bytes": 5803,
+      "path": "docs/nsc-flow-compatibility.md",
+      "sha256": "0524fee024e305b039e634790428806e3b39d594c443cf1b4051279b09716dc7"
+    },
+    {
       "bytes": 3821,
       "path": "docs/nsc-geometric-chain.md",
       "sha256": "288be5e077d41dbd7481729b57aad064181cecfb83eba80eb44328fd7e0d7ea1"
@@ -176,9 +181,9 @@
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
     },
     {
-      "bytes": 7305,
+      "bytes": 7755,
       "path": "docs/nsc-prior-art-reuse.md",
-      "sha256": "ccc080837bad1fb1ea5af8fc185d10d4e7dce633b4fa00aa5b07872c54c5d45f"
+      "sha256": "f9a90ef2d0657683c6d02a26a755cd3c1f9cf84facc5fecad90b01556b300162"
     },
     {
       "bytes": 2394,
@@ -241,9 +246,9 @@
       "sha256": "27d5c5ecd2e7b0f1d7cf88230f00c39652f257943ea0b8da3084c07a331d0a19"
     },
     {
-      "bytes": 7993,
+      "bytes": 8053,
       "path": "docs/reproducing.md",
-      "sha256": "937b8abf5d061e9f37d5d225aa1c5d76d93a13b49b7f7e1b278eddee2caec5ab"
+      "sha256": "46c3b8b2bb27312170aeed6c6cc9929cb4c9df78a05f93df34e9e0f51ecb4714"
     },
     {
       "bytes": 948,
@@ -289,6 +294,11 @@
       "bytes": 7424,
       "path": "results/development/compact-interaction.json",
       "sha256": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f"
+    },
+    {
+      "bytes": 2088,
+      "path": "results/development/flow-compatibility.json",
+      "sha256": "ab4ce6b98afbb4b79c53396197c699f6071e83ee0e09139e71c8fcd31498aabb"
     },
     {
       "bytes": 3574,
@@ -774,6 +784,11 @@
       "bytes": 19597,
       "path": "scripts/check_nsc_finite_terms.py",
       "sha256": "551251aaa40537825a0c23e9d81a9b1d81b36d106a0936e194af2611d1c771b0"
+    },
+    {
+      "bytes": 5655,
+      "path": "scripts/check_nsc_flow_compatibility.py",
+      "sha256": "4a526141ce337f763c26aa9aa1a841c682319c28b3de60ccefc7cc896cd7fac8"
     },
     {
       "bytes": 5272,
