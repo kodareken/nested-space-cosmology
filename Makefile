@@ -8,7 +8,7 @@ help:
 	@echo "  make install          install the pinned project and paper dependencies"
 	@echo "  make check            validate manifests, claims, paths, and links"
 	@echo "  make test             run focused publication tests"
-	@echo "  make reproduce        recompute the 59-artifact chain portably"
+	@echo "  make reproduce        recompute the 62-artifact chain portably"
 	@echo "  make reproduce-exact  require byte-identical recomputation"
 	@echo "  make paper            rebuild the tracked paper PDF"
 	@echo "  make paper-check      rebuild twice and verify deterministic bytes"

@@ -1,10 +1,9 @@
 # Compact result archive
 
 This directory contains the original 58-artifact v0.1.0 dependency closure that
-ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus the 59th
-follow-up `NSC-2-ZETA1-UNIT-CLOSURE-CHECK`. The machine-readable order, hashes,
-categories, dependencies, and paper claim links are in
-[manifest.json](manifest.json).
+ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus scoped
+follow-ups 59–62. The machine-readable order, hashes, categories, dependencies,
+and paper claim links are in [manifest.json](manifest.json).
 
 The categories are intentionally different:
 
@@ -24,12 +23,20 @@ There is exactly one current frontier:
   not select \(\Omega\), solve the mode-resolved tail, or derive physical
   \(\zeta\). Dilation alone does not derive \(\zeta=\Omega^2\).
 
-The 59th record is a follow-up diagnostic, not a second frontier:
+Scoped follow-ups are not a second frontier:
 
 - [nsc-2-zeta1-unit-closure-check.json](nsc-2-zeta1-unit-closure-check.json)
   corrects the additive-gap units to \(q_j=\lambda_j/\zeta+\mu^2\) and proves
   that the inherited subtracted derivative is strictly negative on this finite,
   fixed-geometry family. It does not select a physical scale.
+- [nsc-3-regulated-recursion.json](nsc-3-regulated-recursion.json)
+  derives finite regulated variations, a frequency factor, and a nonelliptic
+  trapped coordinate-time witness. It does not derive the covariant measure.
+- [nsc-3-radial-spectrum.json](nsc-3-radial-spectrum.json)
+  proves the isolated radial throat is gapless. It does not refute nested space.
+- [nsc-3-geometric-chain.json](nsc-3-geometric-chain.json)
+  produces a controlled periodic-throat gap without inserted mass. \(R\) and
+  \(\Omega\) remain inputs; this is not a Lorentzian nested cosmology.
 
 For the scientific interpretation, including the determinant roots invalidated
 by anomaly compensation, read [the current-result document](../docs/current-result.md).

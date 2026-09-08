@@ -1,0 +1,72 @@
+{
+  "Weyl_sequence": {
+    "bounds_at_kappa_1": [
+      {
+        "n": 4,
+        "upper_bound": 0.4783301873747874
+      },
+      {
+        "n": 8,
+        "upper_bound": 0.21549665017740666
+      },
+      {
+        "n": 16,
+        "upper_bound": 0.10298780737841798
+      },
+      {
+        "n": 32,
+        "upper_bound": 0.05041865244406576
+      },
+      {
+        "n": 64,
+        "upper_bound": 0.024953310085453376
+      },
+      {
+        "n": 128,
+        "upper_bound": 0.012414162857947834
+      }
+    ],
+    "bump": "f(s)=sqrt(15/16)(1-s\u00b2) for |s|<=1; zero otherwise; f in H\u00b9",
+    "bump_derivative_norm_squared": "5/2",
+    "bump_norm_squared": "1",
+    "conclusion": "every real E belongs to essential spectrum; spec_ess(D)=R",
+    "energy": "any real E",
+    "limit": "0",
+    "residual_norm_upper_bound": "Abs(kappa)/sqrt((n**2 - n)**2 + 1) + sqrt(10)/(2*n)",
+    "spinor": "(1,i)/sqrt(2), sigma_2 eigenvalue +1",
+    "state": "psi_n(rho)=n^(-1/2)f((rho-n\u00b2)/n)exp(i E rho)v_plus",
+    "support": "[n\u00b2-n,n\u00b2+n] escapes to +infinity; normalized states converge weakly to zero"
+  },
+  "artifact_id": "NSC-3-RADIAL-SPECTRUM",
+  "classification": "gapless_essential_spectrum_of_the_frozen_spatial_throat_not_a_physical_particle_prediction",
+  "consequence": "smooth radial throat and current-conserving gluing alone do not generate a nonzero spectral mass gap; finite box levels are not physical masses",
+  "nonclaims": {
+    "all_possible_embedded_eigenvalues_excluded_here": false,
+    "compact_warped_or_Lorentzian_spectrum_proved_here": false,
+    "dynamical_Phi_or_stationary_scale_determined": false,
+    "full_recursive_or_interacting_spectrum_gapless": false,
+    "nested_architecture_refuted": false,
+    "new_to_world_mathematical_priority_established": false
+  },
+  "operator": {
+    "D": "-i sigma_2 partial_rho + sigma_1 kappa/sqrt(1+rho\u00b2)",
+    "Hilbert_space": "L\u00b2(R,d_rho) tensor C\u00b2",
+    "domain": "H\u00b9(R) tensor C\u00b2",
+    "potential": "kappa/sqrt(rho**2 + 1)",
+    "self_adjointness": "free self-adjoint Dirac plus bounded Hermitian multiplication",
+    "squared_partner_minus": "kappa**2/(rho**2 + 1) + kappa*rho/(rho**2 + 1)**(3/2)",
+    "squared_partner_plus": "kappa**2/(rho**2 + 1) - kappa*rho/(rho**2 + 1)**(3/2)"
+  },
+  "schema": "nsc-radial-spectrum-v1",
+  "source_sha256": "14e5ec4ed1703a6a3f96ae6067f90c2c6c742c54b958d2ee3aeefbf824fed184",
+  "terminal": true,
+  "zero_energy": {
+    "L2_global_zero_mode": false,
+    "primitive_of_w": "kappa*asinh(rho)",
+    "reason": "for nonzero kappa each solution grows at one end; kappa=0 gives nonintegrable constants",
+    "solutions": [
+      "u=C exp(-kappa asinh(rho))",
+      "v=C exp(+kappa asinh(rho))"
+    ]
+  }
+}

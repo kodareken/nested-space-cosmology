@@ -24,6 +24,8 @@ CORE_FILES = (
     "src/recursive_horizons/__init__.py",
     "src/recursive_horizons/evidence_io.py",
     "src/recursive_horizons/unified_action.py",
+    "src/recursive_horizons/nsc_regulated.py",
+    "src/recursive_horizons/nsc_geometric_chain.py",
 )
 
 
@@ -72,8 +74,8 @@ def load_manifest() -> dict[str, Any]:
         raise ReproductionError("unexpected result manifest schema")
     steps = value.get("steps")
     historical = value.get("historical_result_count", 58)
-    if not isinstance(steps, list) or len(steps) != 59:
-        raise ReproductionError("public result manifest must contain 59 steps")
+    if not isinstance(steps, list) or len(steps) != 62:
+        raise ReproductionError("public result manifest must contain 62 steps")
     if historical != 58:
         raise ReproductionError("historical result count must remain 58")
     return value
@@ -165,8 +167,10 @@ def run_generator(work: Path, step: dict[str, Any]) -> tuple[dict[str, Any], flo
         }
     )
     started = time.monotonic()
+    command = [sys.executable, str(work / step["generator"])]
+    command.extend(str(item) for item in step.get("generator_args", []))
     process = subprocess.run(
-        [sys.executable, str(work / step["generator"])],
+        command,
         cwd=work,
         env=environment,
         capture_output=True,
@@ -183,7 +187,7 @@ def run_generator(work: Path, step: dict[str, Any]) -> tuple[dict[str, Any], flo
         raise ReproductionError(f"generator published no output: {step['output']}")
     raw = output.read_bytes()
     value = json.loads(raw)
-    if raw != canonical_json(value):
+    if step.get("json_format") != "pretty" and raw != canonical_json(value):
         raise ReproductionError(f"result is not canonical JSON: {step['output']}")
     if value.get("artifact_id") != step["artifact_id"] or value.get("terminal") is not True:
         raise ReproductionError(f"invalid result identity or terminal: {step['output']}")

@@ -589,6 +589,61 @@ def build_pdf(
         )
         return KeepTogether([Spacer(1, 3), table, Spacer(1, 7)])
 
+    def geometric_gap_figure() -> object:
+        from matplotlib.backends.backend_agg import FigureCanvasAgg
+        from matplotlib.figure import Figure
+
+        record = json.loads(
+            (REPOSITORY / "results" / "nsc-3-geometric-chain.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        families = record["gap_families"]
+        radii = [row["radius"] for row in families]
+        edges = [row["continuum"]["band_edge"] for row in families]
+        figure = Figure(figsize=(6.4, 2.6), dpi=220)
+        FigureCanvasAgg(figure)
+        left, right = figure.subplots(1, 2)
+        left.plot(radii, edges, "o-", color="#2357A6", markersize=5, linewidth=1.2)
+        left.set_xlabel("motif radius R")
+        left.set_ylabel("continuum first band edge")
+        left.set_title("Gap versus declared R")
+        left.grid(True, alpha=0.3, linewidth=0.4)
+        for family, colour in zip(families, ("#2357A6", "#0A1730", "#64C9E8")):
+            intervals = [row["intervals"] for row in family["lattice"]]
+            errors = family["absolute_errors"]
+            right.loglog(
+                intervals,
+                errors,
+                "o-",
+                color=colour,
+                markersize=4,
+                linewidth=1.1,
+                label=f"R={family['radius']:g}",
+            )
+        right.set_xlabel("intervals per motif")
+        right.set_ylabel("absolute lattice error")
+        right.set_title("Second-order lattice agreement")
+        right.grid(True, which="both", alpha=0.3, linewidth=0.4)
+        right.legend(frameon=False, fontsize=7)
+        figure.tight_layout(pad=0.4)
+        buffer = BytesIO()
+        figure.savefig(buffer, format="png", dpi=220)
+        buffer.seek(0)
+        rendered = Image(buffer)
+        rendered._nsc_buffer = buffer
+        rendered.drawWidth = body_width
+        rendered.drawHeight = body_width * 2.6 / 6.4
+        caption = Paragraph(
+            inline_markup(
+                "**Figure.** Continuum first band edges and lattice errors from "
+                "[`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json). "
+                "R is a declared input."
+            ),
+            styles["Body"],
+        )
+        return KeepTogether([Spacer(1, 4), rendered, caption, Spacer(1, 6)])
+
     def parse_markdown(markdown: str) -> list[object]:
         lines = markdown.splitlines()
         # Cover content is built separately. Begin at the technical abstract.
@@ -613,6 +668,12 @@ def build_pdf(
             stripped = line_value.strip()
             if not stripped:
                 flush_paragraph()
+                index += 1
+                continue
+
+            if stripped == "<!-- nsc-figure:geometric-gap -->":
+                flush_paragraph()
+                story.append(geometric_gap_figure())
                 index += 1
                 continue
 
@@ -662,8 +723,6 @@ def build_pdf(
             if heading:
                 flush_paragraph()
                 level = len(heading.group(1))
-                if heading.group(2) == "References":
-                    story.append(PageBreak())
                 story.append(
                     Paragraph(inline_markup(heading.group(2)), styles[f"Heading{level}"])
                 )

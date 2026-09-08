@@ -99,7 +99,10 @@ Derived here, always conditional on the stated premises:
 - child-side orientation of the source sign, later corrected by the exact child asymptotic;
 - a global horizon-penetrating spectral foliation; throat maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), and \(\Phi_{\mathrm{throat}}=R(E)\) remain unevaluated declarations;
 - the unitary dilation that makes \(\mathcal{T}_\Theta\) executable; \(\zeta=\Omega^2\) is not derived by that dilation alone;
-- the unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a sign theorem for that finite, fixed-geometry family.
+- the unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a sign theorem for that finite, fixed-geometry family;
+- finite regulated noncommuting variations, an explicit finite scale cocycle, and normalized \(1/\Omega\) chain controls;
+- a Weyl-sequence proof that the isolated radial throat is gapless;
+- a controlled periodic-throat band gap without inserted mass, with stencil-derived links reproducing the finite outside response. \(R\) and \(\Omega\) remain inputs.
 
 Numerical diagnostics that **must not** be read as a final \(\zeta\) or a particle-to-cosmology number are listed in [docs/current-result.md](docs/current-result.md).
 
@@ -146,7 +149,8 @@ flowchart TB
   end
 
   subgraph frontier["Current frontier"]
-    TL["Unsolved energy-resolved recursive child tail"]
+    GG["Controlled periodic-throat geometric gap"]
+    TL["Unsolved covariant measure and stationarity"]
     OZ["Open: physical zeta, spectrum, cosmology"]
   end
 
@@ -159,16 +163,18 @@ flowchart TB
   DL --> TL
   DT --> UC
   UC --> TL
+  DL --> GG
+  GG --> TL
   TL --> OZ
 ```
 
 ## Reproduce the public result
 
 The complete current dependency closure is small enough to recompute on a
-laptop. The v0.1.0 historical 58-record chain remains byte-for-byte. A 59th
-follow-up, the unit-closure check, is reproduced by comparing every exact and
-numeric field. The reference historical run regenerated those 58 artifacts
-byte-for-byte in about four minutes:
+laptop. The v0.1.0 historical 58-record chain remains byte-for-byte. Scoped
+follow-ups 59–62 are reproduced by comparing every exact and numeric field.
+The reference historical run regenerated those 58 artifacts byte-for-byte in
+about four minutes:
 
 ```bash
 python3 -m pip install -e ".[paper]"
@@ -190,8 +196,11 @@ rewrites the tracked result files. See
 | [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md) | Imported results and the one open joint claim |
 | [docs/current-result.md](docs/current-result.md) | Present compact checkpoint and nonclaims |
 | [docs/nsc-closure-verification-2026-09-07.md](docs/nsc-closure-verification-2026-09-07.md) | Unit-closure follow-up and remaining equations |
+| [docs/nsc-regulated-recursion.md](docs/nsc-regulated-recursion.md) | Finite regulated variations and spacetime obstruction |
+| [docs/nsc-radial-spectrum.md](docs/nsc-radial-spectrum.md) | Isolated radial throat is gapless |
+| [docs/nsc-geometric-chain.md](docs/nsc-geometric-chain.md) | Controlled periodic-throat geometric gap |
 | [docs/reproducing.md](docs/reproducing.md) | How to inspect and regenerate compact results |
-| [results/README.md](results/README.md) | Category map for the 58-record chain plus the 59th follow-up |
+| [results/README.md](results/README.md) | Category map for the 58-record chain plus scoped follow-ups 59–62 |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Claim discipline and contribution rules |
 | [paper/nested-space-cosmology.md](paper/nested-space-cosmology.md) | Technical paper source |
 | [paper/nested-space-cosmology.pdf](paper/nested-space-cosmology.pdf) | Reproducibly generated working preprint |

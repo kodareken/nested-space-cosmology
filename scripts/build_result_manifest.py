@@ -13,9 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "results" / "manifest.json"
 SOURCE_COMMIT = "ff2cf2722b966589b98a61accdbb6cee819a58c7"
 FOLLOW_UP_SOURCE_COMMIT = "5f38712ca01ddd71e715fd265088925a73369aba"
+NSC3_SOURCE_COMMIT = "445d5b069adea8b5641384b0ee02f07fe9cfcc0a"
+NSC3_INTRODUCED_COMMIT = "3490f19164eb9303915db41b8c90eca0f40a836e"
 FRONTIER_PATH = "results/nsc-2-zeta1-recursion-map.json"
 FOLLOW_UP_PATH = "results/nsc-2-zeta1-unit-closure-check.json"
 HISTORICAL_COUNT = 58
+SCOPED_FOLLOW_UP_PATHS = (
+    FOLLOW_UP_PATH,
+    "results/nsc-3-regulated-recursion.json",
+    "results/nsc-3-radial-spectrum.json",
+    "results/nsc-3-geometric-chain.json",
+)
 
 IMPORTED = {
     "NSC-1-EXACT-BLACK-UNIVERSE-DEFOCUSING",
@@ -102,6 +110,11 @@ HEADLINES = {
         ("/corrected_determinant_diagnostic/zeta", 1e-8, 1e-8),
         ("/corrected_scan/maximum_subtracted_derivative", 1e-8, 1e-8),
     ],
+    "NSC-3-GEOMETRIC-CHAIN": [
+        ("/gap_families/0/continuum/band_edge", 1e-8, 1e-10),
+        ("/gap_families/1/continuum/band_edge", 1e-8, 1e-10),
+        ("/gap_families/2/continuum/band_edge", 1e-8, 1e-10),
+    ],
 }
 
 PAPER_CLAIMS = {
@@ -117,6 +130,13 @@ PAPER_CLAIMS = {
         "finite-family-sign-theorem",
         "raw-versus-regulated-determinant",
     ],
+    "NSC-3-REGULATED-RECURSION": [
+        "finite-regulated-variations",
+        "ultrastatic-frequency-factor",
+        "nonelliptic-coordinate-time",
+    ],
+    "NSC-3-RADIAL-SPECTRUM": ["isolated-radial-gapless"],
+    "NSC-3-GEOMETRIC-CHAIN": ["periodic-throat-gap", "stencil-derived-link"],
 }
 
 OUTPUT_RE = re.compile(r"OUTPUT\s*=\s*ROOT\s*/\s*[\"']([^\"']+)[\"']")
@@ -192,6 +212,21 @@ def category(artifact_id: str, generator_source: str) -> str:
     return "repository_derived_exact_identity"
 
 
+SCOPED_SOURCE_DEPENDENCIES = {
+    "results/nsc-3-regulated-recursion.json": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_regulated.py",
+    ],
+    "results/nsc-3-radial-spectrum.json": [
+        "scripts/check_nsc_scale_closure.py",
+    ],
+    "results/nsc-3-geometric-chain.json": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_geometric_chain.py",
+        "src/recursive_horizons/nsc_regulated.py",
+    ],
+}
+
 FOLLOW_UP_AUXILIARY_INPUTS = [
     {
         "path": "scripts/run_nsc_zeta1_regulated_determinant.py",
@@ -218,21 +253,22 @@ FOLLOW_UP_AUXILIARY_INPUTS = [
 
 def build() -> dict[str, object]:
     generators, dependencies, source_dependencies = discover()
-    if FOLLOW_UP_PATH not in generators:
-        raise RuntimeError(f"follow-up generator is absent: {FOLLOW_UP_PATH}")
+    missing_follow_ups = [path for path in SCOPED_FOLLOW_UP_PATHS if path not in generators]
+    if missing_follow_ups:
+        raise RuntimeError(f"follow-up generator is absent: {missing_follow_ups}")
     historical_dependencies = {
         path: deps
         for path, deps in dependencies.items()
-        if path != FOLLOW_UP_PATH
+        if path not in SCOPED_FOLLOW_UP_PATHS
     }
     paths = closure(historical_dependencies)
-    paths.discard(FOLLOW_UP_PATH)
+    paths.difference_update(SCOPED_FOLLOW_UP_PATHS)
     ordered = order_outputs(paths, historical_dependencies)
     if len(ordered) != HISTORICAL_COUNT:
         raise RuntimeError(
             f"expected {HISTORICAL_COUNT} historical public results, observed {len(ordered)}"
         )
-    ordered.append(FOLLOW_UP_PATH)
+    ordered.extend(SCOPED_FOLLOW_UP_PATHS)
 
     steps: list[dict[str, object]] = []
     portable_outputs: set[str] = set()
@@ -249,9 +285,12 @@ def build() -> dict[str, object]:
         artifact_id = str(value["artifact_id"])
         generator_relative = str(generator.relative_to(ROOT))
         source = generator.read_text(encoding="utf-8")
-        is_follow_up = output == FOLLOW_UP_PATH
+        is_follow_up = output in SCOPED_FOLLOW_UP_PATHS
         declared_dependencies = [] if is_follow_up else dependencies.get(output, [])
-        declared_source_dependencies = source_dependencies.get(output, [])
+        declared_source_dependencies = sorted(
+            set(source_dependencies.get(output, []))
+            | set(SCOPED_SOURCE_DEPENDENCIES.get(output, []))
+        )
         direct_numeric = any(name in source for name in ("numpy", "scipy", "mpmath"))
         dynamic_numeric = any(
             any(
@@ -307,29 +346,42 @@ def build() -> dict[str, object]:
             "paper_claim_ids": PAPER_CLAIMS.get(artifact_id, []),
         }
         if is_follow_up:
-            for auxiliary in FOLLOW_UP_AUXILIARY_INPUTS:
-                auxiliary_path = ROOT / auxiliary["path"]
-                if not auxiliary_path.is_file():
-                    raise RuntimeError(
-                        f"follow-up auxiliary input is absent: {auxiliary['path']}"
-                    )
-                observed = sha256(auxiliary_path)
-                if observed != auxiliary["sha256"]:
-                    raise RuntimeError(
-                        f"follow-up auxiliary input hash mismatch: {auxiliary['path']}"
-                    )
-            step["auxiliary_inputs"] = FOLLOW_UP_AUXILIARY_INPUTS
-            step["follow_up_source_commit"] = FOLLOW_UP_SOURCE_COMMIT
+            step["comparison_policy"] = {
+                "kind": "all_fields",
+                "relative_tolerance": 1e-8,
+                "absolute_tolerance": 1e-8,
+            }
+            if output == FOLLOW_UP_PATH:
+                for auxiliary in FOLLOW_UP_AUXILIARY_INPUTS:
+                    auxiliary_path = ROOT / auxiliary["path"]
+                    if not auxiliary_path.is_file():
+                        raise RuntimeError(
+                            f"follow-up auxiliary input is absent: {auxiliary['path']}"
+                        )
+                    observed = sha256(auxiliary_path)
+                    if observed != auxiliary["sha256"]:
+                        raise RuntimeError(
+                            f"follow-up auxiliary input hash mismatch: {auxiliary['path']}"
+                        )
+                step["auxiliary_inputs"] = FOLLOW_UP_AUXILIARY_INPUTS
+                step["follow_up_source_commit"] = FOLLOW_UP_SOURCE_COMMIT
+            else:
+                step["json_format"] = "pretty"
+                step["generator_args"] = ["--output", output]
+                step["follow_up_source_commit"] = NSC3_SOURCE_COMMIT
         steps.append(step)
 
     return {
         "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
         "source_commit": SOURCE_COMMIT,
         "follow_up_source_commit": FOLLOW_UP_SOURCE_COMMIT,
+        "nsc3_source_commit": NSC3_SOURCE_COMMIT,
+        "nsc3_introduced_commit": NSC3_INTRODUCED_COMMIT,
         "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
         "frontier_output": FRONTIER_PATH,
         "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
         "follow_up_output": FOLLOW_UP_PATH,
+        "scoped_follow_up_outputs": list(SCOPED_FOLLOW_UP_PATHS),
         "historical_result_count": HISTORICAL_COUNT,
         "measured_reference_runtime_seconds": 246.73,
         "result_count": len(steps),

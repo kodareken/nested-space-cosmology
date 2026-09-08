@@ -6,8 +6,16 @@
   "frontier_output": "results/nsc-2-zeta1-recursion-map.json",
   "historical_result_count": 58,
   "measured_reference_runtime_seconds": 246.73,
-  "result_count": 59,
+  "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
+  "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
+  "result_count": 62,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
+  "scoped_follow_up_outputs": [
+    "results/nsc-2-zeta1-unit-closure-check.json",
+    "results/nsc-3-regulated-recursion.json",
+    "results/nsc-3-radial-spectrum.json",
+    "results/nsc-3-geometric-chain.json"
+  ],
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "steps": [
     {
@@ -1428,6 +1436,112 @@
       "source_dependencies": [
         "scripts/run_nsc_zeta1_regulated_determinant.py",
         "scripts/run_nsc_zeta1_warped_y.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-3-REGULATED-RECURSION",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
+      "generator": "scripts/check_nsc_regulated_recursion.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-3-regulated-recursion.json"
+      ],
+      "generator_sha256": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+      "headline_observables": [],
+      "json_format": "pretty",
+      "order": 60,
+      "output": "results/nsc-3-regulated-recursion.json",
+      "output_sha256": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+      "paper_claim_ids": [
+        "finite-regulated-variations",
+        "ultrastatic-frequency-factor",
+        "nonelliptic-coordinate-time"
+      ],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_regulated.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-3-RADIAL-SPECTRUM",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
+      "generator": "scripts/check_nsc_radial_spectrum.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-3-radial-spectrum.json"
+      ],
+      "generator_sha256": "14e5ec4ed1703a6a3f96ae6067f90c2c6c742c54b958d2ee3aeefbf824fed184",
+      "headline_observables": [],
+      "json_format": "pretty",
+      "order": 61,
+      "output": "results/nsc-3-radial-spectrum.json",
+      "output_sha256": "b0c24ee00a4f4ef5191599692dd20c59a5c0db06d53f40f57178004552abfc21",
+      "paper_claim_ids": [
+        "isolated-radial-gapless"
+      ],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-3-GEOMETRIC-CHAIN",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
+      "generator": "scripts/check_nsc_geometric_chain.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-3-geometric-chain.json"
+      ],
+      "generator_sha256": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 1e-10,
+          "pointer": "/gap_families/0/continuum/band_edge",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 1e-10,
+          "pointer": "/gap_families/1/continuum/band_edge",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 1e-10,
+          "pointer": "/gap_families/2/continuum/band_edge",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "json_format": "pretty",
+      "order": 62,
+      "output": "results/nsc-3-geometric-chain.json",
+      "output_sha256": "a5b5061372fef19817d8abd8a6833be020b54806607101338029e7177bfd0615",
+      "paper_claim_ids": [
+        "periodic-throat-gap",
+        "stencil-derived-link"
+      ],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_geometric_chain.py",
+        "src/recursive_horizons/nsc_regulated.py"
       ]
     }
   ]

@@ -279,7 +279,11 @@ b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
 }
 $$
 
-The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) is recovered if \(b_{\mathrm{sym}}=B_{\mathrm{dim}}/\sqrt{\Lambda_{\mathrm{parent}}\Lambda_{\mathrm{child}}}\). Both conventions are legitimate; they cannot silently share the same numerical link. At vanishing argument this reduces to the earlier quadratic fixed point. **Open prediction.** Solving this energy-resolved tail on the warped transition spectrum, then recomputing the anomaly-compensated scale derivative, is the next result that could restore a physical \(\zeta\). The compact records state that \(\Omega\) is not selected, the functional tail is not computed, the scale root is not restored, and physical \(\zeta\) is not promoted.
+The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) is recovered if \(b_{\mathrm{sym}}=B_{\mathrm{dim}}/\sqrt{\Lambda_{\mathrm{parent}}\Lambda_{\mathrm{child}}}\). Both conventions are legitimate; they cannot silently share the same numerical link. At vanishing argument this reduces to the earlier quadratic fixed point.
+
+**Repository derivation.** Finite proper-time matrix variations, including noncommuting perturbations and a finite scale cocycle, are derived for an explicit orthonormal-basis prescription. An ultrastatic frequency factor differs from a spatial heat trace. The trapped coordinate-time Hamiltonian is not elliptic. The isolated radial throat is gapless by a Weyl sequence. Periodic repetition of that throat produces a geometric band gap without inserted mass; \(R\) and \(\Omega\) remain inputs and gravitational seam stress is unproved. That gap is a controlled project realization, not a Lorentzian nested cosmology and not a completed theory.
+
+**Open prediction.** Solving this energy-resolved tail on the warped transition spectrum, then recomputing the anomaly-compensated scale derivative, is the next result that could restore a physical \(\zeta\). The compact records state that \(\Omega\) is not selected, the functional tail is not computed, the scale root is not restored, and physical \(\zeta\) is not promoted. The full covariant measure, physical stationarity, metric health, and nuclear or cosmological predictions remain open.
 
 ## 12. What would count as Nested-Space Cosmology
 
