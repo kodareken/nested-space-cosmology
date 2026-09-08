@@ -1,8 +1,12 @@
 {
+  "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
+  "follow_up_output": "results/nsc-2-zeta1-unit-closure-check.json",
+  "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
   "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
   "frontier_output": "results/nsc-2-zeta1-recursion-map.json",
+  "historical_result_count": 58,
   "measured_reference_runtime_seconds": 246.73,
-  "result_count": 58,
+  "result_count": 59,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "steps": [
@@ -1361,6 +1365,70 @@
         "unitary-recursion-map"
       ],
       "source_dependencies": []
+    },
+    {
+      "artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
+      "auxiliary_inputs": [
+        {
+          "path": "scripts/run_nsc_zeta1_regulated_determinant.py",
+          "sha256": "01caf3d6061b1411a82ab030cdfe17fc8b0c5a9aa076d73ce8dbe589ff67276b"
+        },
+        {
+          "path": "scripts/run_nsc_zeta1_warped_y.py",
+          "sha256": "2206e30f746e3c6c0e04a65c9cead46122c6b97d9fd745b591f3243b43fab67b"
+        },
+        {
+          "path": "results/nsc-1-s-one-child-scale-correction.json",
+          "sha256": "19c50a14a9902b372a1868c147dd1506570b40a1ac3bd1f1200d03cfe5b8763b"
+        },
+        {
+          "path": "results/nsc-2-zeta1-recursion-map.json",
+          "sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774"
+        },
+        {
+          "path": "results/nsc-2-zeta1-anomaly-decomposition.json",
+          "sha256": "052750d49e969a1d82b683f6405a1568aff5f56352183eb9da948a6a2ab0b750"
+        }
+      ],
+      "category": "diagnostic_nonpass",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
+      "generator": "scripts/check_nsc_scale_closure.py",
+      "generator_sha256": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+      "headline_observables": [
+        {
+          "absolute_tolerance": 1e-08,
+          "pointer": "/comparison_at_frozen_old_candidate/corrected_subtracted_derivative",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 1e-08,
+          "pointer": "/corrected_determinant_diagnostic/zeta",
+          "relative_tolerance": 1e-08
+        },
+        {
+          "absolute_tolerance": 1e-08,
+          "pointer": "/corrected_scan/maximum_subtracted_derivative",
+          "relative_tolerance": 1e-08
+        }
+      ],
+      "order": 59,
+      "output": "results/nsc-2-zeta1-unit-closure-check.json",
+      "output_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
+      "paper_claim_ids": [
+        "unit-consistent-mass-term",
+        "finite-family-sign-theorem",
+        "raw-versus-regulated-determinant"
+      ],
+      "source_dependencies": [
+        "scripts/run_nsc_zeta1_regulated_determinant.py",
+        "scripts/run_nsc_zeta1_warped_y.py"
+      ]
     }
   ]
 }

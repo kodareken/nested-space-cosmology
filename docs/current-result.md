@@ -4,7 +4,7 @@
 
 This page is the public checkpoint for the committed compact JSON chain. It is not a proof of Nested-Space Cosmology, not a final \(\zeta\), not a particle spectrum, not a dark-sector fit, and not an identification of our universe with a black-hole interior. Labels follow [THEORY.md](../THEORY.md). Imported launch surfaces are in [docs/prior-art-and-open-claim.md](prior-art-and-open-claim.md). Regeneration is in [docs/reproducing.md](reproducing.md).
 
-The live compact record is `results/nsc-2-zeta1-recursion-map.json` (`NSC-2-ZETA1-RECURSION-MAP`). Its classification is that norm preservation and first-order Dirac scaling fix the minimal parent/child dilation and the energy-resolved recursive tail. Its `nonclaims` are all `false`:
+The live compact record for the unsolved tail is `results/nsc-2-zeta1-recursion-map.json` (`NSC-2-ZETA1-RECURSION-MAP`). The latest follow-up is `results/nsc-2-zeta1-unit-closure-check.json` (`NSC-2-ZETA1-UNIT-CLOSURE-CHECK`). The recursion-map classification is that norm preservation and first-order Dirac scaling fix a minimal parent/child dilation and the energy-resolved recursive tail. Dilation alone does not derive \(\zeta=\Omega^2\). Its `nonclaims` are all `false`:
 
 - `Omega_value_selected`
 - `functional_tail_solution_computed`
@@ -20,18 +20,16 @@ Its `gate` likewise records `mode_resolved_tail_solved: false` and `zeta_derived
 $$
 (U_\Omega\psi)(x)=\Omega^{d/2}\psi(\Omega x),
 \qquad
-\mathcal{T}_\Omega=\sigma_1 U_\Omega,
-\qquad
-\zeta=\Omega^2
+\mathcal{T}_\Omega=\sigma_1 U_\Omega
 $$
 
-preserves the \(L^2\) norm, composes as a semigroup, and scales first-order spectral quantities together, so \(E/\Lambda\) and \(\Phi/\Lambda\) are inherited. The recursive outside equation must be solved as
+preserves the \(L^2\) norm, composes as a semigroup, and scales first-order spectral quantities together, so \(E/\Lambda\) and \(\Phi/\Lambda\) are inherited on a transformed mode. It does not by itself derive \(\zeta=\Omega^2\). The quantities \(\zeta=(\Lambda L_\star)^2\) and \(\Omega=\Lambda_{\mathrm{child}}/\Lambda_{\mathrm{parent}}\) remain distinct until the geometry relates them. With \(b=B_{\mathrm{dim}}/\Lambda_{\mathrm{parent}}\), the recursive outside equation must be solved as
 
 $$
-\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B.
+\Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
 $$
 
-At vanishing argument this recovers the earlier quadratic fixed point \(\Gamma=K-B^2/\Gamma\) on the branch continuous with \(\Gamma\to K\) as \(B\to 0\). An implementation fixture with \(\Omega=2\) then \(\Omega=3\) composes to \(\Omega=6\); that fixture does not select nature’s \(\Omega\).
+The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) absorbs the factor into a symmetric link convention. At vanishing argument this recovers the earlier quadratic fixed point \(\Gamma=K-B^2/\Gamma\) on the branch continuous with \(\Gamma\to K\) as \(B\to 0\). An implementation fixture with \(\Omega=2\) then \(\Omega=3\) composes to \(\Omega=6\); that fixture does not select nature’s \(\Omega\).
 
 This map removes an undefined symbol from the one equation. It does not compute the mode-resolved tail.
 
@@ -47,9 +45,11 @@ At the warped determinant candidate \(\zeta=4.748389947082489\):
 | Pure cutoff anomaly | \(12.336590431250533\) |
 | Physical child-link derivative | \(-12.324575210444092\) |
 
-The compensated child-link derivative stays negative on the scanned domain \(3\pi/2<\zeta\le 200\), from about \(-19.42\) to about \(-0.588\). Compact record: `results/nsc-2-zeta1-anomaly-decomposition.json`.
+The compensated child-link derivative stays negative on the scanned domain \(3\pi/2<\zeta\le 200\), from about \(-19.42\) to about \(-0.588\). Compact record: `results/nsc-2-zeta1-anomaly-decomposition.json`. Those historical numbers used the inconsistent conversion \((\lambda_j+\mu^2)/\zeta\).
 
-**Therefore those determinant-only \(\zeta\) values are invalidated as stationary points of the one equation.** They remain numerical diagnostics.
+**Repository derivation.** The declared additive-gap operator requires \(q_j=\lambda_j/\zeta+\mu^2\). At the same warped candidate, the unit-consistent subtracted derivative is about \(-36.58293\). For the inherited cutoff subtraction at frozen geometry, Hermitian interlacing proves that derivative is strictly negative for every \(\zeta>3\pi/2\) in this finite family. A diagnostic root of the unsubtracted determinant near \(\zeta=6.09675\) still has subtracted derivative about \(-14.15\), so it does not solve the adopted subtracted scale equation. Compact record: `results/nsc-2-zeta1-unit-closure-check.json`.
+
+**Therefore those determinant-only \(\zeta\) values are invalidated as stationary points of the one equation.** They remain numerical diagnostics. Refining the same finite family cannot restore a root.
 
 **Repository derivation.** The missing owner is the recursive child tail, not an independently weighted Einstein–Gauss–Bonnet or heat action. Geometry is already the compensating anomaly of the same fermionic determinant. Adding that geometry again is forbidden double-counting. Compact record: `results/nsc-2-zeta1-anomaly-owner-correction.json`, whose `nonclaims` include `recursive_tail_is_known_to_restore_a_scale_root: false`.
 
@@ -72,7 +72,7 @@ The child-scale correction also supersedes reading \(54/503\) as a child cosmolo
 
 ## Other compact closures, with their nonclaims
 
-The chain contains 58 committed JSON records. The following are the principal closures and the statements they explicitly do not make.
+The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte, plus the 59th unit-closure follow-up. The following are the principal closures and the statements they explicitly do not make.
 
 **Imported bindings, not novelty**
 
@@ -89,9 +89,10 @@ The chain contains 58 committed JSON records. The following are the principal cl
 - Local constants are named spectral outputs (`nsc-1-s-one-constant-dictionary.json`). Nonclaims: electron/proton/neutron spectrum solved; numerical constants of nature predicted; inside-black-hole observationally shown.
 - Two-sheet carrier, Gauss–Bonnet coupling \(1015/144\), on-room vacuum-form \(108/1015\), and dark/black invariant written three ways.
 - Scalar recursive outside kernel with unit-normalized continuum.
-- Exponential heat profile; flat Euclidean graviton form factor without extra cutoff-disk poles; background-adjusted massless room graviton with residue \(12\).
+- Exponential heat profile as a heat-kernel diagnostic, not the complete physical anomaly; flat Euclidean graviton form factor without extra cutoff-disk poles; background-adjusted massless room graviton with residue \(12\).
 - Local identity that one \(\Phi\) is mass gap, Schur self-energy, and relative-metric link.
-- Global spectral foliation and derived throat Neumann-jump operator.
+- Global spectral foliation; throat Neumann-jump maps remain unevaluated declarations.
+- Unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a finite, fixed-geometry sign theorem.
 
 **Invalidated truncations**
 
@@ -106,9 +107,9 @@ The chain contains 58 committed JSON records. The following are the principal cl
 Operationally: solve
 
 $$
-\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B
+\Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}
 $$
 
-on the warped parent/child mode spectrum, then recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, or inserting a dark function.
+on the warped parent/child mode spectrum, with consistent mass units and one regulated operator, then recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, inserting a dark function, or refining the finite additive-gap family.
 
 Until that tail is solved, public documents must keep every earlier \(\zeta\) candidate, \(1006/1015\), \(54/503\), and every particle or cosmological reading in the diagnostic column.

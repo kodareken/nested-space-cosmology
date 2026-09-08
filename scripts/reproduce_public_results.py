@@ -71,8 +71,11 @@ def load_manifest() -> dict[str, Any]:
     if value.get("schema") != "NSC-PUBLIC-RESULT-MANIFEST-v1":
         raise ReproductionError("unexpected result manifest schema")
     steps = value.get("steps")
-    if not isinstance(steps, list) or len(steps) != 58:
-        raise ReproductionError("public result manifest must contain 58 steps")
+    historical = value.get("historical_result_count", 58)
+    if not isinstance(steps, list) or len(steps) != 59:
+        raise ReproductionError("public result manifest must contain 59 steps")
+    if historical != 58:
+        raise ReproductionError("historical result count must remain 58")
     return value
 
 
@@ -101,8 +104,19 @@ def validate_checkout(manifest: dict[str, Any]) -> None:
             raise ReproductionError(
                 f"manifest is not topological at {output}: {', '.join(missing)}"
             )
+        for auxiliary in step.get("auxiliary_inputs", []):
+            relative = str(auxiliary["path"])
+            expected = str(auxiliary["sha256"])
+            path = ROOT / relative
+            if not path.is_file() or sha256(path) != expected:
+                raise ReproductionError(
+                    f"auxiliary provenance input mismatch: {relative}"
+                )
     if manifest["frontier_output"] not in outputs:
         raise ReproductionError("frontier output is not present in the graph")
+    follow_up = manifest.get("follow_up_output")
+    if follow_up is not None and follow_up not in outputs:
+        raise ReproductionError("follow-up output is not present in the graph")
 
 
 def copy_relative(source_root: Path, target_root: Path, relative: str) -> None:
@@ -124,6 +138,15 @@ def prepare_workspace(path: Path, manifest: dict[str, Any]) -> Path:
         scripts.add(str(step["generator"]))
         scripts.update(str(item) for item in step.get("source_dependencies", []))
         copy_relative(ROOT, expected, str(step["output"]))
+        auxiliary_root = Path("provenance") / Path(str(step["output"])).stem
+        for auxiliary in step.get("auxiliary_inputs", []):
+            relative = str(auxiliary["path"])
+            source = ROOT / relative
+            if not source.is_file():
+                raise ReproductionError(f"auxiliary provenance input is absent: {relative}")
+            target = work / auxiliary_root / relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
     for relative in sorted(scripts):
         copy_relative(ROOT, work, relative)
     (work / "results").mkdir(parents=True, exist_ok=True)
@@ -186,13 +209,27 @@ def authenticated_entries(value: dict[str, Any]):
             yield entry
 
 
-def validate_authenticated_inputs(work: Path, value: dict[str, Any]) -> None:
+def auxiliary_lookup(work: Path, step: dict[str, Any] | None) -> dict[str, Path]:
+    if not step:
+        return {}
+    root = work / "provenance" / Path(str(step["output"])).stem
+    lookup: dict[str, Path] = {}
+    for auxiliary in step.get("auxiliary_inputs", []):
+        relative = str(auxiliary["path"])
+        lookup[relative] = root / relative
+    return lookup
+
+
+def validate_authenticated_inputs(
+    work: Path, value: dict[str, Any], step: dict[str, Any] | None = None
+) -> None:
+    lookup = auxiliary_lookup(work, step)
     for entry in authenticated_entries(value):
         relative = entry.get("path")
         expected = entry.get("sha256")
         if not isinstance(relative, str) or not isinstance(expected, str):
             raise ReproductionError("malformed authenticated input entry")
-        path = work / relative
+        path = lookup.get(relative, work / relative)
         if not path.is_file() or sha256(path) != expected:
             raise ReproductionError(f"authenticated input mismatch: {relative}")
         artifact_id = entry.get("artifact_id")
@@ -299,7 +336,7 @@ def validate_result(
 ) -> bool:
     actual_path = work / step["output"]
     expected_path = expected_root / step["output"]
-    validate_authenticated_inputs(work, actual_value)
+    validate_authenticated_inputs(work, actual_value, step)
     if mode == "exact":
         if actual_path.read_bytes() != expected_path.read_bytes():
             raise ReproductionError(f"exact byte mismatch: {step['output']}")
@@ -316,7 +353,7 @@ def validate_result(
         path="",
         relative_tolerance=relative,
         absolute_tolerance=absolute,
-        compare_numbers=policy_kind == "exact",
+        compare_numbers=policy_kind in {"exact", "all_fields"},
     )
     for observable in step.get("headline_observables", []):
         pointer = str(observable["pointer"])

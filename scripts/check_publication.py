@@ -35,6 +35,7 @@ REQUIRED = {
     "docs/current-result.md",
     "docs/prior-art-and-open-claim.md",
     "docs/reproducing.md",
+    "docs/nsc-closure-verification-2026-09-07.md",
     "paper/nested-space-cosmology.md",
     "paper/nested-space-cosmology.pdf",
     "paper/build-manifest.json",
@@ -94,8 +95,19 @@ def check_manifest(errors: list[str]) -> None:
     steps = manifest.get("steps", [])
     if manifest.get("schema") != "NSC-PUBLIC-RESULT-MANIFEST-v1":
         errors.append("unexpected result manifest schema")
-    if len(steps) != 58 or manifest.get("result_count") != 58:
-        errors.append("result manifest does not contain exactly 58 steps")
+    if len(steps) != 59 or manifest.get("result_count") != 59:
+        errors.append("result manifest does not contain exactly 59 steps")
+    if manifest.get("historical_result_count") != 58:
+        errors.append("historical result count must remain 58")
+    if manifest.get("source_commit") != "ff2cf2722b966589b98a61accdbb6cee819a58c7":
+        errors.append("result manifest has the wrong historical source commit")
+    if (
+        manifest.get("follow_up_source_commit")
+        != "5f38712ca01ddd71e715fd265088925a73369aba"
+    ):
+        errors.append("result manifest has the wrong follow-up source commit")
+    if manifest.get("follow_up_artifact_id") != "NSC-2-ZETA1-UNIT-CLOSURE-CHECK":
+        errors.append("follow-up identity is incorrect")
     outputs: set[str] = set()
     current = []
     for step in steps:
@@ -121,6 +133,11 @@ def check_manifest(errors: list[str]) -> None:
                 errors.append(f"manifest path is absent: {relative}")
             elif sha256(path) != step.get(field):
                 errors.append(f"manifest hash mismatch: {relative}")
+        for auxiliary in step.get("auxiliary_inputs", []):
+            relative = str(auxiliary.get("path", ""))
+            path = ROOT / relative
+            if not path.is_file() or sha256(path) != auxiliary.get("sha256"):
+                errors.append(f"auxiliary provenance input mismatch: {relative}")
     if current != ["NSC-2-ZETA1-RECURSION-MAP"]:
         errors.append(f"unexpected current frontier: {current}")
     if manifest.get("frontier_artifact_id") != "NSC-2-ZETA1-RECURSION-MAP":
@@ -236,7 +253,7 @@ def main() -> int:
             print(f"ERROR: {error}", file=sys.stderr)
         print(f"publication check failed with {len(errors)} finding(s)", file=sys.stderr)
         return 1
-    print(f"publication check passed: {len(files)} curated files, 58 result steps")
+    print(f"publication check passed: {len(files)} curated files, 59 result steps")
     return 0
 
 

@@ -12,7 +12,10 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "results" / "manifest.json"
 SOURCE_COMMIT = "ff2cf2722b966589b98a61accdbb6cee819a58c7"
+FOLLOW_UP_SOURCE_COMMIT = "5f38712ca01ddd71e715fd265088925a73369aba"
 FRONTIER_PATH = "results/nsc-2-zeta1-recursion-map.json"
+FOLLOW_UP_PATH = "results/nsc-2-zeta1-unit-closure-check.json"
+HISTORICAL_COUNT = 58
 
 IMPORTED = {
     "NSC-1-EXACT-BLACK-UNIVERSE-DEFOCUSING",
@@ -34,6 +37,7 @@ DIAGNOSTIC = {
     "NSC-1-S-ONE-SHADOW-LENSING-OBSERVATION",
     "NSC-2-ZETA1-ANGULAR-TOWER",
     "NSC-2-ZETA1-ANOMALY-DECOMPOSITION",
+    "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
 }
 
 SUPERSEDED = {
@@ -89,6 +93,15 @@ HEADLINES = {
         ("/scan/minimum_physical_derivative", 1e-8, 1e-4),
         ("/scan/maximum_physical_derivative", 1e-8, 1e-5),
     ],
+    "NSC-2-ZETA1-UNIT-CLOSURE-CHECK": [
+        (
+            "/comparison_at_frozen_old_candidate/corrected_subtracted_derivative",
+            1e-8,
+            1e-8,
+        ),
+        ("/corrected_determinant_diagnostic/zeta", 1e-8, 1e-8),
+        ("/corrected_scan/maximum_subtracted_derivative", 1e-8, 1e-8),
+    ],
 }
 
 PAPER_CLAIMS = {
@@ -99,6 +112,11 @@ PAPER_CLAIMS = {
     "NSC-2-ZETA1-ANOMALY-DECOMPOSITION": ["anomaly-removes-root"],
     "NSC-2-ZETA1-ANOMALY-OWNER-CORRECTION": ["recursive-tail-owner"],
     "NSC-2-ZETA1-RECURSION-MAP": ["unitary-recursion-map"],
+    "NSC-2-ZETA1-UNIT-CLOSURE-CHECK": [
+        "unit-consistent-mass-term",
+        "finite-family-sign-theorem",
+        "raw-versus-regulated-determinant",
+    ],
 }
 
 OUTPUT_RE = re.compile(r"OUTPUT\s*=\s*ROOT\s*/\s*[\"']([^\"']+)[\"']")
@@ -174,12 +192,47 @@ def category(artifact_id: str, generator_source: str) -> str:
     return "repository_derived_exact_identity"
 
 
+FOLLOW_UP_AUXILIARY_INPUTS = [
+    {
+        "path": "scripts/run_nsc_zeta1_regulated_determinant.py",
+        "sha256": "01caf3d6061b1411a82ab030cdfe17fc8b0c5a9aa076d73ce8dbe589ff67276b",
+    },
+    {
+        "path": "scripts/run_nsc_zeta1_warped_y.py",
+        "sha256": "2206e30f746e3c6c0e04a65c9cead46122c6b97d9fd745b591f3243b43fab67b",
+    },
+    {
+        "path": "results/nsc-1-s-one-child-scale-correction.json",
+        "sha256": "19c50a14a9902b372a1868c147dd1506570b40a1ac3bd1f1200d03cfe5b8763b",
+    },
+    {
+        "path": "results/nsc-2-zeta1-recursion-map.json",
+        "sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
+    },
+    {
+        "path": "results/nsc-2-zeta1-anomaly-decomposition.json",
+        "sha256": "052750d49e969a1d82b683f6405a1568aff5f56352183eb9da948a6a2ab0b750",
+    },
+]
+
+
 def build() -> dict[str, object]:
     generators, dependencies, source_dependencies = discover()
-    paths = closure(dependencies)
-    ordered = order_outputs(paths, dependencies)
-    if len(ordered) != 58:
-        raise RuntimeError(f"expected 58 public results, observed {len(ordered)}")
+    if FOLLOW_UP_PATH not in generators:
+        raise RuntimeError(f"follow-up generator is absent: {FOLLOW_UP_PATH}")
+    historical_dependencies = {
+        path: deps
+        for path, deps in dependencies.items()
+        if path != FOLLOW_UP_PATH
+    }
+    paths = closure(historical_dependencies)
+    paths.discard(FOLLOW_UP_PATH)
+    ordered = order_outputs(paths, historical_dependencies)
+    if len(ordered) != HISTORICAL_COUNT:
+        raise RuntimeError(
+            f"expected {HISTORICAL_COUNT} historical public results, observed {len(ordered)}"
+        )
+    ordered.append(FOLLOW_UP_PATH)
 
     steps: list[dict[str, object]] = []
     portable_outputs: set[str] = set()
@@ -196,57 +249,88 @@ def build() -> dict[str, object]:
         artifact_id = str(value["artifact_id"])
         generator_relative = str(generator.relative_to(ROOT))
         source = generator.read_text(encoding="utf-8")
+        is_follow_up = output == FOLLOW_UP_PATH
+        declared_dependencies = [] if is_follow_up else dependencies.get(output, [])
+        declared_source_dependencies = source_dependencies.get(output, [])
         direct_numeric = any(name in source for name in ("numpy", "scipy", "mpmath"))
         dynamic_numeric = any(
             any(
                 name in (ROOT / relative).read_text(encoding="utf-8")
                 for name in ("numpy", "scipy", "mpmath")
             )
-            for relative in source_dependencies.get(output, [])
+            for relative in declared_source_dependencies
         )
         inherited_numeric = any(
-            dependency in portable_outputs
-            for dependency in dependencies.get(output, [])
+            dependency in portable_outputs for dependency in declared_dependencies
         )
-        is_portable_numeric = direct_numeric or dynamic_numeric or inherited_numeric
-        policy = (
-            {"kind": "portable_numeric", "relative_tolerance": 1e-8, "absolute_tolerance": 1e-10}
-            if is_portable_numeric
-            else {"kind": "exact"}
+        is_portable_numeric = (
+            False
+            if is_follow_up
+            else direct_numeric or dynamic_numeric or inherited_numeric
         )
-        if is_portable_numeric:
-            portable_outputs.add(output)
-        steps.append(
-            {
-                "order": index,
-                "artifact_id": artifact_id,
-                "category": category(artifact_id, source),
-                "generator": generator_relative,
-                "generator_sha256": sha256(generator),
-                "output": output,
-                "output_sha256": sha256(result_path),
-                "dependencies": dependencies.get(output, []),
-                "source_dependencies": source_dependencies.get(output, []),
-                "comparison_policy": policy,
-                "headline_observables": [
-                    {
-                        "pointer": pointer,
-                        "relative_tolerance": relative_tolerance,
-                        "absolute_tolerance": absolute_tolerance,
-                    }
-                    for pointer, relative_tolerance, absolute_tolerance in HEADLINES.get(
-                        artifact_id, []
-                    )
-                ],
-                "paper_claim_ids": PAPER_CLAIMS.get(artifact_id, []),
+        if is_follow_up:
+            policy = {
+                "kind": "all_fields",
+                "relative_tolerance": 1e-8,
+                "absolute_tolerance": 1e-8,
             }
-        )
+        elif is_portable_numeric:
+            policy = {
+                "kind": "portable_numeric",
+                "relative_tolerance": 1e-8,
+                "absolute_tolerance": 1e-10,
+            }
+            portable_outputs.add(output)
+        else:
+            policy = {"kind": "exact"}
+        step = {
+            "order": index,
+            "artifact_id": artifact_id,
+            "category": category(artifact_id, source),
+            "generator": generator_relative,
+            "generator_sha256": sha256(generator),
+            "output": output,
+            "output_sha256": sha256(result_path),
+            "dependencies": declared_dependencies,
+            "source_dependencies": declared_source_dependencies,
+            "comparison_policy": policy,
+            "headline_observables": [
+                {
+                    "pointer": pointer,
+                    "relative_tolerance": relative_tolerance,
+                    "absolute_tolerance": absolute_tolerance,
+                }
+                for pointer, relative_tolerance, absolute_tolerance in HEADLINES.get(
+                    artifact_id, []
+                )
+            ],
+            "paper_claim_ids": PAPER_CLAIMS.get(artifact_id, []),
+        }
+        if is_follow_up:
+            for auxiliary in FOLLOW_UP_AUXILIARY_INPUTS:
+                auxiliary_path = ROOT / auxiliary["path"]
+                if not auxiliary_path.is_file():
+                    raise RuntimeError(
+                        f"follow-up auxiliary input is absent: {auxiliary['path']}"
+                    )
+                observed = sha256(auxiliary_path)
+                if observed != auxiliary["sha256"]:
+                    raise RuntimeError(
+                        f"follow-up auxiliary input hash mismatch: {auxiliary['path']}"
+                    )
+            step["auxiliary_inputs"] = FOLLOW_UP_AUXILIARY_INPUTS
+            step["follow_up_source_commit"] = FOLLOW_UP_SOURCE_COMMIT
+        steps.append(step)
 
     return {
         "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
         "source_commit": SOURCE_COMMIT,
+        "follow_up_source_commit": FOLLOW_UP_SOURCE_COMMIT,
         "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
         "frontier_output": FRONTIER_PATH,
+        "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
+        "follow_up_output": FOLLOW_UP_PATH,
+        "historical_result_count": HISTORICAL_COUNT,
         "measured_reference_runtime_seconds": 246.73,
         "result_count": len(steps),
         "steps": steps,
