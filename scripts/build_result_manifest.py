@@ -137,6 +137,10 @@ PAPER_CLAIMS = {
     ],
     "NSC-3-RADIAL-SPECTRUM": ["isolated-radial-gapless"],
     "NSC-3-GEOMETRIC-CHAIN": ["periodic-throat-gap", "stencil-derived-link"],
+    "NSC-12-COMPACT-INTERACTION": ["compact-mode-overlaps"],
+    "NSC-13-TORSION-UV-MAP": ["torsion-uv-finite-matching"],
+    "NSC-14-FLOW-COMPATIBILITY": ["published-flow-compatibility"],
+    "NSC-15-CHARGED-SECTOR": ["charged-sector-parity"],
 }
 
 OUTPUT_RE = re.compile(r"OUTPUT\s*=\s*ROOT\s*/\s*[\"']([^\"']+)[\"']")
@@ -271,6 +275,11 @@ def build() -> dict[str, object]:
                     or any(gate[key] is not expected for key, expected in identity["gate"].items())
                     or "artifact_id" in value or "terminal" in value):
                 raise RuntimeError(f"invalid schema-gated result: {output}")
+        elif identity["kind"] == "schema_status":
+            if (value.get("schema") != identity["schema"]
+                    or value.get("status") != identity["status"]
+                    or "artifact_id" in value or "terminal" in value):
+                raise RuntimeError(f"invalid schema-status result: {output}")
         elif identity["kind"] == "plateau_scope":
             if (value.get("schema") != identity["schema"]
                     or value.get("scope") != identity["scope"]

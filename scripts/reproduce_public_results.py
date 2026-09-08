@@ -38,9 +38,40 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mode", choices=("portable", "exact"), default="portable")
     parser.add_argument("--jobs", default="auto", help="positive integer or 'auto'")
+    parser.add_argument(
+        "--only",
+        default=None,
+        help="comma-separated output paths or artifact ids; omit to run the full graph",
+    )
     parser.add_argument("--keep-workspace", action="store_true")
     parser.add_argument("--json-summary", type=Path)
     return parser.parse_args()
+
+
+def preserved_scientific_files(spec: dict[str, Any]) -> list[dict[str, str]]:
+    files: list[dict[str, str]] = []
+    for key, value in spec.items():
+        if (key.startswith("preserved_") and key.endswith("_scientific_files")
+                and isinstance(value, list)):
+            files.extend(value)
+    return files
+
+
+def selected_steps(manifest: dict[str, Any], only: str | None) -> list[dict[str, Any]]:
+    if only is None:
+        return list(manifest["steps"])
+    wanted = {item.strip() for item in only.split(",") if item.strip()}
+    if not wanted:
+        raise ReproductionError("--only must select at least one output path or artifact id")
+    steps = [
+        step for step in manifest["steps"]
+        if step["output"] in wanted or step["artifact_id"] in wanted
+    ]
+    found = {step["output"] for step in steps} | {step["artifact_id"] for step in steps}
+    missing = sorted(wanted - found)
+    if missing:
+        raise ReproductionError(f"unknown --only selector: {', '.join(missing)}")
+    return steps
 
 
 def sha256(path: Path) -> str:
@@ -109,9 +140,7 @@ def validate_checkout(manifest: dict[str, Any]) -> None:
             if step.get(key) != declared.get(key):
                 raise ReproductionError(f"manifest {key} differs from release specification: {step['output']}")
     for item in (spec["import_files"] + spec["retained_byte_identical_files"]
-                 + spec["preserved_64_scientific_files"]
-                 + spec.get("preserved_75_scientific_files", [])
-                 + spec.get("preserved_77_scientific_files", []) + [spec["retained_comparator"]]):
+                 + preserved_scientific_files(spec) + [spec["retained_comparator"]]):
         relative = item["path"]
         if not (ROOT / relative).is_file() or sha256(ROOT / relative) != item["sha256"]:
             raise ReproductionError(f"pinned release input mismatch: {relative}")
@@ -249,6 +278,14 @@ def validate_identity(value: dict[str, Any], step: dict[str, Any]) -> None:
         if (not isinstance(gate, dict) or set(gate) != set(policy["gate"])
                 or any(gate[key] is not expected for key, expected in policy["gate"].items())):
             raise ReproductionError(f"invalid schema-gated completion: {step['output']}")
+        return
+    if policy["kind"] == "schema_status":
+        if "artifact_id" in value or "terminal" in value:
+            raise ReproductionError(
+                f"unexpected identity fields in schema-status result: {step['output']}"
+            )
+        if value.get("status") != policy["status"]:
+            raise ReproductionError(f"invalid schema-status string: {step['output']}")
         return
     if value.get("artifact_id") != step["artifact_id"]:
         raise ReproductionError(f"invalid result identity: {step['output']}")
@@ -578,15 +615,31 @@ def validate_result(
 
 
 def execute(
-    work: Path, manifest: dict[str, Any], *, mode: str, jobs: int
+    work: Path,
+    manifest: dict[str, Any],
+    *,
+    mode: str,
+    jobs: int,
+    steps_to_run: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    steps = {str(step["output"]): step for step in manifest["steps"]}
+    selected = steps_to_run if steps_to_run is not None else list(manifest["steps"])
+    steps = {str(step["output"]): step for step in selected}
     pending = set(steps)
     complete: set[str] = set()
+    expected_root = work.parent / "expected"
+    for step in selected:
+        for dependency in step.get("dependencies", []):
+            if dependency not in steps:
+                source = expected_root / dependency
+                if not source.is_file():
+                    raise ReproductionError(
+                        f"selected reproduction is missing dependency: {dependency}"
+                    )
+                copy_relative(expected_root, work, dependency)
+                complete.add(dependency)
     running: dict[Future[tuple[dict[str, Any], float]], str] = {}
     durations: dict[str, float] = {}
     exact_matches = 0
-    expected_root = work.parent / "expected"
     started = time.monotonic()
 
     with ThreadPoolExecutor(max_workers=jobs) as executor:
@@ -611,12 +664,19 @@ def execute(
                     exact_matches += 1
                 complete.add(output)
                 print(
-                    f"{len(complete):02d}/{len(steps)} {steps[output]['artifact_id']} "
+                    f"{len(durations):02d}/{len(steps)} {steps[output]['artifact_id']} "
                     f"{elapsed:.2f}s",
                     flush=True,
                 )
 
-    frontier = json.loads((work / manifest["frontier_output"]).read_text(encoding="utf-8"))
+    frontier_path = work / manifest["frontier_output"]
+    if frontier_path.is_file():
+        frontier = json.loads(frontier_path.read_text(encoding="utf-8"))
+        frontier_id = frontier.get("artifact_id", manifest["frontier_artifact_id"])
+        frontier_classification = frontier.get("classification")
+    else:
+        frontier_id = manifest["frontier_artifact_id"]
+        frontier_classification = "not_rerun"
     return {
         "schema": "NSC-PUBLIC-REPRODUCTION-SUMMARY-v1",
         "release_version": manifest["release_version"],
@@ -626,12 +686,12 @@ def execute(
         "scoped_result_count": len(manifest["scoped_follow_up_outputs"]),
         "mode": mode,
         "jobs": jobs,
-        "result_count": len(complete),
+        "result_count": len(durations),
         "exact_byte_matches": exact_matches,
-        "portable_matches": len(complete),
+        "portable_matches": len(durations),
         "elapsed_seconds": time.monotonic() - started,
-        "frontier_artifact_id": frontier["artifact_id"],
-        "frontier_classification": frontier["classification"],
+        "frontier_artifact_id": frontier_id,
+        "frontier_classification": frontier_classification,
         "slowest_steps": [
             {"output": output, "seconds": seconds}
             for output, seconds in sorted(
@@ -646,11 +706,15 @@ def main() -> int:
     jobs = resolve_jobs(args.jobs)
     manifest = load_manifest()
     validate_checkout(manifest)
+    selected = selected_steps(manifest, args.only)
     workspace = Path(tempfile.mkdtemp(prefix="nsc-public-reproduction-"))
     success = False
     try:
         work = prepare_workspace(workspace, manifest)
-        summary = execute(work, manifest, mode=args.mode, jobs=jobs)
+        summary = execute(
+            work, manifest, mode=args.mode, jobs=jobs, steps_to_run=selected
+        )
+        summary["selected_result_count"] = len(selected)
         summary["workspace_retained"] = bool(args.keep_workspace)
         if args.keep_workspace:
             summary["workspace"] = str(workspace)

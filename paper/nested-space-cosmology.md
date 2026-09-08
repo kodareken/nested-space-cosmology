@@ -3,7 +3,7 @@
 ## One Recursive Spectral Gradient–Boundary Equation Across Scales
 
 **Douglas Ek**<br>
-Version 0.3.0 — 8 September 2026<br>
+Version 0.4.0 — 8 September 2026<br>
 Working preprint · not peer reviewed
 
 ## Abstract
@@ -12,7 +12,7 @@ Nested-Space Cosmology proposes that local matter, inherited constants, unresolv
 
 The verified chain now contains evaluated full-spinor finite throat maps, normalized recursion, a gapless isolated radial operator, smooth periodic geometry with a band gap, causal Dirac propagation on a horizon benchmark, covariant vacuum-source controls, and quantum stress differences on a varying neck. A prescribed radius deformation produces Dirac pairs whose energy is accounted for by geometric work. A scalar sheet coupling admits an invariant chiral sector equal to an ordinary massive Dirac Hamiltonian. The same covariant frequency operator now supplies an explicit ultraviolet-subtracted determinant source, an exact comparison of normalization profiles, and a normalized finite state functional whose smeared noise equals the pair-production weight. These results connect geometry, matter-like excitations and response; they do not determine a scheme-independent completed stress, a physical mass spectrum, or a self-consistent cosmology.
 
-The next matching equation is the finite completion, compensator, physical state and link of that specified determinant source, together with the actual boundary interaction. The calculations distinguish stored vacuum stress from energy transport, identify finite action terms requiring ultraviolet matching, and provide precise tests of the physical chiral sector. The 81-record collection preserves the original 58 historical records and adds 23 scoped follow-ups. This working formulation provides an explicit route to physical scale, matter and cosmological predictions; those predictions remain to be obtained from the coupled solution.
+The next matching equation is the finite completion, compensator, physical state and link of that specified determinant source, together with the actual boundary interaction. The calculations distinguish stored vacuum stress from energy transport, identify finite action terms requiring ultraviolet matching, and provide precise tests of the physical chiral sector. Compact reduction now identifies proper four-dimensional Dirac masses on the declared interval; the candidate torsion contact couples those levels; ultraviolet matching leaves a finite datum and a retained volume term; a published Palatini flow cannot be copied into the constrained Dirac sector; and a candidate U(1) extension is only parity- and anomaly-compatible with an imported charged throat. The 85-record collection preserves the original 58 historical records, 23 scoped follow-ups, and four nested development records. This working formulation provides an explicit route to physical scale, matter and cosmological predictions; those predictions remain to be obtained from the coupled solution.
 
 ## 1. One hypothesis and a continuous physical test
 
@@ -57,7 +57,7 @@ Each row is a research target. The third column records the calculation that wou
 | Finite black-hole continuation | Regular benchmark geometry; horizon-penetrating Dirac transport | Self-sourced collapse, physical stability and complete continuation |
 | Dark matter and dark energy | Boundary self-energy, ultraviolet-subtracted determinant source and energy-transfer identities | Joint background stress and perturbation predictions |
 | Particle, wave and measurement | Field excitations, imported collective-coordinate reduction and a finite Gaussian state functional | Derived interactions, detector records and quantum statistics |
-| Mass, chirality and antimatter | Exact invariant sheet/chirality sector and charge algebra | Actual boundary coupling, physical sector selection and gauge representations |
+| Mass, chirality and antimatter | Exact invariant sheet/chirality sector, compact Dirac masses and charge algebra | Actual boundary coupling, physical sector selection and gauge representations |
 | Probability and recursive infinity | Tail endpoint criteria, clock-map controls and a specified determinant remainder | Consistent recursive state measure, causal duration and observable limits |
 
 <!-- nsc-claim:target-constants -->
@@ -77,6 +77,9 @@ with a scale of the model. A spectral cutoff does not by itself prove a shortest
 ### 2.2 Black holes and historical horizons
 
 **Imported result.** Regular black-universe solutions already combine a trapped region, positive minimum areal radius and expanding interior in one geometry [6]. The project uses that solution as a development benchmark. Its existence is not proof that our universe is such an interior or that the same geometry is sourced by this operator.
+
+<!-- nsc-claim:imported-charged-throat -->
+**Imported result.** Maldacena, Milekhin and Popov already derive a semiclassical Einstein–Maxwell throat supported by charged massless Dirac vacuum energy [32]. Their sections 2 and 5 give the light magnetic channels, the anomaly-corrected Casimir stress and its Einstein matching. This is imported theory, not an NSC-computed solution, an observed wormhole, a generic formation process, or a child-expansion proof. The present numerical operator is still neutral and does not contain their gauge or flux state. A candidate U(1) extension is checked only for compact parity, anomaly cancellation and heat-coefficient conventions; mass, internal representation, vacuum/gravitational/gauge coefficients and global boundary matching remain unresolved. Their optical or redshift length is not proper length. Short-distance formulas have stated conditions, and longer separation or mouth stabilization require their sections 5.5–6. The retained ultraviolet volume term is not set to zero to obtain their asymptotically flat exterior.
 
 **Repository derivation.** The actual horizon-penetrating radial Hamiltonian includes the shift and spin connection. Conserved Dirac norm transfers in the child direction in the declared Cauchy problem ([tetrad](../results/nsc-4-dirac-tetrad.json), [transport](../results/nsc-4-lorentzian-transport.json)). The trapped finite boundary has an outflow structure; it cannot be replaced by an arbitrary reflecting wall.
 
@@ -101,7 +104,7 @@ An isotropic background source and a clustering/lensing response are different p
 
 The scalar sheet benchmark in Section 3 provides an exact version of the proposed left/right relation. Its coupling has not yet been derived from the throat. Chirality, radial component, angular sector, sheet label and charge are distinct operations. Antimatter requires the conjugate gauge representation, not merely an opposite sheet or a reversed spatial gradient.
 
-With the stated gamma conventions, distinguish the charge-conjugation matrix \(C=i\gamma^2\gamma^0\) in \(\psi^c=C\bar\psi^T\) from the antilinear column-spinor map \(\psi^c=i\gamma^2\psi^*\). The quantum symmetry operation and a c-number conjugation map are not interchangeable definitions. Physical photons require a spin-one gauge sector. The produced Dirac pairs do not establish baryonic dust or the observed matter excess.
+With the stated gamma conventions, distinguish the charge-conjugation matrix \(C=i\gamma^2\gamma^0\) in \(\psi^c=C\bar\psi^T\) from the antilinear column-spinor map \(\psi^c=i\gamma^2\psi^*\). The quantum symmetry operation and a c-number conjugation map are not interchangeable definitions. Both opposite-parity compact projectors remain; sheet exchange is not charge conjugation. Physical photons require a spin-one gauge sector. The produced Dirac pairs do not establish baryonic dust or the observed matter excess.
 
 <!-- nsc-claim:target-recursion -->
 ### 2.6 Probability, infinite generation and existence
@@ -146,6 +149,29 @@ The next test is the actual boundary map's Clifford structure, orientation and i
 
 This result specifies the actual transport structure of that massless spatial realization. The proposed chiral-sector mass reduction requires an additional interaction or physical domain mechanism derived from the common action. A passive change of the child spin frame does not supply it: chirality must be transported with the frame. The numerical map is a finite spatial point-port response, with its units and regulator stated explicitly; it is not the full PG retarded map or a local mass term.
 
+<!-- nsc-claim:compact-mode-overlaps -->
+**Imported result / repository derivation: compact mass identification.** The missing source input is a physical four-dimensional mass, not another spatial gap. Applying the established conformal Dirac and Kaluza–Klein reductions [33,34] to the declared free carrier on an interval of coordinate length 2 L⋆, with the right-handed component vanishing at both endpoints, yields one Weyl zero mode and the massive Dirac tower
+
+$$
+m_n=\frac{n\pi}{2L_{\star}},\quad n\geq1.
+$$
+
+The full spacetime warp cancels from canonically normalized free evolution. This is an application of prior mathematics, recorded as an explanatory note rather than an extra compact result. Compact size, species, occupations and the actual throat coupling remain open ([compact mass map](../docs/nsc-compact-mass-map.md)).
+
+**Repository derivation: torsion interaction overlaps.** Substituting those NSC profiles into the published higher-dimensional Einstein–Cartan contact [35] produces a mode-matrix vertex. After fermionic antisymmetrization the 3111 coupling remains nonzero, so a single massive level is not an exact interacting sector. The geometric warp changes the overlap coefficients even though it cancelled from free evolution. The five-dimensional stiffness \(s_T\), compact boundary action, physical state and absolute stress remain inputs ([compact interaction](../results/development/compact-interaction.json)).
+
+<!-- nsc-claim:charged-sector-parity -->
+**Imported result / repository derivation: charged parity and anomaly compatibility.** To use the imported charged throat as a source test, a local realization must contain an actual gauge connection. The present candidate is a U(1) extension with two equally charged bulk copies; it does not derive electromagnetism or the internal algebra. Within this field content, opposite compact parities are required both for an even neutral scalar link and for cancellation of the zero-mode cubic and mixed gravitational–gauge anomalies. The two allowed projectors are the invariant scalar-link sectors identified above:
+
+$$
+P_{\mathrm{even}}=\frac{I_8\mp\tau_3\otimes\gamma^5}{2}.
+$$
+
+Both remain. Sheet swap is not charge conjugation: a right-handed charge-one field is counted as a left-handed charge-minus-one field only in anomaly bookkeeping ([charged sector](../results/development/charged-sector.json)). The imported Einstein and Casimir solutions are not recomputed. Link mass, flux geometry, renormalized coefficients and child expansion remain unresolved.
+
+The two five-dimensional Dirac copies yield one four-dimensional Dirac zero field before a link mass is added. Their ultraviolet spinor trace has rank eight; applying the bulk coefficients to this candidate requires that two-copy multiplicity, not the one-copy normalization of the earlier UV control.
+
+
 ## 4. Geometry, vacuum stress and an explicit energy ledger
 
 **Repository derivation.** The isolated radial throat is gapless. Periodic confinement can create a band gap, and a smooth periodic profile removes the earlier geometric seams:
@@ -175,6 +201,12 @@ $$
 $$
 
 This gives a concrete ultraviolet matching problem: determine these coefficients from the same functional, then solve the independent metric equations. They have not been fitted to make the neck stationary. The result concerns a closed torsionless metric sector through four derivatives; boundary contributions and other fields require their corresponding terms.
+
+<!-- nsc-claim:torsion-uv-finite-matching -->
+**Repository derivation: five-dimensional ultraviolet matching.** The leading proper-time bulk coefficients of the candidate torsion contact reuse the dimension-independent heat formulae [29,36]. In five dimensions the induced Einstein and \(K^2\) terms have stiffness ratio 9. A matching window keeps this induced piece separate from the complementary one-loop determinant. The volume term is retained; it is not set to zero to manufacture an asymptotically flat solution. Leading stiffness 9 does not fix the finite datum \(c_T-9c_R\). The displayed derivative scale is a coefficient comparison, not a physical torsion mass ([UV map](../results/development/torsion-uv-map.json)).
+
+<!-- nsc-claim:published-flow-compatibility -->
+**Imported result / repository derivation: quantum-flow limits.** A published generalized Palatini flow [37] has a larger connection field space. Its metric contribution does not preserve the constrained Dirac three-form subspace in \(d=5\); its fermion contribution does. Copying that paper's four-dimensional fixed-point numbers does not determine the present five-dimensional functional. The next flow must be defined on the actual metric, skew three-form, physical fermions, links and measure ([flow compatibility](../results/development/flow-compatibility.json)).
 
 **Repository derivation: covariant determinant source.** The static Euclidean operator on the same smooth cell is
 
@@ -300,13 +332,14 @@ The Skyrme/BPS sector is a possible low-energy construction pattern. Its coeffic
 
 The often-quoted 3.34 solar-mass maximum is imported from a nuclear-calibrated Einstein–BPS model [5]. The historical runner records the published value rather than independently recomputing it. Its potential and calibrated nuclear coefficients matter; other potentials yield different maxima. It is not a universal collapse threshold or an unfitted NSC result ([stellar benchmark](../results/nsc-1-gravitating-bps-observation-link.json)).
 
+
 The next coupled calculation must determine: the full spinor boundary interaction and its domain; the remaining finite coefficients, compensator, physical state and link of the specified ultraviolet-subtracted determinant source; the independent metric equations; and the physical response around that solution. The present source is that specified determinant remainder, not a scheme-independent completed stress. Only then can particle identities, nuclear interactions, collapse, and cosmological predictions be established with the same parameters.
 
 The joint closure is a candidate project contribution, not an established novelty claim. Primary ingredients retain their original attribution. Failure of one local realization informs its revision; it neither disproves the nested architecture nor confirms it.
 
 ## 7. Reproduction and scope
 
-This working revision contains 81 compact records: 58 frozen historical records and 23 scoped follow-ups. All new scientific records, their generators and hash-bound inputs are imported from committed laboratory evidence. Each has a declared comparison policy; source and scope fields remain exact. Schema adapters live outside immutable scientific generators. The source and normalization/state records compare every field with relative tolerance \(2\times10^{-8}\) and absolute tolerance \(2\times10^{-7}\); the response-matching record uses \(2\times10^{-8}\) for both tolerances.
+This working revision contains 85 compact records: 58 frozen historical records, 23 earlier scoped follow-ups, and four newly released records under `results/development/`. The four additions, their generators and hash-bound inputs are imported from laboratory commit `95b96be`. Each has a declared comparison policy; source and scope fields remain exact. The new outputs retain their native schemas, with manifest identities supplied by adapters. Internal status strings that mention v0.3.0 remain historically true. The compact-interaction record compares every field with absolute and relative tolerance \(3\times10^{-12}\); the three exact additions compare every field with zero numeric tolerance. The source and normalization/state records compare every field with relative tolerance \(2\times10^{-8}\) and absolute tolerance \(2\times10^{-7}\); the response-matching record uses \(2\times10^{-8}\) for both tolerances.
 
 ```text
 make demonstrate
@@ -314,7 +347,7 @@ make verify
 make reproduce-exact
 ```
 
-The short demonstration follows computed boundary response, vacuum work, and the invariant spinor sector. The full gate authenticates the graph, runs focused tests, reproduces all records in isolation, and verifies two identical PDF builds. Same-environment exact reproduction and portable numerical comparison are separate checks. See [reproducing](../docs/reproducing.md) and the [result manifest](../results/manifest.json).
+The demonstration displays seven authenticated records covering boundary response, vacuum work, the spinor sector, normalized histories, static-to-causal matching, compact interactions and the charged domain. It does not rerun scientific generators by default; `make demonstrate-recompute` requests those executions explicitly. The full gate authenticates the graph, runs tests, reproduces all records in isolation, and verifies two identical PDF builds. Same-environment exact reproduction and portable numerical comparison are separate checks. See [reproducing](../docs/reproducing.md) and the [result manifest](../results/manifest.json).
 
 The following appendices preserve the main normalization corrections and finite mathematical controls. Their historical numerical roots remain diagnostics. Full covariant physical closure, predicted particle species, a measured dark fraction, and our universe's parent/child identification remain open.
 
@@ -493,6 +526,35 @@ $$
 
 Independent ODE solutions reproduce these maps ([nsc-3-threshold-response.json](../results/nsc-3-threshold-response.json)). The positive boundary stiffness coexists with the gapless radial bulk spectrum; it is not a particle mass of 3/2. A mass identification requires the full pole problem, residues and physical state. At zero energy m(E) can be singular, so E m(E) must be evaluated by its limit or by the squared-operator boundary problem.
 
+## Appendix C. Compact, UV and charged-throat controls
+
+This appendix records technical controls behind the compact-sector and source matching. It does not add a compact-mass result record, recompute the imported wormhole, or select a physical coupling.
+
+The compact-mass application uses four-dimensional signature +--- and a fifth gamma matrix iγ⁵, giving five-dimensional signature +----. It applies Fischmann's conformal law and the interval reduction of Grossman and Neubert. The zero mode is a single Weyl field; it cannot be passed to a massive four-component source as though it contained both chiralities. Opposite endpoint chirality supplies the mirror zero mode and the same massive tower. Self-adjointness alone does not choose between them.
+
+The compact-interaction overlaps are dimensionless profile integrals after the bulk Einstein normalization
+
+$$
+\kappa_{4,\mathrm{bulk}}^2=\frac{\kappa_5^2}{I_3},\quad I_3=\int e^{3\sigma}dY.
+$$
+
+For the declared warp, I₃/L⋆=1.96509101243726. The 3111 left-current fermionic component remains of order 6 after antisymmetrization; the 0111 vertex vanishes by the even bulk warp. These signs are not energy-density signs.
+
+For one bulk Dirac field, the ultraviolet map retains
+
+$$
+\frac{4(\Lambda^5-\nu^5)}{5(4\pi)^{5/2}}\int\sqrt{g}.
+$$
+
+Omitting that volume term in an unconstrained metric variation would change the source problem. Finite coefficients \(c_R\) and \(c_T\) are left unspecified; leading cutoff compensation leaves \(c_T-9c_R\) unchanged.
+
+For the imported throat, the short-exterior-length relations of Maldacena, Milekhin and Popov include
+
+$$
+r_e^2=\frac{\pi q^2G_N}{g^2},\quad E_{\mathrm{quantum}}=-\frac{q}{8\ell}.
+$$
+
+The approximation uses large flux, weak gauge coupling and specified exterior geometry. The optical/redshift scale ℓ is not the proper throat length. Exterior matching and mouth stabilization must satisfy the source's assumptions; these lengths are not substituted as NSC predictions.
 
 ## References
 
@@ -533,3 +595,9 @@ Repository records cited in the text live under [`results/`](../results/manifest
 29. D. V. Vassilevich, “Heat kernel expansion: user’s manual,” *Phys. Rept.* **388**, 279 (2003), [arXiv:hep-th/0306138](https://arxiv.org/abs/hep-th/0306138). The Dirac \(a_0,a_2,a_4\) coefficients used here are this established formula, independently reconstructed on the present operator.
 30. I. Klich, “Full Counting Statistics: An elementary derivation of Levitov’s formula,” [arXiv:cond-mat/0209642](https://arxiv.org/abs/cond-mat/0209642). The Fock-to-determinant identity is imported; it is not a Nested-Space discovery.
 31. R. Martín and E. Verdaguer, “Stochastic semiclassical gravity,” *Phys. Rev. D* **60**, 084008 (1999), [arXiv:gr-qc/9904021](https://arxiv.org/abs/gr-qc/9904021). The influence-functional approach to gravitational response is imported; the present record connects it to this Dirac geometry.
+32. J. Maldacena, A. Milekhin, and F. Popov, “Traversable wormholes in four dimensions,” [arXiv:1807.04726v3](https://arxiv.org/abs/1807.04726). The semiclassical Einstein–Maxwell throat supported by charged massless Dirac vacuum energy is imported theory, not an NSC-computed solution.
+33. M. Fischmann, “On conformal powers of the Dirac operator on spin manifolds,” [arXiv:1311.4182](https://arxiv.org/abs/1311.4182). Used for the conformal Dirac identification of the free compact carrier.
+34. Y. Grossman and M. Neubert, “Neutrino masses and mixings in non-factorizable geometry,” *Phys. Lett. B* **474**, 361 (2000), [arXiv:hep-ph/9912408](https://arxiv.org/abs/hep-ph/9912408). Used for the five-dimensional spinor reduction and chiral endpoint choice; their Randall–Sundrum phenomenology is not imported.
+35. O. Castillo-Felisola, C. Corral, S. Kovalenko, and I. Schmidt, “Torsion in extra dimensions and one-loop observables,” [arXiv:1405.0397](https://arxiv.org/abs/1405.0397). Equations 13 and 18–20 supply the higher-dimensional Einstein–Cartan contact reused on NSC compact profiles.
+36. F. Pfäffle and C. A. Stephan, “On gravity, torsion and the spectral action principle,” [arXiv:1101.1424](https://arxiv.org/abs/1101.1424). Proposition 5.4 supplies the dimension-independent Bochner/\(a_2\) formulae; the four-dimensional curved \(a_4\) is not reused as a five-dimensional formula.
+37. C. Pagani and R. Percacci, “Quantum gravity with torsion and non-metricity,” *Class. Quantum Grav.* **32**, 195019 (2015), [arXiv:1506.02882](https://arxiv.org/abs/1506.02882). The Palatini flow is a compatibility benchmark, not an NSC beta function.

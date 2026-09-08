@@ -1,17 +1,21 @@
 # Reproducing the compact results
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and four nested development records 82–85. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
-Subsequent [compact-interaction](nsc-compact-interaction.md),
-[five-dimensional UV matching](nsc-torsion-uv-map.md), and
-[published-flow compatibility](nsc-flow-compatibility.md) development evidence
-is stored separately in `results/development/`. It does not change the
-immutable v0.3.0 release or its 81-record count. Run
-`make reproduce-development` to authenticate its inputs and compare every
-recorded field. The ordinary `make reproduce` and `make verify` routes include
-this focused check; `make reproduce-exact` refers to the released collection.
+The four nested records live under `results/development/`:
+[compact interaction](nsc-compact-interaction.md),
+[five-dimensional UV matching](nsc-torsion-uv-map.md),
+[published-flow compatibility](nsc-flow-compatibility.md), and
+[charged-sector parity](nsc-charged-self-sourcing-route.md).
+They enter the v0.4.0 collection as records 82–85. Their JSON still lacks
+`artifact_id`; manifest identities are assigned outside those files. Internal
+status strings that mention v0.3.0 remain historically true. The compact-mass
+check is an explanatory application note, not a fifth record. Run
+`make reproduce-development` to recompute only those four nested records with
+their recorded all-field policies. `make reproduce` and `make verify` cover
+the complete 85-record graph; `make reproduce-exact` requires byte identity.
 
 ## Requirements
 
@@ -51,7 +55,7 @@ make verify
 
 - `make check` validates manifests, claims, paths, and links.
 - `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–81 by comparing every recorded field.
+- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–85 by comparing every recorded field. Nested development paths are copied and compared explicitly.
 - `make reproduce-exact` requires byte-identical recomputation.
 - `make paper` rebuilds the tracked paper PDF.
 - `make verify` runs check, test, reproduce, and the paper byte check.
@@ -117,6 +121,10 @@ python3 scripts/check_nsc_covariant_source.py --check
 python3 scripts/check_nsc_measure_normalization.py --check
 python3 scripts/check_nsc_influence.py --check
 python3 scripts/check_nsc_response_matching.py --check
+python3 scripts/check_nsc_compact_interaction.py --check
+python3 scripts/check_nsc_torsion_uv_map.py --check
+python3 scripts/check_nsc_flow_compatibility.py --check
+python3 scripts/check_nsc_charged_sector.py --check
 ```
 
 ## Committed JSON is the public result
@@ -161,4 +169,4 @@ The manuscript source and generated preprint are
 
 ## Short demonstration
 
-Run `make demonstrate` for the computed finite boundary response, prescribed geometry-pulse vacuum work, and invariant sheet/chirality sector. The command checks committed evidence and states the domain of each result. It does not fit observations or generate a new theory claim.
+Run `make demonstrate` to inspect seven authenticated records and their physical scope. It checks the release specification, record hashes and source/input closure, then displays concise results. It does not launch scientific generators by default. To rerun the selected checks, use `make demonstrate-recompute` or `python3 scripts/demonstrate.py --recompute`. Neither route fits observations or creates a new theory claim.

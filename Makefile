@@ -8,6 +8,8 @@ help:
 	@echo "  make install          install the pinned project and paper dependencies"
 	@echo "  make check            validate manifests, claims, paths, and links"
 	@echo "  make test             run focused publication tests"
+	@echo "  make demonstrate      display authenticated results without recomputing"
+	@echo "  make demonstrate-recompute  explicitly rerun the selected demonstrations"
 	@echo "  make reproduce        recompute the released chain and development evidence"
 	@echo "  make reproduce-development  check subsequent development records"
 	@echo "  make reproduce-exact  require byte-identical recomputation"
@@ -25,11 +27,9 @@ test:
 	$(PYTHON) -m unittest discover -s tests -v
 
 reproduce-development:
-	$(PYTHON) scripts/check_nsc_compact_interaction.py --check
-	$(PYTHON) scripts/check_nsc_torsion_uv_map.py --check
-	$(PYTHON) scripts/check_nsc_flow_compatibility.py --check
+	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS) --only results/development/compact-interaction.json,results/development/torsion-uv-map.json,results/development/flow-compatibility.json,results/development/charged-sector.json
 
-reproduce: reproduce-development
+reproduce:
 	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS)
 
 reproduce-exact:
@@ -43,6 +43,9 @@ paper-check:
 
 verify: check test reproduce paper-check
 
-.PHONY: demonstrate
+.PHONY: demonstrate demonstrate-recompute
 demonstrate:
 	$(PYTHON) -B scripts/demonstrate.py
+
+demonstrate-recompute:
+	$(PYTHON) -B scripts/demonstrate.py --recompute

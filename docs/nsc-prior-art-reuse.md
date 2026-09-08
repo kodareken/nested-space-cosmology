@@ -61,6 +61,7 @@ the paper's d=4 fixed-point numbers into the five-dimensional carrier.
 
 | Existing formulation | Reuse | NSC interface |
 |---|---|---|
+| [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3), sections2 and5–6 | Charged-fermion vacuum stress and its semiclassical Einstein–Maxwell throat matching | [Charged operator/state, mass and coefficient matching](nsc-charged-self-sourcing-route.md); this is not a generic black-hole-to-child formation result. |
 | [Bronnikov, Dehnen and Melnikov](https://arxiv.org/html/gr-qc/0611022v2), §§2–3 | Regular black-universe metrics, horizon extensions, expanding interiors and asymptotics | Their phantom source is not our Dirac source; match the required stress to the selected common action. |
 | [Bronnikov and Donskoy](https://arxiv.org/html/0910.4930v1), §3 | Effective brane equations, projected bulk-Weyl stress and black-universe constructions | Derive the outside response instead of treating the undetermined bulk term as already calculated. |
 | [Popławski](https://arxiv.org/pdf/2008.02136), equations1,29,32–34 | Published spin-fluid/Einstein–Cartan collapse and bounce system | Match the torsion coupling, state and particle-production law. A dense spin fluid is not the present vacuum control. |
@@ -69,6 +70,11 @@ There is therefore no separate NSC task to rediscover that an expanding
 interior or a collapse/bounce construction is mathematically possible.
 Re-evolve an imported solution only when a specified change in source,
 action, boundary conditions or perturbations requires it.
+
+For metric integration, use the [full measure construction](nsc-quantum-measure-reuse.md),
+including gauge Jacobians and zero modes. Do not insert a one-dimensional
+weight to produce a desired scale or equate Lorentzian proper-time gauge with
+the heat-kernel regulator.
 
 ## The next useful compatibility comparison
 

@@ -2,7 +2,7 @@
 
 This directory contains the original 58-artifact v0.1.0 dependency closure that
 ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus scoped
-follow-ups 59–81. The machine-readable order, hashes, categories, dependencies,
+follow-ups 59–85. The machine-readable order, hashes, categories, dependencies,
 and paper claim links are in [manifest.json](manifest.json).
 
 The categories are intentionally different:
@@ -14,16 +14,27 @@ The categories are intentionally different:
 | `repository_derived_numerical_result` | A finite numerical calculation with its recorded nonclaims |
 | `diagnostic_nonpass` | A tested truncation or interpretation that did not pass |
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
-| `current_frontier` | The latest derived equation and the next unresolved calculation |
+| `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-There is exactly one current frontier:
+The original collection has one record with the preserved `current_frontier` label:
 
 - [nsc-2-zeta1-recursion-map.json](nsc-2-zeta1-recursion-map.json) derives a
   unitary parent/child dilation and the energy-resolved recursive tail. It does
   not select \(\Omega\), solve the mode-resolved tail, or derive physical
   \(\zeta\). Dilation alone does not derive \(\zeta=\Omega^2\).
 
-Scoped follow-ups are not a second frontier:
+Subsequent scoped results include:
+
+- [charged-sector.json](development/charged-sector.json) checks the candidate
+  charged compact domain, its anomaly cancellation and UV multiplicity. The
+  [source route](../docs/nsc-charged-self-sourcing-route.md) reuses an existing
+  fermion-supported throat; an NSC self-sourced solution remains open.
+- [compact-interaction.json](development/compact-interaction.json) retains
+  cross-level interactions after fermionic antisymmetrization.
+- [torsion-uv-map.json](development/torsion-uv-map.json) separates the leading
+  bulk coefficients from finite matching and the complementary determinant.
+- [flow-compatibility.json](development/flow-compatibility.json) checks the
+  applicability of a published quantum flow to the actual connection sector.
 
 - [nsc-11-response-matching.json](nsc-11-response-matching.json)
   matches the Euclidean and causal Dirac radius response in a relative

@@ -53,13 +53,15 @@ The loop is the physical objective. Its present executable links are:
 
 The current frontier is the full spinor boundary interaction and the remaining finite completion of the specified covariant source. These calculations test the missing connection directly. Physical inheritance scale, particle species, nuclear predictions and a cosmological fit remain open.
 
-The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This supplies the free mass operator for the next interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
+The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This is an explanatory application note, not an additional compact record. It supplies the free mass operator for the interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
 
-The [compact interaction map](docs/nsc-compact-interaction.md) evaluates the candidate bulk contact on those modes. Nonzero couplings between levels survive fermionic antisymmetrization, so the source requires a coupled-mode treatment or a controlled truncation. Its development record has a focused all-field reproducer; the global coupling, compact boundary action and quantum state remain inputs to determine.
+The [compact interaction map](docs/nsc-compact-interaction.md) evaluates the candidate bulk contact on those modes. Nonzero couplings between levels survive fermionic antisymmetrization, so the source requires a coupled-mode treatment or a controlled truncation. The global coupling, compact boundary action and quantum state remain inputs to determine.
 
-The [five-dimensional UV map](docs/nsc-torsion-uv-map.md) identifies the leading proper-time contribution to that coupling, its limited derivative correction and the finite relative datum still requiring a physical matching condition. The calculation separates the induced part from the complementary determinant to avoid counting the same fermions twice.
+The [five-dimensional UV map](docs/nsc-torsion-uv-map.md) identifies the leading proper-time contribution to that coupling, its limited derivative correction and the finite relative datum still requiring a physical matching condition. The calculation separates the induced part from the complementary determinant to avoid counting the same fermions twice. The retained volume term is not set to zero.
 
 The [published-flow comparison](docs/nsc-flow-compatibility.md) checks that the next quantum calculation uses the same connection sector. The larger Palatini flow cannot be substituted for the constrained Dirac formulation without matching its variables and measure. Its published fixed-point numbers remain prior-work benchmarks.
+
+A closer existing self-sourced throat is the semiclassical Einstein–Maxwell construction of Maldacena, Milekhin and Popov. That result is imported theory: it is not an NSC-computed solution, an observed wormhole, a generic formation process or a child-expansion proof. The present numerical operator is still neutral. The [charged-sector record](docs/nsc-charged-self-sourcing-route.md) checks only a candidate U(1) extension's compact parity, anomaly cancellation and heat-coefficient conventions. Both opposite-parity projectors remain; sheet exchange is not charge conjugation. Mass, internal representation, vacuum/gravitational/gauge coefficients and global boundary matching remain unresolved.
 
 ## Read and reproduce
 
@@ -75,7 +77,7 @@ make demonstrate
 make verify
 ```
 
-Version 0.3.0 contains **81 records: 58 frozen historical records and 23 scoped follow-ups**. The original v0.1.0 and v0.2.0 evidence remains byte-for-byte. Five demonstrations follow boundary response, vacuum work, the spinor reduction, normalized quantum histories and static-to-causal matching. The integrated gate verifies the complete collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
+Version 0.4.0 contains **85 records: 58 frozen historical records and 27 scoped follow-ups**. The original v0.1.0, v0.2.0 and v0.3.0 evidence remains byte-for-byte. Seven demonstrations display authenticated results for boundary response, vacuum work, the spinor reduction, normalized histories, static-to-causal matching, compact interactions and the charged domain. The default display performs no scientific recomputation; use `make demonstrate-recompute` when a new execution is wanted. The integrated gate verifies the full collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
 
 ## Scientific attribution and responsibility
 

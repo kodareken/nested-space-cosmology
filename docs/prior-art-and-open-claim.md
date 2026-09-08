@@ -17,12 +17,13 @@ the [technical paper](../paper/nested-space-cosmology.md).
 | Nuclear energy | Nuclear masses and fusion/fission \(Q\)-values are differences of complete bound-state energies; BPS/near-BPS Skyrme models calculate nuclear binding. | Required low-energy projection and calibration/holdout source. |
 | Self-gravitating nuclear matter | Full Einstein–BPS calculations produce compact-star mass-radius branches from nuclear-fixed parameters. | Gravity benchmark, not a discovery target. |
 | Trapped collapse to expansion | Exact regular black-universe solutions contain a trapped interior, positive complete-null-Raychaudhuri \(Q\), a finite radius minimum, and an expanding cosmological interior. | Limiting solution and transition benchmark. |
+| Charged-fermion self-sourcing | [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3) derive a semiclassical Einstein–Maxwell throat supported by charged-fermion vacuum energy. | Reuse their source and matching equations; the NSC gauge, light-mass, state and coefficient identification is the task. This is not an NSC-computed solution or generic child formation. |
 | Outside geometry replacing local phantom matter | An explicit RS2 effective-brane construction produces black-universe solutions with a positive-kinetic local scalar; the exotic null response is carried by the projected five-dimensional Weyl term. | Structural realization of \(\Gamma_{\mathrm{outside}}\); bulk completion and stability remain open. |
 | Matter in another room acting as dark matter | Linearized two-brane gravity makes matter on the other wall gravitate locally as shadow matter and predicts \(25\%\) weaker light deflection at equal Newtonian mass. | Realization of outside particles acting on local fabric, plus a fixed lensing/dynamics discriminator. |
 | Local particles, gauge fields, Higgs, and gravity from one spectrum | The Chamseddine–Connes spectral action produces the Standard Model coupled to Einstein plus Weyl gravity from one Dirac operator and imposes high-scale coupling relations. | Imported local-room action; its finite Dirac/Yukawa spectrum remains input unless the recursive fixed point determines it. |
 | Local common scale anomaly | The regulated fermionic determinant and its induced spectral action have a derived local Higgs–dilaton form including curvature, gauge, Higgs, and dilaton-gradient terms. | Import the common local Weyl mode; derive only the new relative parent/child sheet mode and its off-diagonal spectrum. |
 | Spectral interaction between two geometries | A doubled Dirac operator with two four-metrics and one off-diagonal field derives a canonical relative-metric interaction and an explicit leading FLRW action. | Import the leading interaction; the full exponential relative kernel is a heat-kernel diagnostic, not the complete physical anomaly. |
-| Spectral resolution wall | Full nonlocal spectral-action calculations find that scalar, gauge, and graviton propagation shuts off at momenta approaching the spectral cutoff. | Imported high-resolution boundary behavior; Lorentzian finite-momentum stability of the nested operator remains open. |
+| Spectral resolution diagnostics | Full Euclidean spectral-action calculations exhibit ultraviolet suppression and local-decoupling features in particular kernels. | Derive the physical causal response before interpreting these features as a propagation wall. |
 | Baby universes and inheritance | Black-hole offspring universes and inherited/mutated constants have prior literature, including cosmological natural selection. | Prior hypothesis class; not observational proof. |
 | Stable NEC violation | Beyond-Horndeski/DHOST examples can violate the null condition without the simple phantom kinetic instability. | Candidate mathematical source for the transition boundary. |
 | Reciprocal energy slopes | Dualities and energy functions invariant under scale inversion are known; the BPS core scales as compression plus volume energy. | Fixed-point scaffold for the parent/child map. |
@@ -54,11 +55,11 @@ such that the same fields, operator coefficients, boundary kernel, and scale map
 1. finite stationary electron, proton, and neutron charge sectors;
 2. quantum amplitudes and detector couplings of those same configurations;
 3. nuclear masses and reaction \(Q\)-values without inserted nucleon masses;
-4. the nuclear-fitted self-gravitating branch;
+4. a self-gravitating branch using those same derived matter coefficients;
 5. a stable trapped-to-defocusing-to-expanding transition; and
 6. a non-tunable dimensionless prediction identifying our cosmology with the child side of that transition.
 
-No individual item is project novelty. The invariant closure is.
+The individual ingredients have prior work. A completed and independently tested invariant closure would be a candidate project contribution; a priority claim would still require comparison with that literature.
 
 ## Compute admission rule
 
@@ -68,6 +69,7 @@ A scientific calculation belongs in this repository only when its compact record
 - a stationary configuration of the frozen universal action;
 - a prediction whose datum was not used to determine \(\Theta\);
 - a stable parent/child solution sourced by that same action; or
-- a dimensionless discriminator against ordinary cosmology.
+- a dimensionless discriminator against ordinary cosmology; or
+- a new operator, domain or state compatibility condition that changes which physical calculation is admissible.
 
 Standalone repetitions of interference, a known soliton, a published nuclear table, a black-universe metric, or a generic test suite are not project results.

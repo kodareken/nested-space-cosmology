@@ -176,6 +176,12 @@ def check_manifest(errors: list[str]) -> None:
         str(path.relative_to(ROOT))
         for path in (ROOT / "results").glob("nsc-*.json")
     }
+    development = ROOT / "results" / "development"
+    if development.is_dir():
+        result_files.update(
+            str(path.relative_to(ROOT))
+            for path in development.glob("*.json")
+        )
     if result_files != outputs:
         errors.append("tracked NSC result files differ from the manifest closure")
 
