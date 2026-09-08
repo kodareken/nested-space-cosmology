@@ -26,6 +26,10 @@ interface or consequences of an identified change.
 | Measure to finite remainder | [Normalization profiles](../results/nsc-10-measure-normalization.json) | Exact \(g_{\mathrm{log}}=g_{\mathrm{PT}}+\cdots+h\) identity; heat-covariantized rank is not \(g_{\mathrm{log}}\) |
 | State to pair-production noise | [Influence functional](../results/nsc-10-influence.json) | Smeared geometric variance equals the earlier pair coefficient; \(Z=1\) does not fix the absolute source |
 
+## Candidate source compatibility after v0.3.0
+
+The [torsion/source comparison](nsc-torsion-source-compatibility.md) translates published spectral-action coefficients into the normalization of the imported Einstein–Cartan source. At leading order it gives a factor-nine torsion stiffness and a conditional one-ninth algebraic current response, with a derivative term that must be controlled. This comparison does not alter the 81-record release or its torsionless numerical operator. The next interface is the sourced current kernel, state average and boundary/continuation prescription needed to reuse the published collapse system.
+
 ## Latest computed physical structure
 
 The [full-spinor boundary result](../results/nsc-8-chiral-boundary.json) gives a nonzero, energy-dependent four-component spatial response with direct/Schur/continuum agreement. It preserves physical chirality in the declared domain. Its action kernel occupies the vector/axial Clifford subspace, so the scalar mass mechanism requires a derived additional interaction or domain selection. Opposite normal or frame conventions cannot supply this by themselves.
