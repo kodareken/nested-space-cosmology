@@ -42,6 +42,10 @@ The [action/source comparison](nsc-torsion-source-compatibility.md) now records
 the coefficient conversion and the remaining domain/state conditions. Reuse
 that comparison rather than restarting the same literature derivation.
 
+It also identifies the existing Lucat–Prokopec microscopic in-in source and
+backreaction equations. Those replace a generic 2PI derivation task; the
+remaining work is the NSC parameter/state/domain match and its validity.
+
 Torsion in spectral geometry is also prior art.
 [Iochum, Levy and Vassilevich](https://arxiv.org/abs/1008.3630) give bulk and
 boundary spectral-action terms with skew torsion and chiral bag conditions.

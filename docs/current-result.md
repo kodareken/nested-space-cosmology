@@ -30,6 +30,8 @@ interface or consequences of an identified change.
 
 The [torsion/source comparison](nsc-torsion-source-compatibility.md) translates published spectral-action coefficients into the normalization of the imported Einstein–Cartan source. At leading order it gives a factor-nine torsion stiffness and a conditional one-ninth algebraic current response, with a derivative term that must be controlled. This comparison does not alter the 81-record release or its torsionless numerical operator. The next interface is the sourced current kernel, state average and boundary/continuation prescription needed to reuse the published collapse system.
 
+The same note now identifies the Lucat–Prokopec microscopic in-in Dirac source and backreaction equations for reuse. The conditional local interaction maps to |xi_eff|=1/3 and alpha_5=pi G_N/6. Its mass, state, finite renormalization and validity conditions remain explicit NSC inputs to determine; its published bounce examples are not a calculation at the NSC parameter point.
+
 ## Latest computed physical structure
 
 The [full-spinor boundary result](../results/nsc-8-chiral-boundary.json) gives a nonzero, energy-dependent four-component spatial response with direct/Schur/continuum agreement. It preserves physical chirality in the declared domain. Its action kernel occupies the vector/axial Clifford subspace, so the scalar mass mechanism requires a derived additional interaction or domain selection. Opposite normal or frame conventions cannot supply this by themselves.
