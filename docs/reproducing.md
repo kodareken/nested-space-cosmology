@@ -54,6 +54,47 @@ Incidental coordinates of a numerically flat diagnostic argmin are not public
 observables and may vary between LAPACK implementations. Exact mode remains
 the stronger same-environment check and compares every output byte.
 
+For the smooth-geometry convergence diagnostic, the release specification
+also declares a conditioned comparison of `observed_orders`. These values
+are derived from small differences between independently computed band edges:
+
+\[
+e_j=|\lambda_j^{\mathrm{lattice}}-\lambda^{\mathrm{continuum}}|,
+\qquad p_j=\log_2(e_j/e_{j+1}).
+\]
+
+The checker recomputes both identities within **each** expected and regenerated
+record, allowing at most 16 binary64 ULPs for arithmetic/library rounding.
+Every error must be finite and larger than the absolute comparison budget
+\(b=2\times10^{-12}\), and each regenerated error must differ from its frozen
+value by at most \(b\), with no additional relative tolerance. This tightens
+the ordinary \(10^{-8}\) absolute error comparison by a factor of 5,000.
+The admissible interval for each regenerated order is then calculated from
+the frozen errors, rather than chosen as a blanket order tolerance:
+
+\[
+\log_2\frac{e_j-b}{e_{j+1}+b}
+\;\le p_j^{\mathrm{regenerated}}\le\;
+\log_2\frac{e_j+b}{e_{j+1}-b}.
+\]
+
+Only a 32-ULP cushion is added when evaluating these interval endpoints; it
+covers the permitted identity rounding and endpoint arithmetic. An order
+inconsistent with its own errors still fails even when it lies inside the
+interval. The policy affects exactly nine `absolute_errors` and six
+`observed_orders` values. Raw continuum and lattice spectra, every other
+numeric field, keys, conventions, gates, nonclaims, and source hashes retain
+their existing comparisons. Exact mode still compares every byte.
+
+The \(2\times10^{-12}\) budget is an explicit portability acceptance threshold,
+not a certified total solver uncertainty. The immutable
+[smooth-geometry implementation](../src/recursive_horizons/nsc_smooth_geometry.py)
+uses a band-root `xtol=1e-12`, an ODE discriminant with `rtol=2e-11` and
+`atol=2e-12`, and floating-point eigensolutions. These distinct numerical
+errors cannot be bounded from root `xtol` alone. The ratio interval accounts
+for how accepted small raw-error differences are amplified in the derived
+order; it does not weaken or replace the underlying calculations.
+
 Committed JSON can be inspected without regeneration. The original 58 generators in `scripts/run_*.py` are the historical per-artifact writers; their bytes are frozen. Scoped follow-up checkers are `scripts/check_nsc_scale_closure.py`, `scripts/check_nsc_regulated_recursion.py`, `scripts/check_nsc_radial_spectrum.py`, and `scripts/check_nsc_geometric_chain.py`. Use an individual writer only to create a *new* compact record; they refuse to overwrite a file that already exists.
 
 The unit-closure follow-up authenticates selected v0.1.0 scripts and JSON by SHA-256. Isolated reproduction copies those committed files as auxiliary provenance inputs; it does not add them as extra steps of the historical 58-record chain and does not repin the original laboratory import commit. Direct all-field verification is:

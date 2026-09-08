@@ -1761,6 +1761,19 @@
     {
       "comparison_policy": {
         "absolute_tolerance": 1e-08,
+        "derived_quantities": [
+          {
+            "family_pointers": [
+              "/gap_families/0",
+              "/gap_families/1",
+              "/gap_families/2"
+            ],
+            "identity_ulps": 16,
+            "input_absolute_tolerance": 2e-12,
+            "interval_rounding_ulps": 32,
+            "kind": "log2_absolute_error_ratio"
+          }
+        ],
         "kind": "all_fields",
         "relative_tolerance": 1e-08
       },

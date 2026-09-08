@@ -11,7 +11,7 @@
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "release_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
   "release_spec": "results/release-spec.json",
-  "release_spec_sha256": "9629f86854a31a6968143873bcd09d337defcd1c4c257ab1e0073878c19211ff",
+  "release_spec_sha256": "a9d43693fbc347be75debc7e0a1c06853619210b184048617ca0d8b3cfc7e42d",
   "release_version": "0.2.0",
   "result_count": 77,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
@@ -1877,6 +1877,19 @@
       "category": "repository_derived_exact_identity",
       "comparison_policy": {
         "absolute_tolerance": 1e-08,
+        "derived_quantities": [
+          {
+            "family_pointers": [
+              "/gap_families/0",
+              "/gap_families/1",
+              "/gap_families/2"
+            ],
+            "identity_ulps": 16,
+            "input_absolute_tolerance": 2e-12,
+            "interval_rounding_ulps": 32,
+            "kind": "log2_absolute_error_ratio"
+          }
+        ],
         "kind": "all_fields",
         "relative_tolerance": 1e-08
       },
