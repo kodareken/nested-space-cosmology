@@ -50,6 +50,13 @@ Its matching-window weights and quadratic derivative term are checked. The
 finite relative coefficient c_T-9c_R remains a separate matching condition;
 do not repeat the leading heat calculation to determine it.
 
+For quantum flow, the [Pagani–Percacci compatibility check](nsc-flow-compatibility.md)
+uses the existing d-dimensional beta functions. Their larger Palatini
+truncation is not the current constrained Dirac connection sector; its
+metric term does not preserve the projected coupling relation. Reuse the
+method after matching variables, measure and derivative terms. Do not copy
+the paper's d=4 fixed-point numbers into the five-dimensional carrier.
+
 ## Black-hole interiors and child expansion
 
 | Existing formulation | Reuse | NSC interface |
