@@ -97,7 +97,7 @@ Derived here, always conditional on the stated premises:
 - the exponential heat profile from composition of resolution steps, as a heat-kernel diagnostic rather than a complete anomaly;
 - the local identity that one off-diagonal \(\Phi\) is mass gap, Schur self-energy, and relative-metric link;
 - child-side orientation of the source sign, later corrected by the exact child asymptotic;
-- a global horizon-penetrating spectral foliation; throat maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), and \(\Phi_{\mathrm{throat}}=R(E)\) remain unevaluated declarations;
+- a global horizon-penetrating spectral foliation and computed finite radial Weyl/DtN maps; full Lorentzian horizon maps and their physical matching field remain open;
 - the unitary dilation that makes \(\mathcal{T}_\Theta\) executable; \(\zeta=\Omega^2\) is not derived by that dilation alone;
 - the unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a sign theorem for that finite, fixed-geometry family;
 - finite regulated noncommuting variations, an explicit finite scale cocycle, and normalized \(1/\Omega\) chain controls;
@@ -172,7 +172,7 @@ flowchart TB
 
 The complete current dependency closure is small enough to recompute on a
 laptop. The v0.1.0 historical 58-record chain remains byte-for-byte. Scoped
-follow-ups 59–62 are reproduced by comparing every exact and numeric field.
+follow-ups 59–64 are reproduced by comparing every exact and numeric field.
 The reference historical run regenerated those 58 artifacts byte-for-byte in
 about four minutes:
 
@@ -200,7 +200,7 @@ rewrites the tracked result files. See
 | [docs/nsc-radial-spectrum.md](docs/nsc-radial-spectrum.md) | Isolated radial throat is gapless |
 | [docs/nsc-geometric-chain.md](docs/nsc-geometric-chain.md) | Controlled periodic-throat geometric gap |
 | [docs/reproducing.md](docs/reproducing.md) | How to inspect and regenerate compact results |
-| [results/README.md](results/README.md) | Category map for the 58-record chain plus scoped follow-ups 59–62 |
+| [results/README.md](results/README.md) | Category map for the 58-record chain plus scoped follow-ups 59–64 |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Claim discipline and contribution rules |
 | [paper/nested-space-cosmology.md](paper/nested-space-cosmology.md) | Technical paper source |
 | [paper/nested-space-cosmology.pdf](paper/nested-space-cosmology.pdf) | Reproducibly generated working preprint |
@@ -227,3 +227,9 @@ third-party work retains its original terms. See [LICENSE](LICENSE).
 
 Security reports use [SECURITY.md](SECURITY.md); scientific disagreements and
 reproduction failures belong in the ordinary issue tracker.
+
+## Computed finite boundary response — local September 8 revision
+
+The [first-order radial boundary calculation](docs/nsc-boundary-response.md) now evaluates oriented parent/child Weyl maps with sparse LU and independent ODE integration. The parent is rho>0 and its throat normal is negative; the child is rho<0 and its normal is positive. Their jump is E(m_child-m_parent). These finite spatial maps supersede the earlier unevaluated declarations only in their stated domain; full Lorentzian horizon maps and the physical matching field remain open.
+
+The [threshold example](docs/nsc-threshold-response.md) independently gives a zero-energy DtN jump tending to 3/2 in inverse throat-length units while the radial bulk spectrum is gapless. Boundary stiffness is therefore not automatically a particle mass. The compact-mode warp factor is a projection with measured mixing, not an invariant-subspace theorem. Full covariant stationarity, physical metric health, nonlinear collapse and observational predictions remain unfulfilled.

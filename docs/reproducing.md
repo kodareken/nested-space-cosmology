@@ -1,6 +1,6 @@
 # Reproducing the compact results
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–62. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–64. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -42,7 +42,7 @@ make verify
 
 - `make check` validates manifests, claims, paths, and links.
 - `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–62 by comparing every recorded field.
+- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–64 by comparing every recorded field.
 - `make reproduce-exact` requires byte-identical recomputation.
 - `make paper` rebuilds the tracked paper PDF.
 - `make verify` runs check, test, reproduce, and the paper byte check.

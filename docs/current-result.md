@@ -78,7 +78,7 @@ The child-scale correction also supersedes reading \(54/503\) as a child cosmolo
 
 ## Other compact closures, with their nonclaims
 
-The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte, plus scoped follow-ups 59–62. The following are the principal closures and the statements they explicitly do not make.
+The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte, plus scoped follow-ups 59–64. The following are the principal closures and the statements they explicitly do not make.
 
 **Imported bindings, not novelty**
 
@@ -97,7 +97,7 @@ The chain contains the original 58 v0.1.0 JSON records, preserved byte-for-byte,
 - Scalar recursive outside kernel with unit-normalized continuum.
 - Exponential heat profile as a heat-kernel diagnostic, not the complete physical anomaly; flat Euclidean graviton form factor without extra cutoff-disk poles; background-adjusted massless room graviton with residue \(12\).
 - Local identity that one \(\Phi\) is mass gap, Schur self-energy, and relative-metric link.
-- Global spectral foliation; throat Neumann-jump maps remain unevaluated declarations.
+- Global spectral foliation and computed finite radial Weyl/DtN maps; full Lorentzian throat maps and the physical matching field remain open.
 - Unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a finite, fixed-geometry sign theorem.
 - Finite regulated variations and \(1/\Omega\) chain controls; ultrastatic frequency factor; nonelliptic trapped coordinate-time Hamiltonian.
 - Isolated radial throat gapless by Weyl sequence.
@@ -122,3 +122,9 @@ $$
 on the warped parent/child mode spectrum, with consistent mass units and one regulated operator, then recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, inserting a dark function, or refining the finite additive-gap family. The full covariant measure, physical stationarity, metric health, and nuclear or cosmological predictions remain open. The periodic-throat gap does not close those equations.
 
 Until that tail is solved, public documents must keep every earlier \(\zeta\) candidate, \(1006/1015\), \(54/503\), and every particle or cosmological reading in the diagnostic column.
+
+## Computed finite boundary response — local September 8 revision
+
+The [first-order radial boundary calculation](nsc-boundary-response.md) now evaluates oriented parent/child Weyl maps with sparse LU and independent ODE integration. The parent is rho>0 and its throat normal is negative; the child is rho<0 and its normal is positive. Their jump is E(m_child-m_parent). These finite spatial maps supersede the earlier unevaluated declarations only in their stated domain; full Lorentzian horizon maps and the physical matching field remain open.
+
+The [threshold example](nsc-threshold-response.md) independently gives a zero-energy DtN jump tending to 3/2 in inverse throat-length units while the radial bulk spectrum is gapless. Boundary stiffness is therefore not automatically a particle mass. The compact-mode warp factor is a projection with measured mixing, not an invariant-subspace theorem. Full covariant stationarity, physical metric health, nonlinear collapse and observational predictions remain unfulfilled.

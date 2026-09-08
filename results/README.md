@@ -2,7 +2,7 @@
 
 This directory contains the original 58-artifact v0.1.0 dependency closure that
 ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus scoped
-follow-ups 59–62. The machine-readable order, hashes, categories, dependencies,
+follow-ups 59–64. The machine-readable order, hashes, categories, dependencies,
 and paper claim links are in [manifest.json](manifest.json).
 
 The categories are intentionally different:

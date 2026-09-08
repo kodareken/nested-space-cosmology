@@ -90,8 +90,8 @@ class PublicationManifestTests(unittest.TestCase):
     }
 
     def test_exact_frontier_and_count(self) -> None:
-        self.assertEqual(62, self.manifest["result_count"])
-        self.assertEqual(62, len(self.steps))
+        self.assertEqual(64, self.manifest["result_count"])
+        self.assertEqual(64, len(self.steps))
         self.assertEqual(58, self.manifest["historical_result_count"])
         self.assertEqual(
             "NSC-2-ZETA1-RECURSION-MAP", self.manifest["frontier_artifact_id"]
@@ -106,6 +106,8 @@ class PublicationManifestTests(unittest.TestCase):
                 "results/nsc-3-regulated-recursion.json",
                 "results/nsc-3-radial-spectrum.json",
                 "results/nsc-3-geometric-chain.json",
+                "results/nsc-3-threshold-response.json",
+                "results/nsc-3-boundary-response.json",
             ],
             self.manifest["scoped_follow_up_outputs"],
         )
