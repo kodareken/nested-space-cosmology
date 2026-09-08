@@ -26,6 +26,7 @@ test:
 
 reproduce-development:
 	$(PYTHON) scripts/check_nsc_compact_interaction.py --check
+	$(PYTHON) scripts/check_nsc_torsion_uv_map.py --check
 
 reproduce: reproduce-development
 	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS)

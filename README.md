@@ -57,6 +57,8 @@ The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies establis
 
 The [compact interaction map](docs/nsc-compact-interaction.md) evaluates the candidate bulk contact on those modes. Nonzero couplings between levels survive fermionic antisymmetrization, so the source requires a coupled-mode treatment or a controlled truncation. Its development record has a focused all-field reproducer; the global coupling, compact boundary action and quantum state remain inputs to determine.
 
+The [five-dimensional UV map](docs/nsc-torsion-uv-map.md) identifies the leading proper-time contribution to that coupling, its limited derivative correction and the finite relative datum still requiring a physical matching condition. The calculation separates the induced part from the complementary determinant to avoid counting the same fermions twice.
+
 ## Read and reproduce
 
 1. [Working preprint PDF](paper/nested-space-cosmology.pdf) — main argument, six targets and technical appendices.

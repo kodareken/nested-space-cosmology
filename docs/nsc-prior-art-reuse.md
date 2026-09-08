@@ -44,6 +44,12 @@ Reuse its full fermionic vertex and the nonzero 3111 coupling. An imported
 single-field axial-source equation needs a controlled reduction of this
 tower; repeating the known KK or Einstein–Cartan derivation does not supply it.
 
+The [five-dimensional UV match](nsc-torsion-uv-map.md) also reuses
+Pfäffle–Stephan Proposition5.4, which already holds in arbitrary dimension.
+Its matching-window weights and quadratic derivative term are checked. The
+finite relative coefficient c_T-9c_R remains a separate matching condition;
+do not repeat the leading heat calculation to determine it.
+
 ## Black-hole interiors and child expansion
 
 | Existing formulation | Reuse | NSC interface |

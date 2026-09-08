@@ -4,7 +4,8 @@ This repository publishes the original 58 v0.1.0 compact JSON records, preserved
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
-Subsequent [compact-interaction development evidence](nsc-compact-interaction.md)
+Subsequent [compact-interaction](nsc-compact-interaction.md) and
+[five-dimensional UV matching](nsc-torsion-uv-map.md) development evidence
 is stored separately in `results/development/`. It does not change the
 immutable v0.3.0 release or its 81-record count. Run
 `make reproduce-development` to authenticate its inputs and compare every
