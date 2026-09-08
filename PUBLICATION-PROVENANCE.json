@@ -66,9 +66,9 @@
       "sha256": "3eba33e5d36361800da6a269600d4900a4ba89a1abf380581e6dc2007e6459ff"
     },
     {
-      "bytes": 7148,
+      "bytes": 7598,
       "path": "README.md",
-      "sha256": "1e51606d94d88821f7837fc32be07ad12c9b6d53592602819ee3a0f328cd133f"
+      "sha256": "f62fb3a48048a42b1023d162f03e98dfa18d21122e9ebf6324f3f757ffb7b6c6"
     },
     {
       "bytes": 629,
@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 10022,
+      "bytes": 10828,
       "path": "docs/current-result.md",
-      "sha256": "ba6ff98f45d5dd1f149bdfaff06172ec22844851e31d3cc49839b3839ea3b45a"
+      "sha256": "8f88735a72fabe69a9cef61171659361fd680e54d757c1229db5e2549ab79a53"
     },
     {
       "bytes": 10991,
@@ -104,6 +104,11 @@
       "bytes": 13455,
       "path": "docs/nsc-closure-verification-2026-09-07.md",
       "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
+    },
+    {
+      "bytes": 9160,
+      "path": "docs/nsc-compact-mass-map.md",
+      "sha256": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073"
     },
     {
       "bytes": 16550,
@@ -166,9 +171,9 @@
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
     },
     {
-      "bytes": 5748,
+      "bytes": 6644,
       "path": "docs/nsc-prior-art-reuse.md",
-      "sha256": "cbf0c7304f743a7ff5cc07fb9f04b687971b542537cfcf4fdc481e8eb8547d8f"
+      "sha256": "43c1bb123106485a454c494de074bb61ff664438965a80e0745d3c60380216c8"
     },
     {
       "bytes": 2394,
@@ -714,6 +719,11 @@
       "bytes": 14508,
       "path": "scripts/check_nsc_clock_horizon.py",
       "sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1"
+    },
+    {
+      "bytes": 3346,
+      "path": "scripts/check_nsc_compact_mass_map.py",
+      "sha256": "7209fcc9985a54a34a56def08af04fe726393000cbd45f0cacf59f219bb18e33"
     },
     {
       "bytes": 23460,

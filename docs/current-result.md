@@ -32,6 +32,8 @@ The [torsion/source comparison](nsc-torsion-source-compatibility.md) translates 
 
 The same note now identifies the Lucat–Prokopec microscopic in-in Dirac source and backreaction equations for reuse. The conditional local interaction maps to |xi_eff|=1/3 and alpha_5=pi G_N/6. Its mass, state, finite renormalization and validity conditions remain explicit NSC inputs to determine; its published bounce examples are not a calculation at the NSC parameter point.
 
+The [compact mass map](nsc-compact-mass-map.md) now supplies the free mass operator for the declared five-dimensional interval. Applying established conformal Dirac and KK reduction gives a chiral zero mode and m_n=n pi/(2 L_star) massive Dirac levels. The full spacetime warp cancels from canonically normalized free evolution. The exact embedding and endpoint normalization are checked in the existing spinor frame. This identifies an action-level mass, while compact size, global domain, species and occupations remain open. The next interface is the interaction and gravitational normalization after compact reduction; the earlier four-dimensional torsion coefficient cannot simply be assigned to an isolated tower level. This application note is subsequent to the unchanged 81-record v0.3.0 release.
+
 ## Latest computed physical structure
 
 The [full-spinor boundary result](../results/nsc-8-chiral-boundary.json) gives a nonzero, energy-dependent four-component spatial response with direct/Schur/continuum agreement. It preserves physical chirality in the declared domain. Its action kernel occupies the vector/axial Clifford subspace, so the scalar mass mechanism requires a derived additional interaction or domain selection. Opposite normal or frame conventions cannot supply this by themselves.
