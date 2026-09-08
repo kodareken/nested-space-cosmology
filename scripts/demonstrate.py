@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Recompute three compact demonstrations and state their physical scope."""
+"""Recompute the connected operator demonstrations and state their physical scope."""
 from __future__ import annotations
 
 import os
@@ -17,6 +17,10 @@ CASES = (
      'Vacuum response: prescribed geometric work produces finite Dirac excitations; the geometry work source remains unsolved.'),
     ('scripts/check_nsc_observable_bridge.py',
      'Spinor bridge: exact identification requirements and a kinematic scalar link; particle and cosmology closure remains open.'),
+    ('scripts/check_nsc_influence.py',
+     'State response: normalized histories connect causal force fluctuations to geometric pair production; absolute finite terms remain open.'),
+    ('scripts/check_nsc_response_matching.py',
+     'Static-to-causal match: relative Euclidean and retarded radius responses agree with their coordinate contact retained; full backreaction remains open.'),
 )
 
 
@@ -31,7 +35,7 @@ def main() -> int:
         subprocess.run([sys.executable, str(ROOT / generator), '--check'],
                        cwd=ROOT, env=env, check=True)
         print(scope, flush=True)
-    print(f'Three scoped demonstrations passed within the {manifest["result_count"]}-record release.')
+    print(f'{len(CASES)} scoped demonstrations passed within the {manifest["result_count"]}-record release.')
     return 0
 
 

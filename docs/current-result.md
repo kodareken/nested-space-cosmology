@@ -1,6 +1,6 @@
 # Current result: the connected operator and its physical closure
 
-Version 0.2.0 presents a 77-record working collection: the original 58 historical records and 19 scoped follow-ups. The [paper](../paper/nested-space-cosmology.pdf) organizes these results around six physical questions, with technical derivations and historical corrections in appendices.
+Version 0.3.0 presents an 81-record working collection: the original 58 historical records and 23 scoped follow-ups. The [paper](../paper/nested-space-cosmology.pdf) organizes these results around six physical questions, with technical derivations and historical corrections in appendices.
 
 ## The strongest completed chain
 
@@ -16,6 +16,9 @@ Version 0.2.0 presents a 77-record working collection: the original 58 historica
 | Recursive depth to a defined response | [Tail endpoint](../results/nsc-5-tail-limit.json) | Fixed spatial chain has a quantified endpoint criterion; no physical Omega selected |
 | Source to cosmic evolution | [Plateau requirements](../results/nsc-5-plateau-conditions.json) | Internal exchange, pressure and external room supply cannot be conflated |
 | Clock to physical history | [Clock/horizon audit](../results/nsc-5-clock-horizon.json) | Infinite coordinate time, affine continuation and mapped duration are distinct |
+| Geometry to a specified determinant source | [Covariant source](../results/nsc-9-covariant-source.json) | Frequency-integrated UV-subtracted modulus and metric projections; not scheme-independent completed stress |
+| Measure to finite remainder | [Normalization profiles](../results/nsc-10-measure-normalization.json) | Exact \(g_{\mathrm{log}}=g_{\mathrm{PT}}+\cdots+h\) identity; heat-covariantized rank is not \(g_{\mathrm{log}}\) |
+| State to pair-production noise | [Influence functional](../results/nsc-10-influence.json) | Smeared geometric variance equals the earlier pair coefficient; \(Z=1\) does not fix the absolute source |
 
 ## Latest computed physical structure
 
@@ -23,17 +26,21 @@ The [full-spinor boundary result](../results/nsc-8-chiral-boundary.json) gives a
 
 The [finite metric-response result](../results/nsc-8-finite-terms.json) identifies four independent bulk coefficient channels on the actual smooth profile. Euler and total-divergence terms have zero closed-cell bulk variation. The exact lapse/radius/shape sensitivities now specify which independent ultraviolet matching conditions the common functional must supply before solving self-sourcing.
 
+The [covariant source](../results/nsc-9-covariant-source.json) evaluates the four-dimensional frequency-integrated determinant and all three static metric variations on that same neck. A specified ultraviolet subtraction yields a finite remainder with negative neck null stress. Its projections occupy the matching equation previously written with an unevaluated \(b_A\). The [normalization comparison](../results/nsc-10-measure-normalization.json) keeps the exact finite remainder \(h\) and the sharp-cutoff wall explicit; heat-covariantizing the old rank term is not the calculated modulus. The [influence record](../results/nsc-10-influence.json) supplies normalized histories, mean force, causal response and a positive smeared noise that equals the earlier pair-production weight.
+
 ## The next connection to close
 
-The full spinor boundary map and its transmission domain must determine whether the physical chiral sector is admissible. In parallel, the common covariant functional and state must determine the absolute stress. These two tracks join at
+The [response-matching calculation](../results/nsc-11-response-matching.json) now joins the Euclidean radius Hessian and the vacuum retarded susceptibility on the smooth ultrastatic cell. Its P-minus-AP comparison cancels state-independent local terms, retains the nonzero coordinate contact, and checks spatial, angular, frequency and regulator limits independently. The refined methods differ by at most about1.5e-9 at the three tested frequencies and the same angular truncation. This relative control does not fix the absolute finite coefficients or establish the full finite-cutoff causal functional.
+
+The full spinor boundary map and its transmission domain must determine whether the physical chiral sector is admissible. In parallel, the remaining finite coefficients, compensator, physical state and link must complete the specified ultraviolet-subtracted determinant source. These two tracks join at
 
 $$
 \frac{\delta\Gamma_{\rm one}}{\delta g^{\mu\nu}}=0.
 $$
 
-The calculation must retain every independent metric, field, boundary and relative-scale equation. The Einstein term already induced by the adopted construction is not added again with a new weight.
+The calculation must retain every independent metric, field, boundary and relative-scale equation. The Einstein term already induced by the adopted construction is not added again with a new weight. The present source is that specified UV-subtracted determinant, not a scheme-independent completed stress.
 
-For the prescribed smooth neck, anomaly matching alone leaves finite invariant action terms undetermined. The written flat common-scale average also diverges in the tested finite prescription. A complete compensator, measure, state and ultraviolet matching are required to determine the source rather than fit it.
+For the prescribed smooth neck, anomaly matching alone leaves finite invariant action terms undetermined. The written flat common-scale average also diverges in the tested finite prescription. Equal-history normalization leaves real local phase terms unconstrained. A complete compensator, physical state and link are required to determine the source rather than fit it.
 
 The actual boundary response must be transported into a common spin frame before identifying its scalar, pseudoscalar or other components. The scalar sheet benchmark supplies exact target identities, but the geometric radial potential preserves massless chirality in the paired angular continuum problem. No value of the current radial gap is labeled an electron mass.
 

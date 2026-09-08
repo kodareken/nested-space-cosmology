@@ -1,0 +1,1625 @@
+{
+  "Abel_fixed_cutoff_spatial_resolution": [
+    {
+      "AP_points": 128,
+      "P_points": 129,
+      "cutoffs": [
+        32.0,
+        22.62741699796952,
+        16.0
+      ],
+      "differences": [
+        0.017499211001416215,
+        0.017459302874275717,
+        0.01738018892645915
+      ],
+      "extrapolated": 0.017539353230711523,
+      "remainder_bound_proved": false
+    },
+    {
+      "AP_points": 192,
+      "P_points": 193,
+      "cutoffs": [
+        32.0,
+        22.62741699796952,
+        16.0
+      ],
+      "differences": [
+        0.017499211005812254,
+        0.017459302874274385,
+        0.017380188926457818
+      ],
+      "extrapolated": 0.017539353242436512,
+      "remainder_bound_proved": false
+    },
+    {
+      "AP_points": 256,
+      "P_points": 257,
+      "cutoffs": [
+        32.0,
+        22.62741699796952,
+        16.0
+      ],
+      "differences": [
+        0.01749921100581331,
+        0.01745930287427544,
+        0.017380188926458817
+      ],
+      "extrapolated": 0.01753935324243755,
+      "remainder_bound_proved": false
+    }
+  ],
+  "Abel_resolution": [
+    {
+      "AP_points": 128,
+      "P_points": 129,
+      "minus_euclidean": -2.8172144106441976e-07,
+      "nu": 0.0,
+      "sectors": [
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.027000598479736238,
+            0.026852610304558322,
+            0.026562120227705155
+          ],
+          "extrapolated": 0.027150415412748374,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.007830058077306301,
+            0.007758032337866094,
+            0.007616350249899484
+          ],
+          "extrapolated": 0.007902873613717776,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.001006784989119991,
+            0.000993524738894136,
+            0.0009673973363905075
+          ],
+          "extrapolated": 0.0010201762719952063,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            9.444269086067436e-05,
+            9.281327330357136e-05,
+            8.959871966141009e-05
+          ],
+          "extrapolated": 9.608686890845893e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            7.482673452408051e-06,
+            7.322471236026473e-06,
+            7.006145161136956e-06
+          ],
+          "extrapolated": 7.644235121414175e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            5.334561214986877e-07,
+            5.197846992821553e-07,
+            4.92776425220498e-07
+          ],
+          "extrapolated": 5.472390671723559e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            3.53773597083773e-08,
+            3.431953166099788e-08,
+            3.222948707914952e-08
+          ],
+          "extrapolated": 3.644372492672687e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            2.2256907428186423e-09,
+            2.1495183410991103e-09,
+            1.999045484701867e-09
+          ],
+          "extrapolated": 2.3024871268854477e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.18577126827113996
+    },
+    {
+      "AP_points": 128,
+      "P_points": 129,
+      "minus_euclidean": -2.67445128376842e-07,
+      "nu": 0.6,
+      "sectors": [
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.02460543782670338,
+            0.02446936628601032,
+            0.024202461836717537
+          ],
+          "extrapolated": 0.02474325557809422,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.007438667303133473,
+            0.007370622035594798,
+            0.007236774261976664
+          ],
+          "extrapolated": 0.007507460157825219,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.0009729916804666061,
+            0.000960273831607461,
+            0.0009352077040194473
+          ],
+          "extrapolated": 0.0009858327193691767,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            9.20764670939711e-05,
+            9.049952352002677e-05,
+            8.738701497468249e-05
+          ],
+          "extrapolated": 9.366720353543023e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            7.3336160251180615e-06,
+            7.177649564038546e-06,
+            6.869508722306961e-06
+          ],
+          "extrapolated": 7.4908465130067254e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            5.246525724977857e-07,
+            5.112868204371068e-07,
+            4.848653873956721e-07
+          ],
+          "extrapolated": 5.381216815851057e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            3.4879606758408954e-08,
+            3.3842219693269726e-08,
+            3.179115393159293e-08
+          ],
+          "extrapolated": 3.592489661308207e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            2.1984236653338485e-09,
+            2.12354400730419e-09,
+            1.9755205249438745e-09
+          ],
+          "extrapolated": 2.2738819345965075e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.17252518197592087
+    },
+    {
+      "AP_points": 128,
+      "P_points": 129,
+      "minus_euclidean": -2.1616907605603863e-07,
+      "nu": 1.4,
+      "sectors": [
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.01743705710554455,
+            0.01733628816478494,
+            0.017139178573814057
+          ],
+          "extrapolated": 0.017539302143153607,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.006037004628805409,
+            0.005982894147314899,
+            0.005876475492089472
+          ],
+          "extrapolated": 0.006091715879547784,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            0.0008425978082222674,
+            0.0008319282774971182,
+            0.0008108724738551398
+          ],
+          "extrapolated": 0.0008533617582168566,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            8.259692655077089e-05,
+            8.122633211105068e-05,
+            7.851547102921685e-05
+          ],
+          "extrapolated": 8.397763025635996e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            6.723089616134104e-06,
+            6.5841979393077565e-06,
+            6.3090879269811495e-06
+          ],
+          "extrapolated": 6.862872406735813e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            4.880671493623367e-07,
+            4.759542613363976e-07,
+            4.5194096065515055e-07
+          ],
+          "extrapolated": 5.002508625118196e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            3.2789853499082255e-08,
+            3.183725061361997e-08,
+            2.994806724831989e-08
+          ],
+          "extrapolated": 3.374779718641937e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            20.0,
+            14.14213562373095,
+            10.0
+          ],
+          "differences": [
+            2.083074157610554e-09,
+            2.0136079470489676e-09,
+            1.8758495867743363e-09
+          ],
+          "extrapolated": 2.1529317217883204e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.13062519609267206
+    },
+    {
+      "AP_points": 192,
+      "P_points": 193,
+      "minus_euclidean": -1.6918718093172913e-08,
+      "nu": 0.0,
+      "sectors": [
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.027091703204100148,
+            0.027033221353980452,
+            0.026917125470253433
+          ],
+          "extrapolated": 0.027150474326390634,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.007874341075753355,
+            0.007845920209600399,
+            0.0077894455611762226
+          ],
+          "extrapolated": 0.007902884303200223,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.0010149283950720012,
+            0.0010097028216384807,
+            0.0009993101890994893
+          ],
+          "extrapolated": 0.0010201734732815382,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            9.544232932690022e-05,
+            9.48009671812855e-05,
+            9.352441404031353e-05
+          ],
+          "extrapolated": 9.608574852260077e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            7.580866868472924e-06,
+            7.5178757255045525e-06,
+            7.392408403195105e-06
+          ],
+          "extrapolated": 7.644029665983728e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            5.41829024314211e-07,
+            5.364585318190507e-07,
+            5.257543458370151e-07
+          ],
+          "extrapolated": 5.472117831454663e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            3.602475739938882e-08,
+            3.560956773895896e-08,
+            3.478152521552147e-08
+          ],
+          "extrapolated": 3.6440725992292755e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            2.2722819181808518e-09,
+            2.242405372498979e-09,
+            2.1827877283442376e-09
+          ],
+          "extrapolated": 2.302203612932393e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.18577153307386293
+    },
+    {
+      "AP_points": 192,
+      "P_points": 193,
+      "minus_euclidean": -1.6053392309922643e-08,
+      "nu": 0.6,
+      "sectors": [
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.024689239596869417,
+            0.02463544274558116,
+            0.024528678211966692
+          ],
+          "extrapolated": 0.024743312837811688,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.0074805036843959005,
+            0.007453653003292704,
+            0.007400299050141834
+          ],
+          "extrapolated": 0.007507470168517605,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.0009808006678166947,
+            0.0009757898058171399,
+            0.0009658229542570673
+          ],
+          "extrapolated": 0.000985829820629262,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            9.304365030615713e-05,
+            9.242313465929186e-05,
+            9.118782672512538e-05
+          ],
+          "extrapolated": 9.366607373954376e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            7.429181166251908e-06,
+            7.3678789247466625e-06,
+            7.245745387240987e-06
+          ],
+          "extrapolated": 7.490640389592092e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            5.328351866396019e-07,
+            5.275870238463654e-07,
+            5.17123744714354e-07
+          ],
+          "extrapolated": 5.380943649176592e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            3.5514239549172544e-08,
+            3.510726021005439e-08,
+            3.4295349227164706e-08
+          ],
+          "extrapolated": 3.5921901453406235e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            2.244203045620452e-09,
+            2.214847860670943e-09,
+            2.1562529539664865e-09
+          ],
+          "extrapolated": 2.2735967183014813e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.17252543336765694
+    },
+    {
+      "AP_points": 192,
+      "P_points": 193,
+      "minus_euclidean": -1.294844320653965e-08,
+      "nu": 1.4,
+      "sectors": [
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.017499211005812254,
+            0.017459302874274385,
+            0.017380188926457818
+          ],
+          "extrapolated": 0.017539353242436512,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.006070276381522799,
+            0.006048922251113309,
+            0.006006492948469
+          ],
+          "extrapolated": 0.006091723497990513,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            0.0008491443397193876,
+            0.0008449439913418288,
+            0.0008365848274867194
+          ],
+          "extrapolated": 0.0008533585323969491,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            8.343654662468225e-05,
+            8.289796105387381e-05,
+            8.182481309937373e-05
+          ],
+          "extrapolated": 8.397647325786295e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            6.808066228103371e-06,
+            6.753567515005443e-06,
+            6.644869569694123e-06
+          ],
+          "extrapolated": 6.862664768162811e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            4.954703243242875e-07,
+            4.907231936357448e-07,
+            4.812470657533652e-07
+          ],
+          "extrapolated": 5.002234995110655e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            3.337156861960011e-08,
+            3.299862161298961e-08,
+            3.225360334369043e-08
+          ],
+          "extrapolated": 3.374480754085122e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            32.0,
+            22.62741699796952,
+            16.0
+          ],
+          "differences": [
+            2.1254642490475817e-09,
+            2.0982895421184367e-09,
+            2.043971658594046e-09
+          ],
+          "extrapolated": 2.1526494660880266e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.1306253993133049
+    },
+    {
+      "AP_points": 256,
+      "P_points": 257,
+      "minus_euclidean": -1.489159295875453e-09,
+      "nu": 0.0,
+      "sectors": [
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.027124319611666836,
+            0.02709821923051625,
+            0.02704619213572801
+          ],
+          "extrapolated": 0.027150477881988395,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.007890183574493337,
+            0.007877506535008738,
+            0.007852225351061781
+          ],
+          "extrapolated": 0.007902884912318683,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.0010178398415474632,
+            0.001015510208677295,
+            0.0010108623841857955
+          ],
+          "extrapolated": 0.0010201732881672438,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            9.579950051818997e-05,
+            9.551371500826633e-05,
+            9.494331800619094e-05
+          ],
+          "extrapolated": 9.60856773673709e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            7.615930620374911e-06,
+            7.587875749059947e-06,
+            7.531859544940289e-06
+          ],
+          "extrapolated": 7.644016671193299e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            5.448172153421638e-07,
+            5.424264148956581e-07,
+            5.376510046062322e-07
+          ],
+          "extrapolated": 5.472100793231979e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            3.6255725532896577e-08,
+            3.6070973763457914e-08,
+            3.5701809508736915e-08
+          ],
+          "extrapolated": 3.6440590397054016e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            2.2888748674176895e-09,
+            2.2755912709726545e-09,
+            2.249033848045201e-09
+          ],
+          "extrapolated": 2.30216172051693e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.18577154850342173
+    },
+    {
+      "AP_points": 256,
+      "P_points": 257,
+      "minus_euclidean": -1.4126730896180106e-09,
+      "nu": 0.6,
+      "sectors": [
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.024719247619275575,
+            0.02469523426746012,
+            0.024647373534951056
+          ],
+          "extrapolated": 0.024743316294798312,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.0074954710075374464,
+            0.007483494271720792,
+            0.007459609783597498
+          ],
+          "extrapolated": 0.00750747073785744,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.0009835923032373017,
+            0.0009813585493629873,
+            0.000976901759920601
+          ],
+          "extrapolated": 0.0009858296298803637,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            9.338917540535618e-05,
+            9.311271047263148e-05,
+            9.256086585462953e-05
+          ],
+          "extrapolated": 9.366600208723004e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            7.463300288002017e-06,
+            7.436001481231358e-06,
+            7.381488703828154e-06
+          ],
+          "extrapolated": 7.490627373485381e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            5.357548715778648e-07,
+            5.334189072669915e-07,
+            5.287524214026007e-07
+          ],
+          "extrapolated": 5.380926501411901e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            3.574060336575258e-08,
+            3.555953398404199e-08,
+            3.519768387860722e-08
+          ],
+          "extrapolated": 3.5921768966791966e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            2.260504672335628e-09,
+            2.247455554993394e-09,
+            2.2213608730226042e-09
+          ],
+          "extrapolated": 2.2735549739157554e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.17252544800837616
+    },
+    {
+      "AP_points": 256,
+      "P_points": 257,
+      "minus_euclidean": -1.1388928966571399e-09,
+      "nu": 1.4,
+      "sectors": [
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.017521484646825347,
+            0.017503659855827913,
+            0.01746815095498222
+          ],
+          "extrapolated": 0.017539356331539174,
+          "kappa": 1,
+          "remainder_bound_proved": false,
+          "weight": 4
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.006082180147229055,
+            0.006072654825170165,
+            0.006053659554906776
+          ],
+          "extrapolated": 0.006091723927239408,
+          "kappa": 2,
+          "remainder_bound_proved": false,
+          "weight": 8
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            0.0008514837608064596,
+            0.0008496118887610926,
+            0.0008458762165348688
+          ],
+          "extrapolated": 0.00085335832347333,
+          "kappa": 3,
+          "remainder_bound_proved": false,
+          "weight": 12
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            8.373630958757872e-05,
+            8.349646839800329e-05,
+            8.301753461248396e-05
+          ],
+          "extrapolated": 8.397640030836466e-05,
+          "kappa": 4,
+          "remainder_bound_proved": false,
+          "weight": 16
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            6.838380899765184e-06,
+            6.814127067045206e-06,
+            6.765670339525798e-06
+          ],
+          "extrapolated": 6.862651711792012e-06,
+          "kappa": 5,
+          "remainder_bound_proved": false,
+          "weight": 20
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            4.981095145240033e-07,
+            4.959980701713107e-07,
+            4.917776799118201e-07
+          ],
+          "extrapolated": 5.002217916919941e-07,
+          "kappa": 6,
+          "remainder_bound_proved": false,
+          "weight": 24
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            3.3578858804617084e-08,
+            3.341305898629798e-08,
+            3.308151796943548e-08
+          ],
+          "extrapolated": 3.374467816286142e-08,
+          "kappa": 7,
+          "remainder_bound_proved": false,
+          "weight": 28
+        },
+        {
+          "cutoffs": [
+            48.0,
+            33.94112549695428,
+            24.0
+          ],
+          "differences": [
+            2.1405472949709292e-09,
+            2.1284716211766863e-09,
+            2.1043211617666202e-09
+          ],
+          "extrapolated": 2.1526232648246455e-09,
+          "kappa": 8,
+          "remainder_bound_proved": false,
+          "weight": 32
+        }
+      ],
+      "total": 0.13062541112285522
+    }
+  ],
+  "angular_resolution": [
+    {
+      "nu": 0.0,
+      "sectors": [
+        {
+          "cumulative": 0.10860191291955709,
+          "kappa": 1,
+          "weighted_difference": 0.10860191291955709
+        },
+        {
+          "cumulative": 0.17182499268398996,
+          "kappa": 2,
+          "weighted_difference": 0.06322307976443287
+        },
+        {
+          "cumulative": 0.18406707191724644,
+          "kappa": 3,
+          "weighted_difference": 0.012242079233256487
+        },
+        {
+          "cumulative": 0.18560444264192663,
+          "kappa": 4,
+          "weighted_difference": 0.001537370724680187
+        },
+        {
+          "cumulative": 0.18575732295063693,
+          "kappa": 5,
+          "weighted_difference": 0.00015288030871030145
+        },
+        {
+          "cumulative": 0.18577045598787065,
+          "kappa": 6,
+          "weighted_difference": 1.3133037233714617e-05
+        },
+        {
+          "cumulative": 0.1857714763227428,
+          "kappa": 7,
+          "weighted_difference": 1.0203348721482541e-06
+        },
+        {
+          "cumulative": 0.18577154999258103,
+          "kappa": 8,
+          "weighted_difference": 7.366983822976181e-08
+        }
+      ]
+    },
+    {
+      "nu": 0.6,
+      "sectors": [
+        {
+          "cumulative": 0.09897326653238675,
+          "kappa": 1,
+          "weighted_difference": 0.09897326653238675
+        },
+        {
+          "cumulative": 0.1590330328703617,
+          "kappa": 2,
+          "weighted_difference": 0.06005976633797494
+        },
+        {
+          "cumulative": 0.17086298819777496,
+          "kappa": 3,
+          "weighted_difference": 0.011829955327413266
+        },
+        {
+          "cumulative": 0.17236164411742044,
+          "kappa": 4,
+          "weighted_difference": 0.0014986559196454863
+        },
+        {
+          "cumulative": 0.1725114566399279,
+          "kappa": 5,
+          "weighted_difference": 0.00014981252250745314
+        },
+        {
+          "cumulative": 0.17252437085897138,
+          "kappa": 6,
+          "weighted_difference": 1.2914219043480557e-05
+        },
+        {
+          "cumulative": 0.17252537666666007,
+          "kappa": 7,
+          "weighted_difference": 1.005807688692073e-06
+        },
+        {
+          "cumulative": 0.17252544942104925,
+          "kappa": 8,
+          "weighted_difference": 7.275438917986321e-08
+        }
+      ]
+    },
+    {
+      "nu": 1.4,
+      "sectors": [
+        {
+          "cumulative": 0.07015742653692875,
+          "kappa": 1,
+          "weighted_difference": 0.07015742653692875
+        },
+        {
+          "cumulative": 0.1188912182815885,
+          "kappa": 2,
+          "weighted_difference": 0.04873379174465975
+        },
+        {
+          "cumulative": 0.12913151791149652,
+          "kappa": 3,
+          "weighted_difference": 0.010240299629908023
+        },
+        {
+          "cumulative": 0.1304751402007161,
+          "kappa": 4,
+          "weighted_difference": 0.0013436222892195815
+        },
+        {
+          "cumulative": 0.1306123932100252,
+          "kappa": 5,
+          "weighted_difference": 0.00013725300930911288
+        },
+        {
+          "cumulative": 0.13062439852850588,
+          "kappa": 6,
+          "weighted_difference": 1.2005318480667881e-05
+        },
+        {
+          "cumulative": 0.13062534337768522,
+          "kappa": 7,
+          "weighted_difference": 9.448491793406788e-07
+        },
+        {
+          "cumulative": 0.13062541226174812,
+          "kappa": 8,
+          "weighted_difference": 6.888406289817794e-08
+        }
+      ]
+    }
+  ],
+  "artifact_id": "NSC-11-RESPONSE-MATCHING",
+  "classification": "relative_Euclidean_and_retarded_radius_response_matching_on_smooth_ultrastatic_cell",
+  "comparison": "every field; floats atol2e-8 rtol2e-8, exact keys types hashes; internal identity gates tighter",
+  "contact_spin_structures": [
+    {
+      "energy": 4.3972543839541895,
+      "inverse_radius_hessian": -0.02532048223434964,
+      "log_radius_contact": -0.25567346650033307,
+      "log_radius_hessian": -0.2809939487346827,
+      "spin_structure": "P"
+    },
+    {
+      "energy": 4.362200630929597,
+      "inverse_radius_hessian": -0.0524709604642403,
+      "log_radius_contact": -0.23365934865101448,
+      "log_radius_hessian": -0.2861303091152548,
+      "spin_structure": "AP"
+    }
+  ],
+  "conventions": {
+    "angular_counting": "representative2N block times4kappa; finite angular truncation explicit",
+    "contact": "log r coordinate has <H_second>; it is state-dependent and need not cancel in P-AP",
+    "coordinate": "r=r0/(1+J s), s=exp[2(cos(2pi(x+0.6)/L)-1)]; affine Dirac perturbation",
+    "cutoffs": "proper-time Lambda and positive Abel transition weight are distinct finite prescriptions; matching tests cutoff-removal limit",
+    "geometry": "R2 smooth circle, a=1,N=q=1; P and AP spin structures on symmetric Fourier grids",
+    "relative": "P minus AP on identical local geometry; local state-independent finite metric terms cancel in continuum",
+    "retarded": "H_int=+J V, Fourier exp(+i z t), analytic for Im z>0",
+    "state": "negative-energy Gaussian vacuum in each spin structure, not a dynamically selected state",
+    "units": "hbar=c=a=1; energies and frequencies in inverse a; J dimensionless"
+  },
+  "covariant_static_owner_match": {
+    "canonical_log_radius_hessian_times4": -0.32244040909998944,
+    "difference": 6.6058269965196814e-15,
+    "frequency_operator_hessian": -0.32244040909998284,
+    "full_kappa1_weight": 4
+  },
+  "extrapolation": "quadratic Richardson in1/K^2; cancels first two analytic Abel terms; measured convergence, no proved remainder bound",
+  "finite_cutoff_distinction": {
+    "equal_at_finite_cutoff": false,
+    "meaning": "Proper-time regularization of the action is not the bare finite-grid Kubo kernel or an Abel transition cutoff.",
+    "proper_time_kappa1_static": 0.031399634703523374,
+    "unregulated_fixed_grid_vacuum_kubo": -0.3847124400956481
+  },
+  "finite_grid_frequency_identity": [
+    {
+      "difference": 3.885780586188048e-16,
+      "direct_infinite_frequency_integral": -0.3847124400956477,
+      "nu": 0.0,
+      "retarded_at_i_nu": -0.3847124400956481
+    },
+    {
+      "difference": 5.551115123125783e-16,
+      "direct_infinite_frequency_integral": -0.3776655666430555,
+      "nu": 0.6,
+      "retarded_at_i_nu": -0.37766556664305606
+    },
+    {
+      "difference": 3.3306690738754696e-16,
+      "direct_infinite_frequency_integral": -0.35252660072228326,
+      "nu": 1.4,
+      "retarded_at_i_nu": -0.3525266007222836
+    }
+  ],
+  "frequency_resolution": [
+    {
+      "nodes": 32,
+      "nu1p4_kappa1_difference": 0.07009414290039861
+    },
+    {
+      "nodes": 48,
+      "nu1p4_kappa1_difference": 0.07015839495348054
+    },
+    {
+      "nodes": 64,
+      "nu1p4_kappa1_difference": 0.07015742158080729
+    },
+    {
+      "nodes": 96,
+      "nu1p4_kappa1_difference": 0.07015742653692875
+    }
+  ],
+  "gate": {
+    "angular_last_increment_small": true,
+    "finite_frequency_loop_matches_retarded": true,
+    "frequency_refinement": true,
+    "independent_energy_hessians": true,
+    "relative_euclidean_and_Abel_limit_match": true,
+    "same_covariant_static_hessian": true,
+    "spatial_refinement": true,
+    "state_dependent_coordinate_contact_retained": true
+  },
+  "independent_metric_differences": [
+    {
+      "coordinate": "inverse_radius",
+      "differences": [
+        {
+          "energy_second_difference": 0.0313993317076211,
+          "minus_spectral_hessian": -3.0299590227100826e-07,
+          "step": 0.008
+        },
+        {
+          "energy_second_difference": 0.03139955882802692,
+          "minus_spectral_hessian": -7.587549645526881e-08,
+          "step": 0.004
+        }
+      ],
+      "hessian": 0.031399634703523374
+    },
+    {
+      "coordinate": "log_radius",
+      "differences": [
+        {
+          "energy_second_difference": -0.08060888431575541,
+          "minus_spectral_hessian": 1.2179592419475638e-06,
+          "step": 0.008
+        },
+        {
+          "energy_second_difference": -0.0806097980310394,
+          "minus_spectral_hessian": 3.0424395795758397e-07,
+          "step": 0.004
+        }
+      ],
+      "hessian": -0.08061010227499736
+    }
+  ],
+  "input_hashes": {
+    "results/nsc-10-influence.json": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1",
+    "results/nsc-10-measure-normalization.json": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "nonclaims": {
+    "complete_finite_cutoff_causal_functional": false,
+    "continuum_remainder_bound": false,
+    "local_finite_coefficients_fixed": false,
+    "metric_hessian_constraints_or_health": false,
+    "new_to_world_Kubo_identity": false,
+    "preferred_spin_structure_selected": false,
+    "self_sourced_solution": false
+  },
+  "one_channel_relative_log_radius_contact": -0.022014117849318587,
+  "proper_time_cutoff_resolution": [
+    {
+      "nu1p4_kappa1_difference": 0.07056018346491028,
+      "proper_time_cutoff": 1.0
+    },
+    {
+      "nu1p4_kappa1_difference": 0.07015743321334364,
+      "proper_time_cutoff": 2.0
+    },
+    {
+      "nu1p4_kappa1_difference": 0.0701574265359474,
+      "proper_time_cutoff": 3.0
+    },
+    {
+      "nu1p4_kappa1_difference": 0.07015742653693047,
+      "proper_time_cutoff": 4.0
+    },
+    {
+      "nu1p4_kappa1_difference": 0.0701574265926671,
+      "proper_time_cutoff": 6.0
+    }
+  ],
+  "schema": "nsc-response-matching-v1",
+  "source_hashes": {
+    "docs/nsc-response-matching.md": "90dabe580da596f709cd79876bd5f621c768aefcd12c4b4c6e2a3ecd6d045e99",
+    "scripts/check_nsc_response_matching.py": "5c16e9fe30b211ab0bcb0361213469f19ff03bc1f2d203ca279fb6efcb82a90c",
+    "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_response_matching.py": "d762d8923ad47e9475310469a698444a1d03c76e5091305cf741a9d8fa2ee132",
+    "tests/test_nsc_response_matching.py": "f11db61f650a4a84cd5b5f665f296f16e5d9ee9ffb26a03c2ce3cc84c9beb8c7"
+  },
+  "spatial_resolution": [
+    {
+      "AP_points": 16,
+      "P_points": 17,
+      "nu1p4_kappa1_difference": 0.07012523036867546
+    },
+    {
+      "AP_points": 24,
+      "P_points": 25,
+      "nu1p4_kappa1_difference": 0.07015742518868852
+    },
+    {
+      "AP_points": 32,
+      "P_points": 33,
+      "nu1p4_kappa1_difference": 0.07015742653692875
+    },
+    {
+      "AP_points": 48,
+      "P_points": 49,
+      "nu1p4_kappa1_difference": 0.07015742653693047
+    }
+  ],
+  "static_spectral": {
+    "energy": 0.8017019721868957,
+    "inverse_radius_hessian": 0.031399634703523374,
+    "log_radius_contact": -0.11200973697852074,
+    "log_radius_hessian": -0.08061010227499736
+  },
+  "terminal": true
+}

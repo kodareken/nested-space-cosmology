@@ -1,6 +1,6 @@
 # Reproducing the compact results
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–77. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -42,7 +42,7 @@ make verify
 
 - `make check` validates manifests, claims, paths, and links.
 - `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–77 by comparing every recorded field.
+- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–81 by comparing every recorded field.
 - `make reproduce-exact` requires byte-identical recomputation.
 - `make paper` rebuilds the tracked paper PDF.
 - `make verify` runs check, test, reproduce, and the paper byte check.
@@ -104,6 +104,10 @@ python3 scripts/check_nsc_scale_closure.py --check
 python3 scripts/check_nsc_regulated_recursion.py --check
 python3 scripts/check_nsc_radial_spectrum.py --check
 python3 scripts/check_nsc_geometric_chain.py --check
+python3 scripts/check_nsc_covariant_source.py --check
+python3 scripts/check_nsc_measure_normalization.py --check
+python3 scripts/check_nsc_influence.py --check
+python3 scripts/check_nsc_response_matching.py --check
 ```
 
 ## Committed JSON is the public result

@@ -1,5 +1,5 @@
 {
-  "checkpoint_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+  "checkpoint_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
   "current_targets": [
     {
       "claim_id": "target-constants",
@@ -9,7 +9,9 @@
         "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
         "NSC-4-SMOOTH-GEOMETRY",
         "NSC-5-TAIL-LIMIT",
-        "NSC-8-FINITE-TERMS"
+        "NSC-8-FINITE-TERMS",
+        "NSC-9-COVARIANT-SOURCE",
+        "NSC-10-MEASURE-NORMALIZATION"
       ]
     },
     {
@@ -20,7 +22,8 @@
         "NSC-4-DIRAC-TETRAD",
         "NSC-4-LORENTZIAN-TRANSPORT",
         "NSC-5-CLOCK-HORIZON",
-        "NSC-8-CHIRAL-BOUNDARY"
+        "NSC-8-CHIRAL-BOUNDARY",
+        "NSC-11-RESPONSE-MATCHING"
       ]
     },
     {
@@ -32,7 +35,10 @@
         "NSC-5-PLATEAU-CONDITIONS",
         "NSC-6-ENERGY-TRANSFER",
         "NSC-6-VACUUM-WORK",
-        "NSC-8-FINITE-TERMS"
+        "NSC-8-FINITE-TERMS",
+        "NSC-9-COVARIANT-SOURCE",
+        "NSC-10-INFLUENCE",
+        "NSC-11-RESPONSE-MATCHING"
       ]
     },
     {
@@ -42,7 +48,8 @@
       "supporting_artifact_ids": [
         "NSC-1-S-ONE-PARTICLE-WAVE-IDENTITY",
         "NSC-7-OBSERVABLE-BRIDGE",
-        "NSC-8-CHIRAL-BOUNDARY"
+        "NSC-8-CHIRAL-BOUNDARY",
+        "NSC-10-INFLUENCE"
       ]
     },
     {
@@ -62,7 +69,11 @@
         "NSC-2-ZETA1-RECURSION-MAP",
         "NSC-3-REGULATED-RECURSION",
         "NSC-5-TAIL-LIMIT",
-        "NSC-8-FINITE-TERMS"
+        "NSC-8-FINITE-TERMS",
+        "NSC-9-COVARIANT-SOURCE",
+        "NSC-10-MEASURE-NORMALIZATION",
+        "NSC-10-INFLUENCE",
+        "NSC-11-RESPONSE-MATCHING"
       ]
     }
   ],
@@ -81,6 +92,10 @@
       "sha256": "9848ab71783af5dce121e06a1718de5b5877f288daa15c45603e49d2a26c309e"
     },
     {
+      "path": "docs/nsc-covariant-source.md",
+      "sha256": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6"
+    },
+    {
       "path": "docs/nsc-dirac-tetrad.md",
       "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
     },
@@ -93,8 +108,16 @@
       "sha256": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135"
     },
     {
+      "path": "docs/nsc-influence.md",
+      "sha256": "eb05623cc61a068d28faecfa32ffc726b6a8b3593e24322de1d37550b3c03f77"
+    },
+    {
       "path": "docs/nsc-lorentzian-transport.md",
       "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
+    },
+    {
+      "path": "docs/nsc-measure-normalization.md",
+      "sha256": "649a4cb1a1bb44e134432062b576f840dee17068592d23a0c324e44503d16e2d"
     },
     {
       "path": "docs/nsc-observable-bridge.md",
@@ -107,6 +130,10 @@
     {
       "path": "docs/nsc-plateau-conditions.md",
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
+    },
+    {
+      "path": "docs/nsc-response-matching.md",
+      "sha256": "90dabe580da596f709cd79876bd5f621c768aefcd12c4b4c6e2a3ecd6d045e99"
     },
     {
       "path": "docs/nsc-self-sourcing-progress.md",
@@ -127,6 +154,18 @@
     {
       "path": "docs/nsc-vacuum-work.md",
       "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
+    },
+    {
+      "path": "results/nsc-10-influence.json",
+      "sha256": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1"
+    },
+    {
+      "path": "results/nsc-10-measure-normalization.json",
+      "sha256": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f"
+    },
+    {
+      "path": "results/nsc-11-response-matching.json",
+      "sha256": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4"
     },
     {
       "path": "results/nsc-4-covariant-measure.json",
@@ -181,6 +220,10 @@
       "sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c"
     },
     {
+      "path": "results/nsc-9-covariant-source.json",
+      "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+    },
+    {
       "path": "scripts/check_nsc_chiral_boundary.py",
       "sha256": "ce5c7e04ec35e4e9ab30ceb39b7099e350a71f874b70348f343b06395fcc7300"
     },
@@ -191,6 +234,10 @@
     {
       "path": "scripts/check_nsc_covariant_measure.py",
       "sha256": "6c0f49d5ae39313f82c6298b7526e8fa1f7c56cb1ab94ed354e0ec5de6a64e01"
+    },
+    {
+      "path": "scripts/check_nsc_covariant_source.py",
+      "sha256": "11112370061ae826ee92b666662d63a7b8417138ad55fed7b11d9ad288c0e393"
     },
     {
       "path": "scripts/check_nsc_dirac_tetrad.py",
@@ -205,8 +252,16 @@
       "sha256": "551251aaa40537825a0c23e9d81a9b1d81b36d106a0936e194af2611d1c771b0"
     },
     {
+      "path": "scripts/check_nsc_influence.py",
+      "sha256": "c4faa0aa1bb73c73274cf51c282cc25bc8ffb7b63f0bb2a95405084a5666c91d"
+    },
+    {
       "path": "scripts/check_nsc_lorentzian.py",
       "sha256": "ed0edaa53326e6f312bbb21d1e6ec01ddf501190d6b2f6e0a1baef8044480bce"
+    },
+    {
+      "path": "scripts/check_nsc_measure_normalization.py",
+      "sha256": "31c9bccba28d39d32f5a1084f575780902b11dc9eafc1c5e728322ba803755ee"
     },
     {
       "path": "scripts/check_nsc_observable_bridge.py",
@@ -215,6 +270,10 @@
     {
       "path": "scripts/check_nsc_plateau_conditions.py",
       "sha256": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6"
+    },
+    {
+      "path": "scripts/check_nsc_response_matching.py",
+      "sha256": "5c16e9fe30b211ab0bcb0361213469f19ff03bc1f2d203ca279fb6efcb82a90c"
     },
     {
       "path": "scripts/check_nsc_shape_response.py",
@@ -237,8 +296,16 @@
       "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
     },
     {
+      "path": "src/recursive_horizons/nsc_covariant_identities.py",
+      "sha256": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1"
+    },
+    {
       "path": "src/recursive_horizons/nsc_covariant_measure.py",
       "sha256": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_covariant_operator.py",
+      "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
     },
     {
       "path": "src/recursive_horizons/nsc_energy_transfer.py",
@@ -249,8 +316,20 @@
       "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
     },
     {
+      "path": "src/recursive_horizons/nsc_influence.py",
+      "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8"
+    },
+    {
       "path": "src/recursive_horizons/nsc_lorentzian.py",
       "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_measure_normalization.py",
+      "sha256": "e3ac23d660287765580689cd965eecf72552a813e24fb2b641942adc703a9b9f"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_response_matching.py",
+      "sha256": "d762d8923ad47e9475310469a698444a1d03c76e5091305cf741a9d8fa2ee132"
     },
     {
       "path": "src/recursive_horizons/nsc_shape_response.py",
@@ -281,8 +360,16 @@
       "sha256": "83f4c011d441d37012ef3aa02e0c8b00a44d9e9906021704efcd68e092cd0cda"
     },
     {
+      "path": "tests/test_nsc_covariant_identities.py",
+      "sha256": "564562d792eea5f9b03183f942155f782c427664056956720a876be22e66dbcd"
+    },
+    {
       "path": "tests/test_nsc_covariant_measure.py",
       "sha256": "fd6c12910efd8b28a8dfc129eed19e8660d45f02bf3bdd662a697b4930cbf95d"
+    },
+    {
+      "path": "tests/test_nsc_covariant_source.py",
+      "sha256": "0b66e4a5a080b4d0bbf45c847bc4acbeecfece6d57f13b17eea9bed738e58e8c"
     },
     {
       "path": "tests/test_nsc_energy_transfer.py",
@@ -293,8 +380,20 @@
       "sha256": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
     },
     {
+      "path": "tests/test_nsc_influence.py",
+      "sha256": "1cd14a4241975dbdee752df616ef94fa19931d6fd248503d005dd5160c911c28"
+    },
+    {
       "path": "tests/test_nsc_lorentzian.py",
       "sha256": "d2cd33889552058171a5d4a0c9168496779ea55c51c7aa8e6bf96649ba5153f8"
+    },
+    {
+      "path": "tests/test_nsc_measure_normalization.py",
+      "sha256": "a165f079525e527c14290f2b5e0a901e3069bc7020f3428e4a44f7f37761440e"
+    },
+    {
+      "path": "tests/test_nsc_response_matching.py",
+      "sha256": "f11db61f650a4a84cd5b5f665f296f16e5d9ee9ffb26a03c2ce3cc84c9beb8c7"
     },
     {
       "path": "tests/test_nsc_shape_response.py",
@@ -1429,7 +1528,253 @@
       "sha256": "e95ddc0eb9a4771c420bf79700c9c624dc0d23614a6ef313ab3608bab13acad7"
     }
   ],
-  "release_version": "0.2.0",
+  "preserved_77_scientific_files": [
+    {
+      "path": "docs/nsc-chiral-boundary.md",
+      "sha256": "fb6dc600ea65dc02ef4f4282dc4b930bead1010b57551e98c6346b4b118d2d2a"
+    },
+    {
+      "path": "docs/nsc-clock-horizon.md",
+      "sha256": "8ef7849ced4b5fad6b00456c11dd6e2fa4248b6acd6c0caad7afc17d1c014aac"
+    },
+    {
+      "path": "docs/nsc-covariant-measure.md",
+      "sha256": "9848ab71783af5dce121e06a1718de5b5877f288daa15c45603e49d2a26c309e"
+    },
+    {
+      "path": "docs/nsc-dirac-tetrad.md",
+      "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
+    },
+    {
+      "path": "docs/nsc-energy-transfer.md",
+      "sha256": "0c962da1e1c1c9b0f0c18807dfc6549526e914ae61c40d1131a57d74f0d66e28"
+    },
+    {
+      "path": "docs/nsc-finite-terms.md",
+      "sha256": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135"
+    },
+    {
+      "path": "docs/nsc-lorentzian-transport.md",
+      "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
+    },
+    {
+      "path": "docs/nsc-observable-bridge.md",
+      "sha256": "a812fae995ff009edbeb325f10dfa275253cb2ca0fe4bd6f241bc59a7b3a289b"
+    },
+    {
+      "path": "docs/nsc-observational-targets.md",
+      "sha256": "1f71ff4360d034abde3534682f28d7a334c68cf9a5af73da707e3660b9148d3c"
+    },
+    {
+      "path": "docs/nsc-plateau-conditions.md",
+      "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
+    },
+    {
+      "path": "docs/nsc-self-sourcing-progress.md",
+      "sha256": "4417917a63ad6b33310c69205fdf6f3cdc326275ea0bf6d96312312e36c64800"
+    },
+    {
+      "path": "docs/nsc-shape-response.md",
+      "sha256": "5eae1d3cc04ee2567f817466eed6f1ff484937f05ca9b5b4648e38a172f63a33"
+    },
+    {
+      "path": "docs/nsc-smooth-geometry.md",
+      "sha256": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383"
+    },
+    {
+      "path": "docs/nsc-tail-limit.md",
+      "sha256": "d54c4ced5c3e52e8d4f47654621a47b2b64ffe6d5a3ae4808afea950cfcf1e9b"
+    },
+    {
+      "path": "docs/nsc-vacuum-work.md",
+      "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
+    },
+    {
+      "path": "results/nsc-4-covariant-measure.json",
+      "sha256": "e1cd39c855e0c723b04718ec35c8404f64fdba89fc497db8cf1e01d1615250ca"
+    },
+    {
+      "path": "results/nsc-4-dirac-tetrad.json",
+      "sha256": "acaa1ec0bb521e746f9786f7b0a42fd474699476ba9b91bf5f0c50b2a70fe068"
+    },
+    {
+      "path": "results/nsc-4-lorentzian-transport.json",
+      "sha256": "93b1144975de0d146ae42ab35cf6b3dae43f7ea7b8cc2d4130cc5aeada6e98fe"
+    },
+    {
+      "path": "results/nsc-4-shape-response.json",
+      "sha256": "2ad75d62c9682355f827f5b51b6b7242ec504ee7424fd674914cc7f9771ad9f7"
+    },
+    {
+      "path": "results/nsc-4-smooth-geometry.json",
+      "sha256": "028046731ca6a5e3ee3230db87cd623081083a05877da50e029330a127f11673"
+    },
+    {
+      "path": "results/nsc-5-clock-horizon.json",
+      "sha256": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f"
+    },
+    {
+      "path": "results/nsc-5-plateau-conditions.json",
+      "sha256": "d0f6b02e3c8bd9c6174b95ac1ff5fd46e4587bd9277c6c7fdd136a295f049f61"
+    },
+    {
+      "path": "results/nsc-5-tail-limit.json",
+      "sha256": "499658c02d7662b2ef3b3f80a4578ae9b952b09a47c31c75a599c09087b7372a"
+    },
+    {
+      "path": "results/nsc-6-energy-transfer.json",
+      "sha256": "911fefa75e6ffa5f61224f4354c63351cb366728efa73ecf6784371ff3669be1"
+    },
+    {
+      "path": "results/nsc-6-vacuum-work.json",
+      "sha256": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605"
+    },
+    {
+      "path": "results/nsc-7-observable-bridge.json",
+      "sha256": "69495eda9f1815436223a8e472d923aa5ba9db913b03696bdf0e8388b2f1b024"
+    },
+    {
+      "path": "results/nsc-8-chiral-boundary.json",
+      "sha256": "9bbf676447b9a6fb68966dfeab1ea798834e478e23501e9757fc8e79027c0f07"
+    },
+    {
+      "path": "results/nsc-8-finite-terms.json",
+      "sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c"
+    },
+    {
+      "path": "scripts/check_nsc_chiral_boundary.py",
+      "sha256": "ce5c7e04ec35e4e9ab30ceb39b7099e350a71f874b70348f343b06395fcc7300"
+    },
+    {
+      "path": "scripts/check_nsc_clock_horizon.py",
+      "sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1"
+    },
+    {
+      "path": "scripts/check_nsc_covariant_measure.py",
+      "sha256": "6c0f49d5ae39313f82c6298b7526e8fa1f7c56cb1ab94ed354e0ec5de6a64e01"
+    },
+    {
+      "path": "scripts/check_nsc_dirac_tetrad.py",
+      "sha256": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae"
+    },
+    {
+      "path": "scripts/check_nsc_energy_transfer.py",
+      "sha256": "7cfd780e76c89f123decf11f09a97390525194f4c4ee326ff30bc9e4a504d713"
+    },
+    {
+      "path": "scripts/check_nsc_finite_terms.py",
+      "sha256": "551251aaa40537825a0c23e9d81a9b1d81b36d106a0936e194af2611d1c771b0"
+    },
+    {
+      "path": "scripts/check_nsc_lorentzian.py",
+      "sha256": "ed0edaa53326e6f312bbb21d1e6ec01ddf501190d6b2f6e0a1baef8044480bce"
+    },
+    {
+      "path": "scripts/check_nsc_observable_bridge.py",
+      "sha256": "ca10587a97c97a382c9b59621f2c7ce14738d3e383c57d51c6c1af5ed7b0e80c"
+    },
+    {
+      "path": "scripts/check_nsc_plateau_conditions.py",
+      "sha256": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6"
+    },
+    {
+      "path": "scripts/check_nsc_shape_response.py",
+      "sha256": "5a5064e842a4a1526fb43137f0696ec2297b2bb26588cfcb0e58c2b85c0b4208"
+    },
+    {
+      "path": "scripts/check_nsc_smooth_geometry.py",
+      "sha256": "f13d1d9b475e270d954b5063335022663f6f10d06718bcac2220b66209fbc900"
+    },
+    {
+      "path": "scripts/check_nsc_tail_limit.py",
+      "sha256": "6c3a37f032323c15e5e85ea42990b316f12e083715d6c57da57defcccb8d8b4f"
+    },
+    {
+      "path": "scripts/check_nsc_vacuum_work.py",
+      "sha256": "f75ea645710751521bcd22c880a59d570664f47439d334d5e51595edbb3b0db9"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_chiral_boundary.py",
+      "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_covariant_measure.py",
+      "sha256": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_energy_transfer.py",
+      "sha256": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_finite_terms.py",
+      "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_lorentzian.py",
+      "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_shape_response.py",
+      "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_smooth_geometry.py",
+      "sha256": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_spinor_bridge.py",
+      "sha256": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_tail_limit.py",
+      "sha256": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_vacuum_work.py",
+      "sha256": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c"
+    },
+    {
+      "path": "src/recursive_horizons/provenance.py",
+      "sha256": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+    },
+    {
+      "path": "tests/test_nsc_chiral_boundary.py",
+      "sha256": "83f4c011d441d37012ef3aa02e0c8b00a44d9e9906021704efcd68e092cd0cda"
+    },
+    {
+      "path": "tests/test_nsc_covariant_measure.py",
+      "sha256": "fd6c12910efd8b28a8dfc129eed19e8660d45f02bf3bdd662a697b4930cbf95d"
+    },
+    {
+      "path": "tests/test_nsc_energy_transfer.py",
+      "sha256": "9c85aeaf8874db3223fa18b5031ac4a8e95609a769ba9b83e573041271792860"
+    },
+    {
+      "path": "tests/test_nsc_finite_terms.py",
+      "sha256": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
+    },
+    {
+      "path": "tests/test_nsc_lorentzian.py",
+      "sha256": "d2cd33889552058171a5d4a0c9168496779ea55c51c7aa8e6bf96649ba5153f8"
+    },
+    {
+      "path": "tests/test_nsc_shape_response.py",
+      "sha256": "576511dd4a2628ffc610cec2c76059ea02c2d81ec23d7d52b62eb22cdfa8db4e"
+    },
+    {
+      "path": "tests/test_nsc_smooth_geometry.py",
+      "sha256": "0f212f17035376664395c72ecd0a491c77fc9b025c459e3a7013e2f7314c0771"
+    },
+    {
+      "path": "tests/test_nsc_tail_limit.py",
+      "sha256": "1b0c323c056ef8a45aa49dfa7cc4a825235cc19a809abb811b2e1c8fcb83ef2e"
+    },
+    {
+      "path": "tests/test_nsc_vacuum_work.py",
+      "sha256": "d331aeeccc9a479fa2cba10d7eb3bd88cda18dfdacd763bfeea62087f1dc26a5"
+    }
+  ],
+  "release_version": "0.3.0",
   "retained_byte_identical_files": [
     {
       "path": "scripts/check_nsc_geometric_chain.py",
@@ -2002,7 +2347,141 @@
         "src/recursive_horizons/nsc_shape_response.py",
         "tests/test_nsc_finite_terms.py"
       ]
+    },
+    {
+      "artifact_id": "NSC-9-COVARIANT-SOURCE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-4-covariant-measure.json",
+        "results/nsc-8-finite-terms.json"
+      ],
+      "follow_up_source_commit": "3a747cc17e33a6a3d6cc58634eaa40dd69e30a26",
+      "generator": "scripts/check_nsc_covariant_source.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-covariant-source-v1"
+      },
+      "json_format": "pretty",
+      "output": "results/nsc-9-covariant-source.json",
+      "source_dependencies": [
+        "docs/nsc-covariant-source.md",
+        "src/recursive_horizons/nsc_covariant_identities.py",
+        "src/recursive_horizons/nsc_covariant_measure.py",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_energy_transfer.py",
+        "src/recursive_horizons/nsc_finite_terms.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/nsc_shape_response.py",
+        "tests/test_nsc_covariant_identities.py",
+        "tests/test_nsc_covariant_source.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-10-MEASURE-NORMALIZATION",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "b87f7e4c73a505f97ed1ae3f012158389491a2a5",
+      "generator": "scripts/check_nsc_measure_normalization.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-10-measure-normalization.json"
+      ],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-measure-normalization-v1"
+      },
+      "json_format": "pretty",
+      "output": "results/nsc-10-measure-normalization.json",
+      "source_dependencies": [
+        "docs/nsc-measure-normalization.md",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_measure_normalization.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "tests/test_nsc_measure_normalization.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-10-INFLUENCE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-6-vacuum-work.json",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "b87f7e4c73a505f97ed1ae3f012158389491a2a5",
+      "generator": "scripts/check_nsc_influence.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-10-influence.json"
+      ],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-influence-v1"
+      },
+      "json_format": "pretty",
+      "output": "results/nsc-10-influence.json",
+      "source_dependencies": [
+        "docs/nsc-influence.md",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_influence.py",
+        "src/recursive_horizons/nsc_vacuum_work.py",
+        "tests/test_nsc_influence.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-11-RESPONSE-MATCHING",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-10-influence.json",
+        "results/nsc-10-measure-normalization.json",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "14fddc92f13f6feaa0e6a1a3fd81567280212a59",
+      "generator": "scripts/check_nsc_response_matching.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-11-response-matching.json"
+      ],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-response-matching-v1"
+      },
+      "json_format": "pretty",
+      "output": "results/nsc-11-response-matching.json",
+      "source_dependencies": [
+        "docs/nsc-response-matching.md",
+        "src/recursive_horizons/nsc_covariant_identities.py",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_influence.py",
+        "src/recursive_horizons/nsc_response_matching.py",
+        "tests/test_nsc_response_matching.py"
+      ]
     }
   ],
-  "source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7"
+  "source_commit": "14fddc92f13f6feaa0e6a1a3fd81567280212a59"
 }
