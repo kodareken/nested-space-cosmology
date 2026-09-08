@@ -1,0 +1,609 @@
+{
+  "artifact_id": "NSC-5-TAIL-LIMIT",
+  "classification": "exact_endpoint_and_Weyl_disk_tail_criteria_for_the_declared_smooth_spatial_chain_not_cosmological_digits",
+  "conventions": {
+    "Hilbert_space": "unweighted ell\u00b2 of the interleaved node/edge chain",
+    "Jacobi_sign_gauge": "unitary sign change of the interleaved path; first-site projection unchanged",
+    "geometry": "smooth_motif(a=1,R=2,kappa=1), 16 intervals per motif",
+    "resolvent": "G00(z)=<e0,(z-J)^-1 e0>, z=0.3+0.4i in parent units",
+    "scaling": "H_n=Omega^n H; B_n=Omega^n B; one common dimensional energy"
+  },
+  "critical_scalar_counterexample": {
+    "K": 2,
+    "Omega": 4,
+    "b": 2,
+    "controls": [
+      {
+        "depth": 1,
+        "error_to_limit": 1.0,
+        "inverse_response": 2.0
+      },
+      {
+        "depth": 2,
+        "error_to_limit": 0.5,
+        "inverse_response": 1.5
+      },
+      {
+        "depth": 4,
+        "error_to_limit": 0.25,
+        "inverse_response": 1.25
+      },
+      {
+        "depth": 8,
+        "error_to_limit": 0.125,
+        "inverse_response": 1.125
+      },
+      {
+        "depth": 16,
+        "error_to_limit": 0.0625,
+        "inverse_response": 1.0625
+      },
+      {
+        "depth": 32,
+        "error_to_limit": 0.03125,
+        "inverse_response": 1.03125
+      },
+      {
+        "depth": 64,
+        "error_to_limit": 0.015625,
+        "inverse_response": 1.015625
+      }
+    ],
+    "error": "1/n, not O(4^-n)",
+    "exact_solution": "Gamma_n=(n+1)/n",
+    "limit": 1,
+    "recursion": "Gamma_(n+1)=2-1/Gamma_n, Gamma_1=2",
+    "successive_correction": "-1/[n(n+1)]"
+  },
+  "decimal_counterexamples": {
+    "decimal_expansion_is_a_physical_signature": false,
+    "infinite_positive_geometric_sum": "sum_(n>=1)2^-n=1 has terminating decimal",
+    "nonterminating_without_fractal_geometry": "1/3=0.333... in base ten and 0.1 in base three"
+  },
+  "endpoint_theorem": {
+    "left_boundary_caution": "odd formal solution need not satisfy regular left boundary but is required to classify infinity",
+    "limit_circle_condition": "Omega*q>1; both independent endpoint solutions are square summable",
+    "limit_point_condition": "Omega*q<=1 (q<1); equality is nondecaying odd solution",
+    "q": "product_i[(1/h-w_i/2)/(1/h+w_i/2)]",
+    "scope": "fixed lattice and stipulated scaling/Hilbert measure; not a continuum or full NSC theorem",
+    "two_zero_energy_motif_multipliers": "(-1)^m q and (-1)^m/(Omega*q)"
+  },
+  "families": [
+    {
+      "Omega": 1.3,
+      "critical_Omega": 22.40508587336765,
+      "endpoint_class": "limit_point",
+      "precision_decimal_digits": 220,
+      "q": 0.0446327233759311,
+      "rows": [
+        {
+          "center": [
+            0.3228224332428765,
+            -0.5128766893911443
+          ],
+          "depth": 1,
+          "diameter_numeric": 0.007147667333845957,
+          "dirichlet_circle_relative_residual": 3.604334971530425e-219,
+          "dirichlet_response": [
+            0.32296033702576654,
+            -0.5164478614152138
+          ],
+          "log10_diameter": -2.1458356685946303,
+          "passive_terminal_radius_ratio": 0.37186839502780145,
+          "real_terminal_circle_relative_residual": 2.1892101672718352e-219,
+          "sites": 32
+        },
+        {
+          "center": [
+            0.32515494756286206,
+            -0.5112298065244468
+          ],
+          "depth": 2,
+          "diameter_numeric": 1.762655636819467e-05,
+          "dirichlet_circle_relative_residual": 4.983941194298143e-217,
+          "dirichlet_response": [
+            0.3251619316928911,
+            -0.5112351820058287
+          ],
+          "log10_diameter": -4.753832525838578,
+          "passive_terminal_radius_ratio": 0.3926084889273637,
+          "real_terminal_circle_relative_residual": 3.2546779814229593e-217,
+          "sites": 64
+        },
+        {
+          "center": [
+            0.3251564679888697,
+            -0.5112221955573234
+          ],
+          "depth": 4,
+          "diameter_numeric": 1.538375684456893e-10,
+          "dirichlet_circle_relative_residual": 2.003092746472495e-211,
+          "dirichlet_response": [
+            0.3251564680643761,
+            -0.5112221955426506
+          ],
+          "log10_diameter": -9.812937593167426,
+          "passive_terminal_radius_ratio": 0.4087061509293699,
+          "real_terminal_circle_relative_residual": 5.890404775432894e-212,
+          "sites": 128
+        },
+        {
+          "center": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "depth": 8,
+          "diameter_numeric": 1.7685197946723988e-20,
+          "dirichlet_circle_relative_residual": 5.394613235972699e-202,
+          "dirichlet_response": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "log10_diameter": -19.752390074854667,
+          "passive_terminal_radius_ratio": 0.41650458355527875,
+          "real_terminal_circle_relative_residual": 4.537403089905777e-201,
+          "sites": 256
+        },
+        {
+          "center": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "depth": 16,
+          "diameter_numeric": 2.876233010555455e-40,
+          "dirichlet_circle_relative_residual": 3.278283734820875e-182,
+          "dirichlet_response": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "log10_diameter": -39.54117593362319,
+          "passive_terminal_radius_ratio": 0.41758378002363894,
+          "real_terminal_circle_relative_residual": 1.9323537976822402e-181,
+          "sites": 512
+        },
+        {
+          "center": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "depth": 32,
+          "diameter_numeric": 7.831116830622515e-80,
+          "dirichlet_circle_relative_residual": 5.2635705490636925e-143,
+          "dirichlet_response": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "log10_diameter": -79.10617629684518,
+          "passive_terminal_radius_ratio": 0.41760025028144665,
+          "real_terminal_circle_relative_residual": 6.336343831593541e-142,
+          "sites": 1024
+        },
+        {
+          "center": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "depth": 64,
+          "diameter_numeric": 5.807844900232089e-159,
+          "dirichlet_circle_relative_residual": 1.1498482355998715e-62,
+          "dirichlet_response": [
+            0.3251564679509762,
+            -0.5112221954940779
+          ],
+          "log10_diameter": -158.2359849900822,
+          "passive_terminal_radius_ratio": 0.41760025400205775,
+          "real_terminal_circle_relative_residual": 2.2610053700368555e-62,
+          "sites": 2048
+        }
+      ],
+      "self_adjoint_condition_at_infinite_depth_needed": false,
+      "zero_energy_even_multiplier_abs": 0.0446327233759311,
+      "zero_energy_odd_multiplier_abs": 17.23468144105204
+    },
+    {
+      "Omega": 4.0,
+      "critical_Omega": 22.40508587336765,
+      "endpoint_class": "limit_point",
+      "precision_decimal_digits": 220,
+      "q": 0.0446327233759311,
+      "rows": [
+        {
+          "center": [
+            0.3228224332428765,
+            -0.5128766893911443
+          ],
+          "depth": 1,
+          "diameter_numeric": 0.007147667333845957,
+          "dirichlet_circle_relative_residual": 3.604334971530425e-219,
+          "dirichlet_response": [
+            0.32296033702576654,
+            -0.5164478614152138
+          ],
+          "log10_diameter": -2.1458356685946303,
+          "passive_terminal_radius_ratio": 0.37186839502780145,
+          "real_terminal_circle_relative_residual": 2.1892101672718352e-219,
+          "sites": 32
+        },
+        {
+          "center": [
+            0.3250733254572126,
+            -0.5112610280579042
+          ],
+          "depth": 2,
+          "diameter_numeric": 0.0001954449136714583,
+          "dirichlet_circle_relative_residual": 1.716250061882935e-217,
+          "dirichlet_response": [
+            0.3251199586973772,
+            -0.5113469059915179
+          ],
+          "log10_diameter": -3.7089756273200534,
+          "passive_terminal_radius_ratio": 0.4186193209069482,
+          "real_terminal_circle_relative_residual": 2.3048287316233936e-217,
+          "sites": 64
+        },
+        {
+          "center": [
+            0.3251394085445895,
+            -0.5111908750266724
+          ],
+          "depth": 4,
+          "diameter_numeric": 1.975520052665273e-07,
+          "dirichlet_circle_relative_residual": 2.704100916549844e-214,
+          "dirichlet_response": [
+            0.32513945981606746,
+            -0.5111909594537667
+          ],
+          "log10_diameter": -6.704318557621272,
+          "passive_terminal_radius_ratio": 0.425695023164738,
+          "real_terminal_circle_relative_residual": 4.2536957296037786e-214,
+          "sites": 128
+        },
+        {
+          "center": [
+            0.32513947522079323,
+            -0.5111908021569771
+          ],
+          "depth": 8,
+          "diameter_numeric": 2.0388756561572339e-13,
+          "dirichlet_circle_relative_residual": 3.934141081288229e-208,
+          "dirichlet_response": [
+            0.3251394752208462,
+            -0.5111908021570641
+          ],
+          "log10_diameter": -12.690609259504562,
+          "passive_terminal_radius_ratio": 0.4257369202040289,
+          "real_terminal_circle_relative_residual": 5.1109352652950765e-208,
+          "sites": 256
+        },
+        {
+          "center": [
+            0.32513947522086206,
+            -0.5111908021569018
+          ],
+          "depth": 16,
+          "diameter_numeric": 2.1717248311993e-25,
+          "dirichlet_circle_relative_residual": 2.0155201932585593e-195,
+          "dirichlet_response": [
+            0.32513947522086206,
+            -0.5111908021569018
+          ],
+          "log10_diameter": -24.66319520296087,
+          "passive_terminal_radius_ratio": 0.4257369209148234,
+          "real_terminal_circle_relative_residual": 2.3074926768023928e-195,
+          "sites": 512
+        },
+        {
+          "center": [
+            0.32513947522086206,
+            -0.5111908021569018
+          ],
+          "depth": 32,
+          "diameter_numeric": 2.463955783144534e-49,
+          "dirichlet_circle_relative_residual": 1.169096017378598e-171,
+          "dirichlet_response": [
+            0.32513947522086206,
+            -0.5111908021569018
+          ],
+          "log10_diameter": -48.608367090058195,
+          "passive_terminal_radius_ratio": 0.4257369209148234,
+          "real_terminal_circle_relative_residual": 1.9940251110951667e-171,
+          "sites": 1024
+        },
+        {
+          "center": [
+            0.32513947522086206,
+            -0.5111908021569018
+          ],
+          "depth": 64,
+          "diameter_numeric": 3.1716783357929857e-97,
+          "dirichlet_circle_relative_residual": 1.4726411880519603e-123,
+          "dirichlet_response": [
+            0.32513947522086206,
+            -0.5111908021569018
+          ],
+          "log10_diameter": -96.49871086425284,
+          "passive_terminal_radius_ratio": 0.4257369209148234,
+          "real_terminal_circle_relative_residual": 1.689448226247074e-123,
+          "sites": 2048
+        }
+      ],
+      "self_adjoint_condition_at_infinite_depth_needed": false,
+      "zero_energy_even_multiplier_abs": 0.0446327233759311,
+      "zero_energy_odd_multiplier_abs": 5.6012714683419125
+    },
+    {
+      "Omega": 50.0,
+      "critical_Omega": 22.40508587336765,
+      "endpoint_class": "limit_circle",
+      "precision_decimal_digits": 220,
+      "q": 0.0446327233759311,
+      "rows": [
+        {
+          "center": [
+            0.3228224332428765,
+            -0.5128766893911443
+          ],
+          "depth": 1,
+          "diameter_numeric": 0.007147667333845957,
+          "dirichlet_circle_relative_residual": 3.604334971530425e-219,
+          "dirichlet_response": [
+            0.32296033702576654,
+            -0.5164478614152138
+          ],
+          "log10_diameter": -2.1458356685946303,
+          "passive_terminal_radius_ratio": 0.37186839502780145,
+          "real_terminal_circle_relative_residual": 2.1892101672718352e-219,
+          "sites": 32
+        },
+        {
+          "center": [
+            0.3232150273681208,
+            -0.5129695238976337
+          ],
+          "depth": 2,
+          "diameter_numeric": 0.00524664781827059,
+          "dirichlet_circle_relative_residual": 2.5210573813413263e-219,
+          "dirichlet_response": [
+            0.3235156856613111,
+            -0.5155755616799724
+          ],
+          "log10_diameter": -2.280118086881327,
+          "passive_terminal_radius_ratio": 0.8240864495225836,
+          "real_terminal_circle_relative_residual": 2.0596874030566392e-219,
+          "sites": 64
+        },
+        {
+          "center": [
+            0.3232877706914805,
+            -0.5129029222596251
+          ],
+          "depth": 4,
+          "diameter_numeric": 0.005046857465842138,
+          "dirichlet_circle_relative_residual": 1.0637602888483438e-218,
+          "dirichlet_response": [
+            0.3236135110217849,
+            -0.5154052383482407
+          ],
+          "log10_diameter": -2.2969789605075177,
+          "passive_terminal_radius_ratio": 0.9925802092660404,
+          "real_terminal_circle_relative_residual": 3.494478243559777e-219,
+          "sites": 128
+        },
+        {
+          "center": [
+            0.3232906982118793,
+            -0.5129002065715198
+          ],
+          "depth": 8,
+          "diameter_numeric": 0.0050388711330658165,
+          "dirichlet_circle_relative_residual": 3.0882501165906582e-220,
+          "dirichlet_response": [
+            0.3236173857082961,
+            -0.5153983720691592
+          ],
+          "log10_diameter": -2.297666748394393,
+          "passive_terminal_radius_ratio": 0.9999879163340278,
+          "real_terminal_circle_relative_residual": 4.3407071083190915e-219,
+          "sites": 256
+        },
+        {
+          "center": [
+            0.3232907029710277,
+            -0.5129002021567326
+          ],
+          "depth": 16,
+          "diameter_numeric": 0.0050388581500247255,
+          "dirichlet_circle_relative_residual": 1.4960894668274443e-218,
+          "dirichlet_response": [
+            0.32361739200298856,
+            -0.5153983609067752
+          ],
+          "log10_diameter": -2.2976678673891477,
+          "passive_terminal_radius_ratio": 0.999999999968068,
+          "real_terminal_circle_relative_residual": 1.3828533374574773e-218,
+          "sites": 512
+        },
+        {
+          "center": [
+            0.32329070297104023,
+            -0.5129002021567209
+          ],
+          "depth": 32,
+          "diameter_numeric": 0.005038858149990417,
+          "dirichlet_circle_relative_residual": 3.906646463290465e-218,
+          "dirichlet_response": [
+            0.3236173920030052,
+            -0.5153983609067456
+          ],
+          "log10_diameter": -2.297667867392105,
+          "passive_terminal_radius_ratio": 1.0,
+          "real_terminal_circle_relative_residual": 3.6715957098996903e-218,
+          "sites": 1024
+        },
+        {
+          "center": [
+            0.32329070297104023,
+            -0.5129002021567209
+          ],
+          "depth": 64,
+          "diameter_numeric": 0.005038858149990417,
+          "dirichlet_circle_relative_residual": 1.39829462783563e-218,
+          "dirichlet_response": [
+            0.3236173920030052,
+            -0.5153983609067456
+          ],
+          "log10_diameter": -2.297667867392105,
+          "passive_terminal_radius_ratio": 1.0,
+          "real_terminal_circle_relative_residual": 1.7036890373506508e-218,
+          "sites": 2048
+        }
+      ],
+      "self_adjoint_condition_at_infinite_depth_needed": true,
+      "zero_energy_even_multiplier_abs": 0.0446327233759311,
+      "zero_energy_odd_multiplier_abs": 0.44810171746735306
+    }
+  ],
+  "matrix_and_scalar_controls": [
+    {
+      "Omega": 1.3,
+      "block_error": 3.3766115072321297e-16,
+      "depth": 1,
+      "direct_error": 4.47545209131181e-16
+    },
+    {
+      "Omega": 1.3,
+      "block_error": 3.3306690738754696e-16,
+      "depth": 2,
+      "direct_error": 4.041272810440265e-16
+    },
+    {
+      "Omega": 1.3,
+      "block_error": 5.551115123125783e-17,
+      "depth": 4,
+      "direct_error": 0.0
+    },
+    {
+      "Omega": 4.0,
+      "block_error": 3.3766115072321297e-16,
+      "depth": 1,
+      "direct_error": 4.47545209131181e-16
+    },
+    {
+      "Omega": 4.0,
+      "block_error": 2.7755575615628914e-16,
+      "depth": 2,
+      "direct_error": 4.996003610813204e-16
+    },
+    {
+      "Omega": 4.0,
+      "block_error": 1.2412670766236366e-16,
+      "depth": 4,
+      "direct_error": 4.041272810440265e-16
+    },
+    {
+      "Omega": 50.0,
+      "block_error": 3.3766115072321297e-16,
+      "depth": 1,
+      "direct_error": 4.47545209131181e-16
+    },
+    {
+      "Omega": 50.0,
+      "block_error": 5.551115123125783e-17,
+      "depth": 2,
+      "direct_error": 5.551115123125783e-17
+    },
+    {
+      "Omega": 50.0,
+      "block_error": 3.554447978966673e-16,
+      "depth": 4,
+      "direct_error": 7.711855592701269e-16
+    }
+  ],
+  "nonclaims": {
+    "cosmological_time_attractor_proved": false,
+    "dark_fraction_95_percent_derived": false,
+    "new_to_world_mathematics_claimed": false,
+    "physical_Omega_selected": false,
+    "positive_dark_density_increment_inferred": false,
+    "precision_of_physical_constants_exceeds_lattice_accuracy": false
+  },
+  "observable_requirement": "derive the stress/observation functional and its error amplification before converting a resolvent bound into a dark fraction or detectability threshold",
+  "primary_source": "https://www.mat.univie.ac.at/~gerald/ftp/book-jac/jacop.pdf",
+  "schema": "nsc-tail-limit-v1",
+  "small_Gram_controls": [
+    {
+      "couplings": [
+        1.0
+      ],
+      "direct_error": 0.0,
+      "gram_residual": 0.0,
+      "radius": 0.3125
+    },
+    {
+      "couplings": [
+        0.7,
+        1.2
+      ],
+      "direct_error": 1.2412670766236366e-16,
+      "gram_residual": 1.6867516709168837e-80,
+      "radius": 0.12048851124286221
+    },
+    {
+      "couplings": [
+        1.1,
+        0.8,
+        1.4
+      ],
+      "direct_error": 1.1188630228279524e-16,
+      "gram_residual": 3.3735033418337674e-80,
+      "radius": 0.06593063216789904
+    }
+  ],
+  "source_hashes": {
+    "scripts/check_nsc_tail_limit.py": "6c3a37f032323c15e5e85ea42990b316f12e083715d6c57da57defcccb8d8b4f",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_smooth_geometry.py": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0",
+    "src/recursive_horizons/nsc_tail_limit.py": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded"
+  },
+  "spatial_resolution": [
+    {
+      "critical_Omega_lattice": 22.40508587336765,
+      "intervals": 16,
+      "q_continuum": 0.045109543404710066,
+      "q_error": 0.0004768200287789681,
+      "q_lattice": 0.0446327233759311
+    },
+    {
+      "critical_Omega_lattice": 22.226926367972315,
+      "intervals": 32,
+      "q_continuum": 0.045109543404710066,
+      "q_error": 0.00011906728377681502,
+      "q_lattice": 0.04499047612093325
+    },
+    {
+      "critical_Omega_lattice": 22.182891878108705,
+      "intervals": 64,
+      "q_continuum": 0.045109543404710066,
+      "q_error": 2.9758248886679883e-05,
+      "q_lattice": 0.045079785155823386
+    },
+    {
+      "critical_Omega_lattice": 22.171914454942275,
+      "intervals": 128,
+      "q_continuum": 0.045109543404710066,
+      "q_error": 7.43902702097371e-06,
+      "q_lattice": 0.04510210437768909
+    }
+  ],
+  "tail_bound": {
+    "bound_is_for_full_matrix_or_stress_derivatives": false,
+    "consequence": "any two self-adjoint completions, including a Dirichlet truncation comparison, differ in G00 by at most 2R_M",
+    "displayed_values_interval_certified": false,
+    "mathematical_bound_exact": true,
+    "passive_convention": "terminal self-energy Im Sigma<=0",
+    "polynomials": "p_-1=0,p0=1,p_(j+1)=(z*p_j-a_(j-1)*p_(j-1))/a_j",
+    "precision_difference_log10_diameter": 0.0,
+    "radius": "R_M=1/(2 Im(z) sum_{j=0}^{M-1}|p_j|\u00b2)"
+  },
+  "terminal": true
+}

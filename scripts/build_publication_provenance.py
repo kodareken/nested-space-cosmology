@@ -43,17 +43,21 @@ def included_files() -> list[Path]:
 
 
 def main() -> int:
+    release = json.loads((ROOT / "results/release-spec.json").read_text())
+    metadata = json.loads((ROOT / "paper/metadata.json").read_text())
     record = {
         "schema": "NSC-PUBLICATION-PROVENANCE-v1",
-        "public_version": "0.1.0",
+        "public_version": metadata["version"],
         "source_project": "BlackHoles-Infinity",
         "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
         "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
         "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
         "boundary_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
         "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
-        "source_branch": "doug/commit-branch",
-        "export_timestamp_utc": "2026-09-07T00:00:00Z",
+        "source_branch": "codex/nsc-closure-verification",
+        "release_source_commit": release["source_commit"],
+        "release_spec_sha256": sha256(ROOT / "results/release-spec.json"),
+        "export_timestamp_utc": metadata["date_iso"] + "T00:00:00Z",
         "source_worktree_clean": True,
         "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
         "frontier_sha256": sha256(FRONTIER),

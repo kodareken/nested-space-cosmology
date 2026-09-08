@@ -90,8 +90,10 @@ class PublicationManifestTests(unittest.TestCase):
     }
 
     def test_exact_frontier_and_count(self) -> None:
-        self.assertEqual(64, self.manifest["result_count"])
-        self.assertEqual(64, len(self.steps))
+        release = json.loads((ROOT / "results/release-spec.json").read_text())
+        expected_count = 58 + len(release["scoped_follow_ups"])
+        self.assertEqual(expected_count, self.manifest["result_count"])
+        self.assertEqual(expected_count, len(self.steps))
         self.assertEqual(58, self.manifest["historical_result_count"])
         self.assertEqual(
             "NSC-2-ZETA1-RECURSION-MAP", self.manifest["frontier_artifact_id"]
@@ -101,15 +103,8 @@ class PublicationManifestTests(unittest.TestCase):
             self.manifest["follow_up_artifact_id"],
         )
         self.assertEqual(
-            [
-                "results/nsc-2-zeta1-unit-closure-check.json",
-                "results/nsc-3-regulated-recursion.json",
-                "results/nsc-3-radial-spectrum.json",
-                "results/nsc-3-geometric-chain.json",
-                "results/nsc-3-threshold-response.json",
-                "results/nsc-3-boundary-response.json",
-            ],
-            self.manifest["scoped_follow_up_outputs"],
+            {row["output"] for row in release["scoped_follow_ups"]},
+            set(self.manifest["scoped_follow_up_outputs"]),
         )
         self.assertEqual(
             "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
@@ -207,8 +202,12 @@ class PublicationManifestTests(unittest.TestCase):
     def test_every_result_is_terminal_and_identified(self) -> None:
         for step in self.steps:
             result = json.loads((ROOT / step["output"]).read_text(encoding="utf-8"))
-            self.assertIs(True, result["terminal"])
-            self.assertEqual(step["artifact_id"], result["artifact_id"])
+            load_script("reproduce_public_results.py").validate_identity(result, step)
+            if step.get("identity_policy", {}).get("kind") == "schema_gate":
+                self.assertNotIn("artifact_id", result)
+                self.assertEqual(step["identity_policy"]["schema"], result["schema"])
+            else:
+                self.assertEqual(step["artifact_id"], result["artifact_id"])
 
     def test_determinant_scale_roots_are_not_frontier(self) -> None:
         superseded = {
@@ -329,8 +328,9 @@ class PublicationManifestTests(unittest.TestCase):
             "nsc-1-s-one-flat-spectral-poles.json",
         ):
             value = json.loads((ROOT / "results" / name).read_text(encoding="utf-8"))
-            reproducer.validate_authenticated_inputs(ROOT, value)
-            normalized = reproducer.normalize_dynamic_hashes(value)
+            step = next(row for row in self.steps if row["output"] == "results/" + name)
+            locations = reproducer.validate_authenticated_inputs(ROOT, value, step)
+            normalized = reproducer.normalize_dynamic_hashes(value, locations)
             entries = list(reproducer.authenticated_entries(normalized))
             self.assertTrue(entries)
             self.assertTrue(

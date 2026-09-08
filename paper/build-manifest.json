@@ -1,12 +1,26 @@
 {
-  "bytes": 467853,
+  "bytes": 615934,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "21fb28a5ddfd86723f87816d7486a04020a4524ae9252d30fa4b5a2379b3ec32",
+  "metadata_sha256": "676d4afacae4a6c173e8f8ffd10a295d6cb56d44eaeccfaa227ae5b98da23f4e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 18,
-  "pdf_sha256": "809fe3358f3ea4e6e2a025e2685b0a5a5bb8c3bebc5363291f5ffb15d1f0261a",
+  "pages": 16,
+  "pdf_sha256": "384d74a537edeb67c59ab68a802c002c93dfc78e9e88df6775396ceb307532b4",
   "schema": "NSC-PAPER-BUILD-v1",
+  "scientific_build_inputs": [
+    {
+      "path": "results/nsc-3-geometric-chain.json",
+      "sha256": "a5b5061372fef19817d8abd8a6833be020b54806607101338029e7177bfd0615"
+    },
+    {
+      "path": "results/nsc-6-vacuum-work.json",
+      "sha256": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605"
+    },
+    {
+      "path": "scripts/build_paper.py",
+      "sha256": "a7c5db08c8e06cdf497f34cf7e7e77584a42a45d1e6673df4bf4828d05675feb"
+    }
+  ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "94bb75da85ccdb7bcc2581c85c8d4e73d9a5c90cd0802cac2a6daf753fcf2470",
-  "version": "0.1.0"
+  "source_sha256": "96d15a26bd1929208fe653b8c8a6fc368b6e2665474c46c842f83f7472ae5860",
+  "version": "0.2.0"
 }

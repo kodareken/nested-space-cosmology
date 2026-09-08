@@ -98,8 +98,15 @@ def check_manifest(errors: list[str]) -> None:
     steps = manifest.get("steps", [])
     if manifest.get("schema") != "NSC-PUBLIC-RESULT-MANIFEST-v1":
         errors.append("unexpected result manifest schema")
-    if len(steps) != 64 or manifest.get("result_count") != 64:
-        errors.append("result manifest does not contain exactly 64 steps")
+    release = json.loads((ROOT / "results/release-spec.json").read_text(encoding="utf-8"))
+    expected_count = 58 + len(release["scoped_follow_ups"])
+    if len(steps) != expected_count or manifest.get("result_count") != expected_count:
+        errors.append("result manifest count differs from release specification")
+    from reproduce_public_results import validate_checkout
+    try:
+        validate_checkout(manifest)
+    except Exception as exc:
+        errors.append(f"result closure validation failed: {exc}")
     if manifest.get("historical_result_count") != 58:
         errors.append("historical result count must remain 58")
     if manifest.get("source_commit") != "ff2cf2722b966589b98a61accdbb6cee819a58c7":
@@ -116,16 +123,23 @@ def check_manifest(errors: list[str]) -> None:
         != "445d5b069adea8b5641384b0ee02f07fe9cfcc0a"
     ):
         errors.append("result manifest has the wrong nsc-3 source commit")
-    expected_scoped = [
-        "results/nsc-2-zeta1-unit-closure-check.json",
-        "results/nsc-3-regulated-recursion.json",
-        "results/nsc-3-radial-spectrum.json",
-        "results/nsc-3-geometric-chain.json",
-        "results/nsc-3-threshold-response.json",
-        "results/nsc-3-boundary-response.json",
-    ]
-    if manifest.get("scoped_follow_up_outputs") != expected_scoped:
-        errors.append("scoped follow-up outputs are incorrect")
+    expected_scoped = {row["output"] for row in release["scoped_follow_ups"]}
+    if set(manifest.get("scoped_follow_up_outputs", [])) != expected_scoped:
+        errors.append("scoped follow-up outputs differ from release specification")
+    paper = (ROOT / "paper/nested-space-cosmology.md").read_text(encoding="utf-8")
+    targets = release.get("current_targets", [])
+    required_targets = {"target-constants", "target-continuation", "target-dark-sector",
+                        "target-measurement", "target-antimatter", "target-recursion"}
+    if {target.get("claim_id") for target in targets} != required_targets or len(targets) != 6:
+        errors.append("release must declare the six physical targets")
+    artifact_ids = {step.get("artifact_id") for step in steps}
+    for target in targets:
+        if target.get("status") != "open_target" or not target.get("required_physical_result"):
+            errors.append(f"invalid physical target status: {target.get('claim_id')}")
+        if not target.get("supporting_artifact_ids") or not set(target["supporting_artifact_ids"]) <= artifact_ids:
+            errors.append(f"physical target has absent evidence: {target.get('claim_id')}")
+        if f"<!-- nsc-claim:{target['claim_id']} -->" not in paper:
+            errors.append(f"paper lacks target claim anchor: {target['claim_id']}")
     outputs: set[str] = set()
     current = []
     for step in steps:
@@ -156,10 +170,8 @@ def check_manifest(errors: list[str]) -> None:
             path = ROOT / relative
             if not path.is_file() or sha256(path) != auxiliary.get("sha256"):
                 errors.append(f"auxiliary provenance input mismatch: {relative}")
-    if current != ["NSC-2-ZETA1-RECURSION-MAP"]:
-        errors.append(f"unexpected current frontier: {current}")
-    if manifest.get("frontier_artifact_id") != "NSC-2-ZETA1-RECURSION-MAP":
-        errors.append("frontier identity is incorrect")
+    if current != [manifest.get("frontier_artifact_id")]:
+        errors.append(f"historical frontier differs from its declared manifest identity: {current}")
     result_files = {
         str(path.relative_to(ROOT))
         for path in (ROOT / "results").glob("nsc-*.json")
@@ -271,7 +283,8 @@ def main() -> int:
             print(f"ERROR: {error}", file=sys.stderr)
         print(f"publication check failed with {len(errors)} finding(s)", file=sys.stderr)
         return 1
-    print(f"publication check passed: {len(files)} curated files, 64 result steps")
+    count = json.loads(RESULT_MANIFEST.read_text())["result_count"]
+    print(f"publication check passed: {len(files)} curated files, {count} result steps")
     return 0
 
 

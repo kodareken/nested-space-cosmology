@@ -19,14 +19,11 @@ NSC3_INTRODUCED_COMMIT = "3490f19164eb9303915db41b8c90eca0f40a836e"
 FRONTIER_PATH = "results/nsc-2-zeta1-recursion-map.json"
 FOLLOW_UP_PATH = "results/nsc-2-zeta1-unit-closure-check.json"
 HISTORICAL_COUNT = 58
-SCOPED_FOLLOW_UP_PATHS = (
-    FOLLOW_UP_PATH,
-    "results/nsc-3-regulated-recursion.json",
-    "results/nsc-3-radial-spectrum.json",
-    "results/nsc-3-geometric-chain.json",
-    "results/nsc-3-threshold-response.json",
-    "results/nsc-3-boundary-response.json",
-)
+RELEASE_SPEC_PATH = ROOT / "results/release-spec.json"
+RELEASE_SPEC = json.loads(RELEASE_SPEC_PATH.read_text(encoding="utf-8"))
+SCOPED_SPECS = {row["output"]: row for row in RELEASE_SPEC["scoped_follow_ups"]}
+SCOPED_FOLLOW_UP_PATHS = tuple(SCOPED_SPECS)
+
 
 IMPORTED = {
     "NSC-1-EXACT-BLACK-UNIVERSE-DEFOCUSING",
@@ -172,6 +169,10 @@ def discover() -> tuple[dict[str, Path], dict[str, list[str]], dict[str, list[st
             {item for item in RESULT_RE.findall(source) if item != output}
         )
         source_dependencies[output] = sorted(set(SCRIPT_RE.findall(source)))
+    for output, row in SCOPED_SPECS.items():
+        generators[output] = ROOT / row["generator"]
+        dependencies[output] = row["dependencies"]
+        source_dependencies[output] = row["source_dependencies"]
     return generators, dependencies, source_dependencies
 
 
@@ -223,49 +224,6 @@ def category(artifact_id: str, generator_source: str) -> str:
     return "repository_derived_exact_identity"
 
 
-SCOPED_SOURCE_DEPENDENCIES = {
-    "results/nsc-3-threshold-response.json": ["scripts/check_nsc_scale_closure.py"],
-    "results/nsc-3-boundary-response.json": [
-        "src/recursive_horizons/nsc_boundary.py", "tests/test_nsc_boundary.py",
-        "docs/nsc-boundary-response.md",
-    ],
-    "results/nsc-3-regulated-recursion.json": [
-        "scripts/check_nsc_scale_closure.py",
-        "src/recursive_horizons/nsc_regulated.py",
-    ],
-    "results/nsc-3-radial-spectrum.json": [
-        "scripts/check_nsc_scale_closure.py",
-    ],
-    "results/nsc-3-geometric-chain.json": [
-        "scripts/check_nsc_scale_closure.py",
-        "src/recursive_horizons/nsc_geometric_chain.py",
-        "src/recursive_horizons/nsc_regulated.py",
-    ],
-}
-
-FOLLOW_UP_AUXILIARY_INPUTS = [
-    {
-        "path": "scripts/run_nsc_zeta1_regulated_determinant.py",
-        "sha256": "01caf3d6061b1411a82ab030cdfe17fc8b0c5a9aa076d73ce8dbe589ff67276b",
-    },
-    {
-        "path": "scripts/run_nsc_zeta1_warped_y.py",
-        "sha256": "2206e30f746e3c6c0e04a65c9cead46122c6b97d9fd745b591f3243b43fab67b",
-    },
-    {
-        "path": "results/nsc-1-s-one-child-scale-correction.json",
-        "sha256": "19c50a14a9902b372a1868c147dd1506570b40a1ac3bd1f1200d03cfe5b8763b",
-    },
-    {
-        "path": "results/nsc-2-zeta1-recursion-map.json",
-        "sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
-    },
-    {
-        "path": "results/nsc-2-zeta1-anomaly-decomposition.json",
-        "sha256": "052750d49e969a1d82b683f6405a1568aff5f56352183eb9da948a6a2ab0b750",
-    },
-]
-
 
 def build() -> dict[str, object]:
     generators, dependencies, source_dependencies = discover()
@@ -284,7 +242,15 @@ def build() -> dict[str, object]:
         raise RuntimeError(
             f"expected {HISTORICAL_COUNT} historical public results, observed {len(ordered)}"
         )
-    ordered.extend(SCOPED_FOLLOW_UP_PATHS)
+    pending = list(SCOPED_FOLLOW_UP_PATHS)
+    while pending:
+        ready = [path for path in pending if set(dependencies[path]) <= set(ordered)]
+        if not ready:
+            raise RuntimeError("scoped result graph contains a cycle or absent dependency")
+        # The explicit release order breaks ties, preserving published checkpoints.
+        path = ready[0]
+        ordered.append(path)
+        pending.remove(path)
 
     steps: list[dict[str, object]] = []
     portable_outputs: set[str] = set()
@@ -296,17 +262,30 @@ def build() -> dict[str, object]:
         if not result_path.is_file():
             raise RuntimeError(f"result is absent: {output}")
         value = json.loads(result_path.read_text(encoding="utf-8"))
-        if value.get("terminal") is not True:
+        identity = SCOPED_SPECS.get(output, {}).get("identity_policy", {"kind": "terminal"})
+        if identity["kind"] == "schema_gate":
+            gate = value.get("gate")
+            if (value.get("schema") != identity["schema"]
+                    or value.get("classification") != identity["classification"]
+                    or not isinstance(gate, dict) or set(gate) != set(identity["gate"])
+                    or any(gate[key] is not expected for key, expected in identity["gate"].items())
+                    or "artifact_id" in value or "terminal" in value):
+                raise RuntimeError(f"invalid schema-gated result: {output}")
+        elif identity["kind"] == "plateau_scope":
+            if (value.get("schema") != identity["schema"]
+                    or value.get("scope") != identity["scope"]
+                    or value.get("observational_audit", {}).get("prediction_claim") is not False):
+                raise RuntimeError(f"invalid scoped plateau record: {output}")
+        elif value.get("terminal") is not True:
             raise RuntimeError(f"result is not terminal: {output}")
-        artifact_id = str(value["artifact_id"])
+        artifact_id = SCOPED_SPECS.get(output, {}).get("artifact_id", value.get("artifact_id"))
+        if not isinstance(artifact_id, str) or not artifact_id:
+            raise RuntimeError(f"result has no declared artifact identity: {output}")
         generator_relative = str(generator.relative_to(ROOT))
         source = generator.read_text(encoding="utf-8")
         is_follow_up = output in SCOPED_FOLLOW_UP_PATHS
-        declared_dependencies = [] if is_follow_up else dependencies.get(output, [])
-        declared_source_dependencies = sorted(
-            set(source_dependencies.get(output, []))
-            | set(SCOPED_SOURCE_DEPENDENCIES.get(output, []))
-        )
+        declared_dependencies = dependencies.get(output, [])
+        declared_source_dependencies = sorted(set(source_dependencies.get(output, [])))
         direct_numeric = any(name in source for name in ("numpy", "scipy", "mpmath"))
         dynamic_numeric = any(
             any(
@@ -362,39 +341,26 @@ def build() -> dict[str, object]:
             "paper_claim_ids": PAPER_CLAIMS.get(artifact_id, []),
         }
         if is_follow_up:
-            step["comparison_policy"] = {
-                "kind": "all_fields",
-                "relative_tolerance": 1e-8,
-                "absolute_tolerance": 1e-8,
+            row = SCOPED_SPECS[output]
+            for key in ("comparison_policy", "generator_args", "json_format",
+                        "follow_up_source_commit", "auxiliary_inputs", "identity_policy", "category"):
+                if key in row:
+                    step[key] = row[key]
+            step["source_dependency_hashes"] = {
+                relative: sha256(ROOT / relative)
+                for relative in declared_source_dependencies
             }
-            if output == FOLLOW_UP_PATH:
-                for auxiliary in FOLLOW_UP_AUXILIARY_INPUTS:
-                    auxiliary_path = ROOT / auxiliary["path"]
-                    if not auxiliary_path.is_file():
-                        raise RuntimeError(
-                            f"follow-up auxiliary input is absent: {auxiliary['path']}"
-                        )
-                    observed = sha256(auxiliary_path)
-                    if observed != auxiliary["sha256"]:
-                        raise RuntimeError(
-                            f"follow-up auxiliary input hash mismatch: {auxiliary['path']}"
-                        )
-                step["auxiliary_inputs"] = FOLLOW_UP_AUXILIARY_INPUTS
-                step["follow_up_source_commit"] = FOLLOW_UP_SOURCE_COMMIT
-            else:
-                step["json_format"] = "pretty"
-                step["generator_args"] = ["--output", output]
-                step["follow_up_source_commit"] = (
-                    BOUNDARY_SOURCE_COMMIT if output in {
-                        "results/nsc-3-threshold-response.json", "results/nsc-3-boundary-response.json"
-                    } else NSC3_SOURCE_COMMIT
-                )
-                if output == "results/nsc-3-boundary-response.json":
-                    step["json_format"] = "compact"
+            for auxiliary in row.get("auxiliary_inputs", []):
+                if sha256(ROOT / auxiliary["path"]) != auxiliary["sha256"]:
+                    raise RuntimeError(f"auxiliary provenance mismatch: {auxiliary['path']}")
         steps.append(step)
 
     return {
         "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
+        "release_version": RELEASE_SPEC["release_version"],
+        "release_spec": "results/release-spec.json",
+        "release_spec_sha256": sha256(RELEASE_SPEC_PATH),
+        "release_source_commit": RELEASE_SPEC["source_commit"],
         "source_commit": SOURCE_COMMIT,
         "follow_up_source_commit": FOLLOW_UP_SOURCE_COMMIT,
         "nsc3_source_commit": NSC3_SOURCE_COMMIT,
@@ -404,7 +370,7 @@ def build() -> dict[str, object]:
         "frontier_output": FRONTIER_PATH,
         "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
         "follow_up_output": FOLLOW_UP_PATH,
-        "scoped_follow_up_outputs": list(SCOPED_FOLLOW_UP_PATHS),
+        "scoped_follow_up_outputs": ordered[HISTORICAL_COUNT:],
         "historical_result_count": HISTORICAL_COUNT,
         "measured_reference_runtime_seconds": 246.73,
         "result_count": len(steps),
