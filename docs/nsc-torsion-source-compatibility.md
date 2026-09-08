@@ -97,7 +97,51 @@ Further interface conditions are explicit:
   action. These coefficient relations concern a candidate spectral extension;
   its place in the same regulated functional must be established first.
 
-The next useful output is a sourced torsion/current kernel and its state
-average, sufficient to determine whether the imported fluid source applies.
-That calculation would advance the interface. Rebuilding the already
-published collapse geometry would not.
+## Reuse the microscopic quantum source as well
+
+[Lucat and Prokopec, arXiv:1512.06074v1](https://arxiv.org/html/1512.06074v1)
+provide a closer state-level starting point: a renormalized in-in 2PI Dirac
+functional and semiclassical backreaction. Reuse equations17,21,24,26 and
+33 rather than constructing that general machinery again.
+
+Their local interaction coefficient is
+\(\alpha_5=3\pi G_N\xi^2/2\), with minimal Einstein–Cartan at \(\xi=1\).
+The conditional one-ninth matching above therefore maps to
+
+\[
+|\xi_{\rm eff}|=1/3,\qquad
+\alpha_5^{\rm match}=\pi G_N/6.
+\]
+
+These are coefficient conversions for the candidate's algebraic limit,
+not an adopted value for the completed NSC action. The source-sign and
+Lorentzian/domain conditions above still apply.
+
+With \(X=iS^{aa}(x,x)\) and \(A^\mu=\gamma^5\gamma^\mu\), the two
+contractions in their equation17 have structure
+
+\[
+\mathcal W[X]=\operatorname{tr}(XA^\mu)\operatorname{tr}(XA_\mu)
+-\operatorname{tr}(XA^\mu XA_\mu).
+\]
+
+Use this inside the renormalized functional, including its counterterms.
+A vanishing mean axial current does not justify omitting the second term.
+
+| Interface | NSC ownership still required |
+|---|---|
+| G_N and interaction coefficient | Same action normalization; no second gravitational weight |
+| Scalar/pseudoscalar mass | Physical pole/sector of the full operator; not the radial gap or subtraction mass |
+| Contour propagators and initial state | Full spinor, geometric measure and parent-child state correlations; a retarded map alone is insufficient |
+| Finite renormalization terms | Match their dimensional prescription to the NSC regulator, including the interaction's curvature–fermion term R psi-bar psi, before using absolute stress |
+| Room boundary and recursion | Supply the NSC transmission domain and scale map; neither is provided by a homogeneous cosmological example |
+
+The paper's sectionVI is a required reuse condition: its near-equilibrium
+relativistic bounce reaches the effective scattering cutoff; the authors
+argue for a controlled nonrelativistic nonequilibrium regime. Its illustrated
+large-coupling examples do not establish a bounce at our conditional matched
+coupling. Mass, state and scale separation must be fixed before a run.
+
+The next computation must resolve one of those NSC inputs or evaluate the
+matched source where the imported approximation applies. Rebuilding either
+the collapse geometry or the general 2PI derivation would not do that.

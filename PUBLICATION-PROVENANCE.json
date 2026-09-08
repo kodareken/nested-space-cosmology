@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 9640,
+      "bytes": 10022,
       "path": "docs/current-result.md",
-      "sha256": "7943b7286ae1c8fe7cd3f0329dcd4ee7b648f90e54d101743f5ea185cad8c227"
+      "sha256": "ba6ff98f45d5dd1f149bdfaff06172ec22844851e31d3cc49839b3839ea3b45a"
     },
     {
       "bytes": 10991,
@@ -166,9 +166,9 @@
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
     },
     {
-      "bytes": 5523,
+      "bytes": 5748,
       "path": "docs/nsc-prior-art-reuse.md",
-      "sha256": "e6ebf405b3a34ad5f68bce6fe81a12972219f62a66a6c60a286d047ef34aafd7"
+      "sha256": "cbf0c7304f743a7ff5cc07fb9f04b687971b542537cfcf4fdc481e8eb8547d8f"
     },
     {
       "bytes": 2394,
@@ -211,9 +211,9 @@
       "sha256": "6e24744f080d3063600ed913b87372393890598bf9693a6fd96d0b322fe60a2d"
     },
     {
-      "bytes": 4483,
+      "bytes": 6704,
       "path": "docs/nsc-torsion-source-compatibility.md",
-      "sha256": "4704aed468c3047e0d57eba58ec5dd9846f5277be986fcbf714bc3bd61b5cf11"
+      "sha256": "0570ef7cc64dd6b91fb67f863d33fdd4216fa305ff458f573f9a25c0dbf7780c"
     },
     {
       "bytes": 8554,
