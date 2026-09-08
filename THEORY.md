@@ -90,7 +90,7 @@ S_{\mathrm{one}}[\mathbb{D}_\Theta,\Psi]
 }
 $$
 
-The exponential profile is not an extra coefficient. **Repository derivation.** Composition of successive unresolved-resolution steps, with positivity and \(\mathbb{D}^2\) as generator, selects the heat semigroup \(f_\tau(\mathbb{D}^2)=e^{-\tau\mathbb{D}^2}\). Remaining \(\Lambda\) names the unit of resolution.
+The exponential profile is not an extra coefficient. **Repository derivation.** Composition of successive unresolved-resolution steps, with positivity and \(\mathbb{D}^2\) as generator, selects the heat semigroup \(f_\tau(\mathbb{D}^2)=e^{-\tau\mathbb{D}^2}\) as the present heat-kernel diagnostic. Remaining \(\Lambda\) names the unit of resolution. Identifying that positivity with the complete physical anomaly or covariance requires a common regulator, field measure, and derived variation.
 
 **Imported result.** The Chamseddine–Connes spectral action produces the Standard Model coupled to Einstein plus Weyl gravity from one Dirac operator. This repository imports that local-room reduction. It does not reconstruct each known Standard-Model term as a discovery.
 
@@ -190,7 +190,7 @@ is therefore not the complete healthy action. The omitted off-diagonal \(\Phi\) 
 
 **Repository derivation.** With the exponential profile, one \(\Phi\) then has three exact roles: mass gap, outside self-energy, and relative-metric interaction, and it simultaneously shifts the effective vacuum curvature.
 
-**Numerical diagnostic.** The leading \(a_0+a_2\) doubled-FLRW truncation has no parameter overlap between a positive de Sitter room and generic relative-mode decay. The untruncated exponential relative kernel restores a positive flat Euclidean relative-sheet kernel on the scanned mass/momentum box. That is not Lorentzian causality, not an electron mass, and not \(\Xi_{\mathrm{NSC}}\).
+**Numerical diagnostic.** The leading \(a_0+a_2\) doubled-FLRW truncation has no parameter overlap between a positive de Sitter room and generic relative-mode decay. The untruncated exponential relative kernel restores a positive flat Euclidean relative-sheet heat Hessian on the scanned mass/momentum box. That heat-kernel positivity is not the complete physical anomaly, not Lorentzian causality, not an electron mass, and not \(\Xi_{\mathrm{NSC}}\). Raw finite-determinant invariance of the same two-sheet symbol does not set the regulated relative Hessian to zero.
 
 **Repository derivation.** Matching the transition vacuum-form component to the doubled gap, then using the exact expanding child’s Ricci sign, selected a conditional one-scale gap \(|\Phi|^2/\Lambda^2=1006/1015\) and a boundary cross-projection \(\Xi_{\mathrm{boundary}}=54/503\).
 
@@ -214,7 +214,7 @@ Direct \(\Lambda L_\star=1\) gives a negative \(\mu^2\) and is not the physical 
 
 **Repository derivation.** The original constant-\(t\) slices cannot define the inheritance spectrum because \(t\) and \(\rho\) exchange causal roles across the horizon. The exact metric nevertheless admits a global horizon-penetrating time and a positive spatial metric on which a self-adjoint Dirac Hamiltonian can live.
 
-**Repository derivation.** Cutting at the throat produces a derived Neumann jump operator \(\Phi_{\mathrm{throat}}(E)=\mathcal{N}_p(E)+\mathcal{N}_c(E)\). The throat link is not an arbitrary inserted function.
+**Repository derivation.** Cutting at the throat produces a proposed Neumann jump operator \(\Phi_{\mathrm{throat}}(E)=\mathcal{N}_p(E)+\mathcal{N}_c(E)\). Compact-record identities include radial partner operators and a two-component flux-cancellation example. The maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), the APS projectors, lapse/shift additions, and \(\Phi_{\mathrm{throat}}=R(E)\) remain unevaluated declarations. Flux cancellation and a proposed gluing identity do not establish their physical identification. The cited BFK theorem assumes compactness, a product collar, and spectral conditions whose applicability to this noncompact warped geometry is unproved.
 
 **Numerical diagnostic.** The lowest joined Dirac sector has an isolated child-allowed heat minimum near \(\zeta\approx 5.0967\). The first omitted angular sector removes that heat-only root. The regulated fermionic determinant restores an angularly converged minimum near \(\zeta_{\det}\approx 4.9907\). Factorized compact-\(y\) controls keep a root only when an even zero mode is present. Joint fermion/metric orbifold parity selects one chiral zero mode and an unwarped candidate near \(\zeta_{\mathrm{orb}}\approx 4.7479\). The exact conformal compact warp preserves a nearby root near \(\zeta_{\mathrm{warped}\,y}\approx 4.7484\).
 
@@ -234,6 +234,14 @@ The compensated derivative remains negative throughout the 257-point scan \(3\pi
 
 **Therefore the anomaly invalidated the determinant-only scale roots.** \(\zeta_{\det}\) and \(\zeta_{\mathrm{warped}\,y}\) are uncompensated determinant diagnostics, not stationary points of the one equation.
 
+**Repository derivation.** Those historical determinant numbers also implemented the inconsistent conversion \((\lambda_j+\mu^2)/\zeta\). The declared additive-gap operator requires
+
+$$
+q_j=\frac{\lambda_j}{\zeta}+\mu^2=1+\frac{\lambda_j-a}{\zeta},\qquad a=\frac{3\pi}{2}.
+$$
+
+At fixed spatial geometry, the inherited cutoff subtraction then gives \(d\Gamma_{\mathrm{sub},j}/d\log\zeta=-e^{-q_j}/(2q_j)\). Hermitian interlacing on the joined versus principal-compression disconnected matrices makes the total subtracted derivative strictly negative for every \(\zeta>3\pi/2\) in this finite, fixed-geometry, additive-gap family. Compact record: `results/nsc-2-zeta1-unit-closure-check.json`. The scan corroborates the sign; it is not the basis for the statement between sample points. Refining this family cannot close its scale equation. The result does not cover the full noncompact operator or a general recursive geometry.
+
 **Repository derivation.** The missing owner is not an independently weighted geometric boundary action. Geometry is already the compensating response of the same fermionic determinant. The calculations through that scan joined one parent to one child treated as a terminal asymptotic domain. Recursion requires that the child’s boundary response already contain its own child tail:
 
 $$
@@ -250,29 +258,28 @@ The compact record states that the recursive tail is **not** known to restore a 
 
 **The current frontier is the unsolved energy-resolved recursive child tail.**
 
-**Repository derivation.** Norm preservation and first-order Dirac scaling fix the minimal parent/child dilation
+**Repository derivation.** Norm preservation and first-order Dirac scaling fix a minimal parent/child dilation
 
 $$
 (U_\Omega\psi)(x)=\Omega^{d/2}\psi(\Omega x),
 \qquad
-\mathcal{T}_\Omega=\sigma_1 U_\Omega,
-\qquad
-\zeta=\Omega^2.
+\mathcal{T}_\Omega=\sigma_1 U_\Omega.
 $$
 
-Dimensionless ratios \(E/\Lambda\) and \(\Phi/\Lambda\) are inherited. A parent dimensionless energy \(x\) is seen by the finer child as \(x/\Omega\). The recursive outside equation is therefore the functional relation
+That map does not by itself derive \(\zeta=\Omega^2\). The inheritance scale \(\zeta=(\Lambda L_\star)^2\) and the cutoff ratio \(\Omega=\Lambda_{\mathrm{child}}/\Lambda_{\mathrm{parent}}\) remain distinct until the geometry establishes their relationship. Dimensionless ratios \(E/\Lambda\) and \(\Phi/\Lambda\) are inherited on a transformed mode. A parent dimensionless energy \(x\) at one common dimensional energy is seen by the finer child as \(x/\Omega\). With \(b=B_{\mathrm{dim}}/\Lambda_{\mathrm{parent}}\), the parent block is
 
 $$
 \boxed{
-\Gamma(x)
+\Gamma_p(x)
 =
-K(x)
+K_p(x)
 -
-B^{\dagger}\Gamma(x/\Omega)^{-1}B.
+\frac{1}{\Omega}\,
+b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
 }
 $$
 
-At \(x=0\) it reduces to the earlier quadratic fixed point. **Open prediction.** Solving this energy-resolved tail on the warped transition spectrum, then recomputing the anomaly-compensated scale derivative, is the next result that could restore a physical \(\zeta\). The compact record states that \(\Omega\) is not selected, the functional tail is not computed, the scale root is not restored, and physical \(\zeta\) is not promoted.
+The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) is recovered if \(b_{\mathrm{sym}}=B_{\mathrm{dim}}/\sqrt{\Lambda_{\mathrm{parent}}\Lambda_{\mathrm{child}}}\). Both conventions are legitimate; they cannot silently share the same numerical link. At vanishing argument this reduces to the earlier quadratic fixed point. **Open prediction.** Solving this energy-resolved tail on the warped transition spectrum, then recomputing the anomaly-compensated scale derivative, is the next result that could restore a physical \(\zeta\). The compact records state that \(\Omega\) is not selected, the functional tail is not computed, the scale root is not restored, and physical \(\zeta\) is not promoted.
 
 ## 12. What would count as Nested-Space Cosmology
 

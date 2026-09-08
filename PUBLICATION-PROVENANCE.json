@@ -7,6 +7,9 @@
     "NSC experiments outside the current frontier dependency closure"
   ],
   "export_timestamp_utc": "2026-09-07T00:00:00Z",
+  "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
+  "follow_up_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
+  "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
   "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
   "frontier_sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
   "historical_archive_location": "not_public",
@@ -47,9 +50,9 @@
       "sha256": "1e599cb6b5a94dbae5d85446377268b4270adbe2b98873c777bd02aa1a9a712d"
     },
     {
-      "bytes": 3422,
+      "bytes": 3632,
       "path": "CONTRIBUTING.md",
-      "sha256": "c216d3f4dee0fd186a66d158efd4a1e08c58e80adf5d830330b96a904c3e8176"
+      "sha256": "086ad8575218a3aa8e3693359ad7f17dc4faa1cbe2a4c6ad3be746ba2fb8f0e3"
     },
     {
       "bytes": 1853,
@@ -59,12 +62,12 @@
     {
       "bytes": 1226,
       "path": "Makefile",
-      "sha256": "d85b132e11dd29bc0a753d1e60061e3c72e0f5e877132f65d945d0589f68f9b3"
+      "sha256": "e5d8f62909c221f5bb38e05b0ca7e00db5addadc9c60983496a99fe0c5a76bbd"
     },
     {
-      "bytes": 10640,
+      "bytes": 11985,
       "path": "README.md",
-      "sha256": "f3e626f61f60410e124683106dc769304f92eddfc3124a792e92f38653a76cb0"
+      "sha256": "46126bceff1ae00cca2ff63157ff56559b3cbc34d29383b800dc17b1185f4f59"
     },
     {
       "bytes": 629,
@@ -72,44 +75,49 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 21877,
+      "bytes": 24249,
       "path": "THEORY.md",
-      "sha256": "51b3b6f3f71666bd411b961954a8899592eab978a0d78cb23d9decdc1229ddb7"
+      "sha256": "e23f5bbc99cbdc60fb3178ae8ba581a1e39065b219caa8a15d238dfe5e72a133"
     },
     {
-      "bytes": 9086,
+      "bytes": 10840,
       "path": "docs/current-result.md",
-      "sha256": "05b08366d3211a7e59cba2ec0831298a4cc4bf32ccabdf09fc4e5b623cb03854"
+      "sha256": "24be0be52c1dff1d91dde13df9739001105595c18992eb2fbccbbdc7a5203b1f"
     },
     {
-      "bytes": 9432,
+      "bytes": 13455,
+      "path": "docs/nsc-closure-verification-2026-09-07.md",
+      "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
+    },
+    {
+      "bytes": 9954,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "e593d281c7dfe88a60b69933077d254860a6089a9e909eceb9c5e540a14abaeb"
+      "sha256": "ff774dc3a6354e787e8ec4fffc3ea8a393b75caed25db71d75d5b9e517d8e195"
     },
     {
-      "bytes": 3939,
+      "bytes": 4556,
       "path": "docs/reproducing.md",
-      "sha256": "11fc9103799d294b89d6e63bedf19c7f31ce7a4567bf85b7482b9b8eb6ee7781"
+      "sha256": "26d06bcff545fa894e38996036bc99f8855eaa56d14b49430acf4fa0cfd9146f"
     },
     {
       "bytes": 485,
       "path": "paper/build-manifest.json",
-      "sha256": "fc9768e2f96f4ab732f1d5877b0d88b9a671adfc555628b8b2690f11a03091e9"
+      "sha256": "22da41cad032d0ea5bff9930ea5e7dd809db83e950d2fc1c1bdf23239d5081c8"
     },
     {
       "bytes": 356,
       "path": "paper/metadata.json",
-      "sha256": "ab3e020ff313f83a4c4f8fd7c08cfedf46e575fdf086f77e184c3930ad945e10"
+      "sha256": "21fb28a5ddfd86723f87816d7486a04020a4524ae9252d30fa4b5a2379b3ec32"
     },
     {
-      "bytes": 45700,
+      "bytes": 52751,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "f7dda6884066cf1bf1b1a69047a92cf68bbc64dc21c597e9c492db5ba306ef70"
+      "sha256": "fe563623634a8d448e3479467cdf73a4b22dc0709c18b6bb3f027b6ccc49e0eb"
     },
     {
-      "bytes": 274923,
+      "bytes": 297368,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "186ca62dd64884ec877fa61947ef008a1b21a407f23ba4a3a34cf1abff14f2e4"
+      "sha256": "50805e90a0ae61ca5617f066d34a3ac28fb2efb9aadbc7ffbf4df2bd0c714940"
     },
     {
       "bytes": 1064,
@@ -127,14 +135,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 1461,
+      "bytes": 1968,
       "path": "results/README.md",
-      "sha256": "fcedb6ecaaf369d790aadb3d29429f516e8e7ff744756e35d4a29a170d3c8946"
+      "sha256": "78287734e475154174c1f4daed5fdb4bccdb7605f6967b273de7f0d101678bd3"
     },
     {
-      "bytes": 54758,
+      "bytes": 57420,
       "path": "results/manifest.json",
-      "sha256": "7ff39826d6c06872921ec2e3f5ff0f0de689c319c838753236a3847ce7528287"
+      "sha256": "51c284c348462176405834f5602aa0dd820a3c6c2b81f5284243b3ba09203b64"
     },
     {
       "bytes": 7369,
@@ -417,6 +425,11 @@
       "sha256": "77167b67ef6b9f2260a76a6fcc5782eeb6f4e61507a83992222acf1980825263"
     },
     {
+      "bytes": 23891,
+      "path": "results/nsc-2-zeta1-unit-closure-check.json",
+      "sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928"
+    },
+    {
       "bytes": 3620,
       "path": "results/nsc-2-zeta1-warped-y.json",
       "sha256": "243dbdc8d6085815c588ced0280ad05b9b2e7437ce59e4962e560b3945fb90e5"
@@ -432,24 +445,29 @@
       "sha256": "9903b7b156236cdc42d9172d9d20db1c88b61817fb867433b58578b843ddfee8"
     },
     {
-      "bytes": 2566,
+      "bytes": 2806,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "84b418ac8f4b9b3452c35353265303f904f7eac5adde3f3143b447d0b3d292a0"
+      "sha256": "20b98e6bfb0f6e1939fc454f0a4754f83af5c4eb63cbdc9f9d0589cb0a2eefbf"
     },
     {
-      "bytes": 9576,
+      "bytes": 12824,
       "path": "scripts/build_result_manifest.py",
-      "sha256": "7a1f0672a0a30671830eb4c61cf10b5a64cb7ccd16521f5b546c6615ff2f373e"
+      "sha256": "264846ac14aa910d68c379010dc66f9161da5b76da2b7b9ca704da8700c8ce76"
     },
     {
-      "bytes": 9218,
+      "bytes": 19106,
+      "path": "scripts/check_nsc_scale_closure.py",
+      "sha256": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7"
+    },
+    {
+      "bytes": 10195,
       "path": "scripts/check_publication.py",
-      "sha256": "cf8d384dda83d19215c24c3a060476a97422f1d2c6667f61d1e45ddb5b6742c9"
+      "sha256": "f0ed9c5cf54d4bf514e2683aa60e6698c9f5ff521a87b92b9732e9ebb3abf457"
     },
     {
-      "bytes": 15773,
+      "bytes": 17506,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "a9d070489f882b31449e125184f47011b1415923a03955d3c09a9762b86c00aa"
+      "sha256": "b3789382c97c0e3bf0c27520019dc2e09a9154ee8d96b91632360bbc2fe562db"
     },
     {
       "bytes": 7793,
@@ -757,9 +775,9 @@
       "sha256": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
     },
     {
-      "bytes": 7727,
+      "bytes": 18628,
       "path": "tests/test_publication.py",
-      "sha256": "d90b35ce2c9112bc1884940d01feed9fe1cf0a63cc86820825f59cf6f81f69a7"
+      "sha256": "502290ef974d29a311f2e0e923a5ff20d62386956c0dd04b56656084bfa3c6a5"
     }
   ],
   "public_version": "0.1.0",

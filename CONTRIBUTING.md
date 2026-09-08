@@ -17,11 +17,13 @@ Nested-Space Cosmology welcomes criticism, calculations, counterexamples, and cl
 
 **The current frontier is the unsolved energy-resolved recursive child tail.**
 
-Do not restore a scale root by adding an independently weighted geometric action, retuning \(\Phi\) after seeing the target, or inserting a dark-matter or dark-energy function. The derived unsolved equation is
+Do not restore a scale root by adding an independently weighted geometric action, retuning \(\Phi\) after seeing the target, or inserting a dark-matter or dark-energy function. The derived unsolved equation, with explicit parent normalization, is
 
 $$
-\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B.
+\Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
 $$
+
+Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is \(q_j=\lambda_j/\zeta+\mu^2\).
 
 ## Verification
 

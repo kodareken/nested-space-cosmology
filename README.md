@@ -46,19 +46,20 @@ The public documents, derivations, scripts, and compact results were developed i
 
 **The current frontier is the unsolved energy-resolved recursive child tail.**
 
-Anomaly compensation removed the determinant-only scale roots. Adding an independently weighted geometric action is forbidden double-counting. The missing owner is the child’s own next-child response. The derived, still unsolved, functional equation is
+Anomaly compensation removed the determinant-only scale roots. Adding an independently weighted geometric action is forbidden double-counting. The missing owner is the child’s own next-child response. At a fixed common dimensional energy, and with \(b=B_{\mathrm{dim}}/\Lambda_{\mathrm{parent}}\), the parent block is
 
 $$
-\Gamma(x)
+\Gamma_p(x)
 =
-K(x)
+K_p(x)
 -
-B^{\dagger}\,
-\Gamma(x/\Omega)^{-1}
-B.
+\frac{1}{\Omega}\,
+b\,
+\Gamma_c(x/\Omega)^{-1}
+b^{\dagger}.
 $$
 
-\(\Omega\) is not selected. The mode-resolved tail is not solved on the warped transition spectrum. Physical \(\zeta\) is not derived. See [docs/current-result.md](docs/current-result.md).
+The unweighted display \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) is the same equation after a symmetric link convention; the two normalizations cannot silently share a numerical \(B\). \(\Omega\) is not selected. Dilation alone does not derive \(\zeta=\Omega^2\). The mode-resolved tail is not solved on the warped transition spectrum. Physical \(\zeta\) is not derived. See [docs/current-result.md](docs/current-result.md).
 
 ## What is imported
 
@@ -93,17 +94,18 @@ Derived here, always conditional on the stated premises:
 - the two-sheet representation of a noninjective areal-radius black-universe chart;
 - the transition-fixed Gauss–Bonnet coupling \(\alpha_{\mathrm{GB}}/L_\star^2=1015/144\) and the on-room vacuum-form component \(108/1015\);
 - the scalar recursive outside kernel \(\Gamma=K-b^2/\Gamma\);
-- the exponential heat profile from composition of resolution steps;
+- the exponential heat profile from composition of resolution steps, as a heat-kernel diagnostic rather than a complete anomaly;
 - the local identity that one off-diagonal \(\Phi\) is mass gap, Schur self-energy, and relative-metric link;
 - child-side orientation of the source sign, later corrected by the exact child asymptotic;
-- a global horizon-penetrating spectral foliation and a derived throat Neumann-jump operator;
-- the unitary dilation that makes \(\mathcal{T}_\Theta\) executable, with \(\zeta=\Omega^2\).
+- a global horizon-penetrating spectral foliation; throat maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), and \(\Phi_{\mathrm{throat}}=R(E)\) remain unevaluated declarations;
+- the unitary dilation that makes \(\mathcal{T}_\Theta\) executable; \(\zeta=\Omega^2\) is not derived by that dilation alone;
+- the unit-consistent additive-gap argument \(q_j=\lambda_j/\zeta+\mu^2\) and a sign theorem for that finite, fixed-geometry family.
 
 Numerical diagnostics that **must not** be read as a final \(\zeta\) or a particle-to-cosmology number are listed in [docs/current-result.md](docs/current-result.md).
 
 ## What the anomaly invalidated
 
-Compensating the pure cutoff anomaly of the invariant partition function **invalidated the determinant-only inheritance-scale roots**. After that compensation, the joined-minus-disconnected child-link derivative stays negative on the scanned domain \(3\pi/2<\zeta\le 200\). Those earlier numbers remain useful diagnostics. They are not stationary points of the one equation.
+Compensating the pure cutoff anomaly of the invariant partition function **invalidated the determinant-only inheritance-scale roots**. Those historical numbers also used the inconsistent mass conversion \((\lambda_j+\mu^2)/\zeta\). The declared additive-gap operator requires \(q_j=\lambda_j/\zeta+\mu^2\). After that unit correction, the same inherited cutoff subtraction has a strictly negative derivative for every \(\zeta>3\pi/2\) in the finite, fixed-geometry family. Those earlier numbers remain useful diagnostics. They are not stationary points of the one equation. Raw finite-determinant invariance does not set the regulated relative Hessian to zero.
 
 Related routes already rejected on their own JSON nonclaims, and not repaired by retuning \(\Phi\) or adding a second geometric weight:
 
@@ -138,6 +140,7 @@ flowchart TB
     Z1["Direct one-scale gap 1006/1015"]
     HT["Heat-only angular zeta"]
     DT["Determinant-only zeta after anomaly compensation"]
+    UC["Unit-corrected finite-family determinant"]
     EG["Diagonal critical EGB interface"]
     SW["Constant two-wall shadow dominance"]
   end
@@ -154,15 +157,18 @@ flowchart TB
   ID --> DL
   TS --> invalidated
   DL --> TL
-  DT --> TL
+  DT --> UC
+  UC --> TL
   TL --> OZ
 ```
 
 ## Reproduce the public result
 
 The complete current dependency closure is small enough to recompute on a
-laptop. The reference run regenerated all 58 artifacts byte-for-byte in about
-four minutes:
+laptop. The v0.1.0 historical 58-record chain remains byte-for-byte. A 59th
+follow-up, the unit-closure check, is reproduced by comparing every exact and
+numeric field. The reference historical run regenerated those 58 artifacts
+byte-for-byte in about four minutes:
 
 ```bash
 python3 -m pip install -e ".[paper]"
@@ -183,8 +189,9 @@ rewrites the tracked result files. See
 | [AGENTS.md](AGENTS.md) | Short working orientation for the one-equation thesis |
 | [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md) | Imported results and the one open joint claim |
 | [docs/current-result.md](docs/current-result.md) | Present compact checkpoint and nonclaims |
+| [docs/nsc-closure-verification-2026-09-07.md](docs/nsc-closure-verification-2026-09-07.md) | Unit-closure follow-up and remaining equations |
 | [docs/reproducing.md](docs/reproducing.md) | How to inspect and regenerate compact results |
-| [results/README.md](results/README.md) | Category map for the 58-artifact chain |
+| [results/README.md](results/README.md) | Category map for the 58-record chain plus the 59th follow-up |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Claim discipline and contribution rules |
 | [paper/nested-space-cosmology.md](paper/nested-space-cosmology.md) | Technical paper source |
 | [paper/nested-space-cosmology.pdf](paper/nested-space-cosmology.pdf) | Reproducibly generated working preprint |
