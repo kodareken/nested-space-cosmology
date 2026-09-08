@@ -102,7 +102,7 @@ The exponential profile is not an extra coefficient. **Repository derivation.** 
 
 **Postulate.** Observers inside one room experience constants because their clocks, rulers, matter, and signals are solutions of the same local stationary state.
 
-**Repository derivation.** The constant dictionary names Hessian and spectral outputs of one stationary \(S_{\mathrm{one}}\): characteristic-cone speed, metric stiffness as \(G^{-1}\), localized-sector masses, representation/topological spin and charge, vacuum-plus-boundary energy as \(\Lambda_n\), Planck length as a derived resolution scale, and absolute zero as the lower spectral bound. The parent/child unit map \(\Gamma_e\) is derived from already-defined scale inheritance; it is not a post-hoc fit.
+**Repository derivation.** The constant dictionary names Hessian and spectral outputs of one stationary \(S_{\mathrm{one}}\): characteristic-cone speed, metric stiffness as \(G^{-1}\), localized-sector masses, representation/topological spin and charge, vacuum-plus-boundary energy as \(\Lambda_n\), the proposed Planck-scale relation, and a historical name for absolute zero. The latter is not a temperature derivation: a signed one-particle Dirac spectrum has no physical thermal lower bound, and a many-body thermal state is required. A cutoff is not automatically a shortest measurable distance. The parent/child unit map \(\Gamma_e\) is derived from already-defined scale inheritance; it is not a post-hoc fit.
 
 **Open prediction.** Solving \(\Theta=\mathcal{C}[\Theta]\) for shared electron, proton, and neutron stationary sectors, then holding out mass ratios, would be a result. The compact record states that those sectors are not solved and that numerical values of nature’s constants are not predicted.
 
@@ -256,7 +256,7 @@ The compact record states that the recursive tail is **not** known to restore a 
 
 ## 11. Current frontier
 
-**The current frontier is the unsolved energy-resolved recursive child tail.**
+**The current frontier is the full spinor boundary interaction and covariant state/stress closure.**
 
 **Repository derivation.** Norm preservation and first-order Dirac scaling fix a minimal parent/child dilation
 
@@ -292,14 +292,24 @@ The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) is reco
 1. finite stationary electron, proton, and neutron charge sectors;
 2. quantum amplitudes and detector couplings of those same configurations;
 3. nuclear masses and reaction \(Q\)-values without inserted nucleon masses;
-4. the nuclear-fitted self-gravitating branch;
+4. a self-gravitating branch from the same derived nuclear coefficients;
 5. a stable trapped-to-defocusing-to-expanding transition;
 6. a non-tunable dimensionless prediction identifying our cosmology with the child side of that transition.
 
-No individual item is project novelty. The invariant closure is. Until that joint solution exists, Nested-Space Cosmology remains a constructive working hypothesis: one equation, many imported launch surfaces, a sequence of honest derivations and invalidated truncations, and an unsolved recursive child tail.
+The invariant closure is the candidate joint contribution to establish and compare with prior work. The existing identities and experiments connect parts of that construction; the complete physical solution remains the research target.
 
 ## Computed finite boundary response — local September 8 revision
 
 The [first-order radial boundary calculation](docs/nsc-boundary-response.md) now evaluates oriented parent/child Weyl maps with sparse LU and independent ODE integration. The parent is rho>0 and its throat normal is negative; the child is rho<0 and its normal is positive. Their jump is E(m_child-m_parent). These finite spatial maps supersede the earlier unevaluated declarations only in their stated domain; full Lorentzian horizon maps and the physical matching field remain open.
 
 The [threshold example](docs/nsc-threshold-response.md) independently gives a zero-energy DtN jump tending to 3/2 in inverse throat-length units while the radial bulk spectrum is gapless. Boundary stiffness is therefore not automatically a particle mass. The compact-mode warp factor is a projection with measured mixing, not an invariant-subspace theorem. Full covariant stationarity, physical metric health, nonlinear collapse and observational predictions remain unfulfilled.
+
+## Current six-target and physical-closure checkpoint
+
+**Repository derivation.** The v0.2.0 collection has 77 records: 58 frozen historical records and 19 scoped follow-ups. The [current-result page](docs/current-result.md) connects the six targets to evaluated boundary maps, smooth geometry, causal Dirac dynamics, vacuum-stress differences, energy/work accounting, and the invariant chiral-sector benchmark.
+
+**Open prediction.** The actual throat's full spinor coupling and physical sector, absolute renormalized stress, common-action backreaction, particle identities, nuclear interactions, measurement model and cosmological response remain to be derived. Static vacuum current vanishes; a prescribed changing geometry supplies work and creates Dirac pairs. That supplied work is not yet a self-sourced cosmic injection rate.
+
+**Imported result.** The historical 3.34 solar-mass Einstein–BPS value is a published branch endpoint using nuclear-calibrated parameters, copied by the old runner. It is neither an independently calculated NSC mass limit nor a universal collapse threshold.
+
+**Open prediction.** The observed Hubble and lensing results in [observational targets](docs/nsc-observational-targets.md) are development comparisons. Neither they nor the present operator identities demonstrate an NSC solution to a cosmological tension.

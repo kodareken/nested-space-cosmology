@@ -24,6 +24,20 @@ BUILD_MANIFEST = REPOSITORY / "paper" / "build-manifest.json"
 BUILD_DIRECTORY = REPOSITORY / "paper" / ".build"
 
 
+def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
+    """Authenticate the renderer and every dataset used by a manuscript figure."""
+    paths = ["scripts/build_paper.py"]
+    text = source.read_text(encoding="utf-8")
+    for marker, path in (
+        ("geometric-gap", "results/nsc-3-geometric-chain.json"),
+        ("vacuum-work", "results/nsc-6-vacuum-work.json"),
+    ):
+        if f"<!-- nsc-figure:{marker} -->" in text:
+            paths.append(path)
+    return [{"path": path, "sha256": hashlib.sha256((REPOSITORY/path).read_bytes()).hexdigest()}
+            for path in sorted(paths)]
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=SOURCE)
@@ -330,6 +344,12 @@ def build_pdf(
     token_pattern = re.compile(r"@@RH_TOKEN_(\d+)@@")
 
     greek = {
+        "Pi": "Π",
+        "Psi": "Ψ",
+        "psi": "ψ",
+        "xi": "ξ",
+        "nu": "ν",
+        "chi": "χ",
         "alpha": "α",
         "beta": "β",
         "gamma": "γ",
@@ -369,6 +389,11 @@ def build_pdf(
         value = value.replace(r"\in", "∈").replace(r"\times", "×")
         value = value.replace(r"\ell", "ℓ").replace(r"\odot", "⊙")
         value = value.replace(r"\ddots", "⋱").replace(r"\cdots", "⋯")
+        value = value.replace(r"\otimes", "⊗").replace(r"\cdot", "·")
+        value = value.replace(r"\partial", "∂").replace(r"\infty", "∞")
+        value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±")
+        value = value.replace(r"\Box", "□")
+        value = value.replace(r"\bar\psi", "ψ̄")
         value = value.replace(r"\sqrt", "√")
         value = re.sub(
             r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
@@ -646,6 +671,49 @@ def build_pdf(
         )
         return KeepTogether([Spacer(1, 4), rendered, caption, Spacer(1, 6)])
 
+    def vacuum_work_figure() -> object:
+        from matplotlib.backends.backend_agg import FigureCanvasAgg
+        from matplotlib.figure import Figure
+
+        record = json.loads((REPOSITORY / "results/nsc-6-vacuum-work.json").read_text())
+        figure = Figure(figsize=(6.4, 2.8), dpi=220)
+        FigureCanvasAgg(figure)
+        left, right = figure.subplots(1, 2)
+        grids = record["spatial_refinement"]
+        left.plot([r["points"] for r in grids],
+                  [r["full_angular_through_kappa8_energy_coefficient"] for r in grids],
+                  "o-", color="#2357A6", linewidth=1.2)
+        left.set_xlabel("axial grid points")
+        left.set_ylabel("energy / pulse amplitude squared")
+        left.set_title("Angular sum through kappa = 8")
+        left.grid(True, alpha=.25)
+        rows = [r for r in record["finite_real_time_controls"] if r["epsilon"] > 0]
+        x = [r["epsilon"]**2 for r in rows]
+        right.plot(x, [r["external_work"] for r in rows], "o", color="#2357A6", label="supplied work")
+        right.plot(x, [r["excitation_energy"] for r in rows], "+", color="#0A1730", label="excitation energy")
+        coefficient = grids[0]["response"]["energy_coefficient"]
+        right.plot([0, max(x)], [0, coefficient*max(x)], "--", color="#64C9E8", label="leading spectrum")
+        right.set_xlabel("pulse amplitude squared")
+        right.set_ylabel("energy in throat units")
+        right.set_title("One channel; 32 axial points")
+        right.ticklabel_format(axis="both", style="sci", scilimits=(0, 0))
+        right.grid(True, alpha=.25)
+        right.legend(frameon=False, fontsize=6.5)
+        figure.tight_layout(pad=.6)
+        buffer = BytesIO()
+        figure.savefig(buffer, format="png", dpi=220)
+        buffer.seek(0)
+        rendered = Image(buffer)
+        rendered._nsc_buffer = buffer
+        rendered.drawWidth = body_width
+        rendered.drawHeight = body_width*2.8/6.4
+        caption = Paragraph(inline_markup(
+            "**Figure.** Response to a prescribed geometry pulse. Left: spatial refinement of the angular sum. "
+            "Right: independent finite evolution accounts for supplied work in one channel. "
+            "The pulse is an input; this is not a self-sourced cosmology. "
+            "[Vacuum-work evidence](../results/nsc-6-vacuum-work.json)."), styles["Body"])
+        return KeepTogether([Spacer(1,4),rendered,caption,Spacer(1,6)])
+
     def parse_markdown(markdown: str) -> list[object]:
         lines = markdown.splitlines()
         # Cover content is built separately. Begin at the technical abstract.
@@ -679,6 +747,17 @@ def build_pdf(
                 index += 1
                 continue
 
+            if stripped == "<!-- nsc-figure:vacuum-work -->":
+                flush_paragraph()
+                story.append(vacuum_work_figure())
+                index += 1
+                continue
+
+            if stripped.startswith("<!--") and stripped.endswith("-->"):
+                flush_paragraph()
+                index += 1
+                continue
+
             if stripped.startswith("```"):
                 flush_paragraph()
                 index += 1
@@ -709,7 +788,11 @@ def build_pdf(
                 while index < len(lines) and lines[index].strip().startswith("|"):
                     table_lines.append(lines[index])
                     index += 1
-                story.append(KeepTogether([table_flowable(table_lines), Spacer(1, 8)]))
+                table = table_flowable(table_lines)
+                if len(table_lines) <= 6:
+                    story.append(KeepTogether([table, Spacer(1, 8)]))
+                else:
+                    story.extend([table, Spacer(1, 8)])
                 continue
 
             if stripped.startswith(">"):
@@ -952,6 +1035,7 @@ def write_build_manifest(
         "pages": pages,
         "bytes": size,
         "version": metadata["version"],
+        "scientific_build_inputs": scientific_build_inputs(source),
     }
     BUILD_MANIFEST.write_text(
         json.dumps(record, indent=2, sort_keys=True) + "\n", encoding="utf-8"
@@ -975,6 +1059,7 @@ def check_build(source: Path, output: Path, metadata: dict[str, object]) -> int:
             return 1
         manifest = json.loads(BUILD_MANIFEST.read_text(encoding="utf-8"))
         expected = {
+            "scientific_build_inputs": scientific_build_inputs(source),
             "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
             "metadata_sha256": hashlib.sha256(METADATA.read_bytes()).hexdigest(),
             "pdf_sha256": first_result[2],

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nested-space-cosmology"
-version = "0.1.0"
+version = "0.2.0"
 description = "A reproducible recursive spectral gradient-boundary framework"
 readme = "README.md"
 requires-python = ">=3.12"

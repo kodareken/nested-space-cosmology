@@ -52,15 +52,15 @@ Use the labels defined in [THEORY.md](THEORY.md): Postulate, Imported result, Re
 
 ## Current frontier
 
-**The current frontier is the unsolved energy-resolved recursive child tail.**
+The physical frontier is the full spinor boundary interaction, covariant quantum functional, admissible state and absolute stress/backreaction. Finite boundary maps, spatial recursion, a prescribed geometry-pulse vacuum response and an invariant chiral-sector benchmark are computed. They do not select the physical coupling, sector or inheritance scale.
 
-Anomaly compensation invalidated the determinant-only \(\zeta\) roots. An independently weighted geometric action is forbidden double-counting. The derived unsolved equation is
+At common dimensional energy, parent normalization gives
 
 $$
-\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B.
+\Gamma_p(x)=K_p(x)-\Omega^{-1}b\,\Gamma_c(x/\Omega)^{-1}b^\dagger.
 $$
 
-\(\Omega\) is not selected. Physical \(\zeta\), a particle spectrum, a dark-sector fit, and identification of our universe with a black-hole interior remain open. Details: [docs/current-result.md](docs/current-result.md). Imported sources and the joint claim: [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md). Reproduction: [docs/reproducing.md](docs/reproducing.md).
+The retarded map must be accompanied by quantum-state data. Induced geometric terms must be counted once. The present compact evidence is indexed by the release manifest; the physical requirements and six targets are in [docs/current-result.md](docs/current-result.md).
 
 ## What not to claim
 

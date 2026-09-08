@@ -7,7 +7,7 @@
     "private plans, host paths, refs, reflogs, and development history",
     "NSC experiments outside the current frontier dependency closure"
   ],
-  "export_timestamp_utc": "2026-09-07T00:00:00Z",
+  "export_timestamp_utc": "2026-09-08T00:00:00Z",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
   "follow_up_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
   "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 4539,
+      "bytes": 4594,
       "path": "AGENTS.md",
-      "sha256": "38c7b5eb3f5c6cb856bc78dd4e3d2c19bf1126e550b6a56abafed8c9478f0b8f"
+      "sha256": "7cebb650a4c59dcbd7a8a1763f4c769d286b4b6745b6818aac3953d73c43e730"
     },
     {
       "bytes": 964,
       "path": "CITATION.cff",
-      "sha256": "8bf4090c097c1a8b6f4e526d40f7fc970a1c35e11cf66a53ec253921d041ded2"
+      "sha256": "4e6bb5d94f51180678f2e4e45e1cb0af2048e19bbc8af6a76ae1e835fa7a6fe6"
     },
     {
       "bytes": 606,
@@ -61,14 +61,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 1226,
+      "bytes": 1297,
       "path": "Makefile",
-      "sha256": "054571fe89a9762f15c7796a296f3cef9ce75fb9934f0676a5819120254c092e"
+      "sha256": "06c51dbbeb8f4c386c192616e8c066d76366a8f802743a968b52586d5bfa76dc"
     },
     {
-      "bytes": 13754,
+      "bytes": 6084,
       "path": "README.md",
-      "sha256": "6bacc311a69cb5a624043f89c4a0210f3fb6b8cb886679bd6e4ea19c564db555"
+      "sha256": "004079cf1cc83c7c83ad5c05232fa769a0f58cf64ad8a7938200cbfe32297433"
     },
     {
       "bytes": 629,
@@ -76,14 +76,14 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 26187,
+      "bytes": 27721,
       "path": "THEORY.md",
-      "sha256": "875e3b484ca0bfed26a2c59f3ab7109fef87dad270cecb70a78a01a133850d23"
+      "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 13820,
+      "bytes": 6383,
       "path": "docs/current-result.md",
-      "sha256": "9b9ddac44d185c16444ebb1d15598a4ff0936559f1aa8c8373c7c7601fad2068"
+      "sha256": "2d510a531d7c6b7998e42e9ae5907e6d7f4ae8cbaafc49ce55dd6117a23ce7a6"
     },
     {
       "bytes": 10991,
@@ -91,14 +91,64 @@
       "sha256": "2ee875c13c88f79d61a3fdc5842d17905bd002c95aa3a0856c4deda26d5f4006"
     },
     {
+      "bytes": 13885,
+      "path": "docs/nsc-chiral-boundary.md",
+      "sha256": "fb6dc600ea65dc02ef4f4282dc4b930bead1010b57551e98c6346b4b118d2d2a"
+    },
+    {
+      "bytes": 8657,
+      "path": "docs/nsc-clock-horizon.md",
+      "sha256": "8ef7849ced4b5fad6b00456c11dd6e2fa4248b6acd6c0caad7afc17d1c014aac"
+    },
+    {
       "bytes": 13455,
       "path": "docs/nsc-closure-verification-2026-09-07.md",
       "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
     },
     {
+      "bytes": 16550,
+      "path": "docs/nsc-covariant-measure.md",
+      "sha256": "9848ab71783af5dce121e06a1718de5b5877f288daa15c45603e49d2a26c309e"
+    },
+    {
+      "bytes": 8854,
+      "path": "docs/nsc-dirac-tetrad.md",
+      "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
+    },
+    {
+      "bytes": 10560,
+      "path": "docs/nsc-energy-transfer.md",
+      "sha256": "0c962da1e1c1c9b0f0c18807dfc6549526e914ae61c40d1131a57d74f0d66e28"
+    },
+    {
+      "bytes": 11936,
+      "path": "docs/nsc-finite-terms.md",
+      "sha256": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135"
+    },
+    {
       "bytes": 3821,
       "path": "docs/nsc-geometric-chain.md",
       "sha256": "288be5e077d41dbd7481729b57aad064181cecfb83eba80eb44328fd7e0d7ea1"
+    },
+    {
+      "bytes": 4039,
+      "path": "docs/nsc-lorentzian-transport.md",
+      "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
+    },
+    {
+      "bytes": 11598,
+      "path": "docs/nsc-observable-bridge.md",
+      "sha256": "a812fae995ff009edbeb325f10dfa275253cb2ca0fe4bd6f241bc59a7b3a289b"
+    },
+    {
+      "bytes": 8694,
+      "path": "docs/nsc-observational-targets.md",
+      "sha256": "1f71ff4360d034abde3534682f28d7a334c68cf9a5af73da707e3660b9148d3c"
+    },
+    {
+      "bytes": 7962,
+      "path": "docs/nsc-plateau-conditions.md",
+      "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
     },
     {
       "bytes": 2394,
@@ -111,9 +161,34 @@
       "sha256": "9eceb09e6c125073650afb1f4481122dc6044e92222d969b14608056adc96b93"
     },
     {
+      "bytes": 5911,
+      "path": "docs/nsc-self-sourcing-progress.md",
+      "sha256": "4417917a63ad6b33310c69205fdf6f3cdc326275ea0bf6d96312312e36c64800"
+    },
+    {
+      "bytes": 8166,
+      "path": "docs/nsc-shape-response.md",
+      "sha256": "5eae1d3cc04ee2567f817466eed6f1ff484937f05ca9b5b4648e38a172f63a33"
+    },
+    {
+      "bytes": 5325,
+      "path": "docs/nsc-smooth-geometry.md",
+      "sha256": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383"
+    },
+    {
+      "bytes": 5472,
+      "path": "docs/nsc-tail-limit.md",
+      "sha256": "d54c4ced5c3e52e8d4f47654621a47b2b64ffe6d5a3ae4808afea950cfcf1e9b"
+    },
+    {
       "bytes": 2016,
       "path": "docs/nsc-threshold-response.md",
       "sha256": "6e24744f080d3063600ed913b87372393890598bf9693a6fd96d0b322fe60a2d"
+    },
+    {
+      "bytes": 8554,
+      "path": "docs/nsc-vacuum-work.md",
+      "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
     },
     {
       "bytes": 10212,
@@ -121,34 +196,34 @@
       "sha256": "7d6f37fa397fad4dc9f85d7698abfba77de4e5a6aa2baf7257b120337a75bdad"
     },
     {
-      "bytes": 4847,
+      "bytes": 5152,
       "path": "docs/reproducing.md",
-      "sha256": "379746f650e805ac46584f1d8e7ee7ea97d9409635fe9706d83c6bb9eacb4db4"
+      "sha256": "a63fba2aaee141fdfd7bcef8ef96c4df1c23b11f2cf5be63c4f5627cfd45cb23"
     },
     {
-      "bytes": 485,
+      "bytes": 948,
       "path": "paper/build-manifest.json",
-      "sha256": "0c01ce3d66c56bc9063311aeb2c1194d31181e55a991de48c459bbdb472acb5f"
+      "sha256": "7ae304e71e3fdd62e0e3b4f13e15792b71f1a2c07d24f8289537589c4cefbf19"
     },
     {
-      "bytes": 356,
+      "bytes": 363,
       "path": "paper/metadata.json",
-      "sha256": "21fb28a5ddfd86723f87816d7486a04020a4524ae9252d30fa4b5a2379b3ec32"
+      "sha256": "676d4afacae4a6c173e8f8ffd10a295d6cb56d44eaeccfaa227ae5b98da23f4e"
     },
     {
-      "bytes": 61249,
+      "bytes": 47881,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "94bb75da85ccdb7bcc2581c85c8d4e73d9a5c90cd0802cac2a6daf753fcf2470"
+      "sha256": "96d15a26bd1929208fe653b8c8a6fc368b6e2665474c46c842f83f7472ae5860"
     },
     {
-      "bytes": 467853,
+      "bytes": 615934,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "809fe3358f3ea4e6e2a025e2685b0a5a5bb8c3bebc5363291f5ffb15d1f0261a"
+      "sha256": "384d74a537edeb67c59ab68a802c002c93dfc78e9e88df6775396ceb307532b4"
     },
     {
       "bytes": 1064,
       "path": "pyproject.toml",
-      "sha256": "6d5e909ec1b8b663cc312d4b3052e77eff95c797ed7ada65bf1012f68adc3569"
+      "sha256": "69c1c7fd4a389c27790492089600671379d45a67116a25541188ed6caa370938"
     },
     {
       "bytes": 36,
@@ -166,9 +241,9 @@
       "sha256": "149adfbbda066f5de76b5eb835ae50cb1c9588116ade5e0e3eac7ba94a8aed50"
     },
     {
-      "bytes": 63704,
+      "bytes": 91378,
       "path": "results/manifest.json",
-      "sha256": "1ddfa6a7eb5cda02b57d822d8921d77a71ba4255fb2f409355d2fc7050125388"
+      "sha256": "2359a617d8d29b44dd1e229714ff38f1f059256325830c0a0a14147f08bce6eb"
     },
     {
       "bytes": 7369,
@@ -491,19 +566,89 @@
       "sha256": "23940638d19b073ab9ca2386dbbb60d1326ab71839a338b149a9b35cd58d2ca9"
     },
     {
-      "bytes": 37269,
+      "bytes": 69127,
+      "path": "results/nsc-4-covariant-measure.json",
+      "sha256": "e1cd39c855e0c723b04718ec35c8404f64fdba89fc497db8cf1e01d1615250ca"
+    },
+    {
+      "bytes": 9252,
+      "path": "results/nsc-4-dirac-tetrad.json",
+      "sha256": "acaa1ec0bb521e746f9786f7b0a42fd474699476ba9b91bf5f0c50b2a70fe068"
+    },
+    {
+      "bytes": 48237,
+      "path": "results/nsc-4-lorentzian-transport.json",
+      "sha256": "93b1144975de0d146ae42ab35cf6b3dae43f7ea7b8cc2d4130cc5aeada6e98fe"
+    },
+    {
+      "bytes": 590479,
+      "path": "results/nsc-4-shape-response.json",
+      "sha256": "2ad75d62c9682355f827f5b51b6b7242ec504ee7424fd674914cc7f9771ad9f7"
+    },
+    {
+      "bytes": 19998,
+      "path": "results/nsc-4-smooth-geometry.json",
+      "sha256": "028046731ca6a5e3ee3230db87cd623081083a05877da50e029330a127f11673"
+    },
+    {
+      "bytes": 11822,
+      "path": "results/nsc-5-clock-horizon.json",
+      "sha256": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f"
+    },
+    {
+      "bytes": 25877,
+      "path": "results/nsc-5-plateau-conditions.json",
+      "sha256": "d0f6b02e3c8bd9c6174b95ac1ff5fd46e4587bd9277c6c7fdd136a295f049f61"
+    },
+    {
+      "bytes": 20432,
+      "path": "results/nsc-5-tail-limit.json",
+      "sha256": "499658c02d7662b2ef3b3f80a4578ae9b952b09a47c31c75a599c09087b7372a"
+    },
+    {
+      "bytes": 77629,
+      "path": "results/nsc-6-energy-transfer.json",
+      "sha256": "911fefa75e6ffa5f61224f4354c63351cb366728efa73ecf6784371ff3669be1"
+    },
+    {
+      "bytes": 18247,
+      "path": "results/nsc-6-vacuum-work.json",
+      "sha256": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605"
+    },
+    {
+      "bytes": 14798,
+      "path": "results/nsc-7-observable-bridge.json",
+      "sha256": "69495eda9f1815436223a8e472d923aa5ba9db913b03696bdf0e8388b2f1b024"
+    },
+    {
+      "bytes": 74723,
+      "path": "results/nsc-8-chiral-boundary.json",
+      "sha256": "9bbf676447b9a6fb68966dfeab1ea798834e478e23501e9757fc8e79027c0f07"
+    },
+    {
+      "bytes": 526968,
+      "path": "results/nsc-8-finite-terms.json",
+      "sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c"
+    },
+    {
+      "bytes": 74950,
+      "path": "results/release-spec.json",
+      "sha256": "9629f86854a31a6968143873bcd09d337defcd1c4c257ab1e0073878c19211ff"
+    },
+    {
+      "bytes": 41402,
       "path": "scripts/build_paper.py",
-      "sha256": "e01aa8ba9bc47b5652046095ddccfa5ea76c6014f7655a7d623b63b3f2c31169"
+      "sha256": "a7c5db08c8e06cdf497f34cf7e7e77584a42a45d1e6673df4bf4828d05675feb"
     },
     {
-      "bytes": 3036,
+      "bytes": 3352,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "94ce3105fb2b99da11ee0e92ec0a18a5c63c54a84696d35c784ea4cbbbc5fc06"
+      "sha256": "e72ef257cf1aceba430dfa2302443049ca5b8ef459617e514647c1f0e4c49ef9"
     },
     {
-      "bytes": 16180,
+      "bytes": 15704,
       "path": "scripts/build_result_manifest.py",
-      "sha256": "f51da0f9f60a6976c37bcb058f6df3f52c9995eb2da48b61994072558bab14b4"
+      "sha256": "4117a5edd0a6189328b048c010746f845bdf1e22574cc3a9ebbedd680d92aef6"
     },
     {
       "bytes": 2304,
@@ -511,9 +656,54 @@
       "sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e"
     },
     {
+      "bytes": 1474,
+      "path": "scripts/check_nsc_chiral_boundary.py",
+      "sha256": "ce5c7e04ec35e4e9ab30ceb39b7099e350a71f874b70348f343b06395fcc7300"
+    },
+    {
+      "bytes": 14508,
+      "path": "scripts/check_nsc_clock_horizon.py",
+      "sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1"
+    },
+    {
+      "bytes": 23460,
+      "path": "scripts/check_nsc_covariant_measure.py",
+      "sha256": "6c0f49d5ae39313f82c6298b7526e8fa1f7c56cb1ab94ed354e0ec5de6a64e01"
+    },
+    {
+      "bytes": 15148,
+      "path": "scripts/check_nsc_dirac_tetrad.py",
+      "sha256": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae"
+    },
+    {
+      "bytes": 9503,
+      "path": "scripts/check_nsc_energy_transfer.py",
+      "sha256": "7cfd780e76c89f123decf11f09a97390525194f4c4ee326ff30bc9e4a504d713"
+    },
+    {
+      "bytes": 19597,
+      "path": "scripts/check_nsc_finite_terms.py",
+      "sha256": "551251aaa40537825a0c23e9d81a9b1d81b36d106a0936e194af2611d1c771b0"
+    },
+    {
       "bytes": 5272,
       "path": "scripts/check_nsc_geometric_chain.py",
       "sha256": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b"
+    },
+    {
+      "bytes": 7014,
+      "path": "scripts/check_nsc_lorentzian.py",
+      "sha256": "ed0edaa53326e6f312bbb21d1e6ec01ddf501190d6b2f6e0a1baef8044480bce"
+    },
+    {
+      "bytes": 7357,
+      "path": "scripts/check_nsc_observable_bridge.py",
+      "sha256": "ca10587a97c97a382c9b59621f2c7ce14738d3e383c57d51c6c1af5ed7b0e80c"
+    },
+    {
+      "bytes": 19929,
+      "path": "scripts/check_nsc_plateau_conditions.py",
+      "sha256": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6"
     },
     {
       "bytes": 4370,
@@ -531,19 +721,44 @@
       "sha256": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7"
     },
     {
+      "bytes": 16044,
+      "path": "scripts/check_nsc_shape_response.py",
+      "sha256": "5a5064e842a4a1526fb43137f0696ec2297b2bb26588cfcb0e58c2b85c0b4208"
+    },
+    {
+      "bytes": 1491,
+      "path": "scripts/check_nsc_smooth_geometry.py",
+      "sha256": "f13d1d9b475e270d954b5063335022663f6f10d06718bcac2220b66209fbc900"
+    },
+    {
+      "bytes": 8036,
+      "path": "scripts/check_nsc_tail_limit.py",
+      "sha256": "6c3a37f032323c15e5e85ea42990b316f12e083715d6c57da57defcccb8d8b4f"
+    },
+    {
       "bytes": 4015,
       "path": "scripts/check_nsc_threshold_response.py",
       "sha256": "f2066aacd9a0893fd255ce1d9fd822b14ebd785aa7a836b215db29edd86e9834"
     },
     {
-      "bytes": 10948,
-      "path": "scripts/check_publication.py",
-      "sha256": "93673e85e164ecb6fe9a4b83c227345111050afda473cf6b1eb181edc271ccc2"
+      "bytes": 8911,
+      "path": "scripts/check_nsc_vacuum_work.py",
+      "sha256": "f75ea645710751521bcd22c880a59d570664f47439d334d5e51595edbb3b0db9"
     },
     {
-      "bytes": 17741,
+      "bytes": 12206,
+      "path": "scripts/check_publication.py",
+      "sha256": "5d72fd1644248ac275f3ec22d79cd6367f89f26871b1ed6b6fe2cfaa3ffe8a5d"
+    },
+    {
+      "bytes": 1524,
+      "path": "scripts/demonstrate.py",
+      "sha256": "8ac8a2893a2297e16e2de7574d8983fbc449c74f3c9f32e9d229ef9b0fb4ff24"
+    },
+    {
+      "bytes": 26272,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "c028ed70358f40f3e6b1322b10640912efbac220e48b63d32a034ce0920498f1"
+      "sha256": "4bae560a64fa32308090259b9e5011548f64c933987aab8eb7644e33a61de2cd"
     },
     {
       "bytes": 7793,
@@ -836,6 +1051,11 @@
       "sha256": "e95ddc0eb9a4771c420bf79700c9c624dc0d23614a6ef313ab3608bab13acad7"
     },
     {
+      "bytes": 4432,
+      "path": "scripts/stage_release_import.py",
+      "sha256": "a259c6af8c103a30d23831906f854ab9ce08bbe758dcce20931e02ed21e0a072"
+    },
+    {
       "bytes": 281,
       "path": "src/recursive_horizons/__init__.py",
       "sha256": "8ac35a8822ae3d761e9e14a768bfcfdbc32686eed23c097f5c43a8c60df6bcea"
@@ -851,14 +1071,69 @@
       "sha256": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e"
     },
     {
+      "bytes": 22423,
+      "path": "src/recursive_horizons/nsc_chiral_boundary.py",
+      "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
+    },
+    {
+      "bytes": 16422,
+      "path": "src/recursive_horizons/nsc_covariant_measure.py",
+      "sha256": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5"
+    },
+    {
+      "bytes": 5654,
+      "path": "src/recursive_horizons/nsc_energy_transfer.py",
+      "sha256": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d"
+    },
+    {
+      "bytes": 15339,
+      "path": "src/recursive_horizons/nsc_finite_terms.py",
+      "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
+    },
+    {
       "bytes": 3305,
       "path": "src/recursive_horizons/nsc_geometric_chain.py",
       "sha256": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d"
     },
     {
+      "bytes": 7554,
+      "path": "src/recursive_horizons/nsc_lorentzian.py",
+      "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+    },
+    {
       "bytes": 9463,
       "path": "src/recursive_horizons/nsc_regulated.py",
       "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+    },
+    {
+      "bytes": 11005,
+      "path": "src/recursive_horizons/nsc_shape_response.py",
+      "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5"
+    },
+    {
+      "bytes": 32757,
+      "path": "src/recursive_horizons/nsc_smooth_geometry.py",
+      "sha256": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0"
+    },
+    {
+      "bytes": 7793,
+      "path": "src/recursive_horizons/nsc_spinor_bridge.py",
+      "sha256": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+    },
+    {
+      "bytes": 4481,
+      "path": "src/recursive_horizons/nsc_tail_limit.py",
+      "sha256": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded"
+    },
+    {
+      "bytes": 6533,
+      "path": "src/recursive_horizons/nsc_vacuum_work.py",
+      "sha256": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c"
+    },
+    {
+      "bytes": 1515,
+      "path": "src/recursive_horizons/provenance.py",
+      "sha256": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
     },
     {
       "bytes": 20039,
@@ -871,16 +1146,68 @@
       "sha256": "127fe20da377d4c115131381f71df479e7ea46229c0cee93103edfd0dd9d6d67"
     },
     {
-      "bytes": 21416,
+      "bytes": 7782,
+      "path": "tests/test_nsc_chiral_boundary.py",
+      "sha256": "83f4c011d441d37012ef3aa02e0c8b00a44d9e9906021704efcd68e092cd0cda"
+    },
+    {
+      "bytes": 11063,
+      "path": "tests/test_nsc_covariant_measure.py",
+      "sha256": "fd6c12910efd8b28a8dfc129eed19e8660d45f02bf3bdd662a697b4930cbf95d"
+    },
+    {
+      "bytes": 6263,
+      "path": "tests/test_nsc_energy_transfer.py",
+      "sha256": "9c85aeaf8874db3223fa18b5031ac4a8e95609a769ba9b83e573041271792860"
+    },
+    {
+      "bytes": 8798,
+      "path": "tests/test_nsc_finite_terms.py",
+      "sha256": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
+    },
+    {
+      "bytes": 1052,
+      "path": "tests/test_nsc_lorentzian.py",
+      "sha256": "d2cd33889552058171a5d4a0c9168496779ea55c51c7aa8e6bf96649ba5153f8"
+    },
+    {
+      "bytes": 6641,
+      "path": "tests/test_nsc_shape_response.py",
+      "sha256": "576511dd4a2628ffc610cec2c76059ea02c2d81ec23d7d52b62eb22cdfa8db4e"
+    },
+    {
+      "bytes": 7121,
+      "path": "tests/test_nsc_smooth_geometry.py",
+      "sha256": "0f212f17035376664395c72ecd0a491c77fc9b025c459e3a7013e2f7314c0771"
+    },
+    {
+      "bytes": 1252,
+      "path": "tests/test_nsc_tail_limit.py",
+      "sha256": "1b0c323c056ef8a45aa49dfa7cc4a825235cc19a809abb811b2e1c8fcb83ef2e"
+    },
+    {
+      "bytes": 3681,
+      "path": "tests/test_nsc_vacuum_work.py",
+      "sha256": "d331aeeccc9a479fa2cba10d7eb3bd88cda18dfdacd763bfeea62087f1dc26a5"
+    },
+    {
+      "bytes": 21680,
       "path": "tests/test_publication.py",
-      "sha256": "bdcfe6a528009bca1b31f4a0b2e0d55a49f4bb4d2f9db4533e122e03a94d2794"
+      "sha256": "8ee483eca506fee952a2d0b8214525e864353754ab0593d155d591a3353b580d"
+    },
+    {
+      "bytes": 11922,
+      "path": "tests/test_release_infrastructure.py",
+      "sha256": "8f94ef07f9d0e0dfddd83f1a03d8aacccb9db6dec2f2cfae95c43a4f59844a01"
     }
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.1.0",
+  "public_version": "0.2.0",
+  "release_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
+  "release_spec_sha256": "9629f86854a31a6968143873bcd09d337defcd1c4c257ab1e0073878c19211ff",
   "schema": "NSC-PUBLICATION-PROVENANCE-v1",
-  "source_branch": "doug/commit-branch",
+  "source_branch": "codex/nsc-closure-verification",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "source_project": "BlackHoles-Infinity",
   "source_worktree_clean": true

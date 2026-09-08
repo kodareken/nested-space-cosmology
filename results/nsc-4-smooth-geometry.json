@@ -1,0 +1,482 @@
+{
+  "artifact_id": "NSC-4-SMOOTH-GEOMETRY",
+  "classification": "seam_free_periodic_areal_radius_opens_a_spatial_band_gap_and_requires_NEC_violating_effective_Einstein_stress_that_a_cosmological_constant_cannot_supply",
+  "cosmological_constant": {
+    "can_supply_required_radial_null_stress": false,
+    "eight_pi_G_rho_plus_p": 0.0,
+    "equation_of_state": "p = -rho",
+    "reason": "A cosmological constant contributes equally to 8 pi G rho and -8 pi G p, so its radial-null projection vanishes. The smooth profile has 8 pi G int (rho + p_r) dx = -2 int (r'/r)^2 dx < 0 whenever r' is not identically zero."
+  },
+  "curvature_identities": {
+    "ADM_hamiltonian_eight_pi_G_rho_equals_half_spatial_scalar": true,
+    "G_theta_theta": "r(x)*Derivative(r(x), (x, 2))",
+    "G_theta_theta_minus_r_squared_times_eight_pi_G_p_t": "0",
+    "G_tt": "(-2*r(x)*Derivative(r(x), (x, 2)) - Derivative(r(x), x)**2 + 1)/r(x)**2",
+    "G_tt_minus_eight_pi_G_rho": "0",
+    "G_up_t_t_minus_eight_pi_G_rho": "0",
+    "G_up_theta_theta_plus_eight_pi_G_p_t": "0",
+    "G_up_x_x_plus_eight_pi_G_p_r": "0",
+    "G_xx": "(Derivative(r(x), x)**2 - 1)/r(x)**2",
+    "G_xx_minus_eight_pi_G_p_r": "0",
+    "conservation_p_r_prime_plus_two_r_prime_over_r_times_p_r_minus_p_t": "0",
+    "four_scalar_curvature": "2*(2*r(x)*Derivative(r(x), (x, 2)) + Derivative(r(x), x)**2 - 1)/r(x)**2",
+    "independent_checks": [
+      "3D Christoffel/Ricci scalar",
+      "4D Christoffel/Ricci/Einstein tensor",
+      "lapse-normal projection G_mu nu n^mu n^nu",
+      "Euler-Lagrange of int N r^2 ^4R"
+    ],
+    "lapse_euler_plus_r_squared_spatial_scalar": "0",
+    "lapse_normal_projection_minus_eight_pi_G_rho": "0",
+    "lapse_normal_projection_minus_half_spatial_scalar": "0",
+    "local_null_identity_rho_plus_p_r_plus_two_r_second_over_r": "0",
+    "spatial_Gamma_x_theta_theta": "-r(x)*Derivative(r(x), x)",
+    "spatial_scalar_curvature": "2*(-2*r(x)*Derivative(r(x), (x, 2)) - Derivative(r(x), x)**2 + 1)/r(x)**2",
+    "spatial_scalar_minus_twice_eight_pi_G_rho": "0"
+  },
+  "declared_geometry": {
+    "R_is_input": true,
+    "R_values": [
+      2.0,
+      4.0,
+      8.0
+    ],
+    "a": 1.0,
+    "a_is_input": true,
+    "added_phantom_field": false,
+    "derivative_seams": "removed; r is C^infinity 2R-periodic",
+    "fitted_coupling": false,
+    "formula": "r(x)=sqrt(a^2+[sin(k x)/k]^2), k=pi/(2R), x in [-R,R]",
+    "independent_mass_inserted": false,
+    "stationary_GR": false,
+    "stress_status": "required_effective_Einstein_stress_of_the_imposed_4D_ultrastatic_metric; not_derived_matter_stress_of_S_one_or_full_spectral_5D_theory"
+  },
+  "finite_difference_metric_check": {
+    "Gamma_x_theta_theta_plus_r_r_prime": 4.229394612309534e-13,
+    "Ric_theta_theta": 0.14735983782184325,
+    "Ric_xx": -1.3467407269372922,
+    "eight_pi_G_p_r": -0.8050068327066184,
+    "eight_pi_G_p_t": 0.6733703634686461,
+    "eight_pi_G_rho": -0.5417338942306736,
+    "location": 0.35,
+    "p_r_residual": -2.2448709557920665e-13,
+    "p_t_residual": -1.9435375531173804e-09,
+    "r_from_metric": 1.0580384604313162,
+    "rho_residual": 3.8872997043526425e-09,
+    "spatial_scalar": -1.0834677884613473,
+    "step": 0.0001
+  },
+  "gap_families": [
+    {
+      "absolute_errors": [
+        1.8556273134406887e-05,
+        4.643046148333774e-06,
+        1.161008124528351e-06
+      ],
+      "analytic_zero_discriminant": 22.213367621928867,
+      "conservation": {
+        "max_abs_exact_residual": 3.3306690738754696e-16,
+        "max_abs_periodic_central_residual": 2.2792034165552977e-06,
+        "periodic_gradient": true,
+        "rms_periodic_central_residual": 8.784664460836372e-07,
+        "samples": 4096,
+        "spacing": 0.0009765625
+      },
+      "continuum": {
+        "band_edge": 0.7642320354638438,
+        "bracket": [
+          0.7578125,
+          0.765625
+        ],
+        "discriminant_residual": -2.042810365310288e-13,
+        "monodromy_determinant": 0.9999999999997273
+      },
+      "gap_versus_null_stress": {
+        "added_phantom_field": false,
+        "continuum_band_edge": 0.7642320354638438,
+        "eight_pi_G_period_integral_rho_plus_p_r": -0.5839376400311772,
+        "fitted_coupling": false,
+        "same_profile": true,
+        "throat_eight_pi_G_rho_plus_p_r": -2.0
+      },
+      "lattice": [
+        {
+          "continuum_zero_transfer": 0.045109543404710066,
+          "intervals": 32,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.7642505917369782,
+          "phase_samples": 33,
+          "spacing": 0.125,
+          "zero_transfer": 0.04499047612093325
+        },
+        {
+          "continuum_zero_transfer": 0.045109543404710066,
+          "intervals": 64,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.7642366785099921,
+          "phase_samples": 33,
+          "spacing": 0.0625,
+          "zero_transfer": 0.045079785155823386
+        },
+        {
+          "continuum_zero_transfer": 0.045109543404710066,
+          "intervals": 128,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.7642331964719683,
+          "phase_samples": 33,
+          "spacing": 0.03125,
+          "zero_transfer": 0.04510210437768909
+        }
+      ],
+      "null_stress": {
+        "eight_pi_G_integral_rho_plus_p_r": -0.5839376400311772,
+        "expected_throat_eight_pi_G_rho_plus_p_r": -2.0,
+        "identity_residual": -1.1102230246251565e-16,
+        "integral_abserr": 8.984112476530789e-14,
+        "minus_two_integral_r_prime_over_r_squared": -0.5839376400311771,
+        "slope_abserr": 7.345793571048763e-14,
+        "strictly_negative": true,
+        "throat_eight_pi_G_p_r": -1.0,
+        "throat_eight_pi_G_p_t": 1.0,
+        "throat_eight_pi_G_rho": -1.0,
+        "throat_eight_pi_G_rho_plus_p_r": -2.0
+      },
+      "observed_orders": [
+        1.9987634614686844,
+        1.9996935523009598
+      ],
+      "radius": 2.0,
+      "seamed_continuum_band_edge": 0.7034881641265661,
+      "smooth_minus_seamed_band_edge": 0.060743871337277655,
+      "smoothness": {
+        "R": 2.0,
+        "a": 1.0,
+        "expected_r_second_at_origin": 1.0,
+        "k": 0.7853981633974483,
+        "k_times_R": 1.5707963267948966,
+        "periodic_C_infinity": true,
+        "r_at_origin": 1.0,
+        "r_max": 1.6189931866062328,
+        "r_min": 1.0,
+        "r_minus_R": 1.6189931866062328,
+        "r_plus_R": 1.6189931866062328,
+        "r_prime_minus_R": -4.81555063328068e-17,
+        "r_prime_plus_R": 4.81555063328068e-17,
+        "r_second_at_origin": 1.0,
+        "r_second_minus_R": -0.6176678248388561,
+        "r_second_plus_R": -0.6176678248388561,
+        "r_third_minus_R": 6.370301596918797e-17,
+        "r_third_plus_R": -6.370301596918797e-17,
+        "seamed_sqrt_one_plus_rho_squared_r_prime_jump": 1.7888543819998317,
+        "smooth_r_prime_jump": 0.0
+      },
+      "throat": 1.0,
+      "zero_discriminant": 22.213367621926515,
+      "zero_energy_integral": 3.098661449432831,
+      "zero_monodromy_determinant": 0.9999999999998708
+    },
+    {
+      "absolute_errors": [
+        1.7828198111136118e-06,
+        4.920976304223501e-07,
+        1.259081523485861e-07
+      ],
+      "analytic_zero_discriminant": 94.37606990675647,
+      "conservation": {
+        "max_abs_exact_residual": 3.3306690738754696e-16,
+        "max_abs_periodic_central_residual": 8.022703906984674e-06,
+        "periodic_gradient": true,
+        "rms_periodic_central_residual": 2.285425555026466e-06,
+        "samples": 4096,
+        "spacing": 0.001953125
+      },
+      "continuum": {
+        "band_edge": 0.5142554634359261,
+        "bracket": [
+          0.5078125,
+          0.515625
+        ],
+        "discriminant_residual": -3.375077994860476e-14,
+        "monodromy_determinant": 0.9999999999998614
+      },
+      "gap_versus_null_stress": {
+        "added_phantom_field": false,
+        "continuum_band_edge": 0.5142554634359261,
+        "eight_pi_G_period_integral_rho_plus_p_r": -1.3586948085650197,
+        "fitted_coupling": false,
+        "same_profile": true,
+        "throat_eight_pi_G_rho_plus_p_r": -2.0
+      },
+      "lattice": [
+        {
+          "continuum_zero_transfer": 0.010597096270669891,
+          "intervals": 32,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.5142572462557372,
+          "phase_samples": 33,
+          "spacing": 0.25,
+          "zero_transfer": 0.010480786657161118
+        },
+        {
+          "continuum_zero_transfer": 0.010597096270669891,
+          "intervals": 64,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.5142559555335565,
+          "phase_samples": 33,
+          "spacing": 0.125,
+          "zero_transfer": 0.010568034289342897
+        },
+        {
+          "continuum_zero_transfer": 0.010597096270669891,
+          "intervals": 128,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.5142555893440784,
+          "phase_samples": 33,
+          "spacing": 0.0625,
+          "zero_transfer": 0.010589831730889088
+        }
+      ],
+      "null_stress": {
+        "eight_pi_G_integral_rho_plus_p_r": -1.3586948085650197,
+        "expected_throat_eight_pi_G_rho_plus_p_r": -2.0,
+        "identity_residual": 4.440892098500626e-16,
+        "integral_abserr": 3.9748159788925495e-14,
+        "minus_two_integral_r_prime_over_r_squared": -1.3586948085650201,
+        "slope_abserr": 2.1983296523910558e-14,
+        "strictly_negative": true,
+        "throat_eight_pi_G_p_r": -1.0,
+        "throat_eight_pi_G_p_t": 1.0,
+        "throat_eight_pi_G_rho": -1.0,
+        "throat_eight_pi_G_rho_plus_p_r": -2.0
+      },
+      "observed_orders": [
+        1.8571444230725167,
+        1.9665728712897732
+      ],
+      "radius": 4.0,
+      "seamed_continuum_band_edge": 0.45526553767475103,
+      "smooth_minus_seamed_band_edge": 0.058989925761175066,
+      "smoothness": {
+        "R": 4.0,
+        "a": 1.0,
+        "expected_r_second_at_origin": 1.0,
+        "k": 0.39269908169872414,
+        "k_times_R": 1.5707963267948966,
+        "periodic_C_infinity": true,
+        "r_at_origin": 1.0,
+        "r_max": 2.7357916136119758,
+        "r_min": 1.0,
+        "r_minus_R": 2.7357916136119758,
+        "r_plus_R": 2.7357916136119758,
+        "r_prime_minus_R": -5.699515727914303e-17,
+        "r_prime_plus_R": 5.699515727914303e-17,
+        "r_second_at_origin": 1.0,
+        "r_second_minus_R": -0.3655249160880835,
+        "r_second_plus_R": -0.3655249160880835,
+        "r_third_minus_R": 1.2312372138592771e-17,
+        "r_third_plus_R": -1.2312372138592771e-17,
+        "seamed_sqrt_one_plus_rho_squared_r_prime_jump": 1.9402850002906638,
+        "smooth_r_prime_jump": 0.0
+      },
+      "throat": 1.0,
+      "zero_discriminant": 94.37606990674495,
+      "zero_energy_integral": 4.547175252120891,
+      "zero_monodromy_determinant": 0.9999999999999112
+    },
+    {
+      "absolute_errors": [
+        3.992135876301761e-05,
+        9.913207046186034e-06,
+        2.4743241825442297e-06
+      ],
+      "analytic_zero_discriminant": 399.51033488590195,
+      "conservation": {
+        "max_abs_exact_residual": 2.220446049250313e-16,
+        "max_abs_periodic_central_residual": 3.094911070466999e-05,
+        "periodic_gradient": true,
+        "rms_periodic_central_residual": 6.317207908716781e-06,
+        "samples": 4096,
+        "spacing": 0.00390625
+      },
+      "continuum": {
+        "band_edge": 0.2845408508188992,
+        "bracket": [
+          0.28125,
+          0.2890625
+        ],
+        "discriminant_residual": -3.254285729781259e-12,
+        "monodromy_determinant": 1.0000000000002776
+      },
+      "gap_versus_null_stress": {
+        "added_phantom_field": false,
+        "continuum_band_edge": 0.2845408508188992,
+        "eight_pi_G_period_integral_rho_plus_p_r": -2.0867274728388496,
+        "fitted_coupling": false,
+        "same_profile": true,
+        "throat_eight_pi_G_rho_plus_p_r": -2.0
+      },
+      "lattice": [
+        {
+          "continuum_zero_transfer": 0.002503079840711218,
+          "intervals": 32,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.28450092946013616,
+          "phase_samples": 33,
+          "spacing": 0.5,
+          "zero_transfer": 0.002395538123923124
+        },
+        {
+          "continuum_zero_transfer": 0.002503079840711218,
+          "intervals": 64,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.284530937611853,
+          "phase_samples": 33,
+          "spacing": 0.25,
+          "zero_transfer": 0.0024762571297727216
+        },
+        {
+          "continuum_zero_transfer": 0.002503079840711218,
+          "intervals": 128,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.28453837649471664,
+          "phase_samples": 33,
+          "spacing": 0.125,
+          "zero_transfer": 0.0024963781846215516
+        }
+      ],
+      "null_stress": {
+        "eight_pi_G_integral_rho_plus_p_r": -2.0867274728388496,
+        "expected_throat_eight_pi_G_rho_plus_p_r": -2.0,
+        "identity_residual": 4.440892098500626e-16,
+        "integral_abserr": 3.95935068966913e-14,
+        "minus_two_integral_r_prime_over_r_squared": -2.08672747283885,
+        "slope_abserr": 1.934685691836387e-14,
+        "strictly_negative": true,
+        "throat_eight_pi_G_p_r": -1.0,
+        "throat_eight_pi_G_p_t": 1.0,
+        "throat_eight_pi_G_rho": -1.0,
+        "throat_eight_pi_G_rho_plus_p_r": -2.0
+      },
+      "observed_orders": [
+        2.009737057180401,
+        2.0023173301597557
+      ],
+      "radius": 8.0,
+      "seamed_continuum_band_edge": 0.2479700182657252,
+      "smooth_minus_seamed_band_edge": 0.036570832553173976,
+      "smoothness": {
+        "R": 8.0,
+        "a": 1.0,
+        "expected_r_second_at_origin": 1.0,
+        "k": 0.19634954084936207,
+        "k_times_R": 1.5707963267948966,
+        "periodic_C_infinity": true,
+        "r_at_origin": 1.0,
+        "r_max": 5.190204525106739,
+        "r_min": 1.0,
+        "r_minus_R": 5.190204525106739,
+        "r_plus_R": 5.190204525106739,
+        "r_prime_minus_R": -6.008505928677957e-17,
+        "r_prime_plus_R": 6.008505928677957e-17,
+        "r_second_at_origin": 1.0,
+        "r_second_minus_R": -0.19267063468552514,
+        "r_second_plus_R": -0.19267063468552514,
+        "r_third_minus_R": 2.5744434067492307e-18,
+        "r_third_plus_R": -2.5744434067492307e-18,
+        "seamed_sqrt_one_plus_rho_squared_r_prime_jump": 1.9845557534273355,
+        "smooth_r_prime_jump": 0.0
+      },
+      "throat": 1.0,
+      "zero_discriminant": 399.51033488587603,
+      "zero_energy_integral": 5.990233369034351,
+      "zero_monodromy_determinant": 0.9999999999999378
+    }
+  ],
+  "next_equation": {
+    "einstein_matching": "G_mu nu[r] = 8 pi G T^{rest}_mu nu, with T_rest from Gamma_one minus its already included Einstein term",
+    "owner": "quantum/boundary stress of S_one on this, or a dynamically selected, confining profile; the present record only computes the geometric right-hand side",
+    "radial_null_constraint": "int_{-R}^{R} ell^mu ell^nu (G_mu nu[r] - 8 pi G T^{rest}_mu nu) dx = 0, equivalently 8 pi G int (rho + p_r)_one dx = -2 int (r'/r)^2 dx",
+    "statement": "The geometric residual G_mu nu[r] must be identified with the variational stress of the same one-action / spectral-boundary functional at frozen Theta, with no extra phantom field and no fitted coupling."
+  },
+  "nonclaims": {
+    "cosmological_constant_accounts_for_the_null_projection": false,
+    "derived_S_one_or_spectral_matter_stress": false,
+    "new_to_world_mechanism_established": false,
+    "particle_species_or_observed_Lambda_predicted": false,
+    "periodic_spatial_array_is_a_Lorentzian_nested_cosmology": false,
+    "physical_metric_stability_proved": false,
+    "stationary_geometry_or_a_R_derived": false
+  },
+  "preserved_published_bytes": {
+    "commits": [
+      "76975387b9b03e323c1832237e0270dc9d49a382",
+      "8e745d2744b1c8251b439d8ddca0db2a9740c653"
+    ],
+    "read_only_imported_module": {
+      "path": "src/recursive_horizons/nsc_geometric_chain.py",
+      "sha256": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+      "use": "seamed continuum band-edge comparison only"
+    },
+    "result_source_hashes": {
+      "results/nsc-3-geometric-chain.json": {
+        "scripts/check_nsc_geometric_chain.py": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b",
+        "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+      },
+      "results/nsc-3-radial-spectrum.json": {
+        "scripts/check_nsc_radial_spectrum.py": "14e5ec4ed1703a6a3f96ae6067f90c2c6c742c54b958d2ee3aeefbf824fed184"
+      },
+      "results/nsc-3-regulated-recursion.json": {
+        "scripts/check_nsc_regulated_recursion.py": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+      }
+    },
+    "verified_file_hashes": {
+      "scripts/check_nsc_geometric_chain.py": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b",
+      "scripts/check_nsc_radial_spectrum.py": "14e5ec4ed1703a6a3f96ae6067f90c2c6c742c54b958d2ee3aeefbf824fed184",
+      "scripts/check_nsc_regulated_recursion.py": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+      "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+      "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+    }
+  },
+  "proof_scope": {
+    "S_one_or_spectral_matter_stress": false,
+    "derived_a_or_R": false,
+    "five_dimensional_or_full_heat_kernel_stress": false,
+    "new_to_world_mechanism": false,
+    "particle_species_identification": false,
+    "required_4D_ultrastatic_Einstein_stress": true,
+    "spatial_dirac_gap": true,
+    "stationary_Einstein_solution": false
+  },
+  "removed_angular_potential_control": {
+    "interpretation": "formal control with w removed; kappa=0 is not a spinor-sphere eigenvalue",
+    "kappa": 0.0,
+    "zero_phase_gap": 1.0575841779158651e-15
+  },
+  "riemann_convention": {
+    "connection": "Gamma^l_{ij} = (1/2) g^{ls}(d_i g_{js} + d_j g_{is} - d_s g_{ij})",
+    "einstein": "G_{ij} = R_{ij} - (1/2) R g_{ij}",
+    "metric": "ds^2 = dt^2 - dx^2 - r(x)^2 dOmega_2^2",
+    "radial_pressure": "8 pi G p_r = G_xx = -G^x_x",
+    "ricci": "R_{sj} = R^i_{sij} (contract first and third index)",
+    "riemann": "R^r_{sij} = d_i Gamma^r_{js} - d_j Gamma^r_{is} + Gamma^r_{il} Gamma^l_{js} - Gamma^r_{jl} Gamma^l_{is}",
+    "signature": "(+,-,-,-)",
+    "static_observer": "u^mu = (1,0,0,0),  8 pi G rho = G_tt = G^t_t",
+    "tangential_pressure": "8 pi G p_t = G_theta_theta / r^2 = -G^theta_theta"
+  },
+  "schema": "nsc-smooth-geometry-v1",
+  "source_hashes": {
+    "docs/nsc-smooth-geometry.md": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383",
+    "scripts/check_nsc_smooth_geometry.py": "f13d1d9b475e270d954b5063335022663f6f10d06718bcac2220b66209fbc900",
+    "src/recursive_horizons/nsc_smooth_geometry.py": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0",
+    "tests/test_nsc_smooth_geometry.py": "0f212f17035376664395c72ecd0a491c77fc9b025c459e3a7013e2f7314c0771"
+  },
+  "terminal": true,
+  "zero_gap_exclusion": {
+    "argument": "I>0 so neither multiplier has modulus 1; zero is outside every real Bloch fiber; compact phase and continuity give an open spectral gap",
+    "continuum_transfer_eigenvalues": "exp(plus_or_minus I), I = kappa * int dx/r = 2 kappa/(a k) K(-1/(a^2 k^2))",
+    "discrete_transfer": "product[(1-h*w/2)/(1+h*w/2)] in (0,1)",
+    "scope": "equal-scale periodic spatial family on the smooth profile only"
+  }
+}

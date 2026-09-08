@@ -1,0 +1,664 @@
+{
+  "LCDM_control": {
+    "H_limit_over_H0": 0.8366600265340756,
+    "Kretschmann_limit_over_H0_fourth_exact": "294/25",
+    "Ricci_limit_over_H0_squared_exact": "42/5",
+    "curvature_convention": "signature (-,+,+,+), R=6*(dot(H)+2H^2), flat FLRW",
+    "fraction_limit": 1.0,
+    "meaning": "A diverging density ratio has a diluting denominator and is not a curvature singularity; its fraction is bounded.",
+    "ratio": "rho_dark/rho_b=5+14*exp(3N) -> infinity",
+    "samples": [
+      {
+        "H_over_H0": 1.0,
+        "Kretschmann_over_H0_fourth": 15.629999999999999,
+        "N": 0.0,
+        "Ricci_over_H0_squared": 9.299999999999999,
+        "dark_fraction": 0.95,
+        "q_dec": -0.55,
+        "ratio": 18.999999999999996
+      },
+      {
+        "H_over_H0": 0.845538952686604,
+        "Kretschmann_over_H0_fourth": 11.888809727725516,
+        "N": 1.0,
+        "Ricci_over_H0_squared": 8.444808361531075,
+        "dark_fraction": 0.996518075745542,
+        "q_dec": -0.9686626817098771,
+        "ratio": 286.19751692462734
+      },
+      {
+        "H_over_H0": 0.8371043098999071,
+        "Kretschmann_over_H0_fourth": 11.766254750171875,
+        "N": 2.0,
+        "Ricci_over_H0_squared": 8.402230876958999,
+        "dark_fraction": 0.9998231341616303,
+        "q_dec": -0.998408207454673,
+        "ratio": 5653.003108898291
+      },
+      {
+        "H_over_H0": 0.8366611280941083,
+        "Kretschmann_over_H0_fourth": 11.760015483466093,
+        "N": 4.0,
+        "Ricci_over_H0_squared": 8.400005529791116,
+        "dark_fraction": 0.9999995611288446,
+        "q_dec": -0.9999960501596022,
+        "ratio": 2278572.0798660545
+      },
+      {
+        "H_over_H0": 0.8366600265408437,
+        "Kretschmann_over_H0_fourth": 11.760000000095133,
+        "N": 8.0,
+        "Ricci_over_H0_squared": 8.400000000033975,
+        "dark_fraction": 0.9999999999973034,
+        "q_dec": -0.9999999999757313,
+        "ratio": 370847709822.80853
+      }
+    ],
+    "snapshot": {
+      "baryon_fraction": 0.05,
+      "cold_dark_matter_fraction": 0.25,
+      "vacuum_fraction": 0.7
+    },
+    "status": "rounded flat dust-plus-positive-Lambda control; no current parameter estimation"
+  },
+  "artifact_id": "NSC-5-PLATEAU-CONDITIONS",
+  "assumptions": [
+    "Homogeneous flat FLRW, constant G, positive densities, H>0, radiation negligible at late time.",
+    "Visible means fixed-mass baryonic dust; dark is the combined effective unresolved stress, not a separately postulated substance.",
+    "Total effective stress is conserved. Separately conserved baryons Q=0 are the baseline; a nonzero transfer must be derived.",
+    "Asymptotic flattening means curvature invariants tend to zero, not a chosen coordinate chart or necessarily no expansion.",
+    "The rounded 95% fraction is an illustrative current matching datum; no attractor at r=19 is asserted."
+  ],
+  "exact": {
+    "equations": {
+      "N": "ln(a); prime=d/dN; a=1 at the control snapshot",
+      "Q_zero_solution": "r(N)=r0*exp[-3*integral_0^N w_d(s) ds]",
+      "autonomous_flow_derivative": "-epsilon*(2*r + 2) - epsilon_r*(r + 1)**2 - 3*r*w_r - 3*w_d",
+      "continued_acceleration_at_fixed_fraction": "q_dec<0 requires epsilon_star=(1-f_star)*(1-2*q_dec)>0",
+      "energy_transfer_sign": "dot(rho_b)+3H*rho_b=Q; dot(rho_d)+3H*(rho_d+p_d)=-Q",
+      "epsilon": "Q/[H*(rho_b+rho_d)]",
+      "f_prime": "-3*w_d*f*(1-f)-epsilon=(1-f)*(1-2*q_dec)-epsilon",
+      "finite_positive_ratio_condition": "integral_0^N w_d(s) ds converges to a finite real limit",
+      "fixed_point_epsilon": "-3*w_d*r/(1+r)^2=(1-f)*(1-2*q_dec)",
+      "flat_Q_zero_late_geometry": "H^2 proportional to a^(-3); a(t) proportional to t^(2/3); curvature -> 0",
+      "local_stability": "F'(r_star)<0 for scalar autonomous closure; full coupled physical Jacobian otherwise",
+      "q_dec": "(1+3*w_d*f)/2=-1-d(ln H)/dN",
+      "r_prime": "-3*w_d*r-(1+r)^2*epsilon",
+      "regular_Q_zero_fixed_point": "w_d(r_star)=0; F'(r_star)=-3*r_star*w_d'(r_star)",
+      "regular_Q_zero_late_deceleration": "q_dec -> 1/2; w_total -> 0",
+      "regular_Q_zero_positive_root_stability": "w_d'(r_star)>0"
+    },
+    "regular_limit_assumption": "Limits are smooth asymptotic dynamical states; convergence of a function alone need not imply convergence of its derivative.",
+    "zero_residuals": {
+      "conserved_baryon_fixed_point_derivative": "0",
+      "exponential_history_Friedmann_vs_stress_deceleration": "0",
+      "exponential_history_H_squared_limit": "0",
+      "exponential_history_baryon_conservation": "0",
+      "exponential_history_dark_conservation": "0",
+      "exponential_history_deceleration_limit": "0",
+      "exponential_history_finite_amplitude_limit": "0",
+      "exponential_history_ratio_limit": "0",
+      "fraction_from_deceleration": "0",
+      "fraction_from_two_continuity_equations": "0",
+      "observable_ratio_reconstruction": "0",
+      "ratio_from_two_continuity_equations": "0",
+      "spectral_contraction_derivative": "0",
+      "spectral_fixed_point": "0"
+    }
+  },
+  "exponential_future_controls": {
+    "analytic_density": "rho_d(N)=(19/20)*exp[-3N+42*(1-exp(-k*N))/(19*k)]",
+    "analytic_ratio_limit": "r_star=19*exp[42/(19*k)]; f_star=r_star/(1+r_star)",
+    "convergent_tail": "ln(r_star/r(N))=42*exp(-k*N)/(19*k); 0<=f_star-f(N)<=ln(r_star/r(N))/4",
+    "histories": [
+      {
+        "acceleration_ends_N": 0.777417968078728,
+        "acceleration_ends_a": 2.175846900035219,
+        "acceleration_ends_elapsed_H0_time": 1.0210255853107195,
+        "asymptotic_E_squared_a_cubed": 8.714489631231633,
+        "asymptotic_H_over_H0": 0.0,
+        "asymptotic_q_dec": 0.5,
+        "convergent_tails": [
+          {
+            "N": 0.0,
+            "remaining_fraction": 0.044262429342872084,
+            "remaining_log_ratio": 2.2105263157894735,
+            "rigorous_fraction_tail_upper_bound": 0.5526315789473684
+          },
+          {
+            "N": 2.0,
+            "remaining_fraction": 0.0019854011623413417,
+            "remaining_log_ratio": 0.29916220504935437,
+            "rigorous_fraction_tail_upper_bound": 0.07479055126233859
+          },
+          {
+            "N": 4.0,
+            "remaining_fraction": 0.0002356488040835798,
+            "remaining_log_ratio": 0.04048720175404397,
+            "rigorous_fraction_tail_upper_bound": 0.010121800438510992
+          },
+          {
+            "N": 8.0,
+            "remaining_fraction": 4.231828866507173e-06,
+            "remaining_log_ratio": 0.0007415489669423945,
+            "rigorous_fraction_tail_upper_bound": 0.00018538724173559863
+          },
+          {
+            "N": 12.0,
+            "remaining_fraction": 7.748076458608644e-08,
+            "remaining_log_ratio": 1.3581943096830778e-05,
+            "rigorous_fraction_tail_upper_bound": 3.3954857742076944e-06
+          }
+        ],
+        "f_star": 0.9942624293428721,
+        "future_integral_quadrature_error_estimate": 1.7297032516065318e-13,
+        "future_integral_w": -0.7368421052631577,
+        "infinite_integral_identity_error": 1.1102230246251565e-16,
+        "k": 1,
+        "maximum_finite_integral_identity_error": 4.440892098500626e-16,
+        "maximum_independent_H_complex_step_q_error": 1.0446310483303023e-11,
+        "r_star": 173.28979262463264,
+        "r_star_exact": "19*exp(42/(19*1))",
+        "samples": [
+          {
+            "H_over_H0": 1.0,
+            "N": 0.0,
+            "dark_fraction": 0.95,
+            "log_r_over_r0": 0.0,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": -0.5499999999999998,
+            "ratio": 19.0,
+            "w_dark": -0.7368421052631579
+          },
+          {
+            "H_over_H0": 0.9516236805833561,
+            "N": 0.1,
+            "dark_fraction": 0.9590973751963634,
+            "log_r_over_r0": 0.21035939170998408,
+            "log_ratio_quadrature_error": 2.7755575615628914e-17,
+            "q_dec": -0.4591774234196111,
+            "ratio": 23.448308752818498,
+            "w_dark": -0.6667223080264965
+          },
+          {
+            "H_over_H0": 0.8691149674015112,
+            "N": 0.25,
+            "dark_fraction": 0.9687323901286095,
+            "log_r_over_r0": 0.4889666900526839,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": -0.33386528549445726,
+            "ratio": 30.98197764757798,
+            "w_dark": -0.5738532085789299
+          },
+          {
+            "H_over_H0": 0.7190302858308406,
+            "N": 0.5,
+            "dark_fraction": 0.9784208708307979,
+            "log_r_over_r0": 0.8697743311615471,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": -0.15590986218388814,
+            "ratio": 45.34107299506803,
+            "w_dark": -0.4469173282093088
+          },
+          {
+            "H_over_H0": 0.44020170234686556,
+            "N": 1.0,
+            "dark_fraction": 0.9871535502284573,
+            "log_r_over_r0": 1.3973191300420746,
+            "log_ratio_quadrature_error": 2.220446049250313e-16,
+            "q_dec": 0.09861981975908135,
+            "ratio": 76.8425181885809,
+            "w_dark": -0.2710690619157996
+          },
+          {
+            "H_over_H0": 0.12668037240053487,
+            "N": 2.0,
+            "dark_fraction": 0.9922770281805308,
+            "log_r_over_r0": 1.9113641107401191,
+            "log_ratio_quadrature_error": 2.220446049250313e-16,
+            "q_dec": 0.351574108114846,
+            "ratio": 128.4838338628981,
+            "w_dark": -0.09972073501645146
+          },
+          {
+            "H_over_H0": 0.007171563943546473,
+            "N": 4.0,
+            "dark_fraction": 0.9940267805387886,
+            "log_r_over_r0": 2.1700391140354296,
+            "log_ratio_quadrature_error": 4.440892098500626e-16,
+            "q_dec": 0.47987731859370164,
+            "ratio": 166.41390576618468,
+            "w_dark": -0.013495733918014657
+          },
+          {
+            "H_over_H0": 1.8131222808533914e-05,
+            "N": 8.0,
+            "dark_fraction": 0.9942581975140056,
+            "log_r_over_r0": 2.209784766822531,
+            "log_ratio_quadrature_error": 4.440892098500626e-16,
+            "q_dec": 0.49963135443037976,
+            "ratio": 173.16133739173924,
+            "w_dark": -0.00024718298898079817
+          }
+        ]
+      },
+      {
+        "acceleration_ends_N": 0.18867762935915103,
+        "acceleration_ends_a": 1.2076515783116508,
+        "acceleration_ends_elapsed_H0_time": 0.20110693124377774,
+        "asymptotic_E_squared_a_cubed": 1.7009292060134837,
+        "asymptotic_H_over_H0": 0.0,
+        "asymptotic_q_dec": 0.5,
+        "convergent_tails": [
+          {
+            "N": 0.0,
+            "remaining_fraction": 0.020604302740390684,
+            "remaining_log_ratio": 0.5526315789473684,
+            "rigorous_fraction_tail_upper_bound": 0.1381578947368421
+          },
+          {
+            "N": 0.5,
+            "remaining_fraction": 0.0022106714479635755,
+            "remaining_log_ratio": 0.07479055126233859,
+            "rigorous_fraction_tail_upper_bound": 0.018697637815584648
+          },
+          {
+            "N": 1.0,
+            "remaining_fraction": 0.0002901707739573592,
+            "remaining_log_ratio": 0.010121800438510992,
+            "rigorous_fraction_tail_upper_bound": 0.002530450109627748
+          },
+          {
+            "N": 2.0,
+            "remaining_fraction": 5.2898543104145155e-06,
+            "remaining_log_ratio": 0.00018538724173559863,
+            "rigorous_fraction_tail_upper_bound": 4.6346810433899656e-05
+          },
+          {
+            "N": 3.0,
+            "remaining_fraction": 9.687876358842793e-08,
+            "remaining_log_ratio": 3.3954857742076944e-06,
+            "rigorous_fraction_tail_upper_bound": 8.488714435519236e-07
+          }
+        ],
+        "f_star": 0.9706043027403907,
+        "future_integral_quadrature_error_estimate": 9.71384459928003e-14,
+        "future_integral_w": -0.18421052631578946,
+        "infinite_integral_identity_error": 0.0,
+        "k": 4,
+        "maximum_finite_integral_identity_error": 1.1102230246251565e-16,
+        "maximum_independent_H_complex_step_q_error": 1.580868769224253e-11,
+        "r_star": 33.01858412026967,
+        "r_star_exact": "19*exp(42/(19*4))",
+        "samples": [
+          {
+            "H_over_H0": 1.0,
+            "N": 0.0,
+            "dark_fraction": 0.95,
+            "log_r_over_r0": 0.0,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": -0.5499999999999998,
+            "ratio": 19.0,
+            "w_dark": -0.7368421052631579
+          },
+          {
+            "H_over_H0": 0.9388630878413696,
+            "N": 0.1,
+            "dark_fraction": 0.957977960152114,
+            "log_r_over_r0": 0.1821915535066204,
+            "log_ratio_quadrature_error": 2.7755575615628914e-17,
+            "q_dec": -0.20974675986085012,
+            "ratio": 22.797036117710178,
+            "w_dark": -0.49392003392099737
+          },
+          {
+            "H_over_H0": 0.8124012045504085,
+            "N": 0.25,
+            "dark_fraction": 0.9642144228770722,
+            "log_r_over_r0": 0.34932978251051866,
+            "log_ratio_quadrature_error": 5.551115123125783e-17,
+            "q_dec": 0.1079469513575419,
+            "ratio": 26.944218883626668,
+            "w_dark": -0.2710690619157996
+          },
+          {
+            "H_over_H0": 0.5941236489194162,
+            "N": 0.5,
+            "dark_fraction": 0.9683936312924271,
+            "log_r_over_r0": 0.4778410276850298,
+            "log_ratio_quadrature_error": 5.551115123125783e-17,
+            "q_dec": 0.355146612953403,
+            "ratio": 30.639193013666258,
+            "w_dark": -0.09972073501645146
+          },
+          {
+            "H_over_H0": 0.2895798928413621,
+            "N": 1.0,
+            "dark_fraction": 0.9703141319664333,
+            "log_r_over_r0": 0.5425097785088574,
+            "log_ratio_quadrature_error": 1.1102230246251565e-16,
+            "q_dec": 0.4803573479871375,
+            "ratio": 32.68606229972023,
+            "w_dark": -0.013495733918014657
+          },
+          {
+            "H_over_H0": 0.06492629199472286,
+            "N": 2.0,
+            "dark_fraction": 0.9705990128860803,
+            "log_r_over_r0": 0.5524461917056328,
+            "log_ratio_quadrature_error": 1.1102230246251565e-16,
+            "q_dec": 0.49964012665233953,
+            "ratio": 33.012463463396976,
+            "w_dark": -0.00024718298898079817
+          },
+          {
+            "H_over_H0": 0.0032327804764452597,
+            "N": 4.0,
+            "dark_fraction": 0.970604300965997,
+            "log_r_over_r0": 0.552631516756877,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": 0.49999987927528333,
+            "ratio": 33.01858206682776,
+            "w_dark": -8.292065505629619e-08
+          },
+          {
+            "H_over_H0": 8.01326188452285e-06,
+            "N": 8.0,
+            "dark_fraction": 0.9706043027403904,
+            "log_r_over_r0": 0.5526315789473614,
+            "log_ratio_quadrature_error": 1.1102230246251565e-16,
+            "q_dec": 0.4999999999999864,
+            "ratio": 33.01858412026944,
+            "w_dark": -9.331490404595708e-15
+          }
+        ]
+      },
+      {
+        "acceleration_ends_N": 0.037238043242344615,
+        "acceleration_ends_a": 1.037940066051951,
+        "acceleration_ends_elapsed_H0_time": 0.03770516652078324,
+        "asymptotic_E_squared_a_cubed": 1.1110224528756223,
+        "asymptotic_H_over_H0": 0.0,
+        "asymptotic_q_dec": 0.5,
+        "convergent_tails": [
+          {
+            "N": 0.0,
+            "remaining_fraction": 0.004996409054932532,
+            "remaining_log_ratio": 0.11052631578947367,
+            "rigorous_fraction_tail_upper_bound": 0.027631578947368417
+          },
+          {
+            "N": 0.1,
+            "remaining_fraction": 0.0006472668234071585,
+            "remaining_log_ratio": 0.014958110252467717,
+            "rigorous_fraction_tail_upper_bound": 0.0037395275631169293
+          },
+          {
+            "N": 0.2,
+            "remaining_fraction": 8.70836708554262e-05,
+            "remaining_log_ratio": 0.0020243600877021986,
+            "rigorous_fraction_tail_upper_bound": 0.0005060900219255496
+          },
+          {
+            "N": 0.4,
+            "remaining_fraction": 1.5935513856403955e-06,
+            "remaining_log_ratio": 3.707744834711972e-05,
+            "rigorous_fraction_tail_upper_bound": 9.26936208677993e-06
+          },
+          {
+            "N": 0.6,
+            "remaining_fraction": 2.9186428365303712e-08,
+            "remaining_log_ratio": 6.790971548415389e-07,
+            "rigorous_fraction_tail_upper_bound": 1.6977428871038473e-07
+          }
+        ],
+        "f_star": 0.9549964090549325,
+        "future_integral_quadrature_error_estimate": 4.035584023376696e-14,
+        "future_integral_w": -0.0368421052631579,
+        "infinite_integral_identity_error": 6.938893903907228e-18,
+        "k": 20,
+        "maximum_finite_integral_identity_error": 4.163336342344337e-17,
+        "maximum_independent_H_complex_step_q_error": 1.72002412313077e-11,
+        "r_star": 21.220449057512443,
+        "r_star_exact": "19*exp(42/(19*20))",
+        "samples": [
+          {
+            "H_over_H0": 1.0,
+            "N": 0.0,
+            "dark_fraction": 0.95,
+            "log_r_over_r0": 0.0,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": -0.5499999999999998,
+            "ratio": 19.0,
+            "w_dark": -0.7368421052631579
+          },
+          {
+            "H_over_H0": 0.9007750714472667,
+            "N": 0.1,
+            "dark_fraction": 0.9543491422315253,
+            "log_r_over_r0": 0.09556820553700596,
+            "log_ratio_quadrature_error": 0.0,
+            "q_dec": 0.35724740311152847,
+            "ratio": 20.90539343360544,
+            "w_dark": -0.09972073501645146
+          },
+          {
+            "H_over_H0": 0.7241800449154364,
+            "N": 0.25,
+            "dark_fraction": 0.954964391412158,
+            "log_r_over_r0": 0.10978159533168001,
+            "log_ratio_quadrature_error": 1.3877787807814457e-17,
+            "q_dec": 0.49288818481250896,
+            "ratio": 21.204651638036594,
+            "w_dark": -0.004964803051957712
+          },
+          {
+            "H_over_H0": 0.49789700729809455,
+            "N": 0.5,
+            "dark_fraction": 0.9549961933943503,
+            "log_r_over_r0": 0.11052129790249991,
+            "log_ratio_quadrature_error": 4.163336342344337e-17,
+            "q_dec": 0.49995207937041186,
+            "ratio": 21.220342575964697,
+            "w_dark": -3.3452579824988835e-05
+          },
+          {
+            "H_over_H0": 0.23519045645501072,
+            "N": 1.0,
+            "dark_fraction": 0.9549964090451416,
+            "log_r_over_r0": 0.11052631556166197,
+            "log_ratio_quadrature_error": 1.3877787807814457e-17,
+            "q_dec": 0.4999999978244063,
+            "ratio": 21.220449052678177,
+            "w_dark": -1.518744774428411e-09
+          },
+          {
+            "H_over_H0": 0.052478084219897414,
+            "N": 2.0,
+            "dark_fraction": 0.9549964090549325,
+            "log_r_over_r0": 0.11052631578947367,
+            "log_ratio_quadrature_error": 2.7755575615628914e-17,
+            "q_dec": 0.5,
+            "ratio": 21.220449057512443,
+            "w_dark": -3.1303662933727495e-18
+          },
+          {
+            "H_over_H0": 0.0026127299668705535,
+            "N": 4.0,
+            "dark_fraction": 0.9549964090549325,
+            "log_r_over_r0": 0.11052631578947367,
+            "log_ratio_quadrature_error": 2.7755575615628914e-17,
+            "q_dec": 0.5,
+            "ratio": 21.220449057512443,
+            "w_dark": -1.329890496307148e-35
+          },
+          {
+            "H_over_H0": 6.476310092421812e-06,
+            "N": 8.0,
+            "dark_fraction": 0.9549964090549325,
+            "log_r_over_r0": 0.11052631578947367,
+            "log_ratio_quadrature_error": 2.7755575615628914e-17,
+            "q_dec": 0.5,
+            "ratio": 21.220449057512443,
+            "w_dark": -2.400254707942384e-70
+          }
+        ]
+      }
+    ],
+    "meaning": "Identical present H, fraction and acceleration do not determine the future ratio or transition rate.",
+    "shared_snapshot": {
+      "H0": 1.0,
+      "f0": 0.95,
+      "q_dec0": -0.55,
+      "r0": 19,
+      "rho_b0": 0.05,
+      "rho_dark0": 0.95,
+      "w_dark0_exact": "-14/19",
+      "w_total0": -0.7
+    },
+    "status": "illustrative future fluid histories; not derived NSC laws, fitted attractors, or perturbation-stability demonstrations",
+    "w_history": "w_d(N)=(-14/19)*exp(-k*N), N>=0, Q=0"
+  },
+  "observational_audit": {
+    "Q_zero_finite_plateau_condition": "E(a)^2*a^3 -> Omega_b0/(1-f_star); d(ln H)/dN -> -3/2",
+    "Q_zero_reconstructed_fraction": "f_H=1-Omega_b0*a^(-3)/E(a)^2",
+    "Q_zero_reconstructed_ratio": "r_H=E(a)^2*a^3/Omega_b0-1, E=H/H0",
+    "independent_comparisons": [
+      "Friedmann and Raychaudhuri residuals against the full stress",
+      "Both continuity equations and the fraction derivative identity",
+      "Present expansion and combined fraction, followed by predicted future shape and curvature",
+      "Physical perturbations and full coupled attractor Jacobian for the same solution"
+    ],
+    "prediction_claim": false,
+    "reconstructed_w_dark": "w_total/f_H",
+    "reconstructed_w_total": "-1-(2/3)*d(ln H)/dN",
+    "required_input": "H(a), full state-defined metric-variation stress, and Q(a) from one common action and fixed parameters",
+    "source_mapping": "No rho_dark, pressure, Q, or current observed density is identified with b, Phi, or a recursion eigenvalue by assertion."
+  },
+  "reproduction_tolerances": {
+    "absolute": 3e-12,
+    "non_numerical_fields": "exact; no excluded fields",
+    "relative": 2e-10
+  },
+  "schema": "NSC-5-PLATEAU-CONDITIONS-v1",
+  "scope": "Exact FLRW consistency requirements plus analytic future controls; full physical closure remains open.",
+  "slow_decay_counterexample": {
+    "curvature_limits_exact": {
+      "H_squared": "0",
+      "Kretschmann": "0",
+      "Ricci": "0"
+    },
+    "fraction_limit": 1.0,
+    "integral_w": "-ln(1+N) -> -infinity",
+    "meaning": "A pressure tending to zero and curvature flattening do not by themselves imply a finite ratio plateau.",
+    "q_dec_limit": 0.5,
+    "ratio": "19*(1+N)^3 -> infinity",
+    "samples": [
+      {
+        "N": 0.0,
+        "dark_fraction": 0.95,
+        "integral_identity_error": 0.0,
+        "integral_w": 0.0,
+        "q_dec": -0.9249999999999998,
+        "ratio": 19.0,
+        "w_dark": -1.0
+      },
+      {
+        "N": 1.0,
+        "dark_fraction": 0.9934640522875817,
+        "integral_identity_error": 0.0,
+        "integral_w": -0.6931471805599453,
+        "q_dec": -0.2450980392156863,
+        "ratio": 152.0,
+        "w_dark": -0.5
+      },
+      {
+        "N": 4.0,
+        "dark_fraction": 0.9995791245791246,
+        "integral_identity_error": 2.220446049250313e-16,
+        "integral_w": -1.6094379124341005,
+        "q_dec": 0.20012626262626265,
+        "ratio": 2375.0,
+        "w_dark": -0.2
+      },
+      {
+        "N": 16.0,
+        "dark_fraction": 0.9999892873976947,
+        "integral_identity_error": 0.0,
+        "integral_w": -2.833213344056216,
+        "q_dec": 0.4117656511119681,
+        "ratio": 93347.0,
+        "w_dark": -0.058823529411764705
+      },
+      {
+        "N": 64.0,
+        "dark_fraction": 0.9999998083511376,
+        "integral_identity_error": 8.881784197001252e-16,
+        "integral_w": -4.174387269895638,
+        "q_dec": 0.47692308134574296,
+        "ratio": 5217875.0,
+        "w_dark": -0.015384615384615385
+      }
+    ],
+    "status": "independent analytic counterexample; not an NSC solution",
+    "w_dark": "-1/(1+N)",
+    "w_dark_limit": 0.0
+  },
+  "source_hashes": {
+    "docs/nsc-plateau-conditions.md": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398",
+    "scripts/check_nsc_plateau_conditions.py": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6"
+  },
+  "spectral_countermodel": {
+    "cosmic_N_in_spectral_equation": false,
+    "depth_contraction_magnitude": 0.38196601125010515,
+    "depth_iteration_derivative": "-1/phi^2",
+    "depth_samples": [
+      {
+        "Gamma_imaginary": 1.0,
+        "depth": 0,
+        "error_from_fixed_point": 0.6180339887498949
+      },
+      {
+        "Gamma_imaginary": 2.0,
+        "depth": 1,
+        "error_from_fixed_point": 0.3819660112501051
+      },
+      {
+        "Gamma_imaginary": 1.5,
+        "depth": 2,
+        "error_from_fixed_point": 0.1180339887498949
+      },
+      {
+        "Gamma_imaginary": 1.6,
+        "depth": 4,
+        "error_from_fixed_point": 0.018033988749894814
+      },
+      {
+        "Gamma_imaginary": 1.6176470588235294,
+        "depth": 8,
+        "error_from_fixed_point": 0.00038692992636546464
+      },
+      {
+        "Gamma_imaginary": 1.618033813400125,
+        "depth": 16,
+        "error_from_fixed_point": 1.7534976981536943e-07
+      },
+      {
+        "Gamma_imaginary": 1.618033988749859,
+        "depth": 32,
+        "error_from_fixed_point": 3.597122599785507e-14
+      }
+    ],
+    "equation": "Gamma=i-1/Gamma",
+    "matter_density_derived_from_Gamma": false,
+    "meaning": "A stable recursion fixed point in room depth imposes no cosmic-time ratio attractor without the metric stress and evolution equations.",
+    "parameters": {
+      "K_at_i": "i",
+      "Omega": 1,
+      "b": 1
+    },
+    "physical_fixed_point": "Gamma_star=i*(1+sqrt(5))/2",
+    "status": "logical countermodel to recursion alone; not a combined self-sourced NSC solution",
+    "uncoupled_cosmic_history": "rho_b=exp(-3N), rho_dark=1, r=exp(3N), f -> 1"
+  }
+}

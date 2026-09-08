@@ -9,7 +9,11 @@
   "measured_reference_runtime_seconds": 246.73,
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "result_count": 64,
+  "release_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
+  "release_spec": "results/release-spec.json",
+  "release_spec_sha256": "9629f86854a31a6968143873bcd09d337defcd1c4c257ab1e0073878c19211ff",
+  "release_version": "0.2.0",
+  "result_count": 77,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
   "scoped_follow_up_outputs": [
     "results/nsc-2-zeta1-unit-closure-check.json",
@@ -17,7 +21,20 @@
     "results/nsc-3-radial-spectrum.json",
     "results/nsc-3-geometric-chain.json",
     "results/nsc-3-threshold-response.json",
-    "results/nsc-3-boundary-response.json"
+    "results/nsc-3-boundary-response.json",
+    "results/nsc-4-covariant-measure.json",
+    "results/nsc-4-dirac-tetrad.json",
+    "results/nsc-5-tail-limit.json",
+    "results/nsc-5-clock-horizon.json",
+    "results/nsc-5-plateau-conditions.json",
+    "results/nsc-6-vacuum-work.json",
+    "results/nsc-4-smooth-geometry.json",
+    "results/nsc-4-lorentzian-transport.json",
+    "results/nsc-4-shape-response.json",
+    "results/nsc-6-energy-transfer.json",
+    "results/nsc-7-observable-bridge.json",
+    "results/nsc-8-chiral-boundary.json",
+    "results/nsc-8-finite-terms.json"
   ],
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "steps": [
@@ -1439,7 +1456,11 @@
       "source_dependencies": [
         "scripts/run_nsc_zeta1_regulated_determinant.py",
         "scripts/run_nsc_zeta1_warped_y.py"
-      ]
+      ],
+      "source_dependency_hashes": {
+        "scripts/run_nsc_zeta1_regulated_determinant.py": "01caf3d6061b1411a82ab030cdfe17fc8b0c5a9aa076d73ce8dbe589ff67276b",
+        "scripts/run_nsc_zeta1_warped_y.py": "2206e30f746e3c6c0e04a65c9cead46122c6b97d9fd745b591f3243b43fab67b"
+      }
     },
     {
       "artifact_id": "NSC-3-REGULATED-RECURSION",
@@ -1470,7 +1491,11 @@
       "source_dependencies": [
         "scripts/check_nsc_scale_closure.py",
         "src/recursive_horizons/nsc_regulated.py"
-      ]
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+      }
     },
     {
       "artifact_id": "NSC-3-RADIAL-SPECTRUM",
@@ -1498,7 +1523,10 @@
       ],
       "source_dependencies": [
         "scripts/check_nsc_scale_closure.py"
-      ]
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7"
+      }
     },
     {
       "artifact_id": "NSC-3-GEOMETRIC-CHAIN",
@@ -1545,7 +1573,12 @@
         "scripts/check_nsc_scale_closure.py",
         "src/recursive_horizons/nsc_geometric_chain.py",
         "src/recursive_horizons/nsc_regulated.py"
-      ]
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+      }
     },
     {
       "artifact_id": "NSC-3-THRESHOLD-RESPONSE",
@@ -1571,7 +1604,10 @@
       "paper_claim_ids": [],
       "source_dependencies": [
         "scripts/check_nsc_scale_closure.py"
-      ]
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7"
+      }
     },
     {
       "artifact_id": "NSC-3-BOUNDARY-RESPONSE",
@@ -1599,7 +1635,570 @@
         "docs/nsc-boundary-response.md",
         "src/recursive_horizons/nsc_boundary.py",
         "tests/test_nsc_boundary.py"
-      ]
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-boundary-response.md": "2ee875c13c88f79d61a3fdc5842d17905bd002c95aa3a0856c4deda26d5f4006",
+        "src/recursive_horizons/nsc_boundary.py": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e",
+        "tests/test_nsc_boundary.py": "127fe20da377d4c115131381f71df479e7ea46229c0cee93103edfd0dd9d6d67"
+      }
+    },
+    {
+      "artifact_id": "NSC-4-COVARIANT-MEASURE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_covariant_measure.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-4-covariant-measure.json"
+      ],
+      "generator_sha256": "6c0f49d5ae39313f82c6298b7526e8fa1f7c56cb1ab94ed354e0ec5de6a64e01",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-covariant-measure-v1"
+      },
+      "json_format": "pretty",
+      "order": 65,
+      "output": "results/nsc-4-covariant-measure.json",
+      "output_sha256": "e1cd39c855e0c723b04718ec35c8404f64fdba89fc497db8cf1e01d1615250ca",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_covariant_measure.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/provenance.py"
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_covariant_measure.py": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+      }
+    },
+    {
+      "artifact_id": "NSC-4-DIRAC-TETRAD",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_dirac_tetrad.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-4-dirac-tetrad.json"
+      ],
+      "generator_sha256": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-dirac-tetrad-v1"
+      },
+      "json_format": "pretty",
+      "order": 66,
+      "output": "results/nsc-4-dirac-tetrad.json",
+      "output_sha256": "acaa1ec0bb521e746f9786f7b0a42fd474699476ba9b91bf5f0c50b2a70fe068",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-dirac-tetrad.md",
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/provenance.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-dirac-tetrad.md": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1",
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+      }
+    },
+    {
+      "artifact_id": "NSC-5-TAIL-LIMIT",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_tail_limit.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-5-tail-limit.json"
+      ],
+      "generator_sha256": "6c3a37f032323c15e5e85ea42990b316f12e083715d6c57da57defcccb8d8b4f",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-tail-limit-v1"
+      },
+      "json_format": "pretty",
+      "order": 67,
+      "output": "results/nsc-5-tail-limit.json",
+      "output_sha256": "499658c02d7662b2ef3b3f80a4578ae9b952b09a47c31c75a599c09087b7372a",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_geometric_chain.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/nsc_smooth_geometry.py",
+        "src/recursive_horizons/nsc_tail_limit.py",
+        "src/recursive_horizons/provenance.py"
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "src/recursive_horizons/nsc_smooth_geometry.py": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0",
+        "src/recursive_horizons/nsc_tail_limit.py": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+      }
+    },
+    {
+      "artifact_id": "NSC-5-CLOCK-HORIZON",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_clock_horizon.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-5-clock-horizon.json"
+      ],
+      "generator_sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-clock-horizon-v1"
+      },
+      "json_format": "pretty",
+      "order": 68,
+      "output": "results/nsc-5-clock-horizon.json",
+      "output_sha256": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-clock-horizon.md",
+        "scripts/check_nsc_dirac_tetrad.py",
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/provenance.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-clock-horizon.md": "8ef7849ced4b5fad6b00456c11dd6e2fa4248b6acd6c0caad7afc17d1c014aac",
+        "scripts/check_nsc_dirac_tetrad.py": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae",
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+      }
+    },
+    {
+      "artifact_id": "NSC-5-PLATEAU-CONDITIONS",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-12,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-10
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_plateau_conditions.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-5-plateau-conditions.json"
+      ],
+      "generator_sha256": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "plateau_scope",
+        "prediction_claim_pointer": "/observational_audit/prediction_claim",
+        "schema": "NSC-5-PLATEAU-CONDITIONS-v1",
+        "scope": "Exact FLRW consistency requirements plus analytic future controls; full physical closure remains open."
+      },
+      "json_format": "pretty",
+      "order": 69,
+      "output": "results/nsc-5-plateau-conditions.json",
+      "output_sha256": "d0f6b02e3c8bd9c6174b95ac1ff5fd46e4587bd9277c6c7fdd136a295f049f61",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-plateau-conditions.md"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-plateau-conditions.md": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
+      }
+    },
+    {
+      "artifact_id": "NSC-6-VACUUM-WORK",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 5e-10,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-07
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_vacuum_work.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-6-vacuum-work.json"
+      ],
+      "generator_sha256": "f75ea645710751521bcd22c880a59d570664f47439d334d5e51595edbb3b0db9",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-vacuum-work-v1"
+      },
+      "json_format": "pretty",
+      "order": 70,
+      "output": "results/nsc-6-vacuum-work.json",
+      "output_sha256": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "src/recursive_horizons/nsc_energy_transfer.py",
+        "src/recursive_horizons/nsc_shape_response.py",
+        "src/recursive_horizons/nsc_vacuum_work.py"
+      ],
+      "source_dependency_hashes": {
+        "src/recursive_horizons/nsc_energy_transfer.py": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+        "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "src/recursive_horizons/nsc_vacuum_work.py": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c"
+      }
+    },
+    {
+      "artifact_id": "NSC-4-SMOOTH-GEOMETRY",
+      "category": "repository_derived_exact_identity",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-3-geometric-chain.json",
+        "results/nsc-3-radial-spectrum.json",
+        "results/nsc-3-regulated-recursion.json"
+      ],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_smooth_geometry.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-4-smooth-geometry.json"
+      ],
+      "generator_sha256": "f13d1d9b475e270d954b5063335022663f6f10d06718bcac2220b66209fbc900",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-smooth-geometry-v1"
+      },
+      "json_format": "pretty",
+      "order": 71,
+      "output": "results/nsc-4-smooth-geometry.json",
+      "output_sha256": "028046731ca6a5e3ee3230db87cd623081083a05877da50e029330a127f11673",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-smooth-geometry.md",
+        "scripts/check_nsc_geometric_chain.py",
+        "scripts/check_nsc_radial_spectrum.py",
+        "scripts/check_nsc_regulated_recursion.py",
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_geometric_chain.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/nsc_smooth_geometry.py",
+        "src/recursive_horizons/provenance.py",
+        "tests/test_nsc_smooth_geometry.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-smooth-geometry.md": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383",
+        "scripts/check_nsc_geometric_chain.py": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b",
+        "scripts/check_nsc_radial_spectrum.py": "14e5ec4ed1703a6a3f96ae6067f90c2c6c742c54b958d2ee3aeefbf824fed184",
+        "scripts/check_nsc_regulated_recursion.py": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "src/recursive_horizons/nsc_smooth_geometry.py": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf",
+        "tests/test_nsc_smooth_geometry.py": "0f212f17035376664395c72ecd0a491c77fc9b025c459e3a7013e2f7314c0771"
+      }
+    },
+    {
+      "artifact_id": "NSC-4-LORENTZIAN-TRANSPORT",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-4-dirac-tetrad.json"
+      ],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_lorentzian.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-4-lorentzian-transport.json"
+      ],
+      "generator_sha256": "ed0edaa53326e6f312bbb21d1e6ec01ddf501190d6b2f6e0a1baef8044480bce",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-lorentzian-transport-v1"
+      },
+      "json_format": "pretty",
+      "order": 72,
+      "output": "results/nsc-4-lorentzian-transport.json",
+      "output_sha256": "93b1144975de0d146ae42ab35cf6b3dae43f7ea7b8cc2d4130cc5aeada6e98fe",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_lorentzian.py",
+        "src/recursive_horizons/provenance.py"
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+      }
+    },
+    {
+      "artifact_id": "NSC-4-SHAPE-RESPONSE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-07,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-06
+      },
+      "dependencies": [
+        "results/nsc-4-covariant-measure.json",
+        "results/nsc-4-smooth-geometry.json"
+      ],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_shape_response.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-4-shape-response.json"
+      ],
+      "generator_sha256": "5a5064e842a4a1526fb43137f0696ec2297b2bb26588cfcb0e58c2b85c0b4208",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-shape-response-v1"
+      },
+      "json_format": "pretty",
+      "order": 73,
+      "output": "results/nsc-4-shape-response.json",
+      "output_sha256": "2ad75d62c9682355f827f5b51b6b7242ec504ee7424fd674914cc7f9771ad9f7",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "src/recursive_horizons/nsc_covariant_measure.py",
+        "src/recursive_horizons/nsc_geometric_chain.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/nsc_shape_response.py",
+        "src/recursive_horizons/nsc_smooth_geometry.py"
+      ],
+      "source_dependency_hashes": {
+        "src/recursive_horizons/nsc_covariant_measure.py": "5975bdbdad564afc122392bc975742da4706900024fbb1f38afeeb90686b63c5",
+        "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+        "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "src/recursive_horizons/nsc_smooth_geometry.py": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0"
+      }
+    },
+    {
+      "artifact_id": "NSC-6-ENERGY-TRANSFER",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [
+        "results/nsc-4-shape-response.json",
+        "results/nsc-4-smooth-geometry.json",
+        "results/nsc-5-plateau-conditions.json"
+      ],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_energy_transfer.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-6-energy-transfer.json"
+      ],
+      "generator_sha256": "7cfd780e76c89f123decf11f09a97390525194f4c4ee326ff30bc9e4a504d713",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-energy-transfer-v1"
+      },
+      "json_format": "pretty",
+      "order": 74,
+      "output": "results/nsc-6-energy-transfer.json",
+      "output_sha256": "911fefa75e6ffa5f61224f4354c63351cb366728efa73ecf6784371ff3669be1",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/check_nsc_scale_closure.py",
+        "src/recursive_horizons/nsc_energy_transfer.py",
+        "src/recursive_horizons/nsc_shape_response.py",
+        "src/recursive_horizons/provenance.py"
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_scale_closure.py": "3241c99fb2918f6091d95160a68931bd616f2773fc48ea61497129488266d9e7",
+        "src/recursive_horizons/nsc_energy_transfer.py": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+        "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "src/recursive_horizons/provenance.py": "7c4451d5545c82ee54e3cb618c9861139c32864626f56e2faf101053bbdf5eaf"
+      }
+    },
+    {
+      "artifact_id": "NSC-7-OBSERVABLE-BRIDGE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-12,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-10
+      },
+      "dependencies": [
+        "results/nsc-5-plateau-conditions.json",
+        "results/nsc-6-energy-transfer.json",
+        "results/nsc-6-vacuum-work.json"
+      ],
+      "follow_up_source_commit": "e25c1b42acd0e390775268aadd899866a838aa32",
+      "generator": "scripts/check_nsc_observable_bridge.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-7-observable-bridge.json"
+      ],
+      "generator_sha256": "ca10587a97c97a382c9b59621f2c7ce14738d3e383c57d51c6c1af5ed7b0e80c",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-observable-bridge-v1"
+      },
+      "json_format": "pretty",
+      "order": 75,
+      "output": "results/nsc-7-observable-bridge.json",
+      "output_sha256": "69495eda9f1815436223a8e472d923aa5ba9db913b03696bdf0e8388b2f1b024",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "scripts/check_nsc_plateau_conditions.py",
+        "src/recursive_horizons/nsc_spinor_bridge.py"
+      ],
+      "source_dependency_hashes": {
+        "scripts/check_nsc_plateau_conditions.py": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6",
+        "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+      }
+    },
+    {
+      "artifact_id": "NSC-8-CHIRAL-BOUNDARY",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 1e-08,
+        "kind": "all_fields",
+        "relative_tolerance": 1e-08
+      },
+      "dependencies": [],
+      "follow_up_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
+      "generator": "scripts/check_nsc_chiral_boundary.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-8-chiral-boundary.json"
+      ],
+      "generator_sha256": "ce5c7e04ec35e4e9ab30ceb39b7099e350a71f874b70348f343b06395fcc7300",
+      "headline_observables": [],
+      "identity_policy": {
+        "classification": "evaluated_finite_spatial_fullspinor_response_and_domain_aware_chiral_obstruction",
+        "gate": {
+          "baseline_scalar_pseudoscalar_tensor_absent": true,
+          "cell_current_and_Green_identity": true,
+          "continuum_response_agrees_below_one_percent": true,
+          "direct_joined_equals_eliminated": true,
+          "frame_transport_restores_obstruction": true,
+          "full_paired_angular_chirality_preserved": true,
+          "independent_transfer_matches_joined": true,
+          "legacy_wall_causes_chiral_breaking": true,
+          "mass_control_has_chiral_odd_response": true,
+          "massless_response_does_not_preserve_candidate_Pi_sheet": true,
+          "nonzero_baseline_link": true,
+          "resolution_second_order": true,
+          "resolvent_has_correct_Schwarz_and_Herglotz_sign": true
+        },
+        "kind": "schema_gate",
+        "schema": "NSC-8-CHIRAL-BOUNDARY-v1"
+      },
+      "json_format": "compact",
+      "order": 76,
+      "output": "results/nsc-8-chiral-boundary.json",
+      "output_sha256": "9bbf676447b9a6fb68966dfeab1ea798834e478e23501e9757fc8e79027c0f07",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-chiral-boundary.md",
+        "src/recursive_horizons/nsc_boundary.py",
+        "src/recursive_horizons/nsc_chiral_boundary.py",
+        "src/recursive_horizons/nsc_lorentzian.py",
+        "src/recursive_horizons/nsc_spinor_bridge.py",
+        "tests/test_nsc_chiral_boundary.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-chiral-boundary.md": "fb6dc600ea65dc02ef4f4282dc4b930bead1010b57551e98c6346b4b118d2d2a",
+        "src/recursive_horizons/nsc_boundary.py": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e",
+        "src/recursive_horizons/nsc_chiral_boundary.py": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c",
+        "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+        "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19",
+        "tests/test_nsc_chiral_boundary.py": "83f4c011d441d37012ef3aa02e0c8b00a44d9e9906021704efcd68e092cd0cda"
+      }
+    },
+    {
+      "artifact_id": "NSC-8-FINITE-TERMS",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 2e-06,
+        "kind": "all_fields",
+        "relative_tolerance": 2e-08
+      },
+      "dependencies": [
+        "results/nsc-4-covariant-measure.json",
+        "results/nsc-4-shape-response.json",
+        "results/nsc-4-smooth-geometry.json"
+      ],
+      "follow_up_source_commit": "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
+      "generator": "scripts/check_nsc_finite_terms.py",
+      "generator_args": [
+        "--output",
+        "results/nsc-8-finite-terms.json"
+      ],
+      "generator_sha256": "551251aaa40537825a0c23e9d81a9b1d81b36d106a0936e194af2611d1c771b0",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "terminal",
+        "schema": "nsc-finite-terms-v1"
+      },
+      "json_format": "pretty",
+      "order": 77,
+      "output": "results/nsc-8-finite-terms.json",
+      "output_sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c",
+      "paper_claim_ids": [],
+      "source_dependencies": [
+        "docs/nsc-covariant-measure.md",
+        "docs/nsc-finite-terms.md",
+        "docs/nsc-self-sourcing-progress.md",
+        "docs/nsc-smooth-geometry.md",
+        "src/recursive_horizons/nsc_finite_terms.py",
+        "src/recursive_horizons/nsc_shape_response.py",
+        "tests/test_nsc_finite_terms.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-covariant-measure.md": "9848ab71783af5dce121e06a1718de5b5877f288daa15c45603e49d2a26c309e",
+        "docs/nsc-finite-terms.md": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135",
+        "docs/nsc-self-sourcing-progress.md": "4417917a63ad6b33310c69205fdf6f3cdc326275ea0bf6d96312312e36c64800",
+        "docs/nsc-smooth-geometry.md": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383",
+        "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+        "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "tests/test_nsc_finite_terms.py": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
+      }
     }
   ]
 }

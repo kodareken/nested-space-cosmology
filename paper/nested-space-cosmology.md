@@ -3,223 +3,258 @@
 ## One Recursive Spectral Gradient–Boundary Equation Across Scales
 
 **Douglas Ek**<br>
-Nested-Space Cosmology<br>
-Version 0.1.0 — 8 September 2026 (unit-closure revision)
+Version 0.2.0 — 8 September 2026<br>
+Working preprint · not peer reviewed
 
 ## Abstract
 
-Nested-Space Cosmology proposes that particles, waves, local constants, unresolved (“dark”) metric response, and the black-to-child transition are projections of one recursive spectral operator rather than separately fitted sectors. The configuration of a room can change. The law, the dimensionless coefficient vector \(\Theta\), the energy meaning, and the boundary kernel must not. The one equation is the heat-kernel spectral action of a self-similar block Dirac operator together with the requirement that a parent/child dilation leave that operator invariant.
+Nested-Space Cosmology proposes that local matter, inherited constants, unresolved gravitational response, and a finite parent-to-child transition arise from one recursive operator and one set of laws. The organizing condition is \(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\). This paper separates that physical hypothesis from exact operator identities, computed development models, and observations still to be predicted.
 
-The construction uses established physics as a launch surface: spectral action and scale anomaly, Skyrme/BPS nuclear structure, Randall–Sundrum outside geometry, two-wall shadow matter, Wetterich flow, and the exact regular black-universe four-geometry. Binding those ingredients is not novelty. What this repository derives is a concrete operator, a two-sheet representation of a noninjective areal-radius chart, Gauss–Bonnet identities of that carrier, a scalar recursive outside kernel, a global horizon-penetrating spectral foliation, computed finite first-order radial boundary maps with explicit domain and approximation limits, and a unitary dilation that makes the recursion map executable.
+The verified chain now contains evaluated full-spinor finite throat maps, normalized recursion, a gapless isolated radial operator, smooth periodic geometry with a band gap, causal Dirac propagation on a horizon benchmark, covariant vacuum-source controls, and quantum stress differences on a varying neck. A prescribed radius deformation produces Dirac pairs whose energy is accounted for by geometric work. A scalar sheet coupling admits an invariant chiral sector equal to an ordinary massive Dirac Hamiltonian. These results provide explicit connections between geometry, matter-like excitations and response; they do not yet determine the absolute source, physical mass spectrum, or self-consistent cosmology.
 
-A ZETA1 numerical chain then produced determinant-only inheritance-scale roots. Those historical numbers used the inconsistent mass conversion \((\lambda_j+\mu^2)/\zeta\). The declared additive-gap operator requires \(q_j=\lambda_j/\zeta+\mu^2\). Compensating the pure cutoff anomaly, and then correcting the units, removes those roots: in the finite, fixed-geometry family the subtracted derivative is strictly negative for every \(\zeta>3\pi/2\). Adding an independently weighted geometric action is forbidden double-counting. The missing owner is the child’s own next-child response. With explicit parent normalization the derived, still unsolved, energy-resolved equation is \(\Gamma_p(x)=K_p(x)-(1/\Omega)\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}\). \(\Omega\) is not selected. Dilation alone does not derive \(\zeta=\Omega^2\). Finite regulated variations and a normalized chain are derived in an explicit matrix calculus; an ultrastatic frequency factor differs from a spatial trace, and the trapped coordinate-time Hamiltonian is not elliptic. The isolated radial throat is gapless. Periodic repetition of that throat produces a geometric band gap without an inserted mass, with continuum edges \(0.7034881641\), \(0.4552655377\), and \(0.2479700183\) at \(R=2,4,8\). That gap is a controlled project realization, not a Lorentzian nested cosmology, not an electron, and not a completed plan. Physical \(\zeta\), a particle spectrum, a dark-sector fit, and identification of our universe with a black-hole interior remain open.
+The next equation closes the feedback: the boundary interaction, quantum state and absolute metric source must determine one another through the common covariant functional. The calculations distinguish stored vacuum stress from energy transport, identify finite action terms requiring ultraviolet matching, and provide precise tests of the physical chiral sector. The 77-record collection preserves the original 58 historical records and adds 19 scoped follow-ups, including the new chiral boundary and finite metric-response calculations. This working formulation provides an explicit route to physical scale, matter and cosmological predictions; those predictions remain to be obtained from the coupled solution.
 
-> **Status.** This is a working preprint of a conjectural research programme, not a completed theory and not a peer-reviewed result. It does not prove Nested-Space Cosmology, a final inheritance scale \(\zeta\), a particle spectrum, a dark-sector fit, or that our universe is the interior of a black hole. Numerical values below are copied from committed compact JSON under [`results/`](../results/manifest.json). If a JSON `nonclaims` flag is `false`, the corresponding statement is not claimed.
+## 1. One hypothesis and a continuous physical test
 
-## Authorship and AI contribution disclosure
+**Postulate.** Spaces form inside spaces through collapse, localization and renewed expansion. A room can change its configuration and locally measured scales while inheriting the same dimensionless law. The central requirement is
 
-**Douglas Ek** is the sole accountable author. He supplied the research direction, the organizing thesis that black holes, universes, singularities, infinity, and local constants belong to one inherited recursive architecture, the scientific decisions about what to import, derive, invalidate, or leave open, and publication responsibility.
+$$
+\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
+$$
 
-The public documents, derivations, scripts, and compact records were developed in iterative collaboration with **ChatGPT** and **OpenAI Codex**. The AI collaborator drafted formal language, executable code, literature comparisons, and adversarial checks; it proposed operator identifications, truncation tests, and claim discipline; and it assisted with numerical investigation of the inheritance-scale chain. Every AI contribution is candidate work until it matches explicit mathematics, a committed compact JSON record, cited primary sources, and the JSON nonclaims. AI credit records material assistance with formulation, computation, drafting, comparison, and audit. It does not transfer scientific accountability and does not imply independent authorship.
+Its block form has room operators on the diagonal and parent/child boundary maps off diagonal. The proposed invariant partition and present spectral prescription are
 
-Evidence labels follow [`THEORY.md`](../THEORY.md): **Postulate**, **Imported result**, **Repository derivation**, **Numerical diagnostic**, **Open prediction**, **Interpretive hypothesis**. The live checkpoint is [`docs/current-result.md`](../docs/current-result.md). Imported launch surfaces and the one joint claim are in [`docs/prior-art-and-open-claim.md`](../docs/prior-art-and-open-claim.md).
+$$
+Z_{\Lambda}^{\mathrm{one}}(\mathbb D_\Theta)=\int\mathcal D\varphi\,Z_\Lambda(e^{-\varphi/2}\mathbb D_\Theta e^{-\varphi/2}),
+$$
 
-## 1. The one-equation claim
+$$
+S_{\mathrm{one}}=\operatorname{Tr}e^{-\mathbb D_\Theta^2/\Lambda^2}+\langle J\Psi,\mathbb D_\Theta\Psi\rangle.
+$$
 
-**Postulate.** Spaces form inside spaces through collapse, localization, and renewed expansion. Eternity is then an unending process of finite rooms, not one infinite container. Singularity and infinity are two directions of the same local-chart wall. Local constants are formation parameters of one room. Unresolved rooms act locally through the same kernel that makes a boundary black. Parent collapse and child expansion are two sides of one finite transition.
+The displayed functional is a formulation to complete, not an already normalized quantum-gravity path integral. The regulator, normalization scale, compensator, measure, determinant phase, zero modes and physical domain must be derived consistently. Induced geometric terms must be counted once. Adding a separate gravitational weight to rescue a stationary root would change the adopted construction.
+
+The same action must generate the source of its geometry, the physical particle sectors and their interactions, and the observable response. The operational chain is:
 
 ```text
-Parent space
-└── Local collapse / black hole
-    └── Child space
-        └── ...
+common action + state + recursive boundary domain
+       -> boundary response and absolute stress
+       -> coupled geometry and state evolution
+       -> matter, energy transfer and physical modes
+       -> expansion, clustering and lensing
+       -> independent observational tests
 ```
 
-**Postulate.** Particles, waves, forces, space, nuclear binding, collapse, and expansion are states, derivatives, or projections of one relational gradient–boundary system. Let \(\mathbb{D}_\Theta\) be one self-similar block Dirac operator whose diagonal blocks are rooms and whose off-diagonal blocks \(\Phi_n\) are finite parent/child maps. The organizing invariant partition equation is
+**Douglas Ek** is the accountable author and retains scientific and publication responsibility. ChatGPT/OpenAI Codex assisted with formulation, derivation, software, computation and presentation; Grok supplied bounded independent checks. The author identifies the principal collaborating sessions as GPT-5.6 Sol and GPT-6 Astra. These attribution labels do not certify a calculation: each result is supported by its committed equations, reproducer, source hashes and stated scope.
 
-$$
-\boxed{
-Z_{\Lambda}^{\mathrm{one}}(\mathbb D_\Theta)
-=
-\int \mathcal D\varphi\,
-Z_\Lambda\!\left(
-e^{-\varphi/2}\mathbb D_\Theta e^{-\varphi/2}
-\right),
-\qquad
-\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
-}
-$$
+## 2. Six explanations the programme aims to establish
 
-The present concrete regulated action inside that partition function is
+Each row is a research target. The third column records the calculation that would turn its interpretation into a physical result.
 
-$$
-S_{\mathrm{one}}[\mathbb{D}_\Theta,\Psi]
-=
-\operatorname{Tr}\,e^{-\mathbb{D}_\Theta^2/\Lambda^2}
-+\langle J\Psi,\mathbb{D}_\Theta\Psi\rangle,
-\qquad
-\mathcal{T}_\Theta^*\mathbb{D}_\Theta
-=
-\mathbb{D}_\Theta.
-$$
-
-The exponential profile is not an extra coefficient. **Repository derivation.** Composition of successive unresolved-resolution steps, with positivity and \(\mathbb{D}^2\) as generator, selects the heat semigroup as the present heat-kernel diagnostic. Remaining \(\Lambda\) names the unit of resolution. Identifying that positivity with the complete physical anomaly or covariance requires a common regulator, field measure, and derived variation.
-
-The operational test is one frozen object \((S_{\mathrm{one}},\Theta,\mathcal{T})\) whose same fields, operator coefficients, boundary kernel, and scale map jointly produce:
-
-1. finite stationary electron, proton, and neutron charge sectors;
-2. quantum amplitudes and detector couplings of those same configurations;
-3. nuclear masses and reaction \(Q\)-values without inserted nucleon masses;
-4. the nuclear-fitted self-gravitating branch;
-5. a stable trapped-to-defocusing-to-expanding transition; and
-6. a non-tunable dimensionless prediction identifying our cosmology with the child side of that transition.
-
-No individual item is project novelty. The invariant closure is. Until that joint solution exists, Nested-Space Cosmology remains a constructive working hypothesis: one equation, imported launch surfaces, a sequence of honest derivations and invalidated truncations, and an unsolved recursive child tail.
-
-## 2. Imported foundations
-
-These are launch surfaces, not discoveries. Primary sources and the compute-admission rule are collected in [`docs/prior-art-and-open-claim.md`](../docs/prior-art-and-open-claim.md). Binding an imported result to \(S_{\mathrm{one}}\) is bookkeeping unless a previously missing arrow is closed with the same \(\Theta\), boundary kernel, and transition map.
-
-| Subject | Imported result | Project use |
+| Target | Strongest present connection | Required physical closure |
 |---|---|---|
-| Electron interference | Individual detections build an interference pattern (Tonomura). | Constraint on any particle ontology. |
-| Quantum state | QFT treats particles as field excitations. PBR constrains purely epistemic wavefunctions ([arXiv:1111.3328](https://arxiv.org/abs/1111.3328)). | Distinguish localized energy from the amplitude of the same field state. |
-| Bell nonlocality | Loophole-free tests exclude local hidden variables ([PRL 115, 250401](https://doi.org/10.1103/PhysRevLett.115.250401), [250402](https://doi.org/10.1103/PhysRevLett.115.250402)). | A gradient medium cannot be an ordinary local three-dimensional fluid. |
-| Solitons / Skyrme | Localized finite-energy field configurations; collective quantization can give fermionic baryons ([arXiv:1309.0820](https://arxiv.org/abs/1309.0820), [arXiv:1312.2960](https://arxiv.org/abs/1312.2960)). | Pattern for stationary charge sectors. |
-| Nuclear energy | Masses and \(Q\)-values are differences of complete bound-state energies. | Required low-energy projection. |
-| Einstein–BPS stars | Nuclear-fixed parameters produce compact-star branches ([arXiv:1503.03095](https://arxiv.org/abs/1503.03095)). | Gravity benchmark, not a discovery target. |
-| Black universes | Exact regular solutions contain a trapped interior, a finite radius minimum, and an expanding cosmological interior ([arXiv:gr-qc/0611022](https://arxiv.org/abs/gr-qc/0611022)). | Limiting four-geometry. Section 6. |
-| RS2 outside geometry | Projected five-dimensional Weyl term can carry the exotic null response while the local scalar remains positive-kinetic ([arXiv:0910.4930](https://arxiv.org/abs/0910.4930)). | Structural realization of \(\Gamma_{\mathrm{outside}}\). |
-| Two-wall shadow matter | Other-wall matter gravitates locally and deflects light \(25\%\) more weakly at equal Newtonian mass ([arXiv:hep-th/9911055](https://arxiv.org/abs/hep-th/9911055)). | Outside particles acting on local fabric, plus a fixed discriminator. |
-| Spectral action | One Dirac operator yields the Standard Model coupled to Einstein plus Weyl gravity ([arXiv:hep-th/9606001](https://arxiv.org/abs/hep-th/9606001)). | Local-room scaffold. Its finite Dirac/Yukawa spectrum remains input until the recursive fixed point determines it. |
-| Local Higgs–dilaton anomaly | Common local Weyl mode of the regulated fermionic determinant ([arXiv:1210.2663](https://arxiv.org/abs/1210.2663)). | Import the common local scale; derive only the relative parent/child sheet. |
-| Doubled spectral geometry | Two metrics and one off-diagonal field yield a canonical relative-metric interaction and a leading FLRW action ([arXiv:2012.06401](https://arxiv.org/abs/2012.06401), [arXiv:2201.03839](https://arxiv.org/abs/2201.03839)). | Leading two-geometry interaction. |
-| Spectral propagation wall | Scalar, gauge, and graviton propagation shuts off near the spectral cutoff ([arXiv:1312.2235](https://arxiv.org/abs/1312.2235)). | High-resolution boundary of local boson propagation. |
-| Wetterich flow | Exact effective-action flow with changing resolution ([DOI 10.1016/0370-2693(93)90726-X](https://doi.org/10.1016/0370-2693(93)90726-X)). | Resolution mathematics; the new task is the recursive boundary condition. |
-| Baby-universe literature | Black-hole offspring and inherited/mutated constants, including cosmological natural selection ([arXiv:gr-qc/9404011](https://arxiv.org/abs/gr-qc/9404011)). | Prior hypothesis class, not an observation. |
+| Constants and thermal limits | Characteristic/current calculations; scale and covariant-measure identities | Common causal cone, derived gravitational coupling and thermal state |
+| Finite black-hole continuation | Regular benchmark geometry; horizon-penetrating Dirac transport | Self-sourced collapse, physical stability and complete continuation |
+| Dark matter and dark energy | Boundary self-energy, vacuum response and energy-transfer identities | Joint background stress and perturbation predictions |
+| Particle, wave and measurement | Field excitations and imported collective-coordinate reduction | Derived interactions, detector records and quantum statistics |
+| Mass, chirality and antimatter | Exact invariant sheet/chirality sector and charge algebra | Actual boundary coupling, physical sector selection and gauge representations |
+| Probability and recursive infinity | Tail endpoint criteria and clock-map controls | Consistent recursive state measure, causal duration and observable limits |
 
-**Imported result.** Observed interference proves wave behavior and localized detections. It does not select a unique ontology in which a wavefunction is a second material substance. Exact black-universe solutions show that a black-hole exterior and an expanding interior can belong to one regular four-geometry. They do not show that our observed universe is such an interior.
+<!-- nsc-claim:target-constants -->
+### 2.1 Constants, resolution and absolute zero
 
-A scientific calculation belongs in this repository only when its compact record contains a coefficient shared by two previously separate scales, a stationary configuration of the frozen action, a prediction whose datum was not used to determine \(\Theta\), a stable parent/child solution sourced by that same action, or a dimensionless discriminator against ordinary cosmology. Standalone repetitions of interference, a known soliton, a published nuclear table, or a black-universe metric are not project results.
-
-## 3. The concrete recursive operator
-
-**Repository derivation.** All preceding projections are calculations of one operator:
+**Open prediction.** The causal cone must follow from the physical principal symbol and agree across the relevant propagating species. A numerical value of a dimensional speed also depends on clock and ruler conventions. Derive the gravitational response before identifying
 
 $$
-\mathbb{D}_\Theta
-=
-\begin{pmatrix}
-\ddots & \ddots & & \\
-\ddots & D_{n-1} & \Phi_{n-1} & \\
-& \Phi_{n-1}^{\dagger} & D_n & \Phi_n \\
-& & \Phi_n^{\dagger} & D_{n+1} & \ddots \\
-& & & \ddots & \ddots
-\end{pmatrix}.
+\ell_P=\sqrt{\hbar G/c^3}
 $$
 
-\(D_n\) contains the geometry, causal cone, internal algebra, and locally resolved fields of room \(n\). \(\Phi_n\) is the finite gradient/boundary map. Eigenvalues and poles are masses and propagation scales; eigenvectors and residues are wave amplitudes of those same states; heat-kernel invariants give local gravitational, gauge, vacuum, and boundary coefficients; modes concentrated outside one diagonal block but overlapping it through \(\Phi\) act locally as dark response; a nonlinear spectral geometry in which a diagonal causal branch ends while the off-diagonal map remains finite is a black-to-child transition.
+with a scale of the model. A spectral cutoff does not by itself prove a shortest measurable distance; that requires a localized-probe/backreaction experiment. The historical constant dictionary names intended outputs but does not derive nature's values ([constant dictionary](../results/nsc-1-s-one-constant-dictionary.json)).
 
-**Imported result.** Wetterich’s exact flow supplies the resolution equation. Nested-Space completion is the additional recursive boundary condition \(\Gamma_{n+1,\Omega k}[\mathcal{T}_\Theta\Phi]=\Gamma_{n,k}[\Phi]\), not a new proof of the flow itself.
+**Open prediction.** Zero temperature is a limit of the physical many-body thermal state, not the bottom of the signed first-quantized Dirac spectrum. A suitable equilibrium construction must be independent of the arbitrary energy origin, handle ground-state degeneracy and zero modes, and distinguish residual spin or vacuum correlations from thermal excitation. The historical phrase equating absolute zero with a spectral infimum is therefore a proposed dictionary entry requiring this additional derivation.
 
-**Open prediction.** The joint flow and recursion should leave only one relevant direction: an overall dimensional unit. Compact record [`nsc-1-s-one-relevant-direction-count.json`](../results/nsc-1-s-one-relevant-direction-count.json) closes the \(L0\)–\(L6\) Skyrme subspace to that rank-three, nullity-one condition. It does not close the remaining gauge, spin, mixing, and boundary coefficients, and it does not predict mass ratios.
+<!-- nsc-claim:target-continuation -->
+### 2.2 Black holes and historical horizons
 
-**Repository derivation.** Nested \(L0\)–\(L6\) self-equality reduces the four Skyrme scale coefficients to one overall normalization ([`nsc-1-s-one-nested-pair-closure.json`](../results/nsc-1-s-one-nested-pair-closure.json)). The constant dictionary then *names* local constants as Hessian and spectral outputs of one stationary \(S_{\mathrm{one}}\): characteristic-cone speed, metric stiffness as \(G^{-1}\), localized-sector masses, representation/topological spin and charge, vacuum-plus-boundary energy as \(\Lambda_n\), Planck length as a derived resolution scale, and absolute zero as the lower spectral bound ([`nsc-1-s-one-constant-dictionary.json`](../results/nsc-1-s-one-constant-dictionary.json)). Those names are not numerical values of nature’s constants. The compact record states that the electron/proton/neutron spectrum is not solved.
+**Imported result.** Regular black-universe solutions already combine a trapped region, positive minimum areal radius and expanding interior in one geometry [6]. The project uses that solution as a development benchmark. Its existence is not proof that our universe is such an interior or that the same geometry is sourced by this operator.
 
-**Imported result.** The bosonic spectral action arises, with specified coefficient modifications, as the term required to cancel the scale anomaly of the spectrally regularized fermionic action ([arXiv:1001.2036](https://arxiv.org/abs/1001.2036)). The quantum form is therefore one invariant partition function, not independently weighted fermionic and bosonic actions ([arXiv:1106.3263](https://arxiv.org/abs/1106.3263)). Geometry is the compensating anomaly of the same spectrum. Adding five-dimensional Einstein–Gauss–Bonnet or heat geometry again with a free weight double-counts that geometry.
+**Repository derivation.** The actual horizon-penetrating radial Hamiltonian includes the shift and spin connection. Conserved Dirac norm transfers in the child direction in the declared Cauchy problem ([tetrad](../results/nsc-4-dirac-tetrad.json), [transport](../results/nsc-4-lorentzian-transport.json)). The trapped finite boundary has an outflow structure; it cannot be replaced by an arbitrary reflecting wall.
 
-**Repository derivation.** Splitting local resolution into a mean field and a relative field shows that the off-diagonal \(\Phi\) depends only on the mean resolution, while the relative field changes the two diagonal propagators. At equal sheet resolution, the same \(\Phi\) is the spectral mass gap and, after eliminating the child sheet, the visible outside self-energy. With the exponential profile and the imported doubled Dirac operator, that same \(\Phi\) is also the relative-metric interaction and simultaneously shifts the effective vacuum curvature ([`nsc-1-s-one-local-two-sheet-anomaly.json`](../results/nsc-1-s-one-local-two-sheet-anomaly.json)). Setting \(\Phi=0\) removes the gap and the outside self-energy at once. This identity does not predict an electron mass. Raw finite-determinant invariance of the relative two-sheet symbol does not set the regulated relative Hessian to zero ([`nsc-2-zeta1-unit-closure-check.json`](../results/nsc-2-zeta1-unit-closure-check.json)).
+**Open prediction.** Complete physical continuation requires a dynamically sourced solution, constraints, finite tidal response and extension of relevant finite-affine endpoints. Infinite coordinate time is not affine completeness ([clock and horizon audit](../results/nsc-5-clock-horizon.json)). High-energy Euclidean spectral form factors [13] are not by themselves a Lorentzian theorem that bosonic signals stop at a physical wall.
 
-## 4. Particle/wave and local-room restrictions
+<!-- nsc-claim:target-dark-sector -->
+### 2.3 Dark response from adjacent rooms
 
-**Imported result.** Individual electron detections build an interference pattern. Quantum field theory describes particles as field excitations. Loophole-free Bell tests exclude local hidden variables. PBR constrains purely epistemic wavefunctions under preparation independence. A gradient medium therefore cannot be an ordinary local three-dimensional fluid.
+**Postulate.** Degrees of freedom outside a locally resolved room can act through its boundary response. **Repository derivation.** Eliminating those degrees of freedom gives a Schur self-energy. This establishes an exact response mechanism, not its identification with the observed dark-matter and dark-energy components.
 
-**Imported result.** Solitons and Skyrmions are localized finite-energy field configurations; collective quantization can give fermionic baryons. Nuclear masses and fusion/fission \(Q\)-values are differences of complete bound-state energies.
+An isotropic background source and a clustering/lensing response are different projections of the same required effective stress. Both must be calculated. A finite vacuum cutoff does not solve the cosmological-constant problem without a predicted renormalized curvature and physical scale. Nor does a nonzero boundary map establish a continuing energy supply.
 
-**Repository derivation**, classified as an imported collective-coordinate reduction rather than project novelty. On the BPS core, one charge-localized configuration and its collective wave amplitude share the same field state and the same rest energy. No separate point particle or pilot wave is inserted ([`nsc-1-s-one-particle-wave-identity.json`](../results/nsc-1-s-one-particle-wave-identity.json)). The compact record states that the electron solution, spin-half, electric charge, and Bell reduction are not obtained, and that complete \(\Theta\) is not calibrated.
+<!-- nsc-claim:target-measurement -->
+### 2.4 Localized excitations, waves and measurement
 
-**Postulate.** Detection is a local transfer of the same conserved charge and energy at a detector boundary, not conversion of a wave substance into a particle substance.
+**Imported result.** Individual detections build interference patterns [1]. QFT describes particles as field excitations; solitons and collective coordinates supply additional useful construction patterns [4]. The existing [particle/wave record](../results/nsc-1-s-one-particle-wave-identity.json) is an imported collective-coordinate reduction. It does not solve an electron or detector.
 
-**Imported result.** The Chamseddine–Connes spectral action produces the Standard Model coupled to Einstein plus Weyl gravity from one Dirac operator. This repository imports that local-room reduction ([`nsc-1-s-one-spectral-room-bind.json`](../results/nsc-1-s-one-spectral-room-bind.json)). It does not reconstruct each known Standard-Model term as a discovery. The finite Dirac/Yukawa matrix still contains measured fermion masses and mixings as input. Nested-Space completion is stronger: the combined functional flow and recursive fixed point must determine that finite spectrum with the same \(\Theta\). Until it does, the spectral action is an imported unifying scaffold, not the derivation of particle masses from the room.
+**Open prediction.** Couple an identified excitation to a detector through the derived interaction and evolve the whole energy/charge ledger. Interference, localized records, outcome probabilities, Bell correlations and no-signalling must follow from that model. Decoherence or mechanical resonance alone does not derive the Born rule or select an individual outcome. Bell and PBR results constrain admissible accounts [2,3]; unresolved room labels alone do not establish one.
 
-**Imported result.** Full Einstein–BPS calculations produce compact-star mass-radius branches from nuclear-fixed parameters. The compact record [`nsc-1-gravitating-bps-observation-link.json`](../results/nsc-1-gravitating-bps-observation-link.json) notes that the nuclear-fitted full-field maximum mass \(3.34\,M_\odot\) lands in the observed compact-object transition region. That is an imported gravity benchmark. The same record forbids reading \(3.34\,M_\odot\) as a precision observational fit, treating a static star as a collapse trajectory, or claiming that BPS stress already defocuses or that the parent/child energy ledger is closed.
+<!-- nsc-claim:target-antimatter -->
+### 2.5 Chiral mass and charge-conjugate states
 
-**Open prediction.** The same Hessian of \(S_{\mathrm{one}}\) must later supply finite rest energy, propagation, interference, detector coupling, spin/statistics, charge, and no-signalling Bell correlations without a second parameter vector. That joint particle/wave result is not available before a physical \(\zeta\) and a solved \(\Theta\).
+The scalar sheet benchmark in Section 3 provides an exact version of the proposed left/right relation. Its coupling has not yet been derived from the throat. Chirality, radial component, angular sector, sheet label and charge are distinct operations. Antimatter requires the conjugate gauge representation, not merely an opposite sheet or a reversed spatial gradient.
 
-## 5. Outside response and two-sheet geometry
+With the stated gamma conventions, distinguish the charge-conjugation matrix \(C=i\gamma^2\gamma^0\) in \(\psi^c=C\bar\psi^T\) from the antilinear column-spinor map \(\psi^c=i\gamma^2\psi^*\). The quantum symmetry operation and a c-number conjugation map are not interchangeable definitions. Physical photons require a spin-one gauge sector. The produced Dirac pairs do not establish baryonic dust or the observed matter excess.
 
-**Postulate.** Degrees of freedom outside the gradient that defines one local room are not locally visible, but they are not absent. “Dark” names unresolved response. “Black” names a causal/boundary continuation into another room. Neither name is a license for a second substance.
+<!-- nsc-claim:target-recursion -->
+### 2.6 Probability, infinite generation and existence
 
-**Repository derivation.** Recursive self-equality replaces an arbitrary outside source by a self-consistent spectrum. At quadratic scalar order
+**Interpretive hypothesis.** Infinity describes ongoing generation rather than one static container. **Repository derivation.** On a particular unweighted spatial chain, the endpoint is uniquely determined for \(\Omega q\le1\), while \(\Omega q>1\) requires data at infinite depth ([tail result](../results/nsc-5-tail-limit.json)). This is an endpoint criterion, not a universal strict-contraction theorem; critical recursions can converge algebraically.
+
+A nonterminating decimal is not evidence of nested geometry. Infinite room count is not proof of infinite mapped proper time. A physical claim of eternal generation requires the state measure, clock map, causal continuation and limiting observable to be defined. Energy conservation and a finite cutoff alone do not prove that child formation is inevitable or that existence has probability one.
+
+## 3. A precise shared mass and self-energy benchmark
+
+**Repository derivation.** In sheet-first Weyl order, consider
 
 $$
-\Gamma
-=
-K-\frac{b^2}{\Gamma},
+H_8=I_2\otimes\boldsymbol{\alpha}\cdot\mathbf p+\Phi\tau_1\otimes\beta,
 \qquad
-\Gamma
-=
-\frac{K+\sqrt{K^2-4b^2}}{2},
+\Pi_-=(I_8-\tau_3\otimes\gamma^5)/2.
 $$
 
-on the branch continuous with \(\Gamma\to K\) as \(b\to 0\) ([`nsc-1-s-one-recursive-outside-kernel.json`](../results/nsc-1-s-one-recursive-outside-kernel.json)). One link coefficient then generates the complete infinite tail. The scalar equation proves only that recursive integration can remove an arbitrary outside function. It does not predict particle masses, lensing, or a black-universe bulk.
-
-**Imported result.** An explicit RS2 construction already produces black-universe solutions with a positive-kinetic local scalar, the exotic null response being carried by the projected five-dimensional Weyl term ([arXiv:0910.4930](https://arxiv.org/abs/0910.4930); [`nsc-1-s-one-outside-black-bind.json`](../results/nsc-1-s-one-outside-black-bind.json)). Garriga and Tanaka’s two-wall result makes matter on the other wall gravitate locally as shadow matter and predicts \(25\%\) weaker light deflection at equal Newtonian mass, i.e. the frozen ratio \(3/4\) ([arXiv:hep-th/9911055](https://arxiv.org/abs/hep-th/9911055); [`nsc-1-s-one-shadow-matter-bind.json`](../results/nsc-1-s-one-shadow-matter-bind.json)). That discriminator is imported, not discovered here.
-
-**Numerical diagnostic.** The frozen constant two-wall tensor ratio predicts \(\gamma=1/2\) for pure shadow dominance. The compared SLACS sample is centered at \(\gamma=0.98\pm 0.07\) ([arXiv:astro-ph/0607657](https://arxiv.org/abs/astro-ph/0607657)). Pure shadow dominance on those kiloparsec scales does not pass ([`nsc-1-s-one-shadow-lensing-observation.json`](../results/nsc-1-s-one-shadow-lensing-observation.json)). That is a rejection of the constant low-energy two-wall projection as the dominant Newtonian mass, not a rejection of recursive outside geometry as a whole.
-
-**Postulate.** A parent-to-child geometry with a positive minimum areal radius cannot be represented globally by one single-valued metric function of the areal radius. The same radius occurs on both sides of the minimum while the parent and child metric states differ.
-
-**Repository derivation.** The complete parent/child geometry is single-valued only after adding a two-sheet branch state ([`nsc-1-s-one-two-sheet-black-geometry.json`](../results/nsc-1-s-one-two-sheet-black-geometry.json)). An explicit compact even five-dimensional carrier then holds both black-universe branches. The transition-fixed curvature \(b_2/F_0=-18/1015\) determines the five-dimensional Gauss–Bonnet coefficient
+The projector selects parent-left plus child-right. Exact calculation gives
 
 $$
-\frac{\alpha_{\mathrm{GB}}}{L_\star^2}
-=
-\frac{1015}{144}
+[H_8,\Pi_-]=0,
+\qquad
+W^\dagger H_8W=\boldsymbol{\alpha}\cdot\mathbf p+\Phi\beta,
 $$
 
-([`nsc-1-s-one-gauss-bonnet-null-closure.json`](../results/nsc-1-s-one-gauss-bonnet-null-closure.json)). On the local sheet \(y=0\), the same coefficient supplies a negative effective null curvature while leaving the local matter null source nonnegative, a constant tangential vacuum-form component \(108/1015\), and a normal component equal to minus one half of the room’s own geometric action density ([`nsc-1-s-one-gauss-bonnet-component-closure.json`](../results/nsc-1-s-one-gauss-bonnet-component-closure.json)).
-
-**Numerical diagnostic.** \(108/1015\) is not identified with the observed cosmological constant. \(L_\star\) is not derived. Linear stability is not proved.
-
-**Repository derivation.** That coefficient closure sits at the five-dimensional Einstein–Gauss–Bonnet critical/unique-vacuum relation \(\alpha_{\mathrm{GB}}\Lambda_0=-3/4\) ([`nsc-1-s-one-gauss-bonnet-criticality.json`](../results/nsc-1-s-one-gauss-bonnet-criticality.json)). **Numerical diagnostic.** On the actual background, the pure critical bulk time-principal matrix has rank \(5/10\) on \(y=0\) ([`nsc-1-s-one-gauss-bonnet-kinetic-rank.json`](../results/nsc-1-s-one-gauss-bonnet-kinetic-rank.json)). The induced local spectral Einstein block restores rank \(10/10\) ([`nsc-1-s-one-induced-interface-rank.json`](../results/nsc-1-s-one-induced-interface-rank.json)). A scan of \(401\) positive relative normalizations still retains complex physical characteristic roots in tangent directions ([`nsc-1-s-one-interface-characteristic-scan.json`](../results/nsc-1-s-one-interface-characteristic-scan.json)). The finite local truncation \(R_5+\alpha_{\mathrm{GB}}\mathcal{G}_5+R_4|_{y=0}\) is therefore not the complete healthy action. The omitted off-diagonal \(\Phi\) modes must complete the characteristic system. Adding or rescaling another diagonal coefficient is not the repair. Nested-Space theory is not rejected by that scan.
-
-**Open prediction.** A scale-dependent tensor projection of the same recursive kernel must recover \(\gamma_{\mathrm{eff}}\approx 1\) on solar and galactic dynamical/lensing scales while retaining nonlocal outside response and the nonlinear black-to-child saddle. That prediction is not available from the constant two-wall truncation.
-
-## 6. Exact black-universe benchmark, labeled prior art
-
-**Imported result.** The exact regular black-universe solution of Bronnikov, Dehnen, and Melnikov already exhibits a trapped interior, a finite positive areal-radius minimum, and an expanding cosmological interior in one four-geometry ([arXiv:gr-qc/0611022](https://arxiv.org/abs/gr-qc/0611022); DOI [10.1007/s10714-007-0430-6](https://doi.org/10.1007/s10714-007-0430-6)). This repository reproduces that geometry as a limiting trapped-to-expanding benchmark. It does not present the reproduction as Nested-Space novelty.
-
-Compact record [`nsc-1-exact-black-universe-defocusing.json`](../results/nsc-1-exact-black-universe-defocusing.json) reproduces, on the imported metric:
-
-- a trapped interval with positive complete-null-Raychaudhuri \(Q\) and a later expanding anti-trapped interval on the same affine congruence;
-- a finite areal-radius minimum equal to \(1\) in the source normalization;
-- exact interior limits \(V_{-\infty}=9\pi\) and \(B_{-\infty}=-3\pi\);
-- field-equation residuals consistent with the published equations at working precision.
-
-The compact `nonclaims` are all `false` for: our observed universe being this specific solution; microscopic stability of the phantom effective description; coupling of the nuclear Skyrme sector to this solution.
-
-A curvature singularity or an infinite limit alone also does not encode a child domain. The transition map, its conserved charges, and the recursive tail must be supplied by \(S_{\mathrm{one}}\). Section 8 records the exact child vacuum \(\Lambda_{e,\mathrm{child}}L_\star^2=18\pi\) implied by that same imported asymptotic; that identity constrains \(\zeta\), it does not identify our cosmology with the solution.
-
-## 7. Global foliation and self-adjoint throat
-
-**Repository derivation.** The original constant-\(t\) slices cannot define the inheritance spectrum because \(t\) and \(\rho\) exchange causal roles across the horizon. The exact metric nevertheless admits a global horizon-penetrating time
+where W embeds those four components. Thus one invariant sector is an ordinary massive Dirac Hamiltonian, with
 
 $$
-d\tau=dt+\frac{\sqrt{1-A}}{A}\,d\rho
+E^2=|\mathbf p|^2+\Phi^2,
+\qquad
+\Sigma_p(E)=\Phi^2(E+\boldsymbol{\alpha}\cdot\mathbf p)^{-1}.
 $$
 
-and a positive spatial metric on which a self-adjoint Dirac Hamiltonian can live ([`nsc-2-zeta1-foliation.json`](../results/nsc-2-zeta1-foliation.json)). The unwarped \((\tau,\rho)\) block has determinant exactly \(-1\). The identity \(1-A=3(x-\sin x\cos x)/\sin^2 x\) with \(x=\pi/2-\arctan\rho\) shows \(A<1\) on the complete real-\(\rho\) domain, so the Painlevé–Gullstrand form remains global. Compact nonclaims: the spatial foliation alone does not fix \(\zeta\), and the relative determinant is not computed.
+The complementary sector is equally invariant and spectrally equivalent. Physical selection must follow from the common action or domain, not preference. A spinor-identity sheet link instead has energies ±p±Phi and is gapless at p=Phi. A Hermitian pseudoscalar link has the same free gap and self-energy as the scalar benchmark. The spectrum therefore does not determine the complete interaction. The [observable bridge](../results/nsc-7-observable-bridge.json) checks these distinctions and the corresponding charge algebra.
 
-**Repository derivation.** Cutting at the throat produces a proposed Neumann jump operator rather than an inserted function ([`nsc-2-zeta1-self-adjoint-domain.json`](../results/nsc-2-zeta1-self-adjoint-domain.json)):
+Both chiral components carry the same Dirac charge. A massive positive-energy eigenstate has a constant chirality expectation. The familiar left-to-right oscillation belongs to a specified initially chiral state containing both energy signs. In the full paired angular continuum problem, the massless radial geometry and its radius pulse preserve physical chirality. Their radial gap is consequently not already a four-dimensional chirality-breaking rest mass.
+
+The next test is the actual boundary map's Clifford structure, orientation and invariant domain, followed by a controlled local limit and physical pole. These calculations are kinematic connections within this project; ordinary Dirac algebra is prior physics.
+
+**Repository derivation: evaluated boundary channels.** The full paired-angular calculation now evaluates an energy-dependent four-component spatial link in an explicit current-conserving domain. Direct joined, transfer and Schur calculations agree below 2e-15 relative; an independent continuum integration gives 0.00947%–0.03645% errors at the reported resolution. The link preserves physical chirality. Its action-form Clifford decomposition has vector and axial content; scalar and pseudoscalar terms vanish to numerical precision ([chiral boundary](../results/nsc-8-chiral-boundary.json)).
+
+This result specifies the actual transport structure of that massless spatial realization. The proposed chiral-sector mass reduction requires an additional interaction or physical domain mechanism derived from the common action. A passive change of the child spin frame does not supply it: chirality must be transported with the frame. The numerical map is a finite spatial point-port response, with its units and regulator stated explicitly; it is not the full PG retarded map or a local mass term.
+
+## 4. Geometry, vacuum stress and an explicit energy ledger
+
+**Repository derivation.** The isolated radial throat is gapless. Periodic confinement can create a band gap, and a smooth periodic profile removes the earlier geometric seams:
 
 $$
-\Phi_{\mathrm{throat}}(E)=\mathcal{N}_p(E)+\mathcal{N}_c(E).
+r(x)=\sqrt{a^2+[\sin(kx)/k]^2},\qquad k=\pi/(2R).
 $$
 
-The compact record establishes radial partner identities and a two-component flux-cancellation example. The maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), the APS projectors, lapse/shift additions, and \(\Phi_{\mathrm{throat}}=R(E)\) were unevaluated declarations in that historical record. Section 15 evaluates finite spatial radial maps; the full APS, lapse/shift horizon problem and physical matching field remain open. Flux cancellation alone does not establish their physical identification. The cited BFK theorem assumes compactness, a product collar, and spectral conditions; its direct applicability to this noncompact warped geometry is unproved ([arXiv:math/0304347](https://arxiv.org/abs/math/0304347)). The compact record also states that the formal domain is not a computed spectrum, that the lowest partial wave is not the complete Dirac operator, and that the physical gap is not fixed.
+At a=1 and R=2,4,8, its continuum first band edges are approximately 0.76423204, 0.51425546 and 0.28454085 ([smooth geometry](../results/nsc-4-smooth-geometry.json)). R remains an input. These are spatial spectral values, not identified particle masses.
 
-## 8. ZETA1 numerical investigation
+The same profile requires a negative effective Einstein null source,
+
+$$
+8\pi G(\rho+p_x)=-2r''/r.
+$$
+
+The [covariant vacuum controls](../results/nsc-4-covariant-measure.json) establish negative axial-null vacuum response on a specified compact constant cylinder. The [varying-neck calculation](../results/nsc-4-shape-response.json) differentiates all metric functions and computes a periodic-minus-antiperiodic stress difference. Its local finite counterterms cancel in that difference; its absolute stress is not thereby fixed. Choosing a spin structure because its stress has the desired sign would not derive it.
+
+A finite term proportional to the squared Weyl curvature leaves the anomaly unchanged but changes the varying-neck shape equation. The current flat common-scale integral also diverges in its finite realization. The ultraviolet functional, complete compensator and state must resolve these questions before a stationary root represents self-sourcing.
+
+**Repository derivation: finite metric response.** The general-metric calculation now isolates four independent bulk channels in the local basis \(M^4,M^2R,C^2,R^2,E_4,\Box R\). On the closed smooth cell, the Euler and divergence terms have exact zero bulk variation. Both R=2 and R=4 profiles distinguish the remaining four coefficients; the constant-cylinder control has rank two. Independent lapse, radial metric and radius variations agree with direct energy changes ([finite terms](../results/nsc-8-finite-terms.json)).
+
+For the declared finite-action sign convention, the exact neck null response is
+
+$$
+\Delta(\rho+p_x)_{\mathrm{fin}}=\frac{4M^2}{a^2}c_R+\frac{32(1+a^2k^2)}{3a^4}c_C-\frac{16(1+4a^2k^2)}{a^4}c_{R^2}.
+$$
+
+This gives a concrete ultraviolet matching problem: determine these coefficients from the same functional, then solve the independent metric equations. They have not been fitted to make the neck stationary. The result concerns a closed torsionless metric sector through four derivatives; boundary contributions and other fields require their corresponding terms.
+
+**Repository derivation.** Assign half of the cross-region link energy to each region, with \(h_A=(P_AH+HP_A)/2\), and use \(C_{ij}=\langle c_j^\dagger c_i\rangle\). Then
+
+$$
+\frac{dE_A}{dt}=\operatorname{Tr}(C\,i[H,h_A])+\operatorname{Tr}(C\dot h_A).
+$$
+
+For the static vacuum, \([H,C]=0\), so continuing net regional injection is zero. A prepared excitation transports conserved energy through the same geometry-derived link ([energy transfer](../results/nsc-6-energy-transfer.json)). Its current depends on occupations and correlations as well as the retarded map.
+
+A prescribed smooth radius pulse gives exactly \(H(t)=H_0+\epsilon g(t)V\). It creates Dirac particle–antiparticle excitations. Independent evolution and spectral transition calculations agree, and supplied geometric work accounts for the excitation energy ([vacuum work](../results/nsc-6-vacuum-work.json)). At epsilon=0.02 and tau=0.5, one representative kappa=1 channel produces approximately 1.40181e-5 pairs and energy 3.46640e-5 in throat units. These are one-channel finite-amplitude controls, not cosmological rates. A uniform clock rescaling produces no pairs.
+
+<!-- nsc-figure:vacuum-work -->
+
+This is a calculated conversion from supplied geometric work into Dirac excitations. The deformation's own source and backreaction remain to be solved. A null-sign match, pair creation or a conserved finite energy ledger alone is not the complete metric equation.
+
+## 5. Recursion and cosmological predictions
+
+At a common dimensional energy, parent-normalized first-order elimination gives
+
+$$
+\Gamma_p(x)=K_p(x)-\frac{1}{\Omega}b\,\Gamma_c(x/\Omega)^{-1}b^\dagger.
+$$
+
+Here \(b=B_{\mathrm{dim}}/\Lambda_p\). The inheritance scale \(\zeta=(\Lambda L_\star)^2\) and cutoff ratio \(\Omega=\Lambda_c/\Lambda_p\) remain distinct. Neither is selected by unit dilation alone. Finite chains and spatial endpoint estimates are verified; the covariant state, physical recursive domain and stationary scale remain open.
+
+Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
+
+$$
+\dot\rho_b+3H(\rho_b+p_b)=Q_b+J_b,
+\qquad
+\dot\rho_d+3H(\rho_d+p_d)=-Q_b+J_d,
+$$
+
+$$
+\dot\rho+3H(\rho+p)=J_b+J_d.
+$$
+
+Internal Q_b cancels. The Bianchi identity requires the full source of ordinary Einstein gravity to be conserved; external room supply therefore needs its reservoir/boundary gravitational accounting. A throat surface integral is power, and a worldtube integral is energy. A cosmological density rate additionally requires proper time, proper volume and deposition into the identified component.
+
+For the closed flat constant-G baseline with visible dust, a constant fraction f below unity requires
+
+$$
+\frac{Q_b}{H\rho_b}=1-2q_{\mathrm{dec}}.
+$$
+
+Zero Q_b alone does not force deceleration: dust plus positive Lambda has zero exchange and approaches de Sitter expansion. A finite regular plateau is an additional condition. A known scalar Q_b also leaves pressure and perturbations undetermined ([plateau conditions](../results/nsc-5-plateau-conditions.json), [source requirements](../results/nsc-7-observable-bridge.json)).
+
+Predicting H(z), BAO and CMB requires the background and thermal history. Predicting clustering and lensing also requires pressure perturbations, anisotropic stress, momentum transfer and constrained metric response. Lambda-CDM is a predictive comparison model; CPL is a phenomenological equation-of-state parameterization. Neither is replaced merely by naming an unevaluated Q.
+
+Current comparison targets are documented with their model assumptions in [observational targets](../docs/nsc-observational-targets.md). H0DN reports 73.50±0.81 km/s/Mpc, with significance depending on the comparison [23]. DES Y6 reports S8=0.789±0.012, a 2.6-sigma projected difference from its primary-CMB comparison [24]. KiDS-Legacy reports S8=0.815 with +0.016/-0.021 uncertainty, agreeing with Planck at 0.73 sigma [25]. These are development targets, not NSC predictions or evidence that a boundary mechanism has resolved a tension.
+
+## 6. Nuclear physics and the remaining common-action equations
+
+The Skyrme/BPS sector is a possible low-energy construction pattern. Its coefficients must be obtained from the evolved common effective action before its particles, binding energies or stellar limits are predictions of NSC.
+
+The often-quoted 3.34 solar-mass maximum is imported from a nuclear-calibrated Einstein–BPS model [5]. The historical runner records the published value rather than independently recomputing it. Its potential and calibrated nuclear coefficients matter; other potentials yield different maxima. It is not a universal collapse threshold or an unfitted NSC result ([stellar benchmark](../results/nsc-1-gravitating-bps-observation-link.json)).
+
+The next coupled calculation must determine: the full spinor boundary interaction and its domain; the finite covariant functional and quantum state; absolute stress and the independent metric/link/relative-scale equations; and the physical response around that solution. Only then can particle identities, nuclear interactions, collapse, and cosmological predictions be established with the same parameters.
+
+The joint closure is a candidate project contribution, not an established novelty claim. Primary ingredients retain their original attribution. Failure of one local realization informs its revision; it neither disproves the nested architecture nor confirms it.
+
+## 7. Reproduction and scope
+
+This working revision contains 77 compact records: 58 frozen historical records and 19 scoped follow-ups. All new scientific records, their generators and hash-bound inputs are imported from committed laboratory evidence. Each has a declared comparison policy; source and scope fields remain exact. Schema adapters live outside immutable scientific generators.
+
+```text
+make demonstrate
+make verify
+make reproduce-exact
+```
+
+The short demonstration follows computed boundary response, vacuum work, and the invariant spinor sector. The full gate authenticates the graph, runs focused tests, reproduces all records in isolation, and verifies two identical PDF builds. Same-environment exact reproduction and portable numerical comparison are separate checks. See [reproducing](../docs/reproducing.md) and the [result manifest](../results/manifest.json).
+
+The following appendices preserve the main normalization corrections and finite mathematical controls. Their historical numerical roots remain diagnostics. Full covariant physical closure, predicted particle species, a measured dark fraction, and our universe's parent/child identification remain open.
+
+## Appendix A. Historical scale tests and corrections
+
+The original numerical candidates are retained for provenance. This appendix does not define the current complete action or imply that adding a recursive tail alone supplies the missing finite measure and state.
+
+### A.1 Historical scale candidates
 
 The inheritance scale is
 
@@ -231,7 +266,7 @@ $$
 
 **Repository derivation.** Matching the local on-room vacuum-form component \(108/1015\) to the doubled gap, then using the exact expanding child’s Ricci sign, selected a *conditional* one-scale gap \(|\Phi|^2/\Lambda^2=1006/1015\) and a boundary cross-projection \(\Xi_{\mathrm{boundary}}=54/503\) ([`nsc-1-s-one-child-orientation.json`](../results/nsc-1-s-one-child-orientation.json)). **Repository derivation.** The exact child asymptotic rejects that magnitude. The actual child vacuum is \(\Lambda_{e,\mathrm{child}}L_\star^2=18\pi\), so a real positive gap requires \(\zeta>3\pi/2\). Direct \(\Lambda L_\star=1\) gives a negative \(\mu^2\) and is not the physical child-matched branch ([`nsc-1-s-one-child-scale-correction.json`](../results/nsc-1-s-one-child-scale-correction.json)). The identities for \(\Phi\) as gap, Schur self-energy, and metric link remain. The numbers \(1006/1015\) and \(54/503\) are **superseded** as child-matched predictions.
 
-The ZETA1 chain then searched for a child-allowed stationary scale of the joined-minus-disconnected Dirac spectrum on the global slice. Every root in the following table is a **numerical diagnostic**. None is a physical \(\zeta\). The later anomaly compensation (Section 9) supersedes all of them as stationary points of the one equation.
+The ZETA1 chain then searched for a child-allowed stationary scale of the joined-minus-disconnected Dirac spectrum on the global slice. Every root in the following table is a **numerical diagnostic**. None is a physical \(\zeta\). The later anomaly compensation supersedes all of them as stationary points of the one equation.
 
 | Compact record | What was computed | Diagnostic value | Why it is not physical \(\zeta\) |
 |---|---|---|---|
@@ -244,7 +279,7 @@ The ZETA1 chain then searched for a child-allowed stationary scale of the joined
 
 Every corresponding JSON record states that the candidate is not promoted, that lapse and shift or the local matrix anomaly remain omitted, and that the electron mass is not predicted.
 
-## 9. Why determinant-only roots are superseded by anomaly compensation
+### A.2 Anomaly and inherited subtraction
 
 **Repository derivation.** The invariant partition function requires cancellation of pure cutoff rescaling while retaining the physical change of the child-constrained gap. For one eigenvalue the physical child-link derivative after compensation is negative whenever the gap constraint \(\mu^2=1-3\pi/(2\zeta)\) is imposed ([`nsc-2-zeta1-anomaly-decomposition.json`](../results/nsc-2-zeta1-anomaly-decomposition.json)).
 
@@ -262,7 +297,7 @@ Those historical numbers used the inconsistent conversion \((\lambda_j+\mu^2)/\z
 
 **Therefore those determinant-only \(\zeta\) values are invalidated as stationary points of the one equation.** \(\zeta_{\det}\) and \(\zeta_{\mathrm{warped}\,y}\) are uncompensated determinant diagnostics, not inheritance-scale predictions.
 
-**Repository derivation.** The missing owner is the recursive child tail, not an independently weighted Einstein–Gauss–Bonnet or heat action ([`nsc-2-zeta1-anomaly-owner-correction.json`](../results/nsc-2-zeta1-anomaly-owner-correction.json)). Geometry is already the compensating anomaly of the same fermionic determinant. Adding that geometry again is forbidden double-counting. The calculations through the scan joined one parent to one child treated as a terminal asymptotic domain. Recursion requires that the child’s boundary response already contain its own child tail. The compact `nonclaims` include `recursive_tail_is_known_to_restore_a_scale_root: false`.
+**Historical interpretation.** The next missing contribution was identified as the recursive child tail, rather than an independently weighted Einstein–Gauss–Bonnet or heat action ([`nsc-2-zeta1-anomaly-owner-correction.json`](../results/nsc-2-zeta1-anomaly-owner-correction.json)). Geometry is already the compensating anomaly of the same fermionic determinant. Adding that geometry again is forbidden double-counting. The calculations through the scan joined one parent to one child treated as a terminal asymptotic domain. Recursion requires that the child’s boundary response already contain its own child tail. The compact `nonclaims` include `recursive_tail_is_known_to_restore_a_scale_root: false`.
 
 Related routes already rejected on their own JSON nonclaims, and not repaired by retuning \(\Phi\) or adding a second geometric weight:
 
@@ -276,7 +311,7 @@ Related routes already rejected on their own JSON nonclaims, and not repaired by
 
 The fermionic sheet-resolution observable is Osterwalder–Schrader positive in the controlled flat sector ([`nsc-1-s-one-fermionic-relative-observable.json`](../results/nsc-1-s-one-fermionic-relative-observable.json)). That does not make \(\sigma_3\) the complete graviton, and it does not restore a scale root. Full-exponential positivity in that sector is a heat-kernel diagnostic, not the complete physical anomaly.
 
-## 10. Unit-consistent mass term and finite-family sign theorem
+### A.3 Corrected units and the sign theorem
 
 **Repository derivation.** The ZETA1 definitions are \(\lambda_j=L_\star^2\operatorname{eig}_j(D_{\mathrm{spatial}}^2)\), \(\zeta=\Lambda^2 L_\star^2\), and \(\mu^2=|\Phi|^2/\Lambda^2=1-a/\zeta\) with \(a=3\pi/2\). The same declared additive-gap operator therefore requires
 
@@ -322,47 +357,10 @@ $$
 
 the unregulated finite determinant is independent of \(\delta\). The proper-time functional used later in ZETA1 has a strictly positive regulated relative Hessian at \(\delta=0\) for \(p\neq 0\). Raw determinant invariance therefore cannot justify setting the regulated relative Hessian to zero. The primary anomaly paper distinguishes its normalization scale from the spectral cutoff ([arXiv:1106.3263](https://arxiv.org/abs/1106.3263)).
 
-## 11. The current recursive-tail equation
 
-**The current frontier is the unsolved energy-resolved recursive child tail.**
+## Appendix B. Finite operator and boundary controls
 
-**Repository derivation.** Norm preservation and first-order Dirac scaling fix a minimal parent/child dilation ([`nsc-2-zeta1-recursion-map.json`](../results/nsc-2-zeta1-recursion-map.json)):
-
-$$
-(U_\Omega\psi)(x)=\Omega^{d/2}\psi(\Omega x),
-\qquad
-\mathcal{T}_\Omega=\sigma_1 U_\Omega.
-$$
-
-The factor \(\Omega^{d/2}\) cancels the coordinate Jacobian. The maps compose as a semigroup. First-order spectral quantities scale together, so \(E/\Lambda\) and \(\Phi/\Lambda\) are inherited on a transformed mode. That dilation does not by itself derive \(\zeta=\Omega^2\). The inheritance scale \(\zeta=(\Lambda L_\star)^2\) and the cutoff ratio \(\Omega=\Lambda_{\mathrm{child}}/\Lambda_{\mathrm{parent}}\) remain distinct until the geometry establishes their relationship.
-
-A parent dimensionless energy \(x\) at one common dimensional energy is seen by the finer child as \(x/\Omega\). With \(b=B_{\mathrm{dim}}/\Lambda_{\mathrm{parent}}\), the recursive outside equation must be solved as
-
-$$
-\boxed{
-\Gamma_p(x)
-=
-K_p(x)
--
-\frac{1}{\Omega}\,
-b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
-}
-$$
-
-The unweighted form \(\Gamma(x)=K(x)-B^{\dagger}\Gamma(x/\Omega)^{-1}B\) is recovered if \(b_{\mathrm{sym}}=B_{\mathrm{dim}}/\sqrt{\Lambda_{\mathrm{parent}}\Lambda_{\mathrm{child}}}\). Both conventions are legitimate; they cannot silently share the same numerical link ([`nsc-2-zeta1-unit-closure-check.json`](../results/nsc-2-zeta1-unit-closure-check.json)). At vanishing argument this recovers the earlier quadratic fixed point on the branch continuous with \(\Gamma\to K\) as \(B\to 0\).
-
-This map removes an undefined symbol from the one equation. It does not compute the mode-resolved tail. The compact `nonclaims` are all `false`:
-
-- `Omega_value_selected`
-- `functional_tail_solution_computed`
-- `physical_zeta_promoted`
-- `scale_root_restored`
-
-The gate records `mode_resolved_tail_solved: false` and `zeta_derived: false`. An implementation fixture with \(\Omega=2\) then \(\Omega=3\) composes to \(\Omega=6\) (and the fixture identification \(\zeta=\Omega^2=4\)); that fixture does not select nature’s \(\Omega\) and does not derive \(\zeta=\Omega^2\) from dilation.
-
-The recorded next result is to solve the functional tail on the warped parent/child mode spectrum and recompute the anomaly-compensated scale derivative. Do not restore a root by adding a second geometric weight, retuning \(\Phi\) after seeing the target, or inserting a dark function.
-
-## 12. Finite regulated variations and a spacetime obstruction
+### B.1 Finite regulated variations and a spacetime obstruction
 
 **Repository derivation.** For a Hermitian finite Dirac matrix with no unresolved zeros, one explicit proper-time prescription is ([`nsc-3-regulated-recursion.json`](../results/nsc-3-regulated-recursion.json); [`docs/nsc-regulated-recursion.md`](../docs/nsc-regulated-recursion.md))
 
@@ -381,7 +379,7 @@ Its first and second variations retain noncommuting perturbations through divide
 
 Along \(D(t)=e^{-t}D\) at fixed cutoff, normalization, and finite domain, \(d\Gamma/dt=\operatorname{Tr}e^{-D(t)^2/\Lambda^2}>0\). No isolated common-scale extremum exists in that finite family. Normalized finite recursion with \(1/\Omega\) agrees with direct chain inversion in declared-matrix controls. \(H\) and \(b\) there are not yet computed throat maps. The compact `nonclaims` include `full_covariant_action_derived: false` and `physical_stationarity_solved: false`.
 
-## 13. The isolated radial throat is gapless
+### B.2 The isolated radial throat is gapless
 
 **Repository derivation.** The unwarped spatial radial Dirac operator already declared by the project,
 
@@ -391,7 +389,7 @@ $$
 
 has essential spectrum equal to \(\mathbb{R}\) ([`nsc-3-radial-spectrum.json`](../results/nsc-3-radial-spectrum.json); [`docs/nsc-radial-spectrum.md`](../docs/nsc-radial-spectrum.md)). A constructive Weyl sequence of compactly supported \(H^1\) bumps escaping to infinity shows that every real energy belongs to the essential spectrum. Smooth radial geometry and current-conserving gluing alone do not generate a nonzero spectral mass gap. Finite-box levels are not physical masses. There is no global \(L^2\) zero mode. The result does not cover the compact warped, interacting, recursive, or Lorentzian operator, and it does not reject Nested-Space Cosmology.
 
-## 14. A controlled geometric gap from repeated throat geometry
+### B.3 A controlled geometric gap from repeated throat geometry
 
 **Repository derivation.** Repeating the finite segment \(\rho\in[-R,R]\) with \(w=(1+\rho^2)^{-1/2}\), instead of two asymptotically widening ends, produces an open spectral gap without an inserted constant mass ([`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json); [`docs/nsc-geometric-chain.md`](../docs/nsc-geometric-chain.md)). At zero energy the exact motif transfer multipliers are \(\exp(\pm 2\operatorname{asinh} R)\); neither has modulus one, so zero is absent from every real Bloch fibre. Continuum first band edges and second-order lattice agreement are
 
@@ -405,7 +403,7 @@ has essential spectrum equal to \(\mathbb{R}\) ([`nsc-3-radial-spectrum.json`](.
 
 The next-room link is the staggered stencil entry \(B_{\mathrm{last\,edge},\mathrm{first\,node}}=1/h+w_{\mathrm{last}}/2\), not a fitted mass. Normalized finite recursion with that geometric \(B\) agrees with direct multi-motif inversion. \(R\) and \(\Omega\) remain declared inputs. Seams are periodic in \(w\) but gravitational junction equations are unproved. This is a positive project-level controlled realization of geometric confinement, not a new-to-world Floquet discovery and not a Lorentzian nested cosmology or an electron.
 
-## 15. Computed finite boundary maps and the threshold distinction
+### B.4 Computed finite boundary maps and the threshold distinction
 
 **Repository derivation.** The finite first-order radial calculation now evaluates parent and child Weyl maps with sparse LU, throat reconstruction, independent ODE integration, and direct Schur controls ([nsc-3-boundary-response.json](../results/nsc-3-boundary-response.json)). The parent lies at positive radial coordinate and its outward throat normal is negative; the child lies at negative radial coordinate and its outward throat normal is positive. The oriented relation is
 
@@ -413,7 +411,7 @@ $$
 N_p(E)+N_c(E)=E[m_c(E)-m_p(E)].
 $$
 
-A nonzero real-energy probability-current probe tests the local conservation law. The compact warp calculation reports mode-mixing leakage: its average-warp expression is a projected approximation. These results compute finite spatial maps; the complete horizon Hamiltonian, physical compensator, and Lorentzian geometry equations remain open.
+A nonzero real-energy probability-current probe tests the local conservation law. The compact warp calculation reports mode-mixing leakage: its average-warp expression is a projected approximation. These results compute finite spatial maps; the full horizon boundary maps, physical compensator, and Lorentzian geometry equations remain open.
 
 **Repository derivation.** The same isolated radial geometry supplies an explicit threshold counterexample. Solving the upper squared-Dirac equation with unit throat value and vanishing exterior value gives, for t=asinh(R),
 
@@ -427,63 +425,6 @@ $$
 
 Independent ODE solutions reproduce these maps ([nsc-3-threshold-response.json](../results/nsc-3-threshold-response.json)). The positive boundary stiffness coexists with the gapless radial bulk spectrum; it is not a particle mass of 3/2. A mass identification requires the full pole problem, residues and physical state. At zero energy m(E) can be singular, so E m(E) must be evaluated by its limit or by the squared-operator boundary problem.
 
-## 16. Predictions available only after \(\zeta\)
-
-Until the energy-resolved tail is solved and a physical \(\zeta\) is derived without using the later compared datum, the following remain **open predictions**. They are not present results.
-
-- Dimensionless mass ratios of electron, proton, and neutron stationary sectors from one \(\Theta\).
-- Detector couplings, spin/statistics, charge, and no-signalling Bell correlations of those same configurations.
-- Nuclear masses and reaction \(Q\)-values without inserted nucleon masses, then the self-gravitating branch determined by the same nuclear-sector parameters.
-- A scale-dependent tensor projection of the recursive kernel with \(\gamma_{\mathrm{eff}}\approx 1\) on tested dynamical/lensing scales and a retained nonlinear black-to-child saddle.
-- A non-tunable dimensionless identification of our cosmology with the child side of the transition, including any reading of \(108/1015\), \(18\pi\), \(1006/1015\), or \(54/503\) as an observed cosmological constant, electron mass, or \(\Xi_{\mathrm{NSC}}\).
-
-**Open prediction**, restated as a restriction. Solving \(\Gamma_p(x)=K_p(x)-(1/\Omega)\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}\) on the warped transition spectrum could restore a physical scale root. The compact record states that the recursive tail is **not** known to restore a root. Failure of one truncation, coordinate chart, or numerical method is not rejection of Nested-Space Cosmology; neither is survival of a diagnostic root promotion of the theory. Refining the finite additive-gap family cannot close its scale equation.
-
-## 17. Reproducibility
-
-This repository publishes the original \(58\) v0.1.0 compact JSON records, preserved byte-for-byte, the 59th unit-closure follow-up, and five scoped nsc-3 records (64 records in total). Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole. Inspection and regeneration are described in [`docs/reproducing.md`](../docs/reproducing.md). All-field follow-up checks are
-
-```text
-python3 scripts/check_nsc_scale_closure.py --check
-python3 scripts/check_nsc_regulated_recursion.py --check
-python3 scripts/check_nsc_radial_spectrum.py --check
-python3 scripts/check_nsc_geometric_chain.py --check
-python3 scripts/check_nsc_threshold_response.py --check
-python3 scripts/check_nsc_boundary_response.py --check
-```
-
-Isolated public reproduction copies authenticated v0.1.0 inputs as auxiliary provenance files; it does not add them as extra steps of the historical 58-record chain.
-
-Pinned dependencies are `mpmath==1.3.0`, `numpy==2.5.1`, `scipy==1.17.1`, and `sympy==1.14.0`. From the repository root:
-
-```text
-make check
-make test
-make reproduce
-make paper
-make verify
-```
-
-The live frontier record is [`results/nsc-2-zeta1-recursion-map.json`](../results/nsc-2-zeta1-recursion-map.json) (`NSC-2-ZETA1-RECURSION-MAP`). Scoped follow-ups are the unit-closure check and [`nsc-3-regulated-recursion.json`](../results/nsc-3-regulated-recursion.json), [`nsc-3-radial-spectrum.json`](../results/nsc-3-radial-spectrum.json), [`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json). Committed JSON is the public scientific object. Typical runners refuse to overwrite an existing file. Portable reproduction requires exact generator hashes, graph, schemas, formulas, classifications, gates, and nonclaims, plus the declared headline numerical observables within their manifest tolerances. Follow-ups compare every recorded field. Platform-dependent coordinates of an otherwise identical diagnostic argmin are not promoted observables. Same-environment exact mode compares every output byte. Passing either mode does not promote a numerical diagnostic or convert an imported black-universe, Skyrme, spectral-action, or shadow-matter result into Nested-Space novelty. The accepted closure plan is not completed by these records.
-
-## 18. Limitations and open claims
-
-The programme is one equation plus a closure test. The present limitations are structural, not cosmetic.
-
-- \(\Omega\) is not selected. The energy-resolved tail is not solved on the warped transition spectrum. Physical \(\zeta\) is not derived. Dilation alone does not derive \(\zeta=\Omega^2\).
-- Throat maps \(N_{\mathrm{parent}}(E)\), \(N_{\mathrm{child}}(E)\), and \(\Phi_{\mathrm{throat}}=R(E)\) remain open for the full Lorentzian horizon operator. The finite spatial radial maps are now evaluated in Section 15; they do not establish the physical matching field.
-- The full covariant field measure, physical stationarity, metric health, and nuclear or cosmological predictions remain open. A finite regulated matrix calculus is not that measure.
-- The isolated radial throat is gapless. The periodic finite-throat gap uses declared \(R\) and \(\Omega\); seams have unproved gravitational stress. It is not a Lorentzian nested cosmology or an electron.
-- Raw finite-determinant invariance does not remove the regulated relative Hessian. Full-exponential positivity is a heat diagnostic, not the complete anomaly. The ultrastatic frequency factor differs from a spatial trace. The trapped coordinate-time Hamiltonian is not elliptic.
-- Electron, proton, and neutron stationary sectors are not solved. Standard-Model mass ratios are not predicted. The finite Dirac/Yukawa spectrum remains imported input.
-- The exact black-universe four-geometry is prior art. This repository does not identify our universe with that interior, prove phantom microscopic stability, or couple Skyrme matter to the transition.
-- \(108/1015\) is an on-room vacuum-form component, not the observed cosmological constant. \(1006/1015\) and \(54/503\) are superseded one-scale diagnostics.
-- Constant two-wall shadow matter does not dominate the tested kiloparsec gravitating mass. Recursive outside geometry as a whole is not thereby rejected, and it is not thereby confirmed.
-- Pure critical Einstein–Gauss–Bonnet is not the complete interface law. The omitted object is the off-diagonal \(\Phi\) block.
-- Standalone bosonic heat-trace covariance and the inverse relative heat Hessian fail necessary positivity tests. The fermionic sheet observable that passes is not the graviton.
-- Lorentzian finite-momentum stability of the nested operator, linear stability of the two-sheet carrier, and a complete parent/child energy ledger remain open.
-
-The only project-level open claim is the invariant closure of \((S_{\mathrm{one}},\Theta,\mathcal{T})\) listed in Section 1. Until that joint solution exists, Nested-Space Cosmology is a constructive working hypothesis with a derived unsolved tail, not a proof.
 
 ## References
 
@@ -513,3 +454,11 @@ Primary sources support only the established ingredient named in the citing sent
 22. G. Teschl, *Ordinary Differential Equations and Dynamical Systems*, Graduate Studies in Mathematics **140**, American Mathematical Society (2012), [author PDF](https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode).
 
 Repository records cited in the text live under [`results/`](../results/manifest.json). The labeled theory is [`THEORY.md`](../THEORY.md). The current compact checkpoint is [`docs/current-result.md`](../docs/current-result.md).
+
+
+23. H0DN Collaboration, “The Local Distance Network,” A&A 708 A166 (2026), [arXiv:2510.23823](https://arxiv.org/abs/2510.23823).
+24. DES Collaboration, “Dark Energy Survey Year 6 Results: Cosmological Constraints from Galaxy Clustering and Weak Lensing,” [arXiv:2601.14559](https://arxiv.org/abs/2601.14559).
+25. A. H. Wright et al., “KiDS-Legacy: Cosmological constraints from cosmic shear,” A&A 703 A158 (2025), [arXiv:2503.19441](https://arxiv.org/abs/2503.19441).
+26. C. Dappiaggi, T.-P. Hack and N. Pinamonti, covariant Dirac stress and trace anomaly, [arXiv:0904.0612](https://arxiv.org/abs/0904.0612).
+27. A.-P. Jauho, N. Wingreen and Y. Meir, state-dependent quantum transport, [arXiv:cond-mat/9404027](https://arxiv.org/abs/cond-mat/9404027).
+28. D. Chung et al., gravitational Dirac production in inflation, [arXiv:1109.2524](https://arxiv.org/abs/1109.2524). This differs from the anisotropic radius-pulse benchmark here.

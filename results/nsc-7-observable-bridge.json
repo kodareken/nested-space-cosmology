@@ -1,0 +1,426 @@
+{
+  "artifact_id": "NSC-7-OBSERVABLE-BRIDGE",
+  "chiral_evolution": [
+    {
+      "controls": [
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.9318894504492167,
+          "pure_left_to_right": 0.0,
+          "time": 0.0
+        },
+        {
+          "analytic_transition": 0.10402265707094714,
+          "positive_energy_right_probability": 0.9318894504492167,
+          "pure_left_to_right": 0.1040226570709471,
+          "time": 0.5
+        },
+        {
+          "analytic_transition": 0.24560918791388855,
+          "positive_energy_right_probability": 0.9318894504492164,
+          "pure_left_to_right": 0.24560918791388864,
+          "time": 1.0
+        },
+        {
+          "analytic_transition": 0.03202797408576428,
+          "positive_energy_right_probability": 0.9318894504492171,
+          "pure_left_to_right": 0.0320279740857643,
+          "time": 2.0
+        }
+      ],
+      "energy": 1.3892443989449805,
+      "expected_positive_energy_chirality": 0.8637789008984333,
+      "helicity_sign": 1,
+      "mass": 0.7,
+      "momentum": 1.2,
+      "positive_energy_chirality": 0.8637789008984335,
+      "pure_left_negative_energy_weight": 0.9318894504492167
+    },
+    {
+      "controls": [
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.06811054955078326,
+          "pure_left_to_right": 0.0,
+          "time": 0.0
+        },
+        {
+          "analytic_transition": 0.10402265707094714,
+          "positive_energy_right_probability": 0.06811054955078326,
+          "pure_left_to_right": 0.1040226570709471,
+          "time": 0.5
+        },
+        {
+          "analytic_transition": 0.24560918791388855,
+          "positive_energy_right_probability": 0.06811054955078333,
+          "pure_left_to_right": 0.24560918791388864,
+          "time": 1.0
+        },
+        {
+          "analytic_transition": 0.03202797408576428,
+          "positive_energy_right_probability": 0.06811054955078326,
+          "pure_left_to_right": 0.0320279740857643,
+          "time": 2.0
+        }
+      ],
+      "energy": 1.3892443989449805,
+      "expected_positive_energy_chirality": -0.8637789008984333,
+      "helicity_sign": -1,
+      "mass": 0.7,
+      "momentum": 1.2,
+      "positive_energy_chirality": -0.8637789008984335,
+      "pure_left_negative_energy_weight": 0.06811054955078326
+    },
+    {
+      "controls": [
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.4999999999999999,
+          "pure_left_to_right": 0.0,
+          "time": 0.0
+        },
+        {
+          "analytic_transition": 0.11757890635775578,
+          "positive_energy_right_probability": 0.4999999999999999,
+          "pure_left_to_right": 0.11757890635775578,
+          "time": 0.5
+        },
+        {
+          "analytic_transition": 0.41501642854987947,
+          "positive_energy_right_probability": 0.4999999999999999,
+          "pure_left_to_right": 0.41501642854987936,
+          "time": 1.0
+        },
+        {
+          "analytic_transition": 0.971111170334329,
+          "positive_energy_right_probability": 0.4999999999999999,
+          "pure_left_to_right": 0.9711111703343288,
+          "time": 2.0
+        }
+      ],
+      "energy": 0.7,
+      "expected_positive_energy_chirality": 0.0,
+      "helicity_sign": 1,
+      "mass": 0.7,
+      "momentum": 0.0,
+      "positive_energy_chirality": 0.0,
+      "pure_left_negative_energy_weight": 0.4999999999999999
+    },
+    {
+      "controls": [
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 1.0,
+          "pure_left_to_right": 0.0,
+          "time": 0.0
+        },
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 1.0,
+          "pure_left_to_right": 0.0,
+          "time": 0.5
+        },
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 1.0,
+          "pure_left_to_right": 0.0,
+          "time": 1.0
+        },
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 1.0,
+          "pure_left_to_right": 0.0,
+          "time": 2.0
+        }
+      ],
+      "energy": 1.2,
+      "expected_positive_energy_chirality": 1.0,
+      "helicity_sign": 1,
+      "mass": 0.0,
+      "momentum": 1.2,
+      "positive_energy_chirality": 1.0,
+      "pure_left_negative_energy_weight": 1.0
+    },
+    {
+      "controls": [
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.0,
+          "pure_left_to_right": 0.0,
+          "time": 0.0
+        },
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.0,
+          "pure_left_to_right": 0.0,
+          "time": 0.5
+        },
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.0,
+          "pure_left_to_right": 0.0,
+          "time": 1.0
+        },
+        {
+          "analytic_transition": 0.0,
+          "positive_energy_right_probability": 0.0,
+          "pure_left_to_right": 0.0,
+          "time": 2.0
+        }
+      ],
+      "energy": 1.2,
+      "expected_positive_energy_chirality": -1.0,
+      "helicity_sign": -1,
+      "mass": 0.0,
+      "momentum": 1.2,
+      "positive_energy_chirality": -1.0,
+      "pure_left_negative_energy_weight": 0.0
+    }
+  ],
+  "classification": "exact_identification_requirements_and_kinematic_Lorentz_scalar_sheet_bridge_not_particle_or_cosmology_closure",
+  "conventions": {
+    "C_scope": "psi^c=i gamma2 psi* is an antilinear c-number map; the quantized charge-conjugation symmetry and physical antiparticle labels are distinct",
+    "angular_radial": "eta acts on(+kappa,-kappa), rho on(F,G)",
+    "basis": "Weyl for4D gamma matrices; separate Dirac basis for spherical expansion",
+    "paired_gamma5": "-eta1 tensor rho2, from full angular expansion",
+    "quantum_Ward_caution": "classical mass axial identity can acquire gauge/gravitational axial anomaly; no anomaly cancellation claimed",
+    "radial_domain_scope": "continuum paired angular operator and compatible domain; no exact naive gamma5 intertwiner claimed for the staggered node/edge regulator",
+    "scalar_sheet_bridge": "L=barPsi(i slash_partial - M)Psi, M=Phi*tau1; a candidate local Lorentz scalar interaction, not derived from current B(E)",
+    "sheet": "tau matrices, independent of spinor chirality",
+    "signature": "+---",
+    "spherical_expansion": "psi_kappa=(F Omega_kappa, i G Omega_-kappa)/r; sigma.rhat Omega_kappa=-Omega_-kappa"
+  },
+  "cosmological_source_accounting": {
+    "boundary_dimensions": {
+      "cosmological_Q": "energy/(proper volume*proper time)",
+      "local_stress": "energy/volume",
+      "surface_flux_integral": "energy/time",
+      "worldtube_flux_integral": "energy"
+    },
+    "closed_room_total": "dot rho+3H(rho+p)=0; internal Q_b cancels",
+    "consequence": "Q=0 alone neither forces a finite plateau nor selects w,H; fixed finite plateau is an additional hypothesis",
+    "exact_residuals": {
+      "dust_fraction_if_only_sourced_Friedmann_retained": "0",
+      "fraction_with_external_source_partition": "0",
+      "internal_transfer_cancels_total": "0",
+      "sourced_Friedmann_derivative": "0"
+    },
+    "general_fraction": "f_prime=3f(1-f)(w_b-w_d)-epsilon_b+j_d-f*(j_b+j_d)",
+    "missing_growth_data": [
+      "rest-frame pressure response",
+      "anisotropic stress",
+      "perturbation of energy transfer",
+      "momentum transfer",
+      "metric constraints",
+      "initial fluctuation spectrum"
+    ],
+    "normalizations": "epsilon_b=Q_b/(H*rho); j_i=J_i/(H*rho)",
+    "open_room_total": "dot rho+3H(rho+p)=J_b+J_d; external source requires reservoir/boundary gravity accounting",
+    "zero_Q_counterexamples": [
+      {
+        "external_J": 0.0,
+        "internal_Q": 0.0,
+        "rows": [
+          {
+            "H_over_H0": 1.0,
+            "a": 1.0,
+            "dark_fraction": 0.95,
+            "q_dec": -0.9249999999999998
+          },
+          {
+            "H_over_H0": 0.9778803607803973,
+            "a": 2.0,
+            "dark_fraction": 0.9934640522875817,
+            "q_dec": -0.9901960784313726
+          },
+          {
+            "H_over_H0": 0.9750801249128196,
+            "a": 4.0,
+            "dark_fraction": 0.999178307313065,
+            "q_dec": -0.9987674609695976
+          },
+          {
+            "H_over_H0": 0.9746856965356833,
+            "a": 16.0,
+            "dark_fraction": 0.9999871506585287,
+            "q_dec": -0.9999807259877931
+          },
+          {
+            "H_over_H0": 0.9746794360097233,
+            "a": 256.0,
+            "dark_fraction": 0.9999999968629134,
+            "q_dec": -0.9999999952943701
+          }
+        ],
+        "stipulated_w_dark": -1.0
+      },
+      {
+        "external_J": 0.0,
+        "internal_Q": 0.0,
+        "rows": [
+          {
+            "H_over_H0": 1.0,
+            "a": 1.0,
+            "dark_fraction": 0.95,
+            "q_dec": -0.2124999999999999
+          },
+          {
+            "H_over_H0": 0.5849151400533329,
+            "a": 2.0,
+            "dark_fraction": 0.9817318616660279,
+            "q_dec": -0.23629889624952094
+          },
+          {
+            "H_over_H0": 0.34573291714848325,
+            "a": 4.0,
+            "dark_fraction": 0.9934640522875817,
+            "q_dec": -0.2450980392156863
+          },
+          {
+            "H_over_H0": 0.12188501561410245,
+            "a": 16.0,
+            "dark_fraction": 0.999178307313065,
+            "q_dec": -0.24938373048479878
+          },
+          {
+            "H_over_H0": 0.015229464008370051,
+            "a": 256.0,
+            "dark_fraction": 0.9999871506585287,
+            "q_dec": -0.24999036299389654
+          }
+        ],
+        "stipulated_w_dark": -0.5
+      }
+    ]
+  },
+  "input_hashes": {
+    "results/nsc-5-plateau-conditions.json": "d0f6b02e3c8bd9c6174b95ac1ff5fd46e4587bd9277c6c7fdd136a295f049f61",
+    "results/nsc-6-energy-transfer.json": "911fefa75e6ffa5f61224f4354c63351cb366728efa73ecf6784371ff3669be1",
+    "results/nsc-6-vacuum-work.json": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605"
+  },
+  "nonclaims": {
+    "CPT_of_full_recursive_domain_proved": false,
+    "Q_alone_predicts_background_or_growth": false,
+    "cosmological_tensions_resolved": false,
+    "new_to_world_theorem": false,
+    "radial_angular_gap_is_a_4D_chiral_mass": false,
+    "scalar_sheet_vertex_derived_from_throat": false,
+    "sheet_equals_antiparticle": false,
+    "sheet_equals_chirality": false
+  },
+  "scalar_vs_identity_link_control": {
+    "Phi": 1.0,
+    "identity_link_spectrum": [
+      -2.0,
+      -2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2.0,
+      2.0
+    ],
+    "momentum": 1.0,
+    "scalar_link_spectrum": [
+      -1.4142135623730951,
+      -1.4142135623730951,
+      -1.4142135623730951,
+      -1.4142135623730951,
+      1.4142135623730951,
+      1.4142135623730951,
+      1.4142135623730951,
+      1.4142135623730951
+    ]
+  },
+  "schema": "nsc-observable-bridge-v1",
+  "source_hashes": {
+    "scripts/check_nsc_observable_bridge.py": "ca10587a97c97a382c9b59621f2c7ce14738d3e383c57d51c6c1af5ed7b0e80c",
+    "scripts/check_nsc_plateau_conditions.py": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "spinor_algebra": {
+    "candidate_restriction": {
+      "complement_rank": 4,
+      "dynamically_invariant_for_scalar_bridge": true,
+      "embedding_columns": [
+        0,
+        1,
+        6,
+        7
+      ],
+      "projector": "(I8-tau3 tensor gamma5)/2",
+      "rank": 4,
+      "selected_by_actual_throat_or_action": false,
+      "selected_components": "parent-left and child-right"
+    },
+    "identities": {
+      "C_cnumber_flips_chirality": "0",
+      "C_cnumber_reverses_frequency": "0",
+      "C_maps_L_to_R_conjugate": "0",
+      "Clifford_0_0": "0",
+      "Clifford_0_1": "0",
+      "Clifford_0_2": "0",
+      "Clifford_0_3": "0",
+      "Clifford_1_0": "0",
+      "Clifford_1_1": "0",
+      "Clifford_1_2": "0",
+      "Clifford_1_3": "0",
+      "Clifford_2_0": "0",
+      "Clifford_2_1": "0",
+      "Clifford_2_2": "0",
+      "Clifford_2_3": "0",
+      "Clifford_3_0": "0",
+      "Clifford_3_1": "0",
+      "Clifford_3_2": "0",
+      "Clifford_3_3": "0",
+      "combined_sheet_C_preserves_restriction": "0",
+      "combined_sheet_C_restricts_to_Dirac_C": "0",
+      "combined_sheet_parity_preserves_restriction": "0",
+      "combined_sheet_parity_restricts_to_Dirac_parity": "0",
+      "free_H_squared": "0",
+      "identity_sheet_link_is_not_mass_gap": "0",
+      "mass_chiral_commutator": "0",
+      "massless_chirality_conservation": "0",
+      "opposite_charge_sheet_breaking": "0",
+      "paired_angular_chirality_squared": "0",
+      "paired_massless_radial_chirality": "0",
+      "parity_flips_chirality": "0",
+      "parity_reverses_momentum": "0",
+      "physical_radial_mass_breaks_chirality": "0",
+      "projectors_are_orthogonal": "0",
+      "projectors_resolve_identity": "0",
+      "pseudoscalar_H_vertex_is_Hermitian": "0",
+      "pseudoscalar_has_same_gap": "0",
+      "pseudoscalar_has_same_scalar_self_energy": "0",
+      "radius_pulse_preserves_massless_chirality": "0",
+      "restricted_joint_child_L_vanishes": "0",
+      "restricted_joint_parent_R_vanishes": "0",
+      "restricted_sector_embedding": "0",
+      "restricted_sector_is_one_Dirac_H": "0",
+      "restricted_sector_preserved": "0",
+      "same_charge_sheet_U1": "0",
+      "scalar_bridge_chiral_mixing": "0",
+      "scalar_bridge_shared_self_energy": "0",
+      "scalar_sheet_mass_gap": "0",
+      "sheet_grading_commutes_with_physical_chirality": "0",
+      "sheet_swap_exchanges_complementary_restrictions": "0",
+      "single_radial_grading_reflects_energy": "0",
+      "symmetric_throat_normal_reflection": "0",
+      "throat_reflection_flips_chirality": "0"
+    },
+    "joint_projector_ranks": {
+      "sheet_-1_chirality_-1": 2,
+      "sheet_-1_chirality_1": 2,
+      "sheet_1_chirality_-1": 2,
+      "sheet_1_chirality_1": 2
+    },
+    "matrices": {
+      "C_cnumber_B": "Matrix([[0, 0, 0, 1], [0, 0, -1, 0], [0, -1, 0, 0], [1, 0, 0, 0]])",
+      "gamma5_Weyl": "Matrix([[-1, 0, 0, 0], [0, -1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])",
+      "paired_angular_gamma5": "Matrix([[0, 0, 0, I], [0, 0, -I, 0], [0, I, 0, 0], [-I, 0, 0, 0]])",
+      "parity": "Matrix([[0, 0, 1, 0], [0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 0]])"
+    },
+    "unresolved_bridge": "derive the actual Clifford structure and any justified local scalar or pseudoscalar limit from the curved boundary response"
+  },
+  "terminal": true
+}

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
 import hashlib
 import json
@@ -74,21 +75,53 @@ def load_manifest() -> dict[str, Any]:
         raise ReproductionError("unexpected result manifest schema")
     steps = value.get("steps")
     historical = value.get("historical_result_count", 58)
-    if not isinstance(steps, list) or len(steps) != 64:
-        raise ReproductionError("public result manifest must contain 64 steps")
+    spec_path = ROOT / value.get("release_spec", "results/release-spec.json")
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    expected_count = 58 + len(spec["scoped_follow_ups"])
+    if (not isinstance(steps, list) or len(steps) != expected_count
+            or value.get("result_count") != expected_count):
+        raise ReproductionError("public result count differs from the explicit release specification")
+    if sha256(spec_path) != value.get("release_spec_sha256"):
+        raise ReproductionError("release specification hash mismatch")
     if historical != 58:
         raise ReproductionError("historical result count must remain 58")
     return value
 
 
 def validate_checkout(manifest: dict[str, Any]) -> None:
+    spec_path = ROOT / manifest["release_spec"]
+    if sha256(spec_path) != manifest["release_spec_sha256"]:
+        raise ReproductionError("release specification hash mismatch")
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    scoped_specs = {row["output"]: row for row in spec["scoped_follow_ups"]}
+    if (manifest.get("historical_result_count") != 58
+            or len(manifest["steps"]) != 58 + len(scoped_specs)
+            or {row["output"] for row in manifest["steps"][58:]} != set(scoped_specs)):
+        raise ReproductionError("manifest graph differs from the historical and scoped release specification")
+    for step in manifest["steps"][58:]:
+        declared = scoped_specs[step["output"]]
+        for key in ("artifact_id", "category"):
+            if key in declared and step.get(key) != declared[key]:
+                raise ReproductionError(f"manifest {key} differs from release specification: {step['output']}")
+        for key in ("generator", "generator_args", "json_format", "comparison_policy",
+                    "identity_policy", "dependencies", "source_dependencies", "auxiliary_inputs",
+                    "follow_up_source_commit"):
+            if step.get(key) != declared.get(key):
+                raise ReproductionError(f"manifest {key} differs from release specification: {step['output']}")
+    for item in (spec["import_files"] + spec["retained_byte_identical_files"]
+                 + spec["preserved_64_scientific_files"]
+                 + spec.get("preserved_75_scientific_files", []) + [spec["retained_comparator"]]):
+        relative = item["path"]
+        if not (ROOT / relative).is_file() or sha256(ROOT / relative) != item["sha256"]:
+            raise ReproductionError(f"pinned release input mismatch: {relative}")
     outputs: set[str] = set()
     for step in manifest["steps"]:
         output = str(step["output"])
         generator = str(step["generator"])
         if output in outputs:
             raise ReproductionError(f"duplicate result output: {output}")
-        outputs.add(output)
+        if output in set(step["dependencies"]):
+            raise ReproductionError(f"self dependency: {output}")
         for relative, expected in (
             (output, step["output_sha256"]),
             (generator, step["generator_sha256"]),
@@ -106,6 +139,15 @@ def validate_checkout(manifest: dict[str, Any]) -> None:
             raise ReproductionError(
                 f"manifest is not topological at {output}: {', '.join(missing)}"
             )
+        outputs.add(output)
+        value = json.loads((ROOT / output).read_text(encoding="utf-8"))
+        validate_identity(value, step)
+        validate_authenticated_inputs(ROOT, value, step, use_auxiliary=False)
+        if set(step.get("source_dependency_hashes", {})) != set(step.get("source_dependencies", [])) and "source_dependency_hashes" in step:
+            raise ReproductionError(f"incomplete source hash closure: {output}")
+        for relative, expected in step.get("source_dependency_hashes", {}).items():
+            if not (ROOT / relative).is_file() or sha256(ROOT / relative) != expected:
+                raise ReproductionError(f"source dependency mismatch: {relative}")
         for auxiliary in step.get("auxiliary_inputs", []):
             relative = str(auxiliary["path"])
             expected = str(auxiliary["sha256"])
@@ -189,66 +231,132 @@ def run_generator(work: Path, step: dict[str, Any]) -> tuple[dict[str, Any], flo
     value = json.loads(raw)
     if step.get("json_format") != "pretty" and raw != canonical_json(value):
         raise ReproductionError(f"result is not canonical JSON: {step['output']}")
-    if value.get("artifact_id") != step["artifact_id"] or value.get("terminal") is not True:
-        raise ReproductionError(f"invalid result identity or terminal: {step['output']}")
+    validate_identity(value, step)
     return value, elapsed
 
 
-def authenticated_entries(value: dict[str, Any]):
+def validate_identity(value: dict[str, Any], step: dict[str, Any]) -> None:
+    policy = step.get("identity_policy", {"kind": "terminal"})
+    if "schema" in policy and value.get("schema") != policy["schema"]:
+        raise ReproductionError(f"invalid result schema: {step['output']}")
+    if policy["kind"] == "schema_gate":
+        if "artifact_id" in value or "terminal" in value:
+            raise ReproductionError(f"unexpected identity fields in schema-gated result: {step['output']}")
+        if value.get("classification") != policy["classification"]:
+            raise ReproductionError(f"invalid schema-gated classification: {step['output']}")
+        gate = value.get("gate")
+        if (not isinstance(gate, dict) or set(gate) != set(policy["gate"])
+                or any(gate[key] is not expected for key, expected in policy["gate"].items())):
+            raise ReproductionError(f"invalid schema-gated completion: {step['output']}")
+        return
+    if value.get("artifact_id") != step["artifact_id"]:
+        raise ReproductionError(f"invalid result identity: {step['output']}")
+    if policy["kind"] == "plateau_scope":
+        if (value.get("scope") != policy["scope"]
+                or value.get("observational_audit", {}).get("prediction_claim") is not False):
+            raise ReproductionError(f"invalid plateau scope or prediction claim: {step['output']}")
+    elif policy["kind"] != "terminal" or value.get("terminal") is not True:
+        raise ReproductionError(f"invalid terminal policy: {step['output']}")
+
+
+def hash_bindings(value: dict[str, Any]):
+    """Yield exact JSON hash locations and file references for supported schemas."""
     for key, collection in value.items():
-        if not key.startswith("authenticated"):
-            continue
-        if isinstance(collection, dict) and {"path", "sha256"} <= set(collection):
-            yield collection
-            continue
-        if isinstance(collection, dict):
-            entries = collection.values()
-        elif isinstance(collection, list):
-            entries = collection
-        else:
-            raise ReproductionError(f"malformed {key} collection")
-        for entry in entries:
-            if not isinstance(entry, dict) or not {"path", "sha256"} <= set(entry):
-                raise ReproductionError(f"malformed entry in {key}")
-            yield entry
+        if key == "source_hashes" and isinstance(collection, list):
+            for index, entry in enumerate(collection):
+                if not isinstance(entry, dict) or not {"path", "sha256"} <= set(entry):
+                    raise ReproductionError("malformed source_hashes list entry")
+                yield (key, index, "sha256"), entry["path"], entry["sha256"], entry.get("artifact_id")
+        elif key in {"source_hashes", "input_hashes", "authenticated_input_hashes"}:
+            if not isinstance(collection, dict):
+                raise ReproductionError(f"malformed {key} mapping")
+            for relative, expected in collection.items():
+                if not isinstance(relative, str) or not isinstance(expected, str):
+                    raise ReproductionError(f"malformed {key} hash entry")
+                yield (key, relative), relative, expected, None
+        elif key.startswith("authenticated"):
+            if isinstance(collection, dict) and {"path", "sha256"} <= set(collection):
+                entries = [((key,), collection)]
+            elif isinstance(collection, dict):
+                entries = [((key, item), entry) for item, entry in collection.items()]
+            elif isinstance(collection, list):
+                entries = [((key, index), entry) for index, entry in enumerate(collection)]
+            else:
+                raise ReproductionError(f"malformed {key} collection")
+            for location, entry in entries:
+                if not isinstance(entry, dict) or not {"path", "sha256"} <= set(entry):
+                    raise ReproductionError(f"malformed entry in {key}")
+                yield location + ("sha256",), entry["path"], entry["sha256"], entry.get("artifact_id")
+        elif key == "independent_tetrad_record_sha256":
+            yield (key,), "results/nsc-4-dirac-tetrad.json", collection, "NSC-4-DIRAC-TETRAD"
+
+
+def authenticated_entries(value: dict[str, Any]):
+    """Compatibility view; mutation uses hash_bindings' exact JSON locations."""
+    for location, relative, expected, artifact in hash_bindings(value):
+        if str(location[0]).startswith("authenticated"):
+            yield {"path": relative, "sha256": expected, "artifact_id": artifact}
 
 
 def auxiliary_lookup(work: Path, step: dict[str, Any] | None) -> dict[str, Path]:
     if not step:
         return {}
     root = work / "provenance" / Path(str(step["output"])).stem
-    lookup: dict[str, Path] = {}
-    for auxiliary in step.get("auxiliary_inputs", []):
-        relative = str(auxiliary["path"])
-        lookup[relative] = root / relative
-    return lookup
+    return {str(item["path"]): root / str(item["path"])
+            for item in step.get("auxiliary_inputs", [])}
 
 
 def validate_authenticated_inputs(
-    work: Path, value: dict[str, Any], step: dict[str, Any] | None = None
-) -> None:
-    lookup = auxiliary_lookup(work, step)
-    for entry in authenticated_entries(value):
-        relative = entry.get("path")
-        expected = entry.get("sha256")
-        if not isinstance(relative, str) or not isinstance(expected, str):
-            raise ReproductionError("malformed authenticated input entry")
+    work: Path, value: dict[str, Any], step: dict[str, Any] | None = None,
+    *, use_auxiliary: bool = True,
+) -> set[tuple]:
+    lookup = auxiliary_lookup(work, step) if use_auxiliary else {}
+    auxiliary_paths = {str(item["path"]) for item in (step or {}).get("auxiliary_inputs", [])}
+    generated = set((step or {}).get("dependencies", []))
+    validated_dynamic: set[tuple] = set()
+    for location, relative, expected, artifact_id in hash_bindings(value):
+        if (not isinstance(relative, str) or not isinstance(expected, str)
+                or len(expected) != 64 or any(char not in "0123456789abcdef" for char in expected)
+                or Path(relative).is_absolute() or ".." in Path(relative).parts):
+            raise ReproductionError("malformed authenticated file or hash")
+        if (step is not None and relative.startswith("results/")
+                and relative not in generated | auxiliary_paths):
+            raise ReproductionError(f"authenticated result is missing from dependency graph: {relative}")
         path = lookup.get(relative, work / relative)
         if not path.is_file() or sha256(path) != expected:
             raise ReproductionError(f"authenticated input mismatch: {relative}")
-        artifact_id = entry.get("artifact_id")
         if artifact_id is not None and relative.startswith("results/"):
             actual_id = json.loads(path.read_text(encoding="utf-8")).get("artifact_id")
             if actual_id != artifact_id:
                 raise ReproductionError(f"authenticated artifact mismatch: {relative}")
+        if (relative in generated and relative not in auxiliary_paths
+                and relative.startswith("results/") and location[0] != "source_hashes"):
+            validated_dynamic.add(location)
+    if "source_sha256" in value and step is not None:
+        if sha256(work / step["generator"]) != value["source_sha256"]:
+            raise ReproductionError("generator source_sha256 mismatch")
+    if "comparison_function_sha256" in value:
+        source = (work / "scripts/check_nsc_scale_closure.py").read_text(encoding="utf-8")
+        node = next(node for node in ast.parse(source).body
+                    if isinstance(node, ast.FunctionDef) and node.name == "compare")
+        body = "".join(source.splitlines(keepends=True)[node.lineno-1:node.end_lineno])
+        if hashlib.sha256(body.encode()).hexdigest() != value["comparison_function_sha256"]:
+            raise ReproductionError("comparison function hash mismatch")
+    return validated_dynamic
 
 
-def normalize_dynamic_hashes(value: dict[str, Any]) -> dict[str, Any]:
+def normalize_dynamic_hashes(value: dict[str, Any], validated_locations: set[tuple]) -> dict[str, Any]:
+    """Normalize only generated-result bindings already authenticated by the caller."""
     normalized = json.loads(json.dumps(value))
-    for entry in authenticated_entries(normalized):
-        path = entry.get("path", "")
-        if isinstance(path, str) and path.startswith("results/"):
-            entry["sha256"] = "<validated-generated-result>"
+    allowed = {location for location, relative, _, _ in hash_bindings(value)
+               if relative.startswith("results/") and location[0] != "source_hashes"}
+    if not validated_locations <= allowed:
+        raise ReproductionError("normalization requested for a non-result hash")
+    for location in validated_locations:
+        parent = normalized
+        for part in location[:-1]:
+            parent = parent[part]
+        parent[location[-1]] = "<validated-generated-result>"
     return normalized
 
 
@@ -268,9 +376,9 @@ def compare_portable(
     if isinstance(expected, (int, float)) and isinstance(actual, (int, float)):
         if not compare_numbers:
             return
-        if isinstance(expected, int) and isinstance(actual, int):
-            if expected != actual:
-                raise ReproductionError(f"integer mismatch at {path}: {actual} != {expected}")
+        if isinstance(expected, int):
+            if not isinstance(actual, int) or expected != actual:
+                raise ReproductionError(f"integer mismatch at {path}: {actual!r} != {expected!r}")
             return
         if not math.isclose(
             float(actual),
@@ -340,20 +448,23 @@ def validate_result(
 ) -> bool:
     actual_path = work / step["output"]
     expected_path = expected_root / step["output"]
-    validate_authenticated_inputs(work, actual_value, step)
+    actual_dynamic = validate_authenticated_inputs(work, actual_value, step)
     if mode == "exact":
         if actual_path.read_bytes() != expected_path.read_bytes():
             raise ReproductionError(f"exact byte mismatch: {step['output']}")
         return True
 
     expected_value = json.loads(expected_path.read_text(encoding="utf-8"))
+    expected_dynamic = validate_authenticated_inputs(ROOT, expected_value, step, use_auxiliary=False)
+    if actual_dynamic != expected_dynamic:
+        raise ReproductionError("authenticated generated-result binding set changed")
     policy = step["comparison_policy"]
     policy_kind = str(policy.get("kind"))
     relative = float(policy.get("relative_tolerance", 0.0))
     absolute = float(policy.get("absolute_tolerance", 0.0))
     compare_portable(
-        normalize_dynamic_hashes(expected_value),
-        normalize_dynamic_hashes(actual_value),
+        normalize_dynamic_hashes(expected_value, expected_dynamic),
+        normalize_dynamic_hashes(actual_value, actual_dynamic),
         path="",
         relative_tolerance=relative,
         absolute_tolerance=absolute,
@@ -414,6 +525,11 @@ def execute(
     frontier = json.loads((work / manifest["frontier_output"]).read_text(encoding="utf-8"))
     return {
         "schema": "NSC-PUBLIC-REPRODUCTION-SUMMARY-v1",
+        "release_version": manifest["release_version"],
+        "release_spec_sha256": manifest["release_spec_sha256"],
+        "release_source_commit": manifest["release_source_commit"],
+        "historical_result_count": manifest["historical_result_count"],
+        "scoped_result_count": len(manifest["scoped_follow_up_outputs"]),
         "mode": mode,
         "jobs": jobs,
         "result_count": len(complete),
