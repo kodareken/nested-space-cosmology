@@ -1,0 +1,2707 @@
+{
+  "comparison": {
+    "exact": "keys, strings, structures, source/input hashes and scope",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "exact_checks": {
+    "joint_angular_harmonic_finite_part": "0",
+    "joint_cylinder_normalization_trace": "0",
+    "positive_Einstein_coefficient_requires_negative_neck_null": "4*(1-3*pi/2)<0"
+  },
+  "input_hashes": {
+    "results/development/massless-reference.json": "1f02ebec5b8b7701080a3b0705f4f62e23aac44149e88872f945050f81472002",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "method": {
+    "angular_degeneracy": "4*kappa, kappa>=1; 2D spin counted inside each Dirac channel",
+    "harmonic_finite_part": "ln(mu*R)+EulerGamma/2",
+    "native": "C++17 fourth-order unitary transport; Python control retained",
+    "physical_map": "integrated anomaly with independent lapse and longitudinal-metric variations",
+    "selected_angular_window": [
+      1536,
+      2048
+    ],
+    "selected_momentum_window": [
+      6144,
+      8192
+    ],
+    "sphere_pressure": "exact4D trace after the two independent base-metric responses",
+    "subtraction": "2D orders0,2 plus fourth-order convergence subtraction; joint4D proper-time finite part restored",
+    "windows": "C-infinity windows on the already convergent remainder, fixed in comoving labels; no physical cutoff substituted"
+  },
+  "neck_source_budget": {
+    "Einstein_coefficient_fitted": false,
+    "coefficient_of_a_EH": -14.849555921538759,
+    "complete_source_budget_closed": false,
+    "geometric_null_requirement": "T_total,kk * L_throat^4 = 4*a_EH*(1-3*pi/2), a_EH=A_EH*L_throat\u00b2>0",
+    "reference_alone_has_required_null_sign": false,
+    "reference_tensor": {
+      "p_parallel": 0.5026775080927613,
+      "p_sphere": 0.037655803851818395,
+      "radial_null": 1.212845866813916,
+      "rho": 0.7101683587211547
+    },
+    "reference_window_spread": {
+      "p_parallel": 0.00048173442914312137,
+      "p_sphere": 0.000505862323322448,
+      "radial_null": 0.0009900854216620125,
+      "rho": 0.000754929064620824
+    },
+    "required_remaining_null": "4*a_EH*(1-3*pi/2)-reference_null; this is a residual requirement, not an inserted source"
+  },
+  "numerical_checks": {
+    "fourth_order_adiabatic_integrals": [
+      {
+        "difference": [
+          6.938893903907228e-18,
+          0.0
+        ],
+        "heat_target": [
+          0.0018464237729060732,
+          0.20585833875040827
+        ],
+        "integrated_E4_P4": [
+          0.00184642377290608,
+          0.20585833875040827
+        ],
+        "q": 0.2
+      },
+      {
+        "difference": [
+          0.0,
+          0.0
+        ],
+        "heat_target": [
+          0.0366086351532184,
+          0.13706826231858166
+        ],
+        "integrated_E4_P4": [
+          0.0366086351532184,
+          0.13706826231858166
+        ],
+        "q": 1.0
+      },
+      {
+        "difference": [
+          -6.938893903907228e-18,
+          0.0
+        ],
+        "heat_target": [
+          0.049072774120001064,
+          -0.08846244458054137
+        ],
+        "integrated_E4_P4": [
+          0.04907277412000106,
+          -0.08846244458054137
+        ],
+        "q": 1.5707963267948966
+      }
+    ],
+    "independent_density_derivative_Ward": [
+      {
+        "barred_residual": -8.294909897843539e-13,
+        "physical_residual": 6.779195260708804e-13,
+        "q": 0.2
+      },
+      {
+        "barred_residual": -1.2917622700669984e-11,
+        "physical_residual": 1.9958062980052205e-12,
+        "q": 0.5
+      },
+      {
+        "barred_residual": -2.8201670165817205e-11,
+        "physical_residual": 3.911648782661814e-11,
+        "q": 1.0
+      },
+      {
+        "barred_residual": -4.40984859739757e-10,
+        "physical_residual": 8.512544431516739e-10,
+        "q": 1.5707963267948966
+      }
+    ],
+    "maximum_unitarity_defect": 2.948752353404416e-13,
+    "momentum_512_to_1024_nodes": [
+      {
+        "difference": {
+          "p_parallel": -3.3306690738754696e-16,
+          "p_sphere": 1.6653345369377348e-16,
+          "radial_null": -3.3306690738754696e-16,
+          "rho": 0.0
+        },
+        "q": 0.1
+      },
+      {
+        "difference": {
+          "p_parallel": -1.4876988529977098e-14,
+          "p_sphere": 7.438494264988549e-15,
+          "radial_null": -1.4876988529977098e-14,
+          "rho": 0.0
+        },
+        "q": 0.2
+      },
+      {
+        "difference": {
+          "p_parallel": 1.9379914339978654e-12,
+          "p_sphere": -9.691830671343382e-13,
+          "radial_null": 1.9376028559392466e-12,
+          "rho": -3.885780586188048e-16
+        },
+        "q": 0.5
+      },
+      {
+        "difference": {
+          "p_parallel": -3.304231888101583e-11,
+          "p_sphere": 1.654679171458895e-11,
+          "radial_null": -3.2991054332853764e-11,
+          "rho": 5.1264548162066603e-14
+        },
+        "q": 1.0
+      },
+      {
+        "difference": {
+          "p_parallel": -4.274552023453282e-08,
+          "p_sphere": 2.1374217840097742e-08,
+          "radial_null": -4.274260501091476e-08,
+          "rho": 2.915445662665661e-12
+        },
+        "q": 1.5707963267948966
+      }
+    ],
+    "native_python_difference": 5.6343818499726694e-15,
+    "static_proper_time_normalization": [
+      {
+        "cutoff": 4.0,
+        "difference": 3.1761823956277606e-06,
+        "exact_density": -0.000361725630726892,
+        "subtracted_density": -0.00035854944833126426
+      },
+      {
+        "cutoff": 8.0,
+        "difference": 7.874469408214067e-07,
+        "exact_density": -0.000361725630726892,
+        "subtracted_density": -0.0003609381837860706
+      },
+      {
+        "cutoff": 16.0,
+        "difference": 1.9645677699756982e-07,
+        "exact_density": -0.000361725630726892,
+        "subtracted_density": -0.00036152917394989445
+      }
+    ],
+    "time_8000_to_16000_steps_probe": [
+      {
+        "difference": {
+          "p_parallel": -4.386104673903546e-10,
+          "p_sphere": 2.1934740135343134e-10,
+          "radial_null": -4.385261320738465e-10,
+          "rho": 8.433531650808845e-14
+        },
+        "q": 0.1
+      },
+      {
+        "difference": {
+          "p_parallel": -9.326723393598968e-09,
+          "p_sphere": 4.6640165340949835e-09,
+          "radial_null": -9.325413732885757e-09,
+          "rho": 1.309660713211258e-12
+        },
+        "q": 0.2
+      },
+      {
+        "difference": {
+          "p_parallel": -5.348182738063034e-07,
+          "p_sphere": 2.674313066830525e-07,
+          "radial_null": -5.347739342603797e-07,
+          "rho": 4.4339545923755e-11
+        },
+        "q": 0.5
+      },
+      {
+        "difference": {
+          "p_parallel": -7.619319290698423e-06,
+          "p_sphere": 3.80993761563142e-06,
+          "radial_null": -7.618763350120128e-06,
+          "rho": 5.559405713562171e-10
+        },
+        "q": 1.0
+      },
+      {
+        "difference": {
+          "p_parallel": 0.00010332277537405954,
+          "p_sphere": -5.1659131998560426e-05,
+          "radial_null": 0.00010332728675099823,
+          "rho": 4.511376938687306e-09
+        },
+        "q": 1.5707963267948966
+      }
+    ],
+    "uncertainty_scope": "window spreads and resolution differences are measured sensitivities, not rigorous infinite-tail error bounds"
+  },
+  "reference": {
+    "field": "one untwisted massless 4D Dirac, all S2 angular channels in the convergent sum",
+    "massive_compact_tower_included": false,
+    "parent_state_matched": false,
+    "state": "the unchanged smooth auxiliary ultrastatic reference from NSC-MASSLESS-REFERENCE-v1",
+    "units": "hbar=c=L_throat=1; normalization mu=1; no observational parameter fitted",
+    "width": 0.1
+  },
+  "remaining_owners": [
+    "parent/reference covariance and boundary flux",
+    "actual finite-Lambda CTP conversion/complement",
+    "massive compact and gauge contributions from the same functional",
+    "independent complete metric/scale equations"
+  ],
+  "run_specifications": {
+    "angular_tail": {
+      "angular_max": 2048,
+      "angular_start": 1025,
+      "backend": "native",
+      "momentum_max": 4096,
+      "momentum_points": 2048,
+      "steps": 40000
+    },
+    "base": {
+      "angular_max": 1024,
+      "backend": "native",
+      "momentum_max": 4096,
+      "momentum_points": 2048,
+      "steps": 20000
+    },
+    "momentum_coarse": {
+      "angular_max": 2048,
+      "backend": "native",
+      "momentum_max": 8192,
+      "momentum_min": 4096,
+      "momentum_points": 512,
+      "momentum_windows": [
+        [
+          4096,
+          6144
+        ],
+        [
+          4096,
+          8192
+        ],
+        [
+          5120,
+          8192
+        ],
+        [
+          6144,
+          8192
+        ]
+      ],
+      "steps": 40000
+    },
+    "momentum_tail": {
+      "angular_max": 2048,
+      "backend": "native",
+      "momentum_max": 8192,
+      "momentum_min": 4096,
+      "momentum_points": 1024,
+      "momentum_windows": [
+        [
+          4096,
+          6144
+        ],
+        [
+          4096,
+          8192
+        ],
+        [
+          5120,
+          8192
+        ],
+        [
+          6144,
+          8192
+        ]
+      ],
+      "steps": 40000
+    },
+    "time_coarse": {
+      "angular_max": 512,
+      "backend": "native",
+      "momentum_max": 2048,
+      "momentum_points": 1536,
+      "steps": 8000
+    },
+    "time_fine": {
+      "angular_max": 512,
+      "backend": "native",
+      "momentum_max": 2048,
+      "momentum_points": 1536,
+      "steps": 16000
+    }
+  },
+  "schema": "NSC-ANGULAR-STRESS-v1",
+  "scope": {
+    "asymptotic_result_substituted_at_neck": false,
+    "auxiliary_reference_tuned_for_a_neck": false,
+    "full_finite_cutoff_Dirac_stress_claimed": false,
+    "new_general_adiabatic_or_conformal_theorem_claimed": false,
+    "self_sourcing_or_observational_prediction_derived": false
+  },
+  "source_hashes": {
+    "docs/nsc-angular-stress.md": "fa75bfe2c20a75688d0c37a0db29c63ebe6144a1c554587976321f6d0fb01e0a",
+    "pyproject.toml": "b5bfe97f7225d19d6036e05d3199376885d4d626db05d49013495c94ec3e400e",
+    "scripts/check_nsc_angular_stress.py": "87f65a14e17ebecd75297c6b04ed1cd2a70ac013760986bc120d4124b332e265",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/_angular_transport.cpp": "f589f18d831e84c532828a4739e6e0b4c4b53a6ff91e35b9737a90757338c6f1",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
+  },
+  "source_rows": [
+    {
+      "resolved_window_spread": {
+        "p_parallel": 4.8842010866301244e-08,
+        "p_sphere": 3.623961783438823e-08,
+        "radial_null": 3.593345029861972e-08,
+        "rho": 4.009371450119925e-08
+      },
+      "selected": {
+        "angular_window": [
+          1536,
+          2048
+        ],
+        "bar_p_parallel": 0.1876241481749091,
+        "bar_rho": 0.32718654219160176,
+        "momentum_window": [
+          6144,
+          8192
+        ],
+        "physical": {
+          "H_parallel": 3.056909078020182,
+          "H_sphere": 3.0527037910487325,
+          "R_L": -112.53346089875441,
+          "local_anomaly_rho": 0.10218689865474886,
+          "p_parallel": -0.1027418272398003,
+          "p_sphere": -0.10283418929973608,
+          "q": 0.1,
+          "radial_null": -0.0005224274019964004,
+          "rho": 0.1022193998378039,
+          "rho_coordinate": -9.96664442325924,
+          "sphere_radius": 10.016686131634776,
+          "trace": 0.41062960567707635,
+          "transported_bar_rho": 3.2501183055034224e-05
+        }
+      },
+      "window_variations": [
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.18355814730246608,
+          "bar_rho": 0.32001880489551554,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.1027422311373377,
+            "p_sphere": -0.10283434335574128,
+            "q": 0.1,
+            "radial_null": -0.0005235433090816088,
+            "rho": 0.10221868782825609,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.178917350723909e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.18786879867590997,
+          "bar_rho": 0.3267829223051977,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274180293736213,
+            "p_sphere": -0.1028342214978124,
+            "q": 0.1,
+            "radial_null": -0.0005224431932727286,
+            "rho": 0.1022193597440894,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.246108934052872e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.18740513935341171,
+          "bar_rho": 0.32704381213966405,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274184899511382,
+            "p_sphere": -0.1028341855111477,
+            "q": 0.1,
+            "radial_null": -0.000522463335446699,
+            "rho": 0.10221938565966712,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.248700491826121e-05
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.18757460415636415,
+          "bar_rho": 0.32715592873785254,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274183216127172,
+            "p_sphere": -0.10283418835949912,
+            "q": 0.1,
+            "radial_null": -0.0005224353644653346,
+            "rho": 0.10221939679680639,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.2498142057511567e-05
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.18356735815250455,
+          "bar_rho": 0.3200252916676432,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274223022237487,
+            "p_sphere": -0.10283434349103986,
+            "q": 0.1,
+            "radial_null": -0.0005235417497531092,
+            "rho": 0.10221868847262176,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.1789817872887346e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.1878865208098298,
+          "bar_rho": 0.3268000547382678,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.1027418011769281,
+            "p_sphere": -0.10283422152710148,
+            "q": 0.1,
+            "radial_null": -0.0005224397309828294,
+            "rho": 0.10221936144594528,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.246279119641699e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.18742969362925596,
+          "bar_rho": 0.32706410445044076,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274184655600674,
+            "p_sphere": -0.10283418572282954,
+            "q": 0.1,
+            "radial_null": -0.0005224588805962244,
+            "rho": 0.10221938767541051,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.2489020661643397e-05
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.1876048350349244,
+          "bar_rho": 0.32717841416143084,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274182915827743,
+            "p_sphere": -0.1028341887441978,
+            "q": 0.1,
+            "radial_null": -0.0005224301278740906,
+            "rho": 0.10221939903040334,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.250037565447706e-05
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.1835689983397459,
+          "bar_rho": 0.3200268382542318,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274223005944633,
+            "p_sphere": -0.10283434349568879,
+            "q": 0.1,
+            "radial_null": -0.000523541433193872,
+            "rho": 0.10221868862625245,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.178997150357609e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.1878917973281837,
+          "bar_rho": 0.32680442119142844,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274180065278342,
+            "p_sphere": -0.10283422157230229,
+            "q": 0.1,
+            "radial_null": -0.0005224387730950741,
+            "rho": 0.10221936187968834,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.2463224939481494e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.18743717162276916,
+          "bar_rho": 0.32706940779736093,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274184581317777,
+            "p_sphere": -0.10283418583083917,
+            "q": 0.1,
+            "radial_null": -0.0005224576109575524,
+            "rho": 0.10221938820222022,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.2489547471358436e-05
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.18761501652853893,
+          "bar_rho": 0.3271843978375559,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274182814689542,
+            "p_sphere": -0.10283418895269357,
+            "q": 0.1,
+            "radial_null": -0.0005224285221016312,
+            "rho": 0.10221939962479379,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.2500970044918e-05
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.18357218224372726,
+          "bar_rho": 0.32002728680498677,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274222974317218,
+            "p_sphere": -0.10283434363154739,
+            "q": 0.1,
+            "radial_null": -0.0005235410723627987,
+            "rho": 0.10221868867080938,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.179001606051324e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.1878968275673558,
+          "bar_rho": 0.3268058582831842,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274180015310296,
+            "p_sphere": -0.10283422175076554,
+            "q": 0.1,
+            "radial_null": -0.0005224381306606213,
+            "rho": 0.10221936202244233,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.246336769346492e-05
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.18744384577220216,
+          "bar_rho": 0.3270712420132099,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.10274184515019895,
+            "p_sphere": -0.10283418607122737,
+            "q": 0.1,
+            "radial_null": -0.0005224567657762802,
+            "rho": 0.10221938838442267,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.248972967379461e-05
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.1876241481749091,
+          "bar_rho": 0.32718654219160176,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.056909078020182,
+            "H_sphere": 3.0527037910487325,
+            "R_L": -112.53346089875441,
+            "local_anomaly_rho": 0.10218689865474886,
+            "p_parallel": -0.1027418272398003,
+            "p_sphere": -0.10283418929973608,
+            "q": 0.1,
+            "radial_null": -0.0005224274019964004,
+            "rho": 0.1022193998378039,
+            "rho_coordinate": -9.96664442325924,
+            "sphere_radius": 10.016686131634776,
+            "trace": 0.41062960567707635,
+            "transported_bar_rho": 3.2501183055034224e-05
+          }
+        }
+      ]
+    },
+    {
+      "resolved_window_spread": {
+        "p_parallel": 2.1298288424564937e-07,
+        "p_sphere": 2.2859366947958204e-07,
+        "radial_null": 8.435720167399019e-07,
+        "rho": 6.305891324942525e-07
+      },
+      "selected": {
+        "angular_window": [
+          1536,
+          2048
+        ],
+        "bar_p_parallel": -0.028264969145456308,
+        "bar_rho": 0.3280037334315268,
+        "momentum_window": [
+          6144,
+          8192
+        ],
+        "physical": {
+          "H_parallel": 3.0202608779226146,
+          "H_sphere": 2.9999381643747913,
+          "R_L": -110.8600028516375,
+          "local_anomaly_rho": 0.09937938357840986,
+          "p_parallel": -0.10149977412818288,
+          "p_sphere": -0.10183470088887145,
+          "q": 0.2,
+          "radial_null": -0.0016094126669171926,
+          "rho": 0.09989036146126569,
+          "rho_coordinate": -4.933154875586894,
+          "sphere_radius": 5.033489547672344,
+          "trace": 0.40505953736719147,
+          "transported_bar_rho": 0.0005109778828558218
+        }
+      },
+      "window_variations": [
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": -0.030217213523509777,
+          "bar_rho": 0.32081519006976184,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.1015028154158191,
+            "p_sphere": -0.10183877955124017,
+            "q": 0.2,
+            "radial_null": -0.001623652566927064,
+            "rho": 0.09987916284889203,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.000499779270482165
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": -0.028401685789240176,
+          "bar_rho": 0.32759894959125035,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149998711106713,
+            "p_sphere": -0.10183490969199557,
+            "q": 0.2,
+            "radial_null": -0.0016102562389339325,
+            "rho": 0.0998897308721332,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005103472937233299
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": -0.028347028172454068,
+          "bar_rho": 0.3278605676618719,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149990196315428,
+            "p_sphere": -0.10183474848618637,
+            "q": 0.2,
+            "radial_null": -0.0016097635314898523,
+            "rho": 0.09989013843166443,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.000510754853254572
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": -0.02831721025970154,
+          "bar_rho": 0.3279729954400311,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149985551156739,
+            "p_sphere": -0.10183468413964115,
+            "q": 0.2,
+            "radial_null": -0.0016095419352256113,
+            "rho": 0.09989031357634177,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005109299979319114
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": -0.030210809287455807,
+          "bar_rho": 0.3208217053231206,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10150280543903331,
+            "p_sphere": -0.1018387794647665,
+            "q": 0.2,
+            "radial_null": -0.0016236324404081265,
+            "rho": 0.09987917299862518,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0004997894202153181
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": -0.02838398694579066,
+          "bar_rho": 0.3276161535764001,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149995953907134,
+            "p_sphere": -0.10183491007745102,
+            "q": 0.2,
+            "radial_null": -0.0016102018658532419,
+            "rho": 0.0998897576732181,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005103740948082338
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": -0.028323315822720095,
+          "bar_rho": 0.3278809432981249,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149986502306785,
+            "p_sphere": -0.10183475108522203,
+            "q": 0.2,
+            "radial_null": -0.001609694849388263,
+            "rho": 0.09989017017367958,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005107865952697177
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": -0.028286813892145345,
+          "bar_rho": 0.3279955721097909,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.1014998081588395,
+            "p_sphere": -0.10183469023056668,
+            "q": 0.2,
+            "radial_null": -0.00160945941162087,
+            "rho": 0.09989034874721862,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005109651688087643
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": -0.030209102491660166,
+          "bar_rho": 0.3208232587164563,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.1015028027801157,
+            "p_sphere": -0.10183877958425486,
+            "q": 0.2,
+            "radial_null": -0.0016236273615496538,
+            "rho": 0.09987917541856604,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0004997918401561816
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": -0.028378299406450584,
+          "bar_rho": 0.32762053838409766,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149995067878559,
+            "p_sphere": -0.10183491109217582,
+            "q": 0.2,
+            "radial_null": -0.0016101861747313678,
+            "rho": 0.09988976450405422,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005103809256443667
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": -0.02831478995409855,
+          "bar_rho": 0.327886268558004,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149985174111446,
+            "p_sphere": -0.10183475357824284,
+            "q": 0.2,
+            "radial_null": -0.001609673271523157,
+            "rho": 0.0998901784695913,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005107948911814447
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": -0.0282748853969901,
+          "bar_rho": 0.32800158020624837,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149978957613272,
+            "p_sphere": -0.10183469484208857,
+            "q": 0.2,
+            "radial_null": -0.0016094314692510908,
+            "rho": 0.09989035810688163,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005109745284717648
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": -0.030208359360349067,
+          "bar_rho": 0.32082370926745574,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10150280162243479,
+            "p_sphere": -0.10183877981215175,
+            "q": 0.2,
+            "radial_null": -0.0016236255019816265,
+            "rho": 0.09987917612045316,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0004997925420433016
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": -0.028374749250410995,
+          "bar_rho": 0.3276219816061068,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.1014999451482046,
+            "p_sphere": -0.10183491273331063,
+            "q": 0.2,
+            "radial_null": -0.0016101783958389904,
+            "rho": 0.0998897667523656,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005103831739557472
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": -0.028308453724042636,
+          "bar_rho": 0.32788811046544664,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149984187027127,
+            "p_sphere": -0.10183475707896436,
+            "q": 0.2,
+            "radial_null": -0.001609660531279783,
+            "rho": 0.09989018133899148,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005107977605816055
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": -0.028264969145456308,
+          "bar_rho": 0.3280037334315268,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 3.0202608779226146,
+            "H_sphere": 2.9999381643747913,
+            "R_L": -110.8600028516375,
+            "local_anomaly_rho": 0.09937938357840986,
+            "p_parallel": -0.10149977412818288,
+            "p_sphere": -0.10183470088887145,
+            "q": 0.2,
+            "radial_null": -0.0016094126669171926,
+            "rho": 0.09989036146126569,
+            "rho_coordinate": -4.933154875586894,
+            "sphere_radius": 5.033489547672344,
+            "trace": 0.40505953736719147,
+            "transported_bar_rho": 0.0005109778828558218
+          }
+        }
+      ]
+    },
+    {
+      "resolved_window_spread": {
+        "p_parallel": 9.856255669432601e-06,
+        "p_sphere": 7.414035021607868e-06,
+        "radial_null": 3.185707084177314e-05,
+        "rho": 2.2000815172340538e-05
+      },
+      "selected": {
+        "angular_window": [
+          1536,
+          2048
+        ],
+        "bar_p_parallel": 0.018653660310039552,
+        "bar_rho": 0.33506367689014294,
+        "momentum_window": [
+          6144,
+          8192
+        ],
+        "physical": {
+          "H_parallel": 2.8043272591867674,
+          "H_sphere": 2.6264706932174597,
+          "R_L": -99.78937921265418,
+          "local_anomaly_rho": 0.08117067383998315,
+          "p_parallel": -0.09047876798274393,
+          "p_sphere": -0.0888545720066886,
+          "q": 0.5,
+          "radial_null": 0.008393484925381195,
+          "rho": 0.09887225290812512,
+          "rho_coordinate": -1.830487721712452,
+          "sphere_radius": 2.085829642933488,
+          "trace": 0.36706016490424626,
+          "transported_bar_rho": 0.017701579068141973
+        }
+      },
+      "window_variations": [
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.016566711747682566,
+          "bar_rho": 0.32766796836172,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09058902250311028,
+            "p_sphere": -0.08899480420846784,
+            "q": 0.5,
+            "radial_null": 0.00789251148109002,
+            "rho": 0.0984815339842003,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017310860144217153
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.01846709654348208,
+          "bar_rho": 0.3346472352835581,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048862423841336,
+            "p_sphere": -0.08886064428644005,
+            "q": 0.5,
+            "radial_null": 0.008361627854539422,
+            "rho": 0.09885025209295278,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017679578252969633
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.0185399563390381,
+          "bar_rho": 0.334916158206616,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048477501953087,
+            "p_sphere": -0.0888554652306468,
+            "q": 0.5,
+            "radial_null": 0.008379684403890933,
+            "rho": 0.0988644594234218,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.01769378558343866
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.018580260740814217,
+          "bar_rho": 0.33503169630983415,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048264571813522,
+            "p_sphere": -0.088853477913897,
+            "q": 0.5,
+            "radial_null": 0.008387917640181833,
+            "rho": 0.09887056335831705,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017699889518333903
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.01657373088930432,
+          "bar_rho": 0.32767476726054745,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.0905886516784015,
+            "p_sphere": -0.0889948100262355,
+            "q": 0.5,
+            "radial_null": 0.007893241494972295,
+            "rho": 0.09848189317337379,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017311219333390648
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.018488055771207282,
+          "bar_rho": 0.3346651527582789,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048751695209027,
+            "p_sphere": -0.0888607246350947,
+            "q": 0.5,
+            "radial_null": 0.008363681729876324,
+            "rho": 0.0988511986819666,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017680524841983444
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.01856989233440154,
+          "bar_rho": 0.3349373648778693,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048319348615241,
+            "p_sphere": -0.08885569581789274,
+            "q": 0.5,
+            "radial_null": 0.008382386296155939,
+            "rho": 0.09886557978230835,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.0176949059423252
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.018620832398063586,
+          "bar_rho": 0.33505518303586035,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048050229750129,
+            "p_sphere": -0.0888539292165624,
+            "q": 0.5,
+            "radial_null": 0.008391301876118876,
+            "rho": 0.09887180417362017,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017701130333637023
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.01657569921511702,
+          "bar_rho": 0.32767638866548177,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09058854769077943,
+            "p_sphere": -0.08899481919023591,
+            "q": 0.5,
+            "radial_null": 0.007893431142215579,
+            "rho": 0.098481978832995,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017311304993011867
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.018495316092620687,
+          "bar_rho": 0.3346697209249545,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048713338573432,
+            "p_sphere": -0.08886079574902503,
+            "q": 0.5,
+            "radial_null": 0.00836430663472755,
+            "rho": 0.09885144002046187,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017680766180478726
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.018581574291010997,
+          "bar_rho": 0.3349429090246979,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.0904825763226314,
+            "p_sphere": -0.08885585794964954,
+            "q": 0.5,
+            "radial_null": 0.008383296359684378,
+            "rho": 0.09886587268231578,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017695198842332636
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.018638053670555876,
+          "bar_rho": 0.33506143504408215,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09047959248919409,
+            "p_sphere": -0.08885421897237927,
+            "q": 0.5,
+            "radial_null": 0.008392541981099538,
+            "rho": 0.09887213447029362,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.01770146063031048
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.016576682134837317,
+          "bar_rho": 0.32767685915122774,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.0905884957626465,
+            "p_sphere": -0.08899483272630554,
+            "q": 0.5,
+            "radial_null": 0.007893507926342178,
+            "rho": 0.09848200368898868,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.01731132984900554
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.018500462419480376,
+          "bar_rho": 0.33467122541964417,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09048686150275176,
+            "p_sphere": -0.08886089194891861,
+            "q": 0.5,
+            "radial_null": 0.008364658000905537,
+            "rho": 0.0988515195036573,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.01768084566367414
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.018591238659209225,
+          "bar_rho": 0.33494482775051576,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.0904820657492998,
+            "p_sphere": -0.08885606255270037,
+            "q": 0.5,
+            "radial_null": 0.008383908300245907,
+            "rho": 0.09886597404954571,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017695300209562562
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.018653660310039552,
+          "bar_rho": 0.33506367689014294,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.8043272591867674,
+            "H_sphere": 2.6264706932174597,
+            "R_L": -99.78937921265418,
+            "local_anomaly_rho": 0.08117067383998315,
+            "p_parallel": -0.09047876798274393,
+            "p_sphere": -0.0888545720066886,
+            "q": 0.5,
+            "radial_null": 0.008393484925381195,
+            "rho": 0.09887225290812512,
+            "rho_coordinate": -1.830487721712452,
+            "sphere_radius": 2.085829642933488,
+            "trace": 0.36706016490424626,
+            "transported_bar_rho": 0.017701579068141973
+          }
+        }
+      ]
+    },
+    {
+      "resolved_window_spread": {
+        "p_parallel": 0.00013840432407336706,
+        "p_sphere": 7.159143044649374e-05,
+        "radial_null": 0.00038129013468124473,
+        "rho": 0.00024288581060785686
+      },
+      "selected": {
+        "angular_window": [
+          1536,
+          2048
+        ],
+        "bar_p_parallel": 0.2722136545541589,
+        "bar_rho": 0.3969784093699402,
+        "momentum_window": [
+          6144,
+          8192
+        ],
+        "physical": {
+          "H_parallel": 2.253231773584292,
+          "H_sphere": 1.4377169923909008,
+          "R_L": -67.09821433849899,
+          "local_anomaly_rho": 0.03917753945354604,
+          "p_parallel": 0.05540149560914813,
+          "p_sphere": -0.03802407576346101,
+          "q": 1.0,
+          "radial_null": 0.2936112925816747,
+          "rho": 0.23820979697252653,
+          "rho_coordinate": -0.6420926159343308,
+          "sphere_radius": 1.1883951057781212,
+          "trace": 0.2588564528903004,
+          "transported_bar_rho": 0.19903225751898052
+        }
+      },
+      "window_variations": [
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.26934027658238185,
+          "bar_rho": 0.38837312912117117,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05396087594084986,
+            "p_sphere": -0.03946097185546581,
+            "q": 1.0,
+            "radial_null": 0.28785626106106854,
+            "rho": 0.23389538512021865,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19471784566667263
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.2719376011691174,
+          "bar_rho": 0.3964939631602878,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05526309128507476,
+            "p_sphere": -0.03807631650672824,
+            "q": 1.0,
+            "radial_null": 0.29323000244699343,
+            "rho": 0.23796691116191868,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19878937170837266
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.27204423903031005,
+          "bar_rho": 0.396805366965341,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05531655609260385,
+            "p_sphere": -0.03802498496437276,
+            "q": 1.0,
+            "radial_null": 0.2934395951467626,
+            "rho": 0.23812303905415874,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19894549960061272
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.27210999574663275,
+          "bar_rho": 0.3969389693178929,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.055349524403695415,
+            "p_sphere": -0.038007977150065,
+            "q": 1.0,
+            "radial_null": 0.2935395473975612,
+            "rho": 0.23819002299386582,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.1990124835403198
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.26934908209208963,
+          "bar_rho": 0.3883816348114238,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.0539652907413387,
+            "p_sphere": -0.03946104701540096,
+            "q": 1.0,
+            "radial_null": 0.2878649403421759,
+            "rho": 0.2338996496008372,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19472211014729118
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.2719646850899765,
+          "bar_rho": 0.3965161687265101,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05527667029537814,
+            "p_sphere": -0.03807753943209827,
+            "q": 1.0,
+            "radial_null": 0.29325471461686015,
+            "rho": 0.237978044321482,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19880050486793596
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.2720847439883541,
+          "bar_rho": 0.39683156498458516,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05533686398101775,
+            "p_sphere": -0.038028571484773246,
+            "q": 1.0,
+            "radial_null": 0.29347303788278944,
+            "rho": 0.23813617390177166,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19895863444822562
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.27216750351118996,
+          "bar_rho": 0.3969679192184894,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.055378356954621434,
+            "p_sphere": -0.038015136149143855,
+            "q": 1.0,
+            "radial_null": 0.2935828945012556,
+            "rho": 0.23820453754663412,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19902699809308808
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.26935149863969887,
+          "bar_rho": 0.3883836654308911,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.053966502320897475,
+            "p_sphere": -0.03946114376140465,
+            "q": 1.0,
+            "radial_null": 0.2878671700092861,
+            "rho": 0.23390066768838857,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19472312823484253
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.27197395017774484,
+          "bar_rho": 0.39652183894554954,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.055281315513584256,
+            "p_sphere": -0.038078440608108985,
+            "q": 1.0,
+            "radial_null": 0.2932622027012509,
+            "rho": 0.2379808871876667,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19880334773412067
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.272100503608988,
+          "bar_rho": 0.39683842389915636,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05534476534995465,
+            "p_sphere": -0.03803080274921908,
+            "q": 1.0,
+            "radial_null": 0.2934843780917715,
+            "rho": 0.2381396127418169,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19896207328827087
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.2721919056544658,
+          "bar_rho": 0.39697563555711507,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05539059140755354,
+            "p_sphere": -0.03801931901311034,
+            "q": 1.0,
+            "radial_null": 0.2935989976791868,
+            "rho": 0.23820840627163326,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19903086681808724
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.26935263635590445,
+          "bar_rho": 0.3883842558209135,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.053967072735356975,
+            "p_sphere": -0.03946128096731216,
+            "q": 1.0,
+            "radial_null": 0.28786803642639003,
+            "rho": 0.23390096369103305,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19472342423748704
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.27198032246366094,
+          "bar_rho": 0.396523711652395,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05528451037361065,
+            "p_sphere": -0.038079568580511494,
+            "q": 1.0,
+            "radial_null": 0.2932663364764987,
+            "rho": 0.23798182610288807,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19880428664934205
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.27211331011007345,
+          "bar_rho": 0.3968408039817517,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05535118611935115,
+            "p_sphere": -0.03803341648533287,
+            "q": 1.0,
+            "radial_null": 0.293491992158337,
+            "rho": 0.23814080603898582,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.1989632665854398
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.2722136545541589,
+          "bar_rho": 0.3969784093699402,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 2.253231773584292,
+            "H_sphere": 1.4377169923909008,
+            "R_L": -67.09821433849899,
+            "local_anomaly_rho": 0.03917753945354604,
+            "p_parallel": 0.05540149560914813,
+            "p_sphere": -0.03802407576346101,
+            "q": 1.0,
+            "radial_null": 0.2936112925816747,
+            "rho": 0.23820979697252653,
+            "rho_coordinate": -0.6420926159343308,
+            "sphere_radius": 1.1883951057781212,
+            "trace": 0.2588564528903004,
+            "transported_bar_rho": 0.19903225751898052
+          }
+        }
+      ]
+    },
+    {
+      "resolved_window_spread": {
+        "p_parallel": 0.00048173442914312137,
+        "p_sphere": 0.000505862323322448,
+        "radial_null": 0.0009900854216620125,
+        "rho": 0.000754929064620824
+      },
+      "selected": {
+        "angular_window": [
+          1536,
+          2048
+        ],
+        "bar_p_parallel": 0.5397353349127914,
+        "bar_rho": 0.7052648933967615,
+        "momentum_window": [
+          6144,
+          8192
+        ],
+        "physical": {
+          "H_parallel": 1.5570211692905311,
+          "H_sphere": 1.179797831238261e-16,
+          "R_L": -26.27433388230814,
+          "local_anomaly_rho": 0.004903465324393183,
+          "p_parallel": 0.5026775080927613,
+          "p_sphere": 0.037655803851818395,
+          "q": 1.5707963267948966,
+          "radial_null": 1.212845866813916,
+          "rho": 0.7101683587211547,
+          "rho_coordinate": -6.123233995736766e-17,
+          "sphere_radius": 1.0,
+          "trace": 0.13217924292475655,
+          "transported_bar_rho": 0.7052648933967615
+        }
+      },
+      "window_variations": [
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.5345373991921656,
+          "bar_rho": 0.6918332183717958,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.4974795723721356,
+            "p_sphere": 0.03353893419964844,
+            "q": 1.5707963267948966,
+            "radial_null": 1.1942162560683247,
+            "rho": 0.696736683696189,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.6918332183717958
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.5399921304948154,
+          "bar_rho": 0.7045099643321406,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5029343036747854,
+            "p_sphere": 0.03714994152849595,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2123477333313193,
+            "rho": 0.7094134296565339,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7045099643321406
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.5401526754851084,
+          "bar_rho": 0.7049888094936284,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5030948486650784,
+            "p_sphere": 0.03730909161409336,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2129871234831,
+            "rho": 0.7098922748180216,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7049888094936284
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.5402170693419345,
+          "bar_rho": 0.7051933328750667,
+          "momentum_window": [
+            4096,
+            6144
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5031592425219045,
+            "p_sphere": 0.03737915637639945,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2132560407213644,
+            "rho": 0.7100967981994599,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7051933328750667
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.5345385513881028,
+          "bar_rho": 0.6918491088076707,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.4974807245680728,
+            "p_sphere": 0.03354630331961729,
+            "q": 1.5707963267948966,
+            "radial_null": 1.1942332987001367,
+            "rho": 0.6967525741320639,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.6918491088076707
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.5399442875856716,
+          "bar_rho": 0.7045506775417475,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5028864607656416,
+            "p_sphere": 0.037194219587871294,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2123406036317823,
+            "rho": 0.7094541428661407,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7045506775417475
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.5400392773084765,
+          "bar_rho": 0.7050365205972948,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5029814504884464,
+            "p_sphere": 0.03738964625424253,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2129214364101344,
+            "rho": 0.709939985921688,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7050365205972948
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.5400227719690469,
+          "bar_rho": 0.705245802724998,
+          "momentum_window": [
+            4096,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5029649451490169,
+            "p_sphere": 0.037502539987808906,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2131142131984083,
+            "rho": 0.7101492680493913,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.705245802724998
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.5345345795074974,
+          "bar_rho": 0.6918529102016263,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.4974767526874674,
+            "p_sphere": 0.033550189956897805,
+            "q": 1.5707963267948966,
+            "radial_null": 1.194233128213487,
+            "rho": 0.6967563755260195,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.6918529102016263
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.5399065388085665,
+          "bar_rho": 0.7045611064019716,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5028487119885365,
+            "p_sphere": 0.03721830840653585,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2123132837149013,
+            "rho": 0.7094645717263648,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7045611064019716
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.539961801329264,
+          "bar_rho": 0.7050490491001166,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.502903974509234,
+            "p_sphere": 0.03743464849525964,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2128564889337436,
+            "rho": 0.7099525144245098,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7050490491001166
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.5398960958787895,
+          "bar_rho": 0.7052598264862743,
+          "momentum_window": [
+            5120,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5028382690587595,
+            "p_sphere": 0.03757288991357573,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2130015608694271,
+            "rho": 0.7101632918106675,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7052598264862743
+          }
+        },
+        {
+          "angular_window": [
+            512,
+            1024
+          ],
+          "bar_p_parallel": 0.5345271926832984,
+          "bar_rho": 0.6918540195294242,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.4974693658632684,
+            "p_sphere": 0.03355443803289622,
+            "q": 1.5707963267948966,
+            "radial_null": 1.1942268507170857,
+            "rho": 0.6967574848538174,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.6918540195294242
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            1536
+          ],
+          "bar_p_parallel": 0.5398557467651844,
+          "bar_rho": 0.7045645700301548,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5027979199451544,
+            "p_sphere": 0.03724543624231853,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2122659552997024,
+            "rho": 0.709468035354548,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7045645700301548
+          }
+        },
+        {
+          "angular_window": [
+            1024,
+            2048
+          ],
+          "bar_p_parallel": 0.539862180666892,
+          "bar_rho": 0.7050534200946174,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.502804353846862,
+            "p_sphere": 0.03748664432369604,
+            "q": 1.5707963267948966,
+            "radial_null": 1.2127612392658724,
+            "rho": 0.7099568854190106,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7050534200946174
+          }
+        },
+        {
+          "angular_window": [
+            1536,
+            2048
+          ],
+          "bar_p_parallel": 0.5397353349127914,
+          "bar_rho": 0.7052648933967615,
+          "momentum_window": [
+            6144,
+            8192
+          ],
+          "physical": {
+            "H_parallel": 1.5570211692905311,
+            "H_sphere": 1.179797831238261e-16,
+            "R_L": -26.27433388230814,
+            "local_anomaly_rho": 0.004903465324393183,
+            "p_parallel": 0.5026775080927613,
+            "p_sphere": 0.037655803851818395,
+            "q": 1.5707963267948966,
+            "radial_null": 1.212845866813916,
+            "rho": 0.7101683587211547,
+            "rho_coordinate": -6.123233995736766e-17,
+            "sphere_radius": 1.0,
+            "trace": 0.13217924292475655,
+            "transported_bar_rho": 0.7052648933967615
+          }
+        }
+      ]
+    }
+  ],
+  "status": "computed finite-radius canonical massless reference tensor with observed numerical convergence"
+}

@@ -13,28 +13,29 @@ $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-The project makes this connection concrete through reproducible operator calculations. The current working preprint joins evaluated throat maps, smooth geometric spectra, causal Dirac transport, quantum vacuum response, energy/work accounting, an exact sheet–chirality reduction, a specified ultraviolet-subtracted determinant source, and a finite noise–pair relation in one narrative.
+The project makes this connection concrete through reproducible operator calculations. The current working preprint joins evaluated throat maps, smooth geometric spectra, causal Dirac transport, quantum vacuum response, energy/work accounting, an exact sheet–chirality reduction, a specified ultraviolet-subtracted determinant source, a finite noise–pair relation, and a parent-matched canonical massless Dirac source in one narrative.
 
 **The research target is a self-sourced physical solution:** the same action and state must determine the geometry, its matter and its observable consequences. The strongest verified milestones and remaining equations are presented together in the [working preprint](paper/nested-space-cosmology.pdf).
 
-The new [horizon/source map](docs/nsc-horizon-source.md),
-[warped determinant](docs/nsc-warped-source.md) and
-[compact/light matching](docs/nsc-compact-matching.md) connect the same
-operator to a conditional horizon flux and linked vacuum, gravitational
-and gauge contributions. The free Dirac part is calculated; the common
-completion, physical state and transmitting interaction remain the next
-source equation.
+The strongest scoped result is the [parent-matched source](docs/nsc-unruh-state.md):
+an actual phase-resolved canonical massless Dirac candidate has negative
+neck null, but it is not complete self-sourcing. Density, pressure
+anisotropy and flux do not match the full required tensor. The
+[state-regulator control](docs/nsc-state-regulator.md) then shows that
+finite-cutoff conversion is state-dependent. Canonical massless reference,
+parent state and finite-\(\Lambda\) full action remain distinct. The common
+completion and transmitting sectors remain the next source equation.
 
 ## Six questions, one construction
 
 | Research question | Current mathematical connection | Next physical link |
 |---|---|---|
-| Where do local constants and thermal limits come from? | Characteristic cones, scale identities, covariant measure and normalization profiles | Derived gravitational coupling and physical thermal state |
-| Can collapse continue into an expanding room? | Smooth geometry, horizon Dirac transport and clock/affine tests | Self-sourced dynamics and complete continuation |
-| Can adjacent rooms explain dark response? | Boundary self-energy, ultraviolet-subtracted source and energy transfer | Joint expansion, clustering and lensing prediction |
-| Can one state explain particles, waves and detection? | Field excitations, collective-coordinate controls and a finite Gaussian state functional | Identified interactions and a detector/statistics calculation |
+| Where do local constants and thermal limits come from? | Characteristic cones, compact-to-light matching and a flat thermal conversion control of the finite proper-time factor | Derived gravitational coupling and physical thermal state |
+| Can collapse continue into an expanding room? | Smooth geometry, horizon transport and a parent-matched massless Dirac source with negative neck null | Self-sourced dynamics and complete continuation |
+| Can adjacent rooms explain dark response? | Boundary self-energy, parent-matched source residuals and energy transfer | Joint expansion, clustering and lensing prediction |
+| Can one state explain particles, waves and detection? | Field excitations, a projected Dirac–gauge interaction and a finite Gaussian state functional | Identified interactions and a detector/statistics calculation |
 | Can sheet coupling generate mass and encode chirality? | Exact invariant Dirac sector and charge-conjugation algebra | Actual boundary coupling and physical sector selection |
-| Can recursive generation define infinity and probability? | Endpoint bounds, clock-transfer conditions and a specified determinant remainder | Consistent recursive state measure and causal duration |
+| Can recursive generation define infinity and probability? | Endpoint bounds, dilution of homogeneous free state differences and a specified determinant remainder | Consistent recursive state measure and causal duration |
 
 ## Follow the evidence
 
@@ -51,6 +52,8 @@ flowchart LR
 The loop is the physical objective. Its present executable links are:
 
 - **One coefficient account:** the retained vacuum, Einstein and gauge terms obey a shared consistency condition. The compact chiral domain fixes the leading gravitational boundary coefficient.
+- **Parent-matched canonical source:** a phase-resolved massless Dirac candidate on the actual child neck has negative null contractions, with \(\rho=-0.0033068962\), \(p_{\parallel}=-0.0494945966\), \(p_{\perp}=-0.0429957713\) and outward parent Killing power \(0.0001422206795\) in throat units. Density, pressure anisotropy and flux do not close the required tensor.
+- **State-dependent conversion:** at flat thermal \(T/\nu=0.5\), canonical \(\rho=0.0719658654\,\nu^4\) versus raw finite \(\rho=-0.00122667356\,\nu^4\). This is a conversion control, not a child temperature or a cosmological \(Q\).
 - **Curved quantum interaction:** the same covariant operator gives an evaluated compact endpoint interaction and its metric source. Its neck null sign depends on the finite geometry and state.
 - **Conditional state selection:** in a charged ultrastatic closed loop, the real free-fermion potential selects effective AP gauge holonomy. The physical return path and remaining source terms must still be established.
 
@@ -63,7 +66,7 @@ The loop is the physical objective. Its present executable links are:
 - **Static and causal response:** independent Euclidean frequency integration and Hamiltonian response agree in the radius channel. The relative continuum calculation retains the required coordinate contact and controls its numerical limits.
 - **Observable source:** internal conversion, external supply, pressure and perturbation response have separate, explicit roles in cosmological evolution.
 
-The current frontier is the common functional beyond the calculated free compact determinant, together with its causal state and transmitting interaction. The new spectral weight and canonical light-field split supply the Dirac contribution and its matched coefficients; the complete source must retain both parts and their remaining physical completion. The new [compact source and holonomy calculation](docs/nsc-compact-casimir.md) supplies a finite interaction and a conditional gauge saddle, while [vacuum–charge matching](docs/nsc-vacuum-charge-matching.md) and the [compact adjoint domain](docs/nsc-compact-boundary-action.md) constrain how they enter the source equation. Physical scale, particle/nuclear identification and cosmological predictions remain to be derived from the joint solution.
+The current frontier is the same-state finite-cutoff conversion and complementary functional, together with massive, boundary and recursive sectors. The parent-matched canonical massless tensor, spectral weight and light-field split are computed inputs; they are not the complete source. Distinguish the canonical massless reference, the parent-matched state and the finite-\(\Lambda\) full action. The [compact source and holonomy calculation](docs/nsc-compact-casimir.md) supplies a finite interaction and a conditional gauge saddle, while [vacuum–charge matching](docs/nsc-vacuum-charge-matching.md) and the [compact adjoint domain](docs/nsc-compact-boundary-action.md) constrain how they enter the source equation. Physical scale, particle/nuclear identification and cosmological predictions remain to be derived from the joint solution. Do not promote the imported 3.34 solar-mass stellar branch, or any single unevaluated \(Q\), to an NSC prediction.
 
 The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This is an explanatory application note, not an additional compact record. It supplies the free mass operator for the interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
 
@@ -88,7 +91,7 @@ python3 -m pip install -e '.[paper]'
 make demonstrate
 ```
 
-Version 0.6.0 contains **91 records: 58 frozen historical records and 33 scoped follow-ups**. Earlier records, generators and comparison policies retain their bytes. Twelve demonstrations display authenticated results, including the horizon source, warped determinant and compact/light coefficient map. The default display performs no scientific recomputation; `make demonstrate-recompute` requests new execution. The integrated release gate verifies the collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
+Version 0.7.0 contains **100 records: 58 frozen historical records and 42 scoped follow-ups**. Earlier records, generators and comparison policies retain their bytes. Fourteen demonstrations display authenticated stored cases. The parent-matched source, thermal conversion control, horizon source, warped determinant and compact/light coefficient map are among the committed records. The default display performs no scientific recomputation; `make demonstrate-recompute` requests new execution. The integrated release gate verifies the collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
 
 Use the default demonstration to inspect authenticated records. Run the full
 release check with `make verify` after relevant changes or when preparing a

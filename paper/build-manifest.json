@@ -1,10 +1,10 @@
 {
-  "bytes": 1204164,
+  "bytes": 1386764,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "0cebe3f26a106757974053b60c1662dd9a14854a936b0990e77c4913c438369a",
+  "metadata_sha256": "e0d5396e90c14546703ed68a1189f7583afde2ed0f1de65b26ac7e670e886b46",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 27,
-  "pdf_sha256": "e1e83a1eaf890405c4e74ec14ea01242343ba7445fbf11538a22d6c329fce723",
+  "pages": 33,
+  "pdf_sha256": "2ceddfeba0128611e269bb1ab67821dfca7bdc3e317a1b834d3eb6df814d6ade",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -14,6 +14,14 @@
     {
       "path": "results/development/compact-matching.json",
       "sha256": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9"
+    },
+    {
+      "path": "results/development/state-regulator.json",
+      "sha256": "4cd5a58b0f32aaa9f6e04dafe869e716b55e3ac54665c275a9e8a43e90609030"
+    },
+    {
+      "path": "results/development/unruh-state.json",
+      "sha256": "98d4659674ad7f7f6b474b7abcc448518bda6861bbafe3ff98c129918dd21343"
     },
     {
       "path": "results/development/warped-source.json",
@@ -29,10 +37,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "fccdb377e54c861d846ae50ae7c4099b1552a468b68ce42710ceb11ccc8d26ce"
+      "sha256": "636785afe4f1885e04b6eacb1e7cd7859d548f7a8ebfc0116834e9b774289577"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "d905ec982364308e1a98a9c36a5939496e595fd3c92f09aa30b8cb0cb70f9c34",
-  "version": "0.6.0"
+  "source_sha256": "d1aa3ccc3cb066fa03a1863f16e86b8d3967b8900dd60a7cd0eb47baa8c9404a",
+  "version": "0.7.0"
 }

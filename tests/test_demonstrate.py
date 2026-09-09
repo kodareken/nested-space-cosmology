@@ -28,7 +28,9 @@ class DemonstrationReadingRoute(unittest.TestCase):
         self.assertIn("A state-defined source at the unwrapped horizon", rendered)
         self.assertIn("The compact warp in the quantum source", rendered)
         self.assertIn("One light field and matched source coefficients", rendered)
-        self.assertIn("12 demonstrations displayed", rendered)
+        self.assertIn("14 demonstrations displayed", rendered)
+        self.assertIn("Parent-matched canonical Dirac source", rendered)
+        self.assertIn("The finite state-regulator conversion", rendered)
         self.assertIn("not the complete vacuum stress", rendered)
         self.assertIn("--recompute", rendered)
 

@@ -234,14 +234,14 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             'results/development/compact-boundary-action.json',
             'results/development/compact-casimir.json',
         ])
-        self.assertEqual(outputs[-3:], [
+        self.assertEqual(outputs[88:91], [
             'results/development/horizon-source.json',
             'results/development/warped-source.json',
             'results/development/compact-matching.json',
         ])
-        self.assertEqual(91, len(self.manifest['steps']))
-        self.assertEqual(33, len(self.release['scoped_follow_ups']))
-        self.assertEqual('eea43512f63e61d8d7686261a683bc36e99efa19', self.release['source_commit'])
+        self.assertEqual(100, len(self.manifest['steps']))
+        self.assertEqual(42, len(self.release['scoped_follow_ups']))
+        self.assertEqual('161028d52ef206a4bc99a25bf97ea467c30e7f16', self.release['source_commit'])
         self.assertEqual('95b96be312feb667377cdbc3bbfe453697a458dd',
                          self.steps['NSC-15-CHARGED-SECTOR']['follow_up_source_commit'])
         self.assertEqual('6eeff9bfab26a18fcd029a59ec908643b63386b5',

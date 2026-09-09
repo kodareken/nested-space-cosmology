@@ -32,7 +32,7 @@ jobs:
 
   result-reproduction:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v7
         with:

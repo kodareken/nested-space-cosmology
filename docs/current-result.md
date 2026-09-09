@@ -1,17 +1,19 @@
 # Current result: the connected operator and its physical closure
 
-Version 0.6.0 presents 91 records: 58 frozen historical records and 33 scoped
+Version 0.7.0 presents 100 records: 58 frozen historical records and 42 scoped
 follow-ups. The [paper](../paper/nested-space-cosmology.pdf) presents the six
-targets and their supported connections. The new source batch adds the
-unwrapped horizon application, compact quantum warp and canonical
-light-field matching.
+targets and their supported connections. The new source batch carries the
+computed free determinant through a retained Dirac–gauge interaction, a
+canonical spherical owner, a local curvature contact, the full spectral
+endpoint, a child-state decay bound, a massless reference, a finite-radius
+angular tensor, a parent-matched source and a state-dependent conversion.
 
-**Current work cursor:** specify the common functional beyond the computed
-free determinant, together with its causal state and transmitting interaction.
-The Dirac coefficient map is now a reusable input. The complete source still
-needs the remaining measure/compensator contribution and physical domain;
-equal-history normalization cannot fix its real finite terms. Do not restart
-raw coefficient scans or generic collapse calculations to answer that question.
+**Current work cursor:** complete the same-state finite-cutoff causal
+conversion and complementary functional. The parent-matched canonical
+massless Dirac candidate is now a reusable input. It has negative neck null
+but does not close self-sourcing. Do not restart raw coefficient scans, fit
+\(G\) to a null residual, or treat the flat thermal control as a child
+temperature, a cosmological \(Q\).
 
 ## The strongest completed chain
 
@@ -23,6 +25,10 @@ interface or consequences of an identified change.
 
 | Connection | Reproducible result | Physical meaning and domain |
 |---|---|---|
+| Parent-matched massless Dirac source | [Parent-matched source](../results/development/unruh-state.json) | Phase-resolved canonical candidate with negative neck null; density, pressure anisotropy and flux do not match the required tensor |
+| Finite-cutoff conversion control | [State regulator](../results/development/state-regulator.json) | At flat \(T/\nu=0.5\), canonical \(\rho=0.0719658654\,\nu^4\) versus raw finite \(\rho=-0.00122667356\,\nu^4\); not child temperature |
+| Full spectral endpoint | [Spectral endpoint](../results/development/spectral-endpoint.json) | At child curvature the local stationary radius is not a root of the same determinant |
+| Canonical spherical geometry owner | [Spherical action](../results/development/spherical-action.json) | First-order constraints close with the area-dependent charge mode; not a quantization of the nonlocal action |
 | Compact warp to quantum source | [Warped determinant](../results/development/warped-source.json) | A covariant finite-cutoff weight for D4; homogeneous source and variations in the declared domain |
 | One light field to linked coefficients | [Compact/light matching](../results/development/compact-matching.json) | Dirac vacuum, Einstein, gauge and a4 contributions; matching cutoff cancels with the retained field |
 | Horizon state to source and current | [Unwrapped source map](../results/development/horizon-source.json) | Conditional magnetic-sector flux; it does not support the original imposed neck alone |
@@ -55,6 +61,45 @@ The [compact mass map](nsc-compact-mass-map.md) supplies the free mass operator 
 **Imported result.** Maldacena, Milekhin and Popov already derive a semiclassical Einstein–Maxwell throat supported by charged massless Dirac vacuum energy. That construction is reused as theory, not recomputed as an NSC solution, observed wormhole, generic formation process or child-expansion proof. The earlier radial transport operator does not contain their magnetic flux state. The new charged candidate probes a flat axial U(1) connection; its magnetic return geometry remains unresolved. The earlier charged-sector record checks compact parity, anomaly cancellation and heat-coefficient conventions; mass, internal representation, vacuum/gravitational/gauge coefficients and global boundary matching remain unresolved. Their optical/redshift length is not proper length. Short-distance formulas have stated conditions, and longer separation or mouth stabilization require their sections 5.5–6. The retained ultraviolet volume term is not set to zero to obtain their asymptotically flat exterior.
 
 ## Latest computed physical structure
+
+The strongest scoped result is the [parent-matched source](nsc-unruh-state.md).
+The standard fermionic characteristic-state prescription, combined with the
+complex reflection amplitude of the actual exterior Dirac operator, gives a
+canonical massless candidate on the expanding child. Units are
+\(\hbar=c=L_{\mathrm{throat}}=1\) and canonical \(\mu=1\). At the neck,
+
+| Component | Value |
+|---|---:|
+| \(\rho\) | \(-0.0033068962\) |
+| \(p_{\parallel}\) | \(-0.0494945966\) |
+| \(p_{\perp}\) | \(-0.0429957713\) |
+| null \(+\) / \(-\) | \(-0.0528075900\), \(-0.0527953956\) |
+| outward parent Killing power | \(0.0001422206795\) |
+
+Both radial null contractions are negative after including the flux. Density,
+pressure anisotropy and flux do not match the full two-derivative tensor
+required by the imposed neck. No Einstein coefficient was fitted. The
+candidate is not complete self-sourcing, not a cosmological \(Q\), and not a
+global Hadamard theorem. Distinguish this parent-matched state from the
+[canonical massless reference](nsc-massless-reference.md) and from the
+finite-\(\Lambda\) full action.
+
+The [finite-angular reference](nsc-angular-stress.md) evaluates that
+reference at finite child radius. At the neck it gives
+\(\rho+p_{\parallel}=+1.2128459\), which cannot supply the required negative
+null by itself. The tail expansion of the reference is not substituted at
+the neck. Homogeneous free [child-state differences](nsc-child-state.md)
+dilute as \(O(r^{-4})\) (massless) or \(O(r^{-3})\) (finite massive moments);
+that bound is not a cosmic-no-hair theorem.
+
+The [full spectral endpoint](nsc-spectral-endpoint.md) decides the
+source language at child curvature: the local heat truncation has the
+wrong radius-derivative sign, so the original spectral weight is used.
+The [projected gauge interaction](nsc-gauge-source.md),
+[canonical spherical action](nsc-spherical-action.md) and
+[curvature-EFT contact](nsc-curvature-eft.md) supply the retained
+light-field interaction and a first-order geometry owner. The curvature
+expansion is not established at the imposed neck.
 
 The [horizon/source map](nsc-horizon-source.md) applies a declared free
 magnetic Dirac zero sector to the unwrapped benchmark. Its conditional
@@ -106,13 +151,22 @@ The [covariant source](../results/nsc-9-covariant-source.json) evaluates the fou
 
 The [response-matching calculation](../results/nsc-11-response-matching.json) now joins the Euclidean radius Hessian and the vacuum retarded susceptibility on the smooth ultrastatic cell. Its P-minus-AP comparison cancels state-independent local terms, retains the nonzero coordinate contact, and checks spatial, angular, frequency and regulator limits independently. The refined methods differ by at most about1.5e-9 at the three tested frequencies and the same angular truncation. This relative control does not fix the absolute finite coefficients or establish the full finite-cutoff causal functional.
 
-The new compact weight supplies the free Euclidean contribution
+The [state-regulator control](nsc-state-regulator.md) shows that the adopted
+finite proper-time factor is state-dependent. At flat thermal \(T/\nu=0.5\),
+a single massless Dirac field has canonical \(\rho=0.0719658654\,\nu^4\)
+versus raw finite \(\rho=-0.00122667356\,\nu^4\). Local vacuum coefficients
+cannot repair that difference. This is a conversion control, not a child
+temperature.
+
+The compact weight supplies the free Euclidean contribution
 \(\Gamma_{5,\Lambda}=\tfrac12\operatorname{Tr}_4 h_\Lambda(D_4^2)\).
-Its light-field split and source coefficients are computed. The remaining
-owner is \(\Gamma_{\rm completion}=\Gamma_{\rm one}-\Gamma_{5,\Lambda}\),
-with the corresponding causal state, correlations and transmitting domain.
-It must be supplied by the same functional, not by independently adjusted
-vacuum or gravitational weights.
+Its light-field split, parent-matched canonical source and exact conversion
+identity \(\Gamma_5=\Gamma_{\mathrm{light,ren}}+(\Gamma_{H,\nu}+\mathcal C_{\nu,\mu})\)
+are computed. The remaining owner is the same-state finite-cutoff causal
+conversion and complementary functional, with massive, boundary and
+recursive sectors. It must be supplied by the same functional, not by
+independently adjusted vacuum or gravitational weights and not by fitting
+\(G\) to a null residual.
 
 The completed source must satisfy
 
@@ -151,4 +205,4 @@ The retarded kernel alone does not determine an occupation state or energy curre
 - [Threshold response](../results/nsc-3-threshold-response.json): a positive Dirichlet-to-Neumann jump can coexist with a gapless bulk spectrum.
 - [Stellar benchmark](../results/nsc-1-gravitating-bps-observation-link.json): 3.34 solar masses is an imported branch from a nuclear-calibrated Einstein–BPS model, not an NSC-derived universal limit.
 
-Physical scale selection, absolute self-sourcing, constrained metric stability, identified particle/nuclear sectors, detector probabilities and independent cosmological predictions remain the successive completion targets. The six-target map is maintained in the release specification and manuscript; no historical terminal flag promotes these open targets to solved physics.
+Physical scale selection, absolute self-sourcing, constrained metric stability, identified particle/nuclear sectors, detector probabilities and independent cosmological predictions remain the successive completion targets. The six-target map is maintained in the release specification and manuscript; no historical terminal flag promotes these open targets to solved physics. The often-quoted 3.34 solar-mass maximum remains an imported nuclear-calibrated Einstein–BPS branch, not an NSC-derived universal limit. No single unevaluated \(Q\) replaces a cosmological prediction.

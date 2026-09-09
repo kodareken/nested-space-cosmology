@@ -49,10 +49,25 @@ CASES = (
     ("results/development/compact-matching.json", "scripts/check_nsc_compact_matching.py",
      "One light field and matched source coefficients",
      "Dirac contributions in the declared scheme; matching cutoff is not a fitted physical scale or a complete measured coupling."),
+    ("results/development/unruh-state.json", "scripts/check_nsc_unruh_state.py",
+     "Parent-matched canonical Dirac source",
+     "Both neck null contractions are negative; density, anisotropy, flux and the full cutoff source remain unmatched."),
+    ("results/development/state-regulator.json", "scripts/check_nsc_state_regulator.py",
+     "The finite state-regulator conversion",
+     "A flat thermal compatibility control; the full nonthermal curved completion remains open."),
 )
 
 
 def headlines(relative: str, record: dict) -> list[str]:
+    if relative.endswith("unruh-state.json"):
+        tensor = record["neck_source_budget"]["candidate_tensor"]
+        return [f"Canonical neck null contractions: {tensor['null_plus']:.8g}, {tensor['null_minus']:.8g}.",
+                f"Parent Killing power: {record['neck_source_budget']['parent_Killing_power']:.8g}.",
+                "This is the canonical massless source candidate, not the complete finite-cutoff tensor."]
+    if relative.endswith("state-regulator.json"):
+        row = next(r['images'] for r in record['thermal_source_rows'] if r['images']['temperature']==.5)
+        return [f"Flat T/nu=0.5: canonical thermal density {row['canonical']['rho']:.8g}; raw endpoint {row['finite_endpoint']['rho']:.8g} (nu^4).",
+                "State-independent local coefficients cannot replace the finite state conversion."]
     if relative.endswith("nsc-3-boundary-response.json"):
         return [f"Joined and eliminated responses agree: {record['gate']['joined_schur_identity_holds']}",
                 f"Independent half-domain maps resolved: {record['gate']['discrete_continuum_maps_resolved']}"]

@@ -1,0 +1,139 @@
+{
+  "Euler_coefficient_after_map": "cEuler+cW, in the original static-energy sign convention",
+  "canonical": {
+    "constraint_structure_check": {
+      "12": {
+        "first_order": [
+          "0",
+          "0",
+          "0"
+        ],
+        "leading": [
+          "0",
+          "-1",
+          "0"
+        ]
+      },
+      "13": {
+        "first_order": [
+          "0",
+          "0",
+          "0"
+        ],
+        "leading": [
+          "0",
+          "0",
+          "1"
+        ]
+      },
+      "23": {
+        "first_order": [
+          "(chi_x**4*Derivative(d(X), X) - 2*chi_x**2*pi_chi**2*Derivative(d(X), X) + 4*emin**2*eplus**2*Derivative(F(X, chi), X) + pi_chi**4*Derivative(d(X), X))/(4*emin**2*eplus**2)",
+          "0",
+          "0"
+        ],
+        "leading": [
+          "(64*pi**3*A**2*C_F**2*q_mag**2 + A**2*chi**2*q_mag - 2*pi*A*C_F*Xminus*Xplus - 2*pi*C_F*V*X**2)/(4*pi*A*C_F*X**2)",
+          "Xminus/(2*X)",
+          "Xplus/(2*X)"
+        ]
+      }
+    },
+    "first_order_correction": [
+      "0",
+      "-(24576*pi**6*A**4*C_F**4*cW*emin**2*eplus**2*q_mag**4 + 768*pi**3*A**4*C_F**2*cW*chi**2*emin**2*eplus**2*q_mag**3 + 6*A**4*cW*chi**4*emin**2*eplus**2*q_mag**2 + 3*pi**2*A**2*C_F**2*X**2*cW*chi_x**4 - 6*pi**2*A**2*C_F**2*X**2*cW*chi_x**2*pi_chi**2 + 3*pi**2*A**2*C_F**2*X**2*cW*pi_chi**4 + 48*pi**2*C_F**2*V**2*X**4*cR*emin**2*eplus**2 - 8*pi**2*C_F**2*V**2*X**4*cW*emin**2*eplus**2)/(24*pi**2*A**3*C_F**2*X**3*emin**2*eplus)",
+      "(24576*pi**6*A**4*C_F**4*cW*emin**2*eplus**2*q_mag**4 + 768*pi**3*A**4*C_F**2*cW*chi**2*emin**2*eplus**2*q_mag**3 + 6*A**4*cW*chi**4*emin**2*eplus**2*q_mag**2 + 3*pi**2*A**2*C_F**2*X**2*cW*chi_x**4 - 6*pi**2*A**2*C_F**2*X**2*cW*chi_x**2*pi_chi**2 + 3*pi**2*A**2*C_F**2*X**2*cW*pi_chi**4 + 48*pi**2*C_F**2*V**2*X**4*cR*emin**2*eplus**2 - 8*pi**2*C_F**2*V**2*X**4*cW*emin**2*eplus**2)/(24*pi**2*A**3*C_F**2*X**3*emin*eplus**2)"
+    ],
+    "first_order_initial_data_enlarged": false,
+    "kinetic0": "(chi_x**2 - pi_chi**2)/(2*emin*eplus)",
+    "new_local_matter_density": "d(X)*K\u00b2+F(X,chi), with d=-cW/(2*A*X)",
+    "old_exact_linear_geometry_integration_reused_without_correction": false
+  },
+  "comparison": {
+    "exact": "identities, symbolic formulas, structures, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "constant_curvature_control": {
+    "apparent_vacuum_Lagrangian_shift": "-2*V**2*(6*cR - cW)/(3*A**2)",
+    "inverse_metric_scale_shift": "-2*V*(6*cR - cW)/(3*A**2)",
+    "physical_curvature_shift_after_pullback": "0 through first EFT order"
+  },
+  "conventions": {
+    "coefficients": "full A,cW,cR,C_F,V symbolic; Dirac cR=0 does not set the full cR to zero",
+    "frame": "canonical X=8*pi*A*r\u00b2 belongs to the redefined EFT metric; original observables require pullback",
+    "leading_action": "sqrt|g|[-A R_L+L_m]",
+    "leading_variation": "-A*(G_mu_nu-T_mu_nu/(2A))*delta g^{mu nu}",
+    "order": "first order in a common formal parameter multiplying cW,cR; O(eps\u00b2) not claimed",
+    "original_curvature_terms": "-cW C\u00b2-cR R\u00b2-cEuler E4-cBox boxR",
+    "signature": "+---; curvature and stress conventions inherited from spherical-action"
+  },
+  "exact_residuals": {
+    "actual_contact_in_verified_constraint_class": "0",
+    "constant_curvature_observable_pullback": "0",
+    "constraint_12_closure_order_0": "0",
+    "constraint_12_closure_order_1": "0",
+    "constraint_12_delta_order_0": "0",
+    "constraint_12_delta_order_1": "0",
+    "constraint_13_closure_order_0": "0",
+    "constraint_13_closure_order_1": "0",
+    "constraint_13_delta_order_0": "0",
+    "constraint_13_delta_order_1": "0",
+    "constraint_23_closure_order_0": "0",
+    "constraint_23_closure_order_1": "0",
+    "constraint_23_delta_order_0": "0",
+    "constraint_23_delta_order_1": "0",
+    "contact_Legendre_to_corrected_constraints": "0",
+    "contact_to_existing_spherical_source": "0",
+    "fourD_Weyl_Euler_identity": "0",
+    "leading_electric_elimination_at_first_order": "0",
+    "leading_kinetic_in_canonical_variables": "0",
+    "off_shell_order_reduction_identity": "0",
+    "spherical_stress_contraction": "0",
+    "spherical_total_trace_includes_vacuum": "0"
+  },
+  "field_map": "g_old^{mu nu}=g_new^{mu nu}-(2*cW/A)*(R^{mu nu}-R*g^{mu nu}/6+(T^{mu nu}-T*g^{mu nu}/3)/(2*A))+(cR/A)*(R-T/(2*A))*g^{mu nu}",
+  "input_hashes": {
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/gauge-source.json": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592",
+    "results/development/spherical-action.json": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456"
+  },
+  "quantum_and_boundary_requirements": {
+    "Euler_box_and_induced_boundary_terms_discarded": false,
+    "Jacobian": "J_F=det[delta g_old/delta g_new], with other field, ghost, cutoff and state transformations included",
+    "Jacobian_set_to_one": false,
+    "composite_products_and_state_matched": false,
+    "stress_contact_expectation_factorized_into_mean_stresses": false
+  },
+  "regime": "requires |c_i R|/A and |c_i T|/A\u00b2 small, external scales below the matched expansion scales; boundaries/state/regulator must be transformed consistently",
+  "schema": "NSC-CURVATURE-EFT-v1",
+  "scope": {
+    "complete_couplings_state_or_self_sourced_solution_derived": false,
+    "correction_added_on_top_of_the_same_unremoved_curvature_term": false,
+    "derivative_expansion_validity_at_original_neck_established": false,
+    "fourD_topological_identity_applied_to_fiveD": false,
+    "full_nonlocal_spectral_action_replaced_by_truncation": false,
+    "full_theory_ghost_or_causality_verdict_derived": false,
+    "physical_vacuum_energy_removed_by_change_of_variables": false
+  },
+  "source_hashes": {
+    "docs/nsc-curvature-eft.md": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_curvature_eft.py": "8f1a77f9ac983287badac12d961f58693711d8d86383f0f46eb3ad7b5b5b44ce",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_curvature_eft.py": "6440e8411e59792020a003d5ab12f9046c12d3e0b598fd06f278247b345c97fc"
+  },
+  "spherical_source": {
+    "Q_T": "K\u00b2/(2*area\u00b2)+4*rho_EM\u00b2-4*V\u00b2/3",
+    "area": "X/(2*A)",
+    "contact_density": "-(12288*pi**6*A**4*C_F**4*cW*q_mag**4 + 384*pi**3*A**4*C_F**2*cW*chi**2*q_mag**3 + 3*A**4*cW*chi**4*q_mag**2 + 6*pi**2*A**2*C_F**2*K**2*X**2*cW + 24*pi**2*C_F**2*V**2*X**4*cR - 4*pi**2*C_F**2*V**2*X**4*cW)/(12*pi**2*A**3*C_F**2*X**3)",
+    "extra_light_fields": "include all sectors in total T BEFORE squaring; cross terms must not be lost",
+    "kinetic": "K=(grad chi)\u00b2",
+    "rho_EM": "rho_B+mu\u00b2*chi\u00b2/(2*area)",
+    "stress_trace": "4*V before quantum anomaly/renormalization"
+  },
+  "status": "local curvature-squared corrections mapped to source contacts and constraints at first EFT order",
+  "stress_contact": "-cW/(2*A\u00b2)*(T_mu_nu*T^{mu nu}-T\u00b2/3)-cR*T\u00b2/(4*A\u00b2)"
+}
