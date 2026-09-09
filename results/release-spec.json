@@ -3713,6 +3713,20 @@
       "category": "repository_derived_numerical_result",
       "comparison_policy": {
         "absolute_tolerance": 3e-09,
+        "derived_quantities": [
+          {
+            "derivative_relative_accuracy": 3e-08,
+            "derivative_scale_floor": 1,
+            "family_pointers": [
+              "/numerical_controls/0",
+              "/numerical_controls/1",
+              "/numerical_controls/2",
+              "/numerical_controls/3"
+            ],
+            "identity_ulps": 8,
+            "kind": "richardson_derivative_residual"
+          }
+        ],
         "kind": "all_fields",
         "relative_tolerance": 3e-08
       },

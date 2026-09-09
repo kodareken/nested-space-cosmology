@@ -91,6 +91,24 @@ Incidental coordinates of a numerically flat diagnostic argmin are not public
 observables and may vary between LAPACK implementations. Exact mode remains
 the stronger same-environment check and compares every output byte.
 
+The spectral-endpoint record also contains the numerical residual
+`independent_derivative_error = extrapolated_log_derivative - analytic_derivative`.
+At radius4, it subtracts derivatives near4754.59 to obtain a value near1e-7.
+Linux CI exposed a change from -1.40e-7 to +1.56e-7, although both estimates
+satisfy the generator's original accuracy requirement. Portable mode now
+checks the Richardson extrapolation and subtraction identities within eight
+ULPs, enforces the original `3e-8*max(1,abs(analytic_derivative))` accuracy,
+and propagates the two operands' original comparison budgets to their
+difference. Every raw derivative retains its original tolerance. Only the
+four named residual fields receive this declared derived-quantity policy;
+the scientific JSON, generator, comparator and exact mode remain unchanged.
+This is a portable acceptance rule, not a new physical error estimate.
+The generator's direct `--check` retains its original comparison; use the
+public portable route for this cross-runtime comparison. If CI reproduction
+fails, it retains generated public result JSON as a short-lived diagnostic
+artifact. Private laboratory raw stores and credentials are not part of
+that isolated result directory.
+
 For the smooth-geometry convergence diagnostic, the release specification
 also declares a conditioned comparison of `observed_orders`. These values
 are derived from small differences between independently computed band edges:
