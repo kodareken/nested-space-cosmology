@@ -42,6 +42,10 @@ flowchart LR
 
 The loop is the physical objective. Its present executable links are:
 
+- **One coefficient account:** the retained vacuum, Einstein and gauge terms obey a shared consistency condition. The compact chiral domain fixes the leading gravitational boundary coefficient.
+- **Curved quantum interaction:** the same covariant operator gives an evaluated compact endpoint interaction and its metric source. Its neck null sign depends on the finite geometry and state.
+- **Conditional state selection:** in a charged ultrastatic closed loop, the real free-fermion potential selects effective AP gauge holonomy. The physical return path and remaining source terms must still be established.
+
 - **Boundary response:** direct inversion and elimination give the same full-spinor spatial response, checked against radial integration. Its chirality and Clifford channels are evaluated in an explicit domain.
 - **Geometry and spectra:** smooth periodic confinement creates a band gap without a manually inserted constant mass. A radial band gap still needs a physical pole and spinor interpretation.
 - **Finite action:** smooth-geometry metric variations identify four independent bulk response coefficients for ultraviolet matching.
@@ -51,7 +55,7 @@ The loop is the physical objective. Its present executable links are:
 - **Static and causal response:** independent Euclidean frequency integration and Hamiltonian response agree in the radius channel. The relative continuum calculation retains the required coordinate contact and controls its numerical limits.
 - **Observable source:** internal conversion, external supply, pressure and perturbation response have separate, explicit roles in cosmological evolution.
 
-The current frontier is the full spinor boundary interaction and the remaining finite completion of the specified covariant source. These calculations test the missing connection directly. Physical inheritance scale, particle species, nuclear predictions and a cosmological fit remain open.
+The current frontier is the actual transmitting geometry and return path, together with the remaining curved bulk determinant, boundary cocycle, phase and finite completion of the common functional. The new [compact source and holonomy calculation](docs/nsc-compact-casimir.md) supplies a finite interaction and a conditional gauge saddle, while [vacuum–charge matching](docs/nsc-vacuum-charge-matching.md) and the [compact adjoint domain](docs/nsc-compact-boundary-action.md) constrain how they enter the source equation. Physical scale, particle/nuclear identification and cosmological predictions remain to be derived from the joint solution.
 
 The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This is an explanatory application note, not an additional compact record. It supplies the free mass operator for the interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
 
@@ -61,7 +65,7 @@ The [five-dimensional UV map](docs/nsc-torsion-uv-map.md) identifies the leading
 
 The [published-flow comparison](docs/nsc-flow-compatibility.md) checks that the next quantum calculation uses the same connection sector. The larger Palatini flow cannot be substituted for the constrained Dirac formulation without matching its variables and measure. Its published fixed-point numbers remain prior-work benchmarks.
 
-A closer existing self-sourced throat is the semiclassical Einstein–Maxwell construction of Maldacena, Milekhin and Popov. That result is imported theory: it is not an NSC-computed solution, an observed wormhole, a generic formation process or a child-expansion proof. The present numerical operator is still neutral. The [charged-sector record](docs/nsc-charged-self-sourcing-route.md) checks only a candidate U(1) extension's compact parity, anomaly cancellation and heat-coefficient conventions. Both opposite-parity projectors remain; sheet exchange is not charge conjugation. Mass, internal representation, vacuum/gravitational/gauge coefficients and global boundary matching remain unresolved.
+A closer existing self-sourced throat is the semiclassical Einstein–Maxwell construction of Maldacena, Milekhin and Popov. That result is imported theory: it is not an NSC-computed solution, an observed wormhole, a generic formation process or a child-expansion proof. The earlier radial transport calculation has no magnetic gauge background. The new free-KK candidate probes a flat U(1) holonomy on a closed cell; a magnetic return geometry is still to be supplied. The [charged-sector record](docs/nsc-charged-self-sourcing-route.md) checks only a candidate U(1) extension's compact parity, anomaly cancellation and heat-coefficient conventions. Both opposite-parity projectors remain; sheet exchange is not charge conjugation. Mass, internal representation, vacuum/gravitational/gauge coefficients and global boundary matching remain unresolved.
 
 ## Read and reproduce
 
@@ -74,10 +78,13 @@ A closer existing self-sourced throat is the semiclassical Einstein–Maxwell co
 ```sh
 python3 -m pip install -e '.[paper]'
 make demonstrate
-make verify
 ```
 
-Version 0.4.0 contains **85 records: 58 frozen historical records and 27 scoped follow-ups**. The original v0.1.0, v0.2.0 and v0.3.0 evidence remains byte-for-byte. Seven demonstrations display authenticated results for boundary response, vacuum work, the spinor reduction, normalized histories, static-to-causal matching, compact interactions and the charged domain. The default display performs no scientific recomputation; use `make demonstrate-recompute` when a new execution is wanted. The integrated gate verifies the full collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
+Version 0.5.0 contains **88 records: 58 frozen historical records and 30 scoped follow-ups**. Earlier records, generators and comparison policies retain their bytes. Nine demonstrations display authenticated results, including the new coefficient condition and curved compact-source/holonomy calculation. The default display performs no scientific recomputation; `make demonstrate-recompute` requests new execution. The integrated release gate verifies the collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
+
+Use the default demonstration to inspect authenticated records. Run the full
+release check with `make verify` after relevant changes or when preparing a
+publication; explicit demonstration recomputation is also available.
 
 ## Scientific attribution and responsibility
 

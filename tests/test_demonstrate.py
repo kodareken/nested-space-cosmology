@@ -23,6 +23,9 @@ class DemonstrationReadingRoute(unittest.TestCase):
         self.assertIn("Displaying recorded results", rendered)
         self.assertIn("Interactions between compact modes", rendered)
         self.assertIn("A consistent charged compact sector", rendered)
+        self.assertIn("One vacuum, gravity and gauge coefficient condition", rendered)
+        self.assertIn("Curved compact vacuum response and a gauge phase", rendered)
+        self.assertIn("not the complete vacuum stress", rendered)
         self.assertIn("--recompute", rendered)
 
 

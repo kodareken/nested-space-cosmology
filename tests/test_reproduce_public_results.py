@@ -1,8 +1,10 @@
-"""Focused identity, hash and comparison checks for the four nested records."""
+"""Focused identity, hash and comparison checks for nested development records."""
 from __future__ import annotations
 
 import copy
 import json
+from pathlib import Path
+import tempfile
 import unittest
 
 from test_publication import ROOT, load_script
@@ -14,6 +16,11 @@ DEVELOPMENT = (
     "NSC-14-FLOW-COMPATIBILITY",
     "NSC-15-CHARGED-SECTOR",
 )
+NEW_DEVELOPMENT = (
+    "NSC-16-VACUUM-CHARGE-MATCHING",
+    "NSC-17-COMPACT-BOUNDARY-ACTION",
+    "NSC-18-COMPACT-CASIMIR",
+)
 
 
 class ReproducePublicResultsTests(unittest.TestCase):
@@ -24,7 +31,7 @@ class ReproducePublicResultsTests(unittest.TestCase):
         cls.steps = {row["artifact_id"]: row for row in cls.manifest["steps"]}
 
     def test_schema_status_assigns_manifest_ids_without_json_identity(self):
-        for artifact in DEVELOPMENT:
+        for artifact in DEVELOPMENT + NEW_DEVELOPMENT:
             step = self.steps[artifact]
             value = json.loads((ROOT / step["output"]).read_text())
             self.assertNotIn("artifact_id", value)
@@ -58,6 +65,36 @@ class ReproducePublicResultsTests(unittest.TestCase):
             with self.assertRaises(self.reproducer.ReproductionError):
                 self.reproducer.validate_authenticated_inputs(ROOT, tampered, step)
 
+    def test_new_records_normalize_only_result_input_digests(self):
+        expected_counts = {
+            "NSC-16-VACUUM-CHARGE-MATCHING": 3,
+            "NSC-17-COMPACT-BOUNDARY-ACTION": 2,
+            "NSC-18-COMPACT-CASIMIR": 2,
+        }
+        for artifact, count in expected_counts.items():
+            step = self.steps[artifact]
+            value = json.loads((ROOT / step["output"]).read_text())
+            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            self.assertEqual(count, len(locations))
+            self.assertTrue(all(location[0] == "input_hashes" for location in locations))
+            normalized = self.reproducer.normalize_dynamic_hashes(value, locations)
+            self.assertEqual(value["source_hashes"], normalized["source_hashes"])
+            for path, digest in value["input_hashes"].items():
+                actual = normalized["input_hashes"][path]
+                self.assertEqual(
+                    "<validated-generated-result>" if path.startswith("results/") else digest,
+                    actual,
+                )
+            tampered = copy.deepcopy(value)
+            key = next(iter(tampered["source_hashes"]))
+            tampered["source_hashes"][key] = "0" * 64
+            with self.assertRaises(self.reproducer.ReproductionError):
+                self.reproducer.validate_authenticated_inputs(ROOT, tampered, step)
+            with self.assertRaises(self.reproducer.ReproductionError):
+                self.reproducer.normalize_dynamic_hashes(
+                    value, {("source_hashes", next(iter(value["source_hashes"])))}
+                )
+
     def test_recorded_all_field_policies_are_preserved(self):
         compact = self.steps["NSC-12-COMPACT-INTERACTION"]
         self.assertEqual(
@@ -76,6 +113,18 @@ class ReproducePublicResultsTests(unittest.TestCase):
             self.assertEqual("all_fields", policy["kind"])
             self.assertEqual(0.0, policy["relative_tolerance"])
             self.assertEqual(0.0, policy["absolute_tolerance"])
+        for artifact in (
+            "NSC-16-VACUUM-CHARGE-MATCHING",
+            "NSC-17-COMPACT-BOUNDARY-ACTION",
+        ):
+            policy = self.steps[artifact]["comparison_policy"]
+            self.assertEqual("all_fields", policy["kind"])
+            self.assertEqual((3e-13, 3e-13), (policy["relative_tolerance"], policy["absolute_tolerance"]))
+            self.assertNotIn("exceptions", policy)
+        casimir = self.steps["NSC-18-COMPACT-CASIMIR"]["comparison_policy"]
+        self.assertEqual("all_fields", casimir["kind"])
+        self.assertEqual((3e-08, 3e-09), (casimir["relative_tolerance"], casimir["absolute_tolerance"]))
+        self.assertNotIn("exceptions", casimir)
 
     def test_v030_status_strings_remain_historically_true(self):
         compact = json.loads(
@@ -97,17 +146,43 @@ class ReproducePublicResultsTests(unittest.TestCase):
     def test_selected_only_parser_accepts_nested_outputs(self):
         selected = self.reproducer.selected_steps(
             self.manifest,
-            "results/development/charged-sector.json,NSC-12-COMPACT-INTERACTION",
+            "results/development/charged-sector.json,NSC-12-COMPACT-INTERACTION,NSC-18-COMPACT-CASIMIR",
         )
         self.assertEqual(
             {
                 "results/development/compact-interaction.json",
                 "results/development/charged-sector.json",
+                "results/development/compact-casimir.json",
             },
             {row["output"] for row in selected},
         )
         with self.assertRaises(self.reproducer.ReproductionError):
             self.reproducer.selected_steps(self.manifest, "results/missing.json")
+
+    def test_unselected_outputs_are_seeded_for_recursive_authentication(self):
+        selected = {"results/development/compact-casimir.json"}
+        with tempfile.TemporaryDirectory() as workspace:
+            expected = Path(workspace) / "expected"
+            work = Path(workspace) / "work"
+            for step in self.manifest["steps"]:
+                self.reproducer.copy_relative(ROOT, expected, step["output"])
+            complete = self.reproducer.seed_unselected_outputs(
+                work, expected, self.manifest, selected
+            )
+            self.assertNotIn("results/development/compact-casimir.json", complete)
+            for relative in (
+                "results/development/compact-boundary-action.json",
+                "results/development/vacuum-charge-matching.json",
+                "results/development/charged-sector.json",
+                "results/nsc-9-covariant-source.json",
+                "results/nsc-8-finite-terms.json",
+                "results/nsc-4-covariant-measure.json",
+            ):
+                self.assertIn(relative, complete)
+                self.assertEqual(
+                    (ROOT / relative).read_bytes(),
+                    (work / relative).read_bytes(),
+                )
 
     def test_empty_explicit_selection_never_triggers_full_reproduction(self):
         for selection in ("", " ", ",,", " , "):
