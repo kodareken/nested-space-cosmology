@@ -1,0 +1,331 @@
+{
+  "compact_convergence": [
+    {
+      "compact_modes": 18,
+      "moments": {
+        "Q1": {
+          "d_cutoff": 8.869329232384159,
+          "d_interval": 2.656013714471499,
+          "d_path": -0.1037364833274633,
+          "weight": 6.213315517915762
+        },
+        "Q1_momentum_tail_bound": 3.02165012349684e-15,
+        "Q1_scaling_residual": 6.204814440025075e-12,
+        "Q2": {
+          "d_cutoff": 35.06616488850416,
+          "d_interval": 6.8196045235730764,
+          "d_path": -0.40766259805120036,
+          "weight": 14.123280182465633
+        },
+        "Q2_momentum_tail_bound": 4.472042182775323e-13,
+        "Q2_scaling_residual": 3.623767952376511e-13,
+        "quadrature_error_estimate": 1.7229358099796979e-09
+      }
+    },
+    {
+      "compact_modes": 26,
+      "moments": {
+        "Q1": {
+          "d_cutoff": 8.869329333161595,
+          "d_interval": 2.65601375043483,
+          "d_path": -0.10373635666516207,
+          "weight": 6.213315582729872
+        },
+        "Q1_momentum_tail_bound": 3.02165012349684e-15,
+        "Q1_scaling_residual": 6.215472581061476e-12,
+        "Q2": {
+          "d_cutoff": 35.066165546428365,
+          "d_interval": 6.819604668026155,
+          "d_path": -0.4076621023362376,
+          "weight": 14.123280439201231
+        },
+        "Q2_momentum_tail_bound": 4.472042182775323e-13,
+        "Q2_scaling_residual": 5.044853423896711e-13,
+        "quadrature_error_estimate": 1.7229359755992053e-09
+      }
+    },
+    {
+      "compact_modes": 34,
+      "moments": {
+        "Q1": {
+          "d_cutoff": 8.869329360514365,
+          "d_interval": 2.65601375990134,
+          "d_path": -0.10373632168098418,
+          "weight": 6.21331560061613
+        },
+        "Q1_momentum_tail_bound": 3.02165012349684e-15,
+        "Q1_scaling_residual": 6.208367153703875e-12,
+        "Q2": {
+          "d_cutoff": 35.06616572467483,
+          "d_interval": 6.819604705430279,
+          "d_path": -0.407661966213205,
+          "weight": 14.123280509622326
+        },
+        "Q2_momentum_tail_bound": 4.472042182775323e-13,
+        "Q2_scaling_residual": 1.9895196601282805e-13,
+        "quadrature_error_estimate": 1.7229357090771588e-09
+      }
+    }
+  ],
+  "comparison": {
+    "exact": "keys, lengths, strings, non-float types and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "conventions": {
+    "Mellin_definitions": "Q1=int H(y)dy, Q2=int y H(y)dy, Q0=H(0)",
+    "coefficient_units": "V length^-4; A length^-2; curvature-squared and gauge coefficients dimensionless",
+    "complement": "Gamma_H,nu=Gamma5-Gamma_light,nu; exact spectral matching, not a sharp energy projection",
+    "full_functional": "Gamma5=(1/2)Tr4 h_Lambda(D4\u00b2), two paired 5D Dirac copies",
+    "light_functional": "Gamma_light,nu=(1/2)Tr4 E1(D4\u00b2/nu\u00b2), one canonical 4D Dirac",
+    "matching_cutoff_is_normalization_mass": false,
+    "parameters": {
+      "Lambda": 2.0,
+      "amplitude": 0.017733990147783252,
+      "basis_modes": 34,
+      "basis_quadrature": 112,
+      "ell": 2.0,
+      "momentum_extent": 12.0,
+      "quadrature_tolerance": 1e-09,
+      "warp_path": 1.0
+    },
+    "validity": "local coefficients through 4D a4; external curvature, derivatives and gauge field must be small for truncation; compact warp treated by the full finite spectral weight"
+  },
+  "exact_matching_residuals": {
+    "Einstein_matching_scale_cancellation": "0",
+    "full_profile_matching_scale_cancellation": "0",
+    "gauge_matching_scale_cancellation": "0",
+    "imported_Dirac_a4_basis_conversion": "0",
+    "static_metric_owner_sign_and_units": "0",
+    "volume_matching_scale_cancellation": "0"
+  },
+  "flat_moment_check": {
+    "analytic_Q1": 6.318536319462639,
+    "analytic_Q2": 14.540464758874116,
+    "integrated": {
+      "Q1": {
+        "d_cutoff": 9.027035368481608,
+        "d_interval": 2.7084990490189633,
+        "d_path": -0.1067235708588955,
+        "weight": 6.318536319465716
+      },
+      "Q1_momentum_tail_bound": 3.02165012349684e-15,
+      "Q1_scaling_residual": 6.142641950646066e-12,
+      "Q2": {
+        "d_cutoff": 36.108141473926196,
+        "d_interval": 7.027211956178273,
+        "d_path": -0.4268942834355805,
+        "weight": 14.54046475887405
+      },
+      "Q2_momentum_tail_bound": 4.472042182775323e-13,
+      "Q2_scaling_residual": 3.552713678800501e-13,
+      "quadrature_error_estimate": 1.7287675690961862e-09
+    }
+  },
+  "infrared_matching": [
+    {
+      "D4_squared": 0.01,
+      "difference_from_zero_limit": -0.01194470867667663,
+      "light_singular_ratio": 1.0118644628559448,
+      "matched_weight": 2.2796593285310065
+    },
+    {
+      "D4_squared": 0.001,
+      "difference_from_zero_limit": -0.0011978837807000708,
+      "light_singular_ratio": 1.0118645596086926,
+      "matched_weight": 2.290406153426983
+    },
+    {
+      "D4_squared": 0.0001,
+      "difference_from_zero_limit": -0.00011982592140347137,
+      "light_singular_ratio": 1.0118645692839958,
+      "matched_weight": 2.2914842112862797
+    }
+  ],
+  "input_hashes": {
+    "results/development/warped-source.json": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac",
+    "results/nsc-10-influence.json": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1",
+    "results/nsc-10-measure-normalization.json": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "matched_coefficients": [
+    {
+      "A_Dirac": 0.006293856198825465,
+      "C_Euler_Dirac": 0.0003558280563700424,
+      "C_R2_Dirac": 0.0,
+      "C_Weyl_Dirac": -0.0005822640922418875,
+      "C_boxR_Dirac": -0.0003881760614945917,
+      "C_gauge_Dirac": 0.0077635212298918345,
+      "Q1_complement": 5.96331560061613,
+      "Q2_complement": 14.092030509622326,
+      "V_Dirac": 0.17847765139485883,
+      "d_nu_A": -0.0010554289962743518,
+      "d_nu_C_gauge": -0.008443431970194815,
+      "d_nu_V": -0.0031662869888230555,
+      "light_singular_slope": 1.0118645687583168,
+      "massive_zero_argument_weight": 0.9171044126600252,
+      "matched_weight_at_zero": 3.6778983983275735,
+      "matching_cutoff": 0.5,
+      "proper_length": 1.988239974113051,
+      "proper_ratio": 0.9941199870565255,
+      "zero_limit_tail_bound": 1.3490866930992642e-160
+    },
+    {
+      "A_Dirac": 0.005502284451619701,
+      "C_Euler_Dirac": 0.00022170732364443278,
+      "C_R2_Dirac": 0.0,
+      "C_Weyl_Dirac": -0.0003627938023272536,
+      "C_boxR_Dirac": -0.00024186253488483575,
+      "C_gauge_Dirac": 0.004837250697696715,
+      "Q1_complement": 5.21331560061613,
+      "Q2_complement": 13.623280509622326,
+      "V_Dirac": 0.17254086329081558,
+      "d_nu_A": -0.0021108579925487037,
+      "d_nu_C_gauge": -0.004221715985097407,
+      "d_nu_V": -0.025330295910584444,
+      "light_singular_slope": 1.0118645687583168,
+      "massive_zero_argument_weight": 0.9171044126600252,
+      "matched_weight_at_zero": 2.291604037207683,
+      "matching_cutoff": 1.0,
+      "proper_length": 1.988239974113051,
+      "proper_ratio": 0.9941199870565255,
+      "zero_limit_tail_bound": 1.3490866930992642e-160
+    },
+    {
+      "A_Dirac": 0.004489072615196324,
+      "C_Euler_Dirac": 0.00015660152189969206,
+      "C_R2_Dirac": 0.0,
+      "C_Weyl_Dirac": -0.0002562570358358597,
+      "C_boxR_Dirac": -0.00017083802389057315,
+      "C_gauge_Dirac": 0.0034167604778114627,
+      "Q1_complement": 4.25331560061613,
+      "Q2_complement": 12.202480509622326,
+      "V_Dirac": 0.1545462210759364,
+      "d_nu_A": -0.002955201189568185,
+      "d_nu_C_gauge": -0.00301551141792672,
+      "d_nu_V": -0.0695063319786437,
+      "light_singular_slope": 1.0118645687583168,
+      "massive_zero_argument_weight": 0.9171044126600252,
+      "matched_weight_at_zero": 1.6186595639652572,
+      "matching_cutoff": 1.4,
+      "proper_length": 1.988239974113051,
+      "proper_ratio": 0.9941199870565255,
+      "zero_limit_tail_bound": 1.3490866930992642e-160
+    }
+  ],
+  "matching_scale_cancellation": [
+    {
+      "matching_cutoff": 0.5,
+      "total_delta_A": 0.0,
+      "total_delta_C_gauge": -4.336808689942018e-19,
+      "total_delta_V": 1.5612511283791264e-17
+    },
+    {
+      "matching_cutoff": 1.4,
+      "total_delta_A": 0.0,
+      "total_delta_C_gauge": -6.505213034913027e-19,
+      "total_delta_V": 1.0408340855860843e-17
+    }
+  ],
+  "proper_coordinate_zero_limit": {
+    "light_singular_slope": 1.0118645687583168,
+    "massive_zero_argument_weight": 0.9171044126600252,
+    "matched_weight_at_zero": 2.291604037207683,
+    "proper_length": 1.988239974113051,
+    "proper_ratio": 0.9941199870565255,
+    "zero_limit_tail_bound": 1.3490866930992642e-160
+  },
+  "refined_moments": {
+    "Q1": {
+      "d_cutoff": 8.869329360514417,
+      "d_interval": 2.6560137599013687,
+      "d_path": -0.10373632168098476,
+      "weight": 6.213315600613302
+    },
+    "Q1_momentum_tail_bound": 6.829924631747841e-21,
+    "Q1_scaling_residual": 5.062616992290714e-13,
+    "Q2": {
+      "d_cutoff": 35.066165724675216,
+      "d_interval": 6.819604705430422,
+      "d_path": -0.40766196621320755,
+      "weight": 14.12328050962243
+    },
+    "Q2_momentum_tail_bound": 1.3659849263495682e-18,
+    "Q2_scaling_residual": 1.3500311979441904e-13,
+    "quadrature_error_estimate": 2.7907046453454997e-10
+  },
+  "schema": "NSC-COMPACT-MATCHING-v1",
+  "scope": {
+    "complete_G_Newton_or_gauge_coupling_predicted": false,
+    "complete_quantum_compensator_derived": false,
+    "joint_self_sourcing_or_cosmological_Q_solved": false,
+    "matching_cutoff_may_be_fitted_as_a_physical_parameter": false,
+    "new_universal_heat_coefficients_claimed": false,
+    "zero_Dirac_R2_coefficient_fixes_complete_R2_term": false
+  },
+  "source_hashes": {
+    "docs/nsc-compact-matching.md": "563576eef2d7a7f0f5a6723f4b1d405c3a6ff9489312f62e4b0c9a69faaaf3f5",
+    "docs/nsc-covariant-source.md": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_compact_matching.py": "742e49f7fe6aafc306c0b68dc4af85f975d0fc4b2253c584203b27d291f92bbc",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_compact_matching.py": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
+  },
+  "state_completion": {
+    "arbitrary_extra_vacuum_or_Einstein_coefficient_inserted": false,
+    "equal_histories_or_state_normalization_fixes_missing_real_terms": false,
+    "known_owner": "nsc_influence normalized light-field CTP functional",
+    "required": "same-regulator causal continuation, light and heavy state/correlations, and completion beyond the free determinant"
+  },
+  "static_metric_owner": {
+    "basis": [
+      "M4",
+      "M2R_L",
+      "C2",
+      "R_L2",
+      "E4",
+      "box_L R_L"
+    ],
+    "coefficients": [
+      0.17254086329081558,
+      0.005502284451619701,
+      -0.0003627938023272536,
+      0.0,
+      0.00022170732364443278,
+      -0.00024186253488483575
+    ],
+    "full_curved_remainder_recomputed": false,
+    "reference_mass": 1.0
+  },
+  "status": "finite Dirac coefficients matched to one retained canonical 4D field",
+  "zero_tangent_spectrum": {
+    "computed_first_six": [
+      2.49667575032018,
+      2.496675758944595,
+      9.986703001673877,
+      9.986703033390071,
+      22.470081755799576,
+      22.470081834050134
+    ],
+    "errors": [
+      3.931255321276694e-11,
+      8.663727513180675e-09,
+      5.504077194018464e-10,
+      3.226660183486274e-08,
+      3.2717757392219937e-09,
+      8.152233377245466e-08
+    ],
+    "exact_first_six": [
+      2.4966757502808674,
+      2.4966757502808674,
+      9.98670300112347,
+      9.98670300112347,
+      22.4700817525278,
+      22.4700817525278
+    ]
+  }
+}

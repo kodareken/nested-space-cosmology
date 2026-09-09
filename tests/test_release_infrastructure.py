@@ -79,7 +79,9 @@ class ReleaseInfrastructureTests(unittest.TestCase):
                          'NSC-8-CHIRAL-BOUNDARY', 'NSC-8-FINITE-TERMS',
                          'NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION',
                          'NSC-10-INFLUENCE', 'NSC-16-VACUUM-CHARGE-MATCHING',
-                         'NSC-17-COMPACT-BOUNDARY-ACTION', 'NSC-18-COMPACT-CASIMIR'):
+                         'NSC-17-COMPACT-BOUNDARY-ACTION', 'NSC-18-COMPACT-CASIMIR',
+                         'NSC-19-HORIZON-SOURCE', 'NSC-20-WARPED-SOURCE',
+                         'NSC-21-COMPACT-MATCHING'):
             step = self.steps[artifact]
             original = json.loads((ROOT / step['output']).read_text())
             locations = self.reproducer.validate_authenticated_inputs(ROOT, original, step)
@@ -154,6 +156,9 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             'NSC-16-VACUUM-CHARGE-MATCHING': (3e-13, 3e-13),
             'NSC-17-COMPACT-BOUNDARY-ACTION': (3e-13, 3e-13),
             'NSC-18-COMPACT-CASIMIR': (3e-8, 3e-9),
+            'NSC-19-HORIZON-SOURCE': (3e-13, 3e-13),
+            'NSC-20-WARPED-SOURCE': (3e-8, 3e-9),
+            'NSC-21-COMPACT-MATCHING': (3e-8, 3e-9),
         }
         for artifact, (relative, absolute) in specifications.items():
             policy = self.steps[artifact]['comparison_policy']
@@ -224,14 +229,19 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             'results/development/flow-compatibility.json',
             'results/development/charged-sector.json',
         ])
-        self.assertEqual(outputs[-3:], [
+        self.assertEqual(outputs[85:88], [
             'results/development/vacuum-charge-matching.json',
             'results/development/compact-boundary-action.json',
             'results/development/compact-casimir.json',
         ])
-        self.assertEqual(88, len(self.manifest['steps']))
-        self.assertEqual(30, len(self.release['scoped_follow_ups']))
-        self.assertEqual('6eeff9bfab26a18fcd029a59ec908643b63386b5', self.release['source_commit'])
+        self.assertEqual(outputs[-3:], [
+            'results/development/horizon-source.json',
+            'results/development/warped-source.json',
+            'results/development/compact-matching.json',
+        ])
+        self.assertEqual(91, len(self.manifest['steps']))
+        self.assertEqual(33, len(self.release['scoped_follow_ups']))
+        self.assertEqual('eea43512f63e61d8d7686261a683bc36e99efa19', self.release['source_commit'])
         self.assertEqual('95b96be312feb667377cdbc3bbfe453697a458dd',
                          self.steps['NSC-15-CHARGED-SECTOR']['follow_up_source_commit'])
         self.assertEqual('6eeff9bfab26a18fcd029a59ec908643b63386b5',
@@ -242,6 +252,14 @@ class ReleaseInfrastructureTests(unittest.TestCase):
                          self.steps['NSC-17-COMPACT-BOUNDARY-ACTION']['paper_claim_ids'])
         self.assertEqual(['curved-compact-source', 'conditional-holonomy-saddle'],
                          self.steps['NSC-18-COMPACT-CASIMIR']['paper_claim_ids'])
+        self.assertEqual('eea43512f63e61d8d7686261a683bc36e99efa19',
+                         self.steps['NSC-19-HORIZON-SOURCE']['follow_up_source_commit'])
+        self.assertEqual(['derived-horizon-source'],
+                         self.steps['NSC-19-HORIZON-SOURCE']['paper_claim_ids'])
+        self.assertEqual(['derived-warped-source'],
+                         self.steps['NSC-20-WARPED-SOURCE']['paper_claim_ids'])
+        self.assertEqual(['derived-compact-matching'],
+                         self.steps['NSC-21-COMPACT-MATCHING']['paper_claim_ids'])
         self.assertEqual('3a747cc17e33a6a3d6cc58634eaa40dd69e30a26',
                          self.steps['NSC-9-COVARIANT-SOURCE']['follow_up_source_commit'])
         for artifact in ('NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION', 'NSC-10-INFLUENCE', 'NSC-11-RESPONSE-MATCHING'):
@@ -273,6 +291,10 @@ class ReleaseInfrastructureTests(unittest.TestCase):
         self.assertEqual(
             'results/development/compact-casimir.json',
             self.importer.safe_relative('results/development/compact-casimir.json'),
+        )
+        self.assertEqual(
+            'results/development/compact-matching.json',
+            self.importer.safe_relative('results/development/compact-matching.json'),
         )
 
 

@@ -81,14 +81,18 @@ Use the labels defined in [THEORY.md](THEORY.md): Postulate, Imported result, Re
 
 ## Current frontier
 
-The latest finite controls include the compact adjoint/boundary action,
-curved compact-interaction source and a conditional one-loop axial U(1)
-holonomy minimum. Use the current result and manifest for their domain.
-The negative finite-cell source is not a full vacuum stress or an isolated
-throat result; the actual return path and common-action source balance are
-the next physical interfaces.
+The latest source map includes the unwrapped magnetic-sector horizon
+application, the finite-cutoff compact warp and its canonical light-field
+matching. The Dirac vacuum, Einstein, gauge and a4 contributions are now
+calculated in that prescription. The complete physical couplings and
+self-sourced geometry remain open.
 
-The physical frontier is the full spinor boundary interaction, covariant quantum functional, admissible state and absolute stress/backreaction. Finite boundary maps, spatial recursion, a prescribed geometry-pulse vacuum response and an invariant chiral-sector benchmark are computed. They do not select the physical coupling, sector or inheritance scale.
+Use [the current result](docs/current-result.md) as the work cursor. The next
+owner is the common contribution beyond the computed free determinant,
+with its measure, compensator, physical state and transmitting interaction.
+Further raw coefficient or compact-grid scans do not determine that missing
+functional. Retain the light field and its complement together so their
+arbitrary matching cutoff cancels.
 
 At common dimensional energy, parent normalization gives
 

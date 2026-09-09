@@ -21,6 +21,11 @@ NEW_DEVELOPMENT = (
     "NSC-17-COMPACT-BOUNDARY-ACTION",
     "NSC-18-COMPACT-CASIMIR",
 )
+V060_DEVELOPMENT = (
+    "NSC-19-HORIZON-SOURCE",
+    "NSC-20-WARPED-SOURCE",
+    "NSC-21-COMPACT-MATCHING",
+)
 
 
 class ReproducePublicResultsTests(unittest.TestCase):
@@ -31,7 +36,7 @@ class ReproducePublicResultsTests(unittest.TestCase):
         cls.steps = {row["artifact_id"]: row for row in cls.manifest["steps"]}
 
     def test_schema_status_assigns_manifest_ids_without_json_identity(self):
-        for artifact in DEVELOPMENT + NEW_DEVELOPMENT:
+        for artifact in DEVELOPMENT + NEW_DEVELOPMENT + V060_DEVELOPMENT:
             step = self.steps[artifact]
             value = json.loads((ROOT / step["output"]).read_text())
             self.assertNotIn("artifact_id", value)
@@ -70,6 +75,9 @@ class ReproducePublicResultsTests(unittest.TestCase):
             "NSC-16-VACUUM-CHARGE-MATCHING": 3,
             "NSC-17-COMPACT-BOUNDARY-ACTION": 2,
             "NSC-18-COMPACT-CASIMIR": 2,
+            "NSC-19-HORIZON-SOURCE": 3,
+            "NSC-20-WARPED-SOURCE": 3,
+            "NSC-21-COMPACT-MATCHING": 4,
         }
         for artifact, count in expected_counts.items():
             step = self.steps[artifact]
@@ -125,6 +133,15 @@ class ReproducePublicResultsTests(unittest.TestCase):
         self.assertEqual("all_fields", casimir["kind"])
         self.assertEqual((3e-08, 3e-09), (casimir["relative_tolerance"], casimir["absolute_tolerance"]))
         self.assertNotIn("exceptions", casimir)
+        horizon = self.steps["NSC-19-HORIZON-SOURCE"]["comparison_policy"]
+        self.assertEqual("all_fields", horizon["kind"])
+        self.assertEqual((3e-13, 3e-13), (horizon["relative_tolerance"], horizon["absolute_tolerance"]))
+        self.assertNotIn("exceptions", horizon)
+        for artifact in ("NSC-20-WARPED-SOURCE", "NSC-21-COMPACT-MATCHING"):
+            policy = self.steps[artifact]["comparison_policy"]
+            self.assertEqual("all_fields", policy["kind"])
+            self.assertEqual((3e-08, 3e-09), (policy["relative_tolerance"], policy["absolute_tolerance"]))
+            self.assertNotIn("exceptions", policy)
 
     def test_v030_status_strings_remain_historically_true(self):
         compact = json.loads(
@@ -146,13 +163,14 @@ class ReproducePublicResultsTests(unittest.TestCase):
     def test_selected_only_parser_accepts_nested_outputs(self):
         selected = self.reproducer.selected_steps(
             self.manifest,
-            "results/development/charged-sector.json,NSC-12-COMPACT-INTERACTION,NSC-18-COMPACT-CASIMIR",
+            "results/development/charged-sector.json,NSC-12-COMPACT-INTERACTION,NSC-18-COMPACT-CASIMIR,NSC-21-COMPACT-MATCHING",
         )
         self.assertEqual(
             {
                 "results/development/compact-interaction.json",
                 "results/development/charged-sector.json",
                 "results/development/compact-casimir.json",
+                "results/development/compact-matching.json",
             },
             {row["output"] for row in selected},
         )
@@ -160,7 +178,7 @@ class ReproducePublicResultsTests(unittest.TestCase):
             self.reproducer.selected_steps(self.manifest, "results/missing.json")
 
     def test_unselected_outputs_are_seeded_for_recursive_authentication(self):
-        selected = {"results/development/compact-casimir.json"}
+        selected = {"results/development/compact-matching.json"}
         with tempfile.TemporaryDirectory() as workspace:
             expected = Path(workspace) / "expected"
             work = Path(workspace) / "work"
@@ -169,8 +187,11 @@ class ReproducePublicResultsTests(unittest.TestCase):
             complete = self.reproducer.seed_unselected_outputs(
                 work, expected, self.manifest, selected
             )
-            self.assertNotIn("results/development/compact-casimir.json", complete)
+            self.assertNotIn("results/development/compact-matching.json", complete)
             for relative in (
+                "results/development/warped-source.json",
+                "results/development/horizon-source.json",
+                "results/development/compact-casimir.json",
                 "results/development/compact-boundary-action.json",
                 "results/development/vacuum-charge-matching.json",
                 "results/development/charged-sector.json",

@@ -25,6 +25,10 @@ class DemonstrationReadingRoute(unittest.TestCase):
         self.assertIn("A consistent charged compact sector", rendered)
         self.assertIn("One vacuum, gravity and gauge coefficient condition", rendered)
         self.assertIn("Curved compact vacuum response and a gauge phase", rendered)
+        self.assertIn("A state-defined source at the unwrapped horizon", rendered)
+        self.assertIn("The compact warp in the quantum source", rendered)
+        self.assertIn("One light field and matched source coefficients", rendered)
+        self.assertIn("12 demonstrations displayed", rendered)
         self.assertIn("not the complete vacuum stress", rendered)
         self.assertIn("--recompute", rendered)
 

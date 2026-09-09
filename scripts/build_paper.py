@@ -8,6 +8,7 @@ import hashlib
 import html
 from io import BytesIO
 import json
+import math
 import os
 import re
 import shutil
@@ -32,6 +33,8 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         ("geometric-gap", "results/nsc-3-geometric-chain.json"),
         ("vacuum-work", "results/nsc-6-vacuum-work.json"),
         ("compact-source", "results/development/compact-casimir.json"),
+        ("source-matching", "results/development/warped-source.json"),
+        ("source-matching", "results/development/compact-matching.json"),
     ):
         if f"<!-- nsc-figure:{marker} -->" in text:
             paths.append(path)
@@ -128,6 +131,50 @@ def compact_source_plot():
         axis.xaxis.label.set_size(8)
         axis.yaxis.label.set_size(8)
     figure.tight_layout(pad=.6)
+    return figure
+
+
+def source_matching_plot():
+    """Two distinct source projections, read only from authenticated records."""
+    from matplotlib.backends.backend_agg import FigureCanvasAgg
+    from matplotlib.figure import Figure
+
+    warped = json.loads((REPOSITORY / "results/development/warped-source.json").read_text())
+    matched = json.loads((REPOSITORY / "results/development/compact-matching.json").read_text())
+    figure = Figure(figsize=(6.4, 2.9), dpi=220)
+    FigureCanvasAgg(figure)
+    left, right = figure.subplots(1, 2)
+    reference = warped["flux_cases"]["1"]
+    values = [reference["flat_upper_comparison"], reference["response"]["potential"]]
+    left.bar([0, 1], values, color=["#2357A6", "#21766C"], width=.58)
+    left.set_xticks([0, 1], ["Unwarped", "Gaussian warp"])
+    left.set_ylim(0, 2.7)
+    left.set_title("Homogeneous spherical potential", fontsize=9)
+    left.set_ylabel(r"$V_2$ (reference length$^{-2}$)")
+    for x, y in enumerate(values):
+        left.text(x, y+.05, f"{y:.6f}", ha="center", fontsize=7)
+    left.text(.5, 2.53, f"change: {100*(values[1]/values[0]-1):.2f}%",
+              ha="center", fontsize=8, color="#334155")
+    rows = matched["matched_coefficients"]
+    cutoffs = [row["matching_cutoff"] for row in rows]
+    complement = [row["V_Dirac"] for row in rows]
+    light = [nu**4/(4*math.pi)**2 for nu in cutoffs]
+    total = [a+b for a, b in zip(complement, light)]
+    right.plot(cutoffs, complement, "o-", color="#2357A6", label="Complement", linewidth=1.2, markersize=3)
+    right.plot(cutoffs, light, "s-", color="#A15A38", label="Retained light", linewidth=1.2, markersize=3)
+    right.plot(cutoffs, total, "--", color="#21766C", label="Sum", linewidth=1.3)
+    right.set_title("Matching changes the partition", fontsize=9)
+    right.set_xlabel(r"matching cutoff $\nu$ (length$^{-1}$)")
+    right.set_ylabel(r"$V_D$ (reference length$^{-4}$)")
+    right.set_ylim(0, .205)
+    right.legend(fontsize=6.5, loc="center right", frameon=False)
+    for axis in (left, right):
+        axis.grid(True, axis="y", alpha=.2, linewidth=.5)
+        axis.set_axisbelow(True)
+        axis.tick_params(labelsize=7)
+        axis.xaxis.label.set_size(8)
+        axis.yaxis.label.set_size(8)
+    figure.tight_layout(pad=.7)
     return figure
 
 
@@ -785,6 +832,25 @@ def build_pdf(
             "[Source and state record](../results/development/compact-casimir.json)."), styles["Body"])
         return KeepTogether([Spacer(1,4),rendered,caption,Spacer(1,6)])
 
+    def source_matching_figure() -> object:
+        buffer = BytesIO()
+        source_matching_plot().savefig(buffer, format="png", dpi=220)
+        buffer.seek(0)
+        rendered = Image(buffer)
+        rendered._nsc_buffer = buffer
+        rendered.drawWidth = body_width
+        rendered.drawHeight = body_width*2.9/6.4
+        caption = Paragraph(inline_markup(
+            "**Figure.** Left: two-dimensional-area potential on R2 times the unit sphere, "
+            "with magnetic flux label 1. Right: the four-dimensional local vacuum coefficient "
+            "split between a retained light field and its complement; their sum is unchanged. "
+            "Both use cutoff 2 and transverse length 2. The panels have different dimensions "
+            "and are different projections of the same free determinant. They do not plot "
+            "cosmological evolution. "
+            "[Warped source](../results/development/warped-source.json); "
+            "[light-field matching](../results/development/compact-matching.json)."), styles["Body"])
+        return KeepTogether([Spacer(1,4), rendered, caption, Spacer(1,6)])
+
     def parse_markdown(markdown: str) -> list[object]:
         lines = markdown.splitlines()
         # Cover content is built separately. Begin at the technical abstract.
@@ -827,6 +893,12 @@ def build_pdf(
             if stripped == "<!-- nsc-figure:compact-source -->":
                 flush_paragraph()
                 story.append(compact_source_figure())
+                index += 1
+                continue
+
+            if stripped == "<!-- nsc-figure:source-matching -->":
+                flush_paragraph()
+                story.append(source_matching_figure())
                 index += 1
                 continue
 

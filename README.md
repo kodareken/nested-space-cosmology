@@ -17,6 +17,14 @@ The project makes this connection concrete through reproducible operator calcula
 
 **The research target is a self-sourced physical solution:** the same action and state must determine the geometry, its matter and its observable consequences. The strongest verified milestones and remaining equations are presented together in the [working preprint](paper/nested-space-cosmology.pdf).
 
+The new [horizon/source map](docs/nsc-horizon-source.md),
+[warped determinant](docs/nsc-warped-source.md) and
+[compact/light matching](docs/nsc-compact-matching.md) connect the same
+operator to a conditional horizon flux and linked vacuum, gravitational
+and gauge contributions. The free Dirac part is calculated; the common
+completion, physical state and transmitting interaction remain the next
+source equation.
+
 ## Six questions, one construction
 
 | Research question | Current mathematical connection | Next physical link |
@@ -55,7 +63,7 @@ The loop is the physical objective. Its present executable links are:
 - **Static and causal response:** independent Euclidean frequency integration and Hamiltonian response agree in the radius channel. The relative continuum calculation retains the required coordinate contact and controls its numerical limits.
 - **Observable source:** internal conversion, external supply, pressure and perturbation response have separate, explicit roles in cosmological evolution.
 
-The current frontier is the actual transmitting geometry and return path, together with the remaining curved bulk determinant, boundary cocycle, phase and finite completion of the common functional. The new [compact source and holonomy calculation](docs/nsc-compact-casimir.md) supplies a finite interaction and a conditional gauge saddle, while [vacuum–charge matching](docs/nsc-vacuum-charge-matching.md) and the [compact adjoint domain](docs/nsc-compact-boundary-action.md) constrain how they enter the source equation. Physical scale, particle/nuclear identification and cosmological predictions remain to be derived from the joint solution.
+The current frontier is the common functional beyond the calculated free compact determinant, together with its causal state and transmitting interaction. The new spectral weight and canonical light-field split supply the Dirac contribution and its matched coefficients; the complete source must retain both parts and their remaining physical completion. The new [compact source and holonomy calculation](docs/nsc-compact-casimir.md) supplies a finite interaction and a conditional gauge saddle, while [vacuum–charge matching](docs/nsc-vacuum-charge-matching.md) and the [compact adjoint domain](docs/nsc-compact-boundary-action.md) constrain how they enter the source equation. Physical scale, particle/nuclear identification and cosmological predictions remain to be derived from the joint solution.
 
 The subsequent [compact mass map](docs/nsc-compact-mass-map.md) applies established dimensional reduction to the existing free five-dimensional carrier. For its declared interval domain, nonzero compact levels become exact four-dimensional Dirac mass terms, alongside a chiral zero mode. This is an explanatory application note, not an additional compact record. It supplies the free mass operator for the interacting-source calculation; the compact size, domain selection and physical state remain to be determined.
 
@@ -80,7 +88,7 @@ python3 -m pip install -e '.[paper]'
 make demonstrate
 ```
 
-Version 0.5.0 contains **88 records: 58 frozen historical records and 30 scoped follow-ups**. Earlier records, generators and comparison policies retain their bytes. Nine demonstrations display authenticated results, including the new coefficient condition and curved compact-source/holonomy calculation. The default display performs no scientific recomputation; `make demonstrate-recompute` requests new execution. The integrated release gate verifies the collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
+Version 0.6.0 contains **91 records: 58 frozen historical records and 33 scoped follow-ups**. Earlier records, generators and comparison policies retain their bytes. Twelve demonstrations display authenticated results, including the horizon source, warped determinant and compact/light coefficient map. The default display performs no scientific recomputation; `make demonstrate-recompute` requests new execution. The integrated release gate verifies the collection and deterministic PDF. [Reproduction details](docs/reproducing.md).
 
 Use the default demonstration to inspect authenticated records. Run the full
 release check with `make verify` after relevant changes or when preparing a

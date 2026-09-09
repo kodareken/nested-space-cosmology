@@ -27,7 +27,7 @@ test:
 	$(PYTHON) -m unittest discover -s tests -v
 
 reproduce-development:
-	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS) --only results/development/compact-interaction.json,results/development/torsion-uv-map.json,results/development/flow-compatibility.json,results/development/charged-sector.json,results/development/vacuum-charge-matching.json,results/development/compact-boundary-action.json,results/development/compact-casimir.json
+	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS) --only results/development/compact-interaction.json,results/development/torsion-uv-map.json,results/development/flow-compatibility.json,results/development/charged-sector.json,results/development/vacuum-charge-matching.json,results/development/compact-boundary-action.json,results/development/compact-casimir.json,results/development/horizon-source.json,results/development/warped-source.json,results/development/compact-matching.json
 
 reproduce:
 	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS)
