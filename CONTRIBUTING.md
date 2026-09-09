@@ -10,6 +10,10 @@ Use the [prior-art reuse map](docs/nsc-prior-art-reuse.md). State the published
 equation or existing implementation being reused, its assumptions, and the
 specific NSC connection left to calculate. A change that merely repeats known
 mathematics or adds another passing baseline does not establish new physics.
+State the decision the result can change, the smallest useful check and its
+stopping condition. Use the existing work entry; no extra tracking system is
+needed. A rerun must identify a changed dependency, failure or concrete
+unresolved concern. Apply the same scope to delegated work.
 
 1. Read [README.md](README.md), [THEORY.md](THEORY.md), and [AGENTS.md](AGENTS.md).
 2. Read [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md) and [docs/current-result.md](docs/current-result.md).
@@ -20,9 +24,13 @@ mathematics or adds another passing baseline does not establish new physics.
 
 ## Current frontier
 
-**The current frontier is the unsolved energy-resolved recursive child tail.**
+Use [the current result](docs/current-result.md) for the scientific frontier.
+Finite boundary maps and recursive controls are reusable evidence. The open
+connection is their physical domain, common quantum functional, state and
+source/backreaction; the equation below is a constraint on that work, not a
+request to restart completed finite-tail calculations.
 
-Do not restore a scale root by adding an independently weighted geometric action, retuning \(\Phi\) after seeing the target, or inserting a dark-matter or dark-energy function. The derived unsolved equation, with explicit parent normalization, is
+Do not restore a scale root by adding an independently weighted geometric action, retuning \(\Phi\) after seeing the target, or inserting a dark-matter or dark-energy function. The recursive constraint, with explicit parent normalization, is
 
 $$
 \Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
