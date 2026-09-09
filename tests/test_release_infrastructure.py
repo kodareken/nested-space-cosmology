@@ -78,7 +78,8 @@ class ReleaseInfrastructureTests(unittest.TestCase):
                          'NSC-6-ENERGY-TRANSFER', 'NSC-4-COVARIANT-MEASURE',
                          'NSC-8-CHIRAL-BOUNDARY', 'NSC-8-FINITE-TERMS',
                          'NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION',
-                         'NSC-10-INFLUENCE'):
+                         'NSC-10-INFLUENCE', 'NSC-16-VACUUM-CHARGE-MATCHING',
+                         'NSC-17-COMPACT-BOUNDARY-ACTION', 'NSC-18-COMPACT-CASIMIR'):
             step = self.steps[artifact]
             original = json.loads((ROOT / step['output']).read_text())
             locations = self.reproducer.validate_authenticated_inputs(ROOT, original, step)
@@ -150,6 +151,9 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             'NSC-10-MEASURE-NORMALIZATION': (2e-8, 2e-7),
             'NSC-10-INFLUENCE': (2e-8, 2e-7),
             'NSC-11-RESPONSE-MATCHING': (2e-8, 2e-8),
+            'NSC-16-VACUUM-CHARGE-MATCHING': (3e-13, 3e-13),
+            'NSC-17-COMPACT-BOUNDARY-ACTION': (3e-13, 3e-13),
+            'NSC-18-COMPACT-CASIMIR': (3e-8, 3e-9),
         }
         for artifact, (relative, absolute) in specifications.items():
             policy = self.steps[artifact]['comparison_policy']
@@ -214,15 +218,30 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             'results/nsc-10-influence.json',
             'results/nsc-11-response-matching.json',
         ])
-        self.assertEqual(outputs[-4:], [
+        self.assertEqual(outputs[81:85], [
             'results/development/compact-interaction.json',
             'results/development/torsion-uv-map.json',
             'results/development/flow-compatibility.json',
             'results/development/charged-sector.json',
         ])
-        self.assertEqual(85, len(self.manifest['steps']))
-        self.assertEqual(27, len(self.release['scoped_follow_ups']))
-        self.assertEqual('95b96be312feb667377cdbc3bbfe453697a458dd', self.release['source_commit'])
+        self.assertEqual(outputs[-3:], [
+            'results/development/vacuum-charge-matching.json',
+            'results/development/compact-boundary-action.json',
+            'results/development/compact-casimir.json',
+        ])
+        self.assertEqual(88, len(self.manifest['steps']))
+        self.assertEqual(30, len(self.release['scoped_follow_ups']))
+        self.assertEqual('6eeff9bfab26a18fcd029a59ec908643b63386b5', self.release['source_commit'])
+        self.assertEqual('95b96be312feb667377cdbc3bbfe453697a458dd',
+                         self.steps['NSC-15-CHARGED-SECTOR']['follow_up_source_commit'])
+        self.assertEqual('6eeff9bfab26a18fcd029a59ec908643b63386b5',
+                         self.steps['NSC-16-VACUUM-CHARGE-MATCHING']['follow_up_source_commit'])
+        self.assertEqual(['vacuum-charge-coefficients'],
+                         self.steps['NSC-16-VACUUM-CHARGE-MATCHING']['paper_claim_ids'])
+        self.assertEqual(['compact-boundary-adjoint'],
+                         self.steps['NSC-17-COMPACT-BOUNDARY-ACTION']['paper_claim_ids'])
+        self.assertEqual(['curved-compact-source', 'conditional-holonomy-saddle'],
+                         self.steps['NSC-18-COMPACT-CASIMIR']['paper_claim_ids'])
         self.assertEqual('3a747cc17e33a6a3d6cc58634eaa40dd69e30a26',
                          self.steps['NSC-9-COVARIANT-SOURCE']['follow_up_source_commit'])
         for artifact in ('NSC-9-COVARIANT-SOURCE', 'NSC-10-MEASURE-NORMALIZATION', 'NSC-10-INFLUENCE', 'NSC-11-RESPONSE-MATCHING'):
@@ -250,6 +269,10 @@ class ReleaseInfrastructureTests(unittest.TestCase):
         self.assertEqual(
             'results/development/charged-sector.json',
             self.importer.safe_relative('results/development/charged-sector.json'),
+        )
+        self.assertEqual(
+            'results/development/compact-casimir.json',
+            self.importer.safe_relative('results/development/compact-casimir.json'),
         )
 
 

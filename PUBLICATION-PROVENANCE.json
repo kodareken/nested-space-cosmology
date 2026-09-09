@@ -7,7 +7,7 @@
     "private plans, host paths, refs, reflogs, and development history",
     "NSC experiments outside the current frontier dependency closure"
   ],
-  "export_timestamp_utc": "2026-09-08T00:00:00Z",
+  "export_timestamp_utc": "2026-09-09T00:00:00Z",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
   "follow_up_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
   "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 5734,
+      "bytes": 6131,
       "path": "AGENTS.md",
-      "sha256": "28402c3fbda0c53b6babf37b5c4008e75591eb67699cec7b7af3d46c1bd83e30"
+      "sha256": "e929465e4bcac16b01c50d32b66ff39996ead45684662f63b22a9eda27d26e3e"
     },
     {
       "bytes": 965,
       "path": "CITATION.cff",
-      "sha256": "897355e541da20487d44b49ba06a6c4d3bc5e977d4b36fee0dc86f84faadb403"
+      "sha256": "36d55fb1814178e9fffccf5115ed3cb90f73b075c76e85d48104bd67b1ab6329"
     },
     {
       "bytes": 606,
@@ -61,14 +61,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 1948,
+      "bytes": 2086,
       "path": "Makefile",
-      "sha256": "b84c03adb7fed9e90e0e317c62552f04dbfc25b17296d06171f468bcf33cc85d"
+      "sha256": "4ba01c4aa54bca3fb9644f1a4e630244e4f45a102b393d0ce8ea8caf970bf983"
     },
     {
-      "bytes": 9647,
+      "bytes": 10903,
       "path": "README.md",
-      "sha256": "187784af44b3c0259412d4d18ed7f0a0fac30a447ebdf54b251cec238a475293"
+      "sha256": "09bee36f3eb77b31fee45680feeaf390a0dde04ee1a767f2788f0a09fb3286f3"
     },
     {
       "bytes": 629,
@@ -81,9 +81,9 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 13924,
+      "bytes": 17256,
       "path": "docs/current-result.md",
-      "sha256": "5df2bf34632bd82dd12ff75fa7ba28dfc783799fd0f2308627891692520d9d54"
+      "sha256": "12c3c30392dce84f1d337d42e8e20c6cc598c00f0fa045b214430450343d03ac"
     },
     {
       "bytes": 10991,
@@ -109,6 +109,16 @@
       "bytes": 13455,
       "path": "docs/nsc-closure-verification-2026-09-07.md",
       "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
+    },
+    {
+      "bytes": 7796,
+      "path": "docs/nsc-compact-boundary-action.md",
+      "sha256": "9ca3b73c41e82d2027303555c475a336889174ccee4758708396e6dedc55a8f3"
+    },
+    {
+      "bytes": 10744,
+      "path": "docs/nsc-compact-casimir.md",
+      "sha256": "00d69b5ecbedc77d9469925ee7fb4cdc7f817eb4ae960fe5445c7a1ca11eb6b9"
     },
     {
       "bytes": 7859,
@@ -246,44 +256,49 @@
       "sha256": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb"
     },
     {
+      "bytes": 8488,
+      "path": "docs/nsc-vacuum-charge-matching.md",
+      "sha256": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024"
+    },
+    {
       "bytes": 8554,
       "path": "docs/nsc-vacuum-work.md",
       "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
     },
     {
-      "bytes": 11696,
+      "bytes": 12814,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "ac9e9ac4ebda648bbf455d9780d26aa2142df3a470822b4d98f23df898af713a"
+      "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
     },
     {
-      "bytes": 8782,
+      "bytes": 9335,
       "path": "docs/reproducing.md",
-      "sha256": "20f0ae82107d3c002882f7caee56210f7630ff2d8e9d0fc9c85d3ce071eeab31"
+      "sha256": "6829a7e9776e6c0f416a5dcde0ee024aa12960f843ff60364f5ba4bb13d5a973"
     },
     {
-      "bytes": 948,
+      "bytes": 1102,
       "path": "paper/build-manifest.json",
-      "sha256": "3b560c8fce7de048afa66160395e90d5763df1fc75583a04ab65d8cefcba41b8"
+      "sha256": "d0a0974893462441815a3ea51033ea5b9350f9704c2b544b091267de70bddd22"
     },
     {
       "bytes": 363,
       "path": "paper/metadata.json",
-      "sha256": "76644fab07148dcce0dbd9365e0a36713b883183876a2094d69be6b8a26e0076"
+      "sha256": "2ffd2fd8049a0c8a4f73d683813dbab64a589edc89049a2fb9278e7b28fe8317"
     },
     {
-      "bytes": 65283,
+      "bytes": 73312,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "c6b0bd5666b64b48be8ad24af4223bdd78cb0446f2afa56f0b828f1db3992d4f"
+      "sha256": "d812468b19303bf00b47112bd4f31d17eebd0ecd0499d537d9a9087e12a72f53"
     },
     {
-      "bytes": 790995,
+      "bytes": 935981,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "2093709f5020e52491f6a7b9a12c212b4b3c6b2a68f851fc1c54a86e7f1c0558"
+      "sha256": "bb1104a616a7c21d1ccb794bd3da5ea28f11f70ddde983ce799f5b31da7c8064"
     },
     {
       "bytes": 1064,
       "path": "pyproject.toml",
-      "sha256": "fa8a10605ef8f7aa0b30a850ae31bde6bcf2a6b15940edc8332b61fa145f86e7"
+      "sha256": "8f4706f3cb74dc38d4f8b52c0ce5890060c145443ecdd6ef865cd6b42b7feed3"
     },
     {
       "bytes": 36,
@@ -296,14 +311,24 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 4189,
+      "bytes": 4790,
       "path": "results/README.md",
-      "sha256": "64fb72074e314a72ede1e61b85d220eb07dcfb0f8a9b1e0520e3f41f68b0a5f1"
+      "sha256": "faf1b3b2a203022764dbc7414a2f022d79c514eda72640d444cbb7d976944643"
     },
     {
       "bytes": 3710,
       "path": "results/development/charged-sector.json",
       "sha256": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be"
+    },
+    {
+      "bytes": 6199,
+      "path": "results/development/compact-boundary-action.json",
+      "sha256": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce"
+    },
+    {
+      "bytes": 56546,
+      "path": "results/development/compact-casimir.json",
+      "sha256": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447"
     },
     {
       "bytes": 7424,
@@ -321,9 +346,14 @@
       "sha256": "74784cddf2a95d11f4412d6fba11001494a882e53f233534d1f0d2338f3e71e8"
     },
     {
-      "bytes": 108000,
+      "bytes": 4605,
+      "path": "results/development/vacuum-charge-matching.json",
+      "sha256": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b"
+    },
+    {
+      "bytes": 114536,
       "path": "results/manifest.json",
-      "sha256": "1c141776486404606bf7f95abb3b19e1ed89e9b7352173d6e85f79259358b58a"
+      "sha256": "bd0d7ae9a3c25461e356429d664e9dc5f71e4ca5b4aa02829aab71135e57cfbd"
     },
     {
       "bytes": 7369,
@@ -731,24 +761,24 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 99713,
+      "bytes": 105369,
       "path": "results/release-spec.json",
-      "sha256": "7e5c8e640207be46520473b936f9ae5f079e5b0aa1d23c202fd06b4e6950b885"
+      "sha256": "faa26a29309d49f4e71af5f88b0060e54332402ba401dda70f8f7bf24c793482"
     },
     {
-      "bytes": 41402,
+      "bytes": 45206,
       "path": "scripts/build_paper.py",
-      "sha256": "a7c5db08c8e06cdf497f34cf7e7e77584a42a45d1e6673df4bf4828d05675feb"
+      "sha256": "4f7a451056ae7704a4cf704e587f5c0284e4e936ec02dcc13f84f8690766469f"
     },
     {
-      "bytes": 3352,
+      "bytes": 3480,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "e72ef257cf1aceba430dfa2302443049ca5b8ef459617e514647c1f0e4c49ef9"
+      "sha256": "c529d9021efcd5bf04e09b74d20b53374160de0cec2f9080a4cb84f05dc2fcfb"
     },
     {
-      "bytes": 16271,
+      "bytes": 16519,
       "path": "scripts/build_result_manifest.py",
-      "sha256": "e0f8ad1e62257a30071574f1a215c91eb22bf1911fcc3bda96d308b30f56be2e"
+      "sha256": "1b25a0c2c41098a8c22cc6f6abcd42c9195e4228939de0cc74cb24e931daf33a"
     },
     {
       "bytes": 2304,
@@ -769,6 +799,16 @@
       "bytes": 14508,
       "path": "scripts/check_nsc_clock_horizon.py",
       "sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1"
+    },
+    {
+      "bytes": 11556,
+      "path": "scripts/check_nsc_compact_boundary_action.py",
+      "sha256": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505"
+    },
+    {
+      "bytes": 17014,
+      "path": "scripts/check_nsc_compact_casimir.py",
+      "sha256": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501"
     },
     {
       "bytes": 8501,
@@ -886,6 +926,11 @@
       "sha256": "d9898ce375471536a0842142c40c5b3000d986060dc96b80a5dac4ed3fb7f982"
     },
     {
+      "bytes": 11116,
+      "path": "scripts/check_nsc_vacuum_charge_matching.py",
+      "sha256": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917"
+    },
+    {
       "bytes": 8911,
       "path": "scripts/check_nsc_vacuum_work.py",
       "sha256": "f75ea645710751521bcd22c880a59d570664f47439d334d5e51595edbb3b0db9"
@@ -896,14 +941,14 @@
       "sha256": "7eb19fe92a00b69b994abc494b5953a1efa8430f853e66508dcfeb141dc02b88"
     },
     {
-      "bytes": 6553,
+      "bytes": 7980,
       "path": "scripts/demonstrate.py",
-      "sha256": "46df53568fabc8538d779fe0b6deee25e32ef915eaa88bb428fcedb168edba44"
+      "sha256": "e77cfbc81699c8854e833485bcb2c1de03085bbecadb9e3e2a9b7f6b39698797"
     },
     {
-      "bytes": 35032,
+      "bytes": 35278,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "ea8fe0992eabcdfcfe448cf9a55c62b9a144557f9e4b23208b27730df5840641"
+      "sha256": "f0195c5511f4aef7dc22df88c3f65398637a0091bdb8b66bdc3d51a356d83428"
     },
     {
       "bytes": 7793,
@@ -1221,6 +1266,11 @@
       "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
     },
     {
+      "bytes": 10975,
+      "path": "src/recursive_horizons/nsc_compact_casimir.py",
+      "sha256": "7c7fac00772094a6cc233deeeddab8cae1d08af83e4516db5ba93882c20475cd"
+    },
+    {
       "bytes": 5232,
       "path": "src/recursive_horizons/nsc_compact_interaction.py",
       "sha256": "e53b5b937539bd78e7d4946a86cd0e321633231ab0aff6d10e2edb837ca51bd7"
@@ -1316,9 +1366,9 @@
       "sha256": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
     },
     {
-      "bytes": 1115,
+      "bytes": 1352,
       "path": "tests/test_demonstrate.py",
-      "sha256": "bcdb285b780eee2d572c04b7e38961d7d8f5ea3e02ee581525080423edbf36b5"
+      "sha256": "59af408ae18793e42fbe7ebabf06f7f05c98c3f343407f995779dc81760cf020"
     },
     {
       "bytes": 5643,
@@ -1406,29 +1456,31 @@
       "sha256": "609b555fd14c6d8719ba0c50f64fb07b487f5d5129d60dd4f8d228efd54a797d"
     },
     {
-      "bytes": 2207,
+      "bytes": 6703,
       "path": "tests/test_release_import.py",
-      "sha256": "9e51b3de5d6be6ba3d9bedf4041e06199d772d503894d4bd803708d0b5d90466"
+      "sha256": "6b5908c27bbd2dc81444d010fa4b772a81abcffb9bee533b4862d5b45932ca41"
     },
     {
-      "bytes": 14741,
+      "bytes": 16228,
       "path": "tests/test_release_infrastructure.py",
-      "sha256": "78a9bd1268593654ad84654ada8a63acf7dcf842d159cc9654a404882dfbe058"
+      "sha256": "f2051eb03e326d373195f9ad99a519f935ed4813a155ba0dd82f474b5891b63a"
     },
     {
-      "bytes": 5072,
+      "bytes": 8925,
       "path": "tests/test_reproduce_public_results.py",
-      "sha256": "bd5c214cf64627175f03dfb93f27eb4e74482b49b366668dcb23d406f8f2cd42"
+      "sha256": "3e409cea45e934bc3939a2ba3d30fb57623a97e4ce7a66bd30447be060693cda"
     }
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.4.0",
-  "release_source_commit": "95b96be312feb667377cdbc3bbfe453697a458dd",
-  "release_spec_sha256": "7e5c8e640207be46520473b936f9ae5f079e5b0aa1d23c202fd06b4e6950b885",
+  "public_version": "0.5.0",
+  "release_source_commit": "6eeff9bfab26a18fcd029a59ec908643b63386b5",
+  "release_source_method": "immutable Git blobs at release_source_commit",
+  "release_source_worktree_used": false,
+  "release_spec_sha256": "faa26a29309d49f4e71af5f88b0060e54332402ba401dda70f8f7bf24c793482",
   "schema": "NSC-PUBLICATION-PROVENANCE-v1",
   "source_branch": "codex/nsc-closure-verification",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "source_project": "BlackHoles-Infinity",
-  "source_worktree_clean": true
+  "source_worktree_clean": null
 }

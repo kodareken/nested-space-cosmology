@@ -34,6 +34,12 @@ CASES = (
     ("results/development/charged-sector.json", "scripts/check_nsc_charged_sector.py",
      "A consistent charged compact sector",
      "Candidate field content and parity; gauge representation, link mass and self-sourcing remain open."),
+    ("results/development/vacuum-charge-matching.json", "scripts/check_nsc_vacuum_charge_matching.py",
+     "One vacuum, gravity and gauge coefficient condition",
+     "A retained positive bulk contribution; the complete functional and charged source geometry remain open."),
+    ("results/development/compact-casimir.json", "scripts/check_nsc_compact_casimir.py",
+     "Curved compact vacuum response and a gauge phase",
+     "Finite endpoint interaction and conditional ultrastatic holonomy saddle; remaining bulk stress and physical return path are open."),
 )
 
 
@@ -70,13 +76,24 @@ def headlines(relative: str, record: dict) -> list[str]:
         multiplicity = record["multiplicity"]
         return [f"Allowed opposite-parity pairs in this minimal candidate: {pairs}",
                 f"Bulk Dirac copies: {multiplicity['bulk_complex_Dirac_fields']}; four-dimensional Dirac zero fields before link mass: {multiplicity['massless_4D_Dirac_zero_fields_before_link_mass']}"]
+    if relative.endswith("vacuum-charge-matching.json"):
+        return [record["matching_invariant"]["definition"],
+                record["matching_invariant"]["nonnegative_proper_time_weight_lower_bound"],
+                record["required_completion"]["positive_vacuum_seed_condition"]]
+    if relative.endswith("compact-casimir.json"):
+        source = record["ultrastatic_reference"]["summary"]["neck"]["radial_null_4D"]
+        phases = record["holonomy"]["cutoff_controls"][-1]["phases"]
+        saddle = next(row for row in phases if row["phase"] == .5)
+        return [f"Finite-cell interaction null source: {source:.8g} (recorded g4 neck units).",
+                f"Effective AP minus P holonomy energy: {saddle['difference_from_periodic']:.8g}.",
+                "The interaction source changes sign with axial geometry; it is not the complete vacuum stress."]
     raise ValueError(f"No demonstration summary for {relative}")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--recompute", action="store_true",
-                        help="rerun the seven selected generators with their all-field checks")
+                        help="rerun the selected generators with their all-field checks")
     args = parser.parse_args()
     manifest = load_manifest()
     validate_checkout(manifest)

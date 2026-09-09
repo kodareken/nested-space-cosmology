@@ -614,6 +614,26 @@ def validate_result(
     return actual_path.read_bytes() == expected_path.read_bytes()
 
 
+def seed_unselected_outputs(
+    work: Path,
+    expected_root: Path,
+    manifest: dict[str, Any],
+    selected_outputs: set[str],
+) -> set[str]:
+    """Copy unselected outputs so recursive authenticators can hash nested records."""
+    complete: set[str] = set()
+    for step in manifest["steps"]:
+        output = str(step["output"])
+        if output in selected_outputs:
+            continue
+        source = expected_root / output
+        if not source.is_file():
+            raise ReproductionError(f"selected reproduction is missing dependency: {output}")
+        copy_relative(expected_root, work, output)
+        complete.add(output)
+    return complete
+
+
 def execute(
     work: Path,
     manifest: dict[str, Any],
@@ -625,18 +645,8 @@ def execute(
     selected = steps_to_run if steps_to_run is not None else list(manifest["steps"])
     steps = {str(step["output"]): step for step in selected}
     pending = set(steps)
-    complete: set[str] = set()
     expected_root = work.parent / "expected"
-    for step in selected:
-        for dependency in step.get("dependencies", []):
-            if dependency not in steps:
-                source = expected_root / dependency
-                if not source.is_file():
-                    raise ReproductionError(
-                        f"selected reproduction is missing dependency: {dependency}"
-                    )
-                copy_relative(expected_root, work, dependency)
-                complete.add(dependency)
+    complete = seed_unselected_outputs(work, expected_root, manifest, set(steps))
     running: dict[Future[tuple[dict[str, Any], float]], str] = {}
     durations: dict[str, float] = {}
     exact_matches = 0

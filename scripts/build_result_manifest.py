@@ -141,6 +141,12 @@ PAPER_CLAIMS = {
     "NSC-13-TORSION-UV-MAP": ["torsion-uv-finite-matching"],
     "NSC-14-FLOW-COMPATIBILITY": ["published-flow-compatibility"],
     "NSC-15-CHARGED-SECTOR": ["charged-sector-parity"],
+    "NSC-16-VACUUM-CHARGE-MATCHING": ["vacuum-charge-coefficients"],
+    "NSC-17-COMPACT-BOUNDARY-ACTION": ["compact-boundary-adjoint"],
+    "NSC-18-COMPACT-CASIMIR": [
+        "curved-compact-source",
+        "conditional-holonomy-saddle",
+    ],
 }
 
 OUTPUT_RE = re.compile(r"OUTPUT\s*=\s*ROOT\s*/\s*[\"']([^\"']+)[\"']")

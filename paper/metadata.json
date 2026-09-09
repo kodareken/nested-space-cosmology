@@ -1,11 +1,11 @@
 {
   "author": "Douglas Ek",
-  "date": "8 September 2026",
-  "date_iso": "2026-09-08",
+  "date": "9 September 2026",
+  "date_iso": "2026-09-09",
   "project": "Nested-Space Cosmology",
-  "source_date_epoch": 1788825600,
+  "source_date_epoch": 1788912000,
   "status": "WORKING PREPRINT \u00b7 NOT PEER REVIEWED",
   "subtitle": "One Recursive Spectral Gradient\u2013Boundary Equation Across Scales",
   "title": "Nested-Space Cosmology",
-  "version": "0.4.0"
+  "version": "0.5.0"
 }

@@ -13,7 +13,8 @@
         "NSC-9-COVARIANT-SOURCE",
         "NSC-10-MEASURE-NORMALIZATION",
         "NSC-13-TORSION-UV-MAP",
-        "NSC-14-FLOW-COMPATIBILITY"
+        "NSC-14-FLOW-COMPATIBILITY",
+        "NSC-16-VACUUM-CHARGE-MATCHING"
       ]
     },
     {
@@ -26,7 +27,9 @@
         "NSC-5-CLOCK-HORIZON",
         "NSC-8-CHIRAL-BOUNDARY",
         "NSC-11-RESPONSE-MATCHING",
-        "NSC-15-CHARGED-SECTOR"
+        "NSC-15-CHARGED-SECTOR",
+        "NSC-16-VACUUM-CHARGE-MATCHING",
+        "NSC-17-COMPACT-BOUNDARY-ACTION"
       ]
     },
     {
@@ -42,7 +45,9 @@
         "NSC-9-COVARIANT-SOURCE",
         "NSC-10-INFLUENCE",
         "NSC-11-RESPONSE-MATCHING",
-        "NSC-15-CHARGED-SECTOR"
+        "NSC-15-CHARGED-SECTOR",
+        "NSC-16-VACUUM-CHARGE-MATCHING",
+        "NSC-18-COMPACT-CASIMIR"
       ]
     },
     {
@@ -54,7 +59,8 @@
         "NSC-7-OBSERVABLE-BRIDGE",
         "NSC-8-CHIRAL-BOUNDARY",
         "NSC-10-INFLUENCE",
-        "NSC-12-COMPACT-INTERACTION"
+        "NSC-12-COMPACT-INTERACTION",
+        "NSC-18-COMPACT-CASIMIR"
       ]
     },
     {
@@ -64,7 +70,8 @@
       "supporting_artifact_ids": [
         "NSC-7-OBSERVABLE-BRIDGE",
         "NSC-8-CHIRAL-BOUNDARY",
-        "NSC-15-CHARGED-SECTOR"
+        "NSC-15-CHARGED-SECTOR",
+        "NSC-17-COMPACT-BOUNDARY-ACTION"
       ]
     },
     {
@@ -81,79 +88,53 @@
         "NSC-10-INFLUENCE",
         "NSC-11-RESPONSE-MATCHING",
         "NSC-13-TORSION-UV-MAP",
-        "NSC-14-FLOW-COMPATIBILITY"
+        "NSC-14-FLOW-COMPATIBILITY",
+        "NSC-17-COMPACT-BOUNDARY-ACTION",
+        "NSC-18-COMPACT-CASIMIR"
       ]
     }
   ],
   "historical_result_count": 58,
   "import_files": [
     {
-      "path": "docs/nsc-charged-self-sourcing-route.md",
-      "sha256": "5d92c16913fc48ce442a224063f2a26eb88af849af64c2fce501a27b7c0c871b"
+      "path": "docs/nsc-compact-boundary-action.md",
+      "sha256": "9ca3b73c41e82d2027303555c475a336889174ccee4758708396e6dedc55a8f3"
     },
     {
-      "path": "docs/nsc-compact-interaction.md",
-      "sha256": "b291198489c4704b0ee006356ab52fd5ecd2bc80a753b8ea5ec92374e50c6083"
+      "path": "docs/nsc-compact-casimir.md",
+      "sha256": "00d69b5ecbedc77d9469925ee7fb4cdc7f817eb4ae960fe5445c7a1ca11eb6b9"
     },
     {
-      "path": "docs/nsc-compact-mass-map.md",
-      "sha256": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073"
+      "path": "docs/nsc-vacuum-charge-matching.md",
+      "sha256": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024"
     },
     {
-      "path": "docs/nsc-flow-compatibility.md",
-      "sha256": "0524fee024e305b039e634790428806e3b39d594c443cf1b4051279b09716dc7"
+      "path": "results/development/compact-boundary-action.json",
+      "sha256": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce"
     },
     {
-      "path": "docs/nsc-prior-art-reuse.md",
-      "sha256": "920344895b4e69cf2bc681fece21c134f9341c8a6b681a78dd4fa0720f64df3f"
+      "path": "results/development/compact-casimir.json",
+      "sha256": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447"
     },
     {
-      "path": "docs/nsc-quantum-measure-reuse.md",
-      "sha256": "ffb812a39ff5af63a6aea4eb9e3192969496d1166dbd1855c4e85c61f7d63aa4"
+      "path": "results/development/vacuum-charge-matching.json",
+      "sha256": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b"
     },
     {
-      "path": "docs/nsc-torsion-uv-map.md",
-      "sha256": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb"
+      "path": "scripts/check_nsc_compact_boundary_action.py",
+      "sha256": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505"
     },
     {
-      "path": "results/development/charged-sector.json",
-      "sha256": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be"
+      "path": "scripts/check_nsc_compact_casimir.py",
+      "sha256": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501"
     },
     {
-      "path": "results/development/compact-interaction.json",
-      "sha256": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f"
+      "path": "scripts/check_nsc_vacuum_charge_matching.py",
+      "sha256": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917"
     },
     {
-      "path": "results/development/flow-compatibility.json",
-      "sha256": "ab4ce6b98afbb4b79c53396197c699f6071e83ee0e09139e71c8fcd31498aabb"
-    },
-    {
-      "path": "results/development/torsion-uv-map.json",
-      "sha256": "74784cddf2a95d11f4412d6fba11001494a882e53f233534d1f0d2338f3e71e8"
-    },
-    {
-      "path": "scripts/check_nsc_charged_sector.py",
-      "sha256": "098d2b8299205be338d5722b5af7d668a577d6ba49a934c3a0a36af8b225b546"
-    },
-    {
-      "path": "scripts/check_nsc_compact_interaction.py",
-      "sha256": "782a0b633bf05f438a48aa5127bf60ad289a204309ea51a822ae014296e58621"
-    },
-    {
-      "path": "scripts/check_nsc_compact_mass_map.py",
-      "sha256": "7209fcc9985a54a34a56def08af04fe726393000cbd45f0cacf59f219bb18e33"
-    },
-    {
-      "path": "scripts/check_nsc_flow_compatibility.py",
-      "sha256": "4a526141ce337f763c26aa9aa1a841c682319c28b3de60ccefc7cc896cd7fac8"
-    },
-    {
-      "path": "scripts/check_nsc_torsion_uv_map.py",
-      "sha256": "d9898ce375471536a0842142c40c5b3000d986060dc96b80a5dac4ed3fb7f982"
-    },
-    {
-      "path": "src/recursive_horizons/nsc_compact_interaction.py",
-      "sha256": "e53b5b937539bd78e7d4946a86cd0e321633231ab0aff6d10e2edb837ca51bd7"
+      "path": "src/recursive_horizons/nsc_compact_casimir.py",
+      "sha256": "7c7fac00772094a6cc233deeeddab8cae1d08af83e4516db5ba93882c20475cd"
     }
   ],
   "preserved_64_scientific_files": [
@@ -1852,7 +1833,77 @@
       "sha256": "d331aeeccc9a479fa2cba10d7eb3bd88cda18dfdacd763bfeea62087f1dc26a5"
     }
   ],
-  "release_version": "0.4.0",
+  "preserved_85_scientific_files": [
+    {
+      "path": "docs/nsc-charged-self-sourcing-route.md",
+      "sha256": "5d92c16913fc48ce442a224063f2a26eb88af849af64c2fce501a27b7c0c871b"
+    },
+    {
+      "path": "docs/nsc-compact-interaction.md",
+      "sha256": "b291198489c4704b0ee006356ab52fd5ecd2bc80a753b8ea5ec92374e50c6083"
+    },
+    {
+      "path": "docs/nsc-compact-mass-map.md",
+      "sha256": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073"
+    },
+    {
+      "path": "docs/nsc-flow-compatibility.md",
+      "sha256": "0524fee024e305b039e634790428806e3b39d594c443cf1b4051279b09716dc7"
+    },
+    {
+      "path": "docs/nsc-prior-art-reuse.md",
+      "sha256": "920344895b4e69cf2bc681fece21c134f9341c8a6b681a78dd4fa0720f64df3f"
+    },
+    {
+      "path": "docs/nsc-quantum-measure-reuse.md",
+      "sha256": "ffb812a39ff5af63a6aea4eb9e3192969496d1166dbd1855c4e85c61f7d63aa4"
+    },
+    {
+      "path": "docs/nsc-torsion-uv-map.md",
+      "sha256": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb"
+    },
+    {
+      "path": "results/development/charged-sector.json",
+      "sha256": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be"
+    },
+    {
+      "path": "results/development/compact-interaction.json",
+      "sha256": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f"
+    },
+    {
+      "path": "results/development/flow-compatibility.json",
+      "sha256": "ab4ce6b98afbb4b79c53396197c699f6071e83ee0e09139e71c8fcd31498aabb"
+    },
+    {
+      "path": "results/development/torsion-uv-map.json",
+      "sha256": "74784cddf2a95d11f4412d6fba11001494a882e53f233534d1f0d2338f3e71e8"
+    },
+    {
+      "path": "scripts/check_nsc_charged_sector.py",
+      "sha256": "098d2b8299205be338d5722b5af7d668a577d6ba49a934c3a0a36af8b225b546"
+    },
+    {
+      "path": "scripts/check_nsc_compact_interaction.py",
+      "sha256": "782a0b633bf05f438a48aa5127bf60ad289a204309ea51a822ae014296e58621"
+    },
+    {
+      "path": "scripts/check_nsc_compact_mass_map.py",
+      "sha256": "7209fcc9985a54a34a56def08af04fe726393000cbd45f0cacf59f219bb18e33"
+    },
+    {
+      "path": "scripts/check_nsc_flow_compatibility.py",
+      "sha256": "4a526141ce337f763c26aa9aa1a841c682319c28b3de60ccefc7cc896cd7fac8"
+    },
+    {
+      "path": "scripts/check_nsc_torsion_uv_map.py",
+      "sha256": "d9898ce375471536a0842142c40c5b3000d986060dc96b80a5dac4ed3fb7f982"
+    },
+    {
+      "path": "src/recursive_horizons/nsc_compact_interaction.py",
+      "sha256": "e53b5b937539bd78e7d4946a86cd0e321633231ab0aff6d10e2edb837ca51bd7"
+    }
+  ],
+  "release_version": "0.5.0",
   "retained_byte_identical_files": [
     {
       "path": "scripts/check_nsc_geometric_chain.py",
@@ -2670,7 +2721,105 @@
         "src/recursive_horizons/nsc_covariant_identities.py",
         "src/recursive_horizons/nsc_spinor_bridge.py"
       ]
+    },
+    {
+      "artifact_id": "NSC-16-VACUUM-CHARGE-MATCHING",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-13,
+        "kind": "all_fields",
+        "relative_tolerance": 3e-13
+      },
+      "dependencies": [
+        "results/development/charged-sector.json",
+        "results/development/compact-interaction.json",
+        "results/development/torsion-uv-map.json"
+      ],
+      "follow_up_source_commit": "6eeff9bfab26a18fcd029a59ec908643b63386b5",
+      "generator": "scripts/check_nsc_vacuum_charge_matching.py",
+      "generator_args": [
+        "--output",
+        "results/development/vacuum-charge-matching.json"
+      ],
+      "identity_policy": {
+        "kind": "schema_status",
+        "schema": "NSC-VACUUM-CHARGE-MATCHING-v2",
+        "status": "leading-coefficient compatibility obstruction; full functional remains open"
+      },
+      "json_format": "pretty",
+      "output": "results/development/vacuum-charge-matching.json",
+      "source_dependencies": [
+        "docs/nsc-vacuum-charge-matching.md"
+      ]
+    },
+    {
+      "artifact_id": "NSC-17-COMPACT-BOUNDARY-ACTION",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-13,
+        "kind": "all_fields",
+        "relative_tolerance": 3e-13
+      },
+      "dependencies": [
+        "results/development/charged-sector.json",
+        "results/development/vacuum-charge-matching.json"
+      ],
+      "follow_up_source_commit": "6eeff9bfab26a18fcd029a59ec908643b63386b5",
+      "generator": "scripts/check_nsc_compact_boundary_action.py",
+      "generator_args": [
+        "--output",
+        "results/development/compact-boundary-action.json"
+      ],
+      "identity_policy": {
+        "kind": "schema_status",
+        "schema": "NSC-COMPACT-BOUNDARY-ACTION-v1",
+        "status": "compact determinant-magnitude boundary matching; full source open"
+      },
+      "json_format": "pretty",
+      "output": "results/development/compact-boundary-action.json",
+      "source_dependencies": [
+        "docs/nsc-compact-boundary-action.md",
+        "docs/nsc-compact-mass-map.md",
+        "scripts/check_nsc_vacuum_charge_matching.py",
+        "src/recursive_horizons/nsc_spinor_bridge.py"
+      ]
+    },
+    {
+      "artifact_id": "NSC-18-COMPACT-CASIMIR",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-09,
+        "kind": "all_fields",
+        "relative_tolerance": 3e-08
+      },
+      "dependencies": [
+        "results/development/compact-boundary-action.json",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "6eeff9bfab26a18fcd029a59ec908643b63386b5",
+      "generator": "scripts/check_nsc_compact_casimir.py",
+      "generator_args": [
+        "--output",
+        "results/development/compact-casimir.json"
+      ],
+      "identity_policy": {
+        "kind": "schema_status",
+        "schema": "NSC-COMPACT-CASIMIR-v1",
+        "status": "finite curved interaction source and conditional one-loop axial holonomy saddle"
+      },
+      "json_format": "pretty",
+      "output": "results/development/compact-casimir.json",
+      "source_dependencies": [
+        "docs/nsc-compact-casimir.md",
+        "scripts/check_nsc_compact_boundary_action.py",
+        "scripts/check_nsc_vacuum_charge_matching.py",
+        "src/recursive_horizons/nsc_compact_casimir.py",
+        "src/recursive_horizons/nsc_covariant_operator.py",
+        "src/recursive_horizons/nsc_finite_terms.py",
+        "src/recursive_horizons/nsc_regulated.py",
+        "src/recursive_horizons/nsc_shape_response.py"
+      ]
     }
   ],
-  "source_commit": "95b96be312feb667377cdbc3bbfe453697a458dd"
+  "source_commit": "6eeff9bfab26a18fcd029a59ec908643b63386b5"
 }

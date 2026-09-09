@@ -36,6 +36,17 @@ Primary anchors include the Tonomura single-electron experiment, PBR (`arXiv:111
 
 ## What is established and what is not
 
+The latest source/state calculation also reuses:
+
+- [Flachi–Moss–Toms](https://arxiv.org/html/hep-th/0103138v2) for massless interval determinants, conformal reduction and Wilson-line mechanisms. The project evaluates the finite curved interaction while retaining the distinct bulk determinant and boundary cocycle.
+- [Dunne](https://arxiv.org/html/0711.1178v1) and [Kirsten–McKane](https://arxiv.org/html/math-ph/0403050v1) for general boundary determinants. Their formulas identify the conditional holonomy minimum of the current positive radial partners.
+- [Krishnan–Raju](https://arxiv.org/html/1605.01603v1) for the Einstein/GHY metric variation, used in the compact boundary momentum balance.
+- [Montero–Van Riet–Venken](https://arxiv.org/html/1910.01648v4) for charged de Sitter geometry, used to test the common source coefficients before importing a near-extremal seed.
+
+These mechanisms and formulas retain their prior attribution. The curved
+source, coefficient and domain matches are scoped project calculations,
+not a claim that the generic Casimir, Wilson-line or gluing mechanisms are new.
+
 Observed electron interference proves wave behavior and localized detections. It does not select a unique ontology in which a wavefunction is literally the material medium. QFT removes the classical particle/wave dichotomy by making a particle a quantum state of fields, but the wavefunction remains the amplitude assigned to a state, not an experimentally isolated second substance.
 
 Exact black-universe solutions show that a black-hole exterior and expanding interior can belong to one regular four-geometry. They do not show that our observed universe is such an interior. A curvature singularity or an infinite limit alone also does not encode a child domain; the transition map and its conserved charges must be supplied.

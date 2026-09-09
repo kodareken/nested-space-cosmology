@@ -2,7 +2,7 @@
 
 This directory contains the original 58-artifact v0.1.0 dependency closure that
 ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus scoped
-follow-ups 59–85. The machine-readable order, hashes, categories, dependencies,
+follow-ups 59–88. The machine-readable order, hashes, categories, dependencies,
 and paper claim links are in [manifest.json](manifest.json).
 
 The categories are intentionally different:
@@ -35,6 +35,15 @@ Subsequent scoped results include:
   bulk coefficients from finite matching and the complementary determinant.
 - [flow-compatibility.json](development/flow-compatibility.json) checks the
   applicability of a published quantum flow to the actual connection sector.
+- [vacuum-charge-matching.json](development/vacuum-charge-matching.json)
+  tests whether retained leading bulk coefficients admit the charged-throat
+  seed. It does not assign a completed vacuum coefficient.
+- [compact-boundary-action.json](development/compact-boundary-action.json)
+  maps mixed heat coefficients onto the declared compact chiral domain. The
+  transmitting throat action remains open.
+- [compact-casimir.json](development/compact-casimir.json) evaluates the
+  curved compact interaction source and a conditional one-loop axial
+  holonomy saddle. Local vacuum completion remains open.
 
 - [nsc-11-response-matching.json](nsc-11-response-matching.json)
   matches the Euclidean and causal Dirac radius response in a relative

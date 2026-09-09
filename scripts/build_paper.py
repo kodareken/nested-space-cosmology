@@ -31,6 +31,7 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
     for marker, path in (
         ("geometric-gap", "results/nsc-3-geometric-chain.json"),
         ("vacuum-work", "results/nsc-6-vacuum-work.json"),
+        ("compact-source", "results/development/compact-casimir.json"),
     ):
         if f"<!-- nsc-figure:{marker} -->" in text:
             paths.append(path)
@@ -91,6 +92,43 @@ def load_metadata() -> dict[str, object]:
     if missing:
         raise RuntimeError(f"paper metadata is missing: {', '.join(missing)}")
     return value
+
+
+def compact_source_plot():
+    """Plot authenticated stored results; never launch a scientific generator."""
+    from matplotlib.backends.backend_agg import FigureCanvasAgg
+    from matplotlib.figure import Figure
+
+    record = json.loads((REPOSITORY / "results/development/compact-casimir.json").read_text())
+    figure = Figure(figsize=(6.4, 2.8), dpi=220)
+    FigureCanvasAgg(figure)
+    left, right = figure.subplots(1, 2)
+    phases = record["holonomy"]["cutoff_controls"][-1]["phases"]
+    left.plot([row["phase"] for row in phases],
+              [row["difference_from_periodic"] for row in phases],
+              "o-", color="#2357A6", markersize=4, linewidth=1.2)
+    left.axvline(.5, color="#526779", linewidth=.7, linestyle=":")
+    left.set_xlabel("effective spatial phase (turns)")
+    left.set_ylabel(r"$\Delta E\,r_0$")
+    left.set_title("Full free-fermion phase potential", fontsize=9)
+    left.set_xticks([0, .25, .5, .75, 1])
+    left.grid(True, alpha=.25, linewidth=.5)
+    cells = record["domain_family"]["observed"]
+    right.plot([row["axial_length"] for row in cells],
+               [1000 * row["neck_null"] for row in cells],
+               "o-", color="#8C4264", markersize=4, linewidth=1.2)
+    right.axhline(0, color="#526779", linewidth=.7)
+    right.set_xlabel(r"axial circumference $L_x/r_0$")
+    right.set_ylabel(r"$10^3(\rho+p_r)_{\rm int}\,r_0^4$")
+    right.set_title("Compact interaction at the neck", fontsize=9)
+    right.set_xticks([4, 6, 8, 12])
+    right.grid(True, alpha=.25, linewidth=.5)
+    for axis in (left, right):
+        axis.tick_params(labelsize=7)
+        axis.xaxis.label.set_size(8)
+        axis.yaxis.label.set_size(8)
+    figure.tight_layout(pad=.6)
+    return figure
 
 
 def build_pdf(
@@ -348,6 +386,8 @@ def build_pdf(
         "Psi": "Ψ",
         "psi": "ψ",
         "xi": "ξ",
+        "Xi": "Ξ",
+        "Sigma": "Σ",
         "nu": "ν",
         "chi": "χ",
         "alpha": "α",
@@ -384,9 +424,12 @@ def build_pdf(
         value = value.replace(r"\qquad", "  ")
         value = value.replace(r"\dagger", "†").replace(r"\star", "⋆")
         value = value.replace(r"\to", "→").replace(r"\mapsto", "↦")
-        value = value.replace(r"\ge", "≥").replace(r"\le", "≤")
+        value = re.sub(r"\\(?:geq|ge)(?![A-Za-z])", "≥", value)
+        value = re.sub(r"\\(?:leq|le)(?![A-Za-z])", "≤", value)
         value = value.replace(r"\neq", "≠").replace(r"\approx", "≈")
-        value = value.replace(r"\in", "∈").replace(r"\times", "×")
+        value = re.sub(r"\\in(?![A-Za-z])", "∈", value).replace(r"\times", "×")
+        value = re.sub(r"\\int(?![A-Za-z])", "∫", value)
+        value = re.sub(r"\\oint(?![A-Za-z])", "∮", value)
         value = value.replace(r"\ell", "ℓ").replace(r"\odot", "⊙")
         value = value.replace(r"\ddots", "⋱").replace(r"\cdots", "⋯")
         value = value.replace(r"\otimes", "⊗").replace(r"\cdot", "·")
@@ -403,12 +446,21 @@ def build_pdf(
             value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
         for name, symbol in greek.items():
             value = value.replace(f"\\{name}", symbol)
+        value = re.sub(r"\\(log|exp|cos|sin|tan|det|Tr)(?![A-Za-z])", r"\1", value)
         value = re.sub(r"_\{([^{}]+)\}", r"_(\1)", value)
         value = re.sub(r"\^\{([^{}]+)\}", r"^(\1)", value)
         value = value.replace("{", "").replace("}", "")
         value = value.replace(r"\left", "").replace(r"\right", "")
         value = value.replace(r"\langle", "⟨").replace(r"\rangle", "⟩")
         return re.sub(r"\s+", " ", value).strip()
+
+    def inline_math_markup(value: str) -> str:
+        plain = html.escape(latex_to_plain(value), quote=False)
+        def script(match: re.Match[str]) -> str:
+            tag = "sub" if match.group(1) == "_" else "super"
+            return f"<{tag}>{match.group(2)}</{tag}>"
+        plain = re.sub(r"([_^])\(([^()]*)\)", script, plain)
+        return re.sub(r"([_^])([\w*⋆†±+-])", script, plain)
 
     def inline_markup(value: str) -> str:
         tokens: list[str] = []
@@ -436,7 +488,7 @@ def build_pdf(
             r"\\\((.+?)\\\)",
             lambda match: reserve(
                 '<font name="RHItalic">'
-                + html.escape(latex_to_plain(match.group(1)), quote=False)
+                + inline_math_markup(match.group(1))
                 + "</font>"
             ),
             value,
@@ -714,6 +766,25 @@ def build_pdf(
             "[Vacuum-work evidence](../results/nsc-6-vacuum-work.json)."), styles["Body"])
         return KeepTogether([Spacer(1,4),rendered,caption,Spacer(1,6)])
 
+    def compact_source_figure() -> object:
+        buffer = BytesIO()
+        figure = compact_source_plot()
+        figure.savefig(buffer, format="png", dpi=220)
+        buffer.seek(0)
+        rendered = Image(buffer)
+        rendered._nsc_buffer = buffer
+        rendered.drawWidth = body_width
+        rendered.drawHeight = body_width*2.8/6.4
+        caption = Paragraph(inline_markup(
+            "**Figure.** Left: full free-KK holonomy energy differences on the ultrastatic "
+            "closed cell; the effective AP phase minimizes this one-loop real potential. "
+            "Right: only the compact endpoint interaction's effective null source, at that phase. "
+            "The transverse separation is 2 in g4 neck units. Increasing the axial circle "
+            "changes the global geometry and the source sign. The remaining bulk source and "
+            "transmitting geometry are still required. "
+            "[Source and state record](../results/development/compact-casimir.json)."), styles["Body"])
+        return KeepTogether([Spacer(1,4),rendered,caption,Spacer(1,6)])
+
     def parse_markdown(markdown: str) -> list[object]:
         lines = markdown.splitlines()
         # Cover content is built separately. Begin at the technical abstract.
@@ -750,6 +821,12 @@ def build_pdf(
             if stripped == "<!-- nsc-figure:vacuum-work -->":
                 flush_paragraph()
                 story.append(vacuum_work_figure())
+                index += 1
+                continue
+
+            if stripped == "<!-- nsc-figure:compact-source -->":
+                flush_paragraph()
+                story.append(compact_source_figure())
                 index += 1
                 continue
 
