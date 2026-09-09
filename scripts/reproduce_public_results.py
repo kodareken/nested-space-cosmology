@@ -521,11 +521,12 @@ def resolve_pointer(value: Any, pointer: str) -> Any:
 def derived_numeric_overrides(
     expected: dict[str, Any], actual: dict[str, Any], policy: dict[str, Any]
 ) -> dict[str, tuple[float, float]]:
-    """Propagate declared raw-error budgets through authenticated log-ratio identities.
+    """Propagate raw comparison budgets through checked derived identities.
 
     The budget is a release acceptance threshold, not a solver error estimate.
-    Every error and order is recomputed independently within its own record;
-    the asymmetric order interval follows monotonically from e +/- budget.
+    Raw operands retain their ordinary comparisons. Richardson residuals also
+    retain the original independent-derivative accuracy requirement. The
+    log-ratio interval follows monotonically from each raw error +/- budget.
     """
     overrides: dict[str, tuple[float, float]] = {}
 
@@ -538,6 +539,44 @@ def derived_numeric_overrides(
         return ulps * max(math.ulp(left), math.ulp(right))
 
     for rule in policy.get("derived_quantities", []):
+        if rule.get("kind") == "richardson_derivative_residual":
+            ulps = rule["identity_ulps"]
+            accuracy = finite_number(rule["derivative_relative_accuracy"], "/derivative_relative_accuracy")
+            relative = finite_number(policy["relative_tolerance"], "/relative_tolerance")
+            absolute = finite_number(policy["absolute_tolerance"], "/absolute_tolerance")
+            if (type(ulps) is not int or ulps < 1 or accuracy <= 0
+                    or accuracy != expected["comparison"]["float_rtol"]
+                    or rule["derivative_scale_floor"] != 1):
+                raise ReproductionError("invalid or changed derivative accuracy contract")
+            for pointer in rule["family_pointers"]:
+                operands = []
+                for label, value in (("expected", expected), ("actual", actual)):
+                    try:
+                        row = resolve_pointer(value, pointer)
+                        central = row["central_difference_steps"]
+                        if len(central) != 2 or len(row["compact_18_26_34"]) != 3:
+                            raise ValueError("wrong derivative-control shape")
+                        coarse, fine = [finite_number(x, pointer) for x in central]
+                        extrapolated = finite_number(row["extrapolated_log_derivative"], pointer)
+                        analytic = finite_number(row["compact_18_26_34"][2]["d_log_radius"], pointer)
+                        residual = finite_number(row["independent_derivative_error"], pointer)
+                    except (KeyError, IndexError, TypeError, ValueError) as exc:
+                        raise ReproductionError(f"malformed derivative control at {pointer}") from exc
+                    reconstructed = (4*fine-coarse)/3
+                    if abs(extrapolated-reconstructed) > rounding_allowance(extrapolated, reconstructed, ulps):
+                        raise ReproductionError(f"{label} Richardson identity failed: {pointer}")
+                    difference = extrapolated-analytic
+                    if abs(residual-difference) > rounding_allowance(residual, difference, ulps):
+                        raise ReproductionError(f"{label} derivative residual identity failed: {pointer}")
+                    if abs(residual) >= accuracy*max(1., abs(analytic)):
+                        raise ReproductionError(f"{label} independent derivative accuracy failed: {pointer}")
+                    operands.append((extrapolated, analytic))
+                # Every operand still receives its original all-field comparison.
+                # The difference inherits the sum of their allowed changes.
+                budget = sum(max(absolute, relative*max(abs(a), abs(b)))
+                             for a, b in zip(*operands))
+                overrides[pointer+"/independent_derivative_error"] = (0., budget)
+            continue
         if rule.get("kind") != "log2_absolute_error_ratio":
             raise ReproductionError("unknown derived-quantity comparison policy")
         budget = finite_number(rule["input_absolute_tolerance"], "/input_absolute_tolerance")

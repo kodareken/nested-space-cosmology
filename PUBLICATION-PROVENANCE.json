@@ -26,9 +26,9 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 1114,
+      "bytes": 1528,
       "path": ".github/workflows/verify.yml",
-      "sha256": "1597f4ab15a65db407c20ceaa8fc320707bd372eaef24f1bc9f74f5df39e27eb"
+      "sha256": "ba9670c7f5210318cab8d4fa497d7f8be447eb19c8f7dc8ea458a47dbeecea04"
     },
     {
       "bytes": 103,
@@ -331,14 +331,14 @@
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
     },
     {
-      "bytes": 10512,
+      "bytes": 11737,
       "path": "docs/reproducing.md",
-      "sha256": "f3f1803998d18e969a4209b264a97764546f96baaaa7aca510278a7048eb322f"
+      "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
       "bytes": 1714,
       "path": "paper/build-manifest.json",
-      "sha256": "7abbf0a67e12026905eed4ca584b0010263c462295f6d2b9129d70bf87476abb"
+      "sha256": "a7273cd4f639c675cb9ecd9efb1a62d20f5c5c2126b3968321da54b2d06ec661"
     },
     {
       "bytes": 363,
@@ -346,14 +346,14 @@
       "sha256": "e0d5396e90c14546703ed68a1189f7583afde2ed0f1de65b26ac7e670e886b46"
     },
     {
-      "bytes": 107873,
+      "bytes": 108210,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "d1aa3ccc3cb066fa03a1863f16e86b8d3967b8900dd60a7cd0eb47baa8c9404a"
+      "sha256": "5a5bf16dc9c446fdff2cdaaee0f5fcf41d302d8abaec996d55630b6ba3762a7a"
     },
     {
-      "bytes": 1386764,
+      "bytes": 1386943,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "2ceddfeba0128611e269bb1ab67821dfca7bdc3e317a1b834d3eb6df814d6ade"
+      "sha256": "2ef9f413a3729039d08d1366fca4c02f0c0e83b457b3b32098071b7bdf5bc92c"
     },
     {
       "bytes": 1144,
@@ -471,9 +471,9 @@
       "sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac"
     },
     {
-      "bytes": 241737,
+      "bytes": 242184,
       "path": "results/manifest.json",
-      "sha256": "f67562a152f7c9b5f026bdf4c23f0377585ef1743545147bebd5ec593b66f3df"
+      "sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f"
     },
     {
       "bytes": 7369,
@@ -881,9 +881,9 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 169826,
+      "bytes": 170273,
       "path": "results/release-spec.json",
-      "sha256": "c7ddc4515fbaa64671b12e14afb57a6ee8c0aedc616eba14c893f0cbacd235da"
+      "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
       "bytes": 53016,
@@ -1126,9 +1126,9 @@
       "sha256": "488d8e2d4983bf5d34a13fd501862c224d78091c6395522ac611692a61daf936"
     },
     {
-      "bytes": 37257,
+      "bytes": 40208,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "dadbdd7f06c608a76b9c586f79e893967aa3cfaf5ac5e2b263ccaa36b2eff86e"
+      "sha256": "4a1fc42f6fa6fbbf000c57a2d01e2b705c9da951a08086fa2b60b215ba1e8e6e"
     },
     {
       "bytes": 7793,
@@ -1621,6 +1621,11 @@
       "sha256": "004152981a8a333be2ec925277008046727468c615d9fa57737db1d7d03214ce"
     },
     {
+      "bytes": 4117,
+      "path": "tests/test_derivative_residual_policy.py",
+      "sha256": "c7f6ec24ab4a3436bfa4134f02fa65dadc896855d3140c1c565ff49d1d7af1b8"
+    },
+    {
       "bytes": 5643,
       "path": "tests/test_derived_portability.py",
       "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
@@ -1737,7 +1742,7 @@
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,
-  "release_spec_sha256": "c7ddc4515fbaa64671b12e14afb57a6ee8c0aedc616eba14c893f0cbacd235da",
+  "release_spec_sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6",
   "schema": "NSC-PUBLICATION-PROVENANCE-v1",
   "source_branch": "codex/nsc-closure-verification",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",

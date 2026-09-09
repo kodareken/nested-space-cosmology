@@ -11,7 +11,7 @@
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_spec": "results/release-spec.json",
-  "release_spec_sha256": "c7ddc4515fbaa64671b12e14afb57a6ee8c0aedc616eba14c893f0cbacd235da",
+  "release_spec_sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6",
   "release_version": "0.7.0",
   "result_count": 100,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
@@ -3359,6 +3359,20 @@
       "category": "repository_derived_numerical_result",
       "comparison_policy": {
         "absolute_tolerance": 3e-09,
+        "derived_quantities": [
+          {
+            "derivative_relative_accuracy": 3e-08,
+            "derivative_scale_floor": 1,
+            "family_pointers": [
+              "/numerical_controls/0",
+              "/numerical_controls/1",
+              "/numerical_controls/2",
+              "/numerical_controls/3"
+            ],
+            "identity_ulps": 8,
+            "kind": "richardson_derivative_residual"
+          }
+        ],
         "kind": "all_fields",
         "relative_tolerance": 3e-08
       },
