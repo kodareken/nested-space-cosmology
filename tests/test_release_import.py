@@ -11,6 +11,10 @@ from test_publication import ROOT, load_script
 V040_SOURCE = "95b96be312feb667377cdbc3bbfe453697a458dd"
 V050_SOURCE = "6eeff9bfab26a18fcd029a59ec908643b63386b5"
 V060_SOURCE = "eea43512f63e61d8d7686261a683bc36e99efa19"
+V070_SOURCE = "161028d52ef206a4bc99a25bf97ea467c30e7f16"
+V070_NAMES = ("gauge-source", "spherical-action", "curvature-eft", "spectral-endpoint",
+              "child-state", "massless-reference", "angular-stress", "unruh-state", "state-regulator")
+V070_OUTPUTS = tuple("results/development/" + name + ".json" for name in V070_NAMES)
 NEW_IMPORTS = (
     "docs/nsc-compact-matching.md",
     "docs/nsc-horizon-source.md",
@@ -70,18 +74,18 @@ class ReleaseImportTests(unittest.TestCase):
         ):
             self.assertEqual(relative, self.importer.safe_relative(relative))
 
-    def test_v060_import_files_match_lab_pin_and_local_bytes(self):
-        self.assertEqual("0.6.0", self.release["release_version"])
-        self.assertEqual(V060_SOURCE, self.release["source_commit"])
+    def test_v070_import_files_match_lab_pin_and_local_bytes(self):
+        self.assertEqual("0.7.0", self.release["release_version"])
+        self.assertEqual(V070_SOURCE, self.release["source_commit"])
         self.assertEqual(
             "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
             self.release["checkpoint_source_commit"],
         )
-        self.assertEqual(12, len(self.release["import_files"]))
+        self.assertEqual(38, len(self.release["import_files"]))
         self.assertEqual(10, len(self.release["preserved_88_scientific_files"]))
         self.assertEqual(17, len(self.release["preserved_85_scientific_files"]))
         self.assertEqual(83, len(self.release["preserved_81_scientific_files"]))
-        self.assertEqual({entry["path"] for entry in self.release["import_files"]}, set(NEW_IMPORTS))
+        self.assertEqual({entry["path"] for entry in self.release["preserved_91_scientific_files"]}, set(NEW_IMPORTS))
         self.assertEqual(
             {entry["path"] for entry in self.release["preserved_88_scientific_files"]},
             set(V050_IMPORTS),
@@ -131,7 +135,7 @@ class ReleaseImportTests(unittest.TestCase):
         current = {step["output"]: step for step in json.loads(
             (ROOT / "results/manifest.json").read_text()
         )["steps"]}
-        self.assertEqual(set(previous), set(current) - set(V050_OUTPUTS + V060_OUTPUTS))
+        self.assertEqual(set(previous), set(current) - set(V050_OUTPUTS + V060_OUTPUTS + V070_OUTPUTS))
         for output, step in previous.items():
             now = current[output]
             self.assertEqual(step["output_sha256"], now["output_sha256"], output)
@@ -152,7 +156,7 @@ class ReleaseImportTests(unittest.TestCase):
         current = {step["output"]: step for step in json.loads(
             (ROOT / "results/manifest.json").read_text()
         )["steps"]}
-        self.assertEqual(set(previous), set(current) - set(V060_OUTPUTS))
+        self.assertEqual(set(previous), set(current) - set(V060_OUTPUTS + V070_OUTPUTS))
         for output, step in previous.items():
             now = current[output]
             self.assertEqual(step, now, output)

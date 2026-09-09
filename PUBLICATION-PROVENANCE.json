@@ -26,9 +26,9 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 1113,
+      "bytes": 1114,
       "path": ".github/workflows/verify.yml",
-      "sha256": "892d9a9ec7befb2264fad4ca06d007e7147138fc99839325d6a0c633887f99e6"
+      "sha256": "1597f4ab15a65db407c20ceaa8fc320707bd372eaef24f1bc9f74f5df39e27eb"
     },
     {
       "bytes": 103,
@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 6860,
+      "bytes": 6988,
       "path": "AGENTS.md",
-      "sha256": "cd5bf71de3ef04ec5a5387b8ba22680492127a319b2838cc5bcba1ce71fce322"
+      "sha256": "23b9a1e8de856f9837a12c62c9b3664d0744ce520979e0a345cbe0bb2a5883dd"
     },
     {
       "bytes": 964,
       "path": "CITATION.cff",
-      "sha256": "a6598adacf04f4e2962f5f2db3de907680817427be46834bbaf8c2df4d050f42"
+      "sha256": "f15be6a6633723b0277e0d5cbdc5a991427bf6d79132c26420f63308b853b570"
     },
     {
       "bytes": 606,
@@ -61,14 +61,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 2207,
+      "bytes": 2568,
       "path": "Makefile",
-      "sha256": "f6925bb5b29e83675feb9e52e601a621d317a941d64d6ea0d7c860d7fac50d7c"
+      "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 11472,
+      "bytes": 12628,
       "path": "README.md",
-      "sha256": "c080789b8da9717e6593b7bf3660b10ce73a96b4826ce0ac501938268cf6fe8a"
+      "sha256": "099a2355d5296a814227178f0231fb582c289e5e944ae3ca36f7ac0050fad750"
     },
     {
       "bytes": 629,
@@ -81,9 +81,14 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 19354,
+      "bytes": 23202,
       "path": "docs/current-result.md",
-      "sha256": "5af3d806d56232ba894076b8469cb89beb8e05a7e13c59e2b889895aad3a6020"
+      "sha256": "4a5ce0d9894da637a0ee6ecf7939a8ada5d936322953beda3b1d862751e4d6a2"
+    },
+    {
+      "bytes": 10326,
+      "path": "docs/nsc-angular-stress.md",
+      "sha256": "fa75bfe2c20a75688d0c37a0db29c63ebe6144a1c554587976321f6d0fb01e0a"
     },
     {
       "bytes": 10991,
@@ -94,6 +99,11 @@
       "bytes": 7397,
       "path": "docs/nsc-charged-self-sourcing-route.md",
       "sha256": "5d92c16913fc48ce442a224063f2a26eb88af849af64c2fce501a27b7c0c871b"
+    },
+    {
+      "bytes": 9829,
+      "path": "docs/nsc-child-state.md",
+      "sha256": "88471087ff1b6771e9fa0843db7c4879d2ec6c1f2931ea3f1fc0d6e8c89db96d"
     },
     {
       "bytes": 13885,
@@ -146,6 +156,11 @@
       "sha256": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6"
     },
     {
+      "bytes": 8724,
+      "path": "docs/nsc-curvature-eft.md",
+      "sha256": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e"
+    },
+    {
       "bytes": 8854,
       "path": "docs/nsc-dirac-tetrad.md",
       "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
@@ -166,6 +181,11 @@
       "sha256": "0524fee024e305b039e634790428806e3b39d594c443cf1b4051279b09716dc7"
     },
     {
+      "bytes": 10288,
+      "path": "docs/nsc-gauge-source.md",
+      "sha256": "7b175e52b4f11d7fe0888a613506186ea07a9b33ba66694fb8d100fd2e0cbed4"
+    },
+    {
       "bytes": 3821,
       "path": "docs/nsc-geometric-chain.md",
       "sha256": "288be5e077d41dbd7481729b57aad064181cecfb83eba80eb44328fd7e0d7ea1"
@@ -184,6 +204,11 @@
       "bytes": 4039,
       "path": "docs/nsc-lorentzian-transport.md",
       "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
+    },
+    {
+      "bytes": 10741,
+      "path": "docs/nsc-massless-reference.md",
+      "sha256": "c15261ccf8eef389c4b328b8b8562b270aa329acb41f25b1300f371a921a50e6"
     },
     {
       "bytes": 15106,
@@ -246,6 +271,21 @@
       "sha256": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383"
     },
     {
+      "bytes": 8978,
+      "path": "docs/nsc-spectral-endpoint.md",
+      "sha256": "a55074de3f1fc2e625bb0259a5e2d53891969f9577882790254fdf4d9734ce8d"
+    },
+    {
+      "bytes": 9980,
+      "path": "docs/nsc-spherical-action.md",
+      "sha256": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292"
+    },
+    {
+      "bytes": 8611,
+      "path": "docs/nsc-state-regulator.md",
+      "sha256": "8aca94f35304d5e2d16cd9f4111d85f8ceba939164d8f68f41a54607b10ba528"
+    },
+    {
       "bytes": 5472,
       "path": "docs/nsc-tail-limit.md",
       "sha256": "d54c4ced5c3e52e8d4f47654621a47b2b64ffe6d5a3ae4808afea950cfcf1e9b"
@@ -264,6 +304,11 @@
       "bytes": 7148,
       "path": "docs/nsc-torsion-uv-map.md",
       "sha256": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb"
+    },
+    {
+      "bytes": 9148,
+      "path": "docs/nsc-unruh-state.md",
+      "sha256": "ca6e21152528c2be44b3a8c4fdac9d69014e8864c746cf1f19eb735ec361ac4b"
     },
     {
       "bytes": 8488,
@@ -286,34 +331,34 @@
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
     },
     {
-      "bytes": 9509,
+      "bytes": 10512,
       "path": "docs/reproducing.md",
-      "sha256": "98aba6a0a297d49c1df47de6b8fd0a99ef666da6bc585f6b37d4a3ad79b9b8e8"
+      "sha256": "f3f1803998d18e969a4209b264a97764546f96baaaa7aca510278a7048eb322f"
     },
     {
-      "bytes": 1410,
+      "bytes": 1714,
       "path": "paper/build-manifest.json",
-      "sha256": "5024172af0dfbe45957c94732e539ca5682080d8ee83116e7fc108cb2bc9b13a"
+      "sha256": "7abbf0a67e12026905eed4ca584b0010263c462295f6d2b9129d70bf87476abb"
     },
     {
       "bytes": 363,
       "path": "paper/metadata.json",
-      "sha256": "0cebe3f26a106757974053b60c1662dd9a14854a936b0990e77c4913c438369a"
+      "sha256": "e0d5396e90c14546703ed68a1189f7583afde2ed0f1de65b26ac7e670e886b46"
     },
     {
-      "bytes": 83889,
+      "bytes": 107873,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "d905ec982364308e1a98a9c36a5939496e595fd3c92f09aa30b8cb0cb70f9c34"
+      "sha256": "d1aa3ccc3cb066fa03a1863f16e86b8d3967b8900dd60a7cd0eb47baa8c9404a"
     },
     {
-      "bytes": 1204164,
+      "bytes": 1386764,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "e1e83a1eaf890405c4e74ec14ea01242343ba7445fbf11538a22d6c329fce723"
+      "sha256": "2ceddfeba0128611e269bb1ab67821dfca7bdc3e317a1b834d3eb6df814d6ade"
     },
     {
-      "bytes": 1064,
+      "bytes": 1144,
       "path": "pyproject.toml",
-      "sha256": "b5a9c0cc2dce0e82d3bb280ad3f948204f7011dea48994dbb1ad57123c8e7a84"
+      "sha256": "f68a4bc1c6d765407e7f5b3f643d586f31ec6b8082f9bd3f4dfb5a2812c818ef"
     },
     {
       "bytes": 36,
@@ -331,9 +376,19 @@
       "sha256": "faf1b3b2a203022764dbc7414a2f022d79c514eda72640d444cbb7d976944643"
     },
     {
+      "bytes": 87723,
+      "path": "results/development/angular-stress.json",
+      "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6"
+    },
+    {
       "bytes": 3710,
       "path": "results/development/charged-sector.json",
       "sha256": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be"
+    },
+    {
+      "bytes": 11855,
+      "path": "results/development/child-state.json",
+      "sha256": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060"
     },
     {
       "bytes": 6199,
@@ -356,9 +411,19 @@
       "sha256": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9"
     },
     {
+      "bytes": 7293,
+      "path": "results/development/curvature-eft.json",
+      "sha256": "21dea11100127a4f1f249fd1597b19539022658753ec6b9ad5b9c6384ca00bd8"
+    },
+    {
       "bytes": 2088,
       "path": "results/development/flow-compatibility.json",
       "sha256": "ab4ce6b98afbb4b79c53396197c699f6071e83ee0e09139e71c8fcd31498aabb"
+    },
+    {
+      "bytes": 14153,
+      "path": "results/development/gauge-source.json",
+      "sha256": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592"
     },
     {
       "bytes": 8902,
@@ -366,9 +431,34 @@
       "sha256": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f"
     },
     {
+      "bytes": 13277,
+      "path": "results/development/massless-reference.json",
+      "sha256": "1f02ebec5b8b7701080a3b0705f4f62e23aac44149e88872f945050f81472002"
+    },
+    {
+      "bytes": 14804,
+      "path": "results/development/spectral-endpoint.json",
+      "sha256": "6cdb46d5cab8e6de357ec437d3813c2a9381a6c6effbb2d14c55c23e4adef4bb"
+    },
+    {
+      "bytes": 7127,
+      "path": "results/development/spherical-action.json",
+      "sha256": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456"
+    },
+    {
+      "bytes": 17670,
+      "path": "results/development/state-regulator.json",
+      "sha256": "4cd5a58b0f32aaa9f6e04dafe869e716b55e3ac54665c275a9e8a43e90609030"
+    },
+    {
       "bytes": 3574,
       "path": "results/development/torsion-uv-map.json",
       "sha256": "74784cddf2a95d11f4412d6fba11001494a882e53f233534d1f0d2338f3e71e8"
+    },
+    {
+      "bytes": 259074,
+      "path": "results/development/unruh-state.json",
+      "sha256": "98d4659674ad7f7f6b474b7abcc448518bda6861bbafe3ff98c129918dd21343"
     },
     {
       "bytes": 4605,
@@ -381,9 +471,9 @@
       "sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac"
     },
     {
-      "bytes": 122187,
+      "bytes": 241737,
       "path": "results/manifest.json",
-      "sha256": "68d0086c1880f05b3c07631a202178b0741d5cc211ebe6c9992384b8b5a113bb"
+      "sha256": "f67562a152f7c9b5f026bdf4c23f0377585ef1743545147bebd5ec593b66f3df"
     },
     {
       "bytes": 7369,
@@ -791,14 +881,14 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
-      "bytes": 111511,
+      "bytes": 169826,
       "path": "results/release-spec.json",
-      "sha256": "8f47bc8f7d736accce4b587353feb19595af64240b4454263c93e03186b16517"
+      "sha256": "c7ddc4515fbaa64671b12e14afb57a6ee8c0aedc616eba14c893f0cbacd235da"
     },
     {
-      "bytes": 48973,
+      "bytes": 53016,
       "path": "scripts/build_paper.py",
-      "sha256": "fccdb377e54c861d846ae50ae7c4099b1552a468b68ce42710ceb11ccc8d26ce"
+      "sha256": "636785afe4f1885e04b6eacb1e7cd7859d548f7a8ebfc0116834e9b774289577"
     },
     {
       "bytes": 3480,
@@ -806,9 +896,14 @@
       "sha256": "c529d9021efcd5bf04e09b74d20b53374160de0cec2f9080a4cb84f05dc2fcfb"
     },
     {
-      "bytes": 16692,
+      "bytes": 17230,
       "path": "scripts/build_result_manifest.py",
-      "sha256": "74fe5f6afa265e63fa66d4106e2128862c2bbd9444b8b4862a4787ec55826aa9"
+      "sha256": "aaaccbbe987fb8983f07e2c8e3071cf29892349ade49af060fd52ec7158dae7c"
+    },
+    {
+      "bytes": 13561,
+      "path": "scripts/check_nsc_angular_stress.py",
+      "sha256": "87f65a14e17ebecd75297c6b04ed1cd2a70ac013760986bc120d4124b332e265"
     },
     {
       "bytes": 2304,
@@ -819,6 +914,11 @@
       "bytes": 7147,
       "path": "scripts/check_nsc_charged_sector.py",
       "sha256": "098d2b8299205be338d5722b5af7d668a577d6ba49a934c3a0a36af8b225b546"
+    },
+    {
+      "bytes": 11787,
+      "path": "scripts/check_nsc_child_state.py",
+      "sha256": "4a9756d8c70b128e4e95b9749f9d288e30db0962af076983627b9f28f558cd0e"
     },
     {
       "bytes": 1474,
@@ -866,6 +966,11 @@
       "sha256": "11112370061ae826ee92b666662d63a7b8417138ad55fed7b11d9ad288c0e393"
     },
     {
+      "bytes": 11925,
+      "path": "scripts/check_nsc_curvature_eft.py",
+      "sha256": "8f1a77f9ac983287badac12d961f58693711d8d86383f0f46eb3ad7b5b5b44ce"
+    },
+    {
       "bytes": 15148,
       "path": "scripts/check_nsc_dirac_tetrad.py",
       "sha256": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae"
@@ -886,6 +991,11 @@
       "sha256": "4a526141ce337f763c26aa9aa1a841c682319c28b3de60ccefc7cc896cd7fac8"
     },
     {
+      "bytes": 10176,
+      "path": "scripts/check_nsc_gauge_source.py",
+      "sha256": "c5f4224d606657f35fccb2ec6b00c5546d6b528b654fd097ba2e272f75b21976"
+    },
+    {
       "bytes": 5272,
       "path": "scripts/check_nsc_geometric_chain.py",
       "sha256": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b"
@@ -904,6 +1014,11 @@
       "bytes": 7014,
       "path": "scripts/check_nsc_lorentzian.py",
       "sha256": "ed0edaa53326e6f312bbb21d1e6ec01ddf501190d6b2f6e0a1baef8044480bce"
+    },
+    {
+      "bytes": 11196,
+      "path": "scripts/check_nsc_massless_reference.py",
+      "sha256": "4e7a53ef151f84c607224fbef7b101ba07341f696a45acf154482571f844b2d1"
     },
     {
       "bytes": 2451,
@@ -951,6 +1066,21 @@
       "sha256": "f13d1d9b475e270d954b5063335022663f6f10d06718bcac2220b66209fbc900"
     },
     {
+      "bytes": 11093,
+      "path": "scripts/check_nsc_spectral_endpoint.py",
+      "sha256": "3e7097d2a3f0444ed852ca6d4cb20a7f4a832972a8b7b4a801e99bf20e0eaadd"
+    },
+    {
+      "bytes": 13700,
+      "path": "scripts/check_nsc_spherical_action.py",
+      "sha256": "9ce56e0880cd4cd2223d263c3f72eddc3c85a744c241ece79abd80d52f3a36da"
+    },
+    {
+      "bytes": 10631,
+      "path": "scripts/check_nsc_state_regulator.py",
+      "sha256": "0bd9d5ff0aaeef0f230f0de8ba540658cf323bff70cb00562eb9d9ba28d9fb9d"
+    },
+    {
       "bytes": 8036,
       "path": "scripts/check_nsc_tail_limit.py",
       "sha256": "6c3a37f032323c15e5e85ea42990b316f12e083715d6c57da57defcccb8d8b4f"
@@ -964,6 +1094,11 @@
       "bytes": 8740,
       "path": "scripts/check_nsc_torsion_uv_map.py",
       "sha256": "d9898ce375471536a0842142c40c5b3000d986060dc96b80a5dac4ed3fb7f982"
+    },
+    {
+      "bytes": 14875,
+      "path": "scripts/check_nsc_unruh_state.py",
+      "sha256": "476f9daca8f1d728305ea9b932f1a3e093f60385ae4573453e1f83d433389930"
     },
     {
       "bytes": 11116,
@@ -981,19 +1116,19 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 12416,
+      "bytes": 12424,
       "path": "scripts/check_publication.py",
-      "sha256": "7eb19fe92a00b69b994abc494b5953a1efa8430f853e66508dcfeb141dc02b88"
+      "sha256": "acc4215b0ea7e55274347422044c0b50a2f475e3d8e3b59d180ec03e2ea9ed90"
     },
     {
-      "bytes": 9870,
+      "bytes": 11187,
       "path": "scripts/demonstrate.py",
-      "sha256": "e09fceab0746a8243df5b4f833a25bb0642e116281e56baf4783902fa82b7d8e"
+      "sha256": "488d8e2d4983bf5d34a13fd501862c224d78091c6395522ac611692a61daf936"
     },
     {
-      "bytes": 35278,
+      "bytes": 37257,
       "path": "scripts/reproduce_public_results.py",
-      "sha256": "f0195c5511f4aef7dc22df88c3f65398637a0091bdb8b66bdc3d51a356d83428"
+      "sha256": "dadbdd7f06c608a76b9c586f79e893967aa3cfaf5ac5e2b263ccaa36b2eff86e"
     },
     {
       "bytes": 7793,
@@ -1286,9 +1421,9 @@
       "sha256": "e95ddc0eb9a4771c420bf79700c9c624dc0d23614a6ef313ab3608bab13acad7"
     },
     {
-      "bytes": 4538,
+      "bytes": 5361,
       "path": "scripts/stage_release_import.py",
-      "sha256": "14997640d38312555965e19e7a23abd01aa8798d8f52ae3bb4810bb2f4ab9c1c"
+      "sha256": "a984411e5f8afd8b0c263b1edf6b6dfc6e1212aa012375d5edd8df3525c20982"
     },
     {
       "bytes": 281,
@@ -1296,14 +1431,29 @@
       "sha256": "8ac35a8822ae3d761e9e14a768bfcfdbc32686eed23c097f5c43a8c60df6bcea"
     },
     {
+      "bytes": 2185,
+      "path": "src/recursive_horizons/_angular_transport.cpp",
+      "sha256": "f589f18d831e84c532828a4739e6e0b4c4b53a6ff91e35b9737a90757338c6f1"
+    },
+    {
       "bytes": 56604,
       "path": "src/recursive_horizons/evidence_io.py",
       "sha256": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d"
     },
     {
+      "bytes": 14612,
+      "path": "src/recursive_horizons/nsc_angular_stress.py",
+      "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
+    },
+    {
       "bytes": 58764,
       "path": "src/recursive_horizons/nsc_boundary.py",
       "sha256": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e"
+    },
+    {
+      "bytes": 2962,
+      "path": "src/recursive_horizons/nsc_child_state.py",
+      "sha256": "50c55b3ca0ae8215426b7b2287392308826b44bb8ca58393b00209129edab69e"
     },
     {
       "bytes": 22423,
@@ -1341,6 +1491,11 @@
       "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
     },
     {
+      "bytes": 2981,
+      "path": "src/recursive_horizons/nsc_curvature_eft.py",
+      "sha256": "6440e8411e59792020a003d5ab12f9046c12d3e0b598fd06f278247b345c97fc"
+    },
+    {
       "bytes": 5654,
       "path": "src/recursive_horizons/nsc_energy_transfer.py",
       "sha256": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d"
@@ -1349,6 +1504,11 @@
       "bytes": 15339,
       "path": "src/recursive_horizons/nsc_finite_terms.py",
       "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
+    },
+    {
+      "bytes": 7648,
+      "path": "src/recursive_horizons/nsc_gauge_source.py",
+      "sha256": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e"
     },
     {
       "bytes": 3305,
@@ -1369,6 +1529,11 @@
       "bytes": 7554,
       "path": "src/recursive_horizons/nsc_lorentzian.py",
       "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+    },
+    {
+      "bytes": 3860,
+      "path": "src/recursive_horizons/nsc_massless_reference.py",
+      "sha256": "361662e89ac53261b9cea1c242b766fb521197dee9cbf076166771716b3ba0f1"
     },
     {
       "bytes": 42567,
@@ -1396,14 +1561,34 @@
       "sha256": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0"
     },
     {
+      "bytes": 4401,
+      "path": "src/recursive_horizons/nsc_spectral_endpoint.py",
+      "sha256": "6a582d0b6a3f2d7a6250b48c35b2bc512b9e033b7592d585d47f3c2f7cd3114d"
+    },
+    {
+      "bytes": 2327,
+      "path": "src/recursive_horizons/nsc_spherical_action.py",
+      "sha256": "66b11798bf42ca758eebdf7479b10d5dedb0094db0c8f4ef8d18bc2f2fe13512"
+    },
+    {
       "bytes": 7793,
       "path": "src/recursive_horizons/nsc_spinor_bridge.py",
       "sha256": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
     },
     {
+      "bytes": 5554,
+      "path": "src/recursive_horizons/nsc_state_regulator.py",
+      "sha256": "0eef4c2faf315691e0617ea26dbd64bbafd71471220d0329be11dc6fd787ab5b"
+    },
+    {
       "bytes": 4481,
       "path": "src/recursive_horizons/nsc_tail_limit.py",
       "sha256": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded"
+    },
+    {
+      "bytes": 21921,
+      "path": "src/recursive_horizons/nsc_unruh_state.py",
+      "sha256": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
     },
     {
       "bytes": 6533,
@@ -1426,9 +1611,14 @@
       "sha256": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
     },
     {
-      "bytes": 1655,
+      "bytes": 1262,
+      "path": "tests/fixtures/source-checkpoints/161028d52ef206a4bc99a25bf97ea467c30e7f16/pyproject.toml",
+      "sha256": "b5bfe97f7225d19d6036e05d3199376885d4d626db05d49013495c94ec3e400e"
+    },
+    {
+      "bytes": 1801,
       "path": "tests/test_demonstrate.py",
-      "sha256": "2b910587905daaab23ab8900df2a21be5b38bdd46a1b1fe93dafc0fa10f6e345"
+      "sha256": "004152981a8a333be2ec925277008046727468c615d9fa57737db1d7d03214ce"
     },
     {
       "bytes": 5643,
@@ -1516,14 +1706,14 @@
       "sha256": "609b555fd14c6d8719ba0c50f64fb07b487f5d5129d60dd4f8d228efd54a797d"
     },
     {
-      "bytes": 9056,
+      "bytes": 9436,
       "path": "tests/test_release_import.py",
-      "sha256": "162785831074d6c033d514c15e6ebc06b72559e829d7faccf9a85812f885ad9d"
+      "sha256": "0e27216c7553a6afda9533c84c186126daac5eb6c4b93460b95f67de47e8f7e2"
     },
     {
-      "bytes": 17471,
+      "bytes": 17474,
       "path": "tests/test_release_infrastructure.py",
-      "sha256": "6dc0f2f3e29e2afb5748d84cb8974fc5149f28de518da59bd120bb22b1992115"
+      "sha256": "5c2bd2e8fc6c311b4dedc663ea1119f78069305305770c11b409c8d7f2e49219"
     },
     {
       "bytes": 10081,
@@ -1531,18 +1721,23 @@
       "sha256": "6a2ef5e546640201483d3c2855d6448702118dbb9301a4214ad8c7534335790b"
     },
     {
-      "bytes": 7280,
+      "bytes": 7335,
       "path": "tests/test_v060_release.py",
-      "sha256": "e3a8c67036befa507402c845956f05027b4b37d8d88d920b234e34d5edc46ed0"
+      "sha256": "82dead2a83e9869c7ee26d7e5ba82b508553747857b84524c265618584659cca"
+    },
+    {
+      "bytes": 5246,
+      "path": "tests/test_v070_release.py",
+      "sha256": "dac1a41461ce3861580be13d919ee312b87d51fc4ef96212b1473facd4e2325f"
     }
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.6.0",
-  "release_source_commit": "eea43512f63e61d8d7686261a683bc36e99efa19",
+  "public_version": "0.7.0",
+  "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,
-  "release_spec_sha256": "8f47bc8f7d736accce4b587353feb19595af64240b4454263c93e03186b16517",
+  "release_spec_sha256": "c7ddc4515fbaa64671b12e14afb57a6ee8c0aedc616eba14c893f0cbacd235da",
   "schema": "NSC-PUBLICATION-PROVENANCE-v1",
   "source_branch": "codex/nsc-closure-verification",
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",

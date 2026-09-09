@@ -1,0 +1,314 @@
+{
+  "comparison": {
+    "exact": "keys, structures, strings, non-float types and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "conventions": {
+    "base_parameters": {
+      "ODE_rtol": 2e-09,
+      "flux": 1,
+      "frequency_nodes": 64,
+      "horizon_offset": 1e-08,
+      "maximum_omega_over_T": 24.0,
+      "minimum_omega_over_T": 0.0001,
+      "outer_phase_extent": 60.0
+    },
+    "collective_field": "electric-displacement/current variable from bosonization; not a new fundamental scalar or the resolution compensator",
+    "collective_mu_squared": "abs(q_mag)*g4^2/(4*pi^2*r^2)",
+    "domain": "recorded spherical exterior, same reflecting transverse compact candidate; photon and fermion angular projection stated separately",
+    "e2_squared": "g4^2/(4*pi*r^2)",
+    "g4": "unselected full matched coupling; the Dirac-only C_F is not its complete value",
+    "potential": "A(rho)*abs(q_mag)*g4^2/[4*pi^2*(1+rho^2)]",
+    "retained_sector": "one canonical massless 4D Dirac -> abs(q_mag) LLL flavours; spherical radial U(1) gauge field only",
+    "scattering_orientation": "unit ingoing horizon amplitude; real-potential reciprocity supplies the outgoing transmission",
+    "state": "specified projected Unruh state, no parent incoming bath, zero electric-flux sector",
+    "statistics": "q-1 neutral CFT units and one Bose charged collective mode",
+    "units": "hbar=c_light=1, original benchmark throat radius unit"
+  },
+  "coupling_controls": [
+    {
+      "conditional_horizon_null_stress": -6.4369472631124845e-06,
+      "flux": 1,
+      "fourD_alpha": 0.0049735919716217296,
+      "g4": 0.25,
+      "mu_over_first_Landau_gap": 0.028134884879909564,
+      "power": {
+        "charged_power_over_one_free_channel": 0.990574839897622,
+        "charged_ratio_lower_with_tail_bounds": 0.9905741988869899,
+        "charged_ratio_upper_with_tail_bounds": 0.9906362738521571,
+        "maximum_relative_current_residual": 2.1544545238938562e-13,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.00037311121264865343,
+        "total_power_over_free_LLL": 0.990574839897622
+      },
+      "strength": 0.0015831434944115277
+    },
+    {
+      "conditional_horizon_null_stress": -6.264547456413312e-06,
+      "flux": 1,
+      "fourD_alpha": 0.019894367886486918,
+      "g4": 0.5,
+      "mu_over_first_Landau_gap": 0.05626976975981913,
+      "power": {
+        "charged_power_over_one_free_channel": 0.9640444204396198,
+        "charged_ratio_lower_with_tail_bounds": 0.964037592252554,
+        "charged_ratio_upper_with_tail_bounds": 0.964112036818472,
+        "maximum_relative_current_residual": 9.906717555453567e-13,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.00036311823021324685,
+        "total_power_over_free_LLL": 0.9640444204396198
+      },
+      "strength": 0.006332573977646111
+    },
+    {
+      "conditional_horizon_null_stress": -5.6760316504785e-06,
+      "flux": 1,
+      "fourD_alpha": 0.07957747154594767,
+      "g4": 1.0,
+      "mu_over_first_Landau_gap": 0.11253953951963826,
+      "power": {
+        "charged_power_over_one_free_channel": 0.8734783607203095,
+        "charged_ratio_lower_with_tail_bounds": 0.8734190085180328,
+        "charged_ratio_upper_with_tail_bounds": 0.8735984419028722,
+        "maximum_relative_current_residual": 5.314527538081501e-12,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.00032900549990185044,
+        "total_power_over_free_LLL": 0.8734783607203095
+      },
+      "strength": 0.025330295910584444
+    }
+  ],
+  "error_scope": {
+    "assumptions": "real stationary integrable potential and disjoint-tail transfer-matrix composition",
+    "domain_tail_formula": "S_tail=c*[atan(rho_left)-atan(rho_h)+atan(1/rho_right)]/(2*omega)",
+    "numerical_caveat": "comparison bounds evaluated in floating point using the computed finite transfer; ODE and quadrature errors assessed separately, not rigorous interval arithmetic",
+    "transmission_bounds": "sech^2(theta+S_tail) <= T_full <= sech^2(max(theta-S_tail,0))",
+    "transmission_extraction": "T=1/(1+abs(b)^2) uses the exact Wronskian; raw 1/abs(a)^2 and current defects retained"
+  },
+  "exact_mapping_residuals": {
+    "boson_CFT_flux_matches_one_complex_Dirac": "0",
+    "charge_potential_is_radial_Maxwell_energy": "0",
+    "future_regular_PG_horizon_null_source": "0",
+    "gauge_elimination_gives_charge_potential": "0",
+    "potential_tail_primitive": "0",
+    "sphere_pressure_from_radius_variation": "0",
+    "spherical_Ward_with_Maxwell_pressure": "0"
+  },
+  "free_limit_reused": {
+    "charged_power_over_one_free_channel": 1.0,
+    "charged_ratio_lower_with_tail_bounds": 1.0,
+    "charged_ratio_upper_with_tail_bounds": 1.0,
+    "maximum_relative_current_residual": 0.0,
+    "missing_IR_ratio_bound": 0.0,
+    "missing_UV_ratio_bound": 0.0,
+    "neutral_central_charge": 0,
+    "parent_Killing_power": 0.0003766613057598104,
+    "total_power_over_free_LLL": 1.0
+  },
+  "geometry_evaluation_overlap": [
+    {
+      "difference_from_recorded_formula": 1.6061472627153933e-15,
+      "rho": 1.9007416054701436
+    },
+    {
+      "difference_from_recorded_formula": 0.0,
+      "rho": 19.9
+    },
+    {
+      "difference_from_recorded_formula": -1.496580637194711e-13,
+      "rho": 20.1
+    },
+    {
+      "difference_from_recorded_formula": -2.915445662665661e-13,
+      "rho": 40.0
+    }
+  ],
+  "independent_refinements": {
+    "ODE_rtol_2e-10": {
+      "charged_ratio_difference": 1.5909495942878493e-12,
+      "power": {
+        "charged_power_over_one_free_channel": 0.9640444204412107,
+        "charged_ratio_lower_with_tail_bounds": 0.9640375922541442,
+        "charged_ratio_upper_with_tail_bounds": 0.9641120368200635,
+        "maximum_relative_current_residual": 1.9942660667297053e-13,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.0003631182302138461,
+        "total_power_over_free_LLL": 0.9640444204412107
+      }
+    },
+    "frequency_nodes_48": {
+      "charged_ratio_difference": -3.959388372720696e-12,
+      "power": {
+        "charged_power_over_one_free_channel": 0.9640444204356604,
+        "charged_ratio_lower_with_tail_bounds": 0.9640375922485964,
+        "charged_ratio_upper_with_tail_bounds": 0.9641120368144945,
+        "maximum_relative_current_residual": 1.004911107185289e-12,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.0003631182302117555,
+        "total_power_over_free_LLL": 0.9640444204356604
+      }
+    },
+    "frequency_nodes_96": {
+      "charged_ratio_difference": -2.7611246622427643e-13,
+      "power": {
+        "charged_power_over_one_free_channel": 0.9640444204393437,
+        "charged_ratio_lower_with_tail_bounds": 0.9640375922522777,
+        "charged_ratio_upper_with_tail_bounds": 0.9641120368181932,
+        "maximum_relative_current_residual": 1.0583716008339723e-12,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.0003631182302131428,
+        "total_power_over_free_LLL": 0.9640444204393437
+      }
+    },
+    "horizon_offset_1e-9": {
+      "charged_ratio_difference": -1.290949569465738e-10,
+      "power": {
+        "charged_power_over_one_free_channel": 0.9640444203105248,
+        "charged_ratio_lower_with_tail_bounds": 0.96403759229974,
+        "charged_ratio_upper_with_tail_bounds": 0.9641120365131335,
+        "maximum_relative_current_residual": 1.019378432638662e-12,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.0003631182301646218,
+        "total_power_over_free_LLL": 0.9640444203105248
+      }
+    },
+    "outer_phase_120": {
+      "charged_ratio_difference": 1.5007586284809804e-08,
+      "power": {
+        "charged_power_over_one_free_channel": 0.9640444354472061,
+        "charged_ratio_lower_with_tail_bounds": 0.9640410219042751,
+        "charged_ratio_upper_with_tail_bounds": 0.9641086410010127,
+        "maximum_relative_current_residual": 1.0098566766568662e-12,
+        "missing_IR_ratio_bound": 6.079271018540267e-05,
+        "missing_UV_ratio_bound": 5.737516506748133e-10,
+        "neutral_central_charge": 0,
+        "parent_Killing_power": 0.00036311823586602387,
+        "total_power_over_free_LLL": 0.9640444354472061
+      }
+    }
+  },
+  "independent_scattering_methods": [
+    {
+      "amplitudes": {
+        "raw_transmission": 0.8725571524715328,
+        "reflection": 0.1274428475269404,
+        "relative_current_residual": 8.749596826096192e-13,
+        "tail_rapidity_bound": 5.277316583232824e-05,
+        "transmission": 0.8725571524730596,
+        "transmission_lower": 0.872524273776994,
+        "transmission_upper": 0.8725900281671457
+      },
+      "direct_field": {
+        "raw_transmission": 0.8725571649477616,
+        "reflection": 0.1274428459511177,
+        "relative_current_residual": 6.245366989861978e-09,
+        "tail_rapidity_bound": 5.277316583232824e-05,
+        "transmission": 0.8725571540488822,
+        "transmission_lower": 0.8725242753529606,
+        "transmission_upper": 0.8725900297428248
+      },
+      "frequency": 0.004,
+      "transmission_difference": 1.5758225835327266e-09
+    },
+    {
+      "amplitudes": {
+        "raw_transmission": 0.9991439679223996,
+        "reflection": 0.0008560320772364935,
+        "relative_current_residual": 1.8214256717651076e-13,
+        "tail_rapidity_bound": 5.277161360540617e-05,
+        "transmission": 0.9991439679227635,
+        "transmission_lower": 0.9991408798044054,
+        "transmission_upper": 0.999147050490494
+      },
+      "direct_field": {
+        "raw_transmission": 0.9991439785247802,
+        "reflection": 0.0008560320682014528,
+        "relative_current_residual": 5.301028606186162e-09,
+        "tail_rapidity_bound": 5.277161360540617e-05,
+        "transmission": 0.9991439679317986,
+        "transmission_lower": 0.9991408798134568,
+        "transmission_upper": 0.9991470504995129
+      },
+      "frequency": 0.04,
+      "transmission_difference": 9.035105996701986e-12
+    },
+    {
+      "amplitudes": {
+        "raw_transmission": 0.9999760397592571,
+        "reflection": 2.3960240515180754e-05,
+        "relative_current_residual": 1.1390615304231073e-13,
+        "tail_rapidity_bound": 5.277143665517973e-05,
+        "transmission": 0.9999760397594849,
+        "transmission_lower": 0.9999755203634002,
+        "transmission_upper": 0.9999765535864541
+      },
+      "direct_field": {
+        "raw_transmission": 0.9999760492930637,
+        "reflection": 2.39602403038988e-05,
+        "relative_current_residual": 4.766798004666856e-09,
+        "tail_rapidity_bound": 5.277143665517973e-05,
+        "transmission": 0.9999760397596961,
+        "transmission_lower": 0.9999755203636138,
+        "transmission_upper": 0.9999765535866632
+      },
+      "frequency": 0.12,
+      "transmission_difference": 2.1116441928370477e-13
+    }
+  ],
+  "input_hashes": {
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f"
+  },
+  "reused_horizon": {
+    "areal_radius": 2.147703093796876,
+    "one_free_channel_power": 0.0003766613057598104,
+    "rho": 1.9006916054701435,
+    "surface_gravity": 0.23832579963401956,
+    "temperature": 0.037930729078082835
+  },
+  "schema": "NSC-GAUGE-SOURCE-v1",
+  "scope": {
+    "asymptotic_mass_gap_present": false,
+    "collective_scale_is_fourD_fermion_or_photon_rest_mass": false,
+    "cosmological_density_rate_or_dark_fraction_predicted": false,
+    "full_4D_reduction_or_magnetic_catalysis_controlled": false,
+    "global_unified_state_or_self_sourced_geometry_solved": false,
+    "higher_photon_Landau_and_compact_modes_included": false,
+    "new_Schwinger_or_Hawking_law_claimed": false,
+    "physical_g4_selected_or_fitted": false
+  },
+  "source_accounting": {
+    "bare_Dirac_UV_Maxwell_term_added_again": false,
+    "full_absolute_renormalized_stress_computed": false,
+    "horizon_null_relation": "T(K,K)_h=-P_infinity/(4*pi*r_h^2), conditional on stationary conserved current and future-regular PG components",
+    "interaction_correction": "Gamma_scalar[mu(r)]-Gamma_scalar[0], plus required local/zero-mode matching terms",
+    "sphere_pressure_operator": "mu(r)^2*X^2/(8*pi*r^2), with composite expectation values consistently renormalized"
+  },
+  "source_hashes": {
+    "docs/nsc-gauge-source.md": "7b175e52b4f11d7fe0888a613506186ea07a9b33ba66694fb8d100fd2e0cbed4",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_gauge_source.py": "c5f4224d606657f35fccb2ec6b00c5546d6b528b654fd097ba2e272f75b21976",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+  },
+  "status": "known projected Dirac-gauge interaction mapped to the unwrapped source and transmission"
+}

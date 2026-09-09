@@ -1,6 +1,6 @@
 # Reproducing the compact results
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and ten nested development records 82–91. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and nineteen nested development records 82–100. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -21,13 +21,29 @@ remain historically true. The compact-mass check is an explanatory application
 note, not a separate record. The later generators recursively authenticate
 input records; isolated reproduction retains those raw dependency files and
 normalizes only result input digests after authentication. Run
-`make reproduce-development` to recompute the ten nested records with
+`make reproduce-development` to recompute the nineteen nested records with
 their recorded all-field policies. `make reproduce` and `make verify` cover
-the complete 91-record graph; `make reproduce-exact` requires byte identity.
+the complete 100-record graph; `make reproduce-exact` requires byte identity.
+
+Records 92–100 add the gauge source, spherical action, curvature EFT,
+full spectral endpoint, child-state bound, absolute massless reference,
+finite angular reference, parent-matched source and state/regulator conversion.
+All nine retain their laboratory JSON, generator bytes and all-field tolerances.
+The original 91 manifest step objects remain unchanged.
+
+The angular-stress record authenticates the laboratory `pyproject.toml`.
+Its immutable copy is kept under `tests/fixtures/source-checkpoints/` and
+restored to its original path only inside an isolated reproduction workspace.
+The public installation configuration is separate. The C++17 angular
+transport source is included in both the source closure and the package.
+Its large angular integration and the parent-state calculation dominate the
+new runtime; the Linux reproduction job has a 120-minute ceiling. This is
+an execution limit, not a claimed measured runtime.
 
 ## Requirements
 
 - Python 3.12 or newer
+- A C++17 compiler with thread support for angular-stress
 - the pinned dependencies in `requirements.txt`:
   - `mpmath==1.3.0`
   - `numpy==2.5.1`
@@ -63,7 +79,7 @@ make verify
 
 - `make check` validates manifests, claims, paths, and links.
 - `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–91 by comparing every recorded field. Nested development paths are copied and compared explicitly.
+- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–100 by comparing every recorded field. Nested development paths are copied and compared explicitly.
 - `make reproduce-exact` requires byte-identical recomputation.
 - `make paper` rebuilds the tracked paper PDF.
 - `make verify` runs check, test, reproduce, and the paper byte check.

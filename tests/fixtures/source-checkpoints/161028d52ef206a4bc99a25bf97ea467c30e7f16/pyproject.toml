@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recursive-horizons"
+version = "0.12.0"
+description = "Nested-Space Cosmology regulated operators and reproducible boundary-response research"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "BlackHoles-Infinity Project" }]
+keywords = ["cosmology", "black holes", "finite gradient closure", "nested gradient spectrum", "horizon thermodynamics", "Einstein-Cartan"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["numpy==2.5.1", "scipy==1.17.1", "sympy==1.14.0", "mpmath==1.3.0"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+recursive_horizons = ["_angular_transport.cpp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+  "archive",
+  "build",
+  "runs",
+  "paper/.build",
+  ".git",
+  ".pytest_cache",
+  ".ruff_cache",
+]
+
+[tool.ruff]
+extend-exclude = [
+  "archive",
+  "build",
+  "runs",
+  "paper/.build",
+]

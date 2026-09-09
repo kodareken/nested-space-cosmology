@@ -35,6 +35,8 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         ("compact-source", "results/development/compact-casimir.json"),
         ("source-matching", "results/development/warped-source.json"),
         ("source-matching", "results/development/compact-matching.json"),
+        ("parent-source", "results/development/unruh-state.json"),
+        ("parent-source", "results/development/state-regulator.json"),
     ):
         if f"<!-- nsc-figure:{marker} -->" in text:
             paths.append(path)
@@ -171,6 +173,49 @@ def source_matching_plot():
     for axis in (left, right):
         axis.grid(True, axis="y", alpha=.2, linewidth=.5)
         axis.set_axisbelow(True)
+        axis.tick_params(labelsize=7)
+        axis.xaxis.label.set_size(8)
+        axis.yaxis.label.set_size(8)
+    figure.tight_layout(pad=.7)
+    return figure
+
+
+def parent_source_plot():
+    """The curved canonical source and a separate flat regulator control."""
+    from matplotlib.backends.backend_agg import FigureCanvasAgg
+    from matplotlib.figure import Figure
+    parent = json.loads((REPOSITORY / "results/development/unruh-state.json").read_text())
+    regulator = json.loads((REPOSITORY / "results/development/state-regulator.json").read_text())
+    neck = parent["neck_source_budget"]["candidate_tensor"]
+    figure = Figure(figsize=(6.4, 3.0), dpi=220)
+    FigureCanvasAgg(figure)
+    left, right = figure.subplots(1, 2)
+    fields = ("rho", "p_parallel", "p_sphere", "radial_null")
+    values = [neck[key] for key in fields]
+    left.bar(range(4), values, color=["#2357A6", "#21766C", "#21766C", "#8C4264"], width=.6)
+    left.set_xticks(range(4), [r"$\rho$", r"$p_\parallel$", r"$p_\perp$", r"$\rho+p_\parallel$"])
+    left.set_ylim(-.067, .006)
+    left.set_ylabel(r"canonical source $\times L_{\rm throat}^{4}$")
+    left.set_title("Curved neck: parent-state candidate", fontsize=8.5)
+    for x, value in enumerate(values):
+        left.text(x, value-.0022, f"{value:.4f}", ha="center", va="top", fontsize=6.5)
+    selected = [row["images"] for row in regulator["thermal_source_rows"]
+                if row["images"]["temperature"] in (.25, .5)]
+    for j, row in enumerate(selected):
+        right.bar(j-.17, row["canonical"]["rho"], width=.32, color="#2357A6",
+                  label="Canonical state" if j==0 else None)
+        right.bar(j+.17, row["finite_endpoint"]["rho"], width=.32, color="#A15A38",
+                  label="Raw finite endpoint" if j==0 else None)
+    right.set_xticks([0, 1], ["0.25", "0.50"])
+    right.set_xlabel(r"thermal control $T/\nu$")
+    right.set_ylabel(r"thermal density $\rho/\nu^4$")
+    right.set_title("Flat equilibrium: matching is required", fontsize=8.5)
+    right.set_ylim(-.01,.09)
+    right.legend(fontsize=6.5, frameon=False, loc="upper left")
+    for axis in (left, right):
+        axis.axhline(0, color="#526779", linewidth=.7)
+        axis.set_axisbelow(True)
+        axis.grid(True, axis="y", alpha=.2, linewidth=.5)
         axis.tick_params(labelsize=7)
         axis.xaxis.label.set_size(8)
         axis.yaxis.label.set_size(8)
@@ -444,6 +489,7 @@ def build_pdf(
         "delta": "δ",
         "Delta": "Δ",
         "epsilon": "ε",
+        "varepsilon": "ε",
         "eta": "η",
         "theta": "θ",
         "Theta": "Θ",
@@ -483,7 +529,9 @@ def build_pdf(
         value = value.replace(r"\partial", "∂").replace(r"\infty", "∞")
         value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±")
         value = value.replace(r"\Box", "□")
+        value = value.replace(r"\parallel", "∥").replace(r"\perp", "⊥")
         value = value.replace(r"\bar\psi", "ψ̄")
+        value = re.sub(r"\\bar\s+([A-Za-z])", lambda match: match.group(1) + "̄", value)
         value = value.replace(r"\sqrt", "√")
         value = re.sub(
             r"\\frac\{([^{}]+)\}\{([^{}]+)\}", r"(\1)/(\2)", value
@@ -493,7 +541,7 @@ def build_pdf(
             value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
         for name, symbol in greek.items():
             value = value.replace(f"\\{name}", symbol)
-        value = re.sub(r"\\(log|exp|cos|sin|tan|det|Tr)(?![A-Za-z])", r"\1", value)
+        value = re.sub(r"\\(log|ln|exp|cos|sin|tan|det|Tr)(?![A-Za-z])", r"\1", value)
         value = re.sub(r"_\{([^{}]+)\}", r"_(\1)", value)
         value = re.sub(r"\^\{([^{}]+)\}", r"^(\1)", value)
         value = value.replace("{", "").replace("}", "")
@@ -507,7 +555,7 @@ def build_pdf(
             tag = "sub" if match.group(1) == "_" else "super"
             return f"<{tag}>{match.group(2)}</{tag}>"
         plain = re.sub(r"([_^])\(([^()]*)\)", script, plain)
-        return re.sub(r"([_^])([\w*⋆†±+-])", script, plain)
+        return re.sub(r"([_^])([\w*⋆†±+∥⊥-])", script, plain)
 
     def inline_markup(value: str) -> str:
         tokens: list[str] = []
@@ -851,6 +899,25 @@ def build_pdf(
             "[light-field matching](../results/development/compact-matching.json)."), styles["Body"])
         return KeepTogether([Spacer(1,4), rendered, caption, Spacer(1,6)])
 
+    def parent_source_figure() -> object:
+        buffer = BytesIO()
+        parent_source_plot().savefig(buffer, format="png", dpi=220)
+        buffer.seek(0)
+        rendered = Image(buffer)
+        rendered._nsc_buffer = buffer
+        rendered.drawWidth = body_width
+        rendered.drawHeight = body_width*3.0/6.4
+        caption = Paragraph(inline_markup(
+            "**Figure.** Left: the canonical massless Dirac source at the imposed curved neck. "
+            "The last bar is the mean of the two radial null contractions; nonzero flux "
+            "splits them slightly, with both remaining negative. Density, anisotropy and flux "
+            "leave independent geometric residuals. Right: a separate flat thermal control "
+            "shows the finite-endpoint/state conversion requirement. The panels use distinct "
+            "geometries and normalizations. They do not depict cosmic evolution or assign a "
+            "temperature to the child. [Parent source](../results/development/unruh-state.json); "
+            "[state/regulator control](../results/development/state-regulator.json)."), styles["Body"])
+        return KeepTogether([Spacer(1,4), rendered, caption, Spacer(1,6)])
+
     def parse_markdown(markdown: str) -> list[object]:
         lines = markdown.splitlines()
         # Cover content is built separately. Begin at the technical abstract.
@@ -899,6 +966,12 @@ def build_pdf(
             if stripped == "<!-- nsc-figure:source-matching -->":
                 flush_paragraph()
                 story.append(source_matching_figure())
+                index += 1
+                continue
+
+            if stripped == "<!-- nsc-figure:parent-source -->":
+                flush_paragraph()
+                story.append(parent_source_figure())
                 index += 1
                 continue
 

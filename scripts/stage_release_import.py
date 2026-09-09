@@ -19,9 +19,13 @@ def digest(data: bytes) -> str:
 
 def safe_relative(relative: str) -> str:
     path = PurePosixPath(relative)
+    fixture = (len(path.parts) == 5 and path.parts[:3] == ('tests', 'fixtures', 'source-checkpoints')
+               and len(path.parts[3]) == 40 and all(c in '0123456789abcdef' for c in path.parts[3])
+               and path.name == 'pyproject.toml')
+    native = relative == 'src/recursive_horizons/_angular_transport.cpp'
     if (path.is_absolute() or '..' in path.parts or len(path.parts) < 2
             or path.parts[0] not in {'results', 'scripts', 'src', 'tests', 'docs'}
-            or path.suffix not in {'.json', '.py', '.md'}
+            or (path.suffix not in {'.json', '.py', '.md'} and not fixture and not native)
             or any(part.startswith('.') for part in path.parts)):
         raise ValueError(f'path is outside the curated scientific allowlist: {relative}')
     return relative
@@ -40,8 +44,15 @@ def stage(source: Path, destination: Path, spec: dict, *, check: bool = False) -
                                        cwd=source, text=True).strip()
     if resolved != commit:
         raise ValueError('release source must be pinned by its full commit hash')
-    def blob(relative):
-        return subprocess.check_output(['git', 'show', f'{commit}:{safe_relative(relative)}'], cwd=source)
+    def blob(relative, target=None):
+        if relative == 'pyproject.toml':
+            if target is None or not safe_relative(target).endswith('/pyproject.toml'):
+                raise ValueError('laboratory configuration requires an immutable source fixture')
+        else:
+            safe_relative(relative)
+            if target is not None and target != relative:
+                raise ValueError('only the declared laboratory configuration can be relocated')
+        return subprocess.check_output(['git', 'show', f'{commit}:{relative}'], cwd=source)
     prepared = []
     seen = set()
     for entry in spec['import_files'] + spec['retained_byte_identical_files']:
@@ -49,7 +60,7 @@ def stage(source: Path, destination: Path, spec: dict, *, check: bool = False) -
         if relative in seen:
             raise ValueError(f'duplicate import path: {relative}')
         seen.add(relative)
-        data = blob(relative)
+        data = blob(entry.get('source_path', relative), relative)
         if digest(data) != entry['sha256']:
             raise ValueError(f'pinned source hash mismatch: {relative}')
         target = destination / relative

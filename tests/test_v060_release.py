@@ -47,12 +47,13 @@ class V060ReleaseTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.reproducer = load_script("reproduce_public_results.py")
-        cls.manifest = json.loads((ROOT / "results/manifest.json").read_text())
-        cls.release = json.loads((ROOT / "results/release-spec.json").read_text())
+        snapshot = lambda path: subprocess.check_output(["git", "show", "v0.6.0:" + path], cwd=ROOT).decode()
+        cls.manifest = json.loads(snapshot("results/manifest.json"))
+        cls.release = json.loads(snapshot("results/release-spec.json"))
         cls.steps = {row["artifact_id"]: row for row in cls.manifest["steps"]}
-        cls.paper = json.loads((ROOT / "paper/metadata.json").read_text())
-        cls.project = tomllib.loads((ROOT / "pyproject.toml").read_text())
-        cls.citation = (ROOT / "CITATION.cff").read_text()
+        cls.paper = json.loads(snapshot("paper/metadata.json"))
+        cls.project = tomllib.loads(snapshot("pyproject.toml"))
+        cls.citation = snapshot("CITATION.cff")
 
     def test_package_citation_paper_and_release_versions_agree(self):
         self.assertEqual("0.6.0", self.project["project"]["version"])

@@ -150,6 +150,15 @@ PAPER_CLAIMS = {
     "NSC-19-HORIZON-SOURCE": ["derived-horizon-source"],
     "NSC-20-WARPED-SOURCE": ["derived-warped-source"],
     "NSC-21-COMPACT-MATCHING": ["derived-compact-matching"],
+    "NSC-22-GAUGE-SOURCE": ["derived-gauge-source"],
+    "NSC-23-SPHERICAL-ACTION": ["canonical-spherical-action"],
+    "NSC-24-CURVATURE-EFT": ["curvature-eft-source"],
+    "NSC-25-SPECTRAL-ENDPOINT": ["full-spectral-endpoint"],
+    "NSC-26-CHILD-STATE": ["child-state-decay"],
+    "NSC-27-MASSLESS-REFERENCE": ["absolute-massless-reference"],
+    "NSC-28-ANGULAR-STRESS": ["finite-angular-reference"],
+    "NSC-29-UNRUH-STATE": ["parent-matched-source"],
+    "NSC-30-STATE-REGULATOR": ["state-regulator-conversion"],
 }
 
 OUTPUT_RE = re.compile(r"OUTPUT\s*=\s*ROOT\s*/\s*[\"']([^\"']+)[\"']")
@@ -361,7 +370,7 @@ def build() -> dict[str, object]:
         if is_follow_up:
             row = SCOPED_SPECS[output]
             for key in ("comparison_policy", "generator_args", "json_format",
-                        "follow_up_source_commit", "auxiliary_inputs", "identity_policy", "category"):
+                        "follow_up_source_commit", "auxiliary_inputs", "identity_policy", "category", "source_fixtures"):
                 if key in row:
                     step[key] = row[key]
             step["source_dependency_hashes"] = {

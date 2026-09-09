@@ -1,0 +1,137 @@
+{
+  "boundary": {
+    "canonical_to_bulk_spatial_boundary": "[X omega_0+Xplus e^-_0+Xminus e^+_0]_ends",
+    "corners_null_boundaries_and_transmission_matched": false,
+    "remaining_GHY": "-integral_boundary sqrt|h1| epsilon X K2",
+    "spherical_IBP": "integral_boundary epsilon*n.dot(grad X)"
+  },
+  "bulk_action_density_without_measure": "-16*pi**2*A4*C_F*q_mag**2/X + 8*pi*A4 - R2*X/2 - grad_X_squared/(4*X) - V4*X/(2*A4)",
+  "canonical": {
+    "Hamiltonian": "-bar_q_i G_i",
+    "Liouville_measure": "Dq Dp Dchi Dpi_chi, with constraint multipliers and BRST ghosts",
+    "constraints": [
+      "X_x + Xminus*eplus - Xplus*emin",
+      "-(64*pi**3*A4**2*C_F**2*emin*eplus*q_mag**2 - 32*pi**2*A4**2*C_F*X*emin*eplus + A4**2*chi**2*emin*eplus*q_mag - 4*pi*A4*C_F*X*Xplus*emin*omega - 4*pi*A4*C_F*X*Xplus_x*emin - pi*A4*C_F*X*chi_x**2 + 2*pi*A4*C_F*X*chi_x*pi_chi - pi*A4*C_F*X*pi_chi**2 - 2*pi*A4*C_F*Xminus*Xplus*emin*eplus + 2*pi*C_F*V4*X**2*emin*eplus)/(4*pi*A4*C_F*X*emin)",
+      "(64*pi**3*A4**2*C_F**2*emin*eplus*q_mag**2 - 32*pi**2*A4**2*C_F*X*emin*eplus + A4**2*chi**2*emin*eplus*q_mag - 4*pi*A4*C_F*X*Xminus*eplus*omega + 4*pi*A4*C_F*X*Xminus_x*eplus - pi*A4*C_F*X*chi_x**2 - 2*pi*A4*C_F*X*chi_x*pi_chi - pi*A4*C_F*X*pi_chi**2 - 2*pi*A4*C_F*Xminus*Xplus*emin*eplus + 2*pi*C_F*V4*X**2*emin*eplus)/(4*pi*A4*C_F*X*eplus)"
+    ],
+    "formal_ghost_determinant": "(det partial_0)^2 det(partial_0+Xplus*U(X)); domains/zero modes must agree",
+    "geometry_momentum_equations": [
+      "Xplus",
+      "-chi_dot**2",
+      "-16*pi**2*A4*C_F*q_mag**2/X + 8*pi*A4 - A4*chi**2*q_mag/(4*pi*C_F*X) + Xminus*Xplus/(2*X) - V4*X/(2*A4)"
+    ],
+    "ghost_matrix": [
+      [
+        "partial_0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "partial_0",
+        "0"
+      ],
+      [
+        "-16*pi**2*A4*C_F*q_mag**2/X**2 - A4*chi**2*q_mag/(4*pi*C_F*X**2) + Xminus*Xplus/(2*X**2) + V4/(2*A4)",
+        "-Xminus/(2*X)",
+        "partial_0 - Xplus/(2*X)"
+      ]
+    ],
+    "local_gravity_configuration_degrees": 0,
+    "matter_measure": "standard covariant scalar measure contains sqrt(q3); its bosonization/UV matching and zero-mode prescription remain required",
+    "p": [
+      "X",
+      "Xplus",
+      "Xminus"
+    ],
+    "q": [
+      "omega",
+      "emin",
+      "eplus"
+    ],
+    "q3_equation": "partial_0 q3=U(X)*Xplus*q3; q3/q3_initial=sqrt(X_initial/X) with auxiliary generating sources set to zero, retaining the charge history",
+    "smeared_bracket": "{G_i[a],G_j[b]}=integral a*b*(partial Pmatter_ij/partial p_k)*G_k",
+    "temporal_gauge": "bar_q=(omega_0,e^-_0,e^+_0)=(0,1,0)"
+  },
+  "charge_potential": "A4*chi**2*q_mag/(4*pi*C_F*X)",
+  "comparison": {
+    "exact": "all symbolic identities, structures, strings and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "conventions": {
+    "GKV_sign": "physical bulk action is minus GKV (2.9); chapter-7 canonical component convention retained",
+    "X": "8*pi*A4*r\u00b2; area field, not a resolution compensator",
+    "coefficients": "full effective A4,V4,C_F kept symbolic; Dirac-only values not substituted",
+    "fourD_action": "sqrt|g4|[-A4 R_L - V4 - C_F F\u00b2]",
+    "q": "absolute magnetic flux for the displayed charged mode; extra neutral CFT sectors required when q>1",
+    "range": "X>0, A4>0, C_F>0; oriented canonical patch q3>0,q2<0 has spacelike slices; local two-derivative spherical action only",
+    "signature": "+---; R_E=-R_L"
+  },
+  "exact_residuals": {
+    "Casimir_Poisson_kernel": "0",
+    "Casimir_primitive": "0",
+    "Casimir_to_spherical_mass_function": "0",
+    "PG_coframe_nondegenerate": "0",
+    "PG_null_coframe_metric": "0",
+    "area_source_matches_Maxwell_pressure": "0",
+    "canonical_component_action_and_boundary": "0",
+    "charge_mass_same_coefficient": "0",
+    "coframe_measure_evolution": "0",
+    "coupled_constraint_12_closure": "0",
+    "coupled_constraint_12_derivative_delta": "0",
+    "coupled_constraint_13_closure": "0",
+    "coupled_constraint_13_derivative_delta": "0",
+    "coupled_constraint_23_closure": "0",
+    "coupled_constraint_23_derivative_delta": "0",
+    "finite_noncommuting_FP_factorization": "0",
+    "full_ghost_and_constraint_Jacobian": "0",
+    "geometric_Poisson_Jacobi": "0",
+    "known_vacuum_metric_normalization": "0",
+    "matter_Casimir_balance": "0",
+    "matter_Legendre_to_same_constraints": "0",
+    "same_GHY_radius_cancellation": "0",
+    "spherical_bulk_normalization": "0"
+  },
+  "input_hashes": {
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/gauge-source.json": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592"
+  },
+  "mass_and_domain": {
+    "Casimir": "-32*pi**2*A4*C_F*q_mag**2/sqrt(X) - 16*pi*A4*sqrt(X) + Xminus*Xplus/sqrt(X) + V4*X**(3/2)/(3*A4)",
+    "Casimir_to_geometric_mass": "-64*sqrt(2)*pi**(3/2)*A4**(3/2)*M_geom",
+    "Poisson_rank_at_Xplus_Xminus_zero": "2 if V(X)!=0; 0 only when V(X)=0; not every neck is a rank-drop point",
+    "area_as_field_valid_at_positive_radius_neck": true,
+    "canonical_time_is_automatically_parent_Killing_time": false,
+    "outgoing_power_balance": "dM_geom/dtau=-G*P_infinity under that parent normalization with the complete source and fixed magnetic/vacuum reference terms",
+    "parent_energy": "M_geom/G, G=1/(16*pi*A4), in the asymptotically flat parent limit with unit-normalized Killing time and the stated reference subtraction",
+    "radius_as_coordinate_valid_at_static_neck": false
+  },
+  "potentials": {
+    "U": "-1/(2*X)",
+    "V": "16*pi**2*A4*C_F*q_mag**2/X - 8*pi*A4 + V4*X/(2*A4)",
+    "mu_squared": "A4*q_mag/(2*pi*C_F*X)"
+  },
+  "schema": "NSC-SPHERICAL-ACTION-v1",
+  "scope": {
+    "GKV_auxiliary_torsion_is_the_5D_physical_three_form": false,
+    "full_5D_or_resolution_field_measure_derived": false,
+    "full_nonlocal_or_higher_curvature_action_quantized": false,
+    "global_gauge_state_or_source_boundary_selected": false,
+    "new_spherical_GR_or_quantization_theorem_claimed": false,
+    "pure_geometry_ghost_cancellation_removes_matter_measure": false,
+    "quantum_regulated_constraint_algebra_verified": false,
+    "self_sourced_geometry_or_physical_couplings_solved": false
+  },
+  "source_hashes": {
+    "docs/nsc-compact-matching.md": "563576eef2d7a7f0f5a6723f4b1d405c3a6ff9489312f62e4b0c9a69faaaf3f5",
+    "docs/nsc-spherical-action.md": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_spherical_action.py": "9ce56e0880cd4cd2223d263c3f72eddc3c85a744c241ece79abd80d52f3a36da",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_spherical_action.py": "66b11798bf42ca758eebdf7479b10d5dedb0094db0c8f4ef8d18bc2f2fe13512"
+  },
+  "status": "local spherical action and coupled canonical constraints matched to existing first-order gravity"
+}

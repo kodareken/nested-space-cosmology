@@ -1,0 +1,408 @@
+{
+  "comparison": {
+    "exact": "strings, keys, structures, source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "conventions": {
+    "functional": "Gamma5=1/2 Tr4 h(D4\u00b2); no additional 5D copy factor",
+    "isotropic_action_response": "(partial_log_a Gamma)/(4 Vol(S4)); not separately added matter on top of the same induced gravity",
+    "local_comparator": "exact canonical light determinant + matched local complement through a4, each included once",
+    "sphere": "S4 radius a; eigenvalues +/-m/a, m>=2; squared multiplicity 4*(m\u00b3-m)/3",
+    "units": "hbar=c=1; sphere/profile lengths in the stored development units; physical scales not fitted",
+    "variation": "partial_log_a at fixed Lambda,ell,warp,state prescription; simultaneous scale stationarity not inferred"
+  },
+  "decision": "use the full spectral source at child-scale curvature; do not accept the local-truncation stationary radius as a solution of the same determinant",
+  "direct_flat_S4_composition": {
+    "action_error": 9.50350909079134e-14,
+    "log_derivative_error": 3.4283687000424834e-13
+  },
+  "endpoint_comparisons": [
+    {
+      "full": {
+        "action": 5.952920687792985e-05,
+        "d_log_radius": 0.0012395998214788512,
+        "four_volume": 0.2962962962962962,
+        "isotropic_action_response": 0.001045912349372781,
+        "last_level": 8,
+        "radius": 0.32573500793527993,
+        "sphere_action_tail_bound": 6.326696800384454e-67,
+        "sphere_log_derivative_tail_bound": 1.9551064078818498e-64
+      },
+      "local_log_derivative_error": -0.1655133682484305,
+      "local_through_a4_plus_exact_light": {
+        "action": 0.006782365974159321,
+        "d_log_radius": -0.16427376842695166,
+        "light_action": 4.386510907107763e-18,
+        "light_d_log_radius": 3.392920946412843e-16
+      }
+    },
+    {
+      "full": {
+        "action": 0.006886072402402475,
+        "d_log_radius": 0.08432604841023376,
+        "four_volume": 0.9635474649175723,
+        "isotropic_action_response": 0.021879059278477664,
+        "last_level": 9,
+        "radius": 0.4374225407786197,
+        "sphere_action_tail_bound": 6.926779563838119e-47,
+        "sphere_log_derivative_tail_bound": 1.506503512348353e-44
+      },
+      "local_log_derivative_error": -0.08432604841026282,
+      "local_through_a4_plus_exact_light": {
+        "action": -0.026208845659690144,
+        "d_log_radius": -2.90607902287993e-14,
+        "light_action": 1.5249732374282624e-10,
+        "light_d_log_radius": 6.668175448780287e-09
+      }
+    },
+    {
+      "full": {
+        "action": 2.9719268734689703,
+        "d_log_radius": 14.803334388338214,
+        "four_volume": 26.318945069571622,
+        "isotropic_action_response": 0.14061481519497657,
+        "last_level": 18,
+        "radius": 1.0,
+        "sphere_action_tail_bound": 1.1532706163238765e-34,
+        "sphere_log_derivative_tail_bound": 1.9252044155476702e-32
+      },
+      "local_log_derivative_error": 0.035979120624228145,
+      "local_through_a4_plus_exact_light": {
+        "action": 2.958680938244394,
+        "d_log_radius": 14.839313508962443,
+        "light_action": 0.01531683296852578,
+        "light_d_log_radius": 0.15048322987676066
+      }
+    },
+    {
+      "full": {
+        "action": 67.45741835236014,
+        "d_log_radius": 284.8489969960012,
+        "four_volume": 421.10312111314596,
+        "isotropic_action_response": 0.16910881368145053,
+        "last_level": 34,
+        "radius": 2.0,
+        "sphere_action_tail_bound": 1.1644689862149738e-29,
+        "sphere_log_derivative_tail_bound": 1.7364701614513603e-27
+      },
+      "local_log_derivative_error": 0.005522423398303999,
+      "local_through_a4_plus_exact_light": {
+        "action": 67.45481832945477,
+        "d_log_radius": 284.8545194193995,
+        "light_action": 1.608367276683397,
+        "light_d_log_radius": 8.126710149099534
+      }
+    },
+    {
+      "full": {
+        "action": 1172.5509618595906,
+        "d_log_radius": 4754.593054990449,
+        "four_volume": 6737.649937810335,
+        "isotropic_action_response": 0.17641882180271157,
+        "last_level": 66,
+        "radius": 4.0,
+        "sphere_action_tail_bound": 1.2270324604829852e-26,
+        "sphere_log_derivative_tail_bound": 1.7251629278866734e-24
+      },
+      "local_log_derivative_error": 0.001261755791347241,
+      "local_through_a4_plus_exact_light": {
+        "action": 1172.5503394287,
+        "d_log_radius": 4754.59431674624,
+        "light_action": 37.69471000860699,
+        "light_d_log_radius": 160.12326920172478
+      }
+    }
+  ],
+  "exact_residuals": {
+    "signed_to_squared_spectrum_multiplicity": "0",
+    "stored_section_to_quasiglobal_0": "0",
+    "stored_section_to_quasiglobal_1": "0",
+    "stored_section_to_quasiglobal_2": "0",
+    "stored_section_to_quasiglobal_3": "0"
+  },
+  "first_compact_squared": 2.4966757502808674,
+  "geometry_scale_comparison": [
+    {
+      "geometry": {
+        "A": -1.7763568394002505e-15,
+        "R_L": -0.08154335856417333,
+        "Riemann_squared": 0.5303124770985003,
+        "curvature_scale_squared": 0.14864842149325874,
+        "largest_section_magnitude": 0.21679612456334074,
+        "radius": 2.147703093796876,
+        "rho": 1.9006916054701435,
+        "sections": [
+          -0.21679612456334074,
+          0.09820514246114871,
+          0.09820514246114863,
+          0.2167961245633406
+        ]
+      },
+      "largest_section_over_cutoff_squared": 0.054199031140835185,
+      "largest_section_over_first_compact_squared": 0.08683391286952337,
+      "largest_section_over_matching_squared": 0.21679612456334074,
+      "location": "horizon"
+    },
+    {
+      "geometry": {
+        "A": -3.7123889803846897,
+        "R_L": -26.274333882308138,
+        "Riemann_squared": 203.08109514325764,
+        "curvature_scale_squared": 2.908902249584151,
+        "largest_section_magnitude": 4.71238898038469,
+        "radius": 1.0,
+        "rho": 0.0,
+        "sections": [
+          -4.71238898038469,
+          0.0,
+          -3.7123889803846897,
+          1.0
+        ]
+      },
+      "largest_section_over_cutoff_squared": 1.1780972450961724,
+      "largest_section_over_first_compact_squared": 1.8874653546238682,
+      "largest_section_over_matching_squared": 4.71238898038469,
+      "location": "neck"
+    },
+    {
+      "geometry": {
+        "R_L": -113.09733552923255,
+        "Riemann_squared": 2131.834550635301,
+        "curvature_scale_squared": 9.42477796076938,
+        "largest_section_magnitude": 9.42477796076938
+      },
+      "largest_section_over_cutoff_squared": 2.356194490192345,
+      "largest_section_over_first_compact_squared": 3.7749307092477364,
+      "largest_section_over_matching_squared": 9.42477796076938,
+      "location": "child_limit"
+    }
+  ],
+  "input_hashes": {
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/curvature-eft.json": "21dea11100127a4f1f249fd1597b19539022658753ec6b9ad5b9c6384ca00bd8",
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+    "results/nsc-5-clock-horizon.json": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f"
+  },
+  "local_stationary_control": {
+    "a0_a2_radius_estimate": 0.43742254297170235,
+    "bracket": [
+      0.2,
+      0.8
+    ],
+    "full_log_derivative": 0.08432604841023376,
+    "is_full_stationary_solution": false,
+    "radius": 0.4374225407786197
+  },
+  "numerical_controls": [
+    {
+      "central_difference_steps": [
+        0.0012396004865157491,
+        0.0012395999877014008
+      ],
+      "compact_18_26_34": [
+        {
+          "action": 5.952920082163372e-05,
+          "d_log_radius": 0.0012395997059463225
+        },
+        {
+          "action": 5.9529205617246495e-05,
+          "d_log_radius": 0.0012395997973304238
+        },
+        {
+          "action": 5.952920687792985e-05,
+          "d_log_radius": 0.0012395998214788512
+        }
+      ],
+      "compact_last_difference": {
+        "action": 1.2606833572946854e-12,
+        "d_log_radius": 2.4148427398354433e-11
+      },
+      "extrapolated_log_derivative": 0.0012395998214299513,
+      "independent_derivative_error": -4.889990322387572e-14,
+      "quadrature_112_to_144": {
+        "action": 7.589415207398531e-19,
+        "d_log_radius": 1.6046192152785466e-17
+      },
+      "radius": 0.32573500793527993,
+      "sphere_extra_eight_levels": {
+        "action": 0.0,
+        "d_log_radius": 0.0
+      }
+    },
+    {
+      "central_difference_steps": [
+        0.08432606106167917,
+        0.08432605156533449
+      ],
+      "compact_18_26_34": [
+        {
+          "action": 0.006886071976452776,
+          "d_log_radius": 0.08432604387633479
+        },
+        {
+          "action": 0.006886072312118437,
+          "d_log_radius": 0.08432604744511918
+        },
+        {
+          "action": 0.006886072402402475,
+          "d_log_radius": 0.08432604841023376
+        }
+      ],
+      "compact_last_difference": {
+        "action": 9.028403805816376e-11,
+        "d_log_radius": 9.651145854716603e-10
+      },
+      "extrapolated_log_derivative": 0.08432604839988626,
+      "independent_derivative_error": -1.0347500634111384e-11,
+      "quadrature_112_to_144": {
+        "action": 1.7433970933566911e-16,
+        "d_log_radius": 2.2065682614424986e-15
+      },
+      "radius": 0.4374225407786197,
+      "sphere_extra_eight_levels": {
+        "action": 0.0,
+        "d_log_radius": 0.0
+      }
+    },
+    {
+      "central_difference_steps": [
+        14.803334862740769,
+        14.803334506594545
+      ],
+      "compact_18_26_34": [
+        {
+          "action": 2.971926790658688,
+          "d_log_radius": 14.80333400736739
+        },
+        {
+          "action": 2.971926855669362,
+          "d_log_radius": 14.803334306390473
+        },
+        {
+          "action": 2.9719268734689703,
+          "d_log_radius": 14.803334388338214
+        }
+      ],
+      "compact_last_difference": {
+        "action": 1.7799608453827886e-08,
+        "d_log_radius": 8.194774103742475e-08
+      },
+      "extrapolated_log_derivative": 14.803334387879138,
+      "independent_derivative_error": -4.5907633250408253e-10,
+      "quadrature_112_to_144": {
+        "action": -8.615330671091215e-14,
+        "d_log_radius": -3.481659405224491e-13
+      },
+      "radius": 1.0,
+      "sphere_extra_eight_levels": {
+        "action": 0.0,
+        "d_log_radius": 0.0
+      }
+    },
+    {
+      "central_difference_steps": [
+        4754.5931830859445,
+        4754.5930869091535
+      ],
+      "compact_18_26_34": [
+        {
+          "action": 1172.5509343820231,
+          "d_log_radius": 4754.592944203144
+        },
+        {
+          "action": 1172.550955945442,
+          "d_log_radius": 4754.593031144163
+        },
+        {
+          "action": 1172.5509618595906,
+          "d_log_radius": 4754.593054990449
+        }
+      ],
+      "compact_last_difference": {
+        "action": 5.9141486872249516e-06,
+        "d_log_radius": 2.384628533036448e-05
+      },
+      "extrapolated_log_derivative": 4754.593054850223,
+      "independent_derivative_error": -1.4022589311935008e-07,
+      "quadrature_112_to_144": {
+        "action": -7.048583938740194e-12,
+        "d_log_radius": -6.821210263296962e-11
+      },
+      "radius": 4.0,
+      "sphere_extra_eight_levels": {
+        "action": 0.0,
+        "d_log_radius": 0.0
+      }
+    }
+  ],
+  "primary_source": {
+    "equations": [
+      "3.51",
+      "3.52",
+      "3.54"
+    ],
+    "url": "https://arxiv.org/html/gr-qc/9505009v1",
+    "use": "published sphere spectrum and both-sign multiplicity, not a new spectrum derivation"
+  },
+  "reused_coefficients": {
+    "A_Dirac": 0.005502284451619701,
+    "C_Euler_Dirac": 0.00022170732364443278,
+    "C_R2_Dirac": 0.0,
+    "C_Weyl_Dirac": -0.0003627938023272536,
+    "C_boxR_Dirac": -0.00024186253488483575,
+    "C_gauge_Dirac": 0.004837250697696715,
+    "Q1_complement": 5.21331560061613,
+    "Q2_complement": 13.623280509622326,
+    "V_Dirac": 0.17254086329081558,
+    "d_nu_A": -0.0021108579925487037,
+    "d_nu_C_gauge": -0.004221715985097407,
+    "d_nu_V": -0.025330295910584444,
+    "light_singular_slope": 1.0118645687583168,
+    "massive_zero_argument_weight": 0.9171044126600252,
+    "matched_weight_at_zero": 2.291604037207683,
+    "matching_cutoff": 1.0,
+    "proper_length": 1.988239974113051,
+    "proper_ratio": 0.9941199870565255,
+    "zero_limit_tail_bound": 1.3490866930992642e-160
+  },
+  "reused_parameters": {
+    "Lambda": 2.0,
+    "amplitude": 0.017733990147783252,
+    "basis_modes": 34,
+    "basis_quadrature": 112,
+    "ell": 2.0,
+    "momentum_extent": 12.0,
+    "quadrature_tolerance": 1e-09,
+    "warp_path": 1.0
+  },
+  "schema": "NSC-SPECTRAL-ENDPOINT-v1",
+  "source_hashes": {
+    "docs/nsc-spectral-endpoint.md": "a55074de3f1fc2e625bb0259a5e2d53891969f9577882790254fdf4d9734ce8d",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_spectral_endpoint.py": "3e7097d2a3f0444ed852ca6d4cb20a7f4a832972a8b7b4a801e99bf20e0eaadd",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_spectral_endpoint.py": "6a582d0b6a3f2d7a6250b48c35b2bc512b9e033b7592d585d47f3c2f7cd3114d"
+  },
+  "state_and_scope": {
+    "all_curved_radii_no_stationarity_theorem": false,
+    "de_Sitter_invariant_state_selected_by_recursion": false,
+    "full_quantum_compensator_or_measure_derived": false,
+    "global_black_universe_continued_to_S4": false,
+    "magnetic_flux_sector_extended_to_S4": false,
+    "partial_metric_variation_may_be_omitted_in_joint_solve": false,
+    "self_sourced_geometry_or_cosmological_flux_derived": false
+  },
+  "status": "full compact-weight endpoint changes the local source decision",
+  "uncertainty": {
+    "compact": "18/26/34 Galerkin changes measured; no rigorous retained-eigenvalue error bound claimed",
+    "derivative": "generalized-eigenvalue variation versus differentiated total action, with two step sizes",
+    "local_expansion": "the horizon ratios alone do not prove all derivative, gauge, state or nonlocal remainder bounds",
+    "sphere_tails": "analytic continuum comparison bounds, evaluated in floating point"
+  }
+}

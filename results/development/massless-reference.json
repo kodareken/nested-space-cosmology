@@ -1,0 +1,291 @@
+{
+  "actual_tail_reference": {
+    "R_L": "-36*pi+18*pi*u\u00b2+O(u4)",
+    "Ricci_series": [
+      "6*pi*u**2 - 9*pi",
+      "-9*pi",
+      "6*pi*u**2 - 9*pi",
+      "6*pi*u**2 - 9*pi"
+    ],
+    "barred_Weyl_amplitude": "O(u), because C_orth[g]=r^-2 C_orth[g_bar]",
+    "barred_state_and_curvature_terms": "bounded at u=0, hence O(u4) after physical rescaling",
+    "conformal_Weyl_term": "r^-4 * bar(nabla nabla)(log(r)*bar(C)) = O(u3); it must not be discarded at finite u",
+    "finite_neck_or_full_NSC_source": false,
+    "limiting_density": 0.10312500000000002,
+    "mixed_order": "z,T,theta,phi",
+    "p_parallel_and_sphere": "-33/320+u\u00b2/32+O(u\u00b3)",
+    "physical_Weyl_amplitude": "6*u\u00b3+O(u4)",
+    "radial_null": "-u\u00b2/16+O(u\u00b3), for this massless reference and heat scheme",
+    "reference_mixed_series": [
+      "33/320 - u**2/32 + O(u\u00b3)",
+      "33/320 - 3*u**2/32 + O(u\u00b3)",
+      "33/320 - u**2/32 + O(u\u00b3)",
+      "33/320 - u**2/32 + O(u\u00b3)"
+    ],
+    "rho": "33/320-3*u\u00b2/32+O(u\u00b3)"
+  },
+  "comparison": {
+    "exact": "symbolic formulas, identities, keys, source/input hashes and scope",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "conversion_functional": {
+    "I_div": "[A0*nu^4/2+A2*nu\u00b2+A4*log(nu\u00b2/mu\u00b2)]/(32*pi\u00b2)",
+    "causal_conversion_on_actual_child_computed": false,
+    "definition": "C_nu,mu=Gamma_light,nu-Gamma_light,ren(mu)",
+    "general_metric_variation": "delta C=delta I_div-(1/2)int ds/s delta(K-K_asym); finite nonlocal remainder retained",
+    "heat_representation": "I_div(nu,mu)-(1/2)int_0^(nu^-2) ds/s [K_light(s)-(4*pi*s)^-2(A0+A2*s+A4*s\u00b2)]",
+    "partition": "Gamma5=Gamma_light,ren + [Gamma_H,nu+C_nu,mu]",
+    "spacetime_zero_modes_and_boundaries": "the representation needs the same prescribed IR and boundary treatment; S4 control has no Dirac zero mode"
+  },
+  "cutoff_removal_controls": [
+    {
+      "canonical_reference_density": 0.10312500000000002,
+      "conversion_density": 6.753786688302732,
+      "conversion_log_derivative": 8.00448792687731,
+      "finite_light_density": 6.8569116883027315,
+      "finite_light_log_derivative": 8.126710149099532,
+      "finite_remainder_density": 0.003786688302730072,
+      "finite_remainder_log_derivative": 0.004487926877309714,
+      "last_level": 22,
+      "matching_cutoff": 6.139960247678931,
+      "nu_times_radius": 2.0,
+      "power_density": 6.750000000000002,
+      "power_log_derivative": 8.0,
+      "renormalized_log_derivative": 0.12222222222222222,
+      "sphere_log_derivative_tail_bound": 3.670762141782789e-50
+    },
+    {
+      "canonical_reference_density": 0.10312500000000002,
+      "conversion_density": 135.00088338895526,
+      "conversion_log_derivative": 160.0010469795025,
+      "finite_light_density": 135.10400838895526,
+      "finite_light_log_derivative": 160.12326920172472,
+      "finite_remainder_density": 0.0008833889552363452,
+      "finite_remainder_log_derivative": 0.0010469795025023348,
+      "last_level": 42,
+      "matching_cutoff": 12.279920495357862,
+      "nu_times_radius": 4.0,
+      "power_density": 135.00000000000003,
+      "power_log_derivative": 160.0,
+      "renormalized_log_derivative": 0.12222222222222222,
+      "sphere_log_derivative_tail_bound": 2.497365432369372e-44
+    },
+    {
+      "canonical_reference_density": 0.10312500000000002,
+      "conversion_density": 2268.0002173644807,
+      "conversion_log_derivative": 2688.0002576171614,
+      "finite_light_density": 2268.1033423644803,
+      "finite_light_log_derivative": 2688.1224798393837,
+      "finite_remainder_density": 0.00021736447998535257,
+      "finite_remainder_log_derivative": 0.0002576171614641215,
+      "last_level": 82,
+      "matching_cutoff": 24.559840990715724,
+      "nu_times_radius": 8.0,
+      "power_density": 2268.0000000000005,
+      "power_log_derivative": 2688.0,
+      "renormalized_log_derivative": 0.12222222222222222,
+      "sphere_log_derivative_tail_bound": 6.819719993640003e-41
+    },
+    {
+      "canonical_reference_density": 0.10312500000000002,
+      "conversion_density": 36720.00005412967,
+      "conversion_log_derivative": 43520.00006415367,
+      "finite_light_density": 36720.10317912966,
+      "finite_light_log_derivative": 43520.12228637589,
+      "finite_remainder_density": 5.412965592768499e-05,
+      "finite_remainder_log_derivative": 6.415366628466368e-05,
+      "last_level": 162,
+      "matching_cutoff": 49.11968198143145,
+      "nu_times_radius": 16.0,
+      "power_density": 36720.00000000001,
+      "power_log_derivative": 43520.0,
+      "renormalized_log_derivative": 0.12222222222222222,
+      "sphere_log_derivative_tail_bound": 1.3596412553488845e-38
+    }
+  ],
+  "exact_residuals": {
+    "Dirac_Euler_to_reference_density": "0",
+    "actual_R_series": "0",
+    "actual_Weyl_amplitude_order": "0",
+    "actual_tail_trace_matches_inherited_heat_scheme": "0",
+    "actual_tail_work_through_u_squared": "0",
+    "finite_R2_variation_on_limiting_geometry": "0",
+    "imported_H3_on_limiting_geometry": "0",
+    "proper_time_divergent_primitive": "0",
+    "reference_mixed_T": "0",
+    "reference_mixed_phi": "0",
+    "reference_mixed_theta": "0",
+    "reference_mixed_z": "0",
+    "reference_radial_null_coefficient": "0",
+    "reference_trace_to_sphere_log_derivative": "0",
+    "same_functional_partition": "0",
+    "sphere_scale_and_heat_derivative": "0"
+  },
+  "imported_light_heat_constant": 0.12222222222222223,
+  "input_hashes": {
+    "results/development/child-state.json": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060",
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/spectral-endpoint.json": "6cdb46d5cab8e6de357ec437d3813c2a9381a6c6effbb2d14c55c23e4adef4bb",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "invariant_endpoint_budgets": [
+    {
+      "converted_complement_density": -0.10207908765062725,
+      "light": {
+        "canonical_reference_density": 0.10312500000000002,
+        "conversion_density": -0.10312500000000002,
+        "conversion_log_derivative": -0.12222222222222222,
+        "finite_light_density": 2.183930373671233e-65,
+        "finite_light_log_derivative": 2.5883619243510902e-65,
+        "finite_remainder_density": -0.08860000995873771,
+        "finite_remainder_log_derivative": -0.10500741921035578,
+        "last_level": 4,
+        "matching_cutoff": 0.5,
+        "nu_times_radius": 0.16286750396763996,
+        "power_density": -0.014524990041262306,
+        "power_log_derivative": -0.017214803011866432,
+        "renormalized_log_derivative": 0.12222222222222222,
+        "sphere_log_derivative_tail_bound": 3.1056826240540956e-263
+      },
+      "matched_total_density": 0.0010459123493727768,
+      "matching_residual": -4.119968255444917e-18,
+      "old_complement_density": 0.001045912349372781,
+      "unchanged_full_density": 0.001045912349372781,
+      "unmatched_replacement_density": 0.1041709123493728
+    },
+    {
+      "converted_complement_density": -0.10207908765062725,
+      "light": {
+        "canonical_reference_density": 0.10312500000000002,
+        "conversion_density": -0.10312499999999974,
+        "conversion_log_derivative": -0.12222222222222189,
+        "finite_light_density": 2.862777048535837e-16,
+        "finite_light_log_derivative": 3.392920946412843e-16,
+        "finite_remainder_density": -0.0497744703181851,
+        "finite_remainder_log_derivative": -0.058991964821552695,
+        "last_level": 6,
+        "matching_cutoff": 1.0,
+        "nu_times_radius": 0.32573500793527993,
+        "power_density": -0.05335052968181464,
+        "power_log_derivative": -0.06323025740066919,
+        "renormalized_log_derivative": 0.12222222222222222,
+        "sphere_log_derivative_tail_bound": 1.1338928555554712e-147
+      },
+      "matched_total_density": 0.0010459123493727768,
+      "matching_residual": -4.119968255444917e-18,
+      "old_complement_density": 0.0010459123493724947,
+      "unchanged_full_density": 0.001045912349372781,
+      "unmatched_replacement_density": 0.10417091234937252
+    },
+    {
+      "converted_complement_density": -0.10207908765062723,
+      "light": {
+        "canonical_reference_density": 0.10312500000000002,
+        "conversion_density": -0.10312497007878965,
+        "conversion_log_derivative": -0.12222218676004697,
+        "finite_light_density": 2.992121036642886e-08,
+        "finite_light_log_derivative": 3.5462175249100865e-08,
+        "finite_remainder_density": -0.010473303098771876,
+        "finite_remainder_log_derivative": -0.012412803672618516,
+        "last_level": 7,
+        "matching_cutoff": 1.4,
+        "nu_times_radius": 0.45602901110939187,
+        "power_density": -0.09265166698001778,
+        "power_log_derivative": -0.10980938308742845,
+        "renormalized_log_derivative": 0.12222222222222222,
+        "sphere_log_derivative_tail_bound": 3.2040739381819967e-102
+      },
+      "matched_total_density": 0.0010459123493727907,
+      "matching_residual": 9.75781955236954e-18,
+      "old_complement_density": 0.0010458824281624145,
+      "unchanged_full_density": 0.001045912349372781,
+      "unmatched_replacement_density": 0.10417088242816244
+    }
+  ],
+  "reference_specification": {
+    "construction": "smooth extension of g/r\u00b2 across u=0 to an auxiliary ultrastatic R_eta x R_z x S\u00b2 region; its ground covariance propagated back by the conformal Dirac operator, then psi=r^-3/2 psi_tilde",
+    "extension_probes": [
+      {
+        "W_extended": 9.42477796076938,
+        "u": -0.2,
+        "width": 0.1
+      },
+      {
+        "W_extended": 9.42477796076938,
+        "u": -0.1,
+        "width": 0.1
+      },
+      {
+        "W_extended": 9.42240023699681,
+        "u": -0.075,
+        "width": 0.1
+      },
+      {
+        "W_extended": 9.422533447187078,
+        "u": -0.05,
+        "width": 0.1
+      },
+      {
+        "W_extended": 9.42477796076938,
+        "u": 0.0,
+        "width": 0.1
+      },
+      {
+        "W_extended": 9.41290071616718,
+        "u": 0.1,
+        "width": 0.1
+      }
+    ],
+    "field": "one free massless four-component Dirac field; untwisted full angular spectrum, no link mass",
+    "finite_radius_absolute_stress_evaluated": false,
+    "ground_covariance": "C_out=1_(H_ultrastatic<0); omega_k,kappa\u00b2=k\u00b2/(3*pi)+kappa\u00b2, |kappa|>=1; no zero eigenvalue",
+    "parent_covariance_matched": false,
+    "parent_flux_compatibility_verified": false,
+    "time_direction": "physical future decreases u; in the constant region use conformal proper eta and extend that ultrastatic time freely",
+    "transport": "C_ref=U_barD C_out U_barD^dagger; all channels retained in the reference definition",
+    "width": 0.1,
+    "width_role": "auxiliary reference choice, not a derived physical parameter or a stress-fitting knob"
+  },
+  "renormalization": {
+    "anomaly_coefficients": {
+      "C2": "-1/20",
+      "Euler": "11/360",
+      "boxR": "-1/30"
+    },
+    "complete_physical_finite_coefficients_set_to_zero": false,
+    "finite_R2_scheme": "must be matched when converting a Hadamard implementation; the u\u00b2 coefficient below is in this heat scheme",
+    "normalization_mu": "held fixed and distinct from matching nu and physical Lambda",
+    "reference_scheme": "covariant proper-time subtraction matching the inherited heat coefficients; no extra dimensionful vacuum/Einstein term allocated to renormalized light",
+    "signature": "+---; physical density is T^T_T"
+  },
+  "required_next_source": {
+    "actual_neck_independent_metric_residuals": true,
+    "full_angular_covariance_on_actual_child": true,
+    "massive_compact_and_interaction_contributions": true,
+    "parent_reference_correlations_and_flux": true,
+    "spacetime_CTP_conversion_kernel": true
+  },
+  "schema": "NSC-MASSLESS-REFERENCE-v1",
+  "scope": {
+    "cosmological_Q_or_dark_fraction_derived": false,
+    "full_angular_finite_child_stress_computed": false,
+    "instantaneous_spatial_cutoff_substituted": false,
+    "negative_reference_null_stress_proves_full_self_sourcing": false,
+    "normalization_conversion_changes_Gamma5": false,
+    "retardation_rule_applied_without_state_hypotheses": false,
+    "source_budget_at_neck_closed": false,
+    "sphere_or_compact_generator_rerun": false
+  },
+  "source_hashes": {
+    "docs/nsc-massless-reference.md": "c15261ccf8eef389c4b328b8b8562b270aa329acb41f25b1300f371a921a50e6",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_massless_reference.py": "4e7a53ef151f84c607224fbef7b101ba07341f696a45acf154482571f844b2d1",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_massless_reference.py": "361662e89ac53261b9cea1c242b766fb521197dee9cbf076166771716b3ba0f1"
+  },
+  "status": "massless reference asymptotics and exact regulator-allocation map"
+}

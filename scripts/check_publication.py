@@ -261,7 +261,7 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
         if path.is_symlink():
             errors.append(f"symlink is not allowed in the public core: {path.relative_to(ROOT)}")
             continue
-        if path.suffix.lower() not in {".md", ".py", ".json", ".toml", ".txt", ".yml", ".yaml", ".cff", ""}:
+        if path.suffix.lower() not in {".md", ".py", ".cpp", ".json", ".toml", ".txt", ".yml", ".yaml", ".cff", ""}:
             continue
         try:
             text = path.read_text(encoding="utf-8")

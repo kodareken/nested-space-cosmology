@@ -136,7 +136,7 @@ def validate_checkout(manifest: dict[str, Any]) -> None:
                 raise ReproductionError(f"manifest {key} differs from release specification: {step['output']}")
         for key in ("generator", "generator_args", "json_format", "comparison_policy",
                     "identity_policy", "dependencies", "source_dependencies", "auxiliary_inputs",
-                    "follow_up_source_commit"):
+                    "follow_up_source_commit", "source_fixtures"):
             if step.get(key) != declared.get(key):
                 raise ReproductionError(f"manifest {key} differs from release specification: {step['output']}")
     for item in (spec["import_files"] + spec["retained_byte_identical_files"]
@@ -223,6 +223,19 @@ def prepare_workspace(path: Path, manifest: dict[str, Any]) -> Path:
             shutil.copy2(source, target)
     for relative in sorted(scripts):
         copy_relative(ROOT, work, relative)
+    fixtures: dict[str, dict] = {}
+    for step in manifest["steps"]:
+        for item in step.get("source_fixtures", []):
+            source_fixture_lookup(ROOT, step)
+            target = item["target"]
+            if target in fixtures and fixtures[target] != item:
+                raise ReproductionError(f"conflicting source fixtures: {target}")
+            fixtures[target] = item
+    for target, item in fixtures.items():
+        destination = work / target
+        if destination.exists():
+            raise ReproductionError(f"source fixture would overwrite a runtime input: {target}")
+        shutil.copy2(ROOT / item["path"], destination)
     (work / "results").mkdir(parents=True, exist_ok=True)
     return work
 
@@ -344,11 +357,34 @@ def auxiliary_lookup(work: Path, step: dict[str, Any] | None) -> dict[str, Path]
             for item in step.get("auxiliary_inputs", [])}
 
 
+def source_fixture_lookup(work: Path, step: dict[str, Any] | None) -> dict[str, Path]:
+    """Resolve the authenticated lab configuration without editing either project."""
+    result = {}
+    for item in (step or {}).get("source_fixtures", []):
+        path = Path(item["path"])
+        parts = path.parts
+        if (set(item) != {"path", "target", "sha256"} or item["target"] != "pyproject.toml"
+                or len(parts) != 5 or parts[:3] != ("tests", "fixtures", "source-checkpoints")
+                or len(parts[3]) != 40 or any(c not in "0123456789abcdef" for c in parts[3])
+                or parts[4] != "pyproject.toml" or item["target"] in result):
+            raise ReproductionError("invalid or duplicate laboratory source fixture")
+        fixture = work / path
+        if not fixture.is_file() or sha256(fixture) != item["sha256"]:
+            raise ReproductionError("laboratory source fixture hash mismatch")
+        if work != ROOT:
+            materialized = work / item["target"]
+            if not materialized.is_file() or sha256(materialized) != item["sha256"]:
+                raise ReproductionError("materialized laboratory configuration differs from its fixture")
+        result[item["target"]] = fixture
+    return result
+
+
 def validate_authenticated_inputs(
     work: Path, value: dict[str, Any], step: dict[str, Any] | None = None,
     *, use_auxiliary: bool = True,
 ) -> set[tuple]:
     lookup = auxiliary_lookup(work, step) if use_auxiliary else {}
+    lookup.update(source_fixture_lookup(work, step))
     auxiliary_paths = {str(item["path"]) for item in (step or {}).get("auxiliary_inputs", [])}
     generated = set((step or {}).get("dependencies", []))
     validated_dynamic: set[tuple] = set()
