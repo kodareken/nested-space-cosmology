@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 6131,
+      "bytes": 6883,
       "path": "AGENTS.md",
-      "sha256": "e929465e4bcac16b01c50d32b66ff39996ead45684662f63b22a9eda27d26e3e"
+      "sha256": "444f79449d77861f9db6584ec6d4314e76b56f69b544feb52f1c59b631dd908d"
     },
     {
       "bytes": 965,
@@ -51,9 +51,9 @@
       "sha256": "1e599cb6b5a94dbae5d85446377268b4270adbe2b98873c777bd02aa1a9a712d"
     },
     {
-      "bytes": 4438,
+      "bytes": 4998,
       "path": "CONTRIBUTING.md",
-      "sha256": "3531cdc73114baf85770cf19888f49d02c57415c324ccb7a14ee4de6c6ba0a29"
+      "sha256": "d9a7f61b5df02d4c7b6120297e988f19fdae419632c3d09c172a4536f73a98fb"
     },
     {
       "bytes": 1853,
