@@ -1,8 +1,17 @@
 # Current result: the connected operator and its physical closure
 
-Version 0.5.0 presents 88 records: 58 frozen historical records and 30 scoped follow-ups. The [paper](../paper/nested-space-cosmology.pdf) organizes the six research targets and the strongest evaluated connections together. The latest batch supplies a source-coefficient condition, the compact adjoint/boundary map, and a finite curved interaction with a conditional gauge-holonomy saddle.
+Version 0.6.0 presents 91 records: 58 frozen historical records and 33 scoped
+follow-ups. The [paper](../paper/nested-space-cosmology.pdf) presents the six
+targets and their supported connections. The new source batch adds the
+unwrapped horizon application, compact quantum warp and canonical
+light-field matching.
 
-**Current work cursor:** establish the physical transmitting geometry and fermion return path, then combine the evaluated interaction with the remaining curved bulk source, boundary cocycle, determinant phase and finite completion of the same action. The historical calculations below are reusable evidence, not a queue to replay.
+**Current work cursor:** specify the common functional beyond the computed
+free determinant, together with its causal state and transmitting interaction.
+The Dirac coefficient map is now a reusable input. The complete source still
+needs the remaining measure/compensator contribution and physical domain;
+equal-history normalization cannot fix its real finite terms. Do not restart
+raw coefficient scans or generic collapse calculations to answer that question.
 
 ## The strongest completed chain
 
@@ -14,6 +23,9 @@ interface or consequences of an identified change.
 
 | Connection | Reproducible result | Physical meaning and domain |
 |---|---|---|
+| Compact warp to quantum source | [Warped determinant](../results/development/warped-source.json) | A covariant finite-cutoff weight for D4; homogeneous source and variations in the declared domain |
+| One light field to linked coefficients | [Compact/light matching](../results/development/compact-matching.json) | Dirac vacuum, Einstein, gauge and a4 contributions; matching cutoff cancels with the retained field |
+| Horizon state to source and current | [Unwrapped source map](../results/development/horizon-source.json) | Conditional magnetic-sector flux; it does not support the original imposed neck alone |
 | Vacuum, gravity and gauge normalization | [Coefficient condition](../results/development/vacuum-charge-matching.json) | Retained positive-profile coefficients cannot alone supply the charged extremal seed |
 | Compact domain to geometric boundary action | [Adjoint/boundary map](../results/development/compact-boundary-action.json) | Determinant magnitude has the Einstein/GHY ratio2; the transmitting domain and full source remain open |
 | Curved operator to finite compact interaction | [Source and holonomy](../results/development/compact-casimir.json) | Effective 4D metric source; neck null sign changes with axial geometry and phase |
@@ -44,6 +56,30 @@ The [compact mass map](nsc-compact-mass-map.md) supplies the free mass operator 
 
 ## Latest computed physical structure
 
+The [horizon/source map](nsc-horizon-source.md) applies a declared free
+magnetic Dirac zero sector to the unwrapped benchmark. Its conditional
+Unruh power is 0.000376661306 per unit absolute flux in the recorded units.
+The sector has negative horizon null stress but the wrong sign to source
+the old imposed neck by itself. That power is not a derived cosmological
+density rate, and the periodic cell's flat Wilson line is not imported
+into an unwrapped radial patch.
+
+The [warped determinant](nsc-warped-source.md) evaluates a compact spectral
+weight h(D4²) with the actual covariant norm and complementary adjoint domain.
+At its homogeneous sphere development point, the potential changes from
+2.218882505 to 2.154980560. Independent variations and convergence checks
+bind the quantum source to the same operator without changing its classical
+compact masses.
+
+The [compact/light map](nsc-compact-matching.md) fixes the complement's finite
+vacuum, Einstein, gauge and a4 coefficients using its proper-length infrared
+limit and two spectral moments. At the specified matching cutoff1, the
+Dirac coefficients are V=0.1725408633, A=0.00550228445 and C_F=0.00483725070.
+Changing the matching cutoff cancels against the retained canonical light
+field. These are linked contributions, not the complete measured couplings.
+
+
+
 The [vacuum–gravity–gauge calculation](nsc-vacuum-charge-matching.md) ties the retained coefficients into Xi=lambda4 rQ². The positive proper-time bulk contribution gives Xi>=3 q_mag², while a positive-vacuum charged extremal seed requires Xi<=1/4. The controlled warp correction does not repair this. The complete functional contribution must determine the source; the vacuum term is not tuned away.
 
 The [compact boundary calculation](nsc-compact-boundary-action.md) identifies the complementary Euclidean adjoint domain behind the Lorentzian chiral boundary values. Applying the existing mixed heat coefficients fixes a1=0, the Einstein/GHY ratio2 and a geometric a3 contribution for the determinant magnitude. The Gaussian endpoints still have a nonzero metric momentum. Their source balance remains pi_parent+pi_child+delta Gamma_rest/delta h=0, with the already included geometric terms excluded from Gamma_rest.
@@ -70,15 +106,30 @@ The [covariant source](../results/nsc-9-covariant-source.json) evaluates the fou
 
 The [response-matching calculation](../results/nsc-11-response-matching.json) now joins the Euclidean radius Hessian and the vacuum retarded susceptibility on the smooth ultrastatic cell. Its P-minus-AP comparison cancels state-independent local terms, retains the nonzero coordinate contact, and checks spatial, angular, frequency and regulator limits independently. The refined methods differ by at most about1.5e-9 at the three tested frequencies and the same angular truncation. This relative control does not fix the absolute finite coefficients or establish the full finite-cutoff causal functional.
 
-The actual transmission domain and closed return path must determine where the calculated chiral/holonomy sector is physically admissible. The remaining decompactified curved bulk determinant is generally nonlocal in g4; it is not a scaleless flat-space term to discard. That source, the boundary cocycle, phase and finite completion must join the computed interaction in
+The new compact weight supplies the free Euclidean contribution
+\(\Gamma_{5,\Lambda}=\tfrac12\operatorname{Tr}_4 h_\Lambda(D_4^2)\).
+Its light-field split and source coefficients are computed. The remaining
+owner is \(\Gamma_{\rm completion}=\Gamma_{\rm one}-\Gamma_{5,\Lambda}\),
+with the corresponding causal state, correlations and transmitting domain.
+It must be supplied by the same functional, not by independently adjusted
+vacuum or gravitational weights.
+
+The completed source must satisfy
 
 $$
-\frac{\delta\Gamma_{\rm one}}{\delta g^{\mu\nu}}=0.
+\frac{\delta\Gamma_{\rm one}}{\delta g^{\mu\nu}}=0
 $$
 
-The calculation must retain every independent metric, field, boundary and relative-scale equation. The Einstein term already induced by the adopted construction is not added again with a new weight. The present source is that specified UV-subtracted determinant, not a scheme-independent completed stress.
+alongside every independent field, boundary and relative-scale equation.
+Retain the nonlocal spectral remainder when a local curvature expansion is
+not controlled. Moving the induced Einstein term to the geometric side
+requires removing that same contribution from the remaining source.
 
-For the prescribed smooth neck, anomaly matching alone leaves finite invariant action terms undetermined. The written flat common-scale average also diverges in the tested finite prescription. Equal-history normalization leaves real local phase terms unconstrained. A complete compensator, physical state and link are required to determine the source rather than fit it.
+The earlier normalization and influence calculations remain applicable:
+a flat common-scale average can diverge, and equal-history normalization
+leaves real local terms unconstrained. More raw Dirac integrations do not
+fix those separate measure/state choices. The exact remaining functional
+and its matching condition must be established before a self-sourcing solve.
 
 The actual boundary response must be transported into a common spin frame before identifying its scalar, pseudoscalar or other components. The scalar sheet benchmark supplies exact target identities, but the geometric radial potential preserves massless chirality in the paired angular continuum problem. No value of the current radial gap is labeled an electron mass.
 

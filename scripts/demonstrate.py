@@ -40,6 +40,15 @@ CASES = (
     ("results/development/compact-casimir.json", "scripts/check_nsc_compact_casimir.py",
      "Curved compact vacuum response and a gauge phase",
      "Finite endpoint interaction and conditional ultrastatic holonomy saddle; remaining bulk stress and physical return path are open."),
+    ("results/development/horizon-source.json", "scripts/check_nsc_horizon_source.py",
+     "A state-defined source at the unwrapped horizon",
+     "Free massless magnetic sector and prescribed Unruh boundary data; the global state and self-sourced geometry remain open."),
+    ("results/development/warped-source.json", "scripts/check_nsc_warped_source.py",
+     "The compact warp in the quantum source",
+     "Specified free Euclidean cutoff modulus; the full common functional and physical state remain open."),
+    ("results/development/compact-matching.json", "scripts/check_nsc_compact_matching.py",
+     "One light field and matched source coefficients",
+     "Dirac contributions in the declared scheme; matching cutoff is not a fitted physical scale or a complete measured coupling."),
 )
 
 
@@ -87,6 +96,18 @@ def headlines(relative: str, record: dict) -> list[str]:
         return [f"Finite-cell interaction null source: {source:.8g} (recorded g4 neck units).",
                 f"Effective AP minus P holonomy energy: {saddle['difference_from_periodic']:.8g}.",
                 "The interaction source changes sign with axial geometry; it is not the complete vacuum stress."]
+    if relative.endswith("horizon-source.json"):
+        source = record["benchmark_Unruh_per_abs_q"]
+        return [f"Conditional parent Killing power per unit absolute flux: {source['parent_Killing_power']:.9g}.",
+                "The free sector has negative horizon null stress but does not source the imposed neck by itself."]
+    if relative.endswith("warped-source.json"):
+        source = record["flux_cases"]["1"]
+        return [f"Unwarped potential: {source['flat_upper_comparison']:.9g}; warped potential: {source['response']['potential']:.9g}.",
+                "Both use the recorded R2-times-unit-sphere development point; classical compact masses remain unchanged."]
+    if relative.endswith("compact-matching.json"):
+        source = next(row for row in record["matched_coefficients"] if row["matching_cutoff"] == 1.)
+        return [f"Dirac coefficients at matching cutoff 1: V={source['V_Dirac']:.9g}, A={source['A_Dirac']:.9g}, C_F={source['C_gauge_Dirac']:.9g}.",
+                "Changing the matching cutoff cancels between the retained light field and its complement."]
     raise ValueError(f"No demonstration summary for {relative}")
 
 

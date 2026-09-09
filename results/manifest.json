@@ -9,11 +9,11 @@
   "measured_reference_runtime_seconds": 246.73,
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "release_source_commit": "6eeff9bfab26a18fcd029a59ec908643b63386b5",
+  "release_source_commit": "eea43512f63e61d8d7686261a683bc36e99efa19",
   "release_spec": "results/release-spec.json",
-  "release_spec_sha256": "faa26a29309d49f4e71af5f88b0060e54332402ba401dda70f8f7bf24c793482",
-  "release_version": "0.5.0",
-  "result_count": 88,
+  "release_spec_sha256": "8f47bc8f7d736accce4b587353feb19595af64240b4454263c93e03186b16517",
+  "release_version": "0.6.0",
+  "result_count": 91,
   "schema": "NSC-PUBLIC-RESULT-MANIFEST-v1",
   "scoped_follow_up_outputs": [
     "results/nsc-2-zeta1-unit-closure-check.json",
@@ -45,7 +45,10 @@
     "results/development/charged-sector.json",
     "results/development/vacuum-charge-matching.json",
     "results/development/compact-boundary-action.json",
-    "results/development/compact-casimir.json"
+    "results/development/compact-casimir.json",
+    "results/development/horizon-source.json",
+    "results/development/warped-source.json",
+    "results/development/compact-matching.json"
   ],
   "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
   "steps": [
@@ -2707,6 +2710,161 @@
         "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
         "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
         "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5"
+      }
+    },
+    {
+      "artifact_id": "NSC-19-HORIZON-SOURCE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-13,
+        "kind": "all_fields",
+        "relative_tolerance": 3e-13
+      },
+      "dependencies": [
+        "results/development/charged-sector.json",
+        "results/development/compact-casimir.json",
+        "results/nsc-5-clock-horizon.json"
+      ],
+      "follow_up_source_commit": "eea43512f63e61d8d7686261a683bc36e99efa19",
+      "generator": "scripts/check_nsc_horizon_source.py",
+      "generator_args": [
+        "--output",
+        "results/development/horizon-source.json"
+      ],
+      "generator_sha256": "35bd9b54620df7c9dd776fe5757f4169147dee85d5b633a7c66e4e8c5aadf974",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "schema_status",
+        "schema": "NSC-HORIZON-SOURCE-v1",
+        "status": "domain/state match and conditional magnetic Dirac source; full closure open"
+      },
+      "json_format": "pretty",
+      "order": 89,
+      "output": "results/development/horizon-source.json",
+      "output_sha256": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+      "paper_claim_ids": [
+        "derived-horizon-source"
+      ],
+      "source_dependencies": [
+        "docs/nsc-horizon-source.md",
+        "docs/nsc-lorentzian-transport.md",
+        "scripts/check_nsc_compact_boundary_action.py",
+        "scripts/check_nsc_vacuum_charge_matching.py",
+        "src/recursive_horizons/nsc_horizon_source.py",
+        "src/recursive_horizons/nsc_lorentzian.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-horizon-source.md": "f77031e2ee09109e27cc351bf4a6b87027b758e98e4b9243062575aa538bdf28",
+        "docs/nsc-lorentzian-transport.md": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c",
+        "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+        "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+        "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+        "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+      }
+    },
+    {
+      "artifact_id": "NSC-20-WARPED-SOURCE",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-09,
+        "kind": "all_fields",
+        "relative_tolerance": 3e-08
+      },
+      "dependencies": [
+        "results/development/compact-boundary-action.json",
+        "results/development/horizon-source.json",
+        "results/development/vacuum-charge-matching.json"
+      ],
+      "follow_up_source_commit": "eea43512f63e61d8d7686261a683bc36e99efa19",
+      "generator": "scripts/check_nsc_warped_source.py",
+      "generator_args": [
+        "--output",
+        "results/development/warped-source.json"
+      ],
+      "generator_sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "schema_status",
+        "schema": "NSC-WARPED-SOURCE-v1",
+        "status": "finite-cutoff two-copy Dirac modulus matched to the Gaussian compact warp"
+      },
+      "json_format": "pretty",
+      "order": 90,
+      "output": "results/development/warped-source.json",
+      "output_sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac",
+      "paper_claim_ids": [
+        "derived-warped-source"
+      ],
+      "source_dependencies": [
+        "docs/nsc-compact-mass-map.md",
+        "docs/nsc-warped-source.md",
+        "scripts/check_nsc_compact_boundary_action.py",
+        "scripts/check_nsc_compact_casimir.py",
+        "scripts/check_nsc_vacuum_charge_matching.py",
+        "src/recursive_horizons/nsc_warped_source.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-compact-mass-map.md": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073",
+        "docs/nsc-warped-source.md": "5e5ac433c2af3bc6f6a6433d9f50dfaa2c06b6c012a018a19bfd21f31e3c12dc",
+        "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+        "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+        "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+        "src/recursive_horizons/nsc_warped_source.py": "97730058a09ddfc77a8ad59b97f7a85f8879082b646ca6c2aa2605e5b5e7250b"
+      }
+    },
+    {
+      "artifact_id": "NSC-21-COMPACT-MATCHING",
+      "category": "repository_derived_numerical_result",
+      "comparison_policy": {
+        "absolute_tolerance": 3e-09,
+        "kind": "all_fields",
+        "relative_tolerance": 3e-08
+      },
+      "dependencies": [
+        "results/development/warped-source.json",
+        "results/nsc-10-influence.json",
+        "results/nsc-10-measure-normalization.json",
+        "results/nsc-9-covariant-source.json"
+      ],
+      "follow_up_source_commit": "eea43512f63e61d8d7686261a683bc36e99efa19",
+      "generator": "scripts/check_nsc_compact_matching.py",
+      "generator_args": [
+        "--output",
+        "results/development/compact-matching.json"
+      ],
+      "generator_sha256": "742e49f7fe6aafc306c0b68dc4af85f975d0fc4b2253c584203b27d291f92bbc",
+      "headline_observables": [],
+      "identity_policy": {
+        "kind": "schema_status",
+        "schema": "NSC-COMPACT-MATCHING-v1",
+        "status": "finite Dirac coefficients matched to one retained canonical 4D field"
+      },
+      "json_format": "pretty",
+      "order": 91,
+      "output": "results/development/compact-matching.json",
+      "output_sha256": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+      "paper_claim_ids": [
+        "derived-compact-matching"
+      ],
+      "source_dependencies": [
+        "docs/nsc-compact-matching.md",
+        "docs/nsc-covariant-source.md",
+        "scripts/check_nsc_compact_boundary_action.py",
+        "scripts/check_nsc_compact_casimir.py",
+        "scripts/check_nsc_vacuum_charge_matching.py",
+        "src/recursive_horizons/nsc_compact_matching.py",
+        "src/recursive_horizons/nsc_finite_terms.py",
+        "src/recursive_horizons/nsc_warped_source.py"
+      ],
+      "source_dependency_hashes": {
+        "docs/nsc-compact-matching.md": "563576eef2d7a7f0f5a6723f4b1d405c3a6ff9489312f62e4b0c9a69faaaf3f5",
+        "docs/nsc-covariant-source.md": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6",
+        "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+        "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+        "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+        "src/recursive_horizons/nsc_compact_matching.py": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378",
+        "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+        "src/recursive_horizons/nsc_warped_source.py": "97730058a09ddfc77a8ad59b97f7a85f8879082b646ca6c2aa2605e5b5e7250b"
       }
     }
   ]

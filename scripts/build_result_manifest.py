@@ -147,6 +147,9 @@ PAPER_CLAIMS = {
         "curved-compact-source",
         "conditional-holonomy-saddle",
     ],
+    "NSC-19-HORIZON-SOURCE": ["derived-horizon-source"],
+    "NSC-20-WARPED-SOURCE": ["derived-warped-source"],
+    "NSC-21-COMPACT-MATCHING": ["derived-compact-matching"],
 }
 
 OUTPUT_RE = re.compile(r"OUTPUT\s*=\s*ROOT\s*/\s*[\"']([^\"']+)[\"']")

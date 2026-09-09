@@ -1,6 +1,6 @@
 # Reproducing the compact results
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and seven nested development records 82–88. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and ten nested development records 82–91. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
 The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -13,15 +13,17 @@ The nested records live under `results/development/`:
 [compact boundary action](nsc-compact-boundary-action.md), and
 [curved compact source](nsc-compact-casimir.md).
 Records 82–85 remain the v0.4.0 nested set. Records 86–88 are the v0.5.0
-follow-ups. Their JSON still lacks `artifact_id`; manifest identities are
+follow-ups. Records 89–91 add the [horizon source](nsc-horizon-source.md),
+[warped quantum source](nsc-warped-source.md), and
+[compact/light matching](nsc-compact-matching.md) in v0.6.0. Their JSON still lacks `artifact_id`; manifest identities are
 assigned outside those files. Internal status strings that mention v0.3.0
 remain historically true. The compact-mass check is an explanatory application
-note, not an eighth record. The later generators recursively authenticate
+note, not a separate record. The later generators recursively authenticate
 input records; isolated reproduction retains those raw dependency files and
 normalizes only result input digests after authentication. Run
-`make reproduce-development` to recompute the seven nested records with
+`make reproduce-development` to recompute the ten nested records with
 their recorded all-field policies. `make reproduce` and `make verify` cover
-the complete 88-record graph; `make reproduce-exact` requires byte identity.
+the complete 91-record graph; `make reproduce-exact` requires byte identity.
 
 ## Requirements
 
@@ -61,7 +63,7 @@ make verify
 
 - `make check` validates manifests, claims, paths, and links.
 - `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–88 by comparing every recorded field. Nested development paths are copied and compared explicitly.
+- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–91 by comparing every recorded field. Nested development paths are copied and compared explicitly.
 - `make reproduce-exact` requires byte-identical recomputation.
 - `make paper` rebuilds the tracked paper PDF.
 - `make verify` runs check, test, reproduce, and the paper byte check.

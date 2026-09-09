@@ -1,4 +1,4 @@
-"""Focused importer and nested-path checks for the v0.5.0 development records."""
+"""Focused importer and nested-path checks for the v0.6.0 development records."""
 from __future__ import annotations
 
 import hashlib
@@ -10,7 +10,22 @@ from test_publication import ROOT, load_script
 
 V040_SOURCE = "95b96be312feb667377cdbc3bbfe453697a458dd"
 V050_SOURCE = "6eeff9bfab26a18fcd029a59ec908643b63386b5"
+V060_SOURCE = "eea43512f63e61d8d7686261a683bc36e99efa19"
 NEW_IMPORTS = (
+    "docs/nsc-compact-matching.md",
+    "docs/nsc-horizon-source.md",
+    "docs/nsc-warped-source.md",
+    "results/development/compact-matching.json",
+    "results/development/horizon-source.json",
+    "results/development/warped-source.json",
+    "scripts/check_nsc_compact_matching.py",
+    "scripts/check_nsc_horizon_source.py",
+    "scripts/check_nsc_warped_source.py",
+    "src/recursive_horizons/nsc_compact_matching.py",
+    "src/recursive_horizons/nsc_horizon_source.py",
+    "src/recursive_horizons/nsc_warped_source.py",
+)
+V050_IMPORTS = (
     "docs/nsc-compact-boundary-action.md",
     "docs/nsc-compact-casimir.md",
     "docs/nsc-vacuum-charge-matching.md",
@@ -21,6 +36,16 @@ NEW_IMPORTS = (
     "scripts/check_nsc_compact_casimir.py",
     "scripts/check_nsc_vacuum_charge_matching.py",
     "src/recursive_horizons/nsc_compact_casimir.py",
+)
+V060_OUTPUTS = (
+    "results/development/horizon-source.json",
+    "results/development/warped-source.json",
+    "results/development/compact-matching.json",
+)
+V050_OUTPUTS = (
+    "results/development/vacuum-charge-matching.json",
+    "results/development/compact-boundary-action.json",
+    "results/development/compact-casimir.json",
 )
 
 
@@ -39,21 +64,33 @@ class ReleaseImportTests(unittest.TestCase):
             "results/development/vacuum-charge-matching.json",
             "results/development/compact-boundary-action.json",
             "results/development/compact-casimir.json",
+            "results/development/horizon-source.json",
+            "results/development/warped-source.json",
+            "results/development/compact-matching.json",
         ):
             self.assertEqual(relative, self.importer.safe_relative(relative))
 
-    def test_v050_import_files_match_lab_pin_and_local_bytes(self):
-        self.assertEqual("0.5.0", self.release["release_version"])
-        self.assertEqual(V050_SOURCE, self.release["source_commit"])
+    def test_v060_import_files_match_lab_pin_and_local_bytes(self):
+        self.assertEqual("0.6.0", self.release["release_version"])
+        self.assertEqual(V060_SOURCE, self.release["source_commit"])
         self.assertEqual(
             "d8f89545c1476c4b5cc862ee2e4271eb89d244a7",
             self.release["checkpoint_source_commit"],
         )
-        self.assertEqual(10, len(self.release["import_files"]))
+        self.assertEqual(12, len(self.release["import_files"]))
+        self.assertEqual(10, len(self.release["preserved_88_scientific_files"]))
         self.assertEqual(17, len(self.release["preserved_85_scientific_files"]))
         self.assertEqual(83, len(self.release["preserved_81_scientific_files"]))
         self.assertEqual({entry["path"] for entry in self.release["import_files"]}, set(NEW_IMPORTS))
-        for entry in self.release["import_files"] + self.release["preserved_85_scientific_files"]:
+        self.assertEqual(
+            {entry["path"] for entry in self.release["preserved_88_scientific_files"]},
+            set(V050_IMPORTS),
+        )
+        for entry in (
+            self.release["import_files"]
+            + self.release["preserved_88_scientific_files"]
+            + self.release["preserved_85_scientific_files"]
+        ):
             path = ROOT / entry["path"]
             self.assertTrue(path.is_file(), entry["path"])
             self.assertEqual(
@@ -61,6 +98,13 @@ class ReleaseImportTests(unittest.TestCase):
                 hashlib.sha256(path.read_bytes()).hexdigest(),
                 entry["path"],
             )
+
+    def test_v050_nested_records_are_preserved_not_reimported(self):
+        preserved = {entry["path"] for entry in self.release["preserved_88_scientific_files"]}
+        imported = {entry["path"] for entry in self.release["import_files"]}
+        for relative in V050_OUTPUTS:
+            self.assertIn(relative, preserved)
+            self.assertNotIn(relative, imported)
 
     def test_v040_nested_records_are_preserved_not_reimported(self):
         preserved = {entry["path"] for entry in self.release["preserved_85_scientific_files"]}
@@ -87,11 +131,7 @@ class ReleaseImportTests(unittest.TestCase):
         current = {step["output"]: step for step in json.loads(
             (ROOT / "results/manifest.json").read_text()
         )["steps"]}
-        self.assertEqual(set(previous), set(current) - {
-            "results/development/vacuum-charge-matching.json",
-            "results/development/compact-boundary-action.json",
-            "results/development/compact-casimir.json",
-        })
+        self.assertEqual(set(previous), set(current) - set(V050_OUTPUTS + V060_OUTPUTS))
         for output, step in previous.items():
             now = current[output]
             self.assertEqual(step["output_sha256"], now["output_sha256"], output)
@@ -99,7 +139,25 @@ class ReleaseImportTests(unittest.TestCase):
             self.assertEqual(step["comparison_policy"], now["comparison_policy"], output)
             self.assertEqual(step.get("source_dependency_hashes"), now.get("source_dependency_hashes"), output)
 
-    def test_new_record_dependency_closure_has_forty_one_existing_paths(self):
+    def test_v050_scientific_bytes_match_tagged_snapshot(self):
+        original = json.loads(
+            subprocess.check_output(
+                ["git", "show", "v0.5.0:results/manifest.json"],
+                cwd=ROOT,
+            )
+        )
+        self.assertEqual(88, original["result_count"])
+        self.assertEqual(V050_SOURCE, original["release_source_commit"])
+        previous = {step["output"]: step for step in original["steps"]}
+        current = {step["output"]: step for step in json.loads(
+            (ROOT / "results/manifest.json").read_text()
+        )["steps"]}
+        self.assertEqual(set(previous), set(current) - set(V060_OUTPUTS))
+        for output, step in previous.items():
+            now = current[output]
+            self.assertEqual(step, now, output)
+
+    def test_new_record_dependency_closure_has_seventy_two_existing_paths(self):
         seen = set()
         files = set()
 
@@ -115,13 +173,10 @@ class ReleaseImportTests(unittest.TestCase):
                     if relative.endswith(".json") and relative.startswith("results/"):
                         walk(relative)
 
-        for path in (
-            "results/development/vacuum-charge-matching.json",
-            "results/development/compact-boundary-action.json",
-            "results/development/compact-casimir.json",
-        ):
+        for path in V060_OUTPUTS:
             walk(path)
-        self.assertEqual(41, len(files))
+        self.assertEqual(72, len(files))
+        self.assertEqual(12, len({path for path in files if path in NEW_IMPORTS}))
         for relative in sorted(files):
             path = ROOT / relative
             self.assertTrue(path.is_file(), relative)
