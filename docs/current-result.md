@@ -6,11 +6,13 @@ that acts on its geometry.** This page follows those connections in order.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `87971de`, now contains eleven post-preprint records.
+through laboratory commit `984a7a6`, now contains twelve post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
-identify the undetermined absolute $V_{\rm full}$ as the first remaining
-common-action input.
+apply the recursive zero-tadpole law that fixes the homogeneous unlinked
+$V_{\rm full}=0$. The local MMP vacuum condition now passes with $A$ and $C$
+unchanged. Their complete normalization and the physical closed magnetic
+return state are the next embedding conditions.
 
 ## 1. Shared mass and visible response
 
@@ -154,8 +156,8 @@ Once supplied, the same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains eleven.
-[The development index](development-update-2026-09-10.md) links all eleven
+[the later snapshot](../results/development-snapshot.json) contains twelve.
+[The development index](development-update-2026-09-10.md) links all twelve
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

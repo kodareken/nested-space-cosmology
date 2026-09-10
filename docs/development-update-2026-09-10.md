@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`87971de117713933f2714267b22072644e5e8d81`. It contains fifteen derivation
-notes, eleven compact result records, ten generators, seven implementation
-modules and three focused tests. The 47 scientific files are imported
+`984a7a68e559fffc367d2884ac60f23fd490beba`. It contains sixteen derivation
+notes, twelve compact result records, eleven generators, eight implementation
+modules and four focused tests. The 52 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -40,6 +40,7 @@ statement:
 | Charged field, state and coefficient dictionary into the imported MMP throat | [NSC–MMP embedding](nsc-mmp-embedding.md) |
 | Canonical Lorentzian evolution plus one-counted induced source terms | [Causal common functional](nsc-causal-common-functional.md) |
 | Identification and quantitative bound for the unresolved absolute vacuum coefficient | [MMP vacuum owner](nsc-mmp-vacuum-owner.md) |
+| Recursive zero-tadpole law fixing the homogeneous unlinked vacuum source | [Relational vacuum normalization](nsc-relational-vacuum-normalization.md) |
 
 The known channel has outward power
 \(P_0=0.00014222067954246644\) in the recorded throat units.
@@ -53,9 +54,12 @@ Canonical CTP now owns causal response. Its finite interface returns all four
 metric forces, stress, power, retarded response, noise and Ward residuals.
 The embedding gate passes the field, parity, AP-state and normalization maps.
 The retained partial coefficients fail the charged seed condition, and the
-owner audit finds no existing same-action term that determines the required
-absolute $V_{\rm full}$. No coefficient, incoming flux or mass history was
-fitted; recursive stationarity remains downstream of that definition.
+owner audit finds no existing contribution that determines the required
+absolute $V_{\rm full}$. The subsequent recursive law projects only the local
+$a_0$ tadpole and gives $V_{\rm full}=\lambda_4=\Xi=0$ while preserving
+$A,C$ and finite topology response. No coefficient, incoming flux or mass
+history is fitted. The physical return state and complete $A,C$ normalization
+are the next embedding conditions.
 
 ## Provenance and inspection
 
@@ -63,7 +67,7 @@ fitted; recursive stationarity remains downstream of that definition.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the eleven later records are indexed separately.
+unchanged; the twelve later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
