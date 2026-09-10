@@ -1,0 +1,120 @@
+{
+  "MMP_vacuum_gate": {
+    "Einstein_coefficient_unchanged": true,
+    "asymptotically_flat_bulk_vacuum_passes": true,
+    "charge_radius_unchanged": true,
+    "charged_seed_bound_passes": true,
+    "gauge_coefficient_unchanged": true,
+    "normalized": {
+      "G_N": 3.6156560173167045,
+      "Xi": 0.0,
+      "Xi_per_q_squared": 0.0,
+      "ell_MMP": 0.4559594548369584,
+      "g_squared": 51.68225002666059,
+      "lambda_4": 0.0,
+      "r_e_squared": 0.2197837434718946
+    },
+    "raw": {
+      "G_N": 3.6156560173167045,
+      "Xi": 3.4459938566757384,
+      "Xi_per_q_squared": 3.4459938566757384,
+      "ell_MMP": 0.4559594548369584,
+      "g_squared": 51.68225002666059,
+      "lambda_4": 15.67902066931717,
+      "r_e_squared": 0.2197837434718946
+    },
+    "throat_length_unchanged": true,
+    "vacuum_seed_Xi": 0.0
+  },
+  "classification": {
+    "compact_modulus_rule": "project only the local a0 density at fixed internal spectral data; retain the topology-dependent finite Casimir/link remainder",
+    "consequence": "local a0 cannot select the inheritance scale; boundary, gradient and nonlocal terms must do so",
+    "finite_cosmological_counterterm_fitted": false,
+    "kind": "NSC recursive normalization law",
+    "observational_value_used": false,
+    "physical_statement": "homogeneous unlinked vacuum defines zero relational gravitational source",
+    "raw_spectral_a0_claimed_zero": false
+  },
+  "coefficient_result": {
+    "independent_coefficient_added": false,
+    "normalized": {
+      "einstein": 0.005502284451619701,
+      "gauge": 0.004837250697696715,
+      "vacuum": 0.0
+    },
+    "raw": {
+      "einstein": 0.005502284451619701,
+      "gauge": 0.004837250697696715,
+      "vacuum": 0.17254086329081558
+    },
+    "reference": "unlinked homogeneous room in inherited dimensionless units"
+  },
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-12
+  },
+  "exact_identities": {
+    "Einstein_basis_preserved": 0.0,
+    "MMP_action_normalization": "G_N=1/(16*pi*A), g^2=1/(4*C)",
+    "P0_idempotence": 0.0,
+    "direct_sum_additivity_residual": 1.1102230246251565e-16,
+    "equal_history_CTP_counterterm": 0.0,
+    "expected_trace": 2.0,
+    "gauge_basis_preserved": 0.0,
+    "normalization_idempotence": 0.0,
+    "pi_control": 3.141592653589793,
+    "scale_covariance_defects": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "trace": 2.0,
+    "zero_derivative_annihilated": 0.0
+  },
+  "gate": {
+    "A_and_C_preserved": true,
+    "Casimir_link_and_curvature_terms_projected_out": false,
+    "V_full": 0.0,
+    "V_full_determined": true,
+    "asymptotically_flat_MMP_vacuum_condition_passes": true,
+    "canonical_CTP_owner_preserved": true,
+    "charged_seed_vacuum_condition_passes": true,
+    "full_physical_MMP_embedding_complete": false
+  },
+  "independent_audit": {
+    "a0_only_subtraction_preserves_A_and_C": true,
+    "connected_minus_disconnected_would_cancel_all_local_Seeley_terms": true,
+    "finite_topology_remainder_retained": true
+  },
+  "input_hashes": {
+    "results/development/causal-common-functional.json": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03",
+    "results/development/mmp-embedding.json": "f4032d09ea4d7b76f6d02475fde29eb38dd239635e9e812518bc425726d477d0",
+    "results/development/mmp-vacuum-owner.json": "2a0999ff12a8ed349096c554eb79a54537ef02afffaa9b23efaee4a1c779eb60"
+  },
+  "law": {
+    "CTP_term": "-V_full*(Vol_plus-Vol_minus), coefficient taken from the same complete action",
+    "applied_after_complete_same_action_assembly": true,
+    "coefficient_action": "(V,A,C) maps to (0,A,C)",
+    "condition": "delta_g Gamma_rel=0 on every unlinked homogeneous room in inherited dimensionless units",
+    "independent_coefficient_added": false,
+    "normalized_action": "Gamma_rel=(I-P0) Gamma_one",
+    "projector": "P0 Gamma = homogeneous local zero-derivative metric tadpole"
+  },
+  "next_embedding_conditions": [
+    "fix or declare the complete induced A_full and C_full normalization",
+    "establish the physical closed magnetic return domain and covariance",
+    "retain a massless lowest-Landau sector or compute the massive Casimir replacement"
+  ],
+  "old_scientific_generators_rerun": false,
+  "schema": "NSC-RELATIONAL-VACUUM-NORMALIZATION-v1",
+  "source_hashes": {
+    "docs/nsc-relational-vacuum-normalization.md": "3ebc492c443f6db8a4f4f63789368de3c5d3e5c643829b43c2a5a06f03f489cf",
+    "scripts/derive_nsc_relational_vacuum.py": "6b19bb3f5f4bfc372cd01f61d2fa00def36fa1f13c61610100063fb783061e8e",
+    "src/recursive_horizons/nsc_relational_vacuum.py": "af5662b36bb15b04402bde77ac43b1bedb11e5e248a5e360924e170365dec2d0"
+  },
+  "status": "recursive zero-tadpole normalization fixes the gravitating homogeneous V_full to zero while retaining gradient and boundary response",
+  "untracked_normalization_or_Weyl_files_read_or_modified": false
+}

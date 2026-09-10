@@ -38,7 +38,7 @@
     {
       "bytes": 8115,
       "path": "AGENTS.md",
-      "sha256": "56bbb3d6b6c629fa207553d96b26f478c4821346cdfd542037b584fc77c07158"
+      "sha256": "4bcb60907bd20474cc957b37ddd9111efe15084978c5fe4d1f07ed6a4e9deaa1"
     },
     {
       "bytes": 964,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 6337,
+      "bytes": 6444,
       "path": "README.md",
-      "sha256": "35cbd7984c969b9c31b659fdb38320b1194bebaf05129f4177beb7b449416d6b"
+      "sha256": "8b46af2298cdbb9776a3de789249e8750fe6b77cbcf8131b38064fb1883511c1"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "1672e2cd1de1ea82cf74f05d60b00992c30bcc3f51136ef4a4e81c2b9e10396d"
     },
     {
-      "bytes": 7093,
+      "bytes": 7270,
       "path": "docs/current-result.md",
-      "sha256": "c46f3e5de13897a34e93ab6206098d7835b952166951f475348f885a3bbec1b3"
+      "sha256": "e2c7c68043a2da4dfdd4d3881238f51548aec0d9f1b00438b04be82148796951"
     },
     {
-      "bytes": 4883,
+      "bytes": 5226,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "cec22356ce59ba9475e3d857b955b7a6386610f22f069bfb67a117ce1e959b39"
+      "sha256": "605fdad6888b16af58de1c1b9160190b6929eed62a1dc9a55c014ddfde24a517"
     },
     {
       "bytes": 3154,
@@ -321,6 +321,11 @@
       "sha256": "9eceb09e6c125073650afb1f4481122dc6044e92222d969b14608056adc96b93"
     },
     {
+      "bytes": 3974,
+      "path": "docs/nsc-relational-vacuum-normalization.md",
+      "sha256": "3ebc492c443f6db8a4f4f63789368de3c5d3e5c643829b43c2a5a06f03f489cf"
+    },
+    {
       "bytes": 6697,
       "path": "docs/nsc-response-matching.md",
       "sha256": "90dabe580da596f709cd79876bd5f621c768aefcd12c4b4c6e2a3ecd6d045e99"
@@ -456,9 +461,9 @@
       "sha256": "faf1b3b2a203022764dbc7414a2f022d79c514eda72640d444cbb7d976944643"
     },
     {
-      "bytes": 13277,
+      "bytes": 14574,
       "path": "results/development-snapshot.json",
-      "sha256": "ef620d4667698d10c7fe2bae2e68a516862e7fb652f3a900ade71a07498d3e98"
+      "sha256": "497fdccf7217d1ebe1be6894b1e928a032953eca3c6c064f049ecbe9bcc3f530"
     },
     {
       "bytes": 3283,
@@ -564,6 +569,11 @@
       "bytes": 5507,
       "path": "results/development/parent-backreaction-gate.json",
       "sha256": "23276b420baa2a122e2df5fb748acd032476f639573b5694cd5e2f7fd4685560"
+    },
+    {
+      "bytes": 4963,
+      "path": "results/development/relational-vacuum-normalization.json",
+      "sha256": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983"
     },
     {
       "bytes": 14804,
@@ -1301,6 +1311,11 @@
       "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
     },
     {
+      "bytes": 7315,
+      "path": "scripts/derive_nsc_relational_vacuum.py",
+      "sha256": "6b19bb3f5f4bfc372cd01f61d2fa00def36fa1f13c61610100063fb783061e8e"
+    },
+    {
       "bytes": 7194,
       "path": "scripts/derive_nsc_vacuum_matched_ctp.py",
       "sha256": "ac07eb75ea60043af225b6b85ded24c161d90418fd3b5fef8db304e4b7c5f26b"
@@ -1771,6 +1786,11 @@
       "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
     },
     {
+      "bytes": 5130,
+      "path": "src/recursive_horizons/nsc_relational_vacuum.py",
+      "sha256": "af5662b36bb15b04402bde77ac43b1bedb11e5e248a5e360924e170365dec2d0"
+    },
+    {
       "bytes": 6466,
       "path": "src/recursive_horizons/nsc_response_matching.py",
       "sha256": "d762d8923ad47e9475310469a698444a1d03c76e5091305cf741a9d8fa2ee132"
@@ -1924,6 +1944,11 @@
       "bytes": 917,
       "path": "tests/test_nsc_mmp_embedding.py",
       "sha256": "40e7287ac62a3b8b96abbf886dacd33cbbfcfcd8e1e5408d47f0a399eaf57d18"
+    },
+    {
+      "bytes": 2004,
+      "path": "tests/test_nsc_relational_vacuum.py",
+      "sha256": "a7f9adb144eb4a18335d5b78aa31ae401387e57ba635a7582dd2ac978a9ee695"
     },
     {
       "bytes": 3862,

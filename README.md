@@ -64,14 +64,16 @@ $T_{kk}^{+}=-0.0528075900$, $T_{kk}^{-}=-0.0527953956$, and outward
 power $P_0=0.0001422206795$, in the specified throat units. The complete
 source equation also includes density, both pressures, flux and the geometric
 contribution. The [narrow closure gates](docs/development-update-2026-09-10.md)
-now bind canonical causal response to the charged MMP normalization and locate
-the next dependency precisely: the absolute common-action coefficient
-$V_{\rm full}$.
+now bind canonical causal response to the charged MMP normalization. The
+recursive zero-tadpole law
+$\Gamma_{\rm rel}=(1-\mathcal P_0)\Gamma_{\rm one}$ fixes the homogeneous
+unlinked $V_{\rm full}=0$ while preserving Einstein, gauge, curvature,
+Casimir and link response.
 
 ## Read, inspect and reproduce
 
 The repository contains the **100-record preprint collection** and an
-**eleven-record development snapshot**, with original source hashes, generators
+**twelve-record development snapshot**, with original source hashes, generators
 and comparison policies. The paper has received an editorial revision;
 the [September 10 development update](docs/development-update-2026-09-10.md)
 indexes the subsequent technical derivations.

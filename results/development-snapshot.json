@@ -154,11 +154,25 @@
       },
       "generator": "scripts/derive_nsc_vacuum_owner.py",
       "output": "results/development/mmp-vacuum-owner.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-12
+      },
+      "generator": "scripts/derive_nsc_relational_vacuum.py",
+      "output": "results/development/relational-vacuum-normalization.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "87971de117713933f2714267b22072644e5e8d81",
+  "source_commit": "984a7a68e559fffc367d2884ac60f23fd490beba",
   "source_files": [
     {
       "bytes": 3154,
@@ -394,10 +408,35 @@
       "bytes": 3307,
       "path": "tests/test_nsc_causal_common.py",
       "sha256": "f92b26c4a1a40cb407c6d1c1a6b9d975151b31fb08527cdee50a462ee694a5c7"
+    },
+    {
+      "bytes": 3974,
+      "path": "docs/nsc-relational-vacuum-normalization.md",
+      "sha256": "3ebc492c443f6db8a4f4f63789368de3c5d3e5c643829b43c2a5a06f03f489cf"
+    },
+    {
+      "bytes": 4963,
+      "path": "results/development/relational-vacuum-normalization.json",
+      "sha256": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983"
+    },
+    {
+      "bytes": 7315,
+      "path": "scripts/derive_nsc_relational_vacuum.py",
+      "sha256": "6b19bb3f5f4bfc372cd01f61d2fa00def36fa1f13c61610100063fb783061e8e"
+    },
+    {
+      "bytes": 5130,
+      "path": "src/recursive_horizons/nsc_relational_vacuum.py",
+      "sha256": "af5662b36bb15b04402bde77ac43b1bedb11e5e248a5e360924e170365dec2d0"
+    },
+    {
+      "bytes": 2004,
+      "path": "tests/test_nsc_relational_vacuum.py",
+      "sha256": "a7f9adb144eb4a18335d5b78aa31ae401387e57ba635a7582dd2ac978a9ee695"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 11 post-preprint records, outside the 100-record release",
+  "status": "development snapshot; 12 post-preprint records, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }

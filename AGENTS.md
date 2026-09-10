@@ -98,7 +98,7 @@ Use the [September 10 development update](docs/development-update-2026-09-10.md)
 before the earlier preprint checkpoint below. The common-source equations,
 boundary state, measure, ADM source maps and flux condition are committed.
 The full causal geometric/UV source remains an explicit missing definition.
-The separate development snapshot authenticates eleven later records while
+The separate development snapshot authenticates twelve later records while
 preserving the 100-record preprint manifest. A push of authenticated existing
 work requires publication/path checks, not replay of the old scientific chain.
 
