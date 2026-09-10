@@ -1,8 +1,21 @@
-# The connected operator: equations and evidence
+# What the calculations show
 
-The construction connects three quantities through the same operator:
-**the locally resolved field, the response across its boundary, and the stress
-that acts on its geometry.** This page follows those connections in order.
+The project starts from one simple claim: a wave, a particle, an unseen
+boundary response, and a changing geometry can be different measurements of
+one inherited spectrum. This page shows the equations and numbers behind that
+claim.
+
+| Plain-language idea | Calculated connection |
+|---|---|
+| A particle is a stable note of a field | One scalar link gives the exact massive Dirac dispersion and propagator self-energy |
+| Another room can be unseen but still act here | Direct propagation and Schur elimination give the same curved boundary response |
+| A boundary stores and transfers energy | The real and imaginary parts of one coherence give link energy and occupation transfer |
+| Geometry can turn into particles | Work from a changing radius equals the energy of the created Dirac pairs |
+| An inherited state can push geometry apart | Both computed radial null contractions are negative at the smooth neck |
+| Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
+
+The construction connects the locally resolved field, the response across its
+boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
@@ -127,22 +140,44 @@ bind stress, energy, flux and geometric work. The
 [local warp source](nsc-warp-local-neck-source.md) evaluates an identified
 summand on the actual neck; its nonlocal remainder has no small-error bound.
 
-## 6. The next source equation
+## 6. The causal and vacuum source now have explicit owners
 
-The full geometric contribution must determine the causal source and its
-admissible state or history data:
+Canonical Lorentzian evolution supplies the causal state-dependent response:
 
 $$
-\left.\frac{\delta\Gamma_{\rm one}}{\delta g_\Delta^{\mu\nu}}\right|_{g_\Delta=0}=0.
+\Gamma_{\rm one}^{\rm CTP}
+=S_{\rm induced}[+]-S_{\rm induced}[-]
+-i\log\det(I-C_0+C_0U_-^\dagger U_+).
 $$
 
-The [quadratic vacuum-matching calculation](nsc-vacuum-matched-ctp.md)
-currently supplies a real phase for complete histories. The
-[definition-gap derivation](nsc-causal-source-definition-gap.md) shows why
-that phase alone does not specify retarded evolution from initial data.
-This is the precise missing input to the joint source solve.
+The [causal common functional](nsc-causal-common-functional.md) returns the
+four metric forces, stress projections, boundary power, retarded response,
+noise, and discrete Ward residuals from one covariance. Equal histories,
+unitarity, covariance trace, and energy/work balance agree at approximately
+$10^{-16}$ in its finite control.
 
-Once supplied, the same solution determines the following physical links:
+The homogeneous gravitational zero is fixed separately by the same-action
+relational law
+
+$$
+\Gamma_{\rm rel}=(1-\mathcal P_0)\Gamma_{\rm one},
+\qquad
+(V,A,C)\mapsto(0,A,C).
+$$
+
+This gives $V_{\rm full}=\lambda_4=\Xi=0$ while preserving Einstein, gauge,
+curvature, Casimir, and link response. The
+[normalization derivation](nsc-relational-vacuum-normalization.md) proves
+idempotence, additivity, CTP normalization, and common room-scale covariance.
+
+The physical geometry is the common stationary point:
+
+$$
+\left.\frac{\delta\Gamma_{\rm one}^{\rm CTP}}
+{\delta g_\Delta^{\mu\nu}}\right|_{g_\Delta=0}=0.
+$$
+
+The same solution determines the following physical links:
 
 | Target | Quantity to extract from the common solution |
 |---|---|

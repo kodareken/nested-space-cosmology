@@ -1,117 +1,258 @@
 # Nested-Space Cosmology
 
-**One recursive law connecting matter, geometry and the spaces beyond a boundary.**
+## What if reality is one inherited spectrum?
 
-Nested-Space Cosmology develops Douglas Ek's proposal that a black-hole-like
-collapse in one space can continue as an expanding space within it. Parent and
-child inherit a common law, expressed by one organizing equation:
+A musical note is not a thing separate from its wave. It is a stable pattern
+inside an oscillation. Change the frequency and the same underlying motion
+appears as a different note.
+
+Nested-Space Cosmology asks whether nature works the same way at every scale:
+
+> **One field. One spectrum. Different stable patterns that we call particles,
+> forces, matter, antimatter, dark gravity, black holes, and expanding space.**
+
+```mermaid
+flowchart LR
+  A[Energy gradient] --> B[Oscillation]
+  B --> C[Frequency spectrum]
+  C --> D[Stable resonances: particles]
+  C --> E[Unresolved response: dark gravity]
+  C --> F[Resolution boundary: black hole]
+  F --> G[Child space with inherited law]
+  G --> A
+```
+
+A local universe is a **room** with its own clocks, rulers, frequencies, and
+resolution. A black hole is the boundary where the parent room can no longer
+represent a compressed gradient as an ordinary local object. The proposal is
+that the process continues as a child room. The child inherits the same
+dimensionless relationships while expressing a wider range of structure.
+
+[Read the idea in plain language](THEORY.md) ·
+[Follow the equations and evidence](docs/current-result.md) ·
+[Open the working paper](paper/nested-space-cosmology.pdf)
+
+## From a note to a universe
+
+Every room has a Dirac operator. Its eigenvectors are possible patterns and
+its eigenvalues are their natural frequencies:
 
 $$
+\boxed{
+\mathbb D_n u_{n,k}=\omega_{n,k}u_{n,k},
+\qquad
+\omega_{n,k}=\Lambda_n\widehat\omega_k(\Theta).
+}
+$$
+
+- $\Lambda_n$ is the room's frequency and resolution scale.
+- $\widehat\omega_k$ is a dimensionless note in the inherited spectrum.
+- $\Theta$ is the law shared by parent and child.
+
+If a child has scale ratio $\Omega$, then
+
+$$
+\Lambda_{n+1}=\Omega\Lambda_n,
+\qquad
+\frac{\omega_{n+1,k}}{\Lambda_{n+1}}
+=\frac{\omega_{n,k}}{\Lambda_n}.
+$$
+
+The absolute range changes. The relationships—the musical intervals of the
+law—remain the same.
+
+## One spectrum, many familiar names
+
+| What we observe | What it is in the spectral picture |
+|---|---|
+| **Wave** | The extended amplitude and phase of a field pattern |
+| **Particle** | A stable pole or localized resonance of that same field |
+| **Matter and antimatter** | The positive- and negative-frequency Dirac sectors, related by charge conjugation |
+| **Mass** | The rest-frequency gap of a physical pole |
+| **Dark energy** | The smooth, near-zero-momentum part of the response inherited from unresolved rooms |
+| **Dark matter** | The finite-wavelength part of that response, acting through clustering and lensing |
+| **Black hole** | A causal and resolution boundary reached by a sufficiently compressed gradient |
+| **Child universe** | The continuation of that gradient in a new room with inherited spectral law |
+| **Complexity** | More distinguishable modes and stable combinations within a wider resolved spectrum |
+
+The matter–antimatter correspondence is a frequency orientation, not merely
+the drawn height of a sine wave:
+
+$$
+\Psi(x)=\sum_s\int d^3p\,
+\left[
+a_s(\mathbf p)u_s(\mathbf p)e^{-ip\cdot x}
++b_s^\dagger(\mathbf p)v_s(\mathbf p)e^{+ip\cdot x}
+\right].
+$$
+
+The two phases $e^{-i\omega t}$ and $e^{+i\omega t}$ become particle and
+antiparticle sectors after quantization. Charge conjugation reverses the gauge
+representation. A real sine wave displays both orientations:
+
+$$
+\sin(\omega t)=\frac{e^{i\omega t}-e^{-i\omega t}}{2i}.
+$$
+
+## A black hole already plays a cosmic bass note
+
+The Perseus galaxy cluster contains literal pressure waves driven by repeated
+outbursts from its central supermassive black hole. Their period is just under
+ten million years:
+
+$$
+\nu_{\rm Perseus}\simeq3.3\times10^{-15}\ \mathrm{Hz},
+$$
+
+about 57 octaves below the B-flat above middle C. The waves carry energy into
+the surrounding gas and help prevent it from cooling. This is measured
+black-hole feedback expressed as frequency, scale, and energy transfer—not
+just a sonification metaphor. [Chandra explains the pressure waves and octave
+calculation](https://chandra.harvard.edu/chronicle/0303/perseus/index.html).
+
+NSC applies the same spectral language across a much larger range. Since
+
+$$
+E=\hbar\omega,
+\qquad
+\lambda=\frac{2\pi c}{\omega},
+$$
+
+higher frequencies resolve shorter lengths. Concentrating enough energy to
+reach the local resolution wall changes the geometry. The black-hole boundary
+then becomes the handoff between the parent spectrum and its child.
+
+At that boundary, reflection and transmission are two parts of one scattering
+response:
+
+$$
+|R(\omega)|^2+|T(\omega)|^2=1.
+$$
+
+The parent observes what returns through $R$. The part carried through $T$
+continues beyond its locally accessible chart. A black shadow, a throat, and
+an expanding interior are therefore three observer-dependent views of the
+same boundary problem. The repository computes the complex Dirac reflection,
+transmission, and the inherited child stress for its smooth benchmark.
+
+## How another room acts without being locally visible
+
+Put a parent and child in one block operator:
+
+$$
+H=
+\begin{pmatrix}
+H_p&B\\
+B^\dagger&H_c
+\end{pmatrix}.
+$$
+
+Eliminating the child does not erase it. It leaves a visible self-energy:
+
+$$
+\boxed{
+G_{pp}(E)^{-1}
+=E-H_p-B(E-H_c)^{-1}B^\dagger.
+}
+$$
+
+This one formula explains how something outside local resolution can still
+change local motion. Its momentum limits have different appearances:
+
+$$
+\Pi_{\rm outside}(k\rightarrow0)
+\longrightarrow\text{smooth background expansion},
+$$
+
+$$
+\Pi_{\rm outside}(k>0)
+\longrightarrow\text{clustering and lensing response}.
+$$
+
+That is the proposed common origin of dark energy and dark matter: two ranges
+of one boundary response rather than two unrelated invisible substances.
+
+## The law that every room inherits
+
+The complete proposal is compressed into
+
+$$
+\boxed{
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
+}
 $$
 
-The idea becomes concrete through a block Dirac operator. Its diagonal blocks
-describe locally resolved fields; its off-diagonal blocks carry the interaction
-between rooms. The same interaction appears in a particle's spectral gap, the
-response of an unresolved room, and the energy exchanged across their boundary.
+The configuration changes from parent to child. The dimensionless law does
+not. The child's own descendants are already contained in its response:
 
-[Read the paper](paper/nested-space-cosmology.pdf) ·
-[Explore the equations and evidence](docs/current-result.md) ·
-[Follow the central idea](THEORY.md)
+$$
+\boxed{
+\Gamma_p(x)
+=K_p(x)-\frac1\Omega
+b\,\Gamma_c(x/\Omega)^{-1}b^\dagger.
+}
+$$
 
-## The strongest connections
+The zero of gravitational energy is also relational. The recursive
+zero-tadpole law removes only the homogeneous unlinked vacuum term:
 
-| Connection | Mathematical result | Evidence |
+$$
+\boxed{
+\Gamma_{\rm rel}=(1-\mathcal P_0)\Gamma_{\rm one},
+\qquad
+(V,A,C)\mapsto(0,A,C).
+}
+$$
+
+Curvature, gauge response, Casimir energy, links, and finite boundary effects
+remain. In the charged-throat map this gives $V_{\rm full}=\lambda_4=\Xi=0$
+without changing $G_N$, the gauge coefficient, charge radius, or throat length.
+
+## What the calculations already connect
+
+| Connection | Result | Reproducible evidence |
 |---|---|---|
-| One coupling, mass and external response | In the invariant scalar-link sector, $E^2=\lvert\mathbf p\rvert^2+\Phi^2$ and $\Sigma_p(E)=\Phi^2(E+\boldsymbol\alpha\cdot\mathbf p)^{-1}$ | [Dirac reduction](docs/nsc-observable-bridge.md) |
-| Geometry determines boundary transport | Evaluated curved spinor maps agree with direct elimination and independent radial integration | [Boundary channels](docs/nsc-chiral-boundary.md) |
-| One coherence, stored energy and transfer | $z_B=\mathrm{Tr}(BC_{cp})$ gives $E_{\rm link}=2\Re z_B$ and $\dot N_p=2\Im z_B$ | [Common-source derivation](docs/nsc-common-source-derivation.md) |
-| Changing geometry creates Dirac excitations | The prescribed radius pulse's work equals the increase in field energy | [Vacuum-work experiment](docs/nsc-vacuum-work.md) |
-| Parent state determines child vacuum stress | The computed canonical massless state has two negative radial null contractions at the smooth neck and outward power | [Parent-matched source](docs/nsc-unruh-state.md) |
-| The same operator supplies geometric forces | Independent lapse, shift, radial-metric and radius variations give the stress projections and conservation identities | [Metric source equations](docs/nsc-adm-source-constraints.md) |
+| One link controls mass and visible response | $E^2=\lvert\mathbf p\rvert^2+\Phi^2$ and $\Sigma_p(E)=\Phi^2(E+\boldsymbol\alpha\cdot\mathbf p)^{-1}$ | [Dirac reduction](docs/nsc-observable-bridge.md) |
+| Geometry determines transmission | Direct propagation, transfer matrices, and boundary elimination agree below $2.3\times10^{-15}$ in the recorded full-spinor system | [Boundary calculation](docs/nsc-chiral-boundary.md) |
+| One coherence stores energy and transfers occupation | $E_{\rm link}=2\Re\mathrm{Tr}(BC_{cp})$ and $\dot N_p=2\Im\mathrm{Tr}(BC_{cp})$ | [Common-source derivation](docs/nsc-common-source-derivation.md) |
+| Geometry can become particles | A smooth radius pulse creates Dirac pairs and its work equals their energy | [Vacuum-work experiment](docs/nsc-vacuum-work.md) |
+| Parent data determine child stress | Both recorded radial null contractions are about $-0.05280$ and the parent power is $1.4222\times10^{-4}$ | [Parent-matched source](docs/nsc-unruh-state.md) |
+| Causal response and geometric source share one state | Canonical CTP returns metric forces, retarded response, noise, and energy balance from one covariance | [Causal common functional](docs/nsc-causal-common-functional.md) |
+| Homogeneous vacuum has a unique relational zero | The idempotent $a_0$ projector sets $V_{\rm full}=0$ while preserving gradient response | [Relational vacuum law](docs/nsc-relational-vacuum-normalization.md) |
 
-The scalar-link reduction is exact for its stated coupling and invariant sector.
-The computed massless throat kernel has vector and axial channels. Connecting
-that transport kernel to a physical mass interaction is one of the equations
-that the common action must determine.
+## Explore at your own depth
 
-## Six physical questions
+1. [The theory in one continuous story](THEORY.md)
+2. [The calculated equations and numbers](docs/current-result.md)
+3. [The 12-record development update](docs/development-update-2026-09-10.md)
+4. [The 100-record preprint manifest](results/manifest.json)
+5. [How to inspect and reproduce results](docs/reproducing.md)
+6. [The working paper](paper/nested-space-cosmology.pdf)
 
-The programme connects six questions through the same operator and state:
+```sh
+python3 -m pip install -e '.[paper]'
+make demonstrate
+```
 
-1. **Constants:** how local propagation, gravitational coupling and resolution emerge.
-2. **Black holes:** how collapse continues through a finite geometry into expansion.
-3. **Dark response:** how adjacent spaces contribute to background gravity, clustering and lensing.
-4. **Particles and waves:** how field excitations interact with detectors and produce records.
-5. **Mass and antimatter:** how chiral coupling, gauge charges and charge-conjugate states arise.
-6. **Recursive infinity:** how successive rooms inherit states, clocks and observable probabilities.
-
-The [theory overview](THEORY.md) develops the proposal. The
-[current result](docs/current-result.md) connects each step to its equations,
-computed quantities and next dependency.
-
-## The equation being completed
-
-The physical feedback loop is
-
-$$
-\text{geometry}\ \longrightarrow\ \text{Dirac state and boundary response}
-\ \longrightarrow\ \text{quantum stress}\ \longrightarrow\ \text{geometry}.
-$$
-
-At the recorded neck, the parent-matched massless source gives
-$T_{kk}^{+}=-0.0528075900$, $T_{kk}^{-}=-0.0527953956$, and outward
-power $P_0=0.0001422206795$, in the specified throat units. The complete
-source equation also includes density, both pressures, flux and the geometric
-contribution. The [narrow closure gates](docs/development-update-2026-09-10.md)
-now bind canonical causal response to the charged MMP normalization. The
-recursive zero-tadpole law
-$\Gamma_{\rm rel}=(1-\mathcal P_0)\Gamma_{\rm one}$ fixes the homogeneous
-unlinked $V_{\rm full}=0$ while preserving Einstein, gauge, curvature,
-Casimir and link response.
-
-## Read, inspect and reproduce
-
-The repository contains the **100-record preprint collection** and an
-**twelve-record development snapshot**, with original source hashes, generators
-and comparison policies. The paper has received an editorial revision;
-the [September 10 development update](docs/development-update-2026-09-10.md)
-indexes the subsequent technical derivations.
-
-    python3 -m pip install -e '.[paper]'
-    make demonstrate
-
-The default demonstration reads fourteen authenticated stored cases.
-[Reproduction instructions](docs/reproducing.md) describe the explicitly
-requested calculation routes. Publication changes use path, provenance and
-PDF checks; completed scientific calculations are reused.
+The default demonstration reads authenticated stored results without launching
+the expensive scientific generators.
 
 ## Research status
 
-NSC is an active theoretical programme and working preprint, not yet peer
-reviewed. Its exact identities and numerical results apply to the operators,
-states, domains and approximations specified in their records. A complete
-self-sourced solution, identified particle and nuclear sectors, and independent
-cosmological predictions remain research objectives. The current results do
-not establish a theory of everything or an observational identification of
-our universe with a black-hole interior. In particular, the quoted
-$3.34M_\odot$ stellar endpoint belongs to an imported, nuclear-calibrated
-Einstein–BPS benchmark.
-
-Established Dirac theory, spectral geometry, quantum-field methods and regular
-black-universe solutions supply the mathematical foundation. Original sources
-are credited in the paper and [prior-art notes](docs/prior-art-and-open-claim.md).
-The project contribution is the explicit integration of these relationships
-through a common recursive operator.
+NSC is an active theoretical programme and working preprint. Its exact
+identities and numerical results apply to the operators, states, domains, and
+approximations named in their records. The common recursive interpretation is
+the theory being assembled from those results. A complete self-sourced
+parent-to-child solution, identified particle spectrum, and independent
+cosmological prediction remain the final integration targets.
 
 ## Authorship
 
-**Douglas Ek** provides the conceptual synthesis, research direction and
-scientific responsibility. ChatGPT/OpenAI Codex assisted with derivations,
-software, computation and writing; Grok supplied bounded investigations.
-The principal collaborating sessions are identified as GPT-5.6 Sol and
-GPT-6 Astra. The equations, source records and reproducible artifacts carry
-the scientific evidence.
+**Douglas Ek** provides the conceptual synthesis, research direction, and
+scientific responsibility. ChatGPT/OpenAI Codex assisted with formulation,
+derivations, software, computation, and writing; Grok supplied bounded
+investigations. The principal collaborating sessions are identified as
+GPT-5.6 Sol and GPT-6 Astra.
 
 Code: MIT. Original prose and figures: CC BY 4.0.
 [Citation](CITATION.cff) · [Contributing](CONTRIBUTING.md) · [Licence](LICENSE)
