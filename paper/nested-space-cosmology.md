@@ -681,6 +681,26 @@ The computed density has the opposite sign to that positive-Einstein requirement
 
 ### 4.9 Finite-cutoff conversion is state dependent
 
+The continuation of a regular black-hole geometry through a positive-radius throat into an expanding child region is used here as an established classical benchmark. Its quantum source cannot be obtained by simply carrying the Euclidean spatial determinant through the horizon: the horizon-penetrating spatial Dirac Hamiltonian loses ellipticity there, as described by Finster and Röken [21] and witnessed explicitly for this carrier in Appendix B.1. Consequently, a proper-time Euclidean heat trace cannot be naively analytically continued into the trapped Lorentzian region to define the finite stress. This obstruction is precisely why the construction abandons the static Euclidean trace here and matches the causal Lorentzian closed-time-path functional to the state-dependent reference.
+
+The retarded causal matching constraint is
+
+$$
+K_E^{P-AP}(\nu)\longrightarrow\chi_R^P(i\nu)-\chi_R^{AP}(i\nu).
+$$
+
+It carries the finite terms into the causal assembly
+
+$$
+\Gamma_{\mathrm{one}}^{\mathrm{CTP}}
+=\Gamma_{\mathrm{ref,ren}}^{\mathrm{CTP}}
+ +\left(\Gamma_{H,\nu}^{\mathrm{CTP}}+\mathcal C_{\nu,\mu}^{\mathrm{CTP}}\right)
+ +\Delta\Gamma_{\mathrm{state}}^{\mathrm{CTP}}
+ +\Gamma_{\mathrm{remaining}}^{\mathrm{CTP}}.
+$$
+
+At the recorded finite endpoints, this transition agrees with the response values in [`nsc-11-response-matching.json`](../results/nsc-11-response-matching.json) and the state-dependent conversion in [`state-regulator.json`](../results/development/state-regulator.json), without introducing another finite term.
+
 <!-- nsc-claim:state-regulator-conversion -->
 **Imported thermal determinant / repository compatibility check.** The adopted finite Euclidean proper-time factor cannot be identified, without a state-dependent conversion, with the thermal source of the canonical Dirac field used above. On flat $\mathbb R^3$ times an antiperiodic Euclidean thermal circle, with one ordinary massless Dirac field, $T/\nu=0.5$ gives canonical $\rho=0.0719658654\,\nu^4$ versus raw finite $\rho=-0.00122667356\,\nu^4$ after subtracting that prescription's own zero-temperature energy [51]. Local vacuum coefficients cancel in the thermal-minus-vacuum difference and cannot repair it. A pole-residue argument is insufficient: the regulated inverse has residue one on shell, yet the finite Matsubara determinant differs from the canonical CAR excitation energy. This flat equilibrium calculation fixes the conversion requirement for that state and prescription.
 
