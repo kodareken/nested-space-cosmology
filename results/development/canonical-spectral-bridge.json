@@ -1,0 +1,346 @@
+{
+  "allocation": {
+    "canonical_Q0_tail_bound": 9.355509629935309e-159,
+    "canonical_Q1_Q2_origin": "stored analytic flat-tower moments; no reintegration",
+    "canonical_fields": {
+      "constant_size_free_light_heavy_link": "0",
+      "interval": "ell=2 L_star, fixed chiral endpoint domain",
+      "mass_formula": "m_n=n*pi/ell",
+      "massless_Dirac_copies": 1,
+      "positive_level_Dirac_copies": 2
+    },
+    "parameters": {
+      "Lambda": 2.0,
+      "amplitude": 0.017733990147783252,
+      "basis_modes": 34,
+      "basis_quadrature": 112,
+      "ell": 2.0,
+      "momentum_extent": 12.0,
+      "quadrature_tolerance": 1e-09,
+      "warp_path": 1.0
+    },
+    "rows": [
+      {
+        "coefficient_reconstruction_residuals": {
+          "A_Dirac": -2.9845917404180966e-15,
+          "C_Euler_Dirac": 5.421010862427522e-20,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": 0.0,
+          "C_boxR_Dirac": -5.421010862427522e-20,
+          "C_gauge_Dirac": 0.0,
+          "V_Dirac": 1.304512053934559e-15
+        },
+        "matching_cutoff": 0.5,
+        "moment_reconstruction_residuals": {
+          "Q0": 0.0,
+          "Q1": -2.8279600883251987e-12,
+          "Q2": 1.0480505352461478e-13
+        },
+        "origins": {
+          "light_endpoint_conversion": {
+            "coefficients": {
+              "A_Dirac": 0.003957858736028819,
+              "C_Euler_Dirac": 0.00026824146545121935,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": -0.00043894057982926796,
+              "C_boxR_Dirac": -0.000292627053219512,
+              "C_gauge_Dirac": 0.00585254106439024,
+              "V_Dirac": 0.1009253977687349
+            },
+            "moments": {
+              "Q0": 2.772588722239781,
+              "Q1": 3.75,
+              "Q2": 7.96875
+            }
+          },
+          "massive_canonical_tower": {
+            "coefficients": {
+              "A_Dirac": 0.0024470504604760836,
+              "C_Euler_Dirac": 9.015422954840129e-05,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": -0.0001475251028973839,
+              "C_boxR_Dirac": -9.835006859825595e-05,
+              "C_gauge_Dirac": 0.0019670013719651188,
+              "V_Dirac": 0.08283595386751534
+            },
+            "moments": {
+              "Q0": 0.9318492190893957,
+              "Q1": 2.3185363194626394,
+              "Q2": 6.540464758874116
+            }
+          },
+          "warp_covariant_conversion": {
+            "coefficients": {
+              "A_Dirac": -0.00011105299768242204,
+              "C_Euler_Dirac": -2.5676386295782017e-06,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": 4.20159048476433e-06,
+              "C_boxR_Dirac": 2.80106032317622e-06,
+              "C_gauge_Dirac": -5.6021206463524396e-05,
+              "V_Dirac": -0.005283700241390097
+            },
+            "moments": {
+              "Q0": -0.026539543001603327,
+              "Q1": -0.10522071884933748,
+              "Q2": -0.41718424925168485
+            }
+          }
+        },
+        "stored_coefficients": {
+          "A_Dirac": 0.006293856198825465,
+          "C_Euler_Dirac": 0.0003558280563700424,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": -0.0005822640922418875,
+          "C_boxR_Dirac": -0.0003881760614945917,
+          "C_gauge_Dirac": 0.0077635212298918345,
+          "V_Dirac": 0.17847765139485883
+        },
+        "stored_moments": {
+          "Q0": 3.6778983983275735,
+          "Q1": 5.96331560061613,
+          "Q2": 14.092030509622326
+        },
+        "sum_coefficients": {
+          "A_Dirac": 0.006293856198822481,
+          "C_Euler_Dirac": 0.00035582805637004246,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": -0.0005822640922418875,
+          "C_boxR_Dirac": -0.00038817606149459176,
+          "C_gauge_Dirac": 0.0077635212298918345,
+          "V_Dirac": 0.17847765139486013
+        },
+        "sum_moments": {
+          "Q0": 3.6778983983275735,
+          "Q1": 5.963315600613302,
+          "Q2": 14.09203050962243
+        }
+      },
+      {
+        "coefficient_reconstruction_residuals": {
+          "A_Dirac": -2.9845917404180966e-15,
+          "C_Euler_Dirac": -2.710505431213761e-20,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": 5.421010862427522e-20,
+          "C_boxR_Dirac": 0.0,
+          "C_gauge_Dirac": -8.673617379884035e-19,
+          "V_Dirac": 1.3322676295501878e-15
+        },
+        "matching_cutoff": 1.0,
+        "moment_reconstruction_residuals": {
+          "Q0": -4.440892098500626e-16,
+          "Q1": -2.8279600883251987e-12,
+          "Q2": 1.0480505352461478e-13
+        },
+        "origins": {
+          "light_endpoint_conversion": {
+            "coefficients": {
+              "A_Dirac": 0.0031662869888230555,
+              "C_Euler_Dirac": 0.00013412073272560968,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": -0.00021947028991463398,
+              "C_boxR_Dirac": -0.000146313526609756,
+              "C_gauge_Dirac": 0.00292627053219512,
+              "V_Dirac": 0.09498860966469166
+            },
+            "moments": {
+              "Q0": 1.3862943611198906,
+              "Q1": 3.0,
+              "Q2": 7.5
+            }
+          },
+          "massive_canonical_tower": {
+            "coefficients": {
+              "A_Dirac": 0.0024470504604760836,
+              "C_Euler_Dirac": 9.015422954840129e-05,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": -0.0001475251028973839,
+              "C_boxR_Dirac": -9.835006859825595e-05,
+              "C_gauge_Dirac": 0.0019670013719651188,
+              "V_Dirac": 0.08283595386751534
+            },
+            "moments": {
+              "Q0": 0.9318492190893957,
+              "Q1": 2.3185363194626394,
+              "Q2": 6.540464758874116
+            }
+          },
+          "warp_covariant_conversion": {
+            "coefficients": {
+              "A_Dirac": -0.00011105299768242204,
+              "C_Euler_Dirac": -2.5676386295782017e-06,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": 4.20159048476433e-06,
+              "C_boxR_Dirac": 2.80106032317622e-06,
+              "C_gauge_Dirac": -5.6021206463524396e-05,
+              "V_Dirac": -0.005283700241390097
+            },
+            "moments": {
+              "Q0": -0.026539543001603327,
+              "Q1": -0.10522071884933748,
+              "Q2": -0.41718424925168485
+            }
+          }
+        },
+        "stored_coefficients": {
+          "A_Dirac": 0.005502284451619701,
+          "C_Euler_Dirac": 0.00022170732364443278,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": -0.0003627938023272536,
+          "C_boxR_Dirac": -0.00024186253488483575,
+          "C_gauge_Dirac": 0.004837250697696715,
+          "V_Dirac": 0.17254086329081558
+        },
+        "stored_moments": {
+          "Q0": 2.291604037207683,
+          "Q1": 5.21331560061613,
+          "Q2": 13.623280509622326
+        },
+        "sum_coefficients": {
+          "A_Dirac": 0.005502284451616717,
+          "C_Euler_Dirac": 0.00022170732364443276,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": -0.00036279380232725355,
+          "C_boxR_Dirac": -0.00024186253488483575,
+          "C_gauge_Dirac": 0.004837250697696714,
+          "V_Dirac": 0.17254086329081691
+        },
+        "sum_moments": {
+          "Q0": 2.2916040372076827,
+          "Q1": 5.213315600613302,
+          "Q2": 13.62328050962243
+        }
+      },
+      {
+        "coefficient_reconstruction_residuals": {
+          "A_Dirac": -2.9845917404180966e-15,
+          "C_Euler_Dirac": 0.0,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": 0.0,
+          "C_boxR_Dirac": 0.0,
+          "C_gauge_Dirac": 0.0,
+          "V_Dirac": 1.304512053934559e-15
+        },
+        "matching_cutoff": 1.4,
+        "moment_reconstruction_residuals": {
+          "Q0": 0.0,
+          "Q1": -2.8279600883251987e-12,
+          "Q2": 1.0480505352461478e-13
+        },
+        "origins": {
+          "light_endpoint_conversion": {
+            "coefficients": {
+              "A_Dirac": 0.002153075152399678,
+              "C_Euler_Dirac": 6.901493098086896e-05,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": -0.0001129335234232401,
+              "C_boxR_Dirac": -7.528901561549341e-05,
+              "C_gauge_Dirac": 0.0015057803123098683,
+              "V_Dirac": 0.07699396744981248
+            },
+            "moments": {
+              "Q0": 0.7133498878774648,
+              "Q1": 2.04,
+              "Q2": 6.0792
+            }
+          },
+          "massive_canonical_tower": {
+            "coefficients": {
+              "A_Dirac": 0.0024470504604760836,
+              "C_Euler_Dirac": 9.015422954840129e-05,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": -0.0001475251028973839,
+              "C_boxR_Dirac": -9.835006859825595e-05,
+              "C_gauge_Dirac": 0.0019670013719651188,
+              "V_Dirac": 0.08283595386751534
+            },
+            "moments": {
+              "Q0": 0.9318492190893957,
+              "Q1": 2.3185363194626394,
+              "Q2": 6.540464758874116
+            }
+          },
+          "warp_covariant_conversion": {
+            "coefficients": {
+              "A_Dirac": -0.00011105299768242204,
+              "C_Euler_Dirac": -2.5676386295782017e-06,
+              "C_R2_Dirac": 0.0,
+              "C_Weyl_Dirac": 4.20159048476433e-06,
+              "C_boxR_Dirac": 2.80106032317622e-06,
+              "C_gauge_Dirac": -5.6021206463524396e-05,
+              "V_Dirac": -0.005283700241390097
+            },
+            "moments": {
+              "Q0": -0.026539543001603327,
+              "Q1": -0.10522071884933748,
+              "Q2": -0.41718424925168485
+            }
+          }
+        },
+        "stored_coefficients": {
+          "A_Dirac": 0.004489072615196324,
+          "C_Euler_Dirac": 0.00015660152189969206,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": -0.0002562570358358597,
+          "C_boxR_Dirac": -0.00017083802389057315,
+          "C_gauge_Dirac": 0.0034167604778114627,
+          "V_Dirac": 0.1545462210759364
+        },
+        "stored_moments": {
+          "Q0": 1.6186595639652572,
+          "Q1": 4.25331560061613,
+          "Q2": 12.202480509622326
+        },
+        "sum_coefficients": {
+          "A_Dirac": 0.004489072615193339,
+          "C_Euler_Dirac": 0.00015660152189969206,
+          "C_R2_Dirac": 0.0,
+          "C_Weyl_Dirac": -0.0002562570358358597,
+          "C_boxR_Dirac": -0.00017083802389057315,
+          "C_gauge_Dirac": 0.0034167604778114627,
+          "V_Dirac": 0.1545462210759377
+        },
+        "sum_moments": {
+          "Q0": 1.6186595639652572,
+          "Q1": 4.253315600613302,
+          "Q2": 12.202480509622431
+        }
+      }
+    ],
+    "warp_path_moment_derivatives": {
+      "Q1": -0.10373632168098476,
+      "Q2": -0.40766196621320755,
+      "origin": "stored warped derivatives; free canonical masses and fixed canonical state have no warp-path dependence"
+    }
+  },
+  "comparison": {
+    "exact": "structure, non-float values, source and input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "input_hashes": {
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9"
+  },
+  "schema": "NSC-CANONICAL-SPECTRAL-BRIDGE-v1",
+  "scope": {
+    "absolute_self_sourced_solution_derived": false,
+    "full_real_time_covariant_conversion_derived": false,
+    "local_a4_truncation_valid_at_neck_established": false,
+    "new_independent_coefficients": false,
+    "new_spectral_or_source_integrals": false,
+    "physical_canonical_field_content_identified": true
+  },
+  "source_hashes": {
+    "docs/nsc-canonical-spectral-bridge.md": "02215f76d44eaf1c426a2f0c0f98d0f963ed931e3788fb8308427c035f61bb9c",
+    "docs/nsc-compact-mass-map.md": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073",
+    "docs/nsc-warped-source.md": "5e5ac433c2af3bc6f6a6433d9f50dfaa2c06b6c012a018a19bfd21f31e3c12dc",
+    "scripts/check_nsc_canonical_spectral_bridge.py": "5999be76de5ffcee333798823b153b185fdb33eee59189f995f54698f5fe6a9a",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_canonical_spectral_bridge.py": "821e1dbdcb79f815521b9aee536643bea1d155c0b639afd49376229e51991879",
+    "src/recursive_horizons/nsc_compact_matching.py": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378"
+  },
+  "status": "canonical tower and covariant-conversion origins of the stored Euclidean source are evaluated"
+}

@@ -1,5 +1,15 @@
 # Current result: the connected operator and its physical closure
 
+**Current development snapshot:** [September 10 update](development-update-2026-09-10.md),
+from laboratory commit `6e530a3`, adds the common-source derivation, boundary
+state, measure reconstruction, metric source maps and backreaction condition.
+The eight new records retain their source hashes and comparison policies in
+[a separate snapshot index](../results/development-snapshot.json).
+The full causal geometric/UV source remains undefined, as detailed in the
+[definition-gap report](nsc-causal-source-definition-gap.md). The real phase
+for complete histories does not yet supply a causal initial-data evolution.
+These later results are outside the existing 100-record PDF and release manifest.
+
 Version 0.7.0 presents 100 records: 58 frozen historical records and 42 scoped
 follow-ups. The [paper](../paper/nested-space-cosmology.pdf) presents the six
 targets and their supported connections. The new source batch carries the
@@ -8,7 +18,7 @@ canonical spherical owner, a local curvature contact, the full spectral
 endpoint, a child-state decay bound, a massless reference, a finite-radius
 angular tensor, a parent-matched source and a state-dependent conversion.
 
-**Current work cursor:** complete the same-state finite-cutoff causal
+**Preprint checkpoint:** complete the same-state finite-cutoff causal
 conversion and complementary functional. The parent-matched canonical
 massless Dirac candidate is now a reusable input. It has negative neck null
 but does not close self-sourcing. Do not restart raw coefficient scans, fit

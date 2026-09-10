@@ -69,6 +69,44 @@ SECRET_PATTERNS = {
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 
+def check_development_snapshot() -> set[str]:
+    """Authenticate the later snapshot without extending the frozen release."""
+    from reproduce_public_results import validate_authenticated_inputs
+    snapshot = json.loads((ROOT / "results/development-snapshot.json").read_text())
+    if snapshot.get("schema") != "NSC-DEVELOPMENT-SNAPSHOT-v1":
+        raise ValueError("unexpected development snapshot schema")
+    if not re.fullmatch(r"[0-9a-f]{40}", snapshot.get("source_commit", "")):
+        raise ValueError("development source is not pinned")
+    if snapshot["release_manifest_sha256"] != sha256(RESULT_MANIFEST):
+        raise ValueError("development snapshot's preprint baseline changed")
+    sources = {}
+    for entry in snapshot["source_files"]:
+        relative = entry["path"]
+        path = Path(relative)
+        if (path.is_absolute() or ".." in path.parts or relative in sources
+                or not path.parts or path.parts[0] not in {"docs", "src", "scripts", "tests", "results"}):
+            raise ValueError("invalid development source path")
+        target = ROOT / path
+        if target.stat().st_size != entry["bytes"] or sha256(target) != entry["sha256"]:
+            raise ValueError(f"development source hash mismatch: {relative}")
+        sources[relative] = entry
+    outputs = set()
+    for record in snapshot["records"]:
+        output = record["output"]
+        if (output in outputs or output not in sources
+                or not output.startswith("results/development/")
+                or record["generator"] not in sources or record["arguments"] != ["--check"]):
+            raise ValueError("invalid development record declaration")
+        value = json.loads((ROOT / output).read_text())
+        if record["comparison"] != value["comparison"]:
+            raise ValueError(f"development comparison policy changed: {output}")
+        validate_authenticated_inputs(ROOT, value)
+        outputs.add(output)
+    if outputs != {path for path in sources if path.startswith("results/")}:
+        raise ValueError("development record index differs from imported results")
+    return outputs
+
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -182,7 +220,14 @@ def check_manifest(errors: list[str]) -> None:
             str(path.relative_to(ROOT))
             for path in development.glob("*.json")
         )
-    if result_files != outputs:
+    try:
+        development_outputs = check_development_snapshot()
+        if development_outputs & outputs:
+            errors.append("development snapshot overlaps the frozen release")
+    except Exception as exc:
+        errors.append(f"development snapshot validation failed: {exc}")
+        development_outputs = set()
+    if result_files != outputs | development_outputs:
         errors.append("tracked NSC result files differ from the manifest closure")
 
 

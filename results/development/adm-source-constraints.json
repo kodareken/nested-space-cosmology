@@ -1,0 +1,178 @@
+{
+  "canonical_force_gradients": {
+    "N": [
+      -4.9157119401444715,
+      -4.956244212793998,
+      -4.9630189244636345,
+      -4.986438400200198,
+      -5.019356388695428,
+      -5.000719776013892,
+      -4.881319979434913,
+      -4.695579505562612,
+      -4.551316702586614,
+      -4.532585995254672,
+      -4.639996711883583,
+      -4.798915055281996
+    ],
+    "beta": [
+      0.0009918694609714377,
+      0.0007080480809034666,
+      0.0004916234015745962,
+      1.0550575500622454e-05,
+      -0.0007049121474036234,
+      -0.001199594681653664,
+      -0.0012856602824808862,
+      -0.0011281717227716937,
+      -0.0008560921179645554,
+      -0.0002449014111783391,
+      0.0006949728184500958,
+      0.0011900698057909207
+    ],
+    "energy": -58.030848566557985,
+    "q": [
+      4.527849129813356,
+      4.839486143164195,
+      4.970339585373877,
+      5.0156990602652245,
+      5.098025291752537,
+      5.185157049187444,
+      5.10320731769448,
+      4.752438213273785,
+      4.275191191489623,
+      3.9321341905037026,
+      3.8865689470339264,
+      4.136320841591918
+    ],
+    "r": [
+      0.07874895122417654,
+      0.08472784261745793,
+      0.10255147938557647,
+      0.13593799744479085,
+      0.19166873591895067,
+      0.26716919933711814,
+      0.3183297268174038,
+      0.2903504476332504,
+      0.2144947235829611,
+      0.14730865900305892,
+      0.10536219891659517,
+      0.08454862201736792
+    ]
+  },
+  "comparison": {
+    "exact": "structure, strings, non-float values and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "domain": {
+    "Euclidean_spinor": "chi=sqrt(N) u",
+    "Euclidean_time_period": 3.1,
+    "canonical_spinor": "u=r sqrt(q) psi",
+    "control_cutoff": 3.0,
+    "finite_difference_step": 0.02,
+    "metric": "N\u00b2dt\u00b2-q\u00b2(dx+beta dt)\u00b2-r\u00b2dOmega\u00b2",
+    "numerical_control": "4 Euclidean time nodes by 12 spatial nodes, one radial block; no vacuum/thermal source interpretation",
+    "physical_shift_continuation": "b_E=-i beta_L for t=-i tau",
+    "signature": "+---",
+    "source_frame": "spherical angular average; full angular multiplicities must be restored",
+    "spatial_scheme": "existing factorized Fourier scheme; no exact finite Leibniz rule claimed"
+  },
+  "energy_constraint_projection_error": 0.0,
+  "exact_identities": {
+    "ADM_Lie_metric_00": "0",
+    "ADM_Lie_metric_01": "0",
+    "ADM_Lie_metric_10": "0",
+    "ADM_Lie_metric_11": "0",
+    "ADM_Lie_sphere_radius": "0",
+    "homogeneous_constraint_energy": "0",
+    "homogeneous_constraint_momentum": "0",
+    "radial_Ward_from_Lie_variation": "0",
+    "stress_frame_N": "0",
+    "stress_frame_beta": "0",
+    "stress_frame_q": "0",
+    "stress_frame_r": "0",
+    "time_Ward_from_Lie_variation": "0"
+  },
+  "input_hashes": {
+    "results/development/vacuum-matched-ctp.json": "ef477c7b438735739b2e93f976c7d36d352669bf547a3bd5da43da0fb70a5bf3",
+    "results/nsc-4-dirac-tetrad.json": "acaa1ec0bb521e746f9786f7b0a42fd474699476ba9b91bf5f0c50b2a70fe068",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "new_vertex_binding": [
+    {
+      "direction": "N",
+      "first_action_difference": -1.7576008872052448e-13,
+      "first_action_variation": -3.196215186039784e-05,
+      "first_operator_error": 2.963370289895314e-14,
+      "second_action_difference": 2.6677566405952646e-12,
+      "second_action_variation": 0.00013507431350878556,
+      "second_operator_error": 6.8463735837983224e-12
+    },
+    {
+      "direction": "q",
+      "first_action_difference": 1.701455816516262e-13,
+      "first_action_variation": 0.0026278655064216673,
+      "first_operator_error": 3.475691956467131e-14,
+      "second_action_difference": 1.7303454676043106e-11,
+      "second_action_variation": 0.006986012225464022,
+      "second_operator_error": 7.639216733149046e-12
+    },
+    {
+      "direction": "r",
+      "first_action_difference": 2.7159447210471904e-13,
+      "first_action_variation": 5.464220389535107e-06,
+      "first_operator_error": 1.0269562977782698e-14,
+      "second_action_difference": 6.101610384480483e-11,
+      "second_action_variation": -0.0016397476875855913,
+      "second_operator_error": 2.169137103009283e-12
+    },
+    {
+      "direction": "beta",
+      "first_action_difference": -2.707488367618277e-13,
+      "first_action_variation": -0.0001321864060241904,
+      "first_operator_error": 7.401486830834377e-15,
+      "second_action_difference": 3.293172342894862e-11,
+      "second_action_variation": -0.0009517945398447223,
+      "second_operator_error": 7.401486830834376e-13
+    },
+    {
+      "direction": "mixed",
+      "first_action_difference": 5.281443685167808e-13,
+      "first_action_variation": 0.002469181168926608,
+      "first_operator_error": 5.4789506265251475e-14,
+      "second_action_difference": 3.85028146518418e-11,
+      "second_action_variation": 0.005119027749822255,
+      "second_operator_error": 7.610357439721827e-12
+    }
+  ],
+  "old_static_fiber_unitary_error": 4.440892098500626e-16,
+  "schema": "NSC-ADM-SOURCE-CONSTRAINTS-v1",
+  "scope": {
+    "continuum_Cauchy_wellposedness_proved": false,
+    "full_absolute_state_source_evaluated": false,
+    "joint_geometry_solution_found": false,
+    "old_physics_generators_rerun": false,
+    "quantum_constraint_algebra_proved": false
+  },
+  "source_hashes": {
+    "docs/nsc-adm-source-constraints.md": "ba37dd348fb2996b01c1990eec9169908685aad35a5a4d7134ff9d863abbc0fc",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "scripts/derive_nsc_adm_source.py": "ad6aab76a31fce8c43278c65304a9c625be2f87d524b1e9d5c95caad12bd2507",
+    "src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+  },
+  "status": "coupled spherical operator vertices, stress projection and continuum Ward/constraint equations derived",
+  "ward_equations": {
+    "constraint_N": "(partial_t-beta partial_x)F_N=beta_x F_N+(N/q\u00b2)partial_x F_beta+2(N_x/q\u00b2-N q_x/q\u00b3)F_beta when F_q=F_r=0",
+    "constraint_beta": "(partial_t-beta partial_x)F_beta=N_x F_N+2 beta_x F_beta when F_q=F_r=0",
+    "energy": "partial_t E+partial_x J=sum_A F_A partial_t A",
+    "energy_density": "E=N F_N+beta F_beta",
+    "energy_flux": "J=-N beta F_N-(beta\u00b2+N\u00b2/q\u00b2) F_beta+q beta F_q",
+    "momentum": "partial_t F_beta+partial_x(q F_q-beta F_beta)=sum_A F_A partial_x A"
+  }
+}
