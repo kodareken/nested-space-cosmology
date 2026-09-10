@@ -43,6 +43,7 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
     for path in (
         "results/development/scale-binding.json",
         "results/development/recursive-source-binding.json",
+        "results/development/charged-ctp-neck-source.json",
     ):
         if path in text:
             paths.append(path)

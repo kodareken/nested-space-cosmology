@@ -238,7 +238,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 14-record development update](docs/development-update-2026-09-10.md)
+3. [The 15-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

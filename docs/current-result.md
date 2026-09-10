@@ -21,7 +21,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `7ed23cd`, now contains fourteen post-preprint records.
+through laboratory commit `7ee7447`, now contains fifteen post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -30,6 +30,14 @@ candidate. Applying its simplest inherited transparent LLL state to the actual
 black-universe neck gives positive rather than required negative null sources,
 so the missing owner is the full charged angular/compact CTP tensor on that
 domain rather than another scale scan.
+
+The subsequent [charged CTP neck calculation](nsc-charged-ctp-neck-source.md)
+returns the retained child-frame tensor
+$(\rho,T_{01},p_\parallel,p_\perp)=(0.0468138,0.00122387,-0.106079,0.0302511)$
+and negative radial null components $-0.0568175$ and $-0.0617129$ at the
+locked scale. This passes the retained sign test, while the hard full gate
+remains open for the first positive compact levels' nonlocal CTP covariance
+and four ADM variations; no cosmological projection is accepted yet.
 
 ## 1. Shared mass and visible response
 
@@ -195,8 +203,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains fourteen.
-[The development index](development-update-2026-09-10.md) links all fourteen
+[the later snapshot](../results/development-snapshot.json) contains fifteen.
+[The development index](development-update-2026-09-10.md) links all fifteen
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

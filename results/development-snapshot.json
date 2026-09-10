@@ -196,11 +196,25 @@
       },
       "generator": "scripts/derive_nsc_recursive_source_binding.py",
       "output": "results/development/recursive-source-binding.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 8e-08,
+        "float_rtol": 8e-07
+      },
+      "generator": "scripts/derive_nsc_charged_ctp_neck.py",
+      "output": "results/development/charged-ctp-neck-source.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "7ed23cd3d7b7a842dae7633404bde33b6fc4ec89",
+  "source_commit": "7ee7447e99b89a4ab6d7c14b20623d7fe5a9987e",
   "source_files": [
     {
       "bytes": 3154,
@@ -511,6 +525,31 @@
       "bytes": 1144,
       "path": "tests/test_nsc_recursive_source_binding.py",
       "sha256": "c2107d2b0b7504fc3ca0b1ef6f92314ea7202cca1eaa56f82be811fc1f6ef5c1"
+    },
+    {
+      "bytes": 3088,
+      "path": "docs/nsc-charged-ctp-neck-source.md",
+      "sha256": "f7bb31c3c0f10b0c069a6308030fac5d2d935ad654fed6414a6acb00a0c70e00"
+    },
+    {
+      "bytes": 19726,
+      "path": "results/development/charged-ctp-neck-source.json",
+      "sha256": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90"
+    },
+    {
+      "bytes": 9722,
+      "path": "scripts/derive_nsc_charged_ctp_neck.py",
+      "sha256": "2da989af7e8450175681acc1a7dc9e09ef4a8ef6ee53663e41a3af8ee2f63026"
+    },
+    {
+      "bytes": 16827,
+      "path": "src/recursive_horizons/nsc_charged_ctp_neck.py",
+      "sha256": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578"
+    },
+    {
+      "bytes": 661,
+      "path": "tests/test_nsc_charged_ctp_neck.py",
+      "sha256": "b1a728513c869a07f1518496b23937fc035f643ee7c0b19bacf09f606d3d98ad"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
