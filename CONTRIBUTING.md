@@ -32,13 +32,13 @@ connection is their physical domain, common quantum functional, state and
 source/backreaction; the equation below is a constraint on that work, not a
 request to restart completed finite-tail calculations.
 
-Do not restore a scale root by adding an independently weighted geometric action, retuning \(\Phi\) after seeing the target, or inserting a dark-matter or dark-energy function. The recursive constraint, with explicit parent normalization, is
+Do not restore a scale root by adding an independently weighted geometric action, retuning $\Phi$ after seeing the target, or inserting a dark-matter or dark-energy function. The recursive constraint, with explicit parent normalization, is
 
 $$
 \Gamma_p(x)=K_p(x)-\frac{1}{\Omega}\,b\,\Gamma_c(x/\Omega)^{-1}b^{\dagger}.
 $$
 
-Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is \(q_j=\lambda_j/\zeta+\mu^2\). Do not promote the controlled periodic-throat gap to a derived \(R\), a Lorentzian nested cosmology, or an electron.
+Do not restore a determinant-only root by refining the finite additive-gap family. The unit-consistent argument is $q_j=\lambda_j/\zeta+\mu^2$. Do not promote the controlled periodic-throat gap to a derived $R$, a Lorentzian nested cosmology, or an electron.
 
 ## Verification
 
@@ -85,7 +85,7 @@ a relationship already made understandable, not replace the explanation.
 - Reserve “measurement” for a validated estimator with uncertainty and provenance.
 - Separate a coordinate statement from an invariant or locally observed one.
 - State the domain of a theorem or model result; a symmetry-reduced identity is not a generic collapse result.
-- Do not claim that Nested-Space Cosmology, a final \(\zeta\), a particle spectrum, a dark-sector fit, or our universe being inside a black hole has been proved.
+- Do not claim that Nested-Space Cosmology, a final $\zeta$, a particle spectrum, a dark-sector fit, or our universe being inside a black hole has been proved.
 
 ## What not to mix
 

@@ -588,6 +588,19 @@ def build_pdf(
             ),
             value,
         )
+        # GitHub Markdown uses single-dollar delimiters for inline mathematics.
+        # Keep support for the legacy parenthesized form above so historical
+        # source notes can still be rendered, but make the canonical manuscript
+        # portable between GitHub and this PDF builder.
+        value = re.sub(
+            r"(?<!\$)\$(?!\$)(.+?)(?<!\$)\$(?!\$)",
+            lambda match: reserve(
+                '<font name="RHItalic">'
+                + inline_math_markup(match.group(1))
+                + "</font>"
+            ),
+            value,
+        )
         value = html.escape(value, quote=False)
         value = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", value)
         value = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", value)

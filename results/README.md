@@ -20,8 +20,8 @@ The original collection has one record with the preserved `current_frontier` lab
 
 - [nsc-2-zeta1-recursion-map.json](nsc-2-zeta1-recursion-map.json) derives a
   unitary parent/child dilation and the energy-resolved recursive tail. It does
-  not select \(\Omega\), solve the mode-resolved tail, or derive physical
-  \(\zeta\). Dilation alone does not derive \(\zeta=\Omega^2\).
+  not select $\Omega$, solve the mode-resolved tail, or derive physical
+  $\zeta$. Dilation alone does not derive $\zeta=\Omega^2$.
 
 Subsequent scoped results include:
 
@@ -51,7 +51,7 @@ Subsequent scoped results include:
   regulator limits. Absolute metric backreaction remains open.
 
 - [nsc-2-zeta1-unit-closure-check.json](nsc-2-zeta1-unit-closure-check.json)
-  corrects the additive-gap units to \(q_j=\lambda_j/\zeta+\mu^2\) and proves
+  corrects the additive-gap units to $q_j=\lambda_j/\zeta+\mu^2$ and proves
   that the inherited subtracted derivative is strictly negative on this finite,
   fixed-geometry family. It does not select a physical scale.
 - [nsc-3-regulated-recursion.json](nsc-3-regulated-recursion.json)
@@ -60,17 +60,17 @@ Subsequent scoped results include:
 - [nsc-3-radial-spectrum.json](nsc-3-radial-spectrum.json)
   proves the isolated radial throat is gapless. It does not refute nested space.
 - [nsc-3-geometric-chain.json](nsc-3-geometric-chain.json)
-  produces a controlled periodic-throat gap without inserted mass. \(R\) and
-  \(\Omega\) remain inputs; this is not a Lorentzian nested cosmology.
+  produces a controlled periodic-throat gap without inserted mass. $R$ and
+  $\Omega$ remain inputs; this is not a Lorentzian nested cosmology.
 - [nsc-9-covariant-source.json](nsc-9-covariant-source.json)
   evaluates the specified ultraviolet-subtracted determinant source. Finite
   coefficients, compensator, physical state and link remain open.
 - [nsc-10-measure-normalization.json](nsc-10-measure-normalization.json)
   compares exact normalization profiles of that modulus. It does not complete
-  \(\Gamma_{\mathrm{one}}\).
+  $\Gamma_{\mathrm{one}}$.
 - [nsc-10-influence.json](nsc-10-influence.json)
   supplies a normalized finite Gaussian state functional whose smeared noise
-  equals the pair-production weight. \(Z=1\) does not fix the absolute source.
+  equals the pair-production weight. $Z=1$ does not fix the absolute source.
 
 For the scientific interpretation, including the determinant roots invalidated
 by anomaly compensation, read [the current-result document](../docs/current-result.md).

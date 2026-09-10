@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 8576,
+      "bytes": 8566,
       "path": "AGENTS.md",
-      "sha256": "07bc12358746ea792dafe051872c3b33681f42da7258c3b1a095aaf8422fe49a"
+      "sha256": "7a452d8a1a8d98adae6be908881c0ebbf63a838d0632d7a24d4140b05da6d748"
     },
     {
       "bytes": 1055,
@@ -51,9 +51,9 @@
       "sha256": "1e599cb6b5a94dbae5d85446377268b4270adbe2b98873c777bd02aa1a9a712d"
     },
     {
-      "bytes": 5575,
+      "bytes": 5567,
       "path": "CONTRIBUTING.md",
-      "sha256": "5006a24f0a56b4a45466af0ab080857ce3b9585b9b9e4716f37ff25cb168be54"
+      "sha256": "8f613ba10882918531ccf504c67e06d3ffa1ffaf53efcf236303fb5bf8352229"
     },
     {
       "bytes": 1853,
@@ -86,9 +86,9 @@
       "sha256": "1a864c8c75e75320e6808c605bf52bccdd93ebff0e91cc9c9739b6f9d7b4f3e9"
     },
     {
-      "bytes": 5226,
+      "bytes": 5216,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "605fdad6888b16af58de1c1b9160190b6929eed62a1dc9a55c014ddfde24a517"
+      "sha256": "770d0a1cebdd958de81f449dfb1d250dccb7308d83a50cea47ec6d9c4ebea190"
     },
     {
       "bytes": 3154,
@@ -423,7 +423,7 @@
     {
       "bytes": 1714,
       "path": "paper/build-manifest.json",
-      "sha256": "ff4eae8217c59b3566f63d4381f0c29dc8181a76c79338094a7e0037a890f8ea"
+      "sha256": "4cb5f490e98e5cf111ccd7a0ed914d9dcca2c940320eae531c0360aa04e9493a"
     },
     {
       "bytes": 345,
@@ -431,14 +431,14 @@
       "sha256": "7c4f6b25cd3eb703432784ab229995c7456edb1293a403f0143a3280ce4ae9ef"
     },
     {
-      "bytes": 105253,
+      "bytes": 104377,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "e2c03e4328622091b2022e8f2073e0a778915488c2e65a89767c60e03d3e03a1"
+      "sha256": "848b84debfc69b9eddf7db3202cdd5796a98789494f3b04aad45028d83db74e8"
     },
     {
-      "bytes": 1499012,
+      "bytes": 1499085,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "8f6c9cf3071fab408e4253f10eb93ee17a50714566596ce98c26ef2200466808"
+      "sha256": "d094479b6bd23b4479fb4bb544b1be2ffc1415bcd4f563fd14531426955d2425"
     },
     {
       "bytes": 1144,
@@ -456,9 +456,9 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 4790,
+      "bytes": 4774,
       "path": "results/README.md",
-      "sha256": "faf1b3b2a203022764dbc7414a2f022d79c514eda72640d444cbb7d976944643"
+      "sha256": "45523477cd3fe230ccc28665caf033a80a0cb9b80a5e8ee29b501e2b7f708df8"
     },
     {
       "bytes": 14574,
@@ -1036,9 +1036,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 53006,
+      "bytes": 53576,
       "path": "scripts/build_paper.py",
-      "sha256": "7e685ebe1869b7ec19030ee8053f9d48851998334bb25dab6aa70238b0780034"
+      "sha256": "68e8264461e8f1fdfa7cda4f9772c1fe113abafc5ebeb184094a36c26005af13"
     },
     {
       "bytes": 3480,
@@ -1271,9 +1271,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 14900,
+      "bytes": 15661,
       "path": "scripts/check_publication.py",
-      "sha256": "552f45d719495f2700131eb901572171c06c9f2f81b9bdf57cfb378a43758b20"
+      "sha256": "645f9d7a0b12255e84004f5064bd0386980a3c85fc3db695dd6e7d3e20fe988e"
     },
     {
       "bytes": 11187,

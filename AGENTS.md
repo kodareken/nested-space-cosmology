@@ -83,7 +83,7 @@ $$
 
 The current concrete regulator is the heat-spectral action plus its fermionic
 quadratic form. The configuration changes from parent to child. The law,
-\(\Theta\), energy meaning, and boundary kernel do not.
+$\Theta$, energy meaning, and boundary kernel do not.
 
 ## Constructive rules
 
@@ -133,7 +133,7 @@ The retarded map must be accompanied by quantum-state data. Induced geometric te
 
 ## What not to claim
 
-Do not claim that Nested-Space Cosmology, a final \(\zeta\), a particle spectrum, a dark-sector fit, or our universe being inside a black hole has been proved. Do not treat \(1006/1015\), \(54/503\), or any determinant-only scale minimum as a child-matched prediction. Do not repair a failed truncation by inserting sector masses, a second \(\Theta\), or an extra dark function.
+Do not claim that Nested-Space Cosmology, a final $\zeta$, a particle spectrum, a dark-sector fit, or our universe being inside a black hole has been proved. Do not treat $1006/1015$, $54/503$, or any determinant-only scale minimum as a child-matched prediction. Do not repair a failed truncation by inserting sector masses, a second $\Theta$, or an extra dark function.
 
 ## Reading order
 
