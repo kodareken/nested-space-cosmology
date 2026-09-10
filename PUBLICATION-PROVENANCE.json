@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 10152,
+      "bytes": 10968,
       "path": "README.md",
-      "sha256": "b10479ec55376d2d417014ba1eb2af7a923f436e7e9534f308a9bda2c623626f"
+      "sha256": "814d35fcc6b7c4626c78e00fc3e56949c7f2eaed921b22b278f679e87176c34a"
     },
     {
       "bytes": 629,
@@ -76,9 +76,9 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 11942,
+      "bytes": 13005,
       "path": "THEORY.md",
-      "sha256": "d97225f55e65fc2c17632d6fffc53889cf2dd1a467f0efd32cb039fad6333b31"
+      "sha256": "95db5eebfe45da56929674c527d82390daafe99584a99c52ce9ef1aa4154eee8"
     },
     {
       "bytes": 9279,

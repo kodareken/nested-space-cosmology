@@ -172,6 +172,18 @@ $$
 That is the proposed common origin of dark energy and dark matter: two ranges
 of one boundary response rather than two unrelated invisible substances.
 
+The familiar rounded $5\%/25\%/70\%$ split is used only as an observational
+target from a $\Lambda$CDM fit. It suggests a concrete hierarchy to calculate:
+
+| Observation | NSC interpretation to test | What must be calculated |
+|---|---|---|
+| $\sim5\%$ baryons | Locally resolved spectrum | Physical poles, residues, charges, and sector assignments |
+| $\sim25\%$ dark matter | Nearest unresolved room response and finite-$k$ Schur projection | Pressure perturbations, anisotropic stress, clustering, and growth |
+| $\sim70\%$ dark energy | More distant recursive tail and zero-momentum projection | Background density and pressure, conservation, and $H(z)$ |
+
+This ordering is a measurable hypothesis. The fractions do not prove it, and
+the fixed-$q$ scale candidate does not determine these cosmological weights.
+
 ## The law that every room inherits
 
 The complete proposal is compressed into

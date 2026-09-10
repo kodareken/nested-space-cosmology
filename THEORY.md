@@ -196,6 +196,22 @@ The project therefore does not need separate arbitrary functions for a dark
 fluid, a particle mass, and a boundary force. They must be projections of the
 same $\Pi_{\rm outside,\Theta}$.
 
+The rounded $\Lambda$CDM fractions provide a useful target dictionary, rather
+than a derivation of the hierarchy:
+
+| Observation | NSC interpretation to test | What must be calculated |
+|---|---|---|
+| $\sim5\%$ baryons | Locally resolved spectrum | Physical poles, residues, charges, and sector assignments |
+| $\sim25\%$ dark matter | Nearest unresolved room response and finite-$k$ Schur projection | Pressure perturbations, anisotropic stress, clustering, and growth |
+| $\sim70\%$ dark energy | More distant recursive tail and zero-momentum projection | Background density and pressure, conservation, and $H(z)$ |
+
+The proposed ordering says that finite-wavelength structure is dominated by
+the nearest unresolved response while deeper contributions are progressively
+smoother. That statement must come from the calculated momentum-dependent
+kernel; neither the observed percentages nor the current $q=4$ scale binding
+establish it. A recursive tail must converge in the relevant observable norm,
+not merely produce a nonterminating decimal representation.
+
 ## 5. A black hole is a spectral handoff
 
 Compressing energy raises the relevant frequency and shortens the wavelength.
