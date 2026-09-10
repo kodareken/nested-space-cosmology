@@ -342,6 +342,8 @@ $$
 P_{\mathrm{even}}=\frac{I_8\mp\tau_3\otimes\gamma^5}{2}.
 $$
 
+At the zero-mode level captured by the diagnostic, the potential for Callan–Harvey anomaly inflow at the spatial boundary is explicitly neutralized by the field content. The two equally charged bulk copies with opposite compact parities, selected by $P_{\mathrm{even}}=(I_8\mp\tau_3\otimes\gamma^5)/2$, give one left- and one right-handed zero mode and make both the cubic $U(1)^3$ and mixed gravitational–$U(1)$ boundary-anomaly coefficients vanish exactly. This exact cancellation strictly preserves $U(1)$ gauge symmetry across the throat boundary in the [`charged-sector.json`](../results/development/charged-sector.json) diagnostic without an additional localized Wess–Zumino boundary term; the full five-dimensional determinant phase and boundary-domain matching remain the separate completion item recorded there.
+
 Both remain. Sheet swap is not charge conjugation: a right-handed charge-one field is counted as a left-handed charge-minus-one field only in anomaly bookkeeping ([charged sector](../results/development/charged-sector.json)). The imported Einstein and Casimir solutions are not recomputed. Link mass, flux geometry, renormalized coefficients and child expansion remain unresolved.
 
 The two five-dimensional Dirac copies yield one four-dimensional Dirac zero field before a link mass is added. Their ultraviolet spinor trace has rank eight; applying the bulk coefficients to this candidate requires that two-copy multiplicity, not the one-copy normalization of the earlier UV control.
