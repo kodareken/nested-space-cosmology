@@ -3,30 +3,53 @@
 ## One Recursive Spectral Gradient–Boundary Equation Across Scales
 
 **Douglas Ek**<br>
-Version 0.7.0 — 9 September 2026<br>
-Working preprint · not peer reviewed
+Version 0.7.0 · editorial revision, 10 September 2026<br>
+Working preprint
 
 ## Abstract
 
-Nested-Space Cosmology proposes that local matter, inherited constants, unresolved gravitational response, and a finite parent-to-child transition arise from one recursive operator and one set of laws. The organizing condition is \(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\). The objective is a self-sourced physical solution whose matter, geometry and observations follow from the same action and state.
+Nested-Space Cosmology develops a common description of local matter, boundary
+response and gravitational source through the recursive condition
+\(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\). A block Dirac operator
+places locally resolved fields on its diagonal and parent–child interactions
+off diagonal. The research objective is a geometry whose quantum state and
+stress are determined by this same action.
 
-The reproducible foundation includes evaluated full-spinor boundary maps, normalized recursion, smooth geometric spectra, causal Dirac transport, quantum vacuum-source controls, and a scalar sheet coupling with an invariant massive Dirac sector. A prescribed geometry pulse creates Dirac pairs with a verified work balance. Covariant metric variation and normalized state histories identify further pieces of the common quantum functional.
+Three connections make the construction concrete. First, a scalar sheet link
+has an invariant four-component sector with the ordinary Dirac mass shell;
+the same coupling fixes the visible self-energy. Second, evaluated curved
+spinor maps connect direct propagation to boundary elimination. Third,
+metric variation and quantum-state evolution connect geometric work, field
+excitation and cross-boundary energy transfer.
 
-This revision combines affine-horizon state data with the actual complex exterior Dirac reflection. The resulting canonical massless candidate has mean radial null stress approximately \(-0.05280\) at the imposed neck, in units \(\hbar=c=L_{\mathrm{throat}}=1\) and normalization \(\mu=1\). Both null contractions are negative after including the flux. No scalar source or Einstein coefficient was fitted. Density, pressure anisotropy and flux still leave independent geometric residuals.
+On the smooth expanding-child benchmark, affine-horizon data and the actual
+complex exterior Dirac reflection determine a canonical massless source with
+mean radial null stress approximately \(-0.05280\), in units
+\(\hbar=c=L_{\mathrm{throat}}=1\) and normalization \(\mu=1\). Both null
+contractions are negative, and the state carries outward parent Killing power
+\(0.0001422206795\). A prescribed geometry pulse independently produces Dirac
+pairs with a verified work balance. The calculation specifies density,
+pressure, flux and their remaining componentwise metric residuals.
 
-A separate thermal calculation quantifies the finite state-dependent conversion required by the adopted proper-time prescription. The canonical state source cannot be identified directly with the raw finite determinant. The same-state nonthermal conversion and full domain conditions remain to be established before the complete source can be used for backreaction.
+The paper follows these equations from the operator to its source, using
+100 reproducible records and a linked development snapshot. Its next defining
+step is the complete causal geometric contribution, with the state and domain
+needed to solve the coupled geometry. The technical appendices retain the
+normalization identities, historical corrections and numerical domains.
 
-The 100-record collection preserves 58 historical records and 42 scoped follow-ups. Evaluated boundary, state and source connections form a reproducible path toward the proposed common action. Full closure requires its remaining causal and transmitting contributions, followed by a joint field/metric/scale solution and independent matter and cosmological predictions.
+## 1. One law across nested spaces
 
-## 1. One hypothesis and a continuous physical test
-
-**Postulate.** Spaces form inside spaces through collapse, localization and renewed expansion. A room can change its configuration and locally measured scales while inheriting the same dimensionless law. The central requirement is
+The central proposal is that spaces form inside spaces through collapse,
+localization and renewed expansion. A room changes its configuration and local
+scale while inheriting a common dimensionless law:
 
 $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-Its block form has room operators on the diagonal and parent/child boundary maps off diagonal. The proposed invariant partition and present spectral prescription are
+The diagonal blocks describe room operators. Off-diagonal blocks describe
+their boundary interactions. The proposed invariant partition and the present
+spectral prescription are
 
 $$
 Z_{\Lambda}^{\mathrm{one}}(\mathbb D_\Theta)=\int\mathcal D\varphi\,Z_\Lambda(e^{-\varphi/2}\mathbb D_\Theta e^{-\varphi/2}),
@@ -36,92 +59,139 @@ $$
 S_{\mathrm{one}}=\operatorname{Tr}e^{-\mathbb D_\Theta^2/\Lambda^2}+\langle J\Psi,\mathbb D_\Theta\Psi\rangle.
 $$
 
-The displayed functional is a formulation to complete, not an already normalized quantum-gravity path integral. The regulator, normalization scale, compensator, measure, determinant phase, zero modes and physical domain must be derived consistently. Induced geometric terms must be counted once. Adding a separate gravitational weight to rescue a stationary root would change the adopted construction.
-
-The same action must generate the source of its geometry, the physical particle sectors and their interactions, and the observable response. The operational chain is:
+A physical realization specifies the regulator, normalization scale, measure,
+compensator, determinant phase, zero modes and boundary domain together.
+Induced geometric terms enter once. These ingredients define the chain
 
 ```text
-common action + state + recursive boundary domain
-       -> boundary response and absolute stress
+common action, quantum state and recursive domain
+       -> boundary response and quantum stress
        -> coupled geometry and state evolution
        -> matter, energy transfer and physical modes
        -> expansion, clustering and lensing
-       -> independent observational tests
 ```
 
-**Douglas Ek** is the accountable author and retains scientific and publication responsibility. ChatGPT/OpenAI Codex assisted with formulation, derivation, software, computation and presentation; Grok supplied bounded independent checks. The author identifies the principal collaborating sessions as GPT-5.6 Sol and GPT-6 Astra. These attribution labels do not certify a calculation: each result is supported by its committed equations, reproducer, source hashes and stated scope.
+The equations below distinguish defining requirements, attributed established
+methods and project calculations through their assumptions and sources.
+General research status is stated in the [repository README](../README.md#research-status).
 
-## 2. Six explanations the programme aims to establish
+Douglas Ek supplies the conceptual synthesis and scientific responsibility.
+ChatGPT/OpenAI Codex assisted with derivations, computation and writing;
+Grok supplied bounded investigations. The principal collaborating sessions
+are identified as GPT-5.6 Sol and GPT-6 Astra. Equations, source hashes and
+reproducible artifacts provide the evidence for each result.
 
-Each row is a research target. The third column records the calculation that would turn its interpretation into a physical result.
+## 2. Six physical connections
 
-| Target | Strongest present connection | Required physical closure |
+| Research target | Present connection | Quantity to determine from the common solution |
 |---|---|---|
-| Constants and thermal limits | Characteristic/current calculations; compact-to-light matching; a flat thermal conversion control of the finite proper-time factor | Complete physical couplings, common causal cone and physical thermal state |
-| Finite black-hole continuation | Regular benchmark geometry; horizon transport and a parent-matched canonical massless Dirac source with negative neck null | Self-sourced collapse, physical stability and complete continuation |
-| Dark matter and dark energy | Boundary self-energy, parent-matched source residuals and energy-transfer identities | Joint background stress and perturbation predictions |
-| Particle, wave and measurement | Field excitations, a projected Dirac–gauge interaction and a finite Gaussian state functional | Derived interactions, detector records and quantum statistics |
-| Mass, chirality and antimatter | Exact invariant sheet/chirality sector, compact Dirac masses and charge algebra | Actual boundary coupling, physical sector selection and gauge representations |
-| Probability and recursive infinity | Tail endpoint criteria; dilution of homogeneous free state differences; a specified determinant remainder | Consistent recursive state measure, causal duration and observable limits |
+| Constants and thermal limits | Characteristic currents, compact/light matching and thermal conversion | Gravitational coupling, common causal cone and physical thermal state |
+| Finite black-hole continuation | Smooth geometry, horizon transport and parent-matched stress | Evolved geometry, constraints and complete continuation |
+| Dark response | Boundary self-energy and energy-transfer identities | Background stress, growth and lensing |
+| Particle, wave and measurement | Excitations, Dirac–gauge interaction and Gaussian state functional | Detector coupling, records and statistics |
+| Mass, chirality and antimatter | Invariant Dirac sector, compact masses and charge algebra | Actual scalar interaction, sector selection and gauge representations |
+| Recursive infinity | Endpoint criteria and free-state dilution | State marginals, clock transfer and observable limits |
 
 <!-- nsc-claim:target-constants -->
-### 2.1 Constants, resolution and absolute zero
+### 2.1 Constants and physical resolution
 
-**Open prediction.** The causal cone must follow from the physical principal symbol and agree across the relevant propagating species. A numerical value of a dimensional speed also depends on clock and ruler conventions. Derive the gravitational response before identifying
+The causal cone follows from the physical principal symbol. A dimensional
+speed is expressed using the room's clock and ruler conventions. Gravitational
+response supplies \(G\), from which
 
 $$
 \ell_P=\sqrt{\hbar G/c^3}
 $$
 
-with a scale of the model. A spectral cutoff does not by itself prove a shortest measurable distance; that requires a localized-probe/backreaction experiment. The historical constant dictionary names intended outputs but does not derive nature's values ([constant dictionary](../results/nsc-1-s-one-constant-dictionary.json)).
+can be compared with the spectral resolution scale. Establishing an operational
+minimum distance additionally requires localized probes and their backreaction.
+The [constant dictionary](../results/nsc-1-s-one-constant-dictionary.json)
+records the intended observables.
 
-**Open prediction.** Zero temperature is a limit of the physical many-body thermal state, not the bottom of the signed first-quantized Dirac spectrum. A suitable equilibrium construction must be independent of the arbitrary energy origin, handle ground-state degeneracy and zero modes, and distinguish residual spin or vacuum correlations from thermal excitation. The historical phrase equating absolute zero with a spectral infimum is therefore a proposed dictionary entry requiring this additional derivation.
+Temperature is defined by the physical many-body state. Its zero-temperature
+limit must respect energy-origin invariance, ground-state degeneracy and zero
+modes. Residual spin and vacuum correlations belong to that state's structure;
+thermal excitation is determined by its occupations.
 
 <!-- nsc-claim:target-continuation -->
-### 2.2 Black holes and historical horizons
+### 2.2 Collapse and an expanding interior
 
-**Imported result.** Regular black-universe solutions already combine a trapped region, positive minimum areal radius and expanding interior in one geometry [6]. The project uses that solution as a development benchmark. Its existence is not proof that our universe is such an interior or that the same geometry is sourced by this operator.
+Regular black-universe solutions already combine a trapped region, positive
+minimum radius and expanding interior [6]. They provide the geometric
+benchmark for the present Dirac calculation.
 
 <!-- nsc-claim:imported-charged-throat -->
-**Imported result.** Maldacena, Milekhin and Popov already derive a semiclassical Einstein–Maxwell throat supported by charged massless Dirac vacuum energy [32]. Their sections 2 and 5 give the light magnetic channels, the anomaly-corrected Casimir stress and its Einstein matching. This is imported theory, not an NSC-computed solution, an observed wormhole, a generic formation process, or a child-expansion proof. The earlier radial transport operator does not contain their magnetic flux state. The charged-sector record checks compact parity, anomaly cancellation and heat-coefficient conventions; the later flat-holonomy calculation adds a conditional gauge saddle on a closed cell. The magnetic return geometry, mass, internal representation, vacuum/gravitational/gauge coefficients and global boundary matching remain unresolved. Their optical or redshift length is not proper length. Short-distance formulas have stated conditions, and longer separation or mouth stabilization require their sections 5.5–6. The retained ultraviolet volume term is not set to zero to obtain their asymptotically flat exterior.
+Maldacena, Milekhin and Popov supply a complementary source benchmark: a
+semiclassical Einstein–Maxwell throat supported by charged massless Dirac
+vacuum energy [32]. Their sections 2 and 5 establish the light magnetic
+channels, Casimir stress and Einstein matching; sections 5.5–6 discuss longer
+separations and stabilization. Applying this construction requires its magnetic
+return geometry, state and coefficient normalization. Its optical length and
+proper length enter different parts of the matching.
 
-**Repository derivation.** The actual horizon-penetrating radial Hamiltonian includes the shift and spin connection. Conserved Dirac norm transfers in the child direction in the declared Cauchy problem ([tetrad](../results/nsc-4-dirac-tetrad.json), [transport](../results/nsc-4-lorentzian-transport.json)). The trapped finite boundary has an outflow structure; it cannot be replaced by an arbitrary reflecting wall.
-
-**Repository derivation.** Section 4.8 records a phase-resolved parent-matched canonical massless Dirac candidate on that same geometry. Its neck null contractions are negative, but density, pressure anisotropy and flux do not match the required two-derivative tensor. The candidate is therefore not a self-sourced continuation.
-
-**Open prediction.** Complete physical continuation requires a dynamically sourced solution, constraints, finite tidal response and extension of relevant finite-affine endpoints. Infinite coordinate time is not affine completeness ([clock and horizon audit](../results/nsc-5-clock-horizon.json)). High-energy Euclidean spectral form factors [13] are not by themselves a Lorentzian theorem that bosonic signals stop at a physical wall.
+The project's horizon-penetrating Hamiltonian retains shift and spin connection.
+Its declared Cauchy evolution conserves Dirac norm while transporting it into
+the child ([tetrad](../results/nsc-4-dirac-tetrad.json),
+[transport](../results/nsc-4-lorentzian-transport.json)). Section 4.8 evaluates
+the parent-matched massless stress. Its negative radial null components,
+pressure anisotropy and outward flux define the input to gravitational
+backreaction. Complete continuation is assessed through the resulting
+constraints, tidal response and finite-affine endpoints
+([clock and horizon](../results/nsc-5-clock-horizon.json)). Physical bosonic
+propagation requires the Lorentzian response associated with the Euclidean
+spectral form factors [13].
 
 <!-- nsc-claim:target-dark-sector -->
-### 2.3 Dark response from adjacent rooms
+### 2.3 Adjacent rooms and gravitational response
 
-**Postulate.** Degrees of freedom outside a locally resolved room can act through its boundary response. **Repository derivation.** Eliminating those degrees of freedom gives a Schur self-energy. This establishes an exact response mechanism, not its identification with the observed dark-matter and dark-energy components.
-
-An isotropic background source and a clustering/lensing response are different projections of the same required effective stress. Both must be calculated. A finite vacuum cutoff does not solve the cosmological-constant problem without a predicted renormalized curvature and physical scale. Nor does a nonzero boundary map establish a continuing energy supply.
+Eliminating an unresolved room produces an exact Schur self-energy. The dark
+sector proposal identifies background gravity and clustering as physical
+projections of this boundary response. Their calculation requires the same
+state's density, pressure, anisotropic stress and transfer currents.
+A predicted vacuum curvature and physical scale connect the spectral
+construction to the cosmological-constant question.
 
 <!-- nsc-claim:target-measurement -->
-### 2.4 Localized excitations, waves and measurement
+### 2.4 Localized excitations, waves and detection
 
-**Imported result.** Individual detections build interference patterns [1]. QFT describes particles as field excitations; solitons and collective coordinates supply additional useful construction patterns [4]. The existing [particle/wave record](../results/nsc-1-s-one-particle-wave-identity.json) is an imported collective-coordinate reduction. It does not solve an electron or detector.
-
-**Open prediction.** Couple an identified excitation to a detector through the derived interaction and evolve the whole energy/charge ledger. Interference, localized records, outcome probabilities, Bell correlations and no-signalling must follow from that model. Decoherence or mechanical resonance alone does not derive the Born rule or select an individual outcome. Bell and PBR results constrain admissible accounts [2,3]; unresolved room labels alone do not establish one.
+Quantum field theory describes particles as field excitations, and individual
+detections build interference patterns [1]. Solitons and collective coordinates
+supply additional construction patterns [4]; the project's
+[particle/wave record](../results/nsc-1-s-one-particle-wave-identity.json)
+imports that reduction. A detector model couples the identified excitation,
+probe and environment through their interaction while retaining energy and
+charge accounting. Its outputs are localized records, normalized outcome
+probabilities, interference and two-detector correlations. Bell and PBR
+results [2,3] constrain that probability construction.
 
 <!-- nsc-claim:target-antimatter -->
 ### 2.5 Chiral mass and charge-conjugate states
 
-The scalar sheet benchmark in Section 3 provides an exact version of the proposed left/right relation. Its coupling has not yet been derived from the throat. Chirality, radial component, angular sector, sheet label and charge are distinct operations. Antimatter requires the conjugate gauge representation, not merely an opposite sheet or a reversed spatial gradient.
-
-With the stated gamma conventions, distinguish the charge-conjugation matrix \(C=i\gamma^2\gamma^0\) in \(\psi^c=C\bar\psi^T\) from the antilinear column-spinor map \(\psi^c=i\gamma^2\psi^*\). The quantum symmetry operation and a c-number conjugation map are not interchangeable definitions. Both opposite-parity compact projectors remain; sheet exchange is not charge conjugation. Physical photons require a spin-one gauge sector. The produced Dirac pairs do not establish baryonic dust or the observed matter excess.
+The scalar-sheet benchmark in Section 3 gives an exact Dirac mass interaction
+on an invariant subspace. The actual boundary problem determines its Clifford
+content and physical sector. Chirality, sheet label and gauge charge have
+separate operators. With the stated gamma conventions,
+\(C=i\gamma^2\gamma^0\) enters \(\psi^c=C\bar\psi^T\), while the corresponding
+column-spinor map is \(\psi^c=i\gamma^2\psi^*\). Charge conjugation acts on the
+gauge representation. Both complementary scalar-link sectors are retained
+until the action or domain selects one. Spin-one fields and the matter–antimatter
+asymmetry require their respective gauge and state dynamics.
 
 <!-- nsc-claim:target-recursion -->
-### 2.6 Probability, infinite generation and existence
+### 2.6 Recursion, clocks and probability
 
-**Interpretive hypothesis.** Infinity describes ongoing generation rather than one static container. **Repository derivation.** On a particular unweighted spatial chain, the endpoint is uniquely determined for \(\Omega q\leq1\), while \(\Omega q>1\) requires data at infinite depth ([tail result](../results/nsc-5-tail-limit.json)). This is an endpoint criterion, not a universal strict-contraction theorem; critical recursions can converge algebraically.
-
-A nonterminating decimal is not evidence of nested geometry. Infinite room count is not proof of infinite mapped proper time. A physical claim of eternal generation requires the state measure, clock map, causal continuation and limiting observable to be defined. Energy conservation and a finite cutoff alone do not prove that child formation is inevitable or that existence has probability one.
+The nested interpretation treats infinity as successive generation of rooms.
+On the specified unweighted spatial chain, the endpoint is uniquely determined
+for \(\Omega q\leq1\); \(\Omega q>1\) requires data at infinite depth
+([tail result](../results/nsc-5-tail-limit.json)). Critical recursions can
+converge algebraically. The physical construction couples this endpoint
+analysis to a state measure, clock-transfer law and limiting observables.
+Those quantities determine what an infinite chain means for duration and
+probability within a room.
 
 ## 3. A precise shared mass and self-energy benchmark
 
-**Repository derivation.** In sheet-first Weyl order, consider
+In sheet-first Weyl order, consider
 
 $$
 H_8=I_2\otimes\boldsymbol{\alpha}\cdot\mathbf p+\Phi\tau_1\otimes\beta,
@@ -145,26 +215,26 @@ E^2=|\mathbf p|^2+\Phi^2,
 \Sigma_p(E)=\Phi^2(E+\boldsymbol{\alpha}\cdot\mathbf p)^{-1}.
 $$
 
-The complementary sector is equally invariant and spectrally equivalent. Physical selection must follow from the common action or domain, not preference. A spinor-identity sheet link instead has energies ±p±Phi and is gapless at p=Phi. A Hermitian pseudoscalar link has the same free gap and self-energy as the scalar benchmark. The spectrum therefore does not determine the complete interaction. The [observable bridge](../results/nsc-7-observable-bridge.json) checks these distinctions and the corresponding charge algebra.
+The complementary sector is equally invariant and spectrally equivalent. The common action or domain must supply physical sector selection. A spinor-identity sheet link instead has energies ±p±Phi and is gapless at p=Phi. A Hermitian pseudoscalar link has the same free gap and self-energy as the scalar benchmark. The spectrum therefore does not determine the complete interaction. The [observable bridge](../results/nsc-7-observable-bridge.json) checks these distinctions and the corresponding charge algebra.
 
 Both chiral components carry the same Dirac charge. A massive positive-energy eigenstate has a constant chirality expectation. The familiar left-to-right oscillation belongs to a specified initially chiral state containing both energy signs. In the full paired angular continuum problem, the massless radial geometry and its radius pulse preserve physical chirality. Their radial gap is consequently not already a four-dimensional chirality-breaking rest mass.
 
-The next test is the actual boundary map's Clifford structure, orientation and invariant domain, followed by a controlled local limit and physical pole. These calculations are kinematic connections within this project; ordinary Dirac algebra is prior physics.
+The boundary calculation below determines the Clifford structure, orientation and invariant domain needed to connect this Dirac reduction to the actual geometry.
 
-**Repository derivation: evaluated boundary channels.** The full paired-angular calculation now evaluates an energy-dependent four-component spatial link in an explicit current-conserving domain. Direct joined, transfer and Schur calculations agree below 2e-15 relative; an independent continuum integration gives 0.00947%–0.03645% errors at the reported resolution. The link preserves physical chirality. Its action-form Clifford decomposition has vector and axial content; scalar and pseudoscalar terms vanish to numerical precision ([chiral boundary](../results/nsc-8-chiral-boundary.json)).
+**evaluated boundary channels.** The full paired-angular calculation now evaluates an energy-dependent four-component spatial link in an explicit current-conserving domain. Direct joined, transfer and Schur calculations agree below 2e-15 relative; an independent continuum integration gives 0.00947%–0.03645% errors at the reported resolution. The link preserves physical chirality. Its action-form Clifford decomposition has vector and axial content; scalar and pseudoscalar terms vanish to numerical precision ([chiral boundary](../results/nsc-8-chiral-boundary.json)).
 
-This result specifies the actual transport structure of that massless spatial realization. The proposed chiral-sector mass reduction requires an additional interaction or physical domain mechanism derived from the common action. A passive change of the child spin frame does not supply it: chirality must be transported with the frame. The numerical map is a finite spatial point-port response, with its units and regulator stated explicitly; it is not the full PG retarded map or a local mass term.
+This finite spatial point-port response fixes the transport structure of the massless realization in its stated units and regulator. Chirality is transported with the spin frame. The scalar mass reduction therefore requires a physical interaction or domain mechanism, followed by its causal response and pole calculation.
 
 <!-- nsc-claim:compact-mode-overlaps -->
-**Imported result / repository derivation: compact mass identification.** The missing source input is a physical four-dimensional mass, not another spatial gap. Applying the established conformal Dirac and Kaluza–Klein reductions [33,34] to the declared free carrier on an interval of coordinate length 2 L⋆, with the right-handed component vanishing at both endpoints, yields one Weyl zero mode and the massive Dirac tower
+**Imported result / repository derivation: compact mass identification.** Applying the established conformal Dirac and Kaluza–Klein reductions [33,34] to the declared free carrier on an interval of coordinate length 2 L⋆, with the right-handed component vanishing at both endpoints, yields one Weyl zero mode and the massive Dirac tower
 
 $$
 m_n=\frac{n\pi}{2L_{\star}},\quad n\geq1.
 $$
 
-The full spacetime warp cancels from canonically normalized free evolution. This is an application of prior mathematics, recorded as an explanatory note rather than an extra compact result. Compact size, species, occupations and the actual throat coupling remain open ([compact mass map](../docs/nsc-compact-mass-map.md)).
+The full spacetime warp cancels from canonically normalized free evolution. The declared compact size fixes this free spectrum; species, occupations and the interacting throat coupling enter the common source problem ([compact mass map](../docs/nsc-compact-mass-map.md)).
 
-**Repository derivation: torsion interaction overlaps.** Substituting those NSC profiles into the published higher-dimensional Einstein–Cartan contact [35] produces a mode-matrix vertex. After fermionic antisymmetrization the 3111 coupling remains nonzero, so a single massive level is not an exact interacting sector. The geometric warp changes the overlap coefficients even though it cancelled from free evolution. The five-dimensional stiffness \(s_T\), compact boundary action, physical state and absolute stress remain inputs ([compact interaction](../results/development/compact-interaction.json)).
+**torsion interaction overlaps.** Substituting those NSC profiles into the published higher-dimensional Einstein–Cartan contact [35] produces a mode-matrix vertex. After fermionic antisymmetrization the 3111 coupling remains nonzero, so a single massive level is not an exact interacting sector. The geometric warp changes the overlap coefficients even though it cancelled from free evolution. The five-dimensional stiffness \(s_T\), compact boundary action, physical state and absolute stress remain inputs ([compact interaction](../results/development/compact-interaction.json)).
 
 <!-- nsc-claim:charged-sector-parity -->
 **Imported result / repository derivation: charged parity and anomaly compatibility.** To use the imported charged throat as a source test, a local realization must contain an actual gauge connection. The present candidate is a U(1) extension with two equally charged bulk copies; it does not derive electromagnetism or the internal algebra. Within this field content, opposite compact parities are required both for an even neutral scalar link and for cancellation of the zero-mode cubic and mixed gravitational–gauge anomalies. The two allowed projectors are the invariant scalar-link sectors identified above:
@@ -180,7 +250,7 @@ The two five-dimensional Dirac copies yield one four-dimensional Dirac zero fiel
 
 ## 4. Geometry, vacuum stress and an explicit energy ledger
 
-**Repository derivation.** The isolated radial throat is gapless. Periodic confinement can create a band gap, and a smooth periodic profile removes the earlier geometric seams:
+The isolated radial throat is gapless. Periodic confinement can create a band gap, and a smooth periodic profile removes the earlier geometric seams:
 
 $$
 r(x)=\sqrt{a^2+[\sin(kx)/k]^2},\qquad k=\pi/(2R).
@@ -198,7 +268,7 @@ The [covariant vacuum controls](../results/nsc-4-covariant-measure.json) establi
 
 A finite term proportional to the squared Weyl curvature leaves the anomaly unchanged but changes the varying-neck shape equation. The current flat common-scale integral also diverges in its finite realization. The ultraviolet functional, complete compensator and state must resolve these questions before a stationary root represents self-sourcing.
 
-**Repository derivation: finite metric response.** The general-metric calculation now isolates four independent bulk channels in the local basis \(M^4,M^2R,C^2,R^2,E_4,\Box R\). On the closed smooth cell, the Euler and divergence terms have exact zero bulk variation. Both R=2 and R=4 profiles distinguish the remaining four coefficients; the constant-cylinder control has rank two. Independent lapse, radial metric and radius variations agree with direct energy changes ([finite terms](../results/nsc-8-finite-terms.json)).
+**finite metric response.** The general-metric calculation now isolates four independent bulk channels in the local basis \(M^4,M^2R,C^2,R^2,E_4,\Box R\). On the closed smooth cell, the Euler and divergence terms have exact zero bulk variation. Both R=2 and R=4 profiles distinguish the remaining four coefficients; the constant-cylinder control has rank two. Independent lapse, radial metric and radius variations agree with direct energy changes ([finite terms](../results/nsc-8-finite-terms.json)).
 
 For the declared finite-action sign convention, the exact neck null response is
 
@@ -209,12 +279,12 @@ $$
 This gives a concrete ultraviolet matching problem: determine these coefficients from the same functional, then solve the independent metric equations. They have not been fitted to make the neck stationary. The result concerns a closed torsionless metric sector through four derivatives; boundary contributions and other fields require their corresponding terms.
 
 <!-- nsc-claim:torsion-uv-finite-matching -->
-**Repository derivation: five-dimensional ultraviolet matching.** The leading proper-time bulk coefficients of the candidate torsion contact reuse the dimension-independent heat formulae [29,36]. In five dimensions the induced Einstein and \(K^2\) terms have stiffness ratio 9. A matching window keeps this induced piece separate from the complementary one-loop determinant. The volume term is retained; it is not set to zero to manufacture an asymptotically flat solution. Leading stiffness 9 does not fix the finite datum \(c_T-9c_R\). The displayed derivative scale is a coefficient comparison, not a physical torsion mass ([UV map](../results/development/torsion-uv-map.json)).
+**five-dimensional ultraviolet matching.** The leading proper-time bulk coefficients of the candidate torsion contact reuse the dimension-independent heat formulae [29,36]. In five dimensions the induced Einstein and \(K^2\) terms have stiffness ratio 9. A matching window keeps this induced piece separate from the complementary one-loop determinant. The volume term is retained; it is not set to zero to manufacture an asymptotically flat solution. Leading stiffness 9 does not fix the finite datum \(c_T-9c_R\). The displayed derivative scale is a coefficient comparison, not a physical torsion mass ([UV map](../results/development/torsion-uv-map.json)).
 
 <!-- nsc-claim:published-flow-compatibility -->
 **Imported result / repository derivation: quantum-flow limits.** A published generalized Palatini flow [37] has a larger connection field space. Its metric contribution does not preserve the constrained Dirac three-form subspace in \(d=5\); its fermion contribution does. Copying that paper's four-dimensional fixed-point numbers does not determine the present five-dimensional functional. The next flow must be defined on the actual metric, skew three-form, physical fermions, links and measure ([flow compatibility](../results/development/flow-compatibility.json)).
 
-**Repository derivation: covariant determinant source.** The static Euclidean operator on the same smooth cell is
+**covariant determinant source.** The static Euclidean operator on the same smooth cell is
 
 $$
 D_\omega=\beta\omega/N+i\beta H_0(q,r).
@@ -226,21 +296,21 @@ $$
 E_\Lambda=\frac{1}{2}\sum_{\kappa\geq1}2\kappa\int_{\mathbb R}\frac{d\omega}{2\pi}\operatorname{Tr}_{x,4}E_1(D_\omega^2/\Lambda^2).
 $$
 
-Frequency integration reproduces the known cylinder vacuum response. Independent metric variations conserve the static stress and recover the established Dirac heat coefficients \(a_0=4\), \(a_2=-R_E/3\) through \(a_4\) [29]. Those coefficients are not a Nested-Space discovery. The specified ultraviolet subtraction is
+Frequency integration reproduces the known cylinder vacuum response. Independent metric variations conserve the static stress and recover the established Dirac heat coefficients \(a_0=4\), \(a_2=-R_E/3\) through \(a_4\) [29]. The specified ultraviolet subtraction is
 
 $$
 E_{\mathrm{sub}}(M)=E_\Lambda-\frac{A_0\Lambda^4/2+A_2\Lambda^2+A_4\log(\Lambda^2/M^2)}{32\pi^2}.
 $$
 
-At \(a=1\), \(R=2\) and \(M=1\), the remainder energy is about \(-0.09050\) with neck null stress about \(-0.00911\) at \(\Lambda=4\). This is a calculated negative null contribution under that subtraction, not a scheme-independent complete source ([covariant source](../results/nsc-9-covariant-source.json)). On the same lapse/radius/shape probes the determinant now supplies actual projections \(b_A^{\mathrm{determinant}}\) in
+At \(a=1\), \(R=2\) and \(M=1\), the remainder energy is about \(-0.09050\) with neck null stress about \(-0.00911\) at \(\Lambda=4\). This is the negative null contribution in the stated subtraction prescription ([covariant source](../results/nsc-9-covariant-source.json)). On the same lapse/radius/shape probes the determinant now supplies actual projections \(b_A^{\mathrm{determinant}}\) in
 
 $$
 b_A^{\mathrm{determinant}}+J_{Ai}c_i+b_A^{\mathrm{compensator,link,state}}=0.
 $$
 
-No coefficient is fitted to hold the neck open. Uniform clock scaling multiplies the covariant energy, while a fixed spatial-Hamiltonian cutoff does not.
+The coefficient and determinant terms retain their common normalization. Uniform clock scaling multiplies the covariant energy, while a fixed spatial-Hamiltonian cutoff does not.
 
-**Repository derivation: normalization profiles.** Write \(x=d^2/\Lambda^2\). The calculated modulus per eigenvalue is half the exponential integral E1(x). A smooth weighted logarithm and the heat-covariantized old rank term obey
+**normalization profiles.** Write \(x=d^2/\Lambda^2\). The calculated modulus per eigenvalue is half the exponential integral E1(x). A smooth weighted logarithm and the heat-covariantized old rank term obey
 
 $$
 g_{\mathrm{log}}=-\frac{1}{2}e^{-x}\log(d^2/M^2),\qquad
@@ -250,7 +320,7 @@ $$
 
 The remainder is not a multiple of the identity or of the heat kernel, so replacing the old finite-rank term by a heat trace changes the finite action. The identity is a comparison of prescriptions, not an insertion into \(\Gamma_{\mathrm{one}}\) ([normalization](../results/nsc-10-measure-normalization.json)). Andrianov’s primary projector \(P_N=\Theta(1-D^2/\Lambda^2)\) is a different object [11]; its cylinder cutoff wall has a closed form, while an unrestricted \(\operatorname{Tr}1\) integral diverges.
 
-**Repository derivation.** Assign half of the cross-region link energy to each region, with \(h_A=(P_AH+HP_A)/2\), and use \(C_{ij}=\langle c_j^\dagger c_i\rangle\). Then
+Assign half of the cross-region link energy to each region, with \(h_A=(P_AH+HP_A)/2\), and use \(C_{ij}=\langle c_j^\dagger c_i\rangle\). Then
 
 $$
 \frac{dE_A}{dt}=\operatorname{Tr}(C\,i[H,h_A])+\operatorname{Tr}(C\dot h_A).
@@ -258,13 +328,13 @@ $$
 
 For the static vacuum, \([H,C]=0\), so continuing net regional injection is zero. A prepared excitation transports conserved energy through the same geometry-derived link ([energy transfer](../results/nsc-6-energy-transfer.json)). Its current depends on occupations and correlations as well as the retarded map.
 
-A prescribed smooth radius pulse gives exactly \(H(t)=H_0+\epsilon g(t)V\). It creates Dirac particle–antiparticle excitations. Independent evolution and spectral transition calculations agree, and supplied geometric work accounts for the excitation energy ([vacuum work](../results/nsc-6-vacuum-work.json)). At epsilon=0.02 and tau=0.5, one representative kappa=1 channel produces approximately 1.40181e-5 pairs and energy 3.46640e-5 in throat units. These are one-channel finite-amplitude controls, not cosmological rates. A uniform clock rescaling produces no pairs.
+A prescribed smooth radius pulse gives exactly \(H(t)=H_0+\epsilon g(t)V\). It creates Dirac particle–antiparticle excitations. Independent evolution and spectral transition calculations agree, and supplied geometric work accounts for the excitation energy ([vacuum work](../results/nsc-6-vacuum-work.json)). At epsilon=0.02 and tau=0.5, one representative kappa=1 channel produces approximately 1.40181e-5 pairs and energy 3.46640e-5 in throat units. These values describe one channel at the stated pulse amplitude and duration. A uniform clock rescaling produces no pairs.
 
 <!-- nsc-figure:vacuum-work -->
 
-This is a calculated conversion from supplied geometric work into Dirac excitations. The deformation's own source and backreaction remain to be solved. A null-sign match, pair creation or a conserved finite energy ledger alone is not the complete metric equation.
+The pulse demonstrates conversion of geometric work into Dirac excitations. The coupled metric equation determines the deformation when its source is evolved dynamically.
 
-**Repository derivation: normalized histories and geometric noise.** The same covariant operator supplies the canonical Hamiltonian \(H=N^{1/2}H_0 N^{1/2}\). For a Gaussian fermionic covariance \(0\leq C\leq I\) and two history unitaries, the normalized closed-time-path amplitude is
+**normalized histories and geometric noise.** The same covariant operator supplies the canonical Hamiltonian \(H=N^{1/2}H_0 N^{1/2}\). For a Gaussian fermionic covariance \(0\leq C\leq I\) and two history unitaries, the normalized closed-time-path amplitude is
 
 $$
 Z[+,-;C]=\det(I-C+C U_-^\dagger U_+),\qquad \Gamma_{\mathrm{IF}}=-i\log Z.
@@ -278,7 +348,7 @@ $$
 
 At \(\tau=0.5\) this common weight is \(0.03533459211\) on the refined spatial grids ([influence](../results/nsc-10-influence.json)). Bare mean forces and equal-time fluctuations do not converge in the same way; they remain finite-regulator quantities, not renormalized absolute stress. Multiplying by a real local-action phase preserves equal-history normalization while changing the mean source, so \(Z=1\) does not select the physical finite terms. The influence approach to gravitational response has prior work by Martín and Verdaguer [31]. The contribution here is the executable connection to this smooth Dirac geometry and its previous energy/pair calculation.
 
-**Repository derivation: matching static and causal response.** The radius channel now connects the Euclidean frequency operator to the Lorentzian Hamiltonian response. Independent matrix integration of the ordinary finite Dirac loop equals the spectral vacuum susceptibility at imaginary external frequency, to about \(10^{-15}\) on the tested finite grids. The finite proper-time Hessian is calculated separately, with its regulator retained.
+**matching static and causal response.** The radius channel now connects the Euclidean frequency operator to the Lorentzian Hamiltonian response. Independent matrix integration of the ordinary finite Dirac loop equals the spectral vacuum susceptibility at imaginary external frequency, to about \(10^{-15}\) on the tested finite grids. The finite proper-time Hessian is calculated separately, with its regulator retained.
 
 The periodic-minus-antiperiodic difference removes state-independent local metric terms on identical geometry. It permits the continuum matching control
 
@@ -301,7 +371,7 @@ Spatial, angular, internal-frequency and cutoff refinements are recorded separat
 <!-- nsc-claim:compact-boundary-adjoint -->
 **Repository derivation using established boundary calculus.** The compact chiral domain fixes the leading Einstein boundary term of the determinant magnitude. It is isotropic for the Lorentzian Hamiltonian current, but the Euclidean Dirac operator requires complementary adjoint data. Using \(D_E^\dagger D_E\), the known mixed heat coefficients [29] yield the Einstein/Gibbons–Hawking–York ratio 2, no leading boundary-volume term, and a specified geometric \(a_3\) contribution ([compact boundary action](../results/development/compact-boundary-action.json)).
 
-This is a coefficient and domain match, not a boundary held in place by its own source. The Gaussian compact endpoints have nonzero geometric momentum. The common metric variation therefore requires
+The Gaussian compact endpoints carry nonzero geometric momentum. The common metric variation therefore requires
 
 $$
 \pi_p^{ab}+\pi_c^{ab}+\frac{\delta\Gamma_{\mathrm{rest}}}{\delta h_{ab}}=0.
@@ -312,13 +382,13 @@ Here \(\Gamma_{\mathrm{rest}}\) excludes the geometric terms already included in
 ### 4.2 A finite Dirac interaction on the curved cell
 
 <!-- nsc-claim:curved-compact-source -->
-**Imported formulation / repository calculation.** The published massless interval determinant [38] can be applied to the existing covariant four-dimensional operator. For two Dirac copies and the untwisted transverse interval of conformal length \(\ell=2L_\star\), its finite endpoint interaction is
+The published massless interval determinant [38] can be applied to the existing covariant four-dimensional operator. For two Dirac copies and the untwisted transverse interval of conformal length \(\ell=2L_\star\), its finite endpoint interaction is
 
 $$
 \Gamma_{\mathrm{int}}=-\frac{1}{2}\operatorname{Tr}\log\left(1-e^{-2\ell\sqrt{D_4^2}}\right).
 $$
 
-The half-rank zero level and full massive-level multiplicities are retained. Differentiating this function of the same \(D_4\) supplies independent lapse, radial-metric, radius and separation responses. No scalar stress source is inserted. These are effective four-dimensional sources integrated over the transverse interval, rather than a pointwise five-dimensional stress or a tension localized at one endpoint.
+The half-rank zero level and full massive-level multiplicities are retained. Differentiating this function of the same \(D_4\) supplies independent lapse, radial-metric, radius and separation responses. These effective four-dimensional sources follow directly from the Dirac determinant, integrated over the transverse interval.
 
 For the unit-neck ultrastatic cell with axial circumference 4 and transverse length 2, the compact interaction gives
 
@@ -333,7 +403,7 @@ The first two local curvature terms of this finite interaction are derived and k
 ### 4.3 A conditional state-selection mechanism
 
 <!-- nsc-claim:conditional-holonomy-saddle -->
-The null-source sign depends on global geometry and state. With the same transverse length and unit neck, enlarging the axial circle to 8 changes the interaction's neck null source to \(+1.6402\times10^{-4}\). Periodic axial data can also reverse the sign. These changes are physical differences between prescribed finite cells, not an error bar proving the isolated-throat limit.
+The null-source sign depends on global geometry and state. With the same transverse length and unit neck, enlarging the axial circle to 8 changes the interaction's neck null source to \(+1.6402\times10^{-4}\). Periodic axial data can also reverse the sign. These values resolve the dependence on the prescribed cell geometry and state.
 
 Where the charged ultrastatic geometry contains a closed axial return path, a flat U(1) connection has a physical Wilson line. Its effective spatial phase combines the spin structure and gauge holonomy:
 
@@ -341,7 +411,7 @@ $$
 \alpha=\eta_{\mathrm{spin}}-\frac{1}{2\pi}\oint A_x\,dx.
 $$
 
-The phase is defined modulo one. Local gauge-invariant terms do not distinguish these flat connections. The general boundary determinant [39,40], applied to the positive radial partner operators, makes each free-fermion contribution minimal at effective AP phase, \(\alpha_\star=1/2\). The full free-KK determinant independently gives an AP-minus-P energy of about -0.16995535 and positive second variation 3.19343937 in the recorded cell. This is a one-loop minimum of the real potential when the holonomy is free to vary, not a derivation of the complete quantum state or physical mode spectrum.
+The phase is defined modulo one. Local gauge-invariant terms do not distinguish these flat connections. The general boundary determinant [39,40], applied to the positive radial partner operators, makes each free-fermion contribution minimal at effective AP phase, \(\alpha_\star=1/2\). The full free-KK determinant independently gives an AP-minus-P energy of about -0.16995535 and positive second variation 3.19343937 in the recorded cell. This is the one-loop minimum of the real potential for a freely varying holonomy on the stated closed cell.
 
 <!-- nsc-figure:compact-source -->
 
@@ -358,7 +428,7 @@ $$
 P_\infty=\frac{|q_{\mathrm{mag}}|\kappa_h^2}{48\pi}.
 $$
 
-At \(\kappa_h=0.2383257996\), this is \(3.76661306\times10^{-4}\) per unit \(|q_{\mathrm{mag}}|\), in the recorded natural units. The local horizon limit is regular under the specified state conditions. This power is not yet a child proper-volume density rate or the cosmological Q. Interactions, a possible light-field mass and the global state remain additional conditions ([horizon/source record](../results/development/horizon-source.json)).
+At \(\kappa_h=0.2383257996\), this is \(3.76661306\times10^{-4}\) per unit \(|q_{\mathrm{mag}}|\), in the recorded natural units. The local horizon limit is regular under the specified state conditions. Converting this power to a child density rate requires proper volume, time and deposition; interactions, a light-field mass and global state enter the corresponding source problem ([horizon/source record](../results/development/horizon-source.json)).
 
 The result tests an actual source requirement. The sector's horizon null stress is negative, but both null contractions at the old imposed neck are positive, where that geometry requires negative ones. Static magnetic and potential terms have zero radial null contraction. The minimal sector therefore does not source that prescribed neck by itself. The reduced metric equations keep the missing source U(r) explicit and propagate their constraint; they do not choose U from the desired geometry. A nonzero outgoing flux also requires evolution or compensating flux before it can belong to an exactly static solution.
 
@@ -387,7 +457,7 @@ $$
 
 The two complementary five-dimensional copies are already included. This is a finite-cutoff free Euclidean determinant magnitude, with a separate prescription required for actual spacetime zero modes. It composes with the existing D4 rather than replacing it. The physical compact warp is calculated at s=1; the numerical homogeneous application uses \(g_4=\mathbb R^2\times S^2(r)\).
 
-For \(q_{\mathrm{mag}}=1\), r=1, transverse length 2 and cutoff 2, the potential per reference two-dimensional area changes from 2.218882505 to 2.154980560. This is a 2.88% change in that regulated contribution. Independent first variations and a dual-heat conformal identity agree within the stated Galerkin convergence. The warp effect does not imply a changed classical mass or a cosmological fraction ([warped-source record](../results/development/warped-source.json)).
+For \(q_{\mathrm{mag}}=1\), r=1, transverse length 2 and cutoff 2, the potential per reference two-dimensional area changes from 2.218882505 to 2.154980560. This is a 2.88% change in that regulated contribution. Independent first variations and a dual-heat conformal identity agree within the stated Galerkin convergence. The classical mass tower is preserved while the regulated geometric potential changes ([warped-source record](../results/development/warped-source.json)).
 
 ### 4.6 One coefficient account for the retained light field
 
@@ -422,26 +492,26 @@ $$
 =-\partial_\nu\Gamma_{\mathrm{light},\nu}.
 $$
 
-The numerical vacuum, Einstein and gauge changes cancel. These coefficients are therefore linked contributions in a stated prescription; nu is not a knob for fitting a physical coupling or geometry. The remaining common functional and causal state must still be matched before identifying the complete Newton constant, gauge coupling or U(r) ([compact/light matching](../results/development/compact-matching.json)).
+The numerical vacuum, Einstein and gauge changes cancel. The matching identity fixes how these contributions combine. The complete Newton constant, gauge coupling and U(r) follow after the common functional and causal state are matched ([compact/light matching](../results/development/compact-matching.json)).
 
 <!-- nsc-figure:source-matching -->
 
 The source equation now has a defined interface: combine the computed free determinant with the contribution required by the common measure, compensator, transmitting interaction and state. These records test distinct controlled settings; their assembly into one Lorentzian solution remains part of physical closure. In particular, the spherical Einstein term already present inside the determinant must be counted once. No additional independently weighted gravitational action is introduced.
 
-The next subsections follow that interface rather than nine separate programmes. A definite interaction among already retained light fields, a first-order spherical geometry owner, and a local curvature correction fix the low-energy source language. At the stored child curvature the local truncation is not controlled, so the original spectral weight is used. Homogeneous free-state differences then dilute, a canonical massless reference is distinguished from a parent-matched candidate, and the finite proper-time factor is shown to be state-dependent. Published methods are reused; none of the following calculations claims a new general theorem or a fitted Newton constant.
+The next subsections follow that interface rather than nine separate programmes. A definite interaction among already retained light fields, a first-order spherical geometry owner, and a local curvature correction fix the low-energy source language. At the stored child curvature the local truncation is not controlled, so the original spectral weight is used. Homogeneous free-state differences then dilute, a canonical massless reference is distinguished from a parent-matched candidate, and the finite proper-time factor is shown to be state-dependent. The following calculations apply the cited methods with the shared coefficient account.
 
 ### 4.7 A retained interaction, a spherical owner and a curvature contact
 
 <!-- nsc-claim:derived-gauge-source -->
-**Imported formulation / repository application.** The retained Dirac and spherical-photon fields already supply a projected interaction in the magnetic lowest-Landau-level sector. Established two-dimensional bosonization [56] reduces the charged current to one collective mode with screening scale \(\mu^2(r)=|q| g_4^2/(4\pi^2 r^2)\). That mode is not an inserted fundamental scalar, a resolution compensator or a predicted four-dimensional rest mass. The physical matched \(g_4\) is not selected here, and the Dirac complement coefficient \(C_{F,D}\) is not its complete inverse coupling.
+The retained Dirac and spherical-photon fields already supply a projected interaction in the magnetic lowest-Landau-level sector. Established two-dimensional bosonization [56] reduces the charged current to one collective mode with screening scale \(\mu^2(r)=|q| g_4^2/(4\pi^2 r^2)\). That mode is not an inserted fundamental scalar, a resolution compensator or a predicted four-dimensional rest mass. The physical matched \(g_4\) is not selected here, and the Dirac complement coefficient \(C_{F,D}\) is not its complete inverse coupling.
 
-Outside the recorded horizon the collective potential is nonnegative and vanishes at both scattering ends, so a constant-mass Boltzmann factor is the wrong flux calculation. With the specified Unruh data and no incoming parent bath, the projected Killing power is the free central-charge term plus the charged Bose integral of the transmission. Reference [44] supplies the free flux normalization; the charged transmission integral is evaluated in the gauge-source record. At the stored \(\kappa_h=0.238325799634\), for \(q=1\) and unselected test couplings, \(g_4=0.5\) gives parent Killing power \(0.0003631182\), or \(0.964044\) of one free LLL channel. These are synthetic coupling controls, not a fit of the physical coupling or a cosmological dark fraction. Stationary current conservation and future-regular Painlevé–Gullstrand components convert that power into a horizon null source \(T(K,K)_h=-P_\infty/(4\pi r_h^2)\). A nonzero net power still requires evolution or compensating flux before it can belong to an exactly static geometry ([gauge-source record](../results/development/gauge-source.json)).
+Outside the recorded horizon the collective potential is nonnegative and vanishes at both scattering ends, so a constant-mass Boltzmann factor is the wrong flux calculation. With the specified Unruh data and no incoming parent bath, the projected Killing power is the free central-charge term plus the charged Bose integral of the transmission. Reference [44] supplies the free flux normalization; the charged transmission integral is evaluated in the gauge-source record. At the stored \(\kappa_h=0.238325799634\), for \(q=1\) and unselected test couplings, \(g_4=0.5\) gives parent Killing power \(0.0003631182\), or \(0.964044\) of one free LLL channel. These are numerical controls at the stated test couplings. Stationary current conservation and future-regular Painlevé–Gullstrand components convert that power into a horizon null source \(T(K,K)_h=-P_\infty/(4\pi r_h^2)\). A nonzero net power still requires evolution or compensating flux before it can belong to an exactly static geometry ([gauge-source record](../results/development/gauge-source.json)).
 
 <!-- nsc-claim:canonical-spherical-action -->
-**Imported formulation / repository application.** The local two-derivative spherical sector of the same action now has an explicit first-order owner. Spherical reduction of \(S_4=\int\sqrt{|g_4|}[-A_4 R_L-V_4-C_F F^2]\) with dimensionless area \(X=8\pi A_4 r^2\) recovers the Grumiller–Kummer–Vassilevich first-order theory [46], including the area-dependent charge potential. The auxiliary torsion of that first-order patch is not the independent five-dimensional skew torsion of the earlier Einstein–Cartan candidate. Coupling the existing charge mode closes the classical constraint algebra, including the \(1/X\) area force that is not the factorized matter potential printed in that reference. This identifies an action-specific canonical measure and ghost operator for the reduced theory. It replaces a guessed one-dimensional scale weight; it does not quantize the full nonlocal spectral action, select physical couplings, or evolve a new geometry ([spherical-action record](../results/development/spherical-action.json)).
+The local two-derivative spherical sector of the same action now has an explicit first-order owner. Spherical reduction of \(S_4=\int\sqrt{|g_4|}[-A_4 R_L-V_4-C_F F^2]\) with dimensionless area \(X=8\pi A_4 r^2\) recovers the Grumiller–Kummer–Vassilevich first-order theory [46], including the area-dependent charge potential. The auxiliary torsion of that first-order patch is not the independent five-dimensional skew torsion of the earlier Einstein–Cartan candidate. Coupling the existing charge mode closes the classical constraint algebra, including the \(1/X\) area force that is not the factorized matter potential printed in that reference. This identifies an action-specific canonical measure and ghost operator for the reduced theory. It replaces a guessed one-dimensional scale weight; it does not quantize the full nonlocal spectral action, select physical couplings, or evolve a new geometry ([spherical-action record](../results/development/spherical-action.json)).
 
 <!-- nsc-claim:curvature-eft-source -->
-**Imported formulation / repository application.** The known local curvature-squared contribution can be retained in that same spherical system as a first-order effective-field-theory contact. A checked metric redefinition [47,48] converts the bulk \(C^2\) and \(R^2\) terms into
+The known local curvature-squared contribution can be retained in that same spherical system as a first-order effective-field-theory contact. A checked metric redefinition [47,48] converts the bulk \(C^2\) and \(R^2\) terms into
 
 $$
 \Delta\mathcal L_m=-\frac{c_W}{2A^2}\left(T_{\mu\nu}T^{\mu\nu}-\frac{T^2}{3}\right)-\frac{c_R}{4A^2}T^2
@@ -463,7 +533,7 @@ $$
 |\Delta\rho|\leq\frac{M+K/r}{4\pi s_{\min}r^3},
 $$
 
-with \(O(r^{-4})\) for massless modes (\(M=0\)) and an \(O(r^{-3})\) envelope when finite massive occupation moments are present. Expansion reduces the local stress through redshift and proper-volume growth; it does not erase the state. The free LLL Unruh-minus-Hartle–Hawking difference decays as \(r^{-4}\) in the interior, with asymptotic \(r^4\) density \(-\kappa_h^2/(576\pi^3)\). This is not a global Hadamard theorem, a cosmic no-hair result, or an identification of the absolute vacuum. A vanishing free difference does not imply that acceleration ends: a persistent common vacuum stress remains possible ([child-state record](../results/development/child-state.json)).
+with \(O(r^{-4})\) for massless modes (\(M=0\)) and an \(O(r^{-3})\) envelope when finite massive occupation moments are present. Expansion reduces the local stress through redshift and proper-volume growth; it does not erase the state. The free LLL Unruh-minus-Hartle–Hawking difference decays as \(r^{-4}\) in the interior, with asymptotic \(r^4\) density \(-\kappa_h^2/(576\pi^3)\). The bound applies to the specified free-state differences; the absolute reference stress is retained separately ([child-state record](../results/development/child-state.json)).
 
 <!-- nsc-claim:absolute-massless-reference -->
 **Imported Hadamard/conformal construction / repository application.** A massless reference can be specified on the child tail by smoothly continuing the conformal metric \(\bar g=g/r^2\) to an auxiliary ultrastatic region and propagating its ground covariance back [26,52,53]. In the inherited proper-time convention the leading absolute stress on that tail is
@@ -479,10 +549,10 @@ $$
 \Gamma_5=\Gamma_{\mathrm{light,ren}}+\left(\Gamma_{H,\nu}+\mathcal C_{\nu,\mu}\right).
 $$
 
-The pieces depend on normalization; their sum preserves the original functional. Adding the renormalized reference to an unconverted complement would change \(\Gamma_5\). This conversion is not a vacuum-tuning mechanism ([massless-reference record](../results/development/massless-reference.json)).
+The pieces depend on normalization; their sum preserves the original functional. Adding the renormalized reference to an unconverted complement would change \(\Gamma_5\). The conversion preserves the specified full functional ([massless-reference record](../results/development/massless-reference.json)).
 
 <!-- nsc-claim:finite-angular-reference -->
-**Repository derivation.** The same reference is then evaluated at finite child radius, retaining the full angular tower, covariant subtraction, conformal anomaly transport and the energy/work identity. Units remain \(\hbar=c=L_{\mathrm{throat}}=1\) and \(\mu=1\). At the neck the auxiliary reference is \(\rho=0.7101684\), \(p_{\parallel}=0.5026775\), \(p_{\perp}=0.0376558\), hence \(\rho+p_{\parallel}=1.2128459\). After extracting one healthy Einstein term \(a_{\mathrm{EH}}=A_{\mathrm{EH}}L_{\mathrm{throat}}^2>0\), the imposed neck requires \(L_{\mathrm{throat}}^4 T_{\mathrm{total},kk}=4a_{\mathrm{EH}}(1-3\pi/2)=-14.8495559\,a_{\mathrm{EH}}<0\). The calculated reference is positive and cannot supply that null requirement by itself. A pure vacuum term proportional to \(g_{\mu\nu}\) cannot change the null component. No reference width was varied to obtain a stress sign ([angular-stress record](../results/development/angular-stress.json)).
+The same reference is then evaluated at finite child radius, retaining the full angular tower, covariant subtraction, conformal anomaly transport and the energy/work identity. Units remain \(\hbar=c=L_{\mathrm{throat}}=1\) and \(\mu=1\). At the neck the auxiliary reference is \(\rho=0.7101684\), \(p_{\parallel}=0.5026775\), \(p_{\perp}=0.0376558\), hence \(\rho+p_{\parallel}=1.2128459\). After extracting one healthy Einstein term \(a_{\mathrm{EH}}=A_{\mathrm{EH}}L_{\mathrm{throat}}^2>0\), the imposed neck requires \(L_{\mathrm{throat}}^4 T_{\mathrm{total},kk}=4a_{\mathrm{EH}}(1-3\pi/2)=-14.8495559\,a_{\mathrm{EH}}<0\). The calculated reference is positive and cannot supply that null requirement by itself. A pure vacuum term proportional to \(g_{\mu\nu}\) cannot change the null component. No reference width was varied to obtain a stress sign ([angular-stress record](../results/development/angular-stress.json)).
 
 <!-- nsc-claim:parent-matched-source -->
 **Imported characteristic-state prescription / repository calculation.** Combining the standard fermionic Unruh boundary data [50] with the complex reflection amplitude of the actual exterior Dirac operator produces a definite massless source candidate on the expanding child. Affine-horizon occupation and empty incoming parent modes are compressed with the unitary scattering matrix; the factor \(i\) in the real interior spin frame is required by the known zero-frequency Rindler projector. The state was specified by those horizon and parent data before the neck sign was computed. In the same canonical heat convention the \(N=32\) tail-corrected neck values are:
@@ -505,7 +575,7 @@ $$
 =\left(2a_{\mathrm{EH}},\;2a_{\mathrm{EH}}(1-3\pi),\;2a_{\mathrm{EH}}(1-3\pi),\;0\right).
 $$
 
-The computed density has the opposite sign to that positive-Einstein requirement, the pressures are unequal, and the state carries outward parent Killing power \(0.0001422206795\). Matching only the null equation by choosing \(a_{\mathrm{EH}}\) would conceal those residuals. Leave \(a_{\mathrm{EH}}\) symbolic. The remaining common-action terms must supply the componentwise difference, or the geometry must evolve under the same action. This is not a global NSC Hadamard theorem, a complete finite-cutoff stress, or a cosmological \(Q\): deposition, proper volume, clock matching and a solved geometry are still required ([parent-matched source](../results/development/unruh-state.json)).
+The computed density has the opposite sign to that positive-Einstein requirement, the pressures are unequal, and the state carries outward parent Killing power \(0.0001422206795\). Matching only the null equation by choosing \(a_{\mathrm{EH}}\) would conceal those residuals. Leave \(a_{\mathrm{EH}}\) symbolic. The remaining common-action terms must supply the componentwise difference, or the geometry must evolve under the same action. The source uses the stated canonical massless normalization and domain. A cosmological density rate additionally requires deposition, proper volume, clock matching and the evolved geometry ([parent-matched source](../results/development/unruh-state.json)).
 
 <!-- nsc-figure:parent-source -->
 
@@ -513,9 +583,9 @@ The computed density has the opposite sign to that positive-Einstein requirement
 ### 4.9 Finite-cutoff conversion is state dependent
 
 <!-- nsc-claim:state-regulator-conversion -->
-**Imported thermal determinant / repository compatibility check.** The adopted finite Euclidean proper-time factor cannot be identified, without a state-dependent conversion, with the thermal source of the canonical Dirac field used above. On flat \(\mathbb R^3\) times an antiperiodic Euclidean thermal circle, with one ordinary massless Dirac field, \(T/\nu=0.5\) gives canonical \(\rho=0.0719658654\,\nu^4\) versus raw finite \(\rho=-0.00122667356\,\nu^4\) after subtracting that prescription's own zero-temperature energy [51]. Local vacuum coefficients cancel in the thermal-minus-vacuum difference and cannot repair it. A pole-residue argument is insufficient: the regulated inverse has residue one on shell, yet the finite Matsubara determinant differs from the canonical CAR excitation energy. This is a conversion control, not a local temperature on the spacelike interior Killing generator, or a cosmological energy-transfer prediction.
+**Imported thermal determinant / repository compatibility check.** The adopted finite Euclidean proper-time factor cannot be identified, without a state-dependent conversion, with the thermal source of the canonical Dirac field used above. On flat \(\mathbb R^3\) times an antiperiodic Euclidean thermal circle, with one ordinary massless Dirac field, \(T/\nu=0.5\) gives canonical \(\rho=0.0719658654\,\nu^4\) versus raw finite \(\rho=-0.00122667356\,\nu^4\) after subtracting that prescription's own zero-temperature energy [51]. Local vacuum coefficients cancel in the thermal-minus-vacuum difference and cannot repair it. A pole-residue argument is insufficient: the regulated inverse has residue one on shell, yet the finite Matsubara determinant differs from the canonical CAR excitation energy. This flat equilibrium calculation fixes the conversion requirement for that state and prescription.
 
-If the intended physical field retains its canonical state functional, the completion must satisfy \(\Delta\Gamma_{\mathrm{completion}}=\Delta\Gamma_{\mathrm{canonical}}-\Delta\Gamma_{\mathrm{raw}}\) for that sector and common contour. The previously computed negative neck null remains valid in its canonical-massless scope; it is not yet the complete finite-cutoff source. The next owner is that same-state conversion, including massive, boundary and recursive sectors ([state-regulator record](../results/development/state-regulator.json)).
+If the intended physical field retains its canonical state functional, the completion must satisfy \(\Delta\Gamma_{\mathrm{completion}}=\Delta\Gamma_{\mathrm{canonical}}-\Delta\Gamma_{\mathrm{raw}}\) for that sector and common contour. The negative neck null is the canonical massless contribution to be combined with the remaining finite-cutoff source. The next owner is that same-state conversion, including massive, boundary and recursive sectors ([state-regulator record](../results/development/state-regulator.json)).
 
 ## 5. Recursion and cosmological predictions
 
@@ -549,22 +619,37 @@ $$
 
 Zero Q_b alone does not force deceleration: dust plus positive Lambda has zero exchange and approaches de Sitter expansion. A finite regular plateau is an additional condition. A known scalar Q_b also leaves pressure and perturbations undetermined ([plateau conditions](../results/nsc-5-plateau-conditions.json), [source requirements](../results/nsc-7-observable-bridge.json)).
 
-Predicting H(z), BAO and CMB requires the background and thermal history. Predicting clustering and lensing also requires pressure perturbations, anisotropic stress, momentum transfer and constrained metric response. Lambda-CDM is a predictive comparison model; CPL is a phenomenological equation-of-state parameterization. Neither is replaced merely by naming an unevaluated Q.
+Predicting H(z), BAO and CMB requires the background and thermal history. Predicting clustering and lensing also requires pressure perturbations, anisotropic stress, momentum transfer and constrained metric response. The resulting background and perturbations are compared jointly with Lambda-CDM and the stated observational likelihoods.
 
-The frozen development targets are documented with their model assumptions in [observational targets](../docs/nsc-observational-targets.md). H0DN reports 73.50±0.81 km/s/Mpc, with significance depending on the comparison [23]. DES Y6 reports S8=0.789±0.012, a 2.6-sigma projected difference from its primary-CMB comparison [24]. KiDS-Legacy reports S8=0.815 with +0.016/-0.021 uncertainty, agreeing with Planck at 0.73 sigma [25]. These are development targets, not NSC predictions or evidence that a boundary mechanism has resolved a tension.
+The frozen development targets are documented with their model assumptions in [observational targets](../docs/nsc-observational-targets.md). H0DN reports 73.50±0.81 km/s/Mpc, with significance depending on the comparison [23]. DES Y6 reports S8=0.789±0.012, a 2.6-sigma projected difference from its primary-CMB comparison [24]. KiDS-Legacy reports S8=0.815 with +0.016/-0.021 uncertainty, agreeing with Planck at 0.73 sigma [25]. These development targets specify the observational comparisons for the derived background and perturbations.
 
 ## 6. Nuclear physics and the remaining common-action equations
 
 The Skyrme/BPS sector is a possible low-energy construction pattern. Its coefficients must be obtained from the evolved common effective action before its particles, binding energies or stellar limits are predictions of NSC.
 
-The often-quoted 3.34 solar-mass maximum is imported from a nuclear-calibrated Einstein–BPS model [5]. The historical runner records the published value rather than independently recomputing it. Its potential and calibrated nuclear coefficients matter; other potentials yield different maxima. It is not a universal collapse threshold or an unfitted NSC result ([stellar benchmark](../results/nsc-1-gravitating-bps-observation-link.json)).
+The often-quoted 3.34 solar-mass maximum is imported from a nuclear-calibrated Einstein–BPS model [5]. The historical runner records the published value rather than independently recomputing it. Its potential and calibrated nuclear coefficients matter; other potentials yield different maxima. It serves here as the stellar control for that imported model ([stellar benchmark](../results/nsc-1-gravitating-bps-observation-link.json)).
 
 
-The next coupled calculation must determine the same-state finite-cutoff causal conversion and complementary functional, together with massive, boundary and recursive sectors, then the independent metric, field and relative-scale equations. The parent-matched canonical massless tensor is a reusable input, not the complete source. The remaining finite terms are not fixed by equal-history normalization, by fitting \(G\) to a null residual, or by treating the flat thermal control as a child temperature. The same completed solution must then supply its constrained physical response before particle identities, nuclear interactions, collapse and cosmological predictions can be established with one parameter set. Further raw Dirac coefficient scans cannot determine a different functional contribution.
+The source problem has a precise next equation:
 
-The joint closure is a candidate project contribution, not an established novelty claim. Primary ingredients retain their original attribution. Failure of one local realization informs its revision; it neither disproves the nested architecture nor confirms it.
+$$
+\left.\frac{\delta\Gamma_{\rm one}}{\delta g_\Delta^{\mu\nu}}\right|_{g_\Delta=0}=0.
+$$
 
-## 7. Reproduction and scope
+The [subsequent common-source derivation](../docs/nsc-common-source-derivation.md)
+binds boundary coherence, energy transfer and metric variation. Its eight
+[development records](../results/development-snapshot.json) add the boundary
+state, measure reconstruction, ADM source projections, a local warp contribution
+and the necessary parent mass balance. The remaining definition is the full
+causal geometric contribution and its state or admissible history data. The
+[causal-source analysis](../docs/nsc-causal-source-definition-gap.md) identifies
+why the computed real phase for complete histories does not yet supply
+retarded initial-data evolution. That input joins the existing quantum source
+to the coupled geometry and scale equations.
+
+The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
+
+## 7. Evidence and reproduction
 
 This working revision contains 100 records: 58 frozen historical records and 42 scoped follow-ups. The nine new source and state records, with their laboratory notes, are imported from laboratory commit \(161028d\). All 91 earlier manifest step objects and scientific records/generators retain their bytes and comparison policies. Native schemas are preserved; publication identities and routing are supplied by adapters. Immutable source notes retain their creation-time publication status; this release manifest supplies their present publication state.
 
@@ -572,11 +657,11 @@ The new records compare their published fields, formulae, scope statements and s
 
 Use the default demonstration to inspect fourteen authenticated stored cases. It launches no scientific generators. Explicit recomputation and the full release gate are documented in [reproducing](../docs/reproducing.md). One integrated gate authenticates the dependency graph, runs relevant tests, regenerates the collection in isolation, and checks deterministic PDF output. Same-environment byte identity and portable all-field agreement are reported separately.
 
-The following appendices preserve the main normalization corrections and finite mathematical controls. Their historical numerical roots remain diagnostics. Full covariant physical closure, predicted particle species, a measured dark fraction, and our universe's parent/child identification remain open.
+The appendices preserve the normalization corrections, finite controls and historical scale diagnostics supporting this construction.
 
 ## Appendix A. Historical scale tests and corrections
 
-The original numerical candidates are retained for provenance. This appendix does not define the current complete action or imply that adding a recursive tail alone supplies the missing finite measure and state.
+This appendix records the historical scale candidates and the normalization corrections that supersede them.
 
 ### A.1 Historical scale candidates
 
@@ -588,7 +673,7 @@ $$
 \mu^2=1-\frac{3\pi}{2\zeta}.
 $$
 
-**Repository derivation.** Matching the local on-room vacuum-form component \(108/1015\) to the doubled gap, then using the exact expanding child’s Ricci sign, selected a *conditional* one-scale gap \(|\Phi|^2/\Lambda^2=1006/1015\) and a boundary cross-projection \(\Xi_{\mathrm{boundary}}=54/503\) ([`nsc-1-s-one-child-orientation.json`](../results/nsc-1-s-one-child-orientation.json)). **Repository derivation.** The exact child asymptotic rejects that magnitude. The actual child vacuum is \(\Lambda_{e,\mathrm{child}}L_\star^2=18\pi\), so a real positive gap requires \(\zeta>3\pi/2\). Direct \(\Lambda L_\star=1\) gives a negative \(\mu^2\) and is not the physical child-matched branch ([`nsc-1-s-one-child-scale-correction.json`](../results/nsc-1-s-one-child-scale-correction.json)). The identities for \(\Phi\) as gap, Schur self-energy, and metric link remain. The numbers \(1006/1015\) and \(54/503\) are **superseded** as child-matched predictions.
+Matching the local on-room vacuum-form component \(108/1015\) to the doubled gap, then using the exact expanding child’s Ricci sign, selected a *conditional* one-scale gap \(|\Phi|^2/\Lambda^2=1006/1015\) and a boundary cross-projection \(\Xi_{\mathrm{boundary}}=54/503\) ([`nsc-1-s-one-child-orientation.json`](../results/nsc-1-s-one-child-orientation.json)). The exact child asymptotic rejects that magnitude. The actual child vacuum is \(\Lambda_{e,\mathrm{child}}L_\star^2=18\pi\), so a real positive gap requires \(\zeta>3\pi/2\). Direct \(\Lambda L_\star=1\) gives a negative \(\mu^2\) and is not the physical child-matched branch ([`nsc-1-s-one-child-scale-correction.json`](../results/nsc-1-s-one-child-scale-correction.json)). The identities for \(\Phi\) as gap, Schur self-energy, and metric link remain. The numbers \(1006/1015\) and \(54/503\) are **superseded** as child-matched predictions.
 
 The ZETA1 chain then searched for a child-allowed stationary scale of the joined-minus-disconnected Dirac spectrum on the global slice. Every root in the following table is a **numerical diagnostic**. None is a physical \(\zeta\). The later anomaly compensation supersedes all of them as stationary points of the one equation.
 
@@ -601,11 +686,11 @@ The ZETA1 chain then searched for a child-allowed stationary scale of the joined
 | [`nsc-2-zeta1-orbifold-parity.json`](../results/nsc-2-zeta1-orbifold-parity.json) | Joint fermion/metric \(S^1/\mathbb{Z}_2\) parity | \(\zeta_{\mathrm{orb}}=4.747863009733466\), \(\mu_{\mathrm{orb}}=0.08643829078229333\) | Unwarped factorization; **superseded candidate**. |
 | [`nsc-2-zeta1-warped-y.json`](../results/nsc-2-zeta1-warped-y.json) | Exact conformal compact warp | \(\zeta=4.748389947082489\), \(\mu=0.08707307719677547\) | Factorized radial-plus-\(y\) sum, not the full Dirac operator with lapse and shift; **superseded candidate**. |
 
-Every corresponding JSON record states that the candidate is not promoted, that lapse and shift or the local matrix anomaly remain omitted, and that the electron mass is not predicted.
+The table records each truncation; the following sections give the corrected scale equation.
 
 ### A.2 Anomaly and inherited subtraction
 
-**Repository derivation.** The invariant partition function requires cancellation of pure cutoff rescaling while retaining the physical change of the child-constrained gap. For one eigenvalue the physical child-link derivative after compensation is negative whenever the gap constraint \(\mu^2=1-3\pi/(2\zeta)\) is imposed ([`nsc-2-zeta1-anomaly-decomposition.json`](../results/nsc-2-zeta1-anomaly-decomposition.json)).
+The invariant partition function requires cancellation of pure cutoff rescaling while retaining the physical change of the child-constrained gap. For one eigenvalue the physical child-link derivative after compensation is negative whenever the gap constraint \(\mu^2=1-3\pi/(2\zeta)\) is imposed ([`nsc-2-zeta1-anomaly-decomposition.json`](../results/nsc-2-zeta1-anomaly-decomposition.json)).
 
 At the warped determinant candidate \(\zeta=4.748389947082489\):
 
@@ -637,7 +722,7 @@ The fermionic sheet-resolution observable is Osterwalder–Schrader positive in 
 
 ### A.3 Corrected units and the sign theorem
 
-**Repository derivation.** The ZETA1 definitions are \(\lambda_j=L_\star^2\operatorname{eig}_j(D_{\mathrm{spatial}}^2)\), \(\zeta=\Lambda^2 L_\star^2\), and \(\mu^2=|\Phi|^2/\Lambda^2=1-a/\zeta\) with \(a=3\pi/2\). The same declared additive-gap operator therefore requires
+The ZETA1 definitions are \(\lambda_j=L_\star^2\operatorname{eig}_j(D_{\mathrm{spatial}}^2)\), \(\zeta=\Lambda^2 L_\star^2\), and \(\mu^2=|\Phi|^2/\Lambda^2=1-a/\zeta\) with \(a=3\pi/2\). The same declared additive-gap operator therefore requires
 
 $$
 \boxed{
@@ -656,7 +741,7 @@ At the old warped candidate \(\zeta=4.748389947082489\):
 
 The independent old-argument reconstruction differs from the stored derivative by \(1.53\times 10^{-8}\). With radial spacings \(0.08\), \(0.04\), and \(0.02\), the corrected subtracted derivative is \(-36.58813190\), \(-36.58292833\), and \(-36.58162543\). Its sign is resolved.
 
-**Repository derivation.** For each mode the determinant piece is one half of \(E_1(q_j)\). At fixed spatial geometry, subtracting the same pure-cutoff term used historically gives
+For each mode the determinant piece is one half of \(E_1(q_j)\). At fixed spatial geometry, subtracting the same pure-cutoff term used historically gives
 
 $$
 \boxed{
@@ -668,7 +753,7 @@ The disconnected radial matrix is the principal submatrix obtained by deleting t
 
 **Consequence.** Refining this family or selecting another determinant-only minimum cannot close its scale equation. A further attempt needs a derived change in the physical operator, its geometry/link dependence on scale, or the anomaly prescription. Merely naming the omitted recursive tail does not prove that it supplies that change.
 
-**Repository derivation.** For the same relative-sheet symbol
+For the same relative-sheet symbol
 
 $$
 D_\delta
@@ -686,7 +771,7 @@ the unregulated finite determinant is independent of \(\delta\). The proper-time
 
 ### B.1 Finite regulated variations and a spacetime obstruction
 
-**Repository derivation.** For a Hermitian finite Dirac matrix with no unresolved zeros, one explicit proper-time prescription is ([`nsc-3-regulated-recursion.json`](../results/nsc-3-regulated-recursion.json); [`docs/nsc-regulated-recursion.md`](../docs/nsc-regulated-recursion.md))
+For a Hermitian finite Dirac matrix with no unresolved zeros, one explicit proper-time prescription is ([`nsc-3-regulated-recursion.json`](../results/nsc-3-regulated-recursion.json); [`docs/nsc-regulated-recursion.md`](../docs/nsc-regulated-recursion.md))
 
 $$
 \Gamma_{\Lambda,M}(D)
@@ -697,7 +782,7 @@ $$
 
 Its first and second variations retain noncommuting perturbations through divided differences. A finite scale cocycle \(C(t)=\Gamma_{\mathrm{reg}}(D_t)-\Gamma_{\mathrm{reg}}(D)-t\operatorname{Tr}\Sigma\) is derived rather than discarded; its endpoint matches an independent integral of \(C'(t)\). Normalization \(M\) and cutoff \(\Lambda\) remain distinct. This finite orthonormal-basis calculus is not a derived continuum gravitational measure.
 
-**Repository derivation.** An ultrastatic Euclidean product \(D_E^2=-\partial_\tau^2+H^2\) produces a frequency factor \(\operatorname{Tr}_{\mathrm{sp}}e^{-tH^2}/\sqrt{4\pi t}\). That factor changes the variational functional; a spatial heat trace cannot silently inherit a four-spacetime anomaly.
+An ultrastatic Euclidean product \(D_E^2=-\partial_\tau^2+H^2\) produces a frequency factor \(\operatorname{Tr}_{\mathrm{sp}}e^{-tH^2}/\sqrt{4\pi t}\). That factor changes the variational functional; a spatial heat trace cannot silently inherit a four-spacetime anomaly.
 
 **Imported result / repository witness.** The recorded horizon-penetrating coordinate-time Hamiltonian is not elliptic in the trapped region: at the throat \(\beta^2=3\pi/2>1\), and a nonzero spatial covector makes one principal eigenvalue exactly zero. Elliptic spatial heat calculus therefore cannot be imported as the full spacetime determinant. The general loss of ellipticity at horizons is documented by Finster and Röken ([arXiv:1512.00761](https://arxiv.org/abs/1512.00761)); the project contribution is the explicit witness for this carrier, not discovery of the phenomenon.
 
@@ -705,7 +790,7 @@ Along \(D(t)=e^{-t}D\) at fixed cutoff, normalization, and finite domain, \(d\Ga
 
 ### B.2 The isolated radial throat is gapless
 
-**Repository derivation.** The unwarped spatial radial Dirac operator already declared by the project,
+The unwarped spatial radial Dirac operator already declared by the project,
 
 $$
 D=-i\sigma_2\partial_\rho+\sigma_1\frac{\kappa}{\sqrt{1+\rho^2}},
@@ -715,7 +800,7 @@ has essential spectrum equal to \(\mathbb{R}\) ([`nsc-3-radial-spectrum.json`](.
 
 ### B.3 A controlled geometric gap from repeated throat geometry
 
-**Repository derivation.** Repeating the finite segment \(\rho\in[-R,R]\) with \(w=(1+\rho^2)^{-1/2}\), instead of two asymptotically widening ends, produces an open spectral gap without an inserted constant mass ([`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json); [`docs/nsc-geometric-chain.md`](../docs/nsc-geometric-chain.md)). At zero energy the exact motif transfer multipliers are \(\exp(\pm 2\operatorname{asinh} R)\); neither has modulus one, so zero is absent from every real Bloch fibre. Continuum first band edges and second-order lattice agreement are
+Repeating the finite segment \(\rho\in[-R,R]\) with \(w=(1+\rho^2)^{-1/2}\), instead of two asymptotically widening ends, produces an open spectral gap without an inserted constant mass ([`nsc-3-geometric-chain.json`](../results/nsc-3-geometric-chain.json); [`docs/nsc-geometric-chain.md`](../docs/nsc-geometric-chain.md)). At zero energy the exact motif transfer multipliers are \(\exp(\pm 2\operatorname{asinh} R)\); neither has modulus one, so zero is absent from every real Bloch fibre. Continuum first band edges and second-order lattice agreement are
 
 | \(R\) | Continuum first band edge | Finest-lattice absolute error |
 |---|---:|---:|
@@ -729,7 +814,7 @@ The next-room link is the staggered stencil entry \(B_{\mathrm{last\,edge},\math
 
 ### B.4 Computed finite boundary maps and the threshold distinction
 
-**Repository derivation.** The finite first-order radial calculation now evaluates parent and child Weyl maps with sparse LU, throat reconstruction, independent ODE integration, and direct Schur controls ([nsc-3-boundary-response.json](../results/nsc-3-boundary-response.json)). The parent lies at positive radial coordinate and its outward throat normal is negative; the child lies at negative radial coordinate and its outward throat normal is positive. The oriented relation is
+The finite first-order radial calculation now evaluates parent and child Weyl maps with sparse LU, throat reconstruction, independent ODE integration, and direct Schur controls ([nsc-3-boundary-response.json](../results/nsc-3-boundary-response.json)). The parent lies at positive radial coordinate and its outward throat normal is negative; the child lies at negative radial coordinate and its outward throat normal is positive. The oriented relation is
 
 $$
 N_p(E)+N_c(E)=E[m_c(E)-m_p(E)].
@@ -737,7 +822,7 @@ $$
 
 A nonzero real-energy probability-current probe tests the local conservation law. The compact warp calculation reports mode-mixing leakage: its average-warp expression is a projected approximation. These results compute finite spatial maps; the full horizon boundary maps, physical compensator, and Lorentzian geometry equations remain open.
 
-**Repository derivation.** The same isolated radial geometry supplies an explicit threshold counterexample. Solving the upper squared-Dirac equation with unit throat value and vanishing exterior value gives, for t=asinh(R),
+The same isolated radial geometry supplies an explicit threshold counterexample. Solving the upper squared-Dirac equation with unit throat value and vanishing exterior value gives, for t=asinh(R),
 
 $$
 I_p=e^{3t}/6+e^t/2-2/3,\qquad I_c=2/3-e^{-t}/2-e^{-3t}/6,
@@ -871,7 +956,7 @@ The last term denotes the contribution still required by the common measure, com
 
 ## Appendix E. Interaction, spectral endpoint and state conversion
 
-This appendix records the technical controls behind Sections 4.7–4.9. It does not add a tenth source programme, recompute imported wormhole or thermal-field theorems, or select a physical coupling.
+This appendix records the interaction, spectral and state controls behind Sections 4.7–4.9, using the cited formulations and the same coefficient account.
 
 ### E.1 Projected gauge transmission
 
@@ -934,7 +1019,7 @@ At \(T/\nu=0.5\) the record's finite-endpoint density is \(-0.00122667356\,\nu^4
 
 ## References
 
-Primary sources support only the established ingredient named in the citing sentence. They do not transfer authority to Nested-Space postulates.
+The references identify the established formulations used in each derivation.
 
 1. A. Tonomura, J. Endo, T. Matsuda, T. Kawasaki, and H. Ezawa, “Demonstration of single-electron buildup of an interference pattern,” *Am. J. Phys.* **57**, 117 (1989). [DOI 10.1119/1.16104](https://doi.org/10.1119/1.16104).
 2. M. F. Pusey, J. Barrett, and T. Rudolph, “On the reality of the quantum state,” *Nature Phys.* **8**, 475 (2012), [arXiv:1111.3328](https://arxiv.org/abs/1111.3328).
@@ -969,9 +1054,9 @@ Repository records cited in the text live under [`results/`](../results/manifest
 27. A.-P. Jauho, N. Wingreen and Y. Meir, state-dependent quantum transport, [arXiv:cond-mat/9404027](https://arxiv.org/abs/cond-mat/9404027).
 28. D. Chung et al., gravitational Dirac production in inflation, [arXiv:1109.2524](https://arxiv.org/abs/1109.2524). This differs from the anisotropic radius-pulse benchmark here.
 29. D. V. Vassilevich, “Heat kernel expansion: user’s manual,” *Phys. Rept.* **388**, 279 (2003), [arXiv:hep-th/0306138](https://arxiv.org/abs/hep-th/0306138). The Dirac \(a_0,a_2,a_4\) coefficients used here are this established formula, independently reconstructed on the present operator.
-30. I. Klich, “Full Counting Statistics: An elementary derivation of Levitov’s formula,” [arXiv:cond-mat/0209642](https://arxiv.org/abs/cond-mat/0209642). The Fock-to-determinant identity is imported; it is not a Nested-Space discovery.
+30. I. Klich, “Full Counting Statistics: An elementary derivation of Levitov’s formula,” [arXiv:cond-mat/0209642](https://arxiv.org/abs/cond-mat/0209642). Source of the Fock-to-determinant identity.
 31. R. Martín and E. Verdaguer, “Stochastic semiclassical gravity,” *Phys. Rev. D* **60**, 084008 (1999), [arXiv:gr-qc/9904021](https://arxiv.org/abs/gr-qc/9904021). The influence-functional approach to gravitational response is imported; the present record connects it to this Dirac geometry.
-32. J. Maldacena, A. Milekhin, and F. Popov, “Traversable wormholes in four dimensions,” [arXiv:1807.04726v3](https://arxiv.org/abs/1807.04726). The semiclassical Einstein–Maxwell throat supported by charged massless Dirac vacuum energy is imported theory, not an NSC-computed solution.
+32. J. Maldacena, A. Milekhin, and F. Popov, “Traversable wormholes in four dimensions,” [arXiv:1807.04726v3](https://arxiv.org/abs/1807.04726). Source of the semiclassical Einstein–Maxwell throat supported by charged massless Dirac vacuum energy.
 33. M. Fischmann, “On conformal powers of the Dirac operator on spin manifolds,” [arXiv:1311.4182](https://arxiv.org/abs/1311.4182). Used for the conformal Dirac identification of the free compact carrier.
 34. Y. Grossman and M. Neubert, “Neutrino masses and mixings in non-factorizable geometry,” *Phys. Lett. B* **474**, 361 (2000), [arXiv:hep-ph/9912408](https://arxiv.org/abs/hep-ph/9912408). Used for the five-dimensional spinor reduction and chiral endpoint choice; their Randall–Sundrum phenomenology is not imported.
 35. O. Castillo-Felisola, C. Corral, S. Kovalenko, and I. Schmidt, “Torsion in extra dimensions and one-loop observables,” [arXiv:1405.0397](https://arxiv.org/abs/1405.0397). Equations 13 and 18–20 supply the higher-dimensional Einstein–Cartan contact reused on NSC compact profiles.
@@ -987,7 +1072,7 @@ Repository records cited in the text live under [`results/`](../results/manifest
 45. A. Codello, R. Percacci and C. Rahmede, “Investigating the Ultraviolet Properties of Gravity with a Wilsonian Renormalization Group Equation,” [arXiv:0805.2909v5](https://arxiv.org/pdf/0805.2909v5), Appendix A, equations A10 and A14–A15 for the trace/Mellin identities used in source matching.
 46. D. Grumiller, W. Kummer and D. V. Vassilevich, “Dilaton gravity in two dimensions,” *Phys. Rept.* **369**, 327 (2002), [arXiv:hep-th/0204253](https://arxiv.org/abs/hep-th/0204253). Spherical reduction and first-order canonical gravity are reused; the present checks concern this source's normalization and area-dependent charge coupling.
 47. L. Parker and D. J. Simon, “Einstein equation with quantum corrections reduced to second order,” *Phys. Rev. D* **47**, 1339 (1993), [arXiv:gr-qc/9211002](https://arxiv.org/abs/gr-qc/9211002). Used for perturbative order reduction of local curvature-squared terms.
-48. M. Ruhdorfer, J. Serra and A. Weiler, “Effective Field Theory of Gravity to All Orders,” *JHEP* **05**, 083 (2020), [arXiv:1908.08050](https://arxiv.org/abs/1908.08050). Used for removing redundant curvature operators by metric redefinition; no new general theorem is claimed.
+48. M. Ruhdorfer, J. Serra and A. Weiler, “Effective Field Theory of Gravity to All Orders,” *JHEP* **05**, 083 (2020), [arXiv:1908.08050](https://arxiv.org/abs/1908.08050). Source for removing redundant curvature operators by metric redefinition.
 49. R. Camporesi and A. Higuchi, “On the eigenfunctions of the Dirac operator on spheres and real hyperbolic spaces,” *J. Geom. Phys.* **20**, 1 (1996), [arXiv:gr-qc/9505009](https://arxiv.org/abs/gr-qc/9505009). The four-sphere Dirac spectrum is imported and composed with the project's compact weight.
 50. C. Gérard, D. Häfner and M. Wrochna, “The Unruh state for massless fermions on Kerr spacetime and its Hadamard property,” [arXiv:2008.10995](https://arxiv.org/abs/2008.10995). Used as a characteristic-state prescription on its stated domain, not as an automatic theorem on the NSC black-universe extension.
 51. Y. V. Gusev and A. I. Zelnikov, “Finite temperature nonlocal effective action for quantum fields in curved space,” *Phys. Rev. D* **59**, 024002 (1999), [arXiv:hep-th/9807038](https://arxiv.org/abs/hep-th/9807038). Fermionic thermal images and the canonical free energy are reused on the adopted finite proper-time endpoint.

@@ -6,9 +6,10 @@ notes, eight compact result records, their generators, five implementation
 modules and one boundary-state test. The 33 scientific files are imported
 byte for byte from that Git checkpoint.
 
-The existing PDF and its 100-record manifest describe the preceding
-preprint checkpoint. This is a subsequent development snapshot, not a new
-tagged release or a claim of completed physical closure.
+The 100-record manifest describes the preceding preprint checkpoint.
+This subsequent development snapshot adds the source derivations below.
+The September 10 editorial revision presents the paper and overview pages
+around these connected equations; the original result records are preserved.
 
 ## Read the connected derivation
 

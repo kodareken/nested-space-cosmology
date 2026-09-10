@@ -1,6 +1,8 @@
 # Contributing
 
-Nested-Space Cosmology welcomes criticism, calculations, counterexamples, and clearer formulations. Contributions are evaluated by whether they make the one-equation claim easier to falsify or reproduce—not by whether they protect the current narrative.
+Nested-Space Cosmology welcomes derivations, calculations, constructive criticism
+and clearer formulations. Contributions should make the common-operator
+construction more explicit, reproducible and physically informative.
 
 **Douglas Ek** is the accountable author. **ChatGPT** and **OpenAI Codex** have been used for formulation, code, computation, drafting, comparison, and audit. Pull requests that include AI-generated text or code must still be checked against explicit mathematics, committed compact JSON, cited sources, and stated nonclaims. AI assistance does not transfer scientific responsibility.
 
@@ -66,6 +68,11 @@ See [docs/reproducing.md](docs/reproducing.md) for pins, overwrite policy, and w
 A calculation may be valuable when it falsifies a preferred truncation. Negative results belong in the compact record and in [docs/current-result.md](docs/current-result.md), not in a private discard pile.
 
 ## Scientific writing rules
+
+Lead with the equation, result and physical connection. The README contains
+the general research-status statement; avoid repeating it throughout the
+paper. Keep the domain, assumptions, provenance and remaining terms beside
+the particular result they qualify. Write established identities directly.
 
 - Say “conditional on” when a result depends on a postulate.
 - Say “inferred from” when the target observable is used to determine an upstream parameter.
