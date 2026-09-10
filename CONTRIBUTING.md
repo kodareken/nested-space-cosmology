@@ -74,6 +74,11 @@ the general research-status statement; avoid repeating it throughout the
 paper. Keep the domain, assumptions, provenance and remaining terms beside
 the particular result they qualify. Write established identities directly.
 
+Write for two readers at once. Give a general reader the visual relationship
+first—gradient, oscillation, spectrum, resonance, boundary, inheritance—then
+give the exact operator statement a physicist can inspect. Jargon should name
+a relationship already made understandable, not replace the explanation.
+
 - Say “conditional on” when a result depends on a postulate.
 - Say “inferred from” when the target observable is used to determine an upstream parameter.
 - Reserve “prediction” for a quantity fixed without using the data later compared with it.

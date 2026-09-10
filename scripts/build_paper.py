@@ -1092,10 +1092,10 @@ def build_pdf(
         canvas.setTitle(str(metadata["title"]))
         canvas.setAuthor(str(metadata["author"]))
         canvas.setSubject(
-            "A recursive spectral gradient-boundary framework across physical scales"
+            "One inherited spectrum connecting matter, geometry, dark response, and nested space"
         )
         canvas.setKeywords(
-            "nested-space cosmology, black holes, spectral geometry, recursive geometry, computational physics"
+            "nested-space cosmology, frequency spectrum, black holes, antimatter, dark matter, dark energy, spectral geometry"
         )
         canvas.setFillColor(navy)
         canvas.rect(0, 0, page_width, page_height, fill=1, stroke=0)
@@ -1207,7 +1207,7 @@ def build_pdf(
             styles["CoverDeck"],
         ),
         Paragraph(
-            "Matter, geometry and boundary response through one recursive operator",
+            "What if one inherited spectrum is enough?",
             styles["CoverSubtitle"],
         ),
         Spacer(1, 18 * mm),

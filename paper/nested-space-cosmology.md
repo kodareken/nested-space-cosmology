@@ -1,6 +1,6 @@
 # Nested-Space Cosmology
 
-## One Recursive Spectral Gradient–Boundary Equation Across Scales
+## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
 Version 0.7.0 · editorial revision, 10 September 2026<br>
@@ -8,19 +8,29 @@ Working preprint
 
 ## Abstract
 
-Nested-Space Cosmology develops a common description of local matter, boundary
-response and gravitational source through the recursive condition
-\(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\). A block Dirac operator
-places locally resolved fields on its diagonal and parent–child interactions
-off diagonal. The research objective is a geometry whose quantum state and
-stress are determined by this same action.
+Nested-Space Cosmology asks whether one inherited frequency spectrum is enough
+to describe what we separately call particles, waves, matter, antimatter,
+dark gravity, black holes, and expanding space. A room is a locally complete
+spacetime with its own clocks, rulers, and resolved spectrum. A black-hole
+boundary is proposed as the handoff at which a compressed parent gradient
+continues in a child room with a new absolute register and the same
+dimensionless law.
 
-Three connections make the construction concrete. First, a scalar sheet link
-has an invariant four-component sector with the ordinary Dirac mass shell;
-the same coupling fixes the visible self-energy. Second, evaluated curved
-spinor maps connect direct propagation to boundary elimination. Third,
-metric variation and quantum-state evolution connect geometric work, field
-excitation and cross-boundary energy transfer.
+The mathematics is organized by
+\(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\). The eigenvalues of
+\(\mathbb D_n\) are the room's natural frequencies. Its diagonal blocks
+describe locally resolved fields, while off-diagonal blocks transmit state and
+energy between rooms. Eliminating an unresolved block produces a visible
+Schur self-energy. Its near-zero-momentum projection is the proposed source of
+smooth dark expansion; its finite-wavelength projection is the proposed source
+of dark clustering and lensing.
+
+Three exact connections anchor this picture. A scalar sheet link has an
+invariant four-component sector with the ordinary Dirac mass shell, and the
+same coupling fixes the visible self-energy. Curved full-spinor boundary maps
+connect direct propagation to boundary elimination. Canonical metric variation
+and state evolution connect geometric work, field excitation, and
+cross-boundary energy transfer.
 
 On the smooth expanding-child benchmark, affine-horizon data and the actual
 complex exterior Dirac reflection determine a canonical massless source with
@@ -31,25 +41,71 @@ contractions are negative, and the state carries outward parent Killing power
 pairs with a verified work balance. The calculation specifies density,
 pressure, flux and their remaining componentwise metric residuals.
 
-The paper follows these equations from the operator to its source, using
-100 reproducible records and a linked development snapshot. Its next defining
-step is the complete causal geometric contribution, with the state and domain
-needed to solve the coupled geometry. The technical appendices retain the
-normalization identities, historical corrections and numerical domains.
+The canonical closed-time-path functional now owns causal response. A
+recursive zero-tadpole law fixes homogeneous unlinked
+\(V_{\rm full}=0\) while preserving Einstein, gauge, curvature, Casimir, and
+link response. The paper follows the spectrum from intuitive picture to exact
+operator equations, using 100 preprint records and twelve post-preprint
+development records. The remaining integration is the physical recursive
+return state, joint geometry/scale solution, particle pole, and cosmological
+projection of the same state.
 
-## 1. One law across nested spaces
+## 1. What if one spectrum is enough?
+
+A musical note is a stable pattern inside an oscillation. It is not a second
+substance added to the wave. NSC applies that simple relation to fields and
+geometry. For room \(n\),
+
+$$
+\mathbb D_n u_{n,k}=\omega_{n,k}u_{n,k},
+\qquad
+\omega_{n,k}=\Lambda_n\widehat\omega_k(\Theta).
+$$
+
+The eigenvector is a possible pattern; the eigenvalue is its natural
+frequency. Energy, frequency, and wavelength are related by
+
+$$
+E=\hbar\omega,
+\qquad
+\nu=\frac{\omega}{2\pi},
+\qquad
+\lambda=\frac{2\pi c}{\omega}.
+$$
+
+A wider frequency range resolves shorter lengths and supports more stable
+combinations. Complexity is the growth of distinguishable patterns within the
+spectrum, not the introduction of unrelated fundamental substances.
+
+If \(\Lambda_{n+1}=\Omega\Lambda_n\), parent and child can occupy different
+absolute registers while preserving the same dimensionless intervals:
+
+$$
+\frac{\omega_{n+1,k}}{\Lambda_{n+1}}
+=\frac{\omega_{n,k}}{\Lambda_n}
+=\widehat\omega_k(\Theta).
+$$
 
 The central proposal is that spaces form inside spaces through collapse,
-localization and renewed expansion. A room changes its configuration and local
-scale while inheriting a common dimensionless law:
+localization, and renewed expansion. A room changes configuration and scale
+while inheriting the common law
 
 $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-The diagonal blocks describe room operators. Off-diagonal blocks describe
-their boundary interactions. The proposed invariant partition and the present
-spectral prescription are
+The Perseus cluster provides a concrete low-frequency image of black-hole
+feedback. Repeated outbursts from its central black hole drive pressure waves
+through the hot gas at roughly \(3.3\times10^{-15}\) Hz—one cycle per ten
+million years and about 57 octaves below the B-flat above middle C. The waves
+carry energy into their environment. [Chandra gives the measured scale and
+octave calculation](https://chandra.harvard.edu/chronicle/0303/perseus/index.html).
+NSC extends the same frequency language from cosmic pressure waves to field
+resonances and geometric boundaries.
+
+The diagonal blocks of \(\mathbb D_\Theta\) describe room operators;
+off-diagonal blocks describe their boundary interactions. The proposed
+invariant partition and spectral prescription are
 
 $$
 Z_{\Lambda}^{\mathrm{one}}(\mathbb D_\Theta)=\int\mathcal D\varphi\,Z_\Lambda(e^{-\varphi/2}\mathbb D_\Theta e^{-\varphi/2}),
@@ -59,9 +115,9 @@ $$
 S_{\mathrm{one}}=\operatorname{Tr}e^{-\mathbb D_\Theta^2/\Lambda^2}+\langle J\Psi,\mathbb D_\Theta\Psi\rangle.
 $$
 
-A physical realization specifies the regulator, normalization scale, measure,
-compensator, determinant phase, zero modes and boundary domain together.
-Induced geometric terms enter once. These ingredients define the chain
+A physical realization specifies the regulator, normalization, measure,
+determinant phase, zero modes, state, and boundary domain together. Induced
+geometric terms enter once. These ingredients form one chain:
 
 ```text
 common action, quantum state and recursive domain
@@ -71,9 +127,9 @@ common action, quantum state and recursive domain
        -> expansion, clustering and lensing
 ```
 
-The equations below distinguish defining requirements, attributed established
-methods and project calculations through their assumptions and sources.
-General research status is stated in the [repository README](../README.md#research-status).
+The equations below move from this picture to the exact algebra and computed
+evidence. General research status is stated once in the
+[repository README](../README.md#research-status).
 
 Douglas Ek supplies the conceptual synthesis and scientific responsibility.
 ChatGPT/OpenAI Codex assisted with derivations, computation and writing;
@@ -81,16 +137,16 @@ Grok supplied bounded investigations. The principal collaborating sessions
 are identified as GPT-5.6 Sol and GPT-6 Astra. Equations, source hashes and
 reproducible artifacts provide the evidence for each result.
 
-## 2. Six physical connections
+## 2. How one spectrum appears as six parts of reality
 
-| Research target | Present connection | Quantity to determine from the common solution |
+| Familiar name | Meaning in the common spectrum | Calculated connection |
 |---|---|---|
-| Constants and thermal limits | Characteristic currents, compact/light matching and thermal conversion | Gravitational coupling, common causal cone and physical thermal state |
-| Finite black-hole continuation | Smooth geometry, horizon transport and parent-matched stress | Evolved geometry, constraints and complete continuation |
-| Dark response | Boundary self-energy and energy-transfer identities | Background stress, growth and lensing |
-| Particle, wave and measurement | Excitations, Dirac–gauge interaction and Gaussian state functional | Detector coupling, records and statistics |
-| Mass, chirality and antimatter | Invariant Dirac sector, compact masses and charge algebra | Actual scalar interaction, sector selection and gauge representations |
-| Recursive infinity | Endpoint criteria and free-state dilution | State marginals, clock transfer and observable limits |
+| Constants and resolution | The local conversion between frequency, energy, length, and gravitational response | Characteristic currents, compact/light matching, and thermal conversion |
+| Black hole and child space | The causal/resolution handoff between two spectral rooms | Smooth geometry, horizon transport, and parent-matched stress |
+| Dark energy and dark matter | Zero- and finite-wavelength ranges of one unresolved boundary response | Schur self-energy, source projections, and energy-transfer identities |
+| Wave and particle | Extended amplitude and stable pole of the same field | Pair creation, response poles, and Gaussian state functional |
+| Matter and antimatter | Conjugate positive- and negative-frequency Dirac sectors | Invariant Dirac mass sector and charge-conjugation algebra |
+| Recursive infinity | The same law and normalized spectrum continuing through descendants | Endpoint criteria, state transport, and normalized recursion |
 
 <!-- nsc-claim:target-constants -->
 ### 2.1 Constants and physical resolution
@@ -129,6 +185,18 @@ separations and stabilization. Applying this construction requires its magnetic
 return geometry, state and coefficient normalization. Its optical length and
 proper length enter different parts of the matching.
 
+At a lossless field boundary, reflection and transmission satisfy
+
+$$
+|R(\omega)|^2+|T(\omega)|^2=1.
+$$
+
+The parent reconstructs what returns through \(R\); the transmitted component
+continues beyond its locally accessible chart. In this sense the shadow,
+throat, and expanding interior are three views of one boundary problem. The
+calculated complex Dirac reflection below determines the inherited child
+covariance rather than serving as a visual analogy alone.
+
 The project's horizon-penetrating Hamiltonian retains shift and spin connection.
 Its declared Cauchy evolution conserves Dirac norm while transporting it into
 the child ([tetrad](../results/nsc-4-dirac-tetrad.json),
@@ -150,6 +218,20 @@ projections of this boundary response. Their calculation requires the same
 state's density, pressure, anisotropic stress and transfer currents.
 A predicted vacuum curvature and physical scale connect the spectral
 construction to the cosmological-constant question.
+
+In momentum language,
+
+$$
+\Gamma_n^{(2)}(k)=K_{\rm local}(k)+\Pi_{\rm outside,\Theta}(k),
+$$
+
+with the proposed observational dictionary
+
+$$
+\Pi_{\rm outside}(0)\longrightarrow\text{background expansion},
+\qquad
+\Pi_{\rm outside}(k>0)\longrightarrow\text{clustering and lensing}.
+$$
 
 <!-- nsc-claim:target-measurement -->
 ### 2.4 Localized excitations, waves and detection
@@ -176,6 +258,23 @@ column-spinor map is \(\psi^c=i\gamma^2\psi^*\). Charge conjugation acts on the
 gauge representation. Both complementary scalar-link sectors are retained
 until the action or domain selects one. Spin-one fields and the matter–antimatter
 asymmetry require their respective gauge and state dynamics.
+
+The frequency picture is explicit in the quantized field:
+
+$$
+\Psi(x)=\sum_s\int d^3p\,
+\left[a_su_se^{-ip\cdot x}+b_s^\dagger v_se^{+ip\cdot x}\right].
+$$
+
+The two phase orientations become particle and antiparticle sectors after
+quantization. A real sine combines both,
+
+$$
+\sin(\omega t)=\frac{e^{i\omega t}-e^{-i\omega t}}{2i},
+$$
+
+while charge conjugation supplies the physical reversal of gauge
+representation.
 
 <!-- nsc-claim:target-recursion -->
 ### 2.6 Recursion, clocks and probability
@@ -585,7 +684,14 @@ The computed density has the opposite sign to that positive-Einstein requirement
 <!-- nsc-claim:state-regulator-conversion -->
 **Imported thermal determinant / repository compatibility check.** The adopted finite Euclidean proper-time factor cannot be identified, without a state-dependent conversion, with the thermal source of the canonical Dirac field used above. On flat \(\mathbb R^3\) times an antiperiodic Euclidean thermal circle, with one ordinary massless Dirac field, \(T/\nu=0.5\) gives canonical \(\rho=0.0719658654\,\nu^4\) versus raw finite \(\rho=-0.00122667356\,\nu^4\) after subtracting that prescription's own zero-temperature energy [51]. Local vacuum coefficients cancel in the thermal-minus-vacuum difference and cannot repair it. A pole-residue argument is insufficient: the regulated inverse has residue one on shell, yet the finite Matsubara determinant differs from the canonical CAR excitation energy. This flat equilibrium calculation fixes the conversion requirement for that state and prescription.
 
-If the intended physical field retains its canonical state functional, the completion must satisfy \(\Delta\Gamma_{\mathrm{completion}}=\Delta\Gamma_{\mathrm{canonical}}-\Delta\Gamma_{\mathrm{raw}}\) for that sector and common contour. The negative neck null is the canonical massless contribution to be combined with the remaining finite-cutoff source. The next owner is that same-state conversion, including massive, boundary and recursive sectors ([state-regulator record](../results/development/state-regulator.json)).
+The subsequent [canonical causal functional](../docs/nsc-causal-common-functional.md)
+assigns real-time response to the Lorentzian Dirac state while retaining
+state-independent induced spectral coefficients once. Equal-history
+normalization, covariance trace, unitarity, and finite energy/work balance
+agree at approximately \(10^{-16}\). The raw proper-time kernel remains a
+distinct Euclidean prescription rather than being relabeled as a retarded
+correlator. The [state-regulator record](../results/development/state-regulator.json)
+provides the equilibrium conversion control.
 
 ## 5. Recursion and cosmological predictions
 
@@ -630,28 +736,40 @@ The Skyrme/BPS sector is a possible low-energy construction pattern. Its coeffic
 The often-quoted 3.34 solar-mass maximum is imported from a nuclear-calibrated Einstein–BPS model [5]. The historical runner records the published value rather than independently recomputing it. Its potential and calibrated nuclear coefficients matter; other potentials yield different maxima. It serves here as the stellar control for that imported model ([stellar benchmark](../results/nsc-1-gravitating-bps-observation-link.json)).
 
 
-The source problem has a precise next equation:
+The source equation is
 
 $$
 \left.\frac{\delta\Gamma_{\rm one}}{\delta g_\Delta^{\mu\nu}}\right|_{g_\Delta=0}=0.
 $$
 
-The [subsequent common-source derivation](../docs/nsc-common-source-derivation.md)
-binds boundary coherence, energy transfer and metric variation. Its eight
-[development records](../results/development-snapshot.json) add the boundary
-state, measure reconstruction, ADM source projections, a local warp contribution
-and the necessary parent mass balance. The remaining definition is the full
-causal geometric contribution and its state or admissible history data. The
-[causal-source analysis](../docs/nsc-causal-source-definition-gap.md) identifies
-why the computed real phase for complete histories does not yet supply
-retarded initial-data evolution. That input joins the existing quantum source
-to the coupled geometry and scale equations.
+The [common-source derivation](../docs/nsc-common-source-derivation.md) binds
+boundary coherence, energy transfer, and metric variation. The canonical CTP
+owner supplies causal state response. The recursive zero-tadpole law
+
+$$
+\Gamma_{\rm rel}=(1-\mathcal P_0)\Gamma_{\rm one},
+\qquad
+(V,A,C)\mapsto(0,A,C),
+$$
+
+fixes the homogeneous unlinked \(V_{\rm full}=0\) and gives
+\(\lambda_4=\Xi=0\) in the charged-throat map. Einstein, gauge, curvature,
+finite Casimir, and link responses remain. The twelve
+[development records](../results/development-snapshot.json) provide the
+boundary state, measure, ADM projections, parent mass balance, MMP embedding,
+causal source, and relational normalization. Their remaining integration is
+the physical recursive return state and joint geometry/scale solution.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
-This working revision contains 100 records: 58 frozen historical records and 42 scoped follow-ups. The nine new source and state records, with their laboratory notes, are imported from laboratory commit \(161028d\). All 91 earlier manifest step objects and scientific records/generators retain their bytes and comparison policies. Native schemas are preserved; publication identities and routing are supplied by adapters. Immutable source notes retain their creation-time publication status; this release manifest supplies their present publication state.
+The preprint collection contains 100 records: 58 frozen historical records and
+42 scoped follow-ups. A separate twelve-record development snapshot, imported
+through laboratory commit \(984a7a6\), carries the common-source and relational
+normalization continuation. The 100-record manifest remains byte-preserved;
+the development index authenticates its additional source files and comparison
+policies separately.
 
 The new records compare their published fields, formulae, scope statements and source/input hashes under the absolute and relative tolerances stored in those JSON files. Earlier horizon-source, warped-source and compact/light policies are unchanged. For the spectral endpoint's small finite-difference residual, portable mode additionally checks the Richardson and subtraction identities, retains the generator's original derivative-accuracy requirement, and propagates the raw operands' comparison budgets. The raw derivatives retain their original tolerances; exact mode is unchanged. Structure, source/comparator hashes and scope fields remain exact. These reproduction policies are distinct from the convergence studies and physical assumptions in each record.
 

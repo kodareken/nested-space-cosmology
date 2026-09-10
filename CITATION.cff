@@ -11,13 +11,17 @@ license: MIT
 repository-code: "https://github.com/kodareken/nested-space-cosmology"
 keywords:
   - nested-space cosmology
+  - inherited frequency spectrum
   - black holes
+  - antimatter
+  - dark matter
+  - dark energy
   - spectral geometry
   - recursive geometry
   - computational physics
 preferred-citation:
   type: report
-  title: "Nested-Space Cosmology: One Recursive Spectral Gradient-Boundary Equation Across Scales"
+  title: "Nested-Space Cosmology: One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space"
   authors:
     - given-names: "Douglas"
       family-names: "Ek"

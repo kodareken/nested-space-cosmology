@@ -10,6 +10,13 @@ and remove repeated generic disclaimers. Use direct language for established
 identities and computed quantities. Keep authenticated notes, numerical records
 and source bytes intact when revising the public narrative.
 
+The public front door uses two layers. Begin with the one-inherited-spectrum
+picture in language a general reader can visualize, then give the exact Dirac,
+Schur, state, stress, and recursion equations that make each correspondence
+precise. Define specialist terms after the intuitive relation they formalize.
+Use positive/negative frequency and charge conjugation for antimatter; use Hz
+for physical frequency and reserve dB for logarithmic amplitude ratios.
+
 For GitHub-facing pages, use dollar-delimited inline math and display math
 blocks. Write the trace as `\mathrm{Tr}` and use `\lvert`/`\rvert` for
 absolute values in tables, whose literal bars otherwise split cells.
