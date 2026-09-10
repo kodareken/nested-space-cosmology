@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 7831,
+      "bytes": 8114,
       "path": "AGENTS.md",
-      "sha256": "36a6d81f3d9f04826b1479a96f4e24e59d2d77a280d37764342ba8a733e60cd0"
+      "sha256": "0209e52a87bb590b0269e9caaf9e1fb514d10dbcdeac7a2a45a75f11ebeb9a9a"
     },
     {
       "bytes": 964,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 6299,
+      "bytes": 6285,
       "path": "README.md",
-      "sha256": "ece8cdce65c0183a9d6d8e9c5d3c5ffc3a65ed9d9af75875c86115a12b81464b"
+      "sha256": "a63999cad8565b3b2892a03da6ab9eb3e254e3225a95d621d9e4385bd74b71e4"
     },
     {
       "bytes": 629,
@@ -76,14 +76,14 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 6602,
+      "bytes": 6574,
       "path": "THEORY.md",
-      "sha256": "8d9dbe0835b8811b9bf31919f8f387fed23d57dc0cf7c28414702e9f1c183ea8"
+      "sha256": "1672e2cd1de1ea82cf74f05d60b00992c30bcc3f51136ef4a4e81c2b9e10396d"
     },
     {
-      "bytes": 6743,
+      "bytes": 6689,
       "path": "docs/current-result.md",
-      "sha256": "92d6ab3a287cde51d482828ac6adb67a6c3f8377c4c49699de557a039d98238d"
+      "sha256": "1e60c374a9ab73db90118e32056c9a73481866a6cbb8bf31eb090216ce27d468"
     },
     {
       "bytes": 4414,

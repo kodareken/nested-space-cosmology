@@ -11,11 +11,11 @@ In the invariant scalar-link sector,
 
 $$
 [H_8,\Pi_-]=0,\qquad
-E^2=|\mathbf p|^2+\Phi^2,\qquad
+E^2=\lvert\mathbf p\rvert^2+\Phi^2,\qquad
 \Sigma_p(E)=\Phi^2(E+\boldsymbol\alpha\cdot\mathbf p)^{-1}.
 $$
 
-The same \(\Phi\) determines the mass shell and visible self-energy.
+The same $\Phi$ determines the mass shell and visible self-energy.
 [The Dirac reduction](nsc-observable-bridge.md) specifies the projector, spin
 frame and charge conventions. The complementary sector is spectrally
 identical. The evaluated massless throat kernel has vector and axial
@@ -26,7 +26,7 @@ requirements.
 
 Parent and child maps are obtained from the smooth Dirac geometry with
 oriented normal data. Direct inversion, Schur elimination and transfer agree
-below \(2\times10^{-15}\) relative error in the recorded finite system.
+below $2\times10^{-15}$ relative error in the recorded finite system.
 Independent radial integration differs by 0.00947%–0.03645% at the stated
 resolution. The [full spinor calculation](nsc-chiral-boundary.md) retains both
 angular sectors and the common spin frame.
@@ -37,7 +37,7 @@ $$
 \Gamma_p(x)=K_p(x)-\Omega^{-1}b\,\Gamma_c(x/\Omega)^{-1}b^\dagger.
 $$
 
-The explicit \(\Omega^{-1}\) is the first-order normalization factor.
+The explicit $\Omega^{-1}$ is the first-order normalization factor.
 [Finite recursion](nsc-regulated-recursion.md) and
 [endpoint criteria](nsc-tail-limit.md) supply the recorded controls.
 
@@ -46,24 +46,24 @@ The explicit \(\Omega^{-1}\) is the first-order normalization factor.
 For the finite quadratic system,
 
 $$
-z_B=\operatorname{Tr}_p(B C_{cp}),\qquad
+z_B=\mathrm{Tr}_p(B C_{cp}),\qquad
 E_{\rm link}=2\Re z_B,\qquad \dot N_p=2\Im z_B,
 $$
 
 $$
-\dot E_{\rm tot}=\operatorname{Tr}(C\dot H).
+\dot E_{\rm tot}=\mathrm{Tr}(C\dot H).
 $$
 
 [The common-source derivation](nsc-common-source-derivation.md) includes
 energy stored in the link. [The boundary-state implementation](nsc-boundary-state.md)
 retains occupied and empty kernels and mixed initial correlations.
 Its finite covariance reconstruction agrees with full evolution to
-\(1.1\times10^{-15}\).
+$1.1\times10^{-15}$.
 
 A prescribed changing radius creates pairs with excitation energy equal to
-the supplied work. In the representative \(\kappa=1\) channel,
-\(\epsilon=0.02\), \(\tau=0.5\) gives approximately
-\(1.40181\times10^{-5}\) pairs and energy \(3.46640\times10^{-5}\)
+the supplied work. In the representative $\kappa=1$ channel,
+$\epsilon=0.02$, $\tau=0.5$ gives approximately
+$1.40181\times10^{-5}$ pairs and energy $3.46640\times10^{-5}$
 in throat units. [The vacuum-work record](nsc-vacuum-work.md) and
 [normalized influence functional](nsc-influence.md) connect this response
 to its geometric fluctuation weight.
@@ -72,20 +72,20 @@ to its geometric fluctuation weight.
 
 Affine-horizon data and the actual complex exterior reflection determine
 the canonical massless state on the expanding child. In the child
-orthonormal frame, with \(\hbar=c=L_{\rm throat}=1\), \(\mu=1\):
+orthonormal frame, with $\hbar=c=L_{\rm throat}=1$, $\mu=1$:
 
 | Quantity | Recorded neck value |
 |---|---:|
-| Density \(\rho\) | \(-0.0033068962\) |
-| Longitudinal pressure \(p_\parallel\) | \(-0.0494945966\) |
-| Angular pressure \(p_\perp\) | \(-0.0429957713\) |
-| Radial null \(+\) | \(-0.0528075900\) |
-| Radial null \(-\) | \(-0.0527953956\) |
-| Outward parent Killing power | \(0.0001422206795\) |
+| Density $\rho$ | $-0.0033068962$ |
+| Longitudinal pressure $p_\parallel$ | $-0.0494945966$ |
+| Angular pressure $p_\perp$ | $-0.0429957713$ |
+| Radial null $+$ | $-0.0528075900$ |
+| Radial null $-$ | $-0.0527953956$ |
+| Outward parent Killing power | $0.0001422206795$ |
 
-Stress has dimensions \(L^{-4}\), and power \(L^{-2}\). Angular refinement
+Stress has dimensions $L^{-4}$, and power $L^{-2}$. Angular refinement
 from 16 to 32 after the recorded tail correction changes tensor components
-by less than \(4\times10^{-6}\) across the sampled radii. This measures
+by less than $4\times10^{-6}$ across the sampled radii. This measures
 numerical sensitivity under that asymptotic-tail approximation.
 [Source and state](nsc-unruh-state.md).
 
@@ -100,7 +100,7 @@ The computed null signs are negative; density, pressure anisotropy and flux
 leave explicit componentwise residuals. The [ADM frame map](nsc-adm-neck-source-map.md)
 places those quantities in the metric equations. Under the stated asymptotic
 Einstein normalization, the outgoing channel contributes
-\(dM_B/du=-P_0\), selecting a backreaction calculation.
+$dM_B/du=-P_0$, selecting a backreaction calculation.
 [Flux and mass balance](nsc-parent-backreaction-gate.md).
 
 ## 5. One normalization and one metric variation

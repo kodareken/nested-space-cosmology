@@ -10,6 +10,11 @@ and remove repeated generic disclaimers. Use direct language for established
 identities and computed quantities. Keep authenticated notes, numerical records
 and source bytes intact when revising the public narrative.
 
+For GitHub-facing pages, use dollar-delimited inline math and display math
+blocks. Write the trace as `\mathrm{Tr}` and use `\lvert`/`\rvert` for
+absolute values in tables, whose literal bars otherwise split cells.
+Check GitHub's Markdown rendering when changing math presentation.
+
 **Execution priority: reuse first.** Consult the [reuse map](docs/nsc-prior-art-reuse.md)
 and current result before allocating scientific compute. Historical derivations
 are reference material, not a queue to repeat.

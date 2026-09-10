@@ -23,9 +23,9 @@ response of an unresolved room, and the energy exchanged across their boundary.
 
 | Connection | Mathematical result | Evidence |
 |---|---|---|
-| One coupling, mass and external response | In the invariant scalar-link sector, \(E^2=|\mathbf p|^2+\Phi^2\) and \(\Sigma_p(E)=\Phi^2(E+\boldsymbol\alpha\cdot\mathbf p)^{-1}\) | [Dirac reduction](docs/nsc-observable-bridge.md) |
+| One coupling, mass and external response | In the invariant scalar-link sector, $E^2=\lvert\mathbf p\rvert^2+\Phi^2$ and $\Sigma_p(E)=\Phi^2(E+\boldsymbol\alpha\cdot\mathbf p)^{-1}$ | [Dirac reduction](docs/nsc-observable-bridge.md) |
 | Geometry determines boundary transport | Evaluated curved spinor maps agree with direct elimination and independent radial integration | [Boundary channels](docs/nsc-chiral-boundary.md) |
-| One coherence, stored energy and transfer | \(z_B=\operatorname{Tr}(BC_{cp})\) gives \(E_{\rm link}=2\Re z_B\) and \(\dot N_p=2\Im z_B\) | [Common-source derivation](docs/nsc-common-source-derivation.md) |
+| One coherence, stored energy and transfer | $z_B=\mathrm{Tr}(BC_{cp})$ gives $E_{\rm link}=2\Re z_B$ and $\dot N_p=2\Im z_B$ | [Common-source derivation](docs/nsc-common-source-derivation.md) |
 | Changing geometry creates Dirac excitations | The prescribed radius pulse's work equals the increase in field energy | [Vacuum-work experiment](docs/nsc-vacuum-work.md) |
 | Parent state determines child vacuum stress | The computed canonical massless state has two negative radial null contractions at the smooth neck and outward power | [Parent-matched source](docs/nsc-unruh-state.md) |
 | The same operator supplies geometric forces | Independent lapse, shift, radial-metric and radius variations give the stress projections and conservation identities | [Metric source equations](docs/nsc-adm-source-constraints.md) |
@@ -60,8 +60,8 @@ $$
 $$
 
 At the recorded neck, the parent-matched massless source gives
-\(T_{kk}^{+}=-0.0528075900\), \(T_{kk}^{-}=-0.0527953956\), and outward
-power \(P_0=0.0001422206795\), in the specified throat units. The complete
+$T_{kk}^{+}=-0.0528075900$, $T_{kk}^{-}=-0.0527953956$, and outward
+power $P_0=0.0001422206795$, in the specified throat units. The complete
 source equation also includes density, both pressures, flux and the geometric
 contribution. The [latest derivation](docs/nsc-causal-source-definition-gap.md)
 locates the next dependency precisely: the full causal geometric/UV source
@@ -92,7 +92,7 @@ self-sourced solution, identified particle and nuclear sectors, and independent
 cosmological predictions remain research objectives. The current results do
 not establish a theory of everything or an observational identification of
 our universe with a black-hole interior. In particular, the quoted
-\(3.34M_\odot\) stellar endpoint belongs to an imported, nuclear-calibrated
+$3.34M_\odot$ stellar endpoint belongs to an imported, nuclear-calibrated
 Einstein–BPS benchmark.
 
 Established Dirac theory, spectral geometry, quantum-field methods and regular
