@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 8114,
+      "bytes": 8115,
       "path": "AGENTS.md",
-      "sha256": "0209e52a87bb590b0269e9caaf9e1fb514d10dbcdeac7a2a45a75f11ebeb9a9a"
+      "sha256": "56bbb3d6b6c629fa207553d96b26f478c4821346cdfd542037b584fc77c07158"
     },
     {
       "bytes": 964,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 6285,
+      "bytes": 6337,
       "path": "README.md",
-      "sha256": "a63999cad8565b3b2892a03da6ab9eb3e254e3225a95d621d9e4385bd74b71e4"
+      "sha256": "35cbd7984c969b9c31b659fdb38320b1194bebaf05129f4177beb7b449416d6b"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "1672e2cd1de1ea82cf74f05d60b00992c30bcc3f51136ef4a4e81c2b9e10396d"
     },
     {
-      "bytes": 6689,
+      "bytes": 7093,
       "path": "docs/current-result.md",
-      "sha256": "1e60c374a9ab73db90118e32056c9a73481866a6cbb8bf31eb090216ce27d468"
+      "sha256": "c46f3e5de13897a34e93ab6206098d7835b952166951f475348f885a3bbec1b3"
     },
     {
-      "bytes": 4414,
+      "bytes": 4883,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "5f20d7605fa327b594b090ae7b77dad25eccb645aa75cbcc371a5fff0d64eab3"
+      "sha256": "cec22356ce59ba9475e3d857b955b7a6386610f22f069bfb67a117ce1e959b39"
     },
     {
       "bytes": 3154,
@@ -119,6 +119,11 @@
       "bytes": 8332,
       "path": "docs/nsc-canonical-spectral-bridge.md",
       "sha256": "02215f76d44eaf1c426a2f0c0f98d0f963ed931e3788fb8308427c035f61bb9c"
+    },
+    {
+      "bytes": 2826,
+      "path": "docs/nsc-causal-common-functional.md",
+      "sha256": "6fabac75f603d2d1a3873d27396020d3bcad22c90774bedddbb1c00a3153e385"
     },
     {
       "bytes": 5750,
@@ -261,6 +266,16 @@
       "sha256": "649a4cb1a1bb44e134432062b576f840dee17068592d23a0c324e44503d16e2d"
     },
     {
+      "bytes": 2805,
+      "path": "docs/nsc-mmp-embedding.md",
+      "sha256": "1411dd5deb8424b8d089b9a0e6ebed88a1656733c6575a482c437b7f1b3fe0ff"
+    },
+    {
+      "bytes": 2501,
+      "path": "docs/nsc-mmp-vacuum-owner.md",
+      "sha256": "9f61a81f0000b4a25289a12b7e753de3bcbb9138cc401d649f289dc0a54c2dc1"
+    },
+    {
       "bytes": 11598,
       "path": "docs/nsc-observable-bridge.md",
       "sha256": "a812fae995ff009edbeb325f10dfa275253cb2ca0fe4bd6f241bc59a7b3a289b"
@@ -279,6 +294,11 @@
       "bytes": 7962,
       "path": "docs/nsc-plateau-conditions.md",
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
+    },
+    {
+      "bytes": 2547,
+      "path": "docs/nsc-prior-art-closure-table.md",
+      "sha256": "a373bb2802a463627d689060cb0426aab85dec4002fcdc37073a51874a32118c"
     },
     {
       "bytes": 8363,
@@ -436,9 +456,9 @@
       "sha256": "faf1b3b2a203022764dbc7414a2f022d79c514eda72640d444cbb7d976944643"
     },
     {
-      "bytes": 9713,
+      "bytes": 13277,
       "path": "results/development-snapshot.json",
-      "sha256": "6711f1f51723cfe867f7ccacf76ab0c01d528ee3869ec0b41ca3b6a3f75d9862"
+      "sha256": "ef620d4667698d10c7fe2bae2e68a516862e7fb652f3a900ade71a07498d3e98"
     },
     {
       "bytes": 3283,
@@ -459,6 +479,11 @@
       "bytes": 12878,
       "path": "results/development/canonical-spectral-bridge.json",
       "sha256": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74"
+    },
+    {
+      "bytes": 7203,
+      "path": "results/development/causal-common-functional.json",
+      "sha256": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03"
     },
     {
       "bytes": 3710,
@@ -524,6 +549,16 @@
       "bytes": 13277,
       "path": "results/development/massless-reference.json",
       "sha256": "1f02ebec5b8b7701080a3b0705f4f62e23aac44149e88872f945050f81472002"
+    },
+    {
+      "bytes": 3381,
+      "path": "results/development/mmp-embedding.json",
+      "sha256": "f4032d09ea4d7b76f6d02475fde29eb38dd239635e9e812518bc425726d477d0"
+    },
+    {
+      "bytes": 3980,
+      "path": "results/development/mmp-vacuum-owner.json",
+      "sha256": "2a0999ff12a8ed349096c554eb79a54537ef02afffaa9b23efaee4a1c779eb60"
     },
     {
       "bytes": 5507,
@@ -1241,6 +1276,11 @@
       "sha256": "ad6aab76a31fce8c43278c65304a9c625be2f87d524b1e9d5c95caad12bd2507"
     },
     {
+      "bytes": 8291,
+      "path": "scripts/derive_nsc_causal_common.py",
+      "sha256": "9d13409c301b4c604ed8666bc02349d1698be9446496a0dfb5081ffa1141a7bc"
+    },
+    {
       "bytes": 7603,
       "path": "scripts/derive_nsc_compact_anomaly.py",
       "sha256": "b2b3aa6aff74061e989a97cfc9221d38ccf8603bbdb898651bab6271695d1af9"
@@ -1251,6 +1291,11 @@
       "sha256": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907"
     },
     {
+      "bytes": 4360,
+      "path": "scripts/derive_nsc_mmp_embedding.py",
+      "sha256": "bb394e381fc5878a05baf8681db042f5fb44f1a865dfae6fa03b7c244a7966a7"
+    },
+    {
       "bytes": 6564,
       "path": "scripts/derive_nsc_parent_backreaction.py",
       "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
@@ -1259,6 +1304,11 @@
       "bytes": 7194,
       "path": "scripts/derive_nsc_vacuum_matched_ctp.py",
       "sha256": "ac07eb75ea60043af225b6b85ded24c161d90418fd3b5fef8db304e4b7c5f26b"
+    },
+    {
+      "bytes": 7356,
+      "path": "scripts/derive_nsc_vacuum_owner.py",
+      "sha256": "0e087b61ffffad4b00c91d5a34c9e6683a88f2dcedd8799c0ada5f0470305fb6"
     },
     {
       "bytes": 6465,
@@ -1611,6 +1661,11 @@
       "sha256": "821e1dbdcb79f815521b9aee536643bea1d155c0b639afd49376229e51991879"
     },
     {
+      "bytes": 11855,
+      "path": "src/recursive_horizons/nsc_causal_common.py",
+      "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90"
+    },
+    {
       "bytes": 2962,
       "path": "src/recursive_horizons/nsc_child_state.py",
       "sha256": "50c55b3ca0ae8215426b7b2287392308826b44bb8ca58393b00209129edab69e"
@@ -1704,6 +1759,11 @@
       "bytes": 42567,
       "path": "src/recursive_horizons/nsc_measure_normalization.py",
       "sha256": "e3ac23d660287765580689cd965eecf72552a813e24fb2b641942adc703a9b9f"
+    },
+    {
+      "bytes": 7383,
+      "path": "src/recursive_horizons/nsc_mmp_embedding.py",
+      "sha256": "3480ee43db89e9ddb1ea64c631945d0564f5964849600aac343f3dac570dd2c7"
     },
     {
       "bytes": 9463,
@@ -1811,6 +1871,11 @@
       "sha256": "10eee1c2d0d67ad7c5ef981a903c8419bc4cd4263b667bcd4a6129c4db48fbec"
     },
     {
+      "bytes": 3307,
+      "path": "tests/test_nsc_causal_common.py",
+      "sha256": "f92b26c4a1a40cb407c6d1c1a6b9d975151b31fb08527cdee50a462ee694a5c7"
+    },
+    {
       "bytes": 7782,
       "path": "tests/test_nsc_chiral_boundary.py",
       "sha256": "83f4c011d441d37012ef3aa02e0c8b00a44d9e9906021704efcd68e092cd0cda"
@@ -1854,6 +1919,11 @@
       "bytes": 10654,
       "path": "tests/test_nsc_measure_normalization.py",
       "sha256": "a165f079525e527c14290f2b5e0a901e3069bc7020f3428e4a44f7f37761440e"
+    },
+    {
+      "bytes": 917,
+      "path": "tests/test_nsc_mmp_embedding.py",
+      "sha256": "40e7287ac62a3b8b96abbf886dacd33cbbfcfcd8e1e5408d47f0a399eaf57d18"
     },
     {
       "bytes": 3862,

@@ -5,6 +5,13 @@ The construction connects three quantities through the same operator:
 that acts on its geometry.** This page follows those connections in order.
 General research status is stated in the [README](../README.md#research-status).
 
+The [September 10 development snapshot](development-update-2026-09-10.md),
+through laboratory commit `87971de`, now contains eleven post-preprint records.
+Its latest gates bind the charged field, parity, AP state and normalization to
+the imported MMP throat; implement canonical CTP as the causal owner; and
+identify the undetermined absolute $V_{\rm full}$ as the first remaining
+common-action input.
+
 ## 1. Shared mass and visible response
 
 In the invariant scalar-link sector,
@@ -147,7 +154,7 @@ Once supplied, the same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains eight.
+[the later snapshot](../results/development-snapshot.json) contains eleven.
 [The development index](development-update-2026-09-10.md) links all eleven
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.

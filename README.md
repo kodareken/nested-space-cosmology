@@ -63,14 +63,15 @@ At the recorded neck, the parent-matched massless source gives
 $T_{kk}^{+}=-0.0528075900$, $T_{kk}^{-}=-0.0527953956$, and outward
 power $P_0=0.0001422206795$, in the specified throat units. The complete
 source equation also includes density, both pressures, flux and the geometric
-contribution. The [latest derivation](docs/nsc-causal-source-definition-gap.md)
-locates the next dependency precisely: the full causal geometric/UV source
-and its state or history prescription.
+contribution. The [narrow closure gates](docs/development-update-2026-09-10.md)
+now bind canonical causal response to the charged MMP normalization and locate
+the next dependency precisely: the absolute common-action coefficient
+$V_{\rm full}$.
 
 ## Read, inspect and reproduce
 
 The repository contains the **100-record preprint collection** and an
-**eight-record development snapshot**, with original source hashes, generators
+**eleven-record development snapshot**, with original source hashes, generators
 and comparison policies. The paper has received an editorial revision;
 the [September 10 development update](docs/development-update-2026-09-10.md)
 indexes the subsequent technical derivations.
