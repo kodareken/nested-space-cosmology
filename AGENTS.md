@@ -1,6 +1,14 @@
 # Nested-Space Cosmology — public working orientation
 
-This file is the short public orientation for the one-equation thesis. It is not evidence, not a compact result, and not a completed theory. Preserve the central thesis when editing the public documents. Do not present imported literature as novelty, and do not promote a JSON nonclaim into a proof.
+This file orients contributors to the one-equation thesis and its evidence.
+Preserve the central thesis, scientific attribution and recorded result scope.
+
+**Presentation:** lead with equations, results and their physical connections.
+The README owns the general research-status statement. Elsewhere retain the
+specific assumptions, domains and unresolved terms that matter to a result,
+and remove repeated generic disclaimers. Use direct language for established
+identities and computed quantities. Keep authenticated notes, numerical records
+and source bytes intact when revising the public narrative.
 
 **Execution priority: reuse first.** Consult the [reuse map](docs/nsc-prior-art-reuse.md)
 and current result before allocating scientific compute. Historical derivations

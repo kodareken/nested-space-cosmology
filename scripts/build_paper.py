@@ -1120,7 +1120,7 @@ def build_pdf(
         canvas.line(left_margin, page_height - 13 * mm, page_width - right_margin, page_height - 13 * mm)
         canvas.line(left_margin, 12 * mm, page_width - right_margin, 12 * mm)
         canvas.setFont("RHRegular", 7.2)
-        canvas.drawString(left_margin, 8.2 * mm, "Working hypothesis · not peer reviewed")
+        canvas.drawString(left_margin, 8.2 * mm, "Douglas Ek · Equations and evidence")
         canvas.drawRightString(page_width - right_margin, 8.2 * mm, str(document.page))
         canvas.restoreState()
 
@@ -1207,7 +1207,7 @@ def build_pdf(
             styles["CoverDeck"],
         ),
         Paragraph(
-            "A constructive one-equation framework and its current reproducible evidence",
+            "Matter, geometry and boundary response through one recursive operator",
             styles["CoverSubtitle"],
         ),
         Spacer(1, 18 * mm),
