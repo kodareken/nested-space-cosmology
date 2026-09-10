@@ -219,12 +219,14 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | Parent data determine child stress | Both recorded radial null contractions are about $-0.05280$ and the parent power is $1.4222\times10^{-4}$ | [Parent-matched source](docs/nsc-unruh-state.md) |
 | Causal response and geometric source share one state | Canonical CTP returns metric forces, retarded response, noise, and energy balance from one covariance | [Causal common functional](docs/nsc-causal-common-functional.md) |
 | Homogeneous vacuum has a unique relational zero | The idempotent $a_0$ projector sets $V_{\rm full}=0$ while preserving gradient response | [Relational vacuum law](docs/nsc-relational-vacuum-normalization.md) |
+| The charged radius fixes a candidate inherited scale | The first cutoff-resolved branch among the checked $q=2,3,4$ sectors gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ | [Scale binding](docs/nsc-scale-binding.md) |
+| The simplest recursive LLL source is decisively testable | Its inherited power closes exactly, but its two null signs do not source the black-universe neck | [Source binding](docs/nsc-recursive-source-binding.md) |
 
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 12-record development update](docs/development-update-2026-09-10.md)
+3. [The 14-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

@@ -168,11 +168,39 @@
       },
       "generator": "scripts/derive_nsc_relational_vacuum.py",
       "output": "results/development/relational-vacuum-normalization.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 4e-09,
+        "float_rtol": 4e-08
+      },
+      "generator": "scripts/derive_nsc_scale_binding.py",
+      "output": "results/development/scale-binding.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 4e-11,
+        "float_rtol": 4e-10
+      },
+      "generator": "scripts/derive_nsc_recursive_source_binding.py",
+      "output": "results/development/recursive-source-binding.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "984a7a68e559fffc367d2884ac60f23fd490beba",
+  "source_commit": "7ed23cd3d7b7a842dae7633404bde33b6fc4ec89",
   "source_files": [
     {
       "bytes": 3154,
@@ -433,6 +461,56 @@
       "bytes": 2004,
       "path": "tests/test_nsc_relational_vacuum.py",
       "sha256": "a7f9adb144eb4a18335d5b78aa31ae401387e57ba635a7582dd2ac978a9ee695"
+    },
+    {
+      "bytes": 3870,
+      "path": "docs/nsc-scale-binding.md",
+      "sha256": "6e5e27f49a7577a6c7b67275fc6a42f2ee63d529512ba6c6ab6b48b087334dbe"
+    },
+    {
+      "bytes": 2238,
+      "path": "docs/nsc-recursive-source-binding.md",
+      "sha256": "04eeceef7b4488b4a5d94f59b5a1dc7dd56b00567d27e3fc5aed4810f6b58b05"
+    },
+    {
+      "bytes": 8691,
+      "path": "results/development/scale-binding.json",
+      "sha256": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+    },
+    {
+      "bytes": 3073,
+      "path": "results/development/recursive-source-binding.json",
+      "sha256": "b962f927e132034de4bd685d86e1c57ff574a7d7a74f778f984cc916c1cd01cd"
+    },
+    {
+      "bytes": 7743,
+      "path": "scripts/derive_nsc_scale_binding.py",
+      "sha256": "7bb39eb83d1189088964b22cfdd49e7e0fc31cd3dec50ad6d42495fb69e859af"
+    },
+    {
+      "bytes": 6311,
+      "path": "scripts/derive_nsc_recursive_source_binding.py",
+      "sha256": "1032ba4b34f33782297b61fdec595d103859dc254a0ffd435c6a9e8a189eb165"
+    },
+    {
+      "bytes": 7503,
+      "path": "src/recursive_horizons/nsc_scale_binding.py",
+      "sha256": "eba807992b8fdeeff2283d676fa24aab66777baa19980006be812f7d8bba3a14"
+    },
+    {
+      "bytes": 2844,
+      "path": "src/recursive_horizons/nsc_recursive_source_binding.py",
+      "sha256": "5b6df2f90bead2e2463d58d4006a73ec234bbece43d52e547ed053199b59195f"
+    },
+    {
+      "bytes": 1108,
+      "path": "tests/test_nsc_scale_binding.py",
+      "sha256": "ee1ca52747d1bb655afc41f9e8f15489d9b3016bac65909ea50f3fdb70ba6d1c"
+    },
+    {
+      "bytes": 1144,
+      "path": "tests/test_nsc_recursive_source_binding.py",
+      "sha256": "c2107d2b0b7504fc3ca0b1ef6f92314ea7202cca1eaa56f82be811fc1f6ef5c1"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",

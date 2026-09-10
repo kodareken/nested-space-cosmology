@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.7.0 · editorial revision, 10 September 2026<br>
+Version 0.8.0 · scale/source binding update, 10 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -45,7 +45,7 @@ The canonical closed-time-path functional now owns causal response. A
 recursive zero-tadpole law fixes homogeneous unlinked
 $V_{\rm full}=0$ while preserving Einstein, gauge, curvature, Casimir, and
 link response. The paper follows the spectrum from intuitive picture to exact
-operator equations, using 100 preprint records and twelve post-preprint
+operator equations, using 100 preprint records and fourteen post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -723,7 +723,32 @@ $$
 \Gamma_p(x)=K_p(x)-\frac{1}{\Omega}b\,\Gamma_c(x/\Omega)^{-1}b^\dagger.
 $$
 
-Here $b=B_{\mathrm{dim}}/\Lambda_p$. The inheritance scale $\zeta=(\Lambda L_\star)^2$ and cutoff ratio $\Omega=\Lambda_c/\Lambda_p$ remain distinct. Neither is selected by unit dilation alone. Finite chains and spatial endpoint estimates are verified; the covariant state, physical recursive domain and stationary scale remain open.
+Here $b=B_{\mathrm{dim}}/\Lambda_p$. The inheritance scale $\zeta=(\Lambda L_\star)^2$ and cutoff ratio $\Omega=\Lambda_c/\Lambda_p$ remain distinct. Neither is selected by unit dilation alone. Finite chains and spatial endpoint estimates are verified; the following charged-radius calculation binds them conditionally in a fixed flux sector, while physical flux selection and the full recursive domain remain open.
+
+**charged radius/scale binding.** Keep the massless charged lowest-Landau field explicit and evaluate the compact Wilsonian coefficients above MMP's physical magnetic scale $\mu_B=\sqrt{|q|}/r_e$. With the relational value $V_{\rm full}=0$, set $r_e=L_\star=1$ and solve
+
+$$
+\frac{q^2 C(\Omega,\mu_B)}{4A(\Omega,\mu_B)}=1,
+\qquad \zeta=\Omega^2.
+$$
+
+For the adjacent fixed sectors $q=2,3,4$, the first radius root that also places the stored child curvature below the cutoff is the $q=4$ development branch,
+
+$$
+\Omega=3.973074368754331,
+\qquad \zeta=15.785319939652627.
+$$
+
+The radius residual is $-1.55\times10^{-15}$ and the compact-resolution change in $\Omega$ is $8.64\times10^{-9}$ ([scale binding](../results/development/scale-binding.json)). The complete action has not selected $q$, and this small-flux branch does not invoke MMP's parametrically large-$q$ control.
+
+**recursive source binding.** Applying the simplest inherited transparent-LLL state law, $\kappa_c=\Omega\kappa_p$, fixes $t_v=\Omega^2t_u$ and gives parent Killing power $-0.02227623165818482$. On the actual black-universe neck its projected radial null components are
+
+$$
+T^{(4)}_{++}=0.007886485863354125,
+\qquad T^{(4)}_{--}=0.05267065468742516.
+$$
+
+Both have the opposite sign from the required neck source. The imported MMP LLL therefore cannot be substituted for the full charged black-universe CTP tensor ([source binding](../results/development/recursive-source-binding.json)). This fixes the work cursor: the charged angular/compact covariance and its metric variation must be evaluated on the horizon-penetrating domain; another scale scan cannot repair this source mismatch.
 
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
@@ -776,20 +801,21 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The twelve
+finite Casimir, and link responses remain. The fourteen
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
-causal source, and relational normalization. Their remaining integration is
-the physical recursive return state and joint geometry/scale solution.
+causal source, relational normalization, scale candidate and direct source
+binding. Their remaining integration is the full charged CTP tensor and joint
+geometry/state solution.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate twelve-record development snapshot, imported
-through laboratory commit $984a7a6$, carries the common-source and relational
-normalization continuation. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate fourteen-record development snapshot, imported
+through laboratory commit $7ed23cd$, carries the common-source, scale-binding
+and source-binding continuation. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 

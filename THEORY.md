@@ -357,6 +357,8 @@ geometry defines the Dirac spectrum
 | Parent-matched source | The inherited state produces two negative radial null contractions at the neck |
 | Canonical CTP owner | One covariance gives source, causal response, fluctuations, and energy transfer |
 | Recursive zero-tadpole law | Homogeneous unlinked vacuum is fixed to $V_{\rm full}=0$ while gradient response remains |
+| Charged radius/scale binding | A fixed-$q$ Wilsonian branch now determines candidate $\Omega$ and $\zeta$ |
+| Recursive LLL neck binding | The direct inherited LLL source has the wrong null signs, isolating the full charged CTP tensor as the missing owner |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)

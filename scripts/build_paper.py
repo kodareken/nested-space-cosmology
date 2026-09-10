@@ -40,6 +40,12 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
     ):
         if f"<!-- nsc-figure:{marker} -->" in text:
             paths.append(path)
+    for path in (
+        "results/development/scale-binding.json",
+        "results/development/recursive-source-binding.json",
+    ):
+        if path in text:
+            paths.append(path)
     return [{"path": path, "sha256": hashlib.sha256((REPOSITORY/path).read_bytes()).hexdigest()}
             for path in sorted(paths)]
 

@@ -1,0 +1,231 @@
+{
+  "adjacent_lower_flux_branches": [
+    {
+      "child_H_over_cutoff": 1.8563752320589484,
+      "coefficients": {
+        "A_Wilsonian_at_magnetic_scale": 0.0017343692378865383,
+        "C_Euler": 7.949192340313298e-05,
+        "C_Weyl": -0.00013007769284149032,
+        "C_Wilsonian_at_magnetic_scale": 0.0017343692378865379,
+        "C_boxR": -8.67184618943269e-05,
+        "V_full_relational": 0.0
+      },
+      "conditional_gap_squared_over_cutoff": -0.7230645011009569,
+      "conditional_gap_times_throat": null,
+      "cutoff_over_magnetic_scale": 1.1693776808620284,
+      "magnetic_flux": 2,
+      "mmp_map": {
+        "G_N": 11.470664638130764,
+        "Xi": 0.0,
+        "Xi_per_q_squared": 0.0,
+        "ell_MMP": 0.6974312520136289,
+        "g_squared": 144.14462303577537,
+        "lambda_4": 0.0,
+        "r_e_squared": 0.9999999999999998
+      },
+      "numerical": {
+        "Q1_scaling_residual": 2.1040946762695967e-12,
+        "Q2_scaling_residual": 2.842170943040401e-14,
+        "bracket": [
+          1.5,
+          2.2
+        ],
+        "compact_modes": 34,
+        "momentum_extent": 14.0,
+        "quadrature_points": 112,
+        "quadrature_tolerance": 1e-09
+      },
+      "omega": 1.6537497758114776,
+      "radius_residual": -2.220446049250313e-16,
+      "recursive_endpoint_product": 0.07381135627680176,
+      "zeta": 2.7348883209965127
+    },
+    {
+      "child_H_over_cutoff": 1.1008006389573366,
+      "coefficients": {
+        "A_Wilsonian_at_magnetic_scale": 0.014071578114843431,
+        "C_Euler": 0.0002866432578942328,
+        "C_Weyl": -0.00046905260382692636,
+        "C_Wilsonian_at_magnetic_scale": 0.006254034717692352,
+        "C_boxR": -0.0003127017358846176,
+        "V_full_relational": 0.0
+      },
+      "conditional_gap_squared_over_cutoff": 0.39411897663555984,
+      "conditional_gap_times_throat": 1.7508162303819725,
+      "cutoff_over_magnetic_scale": 1.6101497293682174,
+      "magnetic_flux": 3,
+      "mmp_map": {
+        "G_N": 1.4137979211799496,
+        "Xi": 0.0,
+        "Xi_per_q_squared": 0.0,
+        "ell_MMP": 3.772344868679603,
+        "g_squared": 39.9741944656563,
+        "lambda_4": 0.0,
+        "r_e_squared": 0.9999999999974674
+      },
+      "numerical": {
+        "Q1_scaling_residual": 4.838796030526282e-11,
+        "Q2_scaling_residual": 2.0463630789890885e-12,
+        "bracket": [
+          2.5,
+          3.5
+        ],
+        "compact_modes": 34,
+        "momentum_extent": 16.73316683435418,
+        "quadrature_points": 112,
+        "quadrature_tolerance": 1e-09
+      },
+      "omega": 2.78886113905903,
+      "radius_residual": -2.532640763774907e-12,
+      "recursive_endpoint_product": 0.12447446775350579,
+      "zeta": 7.77774645295363
+    }
+  ],
+  "child_control": {
+    "asymptotic_H_times_throat": "sqrt(3pi)",
+    "conditional_scalar_gap_real": true,
+    "curvature_resolved_by_cutoff": true,
+    "scalar_gap_applied_to_massless_MMP_LLL": false
+  },
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 4e-09,
+    "float_rtol": 4e-08
+  },
+  "development_branch": {
+    "child_H_over_cutoff": 0.7726963653091622,
+    "coefficients": {
+      "A_Wilsonian_at_magnetic_scale": 0.04501936182826115,
+      "C_Euler": 0.0005158468542821582,
+      "C_Weyl": -0.0008441130342798952,
+      "C_Wilsonian_at_magnetic_scale": 0.01125484045706527,
+      "C_boxR": -0.0005627420228532635,
+      "V_full_relational": 0.0
+    },
+    "conditional_gap_squared_over_cutoff": 0.7014701635190049,
+    "conditional_gap_times_throat": 3.327601382267404,
+    "cutoff_over_magnetic_scale": 1.9865371843771655,
+    "magnetic_flux": 4,
+    "mmp_map": {
+      "G_N": 0.441906928009764,
+      "Xi": 0.0,
+      "Xi_per_q_squared": 0.0,
+      "ell_MMP": 9.051679768893802,
+      "g_squared": 22.212664937694566,
+      "lambda_4": 0.0,
+      "r_e_squared": 0.9999999999999984
+    },
+    "numerical": {
+      "Q1_scaling_residual": 9.831069291976746e-11,
+      "Q2_scaling_residual": 1.2505552149377763e-11,
+      "bracket": [
+        3.0,
+        5.0
+      ],
+      "compact_modes": 34,
+      "momentum_extent": 23.838446212525987,
+      "quadrature_points": 112,
+      "quadrature_tolerance": 1e-09
+    },
+    "omega": 3.973074368754331,
+    "radius_residual": -1.5543122344752192e-15,
+    "recursive_endpoint_product": 0.17732912925261413,
+    "zeta": 15.785319939652627
+  },
+  "equations": {
+    "MMP_radius": "r_e^2=q^2*C/(4*A)",
+    "Wilsonian_coefficients": "A=(Q1-mu_B^2)/(6*(4*pi)^2), C=H_(Lambda,mu_B)(0)/(3*(4*pi)^2)",
+    "magnetic_matching_scale": "mu_B=sqrt(abs(q))/r_e",
+    "relational_vacuum": "V_full=0",
+    "room_scale": "Omega=Lambda*r_e; zeta=Omega^2 in r_e=L_star units",
+    "root": "q^2*C(Omega)/(4*A(Omega))-1=0"
+  },
+  "field_allocation": {
+    "double_counted_light_loop": false,
+    "explicit_light_sector": "one charged four-dimensional Dirac zero field",
+    "integrated_complement": "compact spectral modes above mu_B",
+    "magnetic_scale_source": "MMP equation (2.3) running-coupling scale",
+    "matching_cutoff_fitted_to_root": false
+  },
+  "input_hashes": {
+    "results/development/charged-sector.json": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/relational-vacuum-normalization.json": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983",
+    "results/nsc-5-clock-horizon.json": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f",
+    "results/nsc-5-tail-limit.json": "499658c02d7662b2ef3b3f80a4578ae9b952b09a47c31c75a599c09087b7372a"
+  },
+  "old_scientific_generators_rerun": false,
+  "recursive_compatibility": {
+    "Omega_times_transfer": 0.17732912925261413,
+    "actual_charged_throat_recursive_map_evaluated": false,
+    "endpoint_condition": "Omega*q<=1 (q<1); equality is nondecaying odd solution",
+    "no_remote_endpoint_datum_in_stored_carrier": true,
+    "stored_carrier": "smooth_motif(a=1,R=2,kappa=1), 16 intervals per motif"
+  },
+  "remaining_gate": "evaluate the actual charged recursive boundary/state map and the full four-component CTP metric source before promoting this fixed-q branch",
+  "resolution_control": {
+    "absolute_Omega_change": 8.638295856400191e-09,
+    "absolute_zeta_change": 6.864118340388359e-08,
+    "coarse": {
+      "child_H_over_cutoff": 0.7726963636291584,
+      "coefficients": {
+        "A_Wilsonian_at_magnetic_scale": 0.04501936199189414,
+        "C_Euler": 0.00051584685615712,
+        "C_Weyl": -0.0008441130373480143,
+        "C_Wilsonian_at_magnetic_scale": 0.011254840497973526,
+        "C_boxR": -0.0005627420248986763,
+        "V_full_relational": 0.0
+      },
+      "conditional_gap_squared_over_cutoff": 0.7014701648171378,
+      "conditional_gap_times_throat": 3.3276013925813173,
+      "cutoff_over_magnetic_scale": 1.9865371886963135,
+      "magnetic_flux": 4,
+      "mmp_map": {
+        "G_N": 0.441906926403554,
+        "Xi": 0.0,
+        "Xi_per_q_squared": 0.0,
+        "ell_MMP": 9.051679801794174,
+        "g_squared": 22.212664856957627,
+        "lambda_4": 0.0,
+        "r_e_squared": 0.9999999999999992
+      },
+      "numerical": {
+        "Q1_scaling_residual": 6.288601639425906e-09,
+        "Q2_scaling_residual": 1.2278178473934531e-11,
+        "bracket": [
+          3.0,
+          5.0
+        ],
+        "compact_modes": 26,
+        "momentum_extent": 23.83844626435576,
+        "quadrature_points": 96,
+        "quadrature_tolerance": 3e-08
+      },
+      "omega": 3.973074377392627,
+      "radius_residual": -7.771561172376096e-16,
+      "recursive_endpoint_product": 0.1773291296381648,
+      "zeta": 15.78532000829381
+    }
+  },
+  "schema": "NSC-SCALE-BINDING-v1",
+  "selection": {
+    "MMP_large_q_control_satisfied_by_q4": false,
+    "first_checked_integer_with_child_H_below_cutoff": 4,
+    "low_q_failure": "the radius roots for q=2 and q=3 lie below the stored child curvature scale",
+    "physical_branch_claimed": false,
+    "q_checked": [
+      2,
+      3,
+      4
+    ],
+    "q_selected_by_complete_action": false
+  },
+  "source_hashes": {
+    "docs/nsc-scale-binding.md": "6e5e27f49a7577a6c7b67275fc6a42f2ee63d529512ba6c6ab6b48b087334dbe",
+    "scripts/derive_nsc_scale_binding.py": "7bb39eb83d1189088964b22cfdd49e7e0fc31cd3dec50ad6d42495fb69e859af",
+    "src/recursive_horizons/nsc_scale_binding.py": "eba807992b8fdeeff2283d676fa24aab66777baa19980006be812f7d8bba3a14"
+  },
+  "status": "first checked fixed-flux spectral/MMP radius branch that also places the stored child curvature below the cutoff"
+}

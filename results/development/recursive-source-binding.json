@@ -1,0 +1,71 @@
+{
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 4e-11,
+    "float_rtol": 4e-10
+  },
+  "gate": {
+    "MMP_LLL_can_be_substituted_for_full_black_universe_CTP_source": false,
+    "both_required_null_signs_supplied": false,
+    "next_source_owner": "full charged angular/compact CTP covariance and metric variation on the horizon-penetrating domain",
+    "recursive_state_is_directed": true,
+    "static_flux_balance": false
+  },
+  "identities": {
+    "beta_squared_minus_three_pi_over_two": -8.881784197001252e-16,
+    "power_minus_tu_plus_tv": -3.400058012914542e-16,
+    "t_v_over_t_u_minus_zeta": 0.0
+  },
+  "input_hashes": {
+    "results/development/adm-neck-source-map.json": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe",
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "scale_branch": {
+    "Omega": 3.973074368754331,
+    "q": 4,
+    "zeta": 15.785319939652627
+  },
+  "schema": "NSC-RECURSIVE-SOURCE-BINDING-v1",
+  "scope": {
+    "MMP_geometry_recomputed": false,
+    "cosmological_Q_identified_with_Killing_power": false,
+    "interroom_clock_law_from_global_geometry_proved": false,
+    "new_metric_equation_derived": false,
+    "old_angular_or_scattering_generator_rerun": false,
+    "physical_solution_claimed": false
+  },
+  "source": {
+    "incoming_state_constant": 0.02378287688122372,
+    "magnetic_flux": 4,
+    "omega": 3.973074368754331,
+    "outgoing_state_constant": 0.0015066452230392416,
+    "parent_killing_power": -0.02227623165818482,
+    "pg_source": {
+      "T_rho_rho_2D": 0.44024586787673264,
+      "T_tau_rho_2D": 0.8149937711542647,
+      "T_tau_tau_2D": 1.4040191830209219,
+      "fourD_null_minus": 0.05267065468742516,
+      "fourD_null_plus": 0.007886485863354125,
+      "parent_Killing_power": -0.02227623165818482
+    },
+    "required_null_sign": "both negative on the stored black-universe neck",
+    "source_null_signs_match": false,
+    "surface_gravity": 0.23832579963401956
+  },
+  "source_hashes": {
+    "docs/nsc-recursive-source-binding.md": "04eeceef7b4488b4a5d94f59b5a1dc7dd56b00567d27e3fc5aed4810f6b58b05",
+    "scripts/derive_nsc_recursive_source_binding.py": "1032ba4b34f33782297b61fdec595d103859dc254a0ffd435c6a9e8a189eb165",
+    "src/recursive_horizons/nsc_recursive_source_binding.py": "5b6df2f90bead2e2463d58d4006a73ec234bbece43d52e547ed053199b59195f"
+  },
+  "state_law": {
+    "child_in_parent_energy_frame": "kappa_c=Omega*kappa_p",
+    "external_incoming_reservoir_inserted": false,
+    "parent": "t_u=abs(q)*kappa_p^2/(48*pi)",
+    "recursive_incoming": "t_v=abs(q)*kappa_c^2/(48*pi)=Omega^2*t_u",
+    "transmission": "one for the imported free massless magnetic LLL"
+  },
+  "status": "scale-inherited transparent LLL state evaluated on the actual neck; it does not supply the required black-universe null source"
+}

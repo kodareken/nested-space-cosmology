@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`984a7a68e559fffc367d2884ac60f23fd490beba`. It contains sixteen derivation
-notes, twelve compact result records, eleven generators, eight implementation
-modules and four focused tests. The 52 scientific files are imported
+`7ed23cd3d7b7a842dae7633404bde33b6fc4ec89`. It contains eighteen derivation
+notes, fourteen compact result records, thirteen generators, ten implementation
+modules and six focused tests. The 62 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -41,6 +41,8 @@ statement:
 | Canonical Lorentzian evolution plus one-counted induced source terms | [Causal common functional](nsc-causal-common-functional.md) |
 | Identification and quantitative bound for the unresolved absolute vacuum coefficient | [MMP vacuum owner](nsc-mmp-vacuum-owner.md) |
 | Recursive zero-tadpole law fixing the homogeneous unlinked vacuum source | [Relational vacuum normalization](nsc-relational-vacuum-normalization.md) |
+| Fixed-flux Wilsonian coefficients bound to the imported charged radius | [Charged scale binding](nsc-scale-binding.md) |
+| Scale-inherited transparent LLL state evaluated on the actual neck | [Recursive source binding](nsc-recursive-source-binding.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -58,8 +60,10 @@ owner audit finds no existing contribution that determines the required
 absolute $V_{\rm full}$. The subsequent recursive law projects only the local
 $a_0$ tadpole and gives $V_{\rm full}=\lambda_4=\Xi=0$ while preserving
 $A,C$ and finite topology response. No coefficient, incoming flux or mass
-history is fitted. The physical return state and complete $A,C$ normalization
-are the next embedding conditions.
+history is fitted. The charged radius equation now has a cutoff-resolved
+fixed-$q$ candidate, while its simplest inherited transparent LLL state has
+the wrong null signs on the black-universe neck. The full charged
+angular/compact CTP tensor is therefore the remaining source owner.
 
 ## Provenance and inspection
 
@@ -67,7 +71,7 @@ are the next embedding conditions.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the twelve later records are indexed separately.
+unchanged; the fourteen later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
