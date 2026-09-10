@@ -67,6 +67,21 @@ SECRET_PATTERNS = {
     "private key": re.compile(r"BEGIN (?:RSA|OPENSSH|EC|PGP) PRIVATE KEY"),
 }
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+GITHUB_MARKDOWN_ENTRYPOINTS = {
+    "README.md",
+    "THEORY.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "paper/nested-space-cosmology.md",
+    "docs/current-result.md",
+    "docs/development-update-2026-09-10.md",
+    "results/README.md",
+}
+UNSUPPORTED_GITHUB_MATH = {
+    "operatorname macro": re.compile(r"\\operatorname\*?\{"),
+    "parenthesized inline delimiter": re.compile(r"\\\(|\\\)"),
+    "bracket display delimiter": re.compile(r"(?m)^\\\[$|^\\\]$"),
+}
 
 
 def check_development_snapshot() -> set[str]:
@@ -318,6 +333,11 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
         for label, pattern in SECRET_PATTERNS.items():
             if pattern.search(text):
                 errors.append(f"possible {label} appears in {path.relative_to(ROOT)}")
+        relative = str(path.relative_to(ROOT))
+        if relative in GITHUB_MARKDOWN_ENTRYPOINTS:
+            for label, pattern in UNSUPPORTED_GITHUB_MATH.items():
+                if pattern.search(text):
+                    errors.append(f"unsupported GitHub math {label} in {relative}")
         if path.suffix.lower() == ".md":
             check_markdown_links(errors, path, text)
 

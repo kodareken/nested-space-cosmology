@@ -17,10 +17,10 @@ Start with [the common-source equations](nsc-common-source-derivation.md).
 For the declared finite quadratic fermion system, the same parent–child
 coherence supplies link energy and regional transfer:
 
-\[
-z_B=\operatorname{Tr}_p(B C_{cp}),\qquad
+$$
+z_B=\mathrm{Tr}_p(B C_{cp}),\qquad
 E_{\rm link}=2\Re z_B,\qquad \dot N_p=2\Im z_B.
-\]
+$$
 
 The variation of that Hamiltonian supplies the geometric force. The linked
 results specify what has been constructed and the physical domain of each
@@ -43,9 +43,9 @@ statement:
 | Recursive zero-tadpole law fixing the homogeneous unlinked vacuum source | [Relational vacuum normalization](nsc-relational-vacuum-normalization.md) |
 
 The known channel has outward power
-\(P_0=0.00014222067954246644\) in the recorded throat units.
+$P_0=0.00014222067954246644$ in the recorded throat units.
 Under the stated asymptotic Einstein normalization, its contribution obeys
-\(dM_B/du=-P_0\). This is a necessary initial mass balance, not a complete
+$dM_B/du=-P_0$. This is a necessary initial mass balance, not a complete
 geometry trajectory or a prediction of cosmological energy transfer.
 
 ## Exact remaining definition
