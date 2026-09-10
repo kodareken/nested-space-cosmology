@@ -68,7 +68,7 @@
     {
       "bytes": 10968,
       "path": "README.md",
-      "sha256": "814d35fcc6b7c4626c78e00fc3e56949c7f2eaed921b22b278f679e87176c34a"
+      "sha256": "f50ae610bed44dc9aa86a7272142715a25d2e6ffdfc958d7ac72f430a6b055c3"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "95db5eebfe45da56929674c527d82390daafe99584a99c52ce9ef1aa4154eee8"
     },
     {
-      "bytes": 9279,
+      "bytes": 9767,
       "path": "docs/current-result.md",
-      "sha256": "dbaa688ba7a1a10264658d01c79a1dac7f278fbc7aa4c167cc43f9d3f5fd4dd1"
+      "sha256": "3a60ce4446efb93fa7d61d165b7096fc98893e04b485148861db401993fe86a5"
     },
     {
-      "bytes": 5646,
+      "bytes": 6072,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "5896db159d300b5fe09312e4e3ef42a306842b38dbddaf9ffe71926161b22ebb"
+      "sha256": "61a325862e1fa586c8909465944da9a1e5a73b6f762bdeeec1681a707cfded13"
     },
     {
       "bytes": 3154,
@@ -129,6 +129,11 @@
       "bytes": 5750,
       "path": "docs/nsc-causal-source-definition-gap.md",
       "sha256": "65b7fbad3accaa42ef5eb741c1ceadd4ebb90eb5809135eb3c95895e88c03e3a"
+    },
+    {
+      "bytes": 3088,
+      "path": "docs/nsc-charged-ctp-neck-source.md",
+      "sha256": "f7bb31c3c0f10b0c069a6308030fac5d2d935ad654fed6414a6acb00a0c70e00"
     },
     {
       "bytes": 7397,
@@ -431,9 +436,9 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 2029,
+      "bytes": 2191,
       "path": "paper/build-manifest.json",
-      "sha256": "60844e24e891ec9d53089a330636ec6d2ff4fbc41aa3d6a648d52025aae8f88c"
+      "sha256": "5c4395092a623ff01b6ab8c976f81b0899d98cc36fcb3dd73e23e424f3452506"
     },
     {
       "bytes": 345,
@@ -441,14 +446,14 @@
       "sha256": "487f68f1b68a8055f0a3cb62e0ec175d18ed5539a733c82e7f28557fda6bf081"
     },
     {
-      "bytes": 108539,
+      "bytes": 109189,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "07cc99e3661b89dc180c7e1daa10d969a0c469c4d8a9471dfdbcfccc2d380880"
+      "sha256": "aa1507d926b5519d1b057102032c9dcb472a948f90e73d0cef4c5aa16856ace1"
     },
     {
-      "bytes": 1557880,
+      "bytes": 1558180,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "39b9df5328b96f6aba0300231092129dd58b88974db7117d57e8616bccad69cf"
+      "sha256": "46f654c71874efbee3278b82aeea8573f8dc646d3bbce55cce9d3555a402bfcd"
     },
     {
       "bytes": 1144,
@@ -466,14 +471,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 4774,
+      "bytes": 5264,
       "path": "results/README.md",
-      "sha256": "45523477cd3fe230ccc28665caf033a80a0cb9b80a5e8ee29b501e2b7f708df8"
+      "sha256": "48e3c5f87449aa7282bbcb0357d52016553562f08fc31b3baeca00bc2c813eff"
     },
     {
-      "bytes": 17105,
+      "bytes": 18375,
       "path": "results/development-snapshot.json",
-      "sha256": "ac7a551b0534c3fef9ad90db6484fe1643e4cb827f3bcae08c40baf60422e6a6"
+      "sha256": "823123b15e98c4a5253f878014e8dde690f473929c96636de6ca2639a0c161df"
     },
     {
       "bytes": 3283,
@@ -499,6 +504,11 @@
       "bytes": 7203,
       "path": "results/development/causal-common-functional.json",
       "sha256": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03"
+    },
+    {
+      "bytes": 19726,
+      "path": "results/development/charged-ctp-neck-source.json",
+      "sha256": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90"
     },
     {
       "bytes": 3710,
@@ -1056,9 +1066,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 53791,
+      "bytes": 53851,
       "path": "scripts/build_paper.py",
-      "sha256": "b9bb3ad17098f45499e119a946f1710a11c6f66bf84c76ad666a1d668b005e3a"
+      "sha256": "f7f7c516b6bfa87a653f16aaea1a298719542d874f3768616453f007f02c2e8b"
     },
     {
       "bytes": 3480,
@@ -1309,6 +1319,11 @@
       "bytes": 8291,
       "path": "scripts/derive_nsc_causal_common.py",
       "sha256": "9d13409c301b4c604ed8666bc02349d1698be9446496a0dfb5081ffa1141a7bc"
+    },
+    {
+      "bytes": 9722,
+      "path": "scripts/derive_nsc_charged_ctp_neck.py",
+      "sha256": "2da989af7e8450175681acc1a7dc9e09ef4a8ef6ee53663e41a3af8ee2f63026"
     },
     {
       "bytes": 7603,
@@ -1711,6 +1726,11 @@
       "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90"
     },
     {
+      "bytes": 16827,
+      "path": "src/recursive_horizons/nsc_charged_ctp_neck.py",
+      "sha256": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578"
+    },
+    {
       "bytes": 2962,
       "path": "src/recursive_horizons/nsc_child_state.py",
       "sha256": "50c55b3ca0ae8215426b7b2287392308826b44bb8ca58393b00209129edab69e"
@@ -1934,6 +1954,11 @@
       "bytes": 3307,
       "path": "tests/test_nsc_causal_common.py",
       "sha256": "f92b26c4a1a40cb407c6d1c1a6b9d975151b31fb08527cdee50a462ee694a5c7"
+    },
+    {
+      "bytes": 661,
+      "path": "tests/test_nsc_charged_ctp_neck.py",
+      "sha256": "b1a728513c869a07f1518496b23937fc035f643ee7c0b19bacf09f606d3d98ad"
     },
     {
       "bytes": 7782,

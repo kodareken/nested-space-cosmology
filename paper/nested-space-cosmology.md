@@ -45,7 +45,7 @@ The canonical closed-time-path functional now owns causal response. A
 recursive zero-tadpole law fixes homogeneous unlinked
 $V_{\rm full}=0$ while preserving Einstein, gauge, curvature, Casimir, and
 link response. The paper follows the spectrum from intuitive picture to exact
-operator equations, using 100 preprint records and fourteen post-preprint
+operator equations, using 100 preprint records and fifteen post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -750,6 +750,8 @@ $$
 
 Both have the opposite sign from the required neck source. The imported MMP LLL therefore cannot be substituted for the full charged black-universe CTP tensor ([source binding](../results/development/recursive-source-binding.json)). This fixes the work cursor: the charged angular/compact covariance and its metric variation must be evaluated on the horizon-penetrating domain; another scale scan cannot repair this source mismatch.
 
+**Charged CTP neck result.** The new magnetic angular calculation performs that transport at the locked scale and combines it with the compact Wilsonian local response. In the common child frame its retained tensor gives radial null components $-0.05681746054$ and $-0.06171294116$, so the retained sign gate passes ([charged CTP source](../results/development/charged-ctp-neck-source.json)). The hard full gate remains open because the first positive compact levels still lack their nonlocal horizon-domain CTP covariance and four ADM variations; this is a fail/incomplete result for the requested full owner, and no background projection is started.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -801,7 +803,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The fourteen
+finite Casimir, and link responses remain. The fifteen
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -813,9 +815,9 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate fourteen-record development snapshot, imported
-through laboratory commit $7ed23cd$, carries the common-source, scale-binding
-and source-binding continuation. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate fifteen-record development snapshot, imported
+through laboratory commit $7ee7447$, carries the common-source, scale-binding
+and charged-source continuation. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 
