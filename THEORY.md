@@ -11,8 +11,8 @@ $$
 \boxed{\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.}
 $$
 
-Here \(\mathbb D_\Theta\) describes the room and its links, \(\mathcal T_\Theta\)
-transports the configuration between scales, and \(\Theta\) is the shared set
+Here $\mathbb D_\Theta$ describes the room and its links, $\mathcal T_\Theta$
+transports the configuration between scales, and $\Theta$ is the shared set
 of dimensionless coefficients. The proposal is that matter, gravitational
 response and inherited boundary effects are projections of this same object.
 The [README](README.md#research-status) states the programme's research status.
@@ -25,7 +25,7 @@ $$
 H=\begin{pmatrix}H_p&B\\B^\dagger&H_c\end{pmatrix}.
 $$
 
-The diagonal blocks govern the two rooms. The link \(B\) couples their fields.
+The diagonal blocks govern the two rooms. The link $B$ couples their fields.
 Eliminating the child gives the exact parent response
 
 $$
@@ -55,7 +55,7 @@ $$
 The invariant sector therefore has
 
 $$
-E^2=|\mathbf p|^2+\Phi^2,\qquad
+E^2=\lvert\mathbf p\rvert^2+\Phi^2,\qquad
 \Sigma_p(E)=\Phi^2(E+\boldsymbol\alpha\cdot\mathbf p)^{-1}.
 $$
 
@@ -67,18 +67,18 @@ massless throat's action kernel has vector and axial channels.
 
 Chirality, sheet exchange and charge conjugation have distinct mathematical
 roles. In the stated gamma conventions,
-\(\psi^c=i\gamma^2\psi^*\); its gauge representation is conjugated.
+$\psi^c=i\gamma^2\psi^*$; its gauge representation is conjugated.
 The phase gradient of a wave gives its local frequency and momentum, while
 the charge representation determines the particle–antiparticle relation.
 
 ## 3. Coherence stores energy and carries transfer
 
 A Gaussian fermion state is specified by
-\(C_{ij}=\langle c_j^\dagger c_i\rangle\), with \(0\le C\le I\) and
-\(i\dot C=[H,C]\). Define
+$C_{ij}=\langle c_j^\dagger c_i\rangle$, with $0\le C\le I$ and
+$i\dot C=[H,C]$. Define
 
 $$
-z_B=\operatorname{Tr}_p(B C_{cp}).
+z_B=\mathrm{Tr}_p(B C_{cp}).
 $$
 
 Then
@@ -91,7 +91,7 @@ $$
 The real and imaginary parts of one frame-invariant coherence determine
 stored link energy and occupation transfer. Energy currents include the room
 Hamiltonians; the complete account satisfies
-\(\dot E_{\rm tot}=\operatorname{Tr}(C\dot H)\).
+$\dot E_{\rm tot}=\mathrm{Tr}(C\dot H)$.
 The [common-source derivation](docs/nsc-common-source-derivation.md) carries
 these identities into boundary elimination and metric variation.
 
@@ -128,8 +128,8 @@ $$
 $$
 
 The child response contains its own descendants. The cutoff ratio
-\(\Omega=\Lambda_c/\Lambda_p\) and the room parameter
-\(\zeta=(\Lambda L_\star)^2\) have separate definitions; their relation is a
+$\Omega=\Lambda_c/\Lambda_p$ and the room parameter
+$\zeta=(\Lambda L_\star)^2$ have separate definitions; their relation is a
 geometric output to determine. The recursive state must carry occupations and
 cross-boundary correlations alongside the response kernel.
 
@@ -143,13 +143,13 @@ its mathematical content. The [endpoint](docs/nsc-tail-limit.md) and
 The same source has several observable projections: a homogeneous density and
 pressure determine expansion; anisotropic stress and momentum transfer enter
 clustering and lensing; poles, residues, spin and charges identify matter.
-Internal conversion \(Q_b\) cancels when regional energy equations are summed:
+Internal conversion $Q_b$ cancels when regional energy equations are summed:
 
 $$
 \dot\rho+3H(\rho+p)=J_b+J_d.
 $$
 
-Here \(J_b,J_d\) denote external room supply, including its reservoir and
+Here $J_b,J_d$ denote external room supply, including its reservoir and
 boundary account. Proper time, volume and deposition relate a boundary power
 to a cosmological density rate. The programme seeks an unfitted dimensionless
 relation across these sectors from one solved state and parameter set.
