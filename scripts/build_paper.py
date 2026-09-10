@@ -527,7 +527,7 @@ def build_pdf(
         value = value.replace(r"\ddots", "⋱").replace(r"\cdots", "⋯")
         value = value.replace(r"\otimes", "⊗").replace(r"\cdot", "·")
         value = value.replace(r"\partial", "∂").replace(r"\infty", "∞")
-        value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±")
+        value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±").replace(r"\mp", "∓")
         value = value.replace(r"\Box", "□")
         value = value.replace(r"\parallel", "∥").replace(r"\perp", "⊥")
         value = value.replace(r"\bar\psi", "ψ̄")

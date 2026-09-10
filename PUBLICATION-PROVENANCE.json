@@ -423,7 +423,7 @@
     {
       "bytes": 1714,
       "path": "paper/build-manifest.json",
-      "sha256": "e4ad4517360295553cc4f2aa9c7012ac1dbc22be732a7494f15550d30068bdbd"
+      "sha256": "127c8c6156f196e0bf9623ed93c7fb7d0f7bd200e6b8dad930897ea1e755518b"
     },
     {
       "bytes": 345,
@@ -431,14 +431,14 @@
       "sha256": "7c4f6b25cd3eb703432784ab229995c7456edb1293a403f0143a3280ce4ae9ef"
     },
     {
-      "bytes": 105913,
+      "bytes": 106741,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "1b89da9a723d01c6ef22cc8d7d17993b6c287896679be039fb27e55c44330780"
+      "sha256": "3e230126b0ec4fcda6dde9dc8cbb3711165135edff2f4a453dc59935b02f60fa"
     },
     {
-      "bytes": 1501126,
+      "bytes": 1502399,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "d6ef6974e3d87cc7b81537b45e027794a1e26d6bd35212574d0ca45c843c08b8"
+      "sha256": "c5a532ec126257efcd0c5faaafef52c1ef8d6e62630112182e9c8d88e8eabe57"
     },
     {
       "bytes": 1144,
@@ -1036,9 +1036,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 53576,
+      "bytes": 53599,
       "path": "scripts/build_paper.py",
-      "sha256": "68e8264461e8f1fdfa7cda4f9772c1fe113abafc5ebeb184094a36c26005af13"
+      "sha256": "71bd0621239adcba88f9627e3030defbdc9a0c0beb9d9bd6ea8159e6aa477b8f"
     },
     {
       "bytes": 3480,
