@@ -1,0 +1,248 @@
+{
+  "ADM_binding_reused": {
+    "exact_Ward_and_stress_identities": {
+      "ADM_Lie_metric_00": "0",
+      "ADM_Lie_metric_01": "0",
+      "ADM_Lie_metric_10": "0",
+      "ADM_Lie_metric_11": "0",
+      "ADM_Lie_sphere_radius": "0",
+      "homogeneous_constraint_energy": "0",
+      "homogeneous_constraint_momentum": "0",
+      "radial_Ward_from_Lie_variation": "0",
+      "stress_frame_N": "0",
+      "stress_frame_beta": "0",
+      "stress_frame_q": "0",
+      "stress_frame_r": "0",
+      "time_Ward_from_Lie_variation": "0"
+    },
+    "full_absolute_state_source_evaluated": false
+  },
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-11
+  },
+  "equilibrium_binding_reused": {
+    "covariant_static_owner_difference": 6.6058269965196814e-15,
+    "finite_frequency_loop_matches_retarded": true,
+    "finite_proper_time_equals_canonical_Kubo": false,
+    "frequencies": [
+      0.0,
+      0.6,
+      1.4
+    ],
+    "maximum_direct_loop_minus_retarded_at_i_nu": 5.551115123125783e-16,
+    "meaning": "Proper-time regularization of the action is not the bare finite-grid Kubo kernel or an Abel transition cutoff."
+  },
+  "finite_control": {
+    "Gamma_CTP": [
+      -2.755756320590128e-17,
+      1.1102230246251565e-16
+    ],
+    "boundary_power": -0.05558789721465584,
+    "final_covariance": [
+      [
+        [
+          0.9821458363032988,
+          2.7755575615628914e-17
+        ],
+        [
+          -0.13046299099971617,
+          -0.02268921582603758
+        ]
+      ],
+      [
+        [
+          -0.13046299099971617,
+          0.02268921582603757
+        ],
+        [
+          0.017854163696701137,
+          8.673617379884035e-19
+        ]
+      ]
+    ],
+    "forces": {
+      "N": -0.43156299211003873,
+      "beta": 0.007853118752188783,
+      "q": -0.36444356394362987,
+      "r": -0.10736960510367459
+    },
+    "induced_forces": {
+      "N": -0.0683680885280027,
+      "beta": -0.0012225675782262498,
+      "q": -0.07158522942231038,
+      "r": -0.12563442384363485
+    },
+    "matter_forces": {
+      "N": -0.36319490358203604,
+      "beta": 0.009075686330415032,
+      "q": -0.2928583345213195,
+      "r": 0.018264818739960265
+    },
+    "noise_kernel": {
+      "N": [
+        [
+          0.030728442728442735,
+          0.02992496010786461,
+          0.02625256334902146
+        ],
+        [
+          0.029924960107864607,
+          0.03072844272844273,
+          0.02919421761496753
+        ],
+        [
+          0.02625256334902146,
+          0.029194217614967526,
+          0.03072844272844273
+        ]
+      ],
+      "beta": [
+        [
+          0.039917631917631924,
+          0.038873871783612346,
+          0.03410326289299923
+        ],
+        [
+          0.038873871783612346,
+          0.03991763191763191,
+          0.037924604353569806
+        ],
+        [
+          0.03410326289299924,
+          0.03792460435356981,
+          0.03991763191763193
+        ]
+      ],
+      "q": [
+        [
+          0.0028056628056628043,
+          0.0027323007637437093,
+          0.002396992297741111
+        ],
+        [
+          0.0027323007637437093,
+          0.0028056628056628043,
+          0.0026655802647273068
+        ],
+        [
+          0.00239699229774111,
+          0.0026655802647273068,
+          0.0028056628056628043
+        ]
+      ],
+      "r": [
+        [
+          0.004566396396396398,
+          0.004446994961849277,
+          0.0039012588998588358
+        ],
+        [
+          0.004446994961849276,
+          0.004566396396396397,
+          0.0043384030648973915
+        ],
+        [
+          0.0039012588998588353,
+          0.004338403064897393,
+          0.004566396396396397
+        ]
+      ]
+    },
+    "retarded_response": {
+      "N": [
+        0.0,
+        -0.013961941850315384,
+        -0.03193995053977385
+      ],
+      "beta": [
+        0.0,
+        -0.01813719167487778,
+        -0.04149143516257438
+      ],
+      "q": [
+        0.0,
+        -0.0012747961649224133,
+        -0.00291627961872621
+      ],
+      "r": [
+        0.0,
+        -0.0020748126260548465,
+        -0.004746432363489119
+      ]
+    },
+    "stress": {
+      "T_01": 0.023559356256566348,
+      "p_parallel": 1.4577742557745195,
+      "p_perp": 0.536848025518373,
+      "rho": -0.8631259842200775
+    },
+    "unresolved_terms": [
+      "full common-action vacuum coefficient V_full",
+      "physical charged parent-child covariance and return history"
+    ],
+    "ward_residuals": {
+      "boundary_schur_equal_history_action": 1.1439130619905323e-16,
+      "covariance_hermiticity": 5.745575946153046e-17,
+      "covariance_trace": -1.1102230246251565e-16,
+      "energy_work_balance": 1.1102230246251565e-16,
+      "equal_history_action": 1.1439130619905323e-16,
+      "unitarity": 1.570861911563506e-16
+    }
+  },
+  "first_missing_dependency": "full common-action V_full, followed by the charged parent-child Hamiltonian, covariance and closed magnetic return history",
+  "gate": {
+    "MMP_embedding_unblocked": false,
+    "actual_physical_CausalSource_complete": false,
+    "equal_history_normalized": true,
+    "finite_energy_work_balance": true,
+    "finite_interface_executable": true,
+    "induced_source_counted_once": true
+  },
+  "input_hashes": {
+    "results/development/adm-source-constraints.json": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56",
+    "results/development/mmp-embedding.json": "f4032d09ea4d7b76f6d02475fde29eb38dd239635e9e812518bc425726d477d0",
+    "results/development/warp-local-neck-source.json": "19fefeb200b94c7c4f43cb928843107d0529f5b2dacf77964f1a44a134704590",
+    "results/nsc-11-response-matching.json": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4"
+  },
+  "interface": {
+    "inputs": [
+      "MetricHistory",
+      "GaugeHistory",
+      "LinkHistory",
+      "initial_covariance",
+      "SpectralInducedSource",
+      "BoundaryDomain"
+    ],
+    "outputs": [
+      "Gamma_CTP",
+      "F_N",
+      "F_beta",
+      "F_q",
+      "F_r",
+      "stress",
+      "boundary_power",
+      "retarded_response",
+      "noise_kernel",
+      "ward_residuals",
+      "unresolved_terms"
+    ]
+  },
+  "old_scientific_generators_rerun": false,
+  "schema": "NSC-CAUSAL-COMMON-FUNCTIONAL-v1",
+  "selected_real_time_owner": {
+    "continued_bare_Euclidean_kernel_used_as_retarded_response": false,
+    "functional": "S_induced[+]-S_induced[-]-i log det(I-C0+C0 Uminus_dagger Uplus)",
+    "state_dependent_nonlocal_response": "canonical Lorentzian Dirac evolution",
+    "state_independent_local_coefficients": "same spectral coefficient account, added once"
+  },
+  "source_hashes": {
+    "docs/nsc-causal-common-functional.md": "6fabac75f603d2d1a3873d27396020d3bcad22c90774bedddbb1c00a3153e385",
+    "scripts/derive_nsc_causal_common.py": "9d13409c301b4c604ed8666bc02349d1698be9446496a0dfb5081ffa1141a7bc",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90"
+  },
+  "status": "canonical CTP owner implemented with one-counted induced forces; actual charged parent-child history remains the first physical input"
+}

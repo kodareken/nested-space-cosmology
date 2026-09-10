@@ -1,0 +1,84 @@
+{
+  "anomaly_and_link_parity_passes": true,
+  "antiperiodic_state_passes": true,
+  "coefficient_map": {
+    "G_N": 3.6156560173167045,
+    "Xi": 3.4459938566757384,
+    "Xi_per_q_squared": 3.4459938566757384,
+    "ell_MMP": 0.4559594548369584,
+    "g_squared": 51.68225002666059,
+    "lambda_4": 15.67902066931717,
+    "r_e_squared": 0.2197837434718946
+  },
+  "coefficient_normalization_passes": true,
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-11
+  },
+  "decision": {
+    "MMP_gravity_ODE_rerun": false,
+    "current_partial_realization_embeds_MMP_seed": false,
+    "dependent_recursive_solve_unblocked": false,
+    "generic_fermion_throat_support_rederived": false,
+    "next_owner": "full common-action vacuum coefficient V_full"
+  },
+  "domain_map": {
+    "admissible_compact_parities": [
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "lowest_Landau_channels": "abs(q) complex two-dimensional Dirac fields",
+    "magnetic_flux": "nonzero integer q retained symbolically",
+    "nsc_unwrapped_radial_line_identified_with_reference": false,
+    "reference": "MMP closed magnetic field-line return path"
+  },
+  "field_content_passes": true,
+  "first_unresolved_owner": "full common-action vacuum coefficient V_full",
+  "full_embedding_decidable": false,
+  "imported_relations": {
+    "Casimir_energy": "-abs(q)/(8*ell_MMP) in the MMP short-exterior regime",
+    "G_N": "1/(16*pi*A)",
+    "action": "integral sqrt(-g)*(A*R-C*F^2-V)",
+    "ell_MMP": "16*r_e^3/(abs(q)*G_N)",
+    "g_squared": "1/(4*C)",
+    "r_e_squared": "q^2*C/(4*A)"
+  },
+  "input_hashes": {
+    "results/development/charged-sector.json": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+    "results/development/compact-casimir.json": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447",
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/vacuum-charge-matching.json": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b"
+  },
+  "residuals": {
+    "AP_stationarity": 1.1275374448754e-14,
+    "asymptotically_flat_required_lambda_4": 0.0,
+    "coefficient_map": 0,
+    "field_multiplicity": 0,
+    "parity_and_anomaly": 0,
+    "retained_partial_Xi_minus_RNdS_bound_per_q_squared": 3.1959938566757384,
+    "retained_partial_lambda_4": 15.67902066931717
+  },
+  "retained_partial_seed_passes": false,
+  "schema": "NSC-MMP-EMBEDDING-v1",
+  "source_hashes": {
+    "docs/nsc-mmp-embedding.md": "1411dd5deb8424b8d089b9a0e6ebed88a1656733c6575a482c437b7f1b3fe0ff",
+    "scripts/derive_nsc_mmp_embedding.py": "bb394e381fc5878a05baf8681db042f5fb44f1a865dfae6fa03b7c244a7966a7",
+    "src/recursive_horizons/nsc_mmp_embedding.py": "3480ee43db89e9ddb1ea64c631945d0564f5964849600aac343f3dac570dd2c7"
+  },
+  "state_map": {
+    "AP_minus_P_energy_control": -0.16995534908383547,
+    "complete_physical_return_state": false,
+    "phase": "alpha=1/2 modulo one",
+    "selection": "alpha=1/2 modulo one; conditional one-loop real potential"
+  },
+  "status": "field, parity, state and coefficient conventions bind to the imported MMP sector; the retained partial coefficients fail the seed bound and V_full remains unresolved"
+}

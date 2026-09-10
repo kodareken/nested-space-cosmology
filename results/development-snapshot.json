@@ -112,11 +112,53 @@
       },
       "generator": "scripts/derive_nsc_warp_local_source.py",
       "output": "results/development/warp-local-neck-source.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-12,
+        "float_rtol": 3e-11
+      },
+      "generator": "scripts/derive_nsc_mmp_embedding.py",
+      "output": "results/development/mmp-embedding.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-12,
+        "float_rtol": 3e-11
+      },
+      "generator": "scripts/derive_nsc_causal_common.py",
+      "output": "results/development/causal-common-functional.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-12
+      },
+      "generator": "scripts/derive_nsc_vacuum_owner.py",
+      "output": "results/development/mmp-vacuum-owner.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "6e530a3c0a246f425f022a1dd868d9801b862910",
+  "source_commit": "87971de117713933f2714267b22072644e5e8d81",
   "source_files": [
     {
       "bytes": 3154,
@@ -282,10 +324,80 @@
       "bytes": 3479,
       "path": "tests/test_nsc_boundary_state.py",
       "sha256": "10eee1c2d0d67ad7c5ef981a903c8419bc4cd4263b667bcd4a6129c4db48fbec"
+    },
+    {
+      "bytes": 2547,
+      "path": "docs/nsc-prior-art-closure-table.md",
+      "sha256": "a373bb2802a463627d689060cb0426aab85dec4002fcdc37073a51874a32118c"
+    },
+    {
+      "bytes": 2805,
+      "path": "docs/nsc-mmp-embedding.md",
+      "sha256": "1411dd5deb8424b8d089b9a0e6ebed88a1656733c6575a482c437b7f1b3fe0ff"
+    },
+    {
+      "bytes": 2826,
+      "path": "docs/nsc-causal-common-functional.md",
+      "sha256": "6fabac75f603d2d1a3873d27396020d3bcad22c90774bedddbb1c00a3153e385"
+    },
+    {
+      "bytes": 2501,
+      "path": "docs/nsc-mmp-vacuum-owner.md",
+      "sha256": "9f61a81f0000b4a25289a12b7e753de3bcbb9138cc401d649f289dc0a54c2dc1"
+    },
+    {
+      "bytes": 3381,
+      "path": "results/development/mmp-embedding.json",
+      "sha256": "f4032d09ea4d7b76f6d02475fde29eb38dd239635e9e812518bc425726d477d0"
+    },
+    {
+      "bytes": 7203,
+      "path": "results/development/causal-common-functional.json",
+      "sha256": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03"
+    },
+    {
+      "bytes": 3980,
+      "path": "results/development/mmp-vacuum-owner.json",
+      "sha256": "2a0999ff12a8ed349096c554eb79a54537ef02afffaa9b23efaee4a1c779eb60"
+    },
+    {
+      "bytes": 4360,
+      "path": "scripts/derive_nsc_mmp_embedding.py",
+      "sha256": "bb394e381fc5878a05baf8681db042f5fb44f1a865dfae6fa03b7c244a7966a7"
+    },
+    {
+      "bytes": 8291,
+      "path": "scripts/derive_nsc_causal_common.py",
+      "sha256": "9d13409c301b4c604ed8666bc02349d1698be9446496a0dfb5081ffa1141a7bc"
+    },
+    {
+      "bytes": 7356,
+      "path": "scripts/derive_nsc_vacuum_owner.py",
+      "sha256": "0e087b61ffffad4b00c91d5a34c9e6683a88f2dcedd8799c0ada5f0470305fb6"
+    },
+    {
+      "bytes": 7383,
+      "path": "src/recursive_horizons/nsc_mmp_embedding.py",
+      "sha256": "3480ee43db89e9ddb1ea64c631945d0564f5964849600aac343f3dac570dd2c7"
+    },
+    {
+      "bytes": 11855,
+      "path": "src/recursive_horizons/nsc_causal_common.py",
+      "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90"
+    },
+    {
+      "bytes": 917,
+      "path": "tests/test_nsc_mmp_embedding.py",
+      "sha256": "40e7287ac62a3b8b96abbf886dacd33cbbfcfcd8e1e5408d47f0a399eaf57d18"
+    },
+    {
+      "bytes": 3307,
+      "path": "tests/test_nsc_causal_common.py",
+      "sha256": "f92b26c4a1a40cb407c6d1c1a6b9d975151b31fb08527cdee50a462ee694a5c7"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; outside the 100-record preprint release",
+  "status": "development snapshot; 11 post-preprint records, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }

@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`6e530a3c0a246f425f022a1dd868d9801b862910`. It contains eleven derivation
-notes, eight compact result records, their generators, five implementation
-modules and one boundary-state test. The 33 scientific files are imported
+`87971de117713933f2714267b22072644e5e8d81`. It contains fifteen derivation
+notes, eleven compact result records, ten generators, seven implementation
+modules and three focused tests. The 47 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -37,6 +37,9 @@ statement:
 | Recorded child-frame tensor transported into the source-equation frame | [Neck source map](nsc-adm-neck-source-map.md) |
 | An identified local contribution on the actual neck | [Local warp source](nsc-warp-local-neck-source.md) |
 | Recorded outgoing flux and the necessary evolving-parent mass balance | [Backreaction condition](nsc-parent-backreaction-gate.md) |
+| Charged field, state and coefficient dictionary into the imported MMP throat | [NSC–MMP embedding](nsc-mmp-embedding.md) |
+| Canonical Lorentzian evolution plus one-counted induced source terms | [Causal common functional](nsc-causal-common-functional.md) |
+| Identification and quantitative bound for the unresolved absolute vacuum coefficient | [MMP vacuum owner](nsc-mmp-vacuum-owner.md) |
 
 The known channel has outward power
 \(P_0=0.00014222067954246644\) in the recorded throat units.
@@ -46,12 +49,13 @@ geometry trajectory or a prediction of cosmological energy transfer.
 
 ## Exact remaining definition
 
-The [causal-source report](nsc-causal-source-definition-gap.md) explains why
-the computed real phase for complete histories does not determine the full
-causal geometric source and its admissible initial state. The canonical
-Dirac state, metric vertices, local contribution and conservation identities
-remain scoped inputs. The nonlocal remainder is not a proved small error.
-No coefficient, incoming flux or mass history was fitted to close the source.
+Canonical CTP now owns causal response. Its finite interface returns all four
+metric forces, stress, power, retarded response, noise and Ward residuals.
+The embedding gate passes the field, parity, AP-state and normalization maps.
+The retained partial coefficients fail the charged seed condition, and the
+owner audit finds no existing same-action term that determines the required
+absolute $V_{\rm full}$. No coefficient, incoming flux or mass history was
+fitted; recursive stationarity remains downstream of that definition.
 
 ## Provenance and inspection
 
@@ -59,7 +63,7 @@ No coefficient, incoming flux or mass history was fitted to close the source.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the eight later records are indexed separately.
+unchanged; the eleven later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
