@@ -12,7 +12,7 @@ Nested-Space Cosmology asks whether nature works the same way at every scale:
 > forces, matter, antimatter, dark gravity, black holes, and expanding space.**
 
 ```mermaid
-flowchart LR
+flowchart TD
   A[Energy gradient] --> B[Oscillation]
   B --> C[Frequency spectrum]
   C --> D[Stable resonances: particles]
