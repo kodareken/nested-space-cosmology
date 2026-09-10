@@ -1,0 +1,191 @@
+{
+  "comparison": {
+    "exact": "structure, strings, non-float values, source and input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "domain_map": {
+    "assumptions": "identical torsionless bulk copies, common gauge representation commuting with U, original smooth mixed domains",
+    "closed_operator_square": "D_tilde^2=D_dagger D",
+    "left_unitary": "U=tau1 tensor I4; not a similarity",
+    "pointwise_import_checks": [
+      {
+        "bag_component_sign": -1,
+        "eta": -1,
+        "exact_residuals": {
+          "chi_commutes_with_new_tangent_0": "0",
+          "chi_commutes_with_new_tangent_1": "0",
+          "chi_commutes_with_new_tangent_2": "0",
+          "chi_commutes_with_new_tangent_3": "0",
+          "copy_exchange_maps_allowed_to_adjoint": "0",
+          "grading_anticommutes_with_new_tangent_0": "0",
+          "grading_anticommutes_with_new_tangent_1": "0",
+          "grading_anticommutes_with_new_tangent_2": "0",
+          "grading_anticommutes_with_new_tangent_3": "0",
+          "new_normal_anticommutes_with_chi": "0",
+          "new_normal_current_isotropic": "0",
+          "published_chi_with_component_orientation": "0",
+          "spectral_grading_anticommutes_with_normal": "0",
+          "spectral_grading_preserves_domain": "0"
+        },
+        "outward_normal": -1
+      },
+      {
+        "bag_component_sign": 1,
+        "eta": -1,
+        "exact_residuals": {
+          "chi_commutes_with_new_tangent_0": "0",
+          "chi_commutes_with_new_tangent_1": "0",
+          "chi_commutes_with_new_tangent_2": "0",
+          "chi_commutes_with_new_tangent_3": "0",
+          "copy_exchange_maps_allowed_to_adjoint": "0",
+          "grading_anticommutes_with_new_tangent_0": "0",
+          "grading_anticommutes_with_new_tangent_1": "0",
+          "grading_anticommutes_with_new_tangent_2": "0",
+          "grading_anticommutes_with_new_tangent_3": "0",
+          "new_normal_anticommutes_with_chi": "0",
+          "new_normal_current_isotropic": "0",
+          "published_chi_with_component_orientation": "0",
+          "spectral_grading_anticommutes_with_normal": "0",
+          "spectral_grading_preserves_domain": "0"
+        },
+        "outward_normal": 1
+      },
+      {
+        "bag_component_sign": 1,
+        "eta": 1,
+        "exact_residuals": {
+          "chi_commutes_with_new_tangent_0": "0",
+          "chi_commutes_with_new_tangent_1": "0",
+          "chi_commutes_with_new_tangent_2": "0",
+          "chi_commutes_with_new_tangent_3": "0",
+          "copy_exchange_maps_allowed_to_adjoint": "0",
+          "grading_anticommutes_with_new_tangent_0": "0",
+          "grading_anticommutes_with_new_tangent_1": "0",
+          "grading_anticommutes_with_new_tangent_2": "0",
+          "grading_anticommutes_with_new_tangent_3": "0",
+          "new_normal_anticommutes_with_chi": "0",
+          "new_normal_current_isotropic": "0",
+          "published_chi_with_component_orientation": "0",
+          "spectral_grading_anticommutes_with_normal": "0",
+          "spectral_grading_preserves_domain": "0"
+        },
+        "outward_normal": -1
+      },
+      {
+        "bag_component_sign": -1,
+        "eta": 1,
+        "exact_residuals": {
+          "chi_commutes_with_new_tangent_0": "0",
+          "chi_commutes_with_new_tangent_1": "0",
+          "chi_commutes_with_new_tangent_2": "0",
+          "chi_commutes_with_new_tangent_3": "0",
+          "copy_exchange_maps_allowed_to_adjoint": "0",
+          "grading_anticommutes_with_new_tangent_0": "0",
+          "grading_anticommutes_with_new_tangent_1": "0",
+          "grading_anticommutes_with_new_tangent_2": "0",
+          "grading_anticommutes_with_new_tangent_3": "0",
+          "new_normal_anticommutes_with_chi": "0",
+          "new_normal_current_isotropic": "0",
+          "published_chi_with_component_orientation": "0",
+          "spectral_grading_anticommutes_with_normal": "0",
+          "spectral_grading_preserves_domain": "0"
+        },
+        "outward_normal": 1
+      }
+    ],
+    "self_adjoint_representative": "D_tilde=U D on the original allowed domain"
+  },
+  "geometric_application": {
+    "boundary_shape": "K_ab=(K/4)h_ab, hence K_hat=0",
+    "first_variation_argument": "On the unwarped product K_hat=0, W_nabc=0, nabla_n W_anbn=0; all surviving invariants start at quadratic or higher order. Boundary-constant sigma preserves this under the conformal map.",
+    "gauge_condition": "F_aY=0 (includes tangential Y-independent gauge backgrounds)",
+    "metric": "exp(2 sigma(Y)) (g4+dY^2), g4 independent of Y",
+    "mixed_Weyl_tensor": "W_nabc=0, by the product geometry and conformal covariance",
+    "universal_Wess_Zumino_value_and_first_source": "0 in the stated representative and conformal-product class",
+    "universal_gauge_anomaly": "0: Eq96 is proportional to F_an F^an",
+    "universal_gravitational_anomaly": "0",
+    "unrestricted_intrinsic_invariants": [
+      "E4",
+      "I3",
+      "I4"
+    ],
+    "vanishing_invariants": [
+      "I1",
+      "I2",
+      "I5",
+      "I6",
+      "I7",
+      "I8"
+    ]
+  },
+  "gravitational_anomaly_normalization": "1/[5760 (4 pi)^2]",
+  "input_domain": {
+    "Euclidean_normal_gamma": "outward_sign * I2 tensor gamma5",
+    "Hilbert_measure": "integral sqrt(g5) Psi_dagger Psi",
+    "K_convention": "trace of extrinsic curvature with outward normal; Vassilevich L_aa",
+    "Lorentzian_Cauchy_current": "I2 tensor (i beta gamma5)",
+    "allowed_projector": "P=(I8-eta*tau3 tensor gamma5)/2, eta=+1 or -1",
+    "boundary_type": "reflecting compact endpoints, not the parent-child transmitting throat",
+    "fields": "two torsionless Dirac copies; geometric terms at zero link and gauge backgrounds",
+    "geometry": "Euclidean conformal collar e^(2 sigma)*(g4+dY^2), interval [-L_star,L_star]",
+    "mixed_domain": "(I-P)Psi=0; (nabla_in - K_out/2)P Psi=0",
+    "positive_operator": "D_E^dagger D_E, not a self-adjoint D_E squared on the same chiral domain",
+    "sigma": "-18*(Y/L_star)^2/1015"
+  },
+  "input_hashes": {
+    "results/development/canonical-spectral-bridge.json": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74",
+    "results/development/compact-boundary-action.json": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce"
+  },
+  "phase_scope": {
+    "eta_invariant": "0 for the self-adjoint representative with a discrete eta-regularizable spectrum",
+    "original_D_phase_fixed_by_left_unitarity_alone": false,
+    "phase_identity": "det_zeta D_tilde=det_zeta(D_tilde^2)^(1/2) exp[i*pi*zeta_(D_tilde^2)(0)/2]",
+    "spectral_grading": "tau3 tensor I4",
+    "zero_modes_and_global_phase_on_noncompact_transition_resolved": false,
+    "zeta_phase_without_zero_modes": "1 when a5=0, closed tangential sections/no extra boundary terms, fixed spectral cut"
+  },
+  "primary_source": {
+    "authors": "Amin Faraji Astaneh and Sergey N. Solodukhin",
+    "doi": "10.1103/PhysRevD.108.085015",
+    "equations": "80-89; charges Sec VI.A.3 p15; gauge Eq96",
+    "title": "Fermions, boundaries, and conformal and chiral anomalies in d=3, 4 and 5 dimensions",
+    "url": "https://scoap3-prod-backend.s3.cern.ch/media/files/81024/10.1103/PhysRevD.108.085015.pdf"
+  },
+  "published_charges": {
+    "E4": "0",
+    "I1": "-429/4",
+    "I2": "621",
+    "I3": "0",
+    "I4": "0",
+    "I5": "270",
+    "I6": "990",
+    "I7": "-210",
+    "I8": "-360"
+  },
+  "retained_finite_cutoff_warp_source": {
+    "Q1": -0.10373632168098476,
+    "Q2": -0.40766196621320755,
+    "origin": "stored warped derivatives; free canonical masses and fixed canonical state have no warp-path dependence"
+  },
+  "schema": "NSC-COMPACT-ANOMALY-BRIDGE-v1",
+  "scope": {
+    "finite_cutoff_warp_functional_zero": false,
+    "full_C5_plus_J_real_time_prescription_derived": false,
+    "full_chiral_or_gauge_anomaly_cancellation_claimed": false,
+    "scheme_dependent_trivial_anomalies_set_to_zero": false,
+    "self_sourced_solution_derived": false,
+    "universal_parity_even_conformal_piece_evaluated": true
+  },
+  "source_hashes": {
+    "docs/nsc-compact-anomaly-bridge.md": "d4ebca6d99320d8b2bc81611614bd19c16ae0355c2994c585c1ba74b31fdb0fc",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "scripts/derive_nsc_compact_anomaly.py": "b2b3aa6aff74061e989a97cfc9221d38ccf8603bbdb898651bab6271695d1af9",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "status": "published universal conformal anomaly applied to the paired compact modulus"
+}

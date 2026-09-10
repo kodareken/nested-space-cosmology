@@ -1,0 +1,132 @@
+{
+  "Euclidean_binding": {
+    "canonical_kernel": [
+      -0.375276230907555,
+      0.0
+    ],
+    "counter_kernel": [
+      0.331461525184857,
+      0.0
+    ],
+    "frequency": 0.7,
+    "old_covariant_heat_kernel": -0.04381470572269267,
+    "old_frequency_quadrature_nodes": 128,
+    "reconstruction_residual": [
+      -5.349887199912473e-15,
+      0.0
+    ]
+  },
+  "comparison": {
+    "exact": "structure, strings, non-float values, source and input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "domain": {
+    "approximation": "quadratic in probe amplitude, full frequency dependence",
+    "cutoff": 4.0,
+    "field": "one two-component radial block, kappa=1; full four-dimensional multiplicity 4*kappa is not applied",
+    "geometry": "existing smooth AP axial cell, R=2, a=1, N=q=1",
+    "probe": "r(t,x)=r0(x)/(1+J(t)s(x)); H=H0+J V",
+    "proper_time_and_Feynman_nodes": 40,
+    "spatial_points": 12,
+    "units": "hbar=c=1; kernel and static conversion have energy units"
+  },
+  "finite_history": {
+    "amplitude_action_residual": 1.3877787807814457e-17,
+    "canonical_amplitude": [
+      0.982123140209122,
+      0.1880109417421027
+    ],
+    "constant_probe_amplitudes": [
+      0.02,
+      -0.015
+    ],
+    "geometric_phase_difference": -0.11402060306203526,
+    "modulus_change": 0.0,
+    "period": 6.283185307179586,
+    "prescription_amplitude": [
+      0.9971366121597358,
+      0.07505033937020911
+    ],
+    "principal_action": [
+      0.07512421009834841,
+      4.3013475616557074e-05
+    ],
+    "relative_geometric_branch_actions": [
+      -0.06546821882517866,
+      0.04855238423685661
+    ]
+  },
+  "input_hashes": {
+    "results/development/gaussian-cutoff-measure.json": "125995142e45c28712dfd8fc87c41e89265a37eef8afb74c83230f6becba9ae4",
+    "results/nsc-11-response-matching.json": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4"
+  },
+  "prescription": {
+    "CTP": "Z_phys=exp[i(B_L[+]-B_L[-])] Z_canonical[C0]",
+    "continuation": "continue finite short-proper-time vertex in nu^2 to -omega^2; no loop-contour rotation",
+    "extra_physical_rule": true,
+    "new_fitted_coefficients": false,
+    "raw_thermal_determinant_retained_as_physical_partition_function": false,
+    "state": "retain canonical Gaussian C0 and its unitary histories",
+    "state_differences": "canonical at fixed geometry; B is fixed by zero-temperature vacuum matching",
+    "uniquely_forced_by_Euclidean_determinant": false,
+    "vacuum_matching": "B_E=Gamma_heat_E-Gamma_canonical_vac_E, same normalization and domain"
+  },
+  "real_time_vertices": [
+    {
+      "continued_force_kernel": 0.3327277367392161,
+      "frequency": 0.0,
+      "geometric_branch_action_kernel": -0.3327277367392161
+    },
+    {
+      "continued_force_kernel": 0.3331426979834304,
+      "frequency": 0.4,
+      "geometric_branch_action_kernel": -0.3331426979834304
+    },
+    {
+      "continued_force_kernel": 0.33588439209578225,
+      "frequency": 1.1,
+      "geometric_branch_action_kernel": -0.33588439209578225
+    },
+    {
+      "continued_force_kernel": 0.34561547589547,
+      "frequency": 2.2,
+      "geometric_branch_action_kernel": -0.34561547589547
+    }
+  ],
+  "schema": "NSC-VACUUM-MATCHED-CTP-v1",
+  "scope": {
+    "absolute_continuum_source_or_self_sourced_geometry_solved": false,
+    "all_orders_interacting_nonlocal_unitarity_imported": false,
+    "bare_geometric_vertex_is_a_retarded_correlator": false,
+    "canonical_matter_dynamics_changed": false,
+    "coupled_metric_causality_or_stability_proved": false,
+    "full_curved_nonperturbative_continuation_evaluated": false,
+    "normalized_positive_overlap_kernel_at_finite_regulator": true
+  },
+  "sinusoidal_geometric_phase": {
+    "J1_imag": 0.01,
+    "J1_real": 0.0,
+    "period": 6.283185307179586,
+    "relative_branch_action": -0.00021069623460234308
+  },
+  "source_hashes": {
+    "docs/nsc-vacuum-matched-ctp.md": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "scripts/derive_nsc_vacuum_matched_ctp.py": "ac07eb75ea60043af225b6b85ded24c161d90418fd3b5fef8db304e4b7c5f26b",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_response_matching.py": "d762d8923ad47e9475310469a698444a1d03c76e5091305cf741a9d8fa2ee132",
+    "src/recursive_horizons/nsc_vacuum_matched_ctp.py": "a31e4dbc52fa241684a54a071bda254ecea5963bb1d25493b3c17d7200c09836"
+  },
+  "static_conversion": {
+    "constant_energy": 62.22853892849628,
+    "linear_force": 0.5176522547050608
+  },
+  "status": "explicit working prescription; calculated full-frequency quadratic geometric branch in a finite Dirac channel"
+}

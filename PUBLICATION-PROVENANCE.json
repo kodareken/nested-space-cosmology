@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 6988,
+      "bytes": 7527,
       "path": "AGENTS.md",
-      "sha256": "23b9a1e8de856f9837a12c62c9b3664d0744ce520979e0a345cbe0bb2a5883dd"
+      "sha256": "6345c9181563de7b20b8363ccb277a520b4b863726eb6f0e9041be6cb487b7e5"
     },
     {
       "bytes": 964,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 12628,
+      "bytes": 13197,
       "path": "README.md",
-      "sha256": "099a2355d5296a814227178f0231fb582c289e5e944ae3ca36f7ac0050fad750"
+      "sha256": "36fa5adfc58ae658caa19d0e40b7663173029ac21f5088f04195e9a18aaf2fa2"
     },
     {
       "bytes": 629,
@@ -81,9 +81,24 @@
       "sha256": "0bc696857da3bcc1cc6db5587b57708ac1840756f8305b7fe7d4c6551976c79b"
     },
     {
-      "bytes": 23202,
+      "bytes": 23902,
       "path": "docs/current-result.md",
-      "sha256": "4a5ce0d9894da637a0ee6ecf7939a8ada5d936322953beda3b1d862751e4d6a2"
+      "sha256": "6067f46ee257d9a4240d6b4601d1f8578acddfcd1258a74f81e5e3731b294394"
+    },
+    {
+      "bytes": 4321,
+      "path": "docs/development-update-2026-09-10.md",
+      "sha256": "3d1e11bc29db457c42e57b34decab3b85407dd41d27359668586c0de632fb0c4"
+    },
+    {
+      "bytes": 3154,
+      "path": "docs/nsc-adm-neck-source-map.md",
+      "sha256": "46dbac919b5d6566ad6819b81a3af6cde6894fd41d053c06997e094bcbe2235b"
+    },
+    {
+      "bytes": 8708,
+      "path": "docs/nsc-adm-source-constraints.md",
+      "sha256": "ba37dd348fb2996b01c1990eec9169908685aad35a5a4d7134ff9d863abbc0fc"
     },
     {
       "bytes": 10326,
@@ -94,6 +109,21 @@
       "bytes": 10991,
       "path": "docs/nsc-boundary-response.md",
       "sha256": "2ee875c13c88f79d61a3fdc5842d17905bd002c95aa3a0856c4deda26d5f4006"
+    },
+    {
+      "bytes": 5785,
+      "path": "docs/nsc-boundary-state.md",
+      "sha256": "cbcc764a758884a325040f674c7d8c0cea09c1370e6a17f97ce8690b61e2a218"
+    },
+    {
+      "bytes": 8332,
+      "path": "docs/nsc-canonical-spectral-bridge.md",
+      "sha256": "02215f76d44eaf1c426a2f0c0f98d0f963ed931e3788fb8308427c035f61bb9c"
+    },
+    {
+      "bytes": 5750,
+      "path": "docs/nsc-causal-source-definition-gap.md",
+      "sha256": "65b7fbad3accaa42ef5eb741c1ceadd4ebb90eb5809135eb3c95895e88c03e3a"
     },
     {
       "bytes": 7397,
@@ -119,6 +149,16 @@
       "bytes": 13455,
       "path": "docs/nsc-closure-verification-2026-09-07.md",
       "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
+    },
+    {
+      "bytes": 15767,
+      "path": "docs/nsc-common-source-derivation.md",
+      "sha256": "00c19b04e3f40274cb9e5dd74422c279fef82d26bab75072a6ecadc7f86dcbd8"
+    },
+    {
+      "bytes": 8050,
+      "path": "docs/nsc-compact-anomaly-bridge.md",
+      "sha256": "d4ebca6d99320d8b2bc81611614bd19c16ae0355c2994c585c1ba74b31fdb0fc"
     },
     {
       "bytes": 7796,
@@ -186,6 +226,11 @@
       "sha256": "7b175e52b4f11d7fe0888a613506186ea07a9b33ba66694fb8d100fd2e0cbed4"
     },
     {
+      "bytes": 6983,
+      "path": "docs/nsc-gaussian-cutoff-measure.md",
+      "sha256": "6a2c715652ec974efe9336d40ddba4a6921d48bdffb2e00cb0464e4c0594c270"
+    },
+    {
       "bytes": 3821,
       "path": "docs/nsc-geometric-chain.md",
       "sha256": "288be5e077d41dbd7481729b57aad064181cecfb83eba80eb44328fd7e0d7ea1"
@@ -224,6 +269,11 @@
       "bytes": 8694,
       "path": "docs/nsc-observational-targets.md",
       "sha256": "1f71ff4360d034abde3534682f28d7a334c68cf9a5af73da707e3660b9148d3c"
+    },
+    {
+      "bytes": 7097,
+      "path": "docs/nsc-parent-backreaction-gate.md",
+      "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
     },
     {
       "bytes": 7962,
@@ -316,9 +366,19 @@
       "sha256": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024"
     },
     {
+      "bytes": 8359,
+      "path": "docs/nsc-vacuum-matched-ctp.md",
+      "sha256": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d"
+    },
+    {
       "bytes": 8554,
       "path": "docs/nsc-vacuum-work.md",
       "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
+    },
+    {
+      "bytes": 5432,
+      "path": "docs/nsc-warp-local-neck-source.md",
+      "sha256": "963a184bc1d998de455f473331ab8a9f2154547451bf35c572518dbd32ca0bb4"
     },
     {
       "bytes": 10519,
@@ -376,9 +436,29 @@
       "sha256": "faf1b3b2a203022764dbc7414a2f022d79c514eda72640d444cbb7d976944643"
     },
     {
+      "bytes": 9713,
+      "path": "results/development-snapshot.json",
+      "sha256": "6711f1f51723cfe867f7ccacf76ab0c01d528ee3869ec0b41ca3b6a3f75d9862"
+    },
+    {
+      "bytes": 3283,
+      "path": "results/development/adm-neck-source-map.json",
+      "sha256": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe"
+    },
+    {
+      "bytes": 7156,
+      "path": "results/development/adm-source-constraints.json",
+      "sha256": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56"
+    },
+    {
       "bytes": 87723,
       "path": "results/development/angular-stress.json",
       "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6"
+    },
+    {
+      "bytes": 12878,
+      "path": "results/development/canonical-spectral-bridge.json",
+      "sha256": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74"
     },
     {
       "bytes": 3710,
@@ -389,6 +469,11 @@
       "bytes": 11855,
       "path": "results/development/child-state.json",
       "sha256": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060"
+    },
+    {
+      "bytes": 8875,
+      "path": "results/development/compact-anomaly-bridge.json",
+      "sha256": "38c8e98052671c5c852e272a611da8a9f376d8ca683e9f91b0b8f5ae0977d13f"
     },
     {
       "bytes": 6199,
@@ -426,6 +511,11 @@
       "sha256": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592"
     },
     {
+      "bytes": 4224,
+      "path": "results/development/gaussian-cutoff-measure.json",
+      "sha256": "125995142e45c28712dfd8fc87c41e89265a37eef8afb74c83230f6becba9ae4"
+    },
+    {
       "bytes": 8902,
       "path": "results/development/horizon-source.json",
       "sha256": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f"
@@ -434,6 +524,11 @@
       "bytes": 13277,
       "path": "results/development/massless-reference.json",
       "sha256": "1f02ebec5b8b7701080a3b0705f4f62e23aac44149e88872f945050f81472002"
+    },
+    {
+      "bytes": 5507,
+      "path": "results/development/parent-backreaction-gate.json",
+      "sha256": "23276b420baa2a122e2df5fb748acd032476f639573b5694cd5e2f7fd4685560"
     },
     {
       "bytes": 14804,
@@ -464,6 +559,16 @@
       "bytes": 4605,
       "path": "results/development/vacuum-charge-matching.json",
       "sha256": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b"
+    },
+    {
+      "bytes": 5337,
+      "path": "results/development/vacuum-matched-ctp.json",
+      "sha256": "ef477c7b438735739b2e93f976c7d36d352669bf547a3bd5da43da0fb70a5bf3"
+    },
+    {
+      "bytes": 5165,
+      "path": "results/development/warp-local-neck-source.json",
+      "sha256": "19fefeb200b94c7c4f43cb928843107d0529f5b2dacf77964f1a44a134704590"
     },
     {
       "bytes": 13586,
@@ -911,6 +1016,11 @@
       "sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e"
     },
     {
+      "bytes": 3124,
+      "path": "scripts/check_nsc_canonical_spectral_bridge.py",
+      "sha256": "5999be76de5ffcee333798823b153b185fdb33eee59189f995f54698f5fe6a9a"
+    },
+    {
       "bytes": 7147,
       "path": "scripts/check_nsc_charged_sector.py",
       "sha256": "098d2b8299205be338d5722b5af7d668a577d6ba49a934c3a0a36af8b225b546"
@@ -1116,14 +1226,49 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 12424,
+      "bytes": 14900,
       "path": "scripts/check_publication.py",
-      "sha256": "acc4215b0ea7e55274347422044c0b50a2f475e3d8e3b59d180ec03e2ea9ed90"
+      "sha256": "552f45d719495f2700131eb901572171c06c9f2f81b9bdf57cfb378a43758b20"
     },
     {
       "bytes": 11187,
       "path": "scripts/demonstrate.py",
       "sha256": "488d8e2d4983bf5d34a13fd501862c224d78091c6395522ac611692a61daf936"
+    },
+    {
+      "bytes": 11094,
+      "path": "scripts/derive_nsc_adm_source.py",
+      "sha256": "ad6aab76a31fce8c43278c65304a9c625be2f87d524b1e9d5c95caad12bd2507"
+    },
+    {
+      "bytes": 7603,
+      "path": "scripts/derive_nsc_compact_anomaly.py",
+      "sha256": "b2b3aa6aff74061e989a97cfc9221d38ccf8603bbdb898651bab6271695d1af9"
+    },
+    {
+      "bytes": 6527,
+      "path": "scripts/derive_nsc_gaussian_measure.py",
+      "sha256": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907"
+    },
+    {
+      "bytes": 6564,
+      "path": "scripts/derive_nsc_parent_backreaction.py",
+      "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
+    },
+    {
+      "bytes": 7194,
+      "path": "scripts/derive_nsc_vacuum_matched_ctp.py",
+      "sha256": "ac07eb75ea60043af225b6b85ded24c161d90418fd3b5fef8db304e4b7c5f26b"
+    },
+    {
+      "bytes": 6465,
+      "path": "scripts/derive_nsc_warp_local_source.py",
+      "sha256": "fcb6374a46742aead87223f6eb5e1dfc3524a6f0b4cdbb4af670c27075901ea5"
+    },
+    {
+      "bytes": 4847,
+      "path": "scripts/map_nsc_adm_neck_source.py",
+      "sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c"
     },
     {
       "bytes": 40208,
@@ -1441,6 +1586,11 @@
       "sha256": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d"
     },
     {
+      "bytes": 5881,
+      "path": "src/recursive_horizons/nsc_adm_source.py",
+      "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
+    },
+    {
       "bytes": 14612,
       "path": "src/recursive_horizons/nsc_angular_stress.py",
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
@@ -1449,6 +1599,16 @@
       "bytes": 58764,
       "path": "src/recursive_horizons/nsc_boundary.py",
       "sha256": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e"
+    },
+    {
+      "bytes": 5933,
+      "path": "src/recursive_horizons/nsc_boundary_state.py",
+      "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646"
+    },
+    {
+      "bytes": 4402,
+      "path": "src/recursive_horizons/nsc_canonical_spectral_bridge.py",
+      "sha256": "821e1dbdcb79f815521b9aee536643bea1d155c0b639afd49376229e51991879"
     },
     {
       "bytes": 2962,
@@ -1509,6 +1669,11 @@
       "bytes": 7648,
       "path": "src/recursive_horizons/nsc_gauge_source.py",
       "sha256": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e"
+    },
+    {
+      "bytes": 3264,
+      "path": "src/recursive_horizons/nsc_gaussian_measure.py",
+      "sha256": "8f1508ee0c4c70ff5efd52a954e0784fb83242dd72711fe251cd87fb5929e971"
     },
     {
       "bytes": 3305,
@@ -1591,6 +1756,11 @@
       "sha256": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
     },
     {
+      "bytes": 6373,
+      "path": "src/recursive_horizons/nsc_vacuum_matched_ctp.py",
+      "sha256": "a31e4dbc52fa241684a54a071bda254ecea5963bb1d25493b3c17d7200c09836"
+    },
+    {
       "bytes": 6533,
       "path": "src/recursive_horizons/nsc_vacuum_work.py",
       "sha256": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c"
@@ -1634,6 +1804,11 @@
       "bytes": 10617,
       "path": "tests/test_nsc_boundary.py",
       "sha256": "127fe20da377d4c115131381f71df479e7ea46229c0cee93103edfd0dd9d6d67"
+    },
+    {
+      "bytes": 3479,
+      "path": "tests/test_nsc_boundary_state.py",
+      "sha256": "10eee1c2d0d67ad7c5ef981a903c8419bc4cd4263b667bcd4a6129c4db48fbec"
     },
     {
       "bytes": 7782,

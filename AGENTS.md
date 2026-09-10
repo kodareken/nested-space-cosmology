@@ -81,6 +81,14 @@ Use the labels defined in [THEORY.md](THEORY.md): Postulate, Imported result, Re
 
 ## Current frontier
 
+Use the [September 10 development update](docs/development-update-2026-09-10.md)
+before the earlier preprint checkpoint below. The common-source equations,
+boundary state, measure, ADM source maps and flux condition are committed.
+The full causal geometric/UV source remains an explicit missing definition.
+The separate development snapshot authenticates eight later records while
+preserving the 100-record preprint manifest. A push of authenticated existing
+work requires publication/path checks, not replay of the old scientific chain.
+
 The latest source includes the phase-resolved parent Dirac covariance and
 its canonical massless stress on the expanding child. Both neck null
 contractions are negative, while density, anisotropy and flux leave

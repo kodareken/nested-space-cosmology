@@ -1,0 +1,90 @@
+{
+  "comparison": {
+    "exact": "structure, strings, non-float values and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "decision": {
+    "alternative": "a directed incoming/recursive source must be derived explicitly if a different stationary state is pursued",
+    "next_branch": "evolving geometry with the existing empty-incoming state",
+    "required_work": "solve the initial constraints and coupled geometry/state evolution; do not insert a mass function into the old profile and call it solved"
+  },
+  "evolution_condition": {
+    "Einstein_coefficient_fitted": false,
+    "aEH_times_initial_dimensionless_mass_derivative": -2.829390519883991e-06,
+    "aEH_times_rhat_times_initial_leading_g_uu_derivative": 5.658781039767982e-06,
+    "assumptions": [
+      "positive fixed asymptotic Einstein coefficient",
+      "fixed vacuum/magnetic reference terms",
+      "spherical mean, no additional incoming power or boundary work",
+      "asymptotic retarded time u with the inherited parent normalization"
+    ],
+    "asymptotic_Einstein_regime_of_full_theory_established": false,
+    "complete_total_power_known": false,
+    "constant_power_extrapolated_to_all_times": false,
+    "dimensionless_initial_tangent": "a_EH * d(mhat_B)/d(uhat) = recorded coefficient",
+    "geometric_mass_balance": "dm_B/du=-G P_infinity, G=1/(16*pi*A_EH)",
+    "physical_energy_balance": "d(M_B)/du=-P_infinity",
+    "radiating_mass": "Bondi/remaining-system mass in the matched asymptotically flat regime; not total ADM energy including radiation",
+    "rate_is_recorded_channel_contribution": true,
+    "reused_mass_normalization": {
+      "Casimir": "-32*pi**2*A4*C_F*q_mag**2/sqrt(X) - 16*pi*A4*sqrt(X) + Xminus*Xplus/sqrt(X) + V4*X**(3/2)/(3*A4)",
+      "Casimir_to_geometric_mass": "-64*sqrt(2)*pi**(3/2)*A4**(3/2)*M_geom",
+      "Poisson_rank_at_Xplus_Xminus_zero": "2 if V(X)!=0; 0 only when V(X)=0; not every neck is a rank-drop point",
+      "area_as_field_valid_at_positive_radius_neck": true,
+      "canonical_time_is_automatically_parent_Killing_time": false,
+      "outgoing_power_balance": "dM_geom/dtau=-G*P_infinity under that parent normalization with the complete source and fixed magnetic/vacuum reference terms",
+      "parent_energy": "M_geom/G, G=1/(16*pi*A4), in the asymptotically flat parent limit with unit-normalized Killing time and the stated reference subtraction",
+      "radius_as_coordinate_valid_at_static_neck": false
+    }
+  },
+  "exact_imports": {
+    "Euclidean_static_shear_identity": "0",
+    "paired_reflection_preserves_compact_domain": "0 for eta=+1 and -1",
+    "static_Einstein_required_Killing_power": "0"
+  },
+  "geometric_flux_result": {
+    "assumptions": [
+      "stationary positive Euclidean metric with noncompact radial line and no helical time identification",
+      "covariant parity-even geometric functional and reflection-compatible domain/reference",
+      "the same analytic continuation, without extra directed state or boundary data"
+    ],
+    "global_Lorentzian_future_horizon_reflection_assumed": false,
+    "nonperturbative_horizon_continuation_existence_proved": false,
+    "scope": "applies to nonlocal as well as local geometric terms under these assumptions",
+    "value": "0 on the stationary symmetry-preserving analytic vacuum branch"
+  },
+  "input_hashes": {
+    "results/development/adm-neck-source-map.json": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe",
+    "results/development/spherical-action.json": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456",
+    "results/development/vacuum-matched-ctp.json": "ef477c7b438735739b2e93f976c7d36d352669bf547a3bd5da43da0fb70a5bf3",
+    "results/development/warp-local-neck-source.json": "19fefeb200b94c7c4f43cb928843107d0529f5b2dacf77964f1a44a134704590"
+  },
+  "known_local_geometric_power": 2.7755575615628914e-17,
+  "reused_power": 0.00014222067954246644,
+  "schema": "NSC-PARENT-BACKREACTION-GATE-v1",
+  "scope": {
+    "cosmological_density_Q_predicted": false,
+    "finite_parent_to_child_evolution_solved": false,
+    "full_diagonal_source_residuals_closed": false,
+    "radiation_or_geometry_generator_rerun": false
+  },
+  "source_hashes": {
+    "docs/nsc-parent-backreaction-gate.md": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "scripts/derive_nsc_parent_backreaction.py": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "static_balance": {
+    "additional_independent_empty_incoming_free_channels": "nonnegative outgoing power; cannot cancel the unchanged recorded channel",
+    "full_NSC_static_no_go_claimed": false,
+    "geometric_remainder_can_supply_it_under_stated_symmetry": false,
+    "interacting_or_directed_recursive_state_included_in_that_bound": false,
+    "required_other_sector_power": -0.00014222067954246644
+  },
+  "status": "stationary flux obstruction for the stated free analytic branch and a necessary evolving-parent mass balance"
+}

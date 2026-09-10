@@ -17,6 +17,13 @@ The project makes this connection concrete through reproducible operator calcula
 
 **The research target is a self-sourced physical solution:** the same action and state must determine the geometry, its matter and its observable consequences. The strongest verified milestones and remaining equations are presented together in the [working preprint](paper/nested-space-cosmology.pdf).
 
+**September 10 development update:** the [common-source derivation and follow-ups](docs/development-update-2026-09-10.md)
+are now available with their original code and eight additional result records,
+pinned to laboratory commit `6e530a3`. They connect the boundary state, measure,
+metric variations and outward energy flux. The [remaining causal-source definition](docs/nsc-causal-source-definition-gap.md)
+is explicit. This snapshot follows the 100-record preprint; it does not change
+the PDF or create a new release. Use the update as the current research cursor.
+
 The strongest scoped result is the [parent-matched source](docs/nsc-unruh-state.md):
 an actual phase-resolved canonical massless Dirac candidate has negative
 neck null, but it is not complete self-sourcing. Density, pressure

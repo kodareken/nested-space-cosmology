@@ -1,0 +1,291 @@
+{
+  "baseline_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
+  "records": [
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/map_nsc_adm_neck_source.py",
+      "output": "results/development/adm-neck-source-map.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/derive_nsc_adm_source.py",
+      "output": "results/development/adm-source-constraints.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, non-float values, source and input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/check_nsc_canonical_spectral_bridge.py",
+      "output": "results/development/canonical-spectral-bridge.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values, source and input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/derive_nsc_compact_anomaly.py",
+      "output": "results/development/compact-anomaly-bridge.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values, source and input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/derive_nsc_gaussian_measure.py",
+      "output": "results/development/gaussian-cutoff-measure.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/derive_nsc_parent_backreaction.py",
+      "output": "results/development/parent-backreaction-gate.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values, source and input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/derive_nsc_vacuum_matched_ctp.py",
+      "output": "results/development/vacuum-matched-ctp.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, non-float values and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-09,
+        "float_rtol": 3e-08
+      },
+      "generator": "scripts/derive_nsc_warp_local_source.py",
+      "output": "results/development/warp-local-neck-source.json"
+    }
+  ],
+  "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
+  "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
+  "source_commit": "6e530a3c0a246f425f022a1dd868d9801b862910",
+  "source_files": [
+    {
+      "bytes": 3154,
+      "path": "docs/nsc-adm-neck-source-map.md",
+      "sha256": "46dbac919b5d6566ad6819b81a3af6cde6894fd41d053c06997e094bcbe2235b"
+    },
+    {
+      "bytes": 8708,
+      "path": "docs/nsc-adm-source-constraints.md",
+      "sha256": "ba37dd348fb2996b01c1990eec9169908685aad35a5a4d7134ff9d863abbc0fc"
+    },
+    {
+      "bytes": 5785,
+      "path": "docs/nsc-boundary-state.md",
+      "sha256": "cbcc764a758884a325040f674c7d8c0cea09c1370e6a17f97ce8690b61e2a218"
+    },
+    {
+      "bytes": 8332,
+      "path": "docs/nsc-canonical-spectral-bridge.md",
+      "sha256": "02215f76d44eaf1c426a2f0c0f98d0f963ed931e3788fb8308427c035f61bb9c"
+    },
+    {
+      "bytes": 5750,
+      "path": "docs/nsc-causal-source-definition-gap.md",
+      "sha256": "65b7fbad3accaa42ef5eb741c1ceadd4ebb90eb5809135eb3c95895e88c03e3a"
+    },
+    {
+      "bytes": 15767,
+      "path": "docs/nsc-common-source-derivation.md",
+      "sha256": "00c19b04e3f40274cb9e5dd74422c279fef82d26bab75072a6ecadc7f86dcbd8"
+    },
+    {
+      "bytes": 8050,
+      "path": "docs/nsc-compact-anomaly-bridge.md",
+      "sha256": "d4ebca6d99320d8b2bc81611614bd19c16ae0355c2994c585c1ba74b31fdb0fc"
+    },
+    {
+      "bytes": 6983,
+      "path": "docs/nsc-gaussian-cutoff-measure.md",
+      "sha256": "6a2c715652ec974efe9336d40ddba4a6921d48bdffb2e00cb0464e4c0594c270"
+    },
+    {
+      "bytes": 7097,
+      "path": "docs/nsc-parent-backreaction-gate.md",
+      "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
+    },
+    {
+      "bytes": 8359,
+      "path": "docs/nsc-vacuum-matched-ctp.md",
+      "sha256": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d"
+    },
+    {
+      "bytes": 5432,
+      "path": "docs/nsc-warp-local-neck-source.md",
+      "sha256": "963a184bc1d998de455f473331ab8a9f2154547451bf35c572518dbd32ca0bb4"
+    },
+    {
+      "bytes": 3283,
+      "path": "results/development/adm-neck-source-map.json",
+      "sha256": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe"
+    },
+    {
+      "bytes": 7156,
+      "path": "results/development/adm-source-constraints.json",
+      "sha256": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56"
+    },
+    {
+      "bytes": 12878,
+      "path": "results/development/canonical-spectral-bridge.json",
+      "sha256": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74"
+    },
+    {
+      "bytes": 8875,
+      "path": "results/development/compact-anomaly-bridge.json",
+      "sha256": "38c8e98052671c5c852e272a611da8a9f376d8ca683e9f91b0b8f5ae0977d13f"
+    },
+    {
+      "bytes": 4224,
+      "path": "results/development/gaussian-cutoff-measure.json",
+      "sha256": "125995142e45c28712dfd8fc87c41e89265a37eef8afb74c83230f6becba9ae4"
+    },
+    {
+      "bytes": 5507,
+      "path": "results/development/parent-backreaction-gate.json",
+      "sha256": "23276b420baa2a122e2df5fb748acd032476f639573b5694cd5e2f7fd4685560"
+    },
+    {
+      "bytes": 5337,
+      "path": "results/development/vacuum-matched-ctp.json",
+      "sha256": "ef477c7b438735739b2e93f976c7d36d352669bf547a3bd5da43da0fb70a5bf3"
+    },
+    {
+      "bytes": 5165,
+      "path": "results/development/warp-local-neck-source.json",
+      "sha256": "19fefeb200b94c7c4f43cb928843107d0529f5b2dacf77964f1a44a134704590"
+    },
+    {
+      "bytes": 3124,
+      "path": "scripts/check_nsc_canonical_spectral_bridge.py",
+      "sha256": "5999be76de5ffcee333798823b153b185fdb33eee59189f995f54698f5fe6a9a"
+    },
+    {
+      "bytes": 11094,
+      "path": "scripts/derive_nsc_adm_source.py",
+      "sha256": "ad6aab76a31fce8c43278c65304a9c625be2f87d524b1e9d5c95caad12bd2507"
+    },
+    {
+      "bytes": 7603,
+      "path": "scripts/derive_nsc_compact_anomaly.py",
+      "sha256": "b2b3aa6aff74061e989a97cfc9221d38ccf8603bbdb898651bab6271695d1af9"
+    },
+    {
+      "bytes": 6527,
+      "path": "scripts/derive_nsc_gaussian_measure.py",
+      "sha256": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907"
+    },
+    {
+      "bytes": 6564,
+      "path": "scripts/derive_nsc_parent_backreaction.py",
+      "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
+    },
+    {
+      "bytes": 7194,
+      "path": "scripts/derive_nsc_vacuum_matched_ctp.py",
+      "sha256": "ac07eb75ea60043af225b6b85ded24c161d90418fd3b5fef8db304e4b7c5f26b"
+    },
+    {
+      "bytes": 6465,
+      "path": "scripts/derive_nsc_warp_local_source.py",
+      "sha256": "fcb6374a46742aead87223f6eb5e1dfc3524a6f0b4cdbb4af670c27075901ea5"
+    },
+    {
+      "bytes": 4847,
+      "path": "scripts/map_nsc_adm_neck_source.py",
+      "sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c"
+    },
+    {
+      "bytes": 5881,
+      "path": "src/recursive_horizons/nsc_adm_source.py",
+      "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
+    },
+    {
+      "bytes": 5933,
+      "path": "src/recursive_horizons/nsc_boundary_state.py",
+      "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646"
+    },
+    {
+      "bytes": 4402,
+      "path": "src/recursive_horizons/nsc_canonical_spectral_bridge.py",
+      "sha256": "821e1dbdcb79f815521b9aee536643bea1d155c0b639afd49376229e51991879"
+    },
+    {
+      "bytes": 3264,
+      "path": "src/recursive_horizons/nsc_gaussian_measure.py",
+      "sha256": "8f1508ee0c4c70ff5efd52a954e0784fb83242dd72711fe251cd87fb5929e971"
+    },
+    {
+      "bytes": 6373,
+      "path": "src/recursive_horizons/nsc_vacuum_matched_ctp.py",
+      "sha256": "a31e4dbc52fa241684a54a071bda254ecea5963bb1d25493b3c17d7200c09836"
+    },
+    {
+      "bytes": 3479,
+      "path": "tests/test_nsc_boundary_state.py",
+      "sha256": "10eee1c2d0d67ad7c5ef981a903c8419bc4cd4263b667bcd4a6129c4db48fbec"
+    }
+  ],
+  "source_method": "immutable Git blobs; no working-tree or untracked inputs",
+  "source_project": "BlackHoles-Infinity",
+  "status": "development snapshot; outside the 100-record preprint release",
+  "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
+}
