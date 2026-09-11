@@ -76,6 +76,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/current-result.md",
     "docs/development-update-2026-09-10.md",
     "docs/nsc-background-projection.md",
+    "docs/nsc-child-metric-backreaction.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

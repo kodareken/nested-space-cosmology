@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 8468,
+      "bytes": 8591,
       "path": "AGENTS.md",
-      "sha256": "5da7bc82802308134cacf7aa38eb00d82a3f8832b76d018ede500ffc126560bd"
+      "sha256": "6f6e7315ae356314170a40e19c39d8925c5f38cbe397f61d7c200777990744ec"
     },
     {
       "bytes": 1056,
       "path": "CITATION.cff",
-      "sha256": "1eb0116ae8a635477d44d10733719fe4e65bd572e19e3169deb077960c217c45"
+      "sha256": "cc8892c14997dfd2d2c919bbeb987f1db22bfb0b54537a20f463da4defdee3e8"
     },
     {
       "bytes": 606,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 11809,
+      "bytes": 12435,
       "path": "README.md",
-      "sha256": "6fad9ee98690472e2974856ec11831df1e0834d80841605491dff10d7d0417c0"
+      "sha256": "532cef953c9fa565765cd9b4e7f07b65777f199f47045568793d8dcab341cc0b"
     },
     {
       "bytes": 629,
@@ -76,19 +76,19 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 13297,
+      "bytes": 13455,
       "path": "THEORY.md",
-      "sha256": "1a45b321d4245f956e25ae0276ec62ede9754fdf22858ec881eaaf22d0464ad3"
+      "sha256": "76fda6441eaa4a8bc896666f1ec01a42f0d651363a032475053501fc25960b2d"
     },
     {
-      "bytes": 11331,
+      "bytes": 12199,
       "path": "docs/current-result.md",
-      "sha256": "9221d18188cfb04767a93e3c107f93c30f435f6eb5a30cc3b7967d90b85e7660"
+      "sha256": "21ffab2275eca56f863a9263b55ead99652dfc2cdf4e0c25ec978a3500721e42"
     },
     {
-      "bytes": 6669,
+      "bytes": 7032,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "8804fb5e3a7e34149edae831e0f01d2a383011bea87d48da67493cff3276f129"
+      "sha256": "4cd73069fb2084d8b8a6d0e41f5d23eeee279984518106d89fb37c98ece8f2d8"
     },
     {
       "bytes": 3154,
@@ -144,6 +144,11 @@
       "bytes": 7397,
       "path": "docs/nsc-charged-self-sourcing-route.md",
       "sha256": "5d92c16913fc48ce442a224063f2a26eb88af849af64c2fce501a27b7c0c871b"
+    },
+    {
+      "bytes": 3066,
+      "path": "docs/nsc-child-metric-backreaction.md",
+      "sha256": "7fe2e56865cf8f72010672260f6d584a6d93af128775ffb2fd9d6772883fa7b9"
     },
     {
       "bytes": 9829,
@@ -446,24 +451,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 2525,
+      "bytes": 2693,
       "path": "paper/build-manifest.json",
-      "sha256": "170942ecfb1a055e8f5a352ba76ffc31a63aac18a4b61b1ed627d714da9f2fcc"
+      "sha256": "cdfe0a7751e047d54cad1075447cf833a4307b40501dc8edb08875288c37676c"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "655905370730ec17d68b568a5af9c0ea54c5d77263bab99b6c53ba69adb257bb"
+      "sha256": "17ac99ec820b12c18e0783a736b50e1c3942d38db60beb088daae8af80939c62"
     },
     {
-      "bytes": 112015,
+      "bytes": 113208,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "41c1dde52c73dc7683f9c14341e361900312ae0a4111dd9ebfff29ee7bbb53d4"
+      "sha256": "b35fcc2050ca113cad4e58c75d7bff6b8212c974515455319554dcb4c00a6713"
     },
     {
-      "bytes": 1634595,
+      "bytes": 1656086,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "e925afa49314bb40fdbd61a9a1a212951274a62604c4ea1c953b0aa3517b6fe7"
+      "sha256": "d40c8c62bf6694aeedc3df34fa80034eefe33e552b926b1fc5e5f62cce845f95"
     },
     {
       "bytes": 1144,
@@ -481,14 +486,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 5782,
+      "bytes": 6170,
       "path": "results/README.md",
-      "sha256": "d4269c94527760b614a568daa1ad6182f58bbc152a8408801f8c59ff6a381c48"
+      "sha256": "4bb0ca401d135615a0080c900b0e7475d871de7478c8f2ea95a7c97ffd35fb77"
     },
     {
-      "bytes": 20790,
+      "bytes": 21932,
       "path": "results/development-snapshot.json",
-      "sha256": "85e7cc350bbdb27ab10937c6f399323829ca6881e40acc8fd344043121ccb826"
+      "sha256": "8325666f14a360b8173234c4cf2aa1c498ed6631c69522196e079010b1ad661c"
     },
     {
       "bytes": 3283,
@@ -604,6 +609,11 @@
       "bytes": 9924,
       "path": "results/development/nsc-background-projection.json",
       "sha256": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48"
+    },
+    {
+      "bytes": 5389,
+      "path": "results/development/nsc-child-metric-backreaction.json",
+      "sha256": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a"
     },
     {
       "bytes": 5507,
@@ -1086,9 +1096,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 53980,
+      "bytes": 54046,
       "path": "scripts/build_paper.py",
-      "sha256": "8894e5a4c73877f2564f7b8a02efda201623ae401703ee7da1c83b29a45d0a4a"
+      "sha256": "396c51c8b325e1adc6b4bb8a9370cc476ea0ffe6989d16cc163e23a17682484e"
     },
     {
       "bytes": 3480,
@@ -1321,9 +1331,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 15702,
+      "bytes": 15747,
       "path": "scripts/check_publication.py",
-      "sha256": "428c090bbcbcecb473ebf1224b3381383e9ba8f5cffc184a1a70791e7ba45070"
+      "sha256": "a8ec471ac0c362beeb935f6ae75ca8780a6193d4c319de797e0ab6895374c09c"
     },
     {
       "bytes": 11187,
@@ -1349,6 +1359,11 @@
       "bytes": 9722,
       "path": "scripts/derive_nsc_charged_ctp_neck.py",
       "sha256": "2da989af7e8450175681acc1a7dc9e09ef4a8ef6ee53663e41a3af8ee2f63026"
+    },
+    {
+      "bytes": 10038,
+      "path": "scripts/derive_nsc_child_metric_backreaction.py",
+      "sha256": "66d396110777aee297ed7554f3bc06f3d0c94018f3e4ee72244902d93998258a"
     },
     {
       "bytes": 7603,
@@ -1766,6 +1781,11 @@
       "sha256": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578"
     },
     {
+      "bytes": 3816,
+      "path": "src/recursive_horizons/nsc_child_metric_backreaction.py",
+      "sha256": "442536050c1aa7602fcdf9939c982f475b5d52c1b6ca5ee96144681bb30909ca"
+    },
+    {
       "bytes": 2962,
       "path": "src/recursive_horizons/nsc_child_state.py",
       "sha256": "50c55b3ca0ae8215426b7b2287392308826b44bb8ca58393b00209129edab69e"
@@ -2128,7 +2148,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.10.0",
+  "public_version": "0.11.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,

@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains seventeen records.
+The separate post-preprint development snapshot now contains eighteen records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -32,6 +32,12 @@ uses that completed tensor without recalculating it. Its
 local child-time density derivative, closes conservation below
 `4.4e-16`, and maps the parent Killing power to child spatial momentum. It
 does not introduce a dark-fluid assignment or a global background history.
+
+The latest [nsc-child-metric-backreaction.json](development/nsc-child-metric-backreaction.json)
+applies the initial ADM gate before any time integration. Its
+[Cauchy-surface note](../docs/nsc-child-metric-backreaction.md) records the
+Hamiltonian and momentum failure at $T=0$, with both source null components
+still negative. No CTP source is replayed after that decisive stop condition.
 
 The original collection has one record with the preserved `current_frontier` label:
 

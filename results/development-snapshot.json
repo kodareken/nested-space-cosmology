@@ -238,11 +238,25 @@
       },
       "generator": "scripts/derive_nsc_background_projection.py",
       "output": "results/development/nsc-background-projection.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 2e-13,
+        "float_rtol": 2e-13
+      },
+      "generator": "scripts/derive_nsc_child_metric_backreaction.py",
+      "output": "results/development/nsc-child-metric-backreaction.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "a5fba9d11b457cdb1c18dc7c384d7d505814e2b0",
+  "source_commit": "ea34380ab84c10c857a2c7ec9f1a00506c0a0c64",
   "source_files": [
     {
       "bytes": 3154,
@@ -623,10 +637,30 @@
       "bytes": 5545,
       "path": "src/recursive_horizons/nsc_background_projection.py",
       "sha256": "2f1fc3594ff81af9e09390d5c0f7716a23e313a9edf9cd1a09307acb05b31550"
+    },
+    {
+      "bytes": 3066,
+      "path": "docs/nsc-child-metric-backreaction.md",
+      "sha256": "7fe2e56865cf8f72010672260f6d584a6d93af128775ffb2fd9d6772883fa7b9"
+    },
+    {
+      "bytes": 5389,
+      "path": "results/development/nsc-child-metric-backreaction.json",
+      "sha256": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a"
+    },
+    {
+      "bytes": 10038,
+      "path": "scripts/derive_nsc_child_metric_backreaction.py",
+      "sha256": "66d396110777aee297ed7554f3bc06f3d0c94018f3e4ee72244902d93998258a"
+    },
+    {
+      "bytes": 3816,
+      "path": "src/recursive_horizons/nsc_child_metric_backreaction.py",
+      "sha256": "442536050c1aa7602fcdf9939c982f475b5d52c1b6ca5ee96144681bb30909ca"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 17 post-preprint records, outside the 100-record release",
+  "status": "development snapshot; 18 post-preprint records, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }

@@ -111,15 +111,18 @@ work requires publication/path checks, not replay of the old scientific chain.
 
 The latest source is the completed charged angular plus positive-compact CTP
 tensor on the locked branch. Both neck null contractions are negative. Its
-proper-volume/child-clock projection now closes the local energy, momentum and
-spatial-Killing ledgers and fixes the first child-time density derivative.
-The next owner is metric backreaction and evolution of this same CTP state;
-the single neck slice does not determine later pressures or a global $H(z)$.
+proper-volume/child-clock projection closes the local energy, momentum and
+spatial-Killing ledgers and fixes the first child-time density derivative. The
+subsequent backreaction gate fails the Hamiltonian and homogeneous momentum
+constraints at the initial neck, so the CTP covariance is not replayed along
+an invalid metric trajectory.
 
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
-angular refinement or scale scan does not advance the active gate. Full
-physical couplings, backreaction and observational predictions remain open.
+angular refinement or scale scan does not advance the active gate. The next
+owner is the constraint-complete same-action neck assembly identified in the
+backreaction record. Full physical couplings and observational predictions
+remain open.
 
 At common dimensional energy, parent normalization gives
 
