@@ -1,12 +1,16 @@
 {
-  "bytes": 1558180,
+  "bytes": 1604749,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "487f68f1b68a8055f0a3cb62e0ec175d18ed5539a733c82e7f28557fda6bf081",
+  "metadata_sha256": "02c35788e7cf2d71c83e4ff97c5cb0f5a4fdf36229394ecfcc19e0362268ccd4",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 35,
-  "pdf_sha256": "46f654c71874efbee3278b82aeea8573f8dc646d3bbce55cce9d3555a402bfcd",
+  "pages": 36,
+  "pdf_sha256": "96722bbaee4104bd430dba4f0aa7aada3366c36b9d01ff6b5fab9a43d1274572",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
+    {
+      "path": "results/development/charged-compact-ctp-completion.json",
+      "sha256": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6"
+    },
     {
       "path": "results/development/charged-ctp-neck-source.json",
       "sha256": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90"
@@ -49,10 +53,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "f7f7c516b6bfa87a653f16aaea1a298719542d874f3768616453f007f02c2e8b"
+      "sha256": "daf90f88481400a5eafce2947e067b5993612c5afc39f5af64b22559ce7df1f6"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "aa1507d926b5519d1b057102032c9dcb472a948f90e73d0cef4c5aa16856ace1",
-  "version": "0.8.0"
+  "source_sha256": "50dd157e86930857ba681df0c371c16ae8f6808cb1b8e5150797b46a64c59562",
+  "version": "0.9.0"
 }

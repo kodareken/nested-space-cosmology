@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`7ee7447e99b89a4ab6d7c14b20623d7fe5a9987e`. It contains nineteen derivation
-notes, fifteen compact result records, fourteen generators, eleven implementation
-modules and seven focused tests. The 67 scientific files are imported
+`6956c63403bbea0c9af6ee14502a8fd5fc163947`. It contains twenty derivation
+notes, sixteen compact result records, fifteen generators, twelve implementation
+modules and eight focused tests. The 72 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -44,6 +44,7 @@ statement:
 | Fixed-flux Wilsonian coefficients bound to the imported charged radius | [Charged scale binding](nsc-scale-binding.md) |
 | Scale-inherited transparent LLL state evaluated on the actual neck | [Recursive source binding](nsc-recursive-source-binding.md) |
 | Charged magnetic angular CTP covariance and compact-local source at the locked scale | [Charged CTP neck source](nsc-charged-ctp-neck-source.md) |
+| Positive compact-level nonlocal CTP covariance completing the free neck tensor | [Compact CTP completion](nsc-compact-ctp-completion.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -61,14 +62,14 @@ owner audit finds no existing contribution that determines the required
 absolute $V_{\rm full}$. The subsequent recursive law projects only the local
 $a_0$ tadpole and gives $V_{\rm full}=\lambda_4=\Xi=0$ while preserving
 $A,C$ and finite topology response. No coefficient, incoming flux or mass
-history is fitted. The charged radius equation now has a cutoff-resolved
-fixed-$q$ candidate, while its simplest inherited transparent LLL state has
-the wrong null signs on the black-universe neck. The full charged
-angular/compact CTP tensor is therefore the remaining source owner.
-Its new retained calculation gives both radial null components negative, but
-the hard full gate remains open for the first positive compact levels'
-nonlocal CTP covariance and four ADM variations. Background projection remains
-disabled until that named channel is included.
+history is fitted. The charged radius equation has a cutoff-resolved fixed-$q$
+candidate. Its simplest inherited transparent LLL state has the wrong null
+signs by itself, while the resolved magnetic angular tensor restores both
+negative signs. The remaining positive compact channel is now included in the
+declared free Gaussian realization. Its superadiabatically subtracted $j=1,2$ covariance completes the
+tensor with $T_{++}=-0.24659199207$ and $T_{--}=-0.25148747269$. The neck sign
+gate passes without refitting the scale. The homogeneous pressure projection
+is stored; $H(z)$ remains outside this gate.
 
 ## Provenance and inspection
 
@@ -76,7 +77,7 @@ disabled until that named channel is included.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the fifteen later records are indexed separately.
+unchanged; the sixteen later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific

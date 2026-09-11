@@ -375,6 +375,7 @@ geometry defines the Dirac spectrum
 | Recursive zero-tadpole law | Homogeneous unlinked vacuum is fixed to $V_{\rm full}=0$ while gradient response remains |
 | Charged radius/scale binding | A fixed-$q$ Wilsonian branch now determines candidate $\Omega$ and $\zeta$ |
 | Recursive LLL neck binding | The direct inherited LLL source has the wrong null signs, isolating the full charged CTP tensor as the missing owner |
+| Positive compact CTP completion | The completed free-Gaussian charged tensor has both required neck null signs negative at the locked scale |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)
