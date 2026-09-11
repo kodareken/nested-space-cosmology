@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.10.0 · proper-volume and child-clock deposition gate, 11 September 2026<br>
+Version 0.11.0 · initial child-backreaction constraint gate, 11 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -47,8 +47,11 @@ $V_{\rm full}=0$ while preserving Einstein, gauge, curvature, Casimir, and
 link response. Proper-volume and child-clock projection of the completed
 tensor gives the conserved local density derivative $0.38776013531$ and
 identifies the parent Killing power as child spatial momentum rather than a
-second energy source. The paper follows the spectrum from intuitive picture to exact
-operator equations, using 100 preprint records and seventeen post-preprint
+second energy source. The initial backreaction gate then finds that this source
+and the locked neck miss the Hamiltonian and momentum constraints already at
+$T=0$, locating the exact density and counterflow still required. The paper
+follows the spectrum from intuitive picture to exact operator equations, using
+100 preprint records and eighteen post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -786,6 +789,15 @@ $$
 
 with residual $4.4\times10^{-16}$. The parent Killing direction is spatial in the child, so this quantity is the opposite of a conserved child momentum charge rather than a continuing child energy source. The explicit free compact blocks are decoupled and give regular inter-block $Q=0$; no visible/dark assignment is made. This result fixes the local density Cauchy jet, while later pressure functions require metric backreaction and evolution of the same state ([background projection](../results/development/nsc-background-projection.json)).
 
+**Initial child-backreaction constraint gate.** Before the same covariance can be evolved, its Cauchy data must satisfy the imported ADM constraints. At the unit-radius neck, the locked Einstein coefficient $A=0.04501936182826115$ requires $\rho=2A=0.0900387236565223$ and zero homogeneous momentum density. The completed tensor gives $\rho=0.100748362886786$ and $T_{01}=0.00122387015580509$, hence
+
+$$
+\boxed{\mathcal C_H=-0.118944813912720,
+\qquad \mathcal C_M=-0.0135927088490713.}
+$$
+
+Both null components remain negative, but the metric and source are not on the same constraint surface. The evolution therefore stops at $T=0$ before replaying the CTP covariance. Closing this gate requires the same action to supply $\Delta\rho=-0.0107096392302639$ and $\Delta T_{01}=-0.00122387015580509$, or to derive a different initial geometry; neither is inserted here ([backreaction gate](../results/development/nsc-child-metric-backreaction.json)).
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -837,22 +849,23 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The seventeen
+finite Casimir, and link responses remain. The eighteen
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
 binding. The positive compact completion closes the free-Gaussian neck tensor,
 and its proper-volume/clock projection closes the local child ledger. The
-remaining integration is metric backreaction and evolution of the same state.
+initial ADM gate identifies the exact density and momentum mismatch that now
+owns the backreaction problem.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate seventeen-record development snapshot, imported
-through laboratory commit $a5fba9d$, carries the common-source, scale-binding,
-completed neck-source and child-deposition continuation. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate eighteen-record development snapshot, imported
+through laboratory commit $ea34380$, carries the common-source, scale-binding,
+completed neck-source, child-deposition and backreaction-gate continuation. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 

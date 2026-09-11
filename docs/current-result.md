@@ -13,6 +13,7 @@ claim.
 | Geometry can turn into particles | Work from a changing radius equals the energy of the created Dirac pairs |
 | An inherited state can push geometry apart | Both computed radial null contractions are negative at the smooth neck |
 | The completed stress has a child-time energy ledger | Proper volume and the child clock fix its first conserved density derivative |
+| Backreaction begins with a constraint gate | The locked tensor and neck fail the Hamiltonian and homogeneous momentum constraints at $T=0$ |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -22,7 +23,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `a5fba9d`, now contains seventeen post-preprint records.
+through laboratory commit `ea34380`, now contains eighteen post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -72,6 +73,23 @@ spatial-momentum charge, not an additional energy-deposition rate. The free
 compact blocks give regular bulk $Q=0$. This fixes a local Cauchy jet; the
 pressure derivatives and global background require backreaction and evolution
 of the same CTP state before any $H(z)$ calculation.
+
+The [child backreaction gate](nsc-child-metric-backreaction.md) applies the
+existing ADM constraints before starting that evolution. With the locked
+$A=0.04501936182826115$, the stored neck requires
+$\rho=2A=0.0900387236565223$ and $T_{01}=0$. The completed tensor instead gives
+
+$$
+\boxed{\mathcal C_H=-0.118944813912720,
+\qquad \mathcal C_M=-0.0135927088490713.}
+$$
+
+Both null components are still negative. The evolution stops at $T=0$
+because stepping constraint-violating data would not solve the coupled
+Einstein--CTP system. The required same-action completion is
+$\Delta\rho=-0.0107096392302639$ and
+$\Delta T_{01}=-0.00122387015580509$, or a source-derived initial geometry.
+Neither repair is inserted in this result.
 
 ## 1. Shared mass and visible response
 
@@ -237,8 +255,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains seventeen.
-[The development index](development-update-2026-09-10.md) links all seventeen
+[the later snapshot](../results/development-snapshot.json) contains eighteen.
+[The development index](development-update-2026-09-10.md) links all eighteen
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

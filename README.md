@@ -235,6 +235,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | The simplest recursive LLL source is decisively testable | Its inherited power closes exactly, but its two null signs do not source the black-universe neck | [Source binding](docs/nsc-recursive-source-binding.md) |
 | Positive compact modes complete the free CTP neck source | The completed tensor has $T_{++}=-0.246592$ and $T_{--}=-0.251487$ at the locked scale | [Compact CTP completion](docs/nsc-compact-ctp-completion.md) |
 | The completed source enters the child energy ledger | Proper volume and child time give $\dot\rho_0=0.3877601353$ with total regular bulk $Q=0$ | [Background projection](docs/nsc-background-projection.md) |
+| Backreaction has an exact initial gate | The locked source misses the Hamiltonian and momentum constraints already at $T=0$ | [Backreaction gate](docs/nsc-child-metric-backreaction.md) |
 
 The background projection uses the exact completed tensor on the stored
 Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
@@ -243,11 +244,19 @@ parent-power map close below `4.4e-16`. The parent Killing power becomes the
 opposite of a conserved child spatial-momentum charge, so it is not counted
 again as a continuing child energy source.
 
+The next ADM gate is decisive before time stepping. With the locked Einstein
+coefficient, the same neck has normalized Hamiltonian and momentum residuals
+`-0.1189448139` and `-0.01359270885`. Both null signs remain negative, but the
+metric and source do not share a valid Cauchy surface. The exact required
+completion is `delta_rho=-0.01070963923` and
+`delta_T01=-0.001223870156`; no parameter or initial metric was changed to
+hide it.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 17-record development update](docs/development-update-2026-09-10.md)
+3. [The 18-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`a5fba9d11b457cdb1c18dc7c384d7d505814e2b0`. It contains twenty-one derivation
-notes, seventeen compact result records, seventeen generators, thirteen implementation
-modules and eight focused tests. The 76 scientific files are imported
+`ea34380ab84c10c857a2c7ec9f1a00506c0a0c64`. It contains twenty-two derivation
+notes, eighteen compact result records, eighteen generators, fourteen implementation
+modules and eight focused tests. The 80 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -46,6 +46,7 @@ statement:
 | Charged magnetic angular CTP covariance and compact-local source at the locked scale | [Charged CTP neck source](nsc-charged-ctp-neck-source.md) |
 | Positive compact-level nonlocal CTP covariance completing the free neck tensor | [Compact CTP completion](nsc-compact-ctp-completion.md) |
 | Proper-volume, child-clock, spectral-component and Killing-charge deposition ledger | [Background projection](nsc-background-projection.md) |
+| Initial Hamiltonian/momentum gate for the same tensor and metric jet | [Child backreaction gate](nsc-child-metric-backreaction.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -73,7 +74,10 @@ gate passes without refitting the scale. The homogeneous pressure projection
 is stored. Its proper-volume/clock projection now closes the local energy,
 momentum and spatial-Killing ledgers below $4.4\times10^{-16}$ and gives
 $\dot\rho_0=0.38776013531$. This is a local Cauchy jet; $H(z)$ remains outside
-the gate until the same CTP source and metric are evolved together.
+the gate. The subsequent ADM gate finds that the locked tensor and metric miss
+the Hamiltonian and momentum constraints at $T=0$ by `-0.1189448139` and
+`-0.01359270885`. Time stepping therefore stops before replaying the CTP
+covariance; the missing same-action density and counterflow are recorded.
 
 ## Provenance and inspection
 
@@ -81,7 +85,7 @@ the gate until the same CTP source and metric are evolved together.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the seventeen later records are indexed separately.
+unchanged; the eighteen later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
