@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains twenty records.
+The separate post-preprint development snapshot now contains twenty-one records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -52,6 +52,13 @@ checks that first same-state source evaluation. Its
 at `T=0`: the radius vertex is nonzero, but the earlier compact records contain
 integrated stresses rather than the mode covariance required for unitary CTP
 pressure evolution.
+
+The subsequent [nsc-mode-resolved-cauchy-state.json](development/nsc-mode-resolved-cauchy-state.json)
+authenticates a content-addressed NPZ with every retained covariance block. Its
+[state note](../docs/nsc-mode-resolved-cauchy-state.md) records the channel
+ordering, half-density basis, reference allocation, CAR bounds and old-surface
+moment reconstruction. Landau-slice transport and full selected-history stress
+remain open.
 
 The original collection has one record with the preserved `current_frontier` label:
 

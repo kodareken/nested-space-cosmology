@@ -380,6 +380,7 @@ geometry defines the Dirac spectrum
 | Initial backreaction constraint | The locked tensor keeps both negative null signs but misses the Bronnikov Hamiltonian and momentum constraints at $T=0$ |
 | Source-selected constraint closure | The same tensor fixes a Landau normal and replacement neck radius that satisfy both initial ADM constraints |
 | Coupled evolution state gate | The changed radius has a nonzero source vertex, so later pressure requires the retained mode-resolved Gaussian covariance |
+| Mode-resolved Cauchy serialization | Every retained physical covariance is stored and reconstructs the completed seed tensor without a moment-fluid surrogate |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)
