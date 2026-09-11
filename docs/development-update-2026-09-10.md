@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`ea34380ab84c10c857a2c7ec9f1a00506c0a0c64`. It contains twenty-two derivation
-notes, eighteen compact result records, eighteen generators, fourteen implementation
-modules and eight focused tests. The 80 scientific files are imported
+`cccb98c564e36fc1eb190bd80ae64e1863adc117`. It contains twenty-three derivation
+notes, nineteen compact result records, nineteen generators, fifteen implementation
+modules and eight focused tests. The 84 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -47,6 +47,7 @@ statement:
 | Positive compact-level nonlocal CTP covariance completing the free neck tensor | [Compact CTP completion](nsc-compact-ctp-completion.md) |
 | Proper-volume, child-clock, spectral-component and Killing-charge deposition ledger | [Background projection](nsc-background-projection.md) |
 | Initial Hamiltonian/momentum gate for the same tensor and metric jet | [Child backreaction gate](nsc-child-metric-backreaction.md) |
+| Source-selected Landau normal and areal radius closing both constraints | [Constraint-complete neck](nsc-constraint-complete-neck.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -78,6 +79,10 @@ the gate. The subsequent ADM gate finds that the locked tensor and metric miss
 the Hamiltonian and momentum constraints at $T=0$ by `-0.1189448139` and
 `-0.01359270885`. Time stepping therefore stops before replaying the CTP
 covariance; the missing same-action density and counterflow are recorded.
+The permitted geometry-from-source follow-up uses the tensor's Landau normal
+and constraint-selected radius `0.9453283944`. Both ADM residuals then close
+below `2.3e-16`, the null signs remain negative, and joint evolution is
+reopened without a coupling or state refit.
 
 ## Provenance and inspection
 
@@ -85,7 +90,7 @@ covariance; the missing same-action density and counterflow are recorded.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the eighteen later records are indexed separately.
+unchanged; the nineteen later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific

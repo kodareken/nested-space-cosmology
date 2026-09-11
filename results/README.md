@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains eighteen records.
+The separate post-preprint development snapshot now contains nineteen records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -38,6 +38,13 @@ applies the initial ADM gate before any time integration. Its
 [Cauchy-surface note](../docs/nsc-child-metric-backreaction.md) records the
 Hamiltonian and momentum failure at $T=0$, with both source null components
 still negative. No CTP source is replayed after that decisive stop condition.
+
+The subsequent [nsc-constraint-complete-neck.json](development/nsc-constraint-complete-neck.json)
+uses permitted geometry route B. Its
+[source-selected construction](../docs/nsc-constraint-complete-neck.md) derives
+the Landau normal and replacement radius from the completed tensor, closes
+both constraints below `2.3e-16`, and authorizes joint covariance--metric
+evolution next.
 
 The original collection has one record with the preserved `current_frontier` label:
 

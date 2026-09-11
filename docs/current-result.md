@@ -14,6 +14,7 @@ claim.
 | An inherited state can push geometry apart | Both computed radial null contractions are negative at the smooth neck |
 | The completed stress has a child-time energy ledger | Proper volume and the child clock fix its first conserved density derivative |
 | Backreaction begins with a constraint gate | The locked tensor and neck fail the Hamiltonian and homogeneous momentum constraints at $T=0$ |
+| The tensor can select valid replacement geometry | Its Landau frame and density determine a constraint-complete Kantowski--Sachs neck |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -23,7 +24,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `ea34380`, now contains eighteen post-preprint records.
+through laboratory commit `cccb98c`, now contains nineteen post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -90,6 +91,29 @@ Einstein--CTP system. The required same-action completion is
 $\Delta\rho=-0.0107096392302639$ and
 $\Delta T_{01}=-0.00122387015580509$, or a source-derived initial geometry.
 Neither repair is inserted in this result.
+
+The [constraint-complete assembly](nsc-constraint-complete-neck.md) then takes
+the permitted geometry-from-source route. The tensor's unique subluminal
+Landau boost,
+
+$$
+v=0.00491447570673408,
+$$
+
+sets the normal-frame momentum to zero without changing occupations. At a
+temporal minimum, the Hamiltonian constraint fixes
+
+$$
+\boxed{r_\star=\sqrt{\frac{2A}{\rho_L}}
+=0.945328394434129.}
+$$
+
+The maximum constraint and frame-invariance residual is
+$2.2\times10^{-16}$, with
+$T_{++,L}=T_{--,L}=-0.249027703022043$. This PASS geometry remains in the
+existing Kantowski--Sachs class but replaces the stored unit-radius Bronnikov
+profile. Joint evolution of the same covariance and this selected metric is
+therefore the next executable owner.
 
 ## 1. Shared mass and visible response
 
@@ -255,8 +279,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains eighteen.
-[The development index](development-update-2026-09-10.md) links all eighteen
+[the later snapshot](../results/development-snapshot.json) contains nineteen.
+[The development index](development-update-2026-09-10.md) links all nineteen
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

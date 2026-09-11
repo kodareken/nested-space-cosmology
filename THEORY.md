@@ -378,6 +378,7 @@ geometry defines the Dirac spectrum
 | Positive compact CTP completion | The completed free-Gaussian charged tensor has both required neck null signs negative at the locked scale |
 | Proper-volume/clock deposition | The same tensor fixes a conserved local child-time density jet and maps parent power to child spatial momentum |
 | Initial backreaction constraint | The locked tensor keeps both negative null signs but misses the Bronnikov Hamiltonian and momentum constraints at $T=0$ |
+| Source-selected constraint closure | The same tensor fixes a Landau normal and replacement neck radius that satisfy both initial ADM constraints |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)

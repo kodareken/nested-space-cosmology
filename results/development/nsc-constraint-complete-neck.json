@@ -1,0 +1,121 @@
+{
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 2e-13,
+    "float_rtol": 2e-13
+  },
+  "completed_tensor_old_child_frame": {
+    "T01": 0.0012238701558050947,
+    "p_parallel": -0.34978809526912713,
+    "p_sphere": 0.1295896223176723,
+    "rho": 0.10074836288678615
+  },
+  "constraints": {
+    "Hamiltonian": "H_sphere^2+2*H_parallel*H_sphere+1/r^2-rho_L/(2*A)=0",
+    "declared_tolerance": 2e-12,
+    "equations_imported": true,
+    "maximum_absolute_residual": 2.220446049250313e-16,
+    "momentum": "T01_L=0 for homogeneous Kantowski-Sachs data",
+    "residuals": {
+      "Hamiltonian": 2.220446049250313e-16,
+      "Landau_flux": 0.0,
+      "momentum": -0.0,
+      "null_product_invariance": -2.0816681711721685e-17,
+      "trace_invariance": 0.0
+    }
+  },
+  "gate": {
+    "both_radial_null_signs_negative": true,
+    "constraints_below_tolerance": true,
+    "covariance_metric_evolution_authorized_next": true,
+    "next_owner": "evolve the same CTP covariance and the source-selected metric together, re-evaluating stress at every step",
+    "passes": true
+  },
+  "input_hashes": {
+    "results/development/adm-source-constraints.json": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56",
+    "results/development/compact-interaction.json": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f",
+    "results/development/gauge-source.json": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592",
+    "results/development/nsc-background-projection.json": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48",
+    "results/development/nsc-child-metric-backreaction.json": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a",
+    "results/development/relational-vacuum-normalization.json": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/development/spherical-action.json": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "continuous_parameter_fitted": false,
+    "q": 4,
+    "state_occupations_changed": false,
+    "zeta": 15.785319939652627
+  },
+  "schema": "NSC-CONSTRAINT-COMPLETE-NECK-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "Einstein_or_ADM_equations_rederived": false,
+    "H_of_z_Hessian_or_dark_fraction_fit": false,
+    "fake_H_sphere_adjustment": false,
+    "new_source_channel_or_metric_ansatz": false,
+    "old_source_generator_rerun": false,
+    "source_selected_geometry_is_the_stored_Bronnikov_profile": false,
+    "time_evolution_started": false
+  },
+  "selected_route": {
+    "choice": "B_geometry_from_source",
+    "reason": "no already evaluated same-action source channel has a fixed counterflow; the completed type-I tensor instead determines its constraint-compatible normal and radius"
+  },
+  "source_completion_A_audit": {
+    "gauge_record_absolute_stress_complete": false,
+    "interacting_compact_vertex": "not selected because s_T and its interacting state remain undetermined",
+    "magnetic_gauge_Maxwell": "already owned but diagonal on the homogeneous magnetic background; it does not supply the required T01 counterflow",
+    "new_term_added": false,
+    "relational_vacuum": "V_full=0 is locked and supplies no flux",
+    "unevaluated_nonlocal_remainder": "no recorded finite tensor may be assigned to the residual"
+  },
+  "source_hashes": {
+    "docs/nsc-constraint-complete-neck.md": "16af9c7197f474bf93a66384426b8fc91cebb96c6bfd81f5373cba3ad3d08b22",
+    "scripts/derive_nsc_constraint_complete_neck.py": "1529d664ba1ed2fb552f5d6ac5c89527ab55ffafa1b59c4e42d832f4a3eb5f58",
+    "src/recursive_horizons/nsc_constraint_complete_neck.py": "fa581fdad34579f0144d338c679a1706a94896df7ef4cdecb7f1849ee262d295"
+  },
+  "source_selected_frame": {
+    "gamma": 1.0000120762544864,
+    "radial_nulls": {
+      "Landau_minus": -0.24902770302204313,
+      "Landau_plus": -0.24902770302204313,
+      "old_minus": -0.25148747269395116,
+      "old_plus": -0.2465919920707308
+    },
+    "rapidity": 0.004914515272230269,
+    "residuals": {
+      "Landau_flux": 0.0,
+      "null_product_invariance": -2.0816681711721685e-17,
+      "trace_invariance": 0.0
+    },
+    "stress": {
+      "T01": 0.0,
+      "p_parallel": -0.3497820805889782,
+      "p_sphere": 0.1295896223176723,
+      "rho": 0.10075437756693506
+    },
+    "type_I_discriminant": 0.062014796872434934,
+    "velocity_old_child_frame": 0.0049144757067340755
+  },
+  "source_selected_initial_geometry": {
+    "Bronnikov_profile_retained": false,
+    "H_parallel": 1.557021169290531,
+    "H_sphere": 0.0,
+    "MMP_unit_radius_imposed_on_new_geometry": false,
+    "a_parallel": 1.9267560770332839,
+    "a_parallel_and_H_parallel_owner": "retained seed data; the two constraints do not fix the axial coordinate normalization or H_parallel at H_sphere=0",
+    "is_temporal_minimum_sphere": true,
+    "metric_class": "Kantowski-Sachs: dT_L^2-a_parallel^2 dz_L^2-r^2 dOmega_2^2",
+    "normal": "future Landau eigenvector of the completed radial stress block",
+    "r": 0.9453283944341287,
+    "r_minus_seed_r": -0.05467160556587125,
+    "seed_r": 1.0
+  },
+  "status": "PASS: geometry-from-source selects a Landau-frame Kantowski-Sachs neck whose Hamiltonian and momentum constraints close"
+}
