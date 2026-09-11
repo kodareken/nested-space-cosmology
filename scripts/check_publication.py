@@ -79,6 +79,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-child-metric-backreaction.md",
     "docs/nsc-constraint-complete-neck.md",
     "docs/nsc-coupled-ctp-metric-evolution.md",
+    "docs/nsc-mode-resolved-cauchy-state.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {
@@ -110,6 +111,7 @@ def check_development_snapshot() -> set[str]:
             raise ValueError(f"development source hash mismatch: {relative}")
         sources[relative] = entry
     outputs = set()
+    payloads = set()
     for record in snapshot["records"]:
         output = record["output"]
         if (output in outputs or output not in sources
@@ -120,8 +122,18 @@ def check_development_snapshot() -> set[str]:
         if record["comparison"] != value["comparison"]:
             raise ValueError(f"development comparison policy changed: {output}")
         validate_authenticated_inputs(ROOT, value)
+        payload = value.get("payload")
+        if isinstance(payload, dict) and payload.get("path"):
+            relative = payload["path"]
+            if (relative in payloads or relative not in sources
+                    or not relative.startswith("results/development/artifacts/")):
+                raise ValueError("invalid development payload declaration")
+            target = ROOT / relative
+            if target.stat().st_size != payload.get("bytes") or sha256(target) != payload.get("sha256"):
+                raise ValueError(f"development payload mismatch: {relative}")
+            payloads.add(relative)
         outputs.add(output)
-    if outputs != {path for path in sources if path.startswith("results/")}:
+    if outputs | payloads != {path for path in sources if path.startswith("results/")}:
         raise ValueError("development record index differs from imported results")
     return outputs
 

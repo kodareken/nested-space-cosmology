@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`9d7e56b2a1de3f8f667d8a9a734a72d1f4376c5c`. It contains twenty-four derivation
-notes, twenty compact result records, twenty generators, sixteen implementation
-modules and eight focused tests. The 88 scientific files are imported
+`4a4dc82b2f0e31476b882209a9316d956fd6f448`. It contains twenty-five derivation
+notes, twenty-one compact result records, twenty-one generators, seventeen implementation
+modules, one binary state artifact and eight focused tests. The 93 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -49,6 +49,7 @@ statement:
 | Initial Hamiltonian/momentum gate for the same tensor and metric jet | [Child backreaction gate](nsc-child-metric-backreaction.md) |
 | Source-selected Landau normal and areal radius closing both constraints | [Constraint-complete neck](nsc-constraint-complete-neck.md) |
 | Same-covariance re-evaluation gate before the first coupled metric step | [Coupled evolution gate](nsc-coupled-ctp-metric-evolution.md) |
+| Deterministic serialization and reconstruction of every retained Gaussian mode covariance | [Mode-resolved state](nsc-mode-resolved-cauchy-state.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -89,6 +90,10 @@ has a nonzero metric vertex, while the compact records do not persist the
 mode-resolved Gaussian matrices needed to calculate later pressures. The
 required `ModeResolvedCauchyState` interface is now explicit; no moment-fluid
 closure is substituted.
+The new mode-state payload now persists all 1,904 retained covariance blocks
+and reconstructs the completed seed tensor below `9.2e-13`. This closes the
+serialization/CAR half of the gate. A physical tilted-slice Cauchy isometry and
+general-KS fourth-order/local history evaluation remain before metric stepping.
 
 ## Provenance and inspection
 
@@ -96,7 +101,7 @@ closure is substituted.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the twenty later records are indexed separately.
+unchanged; the twenty-one later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific

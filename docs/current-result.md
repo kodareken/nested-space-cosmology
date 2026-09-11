@@ -16,6 +16,7 @@ claim.
 | Backreaction begins with a constraint gate | The locked tensor and neck fail the Hamiltonian and homogeneous momentum constraints at $T=0$ |
 | The tensor can select valid replacement geometry | Its Landau frame and density determine a constraint-complete Kantowski--Sachs neck |
 | Future pressure needs the full Gaussian state | Four integrated stress moments do not determine the mode commutators under the changed metric |
+| The seed Gaussian state is now inspectable | All 1,904 retained covariance blocks are serialized and reconstruct the completed tensor |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -25,7 +26,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `9d7e56b`, now contains twenty post-preprint records.
+through laboratory commit `4a4dc82`, now contains twenty-one post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -133,6 +134,22 @@ Consequently the exact break occurs at $T=0$, during same-covariance source
 evaluation before the first metric step. The fixed-tensor constraints and null
 signs still pass; future pressure becomes determined only after the recorded
 `ModeResolvedCauchyState` contract is supplied.
+
+The [mode-resolved state artifact](nsc-mode-resolved-cauchy-state.md) now
+supplies the seed side of that contract. A deterministic 407,306-byte NPZ
+contains 33 channels and 1,904 physical covariance blocks. Reload gives
+
+$$
+\lambda_{\min}(C)=-2.67\times10^{-16},
+\qquad
+\lambda_{\max}(C)=1+4.15\times10^{-14},
+$$
+
+and reconstructs all completed unit-radius tensor components with maximum
+residual $9.11\times10^{-13}$. The physical Landau Cauchy isometry and the
+general-KS fourth-order/local source history are not determined by endpoint
+$(v,\eta,r_\star)$, so finite selected-surface stress and metric evolution
+remain gated on those two explicit owners.
 
 ## 1. Shared mass and visible response
 
@@ -298,8 +315,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains twenty.
-[The development index](development-update-2026-09-10.md) links all twenty
+[the later snapshot](../results/development-snapshot.json) contains twenty-one.
+[The development index](development-update-2026-09-10.md) links all twenty-one
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

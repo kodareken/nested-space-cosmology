@@ -238,6 +238,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | Backreaction has an exact initial gate | The locked source misses the Hamiltonian and momentum constraints already at $T=0$ | [Backreaction gate](docs/nsc-child-metric-backreaction.md) |
 | The same source selects constraint-complete geometry | Its Landau normal and $r_\star=0.9453283944$ close both initial constraints | [Constraint-complete neck](docs/nsc-constraint-complete-neck.md) |
 | Coupled evolution has an exact state-data gate | The radius vertex is nonzero, so later pressure requires the actual mode covariance | [Coupled evolution gate](docs/nsc-coupled-ctp-metric-evolution.md) |
+| The retained Gaussian state is now explicit | A deterministic payload stores all 1,904 physical covariance blocks and reconstructs the old tensor | [Mode-resolved state](docs/nsc-mode-resolved-cauchy-state.md) |
 
 The background projection uses the exact completed tensor on the stored
 Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
@@ -269,11 +270,18 @@ integrated stress moments but not the complex mode covariances needed by
 than replacing the missing commutators with frozen pressure or an assumed
 equation of state.
 
+The mode-resolved state now removes the serialization gap. Its 33 channels
+cover the LLL, twelve massive angular sectors and twenty positive-compact
+sectors. Cold reload passes CAR and reconstructs the complete old-surface
+tensor with maximum residual `9.1e-13`. The remaining gate is narrower: a
+physical Dirac Cauchy isometry to the tilted Landau slice and general-KS
+fourth-order/local history providers.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 20-record development update](docs/development-update-2026-09-10.md)
+3. [The 21-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

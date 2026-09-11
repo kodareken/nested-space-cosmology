@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 9091,
+      "bytes": 9313,
       "path": "AGENTS.md",
-      "sha256": "b7bfd17f34f4092bc77fa5f9b70535112a110dc34713b286596e960d064c4718"
+      "sha256": "224e8143eccd5e84b15ba1342d172a67a613614a0a00aa69e32a352660237683"
     },
     {
       "bytes": 1056,
       "path": "CITATION.cff",
-      "sha256": "0ef40edbdfee228fcc60dac6b22f19116a62b6ab36b98575d23fb023ca65f7c8"
+      "sha256": "04276e717bd0c8a90c8ef007407d975f2ee224a1558bf8a83fb4e28f1f23d58b"
     },
     {
       "bytes": 606,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 13756,
+      "bytes": 14379,
       "path": "README.md",
-      "sha256": "26ea4c320abdc9e90fa1ea752a65abb524dfd180d7f7ac8e2a0c7c7515bad6c7"
+      "sha256": "90264c62545b2305d4af7fe668544d31d0677f2d0188201cd0272f3feb423696"
     },
     {
       "bytes": 629,
@@ -76,19 +76,19 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 13761,
+      "bytes": 13923,
       "path": "THEORY.md",
-      "sha256": "48993afc667f2d92775eebde6ec8733f2b0ae133ad36090665560b3447176bf1"
+      "sha256": "7773f7871583308a73c321b2759e1ba78e6e9818f8ca1b6f5fd8cabd322b6eaa"
     },
     {
-      "bytes": 13984,
+      "bytes": 14792,
       "path": "docs/current-result.md",
-      "sha256": "92874e742bfc3a38c7a51d0a9529ca5a23d9dfb07e31479ea1d73db47ddf78cb"
+      "sha256": "ab632ec0840c84840e56c4982209b382eda19f23233746754b4b591afd2beccc"
     },
     {
-      "bytes": 7900,
+      "bytes": 8407,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "16d26268ecc0de354efe3f89ed52f505d4d30d9ba46f592da83dfca26cf094de"
+      "sha256": "0024d34174a6b8ed8a8faf7823fcf282c2cf09719e2efcd13f960450f7903fee"
     },
     {
       "bytes": 3154,
@@ -306,6 +306,11 @@
       "sha256": "9f61a81f0000b4a25289a12b7e753de3bcbb9138cc401d649f289dc0a54c2dc1"
     },
     {
+      "bytes": 3756,
+      "path": "docs/nsc-mode-resolved-cauchy-state.md",
+      "sha256": "877fe100b399d2a0493d9ee9fe28a02df5e087a461e2ac19b9819275b2df4ec9"
+    },
+    {
       "bytes": 11598,
       "path": "docs/nsc-observable-bridge.md",
       "sha256": "a812fae995ff009edbeb325f10dfa275253cb2ca0fe4bd6f241bc59a7b3a289b"
@@ -461,24 +466,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 3031,
+      "bytes": 3200,
       "path": "paper/build-manifest.json",
-      "sha256": "7ee45e177a48e3fe700282e3588ca423cb5abfa4fafc3082719e4087ec907d28"
+      "sha256": "b486887f74a0ece707b90de44bf0eb2619786bc08a8d403869214d80c6160902"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "01493bcdd79207b12849769121e8543f5169fbedba8e939d35b7484f0f874452"
+      "sha256": "39d35e1becdb27447cbaf87732f3292154f17cbb32c0577b10a293b57108bdd7"
     },
     {
-      "bytes": 115639,
+      "bytes": 117348,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "6cfbec597339bd997d0823163b0f0f2612038f1019da3c10353f49db9d068fc2"
+      "sha256": "f5f0df7930d85ae55a8416632dfe223aeaa885ae34037d3a42d7d6550605aa77"
     },
     {
-      "bytes": 1718843,
+      "bytes": 1753567,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "3fc4a50dec575f5f0874694011a9fcb1a32d56ec2b7d444de1eaec0a3051cc89"
+      "sha256": "6a9d9f3c78f5886596f31c01f29ddb8965841c80eaabe9c2671ba153e544438f"
     },
     {
       "bytes": 1144,
@@ -496,14 +501,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 6960,
+      "bytes": 7394,
       "path": "results/README.md",
-      "sha256": "60a5d7b0f6090e1431265eb4ebbe2ed2603dc8babcf994ee14b1258a8fcaa464"
+      "sha256": "bf3b6e995c42f65d3962b1b3f37655da2e434d6b0efe3fac8ee3681d1d4927e4"
     },
     {
-      "bytes": 24227,
+      "bytes": 25809,
       "path": "results/development-snapshot.json",
-      "sha256": "ddc038617b6ddab4441771e4414b0c4c5d537050345f950e896308eb4023e56b"
+      "sha256": "cb005ccf8c929500ce80dead1e7748bab421ce6e2da2b2d0bfbd95d937462683"
     },
     {
       "bytes": 3283,
@@ -519,6 +524,11 @@
       "bytes": 87723,
       "path": "results/development/angular-stress.json",
       "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6"
+    },
+    {
+      "bytes": 407306,
+      "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.69e129f485bc5f7aef717ca8a334dc9f129ef3be621aefe5c6f16208de26992f.npz",
+      "sha256": "69e129f485bc5f7aef717ca8a334dc9f129ef3be621aefe5c6f16208de26992f"
     },
     {
       "bytes": 12878,
@@ -634,6 +644,11 @@
       "bytes": 5889,
       "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
       "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
+    },
+    {
+      "bytes": 24207,
+      "path": "results/development/nsc-mode-resolved-cauchy-state.json",
+      "sha256": "01b876b4ec42f238dd5b796079f4617c05df93a35965fec12d10e513a82e122e"
     },
     {
       "bytes": 5507,
@@ -1116,9 +1131,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 54180,
+      "bytes": 54388,
       "path": "scripts/build_paper.py",
-      "sha256": "006c21374260bf62f35eae8aebf9479fc04fde32b0966a6c0f48fad0e66d5a2e"
+      "sha256": "a9c0ca6da3fa6298cfd86ccf39dccd6b168cd3d72242d4170e0e7e4a9660b0ed"
     },
     {
       "bytes": 3480,
@@ -1351,9 +1366,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 15839,
+      "bytes": 16535,
       "path": "scripts/check_publication.py",
-      "sha256": "a581a2f3eb26559617ded9c0600ea8224aba95ec6a566519dd97908b411c5430"
+      "sha256": "93e546319e4a66281582487318265867774517c21c8b1c386a9ee524ccb039bb"
     },
     {
       "bytes": 11187,
@@ -1414,6 +1429,11 @@
       "bytes": 4360,
       "path": "scripts/derive_nsc_mmp_embedding.py",
       "sha256": "bb394e381fc5878a05baf8681db042f5fb44f1a865dfae6fa03b7c244a7966a7"
+    },
+    {
+      "bytes": 16011,
+      "path": "scripts/derive_nsc_mode_resolved_cauchy_state.py",
+      "sha256": "7c2ac573b4187516b1b8951c5d90fba826a7feefec7c983e8209973b5f0ce2dd"
     },
     {
       "bytes": 6564,
@@ -1931,6 +1951,11 @@
       "sha256": "3480ee43db89e9ddb1ea64c631945d0564f5964849600aac343f3dac570dd2c7"
     },
     {
+      "bytes": 21026,
+      "path": "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py",
+      "sha256": "6eb9f31e9cdd7ab19a6f18642d3057952dded7319c3747abee8971cd4f59d15e"
+    },
+    {
       "bytes": 2844,
       "path": "src/recursive_horizons/nsc_recursive_source_binding.py",
       "sha256": "5b6df2f90bead2e2463d58d4006a73ec234bbece43d52e547ed053199b59195f"
@@ -2188,7 +2213,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.13.0",
+  "public_version": "0.14.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,

@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.13.0 · coupled CTP/metric state-data gate, 11 September 2026<br>
+Version 0.14.0 · mode-resolved Gaussian Cauchy state, 11 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -52,9 +52,11 @@ and the locked neck miss the Hamiltonian and momentum constraints already at
 $T=0$. The permitted geometry-from-source route then uses the tensor's Landau
 normal and density to select a replacement neck that closes both constraints.
 The first coupled step then identifies the missing mode-resolved Gaussian
-Cauchy state needed to recalculate pressure on that changed geometry.
+Cauchy state needed to recalculate pressure on that changed geometry. That
+seed state is now serialized channel by channel and reconstructs the completed
+unit-radius tensor.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and twenty post-preprint
+100 preprint records and twenty-one post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -841,6 +843,32 @@ $$
 
 or its later pressure. The coupled trajectory therefore records a break at time zero during source re-evaluation, before the first metric step. Its next owner is the explicit mode-resolved Cauchy state in the canonical half-density basis, with the existing fourth-order reference carried on the same history ([coupled evolution gate](../results/development/nsc-coupled-ctp-metric-evolution.json)).
 
+**Mode-resolved Cauchy state.** One authorized base extraction now persists the actual physical Gaussian covariance for every retained channel in the canonical half-density basis
+
+$$
+\chi=r\sqrt{a_\parallel}\,\psi.
+$$
+
+The content-addressed payload contains 33 channels and 1,904 complex $2\times2$ blocks: 48 LLL nodes, 576 massive-angular blocks and 1,280 positive-compact blocks. Identical copies remain multiplicities. A cold, pickle-free reload gives
+
+$$
+\lambda_{\min}(C)=-2.67\times10^{-16},
+\qquad
+\lambda_{\max}(C)=1+4.15\times10^{-14},
+$$
+
+and reconstructs the complete old-surface tensor with maximum residual $9.11\times10^{-13}$. The payload separately retains the massive-angular $E_2+E_4/P_2+P_4$ terms, positive-compact fourth-order reference and one-counted local allocation. This passes serialization, CAR and old-surface reconstruction ([mode-resolved state](../results/development/nsc-mode-resolved-cauchy-state.json)).
+
+The local Landau current factor is not the full Cauchy isometry: endpoint rapidity does not specify the tilted hypersurface or intervening metric/gauge/Dirac history, and a direct nonunitary boost can violate $C\le I$. The full map must satisfy
+
+$$
+U_{L0}=J_L\mathrm{Res}_{\Sigma_L}E_g
+\mathrm{Res}_{\Sigma_0}^{-1}J_0^{-1},
+\qquad U_{L0}^\dagger U_{L0}=I.
+$$
+
+The finite $r_\star$ stress also requires the existing fourth-order reference and local induced allocation as general Kantowski--Sachs history providers. Those two owners, rather than occupations or integrated moments, now gate metric evolution.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -892,7 +920,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The twenty
+finite Casimir, and link responses remain. The twenty-one
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -900,17 +928,17 @@ binding. The positive compact completion closes the free-Gaussian neck tensor,
 and its proper-volume/clock projection closes the local child ledger. The
 initial ADM gate identifies the density and momentum mismatch; the
 geometry-from-source follow-up closes it and makes joint evolution the next
-owner. The coupled pre-step now specifies the mode-resolved state payload that
-joint evolution must consume.
+owner. The mode payload is now serialized; the physical Landau Cauchy map and
+general-history reference/local allocation remain before joint evolution.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate twenty-record development snapshot, imported
-through laboratory commit $9d7e56b$, carries the common-source, scale-binding,
-completed neck-source, constraint closure and coupled-state gate. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate twenty-one-record development snapshot, imported
+through laboratory commit $4a4dc82$, carries the common-source, scale-binding,
+completed neck-source, constraint closure and mode-resolved state. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 
