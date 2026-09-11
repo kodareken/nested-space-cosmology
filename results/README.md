@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains nineteen records.
+The separate post-preprint development snapshot now contains twenty records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -45,6 +45,13 @@ uses permitted geometry route B. Its
 the Landau normal and replacement radius from the completed tensor, closes
 both constraints below `2.3e-16`, and authorizes joint covariance--metric
 evolution next.
+
+The latest [nsc-coupled-ctp-metric-evolution.json](development/nsc-coupled-ctp-metric-evolution.json)
+checks that first same-state source evaluation. Its
+[state-data gate](../docs/nsc-coupled-ctp-metric-evolution.md) records a break
+at `T=0`: the radius vertex is nonzero, but the earlier compact records contain
+integrated stresses rather than the mode covariance required for unitary CTP
+pressure evolution.
 
 The original collection has one record with the preserved `current_frontier` label:
 

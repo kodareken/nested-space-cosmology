@@ -78,6 +78,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-background-projection.md",
     "docs/nsc-child-metric-backreaction.md",
     "docs/nsc-constraint-complete-neck.md",
+    "docs/nsc-coupled-ctp-metric-evolution.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.12.0 · source-selected constraint-complete neck, 11 September 2026<br>
+Version 0.13.0 · coupled CTP/metric state-data gate, 11 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -51,8 +51,10 @@ second energy source. The initial backreaction gate then finds that this source
 and the locked neck miss the Hamiltonian and momentum constraints already at
 $T=0$. The permitted geometry-from-source route then uses the tensor's Landau
 normal and density to select a replacement neck that closes both constraints.
+The first coupled step then identifies the missing mode-resolved Gaussian
+Cauchy state needed to recalculate pressure on that changed geometry.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and nineteen post-preprint
+100 preprint records and twenty post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -815,6 +817,30 @@ $$
 
 The resulting initial metric remains Kantowski--Sachs, retaining $a_{\parallel,0}=1.92675607703328$ and $H_{\parallel,0}=1.55702116929053$ from the seed. It is not the stored Bronnikov or MMP unit-radius profile. The maximum constraint and frame-invariance residual is $2.2\times10^{-16}$, and both null contractions are $-0.249027703022043$. This passes the initial assembly gate and authorizes covariance--metric evolution from the source-selected geometry ([constraint-complete neck](../results/development/nsc-constraint-complete-neck.json)).
 
+**First coupled CTP/metric step.** Re-evaluating the same source on the selected geometry is stronger than carrying over its integrated tensor. The radius change modifies the angular Hamiltonian by
+
+$$
+\frac{1}{r_\star}-1=0.0578334533139646,
+$$
+
+and the existing metric vertex is
+
+$$
+\boxed{
+\left.\frac{\partial\rho}{\partial\log r}\right|_C
+=-2(\rho_L+p_{\perp,L})
+=-0.460687999769215.
+}
+$$
+
+Thus the unit-radius stress cannot be copied unchanged onto $r_\star$. The source records retain integrated stress rows and covariance-eigenvalue diagnostics, but not the complex matrix $C_j(k,k')$ for every retained mode. Those four moments do not determine the mode evolution
+
+$$
+\dot C_j=-i[H_j,C_j]
+$$
+
+or its later pressure. The coupled trajectory therefore records a break at time zero during source re-evaluation, before the first metric step. Its next owner is the explicit mode-resolved Cauchy state in the canonical half-density basis, with the existing fourth-order reference carried on the same history ([coupled evolution gate](../results/development/nsc-coupled-ctp-metric-evolution.json)).
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -866,7 +892,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The nineteen
+finite Casimir, and link responses remain. The twenty
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -874,16 +900,17 @@ binding. The positive compact completion closes the free-Gaussian neck tensor,
 and its proper-volume/clock projection closes the local child ledger. The
 initial ADM gate identifies the density and momentum mismatch; the
 geometry-from-source follow-up closes it and makes joint evolution the next
-owner.
+owner. The coupled pre-step now specifies the mode-resolved state payload that
+joint evolution must consume.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate nineteen-record development snapshot, imported
-through laboratory commit $cccb98c$, carries the common-source, scale-binding,
-completed neck-source, child-deposition and constraint-complete continuation. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate twenty-record development snapshot, imported
+through laboratory commit $9d7e56b$, carries the common-source, scale-binding,
+completed neck-source, constraint closure and coupled-state gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 

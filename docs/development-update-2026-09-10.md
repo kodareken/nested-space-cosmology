@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`cccb98c564e36fc1eb190bd80ae64e1863adc117`. It contains twenty-three derivation
-notes, nineteen compact result records, nineteen generators, fifteen implementation
-modules and eight focused tests. The 84 scientific files are imported
+`9d7e56b2a1de3f8f667d8a9a734a72d1f4376c5c`. It contains twenty-four derivation
+notes, twenty compact result records, twenty generators, sixteen implementation
+modules and eight focused tests. The 88 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -48,6 +48,7 @@ statement:
 | Proper-volume, child-clock, spectral-component and Killing-charge deposition ledger | [Background projection](nsc-background-projection.md) |
 | Initial Hamiltonian/momentum gate for the same tensor and metric jet | [Child backreaction gate](nsc-child-metric-backreaction.md) |
 | Source-selected Landau normal and areal radius closing both constraints | [Constraint-complete neck](nsc-constraint-complete-neck.md) |
+| Same-covariance re-evaluation gate before the first coupled metric step | [Coupled evolution gate](nsc-coupled-ctp-metric-evolution.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -83,6 +84,11 @@ The permitted geometry-from-source follow-up uses the tensor's Landau normal
 and constraint-selected radius `0.9453283944`. Both ADM residuals then close
 below `2.3e-16`, the null signs remain negative, and joint evolution is
 reopened without a coupling or state refit.
+The first coupled source evaluation then stops at `T=0`: the selected radius
+has a nonzero metric vertex, while the compact records do not persist the
+mode-resolved Gaussian matrices needed to calculate later pressures. The
+required `ModeResolvedCauchyState` interface is now explicit; no moment-fluid
+closure is substituted.
 
 ## Provenance and inspection
 
@@ -90,7 +96,7 @@ reopened without a coupling or state refit.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the nineteen later records are indexed separately.
+unchanged; the twenty later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific

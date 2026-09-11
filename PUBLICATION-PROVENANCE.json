@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 8774,
+      "bytes": 9091,
       "path": "AGENTS.md",
-      "sha256": "efcc683bd882932efa5c0fc73e1c7be922ecf6af5599634cedf6e52643d35f08"
+      "sha256": "b7bfd17f34f4092bc77fa5f9b70535112a110dc34713b286596e960d064c4718"
     },
     {
       "bytes": 1056,
       "path": "CITATION.cff",
-      "sha256": "59778e102643b676e99a40f79623c4b24051effe62ccfb8d40ec4fbd7633ecaa"
+      "sha256": "0ef40edbdfee228fcc60dac6b22f19116a62b6ab36b98575d23fb023ca65f7c8"
     },
     {
       "bytes": 606,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 13076,
+      "bytes": 13756,
       "path": "README.md",
-      "sha256": "ed8918e6cca10d0db403138ff57e0cd72de62414763a0df89bda3c3c96d4bdee"
+      "sha256": "26ea4c320abdc9e90fa1ea752a65abb524dfd180d7f7ac8e2a0c7c7515bad6c7"
     },
     {
       "bytes": 629,
@@ -76,19 +76,19 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 13604,
+      "bytes": 13761,
       "path": "THEORY.md",
-      "sha256": "566452125c4bf0485d4c981b95c12aa6e3b46821f3386bd81f1ec19bb282e68c"
+      "sha256": "48993afc667f2d92775eebde6ec8733f2b0ae133ad36090665560b3447176bf1"
     },
     {
-      "bytes": 13076,
+      "bytes": 13984,
       "path": "docs/current-result.md",
-      "sha256": "246a91e2a84a176cf50e34d4683def9c122892bfb08494d825ffa8062f662fad"
+      "sha256": "92874e742bfc3a38c7a51d0a9529ca5a23d9dfb07e31479ea1d73db47ddf78cb"
     },
     {
-      "bytes": 7441,
+      "bytes": 7900,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "a1ffcc6f45a03a73aa2bfb09bd2d06626e5c121ad4d5d3bce7dbb42500c5823e"
+      "sha256": "16d26268ecc0de354efe3f89ed52f505d4d30d9ba46f592da83dfca26cf094de"
     },
     {
       "bytes": 3154,
@@ -214,6 +214,11 @@
       "bytes": 3180,
       "path": "docs/nsc-constraint-complete-neck.md",
       "sha256": "16af9c7197f474bf93a66384426b8fc91cebb96c6bfd81f5373cba3ad3d08b22"
+    },
+    {
+      "bytes": 3367,
+      "path": "docs/nsc-coupled-ctp-metric-evolution.md",
+      "sha256": "6cab2a37dce87f199638063f08ad7bce03bdddca364ecd69bc682b449cb611aa"
     },
     {
       "bytes": 16550,
@@ -456,24 +461,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 2860,
+      "bytes": 3031,
       "path": "paper/build-manifest.json",
-      "sha256": "2ea03be76a8683ad389a26598aa5cd882008700b72fa839040a2020cc22e6c52"
+      "sha256": "7ee45e177a48e3fe700282e3588ca423cb5abfa4fafc3082719e4087ec907d28"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "a29aef39f69627416066434ad2784230e454f349677e64c82774999fe7dffc78"
+      "sha256": "01493bcdd79207b12849769121e8543f5169fbedba8e939d35b7484f0f874452"
     },
     {
-      "bytes": 114317,
+      "bytes": 115639,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "c69218b344b1344e75ed7f1a3e1ad3db115a4c071b05fb92f795cc23ec9708af"
+      "sha256": "6cfbec597339bd997d0823163b0f0f2612038f1019da3c10353f49db9d068fc2"
     },
     {
-      "bytes": 1683477,
+      "bytes": 1718843,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "d7433a0a157b1a369161d9196cb5f5445997dd3c6ef7e510513a8e8287525ee9"
+      "sha256": "3fc4a50dec575f5f0874694011a9fcb1a32d56ec2b7d444de1eaec0a3051cc89"
     },
     {
       "bytes": 1144,
@@ -491,14 +496,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 6551,
+      "bytes": 6960,
       "path": "results/README.md",
-      "sha256": "67eb6876ddfadc0e113d51e7f93ecf2827dcf19245085b94344dab10bfda8954"
+      "sha256": "60a5d7b0f6090e1431265eb4ebbe2ed2603dc8babcf994ee14b1258a8fcaa464"
     },
     {
-      "bytes": 23067,
+      "bytes": 24227,
       "path": "results/development-snapshot.json",
-      "sha256": "a19a8df4bff3177204f19702f01713ce69d1fa5ccd92c6cad3f55ff02a09deb3"
+      "sha256": "ddc038617b6ddab4441771e4414b0c4c5d537050345f950e896308eb4023e56b"
     },
     {
       "bytes": 3283,
@@ -624,6 +629,11 @@
       "bytes": 5536,
       "path": "results/development/nsc-constraint-complete-neck.json",
       "sha256": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe"
+    },
+    {
+      "bytes": 5889,
+      "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
+      "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
     },
     {
       "bytes": 5507,
@@ -1106,9 +1116,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 54111,
+      "bytes": 54180,
       "path": "scripts/build_paper.py",
-      "sha256": "5baf687909e59d8bde314ffd27f738dbcd173af6718581ae6213916150275e65"
+      "sha256": "006c21374260bf62f35eae8aebf9479fc04fde32b0966a6c0f48fad0e66d5a2e"
     },
     {
       "bytes": 3480,
@@ -1341,9 +1351,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 15791,
+      "bytes": 15839,
       "path": "scripts/check_publication.py",
-      "sha256": "a293f1590dd1c58d08f7235ff6727dbf4332d2cfd0daf5cb8589ec8916379ef8"
+      "sha256": "a581a2f3eb26559617ded9c0600ea8224aba95ec6a566519dd97908b411c5430"
     },
     {
       "bytes": 11187,
@@ -1389,6 +1399,11 @@
       "bytes": 9873,
       "path": "scripts/derive_nsc_constraint_complete_neck.py",
       "sha256": "1529d664ba1ed2fb552f5d6ac5c89527ab55ffafa1b59c4e42d832f4a3eb5f58"
+    },
+    {
+      "bytes": 10406,
+      "path": "scripts/derive_nsc_coupled_ctp_metric_evolution.py",
+      "sha256": "428571488a9295230a2345cc12cc6963bb3b9764decf9ea4bc5ea565cb3f6897"
     },
     {
       "bytes": 6527,
@@ -1836,6 +1851,11 @@
       "sha256": "fa581fdad34579f0144d338c679a1706a94896df7ef4cdecb7f1849ee262d295"
     },
     {
+      "bytes": 1449,
+      "path": "src/recursive_horizons/nsc_coupled_ctp_metric_evolution.py",
+      "sha256": "4a7fdc14b1e41ccad788537ae76b8131e98b085ae59171c002e93c51cd2e6c9e"
+    },
+    {
       "bytes": 13527,
       "path": "src/recursive_horizons/nsc_covariant_identities.py",
       "sha256": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1"
@@ -2168,7 +2188,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.12.0",
+  "public_version": "0.13.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,
