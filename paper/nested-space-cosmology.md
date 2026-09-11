@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.9.0 · completed free-Gaussian neck-source gate, 11 September 2026<br>
+Version 0.10.0 · proper-volume and child-clock deposition gate, 11 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -44,8 +44,11 @@ pressure, flux and their remaining componentwise metric residuals.
 The canonical closed-time-path functional now owns causal response. A
 recursive zero-tadpole law fixes homogeneous unlinked
 $V_{\rm full}=0$ while preserving Einstein, gauge, curvature, Casimir, and
-link response. The paper follows the spectrum from intuitive picture to exact
-operator equations, using 100 preprint records and sixteen post-preprint
+link response. Proper-volume and child-clock projection of the completed
+tensor gives the conserved local density derivative $0.38776013531$ and
+identifies the parent Killing power as child spatial momentum rather than a
+second energy source. The paper follows the spectrum from intuitive picture to exact
+operator equations, using 100 preprint records and seventeen post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -764,7 +767,24 @@ $$
 T_{--}=-0.25148747269.}
 $$
 
-Both null signs remain negative under angular, frequency-extent and frequency/time changes, so the hard neck gate passes in the declared free Gaussian realization ([compact CTP completion](../results/development/charged-compact-ctp-completion.json)). Its homogeneous projection has $p_{\rm iso}=-0.03020295021$ and $w_{\rm iso,neck}=-0.29978601484$ with nonzero anisotropic stress. These are local neck data; conservation, proper-volume/clock matching and component deposition remain required before calculating $H(z)$.
+Both null signs remain negative under angular, frequency-extent and frequency/time changes, so the hard neck gate passes in the declared free Gaussian realization ([compact CTP completion](../results/development/charged-compact-ctp-completion.json)). Its homogeneous projection has $p_{\rm iso}=-0.03020295021$ and $w_{\rm iso,neck}=-0.29978601484$ with nonzero anisotropic stress. These are local neck data; the following projection determines how they enter the child ledger before any $H(z)$ calculation.
+
+**Proper-volume and child-clock deposition.** The same completed tensor is now projected through the stored Bronnikov child ledger, without another source calculation. At the neck, $V=4\pi a_\parallel r^2=24.21233094747$, the proper-volume rate is $12\pi$, $H_\perp=0$, and the standard anisotropic conservation equation gives
+
+$$
+\boxed{\dot\rho_0
+=-\frac{\dot V_0}{V_0}\rho_0-H_\parallel p_\parallel
+=0.38776013531.}
+$$
+
+Volume dilution contributes $-0.15686733379$ and directional pressure work contributes $+0.54462746910$. The proper energy per unit coordinate $z$ is $E_0=2.43935270463$; its child-time rate is $13.18670052493$, entirely accounted for by that pressure work. The stored parent power obeys
+
+$$
+P_{\rm parent}=-P_z=-a_\parallel V T_{01}
+=-0.057095079694875,
+$$
+
+with residual $4.4\times10^{-16}$. The parent Killing direction is spatial in the child, so this quantity is the opposite of a conserved child momentum charge rather than a continuing child energy source. The explicit free compact blocks are decoupled and give regular inter-block $Q=0$; no visible/dark assignment is made. This result fixes the local density Cauchy jet, while later pressure functions require metric backreaction and evolution of the same state ([background projection](../results/development/nsc-background-projection.json)).
 
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
@@ -817,22 +837,22 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The sixteen
+finite Casimir, and link responses remain. The seventeen
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
-binding. The positive compact completion now closes the free-Gaussian neck
-tensor; its remaining integration is covariant background conservation and
-proper-volume/clock projection of that same source.
+binding. The positive compact completion closes the free-Gaussian neck tensor,
+and its proper-volume/clock projection closes the local child ledger. The
+remaining integration is metric backreaction and evolution of the same state.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate sixteen-record development snapshot, imported
-through laboratory commit $6956c63$, carries the common-source, scale-binding
-and completed free-Gaussian neck-source continuation. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate seventeen-record development snapshot, imported
+through laboratory commit $a5fba9d$, carries the common-source, scale-binding,
+completed neck-source and child-deposition continuation. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 

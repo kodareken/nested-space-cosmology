@@ -75,6 +75,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "paper/nested-space-cosmology.md",
     "docs/current-result.md",
     "docs/development-update-2026-09-10.md",
+    "docs/nsc-background-projection.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

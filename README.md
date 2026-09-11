@@ -234,12 +234,20 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | The charged radius fixes a candidate inherited scale | The first cutoff-resolved branch among the checked $q=2,3,4$ sectors gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ | [Scale binding](docs/nsc-scale-binding.md) |
 | The simplest recursive LLL source is decisively testable | Its inherited power closes exactly, but its two null signs do not source the black-universe neck | [Source binding](docs/nsc-recursive-source-binding.md) |
 | Positive compact modes complete the free CTP neck source | The completed tensor has $T_{++}=-0.246592$ and $T_{--}=-0.251487$ at the locked scale | [Compact CTP completion](docs/nsc-compact-ctp-completion.md) |
+| The completed source enters the child energy ledger | Proper volume and child time give $\dot\rho_0=0.3877601353$ with total regular bulk $Q=0$ | [Background projection](docs/nsc-background-projection.md) |
+
+The background projection uses the exact completed tensor on the stored
+Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
+directional pressure work contributes `+0.5446274691`; the conservation and
+parent-power map close below `4.4e-16`. The parent Killing power becomes the
+opposite of a conserved child spatial-momentum charge, so it is not counted
+again as a continuing child energy source.
 
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 16-record development update](docs/development-update-2026-09-10.md)
+3. [The 17-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

@@ -12,6 +12,7 @@ claim.
 | A boundary stores and transfers energy | The real and imaginary parts of one coherence give link energy and occupation transfer |
 | Geometry can turn into particles | Work from a changing radius equals the energy of the created Dirac pairs |
 | An inherited state can push geometry apart | Both computed radial null contractions are negative at the smooth neck |
+| The completed stress has a child-time energy ledger | Proper volume and the child clock fix its first conserved density derivative |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -21,7 +22,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `6956c63`, now contains sixteen post-preprint records.
+through laboratory commit `a5fba9d`, now contains seventeen post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -52,8 +53,25 @@ $$
 
 with $T_{++}=-0.24659199207$ and $T_{--}=-0.25148747269$. The hard neck sign
 gate therefore passes in this realization. Its homogeneous neck projection is
-recorded, while conservation and proper-volume/clock matching still precede
-any $H(z)$ calculation.
+recorded.
+
+The [proper-volume/clock projection](nsc-background-projection.md) now places
+that tensor in the stored child geometry. At the neck,
+$V=24.21233094747$, $\dot V=12\pi$, and conservation gives
+
+$$
+\boxed{\dot\rho_0=-\frac{\dot V_0}{V_0}\rho_0
+-H_\parallel p_\parallel=0.38776013531.}
+$$
+
+The volume term is $-0.15686733379$ and pressure work is
+$+0.54462746910$. The recorded parent Killing power satisfies
+$P_{\rm parent}=-a_\parallel VT_{01}$ with residual
+$4.4\times10^{-16}$: inside the child it is the opposite of a conserved
+spatial-momentum charge, not an additional energy-deposition rate. The free
+compact blocks give regular bulk $Q=0$. This fixes a local Cauchy jet; the
+pressure derivatives and global background require backreaction and evolution
+of the same CTP state before any $H(z)$ calculation.
 
 ## 1. Shared mass and visible response
 
@@ -219,8 +237,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains sixteen.
-[The development index](development-update-2026-09-10.md) links all sixteen
+[the later snapshot](../results/development-snapshot.json) contains seventeen.
+[The development index](development-update-2026-09-10.md) links all seventeen
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 
