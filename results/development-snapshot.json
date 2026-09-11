@@ -266,11 +266,25 @@
       },
       "generator": "scripts/derive_nsc_constraint_complete_neck.py",
       "output": "results/development/nsc-constraint-complete-neck.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 2e-13,
+        "float_rtol": 2e-13
+      },
+      "generator": "scripts/derive_nsc_coupled_ctp_metric_evolution.py",
+      "output": "results/development/nsc-coupled-ctp-metric-evolution.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "cccb98c564e36fc1eb190bd80ae64e1863adc117",
+  "source_commit": "9d7e56b2a1de3f8f667d8a9a734a72d1f4376c5c",
   "source_files": [
     {
       "bytes": 3154,
@@ -691,10 +705,30 @@
       "bytes": 4075,
       "path": "src/recursive_horizons/nsc_constraint_complete_neck.py",
       "sha256": "fa581fdad34579f0144d338c679a1706a94896df7ef4cdecb7f1849ee262d295"
+    },
+    {
+      "bytes": 3367,
+      "path": "docs/nsc-coupled-ctp-metric-evolution.md",
+      "sha256": "6cab2a37dce87f199638063f08ad7bce03bdddca364ecd69bc682b449cb611aa"
+    },
+    {
+      "bytes": 5889,
+      "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
+      "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
+    },
+    {
+      "bytes": 10406,
+      "path": "scripts/derive_nsc_coupled_ctp_metric_evolution.py",
+      "sha256": "428571488a9295230a2345cc12cc6963bb3b9764decf9ea4bc5ea565cb3f6897"
+    },
+    {
+      "bytes": 1449,
+      "path": "src/recursive_horizons/nsc_coupled_ctp_metric_evolution.py",
+      "sha256": "4a7fdc14b1e41ccad788537ae76b8131e98b085ae59171c002e93c51cd2e6c9e"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 19 post-preprint records, outside the 100-record release",
+  "status": "development snapshot; 20 post-preprint records, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }

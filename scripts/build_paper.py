@@ -48,6 +48,7 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         "results/development/nsc-background-projection.json",
         "results/development/nsc-child-metric-backreaction.json",
         "results/development/nsc-constraint-complete-neck.json",
+        "results/development/nsc-coupled-ctp-metric-evolution.json",
     ):
         if path in text:
             paths.append(path)

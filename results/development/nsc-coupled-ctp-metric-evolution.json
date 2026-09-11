@@ -1,0 +1,115 @@
+{
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 2e-13,
+    "float_rtol": 2e-13
+  },
+  "decision": {
+    "chosen_next_owner": "ModeResolvedCauchyState",
+    "coupled_CTP_metric_trajectory_defined": false,
+    "fake_fluid_or_constant_w_closure_used": false,
+    "fixed_tensor_initial_constraints_pass": true,
+    "fixed_tensor_initial_null_signs_negative": true,
+    "required_contract": {
+      "basis": "canonical half-density chi=sqrt(a_parallel*r^2)*psi",
+      "consumer": "CausalCommonFunctional plus ADM evolution",
+      "payload": "frequency weights and complex Gaussian covariance for every retained compact/angular channel",
+      "renormalization": "the existing fourth-order reference and local induced allocation evaluated on the same metric history",
+      "slice_map": "old child frame to source-selected Landau normal"
+    }
+  },
+  "input_hashes": {
+    "results/development/adm-source-constraints.json": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56",
+    "results/development/causal-common-functional.json": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03",
+    "results/development/charged-compact-ctp-completion.json": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6",
+    "results/development/charged-ctp-neck-source.json": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90",
+    "results/development/child-state.json": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060",
+    "results/development/nsc-background-projection.json": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48",
+    "results/development/nsc-child-metric-backreaction.json": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a",
+    "results/development/nsc-constraint-complete-neck.json": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "occupations_changed": false,
+    "q": 4,
+    "seed_retained_H_parallel": 1.557021169290531,
+    "seed_retained_a_parallel": 1.9267560770332839,
+    "zeta": 15.785319939652627
+  },
+  "prestep_metric_vertex": {
+    "angular_Hamiltonian_coefficient_ratio": 1.0578334533139646,
+    "angular_Hamiltonian_fractional_change": 0.05783345331396461,
+    "fixed_covariance_density_log_radius_vertex": -0.4606879997692147,
+    "linearized_density_change_diagnostic": 0.025901217423328238,
+    "log_radius_change": -0.056222904517381954,
+    "seed_radius": 1.0,
+    "selected_radius": 0.9453283944341287
+  },
+  "rethinking_decision": {
+    "discarded_fixed_tensor_reuse": "nonzero radius vertex proves it is not the same source evaluation",
+    "discarded_moment_fluid": "would invent a pressure law from four moments",
+    "discarded_old_generator_replay_only": "would reconstruct the old slice but not define the Landau slice/history",
+    "selected": "persist and transport the actual mode-resolved covariance before integration"
+  },
+  "schema": "NSC-COUPLED-CTP-METRIC-EVOLUTION-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "H_of_z_likelihood_or_Hessian_computed": false,
+    "new_metric_ansatz_or_source_channel": false,
+    "old_source_generator_rerun": false,
+    "trajectory_claimed": false,
+    "unit_radius_Bronnikov_restored": false,
+    "w_of_a_or_fluid_closure_introduced": false
+  },
+  "source_hashes": {
+    "docs/nsc-coupled-ctp-metric-evolution.md": "6cab2a37dce87f199638063f08ad7bce03bdddca364ecd69bc682b449cb611aa",
+    "scripts/derive_nsc_coupled_ctp_metric_evolution.py": "428571488a9295230a2345cc12cc6963bb3b9764decf9ea4bc5ea565cb3f6897",
+    "src/recursive_horizons/nsc_coupled_ctp_metric_evolution.py": "4a7fdc14b1e41ccad788537ae76b8131e98b085ae59171c002e93c51cd2e6c9e"
+  },
+  "state_information_gate": {
+    "actual_physical_CausalSource_complete_in_reused_record": false,
+    "completed_records_do_not_store": [
+      "complex C_jk for every compact/angular/frequency mode",
+      "canonical isometry from the old neck slice to the Landau slice",
+      "mode-resolved renormalized reference on the selected geometry"
+    ],
+    "completed_records_store": [
+      "integrated rho, T01, p_parallel and p_sphere",
+      "mode labels, quadrature metadata and aggregate row stresses",
+      "minimum/maximum covariance eigenvalue diagnostics"
+    ],
+    "four_integrated_stress_moments_determine_future_commutators": false,
+    "reason": "future pressure uses C_dot=-i[H[g],C]; traces of C with four current vertices do not determine the mode commutators"
+  },
+  "status": "STOP AT T=0 SOURCE RE-EVALUATION: the integrated neck tensor does not contain the mode-resolved Gaussian covariance required by unitary CTP evolution on the source-selected geometry",
+  "trajectory": {
+    "break_stage": "same-covariance stress evaluation before first metric step",
+    "break_time": 0.0,
+    "constraint_break_time": null,
+    "null_sign_break_time": null,
+    "reason": "the fixed-tensor constraint row is not a CTP stress re-evaluation on r_star",
+    "rows": [
+      {
+        "H_parallel": 1.557021169290531,
+        "H_sphere": 0.0,
+        "T": 0.0,
+        "T01_fixed_tensor_gate": 0.0,
+        "a_parallel": 1.9267560770332839,
+        "fixed_tensor_Hamiltonian_constraint": 2.220446049250313e-16,
+        "fixed_tensor_momentum_constraint": -0.0,
+        "null_minus_fixed_tensor_gate": -0.24902770302204313,
+        "null_plus_fixed_tensor_gate": -0.24902770302204313,
+        "p_parallel_fixed_tensor_gate": -0.3497820805889782,
+        "p_sphere_fixed_tensor_gate": 0.1295896223176723,
+        "r": 0.9453283944341287,
+        "rho_fixed_tensor_gate": 0.10075437756693506,
+        "same_covariance_stress_on_selected_geometry": null
+      }
+    ],
+    "time_steps_started": 0
+  }
+}

@@ -119,12 +119,17 @@ an invalid metric trajectory. The permitted geometry-from-source follow-up
 then closes both constraints with the tensor's Landau normal and a
 source-selected Kantowski--Sachs radius.
 
+The first coupled-evolution pre-step shows that this radius change acts on the
+source immediately. The published tensor record is not a mode-resolved
+Gaussian Cauchy state, so future pressure cannot be reconstructed from its four
+moments. The trajectory stops at `T=0` before a surrogate fluid is introduced.
+
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
 angular refinement or scale scan does not advance the active gate. The next
-owner is joint evolution of the same CTP covariance and the source-selected
-metric, with the stress re-evaluated at every step. Full physical couplings and
-observational predictions remain open.
+owner is the explicit `ModeResolvedCauchyState` contract named by the coupled
+evolution record, followed by joint CTP/metric stepping. Full physical
+couplings and observational predictions remain open.
 
 At common dimensional energy, parent normalization gives
 

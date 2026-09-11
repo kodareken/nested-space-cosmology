@@ -237,6 +237,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | The completed source enters the child energy ledger | Proper volume and child time give $\dot\rho_0=0.3877601353$ with total regular bulk $Q=0$ | [Background projection](docs/nsc-background-projection.md) |
 | Backreaction has an exact initial gate | The locked source misses the Hamiltonian and momentum constraints already at $T=0$ | [Backreaction gate](docs/nsc-child-metric-backreaction.md) |
 | The same source selects constraint-complete geometry | Its Landau normal and $r_\star=0.9453283944$ close both initial constraints | [Constraint-complete neck](docs/nsc-constraint-complete-neck.md) |
+| Coupled evolution has an exact state-data gate | The radius vertex is nonzero, so later pressure requires the actual mode covariance | [Coupled evolution gate](docs/nsc-coupled-ctp-metric-evolution.md) |
 
 The background projection uses the exact completed tensor on the stored
 Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
@@ -260,11 +261,19 @@ maximum ADM residual is `2.2e-16`; both null contractions remain negative.
 This source-selected Kantowski--Sachs neck replaces the stored unit-radius
 Bronnikov profile without changing the action or state parameters.
 
+The first same-state evolution step then exposes the next exact dependency.
+Changing to `r_star` changes the angular Hamiltonian by `5.7833%`, and the
+fixed-covariance density vertex is `-0.460688`. The stored result contains four
+integrated stress moments but not the complex mode covariances needed by
+`C_dot=-i[H,C]`. The trajectory therefore records its break at `T=0` rather
+than replacing the missing commutators with frozen pressure or an assumed
+equation of state.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 19-record development update](docs/development-update-2026-09-10.md)
+3. [The 20-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)
