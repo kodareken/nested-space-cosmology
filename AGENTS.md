@@ -115,14 +115,16 @@ proper-volume/child-clock projection closes the local energy, momentum and
 spatial-Killing ledgers and fixes the first child-time density derivative. The
 subsequent backreaction gate fails the Hamiltonian and homogeneous momentum
 constraints at the initial neck, so the CTP covariance is not replayed along
-an invalid metric trajectory.
+an invalid metric trajectory. The permitted geometry-from-source follow-up
+then closes both constraints with the tensor's Landau normal and a
+source-selected Kantowski--Sachs radius.
 
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
 angular refinement or scale scan does not advance the active gate. The next
-owner is the constraint-complete same-action neck assembly identified in the
-backreaction record. Full physical couplings and observational predictions
-remain open.
+owner is joint evolution of the same CTP covariance and the source-selected
+metric, with the stress re-evaluated at every step. Full physical couplings and
+observational predictions remain open.
 
 At common dimensional energy, parent normalization gives
 

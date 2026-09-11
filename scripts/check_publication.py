@@ -77,6 +77,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/development-update-2026-09-10.md",
     "docs/nsc-background-projection.md",
     "docs/nsc-child-metric-backreaction.md",
+    "docs/nsc-constraint-complete-neck.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {
