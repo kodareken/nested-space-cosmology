@@ -21,7 +21,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `7ee7447`, now contains fifteen post-preprint records.
+through laboratory commit `6956c63`, now contains sixteen post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -38,6 +38,22 @@ and negative radial null components $-0.0568175$ and $-0.0617129$ at the
 locked scale. This passes the retained sign test, while the hard full gate
 remains open for the first positive compact levels' nonlocal CTP covariance
 and four ADM variations; no cosmological projection is accepted yet.
+
+That channel is now supplied by the
+[positive compact CTP completion](nsc-compact-ctp-completion.md). It reads the
+previous angular tensor without rerunning it and adds the two positive compact
+levels below the locked cutoff with massive exterior scattering and
+fourth-order superadiabatic subtraction. The completed free-Gaussian tensor is
+
+$$
+(\rho,T_{01},p_\parallel,p_\perp)
+=(0.10074836289,0.00122387016,-0.34978809527,0.12958962232),
+$$
+
+with $T_{++}=-0.24659199207$ and $T_{--}=-0.25148747269$. The hard neck sign
+gate therefore passes in this realization. Its homogeneous neck projection is
+recorded, while conservation and proper-volume/clock matching still precede
+any $H(z)$ calculation.
 
 ## 1. Shared mass and visible response
 
@@ -203,8 +219,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains fifteen.
-[The development index](development-update-2026-09-10.md) links all fifteen
+[the later snapshot](../results/development-snapshot.json) contains sixteen.
+[The development index](development-update-2026-09-10.md) links all sixteen
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

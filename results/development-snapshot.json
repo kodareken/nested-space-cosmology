@@ -210,11 +210,25 @@
       },
       "generator": "scripts/derive_nsc_charged_ctp_neck.py",
       "output": "results/development/charged-ctp-neck-source.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, types, strings and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 2e-06,
+        "float_rtol": 2e-05
+      },
+      "generator": "scripts/derive_nsc_compact_ctp_completion.py",
+      "output": "results/development/charged-compact-ctp-completion.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "7ee7447e99b89a4ab6d7c14b20623d7fe5a9987e",
+  "source_commit": "6956c63403bbea0c9af6ee14502a8fd5fc163947",
   "source_files": [
     {
       "bytes": 3154,
@@ -550,6 +564,31 @@
       "bytes": 661,
       "path": "tests/test_nsc_charged_ctp_neck.py",
       "sha256": "b1a728513c869a07f1518496b23937fc035f643ee7c0b19bacf09f606d3d98ad"
+    },
+    {
+      "bytes": 2866,
+      "path": "docs/nsc-compact-ctp-completion.md",
+      "sha256": "5aa6244df5b09e2aeaf2fdab1a9f8157446e3391d11947604bb3be4aa92c06ad"
+    },
+    {
+      "bytes": 97371,
+      "path": "results/development/charged-compact-ctp-completion.json",
+      "sha256": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6"
+    },
+    {
+      "bytes": 11139,
+      "path": "scripts/derive_nsc_compact_ctp_completion.py",
+      "sha256": "827e5a68794d1b092c4b45f92494b17150bce06905749e33583351ac014cd606"
+    },
+    {
+      "bytes": 17390,
+      "path": "src/recursive_horizons/nsc_compact_ctp_neck.py",
+      "sha256": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e"
+    },
+    {
+      "bytes": 1574,
+      "path": "tests/test_nsc_compact_ctp_neck.py",
+      "sha256": "56a677527de270d065fa93910bbad12a2b054e4460c0aa46e666026c3909ed0d"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",

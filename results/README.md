@@ -16,12 +16,17 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains fifteen records.
+The separate post-preprint development snapshot now contains sixteen records.
 Its latest source gate is [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json),
 with the [operator, state and channel decomposition](../docs/nsc-charged-ctp-neck-source.md).
 At the locked scale its retained angular plus compact-local tensor has both
 radial null components negative. The hard full gate remains closed for the
 nonlocal CTP response of the first positive compact Dirac levels.
+
+The subsequent [charged-compact-ctp-completion.json](development/charged-compact-ctp-completion.json)
+adds those positive compact levels with massive horizon scattering and
+superadiabatic subtraction. Its completed free-Gaussian tensor preserves both
+negative neck null signs and enables the recorded homogeneous projection.
 
 The original collection has one record with the preserved `current_frontier` label:
 

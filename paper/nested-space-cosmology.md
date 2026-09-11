@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.8.0 · scale/source binding update, 10 September 2026<br>
+Version 0.9.0 · completed free-Gaussian neck-source gate, 11 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -45,7 +45,7 @@ The canonical closed-time-path functional now owns causal response. A
 recursive zero-tadpole law fixes homogeneous unlinked
 $V_{\rm full}=0$ while preserving Einstein, gauge, curvature, Casimir, and
 link response. The paper follows the spectrum from intuitive picture to exact
-operator equations, using 100 preprint records and fifteen post-preprint
+operator equations, using 100 preprint records and sixteen post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -752,6 +752,20 @@ Both have the opposite sign from the required neck source. The imported MMP LLL 
 
 **Charged CTP neck result.** The new magnetic angular calculation performs that transport at the locked scale and combines it with the compact Wilsonian local response. In the common child frame its retained tensor gives radial null components $-0.05681746054$ and $-0.06171294116$, so the retained sign gate passes ([charged CTP source](../results/development/charged-ctp-neck-source.json)). The hard full gate remains open because the first positive compact levels still lack their nonlocal horizon-domain CTP covariance and four ADM variations; this is a fail/incomplete result for the requested full owner, and no background projection is started.
 
+**Positive compact CTP completion.** The first two positive compact levels below the locked cutoff are now included with their massive exterior reflection and fourth-order superadiabatic covariance subtraction. The massless limit reproduces the existing $E_2+E_4$ and $P_2+P_4$ subtractions. Reading the preceding angular tensor rather than rerunning it gives the completed free-Gaussian child-frame source
+
+$$
+(\rho,T_{01},p_\parallel,p_\perp)
+=(0.10074836289,\ 0.00122387016,\ -0.34978809527,\ 0.12958962232),
+$$
+
+$$
+\boxed{T_{++}=-0.24659199207,\qquad
+T_{--}=-0.25148747269.}
+$$
+
+Both null signs remain negative under angular, frequency-extent and frequency/time changes, so the hard neck gate passes in the declared free Gaussian realization ([compact CTP completion](../results/development/charged-compact-ctp-completion.json)). Its homogeneous projection has $p_{\rm iso}=-0.03020295021$ and $w_{\rm iso,neck}=-0.29978601484$ with nonzero anisotropic stress. These are local neck data; conservation, proper-volume/clock matching and component deposition remain required before calculating $H(z)$.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -803,21 +817,22 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The fifteen
+finite Casimir, and link responses remain. The sixteen
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
-binding. Their remaining integration is the full charged CTP tensor and joint
-geometry/state solution.
+binding. The positive compact completion now closes the free-Gaussian neck
+tensor; its remaining integration is covariant background conservation and
+proper-volume/clock projection of that same source.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate fifteen-record development snapshot, imported
-through laboratory commit $7ee7447$, carries the common-source, scale-binding
-and charged-source continuation. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate sixteen-record development snapshot, imported
+through laboratory commit $6956c63$, carries the common-source, scale-binding
+and completed free-Gaussian neck-source continuation. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 
