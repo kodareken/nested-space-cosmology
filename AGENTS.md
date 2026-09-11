@@ -109,19 +109,17 @@ The separate development snapshot authenticates twelve later records while
 preserving the 100-record preprint manifest. A push of authenticated existing
 work requires publication/path checks, not replay of the old scientific chain.
 
-The latest source includes the phase-resolved parent Dirac covariance and
-its canonical massless stress on the expanding child. Both neck null
-contractions are negative, while density, anisotropy and flux leave
-independent metric residuals. The raw finite proper-time determinant has a
-different thermal state/source relation from the canonical field; the
-state-dependent conversion is explicit in its equilibrium control.
+The latest source is the completed charged angular plus positive-compact CTP
+tensor on the locked branch. Both neck null contractions are negative. Its
+proper-volume/child-clock projection now closes the local energy, momentum and
+spatial-Killing ledgers and fixes the first child-time density derivative.
+The next owner is metric backreaction and evolution of this same CTP state;
+the single neck slice does not determine later pressures or a global $H(z)$.
 
-Use [the current result](docs/current-result.md) as the work cursor. The next
-owner is the common causal/state completion, including the remaining
-compact, gauge, boundary and recursive contributions. Reuse the computed
-source and normalization evidence. Another angular refinement or a local
-coefficient scan does not supply this missing functional. Full physical
-couplings, self-sourcing and observational predictions remain open.
+Use [the current result](docs/current-result.md) as the work cursor. Reuse the
+completed tensor and its deposition ledger. Another source calculation,
+angular refinement or scale scan does not advance the active gate. Full
+physical couplings, backreaction and observational predictions remain open.
 
 At common dimensional energy, parent normalization gives
 

@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`6956c63403bbea0c9af6ee14502a8fd5fc163947`. It contains twenty derivation
-notes, sixteen compact result records, fifteen generators, twelve implementation
-modules and eight focused tests. The 72 scientific files are imported
+`a5fba9d11b457cdb1c18dc7c384d7d505814e2b0`. It contains twenty-one derivation
+notes, seventeen compact result records, seventeen generators, thirteen implementation
+modules and eight focused tests. The 76 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -45,6 +45,7 @@ statement:
 | Scale-inherited transparent LLL state evaluated on the actual neck | [Recursive source binding](nsc-recursive-source-binding.md) |
 | Charged magnetic angular CTP covariance and compact-local source at the locked scale | [Charged CTP neck source](nsc-charged-ctp-neck-source.md) |
 | Positive compact-level nonlocal CTP covariance completing the free neck tensor | [Compact CTP completion](nsc-compact-ctp-completion.md) |
+| Proper-volume, child-clock, spectral-component and Killing-charge deposition ledger | [Background projection](nsc-background-projection.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -69,7 +70,10 @@ negative signs. The remaining positive compact channel is now included in the
 declared free Gaussian realization. Its superadiabatically subtracted $j=1,2$ covariance completes the
 tensor with $T_{++}=-0.24659199207$ and $T_{--}=-0.25148747269$. The neck sign
 gate passes without refitting the scale. The homogeneous pressure projection
-is stored; $H(z)$ remains outside this gate.
+is stored. Its proper-volume/clock projection now closes the local energy,
+momentum and spatial-Killing ledgers below $4.4\times10^{-16}$ and gives
+$\dot\rho_0=0.38776013531$. This is a local Cauchy jet; $H(z)$ remains outside
+the gate until the same CTP source and metric are evolved together.
 
 ## Provenance and inspection
 
@@ -77,7 +81,7 @@ is stored; $H(z)$ remains outside this gate.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the sixteen later records are indexed separately.
+unchanged; the seventeen later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
