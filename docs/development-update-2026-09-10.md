@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`5f2ff3a1f844d07d9d4af7e9c45ea40d5632012a`. It contains twenty-eight derivation
-notes, twenty-four compact result records, twenty-four generators, twenty implementation
-modules, two active binary artifacts and eight focused tests. The 106 scientific files are imported
+`f30620550e51add143d6a340a3fdf059c7547751`. It contains thirty-two derivation
+notes, twenty-eight compact result records, twenty-eight generators, twenty-four implementation
+modules, three active binary artifacts and eight focused tests. The 123 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -53,6 +53,10 @@ statement:
 | Conditional unitary Cauchy maps and a finite endpoint-history nonuniqueness witness | [Landau Cauchy gate](nsc-landau-cauchy-isometry.md) |
 | Joint history/state route audit and exact missing same-action selector | [Joint BVP gate](nsc-joint-history-state-bvp.md) |
 | Executable homogeneous shift variation and duration-independent nonexistence certificate | [General-KS history gate](nsc-general-ks-same-action-history.md) |
+| General-KS fourth-order reference with four ADM variation channels | [Fourth-order reference](nsc-general-ks-reference.md) |
+| Node-wise Einstein/Maxwell/curvature history forces and endpoint ledger | [Local induced history](nsc-general-ks-local-history.md) |
+| Weighted transmitting frequency-mixing interface family | [Tilted interface](nsc-tilted-landau-interface.md) |
+| Residual composition without premature stationarity solve | [Extended tilted gate](nsc-extended-tilted-history-gate.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -108,6 +112,10 @@ The general-KS owner now executes the independent momentum variation and
 excludes the entire frequency-diagonal homogeneous no-interface class from the
 locked seed. No interior optimizer is run after this necessary constraint
 fails.
+The extended components now expose independent residuals. Reference, local
+bulk and interface construction pass; the composition stays open on the Weyl
+endpoint momentum and physical frequency-kernel selector. The old homogeneous
+nonexistence result remains a passing regression.
 
 ## Provenance and inspection
 
@@ -115,7 +123,7 @@ fails.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the twenty-four later records are indexed separately.
+unchanged; the twenty-eight later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
