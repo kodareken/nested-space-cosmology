@@ -130,13 +130,16 @@ endpoint-identical controls produce different maps. Do not select one as the
 physical history without a same-action equation or joint boundary-value solve.
 The joint BVP audit now proves that route A fails at the seed and route B is
 non-unique under every currently executable condition.
+The general-KS history owner additionally proves that no smooth stationary
+history exists in the frequency-diagonal homogeneous no-interface truncation;
+do not send this class to an optimizer.
 
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
 angular refinement or scale scan does not advance the active gate. The next
-owner is `GeneralKSSameActionHistoryFunctional`: the history variation of the
-declared CTP action with general-KS fourth-order, local and boundary providers.
-Only then may joint CTP/metric stepping resume. Full
+Any extension must implement the general-KS fourth-order/local nodal providers
+and a transmitting tilted-interface variation, or explicitly leave the
+homogeneous class. Only then may joint CTP/metric stepping resume. Full
 physical couplings and observational predictions remain open.
 
 At common dimensional energy, parent normalization gives

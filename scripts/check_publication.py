@@ -82,6 +82,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-mode-resolved-cauchy-state.md",
     "docs/nsc-landau-cauchy-isometry.md",
     "docs/nsc-joint-history-state-bvp.md",
+    "docs/nsc-general-ks-same-action-history.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

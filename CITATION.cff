@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this framework or its calculations, cite this repository and the primary sources for the established physics you rely on."
 title: "Nested-Space Cosmology"
 type: software
-version: 0.16.0
+version: 0.17.0
 date-released: 2026-09-12
 authors:
   - given-names: "Douglas"

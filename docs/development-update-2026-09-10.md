@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`234f03b5198f1d4c5d8083f4191b93cf71d9fac6`. It contains twenty-seven derivation
-notes, twenty-three compact result records, twenty-three generators, nineteen implementation
-modules, two active binary artifacts and eight focused tests. The 102 scientific files are imported
+`5f2ff3a1f844d07d9d4af7e9c45ea40d5632012a`. It contains twenty-eight derivation
+notes, twenty-four compact result records, twenty-four generators, twenty implementation
+modules, two active binary artifacts and eight focused tests. The 106 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -52,6 +52,7 @@ statement:
 | Deterministic serialization and reconstruction of every retained Gaussian mode covariance | [Mode-resolved state](nsc-mode-resolved-cauchy-state.md) |
 | Conditional unitary Cauchy maps and a finite endpoint-history nonuniqueness witness | [Landau Cauchy gate](nsc-landau-cauchy-isometry.md) |
 | Joint history/state route audit and exact missing same-action selector | [Joint BVP gate](nsc-joint-history-state-bvp.md) |
+| Executable homogeneous shift variation and duration-independent nonexistence certificate | [General-KS history gate](nsc-general-ks-same-action-history.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -103,6 +104,10 @@ The joint BVP audit now excludes dynamic seed evolution through its initial
 constraints and bounds the endpoint-state nonuniqueness directly. It names the
 missing general-KS same-action history functional without adding a duration or
 source.
+The general-KS owner now executes the independent momentum variation and
+excludes the entire frequency-diagonal homogeneous no-interface class from the
+locked seed. No interior optimizer is run after this necessary constraint
+fails.
 
 ## Provenance and inspection
 
@@ -110,7 +115,7 @@ source.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the twenty-three later records are indexed separately.
+unchanged; the twenty-four later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
