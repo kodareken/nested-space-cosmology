@@ -240,6 +240,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | Coupled evolution has an exact state-data gate | The radius vertex is nonzero, so later pressure requires the actual mode covariance | [Coupled evolution gate](docs/nsc-coupled-ctp-metric-evolution.md) |
 | The retained Gaussian state is now explicit | A deterministic payload stores all 1,904 physical covariance blocks and reconstructs the old tensor | [Mode-resolved state](docs/nsc-mode-resolved-cauchy-state.md) |
 | A declared history gives a unitary Cauchy map | Two endpoint-identical histories preserve CAR but produce different $U$, so the physical history remains the selector | [Landau Cauchy gate](docs/nsc-landau-cauchy-isometry.md) |
+| The joint BVP has a measured uniqueness obstruction | Route A fails its seed constraints and route B gives distinct state histories at the same endpoints | [Joint BVP gate](docs/nsc-joint-history-state-bvp.md) |
 
 The background projection uses the exact completed tensor on the stored
 Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
@@ -285,11 +286,17 @@ endpoint data and preserve unitarity below `1.2e-14`, but their maps differ by
 finite `r_star` stress; selecting either control would insert an unowned
 history duration/profile.
 
+The joint history/state gate now selects the explicit stop route C. The two
+endpoint-compatible controls differ by `0.192089816` in their final covariance,
+while the unit-radius seed still fails both initial ADM constraints. The
+missing selector is the executable general-KS variation of the already
+declared CTP action, including fourth-order, local and boundary histories.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 22-record development update](docs/development-update-2026-09-10.md)
+3. [The 23-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

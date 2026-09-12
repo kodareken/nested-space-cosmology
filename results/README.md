@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains twenty-two records.
+The separate post-preprint development snapshot now contains twenty-three records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -66,6 +66,12 @@ propagation. The [isometry note](../docs/nsc-landau-cauchy-isometry.md) shows
 that both endpoint-identical controls preserve unitarity and CAR but yield
 different maps. The same action has not yet selected the physical history or
 finite selected-surface stress.
+
+The latest [nsc-joint-history-state-bvp.json](development/nsc-joint-history-state-bvp.json)
+selects the permitted nonuniqueness-and-stop route. Its
+[BVP note](../docs/nsc-joint-history-state-bvp.md) records the seed constraint
+failure, the distinct endpoint-compatible covariances and the exact missing
+same-action history selector. Coupled evolution remains closed.
 
 The original collection has one record with the preserved `current_frontier` label:
 

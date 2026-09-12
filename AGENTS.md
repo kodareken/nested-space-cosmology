@@ -128,13 +128,15 @@ and reconstructs the old tensor; occupations are no longer the missing data.
 The conditional Landau propagator also exists for a supplied ADM history, but
 endpoint-identical controls produce different maps. Do not select one as the
 physical history without a same-action equation or joint boundary-value solve.
+The joint BVP audit now proves that route A fails at the seed and route B is
+non-unique under every currently executable condition.
 
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
 angular refinement or scale scan does not advance the active gate. The next
-owner is a same-action history-selection equation or joint history/state
-boundary-value solve, together with general-KS fourth-order reference and local
-induced providers. Only then may joint CTP/metric stepping resume. Full
+owner is `GeneralKSSameActionHistoryFunctional`: the history variation of the
+declared CTP action with general-KS fourth-order, local and boundary providers.
+Only then may joint CTP/metric stepping resume. Full
 physical couplings and observational predictions remain open.
 
 At common dimensional energy, parent normalization gives

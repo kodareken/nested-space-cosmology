@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.15.0 · conditional Landau Cauchy propagation, 12 September 2026<br>
+Version 0.16.0 · joint history/state BVP gate, 12 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -56,8 +56,10 @@ Cauchy state needed to recalculate pressure on that changed geometry. That
 seed state is now serialized channel by channel and reconstructs the completed
 unit-radius tensor. Conditional blockwise propagation is unitary for every
 supplied history, while endpoint-identical histories give different maps.
+The joint boundary-value audit therefore selects a measured nonuniqueness stop
+and identifies the absent executable same-action history variation.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and twenty-two post-preprint
+100 preprint records and twenty-three post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -887,6 +889,31 @@ $$
 
 This finite witness shows that the endpoint tuple does not select the physical Cauchy map. The controls are not metric solutions, and neither is promoted to the history in $E_g$. Consequently the finite $r_\star$ stress, its null signs and its updated constraints remain undefined ([Landau Cauchy gate](../results/development/nsc-landau-cauchy-isometry.json)). A same-action history-selection equation or joint history/state boundary-value solution must choose the intervening geometry before stress can be assigned.
 
+**Joint history/state boundary-value gate.** The two permitted solve routes are now evaluated against the same records. Dynamic route A cannot start because the serialized unit-radius seed has
+
+$$
+(\mathcal C_H,\mathcal C_M)
+=(-0.118944813912720,-0.0135927088490713).
+$$
+
+Two-point route B has unitary conditional maps, but its endpoint-identical controls satisfy
+
+$$
+\boxed{
+\max|C_A-C_B|=0.192089815976105,
+}
+$$
+
+so at least two distinct state histories obey every currently executable endpoint, CAR and unitarity condition. The selected result is route C: nonuniqueness bound and stop ([joint BVP record](../results/development/nsc-joint-history-state-bvp.json)). The exact missing selector is
+
+$$
+\frac{\delta\Gamma_{\rm one}^{\rm CTP}[g,C[g]]}
+     {\delta g_\Delta^A(\tau)}=0,
+\qquad A\in\{N,\beta,q_{\rm ADM},r\},
+$$
+
+implemented with the general-KS fourth-order reference, local induced history and boundary/interface variation. This is a missing executable part of the declared action rather than a new law. No finite stress or diagnostic duration is selected.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -938,7 +965,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The twenty-two
+finite Casimir, and link responses remain. The twenty-three
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -946,17 +973,17 @@ binding. The positive compact completion closes the free-Gaussian neck tensor,
 and its proper-volume/clock projection closes the local child ledger. The
 initial ADM gate identifies the density and momentum mismatch; the
 geometry-from-source follow-up closes it and makes joint evolution the next
-owner. Conditional Cauchy maps now exist, while physical history selection and
-general-history reference/local allocation remain before joint evolution.
+owner. Conditional Cauchy maps now exist, and the BVP gate identifies the
+general-KS same-action history variation that remains before joint evolution.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate twenty-two-record development snapshot, imported
-through laboratory commit $02544d3$, carries the common-source, scale-binding,
-constraint closure, mode-resolved state and conditional Cauchy maps. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate twenty-three-record development snapshot, imported
+through laboratory commit $234f03b$, carries the common-source, constraint
+closure, mode-resolved state, conditional Cauchy maps and joint BVP gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 

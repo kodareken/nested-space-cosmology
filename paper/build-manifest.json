@@ -1,10 +1,10 @@
 {
-  "bytes": 1778602,
+  "bytes": 1827379,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "be6c42a6b102d39c0f0c5d68553df03cc1fbc969de18319ad7cde006792b5b1c",
+  "metadata_sha256": "d282fbb6b85622ee42210e714b6d8754c3413051aee3fa735c69cbe3a207f2e2",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 38,
-  "pdf_sha256": "60556ff1b4642ca35f90c4a941cc457b288ddd7e5959a8d057d5dc84480113fe",
+  "pdf_sha256": "2cca1437b0f5bfd9623d3b1300d1a3d13f5f87c4d833f200154921790d07c8f4",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -38,6 +38,10 @@
     {
       "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
       "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
+    },
+    {
+      "path": "results/development/nsc-joint-history-state-bvp.json",
+      "sha256": "5b08cd6f1453ae006cbd7812c781869e96c8f058d2882544a3275da2325ce5e0"
     },
     {
       "path": "results/development/nsc-landau-cauchy-isometry.json",
@@ -77,10 +81,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "402e6a10f522a4fce98d938e12f12bfa2935aae7df9051c36fd7e7778e459c93"
+      "sha256": "69a7bb3bc5ecc93cbf4f46718c40302e1af09d49e080c0e0bd44ce704471b728"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "2188627e70b9c5d9ba8a5bf1a95be1b9c599251622113ac6e0949bf931ca8ac1",
-  "version": "0.15.0"
+  "source_sha256": "3f7bbe00f945a755ac87468e26516c7de7acf6fb0ad6398ebf2f7c41d9a9211e",
+  "version": "0.16.0"
 }
