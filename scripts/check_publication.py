@@ -80,6 +80,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-constraint-complete-neck.md",
     "docs/nsc-coupled-ctp-metric-evolution.md",
     "docs/nsc-mode-resolved-cauchy-state.md",
+    "docs/nsc-landau-cauchy-isometry.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

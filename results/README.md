@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains twenty-one records.
+The separate post-preprint development snapshot now contains twenty-two records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -59,6 +59,13 @@ authenticates a content-addressed NPZ with every retained covariance block. Its
 ordering, half-density basis, reference allocation, CAR bounds and old-surface
 moment reconstruction. Landau-slice transport and full selected-history stress
 remain open.
+
+The latest [nsc-landau-cauchy-isometry.json](development/nsc-landau-cauchy-isometry.json)
+and its authenticated U/history payload implement conditional blockwise Dirac
+propagation. The [isometry note](../docs/nsc-landau-cauchy-isometry.md) shows
+that both endpoint-identical controls preserve unitarity and CAR but yield
+different maps. The same action has not yet selected the physical history or
+finite selected-surface stress.
 
 The original collection has one record with the preserved `current_frontier` label:
 

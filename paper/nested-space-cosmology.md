@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.14.0 · mode-resolved Gaussian Cauchy state, 11 September 2026<br>
+Version 0.15.0 · conditional Landau Cauchy propagation, 12 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -54,9 +54,10 @@ normal and density to select a replacement neck that closes both constraints.
 The first coupled step then identifies the missing mode-resolved Gaussian
 Cauchy state needed to recalculate pressure on that changed geometry. That
 seed state is now serialized channel by channel and reconstructs the completed
-unit-radius tensor.
+unit-radius tensor. Conditional blockwise propagation is unitary for every
+supplied history, while endpoint-identical histories give different maps.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and twenty-one post-preprint
+100 preprint records and twenty-two post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -869,6 +870,23 @@ $$
 
 The finite $r_\star$ stress also requires the existing fourth-order reference and local induced allocation as general Kantowski--Sachs history providers. Those two owners, rather than occupations or integrated moments, now gate metric evolution.
 
+**Conditional Landau Cauchy propagation.** The serialized state is now connected to a blockwise history API. For a declared homogeneous ADM history,
+
+$$
+H_{jn}=N\left[-m_j\sigma_1+\frac{\lambda_n}{r}\sigma_2
++\frac{k}{a_\parallel}\sigma_3\right]-\beta k I,
+$$
+
+and exact midpoint exponentials give $U[\mathrm{history}]$ and $C_L=UC_0U^\dagger$. Two smooth diagnostic histories share all recorded seed and Landau endpoint data. Both preserve unitarity below $1.2\times10^{-14}$ and retain the covariance spectrum, but
+
+$$
+\boxed{
+\max\left|U_{0.5}-U_{1.0}\right|=1.99966699255.
+}
+$$
+
+This finite witness shows that the endpoint tuple does not select the physical Cauchy map. The controls are not metric solutions, and neither is promoted to the history in $E_g$. Consequently the finite $r_\star$ stress, its null signs and its updated constraints remain undefined ([Landau Cauchy gate](../results/development/nsc-landau-cauchy-isometry.json)). A same-action history-selection equation or joint history/state boundary-value solution must choose the intervening geometry before stress can be assigned.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -920,7 +938,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The twenty-one
+finite Casimir, and link responses remain. The twenty-two
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -928,7 +946,7 @@ binding. The positive compact completion closes the free-Gaussian neck tensor,
 and its proper-volume/clock projection closes the local child ledger. The
 initial ADM gate identifies the density and momentum mismatch; the
 geometry-from-source follow-up closes it and makes joint evolution the next
-owner. The mode payload is now serialized; the physical Landau Cauchy map and
+owner. Conditional Cauchy maps now exist, while physical history selection and
 general-history reference/local allocation remain before joint evolution.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
@@ -936,9 +954,9 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate twenty-one-record development snapshot, imported
-through laboratory commit $4a4dc82$, carries the common-source, scale-binding,
-completed neck-source, constraint closure and mode-resolved state. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate twenty-two-record development snapshot, imported
+through laboratory commit $02544d3$, carries the common-source, scale-binding,
+constraint closure, mode-resolved state and conditional Cauchy maps. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 

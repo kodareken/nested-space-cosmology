@@ -17,6 +17,7 @@ claim.
 | The tensor can select valid replacement geometry | Its Landau frame and density determine a constraint-complete Kantowski--Sachs neck |
 | Future pressure needs the full Gaussian state | Four integrated stress moments do not determine the mode commutators under the changed metric |
 | The seed Gaussian state is now inspectable | All 1,904 retained covariance blocks are serialized and reconstruct the completed tensor |
+| Cauchy propagation is history dependent | Conditional maps are unitary, while equal endpoint data produce different propagated states |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -26,7 +27,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `4a4dc82`, now contains twenty-one post-preprint records.
+through laboratory commit `02544d3`, now contains twenty-two post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -150,6 +151,20 @@ residual $9.11\times10^{-13}$. The physical Landau Cauchy isometry and the
 general-KS fourth-order/local source history are not determined by endpoint
 $(v,\eta,r_\star)$, so finite selected-surface stress and metric evolution
 remain gated on those two explicit owners.
+
+The [Landau Cauchy-isometry owner](nsc-landau-cauchy-isometry.md) now computes
+the blockwise time-ordered Dirac exponential for a supplied ADM history. Two
+smooth histories with identical seed and Landau endpoint data give
+
+$$
+\max\lvert U_{0.5}-U_{1.0}\rvert=1.99966699255,
+$$
+
+while each satisfies $\lVert U^\dagger U-I\rVert<1.2\times10^{-14}$ and
+preserves the CAR spectrum. This makes the selection issue finite and exact:
+the endpoint tuple does not determine the physical $U_{L0}$. Neither control
+is promoted to a metric history, so a unique finite $r_\star$ stress and its
+updated constraints remain undefined.
 
 ## 1. Shared mass and visible response
 
@@ -315,8 +330,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains twenty-one.
-[The development index](development-update-2026-09-10.md) links all twenty-one
+[the later snapshot](../results/development-snapshot.json) contains twenty-two.
+[The development index](development-update-2026-09-10.md) links all twenty-two
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`4a4dc82b2f0e31476b882209a9316d956fd6f448`. It contains twenty-five derivation
-notes, twenty-one compact result records, twenty-one generators, seventeen implementation
-modules, one binary state artifact and eight focused tests. The 93 scientific files are imported
+`02544d31cb007fe94abe3eea7a1fa81419210f82`. It contains twenty-six derivation
+notes, twenty-two compact result records, twenty-two generators, eighteen implementation
+modules, two active binary artifacts and eight focused tests. The 98 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -50,6 +50,7 @@ statement:
 | Source-selected Landau normal and areal radius closing both constraints | [Constraint-complete neck](nsc-constraint-complete-neck.md) |
 | Same-covariance re-evaluation gate before the first coupled metric step | [Coupled evolution gate](nsc-coupled-ctp-metric-evolution.md) |
 | Deterministic serialization and reconstruction of every retained Gaussian mode covariance | [Mode-resolved state](nsc-mode-resolved-cauchy-state.md) |
+| Conditional unitary Cauchy maps and a finite endpoint-history nonuniqueness witness | [Landau Cauchy gate](nsc-landau-cauchy-isometry.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -94,6 +95,9 @@ The new mode-state payload now persists all 1,904 retained covariance blocks
 and reconstructs the completed seed tensor below `9.2e-13`. This closes the
 serialization/CAR half of the gate. A physical tilted-slice Cauchy isometry and
 general-KS fourth-order/local history evaluation remain before metric stepping.
+The conditional propagator now evolves all mode blocks unitarily for a supplied
+history. Endpoint-identical controls give different U, so no physical history
+or finite selected-surface stress is chosen by the current endpoint data.
 
 ## Provenance and inspection
 
@@ -101,7 +105,7 @@ general-KS fourth-order/local history evaluation remain before metric stepping.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the twenty-one later records are indexed separately.
+unchanged; the twenty-two later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific

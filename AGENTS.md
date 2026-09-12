@@ -125,14 +125,17 @@ Gaussian Cauchy state, so future pressure cannot be reconstructed from its four
 moments. The trajectory stops at `T=0` before a surrogate fluid is introduced.
 The subsequent mode-state artifact now serializes every retained covariance
 and reconstructs the old tensor; occupations are no longer the missing data.
+The conditional Landau propagator also exists for a supplied ADM history, but
+endpoint-identical controls produce different maps. Do not select one as the
+physical history without a same-action equation or joint boundary-value solve.
 
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
 angular refinement or scale scan does not advance the active gate. The next
-owner is the physical Dirac Cauchy isometry to the tilted Landau slice together
-with general-KS fourth-order reference and local induced history providers.
-Only then may joint CTP/metric stepping resume. Full physical couplings and
-observational predictions remain open.
+owner is a same-action history-selection equation or joint history/state
+boundary-value solve, together with general-KS fourth-order reference and local
+induced providers. Only then may joint CTP/metric stepping resume. Full
+physical couplings and observational predictions remain open.
 
 At common dimensional energy, parent normalization gives
 
