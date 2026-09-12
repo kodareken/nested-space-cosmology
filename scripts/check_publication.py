@@ -83,6 +83,10 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-landau-cauchy-isometry.md",
     "docs/nsc-joint-history-state-bvp.md",
     "docs/nsc-general-ks-same-action-history.md",
+    "docs/nsc-general-ks-reference.md",
+    "docs/nsc-general-ks-local-history.md",
+    "docs/nsc-tilted-landau-interface.md",
+    "docs/nsc-extended-tilted-history-gate.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

@@ -338,11 +338,65 @@
       },
       "generator": "scripts/derive_nsc_general_ks_same_action_history.py",
       "output": "results/development/nsc-general-ks-same-action-history.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "strings, booleans, integers, keys, input and source hashes",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_general_ks_reference.py",
+      "output": "results/development/nsc-general-ks-reference.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "schema, strings, booleans, shapes and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-11,
+        "float_rtol": 3e-11
+      },
+      "generator": "scripts/derive_nsc_general_ks_local_history.py",
+      "output": "results/development/nsc-general-ks-local-history.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "keys, strings, booleans, integer ranks, hashes, dtypes and shapes",
+        "exceptions": [],
+        "fields": "all JSON fields and artifact arrays",
+        "float_atol": 3e-12,
+        "float_rtol": 3e-12
+      },
+      "generator": "scripts/derive_nsc_tilted_landau_interface.py",
+      "output": "results/development/nsc-tilted-landau-interface.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "schema, strings, booleans and source/input hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_extended_tilted_history_gate.py",
+      "output": "results/development/nsc-extended-tilted-history-gate.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "5f2ff3a1f844d07d9d4af7e9c45ea40d5632012a",
+  "source_commit": "f30620550e51add143d6a340a3fdf059c7547751",
   "source_files": [
     {
       "bytes": 3154,
@@ -873,10 +927,95 @@
       "bytes": 3052,
       "path": "src/recursive_horizons/nsc_general_ks_same_action_history.py",
       "sha256": "7df80364a6542f7dc1f3ccbabf520efeb27bfa19ff00eed581be7842bf111471"
+    },
+    {
+      "bytes": 3011,
+      "path": "docs/nsc-general-ks-reference.md",
+      "sha256": "3df344bf336c18b0236c0656cb30bd3f66bc05e09e7afcef2432700d0a8490bb"
+    },
+    {
+      "bytes": 4643,
+      "path": "results/development/nsc-general-ks-reference.json",
+      "sha256": "6c8d80297b5cafcb0e61815cd5a425d9b45364bddc5f89e3a4a824b974c5a146"
+    },
+    {
+      "bytes": 9699,
+      "path": "scripts/derive_nsc_general_ks_reference.py",
+      "sha256": "edd9faae1e28aed7142013de242542ce715b84145017c279fd7eab3f2d713a5b"
+    },
+    {
+      "bytes": 9310,
+      "path": "src/recursive_horizons/nsc_general_ks_reference.py",
+      "sha256": "e789fb856d3a1d76c08ee02c4c0c53746b3e8831b57ab0ac3150bc01153851f6"
+    },
+    {
+      "bytes": 2262,
+      "path": "docs/nsc-general-ks-local-history.md",
+      "sha256": "c8fe1dd63fa1d7182867e0c7d29188a2ce6a763efd09cdbc6654963c2c57aab7"
+    },
+    {
+      "bytes": 39906,
+      "path": "results/development/nsc-general-ks-local-history.json",
+      "sha256": "b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e"
+    },
+    {
+      "bytes": 12076,
+      "path": "scripts/derive_nsc_general_ks_local_history.py",
+      "sha256": "b248b0b3633b347f9c1edd2969b2d657b4b936708117065e4aed2cbb6ad39dac"
+    },
+    {
+      "bytes": 7934,
+      "path": "src/recursive_horizons/nsc_general_ks_local_history.py",
+      "sha256": "533678f69c994dc5cac598bc54ca52922d58bdf5716371431306b82f73b7b866"
+    },
+    {
+      "bytes": 3785,
+      "path": "docs/nsc-tilted-landau-interface.md",
+      "sha256": "1ed1829891ec42d5d9d12a7932d76a8e16ae422e8be59f38ae28c19cfc6dbb2f"
+    },
+    {
+      "bytes": 59802,
+      "path": "results/development/nsc-tilted-landau-interface.json",
+      "sha256": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a"
+    },
+    {
+      "bytes": 16385,
+      "path": "scripts/derive_nsc_tilted_landau_interface.py",
+      "sha256": "f8fb4e3ad94433f84931115b6ca8fa250900fb02a68a5984734c722209c49fd9"
+    },
+    {
+      "bytes": 6839,
+      "path": "src/recursive_horizons/nsc_tilted_landau_interface.py",
+      "sha256": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2"
+    },
+    {
+      "bytes": 14321218,
+      "path": "results/development/artifacts/nsc-tilted-landau-interface.0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4.npz",
+      "sha256": "0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4"
+    },
+    {
+      "bytes": 1980,
+      "path": "docs/nsc-extended-tilted-history-gate.md",
+      "sha256": "4c9b07482311c8ba95988cae2416f5049543e508ff8f83a28a4521d94fe32b4c"
+    },
+    {
+      "bytes": 5628,
+      "path": "results/development/nsc-extended-tilted-history-gate.json",
+      "sha256": "2adaeb34a04bbc4ab3b82607d1770941378b7df7a3bca63b7cbe2e23115c80fa"
+    },
+    {
+      "bytes": 7216,
+      "path": "scripts/derive_nsc_extended_tilted_history_gate.py",
+      "sha256": "daa26999b0234daf8b8ab92ed9592d41ad36a4db02f46fac6918e3d249bf7261"
+    },
+    {
+      "bytes": 1553,
+      "path": "src/recursive_horizons/nsc_extended_tilted_history_gate.py",
+      "sha256": "a23a44c6127a8ec141af33d1e5e33812ba8cc1b2d10593a6bcdc8f827f80559e"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 24 post-preprint records plus two active state/history payloads, outside the 100-record release",
+  "status": "development snapshot; 28 post-preprint records plus three active state/history/interface payloads, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }

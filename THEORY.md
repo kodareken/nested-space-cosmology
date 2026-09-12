@@ -384,6 +384,7 @@ geometry defines the Dirac spectrum
 | Conditional Landau Cauchy propagation | Every declared KS history gives a unitary CAR-preserving map, while endpoint-identical histories demonstrate physical path dependence |
 | Joint history/state BVP gate | The seed constraints exclude direct evolution and the endpoint problem has at least two distinct admissible state histories |
 | General-KS same-action history | The homogeneous shift variation proves nonexistence for the locked frequency-diagonal no-interface state class |
+| Extended tilted history components | General-KS reference, node-wise local forces and weighted frequency-mixing interface now expose separate residuals; their boundary-action selector remains open |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)

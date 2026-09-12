@@ -1,0 +1,1407 @@
+{
+  "comparison": {
+    "exact": "keys, strings, booleans, integer ranks, hashes, dtypes and shapes",
+    "exceptions": [],
+    "fields": "all JSON fields and artifact arrays",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-12
+  },
+  "domain": {
+    "boundary_parent_child_orientation": {
+      "N_child_outward": "+u'_child/u_child=-w0+E*m_child",
+      "N_parent_outward": "-u'_parent/u_parent=w0-E*m_parent",
+      "child_interval": "rho_in_[-R, 0]_cosmological",
+      "child_outward_normal": "at_rho=0_outward_normal_is_plus_d_rho",
+      "geometry_source": "black-universe chart: R_4->0 as rho->+inf (parent), R_4=-36*pi as rho->-inf (child)",
+      "ordinary_logarithmic_derivative": "u'/u=-w+E*m",
+      "oriented_jump": "N_parent+N_child=E*(m_child-m_parent)",
+      "oriented_jump_residual": "0",
+      "parent_interval": "rho_in_[0, R]_asymptotically_flat",
+      "parent_outward_normal": "at_rho=0_outward_normal_is_minus_d_rho",
+      "w0_cancels_in_the_jump": true
+    },
+    "curvature_boundary_allocation": "Euler, box-R and induced boundary variations remain separate in the imported first-order four-dimensional EFT owner",
+    "imported_oriented_identity_transmission_residual": 0.0,
+    "imported_spatial_boundary_domain": "common coordinate spin frame: psi_parent(0)=psi_child(0); parent normal=-d_rho, child normal=+d_rho",
+    "imported_spatial_kernel_scope": "spatial finite interval on fixed r=sqrt(1+rho^2); no PG stationary map across horizon is evaluated",
+    "in_scope": "33 retained symmetry channels; arbitrary dense frequency/spin unitary V_c inside each channel; quadrature-weighted tilted Cauchy norm",
+    "out_of_scope": "mixing different angular/compact channels, a selected hypersurface embedding/history, new boundary shell, finite stress evaluation, and metric stepping"
+  },
+  "gate": {
+    "channel_block_rank_pass": true,
+    "coupled_evolution_reopened": false,
+    "extended_existence_or_nonexistence_claimed": false,
+    "extended_history_gate_ready_from_this_owner": true,
+    "frequency_mixing_CAR_witness_pass": true,
+    "physical_frequency_mixing_kernel_selected": false,
+    "weighted_interface_variation_pass": true
+  },
+  "input_hashes": {
+    "results/development/curvature-eft.json": "21dea11100127a4f1f249fd1597b19539022658753ec6b9ad5b9c6384ca00bd8",
+    "results/development/nsc-constraint-complete-neck.json": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/nsc-3-boundary-response.json": "20bda4d3600724466354084cffcaad0d63debde19020b71708926667b746c767",
+    "results/nsc-8-chiral-boundary.json": "9bbf676447b9a6fb68966dfeab1ea798834e478e23501e9757fc8e79027c0f07"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "occupations_or_parameters_refitted": false,
+    "zeta": 15.785319939652627
+  },
+  "owner": "TransmittingTiltedLandauInterface",
+  "payload": {
+    "allow_pickle": false,
+    "arrays": {
+      "K_coordinate_frequency_mixing_values": {
+        "dtype": "<c16",
+        "sha256": "31ec4f40d6e6e0d7e7f78d6cced54133ee592f3005ff5492f2854d43b8cb1908",
+        "shape": [
+          447488
+        ]
+      },
+      "U_frequency_mixing_values": {
+        "dtype": "<c16",
+        "sha256": "56298413db82c2f3e335907570290e7205a45c3e362ed3b080a124647ff66e1f",
+        "shape": [
+          447488
+        ]
+      },
+      "block_value_offsets": {
+        "dtype": "<i8",
+        "sha256": "12777020f30b533980ea47c9929e9a3eb8ea3a8ea7b08897eadce7bb180e34fd",
+        "shape": [
+          34
+        ]
+      },
+      "channel_dimensions": {
+        "dtype": "<i8",
+        "sha256": "710d2de49b800007778dc12c41138a27bad65b4da09bda2058a2a47bdbf116b9",
+        "shape": [
+          33
+        ]
+      }
+    },
+    "bytes": 14321218,
+    "format": "deterministic uncompressed NPZ; complete channel-block witness matrices",
+    "path": "results/development/artifacts/nsc-tilted-landau-interface.0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4.npz",
+    "sha256": "0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4"
+  },
+  "physical_selector": {
+    "exact_next_owner": "same-action mode-resolved transmitting boundary scattering/embedding operator that selects one V_c in every retained channel",
+    "finite_stress_evaluated": false,
+    "interface_T01_assigned": null,
+    "reason": "the current finite spatial boundary response and Landau endpoint constrain the weighted isometry but provide no mode-resolved frequency kernel or intervening embedding",
+    "selected": false,
+    "status": "OPEN",
+    "updated_nulls_or_constraints": null
+  },
+  "rank_nonuniqueness_certificate": {
+    "admissible_family_real_dimension_and_linearized_nullity": 447488,
+    "channels": 33,
+    "endpoint_selects_unique_kernel": false,
+    "frequency_nodes": 1904,
+    "full_block_map_rank": 3808,
+    "full_block_map_rank_defect": 0,
+    "identity_family_element_frobenius": 61.70899448216605,
+    "identity_to_mixing_witness_frobenius": 86.51011501552865,
+    "real_kernel_unknowns": 894976,
+    "reason": "positive G0 and GL reduce the endpoint equation to unrestricted V_c dagger V_c=I in every retained channel",
+    "total_canonical_dimension": 3808,
+    "weighted_isometry_constraint_jacobian_rank": 447488
+  },
+  "residuals": {
+    "all_channel_kernel_rank_defects_zero": true,
+    "channel_residuals": [
+      {
+        "angular_level": 0,
+        "channel_index": 0,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 0,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 1.9984014443252818e-14,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.721958498152797e-17,
+          "target_maximum_eigenvalue": 1.00000000000002,
+          "target_minimum_eigenvalue": -5.536815811309919e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 0.0,
+          "target_maximum_eigenvalue": 1.0,
+          "target_minimum_eigenvalue": 1.6209079972530295e-46
+        }
+      },
+      {
+        "angular_level": 1,
+        "channel_index": 1,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 9.992007221626409e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.3306690738754696e-16,
+          "target_maximum_eigenvalue": 1.0000000000000238,
+          "target_minimum_eigenvalue": -5.956974638339586e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 9.315588089471871e-17,
+          "target_maximum_eigenvalue": 1.0000000000000202,
+          "target_minimum_eigenvalue": -4.0547175417515516e-18
+        }
+      },
+      {
+        "angular_level": 2,
+        "channel_index": 2,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 9.103828801926284e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.3310756248777615e-16,
+          "target_maximum_eigenvalue": 1.0000000000000246,
+          "target_minimum_eigenvalue": -4.337753193574908e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 9.497831361220999e-17,
+          "target_maximum_eigenvalue": 1.0000000000000175,
+          "target_minimum_eigenvalue": -1.0233340671517872e-16
+        }
+      },
+      {
+        "angular_level": 3,
+        "channel_index": 3,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.439293542825908e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.2221394694025363e-16,
+          "target_maximum_eigenvalue": 1.000000000000025,
+          "target_minimum_eigenvalue": -8.915094328885034e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.9843433097286524e-16,
+          "target_maximum_eigenvalue": 1.0000000000000224,
+          "target_minimum_eigenvalue": -9.912047516660327e-17
+        }
+      },
+      {
+        "angular_level": 4,
+        "channel_index": 4,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.771561172376096e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.220717083251841e-16,
+          "target_maximum_eigenvalue": 1.0000000000000344,
+          "target_minimum_eigenvalue": -7.603449858027339e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 9.884900029235274e-17,
+          "target_maximum_eigenvalue": 1.0000000000000266,
+          "target_minimum_eigenvalue": -1.7617958005966755e-16
+        }
+      },
+      {
+        "angular_level": 5,
+        "channel_index": 5,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.993605777301127e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.77561177114213e-16,
+          "target_maximum_eigenvalue": 1.0000000000000284,
+          "target_minimum_eigenvalue": -7.941219201194672e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.7588479129125194e-16,
+          "target_maximum_eigenvalue": 1.0000000000000242,
+          "target_minimum_eigenvalue": -1.0362774255134743e-16
+        }
+      },
+      {
+        "angular_level": 6,
+        "channel_index": 6,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.105427357601002e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.666147490140628e-16,
+          "target_maximum_eigenvalue": 1.0000000000000258,
+          "target_minimum_eigenvalue": -7.201717610242444e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.6497708170175846e-16,
+          "target_maximum_eigenvalue": 1.000000000000023,
+          "target_minimum_eigenvalue": -1.9705033752598977e-16
+        }
+      },
+      {
+        "angular_level": 7,
+        "channel_index": 7,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.994405055138486e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.229389646152678e-16,
+          "target_maximum_eigenvalue": 1.0000000000000295,
+          "target_minimum_eigenvalue": -7.784458393729703e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 9.662311222705246e-17,
+          "target_maximum_eigenvalue": 1.0000000000000262,
+          "target_minimum_eigenvalue": -1.7788057922402315e-16
+        }
+      },
+      {
+        "angular_level": 8,
+        "channel_index": 8,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 8.43769498715119e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.6658991298631904e-16,
+          "target_maximum_eigenvalue": 1.0000000000000293,
+          "target_minimum_eigenvalue": -8.739443914104851e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 9.771162915052264e-17,
+          "target_maximum_eigenvalue": 1.0000000000000209,
+          "target_minimum_eigenvalue": -2.4673619684677494e-16
+        }
+      },
+      {
+        "angular_level": 9,
+        "channel_index": 9,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 8.43769498715119e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.6762312587852222e-16,
+          "target_maximum_eigenvalue": 1.0000000000000266,
+          "target_minimum_eigenvalue": -1.0627226698256323e-15
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.0371453549602562e-16,
+          "target_maximum_eigenvalue": 1.0000000000000182,
+          "target_minimum_eigenvalue": -2.1337198264089368e-16
+        }
+      },
+      {
+        "angular_level": 10,
+        "channel_index": 10,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 9.547918011776346e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.2204841654057886e-16,
+          "target_maximum_eigenvalue": 1.0000000000000306,
+          "target_minimum_eigenvalue": -7.210091941605292e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 9.221718907844595e-17,
+          "target_maximum_eigenvalue": 1.0000000000000233,
+          "target_minimum_eigenvalue": -1.976743859291988e-16
+        }
+      },
+      {
+        "angular_level": 11,
+        "channel_index": 11,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 8.881784197001252e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.220446049250313e-16,
+          "target_maximum_eigenvalue": 1.0000000000000273,
+          "target_minimum_eigenvalue": -8.754208821193799e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.7172168329319693e-16,
+          "target_maximum_eigenvalue": 1.0000000000000184,
+          "target_minimum_eigenvalue": -2.3089564300619706e-16
+        }
+      },
+      {
+        "angular_level": 12,
+        "channel_index": 12,
+        "compact_level": 0,
+        "dimension": 96,
+        "family": 1,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 8.43769498715119e-15,
+          "canonical_reconstruction_max_abs": 1.1188630228279524e-16,
+          "canonical_unitarity_max_abs": 4.537997605298947e-15,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 9.695359714832666,
+          "interface_variation_max_abs": 5.248613460302993e-15,
+          "interface_variation_whitened_norm": 2.3488601702828368e-14,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.2207890710983763e-16,
+          "target_maximum_eigenvalue": 1.0000000000000309,
+          "target_minimum_eigenvalue": -8.797026555050763e-16
+        },
+        "frequency_nodes": 48,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 96,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 1.1102230246251565e-15,
+          "interface_variation_whitened_norm": 7.438430214781185e-16,
+          "kernel_rank": 96,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 1.620620421972517e-16,
+          "target_maximum_eigenvalue": 1.0000000000000224,
+          "target_minimum_eigenvalue": -1.6542665768699479e-16
+        }
+      },
+      {
+        "angular_level": 0,
+        "channel_index": 13,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.993605777301127e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.2247786310271853e-16,
+          "target_maximum_eigenvalue": 1.0000000000000324,
+          "target_minimum_eigenvalue": -1.127421928964835e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.340693190393023e-17,
+          "target_maximum_eigenvalue": 1.0000000000000273,
+          "target_minimum_eigenvalue": -2.0771431294356376e-16
+        }
+      },
+      {
+        "angular_level": 1,
+        "channel_index": 14,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.661338147750939e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.376611507232129e-16,
+          "target_maximum_eigenvalue": 1.000000000000032,
+          "target_minimum_eigenvalue": -7.629881306242829e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000282,
+          "target_minimum_eigenvalue": -1.704817205087101e-16
+        }
+      },
+      {
+        "angular_level": 2,
+        "channel_index": 15,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.661338147750939e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.3306690738754696e-16,
+          "target_maximum_eigenvalue": 1.000000000000028,
+          "target_minimum_eigenvalue": -9.901372905052503e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.000000000000024,
+          "target_minimum_eigenvalue": -2.1205403359776654e-16
+        }
+      },
+      {
+        "angular_level": 3,
+        "channel_index": 16,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.439293542825908e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.8305244335018383e-16,
+          "target_maximum_eigenvalue": 1.000000000000032,
+          "target_minimum_eigenvalue": -1.088814987447945e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000295,
+          "target_minimum_eigenvalue": -1.9470093806920122e-16
+        }
+      },
+      {
+        "angular_level": 4,
+        "channel_index": 17,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.438494264988549e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.8066088919804617e-16,
+          "target_maximum_eigenvalue": 1.0000000000000413,
+          "target_minimum_eigenvalue": -9.119252278591994e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000404,
+          "target_minimum_eigenvalue": -2.0792599940028796e-16
+        }
+      },
+      {
+        "angular_level": 5,
+        "channel_index": 18,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 8.43769498715119e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.7894008272968645e-16,
+          "target_maximum_eigenvalue": 1.000000000000036,
+          "target_minimum_eigenvalue": -1.3322676295501878e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.000000000000033,
+          "target_minimum_eigenvalue": -1.173869223515295e-16
+        }
+      },
+      {
+        "angular_level": 6,
+        "channel_index": 19,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.105427357601002e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.3306690738754696e-16,
+          "target_maximum_eigenvalue": 1.0000000000000329,
+          "target_minimum_eigenvalue": -1.2151895575112484e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000293,
+          "target_minimum_eigenvalue": -1.863902145836831e-16
+        }
+      },
+      {
+        "angular_level": 7,
+        "channel_index": 20,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 9.103828801926284e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.3306690738754696e-16,
+          "target_maximum_eigenvalue": 1.0000000000000404,
+          "target_minimum_eigenvalue": -9.654866103430287e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000395,
+          "target_minimum_eigenvalue": -2.119658682548865e-16
+        }
+      },
+      {
+        "angular_level": 8,
+        "channel_index": 21,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.5503158452884236e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.7894008272968645e-16,
+          "target_maximum_eigenvalue": 1.0000000000000282,
+          "target_minimum_eigenvalue": -9.756781544882808e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000224,
+          "target_minimum_eigenvalue": -2.1740820609386083e-16
+        }
+      },
+      {
+        "angular_level": 9,
+        "channel_index": 22,
+        "compact_level": 1,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.661338147750939e-15,
+          "canonical_reconstruction_max_abs": 5.928593550334434e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.834738780885857e-15,
+          "interface_variation_whitened_norm": 2.075953710455996e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.7755575615628914e-16,
+          "target_maximum_eigenvalue": 1.000000000000031,
+          "target_minimum_eigenvalue": -1.4173969733643157e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 2.220446049250313e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 4.519259214337011e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000273,
+          "target_minimum_eigenvalue": -1.5671737884649262e-16
+        }
+      },
+      {
+        "angular_level": 0,
+        "channel_index": 23,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.327471962526033e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.775774393527721e-16,
+          "target_maximum_eigenvalue": 1.0000000000000309,
+          "target_minimum_eigenvalue": -8.382632318484862e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.5254645301448515e-17,
+          "target_maximum_eigenvalue": 1.0000000000000244,
+          "target_minimum_eigenvalue": -2.386559632847372e-16
+        }
+      },
+      {
+        "angular_level": 1,
+        "channel_index": 24,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.771561172376096e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.342213888644167e-16,
+          "target_maximum_eigenvalue": 1.0000000000000364,
+          "target_minimum_eigenvalue": -9.49050190844969e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.000000000000035,
+          "target_minimum_eigenvalue": -1.771594947731311e-16
+        }
+      },
+      {
+        "angular_level": 2,
+        "channel_index": 25,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 6.328271240363392e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.482534153247273e-16,
+          "target_maximum_eigenvalue": 1.0000000000000262,
+          "target_minimum_eigenvalue": -1.200587224408767e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.000000000000022,
+          "target_minimum_eigenvalue": -1.8218888960556283e-16
+        }
+      },
+      {
+        "angular_level": 3,
+        "channel_index": 26,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 9.2148511043888e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.9406505148178845e-16,
+          "target_maximum_eigenvalue": 1.0000000000000429,
+          "target_minimum_eigenvalue": -1.0186012065159396e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000415,
+          "target_minimum_eigenvalue": -2.5590561914408163e-16
+        }
+      },
+      {
+        "angular_level": 4,
+        "channel_index": 27,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 5.995204332975845e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.376611507232129e-16,
+          "target_maximum_eigenvalue": 1.0000000000000318,
+          "target_minimum_eigenvalue": -9.034797843229707e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000275,
+          "target_minimum_eigenvalue": -1.8462001263089922e-16
+        }
+      },
+      {
+        "angular_level": 5,
+        "channel_index": 28,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 8.215650382226158e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.342213888644167e-16,
+          "target_maximum_eigenvalue": 1.0000000000000309,
+          "target_minimum_eigenvalue": -9.583108447760105e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.000000000000028,
+          "target_minimum_eigenvalue": -1.3373799078037564e-16
+        }
+      },
+      {
+        "angular_level": 6,
+        "channel_index": 29,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 5.773159728050814e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.8305244335018383e-16,
+          "target_maximum_eigenvalue": 1.0000000000000375,
+          "target_minimum_eigenvalue": -8.156240292148423e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000324,
+          "target_minimum_eigenvalue": -1.4442437349014903e-16
+        }
+      },
+      {
+        "angular_level": 7,
+        "channel_index": 30,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 5.773159728050814e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.482534153247273e-16,
+          "target_maximum_eigenvalue": 1.0000000000000342,
+          "target_minimum_eigenvalue": -1.31104258921374e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000284,
+          "target_minimum_eigenvalue": -1.6422897140776942e-16
+        }
+      },
+      {
+        "angular_level": 8,
+        "channel_index": 31,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 5.10702591327572e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 2.482534153247273e-16,
+          "target_maximum_eigenvalue": 1.0000000000000384,
+          "target_minimum_eigenvalue": -8.495227546940746e-16
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000353,
+          "target_minimum_eigenvalue": -1.3239878216075723e-16
+        }
+      },
+      {
+        "angular_level": 9,
+        "channel_index": 32,
+        "compact_level": 2,
+        "dimension": 128,
+        "family": 2,
+        "frequency_mixing_witness": {
+          "CAR_spectrum_transport_max_abs": 7.327471962526033e-15,
+          "canonical_reconstruction_max_abs": 6.938893903907228e-17,
+          "canonical_unitarity_max_abs": 4.94869688636381e-15,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 11.224972160321823,
+          "interface_variation_max_abs": 8.792598715518665e-15,
+          "interface_variation_whitened_norm": 2.0777904041394803e-14,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 3.3306690738754696e-16,
+          "target_maximum_eigenvalue": 1.0000000000000286,
+          "target_minimum_eigenvalue": -1.2330364177157194e-15
+        },
+        "frequency_nodes": 64,
+        "identity_witness": {
+          "CAR_spectrum_transport_max_abs": 0.0,
+          "canonical_reconstruction_max_abs": 4.440892098500626e-16,
+          "canonical_unitarity_max_abs": 0.0,
+          "dimension": 128,
+          "frequency_offblock_frobenius": 0.0,
+          "interface_variation_max_abs": 8.881784197001252e-16,
+          "interface_variation_whitened_norm": 6.406994307420732e-16,
+          "kernel_rank": 128,
+          "rank_defect": 0,
+          "target_hermiticity_max_abs": 5.551115123125783e-17,
+          "target_maximum_eigenvalue": 1.0000000000000244,
+          "target_minimum_eigenvalue": -2.454348478016674e-16
+        }
+      }
+    ],
+    "declared_tolerance": 3e-11,
+    "maximum_CAR_spectrum_transport_max_abs": 1.9984014443252818e-14,
+    "maximum_canonical_unitarity_max_abs": 4.94869688636381e-15,
+    "maximum_interface_variation_max_abs": 8.834738780885857e-15,
+    "maximum_target_covariance_eigenvalue": 1.0000000000000429,
+    "maximum_whitened_interface_norm": 2.3488601702828368e-14,
+    "minimum_frequency_mixing_offblock_frobenius": 9.695359714832666,
+    "minimum_target_covariance_eigenvalue": -1.4173969733643157e-15
+  },
+  "schema": "NSC-TILTED-LANDAU-INTERFACE-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "GR_or_heat_kernel_rederived": false,
+    "diagnostic_duration_or_metric_profile_chosen": false,
+    "finite_stress_or_nulls_fabricated": false,
+    "metric_timestep_started": false,
+    "new_counterflow_or_physical_term_added": false,
+    "old_unit_radius_stress_copied": false
+  },
+  "source_hashes": {
+    "docs/nsc-tilted-landau-interface.md": "1ed1829891ec42d5d9d12a7932d76a8e16ae422e8be59f38ae28c19cfc6dbb2f",
+    "scripts/derive_nsc_tilted_landau_interface.py": "f8fb4e3ad94433f84931115b6ca8fa250900fb02a68a5984734c722209c49fd9",
+    "src/recursive_horizons/nsc_tilted_landau_interface.py": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2"
+  },
+  "status": "CONSTRUCTION PASS / PHYSICAL SELECTOR OPEN: the complete retained channel-block family is weighted-isometric and CAR preserving, including frequency-mixing witnesses, but the boundary/endpoint data do not select one physical kernel",
+  "weighted_interface_family": {
+    "B_L_half_is_U": false,
+    "admissible_group": "direct_product_c U(2*n_c)",
+    "canonical_Cauchy_map": "U_c=GL_c^(1/2) K_c G0_c^(-1/2)=V_c",
+    "coordinate_kernel": "K_c=GL_c^(-1/2) V_c G0_c^(1/2)",
+    "coordinate_metric_Landau": "GL=diag(quadrature_weight) tensor exp(-eta sigma2)",
+    "coordinate_metric_seed": "G0=diag(quadrature_weight) tensor I2",
+    "rapidity": 0.004914515272230269,
+    "spin_metric_B_L": [
+      [
+        {
+          "imag": 0.0,
+          "real": 1.0000120762544864
+        },
+        {
+          "imag": 0.004914535055193377,
+          "real": 0.0
+        }
+      ],
+      [
+        {
+          "imag": -0.004914535055193377,
+          "real": 0.0
+        },
+        {
+          "imag": 0.0,
+          "real": 1.0000120762544864
+        }
+      ]
+    ],
+    "spin_metric_inverse_sqrt": [
+      [
+        {
+          "imag": 0.0,
+          "real": 1.0000030190590643
+        },
+        {
+          "imag": -0.0024572601089832835,
+          "real": 0.0
+        }
+      ],
+      [
+        {
+          "imag": 0.0024572601089832835,
+          "real": 0.0
+        },
+        {
+          "imag": 0.0,
+          "real": 1.0000030190590643
+        }
+      ]
+    ],
+    "spin_metric_positive_sqrt": [
+      [
+        {
+          "imag": 0.0,
+          "real": 1.0000030190590643
+        },
+        {
+          "imag": 0.0024572601089832835,
+          "real": 0.0
+        }
+      ],
+      [
+        {
+          "imag": -0.0024572601089832835,
+          "real": 0.0
+        },
+        {
+          "imag": 0.0,
+          "real": 1.0000030190590643
+        }
+      ]
+    ]
+  }
+}

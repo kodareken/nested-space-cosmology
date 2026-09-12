@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains twenty-four records.
+The separate post-preprint development snapshot now contains twenty-eight records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -79,6 +79,15 @@ executes the minimal homogeneous shift variation. Its
 duration-independent nonexistence certificate for the frequency-diagonal
 no-interface class. It does not extend that result to a tilted transmitting
 interface or inhomogeneous spherical geometry.
+
+The extended tilted components are now separate records:
+[fourth-order reference](development/nsc-general-ks-reference.json),
+[local induced history](development/nsc-general-ks-local-history.json), and
+[tilted interface](development/nsc-tilted-landau-interface.json). The
+[composition gate](development/nsc-extended-tilted-history-gate.json) confirms
+that all three expose residuals. Stationarity remains open on a shared
+transmitting-boundary action that must select $V_c$ and complete the Weyl
+endpoint force.
 
 The original collection has one record with the preserved `current_frontier` label:
 

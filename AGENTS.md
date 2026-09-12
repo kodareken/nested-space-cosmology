@@ -134,12 +134,17 @@ The general-KS history owner additionally proves that no smooth stationary
 history exists in the frequency-diagonal homogeneous no-interface truncation;
 do not send this class to an optimizer.
 
+The extended tilted class now has real reference, local-history and
+frequency-mixing interface owners. Their composition remains open because the
+physical kernel and Weyl endpoint completion are not selected. Do not treat an
+identity or Fourier witness as the physical interface.
+
 Use [the current result](docs/current-result.md) as the work cursor. Reuse the
 completed tensor and its deposition ledger. Another source calculation,
 angular refinement or scale scan does not advance the active gate. The next
-Any extension must implement the general-KS fourth-order/local nodal providers
-and a transmitting tilted-interface variation, or explicitly leave the
-homogeneous class. Only then may joint CTP/metric stepping resume. Full
+The next owner is `ModeResolvedTransmittingBoundaryHistoryAction`, the already
+declared interface term that must jointly select one channel kernel and supply
+the matching endpoint metric variation. Only then may joint CTP/metric stepping resume. Full
 physical couplings and observational predictions remain open.
 
 At common dimensional energy, parent normalization gives

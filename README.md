@@ -242,6 +242,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | A declared history gives a unitary Cauchy map | Two endpoint-identical histories preserve CAR but produce different $U$, so the physical history remains the selector | [Landau Cauchy gate](docs/nsc-landau-cauchy-isometry.md) |
 | The joint BVP has a measured uniqueness obstruction | Route A fails its seed constraints and route B gives distinct state histories at the same endpoints | [Joint BVP gate](docs/nsc-joint-history-state-bvp.md) |
 | The homogeneous history variation is now executable | Its shift equation proves no stationary frequency-diagonal KS history exists from the locked seed | [General-KS history gate](docs/nsc-general-ks-same-action-history.md) |
+| The tilted/frequency-mixing components are executable | Reference and bulk/interface algebra pass; physical kernel selection and Weyl endpoint completion remain open | [Extended tilted gate](docs/nsc-extended-tilted-history-gate.md) |
 
 The background projection uses the exact completed tensor on the stored
 Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
@@ -300,11 +301,18 @@ term has zero axial momentum, while the serialized state gives
 Continuity therefore excludes every smooth frequency-diagonal no-interface KS
 history, independent of duration or radial profile.
 
+The larger tilted class now has three independent records. Fourth-order
+reference residuals pass below `7.1e-12`; node-wise local gradients pass below
+`2.1e-7`; and the transmitting interface preserves weighted current,
+unitarity and CAR below `2.4e-14`. The composition remains open because its
+Weyl endpoint residual is `93.5426453` and the boundary data leave a
+`447488`-dimensional family of admissible mixing kernels.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 24-record development update](docs/development-update-2026-09-10.md)
+3. [The 28-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

@@ -20,6 +20,7 @@ claim.
 | Cauchy propagation is history dependent | Conditional maps are unitary, while equal endpoint data produce different propagated states |
 | The present joint BVP is non-unique | The seed cannot start and the endpoint problem lacks an executable same-action history selector |
 | The homogeneous history class is decided | The complete shift ledger excludes every smooth frequency-diagonal no-interface history from the locked seed |
+| The larger tilted class now has real component owners | Reference, local bulk and weighted interface gates run separately before stationarity composition |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -29,7 +30,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `5f2ff3a`, now contains twenty-four post-preprint records.
+through laboratory commit `f306205`, now contains twenty-eight post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -205,6 +206,26 @@ stationary history exists in the frequency-diagonal no-interface KS
 truncation. A tilted transmitting interface or spatially inhomogeneous
 spherical history lies outside this certificate.
 
+The extended class now has separate executable
+[fourth-order reference](nsc-general-ks-reference.md),
+[node-wise local history](nsc-general-ks-local-history.md), and
+[tilted interface](nsc-tilted-landau-interface.md) owners. Their composition
+gives
+
+$$
+R_{\rm ref}\le 7.06\times10^{-12},\qquad
+R_{\rm local,node}=2.08\times10^{-7},\qquad
+R_{\rm interface}\le2.35\times10^{-14}.
+$$
+
+The [extended gate](nsc-extended-tilted-history-gate.md) nevertheless remains
+open: the free Weyl endpoint force is $93.54264532195464$ against a
+$3\times10^{-11}$ stationarity tolerance, and the weighted-isometry equation
+leaves $447488$ real kernel directions. The same transmitting boundary action
+must select one $V_c$ and complete that endpoint variation before
+$\delta\Gamma$ is single-valued. No optimizer, finite stress or existence
+claim is launched before then.
+
 ## 1. Shared mass and visible response
 
 In the invariant scalar-link sector,
@@ -369,8 +390,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains twenty-four.
-[The development index](development-update-2026-09-10.md) links all twenty-four
+[the later snapshot](../results/development-snapshot.json) contains twenty-eight.
+[The development index](development-update-2026-09-10.md) links all twenty-eight
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 
