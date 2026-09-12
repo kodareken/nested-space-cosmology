@@ -19,6 +19,7 @@ claim.
 | The seed Gaussian state is now inspectable | All 1,904 retained covariance blocks are serialized and reconstruct the completed tensor |
 | Cauchy propagation is history dependent | Conditional maps are unitary, while equal endpoint data produce different propagated states |
 | The present joint BVP is non-unique | The seed cannot start and the endpoint problem lacks an executable same-action history selector |
+| The homogeneous history class is decided | The complete shift ledger excludes every smooth frequency-diagonal no-interface history from the locked seed |
 | Empty uniform space defines the zero | The recursive $a_0$ projector fixes $V_{\rm full}=0$ and preserves all gradient terms |
 | Charged radius and spectral coefficients meet at one scale | The first cutoff-resolved checked branch gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ |
 | The direct MMP-LLL substitution is decided | Its recursive power is fixed, but both neck null components have the wrong sign |
@@ -28,7 +29,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `234f03b`, now contains twenty-three post-preprint records.
+through laboratory commit `5f2ff3a`, now contains twenty-four post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -186,6 +187,23 @@ The chosen result is route C: non-uniqueness bound and stop. The missing
 selector is the executable general-KS history variation of the existing CTP
 action, including its fourth-order, local and boundary terms. No finite stress
 or metric history is assigned until that owner exists.
+
+The [general-KS same-action owner](nsc-general-ks-same-action-history.md) now
+executes the independent shift variation in the minimal homogeneous class.
+Every already owned local, fourth-order-reference and magnetic contribution
+has zero homogeneous $T_{01}$, whereas the serialized state yields
+
+$$
+\boxed{\mathcal E_\beta(0)
+=-\frac{T_{01}}{2A}
+=-0.0135927088490713.}
+$$
+
+Smooth unitary evolution makes this nonzero source continuous, while the
+homogeneous momentum constraint requires zero on every slice. Hence no smooth
+stationary history exists in the frequency-diagonal no-interface KS
+truncation. A tilted transmitting interface or spatially inhomogeneous
+spherical history lies outside this certificate.
 
 ## 1. Shared mass and visible response
 
@@ -351,8 +369,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains twenty-three.
-[The development index](development-update-2026-09-10.md) links all twenty-three
+[the later snapshot](../results/development-snapshot.json) contains twenty-four.
+[The development index](development-update-2026-09-10.md) links all twenty-four
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

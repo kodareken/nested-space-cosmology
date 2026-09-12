@@ -36,14 +36,14 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 9681,
+      "bytes": 9885,
       "path": "AGENTS.md",
-      "sha256": "22a4a70dac0ed1f3ad32d994e865367944d024c5bde9028e821bfe4983276a3e"
+      "sha256": "8ef8c9e2299eb88ad4d845eb627f89a6a5cff525a3b7ceb3be71c52e9f86b67e"
     },
     {
       "bytes": 1056,
       "path": "CITATION.cff",
-      "sha256": "ff2af29e396fedc477508fa23b8d1bb070196a002ba63068719a90beb716d3e6"
+      "sha256": "e217792cd76cf1be867ec036ed8357be965740c2ee00273762f82781ba95b815"
     },
     {
       "bytes": 606,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 15599,
+      "bytes": 16243,
       "path": "README.md",
-      "sha256": "6ea3d2b9cdfc6737d29686a4a83116d0a04dd29b90de43b99445ce606e4ecdb3"
+      "sha256": "1dcd25905a67d4c6658a8576f4fe52b499e1d7c3615ef39bbd9b843d17c83984"
     },
     {
       "bytes": 629,
@@ -76,19 +76,19 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 14260,
+      "bytes": 14408,
       "path": "THEORY.md",
-      "sha256": "c44568ec494da33fe33a1db8d0de948623fd5d5f75ea6a32ca67c6c034fe3cd0"
+      "sha256": "0469f6a99c17a130b87aa85fa565b4410479782c71bb5ab8e9fc376ca0484c31"
     },
     {
-      "bytes": 16310,
+      "bytes": 17177,
       "path": "docs/current-result.md",
-      "sha256": "8e9f2cdbe367598e8dfdd9be47040d773c2ab81fe88528c5c51297734c28ed8e"
+      "sha256": "21c31a148202903d7421982661646d52d4d2076321d4b51417d04a069f87d65b"
     },
     {
-      "bytes": 9158,
+      "bytes": 9546,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "dd382fdce5d167ec4c89ba870498ee967ee5d04cf469495a70ee30df75b6356f"
+      "sha256": "238e329248da43bc1b1cbbbc7c75708bb176cc76efe40b05ecaa527c5a17586c"
     },
     {
       "bytes": 3154,
@@ -264,6 +264,11 @@
       "bytes": 6983,
       "path": "docs/nsc-gaussian-cutoff-measure.md",
       "sha256": "6a2c715652ec974efe9336d40ddba4a6921d48bdffb2e00cb0464e4c0594c270"
+    },
+    {
+      "bytes": 2793,
+      "path": "docs/nsc-general-ks-same-action-history.md",
+      "sha256": "d7e99b7cf1b79c8f4d0cb2216db21bdee6baab6c983550c4be10b55302ade162"
     },
     {
       "bytes": 3821,
@@ -476,24 +481,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 3531,
+      "bytes": 3704,
       "path": "paper/build-manifest.json",
-      "sha256": "7788c49f53096f152d562232266fab225b7ca806396481f57d9579173d38d3f1"
+      "sha256": "980ce9c6a4ded672f9f059d05de6f19abe996b8c980111c054052b2846592cfb"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "d282fbb6b85622ee42210e714b6d8754c3413051aee3fa735c69cbe3a207f2e2"
+      "sha256": "013e46f408b5bfe7d2ec335806b854bbf0122d844b032c8cb5880f8230bc49bd"
     },
     {
-      "bytes": 119798,
+      "bytes": 121199,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "3f7bbe00f945a755ac87468e26516c7de7acf6fb0ad6398ebf2f7c41d9a9211e"
+      "sha256": "fb6e1215def2d62d472c3014aa105f07f452a0495e5d60f90b77a349af3d9cce"
     },
     {
-      "bytes": 1827379,
+      "bytes": 1855072,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "2cca1437b0f5bfd9623d3b1300d1a3d13f5f87c4d833f200154921790d07c8f4"
+      "sha256": "9ccefb00105eb1a7acfcf0b99fb20aa9f10f4129f40bd0995c11060107fc2b48"
     },
     {
       "bytes": 1144,
@@ -511,14 +516,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 8195,
+      "bytes": 8621,
       "path": "results/README.md",
-      "sha256": "f78267550248c2ff570dc29fe1b423b5dc9876566891b9fc0a091d3b0e7e204d"
+      "sha256": "acc21567caf8adf4a788f91b06bde92a9d358d6228bc7f8b0ba9b9753b9f3be2"
     },
     {
-      "bytes": 28401,
+      "bytes": 29577,
       "path": "results/development-snapshot.json",
-      "sha256": "359d4f931c3e750263beadf62588342e36dc550312f5cca1ff2f1bfefe9b2142"
+      "sha256": "de1de260d7c3295ce4409cbdbaa687ea55292e517d9f546d210baf8e4496a6ef"
     },
     {
       "bytes": 3283,
@@ -659,6 +664,11 @@
       "bytes": 5889,
       "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
       "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
+    },
+    {
+      "bytes": 7205,
+      "path": "results/development/nsc-general-ks-same-action-history.json",
+      "sha256": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128"
     },
     {
       "bytes": 5307,
@@ -1156,9 +1166,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 54662,
+      "bytes": 54733,
       "path": "scripts/build_paper.py",
-      "sha256": "69a7bb3bc5ecc93cbf4f46718c40302e1af09d49e080c0e0bd44ce704471b728"
+      "sha256": "8f70b8ad598461fa6f07f6ec1febd3c31aa0c4209b8ec849afb4f30bbba2b84a"
     },
     {
       "bytes": 3480,
@@ -1391,9 +1401,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 16620,
+      "bytes": 16670,
       "path": "scripts/check_publication.py",
-      "sha256": "8baf5ee34f75a2cedb63c8192c0bf4d2ce83dc6207be6ccf50c80ed977060b4b"
+      "sha256": "45e993b9419a9ab634575eee9fcbf97286b4518b1622e993aa3c30707ddf805f"
     },
     {
       "bytes": 11187,
@@ -1449,6 +1459,11 @@
       "bytes": 6527,
       "path": "scripts/derive_nsc_gaussian_measure.py",
       "sha256": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907"
+    },
+    {
+      "bytes": 9781,
+      "path": "scripts/derive_nsc_general_ks_same_action_history.py",
+      "sha256": "ccb8fc6c6dbaad012e3e736c30ed19b4e02e0a266f62525a630745b3b42656da"
     },
     {
       "bytes": 8662,
@@ -1951,6 +1966,11 @@
       "sha256": "8f1508ee0c4c70ff5efd52a954e0784fb83242dd72711fe251cd87fb5929e971"
     },
     {
+      "bytes": 3052,
+      "path": "src/recursive_horizons/nsc_general_ks_same_action_history.py",
+      "sha256": "7df80364a6542f7dc1f3ccbabf520efeb27bfa19ff00eed581be7842bf111471"
+    },
+    {
       "bytes": 3305,
       "path": "src/recursive_horizons/nsc_geometric_chain.py",
       "sha256": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d"
@@ -2258,7 +2278,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.16.0",
+  "public_version": "0.17.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,

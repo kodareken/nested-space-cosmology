@@ -1,10 +1,10 @@
 {
-  "bytes": 1827379,
+  "bytes": 1855072,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "d282fbb6b85622ee42210e714b6d8754c3413051aee3fa735c69cbe3a207f2e2",
+  "metadata_sha256": "013e46f408b5bfe7d2ec335806b854bbf0122d844b032c8cb5880f8230bc49bd",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 38,
-  "pdf_sha256": "2cca1437b0f5bfd9623d3b1300d1a3d13f5f87c4d833f200154921790d07c8f4",
+  "pages": 39,
+  "pdf_sha256": "9ccefb00105eb1a7acfcf0b99fb20aa9f10f4129f40bd0995c11060107fc2b48",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -38,6 +38,10 @@
     {
       "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
       "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
+    },
+    {
+      "path": "results/development/nsc-general-ks-same-action-history.json",
+      "sha256": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128"
     },
     {
       "path": "results/development/nsc-joint-history-state-bvp.json",
@@ -81,10 +85,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "69a7bb3bc5ecc93cbf4f46718c40302e1af09d49e080c0e0bd44ce704471b728"
+      "sha256": "8f70b8ad598461fa6f07f6ec1febd3c31aa0c4209b8ec849afb4f30bbba2b84a"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "3f7bbe00f945a755ac87468e26516c7de7acf6fb0ad6398ebf2f7c41d9a9211e",
-  "version": "0.16.0"
+  "source_sha256": "fb6e1215def2d62d472c3014aa105f07f452a0495e5d60f90b77a349af3d9cce",
+  "version": "0.17.0"
 }

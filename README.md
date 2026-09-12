@@ -241,6 +241,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | The retained Gaussian state is now explicit | A deterministic payload stores all 1,904 physical covariance blocks and reconstructs the old tensor | [Mode-resolved state](docs/nsc-mode-resolved-cauchy-state.md) |
 | A declared history gives a unitary Cauchy map | Two endpoint-identical histories preserve CAR but produce different $U$, so the physical history remains the selector | [Landau Cauchy gate](docs/nsc-landau-cauchy-isometry.md) |
 | The joint BVP has a measured uniqueness obstruction | Route A fails its seed constraints and route B gives distinct state histories at the same endpoints | [Joint BVP gate](docs/nsc-joint-history-state-bvp.md) |
+| The homogeneous history variation is now executable | Its shift equation proves no stationary frequency-diagonal KS history exists from the locked seed | [General-KS history gate](docs/nsc-general-ks-same-action-history.md) |
 
 The background projection uses the exact completed tensor on the stored
 Bronnikov child geometry. Volume dilution contributes `-0.1568673338` and
@@ -292,11 +293,18 @@ while the unit-radius seed still fails both initial ADM constraints. The
 missing selector is the executable general-KS variation of the already
 declared CTP action, including fourth-order, local and boundary histories.
 
+The first executable `GeneralKSSameActionHistoryFunctional` now resolves that
+scoped class without an optimizer. Every owned homogeneous local/reference
+term has zero axial momentum, while the serialized state gives
+`T01=0.001223870156` and normalized shift residual `-0.01359270885`.
+Continuity therefore excludes every smooth frequency-diagonal no-interface KS
+history, independent of duration or radial profile.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 23-record development update](docs/development-update-2026-09-10.md)
+3. [The 24-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

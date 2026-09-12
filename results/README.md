@@ -16,7 +16,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains twenty-three records.
+The separate post-preprint development snapshot now contains twenty-four records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
@@ -72,6 +72,13 @@ selects the permitted nonuniqueness-and-stop route. Its
 [BVP note](../docs/nsc-joint-history-state-bvp.md) records the seed constraint
 failure, the distinct endpoint-compatible covariances and the exact missing
 same-action history selector. Coupled evolution remains closed.
+
+The latest [nsc-general-ks-same-action-history.json](development/nsc-general-ks-same-action-history.json)
+executes the minimal homogeneous shift variation. Its
+[history note](../docs/nsc-general-ks-same-action-history.md) gives a
+duration-independent nonexistence certificate for the frequency-diagonal
+no-interface class. It does not extend that result to a tilted transmitting
+interface or inhomogeneous spherical geometry.
 
 The original collection has one record with the preserved `current_frontier` label:
 

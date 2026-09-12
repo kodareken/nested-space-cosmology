@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.16.0 · joint history/state BVP gate, 12 September 2026<br>
+Version 0.17.0 · general-KS same-action history gate, 12 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -58,8 +58,10 @@ unit-radius tensor. Conditional blockwise propagation is unitary for every
 supplied history, while endpoint-identical histories give different maps.
 The joint boundary-value audit therefore selects a measured nonuniqueness stop
 and identifies the absent executable same-action history variation.
+Its homogeneous shift component is now executable and proves nonexistence for
+the locked frequency-diagonal no-interface history class.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and twenty-three post-preprint
+100 preprint records and twenty-four post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -914,6 +916,24 @@ $$
 
 implemented with the general-KS fourth-order reference, local induced history and boundary/interface variation. This is a missing executable part of the declared action rather than a new law. No finite stress or diagnostic duration is selected.
 
+**General-KS same-action history variation.** The minimal homogeneous owner now executes the independent shift equation before an interior collocation. In the frequency-diagonal KS class, every owned local metric invariant, parity-completed fourth-order reference and static magnetic contribution has zero normal--axial momentum. The serialized state has
+
+$$
+T_{01}=0.00122387015580509,
+$$
+
+so the locked Einstein normalization gives
+
+$$
+\boxed{
+\mathcal E_\beta(0)
+=-\frac{T_{01}}{2A}
+=-0.0135927088490713.
+}
+$$
+
+Unitary finite-mode evolution and smooth metric vertices make this quantity continuous near the seed, whereas the homogeneous momentum constraint requires it to vanish on every slice. Therefore no smooth stationary history exists in the frequency-diagonal homogeneous no-interface truncation, for any duration or radial profile ([general-KS history record](../results/development/nsc-general-ks-same-action-history.json)). Extending the calculation to a tilted frequency-mixing interface requires its transmitting boundary variation together with general-KS fourth-order and local nodal providers; this certificate does not cover that larger class.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -965,7 +985,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The twenty-three
+finite Casimir, and link responses remain. The twenty-four
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -975,15 +995,17 @@ initial ADM gate identifies the density and momentum mismatch; the
 geometry-from-source follow-up closes it and makes joint evolution the next
 owner. Conditional Cauchy maps now exist, and the BVP gate identifies the
 general-KS same-action history variation that remains before joint evolution.
+Its homogeneous shift component now excludes the no-interface truncation
+without an optimizer.
 
 The project contribution being developed is the common-action closure across these sectors. The primary ingredients retain the attribution given in their derivations and references.
 
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate twenty-three-record development snapshot, imported
-through laboratory commit $234f03b$, carries the common-source, constraint
-closure, mode-resolved state, conditional Cauchy maps and joint BVP gate. The 100-record manifest remains byte-preserved;
+42 scoped follow-ups. A separate twenty-four-record development snapshot, imported
+through laboratory commit $5f2ff3a$, carries the common-source, constraint
+closure, mode-resolved state, conditional maps and general-KS history gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison
 policies separately.
 
