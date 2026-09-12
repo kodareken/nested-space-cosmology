@@ -119,8 +119,7 @@ def _outer_covariance(upper, lower, incoming_upper, incoming_lower):
 def extract_charged_angular(config: ChargedCTPNeckConfig):
     names = (
         "frequencies", "weights", "masses_1d", "degeneracies",
-        "canonical_positive", "canonical_negative",
-        "canonical_incoming_positive", "canonical_incoming_negative",
+        "positive", "negative", "incoming_positive", "incoming_negative",
         "energy2", "energy4", "pressure2", "pressure4",
         "momentum", "transmission", "outgoing_occupation",
         "incoming_occupation", "jets",
@@ -131,9 +130,8 @@ def extract_charged_angular(config: ChargedCTPNeckConfig):
         names,
     )
     covariance = _outer_covariance(
-        values["canonical_positive"], values["canonical_negative"],
-        values["canonical_incoming_positive"],
-        values["canonical_incoming_negative"],
+        values["positive"], values["negative"],
+        values["incoming_positive"], values["incoming_negative"],
     )
     channels = []
     for index, (mass, degeneracy) in enumerate(zip(
@@ -155,8 +153,8 @@ def extract_charged_angular(config: ChargedCTPNeckConfig):
             "weight": values["weights"],
             "covariance": covariance[index],
             "reference_covariance": np.zeros_like(covariance[index]),
-            "hx": np.full_like(momentum, float(mass)),
-            "hy": np.zeros_like(momentum),
+            "hx": np.zeros_like(momentum),
+            "hy": np.full_like(momentum, float(mass)),
             "hz": momentum,
             "reference_energy": (
                 values["energy2"][index]/mass
@@ -347,6 +345,10 @@ def reconstruct_seed_tensor(arrays, channels, compact_local):
         elif channel["family"] == FAMILY_ANGULAR:
             mass = channel["angular_eigenvalue"]
             momentum = arrays["hz_seed"][sl]
+            # The legacy reducer undoes the working-basis phase before its
+            # real energy rotation.  Reproduce that same fixed basis map.
+            phase = np.diag([np.exp(0.25j*pi), np.exp(-0.25j*pi)])
+            c = np.einsum("ab,fbc,dc->fad", phase, c, phase.conj())
             energy = np.sqrt(mass*mass+momentum*momentum)
             cosine = mass/np.sqrt(2*energy*(energy-momentum))
             sine = np.sqrt((energy-momentum)/(2*energy))

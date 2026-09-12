@@ -1,0 +1,256 @@
+{
+  "comparison": {
+    "exact": "hashes, schema, labels, dtypes and shapes",
+    "exceptions": [],
+    "fields": "all JSON fields and control artifact arrays",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-12
+  },
+  "conditional_isometry_owner": {
+    "Hamiltonian": "N[-m sigma1+(lambda/r)sigma2+(k/a)sigma3]-shift*k*I",
+    "controls_are_frequency_diagonal_because_they_are_homogeneous": true,
+    "formula": "U[history]=T exp[-i integral H_ADM[history] dt] in canonical half-density blocks",
+    "frequency_mixing_interface_allowed": true,
+    "full_dense_embedding_used": false
+  },
+  "constraints": {
+    "ADM_owner_rederived": false,
+    "fixed_tensor_source_selected_residuals": {
+      "Hamiltonian": 2.220446049250313e-16,
+      "Landau_flux": 0.0,
+      "momentum": -0.0,
+      "null_product_invariance": -2.0816681711721685e-17,
+      "trace_invariance": 0.0
+    },
+    "updated_with_finite_target_stress": false
+  },
+  "control_histories": [
+    {
+      "duration": 0.5,
+      "endpoints": {
+        "a_parallel": [
+          1.9267560770332839,
+          1.9267560770332839
+        ],
+        "lapse": [
+          1.0,
+          0.9999879238913477
+        ],
+        "r": [
+          1.0,
+          0.9453283944341287
+        ],
+        "shift": [
+          -0.0,
+          -0.0025506475704496663
+        ]
+      },
+      "label": "endpoint_control_duration_0.5",
+      "points": 257
+    },
+    {
+      "duration": 1.0,
+      "endpoints": {
+        "a_parallel": [
+          1.9267560770332839,
+          1.9267560770332839
+        ],
+        "lapse": [
+          1.0,
+          0.9999879238913477
+        ],
+        "r": [
+          1.0,
+          0.9453283944341287
+        ],
+        "shift": [
+          -0.0,
+          -0.0025506475704496663
+        ]
+      },
+      "label": "endpoint_control_duration_1.0",
+      "points": 513
+    }
+  ],
+  "control_results": {
+    "long": {
+      "maximum_covariance_eigenvalue": 1.0000000000000417,
+      "maximum_unitarity_residual": 1.1879386363489175e-14,
+      "minimum_covariance_eigenvalue": -3.5106510531411366e-16
+    },
+    "maximum_U_short_minus_U_long": 1.999666992547976,
+    "same_endpoint_data": true,
+    "short": {
+      "maximum_covariance_eigenvalue": 1.0000000000000424,
+      "maximum_unitarity_residual": 8.43769498715119e-15,
+      "minimum_covariance_eigenvalue": -3.184599793506119e-16
+    }
+  },
+  "finite_selected_stress": {
+    "evaluated": false,
+    "linearized_density_used": false,
+    "null_signs": null,
+    "old_tensor_copied": false,
+    "reason": "different conditional U already give different target covariance; the general-KS fourth-order reference and local induced history are also absent"
+  },
+  "gate": {
+    "conditional_CAR_pass": true,
+    "conditional_U_unitarity_pass": true,
+    "constraints_with_updated_stress_pass": false,
+    "coupled_evolution_reopened": false,
+    "endpoint_data_select_unique_U": false,
+    "finite_rstar_stress_pass": false,
+    "full_contract_pass": false,
+    "next_owner": "joint history/state boundary-value solve or an explicit same-action history-selection equation",
+    "physical_U_L0_pass": false
+  },
+  "input_hashes": {
+    "results/development/adm-source-constraints.json": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56",
+    "results/development/nsc-constraint-complete-neck.json": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe",
+    "results/development/nsc-coupled-ctp-metric-evolution.json": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "occupations_refitted": false,
+    "zeta": 15.785319939652627
+  },
+  "payload": {
+    "arrays": {
+      "C_long": {
+        "dtype": "<c16",
+        "sha256": "3c8564452b2265cf392605352f91c03390879c110c6e8b225d9747c2baab054d",
+        "shape": [
+          1904,
+          2,
+          2
+        ]
+      },
+      "C_short": {
+        "dtype": "<c16",
+        "sha256": "7e57b3dda9b73c92bbf6b05d302e5829e2381362b176c3a5371f848269006629",
+        "shape": [
+          1904,
+          2,
+          2
+        ]
+      },
+      "U_long": {
+        "dtype": "<c16",
+        "sha256": "d636bd143e394834436ca44bf90c439308cf065599ed9cf2a027d7ac4e89eafc",
+        "shape": [
+          1904,
+          2,
+          2
+        ]
+      },
+      "U_short": {
+        "dtype": "<c16",
+        "sha256": "5eaa60e0a146bc2774dc56736e848764c01abd172dc19ce700e39b2af312a7e1",
+        "shape": [
+          1904,
+          2,
+          2
+        ]
+      },
+      "long_a": {
+        "dtype": "<f8",
+        "sha256": "9d379507a656a31d61f9e82ab3f0a3a17c0afb9b06519fc2c0b86b3c34ebea73",
+        "shape": [
+          513
+        ]
+      },
+      "long_lapse": {
+        "dtype": "<f8",
+        "sha256": "7535153b132c5e5e0da7b8d3631bdd7775b6e379e0eb89847a7d2967b09d7385",
+        "shape": [
+          513
+        ]
+      },
+      "long_r": {
+        "dtype": "<f8",
+        "sha256": "8908da53a6a1cb02751007b5c920ae8e047e2426c1bcde64637be1bd3eaa9b3a",
+        "shape": [
+          513
+        ]
+      },
+      "long_shift": {
+        "dtype": "<f8",
+        "sha256": "4f27586c95bce6a5e2cf4bbb4ccceb86751ba3c45b353cdb80adf63bbc849983",
+        "shape": [
+          513
+        ]
+      },
+      "long_time": {
+        "dtype": "<f8",
+        "sha256": "93f782efd0bc80a3b3aff23fdc0d5810d89264ea48bf8221ae6cfd7186703ad3",
+        "shape": [
+          513
+        ]
+      },
+      "short_a": {
+        "dtype": "<f8",
+        "sha256": "1a07e12871ca6d31e4065587d027acbc06c7fa01d3b0341f268ddd27ab4bdb1f",
+        "shape": [
+          257
+        ]
+      },
+      "short_lapse": {
+        "dtype": "<f8",
+        "sha256": "d753f8203fd4dc480891cca417595e078e7e2f48c0fb00e718c383835a63e6f3",
+        "shape": [
+          257
+        ]
+      },
+      "short_r": {
+        "dtype": "<f8",
+        "sha256": "205ea89ed2dfbf5b3dbce11258619968a19f56858fb3037096899e652d80adb9",
+        "shape": [
+          257
+        ]
+      },
+      "short_shift": {
+        "dtype": "<f8",
+        "sha256": "142f7cae1cbc8c8c67da4229f1a16c385868a21674b2a83a7b9fc8b9d59a3052",
+        "shape": [
+          257
+        ]
+      },
+      "short_time": {
+        "dtype": "<f8",
+        "sha256": "bbacf3a7fecdef8266ffe79d74efdc7ac1ed25f2167d10c84f95d0f0e106b376",
+        "shape": [
+          257
+        ]
+      }
+    },
+    "bytes": 521440,
+    "format": "deterministic uncompressed NPZ; diagnostic control histories",
+    "path": "results/development/artifacts/nsc-landau-cauchy-control-isometries.6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1.npz",
+    "sha256": "6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1"
+  },
+  "physical_history_gate": {
+    "circular_dependency": "the requested history would be produced by coupled metric evolution, while that evolution was forbidden until this map exists",
+    "conditional_control_U_claimed_physical": false,
+    "local_B_sqrt_used_as_U": false,
+    "reason": "the constraint record fixes endpoint data but no lapse/shift/metric history or Landau hypersurface embedding between non-isometric slices",
+    "selected": false
+  },
+  "schema": "NSC-LANDAU-CAUCHY-ISOMETRY-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "four_moment_surrogate_or_dark_fit": false,
+    "metric_time_step_started": false,
+    "new_physical_metric_ansatz_selected": false,
+    "pointwise_spin_boost_used_as_isometry": false
+  },
+  "source_hashes": {
+    "docs/nsc-landau-cauchy-isometry.md": "39c64efa9896a2d29ad07e8c1851ecf1bfe377305622eea8603ae828227d4385",
+    "scripts/derive_nsc_landau_cauchy_isometry.py": "1bf724bf98237c2a6afc1b7f8a2d393fd9b14aac019fd5c022f23ee36bfef072",
+    "src/recursive_horizons/nsc_landau_cauchy_isometry.py": "c03e5eb46c8be3078087b5f6be768c0045d350f68ff2d457eafd1c0987baac00"
+  },
+  "status": "CONDITIONAL API PASS / PHYSICAL SELECTION FAIL: each declared KS history gives a unitary CAR-preserving map, but endpoint-identical histories give different U and no same-action history selects one"
+}

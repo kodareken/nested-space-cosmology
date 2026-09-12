@@ -566,7 +566,7 @@
       },
       "covariance_seed": {
         "dtype": "<c16",
-        "sha256": "a5b077a173a28cc9a9633b57fd636000f6b9ddcf74e6c912b3a9a783ae373e29",
+        "sha256": "753de9f129e83fb402903ae342d29911868894e216ff935e8dd94cac2825c668",
         "shape": [
           1904,
           2,
@@ -582,14 +582,14 @@
       },
       "hx_seed": {
         "dtype": "<f8",
-        "sha256": "7b4586547595f5277df6329cb3805a691ca513098e87b17d8c99f77a7cb74147",
+        "sha256": "b653d79ae5e5d1d39d2da59354a0e565da685842c9a9dc37a3f4f47757a82850",
         "shape": [
           1904
         ]
       },
       "hy_seed": {
         "dtype": "<f8",
-        "sha256": "8a43098a105cbd1a86d51144a2d5185f56b2de1a4792b06f9b6d38d68a9cb55b",
+        "sha256": "e5c60d3359ff9e626e69037c2361ef80c054e67b065900f162a4986bbfb406f4",
         "shape": [
           1904
         ]
@@ -653,8 +653,8 @@
     },
     "bytes": 407306,
     "format": "deterministic uncompressed NPZ",
-    "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.69e129f485bc5f7aef717ca8a334dc9f129ef3be621aefe5c6f16208de26992f.npz",
-    "sha256": "69e129f485bc5f7aef717ca8a334dc9f129ef3be621aefe5c6f16208de26992f"
+    "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+    "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
   },
   "renormalization": {
     "LLL": "analytic conformal local term plus serialized transparent covariance",
@@ -676,10 +676,10 @@
     "allocation_details": {
       "charged_angular": {
         "T01": 0.0007463646464695638,
-        "p_parallel": -0.06223175541373042,
-        "p_sphere": -0.02697922437605356,
+        "p_parallel": -0.06223175541372457,
+        "p_sphere": -0.02697922437603939,
         "parent_Killing_power": -0.03481884803668936,
-        "rho": 0.015989038758919008
+        "rho": 0.01598903875895321
       },
       "lll_quadrature": {
         "t_u": 0.0015066452231379285,
@@ -702,23 +702,23 @@
       "parent_Killing_power": -0.057095079694874526,
       "rho": 0.10074836288678615
     },
-    "hermiticity_residual": 5.551115123125783e-17,
-    "maximum_absolute_moment_residual": 9.10632680373169e-13,
+    "hermiticity_residual": 1.9843433097286524e-16,
+    "maximum_absolute_moment_residual": 8.764378112147142e-13,
     "maximum_eigenvalue": 1.0000000000000415,
-    "minimum_eigenvalue": -2.6711217533718826e-16,
+    "minimum_eigenvalue": -2.5590561914408163e-16,
     "moment_residuals": {
       "T01": 3.874938564463193e-15,
-      "p_parallel": -1.325606291402437e-13,
-      "p_sphere": -3.890499034042705e-13,
+      "p_parallel": -1.2667644710973036e-13,
+      "p_sphere": -3.748668042646841e-13,
       "parent_Killing_power": -1.8120921430053727e-13,
-      "rho": -9.10632680373169e-13
+      "rho": -8.764378112147142e-13
     },
     "reconstructed_tensor": {
       "T01": 0.0012238701558089696,
-      "p_parallel": -0.3497880952692597,
-      "p_sphere": 0.12958962231728324,
+      "p_parallel": -0.3497880952692538,
+      "p_sphere": 0.12958962231729743,
       "parent_Killing_power": -0.057095079695055735,
-      "rho": 0.10074836288587552
+      "rho": 0.10074836288590971
     },
     "samples": 1904
   },
@@ -768,7 +768,7 @@
     "src/recursive_horizons/nsc_charged_ctp_neck.py": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
     "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
     "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
-    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "6eb9f31e9cdd7ab19a6f18642d3057952dded7319c3747abee8971cd4f59d15e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
     "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
   },
   "status": "PARTIAL PASS: all 1904 seed covariance blocks are serialized and reconstruct the unit-radius tensor; the physical Landau Cauchy isometry and new-history renormalized stress remain undefined"

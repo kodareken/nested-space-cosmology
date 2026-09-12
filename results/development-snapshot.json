@@ -296,11 +296,25 @@
       },
       "generator": "scripts/derive_nsc_mode_resolved_cauchy_state.py",
       "output": "results/development/nsc-mode-resolved-cauchy-state.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "hashes, schema, labels, dtypes and shapes",
+        "exceptions": [],
+        "fields": "all JSON fields and control artifact arrays",
+        "float_atol": 3e-12,
+        "float_rtol": 3e-12
+      },
+      "generator": "scripts/derive_nsc_landau_cauchy_isometry.py",
+      "output": "results/development/nsc-landau-cauchy-isometry.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "4a4dc82b2f0e31476b882209a9316d956fd6f448",
+  "source_commit": "02544d31cb007fe94abe3eea7a1fa81419210f82",
   "source_files": [
     {
       "bytes": 3154,
@@ -748,14 +762,14 @@
       "sha256": "877fe100b399d2a0493d9ee9fe28a02df5e087a461e2ac19b9819275b2df4ec9"
     },
     {
-      "bytes": 24207,
+      "bytes": 24210,
       "path": "results/development/nsc-mode-resolved-cauchy-state.json",
-      "sha256": "01b876b4ec42f238dd5b796079f4617c05df93a35965fec12d10e513a82e122e"
+      "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
     },
     {
       "bytes": 407306,
-      "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.69e129f485bc5f7aef717ca8a334dc9f129ef3be621aefe5c6f16208de26992f.npz",
-      "sha256": "69e129f485bc5f7aef717ca8a334dc9f129ef3be621aefe5c6f16208de26992f"
+      "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+      "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
     },
     {
       "bytes": 16011,
@@ -763,13 +777,38 @@
       "sha256": "7c2ac573b4187516b1b8951c5d90fba826a7feefec7c983e8209973b5f0ce2dd"
     },
     {
-      "bytes": 21026,
+      "bytes": 21214,
       "path": "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py",
-      "sha256": "6eb9f31e9cdd7ab19a6f18642d3057952dded7319c3747abee8971cd4f59d15e"
+      "sha256": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a"
+    },
+    {
+      "bytes": 2585,
+      "path": "docs/nsc-landau-cauchy-isometry.md",
+      "sha256": "39c64efa9896a2d29ad07e8c1851ecf1bfe377305622eea8603ae828227d4385"
+    },
+    {
+      "bytes": 8264,
+      "path": "results/development/nsc-landau-cauchy-isometry.json",
+      "sha256": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5"
+    },
+    {
+      "bytes": 521440,
+      "path": "results/development/artifacts/nsc-landau-cauchy-control-isometries.6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1.npz",
+      "sha256": "6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1"
+    },
+    {
+      "bytes": 12964,
+      "path": "scripts/derive_nsc_landau_cauchy_isometry.py",
+      "sha256": "1bf724bf98237c2a6afc1b7f8a2d393fd9b14aac019fd5c022f23ee36bfef072"
+    },
+    {
+      "bytes": 4536,
+      "path": "src/recursive_horizons/nsc_landau_cauchy_isometry.py",
+      "sha256": "c03e5eb46c8be3078087b5f6be768c0045d350f68ff2d457eafd1c0987baac00"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 21 post-preprint records plus one state payload, outside the 100-record release",
+  "status": "development snapshot; 22 post-preprint records plus two active state/history payloads, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }
