@@ -53,6 +53,7 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
         "results/development/nsc-landau-cauchy-isometry.json",
         "results/development/artifacts/nsc-landau-cauchy-control-isometries.6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1.npz",
+        "results/development/nsc-joint-history-state-bvp.json",
     ):
         if path in text:
             paths.append(path)

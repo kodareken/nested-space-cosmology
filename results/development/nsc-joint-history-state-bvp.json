@@ -1,0 +1,106 @@
+{
+  "comparison": {
+    "exact": "schema, strings, booleans and source/input/artifact hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "exact_missing_selector": {
+    "current_causal_owner_role": "evaluates a supplied finite history; it does not solve or select one",
+    "equation": "delta Gamma_one_CTP[g,C[g]] / delta g_Delta^A(tau)=0 for A=N,beta,q_ADM,r",
+    "missing_executable_part_of_declared_action": true,
+    "must_include": [
+      "blockwise ModeResolvedCauchyState Dirac evolution",
+      "general-KS fourth-order reference history",
+      "general-KS local induced coefficient history counted once",
+      "boundary/interface variation and the declared endpoint conditions"
+    ],
+    "name": "GeneralKSSameActionHistoryFunctional",
+    "new_physical_law_required": false
+  },
+  "existing_selector_audit": {
+    "CTP_energy_work_Ward": "holds for each declared unitary history; does not distinguish them",
+    "CTP_equal_history_normalization": "normalizes Gamma[g,g]=0; does not extremize the physical average history",
+    "H_sphere_zero": "endpoint condition satisfied by both controls; does not select the interior history",
+    "declared_gauge_invariant_mismatch_with_stationary_equation": null,
+    "recursive_scale_stationarity": "locks Omega/zeta but supplies no KS history functional",
+    "relational_zero_tadpole": "selects V_full=0, not lapse/shift/radius duration or profile",
+    "spherical_constraints": "restrict each Cauchy slice but do not supply the missing quantum stress history"
+  },
+  "finite_stress_and_constraints": {
+    "fabricated_value_used": false,
+    "finite_rstar_stress": null,
+    "null_signs": null,
+    "reason": "different allowed histories give different C_L before the absent history-dependent reference/local terms are evaluated",
+    "updated_constraint_residuals": null
+  },
+  "gate": {
+    "coupled_evolution_reopened": false,
+    "full_joint_BVP_pass": false,
+    "missing_selector_named_exactly": true,
+    "nonuniqueness_lower_bound_pass": true,
+    "route_A_pass": false,
+    "route_B_unique_selector_pass": false
+  },
+  "input_hashes": {
+    "results/development/causal-common-functional.json": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03",
+    "results/development/nsc-child-metric-backreaction.json": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a",
+    "results/development/nsc-constraint-complete-neck.json": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe",
+    "results/development/nsc-landau-cauchy-isometry.json": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/relational-vacuum-normalization.json": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983",
+    "results/development/spherical-action.json": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "occupation_or_parameter_refit": false,
+    "zeta": 15.785319939652627
+  },
+  "route_A_dynamic_seed": {
+    "Hamiltonian_constraint_residual": -0.11894481391271983,
+    "can_start_ADM_evolution": false,
+    "momentum_constraint_residual": -0.013592708849071286,
+    "reason": "constraints are initial-data equations and fail before a state or metric step",
+    "seed_surface": "serialized r=1 ModeResolvedCauchyState"
+  },
+  "route_B_two_point_BVP": {
+    "conditional_U_API_pass": true,
+    "finite_rstar_stress_available": false,
+    "nonuniqueness_witness": {
+      "distinct_admissible_control_count_lower_bound": 2,
+      "frobenius_C_difference": 2.3575058762776773,
+      "frobenius_U_difference": 90.06387698676542,
+      "maximum_absolute_C_difference": 0.19208981597610514,
+      "maximum_absolute_U_difference": 1.999666992547976
+    },
+    "same_endpoints": true,
+    "seed_state_serialized": true,
+    "unique_history_selected": false
+  },
+  "schema": "NSC-JOINT-HISTORY-STATE-BVP-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "diagnostic_duration_selected_physical": false,
+    "metric_timestep_started": false,
+    "new_source_channel": false,
+    "pointwise_spin_boost_used": false,
+    "unit_radius_tensor_or_linearized_density_reused": false,
+    "w_of_a_H_of_z_Hessian_or_dark_fit": false
+  },
+  "selected_route": {
+    "A_dynamic_seed_attempted": false,
+    "A_stop_is_algebraic_before_timestep": true,
+    "B_physical_history_selected": false,
+    "choice": "C_nonuniqueness_bound_and_stop"
+  },
+  "source_hashes": {
+    "docs/nsc-joint-history-state-bvp.md": "5fc2058cf062752c92bc595f4655abe3ff8cc29364620300722ba81188bcd945",
+    "scripts/derive_nsc_joint_history_state_bvp.py": "dae31933501468a433a88f42e536eedf0a5ff1b67c93b7ac1992324254eb82a8",
+    "src/recursive_horizons/nsc_joint_history_state_bvp.py": "22491b2fc5a3b89a11986088a8c9965ad3176dfc1074af5e9ff7bf24b99bb10c"
+  },
+  "status": "FAIL / ROUTE C: dynamic seed evolution fails its initial constraints, while the two-point BVP has multiple unitary state histories and no executable same-action history selector"
+}

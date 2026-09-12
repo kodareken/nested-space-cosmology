@@ -310,11 +310,25 @@
       },
       "generator": "scripts/derive_nsc_landau_cauchy_isometry.py",
       "output": "results/development/nsc-landau-cauchy-isometry.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "schema, strings, booleans and source/input/artifact hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_joint_history_state_bvp.py",
+      "output": "results/development/nsc-joint-history-state-bvp.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "02544d31cb007fe94abe3eea7a1fa81419210f82",
+  "source_commit": "234f03b5198f1d4c5d8083f4191b93cf71d9fac6",
   "source_files": [
     {
       "bytes": 3154,
@@ -805,10 +819,30 @@
       "bytes": 4536,
       "path": "src/recursive_horizons/nsc_landau_cauchy_isometry.py",
       "sha256": "c03e5eb46c8be3078087b5f6be768c0045d350f68ff2d457eafd1c0987baac00"
+    },
+    {
+      "bytes": 2859,
+      "path": "docs/nsc-joint-history-state-bvp.md",
+      "sha256": "5fc2058cf062752c92bc595f4655abe3ff8cc29364620300722ba81188bcd945"
+    },
+    {
+      "bytes": 5307,
+      "path": "results/development/nsc-joint-history-state-bvp.json",
+      "sha256": "5b08cd6f1453ae006cbd7812c781869e96c8f058d2882544a3275da2325ce5e0"
+    },
+    {
+      "bytes": 8662,
+      "path": "scripts/derive_nsc_joint_history_state_bvp.py",
+      "sha256": "dae31933501468a433a88f42e536eedf0a5ff1b67c93b7ac1992324254eb82a8"
+    },
+    {
+      "bytes": 1081,
+      "path": "src/recursive_horizons/nsc_joint_history_state_bvp.py",
+      "sha256": "22491b2fc5a3b89a11986088a8c9965ad3176dfc1074af5e9ff7bf24b99bb10c"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 22 post-preprint records plus two active state/history payloads, outside the 100-record release",
+  "status": "development snapshot; 23 post-preprint records plus two active state/history payloads, outside the 100-record release",
   "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
 }

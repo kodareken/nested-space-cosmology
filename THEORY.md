@@ -382,6 +382,7 @@ geometry defines the Dirac spectrum
 | Coupled evolution state gate | The changed radius has a nonzero source vertex, so later pressure requires the retained mode-resolved Gaussian covariance |
 | Mode-resolved Cauchy serialization | Every retained physical covariance is stored and reconstructs the completed seed tensor without a moment-fluid surrogate |
 | Conditional Landau Cauchy propagation | Every declared KS history gives a unitary CAR-preserving map, while endpoint-identical histories demonstrate physical path dependence |
+| Joint history/state BVP gate | The seed constraints exclude direct evolution and the endpoint problem has at least two distinct admissible state histories |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)
