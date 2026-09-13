@@ -385,6 +385,7 @@ geometry defines the Dirac spectrum
 | Joint history/state BVP gate | The seed constraints exclude direct evolution and the endpoint problem has at least two distinct admissible state histories |
 | General-KS same-action history | The homogeneous shift variation proves nonexistence for the locked frequency-diagonal no-interface state class |
 | Extended tilted history components | General-KS reference, node-wise local forces and weighted frequency-mixing interface now expose separate residuals; their boundary-action selector remains open |
+| Physical transmission must select a state | The remaining kernel freedom changes all 33 recorded channel covariances in a fixed basis; the full extended gate identifies the uncomputed transmitting selector and endpoint derivative |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)

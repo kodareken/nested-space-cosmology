@@ -1,5 +1,13 @@
 # Compact result archive
 
+Latest: [full extended gate](development/nsc-full-extended-history-gate.json),
+[transmitting selector](development/nsc-transmitting-boundary-selection.json),
+and [Weyl endpoint binding](development/nsc-weyl-endpoint-match.json).
+All three records report OPEN for the physical transmitting action; the
+stored-covariance probe and exact endpoint extraction are completed subchecks.
+Run only `python3 scripts/derive_nsc_transmitting_boundary_binding.py --check`
+to reproduce this new binding calculation.
+
 This directory contains the original 58-artifact v0.1.0 dependency closure that
 ends at `NSC-2-ZETA1-RECURSION-MAP`, preserved byte-for-byte, plus scoped
 follow-ups 59–88. The machine-readable order, hashes, categories, dependencies,
@@ -16,7 +24,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains twenty-eight records.
+The separate post-preprint development snapshot now contains thirty-one records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

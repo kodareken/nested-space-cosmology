@@ -305,14 +305,21 @@ The larger tilted class now has three independent records. Fourth-order
 reference residuals pass below `7.1e-12`; node-wise local gradients pass below
 `2.1e-7`; and the transmitting interface preserves weighted current,
 unitarity and CAR below `2.4e-14`. The composition remains open because its
-Weyl endpoint residual is `93.5426453` and the boundary data leave a
+diagnostic Weyl end-node gradient is `93.5426453` and the boundary data leave a
 `447488`-dimensional family of admissible mixing kernels.
+
+The [full extended binding gate](docs/nsc-full-extended-history-gate.md) now
+applies that freedom to the recorded state: all 33 channels have a
+norm-preserving direction that changes the covariance in its fixed basis.
+The eight Weyl end-node coefficients bind exactly, while the physical
+transmitting selector and its endpoint metric derivative remain OPEN.
+Those two explicit dependencies keep the geometry evolution gate closed.
 
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 28-record development update](docs/development-update-2026-09-10.md)
+3. [The 31-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

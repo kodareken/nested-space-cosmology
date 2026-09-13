@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`f30620550e51add143d6a340a3fdf059c7547751`. It contains thirty-two derivation
-notes, twenty-eight compact result records, twenty-eight generators, twenty-four implementation
-modules, three active binary artifacts and eight focused tests. The 123 scientific files are imported
+`ca6c78a6eb1fa523f1dd51def1cd7ecfb6cb4b64`. It contains 35 derivation
+notes, 31 result records, 29 generators, 25 implementation
+modules, three active binary artifacts and nine focused test files. The 132 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -57,6 +57,9 @@ statement:
 | Node-wise Einstein/Maxwell/curvature history forces and endpoint ledger | [Local induced history](nsc-general-ks-local-history.md) |
 | Weighted transmitting frequency-mixing interface family | [Tilted interface](nsc-tilted-landau-interface.md) |
 | Residual composition without premature stationarity solve | [Extended tilted gate](nsc-extended-tilted-history-gate.md) |
+| Physical transmitting selector audited against the serialized state | [Kernel selection](nsc-transmitting-boundary-selection.md) |
+| Shared endpoint basis with explicit missing derivative slots | [Weyl endpoint binding](nsc-weyl-endpoint-match.md) |
+| Full A–D composition with unevaluated residuals preserved | [Full extended gate](nsc-full-extended-history-gate.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -123,7 +126,7 @@ nonexistence result remains a passing regression.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the twenty-eight later records are indexed separately.
+unchanged; the thirty-one later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
