@@ -1,5 +1,12 @@
 # Compact result archive
 
+Physical-jet gate J→M: [known bulk jets](development/nsc-dirac-endpoint-jets.json),
+[boundary remainder](development/nsc-transmitting-boundary-remainder.json),
+[extended decision](development/nsc-physical-jet-extended-gate.json).
+The new derivative transport passes on frozen controls; physical transmitting
+jets and the two-sided boundary mismatch remain OPEN. Reproduce this record
+with `python3 scripts/derive_nsc_dirac_endpoint_jets.py --check`.
+
 Transmitting action F→H:
 [first differential](development/nsc-transmitting-ctp-variation.json),
 [metric chain rule](development/nsc-transmitting-metric-pullback.json),
@@ -32,7 +39,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains thirty-four records.
+The separate post-preprint development snapshot now contains thirty-seven records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

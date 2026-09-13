@@ -66,6 +66,10 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         "results/development/nsc-transmitting-ctp-variation.json",
         "results/development/nsc-transmitting-metric-pullback.json",
         "results/development/nsc-extended-action-completion-gate.json",
+        "results/development/nsc-dirac-endpoint-jets.json",
+        "results/development/nsc-transmitting-boundary-remainder.json",
+        "results/development/nsc-physical-jet-extended-gate.json",
+        "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
     ):
         if path in text:
             paths.append(path)

@@ -1,12 +1,16 @@
 {
-  "bytes": 1906855,
+  "bytes": 1909118,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "1ccbecdc4792ccca825c1d688a61e6036214fadcefabf002bc6bd0f53fe1eabf",
+  "metadata_sha256": "e4228a499556f0b59aafcebfe5f72e29aa02c63067834c0d617f3d751adf54f2",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 40,
-  "pdf_sha256": "a99adcc5b60db431eec37f990f18529cf6ffbc4c1491b04981f3972a0440038d",
+  "pdf_sha256": "9aaff2fbfbd4dc9533145a8621f22e102e21ae842cd9a2f8a023a2f441e7e5bb",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
+    {
+      "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
+      "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
+    },
     {
       "path": "results/development/charged-compact-ctp-completion.json",
       "sha256": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6"
@@ -40,6 +44,10 @@
       "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
     },
     {
+      "path": "results/development/nsc-dirac-endpoint-jets.json",
+      "sha256": "03de778be24325726b0de2f6046afe43e69935ce914a46338a40ccfc26a09cff"
+    },
+    {
       "path": "results/development/nsc-extended-action-completion-gate.json",
       "sha256": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464"
     },
@@ -66,6 +74,14 @@
     {
       "path": "results/development/nsc-mode-resolved-cauchy-state.json",
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+    },
+    {
+      "path": "results/development/nsc-physical-jet-extended-gate.json",
+      "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
+    },
+    {
+      "path": "results/development/nsc-transmitting-boundary-remainder.json",
+      "sha256": "c09163816af3961f53f3bd80b236ea4a7c8cb95eb75fd6d765f51568e2d41e72"
     },
     {
       "path": "results/development/nsc-transmitting-boundary-selection.json",
@@ -113,10 +129,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "f05734d4db753e1589c01d95d92bdb7158a25ebe37bc5121d6234301b3b1600a"
+      "sha256": "47f9325b8c72750ff4ac3ca88487942c6373136327ad6f91c13374d4ceb70ea3"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "aca8a78c574f68b65a318833fef154a5e5257342914c1dc790cd35ea199f99ac",
-  "version": "0.20.0"
+  "source_sha256": "fbfe569729539c8cf80a574ad7c7c7d82af8166de7dd2fd3cc63637efc1015d1",
+  "version": "0.21.0"
 }

@@ -1,6 +1,16 @@
 # What the calculations show
 
-**Latest calculation — transmitting CTP first differential.** The
+**Latest calculation — known bulk endpoint jets.** The
+[Hamiltonian-to-CTP chain](nsc-dirac-endpoint-jets.md) is now executable for
+the already owned bulk vertices, using a fixed representative block in each
+of the 33 channels on the frozen control. The derivative residual is
+`1.0276e-10`; its contraction against the existing CTP action differs by
+`4.9394e-11` (finite-difference tolerance `3e-8`). These are diagnostic bulk
+jets, not complete physical transmitting jets. The
+[J→M gate](nsc-physical-jet-extended-gate.md) remains **OPEN** for the link,
+embedding and remaining boundary derivatives.
+
+**Preceding calculation — transmitting CTP first differential.** The
 [new action differential](nsc-transmitting-ctp-variation.md) agrees with the
 existing determinant in all 33 retained channels, with maximum error
 `5.551121183780314e-12` (finite-difference tolerance `3e-8`). Common-branch
@@ -50,7 +60,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `5e20e21`, now contains thirty-four post-preprint records.
+through laboratory commit `68a4964`, now contains thirty-seven post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -412,8 +422,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains thirty-four.
-[The development index](development-update-2026-09-10.md) links all thirty-four
+[the later snapshot](../results/development-snapshot.json) contains thirty-seven.
+[The development index](development-update-2026-09-10.md) links all thirty-seven
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 
