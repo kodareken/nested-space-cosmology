@@ -476,11 +476,53 @@
       },
       "generator": "scripts/derive_nsc_transmitting_action_completion.py",
       "output": "results/development/nsc-extended-action-completion-gate.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_dirac_endpoint_jets.py",
+      "output": "results/development/nsc-dirac-endpoint-jets.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_dirac_endpoint_jets.py",
+      "output": "results/development/nsc-transmitting-boundary-remainder.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_dirac_endpoint_jets.py",
+      "output": "results/development/nsc-physical-jet-extended-gate.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "5e20e217bd539d7fce5de8224a92a802e4d398c4",
+  "source_commit": "68a4964dea4847c4b4a15d76265b2a4670dbdb26",
   "source_files": [
     {
       "bytes": 3154,
@@ -1186,10 +1228,55 @@
       "bytes": 5079,
       "path": "results/development/nsc-extended-action-completion-gate.json",
       "sha256": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464"
+    },
+    {
+      "bytes": 2715,
+      "path": "docs/nsc-dirac-endpoint-jets.md",
+      "sha256": "1d34b51bcfc2a6b91d40df4a579d5081f0048893d917d84d4965366a5cf98062"
+    },
+    {
+      "bytes": 1297,
+      "path": "docs/nsc-transmitting-boundary-remainder.md",
+      "sha256": "8ebb6dbc193e4484b333e61b943e8d3b4f54ac8f4d77ade9b6f25c8b55995b54"
+    },
+    {
+      "bytes": 1793,
+      "path": "docs/nsc-physical-jet-extended-gate.md",
+      "sha256": "45a71d5c678a1d5531dc3a5715b98c47c8088b28a61777d4bb6f61c67a4320d4"
+    },
+    {
+      "bytes": 12488,
+      "path": "scripts/derive_nsc_dirac_endpoint_jets.py",
+      "sha256": "1be894ff668404925ee94693226dc96a883c2b9a4341885876b6e2ec75583ca0"
+    },
+    {
+      "bytes": 4098,
+      "path": "src/recursive_horizons/nsc_dirac_endpoint_jets.py",
+      "sha256": "25438ce7c0e812bd51e20009b6d01e470d062e3349a291da4b4bf9031c75d3f0"
+    },
+    {
+      "bytes": 8667,
+      "path": "results/development/nsc-dirac-endpoint-jets.json",
+      "sha256": "03de778be24325726b0de2f6046afe43e69935ce914a46338a40ccfc26a09cff"
+    },
+    {
+      "bytes": 5144,
+      "path": "results/development/nsc-transmitting-boundary-remainder.json",
+      "sha256": "c09163816af3961f53f3bd80b236ea4a7c8cb95eb75fd6d765f51568e2d41e72"
+    },
+    {
+      "bytes": 4939,
+      "path": "results/development/nsc-physical-jet-extended-gate.json",
+      "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
+    },
+    {
+      "bytes": 24872,
+      "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
+      "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 34 post-preprint records plus three active state/history/interface payloads, outside the 100-record release",
-  "verification_scope": "byte and dependency authentication; focused transmitting CTP first-differential and pullback checks; original scientific verification retained without replay"
+  "status": "development snapshot; 37 post-preprint records plus four active state/history/interface/partial-jet payloads, outside the 100-record release",
+  "verification_scope": "byte and dependency authentication; new known-bulk endpoint-jet derivative checks; earlier certificates and scientific verification retained without replay"
 }

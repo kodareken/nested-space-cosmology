@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.20.0 · transmitting CTP first differential, 13 September 2026<br>
+Version 0.21.0 · known bulk endpoint jets, 13 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -65,7 +65,7 @@ weighted interface components with separate residuals. The full transmitting-act
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and thirty-four post-preprint
+100 preprint records and thirty-seven post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -972,6 +972,10 @@ The implemented differential agrees with the existing determinant in all 33 chan
 
 The [metric pullback](../results/development/nsc-transmitting-metric-pullback.json) now contracts supplied branch jets $\partial V_\pm/\partial g^A_{\Delta,e}$ into the existing endpoint basis. The physical jets, transmitting embedding and same-action remainder are not supplied by the locked histories/vertices, so no physical endpoint mismatch is assigned. The [F→H gate](../results/development/nsc-extended-action-completion-gate.json) remains **OPEN** and keeps the old certificates intact.
 
+**Hamiltonian-to-endpoint jets: known bulk component.** The owned KS mode Hamiltonian is now differentiated through the same midpoint propagator into `EndpointBranchJets`, then through the existing Gaussian CTP differential. One fixed representative block from each of the 33 channels is evaluated on the authenticated frozen control solely to check this new derivative. The maximum jet discrepancy against perturbed original propagation is $1.03\times10^{-10}$, and the action-contraction discrepancy is $4.94\times10^{-11}$ (finite-difference tolerance $3\times10^{-8}$); endpoint tangent residuals are below $1.4\times10^{-16}$ ([jet record](../results/development/nsc-dirac-endpoint-jets.json), [partial-jet artifact](../results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz)).
+
+These are frequency-diagonal bulk control jets. The transmitting $dB/dg_\Delta$ and embedding/normal derivatives are absent. The [boundary remainder](../results/development/nsc-transmitting-boundary-remainder.json) preserves the original eight coefficients without subtracting the control covector. The [J→M physical gate](../results/development/nsc-physical-jet-extended-gate.json) remains **OPEN**, with no physical jet, stress or metric trajectory assigned.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -1023,7 +1027,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The thirty-four
+finite Casimir, and link responses remain. The thirty-seven
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1041,8 +1045,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate thirty-four-record development snapshot, imported
-through laboratory commit $5e20e21$, carries the common-source, constraint
+42 scoped follow-ups. A separate thirty-seven-record development snapshot, imported
+through laboratory commit $68a4964$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

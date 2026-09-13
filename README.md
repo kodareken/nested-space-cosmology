@@ -323,11 +323,18 @@ metric equation still requires the actual transmitting link/embedding
 derivatives. The [extended action gate](docs/nsc-extended-action-completion-gate.md)
 records this conditional PASS and physical OPEN separately.
 
+The [endpoint-jet calculation](docs/nsc-dirac-endpoint-jets.md) now connects
+the known KS Hamiltonian's metric vertices through the original midpoint
+propagator into that CTP differential. Checks on the frozen control pass at
+`1.03e-10` for the unitary derivative and `4.94e-11` for its action contraction.
+The [physical gate](docs/nsc-physical-jet-extended-gate.md) keeps these bulk
+control jets separate from the missing transmitting link and embedding jets.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 34-record development update](docs/development-update-2026-09-10.md)
+3. [The 37-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

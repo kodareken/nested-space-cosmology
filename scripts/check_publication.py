@@ -93,6 +93,9 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-transmitting-ctp-variation.md",
     "docs/nsc-transmitting-metric-pullback.md",
     "docs/nsc-extended-action-completion-gate.md",
+    "docs/nsc-dirac-endpoint-jets.md",
+    "docs/nsc-transmitting-boundary-remainder.md",
+    "docs/nsc-physical-jet-extended-gate.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

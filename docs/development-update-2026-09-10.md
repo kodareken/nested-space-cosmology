@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`5e20e217bd539d7fce5de8224a92a802e4d398c4`. It contains 38 derivation
-notes, 34 result records, 30 generators, 26 implementation
-modules, three active binary artifacts and ten focused test files. The 141 scientific files are imported
+`68a4964dea4847c4b4a15d76265b2a4670dbdb26`. It contains 41 derivation
+notes, 37 result records, 31 generators, 27 implementation
+modules, four active binary artifacts and ten focused test files. The 150 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -63,6 +63,9 @@ statement:
 | Existing CTP determinant differentiated on all retained NSC channels | [Transmitting differential](nsc-transmitting-ctp-variation.md) |
 | Conditional metric chain rule in the same endpoint covector | [Metric pullback](nsc-transmitting-metric-pullback.md) |
 | Extended F→H decision after the first differential | [Action completion gate](nsc-extended-action-completion-gate.md) |
+| Owned KS bulk vertices propagated into endpoint branch jets | [Dirac endpoint jets](nsc-dirac-endpoint-jets.md) |
+| Existing endpoint object with the physical remainder kept explicit | [Boundary remainder](nsc-transmitting-boundary-remainder.md) |
+| Physical jet and selector dependency decision J→M | [Physical-jet extended gate](nsc-physical-jet-extended-gate.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -129,7 +132,7 @@ nonexistence result remains a passing regression.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the thirty-four later records are indexed separately.
+unchanged; the thirty-seven later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific

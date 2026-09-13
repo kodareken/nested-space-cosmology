@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 17871,
+      "bytes": 18333,
       "path": "README.md",
-      "sha256": "9f940bf963316632e297307448e47da78c586f414b57258bdb161deb38e1a3b7"
+      "sha256": "05029802b04ac42b086b196c60100a5bad955f111ef0733af5dd77f6da2f11d5"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "e3bffeb9df5da6cfbecf336e0f1681a024a3fe066b3a1a6b7f3295af266088cc"
     },
     {
-      "bytes": 19605,
+      "bytes": 20217,
       "path": "docs/current-result.md",
-      "sha256": "a3e3927c88ee12ba90966b222a34de553ba8a6087b0a6acf6b4031275aa6ee32"
+      "sha256": "87862ed58e262c60d9d0c7680044e382ca34bd3d20479fd6dbc1bd8ff2df5990"
     },
     {
-      "bytes": 11047,
+      "bytes": 11419,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "37b85ce7cf2e659c450c8c99743c3d745e9a4d714740a826a5305821fd608e2a"
+      "sha256": "e49d985c620b8a39d642cd4f4cfc2e4d5eb73af1697b79d9c365dda57799fcc0"
     },
     {
       "bytes": 3154,
@@ -236,6 +236,11 @@
       "sha256": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e"
     },
     {
+      "bytes": 2715,
+      "path": "docs/nsc-dirac-endpoint-jets.md",
+      "sha256": "1d34b51bcfc2a6b91d40df4a579d5081f0048893d917d84d4965366a5cf98062"
+    },
+    {
       "bytes": 8854,
       "path": "docs/nsc-dirac-tetrad.md",
       "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
@@ -366,6 +371,11 @@
       "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
     },
     {
+      "bytes": 1793,
+      "path": "docs/nsc-physical-jet-extended-gate.md",
+      "sha256": "45a71d5c678a1d5531dc3a5715b98c47c8088b28a61777d4bb6f61c67a4320d4"
+    },
+    {
       "bytes": 7962,
       "path": "docs/nsc-plateau-conditions.md",
       "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
@@ -471,6 +481,11 @@
       "sha256": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb"
     },
     {
+      "bytes": 1297,
+      "path": "docs/nsc-transmitting-boundary-remainder.md",
+      "sha256": "8ebb6dbc193e4484b333e61b943e8d3b4f54ac8f4d77ade9b6f25c8b55995b54"
+    },
+    {
       "bytes": 3251,
       "path": "docs/nsc-transmitting-boundary-selection.md",
       "sha256": "7b3d929f00d7c2238bef4d864b43904b2484e48f848a4da63b6473b7579b3dff"
@@ -531,24 +546,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 4894,
+      "bytes": 5635,
       "path": "paper/build-manifest.json",
-      "sha256": "f621114914bc695d2ff2346ff5fe8ef42c27e7e75b8f85f454ad22b4ec5ddbf2"
+      "sha256": "85b4730405ff2a01feaa9110cac171cb964e66487cc26e5957fe5326b6760792"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "1ccbecdc4792ccca825c1d688a61e6036214fadcefabf002bc6bd0f53fe1eabf"
+      "sha256": "e4228a499556f0b59aafcebfe5f72e29aa02c63067834c0d617f3d751adf54f2"
     },
     {
-      "bytes": 125911,
+      "bytes": 127219,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "aca8a78c574f68b65a318833fef154a5e5257342914c1dc790cd35ea199f99ac"
+      "sha256": "fbfe569729539c8cf80a574ad7c7c7d82af8166de7dd2fd3cc63637efc1015d1"
     },
     {
-      "bytes": 1906855,
+      "bytes": 1909118,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "a99adcc5b60db431eec37f990f18529cf6ffbc4c1491b04981f3972a0440038d"
+      "sha256": "9aaff2fbfbd4dc9533145a8621f22e102e21ae842cd9a2f8a023a2f441e7e5bb"
     },
     {
       "bytes": 1144,
@@ -566,14 +581,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 10107,
+      "bytes": 10561,
       "path": "results/README.md",
-      "sha256": "530fdb3619322f667a762af7488cc3db3ce85558f4cbaac80e64a7500e7e05d0"
+      "sha256": "fda78feb6406013908b2e86a14e31224155ad0f089d77113ef0d8393bcf03e74"
     },
     {
-      "bytes": 40327,
+      "bytes": 43289,
       "path": "results/development-snapshot.json",
-      "sha256": "683579649e209485c359907d0bc125c0db60906f2f43228a12c0c90602567016"
+      "sha256": "51e3e6b818294c299040d38e1934da8de63a1fb3ea47ea887731402a55951a9e"
     },
     {
       "bytes": 3283,
@@ -589,6 +604,11 @@
       "bytes": 87723,
       "path": "results/development/angular-stress.json",
       "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6"
+    },
+    {
+      "bytes": 24872,
+      "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
+      "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
     },
     {
       "bytes": 521440,
@@ -721,6 +741,11 @@
       "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
     },
     {
+      "bytes": 8667,
+      "path": "results/development/nsc-dirac-endpoint-jets.json",
+      "sha256": "03de778be24325726b0de2f6046afe43e69935ce914a46338a40ccfc26a09cff"
+    },
+    {
       "bytes": 5079,
       "path": "results/development/nsc-extended-action-completion-gate.json",
       "sha256": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464"
@@ -766,9 +791,19 @@
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
     },
     {
+      "bytes": 4939,
+      "path": "results/development/nsc-physical-jet-extended-gate.json",
+      "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
+    },
+    {
       "bytes": 59802,
       "path": "results/development/nsc-tilted-landau-interface.json",
       "sha256": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a"
+    },
+    {
+      "bytes": 5144,
+      "path": "results/development/nsc-transmitting-boundary-remainder.json",
+      "sha256": "c09163816af3961f53f3bd80b236ea4a7c8cb95eb75fd6d765f51568e2d41e72"
     },
     {
       "bytes": 24842,
@@ -1271,9 +1306,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 55537,
+      "bytes": 55870,
       "path": "scripts/build_paper.py",
-      "sha256": "f05734d4db753e1589c01d95d92bdb7158a25ebe37bc5121d6234301b3b1600a"
+      "sha256": "47f9325b8c72750ff4ac3ca88487942c6373136327ad6f91c13374d4ceb70ea3"
     },
     {
       "bytes": 3480,
@@ -1506,9 +1541,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 17126,
+      "bytes": 17262,
       "path": "scripts/check_publication.py",
-      "sha256": "538b5cba64babdba1dbfd3abeed2efbad9361609a2587d71f56cc2163db5f4ba"
+      "sha256": "bf84db179e4c2840bcf2ee5706b363b4263428903340dc1c141b634f4bfb7f64"
     },
     {
       "bytes": 11187,
@@ -1559,6 +1594,11 @@
       "bytes": 10406,
       "path": "scripts/derive_nsc_coupled_ctp_metric_evolution.py",
       "sha256": "428571488a9295230a2345cc12cc6963bb3b9764decf9ea4bc5ea565cb3f6897"
+    },
+    {
+      "bytes": 12488,
+      "path": "scripts/derive_nsc_dirac_endpoint_jets.py",
+      "sha256": "1be894ff668404925ee94693226dc96a883c2b9a4341885876b6e2ec75583ca0"
     },
     {
       "bytes": 7216,
@@ -2081,6 +2121,11 @@
       "sha256": "6440e8411e59792020a003d5ab12f9046c12d3e0b598fd06f278247b345c97fc"
     },
     {
+      "bytes": 4098,
+      "path": "src/recursive_horizons/nsc_dirac_endpoint_jets.py",
+      "sha256": "25438ce7c0e812bd51e20009b6d01e470d062e3349a291da4b4bf9031c75d3f0"
+    },
+    {
       "bytes": 5654,
       "path": "src/recursive_horizons/nsc_energy_transfer.py",
       "sha256": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d"
@@ -2453,7 +2498,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.20.0",
+  "public_version": "0.21.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,
