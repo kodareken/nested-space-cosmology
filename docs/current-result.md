@@ -1,6 +1,16 @@
 # What the calculations show
 
-**Latest calculation — known bulk endpoint jets.** The
+**Latest definition — transmitting Dirac seed-seam domain: PASS in its finite scope.**
+The [new domain](nsc-transmitting-dirac-domain.md) identifies the 33 retained
+channels with two oriented traces of one field on the stored spacelike
+surface. All 1,904 blocks are mapped using the actual coframe, quadrature
+and spin-current basis. Normalization residual is `6.66e-16`, covariance
+recovery `5.55e-16`, and the oriented boundary-form residual `1.08e-16`
+(tolerance `3e-11`). The same-surface domain is now explicit; an instantaneous
+Hamiltonian link, selected Cauchy history and remaining boundary action are
+still separate definitions. No physical propagator or stress is assigned.
+
+**Preceding calculation — known bulk endpoint jets.** The
 [Hamiltonian-to-CTP chain](nsc-dirac-endpoint-jets.md) is now executable for
 the already owned bulk vertices, using a fixed representative block in each
 of the 33 channels on the frozen control. The derivative residual is
@@ -60,7 +70,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `68a4964`, now contains thirty-seven post-preprint records.
+through laboratory commit `05be98a`, now contains thirty-eight post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -422,8 +432,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains thirty-seven.
-[The development index](development-update-2026-09-10.md) links all thirty-seven
+[the later snapshot](../results/development-snapshot.json) contains thirty-eight.
+[The development index](development-update-2026-09-10.md) links all thirty-eight
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

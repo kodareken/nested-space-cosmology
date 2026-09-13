@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 18333,
+      "bytes": 18843,
       "path": "README.md",
-      "sha256": "05029802b04ac42b086b196c60100a5bad955f111ef0733af5dd77f6da2f11d5"
+      "sha256": "ce1c5a9c92427c8f6650ce0f04db51ad9722f3669ad8795a345dab117bbb347f"
     },
     {
       "bytes": 629,
@@ -76,19 +76,19 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 15033,
+      "bytes": 15241,
       "path": "THEORY.md",
-      "sha256": "e3bffeb9df5da6cfbecf336e0f1681a024a3fe066b3a1a6b7f3295af266088cc"
+      "sha256": "1550b63706675632798f0156cadd912a309e4f48f91b0060a6ff1f5a42420973"
     },
     {
-      "bytes": 20217,
+      "bytes": 20907,
       "path": "docs/current-result.md",
-      "sha256": "87862ed58e262c60d9d0c7680044e382ca34bd3d20479fd6dbc1bd8ff2df5990"
+      "sha256": "0dba4915fafa92ab6afb4678b0fef992eacd88de93cb99dfa16a31f353a78263"
     },
     {
-      "bytes": 11419,
+      "bytes": 11564,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "e49d985c620b8a39d642cd4f4cfc2e4d5eb73af1697b79d9c365dda57799fcc0"
+      "sha256": "e3465b961590ce2215a824a89e6c0ec815cce4220418a75ff6b0ce6f39e09f63"
     },
     {
       "bytes": 3154,
@@ -496,6 +496,11 @@
       "sha256": "be1ffb026d35c8e7c68219644031bc1b6af346602f45d70526b5b5ef7229fe5a"
     },
     {
+      "bytes": 6124,
+      "path": "docs/nsc-transmitting-dirac-domain.md",
+      "sha256": "bb06e937fe7946488b5826dd3cb2494fdea0849baa339196a8df27378e2d1d2e"
+    },
+    {
       "bytes": 2375,
       "path": "docs/nsc-transmitting-metric-pullback.md",
       "sha256": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72"
@@ -546,24 +551,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 5635,
+      "bytes": 6045,
       "path": "paper/build-manifest.json",
-      "sha256": "85b4730405ff2a01feaa9110cac171cb964e66487cc26e5957fe5326b6760792"
+      "sha256": "f46ed12b10c78d22dbf7c5fef7bb029e5a131039ea84efe8338fad6eeb1caf51"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "e4228a499556f0b59aafcebfe5f72e29aa02c63067834c0d617f3d751adf54f2"
+      "sha256": "5d7974567d44ddadf91df09a4e79f89ff3a6e9e8ad8dd47ebe582962a354476f"
     },
     {
-      "bytes": 127219,
+      "bytes": 128894,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "fbfe569729539c8cf80a574ad7c7c7d82af8166de7dd2fd3cc63637efc1015d1"
+      "sha256": "3c74573345c212e7a9ade58cd48b63277ca436238b30c784c7838daf512bce79"
     },
     {
-      "bytes": 1909118,
+      "bytes": 1925384,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "9aaff2fbfbd4dc9533145a8621f22e102e21ae842cd9a2f8a023a2f441e7e5bb"
+      "sha256": "2558520f1ce84f97379c97dc6de1282e5cc0d9b8e8209af0bbf07a8674ddd62b"
     },
     {
       "bytes": 1144,
@@ -581,14 +586,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 10561,
+      "bytes": 10945,
       "path": "results/README.md",
-      "sha256": "fda78feb6406013908b2e86a14e31224155ad0f089d77113ef0d8393bcf03e74"
+      "sha256": "4de0f8ec74507d8078d3e0201882814b5f9a6edb2ef38d1d1145c3e3ff450d97"
     },
     {
-      "bytes": 43289,
+      "bytes": 44881,
       "path": "results/development-snapshot.json",
-      "sha256": "51e3e6b818294c299040d38e1934da8de63a1fb3ea47ea887731402a55951a9e"
+      "sha256": "a3820292b47f35d6712211cf03d14a8530cc00f05518c030a6b8c724c98a01ab"
     },
     {
       "bytes": 3283,
@@ -624,6 +629,11 @@
       "bytes": 14321218,
       "path": "results/development/artifacts/nsc-tilted-landau-interface.0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4.npz",
       "sha256": "0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4"
+    },
+    {
+      "bytes": 543340,
+      "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+      "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
     },
     {
       "bytes": 12878,
@@ -814,6 +824,11 @@
       "bytes": 25686,
       "path": "results/development/nsc-transmitting-ctp-variation.json",
       "sha256": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3"
+    },
+    {
+      "bytes": 43142,
+      "path": "results/development/nsc-transmitting-dirac-domain.json",
+      "sha256": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926"
     },
     {
       "bytes": 6130,
@@ -1306,9 +1321,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 55870,
+      "bytes": 56076,
       "path": "scripts/build_paper.py",
-      "sha256": "47f9325b8c72750ff4ac3ca88487942c6373136327ad6f91c13374d4ceb70ea3"
+      "sha256": "00e2ca1939b16c17319c263a290d82eb819b576ecc591fd84203acd954db352d"
     },
     {
       "bytes": 3480,
@@ -1541,9 +1556,14 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 17262,
+      "bytes": 17307,
       "path": "scripts/check_publication.py",
-      "sha256": "bf84db179e4c2840bcf2ee5706b363b4263428903340dc1c141b634f4bfb7f64"
+      "sha256": "2dd56acbd72874f9d44d55db41c528668e747feaa12f3a4adf743cf5ae52d79a"
+    },
+    {
+      "bytes": 13193,
+      "path": "scripts/define_nsc_transmitting_dirac_domain.py",
+      "sha256": "10adecda52bf0a050c67746bf943ab4019cdfbb1006369ebd5607fb487e3adfc"
     },
     {
       "bytes": 11187,
@@ -2291,6 +2311,11 @@
       "sha256": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602"
     },
     {
+      "bytes": 6656,
+      "path": "src/recursive_horizons/nsc_transmitting_dirac_domain.py",
+      "sha256": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+    },
+    {
       "bytes": 21921,
       "path": "src/recursive_horizons/nsc_unruh_state.py",
       "sha256": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
@@ -2461,6 +2486,11 @@
       "sha256": "14ba673ca67f470ed5b7d43fc3434eee47646ad96deeb0284992c095fd2bc67e"
     },
     {
+      "bytes": 1949,
+      "path": "tests/test_nsc_transmitting_dirac_domain.py",
+      "sha256": "fae2775e3f23066dc4bc92505bf88157d7ecef2e389efed7adc775499017aa10"
+    },
+    {
       "bytes": 3681,
       "path": "tests/test_nsc_vacuum_work.py",
       "sha256": "d331aeeccc9a479fa2cba10d7eb3bd88cda18dfdacd763bfeea62087f1dc26a5"
@@ -2498,7 +2528,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.21.0",
+  "public_version": "0.22.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,
