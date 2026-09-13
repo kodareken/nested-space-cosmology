@@ -434,11 +434,53 @@
       },
       "generator": "scripts/derive_nsc_transmitting_boundary_binding.py",
       "output": "results/development/nsc-full-extended-history-gate.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_action_completion.py",
+      "output": "results/development/nsc-transmitting-ctp-variation.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_action_completion.py",
+      "output": "results/development/nsc-transmitting-metric-pullback.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_action_completion.py",
+      "output": "results/development/nsc-extended-action-completion-gate.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "ca6c78a6eb1fa523f1dd51def1cd7ecfb6cb4b64",
+  "source_commit": "5e20e217bd539d7fce5de8224a92a802e4d398c4",
   "source_files": [
     {
       "bytes": 3154,
@@ -1099,10 +1141,55 @@
       "bytes": 6572,
       "path": "results/development/nsc-full-extended-history-gate.json",
       "sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106"
+    },
+    {
+      "bytes": 3095,
+      "path": "docs/nsc-transmitting-ctp-variation.md",
+      "sha256": "be1ffb026d35c8e7c68219644031bc1b6af346602f45d70526b5b5ef7229fe5a"
+    },
+    {
+      "bytes": 2375,
+      "path": "docs/nsc-transmitting-metric-pullback.md",
+      "sha256": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72"
+    },
+    {
+      "bytes": 2168,
+      "path": "docs/nsc-extended-action-completion-gate.md",
+      "sha256": "20a0b0aac347ac4d03633eaccdc593ad13326620c9d46717926a50017f6cc039"
+    },
+    {
+      "bytes": 6219,
+      "path": "src/recursive_horizons/nsc_transmitting_ctp_variation.py",
+      "sha256": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602"
+    },
+    {
+      "bytes": 10521,
+      "path": "scripts/derive_nsc_transmitting_action_completion.py",
+      "sha256": "d942a1b56f1bcc782eced48bf0e8f007a6f6b49fb63200947d1696955c89ce2c"
+    },
+    {
+      "bytes": 2731,
+      "path": "tests/test_nsc_transmitting_ctp_variation.py",
+      "sha256": "14ba673ca67f470ed5b7d43fc3434eee47646ad96deeb0284992c095fd2bc67e"
+    },
+    {
+      "bytes": 25686,
+      "path": "results/development/nsc-transmitting-ctp-variation.json",
+      "sha256": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3"
+    },
+    {
+      "bytes": 6130,
+      "path": "results/development/nsc-transmitting-metric-pullback.json",
+      "sha256": "68092e0de029be1c944f992419a40ff7a8ecbd5afba4b8599ec06a25b7871945"
+    },
+    {
+      "bytes": 5079,
+      "path": "results/development/nsc-extended-action-completion-gate.json",
+      "sha256": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 31 post-preprint records plus three active state/history/interface payloads, outside the 100-record release",
-  "verification_scope": "byte and dependency authentication; focused transmitting-binding records verified; original scientific verification retained without replay"
+  "status": "development snapshot; 34 post-preprint records plus three active state/history/interface payloads, outside the 100-record release",
+  "verification_scope": "byte and dependency authentication; focused transmitting CTP first-differential and pullback checks; original scientific verification retained without replay"
 }

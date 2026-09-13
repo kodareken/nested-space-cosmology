@@ -386,6 +386,7 @@ geometry defines the Dirac spectrum
 | General-KS same-action history | The homogeneous shift variation proves nonexistence for the locked frequency-diagonal no-interface state class |
 | Extended tilted history components | General-KS reference, node-wise local forces and weighted frequency-mixing interface now expose separate residuals; their boundary-action selector remains open |
 | Physical transmission must select a state | The remaining kernel freedom changes all 33 recorded channel covariances in a fixed basis; the full extended gate identifies the uncomputed transmitting selector and endpoint derivative |
+| A normalized action still has a source variation | The existing CTP determinant now has a checked first differential; its physical metric response requires the link/embedding chain rule |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)

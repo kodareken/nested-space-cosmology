@@ -90,6 +90,9 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-transmitting-boundary-selection.md",
     "docs/nsc-weyl-endpoint-match.md",
     "docs/nsc-full-extended-history-gate.md",
+    "docs/nsc-transmitting-ctp-variation.md",
+    "docs/nsc-transmitting-metric-pullback.md",
+    "docs/nsc-extended-action-completion-gate.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

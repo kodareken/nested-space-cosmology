@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`ca6c78a6eb1fa523f1dd51def1cd7ecfb6cb4b64`. It contains 35 derivation
-notes, 31 result records, 29 generators, 25 implementation
-modules, three active binary artifacts and nine focused test files. The 132 scientific files are imported
+`5e20e217bd539d7fce5de8224a92a802e4d398c4`. It contains 38 derivation
+notes, 34 result records, 30 generators, 26 implementation
+modules, three active binary artifacts and ten focused test files. The 141 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -60,6 +60,9 @@ statement:
 | Physical transmitting selector audited against the serialized state | [Kernel selection](nsc-transmitting-boundary-selection.md) |
 | Shared endpoint basis with explicit missing derivative slots | [Weyl endpoint binding](nsc-weyl-endpoint-match.md) |
 | Full A–D composition with unevaluated residuals preserved | [Full extended gate](nsc-full-extended-history-gate.md) |
+| Existing CTP determinant differentiated on all retained NSC channels | [Transmitting differential](nsc-transmitting-ctp-variation.md) |
+| Conditional metric chain rule in the same endpoint covector | [Metric pullback](nsc-transmitting-metric-pullback.md) |
+| Extended F→H decision after the first differential | [Action completion gate](nsc-extended-action-completion-gate.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -126,7 +129,7 @@ nonexistence result remains a passing regression.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the thirty-one later records are indexed separately.
+unchanged; the thirty-four later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
