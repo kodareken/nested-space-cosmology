@@ -1,10 +1,10 @@
 {
-  "bytes": 1869769,
+  "bytes": 1885424,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "a9a532b5f43b7ee584999de2ab12b4debee60038defdb8b4c561f74f7176004f",
+  "metadata_sha256": "ba24077118e097674040d2ec145e5a2ab7dc487aa9bf3862238d80857896cd4f",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 39,
-  "pdf_sha256": "34b9b6e6a842a5c55f29312d67f240613626b000bf50da9068403be1395de280",
+  "pdf_sha256": "016f3ea19e5d63444f437984bba091b18749a2a24b3b24116fde5d52a460bc55",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -44,6 +44,10 @@
       "sha256": "2adaeb34a04bbc4ab3b82607d1770941378b7df7a3bca63b7cbe2e23115c80fa"
     },
     {
+      "path": "results/development/nsc-full-extended-history-gate.json",
+      "sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106"
+    },
+    {
       "path": "results/development/nsc-general-ks-same-action-history.json",
       "sha256": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128"
     },
@@ -58,6 +62,14 @@
     {
       "path": "results/development/nsc-mode-resolved-cauchy-state.json",
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+    },
+    {
+      "path": "results/development/nsc-transmitting-boundary-selection.json",
+      "sha256": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e"
+    },
+    {
+      "path": "results/development/nsc-weyl-endpoint-match.json",
+      "sha256": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6"
     },
     {
       "path": "results/development/recursive-source-binding.json",
@@ -89,10 +101,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "6ddd2ecddadfdbbc254ff12e9771b935af3a4d3874147b0df1ecef32b3280501"
+      "sha256": "d340aed60a9cc2fb249e347a67da88832e11e607a76b58361944fd7cd42ff390"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "009c02e75923f54bda153b53f1ac9d8f8a656522913566df395361f057a13b5f",
-  "version": "0.18.0"
+  "source_sha256": "6e686dda3399568ba2d8379c01dacc4aa6e799827094e8ca26227aad919b6be0",
+  "version": "0.19.0"
 }

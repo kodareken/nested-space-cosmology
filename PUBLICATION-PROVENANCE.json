@@ -7,7 +7,7 @@
     "private plans, host paths, refs, reflogs, and development history",
     "NSC experiments outside the current frontier dependency closure"
   ],
-  "export_timestamp_utc": "2026-09-12T00:00:00Z",
+  "export_timestamp_utc": "2026-09-13T00:00:00Z",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
   "follow_up_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
   "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 16904,
+      "bytes": 17347,
       "path": "README.md",
-      "sha256": "116e5efb9f8b4ca83693b929c7852f31cf0eae4027e63435d3f56e9377391272"
+      "sha256": "915d160c3847e9bd4f9ed59837868b6fb00c91ce672c144f4e2efd7b0dcb7aa0"
     },
     {
       "bytes": 629,
@@ -76,19 +76,19 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 14609,
+      "bytes": 14843,
       "path": "THEORY.md",
-      "sha256": "337161bd07097dbf9e081427a329fb6df583f42a2d08d5ae8725f86189d18f77"
+      "sha256": "ac7b827c9f6fd103da30df7c8ed4333dfa9284d85c7eac18a2c06277cc3dd655"
     },
     {
-      "bytes": 18193,
+      "bytes": 18922,
       "path": "docs/current-result.md",
-      "sha256": "9e664f1fae732bf49033de742bfc99e739a3deb7803c24c8678209931d0e5588"
+      "sha256": "a9440e4efb0d905cde9b902188ecff5ebb6c22791a0e5a947b0bd122c01c4af9"
     },
     {
-      "bytes": 10333,
+      "bytes": 10664,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "8c39d3c6e0c4d4c78310deebd2f532f014fa538545c3b552ace4059d2955f01a"
+      "sha256": "9dcc89b19c51f316bf27f3051bf6ad65259873fe124462cfc59f6813ce2b69ea"
     },
     {
       "bytes": 3154,
@@ -259,6 +259,11 @@
       "bytes": 5803,
       "path": "docs/nsc-flow-compatibility.md",
       "sha256": "0524fee024e305b039e634790428806e3b39d594c443cf1b4051279b09716dc7"
+    },
+    {
+      "bytes": 2757,
+      "path": "docs/nsc-full-extended-history-gate.md",
+      "sha256": "6cba349c282b358f5b78e151b3a5231e5d64b7a13685f37557e47fd85b8c1446"
     },
     {
       "bytes": 10288,
@@ -461,6 +466,11 @@
       "sha256": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb"
     },
     {
+      "bytes": 3251,
+      "path": "docs/nsc-transmitting-boundary-selection.md",
+      "sha256": "7b3d929f00d7c2238bef4d864b43904b2484e48f848a4da63b6473b7579b3dff"
+    },
+    {
       "bytes": 9148,
       "path": "docs/nsc-unruh-state.md",
       "sha256": "ca6e21152528c2be44b3a8c4fdac9d69014e8864c746cf1f19eb735ec361ac4b"
@@ -491,6 +501,11 @@
       "sha256": "5e5ac433c2af3bc6f6a6433d9f50dfaa2c06b6c012a018a19bfd21f31e3c12dc"
     },
     {
+      "bytes": 3127,
+      "path": "docs/nsc-weyl-endpoint-match.md",
+      "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
+    },
+    {
       "bytes": 12814,
       "path": "docs/prior-art-and-open-claim.md",
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
@@ -501,24 +516,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 3875,
+      "bytes": 4380,
       "path": "paper/build-manifest.json",
-      "sha256": "aace36589023959897927230c4d144d6f6fc45bd128736ba6fb4b0940298d42c"
+      "sha256": "e7e83b001cb3e4096d75e90fd0f027ca6d1e8384887228047ea7c6ca72be91e8"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "a9a532b5f43b7ee584999de2ab12b4debee60038defdb8b4c561f74f7176004f"
+      "sha256": "ba24077118e097674040d2ec145e5a2ab7dc487aa9bf3862238d80857896cd4f"
     },
     {
-      "bytes": 122802,
+      "bytes": 124503,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "009c02e75923f54bda153b53f1ac9d8f8a656522913566df395361f057a13b5f"
+      "sha256": "6e686dda3399568ba2d8379c01dacc4aa6e799827094e8ca26227aad919b6be0"
     },
     {
-      "bytes": 1869769,
+      "bytes": 1885424,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "34b9b6e6a842a5c55f29312d67f240613626b000bf50da9068403be1395de280"
+      "sha256": "016f3ea19e5d63444f437984bba091b18749a2a24b3b24116fde5d52a460bc55"
     },
     {
       "bytes": 1144,
@@ -536,14 +551,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 9135,
+      "bytes": 9636,
       "path": "results/README.md",
-      "sha256": "fb5c22af24cdf9d31e79e3515597bf6adcb38fcdfe8bee6e19485294c07c851b"
+      "sha256": "6a1019beac4172c6fca363c01f006b4a80b0d19a447b2a6b53e67fa6280a3430"
     },
     {
-      "bytes": 34413,
+      "bytes": 37356,
       "path": "results/development-snapshot.json",
-      "sha256": "83839d1fb3ad11459a81cf9276b9b5c21f972b38c491a321cb7ebf55dc6c907c"
+      "sha256": "7131d7eca205031058a6950ea881c28a5a5225620b8bc410c446dc8d70b835b5"
     },
     {
       "bytes": 3283,
@@ -696,6 +711,11 @@
       "sha256": "2adaeb34a04bbc4ab3b82607d1770941378b7df7a3bca63b7cbe2e23115c80fa"
     },
     {
+      "bytes": 6572,
+      "path": "results/development/nsc-full-extended-history-gate.json",
+      "sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106"
+    },
+    {
       "bytes": 39906,
       "path": "results/development/nsc-general-ks-local-history.json",
       "sha256": "b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e"
@@ -729,6 +749,16 @@
       "bytes": 59802,
       "path": "results/development/nsc-tilted-landau-interface.json",
       "sha256": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a"
+    },
+    {
+      "bytes": 24842,
+      "path": "results/development/nsc-transmitting-boundary-selection.json",
+      "sha256": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e"
+    },
+    {
+      "bytes": 11160,
+      "path": "results/development/nsc-weyl-endpoint-match.json",
+      "sha256": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6"
     },
     {
       "bytes": 5507,
@@ -1211,9 +1241,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 55130,
+      "bytes": 55329,
       "path": "scripts/build_paper.py",
-      "sha256": "6ddd2ecddadfdbbc254ff12e9771b935af3a4d3874147b0df1ecef32b3280501"
+      "sha256": "d340aed60a9cc2fb249e347a67da88832e11e607a76b58361944fd7cd42ff390"
     },
     {
       "bytes": 3480,
@@ -1446,9 +1476,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 16845,
+      "bytes": 16981,
       "path": "scripts/check_publication.py",
-      "sha256": "e3ffd82d51ff7c1bc8599707e5e8c7bc55945595f2472f882bc73dd1ceb0b7f6"
+      "sha256": "e0744c91bce9b185fc1f6075cf7a6d80457837727b65c948625dae6f60a5c7c6"
     },
     {
       "bytes": 11187,
@@ -1569,6 +1599,11 @@
       "bytes": 16385,
       "path": "scripts/derive_nsc_tilted_landau_interface.py",
       "sha256": "f8fb4e3ad94433f84931115b6ca8fa250900fb02a68a5984734c722209c49fd9"
+    },
+    {
+      "bytes": 11229,
+      "path": "scripts/derive_nsc_transmitting_boundary_binding.py",
+      "sha256": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019"
     },
     {
       "bytes": 7194,
@@ -2166,6 +2201,11 @@
       "sha256": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2"
     },
     {
+      "bytes": 11758,
+      "path": "src/recursive_horizons/nsc_transmitting_boundary_history.py",
+      "sha256": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d"
+    },
+    {
       "bytes": 21921,
       "path": "src/recursive_horizons/nsc_unruh_state.py",
       "sha256": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
@@ -2326,6 +2366,11 @@
       "sha256": "1b0c323c056ef8a45aa49dfa7cc4a825235cc19a809abb811b2e1c8fcb83ef2e"
     },
     {
+      "bytes": 2621,
+      "path": "tests/test_nsc_transmitting_boundary_history.py",
+      "sha256": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
+    },
+    {
       "bytes": 3681,
       "path": "tests/test_nsc_vacuum_work.py",
       "sha256": "d331aeeccc9a479fa2cba10d7eb3bd88cda18dfdacd763bfeea62087f1dc26a5"
@@ -2363,7 +2408,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.18.0",
+  "public_version": "0.19.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,

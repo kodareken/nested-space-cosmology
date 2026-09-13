@@ -1,0 +1,139 @@
+{
+  "action_evidence_hashes": {
+    "docs/nsc-compact-boundary-action.md": "9ca3b73c41e82d2027303555c475a336889174ccee4758708396e6dedc55a8f3",
+    "docs/nsc-curvature-eft.md": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e",
+    "docs/nsc-spherical-action.md": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292",
+    "docs/nsc-tilted-landau-interface.md": "1ed1829891ec42d5d9d12a7932d76a8e16ae422e8be59f38ae28c19cfc6dbb2f",
+    "src/recursive_horizons/nsc_boundary.py": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_extended_tilted_history_gate.py": "a23a44c6127a8ec141af33d1e5e33812ba8cc1b2d10593a6bcdc8f827f80559e",
+    "src/recursive_horizons/nsc_general_ks_local_history.py": "533678f69c994dc5cac598bc54ca52922d58bdf5716371431306b82f73b7b866",
+    "src/recursive_horizons/nsc_landau_cauchy_isometry.py": "c03e5eb46c8be3078087b5f6be768c0045d350f68ff2d457eafd1c0987baac00",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_tilted_landau_interface.py": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2"
+  },
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "component_gates": {
+    "components_expose_residuals": true,
+    "extended_functional_complete": false,
+    "killed_homogeneous_regression_pass": true,
+    "local_bulk_pass": true,
+    "physical_kernel_selector_pass": false,
+    "reference_pass": true,
+    "stationarity_solve_authorized": false,
+    "tilted_interface_construction_pass": true,
+    "weyl_endpoint_completion_pass": false
+  },
+  "composition": {
+    "blocking_residuals": [
+      "delta_Gamma_rest/dV_c: physical transmitting kernel selector",
+      "pullback(delta_Gamma_rest/dh) to the local Weyl endpoint variation basis"
+    ],
+    "component_construction_pass": true,
+    "coupled_evolution_reopened": false,
+    "decision": "OPEN",
+    "extended_existence_claimed": false,
+    "extended_nonexistence_claimed": false,
+    "finite_stress": null,
+    "metric_timestep_started": false,
+    "nulls": null,
+    "old_homogeneous_nonexistence": true,
+    "old_homogeneous_result_reused_not_rerun": true,
+    "optimizer_started": false,
+    "residual_surface": {
+      "bulk_reference_and_local": "authenticated component records on supplied histories",
+      "endpoint_matching": {
+        "boundary_components": null,
+        "evaluated": false,
+        "maximum_absolute": null,
+        "mismatch_components": null,
+        "reason": "Gamma_rest has no evaluated metric derivative and no transmitting-to-KS endpoint pullback",
+        "status": "OPEN",
+        "tolerance": 3e-11
+      },
+      "fields": [
+        "N",
+        "beta",
+        "q_ADM",
+        "r"
+      ],
+      "history_variation": {
+        "N": null,
+        "beta": null,
+        "q_ADM": null,
+        "r": null
+      },
+      "kernel_selection": {
+        "evaluated": false,
+        "tolerance": 3e-11,
+        "value": null
+      }
+    },
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "results/development/compact-boundary-action.json": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce",
+    "results/development/nsc-general-ks-local-history.json": "b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+    "results/development/nsc-general-ks-reference.json": "6c8d80297b5cafcb0e61815cd5a425d9b45364bddc5f89e3a4a824b974c5a146",
+    "results/development/nsc-general-ks-same-action-history.json": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-tilted-landau-interface.json": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "mode_state_artifact": {
+    "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+    "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+  },
+  "schema": "NSC-FULL-EXTENDED-HISTORY-GATE-v1",
+  "scope": {
+    "finite_stress_fabricated": false,
+    "metric_timestep_started": false,
+    "new_physical_term": false,
+    "old_generator_called": false,
+    "parameters_refitted": false,
+    "physical_duration_chosen": false
+  },
+  "source_hashes": {
+    "docs/nsc-full-extended-history-gate.md": "6cba349c282b358f5b78e151b3a5231e5d64b7a13685f37557e47fd85b8c1446",
+    "docs/nsc-transmitting-boundary-selection.md": "7b3d929f00d7c2238bef4d864b43904b2484e48f848a4da63b6473b7579b3dff",
+    "docs/nsc-weyl-endpoint-match.md": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "tests/test_nsc_transmitting_boundary_history.py": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
+  },
+  "status": "OPEN",
+  "steps": {
+    "A": "OPEN",
+    "B": "OPEN",
+    "C": "residual-bearing OPEN composition",
+    "D": "OPEN"
+  },
+  "upstream_numerical_controls": {
+    "diagnostic_local_endpoint_gradient": 93.54264532195464,
+    "interface_tolerance": 3e-11,
+    "interface_unitarity": 4.94869688636381e-15,
+    "local_node_gradient": 2.077740759443003e-07,
+    "local_node_gradient_tolerance": 5e-07,
+    "reference_bloch": 2.168404344971009e-19,
+    "reference_parity_beta": 0.0,
+    "source": "unchanged authenticated component records; full controls remain there"
+  }
+}

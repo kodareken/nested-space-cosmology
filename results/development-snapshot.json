@@ -392,11 +392,53 @@
       },
       "generator": "scripts/derive_nsc_extended_tilted_history_gate.py",
       "output": "results/development/nsc-extended-tilted-history-gate.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_boundary_binding.py",
+      "output": "results/development/nsc-transmitting-boundary-selection.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_boundary_binding.py",
+      "output": "results/development/nsc-weyl-endpoint-match.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_boundary_binding.py",
+      "output": "results/development/nsc-full-extended-history-gate.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "f30620550e51add143d6a340a3fdf059c7547751",
+  "source_commit": "ca6c78a6eb1fa523f1dd51def1cd7ecfb6cb4b64",
   "source_files": [
     {
       "bytes": 3154,
@@ -1012,10 +1054,55 @@
       "bytes": 1553,
       "path": "src/recursive_horizons/nsc_extended_tilted_history_gate.py",
       "sha256": "a23a44c6127a8ec141af33d1e5e33812ba8cc1b2d10593a6bcdc8f827f80559e"
+    },
+    {
+      "bytes": 3251,
+      "path": "docs/nsc-transmitting-boundary-selection.md",
+      "sha256": "7b3d929f00d7c2238bef4d864b43904b2484e48f848a4da63b6473b7579b3dff"
+    },
+    {
+      "bytes": 3127,
+      "path": "docs/nsc-weyl-endpoint-match.md",
+      "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
+    },
+    {
+      "bytes": 2757,
+      "path": "docs/nsc-full-extended-history-gate.md",
+      "sha256": "6cba349c282b358f5b78e151b3a5231e5d64b7a13685f37557e47fd85b8c1446"
+    },
+    {
+      "bytes": 11758,
+      "path": "src/recursive_horizons/nsc_transmitting_boundary_history.py",
+      "sha256": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d"
+    },
+    {
+      "bytes": 11229,
+      "path": "scripts/derive_nsc_transmitting_boundary_binding.py",
+      "sha256": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019"
+    },
+    {
+      "bytes": 2621,
+      "path": "tests/test_nsc_transmitting_boundary_history.py",
+      "sha256": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
+    },
+    {
+      "bytes": 24842,
+      "path": "results/development/nsc-transmitting-boundary-selection.json",
+      "sha256": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e"
+    },
+    {
+      "bytes": 11160,
+      "path": "results/development/nsc-weyl-endpoint-match.json",
+      "sha256": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6"
+    },
+    {
+      "bytes": 6572,
+      "path": "results/development/nsc-full-extended-history-gate.json",
+      "sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 28 post-preprint records plus three active state/history/interface payloads, outside the 100-record release",
-  "verification_scope": "byte and dependency authentication; original scientific verification retained; no scientific replay in this publication update"
+  "status": "development snapshot; 31 post-preprint records plus three active state/history/interface payloads, outside the 100-record release",
+  "verification_scope": "byte and dependency authentication; focused transmitting-binding records verified; original scientific verification retained without replay"
 }

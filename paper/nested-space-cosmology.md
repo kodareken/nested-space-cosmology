@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.18.0 · extended tilted/frequency-mixing component gate, 12 September 2026<br>
+Version 0.19.0 · full extended transmitting-action gate, 13 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -61,9 +61,11 @@ and identifies the absent executable same-action history variation.
 Its homogeneous shift component is now executable and proves nonexistence for
 the locked frequency-diagonal no-interface history class.
 The larger tilted class now has executable fourth-order, local-history and
-weighted interface components with separate residuals.
+weighted interface components with separate residuals. The full transmitting-action
+binding finds state-changing admissible kernel directions in all 33 channels
+and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and twenty-eight post-preprint
+100 preprint records and thirty-one post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -936,13 +938,27 @@ $$
 
 Unitary finite-mode evolution and smooth metric vertices make this quantity continuous near the seed, whereas the homogeneous momentum constraint requires it to vanish on every slice. Therefore no smooth stationary history exists in the frequency-diagonal homogeneous no-interface truncation, for any duration or radial profile ([general-KS history record](../results/development/nsc-general-ks-same-action-history.json)). Extending the calculation to a tilted frequency-mixing interface requires its transmitting boundary variation together with general-KS fourth-order and local nodal providers; this certificate does not cover that larger class.
 
-**Extended tilted/frequency-mixing components.** The larger class now has three independently executable owners. `GeneralKSFourthOrderReferenceHistory` supplies order-zero through order-four Bloch histories and all four parity-completed ADM reference variations. Its recurrence and normalization residuals are below $3.1\times10^{-18}$, with maximum four-force refinement $7.06\times10^{-12}$. `GeneralKSLocalInducedHistory` supplies node-wise Einstein, Maxwell, Weyl, Euler and box-R action forces. Its node-gradient residual is $2.08\times10^{-7}$, while the uncompleted free Weyl endpoint force is
+**Extended tilted/frequency-mixing components.** The larger class now has three independently executable owners. `GeneralKSFourthOrderReferenceHistory` supplies order-zero through order-four Bloch histories and all four parity-completed ADM reference variations. Its recurrence and normalization residuals are below $3.1\times10^{-18}$, with maximum four-force refinement $7.06\times10^{-12}$. `GeneralKSLocalInducedHistory` supplies node-wise Einstein, Maxwell, Weyl, Euler and box-R action forces. Its node-gradient residual is $2.08\times10^{-7}$, while the largest diagnostic end-node derivative of its Weyl action is
 
 $$
 \max|\delta S_W|_{\partial}=93.54264532195464
 $$
 
-against a $3\times10^{-11}$ stationarity tolerance. The transmitting tilted owner supplies full channel-block weighted isometries; interface, unitarity and CAR residuals remain below $2.35\times10^{-14}$. Its endpoint equation nevertheless leaves $447488$ real kernel directions and selects no physical $V_c$ ([extended tilted gate](../results/development/nsc-extended-tilted-history-gate.json)). Thus all component constructions are real, but the full action derivative is not single-valued. The already declared transmitting boundary action must select the kernel and provide the same endpoint metric variation before an existence or non-existence solve is meaningful. No optimizer or finite stress is run at this stage.
+on the recorded 33-node control history. This is a discrete local gradient; the
+physical two-sided endpoint mismatch still requires a common boundary pullback.
+The target matching tolerance is $3\times10^{-11}$. The transmitting tilted owner supplies full channel-block weighted isometries; interface, unitarity and CAR residuals remain below $2.35\times10^{-14}$. Its endpoint equation nevertheless leaves $447488$ real kernel directions and selects no physical $V_c$ ([extended tilted gate](../results/development/nsc-extended-tilted-history-gate.json)). Thus all component constructions are real, but the full action derivative is not single-valued. The already declared transmitting boundary action must select the kernel and provide the same endpoint metric variation before an existence or non-existence solve is meaningful. No optimizer or finite stress is run at this stage.
+
+**Full transmitting-action binding: OPEN.** The existing causal functional takes the link history and its metric vertices as inputs. The source audit finds no evaluated mode-resolved transmitting action selecting $V_c$ ([selection record](../results/development/nsc-transmitting-boundary-selection.json)). Applying one normalized first/last-frequency tangent in each recorded channel gives
+
+$$
+\delta V_c=iX_c,\qquad \delta(V_c^\dagger V_c)=0,
+\qquad \delta C_c=i[X_c,C_{c,0}].
+$$
+
+All 33 fixed-basis covariance tangents are nonzero at tolerance $3\times10^{-11}$; the largest Frobenius norm is $0.679080121964124$, while the isometry tangent residual is zero. Thus the admissible family can change state transport in the recorded basis. This probe selects no physical kernel and computes no stress.
+
+The [endpoint binding](../results/development/nsc-weyl-endpoint-match.json) extracts all eight stored end-node coefficients exactly and retains the full nodal gradient. The transmitting derivative, its pullback to these coordinates, and independent boundary-jet variations remain unevaluated. The [full extended gate](../results/development/nsc-full-extended-history-gate.json) therefore returns **OPEN**, with explicit missing residuals. The homogeneous non-existence certificate is retained within its original scope; metric evolution remains closed.
+
 
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
@@ -995,7 +1011,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The twenty-eight
+finite Casimir, and link responses remain. The thirty-one
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1013,8 +1029,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate twenty-eight-record development snapshot, imported
-through laboratory commit $f306205$, carries the common-source, constraint
+42 scoped follow-ups. A separate thirty-one-record development snapshot, imported
+through laboratory commit $ca6c78a$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

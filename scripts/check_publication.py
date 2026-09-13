@@ -87,6 +87,9 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-general-ks-local-history.md",
     "docs/nsc-tilted-landau-interface.md",
     "docs/nsc-extended-tilted-history-gate.md",
+    "docs/nsc-transmitting-boundary-selection.md",
+    "docs/nsc-weyl-endpoint-match.md",
+    "docs/nsc-full-extended-history-gate.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

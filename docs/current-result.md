@@ -1,5 +1,15 @@
 # What the calculations show
 
+**Latest result — full extended gate: OPEN.** The
+[transmitting-action audit](nsc-full-extended-history-gate.md) finds
+norm-preserving directions that change the stored covariance in all 33 channels,
+with maximum tangent norm `0.679080121964124` and isometry residual zero
+(tolerance `3e-11`). The [Weyl binding](nsc-weyl-endpoint-match.md) extracts
+all eight diagnostic end-node coefficients exactly. The physical boundary
+kernel selector, endpoint derivative and its pullback remain unevaluated.
+The value `93.54264532195464` is the local diagnostic gradient, not an
+evaluated two-sided physical mismatch.
+
 The project starts from one simple claim: a wave, a particle, an unseen
 boundary response, and a changing geometry can be different measurements of
 one inherited spectrum. This page shows the equations and numbers behind that
@@ -30,7 +40,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `f306205`, now contains twenty-eight post-preprint records.
+through laboratory commit `ca6c78a`, now contains thirty-one post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -219,9 +229,11 @@ R_{\rm interface}\le2.35\times10^{-14}.
 $$
 
 The [extended gate](nsc-extended-tilted-history-gate.md) nevertheless remains
-open: the free Weyl endpoint force is $93.54264532195464$ against a
-$3\times10^{-11}$ stationarity tolerance, and the weighted-isometry equation
-leaves $447488$ real kernel directions. The same transmitting boundary action
+open: the diagnostic Weyl end-node gradient is $93.54264532195464$, and
+the weighted-isometry equation leaves $447488$ real kernel directions.
+The new [endpoint binding](nsc-weyl-endpoint-match.md) preserves that gradient
+and leaves the physical mismatch unevaluated, with target tolerance
+$3\times10^{-11}$. The same transmitting boundary action
 must select one $V_c$ and complete that endpoint variation before
 $\delta\Gamma$ is single-valued. No optimizer, finite stress or existence
 claim is launched before then.
@@ -390,8 +402,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains twenty-eight.
-[The development index](development-update-2026-09-10.md) links all twenty-eight
+[the later snapshot](../results/development-snapshot.json) contains thirty-one.
+[The development index](development-update-2026-09-10.md) links all thirty-one
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 
