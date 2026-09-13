@@ -315,11 +315,19 @@ The eight Weyl end-node coefficients bind exactly, while the physical
 transmitting selector and its endpoint metric derivative remain OPEN.
 Those two explicit dependencies keep the geometry evolution gate closed.
 
+The [CTP first-differential calculation](docs/nsc-transmitting-ctp-variation.md)
+now evaluates the action response itself on all 33 channels, agreeing with
+the existing determinant to `5.56e-12`. A common change of both branches is
+flat; the relative variation is a source differential. Converting it to the
+metric equation still requires the actual transmitting link/embedding
+derivatives. The [extended action gate](docs/nsc-extended-action-completion-gate.md)
+records this conditional PASS and physical OPEN separately.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 31-record development update](docs/development-update-2026-09-10.md)
+3. [The 34-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

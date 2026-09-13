@@ -1,6 +1,16 @@
 # What the calculations show
 
-**Latest result — full extended gate: OPEN.** The
+**Latest calculation — transmitting CTP first differential.** The
+[new action differential](nsc-transmitting-ctp-variation.md) agrees with the
+existing determinant in all 33 retained channels, with maximum error
+`5.551121183780314e-12` (finite-difference tolerance `3e-8`). Common-branch
+variation is exactly zero; relative variation supplies the conditional
+Gaussian source differential. Its [endpoint chain rule](nsc-transmitting-metric-pullback.md)
+preserves the old covector and leaves the missing physical branch jets and
+boundary remainder explicit. The [F→H decision](nsc-extended-action-completion-gate.md)
+is **OPEN**; the old certificates are unchanged.
+
+**Preceding binding result — full extended gate: OPEN.** The
 [transmitting-action audit](nsc-full-extended-history-gate.md) finds
 norm-preserving directions that change the stored covariance in all 33 channels,
 with maximum tangent norm `0.679080121964124` and isometry residual zero
@@ -40,7 +50,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `ca6c78a`, now contains thirty-one post-preprint records.
+through laboratory commit `5e20e21`, now contains thirty-four post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -402,8 +412,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains thirty-one.
-[The development index](development-update-2026-09-10.md) links all thirty-one
+[the later snapshot](../results/development-snapshot.json) contains thirty-four.
+[The development index](development-update-2026-09-10.md) links all thirty-four
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

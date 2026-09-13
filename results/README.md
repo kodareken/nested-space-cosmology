@@ -1,6 +1,14 @@
 # Compact result archive
 
-Latest: [full extended gate](development/nsc-full-extended-history-gate.json),
+Transmitting action F→H:
+[first differential](development/nsc-transmitting-ctp-variation.json),
+[metric chain rule](development/nsc-transmitting-metric-pullback.json),
+[extended action decision](development/nsc-extended-action-completion-gate.json).
+The conditional Gaussian differential passes; physical selection and
+two-sided endpoint matching remain OPEN. Its focused verifier is
+`python3 scripts/derive_nsc_transmitting_action_completion.py --check`.
+
+Preceding binding: [full extended gate](development/nsc-full-extended-history-gate.json),
 [transmitting selector](development/nsc-transmitting-boundary-selection.json),
 and [Weyl endpoint binding](development/nsc-weyl-endpoint-match.json).
 All three records report OPEN for the physical transmitting action; the
@@ -24,7 +32,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains thirty-one records.
+The separate post-preprint development snapshot now contains thirty-four records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.19.0 · full extended transmitting-action gate, 13 September 2026<br>
+Version 0.20.0 · transmitting CTP first differential, 13 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -65,7 +65,7 @@ weighted interface components with separate residuals. The full transmitting-act
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and thirty-one post-preprint
+100 preprint records and thirty-four post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -960,6 +960,18 @@ All 33 fixed-basis covariance tangents are nonzero at tolerance $3\times10^{-11}
 The [endpoint binding](../results/development/nsc-weyl-endpoint-match.json) extracts all eight stored end-node coefficients exactly and retains the full nodal gradient. The transmitting derivative, its pullback to these coordinates, and independent boundary-jet variations remain unevaluated. The [full extended gate](../results/development/nsc-full-extended-history-gate.json) therefore returns **OPEN**, with explicit missing residuals. The homogeneous non-existence certificate is retained within its original scope; metric evolution remains closed.
 
 
+**Transmitting CTP first differential.** Applying the existing finite Gaussian action to the retained channel maps gives
+
+$$
+Q=I-C_0+C_0V_-^\dagger V_+,
+\qquad
+\delta\Gamma_G=-i\,\mathrm{Tr}[Q^{-1}C_0(\delta V_-^\dagger V_++V_-^\dagger\delta V_+)].
+$$
+
+The implemented differential agrees with the existing determinant in all 33 channels, with maximum error $5.55\times10^{-12}$ (finite-difference tolerance $3\times10^{-8}$) and zero unitary-tangent residual ([record](../results/development/nsc-transmitting-ctp-variation.json)). Common-branch variation is flat for every map. For $V_\pm(s)=e^{\pm isX/2}V$, the relative derivative is $\mathrm{Tr}(VC_0V^\dagger X)$. With $X=I/\sqrt{d_c}$ it is independent of $V_c$, ranging from $4.8989794875$ to $5.6568542495$ across the retained channels. These are finite Gaussian action derivatives, not renormalized stresses or independent equations selecting $V_c$.
+
+The [metric pullback](../results/development/nsc-transmitting-metric-pullback.json) now contracts supplied branch jets $\partial V_\pm/\partial g^A_{\Delta,e}$ into the existing endpoint basis. The physical jets, transmitting embedding and same-action remainder are not supplied by the locked histories/vertices, so no physical endpoint mismatch is assigned. The [F→H gate](../results/development/nsc-extended-action-completion-gate.json) remains **OPEN** and keeps the old certificates intact.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -1011,7 +1023,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The thirty-one
+finite Casimir, and link responses remain. The thirty-four
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1029,8 +1041,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate thirty-one-record development snapshot, imported
-through laboratory commit $ca6c78a$, carries the common-source, constraint
+42 scoped follow-ups. A separate thirty-four-record development snapshot, imported
+through laboratory commit $5e20e21$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

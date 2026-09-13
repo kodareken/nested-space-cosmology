@@ -1,0 +1,778 @@
+{
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "input_hashes": {
+    "results/development/nsc-full-extended-history-gate.json": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-transmitting-boundary-selection.json": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e",
+    "results/development/nsc-weyl-endpoint-match.json": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_tilted_landau_interface.py": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "mode_state_payload": {
+    "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+    "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+  },
+  "schema": "NSC-TRANSMITTING-CTP-VARIATION-v1",
+  "scope": {
+    "duration_selected": false,
+    "finite_stress_fabricated": false,
+    "metric_timestep_started": false,
+    "new_physical_action_term": false,
+    "old_generator_rerun": false,
+    "parameters_refitted": false,
+    "source_integration_run": false
+  },
+  "selection": {
+    "central_derivative_invariant_under_V": true,
+    "conditional_differential_status": "PASS",
+    "difference_convention": "Vplus(s)=exp(i s X/2)V; Vminus(s)=exp(-i s X/2)V; V=I is an algebra control only",
+    "differential": "dGamma_G=-i Tr[Q^-1 C0(dVminus^dagger Vplus+Vminus^dagger dVplus)]",
+    "dimensionless_derivative_step": 2e-05,
+    "functional": "Gamma_G=-i log det Q; Q=I-C0+C0 Vminus^dagger Vplus",
+    "generator": "X=I/sqrt(d_c) in each retained channel; ||X||_F=1",
+    "missing_action_ingredient": "the physical map U[g,B,embedding] and its admissible metric/link variations, including the same-action non-Gaussian boundary completion",
+    "nonexistence_of_full_extended_class_claimed": false,
+    "normalization_note": "per-channel finite canonical determinant; not a continuum angular sum, renormalized stress, or total same-action derivative",
+    "physical_selection_residual": null,
+    "previous_covariance_freedom_probe_reused": 0.679080121964124,
+    "reason": "common-branch variation is identically flat; the relative derivative is a source differential, not an independent equation extremizing unrestricted V",
+    "residuals": {
+      "algebra_tolerance": 3e-11,
+      "first_differential_tolerance": 3e-08,
+      "maximum_common_branch_derivative": 0.0,
+      "maximum_first_differential_error": 5.551121183780314e-12,
+      "maximum_relative_identity_derivative": 5.656854249492403,
+      "maximum_trace_identity_residual": 1.776356944588069e-15,
+      "maximum_unitarity_and_tangent_residual": 0.0,
+      "minimum_relative_identity_derivative": 4.898979487534709
+    },
+    "rows": [
+      {
+        "canonical_dimension": 96,
+        "channel": 0,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.173518542246589,
+          0.0
+        ],
+        "first_differential_error": 5.3290705182007514e-14,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.173518542246643,
+        "relative_branch_derivative": [
+          5.173518542246642,
+          -0.0
+        ],
+        "trace_identity_residual": 8.881784197001252e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 1,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.911107536438068,
+          0.0
+        ],
+        "first_differential_error": 7.99360584158984e-15,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.911107536438076,
+        "relative_branch_derivative": [
+          4.911107536438076,
+          -1.0138033595863524e-18
+        ],
+        "trace_identity_residual": 1.0138033595863524e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 2,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.901754639744885,
+          0.0
+        ],
+        "first_differential_error": 2.6645402314116308e-15,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.901754639744888,
+        "relative_branch_derivative": [
+          4.901754639744888,
+          5.147603523921784e-18
+        ],
+        "trace_identity_residual": 5.147603523921784e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 3,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.899861608485485,
+          0.0
+        ],
+        "first_differential_error": 8.888677476687502e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.899861608485485,
+        "relative_branch_derivative": [
+          4.899861608485486,
+          -3.4999537492733e-17
+        ],
+        "trace_identity_residual": 8.888677476687502e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 4,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.899102536757221,
+          0.0
+        ],
+        "first_differential_error": 8.882288181177162e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.899102536757222,
+        "relative_branch_derivative": [
+          4.899102536757222,
+          -9.461929707153962e-18
+        ],
+        "trace_identity_residual": 9.461929707153962e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 5,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898996397436123,
+          0.0
+        ],
+        "first_differential_error": 8.883898984041261e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.8989963974361235,
+        "relative_branch_derivative": [
+          4.8989963974361235,
+          -1.9383146428843304e-17
+        ],
+        "trace_identity_residual": 1.9383146428843304e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 6,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898982416603755,
+          0.0
+        ],
+        "first_differential_error": 8.893757686666419e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898982416603756,
+        "relative_branch_derivative": [
+          4.898982416603756,
+          -4.613407277022157e-17
+        ],
+        "trace_identity_residual": 4.613407277022157e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 7,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898980563638334,
+          0.0
+        ],
+        "first_differential_error": 1.5007566606156237e-17,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898980563638334,
+        "relative_branch_derivative": [
+          4.898980563638334,
+          -1.5007566606156237e-17
+        ],
+        "trace_identity_residual": 1.5007566606156237e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 8,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898979755394632,
+          0.0
+        ],
+        "first_differential_error": 1.4875065957669813e-17,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898979755394632,
+        "relative_branch_derivative": [
+          4.898979755394632,
+          -1.4875065957669813e-17
+        ],
+        "trace_identity_residual": 1.4875065957669813e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 9,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898979532438812,
+          0.0
+        ],
+        "first_differential_error": 1.776467190250438e-15,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898979532438814,
+        "relative_branch_derivative": [
+          4.898979532438814,
+          -1.9800433132590443e-17
+        ],
+        "trace_identity_residual": 1.9800433132590443e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 10,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.89897950918387,
+          0.0
+        ],
+        "first_differential_error": 3.672190553200777e-17,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898979509183869,
+        "relative_branch_derivative": [
+          4.89897950918387,
+          -3.672190553200777e-17
+        ],
+        "trace_identity_residual": 8.889372326362044e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 11,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898979488879987,
+          0.0
+        ],
+        "first_differential_error": 3.189460511845442e-17,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898979488879987,
+        "relative_branch_derivative": [
+          4.898979488879987,
+          -3.189460511845442e-17
+        ],
+        "trace_identity_residual": 3.189460511845442e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 96,
+        "channel": 12,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          4.898979487534708,
+          0.0
+        ],
+        "first_differential_error": 8.895343194112006e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 4.898979487534709,
+        "relative_branch_derivative": [
+          4.898979487534709,
+          -4.909582659795072e-17
+        ],
+        "trace_identity_residual": 4.909582659795072e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 13,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492378,
+          0.0
+        ],
+        "first_differential_error": 5.141559709800164e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492379,
+        "relative_branch_derivative": [
+          5.656854249492378,
+          5.141559709800164e-18
+        ],
+        "trace_identity_residual": 8.88193301515645e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 14,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492381,
+          0.0
+        ],
+        "first_differential_error": 8.881785049299125e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.6568542494923815,
+        "relative_branch_derivative": [
+          5.6568542494923815,
+          3.890996310797748e-19
+        ],
+        "trace_identity_residual": 3.890996310797748e-19,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 15,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492394,
+          0.0
+        ],
+        "first_differential_error": 2.9502610994936724e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492395,
+        "relative_branch_derivative": [
+          5.656854249492394,
+          -2.9502610994936724e-18
+        ],
+        "trace_identity_residual": 8.881833196258344e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 16,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492367,
+          0.0
+        ],
+        "first_differential_error": 4.058699031061029e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492367,
+        "relative_branch_derivative": [
+          5.656854249492367,
+          -4.058699031061029e-18
+        ],
+        "trace_identity_residual": 4.058699031061029e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 17,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492385,
+          0.0
+        ],
+        "first_differential_error": 1.2666932037112373e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492385,
+        "relative_branch_derivative": [
+          5.656854249492385,
+          -1.2666932037112373e-18
+        ],
+        "trace_identity_residual": 1.2666932037112373e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 18,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492382,
+          0.0
+        ],
+        "first_differential_error": 8.881786239340338e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492382,
+        "relative_branch_derivative": [
+          5.6568542494923815,
+          -6.023224568327184e-19
+        ],
+        "trace_identity_residual": 8.881786239340338e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 19,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492385,
+          0.0
+        ],
+        "first_differential_error": 1.4524182277319942e-17,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492385,
+        "relative_branch_derivative": [
+          5.656854249492385,
+          1.4524182277319942e-17
+        ],
+        "trace_identity_residual": 1.4524182277319942e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 20,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.65685424949238,
+          0.0
+        ],
+        "first_differential_error": 3.950659632114862e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492379,
+        "relative_branch_derivative": [
+          5.65685424949238,
+          -3.950659632114862e-18
+        ],
+        "trace_identity_residual": 8.88187206017144e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 21,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492377,
+          0.0
+        ],
+        "first_differential_error": 8.881798999267245e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492377,
+        "relative_branch_derivative": [
+          5.656854249492376,
+          1.6215464330685028e-18
+        ],
+        "trace_identity_residual": 8.881798999267245e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 22,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492385,
+          -5.551115123125782e-12
+        ],
+        "first_differential_error": 5.551121183780314e-12,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492385,
+        "relative_branch_derivative": [
+          5.656854249492385,
+          6.060654532306057e-18
+        ],
+        "trace_identity_residual": 6.060654532306057e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 23,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.6568542494923735,
+          0.0
+        ],
+        "first_differential_error": 8.881987157337834e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492374,
+        "relative_branch_derivative": [
+          5.656854249492374,
+          -6.004449194577563e-18
+        ],
+        "trace_identity_residual": 6.004449194577563e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 24,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492374,
+          0.0
+        ],
+        "first_differential_error": 1.693830533835878e-20,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492375,
+        "relative_branch_derivative": [
+          5.656854249492374,
+          1.693830533835878e-20
+        ],
+        "trace_identity_residual": 8.88178419861639e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 25,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492375,
+          5.551115123125782e-12
+        ],
+        "first_differential_error": 5.551099196577923e-12,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492375,
+        "relative_branch_derivative": [
+          5.656854249492374,
+          1.5997602336955493e-17
+        ],
+        "trace_identity_residual": 8.883224800158687e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 26,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492366,
+          -5.551115123125782e-12
+        ],
+        "first_differential_error": 5.551114148924361e-12,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492366,
+        "relative_branch_derivative": [
+          5.6568542494923655,
+          -1.0452557071004014e-18
+        ],
+        "trace_identity_residual": 8.881790347562281e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 27,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492373,
+          0.0
+        ],
+        "first_differential_error": 1.2553335960897868e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492373,
+        "relative_branch_derivative": [
+          5.656854249492373,
+          -1.2553335960897868e-18
+        ],
+        "trace_identity_residual": 1.2553335960897868e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 28,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492383,
+          5.551115123125782e-12
+        ],
+        "first_differential_error": 5.551104977731505e-12,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492383,
+        "relative_branch_derivative": [
+          5.656854249492383,
+          1.0145394277132182e-17
+        ],
+        "trace_identity_residual": 1.0145394277132182e-17,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 29,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492401,
+          0.0
+        ],
+        "first_differential_error": 6.113118786085935e-19,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492403,
+        "relative_branch_derivative": [
+          5.656854249492401,
+          6.113118786085935e-19
+        ],
+        "trace_identity_residual": 1.776356944588069e-15,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 30,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492392,
+          0.0
+        ],
+        "first_differential_error": 4.3012616514357574e-18,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492392,
+        "relative_branch_derivative": [
+          5.656854249492392,
+          4.3012616514357574e-18
+        ],
+        "trace_identity_residual": 4.3012616514357574e-18,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 31,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.65685424949239,
+          0.0
+        ],
+        "first_differential_error": 8.883129508711544e-16,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.656854249492392,
+        "relative_branch_derivative": [
+          5.656854249492391,
+          1.5459413456083662e-17
+        ],
+        "trace_identity_residual": 8.883129508711544e-16,
+        "unitarity_and_tangent_residual": 0.0
+      },
+      {
+        "canonical_dimension": 128,
+        "channel": 32,
+        "common_branch_derivative": [
+          0.0,
+          -0.0
+        ],
+        "existing_action_finite_difference": [
+          5.656854249492389,
+          0.0
+        ],
+        "first_differential_error": 1.5492804320742092e-17,
+        "linear_solve_residual": 0.0,
+        "normalized_trace_identity": 5.6568542494923895,
+        "relative_branch_derivative": [
+          5.656854249492389,
+          -1.5492804320742092e-17
+        ],
+        "trace_identity_residual": 8.883135326036255e-16,
+        "unitarity_and_tangent_residual": 0.0
+      }
+    ],
+    "selected_Vc": null,
+    "status": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-extended-action-completion-gate.md": "20a0b0aac347ac4d03633eaccdc593ad13326620c9d46717926a50017f6cc039",
+    "docs/nsc-transmitting-ctp-variation.md": "be1ffb026d35c8e7c68219644031bc1b6af346602f45d70526b5b5ef7229fe5a",
+    "docs/nsc-transmitting-metric-pullback.md": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72",
+    "scripts/derive_nsc_transmitting_action_completion.py": "d942a1b56f1bcc782eced48bf0e8f007a6f6b49fb63200947d1696955c89ce2c",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "tests/test_nsc_transmitting_ctp_variation.py": "14ba673ca67f470ed5b7d43fc3434eee47646ad96deeb0284992c095fd2bc67e"
+  },
+  "status": "OPEN"
+}
