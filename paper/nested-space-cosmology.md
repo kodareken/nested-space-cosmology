@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.21.0 · known bulk endpoint jets, 13 September 2026<br>
+Version 0.22.0 · transmitting Dirac seam domain, 13 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -65,7 +65,7 @@ weighted interface components with separate residuals. The full transmitting-act
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and thirty-seven post-preprint
+100 preprint records and thirty-eight post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -976,6 +976,17 @@ The [metric pullback](../results/development/nsc-transmitting-metric-pullback.js
 
 These are frequency-diagonal bulk control jets. The transmitting $dB/dg_\Delta$ and embedding/normal derivatives are absent. The [boundary remainder](../results/development/nsc-transmitting-boundary-remainder.json) preserves the original eight coefficients without subtracting the control covector. The [J→M physical gate](../results/development/nsc-physical-jet-extended-gate.json) remains **OPEN**, with no physical jet, stress or metric trajectory assigned.
 
+**Transmitting Dirac domain: finite same-surface definition.** The stored throat $\rho=0$ is a spacelike three-surface: $g_{\tau\tau}=1-3\pi/2<0$ and $a_\Sigma=\sqrt{3\pi/2-1}=1.9267560770332839$. On it $z=\tau$ and the stored mode labels satisfy $k=-\omega$. The explicit reduced spin-basis map $R=(I+i\sigma_1)/\sqrt2$ transports the stored current $\sigma_3$ to $\sigma_2$, while the inherited child/PG coframe gives $J_\Sigma=e^{-\xi\sigma_2}$ with $\xi=0.4981473092556278$. This is a coframe change on one surface, distinct from propagation to a tilted Landau slice.
+
+For each quadrature weight $w_j$, the map and norm are
+
+$$
+T_j=\frac{e^{+\xi\sigma_2/2}R}{r\sqrt{a_\Sigma w_j}},\qquad
+G_j=a_\Sigma r^2w_jJ_\Sigma,\qquad T_j^\dagger G_jT_j=I.
+$$
+
+The transparent domain is the graph $E_ja_j=(T_ja_j,T_ja_j)$ with opposite oriented boundary forms. All 1,904 blocks pass normalization at $6.67\times10^{-16}$, canonical covariance recovery at $5.56\times10^{-16}$ and Green-form cancellation at $1.09\times10^{-16}$ (tolerance $3\times10^{-11}$). It has 3,808 independent coefficients; the two traces are restrictions of one field, not independent room states ([domain record](../results/development/nsc-transmitting-dirac-domain.json), [trace-map artifact](../results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz)). **T passes in this finite retained domain.** Its conversion into an instantaneous Hamiltonian block $B[g,X_\Sigma]$, a selected history, and the remaining metric/normal-jet boundary action are still open. No seed tensor is propagated to $r_\star$ by this identification.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -1027,7 +1038,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The thirty-seven
+finite Casimir, and link responses remain. The thirty-eight
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1045,8 +1056,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate thirty-seven-record development snapshot, imported
-through laboratory commit $68a4964$, carries the common-source, constraint
+42 scoped follow-ups. A separate thirty-eight-record development snapshot, imported
+through laboratory commit $05be98a$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

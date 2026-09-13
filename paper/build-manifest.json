@@ -1,15 +1,19 @@
 {
-  "bytes": 1909118,
+  "bytes": 1925384,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "e4228a499556f0b59aafcebfe5f72e29aa02c63067834c0d617f3d751adf54f2",
+  "metadata_sha256": "5d7974567d44ddadf91df09a4e79f89ff3a6e9e8ad8dd47ebe582962a354476f",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 40,
-  "pdf_sha256": "9aaff2fbfbd4dc9533145a8621f22e102e21ae842cd9a2f8a023a2f441e7e5bb",
+  "pdf_sha256": "2558520f1ce84f97379c97dc6de1282e5cc0d9b8e8209af0bbf07a8674ddd62b",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
       "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
       "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
+    },
+    {
+      "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+      "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
     },
     {
       "path": "results/development/charged-compact-ctp-completion.json",
@@ -92,6 +96,10 @@
       "sha256": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3"
     },
     {
+      "path": "results/development/nsc-transmitting-dirac-domain.json",
+      "sha256": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926"
+    },
+    {
       "path": "results/development/nsc-transmitting-metric-pullback.json",
       "sha256": "68092e0de029be1c944f992419a40ff7a8ecbd5afba4b8599ec06a25b7871945"
     },
@@ -129,10 +137,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "47f9325b8c72750ff4ac3ca88487942c6373136327ad6f91c13374d4ceb70ea3"
+      "sha256": "00e2ca1939b16c17319c263a290d82eb819b576ecc591fd84203acd954db352d"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "fbfe569729539c8cf80a574ad7c7c7d82af8166de7dd2fd3cc63637efc1015d1",
-  "version": "0.21.0"
+  "source_sha256": "3c74573345c212e7a9ade58cd48b63277ca436238b30c784c7838daf512bce79",
+  "version": "0.22.0"
 }

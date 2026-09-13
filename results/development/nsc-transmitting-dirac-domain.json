@@ -1,0 +1,1095 @@
+{
+  "channel_map": {
+    "canonical_CAR_space": "one independent canonical a_j per retained node; the two traces are redundant, not a doubled CAR Hilbert space",
+    "canonical_identity": "T_j^dagger G_j T_j=I",
+    "channels": [
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 0.0,
+          "angular_level": 0,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 4,
+          "factor": 1.2732395447351628,
+          "family": 0,
+          "index": 0,
+          "reference_scheme": "transparent LLL filled-sea covariance plus analytic conformal local term",
+          "sample_count": 48,
+          "sample_offset": 0
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 5.551115123125783e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 0.0,
+          "recovered_CAR_upper_violation": 2.220446049250313e-16,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 2.23606797749979,
+          "angular_level": 1,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 12,
+          "factor": 0.1577592278286934,
+          "family": 1,
+          "index": 1,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 48
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 5.551129551440712e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 1.5222754676584106e-16,
+          "recovered_CAR_upper_violation": 1.9984014443252818e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 3.4641016151377544,
+          "angular_level": 2,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 16,
+          "factor": 0.21034563710492452,
+          "family": 1,
+          "index": 2,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 96
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440925695048521e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.79754585646275e-16,
+          "recovered_CAR_upper_violation": 1.7319479184152442e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 4.58257569495584,
+          "angular_level": 3,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 20,
+          "factor": 0.26293204638115564,
+          "family": 1,
+          "index": 3,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 144
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440897150078173e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 1.2705589257841187e-16,
+          "recovered_CAR_upper_violation": 2.2426505097428162e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 5.656854249492381,
+          "angular_level": 4,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 24,
+          "factor": 0.3155184556573868,
+          "family": 1,
+          "index": 4,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 192
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3306815516132555e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 1.9707394084024927e-16,
+          "recovered_CAR_upper_violation": 2.6645352591003757e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 6.708203932499369,
+          "angular_level": 5,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 28,
+          "factor": 0.36810486493361794,
+          "family": 1,
+          "index": 5,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 240
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440923517687221e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 1.507623733387893e-16,
+          "recovered_CAR_upper_violation": 2.4424906541753444e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 7.745966692414834,
+          "angular_level": 6,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 32,
+          "factor": 0.42069127420984903,
+          "family": 1,
+          "index": 6,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 288
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 3.330675881601427e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.2508911547651477e-16,
+          "recovered_CAR_upper_violation": 2.3092638912203256e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 8.774964387392123,
+          "angular_level": 7,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 36,
+          "factor": 0.4732776834860802,
+          "family": 1,
+          "index": 7,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 336
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3307142486596306e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.4339175192147394e-16,
+          "recovered_CAR_upper_violation": 2.5757174171303632e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 9.797958971132712,
+          "angular_level": 8,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 40,
+          "factor": 0.5258640927623113,
+          "family": 1,
+          "index": 8,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 384
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3306740313255406e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.7601213210129395e-16,
+          "recovered_CAR_upper_violation": 2.0872192862952943e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 10.816653826391969,
+          "angular_level": 9,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 44,
+          "factor": 0.5784505020385424,
+          "family": 1,
+          "index": 9,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 432
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440896099773537e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 1.9193398287965952e-16,
+          "recovered_CAR_upper_violation": 1.8207657603852567e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 11.832159566199232,
+          "angular_level": 10,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 48,
+          "factor": 0.6310369113147736,
+          "family": 1,
+          "index": 10,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 480
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 3.33068157474755e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 1.4226357782822428e-16,
+          "recovered_CAR_upper_violation": 2.3092638912203256e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 12.84523257866513,
+          "angular_level": 11,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 52,
+          "factor": 0.6836233205910047,
+          "family": 1,
+          "index": 11,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 528
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 3.885780737443928e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.251591628581351e-16,
+          "recovered_CAR_upper_violation": 1.8207657603852567e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 96,
+        "channel": {
+          "angular_eigenvalue": 13.856406460551018,
+          "angular_level": 12,
+          "compact_level": 0,
+          "compact_mass": 0.0,
+          "copy_count": 1,
+          "degeneracy": 56,
+          "factor": 0.7362097298672359,
+          "family": 1,
+          "index": 12,
+          "reference_scheme": "massive-angular E2+E4/P2+P4",
+          "sample_count": 48,
+          "sample_offset": 576
+        },
+        "doubled_trace_dimension": 192,
+        "independent_coefficients": 96,
+        "matching_constraint_rank": 96,
+        "residuals": {
+          "canonical_covariance_recovery": 2.775560949692613e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.314811747700788e-16,
+          "recovered_CAR_upper_violation": 2.220446049250313e-14,
+          "same_surface_green_form": 1.0421935263085789e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 0.0,
+          "angular_level": 0,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 4,
+          "factor": 0.10517281855246226,
+          "family": 2,
+          "index": 13,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 624
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3324495150625936e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 3.191940984261485e-16,
+          "recovered_CAR_upper_violation": 2.7533531010703882e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 2.23606797749979,
+          "angular_level": 1,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 12,
+          "factor": 0.3155184556573868,
+          "family": 2,
+          "index": 14,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 688
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.332665234965116e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.688316458388275e-16,
+          "recovered_CAR_upper_violation": 2.842170943040401e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 3.4641016151377544,
+          "angular_level": 2,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 16,
+          "factor": 0.42069127420984903,
+          "family": 2,
+          "index": 15,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 752
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440937787710395e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.771298833743012e-16,
+          "recovered_CAR_upper_violation": 2.398081733190338e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 4.58257569495584,
+          "angular_level": 3,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 20,
+          "factor": 0.5258640927623113,
+          "family": 2,
+          "index": 16,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 816
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440942022699315e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.2591638907687106e-16,
+          "recovered_CAR_upper_violation": 2.930988785010413e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 5.656854249492381,
+          "angular_level": 4,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 24,
+          "factor": 0.6310369113147736,
+          "family": 2,
+          "index": 17,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 880
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.331437403222278e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 3.250174686795224e-16,
+          "recovered_CAR_upper_violation": 4.0190073491430667e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 6.708203932499369,
+          "angular_level": 5,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 28,
+          "factor": 0.7362097298672359,
+          "family": 2,
+          "index": 18,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 944
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3313828422416135e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 1.774744468549018e-16,
+          "recovered_CAR_upper_violation": 3.3306690738754696e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 7.745966692414834,
+          "angular_level": 6,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 32,
+          "factor": 0.8413825484196981,
+          "family": 2,
+          "index": 19,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1008
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 2.7894008272968645e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.74180771396068e-16,
+          "recovered_CAR_upper_violation": 2.930988785010413e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 8.774964387392123,
+          "angular_level": 7,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 36,
+          "factor": 0.9465553669721604,
+          "family": 2,
+          "index": 20,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1072
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3339258140164333e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.3975681557289855e-16,
+          "recovered_CAR_upper_violation": 3.9745984281580604e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 9.797958971132712,
+          "angular_level": 8,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 40,
+          "factor": 1.0517281855246225,
+          "family": 2,
+          "index": 21,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1136
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440900369163705e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.1695348148792996e-16,
+          "recovered_CAR_upper_violation": 2.2426505097428162e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 10.816653826391969,
+          "angular_level": 9,
+          "compact_level": 1,
+          "compact_mass": 1.5707963267948966,
+          "copy_count": 2,
+          "degeneracy": 44,
+          "factor": 1.1569010040770848,
+          "family": 2,
+          "index": 22,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1200
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.342213888644167e-16,
+          "inverse_map": 2.220446049250313e-16,
+          "normalization": 4.440892098500626e-16,
+          "recovered_CAR_lower_violation": 2.064111334246722e-16,
+          "recovered_CAR_upper_violation": 2.708944180085382e-14,
+          "same_surface_green_form": 1.0109206455804527e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 0.0,
+          "angular_level": 0,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 4,
+          "factor": 0.10517281855246226,
+          "family": 2,
+          "index": 23,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1264
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3306835558228516e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.570300701328193e-16,
+          "recovered_CAR_upper_violation": 2.4424906541753444e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 2.23606797749979,
+          "angular_level": 1,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 12,
+          "factor": 0.3155184556573868,
+          "family": 2,
+          "index": 24,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1328
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 4.441073376640799e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.5074264747887344e-16,
+          "recovered_CAR_upper_violation": 3.5083047578154947e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 3.4641016151377544,
+          "angular_level": 2,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 16,
+          "factor": 0.42069127420984903,
+          "family": 2,
+          "index": 25,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1392
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 4.440900391516812e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.5846550972347497e-16,
+          "recovered_CAR_upper_violation": 2.19824158875781e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 4.58257569495584,
+          "angular_level": 3,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 20,
+          "factor": 0.5258640927623113,
+          "family": 2,
+          "index": 26,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1456
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 2.636779683484747e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 3.1141677037533946e-16,
+          "recovered_CAR_upper_violation": 4.1744385725905886e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 5.656854249492381,
+          "angular_level": 4,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 24,
+          "factor": 0.6310369113147736,
+          "family": 2,
+          "index": 27,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1520
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.3313748241431283e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 4.109057068802961e-16,
+          "recovered_CAR_upper_violation": 2.731148640577885e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 6.708203932499369,
+          "angular_level": 5,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 28,
+          "factor": 0.7362097298672359,
+          "family": 2,
+          "index": 28,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1584
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.331011198142727e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.243226373915355e-16,
+          "recovered_CAR_upper_violation": 2.7755575615628914e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 7.745966692414834,
+          "angular_level": 6,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 32,
+          "factor": 0.8413825484196981,
+          "family": 2,
+          "index": 29,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1648
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.331863405641067e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.0538826587247712e-16,
+          "recovered_CAR_upper_violation": 3.241851231905457e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 8.774964387392123,
+          "angular_level": 7,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 36,
+          "factor": 0.9465553669721604,
+          "family": 2,
+          "index": 30,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1712
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 2.4286131534324696e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.364931551719584e-16,
+          "recovered_CAR_upper_violation": 2.8199664825478976e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 9.797958971132712,
+          "angular_level": 8,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 40,
+          "factor": 1.0517281855246225,
+          "family": 2,
+          "index": 31,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1776
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 3.331036345199023e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.300480693029586e-16,
+          "recovered_CAR_upper_violation": 3.552713678800501e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      },
+      {
+        "allowed_graph_dimension": 128,
+        "channel": {
+          "angular_eigenvalue": 10.816653826391969,
+          "angular_level": 9,
+          "compact_level": 2,
+          "compact_mass": 3.141592653589793,
+          "copy_count": 2,
+          "degeneracy": 44,
+          "factor": 1.1569010040770848,
+          "family": 2,
+          "index": 32,
+          "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+          "sample_count": 64,
+          "sample_offset": 1840
+        },
+        "doubled_trace_dimension": 256,
+        "independent_coefficients": 128,
+        "matching_constraint_rank": 128,
+        "residuals": {
+          "canonical_covariance_recovery": 4.442415536033607e-16,
+          "inverse_map": 1.1102230246251565e-16,
+          "normalization": 6.661338147750939e-16,
+          "recovered_CAR_lower_violation": 2.4434994663460443e-16,
+          "recovered_CAR_upper_violation": 2.398081733190338e-14,
+          "same_surface_green_form": 1.0803096486263252e-16
+        }
+      }
+    ],
+    "common_current": "sigma2 after R=(I+i sigma1)/sqrt2",
+    "frequency_convention": "stored parent-neck omega; k=-omega on Sigma0; weights and occupations unchanged; no second Omega rescaling",
+    "multiplicity_convention": "existing channel labels, degeneracies, copy counts and source factors preserved; no new angular-state basis or sector selected",
+    "normal_current_metric": "J=(q beta I-N sigma2)/aSigma=exp(-xi sigma2)",
+    "operator_rotation": "hx sigma1+hy sigma2+hz sigma3 -> hx sigma1-hy sigma3+hz sigma2",
+    "sewing_graph": "E_j a_j=(T_j a_j,T_j a_j); Green form diag(+G_j,-G_j)",
+    "stored_current": "sigma3 in the reduced KS mode representation",
+    "trace_map": "T_j=(r sqrt(aSigma*w_j))^-1 exp(+xi sigma2/2) R",
+    "trace_metric": "G_j=aSigma*r^2*w_j*J"
+  },
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "domain": {
+    "child_outward": "opposite past normal toward increasing rho",
+    "compact_reflecting_endpoints_unchanged": true,
+    "finite_projection_definition_not_continuum_wellposedness_proof": true,
+    "in": "retained reduced charged angular/compact channels; one Dirac field restricted from rho>0 and rho<0; common gauge and spin frame; smooth shared induced metric",
+    "no_independent_particle_copies_added": true,
+    "out": "continuum spectral completeness, four-spinor reconstruction of unresolved degeneracies, null surfaces, a moving neck or tilted SigmaL, physical kernel selection and independent simultaneous room Hamiltonians",
+    "parent_outward": "future normal toward decreasing rho",
+    "surface": "Sigma0: rho=0 with coordinates (tau,theta,phi); tau=z on the seam",
+    "surface_type": "spacelike three-surface; not the two-sphere rho=0 intersect tau=constant",
+    "transmission_condition": "psi_parent|Sigma0=psi_child|Sigma0; same physical trace from both sides"
+  },
+  "finite_domain_dimensions": {
+    "channels": 33,
+    "doubled_trace_dimension": 7616,
+    "independent_coefficient_dimension": 3808,
+    "matching_rank": 3808,
+    "maximal_isotropic_graph_dimension": 3808,
+    "nodes": 1904
+  },
+  "geometry": {
+    "F_gtautau": -3.712388980384689,
+    "N": 1.0,
+    "beta": 2.1708037636748028,
+    "coframe_rapidity": 0.4981473092556278,
+    "coframe_rapidity_is_not_Landau_eta": true,
+    "embedding_rule": "fixed coordinate cut X_Sigma0(tau,theta,phi)=(tau,0,theta,phi) in the inherited chart",
+    "future_normal_tau_rho": [
+      1.1266624714724092,
+      -1.9267560770332837
+    ],
+    "induced_a": 1.9267560770332837,
+    "moving_embedding_or_history_selected": false,
+    "normal_rule": "aSigma=sqrt(q^2 beta^2-N^2); n=(q beta/(N aSigma),-aSigma/(N q)); future normal for q beta>N",
+    "q_PG": 1.0,
+    "r": 1.0
+  },
+  "input_hashes": {
+    "results/development/adm-neck-source-map.json": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-physical-jet-extended-gate.json": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a",
+    "results/development/nsc-tilted-landau-interface.json": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "scripts/map_nsc_adm_neck_source.py": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_chiral_boundary.py": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "payload": {
+    "bytes": 543340,
+    "description": "same-surface spectral trace maps and coordinate covariances; not U_L0 or a physical stress",
+    "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+    "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
+  },
+  "preserved": {
+    "Gaussian_differential_checks": {
+      "algebra_tolerance": 3e-11,
+      "first_differential_tolerance": 3e-08,
+      "maximum_common_branch_derivative": 0.0,
+      "maximum_first_differential_error": 5.551121183780314e-12,
+      "maximum_relative_identity_derivative": 5.656854249492403,
+      "maximum_trace_identity_residual": 1.776356944588069e-15,
+      "maximum_unitarity_and_tangent_residual": 0.0,
+      "minimum_relative_identity_derivative": 4.898979487534709
+    },
+    "Weyl_eight_coefficients_and_93_54264532195464": "unchanged; physical two-sided mismatch not evaluated",
+    "bulk_jet_checks": {
+      "U_against_owned_propagator": 1.0053497077208614e-15,
+      "algebra_tolerance": 3e-11,
+      "dU_against_perturbed_owned_propagator": 1.0275754984438348e-10,
+      "endpoint_contraction_against_owned_action": 4.939392818370525e-11,
+      "endpoint_tangent": 1.3877825924244738e-16,
+      "finite_difference_tolerance": 3e-08,
+      "step_tangent": 4.2207643840401616e-17,
+      "unitarity": 1.3322676295501878e-15
+    },
+    "homogeneous_nonexistence": true
+  },
+  "rejected_paths": {
+    "copy_seed_to_rstar": "this stored covariance belongs to Sigma0; another surface requires its Cauchy transport",
+    "given_B_only": "given B matrices are not a differentiable transmitting Dirac domain",
+    "instantaneous_B_from_temporal_sewing": "spacelike same-field trace sewing does not define an instantaneous parent/child Hamiltonian block B"
+  },
+  "residuals": {
+    "canonical_covariance_recovery": 5.551129551440712e-16,
+    "current_intertwining": 2.220446049250313e-16,
+    "induced_metric": 0.0,
+    "inverse_map": 2.220446049250313e-16,
+    "normal_tangent": 5.963664990784441e-16,
+    "normal_unit": 0.0,
+    "normalization": 6.661338147750939e-16,
+    "recovered_CAR_lower_violation": 4.109057068802961e-16,
+    "recovered_CAR_upper_violation": 4.1744385725905886e-14,
+    "rotated_mode_H": 7.119291619286993e-15,
+    "same_surface_green_form": 1.0803096486263252e-16,
+    "seed_a_match": 2.220446049250313e-16,
+    "spin_rotation_unitarity": 2.220446049250313e-16,
+    "stored_axial_momentum_plus_frequency": 1.7763568394002505e-15
+  },
+  "schema": "NSC-TRANSMITTING-DIRAC-DOMAIN-v1",
+  "scope": {
+    "coordinate_boost_used_as_propagation": false,
+    "finite_stress": null,
+    "metric_timestep_started": false,
+    "new_physical_interaction": false,
+    "nulls": null,
+    "old_generators_rerun": false,
+    "optimizer_started": false,
+    "parameters_refitted": false,
+    "physical_Vc_or_U_L0_selected": false,
+    "physical_two_sided_mismatch": null,
+    "source_tensor_copied_to_rstar": false,
+    "stationary_history": null
+  },
+  "source_hashes": {
+    "docs/nsc-transmitting-dirac-domain.md": "bb06e937fe7946488b5826dd3cb2494fdea0849baa339196a8df27378e2d1d2e",
+    "scripts/define_nsc_transmitting_dirac_domain.py": "10adecda52bf0a050c67746bf943ab4019cdfbb1006369ebd5607fb487e3adfc",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "tests/test_nsc_transmitting_dirac_domain.py": "fae2775e3f23066dc4bc92505bf88157d7ecef2e389efed7adc775499017aa10"
+  },
+  "status": "DEFINITION PASS: finite retained same-surface seed-seam domain; dynamical link and full closure OPEN",
+  "steps": {
+    "T": "PASS in finite retained seed-seam domain",
+    "U": "OPEN",
+    "V": "fixed-seam normal defined; moving/selected-surface jets not evaluated",
+    "W": "OPEN",
+    "X": "OPEN"
+  },
+  "substrate": {
+    "Gamma_rest_metric_and_normal_jet_dependence": "OPEN: not defined by fermionic trace matching",
+    "Hamiltonian_B_g_XSigma": "OPEN: temporal trace sewing does not specify an independent simultaneous parent/child Hamiltonian partition",
+    "channel_to_seed_boundary": "DEFINED and evaluated in the finite retained domain",
+    "fixed_seam_embedding_and_normal": "DEFINED from the inherited geometry; no dynamical selection"
+  },
+  "tolerance": 3e-11
+}

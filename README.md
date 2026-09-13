@@ -330,11 +330,19 @@ propagator into that CTP differential. Checks on the frozen control pass at
 The [physical gate](docs/nsc-physical-jet-extended-gate.md) keeps these bulk
 control jets separate from the missing transmitting link and embedding jets.
 
+The [transmitting Dirac domain](docs/nsc-transmitting-dirac-domain.md) now
+defines the stored channels on the actual spacelike seed seam. The same
+field has two oppositely oriented boundary traces, with 3,808 independent
+coefficients rather than two independent room states. The explicit
+geometry/spin-frame map preserves the stored covariance to `5.56e-16`.
+This defines the finite same-surface transmission domain; its conversion
+into a physical Hamiltonian link and the remaining boundary action are open.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 37-record development update](docs/development-update-2026-09-10.md)
+3. [The 38-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

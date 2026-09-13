@@ -518,11 +518,25 @@
       },
       "generator": "scripts/derive_nsc_dirac_endpoint_jets.py",
       "output": "results/development/nsc-physical-jet-extended-gate.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/define_nsc_transmitting_dirac_domain.py",
+      "output": "results/development/nsc-transmitting-dirac-domain.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "68a4964dea4847c4b4a15d76265b2a4670dbdb26",
+  "source_commit": "05be98a189fb18257cbbcf7ee181407ffa0c5276",
   "source_files": [
     {
       "bytes": 3154,
@@ -1273,10 +1287,40 @@
       "bytes": 24872,
       "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
       "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
+    },
+    {
+      "bytes": 6124,
+      "path": "docs/nsc-transmitting-dirac-domain.md",
+      "sha256": "bb06e937fe7946488b5826dd3cb2494fdea0849baa339196a8df27378e2d1d2e"
+    },
+    {
+      "bytes": 13193,
+      "path": "scripts/define_nsc_transmitting_dirac_domain.py",
+      "sha256": "10adecda52bf0a050c67746bf943ab4019cdfbb1006369ebd5607fb487e3adfc"
+    },
+    {
+      "bytes": 6656,
+      "path": "src/recursive_horizons/nsc_transmitting_dirac_domain.py",
+      "sha256": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+    },
+    {
+      "bytes": 1949,
+      "path": "tests/test_nsc_transmitting_dirac_domain.py",
+      "sha256": "fae2775e3f23066dc4bc92505bf88157d7ecef2e389efed7adc775499017aa10"
+    },
+    {
+      "bytes": 43142,
+      "path": "results/development/nsc-transmitting-dirac-domain.json",
+      "sha256": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926"
+    },
+    {
+      "bytes": 543340,
+      "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+      "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 37 post-preprint records plus four active state/history/interface/partial-jet payloads, outside the 100-record release",
-  "verification_scope": "byte and dependency authentication; new known-bulk endpoint-jet derivative checks; earlier certificates and scientific verification retained without replay"
+  "status": "development snapshot; 38 post-preprint records plus five active state/history/interface/jet/domain payloads, outside the 100-record release",
+  "verification_scope": "byte and dependency authentication; retained transmitting Dirac domain definition verified; previous certificates retained without scientific replay"
 }

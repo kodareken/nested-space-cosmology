@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`68a4964dea4847c4b4a15d76265b2a4670dbdb26`. It contains 41 derivation
-notes, 37 result records, 31 generators, 27 implementation
-modules, four active binary artifacts and ten focused test files. The 150 scientific files are imported
+`05be98a189fb18257cbbcf7ee181407ffa0c5276`. It contains 42 derivation
+notes, 38 result records, 32 generators, 28 implementation
+modules, five active binary artifacts and eleven focused test files. The 156 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -66,6 +66,7 @@ statement:
 | Owned KS bulk vertices propagated into endpoint branch jets | [Dirac endpoint jets](nsc-dirac-endpoint-jets.md) |
 | Existing endpoint object with the physical remainder kept explicit | [Boundary remainder](nsc-transmitting-boundary-remainder.md) |
 | Physical jet and selector dependency decision J→M | [Physical-jet extended gate](nsc-physical-jet-extended-gate.md) |
+| Actual spacelike seed-seam domain and map for all retained Dirac channels | [Transmitting Dirac domain](nsc-transmitting-dirac-domain.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -132,7 +133,7 @@ nonexistence result remains a passing regression.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the thirty-seven later records are indexed separately.
+unchanged; the thirty-eight later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
