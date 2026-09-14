@@ -346,11 +346,20 @@ domain, so the sharp product $P_pH_DP_c$ still needs a domain-respecting
 realization before it can be used as an ordinary link matrix. Its projected
 resolvent $P_p(H_D-z)^{-1}P_c$ is well-defined from the common operator.
 
+The [transmitting cross-resolvent](docs/nsc-transmitting-cross-resolvent.md)
+now evaluates that response in all 33 retained channels. The full operator is
+inverted before spatial projection, so seam continuity handles the sharp-cut
+terms explicitly. Its inverse packet response supplies an energy-dependent
+cross kernel; four static metric kernels agree with an independent weak-form
+calculation below `6.6e-13`. In the trapped probe cell, causal transmission is
+parent-to-child. The real-time state/history conversion and remaining boundary
+variation are the next integration step.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 40-record development update](docs/development-update-2026-09-10.md)
+3. [The 41-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

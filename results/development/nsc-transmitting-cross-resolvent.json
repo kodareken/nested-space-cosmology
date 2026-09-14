@@ -1,0 +1,2908 @@
+{
+  "channels": [
+    {
+      "channel": {
+        "angular_eigenvalue": 0.0,
+        "angular_level": 0,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 4,
+        "factor": 1.2732395447351628,
+        "family": 0,
+        "index": 0,
+        "reference_scheme": "transparent LLL filled-sea covariance plus analytic conformal local term",
+        "sample_count": 48,
+        "sample_offset": 0
+      },
+      "closed_four_mode_H_test_difference": 1.2599245712139424,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.4263899726467809,
+            9.874025908754952
+          ],
+          [
+            -5.1573169598503315,
+            -0.03084431313856445
+          ]
+        ],
+        [
+          [
+            5.157316959850332,
+            0.030844313138563756
+          ],
+          [
+            -0.4263899726467804,
+            9.874025908754948
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 15.76559961762004,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.06392485090523159,
+            0.4088935858566637
+          ],
+          [
+            0.17268534083796558,
+            0.049153047669582395
+          ]
+        ],
+        [
+          [
+            -0.17268534083796558,
+            -0.04915304766958242
+          ],
+          [
+            -0.06392485090523156,
+            0.40889358585666347
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.6379915362346266,
+      "function_evaluations": 3180,
+      "individual_projected_delta_coefficient_norm": 1.4305881219892924,
+      "minimum_imaginary_eigenvalue": 0.006943775882329682,
+      "residuals": {
+        "adjoint_metric_jets": 6.525098934429729e-13,
+        "adjoint_response": 1.7050231408640384e-14,
+        "cross_generator_reconstruction": 3.034923386023436e-16,
+        "inverse_metric_weak_identity": 5.887845413288469e-13,
+        "inverse_response": 9.376713303538803e-16,
+        "inverse_response_adjoint": 2.6213168141595995e-14,
+        "metric_weak_identity": 5.80837663202645e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.197375300795958e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 2.23606797749979,
+        "angular_level": 1,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 12,
+        "factor": 0.1577592278286934,
+        "family": 1,
+        "index": 1,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 48
+      },
+      "closed_four_mode_H_test_difference": 1.2880149669489331,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -4.849712038105646,
+            7.777066295553193
+          ],
+          [
+            -4.132274901198358,
+            -1.0115622887054594
+          ]
+        ],
+        [
+          [
+            4.246355717617942,
+            -1.0521573434115923
+          ],
+          [
+            4.2381069630831805,
+            8.393293610706264
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 14.47925831535854,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.33903656437635216,
+            0.1077770825294537
+          ],
+          [
+            0.037387647522388566,
+            0.07791330130369041
+          ]
+        ],
+        [
+          [
+            -0.06220299340591044,
+            0.03378018729212084
+          ],
+          [
+            0.29791841216433135,
+            0.1946497435160651
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.5154456582507141,
+      "function_evaluations": 3195,
+      "individual_projected_delta_coefficient_norm": 1.5778794433354633,
+      "minimum_imaginary_eigenvalue": 0.008925697445614228,
+      "residuals": {
+        "adjoint_metric_jets": 1.781225530629408e-13,
+        "adjoint_response": 9.436610768733946e-15,
+        "cross_generator_reconstruction": 2.549512416582222e-16,
+        "inverse_metric_weak_identity": 2.7855391962431673e-13,
+        "inverse_response": 9.686415058334858e-16,
+        "inverse_response_adjoint": 3.0564945810793514e-14,
+        "metric_weak_identity": 1.6220658816613217e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 7.824187940394905e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 3.4641016151377544,
+        "angular_level": 2,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 16,
+        "factor": 0.21034563710492452,
+        "family": 1,
+        "index": 2,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 96
+      },
+      "closed_four_mode_H_test_difference": 1.3556793186539855,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -6.4366289135099635,
+            5.381798707373847
+          ],
+          [
+            -2.8845598746191308,
+            -1.2991503154075588
+          ]
+        ],
+        [
+          [
+            3.033921231747075,
+            -1.4709478025020144
+          ],
+          [
+            6.138166610403542,
+            6.228633765180873
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 12.970881223153842,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.293441428808281,
+            -0.1158041129183206
+          ],
+          [
+            -0.06759944044936682,
+            0.04641753131128981
+          ]
+        ],
+        [
+          [
+            0.04632735800742855,
+            0.04919498831273369
+          ],
+          [
+            0.32507171211322977,
+            -0.041276805231656784
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.46710223711018956,
+      "function_evaluations": 3195,
+      "individual_projected_delta_coefficient_norm": 1.6000371896987118,
+      "minimum_imaginary_eigenvalue": 0.012213579360786767,
+      "residuals": {
+        "adjoint_metric_jets": 1.1299603065511919e-13,
+        "adjoint_response": 8.857631669817789e-15,
+        "cross_generator_reconstruction": 1.5746856204965377e-16,
+        "inverse_metric_weak_identity": 1.8636564208503066e-13,
+        "inverse_response": 8.229283900961481e-16,
+        "inverse_response_adjoint": 3.0316497611021987e-14,
+        "metric_weak_identity": 9.075628909091487e-14,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 9.795222677607546e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 4.58257569495584,
+        "angular_level": 3,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 20,
+        "factor": 0.26293204638115564,
+        "family": 1,
+        "index": 3,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 144
+      },
+      "closed_four_mode_H_test_difference": 1.4667570840802129,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -7.084026160447699,
+            2.781932034219521
+          ],
+          [
+            -1.5123852967053137,
+            -1.3350891393577298
+          ]
+        ],
+        [
+          [
+            1.664724856929949,
+            -1.6537251692742143
+          ],
+          [
+            7.14370963618651,
+            3.722279257299681
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 11.505929375799438,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.16349621601191977,
+            -0.2360608539269868
+          ],
+          [
+            -0.12291383038036097,
+            0.006484195430320246
+          ]
+        ],
+        [
+          [
+            0.11306211130749466,
+            0.0362255708578723
+          ],
+          [
+            0.23309953146786266,
+            -0.2022536855568676
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.45490974026202785,
+      "function_evaluations": 3249,
+      "individual_projected_delta_coefficient_norm": 1.4822658940290405,
+      "minimum_imaginary_eigenvalue": 0.014977928204577093,
+      "residuals": {
+        "adjoint_metric_jets": 1.4188335308528712e-13,
+        "adjoint_response": 1.379493889579711e-14,
+        "cross_generator_reconstruction": 2.334863047125274e-16,
+        "inverse_metric_weak_identity": 1.4767736610164978e-13,
+        "inverse_response": 8.951748480241194e-16,
+        "inverse_response_adjoint": 3.9220369124620345e-14,
+        "metric_weak_identity": 1.1306913249965741e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.0020608071961219e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 5.656854249492381,
+        "angular_level": 4,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 24,
+        "factor": 0.3155184556573868,
+        "family": 1,
+        "index": 4,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 192
+      },
+      "closed_four_mode_H_test_difference": 1.6019103989570163,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -6.901858228615795,
+            0.24453735042486135
+          ],
+          [
+            -0.16484270710204418,
+            -1.1533296821024797
+          ]
+        ],
+        [
+          [
+            0.2878186228101619,
+            -1.6154766831544747
+          ],
+          [
+            7.32640868349506,
+            1.1427188985979984
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 10.330898467685406,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.025855286827822815,
+            -0.24757398111453108
+          ],
+          [
+            -0.12469653971718311,
+            -0.02357679553207087
+          ]
+        ],
+        [
+          [
+            0.12651351905868904,
+            0.01045887403063149
+          ],
+          [
+            0.09506782749918638,
+            -0.256488547866146
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.41110313772744245,
+      "function_evaluations": 3339,
+      "individual_projected_delta_coefficient_norm": 1.2562624592362988,
+      "minimum_imaginary_eigenvalue": 0.012292192862370904,
+      "residuals": {
+        "adjoint_metric_jets": 2.328497566101718e-13,
+        "adjoint_response": 2.2233230166554156e-14,
+        "cross_generator_reconstruction": 2.1274245860452972e-16,
+        "inverse_metric_weak_identity": 1.5090627127209043e-13,
+        "inverse_response": 6.467746269822547e-16,
+        "inverse_response_adjoint": 5.035591665774833e-14,
+        "metric_weak_identity": 1.487433510887887e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.0673670538943139e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 6.708203932499369,
+        "angular_level": 5,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 28,
+        "factor": 0.36810486493361794,
+        "family": 1,
+        "index": 5,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 240
+      },
+      "closed_four_mode_H_test_difference": 1.7188818197162075,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -5.989465271077383,
+            -1.9281118552481886
+          ],
+          [
+            0.9911076106523888,
+            -0.7945332396275329
+          ]
+        ],
+        [
+          [
+            -0.9293088139368904,
+            -1.371040843196108
+          ],
+          [
+            6.733709278879196,
+            -1.2103485046262143
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 9.526596398769298,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.06892180436961329,
+            -0.18298768155697856
+          ],
+          [
+            -0.0890075460436206,
+            -0.035213690981082284
+          ]
+        ],
+        [
+          [
+            0.09763418079091139,
+            -0.012996327156548911
+          ],
+          [
+            -0.026273108899806687,
+            -0.2183717749204226
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.3247689950038474,
+      "function_evaluations": 3513,
+      "individual_projected_delta_coefficient_norm": 0.9792891474930021,
+      "minimum_imaginary_eigenvalue": 0.01023062272333501,
+      "residuals": {
+        "adjoint_metric_jets": 3.222654644201183e-13,
+        "adjoint_response": 3.102218029359508e-14,
+        "cross_generator_reconstruction": 1.0367784962136927e-16,
+        "inverse_metric_weak_identity": 2.0228404454725124e-13,
+        "inverse_response": 6.719495664619174e-16,
+        "inverse_response_adjoint": 7.197416928637301e-14,
+        "metric_weak_identity": 1.7755780330013244e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.138186894430417e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 7.745966692414834,
+        "angular_level": 6,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 32,
+        "factor": 0.42069127420984903,
+        "family": 1,
+        "index": 6,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 288
+      },
+      "closed_four_mode_H_test_difference": 1.7600722121276304,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -4.532577527514294,
+            -3.439574164186608
+          ],
+          [
+            1.7909223850526326,
+            -0.32976938553101776
+          ]
+        ],
+        [
+          [
+            -1.8164142328121846,
+            -0.9586138724900322
+          ],
+          [
+            5.485288366201747,
+            -3.0281366752478673
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 8.89760539228652,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.10366498050307059,
+            -0.09228822625246061
+          ],
+          [
+            -0.04124190828790028,
+            -0.029959459816496455
+          ]
+        ],
+        [
+          [
+            0.05040519389082448,
+            -0.024655090939312146
+          ],
+          [
+            -0.09430557764274389,
+            -0.1319711660102165
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.22654027640195967,
+      "function_evaluations": 3675,
+      "individual_projected_delta_coefficient_norm": 0.7121978891887725,
+      "minimum_imaginary_eigenvalue": 0.008812721374669449,
+      "residuals": {
+        "adjoint_metric_jets": 3.297147156130248e-13,
+        "adjoint_response": 3.5249959030613365e-14,
+        "cross_generator_reconstruction": 4.955361418800576e-17,
+        "inverse_metric_weak_identity": 3.0654162308977163e-13,
+        "inverse_response": 5.23855123344251e-16,
+        "inverse_response_adjoint": 9.881436127457978e-14,
+        "metric_weak_identity": 1.8193560763649392e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.0997844759631416e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 8.774964387392123,
+        "angular_level": 7,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 36,
+        "factor": 0.4732776834860802,
+        "family": 1,
+        "index": 7,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 336
+      },
+      "closed_four_mode_H_test_difference": 1.6679304203816985,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -2.8357356070120687,
+            -4.064490752694857
+          ],
+          [
+            2.107066234763254,
+            0.1335375531531745
+          ]
+        ],
+        [
+          [
+            -2.2306157947712695,
+            -0.4494051034623633
+          ],
+          [
+            3.812002900874836,
+            -4.0412404668575626
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 8.06595588294072,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.09071390873233902,
+            -0.01819314368400674
+          ],
+          [
+            -0.003317704999329016,
+            -0.0160204267259225
+          ]
+        ],
+        [
+          [
+            0.008645780045543987,
+            -0.023175970342213623
+          ],
+          [
+            -0.10496984536877067,
+            -0.04560529452422191
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.1501267843951672,
+      "function_evaluations": 3789,
+      "individual_projected_delta_coefficient_norm": 0.49758639744193434,
+      "minimum_imaginary_eigenvalue": 0.007524353157096469,
+      "residuals": {
+        "adjoint_metric_jets": 3.5996361884697787e-13,
+        "adjoint_response": 3.0252889019424975e-14,
+        "cross_generator_reconstruction": 5.33991308585699e-17,
+        "inverse_metric_weak_identity": 3.657606815254173e-13,
+        "inverse_response": 3.048651776960355e-16,
+        "inverse_response_adjoint": 1.1189029018157517e-13,
+        "metric_weak_identity": 2.2180248232774547e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.0733480839765831e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 9.797958971132712,
+        "angular_level": 8,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 40,
+        "factor": 0.5258640927623113,
+        "family": 1,
+        "index": 8,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 384
+      },
+      "closed_four_mode_H_test_difference": 1.4222336084038842,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -1.3097177461012541,
+            -3.748643652007134
+          ],
+          [
+            1.9029001667886125,
+            0.4626950027148361
+          ]
+        ],
+        [
+          [
+            -2.10624377954571,
+            0.049937274552177335
+          ],
+          [
+            2.0677902632179714,
+            -4.102212771153203
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 6.71903775084078,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.05701651830426756,
+            0.019358702981509244
+          ],
+          [
+            0.014627267816508322,
+            -0.0026918542588148515
+          ]
+        ],
+        [
+          [
+            -0.014114016886619818,
+            -0.013674551016659412
+          ],
+          [
+            -0.07848575006210189,
+            0.00945604994042158
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.10238395599537661,
+      "function_evaluations": 3861,
+      "individual_projected_delta_coefficient_norm": 0.3430284540505959,
+      "minimum_imaginary_eigenvalue": 0.005977920517021842,
+      "residuals": {
+        "adjoint_metric_jets": 4.3353646910372596e-13,
+        "adjoint_response": 2.7337114753825048e-14,
+        "cross_generator_reconstruction": 3.941488721342147e-17,
+        "inverse_metric_weak_identity": 3.6118165804357377e-13,
+        "inverse_response": 2.99368139313823e-16,
+        "inverse_response_adjoint": 1.066054126922665e-13,
+        "metric_weak_identity": 2.9658926567076936e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.1724200791692715e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 10.816653826391969,
+        "angular_level": 9,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 44,
+        "factor": 0.5784505020385424,
+        "family": 1,
+        "index": 9,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 432
+      },
+      "closed_four_mode_H_test_difference": 1.119131050433984,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.3772378376922645,
+            -2.7239837497415933
+          ],
+          [
+            1.2963167535193134,
+            0.5410651680509575
+          ]
+        ],
+        [
+          [
+            -1.5207376197064695,
+            0.4090755799106638
+          ],
+          [
+            0.6896667455072913,
+            -3.2994386308455157
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 4.835029031269612,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.027107231218022443,
+            0.024143814957347413
+          ],
+          [
+            0.014946435925198783,
+            0.0043170096580170975
+          ]
+        ],
+        [
+          [
+            -0.017456058319116424,
+            -0.0033745346954248386
+          ],
+          [
+            -0.04266202051336512,
+            0.02701300670917299
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.06652526051402641,
+      "function_evaluations": 3984,
+      "individual_projected_delta_coefficient_norm": 0.2259074689806368,
+      "minimum_imaginary_eigenvalue": 0.004510158993433824,
+      "residuals": {
+        "adjoint_metric_jets": 3.5647821411928626e-13,
+        "adjoint_response": 2.4492765375720896e-14,
+        "cross_generator_reconstruction": 8.759924156160196e-18,
+        "inverse_metric_weak_identity": 2.991344968468079e-13,
+        "inverse_response": 2.639469759320743e-16,
+        "inverse_response_adjoint": 8.889939838727062e-14,
+        "metric_weak_identity": 2.4815058118429956e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 9.889364096444979e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 11.832159566199232,
+        "angular_level": 10,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 48,
+        "factor": 0.6310369113147736,
+        "family": 1,
+        "index": 10,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 480
+      },
+      "closed_four_mode_H_test_difference": 0.9925203874777814,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.26703979599224215,
+            -1.5465586405095881
+          ],
+          [
+            0.5860463932419977,
+            0.3439894061728949
+          ]
+        ],
+        [
+          [
+            -0.7409495265498303,
+            0.5135456819393948
+          ],
+          [
+            0.060378131878445096,
+            -2.049954091104866
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 2.818443831363205,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.012594852220556656,
+            0.013193500930639642
+          ],
+          [
+            0.007066188756312107,
+            0.0045136930891252975
+          ]
+        ],
+        [
+          [
+            -0.009898677082200769,
+            0.002621909174374945
+          ],
+          [
+            -0.017646830149892812,
+            0.01999109907610076
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.034912978824687815,
+      "function_evaluations": 4146,
+      "individual_projected_delta_coefficient_norm": 0.12733971820277684,
+      "minimum_imaginary_eigenvalue": 0.0034089392091465453,
+      "residuals": {
+        "adjoint_metric_jets": 3.3700947626051813e-13,
+        "adjoint_response": 1.871844145943764e-14,
+        "cross_generator_reconstruction": 1.0198418512728137e-17,
+        "inverse_metric_weak_identity": 3.685038794991336e-13,
+        "inverse_response": 2.0311762576960724e-16,
+        "inverse_response_adjoint": 7.635147923498076e-14,
+        "metric_weak_identity": 1.9969132945374894e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.096808958592542e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 12.84523257866513,
+        "angular_level": 11,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 52,
+        "factor": 0.6836233205910047,
+        "family": 1,
+        "index": 11,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 528
+      },
+      "closed_four_mode_H_test_difference": 1.0095665680419517,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.7827294523564758,
+            -0.8994201181014925
+          ],
+          [
+            0.15558757661893394,
+            0.004104041595624566
+          ]
+        ],
+        [
+          [
+            -0.16661342155235287,
+            0.3377768480160563
+          ],
+          [
+            0.269115333203648,
+            -1.033776135539886
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 1.6519127319146365,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.011541190259630204,
+            0.0032806469896322155
+          ],
+          [
+            0.0002724737440240752,
+            0.001116844836145557
+          ]
+        ],
+        [
+          [
+            -0.0015951994579500054,
+            0.003271019141050655
+          ],
+          [
+            -0.009202074896045322,
+            0.007139982943889523
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.017151824042124446,
+      "function_evaluations": 4260,
+      "individual_projected_delta_coefficient_norm": 0.07409000092235606,
+      "minimum_imaginary_eigenvalue": 0.0026623494750017897,
+      "residuals": {
+        "adjoint_metric_jets": 3.7704066580981e-13,
+        "adjoint_response": 1.6519891188023586e-14,
+        "cross_generator_reconstruction": 6.781465751594189e-18,
+        "inverse_metric_weak_identity": 5.860246241914157e-13,
+        "inverse_response": 3.160422932462329e-16,
+        "inverse_response_adjoint": 8.725487008251961e-14,
+        "metric_weak_identity": 2.058762474723074e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 5.815905075200097e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 13.856406460551018,
+        "angular_level": 12,
+        "compact_level": 0,
+        "compact_mass": 0.0,
+        "copy_count": 1,
+        "degeneracy": 56,
+        "factor": 0.7362097298672359,
+        "family": 1,
+        "index": 12,
+        "reference_scheme": "massive-angular E2+E4/P2+P4",
+        "sample_count": 48,
+        "sample_offset": 576
+      },
+      "closed_four_mode_H_test_difference": 0.8804008102923843,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -1.3154133931040797,
+            -1.141432309613049
+          ],
+          [
+            0.23286284778649563,
+            -0.23577990158437462
+          ]
+        ],
+        [
+          [
+            -0.1091912503746004,
+            0.009247241855463113
+          ],
+          [
+            0.9287895043858366,
+            -0.8396411047997797
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 2.1731665258381665,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.015077341355864905,
+            0.002215839984069045
+          ],
+          [
+            -0.0010569815696354476,
+            -0.001959005484320244
+          ]
+        ],
+        [
+          [
+            0.0014742109973902725,
+            0.0007878295132694136
+          ],
+          [
+            -0.011475236139158098,
+            0.0012311363279000709
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.019317913868648943,
+      "function_evaluations": 4437,
+      "individual_projected_delta_coefficient_norm": 0.10758701214090162,
+      "minimum_imaginary_eigenvalue": 0.002179383579246165,
+      "residuals": {
+        "adjoint_metric_jets": 3.265309612467169e-13,
+        "adjoint_response": 1.9585595746066236e-14,
+        "cross_generator_reconstruction": 4.063950741464904e-18,
+        "inverse_metric_weak_identity": 6.553491887463577e-13,
+        "inverse_response": 3.249409236149386e-16,
+        "inverse_response_adjoint": 9.468670555573321e-14,
+        "metric_weak_identity": 1.9155577156459205e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 5.5431350828581567e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 0.0,
+        "angular_level": 0,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 4,
+        "factor": 0.10517281855246226,
+        "family": 2,
+        "index": 13,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 624
+      },
+      "closed_four_mode_H_test_difference": 1.267511358168442,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.4053665357994338,
+            9.72829870577228
+          ],
+          [
+            -7.934565615189825,
+            -0.2318561956005557
+          ]
+        ],
+        [
+          [
+            1.371413283010689,
+            -0.2231734333350876
+          ],
+          [
+            -0.3209655742634496,
+            8.182261700462677
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 15.059821139148799,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.026577344197967957,
+            0.20322829866021075
+          ],
+          [
+            -0.1730228167869443,
+            -0.005463147535240362
+          ]
+        ],
+        [
+          [
+            -0.3682912870649215,
+            -0.07065010528280595
+          ],
+          [
+            -0.04779643977529184,
+            0.30249119299650895
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.553525219579807,
+      "function_evaluations": 3192,
+      "individual_projected_delta_coefficient_norm": 1.5274564966777497,
+      "minimum_imaginary_eigenvalue": 0.007924858180794065,
+      "residuals": {
+        "adjoint_metric_jets": 3.480687476442732e-13,
+        "adjoint_response": 1.2409563521965765e-14,
+        "cross_generator_reconstruction": 1.362420718993091e-16,
+        "inverse_metric_weak_identity": 3.5182071180326014e-13,
+        "inverse_response": 9.418815210568519e-16,
+        "inverse_response_adjoint": 1.9312898046848822e-14,
+        "metric_weak_identity": 2.6704294001102425e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 5.488605681887843e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 2.23606797749979,
+        "angular_level": 1,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 12,
+        "factor": 0.3155184556573868,
+        "family": 2,
+        "index": 14,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 688
+      },
+      "closed_four_mode_H_test_difference": 1.3054219318232194,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -4.629846603234027,
+            7.644440578396609
+          ],
+          [
+            -6.714425137588512,
+            -1.1186066520742635
+          ]
+        ],
+        [
+          [
+            0.7339253789223804,
+            -1.2533258697584522
+          ],
+          [
+            4.144592678971712,
+            6.828883308512255
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 13.861042710054498,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.26022363583533603,
+            -0.02324233650035258
+          ],
+          [
+            -0.20362305162770009,
+            0.025119285316160752
+          ]
+        ],
+        [
+          [
+            -0.20424168145009042,
+            0.014204151884932648
+          ],
+          [
+            0.26056496677236335,
+            0.11251130861131903
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.48251341053816693,
+      "function_evaluations": 3201,
+      "individual_projected_delta_coefficient_norm": 1.5982467028895628,
+      "minimum_imaginary_eigenvalue": 0.0100792528526759,
+      "residuals": {
+        "adjoint_metric_jets": 1.3656213175655717e-13,
+        "adjoint_response": 7.98395084130244e-15,
+        "cross_generator_reconstruction": 2.227819932579083e-16,
+        "inverse_metric_weak_identity": 2.1168363141160666e-13,
+        "inverse_response": 6.417820445692722e-16,
+        "inverse_response_adjoint": 2.3804448273524497e-14,
+        "metric_weak_identity": 1.0989712559468903e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 5.1840542993652674e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 3.4641016151377544,
+        "angular_level": 2,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 16,
+        "factor": 0.42069127420984903,
+        "family": 2,
+        "index": 15,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 752
+      },
+      "closed_four_mode_H_test_difference": 1.3813505824301788,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -6.123963277835197,
+            5.2596618427532285
+          ],
+          [
+            -5.203925255124111,
+            -1.3509547863806128
+          ]
+        ],
+        [
+          [
+            -0.10638910906853516,
+            -1.627727062209461
+          ],
+          [
+            5.942080494152479,
+            4.848833782061224
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 12.472097237464695,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.22251554301997659,
+            -0.18001395283845528
+          ],
+          [
+            -0.2039425802983976,
+            0.011080786845712048
+          ]
+        ],
+        [
+          [
+            -0.04056119165347188,
+            0.036913157661050966
+          ],
+          [
+            0.2778046498948392,
+            -0.09071090297075415
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.4604836944949432,
+      "function_evaluations": 3198,
+      "individual_projected_delta_coefficient_norm": 1.5675492756098282,
+      "minimum_imaginary_eigenvalue": 0.013461178150833537,
+      "residuals": {
+        "adjoint_metric_jets": 1.0734035774775386e-13,
+        "adjoint_response": 8.157149478094098e-15,
+        "cross_generator_reconstruction": 2.6615429879487767e-16,
+        "inverse_metric_weak_identity": 1.5453539057772207e-13,
+        "inverse_response": 1.0694437150363158e-15,
+        "inverse_response_adjoint": 2.894169085588012e-14,
+        "metric_weak_identity": 8.182600683325209e-14,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 5.288756787798756e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 4.58257569495584,
+        "angular_level": 3,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 20,
+        "factor": 0.5258640927623113,
+        "family": 2,
+        "index": 16,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 816
+      },
+      "closed_four_mode_H_test_difference": 1.4950633539381566,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -6.707005592444069,
+            2.676123299110264
+          ],
+          [
+            -3.515815600120496,
+            -1.3400233328941484
+          ]
+        ],
+        [
+          [
+            -1.0217942760795689,
+            -1.761828245760939
+          ],
+          [
+            6.866110689448712,
+            2.5721027320325796
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 11.144930352853246,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.1138290364231741,
+            -0.24945785227806455
+          ],
+          [
+            -0.17347584561861026,
+            -0.010272181520338514
+          ]
+        ],
+        [
+          [
+            0.07332305092182254,
+            0.03135231450031906
+          ],
+          [
+            0.19155390937786418,
+            -0.22258025230776438
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.4449491686236011,
+      "function_evaluations": 3294,
+      "individual_projected_delta_coefficient_norm": 1.421974236718525,
+      "minimum_imaginary_eigenvalue": 0.014285397692014217,
+      "residuals": {
+        "adjoint_metric_jets": 1.6281902068317912e-13,
+        "adjoint_response": 1.4479468424039854e-14,
+        "cross_generator_reconstruction": 8.121767085755589e-17,
+        "inverse_metric_weak_identity": 1.4595645775612155e-13,
+        "inverse_response": 4.830636726140308e-16,
+        "inverse_response_adjoint": 3.985460855812685e-14,
+        "metric_weak_identity": 1.1028956049622533e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 7.422219488330767e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 5.656854249492381,
+        "angular_level": 4,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 24,
+        "factor": 0.6310369113147736,
+        "family": 2,
+        "index": 17,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 880
+      },
+      "closed_four_mode_H_test_difference": 1.6247288925286203,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -6.489446235380877,
+            0.16442012786670057
+          ],
+          [
+            -1.8170101909703271,
+            -1.120933367332967
+          ]
+        ],
+        [
+          [
+            -1.8848471856268156,
+            -1.6711802975599572
+          ],
+          [
+            6.987743691096433,
+            0.257159335518522
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 10.096442412298375,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.00021306663066793434,
+            -0.23188631096557907
+          ],
+          [
+            -0.11973085813004893,
+            -0.025798641818317588
+          ]
+        ],
+        [
+          [
+            0.11971609501168944,
+            0.01111869162463036
+          ],
+          [
+            0.06739114910267048,
+            -0.25667600024307324
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.3919847697363943,
+      "function_evaluations": 3357,
+      "individual_projected_delta_coefficient_norm": 1.189198690976061,
+      "minimum_imaginary_eigenvalue": 0.011706805665670937,
+      "residuals": {
+        "adjoint_metric_jets": 2.444571384898428e-13,
+        "adjoint_response": 2.2790212914539536e-14,
+        "cross_generator_reconstruction": 1.8809939267375805e-16,
+        "inverse_metric_weak_identity": 1.6742991963314973e-13,
+        "inverse_response": 5.613438922286776e-16,
+        "inverse_response_adjoint": 5.396006805596876e-14,
+        "metric_weak_identity": 1.6702426270040572e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.456924787543083e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 6.708203932499369,
+        "angular_level": 5,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 28,
+        "factor": 0.7362097298672359,
+        "family": 2,
+        "index": 18,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 944
+      },
+      "closed_four_mode_H_test_difference": 1.7276836259315118,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -5.576205284534285,
+            -1.9710852511471653
+          ],
+          [
+            -0.2966788942892042,
+            -0.7377449073173505
+          ]
+        ],
+        [
+          [
+            -2.5572048689353157,
+            -1.3729797688613494
+          ],
+          [
+            6.358935098637511,
+            -1.8103587136735402
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 9.367462452842506,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.07524797628324191,
+            -0.15835078940154113
+          ],
+          [
+            -0.05929422795621606,
+            -0.02931322435337261
+          ]
+        ],
+        [
+          [
+            0.10840397810693997,
+            -0.009520136847286639
+          ],
+          [
+            -0.038808283860229914,
+            -0.20881520607327264
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.3034208787943406,
+      "function_evaluations": 3555,
+      "individual_projected_delta_coefficient_norm": 0.920186363010858,
+      "minimum_imaginary_eigenvalue": 0.009869384430763075,
+      "residuals": {
+        "adjoint_metric_jets": 3.2813798064165864e-13,
+        "adjoint_response": 2.8876350787874564e-14,
+        "cross_generator_reconstruction": 7.648537249746665e-17,
+        "inverse_metric_weak_identity": 1.9017934413441437e-13,
+        "inverse_response": 3.5054783044042113e-16,
+        "inverse_response_adjoint": 6.898319639818565e-14,
+        "metric_weak_identity": 1.485416017252911e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.762612452570189e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 7.745966692414834,
+        "angular_level": 6,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 32,
+        "factor": 0.8413825484196981,
+        "family": 2,
+        "index": 19,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1008
+      },
+      "closed_four_mode_H_test_difference": 1.7478394671380162,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -4.159692333768802,
+            -3.435236255153706
+          ],
+          [
+            0.8546241124686321,
+            -0.26569626660539936
+          ]
+        ],
+        [
+          [
+            -2.9069575675803003,
+            -0.9097097179133482
+          ],
+          [
+            5.106082828340963,
+            -3.3417512102005946
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 8.741980461621507,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.0989036009200783,
+            -0.07207696091016025
+          ],
+          [
+            -0.00970144189922798,
+            -0.02203670531024564
+          ]
+        ],
+        [
+          [
+            0.06634174033578027,
+            -0.020821086493962845
+          ],
+          [
+            -0.0953558973845221,
+            -0.12113010674871064
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.2101350494453229,
+      "function_evaluations": 3705,
+      "individual_projected_delta_coefficient_norm": 0.6684437578660062,
+      "minimum_imaginary_eigenvalue": 0.008540040860396555,
+      "residuals": {
+        "adjoint_metric_jets": 2.9998407582387147e-13,
+        "adjoint_response": 3.172220133652544e-14,
+        "cross_generator_reconstruction": 4.683753385137379e-17,
+        "inverse_metric_weak_identity": 3.078454404640636e-13,
+        "inverse_response": 3.9371559512571344e-16,
+        "inverse_response_adjoint": 9.590428104474204e-14,
+        "metric_weak_identity": 1.8834692429738912e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.616369209215843e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 8.774964387392123,
+        "angular_level": 7,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 36,
+        "factor": 0.9465553669721604,
+        "family": 2,
+        "index": 20,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1072
+      },
+      "closed_four_mode_H_test_difference": 1.632371266616748,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -2.548485143264654,
+            -4.0103206474440585
+          ],
+          [
+            1.4816945546347116,
+            0.18417733289921057
+          ]
+        ],
+        [
+          [
+            -2.8393797159489935,
+            -0.3593036727930361
+          ],
+          [
+            3.4672502054615846,
+            -4.095704865165594
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 7.8609533069713935,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.0827407751974467,
+            -0.007557659962644884
+          ],
+          [
+            0.018448667353362206,
+            -0.010055181215819792
+          ]
+        ],
+        [
+          [
+            0.022361037330542007,
+            -0.020470226926681958
+          ],
+          [
+            -0.10018813370308456,
+            -0.03820918534548988
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.14057476395635263,
+      "function_evaluations": 3819,
+      "individual_projected_delta_coefficient_norm": 0.46913855401299004,
+      "minimum_imaginary_eigenvalue": 0.007235866093724542,
+      "residuals": {
+        "adjoint_metric_jets": 3.3386544330855886e-13,
+        "adjoint_response": 2.6662524141403283e-14,
+        "cross_generator_reconstruction": 2.8517608800053543e-17,
+        "inverse_metric_weak_identity": 3.344508664183617e-13,
+        "inverse_response": 3.949461456720822e-16,
+        "inverse_response_adjoint": 1.0220768611978584e-13,
+        "metric_weak_identity": 2.071693998330184e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.225858104129469e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 9.797958971132712,
+        "angular_level": 8,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 40,
+        "factor": 1.0517281855246225,
+        "family": 2,
+        "index": 21,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1136
+      },
+      "closed_four_mode_H_test_difference": 1.3726202029943657,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -1.1478539649252184,
+            -3.6584711393435887
+          ],
+          [
+            1.523216274490928,
+            0.47884099684680936
+          ]
+        ],
+        [
+          [
+            -2.343480390751228,
+            0.16261477405103375
+          ],
+          [
+            1.800325814444647,
+            -3.9611667190178705
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 6.457694251195667,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.0508640157548104,
+            0.02164627994275338
+          ],
+          [
+            0.02492149899874356,
+            -3.9024470244564084e-05
+          ]
+        ],
+        [
+          [
+            -0.005180370560736866,
+            -0.012460950737741986
+          ],
+          [
+            -0.07282700816331943,
+            0.012381262491160156
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.09651928553739655,
+      "function_evaluations": 3921,
+      "individual_projected_delta_coefficient_norm": 0.3244979009055962,
+      "minimum_imaginary_eigenvalue": 0.0057024936268414445,
+      "residuals": {
+        "adjoint_metric_jets": 4.316812937717807e-13,
+        "adjoint_response": 2.630884694448095e-14,
+        "cross_generator_reconstruction": 2.263338985180469e-17,
+        "inverse_metric_weak_identity": 3.2170400176887093e-13,
+        "inverse_response": 3.318237015708041e-16,
+        "inverse_response_adjoint": 1.012209028999477e-13,
+        "metric_weak_identity": 2.8162983485870163e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.0691190893871904e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 10.816653826391969,
+        "angular_level": 9,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 44,
+        "factor": 1.1569010040770848,
+        "family": 2,
+        "index": 22,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1200
+      },
+      "closed_four_mode_H_test_difference": 1.0843287544595523,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.3557954599998818,
+            -2.6334277933521264
+          ],
+          [
+            1.082549322305877,
+            0.5089469492545683
+          ]
+        ],
+        [
+          [
+            -1.5451277232876115,
+            0.5172587902530723
+          ],
+          [
+            0.5353492527147823,
+            -3.0650979758552612
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 4.563866030667064,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.02439395440197695,
+            0.02221417943516306
+          ],
+          [
+            0.017679097940226363,
+            0.004299809099145457
+          ]
+        ],
+        [
+          [
+            -0.01268348073287426,
+            -0.003222187404611571
+          ],
+          [
+            -0.03888016913809813,
+            0.02682265033803756
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.06182191310650243,
+      "function_evaluations": 4014,
+      "individual_projected_delta_coefficient_norm": 0.2120246360650205,
+      "minimum_imaginary_eigenvalue": 0.004310474092927521,
+      "residuals": {
+        "adjoint_metric_jets": 3.454398490896859e-13,
+        "adjoint_response": 2.334853907820149e-14,
+        "cross_generator_reconstruction": 1.691355389077387e-17,
+        "inverse_metric_weak_identity": 3.153535056361859e-13,
+        "inverse_response": 2.934021569692134e-16,
+        "inverse_response_adjoint": 8.467980948436788e-14,
+        "metric_weak_identity": 2.562692663962002e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 9.25589069125415e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 0.0,
+        "angular_level": 0,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 4,
+        "factor": 0.10517281855246226,
+        "family": 2,
+        "index": 23,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1264
+      },
+      "closed_four_mode_H_test_difference": 1.317388718206415,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.2553073946435895,
+            7.734836343937134
+          ],
+          [
+            -9.045550012776017,
+            -0.32784878556858876
+          ]
+        ],
+        [
+          [
+            -2.512048706819845,
+            -0.4667265361809395
+          ],
+          [
+            -0.11565064354059747,
+            5.110782217423393
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 13.209240224304148,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.022740985384769402,
+            -0.10292976158711188
+          ],
+          [
+            -0.35601944863129203,
+            -0.03648091384623518
+          ]
+        ],
+        [
+          [
+            -0.26325321953232106,
+            -0.038521456977164914
+          ],
+          [
+            0.0021293830513004174,
+            -0.004744564227492381
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.4582636779400039,
+      "function_evaluations": 3249,
+      "individual_projected_delta_coefficient_norm": 1.5747652123619353,
+      "minimum_imaginary_eigenvalue": 0.011371147566540686,
+      "residuals": {
+        "adjoint_metric_jets": 1.1061615054976798e-13,
+        "adjoint_response": 5.370582927459261e-15,
+        "cross_generator_reconstruction": 1.135192293386742e-16,
+        "inverse_metric_weak_identity": 1.4943120929182684e-13,
+        "inverse_response": 7.585184517604436e-16,
+        "inverse_response_adjoint": 1.1431735658958823e-14,
+        "metric_weak_identity": 8.797842974586195e-14,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 4.262814043283614e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 2.23606797749979,
+        "angular_level": 1,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 12,
+        "factor": 0.3155184556573868,
+        "family": 2,
+        "index": 24,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1328
+      },
+      "closed_four_mode_H_test_difference": 1.3746202982442695,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -3.924843433541266,
+            5.840549674850397
+          ],
+          [
+            -7.743396444236522,
+            -1.0261394242107633
+          ]
+        ],
+        [
+          [
+            -2.831999475985503,
+            -1.3316992897066915
+          ],
+          [
+            3.775629977140451,
+            3.987540125415933
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 12.266991036884827,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.11401562729085168,
+            -0.19863166428444015
+          ],
+          [
+            -0.3035141134334524,
+            -0.016658892671045374
+          ]
+        ],
+        [
+          [
+            -0.12385661356315203,
+            0.014932025908787483
+          ],
+          [
+            0.17578145404498025,
+            -0.10925541607255845
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.45083448041346724,
+      "function_evaluations": 3279,
+      "individual_projected_delta_coefficient_norm": 1.5272487738612788,
+      "minimum_imaginary_eigenvalue": 0.013743557459153946,
+      "residuals": {
+        "adjoint_metric_jets": 1.3117724754213427e-13,
+        "adjoint_response": 6.310266462372428e-15,
+        "cross_generator_reconstruction": 1.8008568711632302e-16,
+        "inverse_metric_weak_identity": 1.372090642892885e-13,
+        "inverse_response": 8.557512898099699e-16,
+        "inverse_response_adjoint": 1.8959876796303892e-14,
+        "metric_weak_identity": 8.686100831257487e-14,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 4.94360595082721e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 3.4641016151377544,
+        "angular_level": 2,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 16,
+        "factor": 0.42069127420984903,
+        "family": 2,
+        "index": 25,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1392
+      },
+      "closed_four_mode_H_test_difference": 1.4623433380894368,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -5.17059241053987,
+            3.686794954068785
+          ],
+          [
+            -6.121881786972745,
+            -1.16653323377976
+          ]
+        ],
+        [
+          [
+            -3.235540169204236,
+            -1.6076358289652526
+          ],
+          [
+            5.2890324683582906,
+            2.3563336577797136
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 11.213612496055921,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.08787219421856848,
+            -0.2447503129095391
+          ],
+          [
+            -0.22888904321961256,
+            -0.01689324857115945
+          ]
+        ],
+        [
+          [
+            0.009468433684012652,
+            0.028063942776671534
+          ],
+          [
+            0.1663103991704716,
+            -0.20837251869499784
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.43846927563914834,
+      "function_evaluations": 3291,
+      "individual_projected_delta_coefficient_norm": 1.4112025589246386,
+      "minimum_imaginary_eigenvalue": 0.014331786052341226,
+      "residuals": {
+        "adjoint_metric_jets": 1.5360659200822806e-13,
+        "adjoint_response": 1.0913753676600474e-14,
+        "cross_generator_reconstruction": 2.260538389467473e-16,
+        "inverse_metric_weak_identity": 1.3674110306308067e-13,
+        "inverse_response": 7.546374983361432e-16,
+        "inverse_response_adjoint": 2.941659805659701e-14,
+        "metric_weak_identity": 1.1667381057345867e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 6.402742718316985e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 4.58257569495584,
+        "angular_level": 3,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 20,
+        "factor": 0.5258640927623113,
+        "family": 2,
+        "index": 26,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1456
+      },
+      "closed_four_mode_H_test_difference": 1.571089491751437,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -5.591615033911211,
+            1.3905193169410697
+          ],
+          [
+            -4.3096844801465775,
+            -1.0914790744056995
+          ]
+        ],
+        [
+          [
+            -3.6183852692602922,
+            -1.6544128705541228
+          ],
+          [
+            5.998852398720233,
+            0.5196432715207235
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 10.249412796880277,
+      "forward_parent_to_child_response": [
+        [
+          [
+            -0.020852906450342837,
+            -0.23563456129605712
+          ],
+          [
+            -0.14529672120808168,
+            -0.020741390395883807
+          ]
+        ],
+        [
+          [
+            0.0970698624221989,
+            0.021544232765247254
+          ],
+          [
+            0.09335735080368186,
+            -0.2527013699394981
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.3999501495542589,
+      "function_evaluations": 3384,
+      "individual_projected_delta_coefficient_norm": 1.226028948531048,
+      "minimum_imaginary_eigenvalue": 0.012116910565593457,
+      "residuals": {
+        "adjoint_metric_jets": 2.0923443604677846e-13,
+        "adjoint_response": 1.791393728585067e-14,
+        "cross_generator_reconstruction": 1.7088567166901813e-16,
+        "inverse_metric_weak_identity": 1.3526644925857605e-13,
+        "inverse_response": 5.467778500565199e-16,
+        "inverse_response_adjoint": 4.324079687217819e-14,
+        "metric_weak_identity": 1.4004226814396716e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 7.444987679959767e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 5.656854249492381,
+        "angular_level": 4,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 24,
+        "factor": 0.6310369113147736,
+        "family": 2,
+        "index": 27,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1520
+      },
+      "closed_four_mode_H_test_difference": 1.6738814292747892,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -5.300034911894674,
+            -0.7822907489745041
+          ],
+          [
+            -2.4883283951629895,
+            -0.8384902869919609
+          ]
+        ],
+        [
+          [
+            -3.880909872940803,
+            -1.4885716802092985
+          ],
+          [
+            5.9752378444515815,
+            -1.2824305688504922
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 9.498557553517632,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.044268921161024516,
+            -0.17963455995395947
+          ],
+          [
+            -0.06702641818120172,
+            -0.022020096014109227
+          ]
+        ],
+        [
+          [
+            0.12578127585575202,
+            0.005288073743229387
+          ],
+          [
+            0.0036356581642482074,
+            -0.2314990793199476
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.32963566659172494,
+      "function_evaluations": 3555,
+      "individual_projected_delta_coefficient_norm": 0.9959775605288788,
+      "minimum_imaginary_eigenvalue": 0.010299241160934605,
+      "residuals": {
+        "adjoint_metric_jets": 3.2706291682376877e-13,
+        "adjoint_response": 2.5447224297434198e-14,
+        "cross_generator_reconstruction": 7.618107815810782e-17,
+        "inverse_metric_weak_identity": 2.0075081795900891e-13,
+        "inverse_response": 4.116689807314457e-16,
+        "inverse_response_adjoint": 5.869031959853491e-14,
+        "metric_weak_identity": 1.8293069559159157e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.77616825369207e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 6.708203932499369,
+        "angular_level": 5,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 28,
+        "factor": 0.7362097298672359,
+        "family": 2,
+        "index": 28,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1584
+      },
+      "closed_four_mode_H_test_difference": 1.7279409967062673,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -4.415955120442915,
+            -2.541345354617114
+          ],
+          [
+            -0.8618156622013614,
+            -0.45843803568809705
+          ]
+        ],
+        [
+          [
+            -3.923439355703227,
+            -1.1330656279518978
+          ],
+          [
+            5.283604266195363,
+            -2.791716850298477
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 8.905018731844779,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.0810063326527965,
+            -0.10239850616209577
+          ],
+          [
+            -0.007201288133767818,
+            -0.01811211247594602
+          ]
+        ],
+        [
+          [
+            0.10626604432736482,
+            -0.010115770618881156
+          ],
+          [
+            -0.06478962759622792,
+            -0.1627497480949726
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.24394131364827357,
+      "function_evaluations": 3672,
+      "individual_projected_delta_coefficient_norm": 0.7593624400487643,
+      "minimum_imaginary_eigenvalue": 0.008932948856636883,
+      "residuals": {
+        "adjoint_metric_jets": 2.6934107131401166e-13,
+        "adjoint_response": 2.6774330868872226e-14,
+        "cross_generator_reconstruction": 5.054568667899559e-17,
+        "inverse_metric_weak_identity": 2.2505253871770792e-13,
+        "inverse_response": 2.9486750432864535e-16,
+        "inverse_response_adjoint": 7.15425739781223e-14,
+        "metric_weak_identity": 1.5258038181714948e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.948953422429171e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 7.745966692414834,
+        "angular_level": 6,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 32,
+        "factor": 0.8413825484196981,
+        "family": 2,
+        "index": 29,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1648
+      },
+      "closed_four_mode_H_test_difference": 1.6830945634725294,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -3.1478910725524285,
+            -3.6212337539962127
+          ],
+          [
+            0.36802099431237867,
+            -0.033394358739833874
+          ]
+        ],
+        [
+          [
+            -3.6666277467834907,
+            -0.6391301294062599
+          ],
+          [
+            4.06856031034919,
+            -3.7618596089485656
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 8.229005031798916,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.08351775762788809,
+            -0.033025746027027854
+          ],
+          [
+            0.026905945268517733,
+            -0.010311966655817803
+          ]
+        ],
+        [
+          [
+            0.06334182137954106,
+            -0.017642210431569764
+          ],
+          [
+            -0.09314201202230481,
+            -0.07991867726197358
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.1681726660025098,
+      "function_evaluations": 3768,
+      "individual_projected_delta_coefficient_norm": 0.5523360147075405,
+      "minimum_imaginary_eigenvalue": 0.007745077634305377,
+      "residuals": {
+        "adjoint_metric_jets": 2.7318209045818654e-13,
+        "adjoint_response": 2.4224889222867623e-14,
+        "cross_generator_reconstruction": 4.280937645780395e-17,
+        "inverse_metric_weak_identity": 2.7130907435379307e-13,
+        "inverse_response": 2.8738226602476994e-16,
+        "inverse_response_adjoint": 8.426910447331075e-14,
+        "metric_weak_identity": 1.5802217202660794e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.256151453384186e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 8.774964387392123,
+        "angular_level": 7,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 36,
+        "factor": 0.9465553669721604,
+        "family": 2,
+        "index": 30,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1712
+      },
+      "closed_four_mode_H_test_difference": 1.5039305162318466,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -1.8086000678991483,
+            -3.857039326044577
+          ],
+          [
+            1.0445621273063166,
+            0.32378376891491367
+          ]
+        ],
+        [
+          [
+            -3.0833178618516737,
+            -0.09533627861386118
+          ],
+          [
+            2.5840839068749473,
+            -4.014589054646448
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 7.187077674115212,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.06289331994593735,
+            0.00953531545250481
+          ],
+          [
+            0.036294176871209845,
+            -0.0022371745053542105
+          ]
+        ],
+        [
+          [
+            0.022232526889689564,
+            -0.01606167323154543
+          ],
+          [
+            -0.08455232771298418,
+            -0.014003729411615479
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.11604407489028562,
+      "function_evaluations": 3852,
+      "individual_projected_delta_coefficient_norm": 0.3923360926229241,
+      "minimum_imaginary_eigenvalue": 0.0063969308805438135,
+      "residuals": {
+        "adjoint_metric_jets": 3.418350987372095e-13,
+        "adjoint_response": 2.285681378996594e-14,
+        "cross_generator_reconstruction": 4.153385931645076e-17,
+        "inverse_metric_weak_identity": 3.355690874426624e-13,
+        "inverse_response": 3.946289189161894e-16,
+        "inverse_response_adjoint": 9.137391035014483e-14,
+        "metric_weak_identity": 2.4151454009296933e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 1.0766198717244267e-13
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 9.797958971132712,
+        "angular_level": 8,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 40,
+        "factor": 1.0517281855246225,
+        "family": 2,
+        "index": 31,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1776
+      },
+      "closed_four_mode_H_test_difference": 1.2209833849870966,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.774147544099278,
+            -3.287092855934879
+          ],
+          [
+            1.1217041730496657,
+            0.491816230641553
+          ]
+        ],
+        [
+          [
+            -2.23873515701695,
+            0.3739099891084887
+          ],
+          [
+            1.1879863674004245,
+            -3.5234018315775737
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 5.64639736285402,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.03678010621523828,
+            0.02262461017479487
+          ],
+          [
+            0.028979951186772778,
+            0.0027434534732485943
+          ]
+        ],
+        [
+          [
+            -0.002072247156826697,
+            -0.008936611381126055
+          ],
+          [
+            -0.056556290255479015,
+            0.019649265534992227
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.07988039898057675,
+      "function_evaluations": 3963,
+      "individual_projected_delta_coefficient_norm": 0.2713632297023649,
+      "minimum_imaginary_eigenvalue": 0.004976305782769377,
+      "residuals": {
+        "adjoint_metric_jets": 3.682634115686696e-13,
+        "adjoint_response": 2.359315848069359e-14,
+        "cross_generator_reconstruction": 2.121493052175372e-17,
+        "inverse_metric_weak_identity": 2.7892330473901514e-13,
+        "inverse_response": 3.19818989840413e-16,
+        "inverse_response_adjoint": 8.786519873721974e-14,
+        "metric_weak_identity": 2.3836744079644637e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 9.850973055419261e-14
+      }
+    },
+    {
+      "channel": {
+        "angular_eigenvalue": 10.816653826391969,
+        "angular_level": 9,
+        "compact_level": 2,
+        "compact_mass": 3.141592653589793,
+        "copy_count": 2,
+        "degeneracy": 44,
+        "factor": 1.1569010040770848,
+        "family": 2,
+        "index": 32,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 1840
+      },
+      "closed_four_mode_H_test_difference": 0.9987521408376601,
+      "forward_inverse_response_kernel": [
+        [
+          [
+            -0.35589248598725987,
+            -2.240510470588135
+          ],
+          [
+            0.7340377403077385,
+            0.3960105775140228
+          ]
+        ],
+        [
+          [
+            -1.3199633808568676,
+            0.6322183805069967
+          ],
+          [
+            0.27081345241487287,
+            -2.503610616975463
+          ]
+        ]
+      ],
+      "forward_kernel_norm": 3.7849163619545734,
+      "forward_parent_to_child_response": [
+        [
+          [
+            0.01869818809025796,
+            0.01669206297711503
+          ],
+          [
+            0.01578823085352876,
+            0.0034472736647501584
+          ]
+        ],
+        [
+          [
+            -0.00795550118265264,
+            -0.0014713563620991253
+          ],
+          [
+            -0.028774350203621214,
+            0.024061746097934055
+          ]
+        ]
+      ],
+      "forward_response_norm": 0.04859819828993863,
+      "function_evaluations": 4086,
+      "individual_projected_delta_coefficient_norm": 0.17156203488624927,
+      "minimum_imaginary_eigenvalue": 0.003802662910426284,
+      "residuals": {
+        "adjoint_metric_jets": 3.0898154227510955e-13,
+        "adjoint_response": 2.0341345897939065e-14,
+        "cross_generator_reconstruction": 1.1557818913075457e-17,
+        "inverse_metric_weak_identity": 3.4301492654797525e-13,
+        "inverse_response": 1.5390286491434082e-16,
+        "inverse_response_adjoint": 7.528959082661758e-14,
+        "metric_weak_identity": 2.2895969743659313e-13,
+        "positive_imaginary_violation": 0.0,
+        "resolvent_norm_bound_violation": 0.0,
+        "reverse_upper_metric_jets": 0.0,
+        "reverse_upper_response": 0.0,
+        "seam_continuity": 0.0,
+        "true_resolvent_identity": 8.393557132890885e-14
+      }
+    }
+  ],
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "definition": {
+    "causal_prescription": "Im z>0: forward support toward decreasing rho, zero above source; Im z<0: reverse support, zero below source",
+    "convention": "(H-z)^-1=i integral_0^infinity exp(i z t)exp(-iHt)dt in upper half-plane; not directly the -i theta convention without its sign conversion",
+    "domain": "actual whole-line transmitted PG Dirac domain; computations restricted to strictly trapped [-1,1], using causal support, not walls",
+    "kernel_generator": "K(z)=R_packet(z)^-1; K_cp is an energy-dependent inverse-response cross kernel",
+    "not_a_closed_four_mode_resolvent": true,
+    "not_evaluated": "numeric response from the asymptotically exterior parent region or through a singular stationary horizon chart",
+    "ordinary_Hamiltonian_B_claimed": false,
+    "packet_response": "R_packet=J^dagger R J, J=[f_parent I2,f_child I2]; order parent,child",
+    "probe_roles": "normalized L2 source/measurement functions in D(H), not a physical initial state or new particle sector",
+    "probes": "fp=sqrt(30)*rho*(1-rho) on (0,1); fc=fp(-rho) on (-1,0); zero elsewhere",
+    "route": "B: whole-line boundary-resolvent, then normalized packet compression",
+    "whole_line_response": "R(z)=(H_D-z)^-1; projectors applied after inversion"
+  },
+  "delta_accounting": {
+    "cancellation": "u_parent(0)=u_child(0), including metric sensitivities; they cancel before projection of the full solution",
+    "delta_renamed_as_B_or_source": false,
+    "individual_terms": "i v0 u(0) delta from P_child and its opposite from P_parent are nonzero",
+    "locked_principal_singular_values": [
+      1.170803763674803,
+      3.1708037636748028
+    ]
+  },
+  "input_hashes": {
+    "results/development/nsc-common-time-bulk-split.json": "3c3236e5d0e56d2d1eaed1497501e346969599bd3dce0792132e3539bcac6da7",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-transmitting-ctp-variation.json": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3",
+    "results/development/nsc-transmitting-dirac-domain.json": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926",
+    "results/nsc-8-chiral-boundary.json": "9bbf676447b9a6fb68966dfeab1ea798834e478e23501e9757fc8e79027c0f07",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "metric_derivative": {
+    "CTP_bridge": "requires the time/spectral reconstruction of the full history response and its state/memory data; a static packet resolvent derivative is not a unitary dU",
+    "EndpointBranchJets_filled": false,
+    "canonical_probe_functions_held_fixed": true,
+    "cut": "fixed rho=0",
+    "fields": [
+      "log_N",
+      "beta",
+      "log_q_PG",
+      "log_r"
+    ],
+    "functional": "delta R_packet=sum_A integral s_A(rho) J_A(rho;z)d rho for smooth compact variations in (-1,1)",
+    "inverse_kernel": "delta K=-K delta R_packet K",
+    "kernel": "J_A=i/2[L^dagger V_A U_prime-L_prime^dagger V_A U]-L^dagger M_A U; U=R(z)J, L=R(z*)J",
+    "numeric_direction": "s=exp(1-1/(1-rho\u00b2)) inside |rho|<1, zero outside; no metric history or fitted deformation",
+    "static_metric_jets_evaluated": true
+  },
+  "parameters": {
+    "atol": 2e-14,
+    "finite_difference_atol": 2e-15,
+    "finite_difference_rtol": 2e-13,
+    "identity_check_energy": [
+      0.6,
+      0.35
+    ],
+    "quadrature_points_per_half": 96,
+    "rtol": 2e-12,
+    "z": [
+      0.2,
+      0.25
+    ]
+  },
+  "payload": {
+    "bytes": 3352320,
+    "description": "packet resolvents, inverse-response generators, four compact static metric jets and uncompressed quadrature fields",
+    "path": "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz",
+    "sha256": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5"
+  },
+  "schema": "NSC-TRANSMITTING-CROSS-RESOLVENT-v1",
+  "scope": {
+    "Gamma_rest_boundary_derivative": null,
+    "Z2a": "PASS on declared response/probe domain",
+    "Z2b": "PASS for compact static metric kernels; OPEN for time-history CTP jets",
+    "Z3": "OUT OF SCOPE: fixed cut",
+    "Z4": "OPEN",
+    "metric_timestep_started": false,
+    "new_physical_terms": false,
+    "old_generators_rerun": false,
+    "optimizer_started": false,
+    "parameters_refitted": false,
+    "physical_Vc_or_history_selected": false,
+    "physical_Weyl_mismatch": null,
+    "physical_stress_or_nulls_fabricated": false
+  },
+  "source_hashes": {
+    "docs/nsc-transmitting-cross-resolvent.md": "a4f8df55c341e6502c45dc32e422f4378f6e5eff2926bdadd8388b57445150a3",
+    "scripts/derive_nsc_transmitting_resolvent.py": "e331b81f330f41cb7444a3a07686ce807564992b403fcb9544bd50cd53a9c18a",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "tests/test_nsc_transmitting_resolvent.py": "23607bb611681106ed74877afb12867ba8fc0bdd7a45baa470492df5423e1156"
+  },
+  "status": "Z2a PASS: domain-correct packet cross-response and inverse-response generator; Z2b static metric jets PASS; time-history/CTP source bridge OPEN",
+  "verification": {
+    "T_current_compatibility_reused": 1.7763568394002505e-15,
+    "Z1_projector_and_CAR_prerequisites_reused": {
+      "canonical_CAR": 0.0,
+      "completeness": 0.0,
+      "idempotence": 0.0,
+      "orthogonality": 0.0,
+      "spatial_half_density": 2.220446049250313e-16
+    },
+    "finite_difference_maximum": 1.0076118915436416e-08,
+    "finite_difference_rows": [
+      {
+        "channel": 0,
+        "epsilon": 2e-05,
+        "field": "log_N",
+        "inverse_response_error": 7.170729267852535e-09,
+        "response_error": 1.3587070346894932e-09
+      },
+      {
+        "channel": 0,
+        "epsilon": 2e-05,
+        "field": "beta",
+        "inverse_response_error": 7.259530977566932e-09,
+        "response_error": 1.3848122259163705e-09
+      },
+      {
+        "channel": 0,
+        "epsilon": 2e-05,
+        "field": "log_q_PG",
+        "inverse_response_error": 7.150055367277808e-09,
+        "response_error": 1.357514511416419e-09
+      },
+      {
+        "channel": 0,
+        "epsilon": 2e-05,
+        "field": "log_r",
+        "inverse_response_error": 0.0,
+        "response_error": 0.0
+      },
+      {
+        "channel": 12,
+        "epsilon": 2e-05,
+        "field": "log_N",
+        "inverse_response_error": 1.0076118915436416e-08,
+        "response_error": 2.3122595964467732e-09
+      },
+      {
+        "channel": 12,
+        "epsilon": 2e-05,
+        "field": "beta",
+        "inverse_response_error": 3.965334909434515e-09,
+        "response_error": 3.5884365702428944e-10
+      },
+      {
+        "channel": 12,
+        "epsilon": 2e-05,
+        "field": "log_q_PG",
+        "inverse_response_error": 2.4386868856349695e-09,
+        "response_error": 1.35855321881161e-10
+      },
+      {
+        "channel": 12,
+        "epsilon": 2e-05,
+        "field": "log_r",
+        "inverse_response_error": 4.195680396261124e-09,
+        "response_error": 8.49848067255239e-10
+      },
+      {
+        "channel": 32,
+        "epsilon": 2e-05,
+        "field": "log_N",
+        "inverse_response_error": 4.362604795552028e-09,
+        "response_error": 2.532785962176933e-09
+      },
+      {
+        "channel": 32,
+        "epsilon": 2e-05,
+        "field": "beta",
+        "inverse_response_error": 1.3006240899950152e-09,
+        "response_error": 3.511382030619056e-10
+      },
+      {
+        "channel": 32,
+        "epsilon": 2e-05,
+        "field": "log_q_PG",
+        "inverse_response_error": 1.1262280859511917e-09,
+        "response_error": 1.3599683388608202e-10
+      },
+      {
+        "channel": 32,
+        "epsilon": 2e-05,
+        "field": "log_r",
+        "inverse_response_error": 1.769108750425549e-09,
+        "response_error": 8.383593557790237e-10
+      }
+    ],
+    "finite_difference_tolerance": 3e-08,
+    "finite_difference_tolerance_reason": "central finite difference at epsilon=2e-5 combines O(epsilon\u00b2) truncation with amplified ODE/inversion roundoff",
+    "maximum_residuals": {
+      "adjoint_metric_jets": 6.525098934429729e-13,
+      "adjoint_response": 3.5249959030613365e-14,
+      "cross_generator_reconstruction": 3.034923386023436e-16,
+      "inverse_metric_weak_identity": 6.553491887463577e-13,
+      "inverse_response": 1.0694437150363158e-15,
+      "inverse_response_adjoint": 1.1189029018157517e-13,
+      "metric_weak_identity": 5.80837663202645e-13,
+      "positive_imaginary_violation": 0.0,
+      "resolvent_norm_bound_violation": 0.0,
+      "reverse_upper_metric_jets": 0.0,
+      "reverse_upper_response": 0.0,
+      "seam_continuity": 0.0,
+      "true_resolvent_identity": 1.1724200791692715e-13
+    },
+    "packet_gram_error": 1.5543122344752192e-15,
+    "resolvent_identity_uses_uncompressed_solutions": true,
+    "tolerance": 3e-11
+  }
+}

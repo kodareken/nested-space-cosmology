@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.23.0 · independent common-time bulk spaces, 14 September 2026<br>
+Version 0.24.0 · transmitting cross response and static metric kernels, 14 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -65,7 +65,7 @@ weighted interface components with separate residuals. The full transmitting-act
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and forty post-preprint
+100 preprint records and forty-one post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -994,15 +994,35 @@ $$
 P_p=\mathbf{1}_{\rho>0},\quad P_c=\mathbf{1}_{\rho<0},\qquad P_pP_c=0,\quad P_p+P_c=I.
 $$
 
-Per channel the canonical measure is $L^2(d\rho;\mathbb C^2)$ after $\chi=r\sqrt{q_{\rm PG}}\psi$. T's transparent matching is a condition on operator-domain traces at $\rho=0$ for every $\tau$, not equality of independent bulk variables. The existing whole-line Dirac closure and its bounded retained potentials are imported. The finite spatial rank witness has parent and child ranks 1,904 each, zero projector/CAR residual and T-current compatibility residual $1.78\times10^{-15}$ (tolerance $3\times10^{-11}$). No seed frequency covariance is assigned to that spatial witness ([Z1 record](../results/development/nsc-common-time-bulk-split.json)).
+Per channel the canonical measure is $L^2(d\rho;\mathbb C^2)$ after $\chi=r\sqrt{q_{\mathrm{PG}}}\psi$. T's transparent matching is a condition on operator-domain traces at $\rho=0$ for every $\tau$, not equality of independent bulk variables. The existing whole-line Dirac closure and its bounded retained potentials are imported. The finite spatial rank witness has parent and child ranks 1,904 each, zero projector/CAR residual and T-current compatibility residual $1.78\times10^{-15}$ (tolerance $3\times10^{-11}$). No seed frequency covariance is assigned to that spatial witness ([Z1 record](../results/development/nsc-common-time-bulk-split.json)).
 
-**Z2 operator-domain gate.** For the inherited principal matrix $v=(N/q_{\rm PG})\sigma_2-\beta I$, the sharp child projector gives
+**Z2 operator-domain gate.** For the inherited principal matrix $v=(N/q_{\mathrm{PG}})\sigma_2-\beta I$, the sharp child projector gives
 
 $$
 H(P_c\chi)-P_cH\chi=i\,v(0)\chi(0)\delta(\rho).
 $$
 
-At the locked seam the singular values of $v(0)$ are $1.1708037637$ and $3.1708037637$. A nonzero transmitting trace therefore leaves the operator domain after sharp zero extension. The ordinary block $P_pH_DP_c$ cannot be inserted into the finite canonical assembly without a domain-respecting realization; the delta coefficient is not a new source or a link matrix. Z2 remains **OPEN**. The bounded response $P_p(H_D-z)^{-1}P_c$ is already well-defined for nonreal $z$ and is not evaluated in this definition gate. Moving-surface jets are out of scope for the fixed coordinate split; the boundary remainder, physical mismatch and stationary solution remain open.
+At the locked seam the singular values of $v(0)$ are $1.1708037637$ and $3.1708037637$. A nonzero transmitting trace therefore leaves the operator domain after sharp zero extension. The ordinary block $P_pH_DP_c$ cannot be inserted into the finite canonical assembly without a domain-respecting realization; the delta coefficient is not a new source or a link matrix. The ordinary sharp-block route remains **OPEN**. The bounded response $P_p(H_D-z)^{-1}P_c$ is well-defined for nonreal $z$; the following calculation evaluates it through domain-correct spatial probes. Moving-surface jets are out of scope for the fixed coordinate split; the boundary remainder, physical mismatch and stationary solution remain open.
+
+**Domain-correct cross response and static metric variation: Z2a PASS / static Z2b PASS.** On the same whole-line operator, take independent normalized spatial probes $f_p=\sqrt{30}\rho(1-\rho)$ for $0<\rho<1$ and $f_c(\rho)=f_p(-\rho)$ for $-1<\rho<0$, zero elsewhere. With both spin components in $J$, define
+
+$$
+\mathcal R(z)=J^\dagger(H_D-z)^{-1}J,\qquad
+\mathcal K(z)=\mathcal R(z)^{-1}.
+$$
+
+The inherited causal propagator fixes the inflow data of this resolvent for nonreal energy. It introduces no reflecting box: the response remains unconstrained at the outflow endpoint. The full solution is continuous at the seam, so the two nonzero projected delta contributions cancel. All 33 retained channels are evaluated at the existing complex energies. In this strictly trapped probe cell, the upper-half-plane response has $\mathcal R_{pc}=0$ and nonzero $\mathcal R_{cp}$; the lower half-plane supplies the adjoint partner. The first channel has forward response norm $0.6379915362$. Zero reverse retarded response expresses causal direction and does not set $B=0$.
+
+The finite probe functions belong to the operator domain. Eliminating the complementary bulk therefore defines the energy-dependent generating kernel $\mathcal K_{cp}(z)$ without the unsafe sharp product $P_pH_DP_c$. This is an inverse projected response, not a constant Hamiltonian of four closed modes. The adjoint residual is $3.53\times10^{-14}$, the true resolvent-identity residual $1.18\times10^{-13}$, and seam mismatch zero, against tolerance $3\times10^{-11}$ ([cross-response record](../results/development/nsc-transmitting-cross-resolvent.json)).
+
+For fixed probes and the fixed coordinate cut, the same calculation supplies all four static metric kernels for compact variations of $(\log N,\beta,\log q_{\mathrm{PG}},\log r)$:
+
+$$
+\delta\mathcal R=\sum_A\int s_A(\rho)\mathcal J_A(\rho;z)\,d\rho,
+\qquad \delta\mathcal K=-\mathcal K\,\delta\mathcal R\,\mathcal K.
+$$
+
+The independent weak-resolvent calculation agrees below $6.56\times10^{-13}$; finite differences give $1.01\times10^{-8}$ against tolerance $3\times10^{-8}$. The [derivation](../docs/nsc-transmitting-cross-resolvent.md) and [numerical fields](../results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz) preserve the normalization and uncompressed response data. These static spatial derivatives require time/spectral reconstruction, physical state/memory data and the endpoint-coordinate pullback before entering the CTP branch-jet interface. The remaining boundary action, physical Weyl mismatch and extended stationarity stay OPEN; no metric trajectory is selected.
 
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
@@ -1055,7 +1075,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The forty
+finite Casimir, and link responses remain. The forty-one
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1073,8 +1093,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate forty-record development snapshot, imported
-through laboratory commit $ed15c62$, carries the common-source, constraint
+42 scoped follow-ups. A separate forty-one-record development snapshot, imported
+through laboratory commit $0248eeb$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

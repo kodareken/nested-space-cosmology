@@ -99,6 +99,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-transmitting-dirac-domain.md",
     "docs/nsc-hamiltonian-trace-representation.md",
     "docs/nsc-common-time-bulk-split.md",
+    "docs/nsc-transmitting-cross-resolvent.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {
