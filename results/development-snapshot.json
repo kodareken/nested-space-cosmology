@@ -574,11 +574,25 @@
       },
       "generator": "scripts/derive_nsc_transmitting_resolvent.py",
       "output": "results/development/nsc-transmitting-cross-resolvent.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_transmitting_ctp_resolvent.py",
+      "output": "results/development/nsc-transmitting-ctp-resolvent.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "0248eebb5f91ebcbafd044e3d3df373924cfdfd3",
+  "source_commit": "076e29c388b34e20e4e9781b770c04a8d5486855",
   "source_files": [
     {
       "bytes": 3154,
@@ -1429,10 +1443,40 @@
       "bytes": 1280,
       "path": "tests/test_nsc_transmitting_resolvent.py",
       "sha256": "23607bb611681106ed74877afb12867ba8fc0bdd7a45baa470492df5423e1156"
+    },
+    {
+      "bytes": 6857,
+      "path": "docs/nsc-transmitting-ctp-resolvent.md",
+      "sha256": "af9333484ae7fe43074c59bcc1c694b7dcd4af091285aa0294f612839a5832c3"
+    },
+    {
+      "bytes": 39535,
+      "path": "results/development/nsc-transmitting-ctp-resolvent.json",
+      "sha256": "33d91d2c845f865811007c7cc71d731f3458c274fd0db8a1de5c89349434215d"
+    },
+    {
+      "bytes": 3334536,
+      "path": "results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz",
+      "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2"
+    },
+    {
+      "bytes": 12560,
+      "path": "scripts/derive_nsc_transmitting_ctp_resolvent.py",
+      "sha256": "c26225b558ce0ba20161cbd337ff0a8b8a5e00394a90a4dce1d20f9472ba277f"
+    },
+    {
+      "bytes": 7821,
+      "path": "src/recursive_horizons/nsc_transmitting_ctp_resolvent.py",
+      "sha256": "076f703d65ca385c3de186d262c6391c2b9a0e456be74650e2887efedf940664"
+    },
+    {
+      "bytes": 1916,
+      "path": "tests/test_nsc_transmitting_ctp_resolvent.py",
+      "sha256": "d5eb0015f4499d982b958da44ca67ebdc9d1e5bbb790cc10572c6fd6ec39c51b"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 41 post-preprint records plus six active state/history/interface/jet/domain/resolvent payloads, outside the 100-record release",
-  "verification_scope": "byte and dependency authentication; new transmitting cross-resolvent and static metric kernels verified across 33 channels, three focused tests pass; earlier scientific certificates retained without replay"
+  "status": "development snapshot; 42 post-preprint records plus seven active state/history/interface/jet/domain/response payloads, outside the 100-record release",
+  "verification_scope": "byte and dependency authentication; new retarded CTP memory/frequency-transfer vertices verified on 33 channels; two focused tests pass; full state-dependent C1 and C2-C4 OPEN; previous scientific certificates retained without replay"
 }

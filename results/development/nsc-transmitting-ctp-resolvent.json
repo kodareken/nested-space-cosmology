@@ -1,0 +1,886 @@
+{
+  "C2_existing_endpoint_consumer": {
+    "gaussian_endpoint_covector": null,
+    "maximum_residual": null,
+    "reason": "dUplus/dg_Delta and dUminus/dg_Delta on the transmitting embedding are not supplied",
+    "status": "OPEN",
+    "tolerance": 3e-11
+  },
+  "C3_existing_Weyl_match_consumer": {
+    "boundary_components": null,
+    "evaluated": false,
+    "maximum_absolute": null,
+    "mismatch_components": null,
+    "reason": "Gamma_rest has no evaluated metric derivative and no transmitting-to-KS endpoint pullback",
+    "status": "OPEN",
+    "tolerance": 3e-11
+  },
+  "C4": {
+    "decision": "OPEN",
+    "homogeneous_certificate_preserved": true,
+    "metric_stationarity_residual": null,
+    "physical_Vc": null,
+    "reason": "full PG preparation, physical time-history jets, endpoint pullback and Gamma_rest boundary derivative are unevaluated"
+  },
+  "channels": [
+    {
+      "channel_index": 0,
+      "family": 0,
+      "forward_response_norm": 0.6244397441993693,
+      "frequency_transfer_difference_from_static": 0.3060158506935642,
+      "residuals": {
+        "advanced_frequency_exchange": 3.189611421911045e-13,
+        "archived_field_seam": 3.6558979508499347e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 2.7962679125145614e-13,
+        "inverse_memory_Dyson_reconstruction": 5.121557928599044e-16,
+        "outgoing_adjoint": 1.5910967079944316e-13,
+        "retarded_inverse_identity": 8.535742468969481e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 5.80837663202645e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 9.91316043489112,
+      "two_frequency_metric_response_norm": 1.0153388337657894
+    },
+    {
+      "channel_index": 1,
+      "family": 1,
+      "forward_response_norm": 0.5064909403805014,
+      "frequency_transfer_difference_from_static": 0.1962133505385686,
+      "residuals": {
+        "advanced_frequency_exchange": 1.1093492396706574e-13,
+        "archived_field_seam": 4.374233242925086e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.554000615410333e-13,
+        "inverse_memory_Dyson_reconstruction": 3.8910666598569337e-16,
+        "outgoing_adjoint": 9.812196432249562e-14,
+        "retarded_inverse_identity": 1.0070113257497097e-15,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.6220658816613217e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 15.425927759761896,
+      "two_frequency_metric_response_norm": 1.2590438951286194
+    },
+    {
+      "channel_index": 2,
+      "family": 1,
+      "forward_response_norm": 0.4614365118001572,
+      "frequency_transfer_difference_from_static": 0.2324339656370333,
+      "residuals": {
+        "advanced_frequency_exchange": 1.3157447675001658e-13,
+        "archived_field_seam": 1.6040780106247143e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.1133022569720013e-13,
+        "inverse_memory_Dyson_reconstruction": 2.4129376368858544e-16,
+        "outgoing_adjoint": 1.2482250287622987e-13,
+        "retarded_inverse_identity": 4.3836408858347323e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 9.075628909091487e-14
+      },
+      "two_frequency_inverse_memory_vertex_norm": 23.096189758724012,
+      "two_frequency_metric_response_norm": 1.620880264432911
+    },
+    {
+      "channel_index": 3,
+      "family": 1,
+      "forward_response_norm": 0.4507231738911165,
+      "frequency_transfer_difference_from_static": 0.24891694802082212,
+      "residuals": {
+        "advanced_frequency_exchange": 1.7905138275349704e-13,
+        "archived_field_seam": 3.633521691873194e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.3314668373620518e-13,
+        "inverse_memory_Dyson_reconstruction": 3.2700603763843443e-16,
+        "outgoing_adjoint": 1.6393729107271134e-13,
+        "retarded_inverse_identity": 5.670144342988799e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.1306913249965741e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 31.29902832508944,
+      "two_frequency_metric_response_norm": 1.6746112593154376
+    },
+    {
+      "channel_index": 4,
+      "family": 1,
+      "forward_response_norm": 0.4085845549774471,
+      "frequency_transfer_difference_from_static": 0.22255308626874906,
+      "residuals": {
+        "advanced_frequency_exchange": 2.5703594183320574e-13,
+        "archived_field_seam": 2.1447223025150681e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.80114801717316e-13,
+        "inverse_memory_Dyson_reconstruction": 5.139661506050593e-16,
+        "outgoing_adjoint": 1.8261682000463451e-13,
+        "retarded_inverse_identity": 5.649393150043002e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.487433510887887e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 38.45817144395425,
+      "two_frequency_metric_response_norm": 1.5979861209228732
+    },
+    {
+      "channel_index": 5,
+      "family": 1,
+      "forward_response_norm": 0.3253496861153729,
+      "frequency_transfer_difference_from_static": 0.22076971999320352,
+      "residuals": {
+        "advanced_frequency_exchange": 2.8831049016465353e-13,
+        "archived_field_seam": 1.6011566686330864e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 2.1796295342341803e-13,
+        "inverse_memory_Dyson_reconstruction": 3.023663169762251e-16,
+        "outgoing_adjoint": 2.095296965532177e-13,
+        "retarded_inverse_identity": 3.3712600143440693e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.7755780330013244e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 43.21819047742507,
+      "two_frequency_metric_response_norm": 1.6488297200427395
+    },
+    {
+      "channel_index": 6,
+      "family": 1,
+      "forward_response_norm": 0.23142381650923685,
+      "frequency_transfer_difference_from_static": 0.23380653667682486,
+      "residuals": {
+        "advanced_frequency_exchange": 3.9644915486259184e-13,
+        "archived_field_seam": 9.689877616535801e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.6536274876680234e-13,
+        "inverse_memory_Dyson_reconstruction": 2.832576210106794e-16,
+        "outgoing_adjoint": 2.1077977885354898e-13,
+        "retarded_inverse_identity": 4.0858906526907224e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.8193560763649392e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 44.93897350610446,
+      "two_frequency_metric_response_norm": 1.6806135823758992
+    },
+    {
+      "channel_index": 7,
+      "family": 1,
+      "forward_response_norm": 0.15874563146698226,
+      "frequency_transfer_difference_from_static": 0.21107560134114633,
+      "residuals": {
+        "advanced_frequency_exchange": 5.126511509411135e-13,
+        "archived_field_seam": 2.0022923672033124e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 5.561114565449814e-13,
+        "inverse_memory_Dyson_reconstruction": 1.6065485715102598e-16,
+        "outgoing_adjoint": 1.8778416467724306e-13,
+        "retarded_inverse_identity": 2.963129099538041e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.2180248232774547e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 44.526277866579335,
+      "two_frequency_metric_response_norm": 1.4812317197742968
+    },
+    {
+      "channel_index": 8,
+      "family": 1,
+      "forward_response_norm": 0.11196227812259027,
+      "frequency_transfer_difference_from_static": 0.16071891891352244,
+      "residuals": {
+        "advanced_frequency_exchange": 6.185322944013943e-13,
+        "archived_field_seam": 2.9931857262535855e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 4.4145414224744164e-13,
+        "inverse_memory_Dyson_reconstruction": 2.578244144499977e-16,
+        "outgoing_adjoint": 1.6757507052393988e-13,
+        "retarded_inverse_identity": 1.68377679491292e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.9658926567076936e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 44.54234048886149,
+      "two_frequency_metric_response_norm": 1.1127189936808453
+    },
+    {
+      "channel_index": 9,
+      "family": 1,
+      "forward_response_norm": 0.07520081591983512,
+      "frequency_transfer_difference_from_static": 0.12572631555850747,
+      "residuals": {
+        "advanced_frequency_exchange": 5.492983769731248e-13,
+        "archived_field_seam": 2.4244128826399834e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.78700924713927e-13,
+        "inverse_memory_Dyson_reconstruction": 1.894536501821219e-16,
+        "outgoing_adjoint": 1.4291452437857343e-13,
+        "retarded_inverse_identity": 4.4005617223451665e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.4815058118429956e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 45.90377106655261,
+      "two_frequency_metric_response_norm": 0.7930306100937695
+    },
+    {
+      "channel_index": 10,
+      "family": 1,
+      "forward_response_norm": 0.04291628148986828,
+      "frequency_transfer_difference_from_static": 0.10920161182747941,
+      "residuals": {
+        "advanced_frequency_exchange": 5.164220539761029e-13,
+        "archived_field_seam": 2.8240074934036185e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.8518645956774214e-13,
+        "inverse_memory_Dyson_reconstruction": 1.0664103857629591e-16,
+        "outgoing_adjoint": 1.0252301401361382e-13,
+        "retarded_inverse_identity": 3.3054655408063295e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.9969132945374894e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 44.37261000001534,
+      "two_frequency_metric_response_norm": 0.6000471198715236
+    },
+    {
+      "channel_index": 11,
+      "family": 1,
+      "forward_response_norm": 0.023481196087654758,
+      "frequency_transfer_difference_from_static": 0.08159818855401982,
+      "residuals": {
+        "advanced_frequency_exchange": 5.3720382657205e-13,
+        "archived_field_seam": 3.1395834247334357e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.3977661945646945e-13,
+        "inverse_memory_Dyson_reconstruction": 8.27749129099054e-17,
+        "outgoing_adjoint": 7.897662071492849e-14,
+        "retarded_inverse_identity": 2.369263030404851e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.058762474723074e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 36.855977309087784,
+      "two_frequency_metric_response_norm": 0.42523704850732946
+    },
+    {
+      "channel_index": 12,
+      "family": 1,
+      "forward_response_norm": 0.02059531617764004,
+      "frequency_transfer_difference_from_static": 0.04963089514507855,
+      "residuals": {
+        "advanced_frequency_exchange": 4.075927736058514e-13,
+        "archived_field_seam": 1.2689350192735842e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 2.762612760310732e-13,
+        "inverse_memory_Dyson_reconstruction": 7.658228871471266e-17,
+        "outgoing_adjoint": 8.686627416186758e-14,
+        "retarded_inverse_identity": 1.0726007010028969e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.9155577156459205e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 32.54654961081854,
+      "two_frequency_metric_response_norm": 0.2909849463658858
+    },
+    {
+      "channel_index": 13,
+      "family": 2,
+      "forward_response_norm": 0.5428677401975058,
+      "frequency_transfer_difference_from_static": 0.20796285245922155,
+      "residuals": {
+        "advanced_frequency_exchange": 1.9701313639822683e-13,
+        "archived_field_seam": 1.6076805758308424e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.7663244210521817e-13,
+        "inverse_memory_Dyson_reconstruction": 5.035598227418726e-16,
+        "outgoing_adjoint": 8.391024644261241e-14,
+        "retarded_inverse_identity": 8.143867864721086e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.6704294001102425e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 11.284554843020782,
+      "two_frequency_metric_response_norm": 0.9894887474514276
+    },
+    {
+      "channel_index": 14,
+      "family": 2,
+      "forward_response_norm": 0.47556564507236854,
+      "frequency_transfer_difference_from_static": 0.18607859554170247,
+      "residuals": {
+        "advanced_frequency_exchange": 9.436453698370933e-14,
+        "archived_field_seam": 3.2597472454685096e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.0610957925356996e-13,
+        "inverse_memory_Dyson_reconstruction": 3.5932274399157133e-16,
+        "outgoing_adjoint": 6.206558744139589e-14,
+        "retarded_inverse_identity": 7.322306131855556e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.0989712559468903e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 16.963139592691356,
+      "two_frequency_metric_response_norm": 1.3329133802067334
+    },
+    {
+      "channel_index": 15,
+      "family": 2,
+      "forward_response_norm": 0.4557245927739301,
+      "frequency_transfer_difference_from_static": 0.2328119472042744,
+      "residuals": {
+        "advanced_frequency_exchange": 1.2469555503298707e-13,
+        "archived_field_seam": 1.4008459309675182e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.061848549755015e-13,
+        "inverse_memory_Dyson_reconstruction": 3.90037817888524e-16,
+        "outgoing_adjoint": 8.083171562227531e-14,
+        "retarded_inverse_identity": 5.723325714598214e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 8.182600683325209e-14
+      },
+      "two_frequency_inverse_memory_vertex_norm": 24.340763444221633,
+      "two_frequency_metric_response_norm": 1.5894626016055626
+    },
+    {
+      "channel_index": 16,
+      "family": 2,
+      "forward_response_norm": 0.4413762930845913,
+      "frequency_transfer_difference_from_static": 0.2353037532140982,
+      "residuals": {
+        "advanced_frequency_exchange": 1.9180980371731709e-13,
+        "archived_field_seam": 5.807719583220348e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.5268719536531372e-13,
+        "inverse_memory_Dyson_reconstruction": 2.9722674069955455e-16,
+        "outgoing_adjoint": 1.2806848633295144e-13,
+        "retarded_inverse_identity": 3.7380328128997615e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.1028956049622533e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 32.03578257359665,
+      "two_frequency_metric_response_norm": 1.5891477115144348
+    },
+    {
+      "channel_index": 17,
+      "family": 2,
+      "forward_response_norm": 0.39031731264411784,
+      "frequency_transfer_difference_from_static": 0.21223970222861005,
+      "residuals": {
+        "advanced_frequency_exchange": 2.850364372708423e-13,
+        "archived_field_seam": 1.6168211237258683e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.9237429308379924e-13,
+        "inverse_memory_Dyson_reconstruction": 2.876433327553357e-16,
+        "outgoing_adjoint": 1.6934467508900725e-13,
+        "retarded_inverse_identity": 2.9790028039136644e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.6702426270040572e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 38.59741694823675,
+      "two_frequency_metric_response_norm": 1.5448984542554547
+    },
+    {
+      "channel_index": 18,
+      "family": 2,
+      "forward_response_norm": 0.3051648413260933,
+      "frequency_transfer_difference_from_static": 0.21852270586650527,
+      "residuals": {
+        "advanced_frequency_exchange": 3.2497216239722343e-13,
+        "archived_field_seam": 1.5610555527833542e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 2.1940757626526472e-13,
+        "inverse_memory_Dyson_reconstruction": 3.2467026556612767e-16,
+        "outgoing_adjoint": 1.8480898633319096e-13,
+        "retarded_inverse_identity": 4.981768234859989e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.485416017252911e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 42.790043931192095,
+      "two_frequency_metric_response_norm": 1.6201973726937233
+    },
+    {
+      "channel_index": 19,
+      "family": 2,
+      "forward_response_norm": 0.21628028516483594,
+      "frequency_transfer_difference_from_static": 0.22796596371387665,
+      "residuals": {
+        "advanced_frequency_exchange": 3.617986623667632e-13,
+        "archived_field_seam": 2.613670802300941e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.630426211664558e-13,
+        "inverse_memory_Dyson_reconstruction": 1.8918855289255455e-16,
+        "outgoing_adjoint": 1.7419717873846009e-13,
+        "retarded_inverse_identity": 3.775325852781557e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.8834692429738912e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 44.14791857338862,
+      "two_frequency_metric_response_norm": 1.626868613871242
+    },
+    {
+      "channel_index": 20,
+      "family": 2,
+      "forward_response_norm": 0.15008066673503306,
+      "frequency_transfer_difference_from_static": 0.2002806496468342,
+      "residuals": {
+        "advanced_frequency_exchange": 4.836835668866539e-13,
+        "archived_field_seam": 2.0069154875042084e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.5998368414379616e-13,
+        "inverse_memory_Dyson_reconstruction": 1.698554955110742e-16,
+        "outgoing_adjoint": 1.5493208260219523e-13,
+        "retarded_inverse_identity": 3.466043598377798e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.071693998330184e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 43.77107200129609,
+      "two_frequency_metric_response_norm": 1.4037850780350365
+    },
+    {
+      "channel_index": 21,
+      "family": 2,
+      "forward_response_norm": 0.10645046356192141,
+      "frequency_transfer_difference_from_static": 0.15160919585717103,
+      "residuals": {
+        "advanced_frequency_exchange": 6.125282472813582e-13,
+        "archived_field_seam": 2.6526645454238384e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.897668644089308e-13,
+        "inverse_memory_Dyson_reconstruction": 1.4271801093926418e-16,
+        "outgoing_adjoint": 1.5226316685703017e-13,
+        "retarded_inverse_identity": 2.002089035149423e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.8162983485870163e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 44.11411009080626,
+      "two_frequency_metric_response_norm": 1.0446487215922244
+    },
+    {
+      "channel_index": 22,
+      "family": 2,
+      "forward_response_norm": 0.07064149427922284,
+      "frequency_transfer_difference_from_static": 0.12152977367799792,
+      "residuals": {
+        "advanced_frequency_exchange": 4.82086915012552e-13,
+        "archived_field_seam": 2.382003764592802e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.9428200106727474e-13,
+        "inverse_memory_Dyson_reconstruction": 2.1919103783517352e-16,
+        "outgoing_adjoint": 1.2593249357529152e-13,
+        "retarded_inverse_identity": 3.676214779892623e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.562692663962002e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 45.41469686660627,
+      "two_frequency_metric_response_norm": 0.7536267438185021
+    },
+    {
+      "channel_index": 23,
+      "family": 2,
+      "forward_response_norm": 0.4527721536641379,
+      "frequency_transfer_difference_from_static": 0.1853080816103626,
+      "residuals": {
+        "advanced_frequency_exchange": 9.743276128152823e-14,
+        "archived_field_seam": 6.204321529477735e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 7.998042173542393e-14,
+        "inverse_memory_Dyson_reconstruction": 2.369736168670544e-16,
+        "outgoing_adjoint": 4.70733002479478e-14,
+        "retarded_inverse_identity": 4.160687649098322e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 8.797842974586195e-14
+      },
+      "two_frequency_inverse_memory_vertex_norm": 17.056166751558518,
+      "two_frequency_metric_response_norm": 1.3008648500739524
+    },
+    {
+      "channel_index": 24,
+      "family": 2,
+      "forward_response_norm": 0.4466660576036334,
+      "frequency_transfer_difference_from_static": 0.21152673870856678,
+      "residuals": {
+        "advanced_frequency_exchange": 1.1444573542367614e-13,
+        "archived_field_seam": 1.0303527169198797e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 8.670271124649197e-14,
+        "inverse_memory_Dyson_reconstruction": 2.1986631900941457e-16,
+        "outgoing_adjoint": 7.041799408294263e-14,
+        "retarded_inverse_identity": 7.165548814217467e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 8.686100831257487e-14
+      },
+      "two_frequency_inverse_memory_vertex_norm": 22.030460383621282,
+      "two_frequency_metric_response_norm": 1.4134764934921347
+    },
+    {
+      "channel_index": 25,
+      "family": 2,
+      "forward_response_norm": 0.43522464745572503,
+      "frequency_transfer_difference_from_static": 0.2160431258825609,
+      "residuals": {
+        "advanced_frequency_exchange": 1.7880680163764585e-13,
+        "archived_field_seam": 1.179144108346756e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.2477768240331903e-13,
+        "inverse_memory_Dyson_reconstruction": 2.9332213528431505e-16,
+        "outgoing_adjoint": 1.062931738235671e-13,
+        "retarded_inverse_identity": 7.037098375880878e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.1667381057345867e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 28.090498955408197,
+      "two_frequency_metric_response_norm": 1.42970265698565
+    },
+    {
+      "channel_index": 26,
+      "family": 2,
+      "forward_response_norm": 0.3981561693322367,
+      "frequency_transfer_difference_from_static": 0.1991841111652418,
+      "residuals": {
+        "advanced_frequency_exchange": 2.9701944780899956e-13,
+        "archived_field_seam": 1.248836678355526e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.954100853358828e-13,
+        "inverse_memory_Dyson_reconstruction": 3.0212297438807214e-16,
+        "outgoing_adjoint": 1.393874849758071e-13,
+        "retarded_inverse_identity": 4.612760146133814e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.4004226814396716e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 34.118400576419006,
+      "two_frequency_metric_response_norm": 1.401783550880755
+    },
+    {
+      "channel_index": 27,
+      "family": 2,
+      "forward_response_norm": 0.330511542577454,
+      "frequency_transfer_difference_from_static": 0.19715089032923058,
+      "residuals": {
+        "advanced_frequency_exchange": 3.285970685352662e-13,
+        "archived_field_seam": 9.088809240779638e-14,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 2.475044790095228e-13,
+        "inverse_memory_Dyson_reconstruction": 3.3561180846869424e-16,
+        "outgoing_adjoint": 1.776639566695902e-13,
+        "retarded_inverse_identity": 5.390107147746608e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.8293069559159157e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 38.89673790715746,
+      "two_frequency_metric_response_norm": 1.4577776586822613
+    },
+    {
+      "channel_index": 28,
+      "family": 2,
+      "forward_response_norm": 0.24868462938396235,
+      "frequency_transfer_difference_from_static": 0.21220130846648716,
+      "residuals": {
+        "advanced_frequency_exchange": 3.1233570896937884e-13,
+        "archived_field_seam": 1.3276228398448802e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 2.9160437492501085e-13,
+        "inverse_memory_Dyson_reconstruction": 1.949865186872606e-16,
+        "outgoing_adjoint": 1.8182911428640958e-13,
+        "retarded_inverse_identity": 5.284361793144549e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.5258038181714948e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 41.52449527047056,
+      "two_frequency_metric_response_norm": 1.531523218132747
+    },
+    {
+      "channel_index": 29,
+      "family": 2,
+      "forward_response_norm": 0.17683590772579746,
+      "frequency_transfer_difference_from_static": 0.2060026263406074,
+      "residuals": {
+        "advanced_frequency_exchange": 3.776247644458208e-13,
+        "archived_field_seam": 1.637466433631473e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 1.7773028387465454e-13,
+        "inverse_memory_Dyson_reconstruction": 1.6499363337116134e-16,
+        "outgoing_adjoint": 1.6022791131847263e-13,
+        "retarded_inverse_identity": 4.813304768654248e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 1.5802217202660794e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 42.04304590720225,
+      "two_frequency_metric_response_norm": 1.4477780796457125
+    },
+    {
+      "channel_index": 30,
+      "family": 2,
+      "forward_response_norm": 0.12654175694792988,
+      "frequency_transfer_difference_from_static": 0.1688630060470651,
+      "residuals": {
+        "advanced_frequency_exchange": 5.145143422361947e-13,
+        "archived_field_seam": 1.358322188360327e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 4.608087258742947e-13,
+        "inverse_memory_Dyson_reconstruction": 1.7475268229563835e-16,
+        "outgoing_adjoint": 1.5164440730504253e-13,
+        "retarded_inverse_identity": 3.2328399968877694e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.4151454009296933e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 41.95720420925892,
+      "two_frequency_metric_response_norm": 1.1788549534635264
+    },
+    {
+      "channel_index": 31,
+      "family": 2,
+      "forward_response_norm": 0.08969887425816196,
+      "frequency_transfer_difference_from_static": 0.12935055997868097,
+      "residuals": {
+        "advanced_frequency_exchange": 5.687465667026999e-13,
+        "archived_field_seam": 1.6473782971696773e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 5.094169372924845e-13,
+        "inverse_memory_Dyson_reconstruction": 2.4833931078844684e-16,
+        "outgoing_adjoint": 1.411049958609569e-13,
+        "retarded_inverse_identity": 3.683469935168837e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.3836744079644637e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 42.980546187761625,
+      "two_frequency_metric_response_norm": 0.8659669651772982
+    },
+    {
+      "channel_index": 32,
+      "family": 2,
+      "forward_response_norm": 0.05718369636316324,
+      "frequency_transfer_difference_from_static": 0.11043907236051709,
+      "residuals": {
+        "advanced_frequency_exchange": 4.220703309288883e-13,
+        "archived_field_seam": 1.8224417190707612e-13,
+        "driven_seam": 0.0,
+        "driven_vs_weak_two_frequency": 3.5881898667891283e-13,
+        "inverse_memory_Dyson_reconstruction": 1.4517353729687872e-16,
+        "outgoing_adjoint": 1.1089755322562608e-13,
+        "retarded_inverse_identity": 3.332455834134281e-16,
+        "retarded_reverse_metric_transfer": 0.0,
+        "retarded_reverse_response": 0.0,
+        "zero_transfer_static_recovery": 2.2895969743659313e-13
+      },
+      "two_frequency_inverse_memory_vertex_norm": 43.48677093114249,
+      "two_frequency_metric_response_norm": 0.6488367320650685
+    }
+  ],
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "completion_inventory": {
+    "C1": "retarded-memory embedding PASS; full state-dependent CTP embedding OPEN",
+    "C2": "OPEN",
+    "C3": "OPEN",
+    "C4": "OPEN",
+    "EndpointBranchJets_transmitting_fields": null,
+    "Gamma_rest_metric_normal_derivative": null,
+    "KS_endpoint_coordinate_pullback": null,
+    "full_PG_initial_covariance_and_packet_complement_correlations": null,
+    "harmonic_metric_transfer": "evaluated as two-frequency response, not a chosen history",
+    "lesser_greater_and_Keldysh": null,
+    "metric_timestep_started": false,
+    "physical_two_sided_Weyl_mismatch": null,
+    "retarded_and_advanced_memory": "evaluated in the inherited packet basis",
+    "stationary_history_selected": false,
+    "unitary_Vplus_Vminus_on_physical_history": null
+  },
+  "definition": {
+    "CTP_triangular_blocks": "G=[[G_R,G_K],[0,G_A]]; D=[[D_R,-D_R o G_K o D_A],[0,D_A]]",
+    "domain": "actual whole-line transmitted PG Dirac domain; computations restricted to strictly trapped [-1,1], using causal support, not walls",
+    "existing_Gaussian_owner": "GaussianBoundaryState.reconstruct and overlap_schur; nsc_influence.influence",
+    "full_action": "Q=I-C0+C0 Vminus^dagger Vplus; retain complementary determinant and all preparation blocks",
+    "memory": "full energy dependence retained in D_R and its cross block; no constant B approximation",
+    "physical_preparation_available": false,
+    "preparation": "full PG covariance including packet/complement cross blocks; not inferred from retarded data",
+    "projection": "same canonical packets J as Z2a; fixed rho=0; no new independent room variables",
+    "retarded_conversion": "G_R=-R_packet; D_R=-K; G_A(z*)=G_R(z)^dagger",
+    "state_greater": "G_greater(t,s)=-i J^dagger U(t,t0)(I-C0)U(s,t0)^dagger J",
+    "state_lesser": "G_less(t,s)=i J^dagger U(t,t0) C0 U(s,t0)^dagger J",
+    "stored_seed_covariance_assigned_to_PG_packets": false,
+    "stored_state_basis": {
+      "Pauli_axes": "H=-m_j*sigma1+(lambda_n/r)*sigma2+(k/a_parallel)*sigma3",
+      "canonical_half_density": "chi=r*sqrt(a_parallel)*psi at N=1",
+      "covariance_basis": "canonical transported seed basis used by the immutable source kernels",
+      "index_order": "channel, frequency, spinor; upper before lower"
+    }
+  },
+  "input_hashes": {
+    "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5",
+    "results/development/nsc-general-ks-same-action-history.json": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-transmitting-boundary-remainder.json": "c09163816af3961f53f3bd80b236ea4a7c8cb95eb75fd6d765f51568e2d41e72",
+    "results/development/nsc-transmitting-cross-resolvent.json": "da4ab7e89140914f52b30e8d347c001c4c008202a6e8d9dfcd6214e82e03cd43",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "locked_Weyl_extraction_residual": {
+    "maximum_absolute": 0.0,
+    "status": "PASS",
+    "tolerance": 0.0
+  },
+  "locked_eight_Weyl_coefficients": {
+    "N": [
+      -1.6709564486074024,
+      -1.7122278287564878
+    ],
+    "beta": [
+      0.0,
+      0.0
+    ],
+    "q_ADM": [
+      -43.58985597013112,
+      45.868233687373596
+    ],
+    "r": [
+      83.87051420812537,
+      -93.54264532195464
+    ]
+  },
+  "locked_endpoint_basis": {
+    "derivative_kind": "discrete action gradient, not a continuum boundary momentum",
+    "fields": [
+      "N",
+      "beta",
+      "q_ADM",
+      "r"
+    ],
+    "history": "33-node subsample of authenticated endpoint_control_duration_0.5",
+    "history_nodes": 33,
+    "id": "KS-local-nodal-endpoints:b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+    "local_fields": [
+      "lapse",
+      "beta",
+      "q_ADM",
+      "r"
+    ],
+    "node_indices": [
+      0,
+      32
+    ],
+    "orientation": "increasing stored time; signs already included in dS/dg",
+    "physical_history": false,
+    "units": "dimensionless recorded action per unit homogeneous axial coordinate; derivatives with respect to raw metric nodes"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "payload": {
+    "bytes": 3334536,
+    "description": "outgoing resolvent fields and new two-frequency retarded/ inverse-memory metric vertices; no state or stress",
+    "path": "results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz",
+    "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2"
+  },
+  "preserved_Weyl_value": 93.54264532195464,
+  "schema": "NSC-TRANSMITTING-CTP-RESOLVENT-v1",
+  "scope": {
+    "Z3": "OUT OF SCOPE: fixed coordinate cut",
+    "given_B_used": false,
+    "metric_timestep_started": false,
+    "new_physical_terms": false,
+    "old_generators_rerun": false,
+    "optimizer_started": false,
+    "parameters_refitted": false,
+    "prior_scientific_files_modified": false,
+    "state_or_stress_fabricated": false
+  },
+  "source_hashes": {
+    "docs/nsc-transmitting-ctp-resolvent.md": "af9333484ae7fe43074c59bcc1c694b7dcd4af091285aa0294f612839a5832c3",
+    "scripts/derive_nsc_transmitting_ctp_resolvent.py": "c26225b558ce0ba20161cbd337ff0a8b8a5e00394a90a4dce1d20f9472ba277f",
+    "src/recursive_horizons/nsc_transmitting_ctp_resolvent.py": "076f703d65ca385c3de186d262c6391c2b9a0e456be74650e2887efedf940664",
+    "tests/test_nsc_transmitting_ctp_resolvent.py": "d5eb0015f4499d982b958da44ca67ebdc9d1e5bbb790cc10572c6fd6ec39c51b"
+  },
+  "status": "C1 retarded-memory and harmonic metric-transfer PASS; state-dependent C1 and C2-C4 OPEN",
+  "temporal_metric_vertex": {
+    "adjoint": "delta_R_A(zin*,zout*)=delta_R_R(zout,zin)^dagger",
+    "delta_D_R": "K(zout) delta_R(zout,zin) K(zin)",
+    "delta_R": "-J^dagger R(zout) deltaH R(zin) J",
+    "fields": [
+      "log_N",
+      "beta",
+      "log_q_PG",
+      "log_r"
+    ],
+    "finite_history_duration": null,
+    "frequency_provenance": "difference of existing real energy ports; shared imaginary part; response probe, not physical frequency selection",
+    "full_time_history_reconstructed": false,
+    "input_energy": [
+      0.2,
+      0.25
+    ],
+    "omega": 0.39999999999999997,
+    "output_energy": [
+      0.6,
+      0.25
+    ],
+    "source": "existing compact spatial metric vertex times exp(-i omega t); real source includes conjugate harmonic"
+  },
+  "verification": {
+    "earlier_static_residuals_reused": {
+      "adjoint_metric_jets": 6.525098934429729e-13,
+      "adjoint_response": 3.5249959030613365e-14,
+      "cross_generator_reconstruction": 3.034923386023436e-16,
+      "inverse_metric_weak_identity": 6.553491887463577e-13,
+      "inverse_response": 1.0694437150363158e-15,
+      "inverse_response_adjoint": 1.1189029018157517e-13,
+      "metric_weak_identity": 5.80837663202645e-13,
+      "positive_imaginary_violation": 0.0,
+      "resolvent_norm_bound_violation": 0.0,
+      "reverse_upper_metric_jets": 0.0,
+      "reverse_upper_response": 0.0,
+      "seam_continuity": 0.0,
+      "true_resolvent_identity": 1.1724200791692715e-13
+    },
+    "maximum_residuals": {
+      "advanced_frequency_exchange": 6.185322944013943e-13,
+      "archived_field_seam": 3.1395834247334357e-13,
+      "driven_seam": 0.0,
+      "driven_vs_weak_two_frequency": 5.561114565449814e-13,
+      "inverse_memory_Dyson_reconstruction": 5.139661506050593e-16,
+      "outgoing_adjoint": 2.1077977885354898e-13,
+      "retarded_inverse_identity": 1.0070113257497097e-15,
+      "retarded_reverse_metric_transfer": 0.0,
+      "retarded_reverse_response": 0.0,
+      "zero_transfer_static_recovery": 5.80837663202645e-13
+    },
+    "retained_channels": 33,
+    "tolerance": 3e-11
+  }
+}
