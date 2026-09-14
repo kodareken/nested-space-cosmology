@@ -602,11 +602,25 @@
       },
       "generator": "scripts/derive_nsc_pg_lll_preparation.py",
       "output": "results/development/nsc-pg-lll-preparation.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_massive_signed_preparation.py",
+      "output": "results/development/nsc-massive-signed-preparation.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "1d870e185df279cb7f34ac33e38cebadefa4eda5",
+  "source_commit": "0f65890443a3cc51e8b5fb5489ee0aecf14909f5",
   "source_files": [
     {
       "bytes": 3154,
@@ -1512,10 +1526,35 @@
       "bytes": 1725,
       "path": "tests/test_nsc_pg_lll_preparation.py",
       "sha256": "59e414f64dd97d8a9d9d37e0b2498fcedc32c9b7a79760f7f1d287d5444a73d3"
+    },
+    {
+      "bytes": 7085,
+      "path": "docs/nsc-massive-signed-preparation.md",
+      "sha256": "a0ee632611c36431667ff4f1b9e334809f26eb46cca292d72ddf25e7216bace1"
+    },
+    {
+      "bytes": 103548,
+      "path": "results/development/nsc-massive-signed-preparation.json",
+      "sha256": "f1195e2e1fbe1b1cedf04321d098e4bf3834652f31ddebcb9031338c8163a5e4"
+    },
+    {
+      "bytes": 11644,
+      "path": "scripts/derive_nsc_massive_signed_preparation.py",
+      "sha256": "513bf93d44b2b9b9686d3b1ede24e3cd571363ec59d6206288bce3f3b8fabf54"
+    },
+    {
+      "bytes": 8990,
+      "path": "src/recursive_horizons/nsc_massive_signed_preparation.py",
+      "sha256": "a9935f3f04de7d984ea580f019c04d0601fad29f30e62c707ba146202b640d09"
+    },
+    {
+      "bytes": 1710,
+      "path": "tests/test_nsc_massive_signed_preparation.py",
+      "sha256": "dce217ba6fa7a927eb573a4cf5d0c853edb6f5cca21853923f21d81959349acd"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 43 post-preprint records plus seven active numerical payloads; LLL PG preparation added after working PDF v0.25.0",
-  "verification_scope": "new physical LLL PG preparation verified with two focused tests and all-field reproduction; full 33-channel C1b OPEN; all 176 previous scientific files preserved without generator replay; unchanged v0.25.0 PDF retained"
+  "status": "development snapshot; 44 post-preprint records plus seven active numerical payloads; massive signed-map/data-sufficiency gate added after unchanged PDF v0.25.0",
+  "verification_scope": "new exact massive signed-spin map, 32-group residuals and 1152 mixed-group seed information controls verified; six focused tests and all-field reproduction pass; full C1b OPEN; all 181 prior scientific files and PDF retained without replay"
 }

@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 20943,
+      "bytes": 21401,
       "path": "README.md",
-      "sha256": "3ee3048361d6fca9a4da453728380b9412ac5407d88d6972d06dcc7ebde89a83"
+      "sha256": "30ee0938dfeddc133fcb5c24021ac0d8152933146a9ce74c794f0afe61d30cfb"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 25821,
+      "bytes": 27383,
       "path": "docs/current-result.md",
-      "sha256": "1e5a245c8e2534e923d507576e80f649955cb0528dda2cc9a84ec3d8533adc68"
+      "sha256": "1c26537ef6b3b51dc8d3969f6212263f57648d67c6e30457e90aac31d4f2de9f"
     },
     {
-      "bytes": 12335,
+      "bytes": 12486,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "4af02939499b9728501191dd3943d96d95c8456d7668f7aace9562381e0966bf"
+      "sha256": "d0464cea67b29068eb5424af2211126494975bf03a4879c9580cd3bb18c4c978"
     },
     {
       "bytes": 3154,
@@ -339,6 +339,11 @@
       "bytes": 4039,
       "path": "docs/nsc-lorentzian-transport.md",
       "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
+    },
+    {
+      "bytes": 7085,
+      "path": "docs/nsc-massive-signed-preparation.md",
+      "sha256": "a0ee632611c36431667ff4f1b9e334809f26eb46cca292d72ddf25e7216bace1"
     },
     {
       "bytes": 10741,
@@ -611,14 +616,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 12740,
+      "bytes": 13181,
       "path": "results/README.md",
-      "sha256": "886bde668d79d3fa9c3465848b6f5e82a6a5b015d935bb0dac9f248ed8442f89"
+      "sha256": "7855e3960a6436739228a6961813bff21940d0a645d2a1aa4ccbc04e396a2a7c"
     },
     {
-      "bytes": 51757,
+      "bytes": 53145,
       "path": "results/development-snapshot.json",
-      "sha256": "3255c3b3e46becb33f8c99ca865710bbace56e91274091b2fe1631aaef66b381"
+      "sha256": "716c47aade42c6cd73907fff407474b25f43319175a7ae737422a7720c014e8a"
     },
     {
       "bytes": 3283,
@@ -839,6 +844,11 @@
       "bytes": 8264,
       "path": "results/development/nsc-landau-cauchy-isometry.json",
       "sha256": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5"
+    },
+    {
+      "bytes": 103548,
+      "path": "results/development/nsc-massive-signed-preparation.json",
+      "sha256": "f1195e2e1fbe1b1cedf04321d098e4bf3834652f31ddebcb9031338c8163a5e4"
     },
     {
       "bytes": 24210,
@@ -1621,9 +1631,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 17533,
+      "bytes": 17579,
       "path": "scripts/check_publication.py",
-      "sha256": "8cc4cdaf50a4dae1ec8ca6fdbc0fd23856435097a028eaed7a7ce92fe85cf59a"
+      "sha256": "1aea29101f25e1364743d1c956f6b60d149158959d1f84935dfa19821558c9f0"
     },
     {
       "bytes": 12921,
@@ -1724,6 +1734,11 @@
       "bytes": 12964,
       "path": "scripts/derive_nsc_landau_cauchy_isometry.py",
       "sha256": "1bf724bf98237c2a6afc1b7f8a2d393fd9b14aac019fd5c022f23ee36bfef072"
+    },
+    {
+      "bytes": 11644,
+      "path": "scripts/derive_nsc_massive_signed_preparation.py",
+      "sha256": "513bf93d44b2b9b9686d3b1ede24e3cd571363ec59d6206288bce3f3b8fabf54"
     },
     {
       "bytes": 4360,
@@ -2306,6 +2321,11 @@
       "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
     },
     {
+      "bytes": 8990,
+      "path": "src/recursive_horizons/nsc_massive_signed_preparation.py",
+      "sha256": "a9935f3f04de7d984ea580f019c04d0601fad29f30e62c707ba146202b640d09"
+    },
+    {
       "bytes": 3860,
       "path": "src/recursive_horizons/nsc_massless_reference.py",
       "sha256": "361662e89ac53261b9cea1c242b766fb521197dee9cbf076166771716b3ba0f1"
@@ -2539,6 +2559,11 @@
       "bytes": 1052,
       "path": "tests/test_nsc_lorentzian.py",
       "sha256": "d2cd33889552058171a5d4a0c9168496779ea55c51c7aa8e6bf96649ba5153f8"
+    },
+    {
+      "bytes": 1710,
+      "path": "tests/test_nsc_massive_signed_preparation.py",
+      "sha256": "dce217ba6fa7a927eb573a4cf5d0c853edb6f5cca21853923f21d81959349acd"
     },
     {
       "bytes": 10654,
