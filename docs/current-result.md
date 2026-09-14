@@ -1,6 +1,36 @@
 # What the calculations show
 
-**Latest development — paired horizon construction and a compact normalization correction.**
+**Latest development — full compact restart: H1 PASS.** The
+[versioned restart](nsc-compact-matched-restart.md) now regenerates every
+retained compact frequency from the original horizon/incoming data: 20 groups,
+1,280 X blocks, 1,152 angular-partner Y blocks and their signed-frequency
+partners. The historical seed is used only after construction, as a control.
+
+| Start convention | Explicit control | Result |
+|---|---|---|
+| `historical_radial_r_h` | Immutable original compact seed | Maximum X residual `4.11e-14` |
+| `matched_delta_q` | New `compact-seed-v2-matched-delta-q` checkpoint | Cold regeneration reproduces the stored artifact byte for byte |
+
+The new matched control uses the corrected interior Frobenius argument and
+shares the same inherited propagator, source and scattering with the historical
+comparison. The two conventions are not made numerically equal. Their largest
+X difference on the full grid is `2.73e-4`; it remains a diagnostic of the finite
+start convention.
+
+The [record](../results/development/nsc-compact-matched-restart.json) verifies
+unitarity `5.97e-14`, matched modal normalization `5.99e-14`, T feedback
+`4.37e-16`, and the prior independent matched modal control `9.20e-12`
+(tolerance `3e-11`). The loader requires an explicit convention and hash.
+The original seed, source file and previous result records are unchanged.
+
+**H2 and full C1b remain OPEN.** The complete compact seed-frequency table is
+now available under a consistent matched convention. It still needs the massive
+global PG mode transform and current/Plancherel completeness before spatial
+covariance assembly. No massive spatial C, transmitting endpoint jets, new
+stress or metric evolution is inferred from this checkpoint. **PDF v0.25.0
+is unchanged.**
+
+**Preceding development — paired horizon construction and a compact normalization correction.**
 The [new map](nsc-horizon-paired-pg-map.md) normalizes the magnetic angular
 spinors, their gauge transition and their signed pairing. Under the already
 selected affine-horizon preparation, orthogonality and angular-sign conservation
@@ -208,7 +238,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `da53747`, now contains forty-five post-preprint records.
+through laboratory commit `3ba9e01`, now contains forty-six post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -570,7 +600,7 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains forty-five.
+[the later snapshot](../results/development-snapshot.json) contains forty-six.
 [The development index](development-update-2026-09-10.md) links their
 derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.

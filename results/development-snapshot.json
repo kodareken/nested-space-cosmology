@@ -630,11 +630,25 @@
       },
       "generator": "scripts/derive_nsc_horizon_paired_pg_map.py",
       "output": "results/development/nsc-horizon-paired-pg-map.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_compact_matched_restart.py",
+      "output": "results/development/nsc-compact-matched-restart.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "da53747301fe2c43a645bb16044b79fd323937cb",
+  "source_commit": "3ba9e0175f117f268ae09d891b361192952479eb",
   "source_files": [
     {
       "bytes": 3154,
@@ -1600,10 +1614,50 @@
       "bytes": 1162,
       "path": "tests/test_nsc_paired_horizon_preparation.py",
       "sha256": "d9ce5c32cd43b3c44e96411c46fea27585ae316e7e5c37653df439b684f49e1d"
+    },
+    {
+      "bytes": 5434,
+      "path": "docs/nsc-compact-matched-restart.md",
+      "sha256": "2db0f77875f652faa9311ed1fafe35abbbd8d2478f5e1d344e7bdf8bb4d29d4d"
+    },
+    {
+      "bytes": 19818,
+      "path": "results/development/nsc-compact-matched-restart.json",
+      "sha256": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf"
+    },
+    {
+      "bytes": 12224,
+      "path": "scripts/derive_nsc_compact_matched_restart.py",
+      "sha256": "f85163f740ba08fe52f4a21542ed913e179076ef6a45b78377ee3014d4171c2d"
+    },
+    {
+      "bytes": 5083,
+      "path": "src/recursive_horizons/nsc_compact_restart_scattering.py",
+      "sha256": "9d3869d0e7444f55182138d0b0c52cedc06b3afee8e4cdec8ce499ab7bdf7b4f"
+    },
+    {
+      "bytes": 5535,
+      "path": "src/recursive_horizons/nsc_compact_matched_restart.py",
+      "sha256": "098735ba10f1daeb5c659057dfa6427922f7e904df63f327ff8c06a2617eb2b3"
+    },
+    {
+      "bytes": 1937,
+      "path": "tests/test_nsc_compact_matched_restart.py",
+      "sha256": "9a04d0f543533bc87cc431fd338995cbdaeba6da0f3d86a67df168dde05d68de"
+    },
+    {
+      "bytes": 236258,
+      "path": "results/development/artifacts/nsc-compact-restart-scattering.f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9.npz",
+      "sha256": "f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9"
+    },
+    {
+      "bytes": 2573460,
+      "path": "results/development/artifacts/nsc-compact-seed-generations.77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08.npz",
+      "sha256": "77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 45 post-preprint records plus seven numerical payloads; paired horizon normalization gate added after unchanged PDF v0.25.0",
-  "verification_scope": "new magnetic angular basis, signed modal horizon maps and finite compact collar discrepancy verified at one stored frequency per group; four focused tests and all-field reproduction pass; full C1b-H OPEN; all 186 prior scientific files and PDF retained without old stress/reference replay"
+  "status": "development snapshot; 46 post-preprint records plus nine numerical payloads; H1 versioned full compact restart PASS, global PG state OPEN; PDF v0.25.0 retained",
+  "verification_scope": "full1280historicalX regression plus newmatchedcontrol with1152Y andsignedpartners verified; sixfocusedtests andcoldall-field/byte-artifactreproduction pass; unchangedscatteringread fromauthenticatedinput; all193prior scientificfiles andPDF retained"
 }

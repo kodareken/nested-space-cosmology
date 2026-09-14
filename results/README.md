@@ -1,5 +1,12 @@
 # Compact result archive
 
+H1: [full compact matched restart](development/nsc-compact-matched-restart.json)
+records both explicit start conventions and their immutable payloads. All
+1,280 historical X controls pass; the new matched checkpoint includes 1,152
+angular partners and signed-frequency data. See the [version policy](../docs/nsc-compact-matched-restart.md).
+Verifier: `python3 scripts/derive_nsc_compact_matched_restart.py --check`.
+H2/global PG covariance remains OPEN; PDF v0.25.0 is unchanged.
+
 C1b-H: [paired horizon map and normalization gate](development/nsc-horizon-paired-pg-map.json)
 contains magnetic/gauge normalization, derived angular Z, and matched modal
 X/Y controls for all 32 groups. Its [note](../docs/nsc-horizon-paired-pg-map.md)
@@ -86,7 +93,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains forty-five records.
+The separate post-preprint development snapshot now contains forty-six records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

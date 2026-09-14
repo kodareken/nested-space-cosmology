@@ -32,11 +32,11 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
-**Latest development:** the [paired horizon calculation](docs/nsc-horizon-paired-pg-map.md)
-fixes the angular boundary cross block and isolates a finite-collar normalization
-error in the historical compact seed. The corrected modal construction and its
-remaining OPEN gate are recorded in [the current result](docs/current-result.md).
-The working PDF remains at v0.25.0.
+**Latest development:** the [versioned compact restart](docs/nsc-compact-matched-restart.md)
+reproduces the historical seed and supplies a separate matched checkpoint on the
+full compact frequency grids. H1 passes; [the current result](docs/current-result.md)
+keeps global PG state normalization as the next open gate. The working PDF
+remains at v0.25.0.
 
 ## From a note to a universe
 
@@ -387,7 +387,7 @@ multiplicity or from LLL. Full C1b remains open; PDF v0.25.0 is unchanged.
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 45-record development update](docs/development-update-2026-09-10.md)
+3. [The 46-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

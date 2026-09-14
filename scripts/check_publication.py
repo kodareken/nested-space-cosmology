@@ -104,6 +104,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-pg-lll-preparation.md",
     "docs/nsc-massive-signed-preparation.md",
     "docs/nsc-horizon-paired-pg-map.md",
+    "docs/nsc-compact-matched-restart.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {
@@ -146,16 +147,22 @@ def check_development_snapshot() -> set[str]:
         if record["comparison"] != value["comparison"]:
             raise ValueError(f"development comparison policy changed: {output}")
         validate_authenticated_inputs(ROOT, value)
-        payload = value.get("payload")
-        if isinstance(payload, dict) and payload.get("path"):
-            relative = payload["path"]
-            if (relative in payloads or relative not in sources
-                    or not relative.startswith("results/development/artifacts/")):
-                raise ValueError("invalid development payload declaration")
-            target = ROOT / relative
-            if target.stat().st_size != payload.get("bytes") or sha256(target) != payload.get("sha256"):
-                raise ValueError(f"development payload mismatch: {relative}")
-            payloads.add(relative)
+        declared_payloads = [value.get("payload")]
+        if value.get("schema") == "NSC-COMPACT-MATCHED-RESTART-v1":
+            for key in ("scattering_payload", "seed_generations_payload"):
+                if not isinstance(value.get(key), dict) or not value[key].get("path"):
+                    raise ValueError(f"missing versioned restart payload: {key}")
+                declared_payloads.append(value[key])
+        for payload in declared_payloads:
+            if isinstance(payload, dict) and payload.get("path"):
+                relative = payload["path"]
+                if (relative in payloads or relative not in sources
+                        or not relative.startswith("results/development/artifacts/")):
+                    raise ValueError("invalid development payload declaration")
+                target = ROOT / relative
+                if target.stat().st_size != payload.get("bytes") or sha256(target) != payload.get("sha256"):
+                    raise ValueError(f"development payload mismatch: {relative}")
+                payloads.add(relative)
         outputs.add(output)
     if outputs | payloads != {path for path in sources if path.startswith("results/")}:
         raise ValueError("development record index differs from imported results")
