@@ -103,6 +103,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-transmitting-ctp-resolvent.md",
     "docs/nsc-pg-lll-preparation.md",
     "docs/nsc-massive-signed-preparation.md",
+    "docs/nsc-horizon-paired-pg-map.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

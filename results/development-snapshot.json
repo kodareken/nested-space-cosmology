@@ -616,11 +616,25 @@
       },
       "generator": "scripts/derive_nsc_massive_signed_preparation.py",
       "output": "results/development/nsc-massive-signed-preparation.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_horizon_paired_pg_map.py",
+      "output": "results/development/nsc-horizon-paired-pg-map.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "0f65890443a3cc51e8b5fb5489ee0aecf14909f5",
+  "source_commit": "da53747301fe2c43a645bb16044b79fd323937cb",
   "source_files": [
     {
       "bytes": 3154,
@@ -1551,10 +1565,45 @@
       "bytes": 1710,
       "path": "tests/test_nsc_massive_signed_preparation.py",
       "sha256": "dce217ba6fa7a927eb573a4cf5d0c853edb6f5cca21853923f21d81959349acd"
+    },
+    {
+      "bytes": 7069,
+      "path": "docs/nsc-horizon-paired-pg-map.md",
+      "sha256": "739fdd72ea2d5deffc7140b5e34359f90af1dd76cd712ff128474c76a1c0ec36"
+    },
+    {
+      "bytes": 229649,
+      "path": "results/development/nsc-horizon-paired-pg-map.json",
+      "sha256": "452d8d7c24e06b01d24ec337aa131154973e46a29c6b230acd4e42c8e6f95886"
+    },
+    {
+      "bytes": 14114,
+      "path": "scripts/derive_nsc_horizon_paired_pg_map.py",
+      "sha256": "a2395001314782745592e12871082329eb0a43e03a9eadf5d33523e0ab7c4875"
+    },
+    {
+      "bytes": 21507,
+      "path": "src/recursive_horizons/nsc_monopole_paired_basis.py",
+      "sha256": "13776a73072d44a4999c941bba0047e95a2f70a963a6bd9f4b644befe7b88353"
+    },
+    {
+      "bytes": 10314,
+      "path": "src/recursive_horizons/nsc_paired_horizon_preparation.py",
+      "sha256": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335"
+    },
+    {
+      "bytes": 1091,
+      "path": "tests/test_nsc_monopole_paired_basis.py",
+      "sha256": "4ba19cfab46e5c9720d8c742e067ba423c3c6acde647fbfd28401d395902776e"
+    },
+    {
+      "bytes": 1162,
+      "path": "tests/test_nsc_paired_horizon_preparation.py",
+      "sha256": "d9ce5c32cd43b3c44e96411c46fea27585ae316e7e5c37653df439b684f49e1d"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 44 post-preprint records plus seven active numerical payloads; massive signed-map/data-sufficiency gate added after unchanged PDF v0.25.0",
-  "verification_scope": "new exact massive signed-spin map, 32-group residuals and 1152 mixed-group seed information controls verified; six focused tests and all-field reproduction pass; full C1b OPEN; all 181 prior scientific files and PDF retained without replay"
+  "status": "development snapshot; 45 post-preprint records plus seven numerical payloads; paired horizon normalization gate added after unchanged PDF v0.25.0",
+  "verification_scope": "new magnetic angular basis, signed modal horizon maps and finite compact collar discrepancy verified at one stored frequency per group; four focused tests and all-field reproduction pass; full C1b-H OPEN; all 186 prior scientific files and PDF retained without old stress/reference replay"
 }

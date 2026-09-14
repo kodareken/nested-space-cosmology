@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`0f65890443a3cc51e8b5fb5489ee0aecf14909f5`. It contains 48 derivation
-notes, 44 result records, 38 generators, 33 implementation
-modules, seven active binary artifacts and sixteen focused test files. The 186 scientific files are imported
+`da53747301fe2c43a645bb16044b79fd323937cb`. It contains 49 derivation
+notes, 45 result records, 39 generators, 35 implementation
+modules, seven active binary artifacts and eighteen focused test files. The 193 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -73,6 +73,7 @@ statement:
 | Retarded CTP memory and harmonic metric-transfer vertices with explicit preparation gap | [CTP cross-resolvent connection](nsc-transmitting-ctp-resolvent.md) |
 | Physical common-PG-time LLL state with horizon-partner and packet/bulk correlations | [LLL PG Cauchy preparation](nsc-pg-lll-preparation.md) |
 | Exact massive signed-spin maps and mixed-group paired-state information certificate | [Massive preparation gate](nsc-massive-signed-preparation.md) |
+| Magnetic horizon pairing, computed modal X/Y and finite compact collar correction | [Paired horizon map](nsc-horizon-paired-pg-map.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -139,7 +140,7 @@ nonexistence result remains a passing regression.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the forty-four later records are indexed separately.
+unchanged; the forty-five later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
