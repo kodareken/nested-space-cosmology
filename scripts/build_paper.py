@@ -72,6 +72,8 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         "results/development/nsc-transmitting-dirac-domain.json",
         "results/development/nsc-hamiltonian-trace-representation.json",
         "results/development/nsc-common-time-bulk-split.json",
+        "results/development/nsc-transmitting-cross-resolvent.json",
+        "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz",
         "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
         "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
     ):

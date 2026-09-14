@@ -1,5 +1,12 @@
 # Compact result archive
 
+Z2a and static Z2b: [transmitting cross-resolvent](development/nsc-transmitting-cross-resolvent.json)
+passes the domain-correct cross-response and four static metric-kernel checks
+on all 33 retained channels. Its [derivation](../docs/nsc-transmitting-cross-resolvent.md)
+keeps the energy-dependent inverse response distinct from an instantaneous
+Hamiltonian block. The time-history CTP bridge and Z4 remain OPEN.
+Verifier: `python3 scripts/derive_nsc_transmitting_resolvent.py --check`.
+
 Z1: [common-time bulk spaces and projectors](development/nsc-common-time-bulk-split.json)
 pass the independent CAR/rank gate. Z2 records the sharp-projector domain
 obstruction. The preceding [trace-representation FAIL](development/nsc-hamiltonian-trace-representation.json)
@@ -51,7 +58,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains forty records.
+The separate post-preprint development snapshot now contains forty-one records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

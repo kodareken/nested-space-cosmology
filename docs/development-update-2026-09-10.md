@@ -1,9 +1,9 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`ed15c62088bb401345deef6a6e51e6c2e4e4b574`. It contains 44 derivation
-notes, 40 result records, 34 generators, 29 implementation
-modules, five active binary artifacts and twelve focused test files. The 164 scientific files are imported
+`0248eebb5f91ebcbafd044e3d3df373924cfdfd3`. It contains 45 derivation
+notes, 41 result records, 35 generators, 30 implementation
+modules, six active binary artifacts and thirteen focused test files. The 170 scientific files are imported
 byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
@@ -69,6 +69,7 @@ statement:
 | Actual spacelike seed-seam domain and map for all retained Dirac channels | [Transmitting Dirac domain](nsc-transmitting-dirac-domain.md) |
 | Scoped rejection of duplicated seam traces as independent Hamiltonian rooms | [Trace-representation certificate](nsc-hamiltonian-trace-representation.md) |
 | Independent common-time bulk projectors and transmitted operator-domain check | [Common-time bulk split](nsc-common-time-bulk-split.md) |
+| Domain-correct causal cross response, inverse-response generator and static metric kernels | [Transmitting cross-resolvent](nsc-transmitting-cross-resolvent.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.
@@ -135,7 +136,7 @@ nonexistence result remains a passing regression.
 records every imported path, its SHA-256 and byte count, the full source
 commit, and each record's generator and original comparison policy.
 The original 100-record [release manifest](../results/manifest.json) is
-unchanged; the forty later records are indexed separately.
+unchanged; the forty-one later records are indexed separately.
 
 `make check` authenticates both collections, the stored dependencies,
 publication paths and links. This update reuses the completed scientific
