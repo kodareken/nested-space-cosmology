@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 21773,
+      "bytes": 21757,
       "path": "README.md",
-      "sha256": "9343edc6778c09e56159c0d9ea2f03a8910207800eb69eb8decc90a84d2e2631"
+      "sha256": "ccd8f6e13de15f3837feab47d6c7bef2bbc8af84f5ca84f318afb28ac3c1699c"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 29617,
+      "bytes": 31388,
       "path": "docs/current-result.md",
-      "sha256": "820b94d988da531d8760690afb98f3f4f83b2497d6f8f595dfcb5a68790fa914"
+      "sha256": "f9422773f79d5be8c938246da3235a0b5bb7fb5a2889a26d2923d0f41d49972c"
     },
     {
-      "bytes": 12626,
+      "bytes": 12774,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "ad3552861c917414a525c4a27a72f0e0abaa58e6e2f6db9a75e81098361dc078"
+      "sha256": "d4a871bf6e9190c014dd04d6119364bb8ee77a706e95e8ca87723fcf62198d9d"
     },
     {
       "bytes": 3154,
@@ -209,6 +209,11 @@
       "bytes": 9160,
       "path": "docs/nsc-compact-mass-map.md",
       "sha256": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073"
+    },
+    {
+      "bytes": 5434,
+      "path": "docs/nsc-compact-matched-restart.md",
+      "sha256": "2db0f77875f652faa9311ed1fafe35abbbd8d2478f5e1d344e7bdf8bb4d29d4d"
     },
     {
       "bytes": 8855,
@@ -621,14 +626,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 13659,
+      "bytes": 14139,
       "path": "results/README.md",
-      "sha256": "15c2b1c446f3b8f7ace17cd3de4e940acff2ffbb4bd1f09457a08e54178ac730"
+      "sha256": "8567fcc13b50b4e71c276ee0617c6824e55094a9246e22b8ee036aa221d4ad2a"
     },
     {
-      "bytes": 54860,
+      "bytes": 56877,
       "path": "results/development-snapshot.json",
-      "sha256": "64fe7e1c251a900eb18b9694362e7001b5765b63ee34f66d243a08af1c6d78ab"
+      "sha256": "bbcc32ba5dcdb047248c146a9b1f5ee58c9c700b33cdc7ab862596ae21dcfd2d"
     },
     {
       "bytes": 3283,
@@ -644,6 +649,16 @@
       "bytes": 87723,
       "path": "results/development/angular-stress.json",
       "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6"
+    },
+    {
+      "bytes": 236258,
+      "path": "results/development/artifacts/nsc-compact-restart-scattering.f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9.npz",
+      "sha256": "f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9"
+    },
+    {
+      "bytes": 2573460,
+      "path": "results/development/artifacts/nsc-compact-seed-generations.77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08.npz",
+      "sha256": "77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08"
     },
     {
       "bytes": 24872,
@@ -789,6 +804,11 @@
       "bytes": 26042,
       "path": "results/development/nsc-common-time-bulk-split.json",
       "sha256": "3c3236e5d0e56d2d1eaed1497501e346969599bd3dce0792132e3539bcac6da7"
+    },
+    {
+      "bytes": 19818,
+      "path": "results/development/nsc-compact-matched-restart.json",
+      "sha256": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf"
     },
     {
       "bytes": 5536,
@@ -1641,9 +1661,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 17620,
+      "bytes": 18118,
       "path": "scripts/check_publication.py",
-      "sha256": "6623fc41c0a03f27723194fe1f6fcac15025e6172367230f9141de6b37095267"
+      "sha256": "abc46b7f92fe81683bd6b080699f1676fa37ccbd0e0d7a8a069f376166dfb0bf"
     },
     {
       "bytes": 12921,
@@ -1694,6 +1714,11 @@
       "bytes": 11139,
       "path": "scripts/derive_nsc_compact_ctp_completion.py",
       "sha256": "827e5a68794d1b092c4b45f92494b17150bce06905749e33583351ac014cd606"
+    },
+    {
+      "bytes": 12224,
+      "path": "scripts/derive_nsc_compact_matched_restart.py",
+      "sha256": "f85163f740ba08fe52f4a21542ed913e179076ef6a45b78377ee3014d4171c2d"
     },
     {
       "bytes": 9873,
@@ -2226,9 +2251,19 @@
       "sha256": "e53b5b937539bd78e7d4946a86cd0e321633231ab0aff6d10e2edb837ca51bd7"
     },
     {
+      "bytes": 5535,
+      "path": "src/recursive_horizons/nsc_compact_matched_restart.py",
+      "sha256": "098735ba10f1daeb5c659057dfa6427922f7e904df63f327ff8c06a2617eb2b3"
+    },
+    {
       "bytes": 6318,
       "path": "src/recursive_horizons/nsc_compact_matching.py",
       "sha256": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378"
+    },
+    {
+      "bytes": 5083,
+      "path": "src/recursive_horizons/nsc_compact_restart_scattering.py",
+      "sha256": "9d3869d0e7444f55182138d0b0c52cedc06b3afee8e4cdec8ce499ab7bdf7b4f"
     },
     {
       "bytes": 4075,
@@ -2549,6 +2584,11 @@
       "bytes": 1574,
       "path": "tests/test_nsc_compact_ctp_neck.py",
       "sha256": "56a677527de270d065fa93910bbad12a2b054e4460c0aa46e666026c3909ed0d"
+    },
+    {
+      "bytes": 1937,
+      "path": "tests/test_nsc_compact_matched_restart.py",
+      "sha256": "9a04d0f543533bc87cc431fd338995cbdaeba6da0f3d86a67df168dde05d68de"
     },
     {
       "bytes": 3684,
