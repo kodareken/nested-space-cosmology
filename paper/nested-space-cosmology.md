@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.24.0 · transmitting cross response and static metric kernels, 14 September 2026<br>
+Version 0.25.0 · causal memory and frequency-transfer vertices, 14 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -65,7 +65,7 @@ weighted interface components with separate residuals. The full transmitting-act
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and forty-one post-preprint
+100 preprint records and forty-two post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -1024,6 +1024,28 @@ $$
 
 The independent weak-resolvent calculation agrees below $6.56\times10^{-13}$; finite differences give $1.01\times10^{-8}$ against tolerance $3\times10^{-8}$. The [derivation](../docs/nsc-transmitting-cross-resolvent.md) and [numerical fields](../results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz) preserve the normalization and uncompressed response data. These static spatial derivatives require time/spectral reconstruction, physical state/memory data and the endpoint-coordinate pullback before entering the CTP branch-jet interface. The remaining boundary action, physical Weyl mismatch and extended stationarity stay OPEN; no metric trajectory is selected.
 
+**Causal memory and time-dependent metric transfer.** The same response now enters the retarded sector of the Gaussian CTP construction with its canonical sign convention,
+
+$$
+G_J^R(z)=-\mathcal R(z),\qquad D_J^R(z)=-\mathcal K(z).
+$$
+
+The inverse kernel retains the memory of the complementary bulk. It is not inserted as a full unitary in $Q=I-C_0+C_0V_-^\dagger V_+$. State-dependent contour components additionally require the full PG covariance and its packet/complement preparation correlations; the existing Gaussian boundary owner retains both cross terms and the complementary determinant.
+
+A compact metric source with harmonic time dependence now gives a computed frequency-transfer vertex. Using the existing incoming energy $z_i=0.2+0.25i$ and $z_o=0.6+0.25i$ fixes a real probe frequency difference $\omega=0.4$, without selecting a metric duration or history:
+
+$$
+\delta\mathcal R_A(z_o,z_i)=-J^\dagger R(z_o)W_A R(z_i)J,
+$$
+
+$$
+\delta D_{J,A}^R(z_o,z_i)=\mathcal K(z_o)\delta\mathcal R_A(z_o,z_i)\mathcal K(z_i).
+$$
+
+The four $W_A$ are the existing compact spatial metric vertices. The retarded driven equation and independent weak-resolvent integral agree to $5.57\times10^{-13}$ across all 33 channels; adjoint frequency exchange agrees to $6.19\times10^{-13}$ and inverse-memory Dyson reconstruction to $5.14\times10^{-16}$, against tolerance $3\times10^{-11}$. The zero-transfer limit recovers the recorded static jets. The reverse retarded response and its temporal metric variation remain zero in the trapped probe cell ([CTP memory record](../results/development/nsc-transmitting-ctp-resolvent.json), [authenticated fields](../results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz)).
+
+**Retarded-memory C1 component PASS; full C1 and C2--C4 OPEN.** The [CTP binding note](../docs/nsc-transmitting-ctp-resolvent.md) identifies the physical preparation on a common PG-time slice, the full unitary history and the KS endpoint-coordinate pullback still needed to obtain complete branch jets. The old frequency covariance is not assigned to spatial packets. The remaining boundary derivative and physical two-sided Weyl mismatch stay unevaluated, with the eight stored coefficients preserved. No stress or metric evolution is attributed to this temporal-response calculation.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -1075,7 +1097,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The forty-one
+finite Casimir, and link responses remain. The forty-two
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1093,8 +1115,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate forty-one-record development snapshot, imported
-through laboratory commit $0248eeb$, carries the common-source, constraint
+42 scoped follow-ups. A separate forty-two-record development snapshot, imported
+through laboratory commit $076e29c$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

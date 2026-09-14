@@ -1,6 +1,28 @@
 # What the calculations show
 
-**Latest result — domain-correct transmitting response: Z2a PASS.** The
+**Latest result — causal memory and temporal metric transfer.** The
+[new CTP connection](nsc-transmitting-ctp-resolvent.md) places the computed
+packet response in the convention $G_J^R=-\mathcal R$, $D_J^R=-\mathcal K$.
+It preserves the energy-dependent memory and calculates the four metric
+vertices between distinct frequencies, using the same transmitted Dirac
+operator and archived incoming fields.
+
+All 33 channels pass: driven-versus-weak-form residual `5.57e-13`, adjoint
+frequency-exchange residual `6.19e-13`, and inverse-memory Dyson residual
+`5.14e-16` (tolerance `3e-11`). The zero-transfer limit reconstructs the
+locked static derivatives; reverse retarded response and its metric transfer
+remain zero in the trapped probe cell. The harmonic source is a linear-response
+probe, not a selected metric history or physical frequency prediction.
+
+**Retarded-memory C1 component PASS; full C1 and C2–C4 OPEN.** The
+[record](../results/development/nsc-transmitting-ctp-resolvent.json) retains the
+exact missing preparation: the physical covariance on a common PG-time slice,
+including its packet/complement cross correlations. That state, full history
+reconstruction and the KS endpoint pullback are required before the memory
+vertices become `EndpointBranchJets`. The existing consumers leave the
+remaining boundary derivative and physical Weyl mismatch unevaluated.
+
+**Preceding result — domain-correct transmitting response: Z2a PASS.** The
 [cross-resolvent calculation](nsc-transmitting-cross-resolvent.md) evaluates
 all 33 retained channels on the inherited whole-line Dirac domain. Continuous
 seam data cancel the individual sharp-projector delta terms. Independent
@@ -103,7 +125,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `0248eeb`, now contains forty-one post-preprint records.
+through laboratory commit `076e29c`, now contains forty-two post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -465,7 +487,7 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains forty-one.
+[the later snapshot](../results/development-snapshot.json) contains forty-two.
 [The development index](development-update-2026-09-10.md) links their
 derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.

@@ -1,5 +1,12 @@
 # Compact result archive
 
+C1 retarded memory: [transmitting CTP resolvent](development/nsc-transmitting-ctp-resolvent.json)
+records four temporal metric-transfer vertices on all 33 channels. The
+[derivation](../docs/nsc-transmitting-ctp-resolvent.md) binds the response to
+CTP memory and preserves the missing state/preparation/endpoint inputs.
+Full C1 and C2–C4 remain OPEN.
+Verifier: `python3 scripts/derive_nsc_transmitting_ctp_resolvent.py --check`.
+
 Z2a and static Z2b: [transmitting cross-resolvent](development/nsc-transmitting-cross-resolvent.json)
 passes the domain-correct cross-response and four static metric-kernel checks
 on all 33 retained channels. Its [derivation](../docs/nsc-transmitting-cross-resolvent.md)
@@ -58,7 +65,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains forty-one records.
+The separate post-preprint development snapshot now contains forty-two records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

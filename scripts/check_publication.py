@@ -100,6 +100,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-hamiltonian-trace-representation.md",
     "docs/nsc-common-time-bulk-split.md",
     "docs/nsc-transmitting-cross-resolvent.md",
+    "docs/nsc-transmitting-ctp-resolvent.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

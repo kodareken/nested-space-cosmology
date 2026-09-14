@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 19951,
+      "bytes": 20470,
       "path": "README.md",
-      "sha256": "3492292438a7e095acafb48d63b7102c1fe271c5cc5947b1089d5f5471cfcb38"
+      "sha256": "88f04002473f4f4f84cc1628074f8edae5db61fa36e62a7ef1986e3984bb1409"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 23028,
+      "bytes": 24410,
       "path": "docs/current-result.md",
-      "sha256": "6f733127286fa2fbc9064b109daadf67be57c07dcd447cf027ae94ebaff2f53b"
+      "sha256": "a5beff9271ebb88a715bbdeb2efb2dd2e67f29edec8e8cfaf01ca3a03e697d94"
     },
     {
-      "bytes": 12025,
+      "bytes": 12189,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "0a5b708bb2660fcfb43e8a0ef09c7a2283f9846fa303053ed08b343f7d269ca9"
+      "sha256": "88dcd628e0005664522361e36e20dc798d9b13f5f2886824329b3a29772d6875"
     },
     {
       "bytes": 3154,
@@ -506,6 +506,11 @@
       "sha256": "a4f8df55c341e6502c45dc32e422f4378f6e5eff2926bdadd8388b57445150a3"
     },
     {
+      "bytes": 6857,
+      "path": "docs/nsc-transmitting-ctp-resolvent.md",
+      "sha256": "af9333484ae7fe43074c59bcc1c694b7dcd4af091285aa0294f612839a5832c3"
+    },
+    {
       "bytes": 3095,
       "path": "docs/nsc-transmitting-ctp-variation.md",
       "sha256": "be1ffb026d35c8e7c68219644031bc1b6af346602f45d70526b5b5ef7229fe5a"
@@ -566,24 +571,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 6801,
+      "bytes": 7213,
       "path": "paper/build-manifest.json",
-      "sha256": "bea70aa6fc25084f833698ac11a8441304b6f5a5c22c2eb129f771bb8f6b60df"
+      "sha256": "c74a5f55b4bb7a9908afeb0c6a9a2f65b8688a17d8f2a428b030418c6bb001f6"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "0d6cd79705fd74bf4a2e10e5bcc995adcf9d77adc3294f805494d5dd5b0ddc93"
+      "sha256": "9ec8fda8b49e4a66e794de21c87c2c63e75e543b71bc7e439da50f56e2efe0d2"
     },
     {
-      "bytes": 133774,
+      "bytes": 136137,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "aa322e28e11a2222baa3cd597714c29af963e37fb972f72f09374d53c2e30053"
+      "sha256": "c0947d694f3e7b3d60e127a9f51aa8b12c19912c06f1f2945c7b017e4288966a"
     },
     {
-      "bytes": 1990673,
+      "bytes": 2030147,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "2afd6944dd10fe3821fcabe33000bc07abaadcf4ba5d6a7fc50a377994795d65"
+      "sha256": "68d57f99c3ffb9c2ead60ff0530542400fbbc99ea3e426305f29b900c2569376"
     },
     {
       "bytes": 1144,
@@ -601,14 +606,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 11879,
+      "bytes": 12310,
       "path": "results/README.md",
-      "sha256": "e74a4289ce14b5b89e4352e5ac98ae97e694ff4d9def25b5cbb02de137f9c93e"
+      "sha256": "b71141ad23dab9b2977f65bc9b938be885c2a6eb74c6c78b3c5dae5716eb9f50"
     },
     {
-      "bytes": 48861,
+      "bytes": 50499,
       "path": "results/development-snapshot.json",
-      "sha256": "2a3bdb0cbc3fe6fe2771fd0cedcdba9f96a9d00861ca9d984e34d3ac0f66e4a4"
+      "sha256": "eb695d162c47814610fa751e1c191d18f7c7ce4673851c41702260ece631a121"
     },
     {
       "bytes": 3283,
@@ -649,6 +654,11 @@
       "bytes": 3352320,
       "path": "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz",
       "sha256": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5"
+    },
+    {
+      "bytes": 3334536,
+      "path": "results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz",
+      "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2"
     },
     {
       "bytes": 543340,
@@ -854,6 +864,11 @@
       "bytes": 88613,
       "path": "results/development/nsc-transmitting-cross-resolvent.json",
       "sha256": "da4ab7e89140914f52b30e8d347c001c4c008202a6e8d9dfcd6214e82e03cd43"
+    },
+    {
+      "bytes": 39535,
+      "path": "results/development/nsc-transmitting-ctp-resolvent.json",
+      "sha256": "33d91d2c845f865811007c7cc71d731f3458c274fd0db8a1de5c89349434215d"
     },
     {
       "bytes": 25686,
@@ -1356,9 +1371,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 56424,
+      "bytes": 56632,
       "path": "scripts/build_paper.py",
-      "sha256": "6650c6e103a32888864689ac38ce71e2945404e34733702398ddfc3410331def"
+      "sha256": "a89da3af1159832e7609c3d52787dfff179885dfd449269b8d614425a8608452"
     },
     {
       "bytes": 3480,
@@ -1596,9 +1611,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 17449,
+      "bytes": 17495,
       "path": "scripts/check_publication.py",
-      "sha256": "62f0ae6a26e1c038528a65d49bd6d09186c6ccfc6d8e317894d0f52852556faa"
+      "sha256": "c6990f33b641da90dfe5b1f3eba65ce346e93197310e342431fac3580af8634e"
     },
     {
       "bytes": 12921,
@@ -1744,6 +1759,11 @@
       "bytes": 11229,
       "path": "scripts/derive_nsc_transmitting_boundary_binding.py",
       "sha256": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019"
+    },
+    {
+      "bytes": 12560,
+      "path": "scripts/derive_nsc_transmitting_ctp_resolvent.py",
+      "sha256": "c26225b558ce0ba20161cbd337ff0a8b8a5e00394a90a4dce1d20f9472ba277f"
     },
     {
       "bytes": 13134,
@@ -2361,6 +2381,11 @@
       "sha256": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d"
     },
     {
+      "bytes": 7821,
+      "path": "src/recursive_horizons/nsc_transmitting_ctp_resolvent.py",
+      "sha256": "076f703d65ca385c3de186d262c6391c2b9a0e456be74650e2887efedf940664"
+    },
+    {
       "bytes": 6219,
       "path": "src/recursive_horizons/nsc_transmitting_ctp_variation.py",
       "sha256": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602"
@@ -2546,6 +2571,11 @@
       "sha256": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
     },
     {
+      "bytes": 1916,
+      "path": "tests/test_nsc_transmitting_ctp_resolvent.py",
+      "sha256": "d5eb0015f4499d982b958da44ca67ebdc9d1e5bbb790cc10572c6fd6ec39c51b"
+    },
+    {
       "bytes": 2731,
       "path": "tests/test_nsc_transmitting_ctp_variation.py",
       "sha256": "14ba673ca67f470ed5b7d43fc3434eee47646ad96deeb0284992c095fd2bc67e"
@@ -2598,7 +2628,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.24.0",
+  "public_version": "0.25.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,

@@ -1,10 +1,10 @@
 {
-  "bytes": 1990673,
+  "bytes": 2030147,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "0d6cd79705fd74bf4a2e10e5bcc995adcf9d77adc3294f805494d5dd5b0ddc93",
+  "metadata_sha256": "9ec8fda8b49e4a66e794de21c87c2c63e75e543b71bc7e439da50f56e2efe0d2",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 42,
-  "pdf_sha256": "2afd6944dd10fe3821fcabe33000bc07abaadcf4ba5d6a7fc50a377994795d65",
+  "pages": 43,
+  "pdf_sha256": "68d57f99c3ffb9c2ead60ff0530542400fbbc99ea3e426305f29b900c2569376",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -14,6 +14,10 @@
     {
       "path": "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz",
       "sha256": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz",
+      "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2"
     },
     {
       "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
@@ -108,6 +112,10 @@
       "sha256": "da4ab7e89140914f52b30e8d347c001c4c008202a6e8d9dfcd6214e82e03cd43"
     },
     {
+      "path": "results/development/nsc-transmitting-ctp-resolvent.json",
+      "sha256": "33d91d2c845f865811007c7cc71d731f3458c274fd0db8a1de5c89349434215d"
+    },
+    {
       "path": "results/development/nsc-transmitting-ctp-variation.json",
       "sha256": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3"
     },
@@ -153,10 +161,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "6650c6e103a32888864689ac38ce71e2945404e34733702398ddfc3410331def"
+      "sha256": "a89da3af1159832e7609c3d52787dfff179885dfd449269b8d614425a8608452"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "aa322e28e11a2222baa3cd597714c29af963e37fb972f72f09374d53c2e30053",
-  "version": "0.24.0"
+  "source_sha256": "c0947d694f3e7b3d60e127a9f51aa8b12c19912c06f1f2945c7b017e4288966a",
+  "version": "0.25.0"
 }

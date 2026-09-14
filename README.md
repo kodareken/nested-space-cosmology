@@ -355,11 +355,19 @@ calculation below `6.6e-13`. In the trapped probe cell, causal transmission is
 parent-to-child. The real-time state/history conversion and remaining boundary
 variation are the next integration step.
 
+The [CTP memory connection](docs/nsc-transmitting-ctp-resolvent.md) now
+calculates how a time-dependent metric perturbation transfers the response
+between frequencies. All 33 channels preserve causal direction, and two
+independent calculations agree below `5.57e-13`. The energy-dependent kernel
+enters the retarded CTP sector with its memory intact. Full state-dependent
+CTP still needs the physical PG preparation and history/endpoint coupling;
+no stress or metric trajectory is assigned by these response vertices.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 41-record development update](docs/development-update-2026-09-10.md)
+3. [The 42-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)
