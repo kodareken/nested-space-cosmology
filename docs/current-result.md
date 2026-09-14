@@ -1,6 +1,42 @@
 # What the calculations show
 
-**Latest development — massive signed-spin map and data-sufficiency gate.**
+**Latest development — paired horizon construction and a compact normalization correction.**
+The [new map](nsc-horizon-paired-pg-map.md) normalizes the magnetic angular
+spinors, their gauge transition and their signed pairing. Under the already
+selected affine-horizon preparation, orthogonality and angular-sign conservation
+fix $Z(E)=0$. The horizon-partner correlations inside each angular sector remain.
+The other marginal $Y(E)$ is computed by its own massive mode propagation,
+without using stored seed covariance as input.
+
+The [record](../results/development/nsc-horizon-paired-pg-map.json) evaluates
+one existing frequency in each of the 32 massive groups. Magnetic angular
+residuals are below `1.16e-13`; matched frame and mode residuals are below
+`6.44e-12` (tolerance `3e-11`). These are finite modal maps on the trapped
+probe chart, not a completed spatial PG covariance or all-frequency state.
+
+**Finite compact collar mismatch identified.** The stored interior uses
+$\delta_q=q_{h,\mathrm{geom}}-q_{\mathrm{geom}}$, with
+$q_{\mathrm{geom}}=\pi/2+\arctan\rho$; this coordinate is distinct from the
+fixed magnetic flux. Since $|\rho-\rho_h|=r_h^2\delta_q+O(\delta_q^2)$,
+the interior Frobenius distance is $\sqrt{2\delta_q/\kappa_h}$.
+The historical compact initializer additionally divides by $r_h$.
+That factor is correct for an exterior radial offset, but not for this interior
+coordinate. The new owner uses the matched normalization and leaves the old
+files untouched.
+
+All twelve angular-only controls recover their stored X. For all twenty
+compact controls, the legacy frame recovers X while the matched frame changes
+it by norms between `3.88e-5` and `1.47e-4`. This isolates the discrepancy to
+the finite initial frame. Both conventions have the same zero-collar limit;
+no new physical interaction or fitted coefficient is introduced.
+
+**C1b-H remains OPEN.** The compact retained-state checkpoint must be reconciled
+under the matched collar convention, and the global signed PG spectral/current
+resolution must be completed before spatial covariance assembly. No corrected
+modal counterpart is silently substituted into the locked seed. C1b-M2 and
+C2–C4 remain unexecuted. **PDF v0.25.0 is unchanged.**
+
+**Preceding development — massive signed-spin map and data-sufficiency gate.**
 The [new operator map](nsc-massive-signed-preparation.md) connects the imported
 paired angular representation to T's current basis. Its coefficient identities
 are exact; the maximum numerical residual is `6.06e-15` (tolerance `3e-11`).
@@ -172,7 +208,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `0f65890`, now contains forty-four post-preprint records.
+through laboratory commit `da53747`, now contains forty-five post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -534,7 +570,7 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains forty-four.
+[the later snapshot](../results/development-snapshot.json) contains forty-five.
 [The development index](development-update-2026-09-10.md) links their
 derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.

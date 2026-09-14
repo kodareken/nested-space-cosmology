@@ -1,5 +1,12 @@
 # Compact result archive
 
+C1b-H: [paired horizon map and normalization gate](development/nsc-horizon-paired-pg-map.json)
+contains magnetic/gauge normalization, derived angular Z, and matched modal
+X/Y controls for all 32 groups. Its [note](../docs/nsc-horizon-paired-pg-map.md)
+identifies the compact interior collar discrepancy. Full spatial PG covariance
+and C1b remain OPEN; the old seed records and PDF v0.25.0 are preserved.
+Verifier: `python3 scripts/derive_nsc_horizon_paired_pg_map.py --check`.
+
 C1b-M: [massive signed preparation gate](development/nsc-massive-signed-preparation.json)
 records exact operator maps and the hard mixed-group data-sufficiency
 certificate. The [derivation](../docs/nsc-massive-signed-preparation.md)
@@ -79,7 +86,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains forty-four records.
+The separate post-preprint development snapshot now contains forty-five records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.
