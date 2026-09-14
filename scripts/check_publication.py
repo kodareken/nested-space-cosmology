@@ -97,6 +97,8 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-transmitting-boundary-remainder.md",
     "docs/nsc-physical-jet-extended-gate.md",
     "docs/nsc-transmitting-dirac-domain.md",
+    "docs/nsc-hamiltonian-trace-representation.md",
+    "docs/nsc-common-time-bulk-split.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

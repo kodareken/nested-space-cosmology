@@ -1,0 +1,123 @@
+{
+  "authenticated_T_payload": {
+    "bytes": 543340,
+    "description": "same-surface spectral trace maps and coordinate covariances; not U_L0 or a physical stress",
+    "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+    "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
+  },
+  "certificate_tolerance": 3e-11,
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "constrained_extension_certificate": {
+    "blocks": "H_pp=H_cc=(h+J)/2; B=(h-J)/2 in ideal canonical coordinates",
+    "complement_included_in_physical_spectral_trace": false,
+    "definition": "H_J=E h E^dagger+F J F^dagger; F=(I,-I)^T/sqrt(2); J arbitrary Hermitian on the redundant complement",
+    "fixed_data": "the physical single-field h and its vertices; T does not supply separately fixed independent H_parent and H_child",
+    "maximum_witness_B_difference": 10.256482060465736,
+    "maximum_witness_dB_difference_by_field": {
+      "N": 10.256482060465736,
+      "beta": 19.761739138985213,
+      "q_ADM": 5.323186563531238,
+      "r": 6.928203230275508
+    },
+    "meaning": "B and its derivatives depend on an unphysical extension unless a genuine room partition is specified",
+    "physical_h_and_vertices_unchanged": true,
+    "redundant_diagonal_blocks_also_vary_between_witnesses": true,
+    "witnesses": [
+      "J=0 gives B=h/2",
+      "J=h gives B=0"
+    ],
+    "witnesses_adopted_as_physical_links": false
+  },
+  "domain": "two complete T traces of one canonical seed coefficient vector; no bulk spatial partition is supplied",
+  "downstream": {
+    "U": "OPEN",
+    "V": "moving-surface jets not evaluated",
+    "W": "OPEN",
+    "X": "OPEN"
+  },
+  "input_hashes": {
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-transmitting-dirac-domain.json": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_dirac_endpoint_jets.py": "25438ce7c0e812bd51e20009b6d01e470d062e3349a291da4b4bf9031c75d3f0",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "missing_physical_representation": {
+    "conditions": "P_parent P_child=0; P_parent+P_child=I on the physical space; domains and common clock specified",
+    "only_then": "B=P_parent H_D[g] P_child with derivatives of H_D and the actual projectors",
+    "required": "equal-time independent bulk subspaces and embeddings P_parent,P_child of the physical Dirac Hilbert space, compatible with T's trace condition",
+    "these_projectors_are_not_Ts_two_complete_trace_maps": true
+  },
+  "operator_CAR_certificate": {
+    "embedding": "E=(I,I)^T/sqrt(2) after the authenticated T inverse",
+    "exact_spectral_norm_lower_bound": 1,
+    "independent_coefficients": 3808,
+    "literal_trace_pair_as_independent_rooms": "FAIL",
+    "measured_maximum_spectral_norm_mismatch": 1.0,
+    "measured_minimum_spectral_norm_mismatch": 1.0,
+    "not_a_no_go_for_true_orthogonal_bulk_partitions": true,
+    "occupation_covariance_positivity_checks_pass": true,
+    "physical_relation": "{a,a^dagger}=I_d; b=E a implies {b,b^dagger}=E E^dagger",
+    "positivity_does_not_change_operator_CAR": true,
+    "proposed_independent_trace_slots": 7616,
+    "rank_defect": 3808,
+    "required_by_independent_room_assembly": "I_(2d)",
+    "target_tolerance": 3e-11
+  },
+  "physical_outputs": {
+    "B": null,
+    "Gamma_rest_boundary_derivative": null,
+    "dB_dgDelta": null,
+    "full_EndpointBranchJets": null,
+    "physical_Vc": null,
+    "stationary_history": null,
+    "two_sided_Weyl_mismatch": null
+  },
+  "publication_gate": "physical U minimum not met; retain v0.22.0 PDF and curated release",
+  "residuals": {
+    "CAR_distance_from_exact_one": 0.0,
+    "artifact_canonicalization": 2.220446049250313e-16,
+    "extension_graph_invariance": 7.105427357601002e-15,
+    "extension_hermiticity": 1.7763568394002505e-15,
+    "graph_complement_orthogonality": 2.3615800235104444e-17,
+    "normalized_graph_isometry": 4.440892098500626e-16,
+    "physical_h_compression": 2.1316282072803006e-14,
+    "physical_vertex_compression": 4.263256414560601e-14
+  },
+  "schema": "NSC-HAMILTONIAN-TRACE-REPRESENTATION-v1",
+  "scope": {
+    "T_preserved": true,
+    "extended_nonexistence_claimed": false,
+    "finite_stress_fabricated": false,
+    "given_B_used": false,
+    "metric_timestep_started": false,
+    "new_physical_terms_or_copies": false,
+    "old_generators_rerun": false,
+    "optimizer_started": false,
+    "parameters_refitted": false,
+    "physical_history_selected": false
+  },
+  "source_hashes": {
+    "docs/nsc-hamiltonian-trace-representation.md": "371243e26b216a2e3d50004b9de7b61b42737114d1618251c5ec28e32e6dd95d",
+    "scripts/check_nsc_hamiltonian_trace_representation.py": "7dcbe88d53e035e0e2a305690bafa80c4c39126b7199bfdbedf05a7d8b808532"
+  },
+  "status": "U OPEN: literal independent-trace embedding rejected; constrained lifts do not determine physical B"
+}

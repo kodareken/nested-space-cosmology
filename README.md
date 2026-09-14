@@ -338,11 +338,19 @@ geometry/spin-frame map preserves the stored covariance to `5.56e-16`.
 This defines the finite same-surface transmission domain; its conversion
 into a physical Hamiltonian link and the remaining boundary action are open.
 
+The [common-time bulk split](docs/nsc-common-time-bulk-split.md) now defines
+independent parent and child spaces by their spatial support on one PG time
+slice. Projector and CAR residuals are zero; the old duplicated-trace
+representation remains rejected. The transmitted Dirac operator has a coupled
+domain, so the sharp product $P_pH_DP_c$ still needs a domain-respecting
+realization before it can be used as an ordinary link matrix. Its projected
+resolvent $P_p(H_D-z)^{-1}P_c$ is well-defined from the common operator.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 38-record development update](docs/development-update-2026-09-10.md)
+3. [The 40-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)
