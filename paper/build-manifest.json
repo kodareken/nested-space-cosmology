@@ -1,10 +1,10 @@
 {
-  "bytes": 1925384,
+  "bytes": 1958211,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "5d7974567d44ddadf91df09a4e79f89ff3a6e9e8ad8dd47ebe582962a354476f",
+  "metadata_sha256": "ba6b30d912c071c12837e3967acf922dff38d1dc124f168962d1e0b26a4a5f8b",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 40,
-  "pdf_sha256": "2558520f1ce84f97379c97dc6de1282e5cc0d9b8e8209af0bbf07a8674ddd62b",
+  "pages": 41,
+  "pdf_sha256": "f2c7c470dd1d9e5f8bc5c6c56ae98c913d04a9d70acf308d936003d46c3124f2",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -40,6 +40,10 @@
       "sha256": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a"
     },
     {
+      "path": "results/development/nsc-common-time-bulk-split.json",
+      "sha256": "3c3236e5d0e56d2d1eaed1497501e346969599bd3dce0792132e3539bcac6da7"
+    },
+    {
       "path": "results/development/nsc-constraint-complete-neck.json",
       "sha256": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe"
     },
@@ -66,6 +70,10 @@
     {
       "path": "results/development/nsc-general-ks-same-action-history.json",
       "sha256": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128"
+    },
+    {
+      "path": "results/development/nsc-hamiltonian-trace-representation.json",
+      "sha256": "dcb05abc769da5a05a6f69bdeb993a69e1adb488ae4c66a54a180d816fd564dc"
     },
     {
       "path": "results/development/nsc-joint-history-state-bvp.json",
@@ -137,10 +145,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "00e2ca1939b16c17319c263a290d82eb819b576ecc591fd84203acd954db352d"
+      "sha256": "f386652c4606ea73909cb58c368fe5fe7b6d233f7e4285afdc589c577dedc530"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "3c74573345c212e7a9ade58cd48b63277ca436238b30c784c7838daf512bce79",
-  "version": "0.22.0"
+  "source_sha256": "373d08f02d2e862065512835cb166c4b9627a9b22323252d2d7c038c84c99c46",
+  "version": "0.23.0"
 }

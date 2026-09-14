@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.22.0 · transmitting Dirac seam domain, 13 September 2026<br>
+Version 0.23.0 · independent common-time bulk spaces, 14 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -65,7 +65,7 @@ weighted interface components with separate residuals. The full transmitting-act
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and thirty-eight post-preprint
+100 preprint records and forty post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -987,6 +987,23 @@ $$
 
 The transparent domain is the graph $E_ja_j=(T_ja_j,T_ja_j)$ with opposite oriented boundary forms. All 1,904 blocks pass normalization at $6.67\times10^{-16}$, canonical covariance recovery at $5.56\times10^{-16}$ and Green-form cancellation at $1.09\times10^{-16}$ (tolerance $3\times10^{-11}$). It has 3,808 independent coefficients; the two traces are restrictions of one field, not independent room states ([domain record](../results/development/nsc-transmitting-dirac-domain.json), [trace-map artifact](../results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz)). **T passes in this finite retained domain.** Its conversion into an instantaneous Hamiltonian block $B[g,X_\Sigma]$, a selected history, and the remaining metric/normal-jet boundary action are still open. No seed tensor is propagated to $r_\star$ by this identification.
 
+**Independent common-time bulk spaces: Z1 definition PASS.** The two complete T traces cannot be used as independent room variables: their normalized graph has rank 3,808 inside 7,616 slots, with operator-CAR discrepancy exactly one ([scoped FAIL record](../results/development/nsc-hamiltonian-trace-representation.json)). The common-time definition instead uses the inherited PG $\tau$ foliation and independent spatial supports in the same field:
+
+$$
+\mathcal H_\tau=\mathcal H_p\oplus\mathcal H_c,\qquad
+P_p=\mathbf{1}_{\rho>0},\quad P_c=\mathbf{1}_{\rho<0},\qquad P_pP_c=0,\quad P_p+P_c=I.
+$$
+
+Per channel the canonical measure is $L^2(d\rho;\mathbb C^2)$ after $\chi=r\sqrt{q_{\rm PG}}\psi$. T's transparent matching is a condition on operator-domain traces at $\rho=0$ for every $\tau$, not equality of independent bulk variables. The existing whole-line Dirac closure and its bounded retained potentials are imported. The finite spatial rank witness has parent and child ranks 1,904 each, zero projector/CAR residual and T-current compatibility residual $1.78\times10^{-15}$ (tolerance $3\times10^{-11}$). No seed frequency covariance is assigned to that spatial witness ([Z1 record](../results/development/nsc-common-time-bulk-split.json)).
+
+**Z2 operator-domain gate.** For the inherited principal matrix $v=(N/q_{\rm PG})\sigma_2-\beta I$, the sharp child projector gives
+
+$$
+H(P_c\chi)-P_cH\chi=i\,v(0)\chi(0)\delta(\rho).
+$$
+
+At the locked seam the singular values of $v(0)$ are $1.1708037637$ and $3.1708037637$. A nonzero transmitting trace therefore leaves the operator domain after sharp zero extension. The ordinary block $P_pH_DP_c$ cannot be inserted into the finite canonical assembly without a domain-respecting realization; the delta coefficient is not a new source or a link matrix. Z2 remains **OPEN**. The bounded response $P_p(H_D-z)^{-1}P_c$ is already well-defined for nonreal $z$ and is not evaluated in this definition gate. Moving-surface jets are out of scope for the fixed coordinate split; the boundary remainder, physical mismatch and stationary solution remain open.
+
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 
 $$
@@ -1038,7 +1055,7 @@ $$
 
 fixes the homogeneous unlinked $V_{\rm full}=0$ and gives
 $\lambda_4=\Xi=0$ in the charged-throat map. Einstein, gauge, curvature,
-finite Casimir, and link responses remain. The thirty-eight
+finite Casimir, and link responses remain. The forty
 [development records](../results/development-snapshot.json) provide the
 boundary state, measure, ADM projections, parent mass balance, MMP embedding,
 causal source, relational normalization, scale candidate and direct source
@@ -1056,8 +1073,8 @@ The project contribution being developed is the common-action closure across the
 ## 7. Evidence and reproduction
 
 The preprint collection contains 100 records: 58 frozen historical records and
-42 scoped follow-ups. A separate thirty-eight-record development snapshot, imported
-through laboratory commit $05be98a$, carries the common-source, constraint
+42 scoped follow-ups. A separate forty-record development snapshot, imported
+through laboratory commit $ed15c62$, carries the common-source, constraint
 closure, mode-resolved state, general-KS reference/local histories and tilted
 interface gate. The 100-record manifest remains byte-preserved;
 the development index authenticates its additional source files and comparison

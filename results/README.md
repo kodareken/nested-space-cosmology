@@ -1,5 +1,11 @@
 # Compact result archive
 
+Z1: [common-time bulk spaces and projectors](development/nsc-common-time-bulk-split.json)
+pass the independent CAR/rank gate. Z2 records the sharp-projector domain
+obstruction. The preceding [trace-representation FAIL](development/nsc-hamiltonian-trace-representation.json)
+is imported as a scoped negative certificate, not as extended non-existence.
+The new definition's verifier is `python3 scripts/define_nsc_common_time_bulk_split.py --check`.
+
 Transmitting domain T: [definition and residuals](development/nsc-transmitting-dirac-domain.json).
 The same-surface retained-channel map and its oriented Dirac boundary graph
 pass. The record preserves the distinction from a Hamiltonian link and from
@@ -45,7 +51,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains thirty-eight records.
+The separate post-preprint development snapshot now contains forty records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

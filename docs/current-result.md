@@ -1,6 +1,16 @@
 # What the calculations show
 
-**Latest definition — transmitting Dirac seed-seam domain: PASS in its finite scope.**
+**Latest definition — common-time bulk split: Z1 PASS.** The
+[new bulk domain](nsc-common-time-bulk-split.md) uses the inherited PG time
+and spatial supports $\rho>0$ and $\rho<0$. Its finite witness has parent and
+child ranks 1,904 each, with zero projector/CAR residual and rank defect zero.
+The current matching to T has residual `1.78e-15` (tolerance `3e-11`).
+The [duplicated-trace FAIL](nsc-hamiltonian-trace-representation.md) is preserved.
+Z2 remains OPEN because a sharp support projection of nonzero transmitting
+trace data leaves the Dirac operator domain. No delta coefficient is promoted
+to a Hamiltonian link or source.
+
+**Preceding definition — transmitting Dirac seed-seam domain: PASS in its finite scope.**
 The [new domain](nsc-transmitting-dirac-domain.md) identifies the 33 retained
 channels with two oriented traces of one field on the stored spacelike
 surface. All 1,904 blocks are mapped using the actual coframe, quadrature
@@ -70,7 +80,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `05be98a`, now contains thirty-eight post-preprint records.
+through laboratory commit `ed15c62`, now contains forty post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -432,8 +442,8 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains thirty-eight.
-[The development index](development-update-2026-09-10.md) links all thirty-eight
+[the later snapshot](../results/development-snapshot.json) contains forty.
+[The development index](development-update-2026-09-10.md) links all forty
 new derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
 

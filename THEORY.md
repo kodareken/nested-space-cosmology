@@ -388,6 +388,7 @@ geometry defines the Dirac spectrum
 | Physical transmission must select a state | The remaining kernel freedom changes all 33 recorded channel covariances in a fixed basis; the full extended gate identifies the uncomputed transmitting selector and endpoint derivative |
 | A normalized action still has a source variation | The existing CTP determinant now has a checked first differential; its physical metric response requires the link/embedding chain rule |
 | Two sides of one boundary can carry the same field | The retained transmitting domain now maps all stored channels to two oriented traces on the spacelike seed seam, preserving their canonical covariance |
+| Independent bulk regions share one time | Spatial support projectors on a common PG slice give independent canonical parent/child variables; the transmission condition belongs to the Dirac operator domain |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
 and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)
