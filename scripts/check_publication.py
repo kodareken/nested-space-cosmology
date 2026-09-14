@@ -101,6 +101,7 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "docs/nsc-common-time-bulk-split.md",
     "docs/nsc-transmitting-cross-resolvent.md",
     "docs/nsc-transmitting-ctp-resolvent.md",
+    "docs/nsc-pg-lll-preparation.md",
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {

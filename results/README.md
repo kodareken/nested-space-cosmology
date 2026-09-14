@@ -1,5 +1,12 @@
 # Compact result archive
 
+C1b LLL: [physical PG Cauchy preparation](development/nsc-pg-lll-preparation.json)
+contains the seven-probe covariance, packet/bulk correlations and equal-time
+CTP matrices. The [derivation](../docs/nsc-pg-lll-preparation.md) prepares only
+the exact massless group; the 32 massive groups and full C1b remain OPEN.
+Verifier: `python3 scripts/derive_nsc_pg_lll_preparation.py --check`.
+The PDF remains at its v0.25.0 checkpoint.
+
 C1 retarded memory: [transmitting CTP resolvent](development/nsc-transmitting-ctp-resolvent.json)
 records four temporal metric-transfer vertices on all 33 channels. The
 [derivation](../docs/nsc-transmitting-ctp-resolvent.md) binds the response to
@@ -65,7 +72,7 @@ The categories are intentionally different:
 | `superseded_candidate` | A useful intermediate value later removed from physical consideration |
 | `current_frontier` | A preserved label in the original collection; the current research direction is maintained in the current-result document |
 
-The separate post-preprint development snapshot now contains forty-two records.
+The separate post-preprint development snapshot now contains forty-three records.
 The [charged-ctp-neck-source.json](development/charged-ctp-neck-source.json)
 record first supplies the charged angular and compact-local tensor at the
 locked scale.

@@ -363,11 +363,18 @@ enters the retarded CTP sector with its memory intact. Full state-dependent
 CTP still needs the physical PG preparation and history/endpoint coupling;
 no stress or metric trajectory is assigned by these response vertices.
 
+The [physical LLL PG preparation](docs/nsc-pg-lll-preparation.md) now adds
+state-dependent CTP data to that exact massless channel. The existing horizon
+pair and incoming occupation determine its spatial covariance and correlations
+with the eliminated bulk. Seed recovery, CAR and an independent retarded match
+pass. The 32 massive groups retain an explicit signed-mode reconstruction gap;
+full C1b remains open. This development result follows the unchanged PDF v0.25.0.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 42-record development update](docs/development-update-2026-09-10.md)
+3. [The 43-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)

@@ -588,11 +588,25 @@
       },
       "generator": "scripts/derive_nsc_transmitting_ctp_resolvent.py",
       "output": "results/development/nsc-transmitting-ctp-resolvent.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+        "exceptions": [],
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_pg_lll_preparation.py",
+      "output": "results/development/nsc-pg-lll-preparation.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "076e29c388b34e20e4e9781b770c04a8d5486855",
+  "source_commit": "1d870e185df279cb7f34ac33e38cebadefa4eda5",
   "source_files": [
     {
       "bytes": 3154,
@@ -1473,10 +1487,35 @@
       "bytes": 1916,
       "path": "tests/test_nsc_transmitting_ctp_resolvent.py",
       "sha256": "d5eb0015f4499d982b958da44ca67ebdc9d1e5bbb790cc10572c6fd6ec39c51b"
+    },
+    {
+      "bytes": 6324,
+      "path": "docs/nsc-pg-lll-preparation.md",
+      "sha256": "14d3fde7de952eb3f747d47a19495a5cac9fe66a01672f9eabc580195b8908d1"
+    },
+    {
+      "bytes": 24697,
+      "path": "results/development/nsc-pg-lll-preparation.json",
+      "sha256": "7ea9504c9f39f44f963377cb7fb4f19909fe38bc65fd48c2b2e3ed030017d782"
+    },
+    {
+      "bytes": 11831,
+      "path": "scripts/derive_nsc_pg_lll_preparation.py",
+      "sha256": "0a9e81124513051c16e5ea344245a3c82bc5b09d92c7368424415ef2184efeb1"
+    },
+    {
+      "bytes": 11063,
+      "path": "src/recursive_horizons/nsc_pg_lll_preparation.py",
+      "sha256": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a"
+    },
+    {
+      "bytes": 1725,
+      "path": "tests/test_nsc_pg_lll_preparation.py",
+      "sha256": "59e414f64dd97d8a9d9d37e0b2498fcedc32c9b7a79760f7f1d287d5444a73d3"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 42 post-preprint records plus seven active state/history/interface/jet/domain/response payloads, outside the 100-record release",
-  "verification_scope": "byte and dependency authentication; new retarded CTP memory/frequency-transfer vertices verified on 33 channels; two focused tests pass; full state-dependent C1 and C2-C4 OPEN; previous scientific certificates retained without replay"
+  "status": "development snapshot; 43 post-preprint records plus seven active numerical payloads; LLL PG preparation added after working PDF v0.25.0",
+  "verification_scope": "new physical LLL PG preparation verified with two focused tests and all-field reproduction; full 33-channel C1b OPEN; all 176 previous scientific files preserved without generator replay; unchanged v0.25.0 PDF retained"
 }
