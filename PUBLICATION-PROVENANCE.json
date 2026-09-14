@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 20470,
+      "bytes": 20943,
       "path": "README.md",
-      "sha256": "88f04002473f4f4f84cc1628074f8edae5db61fa36e62a7ef1986e3984bb1409"
+      "sha256": "3ee3048361d6fca9a4da453728380b9412ac5407d88d6972d06dcc7ebde89a83"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 24410,
+      "bytes": 25821,
       "path": "docs/current-result.md",
-      "sha256": "a5beff9271ebb88a715bbdeb2efb2dd2e67f29edec8e8cfaf01ca3a03e697d94"
+      "sha256": "1e5a245c8e2534e923d507576e80f649955cb0528dda2cc9a84ec3d8533adc68"
     },
     {
-      "bytes": 12189,
+      "bytes": 12335,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "88dcd628e0005664522361e36e20dc798d9b13f5f2886824329b3a29772d6875"
+      "sha256": "4af02939499b9728501191dd3943d96d95c8456d7668f7aace9562381e0966bf"
     },
     {
       "bytes": 3154,
@@ -381,6 +381,11 @@
       "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
     },
     {
+      "bytes": 6324,
+      "path": "docs/nsc-pg-lll-preparation.md",
+      "sha256": "14d3fde7de952eb3f747d47a19495a5cac9fe66a01672f9eabc580195b8908d1"
+    },
+    {
       "bytes": 1793,
       "path": "docs/nsc-physical-jet-extended-gate.md",
       "sha256": "45a71d5c678a1d5531dc3a5715b98c47c8088b28a61777d4bb6f61c67a4320d4"
@@ -606,14 +611,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 12310,
+      "bytes": 12740,
       "path": "results/README.md",
-      "sha256": "b71141ad23dab9b2977f65bc9b938be885c2a6eb74c6c78b3c5dae5716eb9f50"
+      "sha256": "886bde668d79d3fa9c3465848b6f5e82a6a5b015d935bb0dac9f248ed8442f89"
     },
     {
-      "bytes": 50499,
+      "bytes": 51757,
       "path": "results/development-snapshot.json",
-      "sha256": "eb695d162c47814610fa751e1c191d18f7c7ce4673851c41702260ece631a121"
+      "sha256": "3255c3b3e46becb33f8c99ca865710bbace56e91274091b2fe1631aaef66b381"
     },
     {
       "bytes": 3283,
@@ -839,6 +844,11 @@
       "bytes": 24210,
       "path": "results/development/nsc-mode-resolved-cauchy-state.json",
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+    },
+    {
+      "bytes": 24697,
+      "path": "results/development/nsc-pg-lll-preparation.json",
+      "sha256": "7ea9504c9f39f44f963377cb7fb4f19909fe38bc65fd48c2b2e3ed030017d782"
     },
     {
       "bytes": 4939,
@@ -1611,9 +1621,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 17495,
+      "bytes": 17533,
       "path": "scripts/check_publication.py",
-      "sha256": "c6990f33b641da90dfe5b1f3eba65ce346e93197310e342431fac3580af8634e"
+      "sha256": "8cc4cdaf50a4dae1ec8ca6fdbc0fd23856435097a028eaed7a7ce92fe85cf59a"
     },
     {
       "bytes": 12921,
@@ -1729,6 +1739,11 @@
       "bytes": 6564,
       "path": "scripts/derive_nsc_parent_backreaction.py",
       "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
+    },
+    {
+      "bytes": 11831,
+      "path": "scripts/derive_nsc_pg_lll_preparation.py",
+      "sha256": "0a9e81124513051c16e5ea344245a3c82bc5b09d92c7368424415ef2184efeb1"
     },
     {
       "bytes": 6311,
@@ -2311,6 +2326,11 @@
       "sha256": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a"
     },
     {
+      "bytes": 11063,
+      "path": "src/recursive_horizons/nsc_pg_lll_preparation.py",
+      "sha256": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a"
+    },
+    {
       "bytes": 2844,
       "path": "src/recursive_horizons/nsc_recursive_source_binding.py",
       "sha256": "5b6df2f90bead2e2463d58d4006a73ec234bbece43d52e547ed053199b59195f"
@@ -2529,6 +2549,11 @@
       "bytes": 917,
       "path": "tests/test_nsc_mmp_embedding.py",
       "sha256": "40e7287ac62a3b8b96abbf886dacd33cbbfcfcd8e1e5408d47f0a399eaf57d18"
+    },
+    {
+      "bytes": 1725,
+      "path": "tests/test_nsc_pg_lll_preparation.py",
+      "sha256": "59e414f64dd97d8a9d9d37e0b2498fcedc32c9b7a79760f7f1d287d5444a73d3"
     },
     {
       "bytes": 1144,

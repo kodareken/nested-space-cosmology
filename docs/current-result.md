@@ -1,6 +1,29 @@
 # What the calculations show
 
-**Latest result — causal memory and temporal metric transfer.** The
+**Latest development — physical LLL PG Cauchy preparation.** The
+[LLL preparation](nsc-pg-lll-preparation.md) uses the original horizon pair and
+inherited incoming occupation to construct a covariance on the same common
+PG-time slice as the retarded memory operator. It retains the exterior outgoing
+partner and packet/bulk correlations; stored seed blocks are comparison data,
+not copied spatial inputs.
+
+The [record](../results/development/nsc-pg-lll-preparation.json) gives seed
+reconstruction `5.56e-17`, spatial CAR-Gram residual `7.57e-15`, and quadrature
+refinement `4.34e-12` (tolerance `3e-11`). The independent characteristic
+response matches the locked LLL resolvent to `1.53e-14`. Its seven-probe
+covariance has eigenvalues between `0.11534` and `0.88466`; the packet-to-sampled-
+bulk correlation norm is `0.50269`. These are quantum correlation matrices,
+not stress or energy fractions.
+
+**LLL C1b PASS; full C1b and C2–C4 OPEN.** The 32 massive groups still require
+the signed-frequency spin/angular mode map in T's current basis, or the full
+paired four-spinor PG description and its state correlations. Degeneracy and
+copy count do not supply that map. Full transmitting `EndpointBranchJets`,
+remaining boundary variation and physical Weyl mismatch stay unevaluated.
+This development record follows the unchanged **PDF v0.25.0**; no new paper
+version or metric evolution is claimed.
+
+**Preceding result — causal memory and temporal metric transfer.** The
 [new CTP connection](nsc-transmitting-ctp-resolvent.md) places the computed
 packet response in the convention $G_J^R=-\mathcal R$, $D_J^R=-\mathcal K$.
 It preserves the energy-dependent memory and calculates the four metric
@@ -125,7 +148,7 @@ boundary, and the stress acting on its geometry through the same operator.
 General research status is stated in the [README](../README.md#research-status).
 
 The [September 10 development snapshot](development-update-2026-09-10.md),
-through laboratory commit `076e29c`, now contains forty-two post-preprint records.
+through laboratory commit `1d870e1`, now contains forty-three post-preprint records.
 Its latest gates bind the charged field, parity, AP state and normalization to
 the imported MMP throat; implement canonical CTP as the causal owner; and
 apply the recursive zero-tadpole law that fixes the homogeneous unlinked
@@ -487,7 +510,7 @@ The same solution determines the following physical links:
 ## Inspect the record
 
 The [preprint manifest](../results/manifest.json) contains 100 records;
-[the later snapshot](../results/development-snapshot.json) contains forty-two.
+[the later snapshot](../results/development-snapshot.json) contains forty-three.
 [The development index](development-update-2026-09-10.md) links their
 derivation notes. The canonical paper retains its technical appendices,
 attribution and historical scale corrections.
