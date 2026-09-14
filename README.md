@@ -370,11 +370,18 @@ with the eliminated bulk. Seed recovery, CAR and an independent retarded match
 pass. The 32 massive groups retain an explicit signed-mode reconstruction gap;
 full C1b remains open. This development result follows the unchanged PDF v0.25.0.
 
+The [massive signed-spin gate](docs/nsc-massive-signed-preparation.md) now
+identifies the correct two- or four-component operator map for the retained
+groups. Its mixed-group certificate shows why the stored seed marginal cannot
+supply the missing paired state: the horizon/parent preparation must be mapped
+onto both angular sectors. No massive spatial covariance is inferred from
+multiplicity or from LLL. Full C1b remains open; PDF v0.25.0 is unchanged.
+
 ## Explore at your own depth
 
 1. [The theory in one continuous story](THEORY.md)
 2. [The calculated equations and numbers](docs/current-result.md)
-3. [The 43-record development update](docs/development-update-2026-09-10.md)
+3. [The 44-record development update](docs/development-update-2026-09-10.md)
 4. [The 100-record preprint manifest](results/manifest.json)
 5. [How to inspect and reproduce results](docs/reproducing.md)
 6. [The working paper](paper/nested-space-cosmology.pdf)
