@@ -1,10 +1,10 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`83e2458f3c27689134dc7bfa5c363a7db33e9f86`. It contains 53 derivation notes, 48 result records,
-44 generators/verifiers, 48 implementation modules, eleven active binary artifacts
-and twenty-three focused test files. The 227 scientific files are imported byte
-for byte from that Git checkpoint.
+`149934f1cd63d94a449df9c6979e54436ba58576`. It contains 55 derivation notes and one precision-audit
+evidence file, 50 result records, 47 generators/verifiers, 50 implementation
+modules, thirteen active binary artifacts and twenty-four focused test files.
+The 240 scientific files are imported byte for byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
 This subsequent development snapshot adds the source derivations below.
@@ -77,6 +77,8 @@ statement:
 | Explicit historical and matched compact seed generations on the full retained grids | [Versioned compact restart](nsc-compact-matched-restart.md) |
 | Massive PG mode fields and whole-line Green normalization on all retained nodes | [Massive PG mode resolution](nsc-pg-massive-mode-resolution.md) |
 | Full-energy massive group13 covariance and retained probe–bulk correlations | [Massive PG covariance](nsc-pg-group13-covariance.md) |
+| All compact signed-family subgap panels | [Retained subgap inputs](nsc-pg-retained-subgap.md) |
+| High-energy inputs for the remaining 31 groups | [Retained tails](nsc-pg-retained-tail.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.

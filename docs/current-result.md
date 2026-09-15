@@ -1,5 +1,26 @@
 # What the calculations show
 
+**Retained-state integration inputs: PASS.** Two further input collections
+are now complete for the full covariance construction:
+
+- [Compact subgap panels](nsc-pg-retained-subgap.md): all **38 signed families**
+  in the 20 compact groups; largest summed quadrature estimate
+  $3.14\times10^{-11}$.
+- [High-energy tail inputs](nsc-pg-retained-tail.md): all **61 signed families**
+  for the remaining 31 groups. The largest covariance representation bound is
+  $9.73\times10^{-10}$ and the Gram bound is $1.95\times10^{-9}$.
+
+Five groups require the numerical transition at 320 instead of 160. This
+changes the numerical integration split, with the same physical operator and
+parameters. The [precision audit](nsc-pg-tail-moment-audit.json) independently
+recomputed all 29 new energy tables with 50-digit process-local precision;
+their stored numerical values were identical.
+
+**Full retained C1b remains OPEN at covariance assembly and its error checks.**
+The completed group-13 result below remains the first full-energy massive
+covariance. PDF v0.25.0 and the metric-evolution gate are unchanged.
+
+
 **Latest development — first full-energy massive PG covariance: PASS.**
 The [new calculation](nsc-pg-group13-covariance.md) completes the retained
 $m=\pi/2$, zero-angular-eigenvalue group on the common PG Cauchy surface.

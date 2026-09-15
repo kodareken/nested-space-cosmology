@@ -671,11 +671,36 @@
       },
       "generator": "scripts/derive_nsc_pg_group13_covariance.py",
       "output": "results/development/nsc-pg-group13-covariance.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure and authenticated hashes",
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13,
+        "routine": "recompose archived physical subgap matrices; no old generator rerun"
+      },
+      "generator": "scripts/check_nsc_pg_retained_subgap.py",
+      "output": "results/development/nsc-pg-retained-subgap.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "fields": "all JSON fields and NPZ array identities",
+        "routine": "authenticate the tail artifact; no old generator rerun"
+      },
+      "generator": "scripts/derive_nsc_pg_retained_tail.py",
+      "output": "results/development/nsc-pg-retained-tail.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "83e2458f3c27689134dc7bfa5c363a7db33e9f86",
+  "source_commit": "149934f1cd63d94a449df9c6979e54436ba58576",
   "source_files": [
     {
       "bytes": 3154,
@@ -1811,10 +1836,75 @@
       "bytes": 2756,
       "path": "tests/test_nsc_pg_threshold_projection.py",
       "sha256": "7bcfcd23f9b3ca97e573500e07c81ad2881544046cba39053ae6c9ac871d9e82"
+    },
+    {
+      "bytes": 3100,
+      "path": "docs/nsc-pg-retained-subgap.md",
+      "sha256": "4e0eab72119fff6b5b2a16b3267333a18d891fd0b365131fb56e4e9f2863518f"
+    },
+    {
+      "bytes": 2437,
+      "path": "docs/nsc-pg-retained-tail.md",
+      "sha256": "a87ecc8f96744f5fe9f73f938633c9149abbf86ea31b3eee94d2115cde9f9eba"
+    },
+    {
+      "bytes": 11789,
+      "path": "docs/nsc-pg-tail-moment-audit.json",
+      "sha256": "176cc1696cc4a7a36f81b89fc940921b959c451ba0d643262da358e7c4db1a2f"
+    },
+    {
+      "bytes": 186007,
+      "path": "results/development/artifacts/nsc-pg-retained-subgap.f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26.npz",
+      "sha256": "f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26"
+    },
+    {
+      "bytes": 158252,
+      "path": "results/development/artifacts/nsc-pg-retained-tail.1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006.npz",
+      "sha256": "1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006"
+    },
+    {
+      "bytes": 19381,
+      "path": "results/development/nsc-pg-retained-subgap.json",
+      "sha256": "e5c021b53e038295b4906292fe2b194be73aa55407df5dcd1252b404a520bb6d"
+    },
+    {
+      "bytes": 8870,
+      "path": "results/development/nsc-pg-retained-tail.json",
+      "sha256": "e0bda22ce60ea058b3e8a0e963f5ef97ada95421f88507f4a9c027692a29da52"
+    },
+    {
+      "bytes": 5829,
+      "path": "scripts/check_nsc_pg_retained_subgap.py",
+      "sha256": "48583a4ec93b40142adaa78a318a6d958e1bfb3c06fff9fc88925e80de976b19"
+    },
+    {
+      "bytes": 21056,
+      "path": "scripts/derive_nsc_pg_retained_tail.py",
+      "sha256": "b354ea33b2b211ea65c13c0ae80e731412bbdddeb4b9b41fa650c161187518f7"
+    },
+    {
+      "bytes": 9151,
+      "path": "scripts/derive_nsc_pg_retarded_threshold.py",
+      "sha256": "cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d"
+    },
+    {
+      "bytes": 2247,
+      "path": "src/recursive_horizons/nsc_pg_adaptive_threshold.py",
+      "sha256": "f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7"
+    },
+    {
+      "bytes": 2614,
+      "path": "src/recursive_horizons/nsc_pg_retarded_threshold.py",
+      "sha256": "1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681"
+    },
+    {
+      "bytes": 3433,
+      "path": "tests/test_nsc_pg_retained_tail.py",
+      "sha256": "6bb56b1d2f75d55deccdd3c3a91ccb8cbd5150b42997df7d4a957ff5ad140fdd"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 48 post-preprint records plus eleven numerical payloads; first massive PG covariance group PASS, full retained C1b OPEN; PDF v0.25.0 retained",
-  "verification_scope": "Full-energy group13 covariance and independently integrated CAR verified; fifteen focused tests and all-field record replay pass; all 209 previous scientific files and the PDF are byte-preserved"
+  "status": "50 post-preprint records plus thirteen payloads; all compact subgap and remaining retained tail inputs PASS; full C1b assembly OPEN; PDF v0.25.0 retained",
+  "verification_scope": "38 signed compact subgap panels and 61 signed remaining tail families authenticated; tail moment precision independently audited; all 227 previous scientific files preserved"
 }
