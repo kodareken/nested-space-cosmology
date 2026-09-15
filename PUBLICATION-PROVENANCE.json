@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 21850,
+      "bytes": 22212,
       "path": "README.md",
-      "sha256": "b3d0b01a94c048a292d6c982c1b41b0804d72f9b3fd0067d8732bf159cc74060"
+      "sha256": "7cc53b07b219094350a9bfc7893e77716522459041e9a3289f9efc6c8e9865a0"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 34454,
+      "bytes": 35555,
       "path": "docs/current-result.md",
-      "sha256": "7f8a5c182f4124be0bc619a1d1a48a610c84143606ea4bfec9c74a78df69132c"
+      "sha256": "10fa47b5ed64346eba088c8806e55eb02a544096b5f2998f2a89d46e71d0097f"
     },
     {
-      "bytes": 13078,
+      "bytes": 13310,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "d7f5dc9e96088e3000661dd4b38744fc1456395ae93912ceb6b76e59f9e5eaf7"
+      "sha256": "4f61bd3f5e9be622f3741fb238b3cf5cc0f506a4d3da41f9fb873fd2ffb8b75b"
     },
     {
       "bytes": 3154,
@@ -411,6 +411,21 @@
       "sha256": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a"
     },
     {
+      "bytes": 3100,
+      "path": "docs/nsc-pg-retained-subgap.md",
+      "sha256": "4e0eab72119fff6b5b2a16b3267333a18d891fd0b365131fb56e4e9f2863518f"
+    },
+    {
+      "bytes": 2437,
+      "path": "docs/nsc-pg-retained-tail.md",
+      "sha256": "a87ecc8f96744f5fe9f73f938633c9149abbf86ea31b3eee94d2115cde9f9eba"
+    },
+    {
+      "bytes": 11789,
+      "path": "docs/nsc-pg-tail-moment-audit.json",
+      "sha256": "176cc1696cc4a7a36f81b89fc940921b959c451ba0d643262da358e7c4db1a2f"
+    },
+    {
       "bytes": 5026,
       "path": "docs/nsc-pg-threshold-projection.md",
       "sha256": "e4d2dc9eb62d692cba3a41b54ddb39dd5fea624f38602296899a317fa3b0bdbe"
@@ -641,14 +656,14 @@
       "sha256": "57b0b76c31eda3845fde761b6507cf6fa254fba444e9b6f1c4e2d9ed026591f9"
     },
     {
-      "bytes": 15003,
+      "bytes": 15241,
       "path": "results/README.md",
-      "sha256": "5e0e011fe107649081193aa65e45de0b474f76f7c15240874bd5b2ab1840de8e"
+      "sha256": "14e960b762fb32da638ac4761159514ed364a2a0c150fb79ddb5fb996d9d6ae5"
     },
     {
-      "bytes": 62756,
+      "bytes": 65969,
       "path": "results/development-snapshot.json",
-      "sha256": "2f9ce1a442a8ac3022c9f3dcf066d98ddcea1b9411d49376ad683c12c6c4464f"
+      "sha256": "dab2b22d446cf26043105b3f95539654e28d6e5cebc7c1a86812696aa4a52917"
     },
     {
       "bytes": 3283,
@@ -699,6 +714,16 @@
       "bytes": 4965711,
       "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
       "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
+    },
+    {
+      "bytes": 186007,
+      "path": "results/development/artifacts/nsc-pg-retained-subgap.f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26.npz",
+      "sha256": "f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26"
+    },
+    {
+      "bytes": 158252,
+      "path": "results/development/artifacts/nsc-pg-retained-tail.1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006.npz",
+      "sha256": "1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006"
     },
     {
       "bytes": 14321218,
@@ -924,6 +949,16 @@
       "bytes": 66593,
       "path": "results/development/nsc-pg-massive-mode-resolution.json",
       "sha256": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce"
+    },
+    {
+      "bytes": 19381,
+      "path": "results/development/nsc-pg-retained-subgap.json",
+      "sha256": "e5c021b53e038295b4906292fe2b194be73aa55407df5dcd1252b404a520bb6d"
+    },
+    {
+      "bytes": 8870,
+      "path": "results/development/nsc-pg-retained-tail.json",
+      "sha256": "e0bda22ce60ea058b3e8a0e963f5ef97ada95421f88507f4a9c027692a29da52"
     },
     {
       "bytes": 4939,
@@ -1616,6 +1651,11 @@
       "sha256": "8459cc5c6d832f138e7dc977e25297cbe2bfa7dc2ca20b14b1b55ac5152adbc0"
     },
     {
+      "bytes": 5829,
+      "path": "scripts/check_nsc_pg_retained_subgap.py",
+      "sha256": "48583a4ec93b40142adaa78a318a6d958e1bfb3c06fff9fc88925e80de976b19"
+    },
+    {
       "bytes": 19929,
       "path": "scripts/check_nsc_plateau_conditions.py",
       "sha256": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6"
@@ -1849,6 +1889,16 @@
       "bytes": 9729,
       "path": "scripts/derive_nsc_pg_massive_modes.py",
       "sha256": "484d23fbe59a00db9574e1959f88fbd8278cdd991975e6c7f0dd69a7a0543e8a"
+    },
+    {
+      "bytes": 21056,
+      "path": "scripts/derive_nsc_pg_retained_tail.py",
+      "sha256": "b354ea33b2b211ea65c13c0ae80e731412bbdddeb4b9b41fa650c161187518f7"
+    },
+    {
+      "bytes": 9151,
+      "path": "scripts/derive_nsc_pg_retarded_threshold.py",
+      "sha256": "cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d"
     },
     {
       "bytes": 7507,
@@ -2471,6 +2521,11 @@
       "sha256": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335"
     },
     {
+      "bytes": 2247,
+      "path": "src/recursive_horizons/nsc_pg_adaptive_threshold.py",
+      "sha256": "f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7"
+    },
+    {
       "bytes": 10451,
       "path": "src/recursive_horizons/nsc_pg_fast_packets.py",
       "sha256": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec"
@@ -2499,6 +2554,11 @@
       "bytes": 6713,
       "path": "src/recursive_horizons/nsc_pg_retarded_packets.py",
       "sha256": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a"
+    },
+    {
+      "bytes": 2614,
+      "path": "src/recursive_horizons/nsc_pg_retarded_threshold.py",
+      "sha256": "1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681"
     },
     {
       "bytes": 2650,
@@ -2779,6 +2839,11 @@
       "bytes": 3234,
       "path": "tests/test_nsc_pg_massive_modes.py",
       "sha256": "56a9a4a572ca9e21c1196140bdc20924f119521a45fdb344277866763114ecda"
+    },
+    {
+      "bytes": 3433,
+      "path": "tests/test_nsc_pg_retained_tail.py",
+      "sha256": "6bb56b1d2f75d55deccdd3c3a91ccb8cbd5150b42997df7d4a957ff5ad140fdd"
     },
     {
       "bytes": 2756,

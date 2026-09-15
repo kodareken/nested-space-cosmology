@@ -39,6 +39,12 @@ covariance eigenvalues lie in $[0.03570181,0.96429819]$. This is the retained
 compact group with $m=\pi/2$ and zero angular eigenvalue. The other 31 massive
 groups remain in progress; the PDF stays v0.25.0.
 
+The [compact subgap panels](docs/nsc-pg-retained-subgap.md) are complete for
+all 38 signed families. The [remaining high-energy tails](docs/nsc-pg-retained-tail.md)
+are also computed for all 61 signed families, with their error budgets and
+numerical transition points recorded. Full covariance assembly uses these
+same inputs; the physical scales remain fixed.
+
 ## From a note to a universe
 
 Every room has a Dirac operator. Its eigenvectors are possible patterns and

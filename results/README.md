@@ -1,5 +1,10 @@
 # Compact result archive
 
+New complete input sets: [38 compact subgap families](development/nsc-pg-retained-subgap.json)
+and [61 remaining tail families](development/nsc-pg-retained-tail.json).
+Both are scoped input PASS records; full retained C1b remains OPEN.
+
+
 Latest: [full-energy PG covariance of retained group13](development/nsc-pg-group13-covariance.json)
 — first massive group PASS, including the computed CAR matrix and bulk-probe
 correlations. [Method and error account](../docs/nsc-pg-group13-covariance.md).
