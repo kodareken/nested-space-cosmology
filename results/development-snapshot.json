@@ -748,11 +748,24 @@
       },
       "generator": "scripts/derive_nsc_weyl_boundary_jets.py",
       "output": "results/development/nsc-weyl-boundary-jets.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "hashes, schemas, symbolic identities and scope",
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_smooth_seam_variation.py",
+      "output": "results/development/nsc-smooth-seam-variation.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "43b982d18c3f95d3d546d2fc818d795f1e3eba32",
+  "source_commit": "fc0585ce95173112c370ff4fd0c174803c8a9c97",
   "source_files": [
     {
       "bytes": 3154,
@@ -998,6 +1011,11 @@
       "bytes": 3870,
       "path": "docs/nsc-scale-binding.md",
       "sha256": "6e5e27f49a7577a6c7b67275fc6a42f2ee63d529512ba6c6ab6b48b087334dbe"
+    },
+    {
+      "bytes": 4546,
+      "path": "docs/nsc-smooth-seam-variation.md",
+      "sha256": "5eb9f197b6a499069a7502a8b6ac5d9ac20b87b1512fcfbd2f06d4d82926c84a"
     },
     {
       "bytes": 3785,
@@ -1335,6 +1353,11 @@
       "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
     },
     {
+      "bytes": 7526,
+      "path": "results/development/nsc-smooth-seam-variation.json",
+      "sha256": "bda39eac1219b4264370de11995afd60199001f520304e5b20eeca3206ffae44"
+    },
+    {
       "bytes": 59802,
       "path": "results/development/nsc-tilted-landau-interface.json",
       "sha256": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a"
@@ -1640,6 +1663,11 @@
       "sha256": "7bb39eb83d1189088964b22cfdd49e7e0fc31cd3dec50ad6d42495fb69e859af"
     },
     {
+      "bytes": 6546,
+      "path": "scripts/derive_nsc_smooth_seam_variation.py",
+      "sha256": "f5193af0df5327f30a08c4290b75e7bf07070e4378437e8cc3226302c0803916"
+    },
+    {
       "bytes": 16385,
       "path": "scripts/derive_nsc_tilted_landau_interface.py",
       "sha256": "f8fb4e3ad94433f84931115b6ca8fa250900fb02a68a5984734c722209c49fd9"
@@ -1930,6 +1958,11 @@
       "sha256": "eba807992b8fdeeff2283d676fa24aab66777baa19980006be812f7d8bba3a14"
     },
     {
+      "bytes": 3479,
+      "path": "src/recursive_horizons/nsc_smooth_seam_variation.py",
+      "sha256": "dce729cfd3c32919e5109fe912bb6451cd910ac112795f98b8ba180d481296c3"
+    },
+    {
       "bytes": 6839,
       "path": "src/recursive_horizons/nsc_tilted_landau_interface.py",
       "sha256": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2"
@@ -2080,6 +2113,11 @@
       "sha256": "ee1ca52747d1bb655afc41f9e8f15489d9b3016bac65909ea50f3fdb70ba6d1c"
     },
     {
+      "bytes": 2212,
+      "path": "tests/test_nsc_smooth_seam_variation.py",
+      "sha256": "469f70adbdf180ff9f53ed88377a79a1df5b347e5129cd2888060f386b95b610"
+    },
+    {
       "bytes": 2621,
       "path": "tests/test_nsc_transmitting_boundary_history.py",
       "sha256": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
@@ -2112,6 +2150,6 @@
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "54 post-preprint records; Weyl intrinsic boundary jets extracted; physical endpoint/gluing domain and remaining transmitting action OPEN",
-  "verification_scope": "Exact decomposition of the existing Weyl nodal gradient into bulk, canonical boundary jets and stencil defect; no new source or selected history; all 266 prior scientific files preserved; PDF v0.26.0 unchanged"
+  "status": "55 post-preprint records; geometric boundary variation matched on the actual smooth seam; complete quantum/field functional and physical stationarity OPEN",
+  "verification_scope": "Correct common-surface orientation and locked geometric momenta; geometric cancellation is not a quantum stress or a bulk solution; all 271 prior scientific files preserved; PDF v0.26.0 unchanged"
 }

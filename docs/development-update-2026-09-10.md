@@ -1,13 +1,13 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`43b982d18c3f95d3d546d2fc818d795f1e3eba32`. It contains 59 derivation notes, two numerical-audit evidence
-files, 54 result records, 55 generators/verifiers, 56 implementation modules,
-seventeen binary artifacts and twenty-eight focused test files. The 271
-scientific files are imported byte for byte from that checkpoint. The new
-Weyl boundary-jet extraction preserves the old end-node record and identifies
-the actual normal-shear variation; physical gluing and the remaining
-transmitting action remain open. PDF v0.26.0 is retained.
+`fc0585ce95173112c370ff4fd0c174803c8a9c97`. It contains 60 derivation notes, two numerical-audit evidence
+files, 55 result records, 56 generators/verifiers, 57 implementation modules,
+seventeen binary artifacts and twenty-nine focused test files. The 276
+scientific files are imported byte for byte from that checkpoint. Geometric
+matching now uses the actual shared smooth surface; the remaining full
+quantum/field functional and physical stationarity remain open. PDF v0.26.0
+is retained.
 
 The 100-record manifest describes the preceding preprint checkpoint.
 This subsequent development snapshot adds the source derivations below.
@@ -31,6 +31,7 @@ statement:
 
 | Connection | Derivation and implementation |
 |---|---|
+| Geometric boundary variation on the actual shared smooth seam | [Smooth-seam matching](nsc-smooth-seam-variation.md) |
 | Intrinsic Weyl boundary jets and exact old-gradient decomposition | [Boundary-jet owner](nsc-weyl-boundary-jets.md) |
 | Physical PG mode-space time-ordered CTP insertion | [PG history derivative](nsc-pg-ctp-mode-jets.md) |
 | Raw KS metric-profile and fixed-normal pullback | [KS coordinate pullback](nsc-pg-ks-metric-pullback.md) |
