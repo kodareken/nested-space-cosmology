@@ -1,5 +1,30 @@
 # What the calculations show
 
+**Actual geometric seam matching: PASS.** The [new boundary calculation](nsc-smooth-seam-variation.md)
+uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
+normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required
+by that domain. The quantum/field remainder and bulk self-sourcing remain open;
+no new interface force or zero quantum source is assigned. PDF v0.26.0 is unchanged.
+
+On the actual reference seam, the parent Weyl coefficients are
+$(\overline P_a,\overline P_r,\Pi_\sigma)=(0.41509246,-0.63006293,0.10900237)$.
+The child has opposite metric covectors and the same shear-conjugate
+coefficient, because its shear variation also reverses. All geometric
+matching residuals vanish; the density/normal checks remain below
+$6\times10^{-16}$ against tolerance $3\times10^{-11}$.
+
+The full unit normal is $n=(\beta/a)\partial_\tau-a\partial_\rho$.
+Only for stationary background scalars does its action reduce to
+$-a\,d/d\rho$. This shorthand is not applied to time-dependent quantum fields.
+The old $93.5426$ time-node diagnostic is preserved and is not identified
+with either side of this surface.
+
+**Remaining definition gate:** the complete remaining same-action
+quantum/field functional and its physical history/endpoint domain must be
+identified before a full stationarity equation can be evaluated. The Gaussian
+Schur factor is already counted and cannot supply an extra chosen force.
+Further geometric or adapter controls do not determine that missing functional.
+
 **Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](nsc-weyl-boundary-jets.md)
 reconstructs the stored $93.5426$ end-node derivative from its bulk, boundary
 and numerical-stencil contributions. The physical boundary rate is the normal

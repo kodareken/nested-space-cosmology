@@ -32,6 +32,12 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
+**Actual geometric seam matching: PASS.** The [new boundary calculation](docs/nsc-smooth-seam-variation.md)
+uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
+normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required
+by that domain. The quantum/field remainder and bulk self-sourcing remain open;
+no new interface force or zero quantum source is assigned. PDF v0.26.0 is unchanged.
+
 **Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](docs/nsc-weyl-boundary-jets.md)
 reconstructs the stored $93.5426$ end-node derivative from its bulk, boundary
 and numerical-stencil contributions. The physical boundary rate is the normal

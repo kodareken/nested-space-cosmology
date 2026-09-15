@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 23017,
+      "bytes": 23452,
       "path": "README.md",
-      "sha256": "ecfddfe25afdd20051ea132a0043f5566079bcf8c0c1240fbc358b009d6d3c65"
+      "sha256": "d01f1a5043bf883e882fb0589570008de82784ecdccb9fb53c8db85f74ee7665"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 39632,
+      "bytes": 41158,
       "path": "docs/current-result.md",
-      "sha256": "c5578c6b4c572c01f5e4fb4d2004f8fb89a63bb711715e78a7dacedfefada623"
+      "sha256": "299b405699079098539aeb822e1f0a3bfed43ec96cd8efa272c9a1ef23efb535"
     },
     {
-      "bytes": 13955,
+      "bytes": 14032,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "bf10a1e10de01df33c3c3f2d1007c9086e3873d48163b91cd6a960781e4497b0"
+      "sha256": "25b41ab3abae9fff500331441da355cf7acb4e9a91611c7872dbbd974b99e7db"
     },
     {
       "bytes": 3154,
@@ -521,6 +521,11 @@
       "sha256": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383"
     },
     {
+      "bytes": 4546,
+      "path": "docs/nsc-smooth-seam-variation.md",
+      "sha256": "5eb9f197b6a499069a7502a8b6ac5d9ac20b87b1512fcfbd2f06d4d82926c84a"
+    },
+    {
       "bytes": 8978,
       "path": "docs/nsc-spectral-endpoint.md",
       "sha256": "a55074de3f1fc2e625bb0259a5e2d53891969f9577882790254fdf4d9734ce8d"
@@ -681,14 +686,14 @@
       "sha256": "57b0b76c31eda3845fde761b6507cf6fa254fba444e9b6f1c4e2d9ed026591f9"
     },
     {
-      "bytes": 16393,
+      "bytes": 16696,
       "path": "results/README.md",
-      "sha256": "45d7abd4f61e998a53b55374291fbb12577d89e4d93ee0ff2697925070c14008"
+      "sha256": "3f5f321cc979f1f39618356e9080e6bd054bcb1f25bf2ba668aa04e4f3026a17"
     },
     {
-      "bytes": 73287,
+      "bytes": 74558,
       "path": "results/development-snapshot.json",
-      "sha256": "b3836409a2d602d58a4288de0d4c3f55bc51c10502b7af0b3407077a7b9ab3e7"
+      "sha256": "042294e6b8873253d24e10c94e119c85a0b714ffa7494936c7bcecf01418a791"
     },
     {
       "bytes": 3283,
@@ -1024,6 +1029,11 @@
       "bytes": 4939,
       "path": "results/development/nsc-physical-jet-extended-gate.json",
       "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
+    },
+    {
+      "bytes": 7526,
+      "path": "results/development/nsc-smooth-seam-variation.json",
+      "sha256": "bda39eac1219b4264370de11995afd60199001f520304e5b20eeca3206ffae44"
     },
     {
       "bytes": 59802,
@@ -2021,6 +2031,11 @@
       "sha256": "7bb39eb83d1189088964b22cfdd49e7e0fc31cd3dec50ad6d42495fb69e859af"
     },
     {
+      "bytes": 6546,
+      "path": "scripts/derive_nsc_smooth_seam_variation.py",
+      "sha256": "f5193af0df5327f30a08c4290b75e7bf07070e4378437e8cc3226302c0803916"
+    },
+    {
       "bytes": 16385,
       "path": "scripts/derive_nsc_tilted_landau_interface.py",
       "sha256": "f8fb4e3ad94433f84931115b6ca8fa250900fb02a68a5984734c722209c49fd9"
@@ -2746,6 +2761,11 @@
       "sha256": "19f844a515adb8e26b64e980eebd77f83ee7137cb761f6e17ea84dca0ba409b0"
     },
     {
+      "bytes": 3479,
+      "path": "src/recursive_horizons/nsc_smooth_seam_variation.py",
+      "sha256": "dce729cfd3c32919e5109fe912bb6451cd910ac112795f98b8ba180d481296c3"
+    },
+    {
       "bytes": 4401,
       "path": "src/recursive_horizons/nsc_spectral_endpoint.py",
       "sha256": "6a582d0b6a3f2d7a6250b48c35b2bc512b9e033b7592d585d47f3c2f7cd3114d"
@@ -3029,6 +3049,11 @@
       "bytes": 7121,
       "path": "tests/test_nsc_smooth_geometry.py",
       "sha256": "0f212f17035376664395c72ecd0a491c77fc9b025c459e3a7013e2f7314c0771"
+    },
+    {
+      "bytes": 2212,
+      "path": "tests/test_nsc_smooth_seam_variation.py",
+      "sha256": "469f70adbdf180ff9f53ed88377a79a1df5b347e5129cd2888060f386b95b610"
     },
     {
       "bytes": 1252,

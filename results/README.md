@@ -1,5 +1,10 @@
 # Compact result archive
 
+New: [geometric variation on the shared smooth seam](development/nsc-smooth-seam-variation.json)
+— geometric matching PASS on the actual $\rho=0$ surface. The quantum
+remainder and bulk field equations are not declared solved. Verifier:
+`python3 scripts/derive_nsc_smooth_seam_variation.py --check`.
+
 New: [intrinsic Weyl boundary jets](development/nsc-weyl-boundary-jets.json)
 — extraction and reconstruction PASS. All original end-node coefficients are
 preserved, with explicit bulk/boundary/stencil accounting and proper-normal
