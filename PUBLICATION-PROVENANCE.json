@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 21819,
+      "bytes": 21850,
       "path": "README.md",
-      "sha256": "7908b33cc77434941f7bdc6fa7c3cd2700540ec9eb419ed048cf46a057af80e3"
+      "sha256": "b3d0b01a94c048a292d6c982c1b41b0804d72f9b3fd0067d8732bf159cc74060"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 32942,
+      "bytes": 34454,
       "path": "docs/current-result.md",
-      "sha256": "14905197375aee73b6f14d0c6d951612bd1bd00609171c027584ff5f710b36c9"
+      "sha256": "7f8a5c182f4124be0bc619a1d1a48a610c84143606ea4bfec9c74a78df69132c"
     },
     {
-      "bytes": 12931,
+      "bytes": 13078,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "1eabf67f884c7ee3f214474f99df8b0f3a2e86390387bb9784909e435ec8d649"
+      "sha256": "d7f5dc9e96088e3000661dd4b38744fc1456395ae93912ceb6b76e59f9e5eaf7"
     },
     {
       "bytes": 3154,
@@ -396,6 +396,11 @@
       "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
     },
     {
+      "bytes": 5132,
+      "path": "docs/nsc-pg-group13-covariance.md",
+      "sha256": "9f3640822238ef9c552d4d75909ab85b4fcdedbc12622a0cbed11cb314525158"
+    },
+    {
       "bytes": 6324,
       "path": "docs/nsc-pg-lll-preparation.md",
       "sha256": "14d3fde7de952eb3f747d47a19495a5cac9fe66a01672f9eabc580195b8908d1"
@@ -404,6 +409,11 @@
       "bytes": 11820,
       "path": "docs/nsc-pg-massive-mode-resolution.md",
       "sha256": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a"
+    },
+    {
+      "bytes": 5026,
+      "path": "docs/nsc-pg-threshold-projection.md",
+      "sha256": "e4d2dc9eb62d692cba3a41b54ddb39dd5fea624f38602296899a317fa3b0bdbe"
     },
     {
       "bytes": 1793,
@@ -616,9 +626,9 @@
       "sha256": "68d57f99c3ffb9c2ead60ff0530542400fbbc99ea3e426305f29b900c2569376"
     },
     {
-      "bytes": 1144,
+      "bytes": 1170,
       "path": "pyproject.toml",
-      "sha256": "f68a4bc1c6d765407e7f5b3f643d586f31ec6b8082f9bd3f4dfb5a2812c818ef"
+      "sha256": "609267db42bb16fcc86b66e797ff2fd8d03550e3b93337a39a1f472e7241efac"
     },
     {
       "bytes": 36,
@@ -626,19 +636,19 @@
       "sha256": "b54801f9deb47c5c159b7e39353a488c3d7d0fcfa96515751e6c10f80b0763c6"
     },
     {
-      "bytes": 55,
+      "bytes": 76,
       "path": "requirements.txt",
-      "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
+      "sha256": "57b0b76c31eda3845fde761b6507cf6fa254fba444e9b6f1c4e2d9ed026591f9"
     },
     {
-      "bytes": 14581,
+      "bytes": 15003,
       "path": "results/README.md",
-      "sha256": "29ef3c349b8b2567976ecaf967627909036f7d7e802bb2415227e4a447a5b7a1"
+      "sha256": "5e0e011fe107649081193aa65e45de0b474f76f7c15240874bd5b2ab1840de8e"
     },
     {
-      "bytes": 59032,
+      "bytes": 62756,
       "path": "results/development-snapshot.json",
-      "sha256": "dd5732dddd4afcda7eb3a7c406ecde4f05416265cacef67dcfe126af255ee93f"
+      "sha256": "2f9ce1a442a8ac3022c9f3dcf066d98ddcea1b9411d49376ad683c12c6c4464f"
     },
     {
       "bytes": 3283,
@@ -679,6 +689,11 @@
       "bytes": 407306,
       "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
       "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
     },
     {
       "bytes": 4965711,
@@ -894,6 +909,11 @@
       "bytes": 24210,
       "path": "results/development/nsc-mode-resolved-cauchy-state.json",
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+    },
+    {
+      "bytes": 35044,
+      "path": "results/development/nsc-pg-group13-covariance.json",
+      "sha256": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92"
     },
     {
       "bytes": 24697,
@@ -1816,6 +1836,11 @@
       "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
     },
     {
+      "bytes": 16054,
+      "path": "scripts/derive_nsc_pg_group13_covariance.py",
+      "sha256": "a595a0d257087226ff91527d4d0ec67f84e5d14fcff187f3be4a2ce2b074989f"
+    },
+    {
       "bytes": 11831,
       "path": "scripts/derive_nsc_pg_lll_preparation.py",
       "sha256": "0a9e81124513051c16e5ea344245a3c82bc5b09d92c7368424415ef2184efeb1"
@@ -1824,6 +1849,11 @@
       "bytes": 9729,
       "path": "scripts/derive_nsc_pg_massive_modes.py",
       "sha256": "484d23fbe59a00db9574e1959f88fbd8278cdd991975e6c7f0dd69a7a0543e8a"
+    },
+    {
+      "bytes": 7507,
+      "path": "scripts/derive_nsc_pg_threshold_projection.py",
+      "sha256": "40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6"
     },
     {
       "bytes": 6311,
@@ -2291,6 +2321,11 @@
       "sha256": "9d3869d0e7444f55182138d0b0c52cedc06b3afee8e4cdec8ce499ab7bdf7b4f"
     },
     {
+      "bytes": 17830,
+      "path": "src/recursive_horizons/nsc_complex_horizon_modes.py",
+      "sha256": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2"
+    },
+    {
       "bytes": 4075,
       "path": "src/recursive_horizons/nsc_constraint_complete_neck.py",
       "sha256": "fa581fdad34579f0144d338c679a1706a94896df7ef4cdecb7f1849ee262d295"
@@ -2436,6 +2471,16 @@
       "sha256": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335"
     },
     {
+      "bytes": 10451,
+      "path": "src/recursive_horizons/nsc_pg_fast_packets.py",
+      "sha256": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec"
+    },
+    {
+      "bytes": 7885,
+      "path": "src/recursive_horizons/nsc_pg_high_energy.py",
+      "sha256": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b"
+    },
+    {
       "bytes": 11063,
       "path": "src/recursive_horizons/nsc_pg_lll_preparation.py",
       "sha256": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a"
@@ -2444,6 +2489,36 @@
       "bytes": 15356,
       "path": "src/recursive_horizons/nsc_pg_massive_modes.py",
       "sha256": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4"
+    },
+    {
+      "bytes": 5709,
+      "path": "src/recursive_horizons/nsc_pg_packet_modes.py",
+      "sha256": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd"
+    },
+    {
+      "bytes": 6713,
+      "path": "src/recursive_horizons/nsc_pg_retarded_packets.py",
+      "sha256": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a"
+    },
+    {
+      "bytes": 2650,
+      "path": "src/recursive_horizons/nsc_pg_state_covariance.py",
+      "sha256": "1c0276a62bf90c7ab95011ce0a191f194289cbb6a1c017ab05fcc37b180de6a1"
+    },
+    {
+      "bytes": 6425,
+      "path": "src/recursive_horizons/nsc_pg_tail_packets.py",
+      "sha256": "d237611262a267a6cecfd49415a4f5bc12c9427bfb342068b73af3fdb0222f1f"
+    },
+    {
+      "bytes": 6937,
+      "path": "src/recursive_horizons/nsc_pg_tail_series.py",
+      "sha256": "3ff03563443cd6f6c6da7498de819acb59ffbe2a54e04dd6d5c3937176d537c7"
+    },
+    {
+      "bytes": 3659,
+      "path": "src/recursive_horizons/nsc_pg_threshold_projection.py",
+      "sha256": "56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f"
     },
     {
       "bytes": 2844,
@@ -2626,6 +2701,11 @@
       "sha256": "9a04d0f543533bc87cc431fd338995cbdaeba6da0f3d86a67df168dde05d68de"
     },
     {
+      "bytes": 6748,
+      "path": "tests/test_nsc_complex_horizon_modes.py",
+      "sha256": "c9dc67841801f640e86c0468c146615c94490f81a339eaaa0b8af497397be2c2"
+    },
+    {
       "bytes": 3684,
       "path": "tests/test_nsc_covariant_identities.py",
       "sha256": "564562d792eea5f9b03183f942155f782c427664056956720a876be22e66dbcd"
@@ -2686,6 +2766,11 @@
       "sha256": "d9ce5c32cd43b3c44e96411c46fea27585ae316e7e5c37653df439b684f49e1d"
     },
     {
+      "bytes": 2068,
+      "path": "tests/test_nsc_pg_group13_covariance.py",
+      "sha256": "f068fa6402bac5c110b32b06507d64b845052385b07c8cd96b64ea7aa179de0e"
+    },
+    {
       "bytes": 1725,
       "path": "tests/test_nsc_pg_lll_preparation.py",
       "sha256": "59e414f64dd97d8a9d9d37e0b2498fcedc32c9b7a79760f7f1d287d5444a73d3"
@@ -2694,6 +2779,11 @@
       "bytes": 3234,
       "path": "tests/test_nsc_pg_massive_modes.py",
       "sha256": "56a9a4a572ca9e21c1196140bdc20924f119521a45fdb344277866763114ecda"
+    },
+    {
+      "bytes": 2756,
+      "path": "tests/test_nsc_pg_threshold_projection.py",
+      "sha256": "7bcfcd23f9b3ca97e573500e07c81ad2881544046cba39053ae6c9ac871d9e82"
     },
     {
       "bytes": 1144,
