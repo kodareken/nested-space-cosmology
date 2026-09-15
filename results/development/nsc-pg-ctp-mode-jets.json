@@ -1,0 +1,1807 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "source/input hashes and domain labels",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-10
+  },
+  "construction": {
+    "history_derivative": "deltaU/dg_A(tau)=-i exp[-i Eo(tf-tau)] M_A exp[-i Ei(tau-ti)]",
+    "kernel_scope": "first variation at the owned static PG background; times remain arguments, no history selected",
+    "ordinary_matrix_link_assigned": false,
+    "source_control": "finite Nystr\u00f6m differential through existing ctp_first_variation; not an absolute stress or full action trace",
+    "vertex": "M_A(Eo,Ei)=integral Phi_Eo dagger deltaH_A Phi_Ei d rho",
+    "whole_bulk_retained": true
+  },
+  "domain": {
+    "given_B": false,
+    "metric_fields": [
+      "log_N",
+      "beta",
+      "log_q_PG",
+      "log_r"
+    ],
+    "new_particle_sectors": false,
+    "packet_covariance_as_C0": false,
+    "seam_account": "full continuous fields; no sharp-projection delta distribution relabeled as link or stress",
+    "spatial_direction": "existing smooth compact profile on (-1,1)",
+    "spectral_measure": "dE/(2*pi); no discrete sample is a complete Cauchy space",
+    "state": "same C_H plus inherited incoming occupation; opposite-energy covariance on open source fibers",
+    "surface": "fixed common-PG source-mode representation, rho=0 transmitting seam"
+  },
+  "failures": {},
+  "gate": {
+    "B1_full": "OPEN: raw KS endpoint/Cauchy-slice pullback and history-dependent domain must be supplied",
+    "Gamma_rest": "OPEN",
+    "Weyl_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "history_selected": false,
+    "metric_timestep": false,
+    "physical_two_sided_Weyl_mismatch": null,
+    "stationarity": "OPEN",
+    "stress_computed": false
+  },
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-lll-preparation.json": "7ea9504c9f39f44f963377cb7fb4f19909fe38bc65fd48c2b2e3ed030017d782",
+    "results/development/nsc-pg-massive-mode-resolution.json": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "results/development/nsc-transmitting-ctp-resolvent.json": "33d91d2c845f865811007c7cc71d731f3458c274fd0db8a1de5c89349434215d",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "jet_inventory": {
+    "CTP_source_fiber_contraction": "computed control",
+    "PG_source_mode_metric_insertion": "computed",
+    "PG_time_ordered_derivative_kernel": "defined from computed insertion",
+    "raw_KS_endpoint_pullback": null,
+    "transmitting_EndpointBranchJets": null
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "CTP_linear_solve": 0.0,
+    "CTP_tangent": 2.7755575615628914e-17,
+    "CTP_trace": 2.380586098258211e-18,
+    "energy_exchange_hermiticity": 3.552713678800501e-15,
+    "seam": 0.0,
+    "source_CAR_lower_violation": 4.293275429054021e-17,
+    "source_CAR_upper_violation": 4.293275429054021e-17,
+    "spatial_refinement": 1.853628361931194e-11,
+    "weak_vs_direct": 5.623512462297507e-10
+  },
+  "payload": {
+    "bytes": 9829760,
+    "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+    "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+  },
+  "per_family": {
+    "0_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.0842021724855044e-19,
+      "CTP_trace": 1.0725902296775458e-20,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 2.7755575615628914e-17,
+      "group": 0,
+      "positive_frequency_transfer_norm": 0.9455559503742247,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 4.293275429054021e-17,
+      "source_CAR_upper_violation": 4.293275429054021e-17,
+      "source_differential_control": [
+        0.014387891195022713,
+        -0.012250366782621579,
+        -0.014387891195022713,
+        0.0
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 3.2321922915912263e-12,
+      "weak_vs_direct": 3.286059964811973e-11
+    },
+    "10_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 4.944819527392995e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.9860273225978185e-15,
+      "group": 10,
+      "positive_frequency_transfer_norm": 19.476187800362073,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.38331329846283996,
+        -0.1984647674921437,
+        -0.10750266472917452,
+        -0.2758106337336654
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.6127543745079418e-11,
+      "weak_vs_direct": 4.785406708990759e-10
+    },
+    "10_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 2.45824843160959e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.9860273225978185e-15,
+      "group": 10,
+      "positive_frequency_transfer_norm": 19.47618780036208,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.3833132984628397,
+        -0.19846476749214353,
+        -0.10750266472917448,
+        -0.2758106337336653
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.6127543745079418e-11,
+      "weak_vs_direct": 4.785406708990759e-10
+    },
+    "11_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3904866443919908e-17,
+      "CTP_trace": 7.3474814218390215e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.790180836524724e-15,
+      "group": 11,
+      "positive_frequency_transfer_norm": 21.14062103232068,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.41607861421030945,
+        -0.21540163001461188,
+        -0.11663262102105104,
+        -0.29944599318925863
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.72821756905489e-11,
+      "weak_vs_direct": 5.284273911771228e-10
+    },
+    "11_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3985787785349405e-17,
+      "CTP_trace": 3.2827820662024478e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.790180836524724e-15,
+      "group": 11,
+      "positive_frequency_transfer_norm": 21.140621032320688,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.41607861421030945,
+        -0.21540163001461193,
+        -0.11663262102105108,
+        -0.2994459931892586
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.7280399333796818e-11,
+      "weak_vs_direct": 5.246199589375582e-10
+    },
+    "12_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 2.3822801641527197e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 12,
+      "positive_frequency_transfer_norm": 22.802150561964677,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.4487862153588941,
+        -0.2323105605083028,
+        -0.12575055732142046,
+        -0.3230356580374736
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.853628361931194e-11,
+      "weak_vs_direct": 5.623512462297507e-10
+    },
+    "12_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 1.7327117727270781e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 12,
+      "positive_frequency_transfer_norm": 22.802150561964673,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.44878621535889435,
+        -0.2323105605083029,
+        -0.12575055732142054,
+        -0.3230356580374736
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.853628361931194e-11,
+      "weak_vs_direct": 5.623512462297507e-10
+    },
+    "13_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.734723475976807e-18,
+      "CTP_trace": 3.7100043089738355e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.6653345369377348e-16,
+      "group": 13,
+      "positive_frequency_transfer_norm": 2.535121263836758,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.08366454400790233,
+        -0.04509995321189665,
+        -0.027027486651644828,
+        0.0
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 4.689582056049543e-12,
+      "weak_vs_direct": 8.034173359670576e-11
+    },
+    "14_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.471140604459642e-18,
+      "CTP_trace": 4.645975715689837e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 4.443059973708341e-16,
+      "group": 14,
+      "positive_frequency_transfer_norm": 4.353401445579102,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.13549006702028818,
+        -0.07118842029431703,
+        -0.0400224124629097,
+        -0.062294318596040954
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 5.646150214046392e-12,
+      "weak_vs_direct": 1.2505952321775935e-10
+    },
+    "14_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.471140604459642e-18,
+      "CTP_trace": 1.3552527156068805e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 4.443059973708341e-16,
+      "group": 14,
+      "positive_frequency_transfer_norm": 4.339093885001221,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.1354900670202845,
+        -0.07118842029431262,
+        -0.04002241246290597,
+        -0.06229431859604127
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 5.646150214046392e-12,
+      "weak_vs_direct": 1.2505952321775935e-10
+    },
+    "15_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 5.912289971835016e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 4.965068306494546e-16,
+      "group": 15,
+      "positive_frequency_transfer_norm": 6.110573255208828,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.1853541869071661,
+        -0.09670218386048632,
+        -0.053413472529737285,
+        -0.10754597673165708
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 6.731948332154115e-12,
+      "weak_vs_direct": 1.6700213856268591e-10
+    },
+    "15_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 2.710505431213761e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 4.965068306494546e-16,
+      "group": 15,
+      "positive_frequency_transfer_norm": 6.093612409723228,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.1853541869071697,
+        -0.09670218386049059,
+        -0.053413472529740894,
+        -0.10754597673165722
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 6.731948332154115e-12,
+      "weak_vs_direct": 1.6700213856268591e-10
+    },
+    "16_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.878959614448864e-18,
+      "CTP_trace": 8.029872339970767e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 6.280369834735101e-16,
+      "group": 16,
+      "positive_frequency_transfer_norm": 7.841731328476163,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.2342768263976553,
+        -0.12184820175253401,
+        -0.06677031011377009,
+        -0.14803552916629553
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 8.009592988863403e-12,
+      "weak_vs_direct": 2.0980398569383582e-10
+    },
+    "16_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.878959614448864e-18,
+      "CTP_trace": 4.743384504624082e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 6.280369834735101e-16,
+      "group": 16,
+      "positive_frequency_transfer_norm": 7.827752682875468,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.23427682639766423,
+        -0.12184820175254456,
+        -0.06677031011377894,
+        -0.1480355291662958
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 8.009592988863403e-12,
+      "weak_vs_direct": 2.0980398569383582e-10
+    },
+    "17_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 5.204170427930421e-18,
+      "CTP_trace": 7.630708063577178e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.155133597044475e-16,
+      "group": 17,
+      "positive_frequency_transfer_norm": 9.548316540730335,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.2827705434159298,
+        -0.14682683246564215,
+        -0.0801127622328471,
+        -0.1864254104217533
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 9.148237722917983e-12,
+      "weak_vs_direct": 2.499521477290714e-10
+    },
+    "17_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 5.204170427930421e-18,
+      "CTP_trace": 1.0663086014747573e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.155133597044475e-16,
+      "group": 17,
+      "positive_frequency_transfer_norm": 9.538410560011192,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.28277054341593466,
+        -0.14682683246564768,
+        -0.08011276223285164,
+        -0.18642541042175373
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 9.148237722917983e-12,
+      "weak_vs_direct": 2.499521477290714e-10
+    },
+    "18_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 4.396100996249819e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.155133597044475e-16,
+      "group": 18,
+      "positive_frequency_transfer_norm": 11.236874099657287,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.3310336360717301,
+        -0.17171691489936336,
+        -0.09345073423287828,
+        -0.22365694023979585
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.035349583848844e-11,
+      "weak_vs_direct": 2.880777863833502e-10
+    },
+    "18_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 1.8295911660692887e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.155133597044475e-16,
+      "group": 18,
+      "positive_frequency_transfer_norm": 11.229696201631906,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.33103363607172537,
+        -0.17171691489935764,
+        -0.09345073423287345,
+        -0.2236569402397961
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.035349583848844e-11,
+      "weak_vs_direct": 2.880777863833502e-10
+    },
+    "19_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 9.461358020830535e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.989550626504553e-16,
+      "group": 19,
+      "positive_frequency_transfer_norm": 12.914966686102161,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.3791576724009473,
+        -0.19655427596054004,
+        -0.1067874537237525,
+        -0.2601740942700618
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.1523226817299325e-11,
+      "weak_vs_direct": 3.249098944667788e-10
+    },
+    "19_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 5.628533934504826e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.989550626504553e-16,
+      "group": 19,
+      "positive_frequency_transfer_norm": 12.909289170244245,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.37915767240094334,
+        -0.19655427596053493,
+        -0.10678745372374819,
+        -0.2601740942700623
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.1523226817299325e-11,
+      "weak_vs_direct": 3.249098944667788e-10
+    },
+    "1_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.2266347333466993e-18,
+      "CTP_trace": 1.4230153513872246e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 2.220446049250313e-16,
+      "group": 1,
+      "positive_frequency_transfer_norm": 3.7835691986514446,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.07284406616859185,
+        -0.03855271061732246,
+        -0.02204986166318095,
+        -0.050794204505410875
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 4.503064587897022e-12,
+      "weak_vs_direct": 1.0414159598068483e-10
+    },
+    "1_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.2266347333466993e-18,
+      "CTP_trace": 3.3881317890172014e-20,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 2.220446049250313e-16,
+      "group": 1,
+      "positive_frequency_transfer_norm": 3.7835691986514437,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.07284406616859186,
+        -0.03855271061732247,
+        -0.02204986166318096,
+        -0.05079420450541089
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 4.503064587897022e-12,
+      "weak_vs_direct": 1.0414159598068483e-10
+    },
+    "20_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.938893903907228e-18,
+      "CTP_trace": 1.6940658945086007e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 20,
+      "positive_frequency_transfer_norm": 14.586497024861018,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.4271911177493878,
+        -0.22135760677363647,
+        -0.12012403767080687,
+        -0.2962176437505476
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.3418599564921994e-11,
+      "weak_vs_direct": 3.6429733350740195e-10
+    },
+    "20_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.938893903907228e-18,
+      "CTP_trace": 2.63639004832901e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 20,
+      "positive_frequency_transfer_norm": 14.581874389902405,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.42719111774938356,
+        -0.2213576067736318,
+        -0.12012403767080286,
+        -0.29621764375054827
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.3418599564921994e-11,
+      "weak_vs_direct": 3.6429733350740195e-10
+    },
+    "21_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 2.7755575615628914e-17,
+      "CTP_trace": 7.572474548453445e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.155133597044475e-16,
+      "group": 21,
+      "positive_frequency_transfer_norm": 16.252926766167988,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.47516214188264017,
+        -0.2461376491675279,
+        -0.13346087262354828,
+        -0.33193043235042985
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.4404477610711178e-11,
+      "weak_vs_direct": 4.0487900420963173e-10
+    },
+    "21_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.5515838457795457e-17,
+      "CTP_trace": 2.1480755542369057e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 21,
+      "positive_frequency_transfer_norm": 16.24918005579531,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.47516214188264944,
+        -0.24613764916753916,
+        -0.13346087262355794,
+        -0.3319304323504298
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.4400924897197235e-11,
+      "weak_vs_direct": 4.0437285245453113e-10
+    },
+    "22_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 2.7755575615628914e-17,
+      "CTP_trace": 2.041508221560474e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.831026719408895e-15,
+      "group": 22,
+      "positive_frequency_transfer_norm": 17.915433322282745,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.5230882790213048,
+        -0.27090103107432717,
+        -0.1467980740921943,
+        -0.3674028626491143
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.5074164139273872e-11,
+      "weak_vs_direct": 4.498695166096501e-10
+    },
+    "22_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.5515838457795457e-17,
+      "CTP_trace": 8.202984698565865e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 22,
+      "positive_frequency_transfer_norm": 17.912338305262136,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.5230882790213034,
+        -0.2709010310743263,
+        -0.1467980740921936,
+        -0.3674028626491137
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.507949320980348e-11,
+      "weak_vs_direct": 4.5310496352943144e-10
+    },
+    "23_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.992893892674703e-18,
+      "CTP_trace": 1.5585406229479126e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.95090418262362e-16,
+      "group": 23,
+      "positive_frequency_transfer_norm": 4.826505827248189,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.1633506751131807,
+        -0.08589447816818083,
+        -0.04806665709946622,
+        0.0
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 7.048139849531499e-12,
+      "weak_vs_direct": 1.4421667462335602e-10
+    },
+    "24_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 3.4897757426877174e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 4.440892098500626e-16,
+      "group": 24,
+      "positive_frequency_transfer_norm": 5.867203202609866,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.19508404424393633,
+        -0.10209835839383499,
+        -0.056550769383442515,
+        -0.04359360547872053
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 7.75424169328031e-12,
+      "weak_vs_direct": 1.7200469025234712e-10
+    },
+    "24_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 2.981555974335137e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 4.440892098500626e-16,
+      "group": 24,
+      "positive_frequency_transfer_norm": 5.853577339773379,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.19508404424393744,
+        -0.10209835839383623,
+        -0.05655076938344358,
+        -0.04359360547872077
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 7.75424169328031e-12,
+      "weak_vs_direct": 1.7200469025234712e-10
+    },
+    "25_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 4.9065389333867974e-18,
+      "CTP_trace": 3.1848438816761693e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 6.280369834735101e-16,
+      "group": 25,
+      "positive_frequency_transfer_norm": 7.187115513731752,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.2324488678732756,
+        -0.12124453611646452,
+        -0.0666772281406526,
+        -0.0864584234560557
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 8.47588665929578e-12,
+      "weak_vs_direct": 2.0425986202060428e-10
+    },
+    "25_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 4.9065389333867974e-18,
+      "CTP_trace": 1.0537089863843496e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 6.280369834735101e-16,
+      "group": 25,
+      "positive_frequency_transfer_norm": 7.169833995579767,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.23244886787327843,
+        -0.12124453611646788,
+        -0.06667722814065537,
+        -0.08645842345605609
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 8.47588665929578e-12,
+      "weak_vs_direct": 2.0425986202060428e-10
+    },
+    "26_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.952433221959954e-18,
+      "CTP_trace": 7.962109704190423e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.95090418262362e-16,
+      "group": 26,
+      "positive_frequency_transfer_norm": 8.656951764297997,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.27307165467280325,
+        -0.14211508028588377,
+        -0.07778475947158164,
+        -0.12774157172120695
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 9.277023593838068e-12,
+      "weak_vs_direct": 2.3952041331037896e-10
+    },
+    "26_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.952433221959954e-18,
+      "CTP_trace": 4.811147140404426e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.95090418262362e-16,
+      "group": 26,
+      "positive_frequency_transfer_norm": 8.641315892820469,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.27307165467280803,
+        -0.14211508028588954,
+        -0.07778475947158654,
+        -0.12774157172120726
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 9.277023593838068e-12,
+      "weak_vs_direct": 2.3952041331037896e-10
+    },
+    "27_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 2.812149384884277e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 27,
+      "positive_frequency_transfer_norm": 10.196159568501807,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.3156796234266324,
+        -0.16404461858867847,
+        -0.08950222718735616,
+        -0.16764629723462474
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.0411227435725238e-11,
+      "weak_vs_direct": 2.723628099987727e-10
+    },
+    "27_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 4.861969117239684e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 27,
+      "positive_frequency_transfer_norm": 10.183464997838684,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.3156796234266386,
+        -0.16404461858868558,
+        -0.08950222718736217,
+        -0.16764629723462476
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.0411227435725238e-11,
+      "weak_vs_direct": 2.723628099987727e-10
+    },
+    "28_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3985787785349405e-17,
+      "CTP_trace": 4.438452643612534e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.784146017590271e-15,
+      "group": 28,
+      "positive_frequency_transfer_norm": 11.771635187637758,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.3595675736614544,
+        -0.1866602002528559,
+        -0.1016181852303654,
+        -0.2064658296416076
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.1482370609903973e-11,
+      "weak_vs_direct": 3.055973413779244e-10
+    },
+    "28_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3985787785349405e-17,
+      "CTP_trace": 1.5405411728187587e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.784146017590271e-15,
+      "group": 28,
+      "positive_frequency_transfer_norm": 11.761117877330847,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.3595675736614494,
+        -0.18666020025284988,
+        -0.1016181852303602,
+        -0.2064658296416082
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.1482370609903973e-11,
+      "weak_vs_direct": 3.055973413779244e-10
+    },
+    "29_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 2.710505431213761e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.881784197001252e-16,
+      "group": 29,
+      "positive_frequency_transfer_norm": 13.370284014401593,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.4043208011167511,
+        -0.2097410495883329,
+        -0.11400604353793853,
+        -0.24445262934713485
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.262101534393984e-11,
+      "weak_vs_direct": 3.431578520149181e-10
+    },
+    "29_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 1.3154421670859284e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 8.881784197001252e-16,
+      "group": 29,
+      "positive_frequency_transfer_norm": 13.36132252790273,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.40432080111676083,
+        -0.20974104958834455,
+        -0.11400604353794835,
+        -0.24445262934713527
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.262101534393984e-11,
+      "weak_vs_direct": 3.431578520149181e-10
+    },
+    "2_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.476216610979977e-18,
+      "CTP_trace": 4.684092198316281e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 8.899114524108741e-16,
+      "group": 2,
+      "positive_frequency_transfer_norm": 5.761476616816804,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.11303558007614849,
+        -0.059031489463225534,
+        -0.03276637871819814,
+        -0.08026920135795032
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 6.148415110392303e-12,
+      "weak_vs_direct": 1.5290213568143527e-10
+    },
+    "2_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.469446951953614e-18,
+      "CTP_trace": 3.1064933340551465e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 8.881784197001252e-16,
+      "group": 2,
+      "positive_frequency_transfer_norm": 5.761476616816803,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.11303558007614846,
+        -0.059031489463225534,
+        -0.03276637871819814,
+        -0.08026920135795032
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 6.1479710211662015e-12,
+      "weak_vs_direct": 1.5211996162070212e-10
+    },
+    "30_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 9.813077866773595e-18,
+      "CTP_trace": 1.0359212944920093e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.2560739669470201e-15,
+      "group": 30,
+      "positive_frequency_transfer_norm": 14.983158828148179,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.449682547302398,
+        -0.23314986617601896,
+        -0.12658642452029387,
+        -0.28180150202900933
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.3642420526698596e-11,
+      "weak_vs_direct": 3.8258442502795136e-10
+    },
+    "30_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 9.813077866773595e-18,
+      "CTP_trace": 1.268855354986942e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.2560739669470201e-15,
+      "group": 30,
+      "positive_frequency_transfer_norm": 14.975600855466238,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.4496825473024052,
+        -0.2331498661760272,
+        -0.12658642452030067,
+        -0.2818015020290097
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.3642420526698596e-11,
+      "weak_vs_direct": 3.8258442502795136e-10
+    },
+    "31_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.0551910960100404e-17,
+      "CTP_trace": 1.0206217618822285e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 31,
+      "positive_frequency_transfer_norm": 16.604100620133877,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.49548671524891535,
+        -0.25679754012945644,
+        -0.13930749121284758,
+        -0.3186575937087418
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.506172964167624e-11,
+      "weak_vs_direct": 4.1740214187903743e-10
+    },
+    "31_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 2.0816681711721685e-17,
+      "CTP_trace": 3.8963515573697816e-19,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 31,
+      "positive_frequency_transfer_norm": 16.597764225581304,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.4954867152489137,
+        -0.256797540129454,
+        -0.13930749121284536,
+        -0.3186575937087429
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.506172964156387e-11,
+      "weak_vs_direct": 4.1766666933844015e-10
+    },
+    "32_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3985787785349405e-17,
+      "CTP_trace": 1.3912516158651883e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.790180836524724e-15,
+      "group": 32,
+      "positive_frequency_transfer_norm": 18.230420638591646,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.5416217187329255,
+        -0.28062405896411025,
+        -0.15213416761118204,
+        -0.35512838814284253
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.6049384044219827e-11,
+      "weak_vs_direct": 4.6298161661045975e-10
+    },
+    "32_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 2.380586098258211e-18,
+      "energies": [
+        -0.5562120090641313,
+        -0.19069155123954112,
+        0.19069155123954112,
+        0.5562120090641313
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 32,
+      "positive_frequency_transfer_norm": 18.225010727945733,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.702622209193363e-17,
+      "source_CAR_upper_violation": 3.702622209193363e-17,
+      "source_differential_control": [
+        0.5416217187329257,
+        -0.2806240589641107,
+        -0.15213416761118248,
+        -0.35512838814284287
+      ],
+      "source_rank": 8,
+      "spatial_refinement": 1.6049384044003183e-11,
+      "weak_vs_direct": 4.636880442048317e-10
+    },
+    "3_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 4.9065389333867974e-18,
+      "CTP_trace": 2.2224026953584705e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 6.280369834735101e-16,
+      "group": 3,
+      "positive_frequency_transfer_norm": 7.584373497711322,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.14915427376618834,
+        -0.07758317372503541,
+        -0.04259345193403066,
+        -0.1065608218321577
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 7.474021401778207e-12,
+      "weak_vs_direct": 2.0086916772944518e-10
+    },
+    "3_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 4.9065389333867974e-18,
+      "CTP_trace": 2.2917535179149164e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 6.280369834735101e-16,
+      "group": 3,
+      "positive_frequency_transfer_norm": 7.584373497711323,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.14915427376618826,
+        -0.07758317372503537,
+        -0.04259345193403065,
+        -0.10656082183215766
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 7.474021401778207e-12,
+      "weak_vs_direct": 2.0086916772944518e-10
+    },
+    "4_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.969320381211996e-18,
+      "CTP_trace": 3.134815998228962e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 4,
+      "positive_frequency_transfer_norm": 9.34193325730588,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.1837785996178626,
+        -0.09541957105693795,
+        -0.052110384260723716,
+        -0.13166821535713896
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 8.698819442580668e-12,
+      "weak_vs_direct": 2.397846948331541e-10
+    },
+    "4_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.0417371955916405e-17,
+      "CTP_trace": 6.685207536204565e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.7798229048217483e-15,
+      "group": 4,
+      "positive_frequency_transfer_norm": 9.341933257305877,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.18377859961786258,
+        -0.09541957105693794,
+        -0.0521103842607237,
+        -0.1316682153571389
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 8.697043085759813e-12,
+      "weak_vs_direct": 2.3843697815412707e-10
+    },
+    "5_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.878959614448864e-18,
+      "CTP_trace": 5.823351512373315e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 5,
+      "positive_frequency_transfer_norm": 11.064664624341836,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.2177065947620775,
+        -0.11291902761389569,
+        -0.061482315336369865,
+        -0.1562242794257076
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 9.948486479142239e-12,
+      "weak_vs_direct": 2.7686437609858184e-10
+    },
+    "5_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 3.878959614448864e-18,
+      "CTP_trace": 3.459070798349749e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 9.930136612989092e-16,
+      "group": 5,
+      "positive_frequency_transfer_norm": 11.064664624341837,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.2177065947620775,
+        -0.11291902761389569,
+        -0.06148231533636987,
+        -0.1562242794257076
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 9.948486479142239e-12,
+      "weak_vs_direct": 2.7686437609858184e-10
+    },
+    "6_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 6.140988867593677e-20,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 6,
+      "positive_frequency_transfer_norm": 12.766694525502892,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.2512219768954279,
+        -0.1302188441571577,
+        -0.07076839028485514,
+        -0.18045358661057276
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.1200818050838525e-11,
+      "weak_vs_direct": 3.176181540580313e-10
+    },
+    "6_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 1.088437337221776e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.7763568394002505e-15,
+      "group": 6,
+      "positive_frequency_transfer_norm": 12.7666945255029,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.2512219768954278,
+        -0.13021884415715768,
+        -0.07076839028485511,
+        -0.18045358661057267
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.1200818050838525e-11,
+      "weak_vs_direct": 3.176181540580313e-10
+    },
+    "7_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.938893903907228e-18,
+      "CTP_trace": 5.225333016721978e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 8.95090418262362e-16,
+      "group": 7,
+      "positive_frequency_transfer_norm": 14.455428668868837,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.28447112811475495,
+        -0.1473898418800941,
+        -0.07999906662588775,
+        -0.20447206148886712
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.2462919585279932e-11,
+      "weak_vs_direct": 3.5983953124617483e-10
+    },
+    "7_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 6.938893903907228e-18,
+      "CTP_trace": 3.1584402765234766e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 8.95090418262362e-16,
+      "group": 7,
+      "positive_frequency_transfer_norm": 14.45542866886883,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.284471128114755,
+        -0.14738984188009413,
+        -0.0799990666258878,
+        -0.2044720614888672
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.2462919585279932e-11,
+      "weak_vs_direct": 3.5983953124617483e-10
+    },
+    "8_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 3.4198955245392376e-20,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.831026719408895e-15,
+      "group": 8,
+      "positive_frequency_transfer_norm": 16.13502420181013,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.3175379112166804,
+        -0.16447259374352508,
+        -0.0891917876636586,
+        -0.22834612355302178
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.3663736808668814e-11,
+      "weak_vs_direct": 4.0178078597302374e-10
+    },
+    "8_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 2.7791945092801645e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 1.831026719408895e-15,
+      "group": 8,
+      "positive_frequency_transfer_norm": 16.135024201810136,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.31753791121668024,
+        -0.164472593743525,
+        -0.08919178766365857,
+        -0.2283461235530217
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.3663736808668814e-11,
+      "weak_vs_direct": 4.0178078597302374e-10
+    },
+    "9_-1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 2.0816681711721685e-17,
+      "CTP_trace": 4.222988637654721e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 3.552713678800501e-15,
+      "group": 9,
+      "positive_frequency_transfer_norm": 17.80804245009818,
+      "seam": 0.0,
+      "sign": -1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.3504740566905823,
+        -0.18149212820372904,
+        -0.09835731417023894,
+        -0.2521167425203433
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.5152323840253482e-11,
+      "weak_vs_direct": 4.4529463568978394e-10
+    },
+    "9_1": {
+      "CTP_linear_solve": 0.0,
+      "CTP_tangent": 2.0816681711721685e-17,
+      "CTP_trace": 4.455260953659611e-19,
+      "energies": [
+        -0.5780374718081991,
+        -0.19841474428582717,
+        0.19841474428582717,
+        0.5780374718081991
+      ],
+      "energy_exchange_hermiticity": 3.552713678800501e-15,
+      "group": 9,
+      "positive_frequency_transfer_norm": 17.808042450098185,
+      "seam": 0.0,
+      "sign": 1,
+      "source_CAR_lower_violation": 3.686122212462139e-17,
+      "source_CAR_upper_violation": 3.686122212462139e-17,
+      "source_differential_control": [
+        0.35047405669058224,
+        -0.181492128203729,
+        -0.09835731417023891,
+        -0.2521167425203432
+      ],
+      "source_rank": 12,
+      "spatial_refinement": 1.5152323840253482e-11,
+      "weak_vs_direct": 4.4529463568978394e-10
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_pg_ctp_mode_jets.py --check",
+  "schema": "NSC-PG-CTP-MODE-JETS-v1",
+  "source_hashes": {
+    "docs/nsc-pg-ctp-mode-jets.md": "daa2ca26c0de962cea191830ec8c5376b57f1c1bd200995db34c9b4d67783152",
+    "scripts/derive_nsc_pg_ctp_mode_jets.py": "973b45a139a3a32c117dd5edc6cb45e6cb9d8e1216097709a21cafc345e90aac",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "tests/test_nsc_pg_ctp_mode_jets.py": "e624a12bf8aefb48d87a927d4b10fd93f33749b813868f8a5a91e7d8fcc252a3"
+  },
+  "status": "PASS: physical PG mode-space history insertion; full KS endpoint jets OPEN",
+  "tolerances": {
+    "algebra": 3e-11,
+    "spatial_and_differential": 3e-08
+  }
+}

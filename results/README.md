@@ -1,5 +1,11 @@
 # Compact result archive
 
+New: [PG source-mode CTP insertion](development/nsc-pg-ctp-mode-jets.json)
+and [raw KS metric pullback](development/nsc-pg-ks-metric-pullback.json)
+are PASS component records across all 63 signed families. Full two-endpoint
+B1 remains OPEN. Their `--check` verifiers reuse the authenticated field and
+vertex payloads; no old generator or PDF rerun is needed.
+
 Current: [all retained PG covariances](development/nsc-pg-retained-covariance.json)
 — **C1b PASS**, 32 massive groups plus LLL. Full source-mode preparation,
 independently integrated CAR and all equal-time CTP matrices are recorded.

@@ -1,5 +1,27 @@
 # What the calculations show
 
+**New CTP connection:** the [physical mode-history insertion](nsc-pg-ctp-mode-jets.md)
+now acts in the same source-mode basis as the prepared PG covariance. Its
+[raw KS metric pullback](nsc-pg-ks-metric-pullback.md) retains the full
+spatial coordinate dependence. All 63 signed families pass the direct/weak
+variation and CTP contraction checks. Complete history-endpoint jets remain
+open; PDF v0.26.0 is unchanged.
+
+| New component | Maximum residual | Tolerance |
+|---|---:|---:|
+| PG weak/direct Hamiltonian variation | $5.63\times10^{-10}$ | $3\times10^{-8}$ |
+| Raw KS weak/direct variation | $2.18\times10^{-9}$ | $3\times10^{-8}$ |
+| CTP tangent condition | $2.78\times10^{-17}$ | $3\times10^{-11}$ |
+| Coordinate metric reconstruction | $1.78\times10^{-15}$ | $3\times10^{-11}$ |
+
+The actual mode-space kernel determines the conditional time-ordered insertion.
+Its raw KS conversion is integrated point by point; using only the neck's
+Jacobian gives a different result. The fixed-surface normal derivative is
+also evaluated. **Remaining B1:** the actual two-endpoint variation support
+and Cauchy embedding, $\delta g_P^A(\tau,\rho)/\delta g^B_{K,e}$.
+No source stress, physical history or metric timestep is assigned here.
+Six focused tests and both all-field verifiers pass.
+
 **Full retained PG preparation: C1b PASS.** The [common-time covariance](nsc-pg-retained-covariance.md)
 now includes all **32 massive groups plus the LLL channel**, with both signed
 angular families and correlations with the unresolved bulk. Its independently
