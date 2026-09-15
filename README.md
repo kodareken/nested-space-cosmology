@@ -32,11 +32,12 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
-**Latest development:** the [versioned compact restart](docs/nsc-compact-matched-restart.md)
-reproduces the historical seed and supplies a separate matched checkpoint on the
-full compact frequency grids. H1 passes; [the current result](docs/current-result.md)
-keeps global PG state normalization as the next open gate. The working PDF
-remains at v0.25.0.
+**Latest development:** the [massive PG mode construction](docs/nsc-pg-massive-mode-resolution.md)
+now covers all 32 retained massive groups and 3,584 frequency/angular-sign
+labels. It connects the horizon and infinity data to both PG charts, with
+complex transmission amplitudes and a verified whole-line Green jump.
+Spatial covariance integration and its spectral tail are the active step;
+the PDF remains v0.25.0.
 
 ## From a note to a universe
 

@@ -644,11 +644,24 @@
       },
       "generator": "scripts/derive_nsc_compact_matched_restart.py",
       "output": "results/development/nsc-compact-matched-restart.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "fresh_mode_reproduction": "derive_nsc_pg_massive_modes.py produces the mode payload and all measured residuals from the same named owners",
+        "policy": "authenticate every source/input/payload and record field; reconstruct stored-field numerical residuals without repeating Jost or historical generators",
+        "stored_field_atol": 3e-13,
+        "stored_field_rtol": 3e-07
+      },
+      "generator": "scripts/check_nsc_pg_massive_modes.py",
+      "output": "results/development/nsc-pg-massive-mode-resolution.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "3ba9e0175f117f268ae09d891b361192952479eb",
+  "source_commit": "cdb0e7de2790863858ddfe698c2e88f5397d1509",
   "source_files": [
     {
       "bytes": 3154,
@@ -1654,10 +1667,50 @@
       "bytes": 2573460,
       "path": "results/development/artifacts/nsc-compact-seed-generations.77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08.npz",
       "sha256": "77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08"
+    },
+    {
+      "bytes": 11820,
+      "path": "docs/nsc-pg-massive-mode-resolution.md",
+      "sha256": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a"
+    },
+    {
+      "bytes": 4965711,
+      "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
+      "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
+    },
+    {
+      "bytes": 66593,
+      "path": "results/development/nsc-pg-massive-mode-resolution.json",
+      "sha256": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce"
+    },
+    {
+      "bytes": 11166,
+      "path": "scripts/check_nsc_pg_massive_modes.py",
+      "sha256": "8459cc5c6d832f138e7dc977e25297cbe2bfa7dc2ca20b14b1b55ac5152adbc0"
+    },
+    {
+      "bytes": 9729,
+      "path": "scripts/derive_nsc_pg_massive_modes.py",
+      "sha256": "484d23fbe59a00db9574e1959f88fbd8278cdd991975e6c7f0dd69a7a0543e8a"
+    },
+    {
+      "bytes": 7583,
+      "path": "src/recursive_horizons/nsc_massive_jost_modes.py",
+      "sha256": "b027182d2aebfa407a2abf7dd7bafb717dfbd1b455490af74390442bc1060ea6"
+    },
+    {
+      "bytes": 15356,
+      "path": "src/recursive_horizons/nsc_pg_massive_modes.py",
+      "sha256": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4"
+    },
+    {
+      "bytes": 3234,
+      "path": "tests/test_nsc_pg_massive_modes.py",
+      "sha256": "56a9a4a572ca9e21c1196140bdc20924f119521a45fdb344277866763114ecda"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 46 post-preprint records plus nine numerical payloads; H1 versioned full compact restart PASS, global PG state OPEN; PDF v0.25.0 retained",
-  "verification_scope": "full1280historicalX regression plus newmatchedcontrol with1152Y andsignedpartners verified; sixfocusedtests andcoldall-field/byte-artifactreproduction pass; unchangedscatteringread fromauthenticatedinput; all193prior scientificfiles andPDF retained"
+  "status": "development snapshot; 47 post-preprint records plus ten numerical payloads; massive PG mode/Green construction PASS, spatial covariance integration OPEN; PDF v0.25.0 retained",
+  "verification_scope": "All 32 massive groups and 3584 positive-energy/signed-angular nodes evaluated; source law, current, complex scattering and whole-line Green residuals verified from authenticated fields; seven focused tests pass; all 201 previous scientific files and PDF retained"
 }
