@@ -1,6 +1,36 @@
 # What the calculations show
 
-**Latest development — massive PG mode/Green construction: PASS.**
+**Latest development — first full-energy massive PG covariance: PASS.**
+The [new calculation](nsc-pg-group13-covariance.md) completes the retained
+$m=\pi/2$, zero-angular-eigenvalue group on the common PG Cauchy surface.
+The [record](../results/development/nsc-pg-group13-covariance.json) contains
+the covariance, independently integrated CAR matrix, and lesser/greater/Keldysh
+blocks, with the complete energy account and its numerical error checks.
+
+| Quantity | Result |
+|---|---:|
+| CAR residual | $3.27\times10^{-11}$ |
+| Covariance eigenvalue range | $[0.03570181,0.96429819]$ |
+| Original-probe / bulk-probe correlation norm | $0.31816523$ |
+| Finite-energy covariance refinement | $2.81\times10^{-15}$ |
+| Tail mode-order change | $5.33\times10^{-15}$ |
+| Tail spatial-grid change | $1.26\times10^{-12}$ |
+| Fourier/normalization covariance-tail bound | $5.70\times10^{-10}$ |
+
+The primary covariance uses the **calculated** CAR Gram; no identity correction
+is used to fill a truncated frequency table. The eight probes inspect the full
+mode-defined field and its unresolved-bulk correlations. They do not form a
+closed eight-mode evolution model.
+
+**Full retained C1b remains OPEN:** 31 massive groups remain. The locked action,
+scales, seeds and all 209 earlier scientific files are unchanged. The existing
+fourth-order reference/local allocation is preserved; no stress or metric
+timestep is assigned here. **PDF v0.25.0 remains unchanged.**
+
+Earlier entries below retain their checkpoint scope.
+
+
+**Previous checkpoint — massive PG mode/Green construction: PASS.**
 The [new derivation](nsc-pg-massive-mode-resolution.md) and
 [record](../results/development/nsc-pg-massive-mode-resolution.json) evaluate
 all **32 massive groups** on the complete existing node tables: **3,584

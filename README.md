@@ -32,12 +32,12 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
-**Latest development:** the [massive PG mode construction](docs/nsc-pg-massive-mode-resolution.md)
-now covers all 32 retained massive groups and 3,584 frequency/angular-sign
-labels. It connects the horizon and infinity data to both PG charts, with
-complex transmission amplitudes and a verified whole-line Green jump.
-Spatial covariance integration and its spectral tail are the active step;
-the PDF remains v0.25.0.
+**Latest development:** the [first massive PG covariance](docs/nsc-pg-group13-covariance.md)
+now includes the full energy integral and correlations with bulk probes.
+Its independently integrated CAR residual is $3.27\times10^{-11}$, and its
+covariance eigenvalues lie in $[0.03570181,0.96429819]$. This is the retained
+compact group with $m=\pi/2$ and zero angular eigenvalue. The other 31 massive
+groups remain in progress; the PDF stays v0.25.0.
 
 ## From a note to a universe
 

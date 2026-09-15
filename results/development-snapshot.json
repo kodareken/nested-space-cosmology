@@ -657,11 +657,25 @@
       },
       "generator": "scripts/check_nsc_pg_massive_modes.py",
       "output": "results/development/nsc-pg-massive-mode-resolution.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "structure, strings, integers, booleans, source/input/payload hashes",
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13,
+        "routine": "recombine the authenticated full-energy input artifact; no old generator rerun"
+      },
+      "generator": "scripts/derive_nsc_pg_group13_covariance.py",
+      "output": "results/development/nsc-pg-group13-covariance.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "cdb0e7de2790863858ddfe698c2e88f5397d1509",
+  "source_commit": "83e2458f3c27689134dc7bfa5c363a7db33e9f86",
   "source_files": [
     {
       "bytes": 3154,
@@ -1707,10 +1721,100 @@
       "bytes": 3234,
       "path": "tests/test_nsc_pg_massive_modes.py",
       "sha256": "56a9a4a572ca9e21c1196140bdc20924f119521a45fdb344277866763114ecda"
+    },
+    {
+      "bytes": 5132,
+      "path": "docs/nsc-pg-group13-covariance.md",
+      "sha256": "9f3640822238ef9c552d4d75909ab85b4fcdedbc12622a0cbed11cb314525158"
+    },
+    {
+      "bytes": 5026,
+      "path": "docs/nsc-pg-threshold-projection.md",
+      "sha256": "e4d2dc9eb62d692cba3a41b54ddb39dd5fea624f38602296899a317fa3b0bdbe"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+    },
+    {
+      "bytes": 35044,
+      "path": "results/development/nsc-pg-group13-covariance.json",
+      "sha256": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92"
+    },
+    {
+      "bytes": 16054,
+      "path": "scripts/derive_nsc_pg_group13_covariance.py",
+      "sha256": "a595a0d257087226ff91527d4d0ec67f84e5d14fcff187f3be4a2ce2b074989f"
+    },
+    {
+      "bytes": 7507,
+      "path": "scripts/derive_nsc_pg_threshold_projection.py",
+      "sha256": "40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6"
+    },
+    {
+      "bytes": 17830,
+      "path": "src/recursive_horizons/nsc_complex_horizon_modes.py",
+      "sha256": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2"
+    },
+    {
+      "bytes": 10451,
+      "path": "src/recursive_horizons/nsc_pg_fast_packets.py",
+      "sha256": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec"
+    },
+    {
+      "bytes": 7885,
+      "path": "src/recursive_horizons/nsc_pg_high_energy.py",
+      "sha256": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b"
+    },
+    {
+      "bytes": 5709,
+      "path": "src/recursive_horizons/nsc_pg_packet_modes.py",
+      "sha256": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd"
+    },
+    {
+      "bytes": 6713,
+      "path": "src/recursive_horizons/nsc_pg_retarded_packets.py",
+      "sha256": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a"
+    },
+    {
+      "bytes": 2650,
+      "path": "src/recursive_horizons/nsc_pg_state_covariance.py",
+      "sha256": "1c0276a62bf90c7ab95011ce0a191f194289cbb6a1c017ab05fcc37b180de6a1"
+    },
+    {
+      "bytes": 6425,
+      "path": "src/recursive_horizons/nsc_pg_tail_packets.py",
+      "sha256": "d237611262a267a6cecfd49415a4f5bc12c9427bfb342068b73af3fdb0222f1f"
+    },
+    {
+      "bytes": 6937,
+      "path": "src/recursive_horizons/nsc_pg_tail_series.py",
+      "sha256": "3ff03563443cd6f6c6da7498de819acb59ffbe2a54e04dd6d5c3937176d537c7"
+    },
+    {
+      "bytes": 3659,
+      "path": "src/recursive_horizons/nsc_pg_threshold_projection.py",
+      "sha256": "56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f"
+    },
+    {
+      "bytes": 6748,
+      "path": "tests/test_nsc_complex_horizon_modes.py",
+      "sha256": "c9dc67841801f640e86c0468c146615c94490f81a339eaaa0b8af497397be2c2"
+    },
+    {
+      "bytes": 2068,
+      "path": "tests/test_nsc_pg_group13_covariance.py",
+      "sha256": "f068fa6402bac5c110b32b06507d64b845052385b07c8cd96b64ea7aa179de0e"
+    },
+    {
+      "bytes": 2756,
+      "path": "tests/test_nsc_pg_threshold_projection.py",
+      "sha256": "7bcfcd23f9b3ca97e573500e07c81ad2881544046cba39053ae6c9ac871d9e82"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "development snapshot; 47 post-preprint records plus ten numerical payloads; massive PG mode/Green construction PASS, spatial covariance integration OPEN; PDF v0.25.0 retained",
-  "verification_scope": "All 32 massive groups and 3584 positive-energy/signed-angular nodes evaluated; source law, current, complex scattering and whole-line Green residuals verified from authenticated fields; seven focused tests pass; all 201 previous scientific files and PDF retained"
+  "status": "development snapshot; 48 post-preprint records plus eleven numerical payloads; first massive PG covariance group PASS, full retained C1b OPEN; PDF v0.25.0 retained",
+  "verification_scope": "Full-energy group13 covariance and independently integrated CAR verified; fifteen focused tests and all-field record replay pass; all 209 previous scientific files and the PDF are byte-preserved"
 }

@@ -1,5 +1,12 @@
 # Compact result archive
 
+Latest: [full-energy PG covariance of retained group13](development/nsc-pg-group13-covariance.json)
+— first massive group PASS, including the computed CAR matrix and bulk-probe
+correlations. [Method and error account](../docs/nsc-pg-group13-covariance.md).
+Verifier: `python3 scripts/derive_nsc_pg_group13_covariance.py --check`.
+Full retained C1b and the remaining 31 massive groups stay OPEN; PDF v0.25.0 unchanged.
+
+
 Latest: [massive PG mode resolution](development/nsc-pg-massive-mode-resolution.json)
 — 32 groups and 3,584 signed-angular/frequency labels; current, source law,
 complex scattering and whole-line Green checks pass. See the
