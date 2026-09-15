@@ -735,11 +735,24 @@
       },
       "generator": "scripts/derive_nsc_pg_ks_metric_pullback.py",
       "output": "results/development/nsc-pg-ks-metric-pullback.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "hashes, original eight coefficients, schemas and scope",
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_weyl_boundary_jets.py",
+      "output": "results/development/nsc-weyl-boundary-jets.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "978b68c9d5bc04ed0d0efb330edc248c2a5b24fd",
+  "source_commit": "43b982d18c3f95d3d546d2fc818d795f1e3eba32",
   "source_files": [
     {
       "bytes": 3154,
@@ -1035,6 +1048,11 @@
       "bytes": 5432,
       "path": "docs/nsc-warp-local-neck-source.md",
       "sha256": "963a184bc1d998de455f473331ab8a9f2154547451bf35c572518dbd32ca0bb4"
+    },
+    {
+      "bytes": 5022,
+      "path": "docs/nsc-weyl-boundary-jets.md",
+      "sha256": "93342e305d00fe89b07928b40e426fc4aac4045dbd7369481b17ad6c9faa9422"
     },
     {
       "bytes": 3127,
@@ -1357,6 +1375,11 @@
       "sha256": "68092e0de029be1c944f992419a40ff7a8ecbd5afba4b8599ec06a25b7871945"
     },
     {
+      "bytes": 26401,
+      "path": "results/development/nsc-weyl-boundary-jets.json",
+      "sha256": "66436d286f1feb79398745ed16aa0ce129fcd02ba2445d38c7b5aa81a317ac34"
+    },
+    {
       "bytes": 11160,
       "path": "results/development/nsc-weyl-endpoint-match.json",
       "sha256": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6"
@@ -1657,6 +1680,11 @@
       "sha256": "fcb6374a46742aead87223f6eb5e1dfc3524a6f0b4cdbb4af670c27075901ea5"
     },
     {
+      "bytes": 7086,
+      "path": "scripts/derive_nsc_weyl_boundary_jets.py",
+      "sha256": "efe623da3299e5ef7182cb065c2e173e8b02da951ebb020d02f7437d007d3895"
+    },
+    {
       "bytes": 4847,
       "path": "scripts/map_nsc_adm_neck_source.py",
       "sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c"
@@ -1937,6 +1965,11 @@
       "sha256": "a31e4dbc52fa241684a54a071bda254ecea5963bb1d25493b3c17d7200c09836"
     },
     {
+      "bytes": 3836,
+      "path": "src/recursive_horizons/nsc_weyl_boundary_jets.py",
+      "sha256": "7acf2bf3b58dc58115bf3cc21d01799ad88f53bdcaf4d68d625d36a7c22f39d4"
+    },
+    {
       "bytes": 3479,
       "path": "tests/test_nsc_boundary_state.py",
       "sha256": "10eee1c2d0d67ad7c5ef981a903c8419bc4cd4263b667bcd4a6129c4db48fbec"
@@ -2070,10 +2103,15 @@
       "bytes": 1280,
       "path": "tests/test_nsc_transmitting_resolvent.py",
       "sha256": "23607bb611681106ed74877afb12867ba8fc0bdd7a45baa470492df5423e1156"
+    },
+    {
+      "bytes": 2347,
+      "path": "tests/test_nsc_weyl_boundary_jets.py",
+      "sha256": "8ddb6794de5db61bee7c4cc74bae077f00e4360ddcb4f3c6d8baafe70d28c83e"
     }
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "53 post-preprint records; retained C1b PASS; PG mode-history insertion and raw KS metric-profile pullback PASS; complete two-endpoint B1 OPEN",
-  "verification_scope": "63 signed families: physical weak/direct Hamiltonian variation, CTP source-fiber contraction, rho-dependent PG/KS metric pullback and fixed normal; all 254 prior scientific files preserved; PDF v0.26.0 unchanged"
+  "status": "54 post-preprint records; Weyl intrinsic boundary jets extracted; physical endpoint/gluing domain and remaining transmitting action OPEN",
+  "verification_scope": "Exact decomposition of the existing Weyl nodal gradient into bulk, canonical boundary jets and stencil defect; no new source or selected history; all 266 prior scientific files preserved; PDF v0.26.0 unchanged"
 }

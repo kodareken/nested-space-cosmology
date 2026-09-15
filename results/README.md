@@ -1,5 +1,11 @@
 # Compact result archive
 
+New: [intrinsic Weyl boundary jets](development/nsc-weyl-boundary-jets.json)
+— extraction and reconstruction PASS. All original end-node coefficients are
+preserved, with explicit bulk/boundary/stencil accounting and proper-normal
+shear coefficients. The physical interface variational domain remains OPEN.
+Verifier: `python3 scripts/derive_nsc_weyl_boundary_jets.py --check`.
+
 New: [PG source-mode CTP insertion](development/nsc-pg-ctp-mode-jets.json)
 and [raw KS metric pullback](development/nsc-pg-ks-metric-pullback.json)
 are PASS component records across all 63 signed families. Full two-endpoint

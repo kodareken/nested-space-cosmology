@@ -32,6 +32,13 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
+**Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](docs/nsc-weyl-boundary-jets.md)
+reconstructs the stored $93.5426$ end-node derivative from its bulk, boundary
+and numerical-stencil contributions. The physical boundary rate is the normal
+shear $H_\parallel-H_\perp$. Its coefficient is now explicit; it is not an
+extra force chosen to cancel the old number. Physical gluing and the remaining
+same-action contribution remain to be specified. PDF v0.26.0 is unchanged.
+
 **New CTP connection:** the [physical mode-history insertion](docs/nsc-pg-ctp-mode-jets.md)
 now acts in the same source-mode basis as the prepared PG covariance. Its
 [raw KS metric pullback](docs/nsc-pg-ks-metric-pullback.md) retains the full
