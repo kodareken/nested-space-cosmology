@@ -1,5 +1,24 @@
 # What the calculations show
 
+**Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](nsc-weyl-boundary-jets.md)
+reconstructs the stored $93.5426$ end-node derivative from its bulk, boundary
+and numerical-stencil contributions. The physical boundary rate is the normal
+shear $H_\parallel-H_\perp$. Its coefficient is now explicit; it is not an
+extra force chosen to cancel the old number. Physical gluing and the remaining
+same-action contribution remain to be specified. PDF v0.26.0 is unchanged.
+
+For the final radius node, the exact stored derivative is recovered as
+bulk $+0.68615308$, canonical boundary $-87.27311859$, and stencil contribution
+$-6.95567981$. All old nodal derivatives reconstruct within
+$9.13\times10^{-12}$ against tolerance $3\times10^{-11}$; the shared eight
+original coefficients remain unchanged.
+
+This changes the remaining gate: the physical interface must bind intrinsic
+metric and normal-shear variations on one actual surface. The two diagnostic
+time ends are not automatically the two sides of that surface. The Gaussian
+Schur factor is already part of $\Gamma_G$ and cannot be counted again as a
+new $\Gamma_{\rm rest}$ force. No additional term is set to zero.
+
 **New CTP connection:** the [physical mode-history insertion](nsc-pg-ctp-mode-jets.md)
 now acts in the same source-mode basis as the prepared PG covariance. Its
 [raw KS metric pullback](nsc-pg-ks-metric-pullback.md) retains the full

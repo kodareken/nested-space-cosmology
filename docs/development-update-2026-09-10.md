@@ -1,13 +1,13 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`978b68c9d5bc04ed0d0efb330edc248c2a5b24fd`. It contains 58 derivation notes, two numerical-audit evidence
-files, 53 result records, 54 generators/verifiers, 55 implementation modules,
-seventeen binary artifacts and twenty-seven focused test files. The 266
-scientific files are imported byte for byte from that Git checkpoint.
-Retained C1b, PG source-mode variation and raw KS metric-profile pullback pass;
-the complete two-endpoint history pullback and stationarity remain open.
-PDF v0.26.0 is retained.
+`43b982d18c3f95d3d546d2fc818d795f1e3eba32`. It contains 59 derivation notes, two numerical-audit evidence
+files, 54 result records, 55 generators/verifiers, 56 implementation modules,
+seventeen binary artifacts and twenty-eight focused test files. The 271
+scientific files are imported byte for byte from that checkpoint. The new
+Weyl boundary-jet extraction preserves the old end-node record and identifies
+the actual normal-shear variation; physical gluing and the remaining
+transmitting action remain open. PDF v0.26.0 is retained.
 
 The 100-record manifest describes the preceding preprint checkpoint.
 This subsequent development snapshot adds the source derivations below.
@@ -31,6 +31,7 @@ statement:
 
 | Connection | Derivation and implementation |
 |---|---|
+| Intrinsic Weyl boundary jets and exact old-gradient decomposition | [Boundary-jet owner](nsc-weyl-boundary-jets.md) |
 | Physical PG mode-space time-ordered CTP insertion | [PG history derivative](nsc-pg-ctp-mode-jets.md) |
 | Raw KS metric-profile and fixed-normal pullback | [KS coordinate pullback](nsc-pg-ks-metric-pullback.md) |
 | Full retained common-PG covariance and CTP Cauchy data | [Retained state](nsc-pg-retained-covariance.md) |
