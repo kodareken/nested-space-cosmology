@@ -3,7 +3,7 @@
 ## One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space
 
 **Douglas Ek**<br>
-Version 0.25.0 · causal memory and frequency-transfer vertices, 14 September 2026<br>
+Version 0.26.0 · common-PG covariance of the retained charged field, 15 September 2026<br>
 Working preprint
 
 ## Abstract
@@ -64,8 +64,14 @@ The larger tilted class now has executable fourth-order, local-history and
 weighted interface components with separate residuals. The full transmitting-action
 binding finds state-changing admissible kernel directions in all 33 channels
 and records the unevaluated selector and endpoint derivative explicitly.
+The horizon/infinity mode construction now prepares the common-PG covariance
+of all 32 retained massive groups and the separate massless lowest-Landau
+channel. The complete energy integral preserves the canonical anticommutation
+relations to $1.40\times10^{-10}$ and retains correlations with the unresolved
+bulk. This supplies the state input to the causal memory formulation; the
+transmitting history/endpoint derivatives remain the next action-level link.
 The paper follows the spectrum from intuitive picture to exact operator equations, using
-100 preprint records and forty-two post-preprint
+100 preprint records and fifty-one post-preprint
 development records. The remaining integration is the physical recursive
 return state, joint geometry/scale solution, particle pole, and cosmological
 projection of the same state.
@@ -1044,7 +1050,61 @@ $$
 
 The four $W_A$ are the existing compact spatial metric vertices. The retarded driven equation and independent weak-resolvent integral agree to $5.57\times10^{-13}$ across all 33 channels; adjoint frequency exchange agrees to $6.19\times10^{-13}$ and inverse-memory Dyson reconstruction to $5.14\times10^{-16}$, against tolerance $3\times10^{-11}$. The zero-transfer limit recovers the recorded static jets. The reverse retarded response and its temporal metric variation remain zero in the trapped probe cell ([CTP memory record](../results/development/nsc-transmitting-ctp-resolvent.json), [authenticated fields](../results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz)).
 
-**Retarded-memory C1 component PASS; full C1 and C2--C4 OPEN.** The [CTP binding note](../docs/nsc-transmitting-ctp-resolvent.md) identifies the physical preparation on a common PG-time slice, the full unitary history and the KS endpoint-coordinate pullback still needed to obtain complete branch jets. The old frequency covariance is not assigned to spatial packets. The remaining boundary derivative and physical two-sided Weyl mismatch stay unevaluated, with the eight stored coefficients preserved. No stress or metric evolution is attributed to this temporal-response calculation.
+**Retarded-memory component PASS.** At this checkpoint, full C1 and C2--C4 remained OPEN. The [CTP binding note](../docs/nsc-transmitting-ctp-resolvent.md) identifies the physical preparation on a common PG-time slice, the full unitary history and the KS endpoint-coordinate pullback still needed to obtain complete branch jets. The old frequency covariance is not assigned to spatial packets. The remaining boundary derivative and physical two-sided Weyl mismatch stay unevaluated, with the eight stored coefficients preserved. No stress or metric evolution is attributed to this temporal-response calculation.
+
+**Retained-state C1b PASS: common-PG preparation.** The physical massive
+horizon/infinity maps now supply the missing state on the same Cauchy surface
+as the retarded response. The construction keeps the existing affine horizon
+pair $C_H$, inherited incoming occupation, magnetic angular normalization and
+matched $\delta_q$ start convention:
+
+$$
+C_{\mathrm{PG}}=\mathcal F(C_H\oplus n_{\mathrm{in}})\mathcal F^\dagger.
+$$
+
+All 32 massive groups are evaluated, with their own signed angular mode maps;
+the separate LLL preparation gives 33 retained groups in total. The full
+energy integral combines resolved massive modes, the causal subgap contour
+and the massive high-energy tail. For the two angular signs, the independently
+integrated positive-energy Gram and centered covariance give
+
+$$
+G_{\mathrm{raw},s}=G_s+S G_{-s}^{*}S,\qquad
+C_{\mathrm{raw},s}=\frac{1}{2}G_{\mathrm{raw},s}+K_s-S K_{-s}^{*}S.
+$$
+
+No identity correction fills a truncated frequency table. Eight orthonormal
+coordinates per massive group inspect the original four parent/child packets
+and four bulk observables. The whole-field source-mode operator and its
+$Q=I-JJ^\dagger$ complement remain present; these observables do not form a
+closed eight-mode dynamics. The existing state-block owner retains
+$C_{JQ}(E;\rho)=F_J C_{\mathrm{src}}(\Phi-JF_J)^\dagger$.
+
+| Check | Result | Numerical tolerance |
+|---|---:|---:|
+| Largest integrated CAR residual | $1.40\times10^{-10}$ | $3\times10^{-9}$ |
+| Covariance eigenvalues | $[0.0027381,0.9972619]$ | $[0,1]$ |
+| Low-energy covariance refinement | $2.89\times10^{-11}$ | $3\times10^{-9}$ |
+| Middle-band covariance refinement | $1.18\times10^{-14}$ | $3\times10^{-9}$ |
+| Fourier/normalization covariance-tail bound | $9.73\times10^{-10}$ | $3\times10^{-9}$ |
+
+The source-occupation omission above the middle-band start is exponentially
+bounded. Physical/middle-band join controls and numerical mode-order/grid
+checks remain distinct from the Fourier representation bound. The
+[retained-state record](../results/development/nsc-pg-retained-covariance.json)
+contains every covariance, CAR matrix and equal-time contour block;
+[its derivation](../docs/nsc-pg-retained-covariance.md) gives the connected
+energy account and numerical scope. The retained preparation supplies
+
+$$
+G^{<}=iC_{\mathrm{raw}},\qquad
+G^{>}=-i(G_{\mathrm{raw}}-C_{\mathrm{raw}}),\qquad
+G^K=-i(G_{\mathrm{raw}}-2C_{\mathrm{raw}}).
+$$
+
+Full transmitting branch jets still require unitary history derivatives and
+KS endpoint coordinates, followed by the remaining boundary variation and
+two-sided Weyl match. No metric trajectory is inferred from this state gate.
 
 Let Q_b denote internal transfer into the visible component and J_b,J_d denote external room supply. The complete ledger is
 

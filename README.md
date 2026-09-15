@@ -32,18 +32,16 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
-**Latest development:** the [first massive PG covariance](docs/nsc-pg-group13-covariance.md)
-now includes the full energy integral and correlations with bulk probes.
-Its independently integrated CAR residual is $3.27\times10^{-11}$, and its
-covariance eigenvalues lie in $[0.03570181,0.96429819]$. This is the retained
-compact group with $m=\pi/2$ and zero angular eigenvalue. The other 31 massive
-groups remain in progress; the PDF stays v0.25.0.
+**Full retained PG preparation: C1b PASS.** The [common-time covariance](docs/nsc-pg-retained-covariance.md)
+now includes all **32 massive groups plus the LLL channel**, with both signed
+angular families and correlations with the unresolved bulk. Its independently
+integrated CAR residual is at most $1.40\times10^{-10}$, against the declared
+$3\times10^{-9}$ numerical tolerance. Historical seeds and physical scales are
+unchanged. The working PDF is now **v0.26.0**.
 
-The [compact subgap panels](docs/nsc-pg-retained-subgap.md) are complete for
-all 38 signed families. The [remaining high-energy tails](docs/nsc-pg-retained-tail.md)
-are also computed for all 61 signed families, with their error budgets and
-numerical transition points recorded. Full covariance assembly uses these
-same inputs; the physical scales remain fixed.
+The next calculation couples this prepared state to the transmitting history
+jets and endpoint variation. The [current result](docs/current-result.md)
+shows the completed state gate and the remaining action derivatives.
 
 ## From a note to a universe
 

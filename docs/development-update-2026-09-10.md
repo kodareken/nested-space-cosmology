@@ -1,10 +1,11 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`149934f1cd63d94a449df9c6979e54436ba58576`. It contains 55 derivation notes and one precision-audit
-evidence file, 50 result records, 47 generators/verifiers, 50 implementation
-modules, thirteen active binary artifacts and twenty-four focused test files.
-The 240 scientific files are imported byte for byte from that Git checkpoint.
+`f768ee07738799a8b8c5ac14c9f1af8cd34fdcd1`. It contains 56 derivation notes, two numerical-audit evidence
+files, 51 result records, 52 generators/verifiers, 53 implementation modules,
+fifteen binary artifacts and twenty-five focused test files. The 254 scientific
+files are imported byte for byte from that Git checkpoint. The retained-state
+C1b gate now passes; history/endpoint derivatives and stationarity remain open.
 
 The 100-record manifest describes the preceding preprint checkpoint.
 This subsequent development snapshot adds the source derivations below.
@@ -28,6 +29,7 @@ statement:
 
 | Connection | Derivation and implementation |
 |---|---|
+| Full retained common-PG covariance and CTP Cauchy data | [Retained state](nsc-pg-retained-covariance.md) |
 | Boundary response with occupied, empty and initial-correlation kernels | [Finite Gaussian boundary state](nsc-boundary-state.md) |
 | Canonical tower, cutoff conversion and warped determinant in one account | [Canonical–spectral bridge](nsc-canonical-spectral-bridge.md) |
 | Imported doubled-Dirac anomaly with the actual compact domain | [Compact anomaly application](nsc-compact-anomaly-bridge.md) |

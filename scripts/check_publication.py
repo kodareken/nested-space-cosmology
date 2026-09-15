@@ -148,6 +148,10 @@ def check_development_snapshot() -> set[str]:
             raise ValueError(f"development comparison policy changed: {output}")
         validate_authenticated_inputs(ROOT, value)
         declared_payloads = [value.get("payload")]
+        auxiliary = value.get("auxiliary_payloads", [])
+        if not isinstance(auxiliary, list) or any(not isinstance(p, dict) or not p.get("path") for p in auxiliary):
+            raise ValueError("invalid auxiliary payload declaration")
+        declared_payloads.extend(auxiliary)
         if value.get("schema") == "NSC-COMPACT-MATCHED-RESTART-v1":
             for key in ("scattering_payload", "seed_generations_payload"):
                 if not isinstance(value.get(key), dict) or not value[key].get("path"):

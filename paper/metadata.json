@@ -1,11 +1,11 @@
 {
   "author": "Douglas Ek",
-  "date": "14 September 2026",
-  "date_iso": "2026-09-14",
+  "date": "15 September 2026",
+  "date_iso": "2026-09-15",
   "project": "Nested-Space Cosmology",
-  "source_date_epoch": 1789344000,
+  "source_date_epoch": 1789430400,
   "status": "WORKING PREPRINT",
   "subtitle": "One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space",
   "title": "Nested-Space Cosmology",
-  "version": "0.25.0"
+  "version": "0.26.0"
 }

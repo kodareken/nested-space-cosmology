@@ -1,10 +1,10 @@
 {
-  "bytes": 2030147,
+  "bytes": 2076644,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "9ec8fda8b49e4a66e794de21c87c2c63e75e543b71bc7e439da50f56e2efe0d2",
+  "metadata_sha256": "90034005464366c8b957904e1d91eeba19c35ae14bdcf5a5d958d294681f5501",
   "output": "paper/nested-space-cosmology.pdf",
   "pages": 43,
-  "pdf_sha256": "68d57f99c3ffb9c2ead60ff0530542400fbbc99ea3e426305f29b900c2569376",
+  "pdf_sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -96,6 +96,10 @@
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
     },
     {
+      "path": "results/development/nsc-pg-retained-covariance.json",
+      "sha256": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495"
+    },
+    {
       "path": "results/development/nsc-physical-jet-extended-gate.json",
       "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
     },
@@ -161,10 +165,10 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "a89da3af1159832e7609c3d52787dfff179885dfd449269b8d614425a8608452"
+      "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "c0947d694f3e7b3d60e127a9f51aa8b12c19912c06f1f2945c7b017e4288966a",
-  "version": "0.25.0"
+  "source_sha256": "509f61e7cec3e0a294bcb5f492b805c6ae0216eb1ae1b6fab0a7eb29ec329ff3",
+  "version": "0.26.0"
 }

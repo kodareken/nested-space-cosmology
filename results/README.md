@@ -1,5 +1,12 @@
 # Compact result archive
 
+Current: [all retained PG covariances](development/nsc-pg-retained-covariance.json)
+— **C1b PASS**, 32 massive groups plus LLL. Full source-mode preparation,
+independently integrated CAR and all equal-time CTP matrices are recorded.
+Verifier: `python3 scripts/derive_nsc_pg_retained_covariance.py --check`.
+Working PDF **v0.26.0** incorporates this result. Earlier entries below retain
+their checkpoint scope.
+
 New complete input sets: [38 compact subgap families](development/nsc-pg-retained-subgap.json)
 and [61 remaining tail families](development/nsc-pg-retained-tail.json).
 Both are scoped input PASS records; full retained C1b remains OPEN.
