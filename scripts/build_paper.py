@@ -41,6 +41,7 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         if f"<!-- nsc-figure:{marker} -->" in text:
             paths.append(path)
     for path in (
+        "results/development/nsc-pg-retained-covariance.json",
         "results/development/scale-binding.json",
         "results/development/recursive-source-binding.json",
         "results/development/charged-ctp-neck-source.json",

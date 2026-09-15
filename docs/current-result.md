@@ -1,5 +1,33 @@
 # What the calculations show
 
+**Full retained PG preparation: C1b PASS.** The [common-time covariance](nsc-pg-retained-covariance.md)
+now includes all **32 massive groups plus the LLL channel**, with both signed
+angular families and correlations with the unresolved bulk. Its independently
+integrated CAR residual is at most $1.40\times10^{-10}$, against the declared
+$3\times10^{-9}$ numerical tolerance. Historical seeds and physical scales are
+unchanged. The working PDF is now **v0.26.0**.
+
+The next calculation couples this prepared state to the transmitting history
+jets and endpoint variation. The [current result](current-result.md)
+shows the completed state gate and the remaining action derivatives.
+
+| Computed quantity | Result |
+|---|---:|
+| Signed family evaluations, including LLL | 63 |
+| Largest CAR residual | $1.40\times10^{-10}$ |
+| Covariance eigenvalue range | $[0.0027381,0.9972619]$ |
+| Largest measured low-energy covariance refinement | $2.89\times10^{-11}$ |
+| Largest measured middle-band covariance refinement | $1.18\times10^{-14}$ |
+| Largest covariance-tail representation bound | $9.73\times10^{-10}$ |
+
+[Full record](../results/development/nsc-pg-retained-covariance.json) ·
+[Join/error audit](nsc-pg-retained-join-audit.json).
+The whole-field mode map retains $C_H$, incoming occupation and the probe
+complement. No closed eight-mode state replaces the bulk. All-field replay
+and three focused tests pass. $\Gamma_{\rm rest}$, the physical two-sided
+Weyl mismatch and extended stationarity remain OPEN; no metric timestep is
+started. Earlier entries below retain their dated checkpoint scope.
+
 **Retained-state integration inputs: PASS.** Two further input collections
 are now complete for the full covariance construction:
 
@@ -21,7 +49,7 @@ The completed group-13 result below remains the first full-energy massive
 covariance. PDF v0.25.0 and the metric-evolution gate are unchanged.
 
 
-**Latest development — first full-energy massive PG covariance: PASS.**
+**Earlier checkpoint — first full-energy massive PG covariance: PASS.**
 The [new calculation](nsc-pg-group13-covariance.md) completes the retained
 $m=\pi/2$, zero-angular-eigenvalue group on the common PG Cauchy surface.
 The [record](../results/development/nsc-pg-group13-covariance.json) contains

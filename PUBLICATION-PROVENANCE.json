@@ -7,7 +7,7 @@
     "private plans, host paths, refs, reflogs, and development history",
     "NSC experiments outside the current frontier dependency closure"
   ],
-  "export_timestamp_utc": "2026-09-14T00:00:00Z",
+  "export_timestamp_utc": "2026-09-15T00:00:00Z",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
   "follow_up_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
   "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 22212,
+      "bytes": 22092,
       "path": "README.md",
-      "sha256": "7cc53b07b219094350a9bfc7893e77716522459041e9a3289f9efc6c8e9865a0"
+      "sha256": "8fcd8670b12fe621cd45f3a2ac61c087f4bafb4a3e9a5ea0efc7ec64b8076d9f"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 35555,
+      "bytes": 37155,
       "path": "docs/current-result.md",
-      "sha256": "10fa47b5ed64346eba088c8806e55eb02a544096b5f2998f2a89d46e71d0097f"
+      "sha256": "ff19ac408b32ed6c76dd6b0861d5c9f5b3bd300ccf7f2033fdd613359a708639"
     },
     {
-      "bytes": 13310,
+      "bytes": 13508,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "4f61bd3f5e9be622f3741fb238b3cf5cc0f506a4d3da41f9fb873fd2ffb8b75b"
+      "sha256": "4e60e6dcce11501c6b0ce594b2ccd3085566c0cba5a8089f4cd57b7e2feb6152"
     },
     {
       "bytes": 3154,
@@ -411,6 +411,16 @@
       "sha256": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a"
     },
     {
+      "bytes": 7041,
+      "path": "docs/nsc-pg-retained-covariance.md",
+      "sha256": "43c87090e85246aee1802b324f31d70e76e91b4df2e6cc90da7b85c54fa0c04a"
+    },
+    {
+      "bytes": 13261,
+      "path": "docs/nsc-pg-retained-join-audit.json",
+      "sha256": "111800dd3fbcec40bee9459274c7c374e0aa37b5e8e6463b7c9a2ebd37b1c0a7"
+    },
+    {
       "bytes": 3100,
       "path": "docs/nsc-pg-retained-subgap.md",
       "sha256": "4e0eab72119fff6b5b2a16b3267333a18d891fd0b365131fb56e4e9f2863518f"
@@ -621,24 +631,24 @@
       "sha256": "b1f6699d1cc8d9224dc3c596376e80537b2801bc4e96f2ce1ddf38cafb9fad39"
     },
     {
-      "bytes": 7213,
+      "bytes": 7378,
       "path": "paper/build-manifest.json",
-      "sha256": "c74a5f55b4bb7a9908afeb0c6a9a2f65b8688a17d8f2a428b030418c6bb001f6"
+      "sha256": "2513127bb20752d00f9cda80dbf230a2131d1586ee100780aded26e94c583f19"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
-      "sha256": "9ec8fda8b49e4a66e794de21c87c2c63e75e543b71bc7e439da50f56e2efe0d2"
+      "sha256": "90034005464366c8b957904e1d91eeba19c35ae14bdcf5a5d958d294681f5501"
     },
     {
-      "bytes": 136137,
+      "bytes": 139284,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "c0947d694f3e7b3d60e127a9f51aa8b12c19912c06f1f2945c7b017e4288966a"
+      "sha256": "509f61e7cec3e0a294bcb5f492b805c6ae0216eb1ae1b6fab0a7eb29ec329ff3"
     },
     {
-      "bytes": 2030147,
+      "bytes": 2076644,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "68d57f99c3ffb9c2ead60ff0530542400fbbc99ea3e426305f29b900c2569376"
+      "sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf"
     },
     {
       "bytes": 1170,
@@ -656,14 +666,14 @@
       "sha256": "57b0b76c31eda3845fde761b6507cf6fa254fba444e9b6f1c4e2d9ed026591f9"
     },
     {
-      "bytes": 15241,
+      "bytes": 15654,
       "path": "results/README.md",
-      "sha256": "14e960b762fb32da638ac4761159514ed364a2a0c150fb79ddb5fb996d9d6ae5"
+      "sha256": "b2eb4edc1a652fed7ad43c425f76d4e57b5efaee2f8bc84b1568a18987cca8a9"
     },
     {
-      "bytes": 65969,
+      "bytes": 69005,
       "path": "results/development-snapshot.json",
-      "sha256": "dab2b22d446cf26043105b3f95539654e28d6e5cebc7c1a86812696aa4a52917"
+      "sha256": "461962194b70e2ada15ce6afe7c6b9851999dd20f2bf607b82374821c37b7c14"
     },
     {
       "bytes": 3283,
@@ -711,9 +721,19 @@
       "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
     },
     {
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    },
+    {
       "bytes": 4965711,
       "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
       "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
+    },
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
     },
     {
       "bytes": 186007,
@@ -949,6 +969,11 @@
       "bytes": 66593,
       "path": "results/development/nsc-pg-massive-mode-resolution.json",
       "sha256": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce"
+    },
+    {
+      "bytes": 2002372,
+      "path": "results/development/nsc-pg-retained-covariance.json",
+      "sha256": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495"
     },
     {
       "bytes": 19381,
@@ -1491,9 +1516,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 56632,
+      "bytes": 56695,
       "path": "scripts/build_paper.py",
-      "sha256": "a89da3af1159832e7609c3d52787dfff179885dfd449269b8d614425a8608452"
+      "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
       "bytes": 3480,
@@ -1741,9 +1766,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 18118,
+      "bytes": 18404,
       "path": "scripts/check_publication.py",
-      "sha256": "abc46b7f92fe81683bd6b080699f1676fa37ccbd0e0d7a8a069f376166dfb0bf"
+      "sha256": "b9d74871200191a284bdb0d1d06ba2b2cae66840b0a3d2060b81c86fd1093bd2"
     },
     {
       "bytes": 12921,
@@ -1876,9 +1901,19 @@
       "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
     },
     {
+      "bytes": 5179,
+      "path": "scripts/derive_nsc_pg_batched_low.py",
+      "sha256": "0eb0f0cc007dbde104f34317ff4802190d1e6f18318933f4d2c79eda0007d9cf"
+    },
+    {
       "bytes": 16054,
       "path": "scripts/derive_nsc_pg_group13_covariance.py",
       "sha256": "a595a0d257087226ff91527d4d0ec67f84e5d14fcff187f3be4a2ce2b074989f"
+    },
+    {
+      "bytes": 3593,
+      "path": "scripts/derive_nsc_pg_group14_covariance.py",
+      "sha256": "9dd9ef34485eadf16c62b6b014ae2dd19f7a175e06b7b5d6ecc5399d2bfca2e0"
     },
     {
       "bytes": 11831,
@@ -1886,9 +1921,24 @@
       "sha256": "0a9e81124513051c16e5ea344245a3c82bc5b09d92c7368424415ef2184efeb1"
     },
     {
+      "bytes": 5185,
+      "path": "scripts/derive_nsc_pg_low_inputs.py",
+      "sha256": "fb0a4f623d844d7cf62d4dbdbf23481e70f12013ad6c4f65a5d66523f21a0e39"
+    },
+    {
       "bytes": 9729,
       "path": "scripts/derive_nsc_pg_massive_modes.py",
       "sha256": "484d23fbe59a00db9574e1959f88fbd8278cdd991975e6c7f0dd69a7a0543e8a"
+    },
+    {
+      "bytes": 3096,
+      "path": "scripts/derive_nsc_pg_mid_inputs.py",
+      "sha256": "fc824b1010940618a00a50ae66571a292a76e0ad3c8c2641decea47881d33b3d"
+    },
+    {
+      "bytes": 16547,
+      "path": "scripts/derive_nsc_pg_retained_covariance.py",
+      "sha256": "27018e2af23dcd6e2fe47e215b5a9a3c8863103e616644a96119209433ab26fd"
     },
     {
       "bytes": 21056,
@@ -2526,6 +2576,16 @@
       "sha256": "f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7"
     },
     {
+      "bytes": 1998,
+      "path": "src/recursive_horizons/nsc_pg_batch_projection.py",
+      "sha256": "1891a18f4f06a1b80fe3f052b8e00fcd6b97a9e1e57b8b5b2d139caea06622ac"
+    },
+    {
+      "bytes": 6564,
+      "path": "src/recursive_horizons/nsc_pg_batched_modes.py",
+      "sha256": "4730ab26994892e8c786c1cef6a2401f6d59420a3278ac2b15763b1b3d89b1d4"
+    },
+    {
       "bytes": 10451,
       "path": "src/recursive_horizons/nsc_pg_fast_packets.py",
       "sha256": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec"
@@ -2549,6 +2609,11 @@
       "bytes": 5709,
       "path": "src/recursive_horizons/nsc_pg_packet_modes.py",
       "sha256": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd"
+    },
+    {
+      "bytes": 3540,
+      "path": "src/recursive_horizons/nsc_pg_retained_covariance.py",
+      "sha256": "c1d5b3a864a29de1601877b81a1882ecbf8008a6856b741d0806c09a9f88f6aa"
     },
     {
       "bytes": 6713,
@@ -2841,6 +2906,11 @@
       "sha256": "56a9a4a572ca9e21c1196140bdc20924f119521a45fdb344277866763114ecda"
     },
     {
+      "bytes": 2643,
+      "path": "tests/test_nsc_pg_retained_covariance.py",
+      "sha256": "84713b98436090748faac0a1a06aea75ecf545cc292110cc3ef381e6de5004ee"
+    },
+    {
       "bytes": 3433,
       "path": "tests/test_nsc_pg_retained_tail.py",
       "sha256": "6bb56b1d2f75d55deccdd3c3a91ccb8cbd5150b42997df7d4a957ff5ad140fdd"
@@ -2948,7 +3018,7 @@
   ],
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.25.0",
+  "public_version": "0.26.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,
