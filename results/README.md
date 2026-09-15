@@ -1,5 +1,13 @@
 # Compact result archive
 
+Latest: [massive PG mode resolution](development/nsc-pg-massive-mode-resolution.json)
+— 32 groups and 3,584 signed-angular/frequency labels; current, source law,
+complex scattering and whole-line Green checks pass. See the
+[derivation and numerical scope](../docs/nsc-pg-massive-mode-resolution.md).
+Verifier: `python3 scripts/check_nsc_pg_massive_modes.py --check`.
+Spatial covariance integration remains OPEN; PDF v0.25.0 is unchanged.
+
+
 H1: [full compact matched restart](development/nsc-compact-matched-restart.json)
 records both explicit start conventions and their immutable payloads. All
 1,280 historical X controls pass; the new matched checkpoint includes 1,152

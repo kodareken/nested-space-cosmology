@@ -1,10 +1,10 @@
 # Development update: common source and gravitational backreaction
 
 This update publishes the committed laboratory work through
-`3ba9e0175f117f268ae09d891b361192952479eb`. It contains 50 derivation
-notes, 46 result records, 40 generators, 37 implementation
-modules, nine active binary artifacts and nineteen focused test files. The 201 scientific files are imported
-byte for byte from that Git checkpoint.
+`cdb0e7de2790863858ddfe698c2e88f5397d1509`. It contains 51 derivation notes, 47 result records,
+42 generators/verifiers, 39 implementation modules, ten active binary artifacts
+and twenty focused test files. The 209 scientific files are imported byte for
+byte from that Git checkpoint.
 
 The 100-record manifest describes the preceding preprint checkpoint.
 This subsequent development snapshot adds the source derivations below.
@@ -75,6 +75,7 @@ statement:
 | Exact massive signed-spin maps and mixed-group paired-state information certificate | [Massive preparation gate](nsc-massive-signed-preparation.md) |
 | Magnetic horizon pairing, computed modal X/Y and finite compact collar correction | [Paired horizon map](nsc-horizon-paired-pg-map.md) |
 | Explicit historical and matched compact seed generations on the full retained grids | [Versioned compact restart](nsc-compact-matched-restart.md) |
+| Massive PG mode fields and whole-line Green normalization on all retained nodes | [Massive PG mode resolution](nsc-pg-massive-mode-resolution.md) |
 
 The known channel has outward power
 $P_0=0.00014222067954246644$ in the recorded throat units.

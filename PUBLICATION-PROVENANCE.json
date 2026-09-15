@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 21757,
+      "bytes": 21819,
       "path": "README.md",
-      "sha256": "ccd8f6e13de15f3837feab47d6c7bef2bbc8af84f5ca84f318afb28ac3c1699c"
+      "sha256": "7908b33cc77434941f7bdc6fa7c3cd2700540ec9eb419ed048cf46a057af80e3"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 31388,
+      "bytes": 32942,
       "path": "docs/current-result.md",
-      "sha256": "f9422773f79d5be8c938246da3235a0b5bb7fb5a2889a26d2923d0f41d49972c"
+      "sha256": "14905197375aee73b6f14d0c6d951612bd1bd00609171c027584ff5f710b36c9"
     },
     {
-      "bytes": 12774,
+      "bytes": 12931,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "d4a871bf6e9190c014dd04d6119364bb8ee77a706e95e8ca87723fcf62198d9d"
+      "sha256": "1eabf67f884c7ee3f214474f99df8b0f3a2e86390387bb9784909e435ec8d649"
     },
     {
       "bytes": 3154,
@@ -401,6 +401,11 @@
       "sha256": "14d3fde7de952eb3f747d47a19495a5cac9fe66a01672f9eabc580195b8908d1"
     },
     {
+      "bytes": 11820,
+      "path": "docs/nsc-pg-massive-mode-resolution.md",
+      "sha256": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a"
+    },
+    {
       "bytes": 1793,
       "path": "docs/nsc-physical-jet-extended-gate.md",
       "sha256": "45a71d5c678a1d5531dc3a5715b98c47c8088b28a61777d4bb6f61c67a4320d4"
@@ -626,14 +631,14 @@
       "sha256": "89750876286acfc4fedb78f145743ecdd0dcc5ea293ec398ac8333937023172b"
     },
     {
-      "bytes": 14139,
+      "bytes": 14581,
       "path": "results/README.md",
-      "sha256": "8567fcc13b50b4e71c276ee0617c6824e55094a9246e22b8ee036aa221d4ad2a"
+      "sha256": "29ef3c349b8b2567976ecaf967627909036f7d7e802bb2415227e4a447a5b7a1"
     },
     {
-      "bytes": 56877,
+      "bytes": 59032,
       "path": "results/development-snapshot.json",
-      "sha256": "bbcc32ba5dcdb047248c146a9b1f5ee58c9c700b33cdc7ab862596ae21dcfd2d"
+      "sha256": "dd5732dddd4afcda7eb3a7c406ecde4f05416265cacef67dcfe126af255ee93f"
     },
     {
       "bytes": 3283,
@@ -674,6 +679,11 @@
       "bytes": 407306,
       "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
       "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+    },
+    {
+      "bytes": 4965711,
+      "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
+      "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
     },
     {
       "bytes": 14321218,
@@ -889,6 +899,11 @@
       "bytes": 24697,
       "path": "results/development/nsc-pg-lll-preparation.json",
       "sha256": "7ea9504c9f39f44f963377cb7fb4f19909fe38bc65fd48c2b2e3ed030017d782"
+    },
+    {
+      "bytes": 66593,
+      "path": "results/development/nsc-pg-massive-mode-resolution.json",
+      "sha256": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce"
     },
     {
       "bytes": 4939,
@@ -1576,6 +1591,11 @@
       "sha256": "ca10587a97c97a382c9b59621f2c7ce14738d3e383c57d51c6c1af5ed7b0e80c"
     },
     {
+      "bytes": 11166,
+      "path": "scripts/check_nsc_pg_massive_modes.py",
+      "sha256": "8459cc5c6d832f138e7dc977e25297cbe2bfa7dc2ca20b14b1b55ac5152adbc0"
+    },
+    {
       "bytes": 19929,
       "path": "scripts/check_nsc_plateau_conditions.py",
       "sha256": "2eabe6d8382453443ec36673684dbeb7a41525d94e93765c35b3c69fe71479e6"
@@ -1799,6 +1819,11 @@
       "bytes": 11831,
       "path": "scripts/derive_nsc_pg_lll_preparation.py",
       "sha256": "0a9e81124513051c16e5ea344245a3c82bc5b09d92c7368424415ef2184efeb1"
+    },
+    {
+      "bytes": 9729,
+      "path": "scripts/derive_nsc_pg_massive_modes.py",
+      "sha256": "484d23fbe59a00db9574e1959f88fbd8278cdd991975e6c7f0dd69a7a0543e8a"
     },
     {
       "bytes": 6311,
@@ -2371,6 +2396,11 @@
       "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
     },
     {
+      "bytes": 7583,
+      "path": "src/recursive_horizons/nsc_massive_jost_modes.py",
+      "sha256": "b027182d2aebfa407a2abf7dd7bafb717dfbd1b455490af74390442bc1060ea6"
+    },
+    {
       "bytes": 8990,
       "path": "src/recursive_horizons/nsc_massive_signed_preparation.py",
       "sha256": "a9935f3f04de7d984ea580f019c04d0601fad29f30e62c707ba146202b640d09"
@@ -2409,6 +2439,11 @@
       "bytes": 11063,
       "path": "src/recursive_horizons/nsc_pg_lll_preparation.py",
       "sha256": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a"
+    },
+    {
+      "bytes": 15356,
+      "path": "src/recursive_horizons/nsc_pg_massive_modes.py",
+      "sha256": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4"
     },
     {
       "bytes": 2844,
@@ -2654,6 +2689,11 @@
       "bytes": 1725,
       "path": "tests/test_nsc_pg_lll_preparation.py",
       "sha256": "59e414f64dd97d8a9d9d37e0b2498fcedc32c9b7a79760f7f1d287d5444a73d3"
+    },
+    {
+      "bytes": 3234,
+      "path": "tests/test_nsc_pg_massive_modes.py",
+      "sha256": "56a9a4a572ca9e21c1196140bdc20924f119521a45fdb344277866763114ecda"
     },
     {
       "bytes": 1144,

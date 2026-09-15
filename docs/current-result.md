@@ -1,6 +1,35 @@
 # What the calculations show
 
-**Latest development — full compact restart: H1 PASS.** The
+**Latest development — massive PG mode/Green construction: PASS.**
+The [new derivation](nsc-pg-massive-mode-resolution.md) and
+[record](../results/development/nsc-pg-massive-mode-resolution.json) evaluate
+all **32 massive groups** on the complete existing node tables: **3,584
+positive-energy/angular-sign combinations**, with signed-frequency partners
+fixed by the existing operator map.
+
+The input is the affine horizon covariance and inherited incoming occupation.
+Complex Jost amplitudes give the exterior modes; the matched inner preparation
+gives their transmitted components and independent interior horizon partner.
+An open infinity channel remains present even when its occupation vanishes.
+
+| Check | Maximum | Tolerance |
+|---|---:|---:|
+| Complex scattering isometry | $1.12\times10^{-12}$ | $3\times10^{-11}$ |
+| Physical source law | $0$ | $3\times10^{-11}$ |
+| Source CAR violation | $2.66\times10^{-17}$ | $3\times10^{-11}$ |
+| Whole-line Green jump, relative | $8.29\times10^{-10}$ | $3\times10^{-9}$ |
+| PG fields under outer-radius doubling | $7.79\times10^{-10}$ | $3\times10^{-9}$ |
+
+Seven focused tests pass, including rejection of an omitted open infinity
+channel. The old seed generations and all 201 previous scientific files are
+unchanged. **Full C1b remains OPEN at the packet energy integral and its
+contact/tail account.** A finite mode table is not used to fill the continuum
+CAR identity. PDF v0.25.0 and the metric-evolution gate remain unchanged.
+
+The earlier entries below retain their individual checkpoint scope.
+
+
+**Previous checkpoint — full compact restart: H1 PASS.** The
 [versioned restart](nsc-compact-matched-restart.md) now regenerates every
 retained compact frequency from the original horizon/incoming data: 20 groups,
 1,280 X blocks, 1,152 angular-partner Y blocks and their signed-frequency
