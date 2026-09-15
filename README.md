@@ -32,6 +32,13 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
+**New CTP connection:** the [physical mode-history insertion](docs/nsc-pg-ctp-mode-jets.md)
+now acts in the same source-mode basis as the prepared PG covariance. Its
+[raw KS metric pullback](docs/nsc-pg-ks-metric-pullback.md) retains the full
+spatial coordinate dependence. All 63 signed families pass the direct/weak
+variation and CTP contraction checks. Complete history-endpoint jets remain
+open; PDF v0.26.0 is unchanged.
+
 **Full retained PG preparation: C1b PASS.** The [common-time covariance](docs/nsc-pg-retained-covariance.md)
 now includes all **32 massive groups plus the LLL channel**, with both signed
 angular families and correlations with the unresolved bulk. Its independently

@@ -709,11 +709,37 @@
       },
       "generator": "scripts/derive_nsc_pg_retained_covariance.py",
       "output": "results/development/nsc-pg-retained-covariance.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "source/input hashes and domain labels",
+        "fields": "all",
+        "float_atol": 3e-12,
+        "float_rtol": 3e-10
+      },
+      "generator": "scripts/derive_nsc_pg_ctp_mode_jets.py",
+      "output": "results/development/nsc-pg-ctp-mode-jets.json"
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "comparison": {
+        "exact": "source/input hashes and domain labels",
+        "fields": "all",
+        "float_atol": 3e-13,
+        "float_rtol": 3e-13
+      },
+      "generator": "scripts/derive_nsc_pg_ks_metric_pullback.py",
+      "output": "results/development/nsc-pg-ks-metric-pullback.json"
     }
   ],
   "release_manifest_sha256": "ca7f7996823cf517418a26d8d8f427c96c56f5b5c9b35074ab22d2cb07d56f5f",
   "schema": "NSC-DEVELOPMENT-SNAPSHOT-v1",
-  "source_commit": "f768ee07738799a8b8c5ac14c9f1af8cd34fdcd1",
+  "source_commit": "978b68c9d5bc04ed0d0efb330edc248c2a5b24fd",
   "source_files": [
     {
       "bytes": 3154,
@@ -881,9 +907,19 @@
       "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
     },
     {
+      "bytes": 4530,
+      "path": "docs/nsc-pg-ctp-mode-jets.md",
+      "sha256": "daa2ca26c0de962cea191830ec8c5376b57f1c1bd200995db34c9b4d67783152"
+    },
+    {
       "bytes": 5132,
       "path": "docs/nsc-pg-group13-covariance.md",
       "sha256": "9f3640822238ef9c552d4d75909ab85b4fcdedbc12622a0cbed11cb314525158"
+    },
+    {
+      "bytes": 4497,
+      "path": "docs/nsc-pg-ks-metric-pullback.md",
+      "sha256": "397d44e013cd939493538f1b8fce8d0c709560c1d0a944be5f04d40a3e50669b"
     },
     {
       "bytes": 6324,
@@ -1041,6 +1077,11 @@
       "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
     },
     {
+      "bytes": 9829760,
+      "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+      "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+    },
+    {
       "bytes": 428603,
       "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
       "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
@@ -1049,6 +1090,11 @@
       "bytes": 849780,
       "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
       "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    },
+    {
+      "bytes": 1194377,
+      "path": "results/development/artifacts/nsc-pg-ks-metric-pullback.191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76.npz",
+      "sha256": "191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76"
     },
     {
       "bytes": 4965711,
@@ -1226,9 +1272,19 @@
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
     },
     {
+      "bytes": 59593,
+      "path": "results/development/nsc-pg-ctp-mode-jets.json",
+      "sha256": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6"
+    },
+    {
       "bytes": 35044,
       "path": "results/development/nsc-pg-group13-covariance.json",
       "sha256": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92"
+    },
+    {
+      "bytes": 35475,
+      "path": "results/development/nsc-pg-ks-metric-pullback.json",
+      "sha256": "e4cf9ae39b6c964780d3bcaf4682357d2883e8ea4eb5081552815a0a18ea12d2"
     },
     {
       "bytes": 24697,
@@ -1486,6 +1542,11 @@
       "sha256": "0eb0f0cc007dbde104f34317ff4802190d1e6f18318933f4d2c79eda0007d9cf"
     },
     {
+      "bytes": 12368,
+      "path": "scripts/derive_nsc_pg_ctp_mode_jets.py",
+      "sha256": "973b45a139a3a32c117dd5edc6cb45e6cb9d8e1216097709a21cafc345e90aac"
+    },
+    {
       "bytes": 16054,
       "path": "scripts/derive_nsc_pg_group13_covariance.py",
       "sha256": "a595a0d257087226ff91527d4d0ec67f84e5d14fcff187f3be4a2ce2b074989f"
@@ -1494,6 +1555,11 @@
       "bytes": 3593,
       "path": "scripts/derive_nsc_pg_group14_covariance.py",
       "sha256": "9dd9ef34485eadf16c62b6b014ae2dd19f7a175e06b7b5d6ecc5399d2bfca2e0"
+    },
+    {
+      "bytes": 8594,
+      "path": "scripts/derive_nsc_pg_ks_metric_pullback.py",
+      "sha256": "a129a100d72db3044b27712e577247c7c317f46dd2bddd18091ee0ff0903be16"
     },
     {
       "bytes": 11831,
@@ -1751,6 +1817,11 @@
       "sha256": "4730ab26994892e8c786c1cef6a2401f6d59420a3278ac2b15763b1b3d89b1d4"
     },
     {
+      "bytes": 7855,
+      "path": "src/recursive_horizons/nsc_pg_ctp_mode_jets.py",
+      "sha256": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d"
+    },
+    {
       "bytes": 10451,
       "path": "src/recursive_horizons/nsc_pg_fast_packets.py",
       "sha256": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec"
@@ -1759,6 +1830,11 @@
       "bytes": 7885,
       "path": "src/recursive_horizons/nsc_pg_high_energy.py",
       "sha256": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b"
+    },
+    {
+      "bytes": 5774,
+      "path": "src/recursive_horizons/nsc_pg_ks_metric_pullback.py",
+      "sha256": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92"
     },
     {
       "bytes": 11063,
@@ -1916,9 +1992,19 @@
       "sha256": "d9ce5c32cd43b3c44e96411c46fea27585ae316e7e5c37653df439b684f49e1d"
     },
     {
+      "bytes": 2555,
+      "path": "tests/test_nsc_pg_ctp_mode_jets.py",
+      "sha256": "e624a12bf8aefb48d87a927d4b10fd93f33749b813868f8a5a91e7d8fcc252a3"
+    },
+    {
       "bytes": 2068,
       "path": "tests/test_nsc_pg_group13_covariance.py",
       "sha256": "f068fa6402bac5c110b32b06507d64b845052385b07c8cd96b64ea7aa179de0e"
+    },
+    {
+      "bytes": 2192,
+      "path": "tests/test_nsc_pg_ks_metric_pullback.py",
+      "sha256": "9e9df086159b35b2ddf73dd9010aa316f46fe9c43fa283c1072339237084c661"
     },
     {
       "bytes": 1725,
@@ -1988,6 +2074,6 @@
   ],
   "source_method": "immutable Git blobs; no working-tree or untracked inputs",
   "source_project": "BlackHoles-Infinity",
-  "status": "51 post-preprint records; all 33 retained groups have common-PG covariance; C1b PASS; transmitting history jets and extended stationarity OPEN",
-  "verification_scope": "Full-energy covariance, independent CAR Gram, eigenvalues, signed pairing, source law, quadrature/refinement and tail/join error controls; all 240 prior scientific files preserved"
+  "status": "53 post-preprint records; retained C1b PASS; PG mode-history insertion and raw KS metric-profile pullback PASS; complete two-endpoint B1 OPEN",
+  "verification_scope": "63 signed families: physical weak/direct Hamiltonian variation, CTP source-fiber contraction, rho-dependent PG/KS metric pullback and fixed normal; all 254 prior scientific files preserved; PDF v0.26.0 unchanged"
 }
