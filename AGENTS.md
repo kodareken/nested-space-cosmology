@@ -101,6 +101,14 @@ Use the labels defined in [THEORY.md](THEORY.md): Postulate, Imported result, Re
 
 ## Current frontier
 
+The [2026-09-16 action-scope clarification](docs/nsc-declared-action-scope.md)
+supersedes earlier requests for an extra `Gamma_rest` functional. Count the
+full Gaussian determinant, reference and local terms once. The active B1d
+owner is the physical history/KS-endpoint chain rule; do not equate PG time
+with KS time or the old diagnostic time ends with the smooth seam. Follow
+[current result](docs/current-result.md). The checkpoint narrative below is
+historical and does not authorize an additional boundary action.
+
 Use the [September 10 development update](docs/development-update-2026-09-10.md)
 before the earlier preprint checkpoint below. The common-source equations,
 boundary state, measure, ADM source maps and flux condition are committed.

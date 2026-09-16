@@ -1,5 +1,13 @@
 # Development update: common source and gravitational backreaction
 
+**Author clarification, 2026-09-16:** [declared action scope](nsc-declared-action-scope.md).
+No extra independent `Gamma_rest` term is required by the inspected canonical
+ledger. Its existing Gaussian/reference/local variation remains the task.
+B1d still needs the physical history-to-KS-endpoint chain rule. This entry is
+an execution correction, not a new scientific record or numerical gate;
+the 55-record development collection and PDF v0.26.0 are unchanged.
+
+
 This update publishes the committed laboratory work through
 `fc0585ce95173112c370ff4fd0c174803c8a9c97`. It contains 60 derivation notes, two numerical-audit evidence
 files, 55 result records, 56 generators/verifiers, 57 implementation modules,

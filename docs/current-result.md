@@ -3,7 +3,7 @@
 **Actual geometric seam matching: PASS.** The [new boundary calculation](nsc-smooth-seam-variation.md)
 uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
 normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required
-by that domain. The quantum/field remainder and bulk self-sourcing remain open;
+by that domain. The full declared quantum/field variation and bulk self-sourcing remain open;
 no new interface force or zero quantum source is assigned. PDF v0.26.0 is unchanged.
 
 On the actual reference seam, the parent Weyl coefficients are
@@ -19,11 +19,19 @@ $-a\,d/d\rho$. This shorthand is not applied to time-dependent quantum fields.
 The old $93.5426$ time-node diagnostic is preserved and is not identified
 with either side of this surface.
 
-**Remaining definition gate:** the complete remaining same-action
-quantum/field functional and its physical history/endpoint domain must be
-identified before a full stationarity equation can be evaluated. The Gaussian
-Schur factor is already counted and cannot supply an extra chosen force.
-Further geometric or adapter controls do not determine that missing functional.
+**Action scope clarified by the author (2026-09-16):**
+[$\Gamma_{\rm rest}$ counts only remaining declared contributions](nsc-declared-action-scope.md).
+The geometric seam terms and full Gaussian CTP determinant, including its
+Schur complement, are already owned. No extra independent boundary functional
+is required or introduced. Stationarity must be evaluated from the declared
+Gaussian, reference and local action with complete physical state/history jets.
+
+**B1d remains OPEN:** the physical history-to-KS-endpoint chain rule is not
+implemented. Its two diagnostic time-node coordinates must not be identified
+with the two sides of the single smooth throat. The existing chart has
+$T=T(\rho)$ and $z=\tau+S(\rho)$; replacing KS time by PG time would give
+a different derivative. B2, $V_c$ and extended stationarity remain unevaluated.
+This clarification adds no numerical result; PDF v0.26.0 is unchanged.
 
 **Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](nsc-weyl-boundary-jets.md)
 reconstructs the stored $93.5426$ end-node derivative from its bulk, boundary

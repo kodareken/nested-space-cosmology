@@ -32,10 +32,15 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
+**Current action scope:** [the author's clarification](docs/nsc-declared-action-scope.md)
+counts the Gaussian CTP determinant and induced terms once; no extra
+independent $\Gamma_{\rm rest}$ term is required. The next open connection
+is the physical history-to-KS-endpoint derivative. [Current status](docs/current-result.md).
+
 **Actual geometric seam matching: PASS.** The [new boundary calculation](docs/nsc-smooth-seam-variation.md)
 uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
 normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required
-by that domain. The quantum/field remainder and bulk self-sourcing remain open;
+by that domain. The declared quantum/field variation and bulk self-sourcing remain open;
 no new interface force or zero quantum source is assigned. PDF v0.26.0 is unchanged.
 
 **Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](docs/nsc-weyl-boundary-jets.md)
