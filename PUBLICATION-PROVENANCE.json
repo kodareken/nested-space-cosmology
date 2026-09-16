@@ -36,9 +36,9 @@
       "sha256": "66556720765dae4500b411a491640caf4b9c0fa009c736f6fd3c74654a535b97"
     },
     {
-      "bytes": 10195,
+      "bytes": 10716,
       "path": "AGENTS.md",
-      "sha256": "cdcf045f86e6ddb6fd47d0395bbdf3e6392631da6dc58c931ae6fbf85a2acaac"
+      "sha256": "a69039586a9276c02e7988c89b2d7e9a793810ab0d05360e032d38909118e927"
     },
     {
       "bytes": 1056,
@@ -66,9 +66,9 @@
       "sha256": "b32edf6e6ace3b501fcff75908afcbc841983a0c1666c58d544495d34e7d637b"
     },
     {
-      "bytes": 23452,
+      "bytes": 23789,
       "path": "README.md",
-      "sha256": "d01f1a5043bf883e882fb0589570008de82784ecdccb9fb53c8db85f74ee7665"
+      "sha256": "5788ab01ef732bdfb9c2b2afe3cfec685ed3c3c0403bfc83df6d0f883bdf2bc3"
     },
     {
       "bytes": 629,
@@ -81,14 +81,14 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 41158,
+      "bytes": 41712,
       "path": "docs/current-result.md",
-      "sha256": "299b405699079098539aeb822e1f0a3bfed43ec96cd8efa272c9a1ef23efb535"
+      "sha256": "0d75de498180d57a970dd9f30c9395dd00ebf4fec36d7d365f9cbfa88835d2ef"
     },
     {
-      "bytes": 14032,
+      "bytes": 14497,
       "path": "docs/development-update-2026-09-10.md",
-      "sha256": "25b41ab3abae9fff500331441da355cf7acb4e9a91611c7872dbbd974b99e7db"
+      "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
       "bytes": 3154,
@@ -244,6 +244,11 @@
       "bytes": 8724,
       "path": "docs/nsc-curvature-eft.md",
       "sha256": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e"
+    },
+    {
+      "bytes": 5151,
+      "path": "docs/nsc-declared-action-scope.md",
+      "sha256": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae"
     },
     {
       "bytes": 2715,
