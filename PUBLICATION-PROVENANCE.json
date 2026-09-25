@@ -716,9 +716,9 @@
       "sha256": "1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8"
     },
     {
-      "bytes": 2327,
+      "bytes": 2274,
       "path": "paper/local-gate-evidence/snapshot.json",
-      "sha256": "1e4b1a4e3ffa751ee686110b49a686ec0d4edaf61c5a2ae749fa10847f89f8ea"
+      "sha256": "5caa9161bbf7bfdd65b9f2b28dd14d5c35e50ff33fd84429babcc82cc8a3e57a"
     },
     {
       "bytes": 6187,
@@ -1641,9 +1641,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 2240,
+      "bytes": 2254,
       "path": "scripts/build_local_gate_draft.py",
-      "sha256": "b852b081776704a6d9b3cdc078e957f25c0cca59e1997badbe3526e01c3be3bb"
+      "sha256": "bddb98a5c0d28513245cc80cdf8787393bd3a7b409b71d0d7a2d2f10e6bb3deb"
     },
     {
       "bytes": 56695,
@@ -1651,9 +1651,9 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 3492,
+      "bytes": 3506,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "5ba7230fb0461aabb3900dbbaafa1b8f790704da7c3a98ed82ecb67711622b2c"
+      "sha256": "c2ee1a414c4638f62ef89090aca15eafe447dfaa9bf85a5240b399dc982f7760"
     },
     {
       "bytes": 17236,

@@ -83,7 +83,7 @@ def main() -> int:
         ],
     }
     OUTPUT.write_text(
-        json.dumps(record, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(record, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
     )
     print(f"wrote {OUTPUT.relative_to(ROOT)} with {len(record['included_paths'])} paths")
     return 0
