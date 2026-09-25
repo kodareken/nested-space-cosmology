@@ -1,0 +1,280 @@
+{
+  "allocation_changed": false,
+  "allocation_total": 2e-11,
+  "arithmetic_scope": "remaining geometry, field and assembly arithmetic; phase arithmetic is already in phase_value",
+  "components": {
+    "arithmetic": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "baseline_low_subgap": {
+      "allocation_per_component": 3e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "between_node": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "changed_history_UV_tail": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "covered_regions": {
+      "allocation_excess": [
+        7.916253820835393e-12,
+        0.0
+      ],
+      "allocation_per_component": 1e-12,
+      "bound": [
+        8.916253820835393e-12,
+        3.882373567206641e-18
+      ],
+      "evidence": {
+        "field": "partial_error_budget.covered_spectral_regions_action_error_upper",
+        "path": "results/development/nsc-incoming-source-update-v5.json",
+        "sha256": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d"
+      },
+      "scope": "only the unchanged V5 covered baseline spectral regions",
+      "status": "REUSE: bound exceeds provisional allocation"
+    },
+    "energy_interpolation": {
+      "allocation_per_component": 1e-12,
+      "bound": [
+        4.831544943811172e-26,
+        3.7840291005960114e-26
+      ],
+      "evidence": {
+        "field": "total_N_beta_interpolation_error_upper",
+        "path": "results/development/nsc-ks-difference-interpolation-d48-v3.json",
+        "sha256": "4a0f524c86a98c19c8ec1eaa57b15e3c303192f66f61ddf3e98dc87b86bc8268"
+      },
+      "exact_upper_evidence": [
+        {
+          "exponent": -241,
+          "mantissa": "170732020046352255259968496515477806790233676431"
+        },
+        {
+          "exponent": -243,
+          "mantissa": "534864056753924120233991382699230321686467122599"
+        }
+      ],
+      "status": "ENCLOSED: ideal difference interpolation; node solves and arithmetic excluded"
+    },
+    "field_space_time": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "phase_value": {
+      "allocation_per_component": 1e-12,
+      "bound": [
+        8.289915933464546e-14,
+        6.995695022789683e-14
+      ],
+      "evidence": {
+        "field": "quadrature_attempts.192.value_error_upper_N_beta",
+        "path": "results/development/nsc-ks-current-phase-accuracy-v3-n129.json",
+        "sha256": "1e66f1f4b8828ed9cd8c4963bd1c67af130c928cccc775dd38091f779b68a857"
+      },
+      "exact_upper_evidence": [
+        {
+          "binary64_upper": 8.289915933464546e-14,
+          "exponent": -73,
+          "mantissa": "782960423"
+        },
+        {
+          "binary64_upper": 6.995695022789683e-14,
+          "exponent": -72,
+          "mantissa": "330362357"
+        }
+      ],
+      "status": "ENCLOSED: 129 nodal phase values including phase contraction arithmetic; between-node excluded"
+    },
+    "upstream": {
+      "allocation_per_component": 2e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    }
+  },
+  "constraint_order": [
+    "N",
+    "beta"
+  ],
+  "degree": 48,
+  "full_error_sum": null,
+  "input_hashes": {
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-ks-current-phase-accuracy-v3-n129.json": "1e66f1f4b8828ed9cd8c4963bd1c67af130c928cccc775dd38091f779b68a857",
+    "results/development/nsc-ks-difference-interpolation-d48-v3.json": "4a0f524c86a98c19c8ec1eaa57b15e3c303192f66f61ddf3e98dc87b86bc8268",
+    "results/development/nsc-local-gate-evidence-components-v3.json": "2d5fb66fa3310395cc9972ab2a66342c331931c76fea0715e7f565a118986cf4"
+  },
+  "known_component_proofs_replayed": [
+    "covered_regions",
+    "energy_interpolation",
+    "phase_value"
+  ],
+  "missing_components": [
+    "field_space_time",
+    "changed_history_UV_tail",
+    "baseline_low_subgap",
+    "upstream",
+    "between_node",
+    "arithmetic"
+  ],
+  "named_gap": "field_source_and_continuous_residual_enclosures_missing",
+  "numerical_indicators_used_as_bounds": false,
+  "partial_known_error_sum": [
+    8.999152980170087e-12,
+    6.996083260150188e-14
+  ],
+  "phase_continuous_remainder_included": false,
+  "phase_nodes": 192,
+  "phase_target_nodes_hex": [
+    "0x1.2d47e189e2af7p+0",
+    "0x1.2d487920cd0d9p+0",
+    "0x1.2d4a3fce2bf15p+0",
+    "0x1.2d4d354be2515p+0",
+    "0x1.2d51592521217p+0",
+    "0x1.2d56aab67955ep+0",
+    "0x1.2d5d292df5173p+0",
+    "0x1.2d64d38b38227p+0",
+    "0x1.2d6da89fa7518p+0",
+    "0x1.2d77a70e97453p+0",
+    "0x1.2d82cd4d8228ep+0",
+    "0x1.2d8f19a444896p+0",
+    "0x1.2d9c8a2d6133dp+0",
+    "0x1.2dab1cd64c130p+0",
+    "0x1.2dbacf5fbbffbp+0",
+    "0x1.2dcb9f5e03769p+0",
+    "0x1.2ddd8a3970272p+0",
+    "0x1.2df08d2eb14bfp+0",
+    "0x1.2e04a54f44bd0p+0",
+    "0x1.2e19cf81eaab2p+0",
+    "0x1.2e3008831ff29p+0",
+    "0x1.2e474ce59ef21p+0",
+    "0x1.2e5f9912e6d27p+0",
+    "0x1.2e78e94bc929ep+0",
+    "0x1.2e9339a8fde4dp+0",
+    "0x1.2eae861bbd5e5p+0",
+    "0x1.2ecaca6e608f0p+0",
+    "0x1.2ee80245073b5p+0",
+    "0x1.2f06291e44060p+0",
+    "0x1.2f253a53ce4dbp+0",
+    "0x1.2f45311b39b88p+0",
+    "0x1.2f660886b3536p+0",
+    "0x1.2f87bb85c4263p+0",
+    "0x1.2faa44e6191f9p+0",
+    "0x1.2fcd9f5450393p+0",
+    "0x1.2ff1c55ccab5bp+0",
+    "0x1.3016b16c84566p+0",
+    "0x1.303c5dd1ef68ep+0",
+    "0x1.3062c4bdd58a4p+0",
+    "0x1.3089e0443cfcdp+0",
+    "0x1.30b1aa5d526d5p+0",
+    "0x1.30da1ce65703dp+0",
+    "0x1.310331a2929b0p+0",
+    "0x1.312ce23c49f91p+0",
+    "0x1.31572845b8e3dp+0",
+    "0x1.3181fd3a0fe9dp+0",
+    "0x1.31ad5a7e75b8dp+0",
+    "0x1.31d939630bdaap+0",
+    "0x1.32059323f6afap+0",
+    "0x1.323260ea687e2p+0",
+    "0x1.325f9bcdaf6e3p+0",
+    "0x1.328d3cd446471p+0",
+    "0x1.32bb3cf4e7c55p+0",
+    "0x1.32e99517a45ebp+0",
+    "0x1.33183e16fa487p+0",
+    "0x1.334730c0ef963p+0",
+    "0x1.337665d82e443p+0",
+    "0x1.33a5d6152202bp+0",
+    "0x1.33d57a2717952p+0",
+    "0x1.34054ab55d9a1p+0",
+    "0x1.34354060668dep+0",
+    "0x1.346553c2ebdccp+0",
+    "0x1.34957d7311d67p+0",
+    "0x1.34c5b6038c570p+0",
+    "0x1.34f5f604c3f72p+0",
+    "0x1.35263605fb974p+0",
+    "0x1.35566e967617dp+0",
+    "0x1.358698469c118p+0",
+    "0x1.35b6aba921606p+0",
+    "0x1.35e6a1542a543p+0",
+    "0x1.361671e270592p+0",
+    "0x1.364615f465eb9p+0",
+    "0x1.3675863159aa1p+0",
+    "0x1.36a4bb4898581p+0",
+    "0x1.36d3adf28da5dp+0",
+    "0x1.370256f1e38f9p+0",
+    "0x1.3730af14a028fp+0",
+    "0x1.375eaf3541a73p+0",
+    "0x1.378c503bd8801p+0",
+    "0x1.37b98b1f1f702p+0",
+    "0x1.37e658e5913eap+0",
+    "0x1.3812b2a67c13ap+0",
+    "0x1.383e918b12357p+0",
+    "0x1.3869eecf78047p+0",
+    "0x1.3894c3c3cf0a7p+0",
+    "0x1.38bf09cd3df53p+0",
+    "0x1.38e8ba66f5534p+0",
+    "0x1.3911cf2330ea7p+0",
+    "0x1.393a41ac3580fp+0",
+    "0x1.39620bc54af17p+0",
+    "0x1.3989274bb2640p+0",
+    "0x1.39af8e3798856p+0",
+    "0x1.39d53a9d0397ep+0",
+    "0x1.39fa26acbd389p+0",
+    "0x1.3a1e4cb537b51p+0",
+    "0x1.3a41a7236ecebp+0",
+    "0x1.3a643083c3c81p+0",
+    "0x1.3a85e382d49aep+0",
+    "0x1.3aa6baee4e35cp+0",
+    "0x1.3ac6b1b5b9a09p+0",
+    "0x1.3ae5c2eb43e84p+0",
+    "0x1.3b03e9c480b2fp+0",
+    "0x1.3b21219b275f4p+0",
+    "0x1.3b3d65edca8ffp+0",
+    "0x1.3b58b2608a097p+0",
+    "0x1.3b7302bdbec46p+0",
+    "0x1.3b8c52f6a11bdp+0",
+    "0x1.3ba49f23e8fc3p+0",
+    "0x1.3bbbe38667fbbp+0",
+    "0x1.3bd21c879d432p+0",
+    "0x1.3be746ba43314p+0",
+    "0x1.3bfb5edad6a25p+0",
+    "0x1.3c0e61d017c72p+0",
+    "0x1.3c204cab8477bp+0",
+    "0x1.3c311ca9cbee9p+0",
+    "0x1.3c40cf333bdb4p+0",
+    "0x1.3c4f61dc26ba7p+0",
+    "0x1.3c5cd2654364ep+0",
+    "0x1.3c691ebc05c56p+0",
+    "0x1.3c7444faf0a91p+0",
+    "0x1.3c7e4369e09ccp+0",
+    "0x1.3c87187e4fcbdp+0",
+    "0x1.3c8ec2db92d71p+0",
+    "0x1.3c9541530e986p+0",
+    "0x1.3c9a92e466ccdp+0",
+    "0x1.3c9eb6bda59cfp+0",
+    "0x1.3ca1ac3b5bfcfp+0",
+    "0x1.3ca372e8bae0bp+0",
+    "0x1.3ca40a7fa53edp+0"
+  ],
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_tolerance": 3e-11,
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "reference_mode": "direct-original-energies",
+  "residual_reserve": 1e-11,
+  "schema": "NSC-KS-GATE-ERROR-BUDGET-v4",
+  "source_hashes": {
+    "scripts/derive_nsc_ks_current_phase_accuracy_v3.py": "1a77c8387f5cad184fae0d2fe62d479e3c319ec16f9145cb365cedc50f2da9dc",
+    "scripts/derive_nsc_ks_gate_budget_v2.py": "91009a27b727104523861787cbacc76500798c19d7a195973731b894988b5ef1",
+    "scripts/derive_nsc_ks_gate_budget_v4.py": "978fae008b86ac93364aa29e8d22b4d7e70ca9f86023a5fd40fa811135765f2a"
+  },
+  "status": "OPEN: three error components enclosed; six remain missing"
+}

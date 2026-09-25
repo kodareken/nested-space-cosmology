@@ -22,7 +22,7 @@ note, not a separate record. The later generators recursively authenticate
 input records; isolated reproduction retains those raw dependency files and
 normalizes only result input digests after authentication. Run
 `make reproduce-development` to recompute the nineteen nested records with
-their recorded all-field policies. `make reproduce` and `make verify` cover
+their recorded all-field policies. `make reproduce` recomputes
 the complete 100-record graph; `make reproduce-exact` requires byte identity.
 
 Records 92–100 add the gauge source, spherical action, curvature EFT,
@@ -39,6 +39,21 @@ transport source is included in both the source closure and the package.
 Its large angular integration and the parent-state calculation dominate the
 new runtime; the Linux reproduction job has a 120-minute ceiling. This is
 an execution limit, not a claimed measured runtime.
+
+## Routine verification and deliberate recomputation
+
+`make verify` authenticates locked records, runs focused tests, and checks the
+notebook and focused draft. It does not rerun historical scientific campaigns.
+Those remain available through `make reproduce` or the manually dispatched
+GitHub workflow with `reproduce_history` enabled. The new OPEN draft has its
+own [reproduction guide](local-gate-draft.md).
+
+`make test` uses pytest to run both pytest functions and unittest classes.
+On Windows, the historical retained-tail exact JSON test is replaced by an
+all-field replay that normalizes only its native payload path separators.
+The original test, producer, record and authenticated hashes remain unchanged;
+Linux CI runs the original exact test. Numerical values are never normalized
+by this portability adapter.
 
 ## Requirements
 

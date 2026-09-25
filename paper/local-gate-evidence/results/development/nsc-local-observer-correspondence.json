@@ -1,0 +1,267 @@
+{
+  "accountable_author": "Douglas Ek",
+  "artifact_id": "NSC-LOCAL-OBSERVER-CORRESPONDENCE",
+  "bound_source_records": {
+    "block_schur": "results/nsc-3-boundary-response.json",
+    "common_action_derivation": "docs/nsc-common-source-derivation.md",
+    "declared_action_scope": "docs/nsc-declared-action-scope.md",
+    "normalized_recursion": "results/nsc-3-regulated-recursion.json",
+    "prescribed_geometry_work": "results/nsc-6-vacuum-work.json",
+    "retarded_memory_and_conservation": "results/nsc-6-energy-transfer.json",
+    "two_sheet_embedding": "results/nsc-7-observable-bridge.json"
+  },
+  "claim_status": {
+    "absolute_continuum_stress_match": "OPEN",
+    "antimatter_is_mechanical_pressure": "NONCLAIM",
+    "common_action_metric_variation_conservation": "PASS_FINITE_OWNERSHIP",
+    "exact_block_schur_resolvent_reduction": "PASS",
+    "lambdacdm_background_perturbation_match": "NONCLAIM",
+    "local_incoming_gate": "OPEN",
+    "normalized_inherited_recursion": "PASS",
+    "retained_retarded_memory_initial_state_noise": "PASS",
+    "retarded_map_selects_occupation_or_current": "NONCLAIM",
+    "same_action_cosmological_backreaction": "OPEN",
+    "schur_feshbach_algebra_is_nsc_novelty": "NONCLAIM",
+    "sheet_exchange_equals_antimatter": "NONCLAIM",
+    "sheet_exchange_equals_charge_conjugation": "NONCLAIM",
+    "two_sheet_dirac_charge_conjugation_embedding": "PASS"
+  },
+  "classification": "compact_local_observer_correspondence_of_bound_finite_identities_not_lambdacdm_or_antimatter_closure",
+  "equations": {
+    "block_schur": "S = K_A - B K_B^{-1} B^\\dagger,  G_AA = S^{-1} = ((zI-H)^{-1})_{AA}",
+    "charge_conjugation": "psi^c = i gamma^2 psi^* with the conjugate gauge representation",
+    "energy_balance": "dot E_A = Tr(C J_A) + Tr(C dot h_A),  J_A = i[H,h_A]",
+    "feshbach_self_energy": "Sigma_A(z) = B (zI-H_BB)^{-1} B^\\dagger",
+    "gaussian_metric_variation": "delta Gamma_F / delta X^A = -Tr(C delta H / delta X^A) on the physical history at fixed preparation",
+    "gaussian_schur_variation": "delta log det K = Tr(G_c delta K_c) + Tr(S^{-1} delta S),  S = K_p - V G_c W",
+    "initial_noise": "B exp[-i H_BB t] C_BB(0) exp[i H_BB s] B^\\dagger, plus initial C_AB",
+    "normalized_recursion": "Gamma_n(x) = x I - H - (1/Omega) b Gamma_{n+1}(x/Omega)^{-1} b^\\dagger,  H_n = Omega^n H, B_n = Omega^n b",
+    "retarded_memory": "i dpsi_A/dt = H_AA psi_A - i \\int_0^t B exp[-i H_BB(t-s)] B^\\dagger psi_A(s) ds + B exp[-i H_BB t] psi_B(0)",
+    "scalar_sheet_embedding": "Pi_- = (I_8 - tau_3 \\otimes gamma^5)/2,  W^\\dagger H_8 W = alpha\u00b7p + Phi beta",
+    "total_conservation": "dot E_tot = Tr(C dot H);  Tr([H,C] H) = 0"
+  },
+  "independent_controls": {
+    "block_schur_resolvent_reduction": {
+      "dropped_adjoint_differs": true,
+      "equation": "S = K_A - B K_B^{-1} B^\\dagger,  G_AA = S^{-1} = ((zI-H)^{-1})_{AA}",
+      "exact_joined_versus_schur_residual": "Matrix([[0, 0], [0, 0]])",
+      "layer": "imported_algebra_independently_verified",
+      "naive_bbdagger_over_z_differs": true,
+      "negative_controls": [
+        "reversed_multiplication",
+        "dropped_B_adjoint",
+        "naive_B_Bdagger_over_z",
+        "wrong_block_order_on_numeric_split"
+      ],
+      "novelty_claimed": false,
+      "numeric_joined_versus_schur_residual": 2.482534153247273e-16,
+      "reversed_multiplication_differs": true,
+      "reversed_multiplication_residual": "Matrix([[12855/4404512 - 166239*I/4404512, -42213/1258432 + 1033*I/78652], [4149/1258432 + 65*I/19663, -32653/2202256 + 327771*I/17618048]])",
+      "wrong_block_order_residual": 0.07400646279116095
+    },
+    "common_action_metric_variation_conservation": {
+      "cyclic_trace_identity": "Tr([H,C]H)=0",
+      "equations": {
+        "energy_balance": "dot E_A = Tr(C J_A) + Tr(C dot h_A),  J_A = i[H,h_A]",
+        "gaussian_metric_variation": "delta Gamma_F / delta X^A = -Tr(C delta H / delta X^A) on the physical history at fixed preparation",
+        "gaussian_schur_variation": "delta log det K = Tr(G_c delta K_c) + Tr(S^{-1} delta S),  S = K_p - V G_c W",
+        "total_conservation": "dot E_tot = Tr(C dot H);  Tr([H,C] H) = 0"
+      },
+      "finite_logdet_schur_residual": "0",
+      "finite_schur_variation_residual": "0",
+      "induced_source_counted_once": true,
+      "layer": "repository_derived_identities_with_imported_determinant_algebra",
+      "missing_common_action_evidence": [
+        "absolute_covariantly_renormalized_continuum_stress_on_the_varying_throat",
+        "same_action_metric_backreaction_of_an_evolving_geometry",
+        "full_continuum_CTP_coefficient_match",
+        "complete_LambdaCDM_background_H_of_z_and_perturbation_growth_lensing_match",
+        "closed_local_incoming_gate_under_evolved_C_Sigma"
+      ],
+      "negative_controls": [
+        "omit_child_block_variation_from_logdet",
+        "drop_induced_or_matter_half_of_the_common_force"
+      ],
+      "omitted_child_variation_residual": "580/22659",
+      "owned_ctp_max_abs_ward_residual": 1.570861911563506e-16,
+      "owned_ctp_unresolved_terms": [
+        "full continuum coefficient match"
+      ],
+      "stronger_result_blocked_by_missing_common_action_evidence": true,
+      "two_level_regional_energy_residual": 0.0
+    },
+    "normalized_inherited_recursion": {
+      "depth": 5,
+      "direct_reduced_error": 1.3634970661652718e-16,
+      "doubled_link_error": 0.28760581182345707,
+      "equation": "Gamma_n(x) = x I - H - (1/Omega) b Gamma_{n+1}(x/Omega)^{-1} b^\\dagger,  H_n = Omega^n H, B_n = Omega^n b",
+      "eternal_time_dependent_solution": false,
+      "layer": "repository_derived_identities",
+      "minimum_imaginary_eigenvalue": 0.3036856744065024,
+      "negative_controls": [
+        "drop_one_over_omega_weight",
+        "double_link_amplitude"
+      ],
+      "omega": 1.6,
+      "omega_one_direct_reduced_error": 2.206579171626067e-16,
+      "selects_physical_Omega": false,
+      "unweighted_versus_normalized_error": 0.06595306642645639
+    },
+    "retarded_memory_initial_state_noise": {
+      "equation": "i dpsi_A/dt = H_AA psi_A - i \\int_0^t B exp[-i H_BB(t-s)] B^\\dagger psi_A(s) ds + B exp[-i H_BB t] psi_B(0)",
+      "excited_current": 0.09127634889390521,
+      "excited_initial_noise_norm": 0.09394147114027969,
+      "excited_self_energy_norm": 0.11713842258115291,
+      "layer": "repository_derived_identities",
+      "negative_controls": [
+        "omit_initial_child_source",
+        "occupation_changes_noise_not_self_energy",
+        "same_schur_map_zero_vacuum_current_nonzero_excited_current"
+      ],
+      "noise_equation": "B exp[-i H_BB t] C_BB(0) exp[i H_BB s] B^\\dagger, plus initial C_AB",
+      "omitted_initial_child_residual": 0.4219039772535884,
+      "resolvent_with_initial_child_residual": 2.482534153247273e-16,
+      "retarded_map_selects_occupation": false,
+      "self_energy_independent_of_occupation": true,
+      "vacuum_current": 0.0,
+      "vacuum_initial_noise_norm": 0.0,
+      "vacuum_self_energy_norm": 0.11713842258115291
+    },
+    "two_sheet_dirac_charge_conjugation_embedding": {
+      "all_exact_identities_zero": true,
+      "charge_conjugation_operator": "(tau_1 \u2297 i gamma_2) K",
+      "equations": {
+        "charge_conjugation": "psi^c = i gamma^2 psi^* with the conjugate gauge representation",
+        "scalar_sheet_embedding": "Pi_- = (I_8 - tau_3 \\otimes gamma^5)/2,  W^\\dagger H_8 W = alpha\u00b7p + Phi beta"
+      },
+      "identity_link_gap_at_unit_momentum": 0.0,
+      "joint_projector_ranks": {
+        "sheet_-1_chirality_-1": 2,
+        "sheet_-1_chirality_1": 2,
+        "sheet_1_chirality_-1": 2,
+        "sheet_1_chirality_1": 2
+      },
+      "layer": "repository_derived_identities_on_imported_clifford_algebra",
+      "negative_controls": [
+        "sheet_exchange_is_not_charge_conjugation",
+        "identity_sheet_link_is_not_a_mass_gap",
+        "complementary_rank_four_sector_is_equally_invariant"
+      ],
+      "restricted_sector": {
+        "complement_rank": 4,
+        "dynamically_invariant_for_scalar_bridge": true,
+        "embedding_columns": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "projector": "(I8-tau3 tensor gamma5)/2",
+        "rank": 4,
+        "selected_by_actual_throat_or_action": false,
+        "selected_components": "parent-left and child-right"
+      },
+      "restricted_sector_evolution_residual": 0.0,
+      "selected_by_actual_throat_or_action": false,
+      "sheet_exchange_is_antimatter": false,
+      "sheet_exchange_is_charge_conjugation": false,
+      "sheet_exchange_operator": "tau_1 \u2297 I_4",
+      "sheet_exchange_versus_C_matrix_residual": 2.039607805437114,
+      "sheet_exchange_versus_C_state_residual": 2.039607805437114
+    }
+  },
+  "input_hashes": {
+    "docs/nsc-common-source-derivation.md": "00c19b04e3f40274cb9e5dd74422c279fef82d26bab75072a6ecadc7f86dcbd8",
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "docs/nsc-energy-transfer.md": "0c962da1e1c1c9b0f0c18807dfc6549526e914ae61c40d1131a57d74f0d66e28",
+    "docs/nsc-observable-bridge.md": "a812fae995ff009edbeb325f10dfa275253cb2ca0fe4bd6f241bc59a7b3a289b",
+    "docs/nsc-regulated-recursion.md": "9eceb09e6c125073650afb1f4481122dc6044e92222d969b14608056adc96b93",
+    "results/nsc-3-boundary-response.json": "20bda4d3600724466354084cffcaad0d63debde19020b71708926667b746c767",
+    "results/nsc-3-regulated-recursion.json": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+    "results/nsc-6-energy-transfer.json": "911fefa75e6ffa5f61224f4354c63351cb366728efa73ecf6784371ff3669be1",
+    "results/nsc-6-vacuum-work.json": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605",
+    "results/nsc-7-observable-bridge.json": "69495eda9f1815436223a8e472d923aa5ba9db913b03696bdf0e8388b2f1b024",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_energy_transfer.py": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "layers": {
+    "imported_algebra": [
+      "Block Schur/Feshbach reduction of a finite resolvent is standard linear algebra.",
+      "Retarded memory plus an eliminated initial state is standard nonequilibrium Green-function structure (Jauho\u2013Wingreen\u2013Meir; Mart\u00edn\u2013Verdaguer as methodological prior art).",
+      "Klich's Fock determinant identity is imported; this record does not re-prove it.",
+      "Dirac charge conjugation and Clifford algebra are imported; the scalar two-sheet bilinear is a kinematic benchmark, not a new Clifford theorem."
+    ],
+    "nonclaims": [
+      "Schur/Feshbach algebra is not NSC novelty.",
+      "No complete LambdaCDM background or perturbation match is established.",
+      "Sheet exchange is not charge conjugation and is not antimatter.",
+      "Antimatter is not mechanical pressure.",
+      "The retarded map alone does not select an occupation or an energy current.",
+      "The local incoming gate under evolved C_Sigma[g] remains OPEN.",
+      "Prescribed geometry work is not same-action backreaction."
+    ],
+    "nsc_interpretation": [
+      "A local observer in one nested region is described by the reduced block, its retarded memory, the retained initial-state/noise data, and the same-action variation of the remaining Hamiltonian.",
+      "Inheritance T_Theta^* D_Theta = D_Theta is the organizing invariance; the finite normalized chain is a control of that law, not an eternal cosmology.",
+      "Inside/outside are relational roles of the region map, not gauge-charge assignments and not antimatter labels.",
+      "Metric, link and relative-scale equations are different variations of one declared action; no independent dark-fluid function is added here."
+    ],
+    "repository_derived_identities": [
+      "Noncommuting block Schur agrees with the joined resolvent restriction; reversed multiplication differs.",
+      "The Laplace/resolvent identity retains B (zI-H_BB)^{-1} psi_B(0); omitting it changes the solution.",
+      "The retarded self-energy is independent of the occupation, while the initial-noise term B C_BB B^\\dagger is not.",
+      "Finite regional energy obeys dot E_A = Tr(C J_A)+Tr(C dot h_A) for h_A={P,H}/2.",
+      "Finite Gaussian block elimination counts log det K_c once; all link variations sit in delta S.",
+      "Normalized recursion with 1/Omega agrees with the direct multi-room inverse on the declared finite chain.",
+      "A local scalar sheet coupling admits an invariant rank-four Dirac sector; the complementary sector is equally invariant.",
+      "Combined sheet parity and (tau_1 \u2297 i gamma_2)K restrict to ordinary Dirac parity and C; sheet exchange alone does neither."
+    ]
+  },
+  "missing_common_action_evidence": [
+    "absolute_covariantly_renormalized_continuum_stress_on_the_varying_throat",
+    "same_action_metric_backreaction_of_an_evolving_geometry",
+    "full_continuum_CTP_coefficient_match",
+    "complete_LambdaCDM_background_H_of_z_and_perturbation_growth_lensing_match",
+    "closed_local_incoming_gate_under_evolved_C_Sigma"
+  ],
+  "nonclaims": {
+    "absolute_continuum_stress_matched": false,
+    "antimatter_is_mechanical_pressure": false,
+    "complete_LambdaCDM_background_perturbation_match": false,
+    "local_incoming_EXISTENCE": false,
+    "local_incoming_NONEXISTENCE": false,
+    "physical_sector_selected_by_actual_throat": false,
+    "retarded_map_selects_occupation_or_energy_current": false,
+    "same_action_cosmological_backreaction_solved": false,
+    "schur_feshbach_algebra_is_nsc_novelty": false,
+    "sheet_exchange_is_antimatter": false,
+    "sheet_exchange_is_charge_conjugation": false
+  },
+  "physical_claim_verified": false,
+  "reproducer": "python3 scripts/derive_nsc_local_observer_correspondence.py --check",
+  "schema": "NSC-LOCAL-OBSERVER-CORRESPONDENCE-v1",
+  "scope": {
+    "arxiv_publication": false,
+    "finite_matrix_identities": true,
+    "global_parent_child_matching": false,
+    "imported_algebra_not_claimed_as_novelty": true,
+    "lambdacdm_match": false,
+    "local_incoming_gate": "OPEN",
+    "local_observer_correspondence": true,
+    "metric_timestep": false,
+    "nsc_interpretation_separated_from_identities": true,
+    "scientific_campaign_or_expensive_generator": false,
+    "sheet_exchange_antimatter_identity": false
+  },
+  "source_hashes": {
+    "docs/nsc-local-observer-correspondence.md": "4345b0ef91703c53ec879bfa9d3eeea4b07ee31209ad8a701f3fe17d5039f477",
+    "scripts/derive_nsc_local_observer_correspondence.py": "53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_local_observer_correspondence.py": "26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+    "tests/test_nsc_local_observer_correspondence.py": "f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56"
+  },
+  "status": "PASS: compact local-observer correspondence of bound finite identities; no LambdaCDM match and no sheet-exchange/antimatter identity; local incoming gate OPEN"
+}
