@@ -95,7 +95,7 @@ retained resolvent is the inverse of the Schur complement
   =
   S^{-1}
   =
-  \bigl((zI-H)^{-1}\bigr)_{AA},
+  \bigl((\lambda I-H)^{-1}\bigr)_{AA},
 \end{equation}
 where $K_A=\lambda I-H_{AA}$, $K_B=\lambda I-H_{BB}$,
 and $\lambda$ is a complex spectral parameter outside the relevant spectra.
@@ -514,7 +514,7 @@ counts classify coverage. They are not a directed $N,\beta$ bound.
 Certificate v2 requires nine nonnegative componentwise error bounds on
 $I$, added to a continuous residual upper bound, before an existence
 decision. The v4 budget records three enclosed or reused components and
-six missing components. The partial known error sum is
+six missing components. The partial known error sum, rounded for display, is
 \begin{equation}
 \label{eq:partial-budget}
   \bigl(\DraftPartialN,\,
@@ -563,7 +563,7 @@ comparison on family $14_1$, cell $122$, stays inside its recorded directed
 enclosure. That comparison is one cell. It does not supply a full-cone
 bound, and it does not replace physical $\rho=1$ source error.
 
-The reanchor record reports candidate nodal maxima
+The reanchor record reports candidate nodal maxima (rounded for display)
 \begin{equation}
 \label{eq:nodal-maxima}
   \bigl(\DraftNodalN,\,
@@ -621,11 +621,6 @@ necessary relation with strict error-controlled separation is present, the
 non-existence criterion cannot fire. No residual quoted from a control
 history is a physical root.
 
-Klich, G\'{e}rard--H\"{a}fner--Wrochna, Bronnikov--Dehnen--Melnikov, and
-Blanes--Moan results remain inside their original domains. Nested-space
-application requires the connection that is shown. No such connection is
-used here to close the local gate.
-
 This article is a public research draft. It is not a closed-result release
 or an arXiv submission.
 
@@ -634,7 +629,7 @@ or an arXiv submission.
 \label{app:provenance}
 
 The source snapshot names laboratory commit
-\texttt{aefbdbafdebb737672b50580ca569f52256ef041} and the public base
+\texttt{aefbdbaf} (full identity in the manifest) and the public base
 commit. The public Git history identifies subsequent editorial changes.
 The build manifest records source and PDF hashes, compiler identity, and the
 two-build comparison. The retained notebook v0.26.0 is unchanged.
@@ -646,13 +641,11 @@ license has been selected and no submission action is recorded.
 
 \section*{Significant AI-use disclosure}
 
-OpenAI Codex and xAI Grok were used for laboratory code, bounded review
-slices, and drafting assistance on this manuscript. Douglas Ek is the
-accountable author. He is solely responsible for the declared local
-question, the model and state law, the acceptance or rejection of any later
-certificate, and every scientific claim that this manuscript may later be
-allowed to carry. No closed local result was invented by the writing pass.
+OpenAI Codex and xAI Grok assisted with implementation, numerical workflow
+review, and language preparation. Douglas Ek is the sole author and assumes
+responsibility for every scientific claim. The local gate remains open.
 
+\small
 \bibliographystyle{unsrt}
 \bibliography{references}
 

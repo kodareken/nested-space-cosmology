@@ -676,14 +676,14 @@
       "sha256": "f82d6fc2fca7801805d1aa99e13e7c589fb249499e2387168205b4431b35f0a9"
     },
     {
-      "bytes": 26609,
+      "bytes": 26201,
       "path": "paper/local-gate-draft/main.tex",
-      "sha256": "3ce82ad88e5669908db4afd9e729f6983b4d482eca0a6984b90f7487d9995c1f"
+      "sha256": "bcb160b30434ca386077a33af9e875aa6c3770e5aec023117133df87e0555f1a"
     },
     {
-      "bytes": 2159,
+      "bytes": 2199,
       "path": "paper/local-gate-draft/references.bib",
-      "sha256": "6e41cde81b5ad0128fc6ceae8db587642f83a21b58dfae29ecf0b5c793b1754f"
+      "sha256": "58390829ad2ca119ca18e995e3d6a6f9f14562e45591ffb11ad80ef58e6b4836"
     },
     {
       "bytes": 4045,
