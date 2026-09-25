@@ -671,6 +671,16 @@
       "sha256": "2513127bb20752d00f9cda80dbf230a2131d1586ee100780aded26e94c583f19"
     },
     {
+      "bytes": 1421,
+      "path": "paper/local-gate-draft-manifest.json",
+      "sha256": "52c1f7bdd593650c01a4438c77a052ff48790de4013f6b9dee8e677f6e208d73"
+    },
+    {
+      "bytes": 1064,
+      "path": "paper/local-gate-draft-review.json",
+      "sha256": "3a694a859ffd3a4240abe92f73cdb6233fa370f9b6ab3c1134b7c539b9a3b6ab"
+    },
+    {
       "bytes": 596,
       "path": "paper/local-gate-draft/evidence_values.tex",
       "sha256": "f82d6fc2fca7801805d1aa99e13e7c589fb249499e2387168205b4431b35f0a9"
@@ -729,6 +739,16 @@
       "bytes": 30104,
       "path": "paper/local-gate-evidence/src/recursive_horizons/nsc_local_observer_correspondence.py",
       "sha256": "26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e"
+    },
+    {
+      "bytes": 12966,
+      "path": "paper/local-incoming-gate-draft-source.tar.gz",
+      "sha256": "95b4060190fb5ac7d400d4c4fb4bbc18f5aef68ca266b7e93b2ab09ba1034030"
+    },
+    {
+      "bytes": 280659,
+      "path": "paper/local-incoming-gate-draft.pdf",
+      "sha256": "8af811e2e01c89d7ce867b774a256394776d0a4c8332c258b1b751fe6ca9e875"
     },
     {
       "bytes": 346,

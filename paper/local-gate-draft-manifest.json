@@ -1,0 +1,25 @@
+{
+  "arxiv_runtime_verified": false,
+  "bbl_sha256": "31e7d14de8358df81f1d1c8b5465967198e4eb1615e7ae14c7b248d2031a19ad",
+  "byte_identical_clean_builds": true,
+  "clean_builds": 2,
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+  "complete_scientific_dependency_closure": false,
+  "inputs": {
+    "paper/local-gate-draft/evidence_values.tex": "f82d6fc2fca7801805d1aa99e13e7c589fb249499e2387168205b4431b35f0a9",
+    "paper/local-gate-draft/main.tex": "bcb160b30434ca386077a33af9e875aa6c3770e5aec023117133df87e0555f1a",
+    "paper/local-gate-draft/references.bib": "58390829ad2ca119ca18e995e3d6a6f9f14562e45591ffb11ad80ef58e6b4836",
+    "paper/local-gate-draft/result_macros.tex": "7f1c673219a25f8a90a6e5db348da97a26a5b61077cc636e4074d1bf05871140",
+    "paper/local-gate-evidence/snapshot.json": "5caa9161bbf7bfdd65b9f2b28dd14d5c35e50ff33fd84429babcc82cc8a3e57a",
+    "scripts/local_gate_draft.py": "5746fbca4a67901b604f3faa47f8ed8313e00a875fdc36be9acadabb0af5fde7"
+  },
+  "lab_commit": "aefbdbafdebb737672b50580ca569f52256ef041",
+  "license_selected_for_arxiv": null,
+  "pdf_sha256": "8af811e2e01c89d7ce867b774a256394776d0a4c8332c258b1b751fe6ca9e875",
+  "schema": "NSC-OPEN-DRAFT-BUILD-v1",
+  "source_archive_sha256": "95b4060190fb5ac7d400d4c4fb4bbc18f5aef68ca266b7e93b2ab09ba1034030",
+  "source_date_epoch": 0,
+  "status": "OPEN",
+  "submission_ready": false,
+  "texlive_container_digest": null
+}
