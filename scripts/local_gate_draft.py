@@ -171,7 +171,8 @@ def compile_twice(files: dict[str, bytes]):
             if re.search(r'(undefined references|undefined citations|Citation .* undefined|Reference .* undefined|Rerun to get)', log):
                 raise ValueError('unresolved TeX references')
             if re.search(r'Overfull \\[hv]box', log):
-                raise ValueError('overfull TeX box; inspect layout before delivery')
+                details = '\n'.join(re.findall(r'Overfull[^\n]*\n(?:[^\n]*\n){0,5}', log))
+                raise ValueError('overfull TeX box; inspect layout before delivery:\n' + details)
             products.append(((folder / 'main.pdf').read_bytes(), (folder / 'main.bbl').read_bytes()))
     if products[0] != products[1]:
         raise ValueError('two clean PDF/bibliography builds differ')
