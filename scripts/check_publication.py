@@ -190,7 +190,7 @@ def public_files() -> list[Path]:
             paths.append(path)
         elif path.is_file() and path.name != ".DS_Store" and path.suffix != ".pyc":
             paths.append(path)
-    return sorted(paths, key=lambda item: str(item.relative_to(ROOT)))
+    return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
 
 
 def check_manifest(errors: list[str]) -> None:
@@ -277,13 +277,13 @@ def check_manifest(errors: list[str]) -> None:
     if current != [manifest.get("frontier_artifact_id")]:
         errors.append(f"historical frontier differs from its declared manifest identity: {current}")
     result_files = {
-        str(path.relative_to(ROOT))
+        path.relative_to(ROOT).as_posix()
         for path in (ROOT / "results").glob("nsc-*.json")
     }
     development = ROOT / "results" / "development"
     if development.is_dir():
         result_files.update(
-            str(path.relative_to(ROOT))
+            path.relative_to(ROOT).as_posix()
             for path in development.glob("*.json")
         )
     try:
@@ -307,7 +307,7 @@ def check_provenance(errors: list[str], files: list[Path]) -> None:
         errors.append("publication provenance has the wrong source commit")
     declared = {entry["path"]: entry for entry in value.get("included_paths", [])}
     actual = {
-        str(path.relative_to(ROOT))
+        path.relative_to(ROOT).as_posix()
         for path in files
         if path != PROVENANCE
     }
@@ -359,7 +359,7 @@ def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
 
 
 def check_public_boundary(errors: list[str], files: list[Path]) -> None:
-    relative_files = {str(path.relative_to(ROOT)) for path in files}
+    relative_files = {path.relative_to(ROOT).as_posix() for path in files}
     for required in sorted(REQUIRED - relative_files):
         errors.append(f"required public file is absent: {required}")
     for excluded in sorted(EXCLUDED_ROOTS & {path.parts[0] for path in map(Path, relative_files)}):
@@ -384,7 +384,7 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
         for label, pattern in SECRET_PATTERNS.items():
             if pattern.search(text):
                 errors.append(f"possible {label} appears in {path.relative_to(ROOT)}")
-        relative = str(path.relative_to(ROOT))
+        relative = path.relative_to(ROOT).as_posix()
         if relative in GITHUB_MARKDOWN_ENTRYPOINTS:
             for label, pattern in UNSUPPORTED_GITHUB_MATH.items():
                 if pattern.search(text):

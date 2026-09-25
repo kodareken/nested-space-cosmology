@@ -308,7 +308,7 @@ def build() -> dict[str, object]:
         artifact_id = SCOPED_SPECS.get(output, {}).get("artifact_id", value.get("artifact_id"))
         if not isinstance(artifact_id, str) or not artifact_id:
             raise RuntimeError(f"result has no declared artifact identity: {output}")
-        generator_relative = str(generator.relative_to(ROOT))
+        generator_relative = generator.relative_to(ROOT).as_posix()
         source = generator.read_text(encoding="utf-8")
         is_follow_up = output in SCOPED_FOLLOW_UP_PATHS
         declared_dependencies = dependencies.get(output, [])

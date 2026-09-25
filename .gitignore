@@ -8,3 +8,4 @@ build/
 dist/
 paper/.build/
 .DS_Store
+._*

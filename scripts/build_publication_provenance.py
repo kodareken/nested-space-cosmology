@@ -39,7 +39,7 @@ def included_files() -> list[Path]:
         if path.name == ".DS_Store" or path.suffix == ".pyc":
             continue
         paths.append(path)
-    return sorted(paths, key=lambda item: str(item.relative_to(ROOT)))
+    return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
 
 
 def main() -> int:
@@ -75,7 +75,7 @@ def main() -> int:
         ],
         "included_paths": [
             {
-                "path": str(path.relative_to(ROOT)),
+                "path": path.relative_to(ROOT).as_posix(),
                 "sha256": sha256(path),
                 "bytes": path.stat().st_size,
             }
