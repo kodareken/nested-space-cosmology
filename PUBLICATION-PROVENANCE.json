@@ -26,9 +26,9 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 1448,
+      "bytes": 1530,
       "path": ".github/workflows/draft-pdf.yml",
-      "sha256": "5d8c7e0882fc5af889d2fcb2ed2b6f21dcbd853b6ecfdf99e7f08d3b9af60e65"
+      "sha256": "489e42c56d3d1dc265578156b310cd7724626446bcc029154d808f0c5f137a3a"
     },
     {
       "bytes": 1787,
@@ -2161,9 +2161,9 @@
       "sha256": "efe623da3299e5ef7182cb065c2e173e8b02da951ebb020d02f7437d007d3895"
     },
     {
-      "bytes": 11258,
+      "bytes": 11362,
       "path": "scripts/local_gate_draft.py",
-      "sha256": "6cfbd13d7db4abf9401e7ef4ca699bdb6e22a9bc7b05db98fe9b6237340ce9fa"
+      "sha256": "5746fbca4a67901b604f3faa47f8ed8313e00a875fdc36be9acadabb0af5fde7"
     },
     {
       "bytes": 4847,
