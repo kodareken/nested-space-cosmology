@@ -32,41 +32,36 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Open the working paper](paper/nested-space-cosmology.pdf)
 
-**Current action scope:** [the author's clarification](docs/nsc-declared-action-scope.md)
-counts the Gaussian CTP determinant and induced terms once; no extra
-independent $\Gamma_{\rm rest}$ term is required. The next open connection
-is the physical history-to-KS-endpoint derivative. [Current status](docs/current-result.md).
+## Current local test: OPEN
 
-**Actual geometric seam matching: PASS.** The [new boundary calculation](docs/nsc-smooth-seam-variation.md)
-uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
-normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required
-by that domain. The declared quantum/field variation and bulk self-sourcing remain open;
-no new interface force or zero quantum source is assigned. PDF v0.26.0 is unchanged.
+The active question is precise: can two incoming gravitational constraints
+close on $I=S(1)+[0.12,0.18]$ when a fixed upstream quantum source is
+transported along a changed metric history?
 
-**Weyl boundary variation clarified:** the [intrinsic boundary-jet calculation](docs/nsc-weyl-boundary-jets.md)
-reconstructs the stored $93.5426$ end-node derivative from its bulk, boundary
-and numerical-stencil contributions. The physical boundary rate is the normal
-shear $H_\parallel-H_\perp$. Its coefficient is now explicit; it is not an
-extra force chosen to cancel the old number. Physical gluing and the remaining
-same-action contribution remain to be specified. PDF v0.26.0 is unchanged.
+$$
+C_\Sigma[g]=U_g C_{\mathrm{up}} U_g^\dagger,
+\qquad
+\delta r=\chi(s)\left[s\,w(z)+\frac{s^3}{6}U(z)\right].
+$$
 
-**New CTP connection:** the [physical mode-history insertion](docs/nsc-pg-ctp-mode-jets.md)
-now acts in the same source-mode basis as the prepared PG covariance. Its
-[raw KS metric pullback](docs/nsc-pg-ks-metric-pullback.md) retains the full
-spatial coordinate dependence. All 63 signed families pass the direct/weak
-variation and CTP contraction checks. Complete history-endpoint jets remain
-open; PDF v0.26.0 is unchanged.
+The source stays fixed; its state on the incoming surface responds to the
+history. The two unknown functions are $w(z)$ and $U(z)$. A successful local
+existence test needs **both** residuals, including every error term, below
+$3\times10^{-11}$ throughout the interval. The current candidate is a solver
+seed: its sampled maxima are about $9.64\times10^{-4}$ and
+$3.81\times10^{-4}$, well above that target. No closed local result or arXiv
+submission is claimed.
 
-**Full retained PG preparation: C1b PASS.** The [common-time covariance](docs/nsc-pg-retained-covariance.md)
-now includes all **32 massive groups plus the LLL channel**, with both signed
-angular families and correlations with the unresolved bulk. Its independently
-integrated CAR residual is at most $1.40\times10^{-10}$, against the declared
-$3\times10^{-9}$ numerical tolerance. Historical seeds and physical scales are
-unchanged. The working PDF is now **v0.26.0**.
+- [Focused research draft (PDF)](paper/local-incoming-gate-draft.pdf): English explanations, equations, notation, evidence, and original-source attribution.
+- [Current result and exact remaining gaps](docs/current-result.md).
+- [Draft source and verification guide](docs/local-gate-draft.md), including hashes and the laboratory commit.
+- [Theory notebook v0.26.0](paper/nested-space-cosmology.pdf): the preserved broader exposition.
 
-The next calculation couples this prepared state to the transmitting history
-jets and endpoint variation. The [current result](docs/current-result.md)
-shows the completed state gate and the remaining action derivatives.
+The draft includes a **selected evidence snapshot**, not the full dependency
+closure required for a final certificate. Release `0.27.0` remains reserved
+for that closed local result. Global matching and observational fitting are
+later research. The conceptual picture below describes the proposal; the
+linked records distinguish identities, numerical diagnostics, and open claims.
 
 ## From a note to a universe
 

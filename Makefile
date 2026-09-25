@@ -15,7 +15,9 @@ help:
 	@echo "  make reproduce-exact  require byte-identical recomputation"
 	@echo "  make paper            rebuild the tracked paper PDF"
 	@echo "  make paper-check      rebuild twice and verify deterministic bytes"
-	@echo "  make verify           run the integrated public-repository gate"
+	@echo "  make draft-check      authenticate the focused OPEN draft and its evidence"
+	@echo "  make draft            rebuild the focused draft twice (requires pdflatex/bibtex)"
+	@echo "  make verify           validate locked evidence, tests, and both papers"
 
 install:
 	$(PYTHON) -m pip install -e '.[paper]'
@@ -41,7 +43,14 @@ paper:
 paper-check:
 	$(PYTHON) scripts/build_paper.py --check
 
-verify: check test reproduce paper-check
+verify: check test paper-check draft-check
+
+.PHONY: draft draft-check
+draft:
+	$(PYTHON) scripts/build_local_gate_draft.py --check
+
+draft-check:
+	$(PYTHON) scripts/verify_local_gate_draft.py
 
 .PHONY: demonstrate demonstrate-recompute
 demonstrate:

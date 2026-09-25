@@ -1,5 +1,45 @@
 # What the calculations show
 
+## Active checkpoint: source-fixed local incoming gate
+
+The current laboratory snapshot is indexed in the
+[draft evidence manifest](../paper/local-gate-evidence/snapshot.json).
+Its state law and test domain are
+
+$$
+C_\Sigma[g]=U_g C_{\mathrm{up}}U_g^\dagger,
+\qquad I=S(1)+[0.12,0.18],
+\qquad \delta r=\chi(s)[s\,w(z)+s^3U(z)/6].
+$$
+
+**Status: OPEN.** The evolved state and its retarded derivative are implemented
+in the laboratory. The earlier B1d implementation gaps described below are
+historical checkpoints. Current work concerns rigorous whole-cone field,
+physical-source, ultraviolet, continuous, and arithmetic bounds before a
+production nonlinear search can be certified.
+
+| Quantity | Recorded meaning |
+|---|---|
+| Candidate nodal maxima, $N$ and $\beta$ | Approximately $9.64\times10^{-4}$ and $3.81\times10^{-4}$; solver seed, not a root |
+| Local existence target | Each continuous residual plus its complete error bound at most $3\times10^{-11}$ |
+| v4 error budget | Three finite reused components, six missing; partial sums about $9.00\times10^{-12}$ and $7.00\times10^{-14}$ |
+| Field pilot | One spatial period in one trajectory cell; no whole-cone or physical-source certificate |
+| Successor 257-node budget | All nine components require authenticated applicable bounds; 129-node phase coverage does not transfer automatically |
+| Final outcome | Neither local EXISTENCE nor scoped NON-EXISTENCE is established |
+
+Read the [focused PDF](../paper/local-incoming-gate-draft.pdf) and
+[verification guide](local-gate-draft.md). The draft snapshot authenticates
+selected original bytes. It is not a full scientific replay or a release of
+all active laboratory code. The historical manifests and notebook below stay
+unchanged. Frozen-state non-existence results apply to their own declared
+classes and do not decide this switched-state gate.
+
+## Earlier public checkpoints
+
+The sections below preserve their original scope and recorded numbers. They
+are background for the active checkpoint above, not a current work queue.
+
+
 **Actual geometric seam matching: PASS.** The [new boundary calculation](nsc-smooth-seam-variation.md)
 uses the two sides of the same smooth $\rho=0$ surface. With opposite outward
 normals, the Weyl and Einstein–GHY common boundary covectors cancel, as required

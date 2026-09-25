@@ -1,0 +1,1175 @@
+{
+  "accountable_author": "Douglas Ek",
+  "coverage": {
+    "angular_families_with_columns": 62,
+    "baseline_ell0_allocations_retained": true,
+    "directed_N_beta_contribution_bound": {
+      "N": null,
+      "beta": null,
+      "status": "OPEN: complete 164-panel physical column reconstruction unevaluated; 102-panel low/subgap subset identified"
+    },
+    "double_counted": false,
+    "ell0_remaining_reconstruction_panels": 4,
+    "ell0_remaining_reconstruction_rows": 532,
+    "ell0_zero_response_groups": [
+      0,
+      13,
+      23
+    ],
+    "identities_that_are_not_error_bounds": [
+      "Pauli 4-component subgap covariance reconstruction",
+      "negative-source complement I-conj(C_src)",
+      "ell=0 Dirac r-independence of the radius-history response",
+      "nested-node / nested-gradient algebraic identities",
+      "quadrature-node or refinement movement"
+    ],
+    "inventory_positive_panels": 164,
+    "inventory_positive_rows": 49372,
+    "remaining_by_kind": {
+      "low_mode_reconstruction": 64,
+      "subgap_rows": 38
+    },
+    "remaining_identity_digest": "86b92947ceedcb4289d5cce7814d0f8aac8e7899404703703b6beb955be40337",
+    "remaining_low_subgap_source_error_bound": null,
+    "remaining_panel_identities": [
+      [
+        1,
+        -1,
+        "low/1_-1",
+        528
+      ],
+      [
+        1,
+        1,
+        "low/1_1",
+        528
+      ],
+      [
+        2,
+        -1,
+        "low/2_-1",
+        528
+      ],
+      [
+        2,
+        1,
+        "low/2_1",
+        528
+      ],
+      [
+        3,
+        -1,
+        "low/3_-1",
+        528
+      ],
+      [
+        3,
+        1,
+        "low/3_1",
+        528
+      ],
+      [
+        4,
+        -1,
+        "low/4_-1",
+        528
+      ],
+      [
+        4,
+        1,
+        "low/4_1",
+        528
+      ],
+      [
+        5,
+        -1,
+        "low/5_-1",
+        528
+      ],
+      [
+        5,
+        1,
+        "low/5_1",
+        528
+      ],
+      [
+        6,
+        -1,
+        "low_ref/6_-1",
+        960
+      ],
+      [
+        6,
+        1,
+        "low_ref/6_1",
+        960
+      ],
+      [
+        7,
+        -1,
+        "low/7_-1",
+        528
+      ],
+      [
+        7,
+        1,
+        "low/7_1",
+        528
+      ],
+      [
+        8,
+        -1,
+        "low/8_-1",
+        528
+      ],
+      [
+        8,
+        1,
+        "low/8_1",
+        528
+      ],
+      [
+        9,
+        -1,
+        "low/9_-1",
+        528
+      ],
+      [
+        9,
+        1,
+        "low/9_1",
+        528
+      ],
+      [
+        10,
+        -1,
+        "low/10_-1",
+        528
+      ],
+      [
+        10,
+        1,
+        "low/10_1",
+        528
+      ],
+      [
+        11,
+        -1,
+        "low/11_-1",
+        528
+      ],
+      [
+        11,
+        1,
+        "low/11_1",
+        528
+      ],
+      [
+        12,
+        -1,
+        "low/12_-1",
+        528
+      ],
+      [
+        12,
+        1,
+        "low/12_1",
+        528
+      ],
+      [
+        13,
+        1,
+        "group13/low",
+        192
+      ],
+      [
+        13,
+        1,
+        "subgap8/13_1",
+        8
+      ],
+      [
+        14,
+        -1,
+        "group14/low16_-1",
+        48
+      ],
+      [
+        14,
+        -1,
+        "group14/low32_-1",
+        96
+      ],
+      [
+        14,
+        -1,
+        "subgap8/14_-1",
+        8
+      ],
+      [
+        14,
+        1,
+        "group14/low16_1",
+        48
+      ],
+      [
+        14,
+        1,
+        "group14/low32_1",
+        96
+      ],
+      [
+        14,
+        1,
+        "subgap8/14_1",
+        8
+      ],
+      [
+        15,
+        -1,
+        "low/15_-1",
+        480
+      ],
+      [
+        15,
+        -1,
+        "subgap8/15_-1",
+        8
+      ],
+      [
+        15,
+        1,
+        "low/15_1",
+        480
+      ],
+      [
+        15,
+        1,
+        "subgap8/15_1",
+        8
+      ],
+      [
+        16,
+        -1,
+        "low/16_-1",
+        480
+      ],
+      [
+        16,
+        -1,
+        "subgap8/16_-1",
+        8
+      ],
+      [
+        16,
+        1,
+        "low/16_1",
+        480
+      ],
+      [
+        16,
+        1,
+        "subgap8/16_1",
+        8
+      ],
+      [
+        17,
+        -1,
+        "low/17_-1",
+        480
+      ],
+      [
+        17,
+        -1,
+        "subgap8/17_-1",
+        8
+      ],
+      [
+        17,
+        1,
+        "low/17_1",
+        480
+      ],
+      [
+        17,
+        1,
+        "subgap8/17_1",
+        8
+      ],
+      [
+        18,
+        -1,
+        "low/18_-1",
+        480
+      ],
+      [
+        18,
+        -1,
+        "subgap8/18_-1",
+        8
+      ],
+      [
+        18,
+        1,
+        "low/18_1",
+        480
+      ],
+      [
+        18,
+        1,
+        "subgap8/18_1",
+        8
+      ],
+      [
+        19,
+        -1,
+        "low/19_-1",
+        480
+      ],
+      [
+        19,
+        -1,
+        "subgap8/19_-1",
+        8
+      ],
+      [
+        19,
+        1,
+        "low/19_1",
+        480
+      ],
+      [
+        19,
+        1,
+        "subgap8/19_1",
+        8
+      ],
+      [
+        20,
+        -1,
+        "low/20_-1",
+        480
+      ],
+      [
+        20,
+        -1,
+        "subgap8/20_-1",
+        8
+      ],
+      [
+        20,
+        1,
+        "low/20_1",
+        480
+      ],
+      [
+        20,
+        1,
+        "subgap8/20_1",
+        8
+      ],
+      [
+        21,
+        -1,
+        "low/21_-1",
+        480
+      ],
+      [
+        21,
+        -1,
+        "subgap8/21_-1",
+        8
+      ],
+      [
+        21,
+        1,
+        "low/21_1",
+        480
+      ],
+      [
+        21,
+        1,
+        "subgap8/21_1",
+        8
+      ],
+      [
+        22,
+        -1,
+        "low_ref/22_-1",
+        852
+      ],
+      [
+        22,
+        -1,
+        "subgap8/22_-1",
+        8
+      ],
+      [
+        22,
+        1,
+        "low_ref/22_1",
+        852
+      ],
+      [
+        22,
+        1,
+        "subgap8/22_1",
+        8
+      ],
+      [
+        23,
+        1,
+        "low/23_1",
+        324
+      ],
+      [
+        23,
+        1,
+        "subgap8/23_1",
+        8
+      ],
+      [
+        24,
+        -1,
+        "low/24_-1",
+        324
+      ],
+      [
+        24,
+        -1,
+        "subgap8/24_-1",
+        8
+      ],
+      [
+        24,
+        1,
+        "low/24_1",
+        324
+      ],
+      [
+        24,
+        1,
+        "subgap8/24_1",
+        8
+      ],
+      [
+        25,
+        -1,
+        "low/25_-1",
+        324
+      ],
+      [
+        25,
+        -1,
+        "subgap8/25_-1",
+        8
+      ],
+      [
+        25,
+        1,
+        "low/25_1",
+        324
+      ],
+      [
+        25,
+        1,
+        "subgap8/25_1",
+        8
+      ],
+      [
+        26,
+        -1,
+        "low/26_-1",
+        324
+      ],
+      [
+        26,
+        -1,
+        "subgap8/26_-1",
+        8
+      ],
+      [
+        26,
+        1,
+        "low/26_1",
+        324
+      ],
+      [
+        26,
+        1,
+        "subgap8/26_1",
+        8
+      ],
+      [
+        27,
+        -1,
+        "low/27_-1",
+        324
+      ],
+      [
+        27,
+        -1,
+        "subgap8/27_-1",
+        8
+      ],
+      [
+        27,
+        1,
+        "low/27_1",
+        324
+      ],
+      [
+        27,
+        1,
+        "subgap8/27_1",
+        8
+      ],
+      [
+        28,
+        -1,
+        "low/28_-1",
+        324
+      ],
+      [
+        28,
+        -1,
+        "subgap8/28_-1",
+        8
+      ],
+      [
+        28,
+        1,
+        "low/28_1",
+        324
+      ],
+      [
+        28,
+        1,
+        "subgap8/28_1",
+        8
+      ],
+      [
+        29,
+        -1,
+        "low/29_-1",
+        324
+      ],
+      [
+        29,
+        -1,
+        "subgap8/29_-1",
+        8
+      ],
+      [
+        29,
+        1,
+        "low/29_1",
+        324
+      ],
+      [
+        29,
+        1,
+        "subgap8/29_1",
+        8
+      ],
+      [
+        30,
+        -1,
+        "low/30_-1",
+        324
+      ],
+      [
+        30,
+        -1,
+        "subgap8/30_-1",
+        8
+      ],
+      [
+        30,
+        1,
+        "low/30_1",
+        324
+      ],
+      [
+        30,
+        1,
+        "subgap8/30_1",
+        8
+      ],
+      [
+        31,
+        -1,
+        "low/31_-1",
+        324
+      ],
+      [
+        31,
+        -1,
+        "subgap8/31_-1",
+        8
+      ],
+      [
+        31,
+        1,
+        "low/31_1",
+        324
+      ],
+      [
+        31,
+        1,
+        "subgap8/31_1",
+        8
+      ],
+      [
+        32,
+        -1,
+        "low_ref/32_-1",
+        552
+      ],
+      [
+        32,
+        -1,
+        "subgap8/32_-1",
+        8
+      ],
+      [
+        32,
+        1,
+        "low_ref/32_1",
+        552
+      ],
+      [
+        32,
+        1,
+        "subgap8/32_1",
+        8
+      ]
+    ],
+    "remaining_physical_rho1_source_error_bound": null,
+    "remaining_reconstruction_panels": 102,
+    "remaining_reconstruction_rows": 29356,
+    "v5_action_covered_panels": 62,
+    "v5_action_covered_rows": 20016,
+    "v5_action_identity_digest": "ba530882bb06f9fa5b70623361e61cb14f3499188db81dd30dfc54364591aef4",
+    "v5_action_is_not_column_reconstruction": true,
+    "v5_action_panel_identities": [
+      [
+        1,
+        -1,
+        "mid/1_-1",
+        240
+      ],
+      [
+        1,
+        1,
+        "mid/1_1",
+        240
+      ],
+      [
+        2,
+        -1,
+        "mid/2_-1",
+        240
+      ],
+      [
+        2,
+        1,
+        "mid/2_1",
+        240
+      ],
+      [
+        3,
+        -1,
+        "mid/3_-1",
+        240
+      ],
+      [
+        3,
+        1,
+        "mid/3_1",
+        240
+      ],
+      [
+        4,
+        -1,
+        "mid/4_-1",
+        240
+      ],
+      [
+        4,
+        1,
+        "mid/4_1",
+        240
+      ],
+      [
+        5,
+        -1,
+        "mid/5_-1",
+        240
+      ],
+      [
+        5,
+        1,
+        "mid/5_1",
+        240
+      ],
+      [
+        6,
+        -1,
+        "mid/6_-1",
+        240
+      ],
+      [
+        6,
+        1,
+        "mid/6_1",
+        240
+      ],
+      [
+        7,
+        -1,
+        "mid/7_-1",
+        240
+      ],
+      [
+        7,
+        1,
+        "mid/7_1",
+        240
+      ],
+      [
+        8,
+        -1,
+        "mid/8_-1",
+        240
+      ],
+      [
+        8,
+        1,
+        "mid/8_1",
+        240
+      ],
+      [
+        9,
+        -1,
+        "mid/9_-1",
+        240
+      ],
+      [
+        9,
+        1,
+        "mid/9_1",
+        240
+      ],
+      [
+        10,
+        -1,
+        "mid/10_-1",
+        560
+      ],
+      [
+        10,
+        1,
+        "mid/10_1",
+        560
+      ],
+      [
+        11,
+        -1,
+        "mid/11_-1",
+        560
+      ],
+      [
+        11,
+        1,
+        "mid/11_1",
+        560
+      ],
+      [
+        12,
+        -1,
+        "mid_ref/12_-1",
+        840
+      ],
+      [
+        12,
+        1,
+        "mid_ref/12_1",
+        840
+      ],
+      [
+        13,
+        1,
+        "group13/mid",
+        432
+      ],
+      [
+        14,
+        -1,
+        "group14/mid24_-1",
+        432
+      ],
+      [
+        14,
+        1,
+        "group14/mid24_1",
+        432
+      ],
+      [
+        15,
+        -1,
+        "mid/15_-1",
+        240
+      ],
+      [
+        15,
+        1,
+        "mid/15_1",
+        240
+      ],
+      [
+        16,
+        -1,
+        "mid/16_-1",
+        240
+      ],
+      [
+        16,
+        1,
+        "mid/16_1",
+        240
+      ],
+      [
+        17,
+        -1,
+        "mid/17_-1",
+        240
+      ],
+      [
+        17,
+        1,
+        "mid/17_1",
+        240
+      ],
+      [
+        18,
+        -1,
+        "mid/18_-1",
+        240
+      ],
+      [
+        18,
+        1,
+        "mid/18_1",
+        240
+      ],
+      [
+        19,
+        -1,
+        "mid/19_-1",
+        240
+      ],
+      [
+        19,
+        1,
+        "mid/19_1",
+        240
+      ],
+      [
+        20,
+        -1,
+        "mid/20_-1",
+        240
+      ],
+      [
+        20,
+        1,
+        "mid/20_1",
+        240
+      ],
+      [
+        21,
+        -1,
+        "mid/21_-1",
+        240
+      ],
+      [
+        21,
+        1,
+        "mid/21_1",
+        240
+      ],
+      [
+        22,
+        -1,
+        "mid_ref/22_-1",
+        360
+      ],
+      [
+        22,
+        1,
+        "mid_ref/22_1",
+        360
+      ],
+      [
+        23,
+        1,
+        "mid/23_1",
+        240
+      ],
+      [
+        24,
+        -1,
+        "mid/24_-1",
+        240
+      ],
+      [
+        24,
+        1,
+        "mid/24_1",
+        240
+      ],
+      [
+        25,
+        -1,
+        "mid/25_-1",
+        240
+      ],
+      [
+        25,
+        1,
+        "mid/25_1",
+        240
+      ],
+      [
+        26,
+        -1,
+        "mid/26_-1",
+        240
+      ],
+      [
+        26,
+        1,
+        "mid/26_1",
+        240
+      ],
+      [
+        27,
+        -1,
+        "mid/27_-1",
+        240
+      ],
+      [
+        27,
+        1,
+        "mid/27_1",
+        240
+      ],
+      [
+        28,
+        -1,
+        "mid/28_-1",
+        240
+      ],
+      [
+        28,
+        1,
+        "mid/28_1",
+        240
+      ],
+      [
+        29,
+        -1,
+        "mid/29_-1",
+        240
+      ],
+      [
+        29,
+        1,
+        "mid/29_1",
+        240
+      ],
+      [
+        30,
+        -1,
+        "mid/30_-1",
+        240
+      ],
+      [
+        30,
+        1,
+        "mid/30_1",
+        240
+      ],
+      [
+        31,
+        -1,
+        "mid/31_-1",
+        560
+      ],
+      [
+        31,
+        1,
+        "mid/31_1",
+        560
+      ],
+      [
+        32,
+        -1,
+        "mid_ref/32_-1",
+        840
+      ],
+      [
+        32,
+        1,
+        "mid_ref/32_1",
+        840
+      ]
+    ]
+  },
+  "directed_N_beta_contribution_bound": {
+    "N": null,
+    "beta": null,
+    "status": "OPEN: complete 164-panel physical column reconstruction unevaluated; 102-panel low/subgap subset identified"
+  },
+  "historical_coarse_4p998e_minus9_is_current_remaining_bound": false,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-group32-order24-bound.json": "0747f2469afd2126ccdb5df86b125c15ac334fe2f631ce249b00c2235f788b04",
+    "results/development/nsc-incoming-retained-order24-bound.json": "e2dd066d67c582e059a6cba19002d18a1156ea0429a2b3847aadbb8798852754",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-ks-low-subgap-decision-v2.json": "63098d718b4481c93b6c1db27e69a1b257cd8cefc6cfd432bccaf409ee3841f7",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-ks-upstream-error-pilot.json": "59729ca21f1de6870af30494a1609300ed919b97eb0e39b30f89d8b6a187e62f",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+  },
+  "next_method": "split the 59 straddling panel-level windows at their V5 joined thresholds, then produce authenticated directed rho=1 physical-column reconstruction errors for the complete 164-panel / 49372-row source universe; V5 action bounds are not column-accuracy bounds",
+  "owners_used": {
+    "channel_ledger": "results/development/nsc-mode-resolved-cauchy-state.json",
+    "group12_order24_action": "results/development/nsc-incoming-retained-order24-bound.json",
+    "group32_order24_action": "results/development/nsc-incoming-group32-order24-bound.json",
+    "low_subgap_decision": "results/development/nsc-ks-low-subgap-decision-v2.json",
+    "source_inventory": "results/development/nsc-ks-source-inventory.json",
+    "source_inventory_payload": "results/development/artifacts/nsc-ks-source-inventory.npz",
+    "upstream_continuation_pilot": "results/development/nsc-ks-upstream-error-pilot.json",
+    "v5_source_update": "results/development/nsc-incoming-source-update-v5.json"
+  },
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "redo_group12_or_group32_order24_middle_bounds": false,
+  "remaining_low_subgap_source_error_bound": null,
+  "remaining_physical_rho1_source_error_bound": null,
+  "reproducer": "python3 scripts/derive_nsc_ks_rho1_source_bound_v1.py --check",
+  "reused_successors": {
+    "action_bounds_are_not_column_reconstruction": true,
+    "group12_order24_lapse_error_upper": 1.3252914401867609e-14,
+    "group32_combined_action_error_upper": [
+      2.1336305732738716e-13,
+      1.6425601865381046e-90
+    ],
+    "group32_validated_lower_window": [
+      24,
+      32
+    ],
+    "v5_covered_action_bound_N_beta": [
+      8.916253820835393e-12,
+      3.882373567206641e-18
+    ]
+  },
+  "row_threshold_partition": {
+    "physical_column_accuracy_universe_panels": 164,
+    "physical_column_accuracy_universe_rows": 49372,
+    "remaining_panel_campaign_is_not_complete_physical_source_universe": true,
+    "remaining_panel_campaign_panels": 102,
+    "remaining_panel_campaign_rows": 29356,
+    "row_partition_digest": "bdac0da2702268d69b0cc27a6ac73c6a908f5893a2f881186e6e477ab7895070",
+    "rows_at_or_above_joined_in_remaining_panels": 1528,
+    "rows_below_joined_in_remaining_panels": 27828,
+    "straddling_remaining_panels": 59,
+    "v5_action_is_not_column_reconstruction": true
+  },
+  "runtime": {
+    "CPU_seconds": 0.125,
+    "rss_source": "GetProcessMemoryInfo.PeakWorkingSetSize",
+    "rss_units": "bytes",
+    "ru_maxrss": 134672384,
+    "ru_maxrss_at_start": 118108160,
+    "wall_seconds": 0.125
+  },
+  "sample": {
+    "full_remaining_campaign_run": false,
+    "inspected_sample_panels": 2,
+    "inspected_sample_rows": 3,
+    "panels": [
+      {
+        "baseline_retained": true,
+        "coherence_retained": true,
+        "energies": [
+          0.25102605180644444,
+          0.2553956831705244
+        ],
+        "energy_folding_factor": 1,
+        "group": 14,
+        "hermitian_residual": 0.0,
+        "minus_energy_residual": 0.0,
+        "n_rows": 2,
+        "offdiag_max": 0.03650370166341877,
+        "panel": "group14/low32_1",
+        "panel_rows": 96,
+        "radius_history_response": "nontrivial",
+        "reconstruction_error_upper": null,
+        "remaining_panel": true,
+        "row_indices": [
+          0,
+          1
+        ],
+        "sign": 1,
+        "weights": [
+          0.0026319787535513854,
+          0.006102898024089932
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "coherence_retained": true,
+        "energies": [
+          0.00034201726881480377
+        ],
+        "energy_folding_factor": 1,
+        "group": 13,
+        "hermitian_residual": 0.0,
+        "minus_energy_residual": 0.0,
+        "n_rows": 1,
+        "offdiag_max": 0.4999949185222599,
+        "panel": "group13/low",
+        "panel_rows": 192,
+        "radius_history_response": "exact_zero",
+        "reconstruction_error_upper": null,
+        "remaining_panel": true,
+        "row_indices": [
+          0
+        ],
+        "sign": 1,
+        "weights": [
+          0.0008773262511837952
+        ]
+      }
+    ],
+    "payload_sha256": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "reconstruction_bounds_evaluated_panels": 0,
+    "reconstruction_bounds_evaluated_rows": 0
+  },
+  "schema": "NSC-KS-RHO1-SOURCE-BOUND-v1",
+  "source_hashes": {
+    "docs/nsc-ks-rho1-source-bound-v1.md": "37e99ffd31122cb5c7cc30026046da0200ebfa130ead18086f602129c066afe8",
+    "scripts/derive_nsc_ks_rho1_source_bound_v1.py": "4b25e01aa8ba0ae31f4a532c514ac8bf4e7628e42a81558448d26c59e0c4ffc1",
+    "src/recursive_horizons/nsc_ks_rho1_source_bound.py": "4a57e3f10ff83b75965e4828952830650a8b8bb7173e006ceff979132282f351",
+    "tests/test_nsc_ks_rho1_source_bound.py": "a6fdc4198d176a58924a2090913c706c639bc30668b734340923254d5ed230e1"
+  },
+  "status": "OPEN: rho=1 source-bound core and validator; complete 164-panel physical column reconstruction and directed N,beta budget unevaluated; 102-panel low/subgap subset identified",
+  "upstream_physical_slot": {
+    "combined_status": "OPEN: physical rho=1 source error remains an explicit missing input",
+    "combined_upstream_bound_N_beta": null,
+    "physical_rho1_source_error_upper": null
+  }
+}
