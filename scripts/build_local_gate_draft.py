@@ -34,7 +34,7 @@ def main():
     else:
         (ROOT / PDF).write_bytes(pdf)
         (ROOT / ARCHIVE).write_bytes(archive)
-        (ROOT / MANIFEST).write_text(json.dumps(record, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+        (ROOT / MANIFEST).write_text(json.dumps(record, indent=2, sort_keys=True) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps({'ok': True, 'status': 'OPEN', 'pdf_sha256': digest(pdf),
                       'identical_clean_builds': True, 'submission_ready': False}, indent=2))
 
