@@ -31,9 +31,9 @@
       "sha256": "489e42c56d3d1dc265578156b310cd7724626446bcc029154d808f0c5f137a3a"
     },
     {
-      "bytes": 1787,
+      "bytes": 1791,
       "path": ".github/workflows/verify.yml",
-      "sha256": "523e61bbefe7b89bb01a1f304d113a166ef3ea30813106077c211633538696bd"
+      "sha256": "b9f5aae550ac86a01b95e53e290971a0c76c9a2d4de7b423fdf0de9718e7273e"
     },
     {
       "bytes": 107,
@@ -66,9 +66,9 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 2902,
+      "bytes": 2886,
       "path": "Makefile",
-      "sha256": "f9403fa35ff84a82938f66de2c7d21a1ff9c4cf53815eeb657e1cb83f957425c"
+      "sha256": "8897371cd7a0f20d6ab5e4bd7061ea938659d588511ba8ba521e4305c7574d29"
     },
     {
       "bytes": 23015,
@@ -766,9 +766,9 @@
       "sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf"
     },
     {
-      "bytes": 1171,
+      "bytes": 1188,
       "path": "pyproject.toml",
-      "sha256": "19df7ae1854cbf570348f08cfab13f552ec400abbb426a8868fda2e6a267c883"
+      "sha256": "f03677da2f7f7fbe3bf4f979f12abbfd6e796c574e8f798e42b60a59072dadfb"
     },
     {
       "bytes": 36,
