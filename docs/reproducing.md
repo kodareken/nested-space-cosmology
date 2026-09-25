@@ -48,6 +48,13 @@ Those remain available through `make reproduce` or the manually dispatched
 GitHub workflow with `reproduce_history` enabled. The new OPEN draft has its
 own [reproduction guide](local-gate-draft.md).
 
+`make test` uses pytest to run both pytest functions and unittest classes.
+On Windows, the historical retained-tail exact JSON test is replaced by an
+all-field replay that normalizes only its native payload path separators.
+The original test, producer, record and authenticated hashes remain unchanged;
+Linux CI runs the original exact test. Numerical values are never normalized
+by this portability adapter.
+
 ## Requirements
 
 - Python 3.12 or newer

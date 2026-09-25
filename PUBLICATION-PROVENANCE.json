@@ -661,9 +661,9 @@
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
     },
     {
-      "bytes": 12136,
+      "bytes": 12546,
       "path": "docs/reproducing.md",
-      "sha256": "2a42ecb68eaf64bb250f9d8071b3168021a8fa721fb068198523766f0674cc8e"
+      "sha256": "89ef992ae55c9df5da69c4cb72ff57f7a8cc23c9f678cd3339692fafa6dd2274"
     },
     {
       "bytes": 7378,
@@ -2966,6 +2966,11 @@
       "sha256": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
     },
     {
+      "bytes": 675,
+      "path": "tests/conftest.py",
+      "sha256": "7788158d72c0f7b99fa95e172c416fe39a41ccdf9eaa38b546026ade843e9a61"
+    },
+    {
       "bytes": 1262,
       "path": "tests/fixtures/source-checkpoints/161028d52ef206a4bc99a25bf97ea467c30e7f16/pyproject.toml",
       "sha256": "b5bfe97f7225d19d6036e05d3199376885d4d626db05d49013495c94ec3e400e"
@@ -3209,6 +3214,11 @@
       "bytes": 2347,
       "path": "tests/test_nsc_weyl_boundary_jets.py",
       "sha256": "8ddb6794de5db61bee7c4cc74bae077f00e4360ddcb4f3c6d8baafe70d28c83e"
+    },
+    {
+      "bytes": 804,
+      "path": "tests/test_portable_tail_replay.py",
+      "sha256": "e3bf7ca130e4f9e21f938cab3e04537cb7e3c1a1b9c2d16da3c1efed34977711"
     },
     {
       "bytes": 21910,
