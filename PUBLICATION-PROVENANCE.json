@@ -41,9 +41,9 @@
       "sha256": "f20889d6e7f8ae4995f0b0d285c86a8e38e990e50ae0c1317a1e097f7f948367"
     },
     {
-      "bytes": 10716,
+      "bytes": 1555,
       "path": "AGENTS.md",
-      "sha256": "a69039586a9276c02e7988c89b2d7e9a793810ab0d05360e032d38909118e927"
+      "sha256": "96bcba9b904973cc71b9117ac95c78242856424344da2cf9f1a50a44c5387190"
     },
     {
       "bytes": 1056,
@@ -56,9 +56,9 @@
       "sha256": "1e599cb6b5a94dbae5d85446377268b4270adbe2b98873c777bd02aa1a9a712d"
     },
     {
-      "bytes": 5567,
+      "bytes": 5815,
       "path": "CONTRIBUTING.md",
-      "sha256": "8f613ba10882918531ccf504c67e06d3ffa1ffaf53efcf236303fb5bf8352229"
+      "sha256": "8cac16d32debfecd18cf0a18b2391a4b82dd25bb7b23fb5bc14ec57721f29ee2"
     },
     {
       "bytes": 1853,
@@ -71,9 +71,9 @@
       "sha256": "8897371cd7a0f20d6ab5e4bd7061ea938659d588511ba8ba521e4305c7574d29"
     },
     {
-      "bytes": 23015,
+      "bytes": 16879,
       "path": "README.md",
-      "sha256": "d8776bf4e6bad13fe5e90e4a0eb736e9f07adcd6460856885e2e862f1d0f97f3"
+      "sha256": "4930a0a01e7065e1708f16a2721dd7f3d077b7520a2d2a1196a8aa7905612c9b"
     },
     {
       "bytes": 629,
@@ -86,9 +86,9 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 43753,
+      "bytes": 44088,
       "path": "docs/current-result.md",
-      "sha256": "e54632e4298ff73504e95bd2f02e52379c1a17653560cea0c7d8996235c613a0"
+      "sha256": "c76bf150a7aa2d7cccd196c9bdc9a5ef3c62aea1dff96691ed9b919cd8f3c1df"
     },
     {
       "bytes": 14497,
@@ -96,9 +96,14 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 4068,
+      "bytes": 3705,
+      "path": "docs/instructions.md",
+      "sha256": "53366551e11e681f90d237f18c695e74d346fd7a9215d77ca788c7c9132fd255"
+    },
+    {
+      "bytes": 4367,
       "path": "docs/local-gate-draft.md",
-      "sha256": "bd7892ab1b0da74e13097a34043a861e196c6b0de06a82cce27a18689f695260"
+      "sha256": "0b3bf5da52805259cdb9531f55021b9aa6652e8c4c5fd7441949f626ee70c4c2"
     },
     {
       "bytes": 3154,
@@ -656,6 +661,11 @@
       "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
     },
     {
+      "bytes": 3634,
+      "path": "docs/papers.md",
+      "sha256": "9fd011781797a1951afdd9a40a098944dd89ed29598dc714680ba61161f0d97d"
+    },
+    {
       "bytes": 12814,
       "path": "docs/prior-art-and-open-claim.md",
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
@@ -669,6 +679,11 @@
       "bytes": 7378,
       "path": "paper/build-manifest.json",
       "sha256": "2513127bb20752d00f9cda80dbf230a2131d1586ee100780aded26e94c583f19"
+    },
+    {
+      "bytes": 1029,
+      "path": "paper/catalog.json",
+      "sha256": "145cd922017c833dcb77bbae15587e27840717142e667edcc3b562be4eb7c45e"
     },
     {
       "bytes": 1421,
@@ -686,14 +701,14 @@
       "sha256": "f82d6fc2fca7801805d1aa99e13e7c589fb249499e2387168205b4431b35f0a9"
     },
     {
-      "bytes": 26201,
+      "bytes": 26857,
       "path": "paper/local-gate-draft/main.tex",
-      "sha256": "bcb160b30434ca386077a33af9e875aa6c3770e5aec023117133df87e0555f1a"
+      "sha256": "01a2ebc59ef4d7b8555ce7dc8fce40e4b5dc71ad4fe30756a931b17d123f8060"
     },
     {
-      "bytes": 2199,
+      "bytes": 2582,
       "path": "paper/local-gate-draft/references.bib",
-      "sha256": "58390829ad2ca119ca18e995e3d6a6f9f14562e45591ffb11ad80ef58e6b4836"
+      "sha256": "6689a74f16399d5165970b4e0137ca8c8388870cf1278db64789b71c68db4f57"
     },
     {
       "bytes": 4045,
@@ -1916,9 +1931,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 18440,
+      "bytes": 21188,
       "path": "scripts/check_publication.py",
-      "sha256": "ec2b82f1cfa36533683aeb13b7e31d9934943eaead6d90137da6347b6fee14b0"
+      "sha256": "d278487453a5278c329781c11ed936d23a965cbc3b789fb9b1ff3bc3286eb07a"
     },
     {
       "bytes": 12921,
@@ -3214,6 +3229,11 @@
       "bytes": 2347,
       "path": "tests/test_nsc_weyl_boundary_jets.py",
       "sha256": "8ddb6794de5db61bee7c4cc74bae077f00e4360ddcb4f3c6d8baafe70d28c83e"
+    },
+    {
+      "bytes": 2492,
+      "path": "tests/test_paper_catalog.py",
+      "sha256": "bde84c15c47b1a6455832971f7c5d9d25de26adde38d70bb374ea3df24121fdf"
     },
     {
       "bytes": 804,
