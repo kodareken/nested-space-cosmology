@@ -30,25 +30,18 @@ that dated version are historical; current work is described in
 [Source archive](../paper/local-incoming-gate-draft-source.tar.gz) ·
 [Build manifest](../paper/local-gate-draft-manifest.json)
 
-This article isolates one question from the programme: whether a declared
-radius history and a state evolved from the same upstream source satisfy both
-local incoming constraints on `I=S(1)+[0.12,0.18]`. Its result is **OPEN**.
-It develops the mathematical formulation and reports the measured checkpoint;
-it does not present a certified realization, global recurrence or an arXiv
-submission. It is a companion to the broad manuscript, not a replacement.
+The current edition presents a finite nested-operator theorem: coupled regions,
+normalized inheritance, corresponding spectra and an exact reduced local response.
+Regional states can differ under the same law. The earlier local incoming-gate
+framework is retained as an explicitly OPEN application checkpoint in an appendix.
+Its previous nine-page edition remains in Git history; this is a revision of the
+same companion, not a third paper or a replacement of the foundation.
 
-| Foundation in v0.26.0 | Connection developed in the companion |
-|---|---|
-| Sections 1–2: inherited spectrum and nested-region interpretation | Introduction: the inheritance postulate and the declared local question |
-| Section 3 and Appendix B: Dirac embedding and boundary/Schur response | Unresolved-region elimination, retained state/memory terms and finite correspondence checks |
-| Section 4 and Appendix D: source, stress and energy accounting | Evolved upstream state, retarded variation and lapse/shift constraints |
-| Section 5 and Appendices D–E: history dependence and incomplete coupled evolution | Source-fixed two-function history class, error budget and local acceptance criterion |
-| Section 7: authenticated public evidence | Selected checkpoint snapshot and artifact verification, explicitly short of a complete new scientific certificate |
-
-The original manuscript and the companion intentionally have different scopes
-and build manifests. Their PDFs have not been concatenated or substituted for
-one another. A later edition can incorporate verified new results with an
-explicit change record while preserving earlier versions.
+The [proof note](nsc-nested-qualities.md) states the construction and domain.
+The [new source snapshot](../paper/nested-quality-evidence/snapshot.json) binds
+its small exact controls independently of the old physical error budget.
+The organizing equation is realized as a normalized map between equal-depth
+windows; adding further regions can change the dressed spectrum.
 
 ## Source of current status
 
@@ -59,6 +52,6 @@ identifies both document roles for tools and fresh contributors. The publication
 verifier checks their sources, PDFs and manifests together.
 
 Successful file authentication and reproducible builds do not close the local
-gate. Release 0.27.0 remains reserved for a closed local result and its complete
-scientific dependency chain. Existing documents remain available while that
+gate. The former 0.27.0 closed-local-result promise is not silently relabeled by
+this mathematical companion update. Existing documents remain available while that
 research continues.

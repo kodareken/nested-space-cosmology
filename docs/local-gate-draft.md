@@ -1,27 +1,20 @@
-# Focused local incoming-gate companion
+# Focused nested-qualities companion
 
 [Read the PDF](../paper/local-incoming-gate-draft.pdf) ·
 [Download TeX source](../paper/local-incoming-gate-draft-source.tar.gz) ·
 [Inspect build hashes](../paper/local-gate-draft-manifest.json) ·
-[Inspect source snapshot](../paper/local-gate-evidence/snapshot.json)
+[Inspect theorem snapshot](../paper/nested-quality-evidence/snapshot.json) ·
+[Inspect application snapshot](../paper/local-gate-evidence/snapshot.json)
 
-The draft develops the question in English and then gives the corresponding
-Schur reduction, retarded state law, lapse/shift constraints, and local error
-criterion. A notation table, nine-component budget table, and scoped primary
-references make the mathematical argument inspectable. Douglas Ek is the author;
-significant Codex and Grok assistance is disclosed in the article.
+The current article gives a connected proof of four nested qualities in a
+specified finite coupled-operator family. It permits different regional states
+under a shared law. The earlier source-fixed incoming calculation remains an
+OPEN application checkpoint in an appendix. Its source records and numerical
+claims retain their original meanings. The 43-page foundation is unchanged.
 
-It is a focused companion to the preserved
-[v0.26.0 foundational manuscript](../paper/nested-space-cosmology.pdf).
-[The paper guide](papers.md) maps the reused foundation to the local question
-and distinguishes the two document versions. Neither paper was lost or
-replaced by creating the companion.
-
-The scientific verdict is **OPEN**. The candidate is not a physical root, the
-one-cell field pilot is not a whole-cone certificate, and three known v4 error
-terms do not complete the budget. The successor 257-node budget needs newly
-authenticated applicability for all nine terms. Release `0.27.0` is reserved for
-a closed local result and its full dependency graph.
+The prior nine-page companion remains in Git history at `134962d`. The revised
+PDF is the same paper location with a new title and result focus, not a third
+manuscript. See [the paper guide](papers.md) and [proof note](nsc-nested-qualities.md).
 
 ## What is verifiable here
 
@@ -50,21 +43,29 @@ the historical manifests, publication tests, and preserved notebook. Expensive
 scientific regeneration runs only through the explicit `make reproduce` command
 or the manual GitHub workflow option.
 
+The additional `paper/nested-quality-evidence/` snapshot contains immutable
+Git blobs for the proof and its exact controls. The verifier checks every
+listed byte/hash and the proof-owner links in the record. Original Markdown
+source inside that snapshot retains its laboratory-relative citation paths;
+the reader-facing proof under `docs/` has checked public links. Reused earlier
+records are references, not a new complete gravitational certificate.
+
 ## Rebuild the PDF
 
 Use the exact compiler identified by `paper/local-gate-draft-manifest.json`.
-The CI builder uses the Ubuntu 24.04 TeX packages, `pdflatex`, and BibTeX,
+The earlier CI builder used Ubuntu 24.04 TeX packages, `pdflatex`, and BibTeX,
 with standard `amsmath`, `amssymb`, `geometry`,
 `booktabs`, `microtype`, and `hyperref` packages. It is not yet a pinned arXiv
 container. A different distribution can legitimately produce different bytes.
 
 ```console
-python scripts/build_local_gate_draft.py --check
+python scripts/build_local_gate_draft.py --engine tectonic --check
 ```
 
-The builder uses two clean temporary directories, a fixed source-date epoch,
-suppressed volatile PDF metadata, disabled shell escape, BibTeX, and three TeX
-passes. It rejects unresolved references, overfull boxes, and differing output
+The current Mac build uses Tectonic 0.17.0 (official release binary, separately downloaded into ignored build storage). The builder also retains its pdflatex/BibTeX mode. It uses two clean temporary directories, a fixed source-date epoch,
+suppressed volatile PDF metadata, and disabled shell escape. The pdflatex
+mode runs BibTeX and three TeX passes; Tectonic manages its own bibliography
+and convergence passes in untrusted mode. It rejects unresolved references, overfull boxes, and differing output
 bytes. The source archive contains `main.tex` at its root, all input macros,
 the `.bib`, and the generated `main.bbl`; it excludes logs, hidden files, and
 absolute paths. Both clean PDF builds must match the tracked artifact.
@@ -78,8 +79,8 @@ to accommodate an editorial update.
 
 ## Path to submission
 
-An arXiv submission still requires a closed local certificate, the complete
-scientific dependency closure, independent verifier replay, a pinned compatible
-TeX environment, account/category eligibility, and Douglas's final metadata,
-license, preview, and submission actions. This draft performs none of them.
-The focused draft and notebook have different purposes and version histories.
+An arXiv submission requires a reviewed claim matching the actual theorem,
+verified source/PDF, references, disclosure, account/category eligibility and
+Douglas's final metadata/license/preview decision. The old physical local-gate
+certificate is required only if that result is claimed; it is not a prerequisite
+for this finite theorem. This update makes no submission or release claim.

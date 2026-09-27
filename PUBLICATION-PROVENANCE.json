@@ -36,14 +36,14 @@
       "sha256": "b9f5aae550ac86a01b95e53e290971a0c76c9a2d4de7b423fdf0de9718e7273e"
     },
     {
-      "bytes": 107,
+      "bytes": 115,
       "path": ".gitignore",
-      "sha256": "f20889d6e7f8ae4995f0b0d285c86a8e38e990e50ae0c1317a1e097f7f948367"
+      "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 1555,
+      "bytes": 1699,
       "path": "AGENTS.md",
-      "sha256": "96bcba9b904973cc71b9117ac95c78242856424344da2cf9f1a50a44c5387190"
+      "sha256": "7555363f7cb3bad3931945cf29a754d2f6928e1108464190f5b632163b30748b"
     },
     {
       "bytes": 1056,
@@ -71,9 +71,9 @@
       "sha256": "8897371cd7a0f20d6ab5e4bd7061ea938659d588511ba8ba521e4305c7574d29"
     },
     {
-      "bytes": 16879,
+      "bytes": 17389,
       "path": "README.md",
-      "sha256": "4930a0a01e7065e1708f16a2721dd7f3d077b7520a2d2a1196a8aa7905612c9b"
+      "sha256": "b59af8a64f3c990cf91a6e5723803592f41b10892f6a1ad939efd3fc9c33b388"
     },
     {
       "bytes": 629,
@@ -86,9 +86,9 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 44088,
+      "bytes": 45134,
       "path": "docs/current-result.md",
-      "sha256": "c76bf150a7aa2d7cccd196c9bdc9a5ef3c62aea1dff96691ed9b919cd8f3c1df"
+      "sha256": "a9b4f9f562831669c1ebd092e3c127b8f7efbdc3186d542276b2fe3ef4de47c5"
     },
     {
       "bytes": 14497,
@@ -96,14 +96,14 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 3705,
+      "bytes": 4247,
       "path": "docs/instructions.md",
-      "sha256": "53366551e11e681f90d237f18c695e74d346fd7a9215d77ca788c7c9132fd255"
+      "sha256": "0005bdb74b9d272dc0e231ed5f8faddb07ec99c0a39a248cbfc703de4536e601"
     },
     {
-      "bytes": 4367,
+      "bytes": 4771,
       "path": "docs/local-gate-draft.md",
-      "sha256": "0b3bf5da52805259cdb9531f55021b9aa6652e8c4c5fd7441949f626ee70c4c2"
+      "sha256": "d923f734800e25b26d12884707d1a1eb625ee721ad0863fa2c1564ec19198f99"
     },
     {
       "bytes": 3154,
@@ -366,6 +366,11 @@
       "sha256": "39c64efa9896a2d29ad07e8c1851ecf1bfe377305622eea8603ae828227d4385"
     },
     {
+      "bytes": 5908,
+      "path": "docs/nsc-local-observer-correspondence.md",
+      "sha256": "4345b0ef91703c53ec879bfa9d3eeea4b07ee31209ad8a701f3fe17d5039f477"
+    },
+    {
       "bytes": 4039,
       "path": "docs/nsc-lorentzian-transport.md",
       "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
@@ -399,6 +404,11 @@
       "bytes": 3756,
       "path": "docs/nsc-mode-resolved-cauchy-state.md",
       "sha256": "877fe100b399d2a0493d9ee9fe28a02df5e087a461e2ac19b9819275b2df4ec9"
+    },
+    {
+      "bytes": 7619,
+      "path": "docs/nsc-nested-qualities.md",
+      "sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d"
     },
     {
       "bytes": 11598,
@@ -661,9 +671,9 @@
       "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
     },
     {
-      "bytes": 3634,
+      "bytes": 2879,
       "path": "docs/papers.md",
-      "sha256": "9fd011781797a1951afdd9a40a098944dd89ed29598dc714680ba61161f0d97d"
+      "sha256": "70a59fbbd78d3d2b652aa5442350691d332310557d998d7dd39a388e8451fddf"
     },
     {
       "bytes": 12814,
@@ -681,14 +691,14 @@
       "sha256": "2513127bb20752d00f9cda80dbf230a2131d1586ee100780aded26e94c583f19"
     },
     {
-      "bytes": 1029,
+      "bytes": 1290,
       "path": "paper/catalog.json",
-      "sha256": "145cd922017c833dcb77bbae15587e27840717142e667edcc3b562be4eb7c45e"
+      "sha256": "69e298abb7606883ff8227d1223018317132a8313d89490f9897aacef62aa37e"
     },
     {
-      "bytes": 1421,
+      "bytes": 1701,
       "path": "paper/local-gate-draft-manifest.json",
-      "sha256": "867543d76492b6139f0faaee3b34017e5572ef3fd04bfdd11ea9028d34236203"
+      "sha256": "369208e2522d1d780e549f92119bddb918e29e84c80c4309ecc2cd033ef8c217"
     },
     {
       "bytes": 1125,
@@ -701,9 +711,9 @@
       "sha256": "f82d6fc2fca7801805d1aa99e13e7c589fb249499e2387168205b4431b35f0a9"
     },
     {
-      "bytes": 26857,
+      "bytes": 14606,
       "path": "paper/local-gate-draft/main.tex",
-      "sha256": "01a2ebc59ef4d7b8555ce7dc8fce40e4b5dc71ad4fe30756a931b17d123f8060"
+      "sha256": "b217e03f45556d9ea2994ce44e1652f39d4ef52963f9d939aa5b781905a26d04"
     },
     {
       "bytes": 2582,
@@ -756,19 +766,59 @@
       "sha256": "26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e"
     },
     {
-      "bytes": 13405,
+      "bytes": 9262,
       "path": "paper/local-incoming-gate-draft-source.tar.gz",
-      "sha256": "b1f66d98c19b88a7193b90f66b3bc7fa5019b10e9cca555f8ac6e235ccf33c17"
+      "sha256": "434a1ab0018085d50986899d8c92e36f4788f431ee63a43b440311dfbe04c790"
     },
     {
-      "bytes": 285325,
+      "bytes": 83203,
       "path": "paper/local-incoming-gate-draft.pdf",
-      "sha256": "e259054ed9ca22ef856ce2e085fa61e12cd20f9b317e00863c9a0cafa09b6c07"
+      "sha256": "4d4e49e0526137d20722de9047240744520891987e7a43d216dd14cc0762e42d"
     },
     {
       "bytes": 346,
       "path": "paper/metadata.json",
       "sha256": "90034005464366c8b957904e1d91eeba19c35ae14bdcf5a5d958d294681f5501"
+    },
+    {
+      "bytes": 7619,
+      "path": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d"
+    },
+    {
+      "bytes": 15610,
+      "path": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json",
+      "sha256": "1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8"
+    },
+    {
+      "bytes": 1706,
+      "path": "paper/nested-quality-evidence/results/development/nsc-nested-qualities-v1.json",
+      "sha256": "99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033"
+    },
+    {
+      "bytes": 14802,
+      "path": "paper/nested-quality-evidence/results/nsc-3-regulated-recursion.json",
+      "sha256": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39"
+    },
+    {
+      "bytes": 2010,
+      "path": "paper/nested-quality-evidence/scripts/check_nsc_nested_qualities.py",
+      "sha256": "24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec"
+    },
+    {
+      "bytes": 2007,
+      "path": "paper/nested-quality-evidence/snapshot.json",
+      "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f"
+    },
+    {
+      "bytes": 3126,
+      "path": "paper/nested-quality-evidence/src/recursive_horizons/nsc_nested_qualities.py",
+      "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1"
+    },
+    {
+      "bytes": 1697,
+      "path": "paper/nested-quality-evidence/tests/test_nsc_nested_qualities.py",
+      "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
       "bytes": 139284,
@@ -1676,9 +1726,9 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
-      "bytes": 2254,
+      "bytes": 2814,
       "path": "scripts/build_local_gate_draft.py",
-      "sha256": "bddb98a5c0d28513245cc80cdf8787393bd3a7b409b71d0d7a2d2f10e6bb3deb"
+      "sha256": "8eafb9080a5dd6ac005e9575af780280cef4413d91792b06af106cd1f8219e6a"
     },
     {
       "bytes": 56695,
@@ -1931,9 +1981,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 21188,
+      "bytes": 21479,
       "path": "scripts/check_publication.py",
-      "sha256": "d278487453a5278c329781c11ed936d23a965cbc3b789fb9b1ff3bc3286eb07a"
+      "sha256": "727ecc5dc1be3703b6ac05fdf83430472c40470d3b588f8ef48376d207877588"
     },
     {
       "bytes": 12921,
@@ -2196,9 +2246,9 @@
       "sha256": "efe623da3299e5ef7182cb065c2e173e8b02da951ebb020d02f7437d007d3895"
     },
     {
-      "bytes": 11362,
+      "bytes": 14202,
       "path": "scripts/local_gate_draft.py",
-      "sha256": "5746fbca4a67901b604f3faa47f8ed8313e00a875fdc36be9acadabb0af5fde7"
+      "sha256": "bb4ada01923ddf738c296d279219f06155a81dc20dfbf513ddde0e8fe1ef5017"
     },
     {
       "bytes": 4847,
@@ -3006,9 +3056,9 @@
       "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
     },
     {
-      "bytes": 3038,
+      "bytes": 4256,
       "path": "tests/test_local_gate_draft.py",
-      "sha256": "c15e7824026b1f495c1297a99f9848f742b60d709d0ccebfafa278dfe68aa77d"
+      "sha256": "156e985ba293cbaec0f9da2bc107b71a673fb0d57e0284d036d4963ad3c75048"
     },
     {
       "bytes": 10617,

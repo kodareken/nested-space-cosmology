@@ -12,6 +12,7 @@ When relevant files, owners or behavior change, update their documentation in
 | Current scientific result and remaining gaps | [Current result](docs/current-result.md) |
 | Resume after compaction; repository roles and editing boundaries | [Instructions](docs/instructions.md) |
 | Inheritance idea and evidence labels | [Theory](THEORY.md) |
+| Finite nested-quality theorem and evidence | [Proof](docs/nsc-nested-qualities.md), [snapshot](paper/nested-quality-evidence/snapshot.json) |
 | Existing mathematics to reuse | [Prior-art reuse map](docs/nsc-prior-art-reuse.md) |
 | Verify records and build artifacts | [Reproduction](docs/reproducing.md), [focused-draft build](docs/local-gate-draft.md) |
 | Publication and contribution contracts | [Contributing](CONTRIBUTING.md) |

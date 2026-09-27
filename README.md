@@ -1,5 +1,12 @@
 # Nested-Space Cosmology
 
+**New focused mathematical result:** [Nested Qualities and Local Responses](paper/local-incoming-gate-draft.pdf)
+gives an explicit finite-window construction, a proof of inherited scale relations,
+ordered regional reduction and distinct regional states under the same law.
+[Proof and scope](docs/nsc-nested-qualities.md). The separate gravitational
+incoming gate remains OPEN; its historical checkpoint is retained in an appendix.
+The [43-page foundation](paper/nested-space-cosmology.pdf) remains unchanged.
+
 ## One research programme, two complementary papers
 
 The original manuscript remains the foundation of this project. The focused
