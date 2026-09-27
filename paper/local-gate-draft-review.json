@@ -1,15 +1,15 @@
 {
-  "build_source_commit": "9b68083",
-  "build_workflow": "https://github.com/kodareken/nested-space-cosmology/actions/runs/36157587778",
-  "independent_review_limit": "The lab manuscript and numerical primitives received Grok review. A later Windows Grok public-tooling review terminated before findings; it is not counted as completed independent review.",
-  "page_count": 8,
-  "pdf_sha256": "8af811e2e01c89d7ce867b774a256394776d0a4c8332c258b1b751fe6ca9e875",
+  "build_source_commit": "e5462a4a9cd633e10c0448cf36d8e5f5290dde47",
+  "build_workflow": "https://github.com/kodareken/nested-space-cosmology/actions/runs/36312067368",
+  "independent_review_limit": "Grok reviewed all 39 original PR paths and paper continuity at 24922ac. The subsequent routing, citation and catalog corrections were integrated and verified by Codex. No scientific closure was established.",
+  "page_count": 9,
+  "pdf_sha256": "e259054ed9ca22ef856ce2e085fa61e12cd20f9b317e00863c9a0cafa09b6c07",
   "schema": "NSC-OPEN-DRAFT-REVIEW-v1",
   "scientific_status": "OPEN",
   "submission_ready": false,
   "visual_review": {
-    "layout": "PASS: readable equations, tables and linked references; no clipped content",
-    "method": "Every pdftoppm page render inspected after the final build",
+    "layout": "PASS: readable text, equations, tables and references; no clipped content",
+    "method": "All nine pdftoppm page renders inspected after the two clean builds",
     "pages_reviewed": [
       1,
       2,
@@ -18,12 +18,13 @@
       5,
       6,
       7,
-      8
+      8,
+      9
     ]
   },
   "windows_tests": {
-    "command": "python -m unittest discover -s tests -q",
-    "passed": 255,
-    "platform_workaround": "Process-local Python _wmi import fallback; no scientific record rewritten"
+    "command": "python -m pytest -q",
+    "passed": 347,
+    "platform_workaround": "Native validation environment with scoped _wmi fallback; scientific records unchanged"
   }
 }

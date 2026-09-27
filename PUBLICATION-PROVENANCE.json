@@ -688,12 +688,12 @@
     {
       "bytes": 1421,
       "path": "paper/local-gate-draft-manifest.json",
-      "sha256": "52c1f7bdd593650c01a4438c77a052ff48790de4013f6b9dee8e677f6e208d73"
+      "sha256": "867543d76492b6139f0faaee3b34017e5572ef3fd04bfdd11ea9028d34236203"
     },
     {
-      "bytes": 1064,
+      "bytes": 1125,
       "path": "paper/local-gate-draft-review.json",
-      "sha256": "3a694a859ffd3a4240abe92f73cdb6233fa370f9b6ab3c1134b7c539b9a3b6ab"
+      "sha256": "5aa7f064f9e79b2157fdf30f0fffe030a14c0fd3c60e52d46079732679bff38b"
     },
     {
       "bytes": 596,
@@ -756,14 +756,14 @@
       "sha256": "26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e"
     },
     {
-      "bytes": 12966,
+      "bytes": 13405,
       "path": "paper/local-incoming-gate-draft-source.tar.gz",
-      "sha256": "95b4060190fb5ac7d400d4c4fb4bbc18f5aef68ca266b7e93b2ab09ba1034030"
+      "sha256": "b1f66d98c19b88a7193b90f66b3bc7fa5019b10e9cca555f8ac6e235ccf33c17"
     },
     {
-      "bytes": 280659,
+      "bytes": 285325,
       "path": "paper/local-incoming-gate-draft.pdf",
-      "sha256": "8af811e2e01c89d7ce867b774a256394776d0a4c8332c258b1b751fe6ca9e875"
+      "sha256": "e259054ed9ca22ef856ce2e085fa61e12cd20f9b317e00863c9a0cafa09b6c07"
     },
     {
       "bytes": 346,
