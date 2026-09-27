@@ -74,6 +74,20 @@ class ReleaseImportTests(unittest.TestCase):
         ):
             self.assertEqual(relative, self.importer.safe_relative(relative))
 
+    def test_only_content_addressed_development_npz_payloads_are_allowed(self):
+        digest = 'a' * 64
+        relative = f'results/development/artifacts/local-gate.{digest}.npz'
+        self.assertEqual(relative, self.importer.safe_relative(relative))
+        for rejected in (
+            'results/development/artifacts/local-gate.npz',
+            f'results/development/local-gate.{digest}.npz',
+            f'results/artifacts/local-gate.{digest}.npz',
+            f'results/development/artifacts/local-gate.{"g" * 64}.npz',
+            f'docs/local-gate.{digest}.npz',
+        ):
+            with self.assertRaises(ValueError):
+                self.importer.safe_relative(rejected)
+
     def test_v070_import_files_match_lab_pin_and_local_bytes(self):
         self.assertEqual("0.7.0", self.release["release_version"])
         self.assertEqual(V070_SOURCE, self.release["source_commit"])

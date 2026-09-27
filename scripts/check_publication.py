@@ -42,6 +42,11 @@ REQUIRED = {
     "paper/nested-space-cosmology.md",
     "paper/nested-space-cosmology.pdf",
     "paper/build-manifest.json",
+    "paper/catalog.json",
+    "paper/local-incoming-gate-draft.pdf",
+    "paper/local-gate-draft-manifest.json",
+    "docs/papers.md",
+    "docs/instructions.md",
     "results/manifest.json",
     "PUBLICATION-PROVENANCE.json",
 }
@@ -190,7 +195,7 @@ def public_files() -> list[Path]:
             paths.append(path)
         elif path.is_file() and path.name != ".DS_Store" and path.suffix != ".pyc":
             paths.append(path)
-    return sorted(paths, key=lambda item: str(item.relative_to(ROOT)))
+    return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
 
 
 def check_manifest(errors: list[str]) -> None:
@@ -277,13 +282,13 @@ def check_manifest(errors: list[str]) -> None:
     if current != [manifest.get("frontier_artifact_id")]:
         errors.append(f"historical frontier differs from its declared manifest identity: {current}")
     result_files = {
-        str(path.relative_to(ROOT))
+        path.relative_to(ROOT).as_posix()
         for path in (ROOT / "results").glob("nsc-*.json")
     }
     development = ROOT / "results" / "development"
     if development.is_dir():
         result_files.update(
-            str(path.relative_to(ROOT))
+            path.relative_to(ROOT).as_posix()
             for path in development.glob("*.json")
         )
     try:
@@ -307,7 +312,7 @@ def check_provenance(errors: list[str], files: list[Path]) -> None:
         errors.append("publication provenance has the wrong source commit")
     declared = {entry["path"]: entry for entry in value.get("included_paths", [])}
     actual = {
-        str(path.relative_to(ROOT))
+        path.relative_to(ROOT).as_posix()
         for path in files
         if path != PROVENANCE
     }
@@ -337,6 +342,47 @@ def check_paper(errors: list[str]) -> None:
             errors.append(f"paper build manifest mismatch: {path_field}")
 
 
+def check_paper_catalog(errors: list[str]) -> None:
+    """Both papers and their distinct roles must survive a publication update."""
+    try:
+        catalog = json.loads((ROOT / 'paper/catalog.json').read_text(encoding='utf-8'))
+        if (catalog.get('schema') != 'NSC-PAPER-CATALOG-v1'
+                or catalog.get('current_status') != 'OPEN'):
+            raise ValueError('unexpected catalog or scientific status')
+        rows = catalog.get('documents', [])
+        documents = {row['id']: row for row in rows}
+        if len(rows) != 2 or set(documents) != {'foundation', 'local-gate'}:
+            raise ValueError('both unique paper roles are required')
+        roles = {'foundation': 'foundational_manuscript', 'local-gate': 'focused_open_companion'}
+        for name, row in documents.items():
+            if row['role'] != roles[name]:
+                raise ValueError('paper role differs')
+            paths = {}
+            for field in ('source', 'pdf', 'manifest'):
+                relative = Path(row[field])
+                candidate = ROOT / relative
+                if relative.is_absolute() or not candidate.resolve().is_relative_to(ROOT.resolve()) or not candidate.is_file():
+                    raise ValueError('missing or invalid paper path: ' + row[field])
+                paths[field] = candidate
+            record = json.loads(paths['manifest'].read_text(encoding='utf-8'))
+            if sha256(paths['pdf']) != record['pdf_sha256']:
+                raise ValueError('paper PDF differs from build manifest')
+            if name == 'foundation':
+                if (record['version'] != row['version']
+                        or sha256(paths['source']) != row['source_sha256']
+                        or record['source_sha256'] != row['source_sha256']
+                        or record['pdf_sha256'] != row['pdf_sha256']):
+                    raise ValueError('preserved foundation differs')
+            elif (row.get('status') != 'OPEN' or row.get('submission_ready') is not False
+                  or record.get('status') != 'OPEN' or record.get('submission_ready') is not False
+                  or record['inputs'].get(row['source']) != sha256(paths['source'])):
+                raise ValueError('companion status/source differs from its build')
+        if documents['foundation']['pdf'] == documents['local-gate']['pdf']:
+            raise ValueError('companion cannot replace the foundational PDF')
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f'paper catalog: {error}')
+
+
 def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
     for raw_target in LINK_RE.findall(text):
         target = raw_target.strip().strip("<>").split()[0]
@@ -359,7 +405,7 @@ def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
 
 
 def check_public_boundary(errors: list[str], files: list[Path]) -> None:
-    relative_files = {str(path.relative_to(ROOT)) for path in files}
+    relative_files = {path.relative_to(ROOT).as_posix() for path in files}
     for required in sorted(REQUIRED - relative_files):
         errors.append(f"required public file is absent: {required}")
     for excluded in sorted(EXCLUDED_ROOTS & {path.parts[0] for path in map(Path, relative_files)}):
@@ -384,7 +430,7 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
         for label, pattern in SECRET_PATTERNS.items():
             if pattern.search(text):
                 errors.append(f"possible {label} appears in {path.relative_to(ROOT)}")
-        relative = str(path.relative_to(ROOT))
+        relative = path.relative_to(ROOT).as_posix()
         if relative in GITHUB_MARKDOWN_ENTRYPOINTS:
             for label, pattern in UNSUPPORTED_GITHUB_MATH.items():
                 if pattern.search(text):
@@ -399,6 +445,7 @@ def main() -> int:
     check_public_boundary(errors, files)
     check_manifest(errors)
     check_paper(errors)
+    check_paper_catalog(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

@@ -1,0 +1,53 @@
+{
+  "complete_scientific_dependency_closure": false,
+  "files": [
+    {
+      "bytes": 9104,
+      "git_blob": "b1b9a9dbceb96b4d85bdb2b6544a3cad939d8980",
+      "path": "results/development/nsc-ks-gate-budget-v4.json",
+      "sha256": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0"
+    },
+    {
+      "bytes": 4526,
+      "git_blob": "83fab57c02658bc6abe4cec501cf7cc81d4cf7d4",
+      "path": "results/development/nsc-ks-gate-reanchor-v2.json",
+      "sha256": "f5914559d7b9570ff16bea1c50a0417a16d0bbcd2384999ce8bc98a108f9ea6f"
+    },
+    {
+      "bytes": 15610,
+      "git_blob": "b74bc22f9a9c18eef94fac0e17e1121ff4701075",
+      "path": "results/development/nsc-local-observer-correspondence.json",
+      "sha256": "1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8"
+    },
+    {
+      "bytes": 20354,
+      "git_blob": "1f149eb1e791c954d7ae0e549a9be0ba8eabfef0",
+      "path": "results/development/nsc-ks-rho1-source-bound-v1.json",
+      "sha256": "997253e3996c6b3ef7d347c80d1e83e6ecb4772ca1eea1282495f2d760a5dc6e"
+    },
+    {
+      "bytes": 3662632,
+      "git_blob": "03177a551f6447ee008cc8d4ad6ea6ab09ca21f6",
+      "path": "results/development/nsc-ks-current-field-pilot-v4.json",
+      "sha256": "a10407eebb68e9c70666119a2429769ee1b59d16b235af6a3321ac07177ef0a1"
+    },
+    {
+      "bytes": 6187,
+      "git_blob": "9232524e1f146ab957fd9722f7c9d9dd9b99d4ca",
+      "path": "src/recursive_horizons/nsc_local_gate_certificate_v2.py",
+      "sha256": "c86dad610106ecf76f9a272a1f0480a9891744e9c8f291fff33984b0e314833f"
+    },
+    {
+      "bytes": 30104,
+      "git_blob": "c9a213f8b9d1fa4b1457fcf8163bc956be3e1b27",
+      "path": "src/recursive_horizons/nsc_local_observer_correspondence.py",
+      "sha256": "26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e"
+    }
+  ],
+  "lab_commit": "aefbdbafdebb737672b50580ca569f52256ef041",
+  "public_base_commit": "8332f83e7477ed0f77d0ef65ed1bf30667451c9f",
+  "schema": "NSC-OPEN-DRAFT-SNAPSHOT-v1",
+  "scope": "Selected records and inspectable owners cited by the research draft. Hash verification does not replay their complete scientific dependency graph. No closed local certificate.",
+  "source_method": "immutable Git blobs; source bytes unchanged",
+  "status": "OPEN"
+}

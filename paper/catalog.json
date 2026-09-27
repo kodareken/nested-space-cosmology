@@ -1,0 +1,29 @@
+{
+  "schema": "NSC-PAPER-CATALOG-v1",
+  "project": "Nested-Space Cosmology",
+  "current_status": "OPEN",
+  "status_document": "docs/current-result.md",
+  "relationship": "One research programme; preserved foundation and focused local-test companion",
+  "documents": [
+    {
+      "id": "foundation",
+      "role": "foundational_manuscript",
+      "version": "0.26.0",
+      "date": "2026-09-15",
+      "source": "paper/nested-space-cosmology.md",
+      "pdf": "paper/nested-space-cosmology.pdf",
+      "manifest": "paper/build-manifest.json",
+      "source_sha256": "509f61e7cec3e0a294bcb5f492b805c6ae0216eb1ae1b6fab0a7eb29ec329ff3",
+      "pdf_sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf"
+    },
+    {
+      "id": "local-gate",
+      "role": "focused_open_companion",
+      "status": "OPEN",
+      "submission_ready": false,
+      "source": "paper/local-gate-draft/main.tex",
+      "pdf": "paper/local-incoming-gate-draft.pdf",
+      "manifest": "paper/local-gate-draft-manifest.json"
+    }
+  ]
+}

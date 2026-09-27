@@ -1,0 +1,99 @@
+{
+  "best_measured_label": "v2-current-dop-g1024-d48-metadata2",
+  "best_measured_merit": 0.0009640931165493475,
+  "best_measured_profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "calibration_scope": "representative complete families on history 0b0e4ced; convergence indicators only",
+  "certificate_numerics": null,
+  "class": "delta r = chi(s)[s*w(z)+s^3*U(z)/6]",
+  "comparison_is_of_certified_continuum_residuals": false,
+  "full_retained_source_covered": true,
+  "history_specific_bounds_transferred": false,
+  "input_hashes": {
+    "results/development/nsc-ks-family-comparison-v3-split-cf4-dop.json": "8a6f63fb172f145fa8dd731a35f45728df2daa40e06eaf62995d421d7e6b4a49",
+    "results/development/nsc-ks-family-comparison-v3-split-space-1024-2048.json": "a39806ce448dd5ffbd99e89ee1c962e2ec14d888d0c3812629fa5921d0de8463",
+    "results/development/nsc-ks-gate-budget-v4.json": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0",
+    "results/development/nsc-ks-gate-value-v2-current-dop-g1024-d48-metadata2.json": "3153bd68a22a9f5ce04fa93fdd26b088db93b5f6b080eed8a22a400eb177edbf",
+    "results/development/nsc-ks-gate-value-v2-n64-best-dop-g1024-d48.json": "576fff26b4f7810e164a0fbd9e5c3444dffff5317bb2caaea44b4bdf35f6cfe2",
+    "results/development/nsc-ks-gate-value-v2-trial-dop-g1024-d48.json": "a4b6e945ae51174d9b40ce71d50b0a5abcaa051002ead007cf387614b2a9ce8e"
+  },
+  "interval": "S(1)+[0.12,0.18]",
+  "merit_definition": "m(g)=max over nodes of max(|E_N|, |E_beta|)",
+  "node_count": 129,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_tolerance": 3e-11,
+  "rows": [
+    {
+      "coefficients_per_function": 32,
+      "history_path": "results/development/nsc-ks-gate-history-lm-broyden.json",
+      "label": "v2-current-dop-g1024-d48-metadata2",
+      "merit": 0.0009640931165493475,
+      "new_optimizer_step": false,
+      "nodal_maxima": [
+        0.0009640931165493475,
+        0.00038096015963721627
+      ],
+      "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+      "value_record": {
+        "path": "results/development/nsc-ks-gate-value-v2-current-dop-g1024-d48-metadata2.json",
+        "sha256": "3153bd68a22a9f5ce04fa93fdd26b088db93b5f6b080eed8a22a400eb177edbf"
+      }
+    },
+    {
+      "coefficients_per_function": 64,
+      "history_path": "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust03.json",
+      "label": "v2-n64-best-dop-g1024-d48",
+      "merit": 0.0010270563852054077,
+      "new_optimizer_step": false,
+      "nodal_maxima": [
+        0.0010270563852054077,
+        0.0006836887627041238
+      ],
+      "profile_identity": "ad75942438dad1de599ee260e5d9aa7f17d60af26b533bee2b0691f2a6dec777",
+      "value_record": {
+        "path": "results/development/nsc-ks-gate-value-v2-n64-best-dop-g1024-d48.json",
+        "sha256": "576fff26b4f7810e164a0fbd9e5c3444dffff5317bb2caaea44b4bdf35f6cfe2"
+      }
+    },
+    {
+      "coefficients_per_function": 32,
+      "history_path": "results/development/nsc-ks-coupled-newton-n32-truncated-trial.json",
+      "label": "v2-trial-dop-g1024-d48",
+      "merit": 0.0010444532873277786,
+      "new_optimizer_step": false,
+      "nodal_maxima": [
+        0.0010444532873277786,
+        0.00035658230734738824
+      ],
+      "profile_identity": "a9572341fe01e157cb0d9e2176e022e49277304f560a40ec73231ae3825e4508",
+      "value_record": {
+        "path": "results/development/nsc-ks-gate-value-v2-trial-dop-g1024-d48.json",
+        "sha256": "a4b6e945ae51174d9b40ce71d50b0a5abcaa051002ead007cf387614b2a9ce8e"
+      }
+    }
+  ],
+  "runtime_versions": {
+    "numpy": "2.5.1",
+    "python": "3.14.3",
+    "scipy": "1.17.1"
+  },
+  "schema": "NSC-KS-GATE-REANCHOR-v2",
+  "solver": {
+    "atol": 5e-19,
+    "degree": 48,
+    "grid_nodes": 1024,
+    "integrator": "dop853",
+    "length": 0.4,
+    "max_step": 0.0001220703125,
+    "phase_nodes": 192,
+    "rtol": 5e-14,
+    "step_control": "primal"
+  },
+  "source_hashes": {
+    "scripts/derive_nsc_ks_gate_reanchor_v2.py": "4f99c46d2aaf97c4aa184b1636abb8efcc115c8dbadb9614f3fe2861473b0e66",
+    "scripts/derive_nsc_ks_gate_value.py": "55f5a525db717137ca452b3e93118a539f2f21e5c9dfe087cde85e179ea07302"
+  },
+  "source_identity": "ed6330bb7f905975c11a05696d3fff7a2763ea1fd05fdb5d0aff3b319793becf",
+  "state_law": "C_Sigma[g]=U_g C_up U_g^dagger; C_up unchanged",
+  "status": "OPEN: comparable corrected nodal measurements; full error budget incomplete"
+}

@@ -24,18 +24,25 @@ class V070ReleaseTests(unittest.TestCase):
         cls.manifest=json.loads((ROOT/'results/manifest.json').read_text())
         cls.release=json.loads((ROOT/'results/release-spec.json').read_text())
 
-    def test_current_version_and_historical_step_preservation(self):
+    def test_historical_version_and_step_preservation(self):
         old=json.loads(subprocess.check_output(['git','show','v0.6.0:results/manifest.json'],cwd=ROOT))
         self.assertEqual(old['steps'],self.manifest['steps'][:91])
         self.assertEqual(100,len(self.manifest['steps']))
         self.assertEqual(58,self.manifest['historical_result_count'])
         self.assertEqual(42,len(self.release['scoped_follow_ups']))
         self.assertEqual(PIN,self.release['source_commit'])
+        def tagged(path):
+            return subprocess.check_output(['git','show','v0.7.0:'+path],cwd=ROOT).decode()
         for version in (self.release['release_version'],self.manifest['release_version'],
-                        json.loads((ROOT/'paper/metadata.json').read_text())['version'],
-                        tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version']):
+                        json.loads(tagged('paper/metadata.json'))['version'],
+                        tomllib.loads(tagged('pyproject.toml'))['project']['version']):
             self.assertEqual('0.7.0',version)
-        self.assertIn('version: 0.7.0',(ROOT/'CITATION.cff').read_text())
+        self.assertIn('version: 0.7.0',tagged('CITATION.cff'))
+
+    def test_current_notebook_metadata_is_consistent(self):
+        version=json.loads((ROOT/'paper/metadata.json').read_text())['version']
+        self.assertEqual(version,tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version'])
+        self.assertIn('version: '+version,(ROOT/'CITATION.cff').read_text())
 
     def test_new_policies_preserve_the_recorded_tolerances(self):
         self.assertEqual(['results/development/'+n+'.json' for n in NAMES],

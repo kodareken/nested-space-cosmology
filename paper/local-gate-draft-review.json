@@ -1,0 +1,30 @@
+{
+  "build_source_commit": "e5462a4a9cd633e10c0448cf36d8e5f5290dde47",
+  "build_workflow": "https://github.com/kodareken/nested-space-cosmology/actions/runs/36312067368",
+  "independent_review_limit": "Grok reviewed all 39 original PR paths and paper continuity at 24922ac. The subsequent routing, citation and catalog corrections were integrated and verified by Codex. No scientific closure was established.",
+  "page_count": 9,
+  "pdf_sha256": "e259054ed9ca22ef856ce2e085fa61e12cd20f9b317e00863c9a0cafa09b6c07",
+  "schema": "NSC-OPEN-DRAFT-REVIEW-v1",
+  "scientific_status": "OPEN",
+  "submission_ready": false,
+  "visual_review": {
+    "layout": "PASS: readable text, equations, tables and references; no clipped content",
+    "method": "All nine pdftoppm page renders inspected after the two clean builds",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "windows_tests": {
+    "command": "python -m pytest -q",
+    "passed": 347,
+    "platform_workaround": "Native validation environment with scoped _wmi fallback; scientific records unchanged"
+  }
+}
