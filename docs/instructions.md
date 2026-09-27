@@ -24,6 +24,15 @@ handover and registered working checkout. The selected evidence snapshot here
 does not contain its complete active code or replace its work cursor. A missing
 experimental input is not a reason to reconstruct it from public prose.
 
+## Current nested-quality result
+
+The focused companion now leads with the finite construction in
+[nsc-nested-qualities.md](nsc-nested-qualities.md). The previous numerical
+application remains OPEN in its appendix. The current work does not require
+eternity, heat-death or a new full incoming-gate campaign. Preserve different
+regional states under common laws. Before claiming two descriptions conflict,
+identify their region, scale, observer, state and compared quantity.
+
 ## Keep the papers connected
 
 The organizing inheritance postulate remains
@@ -34,9 +43,9 @@ $$
 
 The broad manuscript contains the physical interpretation, operator/Schur/
 recursion calculations, source history and references. Its v0.26.0 source and
-PDF are preserved. The companion develops one source-fixed local incoming test
-under `C_Sigma[g]=U_g C_up U_g†` on `I=S(1)+[0.12,0.18]`. Its current result is
-OPEN. A later edition can incorporate verified new results with an explicit
+PDF are preserved. The companion retains one source-fixed local incoming test as an application
+under `C_Sigma[g]=U_g C_up U_g†` on `I=S(1)+[0.12,0.18]`. That application is
+OPEN, separately from the finite nested-operator theorem. A later edition can incorporate verified new results with an explicit
 change record; do not silently substitute a new PDF for a frozen version.
 
 Keep assumptions, imported identities, repository calculations, numerical

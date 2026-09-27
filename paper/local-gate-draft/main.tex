@@ -1,665 +1,285 @@
 \documentclass[11pt]{article}
-
-\ifdefined\pdfinfoomitdate
-  \pdfinfoomitdate=1
-\fi
-\ifdefined\pdfsuppressptexinfo
-  \pdfsuppressptexinfo=-1
-\fi
-\ifdefined\pdftrailerid
-  \pdftrailerid{}
-\fi
-
-\usepackage{amsmath,amssymb}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=-1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage[margin=1.05in]{geometry}
 \usepackage{booktabs}
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 \usepackage[hidelinks]{hyperref}
-
 \input{result_macros}
 \input{evidence_values}
-
-\hypersetup{
-  pdftitle={Unresolved Regions as Local Sources: A Local Incoming-Gate Framework for Nested-Space Inheritance},
-  pdfauthor={Douglas Ek},
-  pdfsubject={Research draft. Local incoming-gate certificate OPEN.}
-}
-
-\title{\NSCTitleMacro}
-\author{\NSCAuthorMacro}
-\date{}
-
+\hypersetup{pdftitle={Nested Qualities and Local Responses: An Inherited Finite-Operator Construction},pdfauthor={Douglas Ek},pdfsubject={Finite mathematical construction; gravitational application OPEN}}
+\title{Nested Qualities and Local Responses:\\An Inherited Finite-Operator Construction}
+\author{Douglas Ek}
+\date{27 September 2026}
 \newcommand{\Tr}{\operatorname{Tr}}
-\newcommand{\up}{\mathrm{up}}
-\newcommand{\src}{\mathrm{src}}
-\newcommand{\refg}{\mathrm{ref}}
-\newcommand{\loc}{\mathrm{local}}
-
+\newcommand{\spec}{\operatorname{spec}}
+\newtheorem{proposition}{Proposition}
 \begin{document}
 \maketitle
-
-\vspace{-1.15em}
-\begin{center}
-\large\textit{Research draft} --- local incoming-gate certificate \textbf{\NSCVerdict}\\[0.35em]
-\normalsize
-Declared interval $\NSCInterval$. Source held fixed. State evolved.
-\end{center}
-
 \begin{abstract}
-This research draft formulates a \emph{local} incoming-gate framework in
-which an unresolved nested region acts as a source for two incoming
-gravitational constraints. A local observer retains a reduced block of the
-Dirac Hamiltonian, a retarded memory kernel, and complementary
-initial-state data. The incoming quantum kernel is obtained by transporting
-a fixed upstream source along a metric history,
-\begin{equation*}
-  \NSCStateLaw.
-\end{equation*}
-The history class contains two axial functions that perturb the areal radius on one connected
-coordinate interval $I$ of positive length. The symbols $N$ and $\beta$
-label the incoming constraints associated with lapse and shift variations of
-the declared action; they are not fit parameters of the history. Closing
-both constraints on $I$, or excluding the whole class by a necessary
-relation, is the local gate. Laboratory records presently give the
-generated verdict \NSCVerdict: three of nine error-budget components are
-enclosed, six remain missing, and sampled nodal maxima lie above the
-existence tolerance $\NSCTolerance$. Open is a documented intermediate
-status. The manuscript claims no global parent/child matching and no
-observational identification.
+We give an explicit finite-operator construction exhibiting four nested
+qualities: coupled regional composition, an inherited law under a normalized
+scale transformation, preserved dimensionless spectral relationships, and
+an effective local response to unresolved regions. Every finite depth is
+covered by the same algebraic argument. The transformation acts on an indexed
+family of equal-depth windows, not by an unscaled dilation of a single fixed
+matrix. Admissible quantum states may differ between regions; common laws
+do not require identical occupations or behavior. Ordered Schur reduction
+retains the influence of a region's own surroundings, while time-domain
+elimination retains memory and initial-state information. These results reuse
+standard spectral and block-operator mathematics and connect the existing
+Nested-Space Cosmology formulation to a concrete model. They establish
+mathematical nested qualities within the stated finite class, without changing
+local quantum evolution. A separate gravitational incoming-gate calculation
+remains OPEN and is reported only as an application checkpoint.
 \end{abstract}
 
-\section{Unresolved regions as local sources}
-\label{sec:intro}
-
-This article is a focused companion to the broader Nested-Space Cosmology
-manuscript, version~0.26.0~\cite{EkNSC2026}. Its organizing inheritance
-postulate remains
-\begin{equation}
-\label{eq:inheritance}
-  \mathcal T_\Theta^{*}\mathbb D_\Theta=\mathbb D_\Theta.
+\section{Question and relation to the foundation}
+This article is a focused companion to the preserved Nested-Space Cosmology
+working manuscript, version 0.26.0~\cite{EkNSC2026}. Its organizing relation is
+\begin{equation}\label{eq:inheritance}
+\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 \end{equation}
-The same operator law is proposed to be inherited across nested regions.
-The earlier operator, recursion and energy-transfer calculations are reused
-within their recorded domains. Here the question is narrower: a source-fixed
-local consistency test. This OPEN companion preserves that foundation; it
-does not replace the broader manuscript or establish continuing regeneration.
+The intended question is whether coupled regions can inherit a common law,
+while having different local states and retaining the influence of their
+surroundings in a reduced description. Here we specify a finite construction
+and a transformation for which these properties can be proved.
 
-A local observer in one nested region does not resolve every degree of
-freedom that still influences the local field. Write a finite quadratic
-Hamiltonian in parent/child blocks,
-\begin{equation}
-\label{eq:block-H}
-  H
-  =
-  \begin{pmatrix}
-    H_{AA} & B \\
-    B^{\dagger} & H_{BB}
-  \end{pmatrix}.
+A region is a declared subspace of the finite system. Calling one region an
+inside and its complement an outside describes their relation in the chosen
+partition. It does not assign gauge charge or assert a particular horizon
+geometry. A common operator law is compatible with different initial states,
+occupations and correlations. A property of one region is therefore not
+assumed to be the property of every region.
+
+The contribution is the connected construction and its precise interpretation.
+Schur elimination and unitary spectral covariance are established mathematics,
+not discoveries claimed here. We do not need to reconstruct published
+black-universe geometries to establish these finite properties. Such
+geometries provide separately scoped examples, with their own supporting
+sources~\cite{BronnikovDehnenMelnikov2007}. Nor does the present theorem
+require a proof of eternal dynamics or closure of the numerical application
+in Appendix~\ref{app:gate}.
+
+\section{An inherited family of coupled regions}
+Fix a finite regional dimension $d$, a Hermitian prototype $H$, a nonzero
+$d\times d$ coupling $B$, and a finite positive scale ratio $\Omega$.
+Use orthonormal regional frames and common energy units with $\hbar=1$.
+For an integer starting label $m$ and a finite depth $N\geq1$, let
+$\mathcal H_{m,N}$ be the direct sum of $N$ copies of $\mathbb C^d$.
+The domain is the whole finite space. Define the Hermitian matrix $J_{m,N}$ by
+\begin{align}\label{eq:window}
+ (J_{m,N})_{jj}&=\Omega^{m+j}H, &&0\leq j<N,\\
+ (J_{m,N})_{j,j+1}&=\Omega^{m+j}B,
+ & (J_{m,N})_{j+1,j}&=\Omega^{m+j}B^\dagger, &&0\leq j<N-1,
+\end{align}
+with all other blocks zero. The nonzero link makes the construction coupled.
+The shared data are $\Theta=(H,B,\Omega)$; $N$ specifies a boundary problem.
+The exterior remainder after the first region is removed is exactly the
+window $J_{m+1,N-1}$ when $N>1$.
+
+\begin{proposition}[Inheritance under normalized relabeling]\label{prop:inherit}
+Let $U_m:\mathcal H_{m,N}\to\mathcal H_{m+1,N}$ be the unitary map that
+relabels corresponding ordered regional frames. Then
+\begin{equation}\label{eq:shift}
+ J_{m+1,N}=\Omega U_mJ_{m,N}U_m^\dagger,
+ \qquad \Omega^{-1}U_m^\dagger J_{m+1,N}U_m=J_{m,N}.
 \end{equation}
-Eliminating the complementary block is ordinary linear algebra. The
-retained resolvent is the inverse of the Schur complement
-\begin{equation}
-\label{eq:schur}
-  S
-  =
-  K_A - B K_B^{-1} B^{\dagger},
-  \qquad
-  G_{AA}
-  =
-  S^{-1}
-  =
-  \bigl((\lambda I-H)^{-1}\bigr)_{AA},
+In particular,
+\begin{equation}\label{eq:spectrum}
+ \spec\!\left(\Omega^{-m}J_{m,N}\right)=\spec(J_{0,N}).
 \end{equation}
-where $K_A=\lambda I-H_{AA}$, $K_B=\lambda I-H_{BB}$,
-and $\lambda$ is a complex spectral parameter outside the relevant spectra.
-The Feshbach self-energy is
+\end{proposition}
+\begin{proof}
+Every nonzero block in~\eqref{eq:window} gains one factor $\Omega$ when
+$m$ increases by one. The unitary $U_m$ changes its label, not its matrix
+entries in corresponding frames. This proves~\eqref{eq:shift} block by
+block. Iteration and invariance of spectrum under unitary conjugation give
+\eqref{eq:spectrum} for every integer $m$ and finite $N$.
+\end{proof}
+
+Equation~\eqref{eq:shift} gives a concrete meaning to the pullback in
+\eqref{eq:inheritance}: relabel the window and remove its declared scale.
+The invariant object is the indexed law/family. We do not assert that a
+nonzero finite matrix is unitarily equivalent to an unscaled dilation of
+itself. For fixed $N$, the frequency eigenvalues can be written
+$\omega_{m,k}=\Lambda_m\widehat\omega_k(\Theta,N)$ with
+$\Lambda_m=\Omega^m$ in the chosen units. Isolated regional blocks obey the
+same statement without the $N$-dependence.
+
+This does not make the dressed spectrum independent of surrounding regions.
+Changing $N$ changes the boundary problem and can shift that spectrum.
+Likewise, the theorem does not determine a physical value of $\Omega$ or
+identify $H,B$ with a particular curved-spacetime operator. Those are explicit
+inputs or separate identifications, not quantities inferred from notation.
+
+\section{Nested reduction retains the exterior influence}
+For a complex spectral parameter $z$ with $\operatorname{Im}z>0$, all required
+resolvents exist: the finite Hamiltonian and its principal subblocks are
+Hermitian. For a retained block $A$ and complement $E$, write
 \begin{equation}
-\label{eq:feshbach}
-  \Sigma_A(\lambda)
-  =
-  B(\lambda I-H_{BB})^{-1}B^{\dagger}.
+ J=\begin{pmatrix}J_{AA}&V\\V^\dagger&J_{EE}\end{pmatrix}.
 \end{equation}
-The complementary region disappears from the local basis and leaves an
-effective operator on the retained block.
+Its retained resolvent is
+\begin{equation}\label{eq:schur}
+ [(zI-J)^{-1}]_{AA}
+ =\left[zI-J_{AA}-\Sigma_A(z)\right]^{-1},\quad
+ \Sigma_A(z)=V(zI-J_{EE})^{-1}V^\dagger.
+\end{equation}
+The unresolved region is absent from the retained basis but remains in its
+response. This is exact elimination, not removal of a physical influence.
 
-In time, the same elimination is not a memory kernel alone. The
-complementary initial state survives as an inhomogeneous source
+\begin{proposition}[Composition at every finite depth]\label{prop:schur}
+Starting at the final region, define
+\begin{align}
+ S_{N-1}(z)&=zI-\Omega^{m+N-1}H,\\
+ S_j(z)&=zI-\Omega^{m+j}H
+ -\Omega^{2(m+j)}B S_{j+1}(z)^{-1}B^\dagger.
+\end{align}
+Then $S_0(z)^{-1}$ is exactly the first regional block of
+$(zI-J_{m,N})^{-1}$. Grouping the exterior regions before eliminating them
+gives the same result.
+\end{proposition}
+\begin{proof}
+The two-block inverse identity~\eqref{eq:schur} establishes the terminal
+elimination. Apply it successively to the resulting complement; induction
+on $N$ gives the claim. Alternatively eliminate the entire complement in
+one step. Both procedures equal the same block of the joined inverse,
+which proves agreement independently of the grouping.
+\end{proof}
+For three blocks of $K=zI-J$, this statement is particularly visible:
 \begin{equation}
-\label{eq:memory}
-  i\dot\psi_A
-  =
-  H_{AA}\psi_A
-  -i\int_0^t B\,e^{-iH_{BB}(t-s)}B^{\dagger}\psi_A(s)\,ds
-  +B\,e^{-iH_{BB}t}\psi_B(0).
+ K=\begin{pmatrix}A&-V&0\\-V^\dagger&C&-W\\0&-W^\dagger&F\end{pmatrix},
+ \qquad S=A-V(C-WF^{-1}W^\dagger)^{-1}V^\dagger.
 \end{equation}
-The integral is retarded. The last term carries $C_{BB}(0)$ and the
-initial cross block $C_{AB}$. Occupation data live in that remainder; they
-are not selected by $\Sigma_A(\lambda)$. Nested-space cosmology interprets this
-triple---reduced operator, retarded memory, retained initial
-state---as the local source associated with an unresolved nested region.
-Inside and outside are relational roles of the inheritance map
-$\mathcal T_{\Theta}$, not assignments of gauge charge.
+The outer contribution enters the middle response, which enters the retained
+response. Noncommuting products keep their displayed order.
 
-The present article turns that interpretation into a declared local test on
-an incoming surface $\Sigma$. A metric history $g$ transports a
-\emph{fixed} upstream source to an incoming kernel $C_{\Sigma}[g]$. Two
-constraint residuals, generated by lapse and shift variations, are then
-asked to vanish on a connected interval $I$ of positive length. The
-laboratory already owns the chart, the source inventory, the retarded
-evolution, and a nine-component error interface. What it does not own is a
-closed certificate. The generated local verdict occupying that interface is
-\textbf{\NSCVerdict}.
+Normalize $S_j$ by $\Omega^{m+j}$ and set $x=z/\Omega^{m+j}$. The recurrence is
+\begin{equation}\label{eq:recursion}
+ \Gamma_j(x)=xI-H-\Omega^{-1}B\Gamma_{j+1}(x/\Omega)^{-1}B^\dagger.
+\end{equation}
+This is the repository's existing normalized chain. The factor $1/\Omega$
+follows from the scale of the eliminated inverse; it is not an adjustable
+coupling. The proof covers arbitrary finite depth. No assumption about an
+infinite physical lifetime enters it.
 
-Statements below are labelled by kind:
-\emph{assumption} (chart, source, history class, action inventory);
-\emph{imported identity} (published mathematics in its original domain);
-\emph{repository identity} (checked relation in this codebase);
-\emph{interpretation} (the nested-space reading of those relations);
-\emph{currently unproved closure} (the local incoming gate).
+\section{The same law permits different regional states}
+Let $C$ be any Hermitian fermionic one-particle covariance satisfying
+$0\leq C\leq I$. Different regional blocks can have different occupations
+and cross-region correlations. Under the same static $J$,
+\begin{equation}\label{eq:state}
+ C(t)=e^{-iJt}C(0)e^{iJt},\qquad i\dot C=[J,C].
+\end{equation}
+Unitary conjugation preserves the interval $0\leq C\leq I$, but does not
+require equality of regional blocks. For example $C_{\rm stat}=I/2$ is
+stationary, whereas a nonuniform diagonal $C_{\rm var}$ with
+$[J,C_{\rm var}]\ne0$ evolves under the identical operator. Within that
+second state the regional occupations already differ. This is a statement
+about admissible states, not a simulation of stable stars or collapse.
 
-\section{Notation}
-\label{sec:notation}
+Solving the exterior Schr\"odinger equation and substituting it into the
+retained equation yields
+\begin{align}\label{eq:memory}
+ i\dot\psi_A={}&J_{AA}\psi_A
+ -i\int_0^t V e^{-iJ_{EE}(t-s)}V^\dagger\psi_A(s)\,ds\nonumber\\
+ &+V e^{-iJ_{EE}t}\psi_E(0).
+\end{align}
+The initial exterior term must remain. Its covariance contains
+$V e^{-iJ_{EE}t}C_{EE}(0)e^{iJ_{EE}s}V^\dagger$; cross correlations also
+retain $C_{AE}(0)$. Thus the retarded operator and the state-dependent
+response are different objects. Equal operator laws need not produce
+equal measured histories.
 
-\begin{center}
-\small
-\begin{tabular}{@{}l@{\hspace{1.1em}}l@{\hspace{1.1em}}p{0.50\textwidth}@{}}
-\toprule
-Symbol & Kind & Meaning \\
-\midrule
-$I$ & assumption & Connected incoming interval $\NSCInterval$ \\
-$\Sigma$ & assumption & Incoming surface; coordinate $z$ along $\Sigma$ \\
-$s=T-T_{\Sigma}$ & assumption & Normal displacement from $\Sigma$ \\
-$w(z),U(z)$ & assumption & Two axial history functions \\
-$\chi(s)$ & assumption & Smooth normal cutoff; equal to $1$ near $s=0$ \\
-$N,\beta,a$ & assumption & Background lapse, shift, axial scale; held fixed \\
-$C_{\src}$ & assumption & Upstream source covariance; $\delta C_{\src}=0$ \\
-$U_g$, $F[g]$ & repository & Causal transport of source columns by $g$ \\
-$C_{\Sigma}[g]$ & repository & Incoming kernel on $\Sigma$ \\
-$\mathcal E_N,\mathcal E_\beta$ & repository & Incoming lapse and shift constraints \\
-$G_N,G_\beta$ & repository & Raw Gaussian source vertices \\
-$\epsilon_B$ & certificate & Nine-component error bound, $B=N,\beta$ \\
-$\Theta$ & interpretation & Inherited dimensionless law \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section{Declared local model}
-\label{sec:model}
-
-The calculation uses the already declared Kantowski--Sachs /
-Painlev\'{e}--Gullstrand incoming chart. The areal radius of the reference
-slice is one at the evaluation surface. Lapse $N$, shift $\beta$, and axial
-scale $a$ remain the background fields of that slice. The intrinsic
-incoming identification and the physical seam location are unchanged.
-Couplings $A,q,\Omega,\zeta,V_{\mathrm{full}}$ remain locked. No additional
-action term is introduced. Einstein--Gibbons--Hawking--York, local seam
-contributions, and the Gaussian closed-time-path functional are each
-counted once.
-
-The history class is the two-function radius family
+Total energy is conserved for static $J$:
 \begin{equation}
-\label{eq:history}
-  \NSCHistoryClass,
+ \frac{d}{dt}\Tr(CJ)=-i\Tr([J,C]J)=0.
 \end{equation}
-with a smooth normal cutoff $\chi(s)$ equal to one near $s=0$.
-The functions $w,U$ share an axial cutoff equal to one on $I$,
-with support inside $S(1)+[0.09,0.21]$. These are coordinate
-domains for a local calculation. They are not a cosmological duration. The
-functions $w$ and $U$ are represented by Chebyshev coefficients times that
-cutoff. Base coefficient counts $8,16,32,64$ belong to the same class.
-Every normal and mixed derivative is the derivative of these two functions.
-Independent pointwise jets are not a surrogate for the surface functions.
+Regional energy can nevertheless be exchanged. With the existing allocation
+$h_A=(PJ+JP)/2$, the current is $i[J,h_A]$. This reuses finite quantum
+energy accounting and does not introduce a second independently chosen
+source. The Gaussian formulation can use established fermionic determinant
+identities~\cite{Klich2003}; a metric-source interpretation still requires
+the applicable common-action variation.
 
-For amplitudes in a sufficiently small neighbourhood of zero, and with
-$w,U$ supported in a compact axial interval together with a compact radial
-window $K$ about $\rho=1$ strictly inside the trapped chart, the radius
-stays positive on compact $K$. Any initial slice strictly before the
-perturbation sees the reference geometry and the original upstream columns.
-Incident data on the upstream characteristic are those same columns, with
-vanishing preparation tangents.
+\section{Verification, interpretation and scope}
+The analytical arguments establish the four qualities for the declared
+finite construction. A new small control record binds this proof to exact
+rational complex matrices: three two-dimensional regions, $\Omega=3/2$
+and $z=1+2i$. Twelve exact predicates check the normalized shift, joined
+versus nested inverse, recurrence and distinct admissible states. Removing
+the normalization, reversing the noncommuting coupling or omitting the
+state contribution is detected. These are bounded integration checks;
+they do not replace the arbitrary-depth argument with a numerical depth scan.
 
-The symbols $N$ and $\beta$ name the two incoming constraints obtained from
-the declared action by varying the lapse and the shift. They are not free
-amplitudes in~\eqref{eq:history}, and they are not adjustable source
-parameters. The history varies areal radius; the constraints ask whether
-that variation, together with the evolved state, can cancel both lapse and
-shift residuals on $I$.
+The source and record are included under \texttt{paper/nested-quality-evidence}
+in the repository. The pinned source is lab commit
+\texttt{4b3c44d0c47a49a17f543ff19e0298770ac041e8}.
+The replay command is
+\begin{quote}\small\ttfamily
+python paper/nested-quality-evidence/scripts/\\
+check\_nsc\_nested\_qualities.py --check
+\end{quote}
+It requires SymPy; the ordinary publication hash verifier does not.
+Earlier correspondence and recursion records are retained as authenticated
+references, with no claim that their whole gravitational dependency chain
+has become a new closed certificate.
 
-\section{Source-fixed incoming state}
-\label{sec:state}
+This construction makes nested qualities mathematically explicit using
+standard local finite dynamics. It offers a precise way to describe an
+unresolved surrounding system through its local response. Identifying that
+response with cosmological dark matter or dark energy, or deriving numerical
+values of $c$ and $\Lambda$, is not established by the Schur identity alone.
+Those identifications are not required for the result proved here.
 
-\emph{Assumption.} The same quantum state means the same upstream source
-preparation, not a covariance pinned to $\Sigma$ independently of the
-metric.
+The term \emph{self-similar law} refers to the specified normalized
+transformation. It is not a measurement of a spatial fractal dimension of
+the Universe. An infinite geometric construction would need its own domains
+and limiting state; an eternal engine is neither assumed nor proved.
+Different regional states remain a feature of the construction throughout.
 
-\emph{Repository identity.} For an allowed history the incoming kernel is
-the evolved restriction of the original source columns,
-\begin{equation}
-\label{eq:state-law}
-  C_{\Sigma}[g]
-  =
-  U_{g}C_{\up}U_{g}^{\dagger}
-  =
-  F[g]C_{\src}F[g]^{\dagger},
-  \qquad
-  \delta C_{\src}=0.
-\end{equation}
-Source selection stays fixed while the state on $\Sigma$ evolves. All
-source channels, coherences, and cross-position kernels are retained.
-Source energies remain labels; they are not substituted as outgoing momenta
-$k=-E$ on evolved columns.
-
-The causal chain is then
-\begin{equation}
-\label{eq:causal-chain}
-  C_{\src}
-  \ \xrightarrow{\ U_g,\ \delta C_{\src}=0\ }\
-  C_{\Sigma}[g]
-  \ \longrightarrow\
-  \bigl(\mathcal E_N[g],\,\mathcal E_\beta[g]\bigr)\vert_{I}.
-\end{equation}
-A compact-support radius perturbation that is silent in the past produces a
-retarded incoming variation
-\begin{equation}
-\label{eq:delta-C}
-  \delta C_{\Sigma}(z,z')
-  =
-  \delta F_{\Sigma}(z)C_{\src}F_{\Sigma}(z')^{\dagger}
-  +F_{\Sigma}(z)C_{\src}\delta F_{\Sigma}(z')^{\dagger}.
-\end{equation}
-The restriction map at $\Sigma$ has vanishing parameter derivative for this
-radius family, because the intrinsic metric and normal on $\Sigma$ are
-held fixed. The kernel on $\Sigma$ nevertheless changes, because the Dirac
-evolution from the upstream source feels the history.
-
-A frozen incoming $C_0$ is a different law. In the smooth compact class with
-exact prepared $C_{\Sigma}=C_0$, the incoming order-four geometric germ is
-forced to the reference germ, and the included shift constraint cannot
-close: the baseline Killing current satisfies the strict bound
-$P_K<-M$ with
-\begin{equation}
-\label{eq:PK}
-  M=\frac{5887634380411363}{265464355000000000}>0.
-\end{equation}
-That non-existence result remains a regression of the frozen class. It is
-not the active local gate under~\eqref{eq:state-law}.
-
-\section{Lapse and shift constraints}
-\label{sec:constraints}
-
-\emph{Currently unproved closure.} Both incoming constraints are required to
-close on one connected interval $I$ of positive length, or a necessary
-relation must exclude the entire declared local history class, under the
-source-fixed evolved state~\eqref{eq:state-law}.
-
-The owned assembly is
-\begin{equation}
-\label{eq:assembly}
-  \mathcal E_B[g]
-  =
-  \mathcal E_B[g_{\refg}]
-  +\Delta\mathcal E_B^{\loc+\refg}[j_{\Sigma}g]
-  +\bigl(G_B[C_{\Sigma}[g]]-G_B[C_{\refg}]\bigr),
-  \qquad
-  B=N,\beta.
-\end{equation}
-Baseline and geometry are added once. The computational reference of each
-family is the stationary phase of the same initial fields; its history
-tangent vanishes. Current matter uses the weighted exact-phase pair
-$(F,F_z)$ and the retarded tangents $(\delta F,\delta F_z)$.
-
-Let $F$ denote evolved canonical source columns weighted once with the
-original square roots of $dE/(2\pi)$, and let $C_{\src}$ be the fixed full
-source matrix. With axial derivative $F_z$,
-\begin{equation}
-\label{eq:DJ}
-  D=FC_{\src}F^{\dagger},
-  \qquad
-  J
-  =
-  \frac{F_z C_{\src}F^{\dagger}-F C_{\src}F_z^{\dagger}}{2i}.
-\end{equation}
-The raw Gaussian vertices, with inherited signed-family multiplicity $\mu$,
-are
-\begin{equation}
-\label{eq:vertices}
-\begin{aligned}
-  G_N
-  &=
-  \mu\Bigl[
-    m\Tr(\sigma_1 D)
-    -\frac{\ell}{r}\Tr(\sigma_2 D)
-    -\frac1a\Tr(\sigma_3 J)
-  \Bigr],
-  \\
-  G_\beta
-  &=
-  \mu\Tr J.
-\end{aligned}
-\end{equation}
-Only in the stationary reference does $F_z=-iEF$. That substitution is
-wrong for evolved columns and their tangents.
-
-The local/reference geometric response on the compatible slots
-$(w,w_z,w_{zz},w_{zzz},U,U_z)$ has the certified principal matrix
-\begin{equation}
-\label{eq:principal}
-  \begin{pmatrix}
-    \partial_U\mathcal E_N & \partial_{w_{zz}}\mathcal E_N \\
-    \partial_{U_z}\mathcal E_\beta & \partial_{w_{zzz}}\mathcal E_\beta
-  \end{pmatrix}
-  =
-  \begin{pmatrix}
-    c_u & B \\
-    d & e
-  \end{pmatrix},
-\end{equation}
-with $c_u>0$ from the lapse variation of the third normal radius
-derivative and $c_v$ the mixed-normal shift coefficient in
-$\mathcal E_\beta=S_\beta+c_v\,\delta r_{Tz}$. These coefficients are
-action responses. They are not new couplings. Geometric invertibility of
-\eqref{eq:principal} is a useful preconditioner. It is not existence in the
-coupled state class.
-
-A closed local result is one of the following.
-\begin{itemize}
-\item Local EXISTENCE: a verified history $g$ in the declared class with
-both residuals and the nine-component error budget inside the componentwise
-tolerance
-\begin{equation}
-\label{eq:tolerance}
-  \sup_{z\in I}
-  \bigl(\lvert\widehat{\mathcal E}_B(z)\rvert+\epsilon_B(z)\bigr)
-  \le \NSCTolerance,
-  \qquad
-  B=N,\beta.
-\end{equation}
-\item Scoped local NON-EXISTENCE: a necessary relation covering the entire
-declared class, with a strict error-controlled separation from zero.
-Failed optimization is not non-existence.
-\end{itemize}
-The generated placeholder occupying the result slot is
-\textbf{\NSCVerdict}.
-
-\section{Imported mathematics}
-\label{sec:imported}
-
-The local calculation reuses published mathematics inside the domains
-stated by those authors. Application to nested-space cosmology requires the
-connection that is actually shown.
-
-Klich~\cite{Klich2003} proves a Fock-space trace identity that reduces
-certain traces of quadratic fermionic operators to single-particle
-determinants, and thereby recovers Levitov's full-counting-statistics
-formula. The published chapter is a contribution to mesoscopic quantum
-noise. The identity is used here as established algebra for a Gaussian
-fermionic functional. It does not select an occupation, close
-\eqref{eq:tolerance}, or supply a cosmological source.
-
-G\'{e}rard, H\"{a}fner and Wrochna~\cite{GerardHafnerWrochna2023} construct
-the Unruh state for massless Dirac fields on slowly rotating Kerr
-spacetimes. In their stated Kerr--Kruskal domain, Theorem~1.1 proves that
-the state is asymptotically thermal at Hawking temperature on the past
-event horizon and is pure and Hadamard in the union of exterior and
-interior regions. Affine-frequency horizon data and incoming-vacuum data at
-past null infinity belong to that theorem. The theorem does not
-automatically prove the characteristic traces, spin/current maps, or
-Hadamard hypotheses on the nested-space black-universe chart used here.
-
-Bronnikov, Dehnen and Melnikov~\cite{BronnikovDehnenMelnikov2007} describe
-regular black-universe geometries: an exterior resembling Schwarzschild, a regular
-minimum of areal radius, an expanding Kantowski--Sachs interior, and a
-de~Sitter infinity in place of a singularity. Those metrics and causal
-extensions are reusable geometric examples. Their supporting phantom source
-is not the selected Dirac / closed-time-path source of the local gate.
-
-Blanes and Moan~\cite{BlanesMoan2006} construct commutator-free Magnus
-integrators. Equation~(43) of that paper is the fourth-order two-exponential
-scheme
-\begin{equation}
-\label{eq:cf4}
-  x_h
-  =
-  \exp(\alpha_1 h A_1+\alpha_2 h A_2)
-  \exp(\alpha_2 h A_1+\alpha_1 h A_2)\,x_0
-\end{equation}
-used as a numerical method on the extended linear system when a time
-integrator of that family is compared. Formal order is not an error
-certificate for~\eqref{eq:tolerance}. Production evaluations use the owned
-DOP853 path; CF4 is a comparison method with its own implementation
-controls.
-
-\section{Repository identities and interpretation}
-\label{sec:identities}
-
-The compact local-observer correspondence checks five finite identities
-independently of the incoming-gate search. The owner and record paths are
-listed in Section~\ref{sec:repro}.
-
-\emph{Imported algebra, repository-checked.} The joined resolvent equals
-the ordered Schur complement~\eqref{eq:schur}. Reversed multiplication,
-dropping $B^{\dagger}$, replacing the child resolvent by $BB^{\dagger}/\lambda$,
-and transposing the coupling each disagree with the joined inverse.
-
-\emph{Repository identity.} Eliminating the complementary region in time
-retains both the memory integral and the initial-state term
-in~\eqref{eq:memory}. Omitting $\psi_B(0)$ changes the resolvent solution.
-The retarded self-energy is independent of occupation; the noise term is
-not. The same Schur map has vanishing vacuum current and a nonzero excited
-current.
-
-\emph{Repository identity.} The same Hamiltonian owns conservation and
-metric variation,
-\begin{equation}
-\label{eq:energy}
-  \dot E_A=\Tr(C J_A)+\Tr(C\dot h_A),
-  \qquad
-  \dot E_{\mathrm{tot}}=\Tr(C\dot H),
-  \qquad
-  \Tr([H,C]H)=0,
-\end{equation}
-and, on the physical history at fixed preparation,
-\begin{equation}
-\label{eq:variation}
-  \left.\frac{\delta\Gamma_F}{\delta X^A}\right|_{X_+=X_-}
-  =
-  -\Tr\!\left(C\frac{\delta H}{\delta X^A}\right).
-\end{equation}
-The child's Gaussian determinant is counted once. Omitting the complementary
-Schur variation fails the finite check.
-
-\emph{Repository identity.} Normalized inheritance on a finite chain,
-\begin{equation}
-\label{eq:recursion}
-  \Gamma_n(x)
-  =
-  xI-H-\frac1\Omega\,b\,\Gamma_{n+1}(x/\Omega)^{-1}b^{\dagger},
-\end{equation}
-agrees with the direct multi-room inverse. Dropping $1/\Omega$ or reversing
-a noncommuting link fails. The control does not select a physical $\Omega$.
-
-\emph{Interpretation.} A local observer in one nested region is described
-by the reduced block, the retarded memory, the retained initial-state and
-noise data, and the same-action variation of the remaining Hamiltonian.
-Sheet exchange in the tested two-sheet Dirac embedding is a distinct
-operator from charge conjugation; it is not antimatter.
-
-\emph{Currently unproved.} Those identities do not close
-\eqref{eq:tolerance}. They supply the language in which the local gate is
-posed.
-
-The homogeneous frequency-diagonal Kantowski--Sachs class without interface
-is already decided under a different truncation: the serialized state
-produces a nonzero shift residual, while every owned homogeneous
-local/reference term has vanishing axial momentum, so no smooth stationary
-history exists in that class. That certificate is not transferred to the
-two-function incoming family~\eqref{eq:history}.
-
-\section{Numerical method, inventory, and present evidence}
-\label{sec:evidence}
-
-The production evaluator evolves each candidate from fixed upstream batches
-and returns both constraints together with all retarded history derivatives.
-Source parameters, coherences, weights, and the seam remain immutable.
-Cache identity binds the analytic profile, the computational mesh,
-interpolant degree, solver options, and channel labels. Amplitudes alone
-are not a cache key.
-
-A damped Newton or Gauss--Newton search, when used, carries the full
-retarded Jacobian. The certified geometric principal
-operator~\eqref{eq:principal} may be used as a preconditioner. A nodal hit
-is not a continuous residual bound on $I$.
-
-The retained source inventory materializes authenticated panels with
-original quadrature weights, signed angular partners, and the three
-$\ell=0$ groups that keep their baseline allocation because their
-radius-history response vanishes identically in this family. Contour
-bilinears are not accepted as physical Gaussian mode columns. Loading the
-inventory is not a source certificate.
-
-Current records, read from the source-bound note and associated development
-JSON named in Section~\ref{sec:repro}, are as follows. The physical
-column-accuracy universe is $164$ panels / $49372$ rows. An older
-$102$-panel low/subgap subset inspects $27828$ rows below the joined V5
-thresholds, $1528$ rows at or above, and $59$ straddling panels. Those row
-counts classify coverage. They are not a directed $N,\beta$ bound.
-
-Certificate v2 requires nine nonnegative componentwise error bounds on
-$I$, added to a continuous residual upper bound, before an existence
-decision. The v4 budget records three enclosed or reused components and
-six missing components. The partial known error sum, rounded for display, is
-\begin{equation}
-\label{eq:partial-budget}
-  \bigl(\DraftPartialN,\,
-        \DraftPartialBeta\bigr)
-\end{equation}
-for $(N,\beta)$. That pair is a sum of presently owned pieces. It is not a
-closure bound. The successor $257$-node budget keeps all nine slots open
-until applicable bounds are authenticated; the $129$-node phase result
-cannot be transferred by relabelling it.
-
-\begin{center}
-\small
-\begin{tabular}{@{}lcc@{}}
-\toprule
-Component & $N$ & $\beta$ \\
-\midrule
-Covered baseline regions
-  & $\DraftCoveredN$
-  & $\DraftCoveredBeta$ \\
-Phase value
-  & $\DraftPhaseN$
-  & $\DraftPhaseBeta$ \\
-Energy interpolation
-  & $\DraftInterpolationN$
-  & $\DraftInterpolationBeta$ \\
-Field / space / time (whole-cone) & missing & missing \\
-Changed-history ultraviolet tail & missing & missing \\
-Baseline low / subgap & missing & missing \\
-Upstream continuation & missing & missing \\
-Between-node remainder & missing & missing \\
-Arithmetic remainder & missing & missing \\
-\midrule
-Partial known sum & $\DraftPartialN$
-  & $\DraftPartialBeta$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-Covered-region reuse applies only to unchanged V5 baseline spectral
-regions. Phase-value enclosure covers $129$ nodal phase values, including
-phase-contraction arithmetic, and excludes the between-node remainder.
-Energy interpolation is an ideal difference-interpolation remainder; node
-solves and arithmetic are excluded. Whole-cone field work restores directed
-residual integrals on the backward cone of $I$. A restored one-cell
-comparison on family $14_1$, cell $122$, stays inside its recorded directed
-enclosure. That comparison is one cell. It does not supply a full-cone
-bound, and it does not replace physical $\rho=1$ source error.
-
-The reanchor record reports candidate nodal maxima (rounded for display)
-\begin{equation}
-\label{eq:nodal-maxima}
-  \bigl(\DraftNodalN,\,
-        \DraftNodalBeta\bigr)
-\end{equation}
-for $(N,\beta)$ on $129$ nodes, for the current measured profile in the
-declared class. Those numbers are sampled maxima, not continuous suprema,
-and not existence residuals in the sense of~\eqref{eq:tolerance}. They lie
-orders of magnitude above $\NSCTolerance$. They are not compensated by
-\eqref{eq:partial-budget}.
-
-An earlier discrete coupling control of the evolved-constraint assembly
-reports residual $1.352287829051212\times 10^{-9}$ against tolerance
-$3\times 10^{-8}$. That check verifies that matter and the retarded
-derivative enter both constraints. It is not a physical root.
-
-\section{Reproduction}
-\label{sec:repro}
-
-The public draft carries a selected snapshot of original laboratory records
-and two inspectable mathematical owners. Each byte is bound to a source Git
-blob and laboratory commit in \texttt{paper/local-gate-evidence/snapshot.json}.
-This snapshot supports inspection of the quoted checkpoint; it is not the
-complete dependency graph needed to replay the active scientific calculation.
-The historical public evidence chain remains independently reproducible.
-
-The following commands, from the public repository root, authenticate the
-draft or rebuild it without starting scientific campaigns:
-\begin{verbatim}
-python scripts/verify_local_gate_draft.py
-python scripts/build_local_gate_draft.py --check
-\end{verbatim}
-The first checks source, record, PDF, and source-archive hashes. The second
-requires the compiler recorded in the build manifest, performs two clean
-builds, and requires identical PDF and bibliography bytes. Numerical values
-in the budget table and candidate pair are generated from the original
-records. A digest establishes artifact identity, not the truth of a physical
-claim. Closure still requires a fresh history evaluation and all nine
-applicable error bounds.
-
-\section{Limitations}
-\label{sec:limitations}
-
-Every claim in this article is restricted to the declared local incoming
-gate on $I$ under the state law~\eqref{eq:state-law} and the history
-class~\eqref{eq:history}. Global
-parent/child matching, extended stationarity, metric timestep, and
-observational comparison are later research. They are not hidden completion
-conditions.
-
-The generated verdict is \NSCVerdict. Open is a documented intermediate
-status. Until all nine error components and a continuous residual upper
-bound are present, the existence criterion cannot fire. Until a class-wide
-necessary relation with strict error-controlled separation is present, the
-non-existence criterion cannot fire. No residual quoted from a control
-history is a physical root.
-
-This article is a public research draft. It is not a closed-result release
-or an arXiv submission.
+\section*{Author responsibility and assistance}
+Douglas Ek is the accountable author. Codex and Grok assisted with source
+review, algebraic controls, implementation and preparation of this manuscript.
+AI-generated descriptions were not treated as evidence. The full article and
+any submission remain subject to author review.
 
 \appendix
-\section{Provenance}
-\label{app:provenance}
+\section{Preserved gravitational application checkpoint}\label{app:gate}
+The separate source-fixed incoming calculation asks whether
+$\NSCStateLaw$ satisfies both incoming constraints on $\NSCInterval$ in
+$\NSCHistoryClass$. Its certificate remains \textbf{\NSCVerdict}.
+The recorded candidate has nodal maxima
+$(\DraftNodalN,\DraftNodalBeta)$, not certified continuous suprema.
+The numerical existence threshold is $\NSCTolerance$ with complete error
+control; it is not an acceptance threshold for the finite propositions above.
 
-The source snapshot names laboratory commit
-\texttt{aefbdbaf} (full identity in the manifest) and the public base
-commit. The public Git history identifies subsequent editorial changes.
-The build manifest records source and PDF hashes, compiler identity, and the
-two-build comparison. The retained notebook v0.26.0 is unchanged.
+Three error components are enclosed in the preserved checkpoint; six remain
+unbounded. The finite operator theorem does not complete those bounds,
+select a physical radius history or change an old certificate's meaning.
+The values below are generated from the original immutable records.
+\begin{center}\small
+\begin{tabular}{@{}lll@{}}
+\toprule Component & $N$ & $\beta$\\\midrule
+Covered regions & $\DraftCoveredN$ & $\DraftCoveredBeta$\\
+Energy interpolation & $\DraftInterpolationN$ & $\DraftInterpolationBeta$\\
+Phase value & $\DraftPhaseN$ & $\DraftPhaseBeta$\\
+Field/space/time & OPEN & OPEN\\
+Changed-history UV tail & OPEN & OPEN\\
+Low/subgap & OPEN & OPEN\\
+Upstream preparation & OPEN & OPEN\\
+Between-node remainder & OPEN & OPEN\\
+Remaining arithmetic & OPEN & OPEN\\\bottomrule
+\end{tabular}
+\end{center}
+The source, chart, state and numerical assumptions of this application
+are separate from the finite theorem. Published curved-field constructions
+must be reused with their original domains~\cite{GerardHafnerWrochna2023}.
+No numerical campaign was rerun for the present synthesis, and no release
+or arXiv submission is implied by the completed finite argument.
 
-The compiler used for this draft is identified exactly in the manifest.
-It is not an immutable arXiv build-container lock. Reproducible bytes on that
-runtime do not prove compatibility with arXiv's current service. No arXiv
-license has been selected and no submission action is recorded.
-
-\section*{Significant AI-use disclosure}
-
-OpenAI Codex and xAI Grok assisted with implementation, numerical workflow
-review, and language preparation. Douglas Ek is the sole author and assumes
-responsibility for every scientific claim. The local gate remains open.
-
-\small
 \bibliographystyle{unsrt}
 \bibliography{references}
-
 \end{document}

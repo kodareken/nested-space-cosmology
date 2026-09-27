@@ -3,7 +3,7 @@
   "project": "Nested-Space Cosmology",
   "current_status": "OPEN",
   "status_document": "docs/current-result.md",
-  "relationship": "One research programme; preserved foundation and focused local-test companion",
+  "relationship": "One research programme; preserved foundation and focused nested-qualities companion with historical OPEN application",
   "documents": [
     {
       "id": "foundation",
@@ -23,7 +23,10 @@
       "submission_ready": false,
       "source": "paper/local-gate-draft/main.tex",
       "pdf": "paper/local-incoming-gate-draft.pdf",
-      "manifest": "paper/local-gate-draft-manifest.json"
+      "manifest": "paper/local-gate-draft-manifest.json",
+      "title": "Nested Qualities and Local Responses: An Inherited Finite-Operator Construction"
     }
-  ]
+  ],
+  "mathematical_result": "finite nested-operator construction with explicit proof",
+  "physical_local_gate_status": "OPEN"
 }

@@ -1,5 +1,21 @@
 # What the calculations show
 
+## Nested qualities: finite mathematical construction, 27 September 2026
+
+The [connected proof](nsc-nested-qualities.md) and [focused article](../paper/local-incoming-gate-draft.pdf)
+now establish four properties for a declared finite coupled-operator family:
+regional composition, normalized inherited law, normalized spectra and the
+local response of unresolved regions. Different regional states are allowed.
+The proof holds at every finite depth; it is not a proof of infinite physical time.
+
+Twelve exact controls and four focused tests accompany the construction.
+The [source snapshot](../paper/nested-quality-evidence/snapshot.json) binds its
+proof, implementation and control record to an immutable laboratory commit.
+The separate source-fixed gravitational gate remains OPEN. No cosmological
+abundance, physical c/Lambda value, or eternal dynamics is derived by this result.
+The numerical checkpoint below is retained history, not a requirement for the
+finite theorem. This is an unpublished working-article update, not release 0.27.0.
+
 Read [the paper guide](papers.md) for the relationship between the preserved
 foundational manuscript and the focused companion. This page owns current
 public status; dated checkpoints later in the file remain historical.

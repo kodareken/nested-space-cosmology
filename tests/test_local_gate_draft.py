@@ -20,6 +20,26 @@ class LocalGateDraftTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         shutil.copytree(ROOT / draft.EVIDENCE, self.root / draft.EVIDENCE)
         shutil.copytree(ROOT / draft.SOURCE, self.root / draft.SOURCE)
+        shutil.copytree(ROOT / draft.NESTED_EVIDENCE, self.root / draft.NESTED_EVIDENCE,
+                        ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+
+    def test_nested_quality_dependencies_and_scope(self):
+        self.assertEqual(draft.authenticate_nested_snapshot(self.root)['physical_local_gate'],'OPEN')
+        path=self.root/draft.NESTED_EVIDENCE/'src/recursive_horizons/nsc_nested_qualities.py'
+        path.write_bytes(path.read_bytes()+b'changed')
+        with self.assertRaisesRegex(ValueError,'dependency differs'):
+            draft.authenticate_nested_snapshot(self.root)
+
+    def test_missing_nested_quality_descendant_is_rejected(self):
+        (self.root/draft.NESTED_EVIDENCE/'tests/test_nsc_nested_qualities.py').unlink()
+        with self.assertRaises(OSError):draft.authenticate_nested_snapshot(self.root)
+
+    def test_nested_snapshot_cannot_claim_physical_existence(self):
+        path=self.root/draft.NESTED_EVIDENCE/'snapshot.json'
+        value=json.loads(path.read_text());value['physical_local_gate']='EXISTENCE'
+        path.write_text(json.dumps(value))
+        with self.assertRaisesRegex(ValueError,'scope'):
+            draft.authenticate_nested_snapshot(self.root)
 
     def test_original_snapshot_and_generated_values(self):
         self.assertEqual(draft.authenticate_snapshot(self.root)['status'], 'OPEN')

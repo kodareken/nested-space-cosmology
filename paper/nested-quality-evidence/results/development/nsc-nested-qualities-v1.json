@@ -1,0 +1,39 @@
+{
+  "claim": "finite-window inheritance and nested local response",
+  "controls": {
+    "checks": {
+      "distinct_admissible_occupations": true,
+      "exterior_state_changes_noise": true,
+      "hermitian_coupled_window": true,
+      "joined_equals_nested_resolvent": true,
+      "normalized_recurrence_exact": true,
+      "normalized_shift_exact": true,
+      "omitted_omega_factor_rejected": true,
+      "reversed_coupling_rejected": true,
+      "same_law_nonstationary_state": true,
+      "same_law_stationary_state": true,
+      "total_energy_derivative_zero": true,
+      "unscaled_shift_rejected": true
+    },
+    "depth": 3,
+    "dimension_per_region": 2,
+    "omega": "3/2",
+    "spectral_parameter": "1 + 2*I"
+  },
+  "cosmological_identification": false,
+  "eternity_claimed": false,
+  "new_physical_laws_claimed": false,
+  "physical_local_gate": "OPEN",
+  "reused_record_hashes": {
+    "results/development/nsc-local-observer-correspondence.json": "1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+    "results/nsc-3-regulated-recursion.json": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39"
+  },
+  "schema": "NSC-NESTED-QUALITIES-v1",
+  "source_hashes": {
+    "docs/nsc-nested-qualities.md": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
+    "scripts/check_nsc_nested_qualities.py": "24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec",
+    "src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "tests/test_nsc_nested_qualities.py": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
+  },
+  "status": "PASS_FINITE_OPERATOR_CONTROLS"
+}

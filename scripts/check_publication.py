@@ -435,7 +435,10 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
             for label, pattern in UNSUPPORTED_GITHUB_MATH.items():
                 if pattern.search(text):
                     errors.append(f"unsupported GitHub math {label} in {relative}")
-        if path.suffix.lower() == ".md":
+        # Immutable laboratory source copies retain their original relative
+        # citation paths. Their bytes/inventory are checked by the nested
+        # snapshot verifier; the reader-facing proof in docs/ is link-checked.
+        if path.suffix.lower() == ".md" and not relative.startswith("paper/nested-quality-evidence/"):
             check_markdown_links(errors, path, text)
 
 

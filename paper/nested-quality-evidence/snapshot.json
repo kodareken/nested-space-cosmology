@@ -1,0 +1,51 @@
+{
+  "files": [
+    {
+      "bytes": 7619,
+      "git_blob": "d765ba39c1e09664e557b2e7ac90e3fa07bc49df",
+      "path": "docs/nsc-nested-qualities.md",
+      "sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d"
+    },
+    {
+      "bytes": 3126,
+      "git_blob": "84b32c207ba7111352e1e3b815a72bade282cc45",
+      "path": "src/recursive_horizons/nsc_nested_qualities.py",
+      "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1"
+    },
+    {
+      "bytes": 2010,
+      "git_blob": "cfe88b0df2587e6b96cbbadde8134bf5b107754e",
+      "path": "scripts/check_nsc_nested_qualities.py",
+      "sha256": "24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec"
+    },
+    {
+      "bytes": 1697,
+      "git_blob": "3efc6343d87a510b645bc2193f5135684be5163b",
+      "path": "tests/test_nsc_nested_qualities.py",
+      "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
+    },
+    {
+      "bytes": 1706,
+      "git_blob": "f444b39a64a004bc318621bcfbce615fd408d077",
+      "path": "results/development/nsc-nested-qualities-v1.json",
+      "sha256": "99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033"
+    },
+    {
+      "bytes": 15610,
+      "git_blob": "b74bc22f9a9c18eef94fac0e17e1121ff4701075",
+      "path": "results/development/nsc-local-observer-correspondence.json",
+      "sha256": "1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8"
+    },
+    {
+      "bytes": 14802,
+      "git_blob": "1cc7506757d120d9a2a3eff8a477fcbf09f5e180",
+      "path": "results/nsc-3-regulated-recursion.json",
+      "sha256": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39"
+    }
+  ],
+  "lab_commit": "4b3c44d0c47a49a17f543ff19e0298770ac041e8",
+  "physical_local_gate": "OPEN",
+  "schema": "NSC-NESTED-QUALITIES-SNAPSHOT-v1",
+  "scope": "finite construction and exact controls; reused historical records are references, not a new cosmological certificate",
+  "status": "PASS_FINITE_OPERATOR_CONTROLS"
+}

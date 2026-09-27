@@ -20,6 +20,7 @@ SOURCE = Path('paper/local-gate-draft')
 PDF = Path('paper/local-incoming-gate-draft.pdf')
 ARCHIVE = Path('paper/local-incoming-gate-draft-source.tar.gz')
 MANIFEST = Path('paper/local-gate-draft-manifest.json')
+NESTED_EVIDENCE = Path('paper/nested-quality-evidence')
 COMPONENTS = ('field_space_time', 'changed_history_UV_tail', 'baseline_low_subgap',
               'upstream', 'energy_interpolation', 'covered_regions', 'phase_value',
               'between_node', 'arithmetic')
@@ -104,6 +105,45 @@ def evidence_values(root: Path) -> str:
     return '\n'.join(lines) + '\n'
 
 
+def authenticate_nested_snapshot(root: Path):
+    """Bind the finite theorem controls separately from the OPEN physical gate."""
+    folder = root / NESTED_EVIDENCE
+    snapshot = read_json(folder / 'snapshot.json')
+    if (snapshot.get('schema') != 'NSC-NESTED-QUALITIES-SNAPSHOT-v1'
+            or snapshot.get('status') != 'PASS_FINITE_OPERATOR_CONTROLS'
+            or snapshot.get('physical_local_gate') != 'OPEN'
+            or not re.fullmatch('[0-9a-f]{40}', snapshot.get('lab_commit', ''))):
+        raise ValueError('invalid nested-quality scope')
+    seen = set()
+    for item in snapshot['files']:
+        name = item['path']
+        if name in seen:
+            raise ValueError('duplicate nested-quality dependency')
+        seen.add(name)
+        data = safe_path(folder, name).read_bytes()
+        if (len(data) != item['bytes'] or digest(data) != item['sha256']
+                or sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest() != item['git_blob']):
+            raise ValueError('nested-quality dependency differs: ' + name)
+    actual = {p.relative_to(folder).as_posix() for p in folder.rglob('*')
+              if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc'}
+    if actual != seen | {'snapshot.json'}:
+        raise ValueError('nested-quality dependency inventory differs')
+    record = read_json(folder / 'results/development/nsc-nested-qualities-v1.json')
+    if (record['status'] != 'PASS_FINITE_OPERATOR_CONTROLS'
+            or record['physical_local_gate'] != 'OPEN'
+            or record['cosmological_identification'] is not False
+            or record['eternity_claimed'] is not False
+            or record['new_physical_laws_claimed'] is not False
+            or not record['controls']['checks']
+            or any(v is not True for v in record['controls']['checks'].values())):
+        raise ValueError('nested-quality result scope or controls changed')
+    for group in ('source_hashes', 'reused_record_hashes'):
+        for name, expected in record[group].items():
+            if name not in seen or digest(safe_path(folder, name).read_bytes()) != expected:
+                raise ValueError('unbound nested-quality proof dependency')
+    return snapshot
+
+
 def source_files(root: Path) -> dict[str, bytes]:
     expected = {'main.tex', 'references.bib', 'result_macros.tex', 'evidence_values.tex'}
     folder = root / SOURCE
@@ -149,21 +189,26 @@ def packed_source(files: dict[str, bytes]) -> bytes:
     return output.getvalue()
 
 
-def compile_twice(files: dict[str, bytes]):
-    tools = {name: shutil.which(name) for name in ('pdflatex', 'bibtex')}
+def compile_twice(files: dict[str, bytes], engine='pdflatex'):
+    names = ('tectonic',) if engine == 'tectonic' else ('pdflatex', 'bibtex')
+    tools = {name: shutil.which(name) for name in names}
     if not all(tools.values()):
-        raise ValueError('draft build requires pdflatex and bibtex')
+        raise ValueError('draft build requires ' + ', '.join(names))
     env = dict(os.environ, SOURCE_DATE_EPOCH='0', FORCE_SOURCE_DATE='1', TZ='UTC')
     products = []
-    compiler = subprocess.check_output([tools['pdflatex'], '--version'], text=True).splitlines()[0]
+    compiler = subprocess.check_output([tools[engine], '--version'], text=True).splitlines()[0]
     for _ in range(2):
         with tempfile.TemporaryDirectory(prefix='nsc-local-draft-') as directory:
             folder = Path(directory)
             for name, data in files.items():
                 (folder / name).write_bytes(data)
-            latex = [tools['pdflatex'], '-no-shell-escape', '-interaction=nonstopmode',
-                     '-halt-on-error', '-file-line-error', 'main.tex']
-            for cmd in (latex, [tools['bibtex'], 'main'], latex, latex):
+            if engine == 'tectonic':
+                commands = ([tools['tectonic'], '--untrusted', '--keep-intermediates', '--keep-logs', 'main.tex'],)
+            else:
+                latex = [tools['pdflatex'], '-no-shell-escape', '-interaction=nonstopmode',
+                         '-halt-on-error', '-file-line-error', 'main.tex']
+                commands = (latex, [tools['bibtex'], 'main'], latex, latex)
+            for cmd in commands:
                 run = subprocess.run(cmd, cwd=folder, env=env, capture_output=True, text=True)
                 if run.returncode:
                     raise ValueError('TeX build failed: ' + run.stdout[-3500:] + run.stderr[-1000:])
@@ -181,14 +226,17 @@ def compile_twice(files: dict[str, bytes]):
 
 def verify(root: Path = ROOT):
     snapshot = authenticate_snapshot(root)
+    nested = authenticate_nested_snapshot(root)
     files = source_files(root)
     manifest = read_json(root / MANIFEST)
     if (manifest['status'] != 'OPEN' or manifest['submission_ready'] is not False
             or manifest['complete_scientific_dependency_closure'] is not False
-            or manifest['lab_commit'] != snapshot['lab_commit']):
+            or manifest['lab_commit'] != snapshot['lab_commit']
+            or manifest.get('nested_qualities_lab_commit') != nested['lab_commit']):
         raise ValueError('invalid draft manifest')
     expected = {**{(SOURCE / n).as_posix(): digest(b) for n, b in files.items()},
                 (EVIDENCE / 'snapshot.json').as_posix(): digest((root / EVIDENCE / 'snapshot.json').read_bytes()),
+                (NESTED_EVIDENCE / 'snapshot.json').as_posix(): digest((root / NESTED_EVIDENCE / 'snapshot.json').read_bytes()),
                 'scripts/local_gate_draft.py': digest((root / 'scripts/local_gate_draft.py').read_bytes())}
     if manifest['inputs'] != expected:
         raise ValueError('draft build inputs differ')
