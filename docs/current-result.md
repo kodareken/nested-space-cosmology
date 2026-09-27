@@ -1,5 +1,9 @@
 # What the calculations show
 
+Read [the paper guide](papers.md) for the relationship between the preserved
+foundational manuscript and the focused companion. This page owns current
+public status; dated checkpoints later in the file remain historical.
+
 ## Active checkpoint: source-fixed local incoming gate
 
 The current laboratory snapshot is indexed in the
@@ -66,8 +70,9 @@ Schur complement, are already owned. No extra independent boundary functional
 is required or introduced. Stationarity must be evaluated from the declared
 Gaussian, reference and local action with complete physical state/history jets.
 
-**B1d remains OPEN:** the physical history-to-KS-endpoint chain rule is not
-implemented. Its two diagnostic time-node coordinates must not be identified
+**Historical B1d checkpoint (16 September 2026):** the physical
+history-to-KS-endpoint chain rule was not yet implemented at that checkpoint.
+Its two diagnostic time-node coordinates must not be identified
 with the two sides of the single smooth throat. The existing chart has
 $T=T(\rho)$ and $z=\tau+S(\rho)$; replacing KS time by PG time would give
 a different derivative. B2, $V_c$ and extended stationarity remain unevaluated.
@@ -121,9 +126,10 @@ integrated CAR residual is at most $1.40\times10^{-10}$, against the declared
 $3\times10^{-9}$ numerical tolerance. Historical seeds and physical scales are
 unchanged. The working PDF is now **v0.26.0**.
 
-The next calculation couples this prepared state to the transmitting history
-jets and endpoint variation. The [current result](current-result.md)
-shows the completed state gate and the remaining action derivatives.
+At this earlier checkpoint, the next calculation coupled the prepared state to
+history jets and endpoint variation. The active source-fixed incoming-state
+and constraint path is now implemented; its remaining validation work is
+described in the opening section of this page.
 
 | Computed quantity | Result |
 |---|---:|

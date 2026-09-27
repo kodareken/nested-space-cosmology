@@ -1,8 +1,8 @@
-# Focused local incoming-gate draft
+# Focused local incoming-gate companion
 
-[Read the PDF](../paper/local-incoming-gate-draft.pdf) Â·
-[Download TeX source](../paper/local-incoming-gate-draft-source.tar.gz) Â·
-[Inspect build hashes](../paper/local-gate-draft-manifest.json) Â·
+[Read the PDF](../paper/local-incoming-gate-draft.pdf) ·
+[Download TeX source](../paper/local-incoming-gate-draft-source.tar.gz) ·
+[Inspect build hashes](../paper/local-gate-draft-manifest.json) ·
 [Inspect source snapshot](../paper/local-gate-evidence/snapshot.json)
 
 The draft develops the question in English and then gives the corresponding
@@ -10,6 +10,12 @@ Schur reduction, retarded state law, lapse/shift constraints, and local error
 criterion. A notation table, nine-component budget table, and scoped primary
 references make the mathematical argument inspectable. Douglas Ek is the author;
 significant Codex and Grok assistance is disclosed in the article.
+
+It is a focused companion to the preserved
+[v0.26.0 foundational manuscript](../paper/nested-space-cosmology.pdf).
+[The paper guide](papers.md) maps the reused foundation to the local question
+and distinguishes the two document versions. Neither paper was lost or
+replaced by creating the companion.
 
 The scientific verdict is **OPEN**. The candidate is not a physical root, the
 one-cell field pilot is not a whole-cone certificate, and three known v4 error

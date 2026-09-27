@@ -1,5 +1,25 @@
 # Nested-Space Cosmology
 
+## One research programme, two complementary papers
+
+The original manuscript remains the foundation of this project. The focused
+article develops one local consistency test from that work; it does not replace
+the broader manuscript or claim that the cosmology has been proved.
+
+| Read | Purpose | Status |
+|---|---|---|
+| [Foundational manuscript: PDF](paper/nested-space-cosmology.pdf) · [Markdown](paper/nested-space-cosmology.md) | The broad NSC idea, inheritance relation, existing operator calculations, source history and references | Preserved v0.26.0, 15 September 2026, 43 pages |
+| [Focused companion: PDF](paper/local-incoming-gate-draft.pdf) · [LaTeX](paper/local-gate-draft/main.tex) | The source-fixed local incoming-gate formulation, current evidence and missing bounds | OPEN research draft; no certified local solution or arXiv submission |
+
+[How the papers fit together](docs/papers.md) ·
+[Current scientific status](docs/current-result.md) ·
+[Verification and reproducibility](docs/reproducing.md)
+
+This is the curated public repository for the same work developed in the
+research laboratory. The publication boundary keeps raw experiments separate
+from cited evidence. Working copies and branches are implementation workspaces,
+not additional NSC theories. Published results are traced to their source commits.
+
 ## What if reality is one inherited spectrum?
 
 A musical note is not a thing separate from its wave. It is a stable pattern
@@ -30,7 +50,7 @@ dimensionless relationships while expressing a wider range of structure.
 
 [Read the idea in plain language](THEORY.md) ·
 [Follow the equations and evidence](docs/current-result.md) ·
-[Open the working paper](paper/nested-space-cosmology.pdf)
+[Read the foundational manuscript](paper/nested-space-cosmology.pdf)
 
 ## Current local test: OPEN
 
@@ -55,7 +75,7 @@ submission is claimed.
 - [Focused research draft (PDF)](paper/local-incoming-gate-draft.pdf): English explanations, equations, notation, evidence, and original-source attribution.
 - [Current result and exact remaining gaps](docs/current-result.md).
 - [Draft source and verification guide](docs/local-gate-draft.md), including hashes and the laboratory commit.
-- [Theory notebook v0.26.0](paper/nested-space-cosmology.pdf): the preserved broader exposition.
+- [Foundational manuscript v0.26.0](paper/nested-space-cosmology.pdf): the preserved broader exposition and existing calculations.
 
 The draft includes a **selected evidence snapshot**, not the full dependency
 closure required for a final certificate. Release `0.27.0` remains reserved
@@ -282,131 +302,11 @@ parent-power map close below `4.4e-16`. The parent Killing power becomes the
 opposite of a conserved child spatial-momentum charge, so it is not counted
 again as a continuing child energy source.
 
-The next ADM gate is decisive before time stepping. With the locked Einstein
-coefficient, the same neck has normalized Hamiltonian and momentum residuals
-`-0.1189448139` and `-0.01359270885`. Both null signs remain negative, but the
-metric and source do not share a valid Cauchy surface. The exact required
-completion is `delta_rho=-0.01070963923` and
-`delta_T01=-0.001223870156`; no parameter or initial metric was changed to
-hide it.
-
-Permitted geometry route B now closes that gate. The completed stress fixes a
-unique Landau normal with `v=0.004914475707`, and its density fixes
-`r_star=0.945328394434` while `H_sphere=0` remains a temporal minimum. The
-maximum ADM residual is `2.2e-16`; both null contractions remain negative.
-This source-selected Kantowski--Sachs neck replaces the stored unit-radius
-Bronnikov profile without changing the action or state parameters.
-
-The first same-state evolution step then exposes the next exact dependency.
-Changing to `r_star` changes the angular Hamiltonian by `5.7833%`, and the
-fixed-covariance density vertex is `-0.460688`. The stored result contains four
-integrated stress moments but not the complex mode covariances needed by
-`C_dot=-i[H,C]`. The trajectory therefore records its break at `T=0` rather
-than replacing the missing commutators with frozen pressure or an assumed
-equation of state.
-
-The mode-resolved state now removes the serialization gap. Its 33 channels
-cover the LLL, twelve massive angular sectors and twenty positive-compact
-sectors. Cold reload passes CAR and reconstructs the complete old-surface
-tensor with maximum residual `9.1e-13`. The remaining gate is narrower: a
-physical Dirac Cauchy isometry to the tilted Landau slice and general-KS
-fourth-order/local history providers.
-
-The blockwise Landau propagator is now executable for any supplied
-Kantowski--Sachs/ADM history. Two smooth controls share all source-selected
-endpoint data and preserve unitarity below `1.2e-14`, but their maps differ by
-`1.99967`. Endpoint data therefore do not determine the physical Cauchy map or
-finite `r_star` stress; selecting either control would insert an unowned
-history duration/profile.
-
-The joint history/state gate now selects the explicit stop route C. The two
-endpoint-compatible controls differ by `0.192089816` in their final covariance,
-while the unit-radius seed still fails both initial ADM constraints. The
-missing selector is the executable general-KS variation of the already
-declared CTP action, including fourth-order, local and boundary histories.
-
-The first executable `GeneralKSSameActionHistoryFunctional` now resolves that
-scoped class without an optimizer. Every owned homogeneous local/reference
-term has zero axial momentum, while the serialized state gives
-`T01=0.001223870156` and normalized shift residual `-0.01359270885`.
-Continuity therefore excludes every smooth frequency-diagonal no-interface KS
-history, independent of duration or radial profile.
-
-The larger tilted class now has three independent records. Fourth-order
-reference residuals pass below `7.1e-12`; node-wise local gradients pass below
-`2.1e-7`; and the transmitting interface preserves weighted current,
-unitarity and CAR below `2.4e-14`. The composition remains open because its
-diagnostic Weyl end-node gradient is `93.5426453` and the boundary data leave a
-`447488`-dimensional family of admissible mixing kernels.
-
-The [full extended binding gate](docs/nsc-full-extended-history-gate.md) now
-applies that freedom to the recorded state: all 33 channels have a
-norm-preserving direction that changes the covariance in its fixed basis.
-The eight Weyl end-node coefficients bind exactly, while the physical
-transmitting selector and its endpoint metric derivative remain OPEN.
-Those two explicit dependencies keep the geometry evolution gate closed.
-
-The [CTP first-differential calculation](docs/nsc-transmitting-ctp-variation.md)
-now evaluates the action response itself on all 33 channels, agreeing with
-the existing determinant to `5.56e-12`. A common change of both branches is
-flat; the relative variation is a source differential. Converting it to the
-metric equation still requires the actual transmitting link/embedding
-derivatives. The [extended action gate](docs/nsc-extended-action-completion-gate.md)
-records this conditional PASS and physical OPEN separately.
-
-The [endpoint-jet calculation](docs/nsc-dirac-endpoint-jets.md) now connects
-the known KS Hamiltonian's metric vertices through the original midpoint
-propagator into that CTP differential. Checks on the frozen control pass at
-`1.03e-10` for the unitary derivative and `4.94e-11` for its action contraction.
-The [physical gate](docs/nsc-physical-jet-extended-gate.md) keeps these bulk
-control jets separate from the missing transmitting link and embedding jets.
-
-The [transmitting Dirac domain](docs/nsc-transmitting-dirac-domain.md) now
-defines the stored channels on the actual spacelike seed seam. The same
-field has two oppositely oriented boundary traces, with 3,808 independent
-coefficients rather than two independent room states. The explicit
-geometry/spin-frame map preserves the stored covariance to `5.56e-16`.
-This defines the finite same-surface transmission domain; its conversion
-into a physical Hamiltonian link and the remaining boundary action are open.
-
-The [common-time bulk split](docs/nsc-common-time-bulk-split.md) now defines
-independent parent and child spaces by their spatial support on one PG time
-slice. Projector and CAR residuals are zero; the old duplicated-trace
-representation remains rejected. The transmitted Dirac operator has a coupled
-domain, so the sharp product $P_pH_DP_c$ still needs a domain-respecting
-realization before it can be used as an ordinary link matrix. Its projected
-resolvent $P_p(H_D-z)^{-1}P_c$ is well-defined from the common operator.
-
-The [transmitting cross-resolvent](docs/nsc-transmitting-cross-resolvent.md)
-now evaluates that response in all 33 retained channels. The full operator is
-inverted before spatial projection, so seam continuity handles the sharp-cut
-terms explicitly. Its inverse packet response supplies an energy-dependent
-cross kernel; four static metric kernels agree with an independent weak-form
-calculation below `6.6e-13`. In the trapped probe cell, causal transmission is
-parent-to-child. The real-time state/history conversion and remaining boundary
-variation are the next integration step.
-
-The [CTP memory connection](docs/nsc-transmitting-ctp-resolvent.md) now
-calculates how a time-dependent metric perturbation transfers the response
-between frequencies. All 33 channels preserve causal direction, and two
-independent calculations agree below `5.57e-13`. The energy-dependent kernel
-enters the retarded CTP sector with its memory intact. Full state-dependent
-CTP still needs the physical PG preparation and history/endpoint coupling;
-no stress or metric trajectory is assigned by these response vertices.
-
-The [physical LLL PG preparation](docs/nsc-pg-lll-preparation.md) now adds
-state-dependent CTP data to that exact massless channel. The existing horizon
-pair and incoming occupation determine its spatial covariance and correlations
-with the eliminated bulk. Seed recovery, CAR and an independent retarded match
-pass. The 32 massive groups retain an explicit signed-mode reconstruction gap;
-full C1b remains open. This development result follows the unchanged PDF v0.25.0.
-
-The [massive signed-spin gate](docs/nsc-massive-signed-preparation.md) now
-identifies the correct two- or four-component operator map for the retained
-groups. Its mixed-group certificate shows why the stored seed marginal cannot
-supply the missing paired state: the horizon/parent preparation must be mapped
-onto both angular sectors. No massive spatial covariance is inferred from
-multiplicity or from LLL. Full C1b remains open; PDF v0.25.0 is unchanged.
+These are recorded foundations within their stated classes. The full
+chronological discussion remains in [earlier public checkpoints](docs/current-result.md#earlier-public-checkpoints)
+and the original manuscript. The current work cursor is the source-fixed
+incoming gate described above; those older checkpoints are not a queue of
+derivations to restart.
 
 ## Explore at your own depth
 

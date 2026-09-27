@@ -42,6 +42,11 @@ REQUIRED = {
     "paper/nested-space-cosmology.md",
     "paper/nested-space-cosmology.pdf",
     "paper/build-manifest.json",
+    "paper/catalog.json",
+    "paper/local-incoming-gate-draft.pdf",
+    "paper/local-gate-draft-manifest.json",
+    "docs/papers.md",
+    "docs/instructions.md",
     "results/manifest.json",
     "PUBLICATION-PROVENANCE.json",
 }
@@ -337,6 +342,47 @@ def check_paper(errors: list[str]) -> None:
             errors.append(f"paper build manifest mismatch: {path_field}")
 
 
+def check_paper_catalog(errors: list[str]) -> None:
+    """Both papers and their distinct roles must survive a publication update."""
+    try:
+        catalog = json.loads((ROOT / 'paper/catalog.json').read_text(encoding='utf-8'))
+        if (catalog.get('schema') != 'NSC-PAPER-CATALOG-v1'
+                or catalog.get('current_status') != 'OPEN'):
+            raise ValueError('unexpected catalog or scientific status')
+        rows = catalog.get('documents', [])
+        documents = {row['id']: row for row in rows}
+        if len(rows) != 2 or set(documents) != {'foundation', 'local-gate'}:
+            raise ValueError('both unique paper roles are required')
+        roles = {'foundation': 'foundational_manuscript', 'local-gate': 'focused_open_companion'}
+        for name, row in documents.items():
+            if row['role'] != roles[name]:
+                raise ValueError('paper role differs')
+            paths = {}
+            for field in ('source', 'pdf', 'manifest'):
+                relative = Path(row[field])
+                candidate = ROOT / relative
+                if relative.is_absolute() or not candidate.resolve().is_relative_to(ROOT.resolve()) or not candidate.is_file():
+                    raise ValueError('missing or invalid paper path: ' + row[field])
+                paths[field] = candidate
+            record = json.loads(paths['manifest'].read_text(encoding='utf-8'))
+            if sha256(paths['pdf']) != record['pdf_sha256']:
+                raise ValueError('paper PDF differs from build manifest')
+            if name == 'foundation':
+                if (record['version'] != row['version']
+                        or sha256(paths['source']) != row['source_sha256']
+                        or record['source_sha256'] != row['source_sha256']
+                        or record['pdf_sha256'] != row['pdf_sha256']):
+                    raise ValueError('preserved foundation differs')
+            elif (row.get('status') != 'OPEN' or row.get('submission_ready') is not False
+                  or record.get('status') != 'OPEN' or record.get('submission_ready') is not False
+                  or record['inputs'].get(row['source']) != sha256(paths['source'])):
+                raise ValueError('companion status/source differs from its build')
+        if documents['foundation']['pdf'] == documents['local-gate']['pdf']:
+            raise ValueError('companion cannot replace the foundational PDF')
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f'paper catalog: {error}')
+
+
 def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
     for raw_target in LINK_RE.findall(text):
         target = raw_target.strip().strip("<>").split()[0]
@@ -399,6 +445,7 @@ def main() -> int:
     check_public_boundary(errors, files)
     check_manifest(errors)
     check_paper(errors)
+    check_paper_catalog(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:
