@@ -17,7 +17,7 @@ stopping condition. Use the existing work entry; no extra tracking system is
 needed. A rerun must identify a changed dependency, failure or concrete
 unresolved concern. Apply the same scope to delegated work.
 
-1. Read [README.md](README.md), [THEORY.md](THEORY.md), and [AGENTS.md](AGENTS.md).
+1. Use [AGENTS.md](AGENTS.md) as the maintained index and read [instructions](docs/instructions.md). Update the relevant docs and index together when ownership or behavior changes.
 2. Read [docs/prior-art-and-open-claim.md](docs/prior-art-and-open-claim.md) and [docs/current-result.md](docs/current-result.md).
 3. State whether the change is a postulate, an imported result, a repository derivation, a numerical diagnostic, an open prediction, or an interpretive hypothesis.
 4. Cite primary literature for technical factual claims. Do not present imported black-universe, Skyrme, QFT, spectral-action, or shadow-matter results as novelty.
@@ -26,11 +26,12 @@ unresolved concern. Apply the same scope to delegated work.
 
 ## Current frontier
 
-Use [the current result](docs/current-result.md) for the scientific frontier.
-Finite boundary maps and recursive controls are reusable evidence. The open
-connection is their physical domain, common quantum functional, state and
-source/backreaction; the equation below is a constraint on that work, not a
-request to restart completed finite-tail calculations.
+The active question is the source-fixed local incoming gate on
+`I=S(1)+[0.12,0.18]`; its status is OPEN. Use
+[the current result](docs/current-result.md) for evidence and missing bounds,
+and [the paper guide](docs/papers.md) for the preserved foundational manuscript
+and the focused companion. Finite operator, Schur and recursion results are
+reusable foundations, not a work queue after compaction.
 
 Do not restore a scale root by adding an independently weighted geometric action, retuning $\Phi$ after seeing the target, or inserting a dark-matter or dark-energy function. The recursive constraint, with explicit parent normalization, is
 
@@ -91,5 +92,6 @@ a relationship already made understandable, not replace the explanation.
 
 Keep each repository a coherent public object. Do not combine this programme with unrelated private infrastructure, internal authorization language, or unpublished chronology. Use only relative links inside the repository, plus ordinary literature citations.
 
-The technical paper lives at
-[paper/nested-space-cosmology.md](paper/nested-space-cosmology.md).
+The [paper guide](docs/papers.md) identifies both sources, PDFs and manifests.
+The foundational manuscript is preserved; the local-gate companion develops the
+current narrower question without replacing it.

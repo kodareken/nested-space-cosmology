@@ -23,9 +23,18 @@ def safe_relative(relative: str) -> str:
                and len(path.parts[3]) == 40 and all(c in '0123456789abcdef' for c in path.parts[3])
                and path.name == 'pyproject.toml')
     native = relative == 'src/recursive_horizons/_angular_transport.cpp'
+    payload_digest = path.name.rsplit('.', 2)[-2] if path.name.count('.') >= 2 else ''
+    content_addressed_npz = (
+        len(path.parts) >= 4
+        and path.parts[:3] == ('results', 'development', 'artifacts')
+        and path.suffix == '.npz'
+        and len(payload_digest) == 64
+        and all(character in '0123456789abcdef' for character in payload_digest)
+    )
     if (path.is_absolute() or '..' in path.parts or len(path.parts) < 2
             or path.parts[0] not in {'results', 'scripts', 'src', 'tests', 'docs'}
-            or (path.suffix not in {'.json', '.py', '.md'} and not fixture and not native)
+            or (path.suffix not in {'.json', '.py', '.md'} and not fixture
+                and not native and not content_addressed_npz)
             or any(part.startswith('.') for part in path.parts)):
         raise ValueError(f'path is outside the curated scientific allowlist: {relative}')
     return relative
