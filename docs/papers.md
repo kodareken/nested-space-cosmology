@@ -10,6 +10,12 @@ The relation is the inheritance postulate. Its recorded finite operator,
 Schur-complement, recursion and transfer calculations remain reusable within
 their stated domains. Continuing the local calculation does not erase them.
 
+The latest user-approved conversation plan governs the active task. NSC seeks
+a nested realization of familiar local physics; contradicting LambdaCDM is not
+a publication requirement. Dated manuscript wording and archived execution notes
+do not override that scope. Cosmological background/perturbation matching remains
+subsequent work under the approved plan.
+
 ## Foundational manuscript
 
 [Nested-Space Cosmology, v0.26.0 (43-page PDF)](../paper/nested-space-cosmology.pdf) ·

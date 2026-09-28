@@ -29,12 +29,127 @@
       "sha256": "89ff7044d0c641eb856fc483889dfa860eddf8593b4e94f0c12915ae2b3d86a8"
     },
     {
-      "bytes": 1090,
-      "change": "current routing; original retained in archived lab commit",
+      "bytes": 4830,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/manifest.json",
+      "sha256": "7967b3a59015888f3a70582c93c71f595e1bf7bb777379e61136d0f295fe1e94"
+    },
+    {
+      "bytes": 221,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/09/f3faa364ca88b8ff482c413022ce38f40bef0d",
+      "sha256": "0f9400c558de6ab6fd20910967df351c52e3dde6bda4746b54fe6f766d840d00"
+    },
+    {
+      "bytes": 780,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/15/7a55cdf6ceaf2f69350914046c54fe059855e1",
+      "sha256": "6aeea0b6e6ee03a46f862c63da8a6e9caa0778d08f2c5279982d125f8efcbd81"
+    },
+    {
+      "bytes": 781,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/20/1a906a41d70ca033fb19f4bf7f1483f1fa2552",
+      "sha256": "8433752aeb932c0b130a56c53b0557e214e6426f0928e0f0ad6b39cf97d16ab4"
+    },
+    {
+      "bytes": 61,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/22/993e882ceb7032db8b233fb71231ee3b226316",
+      "sha256": "a692efd32a01a59082038637fafde4073e0433d7eab0576d031d82b7f78bb75d"
+    },
+    {
+      "bytes": 3327,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/31/818fdd6b8cc9c4d8b9d33f41e0f241b2dd1227",
+      "sha256": "b3b452cb5a43f950bebd01ff5f61a4c0c7c10725bd76b2a2ae17f6e91d7904d4"
+    },
+    {
+      "bytes": 6198,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/4d/c21108424b29558c9092c703184543721f5248",
+      "sha256": "36b75417ccc0a40b8f0a229346498987f07c1999e1add3e7b3939d4499689956"
+    },
+    {
+      "bytes": 5361,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/61/286d365dbda4cf1e19b8f154d6f2a298bf92de",
+      "sha256": "7382df9c5cb0ecfc48784296a66aee040dac27ca3b0f1d08359c96284c9a45a4"
+    },
+    {
+      "bytes": 749,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/6b/e0057f68cc1ca3fc021b0a2865ad87ea79f5c1",
+      "sha256": "b743803055349e6a361b7accd0d714381abbd4de732ddf9a31a15386cd2967d0"
+    },
+    {
+      "bytes": 207,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/75/0f08abd50ef461600baf9dd319d1ac38b50ca3",
+      "sha256": "3e5c1d1c7290ce182883397a2c1537a4d9eb53a5d9a4a9a2439d62284282b02c"
+    },
+    {
+      "bytes": 5543,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/82/6473ae9a2ff7a3da07718738ae48be7badcd68",
+      "sha256": "7216cf33fd7c909e4156258a63ca541f02f5d73216730edec42e0b7eb82b3b7a"
+    },
+    {
+      "bytes": 3416,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/9e/fa09bd82b7003391890f1a19828de04148173f",
+      "sha256": "0fd20be98cc53ddd4cbf86dfdbba048730ad86ae546d78b45814798354297393"
+    },
+    {
+      "bytes": 2531,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/a5/a85acef3d98a8d6ff66f928a30725856a1ac6c",
+      "sha256": "73dd5a3828d6a62bf15faa83719d8faba1b8c0bc096985ac5e94ef645d58a725"
+    },
+    {
+      "bytes": 220,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/c7/dc0f98cacb28afd030b089bdb9e1369288120c",
+      "sha256": "682ff6254b1bd7fdbcebf09f9562161aa24ca19f40655fa176ca8045b4aa4495"
+    },
+    {
+      "bytes": 749,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/d4/82613c0af362b6b7440788b335b136e24b8b4f",
+      "sha256": "fa659b9d286b76d3b2b56aa6b0e2ba0671000da09ae4672169a1d6a8fd9d3870"
+    },
+    {
+      "bytes": 60,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/d7/78878f61150cfa0dd2cd3b4024aea276001d46",
+      "sha256": "ec52f540bf0dde367602494aac82f0b7d2380d894d70c50c20e8c1461a2ce262"
+    },
+    {
+      "bytes": 222,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/e6/2d28f3230ae6ddb2712df71eb7c61a8ed65ad6",
+      "sha256": "e8797f15ea671d17b2a8748884afb982b0002eaa64fbfd6226feafcc34a14012"
+    },
+    {
+      "bytes": 60,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/f2/556bf248ef23192a4c864cb816090cb8641931",
+      "sha256": "509f92fbcf10b337e5960aac942a9fa0039a3a8a8b0d39209eea462e3d797523"
+    },
+    {
+      "bytes": 686,
+      "change": "new exact pinned-source proof cache",
+      "path": "lab/.source-history/objects/f7/b6d43cae388b9e87a586e1bc87ee62327ab96d",
+      "sha256": "371642d718e700d640e2f40731f55f9eb56e3205e78db6e53a1f32b0350586b2"
+    },
+    {
+      "bytes": 1183,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "23601e026fee2065520f782b045d4a2586b8df6b",
       "original_sha256": "0be50e63bb581d7870f5d5e62d7b0ab4423232be97c9d0430d6435e4cd7146f9",
       "path": "lab/AGENTS.md",
-      "sha256": "fa1f5640a161b6c82169c9c7c107ebb3fff206f556c13cf217b73b994b1f6703"
+      "sha256": "c9ca64e8a5d2e4fd7c6956efcfd4bed26e234667e08084fd21020344cd5d9a08"
     },
     {
       "bytes": 26912,
@@ -79,19 +194,22 @@
       "sha256": "7c1b5b9b652106dd1d57d78d70e937c76f4ff04f14eaa52468bd24d812d814c4"
     },
     {
-      "bytes": 15897,
+      "bytes": 16200,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "30ae3b051ec2e6a66bc71d21566ce5779a8bd01f",
       "original_sha256": "981834e75247e464f49fc82cd7ac125a947ffd89678c29e7baa243a492297cbe",
       "path": "lab/PLAN.md",
-      "sha256": "981834e75247e464f49fc82cd7ac125a947ffd89678c29e7baa243a492297cbe"
+      "sha256": "c86aa7a961d058c720cb52f00bd8e64b9954d7e8feb9142d0c5a970609f89393"
     },
     {
-      "bytes": 51208,
-      "change": "current routing; original retained in archived lab commit",
+      "bytes": 51252,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "afb83a8788874152766561e762165b6a6ea87663",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "lab/README.md",
-      "sha256": "d6766030d9263579dc69f2d1bc43bc9cd5449397eba379addde0486adf6be180"
+      "sha256": "e4eab712067e7b1f47153fd553283768c7bb868c59100fbfedebd13a540e6c5b"
     },
     {
       "bytes": 3287,
@@ -12155,18 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 106067,
+      "bytes": 106219,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b"
+      "sha256": "2ee5ada46b339f027d658777c396354fb49fb8579dcaefd7cccb97151f3d35f3"
     },
     {
-      "bytes": 42484,
+      "bytes": 43301,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819"
+      "sha256": "bafbdcc07e6426b8f3e0d7cfa87e10828e5967797ffbe53e4b2b2a4bde06ecc0"
     },
     {
       "bytes": 16589,
@@ -12176,12 +12298,13 @@
       "sha256": "98a47e88e8749f025ce449e65cb6adf241e5847eeb2d16de920bb26eeca2785f"
     },
     {
-      "bytes": 6796,
-      "change": "current routing; original retained in archived lab commit",
+      "bytes": 6885,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "89d32c4abf2608357b127a56188c0a25b775266b",
       "original_sha256": "9a82dcdfcb22e91c844845a8d8e9f1c79266c13aa3d5a9b299e92896886e556c",
       "path": "lab/docs/instructions.md",
-      "sha256": "0942c402c9e9e1fa1f7223196423dc2559d89019431cf319adb6fd6077186673"
+      "sha256": "3521b181cb72843064a0d1762e2a40839565d28caf38c79f38ae7995b5069149"
     },
     {
       "bytes": 301,
@@ -15068,11 +15191,13 @@
       "sha256": "eb2e73cb22e3da22a128d5a0f93e1b4b7756c02f79760e78007b0c7ae92f356d"
     },
     {
-      "bytes": 85866,
+      "bytes": 86099,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89a2e7a90c101d6fa34691c2be69c9f5825e9785",
       "original_git_blob": "a774490fce4bb8719421e199b8c6a1848aabc223",
       "original_sha256": "d9f00789b009b51602e33c47fd18337ea7b24da08a2e734bad4abe52a9ec9599",
       "path": "lab/handover.md",
-      "sha256": "d9f00789b009b51602e33c47fd18337ea7b24da08a2e734bad4abe52a9ec9599"
+      "sha256": "7282de247672c9b6e4d912fde00e2a9a04fd5310efcc000417d41ec0312f2f06"
     },
     {
       "bytes": 1286,
@@ -80810,120 +80935,6 @@
       "original_sha256": "97e48abf8687647e7299e961f42bcf6ec7cd810ca0341fd4b438859c7e35ee40",
       "path": "lab/tests/test_restore_nsc_search_payloads.py",
       "sha256": "97e48abf8687647e7299e961f42bcf6ec7cd810ca0341fd4b438859c7e35ee40"
-    },
-    {
-      "bytes": 4830,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/manifest.json",
-      "sha256": "7967b3a59015888f3a70582c93c71f595e1bf7bb777379e61136d0f295fe1e94"
-    },
-    {
-      "bytes": 221,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/09/f3faa364ca88b8ff482c413022ce38f40bef0d",
-      "sha256": "0f9400c558de6ab6fd20910967df351c52e3dde6bda4746b54fe6f766d840d00"
-    },
-    {
-      "bytes": 780,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/15/7a55cdf6ceaf2f69350914046c54fe059855e1",
-      "sha256": "6aeea0b6e6ee03a46f862c63da8a6e9caa0778d08f2c5279982d125f8efcbd81"
-    },
-    {
-      "bytes": 781,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/20/1a906a41d70ca033fb19f4bf7f1483f1fa2552",
-      "sha256": "8433752aeb932c0b130a56c53b0557e214e6426f0928e0f0ad6b39cf97d16ab4"
-    },
-    {
-      "bytes": 61,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/22/993e882ceb7032db8b233fb71231ee3b226316",
-      "sha256": "a692efd32a01a59082038637fafde4073e0433d7eab0576d031d82b7f78bb75d"
-    },
-    {
-      "bytes": 3327,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/31/818fdd6b8cc9c4d8b9d33f41e0f241b2dd1227",
-      "sha256": "b3b452cb5a43f950bebd01ff5f61a4c0c7c10725bd76b2a2ae17f6e91d7904d4"
-    },
-    {
-      "bytes": 6198,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/4d/c21108424b29558c9092c703184543721f5248",
-      "sha256": "36b75417ccc0a40b8f0a229346498987f07c1999e1add3e7b3939d4499689956"
-    },
-    {
-      "bytes": 5361,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/61/286d365dbda4cf1e19b8f154d6f2a298bf92de",
-      "sha256": "7382df9c5cb0ecfc48784296a66aee040dac27ca3b0f1d08359c96284c9a45a4"
-    },
-    {
-      "bytes": 749,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/6b/e0057f68cc1ca3fc021b0a2865ad87ea79f5c1",
-      "sha256": "b743803055349e6a361b7accd0d714381abbd4de732ddf9a31a15386cd2967d0"
-    },
-    {
-      "bytes": 207,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/75/0f08abd50ef461600baf9dd319d1ac38b50ca3",
-      "sha256": "3e5c1d1c7290ce182883397a2c1537a4d9eb53a5d9a4a9a2439d62284282b02c"
-    },
-    {
-      "bytes": 5543,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/82/6473ae9a2ff7a3da07718738ae48be7badcd68",
-      "sha256": "7216cf33fd7c909e4156258a63ca541f02f5d73216730edec42e0b7eb82b3b7a"
-    },
-    {
-      "bytes": 3416,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/9e/fa09bd82b7003391890f1a19828de04148173f",
-      "sha256": "0fd20be98cc53ddd4cbf86dfdbba048730ad86ae546d78b45814798354297393"
-    },
-    {
-      "bytes": 2531,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/a5/a85acef3d98a8d6ff66f928a30725856a1ac6c",
-      "sha256": "73dd5a3828d6a62bf15faa83719d8faba1b8c0bc096985ac5e94ef645d58a725"
-    },
-    {
-      "bytes": 220,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/c7/dc0f98cacb28afd030b089bdb9e1369288120c",
-      "sha256": "682ff6254b1bd7fdbcebf09f9562161aa24ca19f40655fa176ca8045b4aa4495"
-    },
-    {
-      "bytes": 749,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/d4/82613c0af362b6b7440788b335b136e24b8b4f",
-      "sha256": "fa659b9d286b76d3b2b56aa6b0e2ba0671000da09ae4672169a1d6a8fd9d3870"
-    },
-    {
-      "bytes": 60,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/d7/78878f61150cfa0dd2cd3b4024aea276001d46",
-      "sha256": "ec52f540bf0dde367602494aac82f0b7d2380d894d70c50c20e8c1461a2ce262"
-    },
-    {
-      "bytes": 222,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/e6/2d28f3230ae6ddb2712df71eb7c61a8ed65ad6",
-      "sha256": "e8797f15ea671d17b2a8748884afb982b0002eaa64fbfd6226feafcc34a14012"
-    },
-    {
-      "bytes": 60,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/f2/556bf248ef23192a4c864cb816090cb8641931",
-      "sha256": "509f92fbcf10b337e5960aac942a9fa0039a3a8a8b0d39209eea462e3d797523"
-    },
-    {
-      "bytes": 686,
-      "change": "new exact pinned-source proof cache",
-      "path": "lab/.source-history/objects/f7/b6d43cae388b9e87a586e1bc87ee62327ab96d",
-      "sha256": "371642d718e700d640e2f40731f55f9eb56e3205e78db6e53a1f32b0350586b2"
     }
   ],
   "intentionally_omitted": [

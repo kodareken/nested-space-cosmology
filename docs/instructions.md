@@ -7,7 +7,14 @@ changes, fast-forward `main`, and push both. No force-push is needed.
 
 ## Establish context after compaction
 
-Read the root AGENTS index, [PLAN.md](PLAN.md), and [handover](handover.md).
+Read the root AGENTS index and the latest plan approved by Douglas in the
+conversation. On 28 September 2026 Douglas removed the active handover and
+explicitly retired repository PLAN.md copies as task authorities. Do not restore
+the handover, duplicate the plan, or infer a new task from those old documents.
+If a future task lacks the approved plan, obtain it from Douglas instead of
+automatically resuming a historical file. Current evidence is owned by the
+[claim ledger](../lab/docs/claim-ledger.md), [code map](../lab/docs/active-code-map.md)
+and versioned result records.
 The active numerical owners are in `lab/`; root `src/`, `scripts/`, `tests/`
 and `results/` retain the curated publication chain. Do not mix the two Python
 package versions. Launch scientific Python commands from the repository root:
@@ -48,6 +55,30 @@ The helper preserves original import hashes and rejects historical excluded
 payloads and the pinned source cache. Review its diff and run the checks relevant
 to the actual change before committing. Removing evidence needs a separate
 dependency decision; this helper does not silently drop missing files.
+
+## Scientific framing and authority
+
+NSC investigates a proposed larger nested realization of familiar local physics.
+The approved task is the nonlocal-to-local correspondence and one self-consistent
+local realization. It does not require contradicting or falsifying LambdaCDM,
+removing its local terms, or changing measured local laws to make NSC succeed.
+Keep the declared action, preparation, source inventory and locked parameters.
+A new local gate result tests that declared construction; a failure in that class
+is not a general verdict on LambdaCDM or on every nested interpretation.
+
+The sphere and the relation between a region's interior and surroundings are
+Douglas's organizing motivation: examine the coupled system, the inherited law,
+and the effective response left when other regions are unresolved. The present
+spherical calculation supplies a controlled symmetry class. Regional conditions
+may differ under a common law. Reuse the established operator and transfer results.
+
+Same reduced equation form and complete physical equivalence are separate claims.
+Full LambdaCDM background/perturbation matching, a geometric derivation of charge
+conjugation and global recurrence stay subsequent research under the approved
+plan. Do not turn them into new completion requirements or claim them as results
+already established by Schur elimination. Geometry, pressure balance and
+inside/outside analogies motivate the model; their mathematical identifications
+must retain the domains and assumptions actually derived.
 
 ## Current nested-quality result
 
