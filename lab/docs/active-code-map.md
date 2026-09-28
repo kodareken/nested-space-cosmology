@@ -1,5 +1,32 @@
 # Active code and evidence map
 
+## Surface UV invariance and extended source transport, 2026-09-28
+
+The [upstream invariance identity](nsc-ks-uv-upstream-invariance.md) removes common
+spacetime-constant scalar upstream normalization coefficients from the formal
+occupied-vacuum C4 **difference on Sigma**. It retains arbitrary common
+k=n2-s*q_z rather than assigning n2_up=0. The actual L0 recurrence, continuity,
+and matched incoming a/r make the lower current differences vanish. All linked
+A3/n4 terms must change together; varying R while freezing them gives a spurious
+remaining term. The theorem does not remove whole-slab or physical source error.
+Its symbolic identities and countercontrols passed independent Grok review.
+
+The [radial phase continuation](nsc-massive-jost-transport-bound.md) now follows
+an original group-14 source label through 906 original DOP853 cells to a radial
+coordinate offset about 1.0218e-4 outside the coordinate horizon. Exact interval
+metric, phase-monotonicity and tube checks pass on every cell. Refining the
+bound's dyadic subdivision from one to four gives an upper about 9.04e-12
+instead of 6.40e-11 on the SAME numerical trajectory. The r>=8 control is about
+4.01e-13. These are phase errors, not N/beta errors. The small NPZ trace and
+source-inventory bindings are retained; original physical columns are unchanged.
+
+Next source work is the remaining collar, matched horizon sewing and interior
+transport to rho=1. Next UV work is the generated characteristic contribution
+to A3/n4 and its contracted difference on I; a common scalar integration
+constant is no longer a prerequisite for that formal surface coefficient.
+C_M still needs a controlled higher-order remainder and upstream matching.
+No numerical C4, physical source-column bound or closed gate is claimed.
+
 ## New Stage-2 primitives, 2026-09-28
 
 The [exterior Jost phase method](nsc-massive-jost-phase-bound.md) gives a directed
@@ -24,8 +51,8 @@ polynomial contribution dominates this cell's time/radius remainder.
 
 The next missing source connection is propagation of the outer-phase uncertainty
 through the original radial integration, horizon collar and interior mode map.
-For UV, determine the common upstream major-A2 contribution or prove its
-cancellation in the final contracted coefficient before seeking a finite C4.
+The later surface-scoped invariance result above resolves the common scalar
+part of that earlier UV question; whole-slab and physical-source bounds remain.
 No bound above is inserted as a completed physical error-budget component.
 
 ## Endpoint contraction and original-source route, 2026-09-28

@@ -62,6 +62,17 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Later Stage-2 continuation, 28 September 2026
+
+A new [formal UV identity](../lab/docs/nsc-ks-uv-upstream-invariance.md) proves
+that common scalar upstream constants cancel from the incoming C4 difference
+when the higher coefficients are transformed consistently and the incoming
+metrics match. It does not assume a zero upstream normalization error or give
+a numerical C4. A [source phase continuation](../lab/docs/nsc-massive-jost-transport-bound.md)
+now reaches a declared near-horizon endpoint, with a bound of about 9.04e-12
+radians on one original energy label. Horizon sewing, the actual incoming
+source-column error, C_M and the complete gate remain OPEN.
+
 ## Stage-2 method advances, 28 September 2026
 
 The active lab now has a directed exterior subgap phase bound, new massless

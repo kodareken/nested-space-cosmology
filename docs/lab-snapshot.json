@@ -12273,13 +12273,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 107978,
+      "bytes": 109767,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "b50eb4659c16dc0fe41a21940b066966fc43b079",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "17967ad3f439658e0d5b9b32936340ed4799c48eb2df3f5cd7c6f0f67a5431af"
+      "sha256": "2b887f1ccbde005fe744c57fe3d73539f61e27ff5da219ed4f90f456bcee56af"
     },
     {
       "bytes": 43301,
@@ -14316,6 +14316,13 @@
       "sha256": "66aa14ab02b1ef934067507a54a78f627a0dcc94b5fcf38bf3fd41656f1d03b9"
     },
     {
+      "bytes": 5140,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/docs/nsc-ks-uv-upstream-invariance.md",
+      "sha256": "907ad2c759c7af1015a3e10e916073ddd6b7a1487a746183b602bf8842379f7e"
+    },
+    {
       "bytes": 5064,
       "original_git_blob": "9a1b88953367fee24eaf49169cd8699c2601cf39",
       "original_sha256": "4bb29dd4b9eefdbd4ea94967b43801bbe4ee8aa1138a7ec24421a22cf507a38f",
@@ -14510,6 +14517,13 @@
       "changed_from_commit": "b50eb4659c16dc0fe41a21940b066966fc43b079",
       "path": "lab/docs/nsc-massive-jost-phase-bound.md",
       "sha256": "25c3f82d5bc09f2dbea3052e2ef6e92729bcbfbed6e8475e9272071e953a4778"
+    },
+    {
+      "bytes": 6290,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/docs/nsc-massive-jost-transport-bound.md",
+      "sha256": "4239ed8b1a2435dba1706061bfc8c69cc3888d0102e859a0f161eea9eab9a6fc"
     },
     {
       "bytes": 7085,
@@ -71375,6 +71389,13 @@
       "sha256": "e2a73c45f594cdf9a5b0d6664be91ea73f2f8620bcf67ac84731d2e0d51b94f5"
     },
     {
+      "bytes": 72742,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/results/development/artifacts/nsc-massive-jost-transport-bound-v1.npz",
+      "sha256": "3cf18ba5a346aaa9cf5f7ccf1c4f864e6e098d495ea5e184df04ee023650e467"
+    },
+    {
       "bytes": 407306,
       "original_git_blob": "1b524a531e2d873ce0ce87da7ff148f81efd8da1",
       "original_sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940",
@@ -74168,6 +74189,13 @@
       "sha256": "862b78d208836a77eeaa9db9c2ba9a3d5b7cc9435c80a5acd0a96c466c087a38"
     },
     {
+      "bytes": 13924,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/results/development/nsc-ks-uv-upstream-invariance-v1.json",
+      "sha256": "e7ec2c92a0578a3f58a613ca81bbe3cb8fb0679abf10ebc70853df2088d76b0c"
+    },
+    {
       "bytes": 8264,
       "original_git_blob": "d08e0b714c08e850d42a2be78151991d654d6803",
       "original_sha256": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5",
@@ -74334,6 +74362,13 @@
       "changed_from_commit": "b50eb4659c16dc0fe41a21940b066966fc43b079",
       "path": "lab/results/development/nsc-massive-jost-phase-bound-v1.json",
       "sha256": "dc235702dd97e94ea69837353658deebc9197a870ed083a811af61a1563bcd82"
+    },
+    {
+      "bytes": 28853,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/results/development/nsc-massive-jost-transport-bound-v1.json",
+      "sha256": "e36cd872207082ab63e437b11bf61953ba86f8d552d5f8c0210cca51610d76da"
     },
     {
       "bytes": 103548,
@@ -76856,6 +76891,13 @@
       "sha256": "acf400a5abe152c0617422d5c54308714f7532d56264ebfb5715d81f0c47ba8c"
     },
     {
+      "bytes": 2814,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/scripts/derive_nsc_ks_uv_upstream_invariance.py",
+      "sha256": "33093bf897018ddb6cc87c38bcd8dd1b63c32674112f6737144e6647eebf0d05"
+    },
+    {
       "bytes": 8833,
       "original_git_blob": "fd91777cb9845f369727d3945e119a76e20c9f72",
       "original_sha256": "21dd5553775c28d0d25c706f0d86750258db3281d68c42742061a3e648d2b4a3",
@@ -77015,6 +77057,13 @@
       "changed_from_commit": "b50eb4659c16dc0fe41a21940b066966fc43b079",
       "path": "lab/scripts/derive_nsc_massive_jost_phase_bound.py",
       "sha256": "9949b26829ab44ef35e039068dacd85215d1174c90ec31ac10fbaaf45291f961"
+    },
+    {
+      "bytes": 5956,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/scripts/derive_nsc_massive_jost_transport_bound.py",
+      "sha256": "47f850670ff4de36fdf91d63efd1da75fa10f39c3b360980262b789d0cb1304b"
     },
     {
       "bytes": 11644,
@@ -78620,6 +78669,13 @@
       "sha256": "09040ddcc575fb1780b70fd6f01f054b6aab2bc1c63c1ff822ae8a404af74e91"
     },
     {
+      "bytes": 8281,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/src/recursive_horizons/nsc_ks_uv_upstream_invariance.py",
+      "sha256": "6710dc7a29d9d6621b77c25739c9bee0963c576037ac9d7ce0e630990fa3e259"
+    },
+    {
       "bytes": 7362,
       "original_git_blob": "d4cdbb282b46f85946d34b1e690ec60bb1b0b6a5",
       "original_sha256": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4",
@@ -78730,6 +78786,13 @@
       "changed_from_commit": "b50eb4659c16dc0fe41a21940b066966fc43b079",
       "path": "lab/src/recursive_horizons/nsc_massive_jost_phase_bound.py",
       "sha256": "4dfd7dce2ce4030b95882cb2d6e2605a32c2e8d058f6a6067e3c686d49c5e78b"
+    },
+    {
+      "bytes": 20296,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/src/recursive_horizons/nsc_massive_jost_transport_bound.py",
+      "sha256": "7a6759a638a2da788bf71df22580e7595e5d0e2918f34c623564708d6f72a37d"
     },
     {
       "bytes": 8990,
@@ -80503,6 +80566,13 @@
       "sha256": "690dac577992e93fce56c996b14b8cdba0f9d986f671172af19e08c646ba9033"
     },
     {
+      "bytes": 2885,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/tests/test_nsc_ks_uv_upstream_invariance.py",
+      "sha256": "467a890c07cae18c912358bc66729c88956e82109ad3203051ba9fd9dc088ec8"
+    },
+    {
       "bytes": 6699,
       "original_git_blob": "bfe60fe6323ce8a50cb16a902f9bed846ad47154",
       "original_sha256": "9c108e6cd8de2555420415fae3873faded26521a71f8f176a91d93c7ba7823fb",
@@ -80592,6 +80662,13 @@
       "changed_from_commit": "b50eb4659c16dc0fe41a21940b066966fc43b079",
       "path": "lab/tests/test_nsc_massive_jost_phase_bound.py",
       "sha256": "cf9cd1f33cf393ada40c6055e5c02a12504ec5f54f64d76de713b942dd5d37c8"
+    },
+    {
+      "bytes": 11510,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "229d146c8e5643d20f8ede41b771f5f1dd168b58",
+      "path": "lab/tests/test_nsc_massive_jost_transport_bound.py",
+      "sha256": "1e9b1887e1ec819311e17c50dda891d580d20ba609541a45b03f7530980da586"
     },
     {
       "bytes": 1710,
