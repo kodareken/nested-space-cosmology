@@ -1,0 +1,558 @@
+{
+  "artifact_id": "FGC-1-NUM1-VAL1",
+  "artifact_payload": {
+    "GR0_scalar_control_passed": true,
+    "Minkowski_preservation_passed": true,
+    "all_typed_stops_injected": true,
+    "boundary_isolation_passed": true,
+    "checkpoint_restart_equivalence_passed": true,
+    "constraint_convergence_passed": true,
+    "direct_and_Raychaudhuri_routes_agree": true,
+    "exact_vs_floating_backend_passed": true,
+    "primary_and_comparator_methods_passed": true,
+    "quantitative_evidence": {
+      "SBP_and_dissipation": {
+        "records": [
+          {
+            "dissipation_nonpositive": true,
+            "high_frequency_energy_rate": -0.9225260416666667,
+            "order": 4,
+            "sbp_identity_residual": 2.220446049250313e-16,
+            "stencil_reach_intervals": 3
+          },
+          {
+            "dissipation_nonpositive": true,
+            "high_frequency_energy_rate": -0.953125,
+            "order": 2,
+            "sbp_identity_residual": 0.0,
+            "stencil_reach_intervals": 1
+          }
+        ]
+      },
+      "affine_measurement": {
+        "cross_method_theta_difference_infinity": 5.773159728050814e-15,
+        "geometry": "exact_flat_FLRW_with_scale_factor_a_of_t_equals_1_plus_t",
+        "records": [
+          {
+            "hypersurface_twist_squared": 0.0,
+            "initial_normalization_residual": 0.0,
+            "maximum_affine_geodesic_residual": 7.297717985466079e-12,
+            "maximum_direct_Raychaudhuri_disagreement": 7.181455430327333e-11,
+            "maximum_null_residual": 3.3306690738754696e-16,
+            "measurement_sha256": "f00c8d09e97d0610a46f6558d05a70b971867cb262b775e1943a599710b301c0",
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+            "radial_screen_shear_squared": 0.0,
+            "sample_count": 513,
+            "trajectory_sha256": "b0c5edb595db79a24868e354dd27afc0f9cc48030b3e3b447c90ba7dcafedd84"
+          },
+          {
+            "hypersurface_twist_squared": 0.0,
+            "initial_normalization_residual": 0.0,
+            "maximum_affine_geodesic_residual": 6.497424820395281e-11,
+            "maximum_direct_Raychaudhuri_disagreement": 3.5891467575766e-10,
+            "maximum_null_residual": 3.3306690738754696e-16,
+            "measurement_sha256": "0808cd7f47e5751ee63cc244cffb3d529dd9ba23bc8763867d0b3ed85f691217",
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+            "radial_screen_shear_squared": 0.0,
+            "sample_count": 513,
+            "trajectory_sha256": "b1d066e35c1f4a5f0ee0fe2b66ef5eb092f77c1ecbbcb95d5fcc7c5553f2b8c9"
+          }
+        ]
+      },
+      "epistemic_boundary": {
+        "FGCQR_trajectory_evaluated": false,
+        "collapse_evolution_performed": false,
+        "controls_are_independent_of_FGCQR_holdout_outcomes": true,
+        "defocusing_margin_measured": false,
+        "regulator_activation_measured": false,
+        "retained_EFT_validity_inferred": false,
+        "trapped_interval_measured": false
+      },
+      "exact_scalar_and_batched_source": {
+        "activated_fixture_id": "COMP1-activated-compatible-point",
+        "batch_REF1_residual_infinity": 5.169898781271203e-25,
+        "batch_affine_in_accelerations_verified": true,
+        "batch_branch_displacement_infinity": 6.484985351595807e-05,
+        "batch_kinetic_condition_infinity": 160.00017229574706,
+        "exact_vs_batch_ADM_root_absolute_error": 2.4707335597333413e-22,
+        "flat_annulus_point_count": 12,
+        "flat_zero_root_acceleration_infinity": 0.0,
+        "flat_zero_root_iterations": 0,
+        "flat_zero_root_residual_infinity": 1.1469246122160705e-15,
+        "scalar_vs_batch_ADM_root_absolute_error": 2.908056841006738e-26
+      },
+      "method_controls": [
+        {
+          "GR0_scalar": {
+            "constraint_orders": [
+              2.4969682956664627,
+              2.5018512240786053
+            ],
+            "control_id": "GR0-SCALAR",
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+            "minimum_constraint_order": 2.4969682956664627,
+            "minimum_solution_order": 3.0190586189030166,
+            "runs": [
+              {
+                "endpoint_sha256": "dfce14fe2379adac0c6bfab49d6adc877b25450af59f61c3ed7351225afcdd60",
+                "point_count": 33,
+                "reduction_constraint_infinity": 0.004011743197078865,
+                "reduction_constraint_l2": 0.0009477875964745293,
+                "relative_energy_drift": 3.9578974294628405e-08,
+                "solution_infinity_error": 2.6303661622845143e-06,
+                "solution_l2_error": 1.0671478083455455e-06,
+                "spacing": 0.09817477042468103,
+                "step_count": 17,
+                "step_size": 0.011764705882352941
+              },
+              {
+                "endpoint_sha256": "f955951467191fef02b957cfe4f0fa9c71597980ce1f0fab95dae62ec587e408",
+                "point_count": 65,
+                "reduction_constraint_infinity": 0.0010030515614342095,
+                "reduction_constraint_l2": 0.00016789921500671805,
+                "relative_energy_drift": 8.314871835392771e-08,
+                "solution_infinity_error": 3.3645851198194077e-07,
+                "solution_l2_error": 9.253224503962936e-08,
+                "spacing": 0.04908738521234052,
+                "step_count": 33,
+                "step_size": 0.006060606060606061
+              },
+              {
+                "endpoint_sha256": "851fec8658cf8d942e0422eb88e5b6a38c45538813311ed744a5901a5bcf44a2",
+                "point_count": 129,
+                "reduction_constraint_infinity": 0.00025003667398337814,
+                "reduction_constraint_l2": 2.964260743083756e-05,
+                "relative_energy_drift": 2.037840738711597e-08,
+                "solution_infinity_error": 6.652941908491528e-08,
+                "solution_l2_error": 1.1414736649589713e-08,
+                "spacing": 0.02454369260617026,
+                "step_count": 66,
+                "step_size": 0.0030303030303030303
+              }
+            ],
+            "solution_orders": [
+              3.5276600100579687,
+              3.0190586189030166
+            ]
+          },
+          "Minkowski": {
+            "bitwise_preserved": true,
+            "maximum_binary64_drift": 0.0,
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4"
+          },
+          "all_method_controls_passed": true,
+          "boundary_isolation": {
+            "component_differences": {
+              "p": 0.0,
+              "q": 0.0,
+              "u": 0.0
+            },
+            "maximum_measurement_difference": 0.0,
+            "measurement_radius": 2.5,
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+            "outer_radii": [
+              6.0,
+              8.0
+            ],
+            "spacing_preserved": true
+          },
+          "checkpoint_restart": {
+            "canonical_roundtrip_bitwise": true,
+            "checkpoint_sha256": "4c615c2fb123d8cd2446000cf18b17a40ac11af6796fb75430a2d7fa28cc9f34",
+            "continuous_and_restart_endpoint_bitwise_equal": true,
+            "endpoint_sha256": "707b2761ca6d78a069479c291df469461c4f5b671f72c04808d8696c2dda324d",
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4"
+          },
+          "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+          "regular_center_manufactured_solution": {
+            "constraint_orders": [
+              2.012027324475656,
+              2.296465533006238
+            ],
+            "control_id": "MMS-CENTER",
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+            "minimum_constraint_order": 2.012027324475656,
+            "minimum_solution_order": 2.921480537123077,
+            "runs": [
+              {
+                "endpoint_sha256": "d434ed01ddd9707091a09341bba9c394cbbff97123522c74565cf65b734943f4",
+                "point_count": 33,
+                "reduction_constraint_infinity": 0.00017106612833216016,
+                "reduction_constraint_l2": 6.993324675386204e-05,
+                "relative_energy_drift": 0.32968817626538244,
+                "solution_infinity_error": 2.616703425784017e-05,
+                "solution_l2_error": 9.299628619121536e-06,
+                "spacing": 0.09817477042468103,
+                "step_count": 17,
+                "step_size": 0.011764705882352941
+              },
+              {
+                "endpoint_sha256": "fbbc1bdf5060573787dece592a3640dc0cda7ea219425168df85d45780862c42",
+                "point_count": 65,
+                "reduction_constraint_infinity": 0.0001246457532988445,
+                "reduction_constraint_l2": 1.7338164324245555e-05,
+                "relative_energy_drift": 0.3296808459950599,
+                "solution_infinity_error": 4.638195312267612e-06,
+                "solution_l2_error": 1.2274740851461416e-06,
+                "spacing": 0.04908738521234052,
+                "step_count": 33,
+                "step_size": 0.006060606060606061
+              },
+              {
+                "endpoint_sha256": "733e1a5ae1f60e340b0ea2acee9cfa3cb5cdd83b503c0cdba388e89f2a53368b",
+                "point_count": 129,
+                "reduction_constraint_infinity": 3.749061736872808e-05,
+                "reduction_constraint_l2": 3.5293774394817437e-06,
+                "relative_energy_drift": 0.32968006236663727,
+                "solution_infinity_error": 6.188927340611272e-07,
+                "solution_l2_error": 1.504811230725178e-07,
+                "spacing": 0.02454369260617026,
+                "step_count": 66,
+                "step_size": 0.0030303030303030303
+              }
+            ],
+            "solution_orders": [
+              2.921480537123077,
+              3.028038139923554
+            ]
+          }
+        },
+        {
+          "GR0_scalar": {
+            "constraint_orders": [
+              1.9988218881509188,
+              1.9996625738204292
+            ],
+            "control_id": "GR0-SCALAR",
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+            "minimum_constraint_order": 1.9988218881509188,
+            "minimum_solution_order": 1.999353560214122,
+            "runs": [
+              {
+                "endpoint_sha256": "22d2965e8ef42d9c833b24018896d06162c2d7fb97ee1bba2b507af78176e41c",
+                "point_count": 33,
+                "reduction_constraint_infinity": 0.0016056069643808346,
+                "reduction_constraint_l2": 0.0020094358656964953,
+                "relative_energy_drift": 4.7024995554413275e-06,
+                "solution_infinity_error": 3.1778983397012794e-05,
+                "solution_l2_error": 3.984098370346697e-05,
+                "spacing": 0.09817477042468103,
+                "step_count": 17,
+                "step_size": 0.011764705882352941
+              },
+              {
+                "endpoint_sha256": "2f29267d9ff92294660d65f2ed6f791e24344963c28bc93cccdac044a5819d47",
+                "point_count": 65,
+                "reduction_constraint_infinity": 0.00040154685031934534,
+                "reduction_constraint_l2": 0.0005027693627639943,
+                "relative_energy_drift": 8.106172495200223e-07,
+                "solution_infinity_error": 7.94902030309963e-06,
+                "solution_l2_error": 9.964709892121584e-06,
+                "spacing": 0.04908738521234052,
+                "step_count": 33,
+                "step_size": 0.006060606060606061
+              },
+              {
+                "endpoint_sha256": "33dbd0e1443abfb9265ab8953c3154b4e0666270e991b3994abad65fb5f74b25",
+                "point_count": 129,
+                "reduction_constraint_infinity": 0.00010039578385911962,
+                "reduction_constraint_l2": 0.00012572174180854493,
+                "relative_energy_drift": 1.771895782892767e-07,
+                "solution_infinity_error": 1.987655794621901e-06,
+                "solution_l2_error": 2.4916117636272414e-06,
+                "spacing": 0.02454369260617026,
+                "step_count": 66,
+                "step_size": 0.0030303030303030303
+              }
+            ],
+            "solution_orders": [
+              1.999353560214122,
+              1.9997485147927387
+            ]
+          },
+          "Minkowski": {
+            "bitwise_preserved": true,
+            "maximum_binary64_drift": 0.0,
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3"
+          },
+          "all_method_controls_passed": true,
+          "boundary_isolation": {
+            "component_differences": {
+              "p": 0.0,
+              "q": 0.0,
+              "u": 0.0
+            },
+            "maximum_measurement_difference": 0.0,
+            "measurement_radius": 2.5,
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+            "outer_radii": [
+              6.0,
+              8.0
+            ],
+            "spacing_preserved": true
+          },
+          "checkpoint_restart": {
+            "canonical_roundtrip_bitwise": true,
+            "checkpoint_sha256": "35e1b4725d324acfd58a5a79c50123712dfdef941f0f1950f68a2b5cba4227e9",
+            "continuous_and_restart_endpoint_bitwise_equal": true,
+            "endpoint_sha256": "5ae3d27b89d844c9e872b4fb3412f8ac8f4a6154eb8a56de7aa91cff3303228d",
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3"
+          },
+          "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+          "regular_center_manufactured_solution": {
+            "constraint_orders": [
+              1.5171810415309277,
+              1.5089633540904572
+            ],
+            "control_id": "MMS-CENTER",
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+            "minimum_constraint_order": 1.5089633540904572,
+            "minimum_solution_order": 1.9940138467140682,
+            "runs": [
+              {
+                "endpoint_sha256": "83d0bed53cf1aa2eb07214014515c68237888267692de67a88843b0f7fd2e8a6",
+                "point_count": 33,
+                "reduction_constraint_infinity": 0.039873485687411954,
+                "reduction_constraint_l2": 0.009060532718252115,
+                "relative_energy_drift": 0.3296226337538916,
+                "solution_infinity_error": 2.797677035093482e-05,
+                "solution_l2_error": 3.432208250246452e-05,
+                "spacing": 0.09817477042468103,
+                "step_count": 17,
+                "step_size": 0.011764705882352941
+              },
+              {
+                "endpoint_sha256": "68b63c60895d93f0fdd9a52646a1354affd62edd3e3caece6aa69aec3841dad7",
+                "point_count": 65,
+                "reduction_constraint_infinity": 0.019948372648156364,
+                "reduction_constraint_l2": 0.0031654592758264205,
+                "relative_energy_drift": 0.3296659409512008,
+                "solution_infinity_error": 6.992017907325732e-06,
+                "solution_l2_error": 8.616197619304725e-06,
+                "spacing": 0.04908738521234052,
+                "step_count": 33,
+                "step_size": 0.006060606060606061
+              },
+              {
+                "endpoint_sha256": "e168939df359b01f5bc7417fba61bdb71c10cf8d0648a78ec43a4202246df30a",
+                "point_count": 129,
+                "reduction_constraint_infinity": 0.00997565491822893,
+                "reduction_constraint_l2": 0.0011122271665806437,
+                "relative_energy_drift": 0.3296764578826939,
+                "solution_infinity_error": 1.7475141292910834e-06,
+                "solution_l2_error": 2.155683065992957e-06,
+                "spacing": 0.02454369260617026,
+                "step_count": 66,
+                "step_size": 0.0030303030303030303
+              }
+            ],
+            "solution_orders": [
+              1.9940138467140682,
+              1.9989062546259453
+            ]
+          }
+        }
+      ],
+      "regular_center_acceleration_limit": {
+        "analytic_family": "even_polynomial_through_r_pow_8_with_exact_center_values",
+        "minimum_observed_order": 7.999999999040808,
+        "observed_orders": [
+          7.999999999040808,
+          8.00000000095546
+        ],
+        "records": [
+          {
+            "four_point_error_infinity": 0.0003433227539053618,
+            "odd_accelerations_exactly_zero": true,
+            "spacing": "1/8",
+            "three_vs_four_estimator_infinity": 0.0018796920776358306
+          },
+          {
+            "four_point_error_infinity": 1.3411045083344675e-06,
+            "odd_accelerations_exactly_zero": true,
+            "spacing": "1/16",
+            "three_vs_four_estimator_infinity": 2.1826475859576533e-05
+          },
+          {
+            "four_point_error_infinity": 5.238689482212067e-09,
+            "odd_accelerations_exactly_zero": true,
+            "spacing": "1/32",
+            "three_vs_four_estimator_infinity": 3.1157105695456266e-07
+          }
+        ]
+      },
+      "runtime": {
+        "floating_type": "IEEE_754_binary64",
+        "numpy_version": "2.5.1",
+        "python_implementation": "cpython",
+        "python_version": "3.14.6"
+      },
+      "runtime_transaction": {
+        "all_transactions_passed": true,
+        "records": [
+          {
+            "boundary_failure_reason": "boundary_causal_buffer",
+            "boundary_failure_rolled_back_causal_and_health_state": true,
+            "first_failure_immutable": true,
+            "healthy_receipt": {
+              "accepted_stage_count": 5,
+              "first_transaction_serial": 0,
+              "interval_speed_upper": 1.25,
+              "last_transaction_serial": 4,
+              "remaining_causal_buffer": 71.46875,
+              "strict_margin_over_required_buffer": 55.46875
+            },
+            "late_failure_reason": "nonpositive_lapse",
+            "late_failure_rolled_back_all_internal_stages": true,
+            "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+            "stage_count_including_candidate_endpoint": 5
+          },
+          {
+            "boundary_failure_reason": "boundary_causal_buffer",
+            "boundary_failure_rolled_back_causal_and_health_state": true,
+            "first_failure_immutable": true,
+            "healthy_receipt": {
+              "accepted_stage_count": 4,
+              "first_transaction_serial": 0,
+              "interval_speed_upper": 1.25,
+              "last_transaction_serial": 3,
+              "remaining_causal_buffer": 71.46875,
+              "strict_margin_over_required_buffer": 55.46875
+            },
+            "late_failure_reason": "nonpositive_lapse",
+            "late_failure_rolled_back_all_internal_stages": true,
+            "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+            "stage_count_including_candidate_endpoint": 4
+          }
+        ]
+      },
+      "thresholds": {
+        "Minkowski_binary64_drift_max": "0",
+        "SBP_identity_residual_max": "1/100000000000000",
+        "affine_geodesic_residual_max": "1/10000000000",
+        "affine_normalization_residual_max": "1/10000000000",
+        "batch_REF1_residual_infinity_max": "1/1000000000000",
+        "boundary_measurement_difference_max": "1/10000000000000",
+        "center_limit_minimum_observed_order": "5",
+        "comparator_minimum_solution_order": "19/10",
+        "cross_method_theta_difference_max": "1/100000000",
+        "direct_Raychaudhuri_agreement_residual_max": "1/100000000",
+        "exact_scalar_batch_root_absolute_error_max": "1/1000000000000",
+        "minimum_reduction_constraint_order": "3/2",
+        "null_residual_max": "1/1000000000000",
+        "primary_minimum_solution_order": "5/2"
+      },
+      "typed_stop_count": 26,
+      "typed_stop_priority_order": [
+        "nonpositive_lapse",
+        "nonpositive_radial_metric",
+        "nonpositive_areal_radius_away_from_center",
+        "hat_cone_not_Lorentzian",
+        "newton_residual_limit",
+        "newton_iteration_limit",
+        "newton_residual_not_monotonic",
+        "kinetic_condition_limit",
+        "branch_displacement_limit",
+        "acceleration_limit",
+        "all_covector_companion_deformation_limit",
+        "action_energy_deformation_limit",
+        "kinetic_deformation_limit",
+        "effective_planck_ratio_limit",
+        "characteristic_imaginary_part_limit",
+        "eigenframe_condition_limit",
+        "symmetrizer_coercivity_limit",
+        "normalized_constraint_limit",
+        "constraint_convergence_order_limit",
+        "phi_cutoff_proxy_limit",
+        "proper_frequency_cutoff_proxy_limit",
+        "proper_wavenumber_cutoff_proxy_limit",
+        "temporal_alias_band_occupied",
+        "radial_alias_band_occupied",
+        "curvature_cutoff_proxy_limit",
+        "boundary_causal_buffer"
+      ]
+    },
+    "regular_center_manufactured_solution_passed": true,
+    "run_envelope_semantic_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee"
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "independent_solver_and_affine_measurement_validation_certificate",
+  "derivation_document": "docs/fgc-num1-val1.md",
+  "derivation_document_sha256": "6938b59829231096726c68d32f45eca4368d69e68d026ae62f70254780866587",
+  "gate_status": {
+    "independent_solver_validation_and_measurement_contract_passed": true
+  },
+  "generated_by": "scripts/reproduce_fgc_num1_val1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt1_mon1.py": "bc1b4806022a174c7f1b1c8b1cb772d3022946d604faebae24219740b22c8184",
+    "scripts/reproduce_fgc_num1_val1.py": "9d300f54724ab32dbeeafe74625cb5f61116600939a35e69a5b6c13a1e89e5b6",
+    "scripts/reproduce_fgc_src1_nl1.py": "5358e1013da6d5263ad7b4da04ffd112763b70e139b311ec1321852b3ada19ef",
+    "src/recursive_horizons/fgc/evolution/affine_measurement.py": "3c297a0622a4b8f9a758c0e4edae04d0335e12cb7bb4bdcf082a74f9c51e8140",
+    "src/recursive_horizons/fgc/evolution/nonlinear_source.py": "b20d02e9ac78499d2b09ee91388addcb094cdeadcae2284cab747fdcac6ffadd",
+    "src/recursive_horizons/fgc/evolution/numerical_controls.py": "a1f8a5c0eaeb539701648e6994690fe396907847cc26d4a7389733975aa7596f",
+    "src/recursive_horizons/fgc/evolution/numerical_engine.py": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf",
+    "src/recursive_horizons/fgc/evolution/runtime_transaction.py": "b4d6cab77981bd837739e57d618d1dea5afdad8273e97826c268ed3605bbb8a0",
+    "src/recursive_horizons/fgc/evolution/vectorized_source.py": "bfc855b2cc2fd87e2523b4572f68fe3e3c1fd0a0c250f7fef0346d0dc5525e99",
+    "src/recursive_horizons/fgc/modified_harmonic_constraints.py": "428ddbe6325a43d905d5da880d0b67922b5448d38e69a2461e84003348708783",
+    "src/recursive_horizons/fgc/modified_harmonic_modes.py": "1fb291d2e3ae71d9b72bf1b26f10aa9cad30a54a845930a25c313319f0241509",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+  },
+  "nonclaims": {
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-bnd2-cp1.toml": "f91ddded93f162b43250b15197bfaa6df360a1e6ec60a5138ca88e7f88ccbca4",
+    "configs/fgc/fgc-1-con4-phy1.toml": "1b2d8441a96c392c0a0948c9a111e7bfc0fc3df3a31fc63f177768bb29b80255",
+    "configs/fgc/fgc-1-ctr1-reg1.toml": "1f512304a9cf432576c9b7afd8b24670ecfd6cb6a793172f2e4e162319318bbe",
+    "configs/fgc/fgc-1-def0-obs1.toml": "17853fe5280eeb5e08b07fda9c28d55e687c48ad311a440ff9c3971c2e489578",
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4",
+    "configs/fgc/fgc-1-hlt1-mon1.toml": "a9ba9f95ebdf0e1ec16ddc8098b8e5f9873f0b4c23f7077a9a1ca443b3ad7dbb",
+    "configs/fgc/fgc-1-hyp2-md1.toml": "c3fcb05d4ca3b8df72b1659e24178c66e44f7033e11df998a6bc855f6a230382",
+    "configs/fgc/fgc-1-id1-fam1.toml": "fe61161c651af606476f498c4c0a1b99a4034d7a5dd0c3ac9d7f581ba7992a3c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "configs/fgc/fgc-1-src1-nl1.toml": "0048eb844d32bf9d32a4cfddbda242ea99043f2ddfe5ec72c5a8fd551fc6195d",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-bnd2-cp1.json": "154e6740c941e4e4014bb2d1381f633e5f375ab46ae3ad50d629a0363a56a15b",
+    "results/fgc-1-con4-phy1.json": "ab1964af57666e51491026ac279a119b061f17cc55f1ec8ffbc31a45c97ea47b",
+    "results/fgc-1-ctr1-reg1.json": "a60f27ed3a31d6135079881ef06b093b0fb0240b4b3ae0be9e6ca3e91a35736b",
+    "results/fgc-1-def0-obs1.json": "c0d98d7c297335d06501f1ca9b0694fe9fe5c3b956e8e6416b8932bc19bb8626",
+    "results/fgc-1-dom4-run1.json": "238847f4af182fa423a91b381cae65217a76965b7b979ea26b29778781f0ac94",
+    "results/fgc-1-hlt1-mon1.json": "3d07822cdf1cb54080b8d615bb71cb962721172407959888b2902999943e0db1",
+    "results/fgc-1-hyp2-md1.json": "159e966f2279cc534d663a0e9f4abd0c6d429751bb8f6d266bebe5c65d53ad67",
+    "results/fgc-1-id1-fam1.json": "b410741dfc7f58041df0eab45d956687947157747a69a5f5247792607139f4a8",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8",
+    "results/fgc-1-src1-nl1.json": "e3605b74b40fefde9f62fdc529a454a8f4609479522fe029864bb088db9b2d3d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "action_artifact_id": "FGC-1-ACT1",
+    "action_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "action_result_sha256": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_artifact_id": "FGC-2-SF1-PROTO3",
+    "protocol_config_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+    "protocol_semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "target_branch": "FGC-QR",
+    "variation_artifact_id": "FGC-1-VAR1",
+    "variation_config_sha256": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "variation_result_sha256": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-num1-val1.toml": "2b00d268191905b6212f2ed4858344f810c082190940e64fc82da334bd528c11"
+  }
+}

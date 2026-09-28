@@ -1,0 +1,120 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-RCV3-PREF2"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "outcome_neutral_rcv3_temporal_retry_exhaustion_terminal_binder"
+nonclaims = [
+  "PREF2 binds a finite numerical/instrumental terminal; it does not diagnose or prescribe a successor remedy.",
+  "Temporal retry exhaustion before one accepted post-restart macro-step is not a GR-0, FGC-QR, gradient, mechanism, or physical obstruction.",
+  "The terminal preserves the accepted physical state and accumulated temporal debit; no common event, trapping calibration, candidate trajectory, activation, DEF1 result, retained-EFT result, transition, or physical result was earned.",
+]
+
+[predecessor]
+authority_commit = "98f2e4f20c3c09cf052cf5a8a228d31478842792"
+pref1_commit = "46abf80753a53e13cf7206fb76d90dc28e4be242"
+pref1_path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_pref1_binder.py"
+pref1_sha256 = "98caf18141ca83abaf2559ed7eeaa58d42fce4cc1e796fea4fd6171fab01c733"
+
+[[predecessor.authority_blobs]]
+path = "configs/fgc/fgc-1-tdg8-rcv3-rec1-auth1.toml"
+sha256 = "dab950eb11f8e883222524f6ccbf13702776caf7e8833bbc87fcfae7fa3a4996"
+
+[[predecessor.authority_blobs]]
+path = "results/fgc-1-tdg8-rcv3-rec1-auth1.json"
+sha256 = "456ddfb53304025bf53eb8bb58efe0d60ed151eb682a40fd0d8778d9bfda27ae"
+
+[[predecessor.authority_blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_rec1_authority.py"
+sha256 = "1988623897e1b7a05d07e120fdf7cd39be6b4a0b7d58be88919efab15d938d54"
+
+[[predecessor.authority_blobs]]
+path = "scripts/run_fgc_tdg8_rcv3_rec1_event.py"
+sha256 = "00cc24163d0eb37ca8ac44614b360565f127bb8629ecbd2fba2d008ec8e25a5d"
+
+[store]
+path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+leaf_count = 115
+byte_count = 25734805
+manifest_sha256 = "46b57bc38f3bbfbec70c4b6b11a089cb799dc73135af0d9dac0e3dc289b952d4"
+checkpoint_count = 30
+journal_count = 51
+state_count = 17
+payload_count = 11
+decoded_array_count = 99
+rejection_count_after_anchor = 20
+cursor_transition_count_after_anchor = 19
+terminal_record_count = 1
+
+[anchor]
+generation = 9
+checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+checkpoint_raw_sha256 = "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846"
+journal_sequence = 10
+journal_sha256 = "5b533eb7009a9c7c3f353d26813f9cbbde8574afae77492929b435b4c701c5ff"
+
+[recovery]
+generation = 10
+checkpoint_sha256 = "6dc263e7719c9a422e9fed1b81ac573f3127607a2285f3c55b095d9019f60187"
+checkpoint_raw_sha256 = "9abb59999809d22354d6b5f810bc592cd2673e5e4d354d0ec58e9ad53522dc4b"
+checkpoint_byte_count = 186497
+parent_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+journal_sequence = 12
+journal_sha256 = "d25d371b67cd227edc735479f719970b382443d9097ee718a4dd3888c0b6cca4"
+retry_count = 3
+pending_cap_binary64_hex = "0x1.aaa9612df8000p-12"
+
+[terminal]
+generation = 29
+checkpoint_sha256 = "13eb3ffcbf0a30e588a0edf31867d98c14724f4542cb8272d400a0f52f8bc856"
+checkpoint_raw_sha256 = "e1a012dfac1423d7a70a456aa582f64593564e297e096055b497976ebe5ea43d"
+checkpoint_byte_count = 1063710
+parent_sha256 = "8e7784d74d2f94538ae2c2cbb8c2f79538d5275943d6dd6f36294612991f4779"
+journal_sequence = 50
+journal_sha256 = "29aee78763893fa99e82f8b4b6d2918a4f4a091eb37bad7ad03707a5c33d26da"
+journal_raw_sha256 = "b2b9e71c90be5ebbd30e361bbaccd51898cff5f365a656ee2c4bbe5dde32a530"
+journal_byte_count = 23598
+rejection_sequence = 49
+rejection_sha256 = "928cfd1baddf6f4a148e6e6e7277328e50eaeccbf6a45a04c52e9b20cf9117d1"
+rejection_raw_sha256 = "a0bf45404f66c487a76d35b79fa7e879ca4831b0ce9856bb344756bd4560e27a"
+rejection_byte_count = 23448
+terminal_lock_sha256 = "298ec9bd0b57ddc807b8305da2eb1e79a9133c39ce57500ff08eb7f5730922d8"
+terminal_lock_raw_sha256 = "a81c6babfadb699611486e835338abd7ed19016ad075264692fea8c63ad584fd"
+terminal_lock_byte_count = 297
+classification = "invalid"
+disposition = "invalid_terminal"
+owner = "temporal"
+reason = "temporal_retry_exhausted"
+retry_count = 22
+attempted_macro_step_binary64_hex = "0x1.aaa9600000000p-30"
+retry_step_binary64_hex = "0x1.aaa9600000000p-31"
+cursor_sha256 = "586f7050ee53d4ffcd5cae37f8ad78f173140ab97016178706ff5b48b284fbfa"
+member_map_sha256 = "c81af6f77419ec052416827c2a8aa6f8cb3b631889e13ce6a0cdd78f92df48cd"
+
+[scope]
+live_store_read_only = true
+compact_verifier_store_blind = true
+complete_lineage_reconstructed = true
+recovery_runtime_imported = false
+evolution_runtime_imported = false
+PDE_proposal_executed_by_binder = false
+accepted_state_mutated_by_binder = false
+candidate_branch_opened = false
+successor_remedy_selected = false
+
+[claims]
+REC1_authority_commit_bound = true
+generation9_anchor_bound = true
+exact_generation10_recovery_bound = true
+complete_generation9_to_terminal_lineage_bound = true
+all_persisted_states_and_payloads_decoded = true
+accepted_physical_state_preserved_through_terminal = true
+temporal_retry_exhaustion_terminal_bound = true
+terminal_classification_numerical_not_physical = true
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+candidate_trajectory_read = false
+mechanism_result_earned = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

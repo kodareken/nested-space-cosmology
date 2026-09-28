@@ -1,0 +1,123 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arithmetic_and_intrinsic_geometry_error_upper": [
+    {
+      "exponent": -171,
+      "mantissa": "898484852029342327395405381532385281"
+    },
+    {
+      "exponent": -175,
+      "mantissa": "1324547690212768668056687976093057025"
+    }
+  ],
+  "current_field_error": {
+    "N": {
+      "exponent": -159,
+      "mantissa": "868412923485835612486466963528608599"
+    },
+    "beta": {
+      "exponent": -160,
+      "mantissa": "869948653954334108474805533317023003"
+    },
+    "physical_local_gate": "OPEN",
+    "source_accuracy_included": false
+  },
+  "input_hashes": {
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-fine-validation.json": "078ea4a0539cd66b772fbd311d8cc21e9e346aabf3eb0b4c7183107c82058cad"
+  },
+  "node_evaluation_error_upper": [
+    {
+      "exponent": -173,
+      "mantissa": "524343893005738767471647418943483525"
+    },
+    {
+      "exponent": -175,
+      "mantissa": "1269077558663262681399501434374224825"
+    },
+    {
+      "exponent": -172,
+      "mantissa": "254270011123494184287121130429718595"
+    },
+    {
+      "exponent": -170,
+      "mantissa": "32167805744962644052285003995408027"
+    }
+  ],
+  "numerical_control_pass": true,
+  "numerical_control_tolerance": 1e-11,
+  "reference_error_proof": {
+    "causal_margin_lower": {
+      "exponent": -123,
+      "mantissa": "992351775603172147905908361849208827"
+    },
+    "numerical_difference_at_spectator_upper": {
+      "exponent": -187,
+      "mantissa": "55962543336017270779236168277982899"
+    },
+    "physical_source_error_included": false,
+    "reference_pair_difference_retained": true,
+    "row_reference_error_upper": {
+      "exponent": -162,
+      "mantissa": "95065381033527539824430911174109927"
+    },
+    "stress_drift_subtracted": false,
+    "weighted_reference_F_error_upper": {
+      "exponent": -162,
+      "mantissa": "134442751169780646496260384631839087"
+    },
+    "weighted_reference_F_z_error_upper": {
+      "exponent": -166,
+      "mantissa": "1196458763716044430745294456244184405"
+    }
+  },
+  "reference_field_error": {
+    "N": {
+      "exponent": -158,
+      "mantissa": "210093157087818720011733315844366715"
+    },
+    "beta": {
+      "exponent": -156,
+      "mantissa": "9550993709693698056491125961449041"
+    },
+    "physical_local_gate": "OPEN",
+    "source_accuracy_included": false
+  },
+  "reproducer": "python scripts/derive_nsc_ks_fine_matter_accuracy.py --check",
+  "schema": "NSC-KS-FINE-MATTER-ACCURACY-v1",
+  "scope": {
+    "constraint_root_claimed": false,
+    "full_source_accuracy": null,
+    "metric_timestep": false,
+    "physical_local_gate": "OPEN",
+    "sampled_incoming_nodes": 21,
+    "source_energy_UV_bound": null,
+    "source_family": "14_1",
+    "stress_drift_subtracted": false
+  },
+  "source_hashes": {
+    "docs/nsc-ks-fine-matter-accuracy.md": "9112b3436efec9efd945c62b3d09c08be0843a37dcfaa5cc64e77f23c5016686",
+    "scripts/derive_nsc_ks_fine_matter_accuracy.py": "1608a4af6f8826d4c5265978f189c3cdf3cff59da8d10d77268356b5082ebc5f",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_ks_finite_matter_error.py": "a23c6537a35742cb4fccf481e34707664ac46e9ee2d6008325fc236ce1004633",
+    "src/recursive_horizons/nsc_ks_local_constraints.py": "ef09afe2ff77a76dba5fb1580c47efc82cd9e4c11f288144d64d98457232d56a",
+    "src/recursive_horizons/nsc_ks_matter_difference.py": "81b87ad8f903c9495b9a8c29825cfa9c1edb18f60677dab55939de43d537750c",
+    "src/recursive_horizons/nsc_ks_reference_error.py": "7a99488dd9487539935360d93a03bd6853b45b22efb6f2d91f99ed5690d9db97"
+  },
+  "source_matrix_operator_norm_upper": {
+    "exponent": -56,
+    "mantissa": "77384727988582195"
+  },
+  "status": "PASS: finite-source numerical matter error; physical gate OPEN",
+  "total_N_beta_error_upper": [
+    {
+      "exponent": -158,
+      "mantissa": "644409297157400264332041432054658855"
+    },
+    {
+      "exponent": -158,
+      "mantissa": "255701243824262408461090880216861707"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+schema_version = 1
+artifact_id = "FGC-1-SGB1-CTL1-SOL1-FRZ1"
+classification = "prospective_sol1_frozen_nominal_interval_inconclusive_no_health"
+project_version = "0.11.0"
+base_commit = "2be811b"
+owner_document = "docs/fgc-sgb1-ctl1-sol1-frz1.md"
+predecessor_artifact_id = "FGC-1-SGB1-CTL1-SOL1"
+pref1_artifact_id = "FGC-1-SGB1-CTL1-SOL1-PREF1"
+nominal_contract_sha256 = "5fc44f7023eb82632309c6c15120f2e62e5e6483911e18589579576b36654f4b"
+control_contract_sha256 = "661f06f9e6d6fa91d64f1767cf8b8b810c6ce17a4e9bd7ccf8a293b72ed946b9"
+policy = ["nominal_chi_amplitude=3","prefix_radius=10749/1024","support_maximum=14","continuation_steps=16","step_width=3587/16384","tube_radius=1/8","max_bisection_depth=0","max_rational_bit_length=16384"]
+
+[owner_hashes]
+"src/recursive_horizons/fgc/sgb1_ctl1_sol1.py" = "3bbeeac646f1a5762c7dbf56e6ef8e8532a25278bb9289e18beec980f28aa0b8"
+"docs/fgc-sgb1-ctl1-sol1.md" = "d56789d299e66d8fcdb939223c192a911c98067cc6d48e718a7a9cac3831c194"
+"tests/test_fgc_sgb1_ctl1_sol1.py" = "d262dcba4ed2f517397c713ccedf0b4b7111be826ba098bf1bdb20ccbb5fc30c"
+
+[claims]
+"sol1_instrument_contract_frozen" = true
+"nominal_policy_directly_executed" = true
+"nominal_interval_inconclusive_preserved" = true
+"policy_prefix_and_predecessors_bound" = true
+"small_amplitude_control_directly_executed" = true
+"licenses_separate_independent_pref1_binder" = true
+"policy_retuned" = false
+"nominal_family_replaced" = false
+"on_orbit_compactness_nonpass" = false
+"on_orbit_jacobian_nonpass" = false
+"scientific_nonpass" = false
+"SGBL_branch_owned_and_healthy" = false
+"sol1_pref1_implemented" = false
+"holdout_authorized" = false
+"execution_authorized" = false
+"trajectory_trapping_claimed" = false
+"actual_orbit_traps" = false
+"sgbl_model_rejected" = false
+"spacetime_ibvp_theorem" = false
+"mechanism_claimed" = false
+"physical_claimed" = false

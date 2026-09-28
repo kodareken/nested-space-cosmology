@@ -1,0 +1,1698 @@
+{
+  "artifact_id": "FGC-1-TDG9-TI2-PREF1",
+  "artifact_payload": {
+    "artifact_id": "FGC-1-TDG9-TI2-PREF1",
+    "authority": {
+      "blob_count": 6,
+      "blobs": [
+        {
+          "path": "configs/fgc/fgc-1-tdg9-ti2-frz1.toml",
+          "sha256": "8631ce20e22a56b00f4a9580df1ec2e2e98176b14c4761dc78e316cb4a771546"
+        },
+        {
+          "path": "results/fgc-1-tdg9-ti2-frz1.json",
+          "sha256": "2f2f2f844e9611b1023cee869e9f01ce33cfdef2df01cf488302eaaa28a1e3f5"
+        },
+        {
+          "path": "docs/fgc-tdg9-ti2-frz1.md",
+          "sha256": "91f0f9fbf410e6e896d12c5bf01d0c7105f6681114caded73ad21c0a1f668080"
+        },
+        {
+          "path": "scripts/run_fgc_tdg9_ti2.py",
+          "sha256": "488f05b65b71dd2617d1d77c2efa49496aa1a62698b37866e07bbb9c5792cd57"
+        },
+        {
+          "path": "src/recursive_horizons/fgc/evolution/tdg9_ti2_authority.py",
+          "sha256": "7715685100e56434a36edbec73ca684fe2fd88010af3eaeae1a59761884512b5"
+        },
+        {
+          "path": "scripts/reproduce_fgc_tdg9_ti2_frz1.py",
+          "sha256": "42bef89656720404668e3d4daab60295d7b06b9a85d79410bc197de41ece97c4"
+        }
+      ],
+      "parent_commit": "8a32636654dbd6479fcb91a88d4557a8090041d3"
+    },
+    "authority_binding": {
+      "all_committed_blob_hashes_verified": true,
+      "blob_count": 6,
+      "commit": "963f772c7fd5de676c37c3ee385a930701df6341",
+      "parent_commit": "8a32636654dbd6479fcb91a88d4557a8090041d3"
+    },
+    "claims": {
+      "GR0_calibration_completed": false,
+      "TI2_raw_result_independently_bound": true,
+      "all_ten_complete_failures_cleared": false,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "mechanism_result_earned": false,
+      "one_or_more_complete_failures_persist": true,
+      "physical_result_earned": false,
+      "physical_transition_claim_authorized": false,
+      "retained_EFT_evolution_authorized": false,
+      "same_state_tableau_sensitivity_measured": true,
+      "shadow_complete_failure_count": 6,
+      "shadow_complete_inconclusive_count": 0,
+      "shadow_complete_pass_count": 4,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false
+    },
+    "classification": "independently_bound_same_state_tableau_shadow_terminal",
+    "conclusion": {
+      "PDE_or_candidate_state_opened": false,
+      "four_of_ten_complete_failures_clear_under_shadow": true,
+      "independent_method_agreement": false,
+      "physics_inference_permitted": false,
+      "production_SSPRK3_comparator": false,
+      "same_state_tableau_sensitivity_measured": true,
+      "six_of_ten_complete_failures_persist_under_shadow": true,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false,
+      "two_persistent_failures_become_endpoint_state_owned": true
+    },
+    "independent_replay": {
+      "SSPRK3_stage_and_endpoint_record_count": 84,
+      "component_candidate_counts": {
+        "complete_C": 332438,
+        "slope_S": 397721,
+        "value_V": 245280
+      },
+      "component_level_count": 60,
+      "occurrence_count": 10,
+      "occurrences": [
+        {
+          "channel": "u:alpha",
+          "complete_failure_cleared": true,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "0c1d3830e224ea352507bbb2690c6b145d9fb3d14969c1154d8be9024fab04ec",
+              "independent_v2_evidence_sha256": "697884834ac2474afd6137f681b03e762ae221c1ccf89082a363b63344253a1f",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "8bbee819fef4919c78cb46459e9d9d9f456b4a7fc50e31c7f27a9763373e2fe8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "0c1d3830e224ea352507bbb2690c6b145d9fb3d14969c1154d8be9024fab04ec",
+              "independent_v2_evidence_sha256": "e3fd708616934a3825c1d014717d04bb127d661d8509b56e457611b758be5f84",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "23971e62b7e92175d665f575181cfcaeba262f3078f36a6c70eddedf1e329963",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 13294,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "b3c63f38801128b097b406fdec5f906785dbcf05778f03cd6a4c9c7d54a30714",
+              "independent_v2_evidence_sha256": "66e945991198d725ce085763efab6f23f304665383f9726f3de928c4f179e04b",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "bd666e555af36c7127384c44fe7a4bd2ab5de175b858d0ba164a820675ea783a",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "c51efa167b0dd06f988af294de275ef19f185122398b28c9f0e261568e0a7203"
+            },
+            {
+              "candidate_count": 27617,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "b3c63f38801128b097b406fdec5f906785dbcf05778f03cd6a4c9c7d54a30714",
+              "independent_v2_evidence_sha256": "731f38e1f444b6964202b24bd202281e31d0608e786f49cd519f298e5ffc47a5",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "eaa61d0630ba5f8e51427af0e7ff25f1316161a4c2f3e79494fc7f69b6ac0745",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1a89b9648b4742a1c22a9cc1d3cdf680c3de5d43131cc5b3a5a4e1a425b671cb"
+            },
+            {
+              "candidate_count": 11193,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "0c1d3830e224ea352507bbb2690c6b145d9fb3d14969c1154d8be9024fab04ec",
+              "independent_v2_evidence_sha256": "8e3922fa0e97d4d90ded6f9be75c96f1c772b0958ac30daf92df651ed2f9fe6b",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "755ab086b195a7fe6294cc84406731581c376645fb6fa3585b7c2818c47b3268",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "12cbd30deab8ac3e094745f78286fac9c91462a704991b1ead66fd9c1ba135b0"
+            },
+            {
+              "candidate_count": 23521,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "0c1d3830e224ea352507bbb2690c6b145d9fb3d14969c1154d8be9024fab04ec",
+              "independent_v2_evidence_sha256": "cd305de8e261cdd1ac26773d2f5d9f51f66288d1c18e289c6b8a5b40223ba866",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "cfa0f604bdae828232558de190e4dbf088d26164714a3a0333cfc29ab7f9ae2f",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "2e4579e4554f890aed477bfa6c6f47aa501f729c346a77141fa6b367233b4fdd"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "448a8d8872871226cab1d9699ab1d00e63b47a0d9a239591435a0f68cd059152",
+          "retry": 3,
+          "row_stream_sha256": "df97c303789a78d69d766a876b408ee94a5e84caa1e75daa6c36e954630c5b1c",
+          "shadow_complete_classification": "sufficient_contraction_pass",
+          "shadow_ownership_class": "complete_not_failure",
+          "shadow_ownership_sha256": "d23df262c24f1b0dd5ef5a8638d1cf40334eada4f4c8bf11d4f83c2449246c1c"
+        },
+        {
+          "channel": "u:R",
+          "complete_failure_cleared": true,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "a4659270d39ca00b4d4f0ddd34d39b0b27070d75f5a7a7194b1901367a686c3c",
+              "independent_v2_evidence_sha256": "b5ba419c64d052bf342f46db91623af8e995eb2df1e4cd5f2759be6321244735",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "44d2ace4ed698775595722dbf3bdab991ed5330e7ae2b57ab2b8bda76c5b72f5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 13,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "a4659270d39ca00b4d4f0ddd34d39b0b27070d75f5a7a7194b1901367a686c3c",
+              "independent_v2_evidence_sha256": "3372df303ad90767a2d968578b16e6692efd8146f503bc172ffe90b8e2b67a10",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "7de6038926c59c64ec8b71f587f8eea9e0654c35c1dc1c6d83d0efca5caed544",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 12895,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "2ff366cceba2fb69a0d6289cff922a75aa6ad6e3134e5a674841d69b56f0bbf8",
+              "independent_v2_evidence_sha256": "5f47def1133bb5a1d74fd4536433a5d2e8044e53185431749eb7cd510bc7c68d",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "6e3b3b4f0ccfd178823d4ecd5ee605d36ad3dfa9718ff6826b4a98d24fb167e9",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "d0611b753a31cde2e51e83462b82bd009d439bdd59ab15d898f07a00087a75c5"
+            },
+            {
+              "candidate_count": 26351,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "2ff366cceba2fb69a0d6289cff922a75aa6ad6e3134e5a674841d69b56f0bbf8",
+              "independent_v2_evidence_sha256": "b090d656f776e9a028d0002b826e1c84abf8da721c68aad17904abe50016eeb2",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "765e311e8d953de716f6321e0c0fcd6d1f0a6b0fa0667eae05a210d1674c0711",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "526eead65e754f160c11d971a07a34740c4687aee644049960aa8d7fe7721b96"
+            },
+            {
+              "candidate_count": 10712,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "9aae21dc30e0bb4d868dbec4487038c71cba5c3562908dd6d95dde398f206888",
+              "independent_v2_evidence_sha256": "8d1bc3f35e1d0036a8a8e733894fe913667478028568a7528a2c168db9f88c10",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "3ba84ffac0c42bf09edfa37c094aa42ceb5294927a261e85d53dfb82d0c443a7",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "4d242602c2e6a303ffac3577ce3d232411cbca4f74782762f8f1da05ca377339"
+            },
+            {
+              "candidate_count": 21928,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "9aae21dc30e0bb4d868dbec4487038c71cba5c3562908dd6d95dde398f206888",
+              "independent_v2_evidence_sha256": "b9aacd7b02c26a4eb2d9642bb28aac5850c69a568bdb5fa07af5e4292ad6b6d6",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "4be1fd98d8ff58621a1d84ddb3dddda1ff32e4692a28c3ed100cc3aefa5bcf8a",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "999d8b7da297b5a36a17bc60b11eff01787326d42be900896528ec6ee44ee1d4"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "adef1f1f1d60a567a021c27f677c30b07ebaf4f1e694b308ce206a3a60e1cf21",
+          "retry": 3,
+          "row_stream_sha256": "b4a48c7bf72e015f3f3d9a340ea550d608514fb8cd886562265158c33c0b3969",
+          "shadow_complete_classification": "sufficient_contraction_pass",
+          "shadow_ownership_class": "complete_not_failure",
+          "shadow_ownership_sha256": "19c75483f6401620961a2034b97159f00682618f6c52637159a679204ccd3345"
+        },
+        {
+          "channel": "u:alpha",
+          "complete_failure_cleared": false,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "90006131e1b504cd7efb625c931f6c83a48b25e663ec64c8a31ec86bf6fa43ed",
+              "independent_v2_evidence_sha256": "c6f6dd09673dc9002be579882a05ca2457b9a1bc97ca9b2bd5830c57f37ac3d9",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "74a48565f8d4a06ddffea4dde16d9304b88b120fc8d8d4d143dfa2dc24cbfb10",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "90006131e1b504cd7efb625c931f6c83a48b25e663ec64c8a31ec86bf6fa43ed",
+              "independent_v2_evidence_sha256": "4e0b745ef482b02fae5f9308954d35b2232f039e04564011bba165a1c8545269",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "dfd7825af3a39ff76aabec5ffe74b6f1e26070ab29969ad7f5c2959f9c379fd6",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 13280,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "5ba2fd1a9c0dce291859572b3983d1b2aca9435579a297d13a88be3aefc1a7b9",
+              "independent_v2_evidence_sha256": "e3454349bf48b7541b3e70624bad4f4311f276c5197c169a14eada918007c35c",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "a4315dfab579978deec49fe40c5b556127dafbbf52408de1c7334402c7115f86",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "287c3441e9d0965dfda6b52460d927c36a3f6993f24534d35acb0123b2d2421c"
+            },
+            {
+              "candidate_count": 27675,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "5ba2fd1a9c0dce291859572b3983d1b2aca9435579a297d13a88be3aefc1a7b9",
+              "independent_v2_evidence_sha256": "b348ee8bc2b8a3d1f9515e9a72afdc7decd09f394eaaf7909405b758ba5842e3",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "3310456f03d66e4b21346cdf4d0bbdeea29a5a5980e4ec67f66129338878efd8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "74a359d6217117dc66709620a2273fb4c4da26c7d22bee0b0e2e10e5f3828b8c"
+            },
+            {
+              "candidate_count": 11272,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "90006131e1b504cd7efb625c931f6c83a48b25e663ec64c8a31ec86bf6fa43ed",
+              "independent_v2_evidence_sha256": "ddca1004c6192dbe01d3ec09d3b381e55d188a5d3edfebf3ad7487f330c9927b",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "63d467bd663ef7f0491ff0814060bf3c5b96eb33d8085a470e92a167af71dc36",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "01aa2b38770a506729d225475ea0b34c8155b3409a0b96526796c5d9213aa4f7"
+            },
+            {
+              "candidate_count": 23469,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "90006131e1b504cd7efb625c931f6c83a48b25e663ec64c8a31ec86bf6fa43ed",
+              "independent_v2_evidence_sha256": "fc2acba42139f9736eb205737b9a6cd458fe7037306513f90e9cc9de69b77368",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "057e574265e12495ca6ba7f669bf09cb1190bce3edb36e35b85734806cc01ca6",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "66e5b632d66d49cd7aface97bfc70d2ed592648abd501ecf90a5ee842c05a0cf"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "1a5c573552e156e7d22763489ca0330467fb9b8829d95e3b3c54c82dbb9bbc62",
+          "retry": 4,
+          "row_stream_sha256": "2c41431f330dfe28af6fe78bfb80812aeccec45604a82be61c0d2a810f132e01",
+          "shadow_complete_classification": "sufficient_contraction_failure",
+          "shadow_ownership_class": "endpoint_state_owned_failure",
+          "shadow_ownership_sha256": "96e9232a8c06ee975155e8493192a30c42c76bfdd8b16ab66d25bc6b4ac344ba"
+        },
+        {
+          "channel": "u:lambda",
+          "complete_failure_cleared": false,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "b6ecd7763873374d40c8a547e1e64b97fccad172f3f7a6a5950bd535b5a99a18",
+              "independent_v2_evidence_sha256": "a17520159f8d7939f4c7520b1930f09bff9395e9d2af44250831d38d9381de64",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "425d95f4f9274ac749c18962495f923170522635eaf9083c1649ea7eb62ab41b",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 4,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "b6ecd7763873374d40c8a547e1e64b97fccad172f3f7a6a5950bd535b5a99a18",
+              "independent_v2_evidence_sha256": "f6fbe16ecf4f079552b592860f9151eb8bc3ab12b55cf654aa2bd45cc0612991",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "4a0036375102dc25075206de1e6d739510a3c11d8a6cd79a44d1d4b9cd8eb13d",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 12941,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "15938ca5105ec6e01604fe8adb98a0e759c7c6a0089e79c2f5bc05b1bdc84661",
+              "independent_v2_evidence_sha256": "f81bbd0b2257ecb5a7779d07570005bd4ec788f07fb73c8d4ec1d9103a27860c",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "9ba2631fea08a753a3d27e72b3a0fa6f121293034a560e002f5da0b8a68a762d",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "269c5799697bec6844199e50eac4d55525596160c337ac18d8936306b6e55d21"
+            },
+            {
+              "candidate_count": 26345,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "15938ca5105ec6e01604fe8adb98a0e759c7c6a0089e79c2f5bc05b1bdc84661",
+              "independent_v2_evidence_sha256": "ce66a72502ff81242aa723476dfe3234e26362b52571817b3cbda6e2c6516d91",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "c7df46950ad0115f652af58381b263939ffc958ec3962f7edcd8acc3f703454c",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "b729abe8ef16e4801ccf2757ca58b4e104182a2652de983029c4bafe4ee0faca"
+            },
+            {
+              "candidate_count": 10716,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "24bb4adb14517ef22709d8b2b5d30a3139a68456d07ad0d58419efc50e867171",
+              "independent_v2_evidence_sha256": "d1be8c157f518033b18ca67590cabab7e8b4d30a3591925d357f41a9bbfa2945",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "fd32dac82a602db047b6b1ef71bb7325794e199a534430558a9bae43024ec888",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "4c3d2579807ed10133f4f15b082c3da38bcad4dd3fec73c23d10832de7cb8805"
+            },
+            {
+              "candidate_count": 21964,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "24bb4adb14517ef22709d8b2b5d30a3139a68456d07ad0d58419efc50e867171",
+              "independent_v2_evidence_sha256": "0a20924ae1433cdcf9814fb927711c9737ca0dce2bd57eb09e61c954d89638d4",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "77c1370ce212342e5e2800f2a8f33581fee5bd8334ab8e21c17b6f940534a447",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "5c126c200d8a6fc8c4cfd902fd36f314f29c856c6f55dc883566f5e632503bb0"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "2a59b0496a15600dff4487c433952dd1cb02d582783b1ba69c76343c0707375a",
+          "retry": 4,
+          "row_stream_sha256": "421e6b45346dee2bbe085d4e8eb2bcf4480f8e6dea9ba4de6a0d8259428d2ace",
+          "shadow_complete_classification": "sufficient_contraction_failure",
+          "shadow_ownership_class": "endpoint_state_owned_failure",
+          "shadow_ownership_sha256": "8a70eba02691335813cb5adcf9636bb585d662ca6041be870530f1beb6dd9243"
+        },
+        {
+          "channel": "u:R",
+          "complete_failure_cleared": false,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "48c71a4f00693de1e97bd9e27c89370fc6b046d515668dec068a6296666158c5",
+              "independent_v2_evidence_sha256": "10a7f365639dccea7664ee4c8b9dd69148c264b01681011e4141ca999cb995c7",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "6486ddf264e490190f7ab180f7a6cca3f93ae75bdddf821262cdd8a3885048cf",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "48c71a4f00693de1e97bd9e27c89370fc6b046d515668dec068a6296666158c5",
+              "independent_v2_evidence_sha256": "5c8d8017490e6c0c9e439f8791d203ed4dcb598588db9e0737abc96999ba7fc2",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "0e153b7492619aa8c1b82a26880f136150296b6bc5818690cb7e3c8b700c0478",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 12837,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "2bb3725977c9843ae893fa56b5c9aa5547214a42067d2466f071a3a7b23bfea9",
+              "independent_v2_evidence_sha256": "34c67df6fc05545fc53f1832ce5ab51748c5f01626b8faa189e24f97469a36a7",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "86c9448a948c7c6db7bed3b59fca6c07beda1996e0599d3933153136cc321b3e",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "7bcb20f7cb8232583257b743c74646f0bf6b1bd1ffdf45c8b792c351981dd6f9"
+            },
+            {
+              "candidate_count": 26259,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "2bb3725977c9843ae893fa56b5c9aa5547214a42067d2466f071a3a7b23bfea9",
+              "independent_v2_evidence_sha256": "1734216642efe15c9eab9b05d3c561d4de6171c6e94b3b60f6544aeca771322d",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "7ec5540741fbc8e0ef146a7e051b16cb22770c357b6b02627d98ce9acb4225dc",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1620eea707547b97ee451356bd7e9954a32974c93ac1eda587abf5d87e604613"
+            },
+            {
+              "candidate_count": 10643,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "48c71a4f00693de1e97bd9e27c89370fc6b046d515668dec068a6296666158c5",
+              "independent_v2_evidence_sha256": "680aa6cfc5c4f7ae378fbafd3f57410060246888796f030313e3267ad1bfe27d",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "e30495100bc6619f731334dcb430d3a3db7b126e774982574ee1c79386275dff",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "0c8c8a814510dd8b6cebbfb0b35eb75fc5d8063f96fc872b022cc62f8644dec1"
+            },
+            {
+              "candidate_count": 21999,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "48c71a4f00693de1e97bd9e27c89370fc6b046d515668dec068a6296666158c5",
+              "independent_v2_evidence_sha256": "612f4654a26938271b00fe3a709f3b31ae5a78a9d223fadd3715f89605d77d2b",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "780b537c791c79acca928fdde375fa22a3d50574eb9bc36aa4b484a6ce8a614d",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "ae71d48bc856d959eac2a53b770c403dbb3289512419a51287fc5ef590325928"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "a243ff09c5877d86d2ad4cce3d0be3d6d9ce3fae12dfd565b44bc019cf4be0f8",
+          "retry": 4,
+          "row_stream_sha256": "4baa3a66d5a842bbd4f60d3d785abf6fc491bae3d19737946a9792466745acbb",
+          "shadow_complete_classification": "sufficient_contraction_failure",
+          "shadow_ownership_class": "both_components_independently_fail",
+          "shadow_ownership_sha256": "932b42273b3394018e396e914d72b0e419778bff4bd20f942f17ef68d571d19a"
+        },
+        {
+          "channel": "u:alpha",
+          "complete_failure_cleared": false,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 7,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "f22adb1df9430bb30522fb3858e544d9107924473ec8be16f8627feb6ae059e2",
+              "independent_v2_evidence_sha256": "50e56a44c433bd738b794ce90d3177b27cc8316eeab14797f640ab81093aa539",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "65ff49f5b52e67d5e9b7e98789f94a50948c022a1c13e2300813064da07eac75",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "f22adb1df9430bb30522fb3858e544d9107924473ec8be16f8627feb6ae059e2",
+              "independent_v2_evidence_sha256": "8914ea2c4cf380483b3f8ddf98fb59d50560df06297dbb79f865f697192e91b1",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "97a8f954a91a3c7b40ed9d80cc9301f0e81335ca659f01f9e5d5e922024da55e",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 13321,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "5cad43b91d3bdfe754acae1ba69ac763b3ea29bf621d15f1b0e68248c8e3b3f9",
+              "independent_v2_evidence_sha256": "08de8772ee2f042936ce3e3c62b7c0311198998a732cb17256ccc6345a974fa9",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "a8c331ce7a72e608cf8720a7c3d0ad01e8362a23a26fba9843faf2702962cd03",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "2db003520e13d75160f93a53a6c75acd1ea550eb72a13b6aefa83ddb91580b33"
+            },
+            {
+              "candidate_count": 27489,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "5cad43b91d3bdfe754acae1ba69ac763b3ea29bf621d15f1b0e68248c8e3b3f9",
+              "independent_v2_evidence_sha256": "6dca7d26c8960e96924dd7201b1a32c5f2abba32a0365832728d4624ebac1dc6",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "db1ff28472e35f207f670b9be40a2c45aec5b4e5d771c066e204bd28f001280a",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "4f3d7f6613e10a79ff25e451c3a4d6e13a5e8d5cfdbc0c5fb3867b3cd7dd5508"
+            },
+            {
+              "candidate_count": 11149,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "aea05eaea4c08c4c9e3b398c7809a624d4221a9c082cc3c5f81f9c8b38c18ea1",
+              "independent_v2_evidence_sha256": "bd7afc048c67a6ad814c6230beafd83d2804a3d64701dac1be5d41698dde720c",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "d13c1c3b8cd7b53ba53f1bca01559055ad5766038f413e3073d6eac9e06eb665",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1c3916dfbe3817baeee86e07b821cfd70ca5f71a0672f12a6ad65597f0eaba31"
+            },
+            {
+              "candidate_count": 23568,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "aea05eaea4c08c4c9e3b398c7809a624d4221a9c082cc3c5f81f9c8b38c18ea1",
+              "independent_v2_evidence_sha256": "32b65fa65695c230f883613e497d5ca0f3bf5635cd4ec089dc46e6d6d50e14c0",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "30faa13c5c429209e4c7c4eed14ec87ee42d2267b7f0eaf7e27fc46a628b7e32",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "fe265793f0731fa1b6eb1162fd7b9a73416d61d8e5768d75dfd79409e46ad90b"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "19baeb44d80acbc12f8f93634675f2671d9212cf30a191931a0d8ca522be3df8",
+          "retry": 5,
+          "row_stream_sha256": "ba800f5861a88c915f546a05a2d89f9f78a0d99f64bdbba0b9c8e1d06c8d3801",
+          "shadow_complete_classification": "sufficient_contraction_failure",
+          "shadow_ownership_class": "both_components_independently_fail",
+          "shadow_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9"
+        },
+        {
+          "channel": "u:v",
+          "complete_failure_cleared": true,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "98158ddf99c2d398e22a40f7de837a41d08b58c2209b70df3389129c2b12b28f",
+              "independent_v2_evidence_sha256": "b8aaa291b0c9a57f093fa7e0945327e378bec682e8154bd77131849bdb0992a2",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "2d9031c64645583d10e9354f9eb5a51a9b6fb023b8024a7d20ea5ca9078bad13",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "98158ddf99c2d398e22a40f7de837a41d08b58c2209b70df3389129c2b12b28f",
+              "independent_v2_evidence_sha256": "9bb1111e571b98c028f27479b9620a4d23d1443eedbc0c25ea8ed64c1294560e",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "039813ca04307387cab10e46eec5e93a4ef3f4c59664b5752d708fad044a7ce4",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 12792,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "667d575af37d7693e059a500ac6148fa2b2e161c931ffe17bf666b07bb380a31",
+              "independent_v2_evidence_sha256": "463bc5c5bf50ec60d30a1b6d5862d596f2daca9090625425851f70140c6314cd",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "8015cd7b8bd43c05f27d9cc175d21c1dce07d9ccaf3a082968aefc933bf51ac6",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "d103636ccdf6fc08b24f34d94137c4f1ed59eb458d84dbc6c20a9d7493c5d727"
+            },
+            {
+              "candidate_count": 26220,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "667d575af37d7693e059a500ac6148fa2b2e161c931ffe17bf666b07bb380a31",
+              "independent_v2_evidence_sha256": "0f41e51652a9dbb0dfbde806f41ec79186851d1f39075a57ff8a93fbcf565737",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "cd4577ecf7d3b168aed954e733db05a021837f0314bfafdc2cfc061a599de438",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "d1e87ac331b198532b7bbce8ad258899ffb6373aadf4444444fd17782dbfe8ce"
+            },
+            {
+              "candidate_count": 10231,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "fd7e219c6638d2a4f144df6520adef696e5445aefdebb141c295fc1cc48773e0",
+              "independent_v2_evidence_sha256": "3476a4b6fccb6ad0f0f20713ba8c1a9b81f66cb1a18b3a87ce140f6c3472788d",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "ee2e4ffc23e3db071d47ac4e7192a80c80c73c9277be8305a06273f7e3cb5aaf",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "e51743a737f5540de6e5c918d0f15cebb02c6a912e8f7b618561bb65ec261721"
+            },
+            {
+              "candidate_count": 21117,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "fd7e219c6638d2a4f144df6520adef696e5445aefdebb141c295fc1cc48773e0",
+              "independent_v2_evidence_sha256": "581f7fcf046a4a84e179403c95d78c458cf2037bfbb1ddfe05ea12074c468221",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "21217f205ef533108ee304e3874032842eb789bc3cfefbaa96e853288d5e9a11",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "d79a9336f76f2028c19c62211cc8e4ee89f06a5fe4d201aeff3616083345b5a5"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "00c6ed44f68213560f648877b23953bb148a3dbdf9e44827ce60bf8d731b38be",
+          "retry": 5,
+          "row_stream_sha256": "117ac7fae76f6a3ee703290c8e86c3c42087f62ecc4cacd27bd9902770cddf0a",
+          "shadow_complete_classification": "sufficient_contraction_pass",
+          "shadow_ownership_class": "complete_not_failure",
+          "shadow_ownership_sha256": "ec5547b53c028dfa658d0716f34ffb02e1ae89f924353bf0fc21146dd395945f"
+        },
+        {
+          "channel": "u:lambda",
+          "complete_failure_cleared": false,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "68327629a03f39ae08401d352911e5aa293f69e8d3cb034bf73970b8a0b63509",
+              "independent_v2_evidence_sha256": "1255c1f87bb796545a02b8dcf6caac8ea7f5418edceb4c430bf863968007040a",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "9e947ed68383be7aefe11da53d777c528e9e9eb1a2d06ddac2acea3d81acab40",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 5,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "68327629a03f39ae08401d352911e5aa293f69e8d3cb034bf73970b8a0b63509",
+              "independent_v2_evidence_sha256": "bd299d93071fdf5c9e896e7f017b104be9a858a21bb403c7fe9ae6e9e8ba8be4",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "d3fb74b8d6696485c2efc39001d57da1d54f0f38ec0ab70766548f0fc88caf8b",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 12841,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "f71566abdfebf087b60583b69de9c1aca4e8e84c7f5024e9367516cb8eb01636",
+              "independent_v2_evidence_sha256": "07dd8c32e065ac192766e68ca4b9c9f45582899dafe9eec5e9c4e15cbeb5747f",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "a96b1991c7aa8f87b854da11369b530443ba1660060a18d9b24b1ad5f717b6af",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "fcaa4bea65efc44ef42341b1da3daae8b69828c080d6a205596747ca711dc38a"
+            },
+            {
+              "candidate_count": 26246,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "f71566abdfebf087b60583b69de9c1aca4e8e84c7f5024e9367516cb8eb01636",
+              "independent_v2_evidence_sha256": "bd706843b4d40c39a855934fe89d25513e6ddc9c23e84726139aff1dbc7734d9",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "5b25961ba904ead5116494fb70cca8a4bdf871d4075a2ea4cce21674096488ff",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "192b3b86ceb7783cae0e3aa1f751b2ea6a8bf177dbc9f1cf961d03b3489283da"
+            },
+            {
+              "candidate_count": 10627,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "08a78a3cd7ed72b35a9b519d7751a9a3280754ac65c46267435236f4396df992",
+              "independent_v2_evidence_sha256": "58de164f69f259a10509561b884db8e006edebabf397e5fc9b98eb25cdc84635",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "d0f810239b74f1739923b16b3b9db6faee3f31c5395c5953e6b67c100ae12fcd",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "dbefc9b4a677a0538a29910d19478265f955eda0d25be2eb86f729783212d163"
+            },
+            {
+              "candidate_count": 21912,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "08a78a3cd7ed72b35a9b519d7751a9a3280754ac65c46267435236f4396df992",
+              "independent_v2_evidence_sha256": "89893895e0dfbf8b547e697a49699bad38ed76533f346e670a55c36914912db9",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "ebac9d50f7882f82f19df180f99a68c90fc39161c3b407973a1930b7c28dba68",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "52ab0aa57e02da4a13471c1f7f062ef1baf16ce51b97b63e8a888d6c89b91cdc"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "4d88c5bcb44f4bd3896952998250fb8056c76adc9ec4cae3c748862e9d1257ca",
+          "retry": 5,
+          "row_stream_sha256": "d5d041cb85eac9e2aaf04b8623732e4a92c21291b721110660a2eb033a056be0",
+          "shadow_complete_classification": "sufficient_contraction_failure",
+          "shadow_ownership_class": "both_components_independently_fail",
+          "shadow_ownership_sha256": "4fd0cf6e5af7c22d38f99105f1322a314fe517f46768cff154f373838fde2606"
+        },
+        {
+          "channel": "u:R",
+          "complete_failure_cleared": false,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "0ee5682cac7b3e28fea9d0b04820f0a62c5bf72fdc1ef52e59dc96c8bd75bed4",
+              "independent_v2_evidence_sha256": "a7ee7a1422c6a1484f9afa764a650a87508a2c1be9b3c6f4d52e628b98e2512d",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "c4c2d2327dd17eb0b3404bd4577b44ff738be7c1bf2272792493a558da35b041",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "0ee5682cac7b3e28fea9d0b04820f0a62c5bf72fdc1ef52e59dc96c8bd75bed4",
+              "independent_v2_evidence_sha256": "4eb68cf4ba86e139c7ca358b82298cb8177ad137a214e74d6c245bab76c6d2e0",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "d3bad6e7624ff681a3f9d9defc426a121eb4c2c22587d5397337b902ec6e71f7",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 12806,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "dd349dfdc0462c0c3fa96b5b4a3fbf1a6da4fabe9dbfb4d5b2f51e8b6b989f51",
+              "independent_v2_evidence_sha256": "75f83ff1ccf3622582e3e7c5573fe99ff490d0ca5f77f53b5f9871f21bec9716",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "f30a59942cb5ea2fd59f7d2710512902e086a010615c502b75663fcaf8325b04",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "47eab4c1e06db90ee839c000196bb154c6f55c1164cb96f5f5f8b4fa2fd65244"
+            },
+            {
+              "candidate_count": 26202,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "dd349dfdc0462c0c3fa96b5b4a3fbf1a6da4fabe9dbfb4d5b2f51e8b6b989f51",
+              "independent_v2_evidence_sha256": "64cf2de147e5d05bf1258d76dd09eb2bcdaaa5999036c843ec185885d0043b38",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "901d5f8e072d112559f2d4e0eae9fc556d1d13ae1cb3455377088db95cce79cc",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "acfb0512524145e49c7ea57d67ee9999de1a0ce6f3b2d93f51be07688178275b"
+            },
+            {
+              "candidate_count": 10695,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "0ee5682cac7b3e28fea9d0b04820f0a62c5bf72fdc1ef52e59dc96c8bd75bed4",
+              "independent_v2_evidence_sha256": "47d67e65f3e1f1b7cabe710a95bd6899dbad977d295363f142603674a69fa517",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "61382984f11c8e01de7ce95ee464a2e935411a0de522a97221801bb0824e8000",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "5ff687722079377146db0e73808794704eedc8ecb73a66dd9dce8bb52cd97223"
+            },
+            {
+              "candidate_count": 21943,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "0ee5682cac7b3e28fea9d0b04820f0a62c5bf72fdc1ef52e59dc96c8bd75bed4",
+              "independent_v2_evidence_sha256": "f3aded6feb08f43130c593d8900b098b12763c30d19ea5c339a84f3c6f4898a9",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "8c4d57065041f9e43def48b036ebe9b3505c65d128900f35e793a5788acc3d49",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "5780ced4bf29ea57aee5c16489d6d76f4886fb91ec6889386f640c89606fd99b"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "173abdd96f240dd8ee415f36ba84ed0e466ee541742812d6f9c50beb1c28a724",
+          "retry": 5,
+          "row_stream_sha256": "50873a1027ad9e49f3c62f10481d729184ffc0840b861888ac1ba026d089fdd0",
+          "shadow_complete_classification": "sufficient_contraction_failure",
+          "shadow_ownership_class": "both_components_independently_fail",
+          "shadow_ownership_sha256": "932b42273b3394018e396e914d72b0e419778bff4bd20f942f17ef68d571d19a"
+        },
+        {
+          "channel": "q:R",
+          "complete_failure_cleared": true,
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "b395d2e566c95e3f0b73860ead4402c3fbf988ddb6fa229319ad9913ea2db517",
+              "independent_v2_evidence_sha256": "908da541e25df5a9b594cceb810c99fc919a4ea514ea6ae61c6a5d9a94a24c3e",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "56ce11b5a9e49403c7de5754c2d693f56a7fecc302d6ea7c9289410a5c815302",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5"
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 4,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "b395d2e566c95e3f0b73860ead4402c3fbf988ddb6fa229319ad9913ea2db517",
+              "independent_v2_evidence_sha256": "a7222e94345cbf46a30e7a9e438deb5dd66851b548d446e876230d5de5ce677a",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "93ac1082dc972cbe2f3eeb3174a5356934971a67d4231df6fc3bd94d5b52f5b7",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96"
+            },
+            {
+              "candidate_count": 13119,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "b833ec891dab1c2c7f9db81d3d5bcdfe9dc4f6748c178db90ba4eb23bc95bb6d",
+              "independent_v2_evidence_sha256": "eb17cf033c675342f541371227f7edbc830c9f4650642c9063cd1ce93604fb79",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "4c20bd95e2720682f043c758e74f3ebee038ab73f2d40966229c21a7b04b7f9c",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "e958aee4bc3dfdcf46ee814bf16701faaaf652926f77a213b855bcb5d33db01e"
+            },
+            {
+              "candidate_count": 27191,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "b833ec891dab1c2c7f9db81d3d5bcdfe9dc4f6748c178db90ba4eb23bc95bb6d",
+              "independent_v2_evidence_sha256": "e1219033f567d81cccee657e849b63db9d810e9d6e339e6fa7a62df4fdb8ef4c",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "292ec510be9416fc9cc9561428adc603d481cede7a590e8e68b2e080b0459757",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "d9c001fb287d39e7e98347423265cc8cc1dabc591ee414c720687df56d0fe519"
+            },
+            {
+              "candidate_count": 10942,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "15c947dc46ce2837eea8edfb0019b9c0423f470ecc318e61f1b4c306f6a4ea1c",
+              "independent_v2_evidence_sha256": "a3051b9cfe1f27b6945aa8e5fd86495a4db292dace18ad496e7aab1c100be7b0",
+              "level": "D01",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "94d50bdb72776a6ef1d879944e949a7b837ef351d24c61e30245984942396f71",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "29ee3f407ff792ab12d5ea031705e05ab9c1b557e7fea755a8c671d61ee206fb"
+            },
+            {
+              "candidate_count": 22837,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_pass",
+              "contraction_evidence_sha256": "15c947dc46ce2837eea8edfb0019b9c0423f470ecc318e61f1b4c306f6a4ea1c",
+              "independent_v2_evidence_sha256": "78f1123c8441fcabec8187905467a98d69c5c2d02277cf26da0503140ca49009",
+              "level": "D12",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "910d77554058f36cc4aa34c009eb3893840e6339461c2802d2e218a3bdbacc3a",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "stationary_count_stream_sha256": "16028b0059aa57f892034d93a2f61d95c831c824694841d67cb8d5b06089dc41"
+            }
+          ],
+          "original_ownership_class": "both_components_independently_fail",
+          "raw_occurrence_sha256": "04472938311a5a6277e8b92f0a90cec9444a560ce5fc0b7de8461ed1e7eb0a1a",
+          "retry": 5,
+          "row_stream_sha256": "67750ddd4802ab83fb32c648e4bd48c9981e9496d2b8a4144bac6464f3ed9c5d",
+          "shadow_complete_classification": "sufficient_contraction_pass",
+          "shadow_ownership_class": "complete_not_failure",
+          "shadow_ownership_sha256": "ec5547b53c028dfa658d0716f34ffb02e1ae89f924353bf0fc21146dd395945f"
+        }
+      ],
+      "ownership_transition_matrix": {
+        "both_components_independently_fail->both_components_independently_fail": 4,
+        "both_components_independently_fail->complete_not_failure": 4,
+        "both_components_independently_fail->endpoint_state_owned_failure": 2
+      },
+      "primary_v2_route_agreement_count": 60,
+      "replay_receipts_sha256": "4276b1ba50d53d163edc8721960fd39e927d67aad51e24ee622542a1d748b95c",
+      "route_classification_counts": {
+        "nonunique_or_interval_inconclusive": 10,
+        "unique_maximum": 50
+      },
+      "shadow_complete_counts": {
+        "failure": 6,
+        "inconclusive": 0,
+        "pass": 4
+      },
+      "shadow_ownership_counts": {
+        "both_components_independently_fail": 4,
+        "complete_not_failure": 4,
+        "endpoint_state_owned_failure": 2
+      },
+      "shadow_proposal_count": 21,
+      "survivor_count": 93,
+      "total_VSC_candidate_count": 975439,
+      "v2_root_method_counts": {
+        "adaptive_nonsquare": 16,
+        "exact_endpoint": 60,
+        "exact_endpoint_deflation": 17
+      }
+    },
+    "raw": {
+      "authority_commit": "963f772c7fd5de676c37c3ee385a930701df6341",
+      "classification": "completed_one_or_more_complete_failures_persist_under_tableau_shadow",
+      "leaf_count": 2,
+      "manifest_sha256": "afa3d26975c116dfdd350e409c39462769f8b8b5e96e22902496a7704b43e883",
+      "namespace": "runs/fgc-2-sf1/tdg9-ti2/ssprk3-tableau-on-rk4-2049-retries-3-5",
+      "runner_id": "FGC-1-TDG9-TI2-RUN1",
+      "schema": "FGC-1-TDG9-TI2-raw-v1",
+      "terminal_sha256": "e5e8dd4e8d0dee3d32fefc170a5ed0e4f07c0c249200d74d4296ee9a3a601311"
+    },
+    "raw_binding": {
+      "canonical_duplicate_free_schema_verified": true,
+      "leaf_count": 2,
+      "manifest_sha256": "afa3d26975c116dfdd350e409c39462769f8b8b5e96e22902496a7704b43e883",
+      "raw_namespace_unchanged": true,
+      "terminal_sha256": "e5e8dd4e8d0dee3d32fefc170a5ed0e4f07c0c249200d74d4296ee9a3a601311"
+    },
+    "schema_version": 1,
+    "scope": {
+      "GR0_calibration_authorized": false,
+      "PDE_state_commit_authorized": false,
+      "TI2_runner_decision_code_imported": false,
+      "campaign_store_mutation_authorized": false,
+      "candidate_branches_authorized": false,
+      "common_event_authorized": false,
+      "independent_method_agreement": false,
+      "mechanism_result_authorized": false,
+      "one_time_live_raw_and_store_reconstruction": true,
+      "ordinary_verifier_raw_blind": true,
+      "ordinary_verifier_store_blind": true,
+      "physical_result_authorized": false,
+      "production_SSPRK3_comparator": false,
+      "raw_namespace_mutation_authorized": false,
+      "same_state_tableau_counterfactual_only": true,
+      "successor_remedy_selected": false,
+      "temporal_retry_admission_authorized": false
+    },
+    "selection": {
+      "accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "actual_spatial_operator": "inherited_RK4_2049_SBP4",
+      "experiment_label": "same_state_SSPRK3_tableau_counterfactual_on_RK4_2049_SBP4_operator",
+      "failed_occurrences": [
+        {
+          "channel": "u:alpha",
+          "retry": 3
+        },
+        {
+          "channel": "u:R",
+          "retry": 3
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 4
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 4
+        },
+        {
+          "channel": "u:R",
+          "retry": 4
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 5
+        },
+        {
+          "channel": "u:v",
+          "retry": 5
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 5
+        },
+        {
+          "channel": "u:R",
+          "retry": 5
+        },
+        {
+          "channel": "q:R",
+          "retry": 5
+        }
+      ],
+      "independent_method_agreement": false,
+      "member_key": "RK4-2049",
+      "owned_row_count": 2044,
+      "physical_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+      "point_count": 2049,
+      "production_SSPRK3_comparator": false,
+      "retries": [
+        3,
+        4,
+        5
+      ],
+      "tableau_runtime_selector": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+      "tableau_selector": "SSPRK3"
+    },
+    "store": {
+      "leaf_count": 115,
+      "path": "runs/fgc-2-sf1/tdg8-rcv3/calibration",
+      "snapshot_algorithm": "TDG9-LOC1-STORE-SNAPSHOT-v1",
+      "snapshot_sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+    },
+    "store_binding": {
+      "binder_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "binder_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "store_unchanged": true
+    },
+    "target_protocol": "FGC-2-SF1-PROTO18",
+    "work_budget": {
+      "SSPRK3_stage_and_endpoint_record_count": 84,
+      "aggregate_candidate_ceiling": 1471680,
+      "base_cubic_count": 122640,
+      "component_cubic_count": 367920,
+      "family_candidate_ceiling": 490560,
+      "primary_refinement_depth": 160,
+      "route_count": 60,
+      "shadow_proposal_count": 21,
+      "v2_global_proof_bit_ceiling": 9216
+    }
+  }
+}

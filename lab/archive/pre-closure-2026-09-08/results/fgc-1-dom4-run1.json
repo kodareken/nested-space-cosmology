@@ -1,0 +1,261 @@
+{
+  "artifact_id": "FGC-1-DOM4-RUN1",
+  "artifact_payload": {
+    "FGCQR_target_branch_only": true,
+    "all_protocol_cases_contained": true,
+    "branch_continuity_quantified": true,
+    "classical_scope_only": true,
+    "nonzero_parameter_volume": true,
+    "quantitative_evidence": {
+      "domain_definition_sha256": "fc27f0f6617e6739807af17fca6219da5d9064ea1a3a5a782778532cb6f5164e",
+      "epistemic_boundary": {
+        "FGCQR_holdout_outcome_inspected": false,
+        "local_open_state_neighborhoods_are_not_a_global_run_tube": true,
+        "multidirectional_health_is_deferred_to_HYP2": true,
+        "parameter_container_is_not_an_all_case_initial_data_certificate": true,
+        "time_evolution_performed": false,
+        "trajectory_containment_is_deferred_to_HLT1": true
+      },
+      "parameter_container": {
+        "all_PROTO3_candidate_and_holdout_coordinates_contained": true,
+        "chi_amplitude": [
+          "2",
+          "5"
+        ],
+        "chi_half_width": [
+          "7/4",
+          "9/4"
+        ],
+        "dimensionless_coordinate_volume": "9/4",
+        "membership_is_not_static_case_admission": true,
+        "phi_seed_factor": [
+          "1/2",
+          "2"
+        ],
+        "physical_phi_amplitude_coordinate_volume": "9/524288"
+      },
+      "seed_branch_continuation": {
+        "records": [
+          {
+            "acceleration_infinity": 0.07847886058975624,
+            "accelerations": [
+              2.208221461846536e-05,
+              5.203018583718838e-05,
+              0.0011679759151144162,
+              -0.0007233065632330891,
+              -0.0,
+              -0.07847886058975624
+            ],
+            "branch_continuity_preserved": true,
+            "branch_displacement_infinity": 0.0,
+            "coordinate_radius": 12.0,
+            "initial_finite_mass": true,
+            "initial_peak_compactness": 0.10907885188974487,
+            "initial_regular_center": true,
+            "initial_untrapped": true,
+            "iterations": 0,
+            "kinetic_condition_infinity": 1122.9467929778052,
+            "monotonic_residual_history": true,
+            "phi_seed_factor": "0",
+            "residual_infinity": 3.7729920739208164e-17,
+            "spatial_second_derivative_estimators": {
+              "k_rr": 1.212431474548149e-08,
+              "lambda_rr": 7.363633108825596e-08
+            }
+          },
+          {
+            "acceleration_infinity": 0.07847886052359677,
+            "accelerations": [
+              2.2082233728034468e-05,
+              5.203018749882122e-05,
+              0.001167975924446504,
+              -0.0007233064878216802,
+              -7.225448614005919e-05,
+              -0.07847886052359677
+            ],
+            "branch_continuity_preserved": true,
+            "branch_displacement_infinity": 7.225448614005919e-05,
+            "coordinate_radius": 12.0,
+            "initial_finite_mass": true,
+            "initial_peak_compactness": 0.10907885330304734,
+            "initial_regular_center": true,
+            "initial_untrapped": true,
+            "iterations": 1,
+            "kinetic_condition_infinity": 1122.9517272403195,
+            "monotonic_residual_history": true,
+            "phi_seed_factor": "1",
+            "residual_infinity": 2.6933971049197725e-17,
+            "spatial_second_derivative_estimators": {
+              "k_rr": 1.2124314743150455e-08,
+              "lambda_rr": 7.363633143520065e-08
+            }
+          },
+          {
+            "acceleration_infinity": 0.07847886032511886,
+            "accelerations": [
+              2.2082291056741605e-05,
+              5.2030192483715966e-05,
+              0.001167975952438058,
+              -0.0007233062615874737,
+              -0.00014450897226500294,
+              -0.07847886032511886
+            ],
+            "branch_continuity_preserved": true,
+            "branch_displacement_infinity": 7.225448612494376e-05,
+            "coordinate_radius": 12.0,
+            "initial_finite_mass": true,
+            "initial_peak_compactness": 0.10907885754295099,
+            "initial_regular_center": true,
+            "initial_untrapped": true,
+            "iterations": 1,
+            "kinetic_condition_infinity": 1122.9566595598792,
+            "monotonic_residual_history": true,
+            "phi_seed_factor": "2",
+            "residual_infinity": 4.1646482350058244e-17,
+            "spatial_second_derivative_estimators": {
+              "k_rr": 1.2124314742012043e-08,
+              "lambda_rr": 7.3636330468526e-08
+            }
+          }
+        ],
+        "smooth_REF1_coefficients_plus_invertible_acceleration_Jacobian_give_local_open_neighborhoods": true,
+        "strict_nonsingular_branch_margins": true
+      },
+      "spacetime_container": {
+        "final_time": "32",
+        "length_unit_L0": "4",
+        "measurement_radius_maximum": "24",
+        "minimum_boundary_causal_buffer": "16",
+        "radial_domain_maximum": "128",
+        "radial_domain_minimum": "0"
+      },
+      "stress_initial_slice": {
+        "chi_amplitude": "5",
+        "chi_half_width": "9/4",
+        "finite_mass": true,
+        "inside_protocol_compactness_window": true,
+        "no_initial_trapped_sphere": true,
+        "outer_mass": 4.1625327055865835,
+        "peak_compactness": 0.5923895358493777,
+        "peak_radius": 14.021484375,
+        "phi_seed_factor": "2",
+        "regular_center": true,
+        "support_records": [
+          {
+            "acceleration_infinity": 0.11408137129834105,
+            "accelerations": [
+              0.0007447868776765338,
+              0.0020681865180693683,
+              0.007477799205038856,
+              -0.003920991910767162,
+              -0.00014258457324799125,
+              -0.11408137129834105
+            ],
+            "branch_continuity_preserved": true,
+            "branch_displacement_infinity": 0.0,
+            "coordinate_radius": 12.0,
+            "iterations": 0,
+            "kinetic_condition_infinity": 810.0935483104936,
+            "monotonic_residual_history": true,
+            "residual_infinity": 4.520700764360777e-16,
+            "spatial_second_derivative_estimators": {
+              "k_rr": 5.8164743901942956e-08,
+              "lambda_rr": 6.335633777609928e-07
+            },
+            "support_point": "profile_center"
+          },
+          {
+            "acceleration_infinity": 0.6980902958349394,
+            "accelerations": [
+              0.0044237205990644525,
+              0.009170462194281298,
+              -0.46134642307479046,
+              -0.018436024952008134,
+              -0.0,
+              0.6980902958349394
+            ],
+            "branch_continuity_preserved": true,
+            "branch_displacement_infinity": 0.0,
+            "coordinate_radius": 14.021484375,
+            "iterations": 0,
+            "kinetic_condition_infinity": 900.4496014986574,
+            "monotonic_residual_history": true,
+            "residual_infinity": 8.380593107970798e-15,
+            "spatial_second_derivative_estimators": {
+              "k_rr": 4.243708196583623e-05,
+              "lambda_rr": 0.001604145926576317
+            },
+            "support_point": "peak_compactness"
+          }
+        ]
+      },
+      "strict_source_and_branch_margins_passed": true
+    },
+    "run_envelope_semantic_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee"
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "classical_spherical_run_domain_certificate",
+  "derivation_document": "docs/fgc-dom4-run1.md",
+  "derivation_document_sha256": "9eace120af8028e2e9486b11e848f33d79b5c6582195b590562e5f1422c1bd91",
+  "gate_status": {
+    "nonzero_classical_spherical_run_envelope_passed": true
+  },
+  "generated_by": "scripts/reproduce_fgc_dom4_run1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_dom4_run1.py": "35aed2607e4f40ec630856121c17a96761cb90b1471ff742d13d8108a2e9ea54",
+    "src/recursive_horizons/fgc/evolution/floating_jet.py": "1f5780b20b5ff9e4728c07173a848eec9f55736d2dbdcda368cfbd4b3acbcf0c",
+    "src/recursive_horizons/fgc/evolution/initial_state_bridge.py": "c67cfaee65232091baddf23901d0540f52fa6929fd6a60e1a6f7a54f826f9107",
+    "src/recursive_horizons/fgc/evolution/nonlinear_source.py": "b20d02e9ac78499d2b09ee91388addcb094cdeadcae2284cab747fdcac6ffadd",
+    "src/recursive_horizons/fgc/initial_data_family.py": "161d12675e2945055c7a3474db1fe7c72efb159021b558180786d5d1fb127345"
+  },
+  "nonclaims": {
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-con4-phy1.toml": "1b2d8441a96c392c0a0948c9a111e7bfc0fc3df3a31fc63f177768bb29b80255",
+    "configs/fgc/fgc-1-ctr1-reg1.toml": "1f512304a9cf432576c9b7afd8b24670ecfd6cb6a793172f2e4e162319318bbe",
+    "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml": "cd7516d0a913c811569cf8f08ac08d8b47f63c409ce9188b0770638777f743c6",
+    "configs/fgc/fgc-1-id1-fam1.toml": "fe61161c651af606476f498c4c0a1b99a4034d7a5dd0c3ac9d7f581ba7992a3c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "configs/fgc/fgc-1-src1-nl1.toml": "0048eb844d32bf9d32a4cfddbda242ea99043f2ddfe5ec72c5a8fd551fc6195d",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-con4-phy1.json": "ab1964af57666e51491026ac279a119b061f17cc55f1ec8ffbc31a45c97ea47b",
+    "results/fgc-1-ctr1-reg1.json": "a60f27ed3a31d6135079881ef06b093b0fb0240b4b3ae0be9e6ca3e91a35736b",
+    "results/fgc-1-hyp1-dom3-uhyp1.json": "71c04e5e19ca5fc39b6fc4e3bee36b852965a559b3e031148d32ae230f30f6b0",
+    "results/fgc-1-id1-fam1.json": "b410741dfc7f58041df0eab45d956687947157747a69a5f5247792607139f4a8",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8",
+    "results/fgc-1-src1-nl1.json": "e3605b74b40fefde9f62fdc529a454a8f4609479522fe029864bb088db9b2d3d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "action_artifact_id": "FGC-1-ACT1",
+    "action_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "action_result_sha256": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_artifact_id": "FGC-2-SF1-PROTO3",
+    "protocol_config_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+    "protocol_semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "target_branch": "FGC-QR",
+    "variation_artifact_id": "FGC-1-VAR1",
+    "variation_config_sha256": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "variation_result_sha256": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4"
+  }
+}

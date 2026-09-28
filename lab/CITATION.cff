@@ -1,0 +1,229 @@
+cff-version: 1.2.0
+message: "If you use this research programme or its calculations, cite this repository and the primary sources for the established physics you rely on."
+title: "Recursive Horizons: A Thermodynamic Research Programme for Black-Hole-to-Cosmology Transitions"
+type: software
+version: 0.11.0
+date-released: 2026-08-25
+authors:
+  - given-names: "Douglas"
+    family-names: "Ek"
+  - name: "ChatGPT 5.6 Sol"
+license: MIT
+keywords:
+  - black holes
+  - cosmology
+  - horizon thermodynamics
+  - finite gradient closure
+  - nested gradient spectrum
+  - Einstein-Cartan gravity
+  - falsifiability
+preferred-citation:
+  type: article
+  title: "Recursive Horizons: A Thermodynamic Research Programme for Black-Hole-to-Cosmology Transitions"
+  authors:
+    - given-names: "Douglas"
+      family-names: "Ek"
+    - name: "ChatGPT 5.6 Sol"
+  year: 2026
+  notes: >-
+    Conjectural, not peer reviewed. Version 0.11.0 organizes the programme
+    around Finite Gradient Closure: finite realized domains and transitions
+    with lower and upper closure, while continuation may be unbounded. Nested
+    Gradient Spectrum is its H/Q spectral and complexity specialization, using
+    QFT modes, EFT coarse-graining, and thermodynamics without claiming a
+    dark-sector identity, universal hertz, automatic golden ratio, or
+    inevitable observers. NGS-0 executes only the declared finite-band,
+    recurrence-eigenvalue, and independent-trial probability controls. DSF-3
+    is a documentation-level finite-domain causal-calibration hypothesis, not
+    a varying-local-c result. The project uses a
+    no-unaccountable-explanatory-variable rule: dark-sector ontology remains
+    open, but every replacement must recover the evidence, change a
+    predeclared operational prediction, and expose a falsifier; antimatter is
+    directly evidenced and treated separately. Stable asymmetry is a
+    conditional stability and finite-throughput target, not an axiom. The
+    spatial scale-selection controls are not a gravity theory. A corrected
+    tetrad audit shows that the minimal ECD axial contact stress is metric
+    proportional with zero metric-null contraction, retracting the earlier
+    fixed-current NEC claim. FGC-1-SRC1-NL1 closes the same-evaluator
+    nonlinear-source premise; CON4 closes conditional boundary-free
+    constraints; CTR1/ID1 close regular-centre finite-mass data; DOM4/HYP2
+    close a nonzero classical run domain plus sufficient all-spatial-covector
+    principal-health gate; BND2 closes the scoped boundary row by causal
+    isolation; HLT1 closes the transactional classical-health monitor row on
+    synthetic controls; and NUM1 independently validates both numerical
+    methods and the affine-measurement route on outcome-blind controls.
+    FGC-1-RUN1-SYM1 preserves a PROTO3-era 7/8 structural authorization
+    result, while CAL0-PREF2 proves that its last manifest cannot honestly be
+    resolved under PROTO3: the declared compact pulse fails the literal
+    last-bin spectral rule on every grid and calibration lacks a branch-
+    applicability map. No FGC-QR or SGB-L outcome was opened. A premise-only
+    FGC-2-SF1-PROTO4 successor is now frozen by PRO4-FRZ1 against immutable
+    PROTO3/CAL0 Git blobs, with branch-specific stop ownership and convergence-
+    budgeted spectral/constraint admission. FGC-1-HLT2-MON2 now implements
+    those successor formulas on static and manufactured controls without
+    reading a trajectory. FGC-1-ID2-ALL1 then constructs all seven GR-0 inputs
+    and all 35 amplitude/case FGC-QR slices with both methods on three grids;
+    its 252 distinct complete-state hashes give 31/35 FGC-QR static passes and
+    freeze [5/2, 3] as the only fresh-calibration candidates. These are input-
+    contract findings, not mechanism outcomes. The work still exposes an
+    unowned SGB-L source/health route and a missing constraint-to-Raychaudhuri
+    stability map. Fresh GR-0 calibration, PRO4-HLD1, and holdout execution
+    remain false. A nonlinear constraint-
+    preserving IBVP, retained-EFT completion, global transition, spectral
+    transfer, flux and entropy closure, child topology, and independent
+    observational confirmation remain open. The later
+    FGC-1-CAL10-PREF15 binder records that the PROTO13 GR-0 continuation
+    terminated normally at its first 64-sample temporal-spectrum gate while
+    both method-owned spatial/constraint admissions still passed. It derives
+    no cause, eligible case, candidate outcome, or physical obstruction; only
+    a separately frozen temporal-gate diagnosis may follow. FGC-1-TDG1-FRZ1
+    now freezes that diagnosis before reading the terminal histories and proves
+    by synthetic counterexample that normalized raw temporal tail fractions
+    cancel amplitude convergence, so they are not a general spatial-
+    convergence observable for nonzero histories. It preserves the historical
+    stop and authorizes only a read-only diagnosis, not a replacement gate or
+    trajectory. FGC-1-TDG1-PREF16 now binds that actual-history diagnosis:
+    the normalized-ratio defect survives, while 544 of 1728 individual
+    records fail, including 395 above the declared amplitude floor, and the
+    unnormalized comparison remains incomplete. Only prospective TDG2
+    absolute-tail discriminator design may begin. FGC-1-TDG2-FRZ1 now freezes
+    that discriminator before reading an actual history: unnormalized
+    top-band power, independent Decimal/binary64 arithmetic evidence, a
+    conditional interpolation enclosure, and seven no-history controls define
+    five descriptive classes. FGC-1-TDG2-PREF17 now binds all 576 actual
+    history ladders and 1152 field/derivative classifications. The result is
+    mixed: some finest failures contract, a small subset is conditionally
+    nonzero, and the unresolved majority is dominated by the conditional
+    common-grid interpolation enclosure rather than binary64 DFT arithmetic.
+    FGC-1-TDG3-FRZ1 now prospectively freezes two native-grid, no-resampling
+    estimators with independent Decimal arithmetic audits and seven synthetic
+    controls. FGC-1-TDG3-PREF18 now binds all actual histories. Every one of
+    the 92 TDG2 zero-contracting finest classifications survives, none of nine
+    tentative nonzero classifications is confirmed, and 104 of 203 enclosure-
+    dominated classifications remain unresolved or estimator-dependent.
+    Common-grid interpolation is not the sole owner; neither sampled surrogate
+    nor their spread is a continuum enclosure. FGC-1-TDG4-FRZ1 now freezes the
+    required sampling-identifiability theorem and exact no-history controls:
+    the kernel/factorization criterion, smooth between-sample witnesses, an
+    independent 64-node alias family, and the sufficient-premise ledger. The
+    theorem result was then independently bound by FGC-1-TDG4-PREF19 against
+    immutable FRZ1, PROTO4, PROTO13, and CAL10 evidence. Finite samples alone
+    do not bound the declared continuum powers on the unrestricted smooth
+    class. The old rule is retired only as continuum admission, retained as a
+    sampled diagnostic, and CAL10 remains unreclassified. FGC-1-TDG5-FRZ1 now
+    freezes one permitted replacement architecture: a complete-state cubic-
+    Hermite endpoint value/slope map plus same-grid one-step/two-half-step
+    refinement. Exact finite-dimensional and method-order controls pass.
+    FGC-1-TDG5-PREF20 independently rederives the map, both half restrictions,
+    the continuous cubic-extremum candidate theorem, the conditional
+    Richardson factors, and the immutable engine's fresh endpoint-RHS shape.
+    FGC-1-TDG5-IMP1 then implements and synthetically validates both atomic
+    method-owned coarse/fine pairs and the continuous outward binary64
+    candidate/Bernstein envelope. FGC-1-TDG6-FRZ1 then freezes the three-level
+    one-full/two-half/four-quarter admission, exact outward three-halves order
+    test, complete 18-channel finest-pair debit, and bounded temporal retry
+    semantics without an absolute or outcome-scaled tolerance.
+    FGC-1-TDG6-PREF21 independently derives the quarter maps, interval theorem,
+    channel/debit reduction, and source-shape feasibility and authorizes only
+    compositor implementation and synthetic qualification.
+    FGC-1-TDG6-IMP2 now implements and synthetically qualifies that production-
+    shaped compositor for both methods, including independent tracer shadows,
+    fine-only atomic state/tracer/debit commit, durable temporal retries,
+    checkpoint restoration, failure ownership, and mutation controls.
+    FGC-1-PRO14-FRZ1 now binds the exact prospective successor to immutable
+    commit 27badf9 and all six fixed t=23/16 restart payloads. The old
+    64-sample quantity is nonveto-only; TDG6 instead governs every accepted
+    post-restart macro step. Its debit begins at restart and proves no earlier
+    temporal, global PDE, or Raychaudhuri error bound. FGC-1-HLT12-MON12 now
+    binds that successor to the exact restart payloads, pinned runtime, CAL11
+    plan, temporal-aware member, checkpoint contract, and dedicated runner.
+    Its bounded fine-only-commit, retry-ownership, rollback, checkpoint-first
+    idempotent terminal publication,
+    namespace, and nonpromotion controls pass, authorizing exactly one
+    recoverable fresh GR-0 continuation without advancing a production event.
+    Calibration completion, eligible GR-0, candidate branches, and physical
+    results remain closed. FGC-1-CAL11-PREF22 then binds the PROTO14 terminal
+    invalid-runtime result: event 23 remains complete, event 24 aborts at the
+    pre-shadow validator, and every member is restored to zero post-restart
+    accepted macro steps, temporal retries, and TDG6 debit. This is an
+    instrument outcome, not a constraint, spatial, temporal-admission, or
+    scientific GR-0 obstruction. FGC-1-TDG7-FRZ1 now freezes the prospective
+    stage-safe exact-binary64 shared-lattice diagnosis: `G=8Q` makes the actual
+    RK4/SSPRK3 `c={0,1/2,1}` stage times and endpoints exact, while the old
+    independently rounded historical boundaries remain distinct from the new
+    `8Q` selection. It derives the arithmetic root cause while leaving the
+    runtime unrepaired. FGC-1-TDG7-PREF23 now independently binds that theorem,
+    including the historical source-stage contract, and authorizes only a later
+    runtime-repair implementation plus synthetic qualification. FGC-1-TDG7-IMP3
+    now implements and synthetically qualifies that repair on deterministic
+    controls, without reading campaign history or creating a namespace. It
+    exposes the stateless discarded-retry limitation; only prospective
+    replacement-protocol freeze design with a durable cursor is authorized.
+    PROTO15/HLT13 then establish only a synthetic durable-cursor instrument.
+    PROTO16 freezes the missing successful common-event lifecycle and the
+    externally anchored GenesisSpec contract. FGC-1-PRO16-PREF24 then makes a
+    static completeness diagnosis: the receipt cycle is removed but the
+    remaining successor cursor/high-water and external generation-zero
+    construction rules are not frozen to the deterministic standard. PROTO17
+    subsequently freezes the pure construction of the six-member generation
+    zero and common-event successor mappings, but implements no side-effectful
+    runtime. FGC-1-PRO17-PREF25 independently reconstructs that abstract
+    construction without importing the PROTO17 implementation and reproduces
+    its three synthetic hashes. FGC-1-HLT14-MON14 now completes the authorized
+    synthetic-only production-shaped authority, raw-bundle, runtime, and
+    common-event qualification in `72=4+6+18+44` unique cases. It separately
+    reproduces those sealed hashes and fully rehashes temporary real-NPZ
+    inputs, but raw hashes are input-dependent and exception faults are not
+    power-loss proof. Actual raw-byte validation, launch authority,
+    historical-payload replay, and namespace/foreign-store rejection remain
+    required and uncompleted production duties. Only a separate
+    production-prelaunch successor design is authorized; no namespace,
+    pretrajectory operation, calibration, eligibility, candidate, or physical
+    result is authorized.
+    EFT1 stays at 3/12, and neither candidate evolution nor a physical
+    transition is authorized.
+    FGC-1-PRO18-FRZ1 then freezes only the real two-source-container/fresh-
+    output production-prelaunch chain: FGC-1-PRO18-PREF26, immutable
+    FGC-1-PRO18-AUTH1, FGC-1-HLT15-GEN1, and FGC-1-PRO18-PREF27. It opens no
+    raw archive or history and creates no namespace. At that freeze boundary,
+    all four HLT14 production duties were required and uncompleted; only PREF26
+    implementation/design was authorized, with no pretrajectory, calibration,
+    candidate, EFT, transition, or physical result.
+    FGC-1-PRO18-PREF26 now completes the bounded read-only binding of the two
+    actual PROTO12/RSP2 checkpoint containers, their byte-identical external
+    and embedded legacy journals, and all six selected restart identities. It
+    discharges only actual raw-byte/hash recomputation and semantic historical-
+    payload replay. External Git/blob/live-import authority remains for AUTH1,
+    while namespace reuse and foreign-store rejection remain for PREF27.
+    PREF26 is not launch authority, constructs no final GenesisSpec, accesses
+    no future output root, advances no trajectory, and authorizes no
+    calibration, candidate, EFT, transition, or physical claim.
+    FGC-1-PRO18-AUTH1 now constructs the canonical commit-independent,
+    calibration-only authority payload. It binds the compact PREF26 evidence,
+    exact complete GR-0/amplitude-3 GenesisSpec, production source closure
+    including the standard-library-only HLT15 bootstrap/authority module,
+    exact evolution environment, raw-source config, and deterministic fresh
+    campaign ID. At that historical boundary it was deliberately not
+    self-authenticating and advanced no state. FGC-1-HLT15-GEN1 has now used
+    immutable AUTH1 commit 2e3373a... to validate the external Git/blob/live-
+    byte tuple, numerical environment, imports, and actual six-state reimport
+    in one detached invocation before the first output-root observation and
+    atomic generation-zero installation. The resulting checkpoint contains
+    six FRESH_READY members and zero accepted macro-steps, retries, or debits.
+    FGC-1-PRO18-PREF27 independently authenticates
+    that exact eight-leaf store and records byte-identical reuse,
+    self-consistent foreign-store, and arriving-root no-clobber behavior on
+    disposable same-filesystem roots. All four declared HLT14 production
+    duties are complete, but no state
+    advance, calibration, GR-0 eligibility, candidate, EFT, transition, or
+    physical result is authorized.
+    PRO19 subsequently preserved five finite accepted RK4-2049 macro-steps,
+    recovered and independently bound a metadata-only generation-eight retry
+    cursor, and authenticated one committed SID3 resume image. A guarded live
+    preflight passed, but the bounded resume appended only generation nine's
+    generic HLT16AttemptError invalid-terminal record and terminal lock.
+    FGC-1-PRO19-PREF28 proves that all accepted member maps are unchanged and
+    no new state or payload exists. The persisted record exposes no exception
+    message or root-cause diagnosis. Event 23, GR-0 calibration, SGB-L,
+    FGC-QR, DEF1, retained-EFT, transition, and every physical claim remain
+    incomplete.

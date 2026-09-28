@@ -1,0 +1,109 @@
+{
+  "accountable_author": "Douglas Ek",
+  "domain": {
+    "PG_samples": 61,
+    "local_interval": "S(1)+[.12,.18]",
+    "physical_duration": null,
+    "points": 7601,
+    "rho": [
+      -2.0,
+      1.8
+    ],
+    "spacing": 0.0005
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-boundary-buffer.json": "89d0aab320d4396dddc5f82ec235640c887299b5e24e68e80ff6b88cb6084663",
+    "results/development/nsc-retarded-response-resolution.json": "2ee55dd8682dad78e7d578ffc91e949fbf88c3d1a0558a165b289c54f48a934f",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_incoming_boundary_buffer.py": "c9f4862fbdae151bfd1d8a004c931739ed3ebf387a2ddc95dc5db4328ecfa813",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "measurements": {
+    "flux_algebra": 4.440892098500626e-16,
+    "full_computed_drift": [
+      1.8134826973437157e-11,
+      1.833656664007588e-11
+    ],
+    "local_node_count": 21,
+    "local_time_nodes": [
+      0.12,
+      0.123,
+      0.126,
+      0.129,
+      0.132,
+      0.135,
+      0.138,
+      0.14100000000000001,
+      0.14400000000000002,
+      0.147,
+      0.15,
+      0.153,
+      0.156,
+      0.159,
+      0.162,
+      0.165,
+      0.168,
+      0.171,
+      0.17400000000000002,
+      0.177,
+      0.18
+    ],
+    "maximum_incoming_PDE_derivative_drift": 1.0232351173995206e-10,
+    "maximum_incoming_field_drift": 2.3474894981399316e-12,
+    "new_sampling_common_node_residual": 0.0,
+    "phase_residual": 1.421508924903756e-14,
+    "prefix_bytes_equal": true,
+    "reference_indicator": "PASS",
+    "sampled_local_drift": [
+      5.557776461273534e-12,
+      7.775868490766946e-12
+    ]
+  },
+  "payload": {
+    "bytes": 3365007,
+    "path": "results/development/artifacts/nsc-local-reference-accuracy.npz",
+    "sha256": "e2a73c45f594cdf9a5b0d6664be91ea73f2f8620bcf67ac84731d2e0d51b94f5"
+  },
+  "reproducer": "python3 scripts/derive_nsc_local_reference_accuracy.py --check",
+  "reused_artifacts": [
+    {
+      "bytes": 4485091,
+      "path": "results/development/artifacts/nsc-incoming-boundary-buffer.npz",
+      "sha256": "577785ba9e65a074691f608c12af16387b402bd2275df9df95d0b3e38b08563d"
+    },
+    {
+      "bytes": 20796029,
+      "path": "results/development/artifacts/nsc-retarded-response-resolution.npz",
+      "sha256": "8d3a79e6c1dc5ada4bbe17e9c3450ad6576a25212b04bbe0cd6dcf76c3b997cf"
+    }
+  ],
+  "runtime": {
+    "CPU_cap": 90.0,
+    "CPU_seconds": 23.302973,
+    "cap_reached": false,
+    "field_runs_attempted": 1,
+    "field_runs_completed": 1,
+    "wall_seconds": 23.315805334001197
+  },
+  "schema": "NSC-LOCAL-REFERENCE-ACCURACY-v1",
+  "scope": {
+    "between_sample_error_bound": null,
+    "columns_normalized": false,
+    "continuum_field_error_bound": null,
+    "frozen_C0_imposed": false,
+    "full_source_error_bound": null,
+    "metric_timestep": false,
+    "nonzero_history_tested": false,
+    "physical_gate": "OPEN",
+    "source_law_changed": false,
+    "stress_drift_subtracted": false
+  },
+  "source_hashes": {
+    "docs/nsc-local-reference-accuracy.md": "d95efce5b4f566ceb4a5a1b477b833a83a45d244447339e3108af021ee6c18dd",
+    "scripts/derive_nsc_local_reference_accuracy.py": "024fbea65eceb4c06b4535e6c01a0fbcece90b1b8f708e738283b4d28c7bb437"
+  },
+  "status": "PASS: sampled four-energy reference control; physical local gate OPEN",
+  "tolerance": 3e-11
+}

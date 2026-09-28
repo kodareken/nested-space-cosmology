@@ -1,0 +1,94 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG9-LOC2-PREF2"
+classification = "independently_bound_scale_invariant_localization_terminal"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg9-loc2-pref2.md"
+
+[raw]
+namespace = "runs/fgc-2-sf1/tdg9-loc2/rcv3-retries-3-5"
+schema = "FGC-1-TDG9-LOC2-raw-v1"
+classification = "bounded_exact_localization_completed"
+runner_id = "FGC-1-TDG9-LOC2-RUN1"
+authority_commit = "1cd78ee20100ae4ae6495161146c6f2fcf7de1bf"
+manifest_sha256 = "8189b030180444fdeaa8c7df7238550316ae0613efb7f1f8a1466d49b327858f"
+terminal_sha256 = "571bb2979bd73229fbefe07d5a2d137a8e68b68661e94b7dce67f63ac8f04232"
+leaf_count = 2
+
+[authority]
+parent_commit = "14e26c43edbc88003d68cbcf24681bb090d98534"
+blob_count = 6
+blobs = [
+  { path = "configs/fgc/fgc-1-tdg9-loc2-frz1.toml", sha256 = "b22b54584d07894d7fe70badce012c8fc7f9d75d50f16fd05ad97d507c15451d" },
+  { path = "results/fgc-1-tdg9-loc2-frz1.json", sha256 = "62e15c731b53054d32a6bcb42dcbf95c0b879a1ce559edacbf1571e69fe22718" },
+  { path = "docs/fgc-tdg9-loc2-frz1.md", sha256 = "5ea8ed1ccf9c410de24ccb78091f8c53a118999e93ac1899f2805e7bf58d4a08" },
+  { path = "src/recursive_horizons/fgc/evolution/tdg9_loc2_authority.py", sha256 = "2da55fb0126091aaad501c1b7d63759dc62e47615bd72ea898f65099a9bcbdf7" },
+  { path = "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent_v2.py", sha256 = "750c38bb6bad4b37d946f66708055f3dc0835c807244e9c25c6e87e4e87e0511" },
+  { path = "scripts/run_fgc_tdg9_loc2.py", sha256 = "e3ad84f818fe33afce707bcbec1e21a99e0892b3d924536549e0ead740351122" },
+]
+
+[store]
+path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+leaf_count = 115
+snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+snapshot_algorithm = "TDG9-LOC1-STORE-SNAPSHOT-v1"
+
+[selection]
+method = "RK4"
+member_key = "RK4-2049"
+point_count = 2049
+owned_row_count = 2044
+grid_spacing_hex = "0x1.0000000000000p-4"
+outer_radius_hex = "0x1.0000000000000p+7"
+retries = [3, 4, 5]
+failed_occurrences = [
+  { retry = 3, channel = "u:alpha" },
+  { retry = 3, channel = "u:R" },
+  { retry = 4, channel = "u:alpha" },
+  { retry = 4, channel = "u:lambda" },
+  { retry = 4, channel = "u:R" },
+  { retry = 5, channel = "u:alpha" },
+  { retry = 5, channel = "u:v" },
+  { retry = 5, channel = "u:lambda" },
+  { retry = 5, channel = "u:R" },
+  { retry = 5, channel = "q:R" },
+]
+
+[work_budget]
+base_cubic_count = 122640
+component_cubic_count = 367920
+family_candidate_ceiling = 490560
+aggregate_candidate_ceiling = 1471680
+primary_refinement_depth = 160
+v2_initial_refinement_bits = 192
+v2_global_proof_bit_ceiling = 9216
+
+[scope]
+one_time_live_raw_and_store_reconstruction = true
+ordinary_verifier_raw_blind = true
+ordinary_verifier_store_blind = true
+LOC2_runner_decision_code_imported = false
+campaign_store_mutation_authorized = false
+raw_namespace_mutation_authorized = false
+successor_remedy_selected = false
+fourth_width_authorized = false
+stage2_source_decomposition_authorized = false
+SSPRK3_comparator_authorized = false
+PDE_state_commit_authorized = false
+continuation_authorized = false
+candidate_branches_authorized = false
+mechanism_result_authorized = false
+physical_result_authorized = false
+
+[claims]
+LOC2_raw_result_independently_bound = true
+LOC2_exact_localization_completed = true
+primary_v2_route_agreement_completed = true
+all_ten_occurrences_both_components_independently_fail = true
+temporal_instrument_remedy_selected = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

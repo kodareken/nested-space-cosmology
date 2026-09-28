@@ -1,0 +1,464 @@
+{
+  "artifact_id": "FGC-1-TDG5-FRZ1",
+  "artifact_payload": {
+    "alternatives": {
+      "additional_finite_sampling_route": "forbidden_by_TDG4",
+      "endpoint_only_dense_output_route": "rejected_by_exact_interior_alias_control",
+      "full_semidiscrete_Gronwall_route": "deferred_because_a_global_infinity_norm_bound_scales_with_inverse_grid_spacing_and_is_expected_to_be_non_discriminating_without_a_new_energy_estimate",
+      "independent_continuum_derivative_bound_route": "deferred_because_the_current_GR0_health_contract_does_not_bound_every_required_state_derivative_between_steps",
+      "no_new_runtime_dependency": true,
+      "selected_route_is_purpose_built_on_existing_RK_stage_and_transaction_records": true
+    },
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "actual_terminal_history_arrays_consumed": false,
+      "campaign_checkpoint_loaded": false,
+      "candidate_branch_opened": false,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "new_trajectory_authorized": false,
+      "physical_question_answered": false,
+      "replacement_design_frozen": true,
+      "replacement_temporal_admission_defined": false,
+      "runtime_refinement_pair_implementation_authorized": false,
+      "runtime_refinement_pair_implemented": false,
+      "runtime_thresholds_frozen": false,
+      "stage_complete_refinement_theorem_completed": false,
+      "state_advanced": false
+    },
+    "exact_no_history_preflight": {
+      "FGCQR_trajectory_read": false,
+      "GR0_case_eligible": false,
+      "Hermite_data_map": {
+        "condition_number_infinity_upper_bound": "54",
+        "data_map_is_injective": true,
+        "data_order": [
+          "left_value",
+          "left_scaled_slope",
+          "right_value",
+          "right_scaled_slope"
+        ],
+        "determinant": "1",
+        "inverse_infinity_norm": "9",
+        "inverse_matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "-3",
+            "-2",
+            "3",
+            "-1"
+          ],
+          [
+            "2",
+            "1",
+            "-2",
+            "1"
+          ]
+        ],
+        "left_inverse_exact": true,
+        "no_between_sample_kernel_inside_declared_class": true,
+        "physical_endpoint_slopes_are_scaled_by_interval_width": true,
+        "polynomial_class": "P3_on_each_accepted_normalized_time_interval",
+        "right_inverse_exact": true,
+        "sampling_infinity_norm": "6",
+        "sampling_matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        ]
+      },
+      "PROTO14_frozen": false,
+      "SGBL_trajectory_read": false,
+      "actual_terminal_histories_consumed": false,
+      "all_exact_controls_pass": true,
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "endpoint_only_alias_control": {
+        "adversarial_midpoint_value": "1",
+        "adversarial_polynomial_coefficients": [
+          "0",
+          "4",
+          "-4",
+          "0"
+        ],
+        "endpoint_only_sampling_misses_nonzero_interior": true,
+        "endpoint_slopes_differ": true,
+        "endpoint_values_equal": true,
+        "stage_complete_Hermite_data_detects_it": true,
+        "zero_polynomial_coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "method_controls": {
+        "RK4": {
+          "order": {
+            "all_required_order_conditions_pass": true,
+            "conditions": {
+              "order_1_b_e": {
+                "observed": "1",
+                "passed": true,
+                "required": "1"
+              },
+              "order_2_b_c": {
+                "observed": "1/2",
+                "passed": true,
+                "required": "1/2"
+              },
+              "order_3_b_A_c": {
+                "observed": "1/6",
+                "passed": true,
+                "required": "1/6"
+              },
+              "order_3_b_c2": {
+                "observed": "1/3",
+                "passed": true,
+                "required": "1/3"
+              },
+              "order_4_b_A_A_c": {
+                "observed": "1/24",
+                "passed": true,
+                "required": "1/24"
+              },
+              "order_4_b_A_c2": {
+                "observed": "1/12",
+                "passed": true,
+                "required": "1/12"
+              },
+              "order_4_b_C_A_c": {
+                "observed": "1/8",
+                "passed": true,
+                "required": "1/8"
+              },
+              "order_4_b_c3": {
+                "observed": "1/4",
+                "passed": true,
+                "required": "1/4"
+              }
+            },
+            "formal_order": 4,
+            "method": "RK4",
+            "stage_count": 4
+          },
+          "step_doubling": {
+            "Richardson_denominator": 15,
+            "Richardson_factor_is_not_a_rigorous_PDE_error_bound": true,
+            "coarse_vs_two_half_difference": "600193/2473901162496",
+            "contraction_is_stricter_than_two_to_minus_formal_order": true,
+            "exact_contraction_ratio": "4759809/153649408",
+            "fine_path_error_factor": "1/15",
+            "fine_two_half_step_path_is_the_only_committable_path": true,
+            "formal_order": 4,
+            "half_width_difference": "1586603/211106232532992",
+            "method": "RK4",
+            "probe_equation": "y_prime_equals_y_with_y0_equals_1",
+            "probe_step": "1/8",
+            "same_initial_state_and_same_spatial_operator_required": true
+          }
+        },
+        "SSPRK3": {
+          "order": {
+            "all_required_order_conditions_pass": true,
+            "conditions": {
+              "order_1_b_e": {
+                "observed": "1",
+                "passed": true,
+                "required": "1"
+              },
+              "order_2_b_c": {
+                "observed": "1/2",
+                "passed": true,
+                "required": "1/2"
+              },
+              "order_3_b_A_c": {
+                "observed": "1/6",
+                "passed": true,
+                "required": "1/6"
+              },
+              "order_3_b_c2": {
+                "observed": "1/3",
+                "passed": true,
+                "required": "1/3"
+              }
+            },
+            "formal_order": 3,
+            "method": "SSPRK3",
+            "stage_count": 3
+          },
+          "step_doubling": {
+            "Richardson_denominator": 7,
+            "Richardson_factor_is_not_a_rigorous_PDE_error_bound": true,
+            "coarse_vs_two_half_difference": "5473/603979776",
+            "contraction_is_stricter_than_two_to_minus_formal_order": true,
+            "exact_contraction_ratio": "1669/26944",
+            "fine_path_error_factor": "1/7",
+            "fine_two_half_step_path_is_the_only_committable_path": true,
+            "formal_order": 3,
+            "half_width_difference": "21697/38654705664",
+            "method": "SSPRK3",
+            "probe_equation": "y_prime_equals_y_with_y0_equals_1",
+            "probe_step": "1/8",
+            "same_initial_state_and_same_spatial_operator_required": true
+          }
+        }
+      },
+      "owned_row_policy": "dimensionless_u_p_q_on_noncentre_rows_excluding_four_projector_owned_outer_rows",
+      "physical_or_candidate_question_answered": false,
+      "replacement_temporal_admission_defined": false,
+      "required_runtime_layers": [
+        "one_full_step_and_two_half_steps_share_one_initial_state_and_spatial_operator",
+        "continuous_extension_uses_complete_state_endpoint_values_and_fresh_endpoint_RHS_slopes",
+        "every_internal_stage_and_candidate_endpoint_retains_unchanged_source_health_CFL_boundary_and_transaction_guards",
+        "coarse_and_fine_proposals_each_pass_unchanged_source_health_CFL_boundary_and_transaction_guards",
+        "only_the_fine_two_half_step_path_may_commit_atomically",
+        "continuous_coarse_fine_difference_is_maximized_on_each_half_interval",
+        "method_order_owned_Richardson_debit_is_recorded_without_becoming_a_rigorous_PDE_bound",
+        "both_methods_and_method_owned_spatial_ladders_remain_independent_requirements",
+        "projector_owned_rows_are_covered_by_existing_exact_projector_and_constraint_gates"
+      ],
+      "runtime_refinement_pair_implemented": false,
+      "runtime_thresholds_frozen": false,
+      "selected_sufficient_route": "finite_dimensional_stage_complete_continuous_extension_with_stable_injective_data_map",
+      "state_advanced": false
+    },
+    "frozen_replacement_design": {
+      "Hermite_continuous_extension": {
+        "binary64_extremum_evaluation_requires_an_outward_roundoff_debit": true,
+        "condition_number_infinity_upper_bound": "54",
+        "continuous_coarse_fine_difference_is_piecewise_cubic": true,
+        "data_map_is_injective": true,
+        "data_order": [
+          "left_value",
+          "left_scaled_slope",
+          "right_value",
+          "right_scaled_slope"
+        ],
+        "declared_interval_class": "P3_on_each_accepted_normalized_time_interval",
+        "endpoint_physical_slopes_are_multiplied_by_interval_width": true,
+        "inverse_infinity_norm": "9",
+        "maximum_requires_endpoints_and_every_real_derivative_root_in_each_half_interval": true,
+        "sampling_infinity_norm": "6",
+        "sampling_matrix_determinant": "1"
+      },
+      "actual_PDE_continuum_solution_identified": false,
+      "error_semantics": {
+        "Richardson_factor_is_a_numerical_error_debit_not_a_rigorous_PDE_error_bound": true,
+        "complete_DEF1_error_ledger_must_keep_temporal_spatial_source_constraint_affine_null_interpolation_boundary_and_roundoff_terms_separate": true,
+        "continuous_extension_removes_hidden_between_record_freedom_only_inside_the_declared_numerical_class": true,
+        "debit_may_not_be_normalized_by_the_observed_trapped_or_Raychaudhuri_margin": true,
+        "debit_thresholds_must_be_frozen_from_independent_controls_before_any_successor_trajectory": true,
+        "same_grid_difference_is_a_temporal_refinement_measure_not_a_spatial_measure": true,
+        "successful_TDG5_design_does_not_reclassify_CAL10_or_make_GR0_eligible": true
+      },
+      "monitored_state": "dimensionless_u_p_q",
+      "normal_flow_tracer_spectrum_remains_public_diagnostic": true,
+      "normal_flow_tracer_spectrum_required_for_admission": false,
+      "owned_rows": "noncentre_rows_excluding_four_projector_owned_outer_rows",
+      "replaced_object": "PROTO4_inherited_64_point_temporal_spectrum_as_continuum_admission",
+      "retained_object": "PROTO4_inherited_temporal_spectrum_as_sampled_diagnostic_only",
+      "same_grid_step_refinement": {
+        "RK4_Richardson_denominator": 15,
+        "RK4_formal_order": 4,
+        "SSPRK3_Richardson_denominator": 7,
+        "SSPRK3_formal_order": 3,
+        "coarse_path": "one_full_step_of_width_Delta_t",
+        "coarse_path_is_evidence_only": true,
+        "cross_method_agreement_remains_required": true,
+        "each_method_owned_spatial_ladder_remains_required": true,
+        "each_method_owns_its_own_refinement_debit": true,
+        "fine_path": "two_consecutive_half_steps_of_width_Delta_t_over_2",
+        "fine_path_is_the_only_committable_path": true,
+        "formal_order_and_scalar_contraction_controls_do_not_prove_trajectory_asymptotics": true
+      },
+      "same_initial_state_required": true,
+      "same_spatial_operator_required": true,
+      "selected_sufficient_route": "finite_dimensional_stage_complete_continuous_extension_with_stable_injective_data_map",
+      "time_coordinate": "fixed_modified_harmonic_coordinate_time",
+      "transaction_ownership": {
+        "both_paths_must_pass_unchanged_source_health_CFL_boundary_and_scale_premises": true,
+        "coarse_and_fine_paths_must_start_from_one_bitwise_identical_accepted_state": true,
+        "coarse_and_fine_paths_must_use_one_source_projector_and_spatial_operator": true,
+        "fine_two_half_steps_commit_atomically_or_neither_commits": true,
+        "projector_owned_rows_remain_under_existing_exact_projector_and_constraint_gates": true,
+        "rejected_proposals_preserve_complete_typed_evidence": true,
+        "shadow_path_may_not_mutate_runtime_monitor_causal_tracer_or_retry_state": true
+      }
+    },
+    "immutable_lineage": {
+      "actual_terminal_history_arrays_consumed": false,
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "checkpoint_commit": "b866d24fd253ca56db509a2e011323394ae4147b",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "source_compact_result_read": true,
+      "source_compact_result_verified": true,
+      "state_advanced": false,
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-cal10-pref15.toml": "3661ba8cb6b933ab47daf8897c577b4631544605175dbe15d0c084542cf6c9eb",
+        "configs/fgc/fgc-1-tdg4-pref19.toml": "22727f144dd1666699b8c4a2d0d1b58d7a482b4611020b71fe7a021cfa39cf98",
+        "configs/fgc/fgc-2-sf1-protocol-v13.toml": "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692",
+        "docs/fgc-tdg4-pref19.md": "cafdea686218647a06286f0a8f324ea40b3fd97ab7434509bdeb4af19299ce0a",
+        "results/fgc-1-cal10-pref15.json": "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18",
+        "results/fgc-1-tdg4-pref19.json": "0db51678fa0fb32280eb3a352fa8bfacb613de19e0c14bdd99d9e2ed08e9e11b",
+        "scripts/reproduce_fgc_tdg4_pref19.py": "ae660d7ad166a833b4f63d58abdb0ad827ae7ae0657b8ea6f922bd7a2a38c31f",
+        "scripts/run_fgc_gr0_calibration_v13.py": "bdc31c8ab4205ff86a134e9744aaaf8d085344aa1ba6a19cebb3fdbad94286d7",
+        "src/recursive_horizons/fgc/evolution/numerical_engine.py": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf",
+        "src/recursive_horizons/fgc/evolution/tdg4_sampling_identifiability_theorem.py": "e703a3db4a7a09dee68a9f74cdddc18f3183e1f890aff67f196367a26e229b42"
+      }
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "Hermite_condition_mutation_rejected": true,
+      "Hermite_determinant_mutation_rejected": true,
+      "PROTO14_promotion_rejected": true,
+      "Richardson_denominator_mutation_rejected": true,
+      "candidate_promotion_rejected": true,
+      "inexact_Hermite_data_mutation_rejected": true,
+      "invalid_Hermite_interval_mutation_rejected": true,
+      "invalid_method_mutation_rejected": true,
+      "margin_normalization_mutation_rejected": true,
+      "method_order_mutation_rejected": true,
+      "owned_state_mutation_rejected": true,
+      "physical_claim_promotion_rejected": true,
+      "raw_history_scope_promotion_rejected": true,
+      "replacement_admission_promotion_rejected": true,
+      "runtime_implementation_authorization_promotion_rejected": true,
+      "selected_route_mutation_rejected": true,
+      "source_hash_mutation_rejected": true,
+      "theorem_completion_promotion_rejected": true,
+      "transaction_ownership_mutation_rejected": true
+    },
+    "proof_contract": {
+      "Hermite_inverse_condition_upper_bound_must_equal_54": true,
+      "Hermite_sampling_and_inverse_matrices_must_multiply_to_identity_exactly": true,
+      "RK4_order_conditions_through_order_four_must_pass_exactly": true,
+      "SSPRK3_order_conditions_through_order_three_must_pass_exactly": true,
+      "TDG4_theorem_and_narrow_retirement_must_remain_complete": true,
+      "canonical_hash_bound_result_required": true,
+      "endpoint_only_alias_must_be_detected_by_endpoint_slopes": true,
+      "lineage_method_map_transaction_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "no_raw_history_checkpoint_or_candidate_state_may_be_loaded": true,
+      "same_grid_step_doubling_scalar_controls_must_contract_exactly": true,
+      "source_commit_and_every_bound_blob_must_match": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG4_sampling_identifiability_theorem_completed": true,
+      "TDG5_exact_no_history_controls_pass": true,
+      "TDG5_replacement_design_frozen": true,
+      "TDG5_stage_complete_refinement_theorem_completed": false,
+      "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+      "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": true,
+      "runtime_refinement_pair_implementation_authorized": false,
+      "runtime_refinement_pair_implemented": false,
+      "runtime_thresholds_frozen": false
+    }
+  },
+  "classification": "prospective_TDG5_stage_complete_temporal_refinement_design_freeze",
+  "derivation_document": "docs/fgc-tdg5-frz1.md",
+  "derivation_document_sha256": "f549406b381e1be70d04ea741c7c86d9c0e09140fdc104f876697bae4389c795",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG4_sampling_identifiability_theorem_completed": true,
+    "TDG5_exact_no_history_controls_pass": true,
+    "TDG5_replacement_design_frozen": true,
+    "TDG5_stage_complete_refinement_theorem_completed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+    "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+    "dark_sector_mechanism_derived": false,
+    "finite_samples_alone_proved_insufficient_for_continuum_top_band_bound": true,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "replacement_temporal_gate_design_authorized": true,
+    "retained_EFT_evolution_authorized": false,
+    "runtime_refinement_pair_implementation_authorized": false,
+    "runtime_refinement_pair_implemented": false,
+    "runtime_thresholds_frozen": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg5_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg5_frz1.py": "c976d553d9bbf8c730f0fe0c7f5eb2ef0f5fcbb28b59b10e48b7e5ebb1a2d303",
+    "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement.py": "56cf8607adf6aa769eeade329feadf1dd0fc963002de7cc970961b1aa9ba6d55"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG5_stage_complete_refinement_theorem_completed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "runtime_refinement_pair_implementation_authorized": false,
+    "runtime_refinement_pair_implemented": false,
+    "runtime_thresholds_frozen": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg5-frz1.toml": "90f2d548a0cc9062615e69b16c175ad9ecf2db6d49d97ecf35697b9173a50878"
+  }
+}

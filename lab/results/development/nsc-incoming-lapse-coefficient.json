@@ -1,0 +1,360 @@
+{
+  "accountable_author": "Douglas Ek",
+  "coefficient": {
+    "input_interpretation": {
+      "C_Weyl": "the unchanged declared binary ledger coefficient, not an error bound for an unprovided exact coefficient",
+      "geometry_pi_harmonic": "hulls include exact owner expressions and stored floating evaluations",
+      "mass_angular": "hulls include existing definitions and stored labels"
+    },
+    "local_coefficient_intervals": {
+      "compact/weyl_bulk": [
+        -0.04000315091071185,
+        -0.04000315091071182
+      ],
+      "light/WZ_Weyl": [
+        -0.005200430967970123,
+        -0.005200430967970119
+      ],
+      "light/WZ_boxR": [
+        -0.0021578407805520443,
+        -0.002157840780552042
+      ],
+      "light/bar_radial_R2_squared": [
+        0.003484606791205523,
+        0.0034846067912055246
+      ]
+    },
+    "local_sum_interval": [
+      -0.04387681586802849,
+      -0.04387681586802846
+    ],
+    "per_group_reference": [
+      {
+        "coefficient_interval": [
+          0.009003163161571055,
+          0.009003163161571067
+        ],
+        "group": 1
+      },
+      {
+        "coefficient_interval": [
+          0.0050017573119839195,
+          0.0050017573119839264
+        ],
+        "group": 2
+      },
+      {
+        "coefficient_interval": [
+          0.0035726837942742285,
+          0.003572683794274233
+        ],
+        "group": 3
+      },
+      {
+        "coefficient_interval": [
+          0.0028134884879909543,
+          0.0028134884879909582
+        ],
+        "group": 4
+      },
+      {
+        "coefficient_interval": [
+          0.0023341534122591624,
+          0.0023341534122591654
+        ],
+        "group": 5
+      },
+      {
+        "coefficient_interval": [
+          0.0020007029247935677,
+          0.0020007029247935703
+        ],
+        "group": 6
+      },
+      {
+        "coefficient_interval": [
+          0.0017538629535528028,
+          0.001753862953552805
+        ],
+        "group": 7
+      },
+      {
+        "coefficient_interval": [
+          0.001563049159994975,
+          0.001563049159994977
+        ],
+        "group": 8
+      },
+      {
+        "coefficient_interval": [
+          0.0014107520623544386,
+          0.0014107520623544405
+        ],
+        "group": 9
+      },
+      {
+        "coefficient_interval": [
+          0.0012861661659387222,
+          0.0012861661659387237
+        ],
+        "group": 10
+      },
+      {
+        "coefficient_interval": [
+          0.0011822335464689265,
+          0.0011822335464689278
+        ],
+        "group": 11
+      },
+      {
+        "coefficient_interval": [
+          0.0010941344119964824,
+          0.0010941344119964839
+        ],
+        "group": 12
+      },
+      {
+        "coefficient_interval": [
+          -5e-324,
+          5e-324
+        ],
+        "group": 13
+      },
+      {
+        "coefficient_interval": [
+          0.0077886427467386615,
+          0.00778864274673867
+        ],
+        "group": 14
+      },
+      {
+        "coefficient_interval": [
+          0.007108314622373541,
+          0.0071083146223735495
+        ],
+        "group": 15
+      },
+      {
+        "coefficient_interval": [
+          0.005954947806782148,
+          0.005954947806782155
+        ],
+        "group": 16
+      },
+      {
+        "coefficient_interval": [
+          0.005027854929044475,
+          0.005027854929044482
+        ],
+        "group": 17
+      },
+      {
+        "coefficient_interval": [
+          0.004325024938623524,
+          0.00432502493862353
+        ],
+        "group": 18
+      },
+      {
+        "coefficient_interval": [
+          0.0037862448255842622,
+          0.0037862448255842666
+        ],
+        "group": 19
+      },
+      {
+        "coefficient_interval": [
+          0.0033637596629626397,
+          0.003363759662962644
+        ],
+        "group": 20
+      },
+      {
+        "coefficient_interval": [
+          0.0030248824058412872,
+          0.0030248824058412916
+        ],
+        "group": 21
+      },
+      {
+        "coefficient_interval": [
+          0.0027475394309998498,
+          0.0027475394309998537
+        ],
+        "group": 22
+      },
+      {
+        "coefficient_interval": [
+          -5e-324,
+          5e-324
+        ],
+        "group": 23
+      },
+      {
+        "coefficient_interval": [
+          0.0015716692029790619,
+          0.0015716692029790636
+        ],
+        "group": 24
+      },
+      {
+        "coefficient_interval": [
+          0.00269703592576119,
+          0.002697035925761193
+        ],
+        "group": 25
+      },
+      {
+        "coefficient_interval": [
+          0.003209316763710653,
+          0.0032093167637106566
+        ],
+        "group": 26
+      },
+      {
+        "coefficient_interval": [
+          0.0033224805301051326,
+          0.003322480530105137
+        ],
+        "group": 27
+      },
+      {
+        "coefficient_interval": [
+          0.0032353844616793484,
+          0.0032353844616793523
+        ],
+        "group": 28
+      },
+      {
+        "coefficient_interval": [
+          0.0030645917725992664,
+          0.00306459177259927
+        ],
+        "group": 29
+      },
+      {
+        "coefficient_interval": [
+          0.0028683620166692144,
+          0.0028683620166692183
+        ],
+        "group": 30
+      },
+      {
+        "coefficient_interval": [
+          0.0026733343774166234,
+          0.0026733343774166278
+        ],
+        "group": 31
+      },
+      {
+        "coefficient_interval": [
+          0.0024905596412546673,
+          0.002490559641254671
+        ],
+        "group": 32
+      }
+    ],
+    "precision": 50,
+    "reference_coefficient_interval": [
+      0.10127609345430479,
+      0.10127609345430491
+    ],
+    "strictly_positive": true,
+    "total_coefficient_interval": [
+      0.05739927758627631,
+      0.057399277586276436
+    ],
+    "zero_channels": [
+      "light/cylinder",
+      "light/LLL_geometry_bar",
+      "light/WZ_Euler",
+      "light/WZ_gauge",
+      "compact/einstein_bulk",
+      "compact/maxwell_bulk",
+      "compact/euler_bulk_diagnostic"
+    ]
+  },
+  "identity": {
+    "I0": "16/(15*M^6)",
+    "I2": "4/(15*M^4)",
+    "LLL_and_zero_angular_response": 0,
+    "cross_product_residual": "0",
+    "integral_residuals": [
+      "0",
+      "0"
+    ],
+    "multiplicity": "d=copy_count*degeneracy; full signed group and full momentum line",
+    "reference_group_coefficient": "-d*a*L^2/(120*pi*r)*(4*m^2*H_r/M^6+(H_r-H_a)/M^4)"
+  },
+  "independent_density_stencils": {
+    "step1": {
+      "compact/einstein_bulk": 2.220446049250313e-16,
+      "compact/euler_bulk_diagnostic": 5.204170427930421e-17,
+      "compact/maxwell_bulk": 0.0,
+      "compact/weyl_bulk": -0.04000315091071184,
+      "light/LLL_geometry_bar": 0.0,
+      "light/WZ_Euler": 2.168404344971009e-19,
+      "light/WZ_Weyl": -0.005200430967970119,
+      "light/WZ_boxR": -0.002157840780552041,
+      "light/WZ_gauge": 0.0,
+      "light/bar_radial_R2_squared": 0.0034846067912055237,
+      "light/cylinder": 0.0
+    },
+    "step_half": {
+      "compact/einstein_bulk": 4.440892098500626e-16,
+      "compact/euler_bulk_diagnostic": 1.3010426069826053e-17,
+      "compact/maxwell_bulk": 0.0,
+      "compact/weyl_bulk": -0.04000315091071183,
+      "light/LLL_geometry_bar": 0.0,
+      "light/WZ_Euler": 3.469446951953614e-18,
+      "light/WZ_Weyl": -0.005200430967970117,
+      "light/WZ_boxR": -0.002157840780552041,
+      "light/WZ_gauge": 0.0,
+      "light/bar_radial_R2_squared": 0.0034846067912055233,
+      "light/cylinder": 0.0
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-constraint-germ.json": "5fa766e25468781af5c13e1da5d274a6c2ad797d6e35a1919c100b429fac4f72",
+    "results/development/nsc-incoming-local-constraints.json": "a0c61be6ce7a03793e0b2afe091efcd8bb12d7ee35aa727800b66986d8617f1c",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_local_constraints.py": "820f43cbc4849074210b7298b1b9ac0c43abf22cb2b4f127ec407a0fc2519ac3",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_light_restoration_action.py": "68b2d11ee79a1e1b1ba42eaa71354266fe26e0341e219771a5e5f67473c12bdc",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9"
+  },
+  "numerical_control_tolerance": 3e-12,
+  "old_coefficient_distance_to_interval": 3.2852442988229313e-11,
+  "old_probe_interpretation": "dividing the small action response by0.01 amplifies its arithmetic/contour indicator; no new physical source correction",
+  "previous_contour_coefficient": 0.05739927761912888,
+  "reproducer": "python3 scripts/derive_nsc_incoming_lapse_coefficient.py --check",
+  "residuals": {
+    "analytic_zero_local_channels": 4.440892098500626e-16,
+    "density_stencil_steps": 2.220446049250313e-16,
+    "local_closed_vs_density": 1.734723475976807e-18,
+    "old_probe_unscaled_action_difference": 3.285244298822916e-13,
+    "reference_closed_vs_previous_integral": 2.7755575615628914e-16
+  },
+  "schema": "NSC-INCOMING-CLOSED-LAPSE-COEFFICIENT-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "coefficient_positive_enclosure": true,
+    "constraints_solved": false,
+    "metric_evolution": false,
+    "new_physical_parameter_or_term": false,
+    "other_response_coefficients_exactly_enclosed": false,
+    "physical_initial_data_selected": false,
+    "push_or_PDF": false,
+    "source_accuracy_required_for_this_coefficient": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-lapse-coefficient.md": "1be0a9b28d46cde2ca96510a7656606acaed696143e50168fd765cc9aa58d4a0",
+    "scripts/derive_nsc_incoming_lapse_coefficient.py": "086be398f12ae6737ebfc343ab80fd393b043f3fe328c2d8857767a6704304f9",
+    "src/recursive_horizons/nsc_incoming_lapse_coefficient.py": "c3ba0efbf27a235dfdc025d5f0109aea0fd32955218b4eb70c4991a7092ba808",
+    "tests/test_nsc_incoming_lapse_coefficient.py": "d0e6c84b55629f4a689d9a830dd96117f926bb8a355ebba0c476ae68a66a379a"
+  },
+  "status": "PASS: closed positive lapse-response coefficient; physical root OPEN"
+}

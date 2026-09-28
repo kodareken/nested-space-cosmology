@@ -1,0 +1,3188 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, labels, structural zeros, strings, coverage and scope",
+    "fields": "all",
+    "float_atol": 3e-24,
+    "float_rtol": 3e-12
+  },
+  "domain": {
+    "Taylor_orders": [
+      7,
+      9,
+      11,
+      13
+    ],
+    "Taylor_precision": 50,
+    "base_and_refinement_panels": "no reassembly; only missing tails beyond the existing group endpoints added",
+    "differentiation_chop": false,
+    "error_scope": "measured truncation/quadrature controls for the fixed approximation, not a rigorous physical remainder",
+    "exact_zero_source": "source=x^2*g(x), g(0)=0 by the explicit c1/c2/ad1 identity",
+    "history_selected": false,
+    "mode_or_scattering_solve": false,
+    "old_generators_rerun": false,
+    "reference_order": 4,
+    "riccati_order": 16,
+    "state_changed": false,
+    "surface": "same rho=1 incoming KS half-density"
+  },
+  "failures": {},
+  "finite_source_plus_approximate_vacuum_tail": [
+    0.012259499823800198,
+    -0.003386530923627978,
+    0.003190352351246363,
+    0.0018859787532698896
+  ],
+  "gate": {
+    "PDF_bumped": false,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "extended_stationarity": "OPEN",
+    "full_renormalized_source": "OPEN",
+    "homogeneous_nonexistence": "preserved; not rerun",
+    "incoming_constraints": "OPEN",
+    "metric_timestep": false,
+    "physical_Riccati_mode_remainder": "OPEN",
+    "retained_angular_compact_remainder": "OPEN",
+    "selected_nulls": null,
+    "specified_approximation_tail": "PASS",
+    "subgap_source_refinement": "OPEN",
+    "updated_constraints": null
+  },
+  "group_count": 32,
+  "groups": {
+    "1": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.0900332487644417,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        6.4387544947562735e-24,
+        8.154359251783524e-23,
+        0.0,
+        4.399116916756078e-23
+      ],
+      "quadrature16_precision50": [
+        6.475778416486469e-15,
+        -4.640756501670024e-14,
+        0.0,
+        2.6441671716593356e-14
+      ],
+      "quadrature24_precision60": [
+        6.475778416486457e-15,
+        -4.640756501670016e-14,
+        0.0,
+        2.6441671716593308e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 6.310887241768095e-30,
+        "order11_13": 8.154359251783524e-23,
+        "quadrature16_24": 8.204153414298523e-29,
+        "series13_quadrature24": 1.1505378530467413e-25,
+        "stored_band_absolute": 1.900249482969761e-18,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/1_1",
+          "mid/1_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          6.475778422916978e-15,
+          -4.6407565098128697e-14,
+          0.0,
+          2.6441671760522836e-14
+        ],
+        "13": [
+          6.4757784164782235e-15,
+          -4.6407565016585104e-14,
+          0.0,
+          2.6441671716531667e-14
+        ],
+        "7": [
+          6.4830565189499756e-15,
+          -4.6474288001083896e-14,
+          0.0,
+          2.6478672260016936e-14
+        ],
+        "9": [
+          6.475772066203686e-15,
+          -4.640749502137152e-14,
+          0.0,
+          2.6441633543787603e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "4.21284814049710354700368e-461",
+          "4.17803272420622026462623e-461",
+          "4.17803272420622026462623e-461",
+          "1.7407708145441641188722e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1060.053588933363,
+          -1060.0618873746462,
+          -1060.0618873746462,
+          -1065.5425700442463
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-1.46387700874587439838122132219e-114",
+        "-1.34195445846792006136694767869e-113",
+        "5.97783378796666310764412773237e-114"
+      ]
+    },
+    "10": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 320.0,
+      "multiplicity_factor": 0.3601329950577668,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.4730187476007624e-22,
+        4.663370161253962e-21,
+        0.0,
+        2.5053360156404365e-21
+      ],
+      "quadrature16_precision50": [
+        1.1281824145118281e-14,
+        -8.07371400342059e-14,
+        0.0,
+        4.600948208966209e-14
+      ],
+      "quadrature24_precision60": [
+        1.1281824145118262e-14,
+        -8.073714003420576e-14,
+        0.0,
+        4.600948208966201e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 6.310887241768095e-30,
+        "order11_13": 4.663370161253962e-21,
+        "quadrature16_24": 1.3883951931889808e-28,
+        "series13_quadrature24": 8.846387165344295e-24,
+        "stored_band_absolute": 8.669442848125484e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          240.0423962600334,
+          319.9576037399666
+        ],
+        "panels": [
+          "mid/10_1",
+          "mid/10_-1"
+        ],
+        "rows": 160
+      },
+      "tail_by_order": {
+        "11": [
+          1.1281824491848978e-14,
+          -8.073714468872953e-14,
+          0.0,
+          4.600948459028925e-14
+        ],
+        "13": [
+          1.1281824144547103e-14,
+          -8.073714002535937e-14,
+          0.0,
+          4.6009482084953235e-14
+        ],
+        "7": [
+          1.1345348908162456e-14,
+          -8.133000400189682e-14,
+          0.0,
+          4.633767645502964e-14
+        ],
+        "9": [
+          1.1281648664314946e-14,
+          -8.073514082692105e-14,
+          0.0,
+          4.6008394745618e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.77066162081481078242387e-921",
+          "2.71086710059780194313958e-921",
+          "2.71086710059780194313958e-921",
+          "2.98972601085044196421442e-923"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -2119.6617845035576,
+          -2119.6836021004815,
+          -2119.6836021004815,
+          -2124.1908590854673
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "1.25473967332863827964113945083e-112",
+        "8.61169343114512685007861420599e-113",
+        "1.96785165107062797316639015117e-113"
+      ]
+    },
+    "11": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 320.0,
+      "multiplicity_factor": 0.39014407797924733,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        7.105292324539872e-22,
+        9.541195832528631e-21,
+        0.0,
+        5.125862535646753e-21
+      ],
+      "quadrature16_precision50": [
+        1.4390248320154587e-14,
+        -1.0295124636469428e-13,
+        0.0,
+        5.867074734242443e-14
+      ],
+      "quadrature24_precision60": [
+        1.4390248320154562e-14,
+        -1.029512463646941e-13,
+        0.0,
+        5.867074734242433e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 1.262177448353619e-29,
+        "order11_13": 9.541195832528631e-21,
+        "quadrature16_24": 1.7670484276950664e-28,
+        "series13_quadrature24": 2.091337155145665e-23,
+        "stored_band_absolute": 1.4563180771149443e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          240.0423962600334,
+          319.9576037399666
+        ],
+        "panels": [
+          "mid/11_1",
+          "mid/11_-1"
+        ],
+        "rows": 160
+      },
+      "tail_by_order": {
+        "11": [
+          1.439024902933449e-14,
+          -1.0295125588497656e-13,
+          0.0,
+          5.867075245715553e-14
+        ],
+        "13": [
+          1.4390248318805256e-14,
+          -1.0295124634378073e-13,
+          0.0,
+          5.8670747331293e-14
+        ],
+        "7": [
+          1.448557940952885e-14,
+          -1.0384098725242183e-13,
+          0.0,
+          5.916328333097535e-14
+        ],
+        "9": [
+          1.4389939975675837e-14,
+          -1.0294773321481508e-13,
+          0.0,
+          5.866883659524546e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "3.00709634915716620122273e-921",
+          "2.93677269231428543840121e-921",
+          "2.93677269231428543840121e-921",
+          "3.51618284214403814107606e-923"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -2119.5798957024012,
+          -2119.603559392808,
+          -2119.603559392808,
+          -2124.0286648521483
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "3.07796721803199816560386848935e-112",
+        "5.80953966992694617612326863145e-112",
+        "-1.36578622594747400525970007105e-112"
+      ]
+    },
+    "12": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 320.0,
+      "multiplicity_factor": 0.4201551609007279,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.379319149681465e-21,
+        1.8522710478559765e-20,
+        0.0,
+        9.951014815698337e-21
+      ],
+      "quadrature16_precision50": [
+        1.801386307911123e-14,
+        -1.2883354005760768e-13,
+        0.0,
+        7.342370156835945e-14
+      ],
+      "quadrature24_precision60": [
+        1.80138630791112e-14,
+        -1.2883354005760746e-13,
+        0.0,
+        7.342370156835933e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.524354896707238e-29,
+        "order11_13": 1.8522710478559765e-20,
+        "quadrature16_24": 2.271919407036514e-28,
+        "series13_quadrature24": 4.6524870488273075e-23,
+        "stored_band_absolute": 1.9263325070604505e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          240.0423962600334,
+          319.9576037399666
+        ],
+        "panels": [
+          "mid/12_1",
+          "mid/12_-1"
+        ],
+        "rows": 160
+      },
+      "tail_by_order": {
+        "11": [
+          1.8013864455431424e-14,
+          -1.2883355853379306e-13,
+          0.0,
+          7.342371149461224e-14
+        ],
+        "13": [
+          1.8013863076112275e-14,
+          -1.2883354001108259e-13,
+          0.0,
+          7.342370154359742e-14
+        ],
+        "7": [
+          1.8152558253059927e-14,
+          -1.3012800640303488e-13,
+          0.0,
+          7.41402823280474e-14
+        ],
+        "9": [
+          1.8013343742843554e-14,
+          -1.2882762271791475e-13,
+          0.0,
+          7.342048323037915e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "3.24437315132915098328134e-921",
+          "3.16267828403076893366284e-921",
+          "3.16267828403076893366284e-921",
+          "4.08474336491910248092491e-923"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -2119.5039484897247,
+          -2119.5294514206544,
+          -2119.5294514206544,
+          -2123.878781930931
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "5.7139429137260871018193630391e-112",
+        "-2.26553838744009937278002120707e-113",
+        "2.97024837623504851954868257991e-112"
+      ]
+    },
+    "13": {
+      "actual_angular_signs": [
+        1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.12004433168592227,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.1131584679137489e-24,
+        2.3590475162963643e-23,
+        0.0,
+        0.0
+      ],
+      "quadrature16_precision50": [
+        1.3795981342857915e-15,
+        -1.6219207993141684e-14,
+        0.0,
+        0.0
+      ],
+      "quadrature24_precision60": [
+        1.3795981342857891e-15,
+        -1.621920799314166e-14,
+        0.0,
+        0.0
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 3.1554436208840472e-30,
+        "order11_13": 2.3590475162963643e-23,
+        "quadrature16_24": 2.524354896707238e-29,
+        "series13_quadrature24": 4.327059837318294e-26,
+        "stored_band_absolute": 9.105832287171318e-19,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.01925112001192,
+          159.98074887998808
+        ],
+        "panels": [
+          "group13/mid"
+        ],
+        "rows": 120
+      },
+      "tail_by_order": {
+        "11": [
+          1.3795981353972129e-15,
+          -1.6219208016688864e-14,
+          0.0,
+          0.0
+        ],
+        "13": [
+          1.3795981342840544e-15,
+          -1.6219207993098388e-14,
+          0.0,
+          0.0
+        ],
+        "7": [
+          1.3808348388583872e-15,
+          -1.623699161717039e-14,
+          0.0,
+          0.0
+        ],
+        "9": [
+          1.379597114454333e-15,
+          -1.6219190056248865e-14,
+          0.0,
+          0.0
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.80841360454762787303018e-461",
+          "2.78535514947081350975082e-461",
+          "2.78535514947081350975082e-461",
+          "0.0"
+        ],
+        "exact_zero_components": [
+          3
+        ],
+        "natural_log_upper_bounds": [
+          -1060.4591080998716,
+          -1060.4673524827544,
+          -1060.4673524827544,
+          null
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "4.9983735717392577226223952474e-114",
+        "-2.09005481384320257321445064321e-114",
+        "0.0"
+      ]
+    },
+    "14": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.1800664975288834,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.718059534032035e-23,
+        5.538788053061219e-22,
+        0.0,
+        1.7878872298028744e-22
+      ],
+      "quadrature16_precision50": [
+        1.7080760928482555e-14,
+        -1.4136970961128708e-13,
+        0.0,
+        5.2854128514079856e-14
+      ],
+      "quadrature24_precision60": [
+        1.7080760928482527e-14,
+        -1.4136970961128685e-13,
+        0.0,
+        5.285412851407977e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 5.048709793414476e-29,
+        "order11_13": 5.538788053061219e-22,
+        "quadrature16_24": 2.271919407036514e-28,
+        "series13_quadrature24": 9.19698219517348e-25,
+        "stored_band_absolute": 4.982853703953216e-18,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.01925112001192,
+          159.98074887998808
+        ],
+        "panels": [
+          "group14/mid24_1",
+          "group14/mid24_-1"
+        ],
+        "rows": 120
+      },
+      "tail_by_order": {
+        "11": [
+          1.70807609656101e-14,
+          -1.4136971016424596e-13,
+          0.0,
+          5.285412869259322e-14
+        ],
+        "13": [
+          1.7080760928429506e-14,
+          -1.4136970961036716e-13,
+          0.0,
+          5.28541285138045e-14
+        ],
+        "7": [
+          1.7108617554475114e-14,
+          -1.4165955085367896e-13,
+          0.0,
+          5.295734452003387e-14
+        ],
+        "9": [
+          1.708072925591718e-14,
+          -1.4136931064404262e-13,
+          0.0,
+          5.285399285263534e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "8.45421678055212775704233e-461",
+          "8.35606544841244052925246e-461",
+          "8.35606544841244052925246e-461",
+          "3.48154162908832823774439e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.3570625260745,
+          -1059.3687401940863,
+          -1059.3687401940863,
+          -1064.8494228636864
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-1.44535991033265184142900803544e-113",
+        "-9.90191783423529938990128512509e-114",
+        "8.41400651998682788723732984851e-115"
+      ]
+    },
+    "15": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.24008866337184454,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.2359100206803596e-22,
+        4.524382954551832e-21,
+        0.0,
+        1.9420072246696186e-21
+      ],
+      "quadrature16_precision50": [
+        4.6886902786702625e-14,
+        -3.611278178341437e-13,
+        0.0,
+        1.6889641597010763e-13
+      ],
+      "quadrature24_precision60": [
+        4.688690278670255e-14,
+        -3.611278178341431e-13,
+        0.0,
+        1.6889641597010735e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 5.048709793414476e-29,
+        "order11_13": 4.524382954551832e-21,
+        "quadrature16_24": 6.058451752097371e-28,
+        "series13_quadrature24": 8.657224631159538e-24,
+        "stored_band_absolute": 1.393590617358081e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/15_1",
+          "mid/15_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          4.688690310975651e-14,
+          -3.611278223498688e-13,
+          0.0,
+          1.6889641790847595e-13
+        ],
+        "13": [
+          4.6886902786165505e-14,
+          -3.6112781782548587e-13,
+          0.0,
+          1.6889641596646872e-13
+        ],
+        "7": [
+          4.7014901076713386e-14,
+          -3.6238340967561847e-13,
+          0.0,
+          1.6946350246410836e-13
+        ],
+        "9": [
+          4.68866893225318e-14,
+          -3.611252803857471e-13,
+          0.0,
+          1.6889530222060582e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.13122825589849948916784e-460",
+          "1.11414205978832540390033e-460",
+          "1.11414205978832540390033e-460",
+          "7.19144146591303120625587e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.0658387827189,
+          -1059.0810581216344,
+          -1059.0810581216344,
+          -1064.1240064225576
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "2.03233480941795675568308427874e-113",
+        "5.95053344735899230087922488154e-114",
+        "2.64939635585951548132770718484e-114"
+      ]
+    },
+    "16": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.30011082921480564,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.8729973823800714e-21,
+        2.5710892381648396e-20,
+        0.0,
+        1.2108291314054939e-20
+      ],
+      "quadrature16_precision50": [
+        9.72629983484073e-14,
+        -7.279439671408982e-13,
+        0.0,
+        3.68795885256191e-13
+      ],
+      "quadrature24_precision60": [
+        9.726299834840712e-14,
+        -7.279439671408969e-13,
+        0.0,
+        3.6879588525619035e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 1.0097419586828951e-28,
+        "order11_13": 2.5710892381648396e-20,
+        "quadrature16_24": 1.3126645462877636e-27,
+        "series13_quadrature24": 5.886553281051195e-23,
+        "stored_band_absolute": 2.018150697797799e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/16_1",
+          "mid/16_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          9.726300021768393e-14,
+          -7.279439927929238e-13,
+          0.0,
+          3.68795897337117e-13
+        ],
+        "13": [
+          9.726299834468655e-14,
+          -7.279439670820314e-13,
+          0.0,
+          3.687958852288257e-13
+        ],
+        "7": [
+          9.766696545959157e-14,
+          -7.318249901010264e-13,
+          0.0,
+          3.7070141164023707e-13
+        ],
+        "9": [
+          9.726204868285642e-14,
+          -7.279328868073385e-13,
+          0.0,
+          3.6879057542931115e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.41910816155577834204301e-460",
+          "1.39267757473540675487541e-460",
+          "1.39267757473540675487541e-460",
+          "1.18917285543022899636046e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.8391141581997,
+          -1058.8579145703204,
+          -1058.8579145703204,
+          -1063.621054977276
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "2.38359156245458531245473450113e-113",
+        "-1.05069104275599805695221863376e-113",
+        "1.26344020585021447003866639064e-113"
+      ]
+    },
+    "17": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.3601329950577668,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        8.254334636149834e-21,
+        1.1243214944428668e-19,
+        0.0,
+        5.530112865120614e-20
+      ],
+      "quadrature16_precision50": [
+        1.7322946306545542e-13,
+        -1.277443445805186e-12,
+        0.0,
+        6.728860245873918e-13
+      ],
+      "quadrature24_precision60": [
+        1.7322946306545512e-13,
+        -1.2774434458051838e-12,
+        0.0,
+        6.728860245873907e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 1.0097419586828951e-28,
+        "order11_13": 1.1243214944428668e-19,
+        "quadrature16_24": 2.2214323091023692e-27,
+        "series13_quadrature24": 3.115411391190105e-22,
+        "stored_band_absolute": 4.244946129829133e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/17_1",
+          "mid/17_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          1.7322947129995699e-13,
+          -1.277443557925792e-12,
+          0.0,
+          6.728860797370282e-13
+        ],
+        "13": [
+          1.7322946304562235e-13,
+          -1.2774434454936426e-12,
+          0.0,
+          6.728860244358996e-13
+        ],
+        "7": [
+          1.742512559182697e-13,
+          -1.2871637225307702e-12,
+          0.0,
+          6.778540098564336e-13
+        ],
+        "9": [
+          1.7322620951176793e-13,
+          -1.2774057997211219e-12,
+          0.0,
+          6.728672099358264e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.70906296649568644043284e-460",
+          "1.67121308968248810585049e-460",
+          "1.67121308968248810585049e-460",
+          "1.76153621065795942791645e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.653197529748,
+          -1058.6755930135264,
+          -1058.6755930135264,
+          -1063.2281266879436
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-9.91534242780355307437452381509e-114",
+        "-4.77276448892032693543717146787e-113",
+        "2.20233925172441504409167260313e-113"
+      ]
+    },
+    "18": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.4201551609007279,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        2.9807606500716387e-20,
+        4.043465839338665e-19,
+        0.0,
+        2.0381248343469723e-19
+      ],
+      "quadrature16_precision50": [
+        2.797258968529322e-13,
+        -2.0444985122822548e-12,
+        0.0,
+        1.1010832936372327e-12
+      ],
+      "quadrature24_precision60": [
+        2.797258968529317e-13,
+        -2.044498512282251e-12,
+        0.0,
+        1.1010832936372307e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.0194839173657902e-28,
+        "order11_13": 4.043465839338665e-19,
+        "quadrature16_24": 3.6350710512584224e-27,
+        "series13_quadrature24": 1.357033415745857e-21,
+        "stored_band_absolute": 6.548871029972261e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/18_1",
+          "mid/18_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          2.7972592657384736e-13,
+          -2.0444989152718017e-12,
+          0.0,
+          1.101083496773215e-12
+        ],
+        "13": [
+          2.7972589676624086e-13,
+          -2.0444985109252177e-12,
+          0.0,
+          1.1010832929607316e-12
+        ],
+        "7": [
+          2.819542176679077e-13,
+          -2.0655790373657165e-12,
+          0.0,
+          1.1121042349207114e-12
+        ],
+        "9": [
+          2.797166088851094e-13,
+          -2.0443915293676243e-12,
+          0.0,
+          1.1010285408618207e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.00109323576383840720469e-460",
+          "1.94974860462956945682557e-460",
+          "1.94974860462956945682557e-460",
+          "2.43707914036182976642108e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.4954491281603,
+          -1058.521442333699,
+          -1058.521442333699,
+          -1062.9035127146312
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "7.76757393384205191796172712438e-113",
+        "-7.49207244319522192631730882051e-113",
+        "6.92098034996039089255583338338e-113"
+      ]
+    },
+    "19": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.48017732674368907,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        9.237399323355942e-20,
+        1.24996763041387e-18,
+        0.0,
+        6.398020561296452e-19
+      ],
+      "quadrature16_precision50": [
+        4.215954846811076e-13,
+        -3.0630842039290977e-12,
+        0.0,
+        1.672807207658483e-12
+      ],
+      "quadrature24_precision60": [
+        4.2159548468110687e-13,
+        -3.0630842039290925e-12,
+        0.0,
+        1.6728072076584802e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 4.0389678347315804e-28,
+        "order11_13": 1.24996763041387e-18,
+        "quadrature16_24": 5.2506581851510546e-27,
+        "series13_quadrature24": 5.054376465286604e-21,
+        "stored_band_absolute": 1.457522975425429e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/19_1",
+          "mid/19_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          4.2159557673163633e-13,
+          -3.0630854488423464e-12,
+          0.0,
+          1.6728078449014223e-12
+        ],
+        "13": [
+          4.215954843576431e-13,
+          -3.063084198874716e-12,
+          0.0,
+          1.6728072050993661e-12
+        ],
+        "7": [
+          4.259622959236655e-13,
+          -3.1042503650067325e-12,
+          0.0,
+          1.6946350246410839e-12
+        ],
+        "9": [
+          4.215723257598835e-13,
+          -3.062818194501239e-12,
+          0.0,
+          1.6726690285264764e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.29519921154364378777911e-460",
+          "2.22828411957665080780066e-460",
+          "2.22828411957665080780066e-460",
+          "3.21611039479845519830288e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.3583231351001,
+          -1058.3879109410746,
+          -1058.3879109410746,
+          -1062.6261402857808
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "5.63983004683237344088725380452e-114",
+        "2.86687485057155983079362634305e-115",
+        "-1.86043968666316341774415618298e-114"
+      ]
+    },
+    "2": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.12004433168592227,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        8.674452091152116e-23,
+        1.1431157447794427e-21,
+        0.0,
+        6.149301391563692e-22
+      ],
+      "quadrature16_precision50": [
+        2.0699584831887978e-14,
+        -1.482901844739132e-13,
+        0.0,
+        8.44948846529006e-14
+      ],
+      "quadrature24_precision60": [
+        2.0699584831887943e-14,
+        -1.4829018447391296e-13,
+        0.0,
+        8.449488465290046e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.524354896707238e-29,
+        "order11_13": 1.1431157447794427e-21,
+        "quadrature16_24": 2.524354896707238e-28,
+        "series13_quadrature24": 2.0339737144728898e-24,
+        "stored_band_absolute": 5.291620039282352e-18,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/2_1",
+          "mid/2_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          2.0699584918497136e-14,
+          -1.4829018561499473e-13,
+          0.0,
+          8.449488526674593e-14
+        ],
+        "13": [
+          2.0699584831752616e-14,
+          -1.4829018447187898e-13,
+          0.0,
+          8.449488465181579e-14
+        ],
+        "7": [
+          2.0745780860639917e-14,
+          -1.4871772160346844e-13,
+          0.0,
+          8.473175123205418e-14
+        ],
+        "9": [
+          2.0699520384122342e-14,
+          -1.4828945938829104e-13,
+          0.0,
+          8.449448988620669e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "5.6426247136007573315642e-461",
+          "5.57071029894162701950164e-461",
+          "5.57071029894162701950164e-461",
+          "3.59572073295651560312794e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.7613785382464,
+          -1059.7742053021946,
+          -1059.7742053021946,
+          -1064.8171536031177
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-4.43803200066085694683441487465e-113",
+        "1.39795112641105506324066726421e-113",
+        "-2.91799156353595600503754106943e-113"
+      ]
+    },
+    "20": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.5401994925866501,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        2.5357923044577565e-19,
+        3.4257241654838873e-18,
+        0.0,
+        1.7716933344090615e-18
+      ],
+      "quadrature16_precision50": [
+        6.035697011591176e-13,
+        -4.366137598006894e-12,
+        0.0,
+        2.4069023000848174e-12
+      ],
+      "quadrature24_precision60": [
+        6.035697011591166e-13,
+        -4.3661375980068865e-12,
+        0.0,
+        2.406902300084813e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 4.0389678347315804e-28,
+        "order11_13": 3.4257241654838873e-18,
+        "quadrature16_24": 7.270142102516845e-27,
+        "series13_quadrature24": 1.6553989167221546e-20,
+        "stored_band_absolute": 1.2706551697673784e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/20_1",
+          "mid/20_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          6.035699536781686e-13,
+          -4.366141007177063e-12,
+          0.0,
+          2.4069040633085304e-12
+        ],
+        "13": [
+          6.035697000989382e-13,
+          -4.366137581452897e-12,
+          0.0,
+          2.406902291615196e-12
+        ],
+        "7": [
+          6.114619359007032e-13,
+          -4.4403571358546855e-12,
+          0.0,
+          2.446629316825565e-12
+        ],
+        "9": [
+          6.035176879544457e-13,
+          -4.365541290475872e-12,
+          0.0,
+          2.4065894459794077e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.59138101133682841712321e-460",
+          "2.50681963452373215877574e-460",
+          "2.50681963452373215877574e-460",
+          "4.09876677934887690340074e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.2369518346445,
+          -1058.2701279054181,
+          -1058.2701279054181,
+          -1062.3836268203086
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "7.06914458727698817089704277567e-113",
+        "-1.60805809772888009527877996128e-112",
+        "1.13763034273309861620964854297e-112"
+      ]
+    },
+    "21": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.6002216584296113,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        6.308708512456167e-19,
+        8.512998724141403e-18,
+        0.0,
+        4.435024329344219e-18
+      ],
+      "quadrature16_precision50": [
+        8.302533668975775e-13,
+        -5.985421061844465e-12,
+        0.0,
+        3.3215622560002833e-12
+      ],
+      "quadrature24_precision60": [
+        8.302533668975761e-13,
+        -5.985421061844455e-12,
+        0.0,
+        3.3215622560002776e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 8.077935669463161e-28,
+        "order11_13": 8.512998724141403e-18,
+        "quadrature16_24": 1.0501316370302109e-26,
+        "series13_quadrature24": 4.870895284622055e-20,
+        "stored_band_absolute": 2.0509933486202452e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/21_1",
+          "mid/21_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          8.302539946491993e-13,
+          -5.985429526134226e-12,
+          0.0,
+          3.3215666659184637e-12
+        ],
+        "13": [
+          8.30253363778348e-13,
+          -5.985421013135502e-12,
+          0.0,
+          3.3215622308941343e-12
+        ],
+        "7": [
+          8.436395828141806e-13,
+          -6.111078780310441e-12,
+          0.0,
+          3.389270049282167e-12
+        ],
+        "9": [
+          8.301458791286969e-13,
+          -5.984190457330581e-12,
+          0.0,
+          3.3209120665335785e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.88963869765584669855337e-460",
+          "2.78535514947081350975082e-460",
+          "2.78535514947081350975082e-460",
+          "5.0851170270532301689645e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.1280113010644,
+          -1058.1647673897603,
+          -1058.1647673897603,
+          -1062.1679949198437
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "3.1135014902216083330173552227e-112",
+        "-3.96119700100299016279560860857e-114",
+        "1.53118662044031139585617463671e-112"
+      ]
+    },
+    "22": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.6602438242725724,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.446867597104267e-18,
+        1.950781086290792e-17,
+        0.0,
+        1.0217807094519575e-17
+      ],
+      "quadrature16_precision50": [
+        1.106110103133004e-12,
+        -7.95139001167551e-12,
+        0.0,
+        4.434256499526666e-12
+      ],
+      "quadrature24_precision60": [
+        1.1061101031330022e-12,
+        -7.951390011675498e-12,
+        0.0,
+        4.434256499526658e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 8.077935669463161e-28,
+        "order11_13": 1.950781086290792e-17,
+        "quadrature16_24": 1.2924697071141057e-26,
+        "series13_quadrature24": 1.3094778976013885e-19,
+        "stored_band_absolute": 3.1123513723767653e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/22_1",
+          "mid/22_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          1.106111541622077e-12,
+          -7.951409388538571e-12,
+          0.0,
+          4.434266649472972e-12
+        ],
+        "13": [
+          1.1061100947544799e-12,
+          -7.951389880727708e-12,
+          0.0,
+          4.434256431665878e-12
+        ],
+        "7": [
+          1.1276816818792581e-12,
+          -8.153594728774872e-12,
+          0.0,
+          4.543740159818906e-12
+        ],
+        "9": [
+          1.1059025457642787e-12,
+          -7.949016247875231e-12,
+          0.0,
+          4.432995851298226e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "3.18997230621300731652096e-460",
+          "3.0638906644178948607259e-460",
+          "3.0638906644178948607259e-460",
+          "6.17519891453109267430038e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.0291305419398,
+          -1058.069457209956,
+          -1058.069457209956,
+          -1061.9737718683743
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-4.12060329063823273971784630497e-113",
+        "-2.18346023474806129586601525002e-113",
+        "-6.56847399290656491834102467523e-114"
+      ]
+    },
+    "23": {
+      "actual_angular_signs": [
+        1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.12004433168592227,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.062444966539723e-23,
+        5.820118823492592e-22,
+        0.0,
+        0.0
+      ],
+      "quadrature16_precision50": [
+        5.510209503611391e-15,
+        -6.476615337943374e-14,
+        0.0,
+        0.0
+      ],
+      "quadrature24_precision60": [
+        5.510209503611382e-15,
+        -6.476615337943363e-14,
+        0.0,
+        0.0
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 1.262177448353619e-29,
+        "order11_13": 5.820118823492592e-22,
+        "quadrature16_24": 1.135959703518257e-28,
+        "series13_quadrature24": 1.095847704209579e-24,
+        "stored_band_absolute": 3.503988500670679e-18,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/23_1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          5.510209534186652e-15,
+          -6.476615396034966e-14,
+          0.0,
+          0.0
+        ],
+        "13": [
+          5.5102095035622025e-15,
+          -6.476615337833778e-14,
+          0.0,
+          0.0
+        ],
+        "7": [
+          5.523339355433549e-15,
+          -6.494796646868157e-14,
+          0.0,
+          0.0
+        ],
+        "9": [
+          5.510188614699622e-15,
+          -6.476581444302375e-14,
+          0.0,
+          0.0
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.83147205962444223630954e-461",
+          "2.78535514947081350975082e-461",
+          "2.78535514947081350975082e-461",
+          "0.0"
+        ],
+        "exact_zero_components": [
+          3
+        ],
+        "natural_log_upper_bounds": [
+          -1060.450931131426,
+          -1060.4673524827544,
+          -1060.4673524827544,
+          null
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-1.31314480234196731263332320226e-113",
+        "-6.62482877242503922660709624586e-115",
+        "0.0"
+      ]
+    },
+    "24": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.1800664975288834,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.1120752668674893e-22,
+        5.105412408462391e-21,
+        0.0,
+        8.066181010886644e-22
+      ],
+      "quadrature16_precision50": [
+        2.9443866618483285e-14,
+        -2.867019796170494e-13,
+        0.0,
+        5.2766592111863796e-14
+      ],
+      "quadrature24_precision60": [
+        2.9443866618483235e-14,
+        -2.867019796170489e-13,
+        0.0,
+        5.27665921118637e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 5.048709793414476e-29,
+        "order11_13": 5.105412408462391e-21,
+        "quadrature16_24": 5.048709793414476e-28,
+        "series13_quadrature24": 1.0446840791631167e-23,
+        "stored_band_absolute": 9.170873009760684e-18,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/24_1",
+          "mid/24_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          2.944386692914312e-14,
+          -2.8670198471201447e-13,
+          0.0,
+          5.276659291691367e-14
+        ],
+        "13": [
+          2.9443866617935595e-14,
+          -2.8670197960660206e-13,
+          0.0,
+          5.2766592110295566e-14
+        ],
+        "7": [
+          2.95361311042006e-14,
+          -2.877924754082125e-13,
+          0.0,
+          5.295734452003387e-14
+        ],
+        "9": [
+          2.944368509709347e-14,
+          -2.8669943510202623e-13,
+          0.0,
+          5.276617014781575e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "8.5109504943823171151028e-461",
+          "8.35606544841244052925246e-461",
+          "8.35606544841244052925246e-461",
+          "3.48154162908832823774439e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.35037424244,
+          -1059.3687401940863,
+          -1059.3687401940863,
+          -1064.8494228636864
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-1.01178700494442172404236859155e-113",
+        "-5.32331922298157403099763607773e-113",
+        "3.40961721998267294818393035861e-114"
+      ]
+    },
+    "25": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.24008866337184454,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.3982777270652275e-21,
+        2.1182744654690713e-20,
+        0.0,
+        5.741412315577842e-21
+      ],
+      "quadrature16_precision50": [
+        6.331750590751813e-14,
+        -5.543292628326015e-13,
+        0.0,
+        1.6861670217612027e-13
+      ],
+      "quadrature24_precision60": [
+        6.331750590751802e-14,
+        -5.543292628326005e-13,
+        0.0,
+        1.6861670217612e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 1.0097419586828951e-28,
+        "order11_13": 2.1182744654690713e-20,
+        "quadrature16_24": 1.0097419586828951e-27,
+        "series13_quadrature24": 4.979683833118913e-23,
+        "stored_band_absolute": 1.9724633728134755e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/25_1",
+          "mid/25_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          6.331750730295021e-14,
+          -5.543292839655483e-13,
+          0.0,
+          1.686167079043971e-13
+        ],
+        "13": [
+          6.331750590467248e-14,
+          -5.543292627828037e-13,
+          0.0,
+          1.686167021629848e-13
+        ],
+        "7": [
+          6.358491914301403e-14,
+          -5.572273090816632e-13,
+          0.0,
+          1.6946350246410836e-13
+        ],
+        "9": [
+          6.331683561292232e-14,
+          -5.543205820853553e-13,
+          0.0,
+          1.6861426956518313e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.13753330656504664310125e-460",
+          "1.11414205978832540390033e-460",
+          "1.11414205978832540390033e-460",
+          "7.19144146591303120625587e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.06028062535,
+          -1059.0810581216344,
+          -1059.0810581216344,
+          -1064.1240064225576
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-8.65578720490574534868621717314e-113",
+        "1.26545455096255427870852533929e-113",
+        "-3.71372436331643289333011901641e-113"
+      ]
+    },
+    "26": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.30011082921480564,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        5.444700423568891e-21,
+        7.905930589860987e-20,
+        0.0,
+        2.7241110831157085e-20
+      ],
+      "quadrature16_precision50": [
+        1.177153988656949e-13,
+        -9.685241024246927e-13,
+        0.0,
+        3.6818514213060396e-13
+      ],
+      "quadrature24_precision60": [
+        1.177153988656947e-13,
+        -9.685241024246909e-13,
+        0.0,
+        3.681851421306033e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 5.048709793414476e-29,
+        "order11_13": 7.905930589860987e-20,
+        "quadrature16_24": 1.8175355256292112e-27,
+        "series13_quadrature24": 2.18662650378657e-22,
+        "stored_band_absolute": 3.077987050275141e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/26_1",
+          "mid/26_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          1.1771540429732854e-13,
+          -9.685241812653341e-13,
+          0.0,
+          3.681851692978388e-13
+        ],
+        "13": [
+          1.1771539885262811e-13,
+          -9.685241022060282e-13,
+          0.0,
+          3.6818514205672796e-13
+        ],
+        "7": [
+          1.1837948804246739e-13,
+          -9.753798643585823e-13,
+          0.0,
+          3.7070141164023707e-13
+        ],
+        "9": [
+          1.1771327556716583e-13,
+          -9.684977678248256e-13,
+          0.0,
+          3.68175816495574e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.42580377558256548560038e-460",
+          "1.39267757473540675487541e-460",
+          "1.39267757473540675487541e-460",
+          "1.18917285543022899636046e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.8344070695182,
+          -1058.8579145703204,
+          -1058.8579145703204,
+          -1063.621054977276
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "2.76128196181052471284521497048e-113",
+        "-3.45938438778146555641045296192e-113",
+        "2.31609575498836153564409090798e-113"
+      ]
+    },
+    "27": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.3601329950577668,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.8535563559682486e-20,
+        2.6276394831511896e-19,
+        0.0,
+        1.0320853348741741e-19
+      ],
+      "quadrature16_precision50": [
+        1.9764677209471667e-13,
+        -1.5647920298762984e-12,
+        0.0,
+        6.717717594517571e-13
+      ],
+      "quadrature24_precision60": [
+        1.9764677209471632e-13,
+        -1.5647920298762955e-12,
+        0.0,
+        6.717717594517559e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.0194839173657902e-28,
+        "order11_13": 2.6276394831511896e-19,
+        "quadrature16_24": 2.8272774843121063e-27,
+        "series13_quadrature24": 8.618190026520774e-22,
+        "stored_band_absolute": 6.06879377565058e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/27_1",
+          "mid/27_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          1.976467905775105e-13,
+          -1.5647922917784249e-12,
+          0.0,
+          6.717718623275212e-13
+        ],
+        "13": [
+          1.9764677204194695e-13,
+          -1.5647920290144765e-12,
+          0.0,
+          6.717717591189877e-13
+        ],
+        "7": [
+          1.9910628301772068e-13,
+          -1.5794295716398373e-12,
+          0.0,
+          6.778540098564336e-13
+        ],
+        "9": [
+          1.976408796708771e-13,
+          -1.5647207626518059e-12,
+          0.0,
+          6.717430793141356e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.71601086767812213357669e-460",
+          "1.67121308968248810585049e-460",
+          "1.67121308968248810585049e-460",
+          "1.76153621065795942791645e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.6491404430694,
+          -1058.6755930135264,
+          -1058.6755930135264,
+          -1063.2281266879436
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-9.92400148583877554766950930285e-113",
+        "-1.79582887633282233531713359236e-112",
+        "2.20233925172441504409167260313e-113"
+      ]
+    },
+    "28": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.4201551609007279,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        5.60597796421234e-20,
+        7.832123675066678e-19,
+        0.0,
+        3.3325717333462463e-19
+      ],
+      "quadrature16_precision50": [
+        3.0804019297185037e-13,
+        -2.377887440788978e-12,
+        0.0,
+        1.099260081431348e-12
+      ],
+      "quadrature24_precision60": [
+        3.0804019297184986e-13,
+        -2.3778874407889737e-12,
+        0.0,
+        1.0992600814313462e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 4.0389678347315804e-28,
+        "order11_13": 7.832123675066678e-19,
+        "quadrature16_24": 4.4428646182047385e-27,
+        "series13_quadrature24": 3.0468777810735962e-21,
+        "stored_band_absolute": 5.418537966835444e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/28_1",
+          "mid/28_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          3.0804024884241583e-13,
+          -2.3778882209544635e-12,
+          0.0,
+          1.0992604134125344e-12
+        ],
+        "13": [
+          3.080401927826362e-13,
+          -2.377887437742096e-12,
+          0.0,
+          1.0992600801553611e-12
+        ],
+        "7": [
+          3.109517492839338e-13,
+          -2.4065558613262948e-12,
+          0.0,
+          1.1121042349207114e-12
+        ],
+        "9": [
+          3.080255575360754e-13,
+          -2.3777131773258863e-12,
+          0.0,
+          1.0991842640606091e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.00821106182726561716925e-460",
+          "1.94974860462956945682557e-460",
+          "1.94974860462956945682557e-460",
+          "2.43707914036182976642108e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.4918984704834,
+          -1058.521442333699,
+          -1058.521442333699,
+          -1062.9035127146312
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-5.23449652146820096905482928217e-113",
+        "1.01133487949181071367368985168e-112",
+        "-5.40645917636276187285311401065e-113"
+      ]
+    },
+    "29": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.48017732674368907,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.5308479115385702e-19,
+        2.118669470868753e-18,
+        0.0,
+        9.502685085047258e-19
+      ],
+      "quadrature16_precision50": [
+        4.5372800038356475e-13,
+        -3.4416697668310495e-12,
+        0.0,
+        1.6700375345355978e-12
+      ],
+      "quadrature24_precision60": [
+        4.53728000383564e-13,
+        -3.441669766831044e-12,
+        0.0,
+        1.670037534535595e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 4.0389678347315804e-28,
+        "order11_13": 2.118669470868753e-18,
+        "quadrature16_24": 5.6545549686242126e-27,
+        "series13_quadrature24": 9.739381648048119e-21,
+        "stored_band_absolute": 1.2083480341042078e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/29_1",
+          "mid/29_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          4.5372815285835e-13,
+          -3.441671875761133e-12,
+          0.0,
+          1.670038480501484e-12
+        ],
+        "13": [
+          4.5372799977355884e-13,
+          -3.4416697570916622e-12,
+          0.0,
+          1.6700375302329756e-12
+        ],
+        "7": [
+          4.591023320562668e-13,
+          -3.493938163818822e-12,
+          0.0,
+          1.6946350246410839e-12
+        ],
+        "9": [
+          4.536948606559394e-13,
+          -3.4412792311205246e-12,
+          0.0,
+          1.6698587019722492e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.30243584812000779487104e-460",
+          "2.22828411957665080780066e-460",
+          "2.22828411957665080780066e-460",
+          "3.21611039479845519830288e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.355175150339,
+          -1058.3879109410746,
+          -1058.3879109410746,
+          -1062.6261402857808
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-3.78525747785126939711535593442e-113",
+        "-1.0077760974650058271347391013e-112",
+        "3.37258129580443609780777213007e-113"
+      ]
+    },
+    "3": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.15005541460740282,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        6.121993425162092e-22,
+        8.157195263535779e-21,
+        0.0,
+        4.384697271471558e-21
+      ],
+      "quadrature16_precision50": [
+        4.5215996042490456e-14,
+        -3.2378372221290524e-13,
+        0.0,
+        1.8449985912769785e-13
+      ],
+      "quadrature24_precision60": [
+        4.521599604249038e-14,
+        -3.237837222129047e-13,
+        0.0,
+        1.8449985912769752e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 5.048709793414476e-29,
+        "order11_13": 8.157195263535779e-21,
+        "quadrature16_24": 5.553580772755923e-28,
+        "series13_quadrature24": 1.752109295416353e-23,
+        "stored_band_absolute": 8.671317833880211e-18,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/3_1",
+          "mid/3_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          4.521599665354575e-14,
+          -3.2378373035257885e-13,
+          0.0,
+          1.8449986350306228e-13
+        ],
+        "13": [
+          4.5215996041346406e-14,
+          -3.237837221953836e-13,
+          0.0,
+          1.84499859118365e-13
+        ],
+        "7": [
+          4.538139563264982e-14,
+          -3.253200160075872e-13,
+          0.0,
+          1.8535070582011853e-13
+        ],
+        "9": [
+          4.521565332477855e-14,
+          -3.237798417491116e-13,
+          0.0,
+          1.8449774753694508e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "7.0823051592200566740131e-461",
+          "6.96338787367703377437705e-461",
+          "6.96338787367703377437705e-461",
+          "5.94586427715114498180232e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.534128428081,
+          -1059.5510617508803,
+          -1059.5510617508803,
+          -1064.3142021578358
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-8.00007400632535831800978255729e-114",
+        "-3.326887812332964771878311037e-113",
+        "1.26344020585021447003866639064e-113"
+      ]
+    },
+    "30": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.5401994925866501,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.8290529919254545e-19,
+        5.2653955701786296e-18,
+        0.0,
+        2.449718625104506e-18
+      ],
+      "quadrature16_precision50": [
+        6.394310388469347e-13,
+        -4.788963091603605e-12,
+        0.0,
+        2.402917538789356e-12
+      ],
+      "quadrature24_precision60": [
+        6.394310388469336e-13,
+        -4.788963091603597e-12,
+        0.0,
+        2.402917538789352e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 8.077935669463161e-28,
+        "order11_13": 5.2653955701786296e-18,
+        "quadrature16_24": 8.077935669463161e-27,
+        "series13_quadrature24": 2.843650732899898e-20,
+        "stored_band_absolute": 1.3738977995871387e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/30_1",
+          "mid/30_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          6.394314199619541e-13,
+          -4.78896832856266e-12,
+          0.0,
+          2.4029199754693515e-12
+        ],
+        "13": [
+          6.394310370566549e-13,
+          -4.78896306316709e-12,
+          0.0,
+          2.4029175257507264e-12
+        ],
+        "7": [
+          6.487444765498797e-13,
+          -4.878755909518287e-12,
+          0.0,
+          2.446629316825565e-12
+        ],
+        "9": [
+          6.393615893850009e-13,
+          -4.7881505199086894e-12,
+          0.0,
+          2.402532037016742e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "2.59870346803275079559448e-460",
+          "2.50681963452373215877574e-460",
+          "2.50681963452373215877574e-460",
+          "4.09876677934887690340074e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.2341301227502,
+          -1058.2701279054181,
+          -1058.2701279054181,
+          -1062.3836268203086
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-9.29270057499240962671154411943e-113",
+        "1.07621239145808957545029192624e-112",
+        "-8.78051573016893577023997945111e-113"
+      ]
+    },
+    "31": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 320.0,
+      "multiplicity_factor": 0.6002216584296113,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        2.168139816685423e-22,
+        2.967858593939566e-21,
+        0.0,
+        1.417877796670785e-21
+      ],
+      "quadrature16_precision50": [
+        1.3768888809323361e-14,
+        -1.0251873973642061e-13,
+        0.0,
+        5.2669123947839196e-14
+      ],
+      "quadrature24_precision60": [
+        1.3768888809323338e-14,
+        -1.0251873973642043e-13,
+        0.0,
+        5.266912394783911e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.524354896707238e-29,
+        "order11_13": 2.967858593939566e-21,
+        "quadrature16_24": 1.7670484276950664e-28,
+        "series13_quadrature24": 4.668983708077289e-24,
+        "stored_band_absolute": 1.0674991184467276e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          240.0423962600334,
+          319.9576037399666
+        ],
+        "panels": [
+          "mid/31_1",
+          "mid/31_-1"
+        ],
+        "rows": 160
+      },
+      "tail_by_order": {
+        "11": [
+          1.3768889025840962e-14,
+          -1.0251874269961004e-13,
+          0.0,
+          5.2669125363516834e-14
+        ],
+        "13": [
+          1.376888880902698e-14,
+          -1.0251873973175145e-13,
+          0.0,
+          5.266912394563904e-14
+        ],
+        "7": [
+          1.3829134812186439e-14,
+          -1.0309669576289927e-13,
+          0.0,
+          5.295734452003386e-14
+        ],
+        "9": [
+          1.376875501507474e-14,
+          -1.0251718113564516e-13,
+          0.0,
+          5.2668365473717287e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "4.60872397110926686275167e-921",
+          "4.51811183432966990523263e-921",
+          "4.51811183432966990523263e-921",
+          "4.12621390391579079266136e-923"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -2119.1529196246775,
+          -2119.1727764767156,
+          -2119.1727764767156,
+          -2123.8686805772722
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-9.08128768735580325163228107953e-113",
+        "-4.12934949357772983667232599303e-112",
+        "1.53118662044031139585617463671e-112"
+      ]
+    },
+    "32": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 320.0,
+      "multiplicity_factor": 0.6602438242725724,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        4.710811953171366e-22,
+        6.426770302899886e-21,
+        0.0,
+        3.1317822744573585e-21
+      ],
+      "quadrature16_precision50": [
+        1.8237022531416423e-14,
+        -1.3486499162333924e-13,
+        0.0,
+        7.053534209701485e-14
+      ],
+      "quadrature24_precision60": [
+        1.823702253141639e-14,
+        -1.3486499162333901e-13,
+        0.0,
+        7.053534209701473e-14
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 3.1554436208840472e-30,
+        "order11_13": 6.426770302899886e-21,
+        "quadrature16_24": 2.271919407036514e-28,
+        "series13_quadrature24": 1.1706670589930848e-23,
+        "stored_band_absolute": 1.816494729987161e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          240.0423962600334,
+          319.9576037399666
+        ],
+        "panels": [
+          "mid/32_1",
+          "mid/32_-1"
+        ],
+        "rows": 160
+      },
+      "tail_by_order": {
+        "11": [
+          1.8237023001752466e-14,
+          -1.3486499803840265e-13,
+          0.0,
+          7.053534522316771e-14
+        ],
+        "13": [
+          1.823702253067127e-14,
+          -1.3486499161163234e-13,
+          0.0,
+          7.053534209138543e-14
+        ],
+        "7": [
+          1.8332019243149766e-14,
+          -1.3577211643971085e-13,
+          0.0,
+          7.099593999717041e-14
+        ],
+        "9": [
+          1.823677385141219e-14,
+          -1.34862105601146e-13,
+          0.0,
+          7.053391071359931e-14
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "5.07826214528108846900534e-921",
+          "4.96992301776263689575589e-921",
+          "4.96992301776263689575589e-921",
+          "5.01073849137143391267071e-923"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -2119.05590154184,
+          -2119.077466296911,
+          -2119.077466296911,
+          -2123.674457525803
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-7.22496517518083580733228326962e-113",
+        "1.85010555546173903152670292666e-112",
+        "-1.05955468830687208812569063793e-112"
+      ]
+    },
+    "4": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.1800664975288834,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.0288661302323556e-21,
+        4.052289521951197e-20,
+        0.0,
+        2.1775880611763292e-20
+      ],
+      "quadrature16_precision50": [
+        8.253708734399481e-14,
+        -5.907208185851543e-13,
+        0.0,
+        3.3662895296457457e-13
+      ],
+      "quadrature24_precision60": [
+        8.253708734399467e-14,
+        -5.907208185851533e-13,
+        0.0,
+        3.3662895296457397e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 5.048709793414476e-29,
+        "order11_13": 4.052289521951197e-20,
+        "quadrature16_24": 1.0097419586828951e-27,
+        "series13_quadrature24": 1.0588729731665287e-22,
+        "stored_band_absolute": 2.3226052218751075e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/4_1",
+          "mid/4_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          8.253709036599457e-14,
+          -5.907208590021612e-13,
+          0.0,
+          3.3662897468407786e-13
+        ],
+        "13": [
+          8.253708733712844e-14,
+          -5.90720818479266e-13,
+          0.0,
+          3.3662895290819725e-13
+        ],
+        "7": [
+          8.298312344255969e-14,
+          -5.94870886413874e-13,
+          0.0,
+          3.389270049282168e-13
+        ],
+        "9": [
+          8.253579321958139e-14,
+          -5.907061269234753e-13,
+          0.0,
+          3.366209600715283e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "8.53221906947823647204411e-461",
+          "8.35606544841244052925246e-461",
+          "8.35606544841244052925246e-461",
+          "8.80768105328979713958225e-463"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.3478783937592,
+          -1059.3687401940863,
+          -1059.3687401940863,
+          -1063.9212738685037
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "2.93484329151151539152564879266e-113",
+        "3.72786967088513526791266625643e-113",
+        "-3.96513189686809938193508731886e-114"
+      ]
+    },
+    "5": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.21007758045036395,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.1784122973089364e-20,
+        1.5793864589182047e-19,
+        0.0,
+        8.486138447032024e-20
+      ],
+      "quadrature16_precision50": [
+        1.3513450017436812e-13,
+        -9.665572828330156e-13,
+        0.0,
+        5.508458915036919e-13
+      ],
+      "quadrature24_precision60": [
+        1.351345001743679e-13,
+        -9.66557282833014e-13,
+        0.0,
+        5.508458915036909e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.0194839173657902e-28,
+        "order11_13": 1.5793864589182047e-19,
+        "quadrature16_24": 1.6155871338926322e-27,
+        "series13_quadrature24": 5.031057484492781e-22,
+        "stored_band_absolute": 3.7003759745862664e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/5_1",
+          "mid/5_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          1.3513451192596551e-13,
+          -9.665574402685541e-13,
+          0.0,
+          5.508459760972598e-13
+        ],
+        "13": [
+          1.3513450014184254e-13,
+          -9.665572823299082e-13,
+          0.0,
+          5.508458912358754e-13
+        ],
+        "7": [
+          1.361441868979495e-13,
+          -9.75960048022762e-13,
+          0.0,
+          5.560521174603557e-13
+        ],
+        "9": [
+          1.3513057985042306e-13,
+          -9.665127199451347e-13,
+          0.0,
+          5.508216498977789e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "9.99245093718403026076998e-461",
+          "9.74874302314784728412787e-461",
+          "9.74874302314784728412787e-461",
+          "1.21853957018091488321054e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.1898979686277,
+          -1059.2145895142592,
+          -1059.2145895142592,
+          -1063.5966598951911
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-6.71420076354849834750126326137e-113",
+        "-8.22872193714612736720398263411e-113",
+        "7.57260586798814509851359686366e-114"
+      ]
+    },
+    "6": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.24008866337184454,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        3.8425198633779876e-20,
+        5.154461460171754e-19,
+        0.0,
+        2.7693567236334297e-19
+      ],
+      "quadrature16_precision50": [
+        2.05431637379029e-13,
+        -1.4682999368077464e-12,
+        0.0,
+        8.368657870933878e-13
+      ],
+      "quadrature24_precision60": [
+        2.0543163737902865e-13,
+        -1.468299936807744e-12,
+        0.0,
+        8.368657870933863e-13
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 2.0194839173657902e-28,
+        "order11_13": 5.154461460171754e-19,
+        "quadrature16_24": 2.4233807008389483e-27,
+        "series13_quadrature24": 1.991614635409359e-21,
+        "stored_band_absolute": 5.957805217522442e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/6_1",
+          "mid/6_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          2.0543167567568928e-13,
+          -1.4683004502622754e-12,
+          0.0,
+          8.368660629689823e-13
+        ],
+        "13": [
+          2.0543163725049064e-13,
+          -1.4682999348161294e-12,
+          0.0,
+          8.3686578603331e-13
+        ],
+        "7": [
+          2.0745780860639922e-13,
+          -1.4871772160346847e-12,
+          0.0,
+          8.473175123205419e-13
+        ],
+        "9": [
+          2.054214739397755e-13,
+          -1.4681843301047765e-12,
+          0.0,
+          8.368029020222759e-13
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.14630316373630995588336e-460",
+          "1.11414205978832540390033e-460",
+          "1.11414205978832540390033e-460",
+          "1.60805519739922759915144e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1059.052600653171,
+          -1059.0810581216344,
+          -1059.0810581216344,
+          -1063.3192874663407
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "3.15999756685190300401670329556e-113",
+        "1.77665865620675454458942855256e-112",
+        "-7.30329449760782122093879111504e-113"
+      ]
+    },
+    "7": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.27009974629332506,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        1.0937088506173416e-19,
+        1.4678070866412269e-18,
+        0.0,
+        7.885889857505063e-19
+      ],
+      "quadrature16_precision50": [
+        2.957960105727035e-13,
+        -2.1124361862255336e-12,
+        0.0,
+        1.2041160983991184e-12
+      ],
+      "quadrature24_precision60": [
+        2.95796010572703e-13,
+        -2.11243618622553e-12,
+        0.0,
+        1.2041160983991164e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 6.058451752097371e-28,
+        "order11_13": 1.4678070866412269e-18,
+        "quadrature16_24": 3.6350710512584224e-27,
+        "series13_quadrature24": 6.819371481734493e-21,
+        "stored_band_absolute": 7.151760919011404e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/7_1",
+          "mid/7_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          2.957961195040496e-13,
+          -2.112437647213245e-12,
+          0.0,
+          1.2041168833586473e-12
+        ],
+        "13": [
+          2.9579601013316453e-13,
+          -2.1124361794061585e-12,
+          0.0,
+          1.2041160947696616e-12
+        ],
+        "7": [
+          2.995172111754889e-13,
+          -2.1471121056500763e-12,
+          0.0,
+          1.2233146584127825e-12
+        ],
+        "9": [
+          2.9577256064078705e-13,
+          -2.1121693549928423e-12,
+          0.0,
+          1.2039709578168147e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.29439748505535484842188e-460",
+          "1.25340981726186607938787e-460",
+          "1.25340981726186607938787e-460",
+          "2.04938338967443845170037e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.9310974528833,
+          -1058.9632750859782,
+          -1058.9632750859782,
+          -1063.0767740008685
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-1.63482680450819167115083488303e-112",
+        "-2.2975419573743951489832147785e-112",
+        "3.31357576433101738916189947736e-113"
+      ]
+    },
+    "8": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.30011082921480564,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        2.794394793141136e-19,
+        3.751189022596501e-18,
+        0.0,
+        2.0153142509553074e-18
+      ],
+      "quadrature16_precision50": [
+        4.0853176350733866e-13,
+        -2.914865588116102e-12,
+        0.0,
+        1.6616986758117204e-12
+      ],
+      "quadrature24_precision60": [
+        4.08531763507338e-13,
+        -2.9148655881160972e-12,
+        0.0,
+        1.6616986758117175e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 4.0389678347315804e-28,
+        "order11_13": 3.751189022596501e-18,
+        "quadrature16_24": 4.8467614016778965e-27,
+        "series13_quadrature24": 2.074552053007766e-20,
+        "stored_band_absolute": 9.963826923325056e-17,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/8_1",
+          "mid/8_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          4.0853204161152384e-13,
+          -2.9148693185595993e-12,
+          0.0,
+          1.6617006800855616e-12
+        ],
+        "13": [
+          4.0853176217204453e-13,
+          -2.9148655673705767e-12,
+          0.0,
+          1.6616986647713106e-12
+        ],
+        "7": [
+          4.1491561721279833e-13,
+          -2.9743544320693685e-12,
+          0.0,
+          1.6946350246410835e-12
+        ],
+        "9": [
+          4.0848235302737894e-13,
+          -2.9143032645423506e-12,
+          0.0,
+          1.661392808784865e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.44352874500593905656506e-460",
+          "1.39267757473540675487541e-460",
+          "1.39267757473540675487541e-460",
+          "2.54255851352661508448225e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.8220521439293,
+          -1058.8579145703204,
+          -1058.8579145703204,
+          -1062.8611421004036
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-6.51979254443425563084437199806e-113",
+        "-1.13276919405120445716623467445e-113",
+        "-2.6935116751915255868390686618e-113"
+      ]
+    },
+    "9": {
+      "actual_angular_signs": [
+        1,
+        -1
+      ],
+      "lower": 160.0,
+      "multiplicity_factor": 0.3301219121362862,
+      "nonintegrable_coefficients_exactly_zero": true,
+      "order11_13_absolute_change": [
+        6.53894865208727e-19,
+        8.779254099636222e-18,
+        0.0,
+        4.716574482371987e-18
+      ],
+      "quadrature16_precision50": [
+        5.458723947028362e-13,
+        -3.890833674425959e-12,
+        0.0,
+        2.2183530345643973e-12
+      ],
+      "quadrature24_precision60": [
+        5.458723947028352e-13,
+        -3.8908336744259516e-12,
+        0.0,
+        2.2183530345643936e-12
+      ],
+      "residuals": {
+        "coefficient_integral_replay": 8.077935669463161e-28,
+        "order11_13": 8.779254099636222e-18,
+        "quadrature16_24": 7.270142102516845e-27,
+        "series13_quadrature24": 5.721484139158053e-20,
+        "stored_band_absolute": 1.7081853149028146e-16,
+        "stored_band_excess_over_declared_indicator": 0.0
+      },
+      "status": "PASS",
+      "stored_source_band": {
+        "allowance": "16*stored arithmetic indicator + 2*local order11/13 change; comparison control, not rigorous error bound",
+        "energies": [
+          120.0423962600334,
+          159.9576037399666
+        ],
+        "panels": [
+          "mid/9_1",
+          "mid/9_-1"
+        ],
+        "rows": 80
+      },
+      "tail_by_order": {
+        "11": [
+          5.458730449212923e-13,
+          -3.89084239646521e-12,
+          0.0,
+          2.218357720693251e-12
+        ],
+        "13": [
+          5.458723910264271e-13,
+          -3.89083361721111e-12,
+          0.0,
+          2.218353004118769e-12
+        ],
+        "7": [
+          5.562462493259079e-13,
+          -3.987493910492998e-12,
+          0.0,
+          2.271870079909453e-12
+        ],
+        "9": [
+          5.457755955843425e-13,
+          -3.889731985071724e-12,
+          0.0,
+          2.2177537903280333e-12
+        ]
+      },
+      "thermal_source_bound": {
+        "decimal_upper_bounds": [
+          "1.59369732135425835710596e-460",
+          "1.53194533220894743036295e-460",
+          "1.53194533220894743036295e-460",
+          "3.08759945726554633715019e-462"
+        ],
+        "exact_zero_components": [],
+        "natural_log_upper_bounds": [
+          -1058.7230861011506,
+          -1058.7626043905161,
+          -1058.7626043905161,
+          -1062.6669190489342
+        ]
+      },
+      "unfactored_first_derivative_numerical_diagnostic": [
+        "-4.23380452728027972042089399866e-113",
+        "-2.92010972869896673675268906362e-113",
+        "-6.56847399290656491834102467523e-114"
+      ]
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b"
+  },
+  "input_payload": {
+    "bytes": 14789190,
+    "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+    "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+  },
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "coefficient_integral_replay": 8.077935669463161e-28,
+    "order11_13": 1.950781086290792e-17,
+    "quadrature16_24": 1.2924697071141057e-26,
+    "series13_quadrature24": 1.3094778976013885e-19,
+    "stored_band_absolute": 3.1123513723767653e-16,
+    "stored_band_excess_over_declared_indicator": 0.0
+  },
+  "parent_finite_source_commit": "e8a77c69df1c6b272a58d1596a77b8f302cc8203",
+  "payload": {
+    "bytes": 109417,
+    "path": "results/development/artifacts/nsc-incoming-source-tail.9a6338a8cb11a7bccf72c577e38eb1c3e3c3c82c42056fd0a924e3bf7b713a59.npz",
+    "sha256": "9a6338a8cb11a7bccf72c577e38eb1c3e3c3c82c42056fd0a924e3bf7b713a59"
+  },
+  "regular_endpoint_identity": {
+    "c1": "L+i*m",
+    "clock": "dot(a)=A_rho/2; dot(L)=-a*L_rho; A=-a^2",
+    "powers": [
+      2,
+      2,
+      3
+    ],
+    "reduced_endpoint": "source(x)/x^2 -> 0 after P0 and ad1 subtraction",
+    "scope": "each angular sign; local existing Riccati/ad1 coefficient identity",
+    "vacuum_minus_ad1": [
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_source_tail.py --check",
+  "schema": "NSC-INCOMING-SOURCE-TAIL-v1",
+  "source_hashes": {
+    "docs/nsc-incoming-source-tail.md": "4ca110d2a9249177d778dd5f40008147e49260bc0692e7c8ac0b421fe1454156",
+    "scripts/derive_nsc_incoming_source_tail.py": "39acfa3e41133cd361a81d53f155d7ee2661d444c9e4e6f59e0593def9ffb92c",
+    "src/recursive_horizons/nsc_incoming_source_tail.py": "38d4add4f497f7e5bd3736a4d90c3edef93abb7c983315abc76c9b533fbd585e",
+    "tests/test_nsc_incoming_source_tail.py": "18b1f23cd609d94a87f1ea864024ce41b9e2d8681f93902b605a30efdacf4809"
+  },
+  "status": "PASS: all retained source tails in the original Riccati/ad4 approximation; physical remainder OPEN",
+  "thermal_source_bound": {
+    "decimal_upper_bounds": [
+      "3.97000589853294195134024e-459",
+      "3.85771688201707671100489e-459",
+      "3.85771688201707671100489e-459",
+      "5.13153831376201998569014e-461"
+    ],
+    "exact_zero_components": [],
+    "natural_log_upper_bounds": [
+      -1055.5077901037923,
+      -1055.536482157127,
+      -1055.536482157127,
+      -1059.856322389793
+    ],
+    "scope": "same horizon/incoming state correction with current-normalized compression; includes horizon coherence, not vacuum mode error",
+    "source_trace_norm": "2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))"
+  },
+  "tolerances": {
+    "coefficient_integral_replay": 3e-24,
+    "order11_13": 3e-15,
+    "quadrature16_24": 3e-20,
+    "series13_quadrature24": 3e-18,
+    "stored_band_excess_over_declared_indicator": 3e-20
+  },
+  "total_order11_13_absolute_change": [
+    4.181532584353016e-18,
+    5.654372534862766e-17,
+    0.0,
+    2.9139137643970343e-17
+  ],
+  "total_tail_by_order": {
+    "11": [
+      7.213318021290858e-12,
+      -5.299442619085571e-11,
+      0.0,
+      2.8038881583426714e-11
+    ],
+    "13": [
+      7.213313839758272e-12,
+      -5.2994369647130365e-11,
+      0.0,
+      2.8038852444289067e-11
+    ],
+    "7": [
+      7.30907007788597e-12,
+      -5.389980426786696e-11,
+      0.0,
+      2.85139719524533e-11
+    ],
+    "9": [
+      7.21259695680643e-12,
+      -5.29861318388627e-11,
+      0.0,
+      2.8034573282856994e-11
+    ]
+  }
+}

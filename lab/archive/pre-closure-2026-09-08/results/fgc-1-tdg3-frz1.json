@@ -1,0 +1,3042 @@
+{
+  "artifact_id": "FGC-1-TDG3-FRZ1",
+  "artifact_payload": {
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "actual_terminal_histories_diagnosed": false,
+      "candidate_branch_opened": false,
+      "common_grid_resampling_performed": false,
+      "continuum_surrogate_enclosure_claimed": false,
+      "historical_PROTO13_or_TDG2_result_reclassified": false,
+      "new_trajectory_authorized": false,
+      "physical_question_answered": false,
+      "replacement_temporal_admission_defined": false
+    },
+    "frozen_discriminator": {
+      "arithmetic_contract": {
+        "arithmetic_debit_is_the_only_interval_debit": true,
+        "binary64_comparator_uses_native_weighted_sum": true,
+        "binary64_primary_uses_closed_form_segment_sum": true,
+        "coefficient_and_power_disagreement_plus_outward_rounding_are_public": true,
+        "decimal_inputs_are_exact_conversions_of_binary64_phase_and_weighted_samples": true,
+        "high_decimal_precision": 96,
+        "inter_estimator_spread_is_public_but_not_an_error_enclosure": true,
+        "low_decimal_precision": 72
+      },
+      "classification_contract": {
+        "both_estimators_must_agree_before_a_combined_zero_nonzero_or_floor_label": true,
+        "combined_class_names": [
+          "native_estimators_agree_zero_contracting",
+          "native_estimators_agree_nonzero",
+          "native_estimators_agree_floor_dominated",
+          "native_estimators_agree_unresolved",
+          "native_estimators_disagree"
+        ],
+        "estimator_disagreement_is_never_rounded_or_voted_away": true,
+        "no_class_is_a_pass_fail_temporal_admission": true,
+        "no_class_retroactively_reclassifies_PROTO13_or_TDG2": true,
+        "nonzero_resolution_independent_and_nonzero_convergent_are_one_combined_nonzero_family": true,
+        "power_class_names": [
+          "contracts_to_zero_at_required_power_order",
+          "nonzero_resolution_independent_within_arithmetic_enclosure",
+          "converges_to_nonzero_native_power",
+          "arithmetic_floor_dominated",
+          "unresolved_native_power_behavior"
+        ]
+      },
+      "common_grid_resampling_allowed": false,
+      "common_proper_time_overlap_used": false,
+      "comparator_estimator": {
+        "coefficient_definition": "sum_j q_j y_j exp(-2 pi i k x_j)",
+        "continuum_enclosure_claimed": false,
+        "name": "native_trapezoid_quadrature",
+        "resampled_values_allowed": false,
+        "weight_definition": "endpoint_half_cells_and_centered_native_Voronoi_cells",
+        "weights_must_be_positive_and_sum_to_one": true
+      },
+      "comparator_point_counts": [
+        4097,
+        8193,
+        16385
+      ],
+      "estimator_names": [
+        "piecewise_linear_exact_integral",
+        "native_trapezoid_quadrature"
+      ],
+      "field_names": [
+        "alpha_minus_1",
+        "shift_over_r",
+        "lambda_minus_1",
+        "R_over_r_minus_1",
+        "phi_over_Lambda",
+        "chi_over_Lambda"
+      ],
+      "minimum_history_difference_order": "3/2",
+      "minimum_zero_power_order": "3",
+      "native_phase_interval": [
+        0,
+        1
+      ],
+      "normalized_coefficient_floor": "1.5625e-32",
+      "phase_map": "(tau-tau_0)/(tau_63-tau_0)_per_native_history",
+      "power_measures": [
+        "phase_field_tail_power",
+        "phase_derivative_tail_power"
+      ],
+      "primary_estimator": {
+        "closed_form_segment_integral_required": true,
+        "coefficient_definition": "integral_0^1 y_PL(x) exp(-2 pi i k x) dx",
+        "continuum_enclosure_claimed": false,
+        "name": "piecewise_linear_exact_integral",
+        "resampled_values_allowed": false,
+        "weighted_sample_surrogate": "piecewise_linear_interpolant_of_native_compact_windowed_samples"
+      },
+      "primary_point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "replacement_admission_authorized": false,
+      "sample_count": 64,
+      "taper_fraction": "1/8",
+      "top_bins": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "tracer_count": 48
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "8585dbef39a1e706390a17a002cc403445e18cf2",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "source_checkpoint_history_arrays_loaded": false,
+      "source_checkpoint_present": true,
+      "source_checkpoint_resumed": false,
+      "source_checkpoint_sha256": "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97",
+      "source_compact_result_verified_without_raw_reproduction": true,
+      "source_diagnostic_record_read": true,
+      "state_advanced": false,
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-tdg2-pref17.toml": "3f2ec6acf07779c4ae0d5b47fe235f66724d4f3b86975eb391dfae02d325c000",
+        "docs/fgc-tdg2-pref17.md": "8495b96c84bb5cba4af869701c732fd40793b0cc9b951990f1a71a64b129cd01",
+        "results/fgc-1-tdg2-pref17.json": "1a0d9ee99b2eb2f15f10b0625c1cbfe63db15d26692ff5f7b1975d370db593a3",
+        "scripts/reproduce_fgc_tdg2_pref17.py": "f0a939c5f46a0e4fb57b9118e6107788c5f585555802a07a5e8324a63111e776",
+        "src/recursive_horizons/fgc/evolution/tdg2_absolute_tail_diagnosis.py": "d8332ab5b6a3d3ba9db3a129e71a4147c88a3da5c89624914f2f9c757ac74595"
+      }
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "continuum_enclosure_promotion_rejected": true,
+      "decimal_precision_mutation_rejected": true,
+      "estimator_config_mutation_rejected": true,
+      "minimum_order_mutation_rejected": true,
+      "one_bit_signal_mutation_detected": true,
+      "replacement_gate_promotion_rejected": true,
+      "resampling_promotion_rejected": true,
+      "source_hash_mutation_rejected": true,
+      "synthetic_preflight_complete": true,
+      "top_bin_mutation_rejected": true,
+      "unknown_estimator_rejected": true
+    },
+    "proof_contract": {
+      "all_seven_synthetic_controls_must_match": true,
+      "both_native_estimators_must_consume_all_64_samples_without_resampling": true,
+      "canonical_hash_bound_result_required": true,
+      "native_quadrature_coefficients_must_match_independent_decimal_references": true,
+      "one_bit_signal_estimator_bin_order_precision_hash_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "piecewise_linear_coefficients_must_match_independent_decimal_references": true,
+      "source_checkpoint_may_be_hashed_but_not_loaded": true,
+      "source_commit_and_all_tracked_blobs_must_match": true,
+      "source_compact_result_must_preserve_the_mixed_TDG2_outcome": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG2_actual_histories_diagnosed": true,
+      "TDG3_actual_history_execution_authorized_after_freeze_commit": true,
+      "TDG3_actual_history_execution_completed": false,
+      "TDG3_interpolation_ownership_discriminator_frozen": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": false
+    },
+    "synthetic_preflight": {
+      "actual_terminal_histories_consumed": false,
+      "all_control_classes_separated": true,
+      "common_grid_interpolation_owner_control": {
+        "TDG2_classifications": {
+          "derivative_tail_power": "instrument_floor_or_interpolation_enclosure_dominated",
+          "field_tail_power": "instrument_floor_or_interpolation_enclosure_dominated"
+        },
+        "TDG2_identifies_interpolation_owner": true,
+        "TDG3_combined_classifications": {
+          "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+          "phase_field_tail_power": "native_estimators_agree_nonzero"
+        },
+        "TDG3_native_estimators_agree_nonzero": true
+      },
+      "common_grid_resampling_performed": false,
+      "continuum_surrogate_enclosure_claimed": false,
+      "controls": {
+        "common_grid_interpolation_owner": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 1.4394825328907676e-12,
+                  "difference_order_lower_bound": 2.1967509577975224,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    1.4896858531592297e-12,
+                    1.4521486024285656e-12,
+                    1.4439606647213457e-12
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    1.489685853159231e-12,
+                    1.452148602428566e-12,
+                    1.4439606647213465e-12
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.4896858531592325e-12,
+                    1.4521486024285664e-12,
+                    1.4439606647213473e-12
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.03681902949588483,
+                    0.00815765394841509
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 4.3348184318043674e-17,
+                  "difference_order_lower_bound": 2.1378022953752134,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    4.4813025828530414e-17,
+                    4.372916194176322e-17,
+                    4.348288024864987e-17
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    4.4813025828530463e-17,
+                    4.3729161941763247e-17,
+                    4.34828802486499e-17
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    4.481302582853051e-17,
+                    4.372916194176327e-17,
+                    4.348288024864993e-17
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.03532244245402693,
+                    0.008148194054067354
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 3.191186217369618e-13,
+                  "difference_order_lower_bound": 1.7261259232802353,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    3.3039882296244707e-13,
+                    3.227125390510832e-13,
+                    3.203892633888812e-13
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    3.3039882296244737e-13,
+                    3.2271253905108335e-13,
+                    3.2038926338888134e-13
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    3.3039882296244767e-13,
+                    3.227125390510835e-13,
+                    3.203892633888815e-13
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.03395891212416589,
+                    0.01042383288358838
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 9.613301386897502e-18,
+                  "difference_order_lower_bound": 1.6921259938552324,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    9.947480267795286e-18,
+                    9.721489130853938e-18,
+                    9.651551530593933e-18
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    9.947480267795297e-18,
+                    9.721489130853943e-18,
+                    9.651551530593938e-18
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    9.947480267795307e-18,
+                    9.721489130853948e-18,
+                    9.651551530593943e-18
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.033153810368394536,
+                    0.01041644098642396
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+              "phase_field_tail_power": "native_estimators_agree_nonzero"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 4.689541561607849e-09,
+                  "coefficient_arithmetic_debit": 2.2602738488138365e-23,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.01619058678307994,
+                  "minimum_normalized_spacing": 0.015366802360256449,
+                  "normalized_spacing_ratio": 1.0536080573896145,
+                  "peak_coefficient_amplitude": 4.689541561607851e-09,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.2116903504194743e-27,
+                    "binary64_value": 1.48968585315923e-12,
+                    "lower": 1.4896858531592297e-12,
+                    "observed": 1.489685853159231e-12,
+                    "upper": 1.4896858531592325e-12
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 4.314083075427409e-32,
+                    "binary64_value": 4.4813025828530426e-17,
+                    "lower": 4.4813025828530414e-17,
+                    "observed": 4.4813025828530463e-17,
+                    "upper": 4.481302582853051e-17
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 4.642691436101906e-09,
+                  "coefficient_arithmetic_debit": 1.6823467060851044e-23,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.01603180132804785,
+                  "minimum_normalized_spacing": 0.015619909116636244,
+                  "normalized_spacing_ratio": 1.0263696932124218,
+                  "peak_coefficient_amplitude": 4.642691436101906e-09,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 2.0194839173657907e-28,
+                    "binary64_value": 1.452148602428566e-12,
+                    "lower": 1.4521486024285656e-12,
+                    "observed": 1.452148602428566e-12,
+                    "upper": 1.4521486024285664e-12
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.8488927466117467e-32,
+                    "binary64_value": 4.3729161941763234e-17,
+                    "lower": 4.372916194176322e-17,
+                    "observed": 4.3729161941763247e-17,
+                    "upper": 4.372916194176327e-17
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 4.627458662164821e-09,
+                  "coefficient_arithmetic_debit": 2.070373997795144e-23,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.01595240860053193,
+                  "minimum_normalized_spacing": 0.01574646249482603,
+                  "normalized_spacing_ratio": 1.0130788807818627,
+                  "peak_coefficient_amplitude": 4.627458662164822e-09,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.058451752097372e-28,
+                    "binary64_value": 1.443960664721346e-12,
+                    "lower": 1.4439606647213457e-12,
+                    "observed": 1.4439606647213465e-12,
+                    "upper": 1.4439606647213473e-12
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 2.4651903288156624e-32,
+                    "binary64_value": 4.348288024864988e-17,
+                    "lower": 4.348288024864987e-17,
+                    "observed": 4.34828802486499e-17,
+                    "upper": 4.348288024864993e-17
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 2.2067872325753113e-09,
+                  "coefficient_arithmetic_debit": 9.591217866934917e-24,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.01619058678307994,
+                  "minimum_normalized_spacing": 0.015366802360256449,
+                  "normalized_spacing_ratio": 1.0536080573896145,
+                  "peak_coefficient_amplitude": 2.206787232575312e-09,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 2.5243548967072382e-28,
+                    "binary64_value": 3.3039882296244717e-13,
+                    "lower": 3.3039882296244707e-13,
+                    "observed": 3.3039882296244737e-13,
+                    "upper": 3.3039882296244767e-13
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 9.244463733058733e-33,
+                    "binary64_value": 9.947480267795289e-18,
+                    "lower": 9.947480267795286e-18,
+                    "observed": 9.947480267795297e-18,
+                    "upper": 9.947480267795307e-18
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 2.1860965922949183e-09,
+                  "coefficient_arithmetic_debit": 7.587234280791415e-24,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.01603180132804785,
+                  "minimum_normalized_spacing": 0.015619909116636244,
+                  "normalized_spacing_ratio": 1.0263696932124218,
+                  "peak_coefficient_amplitude": 2.186096592294918e-09,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.0097419586828953e-28,
+                    "binary64_value": 3.227125390510834e-13,
+                    "lower": 3.227125390510832e-13,
+                    "observed": 3.2271253905108335e-13,
+                    "upper": 3.227125390510835e-13
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 3.081487911019578e-33,
+                    "binary64_value": 9.721489130853945e-18,
+                    "lower": 9.721489130853938e-18,
+                    "observed": 9.721489130853943e-18,
+                    "upper": 9.721489130853948e-18
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 2.1788054587796756e-09,
+                  "coefficient_arithmetic_debit": 8.592633432068711e-24,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.01595240860053193,
+                  "minimum_normalized_spacing": 0.01574646249482603,
+                  "normalized_spacing_ratio": 1.0130788807818627,
+                  "peak_coefficient_amplitude": 2.1788054587796756e-09,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.0097419586828953e-28,
+                    "binary64_value": 3.203892633888813e-13,
+                    "lower": 3.203892633888812e-13,
+                    "observed": 3.2038926338888134e-13,
+                    "upper": 3.203892633888815e-13
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 3.081487911019578e-33,
+                    "binary64_value": 9.651551530593937e-18,
+                    "lower": 9.651551530593933e-18,
+                    "observed": 9.651551530593938e-18,
+                    "upper": 9.651551530593943e-18
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_nonzero",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+            "phase_field_tail_power": "native_estimators_agree_nonzero"
+          }
+        },
+        "exact_zero": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.5e-323,
+                    1.5e-323,
+                    1.5e-323
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.5e-323,
+                    1.5e-323,
+                    1.5e-323
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.5e-323,
+                    1.5e-323,
+                    1.5e-323
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.5e-323,
+                    1.5e-323,
+                    1.5e-323
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_floor_dominated",
+              "phase_field_tail_power": "native_estimators_agree_floor_dominated"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0,
+                  "coefficient_arithmetic_debit": 1e-323,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0,
+                  "coefficient_arithmetic_debit": 1e-323,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0,
+                  "coefficient_arithmetic_debit": 1e-323,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0,
+                  "coefficient_arithmetic_debit": 1e-323,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0,
+                  "coefficient_arithmetic_debit": 1e-323,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0,
+                  "coefficient_arithmetic_debit": 1e-323,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1e-323,
+                    "binary64_value": 0.0,
+                    "lower": 0.0,
+                    "observed": 0.0,
+                    "upper": 1.5e-323
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_floor_dominated",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_floor_dominated",
+            "phase_field_tail_power": "native_estimators_agree_floor_dominated"
+          }
+        },
+        "nonzero_convergent": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 0.014008873947013278,
+                  "difference_order_lower_bound": 2.154170930127892,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.022376272469551168,
+                    0.016166856859250723,
+                    0.01477183612247714
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.022376272469551244,
+                    0.016166856859250775,
+                    0.014771836122477188
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.02237627246955132,
+                    0.016166856859250827,
+                    0.014771836122477237
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.4689305072740363,
+                    0.1301900564437605
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 4.2207872671239305e-07,
+                  "difference_order_lower_bound": 2.1541709301278864,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    6.741832804150066e-07,
+                    4.870974200998424e-07,
+                    4.4506630621146923e-07
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    6.741832804150088e-07,
+                    4.870974200998439e-07,
+                    4.4506630621147066e-07
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    6.74183280415011e-07,
+                    4.870974200998454e-07,
+                    4.450663062114721e-07
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.4689305072740365,
+                    0.13019005644376108
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 0.0031064345395178244,
+                  "difference_order_lower_bound": 2.154170930127855,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.004961885296990296,
+                    0.0035849621270754905,
+                    0.0032756195905912517
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.004961885296990309,
+                    0.0035849621270754987,
+                    0.003275619590591259
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.004961885296990322,
+                    0.003584962127075507,
+                    0.0032756195905912664
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.4689305072740386,
+                    0.13019005644376314
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "converges_to_nonzero_native_power",
+                  "conservative_native_surrogate_lower_bound": 9.360796563360695e-08,
+                  "difference_order_lower_bound": 2.154170930127851,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    1.495193226993484e-07,
+                    1.0802771065027925e-07,
+                    9.870611537574175e-08
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    1.4951932269934876e-07,
+                    1.0802771065027949e-07,
+                    9.870611537574197e-08
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.4951932269934913e-07,
+                    1.0802771065027973e-07,
+                    9.870611537574218e-08
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    0.46893050727403907,
+                    0.13019005644376344
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+              "phase_field_tail_power": "native_estimators_agree_nonzero"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.000576546513241627,
+                  "coefficient_arithmetic_debit": 1.7369446386560104e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0005765465132416261,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 7.285838599102591e-17,
+                    "binary64_value": 0.022376272469551314,
+                    "lower": 0.022376272469551168,
+                    "observed": 0.022376272469551244,
+                    "upper": 0.02237627246955132
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 2.1175823681357512e-21,
+                    "binary64_value": 6.741832804150108e-07,
+                    "lower": 6.741832804150066e-07,
+                    "observed": 6.741832804150088e-07,
+                    "upper": 6.74183280415011e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0004900645362553829,
+                  "coefficient_arithmetic_debit": 1.4800745887207082e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0004900645362553822,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.8572257327350605e-17,
+                    "binary64_value": 0.01616685685925082,
+                    "lower": 0.016166856859250723,
+                    "observed": 0.016166856859250775,
+                    "upper": 0.016166856859250827
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3764285392882382e-21,
+                    "binary64_value": 4.870974200998452e-07,
+                    "lower": 4.870974200998424e-07,
+                    "observed": 4.870974200998439e-07,
+                    "upper": 4.870974200998454e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0004684440420088219,
+                  "coefficient_arithmetic_debit": 1.3712872249830897e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.00046844404200882127,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.68375338513738e-17,
+                    "binary64_value": 0.014771836122477233,
+                    "lower": 0.01477183612247714,
+                    "observed": 0.014771836122477188,
+                    "upper": 0.014771836122477237
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3764285392882382e-21,
+                    "binary64_value": 4.45066306211472e-07,
+                    "lower": 4.4506630621146923e-07,
+                    "observed": 4.4506630621147066e-07,
+                    "upper": 4.450663062114721e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0002714266425080173,
+                  "coefficient_arithmetic_debit": 8.196811855013483e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.000271426642508017,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.2143064331837651e-17,
+                    "binary64_value": 0.0049618852969903204,
+                    "lower": 0.004961885296990296,
+                    "observed": 0.004961885296990309,
+                    "upper": 0.004961885296990322
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 3.4410713482205956e-22,
+                    "binary64_value": 1.4951932269934908e-07,
+                    "lower": 1.495193226993484e-07,
+                    "observed": 1.4951932269934876e-07,
+                    "upper": 1.4951932269934913e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0002307126461318147,
+                  "coefficient_arithmetic_debit": 6.828715884156767e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.00023071264613181447,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 7.806255641895633e-18,
+                    "binary64_value": 0.003584962127075506,
+                    "lower": 0.0035849621270754905,
+                    "observed": 0.0035849621270754987,
+                    "upper": 0.003584962127075507
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 2.2499312661442357e-22,
+                    "binary64_value": 1.080277106502797e-07,
+                    "lower": 1.0802771065027925e-07,
+                    "observed": 1.0802771065027949e-07,
+                    "upper": 1.0802771065027973e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00022053414703776403,
+                  "coefficient_arithmetic_debit": 6.440835365551805e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.00022053414703776381,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.93889390390723e-18,
+                    "binary64_value": 0.0032756195905912656,
+                    "lower": 0.0032756195905912517,
+                    "observed": 0.003275619590591259,
+                    "upper": 0.0032756195905912664
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.9852334701272667e-22,
+                    "binary64_value": 9.870611537574215e-08,
+                    "lower": 9.870611537574175e-08,
+                    "observed": 9.870611537574197e-08,
+                    "upper": 9.870611537574218e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_nonzero",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+            "phase_field_tail_power": "native_estimators_agree_nonzero"
+          }
+        },
+        "nonzero_resolution_independent": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "nonzero_resolution_independent_within_arithmetic_enclosure",
+                  "conservative_native_surrogate_lower_bound": 0.01432081438051275,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.01432081438051275,
+                    0.01432081438051275,
+                    0.01432081438051275
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.014320814380512796,
+                    0.014320814380512796,
+                    0.014320814380512796
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.014320814380512843,
+                    0.014320814380512843,
+                    0.014320814380512843
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "nonzero_resolution_independent_within_arithmetic_enclosure",
+                  "conservative_native_surrogate_lower_bound": 4.3147729946560426e-07,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    4.3147729946560426e-07,
+                    4.3147729946560426e-07,
+                    4.3147729946560426e-07
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    4.3147729946560564e-07,
+                    4.3147729946560564e-07,
+                    4.3147729946560564e-07
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    4.31477299465607e-07,
+                    4.31477299465607e-07,
+                    4.31477299465607e-07
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "nonzero_resolution_independent_within_arithmetic_enclosure",
+                  "conservative_native_surrogate_lower_bound": 0.0031756065900737907,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.0031756065900737907,
+                    0.0031756065900737907,
+                    0.0031756065900737907
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.003175606590073798,
+                    0.003175606590073798,
+                    0.003175606590073798
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.0031756065900738054,
+                    0.0031756065900738054,
+                    0.0031756065900738054
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "nonzero_resolution_independent_within_arithmetic_enclosure",
+                  "conservative_native_surrogate_lower_bound": 9.569236652758299e-08,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    9.569236652758299e-08,
+                    9.569236652758299e-08,
+                    9.569236652758299e-08
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    9.56923665275832e-08,
+                    9.56923665275832e-08,
+                    9.56923665275832e-08
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    9.569236652758342e-08,
+                    9.569236652758342e-08,
+                    9.569236652758342e-08
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+              "phase_field_tail_power": "native_estimators_agree_nonzero"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00046123721059330156,
+                  "coefficient_arithmetic_debit": 1.3540474066948215e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0004612372105933009,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.510281037539699e-17,
+                    "binary64_value": 0.01432081438051284,
+                    "lower": 0.01432081438051275,
+                    "observed": 0.014320814380512796,
+                    "upper": 0.014320814380512843
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3234889800848445e-21,
+                    "binary64_value": 4.314772994656069e-07,
+                    "lower": 4.3147729946560426e-07,
+                    "observed": 4.3147729946560564e-07,
+                    "upper": 4.31477299465607e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00046123721059330156,
+                  "coefficient_arithmetic_debit": 1.3540474066948215e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0004612372105933009,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.510281037539699e-17,
+                    "binary64_value": 0.01432081438051284,
+                    "lower": 0.01432081438051275,
+                    "observed": 0.014320814380512796,
+                    "upper": 0.014320814380512843
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3234889800848445e-21,
+                    "binary64_value": 4.314772994656069e-07,
+                    "lower": 4.3147729946560426e-07,
+                    "observed": 4.3147729946560564e-07,
+                    "upper": 4.31477299465607e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00046123721059330156,
+                  "coefficient_arithmetic_debit": 1.3540474066948215e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0004612372105933009,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.510281037539699e-17,
+                    "binary64_value": 0.01432081438051284,
+                    "lower": 0.01432081438051275,
+                    "observed": 0.014320814380512796,
+                    "upper": 0.014320814380512843
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3234889800848445e-21,
+                    "binary64_value": 4.314772994656069e-07,
+                    "lower": 4.3147729946560426e-07,
+                    "observed": 4.3147729946560564e-07,
+                    "upper": 4.31477299465607e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00021714131400641382,
+                  "coefficient_arithmetic_debit": 6.352964250460157e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0002171413140064136,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.93889390390723e-18,
+                    "binary64_value": 0.0031756065900738046,
+                    "lower": 0.0031756065900737907,
+                    "observed": 0.003175606590073798,
+                    "upper": 0.0031756065900738054
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.9852334701272667e-22,
+                    "binary64_value": 9.569236652758339e-08,
+                    "lower": 9.569236652758299e-08,
+                    "observed": 9.56923665275832e-08,
+                    "upper": 9.569236652758342e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00021714131400641382,
+                  "coefficient_arithmetic_debit": 6.352964250460157e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0002171413140064136,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.93889390390723e-18,
+                    "binary64_value": 0.0031756065900738046,
+                    "lower": 0.0031756065900737907,
+                    "observed": 0.003175606590073798,
+                    "upper": 0.0031756065900738054
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.9852334701272667e-22,
+                    "binary64_value": 9.569236652758339e-08,
+                    "lower": 9.569236652758299e-08,
+                    "observed": 9.56923665275832e-08,
+                    "upper": 9.569236652758342e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00021714131400641382,
+                  "coefficient_arithmetic_debit": 6.352964250460157e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0002171413140064136,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.93889390390723e-18,
+                    "binary64_value": 0.0031756065900738046,
+                    "lower": 0.0031756065900737907,
+                    "observed": 0.003175606590073798,
+                    "upper": 0.0031756065900738054
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.9852334701272667e-22,
+                    "binary64_value": 9.569236652758339e-08,
+                    "lower": 9.569236652758299e-08,
+                    "observed": 9.56923665275832e-08,
+                    "upper": 9.569236652758342e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_nonzero",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_nonzero",
+            "phase_field_tail_power": "native_estimators_agree_nonzero"
+          }
+        },
+        "power_contracts_to_zero": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "contracts_to_zero_at_required_power_order",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.01432081438051275,
+                    0.0002237627246955117,
+                    3.4962925733673704e-06
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.014320814380512796,
+                    0.00022376272469551244,
+                    3.496292573367382e-06
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.014320814380512843,
+                    0.00022376272469551317,
+                    3.4962925733673933e-06
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    5.999999999999991,
+                    5.999999999999991
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "contracts_to_zero_at_required_power_order",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    4.3147729946560426e-07,
+                    6.741832804150067e-09,
+                    1.0534113756484479e-10
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    4.3147729946560564e-07,
+                    6.741832804150088e-09,
+                    1.0534113756484513e-10
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    4.31477299465607e-07,
+                    6.74183280415011e-09,
+                    1.0534113756484546e-10
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    5.999999999999991,
+                    5.999999999999991
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "contracts_to_zero_at_required_power_order",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.0031756065900737907,
+                    4.961885296990298e-05,
+                    7.752945776547341e-07
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.003175606590073798,
+                    4.9618852969903095e-05,
+                    7.752945776547359e-07
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.0031756065900738054,
+                    4.961885296990321e-05,
+                    7.752945776547377e-07
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    5.999999999999993,
+                    5.999999999999993
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "contracts_to_zero_at_required_power_order",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    9.569236652758299e-08,
+                    1.4951932269934843e-09,
+                    2.3362394171773192e-11
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    9.56923665275832e-08,
+                    1.4951932269934876e-09,
+                    2.3362394171773243e-11
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    9.569236652758342e-08,
+                    1.4951932269934909e-09,
+                    2.3362394171773295e-11
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    5.999999999999993,
+                    5.999999999999993
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_zero_contracting",
+              "phase_field_tail_power": "native_estimators_agree_zero_contracting"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00046123721059330156,
+                  "coefficient_arithmetic_debit": 1.3540474066948215e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0004612372105933009,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.510281037539699e-17,
+                    "binary64_value": 0.01432081438051284,
+                    "lower": 0.01432081438051275,
+                    "observed": 0.014320814380512796,
+                    "upper": 0.014320814380512843
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3234889800848445e-21,
+                    "binary64_value": 4.314772994656069e-07,
+                    "lower": 4.3147729946560426e-07,
+                    "observed": 4.3147729946560564e-07,
+                    "upper": 4.31477299465607e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 5.7654651324162695e-05,
+                  "coefficient_arithmetic_debit": 1.692559258368527e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 5.7654651324162614e-05,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 7.04731412115578e-19,
+                    "binary64_value": 0.00022376272469551312,
+                    "lower": 0.0002237627246955117,
+                    "observed": 0.00022376272469551244,
+                    "upper": 0.00022376272469551317
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 2.0679515313825695e-23,
+                    "binary64_value": 6.741832804150108e-09,
+                    "lower": 6.741832804150067e-09,
+                    "observed": 6.741832804150088e-09,
+                    "upper": 6.74183280415011e-09
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 7.206831415520337e-06,
+                  "coefficient_arithmetic_debit": 2.1156990729606587e-20,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 7.206831415520327e-06,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.1011428314305906e-20,
+                    "binary64_value": 3.4962925733673924e-06,
+                    "lower": 3.4962925733673704e-06,
+                    "observed": 3.496292573367382e-06,
+                    "upper": 3.4962925733673933e-06
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 3.231174267785265e-25,
+                    "binary64_value": 1.0534113756484544e-10,
+                    "lower": 1.0534113756484479e-10,
+                    "observed": 1.0534113756484513e-10,
+                    "upper": 1.0534113756484546e-10
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00021714131400641382,
+                  "coefficient_arithmetic_debit": 6.352964250460157e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0002171413140064136,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.93889390390723e-18,
+                    "binary64_value": 0.0031756065900738046,
+                    "lower": 0.0031756065900737907,
+                    "observed": 0.003175606590073798,
+                    "upper": 0.0031756065900738054
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.9852334701272667e-22,
+                    "binary64_value": 9.569236652758339e-08,
+                    "lower": 9.569236652758299e-08,
+                    "observed": 9.56923665275832e-08,
+                    "upper": 9.569236652758342e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 2.7142664250801728e-05,
+                  "coefficient_arithmetic_debit": 7.941205313075196e-20,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 2.71426642508017e-05,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.0842021724855047e-19,
+                    "binary64_value": 4.9618852969903197e-05,
+                    "lower": 4.961885296990298e-05,
+                    "observed": 4.9618852969903095e-05,
+                    "upper": 4.961885296990321e-05
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 3.101927297073854e-24,
+                    "binary64_value": 1.4951932269934905e-09,
+                    "lower": 1.4951932269934843e-09,
+                    "observed": 1.4951932269934876e-09,
+                    "upper": 1.4951932269934909e-09
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 3.392833031350216e-06,
+                  "coefficient_arithmetic_debit": 9.926506641343996e-21,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 3.3928330313502126e-06,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.694065894508601e-21,
+                    "binary64_value": 7.752945776547374e-07,
+                    "lower": 7.752945776547341e-07,
+                    "observed": 7.752945776547359e-07,
+                    "upper": 7.752945776547377e-07
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 4.846761401677897e-26,
+                    "binary64_value": 2.336239417177329e-11,
+                    "lower": 2.3362394171773192e-11,
+                    "observed": 2.3362394171773243e-11,
+                    "upper": 2.3362394171773295e-11
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_zero_contracting",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_zero_contracting",
+            "phase_field_tail_power": "native_estimators_agree_zero_contracting"
+          }
+        },
+        "subfloor_nonzero": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    1.4320814380512747e-76,
+                    1.4320814380512747e-76,
+                    1.4320814380512747e-76
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    1.4320814380512796e-76,
+                    1.4320814380512796e-76,
+                    1.4320814380512796e-76
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    1.4320814380512845e-76,
+                    1.4320814380512845e-76,
+                    1.4320814380512845e-76
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    4.314772994656042e-81,
+                    4.314772994656042e-81,
+                    4.314772994656042e-81
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    4.314772994656056e-81,
+                    4.314772994656056e-81,
+                    4.314772994656056e-81
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    4.31477299465607e-81,
+                    4.31477299465607e-81,
+                    4.31477299465607e-81
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    3.1756065900737906e-77,
+                    3.1756065900737906e-77,
+                    3.1756065900737906e-77
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    3.1756065900737975e-77,
+                    3.1756065900737975e-77,
+                    3.1756065900737975e-77
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    3.1756065900738044e-77,
+                    3.1756065900738044e-77,
+                    3.1756065900738044e-77
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "arithmetic_floor_dominated",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": true,
+                  "lower_bounds": [
+                    9.5692366527583e-82,
+                    9.5692366527583e-82,
+                    9.5692366527583e-82
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    9.56923665275832e-82,
+                    9.56923665275832e-82,
+                    9.56923665275832e-82
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    9.56923665275834e-82,
+                    9.56923665275834e-82,
+                    9.56923665275834e-82
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    null,
+                    null
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_floor_dominated",
+              "phase_field_tail_power": "native_estimators_agree_floor_dominated"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 4.612372105933015e-41,
+                  "coefficient_arithmetic_debit": 1.4050644341217473e-55,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 4.612372105933009e-41,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.602275123716619e-91,
+                    "binary64_value": 1.432081438051284e-76,
+                    "lower": 1.4320814380512747e-76,
+                    "observed": 1.4320814380512796e-76,
+                    "upper": 1.4320814380512845e-76
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3108693793138157e-95,
+                    "binary64_value": 4.314772994656068e-81,
+                    "lower": 4.314772994656042e-81,
+                    "observed": 4.314772994656056e-81,
+                    "upper": 4.31477299465607e-81
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 4.612372105933015e-41,
+                  "coefficient_arithmetic_debit": 1.4050644341217473e-55,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 4.612372105933009e-41,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.602275123716619e-91,
+                    "binary64_value": 1.432081438051284e-76,
+                    "lower": 1.4320814380512747e-76,
+                    "observed": 1.4320814380512796e-76,
+                    "upper": 1.4320814380512845e-76
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3108693793138157e-95,
+                    "binary64_value": 4.314772994656068e-81,
+                    "lower": 4.314772994656042e-81,
+                    "observed": 4.314772994656056e-81,
+                    "upper": 4.31477299465607e-81
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 4.612372105933015e-41,
+                  "coefficient_arithmetic_debit": 1.4050644341217473e-55,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 4.612372105933009e-41,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.602275123716619e-91,
+                    "binary64_value": 1.432081438051284e-76,
+                    "lower": 1.4320814380512747e-76,
+                    "observed": 1.4320814380512796e-76,
+                    "upper": 1.4320814380512845e-76
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3108693793138157e-95,
+                    "binary64_value": 4.314772994656068e-81,
+                    "lower": 4.314772994656042e-81,
+                    "observed": 4.314772994656056e-81,
+                    "upper": 4.31477299465607e-81
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 2.171413140064138e-41,
+                  "coefficient_arithmetic_debit": 6.237127478714791e-56,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 2.1714131400641358e-41,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.519889758598544e-92,
+                    "binary64_value": 3.1756065900738036e-77,
+                    "lower": 3.1756065900737906e-77,
+                    "observed": 3.1756065900737975e-77,
+                    "upper": 3.1756065900738044e-77
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.8726705418768797e-96,
+                    "binary64_value": 9.569236652758338e-82,
+                    "lower": 9.5692366527583e-82,
+                    "observed": 9.56923665275832e-82,
+                    "upper": 9.56923665275834e-82
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 2.171413140064138e-41,
+                  "coefficient_arithmetic_debit": 6.237127478714791e-56,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 2.1714131400641358e-41,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.519889758598544e-92,
+                    "binary64_value": 3.1756065900738036e-77,
+                    "lower": 3.1756065900737906e-77,
+                    "observed": 3.1756065900737975e-77,
+                    "upper": 3.1756065900738044e-77
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.8726705418768797e-96,
+                    "binary64_value": 9.569236652758338e-82,
+                    "lower": 9.5692366527583e-82,
+                    "observed": 9.56923665275832e-82,
+                    "upper": 9.56923665275834e-82
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 2.171413140064138e-41,
+                  "coefficient_arithmetic_debit": 6.237127478714791e-56,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 2.1714131400641358e-41,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.519889758598544e-92,
+                    "binary64_value": 3.1756065900738036e-77,
+                    "lower": 3.1756065900737906e-77,
+                    "observed": 3.1756065900737975e-77,
+                    "upper": 3.1756065900738044e-77
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.8726705418768797e-96,
+                    "binary64_value": 9.569236652758338e-82,
+                    "lower": 9.5692366527583e-82,
+                    "observed": 9.56923665275832e-82,
+                    "upper": 9.56923665275834e-82
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": true,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_floor_dominated",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_floor_dominated",
+            "phase_field_tail_power": "native_estimators_agree_floor_dominated"
+          }
+        },
+        "unresolved_nonmonotone": {
+          "classification_matched": true,
+          "diagnosis": {
+            "classification_is_not_a_replacement_admission": true,
+            "classifications": {
+              "native_trapezoid_quadrature": {
+                "phase_derivative_tail_power": {
+                  "classification": "unresolved_native_power_behavior",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.01432081438051275,
+                    0.0035802035951281873,
+                    0.008055458089038419
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.014320814380512796,
+                    0.003580203595128199,
+                    0.008055458089038448
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.014320814380512843,
+                    0.0035802035951282107,
+                    0.008055458089038478
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    1.9999999999999907,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "unresolved_native_power_behavior",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "native_trapezoid_quadrature",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    4.3147729946560426e-07,
+                    1.0786932486640107e-07,
+                    2.4270598094940234e-07
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    4.3147729946560564e-07,
+                    1.0786932486640141e-07,
+                    2.427059809494032e-07
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    4.31477299465607e-07,
+                    1.0786932486640175e-07,
+                    2.4270598094940404e-07
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    1.9999999999999911,
+                    null
+                  ]
+                }
+              },
+              "piecewise_linear_exact_integral": {
+                "phase_derivative_tail_power": {
+                  "classification": "unresolved_native_power_behavior",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    0.0031756065900737907,
+                    0.0007939016475184477,
+                    0.0017862787069165074
+                  ],
+                  "measure": "phase_derivative_tail_power",
+                  "observed_powers": [
+                    0.003175606590073798,
+                    0.0007939016475184495,
+                    0.0017862787069165113
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    0.0031756065900738054,
+                    0.0007939016475184514,
+                    0.0017862787069165152
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    1.9999999999999933,
+                    null
+                  ]
+                },
+                "phase_field_tail_power": {
+                  "classification": "unresolved_native_power_behavior",
+                  "conservative_native_surrogate_lower_bound": null,
+                  "difference_order_lower_bound": null,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "every_resolution_below_declared_amplitude_floor": false,
+                  "lower_bounds": [
+                    9.569236652758299e-08,
+                    2.3923091631895748e-08,
+                    5.382695617176545e-08
+                  ],
+                  "measure": "phase_field_tail_power",
+                  "observed_powers": [
+                    9.56923665275832e-08,
+                    2.39230916318958e-08,
+                    5.382695617176556e-08
+                  ],
+                  "point_counts": [
+                    2049,
+                    4097,
+                    8193
+                  ],
+                  "refinement_ratio": 2.0,
+                  "replacement_admission_authorized": false,
+                  "upper_bounds": [
+                    9.569236652758342e-08,
+                    2.3923091631895854e-08,
+                    5.3826956171765664e-08
+                  ],
+                  "zero_power_order_lower_bounds": [
+                    1.9999999999999936,
+                    null
+                  ]
+                }
+              }
+            },
+            "combined_classifications": {
+              "phase_derivative_tail_power": "native_estimators_agree_unresolved",
+              "phase_field_tail_power": "native_estimators_agree_unresolved"
+            },
+            "common_grid_resampling_performed": false,
+            "method": "RK4",
+            "observations": {
+              "native_trapezoid_quadrature": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00046123721059330156,
+                  "coefficient_arithmetic_debit": 1.3540474066948215e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0004612372105933009,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 4.510281037539699e-17,
+                    "binary64_value": 0.01432081438051284,
+                    "lower": 0.01432081438051275,
+                    "observed": 0.014320814380512796,
+                    "upper": 0.014320814380512843
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.3234889800848445e-21,
+                    "binary64_value": 4.314772994656069e-07,
+                    "lower": 4.3147729946560426e-07,
+                    "observed": 4.3147729946560564e-07,
+                    "upper": 4.31477299465607e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00023061860529665078,
+                  "coefficient_arithmetic_debit": 6.770237033474108e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.00023061860529665046,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.1275702593849248e-17,
+                    "binary64_value": 0.00358020359512821,
+                    "lower": 0.0035802035951281873,
+                    "observed": 0.003580203595128199,
+                    "upper": 0.0035802035951282107
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 3.308722450212111e-22,
+                    "binary64_value": 1.0786932486640173e-07,
+                    "lower": 1.0786932486640107e-07,
+                    "observed": 1.0786932486640141e-07,
+                    "upper": 1.0786932486640175e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.0003459279079449762,
+                  "coefficient_arithmetic_debit": 1.029215320252206e-18,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "native_trapezoid_quadrature",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0003459279079449757,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 2.775557561562892e-17,
+                    "binary64_value": 0.008055458089038474,
+                    "lower": 0.008055458089038419,
+                    "observed": 0.008055458089038448,
+                    "upper": 0.008055458089038478
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 7.940933880509067e-22,
+                    "binary64_value": 2.4270598094940393e-07,
+                    "lower": 2.4270598094940234e-07,
+                    "observed": 2.427059809494032e-07,
+                    "upper": 2.4270598094940404e-07
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ],
+              "piecewise_linear_exact_integral": [
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00021714131400641382,
+                  "coefficient_arithmetic_debit": 6.352964250460157e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0002171413140064136,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 6.93889390390723e-18,
+                    "binary64_value": 0.0031756065900738046,
+                    "lower": 0.0031756065900737907,
+                    "observed": 0.003175606590073798,
+                    "upper": 0.0031756065900738054
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 1.9852334701272667e-22,
+                    "binary64_value": 9.569236652758339e-08,
+                    "lower": 9.569236652758299e-08,
+                    "observed": 9.56923665275832e-08,
+                    "upper": 9.569236652758342e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00010857065700320691,
+                  "coefficient_arithmetic_debit": 3.1764821252300786e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.0001085706570032068,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 1.7347234759768075e-18,
+                    "binary64_value": 0.0007939016475184511,
+                    "lower": 0.0007939016475184477,
+                    "observed": 0.0007939016475184495,
+                    "upper": 0.0007939016475184514
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 4.9630836753181666e-23,
+                    "binary64_value": 2.3923091631895847e-08,
+                    "lower": 2.3923091631895748e-08,
+                    "observed": 2.39230916318958e-08,
+                    "upper": 2.3923091631895854e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                {
+                  "binary64_peak_coefficient_amplitude": 0.00016285598550481035,
+                  "coefficient_arithmetic_debit": 4.845596252347717e-19,
+                  "common_grid_resampling_performed": false,
+                  "continuum_surrogate_enclosure_claimed": false,
+                  "declared_normalized_coefficient_floor": 1.5625e-32,
+                  "estimator": "piecewise_linear_exact_integral",
+                  "maximum_normalized_spacing": 0.015873015873015928,
+                  "minimum_normalized_spacing": 0.015873015873015817,
+                  "normalized_spacing_ratio": 1.000000000000007,
+                  "peak_coefficient_amplitude": 0.00016285598550481022,
+                  "phase_derivative_tail_power": {
+                    "arithmetic_debit": 3.686287386450716e-18,
+                    "binary64_value": 0.0017862787069165148,
+                    "lower": 0.0017862787069165074,
+                    "observed": 0.0017862787069165113,
+                    "upper": 0.0017862787069165152
+                  },
+                  "phase_field_tail_power": {
+                    "arithmetic_debit": 9.926167350636333e-23,
+                    "binary64_value": 5.382695617176565e-08,
+                    "lower": 5.382695617176545e-08,
+                    "observed": 5.382695617176556e-08,
+                    "upper": 5.3826956171765664e-08
+                  },
+                  "proper_time_span": 3.9375,
+                  "proper_time_start": 0.0,
+                  "proper_time_stop": 3.9375,
+                  "sample_count": 64,
+                  "top_band_is_below_declared_amplitude_floor": false,
+                  "top_bins": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                }
+              ]
+            },
+            "piecewise_linear_or_quadrature_surrogate_is_not_a_continuum_enclosure": true,
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "expected_combined_classification": "native_estimators_agree_unresolved",
+          "observed_combined_classifications": {
+            "phase_derivative_tail_power": "native_estimators_agree_unresolved",
+            "phase_field_tail_power": "native_estimators_agree_unresolved"
+          }
+        }
+      },
+      "replacement_temporal_admission_defined": false
+    }
+  },
+  "classification": "prospective_TDG3_native_grid_discriminator_freeze",
+  "derivation_document": "docs/fgc-tdg3-frz1.md",
+  "derivation_document_sha256": "a8d63e5d735fd729b56404b32eebc2c79f5dba3dfa6097acc3b1cb11db03f4dd",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG2_absolute_tail_outcome_is_mixed": true,
+    "TDG2_actual_histories_diagnosed": true,
+    "TDG3_actual_histories_diagnosed": false,
+    "TDG3_interpolation_ownership_discriminator_frozen": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "common_grid_interpolation_removed_from_TDG3_measurement": true,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "individual_temporal_budget_failure_cause_fully_derived": false,
+    "physical_transition_claim_authorized": false,
+    "piecewise_linear_or_quadrature_surrogate_is_a_continuum_enclosure": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg3_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg3_frz1.py": "18ad0f47d2a8de0f15f4e967a81a99537c09c83f3378487fc6a74e8fc50633c5",
+    "src/recursive_horizons/fgc/evolution/tdg3_native_tail_diagnosis.py": "9b53ea697cbc8f9026db197849d0bf0b355b92dda0dc22e6bb58d4a4369fb984"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG3_actual_histories_diagnosed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "individual_temporal_budget_failure_cause_fully_derived": false,
+    "physical_transition_claim_authorized": false,
+    "piecewise_linear_or_quadrature_surrogate_is_a_continuum_enclosure": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg3-frz1.toml": "de72fdab1d53b713e321ba17f5177dcddb9de825fef61cc7e0fa31974e455d78"
+  }
+}

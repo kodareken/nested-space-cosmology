@@ -1,0 +1,39 @@
+{
+  "accountable_author": "Douglas Ek",
+  "class_rewrite_is_not_next": true,
+  "existence_tolerance": 3e-11,
+  "finite_leftover_is_not_class_identity": true,
+  "fourier_unclipped_all_node_leftover": [
+    0.000409198777,
+    0.003811452608
+  ],
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-after-fourier.json": "acbbb33cd981848268843829c828cbe8ccec051364b58c1a335fbfd25083d453"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "next_named_owner": "Fourier leftover-null, then the continuous cokernel of the declared (w,U) geometry map; no class rewrite",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "previous_named_search_stall": "declared_wu_image_cannot_reach_existence",
+  "previous_next_named_owner": "an extra normal power s^5 V(z) as a new undeclared class, not this (w,U) discretization",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-RETRACT-S5-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "historical_fourier_bytes_unchanged": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-retract-s5.md": "eee47f1f8be952d7064218386e04930b46ef3a73123ac66021d789b46fa8333d",
+    "scripts/derive_nsc_local_incoming_gate_status_retract_s5.py": "dfea8e1f6b7d81b15c7a07294e82314f473255b2300f0ce808ba44cf3a34af89"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: finite Fourier leftover is representation evidence, not NON-EXISTENCE of the predeclared class; s^5 is retracted"
+}

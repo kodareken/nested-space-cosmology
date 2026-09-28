@@ -1,0 +1,330 @@
+{
+  "artifact_id": "FGC-1-CAL5-PREF7",
+  "artifact_payload": {
+    "decision": {
+      "PROTO8_GR0_case_eligible": false,
+      "PROTO8_ownership_repair_exercised_by_evolved_data": true,
+      "current_failure_is_a_candidate_or_gradient_obstruction": false,
+      "new_protocol_required": "FGC-2-SF1-PROTO9",
+      "prospective_revision": {
+        "amplitude_order_unchanged": true,
+        "constraint_ownership_magnitude_and_order_rules_unchanged": true,
+        "evolution_equations_unchanged": true,
+        "fresh_output_namespace_required": true,
+        "methods_CFL_and_retry_rules_unchanged": true,
+        "new_protocol_required": "FGC-2-SF1-PROTO9",
+        "only_resolution_ladder_may_change": true,
+        "physical_inputs_unchanged": true,
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "source_solver_and_raw_residual_tolerance_unchanged": true,
+        "spectral_ownership_budgets_and_tail_rules_unchanged": true,
+        "trapped_sign_boundary_and_physical_rules_unchanged": true
+      },
+      "smallest_discriminating_successor": "shift_the_entire_nested_grid_ladder_one_level_while_retaining_every_threshold_and_physical_input"
+    },
+    "epistemic_boundary": {
+      "GR0_amplitude_selected": false,
+      "GR0_calibration_completed": false,
+      "SGBL_or_FGCQR_trajectory_read": false,
+      "candidate_or_general_gradient_route_rejected": false,
+      "conditional_Richardson_forecasts_are_observations": false,
+      "dynamic_trapped_sphere_classified": false,
+      "mechanism_question_answered": false,
+      "new_8193_data_exist": false
+    },
+    "immutable_campaign": {
+      "amplitude_stop_records": [
+        {
+          "amplitude": "5/2",
+          "consecutive_qualified_trapped_common_events": 0,
+          "eligible": false,
+          "last_completed_common_event_index": 2,
+          "last_completed_coordinate_time": 0.125,
+          "member_final_state_hashes": {
+            "RK4-1025": "7d5c90e02fa442d1b938cdd5fed038f09697b407c4e36e3171000052fa04a2c3",
+            "RK4-2049": "8919c39ae03d140aa92749243bd972ddcabc765d85f9095e155ee6f960841da4",
+            "RK4-4097": "1fa1eb6af76f07286ed64c70077e426fd47f8a2943268c29fe91f2b9ecb8526d",
+            "SSPRK3-1025": "ba306c2232060f366bae5e3683d6ba28de57646faa940c3f6b67c0ea8bf81e0b",
+            "SSPRK3-2049": "e9233c660f4f223462fe8105bb6573c369a67c97794d98a963ffcf9eaba6516f",
+            "SSPRK3-4097": "f056db60eef665c8a86043dd93d228bc5c6934c7e037874ab3c9b1b5a0f22be7"
+          },
+          "member_source_retry_counts": {
+            "RK4-1025": 0,
+            "RK4-2049": 0,
+            "RK4-4097": 2,
+            "SSPRK3-1025": 0,
+            "SSPRK3-2049": 0,
+            "SSPRK3-4097": 0
+          },
+          "stop": {
+            "classification": "common_event_constraint_or_spectral_stop",
+            "coordinate_time": 0.125,
+            "event_index": 2,
+            "reason": "common_event_constraint_or_spatial_spectral_admission"
+          }
+        },
+        {
+          "amplitude": "3",
+          "consecutive_qualified_trapped_common_events": 0,
+          "eligible": false,
+          "last_completed_common_event_index": 1,
+          "last_completed_coordinate_time": 0.0625,
+          "member_final_state_hashes": {
+            "RK4-1025": "81884e2a3e823977052dd7e72298723dd1d52d216faef1cce9c0c35ab0418f74",
+            "RK4-2049": "d296c63c6edf2eb8d76a155fd4797c73727e8afab20271277cf55b5f0441d4ad",
+            "RK4-4097": "914e893de4b8d8a7a71d7c58ae4666559ad504e8b596bf7cf1f885aca58030d2",
+            "SSPRK3-1025": "3b0fe98b1ba1fa385db6c7c64ef13e39e925ffdf3e8b91391ad13b76bebeb56e",
+            "SSPRK3-2049": "8b2a33628b7781add0d0720c2b5d362602e3f9b34dfaae7b92146838ca026ac2",
+            "SSPRK3-4097": "dfb3c6516d863549f084674da74617428d74ef16ecb26a521ac043c4a8ac8ff8"
+          },
+          "member_source_retry_counts": {
+            "RK4-1025": 0,
+            "RK4-2049": 0,
+            "RK4-4097": 2,
+            "SSPRK3-1025": 0,
+            "SSPRK3-2049": 0,
+            "SSPRK3-4097": 0
+          },
+          "stop": {
+            "classification": "common_event_constraint_or_spectral_stop",
+            "coordinate_time": 0.0625,
+            "event_index": 1,
+            "reason": "common_event_constraint_or_spatial_spectral_admission"
+          }
+        }
+      ],
+      "authorization_commit": "d667c7465786883b1e5d6afad168b64e7b8921d0",
+      "campaign_id": "721dd0f590c2546d2fd9c5b8b2e7d0185938da9bf1ea38e45a8ddde2de4e0ffb",
+      "campaign_result_sha256": "29108470a392dc005c5e7eea5459cb3a101a9c113454b6c9661a9af9a12f78e8",
+      "checkpoint_sha256": "466a571708d578ddccd149fc6d047eb69cfe6f321b77370f0a2a0e04c3f7cd1c",
+      "elapsed_wall_seconds": 1134.328353417004,
+      "event_log_line_count": 9,
+      "event_log_sha256": "c6cc0ff3d0246b9a46a862888ec23b1472fe60383c84c24fd56c7c468c4bbf72",
+      "manifest_implementation_sha256": {
+        "scripts/reproduce_fgc_hlt6_mon6.py": "75ccf591a8cceae80b2fa1c6a849aaf080ed24133a28203aab0d648610d92985",
+        "scripts/run_fgc_gr0_calibration.py": "4e3734495edc0a289e5c61dc68e193cbe19629582234dd04c0c20a46d52774b3",
+        "scripts/run_fgc_gr0_calibration_v6.py": "8bc140d0c6c2fbc65f13d4b84ca78277652c9fd04e4748b134ade9f38fddd8ce",
+        "scripts/run_fgc_gr0_calibration_v7.py": "04324e7066dc5a3c4ea3f6200612cc6c1a51fae5adba0c28ecb10ebec2f5d2e7",
+        "scripts/run_fgc_gr0_calibration_v8.py": "7d5c936ea319862432838385c249b64091357f526303dcc79776d97d5b7f166d",
+        "src/recursive_horizons/fgc/evolution/cal2_source_diagnosis.py": "506764b60d767affb7db067b8bb3e7e92f4d6a6d0c163a5af6a6772fae29c976",
+        "src/recursive_horizons/fgc/evolution/cal4_common_event_diagnosis.py": "0add38fadebbe07b021ccd3c421ced6519efea9f233ad09d447fbc3241041741",
+        "src/recursive_horizons/fgc/evolution/calibration_runtime.py": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9",
+        "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545",
+        "src/recursive_horizons/fgc/evolution/proto6_runtime.py": "f0d63c3b1bd17891ac1cb21969ec6b3454cac4adc6d4c116979626b0d82d77f5",
+        "src/recursive_horizons/fgc/evolution/proto7_runtime.py": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734",
+        "src/recursive_horizons/fgc/evolution/proto8_runtime.py": "6cfe110c15ca6d31b4023d86d8a3e40f4e36df39058b3cd8bf06db06ffac133e"
+      },
+      "manifest_sha256": "df10b4bce3b0faf9fe751deb4f36bdfba628c64286bd72301708bf536f3af01d",
+      "selected_amplitude": null,
+      "terminal_checkpoint_amplitude": "3",
+      "terminal_checkpoint_event_index": 1,
+      "terminal_classification": "calibration_failed_no_eligible_GR0_case"
+    },
+    "resolution_ladder_diagnosis": {
+      "amplitude_3_stop": {
+        "amplitude": "3",
+        "coordinate_time": 0.0625,
+        "event_index": 1,
+        "methods": {
+          "RK4": {
+            "PROTO8_admission_passed": false,
+            "conditional_8193_finest_guard_passed": true,
+            "conditional_8193_norm_if_observed_order_persists": 0.00017748646663741968,
+            "conditional_projection_is_admission_evidence": false,
+            "constraint_admission_passed": false,
+            "constraint_minimum_finite_finest_pair_order": 2.5134796339559022,
+            "constraint_order_passed": true,
+            "constraint_order_threshold": 1.5,
+            "constraint_owned_raw_global_norms": [
+              0.025881954829853504,
+              0.008634125411044635,
+              0.0010134399189588562
+            ],
+            "coordinate_time": 0.0625,
+            "current_coarsest_guard": 0.02,
+            "current_coarsest_guard_passed": false,
+            "current_finest_guard": 0.001,
+            "current_finest_guard_passed": false,
+            "current_nested_tail_failures": [
+              {
+                "family": "derivative",
+                "field": "phi_over_Lambda",
+                "maximum": 0.25,
+                "pair": "2049_to_4097",
+                "ratio": 0.3267172814251121
+              }
+            ],
+            "medium_and_fine_absolute_spectral_budgets_passed": true,
+            "method": "RK4",
+            "new_4097_to_8193_tail_is_unmeasured": true,
+            "prospective_2049_coarsest_guard_passed": true,
+            "prospective_2049_coarsest_norm": 0.008634125411044635
+          },
+          "SSPRK3": {
+            "PROTO8_admission_passed": false,
+            "conditional_8193_finest_guard_passed": true,
+            "conditional_8193_norm_if_observed_order_persists": 0.002314401334462879,
+            "conditional_projection_is_admission_evidence": false,
+            "constraint_admission_passed": false,
+            "constraint_minimum_finite_finest_pair_order": 1.5548563774386956,
+            "constraint_order_passed": true,
+            "constraint_order_threshold": 1.5,
+            "constraint_owned_raw_global_norms": [
+              0.04042782055627422,
+              0.020110408262589037,
+              0.006799814724869778
+            ],
+            "coordinate_time": 0.0625,
+            "current_coarsest_guard": 0.1,
+            "current_coarsest_guard_passed": true,
+            "current_finest_guard": 0.005,
+            "current_finest_guard_passed": false,
+            "current_nested_tail_failures": [
+              {
+                "family": "derivative",
+                "field": "phi_over_Lambda",
+                "maximum": 0.25,
+                "pair": "2049_to_4097",
+                "ratio": 0.26675704013240803
+              }
+            ],
+            "medium_and_fine_absolute_spectral_budgets_passed": true,
+            "method": "SSPRK3",
+            "new_4097_to_8193_tail_is_unmeasured": true,
+            "prospective_2049_coarsest_guard_passed": true,
+            "prospective_2049_coarsest_norm": 0.020110408262589037
+          }
+        },
+        "one_level_resolution_shift_is_a_discriminating_test": true,
+        "one_level_resolution_shift_is_already_admitted": false
+      },
+      "amplitude_5over2_stop": {
+        "amplitude": "5/2",
+        "coordinate_time": 0.125,
+        "event_index": 2,
+        "methods": {
+          "RK4": {
+            "PROTO8_admission_passed": false,
+            "conditional_8193_finest_guard_passed": true,
+            "conditional_8193_norm_if_observed_order_persists": 0.0001554080909854757,
+            "conditional_projection_is_admission_evidence": false,
+            "constraint_admission_passed": false,
+            "constraint_minimum_finite_finest_pair_order": 2.8463924502245064,
+            "constraint_order_passed": true,
+            "constraint_order_threshold": 1.5,
+            "constraint_owned_raw_global_norms": [
+              0.029633696636868583,
+              0.009325010800783741,
+              0.0011176945482867483
+            ],
+            "coordinate_time": 0.125,
+            "current_coarsest_guard": 0.02,
+            "current_coarsest_guard_passed": false,
+            "current_finest_guard": 0.001,
+            "current_finest_guard_passed": false,
+            "current_nested_tail_failures": [],
+            "medium_and_fine_absolute_spectral_budgets_passed": true,
+            "method": "RK4",
+            "new_4097_to_8193_tail_is_unmeasured": true,
+            "prospective_2049_coarsest_guard_passed": true,
+            "prospective_2049_coarsest_norm": 0.009325010800783741
+          },
+          "SSPRK3": {
+            "PROTO8_admission_passed": false,
+            "conditional_8193_finest_guard_passed": true,
+            "conditional_8193_norm_if_observed_order_persists": 0.0025130532902140957,
+            "conditional_projection_is_admission_evidence": false,
+            "constraint_admission_passed": false,
+            "constraint_minimum_finite_finest_pair_order": 1.4456303170520555,
+            "constraint_order_passed": false,
+            "constraint_order_threshold": 1.5,
+            "constraint_owned_raw_global_norms": [
+              0.03852644786016406,
+              0.018644805907846947,
+              0.0068450998268951456
+            ],
+            "coordinate_time": 0.125,
+            "current_coarsest_guard": 0.1,
+            "current_coarsest_guard_passed": true,
+            "current_finest_guard": 0.005,
+            "current_finest_guard_passed": false,
+            "current_nested_tail_failures": [],
+            "medium_and_fine_absolute_spectral_budgets_passed": true,
+            "method": "SSPRK3",
+            "new_4097_to_8193_tail_is_unmeasured": true,
+            "prospective_2049_coarsest_guard_passed": true,
+            "prospective_2049_coarsest_norm": 0.018644805907846947
+          }
+        },
+        "one_level_resolution_shift_is_a_discriminating_test": true,
+        "one_level_resolution_shift_is_already_admitted": false
+      },
+      "candidate_or_physical_trajectory_read": false,
+      "common_event_count": 5,
+      "current_point_counts": [
+        1025,
+        2049,
+        4097
+      ],
+      "new_8193_data_required_before_admission": true,
+      "public_event_count": 9,
+      "smallest_prospective_point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "source_only_retry_count": 4,
+      "threshold_changes_required": false
+    }
+  },
+  "classification": "post_PROTO8_GR0_resolution_ladder_adequacy_diagnosis",
+  "derivation_document": "docs/fgc-cal5-pref7.md",
+  "derivation_document_sha256": "52ad32cc516804635d4f53a9c1f5364316fb32fc2fde0f43a8709511aac34729",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO8_GR0_case_eligible": false,
+    "PROTO8_campaign_terminated_normally": true,
+    "PROTO8_common_event_ownership_repair_exercised": true,
+    "PROTO9_frozen": false,
+    "PROTO9_resolution_ladder_revision_required": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_cal5_pref7.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_cal5_pref7.py": "ef3d77e14bfe823b0622f160a00aa897290f271d900e73f9be5272550a3ceffe",
+    "src/recursive_horizons/fgc/evolution/cal5_resolution_diagnosis.py": "89292b47b45fd9e84bfa326bb8198a73f7d3cdf6fac6e0732007665480eea427"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "FGCQR_mechanism_rejected": false,
+    "SGBL_control_completed": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "new_8193_resolution_admitted": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "trapped_sphere_observed": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal5-pref7.toml": "02ab7bbe58d42661cbf40017acf4e7d935a82d47f3a4f5cf2ea52a03a56a1732"
+  }
+}

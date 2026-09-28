@@ -1,0 +1,139 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG9-UR1-PREF1"
+classification = "independently_bound_retry3_u_R_envelope_lower_owner_terminal"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg9-ur1-pref1.md"
+
+[raw]
+namespace = "runs/fgc-2-sf1/tdg9-ur1/retry3-ur-envelope-owner"
+schema = "UR1-raw-v1"
+classification = "completed_u_R_rows_match_TI2_and_zero_lowers_owned_by_named_envelope_quantity"
+runner_id = "FGC-1-TDG9-UR1-RUN1"
+authority_commit = "17d8c4cf728ffd18ce6e137874501e48b35fbb32"
+manifest_sha256 = "2b82a93a171eea852fb48770924a7a28b812c120cc5af5316d2a29a03dbd7db9"
+terminal_sha256 = "545a163a650810ecaceb11bbd26fd9e8adb3559635e26e8dad35d88460a3f06f"
+leaf_count = 2
+
+[authority]
+parent_commit = "22f7dc5e181af45eb43f6f19dee23fbc29f89c0c"
+blob_count = 16
+blobs = [
+  { path = "Makefile", sha256 = "207174051d6a3a3ce70f19efc7c122b452ba71761906924d283525badcea4e64" },
+  { path = "README.md", sha256 = "73ff82f9c064a0036e912e880c3825783ad77113021e0d749db04cb03477b50f" },
+  { path = "configs/fgc/fgc-1-tdg9-ur1-frz1.toml", sha256 = "6aaa5ae0b91753ac86e36235629ab4ed00ddfe6e4c83b69ad2594d755dcbc303" },
+  { path = "docs/claim-ledger.md", sha256 = "40861eaef270d47aa93f6ba9b0b610deabcaa25de8134dfde71941b5defcb085" },
+  { path = "docs/fgc-runtime-matrix.md", sha256 = "124711908ef0a2b1b3ca54aeec72960d423c5002419161a8523ee04157d58f61" },
+  { path = "docs/fgc-tdg9-ur1-frz1.md", sha256 = "aba34cd72182f795c969397c18acbd5b680b035711e58ea9ff1ff1651a354d2e" },
+  { path = "docs/research-roadmap.md", sha256 = "daa2b02d2401057f521d3cf78a9f0e2d2ed2cccb94c180556f38e5dad1dff325" },
+  { path = "results/README.md", sha256 = "ce620016d40dd1f5908e9b5f8ceb6d6e2630e20efae36f3a5367a59a733a1bbb" },
+  { path = "results/fgc-1-tdg9-ur1-frz1.json", sha256 = "6dad298d01e98080bf3dcd7bde3e4aa969efdda790d97f8d68b40231cee9283f" },
+  { path = "scripts/check_repo.py", sha256 = "cec3bf1d79a065a7e6e3c4254f3c4847eb39b573663ebf24099de479cf6df191" },
+  { path = "scripts/reproduce_fgc_tdg9_ur1_frz1.py", sha256 = "f67c5eb612f92640e8555117f7026a48d3c7c2193e2cc8feed54a56ed155040f" },
+  { path = "scripts/run_fgc_tdg9_ur1.py", sha256 = "f660ba40df882d6ded87d8b0c020f8328fa50fa26a0a61f7f5686febe32c5680" },
+  { path = "src/recursive_horizons/fgc/evolution/tdg9_ur1_authority.py", sha256 = "7ab52c8e910ae0b7bf9ceea415e9e12eedcf09afc67c6986cfc7588d882e015f" },
+  { path = "tests/test_check_repo_tdg9_ur1_frz1.py", sha256 = "afae3ce3d06bf3296a5d86101860924083bd81612cec7aa429b6ae10ca9363ca" },
+  { path = "tests/test_fgc_tdg9_ur1_authority.py", sha256 = "7e74735f07f27da97a42ff76e9d65eb672d14c411cfce160096d2392ab6e9336" },
+  { path = "tests/test_fgc_tdg9_ur1_runner.py", sha256 = "931b677b48c8c8e91ae0d025dd0a8dba37d09e88507cdd48a8a34c6154badd22" },
+]
+
+[store]
+path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+leaf_count = 115
+snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+snapshot_algorithm = "TDG9-LOC1-STORE-SNAPSHOT-v1"
+
+[selection]
+experiment_label = "retry3_SSPRK3_on_inherited_SBP4_u_R_row_hash_and_zero_lower_envelope_owner_diagnostic"
+tableau_selector = "SSPRK3"
+tableau_runtime_selector = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+actual_spatial_operator = "inherited_RK4_2049_SBP4"
+production_SSPRK3_comparator = false
+independent_method_agreement = false
+member_key = "RK4-2049"
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+accepted_time_hex = "0x1.78554de5a30e0p+0"
+point_count = 2049
+owned_row_count = 2044
+retry = 3
+attempted_width_hex = "0x1.aaa9612df8000p-11"
+published_channel = "u:R"
+row_hash_domain = "TDG9-AR1-BINARY64-HERMITE-ROWS-v1"
+TI2_retry3_u_R_row_sha256 = "b4a48c7bf72e015f3f3d9a340ea550d608514fb8cd886562265158c33c0b3969"
+TI2_retry3_u_R_related_complete_C_class = "sufficient_contraction_pass"
+envelope_owner = "Binary64CubicEnvelope"
+classifier_owner = "classify_tdg6_channel"
+
+[work_budget]
+SSPRK3_records_per_proposal = 4
+maximum_stage_and_endpoint_RHS_records = 28
+published_channel = "u:R"
+published_channel_count = 1
+published_row_count = 2044
+resource_escalation_authorized = false
+retry = 3
+retry_4_authorized = false
+retry_5_authorized = false
+retry_count = 1
+fourth_width_authorized = false
+shadow_paths = 7
+shadow_proposals = 7
+
+[decision]
+exact_lower_formula = "max(0,Fraction(raw_candidate_maximum)-Fraction(coefficient_construction_debit)-Fraction(outward_arithmetic_debit))"
+bernstein_certification_slack_recorded = true
+bernstein_certification_slack_part_of_lower_clip = false
+stored_lower_reproduced_by_downward_binary64_rounding = true
+zero_lower_owner = "coefficient_plus_arithmetic_debit_clips_positive_raw_maximum"
+D01_construction_over_raw = { numerator = "654019454794891", denominator = "25865933815808" }
+D12_construction_over_raw = { numerator = "163504863789045", denominator = "5012309316608" }
+construction_alone_sufficient = true
+arithmetic_alone_sufficient = false
+required_design_classifier = "order_inconclusive"
+related_TI2_complete_C_class_is_not_replacement_admission = true
+successor_remedy_selected = false
+
+[scope]
+one_time_live_raw_and_store_authentication = true
+ordinary_verifier_raw_blind = true
+ordinary_verifier_store_blind = true
+ordinary_verifier_shadow_blind = true
+UR1_runner_decision_code_imported = false
+AC1_runner_or_authority_imported = false
+TI2_runner_or_binder_imported = false
+runtime_envelope_implementation_imported = false
+LOC1_row_reconstruction_imported = false
+seven_proposals_reconstructed = false
+production_SSPRK3_comparator = false
+independent_method_agreement = false
+campaign_store_mutation_authorized = false
+raw_namespace_mutation_authorized = false
+temporal_retry_admission_authorized = false
+PDE_state_commit_authorized = false
+successor_remedy_selected = false
+common_event_authorized = false
+GR0_calibration_authorized = false
+candidate_branches_authorized = false
+mechanism_result_authorized = false
+physical_result_authorized = false
+envelope_or_admission_runtime_change_authorized = false
+
+[claims]
+UR1_raw_result_independently_bound = true
+u_R_rows_match_TI2 = true
+D01_D12_lower_owners_equal = true
+zero_lowers_owned_by_coefficient_plus_arithmetic_debit = true
+classification_remains_order_inconclusive = true
+construction_alone_sufficient = true
+arithmetic_alone_sufficient = false
+production_method_earned = false
+production_SSPRK3_comparator = false
+independent_method_agreement = false
+state_advance_authorized = false
+successor_remedy_selected = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

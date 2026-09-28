@@ -1,0 +1,281 @@
+{
+  "artifact_id": "FGC-1-TDG7-FRZ1",
+  "artifact_payload": {
+    "alternatives": {
+      "direct_PROTO14_patch_or_resume_rejection": "historical_terminal_checkpoint_is_immutable_and_nonresumable",
+      "direct_PROTO14_patch_or_resume_selected": false,
+      "epsilon_or_approximate_uniformity_rejection": "adds_an_arbitrary_coordinate_tolerance_and_does_not_own_common_endpoints",
+      "epsilon_or_approximate_uniformity_selected": false,
+      "exact_conservative_shared_lattice_selected": true,
+      "four_q_endpoint_only_lattice_rejection": "can leave an odd-Q fine width whose c=1/2 RK4_or_SSPRK3 stage time rounds_or_aliases_to_an_endpoint",
+      "four_q_endpoint_only_lattice_selected": false,
+      "reinterpret_rounded_nonuniform_paths_after_execution_selected": false,
+      "reinterpret_rounded_nonuniform_paths_rejection": "requires_a_larger_nonuniform_mesh_theorem_and_changes_the_TDG6_comparison_object",
+      "remove_or_relax_historical_guard_rejection": "would_hide_nominal_vs_executed_width_without_constructing_one_shared_partition",
+      "remove_or_relax_historical_guard_selected": false
+    },
+    "claim_boundary": {
+      "CAL11_terminal_invalid_runtime_result_preserved": true,
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "FGCQR_mechanism_rejected": false,
+      "GR0_case_eligible": false,
+      "PROTO14_runtime_fault_cause_fully_derived": true,
+      "PROTO14_runtime_mutation_authorized": false,
+      "PROTO14_terminal_checkpoint_may_resume": false,
+      "SGBL_execution_authorized": false,
+      "TDG7_independent_binder_completed": false,
+      "TDG7_runtime_repair_implementation_authorized": false,
+      "TDG7_runtime_repair_implemented": false,
+      "TDG7_subdivision_lattice_design_frozen": true,
+      "child_domain_or_topology_derived": false,
+      "classical_spherical_diagnostic_authorized": false,
+      "dark_sector_mechanism_derived": false,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "fresh_replacement_protocol_frozen": false,
+      "general_gradient_route_rejected": false,
+      "historical_failure_is_binary64_scheduler_contract_not_TDG6_temporal_admission": true,
+      "historical_failure_is_not_constraint_spatial_source_health_or_physical_model": true,
+      "historical_requested_width_and_rounded_boundary_difference_are_bitwise_distinct": true,
+      "physical_transition_claim_authorized": false,
+      "retained_EFT_evolution_authorized": false,
+      "singularity_resolution_derived": false,
+      "varying_locally_measured_c_derived": false
+    },
+    "exact_design_preflight": {
+      "exact_target_limited_step_lands_bitwise": true,
+      "historical_event24_aligned_plan_passes_all_exact_postconditions": true,
+      "historical_event24_cap_is_never_exceeded": true,
+      "historical_event24_event_target_is_unchanged": true,
+      "historical_event24_old_guard_fails_for_one_two_and_four": true,
+      "historical_event24_stage_times_are_exact_and_strictly_interior": true,
+      "independently_generated_path_endpoint_mutation_is_detected": true,
+      "minimum_aligned_width_returns_typed_stop_without_rounding_up": true,
+      "multi_step_event_preserves_lattice_and_lands_bitwise": true,
+      "no_zero_width_or_midpoint_endpoint_alias_is_permitted": true,
+      "nonfinite_and_nonpositive_caps_return_typed_stops": true,
+      "one_endpoint_nextafter_mutation_is_detected": true,
+      "round_up_mutation_exceeds_cap": true,
+      "start_only_or_minimum_ulp_mutations_fail_crossing_control": true,
+      "too_small_positive_cap_returns_typed_stop": true,
+      "typed_stop_reason": "target_not_stage_lattice_aligned",
+      "unaligned_target_returns_typed_stop": true,
+      "upward_binade_crossing_uses_larger_event_ulp": true
+    },
+    "four_q_endpoint_only_midpoint_attack": {
+      "endpoint_only_fine_width_over_Q": 7329968570071,
+      "endpoint_only_macro_quantum_hex": "0x1.0000000000000p-50",
+      "exact_first_fine_midpoint": "12955178897260247/9007199254740992",
+      "four_q_endpoint_only_route_rejected": true,
+      "midpoint_exact_binary64": false,
+      "rounded_first_fine_midpoint_hex": "0x1.7035552161f6cp+0"
+    },
+    "historical_event24_witness": {
+      "expected_final_hex": "0x1.71aaa90b0fb5cp+0",
+      "old_guard_failures": {
+        "1": {
+          "guard_passes": false,
+          "nominal_step_hex": "0x1.aaa90b0fb5c26p-8",
+          "rounded_adjacent_differences_hex": [
+            "0x1.aaa90b0fb5c00p-8"
+          ],
+          "rounded_boundaries_hex": [
+            "0x1.7000000000000p+0",
+            "0x1.71aaa90b0fb5cp+0"
+          ]
+        },
+        "2": {
+          "guard_passes": false,
+          "nominal_step_hex": "0x1.aaa90b0fb5c26p-9",
+          "rounded_adjacent_differences_hex": [
+            "0x1.aaa90b0fb5c00p-9",
+            "0x1.aaa90b0fb5c00p-9"
+          ],
+          "rounded_boundaries_hex": [
+            "0x1.7000000000000p+0",
+            "0x1.70d5548587daep+0",
+            "0x1.71aaa90b0fb5cp+0"
+          ]
+        },
+        "4": {
+          "guard_passes": false,
+          "nominal_step_hex": "0x1.aaa90b0fb5c26p-10",
+          "rounded_adjacent_differences_hex": [
+            "0x1.aaa90b0fb5c00p-10",
+            "0x1.aaa90b0fb5c00p-10",
+            "0x1.aaa90b0fb5c00p-10",
+            "0x1.aaa90b0fb5c00p-10"
+          ],
+          "rounded_boundaries_hex": [
+            "0x1.7000000000000p+0",
+            "0x1.706aaa42c3ed7p+0",
+            "0x1.70d5548587daep+0",
+            "0x1.713ffec84bc85p+0",
+            "0x1.71aaa90b0fb5cp+0"
+          ]
+        }
+      },
+      "requested_macro_width_hex": "0x1.aaa90b0fb5c26p-8"
+    },
+    "historical_vs_selected_first_macro_endpoint": {
+      "equal": false,
+      "event_target_unchanged": true,
+      "historical_expected_endpoint_hex": "0x1.71aaa90b0fb5cp+0",
+      "selected_aligned_endpoint_hex": "0x1.71aaa90b0fb58p+0"
+    },
+    "immutable_lineage": {
+      "bound_source_sha256": {
+        "checkpoint": {
+          "configs/fgc/fgc-1-cal11-pref22.toml": "685ee05442d7c92ce83994d923890f4fa208b10ffbf2946026b07e9a9cf4d34d",
+          "docs/fgc-cal11-pref22.md": "b115febf6aeb7fdce6d604bf5311ca282d81a3beffaad4765ac75e9d1234d606",
+          "results/fgc-1-cal11-pref22.json": "1339792198ec78ad83bc3e11a2805f09f961607ab6c1f6f06e79bb88ba6b58b8",
+          "scripts/reproduce_fgc_cal11_pref22.py": "c02deeea237176706310dd82a81a71dac85617c1130f2e78342211cbd89e7ef4",
+          "src/recursive_horizons/fgc/evolution/cal11_proto14_campaign_diagnosis.py": "492a520325715743110d81d1b366070ac307fbe9cde9e83f1c4465746021b5bc"
+        },
+        "historical": {
+          "configs/fgc/fgc-1-cal9-run1.toml": "8e6fafff638ffd49549efab8b6f969a01964c915116db9ce3698953201172176",
+          "results/fgc-1-hlt12-mon12.json": "7f4068a3116ff1838ce7f0165ae18e72d2eea68933b87f056b26d8149c935731",
+          "scripts/run_fgc_gr0_calibration_v14.py": "4c13eaf86cf31f55e28b7f60661db78ad22e1bb5b7460adf7aeff455efdc8e45",
+          "src/recursive_horizons/fgc/evolution/numerical_engine.py": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf",
+          "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+        }
+      },
+      "checkpoint_commit": "b59d214832a1d3429f624579a93c6b9e1f544cf5",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "historical_authorization_commit": "7534a1662d8078a63c98025ecd464bb068fa012f",
+      "historical_authorization_commit_is_ancestor_of_checkpoint_commit": true
+    },
+    "mutation_controls": {
+      "candidate_or_claim_promotion_rejected": true,
+      "cap_round_up_mutation_rejected": true,
+      "lineage_hash_mutation_rejected": true,
+      "quantum_or_threshold_mutation_rejected": true,
+      "route_mutation_rejected": true
+    },
+    "optional_checkpoint_metadata": {
+      "clean_clone_absence_permitted": true,
+      "metadata_utf8_only": true,
+      "physical_state_arrays_consumed": false,
+      "whole_file_hash_required_before_metadata_read": true
+    },
+    "proof_contract": {
+      "CAL11_result_config_reproducer_document_and_diagnosis_must_match_checkpoint_commit": true,
+      "TDG7_binder_must_inspect_and_pin_RK4_and_SSPRK3_start_start_plus_dt_over_2_and_start_plus_dt": true,
+      "aligned_plan_must_be_derived_by_an_independent_exact_dyadic_route": true,
+      "binade_target_retry_cap_quantum_and_claim_mutations_must_fail_closed": true,
+      "canonical_hash_bound_result_required": true,
+      "every_successful_plan_must_pass_exact_and_bitwise_partition_postconditions": true,
+      "historical_PROTO14_files_may_not_be_modified": true,
+      "historical_TDG6_runtime_and_PROTO14_runner_must_match_authorization_commit": true,
+      "historical_numerical_engine_must_be_inspected_and_pinned_from_authorization_commit": true,
+      "historical_one_two_four_guard_failures_must_be_reproduced_bitwise": true,
+      "historical_requested_width_must_be_derived_in_the_frozen_operation_order": true,
+      "independent_TDG7_binder_must_precede_runtime_implementation": true,
+      "new_protocol_namespace_and_runtime_authorization_must_follow_runtime_qualification": true,
+      "optional_checkpoint_previous_speed_scalar_must_match_without_loading_physical_arrays": true,
+      "optional_checkpoint_whole_file_hash_must_match_before_metadata_read": true,
+      "runtime_repair_must_be_a_separate_post_commit_artifact": true,
+      "typed_stop_and_no_mutation_contract_must_be_exercised": true
+    },
+    "scope": {
+      "FGCQR_trajectory_read": false,
+      "SGBL_trajectory_read": false,
+      "calibration_branch": "GR-0",
+      "campaign_checkpoint_resumed": false,
+      "campaign_physical_state_arrays_consumed": false,
+      "historical_source_blobs_read_from_immutable_commits": true,
+      "optional_checkpoint_metadata_may_be_verified_read_only": true,
+      "output_namespace_created": false,
+      "physical_or_candidate_question_answered": false,
+      "production_state_advanced": false,
+      "role": "prospective_exact_binary64_subdivision_lattice_diagnosis_and_design_freeze",
+      "source_compact_result_read": true,
+      "synthetic_or_exact_arithmetic_controls_only": true,
+      "target": "FGC-2-SF1-TDG7"
+    },
+    "selected_lattice_plan": {
+      "boundaries_hex": [
+        "0x1.7000000000000p+0",
+        "0x1.706aaa42c3ed6p+0",
+        "0x1.70d5548587dacp+0",
+        "0x1.713ffec84bc82p+0",
+        "0x1.71aaa90b0fb58p+0"
+      ],
+      "cap_not_exceeded": true,
+      "conservative_reduction_exact": "531/576460752303423488",
+      "conservative_reduction_hex": "0x1.0980000000000p-50",
+      "event_quantum_hex": "0x1.0000000000000p-52",
+      "fine_stage_midpoints_hex": [
+        "0x1.7035552161f6bp+0",
+        "0x1.709fff6425e41p+0",
+        "0x1.710aa9a6e9d17p+0",
+        "0x1.717553e9adbedp+0"
+      ],
+      "fine_width_exact": "3664984285035/2251799813685248",
+      "fine_width_hex": "0x1.aaa90b0fb5800p-10",
+      "fine_width_over_Q": 7329968570070,
+      "macro_eight_Q_tick_count": 3664984285035,
+      "macro_quantum_hex": "0x1.0000000000000p-49",
+      "macro_width_exact": "3664984285035/562949953421312",
+      "macro_width_hex": "0x1.aaa90b0fb5800p-8",
+      "selection_budget_hex": "0x1.aaa90b0fb5c26p-8",
+      "stage_times_exact_and_strictly_interior": true,
+      "target_limited": false
+    },
+    "successor_boundary": {
+      "CAL11_terminal_invalid_runtime_result_preserved": true,
+      "PROTO14_runtime_fault_cause_fully_derived": true,
+      "PROTO14_runtime_mutation_authorized": false,
+      "PROTO14_terminal_checkpoint_may_resume": false,
+      "TDG7_independent_binder_authorized": true,
+      "TDG7_independent_binder_completed": false,
+      "TDG7_runtime_repair_implementation_authorized": false,
+      "TDG7_runtime_repair_implemented": false,
+      "TDG7_subdivision_lattice_design_frozen": true,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_replacement_protocol_frozen": false
+    }
+  },
+  "classification": "prospective_exact_binary64_subdivision_lattice_diagnosis_design_freeze",
+  "derivation_document": "docs/fgc-tdg7-frz1.md",
+  "derivation_document_sha256": "3a4a8ae70d418b2d9d32a8209a0235051f3d1df8b776bfb4a9d4616a48b2b75d",
+  "gate_status": "PASS_EXACT_BINARY64_SUBDIVISION_LATTICE_DESIGN_FROZEN",
+  "generated_by": "scripts/reproduce_fgc_tdg7_frz1.py",
+  "implementation_sha256": {
+    "configs/fgc/fgc-1-tdg7-frz1.toml": "28a05df475e93c39805627cd05208c0078fbf0071a8ff90526a3dbc696c4619d",
+    "docs/fgc-tdg7-frz1.md": "3a4a8ae70d418b2d9d32a8209a0235051f3d1df8b776bfb4a9d4616a48b2b75d",
+    "scripts/reproduce_fgc_tdg7_frz1.py": "72bfc07a3f949429e406eede93d4056e1ac5b1f37568c4be3ea4328560ab7b4f",
+    "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py": "2bc86880d46a3b4c6cd743559d0bc4b51b09058382341dfffe6358b4565e44a9"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_runtime_mutation_authorized": false,
+    "PROTO14_terminal_checkpoint_may_resume": false,
+    "SGBL_execution_authorized": false,
+    "TDG7_independent_binder_completed": false,
+    "TDG7_runtime_repair_implementation_authorized": false,
+    "TDG7_runtime_repair_implemented": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "fresh_replacement_protocol_frozen": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg7-frz1.toml": "28a05df475e93c39805627cd05208c0078fbf0071a8ff90526a3dbc696c4619d"
+  }
+}

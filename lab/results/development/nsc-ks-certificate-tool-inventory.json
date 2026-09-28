@@ -1,0 +1,156 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.6195212665669487e-09,
+    7.292716100448793e-08
+  ],
+  "beta_primary_evolved": false,
+  "campaign": {
+    "candidate": "fourier_leftover_null_and_n128_whitened_image",
+    "leftover_null": {
+      "assembled_piece": 0.010923518399,
+      "class_certificate": false,
+      "edge_can_eat_gap": false,
+      "edge_piece": -0.01011256111,
+      "finite_span_is_not_the_class": true,
+      "geometry_abs_exceeds_assembled": true,
+      "geometry_piece": -0.037514731901,
+      "neighborhood_max": 0.014838874403,
+      "neighborhood_min": 0.007714140189,
+      "sign_stable_on_its_probe": true,
+      "survives_geometry_remainder_threshold": true,
+      "unenclosed_edge_tail": null,
+      "walk_max": 0.013901038563,
+      "walk_min": 0.010923518399
+    },
+    "result": "both_fail_as_class_certificates",
+    "whitened_image": {
+      "both_components_short_of_ball": true,
+      "class_certificate": false,
+      "continuous_cokernel_trivial": true,
+      "joint_linear_gain_positive": true,
+      "joint_n_gain_at_beta_drop_1e-8": 2.3080594045459785e-11,
+      "short_N": 2.5895212665675512e-09,
+      "short_beta": 1.3984220329259706e-09
+    }
+  },
+  "existence_tolerance": 3e-11,
+  "families_evolved": 0,
+  "higher_n_authorized": false,
+  "input_hashes": {
+    "results/development/nsc-ks-assembled-chebyshev-n32-stall.json": "22866f7aa041d928e049044f860fd245df9ced4f6dca1646027f7bbbcbe37f71",
+    "results/development/nsc-ks-class-current-neighborhood.json": "9486b007496fb4743d1d66bfa106313dc8ec3c758dc2f0599c4a193b82081dec",
+    "results/development/nsc-ks-declared-wu-cokernel.json": "34743d5b548f8eb95ba0ec68800b9a13ecf65f993fb922dc9b37e150dbbd282f",
+    "results/development/nsc-ks-fourier-leftover-null.json": "4754f7a0206544eabc88b5c180dc1d0ea63c6f7130171fafc77bdf7896564093",
+    "results/development/nsc-ks-fourier-wu-leftover.json": "ffa386a1b0ae0a6e4e428f151be905ea7e45aae5910f8f0b4a446aaaf37a050f",
+    "results/development/nsc-ks-n128-image-channels.json": "2bd6f26668ace2b6514e7cd18266ca268d72b1d7883fb4988b6161447e24a4a4",
+    "results/development/nsc-ks-n16-freed-jet-proposal.json": "e6e5669ecfec87e20c24dea7048042504454cda8b8a84124a313736364d90ca2",
+    "results/development/nsc-ks-n16-leftover-identification.json": "3e1489c51763b379ad16d451227c77d6016f2edf05ec4fbc40e3a336181d4e37",
+    "results/development/nsc-ks-n32-geometry-leftover.json": "dac8e8cb37e9426ecec1552bc1b87caa157a7f483f5e16cf9f4c36dcebe55570"
+  },
+  "inventory": [
+    {
+      "certifies": "Unit left-null of the iterate4 Fourier geometry Jacobian. Sign-stable on that walk and Fourier neighborhood. Finite span, geometry piece larger than the assembled current, edge tail unenclosed.",
+      "class_certificate": false,
+      "tool": "fourier_leftover_null"
+    },
+    {
+      "certifies": "Projection of the five-walk residuals on the n=16 leftover direction. The walk projection changes sign.",
+      "class_certificate": false,
+      "tool": "n16_leftover_direction",
+      "walk_projection_max": 0.00018681826,
+      "walk_projection_min": -0.000425807559
+    },
+    {
+      "certifies": "Dropping the solver jet kills the solve-node leftover. The all-node leftover stays above 3e-11.",
+      "class_certificate": false,
+      "reaches_existence": false,
+      "tool": "n16_freed_jet",
+      "unclipped_all_node_leftover": [
+        0.000151976924,
+        7.770624e-06
+      ]
+    },
+    {
+      "above_existence": true,
+      "all_node_unclipped_leftover": [
+        0.004107193193,
+        0.005790788098
+      ],
+      "certifies": "Extra Chebyshev geometry columns at iterate4. The all-node leftover equals the measured residual and stays above 3e-11. High-mode matter is not invented.",
+      "class_certificate": false,
+      "tool": "n32_geometry_leftover"
+    },
+    {
+      "above_existence": true,
+      "all_node_unclipped_leftover": [
+        0.000409198777,
+        0.003811452608
+      ],
+      "certifies": "Dirac-free Fourier-on-I geometry image at iterate4. The unclipped all-node leftover stays above 3e-11.",
+      "class_certificate": false,
+      "tool": "fourier_wu_leftover"
+    },
+    {
+      "above_existence": true,
+      "assembled_unclipped_leftover": [
+        0.004107193193038788,
+        0.005790788097514318
+      ],
+      "certifies": "Assembled n=32 image with reused matter columns. The linear leftover equals the measured residual and stays above 3e-11.",
+      "class_certificate": false,
+      "tool": "assembled_chebyshev_n32"
+    },
+    {
+      "certifies": "Principal determinant of compact (w,U) geometry excludes zero. That is invertibility, not an obstruction.",
+      "class_certificate": false,
+      "status": "OPEN: continuous cokernel of compact (w,U) geometry is trivial; not L(E), not flux, not NON-EXISTENCE",
+      "tool": "declared_wu_cokernel"
+    },
+    {
+      "certifies": "Stable-rank sup-norm image at ad759424 misses the 3e-11 ball. Joint linear gain stays positive, and the cokernel is trivial. One truncation is not every declared history.",
+      "class_certificate": false,
+      "tool": "n128_whitened_image"
+    },
+    {
+      "certifies": "UV tail, full between-node remainder, field error and low/subgap stay None at ad759424. Missing bounds block a certificate.",
+      "class_certificate": false,
+      "missing": [
+        "baseline_low_subgap",
+        "changed_history_UV_tail",
+        "field_error_bound",
+        "full_between_node_remainder"
+      ],
+      "tool": "deciding_error_channels"
+    },
+    {
+      "applies_to_evolved_class": false,
+      "certifies": "Frozen incoming C0 has P_K < -0.022178625. That exclusion is a different history class from evolved C_Sigma[g].",
+      "class_certificate": false,
+      "tool": "frozen_C0_P_K"
+    },
+    {
+      "certifies": "n16_freed_jet_leftover_cannot_reach_existence",
+      "class_certificate": false,
+      "tool": "n16_freed_jet_owner_stall"
+    }
+  ],
+  "lifted_profile_identity": "3af275b0ee0d0d0237799290e7a76639513d47cc5f1bc6da1d4d33593392f888",
+  "missing_primitive": "A necessary relation on the evolved state, or a residual-image lower bound, that holds for every history in the declared (w,U) class on I and stays strictly above the geometry-remainder survival threshold after the changed-history edge and UV tail is enclosed. Finite-span nulls, a trivial principal cokernel, unenclosed tails, and one-history whitened images do not supply it.",
+  "next_owner_action": "Do not evolve the beta-primary ray, do not open n=256, and do not re-score L(E), Pi-prime plus E_beta, the integrated defect, or the slot divergence. The missing object is the class-wide enclosed relation named in missing_primitive. It is not among these tools.",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "prior_search_result": "class_current_neighborhood_not_sign_stable",
+  "prior_stall": "n128_sup_norm_image_outside_existence_ball",
+  "probe_authorized": false,
+  "profile_identity": "ad75942438dad1de599ee260e5d9aa7f17d60af26b533bee2b0691f2a6dec777",
+  "schema": "NSC-KS-CERTIFICATE-TOOL-INVENTORY-v1",
+  "source_hashes": {
+    "docs/nsc-ks-certificate-tool-inventory.md": "6392bbe0eb4f92d254427e87da521dc9dde496c57abe5c7fdf47bcff0009d3b1",
+    "scripts/derive_nsc_ks_certificate_tool_inventory.py": "a54ed6598a02a815a49a8a31177c70846dfea17b0115cd7a9f58a27121bf447c"
+  },
+  "spent_currents_not_rescored": true,
+  "stall": "declared_class_certificate_tools_exhausted",
+  "status": "OPEN: declared-class certificate tools are exhausted; no scoped NON-EXISTENCE",
+  "survival_threshold": 3.9172032916870865e-11
+}

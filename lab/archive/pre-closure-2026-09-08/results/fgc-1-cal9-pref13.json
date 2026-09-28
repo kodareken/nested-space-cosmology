@@ -1,0 +1,310 @@
+{
+  "artifact_id": "FGC-1-CAL9-PREF13",
+  "artifact_payload": {
+    "campaign_diagnosis": {
+      "SRC4_arithmetic_wall_cleared_for_both_amplitudes": true,
+      "amplitudes": {
+        "3": {
+          "amplitude": "3",
+          "both_PROTO12_spatial_spectral_admissions_passed": true,
+          "campaign_stop_was_not_CFL_retry_exhaustion": true,
+          "common_event_count": 24,
+          "comparator_constraint_absolute_guards_passed": true,
+          "comparator_constraint_alignment_passed": true,
+          "comparator_constraint_monotone_refinement_passed": true,
+          "comparator_frozen_minimum_order": 1.5,
+          "comparator_only_component_below_minimum": "radial_momentum",
+          "comparator_order_shortfall": 0.0009052615636708783,
+          "comparator_previous_radial_momentum_order": 1.522307748775793,
+          "comparator_terminal_radial_momentum_order": 1.4990947384363291,
+          "last_fully_admitted_coordinate_time": 1.375,
+          "last_fully_admitted_event_index": 22,
+          "primary_constraint_minimum_order": 3.2663994781424783,
+          "qualified_trapped_event_observed": false,
+          "serialized_source_retry_count": 0,
+          "some_adaptive_CFL_step_reductions_occurred": true,
+          "terminal_CFL_retry_count_by_member": {
+            "RK4-2049": 217,
+            "RK4-4097": 443,
+            "RK4-8193": 161,
+            "SSPRK3-2049": 185,
+            "SSPRK3-4097": 358,
+            "SSPRK3-8193": 187
+          },
+          "terminal_classification": "common_event_constraint_or_spectral_stop",
+          "terminal_comparator_accumulated_roundoff_enclosures": [
+            1.179614628199488e-09,
+            2.296474121976644e-09,
+            3.5915945773012936e-09
+          ],
+          "terminal_comparator_component_orders": {
+            "Hamiltonian": 1.690211681563169,
+            "gauge_r": 1.9644243027261274,
+            "gauge_t": 1.9919927231725072,
+            "radial_momentum": 1.4990947384363291,
+            "reduction_R": null,
+            "reduction_alpha": null,
+            "reduction_chi": null,
+            "reduction_lambda": null,
+            "reduction_phi": null,
+            "reduction_shift": null
+          },
+          "terminal_comparator_radial_momentum_effective_norms_for_order_only": [
+            0.01782164930848782,
+            0.0060603957083072545,
+            0.0021440183565819993
+          ],
+          "terminal_comparator_radial_momentum_raw_owned_norms": [
+            0.01782165048810245,
+            0.0060603980047813765,
+            0.0021440219481765766
+          ],
+          "terminal_coordinate_time": 1.4375,
+          "terminal_event_index": 23,
+          "terminal_finest_comparator_trapped_score": -0.07414441636828581,
+          "terminal_finest_primary_trapped_score": -0.07414441277408346,
+          "terminal_reason": "common_event_constraint_or_spatial_spectral_admission",
+          "trailing_comparator_radial_momentum_orders": [
+            1.6276453690940582,
+            1.6025218682802533,
+            1.5738425370783709,
+            1.547166329439042,
+            1.522307748775793,
+            1.4990947384363291
+          ],
+          "trailing_event_indices": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ]
+        },
+        "5/2": {
+          "amplitude": "5/2",
+          "both_PROTO12_spatial_spectral_admissions_passed": true,
+          "campaign_stop_was_not_CFL_retry_exhaustion": true,
+          "common_event_count": 25,
+          "comparator_constraint_absolute_guards_passed": true,
+          "comparator_constraint_alignment_passed": true,
+          "comparator_constraint_monotone_refinement_passed": true,
+          "comparator_frozen_minimum_order": 1.5,
+          "comparator_only_component_below_minimum": "radial_momentum",
+          "comparator_order_shortfall": 0.005042518219283032,
+          "comparator_previous_radial_momentum_order": 1.5024552112430836,
+          "comparator_terminal_radial_momentum_order": 1.494957481780717,
+          "last_fully_admitted_coordinate_time": 1.4375,
+          "last_fully_admitted_event_index": 23,
+          "primary_constraint_minimum_order": 3.2606752232454888,
+          "qualified_trapped_event_observed": false,
+          "serialized_source_retry_count": 0,
+          "some_adaptive_CFL_step_reductions_occurred": true,
+          "terminal_CFL_retry_count_by_member": {
+            "RK4-2049": 227,
+            "RK4-4097": 455,
+            "RK4-8193": 149,
+            "SSPRK3-2049": 189,
+            "SSPRK3-4097": 377,
+            "SSPRK3-8193": 147
+          },
+          "terminal_classification": "common_event_constraint_or_spectral_stop",
+          "terminal_comparator_accumulated_roundoff_enclosures": [
+            1.2232703738845885e-09,
+            2.4019755073823035e-09,
+            3.6679921322502196e-09
+          ],
+          "terminal_comparator_component_orders": {
+            "Hamiltonian": 1.732974569918137,
+            "gauge_r": 1.9676995306631015,
+            "gauge_t": 2.0168292274237456,
+            "radial_momentum": 1.494957481780717,
+            "reduction_R": null,
+            "reduction_alpha": null,
+            "reduction_chi": null,
+            "reduction_lambda": null,
+            "reduction_phi": null,
+            "reduction_shift": null
+          },
+          "terminal_comparator_radial_momentum_effective_norms_for_order_only": [
+            0.010641450194259806,
+            0.004243446120651879,
+            0.001505537744775656
+          ],
+          "terminal_comparator_radial_momentum_raw_owned_norms": [
+            0.01064145141753018,
+            0.004243448522627386,
+            0.0015055414127677883
+          ],
+          "terminal_coordinate_time": 1.5,
+          "terminal_event_index": 24,
+          "terminal_finest_comparator_trapped_score": -0.07698176427149771,
+          "terminal_finest_primary_trapped_score": -0.0769817625296822,
+          "terminal_reason": "common_event_constraint_or_spatial_spectral_admission",
+          "trailing_comparator_radial_momentum_orders": [
+            1.6043050187351453,
+            1.5756441352509614,
+            1.5489849605973036,
+            1.5241421047640726,
+            1.5024552112430836,
+            1.494957481780717
+          ],
+          "trailing_event_indices": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
+        }
+      },
+      "both_amplitudes_reached_late_evolved_common_events": true,
+      "campaign_stop_was_not_CFL_retry_exhaustion": true,
+      "candidate_or_mechanism_outcome_read": false,
+      "common_event_count": 49,
+      "event_log_line_count": 49,
+      "no_GR0_amplitude_eligible": true,
+      "serialized_source_retry_count": 0,
+      "shared_declared_veto": {
+        "all_other_terminal_comparator_constraint_subgates_passed": true,
+        "both_terminal_PROTO12_spatial_admissions_passed": true,
+        "common_numerical_cause_derived": false,
+        "common_physical_cause_derived": false,
+        "constraint_component": "radial_momentum",
+        "frozen_minimum_order": 1.5,
+        "gate": "finest_pair_order_passed",
+        "method": "SSPRK3",
+        "preasymptotic_or_persistent_decided": false,
+        "same_configured_gate_failed_for_both_amplitudes": true
+      },
+      "some_adaptive_CFL_step_reductions_occurred": true,
+      "terminal_CFL_retry_count_by_amplitude_and_member": {
+        "3": {
+          "RK4-2049": 217,
+          "RK4-4097": 443,
+          "RK4-8193": 161,
+          "SSPRK3-2049": 185,
+          "SSPRK3-4097": 358,
+          "SSPRK3-8193": 187
+        },
+        "5/2": {
+          "RK4-2049": 227,
+          "RK4-4097": 455,
+          "RK4-8193": 149,
+          "SSPRK3-2049": 189,
+          "SSPRK3-4097": 377,
+          "SSPRK3-8193": 147
+        }
+      }
+    },
+    "epistemic_boundary": {
+      "localized_numerical_question": "whether a prospectively frozen higher nested ladder clears or preserves the late SSPRK3 radial-momentum order veto",
+      "not_derived": [
+        "one common physical or numerical cause for the two matching vetoes",
+        "an eligible GR-0 calibration case",
+        "a qualified trapped common event",
+        "SGB-L or FGC-QR dynamics",
+        "regulator activation or metric-null defocusing",
+        "a continuum branch or hyperbolicity loss",
+        "a retained-EFT or physical transition"
+      ],
+      "observed_results": [
+        "SRC4 advanced both frozen amplitudes to late evolved common events with zero serialized source retry",
+        "both amplitudes stopped when only the terminal SSPRK3 radial-momentum finest-pair constraint order fell below the unchanged three-halves gate",
+        "both terminal RK4 admissions and both terminal PROTO12 pairwise spatial-spectrum admissions passed",
+        "nonzero permitted adaptive CFL step reductions occurred and were not source retries or the terminal stop"
+      ],
+      "successor_status": "RSP2 prospective higher-ladder preflight is required; PROTO13 is not frozen"
+    },
+    "immutable_campaign": {
+      "authorization_commit": "2f9bddbd4967e4a8998845513f345df3475a4bea",
+      "campaign_id": "32ac798e8bd7ccb984dd66262439d55ec01ad7c5cabfea785fe30d1fc60eff36",
+      "campaign_result_sha256": "1d2acde176bc6b760a1ab12643f5d5a8c2c309d97d82c5970826bdce748729c3",
+      "checkpoint_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+      "classification": "calibration_failed_no_eligible_GR0_case",
+      "elapsed_wall_seconds": 16923.856258417014,
+      "event_log_sha256": "c2d35d07db2f6c983a449cdcf2db469360565cf392d78348dcafbd1d81234ba7",
+      "manifest_sha256": "3f6971b180dbb5d5e5fb9fd7914c0ec73a72b6e3bf6cfa28ac4d26eda76536ec"
+    },
+    "prospective_resolution_study": {
+      "PROTO13_requires_a_separate_successor_decision": true,
+      "SSPRK3_radial_momentum_constraint_is_the_target_quantity": true,
+      "amplitude_three_is_the_minimum_cost_nearest_threshold_witness": true,
+      "at_least_one_finer_nested_resolution_is_required": true,
+      "common_event_schedule_and_terminal_time_remain_unchanged": true,
+      "continuum_equations_physical_input_reference_map_and_SRC4_backend_remain_unchanged": true,
+      "higher_ladder_outcome_must_be_unread_when_the_protocol_is_frozen": true,
+      "minimum_order_three_halves_remains_unchanged": true,
+      "next_gate": "FGC-1-RSP2-FRZ1",
+      "no_SGBL_or_FGCQR_trajectory_is_authorized": true,
+      "no_threshold_reduction_fit_or_post_outcome_tuning_is_authorized": true,
+      "preasymptotic_and_persistent_outcomes_must_be_classified_in_advance": true,
+      "purpose": "prospectively_freeze_a_higher_ladder_late_event_constraint_convergence_test_before_any_PROTO13_design"
+    }
+  },
+  "classification": "post_calibration_PROTO12_dual_amplitude_SSPRK3_radial_momentum_order_veto_diagnosis",
+  "derivation_document": "docs/fgc-cal9-pref13.md",
+  "derivation_document_sha256": "f279ef3c60191925f19a0892af67250d9c621f0543552eb8259ef58e5c01defc",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO12_GR0_case_eligible": false,
+    "PROTO12_both_amplitudes_reached_late_evolved_common_events": true,
+    "PROTO12_campaign_terminated_normally": true,
+    "PROTO12_dual_amplitude_SSPRK3_radial_momentum_order_veto_localized": true,
+    "PROTO13_frozen": false,
+    "RSP2_high_ladder_constraint_preflight_required": true,
+    "SGBL_execution_authorized": false,
+    "SRC4_arithmetic_wall_cleared_for_both_amplitudes": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_cal9_pref13.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_cal9_pref13.py": "260e9716d6b6b2fb45c8034706b6f4bdd3acafa9704d9d6ecacad644c091704e",
+    "src/recursive_horizons/fgc/evolution/cal9_proto12_campaign_diagnosis.py": "1d7c3d14b3d97496fbbcb3da26ae0d09f6a4cb8cad7e8fab56b54a076eca03a0"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO12_GR0_case_eligible": false,
+    "PROTO13_frozen": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal9-run1.toml": "8e6fafff638ffd49549efab8b6f969a01964c915116db9ce3698953201172176",
+    "results/fgc-1-hlt10-mon10.json": "630d0d1843130180cb49dd237fe32e83e0336e7e44e7c684e4baf406b1883fe5"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "GR0_calibration_trajectory_read": true,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "mechanism_question_answered": false,
+    "role": "post_calibration_dual_amplitude_comparator_constraint_order_veto_diagnosis",
+    "target_protocol": "FGC-2-SF1-PROTO12"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal9-pref13.toml": "bb4eeec316499c8e9e5d5709ab0f5e9c27a771d8b2c4146987d59e4b4e0143af"
+  }
+}

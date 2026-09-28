@@ -1,0 +1,97 @@
+schema_version = 1
+artifact_id = "FGC-1-RSP1-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+run_plan = "configs/fgc/fgc-1-rsp1-run1.toml"
+owner_document = "docs/fgc-rsp1-frz1.md"
+
+[scope]
+role = "pre_trajectory_amplitude_three_resolution_spectrum_freeze_and_runtime_authorization"
+branch = "GR-0"
+amplitude = "3"
+trajectory_advanced = false
+PROTO11_raw_outcomes_reinterpreted = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[lineage]
+checkpoint_commit = "4feda557dba06ccee751ea8db5a86e1925e767e4"
+src3_result = "results/fgc-1-src3.json"
+src3_result_sha256 = "dea22654cb70b555053941009037c8b5c58e98dfc5a692dc27620e83363765e9"
+src3_config = "configs/fgc/fgc-1-src3.toml"
+src3_config_sha256 = "9a0034ef739f75674d622223f42586c1abc56abb8afdbbd580d9143e22af61ba"
+cal8_result = "results/fgc-1-cal8-pref10.json"
+cal8_result_sha256 = "10c6898e1ec6e7c07793180c4a4f8fa26a1b2f660115a0b2bc54497ff8bbb89d"
+cal8_config = "configs/fgc/fgc-1-cal8-pref10.toml"
+cal8_config_sha256 = "a7646fb7ef2b229c36981a2f4a87e4428de1bdc5cbe324baedc965097c674cb3"
+checkpoint_must_be_ancestor_of_HEAD = true
+tracked_lineage_must_be_canonical_and_hash_matched = true
+
+[study_freeze]
+target_coordinate_time = "1/16"
+amplitude = "3"
+methods_in_order = ["RK4", "SSPRK3"]
+point_counts_in_order = [4097, 8193, 16385]
+new_point_count = 16385
+source_point_batch_size = 2048
+target_field = "phi_over_Lambda"
+target_quantity = "top_band_derivative_weighted_power_fraction"
+unchanged_direct_ratio_ceiling = "1/4"
+both_target_pairs_and_both_methods_must_pass = true
+target_saturation_or_epsilon_floor_forbidden = true
+all_source_constraint_absolute_budget_and_profile_guards_remain_vetoes = true
+t0_target_ratios_are_public_but_not_the_evolved_endpoint_outcome = true
+only_one_synchronized_evolved_endpoint_may_be_read = true
+no_parameter_may_change_after_the_first_trajectory = true
+
+[runtime_binding]
+SRC3_reference_covariant_source_required = true
+PROTO11_reference_state_derivative_map_required = true
+bounded_point_batching_changes_no_per_point_equation_or_root = true
+exact_Minkowski_must_remain_bitwise_stationary = true
+chunked_and_unchunked_source_must_agree_on_frozen_controls = true
+complete_unredefined_raw_source_residual_remains_serialized = true
+raw_source_threshold_remains_strictly_below_1e_minus_12 = true
+condition_limit_remains_strictly_below_1e10 = true
+both_methods_use_their_original_integrator_and_SBP_order = true
+transaction_retry_boundary_and_health_rules_unchanged = true
+
+[proof_contract]
+all_six_initial_states_must_be_rebuilt_and_hash_bound = true
+all_six_t0_SRC3_source_prechecks_must_pass = true
+both_t0_constraint_admissions_must_pass = true
+all_t0_medium_and_fine_absolute_spectral_budgets_must_pass = true
+t0_target_profile_must_contract_for_both_methods = true
+t0_direct_target_ratio_failures_must_remain_public = true
+one_bit_input_mutation_must_change_the_chunked_source = true
+invalid_batch_grid_threshold_and_claim_mutations_must_fail_closed = true
+runner_must_refuse_dirty_tracked_state_drift_or_namespace_overwrite = true
+canonical_hash_bound_authorization_required = true
+
+[namespace]
+output_root = "runs/fgc-2-sf1/rsp1/amplitude3-spectrum"
+runner_id = "FGC-1-RSP1-RUN1-RUNNER"
+fresh_output_root_required_at_first_launch = true
+authorization_creates_no_run_output = true
+raw_outputs_remain_ignored_and_separate_from_tracked_certificate = true
+
+[claims]
+RSP1_runtime_implemented = true
+RSP1_execution_authorized = true
+amplitude_three_spectral_veto_cleared = false
+PROTO12_frozen = false
+fresh_GR0_calibration_completed = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

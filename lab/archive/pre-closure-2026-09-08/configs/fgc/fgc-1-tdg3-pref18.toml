@@ -1,0 +1,184 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG3-PREF18"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+freeze_result = "results/fgc-1-tdg3-frz1.json"
+freeze_config = "configs/fgc/fgc-1-tdg3-frz1.toml"
+source_result = "results/fgc-1-tdg2-pref17.json"
+campaign_manifest = "runs/fgc-2-sf1/proto13/calibration/manifest.json"
+campaign_event_log = "runs/fgc-2-sf1/proto13/calibration/events.jsonl"
+campaign_checkpoint = "runs/fgc-2-sf1/proto13/calibration/latest-checkpoint.npz"
+campaign_result = "runs/fgc-2-sf1/proto13/calibration/campaign-result.json"
+
+[scope]
+target = "FGC-2-SF1-TDG3"
+role = "post_freeze_read_only_native_grid_history_diagnosis"
+calibration_branch = "GR-0"
+source_terminal_event = 63
+source_terminal_coordinate_time = "63/16"
+terminal_histories_read = true
+terminal_checkpoint_resumed = false
+state_advanced = false
+common_grid_resampling_performed = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+replacement_temporal_admission_defined = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+freeze_commit = "5c8d3cc53155ca42db38ddc2005ed60835743309"
+freeze_result_sha256 = "8076210bcaa33f58c5c053c8731df10809427564d3a4594c9ea734acd3cdc770"
+freeze_config_sha256 = "de72fdab1d53b713e321ba17f5177dcddb9de825fef61cc7e0fa31974e455d78"
+freeze_reproducer_sha256 = "18ad0f47d2a8de0f15f4e967a81a99537c09c83f3378487fc6a74e8fc50633c5"
+discriminator_module_sha256 = "9b53ea697cbc8f9026db197849d0bf0b355b92dda0dc22e6bb58d4a4369fb984"
+freeze_document_sha256 = "a8d63e5d735fd729b56404b32eebc2c79f5dba3dfa6097acc3b1cb11db03f4dd"
+source_result_sha256 = "1a0d9ee99b2eb2f15f10b0625c1cbfe63db15d26692ff5f7b1975d370db593a3"
+source_config_sha256 = "3f2ec6acf07779c4ae0d5b47fe235f66724d4f3b86975eb391dfae02d325c000"
+source_reproducer_sha256 = "f0a939c5f46a0e4fb57b9118e6107788c5f585555802a07a5e8324a63111e776"
+source_document_sha256 = "8495b96c84bb5cba4af869701c732fd40793b0cc9b951990f1a71a64b129cd01"
+CAL10_reproducer_sha256 = "71e1e4d211e46d9679e9772eefb0ab90440a648c009efbe570716b5dcf2659e6"
+manifest_sha256 = "7fbe3835da9d23ed868bf5862250a9c9cad31bfb948091fc1290454867f084f6"
+event_log_sha256 = "cc26095e48de376f0e7924a8b5f2c5126e3a0f21f6d6036942cfc4031d248bdd"
+checkpoint_sha256 = "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97"
+campaign_result_sha256 = "83475a061e2dd4e354e357a3c0cca66e44c60312f9c420585dd989598779aa0b"
+freeze_commit_must_be_ancestor_of_HEAD = true
+tracked_freeze_blobs_must_match_commit_and_worktree = true
+raw_bundle_must_be_complete_and_hash_exact_when_present = true
+clean_clone_may_verify_only_the_compact_result = true
+
+[observed_diagnosis]
+method_count = 2
+signal_ladders_per_method = 288
+total_signal_ladders = 576
+combined_power_classifications = 1152
+estimator_power_classifications = 2304
+native_estimator_agreement_count = 1119
+native_estimator_disagreement_count = 33
+native_estimators_agree_zero_contracting = 156
+native_estimators_agree_nonzero = 167
+native_estimators_agree_floor_dominated = 242
+native_estimators_agree_unresolved = 554
+TDG2_finest_zero_classifications = 92
+TDG2_finest_zero_survive_native_zero = 92
+TDG2_finest_nonzero_classifications = 9
+TDG2_finest_nonzero_survive_native_nonzero = 0
+TDG2_finest_nonzero_become_native_zero = 6
+TDG2_finest_nonzero_become_native_unresolved = 3
+TDG2_finest_enclosure_classifications = 203
+TDG2_finest_enclosure_become_native_zero = 56
+TDG2_finest_enclosure_become_native_nonzero = 15
+TDG2_finest_enclosure_become_native_floor = 28
+TDG2_finest_enclosure_remain_native_unresolved = 101
+TDG2_finest_enclosure_native_disagreement = 3
+TDG2_finest_interpolation_owned_classifications = 169
+TDG2_finest_interpolation_become_native_zero = 50
+TDG2_finest_interpolation_become_native_nonzero = 15
+TDG2_finest_interpolation_remain_native_unresolved = 101
+TDG2_finest_interpolation_native_disagreement = 3
+replacement_temporal_admission_earned = false
+
+[observed_diagnosis.RK4]
+point_counts = [2049, 4097, 8193]
+field_zero_contracting = 59
+field_nonzero = 34
+field_floor_dominated = 40
+field_unresolved = 147
+field_estimator_disagreement = 8
+derivative_zero_contracting = 59
+derivative_nonzero = 35
+derivative_floor_dominated = 40
+derivative_unresolved = 145
+derivative_estimator_disagreement = 9
+
+[observed_diagnosis.SSPRK3]
+point_counts = [4097, 8193, 16385]
+field_zero_contracting = 19
+field_nonzero = 47
+field_floor_dominated = 81
+field_unresolved = 132
+field_estimator_disagreement = 9
+derivative_zero_contracting = 19
+derivative_nonzero = 51
+derivative_floor_dominated = 81
+derivative_unresolved = 130
+derivative_estimator_disagreement = 7
+
+[observed_diagnosis.cross_method]
+signal_count = 288
+field_same_combined_class = 170
+derivative_same_combined_class = 167
+field_both_zero_contracting = 19
+field_both_nonzero = 8
+field_both_floor_dominated = 40
+field_both_unresolved = 102
+field_both_estimator_disagreement = 1
+derivative_both_zero_contracting = 19
+derivative_both_nonzero = 10
+derivative_both_floor_dominated = 40
+derivative_both_unresolved = 98
+derivative_both_estimator_disagreement = 0
+
+[conclusions]
+historical_PROTO13_failure_preserved = true
+TDG3_native_grid_history_diagnosis_completed = true
+common_grid_interpolation_was_a_real_but_not_sole_owner = true
+all_TDG2_zero_contracting_finest_failures_survive_both_native_estimators = true
+TDG2_tentative_nonzero_finest_subset_is_not_confirmed = true
+majority_of_TDG2_enclosure_dominated_finest_classifications_remain_unresolved_or_disagree = true
+native_estimator_agreement_does_not_supply_a_continuum_enclosure = true
+replacement_temporal_admission_not_yet_justified = true
+TDG4_sampling_identifiability_theorem_design_may_begin = true
+PROTO14_design_may_not_yet_begin = true
+
+[proof_contract]
+freeze_commit_and_all_tracked_blobs_must_match = true
+raw_bundle_must_match_all_four_CAL10_hashes = true
+terminal_checkpoint_must_restore_through_CAL10_independent_loader = true
+exact_frozen_TDG3_module_must_compute_every_classification = true
+all_576_signal_ladders_and_2304_estimator_classifications_must_be_preserved = true
+TDG2_to_TDG3_cross_tabs_must_be_recomputed = true
+both_native_estimators_must_consume_all_64_samples_without_resampling = true
+arithmetic_intervals_must_not_be_promoted_to_continuum_enclosures = true
+one_bit_history_ladder_hash_count_nonclaim_and_claim_mutations_must_fail_closed = true
+no_class_may_retroactively_pass_PROTO13_or_define_a_replacement_gate = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG3_interpolation_ownership_discriminator_frozen = true
+TDG3_actual_histories_diagnosed = true
+TDG4_sampling_identifiability_theorem_design_may_begin = true
+replacement_temporal_gate_design_authorized = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG2_actual_histories_diagnosed = true
+TDG2_absolute_tail_outcome_is_mixed = true
+TDG3_interpolation_ownership_discriminator_frozen = true
+TDG3_actual_histories_diagnosed = true
+TDG3_native_grid_outcome_is_mixed = true
+common_grid_interpolation_removed_from_TDG3_measurement = true
+common_grid_interpolation_is_the_sole_temporal_failure_owner = false
+piecewise_linear_or_quadrature_surrogate_is_a_continuum_enclosure = false
+individual_temporal_budget_failure_cause_fully_derived = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,91 @@
+{
+  "allowed_zero_projectors": [
+    "(I8-tau3 tensor gamma5)/2",
+    "(I8+tau3 tensor gamma5)/2"
+  ],
+  "assumptions": [
+    "two five-dimensional Dirac copies on the same four-dimensional development background",
+    "unit U(1) charge on both copies; neutral off-diagonal scalar coupling",
+    "room-diagonal compact reflection with signs plus or minus one",
+    "even canonical scalar-link profile for the parity test",
+    "same declared length-2 compact interval; its global extension remains open"
+  ],
+  "comparison": "all exact fields and authenticated hashes; imported Einstein and Casimir solutions are not recomputed",
+  "gauge_heat_coefficient": {
+    "heat_prefactor_excluded": "(4*pi*t)^(-5/2)",
+    "per_unit_charge_Dirac_a4_F_squared": "2/3",
+    "proper_time_window_weight": "Lambda-nu_match",
+    "total_renormalized_gauge_coupling_fixed": false,
+    "two_copy_a4_F_squared": "4/3",
+    "two_copy_bulk_Maxwell_coefficient": "4*(Lambda-nu_match)/(3*(4*pi)^(5/2))"
+  },
+  "multiplicity": {
+    "bulk_complex_Dirac_fields": 2,
+    "bulk_spinor_rank": 8,
+    "massive_4D_Dirac_fields_per_nonzero_compact_level": 2,
+    "massless_4D_Dirac_zero_fields_before_link_mass": 1
+  },
+  "parity_and_anomaly_rows": [
+    {
+      "anomaly_free_zero_sector": false,
+      "child_parity_sign": 1,
+      "cubic_U1_anomaly": "2",
+      "left_Weyl_zero_modes": 2,
+      "mixed_gravitational_U1_anomaly": "2",
+      "neutral_even_scalar_link_allowed": false,
+      "parent_parity_sign": 1,
+      "right_Weyl_zero_modes": 0
+    },
+    {
+      "anomaly_free_zero_sector": true,
+      "child_parity_sign": -1,
+      "cubic_U1_anomaly": "0",
+      "left_Weyl_zero_modes": 1,
+      "mixed_gravitational_U1_anomaly": "0",
+      "neutral_even_scalar_link_allowed": true,
+      "parent_parity_sign": 1,
+      "right_Weyl_zero_modes": 1
+    },
+    {
+      "anomaly_free_zero_sector": true,
+      "child_parity_sign": 1,
+      "cubic_U1_anomaly": "0",
+      "left_Weyl_zero_modes": 1,
+      "mixed_gravitational_U1_anomaly": "0",
+      "neutral_even_scalar_link_allowed": true,
+      "parent_parity_sign": -1,
+      "right_Weyl_zero_modes": 1
+    },
+    {
+      "anomaly_free_zero_sector": false,
+      "child_parity_sign": -1,
+      "cubic_U1_anomaly": "-2",
+      "left_Weyl_zero_modes": 0,
+      "mixed_gravitational_U1_anomaly": "-2",
+      "neutral_even_scalar_link_allowed": false,
+      "parent_parity_sign": -1,
+      "right_Weyl_zero_modes": 2
+    }
+  ],
+  "schema": "NSC-CHARGED-SECTOR-v1",
+  "source_hashes": {
+    "docs/nsc-charged-self-sourcing-route.md": "5d92c16913fc48ce442a224063f2a26eb88af849af64c2fce501a27b7c0c871b",
+    "scripts/check_nsc_charged_sector.py": "098d2b8299205be338d5722b5af7d668a577d6ba49a934c3a0a36af8b225b546",
+    "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "sources": [
+    "https://arxiv.org/html/1807.04726v3",
+    "https://arxiv.org/html/hep-ph/9912408v3",
+    "https://arxiv.org/html/hep-th/0306138v3"
+  ],
+  "status": "candidate operator/domain matching; not a new wormhole construction",
+  "unfulfilled": [
+    "derivation of the U(1) internal/gauge representation from the full NSC algebra",
+    "actual scalar-link profile and mass from the throat/operator equations",
+    "five-dimensional determinant phase and boundary anomaly/domain matching",
+    "same-action renormalized gravitational, gauge and vacuum coefficients",
+    "magnetic flux geometry, complete fermion loop and state matching",
+    "NSC self-sourcing, child formation and cosmological predictions"
+  ]
+}

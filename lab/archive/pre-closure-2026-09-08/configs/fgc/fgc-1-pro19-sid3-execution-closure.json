@@ -1,0 +1,967 @@
+{
+  "authority_delta_paths": [
+    "CHANGELOG.md",
+    "Makefile",
+    "README.md",
+    "configs/fgc/fgc-1-hlt16-mon16.toml",
+    "configs/fgc/fgc-1-pro19-launch-authority.toml",
+    "configs/fgc/fgc-1-pro19-sid3-auth1.toml",
+    "configs/fgc/fgc-1-pro19-sid3-execution-closure.json",
+    "configs/fgc/fgc-runtime-matrix.toml",
+    "docs/claim-ledger.md",
+    "docs/fgc-pro19-sid3-auth1.md",
+    "docs/fgc-runtime-matrix.md",
+    "docs/finite-gradient-closure.md",
+    "docs/research-roadmap.md",
+    "docs/review-summary.md",
+    "paper/fgc-local-defocusing/README.md",
+    "paper/recursive-horizons.md",
+    "paper/recursive-horizons.pdf",
+    "results/README.md",
+    "results/fgc-1-hlt16-mon16.json",
+    "results/fgc-1-pro19-sid3-auth1.json"
+  ],
+  "files": [
+    {
+      "git_blob_oid": "b4bf0b1b194e24c5eacfb1a8bf598fdd80e577d6",
+      "kind": "input",
+      "path": "configs/fgc/fgc-1-cal9-run1.toml",
+      "sha256": "8e6fafff638ffd49549efab8b6f969a01964c915116db9ce3698953201172176"
+    },
+    {
+      "git_blob_oid": "b2a49d8e926b5e3341c26bb8659cd4f9338dae71",
+      "kind": "input",
+      "path": "configs/fgc/fgc-1-pro19-sid2-pref1.toml",
+      "sha256": "e00ae01660ae9467c121b9c7190554dcdaf154ff292a0e7f013a614401e2c58d"
+    },
+    {
+      "git_blob_oid": "3a6139d164c14cc2aaf5544ac15a6a6b99ad22f7",
+      "kind": "input",
+      "path": "configs/fgc/fgc-1-rsp2-run1.toml",
+      "sha256": "8213341f6cc5dd1d044a1ee9ae68b9ce7c7445ef9b933bcf8bcc944d30e4abd1"
+    },
+    {
+      "git_blob_oid": "c9278d4cb02d9748e73f9e991561504c637caf01",
+      "kind": "input",
+      "path": "results/fgc-1-hlt10-mon10.json",
+      "sha256": "630d0d1843130180cb49dd237fe32e83e0336e7e44e7c684e4baf406b1883fe5"
+    },
+    {
+      "git_blob_oid": "39594ad93c0dda409ca1f52966e4b5176ac7c05f",
+      "kind": "input",
+      "path": "results/fgc-1-pro18-auth1.json",
+      "sha256": "dd967568fbae0bd19e063af94ea8e2d53480c98afec5c78bd86601c20faf4efa"
+    },
+    {
+      "git_blob_oid": "7204c4a15e243b43084a27c8bde064e1f0618b0e",
+      "kind": "input",
+      "path": "results/fgc-1-pro19-frz1.json",
+      "sha256": "c4bd7b9bbae3fed06c69ac69d18630152e9d852e8eed915a422bd3d8ea40368e"
+    },
+    {
+      "git_blob_oid": "0427b1458690b66597dc7b9198614b60e4de1f9b",
+      "kind": "input",
+      "path": "results/fgc-1-pro19-sid2-pref1.json",
+      "sha256": "2c70d87f6f5dd022330492562fd395004c7ec1eb9ec1d9e714ee0f0ceceb7738"
+    },
+    {
+      "git_blob_oid": "5c04ee5987967ec1b16e4f78e910745a3b68bccf",
+      "kind": "input",
+      "path": "results/fgc-1-rsp2-frz1.json",
+      "sha256": "a6c147d7b369387e70318ee42eb56c97332702a227fd93d7ad20a1cfe2c1aa22"
+    },
+    {
+      "git_blob_oid": "5ccc46789e622e997ffde89c69d4090490538af8",
+      "kind": "python",
+      "path": "scripts/bootstrap_fgc_pro19_sid3.py",
+      "sha256": "51fae4f53a1864d08b989d7c7aa99a8fffbbff33e0dff34cf73059c744b49cf1"
+    },
+    {
+      "git_blob_oid": "516a01eb7d7402ab3a5a8f03f270c86e845c2604",
+      "kind": "python",
+      "path": "scripts/run_fgc_pro19_event1.py",
+      "sha256": "bb95b4e7f17097ff2891f74c0e78229b713844e39bb9a953ff8bd17912c620d1"
+    },
+    {
+      "git_blob_oid": "aa131c45ab2dc6fd80e6ed4b1dac0e9d2e95dbd2",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/action.py",
+      "sha256": "138260a26b0e386044a68810978eba61742e5d9dcc3f372c7b89276f08fdfbb4"
+    },
+    {
+      "git_blob_oid": "a6fa121fc9645d002c4a42c1734628be63c4d830",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/boundary_domain.py",
+      "sha256": "062d9f07387d78079213bddfc718168be2f2402a77c9e0107e9a2ca04ece5cb1"
+    },
+    {
+      "git_blob_oid": "71a458eb033ce371b5f8db962353096a67567e7f",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/cal2_source_diagnosis.py",
+      "sha256": "506764b60d767affb7db067b8bb3e7e92f4d6a6d0c163a5af6a6772fae29c976"
+    },
+    {
+      "git_blob_oid": "6c31724d075d31a80c74763c24a28844a2010192",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/cal4_common_event_diagnosis.py",
+      "sha256": "0add38fadebbe07b021ccd3c421ced6519efea9f233ad09d447fbc3241041741"
+    },
+    {
+      "git_blob_oid": "2cbbb012a5875aad62aacd78db39687d59293ee4",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/calibration_runtime.py",
+      "sha256": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9"
+    },
+    {
+      "git_blob_oid": "9f2ed038672aaa66e8df26e39ba9e04de6e2ea36",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/floating_jet.py",
+      "sha256": "1f5780b20b5ff9e4728c07173a848eec9f55736d2dbdcda368cfbd4b3acbcf0c"
+    },
+    {
+      "git_blob_oid": "1e650ea2ac035ac2e302d3c7012f1051eedd878e",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/gr0_calibration.py",
+      "sha256": "60c5e86fc4676da32fb76fea47158634bf4e76d0787901489bb8925e8212ec91"
+    },
+    {
+      "git_blob_oid": "08ac3406228666b91f6ae316778410166fa6ebc8",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/gr0_direct_source.py",
+      "sha256": "57942aebc126135425e70bf0fb4bb9d1b541137734ea7421ebe1395917bee1f0"
+    },
+    {
+      "git_blob_oid": "2997cc4d7ccfe68010c68a06efd6296fa396c3c2",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/health_monitor.py",
+      "sha256": "b364b94745a808313248b442417aacd73a7a8035a5ff9fc1a2bd4829e7d55784"
+    },
+    {
+      "git_blob_oid": "da105ad7b228ea9db93d23ad484b8a825caa363b",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py",
+      "sha256": "a6618215fc15a0bf5433ec7ed68e09d5bf7922fb229282381452ebafff7817c2"
+    },
+    {
+      "git_blob_oid": "231f77e09ad7e3a9b380f7fad006da9c3b0e6959",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py",
+      "sha256": "2e00b4ab8ed39951327c4aceb2fe42e36cfdc3cccb5a2a1a35cc94de2ab70813"
+    },
+    {
+      "git_blob_oid": "5af2c02a7096246854b48f986ef036fe49aaeccb",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py",
+      "sha256": "638bd75e592d49889de5c37418845b6646e7055c898cf86064a3048852e07892"
+    },
+    {
+      "git_blob_oid": "1eaa05af648e251277dc9e21299b56ec06c51cdc",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py",
+      "sha256": "5286373a63349d0399bab6e32dac942c8f435942b0045b7684507152b99150e0"
+    },
+    {
+      "git_blob_oid": "222985e65844a9f5c21affa1142d5e11a45478e6",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py",
+      "sha256": "9b4e1b82c04433bcd2b6f75640ab549094ec74e8f6032a055bd6ddfbebfbb7b7"
+    },
+    {
+      "git_blob_oid": "f7971d20cb273ed291af403ff39254f7fe7f9484",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_member_codec.py",
+      "sha256": "8680e5e815921a910de4fb021926bcdd4de5aa1e0c39f2f1f70b74dae56eba75"
+    },
+    {
+      "git_blob_oid": "35de71204f644f9cae943a656ad74152ec4efcb3",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py",
+      "sha256": "e6624b2fe477c6f24b7015c5864786c8d3c929fcb6804d90b3677f0b0daa11f3"
+    },
+    {
+      "git_blob_oid": "2d4844be6e3ad9c70759068bd35e8bc1b1032671",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_state_store.py",
+      "sha256": "02203a5d30ee6e025dda8e968a4ee1ae2d2009e5c35a3701736c426e9d1ebc83"
+    },
+    {
+      "git_blob_oid": "5536c712493484221cbc67fb3dcb83a6669a499a",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/numerical_engine.py",
+      "sha256": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+    },
+    {
+      "git_blob_oid": "d701376bfabbae8f58def8d4742be4c85fe91554",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto10_runtime.py",
+      "sha256": "95f47850177031c0e22612c9466ee4ce7b95b1c1e73115140ea3e2334858cf66"
+    },
+    {
+      "git_blob_oid": "d4a700988632fa2b4c4cf847913fd7b927d11aaa",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto11_runtime.py",
+      "sha256": "4aa3b1360543c4da1b8297dd43cea85fe0e2af6bf0ce7a30f54d0d7eb7e12950"
+    },
+    {
+      "git_blob_oid": "e9237142612aa69ea62ea8ef87b3434a840b4526",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto12_runtime.py",
+      "sha256": "3a16b186e6ac25ccbaaad68e1600790b21208b0295ba4776a7d58b5baa4be5ae"
+    },
+    {
+      "git_blob_oid": "6cdf43d880a0732b73760ffc9534d358f44c8e91",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto14_runtime.py",
+      "sha256": "f5abcfcaf1d55c15fbb1b8825d348230f86c15f54dc50a2328533eb54b6ecca4"
+    },
+    {
+      "git_blob_oid": "4e3015bb9c74b7b2ec7ecf91cb52a108f2be872f",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto15_runtime.py",
+      "sha256": "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+    },
+    {
+      "git_blob_oid": "d21ad2caeeccc72101d216a3d232de9efca04c42",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py",
+      "sha256": "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d"
+    },
+    {
+      "git_blob_oid": "9c72ef3fcc4f2e86f0f09a3c7b036220441cc503",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_cfl_continuation_authority.py",
+      "sha256": "955b864ac79d2b16aabf06150efc1d82c8e33f2a5751a2bdf4fe42a86ecf56af"
+    },
+    {
+      "git_blob_oid": "03dfbc49a135bb3a1264843f08b6a910408e1b99",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_execution_closure.py",
+      "sha256": "7894a58af29ab5a3e28333929745c728791df0e6c3cd56fced453224b97b4eac"
+    },
+    {
+      "git_blob_oid": "58d1a5f0a917e2c71b5588fb76de3728b78eaf6e",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py",
+      "sha256": "735545419a39e3fa5417c020d688cfa4b0ce4770446ae1083d0f4b41e039a5ad"
+    },
+    {
+      "git_blob_oid": "ba67bb0398cb09e7d633ab347ab1508f9554580c",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_launch_authority.py",
+      "sha256": "7dd3c5f8d4f776191e1ba0e0622fc1a849453f348a23343481d8c692cf58ad12"
+    },
+    {
+      "git_blob_oid": "f2f55c04c15fd04c9d13b5ed957f692f739c0fea",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py",
+      "sha256": "0a502abaee9c825ed9302ae717d2063c76e2e00e1cdc0a0f63f901161232f1c9"
+    },
+    {
+      "git_blob_oid": "41c7dada1ce0d635107733f862a6131d0f73a4a5",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_resume_authority.py",
+      "sha256": "d5eeeb64d586f0fb6973d64fc6662726ed2715247033dfb00e928dd4f9e8a33e"
+    },
+    {
+      "git_blob_oid": "f43b6aada3d6377a4cc631f708aa033d1392c9c6",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_sid1_authority.py",
+      "sha256": "50faaa591168c449fc9c9d15cd1e71349b26cb09a587fde59bc08c89ff054522"
+    },
+    {
+      "git_blob_oid": "356b7fc494962c0be1cabbde58b036699dc14151",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_sid2_binder.py",
+      "sha256": "160db0e5a0819c51ca5fde4aee75ccc34537da4018075bc0f8cc8a4c9e2f71d3"
+    },
+    {
+      "git_blob_oid": "76ed6bec6e4fb33a52dea53571de20ea4c5d4512",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto4_admission.py",
+      "sha256": "f3c3973a58b9f81d820b84845615034c01457767102e41b50d9b095997d7765f"
+    },
+    {
+      "git_blob_oid": "87460e95e5fb28bdc77514f187699f2df7de7f22",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto5_runtime.py",
+      "sha256": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545"
+    },
+    {
+      "git_blob_oid": "140f388484d14c979f5dca77f8934f8bf0747668",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto6_runtime.py",
+      "sha256": "f0d63c3b1bd17891ac1cb21969ec6b3454cac4adc6d4c116979626b0d82d77f5"
+    },
+    {
+      "git_blob_oid": "e960d6bcee61bdb5e18599e37c68539475725cb6",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto7_runtime.py",
+      "sha256": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734"
+    },
+    {
+      "git_blob_oid": "6796eefb9fdc7e2d99c567e2f09eab39e74cd527",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto8_runtime.py",
+      "sha256": "6cfe110c15ca6d31b4023d86d8a3e40f4e36df39058b3cd8bf06db06ffac133e"
+    },
+    {
+      "git_blob_oid": "85c1beeec180ef84311c87c444fad7e80e0515cc",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/proto9_runtime.py",
+      "sha256": "e55901a682e0497e4cd8c587933a3a73ea4c8170c7817f0cd43c7641ccec7bac"
+    },
+    {
+      "git_blob_oid": "0f9ad717222480c2071f3add3e7aa9f5ccae1f31",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/protocol_v17.py",
+      "sha256": "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+    },
+    {
+      "git_blob_oid": "da00ca7f61ac323b365fca154e3f1f4184df523d",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/protocol_v8.py",
+      "sha256": "87669b8f3c5d5402ce3641a2812269ade470da0af96c616e9b9ee55642a120b7"
+    },
+    {
+      "git_blob_oid": "4a1086bfe8525297fe72ce3faf55be253980f9ee",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/spectral_sensitivity.py",
+      "sha256": "58e1edcaf5aacfe39e26b4dd3fe3c4de291db5eca0ec7921d4395f389d5a1bad"
+    },
+    {
+      "git_blob_oid": "ef28e1d69b50321272b3a650bba45ba309d193e3",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/spectral_sensitivity_v12.py",
+      "sha256": "2c6fb316d5218e6e05c4290f04c7999e6c2c91999419fb084f4de8d9ea68691d"
+    },
+    {
+      "git_blob_oid": "daabcb4346f3a20c9954835f49d4792ba121c1e9",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/src3_reference_balanced_source.py",
+      "sha256": "c55366173351b7ea19f951a6a500ebc8e00afc3b988ee2dc90221fe30631f719"
+    },
+    {
+      "git_blob_oid": "5e2bb654aaf71decb075bb28120de3e3f0d668ff",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/src4_vectorized_reference_source.py",
+      "sha256": "78ea8a907f9a28658582c4e89380496e80c36f7648014ec89f29dac42d7ce415"
+    },
+    {
+      "git_blob_oid": "90a3d33c943f962ee9844785fb6d12c0c513ea32",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py",
+      "sha256": "75fc11943f459ca7549f75a812fe961e55ae04bbdb13450c1fdd509b5b53a080"
+    },
+    {
+      "git_blob_oid": "d207f5802d8d968f660513415edd3d74ea5e0e51",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py",
+      "sha256": "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+    },
+    {
+      "git_blob_oid": "db9e7346fc996e89baddf947c8860cfabdcd8d81",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py",
+      "sha256": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+    },
+    {
+      "git_blob_oid": "fd274ae253e4046721b8ea5840a21e4cbf2e554a",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py",
+      "sha256": "2bc86880d46a3b4c6cd743559d0bc4b51b09058382341dfffe6358b4565e44a9"
+    },
+    {
+      "git_blob_oid": "3afc46afe39ce7cbb174c67394534727ac187218",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py",
+      "sha256": "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1"
+    },
+    {
+      "git_blob_oid": "910eeb831feb4366181d129ac7d2aa6bcb862fba",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/evolution/vectorized_source.py",
+      "sha256": "bfc855b2cc2fd87e2523b4572f68fe3e3c1fd0a0c250f7fef0346d0dc5525e99"
+    },
+    {
+      "git_blob_oid": "abdf9d4c13f3ab89245e4bea76f8a0f2c64e4f66",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/exact_interval.py",
+      "sha256": "4ac4d091d9104ae64671324b1a7ecf41e6e71e07d685200ff07524bdb822f714"
+    },
+    {
+      "git_blob_oid": "9d0d453339d67351747b3c5f1e690cc6e7701355",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/exact_linear_algebra.py",
+      "sha256": "ea7036e9ab846ffd0804fc184ce5af1e59be5715584871608e7116d13d2731fe"
+    },
+    {
+      "git_blob_oid": "6f28ea40fcbe8bff052c83775dcf0e3d351926f2",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/exact_tangent.py",
+      "sha256": "242134bad2dcd75ee74e7fe358eebf3b01804058ada00397e999f7e12809fd5c"
+    },
+    {
+      "git_blob_oid": "984e857172644b6b7afb93c87b29c68476008085",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/initial_data_family.py",
+      "sha256": "161d12675e2945055c7a3474db1fe7c72efb159021b558180786d5d1fb127345"
+    },
+    {
+      "git_blob_oid": "dc196e38c5f483f207f9eca462b1699b6881a174",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/initial_data_preflight.py",
+      "sha256": "8d13506cc5d0e459edef63349e32b124f0c75ecd8ce6761a965b539aca1ae256"
+    },
+    {
+      "git_blob_oid": "ade37f566ccaeb0e5aab21148c35c37535aa68b2",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/interval_tangent.py",
+      "sha256": "dd51fc19c7c5ac02e0cf5a59a0fe862fc4dd34e2d42f788c9412766e8ead245f"
+    },
+    {
+      "git_blob_oid": "89f2720a134bff924807460dfc25d38a4b1ba0e5",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/modified_harmonic.py",
+      "sha256": "8896a0c266d4c6904e5432a6c96c03386ab3f2d3321250738ad63f869732c00f"
+    },
+    {
+      "git_blob_oid": "cf081da851f69df48d40978923ea35b242ea8592",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_constraints.py",
+      "sha256": "428ddbe6325a43d905d5da880d0b67922b5448d38e69a2461e84003348708783"
+    },
+    {
+      "git_blob_oid": "154b012e74e50ac573e69be377176cf2396ac283",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_first_order.py",
+      "sha256": "5afe3728618d775c01da3c5974f132cef37226c2ce5934cbd62c59e298928ad7"
+    },
+    {
+      "git_blob_oid": "e585a2d825f5b3cf8c80dc68be6853c68912690b",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_implicit.py",
+      "sha256": "ee8595f5946dd93b4c2c83907daf04e2a992be110ddb37ca7545baa8db40f21f"
+    },
+    {
+      "git_blob_oid": "ef2f74036d834f99951d4bba98e93d85c43bbcda",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_reference.py",
+      "sha256": "1cb40b5a00c1651eb2c08cd3c78e7749e274d3954026e293975b4937a6ff7cbb"
+    },
+    {
+      "git_blob_oid": "1e0ec9e4cbd61ec9b8d6d22b0a1b90372d015c47",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/reference_connection.py",
+      "sha256": "1353ba305fb23122ae426983c74919a96272e2ffa8cd5c46c880bd96c6e46ad1"
+    },
+    {
+      "git_blob_oid": "fe1889e76a78e992eac0a24171a176e7529e8a1a",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/scoped_run_authorization.py",
+      "sha256": "c47fade97823566caeebc21583c074fce62c4e296ea717babc40bf11be91e2bf"
+    },
+    {
+      "git_blob_oid": "8bed3070fc5ce64a358a65a275a126e51b61fb12",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/spherical_reduction.py",
+      "sha256": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+    },
+    {
+      "git_blob_oid": "76e449d07fc4679dac35b32d8591987c7ef7e524",
+      "kind": "python",
+      "path": "src/recursive_horizons/fgc/spherical_symbol.py",
+      "sha256": "5add74bdc40f71c720d5739ded449262f1bd4e9586464f95ac16d123e290c19d"
+    }
+  ],
+  "forbidden_module_prefixes": [
+    "recursive_horizons.fgc.evolution.covariant_principal_health",
+    "recursive_horizons.fgc.evolution.initial_state_bridge",
+    "recursive_horizons.fgc.evolution.nonlinear_source",
+    "recursive_horizons.fgc.evolution.proto19_progression_inputs",
+    "recursive_horizons.fgc.evolution.static_initial_admission",
+    "scripts.run_fgc_gr0_calibration"
+  ],
+  "forbidden_script_prefixes": [
+    "scripts/run_fgc_gr0_calibration.py",
+    "src/recursive_horizons/fgc/evolution/proto19_progression_inputs.py",
+    "src/recursive_horizons/fgc/evolution/static_initial_admission.py"
+  ],
+  "git_object_format": "sha1",
+  "implementation_commit": "4d7133c0737524712220f77ee5ae4d9c3550c75a",
+  "imports": [
+    {
+      "module": "recursive_horizons.fgc.action",
+      "path": "src/recursive_horizons/fgc/action.py",
+      "sha256": "138260a26b0e386044a68810978eba61742e5d9dcc3f372c7b89276f08fdfbb4"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.boundary_domain",
+      "path": "src/recursive_horizons/fgc/evolution/boundary_domain.py",
+      "sha256": "062d9f07387d78079213bddfc718168be2f2402a77c9e0107e9a2ca04ece5cb1"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.cal2_source_diagnosis",
+      "path": "src/recursive_horizons/fgc/evolution/cal2_source_diagnosis.py",
+      "sha256": "506764b60d767affb7db067b8bb3e7e92f4d6a6d0c163a5af6a6772fae29c976"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.cal4_common_event_diagnosis",
+      "path": "src/recursive_horizons/fgc/evolution/cal4_common_event_diagnosis.py",
+      "sha256": "0add38fadebbe07b021ccd3c421ced6519efea9f233ad09d447fbc3241041741"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.calibration_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/calibration_runtime.py",
+      "sha256": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.floating_jet",
+      "path": "src/recursive_horizons/fgc/evolution/floating_jet.py",
+      "sha256": "1f5780b20b5ff9e4728c07173a848eec9f55736d2dbdcda368cfbd4b3acbcf0c"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.gr0_calibration",
+      "path": "src/recursive_horizons/fgc/evolution/gr0_calibration.py",
+      "sha256": "60c5e86fc4676da32fb76fea47158634bf4e76d0787901489bb8925e8212ec91"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.gr0_direct_source",
+      "path": "src/recursive_horizons/fgc/evolution/gr0_direct_source.py",
+      "sha256": "57942aebc126135425e70bf0fb4bb9d1b541137734ea7421ebe1395917bee1f0"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.health_monitor",
+      "path": "src/recursive_horizons/fgc/evolution/health_monitor.py",
+      "sha256": "b364b94745a808313248b442417aacd73a7a8035a5ff9fc1a2bd4829e7d55784"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_campaign_recovery",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py",
+      "sha256": "a6618215fc15a0bf5433ec7ed68e09d5bf7922fb229282381452ebafff7817c2"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_campaign_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py",
+      "sha256": "2e00b4ab8ed39951327c4aceb2fe42e36cfdc3cccb5a2a1a35cc94de2ab70813"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_campaign_schema",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py",
+      "sha256": "638bd75e592d49889de5c37418845b6646e7055c898cf86064a3048852e07892"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_campaign_store",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py",
+      "sha256": "5286373a63349d0399bab6e32dac942c8f435942b0045b7684507152b99150e0"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_lifecycle",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py",
+      "sha256": "9b4e1b82c04433bcd2b6f75640ab549094ec74e8f6032a055bd6ddfbebfbb7b7"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_member_codec",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_member_codec.py",
+      "sha256": "8680e5e815921a910de4fb021926bcdd4de5aa1e0c39f2f1f70b74dae56eba75"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_progression_attempt",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py",
+      "sha256": "e6624b2fe477c6f24b7015c5864786c8d3c929fcb6804d90b3677f0b0daa11f3"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.hlt16_state_store",
+      "path": "src/recursive_horizons/fgc/evolution/hlt16_state_store.py",
+      "sha256": "02203a5d30ee6e025dda8e968a4ee1ae2d2009e5c35a3701736c426e9d1ebc83"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.numerical_engine",
+      "path": "src/recursive_horizons/fgc/evolution/numerical_engine.py",
+      "sha256": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto10_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto10_runtime.py",
+      "sha256": "95f47850177031c0e22612c9466ee4ce7b95b1c1e73115140ea3e2334858cf66"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto11_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto11_runtime.py",
+      "sha256": "4aa3b1360543c4da1b8297dd43cea85fe0e2af6bf0ce7a30f54d0d7eb7e12950"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto12_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto12_runtime.py",
+      "sha256": "3a16b186e6ac25ccbaaad68e1600790b21208b0295ba4776a7d58b5baa4be5ae"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto14_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto14_runtime.py",
+      "sha256": "f5abcfcaf1d55c15fbb1b8825d348230f86c15f54dc50a2328533eb54b6ecca4"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto15_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto15_runtime.py",
+      "sha256": "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto17_pure_construction",
+      "path": "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py",
+      "sha256": "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_cfl_continuation_authority",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_cfl_continuation_authority.py",
+      "sha256": "955b864ac79d2b16aabf06150efc1d82c8e33f2a5751a2bdf4fe42a86ecf56af"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_execution_closure",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_execution_closure.py",
+      "sha256": "7894a58af29ab5a3e28333929745c728791df0e6c3cd56fced453224b97b4eac"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_gr0_static_factory",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py",
+      "sha256": "735545419a39e3fa5417c020d688cfa4b0ce4770446ae1083d0f4b41e039a5ad"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_launch_authority",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_launch_authority.py",
+      "sha256": "7dd3c5f8d4f776191e1ba0e0622fc1a849453f348a23343481d8c692cf58ad12"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_progression_contract",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py",
+      "sha256": "0a502abaee9c825ed9302ae717d2063c76e2e00e1cdc0a0f63f901161232f1c9"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_resume_authority",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_resume_authority.py",
+      "sha256": "d5eeeb64d586f0fb6973d64fc6662726ed2715247033dfb00e928dd4f9e8a33e"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_sid1_authority",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_sid1_authority.py",
+      "sha256": "50faaa591168c449fc9c9d15cd1e71349b26cb09a587fde59bc08c89ff054522"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto19_sid2_binder",
+      "path": "src/recursive_horizons/fgc/evolution/proto19_sid2_binder.py",
+      "sha256": "160db0e5a0819c51ca5fde4aee75ccc34537da4018075bc0f8cc8a4c9e2f71d3"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto4_admission",
+      "path": "src/recursive_horizons/fgc/evolution/proto4_admission.py",
+      "sha256": "f3c3973a58b9f81d820b84845615034c01457767102e41b50d9b095997d7765f"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto5_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto5_runtime.py",
+      "sha256": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto6_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto6_runtime.py",
+      "sha256": "f0d63c3b1bd17891ac1cb21969ec6b3454cac4adc6d4c116979626b0d82d77f5"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto7_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto7_runtime.py",
+      "sha256": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto8_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto8_runtime.py",
+      "sha256": "6cfe110c15ca6d31b4023d86d8a3e40f4e36df39058b3cd8bf06db06ffac133e"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.proto9_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/proto9_runtime.py",
+      "sha256": "e55901a682e0497e4cd8c587933a3a73ea4c8170c7817f0cd43c7641ccec7bac"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.protocol_v17",
+      "path": "src/recursive_horizons/fgc/evolution/protocol_v17.py",
+      "sha256": "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.protocol_v8",
+      "path": "src/recursive_horizons/fgc/evolution/protocol_v8.py",
+      "sha256": "87669b8f3c5d5402ce3641a2812269ade470da0af96c616e9b9ee55642a120b7"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.spectral_sensitivity",
+      "path": "src/recursive_horizons/fgc/evolution/spectral_sensitivity.py",
+      "sha256": "58e1edcaf5aacfe39e26b4dd3fe3c4de291db5eca0ec7921d4395f389d5a1bad"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.spectral_sensitivity_v12",
+      "path": "src/recursive_horizons/fgc/evolution/spectral_sensitivity_v12.py",
+      "sha256": "2c6fb316d5218e6e05c4290f04c7999e6c2c91999419fb084f4de8d9ea68691d"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.src3_reference_balanced_source",
+      "path": "src/recursive_horizons/fgc/evolution/src3_reference_balanced_source.py",
+      "sha256": "c55366173351b7ea19f951a6a500ebc8e00afc3b988ee2dc90221fe30631f719"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.src4_vectorized_reference_source",
+      "path": "src/recursive_horizons/fgc/evolution/src4_vectorized_reference_source.py",
+      "sha256": "78ea8a907f9a28658582c4e89380496e80c36f7648014ec89f29dac42d7ce415"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.tdg5_stage_complete_refinement_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py",
+      "sha256": "75fc11943f459ca7549f75a812fe961e55ae04bbdb13450c1fdd509b5b53a080"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.tdg6_temporal_admission_design",
+      "path": "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py",
+      "sha256": "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.tdg6_temporal_admission_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py",
+      "sha256": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.tdg7_binary64_subdivision_lattice",
+      "path": "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py",
+      "sha256": "2bc86880d46a3b4c6cd743559d0bc4b51b09058382341dfffe6358b4565e44a9"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.tdg7_stage_safe_runtime",
+      "path": "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py",
+      "sha256": "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution.vectorized_source",
+      "path": "src/recursive_horizons/fgc/evolution/vectorized_source.py",
+      "sha256": "bfc855b2cc2fd87e2523b4572f68fe3e3c1fd0a0c250f7fef0346d0dc5525e99"
+    },
+    {
+      "module": "recursive_horizons.fgc.exact_interval",
+      "path": "src/recursive_horizons/fgc/exact_interval.py",
+      "sha256": "4ac4d091d9104ae64671324b1a7ecf41e6e71e07d685200ff07524bdb822f714"
+    },
+    {
+      "module": "recursive_horizons.fgc.exact_linear_algebra",
+      "path": "src/recursive_horizons/fgc/exact_linear_algebra.py",
+      "sha256": "ea7036e9ab846ffd0804fc184ce5af1e59be5715584871608e7116d13d2731fe"
+    },
+    {
+      "module": "recursive_horizons.fgc.exact_tangent",
+      "path": "src/recursive_horizons/fgc/exact_tangent.py",
+      "sha256": "242134bad2dcd75ee74e7fe358eebf3b01804058ada00397e999f7e12809fd5c"
+    },
+    {
+      "module": "recursive_horizons.fgc.initial_data_family",
+      "path": "src/recursive_horizons/fgc/initial_data_family.py",
+      "sha256": "161d12675e2945055c7a3474db1fe7c72efb159021b558180786d5d1fb127345"
+    },
+    {
+      "module": "recursive_horizons.fgc.initial_data_preflight",
+      "path": "src/recursive_horizons/fgc/initial_data_preflight.py",
+      "sha256": "8d13506cc5d0e459edef63349e32b124f0c75ecd8ce6761a965b539aca1ae256"
+    },
+    {
+      "module": "recursive_horizons.fgc.interval_tangent",
+      "path": "src/recursive_horizons/fgc/interval_tangent.py",
+      "sha256": "dd51fc19c7c5ac02e0cf5a59a0fe862fc4dd34e2d42f788c9412766e8ead245f"
+    },
+    {
+      "module": "recursive_horizons.fgc.modified_harmonic",
+      "path": "src/recursive_horizons/fgc/modified_harmonic.py",
+      "sha256": "8896a0c266d4c6904e5432a6c96c03386ab3f2d3321250738ad63f869732c00f"
+    },
+    {
+      "module": "recursive_horizons.fgc.modified_harmonic_constraints",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_constraints.py",
+      "sha256": "428ddbe6325a43d905d5da880d0b67922b5448d38e69a2461e84003348708783"
+    },
+    {
+      "module": "recursive_horizons.fgc.modified_harmonic_first_order",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_first_order.py",
+      "sha256": "5afe3728618d775c01da3c5974f132cef37226c2ce5934cbd62c59e298928ad7"
+    },
+    {
+      "module": "recursive_horizons.fgc.modified_harmonic_implicit",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_implicit.py",
+      "sha256": "ee8595f5946dd93b4c2c83907daf04e2a992be110ddb37ca7545baa8db40f21f"
+    },
+    {
+      "module": "recursive_horizons.fgc.modified_harmonic_reference",
+      "path": "src/recursive_horizons/fgc/modified_harmonic_reference.py",
+      "sha256": "1cb40b5a00c1651eb2c08cd3c78e7749e274d3954026e293975b4937a6ff7cbb"
+    },
+    {
+      "module": "recursive_horizons.fgc.reference_connection",
+      "path": "src/recursive_horizons/fgc/reference_connection.py",
+      "sha256": "1353ba305fb23122ae426983c74919a96272e2ffa8cd5c46c880bd96c6e46ad1"
+    },
+    {
+      "module": "recursive_horizons.fgc.scoped_run_authorization",
+      "path": "src/recursive_horizons/fgc/scoped_run_authorization.py",
+      "sha256": "c47fade97823566caeebc21583c074fce62c4e296ea717babc40bf11be91e2bf"
+    },
+    {
+      "module": "recursive_horizons.fgc.spherical_reduction",
+      "path": "src/recursive_horizons/fgc/spherical_reduction.py",
+      "sha256": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+    },
+    {
+      "module": "recursive_horizons.fgc.spherical_symbol",
+      "path": "src/recursive_horizons/fgc/spherical_symbol.py",
+      "sha256": "5add74bdc40f71c720d5739ded449262f1bd4e9586464f95ac16d123e290c19d"
+    },
+    {
+      "module": "scripts.run_fgc_pro19_event1",
+      "path": "scripts/run_fgc_pro19_event1.py",
+      "sha256": "bb95b4e7f17097ff2891f74c0e78229b713844e39bb9a953ff8bd17912c620d1"
+    }
+  ],
+  "interpreter": {
+    "base_exec_prefix": "/opt/homebrew/Caskroom/miniconda/base",
+    "base_prefix": "/opt/homebrew/Caskroom/miniconda/base",
+    "base_sys_path": [
+      "/opt/homebrew/Caskroom/miniconda/base/lib/python314.zip",
+      "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14",
+      "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/lib-dynload",
+      "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages"
+    ],
+    "byteorder": "little",
+    "cache_tag": "cpython-314",
+    "exec_prefix": "/opt/homebrew/Caskroom/miniconda/base",
+    "executable": "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "executable_realpath": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.14",
+    "executable_sha256": "cbfd244fbeb046203838f0b60a86bc444e3028b4ec3d36c4312af081bbc04804",
+    "filesystem_encoding": "utf-8",
+    "filesystem_errors": "surrogateescape",
+    "flags": [
+      [
+        "bytes_warning",
+        0
+      ],
+      [
+        "context_aware_warnings",
+        0
+      ],
+      [
+        "debug",
+        0
+      ],
+      [
+        "dev_mode",
+        false
+      ],
+      [
+        "dont_write_bytecode",
+        1
+      ],
+      [
+        "gil",
+        1
+      ],
+      [
+        "hash_randomization",
+        1
+      ],
+      [
+        "ignore_environment",
+        1
+      ],
+      [
+        "inspect",
+        0
+      ],
+      [
+        "int_max_str_digits",
+        4300
+      ],
+      [
+        "interactive",
+        0
+      ],
+      [
+        "isolated",
+        1
+      ],
+      [
+        "n_fields",
+        21
+      ],
+      [
+        "n_sequence_fields",
+        18
+      ],
+      [
+        "n_unnamed_fields",
+        0
+      ],
+      [
+        "no_site",
+        0
+      ],
+      [
+        "no_user_site",
+        1
+      ],
+      [
+        "optimize",
+        0
+      ],
+      [
+        "quiet",
+        0
+      ],
+      [
+        "safe_path",
+        true
+      ],
+      [
+        "thread_inherit_context",
+        0
+      ],
+      [
+        "utf8_mode",
+        0
+      ],
+      [
+        "verbose",
+        0
+      ],
+      [
+        "warn_default_encoding",
+        0
+      ]
+    ],
+    "hexversion": 51250160,
+    "implementation": "cpython",
+    "implementation_version": "3.14.3",
+    "machine": "arm64",
+    "platform": "darwin",
+    "platform_release": "27.0.0",
+    "prefix": "/opt/homebrew/Caskroom/miniconda/base",
+    "soabi": "cpython-314-darwin",
+    "sysconfig_platform": "macosx-12.1-arm64"
+  },
+  "namespaces": [
+    {
+      "module": "recursive_horizons",
+      "path": "src/recursive_horizons"
+    },
+    {
+      "module": "recursive_horizons.fgc",
+      "path": "src/recursive_horizons/fgc"
+    },
+    {
+      "module": "recursive_horizons.fgc.evolution",
+      "path": "src/recursive_horizons/fgc/evolution"
+    },
+    {
+      "module": "scripts",
+      "path": "scripts"
+    }
+  ],
+  "schema": "FGC-1-PRO19-execution-source-closure-v1"
+}

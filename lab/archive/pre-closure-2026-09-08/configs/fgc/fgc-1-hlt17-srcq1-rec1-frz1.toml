@@ -1,0 +1,173 @@
+artifact_id = "FGC-1-HLT17-SRCQ1-REC1-FRZ1"
+schema_version = 1
+implementation_commit = "1fc17e5e2327cb3d8776386fc12d92a48af07f9c"
+implementation_sha256 = "faf15958643be946d91be235690e5ed5a2b8e89a0b6d0845288956b70064c2dc"
+runner_sha256 = "fd5947022a8322190449a8dfa4f7422c02db2438ce8d656c4b67916fe853da3c"
+authority_sha256 = "294ae85eb6f72a10da7e759be69b5111124208b4a54e3c77ad1bf0941f7775b4"
+source_closure_sha256 = "48e507ca674c7d164b905bb47d9c6778902886979ddb3dbe906e7d5cfd258ce0"
+origin_capture_sha256 = "2824af06c674336d479ec53faa4269f02fb598055860ec22f2ad84602a83fe72"
+output_namespace = "runs/fgc-2-sf1/hlt17-srcq1-rec1-source-origin-qualification"
+accepted_state_advanced = false
+campaign_store_written = false
+endpoint_adopted_or_serialized = false
+pro20_namespace_absent = true
+retry_authorized = false
+campaign_execution_authorized = false
+
+[resource]
+max_rss_bytes = 4294967296
+max_total_wall_seconds = 3600.0
+coordinator_freeze_required = true
+scientific_threshold_fitted = false
+source_retry_cap = 32
+cfl_retry_cap = 32
+
+[resource.max_wall_seconds_per_member]
+RK4-2049 = 900.0
+RK4-4097 = 900.0
+RK4-8193 = 900.0
+SSPRK3-4097 = 900.0
+SSPRK3-8193 = 900.0
+SSPRK3-16385 = 900.0
+
+[[resource.production_enclosure_limits]]
+member_key = "RK4-2049"
+point_count = 2049
+owned_rows = 2044
+fallback_d01 = 16352
+fallback_d12 = 32704
+
+[[resource.production_enclosure_limits]]
+member_key = "RK4-4097"
+point_count = 4097
+owned_rows = 4092
+fallback_d01 = 32736
+fallback_d12 = 65472
+
+[[resource.production_enclosure_limits]]
+member_key = "RK4-8193"
+point_count = 8193
+owned_rows = 8188
+fallback_d01 = 65504
+fallback_d12 = 131008
+
+[[resource.production_enclosure_limits]]
+member_key = "SSPRK3-4097"
+point_count = 4097
+owned_rows = 4092
+fallback_d01 = 32736
+fallback_d12 = 65472
+
+[[resource.production_enclosure_limits]]
+member_key = "SSPRK3-8193"
+point_count = 8193
+owned_rows = 8188
+fallback_d01 = 65504
+fallback_d12 = 131008
+
+[[resource.production_enclosure_limits]]
+member_key = "SSPRK3-16385"
+point_count = 16385
+owned_rows = 16380
+fallback_d01 = 131040
+fallback_d12 = 262080
+
+[environment]
+python_implementation = "CPython"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+blas_name = "accelerate"
+blas_version = "unknown"
+system = "Darwin"
+machine = "arm64"
+byteorder = "little"
+executable = "/opt/homebrew/Caskroom/miniconda/base/bin/python3"
+executable_realpath = "/opt/homebrew/Caskroom/miniconda/base/bin/python3.14"
+executable_sha256 = "cbfd244fbeb046203838f0b60a86bc444e3028b4ec3d36c4312af081bbc04804"
+numpy_extension_realpath = "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so"
+numpy_extension_sha256 = "08cc79db709635a4e0a8d59f227b566d322a561dc9f45ab5ddc335419bfa85fc"
+kernel_release = "27.0.0"
+
+[implementation_identity]
+implementation_id = "tdg11_c1r1_integer_exponent_direct_ring_v1"
+mathematical_object = "exact_accumulation_reconstruction_with_debit"
+reference_wire_artifact_id = "FGC-1-TDG11-IMP1"
+reference_wire_evaluator_id = "tdg11_imp1_exact_bernstein_with_dual_fallback_v1"
+admission_runtime_id = "hlt17_c1r1_admission_runtime_v1"
+
+[attempt2]
+sealed_compact_commit = "efb53b839a36a7f7f52018a44ef4eeaee42c1752"
+sealed_compact_sha256 = "7860491360fe058d6c5019f780103e6bf13b2c243d3c1d59ec3f74109636ab5f"
+metadata_linked_compact_commit = "4891feab58922e449a06585a848eb6a11df994ea"
+metadata_linked_compact_sha256 = "ba656a63343a87b389e388e39e142e8cfc94194c96c33326f6da0963f4504c48"
+derivation_document = "docs/fgc-hlt17-srcq1-frz1.md"
+raw_leaf_relative = "runs/fgc-2-sf1/hlt17-srcq1-source-origin-qualification/qualification.json"
+raw_leaf_sha256 = "889a8d17551a1eea6ed56f43f602fefb3f61ab78637bbdd0c995905e22259d89"
+raw_directory_payload_sha256 = "7b06deb68c989734f8dd669f2f1a8f4531aa90b82cc0e9ff34330db363123009"
+raw_leaf_bytes = 45589
+
+[[source_configuration]]
+member_key = "RK4-2049"
+sha256 = "76e0cae19347d29f3958decf115df9a20953b0d831cda904b41aa14f017e7565"
+
+[[source_configuration]]
+member_key = "RK4-4097"
+sha256 = "8abbdc5978e989262855281ba37e783642adac354d85fca57aa931107dbbd860"
+
+[[source_configuration]]
+member_key = "RK4-8193"
+sha256 = "55b8247845791d5aa5c5131a521f668fa830628583059fb5ea55e2fa1aa82eb5"
+
+[[source_configuration]]
+member_key = "SSPRK3-4097"
+sha256 = "d39b7bbb33dd3c8ffa8985d76d9b1deb5249a725f73ed158ca46e01b105c1dd8"
+
+[[source_configuration]]
+member_key = "SSPRK3-8193"
+sha256 = "25671dbf22da99f1662e4fc209d2680dc0adc8f2e58b0f3d983999d705ba5f9c"
+
+[[source_configuration]]
+member_key = "SSPRK3-16385"
+sha256 = "3f97c57ec9514fa7bef695a8f967110bd1dfa8141d1be8acdbc07190d3ccae61"
+
+[[member_cap]]
+member_key = "RK4-2049"
+grid_spacing_hex = "0x1.0000000000000p-4"
+previous_speed_upper_hex = "0x1.33345e70b5188p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaa90b0fb5c26p-8"
+
+[[member_cap]]
+member_key = "RK4-4097"
+grid_spacing_hex = "0x1.0000000000000p-5"
+previous_speed_upper_hex = "0x1.3333333aecf3ep+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaa9fefc9cp-9"
+
+[[member_cap]]
+member_key = "RK4-8193"
+grid_spacing_hex = "0x1.0000000000000p-6"
+previous_speed_upper_hex = "0x1.3333333333653p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaaaaaa654p-10"
+
+[[member_cap]]
+member_key = "SSPRK3-4097"
+grid_spacing_hex = "0x1.0000000000000p-5"
+previous_speed_upper_hex = "0x1.3333333fe51c4p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaa9908e70p-9"
+
+[[member_cap]]
+member_key = "SSPRK3-8193"
+grid_spacing_hex = "0x1.0000000000000p-6"
+previous_speed_upper_hex = "0x1.33333333349e5p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaaaaa8b26p-10"
+
+[[member_cap]]
+member_key = "SSPRK3-16385"
+grid_spacing_hex = "0x1.0000000000000p-7"
+previous_speed_upper_hex = "0x1.3333333333346p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaaaaaaa91p-11"

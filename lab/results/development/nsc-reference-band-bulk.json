@@ -1,0 +1,908 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "types, hashes, expressions, residuals, structure and scope",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "exact_residuals": "all Pauli coefficient, angular-pair, Weyl-trace and recursion residuals are exactly zero",
+  "input_hashes": {
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700"
+  },
+  "proof_inputs": {
+    "common_remainder": "nsc_common_subtracted_ks_source.reference_band_remainder",
+    "computation": "exact 2x2 Pauli coefficient differentiation and integer order bounds only",
+    "new_connection": "the only nondecaying k-boundary primitives are odd in the actual paired angular sign",
+    "physical_mode_or_large_k_scan": false,
+    "projector_recursion": "nsc_spatial_reference_symbol.reference_projector",
+    "published_formal_owner": "Panati, Spohn and Teufel, math-ph/0201055, sections 2 and 4.4; existing project reuse",
+    "reused_identity": "nsc_reference_band_action.action_variation_identity"
+  },
+  "reproducer": "python3 scripts/derive_nsc_reference_band_bulk.py --check",
+  "result": {
+    "angular_pairing_certificate": {
+      "group_count": 33,
+      "groups": [
+        {
+          "angular_signs": [
+            1
+          ],
+          "chart": "exact_chiral_LLL",
+          "group": 0,
+          "odd_angular_weight_sum": "not required: lambda=0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 4
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 1,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 6
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 2,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 8
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 3,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 10
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 4,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 12
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 5,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 14
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 6,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 16
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 7,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 18
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 8,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 20
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 9,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 22
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 10,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 24
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 11,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 26
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "opposite_angular_S2",
+          "group": 12,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 28
+          }
+        },
+        {
+          "angular_signs": [
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 13,
+          "odd_angular_weight_sum": "not required: lambda=0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 8
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 14,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 12
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 15,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 16
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 16,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 20
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 17,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 24
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 18,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 28
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 19,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 32
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 20,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 36
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 21,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 40
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 22,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 44
+          }
+        },
+        {
+          "angular_signs": [
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 23,
+          "odd_angular_weight_sum": "not required: lambda=0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 8
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 24,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 12
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 25,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 16
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 26,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 20
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 27,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 24
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 28,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 28
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 29,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 32
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 30,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 36
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 31,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 40
+          }
+        },
+        {
+          "angular_signs": [
+            -1,
+            1
+          ],
+          "chart": "positive_S1",
+          "group": 32,
+          "odd_angular_weight_sum": "0",
+          "weight_per_sign": {
+            "denominator": 1,
+            "numerator": 44
+          }
+        }
+      ],
+      "paired_group_count": 30,
+      "sign_owner": "nsc_incoming_source_assembly.assemble",
+      "signed_family_count": 63,
+      "weight_owner": "nsc_incoming_state_moments.incoming_group_factor"
+    },
+    "boundary_accounting": {
+      "finite_k_endpoints": "required separately",
+      "physical_spatial_endpoints": "required separately",
+      "physical_time_endpoints": "required separately"
+    },
+    "bulk_action_gradient": {
+      "N": 0,
+      "a": 0,
+      "beta": 0,
+      "r": 0
+    },
+    "formal_orders": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "leading_exact_certificate": {
+      "LLL": {
+        "U": "I in each fixed chiral k-sign chart",
+        "band_exchange_all_orders": "0",
+        "band_exchange_scope": "each fixed nonzero-k chiral chart of the owned canonical reference",
+        "delta_U": "0",
+        "distributional_gap_zero_bridge_proved": false,
+        "gap_zero_floor_introduced": false,
+        "residuals": {
+          "-1": {
+            "frame": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "frame_variation": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "normal_band_commutator": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "1": {
+            "frame": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "frame_variation": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "normal_band_commutator": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      },
+      "chart_overlap": {
+        "m_positive": "(1+m*a/sqrt(k^2+(m*a)^2+(lambda*a/r)^2))/2 >= 1/2",
+        "massless_nonzero_angular": "(1+abs(lambda)*a/r/sqrt(k^2+(lambda*a/r)^2))/2 >= 1/2"
+      },
+      "definitions": {
+        "D": "delta U star U^dagger",
+        "c": "N/a",
+        "epsilon": "1/abs(k)",
+        "s": "sign(k)",
+        "u": "m*a",
+        "v": "lambda*a/r"
+      },
+      "massive_chart": {
+        "-1": {
+          "band_k_primitive_constant": "delta_v_z*(beta - c)/2",
+          "connection_inverse_K_coefficient": "-I*dv/2",
+          "frame_inverse_K_coefficient": "Matrix([[sqrt(2)*(u - 2*I*v)/4, sqrt(2)*u/4], [-sqrt(2)*u/4, sqrt(2)*(u + 2*I*v)/4]])",
+          "frame_leading": "Matrix([[sqrt(2)/2, -sqrt(2)/2], [sqrt(2)/2, sqrt(2)/2]])",
+          "push_k_primitive_constant": "v_z*(delta_beta - delta_c)/2",
+          "residuals": {
+            "band_primitive_trace": [
+              "0"
+            ],
+            "intertwining_first": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "intertwining_leading": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "paired_band_primitive": [
+              "0"
+            ],
+            "paired_push_primitive": [
+              "0"
+            ],
+            "polar_frame_first": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "polar_frame_leading": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "projected_connection": [
+              "0"
+            ],
+            "push_primitive_trace": [
+              "0"
+            ],
+            "symmetric_projector_constant": [
+              "0"
+            ],
+            "unitarity_first": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "unitarity_leading": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "unpaired_primitive_generically_nonzero": true
+        },
+        "1": {
+          "band_k_primitive_constant": "delta_v_z*(beta + c)/2",
+          "connection_inverse_K_coefficient": "I*dv/2",
+          "frame_inverse_K_coefficient": "Matrix([[sqrt(2)*(u - 2*I*v)/4, -sqrt(2)*u/4], [sqrt(2)*u/4, sqrt(2)*(u + 2*I*v)/4]])",
+          "frame_leading": "Matrix([[sqrt(2)/2, sqrt(2)/2], [-sqrt(2)/2, sqrt(2)/2]])",
+          "push_k_primitive_constant": "v_z*(delta_beta + delta_c)/2",
+          "residuals": {
+            "band_primitive_trace": [
+              "0"
+            ],
+            "intertwining_first": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "intertwining_leading": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "paired_band_primitive": [
+              "0"
+            ],
+            "paired_push_primitive": [
+              "0"
+            ],
+            "polar_frame_first": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "polar_frame_leading": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "projected_connection": [
+              "0"
+            ],
+            "push_primitive_trace": [
+              "0"
+            ],
+            "symmetric_projector_constant": [
+              "0"
+            ],
+            "unitarity_first": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "unitarity_leading": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "unpaired_primitive_generically_nonzero": true
+        }
+      },
+      "massless_nonzero_angular_chart": {
+        "-1/-1": {
+          "band_primitive_constant": [
+            "0"
+          ],
+          "projected_connection": [
+            "0"
+          ],
+          "push_primitive_constant": [
+            "0"
+          ]
+        },
+        "-1/1": {
+          "band_primitive_constant": [
+            "0"
+          ],
+          "projected_connection": [
+            "0"
+          ],
+          "push_primitive_constant": [
+            "0"
+          ]
+        },
+        "1/-1": {
+          "band_primitive_constant": [
+            "0"
+          ],
+          "projected_connection": [
+            "0"
+          ],
+          "push_primitive_constant": [
+            "0"
+          ]
+        },
+        "1/1": {
+          "band_primitive_constant": [
+            "0"
+          ],
+          "projected_connection": [
+            "0"
+          ],
+          "push_primitive_constant": [
+            "0"
+          ]
+        }
+      }
+    },
+    "recursion_power_certificate": {
+      "coordinate_and_metric_variation": "preserve decay powers for smooth finite jets",
+      "leading_P_U": "metric-independent constant plus O(1/abs(k))",
+      "momentum_derivative": "improves a decaying power by one; H has no k derivatives >=2",
+      "power_convention": "O(abs(k)^power), at either fixed k sign",
+      "rows": [
+        {
+          "D_power": -2,
+          "F_power": -1,
+          "G_power": -3,
+          "P_power": -2,
+          "U_and_deltaU_power": -2,
+          "effective_h_power": -1,
+          "formal_order": 1,
+          "frame_recursion_residuals": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "higher_boundary_decays": false,
+          "inverse_star_root_power": -2,
+          "k_boundary_power_before_pairing": 0,
+          "polar_norm_power": -2,
+          "recursion_residuals": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "D_power": -3,
+          "F_power": -2,
+          "G_power": -4,
+          "P_power": -3,
+          "U_and_deltaU_power": -3,
+          "effective_h_power": -2,
+          "formal_order": 2,
+          "frame_recursion_residuals": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "higher_boundary_decays": true,
+          "inverse_star_root_power": -3,
+          "k_boundary_power_before_pairing": -1,
+          "polar_norm_power": -3,
+          "recursion_residuals": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "D_power": -4,
+          "F_power": -3,
+          "G_power": -5,
+          "P_power": -4,
+          "U_and_deltaU_power": -4,
+          "effective_h_power": -3,
+          "formal_order": 3,
+          "frame_recursion_residuals": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "higher_boundary_decays": true,
+          "inverse_star_root_power": -4,
+          "k_boundary_power_before_pairing": -2,
+          "polar_norm_power": -4,
+          "recursion_residuals": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "D_power": -5,
+          "F_power": -4,
+          "G_power": -6,
+          "P_power": -5,
+          "U_and_deltaU_power": -5,
+          "effective_h_power": -4,
+          "formal_order": 4,
+          "frame_recursion_residuals": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "higher_boundary_decays": true,
+          "inverse_star_root_power": -5,
+          "k_boundary_power_before_pairing": -3,
+          "polar_norm_power": -5,
+          "recursion_residuals": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "scalar_shift": "-beta*k is retained; it cancels only in the ordinary spin commutator"
+    },
+    "remainder_identity": "i*epsilon*dT tr(Pi D) + tr[Pi U, deltaH star Udag]_star + tr[Pi D,h]_star + tr[deltaH,P]_star/2",
+    "scope": {
+      "EndpointBranchJets_completed": false,
+      "Gamma_rest_assigned": false,
+      "LLL_distributional_gap_zero_bridge_proved": false,
+      "LLL_trace_convention": "sum of the two owned fixed nonzero-k chiral charts; retain the separate c=4 geometric allocation",
+      "extra_momentum_weight_allowed": false,
+      "finite_momentum_window_exchange_zero": false,
+      "infinite_inventory_limit": "closure is per paired group; spectral summation convergence is separate",
+      "light_geometric_allocation_changed": false,
+      "metric_domain": "smooth finite coordinate and variation jets; N,a,r positive and nondegenerate",
+      "normal_band": "lower normal energy; never sign of shifted coordinate Hamiltonian",
+      "paired_unweighted_full_k_bulk_exchange_closed": true,
+      "physical_source_spectral_convergence_proved": false,
+      "raw_heat_equivalence_required": false,
+      "stationarity_or_constraint_solution_claimed": false
+    },
+    "star_trace_certificate": [
+      {
+        "Moyal_order": 1,
+        "coefficient_residuals": [
+          "0",
+          "0"
+        ],
+        "k_primitive_coefficient": "I",
+        "primitive_k_derivative_order": 0
+      },
+      {
+        "Moyal_order": 2,
+        "coefficient_residuals": [
+          "0",
+          "0",
+          "0"
+        ],
+        "k_primitive_coefficient": "0",
+        "primitive_k_derivative_order": 1
+      },
+      {
+        "Moyal_order": 3,
+        "coefficient_residuals": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "k_primitive_coefficient": "-I/24",
+        "primitive_k_derivative_order": 2
+      },
+      {
+        "Moyal_order": 4,
+        "coefficient_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "k_primitive_coefficient": "0",
+        "primitive_k_derivative_order": 3
+      }
+    ]
+  },
+  "schema": "NSC-REFERENCE-BAND-BULK-v1",
+  "scope_clarification_provenance": {
+    "correction": "make the existing chartwise LLL convention explicit; no distributional k=0 bridge is proved",
+    "exact_coefficients_changed": false,
+    "preserved_record_commit": "e22b03903d58af44043b5d9b5a34901615cd5c48",
+    "preserved_record_sha256": "9faaded760d45fb3181f2bb9cd0f9d17aadaf1a3b09dee2398ec5fa168f7de64"
+  },
+  "source_hashes": {
+    "docs/nsc-reference-band-bulk.md": "77741a7aed69cd505851ac84ce2eeac9ecfefa2c74dc9c1f3fb542c78bcd32ff",
+    "scripts/derive_nsc_reference_band_bulk.py": "800af97671a61fa73b321212ec2c08f8ac00aca7f9566e92aa1393da4eb8bdc4",
+    "src/recursive_horizons/nsc_reference_band_bulk.py": "b7746683c7a75b746a7853ae78b561639923254c66ec0f95fd3f135336c5f009",
+    "tests/test_nsc_reference_band_bulk.py": "c8771a27b9ba167ef6cfc4cf21ca144b1c9878856931c4efea233349fdebf36a"
+  },
+  "status": "PASS: paired unweighted full-k reference-band bulk Euler exchange vanishes through order four"
+}

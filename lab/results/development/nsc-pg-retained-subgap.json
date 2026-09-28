@@ -1,0 +1,527 @@
+{
+  "comparison": {
+    "exact": "structure and authenticated hashes",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13,
+    "routine": "recompose archived physical subgap matrices; no old generator rerun"
+  },
+  "families": [
+    {
+      "angular_sign": 1,
+      "channel": 13,
+      "panel_sha256": "047172748d0a7ded12c2b4a3a1e333e4f9779fac2ca7d06953c19e88430dc9b1",
+      "residuals": {
+        "Hermiticity": 8.370464335562838e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 2.7598683365015193e-17,
+        "quadrature_estimate": 0,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 14,
+      "panel_sha256": "2750203cfa46ccb85e7fae892c69d7fbe8adc9801a4c5847e0d079d4df3f2917",
+      "residuals": {
+        "Hermiticity": 2.1752814883085826e-18,
+        "complement_lower_violation": 2.4671263641827943e-15,
+        "occupied_lower_violation": 2.017295462650717e-17,
+        "quadrature_estimate": 2.365219422528076e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 14,
+      "panel_sha256": "a0b370b00724386e9658f9e88dbc8009dbea4d8dc4e959125cf24308c6c8522e",
+      "residuals": {
+        "Hermiticity": 2.2745063535381422e-17,
+        "complement_lower_violation": 1.7051399546033193e-15,
+        "occupied_lower_violation": 2.23816099589373e-17,
+        "quadrature_estimate": 2.227845285187155e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 15,
+      "panel_sha256": "906db56390dfff18926bf3c3dd9b49ce92746bbdb3297c650acb72b97cc6b2cf",
+      "residuals": {
+        "Hermiticity": 2.1050369753474628e-17,
+        "complement_lower_violation": 2.489560244095266e-15,
+        "occupied_lower_violation": 0.0,
+        "quadrature_estimate": 2.8312690591844916e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 15,
+      "panel_sha256": "dabe2a10a0ef576c92331bbfa19d80c98e453f172091c5d68043d38393b1cfd4",
+      "residuals": {
+        "Hermiticity": 2.1993246788476875e-17,
+        "complement_lower_violation": 1.0376552567994434e-15,
+        "occupied_lower_violation": 0.0,
+        "quadrature_estimate": 2.6340267482887403e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 16,
+      "panel_sha256": "0f143b38f640dbec9f0c3ae7a94369750adf4be240ba61443f0128ac9c73bf6f",
+      "residuals": {
+        "Hermiticity": 2.2627909599523013e-17,
+        "complement_lower_violation": 5.357940351305365e-15,
+        "occupied_lower_violation": 1.332005431993663e-16,
+        "quadrature_estimate": 2.927286272601171e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 16,
+      "panel_sha256": "6e072ee7fbcfe875604ae42ed839b7b384d63d261623c5ef590b5bc63538c85c",
+      "residuals": {
+        "Hermiticity": 3.496986447719783e-19,
+        "complement_lower_violation": 8.319503667836002e-15,
+        "occupied_lower_violation": 9.067088554420104e-17,
+        "quadrature_estimate": 3.4863575752965834e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 17,
+      "panel_sha256": "4e40d12756dfe3cb7610983683df4021d8804158d9758a371408174a40d5cb9f",
+      "residuals": {
+        "Hermiticity": 9.849430322455759e-18,
+        "complement_lower_violation": 3.070288458917233e-15,
+        "occupied_lower_violation": 5.563990800053464e-17,
+        "quadrature_estimate": 6.648798981327918e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 17,
+      "panel_sha256": "18290b3524a2510cd9b87078b91cf5d0b425e321d5ba0a49fcf6025a7cccc88c",
+      "residuals": {
+        "Hermiticity": 8.642052779681407e-18,
+        "complement_lower_violation": 5.0992181772216354e-15,
+        "occupied_lower_violation": 5.0022663865278067e-17,
+        "quadrature_estimate": 3.13293953629213e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 18,
+      "panel_sha256": "b70ec79db02b1ed248e040fff3b221242cf8eec11fe9ea676e3a4b103825505e",
+      "residuals": {
+        "Hermiticity": 4.03901170249184e-18,
+        "complement_lower_violation": 2.3321065036741155e-15,
+        "occupied_lower_violation": 6.175258159012678e-17,
+        "quadrature_estimate": 6.262414021594884e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 18,
+      "panel_sha256": "96cc3cbfa16c365486a1c09bf89a53dd0d7532bebd350eeaff5d12d40506e043",
+      "residuals": {
+        "Hermiticity": 2.0392506829823386e-17,
+        "complement_lower_violation": 3.4594520872264758e-15,
+        "occupied_lower_violation": 6.060905387264982e-17,
+        "quadrature_estimate": 1.0980488115412532e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 19,
+      "panel_sha256": "68f3dbe8bb82db474c7508ca98ed2804bc8241643bdaf6b5ccfa5ffdb2384e2b",
+      "residuals": {
+        "Hermiticity": 5.0694828707196634e-18,
+        "complement_lower_violation": 2.504127977570402e-15,
+        "occupied_lower_violation": 1.2905743138135844e-17,
+        "quadrature_estimate": 3.600314950244378e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 19,
+      "panel_sha256": "e4dd46662ba1c21e6e5c14a7172ca35c78ec30a8f5221f20b4527a1513118a01",
+      "residuals": {
+        "Hermiticity": 2.8422871859035122e-18,
+        "complement_lower_violation": 3.3496607669645997e-15,
+        "occupied_lower_violation": 5.3431232134151645e-18,
+        "quadrature_estimate": 4.159540501882586e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 20,
+      "panel_sha256": "a7ef61dc2426af92c8570426010453fb52da1bb2e23a212c7dab3b58d6e86463",
+      "residuals": {
+        "Hermiticity": 2.038270541487364e-17,
+        "complement_lower_violation": 2.7008667329412358e-15,
+        "occupied_lower_violation": 1.2895677959486054e-17,
+        "quadrature_estimate": 2.959069864578302e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 20,
+      "panel_sha256": "f6a508ad570a8e1bd89ed2fc2a75ae41ae66a39def4e86398010bd603da933b0",
+      "residuals": {
+        "Hermiticity": 8.68847206354661e-19,
+        "complement_lower_violation": 3.62922414219684e-15,
+        "occupied_lower_violation": 1.6379922970289088e-17,
+        "quadrature_estimate": 3.167813628736827e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 21,
+      "panel_sha256": "4910e23529ac740f24029f291abbadfe2c43ec0c49f02b8f36a1ae0dbee91083",
+      "residuals": {
+        "Hermiticity": 2.6172147040821573e-18,
+        "complement_lower_violation": 2.093435471312035e-15,
+        "occupied_lower_violation": 1.549100341749345e-17,
+        "quadrature_estimate": 2.610774109331612e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 21,
+      "panel_sha256": "cf326c474e406df1c613c5b0b77e0588dd421d3bf7b9c0678fd3a5ae2fe39376",
+      "residuals": {
+        "Hermiticity": 1.9861172690132222e-17,
+        "complement_lower_violation": 2.604897418810815e-15,
+        "occupied_lower_violation": 4.632457692988922e-17,
+        "quadrature_estimate": 2.8271314344779515e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 22,
+      "panel_sha256": "a02fbd9100e5efe194c5772b8d448cc734327874929874a279618ad4afaf6a16",
+      "residuals": {
+        "Hermiticity": 5.833342425732563e-18,
+        "complement_lower_violation": 1.6398622932604038e-13,
+        "occupied_lower_violation": 5.739634445737767e-16,
+        "quadrature_estimate": 3.199237193520799e-14,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 22,
+      "panel_sha256": "37df2f48f24fae4caede8921e3cf5352309ea5e7640fbe34bfe8b353c4c3fd4d",
+      "residuals": {
+        "Hermiticity": 1.0320624172062293e-18,
+        "complement_lower_violation": 1.9270118232482418e-14,
+        "occupied_lower_violation": 1.6666496976966156e-16,
+        "quadrature_estimate": 0,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 23,
+      "panel_sha256": "b93c5158a40c32bc0b1596096e62e06fb89395b42e28fa7e4bc17efc267e2519",
+      "residuals": {
+        "Hermiticity": 5.89646235239694e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 1.203404961228412e-16,
+        "quadrature_estimate": 5.596541364716902e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 24,
+      "panel_sha256": "fdeb74f5a90110c8ad70ab84046ffd3674f6bd285d2878c73e2f9e03d2cdaa2c",
+      "residuals": {
+        "Hermiticity": 3.804082884280879e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 1.127957522788219e-16,
+        "quadrature_estimate": 9.515170022595012e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 24,
+      "panel_sha256": "b55197301651c140095b3a2a5ddbd79a1d27057dccf8da860924f742a807eda0",
+      "residuals": {
+        "Hermiticity": 5.89174994418272e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 1.2481936904505416e-16,
+        "quadrature_estimate": 8.987406695946631e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 25,
+      "panel_sha256": "ec5f2db4f9a653bd13e1f92938b8a499ab84f5c790cfc65fca11b27317c60f83",
+      "residuals": {
+        "Hermiticity": 4.6383587848393297e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 2.8464830112428487e-16,
+        "quadrature_estimate": 2.2494580091920532e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 25,
+      "panel_sha256": "092f0083b1e0f721110a9560d01d9068d77fad67139b8d2bc347ab63c834ccc4",
+      "residuals": {
+        "Hermiticity": 8.845986942047364e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 1.7965632155227105e-16,
+        "quadrature_estimate": 2.156086156688814e-11,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 26,
+      "panel_sha256": "8ce87b7dbbe76f022d17224da3f27777a277d33b008778f8ad9a4f6e02583097",
+      "residuals": {
+        "Hermiticity": 1.9701522453182293e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 2.3179018232454127e-17,
+        "quadrature_estimate": 9.528437803171474e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 26,
+      "panel_sha256": "687c1dd9019a26fe6df03140a18777e572029d415e667d85aad3170671dd4ab5",
+      "residuals": {
+        "Hermiticity": 1.005331096560309e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 2.6928748648699423e-19,
+        "quadrature_estimate": 1.2207840633196939e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 27,
+      "panel_sha256": "3b86ed9356200866ca8a0a5e6acfcc81cad4a90ebe22f264a15b9a57e54a6140",
+      "residuals": {
+        "Hermiticity": 4.390833479830055e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 1.7965376973488917e-16,
+        "quadrature_estimate": 1.063400131142213e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 27,
+      "panel_sha256": "36968f8abb65d4167064f9a8f79872c236937f0175a62490995befc6375560ca",
+      "residuals": {
+        "Hermiticity": 1.9700871277653826e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 0.0,
+        "quadrature_estimate": 1.079278444924589e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 28,
+      "panel_sha256": "d6e4d1e614b9a2ac70862e62963ca85d446c045b95cd70a864bacd0b1cc3b826",
+      "residuals": {
+        "Hermiticity": 3.9319396738646614e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 2.3050232290741377e-17,
+        "quadrature_estimate": 1.1584443695460252e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 28,
+      "panel_sha256": "401e8ad6e35d9140f7f34e8b47bb72c6aa71d46be0e7f4d07fc00e633a281e6d",
+      "residuals": {
+        "Hermiticity": 1.1803192384930657e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 9.944264521458824e-17,
+        "quadrature_estimate": 9.529591800068363e-13,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 29,
+      "panel_sha256": "63b54a43a6ca97c0b128e2d189bc4c185e15b4c3fbc0afc5bc0897396a072654",
+      "residuals": {
+        "Hermiticity": 4.0477970801496586e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 7.884449582037782e-17,
+        "quadrature_estimate": 6.207394008455709e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 29,
+      "panel_sha256": "99ea2096689b66e8edbfc20b43a66b6c06d4300216e7abc81a4fc541baacbf88",
+      "residuals": {
+        "Hermiticity": 2.028347536367248e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 3.6740751505207905e-17,
+        "quadrature_estimate": 1.247956405206394e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 30,
+      "panel_sha256": "38725b4a643d206c71ad94e83681578734de884ffd5cdba471aa04a877b06e17",
+      "residuals": {
+        "Hermiticity": 7.913787326829665e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 6.195406027394501e-17,
+        "quadrature_estimate": 1.2989147468869004e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 30,
+      "panel_sha256": "0c5c579a32bdb03600ae6649112db2bf22d53eec2e68eac7d73ec763ce591547",
+      "residuals": {
+        "Hermiticity": 1.0271070485474766e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 5.710691099817937e-17,
+        "quadrature_estimate": 5.5091019089357025e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 31,
+      "panel_sha256": "e94d22a6e8f980fe1a7c643cc42539f5d3f8b9f6cd1cd093896b659be083eacf",
+      "residuals": {
+        "Hermiticity": 1.1093408291353091e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 5.360689103076668e-16,
+        "quadrature_estimate": 3.7428660587490675e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 31,
+      "panel_sha256": "810c0715c860a47a2e4ac045ff3827ee9ee05da4f1726f40e17bc08eee95fadc",
+      "residuals": {
+        "Hermiticity": 1.5863193613139414e-16,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 1.3773213873697037e-16,
+        "quadrature_estimate": 1.7407406720465628e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": -1,
+      "channel": 32,
+      "panel_sha256": "4898893122fc5d77efd43062bcaf67d3bd1743c7665e1a4464338538a517ae05",
+      "residuals": {
+        "Hermiticity": 5.664592961579294e-18,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 5.76730407917404e-16,
+        "quadrature_estimate": 1.0543910784462292e-12,
+        "signed_assembly": 0.0
+      }
+    },
+    {
+      "angular_sign": 1,
+      "channel": 32,
+      "panel_sha256": "73ebc4660bc46a4e9e9486c6676a125fb0c866e769b647b83a70d5560d045852",
+      "residuals": {
+        "Hermiticity": 6.305644339897656e-17,
+        "complement_lower_violation": 0.0,
+        "occupied_lower_violation": 2.1519658795268862e-16,
+        "quadrature_estimate": 3.956214430030012e-12,
+        "signed_assembly": 0.0
+      }
+    }
+  ],
+  "gate": {
+    "PDF_bump": false,
+    "full_C1b": "OPEN",
+    "history_selected": false,
+    "metric_timestep": false,
+    "stress_computed": false,
+    "subgap_panels": "PASS"
+  },
+  "groups": 20,
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-massive-mode-resolution.json": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maximum_residuals": {
+    "Hermiticity": 1.5863193613139414e-16,
+    "complement_lower_violation": 1.6398622932604038e-13,
+    "occupied_lower_violation": 5.76730407917404e-16,
+    "quadrature_estimate": 3.13293953629213e-11,
+    "signed_assembly": 0.0
+  },
+  "method": {
+    "assembly": "explicit opposite-angular positive/negative-energy pairing; no X-preserving completion",
+    "domain": "same whole-line PG Dirac operator, evaluated on the existing eight packet observables",
+    "energy_panel": "[1,m_j] only, m_j=j*pi/2 for the declared compact groups",
+    "integration_error": "adaptive estimates; fixed quadrature/height controls retained for the initial groups",
+    "no_new_physical_terms": true,
+    "normalization": "bounded retarded Green spectral jump plus the retained horizon coherence",
+    "seed_covariance_used_as_input": false,
+    "state": "same C_H and inherited incoming state; closed infinity channel below parent mass"
+  },
+  "payload": {
+    "bytes": 186007,
+    "path": "results/development/artifacts/nsc-pg-retained-subgap.f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26.npz",
+    "sha256": "f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26"
+  },
+  "schema": "NSC-PG-RETAINED-SUBGAP-v1",
+  "signed_families": 38,
+  "source_hashes": {
+    "docs/nsc-pg-retained-subgap.md": "4e0eab72119fff6b5b2a16b3267333a18d891fd0b365131fb56e4e9f2863518f",
+    "scripts/check_nsc_pg_retained_subgap.py": "48583a4ec93b40142adaa78a318a6d958e1bfb3c06fff9fc88925e80de976b19",
+    "scripts/derive_nsc_pg_retarded_threshold.py": "cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+    "src/recursive_horizons/nsc_pg_adaptive_threshold.py": "f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7",
+    "src/recursive_horizons/nsc_pg_retarded_packets.py": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+    "src/recursive_horizons/nsc_pg_retarded_threshold.py": "1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681"
+  },
+  "status": "PASS: all 38 declared compact signed-family subgap panels; full-energy covariance remains separate",
+  "tolerance": 3e-09
+}

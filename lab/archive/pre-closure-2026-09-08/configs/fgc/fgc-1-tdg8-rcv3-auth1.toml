@@ -1,0 +1,164 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-RCV3-AUTH1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_authenticated_generation9_same_event_resume_authority"
+nonclaims = [
+  "AUTH1 authorizes only the installed RCV3 GR-0 generation-nine continuation through event 23; it does not complete an event, trapping calibration, candidate trajectory, mechanism test, or physical result.",
+  "The internal HLT16 campaign ID, original execution commit, plan bytes, generation-nine checkpoint, and sequence-ten journal remain unchanged; projection identity is external and is bound by the receipt, PREF1, and AUTH1.",
+  "The existing depth-two temporal retry, halved cap, retry ceiling 32, minimum macro-step, TDG6/TDG7 admission, source/CFL ownership, and scientific stops are preserved without relaxation.",
+  "A retry or metadata reconciliation never advances physical state; only an independently admitted accepted-fine transition may do so.",
+  "Retry exhaustion, a provenance failure, or an invalid runtime is not a GR-0, FGC-QR, gradient, mechanism, or physical obstruction.",
+  "AUTH1 never reimports generation zero, reruns bootstrap, resumes the terminal source, rechecks destination absence, opens SGB-L or FGC-QR, or authorizes retained-EFT or transition claims.",
+]
+
+[predecessor]
+pref1_authority_commit = "46abf80753a53e13cf7206fb76d90dc28e4be242"
+pref1_config_path = "configs/fgc/fgc-1-tdg8-rcv3-pref1.toml"
+pref1_config_sha256 = "2cdbf7e4ae97bd8cdba2e4a3c47cd798007fd2212c6267c169164232d93f3626"
+pref1_result_path = "results/fgc-1-tdg8-rcv3-pref1.json"
+pref1_result_sha256 = "c61bcb6ad65fec73cc43e6ecc92c7516234b77560c21b0dac1bb72b50160fa0a"
+
+[projection]
+projection_id = "FGC-1-TDG8-RCV3-PROJECTION-1"
+wrapper_path = "runs/fgc-2-sf1/tdg8-rcv3"
+store_path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+receipt_path = "runs/fgc-2-sf1/tdg8-rcv3/bootstrap-receipt.json"
+receipt_sha256 = "59e928830c213bd05d798bbc89b5994667d53a8b3c9ecbad3bf9023cf756dcba"
+receipt_raw_sha256 = "ed6b9c7ff72f18e8843ccfb0992d39dda7ee199e57cda8c17912d6d81004bd8a"
+
+[internal_boundary]
+campaign_id = "FGC-2-SF1-PROTO18-GR0-A3-TDG8-SUCCESSOR-1"
+authorization_commit = "6df67967e6e0bc63eca4dc6951a60d3787368f26"
+plan_sha256 = "e649e477b98411a3051f9946f2a9248b875d2b598818b8983ce06caa969d2126"
+branch = "GR-0"
+amplitude = "3"
+event = 23
+target_rational = "3/2"
+target_binary64_hex = "0x1.8000000000000p+0"
+checkpoint_generation = 9
+checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+checkpoint_raw_sha256 = "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846"
+journal_sequence = 10
+journal_sha256 = "5b533eb7009a9c7c3f353d26813f9cbbde8574afae77492929b435b4c701c5ff"
+journal_raw_sha256 = "b50dc39ebd8bbdd3729d40d9e9ae4b223ff2ef19389d4ca74f9a316bac72202f"
+retry_member_key = "RK4-2049"
+retry_descriptor_sha256 = "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4"
+retry_physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+retry_depth = 2
+pending_cap_binary64_hex = "0x1.aaa9612df8000p-11"
+
+[bounded_policy]
+temporal_retry_cap_per_macro_step = 32
+minimum_macro_step_binary64_hex = "0x1.0000000000000p-30"
+retry_factor_numerator = 1
+retry_factor_denominator = 2
+same_event_only = true
+event_successor = 24
+event_successor_target_rational = "25/16"
+event_successor_target_binary64_hex = "0x1.9000000000000p+0"
+recognized_publication_cuts_allowed = true
+rejection_preserves_accepted_descriptor = true
+rejection_preserves_accepted_time = true
+
+[scope]
+status_read_only = true
+compact_verifier_store_blind = true
+live_projection_reauthenticated_before_mutation = true
+same_event_gr0_resume = true
+source_terminal_store_read_only = true
+source_campaign_resume_authorized = false
+bootstrap_reexecution = false
+destination_absence_recheck = false
+generation_zero_reimport = false
+candidate_branches_forbidden = true
+threshold_or_retry_rule_change = false
+physical_input_change = false
+calibration_result_earned = false
+physical_result_earned = false
+
+[claims]
+PREF1_projection_authentication_bound = true
+bounded_retry_chain_authorized = true
+original_internal_plan_preserved = true
+physical_state_advanced_by_projection = false
+execution_authorized_by_artifact_alone = false
+execution_started = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+
+[[implementation_inventory]]
+role = "authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_execution_authority.py"
+
+[[implementation_inventory]]
+role = "runner"
+path = "scripts/run_fgc_tdg8_rcv3_event.py"
+
+[[implementation_inventory]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_tdg8_rcv3_auth1.py"
+
+[[implementation_inventory]]
+role = "predecessor_authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_bounded_retry_authority.py"
+
+[[implementation_inventory]]
+role = "predecessor_authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_retry_recovery_authority.py"
+
+[[implementation_inventory]]
+role = "predecessor_binder"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_pref1_binder.py"
+
+[[implementation_inventory]]
+role = "projection_runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_fork_runtime.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_successor_runtime.py"
+
+[[implementation_inventory]]
+role = "orchestrator"
+path = "scripts/run_fgc_pro19_event1.py"
+
+[[implementation_inventory]]
+role = "owner_document"
+path = "docs/fgc-tdg8-rcv3-auth1.md"

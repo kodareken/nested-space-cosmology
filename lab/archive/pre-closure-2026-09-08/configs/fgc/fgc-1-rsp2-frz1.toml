@@ -1,0 +1,116 @@
+schema_version = 1
+artifact_id = "FGC-1-RSP2-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+run_plan = "configs/fgc/fgc-1-rsp2-run1.toml"
+owner_document = "docs/fgc-rsp2-frz1.md"
+
+[scope]
+role = "pre_trajectory_late_event_one_finer_grid_constraint_order_freeze_and_runtime_authorization"
+branch = "GR-0"
+amplitude = "3"
+method = "SSPRK3"
+trajectory_advanced = false
+CAL9_outcome_reinterpreted = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[lineage]
+checkpoint_commit = "da1750ffe4139e806e151846fc9945c07b30b449"
+cal9_result = "results/fgc-1-cal9-pref13.json"
+cal9_result_sha256 = "69a2aeff732081d1d1be2e6fd49d020335e2fa13f737d5e21484d080fb1f5fd2"
+cal9_config = "configs/fgc/fgc-1-cal9-pref13.toml"
+cal9_config_sha256 = "bb4eeec316499c8e9e5d5709ab0f5e9c27a771d8b2c4146987d59e4b4e0143af"
+cal9_checkpoint = "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz"
+cal9_checkpoint_sha256 = "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17"
+checkpoint_must_be_ancestor_of_HEAD = true
+tracked_lineage_must_be_canonical_and_hash_matched = true
+raw_checkpoint_must_match_CAL9_certificate = true
+
+[study_freeze]
+target_coordinate_time = "23/16"
+amplitude = "3"
+method = "SSPRK3"
+predecessor_point_counts = [4097, 8193]
+new_point_count = 16385
+combined_point_counts = [4097, 8193, 16385]
+tested_finest_pair = "8193_to_16385"
+target_component = "radial_momentum"
+unchanged_minimum_finest_pair_order = "3/2"
+source_point_batch_size = 2048
+only_the_new_16385_member_is_advanced = true
+predecessor_states_are_hash_bound_and_read_only = true
+same_initial_data_equations_method_reference_map_and_SRC4_backend_required = true
+same_CFL_retry_health_boundary_and_owned_constraint_rules_required = true
+target_pass_means_only_preasymptotic_on_the_tested_ladder = true
+target_fail_means_only_persistent_through_the_tested_pair = true
+complete_constraint_admission_reported_separately = true
+fitted_asymptote_threshold_reduction_and_saturation_forbidden = true
+no_parameter_may_change_after_the_first_trajectory = true
+
+[predecessor_terminal]
+coordinate_time = "23/16"
+SSPRK3_4097_accepted_stage_count = 2524
+SSPRK3_8193_accepted_stage_count = 3948
+SSPRK3_4097_radial_momentum_raw_owned_norm = "0.0060603980047813765"
+SSPRK3_8193_radial_momentum_raw_owned_norm = "0.0021440219481765766"
+SSPRK3_4097_roundoff_enclosure = "2.296474121976644e-9"
+SSPRK3_8193_roundoff_enclosure = "3.5915945773012936e-9"
+predecessor_finest_pair_order = "1.4990947384363291"
+predecessor_order_shortfall = "0.0009052615636708783"
+
+[runtime_binding]
+SRC4_tensor_contracted_reference_source_required = true
+PROTO11_reference_state_derivative_map_required = true
+bounded_point_batching_changes_no_per_point_equation_or_root = true
+complete_unredefined_raw_source_residual_remains_serialized = true
+raw_source_threshold_remains_strictly_below_1e_minus_12 = true
+condition_limit_remains_strictly_below_1e10 = true
+SSPRK3_and_second_order_SBP_are_unchanged = true
+transaction_retry_boundary_and_health_rules_unchanged = true
+terminal_constraint_recomputed_from_all_three_raw_states = true
+roundoff_enclosures_change_order_only = true
+
+[proof_contract]
+CAL9_checkpoint_metadata_and_both_predecessor_arrays_must_be_hash_bound = true
+predecessor_time_stage_counts_norms_enclosures_and_order_must_recompute = true
+new_16385_initial_state_must_be_rebuilt_and_hash_bound = true
+new_16385_t0_SRC4_source_precheck_must_pass = true
+one_bit_input_mutation_must_change_the_SRC4_source = true
+invalid_grid_threshold_time_and_claim_mutations_must_fail_closed = true
+runner_must_refuse_dirty_tracked_state_drift_or_namespace_overwrite = true
+runner_must_checkpoint_each_one_sixteenth_progress_boundary = true
+runtime_stop_or_nonconvergence_must_not_be_classified_as_persistent = true
+all_raw_constraint_norms_and_roundoff_enclosures_must_remain_public = true
+PROTO13_requires_a_separate_post_result_decision = true
+canonical_hash_bound_authorization_required = true
+
+[namespace]
+output_root = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum"
+runner_id = "FGC-1-RSP2-RUN1-RUNNER"
+fresh_output_root_required_at_first_launch = true
+authorization_creates_no_run_output = true
+raw_outputs_remain_ignored_and_separate_from_tracked_certificate = true
+
+[claims]
+RSP2_runtime_implemented = true
+RSP2_execution_authorized = true
+RSP2_outcome_read = false
+RSP2_target_order_cleared = false
+RSP2_complete_constraint_admission_passed = false
+PROTO13_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

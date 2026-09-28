@@ -1,0 +1,38 @@
+{
+  "L_walk_max": 0.583049365175,
+  "L_walk_min": -0.549720576874,
+  "L_walk_sign_stable": false,
+  "accountable_author": "Douglas Ek",
+  "existence_tolerance": 3e-11,
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-bounds-after-n32.json": "d9b74116c5f9b7e2537ba20de7b945c9a0e33d385a0791e69c6de0c7846a9721",
+    "results/development/nsc-ks-n16-geometry-killing-current.json": "6d870a9c9bd0748155b1aebbc4bde75789336e46bfac51b163ea45bf071065cc",
+    "results/development/nsc-ks-n32-evolve-refusal.json": "88b8895574375c2666209d3e394363aeaf4612d656393d3c17c4261493d431f5"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "n32_unclipped_all_node_leftover": [
+    0.004107193193,
+    0.005790788098
+  ],
+  "named_search_stall": "n32_geometry_leftover_cannot_reach_existence",
+  "next_named_owner": "a representation or necessary relation outside Chebyshev n<=32 of the declared s w + s^3 U/6 class, or a locked current other than leftover v and L(E) on this walk",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-N32-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-n32.md": "9fd10f02dfe8e2333a6b555bcc990da4d382da7394618327bf56e8a18c5306c1",
+    "scripts/derive_nsc_local_incoming_gate_status_after_n32.py": "672bf3145b15d498cf5c40453b7d282cf31a4c6c998b21654b017ac78b1a2a28"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: L(E) and n=32 geometry leftover classified; no physical gate certificate"
+}

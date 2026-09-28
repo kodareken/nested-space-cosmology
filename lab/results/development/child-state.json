@@ -1,0 +1,279 @@
+{
+  "angular_applicability": {
+    "LLL_only_approximation_uniform_at_late_child": false,
+    "imported_gap_formula": "kappa_1\u00b2=(1+|q|)/r\u00b2; at fixed finite q its ratio to H_child\u00b2 tends to zero",
+    "normalized_flux_one_controls": [
+      {
+        "abs_flux": 1,
+        "first_nonzero_angular_squared": 2.0,
+        "gap_squared_over_child_H_squared": 0.2122065907891938,
+        "radius": 1.0
+      },
+      {
+        "abs_flux": 1,
+        "first_nonzero_angular_squared": 0.5,
+        "gap_squared_over_child_H_squared": 0.05305164769729845,
+        "radius": 2.0
+      },
+      {
+        "abs_flux": 1,
+        "first_nonzero_angular_squared": 0.125,
+        "gap_squared_over_child_H_squared": 0.013262911924324612,
+        "radius": 4.0
+      },
+      {
+        "abs_flux": 1,
+        "first_nonzero_angular_squared": 0.0078125,
+        "gap_squared_over_child_H_squared": 0.0008289319952702883,
+        "radius": 16.0
+      }
+    ],
+    "state_bound_limit_interchange": "permitted only by the finite M,K dominating moments; not a bound on vacuum zero-point sums",
+    "vacuum_limit_may_be_interchanged_with_unsummed_angular_modes": false
+  },
+  "comparison": {
+    "exact": "symbolic identities, formulas, structures, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "conventions": {
+    "canonical_field": "chi=(a_parallel*r\u00b2)^(1/2)*psi; unit S\u00b2 measure retained",
+    "channel_H": "m*beta+(k/a_parallel)*alpha_z+(kappa/r)*alpha_sphere; physical angular sectors and degeneracies retained in channel measure",
+    "free_tower": "fixed ell, time-independent compact domain/warp; m_n=n*pi/ell, before additional link/gauge interactions",
+    "metric": "dT\u00b2-a_parallel(T)\u00b2 dz\u00b2-r(T)\u00b2 dOmega\u00b2; z is the parent's static time used as an interior spatial coordinate",
+    "stress": "difference between two states on the same operator, geometry and renormalization prescription; local state-independent terms cancel",
+    "units": "hbar=c=L_throat=1; restoring L gives s_min=sqrt(3*pi/2-1)/L, k and m inverse length, kappa dimensionless; mode measure includes longitudinal momentum density",
+    "volume": "4*pi*a_parallel*r\u00b2 per unit coordinate z; no finite global spatial volume assumed"
+  },
+  "exact_residuals": {
+    "canonical_volume_connection": "0",
+    "channel_norm_for_interior_scaling": "0",
+    "future_conformal_time_metric": "0",
+    "future_ratio_series": "0",
+    "null_constants_to_interior_density": "0",
+    "null_constants_to_interior_flux": "0",
+    "null_state_difference_work": "0",
+    "parallel_ratio_from_recorded_metric": "0",
+    "parallel_ratio_monotonicity": "0",
+    "same_action_anisotropic_work": "0",
+    "variable_mass_is_extra_work": "0"
+  },
+  "existing_parent_state_control": {
+    "absolute_reference_stress_identified": false,
+    "asymptotic_r4_density": -3.1803141109877073e-06,
+    "delta_tu": 0.0,
+    "delta_tv": -0.0003766613057598104,
+    "interior_projection": [
+      {
+        "absolute_density_bound": 8.07397998968708e-06,
+        "delta_T_hatT_hatz": -8.07397998968708e-06,
+        "delta_density": -8.07397998968708e-06,
+        "delta_p_parallel": -8.07397998968708e-06,
+        "delta_p_sphere": 0.0,
+        "radius": 1.0,
+        "rho_coordinate": 0.0
+      },
+      {
+        "absolute_density_bound": 2.0184949974217697e-06,
+        "delta_T_hatT_hatz": -9.287179853459823e-07,
+        "delta_density": -9.287179853459823e-07,
+        "delta_p_parallel": -9.287179853459823e-07,
+        "delta_p_sphere": 0.0,
+        "radius": 1.4142135623730951,
+        "rho_coordinate": -1.0
+      },
+      {
+        "absolute_density_bound": 2.793764702313869e-08,
+        "delta_T_hatT_hatz": -1.1108119838118707e-08,
+        "delta_density": -1.1108119838118707e-08,
+        "delta_p_parallel": -1.1108119838118707e-08,
+        "delta_p_sphere": 0.0,
+        "radius": 4.123105625617661,
+        "rho_coordinate": -4.0
+      },
+      {
+        "absolute_density_bound": 1.2224227451872214e-10,
+        "delta_T_hatT_hatz": -4.817320168028068e-11,
+        "delta_density": -4.817320168028068e-11,
+        "delta_p_parallel": -4.817320168028068e-11,
+        "delta_p_sphere": 0.0,
+        "radius": 16.0312195418814,
+        "rho_coordinate": -16.0
+      },
+      {
+        "absolute_density_bound": 4.810118114897936e-13,
+        "delta_T_hatT_hatz": -1.8947402771802772e-13,
+        "delta_density": -1.8947402771802772e-13,
+        "delta_p_parallel": -1.8947402771802772e-13,
+        "delta_p_sphere": 0.0,
+        "radius": 64.00781202322104,
+        "rho_coordinate": -64.0
+      }
+    ],
+    "states": "free LLL Unruh minus Hartle-Hawking, per |q|; only their recorded null constants differ"
+  },
+  "future_geometry": {
+    "W_at_future": 9.42477796076938,
+    "conformal_metric": "g/r\u00b2=du\u00b2/[(1+u\u00b2)\u00b2 W(u)]-W(u) dz\u00b2-dOmega\u00b2",
+    "ratios": [
+      {
+        "a_parallel": 1.9267560770332839,
+        "parallel_over_radius": 1.9267560770332839,
+        "proper_volume_per_dz": 24.212330947469017,
+        "radius": 1.0,
+        "rho": 0.0
+      },
+      {
+        "a_parallel": 4.017109276725501,
+        "parallel_over_radius": 2.8405252103399885,
+        "proper_volume_per_dz": 100.96096793942593,
+        "radius": 1.4142135623730951,
+        "rho": -1.0
+      },
+      {
+        "a_parallel": 12.598702850437,
+        "parallel_over_radius": 3.0556342704777677,
+        "proper_volume_per_dz": 2691.4394777391694,
+        "radius": 4.123105625617661,
+        "rho": -4.0
+      },
+      {
+        "a_parallel": 49.20409569752144,
+        "parallel_over_radius": 3.0692671614268794,
+        "proper_volume_per_dz": 158907.44388581868,
+        "radius": 16.0312195418814,
+        "rho": -16.0
+      }
+    ],
+    "remaining_conformal_time_bound": "0<eta_future-eta(u)<=atan(u)/s_min",
+    "s_min": 1.9267560770332839,
+    "squared_ratio_series": "a_parallel\u00b2/r\u00b2=3*pi-u\u00b2-2*u\u00b3+O(u4), u=-1/rho"
+  },
+  "input_hashes": {
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+    "results/development/spectral-endpoint.json": "6cdb46d5cab8e6de357ec437d3813c2a9381a6c6effbb2d14c55c23e4adef4bb",
+    "results/nsc-10-influence.json": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1",
+    "results/nsc-5-clock-horizon.json": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f"
+  },
+  "reference_state_gap": {
+    "Hadamard_condition_alone_proves_uniform_future_bounds": false,
+    "actual_parent_state_summability_verified": false,
+    "canonical_future_instantaneous_vacuum_assumed": false,
+    "difference_decay_selects_absolute_vacuum": false,
+    "full_finite_regulator_causal_continuation_established": false,
+    "required": "construct or import an applicable Hadamard reference on the actual domain whose absolute stress approaches the same-regulator invariant endpoint; prove parent/reference moment conditions",
+    "round_S4_is_global_continuation_of_actual_interior": false
+  },
+  "required_hypotheses": [
+    "common closed free evolution on the actual expanding interior",
+    "translation-invariant/mode-diagonal and angularly symmetric states, or the specified spatially averaged density",
+    "finite weighted trace-norm moments for the complete retained tower and continuous mode measure",
+    "fixed compact size, transmission domain and masses; no unaccounted reservoir injection",
+    "one common renormalization prescription for both states"
+  ],
+  "schema": "NSC-CHILD-STATE-v1",
+  "scope": {
+    "cosmological_Q_or_dark_fraction_predicted": false,
+    "interacting_gauge_or_metric_state_attractor_proved": false,
+    "new_general_cosmic_no_hair_theorem_claimed": false,
+    "persistent_vacuum_energy_ruled_out": false,
+    "self_sourcing_completed": false,
+    "zero_flux_implies_transient_acceleration": false
+  },
+  "source_hashes": {
+    "docs/nsc-child-state.md": "88471087ff1b6771e9fa0843db7c4879d2ec6c1f2931ea3f1fc0d6e8c89db96d",
+    "docs/nsc-compact-mass-map.md": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073",
+    "scripts/check_nsc_child_state.py": "4a9756d8c70b128e4e95b9749f9d288e30db0962af076983627b9f28f558cd0e",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_mass_map.py": "7209fcc9985a54a34a56def08af04fe726393000cbd45f0cacf59f219bb18e33",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_child_state.py": "50c55b3ca0ae8215426b7b2287392308826b44bb8ca58393b00209129edab69e",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "state_bound": {
+    "density_bound": "|Delta rho| <= (M+K/r)/(4*pi*s_min*r\u00b3)",
+    "energy_ledger": "Delta rho_dot+(H_parallel+2H_sphere)Delta rho+H_parallel Delta p_parallel+2H_sphere Delta p_sphere=0",
+    "mass_change_work": "m_dot*tr(beta Delta C)/(4*pi*a_parallel*r\u00b2) must be retained when m varies",
+    "mass_moment": "M=sum_j/integral dnu_j |m_j| N_j < infinity",
+    "massive_envelope": "O(r^-3) for finite M,K",
+    "massless_rate": "O(r^-4) if M=0",
+    "momentum_moment": "K=sum_j/integral dnu_j (|k_j|/s_min+|kappa_j|) N_j < infinity",
+    "norm": "N_j=||Delta C_j||_1; conserved for Delta C_j=U_j Delta C_j(initial) U_j^dagger",
+    "normalized_bound_controls": [
+      {
+        "massive_M1_K1": {
+          "massive_part": 0.04130126926521847,
+          "redshifting_part": 0.04130126926521847,
+          "total": 0.08260253853043693
+        },
+        "massless_M0_K1": {
+          "massive_part": 0.0,
+          "redshifting_part": 0.04130126926521847,
+          "total": 0.04130126926521847
+        },
+        "radius": 1.0
+      },
+      {
+        "massive_M1_K1": {
+          "massive_part": 0.005162658658152308,
+          "redshifting_part": 0.002581329329076154,
+          "total": 0.007743987987228462
+        },
+        "massless_M0_K1": {
+          "massive_part": 0.0,
+          "redshifting_part": 0.002581329329076154,
+          "total": 0.002581329329076154
+        },
+        "radius": 2.0
+      },
+      {
+        "massive_M1_K1": {
+          "massive_part": 0.0006453323322690385,
+          "redshifting_part": 0.00016133308306725964,
+          "total": 0.0008066654153362982
+        },
+        "massless_M0_K1": {
+          "massive_part": 0.0,
+          "redshifting_part": 0.00016133308306725964,
+          "total": 0.00016133308306725964
+        },
+        "radius": 4.0
+      },
+      {
+        "massive_M1_K1": {
+          "massive_part": 1.0083317691703727e-05,
+          "redshifting_part": 6.30207355731483e-07,
+          "total": 1.071352504743521e-05
+        },
+        "massless_M0_K1": {
+          "massive_part": 0.0,
+          "redshifting_part": 6.30207355731483e-07,
+          "total": 6.30207355731483e-07
+        },
+        "radius": 16.0
+      },
+      {
+        "massive_M1_K1": {
+          "massive_part": 1.5755183893287074e-07,
+          "redshifting_part": 2.4617474833261053e-09,
+          "total": 1.6001358641619684e-07
+        },
+        "massless_M0_K1": {
+          "massive_part": 0.0,
+          "redshifting_part": 2.4617474833261053e-09,
+          "total": 2.4617474833261053e-09
+        },
+        "radius": 64.0
+      }
+    ],
+    "pressure_bounds": "|Delta p_parallel|+2|Delta p_sphere| <= K/(4*pi*s_min*r^4)"
+  },
+  "status": "conditional dilution of homogeneous free Dirac state differences on the actual child",
+  "unchanged_endpoint_input": {
+    "Dirac_log_radius_derivative": 0.0012395998214788512,
+    "radius": 0.32573500793527993,
+    "spectral_sum_rerun": false
+  }
+}

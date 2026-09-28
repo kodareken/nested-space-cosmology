@@ -1,0 +1,147 @@
+schema_version = 1
+artifact_id = "FGC-1-HLT14-MON14"
+project_version = "0.11.0"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v17.toml"
+protocol_freeze_config = "configs/fgc/fgc-1-pro17-frz1.toml"
+protocol_freeze_result = "results/fgc-1-pro17-frz1.json"
+pref25_config = "configs/fgc/fgc-1-pro17-pref25.toml"
+pref25_result = "results/fgc-1-pro17-pref25.json"
+input_adapter_module = "src/recursive_horizons/fgc/evolution/proto17_hlt14_inputs.py"
+runtime_module = "src/recursive_horizons/fgc/evolution/proto17_hlt14_runtime.py"
+qualification_module = "src/recursive_horizons/fgc/evolution/proto17_hlt14_qualification.py"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO17"
+runtime_owner = "FGC-1-HLT14-MON14"
+role = "completed_synthetic_only_PROTO17_authority_bundle_and_durable_runtime_qualification"
+sealed_compact_inputs_read_from_immutable_commit = true
+synthetic_real_NPZ_bundles_opened = true
+synthetic_Git_authority_preflight_exercised = true
+synthetic_temporary_store_materialized = true
+real_production_state_or_raw_bundle_opened = false
+real_historical_journal_payload_semantics_replayed = false
+external_production_launch_authority_instance_validated = false
+production_namespace_materialized = false
+pretrajectory_operation = false
+trajectory_read = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "4da668fad42d4006d3e09f511eafa0ef0e69d7ed"
+checkpoint_must_be_ancestor_of_HEAD = true
+all_bound_blobs_must_match_checkpoint_commit_and_worktree = true
+pref25_config_sha256 = "60e78ac3778bd0411bc52dc8756396a18b8f3f1be54b18938fa5cdcb83c59279"
+pref25_result_sha256 = "7bba3af7b18798496800cdc024168c5593d6cb39ac643c5933d4df101191b199"
+pref25_reproducer_sha256 = "dcd0c0eee47724133b91e66b03d844c24fb23b489f05ebbf7c73438510431279"
+pref25_theorem_sha256 = "59b1eec6bcbde0bded065b281f6f2dc94615b0fd86e94e15e96a9ff756eb18ca"
+pref25_document_sha256 = "ca9ae473fffb268de12a3542211868a88cfcdb5150a15a85a65ef3cb4fcd3e04"
+pref25_test_sha256 = "c1b2891459850dfae285982781be27e9d0490ff73f1275767c2c14fd2de3fcca"
+proto17_protocol_sha256 = "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+proto17_freeze_config_sha256 = "6ff3cfad5eebb7824434e3b7f97da3ce7a8610312523e3461c8999532678d2ec"
+proto17_freeze_result_sha256 = "8e4b3f77015374cf825c141dff34d343eb3d5f4ccebfed5082bc283c1d414fea"
+proto17_freeze_reproducer_sha256 = "1481d8da60d2684a692fe9526236a0b82e6d63299e922545c9b9ee75b9c1a3cf"
+proto17_protocol_core_sha256 = "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+proto17_construction_sha256 = "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d"
+
+[synthetic_adapter_contract]
+canonical_member_order = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193", "SSPRK3-16385"]
+generation_zero_event_index = 23
+generation_zero_accepted_boundary_time = "23/16"
+generation_zero_active_target_time = "3/2"
+common_event_completed_index = 24
+common_event_next_target_time = "25/16"
+expected_generation_zero_checkpoint_sha256 = "01e8214dcbbef025fe7883670043659d3ec66bb47e9b3e9dd4b8089b8ba5f8de"
+expected_common_event_receipt_sha256 = "17f925e8489341392ac5df4fba1cc47b66a27153e64eca4455c3f701f37cbc17"
+expected_successor_checkpoint_sha256 = "c4c31f53a6a97632addafd54d6b3ec08bdcffe4aa4321269f8c8bca957e5380b"
+sealed_abstract_fixture_must_match_pure_constructor_byte_for_byte = true
+real_NPZ_fixture_hashes_are_input_dependent = true
+all_six_raw_bundle_bytes_and_array_hashes_must_be_recomputed = true
+authority_commit_blob_and_three_source_roles_must_be_checked = true
+import_origin_check_is_preflight_not_TOCTOU_closure = true
+synthetic_store_must_be_temporary_and_isolated = true
+real_runs_namespace_must_not_be_created = true
+
+[synthetic_qualification]
+qualification_case_count = 72
+nominal_case_count = 4
+bundle_admission_case_count = 6
+mutation_case_count = 18
+in_process_exception_fault_case_count = 44
+qualification_case_digest = "445765193eddba247b7452635ca382388950a55a3a2bfb128e0b125f530b6baf"
+complete_visible_synthetic_genesis_and_store_plan_verified = true
+content_addressed_state_store_and_checkpoint_reload_verified = true
+structural_six_record_accepted_fine_prefix_verified = true
+predecessor_only_common_event_and_complete_successor_checkpoint_verified = true
+exact_lone_receipt_recovery_only_verified = true
+fully_rehashed_semantic_plan_and_high_water_forgeries_rejected = true
+raw_hash_array_shape_metadata_canonicality_and_symlink_mutations_rejected = true
+authority_commit_schema_source_drift_and_import_origin_preflight_exercised = true
+accepted_prefix_common_event_and_generation_zero_exception_windows_exercised = true
+preexisting_root_foreign_store_and_production_path_guards_exercised = true
+sealed_PREF25_hash_vector_reproduced = true
+all_qualification_cases_passed = true
+faults_are_in_process_exceptions_not_power_loss_proof = true
+
+[future_HLT14_production_instance_requirements.raw_bundle_byte_and_hash_recomputation]
+required = true
+completed = false
+
+[future_HLT14_production_instance_requirements.external_Git_authority_blob_and_live_import_validation]
+required = true
+completed = false
+
+[future_HLT14_production_instance_requirements.semantic_historical_journal_payload_replay]
+required = true
+completed = false
+
+[future_HLT14_production_instance_requirements.namespace_reuse_and_foreign_store_rejection]
+required = true
+completed = false
+
+[authorization]
+HLT14_implementation_and_synthetic_qualification_authorized = true
+HLT14_runtime_implemented = true
+HLT14_synthetic_qualification_passed = true
+production_prelaunch_successor_design_authorized = true
+pretrajectory_operation_authorized = false
+production_namespace_creation_authorized = false
+fresh_GR0_calibration_authorized = false
+candidate_execution_authorized = false
+physical_claim_authorized = false
+
+[claims]
+PROTO17_Pref25_authorization_consumed = true
+HLT14_synthetic_runtime_contract_frozen = true
+HLT14_implementation_and_synthetic_qualification_authorized = true
+HLT14_runtime_implemented = true
+HLT14_synthetic_qualification_passed = true
+HLT14_synthetic_Git_authority_and_import_origin_preflight_exercised = true
+HLT14_synthetic_all_six_raw_bundle_admission_exercised = true
+HLT14_synthetic_semantic_replay_and_exception_recovery_qualified = true
+HLT14_sealed_PREF25_hash_vector_reproduced = true
+production_prelaunch_successor_design_authorized = true
+HLT14_real_production_state_loaded = false
+HLT14_real_raw_bundle_bytes_recomputed = false
+HLT14_real_historical_journal_payload_semantics_replayed = false
+HLT14_external_production_launch_authority_validated = false
+HLT14_production_namespace_reuse_or_foreign_store_rejection_validated = false
+HLT14_production_namespace_materialized = false
+HLT14_production_filesystem_durability_or_restart_qualified = false
+HLT14_power_loss_durability_qualified = false
+HLT14_pretrajectory_operation_authorized = false
+HLT14_trajectory_read = false
+HLT14_fresh_GR0_dynamic_calibration_authorized = false
+HLT14_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

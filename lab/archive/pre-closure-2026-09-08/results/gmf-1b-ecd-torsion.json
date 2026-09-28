@@ -1,0 +1,129 @@
+{
+  "artifact": "ecd_spin_tensor_torsion_and_effective_contact_crosscheck",
+  "axial_current": {
+    "A_hat_0": 1.6250000000000007,
+    "A_hat_r": 0.6250000000000002,
+    "axial_squared": -2.2500000000000018
+  },
+  "classification": "spin_tensor_torsion_invariant_and_reduced_contact_tetrad_stress_gate",
+  "contact_derivation": {
+    "coefficient_verified": true,
+    "derived_after_eliminating_connection_everywhere": true,
+    "einstein_hilbert_piece_alone_claimed_to_equal_full_contact": false,
+    "expected_3_16_kappa_A2": -0.42187500000000033,
+    "full_effective_contact_lagrangian": -0.42187500000000033,
+    "separate_connection_pieces_added_to_reduced_action": false,
+    "torsion_squared_consistency_input": 3.3750000000000027
+  },
+  "contact_tetrad_stress": {
+    "accelerates": true,
+    "contact_sector_tetrad_variation_complete": true,
+    "interpretation": "positive_cosmological_constant_w_minus_1",
+    "p": -0.42187500000000033,
+    "rho": 0.42187500000000033,
+    "rho_plus_3p": -0.8437500000000006,
+    "rho_plus_p": 0.0,
+    "rho_plus_p_negative": false,
+    "stress": [
+      [
+        0.42187500000000033,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.42187500000000033,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.42187500000000033,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.42187500000000033
+      ]
+    ],
+    "w": -1.0
+  },
+  "conventions": {
+    "kappa": 1.0,
+    "metric_signature": "-+++",
+    "orientation_0123": 1
+  },
+  "fixture": {
+    "F": {
+      "imag": 0.0,
+      "real": 0.75
+    },
+    "G": {
+      "imag": 0.0,
+      "real": 0.5
+    },
+    "areal_radius": 0.28209479177387814,
+    "phi": 0.2,
+    "radial_metric": 1.0,
+    "theta": 0.7
+  },
+  "model_id": "GMF-1B-ECD-TOR1",
+  "nonclaims": {
+    "bounce_constructed": false,
+    "child_topology_proven": false,
+    "complete_effective_stress_tensor_derived": false,
+    "constraint_solution_constructed": false,
+    "curvature_invariants_verified": false,
+    "dark_energy_value_fixed": false,
+    "external_Q_derived": false,
+    "finite_mass_exterior_constructed": false,
+    "full_ecd_effective_stress_verified": false,
+    "full_ecd_tetrad_dependence_varied": false,
+    "global_solution_constructed": false,
+    "homogeneous_spin_fluid_closure_derived": false,
+    "horizon_regular_evolution_constructed": false,
+    "late_dark_energy_derived": false,
+    "metric_null_defocusing_derived": false,
+    "quantum_ensemble_equivalence_proven": false,
+    "regular_centre_constructed": false,
+    "rho_plus_p_negative_derived": false,
+    "variable_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "provenance": {
+    "full_torsion_eliminated_contact": {
+      "reference": "Choudhury-Maity-Lahiri 2024 Eq. 7 and Cabral-Lobo-Rubiera-Garcia 2019 Eqs. 20-24",
+      "use": "cross-check the full reduced contact after the independent connection is eliminated everywhere; do not double count intermediate gravitational and Dirac connection pieces"
+    }
+  },
+  "schema_version": 2,
+  "spin_tensor": {
+    "components": {
+      "S_012": 0.3125000000000001,
+      "S_021": -0.3125000000000001,
+      "S_102": -0.3125000000000001,
+      "S_120": 0.3125000000000001,
+      "S_123": 0.8125000000000003,
+      "S_132": -0.8125000000000003,
+      "S_201": 0.3125000000000001,
+      "S_210": -0.3125000000000001,
+      "S_213": -0.8125000000000003,
+      "S_231": 0.8125000000000003,
+      "S_312": 0.8125000000000003,
+      "S_321": -0.8125000000000003
+    },
+    "hodge_dual_of_lowered_axial_current": true,
+    "hodge_dual_residual": 1.1102230246251565e-16,
+    "hodge_dual_verified": true,
+    "totally_antisymmetric": true
+  },
+  "torsion": {
+    "expected_minus_3_2_kappa2_A2": 3.3750000000000027,
+    "relation_verified": true,
+    "torsion_squared": 3.3750000000000027
+  }
+}

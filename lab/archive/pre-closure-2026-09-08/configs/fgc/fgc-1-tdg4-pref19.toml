@@ -1,0 +1,138 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG4-PREF19"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+freeze_result = "results/fgc-1-tdg4-frz1.json"
+freeze_config = "configs/fgc/fgc-1-tdg4-frz1.toml"
+protocol_v4 = "configs/fgc/fgc-2-sf1-protocol-v4.toml"
+protocol_v13 = "configs/fgc/fgc-2-sf1-protocol-v13.toml"
+CAL10_config = "configs/fgc/fgc-1-cal10-pref15.toml"
+CAL10_result = "results/fgc-1-cal10-pref15.json"
+
+[scope]
+target = "FGC-2-SF1-TDG4"
+role = "post_freeze_sampling_identifiability_theorem_binder"
+calibration_branch = "GR-0"
+actual_terminal_history_arrays_consumed = false
+campaign_checkpoint_loaded = false
+campaign_checkpoint_resumed = false
+state_advanced = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+freeze_commit = "8d0df53b32f6668fd29dc085c350f77b3e0c0252"
+freeze_config_sha256 = "b9990512f7cf70b00b05df587454c513c66651a7a740bb900c4e6b587d456cf5"
+freeze_result_sha256 = "d0f6db977a0c7a62db176b12f22479a157ebeb2d7e2483273c43917df8511eb4"
+freeze_reproducer_sha256 = "65582bd00988e551ba0b42f716de01b272b3ac20de067b8b395e594ab3ca1cde"
+freeze_module_sha256 = "31d816df99682114c8dfebff545743bc9624bccad54aff105b094f635f7f0b8d"
+freeze_document_sha256 = "b1d6fa73cd6b5bdfd0b35faa726223dd0e0d6b041ce98fa5f1af4ffd3d50b15c"
+protocol_v4_sha256 = "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a"
+protocol_v13_sha256 = "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692"
+CAL10_config_sha256 = "3661ba8cb6b933ab47daf8897c577b4631544605175dbe15d0c084542cf6c9eb"
+CAL10_result_sha256 = "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18"
+freeze_commit_must_be_ancestor_of_HEAD = true
+all_bound_blobs_must_match_freeze_commit_and_worktree = true
+freeze_result_must_be_canonical_and_prospective = true
+raw_campaign_bundle_must_not_be_loaded = true
+
+[theorem_result]
+sample_count = 64
+top_bins = [28, 29, 30, 31, 32]
+function_space = "C_c_infinity_open_unit_interval"
+exact_identifiability_iff = "T annihilates ker(S)"
+equivalent_factorization = "there exists A on range(S) with T=A composed_with S"
+smooth_between_sample_kernel_witness_exists_for_every_declared_bin = true
+uniform_64_node_alias_crosscheck_exact_for_every_declared_bin = true
+finite_samples_alone_bound_continuum_top_band_field_power = false
+finite_samples_alone_bound_continuum_top_band_derivative_power = false
+both_powers_are_unbounded_on_each_unrestricted_sample_fibre = true
+actual_unsampled_power_of_PROTO13_histories_inferred = false
+PDE_solution_manifold_restriction_proved = false
+
+[retirement_scope]
+retired_object = "PROTO4_inherited_finite_sample_temporal_spectral_rule_as_a_continuum_admission"
+current_rule_retained_as_sampled_diagnostic = true
+historical_PROTO13_stop_preserved = true
+historical_CAL10_result_reclassified = false
+historical_thresholds_changed = false
+actual_history_classifications_changed = false
+physical_or_candidate_result_inferred = false
+replacement_temporal_admission_defined = false
+replacement_gate_acceptance_inferred = false
+
+[assumption_audit]
+sufficient_routes = [
+  "finite_dimensional_class_with_injective_stable_sampling",
+  "quantitative_continuum_derivative_or_Sobolev_bound",
+  "continuum_evolution_residual_plus_stability_estimate",
+]
+insufficient_premises = [
+  "finite_samples_only",
+  "smoothness_without_a_quantitative_norm_bound",
+  "agreement_of_finitely_sampled_surrogates",
+  "finite_sample_densification_without_regular_control",
+  "discrete_residual_without_a_continuum_stability_estimate",
+]
+replacement_design_must_choose_and_quantify_at_least_one_sufficient_route = true
+replacement_bound_must_be_independent_of_the_observed_target_margin = true
+
+[proof_contract]
+freeze_commit_and_all_bound_blobs_must_match = true
+freeze_result_must_preserve_the_unexecuted_theorem_boundary = true
+PROTO4_sample_count_and_absolute_budgets_must_be_recovered = true
+PROTO13_must_preserve_the_inherited_absolute_spectral_contract = true
+CAL10_must_preserve_the_64_sample_failure_and_underived_cause = true
+factorization_lemma_necessity_and_sufficiency_must_be_certified = true
+smooth_kernel_witness_must_cover_every_declared_top_bin = true
+uniform_alias_crosscheck_must_match_the_freeze_exactly = true
+finite_densification_without_regular_control_must_remain_nonidentifying = true
+actual_history_and_PDE_manifold_nonclaims_must_remain_false = true
+historical_stop_must_remain_preserved_without_reclassification = true
+lineage_theorem_retirement_nonclaim_and_claim_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG3_actual_histories_diagnosed = true
+TDG3_native_grid_outcome_is_mixed = true
+TDG4_sampling_identifiability_theorem_design_frozen = true
+TDG4_sampling_identifiability_theorem_completed = true
+finite_samples_alone_proved_insufficient_for_continuum_top_band_bound = true
+current_temporal_spectral_rule_retired_as_continuum_admission = true
+current_temporal_spectral_rule_retained_as_sampled_diagnostic = true
+replacement_temporal_gate_design_authorized = true
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG3_actual_histories_diagnosed = true
+TDG3_native_grid_outcome_is_mixed = true
+TDG4_sampling_identifiability_theorem_design_frozen = true
+TDG4_exact_no_history_controls_pass = true
+TDG4_sampling_identifiability_theorem_completed = true
+finite_samples_alone_proved_insufficient_for_continuum_top_band_bound = true
+current_temporal_spectral_rule_retired_as_continuum_admission = true
+current_temporal_spectral_rule_retained_as_sampled_diagnostic = true
+replacement_temporal_gate_design_authorized = true
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

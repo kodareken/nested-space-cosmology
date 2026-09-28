@@ -1,0 +1,237 @@
+{
+  "accountable_author": "Douglas Ek",
+  "box": {
+    "mu_interval_exact": [
+      "0",
+      "1/128"
+    ],
+    "rho_center": "259/256",
+    "rho_radius": "1/1048576",
+    "z_ball_display": "[1.25375 +/- 4.03e-6]",
+    "z_center_exact": "2823200923066297/2251799813685248",
+    "z_radius_nominal": "1/1048576"
+  },
+  "canonical_momentum_cutoff": 256,
+  "geometry_history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-fine-prepared.npz": "162ad8484b6650106657fae60bf681852695fbb523048e9ed0ce1a2bfb82160c",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-radius-covariance-bounds.json": "e7175ee86abe2475e8115139f0adeb8c2022f2d293fcae6228eb50ab25db5737"
+  },
+  "parameters": {
+    "angular": 2.23606797749979,
+    "axial_scale": 0.844031385900246,
+    "mass": 1.5707963267948966,
+    "multiplicity": 12.0,
+    "radius": 1.4142135623730951
+  },
+  "reproducer": "python scripts/derive_nsc_weyl_small_transfer_control.py --check",
+  "rows_by_sign": [
+    {
+      "at_split_rho_upper": [
+        {
+          "exponent": -175,
+          "mantissa": "230567427770234502850102752258630633625948658257"
+        },
+        {
+          "exponent": -166,
+          "mantissa": "819092974935040631362461994496019763174277151691"
+        },
+        {
+          "exponent": -152,
+          "mantissa": "135352697371707459388189968424586128984209131111"
+        }
+      ],
+      "canonical_cutoff_lower": {
+        "exponent": 8,
+        "mantissa": "1"
+      },
+      "clock_conversion": "R_rho=-R_T/a; a is z-independent",
+      "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+      "input_energy_tail_identified_with_canonical_k": false,
+      "large_transfer_bound": null,
+      "norm": "pointwise2x2 Frobenius on the supplied geometry box",
+      "physical_local_gate": "OPEN",
+      "region": "|k|>=K, |omega|<=|k|",
+      "rows": [
+        {
+          "C5_T_upper": {
+            "exponent": -139,
+            "mantissa": "127859786407050547060423084459358858929157563269"
+          },
+          "C5_rho_upper": {
+            "exponent": -142,
+            "mantissa": "1224862658936080274642908214601937815989813810861"
+          },
+          "C6_T_upper": {
+            "exponent": -128,
+            "mantissa": "369109544675820499763888068534790972182140268185"
+          },
+          "C6_rho_upper": {
+            "exponent": -128,
+            "mantissa": "441996376494592751408910063664105988877056475719"
+          },
+          "axial_order": 0
+        },
+        {
+          "C5_T_upper": {
+            "exponent": -132,
+            "mantissa": "165198483550752054615618760824161913329873163399"
+          },
+          "C5_rho_upper": {
+            "exponent": -131,
+            "mantissa": "98909838806746486260893802905932574167284123609"
+          },
+          "C6_T_upper": {
+            "exponent": -119,
+            "mantissa": "1362880595267440667312170185356003988096530100559"
+          },
+          "C6_rho_upper": {
+            "exponent": -116,
+            "mantissa": "204000510618082450916702265788802342557887380707"
+          },
+          "axial_order": 1
+        },
+        {
+          "C5_T_upper": {
+            "exponent": -124,
+            "mantissa": "312753757485533377796897032918964669316090815815"
+          },
+          "C5_rho_upper": {
+            "exponent": -124,
+            "mantissa": "374512199799882023113124751814960966895645744133"
+          },
+          "C6_T_upper": {
+            "exponent": -107,
+            "mantissa": "903649461804378728041294694304622895901707865999"
+          },
+          "C6_rho_upper": {
+            "exponent": -107,
+            "mantissa": "1082090109833425530529126925615800436235204990793"
+          },
+          "axial_order": 2
+        }
+      ],
+      "schema": "NSC-WEYL-SMALL-TRANSFER-COEFFICIENTS-v1",
+      "sign_k": -1,
+      "time_integral_bound": null,
+      "whole_history_coverage": false
+    },
+    {
+      "at_split_rho_upper": [
+        {
+          "exponent": -177,
+          "mantissa": "922269711081181701122595281960389130053708319007"
+        },
+        {
+          "exponent": -157,
+          "mantissa": "1599790966665602852817184181098682549444010803"
+        },
+        {
+          "exponent": -153,
+          "mantissa": "270705394743243204759995466074789479895176027097"
+        }
+      ],
+      "canonical_cutoff_lower": {
+        "exponent": 8,
+        "mantissa": "1"
+      },
+      "clock_conversion": "R_rho=-R_T/a; a is z-independent",
+      "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+      "input_energy_tail_identified_with_canonical_k": false,
+      "large_transfer_bound": null,
+      "norm": "pointwise2x2 Frobenius on the supplied geometry box",
+      "physical_local_gate": "OPEN",
+      "region": "|k|>=K, |omega|<=|k|",
+      "rows": [
+        {
+          "C5_T_upper": {
+            "exponent": -141,
+            "mantissa": "511439145631458111841619371288736102836701843603"
+          },
+          "C5_rho_upper": {
+            "exponent": -142,
+            "mantissa": "1224862658943877994610160263543415296964149780215"
+          },
+          "C6_T_upper": {
+            "exponent": -120,
+            "mantissa": "1441834158889923845100510531154776303883234959"
+          },
+          "C6_rho_upper": {
+            "exponent": -129,
+            "mantissa": "883992752989185513791027773724657402023578638375"
+          },
+          "axial_order": 0
+        },
+        {
+          "C5_T_upper": {
+            "exponent": -133,
+            "mantissa": "330396966860785376206115153483435394899467821339"
+          },
+          "C5_rho_upper": {
+            "exponent": -134,
+            "mantissa": "791278709877466571889979731623702480480527178649"
+          },
+          "C6_T_upper": {
+            "exponent": -114,
+            "mantissa": "42590018602107521019436033207196773399235442797"
+          },
+          "C6_rho_upper": {
+            "exponent": -116,
+            "mantissa": "204000510618082451711488266848967594375239117961"
+          },
+          "axial_order": 1
+        },
+        {
+          "C5_T_upper": {
+            "exponent": -126,
+            "mantissa": "1251015028767447488183169858920004950381955804591"
+          },
+          "C5_rho_upper": {
+            "exponent": -125,
+            "mantissa": "749024398896440367421353062786049403778623825681"
+          },
+          "C6_T_upper": {
+            "exponent": -107,
+            "mantissa": "903649461804378714232597198280052354647432818737"
+          },
+          "C6_rho_upper": {
+            "exponent": -106,
+            "mantissa": "541045054916712756996835974599390459104913273029"
+          },
+          "axial_order": 2
+        }
+      ],
+      "schema": "NSC-WEYL-SMALL-TRANSFER-COEFFICIENTS-v1",
+      "sign_k": 1,
+      "time_integral_bound": null,
+      "whole_history_coverage": false
+    }
+  ],
+  "runtime": {
+    "CPU_cap": 90.0,
+    "CPU_seconds": 2.160708
+  },
+  "schema": "NSC-WEYL-SMALL-TRANSFER-CONTROL-v1",
+  "scope": {
+    "initial_covariance_error_bound": null,
+    "large_transfer_bound": null,
+    "metric_timestep": false,
+    "new_field_or_source_runs": 0,
+    "physical_local_gate": "OPEN",
+    "physical_source_energy_tail_bound": null,
+    "time_integral_bound": null,
+    "whole_axial_support_covered": false,
+    "whole_preparation_slab_covered": false
+  },
+  "source_family_control": "14_1",
+  "source_hashes": {
+    "docs/nsc-weyl-small-transfer-bound.md": "de1659122d849052bb43037c68ac094b2179746853ebb76aaa9882550959cb2e",
+    "scripts/derive_nsc_weyl_small_transfer_control.py": "8a7096a29e1f4c375d8ca2f5a2dc8d7ed2ff11978ae06a323fa293a9a3157353",
+    "src/recursive_horizons/nsc_ks_spacetime_geometry_jets.py": "16ecbaa15c5a1e129f8a0e1889c3dc2f400f576e76211c804b18b587ce2f66c9",
+    "src/recursive_horizons/nsc_scaled_reference_projector.py": "a6eb3f45d6ce9baa256457c06b6ab61830097acf7394924de74feda9dc113407",
+    "src/recursive_horizons/nsc_weyl_commutator_remainder.py": "fbaf74f5c38f731e1dea3c8e5ed8005d7716dfbe8de2fe974692abd1b3d14691",
+    "src/recursive_horizons/nsc_weyl_small_transfer_bound.py": "c82cc0621b4ccf0d770993726f4002b0db5af44fdb3429eb9a9a7797e342eb46"
+  },
+  "status": "PASS: one finite-history coefficient box; full UV/local gate OPEN"
+}

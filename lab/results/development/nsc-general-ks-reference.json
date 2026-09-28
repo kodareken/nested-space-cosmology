@@ -1,0 +1,115 @@
+{
+  "checks": {
+    "bloch_orders_zero_through_four_close": true,
+    "four_force_channels_refine": true,
+    "order_by_order_normalization_closes": true,
+    "parity_completed_momentum_subtraction_is_zero": true,
+    "reference_projector_trace_is_one": true,
+    "seed_hamiltonian_axes_match_serialized_state": true
+  },
+  "comparison": {
+    "exact": "strings, booleans, integers, keys, input and source hashes",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "construction": {
+    "action_measure": "copy_count*degeneracy*dk/pi after explicit +/-k parity average",
+    "beta_policy": "pair k and -k before summation; never use the one-sided positive-frequency payload as standalone vacuum momentum",
+    "reference_force_sign": "+Tr(C_ref delta H), composing with -Tr(C delta H)",
+    "state_blocks": 1904,
+    "state_channels": 33,
+    "state_manifest": "results/development/nsc-mode-resolved-cauchy-state.json",
+    "state_payload": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz"
+  },
+  "diagnostic": {
+    "center_reference_action_forces": {
+      "N": -203076.98998732102,
+      "beta": 0.0,
+      "q_ADM": 60030.72483733909,
+      "r": 80756.3229791703
+    },
+    "coarse_nodes": 65,
+    "fine_nodes": 129,
+    "force_refinement_relative": {
+      "N": 8.549565010442066e-16,
+      "beta": 0.0,
+      "q_ADM": 4.206635844608569e-12,
+      "r": 7.059147387805159e-12
+    },
+    "kind": "manufactured local differentiation stencil only",
+    "maximum_force_refinement_relative": 7.059147387805159e-12,
+    "physical_duration_or_history_selected": false
+  },
+  "domain": {
+    "hamiltonian_axes": "h=(-m_j,lambda_n/r,k/a_parallel)",
+    "in": "the 33 authenticated ModeResolvedCauchyState channels on a supplied smooth homogeneous KS history, block-diagonal in axial frequency",
+    "normal_derivative": "D=N^-1 d/dtau on the supplied history nodes",
+    "orders": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "out": [
+      "selection of a physical history or duration",
+      "frequency mixing and the transmitting tilted interface",
+      "local induced action forces",
+      "a finite physical stress, null signs, updated constraints, or metric evolution"
+    ]
+  },
+  "gate": {
+    "all_four_ADM_variations_exposed": true,
+    "coupled_evolution_reopened": false,
+    "extended_same_action_gate_ready": false,
+    "owner_residuals_pass": true,
+    "parity_completed_momentum_subtraction": true,
+    "physical_history_selected": false,
+    "remaining_owners": [
+      "GeneralKSLocalInducedHistory",
+      "transmitting tilted-Landau interface with frequency-mixing Cauchy map"
+    ]
+  },
+  "input_hashes": {
+    "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "changed": false,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "owner": "GeneralKSFourthOrderReferenceHistory",
+  "residuals": {
+    "maximum_bloch_recursion_residual": 2.168404344971009e-19,
+    "maximum_order_normalization_residual": 3.0357660829594124e-18,
+    "maximum_parity_completed_beta_projection": 0.0,
+    "maximum_projector_trace_residual": 0.0,
+    "minimum_reference_gap": 0.0011775396636795644,
+    "seed_hamiltonian_axis_residual": 0.0
+  },
+  "schema": "NSC-GENERAL-KS-FOURTH-ORDER-REFERENCE-HISTORY-v1",
+  "scope": {
+    "finite_stress_or_nulls_fabricated": false,
+    "metric_timestep_started": false,
+    "new_physical_term_or_counterflow": false,
+    "old_generator_rerun": false
+  },
+  "source_hashes": {
+    "docs/nsc-general-ks-reference.md": "3df344bf336c18b0236c0656cb30bd3f66bc05e09e7afcef2432700d0a8490bb",
+    "scripts/derive_nsc_general_ks_reference.py": "edd9faae1e28aed7142013de242542ce715b84145017c279fd7eab3f2d713a5b",
+    "src/recursive_horizons/nsc_general_ks_reference.py": "e789fb856d3a1d76c08ee02c4c0c53746b3e8831b57ab0ac3150bc01153851f6"
+  },
+  "status": "PASS: supplied-history order-0..4 reference and all four ADM variation channels are executable; extended composition remains OPEN",
+  "tolerances": {
+    "bloch_recursion": 3e-12,
+    "force_refinement_relative": 3e-08,
+    "order_normalization": 3e-12,
+    "parity_completed_beta": 3e-15,
+    "projector_trace": 3e-15,
+    "seed_hamiltonian_axis": 3e-15
+  }
+}

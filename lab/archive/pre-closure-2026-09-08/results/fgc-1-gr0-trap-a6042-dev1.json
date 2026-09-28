@@ -1,0 +1,63 @@
+{
+  "amplitude": "6.042",
+  "artifact_id": "FGC-1-GR0-TRAP-A6042-DEV1",
+  "classification": "completed_error_separated_trapped_development_origin",
+  "common_event": {
+    "combined_error": 1.1957384299008868e-07,
+    "comparator_owned_constraint_admission_passed": true,
+    "comparator_spatial_admission_passed": true,
+    "comparator_trapped_scores": [
+      0.0001394345861794086,
+      0.00014179241861614854,
+      0.00014199618268480243
+    ],
+    "point_counts": [
+      4097,
+      8193,
+      16385
+    ],
+    "positive_margin_over_combined_error_factor": 1187.4652650070775,
+    "primary_owned_constraint_admission_passed": true,
+    "primary_spatial_admission_passed": true,
+    "primary_trapped_scores": [
+      0.00014203636812882856,
+      0.0001419929540618809,
+      0.00014198978515414032
+    ],
+    "target_time_hex": "0x1.47ae147ae147bp-6",
+    "trapped_sign_passed": true
+  },
+  "initial_state": {
+    "all_six_initial_slices_untrapped": true,
+    "comparator_16385_maximum_compactness": 0.9998639804340634,
+    "comparator_16385_minimum_theta_plus": 2.269937082180756e-05,
+    "primary_16385_maximum_compactness": 0.9998643222192525,
+    "primary_16385_minimum_theta_plus": 2.2642343163389355e-05
+  },
+  "methods": [
+    "RK4",
+    "SSPRK3"
+  ],
+  "nonclaims": {
+    "error_separated_publication_calibration_completed": false,
+    "fgc_qr_candidate_executed": false,
+    "metric_null_defocusing_demonstrated": false,
+    "nested_space_transition_demonstrated": false,
+    "physics_claimed": false
+  },
+  "raw_evidence": {
+    "common_event_path": "runs/fgc-2-sf1/gr0-trap-a6042-fine-owned1.json",
+    "common_event_sha256": "0128cb0dd4f3f6e4ef33ff57902b756bad372feb6f39fcde29868de8377433f4",
+    "rsrc3_common_event_path": "runs/fgc-2-sf1/pro20-rsrc3-event1/event/terminal.json",
+    "rsrc3_common_event_sha256": "096d85ad65ed4955e5947742db9f7afad36ce71fbd124c76103e65a8a9706fd4",
+    "rsrc4_fast_terminal_path": "runs/fgc-2-sf1/pro20-rsrc4-fast1/event/terminal.json",
+    "rsrc4_fast_terminal_sha256": "982cf9cafb455335f979c57dd5296ff49e2578d862c9cb1af92edbf65c687b5a"
+  },
+  "schema": "FGC-1-GR0-TRAP-A6042-DEV1-v1",
+  "source": {
+    "derivative_map": "PROTO11_reference_balanced",
+    "equations": "unredefined_GR0_specialization_of_REF1",
+    "operator": "PROTO12_GR0_SRC4_tensor_contracted",
+    "source_residual_tolerance": 1e-12
+  }
+}

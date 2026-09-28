@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursive Horizons — Interactive Presentation</title>
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --card-bg: #131320;
+    --text: #e0e0e0;
+    --text-secondary: #9090a0;
+    --accent: #64b5f6;
+    --accent2: #ef5350;
+    --accent3: #66bb6a;
+    --accent4: #ffa726;
+    --accent5: #ab47bc;
+    --accent6: #29b6f6;
+    --border: #2a2a3a;
+    --tag-standard: #2e7d32;
+    --tag-speculative: #e65100;
+    --tag-problem: #c62828;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+    background: linear-gradient(135deg, var(--accent5), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* Navigation tabs */
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .tab {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .tab:hover { border-color: var(--accent); color: var(--text); }
+  .tab.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+
+  /* Panel */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* Card */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  .card h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  .card p { margin-bottom: 0.8rem; color: var(--text-secondary); }
+
+  /* Math display */
+  .equation {
+    background: #1a1a2e;
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+    overflow-x: auto;
+  }
+  .equation.speculative { border-left-color: var(--accent2); }
+  .equation.standard { border-left-color: var(--accent3); }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .tag.standard { background: var(--tag-standard); color: #fff; }
+  .tag.speculative { background: var(--tag-speculative); color: #fff; }
+  .tag.problem { background: var(--tag-problem); color: #fff; }
+
+  /* SVG diagram area */
+  .diagram {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  .diagram svg { max-width: 100%; height: auto; border-radius: 8px; }
+
+  /* Cycle diagram */
+  .cycle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  .cycle-node {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    min-width: 120px;
+  }
+  .cycle-arrow { font-size: 1.5rem; color: var(--accent4); }
+
+  /* Entropy bar */
+  .bar-chart { margin: 1rem 0; }
+  .bar-row { display: flex; align-items: center; margin: 0.5rem 0; gap: 0.8rem; }
+  .bar-label { width: 100px; text-align: right; font-size: 0.85rem; color: var(--text-secondary); }
+  .bar-track { flex: 1; background: #1a1a2e; border-radius: 6px; height: 20px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease; }
+  .bar-value { width: 50px; font-size: 0.8rem; color: var(--text-secondary); }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    .card { padding: 1.2rem; }
+    h1 { font-size: 1.6rem; }
+  }
+</style>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Recursive Horizons</h1>
+  <p class="subtitle">How Black-Hole Mathematics, Cosmological Expansion &amp; Horizon Thermodynamics Form an Eternal Engine</p>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchPanel('horizons')">1. Horizons</div>
+    <div class="tab" onclick="switchPanel('thermo')">2. Thermodynamics</div>
+    <div class="tab" onclick="switchPanel('bounce')">3. Bounce</div>
+    <div class="tab" onclick="switchPanel('transition')">4. Transition</div>
+    <div class="tab" onclick="switchPanel('darkenergy')">5. Dark Energy</div>
+    <div class="tab" onclick="switchPanel('cycle')">6. The Cycle</div>
+  </div>
+
+  <!-- PANEL 1: Horizons -->
+  <div id="panel-horizons" class="panel active">
+    <div class="card">
+      <h2>1. Horizons: Causal Boundaries <span class="tag standard">Standard GR</span></h2>
+      <p>A causal boundary forms when the "flow" of spacetime geometry matches the local causal speed \(c\). This unifies black-hole horizons and cosmological horizons under a single principle.</p>
+
+      <h3>Schwarzschild Horizon</h3>
+      <p>For a non-rotating black hole of mass \(M\), the horizon sits at:</p>
+      <div class="equation standard">
+        \[ r_s = \frac{2GM}{c^2} \]
+      </div>
+      <p>The average density inside this radius scales as \(M^{-2}\):</p>
+      <div class="equation standard">
+        \[ \rho_{\rm avg} = \frac{3c^6}{32\pi G^3 M^2} \]
+      </div>
+      <p style="font-size:0.85rem; color: var(--accent4);">⟶ Larger black holes can have lower average density than water — but this is a coordinate bookkeeping quantity, not the physical interior density.</p>
+
+      <h3>Cosmological Horizon</h3>
+      <p>In an expanding universe, the Hubble radius is:</p>
+      <div class="equation standard">
+        \[ R_H = \frac{c}{H} \]
+      </div>
+      <p>The mass enclosed at critical density \(\rho_c = 3H^2/(8\pi G)\) is \(M_H \approx c^3/(2GH)\), and its Schwarzschild radius equals \(R_H\):</p>
+      <div class="equation standard">
+        \[ r_s(M_H) = \frac{c}{H} = R_H \]
+      </div>
+      <p style="font-size:0.85rem; color: var(--accent4);">⟶ This compactness coincidence (\(C=1\)) is the central numerical fact linking black-hole and cosmological horizons.</p>
+
+      <h3>Geometry Flow Unification</h3>
+      <p>In the river model, outgoing light near a black hole satisfies:</p>
+      <div class="equation standard">
+        \[ \frac{dr}{dt}_{\rm out} = c - \sqrt{\frac{2GM}{r}} \]
+      </div>
+      <p>For an expanding universe, incoming light satisfies:</p>
+      <div class="equation standard">
+        \[ \dot{D} = H D - c \]
+      </div>
+      <p>Both hit zero when geometry-flow equals causal speed. This is a structural analogy — not an identity — but it unifies the concept of a horizon as a causal membrane.</p>
+    </div>
+  </div>
+
+  <!-- PANEL 2: Thermodynamics -->
+  <div id="panel-thermo" class="panel">
+    <div class="card">
+      <h2>2. Horizon Thermodynamics <span class="tag standard">Standard GR + QFT</span></h2>
+      <p>Horizons are not just geometric surfaces — they carry entropy and radiate with a temperature. This is one of the deepest results of theoretical physics.</p>
+
+      <h3>Bekenstein–Hawking Entropy</h3>
+      <div class="equation standard">
+        \[ S_{\rm BH} = \frac{k_B A}{4\ell_P^2}, \quad \ell_P = \sqrt{\frac{\hbar G}{c^3}} \]
+      </div>
+      <p>For a spherical horizon \(A = 4\pi r_s^2\), so \(S_{\rm BH} \propto M^2\) — more mass, exponentially more hidden information.</p>
+
+      <h3>Hawking Temperature</h3>
+      <div class="equation standard">
+        \[ T_H = \frac{\hbar c^3}{8\pi G M k_B} \]
+      </div>
+      <p>Large black holes are <em>extremely</em> cold. A solar-mass black hole has \(T_H \sim 10^{-7}\) K.</p>
+
+      <h3>Gibbons–Hawking Temperature (de Sitter)</h3>
+      <p>Cosmological horizons also radiate:</p>
+      <div class="equation standard">
+        \[ T_{\rm GH} = \frac{\hbar H}{2\pi k_B}, \quad R_{\rm dS} = \sqrt{\frac{3}{\Lambda}} \]
+      </div>
+
+      <h3>Information Constraint</h3>
+      <p>Black-hole entropy bounds the information content of everything behind the horizon. If a black hole spawns a child universe and emits Hawking radiation:</p>
+      <div class="equation standard">
+        \[ S_{\rm rad} + S_{\rm child} - I({\rm rad}:{\rm child}) \le S_H \]
+      </div>
+      <p>Information cannot be duplicated — the Page curve and modern replica-wormhole calculations strongly suggest Hawking radiation is unitary. Any baby-universe scenario must respect this constraint.</p>
+    </div>
+  </div>
+
+  <!-- PANEL 3: Bounce -->
+  <div id="panel-bounce" class="panel">
+    <div class="card">
+      <h2>3. Bounce Cosmology <span class="tag standard">Loop Quantum Gravity</span></h2>
+      <p>Classical GR predicts singularities — infinite density at the Big Bang and inside black holes. Quantum gravity replaces these with <em>bounces</em> at finite density.</p>
+
+      <h3>Loop Quantum Cosmology Bounce</h3>
+      <p>When density \(\rho\) approaches the critical Planck-scale density \(\rho_c \sim 5 \times 10^{96} \;\rm kg/m^3\), quantum geometry generates effective repulsion:</p>
+      <div class="equation standard">
+        \[ H^2 = \frac{8\pi G}{3}\rho\left(1 - \frac{\rho}{\rho_c}\right) \]
+      </div>
+      <p>At \(\rho = \rho_c\): \(H^2 \to 0\) — expansion halts, then reverses. Collapse → Stillness → Expansion.</p>
+
+      <div class="diagram">
+        <svg width="500" height="220" viewBox="0 0 500 220">
+          <defs>
+            <linearGradient id="bgGrad1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ab47bc" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#64b5f6" stop-opacity="0.3"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="500" height="220" fill="url(#bgGrad1)" rx="8"/>
+          <!-- Axes -->
+          <line x1="50" y1="170" x2="470" y2="170" stroke="#9090a0" stroke-width="1.5"/>
+          <line x1="50" y1="20" x2="50" y2="170" stroke="#9090a0" stroke-width="1.5"/>
+          <text x="15" y="100" fill="#9090a0" font-size="12" transform="rotate(-90,15,100)">a(t)</text>
+          <text x="250" y="195" fill="#9090a0" font-size="12">time</text>
+          <!-- Bounce curve: contracting, flat at bounce, expanding -->
+          <path d="M 70 140 Q 150 160 220 170 Q 260 170 300 160 Q 380 100 460 60" fill="none" stroke="#64b5f6" stroke-width="3"/>
+          <!-- Bounce point -->
+          <circle cx="260" cy="168" r="6" fill="#ef5350"/>
+          <text x="275" y="165" fill="#ef5350" font-size="12" font-weight="bold">ρ = ρ_c</text>
+          <!-- Density curve (dashed) -->
+          <path d="M 70 50 L 220 50 L 260 168 L 300 50 L 460 50" fill="none" stroke="#ffa726" stroke-width="1.5" stroke-dasharray="6,4"/>
+          <text x="390" y="45" fill="#ffa726" font-size="11">density</text>
+          <!-- Labels -->
+          <text x="70" y="130" fill="#e0e0e0" font-size="11">contraction</text>
+          <text x="380" y="80" fill="#e0e0e0" font-size="11">expansion</text>
+          <!-- Arrowheads -->
+          <polygon points="240,165 248,162 248,170" fill="#ef5350"/>
+        </svg>
+        <p style="font-size:0.8rem; color: var(--text-secondary); margin-top:0.5rem;">The scale factor \(a(t)\) (blue) bounces at Planck density; density (orange, dashed) peaks at \(\rho_c\).</p>
+      </div>
+
+      <h3>From Bounce to Inflation</h3>
+      <p>After the bounce, quantum corrections vanish and classical expansion takes over. If driven by an inflationary scalar field, the universe expands by \(e^N\) with \(N \gtrsim 60\), stretching a subatomic bounce region to cosmic scales and smoothing out curvature.</p>
+
+      <p style="font-size:0.85rem; color: var(--accent4);">⟶ Note: LQC bounce results are best-established for symmetric cosmological models. Extension to realistic black-hole interiors is an open research problem.</p>
+    </div>
+  </div>
+
+  <!-- PANEL 4: Transition -->
+  <div id="panel-transition" class="panel">
+    <div class="card">
+      <h2>4. Parent → Child Transition <span class="tag speculative">Conjecture</span></h2>
+      <p>The hardest physical question: what <em>exactly</em> happens when a black-hole interior bounces into a new universe, and how do the rules change across the transition?</p>
+
+      <h3>The Transition Kernel <span class="tag problem">Open</span></h3>
+      <p>A complete theory would need a quantum channel mapping collapse states to child-universe states + Hawking radiation:</p>
+      <div class="equation speculative">
+        \[ V_X : \mathcal{H}_{\rm collapse}(X,\theta_n) \to \mathcal{H}_{\rm Hawking}(X,\theta_n) \otimes \mathcal{H}_{\rm child}(X,\theta_{n+1}) \]
+      </div>
+      <p>With unitarity \(V_X^\dagger V_X = \mathbb{I}\) and the child state obtained by tracing out radiation:</p>
+      <div class="equation speculative">
+        \[ \rho_{\rm child} = \operatorname{Tr}_{\rm Hawking}[V_X \rho_{\rm collapse} V_X^\dagger] \]
+      </div>
+      <p style="font-size:0.85rem; color: var(--accent2);">⟶ No quantum gravity theory currently specifies \(V_X\). This is a requirements document for what a complete theory would need to supply.</p>
+
+      <h3>Mutation of Constants <span class="tag speculative">Conjecture</span></h3>
+      <p>Dimensionless parameters (fine-structure constant \(\alpha\), mass ratios \(m_e/m_p\)) may drift slightly between generations:</p>
+      <div class="equation speculative">
+        \[ \theta_{n+1} = \theta_n + \frac{1}{\sqrt{S_H/k_B}} \, A(X) \, \xi \]
+      </div>
+      <p>Larger parent horizons → smaller mutation steps. This follows Smolin's cosmological natural selection: universes that produce more black holes have more descendants, and the ensemble is biased towards parameters that maximise black-hole formation.</p>
+
+      <h3>Entropy Budget</h3>
+      <p>The child universe's Hilbert space dimension is bounded by the entropy of the parent black hole. Information cannot be created — only redistributed between the Hawking radiation output and the child universe interior.</p>
+    </div>
+  </div>
+
+  <!-- PANEL 5: Dark Energy -->
+  <div id="panel-darkenergy" class="panel">
+    <div class="card">
+      <h2>5. Dark Energy as Horizon Memory <span class="tag speculative">Conjecture</span></h2>
+      <p>If a child universe inherits its information budget from the parent black-hole horizon, then the cosmological constant \(\Lambda\) is not fundamental — it is a memory of the parent's size.</p>
+
+      <h3>The Derivation</h3>
+      <p>Equate parent black-hole entropy to child de Sitter entropy:</p>
+      <div class="equation speculative">
+        \[ S_{\rm BH} = \frac{k_B \pi r_s^2}{\ell_P^2} = \frac{k_B \cdot 3\pi}{\Lambda \ell_P^2} = S_{\rm dS} \]
+      </div>
+      <p>Cancelling common factors yields a direct link between \(\Lambda\) and the parent black-hole radius:</p>
+      <div class="equation speculative">
+        \[ \Lambda = \frac{3}{r_s^2} = \frac{3c^4}{4G^2 M_{\rm parent}^2} \]
+      </div>
+      <p>For a parent black hole of mass \(\sim 5 \times 10^{22} M_\odot\), this gives \(\Lambda \sim 10^{-52} \; \rm m^{-2}\) — remarkably close to the observed value.</p>
+
+      <div class="diagram">
+        <svg width="500" height="200" viewBox="0 0 500 200">
+          <defs>
+            <linearGradient id="lamGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#29b6f6" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#ab47bc" stop-opacity="0.4"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="500" height="200" fill="url(#lamGrad)" rx="8"/>
+          <!-- Parent box -->
+          <rect x="30" y="40" width="160" height="100" rx="10" fill="none" stroke="#ffa726" stroke-width="2"/>
+          <text x="110" y="85" text-anchor="middle" fill="#ffa726" font-size="13" font-weight="bold">Parent Black Hole</text>
+          <text x="110" y="105" text-anchor="middle" fill="#9090a0" font-size="11">S_BH = π r_s² / ℓ_P²</text>
+          <text x="110" y="125" text-anchor="middle" fill="#9090a0" font-size="11">M ~ 5×10²² M_⊙</text>
+          <!-- Arrow -->
+          <line x1="195" y1="90" x2="270" y2="90" stroke="#e0e0e0" stroke-width="2" marker-end="url(#arrowWhite)"/>
+          <!-- Child box -->
+          <rect x="280" y="40" width="180" height="100" rx="10" fill="none" stroke="#29b6f6" stroke-width="2"/>
+          <text x="370" y="85" text-anchor="middle" fill="#29b6f6" font-size="13" font-weight="bold">Child Universe (now)</text>
+          <text x="370" y="105" text-anchor="middle" fill="#9090a0" font-size="11">Λ = 3 / r_s²</text>
+          <text x="370" y="125" text-anchor="middle" fill="#9090a0" font-size="11">Λ ~ 10⁻⁵² m⁻²</text>
+          <!-- Arrow marker -->
+          <defs>
+            <marker id="arrowWhite" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="7" markerHeight="5" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#e0e0e0"/>
+            </marker>
+          </defs>
+        </svg>
+        <p style="font-size:0.8rem; color: var(--text-secondary); margin-top:0.5rem;">A gargantuan parent horizon → a tiny cosmological constant in the child. Dark energy as horizon memory.</p>
+      </div>
+
+      <p style="font-size:0.85rem; color: var(--accent2);">⟶ This is a conjecture, not a derived result. The derivation assumes (without proof) that \(S_{\rm BH} = S_{\rm dS}\) — there is no established principle requiring the two entropies to match. Treat this as a hypothesis awaiting a microphysical mechanism.</p>
+    </div>
+  </div>
+
+  <!-- PANEL 6: The Cycle -->
+  <div id="panel-cycle" class="panel">
+    <div class="card">
+      <h2>6. The Eternal Engine</h2>
+      <p>The full picture: infinity emerges not from unbounded spatial extent, but from an endless <em>process</em> of compression → transition → expansion → structure formation → renewed collapse.</p>
+
+      <div class="diagram">
+        <svg width="700" height="350" viewBox="0 0 700 350">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="7" markerHeight="5" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#64b5f6"/>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="700" height="350" fill="#131320" rx="12"/>
+
+          <!-- Stage 1: Galaxy with collapse -->
+          <circle cx="120" cy="130" r="65" fill="none" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+          <circle cx="120" cy="130" r="15" fill="#ef5350" opacity="0.7"/>
+          <text x="120" y="215" text-anchor="middle" fill="#e0e0e0" font-size="12" font-weight="bold">1. COLLAPSE</text>
+          <text x="120" y="232" text-anchor="middle" fill="#9090a0" font-size="10">Star implosion</text>
+          <text x="120" y="246" text-anchor="middle" fill="#9090a0" font-size="10">→ Black hole forms</text>
+
+          <!-- Arrow 1→2 -->
+          <line x1="185" y1="130" x2="235" y2="130" stroke="#64b5f6" stroke-width="2" marker-end="url(#arr)"/>
+
+          <!-- Stage 2: Compression -->
+          <circle cx="290" cy="130" r="65" fill="none" stroke="#ffa726" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+          <circle cx="290" cy="130" r="8" fill="#ffa726"/>
+          <text x="290" y="215" text-anchor="middle" fill="#ffa726" font-size="12" font-weight="bold">2. MAX DENSITY</text>
+          <text x="290" y="232" text-anchor="middle" fill="#9090a0" font-size="10">ρ → ρ_c (Planck)</text>
+          <text x="290" y="246" text-anchor="middle" fill="#9090a0" font-size="10">LQC bounce: H² → 0</text>
+
+          <!-- Arrow 2→3 -->
+          <line x1="355" y1="130" x2="405" y2="130" stroke="#64b5f6" stroke-width="2" marker-end="url(#arr)"/>
+
+          <!-- Stage 3: Expansion -->
+          <circle cx="460" cy="130" r="65" fill="none" stroke="#66bb6a" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+          <circle cx="460" cy="130" r="30" fill="none" stroke="#66bb6a" stroke-width="1" opacity="0.5"/>
+          <text x="460" y="215" text-anchor="middle" fill="#66bb6a" font-size="12" font-weight="bold">3. EXPANSION</text>
+          <text x="460" y="232" text-anchor="middle" fill="#9090a0" font-size="10">Inflation → Big Bang</text>
+          <text x="460" y="246" text-anchor="middle" fill="#9090a0" font-size="10">New FLRW universe</text>
+
+          <!-- Arrow 3→4 (curved around) -->
+          <line x1="578" y1="130" x2="630" y2="130" stroke="#64b5f6" stroke-width="2" marker-end="url(#arr)"/>
+
+          <!-- Stage 4: Structure -->
+          <circle cx="120" cy="130" r="90" fill="none" stroke="#ab47bc" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+          <text x="110" y="290" text-anchor="middle" fill="#ab47bc" font-size="12" font-weight="bold">4. STRUCTURE FORMATION</text>
+          <text x="110" y="307" text-anchor="middle" fill="#9090a0" font-size="10">Galaxies, stars, black holes form</text>
+          <text x="110" y="321" text-anchor="middle" fill="#9090a0" font-size="10">Cycle repeats — new collapses spawn new universes</text>
+
+          <!-- Cycle label -->
+          <text x="350" y="330" text-anchor="middle" fill="#64b5f6" font-size="12">∞ Infinite recurrence — not infinite space</text>
+        </svg>
+      </div>
+
+      <h3>The Key Insight</h3>
+      <p style="font-size:1rem;">\(\Lambda\)CDM cosmology emerges as the <em>effective interior theory</em> inside each pocket. The recursive horizon physics only operates at the boundary — the origin (bounce) and the asymptotic future (dark energy as horizon memory). Inside each pocket, standard cosmology works exactly as observed.</p>
+
+      <h3>Open Problems <span class="tag problem">Critical</span></h3>
+      <ol style="color: var(--text-secondary); padding-left: 1.5rem;">
+        <li style="margin-bottom:0.4rem;"><strong>The transition map \(V_X\):</strong> No quantum gravity theory specifies how a collapsing black-hole interior becomes an expanding FLRW universe across a bounce.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Information consistency:</strong> How to satisfy both unitary Hawking radiation (Page curve) and baby universe creation without duplicating information.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Constants inheritance:</strong> A microphysical derivation of how dimensionless parameters change between generations — currently pure dimensional analysis.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Dark matter:</strong> No derivation of \(\Omega_{\rm DM}/\Omega_b \approx 5.4\) from horizon physics.</li>
+        <li style="margin-bottom:0.4rem;"><strong>Observational signature:</strong> A quantitative prediction that distinguishes this model from standard \(\Lambda\)CDM + standard black-hole GR.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script>
+function switchPanel(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>

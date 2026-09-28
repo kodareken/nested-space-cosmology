@@ -1,0 +1,151 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG4-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+source_result = "results/fgc-1-tdg3-pref18.json"
+
+[scope]
+target = "FGC-2-SF1-TDG4"
+role = "prospective_finite_sampling_identifiability_theorem"
+calibration_branch = "GR-0"
+sampled_history_shape = 64
+source_compact_result_read = true
+actual_terminal_history_arrays_consumed = false
+campaign_checkpoint_loaded = false
+campaign_checkpoint_resumed = false
+state_advanced = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+replacement_temporal_admission_defined = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "63f5278d82497380eba57a32331472541b22f5a6"
+source_result_sha256 = "1e12db5903001aeba31338a1d10df4ed96ebab4771509c07d25fd4524ce4f181"
+source_config_sha256 = "c84c8ee99633effb7bb72a5d9602142c8e8c542edfc87f11eb27064050500f78"
+source_reproducer_sha256 = "57342031fef9d7acd91676310ab553c407385da1cafc74c05a54831a7244e3e7"
+source_discriminator_module_sha256 = "9b53ea697cbc8f9026db197849d0bf0b355b92dda0dc22e6bb58d4a4369fb984"
+source_document_sha256 = "d78aff2c2bed81807a6999203701a762e02d95439266d0b1b8ea3e5c4a2b66d0"
+checkpoint_commit_must_be_ancestor_of_HEAD = true
+tracked_source_blobs_must_match_commit_and_worktree = true
+source_compact_result_must_verify_without_raw_history = true
+raw_campaign_bundle_must_not_be_loaded = true
+
+[frozen_theorem]
+sample_count = 64
+phase_interval = [0, 1]
+top_bins = [28, 29, 30, 31, 32]
+function_space = "C_c_infinity_open_unit_interval"
+sampling_operator = "S_x(f)=(f(x_0),...,f(x_63))"
+target_operator = "T_K(f)=(integral_0^1 f(x) exp(-2*pi*i*k*x) dx) for k in K"
+target_field_power = "sum_k 2*abs(T_k(f))^2"
+target_phase_derivative_power = "sum_k 2*(2*pi*k)^2*abs(T_k(f))^2"
+theorem_question = "does finite sampled data alone place a finite upper bound on either continuum top-band power"
+actual_history_values_required = false
+replacement_admission_authorized = false
+
+[frozen_theorem.kernel_criterion]
+exact_identifiability_iff = "T annihilates ker(S)"
+equivalent_factorization = "there exists A on range(S) with T=A composed_with S"
+unboundedness_trigger = "there exists h in ker(S) with T(h) nonzero"
+unboundedness_family = "f_A=f_0+A*h"
+amplitude_is_unrestricted_without_an_external_norm_bound = true
+
+[frozen_theorem.smooth_witness]
+support_selection = "middle third of the widest adjacent-sample gap"
+bump = "nonnegative nonzero phi in C_c_infinity of the selected gap"
+witness = "h_A,k=A*phi*cos(2*pi*k*x)"
+sample_values_and_all_sample_node_derivatives_vanish = true
+target_identity = "hat(h_A,k)=A*(I_0+I_2k)/2"
+strict_bound = "abs(I_2k)<I_0"
+strictness_source = "nonconstant Fourier phase on positive-measure bump support"
+derivative_identity = "hat(dh/dx)_k=2*pi*i*k*hat(h)_k"
+every_declared_top_bin_must_receive_a_nonzero_coefficient = true
+
+[frozen_theorem.uniform_alias_control]
+sample_nodes = "x_j=j/63"
+carrier_frequency = 63
+witness = "sin(2*pi*63*x)*sin(2*pi*(63-k)*x)"
+sample_annihilation_identity = "sin(2*pi*j)=0"
+target_complex_coefficient = "1/4"
+partner_frequency = "126-k"
+partner_complex_coefficient = "-1/4"
+unit_amplitude_positive_bin_field_power = "1/8"
+all_five_declared_top_bins_required = true
+
+[frozen_theorem.quantitative_regular_bound]
+premise = "f in C1 with independently proved abs(f_prime)<=L"
+piecewise_linear_coefficient_error = "L/2*sum_j Delta_j^2"
+coarser_error = "L*h_max/2"
+bound_is_uniform_in_frequency = true
+same_coefficient_bound_feeds_both_declared_power_measures = true
+sample_values_do_not_supply_L = true
+
+[assumption_audit]
+sufficient_routes = [
+  "finite_dimensional_class_with_injective_stable_sampling",
+  "quantitative_continuum_derivative_or_Sobolev_bound",
+  "continuum_evolution_residual_plus_stability_estimate",
+]
+insufficient_premises = [
+  "finite_samples_only",
+  "smoothness_without_a_quantitative_norm_bound",
+  "agreement_of_finitely_sampled_surrogates",
+  "finite_sample_densification_without_regular_control",
+  "discrete_residual_without_a_continuum_stability_estimate",
+]
+every_sufficient_route_must_be_independent_of_the_observed_target_margin = true
+mere_additional_finite_sampling_may_not_be_promoted_to_a_continuum_bound = true
+
+[proof_contract]
+source_commit_and_all_tracked_blobs_must_match = true
+source_compact_result_must_preserve_the_mixed_TDG3_outcome = true
+no_raw_campaign_or_checkpoint_array_may_be_loaded = true
+generic_smooth_kernel_witness_must_cover_every_declared_top_bin = true
+uniform_64_node_alias_witness_must_be_exact_for_every_declared_top_bin = true
+finite_dimensional_factorization_and_nonidentifiability_controls_must_both_pass = true
+quantitative_derivative_bound_control_must_be_exact = true
+finite_densification_without_regular_control_must_remain_nonidentifying = true
+node_bin_matrix_bound_lineage_nonclaim_and_claim_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG3_actual_histories_diagnosed = true
+TDG4_sampling_identifiability_theorem_design_frozen = true
+TDG4_theorem_execution_authorized_after_freeze_commit = true
+TDG4_sampling_identifiability_theorem_completed = false
+current_temporal_spectral_rule_retired_as_continuum_admission = false
+replacement_temporal_gate_design_authorized = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG3_actual_histories_diagnosed = true
+TDG3_native_grid_outcome_is_mixed = true
+TDG4_sampling_identifiability_theorem_design_frozen = true
+TDG4_exact_no_history_controls_pass = true
+TDG4_sampling_identifiability_theorem_completed = false
+finite_samples_alone_proved_insufficient_for_continuum_top_band_bound = false
+current_temporal_spectral_rule_retired_as_continuum_admission = false
+replacement_temporal_gate_design_authorized = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

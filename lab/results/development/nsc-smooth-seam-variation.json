@@ -1,0 +1,204 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, schemas, symbolic identities and scope",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "domain": {
+    "admissible_local_variations": "common intrinsic metric and matched normal metric jets through order three, expressed with opposite outward normals",
+    "child": "rho<0, outward normal is the opposite normal",
+    "independent_interfacial_field_added": false,
+    "justification": "Z1 uses one smooth global metric and smooth compactly supported coefficient variations; a cut does not create two independently variable metrics",
+    "old_control_time_endpoints_identified_with_seam_sides": false,
+    "parent": "rho>0, outward normal is the future child normal",
+    "scope": "the local reduced action on the reference KS geometry and its smooth shared-jet gluing; not an arbitrary nonsmooth interface",
+    "seam": "one rho=0 surface of the existing smooth global metric"
+  },
+  "exact_reference_jet": {
+    "N": "1",
+    "Nd": "0",
+    "Ndd": "0",
+    "a": "sqrt(-4 + 6*pi)/2",
+    "ad": "3",
+    "add": "3*pi*sqrt(-4 + 6*pi)/4",
+    "addd": "-6 + 27*pi/2",
+    "r": "1",
+    "rd": "0",
+    "rdd": "-1 + 3*pi/2",
+    "rddd": "9*sqrt(-4 + 6*pi)/2"
+  },
+  "gate": {
+    "B1_full": "OPEN: complete physical history/source functional and endpoint embedding",
+    "B2_full": "OPEN: remaining same-action quantum/field variation must be identified and evaluated on this same domain",
+    "Z3": "OUT OF SCOPE",
+    "geometric_seam": "PASS",
+    "metric_timestep": false,
+    "new_stress_assigned": false,
+    "physical_Vc_selected": false,
+    "physical_history_selected": false,
+    "stationarity": "OPEN"
+  },
+  "input_hashes": {
+    "docs/nsc-adm-neck-source-map.md": "46dbac919b5d6566ad6819b81a3af6cde6894fd41d053c06997e094bcbe2235b",
+    "docs/nsc-common-time-bulk-split.md": "0fb7f64135f3a663e88f80dec510150e3c1416b7d1cf461e015f9e51828102bf",
+    "results/development/nsc-common-time-bulk-split.json": "3c3236e5d0e56d2d1eaed1497501e346969599bd3dce0792132e3539bcac6da7",
+    "results/development/nsc-transmitting-dirac-domain.json": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926",
+    "results/development/nsc-weyl-boundary-jets.json": "66436d286f1feb79398745ed16aa0ce129fcd02ba2445d38c7b5aa81a317ac34",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_general_ks_local_history.py": "533678f69c994dc5cac598bc54ca52922d58bdf5716371431306b82f73b7b866",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_weyl_boundary_jets.py": "7acf2bf3b58dc58115bf3cc21d01799ad88f53bdcaf4d68d625d36a7c22f39d4"
+  },
+  "legacy_diagnostic": {
+    "Weyl_value": 93.54264532195464,
+    "original_eight_coefficients": {
+      "N": [
+        -1.6709564486074024,
+        -1.7122278287564878
+      ],
+      "beta": [
+        0.0,
+        0.0
+      ],
+      "q_ADM": [
+        -43.58985597013112,
+        45.868233687373596
+      ],
+      "r": [
+        83.87051420812537,
+        -93.54264532195464
+      ]
+    },
+    "role": "unchanged discrete initial/final history gradient; not the covector on this common rho=0 surface"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "matching": {
+    "bulk_metric_residual": null,
+    "child": {
+      "Q_a": 0.056572998555586305,
+      "Q_r": -0.1090023687629711,
+      "Weyl_scalar_F": 2.0,
+      "boxR_boundary_density": 1.575157323188082,
+      "einstein_ghy": [
+        0.0,
+        6.7887598266703675
+      ],
+      "euler_boundary_density": 0.15557574602786234,
+      "normal_F_derivative": 11.560536462199705,
+      "normal_scalar_derivative": 115.60536462199704,
+      "proper_lapse": 0.0,
+      "scalar_curvature": -26.274333882308138,
+      "sigma": -1.557021169290531,
+      "weyl": [
+        -0.4150924626502039,
+        0.6300629292752328,
+        0.1090023687629711
+      ]
+    },
+    "child_variation_pullback": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "normal_vectors_PG": {
+      "child": [
+        -1.1266624714724092,
+        1.9267560770332837
+      ],
+      "parent": [
+        1.1266624714724092,
+        -1.9267560770332837
+      ]
+    },
+    "parent": {
+      "Q_a": 0.056572998555586305,
+      "Q_r": -0.1090023687629711,
+      "Weyl_scalar_F": 2.0,
+      "boxR_boundary_density": -1.575157323188082,
+      "einstein_ghy": [
+        -0.0,
+        -6.7887598266703675
+      ],
+      "euler_boundary_density": -0.15557574602786234,
+      "normal_F_derivative": -11.560536462199705,
+      "normal_scalar_derivative": -115.60536462199704,
+      "proper_lapse": 0.0,
+      "scalar_curvature": -26.274333882308138,
+      "sigma": 1.557021169290531,
+      "weyl": [
+        0.4150924626502039,
+        -0.6300629292752328,
+        0.1090023687629711
+      ]
+    },
+    "quantum_boundary_remainder": null,
+    "residuals": {
+      "boxR_boundary_sum": 0.0,
+      "einstein_ghy_common_covector": 0.0,
+      "euler_boundary_sum": 0.0,
+      "highest_jet_against_owned_density": 1.3877787807814457e-17,
+      "normal_shear_matching": 0.0,
+      "normal_tangent": 5.963664990784441e-16,
+      "normal_unit": 0.0,
+      "reference_geometry_a": 0.0,
+      "reference_geometry_normal_adot": 0.0,
+      "weyl_common_covector": 0.0
+    }
+  },
+  "quantum_account": {
+    "Gamma_rest_assigned_zero": false,
+    "Schur_factor_added_as_extra_action": false,
+    "full_Gaussian": "the already owned full CTP determinant, with its complementary bulk and initial correlations retained",
+    "quantum_or_other_boundary_variation_evaluated": false,
+    "warning_scope": "geometric seam cancellation does not remove the bulk expectation-value stress or certify self-sourcing"
+  },
+  "reference_metric_normal_jet": {
+    "N": 1.0,
+    "Nd": 0.0,
+    "Ndd": 0.0,
+    "a": 1.9267560770332839,
+    "ad": 3.0,
+    "add": 9.079624105300882,
+    "addd": 36.411500823462205,
+    "r": 1.0,
+    "rd": 0.0,
+    "rdd": 3.7123889803846897,
+    "rddd": 17.340804693299557
+  },
+  "reproducer": "python3 scripts/derive_nsc_smooth_seam_variation.py --check",
+  "schema": "NSC-SMOOTH-SEAM-VARIATION-v1",
+  "source_hashes": {
+    "docs/nsc-smooth-seam-variation.md": "5eb9f197b6a499069a7502a8b6ac5d9ac20b87b1512fcfbd2f06d4d82926c84a",
+    "scripts/derive_nsc_smooth_seam_variation.py": "f5193af0df5327f30a08c4290b75e7bf07070e4378437e8cc3226302c0803916",
+    "src/recursive_horizons/nsc_smooth_seam_variation.py": "dce729cfd3c32919e5109fe912bb6451cd910ac112795f98b8ba180d481296c3",
+    "tests/test_nsc_smooth_seam_variation.py": "469f70adbdf180ff9f53ed88377a79a1df5b347e5129cd2888060f386b95b610"
+  },
+  "status": "PASS: geometric variation cancels on the shared smooth seam; quantum/full stationarity OPEN",
+  "tolerance": 3e-11
+}

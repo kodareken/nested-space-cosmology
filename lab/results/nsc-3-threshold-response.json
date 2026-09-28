@@ -1,0 +1,73 @@
+{
+  "artifact_id": "NSC-3-THRESHOLD-RESPONSE",
+  "boundary": "u(0)=1, u(plus_or_minus R)=0; outward normals at throat are minus on parent, plus on child",
+  "classification": "positive_zero_energy_throat_DtN_jump_coexists_with_gapless_bulk_spectrum",
+  "exact": {
+    "I_child": "2/3 - exp(-t)/2 - exp(-3*t)/6",
+    "I_parent": "exp(3*t)/6 + exp(t)/2 - 2/3",
+    "N_child": "-1+1/I_child",
+    "N_parent": "1+1/I_parent",
+    "boundary_unit": "1/L_star with L_star=1",
+    "infinite_box_threshold_jump": "3/2",
+    "jump": "1/I_parent+1/I_child",
+    "t": "asinh(R)"
+  },
+  "finite_boxes": [
+    {
+      "R": 4.0,
+      "child_rho_negative_outward_plus": 0.6534311988535184,
+      "independent_ODE_maps": [
+        1.0107841674555116,
+        0.6534311988534851
+      ],
+      "jump": 1.6642153663091128,
+      "maximum_residual": 8.282263763703668e-14,
+      "parent_rho_positive_outward_minus": 1.0107841674555944
+    },
+    {
+      "R": 8.0,
+      "child_rho_negative_outward_plus": 0.5735701304591085,
+      "independent_ODE_maps": [
+        1.0014326007837764,
+        0.5735701304590719
+      ],
+      "jump": 1.5750027312429666,
+      "maximum_residual": 8.171241461241152e-14,
+      "parent_rho_positive_outward_minus": 1.001432600783858
+    },
+    {
+      "R": 16.0,
+      "child_rho_negative_outward_plus": 0.5359760354616403,
+      "independent_ODE_maps": [
+        1.0001820604120717,
+        0.5359760354616021
+      ],
+      "jump": 1.536158095873794,
+      "maximum_residual": 8.193445921733655e-14,
+      "parent_rho_positive_outward_minus": 1.0001820604121536
+    },
+    {
+      "R": 32.0,
+      "child_rho_negative_outward_plus": 0.51778363306711,
+      "independent_ODE_maps": [
+        1.0000228550490906,
+        0.5177836330670718
+      ],
+      "jump": 1.517806488116282,
+      "maximum_residual": 8.149037000748649e-14,
+      "parent_rho_positive_outward_minus": 1.000022855049172
+    }
+  ],
+  "interpretation": "the threshold boundary stiffness is nonzero even though the separately proved essential spectrum of D is R; DtN(0) is not a constant Dirac mass Phi",
+  "nonclaims": {
+    "full_warped_or_recursive_threshold_derived": false,
+    "global_spectrum_gapped": false,
+    "new_to_world_physics_established": false,
+    "physical_Phi_equals_3_over_2": false
+  },
+  "operator": "upper D\u00b2=A\u2020A=-d\u00b2+w\u00b2-w_prime, w=1/sqrt(1+rho\u00b2)",
+  "schema": "nsc-threshold-response-v1",
+  "source_sha256": "f2066aacd9a0893fd255ce1d9fd822b14ebd785aa7a836b215db29edd86e9834",
+  "terminal": true,
+  "zero_energy_caution": "m(E)=v/u may have a pole at E=0; evaluate E*m(E) by the D\u00b2 boundary problem or its limit, not substitution of m(0)"
+}

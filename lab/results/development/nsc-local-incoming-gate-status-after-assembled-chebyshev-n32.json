@@ -1,0 +1,45 @@
+{
+  "accountable_author": "Douglas Ek",
+  "assembled_condition_number": 105465718047256.38,
+  "assembled_unclipped_leftover": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "families_evolved": 60,
+  "fas_c_cause": "n32 assembled finite image; condition ~1e14; linear step unavailable; leftover equals residual and stays above 3e-11",
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-assembled-chebyshev-n32-stall.json": "22866f7aa041d928e049044f860fd245df9ced4f6dca1646027f7bbbcbe37f71",
+    "results/development/nsc-ks-deciding-bounds-after-assembled-chebyshev-n32.json": "49035da1988427f644900e30f75a7a7c0a124d948b7623c550ae206eb76a47b0",
+    "results/development/nsc-local-incoming-gate-status-after-assembled-chebyshev-gn.json": "b96240dc9895f7a592cecb1209d613ef0b00652681d8bcf54c6121aac13c6511"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "finite_wu_n32_assembled_image_cannot_reach_existence",
+  "next_named_owner": "same declared (w,U) class on I; no class rewrite",
+  "parent_profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "49223e613233a84ece27eb4efd544eb462b4343453d7dcbc8f2cf0cfec9dff68",
+  "reproducer": "python3 scripts/derive_nsc_local_incoming_gate_status_after_assembled_chebyshev_n32.py --check",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-ASSEMBLED-CHEBYSHEV-N32-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "high_mode_only_evolutions": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 60,
+    "no_class_rewrite": true,
+    "open_is_not_done": true,
+    "public_027_blocked": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-assembled-chebyshev-n32.md": "57b52f091eff38a305ad0fdbc92a9f355a90cc5952c70bfa419c51c5f810cb1e",
+    "scripts/derive_nsc_local_incoming_gate_status_after_assembled_chebyshev_n32.py": "efc61a4f341f4e392306996ded335db085d23832915f2802c0c06c5ee761415f"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: assembled Chebyshev n=32 leftover cannot reach EXISTENCE; finite image, not a class identity"
+}

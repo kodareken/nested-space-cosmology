@@ -1,0 +1,313 @@
+artifact_id = "FGC-1-TDG10-QA2-PREF1"
+classification = "independently_bound_retry4_5_ssprk3_sbp4_exact_complete_C_two_width_nonpass_terminal"
+owner_document = "docs/fgc-tdg10-qa2-pref1.md"
+schema_version = 1
+target_protocol = "FGC-2-SF1-PROTO18"
+
+[authority]
+authority_commit = "615144fe72b402835acd6dd89d28f89cbe690cce"
+blob_count = 16
+parent_commit = "a7915925a23ceaff6a491b8d08c572a70d242985"
+
+[[authority.blobs]]
+path = "Makefile"
+sha256 = "5e84d1ef3a6cf951ffad13f0b6d39b974accaaab54124e959b10d3231389ea64"
+
+[[authority.blobs]]
+path = "README.md"
+sha256 = "e5e6304f90730735ef162988721d3f26b5b74d7c316ca3caae577d65fecda80d"
+
+[[authority.blobs]]
+path = "configs/fgc/fgc-1-tdg10-qa2-frz1.toml"
+sha256 = "5d32295113d8c675774319b3313426140b0ca4902f956541182bbc40c2949323"
+
+[[authority.blobs]]
+path = "docs/claim-ledger.md"
+sha256 = "dcae54e4ef16bb9c808dfe659f28099daaeced28090624e8db2faee4cc631ae4"
+
+[[authority.blobs]]
+path = "docs/fgc-runtime-matrix.md"
+sha256 = "c890f748e0ba82033f12956e8ee1971f467cbfc74e94a70634a4cdb917600cb2"
+
+[[authority.blobs]]
+path = "docs/fgc-tdg10-qa2-frz1.md"
+sha256 = "2f703fc2e5e1fb64f775c7eb02c136663d5d25af6d2a54e9df8a015884b92daa"
+
+[[authority.blobs]]
+path = "docs/research-roadmap.md"
+sha256 = "4d76b03b2a4ff901283494d73cc4394ddc5003bc00328e085d893ac08ee0152a"
+
+[[authority.blobs]]
+path = "results/README.md"
+sha256 = "fbd974b2bb87eac6ac0330661b713898f445cde5fdc5ffd9c63fbd93494fdf36"
+
+[[authority.blobs]]
+path = "results/fgc-1-tdg10-qa2-frz1.json"
+sha256 = "a2e1e7345b4fa9b2a4810dd0385ee592e0c1dccdb11e2a626ecbb9de9215868e"
+
+[[authority.blobs]]
+path = "scripts/check_repo.py"
+sha256 = "41d461e9191e8bacb2fba66c8e39b1cdab76a7ff0cda01b206dc86df4e016136"
+
+[[authority.blobs]]
+path = "scripts/reproduce_fgc_tdg10_qa2_frz1.py"
+sha256 = "c3f768c354206f2e54a76b2fcbf5be59b2bb2780816a7b886750ae1d61af29fa"
+
+[[authority.blobs]]
+path = "scripts/run_fgc_tdg10_qa2.py"
+sha256 = "9893dbfeddeadd93f4b72a93fc21563649edda6fcf46238d6d616622168a024e"
+
+[[authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg10_qa2_authority.py"
+sha256 = "5c1344691976315f06f306f412fbf018124888745ebb1aee1a67d7b4c1f0f690"
+
+[[authority.blobs]]
+path = "tests/test_check_repo_tdg10_qa2_frz1.py"
+sha256 = "68ef3d991002028eba4cdabad94d7eb46f84eb79dcccdcdca9451ceaf426b42a"
+
+[[authority.blobs]]
+path = "tests/test_fgc_tdg10_qa2_authority.py"
+sha256 = "404ed37e0dafb8db18b944f07b5e8f24ac5a8b01f04975c64b63913f49f15d8c"
+
+[[authority.blobs]]
+path = "tests/test_fgc_tdg10_qa2_runner.py"
+sha256 = "e747434429b2d306783a0f1e2c9b0429bdd5633b158d7dfd47c4d643b1a807ab"
+
+[live_dependency_authority]
+blob_count = 10
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+sha256 = "ff60118a431aa99ea3b69bc8dfc3a38f1cde2d7bd2b7a9e9f3e7269a4d498d72"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/proto15_runtime.py"
+sha256 = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+sha256 = "4625441983d0e014bf7d8b1bfdee512e2781ccf88213e2ccae3474317b22ee7e"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/numerical_engine.py"
+sha256 = "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py"
+sha256 = "735545419a39e3fa5417c020d688cfa4b0ce4770446ae1083d0f4b41e039a5ad"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py"
+sha256 = "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic.py"
+sha256 = "2c9a0c1a9c6560ed787a605ef508ede7471953ceb222527889c5622ea6d8e82d"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg9_local_extrema.py"
+sha256 = "b97bca8c49313ad28322a1236143e03c5a7f0d3b6bcdb2940965e531a122b28a"
+
+[[live_dependency_authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent_v2.py"
+sha256 = "750c38bb6bad4b37d946f66708055f3dc0835c807244e9c25c6e87e4e87e0511"
+
+[live_working_boundary]
+allowed_additional_untracked = [".qdrant-initialized"]
+authority_commit = "615144fe72b402835acd6dd89d28f89cbe690cce"
+pre_result_path_count = 13
+pre_result_paths = [
+  "Makefile",
+  "README.md",
+  "configs/fgc/fgc-1-tdg10-qa2-pref1.toml",
+  "docs/claim-ledger.md",
+  "docs/fgc-runtime-matrix.md",
+  "docs/fgc-tdg10-qa2-pref1.md",
+  "docs/research-roadmap.md",
+  "results/README.md",
+  "scripts/check_repo.py",
+  "scripts/reproduce_fgc_tdg10_qa2_pref1.py",
+  "src/recursive_horizons/fgc/evolution/tdg10_qa2_pref1_binder.py",
+  "tests/test_check_repo_tdg10_qa2_pref1.py",
+  "tests/test_fgc_tdg10_qa2_pref1_binder.py",
+]
+staged_path_count = 0
+
+[raw]
+authority_commit = "615144fe72b402835acd6dd89d28f89cbe690cce"
+classification = "completed_one_or_more_width_all_channel_nonpass_no_state_advance"
+leaf_count = 2
+manifest_sha256 = "8638ac8caf2fb4adc0ff419e2147080e78e13e4cb3d5640f38fd841a261fd1eb"
+namespace = "runs/fgc-2-sf1/tdg10-qa2/retries4-5-ssprk3-sbp4-exact-complete-c"
+runner_id = "FGC-1-TDG10-QA2-RUN1"
+schema = "FGC-1-TDG10-QA2-raw-v1"
+terminal_sha256 = "252810f4a388ab87e382c33c7cdd7fa576be67a317752828a89c247def49867c"
+
+[store]
+leaf_count = 115
+path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+snapshot_algorithm = "TDG9-LOC1-STORE-SNAPSHOT-v1"
+snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+
+[environment]
+byteorder = "little"
+machine = "arm64"
+numpy_version = "2.5.1"
+python_implementation = "CPython"
+python_version = "3.14.3"
+system = "Darwin"
+
+[selection]
+accepted_time_hex = "0x1.78554de5a30e0p+0"
+actual_spatial_operator = "inherited_RK4_2049_SBP4"
+channel_order = [
+  "u:alpha",
+  "u:v",
+  "u:lambda",
+  "u:R",
+  "u:phi",
+  "u:chi",
+  "p:alpha",
+  "p:v",
+  "p:lambda",
+  "p:R",
+  "p:phi",
+  "p:chi",
+  "q:alpha",
+  "q:v",
+  "q:lambda",
+  "q:R",
+  "q:phi",
+  "q:chi",
+]
+classifier_owner = "classify_tdg6_channel"
+interval_owner = "exact_radius_free_complete_C_dual_rational_localizer"
+member_key = "RK4-2049"
+owned_row_count = 2044
+per_channel_maximum_candidates_D01 = 16352
+per_channel_maximum_candidates_D12 = 32704
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+point_count = 2049
+primary_refinement_depth = 160
+selected_retries = [4, 5]
+tableau_runtime_selector = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+tableau_selector = "SSPRK3"
+
+[[selection.widths]]
+attempted_width_hex = "0x1.aaa9612df8000p-12"
+checkpoint_journal_sequence = 12
+checkpoint_journal_sha256 = "d25d371b67cd227edc735479f719970b382443d9097ee718a4dd3888c0b6cca4"
+checkpoint_journal_raw_sha256 = "dd02233dd5e4cf28becbc4fe29259d0879005d806b70493aa2281255081eb219"
+checkpoint_raw_sha256 = "9abb59999809d22354d6b5f810bc592cd2673e5e4d354d0ec58e9ad53522dc4b"
+checkpoint_sha256 = "6dc263e7719c9a422e9fed1b81ac573f3127607a2285f3c55b095d9019f60187"
+d12_upper_stream_sha256 = "e59c564eafc023495932a5f2578255c90332c01b323786cd52499546d80c54f4"
+failed_channels = ["u:alpha", "u:lambda", "u:R"]
+forbidden_predecessor_generation = 11
+generation = 10
+historical_journal_sha256 = "fc68ce01980cb7a66f82de59bbd59d5e53ace08537b6b0dbfe0be1e070e6912f"
+historical_rejection_raw_sha256 = "26542403a17b05664d5a447b88860186d5f554b1f4d555624493ed40b941694c"
+historical_rejection_sequence = 13
+historical_rejection_sha256 = "1bd21553f3b6e0af613997da094a46d4dcd966a0e4346692bae62b05046862ca"
+prior_retry_count = 3
+retry = 4
+transaction_sha256 = "abab435c8222de0a86368e9562a2949578de38fe822c6032319410b49e4c6f6c"
+width_class = "one_or_more_channel_nonpass"
+
+[[selection.widths]]
+attempted_width_hex = "0x1.aaa9612df0000p-13"
+checkpoint_journal_sequence = 14
+checkpoint_journal_sha256 = "0810018134df958b8dab32bd9c0ecd7ebfc4376fbc87869a8bee7dd02eb1e199"
+checkpoint_journal_raw_sha256 = "a1882d904091591d7fa3ccf3eab04aa748161115f97c15abd57e535e6fa01f3d"
+checkpoint_raw_sha256 = "786bdcb835e043c65ddd33fad3a2af0e3d33e768dc26a9f9f00d2757b0da3ea5"
+checkpoint_sha256 = "11ec8a80d300de72075661a97b616aecead8ec78208bb541b93e62ca4c8124c8"
+d12_upper_stream_sha256 = "94add3b1a6dc90041827d915a881d124b035925698a7c7ad49eb57ed9553ed99"
+failed_channels = ["u:alpha", "u:lambda", "u:R"]
+forbidden_predecessor_generation = 12
+generation = 11
+historical_journal_sha256 = "b602d12ab00757090734ac63042f172a372154d51b41c7d286c7c0a758b62221"
+historical_rejection_raw_sha256 = "1997342415f74f330ce6b45ca6fd550ad0e5e674b85148fea5047ff82ac3f152"
+historical_rejection_sequence = 15
+historical_rejection_sha256 = "475014d918952adef032d71b81073773364a37fa795491e739aae609f77e8537"
+prior_retry_count = 4
+retry = 5
+transaction_sha256 = "69fd069034fdd3e2a80a5f3fa989b639b6659105a8ff3e8742e32e78739fd461"
+width_class = "one_or_more_channel_nonpass"
+
+[work_budget]
+SSPRK3_records_per_proposal = 4
+channel_count_per_width = 18
+fourth_width_authorized = false
+maximum_stage_and_endpoint_RHS_records = 56
+owned_row_count = 2044
+per_channel_maximum_candidates_D01 = 16352
+per_channel_maximum_candidates_D12 = 32704
+primary_refinement_depth = 160
+resource_escalation_authorized = false
+retry_count = 2
+shadow_paths = 14
+shadow_paths_per_width = 7
+shadow_proposals = 14
+shadow_proposals_per_width = 7
+
+[decision]
+any_width_nonpass_rejects_exact_remedy_on_tested_neighborhood = true
+both_widths_all_18_pass_required_for_robustness = true
+classifier_owner = "classify_tdg6_channel"
+complete_admission_is_all_of = true
+diagnostic_fine_endpoint_serialized = false
+equality_passes = true
+interval_owner = "exact_radius_free_complete_C_dual_rational_localizer"
+production_method_earned = false
+state_advance_authorized = false
+sufficient_condition = "8*U12^2 <= L01^2"
+successor_remedy_selected = false
+width_robustness_passed = false
+
+[scope]
+QA1_decision_owner_imported = false
+QA2_authority_imported = false
+QA2_runner_decision_code_imported = false
+TI2_authority_imported = false
+TI2_runner_imported = false
+campaign_store_mutation_authorized = false
+diagnostic_endpoint_serialization_authorized = false
+exact_complete_C_admission_imported = false
+exact_complete_C_runtime_imported = false
+fourteen_proposals_reconstructed = true
+lower_level_exact_arithmetic_and_dual_localizers_reused = true
+one_time_live_raw_and_store_authentication = true
+ordinary_verifier_git_blind = true
+ordinary_verifier_raw_blind = true
+ordinary_verifier_shadow_blind = true
+ordinary_verifier_store_blind = true
+production_admission_called = false
+production_commit_called = false
+raw_namespace_mutation_authorized = false
+state_serialization_called = false
+temporal_retry_admission_authorized = false
+two_width_predecessors_reconstructed = true
+
+[claims]
+FGCQR_authorized = false
+GR0_calibration_completed = false
+SGBL_authorized = false
+accepted_state = false
+both_widths_all_eighteen_channels_admitted = false
+candidate_execution_authorized = false
+common_event_completed = false
+exact_remedy_rejected_on_tested_retry_neighborhood = true
+external_publication_authorized = false
+independent_method_agreement = false
+mechanism_result_earned = false
+physical_result_earned = false
+physical_transition_claim_authorized = false
+production_SSPRK3_comparator = false
+production_method_earned = false
+retained_EFT_evolution_authorized = false
+state_advance_authorized = false
+successor_remedy_selected = false
+width_robustness_passed = false

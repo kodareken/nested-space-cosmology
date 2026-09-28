@@ -1,0 +1,108 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-MHG4-PROP1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+symbol_config = "configs/fgc/fgc-1-hyp1-symbol.toml"
+modified_harmonic_config = "configs/fgc/fgc-1-hyp1-modified-harmonic.toml"
+reference_config = "configs/fgc/fgc-1-hyp1-mhg-reference.toml"
+implicit_config = "configs/fgc/fgc-1-hyp1-mhg-implicit.toml"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+center_included = false
+
+[coordinate_radii]
+FGCQR_flat_reference_vacuum = "4"
+FGCQR_activated_generic = "9/2"
+
+[formulation]
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_equations = "REF1_full_reference_connection_modified_harmonic"
+gauge_constraint = "C^mu=-tilde_g^rho_sigma*(Gamma^mu_rho_sigma-bar_Gamma^mu_rho_sigma)"
+propagation_operator = "nabla_mu[F*hat_P_alpha^(beta_mu_nu)*nabla_beta_C^alpha]"
+operator_input = "independent_spherically_symmetric_contravariant_gauge_vector_two_jet"
+gauge_vector_order = ["C^t", "C^r"]
+gauge_jet_order = ["value", "dt", "dr", "dtt", "dtr", "drr"]
+output_order = ["nu=t", "nu=r", "nu=theta", "nu=phi"]
+noether_identity = "nabla_mu_E^mu_nu+E_phi*nabla^nu_phi+E_chi*nabla^nu_chi=0"
+off_scalar_shell_source = "E_phi*nabla^nu_phi+E_chi*nabla^nu_chi"
+riemann_commutator = "[nabla_mu,nabla_beta]V^rho=R^rho_sigma_mu_beta*V^sigma"
+expanded_operator = "nabla(F*hat_P)*nabla_C+(F/2)*hat_g*nabla_nabla_C+(F/2)*hat_g^nu_beta*Ricci_alpha_beta*C^alpha"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+direct_full_metric_residual_divergence_evaluated = false
+
+[fixtures]
+flat_background_fixture_id = "FGCQR_flat_reference_vacuum"
+activated_background_fixture_id = "FGCQR_activated_generic"
+
+[fixtures.flat_probe.t]
+value = "1/3"
+dt = "2/5"
+dr = "-3/7"
+dtt = "5/11"
+dtr = "-7/13"
+drr = "11/17"
+
+[fixtures.flat_probe.r]
+value = "-2/3"
+dt = "3/5"
+dr = "4/7"
+dtt = "-6/11"
+dtr = "8/13"
+drr = "-10/17"
+
+[fixtures.activated_probe.t]
+value = "2/7"
+dt = "-3/8"
+dr = "5/9"
+dtt = "-7/10"
+dtr = "11/12"
+drr = "-13/14"
+
+[fixtures.activated_probe.r]
+value = "-3/7"
+dt = "4/9"
+dr = "-5/11"
+dtt = "8/13"
+dtr = "-9/14"
+drr = "15/16"
+
+[proof_contract]
+require_exact_noether_sign_and_scalar_source_lock = true
+require_exact_coordinate_divergence_expanded_operator_agreement = true
+require_exact_linear_homogeneity_and_superposition = true
+require_exact_complete_spherical_coefficient_extraction = true
+require_exact_mhg1_hat_wave_principal_regression = true
+require_exact_flat_zero_gauge_operator_control = true
+require_exact_flat_nonzero_probe_control = true
+require_exact_activated_probe_direct_expanded_agreement = true
+require_nonzero_activated_gradient_F_contribution = true
+require_nonzero_activated_projector_derivative_contribution = true
+require_nonzero_activated_connection_contribution = true
+require_nonzero_activated_curvature_contribution = true
+require_nonzero_activated_first_gauge_jet_contribution = true
+require_nonzero_activated_second_gauge_jet_contribution = true
+require_reference_connection_not_an_independent_operator_source = true
+require_direct_metric_derived_divergence_nonclaim = true
+
+[open_gates]
+direct_metric_derived_full_residual_divergence_evaluated = false
+metric_derived_gauge_constraint_propagation_proven = false
+constraint_preserving_initial_boundary_value_problem_proven = false
+complete_lower_order_first_order_sources_derived = false
+reduction_constraint_propagation_proven = false
+physical_initial_constraints_solved = false
+quantified_implicit_branch_neighborhood_proven = false
+uniform_open_domain_symmetrizer_proven = false
+open_retained_eft_domain_proven = false
+boundary_or_regular_center_system_derived = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

@@ -1,0 +1,96 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO11"
+protocol_version = 11
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO10"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v10.toml"
+predecessor_protocol_sha256 = "f06ea93e82a4cdda2a0474623bc0db9ac679e4044657afb32be0d5342fe437fa"
+diagnosis_artifact_id = "FGC-1-CAL7-PREF9"
+diagnosis_config = "configs/fgc/fgc-1-cal7-pref9.toml"
+diagnosis_config_sha256 = "f7d20efe795a0dd33264ef9cca4ae7977461fa5750eea2a01098b42a0b7c4544"
+diagnosis_result = "results/fgc-1-cal7-pref9.json"
+diagnosis_result_sha256 = "aab4ea62d569e224bf0bff0f7c3368b2d8dd07007735c1d1993ea3f9ef5b5d2a"
+diagnosis_checkpoint_commit = "3e34c5e1b0f4193b1178f09725be6e72e462c119"
+revision_classification = "premise_only_post_calibration_well_balanced_reference_map_revision"
+revision_reasons = ["PROTO10_completed_without_an_eligible_GR0_case", "both_amplitudes_stopped_before_the_first_evolved_common_event", "both_stops_were_source_only_on_the_same_RK4_8193_member", "CAL7_localized_the_initial_floor_to_the_first_positive_alpha_row", "the_raw_floor_scaled_as_binary64_epsilon_over_r_squared", "the_floor_was_identical_across_matter_amplitudes", "the_well_balanced_t0_control_passed_the_unchanged_raw_source_gate_on_all_twelve_inputs", "the_control_is_numerical_premise_evidence_only"]
+revision_changes = ["semidiscrete_reference_state_differentiation_map", "versioned_manifest_and_output_namespace"]
+all_unlisted_PROTO10_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_initial_data_and_resolution_ladder_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+source_solver_raw_residual_kinetic_transaction_and_retry_rules_unchanged = true
+methods_CFL_dissipation_and_final_time_unchanged = true
+constraint_magnitude_order_and_spectral_rules_unchanged = true
+direct_one_quarter_ratio_ceiling_and_coarse_veto_unchanged = true
+trapped_boundary_candidate_health_and_scale_stops_unchanged = true
+eligible_calibration_amplitudes_in_frozen_order = ["5/2", "3"]
+PROTO1_through_PROTO10_preserved = true
+PROTO10_GR0_calibration_trajectory_inspected_before_revision = true
+PROTO10_candidate_or_holdout_outcome_observed_before_revision = false
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+mechanism_question_answered_before_revision = false
+
+[replacement.reference_state_differentiation]
+field_order = ["alpha", "shift", "lambda", "R", "phi", "chi"]
+reference_u = ["1", "0", "1", "r", "0", "0"]
+reference_q = ["0", "0", "0", "1", "0", "0"]
+reference_state = "exact_Minkowski_spherical_ADM"
+reference_is_fixed_and_has_no_fitted_or_evolved_parameters = true
+initial_q_rule = "D_h(u-u_ref)+q_ref"
+source_q_r_rule = "D_h(q-q_ref)"
+reduction_constraint_rule = "q-(D_h(u-u_ref)+q_ref)"
+common_event_constraints_use_the_same_rules = true
+p_r_rule_is_unchanged = "D_h(p)"
+du_dt_rule_is_unchanged = "p"
+dq_dt_rule_is_unchanged = "D_h(p)"
+q_remains_an_independent_evolved_field = true
+interior_q_is_not_reprojected_after_initialization_or_Runge_Kutta_stages = true
+reference_subtraction_is_not_added_to_the_continuum_equations = true
+reference_subtraction_is_not_damping_or_constraint_cleaning = true
+physical_u_p_and_observables_are_not_reference_subtracted = true
+raw_source_residual_is_computed_from_the_complete_unredefined_equations = true
+raw_source_residual_maximum = "1/1000000000000"
+no_epsilon_floor_or_new_numeric_tolerance_is_permitted = true
+exact_Minkowski_must_be_bitwise_preserved_on_every_frozen_grid = true
+nontrivial_generic_REF1_and_reduction_defects_must_remain_visible = true
+all_rebuilt_projected_state_hashes_must_be_serialized = true
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro11-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto11/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto11/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+PROTO10_outputs_are_immutable_diagnostic_history_and_forbidden_as_PROTO11_outcomes = true
+
+[inheritance]
+PROTO10_resolution_ladder_inherited_unchanged = true
+PROTO10_guarded_spectral_interpretation_inherited_unchanged = true
+PROTO10_constraint_magnitude_and_order_rules_inherited_unchanged = true
+PROTO10_physical_numerical_transaction_and_stop_rules_inherited_unchanged = true
+HLT8_raw_inputs_and_admissions_remain_diagnostic_history_only = true
+CAL7_is_numerical_premise_evidence_not_calibration_or_mechanism_evidence = true
+fresh_states_must_be_rebuilt_under_the_PROTO11_map = true
+fresh_evolved_states_must_reassess_every_source_constraint_spectral_and_health_gate = true
+successor_runtime_owner = "FGC-1-HLT9-MON9"
+
+[claims]
+PROTO11_successor_runtime_implemented = false
+PROTO11_fresh_GR0_dynamic_calibration_authorized = false
+PROTO11_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

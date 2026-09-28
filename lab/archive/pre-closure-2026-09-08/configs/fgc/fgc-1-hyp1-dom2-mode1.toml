@@ -1,0 +1,57 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-DOM2-MODE1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+first_order_config = "configs/fgc/fgc-1-hyp1-fo1-rc1.toml"
+first_order_result = "results/fgc-1-hyp1-fo1-rc1.json"
+quantified_domain_config = "configs/fgc/fgc-1-hyp1-dom1-qift1.toml"
+quantified_domain_result = "results/fgc-1-hyp1-dom1-qift1.json"
+compatible_data_config = "configs/fgc/fgc-1-hyp1-con1-comp1.toml"
+compatible_data_result = "results/fgc-1-hyp1-con1-comp1.json"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+center_included = false
+
+[controls]
+flat_fixture_id = "FGCQR_flat_reference_vacuum"
+activated_fixture_id = "FGCQR_activated_generic"
+activated_solution_status = "off_shell_control_not_a_solution"
+comp1_fixture_id = "FGCQR_qift1_activated_local_parameter"
+
+[formulation]
+principal_relation = "direct_REF1_branch_principal_equals_MHG1_standard_first_order_principal"
+derivative_state_order = ["dt_h_tt", "dt_h_tr", "dt_h_rr", "dt_areal_radius", "dt_phi", "dt_chi", "dr_h_tt", "dr_h_tr", "dr_h_rr", "dr_areal_radius", "dr_phi", "dr_chi"]
+auxiliary_mode_basis_method = "exact_rref_nullspace_at_exact_auxiliary_polynomial_roots"
+reference_principal_identity = "universal_formal_REF1_connection_variation_equals_MHG_projector_principal_identity"
+physical_mode_basis_method = "exact_rr_schur_physical_and_regulator_quadratic_unit_pivot_charts_at_COMP1_root"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+
+[proof_contract]
+require_exact_ref1_mhg1_branch_equality_on_all_controls = true
+require_exact_rref_auxiliary_bases_on_all_controls = true
+require_exact_auxiliary_basis_residuals_zero = true
+require_polynomial_tilde_identity_when_core_exposes_it = true
+require_comp1_hat_quotient_atlas_identity_when_core_exposes_it = true
+require_zero_speed_lift_when_core_exposes_it = true
+require_exact_comp1_acceleration_root_and_zero_ref1_residual = true
+require_universal_formal_ref1_principal_identity = true
+require_comp1_physical_metric_and_regulator_mode_charts = true
+require_no_floating_point_or_sampled_proof = true
+
+[open_gates]
+uniform_open_domain_symmetrizer_proven = false
+uniform_radial_strong_hyperbolicity_box_proven = false
+metric_derived_gauge_constraint_propagation_proven = false
+complete_reduction_constraint_system_propagation_proven = false
+physical_initial_constraints_solved = false
+constraint_preserving_initial_boundary_value_problem_proven = false
+retained_eft_cutoff_and_omitted_operator_envelope_defined = false
+open_retained_eft_domain_proven = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

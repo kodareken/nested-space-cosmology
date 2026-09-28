@@ -1,0 +1,539 @@
+{
+  "artifact_id": "FGC-1-TDG4-FRZ1",
+  "artifact_payload": {
+    "assumption_audit": {
+      "every_sufficient_route_must_be_independent_of_the_observed_target_margin": true,
+      "insufficient_premises": [
+        "finite_samples_only",
+        "smoothness_without_a_quantitative_norm_bound",
+        "agreement_of_finitely_sampled_surrogates",
+        "finite_sample_densification_without_regular_control",
+        "discrete_residual_without_a_continuum_stability_estimate"
+      ],
+      "mere_additional_finite_sampling_may_not_be_promoted_to_a_continuum_bound": true,
+      "sufficient_routes": [
+        "finite_dimensional_class_with_injective_stable_sampling",
+        "quantitative_continuum_derivative_or_Sobolev_bound",
+        "continuum_evolution_residual_plus_stability_estimate"
+      ]
+    },
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "actual_terminal_history_arrays_consumed": false,
+      "campaign_checkpoint_loaded": false,
+      "candidate_branch_opened": false,
+      "current_temporal_spectral_rule_retired": false,
+      "finite_samples_alone_proved_insufficient": false,
+      "new_trajectory_authorized": false,
+      "physical_question_answered": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": false,
+      "sampling_identifiability_theorem_completed": false,
+      "state_advanced": false
+    },
+    "exact_no_history_preflight": {
+      "PROTO14_frozen": false,
+      "actual_terminal_histories_consumed": false,
+      "all_exact_controls_pass": true,
+      "campaign_checkpoint_loaded": false,
+      "exact_uniform_alias_witnesses": {
+        "28": {
+          "all_sample_values_are_exactly_zero": true,
+          "carrier_frequency": 63,
+          "negative_partner_complex_coefficient": "-1/4",
+          "negative_target_complex_coefficient": "1/4",
+          "partner_bin": 98,
+          "partner_complex_coefficient": "-1/4",
+          "same_sample_vector_for_every_amplitude": true,
+          "sample_annihilation_identity": "sin(2*pi*j)=0",
+          "sample_count": 64,
+          "sample_node_formula": "x_j=j/(N-1), j=0,...,N-1",
+          "target_bin": 28,
+          "target_coefficient_squared": "1/16",
+          "target_complex_coefficient": "1/4",
+          "target_power_unbounded_under_amplitude_scaling": true,
+          "unit_amplitude_positive_bin_derivative_power": "(2*pi*28)^2/8",
+          "unit_amplitude_positive_bin_field_power": "1/8",
+          "witness": "sin(2*pi*(N-1)*x)*sin(2*pi*((N-1)-k)*x)"
+        },
+        "29": {
+          "all_sample_values_are_exactly_zero": true,
+          "carrier_frequency": 63,
+          "negative_partner_complex_coefficient": "-1/4",
+          "negative_target_complex_coefficient": "1/4",
+          "partner_bin": 97,
+          "partner_complex_coefficient": "-1/4",
+          "same_sample_vector_for_every_amplitude": true,
+          "sample_annihilation_identity": "sin(2*pi*j)=0",
+          "sample_count": 64,
+          "sample_node_formula": "x_j=j/(N-1), j=0,...,N-1",
+          "target_bin": 29,
+          "target_coefficient_squared": "1/16",
+          "target_complex_coefficient": "1/4",
+          "target_power_unbounded_under_amplitude_scaling": true,
+          "unit_amplitude_positive_bin_derivative_power": "(2*pi*29)^2/8",
+          "unit_amplitude_positive_bin_field_power": "1/8",
+          "witness": "sin(2*pi*(N-1)*x)*sin(2*pi*((N-1)-k)*x)"
+        },
+        "30": {
+          "all_sample_values_are_exactly_zero": true,
+          "carrier_frequency": 63,
+          "negative_partner_complex_coefficient": "-1/4",
+          "negative_target_complex_coefficient": "1/4",
+          "partner_bin": 96,
+          "partner_complex_coefficient": "-1/4",
+          "same_sample_vector_for_every_amplitude": true,
+          "sample_annihilation_identity": "sin(2*pi*j)=0",
+          "sample_count": 64,
+          "sample_node_formula": "x_j=j/(N-1), j=0,...,N-1",
+          "target_bin": 30,
+          "target_coefficient_squared": "1/16",
+          "target_complex_coefficient": "1/4",
+          "target_power_unbounded_under_amplitude_scaling": true,
+          "unit_amplitude_positive_bin_derivative_power": "(2*pi*30)^2/8",
+          "unit_amplitude_positive_bin_field_power": "1/8",
+          "witness": "sin(2*pi*(N-1)*x)*sin(2*pi*((N-1)-k)*x)"
+        },
+        "31": {
+          "all_sample_values_are_exactly_zero": true,
+          "carrier_frequency": 63,
+          "negative_partner_complex_coefficient": "-1/4",
+          "negative_target_complex_coefficient": "1/4",
+          "partner_bin": 95,
+          "partner_complex_coefficient": "-1/4",
+          "same_sample_vector_for_every_amplitude": true,
+          "sample_annihilation_identity": "sin(2*pi*j)=0",
+          "sample_count": 64,
+          "sample_node_formula": "x_j=j/(N-1), j=0,...,N-1",
+          "target_bin": 31,
+          "target_coefficient_squared": "1/16",
+          "target_complex_coefficient": "1/4",
+          "target_power_unbounded_under_amplitude_scaling": true,
+          "unit_amplitude_positive_bin_derivative_power": "(2*pi*31)^2/8",
+          "unit_amplitude_positive_bin_field_power": "1/8",
+          "witness": "sin(2*pi*(N-1)*x)*sin(2*pi*((N-1)-k)*x)"
+        },
+        "32": {
+          "all_sample_values_are_exactly_zero": true,
+          "carrier_frequency": 63,
+          "negative_partner_complex_coefficient": "-1/4",
+          "negative_target_complex_coefficient": "1/4",
+          "partner_bin": 94,
+          "partner_complex_coefficient": "-1/4",
+          "same_sample_vector_for_every_amplitude": true,
+          "sample_annihilation_identity": "sin(2*pi*j)=0",
+          "sample_count": 64,
+          "sample_node_formula": "x_j=j/(N-1), j=0,...,N-1",
+          "target_bin": 32,
+          "target_coefficient_squared": "1/16",
+          "target_complex_coefficient": "1/4",
+          "target_power_unbounded_under_amplitude_scaling": true,
+          "unit_amplitude_positive_bin_derivative_power": "(2*pi*32)^2/8",
+          "unit_amplitude_positive_bin_field_power": "1/8",
+          "witness": "sin(2*pi*(N-1)*x)*sin(2*pi*((N-1)-k)*x)"
+        }
+      },
+      "finite_dimensional_controls": {
+        "factorable_noninjective": {
+          "domain_dimension": 3,
+          "quantitative_stability_constant_still_required_for_noisy_data": true,
+          "sample_map_is_injective": false,
+          "sample_plus_target_rank": 2,
+          "sample_rank": 2,
+          "sample_row_count": 2,
+          "target_annihilates_sampling_kernel": true,
+          "target_factors_through_samples": true,
+          "target_row_count": 1,
+          "unrestricted_sample_fibre_target_is_unbounded": false
+        },
+        "injective": {
+          "domain_dimension": 2,
+          "quantitative_stability_constant_still_required_for_noisy_data": true,
+          "sample_map_is_injective": true,
+          "sample_plus_target_rank": 2,
+          "sample_rank": 2,
+          "sample_row_count": 2,
+          "target_annihilates_sampling_kernel": true,
+          "target_factors_through_samples": true,
+          "target_row_count": 1,
+          "unrestricted_sample_fibre_target_is_unbounded": false
+        },
+        "nonidentifiable": {
+          "domain_dimension": 3,
+          "quantitative_stability_constant_still_required_for_noisy_data": true,
+          "sample_map_is_injective": false,
+          "sample_plus_target_rank": 3,
+          "sample_rank": 2,
+          "sample_row_count": 2,
+          "target_annihilates_sampling_kernel": false,
+          "target_factors_through_samples": false,
+          "target_row_count": 1,
+          "unrestricted_sample_fibre_target_is_unbounded": true
+        }
+      },
+      "function_space": "C_c_infinity_open_unit_interval",
+      "generic_smooth_kernel_witnesses": {
+        "28": {
+          "all_derivatives_at_sample_nodes_are_zero": true,
+          "all_sample_neighborhoods_are_zero": true,
+          "all_sample_values_are_exactly_zero": true,
+          "bump_contract": "phi is nonnegative, nonzero, smooth, and compactly supported inside the declared open interval",
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_top_band_power_scales_as_amplitude_squared": true,
+          "field_top_band_power_scales_as_amplitude_squared": true,
+          "finite_densification_alone_remains_nonidentifying": true,
+          "function_space": "C_c_infinity_open_unit_interval",
+          "sample_count": 64,
+          "sample_fibre_target_power_is_unbounded": true,
+          "sample_gap": [
+            "0",
+            "1/63"
+          ],
+          "sample_gap_index": 0,
+          "sample_gap_width": "1/63",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "strictness_reason": "the Fourier phase is nonconstant on positive-measure bump support",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 28,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_nonzero_amplitude": true,
+          "witness_family": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)"
+        },
+        "29": {
+          "all_derivatives_at_sample_nodes_are_zero": true,
+          "all_sample_neighborhoods_are_zero": true,
+          "all_sample_values_are_exactly_zero": true,
+          "bump_contract": "phi is nonnegative, nonzero, smooth, and compactly supported inside the declared open interval",
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_top_band_power_scales_as_amplitude_squared": true,
+          "field_top_band_power_scales_as_amplitude_squared": true,
+          "finite_densification_alone_remains_nonidentifying": true,
+          "function_space": "C_c_infinity_open_unit_interval",
+          "sample_count": 64,
+          "sample_fibre_target_power_is_unbounded": true,
+          "sample_gap": [
+            "0",
+            "1/63"
+          ],
+          "sample_gap_index": 0,
+          "sample_gap_width": "1/63",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "strictness_reason": "the Fourier phase is nonconstant on positive-measure bump support",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 29,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_nonzero_amplitude": true,
+          "witness_family": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)"
+        },
+        "30": {
+          "all_derivatives_at_sample_nodes_are_zero": true,
+          "all_sample_neighborhoods_are_zero": true,
+          "all_sample_values_are_exactly_zero": true,
+          "bump_contract": "phi is nonnegative, nonzero, smooth, and compactly supported inside the declared open interval",
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_top_band_power_scales_as_amplitude_squared": true,
+          "field_top_band_power_scales_as_amplitude_squared": true,
+          "finite_densification_alone_remains_nonidentifying": true,
+          "function_space": "C_c_infinity_open_unit_interval",
+          "sample_count": 64,
+          "sample_fibre_target_power_is_unbounded": true,
+          "sample_gap": [
+            "0",
+            "1/63"
+          ],
+          "sample_gap_index": 0,
+          "sample_gap_width": "1/63",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "strictness_reason": "the Fourier phase is nonconstant on positive-measure bump support",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 30,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_nonzero_amplitude": true,
+          "witness_family": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)"
+        },
+        "31": {
+          "all_derivatives_at_sample_nodes_are_zero": true,
+          "all_sample_neighborhoods_are_zero": true,
+          "all_sample_values_are_exactly_zero": true,
+          "bump_contract": "phi is nonnegative, nonzero, smooth, and compactly supported inside the declared open interval",
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_top_band_power_scales_as_amplitude_squared": true,
+          "field_top_band_power_scales_as_amplitude_squared": true,
+          "finite_densification_alone_remains_nonidentifying": true,
+          "function_space": "C_c_infinity_open_unit_interval",
+          "sample_count": 64,
+          "sample_fibre_target_power_is_unbounded": true,
+          "sample_gap": [
+            "0",
+            "1/63"
+          ],
+          "sample_gap_index": 0,
+          "sample_gap_width": "1/63",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "strictness_reason": "the Fourier phase is nonconstant on positive-measure bump support",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 31,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_nonzero_amplitude": true,
+          "witness_family": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)"
+        },
+        "32": {
+          "all_derivatives_at_sample_nodes_are_zero": true,
+          "all_sample_neighborhoods_are_zero": true,
+          "all_sample_values_are_exactly_zero": true,
+          "bump_contract": "phi is nonnegative, nonzero, smooth, and compactly supported inside the declared open interval",
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_top_band_power_scales_as_amplitude_squared": true,
+          "field_top_band_power_scales_as_amplitude_squared": true,
+          "finite_densification_alone_remains_nonidentifying": true,
+          "function_space": "C_c_infinity_open_unit_interval",
+          "sample_count": 64,
+          "sample_fibre_target_power_is_unbounded": true,
+          "sample_gap": [
+            "0",
+            "1/63"
+          ],
+          "sample_gap_index": 0,
+          "sample_gap_width": "1/63",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "strictness_reason": "the Fourier phase is nonconstant on positive-measure bump support",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 32,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_nonzero_amplitude": true,
+          "witness_family": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)"
+        }
+      },
+      "insufficient_premises": [
+        "finite_samples_only",
+        "smoothness_without_a_quantitative_norm_bound",
+        "agreement_of_finitely_sampled_surrogates",
+        "finite_sample_densification_without_regular_control",
+        "discrete_residual_without_a_continuum_stability_estimate"
+      ],
+      "quantitative_regular_bound_control": {
+        "bound_is_frequency_uniform": true,
+        "coarser_max_gap_bound": "2",
+        "coefficient_error_bound": "5/3",
+        "derivative_bound": "6",
+        "derivative_bound_is_an_external_quantitative_premise": true,
+        "maximum_gap": "2/3",
+        "same_coefficient_bound_feeds_field_and_phase_derivative_power": true,
+        "sample_count": 3,
+        "samples_alone_do_not_supply_the_derivative_bound": true,
+        "sum_gap_squares": "5/9"
+      },
+      "replacement_temporal_admission_defined": false,
+      "sample_count": 64,
+      "state_advanced": false,
+      "sufficient_assumption_routes": [
+        "finite_dimensional_class_with_injective_stable_sampling",
+        "quantitative_continuum_derivative_or_Sobolev_bound",
+        "continuum_evolution_residual_plus_stability_estimate"
+      ],
+      "top_bins": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    "frozen_theorem": {
+      "actual_history_values_required": false,
+      "function_space": "C_c_infinity_open_unit_interval",
+      "kernel_criterion": {
+        "amplitude_is_unrestricted_without_an_external_norm_bound": true,
+        "equivalent_factorization": "there exists A on range(S) with T=A composed_with S",
+        "exact_identifiability_iff": "T annihilates ker(S)",
+        "unboundedness_family": "f_A=f_0+A*h",
+        "unboundedness_trigger": "there exists h in ker(S) with T(h) nonzero"
+      },
+      "phase_interval": [
+        0,
+        1
+      ],
+      "quantitative_regular_bound": {
+        "bound_is_uniform_in_frequency": true,
+        "coarser_error": "L*h_max/2",
+        "piecewise_linear_coefficient_error": "L/2*sum_j Delta_j^2",
+        "premise": "f in C1 with independently proved abs(f_prime)<=L",
+        "same_coefficient_bound_feeds_both_declared_power_measures": true,
+        "sample_values_do_not_supply_L": true
+      },
+      "replacement_admission_authorized": false,
+      "sample_count": 64,
+      "sampling_operator": "S_x(f)=(f(x_0),...,f(x_63))",
+      "smooth_witness": {
+        "bump": "nonnegative nonzero phi in C_c_infinity of the selected gap",
+        "derivative_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+        "every_declared_top_bin_must_receive_a_nonzero_coefficient": true,
+        "sample_values_and_all_sample_node_derivatives_vanish": true,
+        "strict_bound": "abs(I_2k)<I_0",
+        "strictness_source": "nonconstant Fourier phase on positive-measure bump support",
+        "support_selection": "middle third of the widest adjacent-sample gap",
+        "target_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+        "witness": "h_A,k=A*phi*cos(2*pi*k*x)"
+      },
+      "target_field_power": "sum_k 2*abs(T_k(f))^2",
+      "target_operator": "T_K(f)=(integral_0^1 f(x) exp(-2*pi*i*k*x) dx) for k in K",
+      "target_phase_derivative_power": "sum_k 2*(2*pi*k)^2*abs(T_k(f))^2",
+      "theorem_question": "does finite sampled data alone place a finite upper bound on either continuum top-band power",
+      "top_bins": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "uniform_alias_control": {
+        "all_five_declared_top_bins_required": true,
+        "carrier_frequency": 63,
+        "partner_complex_coefficient": "-1/4",
+        "partner_frequency": "126-k",
+        "sample_annihilation_identity": "sin(2*pi*j)=0",
+        "sample_nodes": "x_j=j/63",
+        "target_complex_coefficient": "1/4",
+        "unit_amplitude_positive_bin_field_power": "1/8",
+        "witness": "sin(2*pi*63*x)*sin(2*pi*(63-k)*x)"
+      }
+    },
+    "immutable_lineage": {
+      "actual_terminal_history_arrays_consumed": false,
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "checkpoint_commit": "63f5278d82497380eba57a32331472541b22f5a6",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "source_compact_result_read": true,
+      "source_compact_result_verified": true,
+      "state_advanced": false,
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-tdg3-pref18.toml": "c84c8ee99633effb7bb72a5d9602142c8e8c542edfc87f11eb27064050500f78",
+        "docs/fgc-tdg3-pref18.md": "d78aff2c2bed81807a6999203701a762e02d95439266d0b1b8ea3e5c4a2b66d0",
+        "results/fgc-1-tdg3-pref18.json": "1e12db5903001aeba31338a1d10df4ed96ebab4771509c07d25fd4524ce4f181",
+        "scripts/reproduce_fgc_tdg3_pref18.py": "57342031fef9d7acd91676310ab553c407385da1cafc74c05a54831a7244e3e7",
+        "src/recursive_horizons/fgc/evolution/tdg3_native_tail_diagnosis.py": "9b53ea697cbc8f9026db197849d0bf0b355b92dda0dc22e6bb58d4a4369fb984"
+      }
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "exact_preflight_complete": true,
+      "folded_node_mutation_rejected": true,
+      "function_space_mutation_rejected": true,
+      "invalid_target_bin_rejected": true,
+      "invalid_uniform_alias_rejected": true,
+      "matrix_domain_mutation_rejected": true,
+      "negative_regular_bound_rejected": true,
+      "raw_history_scope_promotion_rejected": true,
+      "replacement_design_promotion_rejected": true,
+      "sample_count_mutation_rejected": true,
+      "source_hash_mutation_rejected": true,
+      "sufficient_route_removal_rejected": true,
+      "theorem_completion_promotion_rejected": true,
+      "top_bin_mutation_rejected": true
+    },
+    "proof_contract": {
+      "canonical_hash_bound_result_required": true,
+      "finite_densification_without_regular_control_must_remain_nonidentifying": true,
+      "finite_dimensional_factorization_and_nonidentifiability_controls_must_both_pass": true,
+      "generic_smooth_kernel_witness_must_cover_every_declared_top_bin": true,
+      "no_raw_campaign_or_checkpoint_array_may_be_loaded": true,
+      "node_bin_matrix_bound_lineage_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "quantitative_derivative_bound_control_must_be_exact": true,
+      "source_commit_and_all_tracked_blobs_must_match": true,
+      "source_compact_result_must_preserve_the_mixed_TDG3_outcome": true,
+      "uniform_64_node_alias_witness_must_be_exact_for_every_declared_top_bin": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG3_actual_histories_diagnosed": true,
+      "TDG4_sampling_identifiability_theorem_completed": false,
+      "TDG4_sampling_identifiability_theorem_design_frozen": true,
+      "TDG4_theorem_execution_authorized_after_freeze_commit": true,
+      "current_temporal_spectral_rule_retired_as_continuum_admission": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": false
+    }
+  },
+  "classification": "prospective_TDG4_sampling_identifiability_theorem_freeze",
+  "derivation_document": "docs/fgc-tdg4-frz1.md",
+  "derivation_document_sha256": "b1d6fa73cd6b5bdfd0b35faa726223dd0e0d6b041ce98fa5f1af4ffd3d50b15c",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG3_actual_histories_diagnosed": true,
+    "TDG3_native_grid_outcome_is_mixed": true,
+    "TDG4_exact_no_history_controls_pass": true,
+    "TDG4_sampling_identifiability_theorem_completed": false,
+    "TDG4_sampling_identifiability_theorem_design_frozen": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "current_temporal_spectral_rule_retired_as_continuum_admission": false,
+    "dark_sector_mechanism_derived": false,
+    "finite_samples_alone_proved_insufficient_for_continuum_top_band_bound": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "replacement_temporal_gate_design_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg4_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg4_frz1.py": "65582bd00988e551ba0b42f716de01b272b3ac20de067b8b395e594ab3ca1cde",
+    "src/recursive_horizons/fgc/evolution/tdg4_sampling_identifiability.py": "31d816df99682114c8dfebff545743bc9624bccad54aff105b094f635f7f0b8d"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG4_sampling_identifiability_theorem_completed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "current_temporal_spectral_rule_retired_as_continuum_admission": false,
+    "dark_sector_mechanism_derived": false,
+    "finite_samples_alone_proved_insufficient_for_continuum_top_band_bound": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "replacement_temporal_gate_design_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg4-frz1.toml": "b9990512f7cf70b00b05df587454c513c66651a7a740bb900c4e6b587d456cf5"
+  }
+}

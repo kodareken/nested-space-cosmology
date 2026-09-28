@@ -1,0 +1,166 @@
+{
+  "accountable_author": "Douglas Ek",
+  "control": {
+    "local_interval": "S(1)+[.12,.18]",
+    "method": "Blanes-Moan equation43 on the same augmented field/tangent/source matrix",
+    "points": 7601,
+    "profile": "same alpha=.001 w=T1*plateau,U=0 as midpoint control",
+    "source_family": "14_1",
+    "steps_max": [
+      60,
+      120,
+      240
+    ],
+    "time_interval": [
+      0.0,
+      0.18
+    ]
+  },
+  "input_hashes": {
+    "docs/nsc-local-prepared-response.md": "3f68d0d4df92e193bb8292d3af6796e82b88c001bd1c5fc2b998587df6ea081c",
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-local-prepared-response.json": "aef3e49b96c17aef271b14315f061c21cb0749c693fa9cb960c5e17c52c8be19",
+    "results/development/nsc-local-reference-accuracy.json": "dfa96689f269bc950c76c92aa3e5f4e9c95ac6009068d0f82606eff6f07f0eec",
+    "scripts/derive_nsc_evolved_incoming_constraints.py": "ce53587f3077cf4a8de7f8042a5e532319fac9635757b8a48205683e34b4710c",
+    "scripts/derive_nsc_local_prepared_response.py": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "measurements": {
+    "indicator_target": 1e-11,
+    "last_time_indicator_passed": false,
+    "per_case": {
+      "cf4_120": {
+        "flux_residual": 8.881784197001252e-16,
+        "local_matter_correction_max": [
+          2.381101041892819e-06,
+          1.4861042938844882e-06
+        ],
+        "phase_residual": 1.0662919489796583e-14,
+        "sampled_local_constraint_approximant_max": [
+          0.70776079914065,
+          0.21914690231300743
+        ]
+      },
+      "cf4_240": {
+        "flux_residual": 8.881784197001252e-16,
+        "local_matter_correction_max": [
+          2.381253390693061e-06,
+          1.4862188384354158e-06
+        ],
+        "phase_residual": 1.0551947463945453e-14,
+        "sampled_local_constraint_approximant_max": [
+          0.7077607999186211,
+          0.21914690326487016
+        ]
+      },
+      "cf4_60": {
+        "flux_residual": 8.881784197001252e-16,
+        "local_matter_correction_max": [
+          2.3882646349449033e-06,
+          1.4922076242412236e-06
+        ],
+        "phase_residual": 1.077431262698134e-14,
+        "sampled_local_constraint_approximant_max": [
+          0.7077607535242576,
+          0.2191469082417176
+        ]
+      }
+    },
+    "same_fixed_preparation": true,
+    "time_comparisons": [
+      {
+        "local_matter_change": [
+          5.095302424429349e-08,
+          4.3009397309237696e-08
+        ],
+        "local_tangent_change": [
+          5.0953915193433365e-05,
+          4.301004547098094e-05
+        ],
+        "passes_indicator": false,
+        "steps": [
+          60,
+          120
+        ]
+      },
+      {
+        "local_matter_change": [
+          2.2579913494524817e-09,
+          1.905289660417142e-09
+        ],
+        "local_tangent_change": [
+          2.261518939376426e-06,
+          1.908191955862998e-06
+        ],
+        "passes_indicator": false,
+        "steps": [
+          120,
+          240
+        ]
+      }
+    ]
+  },
+  "payload": {
+    "bytes": 667890,
+    "path": "results/development/artifacts/nsc-local-cf4-response.npz",
+    "sha256": "08c5f5c8b1236e50d0ee10e6f52bde4af001696acd56fc53a00556d4c09965c5"
+  },
+  "reproducer": "python3 scripts/derive_nsc_local_cf4_response.py --check",
+  "reused_artifacts": [
+    {
+      "bytes": 3365007,
+      "path": "results/development/artifacts/nsc-local-reference-accuracy.npz",
+      "sha256": "e2a73c45f594cdf9a5b0d6664be91ea73f2f8620bcf67ac84731d2e0d51b94f5"
+    },
+    {
+      "bytes": 391002,
+      "path": "results/development/artifacts/nsc-local-prepared-response.npz",
+      "sha256": "37fc842c9b49691ad9dbcb910ef2d7aa6d4b2fb5e20119ac7be3596d77bba603"
+    }
+  ],
+  "runtime": {
+    "CPU_cap": 360.0,
+    "CPU_seconds": 240.31239,
+    "attempted": [
+      60,
+      120,
+      240
+    ],
+    "cap_reached": false,
+    "completed": [
+      60,
+      120,
+      240
+    ],
+    "wall_seconds": 240.6629716669995
+  },
+  "schema": "NSC-LOCAL-CF4-RESPONSE-v1",
+  "scope": {
+    "between_node_error": null,
+    "continuum_field_error": null,
+    "frozen_C0_imposed": false,
+    "full_source_error": null,
+    "metric_timestep": false,
+    "new_spatial_sampling": false,
+    "physical_local_gate": "OPEN",
+    "source_changed": false,
+    "stress_drift_subtracted": false,
+    "time_difference_is_error_bound": false
+  },
+  "source_hashes": {
+    "docs/nsc-local-cf4-response.md": "15241a1a44122a2e8339e44d956b85f9db369b720b8f235c2ec50f4e199f7c71",
+    "scripts/derive_nsc_local_cf4_response.py": "28d2e2bea8420cafdf399c978cda619db0fefaa65788d1ffd44bb617a8e58637",
+    "src/recursive_horizons/nsc_cf4_prepared_state.py": "7de977a1ce5a4ea0728a633abd4187ea035e51028cf34afc7c24e3d4d12ed6fd",
+    "tests/test_nsc_cf4_prepared_state.py": "87e4169026012a3637bff262289f0c1fc86d0110224b762810fbf5f6be8e3955"
+  },
+  "status": "OPEN: CF4 time indicator; physical local gate OPEN"
+}

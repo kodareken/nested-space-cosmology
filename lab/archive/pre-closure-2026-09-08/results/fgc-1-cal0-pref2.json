@@ -1,0 +1,177 @@
+{
+  "artifact_id": "FGC-1-CAL0-PREF2",
+  "artifact_payload": {
+    "branch_applicability_obstruction": {
+      "DOM4_coordinate_acceleration_limit": "4",
+      "NUM1_declared_profile_admission_tested": false,
+      "PROTO3_all_RUN1_stops_apply": true,
+      "branch_applicability_map_present": false,
+      "calibration_branch": "GR-0",
+      "hyp2_config_path": "configs/fgc/fgc-1-hyp2-md1.toml",
+      "hyp2_config_sha256": "c3fcb05d4ca3b8df72b1659e24178c66e44f7033e11df998a6bc855f6a230382",
+      "scope_conflation_verified": true,
+      "target_branch_owners": {
+        "DOM4": "FGC-QR",
+        "HLT1": "FGC-QR",
+        "HYP2": "FGC-QR"
+      }
+    },
+    "epistemic_boundary": {
+      "FGCQR_action_or_mechanism_rejected": false,
+      "FGCQR_action_or_mechanism_tested": false,
+      "FGCQR_evolution_outcome_inspected": false,
+      "SGBL_evolution_outcome_inspected": false,
+      "general_gradient_mechanism_rejected": false,
+      "protocol_design_route_closed": "PROTO3_as_executable_resolved_holdout_contract"
+    },
+    "spectral_input_obstruction": {
+      "all_frozen_resolutions_fail_at_initial_time": true,
+      "estimator": "HLT1_windowed_spectral_support",
+      "nonzero_amplitude_scaling_invariance_verified": true,
+      "records": [
+        {
+          "alias_band_occupied": true,
+          "amplitude": "2",
+          "angular_support": 25.002519771574725,
+          "first_unresolved_bin": 84,
+          "measurement_sample_count": 193,
+          "nyquist_bin": 96,
+          "point_count": 1025,
+          "proper_wavenumber_over_cutoff": 1.5626574857234203,
+          "spacing": 0.125,
+          "support_bin": 96,
+          "top_eighth_field_energy_fraction": 8.053870004905234e-08,
+          "top_eighth_gradient_energy_fraction": 6.347447818350775e-05
+        },
+        {
+          "alias_band_occupied": true,
+          "amplitude": "2",
+          "angular_support": 50.13492276274205,
+          "first_unresolved_bin": 168,
+          "measurement_sample_count": 385,
+          "nyquist_bin": 192,
+          "point_count": 2049,
+          "proper_wavenumber_over_cutoff": 3.133432672671378,
+          "spacing": 0.0625,
+          "support_bin": 192,
+          "top_eighth_field_energy_fraction": 1.5874202597674954e-10,
+          "top_eighth_gradient_energy_fraction": 4.793207087659257e-07
+        },
+        {
+          "alias_band_occupied": true,
+          "amplitude": "2",
+          "angular_support": 100.40023544164208,
+          "first_unresolved_bin": 336,
+          "measurement_sample_count": 769,
+          "nyquist_bin": 384,
+          "point_count": 4097,
+          "proper_wavenumber_over_cutoff": 6.27501471510263,
+          "spacing": 0.03125,
+          "support_bin": 384,
+          "top_eighth_field_energy_fraction": 1.386508012646497e-13,
+          "top_eighth_gradient_energy_fraction": 1.7412311796711704e-09
+        },
+        {
+          "alias_band_occupied": true,
+          "amplitude": "5",
+          "angular_support": 25.002519771574725,
+          "first_unresolved_bin": 84,
+          "measurement_sample_count": 193,
+          "nyquist_bin": 96,
+          "point_count": 1025,
+          "proper_wavenumber_over_cutoff": 1.5626574857234203,
+          "spacing": 0.125,
+          "support_bin": 96,
+          "top_eighth_field_energy_fraction": 8.053870004905836e-08,
+          "top_eighth_gradient_energy_fraction": 6.347447818351256e-05
+        },
+        {
+          "alias_band_occupied": true,
+          "amplitude": "5",
+          "angular_support": 50.13492276274205,
+          "first_unresolved_bin": 168,
+          "measurement_sample_count": 385,
+          "nyquist_bin": 192,
+          "point_count": 2049,
+          "proper_wavenumber_over_cutoff": 3.133432672671378,
+          "spacing": 0.0625,
+          "support_bin": 192,
+          "top_eighth_field_energy_fraction": 1.5874202597633346e-10,
+          "top_eighth_gradient_energy_fraction": 4.793207087646793e-07
+        },
+        {
+          "alias_band_occupied": true,
+          "amplitude": "5",
+          "angular_support": 100.40023544164208,
+          "first_unresolved_bin": 336,
+          "measurement_sample_count": 769,
+          "nyquist_bin": 384,
+          "point_count": 4097,
+          "proper_wavenumber_over_cutoff": 6.27501471510263,
+          "spacing": 0.03125,
+          "support_bin": 384,
+          "top_eighth_field_energy_fraction": 1.3865080125126986e-13,
+          "top_eighth_gradient_energy_fraction": 1.741231179498452e-09
+        }
+      ],
+      "tail_energy_report_does_not_override_PROTO3_boolean": true
+    },
+    "successor_requirements": {
+      "action_profiles_amplitude_order_and_holdout_cases_must_remain_unchanged": true,
+      "branch_specific_stop_applicability_required": true,
+      "deterministic_constraint_scale_and_common_event_convergence_required": true,
+      "new_output_namespace_required": true,
+      "spectral_tail_weight_and_convergence_required": true
+    }
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "pre_holdout_protocol_numerical_contract_obstruction",
+  "derivation_document": "docs/fgc-cal0-pref2.md",
+  "derivation_document_sha256": "c802d76741665f4c867c4926db3214e90a01f412f2815d31fb3da130d0dbd8d2",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "PROTO3_pre_holdout_numerical_contract_obstruction_verified": true,
+    "PROTO3_resolved_holdout_manifest_authorized": false,
+    "PROTO4_premise_revision_required": true,
+    "classical_spherical_diagnostic_authorized": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false
+  },
+  "generated_by": "scripts/reproduce_fgc_cal0_pref2.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_cal0_pref2.py": "6305f35e6507fad8707b61ba41174547a3ac3b0b8f0671341fac180acd62f4af",
+    "src/recursive_horizons/fgc/evolution/gr0_calibration.py": "60c5e86fc4676da32fb76fea47158634bf4e76d0787901489bb8925e8212ec91",
+    "src/recursive_horizons/fgc/evolution/gr0_direct_source.py": "57942aebc126135425e70bf0fb4bb9d1b541137734ea7421ebe1395917bee1f0",
+    "src/recursive_horizons/fgc/evolution/health_monitor.py": "b364b94745a808313248b442417aacd73a7a8035a5ff9fc1a2bd4829e7d55784",
+    "src/recursive_horizons/fgc/initial_data_preflight.py": "8d13506cc5d0e459edef63349e32b124f0c75ecd8ce6761a965b539aca1ae256",
+    "src/recursive_horizons/fgc/scoped_run_authorization.py": "c47fade97823566caeebc21583c074fce62c4e296ea717babc40bf11be91e2bf"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4",
+    "configs/fgc/fgc-1-hlt1-mon1.toml": "a9ba9f95ebdf0e1ec16ddc8098b8e5f9873f0b4c23f7077a9a1ca443b3ad7dbb",
+    "configs/fgc/fgc-1-num1-val1.toml": "2b00d268191905b6212f2ed4858344f810c082190940e64fc82da334bd528c11",
+    "configs/fgc/fgc-2-sf1-protocol-v3.toml": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal0-pref2.toml": "384b5f54a0ccd4f62f15bf592c87a5cf2033cb0d6434cd5887e1326b50f52396"
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "artifact_id": "FGC-1-DEF0-OBS1",
+  "classification": "exact_physical_metric_affine_radial_null_Raychaudhuri_observable_controls_not_COL1_DEF1_or_transition",
+  "controls": {
+    "contracting_flat_de_sitter": {
+      "affine_generator": {
+        "affine_exact": true,
+        "affine_residual": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "branch": "outgoing",
+        "k": [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "null_residual": "0",
+        "scale_value": "1"
+      },
+      "classification": "exact_local_physical_metric_affine_radial_null_Raychaudhuri_diagnostic_not_COL1_or_DEF1",
+      "modified_harmonic_auxiliary_cones_used": false,
+      "nonclaims": {
+        "COL1_evolution_solution_consumed": false,
+        "HYP1_complete": false,
+        "ROB1_open_parameter_neighborhood_derived": false,
+        "constraint_preserving_ACT1_IBVP_proven": false,
+        "finite_invariant_transition_surface_derived": false,
+        "finite_trapped_interval_derived": false,
+        "metric_null_affine_defocusing_DEF1_derived": false,
+        "non_spherical_shear_robustness_derived": false,
+        "physical_wall_derived": false,
+        "resolution_independent_positive_Raychaudhuri_margin_derived": false,
+        "singularity_resolution_derived": false,
+        "trapped_to_anti_trapped_transition_derived": false
+      },
+      "null_frame": {
+        "cross_normalization": "-2",
+        "ell_minus": [
+          "1",
+          "-1",
+          "0",
+          "0"
+        ],
+        "ell_minus_null_residual": "0",
+        "ell_plus": [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "ell_plus_null_residual": "0",
+        "round_sphere_classification": "trapped",
+        "theta_minus": "-3",
+        "theta_plus": "-1"
+      },
+      "physical_metric_only": true,
+      "raychaudhuri": {
+        "complete_rhs": "-1/2",
+        "dtheta_dlambda_from_trajectory_jet": "-1/2",
+        "identity_exact": true,
+        "lhs_minus_rhs": "0",
+        "locally_defocusing_at_point": false,
+        "minus_R_ab_k_a_k_b": "0",
+        "minus_half_theta_squared": "-1/2",
+        "minus_shear_squared": "0",
+        "radial_null_hypersurface_twist_free_specialization": true,
+        "spherical_radial_shear_specialization": true,
+        "theta": "-1",
+        "twist_squared": "0"
+      }
+    },
+    "minkowski_spherical": {
+      "affine_generator": {
+        "affine_exact": true,
+        "affine_residual": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "branch": "outgoing",
+        "k": [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "null_residual": "0",
+        "scale_value": "1"
+      },
+      "classification": "exact_local_physical_metric_affine_radial_null_Raychaudhuri_diagnostic_not_COL1_or_DEF1",
+      "modified_harmonic_auxiliary_cones_used": false,
+      "nonclaims": {
+        "COL1_evolution_solution_consumed": false,
+        "HYP1_complete": false,
+        "ROB1_open_parameter_neighborhood_derived": false,
+        "constraint_preserving_ACT1_IBVP_proven": false,
+        "finite_invariant_transition_surface_derived": false,
+        "finite_trapped_interval_derived": false,
+        "metric_null_affine_defocusing_DEF1_derived": false,
+        "non_spherical_shear_robustness_derived": false,
+        "physical_wall_derived": false,
+        "resolution_independent_positive_Raychaudhuri_margin_derived": false,
+        "singularity_resolution_derived": false,
+        "trapped_to_anti_trapped_transition_derived": false
+      },
+      "null_frame": {
+        "cross_normalization": "-2",
+        "ell_minus": [
+          "1",
+          "-1",
+          "0",
+          "0"
+        ],
+        "ell_minus_null_residual": "0",
+        "ell_plus": [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "ell_plus_null_residual": "0",
+        "round_sphere_classification": "normal",
+        "theta_minus": "-1/2",
+        "theta_plus": "1/2"
+      },
+      "physical_metric_only": true,
+      "raychaudhuri": {
+        "complete_rhs": "-1/8",
+        "dtheta_dlambda_from_trajectory_jet": "-1/8",
+        "identity_exact": true,
+        "lhs_minus_rhs": "0",
+        "locally_defocusing_at_point": false,
+        "minus_R_ab_k_a_k_b": "0",
+        "minus_half_theta_squared": "-1/8",
+        "minus_shear_squared": "0",
+        "radial_null_hypersurface_twist_free_specialization": true,
+        "spherical_radial_shear_specialization": true,
+        "theta": "1/2",
+        "twist_squared": "0"
+      }
+    },
+    "synthetic_negative_Rkk": {
+      "affine_generator": {
+        "affine_exact": true,
+        "affine_residual": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "branch": "outgoing",
+        "k": [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "null_residual": "0",
+        "scale_value": "1"
+      },
+      "classification": "exact_local_physical_metric_affine_radial_null_Raychaudhuri_diagnostic_not_COL1_or_DEF1",
+      "modified_harmonic_auxiliary_cones_used": false,
+      "nonclaims": {
+        "COL1_evolution_solution_consumed": false,
+        "HYP1_complete": false,
+        "ROB1_open_parameter_neighborhood_derived": false,
+        "constraint_preserving_ACT1_IBVP_proven": false,
+        "finite_invariant_transition_surface_derived": false,
+        "finite_trapped_interval_derived": false,
+        "metric_null_affine_defocusing_DEF1_derived": false,
+        "non_spherical_shear_robustness_derived": false,
+        "physical_wall_derived": false,
+        "resolution_independent_positive_Raychaudhuri_margin_derived": false,
+        "singularity_resolution_derived": false,
+        "trapped_to_anti_trapped_transition_derived": false
+      },
+      "null_frame": {
+        "cross_normalization": "-2",
+        "ell_minus": [
+          "1",
+          "-1",
+          "0",
+          "0"
+        ],
+        "ell_minus_null_residual": "0",
+        "ell_plus": [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        "ell_plus_null_residual": "0",
+        "round_sphere_classification": "marginal",
+        "theta_minus": "-1",
+        "theta_plus": "0"
+      },
+      "physical_metric_only": true,
+      "raychaudhuri": {
+        "complete_rhs": "1/2",
+        "dtheta_dlambda_from_trajectory_jet": "1/2",
+        "identity_exact": true,
+        "lhs_minus_rhs": "0",
+        "locally_defocusing_at_point": true,
+        "minus_R_ab_k_a_k_b": "1/2",
+        "minus_half_theta_squared": "0",
+        "minus_shear_squared": "0",
+        "radial_null_hypersurface_twist_free_specialization": true,
+        "spherical_radial_shear_specialization": true,
+        "theta": "0",
+        "twist_squared": "0"
+      }
+    }
+  },
+  "derivation_document": "docs/fgc-def0-obs1.md",
+  "derivation_document_sha256": "b7aedf701b265ca8cb6b21cda085eff5d2bd3eeae49daba64984655a46a02d1b",
+  "frozen_configuration": {
+    "artifact_id": "FGC-1-DEF0-OBS1",
+    "controls": {
+      "contracting_flat_de_sitter": {
+        "Hubble_rate": "-1",
+        "branch": "outgoing",
+        "comoving_radius": "2"
+      },
+      "minkowski_spherical": {
+        "areal_radius": "4",
+        "branch": "outgoing"
+      },
+      "synthetic_negative_Rkk": {
+        "areal_radius": "4",
+        "areal_radius_dr": "1",
+        "areal_radius_dt": "-1",
+        "areal_radius_dtt": "1",
+        "branch": "outgoing"
+      }
+    },
+    "metric_signature": "-+++",
+    "open_gates": {
+      "COL1_evolution_solution_consumed": false,
+      "HYP1_complete": false,
+      "ROB1_open_parameter_neighborhood_derived": false,
+      "constraint_preserving_ACT1_IBVP_proven": false,
+      "finite_invariant_transition_surface_derived": false,
+      "finite_trapped_interval_derived": false,
+      "metric_null_affine_defocusing_DEF1_derived": false,
+      "non_spherical_shear_robustness_derived": false,
+      "physical_wall_derived": false,
+      "resolution_independent_positive_Raychaudhuri_margin_derived": false,
+      "singularity_resolution_derived": false,
+      "trapped_to_anti_trapped_transition_derived": false
+    },
+    "physical_metric_reduction_config": "configs/fgc/fgc-1-hyp1-reduction.toml",
+    "physical_metric_reduction_result": "results/fgc-1-hyp1-reduction.json",
+    "project_version": "0.11.0",
+    "proof_contract": {
+      "both_radial_null_directions_and_cross_normalization_exact": true,
+      "complete_twist_free_spherical_Raychaudhuri_rhs": true,
+      "exact_rational_controls_only": true,
+      "independent_trajectory_derivative_and_curvature_rhs_routes": true,
+      "physical_metric_only": true,
+      "positive_rhs_control_is_synthetic_geometry_not_FGC_solution": true,
+      "separate_expansion_shear_twist_and_Ricci_terms": true,
+      "supplied_generator_null_and_affine_residuals_exact": true
+    },
+    "riemann_convention": "plus_partial_mu_gamma_nu",
+    "schema_version": 1
+  },
+  "gate_status": {
+    "evolution_authorized": false,
+    "exact_metric_null_observable_contract_and_controls_passed": true,
+    "metric_null_affine_defocusing_DEF1_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_def0_obs1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_def0_obs1.py": "97a1d1761a4d96ff7264a5a0408d7c4a8d5fcb69ccce1ed8fcca479bfe77473d",
+    "src/recursive_horizons/fgc/metric_null_observable.py": "a0a26faf47c4e292f5aa92d864d1243be90f8bc4a250290dfb32740adb99d66c",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+  },
+  "nonclaims": {
+    "COL1_evolution_solution_consumed": false,
+    "HYP1_complete": false,
+    "ROB1_open_parameter_neighborhood_derived": false,
+    "constraint_preserving_ACT1_IBVP_proven": false,
+    "finite_invariant_transition_surface_derived": false,
+    "finite_trapped_interval_derived": false,
+    "metric_null_affine_defocusing_DEF1_derived": false,
+    "non_spherical_shear_robustness_derived": false,
+    "physical_wall_derived": false,
+    "resolution_independent_positive_Raychaudhuri_margin_derived": false,
+    "singularity_resolution_derived": false,
+    "trapped_to_anti_trapped_transition_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-hyp1-reduction.toml": "6d1820ffb3dd4505990274cf4a3d76d1bbea78cc18484a29419b8101207ab50e",
+    "results/fgc-1-hyp1-reduction.json": "e14047642d55bc8cb6e612c9ae8fc87c587c719835ad634307f2d3383f6f0acd"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-def0-obs1.toml": "17853fe5280eeb5e08b07fda9c28d55e687c48ad311a440ff9c3971c2e489578"
+  }
+}

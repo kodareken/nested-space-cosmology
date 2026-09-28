@@ -1,0 +1,132 @@
+{
+  "comparison": {
+    "exact": "schema, strings, booleans and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "escape_conditions_outside_scope": [
+    "derive a same-action counterflow Delta T01=-0.0012238701558050947",
+    "allow spatially inhomogeneous spherical data whose momentum constraint has gradient terms",
+    "declare a physical boundary momentum shell",
+    "change the initial quantum state"
+  ],
+  "finite_solution": {
+    "C_star": null,
+    "finite_stress": null,
+    "g_star": null,
+    "null_signs": null,
+    "reason": "no admissible homogeneous history reaches an interior stationarity solve from the locked seed",
+    "updated_constraints": null
+  },
+  "full_class_unimplemented_history_terms": [
+    "GeneralKSFourthOrderReferenceHistory with all four ADM variations and parity-completed momentum subtraction",
+    "GeneralKSLocalInducedHistory with nodal action forces rather than constant endpoint forces",
+    "transmitting tilted-Landau interface variation with its frequency-mixing Cauchy map"
+  ],
+  "functional_component_ledger": {
+    "Einstein_A": "locked and owns the geometric constraints",
+    "ModeResolved_state_evolution": "implemented blockwise for a supplied history",
+    "V_full": "zero by the relational law",
+    "boundary_interface": "no momentum shell is declared",
+    "canonical_CTP_determinant": "existing CausalCommonFunctional; supplied-history evaluator",
+    "fourth_order_reference_history": "not needed to decide nonexistence because its homogeneous T01 is zero by axial reflection",
+    "local_induced_history": "not needed to decide nonexistence because its homogeneous T01 is zero by axial reflection",
+    "locked_local_coefficients": {
+      "C_Euler": 0.0005158468542821582,
+      "C_Weyl": -0.0008441130342798952,
+      "C_boxR": -0.0005627420228532635,
+      "C_gauge": 0.01125484045706527
+    },
+    "magnetic_gauge_C": "already owned; diagonal in homogeneous KS",
+    "reference_momentum_policy": "use the parity-completed renormalized reference; the one-sided stored positive-frequency rows are never interpreted as a vacuum T01"
+  },
+  "gate": {
+    "coupled_evolution_reopened": false,
+    "finite_stress_fabricated": false,
+    "full_history_search_needed": false,
+    "nonexistence_in_declared_class_proved": true,
+    "variation_residual_below_tolerance": false
+  },
+  "input_hashes": {
+    "results/development/causal-common-functional.json": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03",
+    "results/development/charged-ctp-neck-source.json": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90",
+    "results/development/gauge-source.json": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592",
+    "results/development/nsc-background-projection.json": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48",
+    "results/development/nsc-joint-history-state-bvp.json": "5b08cd6f1453ae006cbd7812c781869e96c8f058d2882544a3275da2325ce5e0",
+    "results/development/nsc-landau-cauchy-isometry.json": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/development/spherical-action.json": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "occupation_or_parameter_refit": false,
+    "zeta": 15.785319939652627
+  },
+  "nonexistence_certificate": {
+    "continuity_argument": "unitary finite-dimensional C(t) and smooth metric vertices make T01(t) continuous; nonzero T01 at the seed persists on a neighborhood, while the homogeneous shift constraint requires T01(t)=0 on every slice",
+    "stationary_history_exists_in_declared_class": false,
+    "tolerance": 3e-11,
+    "variation": {
+      "boundary_shell_T01": 0.0,
+      "compact_local_T01": 0.0,
+      "counterflow_required": -0.0012238701558050947,
+      "curvature_reference_T01": 0.0,
+      "magnetic_T01": 0.0,
+      "normalized_shift_variation": -0.013592708849071286,
+      "state_T01": 0.0012238701558050947,
+      "total_T01": 0.0012238701558050947,
+      "vacuum_T01": 0.0
+    }
+  },
+  "nonexistence_scope": "frequency-diagonal homogeneous no-interface truncation only; a tilted frequency-mixing interface or inhomogeneous spherical geometry is outside this certificate",
+  "owner": {
+    "declared_variation": "delta Gamma_one_CTP[g,C[g]] / delta g_Delta^A(tau)=0 for A=N,beta,q_ADM,r",
+    "execution_order": "evaluate lapse/shift constraints on fixed boundary data before interior collocation",
+    "history_class": "smooth frequency-diagonal homogeneous Kantowski-Sachs ADM fields N(tau), beta(tau), q_ADM(tau)=a_parallel(tau), r(tau); no spatial gradients and no transmitting tilted interface",
+    "name": "GeneralKSSameActionHistoryFunctional"
+  },
+  "same_action_momentum_ledger": {
+    "boundary_condition": "fixed smooth Cauchy endpoints; no declared momentum shell",
+    "boundary_shell_T01": 0.0,
+    "compact_local_T01": 0.0,
+    "compact_local_verified_zero": 0.0,
+    "counterflow_required": -0.0012238701558050947,
+    "curvature_reference_T01": 0.0,
+    "local_induced_reason": "local scalar metric invariants and their fourth-order reference are axial-reflection even and have no homogeneous T01",
+    "magnetic_T01": 0.0,
+    "magnetic_gauge_reason": "homogeneous static magnetic F_theta_phi has no normal-axial Poynting component",
+    "normalized_shift_variation": -0.013592708849071286,
+    "physical_mode_state": "serialized ModeResolvedCauchyState",
+    "relational_vacuum_verified_zero": 0.0,
+    "state_T01": 0.0012238701558050947,
+    "total_T01": 0.0012238701558050947,
+    "vacuum_T01": 0.0
+  },
+  "schema": "NSC-GENERAL-KS-SAME-ACTION-HISTORY-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "diagnostic_duration_or_profile_selected": false,
+    "metric_timestep_started": false,
+    "new_source_compensator_or_dark_fluid": false,
+    "standard_GR_rederived": false,
+    "w_of_a_H_of_z_or_Hessian": false
+  },
+  "source_hashes": {
+    "docs/nsc-general-ks-same-action-history.md": "d7e99b7cf1b79c8f4d0cb2216db21bdee6baab6c983550c4be10b55302ade162",
+    "scripts/derive_nsc_general_ks_same_action_history.py": "ccb8fc6c6dbaad012e3e736c30ed19b4e02e0a266f62525a630745b3b42656da",
+    "src/recursive_horizons/nsc_general_ks_same_action_history.py": "7df80364a6542f7dc1f3ccbabf520efeb27bfa19ff00eed581be7842bf111471"
+  },
+  "status": "NON-EXISTENCE PASS: no smooth stationary history exists in the declared homogeneous KS class with the locked nonzero-momentum seed state",
+  "variations": {
+    "N_seed_residual": -0.11894481391271983,
+    "beta_seed_residual": -0.013592708849071286,
+    "q_ADM_and_r_interior_variations_evaluated": false,
+    "reason": "one failed independent constraint is sufficient to exclude every smooth history in the scoped class"
+  }
+}

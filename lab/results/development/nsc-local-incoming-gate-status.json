@@ -1,0 +1,52 @@
+{
+  "accountable_author": "Douglas Ek",
+  "error_budget": {
+    "baseline_low_subgap": null,
+    "changed_history_UV_tail": null,
+    "field_error_bound": null,
+    "full_between_node_remainder": null,
+    "geometry_between_node_remainder": [
+      1e-13,
+      1e-13
+    ]
+  },
+  "existence_tolerance": 3e-11,
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-coupled-newton-n16-damped-next5.json": "46b9e22e3aa06fc6c2b37ed81b97f5d6e7ed68076b73607becefa0a07353ca5c",
+    "results/development/nsc-ks-coupled-newton-n16-jacobian-refresh.json": "e97e344f3805e4d523c9ed16ca9ecef95f98953bc22a64de833addbe53a97cea",
+    "results/development/nsc-ks-deciding-error-budget.json": "59cd4d166ba6161d0dc0e663884dc0dc09115c7e6cd7d0cedd77a60ab0e474e4"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "measured_constraint_maxima": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "named_search_stall": "n16_damped_frozen_jacobian_leftover_cannot_reach_existence",
+  "next_named_owner": "a necessary relation for the declared switched class, or a changed Jacobian/representation that can reach 3e-11",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "failed_optimization_is_not_NONEXISTENCE": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "open_is_not_done": true,
+    "solver_step_is_not_physical_EXISTENCE": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status.md": "bd7abcfa97b619d6e628daba878fb7f4f41244e95b3b05c4fe44c9a6e25173d1",
+    "scripts/derive_nsc_local_incoming_gate_status.py": "c18fd6f5d55c8ab244321b8b66017226223b009985218b203d742a59726159f5"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: named n=16 leftover stall; no physical gate certificate",
+  "unclipped_linear_leftover": [
+    0.0001318944269235291,
+    0.0006335944911131271
+  ]
+}

@@ -1,0 +1,167 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG7-IMP3"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+predecessor_commit = "e9289ce479a2cd720d6c58f2ca3d653f573d8eec"
+PREF23_config = "configs/fgc/fgc-1-tdg7-pref23.toml"
+PREF23_document = "docs/fgc-tdg7-pref23.md"
+PREF23_result = "results/fgc-1-tdg7-pref23.json"
+PREF23_reproducer = "scripts/reproduce_fgc_tdg7_pref23.py"
+PREF23_reproduction_test = "tests/test_fgc_tdg7_pref23_reproduction.py"
+PREF23_binder_module = "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_lattice_theorem.py"
+core_runtime = "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py"
+core_runtime_test = "tests/test_fgc_tdg7_stage_safe_runtime.py"
+
+[scope]
+target = "FGC-2-SF1-TDG7"
+role = "authorized_stage_safe_runtime_repair_implementation_and_synthetic_qualification"
+calibration_branch = "GR-0"
+sealed_predecessor_read_only = true
+PREF23_compact_artifacts_read_only = true
+CAL11_history_arrays_loaded = false
+PROTO14_history_arrays_loaded = false
+campaign_checkpoint_loaded = false
+campaign_checkpoint_resumed = false
+production_state_advanced = false
+runs_namespace_created = false
+synthetic_controls_only = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+predecessor_commit = "e9289ce479a2cd720d6c58f2ca3d653f573d8eec"
+PREF23_config_sha256 = "410e6e3451f53dd6d262a2e1c409773955f5d27621b3d95c5e977d7e244643e7"
+PREF23_document_sha256 = "ef0673f179139ff10c6f3b906d3fd362ac2fd53fd8d1ae265fbb47a70b91bfc7"
+PREF23_result_sha256 = "09b40197f043026c59fb1efff2b6d24197ad7aeca03b784da32b602165e97843"
+PREF23_reproducer_sha256 = "4055de98048d7f40cee67e9768fd3b2d453406e26d85f982a205f95a882ddf47"
+PREF23_reproduction_test_sha256 = "32bf4f2d3a932937d08cd926654e57b78accade4ad1c8f79dc782d0a6b269534"
+PREF23_binder_module_sha256 = "f9d3ec171d9250b8998d53459de9ee2fe01ec1c4315c25782d97f4b85056454f"
+core_runtime_sha256 = "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1"
+core_runtime_test_sha256 = "2665b88f3549739fc97f1d838d82abacb3da0b52cbfa7497f02b14f06724e929"
+predecessor_commit_must_be_ancestor_of_HEAD = true
+every_PREF23_blob_must_match_predecessor_and_worktree = true
+PREF23_compact_result_must_remain_canonical = true
+live_core_runtime_and_test_must_match_bound_hashes = true
+CAL11_invalid_runtime_status_preserved_without_loading_history = true
+
+[stage_safe_runtime_contract]
+one_immutable_shared_TDG7_plan_owns_one_two_four_paths = true
+actual_RK4_and_SSPRK3_stage_names_and_times_rechecked_against_plan = true
+RK4_total_shadow_stage_records = 35
+RK4_fine_shadow_stage_records = 20
+SSPRK3_total_shadow_stage_records = 28
+SSPRK3_fine_shadow_stage_records = 16
+typed_coordinate_lattice_stops_precede_shadow_source_projector_tracer_monitor_or_state_work = true
+all_typed_lattice_stops_are_exercised_with_zero_hooks = true
+TDG6_minimum_width_is_frozen_and_not_caller_overridable = true
+fresh_entrypoint_rejects_active_retry_ledger = true
+only_complete_fine_path_commits_atomically = true
+outer_and_medium_paths_are_evidence_only = true
+
+[tdg6_inheritance]
+complete_channel_count = 18
+exact_zero_classification_preserved = true
+one_channel_resolved_order_failure_vetoes_all_of_admission = true
+large_convergent_difference_passes_without_magnitude_tolerance = true
+large_convergent_debit_remains_outward_and_greater_than_nine = true
+source_only_late_shadow_stop_remains_PROTO7_owned = true
+non_source_late_shadow_stop_remains_nonretry_terminal_evidence = true
+tracer_commit_exception_rolls_back_real_monitor_causal_and_tracer_boundaries = true
+valid_TDG6_retry_is_replanned_through_TDG7 = true
+retry_successor_binds_predecessor_plan_retry_and_exact_updated_ledger = true
+retry_successor_rejects_mismatched_method_over_limit_and_forged_evidence_and_prefix = true
+two_minimum_to_minimum_successor_is_valid = true
+TDG6_owns_normal_minimum_macro_step_exhaustion = true
+TDG7_lattice_exhaustion_is_defensive_for_forged_required_wrapper_only = true
+
+[synthetic_qualification]
+both_methods_execute_all_seven_shadow_proposals = true
+all_stage_times_are_recorded_as_exact_binary64_hex = true
+all_typed_lattice_stops_precede_work = true
+fine_only_atomic_commit_required = true
+TDG6_interval_and_retry_controls_required = true
+late_shadow_ownership_and_tracer_rollback_required = true
+lineage_hash_claim_and_result_mutations_must_fail_closed = true
+
+[limitations]
+synthetic_controls_are_not_PROTO14_trajectory_execution = true
+historical_CAL11_invalid_runtime_is_not_physics = true
+current_runtime_repair_does_not_mutate_or_resume_historical_PROTO14 = true
+stateless_adapter_cannot_detect_discarded_external_retry = true
+future_protocol_cursor_required_before_calibration = true
+fresh_vs_retry_protocol_discriminator_implemented = false
+prospective_replacement_protocol_design_only_no_protocol_file_runtime_or_run = true
+no_new_protocol_or_output_namespace_is_created = true
+no_calibration_or_candidate_eligibility_is_derived = true
+no_SGBL_or_FGCQR_or_DEF1_execution_is_authorized = true
+no_retained_EFT_or_physical_transition_or_cosmological_claim_is_derived = true
+
+[proof_contract]
+predecessor_and_all_PREF23_hashes_must_match_git_and_worktree = true
+current_core_runtime_and_test_hashes_must_match = true
+canonical_PREF23_boundary_must_authorize_repair_only = true
+all_actual_method_stages_must_match_one_shared_plan = true
+typed_stops_must_precede_every_runtime_hook = true
+TDG6_all_of_thresholds_and_retry_evidence_must_remain_unchanged = true
+synthetic_controls_must_not_load_CAL11_or_PROTO14_arrays_or_create_runs_namespace = true
+fine_only_commit_late_shadow_ownership_and_tracer_rollback_must_pass = true
+valid_retry_replan_TDG6_minimum_exhaustion_and_defensive_TDG7_stop_must_pass = true
+retry_successor_lineage_and_frozen_minimum_width_must_fail_closed = true
+disjoint_entrypoints_and_protocol_discriminator_limitation_must_be_explicit = true
+replacement_protocol_design_authorization_must_not_promote_freeze_runtime_or_calibration = true
+mutation_nonpromotion_lineage_and_hash_attacks_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG7_independent_binder_completed = true
+TDG7_runtime_repair_implementation_authorized = true
+TDG7_runtime_repair_implemented = true
+TDG7_runtime_repair_synthetic_qualification_passed = true
+replacement_protocol_freeze_design_authorized = true
+fresh_replacement_protocol_frozen = false
+new_protocol_authorized = false
+new_output_namespace_authorized = false
+PROTO14_runtime_mutation_authorized = false
+PROTO14_terminal_checkpoint_may_resume = false
+new_protocol_or_output_namespace_authorized = false
+fresh_GR0_calibration_authorized = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+
+[claims]
+CAL11_terminal_invalid_runtime_result_preserved = true
+TDG7_independent_binder_completed = true
+TDG7_runtime_repair_implementation_authorized = true
+TDG7_runtime_repair_implemented = true
+TDG7_runtime_repair_synthetic_qualification_passed = true
+one_shared_stage_safe_plan_owns_all_paths = true
+typed_lattice_stops_precede_work = true
+TDG6_threshold_and_all_of_admission_unchanged = true
+stateless_adapter_cannot_detect_discarded_external_retry = true
+future_protocol_cursor_required_before_calibration = true
+replacement_protocol_freeze_design_authorized = true
+fresh_vs_retry_protocol_discriminator_implemented = false
+fresh_replacement_protocol_frozen = false
+PROTO14_runtime_mutation_authorized = false
+PROTO14_terminal_checkpoint_may_resume = false
+new_protocol_authorized = false
+new_output_namespace_authorized = false
+fresh_GR0_calibration_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+physical_or_cosmological_claim_derived = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

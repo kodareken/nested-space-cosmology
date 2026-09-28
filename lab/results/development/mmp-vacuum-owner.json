@@ -1,0 +1,83 @@
+{
+  "charged_seed_requirement": {
+    "V_full_max_for_abs_q_1": 0.01251749643695399,
+    "V_full_over_V_partial_max_for_abs_q_1": 0.072548010936145,
+    "asymptotically_flat_MMP": "V_full=0",
+    "general": "V_full <= 2*A_full^2/(q^2*C_full)",
+    "minimum_fraction_of_partial_V_that_must_be_removed": 0.927451989063855
+  },
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-12
+  },
+  "decision": {
+    "additional_sector_added": false,
+    "blocking_definition": "a same-action ultraviolet matching or normalization condition that determines V_full",
+    "coefficient_fitted_or_set_to_zero": false,
+    "current_parameter_free_MMP_embedding": false,
+    "dependent_recursive_scale_solve_started": false,
+    "next_allowed_input": "an explicit microscopic spectrum/measure completing the supertrace, or a derived recursive normalization condition; an imposed cosmological counterterm is not sufficient"
+  },
+  "existing_owner_classification": [
+    {
+      "can_change_asymptotic_bulk_V": true,
+      "term": "retained compact/light spectral volume coefficient",
+      "value": 0.17254086329081558,
+      "value_known": true
+    },
+    {
+      "can_change_asymptotic_bulk_V": false,
+      "reason": "boundary-supported variation is not a homogeneous four-volume term",
+      "term": "compact boundary heat terms"
+    },
+    {
+      "can_change_asymptotic_bulk_V": false,
+      "reason": "their bulk densities vanish or remain curvature-dependent in the flat MMP asymptotic region",
+      "term": "Weyl, Euler, box-R and higher-curvature terms"
+    },
+    {
+      "can_change_asymptotic_bulk_V": false,
+      "reason": "topology and return-length dependent interaction, not a homogeneous vacuum coefficient",
+      "term": "finite Casimir interaction"
+    },
+    {
+      "can_change_asymptotic_bulk_V": false,
+      "reason": "equal-history normalization fixes causal state response but not the state-independent local vacuum counterterm",
+      "term": "canonical CTP state determinant"
+    },
+    {
+      "can_change_asymptotic_bulk_V": null,
+      "reason": "physical return domain and stationary recursive solution are downstream and not yet defined",
+      "term": "recursive tail"
+    }
+  ],
+  "input_hashes": {
+    "results/development/canonical-spectral-bridge.json": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74",
+    "results/development/causal-common-functional.json": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03",
+    "results/development/compact-boundary-action.json": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce",
+    "results/development/compact-casimir.json": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447",
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/mmp-embedding.json": "f4032d09ea4d7b76f6d02475fde29eb38dd239635e9e812518bc425726d477d0"
+  },
+  "one_revision_attempt": {
+    "bulk_V_owner_resolved": false,
+    "causal_owner_resolved": true,
+    "realization": "canonical Lorentzian CTP with spectral induced coefficients counted once",
+    "reason": "the causal/state split does not supply a normalization condition for V_full"
+  },
+  "retained_partial_coefficients": {
+    "A": 0.005502284451619701,
+    "C": 0.004837250697696715,
+    "V": 0.17254086329081558,
+    "Xi_per_q_squared": 3.4459938566757384
+  },
+  "schema": "NSC-MMP-VACUUM-OWNER-v1",
+  "source_hashes": {
+    "docs/nsc-mmp-vacuum-owner.md": "9f61a81f0000b4a25289a12b7e753de3bcbb9138cc401d649f289dc0a54c2dc1",
+    "scripts/derive_nsc_vacuum_owner.py": "0e087b61ffffad4b00c91d5a34c9e6683a88f2dcedd8799c0ada5f0470305fb6"
+  },
+  "status": "the canonical-CTP revision leaves the state-independent bulk vacuum coefficient unfixed; no existing same-action contribution owns the required cancellation"
+}

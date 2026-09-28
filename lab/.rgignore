@@ -1,0 +1,9 @@
+# Active discovery excludes immutable provenance and generated/local state.
+# Use `rg --no-ignore` with an explicit path when historical evidence is the
+# actual target of an audit.
+archive/**
+runs/**
+build/**
+paper/.build/**
+**/__pycache__/**
+*.pyc

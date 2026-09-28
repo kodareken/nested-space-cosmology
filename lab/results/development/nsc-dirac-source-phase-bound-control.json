@@ -1,0 +1,153 @@
+{
+  "accountable_author": "Douglas Ek",
+  "aggregate_phase_value_error_upper_N_beta": [
+    {
+      "binary64_upper": 1.3724903391915106e-12,
+      "exponent": -157,
+      "mantissa": "250737109743654879293840101623722913"
+    },
+    {
+      "binary64_upper": 1.0979922713532084e-12,
+      "exponent": -156,
+      "mantissa": "100294843897461951717536040649489165"
+    }
+  ],
+  "angular": 1.0,
+  "angular_square_weight_per_energy_sign": 107952,
+  "cells": [
+    112,
+    82
+  ],
+  "coefficient_error_bound": [
+    {
+      "binary64_mid": -1.4291180537945065e-06,
+      "binary64_rad": 2.0359255020581712e-17,
+      "mid_exponent": -136,
+      "mid_mantissa": "-124493740532387764293110543068400527",
+      "rad_exponent": -84,
+      "rad_mantissa": "393805265"
+    },
+    {
+      "binary64_mid": 8.630241413697661e-07,
+      "binary64_rad": 4.354774908090062e-17,
+      "mid_exponent": -140,
+      "mid_mantissa": "1202880092304239143620855159839365351",
+      "rad_exponent": -82,
+      "rad_mantissa": "210583993"
+    }
+  ],
+  "cover_cells": 25,
+  "diagnostics": {
+    "gauss_nodes_are_bounds": false,
+    "global_parent_child_matching_required": false,
+    "local_embedding_reused": true,
+    "new_field_or_source_runs": 0,
+    "remainder_uppers": [
+      {
+        "binary64_upper": 1.0179626783591429e-17,
+        "exponent": -174,
+        "mantissa": "243753635211450559158769172006952419"
+      },
+      {
+        "binary64_upper": 2.1773873354488838e-17,
+        "exponent": -175,
+        "mantissa": "1042761369472898084171703031498204957"
+      }
+    ],
+    "rule": "even-power center Taylor polynomial plus uniform remainder_order coefficient",
+    "target_radius_upper": {
+      "binary64_upper": 2e-16,
+      "exponent": -171,
+      "mantissa": "598631070650737835296229307480589525"
+    }
+  },
+  "dyadic_scale": 52,
+  "f_z_unit_angular": [
+    {
+      "binary64_mid": -1.4291180537945065e-06,
+      "binary64_rad": 2.0359255020581712e-17,
+      "mid_exponent": -136,
+      "mid_mantissa": "-124493740532387764293110543068400527",
+      "rad_exponent": -84,
+      "rad_mantissa": "393805265"
+    },
+    {
+      "binary64_mid": 8.630241413697661e-07,
+      "binary64_rad": 4.354774908090062e-17,
+      "mid_exponent": -140,
+      "mid_mantissa": "1202880092304239143620855159839365351",
+      "rad_exponent": -82,
+      "rad_mantissa": "210583993"
+    }
+  ],
+  "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+  "input_hashes": {
+    "results/development/nsc-ks-cutoff-bridge-control.json": "04c376aa9ce588129ae7b6890a2689a586a05cc110703acb300b49699143b07e",
+    "scripts/derive_nsc_local_prepared_response.py": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_operator.py": "9b42c4a175a417f51bb955acfd7f4f8c6680a8034e2e351758c48d1e07ccc442",
+    "src/recursive_horizons/nsc_ks_local_embedding.py": "f7f9f0d84c80f1c94a1337ec519c188e61598e5772cd24a1f31325302348ae3d",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "limits": {
+    "CPU_cap": 60.0,
+    "bits": 120,
+    "max_cells": 8000,
+    "max_depth": 24,
+    "unit_angular_radius_target": "2e-16"
+  },
+  "local_embedding": {
+    "continuum_local_embedding": true,
+    "global_matching_required": false,
+    "reused": true
+  },
+  "max_depth": [
+    8,
+    8
+  ],
+  "obstruction": null,
+  "physical_error_bound": null,
+  "remainder_error_bound": null,
+  "remainder_order": 14,
+  "reproducer": "python scripts/derive_nsc_dirac_source_phase_bound_control.py --check",
+  "rho_up": 1.0300000000000002,
+  "runtime": {
+    "CPU_cap": 60.0,
+    "CPU_seconds": 0.15097800000000006,
+    "wall_process_time": 0.152186
+  },
+  "schema": "NSC-DIRAC-SOURCE-PHASE-BOUND-CONTROL-v1",
+  "scope": {
+    "all_21_incoming_nodes": false,
+    "assembly_correction": false,
+    "between_node_error_bound": null,
+    "field_error_bound": null,
+    "gauss_nodes_are_bounds": false,
+    "metric_timestep": false,
+    "new_field_or_source_runs": 0,
+    "physical_local_gate": "OPEN",
+    "pilot_points": 1,
+    "source_tail_error_bound": null
+  },
+  "source_hashes": {
+    "docs/nsc-dirac-source-phase-bound.md": "ded5af2a5dc653adba1220a228a37660922a4e01c750e3357af13efb5daa8dda",
+    "scripts/derive_nsc_dirac_source_phase_bound_control.py": "125b27a3b08f5e19e60e01ee9f5e5e1468c9cf502f1717e1248c9faedf80697f",
+    "src/recursive_horizons/nsc_dirac_source_phase_bound.py": "c9182d66d7544fcebbca450dadb4b141f7e8c4252b01c3afd042fafb16c814b6",
+    "tests/test_nsc_dirac_source_phase_bound.py": "a3b9677030604ab176ae2442ab1bf265bfeb070a8ca211e2894b2e2433e5262e"
+  },
+  "source_signs": [
+    1,
+    -1
+  ],
+  "source_tail_error_bound": null,
+  "splits": [
+    87,
+    57
+  ],
+  "status": "PASS: directed Taylor enclosure of unit-angular f_s,z at one incoming node; physical local gate OPEN",
+  "taylor_degree": 13,
+  "unit_angular_radius_pass": true,
+  "z": 1.1768780671724794
+}

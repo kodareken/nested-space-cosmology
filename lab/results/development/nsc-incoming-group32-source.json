@@ -1,0 +1,413 @@
+{
+  "accountable_author": "Douglas Ek",
+  "aggregate": {
+    "additive_action_gradient": [
+      1.2065373974413564e-08,
+      8.212800932686979e-91,
+      -1.3609811895002504e-08,
+      -3.538963059113964e-10
+    ],
+    "energy_interval": [
+      32.0,
+      320.0
+    ],
+    "explicit_source_delta": [
+      -5.68777399857017e-10,
+      -5.415172094101309e-10,
+      -4.587058127853911e-92,
+      -1.1796755419968672e-11
+    ],
+    "fits_component_tolerance": true,
+    "lapse_action_error_upper": 2.1336305732738718e-13,
+    "old_source": [
+      1.1461850000927525e-08,
+      -6.773164630230541e-08,
+      4.587058127853911e-92,
+      3.650192893224331e-08
+    ],
+    "saved_union_bound_difference": 2.524354896707238e-29,
+    "shift_action_error_upper": 1.6425601865381048e-90,
+    "source_composition_residual": 6.617444900424222e-24,
+    "source_composition_tolerance": 3e-22,
+    "source_windows_added": [
+      "group32_low",
+      "group32_middle"
+    ],
+    "stationarity_tolerance": 3e-11,
+    "union_added_as_third_source": false,
+    "union_comparison_tolerance": 1e-24,
+    "updated_source_approximant": [
+      1.0893072601070508e-08,
+      -6.827316351171554e-08,
+      5.0524202471545e-115,
+      3.649013217682335e-08
+    ]
+  },
+  "failures": {},
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-group32-order24-bound.json": "0747f2469afd2126ccdb5df86b125c15ac334fe2f631ce249b00c2235f788b04",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_joint_constraints.py": "3fa6a90601d2217a8e13220d0cbad70ab2a2d568ddbf4bbdd686dd67a59f45a0",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_middle_order_correction.py": "b3890553083eac25473abf399ec840126087fb4c9503c2beb3d4b05b4b437620",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_source_tail.py": "38d4add4f497f7e5bd3736a4d90c3edef93abb7c983315abc76c9b533fbd585e",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_incoming_window_refinement.py": "391b201fc27b1f9a1fe00d09dc03e815d70a8e1cf00bef8cda832e05d4314c9b",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a"
+  },
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "payload": {
+    "bytes": 973900,
+    "path": "results/development/artifacts/nsc-incoming-group32-source.25264cdaa285744198e0ff76eab6d41c7a0e0351ba1424c39620118916f0354e.npz",
+    "sha256": "25264cdaa285744198e0ff76eab6d41c7a0e0351ba1424c39620118916f0354e"
+  },
+  "raw_metric_order": [
+    "N",
+    "beta",
+    "a",
+    "r"
+  ],
+  "reproducer": "python3 scripts/derive_nsc_incoming_group32_source.py --check",
+  "schema": "NSC-INCOMING-GROUP32-SOURCE-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "cases_calculated": 2,
+    "full_source_converged": false,
+    "metric_step": false,
+    "modes_or_scattering_solved": 0,
+    "original_certificates_or_source_arrays_changed": false,
+    "other_groups_calculated": false,
+    "physical_state_action_scales_changed": false,
+    "pressure_mode_error_certified": false,
+    "radial_recurrences_rerun": 0,
+    "rigorous_source_quadrature_error_certified": false,
+    "thermal_source_physically_zero": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-group32-source.md": "2ce1d8a825fffaad5cecd1a06ba727c7d5a623adb0bd399b6ff6d12c392387d1",
+    "scripts/derive_nsc_incoming_group32_source.py": "7edb0c4cd5383540e1844b819525f6daaf2fddd0a1b399c5846d55b258a9d4b2",
+    "tests/test_nsc_incoming_group32_source.py": "b2c6d8ac933b6d16e926081c46b8e2400226f7faf50177956af03714b956c7b8"
+  },
+  "status": "PASS: two explicit group32 source-window updates; full source OPEN",
+  "windows": {
+    "group32_low": {
+      "additive_action_gradient": [
+        1.2065802757369254e-08,
+        8.212800932686979e-91,
+        -1.3797807072587164e-08,
+        -2.53392193429063e-10
+      ],
+      "certificate_payload": {
+        "path": "results/development/artifacts/nsc-incoming-group32-order24-bound.5f45f6804ebf68cb3a0336a81a330afa6a62ead29336a59b2a3956dcb25b869a.json",
+        "sha256": "5f45f6804ebf68cb3a0336a81a330afa6a62ead29336a59b2a3956dcb25b869a"
+      },
+      "certificate_record": "results/development/nsc-incoming-group32-order24-bound.json",
+      "explicit_source_delta": [
+        -5.687976132424585e-10,
+        -5.489972998576402e-10,
+        -4.587058127853911e-92,
+        -8.446558162040957e-12
+      ],
+      "factor_per_sign": 0.6602438242725724,
+      "failures": {},
+      "group": 32,
+      "interval": [
+        32.0,
+        40.0
+      ],
+      "interval_binding": {
+        "coefficient_integrals_unchanged": true,
+        "consumer_endpoint_tag": 40.0,
+        "energy": {
+          "density_error_upper": 1.0013879132293045e-14,
+          "lapse_action_error_upper": 2.124226396760216e-13,
+          "linear_transverse_density_upper": 1.0013879132265519e-14,
+          "physical_Riccati_order": 24,
+          "quadratic_longitudinal_density_upper": 2.752721843104105e-26,
+          "thermal_quadrature_low_band_errors_included": false,
+          "vacuum_current_error": 0.0
+        },
+        "fresh_interval": [
+          32.0,
+          40.0
+        ],
+        "new_radial_recurrence": false,
+        "original_endpoint_tag": 320.0,
+        "reason": "saved radial defect integrals have no energy dependence; only finite-energy primitives change"
+      },
+      "kind": "low_vacuum",
+      "new_numerical_value": [
+        7.4472405808738465e-09,
+        -4.523828849514278e-08,
+        0.0,
+        2.4283123231513572e-08
+      ],
+      "numerical_indicators_sum_absolute_signs": {
+        "original_to48": [
+          4.600821724214665e-24,
+          4.727064537908716e-23,
+          0.0,
+          2.0330305554153105e-23
+        ],
+        "precision50_to70": [
+          1.365659334461067e-50,
+          1.3769931859311313e-50,
+          0.0,
+          3.1437403300402574e-52
+        ],
+        "quadrature48_to64": [
+          1.260519340570912e-71,
+          1.9993119372389153e-71,
+          0.0,
+          1.3482493258243108e-71
+        ]
+      },
+      "numerical_tolerances": {
+        "middle_source16_convention": 3e-11,
+        "original_measure": 3e-11,
+        "original_to48": 3e-20,
+        "precision50_to70": 3e-35,
+        "prefix16": 3e-40,
+        "quadrature48_to64": 3e-20,
+        "quadrature_measure": 3e-11,
+        "quadrature_replay": 3e-22
+      },
+      "old_source": [
+        8.016038194116305e-09,
+        -4.468929119528514e-08,
+        4.587058127853911e-92,
+        2.4291569789675613e-08
+      ],
+      "original_grid_numerical_value": [
+        7.4472405808738515e-09,
+        -4.5238288495142794e-08,
+        0.0,
+        2.4283123231513586e-08
+      ],
+      "physical_error_budget": {
+        "density_error_upper": 1.0013879132293047e-14,
+        "fits_component_tolerance": true,
+        "lapse_action_error_upper": 2.1242263967602161e-13,
+        "rigorous_source_quadrature_error_included": false,
+        "shift_action_error_upper": 1.6425601865381046e-90,
+        "stationarity_tolerance": 3e-11
+      },
+      "residuals": {
+        "middle_source16_convention": 0.0,
+        "original_measure": 0.0,
+        "original_to48": 4.727064537908716e-23,
+        "precision50_to70": 1.3769931859311313e-50,
+        "prefix16": 0.0,
+        "quadrature48_to64": 1.9993119372389153e-71,
+        "quadrature_measure": 4.0245584642661925e-16,
+        "quadrature_replay": 5.293955920339377e-23
+      },
+      "retained_archived_thermal": null,
+      "selected_panels": [
+        {
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "method": "resolved physical columns minus existing ad4 reference",
+          "panel": "low_ref/32_1",
+          "rows": 32,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "method": "resolved physical columns minus existing ad4 reference",
+          "panel": "low_ref/32_-1",
+          "rows": 32,
+          "sign": -1
+        }
+      ],
+      "source_order": 24,
+      "status": "PASS: component physical budget and numerical controls; full source OPEN",
+      "thermal_policy": "physical thermal retained as nonzero bounded remainder",
+      "thermal_scattering_stress_upper": [
+        1.1165541070563332e-91,
+        9.174116255711781e-92,
+        9.174116255711781e-92,
+        9.210438740841278e-93
+      ],
+      "updated_source_approximant": [
+        7.4472405808738465e-09,
+        -4.523828849514278e-08,
+        0.0,
+        2.4283123231513572e-08
+      ]
+    },
+    "group32_middle": {
+      "additive_action_gradient": [
+        -4.287829556904659e-13,
+        -0.0,
+        1.8799517758465878e-10,
+        -1.005041124823334e-10
+      ],
+      "certificate_payload": {
+        "path": "results/development/artifacts/nsc-incoming-group32-order24-bound.5f45f6804ebf68cb3a0336a81a330afa6a62ead29336a59b2a3956dcb25b869a.json",
+        "sha256": "5f45f6804ebf68cb3a0336a81a330afa6a62ead29336a59b2a3956dcb25b869a"
+      },
+      "certificate_record": "results/development/nsc-incoming-group32-order24-bound.json",
+      "explicit_source_delta": [
+        2.021338544149715e-14,
+        7.48009044750928e-12,
+        0.0,
+        -3.3501972579277136e-12
+      ],
+      "factor_per_sign": 0.6602438242725724,
+      "failures": {},
+      "group": 32,
+      "interval": [
+        40.0,
+        320.0
+      ],
+      "interval_binding": {
+        "coefficient_integrals_unchanged": true,
+        "consumer_endpoint_tag": 320.0,
+        "energy": {
+          "density_error_upper": 4.433250951505048e-17,
+          "lapse_action_error_upper": 9.40417651365535e-16,
+          "linear_transverse_density_upper": 4.433250951504957e-17,
+          "physical_Riccati_order": 24,
+          "quadratic_longitudinal_density_upper": 9.023012643249685e-31,
+          "thermal_quadrature_low_band_errors_included": false,
+          "vacuum_current_error": 0.0
+        },
+        "fresh_interval": [
+          40.0,
+          320.0
+        ],
+        "new_radial_recurrence": false,
+        "original_endpoint_tag": 320.0,
+        "reason": "saved radial defect integrals have no energy dependence; only finite-energy primitives change"
+      },
+      "kind": "middle_correction",
+      "new_numerical_value": [
+        2.021338544149715e-14,
+        7.48009044750928e-12,
+        0.0,
+        -3.3501972579277136e-12
+      ],
+      "numerical_indicators_sum_absolute_signs": {
+        "original_to48": [
+          2.4353662316175034e-29,
+          7.495830581572884e-27,
+          0.0,
+          3.355697949456983e-27
+        ],
+        "precision50_to70": [
+          4.593880083961803e-63,
+          1.3400503382814568e-61,
+          0.0,
+          1.5180783485527263e-61
+        ],
+        "quadrature48_to64": [
+          3.4617324789172494e-83,
+          9.883310571778616e-82,
+          0.0,
+          1.2683581900449223e-81
+        ]
+      },
+      "numerical_tolerances": {
+        "middle_source16_convention": 3e-11,
+        "original_measure": 3e-11,
+        "original_to48": 3e-20,
+        "precision50_to70": 3e-35,
+        "prefix16": 3e-40,
+        "quadrature48_to64": 3e-20,
+        "quadrature_measure": 3e-11,
+        "quadrature_replay": 3e-22
+      },
+      "old_source": [
+        3.4458118068112197e-09,
+        -2.304235510702027e-08,
+        5.0524202471545e-115,
+        1.22103591425677e-08
+      ],
+      "original_grid_numerical_value": [
+        2.0213385441497125e-14,
+        7.480090447509272e-12,
+        0.0,
+        -3.3501972579277103e-12
+      ],
+      "physical_error_budget": {
+        "density_error_upper": 4.4332509515050484e-17,
+        "fits_component_tolerance": true,
+        "lapse_action_error_upper": 9.404176513655352e-16,
+        "rigorous_source_quadrature_error_included": false,
+        "shift_action_error_upper": 1.809199733754859e-113,
+        "stationarity_tolerance": 3e-11
+      },
+      "residuals": {
+        "middle_source16_convention": 1.5578577535224343e-13,
+        "original_measure": 0.0,
+        "original_to48": 7.495830581572884e-27,
+        "precision50_to70": 1.5180783485527263e-61,
+        "prefix16": 0.0,
+        "quadrature48_to64": 1.2683581900449223e-81,
+        "quadrature_measure": 9.71445146547012e-15,
+        "quadrature_replay": 2.261821987449685e-26
+      },
+      "retained_archived_thermal": [
+        5.128167675121089e-115,
+        4.9778125543339625e-115,
+        5.0524202471545e-115,
+        6.432376686041445e-117
+      ],
+      "selected_panels": [
+        {
+          "interval": [
+            40.0,
+            320.0
+          ],
+          "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+          "panel": "mid_ref/32_1",
+          "rows": 840,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40.0,
+            320.0
+          ],
+          "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+          "panel": "mid_ref/32_-1",
+          "rows": 840,
+          "sign": -1
+        }
+      ],
+      "source_order": 24,
+      "status": "PASS: component physical budget and numerical controls; full source OPEN",
+      "thermal_policy": "old insertion retained, difference to exact thermal bounded",
+      "thermal_scattering_stress_upper": [
+        1.1861252729765068e-114,
+        1.0104840494308936e-114,
+        1.0104840494308936e-114,
+        8.123493881208228e-116
+      ],
+      "updated_source_approximant": [
+        3.445832020196661e-09,
+        -2.303487501657276e-08,
+        5.0524202471545e-115,
+        1.2207008945309774e-08
+      ]
+    }
+  }
+}

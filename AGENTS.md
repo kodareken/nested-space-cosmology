@@ -1,24 +1,37 @@
-# Nested-Space Cosmology — repository index
+# NSC — one repository, active index
 
-This is the public paper/evidence repository for one NSC research programme.
-Read [instructions](docs/instructions.md), then select the owner for the task
-from this index. Keep this index as the navigation map throughout the work.
-When relevant files, owners or behavior change, update their documentation in
-`docs/` and this index in the same change so a fresh agent can find the result.
+Read [instructions](docs/instructions.md), [the accepted plan](docs/PLAN.md),
+and [the current handover](docs/handover.md). Keep this index in view during
+work and update its owners when relevant files, behavior or scope change.
+Do not rely on chat memory or historical continuation instructions.
+
+```text
+AGENTS.md                 entry point and maintained index
+ docs/                    active instructions, PLAN.md, handover.md, paper guides
+ paper/                   both manuscripts, PDFs and frozen paper evidence
+ src/, scripts/, tests/   curated publication/replay owners
+ results/                 published evidence and release manifests
+ lab/                     active scientific workspace in this SAME Git repo
+   src/, scripts/, tests/ current numerical and proof owners
+   docs/                  derivations, claim ledger and scientific code map
+   results/               retained source, calibration and numerical evidence
+   archive/               historical code within its recorded domain
+   .source-history/       exact historical source objects for current replay
+```
 
 | Need | Owner |
 |---|---|
-| Why there are two papers; sources, PDFs and their relationship | [Paper guide](docs/papers.md), [machine-readable catalog](paper/catalog.json) |
-| Current scientific result and remaining gaps | [Current result](docs/current-result.md) |
-| Resume after compaction; repository roles and editing boundaries | [Instructions](docs/instructions.md) |
-| Inheritance idea and evidence labels | [Theory](THEORY.md) |
-| Finite nested-quality theorem and evidence | [Proof](docs/nsc-nested-qualities.md), [snapshot](paper/nested-quality-evidence/snapshot.json) |
-| Existing mathematics to reuse | [Prior-art reuse map](docs/nsc-prior-art-reuse.md) |
-| Verify records and build artifacts | [Reproduction](docs/reproducing.md), [focused-draft build](docs/local-gate-draft.md) |
-| Publication and contribution contracts | [Contributing](CONTRIBUTING.md) |
+| Location, branches, commands and recovery | [Instructions](docs/instructions.md), [consolidation](docs/repository-consolidation.md) |
+| Approved research goal and next step | [Plan](docs/PLAN.md), [handover](docs/handover.md) |
+| Existing mathematics, assumptions and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
+| Active field methods | [Whole cone](lab/docs/nsc-ks-whole-cone-field-v1.md), [radius coupling](lab/docs/nsc-ks-radius-coupling-bounds.md), [endpoint contraction](lab/docs/nsc-ks-endpoint-contraction.md) |
+| Both papers and public status | [Paper guide](docs/papers.md), [current result](docs/current-result.md), [catalog](paper/catalog.json) |
+| Finite nested-quality theorem | [Proof](docs/nsc-nested-qualities.md), [frozen evidence](paper/nested-quality-evidence/snapshot.json) |
+| Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
+| Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 
-Current local-gate status is **OPEN**. The dated v0.26.0 manuscript is preserved;
-the focused article is a companion, not its replacement. The public snapshot
-is not the complete active laboratory. File integrity and passing software
-tests do not establish scientific closure. Add new project documentation under
-`docs/` and link its owning page from this index when useful to future work.
+Work on `codex/work-branch`; integrate verified work into `main` and push both
+to `kodareken/nested-space-cosmology`. The local incoming gate remains OPEN.
+The finite theorem does not complete the accepted local-gate plan. Different
+regions can have different states under the same law; eternity is not a proof
+target. Scientific work uses `lab/` owners, not the older root publication code.

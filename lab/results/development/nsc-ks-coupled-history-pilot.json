@@ -1,0 +1,240 @@
+{
+  "accountable_author": "Douglas Ek",
+  "constraint_maxima": [
+    0.002606822811277913,
+    6.0210388223287374e-05
+  ],
+  "energy_interpolation_degree": 32,
+  "energy_interval": [
+    0.0,
+    160.0
+  ],
+  "grid_nodes": 64,
+  "history": {
+    "axial_support": [
+      1.1468780671724792,
+      1.2668780671724793
+    ],
+    "class": "local source-fixed pure-radius compatible histories",
+    "coefficient_order": "w then U; increasing Chebyshev degree",
+    "coefficients": [
+      [
+        0.0,
+        0.0002067606334475685,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        12.12435557608503,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "duration_selected": false,
+    "interval": [
+      1.1768780671724792,
+      1.2368780671724793
+    ],
+    "normal_window": [
+      0.007,
+      0.03
+    ],
+    "physical_gate": "OPEN; actual evolved full source and error enclosure required",
+    "radius_lower_bound": 0.9999392375809041,
+    "state_supplied_by_family": false
+  },
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01-+1.json": "8c1258e55b06f8cebf82c4fce679ff3fa45679bd732d58ac127d78f96c03cd1f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01--1.json": "83ca518a97a5c59e87cacbf578f6adfdc9cac82f238f323ac7def6bc1ba61010",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02-+1.json": "67928a718edcf00b2e00d250039d8f8f3529a27ddabb8792cc9d805346ad22b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02--1.json": "a09976d0796c367660b36f869c2edb5949b7f1e85cf5f5b527ca028e307204d7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03-+1.json": "ef2edecec4d348a7cc31afd25a09b874532c35cf5d8335d07384e5821aa8c160",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03--1.json": "e2287e0097855ee7b28fc57bac4990a359d29ca6fbd856268c2c6410e83df7b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04-+1.json": "d8323b0a7de83f57d3ccbc98c2fcfc09142edef6f8f5d31adf3777bd4a564961",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04--1.json": "8ee53a6540adbe7f07c627712ae6c349c04dbdb37ffa4f319488c756ba12f12c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05-+1.json": "afdc070960bf890a562cce3ab4542f96e4259d09256f5ac83a1f8eb34c9ced7c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05--1.json": "24bd5ca580b6f07e314433d42a40682851032fa5ea7415d1f4d8b30cd01fd256",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06-+1.json": "72d2bb7f8329ff93f2701e0a31a66e63e15d16292a8dd3d84056cbacc3413db0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06--1.json": "92b789ce874794987a57986bfdc06e2f07310f88c52a8b30d5e0de481e51187a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07-+1.json": "16f285046eb5a8abb9f93c6b32cb129d21fc436a9ce49e39c3e2353ec035d20d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07--1.json": "a2eed3af3c9715834376a6b2ec3551fd48356518af80bb97a20ef130ac793e2b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08-+1.json": "b59f28c2e91944dde7e33965010e19967533365d2bf379e6824b8ca9264f3738",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08--1.json": "f33bd47c48f0c862763cbebe62b6e17217ae94cee26d1a4b8f314e4daa9cf306",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09-+1.json": "2fb6ca9dd88af25c193dd328f851fcbc90e7e0e737bac17aff1cc09e29bd6f0b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09--1.json": "2b061b24f2c86b45dfa37295dc96c0b3aa7da317e6e9a22613aed7bd81ecca93",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10-+1.json": "202e4d2626047e328c0cc3d173478f1b5ccae5898fdada6297bead13b86abe6d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10--1.json": "414940ead7ba2768923dd08d2ee218d30919f1b58f1cc2be00667e7e96d16032",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11-+1.json": "67edc8eadf792a13da97b41b41f17783958d3417e7ad389e62e75a5f40dfa0c1",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11--1.json": "1c1d5521bb7d9e43ec7527a51816052d605026cdabf5f96d1991064367454276",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12-+1.json": "83eaf342300d0b76b3656e94680958c23d59a8acb155d1ee6395417f7d33c852",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12--1.json": "62ed5fa7b5d4b840880e2dd6ad5047db73313e563fd617cbf9e8d09aee3df419",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.json": "6a545864f0d0a0ce8a5f6c4083abfadb6ad4dd5b124b000583c8f15aa2d37b34",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.npz": "c0f024907f1351ee0ab998a871818555ea2f8b27dc8931636e6f91039875455e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14--1.json": "97c8471c38ced6dab0cb801d07da1760d64f005af4965bdb3f198eddbc04d239",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14--1.npz": "fce9b6665ff81aea3d19f3f75053ac806aa675bf9b84b685dcce52b17f1c35a6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15-+1.json": "33dedf7d643953f171f8a1cd31cf930fa8a47b36653ce3d553c32e637108aae9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15--1.json": "04bcbdc57503773673d0f62230fc8b287c8d1389bb99db21fd46dddb11ef5b75",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16-+1.json": "95bedccf1f8b1af7638660aab1a35a0e9f8316011070ac0db9dae3feb5def4e0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16--1.json": "2490ea406e4995fbfd90635b7abadd8079d19042921f1bb7683f9df079181e71",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17-+1.json": "3332b234453c13c014f9dfd915c1e0041a61e5b73f4e0ac44ddc9ca622196123",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17--1.json": "adfc7d8836e6aa206138a1fd75c839649ae5180485cd04956499b5b8db9cece6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18-+1.json": "1865c03586edb9affd5c11a2ac1572574dfe09c2ce2cb587fc5a0517cd853836",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18--1.json": "701357e738555ceb7784ac3dc48cc6606505607478b526ca62333c4a75e70539",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19-+1.json": "33842f6a11c5718633e6c4e43ceba19ec4196bfe9c26d4b534182772a23487c9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19--1.json": "9d4883da6bf7758e38d095b7c6ed1020f368d37650c92f97539200af7ef0129d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20-+1.json": "fdf5ff61880aeb948ee236fde7e10ef858420b6e193975185c038f720154449b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20--1.json": "481dde106ea408b2c48fbc550d5a1987e16e3f359446a6d417f342d6a11e2481",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21-+1.json": "a49b13aea2017b9c3a51dc5837f1f466eae261b8ee2820ed59475de4cdba31a6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21--1.json": "98a86d8d3d83a1d2b1fb69bb35b8d537406e542505d4b0635cfadad970c3c92b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22-+1.json": "9cdaeac607dbf20a2425eb8cf19d7023c0d29245cbb1cc27c064daf76b356028",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22--1.json": "9cbe0bb8b37a1b387bdcb5589fd6775e89c6eb5403d73f85d42f6ee488a0ee97",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24-+1.json": "4bdee28cbc3891d0fb108d94981ab61289fef688fc948f988dfabad826e2dac9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24--1.json": "18774a6b56b91e5939d2c74cf215ac8718b26bc36e9dcd0c802dc18ae6a23ce9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25-+1.json": "cf132e9b6b530cdd0bf6bae121ae3fea38d2001d2c45a9d5adc4f96779e3cd8a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25--1.json": "6e3547d8b833150105ed5f60019ec0197fe846244ecf11cdd0a716ffe36fd7cd",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26-+1.json": "c66d8b44652e8a03cbdff60e90ce300784315811d68e7f47c7ab9e3429ba4537",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26--1.json": "05a26bd27bd6c474779f9120c9df2742c634a4521d6600615c83e87ee6f0a883",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27-+1.json": "4b2cc9524c0101fb93978c5bcc7f5aa45cdfb97e7ed882ae254854c7e798a72e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27--1.json": "982659e6922062d3b40d5f2df5166c3542af88ea7d21d9b91d83179e64a8685d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28-+1.json": "d30d16f957bfcada76d109bce15b8fa43e247c3af73adfc1f900f65e9f8a138b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28--1.json": "e45153643ff8293008ec90e1528e96dd3451aa280870cf4394f88dad3e9c72a7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29-+1.json": "cadef94c7e44b45a4339df2f00507087917ab70828bb3de83678db58a6d63f3f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29--1.json": "9953228558e91230bc818fd0d6a1b1d14fb8ebdd9cd41c89e7ba2bc7854236e5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30-+1.json": "23b6683e4e0d26da2850521f3312d9ff564b77189034b8d4a049e44cc627fffb",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30--1.json": "c349ceef1b82eb290c25fc2dbe1a4fe14a436033e56371cf533ba756a3af80b6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31-+1.json": "620b81efb95d615917010f87d9ae7776045faabb8b13b016dd0ca9b20bb7a7a5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31--1.json": "eface92abd8d1e49f49985fd03c2940e236d55c51f283006923709d53fbd7ab3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32-+1.json": "b1d44d3e6705dc7d7130853a180e1e056361402f087e2f2d81af0c6c9a5a5554",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32--1.json": "4ebf6d1cfefa8c92ff04f709f5967dba9403f1e439cef6d75a019c1860e091ac",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-retained-response-sum.json": "a2300f2badea68344b041451f70a56affc5a10b795ae4d6fab6f8476b3580407",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "operators": [
+    {
+      "angular": -2.23606797749979,
+      "diagnostics": {
+        "accepted_steps": 16,
+        "function_evaluations": 206,
+        "identity_is_operator_basis": true,
+        "physical_constraint_status": "OPEN",
+        "physical_source_supplied": false
+      },
+      "digest": "16ae1ce830d2c582f10e0c2566b6ba53b1ea558debe2ad5378209da5848c5b04",
+      "mass": 1.5707963267948966,
+      "rho_up": 1.0300000000000002
+    },
+    {
+      "angular": 2.23606797749979,
+      "diagnostics": {
+        "accepted_steps": 16,
+        "function_evaluations": 206,
+        "identity_is_operator_basis": true,
+        "physical_constraint_status": "OPEN",
+        "physical_source_supplied": false
+      },
+      "digest": "487174431224a211f51650d7598a4bd6a7c406c9c3e9c3d7145c0f0957c35270",
+      "mass": 1.5707963267948966,
+      "rho_up": 1.0300000000000002
+    }
+  ],
+  "options": {
+    "atol": 2e-13,
+    "max_step": 0.002,
+    "rtol": 2e-11
+  },
+  "payload": {
+    "bytes": 3333424,
+    "path": "results/development/artifacts/nsc-ks-coupled-history-pilot.npz",
+    "sha256": "e8300a6dfdb57263d727291ae02a58b23d0a292050f7daa3fa2b3cb0ce16e0de"
+  },
+  "profile_identity": "175a69769ef4e257055785d67a92676ec2acad79059d21b8a1add7b1c55f74da",
+  "retarded_directions": 16,
+  "retarded_matter_plus_edge_jacobian_maxima": [
+    0.5506036872261575,
+    0.32886400556890294
+  ],
+  "runtime": {
+    "CPU_cap": 30.0,
+    "CPU_seconds": 5.755863,
+    "new_operator_solves": 2
+  },
+  "schema": "NSC-KS-COUPLED-HISTORY-PILOT-v1",
+  "scope": {
+    "between_node_error_bound": null,
+    "finite_tail_and_full_error_bound": null,
+    "full_source_coverage": false,
+    "metric_timestep": false,
+    "new_action_term": false,
+    "physical_local_gate": "OPEN",
+    "physical_optimizer_run": false,
+    "source_cutoff_edge_and_tangent_included": true,
+    "source_preparation_repeated": false
+  },
+  "seed": {
+    "U_constant": 12.12435557608503,
+    "physical_root_claimed": false,
+    "purpose": "geometric solver control only",
+    "source_evolved_from_original_upstream": true,
+    "w_at_center": 0.0,
+    "w_z_at_center": 0.003446010557459475,
+    "w_zz_at_center": 0.0
+  },
+  "signed_batches": 148,
+  "signed_families": [
+    "14_-1_E+1",
+    "14_-1_E-1",
+    "14_1_E+1",
+    "14_1_E-1"
+  ],
+  "source_hashes": {
+    "docs/nsc-ks-coupled-history-pilot.md": "81190fcb76f911e6091b6935ee2128e2d37df54a6559fe4f63fed66137bbc726",
+    "scripts/derive_nsc_ks_coupled_history_pilot.py": "929046fd3a3dc3742990f70a50fee7ef7a7485aadfb7608a482a42dcc6bfe03b",
+    "src/recursive_horizons/nsc_dirac_source_phase.py": "39c36757c1fb38d200d050efc21e00f1913cac14a511a8f2b93e507267bf40fd",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196",
+    "src/recursive_horizons/nsc_ks_energy_propagator.py": "5f75023efc8c2b637fc4983b414cab50f15f90f8abc1a24dbc1d23ecef9ecf94",
+    "src/recursive_horizons/nsc_ks_history_evaluator.py": "86ed312db133f201a3cce11cacc96b62dc89d6c3fe434bdac0f77ca54d023cd6",
+    "src/recursive_horizons/nsc_ks_retained_upstream_archive.py": "e993f3937aff06aafda728f28446bdba04b6f7c7ccacc5fc312e5ac519d87c94"
+  },
+  "source_rows_per_energy_sign": 1168,
+  "status": "OPEN: coupled-history throughput control; only original group14 source responses included",
+  "target_nodes": [
+    1.1768780671724792,
+    1.1774545087603823,
+    1.1791616811971406,
+    1.1798490011354066,
+    1.181933978803403,
+    1.1856648637368827,
+    1.1881733731167172,
+    1.190210960181891,
+    1.1953975642015267,
+    1.2002024391537898,
+    1.2010253575119954,
+    1.2068780671724793,
+    1.2127307768329632,
+    1.2135536951911687,
+    1.2183585701434319,
+    1.2235451741630674,
+    1.2255827612282413,
+    1.2280912706080758,
+    1.2318221555415556,
+    1.233907133209552,
+    1.234594453147818,
+    1.2363016255845762,
+    1.2368780671724793
+  ]
+}

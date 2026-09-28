@@ -1,0 +1,133 @@
+{
+  "blocking_residuals": [
+    {
+      "channel": "free-endpoint Weyl momentum",
+      "owner": "GeneralKSLocalInducedHistory",
+      "tolerance": 3e-11,
+      "value": 93.54264532195464
+    },
+    {
+      "admissible_family_dimension": 447488,
+      "channel": "physical frequency-mixing kernel V_c",
+      "owner": "TransmittingTiltedLandauInterface",
+      "value": null
+    }
+  ],
+  "comparison": {
+    "exact": "schema, strings, booleans and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "component_gates": {
+    "GeneralKSFourthOrderReferenceHistory": {
+      "pass": true,
+      "status": "PASS: supplied-history order-0..4 reference and all four ADM variation channels are executable; extended composition remains OPEN"
+    },
+    "GeneralKSLocalInducedHistory": {
+      "bulk_pass": true,
+      "endpoint_pass": false,
+      "status": "COMPONENT PASS / COMPOSITION OPEN: node-wise local forces are executable; the free-endpoint Weyl completion is absent"
+    },
+    "TransmittingTiltedLandauInterface": {
+      "construction_pass": true,
+      "selector_pass": false,
+      "status": "CONSTRUCTION PASS / PHYSICAL SELECTOR OPEN: the complete retained channel-block family is weighted-isometric and CAR preserving, including frequency-mixing witnesses, but the boundary/endpoint data do not select one physical kernel"
+    }
+  },
+  "composition": {
+    "components_expose_residuals": true,
+    "extended_functional_complete": false,
+    "killed_homogeneous_regression_pass": true,
+    "local_bulk_pass": true,
+    "physical_kernel_selector_pass": false,
+    "reference_pass": true,
+    "stationarity_solve_authorized": false,
+    "tilted_interface_construction_pass": true,
+    "weyl_endpoint_completion_pass": false
+  },
+  "exact_next_owner": {
+    "already_declared_role": "Gamma_rest/interface term in pi_parent+pi_child+delta Gamma_rest/delta h=0",
+    "must_determine": [
+      "one V_c per retained channel from the existing link/boundary dynamics",
+      "tilted embedding and frequency mixing",
+      "metric/interface variation that completes the Weyl endpoint momentum"
+    ],
+    "name": "ModeResolvedTransmittingBoundaryHistoryAction",
+    "new_physical_term_required": false
+  },
+  "extended_stationarity": {
+    "delta_Gamma_assembled": false,
+    "existence_claimed": false,
+    "finite_stress": null,
+    "nonexistence_claimed": false,
+    "null_signs": null,
+    "optimizer_started": false,
+    "reason": "the action derivative is not single-valued until V_c and the matching endpoint variation are selected by the same boundary action",
+    "updated_constraints": null
+  },
+  "frequency_mixing_family": {
+    "admissible_nullity": 447488,
+    "constraint_rank": 447488,
+    "full_rank": 3808,
+    "physical_Vc_selected": false,
+    "rank_defect": 0
+  },
+  "gate": {
+    "coupled_evolution_reopened": false,
+    "extended_composition_ready": false,
+    "finite_stress_fabricated": false,
+    "three_records_real": true
+  },
+  "input_hashes": {
+    "results/development/compact-boundary-action.json": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce",
+    "results/development/nsc-general-ks-local-history.json": "b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+    "results/development/nsc-general-ks-reference.json": "6c8d80297b5cafcb0e61815cd5a425d9b45364bddc5f89e3a4a824b974c5a146",
+    "results/development/nsc-general-ks-same-action-history.json": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-tilted-landau-interface.json": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "refit": false,
+    "zeta": 15.785319939652627
+  },
+  "regression": {
+    "homogeneous_no_interface_nonexistence_still_passes": true
+  },
+  "residual_vector": {
+    "interface_CAR": 1.9984014443252818e-14,
+    "interface_unitarity": 4.94869688636381e-15,
+    "interface_variation": 8.834738780885857e-15,
+    "local_node_gradient": 2.077740759443003e-07,
+    "local_weyl_free_endpoint": 93.54264532195464,
+    "reference_bloch": 2.168404344971009e-19,
+    "reference_order_normalization": 3.0357660829594124e-18,
+    "reference_parity_beta": 0.0
+  },
+  "schema": "NSC-EXTENDED-TILTED-HISTORY-GATE-v1",
+  "scope": {
+    "A_q_Omega_zeta_or_V_full_changed": false,
+    "diagnostic_kernel_selected_physical": false,
+    "metric_timestep_started": false,
+    "new_counterflow_dark_fluid_or_compensator": false,
+    "old_generators_rerun": false
+  },
+  "source_hashes": {
+    "docs/nsc-extended-tilted-history-gate.md": "4c9b07482311c8ba95988cae2416f5049543e508ff8f83a28a4521d94fe32b4c",
+    "scripts/derive_nsc_extended_tilted_history_gate.py": "daa26999b0234daf8b8ab92ed9592d41ad36a4db02f46fac6918e3d249bf7261",
+    "src/recursive_horizons/nsc_extended_tilted_history_gate.py": "a23a44c6127a8ec141af33d1e5e33812ba8cc1b2d10593a6bcdc8f827f80559e"
+  },
+  "status": "COMPONENT CONSTRUCTION PASS / EXTENDED STATIONARITY OPEN: all three owners expose residuals, but the physical mixing kernel and Weyl endpoint completion are not selected",
+  "tolerances": {
+    "interface": 3e-11,
+    "local_node_gradient": 5e-07,
+    "reference": 3e-08,
+    "stationarity": 3e-11
+  }
+}

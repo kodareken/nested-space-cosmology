@@ -1,0 +1,1001 @@
+{
+  "artifact_id": "FGC-1-HYP1-MHG4-PROP1",
+  "artifact_label": "FGC-1 HYP1 exact conditional lower-order reference-gauge operator gate",
+  "classification": "exact_lower_order_reference_gauge_operator_conditional_on_noether_and_scalar_equations_not_direct_metric_residual_divergence_or_constraint_propagation",
+  "coordinate_radii": {
+    "FGCQR_activated_generic": "9/2",
+    "FGCQR_flat_reference_vacuum": "4"
+  },
+  "derivation_document": "docs/fgc-hyp1-mhg-propagation.md",
+  "derivation_document_sha256": "f5e0a9ee361cfbf5c0ca5c015c4630ecd25deff21cc75ddabe5a9d4de0273d15",
+  "development_status": "conditional_lower_order_reference_gauge_operator_complete_metric_derived_constraint_propagation_first_order_domain_and_evolution_gates_open",
+  "formulation": {
+    "direct_full_metric_residual_divergence_evaluated": false,
+    "expanded_operator": "nabla(F*hat_P)*nabla_C+(F/2)*hat_g*nabla_nabla_C+(F/2)*hat_g^nu_beta*Ricci_alpha_beta*C^alpha",
+    "gauge_constraint": "C^mu=-tilde_g^rho_sigma*(Gamma^mu_rho_sigma-bar_Gamma^mu_rho_sigma)",
+    "gauge_equations": "REF1_full_reference_connection_modified_harmonic",
+    "gauge_jet_order": [
+      "value",
+      "dt",
+      "dr",
+      "dtt",
+      "dtr",
+      "drr"
+    ],
+    "gauge_vector_order": [
+      "C^t",
+      "C^r"
+    ],
+    "hat_normal_factor": 9,
+    "noether_identity": "nabla_mu_E^mu_nu+E_phi*nabla^nu_phi+E_chi*nabla^nu_chi=0",
+    "off_scalar_shell_source": "E_phi*nabla^nu_phi+E_chi*nabla^nu_chi",
+    "operator_input": "independent_spherically_symmetric_contravariant_gauge_vector_two_jet",
+    "output_order": [
+      "nu=t",
+      "nu=r",
+      "nu=theta",
+      "nu=phi"
+    ],
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "propagation_operator": "nabla_mu[F*hat_P_alpha^(beta_mu_nu)*nabla_beta_C^alpha]",
+    "riemann_commutator": "[nabla_mu,nabla_beta]V^rho=R^rho_sigma_mu_beta*V^sigma",
+    "tilde_normal_factor": 4
+  },
+  "gate_status": {
+    "complete_first_order_reduction_passed": false,
+    "complete_gauge_propagation_passed": false,
+    "conditional_lower_order_reference_gauge_operator_passed": true,
+    "direct_metric_derived_gauge_constraint_propagation_passed": false,
+    "evolution_authorized": false,
+    "full_fgc1_hyp1_health_gate_passed": false,
+    "publication_local_defocusing_gate_passed": false,
+    "uniform_open_domain_hyperbolicity_gate_passed": false
+  },
+  "gauge_propagation_certificate": {
+    "activated_operator_probe": {
+      "coefficient_blocks": {
+        "dr": [
+          [
+            "-25444631/27088425",
+            "4097098/1658475"
+          ],
+          [
+            "4056791/1786050",
+            "-367185929/243795825"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "drr": [
+          [
+            "58/315",
+            "0"
+          ],
+          [
+            "0",
+            "58/315"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "dt": [
+          [
+            "-2874374/1658475",
+            "464/175"
+          ],
+          [
+            "231044516/48759165",
+            "-1678/20475"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "dtr": [
+          [
+            "-112/15",
+            "0"
+          ],
+          [
+            "0",
+            "-112/15"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "dtt": [
+          [
+            "-56/5",
+            "0"
+          ],
+          [
+            "0",
+            "-56/5"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "value": [
+          [
+            "-551332150349/423334036125",
+            "1319225161312/1747609738875"
+          ],
+          [
+            "613069467971473/746761239724500",
+            "-14755174291210621/20038093265940750"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "fixture_id": "FGCQR_activated_generic",
+      "homogeneity_factor": "-7/5",
+      "operator": {
+        "coordinate_divergence": [
+          "198822248234179/636129944950500",
+          "-2081148099803249797/1683199834339023000",
+          "0",
+          "0"
+        ],
+        "coordinate_route_uses_raw_partial_jet_not_covariant_second": true,
+        "direct_metric_derived_residual_divergence_evaluated": false,
+        "effective_planck_coefficient": "35/9",
+        "expanded_connection_wave_contribution": [
+          "-698133344958893/1120141859586750",
+          "153905907818734091/329321706718504500",
+          "0",
+          "0"
+        ],
+        "expanded_curvature_commutator_term": [
+          "-2051698338332/12233268172125",
+          "527484238129/25407556972875",
+          "0",
+          "0"
+        ],
+        "expanded_divergence": [
+          "198822248234179/636129944950500",
+          "-2081148099803249797/1683199834339023000",
+          "0",
+          "0"
+        ],
+        "expanded_gradient_F_term": [
+          "69680453/4635130500",
+          "216027167/681364183500",
+          "0",
+          "0"
+        ],
+        "expanded_projector_derivative_term": [
+          "13649055296/51719542875",
+          "2751099723056/14119435204875",
+          "0",
+          "0"
+        ],
+        "expanded_route_uses_covariant_second": true,
+        "expanded_wave_term": [
+          "225513788420077/1120141859586750",
+          "-956578466036526293/658643413437009000",
+          "0",
+          "0"
+        ],
+        "extension_contravariant": [
+          [
+            "-102818869/14189175",
+            "-1993466/429975",
+            "0",
+            "0"
+          ],
+          [
+            "-1993466/429975",
+            "-67908152129/25029704700",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "12646651/183891708",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "12646651/183891708"
+          ]
+        ],
+        "gauge_input_is_independent": true,
+        "gradient_effective_planck": [
+          "1/12",
+          "-1/7",
+          "0",
+          "0"
+        ],
+        "hat_inverse_metric": [
+          [
+            "-144/25",
+            "-48/25",
+            "0",
+            "0"
+          ],
+          [
+            "-48/25",
+            "116/1225",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "4/81",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "4/81"
+          ]
+        ],
+        "two_routes_agree_exactly": true
+      },
+      "probe_is_metric_derived_C": false,
+      "zero_independent_probe_control": {
+        "coordinate_divergence": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "coordinate_route_uses_raw_partial_jet_not_covariant_second": true,
+        "direct_metric_derived_residual_divergence_evaluated": false,
+        "effective_planck_coefficient": "35/9",
+        "expanded_connection_wave_contribution": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_curvature_commutator_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_divergence": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_gradient_F_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_projector_derivative_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_route_uses_covariant_second": true,
+        "expanded_wave_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "extension_contravariant": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "gauge_input_is_independent": true,
+        "gradient_effective_planck": [
+          "1/12",
+          "-1/7",
+          "0",
+          "0"
+        ],
+        "hat_inverse_metric": [
+          [
+            "-144/25",
+            "-48/25",
+            "0",
+            "0"
+          ],
+          [
+            "-48/25",
+            "116/1225",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "4/81",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "4/81"
+          ]
+        ],
+        "two_routes_agree_exactly": true
+      }
+    },
+    "all_declared_exact_checks_pass": true,
+    "artifact_id": "FGC-1-HYP1-MHG4-PROP1",
+    "classification": "exact_lower_order_reference_gauge_operator_conditional_on_noether_and_scalar_equations_not_direct_metric_residual_divergence_or_constraint_propagation",
+    "conditional_lower_order_reference_gauge_operator_derived": true,
+    "flat_root_control": {
+      "fixture_id": "FGCQR_flat_reference_vacuum",
+      "nonzero_independent_probe": {
+        "coordinate_divergence": [
+          "-9577/1309",
+          "73669/7854",
+          "0",
+          "0"
+        ],
+        "coordinate_route_uses_raw_partial_jet_not_covariant_second": true,
+        "direct_metric_derived_residual_divergence_evaluated": false,
+        "effective_planck_coefficient": "4",
+        "expanded_connection_wave_contribution": [
+          "-3/7",
+          "31/42",
+          "0",
+          "0"
+        ],
+        "expanded_curvature_commutator_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_divergence": [
+          "-9577/1309",
+          "73669/7854",
+          "0",
+          "0"
+        ],
+        "expanded_gradient_F_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_projector_derivative_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_route_uses_covariant_second": true,
+        "expanded_wave_term": [
+          "-9577/1309",
+          "73669/7854",
+          "0",
+          "0"
+        ],
+        "extension_contravariant": [
+          [
+            "-102/35",
+            "-408/35",
+            "0",
+            "0"
+          ],
+          [
+            "-408/35",
+            "106/105",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-17/140",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-17/140"
+          ]
+        ],
+        "gauge_input_is_independent": true,
+        "gradient_effective_planck": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "hat_inverse_metric": [
+          [
+            "-9",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/16",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/16"
+          ]
+        ],
+        "two_routes_agree_exactly": true
+      },
+      "zero_probe": {
+        "coordinate_divergence": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "coordinate_route_uses_raw_partial_jet_not_covariant_second": true,
+        "direct_metric_derived_residual_divergence_evaluated": false,
+        "effective_planck_coefficient": "4",
+        "expanded_connection_wave_contribution": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_curvature_commutator_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_divergence": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_gradient_F_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_projector_derivative_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "expanded_route_uses_covariant_second": true,
+        "expanded_wave_term": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "extension_contravariant": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "gauge_input_is_independent": true,
+        "gradient_effective_planck": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "hat_inverse_metric": [
+          [
+            "-9",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/16",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/16"
+          ]
+        ],
+        "two_routes_agree_exactly": true
+      }
+    },
+    "formulation": {
+      "activated_coordinate_radius": "9/2",
+      "direct_full_metric_residual_divergence_evaluated": false,
+      "flat_coordinate_radius": "4",
+      "gauge_equations": "REF1_full_reference_connection_modified_harmonic",
+      "gauge_jet_order": [
+        "value",
+        "dt",
+        "dr",
+        "dtt",
+        "dtr",
+        "drr"
+      ],
+      "gauge_vector_order": [
+        "C^t",
+        "C^r"
+      ],
+      "hat_normal_factor": "9",
+      "homogeneous_only_on_both_scalar_equations": true,
+      "noether_identity": "nabla_mu_E^mu_nu+E_phi*nabla^nu_phi+E_chi*nabla^nu_chi=0",
+      "off_scalar_shell_source": "E_phi*nabla^nu_phi+E_chi*nabla^nu_chi",
+      "operator": "nabla_mu[F*hat_P_alpha^(beta_mu_nu)*nabla_beta_C^alpha]",
+      "operator_input": "independent_spherically_symmetric_contravariant_gauge_vector_two_jet",
+      "output_order": [
+        "nu=t",
+        "nu=r",
+        "nu=theta",
+        "nu=phi"
+      ],
+      "physical_equations": "unredefined_ACT1_VAR1",
+      "reference_connection_enters_through_metric_derived_C_not_as_independent_forcing": true,
+      "tilde_normal_factor": "4"
+    },
+    "nonclaims": {
+      "boundary_or_regular_center_system_derived": false,
+      "collapse_solution_derived": false,
+      "complete_lower_order_first_order_sources_derived": false,
+      "constraint_preserving_initial_boundary_value_problem_proven": false,
+      "direct_metric_derived_full_residual_divergence_evaluated": false,
+      "evolution_authorized": false,
+      "metric_derived_gauge_constraint_propagation_proven": false,
+      "metric_null_affine_defocusing_derived": false,
+      "open_retained_eft_domain_proven": false,
+      "physical_initial_constraints_solved": false,
+      "quantified_implicit_branch_neighborhood_proven": false,
+      "reduction_constraint_propagation_proven": false,
+      "singularity_resolution_derived": false,
+      "uniform_open_domain_symmetrizer_proven": false
+    },
+    "principal_regression": {
+      "C_value_first_second_partial_blocks": {
+        "dr": [
+          [
+            "-25444631/27088425",
+            "4097098/1658475"
+          ],
+          [
+            "4056791/1786050",
+            "-367185929/243795825"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "drr": [
+          [
+            "58/315",
+            "0"
+          ],
+          [
+            "0",
+            "58/315"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "dt": [
+          [
+            "-2874374/1658475",
+            "464/175"
+          ],
+          [
+            "231044516/48759165",
+            "-1678/20475"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "dtr": [
+          [
+            "-112/15",
+            "0"
+          ],
+          [
+            "0",
+            "-112/15"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "dtt": [
+          [
+            "-56/5",
+            "0"
+          ],
+          [
+            "0",
+            "-56/5"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "value": [
+          [
+            "-551332150349/423334036125",
+            "1319225161312/1747609738875"
+          ],
+          [
+            "613069467971473/746761239724500",
+            "-14755174291210621/20038093265940750"
+          ],
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ]
+      },
+      "angular_independent_C_columns_not_represented": true,
+      "coefficient_block_shape": [
+        4,
+        2
+      ],
+      "mhg1_full_four_index_principal": [
+        [
+          [
+            "58/315",
+            "112/15",
+            "-56/5"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "58/315",
+            "112/15",
+            "-56/5"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "58/315",
+            "112/15",
+            "-56/5"
+          ],
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "0"
+          ],
+          [
+            "58/315",
+            "112/15",
+            "-56/5"
+          ]
+        ]
+      ],
+      "radial_principal_polynomial": [
+        [
+          [
+            "58/315",
+            "112/15",
+            "-56/5"
+          ],
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "58/315",
+            "112/15",
+            "-56/5"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ],
+        [
+          [
+            "0"
+          ],
+          [
+            "0"
+          ]
+        ]
+      ],
+      "represented_C_input_order": [
+        "C^t",
+        "C^r"
+      ],
+      "second_partial_C_order": [
+        "dtt",
+        "dtr",
+        "drr"
+      ],
+      "spherical_t_r_columns_match_mhg1_exactly": true
+    },
+    "verified_exact_checks": {
+      "activated_connection_contribution_nonzero": true,
+      "activated_curvature_contribution_nonzero": true,
+      "activated_first_gauge_jet_coefficients_nonzero": true,
+      "activated_gradient_F_contribution_nonzero": true,
+      "activated_projector_derivative_contribution_nonzero": true,
+      "activated_second_gauge_jet_coefficients_nonzero": true,
+      "activated_two_routes_agree_exactly": true,
+      "angular_covariant_effects_retained_without_independent_angular_C": true,
+      "exact_linear_homogeneity": true,
+      "exact_linear_superposition": true,
+      "flat_nonzero_probe_exercises_operator": true,
+      "flat_nonzero_two_routes_agree_exactly": true,
+      "flat_zero_gauge_operator_exact": true,
+      "flat_zero_two_routes_agree_exactly": true,
+      "implicit_flat_fgcqr_root_predecessor_exact": true,
+      "operator_input_explicitly_independent_not_metric_derived": true,
+      "reference_connection_is_not_an_independent_operator_source": true,
+      "spherical_principal_columns_match_mhg1_exactly": true
+    }
+  },
+  "gauge_propagation_certificate_sha256": "db23bc7ce6b900593201bde754e9683f6d1c9aea808b3baa3982929086db51f4",
+  "generated_by": "scripts/reproduce_fgc_hyp1_mhg_propagation.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_action.py": "8ce5fc6b2b9fbda40816fddb7df64113f35dad9033cbb2ed5a7e1eafd79108e1",
+    "scripts/reproduce_fgc_hyp1_mhg_implicit.py": "9f7c423f6159f55e138f6fc4dcfb14ec7d291b9c23531c7a252389b128ff1dc2",
+    "scripts/reproduce_fgc_hyp1_mhg_propagation.py": "ae10ffbfd639ba3e0fb0384738bafa16bb7c4c7726961a9483a2b01555e273d0",
+    "scripts/reproduce_fgc_hyp1_mhg_reference.py": "46dc9d7e44633a50e53abaec0fa2370f5517aa4436df2dfeec982c8101b2f289",
+    "scripts/reproduce_fgc_hyp1_modified_harmonic.py": "54bf54498ab73cfb2689f6daddaa922d60e3a2f5a80c66102eae2c058604c682",
+    "scripts/reproduce_fgc_hyp1_reduction.py": "5767d1cb540a958985d27b0dab38997669435fcbbd06eb0c23d4f805a107973f",
+    "scripts/reproduce_fgc_hyp1_symbol.py": "03af25c8d14c605fd6bb85927635b93e8380ead36f4b0318caff470c2df965b4",
+    "scripts/reproduce_fgc_metric_variation.py": "cd0f46288ff7dfb8c9a785e0a2c46a72150c310ff16caf4b5e377187443ff1df",
+    "src/recursive_horizons/fgc/__init__.py": "2b665e6ecef01c52d2780a950203b553355a97bd6658f149c46ef0c00a3b9f0c",
+    "src/recursive_horizons/fgc/exact_linear_algebra.py": "ea7036e9ab846ffd0804fc184ce5af1e59be5715584871608e7116d13d2731fe",
+    "src/recursive_horizons/fgc/exact_tangent.py": "242134bad2dcd75ee74e7fe358eebf3b01804058ada00397e999f7e12809fd5c",
+    "src/recursive_horizons/fgc/modified_harmonic.py": "8896a0c266d4c6904e5432a6c96c03386ab3f2d3321250738ad63f869732c00f",
+    "src/recursive_horizons/fgc/modified_harmonic_implicit.py": "ee8595f5946dd93b4c2c83907daf04e2a992be110ddb37ca7545baa8db40f21f",
+    "src/recursive_horizons/fgc/modified_harmonic_propagation.py": "390394c097430e0d3226b35683c402790b4dceb80cd2dac99eba7cfe4e5a6e99",
+    "src/recursive_horizons/fgc/modified_harmonic_reference.py": "1cb40b5a00c1651eb2c08cd3c78e7749e274d3954026e293975b4937a6ff7cbb",
+    "src/recursive_horizons/fgc/reference_connection.py": "1353ba305fb23122ae426983c74919a96272e2ffa8cd5c46c880bd96c6e46ad1",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c",
+    "src/recursive_horizons/fgc/spherical_symbol.py": "5add74bdc40f71c720d5739ded449262f1bd4e9586464f95ac16d123e290c19d"
+  },
+  "input_fixture_ids": [
+    "FGCQR_flat_reference_vacuum",
+    "FGCQR_activated_generic"
+  ],
+  "input_model_ids": [
+    "FGC-QR",
+    "FGC-QR"
+  ],
+  "nonclaims": {
+    "boundary_or_regular_center_system_derived": false,
+    "collapse_solution_derived": false,
+    "complete_lower_order_first_order_sources_derived": false,
+    "constraint_preserving_initial_boundary_value_problem_proven": false,
+    "direct_metric_derived_full_residual_divergence_evaluated": false,
+    "evolution_authorized": false,
+    "metric_derived_gauge_constraint_propagation_proven": false,
+    "metric_null_affine_defocusing_derived": false,
+    "open_retained_eft_domain_proven": false,
+    "physical_initial_constraints_solved": false,
+    "quantified_implicit_branch_neighborhood_proven": false,
+    "reduction_constraint_propagation_proven": false,
+    "singularity_resolution_derived": false,
+    "uniform_open_domain_symmetrizer_proven": false
+  },
+  "project_version": "0.11.0",
+  "proof_contract": {
+    "require_direct_metric_derived_divergence_nonclaim": true,
+    "require_exact_activated_probe_direct_expanded_agreement": true,
+    "require_exact_complete_spherical_coefficient_extraction": true,
+    "require_exact_coordinate_divergence_expanded_operator_agreement": true,
+    "require_exact_flat_nonzero_probe_control": true,
+    "require_exact_flat_zero_gauge_operator_control": true,
+    "require_exact_linear_homogeneity_and_superposition": true,
+    "require_exact_mhg1_hat_wave_principal_regression": true,
+    "require_exact_noether_sign_and_scalar_source_lock": true,
+    "require_nonzero_activated_connection_contribution": true,
+    "require_nonzero_activated_curvature_contribution": true,
+    "require_nonzero_activated_first_gauge_jet_contribution": true,
+    "require_nonzero_activated_gradient_F_contribution": true,
+    "require_nonzero_activated_projector_derivative_contribution": true,
+    "require_nonzero_activated_second_gauge_jet_contribution": true,
+    "require_reference_connection_not_an_independent_operator_source": true
+  },
+  "reference": {
+    "center_included": false,
+    "radial_domain_minimum": "1/2",
+    "reference_id": "flat_spherical_annulus"
+  },
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-hyp1-mhg-implicit.toml": "009817ad079ac342b3785a34bf91db5d8e2d4be969a77df24176c14bc8c433d0",
+    "configs/fgc/fgc-1-hyp1-mhg-propagation.toml": "694ce6ddee6b86941d3274d3dff5e2c705fe45dba22abb3c766454601e73d5b0",
+    "configs/fgc/fgc-1-hyp1-mhg-reference.toml": "878690ce00209b3572687d6ac0896ea70b7a82429803e221693c8de5455df12a",
+    "configs/fgc/fgc-1-hyp1-modified-harmonic.toml": "9d492be33aaec0dc033ffc643d35ecd1f69b3c71928a297687e08219b216a2b6",
+    "configs/fgc/fgc-1-hyp1-reduction.toml": "6d1820ffb3dd4505990274cf4a3d76d1bbea78cc18484a29419b8101207ab50e",
+    "configs/fgc/fgc-1-hyp1-symbol.toml": "f6a03db3987dcf6a81a6a65d651ecf145f6d7682487d1227a08a4388328d822c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97"
+  },
+  "source_configs": {
+    "action": "configs/fgc/fgc-1-action-gate.toml",
+    "implicit": "configs/fgc/fgc-1-hyp1-mhg-implicit.toml",
+    "modified_harmonic": "configs/fgc/fgc-1-hyp1-modified-harmonic.toml",
+    "propagation": "configs/fgc/fgc-1-hyp1-mhg-propagation.toml",
+    "reduction": "configs/fgc/fgc-1-hyp1-reduction.toml",
+    "reference": "configs/fgc/fgc-1-hyp1-mhg-reference.toml",
+    "symbol": "configs/fgc/fgc-1-hyp1-symbol.toml",
+    "variation": "configs/fgc/fgc-1-metric-variation.toml"
+  }
+}

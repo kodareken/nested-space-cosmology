@@ -1,0 +1,167 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG3-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+source_result = "results/fgc-1-tdg2-pref17.json"
+source_checkpoint = "runs/fgc-2-sf1/proto13/calibration/latest-checkpoint.npz"
+
+[scope]
+target = "FGC-2-SF1-TDG3"
+role = "prospective_native_grid_interpolation_ownership_discriminator"
+calibration_branch = "GR-0"
+source_terminal_event = 63
+source_terminal_coordinate_time = "63/16"
+actual_terminal_histories_consumed = false
+source_checkpoint_history_arrays_loaded = false
+source_checkpoint_resumed = false
+state_advanced = false
+common_grid_resampling_performed = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+replacement_temporal_admission_defined = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "8585dbef39a1e706390a17a002cc403445e18cf2"
+source_result_sha256 = "1a0d9ee99b2eb2f15f10b0625c1cbfe63db15d26692ff5f7b1975d370db593a3"
+source_config_sha256 = "3f2ec6acf07779c4ae0d5b47fe235f66724d4f3b86975eb391dfae02d325c000"
+source_reproducer_sha256 = "f0a939c5f46a0e4fb57b9118e6107788c5f585555802a07a5e8324a63111e776"
+source_discriminator_module_sha256 = "d8332ab5b6a3d3ba9db3a129e71a4147c88a3da5c89624914f2f9c757ac74595"
+source_document_sha256 = "8495b96c84bb5cba4af869701c732fd40793b0cc9b951990f1a71a64b129cd01"
+source_checkpoint_sha256 = "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97"
+checkpoint_commit_must_be_ancestor_of_HEAD = true
+tracked_source_blobs_must_match_commit_and_worktree = true
+source_compact_result_must_be_verified_without_raw_reproduction = true
+source_checkpoint_hash_must_match_if_present = true
+
+[frozen_discriminator]
+sample_count = 64
+tracer_count = 48
+field_names = ["alpha_minus_1", "shift_over_r", "lambda_minus_1", "R_over_r_minus_1", "phi_over_Lambda", "chi_over_Lambda"]
+primary_point_counts = [2049, 4097, 8193]
+comparator_point_counts = [4097, 8193, 16385]
+native_phase_interval = [0, 1]
+phase_map = "(tau-tau_0)/(tau_63-tau_0)_per_native_history"
+common_proper_time_overlap_used = false
+common_grid_resampling_allowed = false
+taper_fraction = "1/8"
+top_bins = [28, 29, 30, 31, 32]
+power_measures = ["phase_field_tail_power", "phase_derivative_tail_power"]
+estimator_names = ["piecewise_linear_exact_integral", "native_trapezoid_quadrature"]
+normalized_coefficient_floor = "1.5625e-32"
+minimum_history_difference_order = "3/2"
+minimum_zero_power_order = "3"
+replacement_admission_authorized = false
+
+[frozen_discriminator.primary_estimator]
+name = "piecewise_linear_exact_integral"
+weighted_sample_surrogate = "piecewise_linear_interpolant_of_native_compact_windowed_samples"
+coefficient_definition = "integral_0^1 y_PL(x) exp(-2 pi i k x) dx"
+closed_form_segment_integral_required = true
+resampled_values_allowed = false
+continuum_enclosure_claimed = false
+
+[frozen_discriminator.comparator_estimator]
+name = "native_trapezoid_quadrature"
+weight_definition = "endpoint_half_cells_and_centered_native_Voronoi_cells"
+coefficient_definition = "sum_j q_j y_j exp(-2 pi i k x_j)"
+weights_must_be_positive_and_sum_to_one = true
+resampled_values_allowed = false
+continuum_enclosure_claimed = false
+
+[frozen_discriminator.arithmetic_contract]
+low_decimal_precision = 72
+high_decimal_precision = 96
+binary64_primary_uses_closed_form_segment_sum = true
+binary64_comparator_uses_native_weighted_sum = true
+decimal_inputs_are_exact_conversions_of_binary64_phase_and_weighted_samples = true
+coefficient_and_power_disagreement_plus_outward_rounding_are_public = true
+arithmetic_debit_is_the_only_interval_debit = true
+inter_estimator_spread_is_public_but_not_an_error_enclosure = true
+
+[frozen_discriminator.classification_contract]
+power_class_names = [
+  "contracts_to_zero_at_required_power_order",
+  "nonzero_resolution_independent_within_arithmetic_enclosure",
+  "converges_to_nonzero_native_power",
+  "arithmetic_floor_dominated",
+  "unresolved_native_power_behavior",
+]
+combined_class_names = [
+  "native_estimators_agree_zero_contracting",
+  "native_estimators_agree_nonzero",
+  "native_estimators_agree_floor_dominated",
+  "native_estimators_agree_unresolved",
+  "native_estimators_disagree",
+]
+both_estimators_must_agree_before_a_combined_zero_nonzero_or_floor_label = true
+nonzero_resolution_independent_and_nonzero_convergent_are_one_combined_nonzero_family = true
+estimator_disagreement_is_never_rounded_or_voted_away = true
+no_class_is_a_pass_fail_temporal_admission = true
+no_class_retroactively_reclassifies_PROTO13_or_TDG2 = true
+
+[synthetic_controls]
+control_names = [
+  "exact_zero",
+  "subfloor_nonzero",
+  "power_contracts_to_zero",
+  "nonzero_resolution_independent",
+  "nonzero_convergent",
+  "unresolved_nonmonotone",
+  "common_grid_interpolation_owner",
+]
+every_control_must_match_both_power_measures = true
+actual_terminal_histories_consumed = false
+common_grid_resampling_performed = false
+continuum_surrogate_enclosure_claimed = false
+replacement_temporal_admission_defined = false
+
+[proof_contract]
+source_commit_and_all_tracked_blobs_must_match = true
+source_compact_result_must_preserve_the_mixed_TDG2_outcome = true
+source_checkpoint_may_be_hashed_but_not_loaded = true
+both_native_estimators_must_consume_all_64_samples_without_resampling = true
+piecewise_linear_coefficients_must_match_independent_decimal_references = true
+native_quadrature_coefficients_must_match_independent_decimal_references = true
+all_seven_synthetic_controls_must_match = true
+one_bit_signal_estimator_bin_order_precision_hash_nonclaim_and_claim_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG2_actual_histories_diagnosed = true
+TDG3_interpolation_ownership_discriminator_frozen = true
+TDG3_actual_history_execution_authorized_after_freeze_commit = true
+TDG3_actual_history_execution_completed = false
+replacement_temporal_gate_design_authorized = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG2_actual_histories_diagnosed = true
+TDG2_absolute_tail_outcome_is_mixed = true
+TDG3_interpolation_ownership_discriminator_frozen = true
+TDG3_actual_histories_diagnosed = false
+common_grid_interpolation_removed_from_TDG3_measurement = true
+piecewise_linear_or_quadrature_surrogate_is_a_continuum_enclosure = false
+individual_temporal_budget_failure_cause_fully_derived = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

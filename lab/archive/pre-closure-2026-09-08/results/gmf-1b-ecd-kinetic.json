@@ -1,0 +1,245 @@
+{
+  "anticommutator_identity": {
+    "identity": "{gamma^c, gamma^{ab}} = -2 i eps^{cabd} gamma5 gamma_d",
+    "maximum_residual": 0.0,
+    "representation_independent": true,
+    "verified_over_all_64_index_triples": true
+  },
+  "artifact": "ecd_contact_tetrad_variation_and_free_dirac_control",
+  "classification": "corrected_contact_stress_and_bounded_torsion_free_dirac_preflight",
+  "contact_stress_null_energy": {
+    "all_contact_null_contractions_zero": true,
+    "contact_null_energy_condition_violated": false,
+    "contact_sector_tetrad_variation_complete": true,
+    "full_ecd_effective_stress_verified": false,
+    "maximum_null_contraction_residual": 0.0,
+    "null_contractions": [
+      {
+        "contact_null_contraction": 0.0,
+        "contact_sector_tetrad_variation_complete": true,
+        "contact_term_alone_derives_null_defocusing": false,
+        "full_ecd_stress_derived": false,
+        "metric_norm": 0.0,
+        "validated_metric_null": true
+      },
+      {
+        "contact_null_contraction": 0.0,
+        "contact_sector_tetrad_variation_complete": true,
+        "contact_term_alone_derives_null_defocusing": false,
+        "full_ecd_stress_derived": false,
+        "metric_norm": 0.0,
+        "validated_metric_null": true
+      }
+    ],
+    "null_vectors_checked": 2,
+    "p": -0.421875,
+    "rho": 0.421875,
+    "rho_plus_p": 0.0,
+    "stress": [
+      [
+        0.421875,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.421875,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.421875,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.421875
+      ]
+    ],
+    "w": -1.0
+  },
+  "conventions": {
+    "canonical_signature": "+---",
+    "gamma_conversion": "Gamma^a=-i*gamma_VC^a",
+    "kappa": 1.0,
+    "orientation_0123": 1,
+    "vc_signature": "-+++"
+  },
+  "correction": {
+    "correct_contact_result": "T_ab=L_4 g_ab and T_ab k^a k^b=0",
+    "homogeneous_spin_fluid_bounce_not_derived": true,
+    "reason": "J_mu=e^I_mu J_I varies with the coframe; its response cancels the fixed-current metric partial because J^I J_I is tetrad independent.",
+    "retracted_claim": "A fixed-coordinate-current variation of J^2 supplies a physical anisotropic contact stress and local NEC violation."
+  },
+  "effective_action_bookkeeping": {
+    "canonical_J_squared": 2.2500000000000018,
+    "canonical_full_contact_coefficient_over_kappa_J2": -0.1875,
+    "canonical_full_contact_lagrangian": -0.42187500000000033,
+    "combined_onshell_coefficient_sign_resolved": true,
+    "connection_eliminated_everywhere_before_reduced_action_used": true,
+    "field_variation_factor_two": 0.375,
+    "field_variation_factor_two_verified": true,
+    "hehl_datta_equation_coefficient_over_kappa": 0.375,
+    "separate_connection_pieces_added_to_reduced_action": false,
+    "signature_translation_verified": true,
+    "vc_A_squared": -2.2500000000000018,
+    "vc_full_contact_coefficient_over_kappa_A2": 0.1875,
+    "vc_full_contact_lagrangian": -0.42187500000000033
+  },
+  "fixture": {
+    "F": {
+      "imag": 0.0,
+      "real": 0.75
+    },
+    "G": {
+      "imag": 0.0,
+      "real": 0.5
+    },
+    "areal_radius": 0.28209479177387814,
+    "radial_metric": 1.0
+  },
+  "free_dirac_plane_wave_control": {
+    "canonical_signature": "+---",
+    "current_equals_two_momentum_residual": 0.0,
+    "current_upper": [
+      2.0,
+      0.0,
+      0.0,
+      2.0
+    ],
+    "general_classical_dirac_nec_proven": false,
+    "massless_dirac_residual": 0.0,
+    "momentum_norm": 0.0,
+    "momentum_upper": [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "null_contractions": {
+      "opposite": 8.0,
+      "parallel": 0.0
+    },
+    "null_probe_norm_residual": 0.0,
+    "positive_frequency_plane_wave_control_only": true,
+    "positive_frequency_plane_wave_nec_nonnegative": true,
+    "spinor": [
+      {
+        "imag": 0.0,
+        "real": 1.0
+      },
+      {
+        "imag": 0.0,
+        "real": 0.0
+      },
+      {
+        "imag": 0.0,
+        "real": 1.0
+      },
+      {
+        "imag": 0.0,
+        "real": 0.0
+      }
+    ],
+    "stress_covariant": [
+      [
+        2.0,
+        -0.0,
+        -0.0,
+        -2.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -2.0,
+        0.0,
+        0.0,
+        2.0
+      ]
+    ]
+  },
+  "model_id": "GMF-1B-ECD-KIN1",
+  "nonclaims": {
+    "bounce_constructed": false,
+    "child_topology_proven": false,
+    "complete_effective_stress_tensor_derived": false,
+    "complete_spin_weighted_harmonic_closure_verified": false,
+    "constraint_compatible_vacuum_region_verified": false,
+    "constraint_solution_constructed": false,
+    "curvature_invariants_verified": false,
+    "external_Q_derived": false,
+    "finite_mass_exterior_constructed": false,
+    "full_ecd_effective_stress_verified": false,
+    "full_ecd_source_so3_equivariance_verified": false,
+    "full_ecd_tetrad_dependence_varied": false,
+    "general_classical_dirac_nec_proven": false,
+    "global_solution_constructed": false,
+    "homogeneous_bounce_rho_plus_p_negative_derived": false,
+    "horizon_regular_evolution_constructed": false,
+    "intermediate_connection_piece_split_audited": false,
+    "late_dark_energy_derived": false,
+    "metric_null_defocusing_derived": false,
+    "regular_centre_constructed": false,
+    "rho_plus_p_negative_derived": false,
+    "torsion_free_dirac_stress_fully_derived": false,
+    "variable_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "provenance": {
+    "free_dirac_scope": {
+      "reference": "direct canonical gamma-matrix plane-wave fixture",
+      "use": "positive-frequency control only; no general Dirac NEC theorem"
+    },
+    "torsion_eliminated_action_and_stress": {
+      "reference": "Choudhury-Maity-Lahiri 2024 Eqs. 7-10; Cabral-Lobo-Rubiera-Garcia 2019 Eqs. 20-24",
+      "use": "full reduced contact sign, tetrad stress, and separation from the torsion-free Dirac kinetic stress"
+    }
+  },
+  "schema_version": 2,
+  "tetrad_current_invariant_cancellation": {
+    "baseline_invariant_residual": 4.440892098500626e-16,
+    "coframe_directions_checked": 16,
+    "coordinate_current_invariant": 1.73,
+    "current_response_cancels_metric_partial": true,
+    "directional_total_residuals": [
+      -8.881784197001252e-16,
+      0.0,
+      0.0,
+      -4.440892098500626e-16,
+      0.0,
+      -5.551115123125783e-17,
+      0.0,
+      0.0,
+      2.220446049250313e-16,
+      1.1102230246251565e-16,
+      0.0,
+      2.220446049250313e-16,
+      1.7763568394002505e-15,
+      3.3306690738754696e-16,
+      -5.551115123125783e-16,
+      1.1102230246251565e-15
+    ],
+    "fixed_coordinate_current_anisotropic_stress_is_physical": false,
+    "fixed_coordinate_current_partial_is_nonzero": true,
+    "internal_current_invariant": 1.7299999999999995,
+    "internal_current_invariant_is_tetrad_independent": true,
+    "maximum_current_response": 4.549398679727617,
+    "maximum_fixed_coordinate_current_metric_partial": 4.549398679727618,
+    "maximum_total_variation_residual": 1.7763568394002505e-15
+  }
+}

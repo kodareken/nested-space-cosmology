@@ -1,0 +1,475 @@
+{
+  "artifact_id": "FGC-1-TDG4-PREF19",
+  "artifact_payload": {
+    "assumption_audit": {
+      "insufficient_premises": [
+        "finite_samples_only",
+        "smoothness_without_a_quantitative_norm_bound",
+        "agreement_of_finitely_sampled_surrogates",
+        "finite_sample_densification_without_regular_control",
+        "discrete_residual_without_a_continuum_stability_estimate"
+      ],
+      "replacement_bound_must_be_independent_of_the_observed_target_margin": true,
+      "replacement_design_must_choose_and_quantify_at_least_one_sufficient_route": true,
+      "sufficient_routes": [
+        "finite_dimensional_class_with_injective_stable_sampling",
+        "quantitative_continuum_derivative_or_Sobolev_bound",
+        "continuum_evolution_residual_plus_stability_estimate"
+      ]
+    },
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "PDE_solution_manifold_restriction_proved": false,
+      "actual_terminal_history_arrays_consumed": false,
+      "actual_unsampled_PROTO13_history_power_inferred": false,
+      "campaign_checkpoint_loaded": false,
+      "candidate_branch_opened": false,
+      "current_rule_retained_as_sampled_diagnostic": true,
+      "current_rule_retired_only_as_continuum_admission": true,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "new_trajectory_authorized": false,
+      "physical_question_answered": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": true,
+      "state_advanced": false
+    },
+    "freeze_crosscheck": {
+      "actual_terminal_histories_consumed": false,
+      "all_five_declared_top_bins_crosschecked": true,
+      "factorization_controls_match_frozen_design": true,
+      "freeze_exact_preflight_reexecuted": true,
+      "smooth_support_intervals_match_frozen_design": true,
+      "uniform_alias_coefficients_and_power_match_frozen_design": true
+    },
+    "immutable_lineage": {
+      "CAL10_both_method_admissions_failed": true,
+      "CAL10_failure_cause_was_underived": true,
+      "CAL10_observed_sample_count": 64,
+      "PROTO13_absolute_spectral_contract_inherited_unchanged": true,
+      "PROTO4_temporal_rule": {
+        "maximum_nested_refinement_tail_ratio": "1/4",
+        "maximum_top_band_derivative_weighted_power_fraction": "1/1024",
+        "maximum_top_band_field_power_fraction": "1/1048576",
+        "minimum_temporal_samples": 64
+      },
+      "actual_terminal_history_arrays_consumed": false,
+      "bound_blob_sha256": {
+        "configs/fgc/fgc-1-cal10-pref15.toml": "3661ba8cb6b933ab47daf8897c577b4631544605175dbe15d0c084542cf6c9eb",
+        "configs/fgc/fgc-1-tdg4-frz1.toml": "b9990512f7cf70b00b05df587454c513c66651a7a740bb900c4e6b587d456cf5",
+        "configs/fgc/fgc-2-sf1-protocol-v13.toml": "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692",
+        "configs/fgc/fgc-2-sf1-protocol-v4.toml": "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a",
+        "docs/fgc-tdg4-frz1.md": "b1d6fa73cd6b5bdfd0b35faa726223dd0e0d6b041ce98fa5f1af4ffd3d50b15c",
+        "results/fgc-1-cal10-pref15.json": "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18",
+        "results/fgc-1-tdg4-frz1.json": "d0f6db977a0c7a62db176b12f22479a157ebeb2d7e2483273c43917df8511eb4",
+        "scripts/reproduce_fgc_tdg4_frz1.py": "65582bd00988e551ba0b42f716de01b272b3ac20de067b8b395e594ab3ca1cde",
+        "src/recursive_horizons/fgc/evolution/tdg4_sampling_identifiability.py": "31d816df99682114c8dfebff545743bc9624bccad54aff105b094f635f7f0b8d"
+      },
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "freeze_commit": "8d0df53b32f6668fd29dc085c350f77b3e0c0252",
+      "freeze_commit_is_ancestor_of_HEAD": true,
+      "freeze_result_verified_prospective": true,
+      "state_advanced": false
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "PDE_manifold_promotion_rejected": true,
+      "PROTO14_promotion_rejected": true,
+      "actual_history_inference_mutation_rejected": true,
+      "candidate_promotion_rejected": true,
+      "folded_node_mutation_rejected": true,
+      "freeze_commit_mutation_rejected": true,
+      "freeze_result_hash_mutation_rejected": true,
+      "historical_reclassification_rejected": true,
+      "invalid_alias_bin_mutation_rejected": true,
+      "matrix_domain_mutation_rejected": true,
+      "protocol_hash_mutation_rejected": true,
+      "replacement_admission_promotion_rejected": true,
+      "sample_count_mutation_rejected": true,
+      "top_bin_mutation_rejected": true
+    },
+    "proof_contract": {
+      "CAL10_must_preserve_the_64_sample_failure_and_underived_cause": true,
+      "PROTO13_must_preserve_the_inherited_absolute_spectral_contract": true,
+      "PROTO4_sample_count_and_absolute_budgets_must_be_recovered": true,
+      "actual_history_and_PDE_manifold_nonclaims_must_remain_false": true,
+      "canonical_hash_bound_result_required": true,
+      "factorization_lemma_necessity_and_sufficiency_must_be_certified": true,
+      "finite_densification_without_regular_control_must_remain_nonidentifying": true,
+      "freeze_commit_and_all_bound_blobs_must_match": true,
+      "freeze_result_must_preserve_the_unexecuted_theorem_boundary": true,
+      "historical_stop_must_remain_preserved_without_reclassification": true,
+      "lineage_theorem_retirement_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "smooth_kernel_witness_must_cover_every_declared_top_bin": true,
+      "uniform_alias_crosscheck_must_match_the_freeze_exactly": true
+    },
+    "retirement_scope": {
+      "actual_history_classifications_changed": false,
+      "current_rule_retained_as_sampled_diagnostic": true,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "historical_thresholds_changed": false,
+      "physical_or_candidate_result_inferred": false,
+      "replacement_gate_acceptance_inferred": false,
+      "replacement_temporal_admission_defined": false,
+      "retired_object": "PROTO4_inherited_finite_sample_temporal_spectral_rule_as_a_continuum_admission"
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG3_actual_histories_diagnosed": true,
+      "TDG3_native_grid_outcome_is_mixed": true,
+      "TDG4_sampling_identifiability_theorem_completed": true,
+      "TDG4_sampling_identifiability_theorem_design_frozen": true,
+      "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+      "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+      "finite_samples_alone_proved_insufficient_for_continuum_top_band_bound": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": true
+    },
+    "theorem_certificate": {
+      "PDE_solution_manifold_restriction_proved": false,
+      "actual_terminal_histories_consumed": false,
+      "actual_unsampled_power_of_the_PROTO13_histories_inferred": false,
+      "all_smooth_witnesses_pass": true,
+      "all_uniform_alias_crosschecks_pass": true,
+      "campaign_checkpoint_loaded": false,
+      "factorization_lemma": {
+        "all_factorization_controls_pass": true,
+        "exact_matrix_controls": {
+          "factorable_noninjective": {
+            "domain_dimension": 3,
+            "sample_map_is_injective": false,
+            "sample_plus_target_rank": 2,
+            "sample_rank": 2,
+            "target_annihilates_sampling_kernel": true,
+            "target_factors_through_samples": true,
+            "unrestricted_kernel_amplitude_makes_target_unbounded": false
+          },
+          "injective": {
+            "domain_dimension": 2,
+            "sample_map_is_injective": true,
+            "sample_plus_target_rank": 2,
+            "sample_rank": 2,
+            "target_annihilates_sampling_kernel": true,
+            "target_factors_through_samples": true,
+            "unrestricted_kernel_amplitude_makes_target_unbounded": false
+          },
+          "nonidentifiable": {
+            "domain_dimension": 3,
+            "sample_map_is_injective": false,
+            "sample_plus_target_rank": 3,
+            "sample_rank": 2,
+            "target_annihilates_sampling_kernel": false,
+            "target_factors_through_samples": false,
+            "unrestricted_kernel_amplitude_makes_target_unbounded": true
+          }
+        },
+        "necessity": "if T=A composed_with S and S(h)=0 then T(h)=A(0)=0",
+        "statement": "T factors through S iff ker(S) is a subset of ker(T)",
+        "sufficiency": "define A(S(f))=T(f); ker(S) subset ker(T) makes A well_defined",
+        "well_defined_difference_check": "S(f)=S(g) implies f-g in ker(S), hence T(f)=T(g)"
+      },
+      "finite_samples_alone_bound_derivative_power": false,
+      "finite_samples_alone_bound_field_power": false,
+      "function_space": "C_c_infinity_open_unit_interval",
+      "insufficient_premises": [
+        "finite_samples_only",
+        "smoothness_without_a_quantitative_norm_bound",
+        "agreement_of_finitely_sampled_surrogates",
+        "finite_sample_densification_without_regular_control",
+        "discrete_residual_without_a_continuum_stability_estimate"
+      ],
+      "sample_count": 64,
+      "sampling_identifiability_theorem_completed": true,
+      "sampling_operator": "S_x(f)=(f(x_0),...,f(x_63))",
+      "smooth_kernel_witnesses": {
+        "28": {
+          "I0_strictly_positive": true,
+          "both_declared_powers_unbounded_as_abs_A_tends_to_infinity": true,
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_power_lower_bound": "2*(2*pi*k)^2*A^2*abs(hat(h_1,k))^2",
+          "field_power_lower_bound": "2*A^2*abs(hat(h_1,k))^2",
+          "phase_nonconstant_on_positive_measure_support": true,
+          "real_smooth_compact_support": true,
+          "reverse_triangle_lower_bound": "abs(I_0+I_2k)>=I_0-abs(I_2k)>0",
+          "sample_count": 64,
+          "sample_values_and_all_sample_node_derivatives_zero": true,
+          "selected_gap": [
+            "0",
+            "1/63"
+          ],
+          "selected_gap_index": 0,
+          "standard_bump": "phi(x)=exp(-1/((x-a)*(b-x))) for a<x<b and zero otherwise",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 28,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_every_nonzero_amplitude": true,
+          "witness": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)",
+          "zero_on_a_neighborhood_of_every_sample": true
+        },
+        "29": {
+          "I0_strictly_positive": true,
+          "both_declared_powers_unbounded_as_abs_A_tends_to_infinity": true,
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_power_lower_bound": "2*(2*pi*k)^2*A^2*abs(hat(h_1,k))^2",
+          "field_power_lower_bound": "2*A^2*abs(hat(h_1,k))^2",
+          "phase_nonconstant_on_positive_measure_support": true,
+          "real_smooth_compact_support": true,
+          "reverse_triangle_lower_bound": "abs(I_0+I_2k)>=I_0-abs(I_2k)>0",
+          "sample_count": 64,
+          "sample_values_and_all_sample_node_derivatives_zero": true,
+          "selected_gap": [
+            "0",
+            "1/63"
+          ],
+          "selected_gap_index": 0,
+          "standard_bump": "phi(x)=exp(-1/((x-a)*(b-x))) for a<x<b and zero otherwise",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 29,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_every_nonzero_amplitude": true,
+          "witness": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)",
+          "zero_on_a_neighborhood_of_every_sample": true
+        },
+        "30": {
+          "I0_strictly_positive": true,
+          "both_declared_powers_unbounded_as_abs_A_tends_to_infinity": true,
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_power_lower_bound": "2*(2*pi*k)^2*A^2*abs(hat(h_1,k))^2",
+          "field_power_lower_bound": "2*A^2*abs(hat(h_1,k))^2",
+          "phase_nonconstant_on_positive_measure_support": true,
+          "real_smooth_compact_support": true,
+          "reverse_triangle_lower_bound": "abs(I_0+I_2k)>=I_0-abs(I_2k)>0",
+          "sample_count": 64,
+          "sample_values_and_all_sample_node_derivatives_zero": true,
+          "selected_gap": [
+            "0",
+            "1/63"
+          ],
+          "selected_gap_index": 0,
+          "standard_bump": "phi(x)=exp(-1/((x-a)*(b-x))) for a<x<b and zero otherwise",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 30,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_every_nonzero_amplitude": true,
+          "witness": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)",
+          "zero_on_a_neighborhood_of_every_sample": true
+        },
+        "31": {
+          "I0_strictly_positive": true,
+          "both_declared_powers_unbounded_as_abs_A_tends_to_infinity": true,
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_power_lower_bound": "2*(2*pi*k)^2*A^2*abs(hat(h_1,k))^2",
+          "field_power_lower_bound": "2*A^2*abs(hat(h_1,k))^2",
+          "phase_nonconstant_on_positive_measure_support": true,
+          "real_smooth_compact_support": true,
+          "reverse_triangle_lower_bound": "abs(I_0+I_2k)>=I_0-abs(I_2k)>0",
+          "sample_count": 64,
+          "sample_values_and_all_sample_node_derivatives_zero": true,
+          "selected_gap": [
+            "0",
+            "1/63"
+          ],
+          "selected_gap_index": 0,
+          "standard_bump": "phi(x)=exp(-1/((x-a)*(b-x))) for a<x<b and zero otherwise",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 31,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_every_nonzero_amplitude": true,
+          "witness": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)",
+          "zero_on_a_neighborhood_of_every_sample": true
+        },
+        "32": {
+          "I0_strictly_positive": true,
+          "both_declared_powers_unbounded_as_abs_A_tends_to_infinity": true,
+          "derivative_coefficient_identity": "hat(dh/dx)_k=2*pi*i*k*hat(h)_k",
+          "derivative_power_lower_bound": "2*(2*pi*k)^2*A^2*abs(hat(h_1,k))^2",
+          "field_power_lower_bound": "2*A^2*abs(hat(h_1,k))^2",
+          "phase_nonconstant_on_positive_measure_support": true,
+          "real_smooth_compact_support": true,
+          "reverse_triangle_lower_bound": "abs(I_0+I_2k)>=I_0-abs(I_2k)>0",
+          "sample_count": 64,
+          "sample_values_and_all_sample_node_derivatives_zero": true,
+          "selected_gap": [
+            "0",
+            "1/63"
+          ],
+          "selected_gap_index": 0,
+          "standard_bump": "phi(x)=exp(-1/((x-a)*(b-x))) for a<x<b and zero otherwise",
+          "strict_triangle_inequality": "abs(I_2k)<I_0",
+          "support_interval": [
+            "1/189",
+            "2/189"
+          ],
+          "target_bin": 32,
+          "target_coefficient_identity": "hat(h_A,k)=A*(I_0+I_2k)/2",
+          "target_coefficient_nonzero_for_every_nonzero_amplitude": true,
+          "witness": "h_A,k(x)=A*phi(x)*cos(2*pi*k*x)",
+          "zero_on_a_neighborhood_of_every_sample": true
+        }
+      },
+      "state_advanced": false,
+      "sufficient_assumption_routes": [
+        "finite_dimensional_class_with_injective_stable_sampling",
+        "quantitative_continuum_derivative_or_Sobolev_bound",
+        "continuum_evolution_residual_plus_stability_estimate"
+      ],
+      "target_bins": [
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "target_operator": "T_K(f)=(integral_0^1 f(x)*exp(-2*pi*i*k*x) dx) for k in K",
+      "theorem": "finite point samples alone do not place a finite upper bound on the declared continuum top-band field or derivative power on C_c_infinity_open_unit_interval",
+      "uniform_alias_crosschecks": {
+        "28": {
+          "all_sample_values_exactly_zero": true,
+          "amplitude_scaling_makes_target_power_unbounded": true,
+          "carrier_frequency": 63,
+          "partner_bin": 98,
+          "partner_complex_coefficient": "-1/4",
+          "positive_bin_field_power": "1/8",
+          "product_to_sum_identity": "sin(qx)*sin((q-k)x)=(cos(kx)-cos((2q-k)x))/2",
+          "sample_count": 64,
+          "sample_identity": "sin(2*pi*(N-1)*j/(N-1))=sin(2*pi*j)=0",
+          "target_bin": 28,
+          "target_complex_coefficient": "1/4"
+        },
+        "29": {
+          "all_sample_values_exactly_zero": true,
+          "amplitude_scaling_makes_target_power_unbounded": true,
+          "carrier_frequency": 63,
+          "partner_bin": 97,
+          "partner_complex_coefficient": "-1/4",
+          "positive_bin_field_power": "1/8",
+          "product_to_sum_identity": "sin(qx)*sin((q-k)x)=(cos(kx)-cos((2q-k)x))/2",
+          "sample_count": 64,
+          "sample_identity": "sin(2*pi*(N-1)*j/(N-1))=sin(2*pi*j)=0",
+          "target_bin": 29,
+          "target_complex_coefficient": "1/4"
+        },
+        "30": {
+          "all_sample_values_exactly_zero": true,
+          "amplitude_scaling_makes_target_power_unbounded": true,
+          "carrier_frequency": 63,
+          "partner_bin": 96,
+          "partner_complex_coefficient": "-1/4",
+          "positive_bin_field_power": "1/8",
+          "product_to_sum_identity": "sin(qx)*sin((q-k)x)=(cos(kx)-cos((2q-k)x))/2",
+          "sample_count": 64,
+          "sample_identity": "sin(2*pi*(N-1)*j/(N-1))=sin(2*pi*j)=0",
+          "target_bin": 30,
+          "target_complex_coefficient": "1/4"
+        },
+        "31": {
+          "all_sample_values_exactly_zero": true,
+          "amplitude_scaling_makes_target_power_unbounded": true,
+          "carrier_frequency": 63,
+          "partner_bin": 95,
+          "partner_complex_coefficient": "-1/4",
+          "positive_bin_field_power": "1/8",
+          "product_to_sum_identity": "sin(qx)*sin((q-k)x)=(cos(kx)-cos((2q-k)x))/2",
+          "sample_count": 64,
+          "sample_identity": "sin(2*pi*(N-1)*j/(N-1))=sin(2*pi*j)=0",
+          "target_bin": 31,
+          "target_complex_coefficient": "1/4"
+        },
+        "32": {
+          "all_sample_values_exactly_zero": true,
+          "amplitude_scaling_makes_target_power_unbounded": true,
+          "carrier_frequency": 63,
+          "partner_bin": 94,
+          "partner_complex_coefficient": "-1/4",
+          "positive_bin_field_power": "1/8",
+          "product_to_sum_identity": "sin(qx)*sin((q-k)x)=(cos(kx)-cos((2q-k)x))/2",
+          "sample_count": 64,
+          "sample_identity": "sin(2*pi*(N-1)*j/(N-1))=sin(2*pi*j)=0",
+          "target_bin": 32,
+          "target_complex_coefficient": "1/4"
+        }
+      }
+    }
+  },
+  "classification": "completed_TDG4_sampling_identifiability_theorem_current_sampled_rule_retired_as_continuum_admission",
+  "derivation_document": "docs/fgc-tdg4-pref19.md",
+  "derivation_document_sha256": "cafdea686218647a06286f0a8f324ea40b3fd97ab7434509bdeb4af19299ce0a",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG3_actual_histories_diagnosed": true,
+    "TDG3_native_grid_outcome_is_mixed": true,
+    "TDG4_exact_no_history_controls_pass": true,
+    "TDG4_sampling_identifiability_theorem_completed": true,
+    "TDG4_sampling_identifiability_theorem_design_frozen": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+    "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+    "dark_sector_mechanism_derived": false,
+    "finite_samples_alone_proved_insufficient_for_continuum_top_band_bound": true,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "replacement_temporal_gate_design_authorized": true,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg4_pref19.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg4_pref19.py": "ae660d7ad166a833b4f63d58abdb0ad827ae7ae0657b8ea6f922bd7a2a38c31f",
+    "src/recursive_horizons/fgc/evolution/tdg4_sampling_identifiability_theorem.py": "e703a3db4a7a09dee68a9f74cdddc18f3183e1f890aff67f196367a26e229b42"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg4-pref19.toml": "22727f144dd1666699b8c4a2d0d1b58d7a482b4611020b71fe7a021cfa39cf98"
+  }
+}

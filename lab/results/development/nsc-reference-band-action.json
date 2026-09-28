@@ -1,0 +1,1790 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, scope, structure",
+    "fields": "all",
+    "float_atol": 3e-11,
+    "float_rtol": 3e-10
+  },
+  "domain": {
+    "CTP_subtraction": "same reference phase on plus branch minus minus branch; positive reference-vertex sign",
+    "LLL": "exact constant chiral reference on each gapped momentum-sign chart; not reused for any massive/angular channel",
+    "action_density": "tr(Pi*(U star H star Udag + i*epsilon*dT(U) star Udag))",
+    "canonical_state": "unchanged; reference frame is not Cauchy transport or a Gaussian covariance",
+    "finite_difference_amplitude_step": 0.0001,
+    "finite_difference_stencil": "fourth-order centered",
+    "formal_order": 4,
+    "history": "same supplied metric amplitudes(.002,.001,.003,.001),omega.4; no history selection",
+    "imported_method": "PST space-adiabatic band construction, applied to owned NSC symbols",
+    "local_star_exchange_interpretation": "density before integration; neither an evaluated cutoff residual nor physical stress",
+    "phase_space": "actual KS T,z and canonical k; local gapped reference-band charts",
+    "point": {
+      "PG_tau": 0.019,
+      "rho": 0.23
+    },
+    "regulator": "not assigned by this formal construction; use the declared covariant heat matching",
+    "trace_boundary_terms": "explicit time derivative and local star-trace exchange retained, not set to zero"
+  },
+  "failures": {},
+  "finite_matching": {
+    "identity": "[Gamma_G,vac^E-Gamma_ref,matched^E+Gamma_local,locked^E-Gamma_heat,full^E]_(<=4)=0",
+    "locked_complement": "H_mu(y)=h_Lambda(y)-E1(y/mu^2); mu_B=sqrt(abs(q))/r_e",
+    "not_allowed": "replace heat matching by a Gaussian of shifted coordinate energy, ignore cutoff trace defects, or refit coefficients",
+    "required_inventory": "same light and retained positive compact canonical channels on both sides",
+    "status": "OPEN: finite general-history regulator and measure conversion not evaluated"
+  },
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_independent_term": "none introduced",
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "complete_source": "OPEN",
+    "extended_stationarity": "OPEN",
+    "finite_matched_reference": "OPEN",
+    "formal_reference_action": "PASS",
+    "history_selected": false,
+    "homogeneous_nonexistence": "preserved in original scope, not rerun",
+    "metric_timestep": false,
+    "nulls": null,
+    "physical_C0_changed": false,
+    "physical_EndpointBranchJets": "OPEN",
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "docs/nsc-adm-source-constraints.md": "ba37dd348fb2996b01c1990eec9169908685aad35a5a4d7134ff9d863abbc0fc",
+    "docs/nsc-compact-ctp-completion.md": "5aa6244df5b09e2aeaf2fdab1a9f8157446e3391d11947604bb3be4aa92c06ad",
+    "docs/nsc-compact-matching.md": "563576eef2d7a7f0f5a6723f4b1d405c3a6ff9489312f62e4b0c9a69faaaf3f5",
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "docs/nsc-vacuum-matched-ctp.md": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d",
+    "results/development/artifacts/nsc-reference-band-action.98c734ac57cbb9834c2b446c0e95538caea7c112456b57f5c47cfd61d6945003.npz": "98c734ac57cbb9834c2b446c0e95538caea7c112456b57f5c47cfd61d6945003",
+    "results/development/nsc-spatial-reference-symbol.json": "035461a3d31719932be50a00cd2a6841d343b3fb582286350fc1724d1d88e9b1",
+    "src/recursive_horizons/nsc_compact_matching.py": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_scale_binding.py": "eba807992b8fdeeff2283d676fa24aab66777baa19980006be812f7d8bba3a14",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "LLL_chiral_operator_residual": 0.0,
+    "LLL_generic_point_delta": 6.532754371361504e-30,
+    "conjugation_scaled": 4.096379925508891e-11,
+    "identity_scaled": 3.7123443481296856e-11,
+    "leading_overlap_identity": 7.275957614183426e-12,
+    "previous_projector_residual": 0.0,
+    "real_band_action": 3.552713678800501e-14,
+    "scaled_residuals/band_decoupling": 2.476852285108532e-14,
+    "scaled_residuals/effective_Hermiticity": 4.583849970788441e-14,
+    "scaled_residuals/normalization_commutator": 3.9299858168770104e-16,
+    "scaled_residuals/projector_intertwining": 1.8897763056927674e-15,
+    "scaled_residuals/unitarity_left": 2.950023636658726e-16,
+    "scaled_residuals/unitarity_right": 3.5433305731739386e-16,
+    "zero_order_energy_residual": 5.329070518200751e-15
+  },
+  "numerical_repair": {
+    "artifact": {
+      "path": "results/development/artifacts/nsc-reference-band-action.98c734ac57cbb9834c2b446c0e95538caea7c112456b57f5c47cfd61d6945003.npz",
+      "sha256": "98c734ac57cbb9834c2b446c0e95538caea7c112456b57f5c47cfd61d6945003"
+    },
+    "cause": "generic LLL square-root/normalization cancellation amplified under metric differentiation",
+    "initial_generic_reference_diagnostic": {
+      "conjugation_scaled": 1.6906488051290436e-06,
+      "identity_scaled": 1.6906486693724207e-06
+    },
+    "massive_channels": "full star-normalized frame retained",
+    "repair": "same exact chiral operator projector; no threshold loosening, no new state"
+  },
+  "payload": {
+    "bytes": 8894339,
+    "path": "results/development/artifacts/nsc-reference-band-action.a9c457fc1239560082c7fe7384ed5125b5344fc44b0e91a94f5e4d004625d993.npz",
+    "sha256": "a9c457fc1239560082c7fe7384ed5125b5344fc44b0e91a94f5e4d004625d993"
+  },
+  "per_symbol": {
+    "0_1/k+1": {
+      "band_energy_by_order": [
+        -0.12425732286532326,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame_maximum_scaled_residual": 0.0,
+      "local_star_trace_exchange_maximum": 0.0,
+      "time_connection_maximum": 0.0,
+      "variation_maximum_scaled_residual": 0.0
+    },
+    "0_1/k-1": {
+      "band_energy_by_order": [
+        -0.12390511836690776,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame_maximum_scaled_residual": 0.0,
+      "local_star_trace_exchange_maximum": 0.0,
+      "time_connection_maximum": 0.0,
+      "variation_maximum_scaled_residual": 0.0
+    },
+    "10_-1/k+1": {
+      "band_energy_by_order": [
+        -11.5424212625691,
+        0.0,
+        0.00041331447899344725,
+        0.0,
+        0.0016789274763097028
+      ],
+      "frame_maximum_scaled_residual": 2.2125177274940449e-16,
+      "local_star_trace_exchange_maximum": 88.078953285873,
+      "time_connection_maximum": 0.00996584251881998,
+      "variation_maximum_scaled_residual": 3.578728405669905e-11
+    },
+    "10_-1/k-1": {
+      "band_energy_by_order": [
+        -11.542069058070684,
+        0.0,
+        -0.0012644890222772427,
+        0.0,
+        -0.007853031136235249
+      ],
+      "frame_maximum_scaled_residual": 2.950023636658726e-16,
+      "local_star_trace_exchange_maximum": 87.73671059157648,
+      "time_connection_maximum": 0.009776895318968288,
+      "variation_maximum_scaled_residual": 9.57776556235637e-12
+    },
+    "10_1/k+1": {
+      "band_energy_by_order": [
+        -11.5424212625691,
+        0.0,
+        0.00041331447899344725,
+        0.0,
+        0.0016789274763097028
+      ],
+      "frame_maximum_scaled_residual": 2.2125177274940449e-16,
+      "local_star_trace_exchange_maximum": 88.078953285873,
+      "time_connection_maximum": 0.00996584251881998,
+      "variation_maximum_scaled_residual": 3.578728405669905e-11
+    },
+    "10_1/k-1": {
+      "band_energy_by_order": [
+        -11.542069058070684,
+        0.0,
+        -0.0012644890222772427,
+        0.0,
+        -0.007853031136235249
+      ],
+      "frame_maximum_scaled_residual": 2.950023636658726e-16,
+      "local_star_trace_exchange_maximum": 87.73671059157648,
+      "time_connection_maximum": 0.009776895318968288,
+      "variation_maximum_scaled_residual": 9.57776556235637e-12
+    },
+    "11_-1/k+1": {
+      "band_energy_by_order": [
+        -12.530562012256812,
+        0.0,
+        0.0003182959325275707,
+        0.0,
+        0.0010150022925790657
+      ],
+      "frame_maximum_scaled_residual": 1.3128477869515823e-16,
+      "local_star_trace_exchange_maximum": 68.8320260776255,
+      "time_connection_maximum": 0.008236366823170745,
+      "variation_maximum_scaled_residual": 2.254873074371445e-11
+    },
+    "11_-1/k-1": {
+      "band_energy_by_order": [
+        -12.530209807758395,
+        0.0,
+        -0.0011053575253307702,
+        0.0,
+        -0.005847609370139274
+      ],
+      "frame_maximum_scaled_residual": 6.564238934757911e-17,
+      "local_star_trace_exchange_maximum": 68.58573243161737,
+      "time_connection_maximum": 0.008236366823170749,
+      "variation_maximum_scaled_residual": 3.7123443481296856e-11
+    },
+    "11_1/k+1": {
+      "band_energy_by_order": [
+        -12.530562012256812,
+        0.0,
+        0.0003182959325275707,
+        0.0,
+        0.0010150022925790657
+      ],
+      "frame_maximum_scaled_residual": 1.3128477869515823e-16,
+      "local_star_trace_exchange_maximum": 68.8320260776255,
+      "time_connection_maximum": 0.008236366823170745,
+      "variation_maximum_scaled_residual": 2.254873074371445e-11
+    },
+    "11_1/k-1": {
+      "band_energy_by_order": [
+        -12.530209807758395,
+        0.0,
+        -0.0011053575253307702,
+        0.0,
+        -0.005847609370139274
+      ],
+      "frame_maximum_scaled_residual": 6.564238934757911e-17,
+      "local_star_trace_exchange_maximum": 68.58573243161737,
+      "time_connection_maximum": 0.008236366823170749,
+      "variation_maximum_scaled_residual": 3.7123443481296856e-11
+    },
+    "12_-1/k+1": {
+      "band_energy_by_order": [
+        -13.51685803915699,
+        0.0,
+        0.0002458330549428972,
+        0.0,
+        0.0006069797123784398
+      ],
+      "frame_maximum_scaled_residual": 1.475781544501489e-16,
+      "local_star_trace_exchange_maximum": 54.83057038565572,
+      "time_connection_maximum": 0.0076354216846230205,
+      "variation_maximum_scaled_residual": 1.7570455999465443e-11
+    },
+    "12_-1/k-1": {
+      "band_energy_by_order": [
+        -13.516505834658574,
+        0.0,
+        -0.000977661508181494,
+        0.0,
+        -0.004461408720179125
+      ],
+      "frame_maximum_scaled_residual": 1.475781544501489e-16,
+      "local_star_trace_exchange_maximum": 54.64873208460581,
+      "time_connection_maximum": 0.007635421684623014,
+      "variation_maximum_scaled_residual": 8.529559816987281e-12
+    },
+    "12_1/k+1": {
+      "band_energy_by_order": [
+        -13.51685803915699,
+        0.0,
+        0.0002458330549428972,
+        0.0,
+        0.0006069797123784398
+      ],
+      "frame_maximum_scaled_residual": 1.475781544501489e-16,
+      "local_star_trace_exchange_maximum": 54.83057038565572,
+      "time_connection_maximum": 0.0076354216846230205,
+      "variation_maximum_scaled_residual": 1.7570455999465443e-11
+    },
+    "12_1/k-1": {
+      "band_energy_by_order": [
+        -13.516505834658574,
+        0.0,
+        -0.000977661508181494,
+        0.0,
+        -0.004461408720179125
+      ],
+      "frame_maximum_scaled_residual": 1.475781544501489e-16,
+      "local_star_trace_exchange_maximum": 54.64873208460581,
+      "time_connection_maximum": 0.007635421684623014,
+      "variation_maximum_scaled_residual": 8.529559816987281e-12
+    },
+    "13_1/k+1": {
+      "band_energy_by_order": [
+        -1.5782660463507734,
+        0.0,
+        0.04259133433730087,
+        0.0,
+        -14.099303229458629
+      ],
+      "frame_maximum_scaled_residual": 2.7485047276029624e-15,
+      "local_star_trace_exchange_maximum": 34384.70364212494,
+      "time_connection_maximum": 19.3136256020191,
+      "variation_maximum_scaled_residual": 5.535883805553905e-12
+    },
+    "13_1/k-1": {
+      "band_energy_by_order": [
+        -1.5779275512333968,
+        0.0,
+        -0.048724850394372035,
+        0.0,
+        9.687106670596568
+      ],
+      "frame_maximum_scaled_residual": 4.606101472513886e-15,
+      "local_star_trace_exchange_maximum": 33472.820951903785,
+      "time_connection_maximum": 20.683909953637432,
+      "variation_maximum_scaled_residual": 2.709931312545856e-12
+    },
+    "14_-1/k+1": {
+      "band_energy_by_order": [
+        -2.692346628214656,
+        0.08373643406571155,
+        0.011835442947928565,
+        1.3418981492372817,
+        0.20674845472858827
+      ],
+      "frame_maximum_scaled_residual": 9.81462507459532e-15,
+      "local_star_trace_exchange_maximum": 6950.776909894975,
+      "time_connection_maximum": 58.98446033965189,
+      "variation_maximum_scaled_residual": 5.1954121441107665e-12
+    },
+    "14_-1/k-1": {
+      "band_energy_by_order": [
+        -2.6920081330972794,
+        0.07663279420748884,
+        -0.01758539440938575,
+        1.276989859052055,
+        -0.8143459207464459
+      ],
+      "frame_maximum_scaled_residual": 4.583849970788441e-14,
+      "local_star_trace_exchange_maximum": 6841.047013653839,
+      "time_connection_maximum": 58.99507293701583,
+      "variation_maximum_scaled_residual": 3.813279984619349e-12
+    },
+    "14_1/k+1": {
+      "band_energy_by_order": [
+        -2.692346628214656,
+        -0.08373643406571155,
+        0.011835442947928565,
+        -1.3418981492372817,
+        0.20674845472858827
+      ],
+      "frame_maximum_scaled_residual": 9.81462507459532e-15,
+      "local_star_trace_exchange_maximum": 6950.776909894975,
+      "time_connection_maximum": 58.98446033965189,
+      "variation_maximum_scaled_residual": 5.1954121441107665e-12
+    },
+    "14_1/k-1": {
+      "band_energy_by_order": [
+        -2.6920081330972794,
+        -0.07663279420748884,
+        -0.01758539440938575,
+        -1.276989859052055,
+        -0.8143459207464459
+      ],
+      "frame_maximum_scaled_residual": 4.583849970788441e-14,
+      "local_star_trace_exchange_maximum": 6841.047013653839,
+      "time_connection_maximum": 58.99507293701583,
+      "variation_maximum_scaled_residual": 3.813279984619349e-12
+    },
+    "15_-1/k+1": {
+      "band_energy_by_order": [
+        -3.7295419037163624,
+        0.06674111751397813,
+        0.005845877598546333,
+        0.5634211683625189,
+        0.16942364323121076
+      ],
+      "frame_maximum_scaled_residual": 1.448907085964412e-14,
+      "local_star_trace_exchange_maximum": 2614.990129783479,
+      "time_connection_maximum": 17.980129492787995,
+      "variation_maximum_scaled_residual": 8.40105963156101e-12
+    },
+    "15_-1/k-1": {
+      "band_energy_by_order": [
+        -3.729203408598985,
+        0.06260510785448237,
+        -0.009486352705240921,
+        0.543662242855427,
+        -0.37597963415232116
+      ],
+      "frame_maximum_scaled_residual": 9.036832789652504e-15,
+      "local_star_trace_exchange_maximum": 2585.049813810523,
+      "time_connection_maximum": 17.98233776759203,
+      "variation_maximum_scaled_residual": 9.155576641992998e-12
+    },
+    "15_1/k+1": {
+      "band_energy_by_order": [
+        -3.7295419037163624,
+        -0.06674111751397813,
+        0.005845877598546333,
+        -0.5634211683625189,
+        0.16942364323121076
+      ],
+      "frame_maximum_scaled_residual": 1.448907085964412e-14,
+      "local_star_trace_exchange_maximum": 2614.990129783479,
+      "time_connection_maximum": 17.980129492787995,
+      "variation_maximum_scaled_residual": 8.40105963156101e-12
+    },
+    "15_1/k-1": {
+      "band_energy_by_order": [
+        -3.729203408598985,
+        -0.06260510785448237,
+        -0.009486352705240921,
+        -0.543662242855427,
+        -0.37597963415232116
+      ],
+      "frame_maximum_scaled_residual": 9.036832789652504e-15,
+      "local_star_trace_exchange_maximum": 2585.049813810523,
+      "time_connection_maximum": 17.98233776759203,
+      "variation_maximum_scaled_residual": 9.155576641992998e-12
+    },
+    "16_-1/k+1": {
+      "band_energy_by_order": [
+        -4.740590493091682,
+        0.054262675406251244,
+        0.0034445780647531796,
+        0.28498809955608395,
+        0.07772560121475652
+      ],
+      "frame_maximum_scaled_residual": 7.30584752450128e-15,
+      "local_star_trace_exchange_maximum": 1272.9295494060739,
+      "time_connection_maximum": 7.179332134094314,
+      "variation_maximum_scaled_residual": 5.948229423256548e-12
+    },
+    "16_-1/k-1": {
+      "band_energy_by_order": [
+        -4.740251997974307,
+        0.05159957372993595,
+        -0.006063537488525761,
+        0.27710443726345196,
+        -0.1741293343404342
+      ],
+      "frame_maximum_scaled_residual": 6.051656448556809e-15,
+      "local_star_trace_exchange_maximum": 1261.4378492416033,
+      "time_connection_maximum": 7.180007941721226,
+      "variation_maximum_scaled_residual": 5.474338130645286e-12
+    },
+    "16_1/k+1": {
+      "band_energy_by_order": [
+        -4.740590493091682,
+        -0.054262675406251244,
+        0.0034445780647531796,
+        -0.28498809955608395,
+        0.07772560121475652
+      ],
+      "frame_maximum_scaled_residual": 7.30584752450128e-15,
+      "local_star_trace_exchange_maximum": 1272.9295494060739,
+      "time_connection_maximum": 7.179332134094314,
+      "variation_maximum_scaled_residual": 5.948229423256548e-12
+    },
+    "16_1/k-1": {
+      "band_energy_by_order": [
+        -4.740251997974307,
+        -0.05159957372993595,
+        -0.006063537488525761,
+        -0.27710443726345196,
+        -0.1741293343404342
+      ],
+      "frame_maximum_scaled_residual": 6.051656448556809e-15,
+      "local_star_trace_exchange_maximum": 1261.4378492416033,
+      "time_connection_maximum": 7.180007941721226,
+      "variation_maximum_scaled_residual": 5.474338130645286e-12
+    },
+    "17_-1/k+1": {
+      "band_energy_by_order": [
+        -5.739327598634894,
+        0.04549441428574184,
+        0.002226073197370522,
+        0.1635084059152423,
+        0.03721353709539681
+      ],
+      "frame_maximum_scaled_residual": 3.4980858327919156e-15,
+      "local_star_trace_exchange_maximum": 717.0999880640961,
+      "time_connection_maximum": 3.4099284043324865,
+      "variation_maximum_scaled_residual": 1.7563266338210303e-11
+    },
+    "17_-1/k-1": {
+      "band_energy_by_order": [
+        -5.738989103517517,
+        0.04364228245641654,
+        -0.004270191201573447,
+        0.15976555755499608,
+        -0.09036120415615016
+      ],
+      "frame_maximum_scaled_residual": 1.2218589807413897e-15,
+      "local_star_trace_exchange_maximum": 711.7457364204748,
+      "time_connection_maximum": 3.4101884700607568,
+      "variation_maximum_scaled_residual": 5.305758781088516e-12
+    },
+    "17_1/k+1": {
+      "band_energy_by_order": [
+        -5.739327598634894,
+        -0.04549441428574184,
+        0.002226073197370522,
+        -0.1635084059152423,
+        0.03721353709539681
+      ],
+      "frame_maximum_scaled_residual": 3.4980858327919156e-15,
+      "local_star_trace_exchange_maximum": 717.0999880640961,
+      "time_connection_maximum": 3.4099284043324865,
+      "variation_maximum_scaled_residual": 1.7563266338210303e-11
+    },
+    "17_1/k-1": {
+      "band_energy_by_order": [
+        -5.738989103517517,
+        -0.04364228245641654,
+        -0.004270191201573447,
+        -0.15976555755499608,
+        -0.09036120415615016
+      ],
+      "frame_maximum_scaled_residual": 1.2218589807413897e-15,
+      "local_star_trace_exchange_maximum": 711.7457364204748,
+      "time_connection_maximum": 3.4101884700607568,
+      "variation_maximum_scaled_residual": 5.305758781088516e-12
+    },
+    "18_-1/k+1": {
+      "band_energy_by_order": [
+        -6.731235685306725,
+        0.03909868086655842,
+        0.0015239735791383645,
+        0.10236217579203688,
+        0.01905683877679914
+      ],
+      "frame_maximum_scaled_residual": 1.4383628975067896e-15,
+      "local_star_trace_exchange_maximum": 444.3825038647318,
+      "time_connection_maximum": 1.8230792374766205,
+      "variation_maximum_scaled_residual": 2.0834680497251764e-12
+    },
+    "18_-1/k-1": {
+      "band_energy_by_order": [
+        -6.730897190189349,
+        0.03773740876377097,
+        -0.003203435781249772,
+        0.10036163728834488,
+        -0.05158026398280972
+      ],
+      "frame_maximum_scaled_residual": 2.1115326383556117e-15,
+      "local_star_trace_exchange_maximum": 441.55102296080685,
+      "time_connection_maximum": 1.8231956975503296,
+      "variation_maximum_scaled_residual": 1.8005953171165806e-11
+    },
+    "18_1/k+1": {
+      "band_energy_by_order": [
+        -6.731235685306725,
+        -0.03909868086655842,
+        0.0015239735791383645,
+        -0.10236217579203688,
+        0.01905683877679914
+      ],
+      "frame_maximum_scaled_residual": 1.4383628975067896e-15,
+      "local_star_trace_exchange_maximum": 444.3825038647318,
+      "time_connection_maximum": 1.8230792374766205,
+      "variation_maximum_scaled_residual": 2.0834680497251764e-12
+    },
+    "18_1/k-1": {
+      "band_energy_by_order": [
+        -6.730897190189349,
+        -0.03773740876377097,
+        -0.003203435781249772,
+        -0.10036163728834488,
+        -0.05158026398280972
+      ],
+      "frame_maximum_scaled_residual": 2.1115326383556117e-15,
+      "local_star_trace_exchange_maximum": 441.55102296080685,
+      "time_connection_maximum": 1.8231956975503296,
+      "variation_maximum_scaled_residual": 1.8005953171165806e-11
+    },
+    "19_-1/k+1": {
+      "band_energy_by_order": [
+        -7.718947908529053,
+        0.03425317880356187,
+        0.0010847331173261367,
+        0.06829068697759909,
+        0.010321485022211765
+      ],
+      "frame_maximum_scaled_residual": 6.545298785751437e-16,
+      "local_star_trace_exchange_maximum": 294.6214043067378,
+      "time_connection_maximum": 1.061901157655217,
+      "variation_maximum_scaled_residual": 3.0183929660309753e-12
+    },
+    "19_-1/k-1": {
+      "band_energy_by_order": [
+        -7.718609413411675,
+        0.0332108913299446,
+        -0.002512693236204591,
+        0.06712562426896242,
+        -0.031713004458240004
+      ],
+      "frame_maximum_scaled_residual": 1.6141451447655386e-15,
+      "local_star_trace_exchange_maximum": 292.983384962928,
+      "time_connection_maximum": 1.0619592424343844,
+      "variation_maximum_scaled_residual": 9.592724164935807e-12
+    },
+    "19_1/k+1": {
+      "band_energy_by_order": [
+        -7.718947908529053,
+        -0.03425317880356187,
+        0.0010847331173261367,
+        -0.06829068697759909,
+        0.010321485022211765
+      ],
+      "frame_maximum_scaled_residual": 6.545298785751437e-16,
+      "local_star_trace_exchange_maximum": 294.6214043067378,
+      "time_connection_maximum": 1.061901157655217,
+      "variation_maximum_scaled_residual": 3.0183929660309753e-12
+    },
+    "19_1/k-1": {
+      "band_energy_by_order": [
+        -7.718609413411675,
+        -0.0332108913299446,
+        -0.002512693236204591,
+        -0.06712562426896242,
+        -0.031713004458240004
+      ],
+      "frame_maximum_scaled_residual": 1.6141451447655386e-15,
+      "local_star_trace_exchange_maximum": 292.983384962928,
+      "time_connection_maximum": 1.0619592424343844,
+      "variation_maximum_scaled_residual": 9.592724164935807e-12
+    },
+    "1_-1/k+1": {
+      "band_energy_by_order": [
+        -2.1848558709721626,
+        0.0,
+        0.02258433530574368,
+        0.0,
+        3.3697680855510947
+      ],
+      "frame_maximum_scaled_residual": 1.1624677857132578e-15,
+      "local_star_trace_exchange_maximum": 13066.751860292496,
+      "time_connection_maximum": 8.00065733429782,
+      "variation_maximum_scaled_residual": 2.0943669435212576e-12
+    },
+    "1_-1/k-1": {
+      "band_energy_by_order": [
+        -2.1845036664737476,
+        0.0,
+        -0.02402783101265483,
+        0.0,
+        -4.045067398622464
+      ],
+      "frame_maximum_scaled_residual": 1.1895800111212148e-15,
+      "local_star_trace_exchange_maximum": 12779.99335196285,
+      "time_connection_maximum": 7.330871148168232,
+      "variation_maximum_scaled_residual": 4.837094037111046e-12
+    },
+    "1_1/k+1": {
+      "band_energy_by_order": [
+        -2.1848558709721626,
+        0.0,
+        0.02258433530574368,
+        0.0,
+        3.3697680855510947
+      ],
+      "frame_maximum_scaled_residual": 1.1624677857132578e-15,
+      "local_star_trace_exchange_maximum": 13066.751860292496,
+      "time_connection_maximum": 8.00065733429782,
+      "variation_maximum_scaled_residual": 2.0943669435212576e-12
+    },
+    "1_1/k-1": {
+      "band_energy_by_order": [
+        -2.1845036664737476,
+        0.0,
+        -0.02402783101265483,
+        0.0,
+        -4.045067398622464
+      ],
+      "frame_maximum_scaled_residual": 1.1895800111212148e-15,
+      "local_star_trace_exchange_maximum": 12779.99335196285,
+      "time_connection_maximum": 7.330871148168232,
+      "variation_maximum_scaled_residual": 4.837094037111046e-12
+    },
+    "20_-1/k+1": {
+      "band_energy_by_order": [
+        -8.703892845062686,
+        0.030464011766453532,
+        0.0007934135380743287,
+        0.047817889166406606,
+        0.005830325550432001
+      ],
+      "frame_maximum_scaled_residual": 4.842808022708928e-16,
+      "local_star_trace_exchange_maximum": 205.45247021094772,
+      "time_connection_maximum": 0.6600267823795881,
+      "variation_maximum_scaled_residual": 1.1715339080806588e-11
+    },
+    "20_-1/k-1": {
+      "band_energy_by_order": [
+        -8.70355434994531,
+        0.029640507966302784,
+        -0.0020372696385294,
+        0.04709383009601001,
+        -0.02066775684222693
+      ],
+      "frame_maximum_scaled_residual": 4.484874502829847e-16,
+      "local_star_trace_exchange_maximum": 204.439015583593,
+      "time_connection_maximum": 0.6600581779403601,
+      "variation_maximum_scaled_residual": 6.343368992587681e-12
+    },
+    "20_1/k+1": {
+      "band_energy_by_order": [
+        -8.703892845062686,
+        -0.030464011766453532,
+        0.0007934135380743287,
+        -0.047817889166406606,
+        0.005830325550432001
+      ],
+      "frame_maximum_scaled_residual": 4.842808022708928e-16,
+      "local_star_trace_exchange_maximum": 205.45247021094772,
+      "time_connection_maximum": 0.6600267823795881,
+      "variation_maximum_scaled_residual": 1.1715339080806588e-11
+    },
+    "20_1/k-1": {
+      "band_energy_by_order": [
+        -8.70355434994531,
+        -0.029640507966302784,
+        -0.0020372696385294,
+        -0.04709383009601001,
+        -0.02066775684222693
+      ],
+      "frame_maximum_scaled_residual": 4.484874502829847e-16,
+      "local_star_trace_exchange_maximum": 204.439015583593,
+      "time_connection_maximum": 0.6600581779403601,
+      "variation_maximum_scaled_residual": 6.343368992587681e-12
+    },
+    "21_-1/k+1": {
+      "band_energy_by_order": [
+        -9.68691466196221,
+        0.02742331501159961,
+        0.0005915418921173391,
+        0.03478001480265467,
+        0.0033903720437837475
+      ],
+      "frame_maximum_scaled_residual": 3.4594346883953046e-16,
+      "local_star_trace_exchange_maximum": 149.01226779155158,
+      "time_connection_maximum": 0.4316701933813955,
+      "variation_maximum_scaled_residual": 3.3998674293049535e-12
+    },
+    "21_-1/k-1": {
+      "band_energy_by_order": [
+        -9.68657616684483,
+        0.02675632125854915,
+        -0.001694590654933993,
+        0.03430650775666243,
+        -0.014111185017658394
+      ],
+      "frame_maximum_scaled_residual": 3.0964897772159685e-16,
+      "local_star_trace_exchange_maximum": 148.35158636041072,
+      "time_connection_maximum": 0.4316882510585212,
+      "variation_maximum_scaled_residual": 6.967333004122183e-12
+    },
+    "21_1/k+1": {
+      "band_energy_by_order": [
+        -9.68691466196221,
+        -0.02742331501159961,
+        0.0005915418921173391,
+        -0.03478001480265467,
+        0.0033903720437837475
+      ],
+      "frame_maximum_scaled_residual": 3.4594346883953046e-16,
+      "local_star_trace_exchange_maximum": 149.01226779155158,
+      "time_connection_maximum": 0.4316701933813955,
+      "variation_maximum_scaled_residual": 3.3998674293049535e-12
+    },
+    "21_1/k-1": {
+      "band_energy_by_order": [
+        -9.68657616684483,
+        -0.02675632125854915,
+        -0.001694590654933993,
+        -0.03430650775666243,
+        -0.014111185017658394
+      ],
+      "frame_maximum_scaled_residual": 3.0964897772159685e-16,
+      "local_star_trace_exchange_maximum": 148.35158636041072,
+      "time_connection_maximum": 0.4316882510585212,
+      "variation_maximum_scaled_residual": 6.967333004122183e-12
+    },
+    "22_-1/k+1": {
+      "band_energy_by_order": [
+        -10.668544981577917,
+        0.024930939096728878,
+        0.00044679085793528084,
+        0.02608481309654465,
+        0.0020044511938351987
+      ],
+      "frame_maximum_scaled_residual": 2.2122033575438013e-16,
+      "local_star_trace_exchange_maximum": 111.53211661171778,
+      "time_connection_maximum": 0.2941403946873639,
+      "variation_maximum_scaled_residual": 7.465126414916846e-12
+    },
+    "22_-1/k-1": {
+      "band_energy_by_order": [
+        -10.668206486460539,
+        0.02437974282331384,
+        -0.0014384975759781822,
+        0.02576218610321951,
+        -0.010006599916602615
+      ],
+      "frame_maximum_scaled_residual": 2.9349281236498675e-16,
+      "local_star_trace_exchange_maximum": 111.08299027480497,
+      "time_connection_maximum": 0.29415130547963764,
+      "variation_maximum_scaled_residual": 1.073298073625565e-11
+    },
+    "22_1/k+1": {
+      "band_energy_by_order": [
+        -10.668544981577917,
+        -0.024930939096728878,
+        0.00044679085793528084,
+        -0.02608481309654465,
+        0.0020044511938351987
+      ],
+      "frame_maximum_scaled_residual": 2.2122033575438013e-16,
+      "local_star_trace_exchange_maximum": 111.53211661171778,
+      "time_connection_maximum": 0.2941403946873639,
+      "variation_maximum_scaled_residual": 7.465126414916846e-12
+    },
+    "22_1/k-1": {
+      "band_energy_by_order": [
+        -10.668206486460539,
+        -0.02437974282331384,
+        -0.0014384975759781822,
+        -0.02576218610321951,
+        -0.010006599916602615
+      ],
+      "frame_maximum_scaled_residual": 2.9349281236498675e-16,
+      "local_star_trace_exchange_maximum": 111.08299027480497,
+      "time_connection_maximum": 0.29415130547963764,
+      "variation_maximum_scaled_residual": 1.073298073625565e-11
+    },
+    "23_1/k+1": {
+      "band_energy_by_order": [
+        -3.1495970242111935,
+        0.0,
+        0.009266682740738743,
+        0.0,
+        -0.9823584289396522
+      ],
+      "frame_maximum_scaled_residual": 4.766787065671031e-15,
+      "local_star_trace_exchange_maximum": 4311.78719221379,
+      "time_connection_maximum": 1.2173022955198352,
+      "variation_maximum_scaled_residual": 4.538256306035986e-12
+    },
+    "23_1/k-1": {
+      "band_energy_by_order": [
+        -3.1492585290938155,
+        0.0,
+        -0.013783006880072304,
+        0.0,
+        0.5058088107440125
+      ],
+      "frame_maximum_scaled_residual": 4.037297727786084e-15,
+      "local_star_trace_exchange_maximum": 4260.588656235874,
+      "time_connection_maximum": 1.2747769387932322,
+      "variation_maximum_scaled_residual": 8.442361347793237e-12
+    },
+    "24_-1/k+1": {
+      "band_energy_by_order": [
+        -3.8311384281849348,
+        0.08158152415672892,
+        0.004928162069806478,
+        0.6418689745721038,
+        -0.23871596564723307
+      ],
+      "frame_maximum_scaled_residual": 1.8364554664878774e-14,
+      "local_star_trace_exchange_maximum": 2401.3206749612104,
+      "time_connection_maximum": 20.00709337683574,
+      "variation_maximum_scaled_residual": 1.6921324790299623e-12
+    },
+    "24_-1/k-1": {
+      "band_energy_by_order": [
+        -3.8307999330675586,
+        0.07665586872727995,
+        -0.009955270833841089,
+        0.6198364620648996,
+        -0.011127628854731342
+      ],
+      "frame_maximum_scaled_residual": 1.4443273239847854e-14,
+      "local_star_trace_exchange_maximum": 2376.7468460877894,
+      "time_connection_maximum": 20.010129869513698,
+      "variation_maximum_scaled_residual": 2.391106445201861e-12
+    },
+    "24_1/k+1": {
+      "band_energy_by_order": [
+        -3.8311384281849348,
+        -0.08158152415672892,
+        0.004928162069806478,
+        -0.6418689745721038,
+        -0.23871596564723307
+      ],
+      "frame_maximum_scaled_residual": 1.8364554664878774e-14,
+      "local_star_trace_exchange_maximum": 2401.3206749612104,
+      "time_connection_maximum": 20.00709337683574,
+      "variation_maximum_scaled_residual": 1.6921324790299623e-12
+    },
+    "24_1/k-1": {
+      "band_energy_by_order": [
+        -3.8307999330675586,
+        -0.07665586872727995,
+        -0.009955270833841089,
+        -0.6198364620648996,
+        -0.011127628854731342
+      ],
+      "frame_maximum_scaled_residual": 1.4443273239847854e-14,
+      "local_star_trace_exchange_maximum": 2376.7468460877894,
+      "time_connection_maximum": 20.010129869513698,
+      "variation_maximum_scaled_residual": 2.391106445201861e-12
+    },
+    "25_-1/k+1": {
+      "band_energy_by_order": [
+        -4.619338677498346,
+        0.08645946535308117,
+        0.0029513238903349595,
+        0.4725412279828818,
+        -0.04888969722577825
+      ],
+      "frame_maximum_scaled_residual": 1.072108776169355e-14,
+      "local_star_trace_exchange_maximum": 1371.6557507775283,
+      "time_connection_maximum": 12.22950989600347,
+      "variation_maximum_scaled_residual": 9.672860145840516e-12
+    },
+    "25_-1/k-1": {
+      "band_energy_by_order": [
+        -4.61900018238097,
+        0.08210762978310769,
+        -0.00711376148327241,
+        0.4590756089937648,
+        -0.08355564005572004
+      ],
+      "frame_maximum_scaled_residual": 9.836265570869463e-15,
+      "local_star_trace_exchange_maximum": 1359.6651572924782,
+      "time_connection_maximum": 12.230883423826796,
+      "variation_maximum_scaled_residual": 1.3332035998019324e-11
+    },
+    "25_1/k+1": {
+      "band_energy_by_order": [
+        -4.619338677498346,
+        -0.08645946535308117,
+        0.0029513238903349595,
+        -0.4725412279828818,
+        -0.04888969722577825
+      ],
+      "frame_maximum_scaled_residual": 1.072108776169355e-14,
+      "local_star_trace_exchange_maximum": 1371.6557507775283,
+      "time_connection_maximum": 12.22950989600347,
+      "variation_maximum_scaled_residual": 9.672860145840516e-12
+    },
+    "25_1/k-1": {
+      "band_energy_by_order": [
+        -4.61900018238097,
+        -0.08210762978310769,
+        -0.00711376148327241,
+        -0.4590756089937648,
+        -0.08355564005572004
+      ],
+      "frame_maximum_scaled_residual": 9.836265570869463e-15,
+      "local_star_trace_exchange_maximum": 1359.6651572924782,
+      "time_connection_maximum": 12.230883423826796,
+      "variation_maximum_scaled_residual": 1.3332035998019324e-11
+    },
+    "26_-1/k+1": {
+      "band_energy_by_order": [
+        -5.468267582363312,
+        0.08128372139803389,
+        0.0019378287467371291,
+        0.31902320929385497,
+        -0.005410366349894578
+      ],
+      "frame_maximum_scaled_residual": 3.2699331111771896e-15,
+      "local_star_trace_exchange_maximum": 827.399780974974,
+      "time_connection_maximum": 6.984005856989705,
+      "variation_maximum_scaled_residual": 3.779774059394424e-12
+    },
+    "26_-1/k-1": {
+      "band_energy_by_order": [
+        -5.467929087245936,
+        0.07781402653411411,
+        -0.005207050569213201,
+        0.3113380527270242,
+        -0.06946056860157815
+      ],
+      "frame_maximum_scaled_residual": 4.152459874521149e-15,
+      "local_star_trace_exchange_maximum": 821.1772757772966,
+      "time_connection_maximum": 6.984635748289591,
+      "variation_maximum_scaled_residual": 9.308468380832074e-12
+    },
+    "26_1/k+1": {
+      "band_energy_by_order": [
+        -5.468267582363312,
+        -0.08128372139803389,
+        0.0019378287467371291,
+        -0.31902320929385497,
+        -0.005410366349894578
+      ],
+      "frame_maximum_scaled_residual": 3.2699331111771896e-15,
+      "local_star_trace_exchange_maximum": 827.399780974974,
+      "time_connection_maximum": 6.984005856989705,
+      "variation_maximum_scaled_residual": 3.779774059394424e-12
+    },
+    "26_1/k-1": {
+      "band_energy_by_order": [
+        -5.467929087245936,
+        -0.07781402653411411,
+        -0.005207050569213201,
+        -0.3113380527270242,
+        -0.06946056860157815
+      ],
+      "frame_maximum_scaled_residual": 4.152459874521149e-15,
+      "local_star_trace_exchange_maximum": 821.1772757772966,
+      "time_connection_maximum": 6.984635748289591,
+      "variation_maximum_scaled_residual": 9.308468380832074e-12
+    },
+    "27_-1/k+1": {
+      "band_energy_by_order": [
+        -6.3536284937268945,
+        0.0740924371418345,
+        0.0013479464755540807,
+        0.21630269040988115,
+        0.003176318806090761
+      ],
+      "frame_maximum_scaled_residual": 3.751568947095904e-15,
+      "local_star_trace_exchange_maximum": 527.6395222713995,
+      "time_connection_maximum": 4.080385764819286,
+      "variation_maximum_scaled_residual": 1.249023925905065e-11
+    },
+    "27_-1/k-1": {
+      "band_energy_by_order": [
+        -6.353289998609517,
+        0.07136232020777412,
+        -0.003938604151174429,
+        0.2118153811094619,
+        -0.04855987534617788
+      ],
+      "frame_maximum_scaled_residual": 3.904689002013363e-15,
+      "local_star_trace_exchange_maximum": 524.184241133589,
+      "time_connection_maximum": 4.080693224390684,
+      "variation_maximum_scaled_residual": 1.477029665058803e-11
+    },
+    "27_1/k+1": {
+      "band_energy_by_order": [
+        -6.3536284937268945,
+        -0.0740924371418345,
+        0.0013479464755540807,
+        -0.21630269040988115,
+        0.003176318806090761
+      ],
+      "frame_maximum_scaled_residual": 3.751568947095904e-15,
+      "local_star_trace_exchange_maximum": 527.6395222713995,
+      "time_connection_maximum": 4.080385764819286,
+      "variation_maximum_scaled_residual": 1.249023925905065e-11
+    },
+    "27_1/k-1": {
+      "band_energy_by_order": [
+        -6.353289998609517,
+        -0.07136232020777412,
+        -0.003938604151174429,
+        -0.2118153811094619,
+        -0.04855987534617788
+      ],
+      "frame_maximum_scaled_residual": 3.904689002013363e-15,
+      "local_star_trace_exchange_maximum": 524.184241133589,
+      "time_connection_maximum": 4.080693224390684,
+      "variation_maximum_scaled_residual": 1.477029665058803e-11
+    },
+    "28_-1/k+1": {
+      "band_energy_by_order": [
+        -7.26210846538271,
+        0.06709380084458523,
+        0.0009723344307298984,
+        0.15036522103428704,
+        0.0038074054430846174
+      ],
+      "frame_maximum_scaled_residual": 8.753033331431395e-16,
+      "local_star_trace_exchange_maximum": 353.40996656969594,
+      "time_connection_maximum": 2.4842426403903306,
+      "variation_maximum_scaled_residual": 7.554891960988307e-12
+    },
+    "28_-1/k-1": {
+      "band_energy_by_order": [
+        -7.261769970265334,
+        0.06492584947714965,
+        -0.0030753747276378394,
+        0.14763458581178265,
+        -0.033058626091052076
+      ],
+      "frame_maximum_scaled_residual": 1.0746950817555086e-15,
+      "local_star_trace_exchange_maximum": 351.36931986979204,
+      "time_connection_maximum": 2.4844031739331394,
+      "variation_maximum_scaled_residual": 1.2772395767613304e-11
+    },
+    "28_1/k+1": {
+      "band_energy_by_order": [
+        -7.26210846538271,
+        -0.06709380084458523,
+        0.0009723344307298984,
+        -0.15036522103428704,
+        0.0038074054430846174
+      ],
+      "frame_maximum_scaled_residual": 8.753033331431395e-16,
+      "local_star_trace_exchange_maximum": 353.40996656969594,
+      "time_connection_maximum": 2.4842426403903306,
+      "variation_maximum_scaled_residual": 7.554891960988307e-12
+    },
+    "28_1/k-1": {
+      "band_energy_by_order": [
+        -7.261769970265334,
+        -0.06492584947714965,
+        -0.0030753747276378394,
+        -0.14763458581178265,
+        -0.033058626091052076
+      ],
+      "frame_maximum_scaled_residual": 1.0746950817555086e-15,
+      "local_star_trace_exchange_maximum": 351.36931986979204,
+      "time_connection_maximum": 2.4844031739331394,
+      "variation_maximum_scaled_residual": 1.2772395767613304e-11
+    },
+    "29_-1/k+1": {
+      "band_energy_by_order": [
+        -8.18601372635524,
+        0.0608572611486793,
+        0.0007182956685588849,
+        0.10756421498408994,
+        0.0029137253180459254
+      ],
+      "frame_maximum_scaled_residual": 1.0757144860266692e-15,
+      "local_star_trace_exchange_maximum": 246.75998976472044,
+      "time_connection_maximum": 1.5778953509348252,
+      "variation_maximum_scaled_residual": 1.3245019152219169e-11
+    },
+    "29_-1/k-1": {
+      "band_energy_by_order": [
+        -8.185675231237862,
+        0.05910958357122117,
+        -0.00246942138364826,
+        0.1058304900469507,
+        -0.0227529520923369
+      ],
+      "frame_maximum_scaled_residual": 1.3901491935838551e-15,
+      "local_star_trace_exchange_maximum": 245.48910380400466,
+      "time_connection_maximum": 1.5779844757005075,
+      "variation_maximum_scaled_residual": 1.673404155728914e-11
+    },
+    "29_1/k+1": {
+      "band_energy_by_order": [
+        -8.18601372635524,
+        -0.0608572611486793,
+        0.0007182956685588849,
+        -0.10756421498408994,
+        0.0029137253180459254
+      ],
+      "frame_maximum_scaled_residual": 1.0757144860266692e-15,
+      "local_star_trace_exchange_maximum": 246.75998976472044,
+      "time_connection_maximum": 1.5778953509348252,
+      "variation_maximum_scaled_residual": 1.3245019152219169e-11
+    },
+    "29_1/k-1": {
+      "band_energy_by_order": [
+        -8.185675231237862,
+        -0.05910958357122117,
+        -0.00246942138364826,
+        -0.1058304900469507,
+        -0.0227529520923369
+      ],
+      "frame_maximum_scaled_residual": 1.3901491935838551e-15,
+      "local_star_trace_exchange_maximum": 245.48910380400466,
+      "time_connection_maximum": 1.5779844757005075,
+      "variation_maximum_scaled_residual": 1.673404155728914e-11
+    },
+    "2_-1/k+1": {
+      "band_energy_by_order": [
+        -3.3814816269612686,
+        0.0,
+        0.008695670316210158,
+        0.0,
+        0.5364519615998588
+      ],
+      "frame_maximum_scaled_residual": 2.7558358368869815e-15,
+      "local_star_trace_exchange_maximum": 3516.1588817450634,
+      "time_connection_maximum": 1.376592693875996,
+      "variation_maximum_scaled_residual": 4.097458021668473e-12
+    },
+    "2_-1/k-1": {
+      "band_energy_by_order": [
+        -3.3811294224628528,
+        0.0,
+        -0.01081822019997457,
+        0.0,
+        -0.7569468930566681
+      ],
+      "frame_maximum_scaled_residual": 3.2009423662373996e-15,
+      "local_star_trace_exchange_maximum": 3468.303669346023,
+      "time_connection_maximum": 1.30050416683205,
+      "variation_maximum_scaled_residual": 6.402202920171468e-12
+    },
+    "2_1/k+1": {
+      "band_energy_by_order": [
+        -3.3814816269612686,
+        0.0,
+        0.008695670316210158,
+        0.0,
+        0.5364519615998588
+      ],
+      "frame_maximum_scaled_residual": 2.7558358368869815e-15,
+      "local_star_trace_exchange_maximum": 3516.1588817450634,
+      "time_connection_maximum": 1.376592693875996,
+      "variation_maximum_scaled_residual": 4.097458021668473e-12
+    },
+    "2_1/k-1": {
+      "band_energy_by_order": [
+        -3.3811294224628528,
+        0.0,
+        -0.01081822019997457,
+        0.0,
+        -0.7569468930566681
+      ],
+      "frame_maximum_scaled_residual": 3.2009423662373996e-15,
+      "local_star_trace_exchange_maximum": 3468.303669346023,
+      "time_connection_maximum": 1.30050416683205,
+      "variation_maximum_scaled_residual": 6.402202920171468e-12
+    },
+    "30_-1/k+1": {
+      "band_energy_by_order": [
+        -9.120657736435835,
+        0.05545177836034547,
+        0.0005390688100266022,
+        0.079075946242699,
+        0.001974887061318504
+      ],
+      "frame_maximum_scaled_residual": 8.141788674793386e-16,
+      "local_star_trace_exchange_maximum": 178.40945537453166,
+      "time_connection_maximum": 1.0418678325509596,
+      "variation_maximum_scaled_residual": 2.1803206542177608e-11
+    },
+    "30_-1/k-1": {
+      "band_energy_by_order": [
+        -9.120319241318455,
+        0.05402041698092851,
+        -0.0020306490067742737,
+        0.07793152748177691,
+        -0.01600475827200697
+      ],
+      "frame_maximum_scaled_residual": 1.2020074878042233e-15,
+      "local_star_trace_exchange_maximum": 177.5815312046803,
+      "time_connection_maximum": 1.0419200225917282,
+      "variation_maximum_scaled_residual": 6.060058980553456e-12
+    },
+    "30_1/k+1": {
+      "band_energy_by_order": [
+        -9.120657736435835,
+        -0.05545177836034547,
+        0.0005390688100266022,
+        -0.079075946242699,
+        0.001974887061318504
+      ],
+      "frame_maximum_scaled_residual": 8.141788674793386e-16,
+      "local_star_trace_exchange_maximum": 178.40945537453166,
+      "time_connection_maximum": 1.0418678325509596,
+      "variation_maximum_scaled_residual": 2.1803206542177608e-11
+    },
+    "30_1/k-1": {
+      "band_energy_by_order": [
+        -9.120319241318455,
+        -0.05402041698092851,
+        -0.0020306490067742737,
+        -0.07793152748177691,
+        -0.01600475827200697
+      ],
+      "frame_maximum_scaled_residual": 1.2020074878042233e-15,
+      "local_star_trace_exchange_maximum": 177.5815312046803,
+      "time_connection_maximum": 1.0419200225917282,
+      "variation_maximum_scaled_residual": 6.060058980553456e-12
+    },
+    "31_-1/k+1": {
+      "band_energy_by_order": [
+        -10.06304868325999,
+        0.05079943634645794,
+        0.0004085890685491542,
+        0.059580703059757344,
+        0.0012632778072248618
+      ],
+      "frame_maximum_scaled_residual": 2.1846346088873668e-16,
+      "local_star_trace_exchange_maximum": 132.83132670320813,
+      "time_connection_maximum": 0.7119216110516214,
+      "variation_maximum_scaled_residual": 1.6158040323923157e-11
+    },
+    "31_-1/k-1": {
+      "band_energy_by_order": [
+        -10.062710188142614,
+        0.049609527256667174,
+        -0.0017037629369601676,
+        0.05879888865220334,
+        -0.011531944658540558
+      ],
+      "frame_maximum_scaled_residual": 5.729462490801089e-16,
+      "local_star_trace_exchange_maximum": 132.2710171470111,
+      "time_connection_maximum": 0.7119536019612436,
+      "variation_maximum_scaled_residual": 8.423191325687539e-12
+    },
+    "31_1/k+1": {
+      "band_energy_by_order": [
+        -10.06304868325999,
+        -0.05079943634645794,
+        0.0004085890685491542,
+        -0.059580703059757344,
+        0.0012632778072248618
+      ],
+      "frame_maximum_scaled_residual": 2.1846346088873668e-16,
+      "local_star_trace_exchange_maximum": 132.83132670320813,
+      "time_connection_maximum": 0.7119216110516214,
+      "variation_maximum_scaled_residual": 1.6158040323923157e-11
+    },
+    "31_1/k-1": {
+      "band_energy_by_order": [
+        -10.062710188142614,
+        -0.049609527256667174,
+        -0.0017037629369601676,
+        -0.05879888865220334,
+        -0.011531944658540558
+      ],
+      "frame_maximum_scaled_residual": 5.729462490801089e-16,
+      "local_star_trace_exchange_maximum": 132.2710171470111,
+      "time_connection_maximum": 0.7119536019612436,
+      "variation_maximum_scaled_residual": 8.423191325687539e-12
+    },
+    "32_-1/k+1": {
+      "band_energy_by_order": [
+        -11.01119765621348,
+        0.046790396233494964,
+        0.00031123900122371605,
+        0.04587835209523231,
+        0.0007713816435209343
+      ],
+      "frame_maximum_scaled_residual": 3.679352409732622e-16,
+      "local_star_trace_exchange_maximum": 101.38470656352172,
+      "time_connection_maximum": 0.5012464658840978,
+      "variation_maximum_scaled_residual": 5.97316505136473e-12
+    },
+    "32_-1/k-1": {
+      "band_energy_by_order": [
+        -11.010859161096104,
+        0.045787758136277966,
+        -0.0014540109712627405,
+        0.04532799632709837,
+        -0.008504850283020041
+      ],
+      "frame_maximum_scaled_residual": 4.2009760707507337e-16,
+      "local_star_trace_exchange_maximum": 100.99300633432054,
+      "time_connection_maximum": 0.5012668580503169,
+      "variation_maximum_scaled_residual": 1.1290936637696661e-11
+    },
+    "32_1/k+1": {
+      "band_energy_by_order": [
+        -11.01119765621348,
+        -0.046790396233494964,
+        0.00031123900122371605,
+        -0.04587835209523231,
+        0.0007713816435209343
+      ],
+      "frame_maximum_scaled_residual": 3.679352409732622e-16,
+      "local_star_trace_exchange_maximum": 101.38470656352172,
+      "time_connection_maximum": 0.5012464658840978,
+      "variation_maximum_scaled_residual": 5.97316505136473e-12
+    },
+    "32_1/k-1": {
+      "band_energy_by_order": [
+        -11.010859161096104,
+        -0.045787758136277966,
+        -0.0014540109712627405,
+        -0.04532799632709837,
+        -0.008504850283020041
+      ],
+      "frame_maximum_scaled_residual": 4.2009760707507337e-16,
+      "local_star_trace_exchange_maximum": 100.99300633432054,
+      "time_connection_maximum": 0.5012668580503169,
+      "variation_maximum_scaled_residual": 1.1290936637696661e-11
+    },
+    "3_-1/k+1": {
+      "band_energy_by_order": [
+        -4.471931935034842,
+        0.0,
+        0.004642469164231744,
+        0.0,
+        0.16126877498978712
+      ],
+      "frame_maximum_scaled_residual": 3.836617507917966e-16,
+      "local_star_trace_exchange_maximum": 1518.4057523604195,
+      "time_connection_maximum": 0.447355103222022,
+      "variation_maximum_scaled_residual": 4.459789429352668e-12
+    },
+    "3_-1/k-1": {
+      "band_energy_by_order": [
+        -4.471579730536428,
+        0.0,
+        -0.006524509413808357,
+        0.0,
+        -0.2616780851779018
+      ],
+      "frame_maximum_scaled_residual": 3.3914283605427514e-16,
+      "local_star_trace_exchange_maximum": 1502.9738860394857,
+      "time_connection_maximum": 0.42834404537140713,
+      "variation_maximum_scaled_residual": 7.220367014815182e-12
+    },
+    "3_1/k+1": {
+      "band_energy_by_order": [
+        -4.471931935034842,
+        0.0,
+        0.004642469164231744,
+        0.0,
+        0.16126877498978712
+      ],
+      "frame_maximum_scaled_residual": 3.836617507917966e-16,
+      "local_star_trace_exchange_maximum": 1518.4057523604195,
+      "time_connection_maximum": 0.447355103222022,
+      "variation_maximum_scaled_residual": 4.459789429352668e-12
+    },
+    "3_1/k-1": {
+      "band_energy_by_order": [
+        -4.471579730536428,
+        0.0,
+        -0.006524509413808357,
+        0.0,
+        -0.2616780851779018
+      ],
+      "frame_maximum_scaled_residual": 3.3914283605427514e-16,
+      "local_star_trace_exchange_maximum": 1502.9738860394857,
+      "time_connection_maximum": 0.42834404537140713,
+      "variation_maximum_scaled_residual": 7.220367014815182e-12
+    },
+    "4_-1/k+1": {
+      "band_energy_by_order": [
+        -5.519500809283532,
+        0.0,
+        0.0028526368799703912,
+        0.0,
+        0.0638143671578858
+      ],
+      "frame_maximum_scaled_residual": 7.65005237273017e-16,
+      "local_star_trace_exchange_maximum": 806.9562787591034,
+      "time_connection_maximum": 0.19208007286723,
+      "variation_maximum_scaled_residual": 1.2235288811035579e-11
+    },
+    "4_-1/k-1": {
+      "band_energy_by_order": [
+        -5.519148604785115,
+        0.0,
+        -0.004480567224857237,
+        0.0,
+        -0.11845473612844712
+      ],
+      "frame_maximum_scaled_residual": 8.361593370546615e-16,
+      "local_star_trace_exchange_maximum": 800.3487864261191,
+      "time_connection_maximum": 0.18535762742827502,
+      "variation_maximum_scaled_residual": 1.407591807870761e-12
+    },
+    "4_1/k+1": {
+      "band_energy_by_order": [
+        -5.519500809283532,
+        0.0,
+        0.0028526368799703912,
+        0.0,
+        0.0638143671578858
+      ],
+      "frame_maximum_scaled_residual": 7.65005237273017e-16,
+      "local_star_trace_exchange_maximum": 806.9562787591034,
+      "time_connection_maximum": 0.19208007286723,
+      "variation_maximum_scaled_residual": 1.2235288811035579e-11
+    },
+    "4_1/k-1": {
+      "band_energy_by_order": [
+        -5.519148604785115,
+        0.0,
+        -0.004480567224857237,
+        0.0,
+        -0.11845473612844712
+      ],
+      "frame_maximum_scaled_residual": 8.361593370546615e-16,
+      "local_star_trace_exchange_maximum": 800.3487864261191,
+      "time_connection_maximum": 0.18535762742827502,
+      "variation_maximum_scaled_residual": 1.407591807870761e-12
+    },
+    "5_-1/k+1": {
+      "band_energy_by_order": [
+        -6.544812229057924,
+        0.0,
+        0.0018978712951938932,
+        0.0,
+        0.02951026830571496
+      ],
+      "frame_maximum_scaled_residual": 4.532368962247082e-16,
+      "local_star_trace_exchange_maximum": 483.7618778076124,
+      "time_connection_maximum": 0.09692912214148121,
+      "variation_maximum_scaled_residual": 5.639153913399338e-12
+    },
+    "5_-1/k-1": {
+      "band_energy_by_order": [
+        -6.544460024559509,
+        0.0,
+        -0.0033187645709201407,
+        0.0,
+        -0.06269318748088987
+      ],
+      "frame_maximum_scaled_residual": 4.570675515714085e-16,
+      "local_star_trace_exchange_maximum": 480.4313468102707,
+      "time_connection_maximum": 0.0940184929438971,
+      "variation_maximum_scaled_residual": 8.673228587392587e-12
+    },
+    "5_1/k+1": {
+      "band_energy_by_order": [
+        -6.544812229057924,
+        0.0,
+        0.0018978712951938932,
+        0.0,
+        0.02951026830571496
+      ],
+      "frame_maximum_scaled_residual": 4.532368962247082e-16,
+      "local_star_trace_exchange_maximum": 483.7618778076124,
+      "time_connection_maximum": 0.09692912214148121,
+      "variation_maximum_scaled_residual": 5.639153913399338e-12
+    },
+    "5_1/k-1": {
+      "band_energy_by_order": [
+        -6.544460024559509,
+        0.0,
+        -0.0033187645709201407,
+        0.0,
+        -0.06269318748088987
+      ],
+      "frame_maximum_scaled_residual": 4.570675515714085e-16,
+      "local_star_trace_exchange_maximum": 480.4313468102707,
+      "time_connection_maximum": 0.0940184929438971,
+      "variation_maximum_scaled_residual": 8.673228587392587e-12
+    },
+    "6_-1/k+1": {
+      "band_energy_by_order": [
+        -7.55693140197959,
+        0.0,
+        0.0013285887253106483,
+        0.0,
+        0.015078189656298702
+      ],
+      "frame_maximum_scaled_residual": 2.0967611170720465e-16,
+      "local_star_trace_exchange_maximum": 314.1366331977847,
+      "time_connection_maximum": 0.054439944135912216,
+      "variation_maximum_scaled_residual": 1.0347035621196115e-11
+    },
+    "6_-1/k-1": {
+      "band_energy_by_order": [
+        -7.556579197481176,
+        0.0,
+        -0.0025847714066186017,
+        0.0,
+        -0.03679795766014259
+      ],
+      "frame_maximum_scaled_residual": 1.9408595640701599e-16,
+      "local_star_trace_exchange_maximum": 312.2669296504242,
+      "time_connection_maximum": 0.05299762878925118,
+      "variation_maximum_scaled_residual": 3.6199948464301326e-12
+    },
+    "6_1/k+1": {
+      "band_energy_by_order": [
+        -7.55693140197959,
+        0.0,
+        0.0013285887253106483,
+        0.0,
+        0.015078189656298702
+      ],
+      "frame_maximum_scaled_residual": 2.0967611170720465e-16,
+      "local_star_trace_exchange_maximum": 314.1366331977847,
+      "time_connection_maximum": 0.054439944135912216,
+      "variation_maximum_scaled_residual": 1.0347035621196115e-11
+    },
+    "6_1/k-1": {
+      "band_energy_by_order": [
+        -7.556579197481176,
+        0.0,
+        -0.0025847714066186017,
+        0.0,
+        -0.03679795766014259
+      ],
+      "frame_maximum_scaled_residual": 1.9408595640701599e-16,
+      "local_star_trace_exchange_maximum": 312.2669296504242,
+      "time_connection_maximum": 0.05299762878925118,
+      "variation_maximum_scaled_residual": 3.6199948464301326e-12
+    },
+    "7_-1/k+1": {
+      "band_energy_by_order": [
+        -8.560538892733017,
+        0.0,
+        0.0009629731148872486,
+        0.0,
+        0.008243629691103347
+      ],
+      "frame_maximum_scaled_residual": 1.4731795247818967e-16,
+      "local_star_trace_exchange_maximum": 216.03355379863717,
+      "time_connection_maximum": 0.03301709057324742,
+      "variation_maximum_scaled_residual": 1.121597986833304e-11
+    },
+    "7_-1/k-1": {
+      "band_energy_by_order": [
+        -8.560186688234602,
+        0.0,
+        -0.002086854368219155,
+        0.0,
+        -0.02325949792883746
+      ],
+      "frame_maximum_scaled_residual": 1.8580091136394649e-16,
+      "local_star_trace_exchange_maximum": 214.8997945982227,
+      "time_connection_maximum": 0.032229278147554004,
+      "variation_maximum_scaled_residual": 1.3709139703053301e-11
+    },
+    "7_1/k+1": {
+      "band_energy_by_order": [
+        -8.560538892733017,
+        0.0,
+        0.0009629731148872486,
+        0.0,
+        0.008243629691103347
+      ],
+      "frame_maximum_scaled_residual": 1.4731795247818967e-16,
+      "local_star_trace_exchange_maximum": 216.03355379863717,
+      "time_connection_maximum": 0.03301709057324742,
+      "variation_maximum_scaled_residual": 1.121597986833304e-11
+    },
+    "7_1/k-1": {
+      "band_energy_by_order": [
+        -8.560186688234602,
+        0.0,
+        -0.002086854368219155,
+        0.0,
+        -0.02325949792883746
+      ],
+      "frame_maximum_scaled_residual": 1.8580091136394649e-16,
+      "local_star_trace_exchange_maximum": 214.8997945982227,
+      "time_connection_maximum": 0.032229278147554004,
+      "variation_maximum_scaled_residual": 1.3709139703053301e-11
+    },
+    "8_-1/k+1": {
+      "band_energy_by_order": [
+        -9.55831626477138,
+        0.0,
+        0.0007152717107278899,
+        0.0,
+        0.004722314840664932
+      ],
+      "frame_maximum_scaled_residual": 1.4739193571325853e-16,
+      "local_star_trace_exchange_maximum": 155.15861037514483,
+      "time_connection_maximum": 0.021222086407100535,
+      "variation_maximum_scaled_residual": 4.9973601669675335e-12
+    },
+    "8_-1/k-1": {
+      "band_energy_by_order": [
+        -9.557964060272964,
+        0.0,
+        -0.0017311995844816617,
+        0.0,
+        -0.015546950074953892
+      ],
+      "frame_maximum_scaled_residual": 1.6824243514348964e-16,
+      "local_star_trace_exchange_maximum": 154.42989322299863,
+      "time_connection_maximum": 0.020758702209187078,
+      "variation_maximum_scaled_residual": 1.0402044525871222e-11
+    },
+    "8_1/k+1": {
+      "band_energy_by_order": [
+        -9.55831626477138,
+        0.0,
+        0.0007152717107278899,
+        0.0,
+        0.004722314840664932
+      ],
+      "frame_maximum_scaled_residual": 1.4739193571325853e-16,
+      "local_star_trace_exchange_maximum": 155.15861037514483,
+      "time_connection_maximum": 0.021222086407100535,
+      "variation_maximum_scaled_residual": 4.9973601669675335e-12
+    },
+    "8_1/k-1": {
+      "band_energy_by_order": [
+        -9.557964060272964,
+        0.0,
+        -0.0017311995844816617,
+        0.0,
+        -0.015546950074953892
+      ],
+      "frame_maximum_scaled_residual": 1.6824243514348964e-16,
+      "local_star_trace_exchange_maximum": 154.42989322299863,
+      "time_connection_maximum": 0.020758702209187078,
+      "variation_maximum_scaled_residual": 1.0402044525871222e-11
+    },
+    "9_-1/k+1": {
+      "band_energy_by_order": [
+        -10.551917543602013,
+        0.0,
+        0.0005405379669589326,
+        0.0,
+        0.002790613985346669
+      ],
+      "frame_maximum_scaled_residual": 1.4745175953090572e-16,
+      "local_star_trace_exchange_maximum": 115.30291267956409,
+      "time_connection_maximum": 0.014277389189957343,
+      "variation_maximum_scaled_residual": 1.3460444830351343e-11
+    },
+    "9_-1/k-1": {
+      "band_energy_by_order": [
+        -10.551565339103593,
+        0.0,
+        -0.0014669756061207997,
+        0.0,
+        -0.010856528450834568
+      ],
+      "frame_maximum_scaled_residual": 1.537715996236555e-16,
+      "local_star_trace_exchange_maximum": 114.81263978372075,
+      "time_connection_maximum": 0.013988427277298007,
+      "variation_maximum_scaled_residual": 1.531906398716399e-11
+    },
+    "9_1/k+1": {
+      "band_energy_by_order": [
+        -10.551917543602013,
+        0.0,
+        0.0005405379669589326,
+        0.0,
+        0.002790613985346669
+      ],
+      "frame_maximum_scaled_residual": 1.4745175953090572e-16,
+      "local_star_trace_exchange_maximum": 115.30291267956409,
+      "time_connection_maximum": 0.014277389189957343,
+      "variation_maximum_scaled_residual": 1.3460444830351343e-11
+    },
+    "9_1/k-1": {
+      "band_energy_by_order": [
+        -10.551565339103593,
+        0.0,
+        -0.0014669756061207997,
+        0.0,
+        -0.010856528450834568
+      ],
+      "frame_maximum_scaled_residual": 1.537715996236555e-16,
+      "local_star_trace_exchange_maximum": 114.81263978372075,
+      "time_connection_maximum": 0.013988427277298007,
+      "variation_maximum_scaled_residual": 1.531906398716399e-11
+    }
+  },
+  "raw_residuals": {
+    "conjugation_absolute": 5.275069270282984e-10,
+    "identity_absolute": 5.311449058353901e-10,
+    "raw_residuals/band_decoupling": 6.039613253960852e-14,
+    "raw_residuals/effective_Hermiticity": 1.1723955140041653e-13,
+    "raw_residuals/normalization_commutator": 1.8632646672452088e-15,
+    "raw_residuals/projector_intertwining": 2.1939104997543793e-14,
+    "raw_residuals/unitarity_left": 1.432187701766452e-14,
+    "raw_residuals/unitarity_right": 8.881784197001252e-15
+  },
+  "reproducer": "python3 scripts/derive_nsc_reference_band_action.py --check",
+  "schema": "NSC-REFERENCE-BAND-ACTION-v1",
+  "source_hashes": {
+    "docs/nsc-reference-band-action.md": "1b0f485795806f3b61a6b439b9ce46d55beadca2b0071ba2f390ae0aeeaf3004",
+    "scripts/derive_nsc_reference_band_action.py": "3664d55d83e7ba096b0c16bdd5e5e60e7cda69c1cae6d5772dac6caf4fbf0757",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "tests/test_nsc_reference_band_action.py": "913240e5d223357a55e430842cbd76f22e1396e5b46dbe65d851d8edc6b60e1f"
+  },
+  "status": "PASS: formal reference action density and variation; finite matching OPEN",
+  "tolerances": {
+    "LLL_chiral_operator_residual": 3e-11,
+    "LLL_generic_point_delta": 3e-11,
+    "conjugation_scaled": 3e-08,
+    "identity_scaled": 3e-08,
+    "leading_overlap_identity": 3e-11,
+    "previous_projector_residual": 3e-11,
+    "real_band_action": 3e-11,
+    "scaled_residuals/band_decoupling": 3e-11,
+    "scaled_residuals/effective_Hermiticity": 3e-11,
+    "scaled_residuals/normalization_commutator": 3e-11,
+    "scaled_residuals/projector_intertwining": 3e-11,
+    "scaled_residuals/unitarity_left": 3e-11,
+    "scaled_residuals/unitarity_right": 3e-11,
+    "zero_order_energy_residual": 3e-11
+  }
+}

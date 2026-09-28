@@ -1,0 +1,42 @@
+{
+  "Abel_current_factor": "(1-r)*exp(-3*i*eta/2)/(1-r*exp(-i*eta)), 0<r<1",
+  "Abel_then_coincidence_limit": "0; take r->1 at fixed eta not in 2*pi*Z, then eta->0",
+  "accountable_author": "Douglas Ek",
+  "current_derivative": "-sin(z)*exp(-i*(N+1/2)*eta)/(2*pi)",
+  "exact_identity_residuals": {
+    "current_identity": "0",
+    "kernel_identity": "0",
+    "zero_split_current": "0"
+  },
+  "finite_cutoff": "P_N projects onto n=1,...,N; derivative at t=0 is i[B,P_N]",
+  "full_projector_current_change": "0 exactly",
+  "generator": "B[n+1,n]=B[n,n+1]=1/(2*(n+1/2)), n>=1; negative Fourier sector",
+  "kernel_derivative": "sin(z)*exp(-i*(N+1/2)*eta)/(2*pi*(N+1/2))",
+  "kernel_uniform_bound": "1/(2*pi*(N+1/2)) -> 0",
+  "numerical_control": {
+    "cutoff": 8,
+    "matrix_current_residual": 1.0007415106216802e-16,
+    "matrix_size": 13,
+    "matrix_tolerance": 1e-13,
+    "tangent_residual": 2.0642376696855536e-12,
+    "tangent_step": 0.0001,
+    "tangent_tolerance": 1e-10,
+    "unitarity_residual": 1.1102230246251565e-16
+  },
+  "schema": "NSC-SOURCE-CUTOFF-UNITARY-CONTROL-v1",
+  "scope": {
+    "NSC_Dirac_evolution_used": false,
+    "NSC_cutoff_exchange_determined": false,
+    "metric_timestep": false,
+    "new_physical_source_runs": 0,
+    "physical_local_gate": "OPEN",
+    "stress_correction_inserted": false
+  },
+  "source_hashes": {
+    "docs/nsc-source-cutoff-unitary-control.md": "bedfdbdba790919c6f86260ea893afb2432988ef62569dcccc6d0d2cbb522ea7",
+    "scripts/check_nsc_source_cutoff_unitary_control.py": "21505b20c69cdda33bb660b02f242f0e7b256142cfa624acfab5239c3cf8b7a3"
+  },
+  "status": "PASS: exact globally unitary control; NSC exchange remains OPEN",
+  "unitary": "U(t)=exp(i*t*B); B bounded self-adjoint; U commutes with the full negative-sector projector",
+  "zero_split_then_N_limit": "-sin(z)/(2*pi)"
+}

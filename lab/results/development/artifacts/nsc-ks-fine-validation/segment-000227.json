@@ -1,0 +1,21 @@
+{
+  "CPU_seconds": 27.975335999999515,
+  "continuous_residual_integral_upper": [
+    {
+      "exponent": -173,
+      "mantissa": "768078696133302558069556984859786053"
+    },
+    {
+      "exponent": -168,
+      "mantissa": "282904174730635573031114287057772699"
+    }
+  ],
+  "physical_local_gate": "OPEN",
+  "proof_subcells": 1,
+  "rho_end": 1.0021679687500002,
+  "rho_start": 1.0022900390625002,
+  "schema": "NSC-KS-FINE-RESIDUAL-SEGMENT-v1",
+  "segment": 227,
+  "signature_digest": "e86c29fd28f884a78dbe112332fa870b34e3d804459dfd901419de65fc6ea031",
+  "whole_spatial_period": true
+}

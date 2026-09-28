@@ -1,0 +1,57 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO6-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v6.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO6"
+predecessor_protocol = "FGC-2-SF1-PROTO5"
+diagnosis_artifact = "FGC-1-CAL2-PREF4"
+calibration_branch = "GR-0"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_post_calibration_trial_stage_stop_ownership_protocol_and_lineage_certificate"
+PROTO5_GR0_calibration_trajectory_disclosed = true
+first_nonzero_common_event_completed = false
+FGCQR_evolution_outcomes_inspected = false
+SGBL_evolution_outcomes_inspected = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "47f4c83bae2df26c51c3544eed8c06507a0cd9eb"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v5.toml"
+predecessor_protocol_sha256 = "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab"
+diagnosis_config = "configs/fgc/fgc-1-cal2-pref4.toml"
+diagnosis_config_sha256 = "d596a45899baecbb5ea1f9d5d26409782376327ce6ddb2fc961e03626abc5a55"
+diagnosis_result = "results/fgc-1-cal2-pref4.json"
+diagnosis_result_sha256 = "0e56f3b91205d68a6f81f4dad56f8ecce6d93ce0184a5899a1bace6d42aca11b"
+
+[proof_contract]
+PROTO6_overlay_must_validate_exactly = true
+checkpoint_must_be_ancestor_of_HEAD = true
+predecessor_and_diagnosis_must_be_read_from_checkpoint = true
+immutable_blob_hashes_must_match_PROTO6_amendment = true
+immutable_PROTO5_must_validate_unchanged = true
+immutable_CAL2_must_be_canonical_and_nonmechanism = true
+accepted_state_source_failure_must_remain_terminal = true
+only_internal_unaccepted_stage_source_failure_may_retry = true
+raw_source_threshold_and_solver_must_remain_unchanged = true
+all_non_source_physical_and_numerical_gates_must_remain_unchanged = true
+new_output_namespaces_must_be_declared_but_not_accessed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO6_successor_runtime_compositor_implemented = false
+PROTO6_fresh_GR0_dynamic_calibration_authorized = false
+PROTO6_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

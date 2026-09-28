@@ -1,0 +1,119 @@
+schema_version = 1
+artifact_id = "FGC-1-HLT12-MON12"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v14.toml"
+protocol_freeze_config = "configs/fgc/fgc-1-pro14-frz1.toml"
+protocol_freeze_result = "results/fgc-1-pro14-frz1.json"
+run_plan_config = "configs/fgc/fgc-1-pro14-run1.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO14"
+predecessor_freeze = "FGC-1-PRO14-FRZ1"
+runtime_owner = "FGC-1-HLT12-MON12"
+calibration_branch = "GR-0"
+calibration_amplitude = "3"
+role = "pretrajectory_TDG6_admitted_restart_runtime_authorization"
+PROTO13_and_CAL10_history_disclosed = true
+PROTO14_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+numerical_premise_promoted_to_physical_mechanism = false
+
+[immutable_lineage]
+checkpoint_commit = "11c800cbd6f31d10d2b9578ed150c23a0a19aa75"
+protocol_config_sha256 = "3043cbc23e7a78af764b6e74397512cb3f7bc78eace64485ab188963ba35f3a3"
+protocol_freeze_config_sha256 = "646d4a88986d77934b6fe80bee50f997ee2397eace5b540b771332c2179525e1"
+protocol_freeze_result_sha256 = "a0bac04e78fe9ed5af851694057e51a0de62e8682a2fbfb734e63c98537c305b"
+protocol_module = "src/recursive_horizons/fgc/evolution/protocol_v14.py"
+protocol_module_sha256 = "a4d766baf1cafa87f32f93594d4c771ac0ada3225007312546afc9325208d86c"
+TDG6_runtime_module = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+TDG6_runtime_module_sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+run_plan_sha256 = "76a8c07132b91cefc0cc466a6108557463841eca8ee1e4a081e718b9d9d472ba"
+PROTO12_checkpoint = "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz"
+PROTO12_checkpoint_sha256 = "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17"
+RSP2_checkpoint = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz"
+RSP2_checkpoint_sha256 = "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34"
+checkpoint_must_be_ancestor_of_HEAD = true
+tracked_predecessor_blobs_must_match_checkpoint_and_worktree = true
+
+[numerical_runtime]
+python_version = "3.14.3"
+python_implementation = "CPython"
+numpy_version = "2.5.1"
+blas_name = "accelerate"
+blas_version = "unknown"
+system = "Darwin"
+machine = "arm64"
+full_runtime_metadata_must_be_recorded_in_manifest_and_result = true
+runtime_drift_must_fail_before_source_or_state_advance = true
+
+[runtime_binding]
+successor_runtime_module = "src/recursive_horizons/fgc/evolution/proto14_runtime.py"
+authorized_runner = "scripts/run_fgc_gr0_calibration_v14.py"
+authorized_runner_id = "FGC-1-CAL11-RUN1-RUNNER"
+TDG6_module_is_consumed_directly = true
+every_accepted_post_restart_macro_step_uses_one_two_four_admission = true
+only_admitted_four_quarter_fine_path_commits = true
+TDG6_ledger_and_complete_temporal_rejections_checkpoint_round_trip = true
+source_and_CFL_retry_ownership_remains_unchanged = true
+sampled_64_history_is_nonveto_diagnostic_only = true
+runner_refuses_dirty_tracked_state_namespace_reuse_and_mismatched_resume = true
+exact_numerical_runtime_contract_is_bound_before_source_or_state_advance = true
+terminal_checkpoint_precedes_result_and_resume_reconciles_idempotently = true
+
+[restart_admission]
+restart_coordinate_time = "23/16"
+primary_point_counts = [2049, 4097, 8193]
+comparator_point_counts = [4097, 8193, 16385]
+expected_member_count = 6
+expected_event_sample_count = 24
+expected_tracer_count = 48
+all_payloads_must_restore_nonmutatingly = true
+TDG6_ledger_must_start_zero_at_restart = true
+pre_restart_temporal_error_bound_proved = false
+restart_event_cannot_count_toward_new_consecutive_trapped_events = true
+no_state_reinitialization_reprojection_interpolation_or_refit = true
+
+[namespace]
+calibration_output_root = "runs/fgc-2-sf1/proto14/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto14/holdout"
+both_roots_must_be_absent_at_authorization = true
+authorization_must_create_neither_root = true
+runner_must_refuse_overwrite = true
+
+[proof_contract]
+PROTO14_and_PRO14_FRZ1_must_validate = true
+all_tracked_predecessor_hashes_must_match = true
+local_authorization_generation_requires_complete_hash_exact_raw_restart_bundle = true
+raw_restart_bundle_optional_but_explicitly_unverified_in_portable_clean_clone_audit = true
+partial_or_hash_mismatched_raw_restart_bundle_fails_closed = true
+all_six_complete_restart_payloads_must_match_PROTO14 = true
+restart_restoration_must_not_mutate_any_payload = true
+TDG6_protocol_runtime_and_successor_runner_must_be_hash_bound = true
+runtime_fingerprint_must_match_exactly = true
+threshold_restart_history_claim_and_namespace_mutations_must_fail_closed = true
+fresh_namespaces_must_be_observed_absent_without_creation = true
+canonical_hash_bound_result_required = true
+no_PROTO14_trajectory_may_be_advanced = true
+
+[claims]
+PROTO14_successor_runtime_implemented = true
+PROTO14_fresh_GR0_dynamic_calibration_authorized = true
+PROTO14_resolved_holdout_manifest_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,222 @@
+{
+  "artifact": "ecd_interaction_action_gamma_identity_gate",
+  "classification": "bounded_ecd_contact_identity_and_tested_local_reconstruction_preflight",
+  "contact_tetrad_stress": [
+    [
+      0.42187500000000033,
+      -0.0,
+      -0.0,
+      -0.0
+    ],
+    [
+      -0.0,
+      -0.42187500000000033,
+      -0.0,
+      -0.0
+    ],
+    [
+      -0.0,
+      -0.0,
+      -0.42187500000000033,
+      -0.0
+    ],
+    [
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.42187500000000033
+    ]
+  ],
+  "exact_fixture": {
+    "F": {
+      "imag": 0.0,
+      "real": 0.75
+    },
+    "G": {
+      "imag": 0.0,
+      "real": 0.5
+    },
+    "action_sources": {
+      "common": -3.0000000000000004,
+      "source_F": {
+        "imag": -0.0,
+        "real": -0.5625000000000001
+      },
+      "source_G": {
+        "imag": -0.0,
+        "real": -0.8437500000000001
+      }
+    },
+    "areal_radius": 0.28209479177387814,
+    "axial": {
+      "A_hat_0": 1.6250000000000007,
+      "A_hat_phi": 0.0,
+      "A_hat_r": 0.6250000000000002,
+      "A_hat_theta": 0.0,
+      "F_abs_squared": 0.5625,
+      "G_abs_squared": 0.25,
+      "algebraic_torsion_source_nonzero": true,
+      "axial_contact_invariant_nonzero": true,
+      "axial_current_nonzero": true,
+      "axial_squared": -2.2500000000000018,
+      "both_radial_amplitudes_populated": true,
+      "canonical_action_signature": "+---",
+      "classical_c_number_field_interpretation": true,
+      "construction": "ventrella_choptuik_massless_left_chiral_doublet",
+      "contact_action_density_nonzero": true,
+      "full_ecd_contact_stress_verified": false,
+      "normalization": 1.0000000000000002,
+      "numerical_vc_signature": "-+++",
+      "o3_parity_compatibility_proven": false,
+      "real_current_definition": "A^a=-i*bar(psi)*gamma_VC^a*gamma_star*psi",
+      "so3_axial_current_compatible": true
+    },
+    "identity": {
+      "all_tested_angle_reconstructions_closed": true,
+      "maximum_coefficient_residual": 1.138904328535643e-16,
+      "maximum_tested_angle_reconstruction_residual": 7.850462293418876e-17,
+      "maximum_weak_identity_residual": 3.3306690738754696e-16,
+      "scope": "Weak action/projection identity and pointwise retained-basis reconstruction at declared tested angles only; not a global spherical-harmonic closure theorem or time-evolution normalization.",
+      "weak_form_identity_closed": true
+    },
+    "kappa": 1.0,
+    "lapse": 1.0,
+    "radial_metric": 1.0,
+    "reduced_contact_density": -0.42187500000000006,
+    "signature_bridge": {
+      "A_squared_minus": -2.2500000000000018,
+      "J_squared_plus": 2.2500000000000018,
+      "adjoint_translation_residual": 0.0,
+      "canonical_action_defined_before_translation": true,
+      "canonical_clifford_residual": 0.0,
+      "canonical_lhs_to_vc_equation_residual": 0.0,
+      "canonical_signature": "+---",
+      "contact_lagrangian_minus": -0.42187500000000033,
+      "contact_lagrangian_plus": -0.42187500000000033,
+      "contact_translation_residual": 0.0,
+      "full_effective_contact_coefficient_plus": "-3*kappa/16",
+      "gamma5_translation_residual": 0.0,
+      "gamma_conversion": "Gamma^a=-i*gamma_VC^a",
+      "hehl_datta_coefficient": "+3*kappa/8",
+      "line_element_physically_changed": false,
+      "maximum_signature_bridge_residual": 8.881784197001252e-16,
+      "norm_translation_residual": 8.881784197001252e-16,
+      "raw_bilinear_minus_signature_quadratic_form_not_a_physical_norm": {
+        "imag": 0.0,
+        "real": 2.2500000000000027
+      },
+      "raw_to_real_current_residual": 2.220446049250313e-16,
+      "raw_vc_axial_bilinear": [
+        {
+          "imag": 1.6250000000000009,
+          "real": 0.0
+        },
+        {
+          "imag": -5.551115123125783e-17,
+          "real": 0.0
+        },
+        {
+          "imag": 0.0,
+          "real": 0.0
+        },
+        {
+          "imag": 0.6250000000000003,
+          "real": 0.0
+        }
+      ],
+      "real_current_definition": "J^a=A^a=-i*bar(psi)*gamma_VC^a*gamma_star*psi",
+      "signature_bridge_closed": true,
+      "source": "Cabral-Lobo-Rubiera-Garcia 2019 arXiv:1902.02222 Eqs. 8-11, 18, 20, 23, 83",
+      "translated_contact_coefficient_minus": "+3*kappa/16",
+      "translated_real_current": [
+        1.6250000000000007,
+        0.0,
+        0.0,
+        0.6250000000000002
+      ],
+      "vc_clifford_residual": 0.0,
+      "vc_signature": "-+++"
+    }
+  },
+  "model_id": "GMF-1B-ECD-INT1",
+  "nonclaims": {
+    "bounce_constructed": false,
+    "child_topology_proven": false,
+    "complete_effective_stress_tensor_derived": false,
+    "constraint_compatible_vacuum_region_verified": false,
+    "constraint_solution_constructed": false,
+    "curvature_invariants_verified": false,
+    "einstein_equations_solved": false,
+    "external_Q_derived": false,
+    "finite_mass_exterior_constructed": false,
+    "finite_mass_exterior_or_match_proven": false,
+    "full_ecd_effective_stress_verified": false,
+    "full_ecd_source_so3_equivariance_verified": false,
+    "full_ecd_stress_verified": false,
+    "full_ecd_tetrad_dependence_varied": false,
+    "global_solution_constructed": false,
+    "horizon_regular_evolution_constructed": false,
+    "late_dark_energy_derived": false,
+    "metric_null_defocusing_derived": false,
+    "null_constraint_solution_constructed": false,
+    "quantum_ensemble_equivalence_proven": false,
+    "radial_stability_proven": false,
+    "regular_centre_constructed": false,
+    "regular_centre_series_verified": false,
+    "time_evolution_normalization_derived": false,
+    "torsion_free_dirac_stress_derived": false,
+    "variable_c_derived": false
+  },
+  "null_contact_gate": {
+    "contact_null_contraction": 0.0,
+    "contact_sector_tetrad_variation_complete": true,
+    "contact_term_alone_derives_null_defocusing": false,
+    "full_ecd_stress_derived": false,
+    "metric_norm": 0.0,
+    "validated_metric_null": true
+  },
+  "one_amplitude_semantics": {
+    "F": {
+      "imag": 0.0,
+      "real": 1.0
+    },
+    "G": {
+      "imag": 0.0,
+      "real": 0.0
+    },
+    "axial": {
+      "A_hat_0": 2.000000000000001,
+      "A_hat_phi": 0.0,
+      "A_hat_r": 2.000000000000001,
+      "A_hat_theta": 0.0,
+      "F_abs_squared": 1.0,
+      "G_abs_squared": 0.0,
+      "algebraic_torsion_source_nonzero": true,
+      "axial_contact_invariant_nonzero": false,
+      "axial_current_nonzero": true,
+      "axial_squared": -0.0,
+      "both_radial_amplitudes_populated": false,
+      "canonical_action_signature": "+---",
+      "classical_c_number_field_interpretation": true,
+      "construction": "ventrella_choptuik_massless_left_chiral_doublet",
+      "contact_action_density_nonzero": false,
+      "full_ecd_contact_stress_verified": false,
+      "normalization": 1.0000000000000002,
+      "numerical_vc_signature": "-+++",
+      "o3_parity_compatibility_proven": false,
+      "real_current_definition": "A^a=-i*bar(psi)*gamma_VC^a*gamma_star*psi",
+      "so3_axial_current_compatible": true
+    },
+    "interpretation": "A nonzero null axial/torsion current can have A^2=0 and a vanishing projected cubic contact source.",
+    "reduced_contact_density": -0.0
+  },
+  "project_version": "0.11.0",
+  "provenance": {
+    "cabral_lobo_rubiera_garcia_2019": {
+      "arxiv_url": "https://arxiv.org/abs/1902.02222",
+      "equations": "8-11, 18, 20, 23, and 83",
+      "use": "combined torsion-eliminated contact action and Hehl-Datta equation in the canonical layer, then explicit signature translation"
+    }
+  },
+  "schema_version": 2
+}

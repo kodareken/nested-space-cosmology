@@ -1,0 +1,446 @@
+{
+  "artifact_id": "FGC-1-TDG9-UR1-PREF1",
+  "artifact_payload": {
+    "artifact_id": "FGC-1-TDG9-UR1-PREF1",
+    "authority": {
+      "blob_count": 16,
+      "blobs": [
+        {
+          "path": "Makefile",
+          "sha256": "207174051d6a3a3ce70f19efc7c122b452ba71761906924d283525badcea4e64"
+        },
+        {
+          "path": "README.md",
+          "sha256": "73ff82f9c064a0036e912e880c3825783ad77113021e0d749db04cb03477b50f"
+        },
+        {
+          "path": "configs/fgc/fgc-1-tdg9-ur1-frz1.toml",
+          "sha256": "6aaa5ae0b91753ac86e36235629ab4ed00ddfe6e4c83b69ad2594d755dcbc303"
+        },
+        {
+          "path": "docs/claim-ledger.md",
+          "sha256": "40861eaef270d47aa93f6ba9b0b610deabcaa25de8134dfde71941b5defcb085"
+        },
+        {
+          "path": "docs/fgc-runtime-matrix.md",
+          "sha256": "124711908ef0a2b1b3ca54aeec72960d423c5002419161a8523ee04157d58f61"
+        },
+        {
+          "path": "docs/fgc-tdg9-ur1-frz1.md",
+          "sha256": "aba34cd72182f795c969397c18acbd5b680b035711e58ea9ff1ff1651a354d2e"
+        },
+        {
+          "path": "docs/research-roadmap.md",
+          "sha256": "daa2b02d2401057f521d3cf78a9f0e2d2ed2cccb94c180556f38e5dad1dff325"
+        },
+        {
+          "path": "results/README.md",
+          "sha256": "ce620016d40dd1f5908e9b5f8ceb6d6e2630e20efae36f3a5367a59a733a1bbb"
+        },
+        {
+          "path": "results/fgc-1-tdg9-ur1-frz1.json",
+          "sha256": "6dad298d01e98080bf3dcd7bde3e4aa969efdda790d97f8d68b40231cee9283f"
+        },
+        {
+          "path": "scripts/check_repo.py",
+          "sha256": "cec3bf1d79a065a7e6e3c4254f3c4847eb39b573663ebf24099de479cf6df191"
+        },
+        {
+          "path": "scripts/reproduce_fgc_tdg9_ur1_frz1.py",
+          "sha256": "f67c5eb612f92640e8555117f7026a48d3c7c2193e2cc8feed54a56ed155040f"
+        },
+        {
+          "path": "scripts/run_fgc_tdg9_ur1.py",
+          "sha256": "f660ba40df882d6ded87d8b0c020f8328fa50fa26a0a61f7f5686febe32c5680"
+        },
+        {
+          "path": "src/recursive_horizons/fgc/evolution/tdg9_ur1_authority.py",
+          "sha256": "7ab52c8e910ae0b7bf9ceea415e9e12eedcf09afc67c6986cfc7588d882e015f"
+        },
+        {
+          "path": "tests/test_check_repo_tdg9_ur1_frz1.py",
+          "sha256": "afae3ce3d06bf3296a5d86101860924083bd81612cec7aa429b6ae10ca9363ca"
+        },
+        {
+          "path": "tests/test_fgc_tdg9_ur1_authority.py",
+          "sha256": "7e74735f07f27da97a42ff76e9d65eb672d14c411cfce160096d2392ab6e9336"
+        },
+        {
+          "path": "tests/test_fgc_tdg9_ur1_runner.py",
+          "sha256": "931b677b48c8c8e91ae0d025dd0a8dba37d09e88507cdd48a8a34c6154badd22"
+        }
+      ],
+      "parent_commit": "22f7dc5e181af45eb43f6f19dee23fbc29f89c0c"
+    },
+    "authority_binding": {
+      "all_committed_blob_hashes_verified": true,
+      "blob_count": 16,
+      "commit": "17d8c4cf728ffd18ce6e137874501e48b35fbb32",
+      "parent_commit": "22f7dc5e181af45eb43f6f19dee23fbc29f89c0c"
+    },
+    "claims": {
+      "D01_D12_lower_owners_equal": true,
+      "GR0_calibration_completed": false,
+      "UR1_raw_result_independently_bound": true,
+      "arithmetic_alone_sufficient": false,
+      "candidate_execution_authorized": false,
+      "classification_remains_order_inconclusive": true,
+      "common_event_completed": false,
+      "construction_alone_sufficient": true,
+      "independent_method_agreement": false,
+      "mechanism_result_earned": false,
+      "physical_result_earned": false,
+      "physical_transition_claim_authorized": false,
+      "production_SSPRK3_comparator": false,
+      "production_method_earned": false,
+      "retained_EFT_evolution_authorized": false,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false,
+      "u_R_rows_match_TI2": true,
+      "zero_lowers_owned_by_coefficient_plus_arithmetic_debit": true
+    },
+    "classification": "independently_bound_retry3_u_R_envelope_lower_owner_terminal",
+    "conclusion": {
+      "PDE_or_candidate_state_opened": false,
+      "arithmetic_alone_sufficient_to_clip": false,
+      "both_zero_lowers_owned_by_coefficient_plus_arithmetic_debit": true,
+      "classification_remains_order_inconclusive": true,
+      "construction_alone_sufficient_to_clip": true,
+      "independent_method_agreement": false,
+      "licenses_only_later_prospectively_frozen_envelope_or_admission_design": true,
+      "physics_inference_permitted": false,
+      "production_SSPRK3_comparator": false,
+      "production_method_earned": false,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false,
+      "u_R_rows_match_TI2_and_zero_lowers_owned_by_named_envelope_quantity": true
+    },
+    "decision": {
+      "D01_construction_over_raw": {
+        "denominator": "25865933815808",
+        "numerator": "654019454794891"
+      },
+      "D12_construction_over_raw": {
+        "denominator": "5012309316608",
+        "numerator": "163504863789045"
+      },
+      "arithmetic_alone_sufficient": false,
+      "bernstein_certification_slack_part_of_lower_clip": false,
+      "bernstein_certification_slack_recorded": true,
+      "construction_alone_sufficient": true,
+      "exact_lower_formula": "max(0,Fraction(raw_candidate_maximum)-Fraction(coefficient_construction_debit)-Fraction(outward_arithmetic_debit))",
+      "related_TI2_complete_C_class_is_not_replacement_admission": true,
+      "required_design_classifier": "order_inconclusive",
+      "stored_lower_reproduced_by_downward_binary64_rounding": true,
+      "successor_remedy_selected": false,
+      "zero_lower_owner": "coefficient_plus_arithmetic_debit_clips_positive_raw_maximum"
+    },
+    "independent_replay": {
+      "D01": {
+        "ambiguous_discriminant_count": 0,
+        "arithmetic_alone_sufficient": false,
+        "arithmetic_margin": {
+          "denominator": "2787593149816327892691964784081045188247552",
+          "numerator": "465959239577848087523702603765"
+        },
+        "bernstein_certification_slack": {
+          "binary64_hex": "0x0.0p+0",
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "bernstein_certification_slack_not_part_of_lower_clip": true,
+        "certified_at_least_raw": true,
+        "certified_continuous_upper_bound": {
+          "binary64_hex": "0x1.2d198e246e459p-38",
+          "denominator": "1237940039285380274899124224",
+          "numerator": "5297004142322777"
+        },
+        "coefficient_construction_debit": {
+          "binary64_hex": "0x1.2969e2a3be458p-38",
+          "denominator": "154742504910672534362390528",
+          "numerator": "654019454794891"
+        },
+        "construction_alone_sufficient": true,
+        "construction_margin": {
+          "denominator": "154742504910672534362390528",
+          "numerator": "-628153520979083"
+        },
+        "construction_over_raw": {
+          "denominator": "25865933815808",
+          "numerator": "654019454794891"
+        },
+        "endpoint_candidate_count": 8176,
+        "endpoint_candidate_identity_verified": true,
+        "exact_clipped": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "exact_unclipped": {
+          "denominator": "2787593149816327892691964784081045188247552",
+          "numerator": "-11315807852051456156593677139979"
+        },
+        "lower_bound": {
+          "binary64_hex": "0x0.0p+0",
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "outward_arithmetic_debit": {
+          "binary64_hex": "0x1.6b2daa9000016p-90",
+          "denominator": "2787593149816327892691964784081045188247552",
+          "numerator": "3194550847799307"
+        },
+        "owned_row_count": 2044,
+        "owner": "coefficient_plus_arithmetic_debit_clips_positive_raw_maximum",
+        "polynomial_count": 4088,
+        "polynomial_count_identity_verified": true,
+        "raw_candidate_maximum": {
+          "binary64_hex": "0x1.78661cc000000p-43",
+          "denominator": "590295810358705651712",
+          "numerator": "98670707"
+        },
+        "real_interior_root_count": 2023,
+        "reproduced_stored_lower": {
+          "binary64_hex": "0x0.0p+0",
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "subinterval_count": 2,
+        "upper_bound": {
+          "binary64_hex": "0x1.2d198e246e459p-38",
+          "denominator": "1237940039285380274899124224",
+          "numerator": "5297004142322777"
+        },
+        "upper_equals_certified_upper": true
+      },
+      "D01_D12_lower_owners_equal": true,
+      "D12": {
+        "ambiguous_discriminant_count": 0,
+        "arithmetic_alone_sufficient": false,
+        "arithmetic_margin": {
+          "denominator": "11150372599265311570767859136324180752990208",
+          "numerator": "1444699799714645305986377580517"
+        },
+        "bernstein_certification_slack": {
+          "binary64_hex": "0x0.0p+0",
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "bernstein_certification_slack_not_part_of_lower_clip": true,
+        "certified_at_least_raw": true,
+        "certified_continuous_upper_bound": {
+          "binary64_hex": "0x1.2d1c31bb91376p-38",
+          "denominator": "618970019642690137449562112",
+          "numerator": "2648592747366843"
+        },
+        "coefficient_construction_debit": {
+          "binary64_hex": "0x1.2969e2a67fea0p-38",
+          "denominator": "38685626227668133590597632",
+          "numerator": "163504863789045"
+        },
+        "construction_alone_sufficient": true,
+        "construction_margin": {
+          "denominator": "38685626227668133590597632",
+          "numerator": "-158492554472437"
+        },
+        "construction_over_raw": {
+          "denominator": "5012309316608",
+          "numerator": "163504863789045"
+        },
+        "endpoint_candidate_count": 16352,
+        "endpoint_candidate_identity_verified": true,
+        "exact_clipped": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "exact_unclipped": {
+          "denominator": "11150372599265311570767859136324180752990208",
+          "numerator": "-45682368592836187762852087463963"
+        },
+        "lower_bound": {
+          "binary64_hex": "0x0.0p+0",
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "outward_arithmetic_debit": {
+          "binary64_hex": "0x1.b9799e940001bp-91",
+          "denominator": "11150372599265311570767859136324180752990208",
+          "numerator": "7766511670263835"
+        },
+        "owned_row_count": 2044,
+        "owner": "coefficient_plus_arithmetic_debit_clips_positive_raw_maximum",
+        "polynomial_count": 8176,
+        "polynomial_count_identity_verified": true,
+        "raw_candidate_maximum": {
+          "binary64_hex": "0x1.23c13aa500000p-43",
+          "denominator": "37778931862957161709568",
+          "numerator": "4894833317"
+        },
+        "real_interior_root_count": 4355,
+        "reproduced_stored_lower": {
+          "binary64_hex": "0x0.0p+0",
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "subinterval_count": 4,
+        "upper_bound": {
+          "binary64_hex": "0x1.2d1c31bb91376p-38",
+          "denominator": "618970019642690137449562112",
+          "numerator": "2648592747366843"
+        },
+        "upper_equals_certified_upper": true
+      },
+      "SSPRK3_stage_and_endpoint_record_count": 28,
+      "arithmetic_alone_sufficient": false,
+      "bernstein_certification_slack_part_of_lower_clip": false,
+      "bernstein_certification_slack_recorded": true,
+      "both_owners": "coefficient_plus_arithmetic_debit_clips_positive_raw_maximum",
+      "classifier": {
+        "admission_passed": false,
+        "channel": "u:R",
+        "classification": "order_inconclusive",
+        "order_threshold_passed": null,
+        "order_threshold_resolved": false,
+        "temporal_retry_permitted": true
+      },
+      "construction_alone_sufficient": true,
+      "production_intervals": {
+        "D01": [
+          "0x0.0p+0",
+          "0x1.2d198e246e459p-38"
+        ],
+        "D12": [
+          "0x0.0p+0",
+          "0x1.2d1c31bb91376p-38"
+        ],
+        "matches_sealed_AC1": true
+      },
+      "raw_terminal_class_matches_independent_reduction": true,
+      "replay_receipt": {
+        "accepted_time_hex": "0x1.78554de5a30e0p+0",
+        "attempted_width_hex": "0x1.aaa9612df8000p-11",
+        "descriptor_sha256": "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4",
+        "historical_journal_sha256": "0d21f650ccc46db778fd81fbebf5acab6394e1c2f7972b7940e24c76af9e1f59",
+        "member_key": "RK4-2049",
+        "retry": 3,
+        "state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+        "transaction_sha256": "7a90163d2eb4252fa7a1bbdf55d12f92a9127ed7cba5a37c28456e72d732b22b"
+      },
+      "row_identity": {
+        "algorithm": "sha256",
+        "domain": "TDG9-AR1-BINARY64-HERMITE-ROWS-v1",
+        "matched": true,
+        "related_TI2_retry3_u_R_radius_free_complete_C_class": "sufficient_contraction_pass",
+        "related_not_replacement_production_admission": true,
+        "row_count": 2044,
+        "sha256": "b4a48c7bf72e015f3f3d9a340ea550d608514fb8cd886562265158c33c0b3969"
+      },
+      "shadow_path_count": 7,
+      "shadow_proposal_count": 7
+    },
+    "raw": {
+      "authority_commit": "17d8c4cf728ffd18ce6e137874501e48b35fbb32",
+      "classification": "completed_u_R_rows_match_TI2_and_zero_lowers_owned_by_named_envelope_quantity",
+      "leaf_count": 2,
+      "manifest_sha256": "2b82a93a171eea852fb48770924a7a28b812c120cc5af5316d2a29a03dbd7db9",
+      "namespace": "runs/fgc-2-sf1/tdg9-ur1/retry3-ur-envelope-owner",
+      "runner_id": "FGC-1-TDG9-UR1-RUN1",
+      "schema": "UR1-raw-v1",
+      "terminal_sha256": "545a163a650810ecaceb11bbd26fd9e8adb3559635e26e8dad35d88460a3f06f"
+    },
+    "raw_binding": {
+      "canonical_duplicate_free_schema_verified": true,
+      "leaf_count": 2,
+      "manifest_sha256": "2b82a93a171eea852fb48770924a7a28b812c120cc5af5316d2a29a03dbd7db9",
+      "raw_namespace_unchanged": true,
+      "terminal_sha256": "545a163a650810ecaceb11bbd26fd9e8adb3559635e26e8dad35d88460a3f06f"
+    },
+    "schema_version": 1,
+    "scope": {
+      "AC1_runner_or_authority_imported": false,
+      "GR0_calibration_authorized": false,
+      "LOC1_row_reconstruction_imported": false,
+      "PDE_state_commit_authorized": false,
+      "TI2_runner_or_binder_imported": false,
+      "UR1_runner_decision_code_imported": false,
+      "campaign_store_mutation_authorized": false,
+      "candidate_branches_authorized": false,
+      "common_event_authorized": false,
+      "envelope_or_admission_runtime_change_authorized": false,
+      "independent_method_agreement": false,
+      "mechanism_result_authorized": false,
+      "one_time_live_raw_and_store_authentication": true,
+      "ordinary_verifier_raw_blind": true,
+      "ordinary_verifier_shadow_blind": true,
+      "ordinary_verifier_store_blind": true,
+      "physical_result_authorized": false,
+      "production_SSPRK3_comparator": false,
+      "raw_namespace_mutation_authorized": false,
+      "runtime_envelope_implementation_imported": false,
+      "seven_proposals_reconstructed": false,
+      "successor_remedy_selected": false,
+      "temporal_retry_admission_authorized": false
+    },
+    "selection": {
+      "TI2_retry3_u_R_related_complete_C_class": "sufficient_contraction_pass",
+      "TI2_retry3_u_R_row_sha256": "b4a48c7bf72e015f3f3d9a340ea550d608514fb8cd886562265158c33c0b3969",
+      "accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "actual_spatial_operator": "inherited_RK4_2049_SBP4",
+      "attempted_width_hex": "0x1.aaa9612df8000p-11",
+      "classifier_owner": "classify_tdg6_channel",
+      "envelope_owner": "Binary64CubicEnvelope",
+      "experiment_label": "retry3_SSPRK3_on_inherited_SBP4_u_R_row_hash_and_zero_lower_envelope_owner_diagnostic",
+      "independent_method_agreement": false,
+      "member_key": "RK4-2049",
+      "owned_row_count": 2044,
+      "physical_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+      "point_count": 2049,
+      "production_SSPRK3_comparator": false,
+      "published_channel": "u:R",
+      "retry": 3,
+      "row_hash_domain": "TDG9-AR1-BINARY64-HERMITE-ROWS-v1",
+      "tableau_runtime_selector": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+      "tableau_selector": "SSPRK3"
+    },
+    "store": {
+      "leaf_count": 115,
+      "path": "runs/fgc-2-sf1/tdg8-rcv3/calibration",
+      "snapshot_algorithm": "TDG9-LOC1-STORE-SNAPSHOT-v1",
+      "snapshot_sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+    },
+    "store_binding": {
+      "binder_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "binder_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "store_unchanged": true
+    },
+    "target_protocol": "FGC-2-SF1-PROTO18",
+    "work_budget": {
+      "SSPRK3_records_per_proposal": 4,
+      "fourth_width_authorized": false,
+      "maximum_stage_and_endpoint_RHS_records": 28,
+      "published_channel": "u:R",
+      "published_channel_count": 1,
+      "published_row_count": 2044,
+      "resource_escalation_authorized": false,
+      "retry": 3,
+      "retry_4_authorized": false,
+      "retry_5_authorized": false,
+      "retry_count": 1,
+      "shadow_paths": 7,
+      "shadow_proposals": 7
+    }
+  }
+}

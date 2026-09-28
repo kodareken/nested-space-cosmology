@@ -1,0 +1,79 @@
+{
+  "artifact_id": "FGC-1-FGCQR-A6042-R1025-DEV1",
+  "schema": "FGC-1-FGCQR-A6042-R1025-DEV1-v1",
+  "classification": "activation_persists_but_is_not_resolution_converged_and_positive_Q_is_gauge_contaminated",
+  "action": {
+    "M_Pl": 2.0,
+    "mu": 0.02,
+    "g4": 256.0,
+    "beta": -128.0,
+    "eta": 16384.0,
+    "alpha": 0.0
+  },
+  "trajectory": {
+    "point_count": 1025,
+    "method": "RK4",
+    "spatial_order": 4,
+    "final_time": 1.8,
+    "accepted_steps": 139,
+    "retries": 0,
+    "activation_factor_final": 68.18543210512824,
+    "trapped_point_count_final": 16,
+    "maximum_compactness_final": 1.3862449234478087,
+    "minimum_effective_planck_coefficient_final": 3.9999653603646803,
+    "kinetic_condition_infinity": 2600481.865722698,
+    "source_residual_infinity_final": 3.183231456205249e-12,
+    "reduction_constraint_infinity_final": 0.04282006917683434
+  },
+  "equal_time_resolution_comparison": {
+    "time_low_resolution": 1.5855631171985884,
+    "activation_factor_513": 130.60704423885937,
+    "time_high_resolution": 1.5871389968556755,
+    "activation_factor_1025": 6.881528147805721,
+    "activation_growth_resolution_converged": false
+  },
+  "null_ray_measurement": {
+    "launch_time": 1.553956834532374,
+    "launch_radius": 13.75,
+    "launch_trapped_score": 0.035179887994975664,
+    "minimum_complete_Q": 0.03540792809590574,
+    "maximum_complete_Q": 0.07574635586472038,
+    "positive_complete_Q_sample_count": 982,
+    "maximum_null_residual": 4.996003610813204e-16,
+    "maximum_route_disagreement": 0.16762082399370032,
+    "maximum_affine_residual": 0.30635900303721797,
+    "positive_Q_error_separated": false
+  },
+  "physical_action_term_check_at_radius_13_75": {
+    "geometric_ricci_null": -0.03673404707057992,
+    "reconstructed_physical_action_ricci_null": 0.0012954519836105688,
+    "gauge_extension_mismatch": 0.038029499054190494,
+    "slice_complete_Q": 0.03523264976255963,
+    "positive_Q_attributable_to_physical_FGC_terms": false
+  },
+  "raw_evidence": [
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-activation-a6042-r1025-dev1.json",
+      "sha256": "5b7b490ccb4cbe18f5909d434cfce046874418daa925685dec3dbd0e2ae641d4"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-activation-a6042-r1025-dev1-history.npz",
+      "sha256": "b28afffcfc276fb4bf9765f7602e353ac37e34fe49d50857058907b6c7b61a2a"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-q-a6042-r1025-dev1.json",
+      "sha256": "e0174329b8bab460a3d9ed2ba474c5d41752c40b6e88073c8997f078c2e4d497"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-null-decomposition-a6042-r1025-dev1.json",
+      "sha256": "7d9d98f9a5d4218e8308f9bd7f52695bb18f3ddae3b35cfd075bb1ad2e366b84"
+    }
+  ],
+  "next_intervention": "supersede_the_local_action_as_the_primary_transition_description_and_test_the_explicit_parent_child_boundary_requirement",
+  "nonclaims": {
+    "physical_metric_null_defocusing_demonstrated": false,
+    "higher_resolution_positive_Q_is_a_physical_FGC_signal": false,
+    "nested_space_transition_demonstrated": false
+  },
+  "terminal": true
+}

@@ -1,0 +1,112 @@
+schema_version = 1
+artifact_id = "FGC-1-CAL10-PREF15"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+run_plan_config = "configs/fgc/fgc-1-pro13-run1.toml"
+runtime_authorization_result = "results/fgc-1-hlt11-mon11.json"
+campaign_manifest = "runs/fgc-2-sf1/proto13/calibration/manifest.json"
+campaign_event_log = "runs/fgc-2-sf1/proto13/calibration/events.jsonl"
+campaign_checkpoint = "runs/fgc-2-sf1/proto13/calibration/latest-checkpoint.npz"
+campaign_result = "runs/fgc-2-sf1/proto13/calibration/campaign-result.json"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO13"
+role = "post_run_terminal_checkpoint_recomputed_GR0_temporal_gate_result"
+calibration_branch = "GR-0"
+amplitude = "3"
+GR0_numerical_trajectory_read = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+mechanism_question_answered = false
+physical_obstruction_inferred_from_temporal_stop = false
+
+[immutable_campaign]
+authorization_commit = "682e6cd91419853a4e5bf132c163326f9cc6a029"
+campaign_id = "36c0e18066cf1646e63ea4bb898f202dc05443dd190e9c053d69940f22665cb8"
+manifest_sha256 = "7fbe3835da9d23ed868bf5862250a9c9cad31bfb948091fc1290454867f084f6"
+event_log_sha256 = "cc26095e48de376f0e7924a8b5f2c5126e3a0f21f6d6036942cfc4031d248bdd"
+checkpoint_sha256 = "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97"
+campaign_result_sha256 = "83475a061e2dd4e354e357a3c0cca66e44c60312f9c420585dd989598779aa0b"
+event_log_line_count = 41
+event_log_byte_count = 2474120
+terminal_classification = "calibration_failed_no_eligible_GR0_case"
+terminal_event_index = 63
+terminal_coordinate_time = "63/16"
+terminal_stop_classification = "common_event_constraint_or_spectral_stop"
+terminal_stop_reason = "causal_past_temporal_spectral_admission"
+resume_recovery_action = "event_log_already_matches_checkpoint"
+resume_checkpoint_event_log_sha256 = "8b0644f354cbe232c182df686af0cd18060474bc3caf7d1952a164d6b2db11e0"
+
+[method_owned_ladders]
+primary_method = "RK4"
+primary_point_counts = [2049, 4097, 8193]
+comparator_method = "SSPRK3"
+comparator_point_counts = [4097, 8193, 16385]
+common_physical_point_count = 2049
+terminal_common_spatial_and_constraint_admissions_passed = true
+terminal_trapped_sign_passed = false
+
+[temporal_stop]
+minimum_sample_count = 64
+observed_sample_count = 64
+tracer_count = 48
+field_count = 6
+maximum_nested_tail_ratio = "1/4"
+both_method_admissions_failed = true
+both_individual_budget_layers_failed = true
+both_nested_ratio_layers_failed = true
+RK4_failed_field_ratio_count = 510
+RK4_failed_derivative_ratio_count = 511
+SSPRK3_failed_field_ratio_count = 453
+SSPRK3_failed_derivative_ratio_count = 453
+threshold_may_not_be_changed_in_this_artifact = true
+numerical_or_physical_cause_derived = false
+
+[proof_contract]
+authorization_commit_must_precede_raw_namespace_creation = true
+manifest_must_bind_the_exact_authorization_commit_plan_and_runtime = true
+raw_bundle_must_match_all_four_frozen_hashes = true
+event_log_must_be_canonical_restart_plus_forty_common_events = true
+terminal_checkpoint_must_embed_the_exact_event_log = true
+terminal_checkpoint_result_must_equal_external_result = true
+all_six_terminal_states_and_runtime_ledgers_must_restore = true
+terminal_common_event_must_be_recomputed_without_runner_classifier = true
+terminal_temporal_admission_must_be_recomputed_from_checkpoint_histories = true
+all_serialized_temporal_ratios_must_match_recomputation = true
+source_and_CFL_retry_provenance_must_remain_separate = true
+threshold_event_method_history_state_and_claim_mutations_must_fail_closed = true
+temporal_stop_must_not_be_promoted_to_candidate_or_physical_failure = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+temporal_gate_diagnosis_may_begin = true
+successor_protocol_frozen = false
+terminal_checkpoint_may_not_resume = true
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+classical_spherical_diagnostic_authorized = false
+
+[claims]
+PROTO13_campaign_terminated_normally = true
+PROTO13_terminal_checkpoint_recomputed = true
+PROTO13_temporal_gate_reached = true
+PROTO13_terminal_common_spatial_and_constraint_admissions_passed = true
+PROTO13_temporal_admission_failed = true
+PROTO13_temporal_failure_cause_derived = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

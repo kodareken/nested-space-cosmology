@@ -1,0 +1,69 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO17-FRZ1"
+project_version = "0.11.0"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v17.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO17"
+role = "premise_only_exact_successor_and_external_generation_zero_construction_contract_certificate"
+raw_history_or_physical_bundle_opened = false
+runtime_or_runner_implemented = false
+namespace_created = false
+trajectory_read = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "03f1f249a9484ba43513c3ad4292cc993598a65b"
+checkpoint_must_be_ancestor_of_HEAD = true
+hlt13_result = "results/fgc-1-hlt13-mon13.json"
+hlt13_result_sha256 = "de55f8d55a1db0043945d3553c7d2070703809b82c1f7141bf923c036b9df5b7"
+proto16_protocol = "configs/fgc/fgc-2-sf1-protocol-v16.toml"
+proto16_protocol_sha256 = "3b0ab8663ed0568f03841167a2db096419b0978a71b534eefa9f9bb9a6787c75"
+proto16_freeze_result = "results/fgc-1-pro16-frz1.json"
+proto16_freeze_result_sha256 = "f8e14deda1638bda6e98831ae1ea80c8d1fdffb23957e183acd8b57a154ce43f"
+pref24_config = "configs/fgc/fgc-1-pro16-pref24.toml"
+pref24_config_sha256 = "c8d983513d123b9d04b8a0574bfea1ce2184f9c9cd1c853a156830cb60f9dc10"
+pref24_result = "results/fgc-1-pro16-pref24.json"
+pref24_result_sha256 = "168f995ee03851d62154661a8575d4af0aa068af128be5874f8e333e4341995f"
+proto15_runtime = "src/recursive_horizons/fgc/evolution/proto15_runtime.py"
+proto15_runtime_sha256 = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+
+[proof_contract]
+full_visible_genesis_spec_schema_is_frozen = true
+complete_state_object_and_TDG6_ledger_inputs_are_required = true
+generation_zero_cursor_origin_and_checkpoint_algorithm_are_fixed = true
+external_commit_blob_and_loaded_source_authentication_are_required = true
+foreign_store_rejection_is_required = true
+temporal_namespace_absence_is_bound_at_freeze_only = true
+common_event_successor_construction_is_acyclic_and_exact = true
+canonical_duplicate_key_safe_result_required = true
+all_listed_synthetic_qualification_mutations_must_fail_closed = true
+historical_journal_payload_replay_is_deferred_to_HLT14_runtime = true
+raw_physical_array_hash_relations_are_deferred_to_HLT14_adapter = true
+freeze_creates_no_runtime_bundle_namespace_or_trajectory = true
+
+[claims]
+PROTO17_frozen = true
+PROTO17_exact_common_event_successor_construction_frozen = true
+PROTO17_external_trusted_genesis_construction_frozen = true
+PROTO16_under_specification_preserved = true
+PROTO17_successor_runtime_implemented = false
+HLT14_implementation_and_synthetic_qualification_authorized = false
+PROTO17_pretrajectory_runtime_authorized = false
+PROTO17_fresh_GR0_dynamic_calibration_authorized = false
+PROTO17_output_namespace_created = false
+PROTO17_trajectory_read = false
+PROTO17_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

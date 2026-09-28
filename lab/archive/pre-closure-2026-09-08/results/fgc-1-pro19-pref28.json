@@ -1,0 +1,128 @@
+{
+  "artifact_id": "FGC-1-PRO19-PREF28",
+  "artifact_payload": {
+    "campaign": {
+      "amplitude": "3",
+      "branch": "GR-0",
+      "campaign_id": "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683",
+      "event": 23,
+      "original_authorization_commit": "c11ba422ce49ddd6f6175de1a9d2da675b97f2de",
+      "original_plan_sha256": "f3b365978aeb2ae6063742807a3161bf5d6aa0c8392cd283fdec2a79d3e46060",
+      "target_rational": "3/2"
+    },
+    "claims": {
+      "GR0_calibration_completed": false,
+      "accepted_member_map_unchanged": true,
+      "candidate_execution_authorized": false,
+      "candidate_runtime_configuration_state_or_outcome_opened": false,
+      "common_event_completed": false,
+      "generation9_terminal_boundary_bound": true,
+      "invalid_runtime_terminal_bound": true,
+      "physical_result_earned": false,
+      "root_cause_localized": false,
+      "terminal_lock_valid": true
+    },
+    "live_anchor": {
+      "generation8": {
+        "checkpoint_raw_sha256": "dca398efa21d699ed09060c2afd1a13b7b3672ca62573c24bd846a0ff6a3ef7d",
+        "checkpoint_sha256": "6d2b6e37e7c7cfd4ce64504353d886099003f959ea2aaee1a14fc778ce14fa46",
+        "disposition": "nonterminal",
+        "generation": 8,
+        "journal_sequence": 8,
+        "journal_sha256": "949b29e46081bf5a42c34461b3894419db86aeca6c733b7a2636c91c6cb2ee4a"
+      },
+      "generation9": {
+        "checkpoint_raw_sha256": "3fd5eb4e79ffaaa0e62bbd28597fc551fb53a97dc35170a4e4bfe3854ed43421",
+        "checkpoint_sha256": "770728faa3b0a7233e755ceadb2cc10a7109d231989e3824a40004da7ded5ea7",
+        "disposition": "invalid_terminal",
+        "event": 23,
+        "generation": 9,
+        "journal_parent_sha256": "949b29e46081bf5a42c34461b3894419db86aeca6c733b7a2636c91c6cb2ee4a",
+        "journal_raw_sha256": "d21f0eaf765c307bd0377503c510cae7e593a5912539e5318c17560d59f11e18",
+        "journal_sequence": 9,
+        "journal_sha256": "9e8b8a58aea5a1e615e9f316e5c8d1872b6d4e813b09765f8da6b339607688bb",
+        "parent_checkpoint_sha256": "6d2b6e37e7c7cfd4ce64504353d886099003f959ea2aaee1a14fc778ce14fa46",
+        "target_rational": "3/2"
+      },
+      "store": {
+        "active_writer_absent": true,
+        "additive_suffix_paths": [
+          "checkpoints/00000000000000000009-770728faa3b0a7233e755ceadb2cc10a7109d231989e3824a40004da7ded5ea7.json",
+          "journal/00000000000000000009-9e8b8a58aea5a1e615e9f316e5c8d1872b6d4e813b09765f8da6b339607688bb.journal",
+          "locks/.active-write.lock.hlt16-quarantine-33ee84d9183e76f764f67680f3455416c496f431d59d33f568fda926f96ce043",
+          "locks/terminal.lock"
+        ],
+        "fork_absent": true,
+        "generation8_baseline_inventory_sha256": "8196b088a19f70ae1016a3d9dddb508add1ce1ce5cd227d105c954bd0c151c27",
+        "generation8_baseline_leaf_count": 52,
+        "lexical_inventory_sha256": "c574d7f92403f8d1dfcaae880edda34fa8de9f3809a508c13db0e58f89f9a216",
+        "orphan_absent": true,
+        "path": "runs/fgc-2-sf1/proto17/calibration",
+        "regular_leaf_count": 56,
+        "staging_absent": true,
+        "symlink_and_special_file_absent": true,
+        "terminal_lock_present": true
+      },
+      "terminal": {
+        "classification": "invalid",
+        "evidence_kind": "invalid",
+        "exception_type": "HLT16AttemptError",
+        "lock_path": "locks/terminal.lock",
+        "lock_raw_sha256": "2c7434d40cecaa67317fad59a2fedf323044509622285a56618e602b2a35c19c",
+        "lock_sha256": "1726b50aa3c7921819bcd077939ddb4f82c2dc994247a6bcc68600cd61920d57",
+        "member_key": "RK4-2049",
+        "owner": "invalid",
+        "reason": "invalid",
+        "rejection_record_sha256": ""
+      },
+      "unchanged_state": {
+        "accepted_time_hex": "0x1.78554de5a30e0p+0",
+        "affected_member_key": "RK4-2049",
+        "descriptor_sha256": "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56",
+        "member_descriptor_count": 6,
+        "member_map_sha256": "4dac7e098558313bc812832ec60abd8ec9b055fed6c70cc0e34aaaeb4c5541f3",
+        "new_state_or_payload_leaf_count": 0,
+        "p_bytes_sha256": "32939115b86938cf8a813bbf9a50a8c90bbaceaee161fa65695deb435d1243b7",
+        "q_bytes_sha256": "48ec07bcace3935173c06e7b41915cacb17f14e1c9d3500522d4eb59a205c4a3",
+        "u_bytes_sha256": "856fc327d3163d038f9fdbfc660968509dd7360faa0bb9d158721eb3049c2fe4"
+      }
+    },
+    "nonclaims": [
+      "PREF28 binds one fail-closed invalid terminal record; it does not identify the unpersisted HLT16AttemptError message or diagnose its root cause.",
+      "PREF28 proves that no accepted member state changed and that event 23 remains incomplete; it is not a GR-0 calibration or physical result.",
+      "PREF28 authorizes no resume, rollback, repair, new campaign, SGB-L, FGC-QR, DEF1, retained-EFT, transition, or physical claim."
+    ],
+    "predecessor": {
+      "artifact_id": "FGC-1-PRO19-SID3-AUTH1",
+      "authority_commit": "b8fea44384be62918670ccbab5bd1a2d92057224",
+      "config_path": "configs/fgc/fgc-1-pro19-sid3-auth1.toml",
+      "config_sha256": "54c6f972d2b80d15e5b5a2307c1c69135e0c0be23b63ca1d412d8b20ef1898e5",
+      "execution_closure_path": "configs/fgc/fgc-1-pro19-sid3-execution-closure.json",
+      "execution_closure_sha256": "494842c38faa4337544259b0f204dc285a1ff3b7be50061187b959cb5ca3b136",
+      "hlt16_config_path": "configs/fgc/fgc-1-hlt16-mon16.toml",
+      "hlt16_config_sha256": "8ee09fbdd7a750849858d7fce252a01195f0f34862ebc892f2535dd5f8c0e526",
+      "hlt16_result_path": "results/fgc-1-hlt16-mon16.json",
+      "hlt16_result_sha256": "f6b8a64afc569af31ca4df943582db520b8eb714e38091fb6087c8ed50bacc52",
+      "implementation_commit": "4d7133c0737524712220f77ee5ae4d9c3550c75a",
+      "launch_manifest_path": "configs/fgc/fgc-1-pro19-launch-authority.toml",
+      "launch_manifest_sha256": "0ba671505e5d5a791d19f0d9c48880d95a79014874a73e03e9a27a4bd98f9786",
+      "result_path": "results/fgc-1-pro19-sid3-auth1.json",
+      "result_sha256": "0d0371f74d4bcb503482047b94cdb4a2b269eeaf275ed80bb0a6317420478500"
+    },
+    "scope": {
+      "PDE_proposal_execution": false,
+      "accepted_state_mutation": false,
+      "candidate_branch_opened": false,
+      "event_commit": false,
+      "live_store_read_only": true,
+      "root_cause_diagnosis": false,
+      "trajectory_resume": false
+    }
+  },
+  "classification": "outcome_neutral_generation9_invalid_terminal_binder",
+  "gate_status": "pass",
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": "cf41456aeaa4012f38820eb9f89d1d06a3665c10dc5d35b8e597eb643d0cf9a4",
+  "target_protocol": "FGC-2-SF1-PROTO18"
+}

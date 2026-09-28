@@ -1,0 +1,34 @@
+{
+  "CPU_seconds": 65.58370500000001,
+  "binding_sha256": "278cfeffef0609b1fe320eb13416c94185c58c53d8eaaa566a1d637a22976e2c",
+  "family": [
+    14,
+    1
+  ],
+  "matter_change_maxima": [
+    3.905418336070579e-05,
+    2.236846842455703e-05
+  ],
+  "operator_diagnostics": {
+    "accepted_steps": 249,
+    "analytic_operator_trace": false,
+    "function_evaluations": 2989,
+    "identity_is_operator_basis": true,
+    "n_primal": 200900,
+    "physical_constraint_status": "OPEN",
+    "physical_source_supplied": false,
+    "primal_error_norm": 4.839290676036565e-09,
+    "stage_coefficient_evaluations": 2991,
+    "step_control": "primal",
+    "tangent_atol": null,
+    "tangent_directions": 0,
+    "tangent_error_norm": 0.0,
+    "tangent_rtol": null,
+    "time_integrator": "dop853"
+  },
+  "payload": {
+    "bytes": 822522,
+    "path": "results/development/artifacts/nsc-ks-evaluator-accuracy-v2-family-dop-g1024-d48/family-14-+1.npz",
+    "sha256": "b6dc9cd913ad804fc5ad51f84f16465c4b0fadab47b68016f15323b348612760"
+  }
+}

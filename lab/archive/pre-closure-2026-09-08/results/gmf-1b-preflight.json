@@ -1,0 +1,101 @@
+{
+  "artifact": "gmf1b_focusing_and_thermal_spin_fluid_preflight",
+  "canonical_scalar_null_focusing": {
+    "T_kk": 0.25,
+    "canonical_null_convergence": true,
+    "classification": "conditional_canonical_scalar_null_focusing_gate",
+    "initial_expansion": -1.0,
+    "negative_expansion_can_rise_to_zero_before_caustic_or_endpoint": false,
+    "negative_initial_expansion": true,
+    "raychaudhuri_derivative": -7.033185307179586,
+    "same_generator_defocusing_to_zero_excluded_under_stated_assumptions": true,
+    "twist_free": true
+  },
+  "canonical_scalar_regular_bridge_supported_under_stated_assumptions": false,
+  "classification": "conditional_material_law_and_null_focusing_rejection_gates",
+  "ec1_background_algebra_rejected": false,
+  "ec1_bounce_gate": {
+    "A": 10.0,
+    "B": 1.0,
+    "continuous_low_z_to_bounce_branch_healthy_causal": false,
+    "cs2_at_bounce": 2.3750044297870203,
+    "discriminant": 96.0,
+    "ec1_background_algebra_rejected": false,
+    "full_einstein_cartan_dirac_rejected": false,
+    "healthy_causal_barotrope_at_bounce": false,
+    "naive_thermal_averaged_perfect_fluid_rejected_as_gmf1b_material_law": true,
+    "one_minus_z_bounce": 0.01010205144336438,
+    "thermal_classification_at_bounce": "superluminal_relative_to_metric_cone",
+    "x_max": 9.898979485566356,
+    "x_min": 0.10102051443364381,
+    "z_bounce": 0.9898979485566356,
+    "z_bounce_strictly_between_one_half_and_one": true
+  },
+  "external_Q_derived": false,
+  "full_einstein_cartan_dirac_rejected": false,
+  "general_recursive_horizons_no_go_proven": false,
+  "global_solution_constructed": false,
+  "late_dark_energy_derived": false,
+  "model_id": "GMF-1B-PF1",
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope": "Rejects only the naive thermal averaged perfect-fluid closure as GMF-1B material law and the stated canonical-scalar null-defocusing route; not full Einstein-Cartan-Dirac, EC-1 background algebra, noncanonical/modified gravity, or topology-changing physics.",
+  "thermal_ec_closure_regimes": {
+    "causal_example": {
+      "classification": "causal_barotrope",
+      "cs2": 0.21568627450980388,
+      "density_temperature_derivative_over_hT3": 3.4,
+      "healthy_causal_barotrope": true,
+      "p_over_hT4": 0.2333333333333333,
+      "pressure_temperature_derivative_over_hT3": 0.7333333333333332,
+      "rho_over_hT4": 0.9,
+      "rho_plus_p_over_hT4": 1.1333333333333333,
+      "z": 0.1
+    },
+    "degenerate_example": {
+      "classification": "degenerate_zero_sound_speed",
+      "cs2": 0.0,
+      "density_temperature_derivative_over_hT3": 2.6666666666666665,
+      "healthy_causal_barotrope": false,
+      "p_over_hT4": 0.1111111111111111,
+      "pressure_temperature_derivative_over_hT3": 0.0,
+      "rho_over_hT4": 0.7777777777777778,
+      "rho_plus_p_over_hT4": 0.8888888888888888,
+      "z": 0.2222222222222222
+    },
+    "gradient_unstable_example": {
+      "classification": "gradient_unstable",
+      "cs2": -0.666666666666667,
+      "density_temperature_derivative_over_hT3": 1.5999999999999996,
+      "healthy_causal_barotrope": false,
+      "p_over_hT4": -0.06666666666666671,
+      "pressure_temperature_derivative_over_hT3": -1.0666666666666669,
+      "rho_over_hT4": 0.6,
+      "rho_plus_p_over_hT4": 0.5333333333333332,
+      "z": 0.4
+    },
+    "singular_example": {
+      "classification": "singular_enthalpy_and_density_derivative",
+      "cs2": null,
+      "density_temperature_derivative_over_hT3": 0.0,
+      "healthy_causal_barotrope": false,
+      "p_over_hT4": -0.3333333333333333,
+      "pressure_temperature_derivative_over_hT3": -2.6666666666666665,
+      "rho_over_hT4": 0.33333333333333337,
+      "rho_plus_p_over_hT4": 0.0,
+      "z": 0.6666666666666666
+    },
+    "superluminal_example": {
+      "classification": "superluminal_relative_to_metric_cone",
+      "cs2": 4.333333333333331,
+      "density_temperature_derivative_over_hT3": -0.8000000000000005,
+      "healthy_causal_barotrope": false,
+      "p_over_hT4": -0.46666666666666673,
+      "pressure_temperature_derivative_over_hT3": -3.466666666666667,
+      "rho_over_hT4": 0.19999999999999996,
+      "rho_plus_p_over_hT4": -0.26666666666666683,
+      "z": 0.8
+    }
+  },
+  "variable_c_derived": false
+}

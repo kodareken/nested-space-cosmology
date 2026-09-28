@@ -1,0 +1,1053 @@
+{
+  "artifact_id": "FGC-1-HLT7-MON7",
+  "artifact_payload": {
+    "accepted_state_source_prechecks": [
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "RK4",
+        "point_count": 2049,
+        "source_residual_infinity": 4.9145872556740196e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "RK4",
+        "point_count": 4097,
+        "source_residual_infinity": 1.9658349022696078e-13,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "RK4",
+        "point_count": 8193,
+        "source_residual_infinity": 7.863339609078496e-13,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "SSPRK3",
+        "point_count": 2049,
+        "source_residual_infinity": 2.3092638912203256e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "SSPRK3",
+        "point_count": 4097,
+        "source_residual_infinity": 1.8947806286935998e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "SSPRK3",
+        "point_count": 8193,
+        "source_residual_infinity": 7.579122514774399e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "RK4",
+        "point_count": 2049,
+        "source_residual_infinity": 4.9145872556740196e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "RK4",
+        "point_count": 4097,
+        "source_residual_infinity": 1.9658349022696078e-13,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "RK4",
+        "point_count": 8193,
+        "source_residual_infinity": 7.863339609078496e-13,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "SSPRK3",
+        "point_count": 2049,
+        "source_residual_infinity": 4.263256414560601e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "SSPRK3",
+        "point_count": 4097,
+        "source_residual_infinity": 2.220446049250313e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "SSPRK3",
+        "point_count": 8193,
+        "source_residual_infinity": 7.579122514774399e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      }
+    ],
+    "decision": "HLT7_implements_the_PROTO9_resolution_binding_but_keeps_calibration_closed_by_the_t0_nested_tail_veto",
+    "epistemic_boundary": {
+      "PROTO8_calibration_history_disclosed": true,
+      "PROTO9_trajectory_advanced": false,
+      "PROTO9_trajectory_read": false,
+      "SGBL_or_FGCQR_outcome_read": false,
+      "conditional_8193_projection_used_as_evidence": false,
+      "four_new_8193_t0_states_constructed": true,
+      "fresh_GR0_recalibration_authorized": false,
+      "mechanism_question_answered": false,
+      "old_ladder_used_as_PROTO9_evidence": false,
+      "resolved_holdout_manifest_exists": false,
+      "t0_absolute_spatial_budgets_passed_for_all_four_cases": true,
+      "t0_constraint_admission_passed_for_all_four_cases": true,
+      "t0_nested_tail_admission_passed_for_any_case": false,
+      "t0_physical_inputs_reconstructed": true,
+      "trapped_or_collapse_outcome_classified": false
+    },
+    "frozen_run_inputs": [
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "43d5382bcf8b945f6fa6469bfe1befe318daaa0c57e211c48950c4b786681dbc",
+        "expanded_run_config_sha256": "e12e6d475321bf678a9b59a4dfcbf5c6f313b0ce8902c7ea792d23d209f35338",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 2049,
+        "projected_state_sha256": "d711694d4c9665de85edfe90470b738922d99a73614bb7bf6e6f3d19881a7671",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "43d5382bcf8b945f6fa6469bfe1befe318daaa0c57e211c48950c4b786681dbc",
+        "expanded_run_config_sha256": "d5912ba0b9beed7f9aa03745dea21166f6ce97d6771c644c6d54b9f69b58b927",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 4097,
+        "projected_state_sha256": "07eb8019a624bdb6e7b56cd28031d3462208afb2d32cb81344404fee32b244bd",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "new_observed_finest_grid",
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "43d5382bcf8b945f6fa6469bfe1befe318daaa0c57e211c48950c4b786681dbc",
+        "expanded_run_config_sha256": "1068cec2f7ebfec6a8acec1dccb1db958adb0cf0f2d0160699aa16b564a0ec76",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.015625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "new_8193_state_constructed": true,
+        "overlap_projected_state_matches_HLT6": false,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 8193,
+        "projected_state_sha256": "e6add7cb3c494c5a85ceebaa5a0c73d379ad4d42915cbbb1699a37dd2c5080b9",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "2558a7976e5001a36d30a1a41ddeb9b1a5e659fc292890c048a492984fdfc895",
+        "expanded_run_config_sha256": "0491e68c16df7cab5435bbfa9201007ed021e47df94b7d77d63635f4287cdda0",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 2049,
+        "projected_state_sha256": "5482e6e7fbd202110463b6f278d533e33c6a86849a66709a2c6c611975bcdbd3",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "2558a7976e5001a36d30a1a41ddeb9b1a5e659fc292890c048a492984fdfc895",
+        "expanded_run_config_sha256": "45942dded517e2b5bd4381512e1463b9f87a052b151e59a34db65b12ff209f9e",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 4097,
+        "projected_state_sha256": "01ffe9b8c63293b2cf79a88a68183d31bb53ee78e3524d5bbeb41ef27118dbad",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "new_observed_finest_grid",
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "2558a7976e5001a36d30a1a41ddeb9b1a5e659fc292890c048a492984fdfc895",
+        "expanded_run_config_sha256": "d0d80e2e9915e43ee378cc6e2d0d54758894dfcf996123947e12788f97e582dc",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.015625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "new_8193_state_constructed": true,
+        "overlap_projected_state_matches_HLT6": false,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 8193,
+        "projected_state_sha256": "3b991acb2bc698769fec25f0dca032a074526dd74c906292774050c703042810",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "6d055cbf0a50c2cfd9037be354896312e5ab50b758d510c4fe681f1228b00262",
+        "expanded_run_config_sha256": "4f65f3fe87c4d92bb4f097bd1edcc37fb2fa006378f180450a79900831f05e45",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 2049,
+        "projected_state_sha256": "c331752451584c41fd8dba3bca4d4e6050617d640e27fc4fd45cb6b1e72bd8ce",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "6d055cbf0a50c2cfd9037be354896312e5ab50b758d510c4fe681f1228b00262",
+        "expanded_run_config_sha256": "2120109713b9115c33b25f453a5ba8aaee4b33424705934fba0ec2f800c08837",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 4097,
+        "projected_state_sha256": "b84fa78009b0cd48b7ed85344b2c58ecb006027f37af3da69dcdc3dcc20677d3",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "new_observed_finest_grid",
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "6d055cbf0a50c2cfd9037be354896312e5ab50b758d510c4fe681f1228b00262",
+        "expanded_run_config_sha256": "7db7b0c6377f6b03d19b2a04955fc2eb68e777d6ebd71ea9d72722fbbce5747e",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.015625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "new_8193_state_constructed": true,
+        "overlap_projected_state_matches_HLT6": false,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 8193,
+        "projected_state_sha256": "611c1ec2c5f0a8de45b4420fd3d189d41e5c302404d90bfb539deb5819fbacc9",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "f68b2223da0b90a55dc67adbb8a56c37b5543d954cb773860c667ee4ba31d35e",
+        "expanded_run_config_sha256": "4442d79a9e078303b31c53001d687c9cb20b519d01cceeeea9ea867c605bf4b4",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 2049,
+        "projected_state_sha256": "39edf10cea7b9ccfc8d131f7713e040509dcf0f698ddfc1cbaab09e4413f3732",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "reconstructed_overlap_grid",
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "f68b2223da0b90a55dc67adbb8a56c37b5543d954cb773860c667ee4ba31d35e",
+        "expanded_run_config_sha256": "f76391e19121263d4c453d90dc78eb0a9d91beebbc5d7bbec417043c3999546f",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "new_8193_state_constructed": false,
+        "overlap_projected_state_matches_HLT6": true,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 4097,
+        "projected_state_sha256": "fe61b334f97dd2f41b1e14620e854efbf1366c4dcc17dda9ad105ad20cb41c36",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "PROTO9_resolution_role": "new_observed_finest_grid",
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "conditional_projection_used": false,
+        "continuum_ID2_state_sha256": "f68b2223da0b90a55dc67adbb8a56c37b5543d954cb773860c667ee4ba31d35e",
+        "expanded_run_config_sha256": "57d7b6f5daca2aea9d3891c0f5df1034884a1a5d6fd8a04331386be2d6ad85fd",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.015625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "new_8193_state_constructed": true,
+        "overlap_projected_state_matches_HLT6": false,
+        "p_bitwise_preserved": true,
+        "plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+        "point_count": 8193,
+        "projected_state_sha256": "c773b3b9125d8023985ff8c8eb83783271ebd2bef31887ddf1071971104d918a",
+        "protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      }
+    ],
+    "frozen_run_plan": {
+      "artifact_id": "FGC-1-CAL6-RUN1-PLAN",
+      "campaign_id": "744258580cee7e7fb3c932470e354ad33d481bffb742ae3d3ff9c317ba68cb4c",
+      "expanded_input_count": 12,
+      "first_eligible_candidate_stops_later_candidates": true,
+      "input_manifest_sha256": "fdee4f360d142a720fc9a1802be688c4fcf322fad76aa3ea893cdb1b9ca47480",
+      "new_8193_input_count": 4,
+      "ordered_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "run_plan_sha256": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+      "t0_common_event_evaluated_count": 4,
+      "t0_common_event_passed_count": 0
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "833910d1b31ed820745d61e0ce7976965e37b487",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "freeze": {
+        "artifact_id": "FGC-1-PRO9-FRZ1",
+        "claims_all_false": true,
+        "result_sha256": "cccda72803bd4b6bbdbc091a90e9746e1cc4b7952ef9f4dd9b684aee962b892d"
+      },
+      "predecessor_run_plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+      "predecessor_runtime": {
+        "artifact_id": "FGC-1-HLT6-MON6",
+        "implementation_files_hash_matched": 12,
+        "result_sha256": "cda19a43fc08d6100511be046fb12a178adb29848429aa656a07160cf6787cbc"
+      },
+      "protocol": {
+        "artifact_id": "FGC-2-SF1-PROTO9",
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "protocol_version": 9,
+        "semantic_holdout_contract_sha256": "72f5b06bca88386cabde0b51fafbdc5a45a644b19b4da8476e39962032d75aea"
+      },
+      "static_input": {
+        "artifact_id": "FGC-1-ID2-ALL1",
+        "result_sha256": "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981"
+      }
+    },
+    "inherited_runtime": {
+      "PROTO8_common_event_and_PROTO7_evolution_unchanged": true,
+      "inherited_implementation_files_hash_matched": 12,
+      "process_local_runner_bindings_are_exception_safe": true
+    },
+    "initial_common_events": [
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": false,
+        "all_adjacent_spatial_tail_ratios_passed": false,
+        "amplitude": "5/2",
+        "coarsest_spatial_individual_budget_passed": true,
+        "conditional_projection_used": false,
+        "constraint_admission_passed": true,
+        "constraint_coarsest_guard_passed": true,
+        "constraint_finest_guard_passed": true,
+        "constraint_finest_pair_order_passed": true,
+        "constraint_minimum_finite_finest_pair_order": 3.8512504834603516,
+        "constraint_monotone_refinement_passed": true,
+        "coordinate_time": 0.0,
+        "derivative_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.0016422223830557096,
+            0.9128116778188167
+          ],
+          "lambda_minus_1": [
+            0.0011974827544511376,
+            8.61566420626136
+          ],
+          "phi_over_Lambda": [
+            0.0022662652284018182,
+            0.8653064394002028
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "excluded_outer_rows": [
+          7,
+          7,
+          7
+        ],
+        "field_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.0003975259433754689,
+            0.2212448340779363
+          ],
+          "lambda_minus_1": [
+            0.00028876169283684276,
+            2.0993524609622694
+          ],
+          "phi_over_Lambda": [
+            0.0005443864645316788,
+            0.21026114988792705
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.0002467330455761252,
+        "method": "RK4",
+        "new_8193_state_present": true,
+        "owned_raw_global_norms": [
+          0.003070602382053849,
+          0.00027315334869367283,
+          1.8740470147715627e-05
+        ],
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": false,
+        "all_adjacent_spatial_tail_ratios_passed": false,
+        "amplitude": "5/2",
+        "coarsest_spatial_individual_budget_passed": true,
+        "conditional_projection_used": false,
+        "constraint_admission_passed": true,
+        "constraint_coarsest_guard_passed": true,
+        "constraint_finest_guard_passed": true,
+        "constraint_finest_pair_order_passed": true,
+        "constraint_minimum_finite_finest_pair_order": 1.9649281666493463,
+        "constraint_monotone_refinement_passed": true,
+        "coordinate_time": 0.0,
+        "derivative_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.001645682778870077,
+            0.9098737950294699
+          ],
+          "lambda_minus_1": [
+            0.0012111130180470255,
+            8.476509046840313
+          ],
+          "phi_over_Lambda": [
+            0.002271781530747811,
+            0.8620933660252693
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "excluded_outer_rows": [
+          5,
+          5,
+          5
+        ],
+        "field_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.00039835320626232596,
+            0.2205390879305069
+          ],
+          "lambda_minus_1": [
+            0.0002919551087244521,
+            2.066190679244102
+          ],
+          "phi_over_Lambda": [
+            0.000545698984044257,
+            0.20948555907414018
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.00024664234952399833,
+        "method": "SSPRK3",
+        "new_8193_state_present": true,
+        "owned_raw_global_norms": [
+          0.010994902547784086,
+          0.002961522233503138,
+          0.0007553933219179992
+        ],
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": false,
+        "all_adjacent_spatial_tail_ratios_passed": false,
+        "amplitude": "3",
+        "coarsest_spatial_individual_budget_passed": true,
+        "conditional_projection_used": false,
+        "constraint_admission_passed": true,
+        "constraint_coarsest_guard_passed": true,
+        "constraint_finest_guard_passed": true,
+        "constraint_finest_pair_order_passed": true,
+        "constraint_minimum_finite_finest_pair_order": 3.851137054125084,
+        "constraint_monotone_refinement_passed": true,
+        "coordinate_time": 0.0,
+        "derivative_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.09896865599132262,
+            0.6110077157145758
+          ],
+          "lambda_minus_1": [
+            0.027965339937480495,
+            3.2433097755153226
+          ],
+          "phi_over_Lambda": [
+            0.09724709104208377,
+            0.8797163045076191
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "excluded_outer_rows": [
+          7,
+          7,
+          7
+        ],
+        "field_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.024902807490005865,
+            0.15170214600972265
+          ],
+          "lambda_minus_1": [
+            0.007207975635491164,
+            0.808091852726052
+          ],
+          "phi_over_Lambda": [
+            0.024689858551566697,
+            0.21671118381959062
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.0005904647592601454,
+        "method": "RK4",
+        "new_8193_state_present": true,
+        "owned_raw_global_norms": [
+          0.004403392529741985,
+          0.00039181498070268994,
+          2.6882833118746507e-05
+        ],
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": false,
+        "all_adjacent_spatial_tail_ratios_passed": false,
+        "amplitude": "3",
+        "coarsest_spatial_individual_budget_passed": true,
+        "conditional_projection_used": false,
+        "constraint_admission_passed": true,
+        "constraint_coarsest_guard_passed": true,
+        "constraint_finest_guard_passed": true,
+        "constraint_finest_pair_order_passed": true,
+        "constraint_minimum_finite_finest_pair_order": 1.9645957308024664,
+        "constraint_monotone_refinement_passed": true,
+        "coordinate_time": 0.0,
+        "derivative_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.09830788107115966,
+            0.6160281733611792
+          ],
+          "lambda_minus_1": [
+            0.028138534871145832,
+            3.2442306866224206
+          ],
+          "phi_over_Lambda": [
+            0.09693296217991254,
+            0.8846382581520159
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "excluded_outer_rows": [
+          5,
+          5,
+          5
+        ],
+        "field_power_tail_ratios": {
+          "R_over_r_minus_1": [
+            0.0,
+            0.0
+          ],
+          "alpha_minus_1": [
+            0.0,
+            0.0
+          ],
+          "chi_over_Lambda": [
+            0.024745391862664484,
+            0.15290668764697168
+          ],
+          "lambda_minus_1": [
+            0.007250923488649599,
+            0.8082817449604854
+          ],
+          "phi_over_Lambda": [
+            0.02462018576216842,
+            0.21787422620743366
+          ],
+          "shift_over_r": [
+            0.0,
+            0.0
+          ]
+        },
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.0005906074603994741,
+        "method": "SSPRK3",
+        "new_8193_state_present": true,
+        "owned_raw_global_norms": [
+          0.01584987288839588,
+          0.004268031920641638,
+          0.0010885698019532236
+        ],
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "trajectory_advanced": false
+      }
+    ],
+    "namespace_precondition": {
+      "authorization_created_no_namespace": true,
+      "both_fresh_namespaces_empty": true,
+      "records": [
+        {
+          "created_by_authorization": false,
+          "empty": true,
+          "entry_count": 0,
+          "existed_before_authorization": false,
+          "path": "runs/fgc-2-sf1/proto9/calibration"
+        },
+        {
+          "created_by_authorization": false,
+          "empty": true,
+          "entry_count": 0,
+          "existed_before_authorization": false,
+          "path": "runs/fgc-2-sf1/proto9/holdout"
+        }
+      ]
+    },
+    "resolution_adapter_controls": {
+      "all_controls_passed": true,
+      "conditional_projection_path_exists": false,
+      "exact_new_ladder_tested_on_physical_t0_inputs": true,
+      "inherited_PROTO8_adapter_controls": {
+        "all_controls_passed": true,
+        "interior_defect": {
+          "accumulated_roundoff_enclosure": 1.9099388737231493e-11,
+          "interior_veto_control_passed": true,
+          "owned_maximum_radius": 2.5,
+          "owned_raw_component_infinity": 4e-06
+        },
+        "outer_projector_defect": {
+          "accumulated_roundoff_enclosure": 1.9099388737231493e-11,
+          "full_maximum_radius": 7.5,
+          "full_raw_component_infinity": 0.0004,
+          "last_owned_radius": 7.125,
+          "owned_raw_component_infinity": 0.0,
+          "public_but_not_owned_control_passed": true
+        },
+        "spatial_spectrum": {
+          "coarse_witness_finest_pair_control_passed": true,
+          "medium_absolute_miss_vetoed": true,
+          "noncontracting_tail_vetoed": true
+        }
+      },
+      "old_PROTO8_ladder_rejected": true,
+      "reordered_ladder_rejected": true
+    }
+  },
+  "classification": "pre_trajectory_PROTO9_resolution_ladder_runtime_with_t0_nested_tail_obstruction",
+  "derivation_document": "docs/fgc-hlt7-mon7.md",
+  "derivation_document_sha256": "9a995b48849cda9cf0d2fae9ee726e757eed54b8609a9ada00c1444bdc377c02",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO9_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO9_resolved_holdout_manifest_authorized": false,
+    "PROTO9_successor_runtime_implemented": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hlt7_mon7.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt7_mon7.py": "3f4b158569a4f428416da2586cad75fafda6cda3a4195741c050ff997ff1bc12",
+    "scripts/run_fgc_gr0_calibration.py": "4e3734495edc0a289e5c61dc68e193cbe19629582234dd04c0c20a46d52774b3",
+    "scripts/run_fgc_gr0_calibration_v6.py": "8bc140d0c6c2fbc65f13d4b84ca78277652c9fd04e4748b134ade9f38fddd8ce",
+    "scripts/run_fgc_gr0_calibration_v7.py": "04324e7066dc5a3c4ea3f6200612cc6c1a51fae5adba0c28ecb10ebec2f5d2e7",
+    "scripts/run_fgc_gr0_calibration_v8.py": "7d5c936ea319862432838385c249b64091357f526303dcc79776d97d5b7f166d",
+    "scripts/run_fgc_gr0_calibration_v9.py": "b26232bdbdbda3243e1320c5eda5dd2f4228d8fd663b7ebb10149218acf7b278",
+    "src/recursive_horizons/fgc/evolution/cal2_source_diagnosis.py": "506764b60d767affb7db067b8bb3e7e92f4d6a6d0c163a5af6a6772fae29c976",
+    "src/recursive_horizons/fgc/evolution/cal4_common_event_diagnosis.py": "0add38fadebbe07b021ccd3c421ced6519efea9f233ad09d447fbc3241041741",
+    "src/recursive_horizons/fgc/evolution/calibration_runtime.py": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9",
+    "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545",
+    "src/recursive_horizons/fgc/evolution/proto6_runtime.py": "f0d63c3b1bd17891ac1cb21969ec6b3454cac4adc6d4c116979626b0d82d77f5",
+    "src/recursive_horizons/fgc/evolution/proto7_runtime.py": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734",
+    "src/recursive_horizons/fgc/evolution/proto8_runtime.py": "6cfe110c15ca6d31b4023d86d8a3e40f4e36df39058b3cd8bf06db06ffac133e",
+    "src/recursive_horizons/fgc/evolution/proto9_runtime.py": "e55901a682e0497e4cd8c587933a3a73ea4c8170c7817f0cd43c7641ccec7bac",
+    "src/recursive_horizons/fgc/evolution/protocol_v9.py": "f31c848cfacfdd3857350818f105df487b533f6622a9e7a247ad2e9488bc32ab"
+  },
+  "nonclaims": {
+    "FGCQR_trajectory_opened": false,
+    "SGBL_comparison_completed": false,
+    "SGBL_health_definition_supplied": false,
+    "child_domain_or_topology": false,
+    "constraint_to_DEF1_stability_map_supplied": false,
+    "dark_sector_mechanism": false,
+    "fresh_GR0_recalibration_completed": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_measured": false,
+    "retained_EFT_validity": false,
+    "singularity_resolution": false,
+    "trapped_sphere_formed_dynamically": false,
+    "varying_locally_measured_c": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal5-run1.toml": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+    "configs/fgc/fgc-1-pro9-frz1.toml": "92f00e53585dc74e7438c353d4fdbcfc0b3b2e634e134cc15e26d7700dea7f1e",
+    "configs/fgc/fgc-2-sf1-protocol-v9.toml": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e",
+    "results/fgc-1-hlt6-mon6.json": "cda19a43fc08d6100511be046fb12a178adb29848429aa656a07160cf6787cbc",
+    "results/fgc-1-id2-all1.json": "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981",
+    "results/fgc-1-pro9-frz1.json": "cccda72803bd4b6bbdbc091a90e9746e1cc4b7952ef9f4dd9b684aee962b892d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "PROTO8_calibration_history_disclosed": true,
+    "PROTO9_trajectory_read": false,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "conditional_8193_projection_used_as_evidence": false,
+    "role": "pre_trajectory_resolution_ladder_runtime_binding_and_fresh_input_freeze",
+    "runtime_owner": "FGC-1-HLT7-MON7",
+    "target_protocol": "FGC-2-SF1-PROTO9"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal6-run1.toml": "ed0daf5be8353274131ad20ea13534fed491aa238a4234f07648e2a3bd6cafb3",
+    "configs/fgc/fgc-1-hlt7-mon7.toml": "9cf667038cbddcad2c92b1728cf439e7131ec2577d939a13d32868538eef7bfd"
+  }
+}

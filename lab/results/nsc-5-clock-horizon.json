@@ -1,0 +1,364 @@
+{
+  "artifact_id": "NSC-5-CLOCK-HORIZON",
+  "child_geometry": {
+    "asymptotic_Lambda": "9pi",
+    "asymptotic_coefficients": {
+      "A_over_rho_squared": "-3*pi",
+      "A_prime_over_rho": "-6*pi",
+      "areal_radius_squared_over_rho_squared": "1"
+    },
+    "asymptotic_directional_H": "sqrt(3pi)",
+    "directional_rates": {
+      "H_parallel": "A_prime/(2sqrt(-A))",
+      "H_sphere": "-sqrt(-A)rho/(1+rho\u00b2)"
+    },
+    "exactly_isotropic_at_finite_rho": false,
+    "interior_metric": "dT\u00b2-(-A)dt\u00b2-r\u00b2d_Omega\u00b2; Kantowski-Sachs homogeneous slices R_t x S\u00b2",
+    "interior_probes": [
+      {
+        "H_parallel": 1.557021169290531,
+        "H_sphere": -0.0,
+        "rho": 0.0,
+        "shear_squared": 0.8081049738729508
+      },
+      {
+        "H_parallel": 2.506425087540642,
+        "H_sphere": 2.00855463836275,
+        "rho": -1.0,
+        "shear_squared": 0.082624994721532
+      },
+      {
+        "H_parallel": 2.997083773925617,
+        "H_sphere": 2.964400670691059,
+        "rho": -4.0,
+        "shear_squared": 0.0003560617456802543
+      },
+      {
+        "H_parallel": 3.0647925209222047,
+        "H_sphere": 3.063290004514953,
+        "rho": -16.0,
+        "shear_squared": 7.525185180200047e-07
+      },
+      {
+        "H_parallel": 3.0696476721783563,
+        "H_sphere": 3.069564448656084,
+        "rho": -64.0,
+        "shear_squared": 2.308718219802789e-09
+      }
+    ],
+    "interior_proper_time": "dT=-d_rho/sqrt(-A) for A<0, with decreasing rho future-directed",
+    "interpretation": "asymptotically locally de Sitter; no claim of a global FLRW chart, compact spatial volume, or observer-independent horizon",
+    "shear_squared": "(H_parallel-H_sphere)\u00b2/3"
+  },
+  "classification": "exact_fixed_background_observer_map_and_clock_completeness_audit",
+  "clock_inheritance": {
+    "adjacent_map": "q_m=d(tau_hat_{m-1})/d(tau_hat_m)>0 for specified transported clocks",
+    "clock_map": "d_tau_c=beta_clock*d_tau_p",
+    "clock_map_derived_from_operator": false,
+    "constant_interval_assumption": "q_j are constant over each mapped interval; otherwise integrate the pointwise composite clock map",
+    "crossing_duration_ratio_in_matched_units": "(L_p/c_p)/(L_c/c_c)=(L_p/L_c)/(c_p/c_c)",
+    "dimensionless_parent_speed_in_child_units": "v=(alpha/beta_clock)*c_p/c_c",
+    "exact_examples": [
+      {
+        "adjacent_clock_factor": "1/2",
+        "classification": "convergent",
+        "each_local_interval_ticks": "1",
+        "infinite_sum": "2",
+        "partial_sums": [
+          {
+            "last_ancestor_index": 0,
+            "total_ticks_exact": "1"
+          },
+          {
+            "last_ancestor_index": 1,
+            "total_ticks_exact": "3/2"
+          },
+          {
+            "last_ancestor_index": 3,
+            "total_ticks_exact": "15/8"
+          },
+          {
+            "last_ancestor_index": 7,
+            "total_ticks_exact": "255/128"
+          },
+          {
+            "last_ancestor_index": 15,
+            "total_ticks_exact": "65535/32768"
+          }
+        ]
+      },
+      {
+        "adjacent_clock_factor": "1",
+        "classification": "divergent",
+        "each_local_interval_ticks": "1",
+        "infinite_sum": "+infinity",
+        "partial_sums": [
+          {
+            "last_ancestor_index": 0,
+            "total_ticks_exact": "1"
+          },
+          {
+            "last_ancestor_index": 1,
+            "total_ticks_exact": "2"
+          },
+          {
+            "last_ancestor_index": 3,
+            "total_ticks_exact": "4"
+          },
+          {
+            "last_ancestor_index": 7,
+            "total_ticks_exact": "8"
+          },
+          {
+            "last_ancestor_index": 15,
+            "total_ticks_exact": "16"
+          }
+        ]
+      },
+      {
+        "adjacent_clock_factor": "2",
+        "classification": "divergent",
+        "each_local_interval_ticks": "1",
+        "infinite_sum": "+infinity",
+        "partial_sums": [
+          {
+            "last_ancestor_index": 0,
+            "total_ticks_exact": "1"
+          },
+          {
+            "last_ancestor_index": 1,
+            "total_ticks_exact": "3"
+          },
+          {
+            "last_ancestor_index": 3,
+            "total_ticks_exact": "15"
+          },
+          {
+            "last_ancestor_index": 7,
+            "total_ticks_exact": "255"
+          },
+          {
+            "last_ancestor_index": 15,
+            "total_ticks_exact": "65535"
+          }
+        ]
+      }
+    ],
+    "global_age_status": "requires causal gluing and a clock convention; not ruled out by scale-dependent local clocks",
+    "indexing": "m=0 is local room; m=1,2,... are successive ancestors",
+    "infinite_runtime_condition": "the positive series diverges; infinitely many rooms alone is insufficient",
+    "larger_length_faster_speed_examples": [
+      {
+        "duration_ratio_exact": "1/2",
+        "length_ratio": 2,
+        "speed_ratio": 4
+      },
+      {
+        "duration_ratio_exact": "1",
+        "length_ratio": 2,
+        "speed_ratio": 2
+      },
+      {
+        "duration_ratio_exact": "2",
+        "length_ratio": 4,
+        "speed_ratio": 2
+      }
+    ],
+    "local_assigned_ancestral_duration": "T_0=sum_{m=0}^infinity [product_{j=1}^m q_j] Delta(tau_hat_m)",
+    "local_proper_age": "elapsed proper time along a specified observer from a specified formation event remains meaningful",
+    "pure_coordinate_rescaling": "v=1 when the null cone is unchanged",
+    "ruler_map": "d_ell_c=alpha*d_ell_p"
+  },
+  "conventions": {
+    "A": "1+3rho+3(1+rho\u00b2)(atan(rho)-pi/2)",
+    "beta": "sqrt(1-A)",
+    "metric": "d_tau\u00b2-(d_rho+beta*d_tau)\u00b2-r\u00b2*d_Omega\u00b2",
+    "null_normalization": "ell_plus/minus=partial_tau+(-beta+/-1)partial_rho",
+    "radius": "sqrt(1+rho\u00b2)",
+    "signature": "+---",
+    "spacetime": "declared PG patch R_tau x R_rho x S\u00b2",
+    "units": "c=L_throat=1"
+  },
+  "entropy": {
+    "ordering_status": "unresolved until matter, gravitational/boundary and coarse-graining contributions define a generalized entropy",
+    "protected_thesis_edited": false,
+    "working_direction": "retain original weak-gradient parent hypothesis"
+  },
+  "horizon_affine_parameter": {
+    "Gamma_rho_tau_tau": "A*A_prime/2",
+    "Gamma_tau_tau_tau": "beta*A_prime/2",
+    "affine_equation_residual": "0",
+    "affine_parameter": "lambda=C*exp(kappa_h*tau)+lambda_0, C>0",
+    "connection_identity_residuals": [
+      "0",
+      "0"
+    ],
+    "curvature_singularity_inferred": false,
+    "declared_pg_patch_past_null_complete": false,
+    "extension_status": "an extension beyond this PG patch has not been constructed or tested here",
+    "finite_past_affine_interval_from_tau_zero_for_C_one": 1.0,
+    "generator": "k=partial_tau at rho_h and fixed angles",
+    "inverse_affine_geodesic_residual": "0",
+    "inverse_residual": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "kappa_h": 0.23832579963401956,
+    "nonaffinity": "nabla_k k=(A_prime_h/2)k",
+    "normalized_samples": [
+      {
+        "lambda_with_lambda_at_zero_one": 4.4631556448645625e-11,
+        "tau": -100.0
+      },
+      {
+        "lambda_with_lambda_at_zero_one": 0.008509977395057123,
+        "tau": -20.0
+      },
+      {
+        "lambda_with_lambda_at_zero_one": 0.3854656486397426,
+        "tau": -4.0
+      },
+      {
+        "lambda_with_lambda_at_zero_one": 1.0,
+        "tau": 0.0
+      },
+      {
+        "lambda_with_lambda_at_zero_one": 2.5942648937171655,
+        "tau": 4.0
+      }
+    ],
+    "past_affine_endpoint": "lambda_0 at tau->-infinity",
+    "radial_metric_determinant": "-1",
+    "relation_to_dirac_flow": "coordinate-time characteristic completeness and norm-preserving evolution do not establish affine geodesic completeness"
+  },
+  "nonclaims": {
+    "all_singularities_coordinate_artifacts": false,
+    "full_extension_constructed": false,
+    "infinite_ancestral_proper_or_affine_runtime_proved": false,
+    "new_to_world_priority_established": false,
+    "particle_identity_derived_from_external_localization": false,
+    "self_sourcing_stationary_solution": false
+  },
+  "observer_map": {
+    "A_prime_identity_residual": "0",
+    "analytic_sign_argument": "A_prime=6(1-rho*x)>0, x=pi/2-atan(rho); for rho>0 use atan(1/rho)<1/rho, while rho<=0 is immediate. A(0)<0 and A(+infinity)=1 imply a unique positive horizon. beta>0 follows from atan(y)>y/(1+y\u00b2).",
+    "area_dimension": 2,
+    "expansion_residuals": [
+      "0",
+      "0"
+    ],
+    "geometry_probes": [
+      {
+        "A": -611.3613435133911,
+        "beta": 24.745935898918656,
+        "rho": -8.0,
+        "theta_minus": 6.3374611443492075,
+        "theta_plus": 5.845153452041515
+      },
+      {
+        "A": -16.13716694115407,
+        "beta": 4.139706141884236,
+        "rho": -1.0,
+        "theta_minus": 5.139706141884236,
+        "theta_plus": 3.1397061418842362
+      },
+      {
+        "A": -3.7123889803846897,
+        "beta": 2.1708037636748028,
+        "rho": 0.0,
+        "theta_minus": -0.0,
+        "theta_plus": -0.0
+      },
+      {
+        "A": -0.7123889803846897,
+        "beta": 1.308582813728153,
+        "rho": 1.0,
+        "theta_minus": -2.3085828137281528,
+        "theta_plus": -0.308582813728153
+      },
+      {
+        "A": -1.7763568394002505e-15,
+        "beta": 1.0000000000000009,
+        "rho": 1.9006916054701435,
+        "theta_minus": -1.648250296224003,
+        "theta_plus": -7.319701716852488e-16
+      },
+      {
+        "A": 0.7507760633815153,
+        "beta": 0.4992233334074888,
+        "rho": 8.0,
+        "theta_minus": -0.3690395897618434,
+        "theta_plus": 0.12326810254584891
+      }
+    ],
+    "horizon_areal_radius": 2.147703093796876,
+    "horizon_rho": 1.9006916054701435,
+    "horizon_sphere_area": 57.96400023141425,
+    "null_residuals": [
+      "0",
+      "0"
+    ],
+    "observer_cosmological_horizon": "requires the specified observer worldline and causal past/future; not identified with the parent horizon by coordinates",
+    "parent_unresolved_point": "measurement limit; invariant area is unchanged",
+    "product_identity_residual": "0",
+    "sign_regions": [
+      {
+        "domain": "rho>rho_h",
+        "minus": "-",
+        "plus": "+",
+        "type": "untrapped"
+      },
+      {
+        "domain": "rho=rho_h",
+        "minus": "-",
+        "plus": "0",
+        "type": "outer_horizon"
+      },
+      {
+        "domain": "0<rho<rho_h",
+        "minus": "-",
+        "plus": "-",
+        "type": "future_trapped"
+      },
+      {
+        "domain": "rho=0",
+        "minus": "0",
+        "plus": "0",
+        "type": "minimal_areal_radius"
+      },
+      {
+        "domain": "rho<0",
+        "minus": "+",
+        "plus": "+",
+        "type": "anti_trapped"
+      }
+    ],
+    "spatial_slice_dimension": 3,
+    "sphere_area": "4pi(1+rho\u00b2)",
+    "theta_minus": "2rho(-1-beta)/(1+rho\u00b2)",
+    "theta_plus": "2rho(1-beta)/(1+rho\u00b2)"
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/gr-qc/0611022",
+      "use": "black-universe Kantowski-Sachs interior and de Sitter asymptotic prior art; does not derive a Dirac source"
+    },
+    {
+      "url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.96.251101",
+      "use": "original regular phantom black-hole family; its matter source is not adopted here"
+    }
+  ],
+  "schema": "nsc-clock-horizon-v1",
+  "source_hashes": {
+    "docs/nsc-clock-horizon.md": "8ef7849ced4b5fad6b00456c11dd6e2fa4248b6acd6c0caad7afc17d1c014aac",
+    "scripts/check_nsc_clock_horizon.py": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1",
+    "scripts/check_nsc_dirac_tetrad.py": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae"
+  },
+  "terminal": true
+}

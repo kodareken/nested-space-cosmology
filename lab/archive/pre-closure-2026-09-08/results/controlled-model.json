@@ -1,0 +1,371 @@
+{
+  "covariant_core": {
+    "H_at_bounce": 0.0,
+    "Hdot_at_bounce": 1.0,
+    "a_at_bounce": 1.0,
+    "action": "Einstein_gravity_plus_canonical_scalar_at_positive_stationary_point",
+    "apparent_horizons_at_t_over_L_1": {
+      "theta_minus_zero": 0.705026843555238,
+      "theta_plus_zero": 2.4365658100345553
+    },
+    "classification": "controlled_covariant_core_not_global_black_hole_transition",
+    "curvature_invariants": {
+      "ricci_scalar": 12.0,
+      "ricci_tensor_squared": 36.0,
+      "riemann_tensor_squared": 24.0
+    },
+    "logical_limit": "Global de Sitter in closed slicing has constant curvature; the scale-factor minimum is not derived transition microphysics.",
+    "matter_condition": "ordinary_matter_absent_vacuum_energy_absorbed_into_V0",
+    "max_abs_friedmann_residual": 0.0,
+    "model_id": "CCT-1",
+    "surface_examples": {
+      "bounce_quarter_sphere": "normal",
+      "contracting_equator_t_over_L_minus_2": "trapped",
+      "expanding_equator_t_over_L_plus_2": "anti_trapped"
+    },
+    "units": "c=hbar=M_Pl=L=1_for_machine_benchmark"
+  },
+  "domain_synthesis": {
+    "classification": "controlled_effective_fluid_and_kottler_balance_benchmarks_not_dark_sector_or_recursive_transition",
+    "exchange_ledger": {
+      "radiation_density_derivative": -7.6000000000000005,
+      "scalar_density_derivative": -14.400000000000002,
+      "total_continuity_residual": 1.0658141036401503e-14,
+      "total_density": 213.5,
+      "total_pressure": -195.16666666666666,
+      "transfer_q": 3.6000000000000005
+    },
+    "fixed_h_spectator_endpoint": {
+      "compensated_rho_oscillatory": 199.99999999999991,
+      "damped_frequency": 9.987492177719089,
+      "endpoint_residual": -8.526512829121202e-14,
+      "initial_rho_oscillatory": 200.0,
+      "periods": 9.0,
+      "time": 5.6619486411984035
+    },
+    "framework_context": "DSF-1 is an operational hypothesis about dimensionless domain settings and relative characteristic cones, not a computed varying-constant result.",
+    "kottler_balance": {
+      "acceleration_at_balance_m_s^-2": -7.703719777548943e-32,
+      "balance_radius_m": 3.5383561033972613e+18,
+      "equation": "a_r=-G*M/r^2+Lambda*c^2*r/3",
+      "interpretation": "Weak-field competition between compact-mass attraction and positive-Lambda vacuum acceleration at an unstable sign-change scale; not a stable equilibrium, not an accretion wall, and not evidence for recursive domains.",
+      "lambda_m^-2": 1e-52,
+      "mass_kg": 1.98847e+30,
+      "radial_slope_at_balance_s^-2": 8.987551787368177e-36,
+      "stability": "unstable_radial_separator"
+    },
+    "logical_limit": "The background identities do not derive the observed dark-energy scale, dark-matter abundance or clustering, microscopic reheating, dimensionless setting variation, or a global parent-child solution.",
+    "model_id": "DST-1",
+    "quadratic_cycle_average": {
+      "p_oscillatory": 0.0,
+      "p_total": -2.0,
+      "p_vacuum": -2.0,
+      "rho_oscillatory": 200.0,
+      "rho_total": 202.0,
+      "rho_vacuum": 2.0,
+      "w_oscillatory": 0.0,
+      "w_total": -0.009900990099009901,
+      "w_vacuum": -1.0
+    },
+    "quadratic_monomial_limit": {
+      "density_scale_exponent": 3.0,
+      "monomial_exponent": 2.0,
+      "w_average": 0.0
+    },
+    "scalar_potential": "V=V0+m^2*varphi^2/2"
+  },
+  "independent_discriminator": {
+    "classification": "conditional_sign_prediction_for_strict_closed_branch",
+    "falsifier": "robust_positive_Omega_K_across_stated_models_and_systematics",
+    "id": "D-KSIGN-1",
+    "illustrative_omega_K_not_present_day_prediction": -0.7240616609663105,
+    "illustrative_t_over_L": 1.0,
+    "independence": "Conditional on the added K=+1 global branch postulate, the sign is independent of H-SAT and of the curvature data that would test it; CCT-1 alone does not derive the post-core matching.",
+    "nonconfirmation": "An observational result statistically consistent with zero does not confirm the branch; later expansion can dilute its magnitude and other closed models share the sign.",
+    "prediction": "Omega_K<0_when_H_is_nonzero",
+    "quantity": "Omega_K=-K*c^2/(a^2*H^2)",
+    "required_branch_postulate": "observable_child_remains_globally_closed_with_K=+1"
+  },
+  "information_map": {
+    "analytic_child_entropy_nats": 0.6931471805599454,
+    "analytic_radiation_entropy_nats": 0.6931471805599454,
+    "audit": {
+      "hermiticity_error": 0.0,
+      "is_isometry": true,
+      "is_recoverable_on_code_range": true,
+      "is_trace_preserving": true,
+      "isometry_error": 2.220446049250313e-16,
+      "output_is_hermitian": true,
+      "output_is_positive_semidefinite": true,
+      "recovery_error": 2.220446049250313e-16,
+      "trace_error": 2.220446049250313e-16
+    },
+    "child_entropy_nats": 0.6931471805599453,
+    "classification": "finite_code_subspace_mathematical_demonstration",
+    "code_dimension": 2,
+    "input_entropy_nats": 2.220446049250313e-16,
+    "joint_output_entropy_nats": 0.0,
+    "logical_limit": "Assumes a finite tensor-factor code approximation; does not derive gravitational factorization, dynamics, or H-SAT.",
+    "model_id": "IM-1",
+    "no_cloning_overlap_contrast": {
+      "absolute_difference": 0.20710678118654746,
+      "input_overlap": 0.7071067811865475,
+      "putative_cloned_output_overlap": 0.5
+    },
+    "p": 0.5,
+    "p_status": "chosen_symmetric_benchmark_not_derived",
+    "radiation_entropy_nats": 0.6931471805599453
+  },
+  "linear_perturbations": {
+    "classification": "classical_core_transfer_not_primordial_spectrum",
+    "logical_limit": "No adiabatic in-state, curvature-mode conversion, reheating, n_s, A_s, Bogoliubov interpretation, or likelihood is supplied.",
+    "scalar_exact_regression": {
+      "eta_core": 0.7,
+      "mass_times_L": 1.4142135623730951,
+      "matrix": {
+        "determinant": 0.9999999999999923,
+        "m11": -0.4902608213407304,
+        "m12": -0.2905252574711889,
+        "m21": 2.6147273172407015,
+        "m22": -0.49026082134072807
+      },
+      "max_abs_error_from_exact_rotation": 6.17284001691587e-14,
+      "n": 2,
+      "steps": 4096
+    },
+    "tensor_refinement": {
+      "eta_core": 0.7,
+      "final_determinant_error": 1.5543122344752192e-15,
+      "final_difference_from_previous": 9.235057163436977e-12,
+      "final_matrix": {
+        "determinant": 0.9999999999999984,
+        "m11": -0.9016064949329542,
+        "m12": -0.19784153368159496,
+        "m21": 0.9457353307614318,
+        "m22": -0.9016064949329532
+      },
+      "n": 3,
+      "steps": [
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ]
+    }
+  },
+  "literal_model_gates": {
+    "boundary_scalings": {
+      "constant_density": {
+        "accelerates": true,
+        "acceleration_classification": "literal_boundary_scaling_only_not_external_origin_evidence",
+        "density_scale_exponent": 0.0,
+        "desi_dr2_flat_wcdm_summary_gates": {
+          "DESI+CMB": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -1.0,
+            "published_mean": -1.055,
+            "published_sigma": 0.036,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": true,
+            "z_score": 1.5277777777777761
+          },
+          "DESI+CMB+DESY5": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -1.0,
+            "published_mean": -0.971,
+            "published_sigma": 0.021,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": true,
+            "z_score": -1.380952380952382
+          },
+          "DESI+CMB+Pantheon+": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -1.0,
+            "published_mean": -0.995,
+            "published_sigma": 0.023,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": true,
+            "z_score": -0.21739130434782628
+          },
+          "DESI+CMB+Union3": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -1.0,
+            "published_mean": -0.997,
+            "published_sigma": 0.027,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": true,
+            "z_score": -0.11111111111111122
+          }
+        },
+        "effective_w": -1.0,
+        "q": 0.0,
+        "s": 1.0,
+        "separately_conserved": true
+      },
+      "constant_tension_surface": {
+        "accelerates": true,
+        "acceleration_classification": "literal_boundary_scaling_only_not_external_origin_evidence",
+        "density_scale_exponent": 1.0,
+        "desi_dr2_flat_wcdm_summary_gates": {
+          "DESI+CMB": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.6666666666666667,
+            "published_mean": -1.055,
+            "published_sigma": 0.036,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 10.787037037037035
+          },
+          "DESI+CMB+DESY5": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.6666666666666667,
+            "published_mean": -0.971,
+            "published_sigma": 0.021,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 14.492063492063487
+          },
+          "DESI+CMB+Pantheon+": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.6666666666666667,
+            "published_mean": -0.995,
+            "published_sigma": 0.023,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 14.275362318840576
+          },
+          "DESI+CMB+Union3": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.6666666666666667,
+            "published_mean": -0.997,
+            "published_sigma": 0.027,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 12.234567901234565
+          }
+        },
+        "effective_w": -0.6666666666666667,
+        "q": 1.0,
+        "s": 1.0,
+        "separately_conserved": true
+      },
+      "inverse_area_density": {
+        "accelerates": false,
+        "acceleration_classification": "literal_boundary_scaling_only_not_external_origin_evidence",
+        "density_scale_exponent": 2.0,
+        "desi_dr2_flat_wcdm_summary_gates": {
+          "DESI+CMB": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.33333333333333337,
+            "published_mean": -1.055,
+            "published_sigma": 0.036,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 20.046296296296294
+          },
+          "DESI+CMB+DESY5": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.33333333333333337,
+            "published_mean": -0.971,
+            "published_sigma": 0.021,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 30.36507936507936
+          },
+          "DESI+CMB+Pantheon+": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.33333333333333337,
+            "published_mean": -0.995,
+            "published_sigma": 0.023,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 28.768115942028984
+          },
+          "DESI+CMB+Union3": {
+            "classification": "approximate_gaussian_summary_not_likelihood_or_origin_inference",
+            "proposed_w": -0.33333333333333337,
+            "published_mean": -0.997,
+            "published_sigma": 0.027,
+            "sigma_multiplier": 1.96,
+            "within_approximate_interval": false,
+            "z_score": 24.580246913580247
+          }
+        },
+        "effective_w": -0.33333333333333337,
+        "q": 2.0,
+        "s": 1.0,
+        "separately_conserved": true
+      }
+    },
+    "classification": "conditional_literal_subclass_rejection_gates_not_model_confirmation",
+    "external_benchmarks": {
+      "DESI_DR2_flat_wCDM": {
+        "arxiv_version": "2503.14738v3",
+        "location": "Table_V",
+        "published_doi": "10.1103/tr6y-kpc6",
+        "scope": "published marginalized means and 68_percent sigmas in flat constant-w CDM with fiducial sum_mnu=0.06_eV",
+        "source": "https://arxiv.org/abs/2503.14738v3",
+        "use": "separate approximate_1.96_sigma_summary_gates_not_a_likelihood"
+      },
+      "GW170817_GRB170817A": {
+        "interval": [
+          -3e-15,
+          7e-16
+        ],
+        "observable": "delta_T=c_T/c_gamma-1",
+        "scope": "associated low-redshift multimessenger path with bounded intrinsic emission delay",
+        "source": "https://arxiv.org/abs/1710.05834"
+      }
+    },
+    "model_id": "DSF-2_DEB-1",
+    "nonimplications": "No raw local c variation, parent speed, external origin, global transition, generic DSF-1 confirmation, or dark-energy identity follows from these conditional gates.",
+    "relative_cone": {
+      "disformal_stationary_null_control": {
+        "c_gamma_over_c_tensor": 1.0,
+        "classification": "disformal_relative_cone_not_variable_local_c_evidence",
+        "conformal_factor": 1.0,
+        "delta_tensor_over_photon": 0.0,
+        "disformal_factor": 1.0,
+        "kinetic_x": 0.0,
+        "relative_cone_gate": {
+          "classification": "relative_cone_constraint_not_variable_local_c_evidence",
+          "delta_tensor_over_photon": 0.0,
+          "lower_inclusive_bound": -3e-15,
+          "upper_inclusive_bound": 7e-16,
+          "within_inclusive_bound": true
+        }
+      },
+      "negative_1e_minus_14": {
+        "classification": "relative_cone_constraint_not_variable_local_c_evidence",
+        "delta_tensor_over_photon": -1e-14,
+        "lower_inclusive_bound": -3e-15,
+        "rejected": true,
+        "upper_inclusive_bound": 7e-16,
+        "within_inclusive_bound": false
+      },
+      "null_control": {
+        "classification": "relative_cone_constraint_not_variable_local_c_evidence",
+        "delta_tensor_over_photon": 0.0,
+        "lower_inclusive_bound": -3e-15,
+        "rejected": false,
+        "upper_inclusive_bound": 7e-16,
+        "within_inclusive_bound": true
+      },
+      "positive_1e_minus_14": {
+        "classification": "relative_cone_constraint_not_variable_local_c_evidence",
+        "delta_tensor_over_photon": 1e-14,
+        "lower_inclusive_bound": -3e-15,
+        "rejected": true,
+        "upper_inclusive_bound": 7e-16,
+        "within_inclusive_bound": false
+      },
+      "quantity": "delta_T=c_T/c_gamma-1"
+    },
+    "scope": "Fixed control and rejection vectors for a late-universe relative tensor/photon cone and separately conserved literal boundary scalings. Published DESI DR2 values are one-dimensional Gaussian posterior summaries only, not a rerun or combination of likelihoods.",
+    "source_caveat": "The GW170817 interval is a low-redshift common-path relative-cone constraint subject to its source-emission-delay assumptions. DESI summaries depend on the stated flat constant-w CDM datasets, priors, epoch, fiducial sum_mnu=0.06_eV baseline, and parameterization; they do not test an arbitrary dark sector."
+  },
+  "project_version": "0.11.0",
+  "schema_version": 3,
+  "scope": "Controlled closed-de-Sitter core, finite code-subspace isometry, classical linear-mode transfer, scalar effective-fluid and Kottler balance benchmarks, and a sign discriminator conditional on an added globally closed-child postulate, plus fixed relative-cone and boundary-scaling rejection gates; no black-hole embedding, dark-sector identification, varying-constant detection, likelihood rerun, or empirical confirmation."
+}

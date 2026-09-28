@@ -1,0 +1,486 @@
+{
+  "artifact_id": "FGC-1-HLT1-MON1",
+  "artifact_payload": {
+    "all_protocol_thresholds_implemented_strictly": true,
+    "canonical_dimensionless_norms_executable": true,
+    "every_accepted_stage_monitored": true,
+    "first_failed_premise_is_preserved": true,
+    "nonmonotone_internal_stage_abscissae_supported": true,
+    "quantitative_evidence": {
+      "canonical_formulas": {
+        "branch": "max_i(abs(a_i-a_previous_accepted_i)/scale_i)",
+        "constraint": "max_i(abs(C_i)/max(abs(source_i),1e-30))",
+        "curvature": "(max(abs(K)^1/4,sqrt(abs(Ricci_eigenvalue)))/Lambda)^2",
+        "matrix": "max_row_sum(abs(diag(row_scale)*A*diag(column_scale)^-1))",
+        "spectral": "largest_windowed_rfft_bin_above_max(absolute_floor,relative_floor*peak)",
+        "state": "u_i*L0^d_i; p_i,q_i*L0^(d_i+1)"
+      },
+      "epistemic_boundary": {
+        "FGCQR_holdout_outcome_inspected": false,
+        "future_solver_must_call_transaction_before_every_stage_commit": true,
+        "monitor_formulas_verified_without_an_accepted_FGCQR_trajectory": true,
+        "scale_thresholds_are_classical_stop_proxies_not_EFT_remainder_control": true,
+        "spectral_window_is_not_an_exact_continuum_bandlimit": true,
+        "time_evolution_performed": false
+      },
+      "formula_controls": {
+        "curvature": {
+          "linear_scale": 4.0,
+          "scale_squared_over_cutoff_squared": 0.0625
+        },
+        "dimensionless_state": {
+          "field_order": [
+            "alpha",
+            "shift",
+            "lambda",
+            "R",
+            "phi",
+            "chi"
+          ],
+          "mass_dimensions": [
+            0,
+            0,
+            0,
+            -1,
+            1,
+            1
+          ],
+          "p": [
+            4.0,
+            4.0,
+            4.0,
+            1.0,
+            16.0,
+            16.0
+          ],
+          "q": [
+            8.0,
+            8.0,
+            8.0,
+            2.0,
+            32.0,
+            32.0
+          ],
+          "u": [
+            2.0,
+            3.0,
+            4.0,
+            2.0,
+            20.0,
+            24.0
+          ]
+        },
+        "induced_scaled_infinity_norm": 4.0,
+        "normalized_branch_displacement": 0.5,
+        "normalized_constraint_infinity": 1e-08,
+        "spectral": {
+          "compact_window_exact_zero_at_both_edges": true,
+          "compact_window_has_unit_plateau": true,
+          "injected_alias_mode": {
+            "alias_band_occupied": true,
+            "amplitude_threshold": 5.820766091346733e-11,
+            "angular_support": 376.99111843077515,
+            "first_unresolved_bin": 56,
+            "nyquist_bin": 64,
+            "support_bin": 60
+          },
+          "low_mode": {
+            "alias_band_occupied": false,
+            "amplitude_threshold": 5.820766091346741e-11,
+            "angular_support": 12.566370614359172,
+            "first_unresolved_bin": 56,
+            "nyquist_bin": 64,
+            "support_bin": 2
+          },
+          "sample_count": 128
+        }
+      },
+      "source_predecessor_margins": {
+        "BND2_smallest_reference_margin": "689/40",
+        "CON4_absolute_threshold_was_deferred_to_HLT1_NUM1": true,
+        "HYP2_witness_extrema": {
+          "maximum_action_energy_deformation_operator_2": 2.2791301028158203e-05,
+          "maximum_action_hessian_symmetry_defect": 0.0,
+          "maximum_companion_deformation_operator_2": 0.00015438464311832197,
+          "maximum_kinetic_deformation_operator_2": 6.607156118155292e-06,
+          "maximum_physical_projector_displacement_upper": 0.031774952983478925,
+          "maximum_pure_gauge_identity_coefficient_bound": 3.4943235430141114e-15,
+          "minimum_cluster_resolvent_singular_margin": 0.000822177856881678,
+          "minimum_physical_energy_coercivity_lower": 0.6791091698799382
+        }
+      },
+      "strict_comparison_contract": {
+        "Newton_iteration_count_equal_to_16_is_allowed": true,
+        "alias_occupation_stops": true,
+        "continuous_lower_equality_stops": true,
+        "continuous_upper_equality_stops": true
+      },
+      "thresholds": {
+        "acceleration_infinity_max": "4",
+        "action_energy_deformation_operator_2_max": "1/8192",
+        "boundary_margin_over_required_buffer_min": "0",
+        "characteristic_imaginary_part_max": "1/10000000000",
+        "companion_deformation_operator_2_max": "1/4096",
+        "curvature_scale_squared_over_Lambda_squared_max": "1/4",
+        "effective_planck_ratio_min": "1/2",
+        "eigenframe_condition_number_max": "100000000",
+        "kinetic_condition_number_max": "10000000000",
+        "kinetic_deformation_operator_2_max": "1/64",
+        "minimum_observed_constraint_convergence_order": "3/2",
+        "newton_iteration_max": 16,
+        "newton_residual_infinity_max": "1/1000000000000",
+        "normalized_branch_displacement_max": "1/16",
+        "normalized_constraint_infinity_max": "1/10000000",
+        "phi_over_Lambda_max": "1/4",
+        "proper_frequency_over_Lambda_max": "1/4",
+        "proper_wavenumber_over_Lambda_max": "1/4",
+        "symmetrizer_coercivity_min": "1/10000000000"
+      },
+      "typed_stop_injections": {
+        "every_reason_independently_stopped": true,
+        "injected_reason_order": [
+          "nonpositive_lapse",
+          "nonpositive_radial_metric",
+          "nonpositive_areal_radius_away_from_center",
+          "hat_cone_not_Lorentzian",
+          "newton_residual_limit",
+          "newton_iteration_limit",
+          "newton_residual_not_monotonic",
+          "kinetic_condition_limit",
+          "branch_displacement_limit",
+          "acceleration_limit",
+          "all_covector_companion_deformation_limit",
+          "action_energy_deformation_limit",
+          "kinetic_deformation_limit",
+          "effective_planck_ratio_limit",
+          "characteristic_imaginary_part_limit",
+          "eigenframe_condition_limit",
+          "symmetrizer_coercivity_limit",
+          "normalized_constraint_limit",
+          "constraint_convergence_order_limit",
+          "phi_cutoff_proxy_limit",
+          "proper_frequency_cutoff_proxy_limit",
+          "proper_wavenumber_cutoff_proxy_limit",
+          "temporal_alias_band_occupied",
+          "radial_alias_band_occupied",
+          "curvature_cutoff_proxy_limit",
+          "boundary_causal_buffer"
+        ],
+        "records": {
+          "acceleration_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "acceleration_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "acceleration_limit"
+          },
+          "action_energy_deformation_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "action_energy_deformation_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "action_energy_deformation_limit"
+          },
+          "all_covector_companion_deformation_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "all_covector_companion_deformation_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "all_covector_companion_deformation_limit"
+          },
+          "boundary_causal_buffer": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "boundary_causal_buffer"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "boundary_causal_buffer"
+          },
+          "branch_displacement_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "branch_displacement_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "branch_displacement_limit"
+          },
+          "characteristic_imaginary_part_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "characteristic_imaginary_part_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "characteristic_imaginary_part_limit"
+          },
+          "constraint_convergence_order_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "constraint_convergence_order_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "constraint_convergence_order_limit"
+          },
+          "curvature_cutoff_proxy_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "curvature_cutoff_proxy_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "curvature_cutoff_proxy_limit"
+          },
+          "effective_planck_ratio_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "effective_planck_ratio_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "effective_planck_ratio_limit"
+          },
+          "eigenframe_condition_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "eigenframe_condition_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "eigenframe_condition_limit"
+          },
+          "hat_cone_not_Lorentzian": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "hat_cone_not_Lorentzian"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "hat_cone_not_Lorentzian"
+          },
+          "kinetic_condition_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "kinetic_condition_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "kinetic_condition_limit"
+          },
+          "kinetic_deformation_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "kinetic_deformation_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "kinetic_deformation_limit"
+          },
+          "newton_iteration_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "newton_iteration_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "newton_iteration_limit"
+          },
+          "newton_residual_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "newton_residual_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "newton_residual_limit"
+          },
+          "newton_residual_not_monotonic": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "newton_residual_not_monotonic"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "newton_residual_not_monotonic"
+          },
+          "nonpositive_areal_radius_away_from_center": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "nonpositive_areal_radius_away_from_center"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "nonpositive_areal_radius_away_from_center"
+          },
+          "nonpositive_lapse": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "nonpositive_lapse"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "nonpositive_lapse"
+          },
+          "nonpositive_radial_metric": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "nonpositive_radial_metric"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "nonpositive_radial_metric"
+          },
+          "normalized_constraint_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "normalized_constraint_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "normalized_constraint_limit"
+          },
+          "phi_cutoff_proxy_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "phi_cutoff_proxy_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "phi_cutoff_proxy_limit"
+          },
+          "proper_frequency_cutoff_proxy_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "proper_frequency_cutoff_proxy_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "proper_frequency_cutoff_proxy_limit"
+          },
+          "proper_wavenumber_cutoff_proxy_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "proper_wavenumber_cutoff_proxy_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "proper_wavenumber_cutoff_proxy_limit"
+          },
+          "radial_alias_band_occupied": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "radial_alias_band_occupied"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "radial_alias_band_occupied"
+          },
+          "symmetrizer_coercivity_limit": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "symmetrizer_coercivity_limit"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "symmetrizer_coercivity_limit"
+          },
+          "temporal_alias_band_occupied": {
+            "accepted_stage_count": 0,
+            "all_failures": [
+              "temporal_alias_band_occupied"
+            ],
+            "last_accepted_time": 0.0,
+            "passed": true,
+            "typed_reason": "temporal_alias_band_occupied"
+          }
+        },
+        "transaction_control": {
+          "SSPRK3_nonmonotone_stage_abscissae_supported": true,
+          "accepted_before_failure": 1,
+          "first_failure_immutable_on_later_attempt": true,
+          "further_acceptance_after_stop_forbidden": true,
+          "last_accepted_stage_after_failure": 1,
+          "last_accepted_time_after_failure": 0.125,
+          "ordering_error_does_not_mutate_last_accepted_state": true,
+          "simultaneous_first_reason": "nonpositive_lapse",
+          "strict_global_stage_transaction_order_enforced": true
+        }
+      }
+    },
+    "run_envelope_semantic_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "scale_stops_not_promoted_to_EFT_validity": true,
+    "stop_occurs_before_threshold_crossing": true,
+    "strict_global_stage_transaction_order_enforced": true
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "classical_health_and_typed_stop_monitor_certificate",
+  "derivation_document": "docs/fgc-hlt1-mon1.md",
+  "derivation_document_sha256": "f91e4a2095043fb9f4f231a60531c740e0fbd6722336251cc088e936b62fc360",
+  "gate_status": {
+    "classical_health_and_typed_stop_monitoring_verified": true
+  },
+  "generated_by": "scripts/reproduce_fgc_hlt1_mon1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt1_mon1.py": "bc1b4806022a174c7f1b1c8b1cb772d3022946d604faebae24219740b22c8184",
+    "src/recursive_horizons/fgc/evolution/boundary_domain.py": "062d9f07387d78079213bddfc718168be2f2402a77c9e0107e9a2ca04ece5cb1",
+    "src/recursive_horizons/fgc/evolution/health_monitor.py": "b364b94745a808313248b442417aacd73a7a8035a5ff9fc1a2bd4829e7d55784"
+  },
+  "nonclaims": {
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-bnd2-cp1.toml": "f91ddded93f162b43250b15197bfaa6df360a1e6ec60a5138ca88e7f88ccbca4",
+    "configs/fgc/fgc-1-con4-phy1.toml": "1b2d8441a96c392c0a0948c9a111e7bfc0fc3df3a31fc63f177768bb29b80255",
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4",
+    "configs/fgc/fgc-1-hyp2-md1.toml": "c3fcb05d4ca3b8df72b1659e24178c66e44f7033e11df998a6bc855f6a230382",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "configs/fgc/fgc-1-src1-nl1.toml": "0048eb844d32bf9d32a4cfddbda242ea99043f2ddfe5ec72c5a8fd551fc6195d",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-bnd2-cp1.json": "154e6740c941e4e4014bb2d1381f633e5f375ab46ae3ad50d629a0363a56a15b",
+    "results/fgc-1-con4-phy1.json": "ab1964af57666e51491026ac279a119b061f17cc55f1ec8ffbc31a45c97ea47b",
+    "results/fgc-1-dom4-run1.json": "238847f4af182fa423a91b381cae65217a76965b7b979ea26b29778781f0ac94",
+    "results/fgc-1-hyp2-md1.json": "159e966f2279cc534d663a0e9f4abd0c6d429751bb8f6d266bebe5c65d53ad67",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8",
+    "results/fgc-1-src1-nl1.json": "e3605b74b40fefde9f62fdc529a454a8f4609479522fe029864bb088db9b2d3d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "action_artifact_id": "FGC-1-ACT1",
+    "action_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "action_result_sha256": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_artifact_id": "FGC-2-SF1-PROTO3",
+    "protocol_config_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+    "protocol_semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "target_branch": "FGC-QR",
+    "variation_artifact_id": "FGC-1-VAR1",
+    "variation_config_sha256": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "variation_result_sha256": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-hlt1-mon1.toml": "a9ba9f95ebdf0e1ec16ddc8098b8e5f9873f0b4c23f7077a9a1ca443b3ad7dbb"
+  }
+}

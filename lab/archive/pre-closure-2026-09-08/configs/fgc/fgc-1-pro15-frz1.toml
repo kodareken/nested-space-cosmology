@@ -1,0 +1,90 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO15-FRZ1"
+project_version = "0.11.0"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v15.toml"
+protocol_core = "src/recursive_horizons/fgc/evolution/protocol_v15.py"
+
+[proto15_inputs]
+protocol_config_sha256 = "f1f1849d85b6cbe1eb61267392a63ca11389f551df127033ddf905abb38fdc3b"
+protocol_core_sha256 = "c40936d2c8cb5eb7a8f36d8ba5c449b3ee797338ad01cc59e13df5474e2208c3"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO15"
+predecessor_protocol = "FGC-2-SF1-PROTO14"
+historical_invalid_terminal = "FGC-1-CAL11-PREF22"
+stage_safe_repair = "FGC-1-TDG7-IMP3"
+freeze_role = "premise_only_campaign_owned_temporal_lifecycle_contract_certificate"
+calibration_branch = "GR-0"
+calibration_amplitude = "3"
+holdout_branch = "FGC-QR"
+PROTO15_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+evidence_checkpoint_commit = "64316d8f80f8532524c306817239f823a73b14be"
+proto14_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v14.toml"
+proto14_protocol_sha256 = "3043cbc23e7a78af764b6e74397512cb3f7bc78eace64485ab188963ba35f3a3"
+proto14_freeze_result = "results/fgc-1-pro14-frz1.json"
+proto14_freeze_result_sha256 = "a0bac04e78fe9ed5af851694057e51a0de62e8682a2fbfb734e63c98537c305b"
+hlt12_runtime_authorization_result = "results/fgc-1-hlt12-mon12.json"
+hlt12_runtime_authorization_result_sha256 = "7f4068a3116ff1838ce7f0165ae18e72d2eea68933b87f056b26d8149c935731"
+cal11_terminal_result = "results/fgc-1-cal11-pref22.json"
+cal11_terminal_result_sha256 = "1339792198ec78ad83bc3e11a2805f09f961607ab6c1f6f06e79bb88ba6b58b8"
+tdg7_repair_config = "configs/fgc/fgc-1-tdg7-imp3.toml"
+tdg7_repair_config_sha256 = "1c989c6e698e40a3237931508b558fe1c8528316e35e8c29c8fc0e2e320c85e8"
+tdg7_repair_result = "results/fgc-1-tdg7-imp3.json"
+tdg7_repair_result_sha256 = "364223f0f0f93c446b9d5b6cf09d3aa3cbe5b48bd1c175faf96a34459fd5b779"
+
+[namespace_precondition]
+calibration_output_root = "runs/fgc-2-sf1/proto15/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto15/holdout"
+both_roots_must_be_absent = true
+freeze_must_create_neither_root = true
+
+[proof_contract]
+sealed_checkpoint_must_be_ancestor_of_HEAD = true
+historical_tracked_inputs_must_match_commit_and_worktree = true
+freeze_consumes_compact_tracked_artifacts_only = true
+historical_raw_runs_history_and_checkpoints_must_not_be_opened = true
+six_restart_records_must_match_PROTO14_and_HLT12_compact_lineage = true
+historical_CAL11_invalid_runtime_boundary_must_remain_public = true
+TDG7_stage_safe_repair_must_be_synthetic_only_and_cursor_incomplete = true
+PROTO15_cursor_lifecycle_and_crash_order_must_validate_exactly = true
+fresh_and_retry_cursor_invariants_must_be_fail_closed = true
+future_runtime_checkpoint_and_common_event_rollback_contract_must_remain_public = true
+canonical_cursor_journal_and_TDG6_ledger_hash_rules_must_remain_public = true
+retry_exhaustion_terminal_record_and_checkpoint_contract_must_remain_public = true
+rollback_must_create_new_generation_not_reuse_old_cursor_bytes = true
+complete_six_member_checkpoint_and_rollback_contract_must_remain_public = true
+retry_successor_semantic_linkage_and_terminal_lock_must_remain_public = true
+recovery_authority_and_fault_injection_contract_must_remain_public = true
+new_output_namespaces_must_be_absent_and_uncreated = true
+adversarial_mutations_must_fail_closed = true
+canonical_duplicate_key_safe_result_required = true
+
+[claims]
+PROTO15_frozen = true
+PROTO15_campaign_owned_cursor_contract_frozen = true
+PROTO15_six_restart_payloads_hash_bound = true
+PROTO14_invalid_runtime_history_preserved = true
+PROTO15_successor_runtime_implemented = false
+PROTO15_pretrajectory_runtime_authorized = false
+PROTO15_fresh_GR0_dynamic_calibration_authorized = false
+PROTO15_trajectory_read = false
+PROTO15_output_namespace_created = false
+PROTO15_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,620 @@
+{
+  "artifact_id": "FGC-1-CON4-PHY1",
+  "artifact_payload": {
+    "Hamiltonian_and_momentum_projections_derived": true,
+    "canonical_normalized_monitors_defined": true,
+    "kinematic_reduction_constraints_closed": true,
+    "metric_defined_gauge_constraints_closed": true,
+    "quantitative_evidence": {
+      "acceleration_structure": {
+        "Einstein_sector": {
+          "Hamiltonian_identity": "G_nn=(3R+K^2-K_ij*K^ij)/2",
+          "contains_second_normal_metric_derivatives": false,
+          "momentum_identity": "G_ni=D_j(K^j_i)-D_i(K)"
+        },
+        "Gauss_Bonnet_sector": {
+          "Hamiltonian_curvature_indices_all_spatial": true,
+          "Hamiltonian_hessian_indices_all_spatial": true,
+          "Hamiltonian_support_count": 36,
+          "contains_double_normal_metric_or_scalar_derivatives": false,
+          "double_dual_identity": "P_acbd proportional eps_acEF*eps_bdGH*R^EFGH",
+          "momentum_curvature_has_at_most_one_normal_index": true,
+          "momentum_hessian_has_at_most_one_normal_index": true,
+          "momentum_support_count_for_one_spatial_direction": 36
+        },
+        "Hamiltonian_and_momentum_are_initial_data_constraints": true,
+        "classification": "covariant_normal_projection_acceleration_structure_theorem",
+        "coordinate_time_accelerations_absent_structurally": true,
+        "independent_exact_evaluator_controls_still_required": true,
+        "matter_stress_sector": {
+          "contains_coordinate_time_accelerations": false,
+          "depends_on_fields_and_first_derivatives_only": true
+        },
+        "nonminimal_F_sector": {
+          "Hamiltonian_identity": "n^a*n^b*(g_ab*boxF-nabla_a_nabla_bF)=-h^ij*nabla_i_nabla_jF",
+          "contains_second_normal_scalar_derivatives": false,
+          "momentum_identity": "n^a*h_i^b*(g_ab*boxF-nabla_a_nabla_bF)=-n^a*h_i^b*nabla_a_nabla_bF"
+        },
+        "normal_projection_basis": "orthonormal_n_plus_three_spatial_directions"
+      },
+      "exact_acceleration_controls": {
+        "all_exact_controls_passed": true,
+        "controls_are_regressions_not_the_global_proof": true,
+        "direction_count_per_state": 6,
+        "records": [
+          {
+            "all_twelve_derivatives_zero": true,
+            "base_H": "0",
+            "base_M": "0",
+            "directions": [
+              {
+                "acceleration": "partial_t^2.h_tt",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.h_tr",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.h_rr",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.areal_radius",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.phi",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.chi",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              }
+            ],
+            "state_index": 0
+          },
+          {
+            "all_twelve_derivatives_zero": true,
+            "base_H": "202078447042225282962449483762053603670779/910039683772882556507608673993591367300000",
+            "base_M": "5652023727211647293118318948191813983283/608898301332440984749152400480098300585000",
+            "directions": [
+              {
+                "acceleration": "partial_t^2.h_tt",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.h_tr",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.h_rr",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.areal_radius",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.phi",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.chi",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              }
+            ],
+            "state_index": 1
+          },
+          {
+            "all_twelve_derivatives_zero": true,
+            "base_H": "2239159209825885762968526269376361120561861/10317002736737005856863523519746637480628960",
+            "base_M": "-212901654343366932663731510829682425238/20478236399880262013855345210804655293355",
+            "directions": [
+              {
+                "acceleration": "partial_t^2.h_tt",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.h_tr",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.h_rr",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.areal_radius",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.phi",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              },
+              {
+                "acceleration": "partial_t^2.chi",
+                "both_exactly_zero": true,
+                "dH_dacceleration": "0",
+                "dM_dacceleration": "0"
+              }
+            ],
+            "state_index": 2
+          }
+        ],
+        "state_count": 3
+      },
+      "monitor_contract": {
+        "HLT1_and_NUM1_must_add_absolute_scale_and_thresholds": true,
+        "common_rescaling_invariant": true,
+        "definition": "abs(sum signed terms)/sum(abs(signed terms))",
+        "not_an_absolute_truncation_or_physical_error_norm": true,
+        "range": "closed_unit_interval",
+        "raw_residual_and_denominator_always_recorded": true,
+        "smallness_on_one_run_is_not_a_propagation_proof": true,
+        "zero_denominator_policy": "if_every_term_is_exactly_zero_return_zero_and_record_zero_scale"
+      },
+      "predecessor_composition": {
+        "CON2_artifact_id": "FGC-1-HYP1-CON2-MPROP1",
+        "CON2_complete_kinematic_reduction_subsidiary_passed": true,
+        "CON2_local_metric_derived_identity_passed": true,
+        "CON3_artifact_id": "FGC-1-HYP1-CON3-CAU1",
+        "CON3_conditional_boundary_free_gauge_uniqueness_passed": true,
+        "conditional_closure": {
+          "compatible_initial_hypersurface_supplied": false,
+          "complete_boundary_free_spherical_constraint_system_closed_conditionally": true,
+          "constraint_preserving_boundary_map_supplied": false,
+          "constraints_imposed_on_initial_data": [
+            "metric_defined_C^t=C^r=0",
+            "unredefined_H=0",
+            "unredefined_M=0",
+            "six_radial_reduction_constraints_q-partial_r_u=0"
+          ],
+          "constraints_monitored_numerically": [
+            "unredefined_H_and_M",
+            "metric_defined_C_and_nabla_C",
+            "six_D_C_K_reduction_residuals"
+          ],
+          "constraints_propagated_analytically": [
+            "C_by_CON2_homogeneous_hat_wave_plus_CON3_boundary_free_uniqueness",
+            "H_and_M_by_invertible_REF1_shell_map_and_vanishing_extension",
+            "six_reduction_constraints_by_d_t_C+d_r_D-K=0"
+          ],
+          "equations_solved_by_future_evolution": [
+            "six_complete_REF1_metric_plus_unmodified_scalar_equations",
+            "six_u_time_definition_equations",
+            "six_q_time_minus_p_radial_compatibility_equations"
+          ],
+          "evolution_authorized": false,
+          "initial_boundary_value_problem_supplied": false,
+          "logical_chain": [
+            "C_zero_on_initial_slice_implies_spatial_nabla_C_zero",
+            "REF1_shell_plus_H_equals_M_equals_zero_implies_normal_nabla_C_zero_by_invertible_map",
+            "CON2_plus_both_scalar_equations_gives_homogeneous_hat_cone_subsidiary_system",
+            "CON3_uniqueness_gives_C_zero_in_the_boundary_free_domain_of_dependence",
+            "extension_then_vanishes_so_REF1_recovers_unredefined_ACT1_VAR1_and_H_equals_M_equals_zero",
+            "FO1_kinematic_identity_independently_preserves_six_radial_reduction_constraints"
+          ],
+          "regular_center_supplied": false,
+          "smooth_solution_existence_supplied": false
+        }
+      },
+      "reduction_monitor_controls": {
+        "off_shell": {
+          "C_values": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "D_values": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "K_values": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "all_subsidiary_identity_residuals_zero": true,
+          "no_incoming_reduction_fields": true,
+          "on_kinematic_shell": false,
+          "zero_radial_principal_speed": true
+        },
+        "on_shell": {
+          "C_values": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "D_values": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "K_values": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "all_subsidiary_identity_residuals_zero": true,
+          "no_incoming_reduction_fields": true,
+          "on_kinematic_shell": true,
+          "zero_radial_principal_speed": true
+        }
+      },
+      "scope": {
+        "boundary_free_domain_of_dependence_only": true,
+        "compatible_nonzero_width_slice_deferred_to_ID1": true,
+        "constraint_preserving_boundary_map_deferred_to_BND2": true,
+        "holdout_executed": false,
+        "smooth_full_REF1_plus_two_scalar_solution_is_conditional": true
+      },
+      "state_controls": [
+        {
+          "coordinate_radius": "4",
+          "gauge_characteristics": {
+            "constraint_preserving_boundary_map_derived": false,
+            "hat_null_polynomial": [
+              "1",
+              "0",
+              "-9"
+            ],
+            "inner_incoming_component_count": 2,
+            "outer_incoming_component_count": 2,
+            "root_isolations": [
+              {
+                "exact": "-1/3"
+              },
+              {
+                "exact": "1/3"
+              }
+            ],
+            "root_signs": [
+              -1,
+              1
+            ]
+          },
+          "gauge_monitor_summary": {
+            "all_components_recomposed_exactly": true,
+            "all_values_in_closed_unit_interval": true,
+            "maximum_relative_cancellation": "0",
+            "monitor_count": 20,
+            "nonzero_raw_value_count": 0,
+            "zero_scale_convention_count": 19
+          },
+          "h_rr": "1",
+          "lapse_squared": "1",
+          "normal_gauge_map": {
+            "H_M_zero_iff_normal_nabla_C_zero": true,
+            "analytic_matrix_equal": true,
+            "determinant": "-6120186961754529976025169/18889465931478580854784",
+            "determinant_strictly_negative": true,
+            "matrix": [
+              [
+                "2473901162487/137438953472",
+                "0"
+              ],
+              [
+                "0",
+                "-2473901162487/137438953472"
+              ]
+            ]
+          },
+          "physical_constraints": {
+            "H": "0",
+            "H_relative_cancellation": "0",
+            "H_terms": [
+              "160560460417258699620351/649037107312131087083442395938816",
+              "3/68719476736",
+              "-687194767361/2361183241434822606848",
+              "0",
+              "-584115552257/649037107312131087083442395938816"
+            ],
+            "M": "0",
+            "M_relative_cancellation": "0",
+            "M_terms": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "exact_recomposition": true,
+            "term_order": [
+              "F_times_Einstein",
+              "nonminimal_F",
+              "minus_phi_stress",
+              "minus_chi_stress",
+              "Gauss_Bonnet_response"
+            ]
+          },
+          "shift": "0",
+          "state_id": "COMP1-compatible"
+        },
+        {
+          "coordinate_radius": "5/2",
+          "gauge_characteristics": {
+            "constraint_preserving_boundary_map_derived": false,
+            "hat_null_polynomial": [
+              "21/34",
+              "-30/17",
+              "-100/17"
+            ],
+            "inner_incoming_component_count": 2,
+            "outer_incoming_component_count": 2,
+            "root_isolations": [
+              {
+                "lower": "-8507247/16777216",
+                "upper": "-4253623/8388608"
+              },
+              {
+                "lower": "3474081/16777216",
+                "upper": "1737041/8388608"
+              }
+            ],
+            "root_signs": [
+              -1,
+              1
+            ]
+          },
+          "gauge_monitor_summary": {
+            "all_components_recomposed_exactly": true,
+            "all_values_in_closed_unit_interval": true,
+            "maximum_relative_cancellation": "2252322265610287421/2295133333256469571",
+            "monitor_count": 20,
+            "nonzero_raw_value_count": 8,
+            "zero_scale_convention_count": 12
+          },
+          "h_rr": "4/3",
+          "lapse_squared": "153/100",
+          "normal_gauge_map": {
+            "H_M_zero_iff_normal_nabla_C_zero": true,
+            "analytic_matrix_equal": true,
+            "determinant": "-2513484/60025",
+            "determinant_strictly_negative": true,
+            "matrix": [
+              [
+                "16983/2450",
+                "0"
+              ],
+              [
+                "-222/245",
+                "-296/49"
+              ]
+            ]
+          },
+          "physical_constraints": {
+            "H": "202078447042225282962449483762053603670779/910039683772882556507608673993591367300000",
+            "H_relative_cancellation": "202078447042225282962449483762053603670779/231134620206850853185299724505403060466279",
+            "H_terms": [
+              "878813555484521191/3707292578237692500",
+              "1199424348797640563/1357260171871308784800",
+              "-1651569195737/103936801603600",
+              "-4102303/55357953800",
+              "1346224820601405167582847/15817707976763297143923650000"
+            ],
+            "M": "5652023727211647293118318948191813983283/608898301332440984749152400480098300585000",
+            "M_relative_cancellation": "16956071181634941879354956844575441949849/20600994409428713910175768830398783351551",
+            "M_terms": [
+              "15031397525159119/1488117655008956475",
+              "-178640148544722533/196246123515673804440",
+              "2363/21430180",
+              "3001/43588940",
+              "-5232203837427471855013706806997/59867575319968877893188278672797500"
+            ],
+            "exact_recomposition": true,
+            "term_order": [
+              "F_times_Einstein",
+              "nonminimal_F",
+              "minus_phi_stress",
+              "minus_chi_stress",
+              "Gauss_Bonnet_response"
+            ]
+          },
+          "shift": "3/20",
+          "state_id": "nonflat-shifted-A"
+        },
+        {
+          "coordinate_radius": "3",
+          "gauge_characteristics": {
+            "constraint_preserving_boundary_map_derived": false,
+            "hat_null_polynomial": [
+              "238/411",
+              "216/137",
+              "-972/137"
+            ],
+            "inner_incoming_component_count": 2,
+            "outer_incoming_component_count": 2,
+            "root_isolations": [
+              {
+                "lower": "-1639343/8388608",
+                "upper": "-3278685/16777216"
+              },
+              {
+                "lower": "1751739/4194304",
+                "upper": "7006957/16777216"
+              }
+            ],
+            "root_signs": [
+              -1,
+              1
+            ]
+          },
+          "gauge_monitor_summary": {
+            "all_components_recomposed_exactly": true,
+            "all_values_in_closed_unit_interval": true,
+            "maximum_relative_cancellation": "1",
+            "monitor_count": 20,
+            "nonzero_raw_value_count": 8,
+            "zero_scale_convention_count": 12
+          },
+          "h_rr": "3/2",
+          "lapse_squared": "137/108",
+          "normal_gauge_map": {
+            "H_M_zero_iff_normal_nabla_C_zero": true,
+            "analytic_matrix_equal": true,
+            "determinant": "-1397537/36450",
+            "determinant_strictly_negative": true,
+            "matrix": [
+              [
+                "13837/2430",
+                "0"
+              ],
+              [
+                "101/135",
+                "-101/15"
+              ]
+            ]
+          },
+          "physical_constraints": {
+            "H": "2239159209825885762968526269376361120561861/10317002736737005856863523519746637480628960",
+            "H_relative_cancellation": "2239159209825885762968526269376361120561861/2410569551627284799097809431234029050175419",
+            "H_terms": [
+              "153179027602257485/679862260243712133",
+              "-22674326953614587/90176028431029577505",
+              "-1835529509093/229511541715488",
+              "-6072049/104358718116",
+              "12451481409740115991988801/365262974626453970374875170709"
+            ],
+            "M": "-212901654343366932663731510829682425238/20478236399880262013855345210804655293355",
+            "M_relative_cancellation": "106450827171683466331865755414841212619/107534137793701149453504598262306148779",
+            "M_terms": [
+              "-2933845884777728/296819936166253095",
+              "-25879086118113184/64209306972736295145",
+              "-1066/10613223",
+              "-1364/22128651",
+              "61255901725625282535416615632736/1157943816787122534003694951133992383"
+            ],
+            "exact_recomposition": true,
+            "term_order": [
+              "F_times_Einstein",
+              "nonminimal_F",
+              "minus_phi_stress",
+              "minus_chi_stress",
+              "Gauss_Bonnet_response"
+            ]
+          },
+          "shift": "-1/9",
+          "state_id": "nonflat-shifted-B"
+        }
+      ]
+    },
+    "run_envelope_semantic_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "smallness_on_one_run_not_used_as_proof": true,
+    "subsidiary_system_closed": true
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "physical_gauge_reduction_constraint_closure_certificate",
+  "derivation_document": "docs/fgc-con4-phy1.md",
+  "derivation_document_sha256": "f460b944e738eebe11dea1f717e50f45acca60958ca17fb359148e2a3932c094",
+  "gate_status": {
+    "physical_gauge_reduction_constraint_system_closed": true
+  },
+  "generated_by": "scripts/reproduce_fgc_con4_phy1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_con4_phy1.py": "937360287a76626f7e3676baef75fd846b3f34077b650b7cce830fec58564fce",
+    "src/recursive_horizons/fgc/constraint_system.py": "945788d4c5d1e1064be0048bb5a63267dd95028621b3559f4040fd54b2401ba3",
+    "src/recursive_horizons/fgc/modified_harmonic_cauchy.py": "06caa5c1f43d7cf73086536742c1eebd8fbc2583a2e3ac63b8be0192c8b73462",
+    "src/recursive_horizons/fgc/modified_harmonic_constraints.py": "428ddbe6325a43d905d5da880d0b67922b5448d38e69a2461e84003348708783",
+    "src/recursive_horizons/fgc/modified_harmonic_metric_propagation.py": "cdf57e13946b90ac33b0bae30512dce13b3a3632624323ff7c26ec2efee18a39",
+    "src/recursive_horizons/fgc/modified_harmonic_reduction_subsidiary.py": "ede9271f5ad916b240cd575e9f979d6bcb315bdaf8c37e0a2df2cacad494395a"
+  },
+  "nonclaims": {
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-hyp1-con1-comp1.toml": "3b52649856dc37d12da912846a0739216e183114d01a14b4b3fa1cea6ce41291",
+    "configs/fgc/fgc-1-hyp1-con2-mprop1.toml": "4dc1c897d0df09656a0a8d0e93f7b4e033d63b2f36c443f7b653878f5dff9402",
+    "configs/fgc/fgc-1-hyp1-con3-cau1.toml": "d693e4901d97447f6f3c23a5a3dbd3c2a2f72ccfd32fad23ef65ef3366ddfc13",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-hyp1-con1-comp1.json": "8bdf33ed4480b171955628f266af413752f69b61019911b3216bfc847a493680",
+    "results/fgc-1-hyp1-con2-mprop1.json": "9df6af7e1906972dbac48aa2459ea462b2636cac40a3b9560ca46f2e4355868f",
+    "results/fgc-1-hyp1-con3-cau1.json": "8c90f9b2b35fdbe61c200f66b3c4aa2fb69a2d51680b573474c12ad688213cee",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "action_artifact_id": "FGC-1-ACT1",
+    "action_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "action_result_sha256": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_artifact_id": "FGC-2-SF1-PROTO3",
+    "protocol_config_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+    "protocol_semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "target_branch": "FGC-QR",
+    "variation_artifact_id": "FGC-1-VAR1",
+    "variation_config_sha256": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "variation_result_sha256": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-con4-phy1.toml": "1b2d8441a96c392c0a0948c9a111e7bfc0fc3df3a31fc63f177768bb29b80255"
+  }
+}

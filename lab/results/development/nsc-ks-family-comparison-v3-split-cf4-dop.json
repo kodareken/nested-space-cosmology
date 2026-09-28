@@ -1,0 +1,98 @@
+{
+  "families": [
+    {
+      "family": [
+        14,
+        1
+      ],
+      "matter_change_max_difference": [
+        5.575679078596157e-16,
+        5.160700697077331e-16
+      ],
+      "physical_field_max_differences": {
+        "axial_columns": 2.4293496660855115e-12,
+        "axial_tangents": 0.0,
+        "column_tangents": 0.0,
+        "columns": 1.5779233923431828e-14
+      },
+      "tangent_directions": 0
+    },
+    {
+      "family": [
+        32,
+        -1
+      ],
+      "matter_change_max_difference": [
+        5.080940009005719e-14,
+        4.7968139876841676e-14
+      ],
+      "physical_field_max_differences": {
+        "axial_columns": 9.59379001289012e-12,
+        "axial_tangents": 0.0,
+        "column_tangents": 0.0,
+        "columns": 3.002204003763872e-14
+      },
+      "tangent_directions": 0
+    }
+  ],
+  "full_source_covered": false,
+  "indicator_not_a_bound": true,
+  "left": {
+    "bytes": 35896,
+    "path": "results/development/nsc-ks-evaluator-accuracy-v2-split-family-g1024-d48.json",
+    "sha256": "9b7b926f481c4ebcbae84fefead04889304a9eae8eacc7636823661dced0cc57"
+  },
+  "left_solver": {
+    "atol": 5e-19,
+    "degree": 48,
+    "grid_nodes": 1024,
+    "integrator": "dop853",
+    "length": 0.4,
+    "max_step": 0.0001220703125,
+    "phase_nodes": 192,
+    "rtol": 5e-14,
+    "step_control": "primal"
+  },
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "right": {
+    "bytes": 35915,
+    "path": "results/development/nsc-ks-evaluator-accuracy-v2-split-family-cf4-h625e7-g1024-d48-metadata2.json",
+    "sha256": "62799db88900ac4fa7812f9c5e69b8e877827784feea76762252215799f8262b"
+  },
+  "right_solver": {
+    "atol": 5e-19,
+    "degree": 48,
+    "grid_nodes": 1024,
+    "integrator": "cf4",
+    "length": 0.4,
+    "max_step": 6.25e-05,
+    "phase_nodes": 192,
+    "rtol": 5e-14,
+    "step_control": "primal"
+  },
+  "schema": "NSC-KS-EVALUATOR-COMPARISON-v3",
+  "source_hashes": {
+    "scripts/derive_nsc_ks_evaluator_accuracy_v2.py": "8fa2c01d1c13cffc62cf4178e9791de2852686e310d61b3096ffdf89a51621b9",
+    "scripts/derive_nsc_ks_family_comparison_v3.py": "1ac5693637d2cb6a3e4a714d2d4bc305117af2d19aeee5c2207c89e154d2f66b",
+    "scripts/derive_nsc_ks_gate_value.py": "55f5a525db717137ca452b3e93118a539f2f21e5c9dfe087cde85e179ea07302",
+    "scripts/derive_nsc_ks_value_metadata_successor.py": "21dd5553775c28d0d25c706f0d86750258db3281d68c42742061a3e648d2b4a3"
+  },
+  "writer_equivalence": {
+    "current_writer_sha256": "55f5a525db717137ca452b3e93118a539f2f21e5c9dfe087cde85e179ea07302",
+    "numerical_arrays_modified": false,
+    "old_writer_sha256": "6b3123b314500c450b8d61f9e89542ac14644a20d7d6eb300c2f88cdfdd40f9d",
+    "pinned_producer_commit": "0ad41b66d15138bd78251fcce4d7535ea957ab97",
+    "records": {
+      "split-family-cf4-h625e7-g1024-d48-metadata2": {
+        "metadata_only_equivalence_verified": true,
+        "original_value_writer_sha256": "55f5a525db717137ca452b3e93118a539f2f21e5c9dfe087cde85e179ea07302"
+      },
+      "split-family-g1024-d48": {
+        "metadata_only_equivalence_verified": true,
+        "original_value_writer_sha256": "6b3123b314500c450b8d61f9e89542ac14644a20d7d6eb300c2f88cdfdd40f9d"
+      }
+    }
+  }
+}

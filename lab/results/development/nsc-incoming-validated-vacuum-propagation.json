@@ -1,0 +1,161 @@
+{
+  "accountable_author": "Douglas Ek",
+  "energy": 24,
+  "group": 32,
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-matched-horizon-initializer.json": "7f6c5576a72b37172c40f76a82eaabce1243199857ded670a7e19d1c04536cff",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_matched_horizon_initializer.py": "0935e82bccdf6d3fa22517ca85c183842625fac772e0dac0a3bcb9a18d8087e8",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "method": {
+    "Cauchy_sample_radius": "1/16",
+    "Taylor_degree": 36,
+    "analytic_radius": "1/8",
+    "coefficient_step_centering_rounding_included": true,
+    "continuous_residuals_enclosed": true,
+    "directed_DFT_nodes": 128,
+    "exact_geometry_disks_nonzero": true,
+    "interval_precision": 80,
+    "maximum_CPU_workers": 2,
+    "maximum_real_step": "1/32",
+    "separate_column_error_radius": true,
+    "sinc_series_degree": 36
+  },
+  "next_connection": "extend validated field error to an energy panel with an independent spectral integration bound; one E24 result does not certify E24\u201332",
+  "numerical_gate_pass": true,
+  "pilot_pointwise_tolerance": 1e-13,
+  "pointwise_weighted_lapse_kernel_error_upper": 4.2269407014154284e-17,
+  "reproducer": "python3 scripts/derive_nsc_incoming_validated_vacuum_propagation.py --check",
+  "schema": "NSC-INCOMING-VALIDATED-VACUUM-PROPAGATION-v1",
+  "scope": {
+    "Hamiltonian_mass_angular": "unchanged stored binary channel labels",
+    "archived_modes_normalized_or_changed": false,
+    "full_source_accuracy_claimed": false,
+    "metric_timestep": false,
+    "physical_IV_or_stationarity_root": false,
+    "physical_state": "same affine limiting vacuum; certified new initializer and unitary fixed-profile field equation",
+    "push_or_PDF": false,
+    "source_quadrature_or_window_integral_claimed": false,
+    "thermal_source_kappa_changed": false
+  },
+  "sign_payloads": [
+    {
+      "bytes": 2020286,
+      "path": "results/development/artifacts/nsc-incoming-validated-vacuum-sign1.ad3f59853b850a49398970abff2701ebd8579e7e124e858c776e1e6a5000bcaa.json",
+      "sha256": "ad3f59853b850a49398970abff2701ebd8579e7e124e858c776e1e6a5000bcaa",
+      "sign": 1
+    },
+    {
+      "bytes": 2019839,
+      "path": "results/development/artifacts/nsc-incoming-validated-vacuum-sign-1.64a8ccf9daa6561d9f43607b683dd277b5a286fd463ce0387a1059e73819e0b4.json",
+      "sha256": "64a8ccf9daa6561d9f43607b683dd277b5a286fd463ce0387a1059e73819e0b4",
+      "sign": -1
+    }
+  ],
+  "signs": {
+    "-1": {
+      "column_end": [
+        [
+          [
+            1,
+            963663922774441502408405569293507531968762257112349173152923325374747561221847141,
+            -270,
+            270
+          ],
+          [
+            0,
+            100765166469967885113004575969895041816801174986398429098274297438523701449658907,
+            -266,
+            266
+          ]
+        ],
+        [
+          [
+            1,
+            1052143290978574906462231377424429806552325750283237060201135477415965093688840921,
+            -272,
+            270
+          ],
+          [
+            1,
+            354953919999643123774138600000340736107551306360324905517370313236458018661491585,
+            -273,
+            268
+          ]
+        ]
+      ],
+      "column_error_upper": 1.2648156011294717e-20,
+      "energy": 24,
+      "pointwise_weighted_lapse_kernel_error_upper": 2.1111117556365602e-17,
+      "projector_error_upper": 2.5450672851845522e-20,
+      "raw_column_norm_defect_upper": 1.5136009997593039e-33,
+      "residual_component_step_maxima": {
+        "analytic_generator_tail_integral_upper": 1.9280963912768447e-23,
+        "coefficient_arithmetic_and_input_integral_upper": 1.9453587177328493e-33,
+        "polynomial_residual_tail_integral_upper": 1.3539893485835304e-36
+      },
+      "sign": -1,
+      "spectral_integral_or_source_quadrature_claimed": false,
+      "steps": 699,
+      "units": "lapse action-gradient spectral kernel per positive-energy dE, inherited signed-family factor included"
+    },
+    "1": {
+      "column_end": [
+        [
+          [
+            1,
+            967258927373736659702840147976051434262169282727061913469185837028697939694404415,
+            -270,
+            270
+          ],
+          [
+            0,
+            804935410155505974576932745925442971449411324520150302191301289841210040328048173,
+            -269,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            312267520216827655190612466595580894073238672635191136018850793806235909402176693,
+            -271,
+            268
+          ],
+          [
+            0,
+            871590673799790455794992138813770659821035587384724373895017631291620057495913877,
+            -272,
+            269
+          ]
+        ]
+      ],
+      "column_error_upper": 1.2648156004616063e-20,
+      "energy": 24,
+      "pointwise_weighted_lapse_kernel_error_upper": 2.115828945778868e-17,
+      "projector_error_upper": 2.550754130647436e-20,
+      "raw_column_norm_defect_upper": 1.5136009875149336e-33,
+      "residual_component_step_maxima": {
+        "analytic_generator_tail_integral_upper": 1.9280963912768447e-23,
+        "coefficient_arithmetic_and_input_integral_upper": 1.9453653443300412e-33,
+        "polynomial_residual_tail_integral_upper": 1.3539893485835291e-36
+      },
+      "sign": 1,
+      "spectral_integral_or_source_quadrature_claimed": false,
+      "steps": 699,
+      "units": "lapse action-gradient spectral kernel per positive-energy dE, inherited signed-family factor included"
+    }
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-validated-vacuum-propagation.md": "9e4204f948f300ada78eef041a65f8af03ee4fdf65fcf71e304dc9eba46bbef8",
+    "scripts/derive_nsc_incoming_validated_vacuum_propagation.py": "fb2834ecd3483f552625def43242af52fb7967bb57ee6dae1ea3910bf015ba93",
+    "src/recursive_horizons/nsc_incoming_validated_vacuum_propagation.py": "b5cbd35037eb1605317ffc352613da2656ba207dbdd4a6e6d219b8dd77bd247f",
+    "tests/test_nsc_incoming_validated_vacuum_propagation.py": "a35751d2449c7d354358a8a1fecb743f0e782a86da7d0ebee7233c8551de76d9"
+  },
+  "status": "PASS: E24 both-sign vacuum field propagation certified; spectral source OPEN"
+}

@@ -1,0 +1,53 @@
+{
+  "accountable_author": "Douglas Ek",
+  "input_hashes": {
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "results/development/nsc-incoming-surface-integrability.json": "270450f9a0df2c0a349af21dc5a9727055e1b55508475829b925d54b596e1a7a",
+    "src/recursive_horizons/nsc_incoming_fixed_transfer.py": "035bbe460bac17fe8a4898747f357ca6f994317c8d16cbb758ea65a47b803dfb",
+    "src/recursive_horizons/nsc_incoming_surface_integrability.py": "c2026d0b61e02688847a014cdb8591bf25be89426d6f1364537ae40b98fb1bec"
+  },
+  "reproducer": "python3 scripts/derive_nsc_ks_linear_uv_contractions.py --check",
+  "result": {
+    "Q2": "-ell*a^2*what*sigma1/(4*r^2)",
+    "angular_pairing_needed_for_these_zeros": false,
+    "complex_Fourier_amplitudes_preserved": true,
+    "fixed_transfer": "Eo=E+omega/2; Ei=E-omega/2; omega fixed as E tends to positive infinity",
+    "forced_diagonal_Q3": "m*ell*a^3*what*sigma3/(4*r^2)",
+    "full_source_addition": "the unchanged coherent thermal source remainder must also be bounded; it is not set to zero",
+    "midpoint_offset_order": "omega shifts P1/E first at E^-2, hence enters P_o Q+Q P_i first at E^-4",
+    "omitted_diagonal_false_N_coefficient": "a**2*ell*m*what/(2*r**2)",
+    "order_conclusion": "linear vacuum N,beta insertions are O(E^-3) at fixed omega after the E^-2 coefficient cancels",
+    "remainder_input": "owned Q expansion through E^-3 with O(E^-4) pair remainder, multiplied by an at-most-E vertex",
+    "residuals": {
+      "N_E_minus1": "0",
+      "N_E_minus2": "0",
+      "beta_E_minus1": "0",
+      "beta_E_minus2": "0",
+      "projector_pair_E_minus3": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "scope": {
+      "finite_history_bound": false,
+      "linear_response_at_reference": true,
+      "numeric_tail_constant": null,
+      "physical_local_gate": "OPEN",
+      "pointwise_on_I_tail_bound": null,
+      "uniform_in_axial_transfer": false
+    },
+    "unfixed_Q3_entries": [
+      "q3_01",
+      "q3_10"
+    ]
+  },
+  "schema": "NSC-KS-LINEAR-UV-CONTRACTIONS-v1",
+  "source_hashes": {
+    "docs/nsc-ks-linear-uv-contractions.md": "1583a3f7f67aceeee2725b674d712fc28a4da4f4d2359b165c6a72f575b19976",
+    "scripts/derive_nsc_ks_linear_uv_contractions.py": "c2f6f2115e6b03c93059013f518ca1796cf769a297b7f56a1c52a476dcd3db3f",
+    "src/recursive_horizons/nsc_ks_linear_uv_contractions.py": "80ff3095f3d4f48a59c6109f264770a753acd0e2c954c977dee62a5f06c6b88f"
+  },
+  "status": "PASS: exact linear endpoint coefficients; finite-history local gate OPEN"
+}

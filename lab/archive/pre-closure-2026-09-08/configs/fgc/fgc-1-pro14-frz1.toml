@@ -1,0 +1,215 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO14-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v14.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO14"
+predecessor_protocol = "FGC-2-SF1-PROTO13"
+replacement_instrument_artifact = "FGC-1-TDG6-IMP2"
+historical_terminal_artifact = "FGC-1-CAL10-PREF15"
+calibration_branch = "GR-0"
+calibration_amplitude = "3"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_TDG6_post_restart_calibration_protocol_certificate"
+PROTO13_GR0_trajectory_inspected = true
+PROTO14_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "27badf9ad3c0bc3aa1c8a4153a42a26bdaf4c00f"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v13.toml"
+predecessor_protocol_sha256 = "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692"
+predecessor_freeze_result = "results/fgc-1-pro13-frz1.json"
+predecessor_freeze_result_sha256 = "a6fd1ce1bf429fd39ff2d7975de009991199a0f41c73e44d46e57b88b35d74b4"
+historical_terminal_result = "results/fgc-1-cal10-pref15.json"
+historical_terminal_result_sha256 = "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18"
+replacement_instrument_config = "configs/fgc/fgc-1-tdg6-imp2.toml"
+replacement_instrument_config_sha256 = "89803b43e9243558aed33473bd9ebd010142b02302f1a5b0b380e8c4f4d7d8c0"
+replacement_instrument_result = "results/fgc-1-tdg6-imp2.json"
+replacement_instrument_result_sha256 = "6a2cac24f65e067aed7ff7de299f9c1f0f3c3319e9aee692763b8df1db4fd5b5"
+replacement_runtime_module = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+replacement_runtime_module_sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+PROTO12_checkpoint = "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz"
+PROTO12_checkpoint_sha256 = "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17"
+RSP2_checkpoint = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz"
+RSP2_checkpoint_sha256 = "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34"
+
+[restart_contract]
+restart_coordinate_time = "23/16"
+final_coordinate_time = "32"
+first_new_common_event_coordinate_time = "3/2"
+common_output_interval = "1/16"
+checkpoint_interval = "1/4"
+primary_method = "RK4"
+primary_point_counts = [2049, 4097, 8193]
+comparator_method = "SSPRK3"
+comparator_point_counts = [4097, 8193, 16385]
+minimum_constraint_finest_pair_order = "3/2"
+maximum_nested_spatial_tail_ratio = "1/4"
+minimum_consecutive_qualified_trapped_common_events = 8
+trapped_sign_margin_over_combined_spatial_error_factor = 4
+restore_state_tracers_history_runtime_monitor_and_causal_debit = true
+continue_source_and_CFL_retry_counters_without_reclassification = true
+no_reinitialization_reprojection_interpolation_or_refit = true
+PROTO13_terminal_checkpoint_may_not_resume = true
+restart_arrays_are_fixed_discrete_calibration_inputs = true
+pre_restart_temporal_error_bound_proved = false
+restart_may_seed_candidate_or_physical_claim = false
+each_method_must_pass_its_own_complete_spatial_admission = true
+cross_method_observables_must_be_extrapolated_or_interval_enclosed = true
+
+[temporal_contract]
+level_step_counts = [1, 2, 4]
+complete_state_channel_count = 18
+minimum_observed_order = "3/2"
+exact_outward_order_test = "8*U12^2<=L01^2"
+all_channels_must_pass_every_accepted_post_restart_macro_step = true
+only_four_quarter_fine_path_may_commit = true
+finest_pair_debits_accumulate_componentwise_outward = true
+debit_cancellation_permitted = false
+absolute_or_signal_scaled_tolerance_permitted = false
+temporal_retry_factor = "1/2"
+maximum_temporal_retries_per_macro_step = 32
+minimum_macro_step = "1/1073741824"
+durable_rejection_before_retry_required = true
+TDG6_ledger_starts_zero_at_restart = true
+sampled_64_history_rule_is_nonveto_diagnostic = true
+sampled_64_history_rule_may_admit_or_reject = false
+temporal_retry_exhaustion_is_invalid_not_physical = true
+global_PDE_error_bound_proved = false
+
+[[restart_members]]
+key = "RK4-2049"
+source_checkpoint = "PROTO12"
+method = "RK4"
+point_count = 2049
+state_sha256 = "d119a3b0ab450b0f0916b801254bbbfa964c8e5e95223cb8e51d9034f62c665e"
+restart_payload_sha256 = "4bb04ae97c09f66881084b5816d14ce300c54152ae11c182f53b64d5e887c072"
+input_hash = "3bfc9a137f20353e9ead2f742f7780b049a11ab576f6e4de98fe4e5d0ad5c0d3"
+step_index = 342
+transaction_serial = 1710
+accepted_stage_count = 1710
+source_retry_count = 0
+CFL_retry_count = 217
+
+[[restart_members]]
+key = "RK4-4097"
+source_checkpoint = "PROTO12"
+method = "RK4"
+point_count = 4097
+state_sha256 = "9d27ca221fbac2a5b3b86a8d9aef49a8b8ac451b255b80529563b8cb7f8b73a9"
+restart_payload_sha256 = "cc6d3b6fbb3a5b6abd93f69f7f59ba67c38e9b7d332fac991a88847970b57aac"
+input_hash = "ffbde443e99535e74900b1e04c1e60cc27da105dd5d605286e77a6c77620c0bb"
+step_index = 673
+transaction_serial = 3365
+accepted_stage_count = 3365
+source_retry_count = 0
+CFL_retry_count = 443
+
+[[restart_members]]
+key = "RK4-8193"
+source_checkpoint = "PROTO12"
+method = "RK4"
+point_count = 8193
+state_sha256 = "d5b4cfe25199862fff5be7d524cc1c3a6030cc634d268cedb626c3ced7220f4a"
+restart_payload_sha256 = "b95ea0be0779f712fb0c354f9c10f28b9ccc6c737fb403d5710dbd07e0e506f9"
+input_hash = "076bebfc71482793017d2d306001b3416f5ad7a4088f35351d4d26322a09d12c"
+step_index = 976
+transaction_serial = 4880
+accepted_stage_count = 4880
+source_retry_count = 0
+CFL_retry_count = 161
+
+[[restart_members]]
+key = "SSPRK3-4097"
+source_checkpoint = "PROTO12"
+method = "SSPRK3"
+point_count = 4097
+state_sha256 = "ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162"
+restart_payload_sha256 = "dc056db806e5d983852135138dd48dbb9b995a8585f56900258bece7e16e7016"
+input_hash = "3cc3dc3a262f83cc19f07c49d477f5e43309f0c9e0f16bdeaf6d0c7dc02bd48f"
+step_index = 631
+transaction_serial = 2524
+accepted_stage_count = 2524
+source_retry_count = 0
+CFL_retry_count = 358
+
+[[restart_members]]
+key = "SSPRK3-8193"
+source_checkpoint = "PROTO12"
+method = "SSPRK3"
+point_count = 8193
+state_sha256 = "c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c"
+restart_payload_sha256 = "b262bf4bd180717d42a7fa4d502f006bac0950669bc9e86c474ad6e4a21ce7ad"
+input_hash = "d4bd39d36dfe749cc6ec04e5f112fc5544e3defdce67315ee871d2d8cfc75b5f"
+step_index = 987
+transaction_serial = 3948
+accepted_stage_count = 3948
+source_retry_count = 0
+CFL_retry_count = 187
+
+[[restart_members]]
+key = "SSPRK3-16385"
+source_checkpoint = "RSP2"
+method = "SSPRK3"
+point_count = 16385
+state_sha256 = "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d"
+restart_payload_sha256 = "62784c8cc63eedc210366f146f28d535343b966e1f988a4298894e78ec560884"
+input_hash = "2946239e5d23b4e7a3cd74419a0b9c214eb89195f72bc84d4b89f39b6ef01963"
+step_index = 1771
+transaction_serial = 7084
+accepted_stage_count = 7084
+source_retry_count = 0
+CFL_retry_count = 0
+
+[namespace_precondition]
+calibration_output_root = "runs/fgc-2-sf1/proto14/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto14/holdout"
+both_roots_must_be_absent = true
+freeze_must_create_neither_root = true
+
+[proof_contract]
+PROTO14_overlay_must_validate_exactly = true
+checkpoint_commit_must_be_ancestor_of_HEAD = true
+all_tracked_lineage_must_match_immutable_commit_blobs = true
+PROTO12_and_RSP2_checkpoint_hashes_must_match = true
+all_six_state_and_complete_restart_payload_hashes_must_match = true
+all_six_members_must_restore_at_exactly_t_23_over_16 = true
+replacement_instrument_must_be_implemented_and_synthetically_qualified = true
+historical_PROTO13_and_CAL10_results_must_remain_unreclassified = true
+sampled_temporal_rule_must_be_nonveto_only = true
+TDG6_threshold_channel_retry_debit_and_checkpoint_contract_may_not_change = true
+source_constraints_spatial_health_boundary_scale_and_trapped_rules_may_not_change = true
+restart_limitation_must_remain_public = true
+new_output_namespaces_must_be_absent_and_uncreated = true
+threshold_restart_history_claim_and_namespace_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO14_frozen = true
+PROTO14_replacement_temporal_admission_frozen = true
+PROTO14_restart_manifest_frozen = true
+PROTO14_terminal_classification_frozen = true
+PROTO14_successor_runtime_implemented = false
+PROTO14_fresh_GR0_dynamic_calibration_authorized = false
+PROTO14_resolved_holdout_manifest_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,37 @@
+{
+  "accountable_author": "Douglas Ek",
+  "continuous_cokernel_trivial": true,
+  "existence_tolerance": 3e-11,
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-bounds-after-cokernel.json": "64d141b65e302ea8d4a852398c0c5e5777cd7283fc6f74bc444846d7badea8d1",
+    "results/development/nsc-ks-declared-wu-cokernel.json": "34743d5b548f8eb95ba0ec68800b9a13ecf65f993fb922dc9b37e150dbbd282f",
+    "results/development/nsc-ks-fourier-leftover-null.json": "4754f7a0206544eabc88b5c180dc1d0ea63c6f7130171fafc77bdf7896564093",
+    "results/development/nsc-local-incoming-gate-status-retract-s5.json": "e9677ff983682c7f029f3f9d31edc5d9a275f978eaf77b719d4fbadbe8e02da4"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "is_L_or_flux_again": false,
+  "leftover_null_walk_sign_stable": true,
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "next_named_owner": "same declared (w,U) class on I; no class rewrite",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-DECLARED-CLASS-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "no_class_rewrite": true,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-declared-class.md": "416f965a5644484b9ff86bbc6329367af7861ff4b74f44789fe552e743b206bd",
+    "scripts/derive_nsc_local_incoming_gate_status_declared_class.py": "f41bddf3dbbcceaf351a84e68c1e9cec45707d5ae221b0e00d37d6fd559e6e55"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: finite leftover is not a class identity; no class rewrite"
+}

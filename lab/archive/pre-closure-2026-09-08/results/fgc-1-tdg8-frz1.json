@@ -1,0 +1,84 @@
+{
+  "artifact_id": "FGC-1-TDG8-FRZ1",
+  "artifact_payload": {
+    "claims": {
+      "GR0_calibration_completed": false,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "physical_result_earned": false,
+      "repair_applied": false,
+      "root_cause_localized": false,
+      "successor_campaign_authorized": false
+    },
+    "conditional_repair": {
+      "authorized_only_if": "canonical JSON bytes are equal and the complete raw difference is limited to tuple-versus-list containers",
+      "forbid_locked_campaign_mutation": true,
+      "forbid_persisted_validator_weakening": true,
+      "owner_symbol": "_replay_pending_rejection",
+      "preserve_all_TDG6_thresholds": true,
+      "preserve_array_order": true,
+      "preserve_health_constraints_and_physical_rules": true,
+      "preserve_retry_counts_and_lattice": true,
+      "preserve_scalar_types": true,
+      "replacement_comparison": "p15._json_safe(seen[0]) != dict(evidence)"
+    },
+    "immutable_bindings": [
+      {
+        "path": "results/fgc-1-pro19-pref28.json",
+        "sha256": "c53482e7965e5e3ed79bad5abcd7323a28868801ef82392360916ae8979659e2"
+      },
+      {
+        "path": "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py",
+        "sha256": "9b4e1b82c04433bcd2b6f75640ab549094ec74e8f6032a055bd6ddfbebfbb7b7"
+      },
+      {
+        "path": "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py",
+        "sha256": "e6624b2fe477c6f24b7015c5864786c8d3c929fcb6804d90b3677f0b0daa11f3"
+      },
+      {
+        "path": "src/recursive_horizons/fgc/evolution/proto15_runtime.py",
+        "sha256": "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+      }
+    ],
+    "predecessor": {
+      "affected_member_key": "RK4-2049",
+      "artifact_id": "FGC-1-PRO19-PREF28",
+      "commit": "0ba8b0fa5c9d683905ff92f901ab31718f4b1cb7",
+      "diagnostic_generation": 8,
+      "event": 23,
+      "result_path": "results/fgc-1-pro19-pref28.json",
+      "result_sha256": "c53482e7965e5e3ed79bad5abcd7323a28868801ef82392360916ae8979659e2",
+      "target_rational": "3/2",
+      "terminal_campaign_path": "runs/fgc-2-sf1/proto17/calibration",
+      "terminal_generation": 9
+    },
+    "question": {
+      "current_comparison": "seen[0] != dict(evidence)",
+      "hypotheses": [
+        "representation_only_tuple_list_drift",
+        "semantic_value_or_order_drift",
+        "different_replay_classification_or_runtime_stop"
+      ],
+      "observed_error": "pending TDG6 replay evidence differs from the durable cursor",
+      "required_observation": "compare the exact generation-eight durable mapping with one independently reconstructed replay mapping before changing runtime code"
+    },
+    "successor": {
+      "amplitude": "3",
+      "branch": "GR-0",
+      "candidate_branches_forbidden": true,
+      "event_count": 1,
+      "execution_requires_separate_committed_image_authority": true,
+      "fresh_campaign_required": true,
+      "fresh_namespace": "runs/fgc-2-sf1/proto19/calibration",
+      "restart_source": "authenticated_generation_zero",
+      "start_rational": "23/16",
+      "target_rational": "3/2"
+    }
+  },
+  "classification": "prospective_retry_evidence_representation_diagnosis_freeze",
+  "gate_status": "pass",
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": "4545dc73723097941518797fa977d92c24143acb222d0f3f7270e308c3be7603",
+  "target_protocol": "FGC-2-SF1-PROTO18"
+}

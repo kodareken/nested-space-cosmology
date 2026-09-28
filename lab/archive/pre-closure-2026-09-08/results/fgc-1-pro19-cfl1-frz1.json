@@ -1,0 +1,86 @@
+{
+  "artifact_id": "FGC-1-PRO19-CFL1-FRZ1",
+  "artifact_payload": {
+    "claims": {
+      "GR0_calibration_completed": false,
+      "candidate_execution_authorized": false,
+      "continuation_contract_frozen": true,
+      "corrected_execution_image_authenticated": false,
+      "corrected_execution_image_authentication_required": true,
+      "exact_generation_6_continuation_authorized_by_artifact_alone": false,
+      "original_campaign_identity_preserved": true,
+      "physical_result_earned": false,
+      "physical_transition_claim_authorized": false,
+      "retained_EFT_evolution_authorized": false
+    },
+    "diagnosed_stop": {
+      "accepted_boundary_restored": true,
+      "accepted_fine_steps_before_stop": 5,
+      "actual_macro_width_hex": "0x1.aaa9612df9800p-8",
+      "classification": "invalid_implementation_or_nonconverged_run",
+      "correct_successor_cap_hex": "0x1.aaa9612df9800p-9",
+      "detail": "cfl_rejection cap reduction differs",
+      "durable_rejection_published": false,
+      "maximum_CFL_ratio_hex": "0x1.0000000000000p-3",
+      "observed_CFL_ratio_hex": "0x1.000004e8e3345p-3",
+      "outer_requested_cap_hex": "0x1.aaa9612df9ba5p-8",
+      "owner_layer": "HLT16_source_CFL_rejection_serialization",
+      "physical_inference_earned": false
+    },
+    "nonclaims": [
+      "The earlier stop is not a GR-0, trapping, FGC-QR, or physical result.",
+      "This authority does not adopt another plan, checkpoint, campaign, or branch.",
+      "This authority does not authorize SGB-L, FGC-QR, DEF1, or retained-EFT evolution."
+    ],
+    "original_campaign": {
+      "amplitude": "3",
+      "authorization_commit": "c11ba422ce49ddd6f6175de1a9d2da675b97f2de",
+      "branch": "GR-0",
+      "campaign_id": "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683",
+      "event": 23,
+      "plan_sha256": "f3b365978aeb2ae6063742807a3161bf5d6aa0c8392cd283fdec2a79d3e46060",
+      "target_rational": "3/2"
+    },
+    "safe_recovery_ancestor": {
+      "active_write": true,
+      "cfl_retry_total": 0,
+      "checkpoint_generation": 6,
+      "checkpoint_sha256": "6277b3be4ffe1bd79b858e2b4770c244b88b9971cbff67ffb1a40d40f14e2e63",
+      "disposition": "nonterminal",
+      "durable_cfl_rejection_exists": false,
+      "durable_terminal_exists": false,
+      "journal_sequence": 5,
+      "journal_tip_sha256": "bf92cbbab28fc55259f1d6cd1249fa73d5e740f067e4e4204e0dd3d1cfb854e5",
+      "member_accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "member_descriptor_sha256": "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56",
+      "member_key": "RK4-2049",
+      "member_mode": "FRESH_READY",
+      "pending_cap_hex": "none",
+      "pending_owner": "none",
+      "source_retry_total": 0,
+      "staging_paths": [],
+      "suffix_classification": "clean",
+      "suffix_kinds": [],
+      "temporal_retry_total": 0,
+      "terminal_lock_present": false,
+      "writer_state": "stale_verified_lock"
+    },
+    "scope": {
+      "candidate_branch_opened": false,
+      "checkpoint_rollback": false,
+      "manual_stale_lock_removal_permitted": false,
+      "permitted_action": "repair_retry_record_identity_and_resume_exact_generation_6_edge",
+      "physical_input_change": false,
+      "plan_change": false,
+      "raw_GEN0_reimport_permitted": false,
+      "retry_cap_change": false,
+      "target_or_threshold_change": false
+    }
+  },
+  "classification": "premise_only_exact_checkpoint_continuation_frozen",
+  "gate_status": "pass",
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": "9ad1fd6e0defb7e57b1d2c9807fd0c2604f0b5c0d48ded8826e132984e3fffc0",
+  "target_protocol": "FGC-2-SF1-PROTO18"
+}

@@ -1,0 +1,47 @@
+{
+  "accountable_author": "Douglas Ek",
+  "density_transport": "(partial_rho-s/a\u00b2 partial_z) n2 = -s/2 partial_z(V\u00b2)",
+  "exact_continuity": "partial_rho n = partial_z(X\u2020 S3 X)/a\u00b2",
+  "exact_residuals": {
+    "s+1/antihermitian_generator": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "s+1/coincidence_inverse_energy_current": "0",
+    "s+1/density_transport": "0",
+    "s+1/minor_coefficient": "0",
+    "s-1/antihermitian_generator": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "s-1/coincidence_inverse_energy_current": "0",
+    "s-1/density_transport": "0",
+    "s-1/minor_coefficient": "0"
+  },
+  "minor_coefficient": "A1[-s]=-a*V[-s,s]/2",
+  "relative_density_coefficient": "delta n2=s*partial_z f_s",
+  "relative_phase": "f_s=ell\u00b2/2 integral_1^rho_up (r_g^-2-r_ref^-2)(rho,z-s*D(rho)) d rho",
+  "schema": "NSC-DIRAC-SOURCE-PHASE-TRANSPORT-v1",
+  "scope": {
+    "finite_source_cutoff_error": null,
+    "formal_coefficient_only": true,
+    "metric_timestep": false,
+    "new_field_or_source_runs": 0,
+    "physical_local_gate": "OPEN",
+    "stress_term_inserted": false,
+    "uniform_remainder_bound": null
+  },
+  "source_hashes": {
+    "docs/nsc-dirac-source-phase-transport.md": "77c35ff2174e56e2ba5cf831999637013c512f8496e63a2934fe397bd247950c",
+    "scripts/check_nsc_dirac_source_phase_transport.py": "4fa972ecd32ddcfeae6b38126be8e6ff3daea5e44cd5209aeb55b452ee923467",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41"
+  },
+  "source_label": "E=s*e, e>0; principal occupied S3=s; carrier exp(-i*s*e*z)",
+  "source_scope": "occupied affine-vacuum asymptotics plus owned exponential coherent source remainder; no replacement of C_up",
+  "status": "PASS: exact formal source-column coefficient; uniform remainder OPEN"
+}

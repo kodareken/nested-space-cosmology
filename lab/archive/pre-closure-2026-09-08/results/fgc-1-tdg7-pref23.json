@@ -1,0 +1,303 @@
+{
+  "artifact_id": "FGC-1-TDG7-PREF23",
+  "artifact_payload": {
+    "claim_boundary": {
+      "CAL11_terminal_invalid_runtime_result_preserved": true,
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "FGCQR_mechanism_rejected": false,
+      "GR0_case_eligible": false,
+      "PROTO14_runtime_fault_cause_fully_derived": true,
+      "PROTO14_runtime_mutation_authorized": false,
+      "PROTO14_terminal_checkpoint_may_resume": false,
+      "SGBL_execution_authorized": false,
+      "TDG7_independent_binder_completed": true,
+      "TDG7_runtime_repair_implementation_authorized": true,
+      "TDG7_runtime_repair_implemented": false,
+      "TDG7_subdivision_lattice_design_frozen": true,
+      "child_domain_or_topology_derived": false,
+      "classical_spherical_diagnostic_authorized": false,
+      "dark_sector_mechanism_derived": false,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "fresh_replacement_protocol_frozen": false,
+      "general_gradient_route_rejected": false,
+      "historical_failure_is_binary64_scheduler_contract_not_TDG6_temporal_admission": true,
+      "historical_failure_is_not_constraint_spatial_source_health_or_physical_model": true,
+      "historical_requested_width_and_rounded_boundary_difference_are_bitwise_distinct": true,
+      "physical_transition_claim_authorized": false,
+      "retained_EFT_evolution_authorized": false,
+      "singularity_resolution_derived": false,
+      "varying_locally_measured_c_derived": false
+    },
+    "freeze_crosscheck": {
+      "freeze_artifact_id": "FGC-1-TDG7-FRZ1",
+      "freeze_authorized_independent_binder_only": true,
+      "freeze_is_canonical": true
+    },
+    "immutable_lineage": {
+      "bound_source_sha256": {
+        "cal11": {
+          "configs/fgc/fgc-1-cal11-pref22.toml": "685ee05442d7c92ce83994d923890f4fa208b10ffbf2946026b07e9a9cf4d34d",
+          "results/fgc-1-cal11-pref22.json": "1339792198ec78ad83bc3e11a2805f09f961607ab6c1f6f06e79bb88ba6b58b8"
+        },
+        "freeze": {
+          "configs/fgc/fgc-1-tdg7-frz1.toml": "28a05df475e93c39805627cd05208c0078fbf0071a8ff90526a3dbc696c4619d",
+          "docs/fgc-tdg7-frz1.md": "3a4a8ae70d418b2d9d32a8209a0235051f3d1df8b776bfb4a9d4616a48b2b75d",
+          "results/fgc-1-tdg7-frz1.json": "9d6e4426653fe159338a12513e9e5e0e5d6b57e59dae210b008e8a6ea6928ff7",
+          "scripts/reproduce_fgc_tdg7_frz1.py": "72bfc07a3f949429e406eede93d4056e1ac5b1f37568c4be3ea4328560ab7b4f",
+          "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py": "2bc86880d46a3b4c6cd743559d0bc4b51b09058382341dfffe6358b4565e44a9"
+        },
+        "historical": {
+          "configs/fgc/fgc-1-cal9-run1.toml": "8e6fafff638ffd49549efab8b6f969a01964c915116db9ce3698953201172176",
+          "results/fgc-1-hlt12-mon12.json": "7f4068a3116ff1838ce7f0165ae18e72d2eea68933b87f056b26d8149c935731",
+          "scripts/run_fgc_gr0_calibration_v14.py": "4c13eaf86cf31f55e28b7f60661db78ad22e1bb5b7460adf7aeff455efdc8e45",
+          "src/recursive_horizons/fgc/evolution/numerical_engine.py": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf",
+          "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+        }
+      },
+      "cal11_checkpoint_commit": "b59d214832a1d3429f624579a93c6b9e1f544cf5",
+      "cal11_checkpoint_commit_is_ancestor_of_freeze_commit": true,
+      "freeze_commit": "ec403c3dbcec27babb861cfc8587d53a0136cfa0",
+      "freeze_commit_is_ancestor_of_HEAD": true,
+      "historical_authorization_commit": "7534a1662d8078a63c98025ecd464bb068fa012f",
+      "historical_authorization_commit_is_ancestor_of_freeze_commit": true
+    },
+    "independent_binder": {
+      "TDG7_independent_binder_completed": true,
+      "TDG7_runtime_repair_implementation_authorized": true,
+      "TDG7_runtime_repair_implemented": false,
+      "all_independent_binder_controls_pass": true,
+      "deterministic_stage_safe_property_controls": {
+        "all_exact_and_strictly_interior": true,
+        "stage_triplet_count": 21098,
+        "successful_plan_count": 3014
+      },
+      "independent_CAL11_event24_witness": {
+        "conservative_reduction": "531/576460752303423488",
+        "endpoint_only_four_q_counterexample_derived_from_historical_one_step": true,
+        "endpoint_only_four_q_midpoint_binary64_hex": "0x1.7035552161f6cp+0",
+        "endpoint_only_four_q_midpoint_exact": false,
+        "event_quantum_hex": "0x1.0000000000000p-52",
+        "fine_width_hex": "0x1.aaa90b0fb5800p-10",
+        "fine_width_over_Q": 7329968570070,
+        "historical_expected_endpoint_hex": "0x1.71aaa90b0fb5cp+0",
+        "historical_failed_counts": [
+          1,
+          2,
+          4
+        ],
+        "macro_quantum_hex": "0x1.0000000000000p-49",
+        "macro_width_hex": "0x1.aaa90b0fb5800p-8",
+        "requested_cap_hex": "0x1.aaa90b0fb5c26p-8",
+        "selected_boundaries_hex": [
+          "0x1.7000000000000p+0",
+          "0x1.706aaa42c3ed6p+0",
+          "0x1.70d5548587dacp+0",
+          "0x1.713ffec84bc82p+0",
+          "0x1.71aaa90b0fb58p+0"
+        ],
+        "selected_fine_midpoints_hex": [
+          "0x1.7035552161f6bp+0",
+          "0x1.709fff6425e41p+0",
+          "0x1.710aa9a6e9d17p+0",
+          "0x1.717553e9adbedp+0"
+        ],
+        "stage_triplet_count": 7
+      },
+      "independent_engine_stage_abscissa_contract": {
+        "candidate_endpoint_uses_final_time": true,
+        "stage_time_kinds": [
+          [
+            "rk4_k1",
+            "start"
+          ],
+          [
+            "rk4_k2",
+            "midpoint"
+          ],
+          [
+            "rk4_k3",
+            "midpoint"
+          ],
+          [
+            "rk4_k4",
+            "end"
+          ],
+          [
+            "ssprk3_s0",
+            "start"
+          ],
+          [
+            "ssprk3_s1",
+            "end"
+          ],
+          [
+            "ssprk3_s2",
+            "midpoint"
+          ],
+          [
+            "candidate_endpoint",
+            "final_time"
+          ]
+        ]
+      },
+      "independent_historical_TDG6_guard_reconstruction": {
+        "historical_expected_endpoint_hex": "0x1.71aaa90b0fb5cp+0",
+        "historical_failed_counts": [
+          1,
+          2,
+          4
+        ],
+        "old_guard_failures": {
+          "1": {
+            "guard_passes": false,
+            "nominal_step_hex": "0x1.aaa90b0fb5c26p-8",
+            "rounded_adjacent_differences_hex": [
+              "0x1.aaa90b0fb5c00p-8"
+            ],
+            "rounded_boundaries_hex": [
+              "0x1.7000000000000p+0",
+              "0x1.71aaa90b0fb5cp+0"
+            ]
+          },
+          "2": {
+            "guard_passes": false,
+            "nominal_step_hex": "0x1.aaa90b0fb5c26p-9",
+            "rounded_adjacent_differences_hex": [
+              "0x1.aaa90b0fb5c00p-9",
+              "0x1.aaa90b0fb5c00p-9"
+            ],
+            "rounded_boundaries_hex": [
+              "0x1.7000000000000p+0",
+              "0x1.70d5548587daep+0",
+              "0x1.71aaa90b0fb5cp+0"
+            ]
+          },
+          "4": {
+            "guard_passes": false,
+            "nominal_step_hex": "0x1.aaa90b0fb5c26p-10",
+            "rounded_adjacent_differences_hex": [
+              "0x1.aaa90b0fb5c00p-10",
+              "0x1.aaa90b0fb5c00p-10",
+              "0x1.aaa90b0fb5c00p-10",
+              "0x1.aaa90b0fb5c00p-10"
+            ],
+            "rounded_boundaries_hex": [
+              "0x1.7000000000000p+0",
+              "0x1.706aaa42c3ed7p+0",
+              "0x1.70d5548587daep+0",
+              "0x1.713ffec84bc85p+0",
+              "0x1.71aaa90b0fb5cp+0"
+            ]
+          }
+        },
+        "requested_cap_hex": "0x1.aaa90b0fb5c26p-8"
+      },
+      "independent_historical_TDG6_source_contract": {
+        "adjacent_uniformity_guard_present": true,
+        "boundaries_are_start_plus_index_times_step": true,
+        "expected_final_is_start_plus_width": true,
+        "macro_endpoint_guard_present": true,
+        "step_is_width_over_count": true
+      },
+      "theorem_module_imports_TDG7_design_helper": false
+    },
+    "limitation_audit": {
+      "historical_CAL11_abort_remains_invalid_runtime_not_physics": true,
+      "historical_checkpoint_may_not_resume": true,
+      "independent_theorem_is_not_runtime_repair_implementation": true,
+      "new_protocol_namespace_and_runtime_authorization_remain_required_before_calibration": true,
+      "new_runtime_must_be_qualified_on_synthetic_controls": true,
+      "no_GR0_SGBL_or_FGCQR_outcome_is_classified": true,
+      "source_shape_feasibility_is_not_synthetic_qualification": true,
+      "stage_safe_coordinate_plan_is_not_TDG6_temporal_admission_result": true
+    },
+    "mutation_controls": {
+      "candidate_or_claim_promotion_rejected": true,
+      "cap_typed_stop_control_passed": true,
+      "four_Q_route_mutation_rejected": true,
+      "historical_engine_stage_mutation_rejected": true,
+      "historical_source_boundary_expression_mutation_rejected": true,
+      "lineage_hash_mutation_rejected": true,
+      "witness_width_or_midpoint_mutation_rejected": true
+    },
+    "proof_contract": {
+      "CAL11_and_historical_source_blobs_must_match_their_immutable_commits": true,
+      "all_witness_fractions_boundaries_and_midpoints_must_match_exactly": true,
+      "canonical_hash_bound_result_required": true,
+      "four_Q_midpoint_alias_and_eight_Q_stage_exactness_must_be_mutation_attacked": true,
+      "freeze_commit_and_all_freeze_blobs_must_match": true,
+      "historical_numerical_engine_stage_abscissae_must_be_inspected_directly": true,
+      "historical_one_two_four_guard_failures_must_be_rederived_from_source_expression": true,
+      "lineage_theorem_authorization_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "no_history_checkpoint_state_tracer_or_debit_array_may_be_loaded": true,
+      "runtime_repair_authorization_must_not_promote_calibration_or_candidate_execution": true,
+      "theorem_must_rederive_eight_Q_without_importing_freeze_design_helper": true
+    },
+    "runtime_repair_authorization": {
+      "TDG7_runtime_repair_implementation_authorized": true,
+      "actual_RK4_and_SSPRK3_stage_times_must_use_shared_plan_coordinates": true,
+      "authorized_object": "implementation_and_synthetic_qualification_of_the_frozen_TDG7_stage_safe_exact_binary64_shared_lattice_runtime_repair",
+      "candidate_execution_authorized": false,
+      "fresh_GR0_calibration_authorized": false,
+      "historical_PROTO14_runtime_mutation_authorized": false,
+      "historical_terminal_checkpoint_may_resume": false,
+      "independent_binder_completed": true,
+      "new_protocol_or_output_namespace_authorized": false,
+      "one_shared_stage_safe_plan_must_own_all_one_two_four_paths": true,
+      "physical_equations_source_projector_spatial_operator_and_TDG6_threshold_unchanged": true,
+      "production_trajectory_authorized": false,
+      "typed_lattice_stop_must_precede_shadow_source_projector_tracer_monitor_or_state_work": true
+    },
+    "successor_boundary": {
+      "CAL11_terminal_invalid_runtime_result_preserved": true,
+      "PROTO14_runtime_fault_cause_fully_derived": true,
+      "PROTO14_runtime_mutation_authorized": false,
+      "PROTO14_terminal_checkpoint_may_resume": false,
+      "TDG7_independent_binder_completed": true,
+      "TDG7_runtime_repair_implementation_authorized": true,
+      "TDG7_runtime_repair_implemented": false,
+      "TDG7_subdivision_lattice_design_frozen": true,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_replacement_protocol_frozen": false
+    }
+  },
+  "classification": "independent_stage_safe_binary64_subdivision_binder_and_runtime_repair_implementation_authorization",
+  "derivation_document": "docs/fgc-tdg7-pref23.md",
+  "derivation_document_sha256": "ef0673f179139ff10c6f3b906d3fd362ac2fd53fd8d1ae265fbb47a70b91bfc7",
+  "gate_status": "PASS_TDG7_RUNTIME_REPAIR_IMPLEMENTATION_AUTHORIZED",
+  "generated_by": "scripts/reproduce_fgc_tdg7_pref23.py",
+  "implementation_sha256": {
+    "configs/fgc/fgc-1-tdg7-pref23.toml": "410e6e3451f53dd6d262a2e1c409773955f5d27621b3d95c5e977d7e244643e7",
+    "docs/fgc-tdg7-pref23.md": "ef0673f179139ff10c6f3b906d3fd362ac2fd53fd8d1ae265fbb47a70b91bfc7",
+    "scripts/reproduce_fgc_tdg7_pref23.py": "4055de98048d7f40cee67e9768fd3b2d453406e26d85f982a205f95a882ddf47",
+    "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_lattice_theorem.py": "f9d3ec171d9250b8998d53459de9ee2fe01ec1c4315c25782d97f4b85056454f"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_runtime_mutation_authorized": false,
+    "PROTO14_terminal_checkpoint_may_resume": false,
+    "SGBL_execution_authorized": false,
+    "TDG7_runtime_repair_implemented": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "fresh_replacement_protocol_frozen": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": "410e6e3451f53dd6d262a2e1c409773955f5d27621b3d95c5e977d7e244643e7"
+}

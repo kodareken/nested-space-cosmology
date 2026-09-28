@@ -1,0 +1,175 @@
+{
+  "artifact": "einstein_cartan_homogeneous_spin_fluid_cap",
+  "bounce": {
+    "acceleration": 305.1555358023554,
+    "continuity_residual_expansion": 0.0,
+    "curvature_invariants": {
+      "kretschmann_scalar": 11062679.757563258,
+      "ricci_scalar": 5819.993814426412,
+      "ricci_tensor_squared": 11176727.878775243,
+      "weyl_tensor_squared": 0.0
+    },
+    "fluid": {
+      "p_radiation": 38.98890055959907,
+      "p_torsion": -115.78509804127734,
+      "p_total": -76.79619748167826,
+      "q_internal": 0.0,
+      "rho_plus_3p": -229.20698880751488,
+      "rho_plus_p": -75.61459384415838,
+      "rho_radiation": 116.96670167879721,
+      "rho_torsion": -115.78509804127734,
+      "rho_total": 1.1816036375198706,
+      "w_radiation": 0.3333333333333333,
+      "w_torsion": 1.0,
+      "w_total": -64.99319657044201
+    },
+    "friedmann_F": 0.0
+  },
+  "boundary": {
+    "areal_radius_at_bounce": 0.27525512860841095,
+    "areal_radius_at_maximum": 2.7247448713915885,
+    "fixed_parent_crossing_comparator_only": true,
+    "misner_sharp_mass_at_bounce": 0.10322067322815655,
+    "misner_sharp_mass_at_maximum": 1.0217793267718458,
+    "static_parent_mass_drift": {
+      "bounce_to_initial_parent_mass_ratio": 0.10102051443364621,
+      "boundary_mass_at_bounce": 0.10322067322815655,
+      "boundary_mass_drift_to_bounce": -0.9185586535436893,
+      "fixed_vacuum_parent_can_remain_smooth_without_flux_or_layer": false,
+      "static_parent_mass_at_a_max": 1.0217793267718458
+    },
+    "work_residual_collapse": 0.0,
+    "work_residual_expansion": 0.0
+  },
+  "child_topology_proven": false,
+  "classification": "reduced_action_motivated_homogeneous_effective_fluid_benchmark",
+  "components": {
+    "late_w_minus_one_component": false,
+    "negative_torsion": "w=1, rho proportional to -a^-6",
+    "q_internal": 0.0,
+    "radiation": "w=1/3, rho proportional to a^-4"
+  },
+  "derived_external_Q": false,
+  "global_solution_constructed": false,
+  "homogeneous_spin_fluid_closure_assumed": true,
+  "interior_probe": {
+    "continuity_residual_collapse": 0.0,
+    "continuity_residual_expansion": 0.0,
+    "curvature_invariants": {
+      "kretschmann_scalar": 26.748971193415642,
+      "ricci_scalar": 0.22222222222222232,
+      "ricci_tensor_squared": 13.382716049382724,
+      "weyl_tensor_squared": 0.0
+    },
+    "fluid": {
+      "p_radiation": 0.044209706414415385,
+      "p_torsion": -0.0044209706414415385,
+      "p_total": 0.03978873577297384,
+      "q_internal": 0.0,
+      "rho_plus_3p": 0.24757435592072613,
+      "rho_plus_p": 0.16799688437477844,
+      "rho_radiation": 0.13262911924324616,
+      "rho_torsion": -0.0044209706414415385,
+      "rho_total": 0.12820814860180463,
+      "w_radiation": 0.3333333333333333,
+      "w_torsion": 1.0,
+      "w_total": 0.31034482758620685
+    },
+    "friedmann_F": 2.2222222222222223,
+    "scale_factor": 1.7320508075688772
+  },
+  "late_dark_energy_derived": false,
+  "microscopic_dirac_stability_or_eft_control_proven": false,
+  "model_id": "EC-1",
+  "null_expansion_sequence": {
+    "marginal_scale_factors": [
+      0.31838674621974133,
+      2.720042256993741
+    ],
+    "sequence": [
+      {
+        "branch": "collapse",
+        "label": "maximum_collapse_endpoint",
+        "region": "normal",
+        "scale_factor": 3.146264369941972
+      },
+      {
+        "branch": "collapse",
+        "label": "collapse_outer_marginal",
+        "region": "marginal",
+        "scale_factor": 2.720042256993741
+      },
+      {
+        "branch": "collapse",
+        "label": "collapsing_trapped_probe",
+        "region": "trapped",
+        "scale_factor": 1.936491673103708
+      },
+      {
+        "branch": "collapse",
+        "label": "collapse_inner_marginal",
+        "region": "marginal",
+        "scale_factor": 0.31838674621974133
+      },
+      {
+        "branch": "expansion",
+        "label": "bounce",
+        "region": "normal",
+        "scale_factor": 0.31783724519578227
+      },
+      {
+        "branch": "expansion",
+        "label": "expansion_inner_marginal",
+        "region": "marginal",
+        "scale_factor": 0.31838674621974133
+      },
+      {
+        "branch": "expansion",
+        "label": "expanding_anti_trapped_probe",
+        "region": "anti_trapped",
+        "scale_factor": 1.936491673103708
+      },
+      {
+        "branch": "expansion",
+        "label": "expansion_outer_marginal",
+        "region": "marginal",
+        "scale_factor": 2.720042256993741
+      },
+      {
+        "branch": "expansion",
+        "label": "maximum_expansion_endpoint",
+        "region": "normal",
+        "scale_factor": 3.146264369941972
+      }
+    ],
+    "single_interior_metric_causal_sequence": true
+  },
+  "parameters": {
+    "A": 10.0,
+    "B": 1.0,
+    "chi_boundary": 1.0471975511965976,
+    "gravitational_constant": 1.0,
+    "kappa": 25.132741228718345
+  },
+  "project_version": "0.11.0",
+  "proper_time": {
+    "coarse": 3.1974562013456342,
+    "coarse_to_fine_difference": 3.552713678800501e-15,
+    "fine": 3.1974562013456307,
+    "fine_to_finer_difference": 4.440892098500626e-16,
+    "finer": 3.1974562013456302
+  },
+  "radial_stability_proven": false,
+  "schema_version": 1,
+  "scope": "Closed-FLRW random-spin ultrarelativistic reduction only; not full Dirac/tetrad evolution, a resolved vacuum boundary, or GMF-1B.",
+  "single_interior_metric_causal_sequence": true,
+  "smooth_static_vacuum_boundary_proven": false,
+  "turning_points": {
+    "a_max": 3.146264369941972,
+    "a_min": 0.31783724519578227,
+    "discriminant": 96.0,
+    "x_max": 9.898979485566356,
+    "x_min": 0.10102051443364381
+  },
+  "variable_c_derived": false
+}

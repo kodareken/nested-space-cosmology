@@ -1,0 +1,279 @@
+{
+  "artifact_id": "FGC-1-PRO11-FRZ1",
+  "artifact_payload": {
+    "decision": "PROTO11_is_frozen_but_HLT9_runtime_fresh_calibration_and_every_candidate_outcome_remain_closed",
+    "epistemic_boundary": {
+      "GR0_calibration_completed": false,
+      "PROTO11_runtime_implemented": false,
+      "PROTO11_trajectory_advanced": false,
+      "PROTO11_trajectory_read": false,
+      "SGBL_or_FGCQR_trajectory_read": false,
+      "fresh_state_constructed_under_PROTO11": false,
+      "mechanism_question_answered": false
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "3e34c5e1b0f4193b1178f09725be6e72e462c119",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "diagnosis": {
+        "artifact_id": "FGC-1-CAL7-PREF9",
+        "campaign_event_count": 264,
+        "classification": "post_calibration_PROTO10_center_adjacent_binary64_source_floor_diagnosis",
+        "config_sha256": "f7d20efe795a0dd33264ef9cca4ae7977461fa5750eea2a01098b42a0b7c4544",
+        "fine_primary_residual_reduction_factor": 10.375000000000075,
+        "is_runtime_calibration_or_mechanism_evidence": false,
+        "maximum_well_balanced_source_residual": 7.579122514774399e-14,
+        "raw_initial_record_count": 12,
+        "result_sha256": "aab4ea62d569e224bf0bff0f7c3368b2d8dd07007735c1d1993ea3f9ef5b5d2a",
+        "source_only_rejection_count": 262,
+        "well_balanced_control_record_count": 12
+      },
+      "predecessor_protocol": {
+        "FGCQR_outcomes_inspected_before_revision": false,
+        "PROTO9_GR0_trajectory_inspected_before_revision": false,
+        "SGBL_outcomes_inspected_before_revision": false,
+        "artifact_id": "FGC-2-SF1-PROTO10",
+        "calibration_output_root": "runs/fgc-2-sf1/proto10/calibration",
+        "claims": {
+          "FGCQR_holdout_execution_authorized": false,
+          "FGCQR_mechanism_rejected": false,
+          "PROTO10_fresh_GR0_dynamic_calibration_authorized": false,
+          "PROTO10_resolved_holdout_manifest_authorized": false,
+          "PROTO10_successor_runtime_implemented": false,
+          "child_domain_or_topology_derived": false,
+          "classical_spherical_diagnostic_authorized": false,
+          "dark_sector_mechanism_derived": false,
+          "general_gradient_route_rejected": false,
+          "physical_transition_claim_authorized": false,
+          "retained_EFT_evolution_authorized": false,
+          "singularity_resolution_derived": false,
+          "varying_locally_measured_c_derived": false
+        },
+        "coarse_to_medium_direct_ratio_veto": true,
+        "diagnosis_artifact_id": "FGC-1-CAL6-PREF8",
+        "diagnosis_checkpoint_commit": "dd3f5adb22f08aa7950b74cef2595aaca2e8cd6e",
+        "diagnostic_saturation_is_physical_resolution_evidence": false,
+        "eligible_calibration_amplitudes": [
+          "5/2",
+          "3"
+        ],
+        "finest_pair_direct_ratio_remains_primary": true,
+        "finest_pair_rule": "direct_ratio_below_one_quarter_or_conditioning_guarded_diagnostic_saturation",
+        "frozen": true,
+        "guarded_saturation_requires_complete_profile_contraction": true,
+        "guarded_saturation_requires_round_trip_contraction": true,
+        "guarded_saturation_requires_tail_erasure_map_witness": true,
+        "holdout_output_root": "runs/fgc-2-sf1/proto10/holdout",
+        "maximum_nested_tail_ratio": "1/4",
+        "mechanism_question_answered_before_revision": false,
+        "medium_and_fine_absolute_budgets_unchanged": true,
+        "new_numeric_tolerance_added": false,
+        "only_finest_pair_spectral_interpretation_changes": true,
+        "outcome_neutral_contract_validated": true,
+        "physical_and_numerical_thresholds_unchanged": true,
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO9",
+        "premise_revision_only": true,
+        "protocol_version": 10,
+        "resolution_ladder_unchanged": true,
+        "resolved_holdout_manifest": "configs/fgc/fgc-1-pro10-hld1.toml",
+        "resolved_holdout_manifest_present": false,
+        "round_trip_is_a_continuum_error_bound": false,
+        "semantic_holdout_contract_sha256": "0ad9f09e144af742f3629a83da8d054e6ee8f4a255d212647b0f7fdb0201afff"
+      },
+      "predecessor_protocol_sha256": "f06ea93e82a4cdda2a0474623bc0db9ac679e4044657afb32be0d5342fe437fa"
+    },
+    "namespace_precondition": {
+      "both_fresh_namespaces_absent": true,
+      "freeze_created_no_namespace": true,
+      "records": [
+        {
+          "exists": false,
+          "path": "runs/fgc-2-sf1/proto11/calibration"
+        },
+        {
+          "exists": false,
+          "path": "runs/fgc-2-sf1/proto11/holdout"
+        }
+      ]
+    },
+    "numerical_map_revision": {
+      "continuum_equation_or_source_row_changed": false,
+      "damping_or_constraint_cleaning_added": false,
+      "exact_Minkowski_and_generic_REF1_controls_required": true,
+      "field_order": [
+        "alpha",
+        "shift",
+        "lambda",
+        "R",
+        "phi",
+        "chi"
+      ],
+      "immutable_design_witness": {
+        "campaign_event_count": 264,
+        "fine_primary_residual_reduction_factor": 10.375000000000075,
+        "is_runtime_calibration_or_mechanism_evidence": false,
+        "maximum_well_balanced_source_residual": 7.579122514774399e-14,
+        "raw_initial_record_count": 12,
+        "source_only_rejection_count": 262,
+        "well_balanced_control_record_count": 12
+      },
+      "initial_q_rule": "D_h(u-u_ref)+q_ref",
+      "interior_q_reprojection_added": false,
+      "new_epsilon_floor_or_numeric_tolerance_added": false,
+      "p_r_du_dt_and_dq_dt_unchanged": true,
+      "projected_input_hashes_must_be_rebuilt": true,
+      "q_remains_independently_evolved": true,
+      "raw_source_residual_maximum": "1/1000000000000",
+      "reduction_constraint_rule": "q-(D_h(u-u_ref)+q_ref)",
+      "reference_q": [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      "reference_u": [
+        "1",
+        "0",
+        "1",
+        "r",
+        "0",
+        "0"
+      ],
+      "source_q_r_rule": "D_h(q-q_ref)"
+    },
+    "protocol_validation": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "PROTO10_GR0_calibration_inspected_before_revision": true,
+      "SGBL_outcomes_inspected_before_revision": false,
+      "artifact_id": "FGC-2-SF1-PROTO11",
+      "calibration_output_root": "runs/fgc-2-sf1/proto11/calibration",
+      "candidate_or_holdout_outcome_observed_before_revision": false,
+      "claims": {
+        "FGCQR_holdout_execution_authorized": false,
+        "FGCQR_mechanism_rejected": false,
+        "PROTO11_fresh_GR0_dynamic_calibration_authorized": false,
+        "PROTO11_resolved_holdout_manifest_authorized": false,
+        "PROTO11_successor_runtime_implemented": false,
+        "child_domain_or_topology_derived": false,
+        "classical_spherical_diagnostic_authorized": false,
+        "dark_sector_mechanism_derived": false,
+        "general_gradient_route_rejected": false,
+        "physical_transition_claim_authorized": false,
+        "retained_EFT_evolution_authorized": false,
+        "singularity_resolution_derived": false,
+        "varying_locally_measured_c_derived": false
+      },
+      "diagnosis_artifact_id": "FGC-1-CAL7-PREF9",
+      "diagnosis_checkpoint_commit": "3e34c5e1b0f4193b1178f09725be6e72e462c119",
+      "eligible_calibration_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "frozen": true,
+      "holdout_output_root": "runs/fgc-2-sf1/proto11/holdout",
+      "initial_q_rule": "D_h(u-u_ref)+q_ref",
+      "interior_q_reprojection_permitted": false,
+      "mechanism_question_answered_before_revision": false,
+      "new_numeric_tolerance_added": false,
+      "only_reference_state_differentiation_changes": true,
+      "outcome_neutral_contract_validated": true,
+      "physical_and_numerical_thresholds_unchanged": true,
+      "point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO10",
+      "premise_revision_only": true,
+      "protocol_version": 11,
+      "raw_source_residual_maximum": "1/1000000000000",
+      "reduction_constraint_rule": "q-(D_h(u-u_ref)+q_ref)",
+      "reference_q": [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      "reference_u": [
+        "1",
+        "0",
+        "1",
+        "r",
+        "0",
+        "0"
+      ],
+      "resolution_ladder_unchanged": true,
+      "resolved_holdout_manifest": "configs/fgc/fgc-1-pro11-hld1.toml",
+      "resolved_holdout_manifest_present": false,
+      "semantic_holdout_contract_sha256": "2ecd63df56139a2e36c163acd73e6b8c0af9c0c1c8682bdad459b2e29dc2fc28",
+      "source_q_r_rule": "D_h(q-q_ref)"
+    }
+  },
+  "classification": "outcome_neutral_PROTO11_well_balanced_reference_map_freeze",
+  "derivation_document": "docs/fgc-pro11-frz1.md",
+  "derivation_document_sha256": "c9b24043d6879ab998ef5e5f9e04ce9769e3e9199549ebb0631b5c94e6cef5fb",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO11_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO11_resolved_holdout_manifest_authorized": false,
+    "PROTO11_successor_runtime_implemented": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro11_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro11_frz1.py": "9967c2eb6eb4184188d2624de008a74ade9e5bdd320f3095fba686117bb70283",
+    "src/recursive_horizons/fgc/evolution/protocol_v11.py": "dc6365e62699fc3a7e08975d4e9e508c0994a18629cb896eb0a2d2a666d13fe1"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO11_runtime_implemented": false,
+    "SGBL_control_completed": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "trapped_sphere_observed": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_evolution_outcomes_inspected": false,
+    "PROTO10_GR0_calibration_trajectory_inspected": true,
+    "PROTO10_candidate_or_holdout_outcome_observed": false,
+    "SGBL_evolution_outcomes_inspected": false,
+    "calibration_branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "diagnosis_artifact": "FGC-1-CAL7-PREF9",
+    "freeze_role": "premise_only_well_balanced_reference_map_protocol_and_lineage_certificate",
+    "holdout_branch": "FGC-QR",
+    "mechanism_question_answered": false,
+    "predecessor_protocol": "FGC-2-SF1-PROTO10",
+    "target_protocol": "FGC-2-SF1-PROTO11"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro11-frz1.toml": "4e3b84e51ffae75a97ba81fe7ed22d9af0c41c526f74f3f51f593a4f66ec9bbc",
+    "configs/fgc/fgc-2-sf1-protocol-v11.toml": "31d21bf6257d6afe033ea8a0d48b59360187a1d9baf2bc95c2fcb086e39ce440"
+  }
+}

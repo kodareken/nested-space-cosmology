@@ -1,0 +1,26 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arxiv_metadata_prepared": false,
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-after-anatomy.json": "d99367800ea334caac977dccedde3085bf5ddf3ef1d689ab231856b559f5aaa9"
+  },
+  "manuscript_027_written": false,
+  "named_search_stall": "n16_freed_jet_leftover_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "public_checkout_unused": true,
+  "public_paper_exists": true,
+  "public_pyproject_exists": true,
+  "public_release_027_cut": false,
+  "schema": "NSC-027-BLOCKED-UNTIL-CERTIFICATE-v1",
+  "scope": {
+    "metric_timestep": false,
+    "open_is_not_a_paper": true,
+    "open_is_not_done": true,
+    "public_checkout_not_edited_by_this_owner": true
+  },
+  "source_hashes": {
+    "docs/nsc-027-blocked-until-certificate.md": "ea8b07e5a499e7fea6f90b3a2f6301d0ff3b23596b9b88154e157c23dcffe6c6",
+    "scripts/derive_nsc_027_blocked_until_certificate.py": "e9a0eebbd9bcf0303dce13dd75e36351f129cadbdda5283c6ba464ce840f4121"
+  },
+  "status": "OPEN: 0.27.0, GitHub release and arXiv stay blocked"
+}

@@ -1,0 +1,567 @@
+{
+  "channel_signs": {
+    "LLL_channel_sign": "positive in both radial null directions",
+    "compact_local_mean_null": -0.033425876551037514,
+    "massive_angular_mean_null": -0.046242716653752,
+    "retained_total_null_minus": -0.06171294115993679,
+    "retained_total_null_plus": -0.05681746053671645,
+    "scale_inherited_LLL_null_minus": 0.01944838133779186,
+    "scale_inherited_LLL_null_plus": 0.021358403375133953
+  },
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 8e-08,
+    "float_rtol": 8e-07
+  },
+  "gate": {
+    "accepted_for_background_projection": false,
+    "failure_owner": "nonlocal CTP covariance and four ADM variations of the first positive compact Dirac levels; the locked local compact coefficient is not their full horizon-domain response",
+    "full_charged_angular_plus_compact_CTP_complete": false,
+    "retained_both_neck_null_components_negative": true,
+    "retained_four_metric_projections_available": true
+  },
+  "input_hashes": {
+    "results/development/adm-neck-source-map.json": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe",
+    "results/development/charged-sector.json": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+    "results/development/relational-vacuum-normalization.json": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "locked_inputs": {
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "black_universe_neck": {
+      "N": 1.0,
+      "beta": 2.1708037636748028,
+      "f_minus_A": 3.712388980384689,
+      "q": 1.0,
+      "r": 1.0,
+      "rho_coordinate": 0.0
+    },
+    "magnetic_flux": 4,
+    "scale_refitted": false,
+    "zeta": 15.785319939652627
+  },
+  "operator_and_state": {
+    "angular_spectrum": "lambda_n=sqrt(n*(n+abs(q))), degeneracy=2*(abs(q)+2*n), n>=1; LLL handled exactly",
+    "compact_allocation": "one charged canonical zero field plus the locked Wilsonian compact local response",
+    "domain": "actual exterior reflection and horizon frame continued to the stored Bronnikov neck",
+    "opposite_compact_parities": true,
+    "real_time_owner": "canonical Lorentzian covariance; no Euclidean heat continuation through the horizon",
+    "state": "parent affine occupation plus scale-inherited child occupation at kappa_c=Omega*kappa_p"
+  },
+  "refinement_changes": {
+    "angular": {
+      "T01": 2.2482651020842154e-09,
+      "p_parallel": 1.4537396085881338e-05,
+      "p_sphere": -4.854691113519161e-06,
+      "parent_Killing_power": -1.0488439037420472e-07,
+      "radial_null_minus": 1.936091341452062e-05,
+      "radial_null_plus": 1.9369906474941967e-05,
+      "rho": 4.8280138588499555e-06
+    },
+    "frequency_time": {
+      "T01": -4.1490219532171885e-07,
+      "p_parallel": -2.537521477802285e-07,
+      "p_sphere": -1.415836718920982e-06,
+      "parent_Killing_power": 1.9355708442685138e-05,
+      "radial_null_minus": -2.5093733427641873e-06,
+      "radial_null_plus": -4.168982124040654e-06,
+      "rho": -3.0854255856221924e-06
+    }
+  },
+  "runs": {
+    "angular_refinement": {
+      "compact_local_source": {
+        "C_Weyl": -0.0008441130342798952,
+        "Killing_power": 0.0,
+        "child_frame": {
+          "T01": 0.0,
+          "p_parallel": -0.0739433021964725,
+          "p_sphere": 0.057230363920953715,
+          "rho": 0.040517425645434965
+        },
+        "gauge_radial_null": 0.0,
+        "radial_null": -0.033425876551037514,
+        "unit_radial_null": 39.598815790770026,
+        "vacuum_radial_null": 0.0
+      },
+      "config": {
+        "angular_levels": 16,
+        "evolution_steps": 5000,
+        "frequency_edges": [
+          0.0,
+          0.25,
+          1.0,
+          4.0,
+          16.0
+        ],
+        "horizon_offset": 1e-10,
+        "horizon_rho": 1.9006916054701435,
+        "magnetic_flux": 4,
+        "magnetic_matching_scale": 2.0,
+        "omega": 3.973074368754331,
+        "phase_cutoff": 4.0,
+        "points_per_frequency_interval": 12,
+        "reflection_tolerance": 2e-10,
+        "surface_gravity": 0.23832579963401956
+      },
+      "diagnostics": {
+        "compact_excited_covariance_included": false,
+        "compact_nonlocal_remainder_included": false,
+        "full_owner_complete": false,
+        "horizon_q": 2.6572647046793456,
+        "massive_child_T01": 0.0007463668947346662,
+        "massive_radial_null_minus": -0.0477160850332766,
+        "massive_radial_null_plus": -0.044730617454337936,
+        "retained_four_metric_projections_returned": true
+      },
+      "lll_source": {
+        "PG_coordinate": {
+          "T_rho_rho_2D": 0.44024586787673264,
+          "T_tau_rho_2D": 0.8149937711542647,
+          "T_tau_tau_2D": 1.4040191830209219,
+          "fourD_null_minus": 0.05267065468742516,
+          "fourD_null_plus": 0.007886485863354125,
+          "parent_Killing_power": -0.02227623165818482
+        },
+        "child_frame": {
+          "T01": 0.0004775055093355235,
+          "p_parallel": 0.030096064064718375,
+          "p_sphere_state": 0.0,
+          "radial_null_minus": 0.01944838133779186,
+          "radial_null_plus": 0.021358403375133953,
+          "rho": -0.009692671708255466
+        }
+      },
+      "massive_angular_source": {
+        "angular_degeneracies": [
+          12.0,
+          16.0,
+          20.0,
+          24.0,
+          28.0,
+          32.0,
+          36.0,
+          40.0,
+          44.0,
+          48.0,
+          52.0,
+          56.0,
+          60.0,
+          64.0,
+          68.0,
+          72.0
+        ],
+        "angular_masses": [
+          2.23606797749979,
+          3.4641016151377544,
+          4.58257569495584,
+          5.656854249492381,
+          6.708203932499369,
+          7.745966692414834,
+          8.774964387392123,
+          9.797958971132712,
+          10.816653826391969,
+          11.832159566199232,
+          12.84523257866513,
+          13.856406460551018,
+          14.866068747318506,
+          15.874507866387544,
+          16.881943016134134,
+          17.88854381999832
+        ],
+        "energy_remainders": [
+          0.0026727330418894464,
+          0.0021576205362523154,
+          0.0010654221386380176,
+          0.0005111676973974299,
+          0.0002561543585870282,
+          0.00012399878643553315,
+          7.121106591782608e-05,
+          3.826693027553675e-05,
+          2.037182314901719e-05,
+          1.1795532741103173e-05,
+          6.562586727385471e-06,
+          3.839459338484684e-06,
+          2.228375673576065e-06,
+          1.325498996827642e-06,
+          7.926037241423225e-07,
+          4.815354643056919e-07
+        ],
+        "maximum_initial_covariance_eigenvalue": 1.0000000000000007,
+        "maximum_scattering_current_defect": 1.7616931247133039e-09,
+        "minimum_initial_covariance_eigenvalue": -1.7800843432917252e-16,
+        "mode_norm_defect": 3.885780586188048e-14,
+        "parent_Killing_power": -0.03481895292107974,
+        "pressure_remainders": [
+          -0.008020716197894953,
+          -0.0049621316718217855,
+          -0.0024730860311891565,
+          -0.0012094003976341465,
+          -0.0005472788217054471,
+          -0.00020858822113334604,
+          -5.4012911981901344e-05,
+          4.092072008674213e-06,
+          1.9220866810067306e-05,
+          1.877926360772921e-05,
+          1.4331028731391395e-05,
+          9.891981950869602e-06,
+          6.467987660706542e-06,
+          4.08083574208527e-06,
+          2.500794054870407e-06,
+          1.4877786282242646e-06
+        ],
+        "reflection_solves": 576,
+        "source": {
+          "H_parallel": 1.5570211692905311,
+          "H_sphere": 1.179797831238261e-16,
+          "R_L": -26.27433388230814,
+          "local_anomaly_rho": 0.004903465324393183,
+          "p_parallel": -0.06221721801750388,
+          "p_sphere": -0.026984079066778036,
+          "q": 1.5707963267948966,
+          "radial_null": -0.04622335124380727,
+          "rho": 0.01599386677369661,
+          "rho_coordinate": 0.0,
+          "sphere_radius": 1.0,
+          "trace": 0.13217924292475655,
+          "transported_bar_rho": 0.011090401449303428
+        }
+      },
+      "totals": {
+        "T01": 0.0012238724040701896,
+        "both_radial_null_components_negative": true,
+        "p_parallel": -0.106064456149258,
+        "p_sphere": 0.03024628485417568,
+        "parent_Killing_power": -0.05709518457926456,
+        "radial_null_minus": -0.06169358024652227,
+        "radial_null_plus": -0.05679809063024151,
+        "rho": 0.046818620710876106
+      }
+    },
+    "base": {
+      "compact_local_source": {
+        "C_Weyl": -0.0008441130342798952,
+        "Killing_power": 0.0,
+        "child_frame": {
+          "T01": 0.0,
+          "p_parallel": -0.0739433021964725,
+          "p_sphere": 0.057230363920953715,
+          "rho": 0.040517425645434965
+        },
+        "gauge_radial_null": 0.0,
+        "radial_null": -0.033425876551037514,
+        "unit_radial_null": 39.598815790770026,
+        "vacuum_radial_null": 0.0
+      },
+      "config": {
+        "angular_levels": 12,
+        "evolution_steps": 5000,
+        "frequency_edges": [
+          0.0,
+          0.25,
+          1.0,
+          4.0,
+          16.0
+        ],
+        "horizon_offset": 1e-10,
+        "horizon_rho": 1.9006916054701435,
+        "magnetic_flux": 4,
+        "magnetic_matching_scale": 2.0,
+        "omega": 3.973074368754331,
+        "phase_cutoff": 4.0,
+        "points_per_frequency_interval": 12,
+        "reflection_tolerance": 2e-10,
+        "surface_gravity": 0.23832579963401956
+      },
+      "diagnostics": {
+        "compact_excited_covariance_included": false,
+        "compact_nonlocal_remainder_included": false,
+        "full_owner_complete": false,
+        "horizon_q": 2.6572647046793456,
+        "massive_child_T01": 0.000746364646469564,
+        "massive_radial_null_minus": -0.04773544594669113,
+        "massive_radial_null_plus": -0.04474998736081287,
+        "retained_four_metric_projections_returned": true
+      },
+      "lll_source": {
+        "PG_coordinate": {
+          "T_rho_rho_2D": 0.44024586787673264,
+          "T_tau_rho_2D": 0.8149937711542647,
+          "T_tau_tau_2D": 1.4040191830209219,
+          "fourD_null_minus": 0.05267065468742516,
+          "fourD_null_plus": 0.007886485863354125,
+          "parent_Killing_power": -0.02227623165818482
+        },
+        "child_frame": {
+          "T01": 0.0004775055093355235,
+          "p_parallel": 0.030096064064718375,
+          "p_sphere_state": 0.0,
+          "radial_null_minus": 0.01944838133779186,
+          "radial_null_plus": 0.021358403375133953,
+          "rho": -0.009692671708255466
+        }
+      },
+      "massive_angular_source": {
+        "angular_degeneracies": [
+          12.0,
+          16.0,
+          20.0,
+          24.0,
+          28.0,
+          32.0,
+          36.0,
+          40.0,
+          44.0,
+          48.0,
+          52.0,
+          56.0
+        ],
+        "angular_masses": [
+          2.23606797749979,
+          3.4641016151377544,
+          4.58257569495584,
+          5.656854249492381,
+          6.708203932499369,
+          7.745966692414834,
+          8.774964387392123,
+          9.797958971132712,
+          10.816653826391969,
+          11.832159566199232,
+          12.84523257866513,
+          13.856406460551018
+        ],
+        "energy_remainders": [
+          0.0026727330418894464,
+          0.0021576205362523154,
+          0.0010654221386380176,
+          0.0005111676973974299,
+          0.0002561543585870282,
+          0.00012399878643553315,
+          7.121106591782608e-05,
+          3.826693027553675e-05,
+          2.037182314901719e-05,
+          1.1795532741103173e-05,
+          6.562586727385471e-06,
+          3.839459338484684e-06
+        ],
+        "maximum_initial_covariance_eigenvalue": 1.0000000000000007,
+        "maximum_scattering_current_defect": 1.4213085153258476e-09,
+        "minimum_initial_covariance_eigenvalue": -1.7800843432917252e-16,
+        "mode_norm_defect": 3.885780586188048e-14,
+        "parent_Killing_power": -0.034818848036689366,
+        "pressure_remainders": [
+          -0.008020716197894953,
+          -0.0049621316718217855,
+          -0.0024730860311891565,
+          -0.0012094003976341465,
+          -0.0005472788217054471,
+          -0.00020858822113334604,
+          -5.4012911981901344e-05,
+          4.092072008674213e-06,
+          1.9220866810067306e-05,
+          1.877926360772921e-05,
+          1.4331028731391395e-05,
+          9.891981950869602e-06
+        ],
+        "reflection_solves": 432,
+        "source": {
+          "H_parallel": 1.5570211692905311,
+          "H_sphere": 1.179797831238261e-16,
+          "R_L": -26.27433388230814,
+          "local_anomaly_rho": 0.004903465324393183,
+          "p_parallel": -0.06223175541358976,
+          "p_sphere": -0.026979224375664516,
+          "q": 1.5707963267948966,
+          "radial_null": -0.046242716653752,
+          "rho": 0.01598903875983776,
+          "rho_coordinate": 0.0,
+          "sphere_radius": 1.0,
+          "trace": 0.13217924292475655,
+          "transported_bar_rho": 0.011085573435444578
+        }
+      },
+      "totals": {
+        "T01": 0.0012238701558050875,
+        "both_radial_null_components_negative": true,
+        "p_parallel": -0.10607899354534388,
+        "p_sphere": 0.0302511395452892,
+        "parent_Killing_power": -0.057095079694874186,
+        "radial_null_minus": -0.06171294115993679,
+        "radial_null_plus": -0.05681746053671645,
+        "rho": 0.046813792697017256
+      }
+    },
+    "frequency_time_refinement": {
+      "compact_local_source": {
+        "C_Weyl": -0.0008441130342798952,
+        "Killing_power": 0.0,
+        "child_frame": {
+          "T01": 0.0,
+          "p_parallel": -0.0739433021964725,
+          "p_sphere": 0.057230363920953715,
+          "rho": 0.040517425645434965
+        },
+        "gauge_radial_null": 0.0,
+        "radial_null": -0.033425876551037514,
+        "unit_radial_null": 39.598815790770026,
+        "vacuum_radial_null": 0.0
+      },
+      "config": {
+        "angular_levels": 12,
+        "evolution_steps": 8000,
+        "frequency_edges": [
+          0.0,
+          0.25,
+          1.0,
+          4.0,
+          16.0
+        ],
+        "horizon_offset": 1e-10,
+        "horizon_rho": 1.9006916054701435,
+        "magnetic_flux": 4,
+        "magnetic_matching_scale": 2.0,
+        "omega": 3.973074368754331,
+        "phase_cutoff": 4.0,
+        "points_per_frequency_interval": 16,
+        "reflection_tolerance": 1e-10,
+        "surface_gravity": 0.23832579963401956
+      },
+      "diagnostics": {
+        "compact_excited_covariance_included": false,
+        "compact_nonlocal_remainder_included": false,
+        "full_owner_complete": false,
+        "horizon_q": 2.6572647046793456,
+        "massive_child_T01": 0.0007459497442742424,
+        "massive_radial_null_minus": -0.04773795532003389,
+        "massive_radial_null_plus": -0.04475415634293692,
+        "retained_four_metric_projections_returned": true
+      },
+      "lll_source": {
+        "PG_coordinate": {
+          "T_rho_rho_2D": 0.44024586787673264,
+          "T_tau_rho_2D": 0.8149937711542647,
+          "T_tau_tau_2D": 1.4040191830209219,
+          "fourD_null_minus": 0.05267065468742516,
+          "fourD_null_plus": 0.007886485863354125,
+          "parent_Killing_power": -0.02227623165818482
+        },
+        "child_frame": {
+          "T01": 0.0004775055093355235,
+          "p_parallel": 0.030096064064718375,
+          "p_sphere_state": 0.0,
+          "radial_null_minus": 0.01944838133779186,
+          "radial_null_plus": 0.021358403375133953,
+          "rho": -0.009692671708255466
+        }
+      },
+      "massive_angular_source": {
+        "angular_degeneracies": [
+          12.0,
+          16.0,
+          20.0,
+          24.0,
+          28.0,
+          32.0,
+          36.0,
+          40.0,
+          44.0,
+          48.0,
+          52.0,
+          56.0
+        ],
+        "angular_masses": [
+          2.23606797749979,
+          3.4641016151377544,
+          4.58257569495584,
+          5.656854249492381,
+          6.708203932499369,
+          7.745966692414834,
+          8.774964387392123,
+          9.797958971132712,
+          10.816653826391969,
+          11.832159566199232,
+          12.84523257866513,
+          13.856406460551018
+        ],
+        "energy_remainders": [
+          0.0026763647471024637,
+          0.0021540863404193714,
+          0.001064838852760276,
+          0.0005135099355197282,
+          0.0002497398448033589,
+          0.00012805517792410115,
+          6.792787411328302e-05,
+          3.825381024164702e-05,
+          2.1247476272865288e-05,
+          1.1575691687824842e-05,
+          6.617839291557974e-06,
+          3.84094162702168e-06
+        ],
+        "maximum_initial_covariance_eigenvalue": 1.0000000000000007,
+        "maximum_scattering_current_defect": 6.107749861428147e-10,
+        "minimum_initial_covariance_eigenvalue": -2.0176684871840484e-16,
+        "mode_norm_defect": 3.8191672047105385e-14,
+        "parent_Killing_power": -0.03479949232824668,
+        "pressure_remainders": [
+          -0.008020828977358459,
+          -0.004962228855487391,
+          -0.00247308988480322,
+          -0.0012093885900879451,
+          -0.0005473514417029083,
+          -0.00020855233503639425,
+          -5.403761068672005e-05,
+          4.089912820967408e-06,
+          1.9230473498957918e-05,
+          1.8778196821945703e-05,
+          1.4332820823913497e-05,
+          9.89349879747099e-06
+        ],
+        "reflection_solves": 576,
+        "source": {
+          "H_parallel": 1.5570211692905311,
+          "H_sphere": 1.179797831238261e-16,
+          "R_L": -26.27433388230814,
+          "local_anomaly_rho": 0.004903465324393183,
+          "p_parallel": -0.06223200916573754,
+          "p_sphere": -0.026980640212383437,
+          "q": 1.5707963267948966,
+          "radial_null": -0.0462460558314854,
+          "rho": 0.015985953334252137,
+          "rho_coordinate": 0.0,
+          "sphere_radius": 1.0,
+          "trace": 0.13217924292475655,
+          "transported_bar_rho": 0.011082488009858952
+        }
+      },
+      "totals": {
+        "T01": 0.0012234552536097658,
+        "both_radial_null_components_negative": true,
+        "p_parallel": -0.10607924729749166,
+        "p_sphere": 0.030249723708570278,
+        "parent_Killing_power": -0.0570757239864315,
+        "radial_null_minus": -0.06171545053327956,
+        "radial_null_plus": -0.05682162951884049,
+        "rho": 0.046810707271431634
+      }
+    }
+  },
+  "schema": "NSC-CHARGED-CTP-NECK-SOURCE-v1",
+  "scope": {
+    "cosmological_projection_or_likelihood_run": false,
+    "dark_fraction_target_used": false,
+    "new_compensator_added": false,
+    "new_metric_ansatz_or_equation": false,
+    "old_MMP_angular_or_historical_generator_rerun": false,
+    "q_Omega_or_zeta_refitted": false
+  },
+  "source_hashes": {
+    "docs/nsc-charged-ctp-neck-source.md": "f7bb31c3c0f10b0c069a6308030fac5d2d935ad654fed6414a6acb00a0c70e00",
+    "scripts/derive_nsc_charged_ctp_neck.py": "2da989af7e8450175681acc1a7dc9e09ef4a8ef6ee53663e41a3af8ee2f63026",
+    "src/recursive_horizons/nsc_charged_ctp_neck.py": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578"
+  },
+  "status": "charged angular CTP covariance plus locked compact local response passes the retained null-sign gate; full compact nonlocal CTP gate remains open"
+}

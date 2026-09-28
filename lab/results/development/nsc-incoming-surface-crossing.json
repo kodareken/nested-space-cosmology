@@ -1,0 +1,124 @@
+{
+  "accountable_author": "Douglas Ek",
+  "conclusion": [
+    "a unique real-analytic crossing germ exists for each such fixed compatible tuple and slope sign",
+    "w(z_c)=w_D and w_prime(z_c)=v_c; U=(Pi0-S_beta*z-G(w)-e*w_second)/d is analytic",
+    "both included lapse and shift constraints hold at and near the crossing"
+  ],
+  "conditions": [
+    "all coefficients and z_c,Pi0,S_N,S_beta are finite real",
+    "R(w_D,z_c)=Delta1*v_c\u00b2 with v_c real and nonzero",
+    "same included compatible source/operator and frozen intrinsic slice"
+  ],
+  "imported_intervals": {
+    "C": [
+      0.11119593102288508,
+      0.11119593102288536
+    ],
+    "Delta1": [
+      0.0033030964529791947,
+      0.003303096452979213
+    ],
+    "d": [
+      -0.029705191751120807,
+      -0.029705191751120727
+    ],
+    "w_D": [
+      0.8828574152795067,
+      0.882857415279511
+    ]
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4"
+  },
+  "proof": {
+    "Jacobian": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "-R_z_at_crossing*t0**3/Delta1",
+        "-2"
+      ]
+    ],
+    "analyticity": "R is the committed real polynomial A(w)*(Pi0-S_beta*z-G(w))+d*D(w)",
+    "centered_right_side": [
+      "x*(s + t0)",
+      "s + t0 - (s + t0)**3*R(w_D + x, y + z_c)/Delta1"
+    ],
+    "eigenvalues": [
+      0,
+      -2
+    ],
+    "finite_smooth_existence": "real analytic implies finite derivatives of every order locally",
+    "first_curvature": "(R_w_at_crossing + R_z_at_crossing/v_c)/(3*Delta1)",
+    "invertibility": "Z_prime(0)=t0!=0; analytic inverse-function theorem",
+    "necessary_compatibility": "R(w_D,z_c)=Delta1*v_c\u00b2>0; t0=1/v_c!=0",
+    "positive_integer_eigenvalues": [],
+    "reality": "conjugation invariance and uniqueness of the holomorphic germ",
+    "residuals": {
+      "centered_Jacobian": "0",
+      "centered_constant_first": "0",
+      "centered_constant_second": "0",
+      "characteristic_polynomial": "0",
+      "first_finite_curvature": "0",
+      "inverse_coordinate_flux": "0",
+      "inverse_first_jet": "0",
+      "lapse_reconstruction": "0",
+      "momentum_reconstruction": "0"
+    },
+    "root_symbol": "w_D is the exact affine principal root; no numerical midpoint substitution",
+    "uniqueness_scope": "analytic germs at fixed compatible real symbolic data"
+  },
+  "reproducer": "PYTHONPATH=src python3 -m recursive_horizons.nsc_incoming_surface_crossing --check",
+  "residuals": {
+    "centered_Jacobian": 0.0,
+    "centered_constant_first": 0.0,
+    "centered_constant_second": 0.0,
+    "characteristic_polynomial": 0.0,
+    "first_finite_curvature": 0.0,
+    "inverse_coordinate_flux": 0.0,
+    "inverse_first_jet": 0.0,
+    "lapse_reconstruction": 0.0,
+    "momentum_reconstruction": 0.0
+  },
+  "schema": "NSC-INCOMING-SURFACE-CROSSING-v1",
+  "scope": {
+    "arbitrary_smooth_uniqueness_claimed": false,
+    "global_existence_claimed": false,
+    "metric_evolution": false,
+    "old_coefficient_or_source_generators_rerun": false,
+    "particular_trajectory_reaches_root_proved": false,
+    "physical_tuple_selected": false,
+    "pressure_equations_or_Gamma_rest_closed": false,
+    "source_constants_numerically_substituted": false,
+    "zero_velocity_or_zero_R_case_analyzed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-surface-crossing.md": "ca253c6bcb7344c190c57b46467a179f9c7c2bf412e0bd0670e4cec5f7f71428",
+    "src/recursive_horizons/nsc_incoming_surface_crossing.py": "ca4e5a02e707f78015d79a9891ba8be185b73f9f64e6f16474c665301ea2e299",
+    "tests/test_nsc_incoming_surface_crossing.py": "5e489e07b66d5a5dbdeb2416613613067e0b754e822100662da58c7bbec564fc"
+  },
+  "status": "PASS: conditional real-analytic nonzero-velocity crossing germ",
+  "theorem": {
+    "author": "Feng Rong",
+    "conclusion": "unique holomorphic germ y(x) with y(0)=0",
+    "hypotheses": [
+      "holomorphic f(x,y) near (0,0)",
+      "f(0,0)=0",
+      "no positive-integer eigenvalue of f_y(0,0)"
+    ],
+    "identifier": "arXiv:1307.3823v1",
+    "locator": "Proposition 2.1, page 2",
+    "published_url": "https://www.sciencedirect.com/science/article/pii/S0001870813002302",
+    "source_checked": "primary author PDF and published Proposition 2.1 on 2026-09-18",
+    "title": "The Briot-Bouquet systems and the center families for holomorphic dynamical systems",
+    "url": "https://arxiv.org/pdf/1307.3823v1#page=2",
+    "zero_eigenvalue_permitted": true
+  },
+  "verification_tolerances": {
+    "exact_symbolic_identities": 0.0
+  }
+}

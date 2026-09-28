@@ -1,0 +1,60 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO7-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v7.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO7"
+predecessor_protocol = "FGC-2-SF1-PROTO6"
+diagnosis_artifact = "FGC-1-CAL3-PREF5"
+calibration_branch = "GR-0"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_post_calibration_general_unaccepted_proposal_ownership_protocol_and_lineage_certificate"
+PROTO6_GR0_calibration_trajectory_disclosed = true
+first_nonzero_common_event_completed = false
+FGCQR_evolution_outcomes_inspected = false
+SGBL_evolution_outcomes_inspected = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "27c63e7aca1439e75e18b576c6da414e458280ff"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v6.toml"
+predecessor_protocol_sha256 = "e50093914f7b84a88bd593361f8b3eb43942cf9a8502f637fc38d8e61dd82448"
+diagnosis_config = "configs/fgc/fgc-1-cal3-pref5.toml"
+diagnosis_config_sha256 = "cec13d7e50d2546d423e7ffea6690226d71fbe5174073e78ffd2ac37f9e44275"
+diagnosis_result = "results/fgc-1-cal3-pref5.json"
+diagnosis_result_sha256 = "669ee5d9a17a8d3e0b213b06fcb3ff426e0908b331fe38429b5704bbbf49080f"
+
+[proof_contract]
+PROTO7_overlay_must_validate_exactly = true
+checkpoint_must_be_ancestor_of_HEAD = true
+predecessor_and_diagnosis_must_be_read_from_checkpoint = true
+immutable_blob_hashes_must_match_PROTO7_amendment = true
+immutable_PROTO6_must_validate_unchanged = true
+immutable_CAL3_must_be_canonical_and_nonmechanism = true
+accepted_state_source_failure_must_remain_terminal = true
+every_source_only_unaccepted_proposal_failure_may_retry = true
+candidate_endpoint_must_remain_unaccepted_until_commit = true
+any_non_source_failure_must_veto_retry = true
+raw_source_threshold_solver_and_retry_budget_must_remain_unchanged = true
+all_non_source_physical_and_numerical_gates_must_remain_unchanged = true
+complete_retry_terminal_and_exhaustion_evidence_must_be_required = true
+new_output_namespaces_must_be_declared_but_not_accessed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO7_successor_runtime_compositor_implemented = false
+PROTO7_fresh_GR0_dynamic_calibration_authorized = false
+PROTO7_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

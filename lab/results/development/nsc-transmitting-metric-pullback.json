@@ -1,0 +1,157 @@
+{
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "input_hashes": {
+    "results/development/nsc-full-extended-history-gate.json": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-transmitting-boundary-selection.json": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e",
+    "results/development/nsc-weyl-endpoint-match.json": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_tilted_landau_interface.py": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "metric_pullback": {
+    "conditional_gaussian_pullback": {
+      "gaussian_endpoint_covector": null,
+      "maximum_residual": null,
+      "reason": "dUplus/dg_Delta and dUminus/dg_Delta on the transmitting embedding are not supplied",
+      "status": "OPEN",
+      "tolerance": 3e-11
+    },
+    "coordinate_aliases": {
+      "N": "N",
+      "beta": "beta",
+      "q": "q_ADM",
+      "r": "r"
+    },
+    "coordinate_aliases_are_not_geometric_embedding": true,
+    "endpoint_basis": {
+      "derivative_kind": "discrete action gradient, not a continuum boundary momentum",
+      "fields": [
+        "N",
+        "beta",
+        "q_ADM",
+        "r"
+      ],
+      "history": "33-node subsample of authenticated endpoint_control_duration_0.5",
+      "history_nodes": 33,
+      "id": "KS-local-nodal-endpoints:b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+      "local_fields": [
+        "lapse",
+        "beta",
+        "q_ADM",
+        "r"
+      ],
+      "node_indices": [
+        0,
+        32
+      ],
+      "orientation": "increasing stored time; signs already included in dS/dg",
+      "physical_history": false,
+      "units": "dimensionless recorded action per unit homogeneous axial coordinate; derivatives with respect to raw metric nodes"
+    },
+    "independent_first_jet_derivative": {
+      "available": false,
+      "components": {
+        "N": [
+          null,
+          null
+        ],
+        "beta": [
+          null,
+          null
+        ],
+        "q_ADM": [
+          null,
+          null
+        ],
+        "r": [
+          null,
+          null
+        ]
+      },
+      "reason": "the existing nodal schema varies metric values, not independently specified normal derivatives; a boundary-jet decomposition and its admissible variations are not supplied"
+    },
+    "locked_extraction_residual": {
+      "maximum_absolute": 0.0,
+      "status": "PASS",
+      "tolerance": 0.0
+    },
+    "locked_local_components": {
+      "N": [
+        -1.6709564486074024,
+        -1.7122278287564878
+      ],
+      "beta": [
+        0.0,
+        0.0
+      ],
+      "q_ADM": [
+        -43.58985597013112,
+        45.868233687373596
+      ],
+      "r": [
+        83.87051420812537,
+        -93.54264532195464
+      ]
+    },
+    "metric_mismatch": {
+      "components": null,
+      "maximum_absolute": null,
+      "status": "OPEN",
+      "tolerance": 3e-11
+    },
+    "missing_derivative_slots": {
+      "boundary_metric_and_normal_jet_pullback": null,
+      "dVminus_dgDelta": null,
+      "dVplus_dgDelta": null,
+      "remaining_same_action_boundary_derivative": null
+    },
+    "preserved_diagnostic_local_maximum": 93.54264532195464,
+    "source_counting": "Gaussian differential only; existing reference/local pieces counted by their owners, never added as an independent cancelling term",
+    "status": "OPEN"
+  },
+  "mode_state_payload": {
+    "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+    "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+  },
+  "schema": "NSC-TRANSMITTING-METRIC-PULLBACK-v1",
+  "scope": {
+    "duration_selected": false,
+    "finite_stress_fabricated": false,
+    "metric_timestep_started": false,
+    "new_physical_action_term": false,
+    "old_generator_rerun": false,
+    "parameters_refitted": false,
+    "source_integration_run": false
+  },
+  "source_hashes": {
+    "docs/nsc-extended-action-completion-gate.md": "20a0b0aac347ac4d03633eaccdc593ad13326620c9d46717926a50017f6cc039",
+    "docs/nsc-transmitting-ctp-variation.md": "be1ffb026d35c8e7c68219644031bc1b6af346602f45d70526b5b5ef7229fe5a",
+    "docs/nsc-transmitting-metric-pullback.md": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72",
+    "scripts/derive_nsc_transmitting_action_completion.py": "d942a1b56f1bcc782eced48bf0e8f007a6f6b49fb63200947d1696955c89ce2c",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "tests/test_nsc_transmitting_ctp_variation.py": "14ba673ca67f470ed5b7d43fc3434eee47646ad96deeb0284992c095fd2bc67e"
+  },
+  "status": "OPEN"
+}

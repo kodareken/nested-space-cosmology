@@ -1,0 +1,94 @@
+{
+  "artifact": "GMF-1_spherical_matching_and_flux_closure_audit",
+  "child_topology_proven": false,
+  "classification": "spherical_matching_obstruction_and_local_shell_diagnostic",
+  "closure_status": {
+    "bulk_Q_derived": false,
+    "global_parent_child_solution": false,
+    "global_trajectory_supplied": false,
+    "smooth_transition_action_supplied": false,
+    "surface_action_supplied": false
+  },
+  "darmois_mass_gate": {
+    "same_lambda_mass_jump_at_R_4": 1.0,
+    "same_lambda_nonzero_parent_mass_direct_match_allowed": false,
+    "same_lambda_parent_mass": 1.0,
+    "two_radius_gate": {
+      "classification": "darmois_mass_gate_not_global_solution",
+      "full_darmois_match_proven": false,
+      "input_is_trivial_same_geometry_control": false,
+      "mass_gate_passes_at_both_radii": false,
+      "mass_jump_radius_a": 4.440892098500626e-16,
+      "mass_jump_radius_b": -0.33099999999999996
+    },
+    "unequal_lambda_balance_radius": 5.848035476425731,
+    "unequal_lambda_jump_at_1p1_balance_radius": -0.33099999999999996,
+    "unequal_lambda_jump_at_balance_radius": 4.440892098500626e-16
+  },
+  "derived_exchange_law": false,
+  "global_solution_constructed": false,
+  "model_id": "GMF-1",
+  "oppenheimer_snyder": {
+    "boundary_geodesic_residual": 1.1102230246251565e-16,
+    "chi_boundary": 1.0471975511965976,
+    "density": 0.001193662073189215,
+    "density_at_a_over_100": 1193.6620731892149,
+    "density_growth_a_to_a_over_100": 999999.9999999999,
+    "endpoint_status": {
+      "finite_parent_mass_matching": true,
+      "global_child_solution": false,
+      "induced_metric_and_extrinsic_curvature_residuals_implemented": false,
+      "matching_status": "established_exact_OS_solution_reduced_identity_regression",
+      "regular_transition": false,
+      "singularity_present_at_a_zero": true,
+      "smooth_match": true
+    },
+    "finite_parent_mass": 3.2475952641916437,
+    "friedmann_residual": 0.0,
+    "ricci_scalar_at_a": 0.03,
+    "ricci_scalar_at_a_over_100": 29999.999999999996,
+    "scale_factor": 10.0
+  },
+  "parent_null_expansions": {
+    "child_anti_trapped_sample_not_joined": "anti_trapped",
+    "marginal_R_2GM": "marginal",
+    "normal_R_3": "normal",
+    "product_identity_residual_R_1p5": 2.220446049250313e-16,
+    "theta_minus_R_1p5": -1.885618083164127,
+    "theta_plus_R_1p5": -0.31426968052735443,
+    "trapped_R_1": "trapped"
+  },
+  "prescribed_timelike_shell": {
+    "constant_tension_conservation_residual": 0.0,
+    "orientation_gate": {
+      "accepted": true,
+      "effective_potential": -4.440892098500626e-16,
+      "orientation_checked": true,
+      "thin_shell_distributional": true,
+      "unsquared_residual": 2.7755575615628914e-17
+    },
+    "q_derived": false,
+    "radial_velocity": 0.0,
+    "radius": 4.0,
+    "static_gate": {
+      "actually_static": false,
+      "derivative_step": 1e-05,
+      "fixed_kappa_during_derivative": true,
+      "fixed_kappa_potential_minimum_if_static": false,
+      "general_shell_stability_claimed": false,
+      "neighborhood_orientation_admissibility_checked": false,
+      "orientation_accepted_at_rest": true,
+      "oriented_junction_residual_at_rest": 2.7755575615628914e-17,
+      "potential": -4.440892098500626e-16,
+      "potential_derivative": 1.1412581652631149,
+      "potential_second_derivative": -1.7284212949775222,
+      "thin_shell_distributional": true
+    },
+    "surface_density": 0.004166046908670202,
+    "warning": "A thin Israel shell has distributional curvature and is only a local compatibility diagnostic."
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope": "Exact spherical GR matching identities and a prescribed local Israel shell; not a global parent-to-child spacetime, smooth transition action, or dark-energy derivation.",
+  "thin_shell_distributional": true
+}

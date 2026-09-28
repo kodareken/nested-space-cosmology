@@ -1,0 +1,243 @@
+{
+  "accountable_author": "Douglas Ek",
+  "all_node_clipped_leftover": [
+    0.003154841546,
+    0.005311926991
+  ],
+  "all_node_clipped_step_norm": 1.0,
+  "all_node_condition_number": 7589.213921587872,
+  "all_node_rank_or_conditioning": false,
+  "all_node_unclipped_leftover": [
+    0.000409198777,
+    0.003811452608
+  ],
+  "all_node_unclipped_step_norm": 4.275650288232,
+  "clipped_beats_measured": true,
+  "current_profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "forbidden_identities": [
+    "2d2588c3c9b1c83fe1a3f291314b8030300c4f14d3b12c24eadd2664eb20231b",
+    "949a188181bd9ba0df43bc8ea00db2c89ce35a458017052b7af928059f819680"
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-n16-geometry-killing-current.json": "6d870a9c9bd0748155b1aebbc4bde75789336e46bfac51b163ea45bf071065cc",
+    "results/development/nsc-ks-n16-leftover-anatomy.json": "62d6c3e6ce6370cabcf6a87f56c87ae80a5aaa1ba02f0d4d4f6df6599a0dbf56",
+    "results/development/nsc-ks-n32-geometry-leftover.json": "dac8e8cb37e9426ecec1552bc1b87caa157a7f483f5e16cf9f4c36dcebe55570"
+  },
+  "n16": {
+    "all_node_clipped_leftover": [
+      0.002917224239,
+      0.004374089732
+    ],
+    "all_node_clipped_step_norm": 1.0,
+    "all_node_condition_number": 8850.336832517076,
+    "all_node_rank_or_conditioning": false,
+    "all_node_unclipped_leftover": [
+      0.000238610378,
+      0.003111301991
+    ],
+    "all_node_unclipped_step_norm": 3.497772958747,
+    "direction_count": 32,
+    "mode_count": 16,
+    "orthonormalized": false,
+    "truncated_svd_all_node": [
+      {
+        "N_max": 0.000238610378,
+        "beta_max": 0.003111301991,
+        "condition_cutoff": 10000.0,
+        "control_max": 0.003111301991,
+        "kept_modes": 32,
+        "step_norm": 3.497772958747
+      },
+      {
+        "N_max": 0.000238610378,
+        "beta_max": 0.003111301991,
+        "condition_cutoff": 1000000.0,
+        "control_max": 0.003111301991,
+        "kept_modes": 32,
+        "step_norm": 3.497772958747
+      },
+      {
+        "N_max": 0.000238610378,
+        "beta_max": 0.003111301991,
+        "condition_cutoff": 100000000.0,
+        "control_max": 0.003111301991,
+        "kept_modes": 32,
+        "step_norm": 3.497772958747
+      }
+    ],
+    "unclipped_reaches_existence": false
+  },
+  "n8": {
+    "all_node_clipped_leftover": [
+      0.003154841546,
+      0.005311926991
+    ],
+    "all_node_clipped_step_norm": 1.0,
+    "all_node_condition_number": 7589.213921587872,
+    "all_node_rank_or_conditioning": false,
+    "all_node_unclipped_leftover": [
+      0.000409198777,
+      0.003811452608
+    ],
+    "all_node_unclipped_step_norm": 4.275650288232,
+    "direction_count": 16,
+    "mode_count": 8,
+    "orthonormalized": false,
+    "truncated_svd_all_node": [
+      {
+        "N_max": 0.000409198777,
+        "beta_max": 0.003811452608,
+        "condition_cutoff": 10000.0,
+        "control_max": 0.003811452608,
+        "kept_modes": 16,
+        "step_norm": 4.275650288232
+      },
+      {
+        "N_max": 0.000409198777,
+        "beta_max": 0.003811452608,
+        "condition_cutoff": 1000000.0,
+        "control_max": 0.003811452608,
+        "kept_modes": 16,
+        "step_norm": 4.275650288232
+      },
+      {
+        "N_max": 0.000409198777,
+        "beta_max": 0.003811452608,
+        "condition_cutoff": 100000000.0,
+        "control_max": 0.003811452608,
+        "kept_modes": 16,
+        "step_norm": 4.275650288232
+      }
+    ],
+    "unclipped_reaches_existence": false
+  },
+  "n8_orthonormalized": {
+    "all_node_clipped_leftover": [
+      0.004106660713,
+      0.005790158629
+    ],
+    "all_node_clipped_step_norm": 1.0,
+    "all_node_condition_number": 235560.18745389537,
+    "all_node_rank_or_conditioning": false,
+    "all_node_unclipped_leftover": [
+      0.030489109985,
+      0.003815824048
+    ],
+    "all_node_unclipped_step_norm": 4262.422536396321,
+    "direction_count": 16,
+    "mode_count": 8,
+    "orthonormalized": true,
+    "truncated_svd_all_node": [
+      {
+        "N_max": 0.004081949067,
+        "beta_max": 0.004371399962,
+        "condition_cutoff": 10000.0,
+        "control_max": 0.004371399962,
+        "kept_modes": 8,
+        "step_norm": 0.260862312285
+      },
+      {
+        "N_max": 0.030489109985,
+        "beta_max": 0.003815824048,
+        "condition_cutoff": 1000000.0,
+        "control_max": 0.030489109985,
+        "kept_modes": 16,
+        "step_norm": 4262.422536396321
+      },
+      {
+        "N_max": 0.030489109985,
+        "beta_max": 0.003815824048,
+        "condition_cutoff": 100000000.0,
+        "control_max": 0.030489109985,
+        "kept_modes": 16,
+        "step_norm": 4262.422536396321
+      }
+    ],
+    "unclipped_reaches_existence": false
+  },
+  "named_search_stall": "fourier_wu_leftover_cannot_reach_existence",
+  "orthonormalized_columns": false,
+  "projected_fourier_coefficients": [
+    [
+      -1.0089000977890779e-05,
+      -1.590838804314643e-05,
+      -6.292584085809765e-05,
+      -8.402458979054196e-06,
+      -3.111949139973333e-05,
+      -4.1032656728374625e-06,
+      -2.5159213487776306e-05,
+      -2.831887476349233e-06
+    ],
+    [
+      11.948755460600346,
+      -0.22327348391933272,
+      0.126241761672663,
+      0.03468535238818902,
+      0.09244323692996739,
+      0.04063295438468144,
+      0.07203132008333839,
+      0.02957872443928364
+    ]
+  ],
+  "projected_radius_lower_bound": 0.9999386294232682,
+  "raised_to_16": false,
+  "representation": "Fourier-on-I times owned axial plateau",
+  "resolution_like_at_8": true,
+  "schema": "NSC-KS-FOURIER-WU-LEFTOVER-v1",
+  "scope": {
+    "chebyshev_family_not_widened": true,
+    "full_scale_n16_not_evolved": true,
+    "high_mode_matter_columns_invented": false,
+    "metric_timestep": false,
+    "n8_next_not_evolved": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "selected_direction_count": 16,
+  "selected_mode_count": 8,
+  "solve_condition_number": 6691.444333161487,
+  "solve_unclipped_leftover": [
+    0.000366206353,
+    0.003892713226
+  ],
+  "solve_unclipped_step_norm": 4.391800771699,
+  "source_hashes": {
+    "docs/nsc-ks-fourier-wu-leftover.md": "bb75a7c8a3d82ac87aae52a1588cde8da3db0d4c3a23686192af27e5c298e2f2",
+    "scripts/derive_nsc_ks_fourier_wu_leftover.py": "8eb65d2c35780b23e643e4573449fa0742d073d4cecda259b1f1b06a060d70c8",
+    "src/recursive_horizons/nsc_local_incoming_fourier_family.py": "0ab11fa9f0d6e8aad81de75dd63d39173737e89bd62559e7395325bd346c0bbf"
+  },
+  "status": "OPEN: Fourier-on-I geometry leftover cannot reach EXISTENCE; no family evolved",
+  "truncated_svd_all_node": [
+    {
+      "N_max": 0.000409198777,
+      "beta_max": 0.003811452608,
+      "condition_cutoff": 10000.0,
+      "control_max": 0.003811452608,
+      "kept_modes": 16,
+      "step_norm": 4.275650288232
+    },
+    {
+      "N_max": 0.000409198777,
+      "beta_max": 0.003811452608,
+      "condition_cutoff": 1000000.0,
+      "control_max": 0.003811452608,
+      "kept_modes": 16,
+      "step_norm": 4.275650288232
+    },
+    {
+      "N_max": 0.000409198777,
+      "beta_max": 0.003811452608,
+      "condition_cutoff": 100000000.0,
+      "control_max": 0.003811452608,
+      "kept_modes": 16,
+      "step_norm": 4.275650288232
+    }
+  ],
+  "unclipped_reaches_existence": false
+}

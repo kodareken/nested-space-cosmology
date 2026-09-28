@@ -1,0 +1,48 @@
+//////////////////////////////////////////////////////////////////////
+TITLE:            GCN/LVC NOTICE
+NOTICE_DATE:      Thu 17 Aug 17 13:08:17 UT
+NOTICE_TYPE:      LVC Initial Skymap
+TRIGGER_NUM:      G298048
+TRIGGER_DATE:     17982 TJD;   229 DOY;   2017/08/17 (yyyy/mm/dd)
+TRIGGER_TIME:     45664.445710 SOD {12:41:04.445710} UT
+SEQUENCE_NUM:     1
+GROUP_TYPE:       1 = CBC
+SEARCH_TYPE:      0 = undefined
+PIPELINE_TYPE:    4 = GSTLAL
+FAR:              3.478e-12 [Hz]  (one per 3328022.5 days)
+PROB_NS:          1.00 [range is 0.0-1.0]
+PROB_REMNANT:     1.00 [range is 0.0-1.0]
+TRIGGER_ID:       0x8
+MISC:             0x1100001
+SKYMAP_URL:       https://gracedb.ligo.org/api/events/G298048/files/bayestar.fits.gz
+SKYMAP_BASIC_URL: https://gracedb.ligo.org/apibasic/events/G298048/files/bayestar.fits.gz
+EVENT_URL:        https://gracedb.ligo.org/events/G298048
+COMMENTS:         LVC Initial Skymap -- a location probability map.  
+COMMENTS:         This event has been vetted by a human.  
+COMMENTS:         LIGO-Hanford Observatory contributed to this candidate event.  
+ 
+ 
+//////////////////////////////////////////////////////////////////////
+TITLE:            GCN/LVC NOTICE
+NOTICE_DATE:      Thu 17 Aug 17 17:51:49 UT
+NOTICE_TYPE:      LVC Update Skymap
+TRIGGER_NUM:      G298048
+TRIGGER_DATE:     17982 TJD;   229 DOY;   2017/08/17 (yyyy/mm/dd)
+TRIGGER_TIME:     45664.445710 SOD {12:41:04.445710} UT
+SEQUENCE_NUM:     2
+GROUP_TYPE:       1 = CBC
+SEARCH_TYPE:      0 = undefined
+PIPELINE_TYPE:    4 = GSTLAL
+FAR:              3.478e-12 [Hz]  (one per 3328022.5 days)
+PROB_NS:          1.00 [range is 0.0-1.0]
+PROB_REMNANT:     1.00 [range is 0.0-1.0]
+TRIGGER_ID:       0x8
+MISC:             0x2100201
+SKYMAP_URL:       https://gracedb.ligo.org/api/events/G298048/files/bayestar-HLV.fits.gz
+SKYMAP_BASIC_URL: https://gracedb.ligo.org/apibasic/events/G298048/files/bayestar-HLV.fits.gz
+EVENT_URL:        https://gracedb.ligo.org/events/G298048
+COMMENTS:         LVC Updated Skymap -- a location probability map.  
+COMMENTS:         This event has been vetted by a human.  
+COMMENTS:         LIGO-Hanford Observatory contributed to this candidate event.  
+ 
+ 

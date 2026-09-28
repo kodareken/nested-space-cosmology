@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizon Mathematics Visualisation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    svg {
+      border: 1px solid #ddd;
+      background-color: white;
+    }
+    .caption {
+      font-size: 0.9em;
+      margin-top: 10px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Horizon Engine Relationships</h1>
+  <div class="container">
+    <!-- SVG Diagram illustrating key mathematical relations -->
+    <svg width="700" height="480" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+      <!-- Define arrowhead marker for arrows -->
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#555" />
+        </marker>
+      </defs>
+      <!-- Draw the main horizon circle -->
+      <circle cx="200" cy="240" r="100" fill="#e0f7fa" stroke="#0097a7" stroke-width="3" />
+      <text x="200" y="240" text-anchor="middle" dy="0.3em" font-size="16" font-weight="bold" fill="#006064">Horizon<br/>R</text>
+      <!-- Box: R = c/H -->
+      <rect x="400" y="60" width="180" height="60" rx="10" ry="10" fill="#fff3e0" stroke="#ffa726" stroke-width="2" />
+      <text x="410" y="90" font-size="16" fill="#e65100">R = c / H</text>
+      <!-- Arrow from circle to R relation -->
+      <line x1="290" y1="175" x2="400" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arrow)" />
+      <!-- Box: M = c³/(2GH) -->
+      <rect x="400" y="150" width="180" height="60" rx="10" ry="10" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2" />
+      <text x="410" y="180" font-size="16" fill="#2e7d32">M = c³ / (2 G H)</text>
+      <!-- Arrow from circle to M relation -->
+      <line x1="290" y1="240" x2="400" y2="180" stroke="#555" stroke-width="2" marker-end="url(#arrow)" />
+      <!-- Box: S/k_B = π R²/ℓ_P² -->
+      <rect x="400" y="240" width="180" height="80" rx="10" ry="10" fill="#f3e5f5" stroke="#ab47bc" stroke-width="2" />
+      <text x="410" y="270" font-size="15" fill="#6a1b9a">S / k₍ᴮ₎ = π R² / ℓₚ²</text>
+      <!-- Arrow from circle to S relation -->
+      <line x1="290" y1="270" x2="400" y2="280" stroke="#555" stroke-width="2" marker-end="url(#arrow)" />
+      <!-- Box: Λ = 3 / R² -->
+      <rect x="400" y="360" width="180" height="60" rx="10" ry="10" fill="#e1f5fe" stroke="#29b6f6" stroke-width="2" />
+      <text x="410" y="390" font-size="16" fill="#0277bd">Λ = 3 / R²</text>
+      <!-- Arrow from circle to Λ relation -->
+      <line x1="290" y1="315" x2="400" y2="390" stroke="#555" stroke-width="2" marker-end="url(#arrow)" />
+      <!-- Box: t ≈ R / c -->
+      <rect x="30" y="60" width="180" height="60" rx="10" ry="10" fill="#fce4ec" stroke="#ec407a" stroke-width="2" />
+      <text x="40" y="90" font-size="16" fill="#ad1457">t ≈ R / c</text>
+      <!-- Arrow from R to time relation -->
+      <line x1="110" y1="175" x2="110" y2="120" stroke="#555" stroke-width="2" marker-end="url(#arrow)" />
+      <!-- Description text -->
+      <text x="30" y="440" font-size="13" fill="#555">This diagram illustrates key relationships of the horizon engine: </text>
+      <text x="30" y="455" font-size="13" fill="#555">the horizon radius R sets the cosmic time scale t, total mass M, entropy S, and vacuum energy Λ.</text>
+    </svg>
+  </div>
+  <p class="caption">Mathematical relationships underpinning the horizon-engine concept. A critical-density universe with Hubble radius R = c/H naturally has a compactness C = 1, giving rise to relations for mass (M), horizon entropy (S), dark-energy density (Λ) and cosmic time (t).</p>
+</body>
+</html>

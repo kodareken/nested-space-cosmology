@@ -1,0 +1,91 @@
+schema_version = 1
+artifact_id = "FGC-1-SRC2-CAP1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+
+[scope]
+role = "deterministic_replay_capture_and_arithmetic_attack_of_the_PROTO11_GR0_affine_source_wall"
+branch = "GR-0"
+amplitude = "5/2"
+method = "RK4"
+point_count = 8193
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+mechanism_question_answered = false
+
+[lineage]
+cal8_result = "results/fgc-1-cal8-pref10.json"
+cal8_result_sha256 = "10c6898e1ec6e7c07793180c4a4f8fa26a1b2f660115a0b2bc54497ff8bbb89d"
+hlt9_authorization = "results/fgc-1-hlt9-mon9.json"
+hlt9_authorization_sha256 = "1902cedb853643c445ece733c57d4cc3815c11d48a1d123aefa12c009368893e"
+cal8_run_plan = "configs/fgc/fgc-1-cal8-run1.toml"
+cal8_run_plan_sha256 = "db3d28ffac36fe4e9720d81ea849cdd7262f876810e30ed2cd1cd8176891d42f"
+campaign_manifest = "runs/fgc-2-sf1/proto11/calibration/manifest.json"
+campaign_manifest_sha256 = "3ab6ea9e4286dfc412aae98f515cb9ca0e231da6280b55edb2e2f4bd47c53d03"
+campaign_event_log = "runs/fgc-2-sf1/proto11/calibration/events.jsonl"
+campaign_event_log_sha256 = "c76d8f3b35e7319351b33a33f3c42ccd2f81741d43f9d7978246ff9daf42b9f5"
+campaign_checkpoint = "runs/fgc-2-sf1/proto11/calibration/latest-checkpoint.npz"
+campaign_checkpoint_sha256 = "f8d8d8768559ff3acd120b559c7f6444467bcdd9fcc217e3048cf30c51fb1017"
+campaign_result = "runs/fgc-2-sf1/proto11/calibration/campaign-result.json"
+campaign_result_sha256 = "d9abdcb813b30999c1c1d439808f5a0bd38baf1762276c690687a9d01d374a08"
+
+[replay]
+first_common_event_index = 1
+first_common_event_time = "1/16"
+first_common_event_state_sha256 = "212724c1b7615d894d3e0d9ad2488dfe60c8d11957f0fa74c2c61ec324c25e7d"
+first_common_event_step_index = 73
+first_common_event_transaction_serial = 365
+first_common_event_CFL_retry_count = 69
+first_common_event_source_retry_count = 0
+target_common_event_index = 2
+target_common_event_time = "1/8"
+expected_source_only_rejection_count = 164
+expected_terminal_accepted_state_sha256 = "414e3805cd2693d73770f6f7222ea27cdaf568299c7f913e6029457320792bab"
+expected_terminal_accepted_time = "0.0706352245695038"
+expected_terminal_step_index = 97
+expected_terminal_transaction_serial = 485
+expected_terminal_source_retry_count = 164
+expected_terminal_failure_stage_time = "0.07063522612170793"
+expected_terminal_failure_residual = "1.0659145473163184e-12"
+expected_terminal_matching_source_calls = 2
+retry_factor = "1/2"
+maximum_CFL_retries_per_step = 32
+maximum_source_retries_per_step = 32
+minimum_step_size = "1/1073741824"
+
+[arithmetic]
+raw_complete_residual_maximum = "1/1000000000000"
+kinetic_condition_number_maximum = "10000000000"
+maximum_complete_refinement_iterations = 16
+symmetric_power_two_seed_scales = ["1", "16", "256"]
+exact_binary_point_limit = 8
+exact_binary_selection_ratio = "1/2"
+complete_unredefined_binary64_residual_is_the_only_gate = true
+reconstructed_affine_residual_is_diagnostic_only = true
+threshold_change_forbidden = true
+continuum_equation_change_forbidden = true
+reference_derivative_map_change_forbidden = true
+
+[output]
+root = "runs/fgc-2-sf1/src2/affine-wall-capture"
+manifest = "runs/fgc-2-sf1/src2/affine-wall-capture/manifest.json"
+replay_result = "runs/fgc-2-sf1/src2/affine-wall-capture/replay-result.json"
+fixture = "runs/fgc-2-sf1/src2/affine-wall-capture/affine-wall-fixture.npz"
+arithmetic_result = "runs/fgc-2-sf1/src2/affine-wall-capture/arithmetic-result.json"
+fresh_namespace_required = true
+clean_tracked_worktree_required = true
+overwrite_forbidden = true
+
+[claims]
+PROTO11_source_wall_replayed = false
+PROTO11_test_instrument_shown_incomplete = false
+PROTO12_frozen = false
+GR0_calibration_completed = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+dark_sector_mechanism_derived = false
+child_domain_or_topology_derived = false

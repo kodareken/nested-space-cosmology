@@ -1,0 +1,123 @@
+{
+  "comparison": {
+    "exact": "identities, strings, types, keys and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "domain": {
+    "Euclidean_normal_gamma": "outward_sign * I2 tensor gamma5",
+    "Hilbert_measure": "integral sqrt(g5) Psi_dagger Psi",
+    "K_convention": "trace of extrinsic curvature with outward normal; Vassilevich L_aa",
+    "Lorentzian_Cauchy_current": "I2 tensor (i beta gamma5)",
+    "allowed_projector": "P=(I8-eta*tau3 tensor gamma5)/2, eta=+1 or -1",
+    "boundary_type": "reflecting compact endpoints, not the parent-child transmitting throat",
+    "fields": "two torsionless Dirac copies; geometric terms at zero link and gauge backgrounds",
+    "geometry": "Euclidean conformal collar e^(2 sigma)*(g4+dY^2), interval [-L_star,L_star]",
+    "mixed_domain": "(I-P)Psi=0; (nabla_in - K_out/2)P Psi=0",
+    "positive_operator": "D_E^dagger D_E, not a self-adjoint D_E squared on the same chiral domain",
+    "sigma": "-18*(Y/L_star)^2/1015"
+  },
+  "domains": {
+    "orientation_-1": {
+      "Euclidean_D_self_adjoint_on_this_domain": false,
+      "Euclidean_same_domain_Green_form_rank": 4,
+      "adjoint_uses_complementary_values": true,
+      "allowed_rank": 4
+    },
+    "orientation_1": {
+      "Euclidean_D_self_adjoint_on_this_domain": false,
+      "Euclidean_same_domain_Green_form_rank": 4,
+      "adjoint_uses_complementary_values": true,
+      "allowed_rank": 4
+    }
+  },
+  "exact_residuals": {
+    "bulk_boundary_warp_cancellation": "0",
+    "normal_-1/Robin_conformal_map": "0",
+    "normal_-1/metric_boundary_residual": "0",
+    "normal_1/Robin_conformal_map": "0",
+    "normal_1/metric_boundary_residual": "0",
+    "orientation_-1/Lorentzian_endpoint_current": "0",
+    "orientation_-1/a1": "0",
+    "orientation_-1/a2_boundary": "0",
+    "orientation_-1/a3_boundary": "0",
+    "orientation_-1/adjoint_boundary_pairing": "0",
+    "orientation_-1/projected_tangent_0": "0",
+    "orientation_-1/projected_tangent_1": "0",
+    "orientation_-1/projected_tangent_2": "0",
+    "orientation_-1/projected_tangent_3": "0",
+    "orientation_-1/projector_derivative_trace": "0",
+    "orientation_1/Lorentzian_endpoint_current": "0",
+    "orientation_1/a1": "0",
+    "orientation_1/a2_boundary": "0",
+    "orientation_1/a3_boundary": "0",
+    "orientation_1/adjoint_boundary_pairing": "0",
+    "orientation_1/projected_tangent_0": "0",
+    "orientation_1/projected_tangent_1": "0",
+    "orientation_1/projected_tangent_2": "0",
+    "orientation_1/projected_tangent_3": "0",
+    "orientation_1/projector_derivative_trace": "0"
+  },
+  "imported_heat_formulas": {
+    "a1": "0",
+    "a2": "-rank/[12*(4*pi)^(5/2)] * (integral_M R + 2*integral_boundary K)",
+    "a3_geometric": "rank/[128*(4*pi)^2] * integral_boundary (K^2-2*K_ab*K_ab)",
+    "a3_on_this_umbilic_collar": "rank/[256*(4*pi)^2] * integral_boundary K^2 >= 0",
+    "assumptions": "unit heat smearing; E=-R/4; local mixed conditions; smooth Euclidean metric; no torsion or link potential",
+    "rank": 8,
+    "source": "https://arxiv.org/html/hep-th/0306138v3, equations 5.30-5.32"
+  },
+  "input_hashes": {
+    "results/development/charged-sector.json": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+    "results/development/vacuum-charge-matching.json": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b"
+  },
+  "metric_boundary_matching": {
+    "Dirichlet_momentum": "pi^ab=-A5*sqrt(abs(h))*epsilon*(K^ab-K*h^ab)",
+    "Gamma_rest_excludes_already_included_geometric_terms": true,
+    "common_interface_equation": "pi_parent^ab+pi_child^ab+delta Gamma_rest/delta h_ab=0",
+    "current_Gaussian_endpoints_stationary_with_no_other_boundary_terms": false,
+    "dimensionless_geometric_residual_per_endpoint": {
+      "-1": "108*exp(18/1015)/1015",
+      "1": "108*exp(18/1015)/1015"
+    },
+    "higher_order_or_transmission_metric_variation_solved": false,
+    "leading_source_free_boundary_condition_if_metric_varied": "K_ab-K*h_ab=0",
+    "residual_definition": "L_star*(K_ab-K*h_ab)/h_ab on the umbilic collar, no component sum",
+    "source": "https://arxiv.org/html/1605.01603v1, equations 4-5"
+  },
+  "proper_time_boundary_action": {
+    "Einstein_boundary_to_bulk_coefficient_ratio": "2",
+    "V_warp_with_derived_a2_boundary": "-12*A5*J",
+    "a2_window_weight": "(Lambda^3-nu_match^3)/3",
+    "a3_window_weight": "(Lambda^2-nu_match^2)/2",
+    "boundary_a3_sign_on_static_umbilic_collar": "nonnegative; N=2 here",
+    "boundary_a3_vacuum_density": "N*(Lambda^2-nu_match^2)/(8*(4*pi)^2) * sum_endpoints exp(2*sigma)*(sigma_prime)^2",
+    "maximum_negative_relative_warp_factor": 0.0006970514306199733,
+    "order_Lambda4_boundary_volume_term": "0",
+    "retained_Xi_lower_bound_for_zeta_ge_1_in_units_q_squared": 2.99790884570814,
+    "reused_K_with_standard_GHY": 0.000418230858371984,
+    "warp_ratio_from_authenticated_input": "-(f3/f5)*K_with_standard_GHY/zeta"
+  },
+  "schema": "NSC-COMPACT-BOUNDARY-ACTION-v1",
+  "scope": {
+    "Dirac_determinant_phase_derived": false,
+    "Euclidean_D_dagger_D_is_positive": true,
+    "compact_geometric_a1_a2_a3_derived_for_declared_modulus_domain": true,
+    "full_compact_boundary_action_derived": false,
+    "full_renormalized_vacuum_fixed": false,
+    "higher_order_curvature_boundary_coefficients_included": false,
+    "quantum_state_or_relative_scale_selected": false,
+    "self_sourced_solution_derived": false,
+    "transmitting_throat_boundary_action_derived": false
+  },
+  "source_hashes": {
+    "docs/nsc-compact-boundary-action.md": "9ca3b73c41e82d2027303555c475a336889174ccee4758708396e6dedc55a8f3",
+    "docs/nsc-compact-mass-map.md": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_spinor_bridge.py": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19"
+  },
+  "status": "compact determinant-magnitude boundary matching; full source open"
+}

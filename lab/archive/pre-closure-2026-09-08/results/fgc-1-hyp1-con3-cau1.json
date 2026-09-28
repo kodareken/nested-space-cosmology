@@ -1,0 +1,188 @@
+{
+  "artifact_id": "FGC-1-HYP1-CON3-CAU1",
+  "classification": "exact_COMP1_compatible_point_witness_and_conditional_boundary_free_gauge_Cauchy_uniqueness_not_solution_hypersurface_or_IBVP",
+  "conditional_gauge_Cauchy_certificate": {
+    "classification": "exact_COMP1_point_witness_plus_conditional_boundary_free_normally_hyperbolic_gauge_Cauchy_uniqueness_not_solution_or_IBVP",
+    "compatible_point_witness": {
+      "QIFT1_full_REF1_root_conditionally_supplies_normal_Cauchy_data": true,
+      "coordinate_radius": "4",
+      "metric_defined_C_zero": true,
+      "normal_gauge_extension_map": {
+        "determinant": "-6120186961754529976025169/18889465931478580854784",
+        "determinant_nonzero": true,
+        "diagonal_entries_nonzero": true,
+        "input_order": [
+          "nabla_t_C^t",
+          "nabla_t_C^r"
+        ],
+        "matrix": [
+          [
+            "-2473901162487/137438953472",
+            "0"
+          ],
+          [
+            "0",
+            "2473901162487/137438953472"
+          ]
+        ],
+        "off_diagonal_entries_zero": true,
+        "output_order": [
+          "extension_covariant_tt",
+          "extension_covariant_tr"
+        ]
+      },
+      "one_local_activated_two_jet_only": true,
+      "physical_H_zero": true,
+      "physical_M_zero": true,
+      "tangential_and_normal_nabla_C_zero_at_local_jet": true
+    },
+    "conditional_theorem": {
+      "REF1_extension_then_vanishes_and_unredefined_ACT1_metric_equation_is_recovered": true,
+      "both_unmodified_scalar_equations_required": true,
+      "boundary_free_domain_of_dependence_or_pre_boundary_region_required": true,
+      "complete_REF1_metric_equations_required": true,
+      "conditional_boundary_free_Cauchy_uniqueness_statement_derived": true,
+      "regularity_required": "sufficient_for_metric_derived_C_and_linear_normally_hyperbolic_uniqueness_at_least_C3_metric_scalar_jet_control",
+      "statement": "On any sufficiently smooth full REF1 plus two-scalar solution, if F>0, hat_g is smooth Lorentzian, Sigma is hat-spacelike and C[g]|Sigma=0 with hat_n.nabla(C[g])|Sigma=0, standard uniqueness for the homogeneous normally hyperbolic system gives C[g]=0 in the boundary-free domain of dependence.",
+      "zero_C_and_zero_hat_normal_derivative_on_hypersurface_required": true
+    },
+    "nonclaims": {
+      "collapse_solution_derived": false,
+      "constraint_preserving_ACT1_IBVP_proven": false,
+      "evolution_authorized": false,
+      "finite_invariant_transition_surface_derived": false,
+      "metric_derived_incoming_gauge_boundary_map_to_main_fields_derived": false,
+      "nonzero_width_compatible_initial_hypersurface_constructed": false,
+      "physical_constraint_propagation_proven": false,
+      "physical_initial_constraint_manifold_solved": false,
+      "quasilinear_local_existence_proven": false,
+      "singularity_resolution_derived": false,
+      "smooth_nonlinear_REF1_solution_constructed": false,
+      "uniform_normal_gauge_map_on_UHYP1_graph_proven": false
+    },
+    "subsidiary_operator": {
+      "F_strictly_positive_at_COMP1": true,
+      "coordinate_t_slice_hat_spacelike_at_COMP1": true,
+      "effective_planck_square_F": "274877906943/68719476736",
+      "equation_on_full_REF1_and_both_scalar_shells": "L_hat(C[g])=0",
+      "hat_base_inverse_determinant": "-9",
+      "hat_inverse_metric_at_COMP1": [
+        [
+          "-9",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/16",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/16"
+        ]
+      ],
+      "hat_metric_Lorentzian_at_COMP1": true,
+      "lower_order_terms_are_linear_homogeneous_in_C_and_nabla_C": true,
+      "normally_hyperbolic_at_COMP1": true,
+      "principal_part": "(F/2)*hat_g^(mu nu)*nabla_mu*nabla_nu*C^alpha",
+      "vector_component_principal_factor_is_scalar_hat_cone_identity": true
+    }
+  },
+  "derivation_document": "docs/fgc-hyp1-con3-cau1.md",
+  "derivation_document_sha256": "e50c4f83617f29084b35ae972cc03eb8499aab7d9e694b547fcc192b4ae6de4b",
+  "frozen_configuration": {
+    "artifact_id": "FGC-1-HYP1-CON3-CAU1",
+    "compatible_data_config": "configs/fgc/fgc-1-hyp1-con1-comp1.toml",
+    "compatible_data_result": "results/fgc-1-hyp1-con1-comp1.json",
+    "metric_signature": "-+++",
+    "metric_subsidiary_config": "configs/fgc/fgc-1-hyp1-con2-mprop1.toml",
+    "metric_subsidiary_result": "results/fgc-1-hyp1-con2-mprop1.json",
+    "open_gates": {
+      "collapse_solution_derived": false,
+      "constraint_preserving_ACT1_IBVP_proven": false,
+      "evolution_authorized": false,
+      "finite_invariant_transition_surface_derived": false,
+      "metric_derived_incoming_gauge_boundary_map_to_main_fields_derived": false,
+      "nonzero_width_compatible_initial_hypersurface_constructed": false,
+      "physical_constraint_propagation_proven": false,
+      "physical_initial_constraint_manifold_solved": false,
+      "quasilinear_local_existence_proven": false,
+      "singularity_resolution_derived": false,
+      "smooth_nonlinear_REF1_solution_constructed": false,
+      "uniform_normal_gauge_map_on_UHYP1_graph_proven": false
+    },
+    "project_version": "0.11.0",
+    "proof_contract": {
+      "COMP1_C_and_complete_local_nabla_C_zero": true,
+      "COMP1_normal_gauge_extension_map_exactly_invertible": true,
+      "COMP1_physical_H_and_M_zero": true,
+      "F_strictly_positive_at_COMP1": true,
+      "both_unmodified_scalar_equations_required": true,
+      "boundary_free_domain_of_dependence_only": true,
+      "complete_REF1_metric_equations_required": true,
+      "coordinate_t_slice_hat_spacelike_at_COMP1": true,
+      "hat_metric_Lorentzian_at_COMP1": true,
+      "homogeneous_linear_subsidiary_operator": true,
+      "metric_defined_C_through_second_partials": true,
+      "standard_normally_hyperbolic_uniqueness_theorem_used": true
+    },
+    "reference": {
+      "coordinate_radius": "4",
+      "hat_normal_factor": "9",
+      "radial_domain_minimum": "1/2",
+      "reference_id": "flat_spherical_annulus",
+      "tilde_normal_factor": "4"
+    },
+    "riemann_convention": "plus_partial_mu_gamma_nu",
+    "schema_version": 1
+  },
+  "gate_status": {
+    "conditional_boundary_free_gauge_Cauchy_uniqueness_theorem_derived": true,
+    "constraint_preserving_ACT1_IBVP_proven": false,
+    "evolution_authorized": false,
+    "exact_COMP1_local_compatible_Cauchy_data_witness_passed": true
+  },
+  "generated_by": "scripts/reproduce_fgc_hyp1_con3_cau1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hyp1_con3_cau1.py": "e47516195e221ba5aa96cd340a1565cc2b172d423fa5898d869f98bd6eb9afdd",
+    "src/recursive_horizons/fgc/modified_harmonic_cauchy.py": "06caa5c1f43d7cf73086536742c1eebd8fbc2583a2e3ac63b8be0192c8b73462",
+    "src/recursive_horizons/fgc/modified_harmonic_constraints.py": "428ddbe6325a43d905d5da880d0b67922b5448d38e69a2461e84003348708783",
+    "src/recursive_horizons/fgc/modified_harmonic_metric_propagation.py": "cdf57e13946b90ac33b0bae30512dce13b3a3632624323ff7c26ec2efee18a39"
+  },
+  "nonclaims": {
+    "collapse_solution_derived": false,
+    "constraint_preserving_ACT1_IBVP_proven": false,
+    "evolution_authorized": false,
+    "finite_invariant_transition_surface_derived": false,
+    "metric_derived_incoming_gauge_boundary_map_to_main_fields_derived": false,
+    "nonzero_width_compatible_initial_hypersurface_constructed": false,
+    "physical_constraint_propagation_proven": false,
+    "physical_initial_constraint_manifold_solved": false,
+    "quasilinear_local_existence_proven": false,
+    "singularity_resolution_derived": false,
+    "smooth_nonlinear_REF1_solution_constructed": false,
+    "uniform_normal_gauge_map_on_UHYP1_graph_proven": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-hyp1-con1-comp1.toml": "3b52649856dc37d12da912846a0739216e183114d01a14b4b3fa1cea6ce41291",
+    "configs/fgc/fgc-1-hyp1-con2-mprop1.toml": "4dc1c897d0df09656a0a8d0e93f7b4e033d63b2f36c443f7b653878f5dff9402",
+    "results/fgc-1-hyp1-con1-comp1.json": "8bdf33ed4480b171955628f266af413752f69b61019911b3216bfc847a493680",
+    "results/fgc-1-hyp1-con2-mprop1.json": "9df6af7e1906972dbac48aa2459ea462b2636cac40a3b9560ca46f2e4355868f"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-hyp1-con3-cau1.toml": "d693e4901d97447f6f3c23a5a3dbd3c2a2f72ccfd32fad23ef65ef3366ddfc13"
+  }
+}

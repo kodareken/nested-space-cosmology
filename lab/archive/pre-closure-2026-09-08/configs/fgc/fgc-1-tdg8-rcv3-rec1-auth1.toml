@@ -1,0 +1,201 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-RCV3-REC1-AUTH1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_exact_recovery_then_same_event_continuation_authority"
+nonclaims = [
+  "REC1 authorizes only exact metadata reconciliation followed by the unchanged GR-0 event-23 continuation; it does not itself complete recovery, an event, trapping calibration, or a physical result.",
+  "The generation-nine physical arrays, campaign identity, internal execution commit, plan, thresholds, retry ceiling, minimum width, source/CFL ownership, and scientific stops remain unchanged.",
+  "The predicted generation-ten checkpoint advances only retry metadata: no accepted physical state, descriptor, payload, or accepted time changes.",
+  "A recovery, writer, provenance, retry, or runtime failure is not a GR-0, FGC-QR, gradient, mechanism, or physical obstruction.",
+  "REC1 has no generation-zero, bootstrap, SGB-L, FGC-QR, calibration-promotion, retained-EFT, or physical-transition entry point.",
+]
+
+[predecessor]
+auth1_authority_commit = "afe855be31fe983e940479bffa669e9e60a26344"
+auth1_config_path = "configs/fgc/fgc-1-tdg8-rcv3-auth1.toml"
+auth1_config_sha256 = "0a453fe3b2ea61a6bfdeea1140228e7028cef668e80e34a2618caeef7d69cbf2"
+auth1_result_path = "results/fgc-1-tdg8-rcv3-auth1.json"
+auth1_result_sha256 = "6796474ba6f39bd5b425fe564cc758587bbe75eb2ed8a5566a5696af828f3618"
+normalization_fix_commit = "ee888156b226c8210a902ed733fd144e0ba24598"
+fixed_schema_path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py"
+fixed_schema_sha256 = "2b6884aaedecfeeaf82a633f92c3418ef0b5889fc620b90faa84bdc714694d48"
+
+[projection]
+projection_id = "FGC-1-TDG8-RCV3-PROJECTION-1"
+wrapper_path = "runs/fgc-2-sf1/tdg8-rcv3"
+store_path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+receipt_path = "runs/fgc-2-sf1/tdg8-rcv3/bootstrap-receipt.json"
+receipt_sha256 = "59e928830c213bd05d798bbc89b5994667d53a8b3c9ecbad3bf9023cf756dcba"
+receipt_raw_sha256 = "ed6b9c7ff72f18e8843ccfb0992d39dda7ee199e57cda8c17912d6d81004bd8a"
+
+[recovery_entry]
+leaf_count = 54
+byte_count = 6328040
+manifest_sha256 = "774ea5aad22a52c031abf8e6ee8462c8066d0fd9570638639cad77036752043a"
+checkpoint_generation = 9
+checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+checkpoint_raw_sha256 = "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846"
+journal_sequence = 10
+journal_sha256 = "5b533eb7009a9c7c3f353d26813f9cbbde8574afae77492929b435b4c701c5ff"
+suffix_kinds = ["tdg6_rejection", "cursor_transition"]
+seq11_path = "journal/00000000000000000011-341cd8cd328434d85774bcb452889ac1886c520a72e945a92337b72cf564161a.journal"
+seq11_sha256 = "341cd8cd328434d85774bcb452889ac1886c520a72e945a92337b72cf564161a"
+seq11_raw_sha256 = "e4f9ca42f2d014d4bdbd875a0f24a9bbb9c04159fb0d9e0e7de8d0d72db61fdf"
+seq11_byte_count = 23839
+seq12_path = "journal/00000000000000000012-d25d371b67cd227edc735479f719970b382443d9097ee718a4dd3888c0b6cca4.journal"
+seq12_sha256 = "d25d371b67cd227edc735479f719970b382443d9097ee718a4dd3888c0b6cca4"
+seq12_raw_sha256 = "dd02233dd5e4cf28becbc4fe29259d0879005d806b70493aa2281255081eb219"
+seq12_byte_count = 101869
+writer_path = "locks/active-write.lock"
+writer_raw_sha256 = "278f0c5aa4cfd86661e8bbaef44e340e39592c9b0206cc8b4dc216f387f29605"
+writer_byte_count = 394
+writer_schema = "FGC-1-HLT16-active-writer-v1"
+writer_authorization_commit = "6df67967e6e0bc63eca4dc6951a60d3787368f26"
+writer_plan_sha256 = "e649e477b98411a3051f9946f2a9248b875d2b598818b8983ce06caa969d2126"
+writer_checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+writer_host = "DouglasMac.local"
+writer_pid = 57763
+
+[recovery_entry.directory_leaf_counts]
+checkpoints = 10
+journal = 13
+locks = 2
+payloads = 11
+receipts = 1
+states = 17
+
+[predicted_recovery]
+generation = 10
+checkpoint_sha256 = "6dc263e7719c9a422e9fed1b81ac573f3127607a2285f3c55b095d9019f60187"
+checkpoint_raw_sha256 = "9abb59999809d22354d6b5f810bc592cd2673e5e4d354d0ec58e9ad53522dc4b"
+checkpoint_byte_count = 186497
+parent_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+journal_sequence = 12
+journal_tip_sha256 = "d25d371b67cd227edc735479f719970b382443d9097ee718a4dd3888c0b6cca4"
+event = 23
+target_rational = "3/2"
+target_binary64_hex = "0x1.8000000000000p+0"
+disposition = "nonterminal"
+retry_member_key = "RK4-2049"
+descriptor_sha256 = "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4"
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+retry_depth = 3
+pending_cap_binary64_hex = "0x1.aaa9612df8000p-12"
+new_state_count = 0
+new_payload_count = 0
+
+[bounded_policy]
+two_phase_reconcile_then_continue = true
+exact_generation10_barrier_before_PDE = true
+temporal_retry_cap_per_macro_step = 32
+minimum_macro_step_binary64_hex = "0x1.0000000000000p-30"
+same_event_only = true
+event_successor = 24
+event_successor_target_rational = "25/16"
+event_successor_target_binary64_hex = "0x1.9000000000000p+0"
+source_CFL_and_scientific_stops_unchanged = true
+owner_token_tracked = false
+
+[scope]
+status_read_only = true
+compact_verifier_store_blind = true
+exact_seq11_seq12_entry_required = true
+exact_predicted_generation10_required_before_PDE = true
+same_campaign_no_fork = true
+same_event_gr0_resume = true
+generation_zero_reimport = false
+bootstrap_reexecution = false
+candidate_branches_forbidden = true
+threshold_or_retry_rule_change = false
+physical_input_change = false
+
+[claims]
+prior_AUTH1_and_normalization_fix_bound = true
+exact_recovery_reconciliation_authorized = true
+bounded_event23_continuation_authorized = true
+unchanged_internal_plan_preserved = true
+candidate_path_excluded = true
+recovery_completed = false
+event24_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+
+[[implementation_inventory]]
+role = "authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_rec1_authority.py"
+
+[[implementation_inventory]]
+role = "runner"
+path = "scripts/run_fgc_tdg8_rcv3_rec1_event.py"
+
+[[implementation_inventory]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_tdg8_rcv3_rec1_auth1.py"
+
+[[implementation_inventory]]
+role = "predecessor_authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_execution_authority.py"
+
+[[implementation_inventory]]
+role = "predecessor_authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_bounded_retry_authority.py"
+
+[[implementation_inventory]]
+role = "predecessor_authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_retry_recovery_authority.py"
+
+[[implementation_inventory]]
+role = "predecessor_binder"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_pref1_binder.py"
+
+[[implementation_inventory]]
+role = "projection_runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_fork_runtime.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_successor_runtime.py"
+
+[[implementation_inventory]]
+role = "orchestrator"
+path = "scripts/run_fgc_pro19_event1.py"
+
+[[implementation_inventory]]
+role = "owner_document"
+path = "docs/fgc-tdg8-rcv3-rec1-auth1.md"

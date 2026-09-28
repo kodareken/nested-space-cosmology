@@ -1,0 +1,302 @@
+{
+  "artifact_id": "FGC-1-TDG9-TI2-FRZ1",
+  "artifact_payload": {
+    "TI1_output_namespace_absent_after_invalid_attempt": true,
+    "TI1_source_order_proof": {
+      "member_fingerprint_serializer": "_json_exact",
+      "restore_calls_member_fingerprint": true,
+      "restore_precedes_shadow": true,
+      "run_prepare_shadow_line": 1592,
+      "run_restore_line": 1591,
+      "shadow_proposals_before_serialization_failure": 0
+    },
+    "TI2_output_namespace_absent_at_prelaunch": true,
+    "artifact_id": "FGC-1-TDG9-TI2-FRZ1",
+    "claims": {
+      "GR0_calibration_completed": false,
+      "TI1_invalid_attempt_preserved": true,
+      "TI2_execution_authorized": true,
+      "TI2_result_earned": false,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "mechanism_result_earned": false,
+      "physical_result_earned": false,
+      "same_state_tableau_sensitivity_measured": false,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false
+    },
+    "classification": "premise_only_same_state_ssprk3_tableau_recovery_authority",
+    "decision": {
+      "changed_ownership_alone_counts_as_clearance": false,
+      "clearance_requires_shadow_complete_pass_or_exact_zero": true,
+      "inconclusive_preempts_clearance_or_persistence_terminal": true,
+      "minimum_observed_order": "3/2",
+      "original_complete_failure_required": true,
+      "successor_remedy_selected": false,
+      "unchanged_contraction_predicate": "D12_squared_times_8_le_D01_squared"
+    },
+    "environment": {
+      "byteorder": "little",
+      "machine": "arm64",
+      "numpy_version": "2.5.1",
+      "python_implementation": "CPython",
+      "python_version": "3.14.3",
+      "sys_platform": "darwin",
+      "system": "Darwin"
+    },
+    "fingerprint_encoding": {
+      "finite_builtin_float_only": true,
+      "float_representation": "mapping_with_single_binary64_hex_key",
+      "general_scientific_json_exact_unchanged": true,
+      "nan_and_infinity_rejected": true,
+      "numpy_foreign_and_extended_numeric_types_rejected": true,
+      "schema": "finite_builtin_binary64_hex_v1"
+    },
+    "implementation": {
+      "AR1_authority_path": "src/recursive_horizons/fgc/evolution/tdg9_ar1_authority.py",
+      "AR1_authority_sha256": "154c7dbe675bbf788cd199c6224f74e439b469cad0f6bf6b0f015a785001647d",
+      "AR1_reconstruction_path": "scripts/run_fgc_tdg9_loc1.py",
+      "AR1_reconstruction_sha256": "19d12813b7ee3fde6b044b224124d62909170fdfaffb728414a378984bac0996",
+      "LOC2_route_path": "scripts/run_fgc_tdg9_loc2.py",
+      "LOC2_route_sha256": "e3ad84f818fe33afce707bcbec1e21a99e0892b3d924536549e0ead740351122",
+      "compositor_path": "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py",
+      "compositor_sha256": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d",
+      "independent_v2_localizer_path": "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent_v2.py",
+      "independent_v2_localizer_sha256": "750c38bb6bad4b37d946f66708055f3dc0835c807244e9c25c6e87e4e87e0511",
+      "primary_localizer_path": "src/recursive_horizons/fgc/evolution/tdg9_local_extrema.py",
+      "primary_localizer_sha256": "b97bca8c49313ad28322a1236143e03c5a7f0d3b6bcdb2940965e531a122b28a",
+      "runner_path": "scripts/run_fgc_tdg9_ti2.py",
+      "runner_sha256": "488f05b65b71dd2617d1d77c2efa49496aa1a62698b37866e07bbb9c5792cd57",
+      "tableau_runtime_path": "src/recursive_horizons/fgc/evolution/numerical_engine.py",
+      "tableau_runtime_sha256": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+    },
+    "output_namespace": "runs/fgc-2-sf1/tdg9-ti2/ssprk3-tableau-on-rk4-2049-retries-3-5",
+    "owner_document": "docs/fgc-tdg9-ti2-frz1.md",
+    "predecessor": {
+      "LOC2_PREF2_binder_path": "src/recursive_horizons/fgc/evolution/tdg9_loc2_pref2_binder.py",
+      "LOC2_PREF2_binder_sha256": "f509a35245b9bc9d6aca38b0eb51f1bb358a4e0945e78c4ab8cf3234f5e1b74d",
+      "LOC2_PREF2_config_path": "configs/fgc/fgc-1-tdg9-loc2-pref2.toml",
+      "LOC2_PREF2_config_sha256": "eb67e45c79995ab642aa7945fa4d75c5a5987d6008cd0ffaa5ce8b7905b142a7",
+      "LOC2_PREF2_result_path": "results/fgc-1-tdg9-loc2-pref2.json",
+      "LOC2_PREF2_result_sha256": "2f1630f449aa4d942cd0b0e45cf6ebb0f43862f2e387da51172584680aa03232",
+      "sealed_store_leaf_count": 115,
+      "sealed_store_snapshot_sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+    },
+    "project_version": "0.11.0",
+    "recovery": {
+      "TI1_authority_commit": "8a32636654dbd6479fcb91a88d4557a8090041d3",
+      "TI1_authority_path": "src/recursive_horizons/fgc/evolution/tdg9_ti1_authority.py",
+      "TI1_authority_sha256": "bf657c95ad20975550edeebbdcd4b3ece462c4a8e21274f563b18d8087f3b01c",
+      "TI1_config_path": "configs/fgc/fgc-1-tdg9-ti1-frz1.toml",
+      "TI1_config_sha256": "e36615549fa8e818285b826442a3ab6865abde0a2deef8b192f70c2457c14fa7",
+      "TI1_owner_document": "docs/fgc-tdg9-ti1-frz1.md",
+      "TI1_owner_document_sha256": "872a4b15ac3a56075f3252b91b7e084b42f7c2a7742e2ab1ab45447cd26d38d9",
+      "TI1_reproducer_path": "scripts/reproduce_fgc_tdg9_ti1_frz1.py",
+      "TI1_reproducer_sha256": "3c79d3b11a0f79d987c33fbe9c45a27dd53374374326361fa17ee18811ae0be7",
+      "TI1_result_path": "results/fgc-1-tdg9-ti1-frz1.json",
+      "TI1_result_sha256": "811942089ec67c5a1b0877c08c1fb051267f4800477084fb86c9ffc44f8aed7b",
+      "TI1_runner_path": "scripts/run_fgc_tdg9_ti1.py",
+      "TI1_runner_sha256": "abee4a9c4aa25dc8c634eaf5f6f2c54e45d74a754740fea874042eef9db8d7bb",
+      "failure_occurs_before_prepare_shadow": true,
+      "first_live_float_binary64_hex": "0x1.78554de5a30e0p+0",
+      "first_live_float_path": "monitor.last_accepted_time",
+      "historical_member_fingerprint_serializer": "_json_exact",
+      "historical_restore_precedes_shadow": true,
+      "historical_run_prepare_shadow_line": 1592,
+      "historical_run_restore_line": 1591,
+      "invalid_code": "nonexact_value",
+      "invalid_detail": "float",
+      "invalid_owner": "serialization",
+      "old_output_namespace": "runs/fgc-2-sf1/tdg9-ti1/ssprk3-tableau-on-rk4-2049-retries-3-5",
+      "old_result_not_reclassified": true,
+      "operator_observed_invalid_stdout_sha256": "b5b2241f86e637ebf4f341d5223797b16938631cb86401f9c77d2596a8048555",
+      "operator_observed_stdout_provenance": "operator_observed_not_raw_namespace_bound_or_timestamp_authenticated",
+      "zero_shadow_proposals_derived_from_source_order": true
+    },
+    "replays": [
+      {
+        "attempted_width_hex": "0x1.aaa9612df8000p-11",
+        "checkpoint_raw_sha256": "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846",
+        "checkpoint_sha256": "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56",
+        "journal_raw_sha256": "e4f9ca42f2d014d4bdbd875a0f24a9bbb9c04159fb0d9e0e7de8d0d72db61fdf",
+        "journal_sequence": 11,
+        "journal_sha256": "341cd8cd328434d85774bcb452889ac1886c520a72e945a92337b72cf564161a",
+        "predecessor_generation": 9,
+        "prior_retry_count": 2,
+        "retry": 3,
+        "transaction_sha256": "7a90163d2eb4252fa7a1bbdf55d12f92a9127ed7cba5a37c28456e72d732b22b"
+      },
+      {
+        "attempted_width_hex": "0x1.aaa9612df8000p-12",
+        "checkpoint_raw_sha256": "9abb59999809d22354d6b5f810bc592cd2673e5e4d354d0ec58e9ad53522dc4b",
+        "checkpoint_sha256": "6dc263e7719c9a422e9fed1b81ac573f3127607a2285f3c55b095d9019f60187",
+        "journal_raw_sha256": "26542403a17b05664d5a447b88860186d5f554b1f4d555624493ed40b941694c",
+        "journal_sequence": 13,
+        "journal_sha256": "1bd21553f3b6e0af613997da094a46d4dcd966a0e4346692bae62b05046862ca",
+        "predecessor_generation": 10,
+        "prior_retry_count": 3,
+        "retry": 4,
+        "transaction_sha256": "abab435c8222de0a86368e9562a2949578de38fe822c6032319410b49e4c6f6c"
+      },
+      {
+        "attempted_width_hex": "0x1.aaa9612df0000p-13",
+        "checkpoint_raw_sha256": "786bdcb835e043c65ddd33fad3a2af0e3d33e768dc26a9f9f00d2757b0da3ea5",
+        "checkpoint_sha256": "11ec8a80d300de72075661a97b616aecead8ec78208bb541b93e62ca4c8124c8",
+        "journal_raw_sha256": "1997342415f74f330ce6b45ca6fd550ad0e5e674b85148fea5047ff82ac3f152",
+        "journal_sequence": 15,
+        "journal_sha256": "475014d918952adef032d71b81073773364a37fa795491e739aae609f77e8537",
+        "predecessor_generation": 11,
+        "prior_retry_count": 4,
+        "retry": 5,
+        "transaction_sha256": "69fd069034fdd3e2a80a5f3fa989b639b6659105a8ff3e8742e32e78739fd461"
+      }
+    ],
+    "restored_predecessor_fingerprints": [
+      {
+        "accepted_time_hex": "0x1.78554de5a30e0p+0",
+        "descriptor_sha256": "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4",
+        "retry": 3,
+        "shadow_proposal_constructed": false,
+        "state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+        "transaction_sha256": "7a90163d2eb4252fa7a1bbdf55d12f92a9127ed7cba5a37c28456e72d732b22b"
+      },
+      {
+        "accepted_time_hex": "0x1.78554de5a30e0p+0",
+        "descriptor_sha256": "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4",
+        "retry": 4,
+        "shadow_proposal_constructed": false,
+        "state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+        "transaction_sha256": "abab435c8222de0a86368e9562a2949578de38fe822c6032319410b49e4c6f6c"
+      },
+      {
+        "accepted_time_hex": "0x1.78554de5a30e0p+0",
+        "descriptor_sha256": "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4",
+        "retry": 5,
+        "shadow_proposal_constructed": false,
+        "state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+        "transaction_sha256": "69fd069034fdd3e2a80a5f3fa989b639b6659105a8ff3e8742e32e78739fd461"
+      }
+    ],
+    "schema_version": 1,
+    "scope": {
+      "GR0_calibration_authorized": false,
+      "PDE_state_commit_authorized": false,
+      "ULP_used_as_tolerance": false,
+      "campaign_store_mutation_authorized": false,
+      "candidate_branches_authorized": false,
+      "compact_verifier_store_blind": true,
+      "continuation_authorized": false,
+      "fine_path_commit_authorized": false,
+      "historical_threshold_changed": false,
+      "independent_method_agreement": false,
+      "live_store_read_only": true,
+      "mechanism_result_authorized": false,
+      "physical_result_authorized": false,
+      "production_SSPRK3_comparator": false,
+      "same_state_tableau_counterfactual_only": true,
+      "temporal_retry_admission_authorized": false
+    },
+    "selection": {
+      "accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "coordinates_sha256": "2a347b314de5e1e94ac0c999db283e03498070ece6762c53252fa41c1e04a646",
+      "descriptor_sha256": "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4",
+      "failed_occurrences": [
+        {
+          "channel": "u:alpha",
+          "retry": 3
+        },
+        {
+          "channel": "u:R",
+          "retry": 3
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 4
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 4
+        },
+        {
+          "channel": "u:R",
+          "retry": 4
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 5
+        },
+        {
+          "channel": "u:v",
+          "retry": 5
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 5
+        },
+        {
+          "channel": "u:R",
+          "retry": 5
+        },
+        {
+          "channel": "q:R",
+          "retry": 5
+        }
+      ],
+      "grid_spacing_hex": "0x1.0000000000000p-4",
+      "member_key": "RK4-2049",
+      "outer_radius_hex": "0x1.0000000000000p+7",
+      "owned_row_count": 2044,
+      "physical_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+      "point_count": 2049,
+      "retries": [
+        3,
+        4,
+        5
+      ]
+    },
+    "semantics": {
+      "RHS_owner": "Proto12GR0EvolutionOperator",
+      "actual_spatial_operator": "inherited_RK4_2049_SBP4",
+      "experiment_label": "same_state_SSPRK3_tableau_counterfactual_on_RK4_2049_SBP4_operator",
+      "independent_method_agreement": false,
+      "ledger_owner": "TDG6TemporalLedger",
+      "only_changed_variable": "explicit_time_tableau_selector",
+      "production_SSPRK3_comparator": false,
+      "projector_owner": "make_gr0_center_boundary_projector.<locals>.projector",
+      "source_member_integrator": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+      "source_member_method": "RK4",
+      "tableau_runtime_selector": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+      "tableau_selector": "SSPRK3",
+      "tracer_owner": "NormalFlowTracers",
+      "transaction_owner": "GR0RuntimeStageTransaction"
+    },
+    "shadow_executed": false,
+    "store_identity_observed_at_prelaunch": {
+      "leaf_count": 115,
+      "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+    },
+    "target_protocol": "FGC-2-SF1-PROTO18",
+    "work_budget": {
+      "SSPRK3_records_per_proposal": 4,
+      "aggregate_candidate_ceiling": 1471680,
+      "base_cubic_count": 122640,
+      "component_cubic_count": 367920,
+      "component_level_count": 60,
+      "family_candidate_ceiling": 490560,
+      "fourth_width_authorized": false,
+      "global_proof_bit_ceiling": 9216,
+      "level_count": 20,
+      "maximum_shadow_proposals": 21,
+      "maximum_stage_and_endpoint_RHS_records": 84,
+      "occurrence_count": 10,
+      "primary_refinement_depth": 160,
+      "resource_escalation_authorized": false,
+      "retry_count": 3,
+      "shadow_paths_per_retry": 7
+    }
+  },
+  "classification": "premise_only_same_state_ssprk3_tableau_recovery_authority",
+  "gate_status": "pass",
+  "schema_version": 1,
+  "source_config_sha256": "8631ce20e22a56b00f4a9580df1ec2e2e98176b14c4761dc78e316cb4a771546"
+}

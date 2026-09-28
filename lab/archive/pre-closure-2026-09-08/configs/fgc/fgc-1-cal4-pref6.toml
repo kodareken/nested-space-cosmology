@@ -1,0 +1,112 @@
+schema_version = 1
+artifact_id = "FGC-1-CAL4-PREF6"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+runtime_authorization_result = "results/fgc-1-hlt5-mon5.json"
+run_plan_config = "configs/fgc/fgc-1-cal4-run1.toml"
+campaign_manifest = "runs/fgc-2-sf1/proto7/calibration/manifest.json"
+campaign_event_log = "runs/fgc-2-sf1/proto7/calibration/events.jsonl"
+campaign_checkpoint = "runs/fgc-2-sf1/proto7/calibration/latest-checkpoint.npz"
+campaign_result = "runs/fgc-2-sf1/proto7/calibration/campaign-result.json"
+deterministic_replay_cache = "runs/fgc-2-sf1/proto7/calibration/cal4-amplitude-5over2-replay.json"
+deterministic_replay_state_cache = "runs/fgc-2-sf1/proto7/calibration/cal4-amplitude-5over2-state.npz"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO7"
+role = "post_calibration_common_event_constraint_and_spectrum_ownership_diagnosis"
+calibration_branch = "GR-0"
+GR0_calibration_trajectory_read = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+first_nonzero_common_event_completed = true
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[immutable_campaign]
+authorization_commit = "b8f1921985191b9ad488ecfd2f183c19936996b1"
+campaign_id = "f1e5d99d061f73417e570e7bb927a0f82458e1002138c68b02360b725d0b3f03"
+manifest_sha256 = "5c924aeba2af7bfa559caed8b6d1c7d8930f244cdd70c830d8aff252df613412"
+event_log_sha256 = "750be20ecb1536425d15c00cd20e59cd81f851b7ce3357333a892406ac11f3cf"
+checkpoint_sha256 = "e4be58d5a9cdff57f4d351e601a9cfc214446edaf946c2ac59532d53a6568615"
+campaign_result_sha256 = "0cba8b11ddb6a96453a5fe78db8f34d100b444f71b02ed8818b9ab080ffd7de2"
+terminal_classification = "calibration_failed_no_eligible_GR0_case"
+amplitudes_in_order = ["5/2", "3"]
+common_stop_classification = "common_event_constraint_or_spectral_stop"
+common_stop_reason = "common_event_constraint_or_spatial_spectral_admission"
+event_log_line_count = 8
+first_nonzero_common_event_time = "1/16"
+source_only_retry_count_per_amplitude = 2
+source_only_retry_member = "RK4-4097"
+
+[constraint_ownership_diagnosis]
+fixed_outer_rows = 4
+RK4_derivative_stencil_reach_rows = 3
+SSPRK3_derivative_stencil_reach_rows = 1
+owned_domain_excludes_fixed_rows_and_every_stencil_that_touches_them = true
+raw_full_domain_residuals_remain_serialized = true
+raw_owned_domain_residuals_decide_magnitude_guards = true
+roundoff_operation_budget_per_diagnostic_evaluation = 4096
+accumulated_roundoff_formula = "4096*binary64_epsilon*(1+accepted_stage_count)"
+accumulated_roundoff_changes_order_classification_only = true
+raw_magnitude_is_never_subtracted_from_a_physical_or_observable_margin = true
+minimum_finest_pair_order = "3/2"
+
+[spectral_ownership_diagnosis]
+coarsest_grid_role = "convergence_witness"
+finest_pair_individual_budgets_required = true
+all_adjacent_nested_tail_ratios_required = true
+unresolved_top_fraction = "1/8"
+maximum_top_band_field_power_fraction = "1/1048576"
+maximum_top_band_derivative_power_fraction = "1/1024"
+maximum_rms_scale_over_cutoff = "1/4"
+maximum_nested_tail_ratio = "1/4"
+no_spectral_threshold_changes = true
+
+[prospective_repair]
+new_protocol_required = "FGC-2-SF1-PROTO8"
+physical_inputs_unchanged = true
+amplitude_order_unchanged = true
+source_solver_and_raw_residual_tolerance_unchanged = true
+methods_grids_CFL_and_retry_rules_unchanged = true
+constraint_magnitude_guards_unchanged = true
+constraint_convergence_order_unchanged = true
+spectral_thresholds_unchanged = true
+trapped_sign_boundary_and_physical_rules_unchanged = true
+outer_constraint_ownership_must_match_the_frozen_projector_and_SBP_stencil = true
+accumulated_stage_count_must_bound_roundoff_order_classification = true
+coarsest_spectrum_remains_public_and_must_contract_to_the_finest_pair = true
+fresh_output_namespace_and_new_protocol_version_required = true
+
+[proof_contract]
+raw_campaign_files_must_match_frozen_hashes = true
+manifest_must_bind_HLT5_plan_implementation_and_commit = true
+event_log_must_contain_two_t0_events_four_exact_retry_records_and_two_t1_events = true
+both_amplitudes_must_complete_the_first_nonzero_common_event = true
+terminal_checkpoint_must_bind_amplitude_3_t1_member_hashes = true
+amplitude_3_checkpoint_assessment_must_reproduce_the_public_event = true
+amplitude_5over2_must_replay_from_the_immutable_t0_inputs = true
+amplitude_5over2_replay_must_reproduce_the_public_t1_event = true
+full_domain_reduction_failures_must_localize_only_to_projector_owned_outer_rows = true
+owned_domain_reduction_residuals_must_fit_the_accumulated_roundoff_enclosure = true
+physical_and_gauge_constraint_orders_and_guards_must_remain_unchanged = true
+finest_pair_spectral_budgets_and_all_nested_tail_ratios_must_be_serialized = true
+prospective_repair_must_not_rescue_amplitude_3 = true
+diagnosis_must_not_read_SGBL_or_FGCQR = true
+diagnosis_must_not_answer_the_mechanism_question = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO7_common_event_ownership_contract_obstructed = true
+PROTO8_common_event_admission_revision_required = true
+fresh_GR0_dynamic_calibration_completed = false
+FGCQR_holdout_execution_authorized = false
+classical_spherical_diagnostic_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

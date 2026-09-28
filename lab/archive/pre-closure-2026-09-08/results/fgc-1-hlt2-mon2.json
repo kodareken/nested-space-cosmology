@@ -1,0 +1,1500 @@
+{
+  "artifact_id": "FGC-1-HLT2-MON2",
+  "artifact_payload": {
+    "branch_applicability": {
+      "FGCQR_with_exact_owner": {
+        "branch": "FGC-QR",
+        "candidate_branch_stop_ids": [
+          "branch_displacement_limit",
+          "acceleration_limit",
+          "all_covector_companion_deformation_limit",
+          "action_energy_deformation_limit",
+          "kinetic_deformation_limit",
+          "effective_planck_ratio_limit",
+          "characteristic_imaginary_part_limit",
+          "eigenframe_condition_limit",
+          "symmetrizer_coercivity_limit",
+          "phi_cutoff_proxy_limit",
+          "curvature_cutoff_proxy_limit"
+        ],
+        "candidate_definition_available": true,
+        "candidate_definition_owner": "FGC-1-SRC1-NL1+FGC-1-DOM4-RUN1+FGC-1-HYP2-MD1",
+        "missing_premise": null,
+        "replaced_stop_ids": [
+          "normalized_constraint_limit",
+          "constraint_convergence_order_limit",
+          "proper_frequency_cutoff_proxy_limit",
+          "proper_wavenumber_cutoff_proxy_limit",
+          "temporal_alias_band_occupied",
+          "radial_alias_band_occupied"
+        ],
+        "runtime_monitor_complete": true,
+        "universal_stop_ids": [
+          "nonpositive_lapse",
+          "nonpositive_radial_metric",
+          "nonpositive_areal_radius_away_from_center",
+          "hat_cone_not_Lorentzian",
+          "newton_residual_limit",
+          "newton_iteration_limit",
+          "newton_residual_not_monotonic",
+          "kinetic_condition_limit",
+          "boundary_causal_buffer"
+        ]
+      },
+      "FGCQR_without_owner": {
+        "branch": "FGC-QR",
+        "candidate_branch_stop_ids": [],
+        "candidate_definition_available": false,
+        "candidate_definition_owner": null,
+        "missing_premise": "FGC-QR_candidate_branch_health_definition_missing",
+        "replaced_stop_ids": [
+          "normalized_constraint_limit",
+          "constraint_convergence_order_limit",
+          "proper_frequency_cutoff_proxy_limit",
+          "proper_wavenumber_cutoff_proxy_limit",
+          "temporal_alias_band_occupied",
+          "radial_alias_band_occupied"
+        ],
+        "runtime_monitor_complete": false,
+        "universal_stop_ids": [
+          "nonpositive_lapse",
+          "nonpositive_radial_metric",
+          "nonpositive_areal_radius_away_from_center",
+          "hat_cone_not_Lorentzian",
+          "newton_residual_limit",
+          "newton_iteration_limit",
+          "newton_residual_not_monotonic",
+          "kinetic_condition_limit",
+          "boundary_causal_buffer"
+        ]
+      },
+      "GR0": {
+        "branch": "GR-0",
+        "candidate_branch_stop_ids": [],
+        "candidate_definition_available": true,
+        "candidate_definition_owner": null,
+        "missing_premise": null,
+        "replaced_stop_ids": [
+          "normalized_constraint_limit",
+          "constraint_convergence_order_limit",
+          "proper_frequency_cutoff_proxy_limit",
+          "proper_wavenumber_cutoff_proxy_limit",
+          "temporal_alias_band_occupied",
+          "radial_alias_band_occupied"
+        ],
+        "runtime_monitor_complete": true,
+        "universal_stop_ids": [
+          "nonpositive_lapse",
+          "nonpositive_radial_metric",
+          "nonpositive_areal_radius_away_from_center",
+          "hat_cone_not_Lorentzian",
+          "newton_residual_limit",
+          "newton_iteration_limit",
+          "newton_residual_not_monotonic",
+          "kinetic_condition_limit",
+          "boundary_causal_buffer"
+        ]
+      },
+      "SGBL_rejected_FGCQR_cross_owner": true,
+      "SGBL_without_owner": {
+        "branch": "SGB-L",
+        "candidate_branch_stop_ids": [],
+        "candidate_definition_available": false,
+        "candidate_definition_owner": null,
+        "missing_premise": "SGB-L_candidate_branch_health_definition_missing",
+        "replaced_stop_ids": [
+          "normalized_constraint_limit",
+          "constraint_convergence_order_limit",
+          "proper_frequency_cutoff_proxy_limit",
+          "proper_wavenumber_cutoff_proxy_limit",
+          "temporal_alias_band_occupied",
+          "radial_alias_band_occupied"
+        ],
+        "runtime_monitor_complete": false,
+        "universal_stop_ids": [
+          "nonpositive_lapse",
+          "nonpositive_radial_metric",
+          "nonpositive_areal_radius_away_from_center",
+          "hat_cone_not_Lorentzian",
+          "newton_residual_limit",
+          "newton_iteration_limit",
+          "newton_residual_not_monotonic",
+          "kinetic_condition_limit",
+          "boundary_causal_buffer"
+        ]
+      },
+      "all_26_historical_stops_partitioned_exactly_once": true
+    },
+    "decision": "PROTO4_branch_and_convergent_numerical_admission_formulas_are_executable_but_no_run_is_authorized",
+    "epistemic_boundary": {
+      "SGBL_health_definition_missing": true,
+      "constraint_smallness_is_not_a_propagation_theorem": true,
+      "constraint_to_Raychaudhuri_stability_map_missing": true,
+      "dynamic_trajectory_used": false,
+      "fresh_calibration_output_namespace_accessed": false,
+      "historical_HLT1_and_CAL0_results_rewritten": false,
+      "holdout_output_namespace_accessed": false,
+      "interpolation_round_trip_is_not_a_continuum_bound": true,
+      "last_bin_occupation_is_diagnostic_only": true,
+      "mechanism_question_answered": false
+    },
+    "quantitative_evidence": {
+      "constraint_and_error_controls": {
+        "DEF1_affine_alignment_control": {
+          "adjacent_refinement_ratios": [
+            2.0,
+            2.0
+          ],
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_names": [
+            "Hamiltonian",
+            "radial_momentum",
+            "gauge_t",
+            "gauge_r",
+            "reduction_alpha",
+            "reduction_shift",
+            "reduction_lambda",
+            "reduction_R",
+            "reduction_phi",
+            "reduction_chi"
+          ],
+          "component_observed_orders": {
+            "Hamiltonian": [
+              2.0,
+              2.0
+            ],
+            "gauge_r": [
+              2.0,
+              2.0
+            ],
+            "gauge_t": [
+              2.0,
+              2.0
+            ],
+            "radial_momentum": [
+              2.0,
+              2.0
+            ],
+            "reduction_R": [
+              2.0,
+              2.0
+            ],
+            "reduction_alpha": [
+              2.0,
+              2.0
+            ],
+            "reduction_chi": [
+              2.0,
+              2.0
+            ],
+            "reduction_lambda": [
+              2.0,
+              2.0
+            ],
+            "reduction_phi": [
+              2.0,
+              2.0
+            ],
+            "reduction_shift": [
+              2.0,
+              2.0
+            ]
+          },
+          "component_order_status": {
+            "Hamiltonian": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_r": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_t": [
+              "finite_order",
+              "finite_order"
+            ],
+            "radial_momentum": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_R": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_alpha": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_chi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_lambda": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_phi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_shift": [
+              "finite_order",
+              "finite_order"
+            ]
+          },
+          "convergence_order_passed": true,
+          "event_alignment_contract": "DEF1_coordinate_time_affine_label_and_origin",
+          "finest_guard_passed": true,
+          "minimum_finite_observed_order": 2.0,
+          "point_counts": [
+            33,
+            65,
+            129
+          ]
+        },
+        "DEF1_missing_affine_alignment_injection": {
+          "adjacent_refinement_ratios": [
+            2.0,
+            2.0
+          ],
+          "admission_passed": false,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": false,
+          "component_names": [
+            "Hamiltonian",
+            "radial_momentum",
+            "gauge_t",
+            "gauge_r",
+            "reduction_alpha",
+            "reduction_shift",
+            "reduction_lambda",
+            "reduction_R",
+            "reduction_phi",
+            "reduction_chi"
+          ],
+          "component_observed_orders": {
+            "Hamiltonian": [
+              2.0,
+              2.0
+            ],
+            "gauge_r": [
+              2.0,
+              2.0
+            ],
+            "gauge_t": [
+              2.0,
+              2.0
+            ],
+            "radial_momentum": [
+              2.0,
+              2.0
+            ],
+            "reduction_R": [
+              2.0,
+              2.0
+            ],
+            "reduction_alpha": [
+              2.0,
+              2.0
+            ],
+            "reduction_chi": [
+              2.0,
+              2.0
+            ],
+            "reduction_lambda": [
+              2.0,
+              2.0
+            ],
+            "reduction_phi": [
+              2.0,
+              2.0
+            ],
+            "reduction_shift": [
+              2.0,
+              2.0
+            ]
+          },
+          "component_order_status": {
+            "Hamiltonian": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_r": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_t": [
+              "finite_order",
+              "finite_order"
+            ],
+            "radial_momentum": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_R": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_alpha": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_chi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_lambda": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_phi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_shift": [
+              "finite_order",
+              "finite_order"
+            ]
+          },
+          "convergence_order_passed": true,
+          "event_alignment_contract": "DEF1_coordinate_time_affine_label_and_origin",
+          "finest_guard_passed": true,
+          "minimum_finite_observed_order": 2.0,
+          "point_counts": [
+            33,
+            65,
+            129
+          ]
+        },
+        "Richardson_additive_control": {
+          "conservative_sum": 0.5416666666666666,
+          "estimate": 0.16666666666666666,
+          "misaligned_common_event_rejected": true,
+          "passed_common_event_required": true,
+          "subtraction_available": false
+        },
+        "common_event_misalignment_injection": {
+          "adjacent_refinement_ratios": [
+            2.0,
+            2.0
+          ],
+          "admission_passed": false,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": false,
+          "component_names": [
+            "Hamiltonian",
+            "radial_momentum",
+            "gauge_t",
+            "gauge_r",
+            "reduction_alpha",
+            "reduction_shift",
+            "reduction_lambda",
+            "reduction_R",
+            "reduction_phi",
+            "reduction_chi"
+          ],
+          "component_observed_orders": {
+            "Hamiltonian": [
+              2.0,
+              2.0
+            ],
+            "gauge_r": [
+              2.0,
+              2.0
+            ],
+            "gauge_t": [
+              2.0,
+              2.0
+            ],
+            "radial_momentum": [
+              2.0,
+              2.0
+            ],
+            "reduction_R": [
+              2.0,
+              2.0
+            ],
+            "reduction_alpha": [
+              2.0,
+              2.0
+            ],
+            "reduction_chi": [
+              2.0,
+              2.0
+            ],
+            "reduction_lambda": [
+              2.0,
+              2.0
+            ],
+            "reduction_phi": [
+              2.0,
+              2.0
+            ],
+            "reduction_shift": [
+              2.0,
+              2.0
+            ]
+          },
+          "component_order_status": {
+            "Hamiltonian": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_r": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_t": [
+              "finite_order",
+              "finite_order"
+            ],
+            "radial_momentum": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_R": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_alpha": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_chi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_lambda": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_phi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_shift": [
+              "finite_order",
+              "finite_order"
+            ]
+          },
+          "convergence_order_passed": true,
+          "event_alignment_contract": "GR0_coordinate_time",
+          "finest_guard_passed": true,
+          "minimum_finite_observed_order": 2.0,
+          "point_counts": [
+            33,
+            65,
+            129
+          ]
+        },
+        "exact_zero_control": {
+          "adjacent_refinement_ratios": [
+            2.0,
+            2.0
+          ],
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_names": [
+            "Hamiltonian",
+            "radial_momentum",
+            "gauge_t",
+            "gauge_r",
+            "reduction_alpha",
+            "reduction_shift",
+            "reduction_lambda",
+            "reduction_R",
+            "reduction_phi",
+            "reduction_chi"
+          ],
+          "component_observed_orders": {
+            "Hamiltonian": [
+              null,
+              null
+            ],
+            "gauge_r": [
+              null,
+              null
+            ],
+            "gauge_t": [
+              null,
+              null
+            ],
+            "radial_momentum": [
+              null,
+              null
+            ],
+            "reduction_R": [
+              null,
+              null
+            ],
+            "reduction_alpha": [
+              null,
+              null
+            ],
+            "reduction_chi": [
+              null,
+              null
+            ],
+            "reduction_lambda": [
+              null,
+              null
+            ],
+            "reduction_phi": [
+              null,
+              null
+            ],
+            "reduction_shift": [
+              null,
+              null
+            ]
+          },
+          "component_order_status": {
+            "Hamiltonian": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "gauge_r": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "gauge_t": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "radial_momentum": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "reduction_R": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "reduction_alpha": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "reduction_chi": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "reduction_lambda": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "reduction_phi": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ],
+            "reduction_shift": [
+              "exact_zero_pair",
+              "exact_zero_pair"
+            ]
+          },
+          "convergence_order_passed": true,
+          "event_alignment_contract": "GR0_coordinate_time",
+          "finest_guard_passed": true,
+          "minimum_finite_observed_order": null,
+          "point_counts": [
+            33,
+            65,
+            129
+          ]
+        },
+        "manufactured_second_order_common_event": {
+          "adjacent_refinement_ratios": [
+            2.0,
+            2.0
+          ],
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_names": [
+            "Hamiltonian",
+            "radial_momentum",
+            "gauge_t",
+            "gauge_r",
+            "reduction_alpha",
+            "reduction_shift",
+            "reduction_lambda",
+            "reduction_R",
+            "reduction_phi",
+            "reduction_chi"
+          ],
+          "component_observed_orders": {
+            "Hamiltonian": [
+              2.0,
+              2.0
+            ],
+            "gauge_r": [
+              2.0,
+              2.0
+            ],
+            "gauge_t": [
+              2.0,
+              2.0
+            ],
+            "radial_momentum": [
+              2.0,
+              2.0
+            ],
+            "reduction_R": [
+              2.0,
+              2.0
+            ],
+            "reduction_alpha": [
+              2.0,
+              2.0
+            ],
+            "reduction_chi": [
+              2.0,
+              2.0
+            ],
+            "reduction_lambda": [
+              2.0,
+              2.0
+            ],
+            "reduction_phi": [
+              2.0,
+              2.0
+            ],
+            "reduction_shift": [
+              2.0,
+              2.0
+            ]
+          },
+          "component_order_status": {
+            "Hamiltonian": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_r": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_t": [
+              "finite_order",
+              "finite_order"
+            ],
+            "radial_momentum": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_R": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_alpha": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_chi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_lambda": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_phi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_shift": [
+              "finite_order",
+              "finite_order"
+            ]
+          },
+          "convergence_order_passed": true,
+          "event_alignment_contract": "GR0_coordinate_time",
+          "finest_guard_passed": true,
+          "minimum_finite_observed_order": 2.0,
+          "point_counts": [
+            33,
+            65,
+            129
+          ]
+        },
+        "nonconvergent_injection": {
+          "adjacent_refinement_ratios": [
+            2.0,
+            2.0
+          ],
+          "admission_passed": false,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_names": [
+            "Hamiltonian",
+            "radial_momentum",
+            "gauge_t",
+            "gauge_r",
+            "reduction_alpha",
+            "reduction_shift",
+            "reduction_lambda",
+            "reduction_R",
+            "reduction_phi",
+            "reduction_chi"
+          ],
+          "component_observed_orders": {
+            "Hamiltonian": [
+              0.0,
+              0.0
+            ],
+            "gauge_r": [
+              0.0,
+              0.0
+            ],
+            "gauge_t": [
+              0.0,
+              0.0
+            ],
+            "radial_momentum": [
+              0.0,
+              0.0
+            ],
+            "reduction_R": [
+              0.0,
+              0.0
+            ],
+            "reduction_alpha": [
+              0.0,
+              0.0
+            ],
+            "reduction_chi": [
+              0.0,
+              0.0
+            ],
+            "reduction_lambda": [
+              0.0,
+              0.0
+            ],
+            "reduction_phi": [
+              0.0,
+              0.0
+            ],
+            "reduction_shift": [
+              0.0,
+              0.0
+            ]
+          },
+          "component_order_status": {
+            "Hamiltonian": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_r": [
+              "finite_order",
+              "finite_order"
+            ],
+            "gauge_t": [
+              "finite_order",
+              "finite_order"
+            ],
+            "radial_momentum": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_R": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_alpha": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_chi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_lambda": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_phi": [
+              "finite_order",
+              "finite_order"
+            ],
+            "reduction_shift": [
+              "finite_order",
+              "finite_order"
+            ]
+          },
+          "convergence_order_passed": false,
+          "event_alignment_contract": "GR0_coordinate_time",
+          "finest_guard_passed": true,
+          "minimum_finite_observed_order": 0.0,
+          "point_counts": [
+            33,
+            65,
+            129
+          ]
+        },
+        "term_sum_normalization_control": {
+          "component_infinity": [
+            12.0,
+            8.0
+          ],
+          "component_names": [
+            "control_a",
+            "control_b"
+          ],
+          "global_infinity": 12.0,
+          "maximum_denominator": 4.0,
+          "minimum_denominator": 0.25,
+          "sample_count": 2
+        }
+      },
+      "declared_compact_initial_profile_control": {
+        "amplitude": "2",
+        "at_least_one_last_bin_diagnostic_true": true,
+        "branch": "GR-0",
+        "dynamic_outcome_used": false,
+        "event": "initial_constraint_solved_slice_t=0",
+        "last_bin_diagnostic_ignored_by_decision": true,
+        "nested_admission": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.004531470139578801,
+              0.0029507916608990303
+            ],
+            "lambda_minus_1": [
+              0.0008256382714446874,
+              0.0003281099267148598
+            ],
+            "phi_over_Lambda": [
+              0.005729568055193595,
+              0.0024619896459649316
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.0012011107604535881,
+              0.0007124262001527446
+            ],
+            "lambda_minus_1": [
+              0.0002174593567247956,
+              8.12143230616696e-05
+            ],
+            "phi_over_Lambda": [
+              0.0015324086710770918,
+              0.0005918329046055856
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "records": [
+          {
+            "every_individual_budget_passed": true,
+            "field_budgets": {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 96,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 193,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 84,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 96,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 193,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 84,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 96,
+                "nyquist_bin": 96,
+                "rms_angular_scale": 0.850497640289843,
+                "rms_scale_over_cutoff": 0.053156102518115186,
+                "sample_count": 193,
+                "top_band_derivative_weighted_power_fraction": 2.957356007270132e-05,
+                "top_band_field_power_fraction": 4.132906821134799e-08,
+                "top_band_first_bin": 84,
+                "total_derivative_weighted_power": 6.499502031819723e-06,
+                "total_field_power": 8.98532639986591e-06
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 96,
+                "nyquist_bin": 96,
+                "rms_angular_scale": 0.3513020018172955,
+                "rms_scale_over_cutoff": 0.021956375113580968,
+                "sample_count": 193,
+                "top_band_derivative_weighted_power_fraction": 8.847743151203959e-05,
+                "top_band_field_power_fraction": 2.1109431836097427e-08,
+                "top_band_first_bin": 84,
+                "total_derivative_weighted_power": 0.00011198151856121235,
+                "total_field_power": 0.0009073714358880739
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 96,
+                "nyquist_bin": 96,
+                "rms_angular_scale": 0.8444611824460649,
+                "rms_scale_over_cutoff": 0.05277882390287906,
+                "sample_count": 193,
+                "top_band_derivative_weighted_power_fraction": 2.353319815521731e-05,
+                "top_band_field_power_fraction": 3.225989675323484e-08,
+                "top_band_first_bin": 84,
+                "total_derivative_weighted_power": 1.330030960578659e-14,
+                "total_field_power": 1.8651010584023168e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 96,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 193,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 84,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              }
+            },
+            "maximum_round_trip_interpolation_infinity": 0.0007109643341070421,
+            "point_count": 1025,
+            "proper_measurement_radius": 24.551956294183377,
+            "round_trip_interpolation_infinity_by_field": {
+              "R_over_r_minus_1": 0.0,
+              "alpha_minus_1": 0.0,
+              "chi_over_Lambda": 0.00014266454344909456,
+              "lambda_minus_1": 0.0007109643341070421,
+              "phi_over_Lambda": 7.341420301865123e-09,
+              "shift_over_r": 0.0
+            }
+          },
+          {
+            "every_individual_budget_passed": true,
+            "field_budgets": {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 192,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 385,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 168,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 192,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 385,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 168,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 192,
+                "nyquist_bin": 192,
+                "rms_angular_scale": 0.854761890867204,
+                "rms_scale_over_cutoff": 0.05342261817920025,
+                "sample_count": 385,
+                "top_band_derivative_weighted_power_fraction": 1.340117043904859e-07,
+                "top_band_field_power_fraction": 4.96407885481704e-11,
+                "top_band_first_bin": 168,
+                "total_derivative_weighted_power": 6.588567092190914e-06,
+                "total_field_power": 9.017801482358456e-06
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 192,
+                "nyquist_bin": 192,
+                "rms_angular_scale": 0.3537455635878655,
+                "rms_scale_over_cutoff": 0.022109097724241595,
+                "sample_count": 385,
+                "top_band_derivative_weighted_power_fraction": 7.305035361546608e-08,
+                "top_band_field_power_fraction": 4.590443467903667e-12,
+                "top_band_first_bin": 168,
+                "total_derivative_weighted_power": 0.00011391922237943856,
+                "total_field_power": 0.0009103638584205338
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 192,
+                "nyquist_bin": 192,
+                "rms_angular_scale": 0.849033181514225,
+                "rms_scale_over_cutoff": 0.053064573844639064,
+                "sample_count": 385,
+                "top_band_derivative_weighted_power_fraction": 1.3483506038667394e-07,
+                "top_band_field_power_fraction": 4.943534551270879e-11,
+                "top_band_first_bin": 168,
+                "total_derivative_weighted_power": 1.3494074748319789e-14,
+                "total_field_power": 1.8719480176643195e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 192,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 385,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 168,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              }
+            },
+            "maximum_round_trip_interpolation_infinity": 0.00022676612530353577,
+            "point_count": 2049,
+            "proper_measurement_radius": 24.55208278246213,
+            "round_trip_interpolation_infinity_by_field": {
+              "R_over_r_minus_1": 0.0,
+              "alpha_minus_1": 0.0,
+              "chi_over_Lambda": 5.145620590587624e-05,
+              "lambda_minus_1": 0.00022676612530353577,
+              "phi_over_Lambda": 2.0244807260122294e-09,
+              "shift_over_r": 0.0
+            }
+          },
+          {
+            "every_individual_budget_passed": true,
+            "field_budgets": {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.8561941174771327,
+                "rms_scale_over_cutoff": 0.053512132342320794,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.9544061977831177e-10,
+                "top_band_field_power_fraction": 3.5365398357958914e-14,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 6.622644231207065e-06,
+                "total_field_power": 9.03414269544084e-06
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.35467039573063214,
+                "rms_scale_over_cutoff": 0.02216689973316451,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 2.3968546171265167e-11,
+                "top_band_field_power_fraction": 3.728097587986594e-16,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 0.00011466797606293742,
+                "total_field_power": 0.000911574710263875
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.8503745094217012,
+                "rms_scale_over_cutoff": 0.05314840683885633,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.3196252258504753e-10,
+                "top_band_field_power_fraction": 2.9257464124967144e-14,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.356164565382775e-14,
+                "total_field_power": 1.8753914247154837e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": false,
+                "last_occupied_bin": 0,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.0,
+                "rms_scale_over_cutoff": 0.0,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 0.0,
+                "top_band_field_power_fraction": 0.0,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 0.0,
+                "total_field_power": 0.0
+              }
+            },
+            "maximum_round_trip_interpolation_infinity": 6.744805959358149e-05,
+            "point_count": 4097,
+            "proper_measurement_radius": 24.55208380869455,
+            "round_trip_interpolation_infinity_by_field": {
+              "R_over_r_minus_1": 0.0,
+              "alpha_minus_1": 0.0,
+              "chi_over_Lambda": 1.4210124440845935e-05,
+              "lambda_minus_1": 6.744805959358149e-05,
+              "phi_over_Lambda": 5.816788568851793e-10,
+              "shift_over_r": 0.0
+            }
+          }
+        ]
+      },
+      "synthetic_spectral_controls": {
+        "causal_64_sample_temporal_control": {
+          "individual_admission_passed": true,
+          "last_bin_alias_diagnostic": true,
+          "last_occupied_bin": 32,
+          "nyquist_bin": 32,
+          "rms_angular_scale": 2.4706245728460905,
+          "rms_scale_over_cutoff": 0.15441403580288066,
+          "sample_count": 64,
+          "top_band_derivative_weighted_power_fraction": 4.556435402421487e-05,
+          "top_band_field_power_fraction": 1.3064939819019835e-07,
+          "top_band_first_bin": 28,
+          "total_derivative_weighted_power": 2.584412409092955,
+          "total_field_power": 0.4233975147159882
+        },
+        "compact_last_bin_control": {
+          "individual_admission_passed": true,
+          "last_bin_alias_diagnostic": true,
+          "last_occupied_bin": 128,
+          "nyquist_bin": 128,
+          "rms_angular_scale": 1.7543117642901533,
+          "rms_scale_over_cutoff": 0.10964448526813458,
+          "sample_count": 256,
+          "top_band_derivative_weighted_power_fraction": 1.7961268653330534e-07,
+          "top_band_field_power_fraction": 3.972575802056095e-11,
+          "top_band_first_bin": 112,
+          "total_derivative_weighted_power": 0.48167645009587357,
+          "total_field_power": 0.15650991732807018
+        },
+        "injected_high_mode": {
+          "individual_admission_passed": false,
+          "last_bin_alias_diagnostic": true,
+          "last_occupied_bin": 112,
+          "nyquist_bin": 128,
+          "rms_angular_scale": 112.00000000000001,
+          "rms_scale_over_cutoff": 7.000000000000001,
+          "sample_count": 256,
+          "top_band_derivative_weighted_power_fraction": 1.0,
+          "top_band_field_power_fraction": 1.0,
+          "top_band_first_bin": 112,
+          "total_derivative_weighted_power": 6271.9999999999945,
+          "total_field_power": 0.49999999999999944
+        },
+        "low_mode": {
+          "individual_admission_passed": true,
+          "last_bin_alias_diagnostic": false,
+          "last_occupied_bin": 2,
+          "nyquist_bin": 128,
+          "rms_angular_scale": 2.0,
+          "rms_scale_over_cutoff": 0.125,
+          "sample_count": 256,
+          "top_band_derivative_weighted_power_fraction": 1.6290578764465058e-29,
+          "top_band_field_power_fraction": 4.54311924588124e-33,
+          "top_band_first_bin": 112,
+          "total_derivative_weighted_power": 2.0,
+          "total_field_power": 0.5
+        },
+        "nested_convergent_control": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.125,
+              0.125
+            ],
+            "alpha_minus_1": [
+              0.125,
+              0.125
+            ],
+            "chi_over_Lambda": [
+              0.125,
+              0.125
+            ],
+            "lambda_minus_1": [
+              0.125,
+              0.125
+            ],
+            "phi_over_Lambda": [
+              0.125,
+              0.125
+            ],
+            "shift_over_r": [
+              0.125,
+              0.125
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.125,
+              0.125
+            ],
+            "alpha_minus_1": [
+              0.125,
+              0.125
+            ],
+            "chi_over_Lambda": [
+              0.125,
+              0.125
+            ],
+            "lambda_minus_1": [
+              0.125,
+              0.125
+            ],
+            "phi_over_Lambda": [
+              0.125,
+              0.125
+            ],
+            "shift_over_r": [
+              0.125,
+              0.125
+            ]
+          },
+          "grid_point_counts": [
+            129,
+            257,
+            513
+          ]
+        },
+        "nested_nonconvergent_injection": {
+          "admission_passed": false,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.125,
+              0.125
+            ],
+            "alpha_minus_1": [
+              0.125,
+              0.125
+            ],
+            "chi_over_Lambda": [
+              0.125,
+              8.0
+            ],
+            "lambda_minus_1": [
+              0.125,
+              0.125
+            ],
+            "phi_over_Lambda": [
+              0.125,
+              0.125
+            ],
+            "shift_over_r": [
+              0.125,
+              0.125
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": false,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.125,
+              0.125
+            ],
+            "alpha_minus_1": [
+              0.125,
+              0.125
+            ],
+            "chi_over_Lambda": [
+              0.125,
+              8.0
+            ],
+            "lambda_minus_1": [
+              0.125,
+              0.125
+            ],
+            "phi_over_Lambda": [
+              0.125,
+              0.125
+            ],
+            "shift_over_r": [
+              0.125,
+              0.125
+            ]
+          },
+          "grid_point_counts": [
+            129,
+            257,
+            513
+          ]
+        }
+      }
+    }
+  },
+  "certificate_contract": [
+    "FGCQR_owner_artifacts_must_have_FGCQR_scope",
+    "GR0_must_activate_only_universal_runtime_stops",
+    "HLT1_and_CAL0_must_remain_historical_inputs",
+    "PROTO4_freeze_must_be_canonical_and_passed",
+    "PROTO4_must_validate_exactly",
+    "Richardson_and_error_sum_must_be_additive_only",
+    "SGBL_missing_owner_must_fail_closed",
+    "all_26_legacy_stops_must_be_partitioned_exactly_once",
+    "candidate_stops_must_require_exact_branch_owner",
+    "canonical_hash_bound_result_required",
+    "common_event_constraint_nonconvergence_must_fail",
+    "declared_compact_initial_profile_must_pass_weighted_spectral_control_on_three_grids",
+    "last_bin_diagnostic_must_not_decide_admission",
+    "nested_spectral_nonconvergence_must_fail",
+    "no_new_output_namespace_may_be_read_or_written",
+    "proper_reference_deviations_and_center_limits_must_be_executable",
+    "term_sum_constraint_normalization_must_be_executable",
+    "weighted_field_derivative_and_RMS_spectra_must_be_executable"
+  ],
+  "classification": "outcome_neutral_PROTO4_successor_admission_monitor_certificate",
+  "derivation_document": "docs/fgc-hlt2-mon2.md",
+  "derivation_document_sha256": "7f37526bddc677395943663c6148afb7cc1e5b1dd17c9fd066bda2cab5ec8f66",
+  "gate_status": {
+    "FGCQR_candidate_health_definition_bound": true,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO4_branch_applicability_executable": true,
+    "PROTO4_common_event_constraint_admission_executable": true,
+    "PROTO4_resolved_holdout_manifest_authorized": false,
+    "PROTO4_successor_admission_monitor_implemented": true,
+    "PROTO4_weighted_spectral_admission_executable": true,
+    "SGBL_candidate_health_definition_bound": false,
+    "SGBL_comparison_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "constraint_to_DEF1_observable_stability_map_supplied": false,
+    "dark_sector_mechanism_derived": false,
+    "declared_compact_initial_profile_weighted_spectral_control_passed": true,
+    "fresh_GR0_calibration_authorized": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hlt2_mon2.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt2_mon2.py": "c3cffa4d33edfb3b5d4b00ca740b46f4b10deb59189d44e17f09d96f6c8f25e9",
+    "src/recursive_horizons/fgc/evolution/proto4_admission.py": "f3c3973a58b9f81d820b84845615034c01457767102e41b50d9b095997d7765f"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "SGBL_control_evolved": false,
+    "candidate_branch_rejected": false,
+    "child_domain_or_topology": false,
+    "collapse_or_trapped_interval_observed": false,
+    "dark_sector_mechanism": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "singularity_resolution": false,
+    "varying_locally_measured_c": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal0-pref2.toml": "384b5f54a0ccd4f62f15bf592c87a5cf2033cb0d6434cd5887e1326b50f52396",
+    "configs/fgc/fgc-1-hlt1-mon1.toml": "a9ba9f95ebdf0e1ec16ddc8098b8e5f9873f0b4c23f7077a9a1ca443b3ad7dbb",
+    "configs/fgc/fgc-1-pro4-frz1.toml": "950013a5d96e84d283513c5ec3d890ac5ecbad05ef31611cae2e0134414d504e",
+    "configs/fgc/fgc-2-sf1-protocol-v4.toml": "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a",
+    "results/fgc-1-cal0-pref2.json": "f1378e8e54469990cc55288d7295a204f0198b2209ddd714ba3fcfd146cf4a0e",
+    "results/fgc-1-dom4-run1.json": "238847f4af182fa423a91b381cae65217a76965b7b979ea26b29778781f0ac94",
+    "results/fgc-1-hlt1-mon1.json": "3d07822cdf1cb54080b8d615bb71cb962721172407959888b2902999943e0db1",
+    "results/fgc-1-hyp2-md1.json": "159e966f2279cc534d663a0e9f4abd0c6d429751bb8f6d266bebe5c65d53ad67",
+    "results/fgc-1-pro4-frz1.json": "48ff8d736a44e131383d2d8dbb977449ad50df214036a34dbbf9346f08989315",
+    "results/fgc-1-src1-nl1.json": "e3605b74b40fefde9f62fdc529a454a8f4609479522fe029864bb088db9b2d3d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_definition_owner": "FGC-1-SRC1-NL1+FGC-1-DOM4-RUN1+FGC-1-HYP2-MD1",
+    "SGBL_definition_owner": null,
+    "calibration_branch": "GR-0",
+    "comparison_branch": "SGB-L",
+    "holdout_branch": "FGC-QR",
+    "physical_study_inherited_unchanged": true,
+    "protocol_artifact_id": "FGC-2-SF1-PROTO4",
+    "protocol_config_sha256": "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a",
+    "protocol_semantic_holdout_contract_sha256": "015c3a7dcab4c2feeff164810036326d8a933589ec547cb445fecf527d909704"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-hlt2-mon2.toml": "cf49d8d52e963aee8941094aa8a1c38ea26593e360dcc3a63f60d0ca2b7f95b3"
+  }
+}

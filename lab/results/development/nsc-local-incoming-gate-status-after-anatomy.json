@@ -1,0 +1,44 @@
+{
+  "accountable_author": "Douglas Ek",
+  "existence_tolerance": 3e-11,
+  "freed_jet_unclipped_all_node_leftover": [
+    0.000151976924,
+    7.770624e-06
+  ],
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-bounds-after-leftover.json": "883a88ff903841ad46ddb1779a7a4dc008fcf8f335c3b653ce313897f7db4953",
+    "results/development/nsc-ks-n16-freed-jet-proposal.json": "e6e5669ecfec87e20c24dea7048042504454cda8b8a84124a313736364d90ca2",
+    "results/development/nsc-ks-n16-leftover-anatomy.json": "62d6c3e6ce6370cabcf6a87f56c87ae80a5aaa1ba02f0d4d4f6df6599a0dbf56",
+    "results/development/nsc-ks-n16-leftover-identification.json": "3e1489c51763b379ad16d451227c77d6016f2edf05ec4fbc40e3a336181d4e37"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "n16_freed_jet_leftover_cannot_reach_existence",
+  "next_named_owner": "a representation or necessary relation outside the n=16 jet-constrained and freed-jet linear leftovers",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-ANATOMY-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "open_is_not_done": true
+  },
+  "solve_unclipped_leftover": {
+    "N_max": 2.8562691e-05,
+    "beta_max": 0.000626418496,
+    "control_max": 0.000626418496,
+    "jet_max": 3e-12,
+    "step_norm": 14.847933022441
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-anatomy.md": "b976dbfe8cf5d48fed3c9f1ca62c13840c7dade9c0a16ac75be8f66b2f9a0198",
+    "scripts/derive_nsc_local_incoming_gate_status_after_anatomy.py": "73a2faa81abb6cbe0bdb6c0b366c16de7f6f27613489821137282db0f2d49d75"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: leftover classified; no physical gate certificate",
+  "walk_projection_sign_stable": false
+}

@@ -1,0 +1,51 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-MHG1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+symbol_config = "configs/fgc/fgc-1-hyp1-symbol.toml"
+
+[formulation]
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_condition = "H^mu=-tilde_g^rho_sigma*Gamma^mu_rho_sigma=0_up_to_declared_reference_connection"
+gauge_fixing = "F*hat_P_alpha^beta_mu_nu*partial_beta_H^alpha"
+auxiliary_metric_family = "g_aux^mu_nu=g^mu_nu-(q-1)*n^mu*n^nu"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+normal_factor_order = "1<tilde<hat"
+covector = "xi_A=(-c,1)"
+field_order = ["h_tt", "h_tr", "h_rr", "areal_radius", "phi", "chi"]
+equation_order = ["metric_tt_mhg", "metric_tr_mhg", "metric_rr_mhg", "metric_theta_theta_mhg", "scalar_phi", "scalar_chi"]
+first_order_state_order = ["dt_h_tt", "dt_h_tr", "dt_h_rr", "dt_areal_radius", "dt_phi", "dt_chi", "dr_h_tt", "dr_h_tr", "dr_h_rr", "dr_areal_radius", "dr_phi", "dr_chi"]
+gauge_constraint_order = ["H^t", "H^r"]
+equation_modification_on_gauge_surface = "none"
+
+[proof_contract]
+fixture_ids = ["GR0_regular", "SGBL_constant_f", "FGCQR_schwarzschild_exterior", "FGCQR_activated_generic"]
+require_positive_effective_planck_coefficient = true
+require_nonzero_gauge_fixing_symbol = true
+require_exact_complete_determinant_factorization = true
+require_tilde_multiplicity = 2
+require_hat_multiplicity = 2
+require_auxiliary_cone_nesting_and_separation = true
+require_hat_cone_gauge_constraint_principal_propagation = true
+require_invertible_coordinate_time_kinetic_matrix = true
+require_exact_standard_first_order_reduction = true
+require_pointwise_complete_real_first_order_eigenbasis = true
+require_direct_x_zero_regularity_control = true
+require_sym1_physical_factor_regression = true
+
+[open_gates]
+complete_lower_order_first_order_sources_derived = false
+gauge_constraint_lower_order_coefficients_serialized = false
+reduction_constraint_propagation_proven = false
+uniform_open_domain_symmetrizer_proven = false
+open_retained_eft_domain_proven = false
+boundary_or_regular_center_system_derived = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

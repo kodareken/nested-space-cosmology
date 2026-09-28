@@ -1,0 +1,1447 @@
+{
+  "artifact_id": "FGC-1-PRO18-PREF26",
+  "artifact_payload": {
+    "AUTH1_input_evidence": {
+      "AUTH1_input_evidence_sha256": "64d903b4e0e95eefef95d60df4cafeadb709ab6200831fdc0b025c5313842968",
+      "active_event_target_time": {
+        "binary64_hex": "0x1.8000000000000p+0",
+        "rational": "3/2"
+      },
+      "authority_identity": "FGC-1-PRO18-AUTH1",
+      "common_event_index": 23,
+      "final_PROTO17_GenesisSpec_construction_deferred_to_AUTH1": true,
+      "future_runtime_adapter_and_runner_source_hashes_present": false,
+      "historical_replay_sha256": "60187e586aebdcb71dad30e517a126bb7599eb7e91f5527eade033435469d9d1",
+      "member_descriptor_set_sha256": "cb14d1375fece25b9bccc62673692c1dfa9eead045f5d13c70f9e659e65861a3",
+      "member_descriptors": [
+        {
+          "accepted_boundary_time": {
+            "binary64_hex": "0x1.7000000000000p+0",
+            "rational": "23/16"
+          },
+          "initial_TDG6_ledger": {
+            "accepted_macro_step_count": 0,
+            "accumulated_debit_vector_hex": [
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0"
+            ],
+            "cumulative_temporal_retry_count": 0,
+            "current_macro_step_temporal_retry_count": 0,
+            "last_accepted_macro_step_temporal_retry_count": 0,
+            "last_accepted_time_hex": "0x1.7000000000000p+0",
+            "serialized_temporal_rejections": []
+          },
+          "initial_TDG6_ledger_sha256": "d8d46f7bdf3d8fc158aa6cd6bf5b387fcade13848ab2356c4bef491f0a6768ca",
+          "member_key": "RK4-2049",
+          "method": "RK4",
+          "point_count": 2049,
+          "source_bundle_key": "PROTO12:RK4-2049",
+          "source_checkpoint": "PROTO12",
+          "state_object": {
+            "CFL_retry_count": 217,
+            "accepted_boundary_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "causal_state": {
+              "accepted_time": 1.4375,
+              "accumulated_characteristic_distance": 1.7250865100612265,
+              "previous_speed_upper": 1.2000178361095966
+            },
+            "coordinate_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "event_history_state": {
+              "sample_count": 24
+            },
+            "input_hash": "3bfc9a137f20353e9ead2f742f7780b049a11ab576f6e4de98fe4e5d0ad5c0d3",
+            "member_key": "RK4-2049",
+            "method": "RK4",
+            "physical_arrays": [
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "d8f41c668de15e21faf2d5dc6ec467e197ce350f05694ab2a151113e26f3c85b",
+                "logical_name": "u",
+                "npz_storage_key": "RK4_2049_u",
+                "shape": [
+                  2049,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "cdb2832847e288bee3e40ffe98d7ae19ce43b6dc170b5f2fe8df6ec8734b6dc7",
+                "logical_name": "p",
+                "npz_storage_key": "RK4_2049_p",
+                "shape": [
+                  2049,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "19639855be03583e558a8bb4723236c90d57443f9598b9213de21d50065ae76c",
+                "logical_name": "q",
+                "npz_storage_key": "RK4_2049_q",
+                "shape": [
+                  2049,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "05bac17d71f47712b386f24f4318383eb2e8b9b92309a8bf184c22cf851e52c7",
+                "logical_name": "tracer_positions",
+                "npz_storage_key": "RK4_2049_tracer_positions",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "2de07f836cc58d0d496928c0d43857a4307af56d9118cca4ac0ab2c73eac8c29",
+                "logical_name": "tracer_proper_times",
+                "npz_storage_key": "RK4_2049_tracer_proper_times",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "a614094990fc56c8436dd47f31f6df20e050eb23cd9ae1d009caed3fd9cfdbef",
+                "logical_name": "event_proper_times",
+                "npz_storage_key": "RK4_2049_event_proper_times",
+                "shape": [
+                  24,
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "cc0161997901dc786289370c4ce1c33945eb781eb04a367f07a53d3113140064",
+                "logical_name": "event_fields",
+                "npz_storage_key": "RK4_2049_event_fields",
+                "shape": [
+                  24,
+                  48,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-2049"
+              }
+            ],
+            "physical_state_sha256": "d119a3b0ab450b0f0916b801254bbbfa964c8e5e95223cb8e51d9034f62c665e",
+            "point_count": 2049,
+            "restart_payload_sha256": "4bb04ae97c09f66881084b5816d14ce300c54152ae11c182f53b64d5e887c072",
+            "runtime_monitor_state": {
+              "accepted_stage_count": 1710,
+              "first_failed_premise": null,
+              "first_failed_time": null,
+              "first_failed_transaction_serial": null,
+              "last_accepted_time": 1.4375,
+              "last_transaction_serial": 1709
+            },
+            "schema_id": "FGC-2-SF1-PROTO17-state-object-v1",
+            "source_retry_count": 0,
+            "step_index": 342,
+            "tracer_state": {
+              "tracer_count": 48
+            },
+            "transaction_serial": 1710
+          },
+          "state_object_canonical_sha256": "b19d22516a4c8a517e20e651a6f7a15fd68e11e7bfc74fe4d25eba13e4d8d40d",
+          "step_index": 342,
+          "transaction_serial": 1710
+        },
+        {
+          "accepted_boundary_time": {
+            "binary64_hex": "0x1.7000000000000p+0",
+            "rational": "23/16"
+          },
+          "initial_TDG6_ledger": {
+            "accepted_macro_step_count": 0,
+            "accumulated_debit_vector_hex": [
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0"
+            ],
+            "cumulative_temporal_retry_count": 0,
+            "current_macro_step_temporal_retry_count": 0,
+            "last_accepted_macro_step_temporal_retry_count": 0,
+            "last_accepted_time_hex": "0x1.7000000000000p+0",
+            "serialized_temporal_rejections": []
+          },
+          "initial_TDG6_ledger_sha256": "d8d46f7bdf3d8fc158aa6cd6bf5b387fcade13848ab2356c4bef491f0a6768ca",
+          "member_key": "RK4-4097",
+          "method": "RK4",
+          "point_count": 4097,
+          "source_bundle_key": "PROTO12:RK4-4097",
+          "source_checkpoint": "PROTO12",
+          "state_object": {
+            "CFL_retry_count": 443,
+            "accepted_boundary_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "causal_state": {
+              "accepted_time": 1.4375,
+              "accumulated_characteristic_distance": 1.7250013442364578,
+              "previous_speed_upper": 1.2000000017987555
+            },
+            "coordinate_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "event_history_state": {
+              "sample_count": 24
+            },
+            "input_hash": "ffbde443e99535e74900b1e04c1e60cc27da105dd5d605286e77a6c77620c0bb",
+            "member_key": "RK4-4097",
+            "method": "RK4",
+            "physical_arrays": [
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "0baf5adf0f80ba5f6f6af7c0dcf2590e7ae8f8580f443455db6e3032479fdc9c",
+                "logical_name": "u",
+                "npz_storage_key": "RK4_4097_u",
+                "shape": [
+                  4097,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "aba9b66c1e30b0e20427aab4aeb5149a8a558e6607059e9bcb95f8972efd7e3f",
+                "logical_name": "p",
+                "npz_storage_key": "RK4_4097_p",
+                "shape": [
+                  4097,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "df0f5590dec9ace9694ec9fb586fa0bbad0c1fef3b5a0545fa6a8ad5aecd3382",
+                "logical_name": "q",
+                "npz_storage_key": "RK4_4097_q",
+                "shape": [
+                  4097,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "31682191b85dacb850da528232242851bddbdf06615a3bab90fe70c8b7b0bfaf",
+                "logical_name": "tracer_positions",
+                "npz_storage_key": "RK4_4097_tracer_positions",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "42892656cf2d6dc5d8569a6a991b22b9e0e91a2ca0fb30b127c5eec5e1c604a2",
+                "logical_name": "tracer_proper_times",
+                "npz_storage_key": "RK4_4097_tracer_proper_times",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "489fd46040fbe5ec0908aeff4cc0c45e2fe8481959af0e2d2380d3b3f6c6cb63",
+                "logical_name": "event_proper_times",
+                "npz_storage_key": "RK4_4097_event_proper_times",
+                "shape": [
+                  24,
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "ccd84e3c1bba42154c4a431f8d839de947eef3855b2afbe23aa83a546514ed9d",
+                "logical_name": "event_fields",
+                "npz_storage_key": "RK4_4097_event_fields",
+                "shape": [
+                  24,
+                  48,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-4097"
+              }
+            ],
+            "physical_state_sha256": "9d27ca221fbac2a5b3b86a8d9aef49a8b8ac451b255b80529563b8cb7f8b73a9",
+            "point_count": 4097,
+            "restart_payload_sha256": "cc6d3b6fbb3a5b6abd93f69f7f59ba67c38e9b7d332fac991a88847970b57aac",
+            "runtime_monitor_state": {
+              "accepted_stage_count": 3365,
+              "first_failed_premise": null,
+              "first_failed_time": null,
+              "first_failed_transaction_serial": null,
+              "last_accepted_time": 1.4375,
+              "last_transaction_serial": 3364
+            },
+            "schema_id": "FGC-2-SF1-PROTO17-state-object-v1",
+            "source_retry_count": 0,
+            "step_index": 673,
+            "tracer_state": {
+              "tracer_count": 48
+            },
+            "transaction_serial": 3365
+          },
+          "state_object_canonical_sha256": "61a19b6758c13105268fcca090fc29139e8b238cb4ceb8227c7d25bfde455e15",
+          "step_index": 673,
+          "transaction_serial": 3365
+        },
+        {
+          "accepted_boundary_time": {
+            "binary64_hex": "0x1.7000000000000p+0",
+            "rational": "23/16"
+          },
+          "initial_TDG6_ledger": {
+            "accepted_macro_step_count": 0,
+            "accumulated_debit_vector_hex": [
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0"
+            ],
+            "cumulative_temporal_retry_count": 0,
+            "current_macro_step_temporal_retry_count": 0,
+            "last_accepted_macro_step_temporal_retry_count": 0,
+            "last_accepted_time_hex": "0x1.7000000000000p+0",
+            "serialized_temporal_rejections": []
+          },
+          "initial_TDG6_ledger_sha256": "d8d46f7bdf3d8fc158aa6cd6bf5b387fcade13848ab2356c4bef491f0a6768ca",
+          "member_key": "RK4-8193",
+          "method": "RK4",
+          "point_count": 8193,
+          "source_bundle_key": "PROTO12:RK4-8193",
+          "source_checkpoint": "PROTO12",
+          "state_object": {
+            "CFL_retry_count": 161,
+            "accepted_boundary_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "causal_state": {
+              "accepted_time": 1.4375,
+              "accumulated_characteristic_distance": 1.7250000240636434,
+              "previous_speed_upper": 1.2000000000001776
+            },
+            "coordinate_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "event_history_state": {
+              "sample_count": 24
+            },
+            "input_hash": "076bebfc71482793017d2d306001b3416f5ad7a4088f35351d4d26322a09d12c",
+            "member_key": "RK4-8193",
+            "method": "RK4",
+            "physical_arrays": [
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "44e26799d3e86ecf74ba94554223d1a9feecd3c36000f850be3148f7a7dd8386",
+                "logical_name": "u",
+                "npz_storage_key": "RK4_8193_u",
+                "shape": [
+                  8193,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "64e454928b74d79070163cd2eede548d0991279ae5e58b7752b8472e786e16b0",
+                "logical_name": "p",
+                "npz_storage_key": "RK4_8193_p",
+                "shape": [
+                  8193,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "19bab9efaa70ab8dbed51fe5039e9118c44605f206d07dc850a164b14e14a6b7",
+                "logical_name": "q",
+                "npz_storage_key": "RK4_8193_q",
+                "shape": [
+                  8193,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "ff7bf7f20b08d0b2ea440ca963a7a10ed19a24b903718bf0a62ff4b622a6cd40",
+                "logical_name": "tracer_positions",
+                "npz_storage_key": "RK4_8193_tracer_positions",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "ee7829597465fa658482443f2a7a042e81aa30f23940cf9d8a08032404cf461d",
+                "logical_name": "tracer_proper_times",
+                "npz_storage_key": "RK4_8193_tracer_proper_times",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "21570beff9aab397b2800138862453cd59bafae60961104d82ce146cdf5f511d",
+                "logical_name": "event_proper_times",
+                "npz_storage_key": "RK4_8193_event_proper_times",
+                "shape": [
+                  24,
+                  48
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "5e2af56c2e474085e6b237345f3a45209d3a9e31abb33d21e4507f3c64b9ad6a",
+                "logical_name": "event_fields",
+                "npz_storage_key": "RK4_8193_event_fields",
+                "shape": [
+                  24,
+                  48,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:RK4-8193"
+              }
+            ],
+            "physical_state_sha256": "d5b4cfe25199862fff5be7d524cc1c3a6030cc634d268cedb626c3ced7220f4a",
+            "point_count": 8193,
+            "restart_payload_sha256": "b95ea0be0779f712fb0c354f9c10f28b9ccc6c737fb403d5710dbd07e0e506f9",
+            "runtime_monitor_state": {
+              "accepted_stage_count": 4880,
+              "first_failed_premise": null,
+              "first_failed_time": null,
+              "first_failed_transaction_serial": null,
+              "last_accepted_time": 1.4375,
+              "last_transaction_serial": 4879
+            },
+            "schema_id": "FGC-2-SF1-PROTO17-state-object-v1",
+            "source_retry_count": 0,
+            "step_index": 976,
+            "tracer_state": {
+              "tracer_count": 48
+            },
+            "transaction_serial": 4880
+          },
+          "state_object_canonical_sha256": "671f49ea5820c797305cc3fba1a7f4ea1b4a9d29d50e2caf9aff7722d41a7fb1",
+          "step_index": 976,
+          "transaction_serial": 4880
+        },
+        {
+          "accepted_boundary_time": {
+            "binary64_hex": "0x1.7000000000000p+0",
+            "rational": "23/16"
+          },
+          "initial_TDG6_ledger": {
+            "accepted_macro_step_count": 0,
+            "accumulated_debit_vector_hex": [
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0"
+            ],
+            "cumulative_temporal_retry_count": 0,
+            "current_macro_step_temporal_retry_count": 0,
+            "last_accepted_macro_step_temporal_retry_count": 0,
+            "last_accepted_time_hex": "0x1.7000000000000p+0",
+            "serialized_temporal_rejections": []
+          },
+          "initial_TDG6_ledger_sha256": "d8d46f7bdf3d8fc158aa6cd6bf5b387fcade13848ab2356c4bef491f0a6768ca",
+          "member_key": "SSPRK3-4097",
+          "method": "SSPRK3",
+          "point_count": 4097,
+          "source_bundle_key": "PROTO12:SSPRK3-4097",
+          "source_checkpoint": "PROTO12",
+          "state_object": {
+            "CFL_retry_count": 358,
+            "accepted_boundary_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "causal_state": {
+              "accepted_time": 1.4375,
+              "accumulated_characteristic_distance": 1.725000020060358,
+              "previous_speed_upper": 1.2000000029557762
+            },
+            "coordinate_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "event_history_state": {
+              "sample_count": 24
+            },
+            "input_hash": "3cc3dc3a262f83cc19f07c49d477f5e43309f0c9e0f16bdeaf6d0c7dc02bd48f",
+            "member_key": "SSPRK3-4097",
+            "method": "SSPRK3",
+            "physical_arrays": [
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "3e3368a23f281ad62af81401f53fc6799d187d28d4f126b475793d25def925d1",
+                "logical_name": "u",
+                "npz_storage_key": "SSPRK3_4097_u",
+                "shape": [
+                  4097,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "7bb726d4a33a451ada46012c51928f0d97c47923bf19ad082f128d6ea1db9c97",
+                "logical_name": "p",
+                "npz_storage_key": "SSPRK3_4097_p",
+                "shape": [
+                  4097,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "62e994a54f617d37e58d4a93e76724d2dd576763a4a0fe0ad89e56e747756429",
+                "logical_name": "q",
+                "npz_storage_key": "SSPRK3_4097_q",
+                "shape": [
+                  4097,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "52de0bdd1ac164cd7c14cc4105103868d291b3e91a80be733bab7f1aa2c644d3",
+                "logical_name": "tracer_positions",
+                "npz_storage_key": "SSPRK3_4097_tracer_positions",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "3480aeba8ee8483b255bf829dbae8f6c266fe5f28659f7e551083594a1767204",
+                "logical_name": "tracer_proper_times",
+                "npz_storage_key": "SSPRK3_4097_tracer_proper_times",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "838ba1c6b678f48102d3087884955102f588527264da4e42e9ca3bf8b1d9ca63",
+                "logical_name": "event_proper_times",
+                "npz_storage_key": "SSPRK3_4097_event_proper_times",
+                "shape": [
+                  24,
+                  48
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "4d8fd35c75d2029c5b7852f89502978480ed797b7b837a74fa729e713180d17c",
+                "logical_name": "event_fields",
+                "npz_storage_key": "SSPRK3_4097_event_fields",
+                "shape": [
+                  24,
+                  48,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-4097"
+              }
+            ],
+            "physical_state_sha256": "ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162",
+            "point_count": 4097,
+            "restart_payload_sha256": "dc056db806e5d983852135138dd48dbb9b995a8585f56900258bece7e16e7016",
+            "runtime_monitor_state": {
+              "accepted_stage_count": 2524,
+              "first_failed_premise": null,
+              "first_failed_time": null,
+              "first_failed_transaction_serial": null,
+              "last_accepted_time": 1.4375,
+              "last_transaction_serial": 2523
+            },
+            "schema_id": "FGC-2-SF1-PROTO17-state-object-v1",
+            "source_retry_count": 0,
+            "step_index": 631,
+            "tracer_state": {
+              "tracer_count": 48
+            },
+            "transaction_serial": 2524
+          },
+          "state_object_canonical_sha256": "1ab7f9fbd4e75a0409c700674d81bb536ce30f5ff25f354b4cd40e0bfbad4b6c",
+          "step_index": 631,
+          "transaction_serial": 2524
+        },
+        {
+          "accepted_boundary_time": {
+            "binary64_hex": "0x1.7000000000000p+0",
+            "rational": "23/16"
+          },
+          "initial_TDG6_ledger": {
+            "accepted_macro_step_count": 0,
+            "accumulated_debit_vector_hex": [
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0"
+            ],
+            "cumulative_temporal_retry_count": 0,
+            "current_macro_step_temporal_retry_count": 0,
+            "last_accepted_macro_step_temporal_retry_count": 0,
+            "last_accepted_time_hex": "0x1.7000000000000p+0",
+            "serialized_temporal_rejections": []
+          },
+          "initial_TDG6_ledger_sha256": "d8d46f7bdf3d8fc158aa6cd6bf5b387fcade13848ab2356c4bef491f0a6768ca",
+          "member_key": "SSPRK3-8193",
+          "method": "SSPRK3",
+          "point_count": 8193,
+          "source_bundle_key": "PROTO12:SSPRK3-8193",
+          "source_checkpoint": "PROTO12",
+          "state_object": {
+            "CFL_retry_count": 187,
+            "accepted_boundary_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "causal_state": {
+              "accepted_time": 1.4375,
+              "accumulated_characteristic_distance": 1.725000000264817,
+              "previous_speed_upper": 1.20000000000129
+            },
+            "coordinate_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "event_history_state": {
+              "sample_count": 24
+            },
+            "input_hash": "d4bd39d36dfe749cc6ec04e5f112fc5544e3defdce67315ee871d2d8cfc75b5f",
+            "member_key": "SSPRK3-8193",
+            "method": "SSPRK3",
+            "physical_arrays": [
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "ed56d358550c22b3817c17f4d358220f8dce7006037705cb533c154de92c2855",
+                "logical_name": "u",
+                "npz_storage_key": "SSPRK3_8193_u",
+                "shape": [
+                  8193,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "d9ceaefbfa6df6e840085461d65eef1194007d0e138c59d172d7d8a8ee75e923",
+                "logical_name": "p",
+                "npz_storage_key": "SSPRK3_8193_p",
+                "shape": [
+                  8193,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "1f82429ba9321a4777f219a169d61ce8ddf0d1fd7b3f52b9c8fac0469b00b8c5",
+                "logical_name": "q",
+                "npz_storage_key": "SSPRK3_8193_q",
+                "shape": [
+                  8193,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "a8a873453093ec8f4335ce3b92a7997e4da025b3df7581ab6b70fde0078e9df9",
+                "logical_name": "tracer_positions",
+                "npz_storage_key": "SSPRK3_8193_tracer_positions",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "d5f840d4409136b983fc55e15fb30338e8f249bf1924b10c9ef57ff95ffe60d3",
+                "logical_name": "tracer_proper_times",
+                "npz_storage_key": "SSPRK3_8193_tracer_proper_times",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "5b5e82bb4f96eb9238c682ed02218cd0a2f571524ebcbdd792271123823ff6b9",
+                "logical_name": "event_proper_times",
+                "npz_storage_key": "SSPRK3_8193_event_proper_times",
+                "shape": [
+                  24,
+                  48
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "6dc5dd448aa9019a99865280f4b1f33ee70be3d10f8ee6684753d73d911324f3",
+                "logical_name": "event_fields",
+                "npz_storage_key": "SSPRK3_8193_event_fields",
+                "shape": [
+                  24,
+                  48,
+                  6
+                ],
+                "source_bundle_key": "PROTO12:SSPRK3-8193"
+              }
+            ],
+            "physical_state_sha256": "c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c",
+            "point_count": 8193,
+            "restart_payload_sha256": "b262bf4bd180717d42a7fa4d502f006bac0950669bc9e86c474ad6e4a21ce7ad",
+            "runtime_monitor_state": {
+              "accepted_stage_count": 3948,
+              "first_failed_premise": null,
+              "first_failed_time": null,
+              "first_failed_transaction_serial": null,
+              "last_accepted_time": 1.4375,
+              "last_transaction_serial": 3947
+            },
+            "schema_id": "FGC-2-SF1-PROTO17-state-object-v1",
+            "source_retry_count": 0,
+            "step_index": 987,
+            "tracer_state": {
+              "tracer_count": 48
+            },
+            "transaction_serial": 3948
+          },
+          "state_object_canonical_sha256": "bca065fd543ff8c4629584d64f8a1ec49d2ab5a653e73bfad08b1fb5ad66d25d",
+          "step_index": 987,
+          "transaction_serial": 3948
+        },
+        {
+          "accepted_boundary_time": {
+            "binary64_hex": "0x1.7000000000000p+0",
+            "rational": "23/16"
+          },
+          "initial_TDG6_ledger": {
+            "accepted_macro_step_count": 0,
+            "accumulated_debit_vector_hex": [
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0",
+              "0x0.0p+0"
+            ],
+            "cumulative_temporal_retry_count": 0,
+            "current_macro_step_temporal_retry_count": 0,
+            "last_accepted_macro_step_temporal_retry_count": 0,
+            "last_accepted_time_hex": "0x1.7000000000000p+0",
+            "serialized_temporal_rejections": []
+          },
+          "initial_TDG6_ledger_sha256": "d8d46f7bdf3d8fc158aa6cd6bf5b387fcade13848ab2356c4bef491f0a6768ca",
+          "member_key": "SSPRK3-16385",
+          "method": "SSPRK3",
+          "point_count": 16385,
+          "source_bundle_key": "RSP2:SSPRK3-16385",
+          "source_checkpoint": "RSP2",
+          "state_object": {
+            "CFL_retry_count": 0,
+            "accepted_boundary_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "causal_state": {
+              "accepted_time": 1.4375,
+              "accumulated_characteristic_distance": 1.7250000000008527,
+              "previous_speed_upper": 1.2000000000000042
+            },
+            "coordinate_time": {
+              "binary64_hex": "0x1.7000000000000p+0",
+              "rational": "23/16"
+            },
+            "event_history_state": {
+              "sample_count": 24
+            },
+            "input_hash": "2946239e5d23b4e7a3cd74419a0b9c214eb89195f72bc84d4b89f39b6ef01963",
+            "member_key": "SSPRK3-16385",
+            "method": "SSPRK3",
+            "physical_arrays": [
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "d0ac42c0ad74a0a9d700731992a1504d7d9d067418d6bf5d7ebf351a91ed1ce6",
+                "logical_name": "u",
+                "npz_storage_key": "SSPRK3_16385_u",
+                "shape": [
+                  16385,
+                  6
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "df42a973169995b4edc181f3a8e2a28cdd0570b27522705198c4009ce36c1184",
+                "logical_name": "p",
+                "npz_storage_key": "SSPRK3_16385_p",
+                "shape": [
+                  16385,
+                  6
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "428f5f8b97a314c3bbdfcd4f94cf56fad781a78528ce8408b5f3e09c11bd4435",
+                "logical_name": "q",
+                "npz_storage_key": "SSPRK3_16385_q",
+                "shape": [
+                  16385,
+                  6
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "81a7b94d0bb19a577a53dd62f05e1fb18d99953e4316f9343aa54676e76108f4",
+                "logical_name": "tracer_positions",
+                "npz_storage_key": "SSPRK3_16385_tracer_positions",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "0f8510643de63366dfbce95cab9325f19f0e69f179b326b351768fad09dea870",
+                "logical_name": "tracer_proper_times",
+                "npz_storage_key": "SSPRK3_16385_tracer_proper_times",
+                "shape": [
+                  48
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "3f7ed11830ce3ccfe71d2c7b2c4481acffa903926316f2ce41f18f3edb96885c",
+                "logical_name": "event_proper_times",
+                "npz_storage_key": "SSPRK3_16385_event_proper_times",
+                "shape": [
+                  24,
+                  48
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              },
+              {
+                "dtype": "<f8",
+                "layout": "C",
+                "little_endian_c_bytes_sha256": "a3f2deae166806ecf371c2c80e93887323cd2bb225b72587aca9d2bcc7a62c68",
+                "logical_name": "event_fields",
+                "npz_storage_key": "SSPRK3_16385_event_fields",
+                "shape": [
+                  24,
+                  48,
+                  6
+                ],
+                "source_bundle_key": "RSP2:SSPRK3-16385"
+              }
+            ],
+            "physical_state_sha256": "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d",
+            "point_count": 16385,
+            "restart_payload_sha256": "62784c8cc63eedc210366f146f28d535343b966e1f988a4298894e78ec560884",
+            "runtime_monitor_state": {
+              "accepted_stage_count": 7084,
+              "first_failed_premise": null,
+              "first_failed_time": null,
+              "first_failed_transaction_serial": null,
+              "last_accepted_time": 1.4375,
+              "last_transaction_serial": 7083
+            },
+            "schema_id": "FGC-2-SF1-PROTO17-state-object-v1",
+            "source_retry_count": 0,
+            "step_index": 1771,
+            "tracer_state": {
+              "tracer_count": 48
+            },
+            "transaction_serial": 7084
+          },
+          "state_object_canonical_sha256": "783844bc83ce2b55c9f16b343d3f081b381159a70cd16578f04692b0273a2447",
+          "step_index": 1771,
+          "transaction_serial": 7084
+        }
+      ],
+      "member_keys_in_canonical_order": [
+        "RK4-2049",
+        "RK4-4097",
+        "RK4-8193",
+        "SSPRK3-4097",
+        "SSPRK3-8193",
+        "SSPRK3-16385"
+      ],
+      "physical_input_manifest": {
+        "bundle_members": [
+          {
+            "raw_file_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+            "relative_input_path": "proto12/calibration/latest-checkpoint.npz",
+            "required_npz_member_keys": [
+              "RK4_2049_u",
+              "RK4_2049_p",
+              "RK4_2049_q",
+              "RK4_2049_tracer_positions",
+              "RK4_2049_tracer_proper_times",
+              "RK4_2049_event_proper_times",
+              "RK4_2049_event_fields",
+              "metadata_utf8"
+            ],
+            "source_bundle_key": "PROTO12:RK4-2049",
+            "source_checkpoint": "PROTO12"
+          },
+          {
+            "raw_file_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+            "relative_input_path": "proto12/calibration/latest-checkpoint.npz",
+            "required_npz_member_keys": [
+              "RK4_4097_u",
+              "RK4_4097_p",
+              "RK4_4097_q",
+              "RK4_4097_tracer_positions",
+              "RK4_4097_tracer_proper_times",
+              "RK4_4097_event_proper_times",
+              "RK4_4097_event_fields",
+              "metadata_utf8"
+            ],
+            "source_bundle_key": "PROTO12:RK4-4097",
+            "source_checkpoint": "PROTO12"
+          },
+          {
+            "raw_file_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+            "relative_input_path": "proto12/calibration/latest-checkpoint.npz",
+            "required_npz_member_keys": [
+              "RK4_8193_u",
+              "RK4_8193_p",
+              "RK4_8193_q",
+              "RK4_8193_tracer_positions",
+              "RK4_8193_tracer_proper_times",
+              "RK4_8193_event_proper_times",
+              "RK4_8193_event_fields",
+              "metadata_utf8"
+            ],
+            "source_bundle_key": "PROTO12:RK4-8193",
+            "source_checkpoint": "PROTO12"
+          },
+          {
+            "raw_file_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+            "relative_input_path": "proto12/calibration/latest-checkpoint.npz",
+            "required_npz_member_keys": [
+              "SSPRK3_4097_u",
+              "SSPRK3_4097_p",
+              "SSPRK3_4097_q",
+              "SSPRK3_4097_tracer_positions",
+              "SSPRK3_4097_tracer_proper_times",
+              "SSPRK3_4097_event_proper_times",
+              "SSPRK3_4097_event_fields",
+              "metadata_utf8"
+            ],
+            "source_bundle_key": "PROTO12:SSPRK3-4097",
+            "source_checkpoint": "PROTO12"
+          },
+          {
+            "raw_file_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+            "relative_input_path": "proto12/calibration/latest-checkpoint.npz",
+            "required_npz_member_keys": [
+              "SSPRK3_8193_u",
+              "SSPRK3_8193_p",
+              "SSPRK3_8193_q",
+              "SSPRK3_8193_tracer_positions",
+              "SSPRK3_8193_tracer_proper_times",
+              "SSPRK3_8193_event_proper_times",
+              "SSPRK3_8193_event_fields",
+              "metadata_utf8"
+            ],
+            "source_bundle_key": "PROTO12:SSPRK3-8193",
+            "source_checkpoint": "PROTO12"
+          },
+          {
+            "raw_file_sha256": "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34",
+            "relative_input_path": "rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz",
+            "required_npz_member_keys": [
+              "SSPRK3_16385_u",
+              "SSPRK3_16385_p",
+              "SSPRK3_16385_q",
+              "SSPRK3_16385_tracer_positions",
+              "SSPRK3_16385_tracer_proper_times",
+              "SSPRK3_16385_event_proper_times",
+              "SSPRK3_16385_event_fields",
+              "metadata_utf8"
+            ],
+            "source_bundle_key": "RSP2:SSPRK3-16385",
+            "source_checkpoint": "RSP2"
+          }
+        ],
+        "format": "FGC-2-SF1-PROTO17-physical-input-manifest-v1",
+        "relative_input_root": "runs/fgc-2-sf1"
+      },
+      "physical_input_manifest_sha256": "2bbb283169e675b589eaed6ebd897897523bede0ef7e421d5468cf782f46f2a2",
+      "restart_coordinate_time": {
+        "binary64_hex": "0x1.7000000000000p+0",
+        "rational": "23/16"
+      },
+      "source_archive_manifest_sha256": "b35d12d266f83aed9a2dae46a3814d1a280d7c029bf7a2f242051dd05c14630c",
+      "target_protocol": "FGC-2-SF1-PROTO17"
+    },
+    "HLT14_production_duties": {
+      "external_Git_authority_blob_and_live_import_validation": {
+        "completed": false,
+        "required": true
+      },
+      "namespace_reuse_and_foreign_store_rejection": {
+        "completed": false,
+        "required": true
+      },
+      "raw_bundle_byte_and_hash_recomputation": {
+        "completed": true,
+        "required": true
+      },
+      "semantic_historical_journal_payload_replay": {
+        "completed": true,
+        "required": true
+      }
+    },
+    "authority_boundary": {
+      "AUTH1_identity": "FGC-1-PRO18-AUTH1",
+      "AUTH1_is_separate_future_committed_artifact": true,
+      "PREF26_result_is_not_launch_authority": true,
+      "PROTO17_genesis_spec_constructed": false,
+      "external_Git_trust_is_not_cryptographic_authentication": true,
+      "future_runtime_adapter_and_runner_pins_deferred_to_AUTH1": true
+    },
+    "decision": {
+      "AUTH1_authorized": false,
+      "AUTH1_committed": false,
+      "AUTH1_implementation_or_design_authorized": true,
+      "AUTH1_input_evidence_derived": true,
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "FGCQR_mechanism_rejected": false,
+      "GR0_case_eligible": false,
+      "HLT15_GEN1_authorized": false,
+      "PREF26_completed": true,
+      "PREF26_contract_frozen": true,
+      "PREF26_read_only_source_execution_authorized": true,
+      "PREF27_authorized": false,
+      "PRO18_predecessor_bound": true,
+      "PROTO17_genesis_spec_constructed": false,
+      "SGBL_execution_authorized": false,
+      "actual_legacy_history_semantically_replayed": true,
+      "actual_raw_bundle_byte_and_hash_recomputed": true,
+      "candidate_execution_authorized": false,
+      "child_domain_or_topology_derived": false,
+      "dark_sector_mechanism_derived": false,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "future_namespace_created": false,
+      "future_output_roots_reobserved": false,
+      "general_gradient_route_rejected": false,
+      "global_continuation_authorized": false,
+      "physical_transition_claim_authorized": false,
+      "pretrajectory_operation_authorized": false,
+      "retained_EFT_evolution_authorized": false,
+      "singularity_resolution_derived": false,
+      "trajectory_read": false,
+      "varying_locally_measured_c_derived": false
+    },
+    "historical_replay": {
+      "PROTO12": {
+        "byte_count": 21096450,
+        "embedded_external_bytes_equal": true,
+        "line_count": 49,
+        "raw_sha256": "c2d35d07db2f6c983a449cdcf2db469360565cf392d78348dcafbd1d81234ba7",
+        "selected_amplitude": "3",
+        "selected_coordinate_time": "23/16",
+        "selected_event_index": 23
+      },
+      "RSP2": {
+        "byte_count": 15060,
+        "classification": "completed_target_and_complete_constraint_pass",
+        "embedded_external_bytes_equal": true,
+        "endpoint_boundary_index": 23,
+        "endpoint_coordinate_time": "23/16",
+        "line_count": 25,
+        "raw_sha256": "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937"
+      },
+      "historical_replay_sha256": "063372b3764138068cecb0bcaf9b5233d61e99d246336013407ad02e45879c65"
+    },
+    "immutable_lineage": {
+      "sealed_commit": "8a41a70606dbdc0092e45eed215fd108b35fac9b",
+      "sealed_commit_is_ancestor_of_HEAD": true,
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-pro18-frz1.toml": "f0997e28bd92c013dac34e8c4c0bc39de4ac7db882a6dc40708724bf58df4a60",
+        "configs/fgc/fgc-2-sf1-protocol-v17.toml": "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484",
+        "docs/fgc-pro18-frz1.md": "4fc2b5850918c3d1ab7555646304374210e7e2a6118bbfabd578d544bd3cc2fb",
+        "results/fgc-1-pro15-frz1.json": "99d24425cb5d40da2e248605265b83bcdc82a2126cfa4b5bce4239c6ef30635c",
+        "results/fgc-1-pro18-frz1.json": "d9aaad258ee9a6faddef445a998fda0faeb925351b412f2ae714b1ff41238698",
+        "scripts/reproduce_fgc_pro18_frz1.py": "2159834037ced5c57fbe7ced91ccfb83eec5b98d62232bef15a2d56014029d60",
+        "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py": "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d",
+        "src/recursive_horizons/fgc/evolution/proto18_prelaunch_contract.py": "e7a86c5d52ce6e020ae5316038518b960d608e8467622dd8cb129a85cc5bfa21",
+        "src/recursive_horizons/fgc/evolution/protocol_v17.py": "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+      }
+    },
+    "source_archive_manifest": {
+      "resource_totals": {
+        "NPZ_members": 53,
+        "largest_uncompressed_NPZ_member_bytes": 21096578,
+        "legacy_event_log_bytes": 21111510,
+        "legacy_event_log_lines": 74,
+        "source_container_bytes": 5942233,
+        "total_source_bytes": 27053743,
+        "uncompressed_NPZ_bytes": 28083115
+      },
+      "source_archive_manifest_sha256": "b35d12d266f83aed9a2dae46a3814d1a280d7c029bf7a2f242051dd05c14630c",
+      "sources": [
+        {
+          "archive_member_names": [
+            "RK4_2049_event_fields.npy",
+            "RK4_2049_event_proper_times.npy",
+            "RK4_2049_p.npy",
+            "RK4_2049_q.npy",
+            "RK4_2049_tracer_positions.npy",
+            "RK4_2049_tracer_proper_times.npy",
+            "RK4_2049_u.npy",
+            "RK4_4097_event_fields.npy",
+            "RK4_4097_event_proper_times.npy",
+            "RK4_4097_p.npy",
+            "RK4_4097_q.npy",
+            "RK4_4097_tracer_positions.npy",
+            "RK4_4097_tracer_proper_times.npy",
+            "RK4_4097_u.npy",
+            "RK4_8193_event_fields.npy",
+            "RK4_8193_event_proper_times.npy",
+            "RK4_8193_p.npy",
+            "RK4_8193_q.npy",
+            "RK4_8193_tracer_positions.npy",
+            "RK4_8193_tracer_proper_times.npy",
+            "RK4_8193_u.npy",
+            "SSPRK3_2049_event_fields.npy",
+            "SSPRK3_2049_event_proper_times.npy",
+            "SSPRK3_2049_p.npy",
+            "SSPRK3_2049_q.npy",
+            "SSPRK3_2049_tracer_positions.npy",
+            "SSPRK3_2049_tracer_proper_times.npy",
+            "SSPRK3_2049_u.npy",
+            "SSPRK3_4097_event_fields.npy",
+            "SSPRK3_4097_event_proper_times.npy",
+            "SSPRK3_4097_p.npy",
+            "SSPRK3_4097_q.npy",
+            "SSPRK3_4097_tracer_positions.npy",
+            "SSPRK3_4097_tracer_proper_times.npy",
+            "SSPRK3_4097_u.npy",
+            "SSPRK3_8193_event_fields.npy",
+            "SSPRK3_8193_event_proper_times.npy",
+            "SSPRK3_8193_p.npy",
+            "SSPRK3_8193_q.npy",
+            "SSPRK3_8193_tracer_positions.npy",
+            "SSPRK3_8193_tracer_proper_times.npy",
+            "SSPRK3_8193_u.npy",
+            "event_log_utf8.npy",
+            "metadata_utf8.npy"
+          ],
+          "archive_member_set_sha256": "d82036c8190aa3d56773d8fb7491ad3db2ee66d206759690d18f2d01e14de42a",
+          "checkpoint": "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz",
+          "checkpoint_byte_count": 4481907,
+          "checkpoint_largest_member_uncompressed_byte_count": 21096578,
+          "checkpoint_npz_member_count": 44,
+          "checkpoint_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+          "checkpoint_total_uncompressed_byte_count": 25630600,
+          "embedded_event_log_bytes_equal_external": true,
+          "embedded_event_log_sha256": "c2d35d07db2f6c983a449cdcf2db469360565cf392d78348dcafbd1d81234ba7",
+          "event_log": "runs/fgc-2-sf1/proto12/calibration/events.jsonl",
+          "event_log_byte_count": 21096450,
+          "event_log_line_count": 49,
+          "event_log_sha256": "c2d35d07db2f6c983a449cdcf2db469360565cf392d78348dcafbd1d81234ba7",
+          "legacy_terminal_classification": "calibration_failed_no_eligible_GR0_case",
+          "metadata_raw_sha256": "fa757d0ac3a1979bf3c8c598b08f4719e2f7264befd6555aa8790c167959dd7c",
+          "selector_keys": [
+            "RK4-2049",
+            "RK4-4097",
+            "RK4-8193",
+            "SSPRK3-4097",
+            "SSPRK3-8193"
+          ],
+          "source_id": "PROTO12"
+        },
+        {
+          "archive_member_names": [
+            "SSPRK3_16385_event_fields.npy",
+            "SSPRK3_16385_event_proper_times.npy",
+            "SSPRK3_16385_p.npy",
+            "SSPRK3_16385_q.npy",
+            "SSPRK3_16385_tracer_positions.npy",
+            "SSPRK3_16385_tracer_proper_times.npy",
+            "SSPRK3_16385_u.npy",
+            "event_log_utf8.npy",
+            "metadata_utf8.npy"
+          ],
+          "archive_member_set_sha256": "31b93847f4f299cec0b8368150a266758d77b62d7d95c43ff908a22d226a4a9a",
+          "checkpoint": "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz",
+          "checkpoint_byte_count": 1460326,
+          "checkpoint_largest_member_uncompressed_byte_count": 786608,
+          "checkpoint_npz_member_count": 9,
+          "checkpoint_sha256": "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34",
+          "checkpoint_total_uncompressed_byte_count": 2452515,
+          "embedded_event_log_bytes_equal_external": true,
+          "embedded_event_log_sha256": "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937",
+          "event_log": "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/events.jsonl",
+          "event_log_byte_count": 15060,
+          "event_log_line_count": 25,
+          "event_log_sha256": "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937",
+          "legacy_terminal_classification": "completed_target_and_complete_constraint_pass",
+          "metadata_raw_sha256": "7eea69c917da68ab83dfbefb895a8ca0ed757f3a057d6ee80d8781a9f15279ce",
+          "selector_keys": [
+            "SSPRK3-16385"
+          ],
+          "source_id": "RSP2"
+        }
+      ]
+    }
+  },
+  "classification": "completed_read_only_actual_two_container_restart_and_legacy_history_binding_without_authority_namespace_or_trajectory",
+  "derivation_document": "docs/fgc-pro18-pref26.md",
+  "derivation_document_sha256": "f29c628b78ace4e7c4e7f9c91486dcaa4208e26b5b4a074657314b258e783fe6",
+  "gate_status": {
+    "AUTH1_authorized": false,
+    "AUTH1_committed": false,
+    "AUTH1_implementation_or_design_authorized": true,
+    "AUTH1_input_evidence_derived": true,
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "HLT15_GEN1_authorized": false,
+    "PREF26_completed": true,
+    "PREF26_contract_frozen": true,
+    "PREF26_read_only_source_execution_authorized": true,
+    "PREF27_authorized": false,
+    "PRO18_predecessor_bound": true,
+    "PROTO17_genesis_spec_constructed": false,
+    "SGBL_execution_authorized": false,
+    "actual_legacy_history_semantically_replayed": true,
+    "actual_raw_bundle_byte_and_hash_recomputed": true,
+    "candidate_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "future_namespace_created": false,
+    "future_output_roots_reobserved": false,
+    "general_gradient_route_rejected": false,
+    "global_continuation_authorized": false,
+    "physical_transition_claim_authorized": false,
+    "pretrajectory_operation_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "trajectory_read": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro18_pref26.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro18_pref26.py": "388e7b9d45fbb1e29faaf1968fc34b272bd7b6815f7a3b69c32ec0bfec62e365",
+    "src/recursive_horizons/fgc/evolution/proto18_historical_replay.py": "73e5654eed3f2c7e2c389ec17ae62aa7d32308119bd01e523a11abf865ae8531",
+    "src/recursive_horizons/fgc/evolution/proto18_pref26_binder.py": "ec88f050275d00e99f4ef124d332a09c98ab560ab7bb6e728aa26d65266a8b54",
+    "src/recursive_horizons/fgc/evolution/proto18_production_inputs.py": "447bd9fdb8263be7133d3edf1e18faf6ddf7ec124c19985cd2de4c921e56812d"
+  },
+  "nonclaims": {
+    "AUTH1_authorized": false,
+    "AUTH1_committed": false,
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "HLT15_GEN1_authorized": false,
+    "PREF27_authorized": false,
+    "PROTO17_genesis_spec_constructed": false,
+    "SGBL_execution_authorized": false,
+    "candidate_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "future_namespace_created": false,
+    "future_output_roots_reobserved": false,
+    "general_gradient_route_rejected": false,
+    "global_continuation_authorized": false,
+    "physical_transition_claim_authorized": false,
+    "pretrajectory_operation_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "trajectory_read": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "future_namespace_created": false,
+    "future_output_roots_observed": false,
+    "historical_event_logs_opened_read_only": true,
+    "mechanism_question_answered": false,
+    "pretrajectory_operation": false,
+    "raw_source_checkpoints_opened_read_only": true,
+    "role": "completed_read_only_actual_source_container_and_legacy_history_binder",
+    "target_protocol": "FGC-2-SF1-PROTO17",
+    "trajectory_read": false
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro18-pref26.toml": "5bfba6be18700c81b6f5e9f6f0bbb667ac865cfe7d559273f38a642eaa9b59ae"
+  }
+}

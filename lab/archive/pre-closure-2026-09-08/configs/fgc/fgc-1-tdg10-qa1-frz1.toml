@@ -1,0 +1,122 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG10-QA1-FRZ1"
+classification = "premise_only_retry3_ssprk3_sbp4_exact_complete_C_all_channel_qualification"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg10-qa1-frz1.md"
+base_commit = "49c514ac283ae3ec8091a6638442da6fdaf58db0"
+output_namespace = "runs/fgc-2-sf1/tdg10-qa1/retry3-ssprk3-sbp4-exact-complete-c"
+
+[predecessor]
+store = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+store_leaf_count = 115
+store_snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+generation = 9
+checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+checkpoint_raw_sha256 = "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846"
+checkpoint_journal_sequence = 10
+checkpoint_journal_sha256 = "5b533eb7009a9c7c3f353d26813f9cbbde8574afae77492929b435b4c701c5ff"
+checkpoint_journal_raw_sha256 = "b50dc39ebd8bbdd3729d40d9e9ae4b223ff2ef19389d4ca74f9a316bac72202f"
+historical_retry3_rejection_sequence = 11
+historical_retry3_rejection_sha256 = "341cd8cd328434d85774bcb452889ac1886c520a72e945a92337b72cf564161a"
+historical_retry3_rejection_raw_sha256 = "e4f9ca42f2d014d4bdbd875a0f24a9bbb9c04159fb0d9e0e7de8d0d72db61fdf"
+member_key = "RK4-2049"
+point_count = 2049
+owned_row_count = 2044
+retry = 3
+prior_retry_count = 2
+accepted_time_binary64_hex = "0x1.78554de5a30e0p+0"
+attempted_width_binary64_hex = "0x1.aaa9612df8000p-11"
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+member_descriptor_sha256 = "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4"
+coordinates_sha256 = "2a347b314de5e1e94ac0c999db283e03498070ece6762c53252fa41c1e04a646"
+transaction_sha256 = "7a90163d2eb4252fa7a1bbdf55d12f92a9127ed7cba5a37c28456e72d732b22b"
+historical_journal_sha256 = "0d21f650ccc46db778fd81fbebf5acab6394e1c2f7972b7940e24c76af9e1f59"
+cursor_mode = "RETRY_PENDING"
+pending_owner = "temporal"
+immediate_predecessor_artifact_id = "FGC-1-TDG9-UR1-PREF1"
+immediate_predecessor_commit = "49c514ac283ae3ec8091a6638442da6fdaf58db0"
+immediate_predecessor_result_path = "results/fgc-1-tdg9-ur1-pref1.json"
+immediate_predecessor_result_sha256 = "27c2aef9b033092285b868f583441842de99f61941ff57aa7e62749cc8d91300"
+
+[formulation]
+source_member_method = "RK4"
+source_member_integrator = "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4"
+tableau_selector = "SSPRK3"
+tableau_runtime_selector = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+actual_spatial_operator = "inherited_RK4_2049_SBP4"
+successor_formulation_if_later_adopted = "SSPRK3_on_inherited_RK4_2049_SBP4"
+interval_owner = "exact_radius_free_complete_C_dual_rational_localizer"
+channel_order_owner = "TDG6_COMPLETE_STATE_CHANNELS"
+channel_count = 18
+complete_admission_is_all_of = true
+minimum_observed_order = "3/2"
+order_squared_multiplier = 8
+equality_passes = true
+outer_subintervals = 2
+finest_subintervals = 4
+primary_refinement_depth = 160
+per_channel_maximum_candidates_D01 = 16352
+per_channel_maximum_candidates_D12 = 32704
+independent_route_required = true
+absolute_tolerance_used = false
+physical_signal_used_for_normalization = false
+declared_cubic_is_exact_PDE_history = false
+pde_trajectory_order_certified = false
+
+[transaction]
+shadow_path_count = 7
+shadow_proposal_count = 7
+SSPRK3_records_per_proposal = 4
+maximum_stage_and_endpoint_records = 28
+historical_store_read_only = true
+output_namespace_must_be_absent = true
+overwrite_forbidden = true
+diagnostic_fine_endpoint_serialized_iff_all_channels_pass = true
+diagnostic_fine_endpoint_is_accepted_state = false
+campaign_state_write_authorized = false
+PDE_state_commit_authorized = false
+fine_path_commit_authorized = false
+independent_postrun_binder_required = true
+later_state_adoption_requires_separate_freeze = true
+
+[environment]
+python_implementation = "CPython"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+system = "Darwin"
+machine = "arm64"
+byteorder = "little"
+
+[exclusions]
+retry_4_authorized = false
+retry_5_authorized = false
+fourth_width_authorized = false
+new_grid_authorized = false
+threshold_change_authorized = false
+historical_module_mutation_authorized = false
+common_event_authorized = false
+GR0_calibration_authorized = false
+production_SSPRK3_comparator_earned = false
+independent_method_agreement_earned = false
+SGBL_authorized = false
+FGCQR_authorized = false
+candidate_execution_authorized = false
+mechanism_result_authorized = false
+physical_result_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+external_publication_authorized = false
+push_authorized = false
+
+[implementation]
+runner_path = "scripts/run_fgc_tdg10_qa1.py"
+runner_sha256 = "036097ee42fba5602df521bac8b3fbd50100c9beeecd9ee118bdcfbe390a0576"
+authority_path = "src/recursive_horizons/fgc/evolution/tdg10_qa1_authority.py"
+authority_sha256 = "c2b164b449afb427a3d162aa2284d9b39777d8fdd5ff9b99cf5bd79a249a7b4e"
+exact_runtime_path = "src/recursive_horizons/fgc/evolution/tdg10_exact_complete_c_runtime.py"
+exact_runtime_sha256 = "8b4be91addd5d5927a63bc55e759f77369e3a29dabc8f0d350b73ab2b39ee352"
+exact_admission_path = "src/recursive_horizons/fgc/evolution/tdg10_exact_complete_c_admission.py"
+exact_admission_sha256 = "16d3f231c90eaa0b769a680cef0ae555b0f29fb3e2b9c551c9b51f3a290358af"
+TI2_runner_path = "scripts/run_fgc_tdg9_ti2.py"
+TI2_runner_sha256 = "488f05b65b71dd2617d1d77c2efa49496aa1a62698b37866e07bbb9c5792cd57"

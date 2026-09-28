@@ -1,0 +1,44 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-CON3-CAU1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+metric_subsidiary_config = "configs/fgc/fgc-1-hyp1-con2-mprop1.toml"
+metric_subsidiary_result = "results/fgc-1-hyp1-con2-mprop1.json"
+compatible_data_config = "configs/fgc/fgc-1-hyp1-con1-comp1.toml"
+compatible_data_result = "results/fgc-1-hyp1-con1-comp1.json"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+coordinate_radius = "4"
+tilde_normal_factor = "4"
+hat_normal_factor = "9"
+
+[proof_contract]
+metric_defined_C_through_second_partials = true
+complete_REF1_metric_equations_required = true
+both_unmodified_scalar_equations_required = true
+homogeneous_linear_subsidiary_operator = true
+F_strictly_positive_at_COMP1 = true
+hat_metric_Lorentzian_at_COMP1 = true
+coordinate_t_slice_hat_spacelike_at_COMP1 = true
+COMP1_C_and_complete_local_nabla_C_zero = true
+COMP1_physical_H_and_M_zero = true
+COMP1_normal_gauge_extension_map_exactly_invertible = true
+boundary_free_domain_of_dependence_only = true
+standard_normally_hyperbolic_uniqueness_theorem_used = true
+
+[open_gates]
+smooth_nonlinear_REF1_solution_constructed = false
+nonzero_width_compatible_initial_hypersurface_constructed = false
+physical_initial_constraint_manifold_solved = false
+uniform_normal_gauge_map_on_UHYP1_graph_proven = false
+metric_derived_incoming_gauge_boundary_map_to_main_fields_derived = false
+physical_constraint_propagation_proven = false
+constraint_preserving_ACT1_IBVP_proven = false
+quasilinear_local_existence_proven = false
+evolution_authorized = false
+collapse_solution_derived = false
+finite_invariant_transition_surface_derived = false
+singularity_resolution_derived = false

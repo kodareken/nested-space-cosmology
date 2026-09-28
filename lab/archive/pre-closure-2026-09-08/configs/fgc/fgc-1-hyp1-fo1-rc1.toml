@@ -1,0 +1,77 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-FO1-RC1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+symbol_config = "configs/fgc/fgc-1-hyp1-symbol.toml"
+modified_harmonic_config = "configs/fgc/fgc-1-hyp1-modified-harmonic.toml"
+reference_config = "configs/fgc/fgc-1-hyp1-mhg-reference.toml"
+implicit_config = "configs/fgc/fgc-1-hyp1-mhg-implicit.toml"
+propagation_config = "configs/fgc/fgc-1-hyp1-mhg-propagation.toml"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+center_included = false
+
+[coordinate_radii]
+FGCQR_flat_reference_vacuum = "4"
+FGCQR_activated_generic = "9/2"
+
+[fixtures]
+flat_background_fixture_id = "FGCQR_flat_reference_vacuum"
+activated_background_fixture_id = "FGCQR_activated_generic"
+activated_background_solution_status = "off_shell_control_not_a_solution"
+
+[formulation]
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_equations = "REF1_full_reference_connection_modified_harmonic"
+first_order_kind = "exact_local_first_order_differential_algebraic_lift"
+state_definition = "U=(u,p=partial_t_u,q=partial_r_u)"
+state_order = ["u.h_tt", "u.h_tr", "u.h_rr", "u.areal_radius", "u.phi", "u.chi", "p.h_tt", "p.h_tr", "p.h_rr", "p.areal_radius", "p.phi", "p.chi", "q.h_tt", "q.h_tr", "q.h_rr", "q.areal_radius", "q.phi", "q.chi"]
+equation_order = ["dt_u_minus_p.h_tt", "dt_u_minus_p.h_tr", "dt_u_minus_p.h_rr", "dt_u_minus_p.areal_radius", "dt_u_minus_p.phi", "dt_u_minus_p.chi", "metric_tt_mhg", "metric_tr_mhg", "metric_rr_mhg", "metric_theta_theta_mhg", "scalar_phi", "scalar_chi", "dt_q_minus_dr_p.h_tt", "dt_q_minus_dr_p.h_tr", "dt_q_minus_dr_p.h_rr", "dt_q_minus_dr_p.areal_radius", "dt_q_minus_dr_p.phi", "dt_q_minus_dr_p.chi"]
+physical_argument_order = ["u.h_tt", "u.h_tr", "u.h_rr", "u.areal_radius", "u.phi", "u.chi", "p.h_tt", "p.h_tr", "p.h_rr", "p.areal_radius", "p.phi", "p.chi", "q.h_tt", "q.h_tr", "q.h_rr", "q.areal_radius", "q.phi", "q.chi", "p_t.h_tt", "p_t.h_tr", "p_t.h_rr", "p_t.areal_radius", "p_t.phi", "p_t.chi", "p_r.h_tt", "p_r.h_tr", "p_r.h_rr", "p_r.areal_radius", "p_r.phi", "p_r.chi", "q_r.h_tt", "q_r.h_tr", "q_r.h_rr", "q_r.areal_radius", "q_r.phi", "q_r.chi"]
+radial_reduction_constraint = "C_r=q-partial_r_u"
+radial_reduction_constraint_identity = "partial_t_C_r=partial_t_q-partial_r_p=0_on_declared_kinematic_rows"
+differentiation_method = "exact_first_tangent_forward_ad"
+flat_branch_theorem = "finite_dimensional_real_implicit_function_theorem"
+flat_linearization = "D_A_at_z0=-J_p_t_inverse*D_z_R_REF1_at_z0"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+nonlinear_acceleration_solver_implemented = false
+
+[proof_contract]
+require_exact_eighteen_variable_and_equation_orders = true
+require_exact_first_order_two_jet_roundtrip_on_both_controls = true
+require_exact_complete_ref1_residual_reproduction_on_both_controls = true
+require_exact_kinematic_rows_and_radial_reduction_constraint_identity = true
+require_exact_all_argument_forward_tangent_primal_regression = true
+require_exact_weighted_tangent_superposition = true
+require_exact_flat_imp1_acceleration_block_regression = true
+require_exact_flat_acceleration_determinant_rank_and_inverse = true
+require_exact_complete_flat_implicit_branch_derivative = true
+require_exact_flat_first_order_principal_regression_to_mhg1 = true
+require_exact_activated_off_shell_nontrivial_control = true
+require_no_nonlinear_acceleration_solve = true
+
+[open_gates]
+explicit_nonlinear_acceleration_map_implemented = false
+solved_acceleration_map_away_from_flat_root_derived = false
+quantified_implicit_branch_neighborhood_proven = false
+complete_nonlinear_lower_order_first_order_sources_derived = false
+complete_quasilinear_first_order_evolution_system_derived = false
+metric_derived_gauge_constraint_propagation_proven = false
+complete_reduction_constraint_system_propagation_proven = false
+physical_hamiltonian_momentum_constraints_derived = false
+physical_initial_constraints_solved = false
+constraint_preserving_initial_boundary_value_problem_proven = false
+uniform_open_domain_symmetrizer_proven = false
+open_retained_eft_domain_proven = false
+boundary_or_regular_center_system_derived = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

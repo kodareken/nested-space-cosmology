@@ -1,0 +1,101 @@
+schema_version = 1
+artifact_id = "FGC-1-HLT3-MON3"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v5.toml"
+protocol_freeze_result = "results/fgc-1-pro5-frz1.json"
+diagnosis_result = "results/fgc-1-cal1-pref3.json"
+static_input_result = "results/fgc-1-id2-all1.json"
+successor_monitor_result = "results/fgc-1-hlt2-mon2.json"
+run_plan_config = "configs/fgc/fgc-1-cal2-run1.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO5"
+runtime_owner = "FGC-1-HLT3-MON3"
+calibration_branch = "GR-0"
+role = "pre_trajectory_runtime_compositor_and_fresh_input_freeze"
+fresh_GR0_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+candidate_action_health_values_invented_for_GR0 = false
+
+[immutable_lineage]
+checkpoint_commit = "cf48cf729ff1c3a6effce6ecd3fdbeaf8d9645bf"
+protocol_config_sha256 = "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab"
+protocol_freeze_result_sha256 = "7810557ed2eb82d9d484b0aeb65b75bbe3fd9565a4a52c5305c07144614add16"
+diagnosis_result_sha256 = "3ea43baf0fb9830b348fc49a79af5c535d8f7089aa03a957a22f6927528a4395"
+static_input_result_sha256 = "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981"
+successor_monitor_result_sha256 = "61a9843a7fe7374c74373fea5580bd83e558d42faff3dd724f01e12b2411061a"
+calibration_runtime_source_sha256 = "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9"
+checkpoint_must_be_ancestor_of_HEAD = true
+all_predecessor_blobs_must_be_read_from_checkpoint = true
+
+[runtime_composition]
+universal_runtime_stop_ids = ["nonpositive_lapse", "nonpositive_radial_metric", "nonpositive_areal_radius_away_from_center", "hat_cone_not_Lorentzian", "newton_residual_limit", "newton_iteration_limit", "newton_residual_not_monotonic", "kinetic_condition_limit", "boundary_causal_buffer"]
+candidate_action_stop_count_for_GR0 = 0
+replaced_numerical_decisions_are_common_event_constraints_and_weighted_spectra = true
+source_residual_and_iterative_refinement_map_to_historical_solver_stop_names = true
+hat_Lorentzian_margin_is_computed_from_actual_ADM_stage_metric = true
+causal_ledger_consumes_every_internal_stage_and_candidate_endpoint = true
+CFL_failure_is_retryable_and_not_a_scientific_stop = true
+scientific_failure_latches_first_premise_and_rolls_back_stage_and_causal_acceptance = true
+common_event_constraints_use_raw_magnitude_guards_and_roundoff_only_for_zero_classification = true
+spatial_spectrum_uses_proper_radial_distance_and_two_edge_compact_window = true
+temporal_spectrum_uses_causal_past_normal_flow_tracers_and_uniform_proper_time_resampling = true
+temporal_resampling_error_is_public_and_nonnegative = true
+trapped_sign_uses_both_metric_null_expansions_with_fixed_orientation = true
+trapped_sign_error_components_are_additive_only = true
+constraint_and_spectral_failures_are_vetoes_not_arbitrary_expansion_error_conversions = true
+
+[input_freeze]
+eligible_amplitudes_in_order = ["5/2", "3"]
+methods_in_order = ["RK4", "SSPRK3"]
+resolutions_in_order = [1025, 2049, 4097]
+expected_run_input_count = 12
+continuum_state_hashes_must_match_ID2 = true
+physical_u_and_p_must_be_bitwise_preserved = true
+only_q_may_change_under_native_SBP_projection = true
+projected_state_and_expanded_run_config_hashes_must_be_serialized = true
+both_amplitudes_and_methods_must_pass_the_t0_common_event = true
+first_eligible_candidate_stops_later_candidates = true
+
+[namespace]
+calibration_output_root = "runs/fgc-2-sf1/proto5/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto5/holdout"
+both_roots_must_be_absent_or_empty_at_authorization = true
+authorization_must_not_create_either_root = true
+runner_must_refuse_overwrite = true
+
+[proof_contract]
+PROTO5_and_PRO5_FRZ1_must_validate_and_pass_from_immutable_checkpoint = true
+CAL1_ID2_and_HLT2_must_be_canonical_and_hash_matched_from_immutable_checkpoint = true
+runtime_stop_partition_must_match_PROTO5_inheritance_exactly = true
+candidate_only_health_fields_must_be_absent_from_GR0_runtime_API = true
+synthetic_runtime_accept_failure_rollback_CFL_and_boundary_controls_must_pass = true
+spatial_and_temporal_weighted_spectral_controls_must_pass_and_fail_when_injected = true
+all_twelve_projected_inputs_must_reconstruct_deterministically = true
+all_four_amplitude_method_t0_common_events_must_pass = true
+run_plan_must_bind_every_protocol_value_and_output_rule = true
+authorized_runner_must_be_hash_bound_and_refuse_drift_overwrite_or_dirty_tracked_state = true
+atomic_checkpoint_must_bind_members_prior_amplitude_records_and_exact_event_log_bytes = true
+resume_must_archive_uncommitted_log_tail_and_reject_divergent_history = true
+fresh_namespaces_must_be_observed_empty_without_creation = true
+canonical_hash_bound_result_required = true
+no_trajectory_may_be_read_or_advanced = true
+
+[claims]
+PROTO5_successor_runtime_compositor_implemented = true
+PROTO5_fresh_GR0_dynamic_calibration_authorized = true
+PROTO5_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

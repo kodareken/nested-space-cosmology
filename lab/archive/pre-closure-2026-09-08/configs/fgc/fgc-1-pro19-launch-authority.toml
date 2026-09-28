@@ -1,0 +1,335 @@
+schema = "FGC-1-PRO19-launch-authority-v1"
+
+[environment]
+source = "AUTH1"
+auth1_result_path = "results/fgc-1-pro18-auth1.json"
+
+[[authority_path]]
+role = "config"
+path = "configs/fgc/fgc-1-hlt16-mon16.toml"
+sha256 = "8ee09fbdd7a750849858d7fce252a01195f0f34862ebc892f2535dd5f8c0e526"
+
+[[authority_path]]
+role = "config"
+path = "configs/fgc/fgc-1-pro19-cfl1-frz1.toml"
+sha256 = "9ad1fd6e0defb7e57b1d2c9807fd0c2604f0b5c0d48ded8826e132984e3fffc0"
+
+[[authority_path]]
+role = "config"
+path = "configs/fgc/fgc-1-pro19-frz1.toml"
+sha256 = "e4dac87e91d96802830418d624a4328b247bd6e4376a5b3de632c7f26ae66988"
+
+[[authority_path]]
+role = "config"
+path = "configs/fgc/fgc-1-pro19-sid1-frz1.toml"
+sha256 = "5019067dd56445b33f270a2b6531572ee2e8e3b2318dc5f82e70d0f554b3c394"
+
+[[authority_path]]
+role = "config"
+path = "configs/fgc/fgc-1-pro19-sid2-pref1.toml"
+sha256 = "e00ae01660ae9467c121b9c7190554dcdaf154ff292a0e7f013a614401e2c58d"
+
+[[authority_path]]
+role = "documentation"
+path = "docs/fgc-hlt16-mon16.md"
+sha256 = "2224e135767059d637d72c772cbd4d1405275d214d9229b75e8c77a9a41c9889"
+
+[[authority_path]]
+role = "documentation"
+path = "docs/fgc-pro19-cfl1-frz1.md"
+sha256 = "1d89c917f38b42f7b1718a0255a56b87431c03b0aab620b6956c661872970163"
+
+[[authority_path]]
+role = "documentation"
+path = "docs/fgc-pro19-frz1.md"
+sha256 = "fe2fd07b1b20a3157c731a375f13297a2b89ce046c927c855d171c91e78d844a"
+
+[[authority_path]]
+role = "documentation"
+path = "docs/fgc-pro19-sid1-frz1.md"
+sha256 = "3dabede07452c5d183d2ebed35b3ee08b62696edd5d31ef2014c9874e94cee12"
+
+[[authority_path]]
+role = "documentation"
+path = "docs/fgc-pro19-sid2-pref1.md"
+sha256 = "9a9c12457a1cca3a7b726343123509a012bec3ffdf12afebf3008686c641d4d6"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-hlt16-mon16.json"
+sha256 = "f6b8a64afc569af31ca4df943582db520b8eb714e38091fb6087c8ed50bacc52"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-pro18-auth1.json"
+sha256 = "dd967568fbae0bd19e063af94ea8e2d53480c98afec5c78bd86601c20faf4efa"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-pro18-pref27.json"
+sha256 = "102b385d058066d668e9e8541c974c736c583f6d5c4afaf9b99e95a16aabeb83"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-pro19-cfl1-frz1.json"
+sha256 = "965d336718cfc0adec42bff382967270351a7c59c72b7f0d22d2df12049cccd3"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-pro19-frz1.json"
+sha256 = "c4bd7b9bbae3fed06c69ac69d18630152e9d852e8eed915a422bd3d8ea40368e"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-pro19-sid1-frz1.json"
+sha256 = "e8f937f8513c0ccb5d7c02bb1d83c4320c7ef0ded26a5461a212abf766882465"
+
+[[authority_path]]
+role = "result"
+path = "results/fgc-1-pro19-sid2-pref1.json"
+sha256 = "2c70d87f6f5dd022330492562fd395004c7ec1eb9ec1d9e714ee0f0ceceb7738"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/check_repo.py"
+sha256 = "e2a9be754246be1e02c3caf93d6d21a5d5b9aa3a983f9f66b32f66303caac587"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_hlt16_mon16.py"
+sha256 = "6b7c4b08a09c453c7836be2ab0c8f9b64bae0d1bfffde38cd6a2e7d8fef5f81f"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_pro19_cfl1_frz1.py"
+sha256 = "8f28819d437534bb3c3ae34e03ee58e4771024bab45a2e735079edc2d4b388b9"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_pro19_frz1.py"
+sha256 = "028a52df86790d928ec67389e6d68cbce1b30995e8da33cf285e5599a57937c6"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_pro19_launch_manifest.py"
+sha256 = "e62c9f5c1d2d3f2c3538769c4acbd31f14f0e0d04911d8ef88dc038a974508e8"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_pro19_sid1_frz1.py"
+sha256 = "d4191948680dfa12edc870e3f82c46e84da0af44e8f49c70055a42b14ca934e9"
+
+[[authority_path]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_pro19_sid2_pref1.py"
+sha256 = "fb8ca105190cd1085fc9258dde801af0ce298f2da250e4c56a7779bc044361f0"
+
+[[authority_path]]
+role = "runner"
+path = "scripts/run_fgc_pro19_event1.py"
+sha256 = "bb95b4e7f17097ff2891f74c0e78229b713844e39bb9a953ff8bd17912c620d1"
+
+[[authority_path]]
+role = "runner"
+path = "scripts/status_fgc_pro19_event1.py"
+sha256 = "918122522a570c2fb8b3a974d5d46a22411965296f09002a946059c1a2e83ff4"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py"
+sha256 = "a6618215fc15a0bf5433ec7ed68e09d5bf7922fb229282381452ebafff7817c2"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+sha256 = "2e00b4ab8ed39951327c4aceb2fe42e36cfdc3cccb5a2a1a35cc94de2ab70813"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py"
+sha256 = "638bd75e592d49889de5c37418845b6646e7055c898cf86064a3048852e07892"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+sha256 = "5286373a63349d0399bab6e32dac942c8f435942b0045b7684507152b99150e0"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+sha256 = "9b4e1b82c04433bcd2b6f75640ab549094ec74e8f6032a055bd6ddfbebfbb7b7"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_member_codec.py"
+sha256 = "8680e5e815921a910de4fb021926bcdd4de5aa1e0c39f2f1f70b74dae56eba75"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_mon16_artifact.py"
+sha256 = "eda9658ff720887c99c19ee2b400e56beb21e238e359b45e815590974b35554b"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+sha256 = "e6624b2fe477c6f24b7015c5864786c8d3c929fcb6804d90b3677f0b0daa11f3"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_state_store.py"
+sha256 = "02203a5d30ee6e025dda8e968a4ee1ae2d2009e5c35a3701736c426e9d1ebc83"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_cfl_continuation_authority.py"
+sha256 = "955b864ac79d2b16aabf06150efc1d82c8e33f2a5751a2bdf4fe42a86ecf56af"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_launch_authority.py"
+sha256 = "7dd3c5f8d4f776191e1ba0e0622fc1a849453f348a23343481d8c692cf58ad12"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_launch_manifest.py"
+sha256 = "fd2a1f1b3bcd65419f603e6c63621a877697fbe5edec656b9ee9a5a244a56ae8"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py"
+sha256 = "0a502abaee9c825ed9302ae717d2063c76e2e00e1cdc0a0f63f901161232f1c9"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_progression_freeze.py"
+sha256 = "8640f9f31d64f5ffb6f2417f284f10ff634e2d607da3db4385088f1808561294"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_progression_inputs.py"
+sha256 = "a13ec13009498ca57d3ec0cae903cabb43f98f42daed765056db0272591b8207"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_sid1_authority.py"
+sha256 = "50faaa591168c449fc9c9d15cd1e71349b26cb09a587fde59bc08c89ff054522"
+
+[[authority_path]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_sid2_binder.py"
+sha256 = "160db0e5a0819c51ca5fde4aee75ccc34537da4018075bc0f8cc8a4c9e2f71d3"
+
+[[authority_path]]
+role = "test"
+path = "tests/fgc_gen0_fixture.py"
+sha256 = "306a327d31b57ed5c2d114d2dc51bae677b4c458d55a02a591a0af246dde8e45"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_check_repo_hlt16_prelaunch.py"
+sha256 = "60a074bedf97f352bfbfc097cd2751cfc1cc78d2c0a2c1944dba2a54c6753866"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_check_repo_pro19_sid1_prelaunch.py"
+sha256 = "c01b5ba8de26f0c6739e1396a972e2a864fca318188e52503928af32d5ef76b9"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_check_repo_pro19_sid2_postrecovery.py"
+sha256 = "faf08a1f23b983b95c7e1ae60ebed10642f1645eeeede550deebefb1e0f65bc8"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_campaign_recovery.py"
+sha256 = "c5dc90ae7dc420be1e0f6e9c05d8cc92f572023a66f6e41799d82040b1f94359"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_campaign_runtime.py"
+sha256 = "ff2bcc57a02f160055b853179f6be09482c7a063afe77d1816368e452e415ef8"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_campaign_schema.py"
+sha256 = "42680da71a83c5c996c2f9492b51027179e13fd275fcd9b41c403f17daf37fe3"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_campaign_store.py"
+sha256 = "67fc648735d2129dca8a79beffd1125fb728bd74f8637592e40a155dc0bd5531"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_member_codec.py"
+sha256 = "1ce48477c1a3937e56df5dc796a32313f2ab563b370d95761012b419d0a8e414"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_mon16_artifact.py"
+sha256 = "25c31cbb067ef1fab9fbc52160096c642acf9cb7bf05181395f2e9d6a7f571c1"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_hlt16_state_store.py"
+sha256 = "a1f833e386c5156d14aba2f0ca8e51d3345eecf18de8fb98542b03d84659d2fd"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_pro19_event1_runner.py"
+sha256 = "b3dff95b74b9c3eb10c716c04ad0390e5871f26fbcbf8d69970109e3b56e85c8"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_pro19_event1_status.py"
+sha256 = "6033bfa7005a256fd4e6526467faf60cd50e722fdf3e5c4a6bbd0e3cca753522"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_cfl_continuation_authority.py"
+sha256 = "195ea57d0bca4892634e5bb85ecdc46439ffe94443e48ce002b354aaae7da05d"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_launch_authority.py"
+sha256 = "9529b49a9c5858e039ae2e340deb19c5e471ff3d7c26efd8cc15baf7a0422210"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_launch_manifest.py"
+sha256 = "244ef6a04dc768ff8e75f6acf5180b87951ac2086e7fdb676d030796206e1e73"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_progression_contract.py"
+sha256 = "8345d2c2b4809dec1b3033c5dcf0364575274a7d493530e3c77c444ceb180777"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_progression_freeze.py"
+sha256 = "eb3d85c825cee55a9c8d575bd7dba169b186b57f1db0f3b8c9640e0eecfa553b"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_progression_inputs.py"
+sha256 = "fb9a12f4b9876de40a7666e07fc8ddb23cddc5f9bb0a1e693a612e5d7eca227c"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_sid1_authority.py"
+sha256 = "da66403196e4353282edb1bab978d550c477cc16a3b8c509be5a5e254da4f29b"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_fgc_proto19_sid2_binder.py"
+sha256 = "43399d372e859c6d8979e88d1b80b93dba3d253c817bd75cae4f5174f6f52de0"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_hlt16_lifecycle.py"
+sha256 = "1762e3064e9970b03ab9a5ddacc019c52b05f6b628ad5eadedf4c06ac6929cac"
+
+[[authority_path]]
+role = "test"
+path = "tests/test_hlt16_progression_attempt.py"
+sha256 = "aa28734eed280863326f6003d29b5aeb9c7a4797081057650e6dba4c7849b634"

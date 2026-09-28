@@ -1,0 +1,74 @@
+{
+  "schema": "NSC-COMPATIBLE-PREPARED-HISTORY-v1",
+  "accountable_author": "Douglas Ek",
+  "status": "PASS: supplied-family derivative control; physical preparation and extended stationarity OPEN",
+  "control": {
+    "synthetic_columns_only": true,
+    "grid_points": 65,
+    "source_columns": 2,
+    "directions": 2,
+    "midpoint_steps": 4,
+    "PG_time_window": [
+      0.0,
+      0.04
+    ],
+    "selected_physical_duration": null,
+    "incoming_center": "s=T(rho)-T(1); z=tau+S(rho)",
+    "numerical_normal_window_radii": [
+      0.015,
+      0.08
+    ],
+    "finite_difference_step": 2e-05,
+    "field_derivative_tolerance": 3e-08,
+    "covariance_derivative_tolerance": 3e-08,
+    "flux_algebra_tolerance": 3e-11,
+    "covariance_projection": "actual rho1 normal/half-density trace of synthetic time-dependent columns",
+    "incoming_z_nodes": [
+      1.0568780671724793,
+      1.0668780671724793,
+      1.0768780671724794,
+      1.0868780671724794,
+      1.0968780671724794
+    ],
+    "stationary_phase_reapplied": false,
+    "incoming_trace_interpolation": null
+  },
+  "residuals": {
+    "complete_field_derivative": 2.44562300609115e-11,
+    "incoming_trace_derivative": 2.2283938140742915e-11,
+    "complete_coherent_covariance_derivative": 3.0832586483953344e-11,
+    "norm_flux_residual": 1.7763568394002505e-15,
+    "metric_flux_tangent_residual": 0.0,
+    "auxiliary_identity_residual": 8.881784197001252e-16
+  },
+  "omitted_term_effects": {
+    "metric_geometry": 0.0002810870928448985,
+    "initial_preparation": 0.10921277908095305,
+    "incoming_preparation": 0.057391052731945065,
+    "source_covariance": 0.04061520057337416
+  },
+  "scope": {
+    "physical_parent_preparation": "OPEN",
+    "incoming_C0_match": "OPEN",
+    "continuous_spectral_completion": "OPEN",
+    "continuum_error_bound": null,
+    "physical_endpoint_family": null,
+    "global_initial_data": "OPEN",
+    "extended_stationarity": "OPEN",
+    "metric_timestep": false,
+    "source_stress_computed": false,
+    "fit_or_added_action_term": false
+  },
+  "source_sha256": {
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "scripts/derive_nsc_compatible_prepared_history.py": "3c27f74c78a2910cdc714f0f62afa2b56a7315140d019e29f258d816032c6996",
+    "tests/test_nsc_compatible_prepared_history.py": "cca4fcf5cced97a43c6ee8c6c3af68cc90061371a3bcd6e0dfa10b50f5d1d5ea",
+    "docs/nsc-compatible-prepared-history.md": "ea4689c019bd434c44cbfb39fcd7ccf4e16e35d40fceca8a6188ad438a3f965a"
+  }
+}

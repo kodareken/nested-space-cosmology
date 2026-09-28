@@ -1,0 +1,140 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG1-PREF16"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+freeze_result = "results/fgc-1-tdg1-frz1.json"
+freeze_config = "configs/fgc/fgc-1-tdg1-frz1.toml"
+campaign_manifest = "runs/fgc-2-sf1/proto13/calibration/manifest.json"
+campaign_event_log = "runs/fgc-2-sf1/proto13/calibration/events.jsonl"
+campaign_checkpoint = "runs/fgc-2-sf1/proto13/calibration/latest-checkpoint.npz"
+campaign_result = "runs/fgc-2-sf1/proto13/calibration/campaign-result.json"
+
+[scope]
+target = "FGC-2-SF1-TDG1"
+role = "post_freeze_read_only_terminal_history_diagnosis"
+calibration_branch = "GR-0"
+source_terminal_event = 63
+source_terminal_coordinate_time = "63/16"
+terminal_histories_read = true
+terminal_checkpoint_resumed = false
+state_advanced = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+replacement_temporal_admission_defined = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+freeze_commit = "e8310bdbc893f76c67daf8fc993bdcd35259184d"
+freeze_result_sha256 = "11beff809d1c1af277e119dfc9fd54b571c2c7bd70de3da96c47e9945b28b7f3"
+freeze_config_sha256 = "4a1f41a40fedb4aecc2adafd79d90a5b96c81d9aaf5001bac1bcfd243d92e4e3"
+diagnosis_module_sha256 = "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44"
+freeze_reproducer_sha256 = "00256721f72d696360407aab161f057ef0dbbc7a4795f87f8b63edd6a1ab8b2b"
+CAL10_reproducer_sha256 = "71e1e4d211e46d9679e9772eefb0ab90440a648c009efbe570716b5dcf2659e6"
+manifest_sha256 = "7fbe3835da9d23ed868bf5862250a9c9cad31bfb948091fc1290454867f084f6"
+event_log_sha256 = "cc26095e48de376f0e7924a8b5f2c5126e3a0f21f6d6036942cfc4031d248bdd"
+checkpoint_sha256 = "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97"
+campaign_result_sha256 = "83475a061e2dd4e354e357a3c0cca66e44c60312f9c420585dd989598779aa0b"
+freeze_commit_must_be_ancestor_of_HEAD = true
+tracked_freeze_blobs_must_match_commit_and_worktree = true
+raw_bundle_must_be_complete_and_hash_exact_when_present = true
+clean_clone_may_verify_only_the_compact_result = true
+
+[observed_diagnosis]
+method_count = 2
+resolution_count = 6
+signals_per_resolution = 288
+total_signal_resolution_records = 1728
+inherited_individual_failure_count = 544
+failed_below_declared_absolute_amplitude_floor = 149
+failed_above_declared_absolute_amplitude_floor = 395
+normalized_raw_tail_ratio_gate_structurally_invalid = true
+individual_budget_failure_cause_fully_derived = false
+history_difference_is_replacement_admission = false
+
+[observed_diagnosis.RK4]
+point_counts = [2049, 4097, 8193]
+individual_failure_counts = [110, 106, 93]
+subfloor_failure_counts = [3, 16, 27]
+above_floor_failure_counts = [107, 90, 66]
+all_view_persistent_failure_counts = [89, 77, 48]
+history_difference_exactly_identical = 15
+history_difference_fine_pair_exact = 8
+history_difference_raw_order_pass = 237
+history_difference_raw_order_below_required = 28
+history_difference_nonmonotone = 0
+history_difference_interpolation_limited = 83
+
+[observed_diagnosis.SSPRK3]
+point_counts = [4097, 8193, 16385]
+individual_failure_counts = [96, 80, 59]
+subfloor_failure_counts = [44, 37, 22]
+above_floor_failure_counts = [52, 43, 37]
+all_view_persistent_failure_counts = [44, 26, 22]
+history_difference_exactly_identical = 33
+history_difference_fine_pair_exact = 1
+history_difference_raw_order_pass = 233
+history_difference_raw_order_below_required = 21
+history_difference_nonmonotone = 0
+history_difference_interpolation_limited = 51
+
+[conclusions]
+historical_PROTO13_failure_preserved = true
+normalized_ratio_cause_derived_structurally = true
+individual_budget_obstruction_remains = true
+individual_failures_contract_with_resolution_but_do_not_vanish = true
+raw_history_differences_are_mostly_convergent_but_not_complete = true
+interpolation_limits_a_nonzero_subset = true
+absolute_tail_convergence_not_yet_diagnosed = true
+TDG2_absolute_tail_discriminator_design_may_begin = true
+replacement_gate_design_may_not_yet_begin = true
+PROTO14_design_may_not_yet_begin = true
+
+[proof_contract]
+freeze_commit_and_all_tracked_blobs_must_match = true
+raw_bundle_must_match_all_four_CAL10_hashes = true
+terminal_checkpoint_must_restore_through_CAL10_independent_loader = true
+exact_frozen_TDG1_module_must_compute_the_diagnosis = true
+both_method_ladders_and_all_1728_signal_records_must_be_consumed = true
+all_576_cross_resolution_signal_differences_must_be_classified = true
+observed_counts_must_match_the_frozen_outcome_contract = true
+one_bit_history_ladder_claim_and_count_mutations_must_fail_closed = true
+no_diagnostic_view_may_retroactively_pass_PROTO13 = true
+no_result_may_define_a_replacement_gate_or_authorize_a_trajectory = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG1_terminal_histories_diagnosed = true
+TDG2_absolute_tail_discriminator_design_may_begin = true
+TDG2_frozen = false
+replacement_temporal_gate_design_authorized = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG1_diagnostic_contract_frozen = true
+TDG1_synthetic_counterexample_confirmed = true
+TDG1_terminal_histories_diagnosed = true
+normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test = false
+individual_temporal_budget_failure_cause_fully_derived = false
+replacement_temporal_admission_defined = false
+TDG2_frozen = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

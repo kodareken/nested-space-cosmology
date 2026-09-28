@@ -1,0 +1,130 @@
+artifact_id = "FGC-1-HLT17-SRCQ1-FRZ1"
+schema_version = 1
+implementation_commit = "7123aa385b3f4165186acd241f532b58ebbb3a9b"
+implementation_sha256 = "e801532e01061122b03bd2e5b8b1359926a65445b676d695fcdc6da371784bab"
+source_closure_sha256 = "616fc0c740d6b00cf2983c4e19b576ad25441904e81a2853229f59055d57f3ab"
+origin_capture_sha256 = "2824af06c674336d479ec53faa4269f02fb598055860ec22f2ad84602a83fe72"
+output_namespace = "runs/fgc-2-sf1/hlt17-srcq1-source-origin-qualification"
+
+[resource]
+max_rss_bytes = 4294967296
+max_total_wall_seconds = 3600.0
+coordinator_freeze_required = true
+scientific_threshold_fitted = false
+source_retry_cap = 32
+cfl_retry_cap = 32
+
+[resource.max_wall_seconds_per_member]
+RK4-2049 = 900.0
+RK4-4097 = 900.0
+RK4-8193 = 900.0
+SSPRK3-4097 = 900.0
+SSPRK3-8193 = 900.0
+SSPRK3-16385 = 900.0
+
+[[resource.production_enclosure_limits]]
+member_key = "RK4-2049"
+point_count = 2049
+owned_rows = 2044
+fallback_d01 = 16352
+fallback_d12 = 32704
+
+[[resource.production_enclosure_limits]]
+member_key = "RK4-4097"
+point_count = 4097
+owned_rows = 4092
+fallback_d01 = 32736
+fallback_d12 = 65472
+
+[[resource.production_enclosure_limits]]
+member_key = "RK4-8193"
+point_count = 8193
+owned_rows = 8188
+fallback_d01 = 65504
+fallback_d12 = 131008
+
+[[resource.production_enclosure_limits]]
+member_key = "SSPRK3-4097"
+point_count = 4097
+owned_rows = 4092
+fallback_d01 = 32736
+fallback_d12 = 65472
+
+[[resource.production_enclosure_limits]]
+member_key = "SSPRK3-8193"
+point_count = 8193
+owned_rows = 8188
+fallback_d01 = 65504
+fallback_d12 = 131008
+
+[[resource.production_enclosure_limits]]
+member_key = "SSPRK3-16385"
+point_count = 16385
+owned_rows = 16380
+fallback_d01 = 131040
+fallback_d12 = 262080
+
+[environment]
+python_implementation = "CPython"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+blas_name = "accelerate"
+blas_version = "unknown"
+system = "Darwin"
+machine = "arm64"
+byteorder = "little"
+executable = "/opt/homebrew/Caskroom/miniconda/base/bin/python3"
+executable_realpath = "/opt/homebrew/Caskroom/miniconda/base/bin/python3.14"
+executable_sha256 = "cbfd244fbeb046203838f0b60a86bc444e3028b4ec3d36c4312af081bbc04804"
+numpy_extension_realpath = "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so"
+numpy_extension_sha256 = "08cc79db709635a4e0a8d59f227b566d322a561dc9f45ab5ddc335419bfa85fc"
+kernel_release = "27.0.0"
+
+[implementation_identity]
+implementation_id = "tdg11_c1r1_integer_exponent_direct_ring_v1"
+mathematical_object = "exact_accumulation_reconstruction_with_debit"
+reference_wire_artifact_id = "FGC-1-TDG11-IMP1"
+reference_wire_evaluator_id = "tdg11_imp1_exact_bernstein_with_dual_fallback_v1"
+admission_runtime_id = "hlt17_c1r1_admission_runtime_v1"
+
+[[member_cap]]
+member_key = "RK4-2049"
+grid_spacing_hex = "0x1.0000000000000p-4"
+previous_speed_upper_hex = "0x1.33345e70b5188p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaa90b0fb5c26p-8"
+
+[[member_cap]]
+member_key = "RK4-4097"
+grid_spacing_hex = "0x1.0000000000000p-5"
+previous_speed_upper_hex = "0x1.3333333aecf3ep+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaa9fefc9cp-9"
+
+[[member_cap]]
+member_key = "RK4-8193"
+grid_spacing_hex = "0x1.0000000000000p-6"
+previous_speed_upper_hex = "0x1.3333333333653p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaaaaaa654p-10"
+
+[[member_cap]]
+member_key = "SSPRK3-4097"
+grid_spacing_hex = "0x1.0000000000000p-5"
+previous_speed_upper_hex = "0x1.3333333fe51c4p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaa9908e70p-9"
+
+[[member_cap]]
+member_key = "SSPRK3-8193"
+grid_spacing_hex = "0x1.0000000000000p-6"
+previous_speed_upper_hex = "0x1.33333333349e5p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaaaaa8b26p-10"
+
+[[member_cap]]
+member_key = "SSPRK3-16385"
+grid_spacing_hex = "0x1.0000000000000p-7"
+previous_speed_upper_hex = "0x1.3333333333346p+0"
+cfl_maximum_hex = "0x1.0000000000000p-3"
+requested_cap_hex = "0x1.aaaaaaaaaaa91p-11"

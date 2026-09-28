@@ -1,0 +1,111 @@
+{
+  "accountable_author": "Douglas Ek",
+  "axial_profile_identity": "a4c061f297027bcb9934fa2338bb81fb799ca4ec26a025f6bc563384c70cd69d",
+  "cases": {
+    "fine_field_cell": {
+      "axial_lower": "4/5",
+      "characteristic_distance_upper": "844424930131975/18014398509481984",
+      "cone_cell_margin": [
+        "2221541253688849/18014398509481984",
+        "2221541253688845/18014398509481984"
+      ],
+      "continuum_local_embedding": true,
+      "coordinate_interval": [
+        "662523453097311/562949953421312",
+        "5570403602420717/4503599627370496"
+      ],
+      "finite_Fourier_causality_certified": false,
+      "global_matching_required": false,
+      "incoming_backward_cone": [
+        "20356325568981977/18014398509481984",
+        "23126039339814843/18014398509481984"
+      ],
+      "metric_timestep": false,
+      "numerical_field_error_bound": null,
+      "period_left": "2266848039411641/2251799813685248",
+      "period_length": "205/512",
+      "physical_local_gate": "OPEN",
+      "physical_periodic_boundary_condition": false,
+      "rho_sigma": "1",
+      "rho_up": "1159676904047903/1125899906842624",
+      "same_upstream_covariance_required": true,
+      "schema": "NSC-KS-CONTINUUM-LOCAL-EMBEDDING-v1",
+      "source_accuracy_bound": null,
+      "support_padding": [
+        "631383557134091/4503599627370496",
+        "315691778567045/2251799813685248"
+      ],
+      "two_distance_buffer_margin": [
+        "418342184136207/9007199254740992",
+        "418342184136205/9007199254740992"
+      ]
+    },
+    "retained_operator_cell": {
+      "axial_lower": "4/5",
+      "characteristic_distance_upper": "844424930131975/18014398509481984",
+      "cone_cell_margin": [
+        "2218022816479965/18014398509481984",
+        "2218022816479553/18014398509481984"
+      ],
+      "continuum_local_embedding": true,
+      "coordinate_interval": [
+        "662523453097311/562949953421312",
+        "5570403602420717/4503599627370496"
+      ],
+      "finite_Fourier_causality_certified": false,
+      "global_matching_required": false,
+      "incoming_backward_cone": [
+        "20356325568981977/18014398509481984",
+        "23126039339814843/18014398509481984"
+      ],
+      "metric_timestep": false,
+      "numerical_field_error_bound": null,
+      "period_left": "4534575688125503/4503599627370496",
+      "period_length": "3518437208883/8796093022208",
+      "physical_local_gate": "OPEN",
+      "physical_periodic_boundary_condition": false,
+      "rho_sigma": "1",
+      "rho_up": "1159676904047903/1125899906842624",
+      "same_upstream_covariance_required": true,
+      "schema": "NSC-KS-CONTINUUM-LOCAL-EMBEDDING-v1",
+      "source_accuracy_bound": null,
+      "support_padding": [
+        "315251973915935/2251799813685248",
+        "630503947831767/4503599627370496"
+      ],
+      "two_distance_buffer_margin": [
+        "416582965531765/9007199254740992",
+        "416582965531559/9007199254740992"
+      ]
+    }
+  },
+  "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-energy-propagator-control.npz": "3c65e9b3d8dacbd82620e5e48f10a0a4b62c19642b526f499d3cf0dbcfaee71b",
+    "results/development/artifacts/nsc-ks-fine-prepared.npz": "162ad8484b6650106657fae60bf681852695fbb523048e9ed0ce1a2bfb82160c",
+    "results/development/nsc-ks-energy-propagator-control.json": "c04c8e3d0315e6ce83d228c72ff63a7e96fd866474c57e547a9ff20647d03162",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-radius-bound.json": "d351138b7522ebb3ff102f639738494c5859f2b4eb70ed0ee2afdbefdc4cb3e5"
+  },
+  "reproducer": "python3 scripts/derive_nsc_ks_local_embedding.py --check",
+  "schema": "NSC-KS-LOCAL-EMBEDDING-CONTROL-v1",
+  "scope": {
+    "field_and_source_error_bound": null,
+    "finite_Fourier_causality_certified": false,
+    "global_parent_child_matching_required": false,
+    "local_interval": "S(1)+[.12,.18]",
+    "metric_timestep": false,
+    "new_field_or_source_runs": 0,
+    "physical_local_gate": "OPEN",
+    "physical_periodic_boundary_condition": false
+  },
+  "source_hashes": {
+    "docs/nsc-ks-local-embedding.md": "7df54c1d72af7dd72d36ffd17a2d0e5e9cf8718223209bb88bdf83fa194c2121",
+    "scripts/derive_nsc_ks_local_embedding.py": "fc3a631119c23ae2f7f1fd8a20fbdc39b9a7185ac27bf6595339d6c6c95cd5d7",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_local_embedding.py": "f7f9f0d84c80f1c94a1337ec519c188e61598e5772cd24a1f31325302348ae3d",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353"
+  },
+  "source_law": "C_Sigma[g]=U_g C_up U_gdagger; same original upstream covariance",
+  "status": "PASS: continuum local domain embedding; numerical/source and physical gates separate"
+}

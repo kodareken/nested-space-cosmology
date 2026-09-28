@@ -1,0 +1,394 @@
+{
+  "artifact_id": "NSC-4-DIRAC-TETRAD",
+  "boundary": {
+    "actual_geometry_probes": [
+      {
+        "A": -611.3613435133911,
+        "beta": 24.745935898918656,
+        "beta_prime": -3.0475187572246223,
+        "rho": -8.0,
+        "speed_minus": -25.745935898918656,
+        "speed_plus": -23.745935898918656
+      },
+      {
+        "A": -3.7123889803846897,
+        "beta": 2.1708037636748028,
+        "beta_prime": -1.381976597885342,
+        "rho": 0.0,
+        "speed_minus": -3.1708037636748028,
+        "speed_plus": -1.1708037636748028
+      },
+      {
+        "A": 0.0,
+        "beta": 1.0,
+        "beta_prime": -0.23832579963401956,
+        "rho": 1.9006916054701453,
+        "speed_minus": -2.0,
+        "speed_plus": 0.0
+      },
+      {
+        "A": 0.7507760633815153,
+        "beta": 0.4992233334074888,
+        "beta_prime": -0.031008428175950724,
+        "rho": 8.0,
+        "speed_minus": -1.499223333407489,
+        "speed_plus": 0.5007766665925112
+      }
+    ],
+    "endpoint_form_eigenvalues": [
+      "1-beta_right",
+      "-1-beta_right",
+      "beta_left-1",
+      "beta_left+1"
+    ],
+    "endpoint_only_self_adjoint_finite_interval_realization": false,
+    "exact_inertia_representative": {
+      "beta_left": "sqrt(6)*sqrt(pi)/2",
+      "beta_right": "1/2",
+      "eigenvalues": [
+        "1/2",
+        "-3/2",
+        "-1 + sqrt(6)*sqrt(pi)/2",
+        "1 + sqrt(6)*sqrt(pi)/2"
+      ],
+      "negative": 1,
+      "positive": 3
+    },
+    "forward_incoming_characteristics": {
+      "left": 0,
+      "right": 1
+    },
+    "forward_outgoing_characteristics": {
+      "left": 2,
+      "right": 1
+    },
+    "horizon": 1.9006916054701453,
+    "interval_assumptions": "left endpoint trapped beta_left>1; right endpoint exterior 0<beta_right<1",
+    "joined_transmission": "u_child=u_parent; generalized U obeys U_dagger C(0)U=C(0)",
+    "nonzero_local_reflecting_line_at_trapped_cut": false,
+    "throat_beta": "sqrt(6)*sqrt(pi)/2",
+    "throat_current_inertia": {
+      "negative": 2,
+      "positive": 0,
+      "zero": 0
+    },
+    "throat_current_matrix_determinant": "-1 + 3*pi/2"
+  },
+  "cartan": {
+    "gamma_clifford_relations_exact": true,
+    "lowered_connection_forms": {
+      "01": "-beta_prime e1",
+      "02": "-beta r_prime/r e2",
+      "03": "-beta r_prime/r e3",
+      "12": "r_prime/r e2",
+      "13": "r_prime/r e3",
+      "23": "cot(theta)/r e3"
+    },
+    "metric_compatibility_exact": true,
+    "metric_residual": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "torsion_residuals": [
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    ]
+  },
+  "classification": "exact_fixed_background_lorentzian_connection_current_and_boundary_domain_derivation",
+  "complete_line": {
+    "bound_square_residual": "0",
+    "bounded_potential": "||V|| <= |kappa| because r>=1",
+    "causal_completeness_argument": "|d_rho/d_tau+beta|<=1 prevents finite-tau escape; S\u00b2 is compact; the declared boundaryless product manifold has Cauchy tau slices",
+    "claim_scope": "fixed unwarped background fermion evolution; no finite reflecting truncation, vacuum, metric variation or gravitational stability theorem",
+    "domain": "initial core C_c^infinity(R;C\u00b2), each fixed finite kappa",
+    "flow_argument": "smooth vector fields a_plus=1-beta and a_minus=-1-beta have complete flows by linear growth; zero at horizon is stationary and adds no finite-time boundary",
+    "generator": "-i(a partial_rho+a_prime/2)",
+    "growth_bound": "beta\u00b2 <= (3pi+3/2)(1+rho\u00b2); hence |1-beta|,|-1-beta| <= C(1+|rho|)",
+    "self_adjointness_argument": "complete smooth half-density transport generators on C_c^infinity, followed by bounded Hermitian perturbation",
+    "transport_group": "U(t)f(rho)=sqrt(partial_rho Phi(-t,rho))*f(Phi(-t,rho))"
+  },
+  "conventions": {
+    "angular_basis": "spinor-sphere kappa=plus_or_minus(ell+1); canonical radial Pauli basis",
+    "dimension": "four spacetime dimensions; no compact conformal warp",
+    "geometry": "r=sqrt(1+rho\u00b2); A=1+3rho+3(1+rho\u00b2)(atan(rho)-pi/2); beta=sqrt(1-A)",
+    "measure_after": "d_rho per normalized angular mode",
+    "measure_before": "r\u00b2 d_rho d_Omega",
+    "metric": "d_tau\u00b2-(d_rho+beta*d_tau)\u00b2-r\u00b2*d_Omega\u00b2",
+    "rescaling": "u=r*psi",
+    "signature": "+---",
+    "spin_connection": "nabla=d+omega_ab gamma^a gamma^b/4 with lowered antisymmetric Lorentz indices",
+    "units": "c=hbar=L_throat=1"
+  },
+  "current": {
+    "continuity_residual": "0",
+    "density": "u_dagger u",
+    "flux": "u_dagger(sigma2-beta I)u=2 Im(conj(u1)u2)-beta u_dagger u",
+    "green_form": "<u,Hv>-<Hu,v>=-i[u_dagger C v]_left^right",
+    "missing_spin_connection_source": "-beta_prime*u_dagger*u",
+    "negative_control_is_nonzero": true,
+    "negative_control_polynomial": "bp*(-x1**2 - x2**2 - y1**2 - y2**2)",
+    "old_u1_zero_wall_unit_trace_current": "-b"
+  },
+  "nonclaims": {
+    "compact_warp_derived": false,
+    "full_covariant_action_derived": false,
+    "metric_hessian_health_verified": false,
+    "new_to_world_priority_established": false,
+    "particle_or_cosmological_scale_predicted": false,
+    "physical_vacuum_selected": false,
+    "stationary_geometry_derived": false
+  },
+  "operator": {
+    "connection_matrix_residual": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "contracted_connection": "-gamma0(beta_prime/2+beta*r_prime/r)+gamma1*r_prime/r+gamma2*cot(theta)/(2r)",
+    "hamiltonian_principal_matrix_residual": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "hamiltonian_shift_matrix_residual": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "radial_hamiltonian": "H=-i(sigma2-beta I)partial_rho+i beta_prime I/2+(kappa/r)sigma1",
+    "radial_rescaling_matrix_residual": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "symmetrized_form": "H=-i(C partial_rho+C_prime/2)+V; C=sigma2-beta I; V=(kappa/r)sigma1"
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/gr-qc/0605031",
+      "use": "Schwarzschild PG connection/shift control, section IV.2; not a proof for this geometry"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/0022123673900037",
+      "use": "Chernoff hyperbolic-generator essential self-adjointness framework; explicit complete-flow argument supplied here"
+    },
+    {
+      "url": "https://arxiv.org/abs/1512.00761",
+      "use": "horizon nonellipticity can coexist with Dirac self-adjointness; its particular boundary theorem is not imported"
+    }
+  ],
+  "schema": "nsc-dirac-tetrad-v1",
+  "source_hashes": {
+    "docs/nsc-dirac-tetrad.md": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1",
+    "scripts/check_nsc_dirac_tetrad.py": "4fa9a6c42974607fd5c1140f4bfc719d5907b859ffbb2c661f16f7e13a3766ae"
+  },
+  "terminal": true
+}

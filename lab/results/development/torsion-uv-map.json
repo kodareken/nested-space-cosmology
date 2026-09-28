@@ -1,0 +1,83 @@
+{
+  "bulk_coefficients": {
+    "Einstein_A5": "(Lambda^3-nu_match^3)/(9*(4*pi)^(5/2))",
+    "K_component_norm_squared": "9*A5",
+    "common_denominator": "(4*pi)^(5/2)",
+    "delta_K_form_norm_squared": "-3*(Lambda-nu_match)/(4*pi)^(5/2)",
+    "derivative_coefficient_scale_squared": "2*(Lambda^2+Lambda*nu_match+nu_match^2)",
+    "derivative_correction_relative_size": "q_E^2/[2*(Lambda^2+Lambda*nu_match+nu_match^2)]",
+    "first_KK_current_harmonic_unwarped_reference": "pi^2/[2*zeta*(1+u+u^2)], u=nu_match/Lambda",
+    "leading_UV_derivative_scale_squared": "2*Lambda^2 as nu_match/Lambda -> 0",
+    "leading_only_contact_prefactor_after_compact_reduction": "(4*pi)^(5/2)/[64*(Lambda^3-nu_match^3)*I3]",
+    "leading_stiffness_ratio": 9,
+    "local_expansion_condition": "q_E, |K|, sqrt(||nabla K||), sqrt(||Riemann||) << nu_match; compact boundary terms separately required",
+    "volume": "4*(Lambda^5-nu_match^5)/(5*(4*pi)^(5/2))"
+  },
+  "comparison": "all fields; exact symbolic strings, integers, types and authenticated source hashes",
+  "component_norm": "||K||_comp^2=sum_ABC K_ABC^2=6*|K|_form^2; physical torsion=2K",
+  "domain": "five-dimensional Riemannian bulk; local flat quadratic torsion test; no boundary terms",
+  "finite_matching": {
+    "Einstein_coefficient": "A5+c_R",
+    "c_R": null,
+    "c_T": null,
+    "leading_cutoff_flow_leaves_c_T_minus_9_c_R_unchanged": true,
+    "s_T": "(9*A5+c_T)/(A5+c_R)",
+    "s_T_minus_9": "(c_T-9*c_R)/(A5+c_R)",
+    "torsion_coefficient": "9*A5+c_T"
+  },
+  "heat_density_without_4pi_factor": {
+    "a0": "4",
+    "a2": "-R/3+3*||K||_comp^2",
+    "flat_quadratic_integrated_a4": "-3*|delta K|_form^2"
+  },
+  "longitudinal_polarization": {
+    "derivative_axis": 0,
+    "half_trace_E_squared": "0",
+    "indices_zero_based": [
+      0,
+      1,
+      2
+    ],
+    "one_twelfth_trace_Omega_squared": "-3",
+    "quadratic_a4_coefficient": "-3"
+  },
+  "matching_split": "remaining one-loop modulus uses proper times above nu_match^-2; the full determinant is not added again",
+  "normalization_scale": "M is distinct from Lambda and nu_match; its full measure matching is not set here",
+  "proper_time_weights": {
+    "a0": "(Lambda^5-nu_match^5)/5",
+    "a2": "(Lambda^3-nu_match^3)/3",
+    "a4": "Lambda-nu_match"
+  },
+  "regulator": "one-half integral from Lambda^-2 to nu_match^-2 of dt/t times Tr exp(-t D^2); 0<nu_match<Lambda",
+  "schema": "NSC-TORSION-UV-MAP-v2",
+  "scope": {
+    "Lorentzian_torsion_mass_or_health_proved": false,
+    "compact_boundary_action_matched": false,
+    "complete_finite_cutoff_kernel_computed": false,
+    "finite_coefficients_selected": false,
+    "full_curved_5D_a4_computed": false,
+    "leading_bulk_ratio_matched": true,
+    "state_or_self_sourced_geometry_solved": false
+  },
+  "source_hashes": {
+    "docs/nsc-torsion-uv-map.md": "bb54f35a66c547fc742a89a7b2ff2e2695fb4d5104609d21da8a23019829f6bb",
+    "scripts/check_nsc_torsion_uv_map.py": "d9898ce375471536a0842142c40c5b3000d986060dc96b80a5dac4ed3fb7f982",
+    "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1"
+  },
+  "sources": [
+    "https://arxiv.org/html/1101.1424v3",
+    "https://arxiv.org/html/hep-th/0306138v3"
+  ],
+  "status": "development; bulk ultraviolet matching, not a completed quantum source",
+  "transverse_polarization": {
+    "derivative_axis": 0,
+    "half_trace_E_squared": "9/2",
+    "indices_zero_based": [
+      1,
+      2,
+      3
+    ],
+    "one_twelfth_trace_Omega_squared": "-9/2",
+    "quadratic_a4_coefficient": "0"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "accountable_author": "Douglas Ek",
+  "algebra_maximum": 2.886579864025407e-15,
+  "cache_verification": {
+    "direction_residual": 0.0,
+    "grid_points": 7,
+    "maximum_radius_change_from_background": 1.0375652451433126e-05,
+    "nonzero_amplitudes": [
+      0.001
+    ],
+    "times": [
+      0.0,
+      0.11,
+      0.15,
+      0.21,
+      0.3
+    ],
+    "value_residual": 0.0
+  },
+  "control": {
+    "PG_time_window": [
+      0.0,
+      0.3
+    ],
+    "amplitude": 0.001,
+    "covariance_derivative_tolerance": 3e-08,
+    "family": "14_1",
+    "field_derivative_tolerance": 3e-08,
+    "field_run_cap": 3,
+    "field_runs": 3,
+    "finite_difference_step": 0.0001,
+    "flux_algebra_tolerance": 3e-11,
+    "grid_points": 801,
+    "initial_and_incident_tangents": "explicit 0 by unchanged entire past/upstream support",
+    "midpoint_steps": 64,
+    "numerical_normal_window_radii": [
+      0.007,
+      0.03
+    ],
+    "outgoing_momentum_substitution": null,
+    "restriction": "actual rho1 MODE_TO_CURRENT/normal half-density; dR=0 for this radius family",
+    "selected_physical_duration": null,
+    "source_law": "unchanged original coherent source blocks; explicit dC_src=0",
+    "stationary_phase_reapplied": false,
+    "support": {
+      "PG_time_support": [
+        0.043175087167987014,
+        0.25620332026786774
+      ],
+      "S1": 1.0568780671724793,
+      "T1": -0.8017223766635779,
+      "axial_center": 1.2068780671724793,
+      "axial_halfwidth": 0.06,
+      "final_support_margin": 0.04379667973213225,
+      "final_time": 0.3,
+      "guard_kind": "numerical support bounds with strict margins; analytic monotonicity and fixed-radius-only principal speeds",
+      "initial_support_margin": 0.043175087167987014,
+      "initial_time": 0.0,
+      "maximum_checked_characteristic_speed": -0.21880440668708911,
+      "normal_inner": 0.007,
+      "normal_outer": 0.03,
+      "radial_support": [
+        0.9743860383229925,
+        1.0250344273443701
+      ],
+      "right_support_margin": 0.17496557265562984
+    },
+    "weights": "sqrt(w/(2*pi)) repeated on each source column; no multiplicity factor added"
+  },
+  "input_hashes": {
+    "docs/nsc-preparation-domain-decision.md": "875dea47881b2f858ee8aea5d8153957c0a675c3042f4d1199376e6e258204ff",
+    "docs/nsc-retarded-compatible-preparation.md": "6970d00ef8008b9afa66aac6b4b4c4bc6fc05713de84eb6df37058b3d7108eb8",
+    "results/development/nsc-compatible-prepared-history.json": "66cb7f086bb60bc646533ed09ca565cc02fedcafbc609d68b5dcf662a2e61318",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "omitted_term_effects": {
+    "finite_difference_versus_frozen_columns": 7.74817335291722e-06,
+    "frozen_incoming_columns": 7.748173435447128e-06,
+    "nonzero_source_covariance_tangent": 0.0008831897035862134
+  },
+  "payload": {
+    "bytes": 1891925,
+    "path": "results/development/artifacts/nsc-evolved-incoming-state.npz",
+    "sha256": "e7847d012402406b8eacf4e29a2c616f07b6957ec45b8efb3d17c533fea9e4da"
+  },
+  "reproducer": "python3 scripts/derive_nsc_evolved_incoming_state.py --check",
+  "residuals": {
+    "auxiliary_identity_residual": 2.886579864025407e-15,
+    "cache_direction_residual": 0.0,
+    "cache_value_residual": 0.0,
+    "complete_coherent_covariance_derivative": 6.185640549126978e-13,
+    "complete_field_derivative": 4.5535757431874324e-11,
+    "incoming_trace_derivative": 1.6906810534048438e-11,
+    "metric_flux_tangent_residual": 0.0,
+    "norm_flux_residual": 2.6645352591003757e-15,
+    "retarded_final_trace_residual": 0.0,
+    "retarded_kernel_residual": 0.0,
+    "source_covariance_hermiticity": 0.0
+  },
+  "retarded_array_only_restriction": {
+    "final_trace_residual": 0.0,
+    "final_trace_tangent_residual": 0.0,
+    "old_solver_rerun": false,
+    "restriction_parameter_derivative": 0.0,
+    "sampled_kernel_residual": 0.0
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 40006859,
+      "path": "results/development/artifacts/nsc-transmitting-history-modes.9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a.npz",
+      "sha256": "9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a"
+    },
+    {
+      "bytes": 9829760,
+      "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+      "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+    },
+    {
+      "bytes": 5889941,
+      "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
+      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+    }
+  ],
+  "runtime": {
+    "CPU_seconds": 4.015169,
+    "case_CPU_seconds": {
+      "center": 1.955941,
+      "minus": 1.0086539999999995,
+      "plus": 1.0121190000000002
+    },
+    "cpu_budget_exceeded": false,
+    "cpu_budget_seconds": 120.0,
+    "field_runs": 3,
+    "wall_seconds": 4.01950399999987
+  },
+  "schema": "NSC-EVOLVED-INCOMING-STATE-v1",
+  "scope": {
+    "A_q_Omega_zeta_Vfull_refit": false,
+    "continuum_error_bound": null,
+    "cosmology_EXISTENCE": "OPEN",
+    "discretization_error": "OPEN",
+    "finite_source_error": "OPEN",
+    "frozen_incoming_C0": false,
+    "full_CAR": "OPEN",
+    "metric_timestep": false,
+    "new_stress_or_Gamma": false,
+    "old_baseline_scattering_horizon_or_source_grids_regenerated": false,
+    "physical_history_solution": "OPEN",
+    "publication": false,
+    "sampled_source": "OPEN",
+    "source_fixed_incoming_state": true
+  },
+  "source_hashes": {
+    "docs/nsc-evolved-incoming-state.md": "d4b95ba5886c2b19bbb5002b28ea4ff11933e3ec99e04f8a2ac52e5c736cdcca",
+    "scripts/derive_nsc_evolved_incoming_state.py": "f33ee6bb7854feb424aefcd5063105f6c1222ff082a570c70ff36b841d411939",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "tests/test_nsc_evolved_incoming_state.py": "6d37d6d7015fa575f327e53db0a07dbb5818cb0e0973c56295bc0cda75a9759e"
+  },
+  "status": "PASS: source-fixed adapter control; sampled source and continuum error OPEN"
+}

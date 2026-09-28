@@ -1,0 +1,78 @@
+{
+  "families": [
+    {
+      "family": [
+        14,
+        1
+      ],
+      "matter_change_max_difference": [
+        5.599565407708729e-17,
+        4.154866012871794e-17
+      ],
+      "physical_field_max_differences": {
+        "axial_columns": 3.972054645195637e-15,
+        "axial_tangents": 0.0,
+        "column_tangents": 0.0,
+        "columns": 6.938893903907228e-18
+      },
+      "tangent_directions": 0
+    },
+    {
+      "family": [
+        32,
+        -1
+      ],
+      "matter_change_max_difference": [
+        2.5205532105943007e-15,
+        2.4210234511601314e-15
+      ],
+      "physical_field_max_differences": {
+        "axial_columns": 2.842170943040401e-14,
+        "axial_tangents": 0.0,
+        "column_tangents": 0.0,
+        "columns": 1.5700924586837752e-16
+      },
+      "tangent_directions": 0
+    }
+  ],
+  "full_source_covered": false,
+  "indicator_not_a_bound": true,
+  "left": {
+    "bytes": 35900,
+    "path": "results/development/nsc-ks-evaluator-accuracy-v2-split-family-g1024-d32.json",
+    "sha256": "b5d1c8d360bffe02e0ad01a5c4ba1a9880e90b2ad53f63197812db02e91e2e5f"
+  },
+  "left_solver": {
+    "atol": 5e-19,
+    "degree": 32,
+    "grid_nodes": 1024,
+    "integrator": "dop853",
+    "length": 0.4,
+    "max_step": 0.0001220703125,
+    "phase_nodes": 192,
+    "rtol": 5e-14,
+    "step_control": "primal"
+  },
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "right": {
+    "bytes": 35896,
+    "path": "results/development/nsc-ks-evaluator-accuracy-v2-split-family-g1024-d48.json",
+    "sha256": "9b7b926f481c4ebcbae84fefead04889304a9eae8eacc7636823661dced0cc57"
+  },
+  "right_solver": {
+    "atol": 5e-19,
+    "degree": 48,
+    "grid_nodes": 1024,
+    "integrator": "dop853",
+    "length": 0.4,
+    "max_step": 0.0001220703125,
+    "phase_nodes": 192,
+    "rtol": 5e-14,
+    "step_control": "primal"
+  },
+  "schema": "NSC-KS-EVALUATOR-COMPARISON-v2",
+  "source_hashes": {
+    "scripts/derive_nsc_ks_evaluator_accuracy_v2.py": "8fa2c01d1c13cffc62cf4178e9791de2852686e310d61b3096ffdf89a51621b9"
+  }
+}

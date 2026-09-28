@@ -1,0 +1,696 @@
+{
+  "action_evidence_hashes": {
+    "docs/nsc-compact-boundary-action.md": "9ca3b73c41e82d2027303555c475a336889174ccee4758708396e6dedc55a8f3",
+    "docs/nsc-curvature-eft.md": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e",
+    "docs/nsc-spherical-action.md": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292",
+    "docs/nsc-tilted-landau-interface.md": "1ed1829891ec42d5d9d12a7932d76a8e16ae422e8be59f38ae28c19cfc6dbb2f",
+    "src/recursive_horizons/nsc_boundary.py": "09aa86721ab3e46e4bc53e3fb017b4c2bc0b13fd2828d3329304c045142adc5e",
+    "src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "src/recursive_horizons/nsc_extended_tilted_history_gate.py": "a23a44c6127a8ec141af33d1e5e33812ba8cc1b2d10593a6bcdc8f827f80559e",
+    "src/recursive_horizons/nsc_general_ks_local_history.py": "533678f69c994dc5cac598bc54ca52922d58bdf5716371431306b82f73b7b866",
+    "src/recursive_horizons/nsc_landau_cauchy_isometry.py": "c03e5eb46c8be3078087b5f6be768c0045d350f68ff2d457eafd1c0987baac00",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_tilted_landau_interface.py": "bcc5f611355076bfce1159403e7e5c4ba58f9bafe0258855242affd1672dfdb2"
+  },
+  "action_inventory": [
+    {
+      "binding_scope": "values is supplied; no transmitting kernel law is encoded by this data container",
+      "declared_fields": [
+        "values"
+      ],
+      "end_line": 75,
+      "line": 74,
+      "path": "src/recursive_horizons/nsc_causal_common.py",
+      "symbol": "LinkHistory"
+    },
+    {
+      "arguments": [
+        "metric_history",
+        "gauge_history",
+        "link_history"
+      ],
+      "binding_scope": "consumes metric, gauge and link histories; does not determine the missing link history",
+      "end_line": 167,
+      "line": 154,
+      "path": "src/recursive_horizons/nsc_causal_common.py",
+      "symbol": "CausalCommonFunctional._assemble"
+    },
+    {
+      "arguments": [
+        "self",
+        "metric_history",
+        "gauge_history",
+        "link_history",
+        "initial_covariance",
+        "spectral_coefficients",
+        "boundary_domain"
+      ],
+      "binding_scope": "requires histories, initial covariance, induced coefficients and boundary domain",
+      "end_line": 289,
+      "line": 201,
+      "path": "src/recursive_horizons/nsc_causal_common.py",
+      "symbol": "CausalCommonFunctional.evaluate"
+    },
+    {
+      "arguments": [
+        "self",
+        "t",
+        "s",
+        "link_t",
+        "child_t",
+        "link_s",
+        "child_s"
+      ],
+      "binding_scope": "two-time kernels require link_t, child_t, link_s, child_s",
+      "end_line": 76,
+      "line": 49,
+      "path": "src/recursive_horizons/nsc_boundary_state.py",
+      "symbol": "GaussianBoundaryState.kernels"
+    },
+    {
+      "arguments": [
+        "arrays",
+        "history",
+        "seed_a",
+        "seed_r"
+      ],
+      "binding_scope": "propagates a supplied history in diagonal frequency blocks",
+      "end_line": 109,
+      "line": 66,
+      "path": "src/recursive_horizons/nsc_landau_cauchy_isometry.py",
+      "symbol": "propagate_blockwise"
+    },
+    {
+      "arguments": [
+        "radius",
+        "half_intervals",
+        "kappa",
+        "mass"
+      ],
+      "binding_scope": "fixed spatial interval operator, not a selected tilted spacetime embedding",
+      "end_line": 400,
+      "line": 371,
+      "path": "src/recursive_horizons/nsc_boundary.py",
+      "symbol": "joined_operator"
+    },
+    {
+      "arguments": [
+        "self",
+        "weights",
+        "canonical_unitary"
+      ],
+      "binding_scope": "requires a canonical_unitary argument; cannot select it from the norm equation",
+      "end_line": 109,
+      "line": 102,
+      "path": "src/recursive_horizons/nsc_tilted_landau_interface.py",
+      "symbol": "TransmittingTiltedLandauInterface.coordinate_kernel"
+    },
+    {
+      "arguments": [
+        "self",
+        "history",
+        "stationarity_tolerance"
+      ],
+      "binding_scope": "provides nodal local action gradients and a diagnostic endpoint projection",
+      "end_line": 183,
+      "line": 148,
+      "path": "src/recursive_horizons/nsc_general_ks_local_history.py",
+      "symbol": "GeneralKSLocalInducedHistory.evaluate"
+    }
+  ],
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "input_hashes": {
+    "results/development/compact-boundary-action.json": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce",
+    "results/development/nsc-general-ks-local-history.json": "b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+    "results/development/nsc-general-ks-reference.json": "6c8d80297b5cafcb0e61815cd5a425d9b45364bddc5f89e3a4a824b974c5a146",
+    "results/development/nsc-general-ks-same-action-history.json": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-tilted-landau-interface.json": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "mode_state_artifact": {
+    "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+    "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+  },
+  "owner": "ModeResolvedTransmittingBoundaryHistoryAction",
+  "schema": "NSC-TRANSMITTING-BOUNDARY-SELECTION-v1",
+  "scope": {
+    "finite_stress_fabricated": false,
+    "metric_timestep_started": false,
+    "new_physical_term": false,
+    "old_generator_called": false,
+    "parameters_refitted": false,
+    "physical_duration_chosen": false
+  },
+  "selection": {
+    "additional_selector_rank": null,
+    "admissible_family_real_dimension": 447488,
+    "covariance_freedom_probe": {
+      "channels_with_state_tangent_above_tolerance": 33,
+      "definition": "dV=iX; first/last-frequency spin-preserving X per channel; ||X||_F=1; dC=i[X,C_seed]",
+      "interpretation": "some allowed maps change C in the fixed source basis; this is not a claim about a selected physical kernel or stress",
+      "maximum_isometry_tangent_residual": 0.0,
+      "maximum_state_tangent": 0.679080121964124,
+      "physical_map_selected": false,
+      "quotient_dimension_after_gauge_and_state_stabilizers": null,
+      "rows": [
+        {
+          "channel": 0,
+          "covariance_tangent_hermiticity_maximum_absolute": 0.0,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.490527632383796,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            0,
+            47
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 1,
+          "covariance_tangent_hermiticity_maximum_absolute": 3.3369583808576215e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6085584532131609,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            48,
+            95
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 2,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.9949319973733282e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5547181204243253,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            96,
+            143
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 3,
+          "covariance_tangent_hermiticity_maximum_absolute": 3.3682237275240583e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5082010669042537,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            144,
+            191
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 4,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.7082087730716566e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.466860609143728,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            192,
+            239
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 5,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.2884981570929129e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.430056490930132,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            240,
+            287
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 6,
+          "covariance_tangent_hermiticity_maximum_absolute": 3.4944402401646896e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.3973656385140246,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            288,
+            335
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 7,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.990171640136467e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.3683717169178867,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            336,
+            383
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 8,
+          "covariance_tangent_hermiticity_maximum_absolute": 5.688235541625204e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.34265262368716504,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            384,
+            431
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 9,
+          "covariance_tangent_hermiticity_maximum_absolute": 5.716955691936441e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.31980245385467915,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            432,
+            479
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 10,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.4818346894634012e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.29944924200425516,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            480,
+            527
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 11,
+          "covariance_tangent_hermiticity_maximum_absolute": 6.74882233517828e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.28126291068159603,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            528,
+            575
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 12,
+          "covariance_tangent_hermiticity_maximum_absolute": 3.994456308323724e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.2649561751795184,
+          "frequencies": [
+            0.0023049207191600946,
+            15.889363805480315
+          ],
+          "frequency_indices": [
+            576,
+            623
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 13,
+          "covariance_tangent_hermiticity_maximum_absolute": 3.737575787515447e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.679080121964124,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            624,
+            687
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 14,
+          "covariance_tangent_hermiticity_maximum_absolute": 9.476934774819105e-18,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6713930011800532,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            688,
+            751
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 15,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.6915215498415977e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6433872084097084,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            752,
+            815
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 16,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.8425757132326388e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6222812849741649,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            816,
+            879
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 17,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.5064202850448714e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6028887191026714,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            880,
+            943
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 18,
+          "covariance_tangent_hermiticity_maximum_absolute": 7.67586541381975e-18,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.584350155680331,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            944,
+            1007
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 19,
+          "covariance_tangent_hermiticity_maximum_absolute": 9.842493260733843e-18,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5662733388335511,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1008,
+            1071
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 20,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.2749636907458836e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5486136756707721,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1072,
+            1135
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 21,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.0688202783953414e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5315389158952389,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1136,
+            1199
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 22,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.0631845082096083e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5148203043078422,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1200,
+            1263
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 23,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.9114248628376005e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6513097449102999,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1264,
+            1327
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 24,
+          "covariance_tangent_hermiticity_maximum_absolute": 4.281357033111278e-18,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6451662826004799,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1328,
+            1391
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 25,
+          "covariance_tangent_hermiticity_maximum_absolute": 8.412958660982853e-18,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6274470014848758,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1392,
+            1455
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 26,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.7755575615628914e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.6098788427228778,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1456,
+            1519
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 27,
+          "covariance_tangent_hermiticity_maximum_absolute": 5.9139843177919435e-18,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5925136096210042,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1520,
+            1583
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 28,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.291403227852797e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5754903147404941,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1584,
+            1647
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 29,
+          "covariance_tangent_hermiticity_maximum_absolute": 1.4339460053908715e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5585008894738784,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1648,
+            1711
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 30,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.7755575615628914e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5419052365095361,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1712,
+            1775
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 31,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.7755575615628914e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5254956742798207,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1776,
+            1839
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        },
+        {
+          "channel": 32,
+          "covariance_tangent_hermiticity_maximum_absolute": 2.290273074680529e-17,
+          "covariance_tangent_trace_absolute": 0.0,
+          "fixed_basis_covariance_tangent_frobenius": 0.5094917993895111,
+          "frequencies": [
+            0.004963767937807978,
+            39.52347827797043
+          ],
+          "frequency_indices": [
+            1840,
+            1903
+          ],
+          "isometry_tangent_maximum_absolute": 0.0
+        }
+      ],
+      "tolerance": 3e-11
+    },
+    "missing": [
+      "mode-resolved transmitting link/embedding functional in the locked channel bases",
+      "its variation with respect to channel scattering data and the history metric"
+    ],
+    "physical_Vc": null,
+    "reason": "the existing action inventory declares Gamma_rest but supplies no functional selecting V_c; norm conservation alone leaves the recorded family",
+    "same_action_equation": "pi_parent^ab+pi_child^ab+delta Gamma_rest/delta h_ab=0",
+    "selection_residual": {
+      "evaluated": false,
+      "tolerance": 3e-11,
+      "value": null
+    },
+    "status": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-full-extended-history-gate.md": "6cba349c282b358f5b78e151b3a5231e5d64b7a13685f37557e47fd85b8c1446",
+    "docs/nsc-transmitting-boundary-selection.md": "7b3d929f00d7c2238bef4d864b43904b2484e48f848a4da63b6473b7579b3dff",
+    "docs/nsc-weyl-endpoint-match.md": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "tests/test_nsc_transmitting_boundary_history.py": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
+  },
+  "status": "OPEN"
+}

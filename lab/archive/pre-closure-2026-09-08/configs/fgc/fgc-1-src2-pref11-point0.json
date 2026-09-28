@@ -1,0 +1,165 @@
+{
+  "action_parameters": {
+    "g4": "1/2",
+    "model_id": "GR-0",
+    "mu": "3",
+    "planck_mass": "2"
+  },
+  "artifact_id": "FGC-1-SRC2-PREF11-POINT0",
+  "baseline_acceleration": [
+    "-0x1.3b4d60d8187f2p-47",
+    "0x1.4314b747bd5b8p-42",
+    "-0x1.fef732efe76d6p-45",
+    "-0x1.0c17c9acdb132p-48",
+    "-0x0.0p+0",
+    "-0x0.0p+0"
+  ],
+  "baseline_complete_residual": [
+    "0x1.2c073cdbd9896p-40",
+    "0x1.4000000000000p-89",
+    "-0x1.d850acfbb9388p-41",
+    "-0x1.fef732efe76c0p-56",
+    "0x0.0p+0",
+    "0x0.0p+0"
+  ],
+  "coordinate_radius": "0x1.0000000000000p-6",
+  "equation_order": [
+    "metric_tt_mhg",
+    "metric_tr_mhg",
+    "metric_rr_mhg",
+    "metric_theta_theta_mhg",
+    "scalar_phi",
+    "scalar_chi"
+  ],
+  "field_order": [
+    "alpha",
+    "shift",
+    "lambda",
+    "R",
+    "phi",
+    "chi"
+  ],
+  "forward_constant": [
+    "0x1.3b5cb3a823023p-37",
+    "-0x1.6b774e30b5070p-36",
+    "-0x1.ffba5916bc487p-41",
+    "-0x1.9d2249e3fff5cp-55",
+    "0x0.0p+0",
+    "0x0.0p+0"
+  ],
+  "forward_jacobian": [
+    [
+      "-0x1.2000000000000p+6",
+      "0x1.864f01689c000p-50",
+      "0x1.2000000000000p+4",
+      "0x1.1ffffffffffffp+11",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    [
+      "-0x1.5af0e4ce80000p-54",
+      "0x1.2000000000001p+6",
+      "0x1.5af0e4d000000p-56",
+      "-0x1.5af0e4cec4000p-49",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    [
+      "-0x1.0000000000001p+3",
+      "0x0.0p+0",
+      "0x1.0000000000000p+1",
+      "-0x1.0000000000000p+8",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    [
+      "-0x1.0000000000002p-9",
+      "0x0.0p+0",
+      "-0x1.0000000000000p-11",
+      "0x1.7489278fffd70p-57",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    [
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "-0x1.0000000000000p+0",
+      "0x0.0p+0"
+    ],
+    [
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "-0x1.0000000000000p+0"
+    ]
+  ],
+  "hat_normal_factor": 9,
+  "lower_jet": {
+    "p": [
+      "-0x1.098e8d95a3341p-54",
+      "0x1.a70c4b2acf0e9p-50",
+      "0x1.50eb136fb92f7p-48",
+      "-0x1.a0a5fba0edb0cp-59",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    "p_r": [
+      "0x1.3da008ba2ce68p-48",
+      "0x1.666fde263dcb0p-48",
+      "-0x1.e642a7a4c0b34p-44",
+      "-0x1.e812145523794p-50",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    "q": [
+      "0x1.b2f3a3b5168e1p-55",
+      "0x1.f8e5982178d38p-54",
+      "0x1.d71714c675aefp-50",
+      "0x1.0000000000000p+0",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    "q_r": [
+      "0x1.2437b009f6879p-48",
+      "-0x1.b3265bb13198bp-44",
+      "-0x1.27eb1b93e3b27p-44",
+      "0x0.0p+0",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ],
+    "u": [
+      "0x1.0000000000000p+0",
+      "0x1.5af0e4cec54d8p-57",
+      "0x1.0000000000000p+0",
+      "0x1.0000000000000p-6",
+      "0x0.0p+0",
+      "0x0.0p+0"
+    ]
+  },
+  "point_index": 0,
+  "raw_fixture_array_sha256": {
+    "baseline_acceleration": "8485f6758db31a7a4a68c0aacdfb53c2cccb3d05f87a430c6bcd332904903ee2",
+    "baseline_complete_residual": "9bceaebea96226fc43074945bde3ebec88082227205834198c7be2d88e145d4c",
+    "forward_constant": "87611ff891f5dfcd44c87d7642a6ccf27fd63d26b4aac33be1c12dbf1ade8acb",
+    "forward_jacobian": "bd95be6c680008e85901ef133332c462d4c84057017ee7411bf63e5252c96621",
+    "p": "785cdcad72b8a619e698b044c34b693f150fee9e007693c205c61f73446916a8",
+    "p_r": "3920c44c95430be8ad38735c4f7af893de613330907c3f28c591c7c34a4e9712",
+    "q": "784d4cb0c4e0c3ff2e6642a743125114475c99c9fbf081f9d8f7c00e058d1c8a",
+    "q_r": "cda9816e698e44bb2c4164dfc87d904a94f8546f56a9c9e51a4842da26003031",
+    "radii": "0dc74320128c27103468849e0c3cd0c1145c64bd6ca92d1055c9e46fa43b6e33",
+    "u": "ba00ad1ae5b5b044f77be8372e718d6df1cb3f7f64c78451cf722055832b040d"
+  },
+  "raw_fixture_sha256": "b55191c052672c195bd3795e8ff1338549eab91c384ef567f817b650c8a4e56e",
+  "schema_version": 1,
+  "source_call": {
+    "amplitude": "5/2",
+    "branch": "GR-0",
+    "member": "RK4-8193",
+    "stage_time": "0x1.21526722367a9p-4"
+  },
+  "tilde_normal_factor": 4
+}

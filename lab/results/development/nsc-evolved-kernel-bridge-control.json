@@ -1,0 +1,107 @@
+{
+  "accountable_author": "Douglas Ek",
+  "compact_test_variation": {
+    "center": 1.2068780671724793,
+    "inner": 0.02,
+    "outer": 0.04,
+    "polynomial_coefficients": [
+      1.0
+    ]
+  },
+  "finite_eta_minus_zero": [
+    [
+      -1.056932319443149e-10,
+      -1.0678968909161313e-07
+    ],
+    [
+      -4.4423131839721464e-11,
+      -4.329500398192465e-07
+    ]
+  ],
+  "identity_residual": 1.887379141862766e-14,
+  "identity_tolerance": 3e-11,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-fine-prepared.npz": "162ad8484b6650106657fae60bf681852695fbb523048e9ed0ce1a2bfb82160c",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa"
+  },
+  "partial_reference_delta_N_beta": [
+    -1.950498287328628e-06,
+    -0.0012835178958403998
+  ],
+  "raw_source_delta_N_beta": [
+    6.478042546831375e-10,
+    1.4863493234384267e-06
+  ],
+  "reference_k_count": 24,
+  "reference_k_interval": [
+    -4.0,
+    4.0
+  ],
+  "reproducer": "python scripts/derive_nsc_evolved_kernel_bridge_control.py --check",
+  "rows": [
+    {
+      "eta": 0.0,
+      "paired_delta_N_beta": [
+        1.9511461104571026e-06,
+        0.0012850042451679755
+      ],
+      "physical_delta_kernel_max": 2.8995381269734605e-09,
+      "reference_delta_kernel_max": 2.4712752173527974e-05,
+      "reference_scope": "control_only",
+      "source_scope": "control_only"
+    },
+    {
+      "eta": 0.006000000000000005,
+      "paired_delta_N_beta": [
+        1.9510404172251583e-06,
+        0.001284897455478884
+      ],
+      "physical_delta_kernel_max": 3.448234637554677e-09,
+      "reference_delta_kernel_max": 2.4714131919908446e-05,
+      "reference_scope": "control_only",
+      "source_scope": "control_only"
+    },
+    {
+      "eta": 0.011999999999999789,
+      "paired_delta_N_beta": [
+        1.951101687325263e-06,
+        0.0012845712951281563
+      ],
+      "physical_delta_kernel_max": 3.995140035922507e-09,
+      "reference_delta_kernel_max": 2.4718269572197755e-05,
+      "reference_scope": "control_only",
+      "source_scope": "control_only"
+    }
+  ],
+  "schema": "NSC-EVOLVED-KERNEL-BRIDGE-CONTROL-v1",
+  "scope": {
+    "band_bulk_identity_reopened": false,
+    "certified_local_reference_coefficients_replaced": false,
+    "coincidence_remainder_bound": null,
+    "compact_test_vertex": "unit plateau around the probe, vanishing before axial cell ends",
+    "control_reference_evolution": "saved jointly evolved homogeneous reference",
+    "finite_band_exchange_bound": null,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "physical_local_gate": "OPEN",
+    "reference_tail_bound": null,
+    "source_tail_bound": null
+  },
+  "source_energies": [
+    -0.5562120090641313,
+    -0.19069155123954112,
+    0.19069155123954112,
+    0.5562120090641313
+  ],
+  "source_hashes": {
+    "docs/nsc-evolved-kernel-bridge-control.md": "c741f7d88b8c547f836dede6816daba7724dc8644ca9b5d086824b6b0ccb3489",
+    "scripts/derive_nsc_evolved_kernel_bridge_control.py": "5ce0c57ea6b2c7db868343d8ded65d57a3648a52b40d5bea805db98f17e4c2b3",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_ks_spacetime_geometry_jets.py": "16ecbaa15c5a1e129f8a0e1889c3dc2f400f576e76211c804b18b587ce2f66c9",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b",
+    "src/recursive_horizons/nsc_scaled_reference_projector.py": "a6eb3f45d6ce9baa256457c06b6ab61830097acf7394924de74feda9dc113407",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700"
+  },
+  "status": "PASS: finite same-kernel identity; full ordered limits OPEN"
+}

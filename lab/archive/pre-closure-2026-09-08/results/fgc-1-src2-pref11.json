@@ -1,0 +1,360 @@
+{
+  "artifact_id": "FGC-1-SRC2-PREF11",
+  "artifact_payload": {
+    "cap1_frozen_outcome": {
+      "baseline_complete_residual_infinity": "1.0659145473163184e-12",
+      "best_frozen_route": "PROTO11_binary64_baseline",
+      "best_frozen_route_passed": false,
+      "captured_coefficient_exact_binary_refinement_passed": false,
+      "complete_rejection_trace_reproduced": true,
+      "maximum_captured_kinetic_condition_infinity": "2859227.196975944",
+      "power_two_equilibration_passed": false,
+      "raw_complete_residual_maximum": "1e-12",
+      "source_only_rejection_count": 164,
+      "symmetric_affine_extraction_passed": false,
+      "target_source_call_matches": 2
+    },
+    "cap1_raw_bundle_binding": {
+      "arithmetic_result_sha256": "b4c7cc342ee24105535ac873242eae185e4b2d59f14164820c9407423785bed9",
+      "fixture_sha256": "b55191c052672c195bd3795e8ff1338549eab91c384ef567f817b650c8a4e56e",
+      "git_commit": "241e9b99a44985202ad35bdfaf9e6e1cf2d2c3d6",
+      "manifest_sha256": "b750680d08d7916c26ae0999a3c84bc3a620a2858c630e7d00d3066f9f5ea675",
+      "partial_or_hash_mismatched_raw_bundle_fails_closed": true,
+      "raw_bundle_optional_for_clean_clone_reproduction": true,
+      "replay_result_sha256": "438569d232df14ecfcaec10a73e7064b003d8f2481ac7dfdd9d22456394b16c2"
+    },
+    "coefficient_diagnosis": {
+      "captured_forward_constant_minus_exact_constant_infinity": 7.100467581659721e-12,
+      "captured_forward_matrix_minus_exact_matrix_infinity": 4.547473508864641e-13,
+      "captured_matrix_binary64_infinity_condition": 2451788.499999999,
+      "constant_term_cancellation_dominates_captured_coefficient_error": true,
+      "exact_constant_binary64_hex": [
+        "0x1.0625807c617e3p-39",
+        "-0x1.6b774e30b506fp-36",
+        "-0x1.83550bf8db73ap-40",
+        "0x1.1cdb2c45f756ap-54",
+        "0x0.0p+0",
+        "0x0.0p+0"
+      ],
+      "exact_matrix_binary64_hex": [
+        [
+          "-0x1.2000000000000p+6",
+          "0x1.864f01689df73p-50",
+          "0x1.2000000000000p+4",
+          "0x1.2000000000000p+11",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        [
+          "-0x1.5af0e4cec54d8p-54",
+          "0x1.2000000000000p+6",
+          "0x1.5af0e4cec54d8p-56",
+          "-0x1.5af0e4cec54d8p-49",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        [
+          "-0x1.0000000000000p+3",
+          "0x0.0p+0",
+          "0x1.0000000000000p+1",
+          "-0x1.0000000000000p+8",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        [
+          "-0x1.0000000000000p-9",
+          "0x0.0p+0",
+          "-0x1.0000000000000p-11",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        [
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "-0x1.0000000000000p+0",
+          "0x0.0p+0"
+        ],
+        [
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "-0x1.0000000000000p+0"
+        ]
+      ],
+      "exact_matrix_binary64_infinity_condition": 2451788.5
+    },
+    "compact_point_fixture": {
+      "artifact_id": "FGC-1-SRC2-PREF11-POINT0",
+      "coordinate_radius_binary64_hex": "0x1.0000000000000p-6",
+      "literal_binary64_bits_are_the_only_point_input": true,
+      "point_index": 0,
+      "sha256": "d3eef30ce918cd03c44968656d9d2d01d4a7c41c91ece0681a88405d176f9354",
+      "source_call": {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "member": "RK4-8193",
+        "stage_time": "0x1.21526722367a9p-4"
+      }
+    },
+    "epistemic_boundary": {
+      "established": [
+        "CAP1 reproduced the complete implicated GR-0 source-wall trace and none of its frozen arithmetic routes cleared the unchanged direct residual gate",
+        "the captured dyadic REF1 system at point zero is exactly affine and nonsingular",
+        "its exact root zeros all six rows and its binary64 rounding has an exact residual below 1e-26",
+        "both current binary64 residual implementations falsely reject that rounded exact root above 1e-12",
+        "the specific captured point-zero wall is an evaluator-cancellation failure rather than a demonstrated equation or physical obstruction"
+      ],
+      "not_established": [
+        "a cancellation-resistant full-grid runtime source evaluator",
+        "an eligible GR-0 calibration amplitude",
+        "resolution convergence for the independent amplitude-3 spectral veto",
+        "SGB-L or FGC-QR dynamics, activation, collapse, or defocusing",
+        "retained-EFT validity or a physical transition",
+        "a singularity resolution, child domain, dark sector, or variable local light speed"
+      ]
+    },
+    "exact_oracle": {
+      "action_parameters": {
+        "planck_mass": 2,
+        "quartic_coupling": "1/2",
+        "scalar_mass": 3
+      },
+      "baseline_acceleration_binary64_hex": [
+        "-0x1.3b4d60d8187f2p-47",
+        "0x1.4314b747bd5b8p-42",
+        "-0x1.fef732efe76d6p-45",
+        "-0x1.0c17c9acdb132p-48",
+        "-0x0.0p+0",
+        "-0x0.0p+0"
+      ],
+      "baseline_exact_residual": [
+        "-506179089041780646275333324016462820735511563536299988136684308935850333627468459934450132262070334165352627971912854506454088480228821836735931952080452886517961926722835831721947/71288134650346800291268306339067051951456695425758748915299883092176174487635584164154887676833928121541286087087412614229511011271491218722697833120659596691437416786879139845044909253853184",
+        "-330781076767993813053531161342478763170811606567656473030337620668703198975831622132724030746500260565504125859171368275133990060993/878694100496718043517683302282418331810487718418343092402491322775749527474899974671687634004666183037093927858109549828751614463963730408009475621262727315456",
+        "-5058704022251203365948226882720990612279218342062365246504181662957072272317038370405461089274403167690511210279635/10830740992659433045228180406808920716548582325686783496759685861775864483615725089999900023844295226942934417817982702456930304",
+        "4727308738918832411057852214627329266848025281883088670750608652824086260145728240967243950345998152319006222765317/44362715105933037753254626946289339254982993206013065202727673289833940924890009968639590497666233249558259375382457149263586525184",
+        "0",
+        "0"
+      ],
+      "baseline_exact_residual_infinity": 7.100467581659723e-12,
+      "branch": "GR-0",
+      "continuum_equations_changed": false,
+      "exact_affine_nonsingular": true,
+      "exact_root_fraction": [
+        "-16159481254506895597032126700792286953342366013327316197459588617313023308380705982917723434091215059162419318843935/779813351471479179256428989290242291591497927449448411766697382047862242820332206479992801716789256339891278082894754576898981888",
+        "13985635777048954950037502689334723028949131243193803842230092939363390011480404092223598278052196694116788831932327/48738334466967448703526811830640143224468620465590525735418586377991390176270762904999550107299328521243204880180922161056186368",
+        "10205344682986997698319697860441819284856052388603319358977532499276863113300273196786390883503417837880449411229651/48738334466967448703526811830640143224468620465590525735418586377991390176270762904999550107299328521243204880180922161056186368",
+        "-237751826667228534640437368696786857626755706850692359301120472895398380269044488835/76895533293152762966220781422103876125697362804839499718093497881599910128103059800826635129716736",
+        "0",
+        "0"
+      ],
+      "exact_root_residual_is_zero": true,
+      "field_order": [
+        "alpha",
+        "shift",
+        "lambda",
+        "R",
+        "phi",
+        "chi"
+      ],
+      "floating_residual_infinities": {
+        "baseline_direct": 1.0659145473163184e-12,
+        "baseline_generic": 4.0587374941066573e-13,
+        "rounded_exact_root_direct": 7.473208059818398e-12,
+        "rounded_exact_root_generic": 6.694593832249057e-12
+      },
+      "floating_residuals": {
+        "baseline": {
+          "direct": [
+            1.0659145473163184e-12,
+            2.0194839173657902e-27,
+            -8.390002284308367e-13,
+            -2.769950181707555e-17,
+            0.0,
+            0.0
+          ],
+          "generic": [
+            -4.0587374941066573e-13,
+            2.0194839173657902e-27,
+            3.697551683196117e-13,
+            4.409006480841397e-18,
+            0.0,
+            0.0
+          ]
+        },
+        "rounded_exact_root": {
+          "direct": [
+            7.473208059818398e-12,
+            2.0194839173657902e-27,
+            -7.432334551818439e-13,
+            -4.318941941833166e-18,
+            0.0,
+            0.0
+          ],
+          "generic": [
+            6.694593832249057e-12,
+            2.0194839173657902e-27,
+            8.368242290311321e-13,
+            -1.0215139514540187e-16,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "hat_normal_factor": 9,
+      "lower_jet_binary64_hex": {
+        "p": [
+          "-0x1.098e8d95a3341p-54",
+          "0x1.a70c4b2acf0e9p-50",
+          "0x1.50eb136fb92f7p-48",
+          "-0x1.a0a5fba0edb0cp-59",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        "p_r": [
+          "0x1.3da008ba2ce68p-48",
+          "0x1.666fde263dcb0p-48",
+          "-0x1.e642a7a4c0b34p-44",
+          "-0x1.e812145523794p-50",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        "q": [
+          "0x1.b2f3a3b5168e1p-55",
+          "0x1.f8e5982178d38p-54",
+          "0x1.d71714c675aefp-50",
+          "0x1.0000000000000p+0",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        "q_r": [
+          "0x1.2437b009f6879p-48",
+          "-0x1.b3265bb13198bp-44",
+          "-0x1.27eb1b93e3b27p-44",
+          "0x0.0p+0",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ],
+        "u": [
+          "0x1.0000000000000p+0",
+          "0x1.5af0e4cec54d8p-57",
+          "0x1.0000000000000p+0",
+          "0x1.0000000000000p-6",
+          "0x0.0p+0",
+          "0x0.0p+0"
+        ]
+      },
+      "mechanism_question_answered": false,
+      "radius_binary64_hex": "0x1.0000000000000p-6",
+      "raw_residual_threshold_changed": false,
+      "rounded_exact_root_binary64_hex": [
+        "-0x1.754c79ad5b587p-46",
+        "0x1.4314b747bd5b8p-42",
+        "0x1.d781691ca502ep-43",
+        "-0x1.bd9644f80d8fap-49",
+        "0x0.0p+0",
+        "0x0.0p+0"
+      ],
+      "rounded_exact_root_residual": [
+        "35662402183340467675454078915717045563453086546781681424504735632945971419792693370320324950597998456511491157483570317784605346827797144373300603932099099722903589/71288134650346800291268306339067051951456695425758748915299883092176174487635584164154887676833928121541286087087412614229511011271491218722697833120659596691437416786879139845044909253853184",
+        "-326921633090321926594609064753935771386734736152428000675350834864339513534664919339832605279214210690129148853743909772560422814657/878694100496718043517683302282418331810487718418343092402491322775749527474899974671687634004666183037093927858109549828751614463963730408009475621262727315456",
+        "-356321912494768550630383109096103262186058876512395978575626378146627874381475338523443890509345491/10830740992659433045228180406808920716548582325686783496759685861775864483615725089999900023844295226942934417817982702456930304",
+        "-353470141015276199973937348710173567740281002165589075138508620605955145065635656579082574454141691/44362715105933037753254626946289339254982993206013065202727673289833940924890009968639590497666233249558259375382457149263586525184",
+        "0",
+        "0"
+      ],
+      "rounded_exact_root_residual_infinity": 5.002571936866773e-28,
+      "schema_version": 1,
+      "tilde_normal_factor": 4
+    },
+    "successor_boundary": {
+      "PROTO12_may_be_considered_only_after_SRC3_passes": true,
+      "amplitude_three_resolution_spectrum_veto_requires_an_independent_prospective_resolution_study": true,
+      "must_be_frozen_before_any_new_GR0_campaign": true,
+      "must_match_exact_oracle_on_compact_point_and_independent_nontrivial_controls": true,
+      "must_preserve_unredefined_equations_reference_map_thresholds_and_protocol_inputs": true,
+      "next_gate": "FGC-1-SRC3",
+      "purpose": "derive_and_predeclare_a_cancellation_resistant_runtime_REF1_source_evaluator"
+    }
+  },
+  "classification": "captured_GR0_point0_binary64_evaluator_cancellation_diagnosis",
+  "derivation_document": "docs/fgc-src2-pref11.md",
+  "derivation_document_sha256": "610f29ff0240af403518553ae34223d38e65200e4628c9717c1b766b8e8f8d08",
+  "gate_status": {
+    "CAP1_frozen_arithmetic_routes_cleared_the_wall": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_calibration_completed": false,
+    "PROTO11_source_wall_replayed": true,
+    "PROTO12_frozen": false,
+    "amplitude_three_spectral_veto_cleared": false,
+    "cancellation_resistant_source_evaluator_required": true,
+    "captured_GR0_point0_binary64_residual_evaluator_incomplete": true,
+    "captured_GR0_point0_exact_affine_system_nonsingular": true,
+    "captured_GR0_point0_exact_root_exists": true,
+    "captured_GR0_point0_physical_or_structural_breakdown_demonstrated": false,
+    "captured_GR0_point0_wall_is_a_floating_cancellation_instrument_failure": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_src2_pref11.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_src2_pref11.py": "e22b0664aaf61f05cc0e68aa51cb955dbcccc07f86f06ce86de138a02fe4fafe",
+    "src/recursive_horizons/fgc/evolution/gr0_direct_source.py": "57942aebc126135425e70bf0fb4bb9d1b541137734ea7421ebe1395917bee1f0",
+    "src/recursive_horizons/fgc/evolution/src2_exact_oracle.py": "401f5449472fbfa45cb2243df9e7ea8204acc90b251c8174676ee3d519035089",
+    "src/recursive_horizons/fgc/evolution/vectorized_source.py": "bfc855b2cc2fd87e2523b4572f68fe3e3c1fd0a0c250f7fef0346d0dc5525e99",
+    "src/recursive_horizons/fgc/modified_harmonic_reference.py": "1cb40b5a00c1651eb2c08cd3c78e7749e274d3954026e293975b4937a6ff7cbb",
+    "src/recursive_horizons/fgc/reference_connection.py": "1353ba305fb23122ae426983c74919a96272e2ffa8cd5c46c880bd96c6e46ad1",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+  },
+  "nonclaims": {
+    "CAP1_frozen_arithmetic_routes_cleared_the_wall": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_calibration_completed": false,
+    "PROTO12_frozen": false,
+    "amplitude_three_spectral_veto_cleared": false,
+    "captured_GR0_point0_physical_or_structural_breakdown_demonstrated": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-src2-cap1.toml": "5f5d2701701876aa403b67cd4e16bb7aa185de3ffd5b87c3cbb1e07ae1b1c10d",
+    "results/fgc-1-cal8-pref10.json": "10c6898e1ec6e7c07793180c4a4f8fa26a1b2f660115a0b2bc54497ff8bbb89d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "GR0_trajectory_read": true,
+    "SGBL_trajectory_read": false,
+    "amplitude": "5/2",
+    "branch": "GR-0",
+    "captured_coordinate_radius": "1/64",
+    "captured_point_index": 0,
+    "collapse_or_trapped_outcome_classified": false,
+    "mechanism_question_answered": false,
+    "member": "RK4-8193",
+    "role": "hash_bound_exact_rational_diagnosis_of_the_captured_PROTO11_GR0_point_zero_source_wall"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-src2-pref11-point0.json": "d3eef30ce918cd03c44968656d9d2d01d4a7c41c91ece0681a88405d176f9354",
+    "configs/fgc/fgc-1-src2-pref11.toml": "293f50130c0d74d2be51184138833af36c750b2dcb68b30e3e1cde369884bdf8"
+  }
+}

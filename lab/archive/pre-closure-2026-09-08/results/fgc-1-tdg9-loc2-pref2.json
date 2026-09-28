@@ -1,0 +1,2226 @@
+{
+  "artifact_id": "FGC-1-TDG9-LOC2-PREF2",
+  "artifact_payload": {
+    "artifact_id": "FGC-1-TDG9-LOC2-PREF2",
+    "authority": {
+      "blob_count": 6,
+      "blobs": [
+        {
+          "path": "configs/fgc/fgc-1-tdg9-loc2-frz1.toml",
+          "sha256": "b22b54584d07894d7fe70badce012c8fc7f9d75d50f16fd05ad97d507c15451d"
+        },
+        {
+          "path": "results/fgc-1-tdg9-loc2-frz1.json",
+          "sha256": "62e15c731b53054d32a6bcb42dcbf95c0b879a1ce559edacbf1571e69fe22718"
+        },
+        {
+          "path": "docs/fgc-tdg9-loc2-frz1.md",
+          "sha256": "5ea8ed1ccf9c410de24ccb78091f8c53a118999e93ac1899f2805e7bf58d4a08"
+        },
+        {
+          "path": "src/recursive_horizons/fgc/evolution/tdg9_loc2_authority.py",
+          "sha256": "2da55fb0126091aaad501c1b7d63759dc62e47615bd72ea898f65099a9bcbdf7"
+        },
+        {
+          "path": "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent_v2.py",
+          "sha256": "750c38bb6bad4b37d946f66708055f3dc0835c807244e9c25c6e87e4e87e0511"
+        },
+        {
+          "path": "scripts/run_fgc_tdg9_loc2.py",
+          "sha256": "e3ad84f818fe33afce707bcbec1e21a99e0892b3d924536549e0ead740351122"
+        }
+      ],
+      "parent_commit": "14e26c43edbc88003d68cbcf24681bb090d98534"
+    },
+    "authority_binding": {
+      "all_committed_blob_hashes_verified": true,
+      "blob_count": 6,
+      "commit": "1cd78ee20100ae4ae6495161146c6f2fcf7de1bf",
+      "parent_commit": "14e26c43edbc88003d68cbcf24681bb090d98534"
+    },
+    "claims": {
+      "GR0_calibration_completed": false,
+      "LOC2_exact_localization_completed": true,
+      "LOC2_raw_result_independently_bound": true,
+      "all_ten_occurrences_both_components_independently_fail": true,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "mechanism_result_earned": false,
+      "physical_result_earned": false,
+      "physical_transition_claim_authorized": false,
+      "primary_v2_route_agreement_completed": true,
+      "retained_EFT_evolution_authorized": false,
+      "temporal_instrument_remedy_selected": false
+    },
+    "classification": "independently_bound_scale_invariant_localization_terminal",
+    "conclusion": {
+      "LOC2_bounded_exact_localization_completed": true,
+      "PDE_or_candidate_state_opened": false,
+      "all_10_failures_have_endpoint_state_and_width_scaled_RHS_failures": true,
+      "mixed_only_failure_count": 0,
+      "physics_inference_permitted": false,
+      "primary_v2_agree_on_all_60_component_levels": true,
+      "stationary_count_digests_agree_on_all_60_component_levels": true,
+      "successor_remedy_selected": false,
+      "survivor_keys_and_intervals_agree_on_all_60_component_levels": true
+    },
+    "independent_replay": {
+      "base_cubic_count": 122640,
+      "both_components_independently_fail_count": 10,
+      "component_candidate_counts": {
+        "complete_C": 326164,
+        "slope_S": 391791,
+        "value_V": 245280
+      },
+      "component_contraction_failure_count": 30,
+      "component_cubic_count": 367920,
+      "component_level_count": 60,
+      "historical_TDG6_evidence_sha256": {
+        "3": "0d21f650ccc46db778fd81fbebf5acab6394e1c2f7972b7940e24c76af9e1f59",
+        "4": "fc68ce01980cb7a66f82de59bbd59d5e53ace08537b6b0dbfe0be1e070e6912f",
+        "5": "b602d12ab00757090734ac63042f172a372154d51b41c7d286c7c0a758b62221"
+      },
+      "level_count": 20,
+      "occurrence_count": 10,
+      "occurrences": [
+        {
+          "PREF1_independent_evidence_sha256": "ccaa26028c2612394a59e763d0f3da2031f1431bf544e1db104a04034269c62f",
+          "PREF1_primary_evidence_sha256": "1e552e2c6ac33828d6d1bc5dbcce6f89220ffe908987376d6402f41980504b74",
+          "PREF1_row_stream_sha256": "6909fcf0d9b3b860ccb0a6cf9c535344f28c30c106db3667e08c9bcef77e389a",
+          "channel": "u:alpha",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": false
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "b7f135ea3782461d100d13e2c8f6ad1961f2a54666c733642b2756ef2a2a4322",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "7d735ada3b5403d966e70702e891bcbd1f28d1537b50fac417ad2e2c9d9c9455",
+              "independent_v2_evidence_sha256": "b32685517ffab0b6efacbfea8410214fb8deeab03c31acfbe57df1338bf0cbe1",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "058429a7ccf5845e4c098fc5652dd41c5491035b13503c898c629a0887dd9c8d",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "435bd922dd31df6d6bb0c4168bb6e0eef5628b787ea4d1cac6dc860802f13b64",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "937040bdbed02c10b1ddb382e451dfe0afb0f885c37340f3e94670bab5e3a376",
+              "survivor_key_stream_sha256": "309eab44932e8db512ab78d87e5f6db2b7dd8df342199bf1d3375e22042ba045",
+              "v2_root_method_counts": {
+                "exact_endpoint": 2
+              }
+            },
+            {
+              "candidate_count": 13316,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "5a91cb3b6c51285ecb92002c2b840479fa0cf579af1b7e53b9883ece7e2e538a",
+              "independent_v2_evidence_sha256": "cb43c423235337efe3e1983124761845b4c949f426be54f10ba236eb444e15ac",
+              "independent_v2_stationary_count_stream_sha256": "001099fd8280a5507923b1d0560677331cb30904bfb2e47bcc2c9710204bf588",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "3f6b23e74d7a3edbfbc1e93996d206b4b930f31c407553041bf6445eb5713b88",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "0c631740531fbda89b6c051cddde33dd352f0fc45762d23a9ec80d8638a8257b",
+              "primary_stationary_count_stream_sha256": "001099fd8280a5507923b1d0560677331cb30904bfb2e47bcc2c9710204bf588",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "465b707d7e815cc401803594fc1ed843abf40a911acc06982f51a64e6c108915",
+              "survivor_key_stream_sha256": "513cf37aa405172228c7a37a88e508160bf682bc5f85418f2cb27c2e43fe118b",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 11127,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "0a0aaf5ea373ca0b773076400f3d3519f9c6f0c4eb533fd25dd002ac6f7a5501",
+              "independent_v2_evidence_sha256": "91433c79be39076225c4e0aa2064acc4d5155427340a9692e45890c64639ee28",
+              "independent_v2_stationary_count_stream_sha256": "a07e4a2cd9ddf5816b74227e622bde42757bfad939367f5736846d1e1736354e",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "b96630a2dbd361e45fd1c2606ebcd392e2900ecbe446a4a7b6412fe541cddbc3",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "d51664e7b2584c4f7ddd4cdc30e2c7aeb78c51f00bca0e3dcda724174720da77",
+              "primary_stationary_count_stream_sha256": "a07e4a2cd9ddf5816b74227e622bde42757bfad939367f5736846d1e1736354e",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "98b82f1c414fa1969c15484acd731694b1ba79ed8d70286530e9dc34b9acc194",
+              "survivor_key_stream_sha256": "76cec2e35e60f558840979863109d55c6374d8a3b345fd6d401585969a06e8fb",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "7d735ada3b5403d966e70702e891bcbd1f28d1537b50fac417ad2e2c9d9c9455",
+              "independent_v2_evidence_sha256": "03cdf39c30ec49d5ba7915e4b0a9554f599ae2d732136f7ddfe8d424b5ae90ce",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "1905f4a11de3326c1a2c979b3bc91d6f237d2abdd78cb2ebaf0fae20faa2ac62",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "41ffae072df954ca7eb7671b2e94c34e7d90ad7ab5d2b3e020401b66e100f4d6",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "2f0ac961ae58c09bec72140c00ff17a16ad76fb2387d164e8fc5c783b4e0a493",
+              "survivor_key_stream_sha256": "a012c4302e1c28cb160c24edf0eac9e1bb6ccafc9e2ab40c9e02b4059856d731",
+              "v2_root_method_counts": {
+                "exact_endpoint": 1
+              }
+            },
+            {
+              "candidate_count": 27536,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "5a91cb3b6c51285ecb92002c2b840479fa0cf579af1b7e53b9883ece7e2e538a",
+              "independent_v2_evidence_sha256": "3b4ce91b9e0b64feabe85b5a03aad2e28620bb6c94cebb3056e9c34f8f60d96c",
+              "independent_v2_stationary_count_stream_sha256": "ad51b4ad42fdbd560cabb0490504e8122d4162422aad047d199abb3881332dc5",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "d7e11d20a1e21c75007098a9af9740b8ab9f241a48cb398cfb9a181ae07e9107",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "18215a84b67beaf46a9a7988305c7f181b1daedd5814266f494c366359e8e777",
+              "primary_stationary_count_stream_sha256": "ad51b4ad42fdbd560cabb0490504e8122d4162422aad047d199abb3881332dc5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "c1ed415b3d8e3de73950fb7255848137ccf8782b114258560b24f75048857662",
+              "survivor_key_stream_sha256": "d7d28761e7ffc884644f5702e0e1e7e3bd1bc0366f492d3713467260a17e997b",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 1
+              }
+            },
+            {
+              "candidate_count": 23177,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "0a0aaf5ea373ca0b773076400f3d3519f9c6f0c4eb533fd25dd002ac6f7a5501",
+              "independent_v2_evidence_sha256": "dcc80a5d5cddc17f632effa371b596ae55432713ee8f0d441dde023a64e4dd92",
+              "independent_v2_stationary_count_stream_sha256": "51546f3d6c23f8a68efb187cd988b7fb8a357af01690c15c97f08acc13c2abc8",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "1905f4a11de3326c1a2c979b3bc91d6f237d2abdd78cb2ebaf0fae20faa2ac62",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "1a91dccdc6a8aa5fc7cb0fafe13c4a728a66a60b3ebd1a72d5a2f013a3a50a53",
+              "primary_stationary_count_stream_sha256": "51546f3d6c23f8a68efb187cd988b7fb8a357af01690c15c97f08acc13c2abc8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "ecdfe6969078ce9e8d3ad882b60616c719acae1fc04b45eb1667ff0701fdeaad",
+              "survivor_key_stream_sha256": "248d23d47da861a4a658a98be14e62defef3e9cc64cd9d80b4b3e858086b021a",
+              "v2_root_method_counts": {
+                "exact_endpoint": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "7da640062a31ff2e86e16c5726bdb78c248ef38687002b523c180cf1ba3d551b",
+          "retry": 3
+        },
+        {
+          "PREF1_independent_evidence_sha256": "ef4e8ffe413546b39c1f3ff263131472449ab2113aeebdb8d0e4f940a96e9c3a",
+          "PREF1_primary_evidence_sha256": "72fb55b4df2b3186ba7b84ad1287f93c6c4e4dd9b7be517d874985da481037d7",
+          "PREF1_row_stream_sha256": "84f48c708fd865497efd16583ad6486e3b91e4034c8bf38269671888c13fcc7d",
+          "channel": "u:R",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 233,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "baf68406149659d7e49ac16c7643b412404b1d95a9178034e06cb7c4adc26d07",
+              "independent_v2_evidence_sha256": "7e8fbbc762efdfe2eb52dc9380f1ef05c61c3b3474dcec9db61dfd8a3941306b",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "8eafcaa6f717a2cb07d2461bad349c13467401231b068581c794b2a8b9583e93",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "4e22e7b2921f9f7e91c2f1f93a006b299b94460e53c5732d8fe053b352467d86",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "f8c457d0fbd2a8b85f346a0dafd14a6e57d55ef3f70bcb3c9a6a98ace80f1400",
+              "survivor_key_stream_sha256": "18e87e9e11ca196a2207d7d0378785a344fb5596051db80ae6ad4c2c7c823407",
+              "v2_root_method_counts": {
+                "exact_endpoint": 233
+              }
+            },
+            {
+              "candidate_count": 12646,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "63129fc5d59fb93eb4c21a2e46fe9f5de2a27710e7aa7e05f4f7e022ab0c0600",
+              "independent_v2_evidence_sha256": "770440adb2f3079c63207465b9aee019b0600acc4685e44250ea2c01714e0335",
+              "independent_v2_stationary_count_stream_sha256": "073772fa81823cdcaf4f2b7cf87cf48c1f047488c130212b3781539f55e1fff8",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "b5b441ce85590abd7f23780c4a67d44ab6f68127a7bfb87faa21181478576ae3",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "28b3787c25cceb87001dad63e81b646814c1e88033fd6c5117d1e152c92788cf",
+              "primary_stationary_count_stream_sha256": "073772fa81823cdcaf4f2b7cf87cf48c1f047488c130212b3781539f55e1fff8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "781f48a3ad4f1cecc3da0a9c63a5b1aca2b74f2e917bd2576ef3c60860c11f8c",
+              "survivor_key_stream_sha256": "242441f2ea1ae20aa8b5e459ed217b37935a8ae9864c592aa9ce2cc2fd543293",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 10462,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "c8684ee1f75f835a8500a8b3e13467fbb1be233edb60cf67e046d1fb82717b49",
+              "independent_v2_evidence_sha256": "3f9a7ec34b55f9d7c9141d6836a4c7cf6bc991b259b31640b8c046742dfda24d",
+              "independent_v2_stationary_count_stream_sha256": "57599c7ef5648995eb6915238c106ff76ba3713ce9623d5b1dae1af53b048926",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "aef014902b4a4efc60959cab92af5bba98f63c0a917800abd004b7071e092a48",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "d714ccbf96ead86e3acbb8d01b4a00f7ff8715ed7bdd1830574dd683fcbaa48a",
+              "primary_stationary_count_stream_sha256": "57599c7ef5648995eb6915238c106ff76ba3713ce9623d5b1dae1af53b048926",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "b52b2f53a426af8c6220a0d48edb5a21bd3a61d753cf1ae60f63616987884bc0",
+              "survivor_key_stream_sha256": "d32eb03d974b6107093fad496e7b309d89fbf71ea9e9e6f04b952aea86bbb1df",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 39,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "baf68406149659d7e49ac16c7643b412404b1d95a9178034e06cb7c4adc26d07",
+              "independent_v2_evidence_sha256": "96d68a15236ee2fd0f0369ed819c4e0fff464690868a85bd1c38e11087bd9d89",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "ae9ec0a03b1fc11d197c1376227928a61fd39382ed460c52cf5d96e59a97ad65",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "761103e6dbb773c57509aad5c37a8776d1e575344285f571e274dbdfd1450063",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "57556268425126ce105fe5aedb42ea2e96c67237b7832804ffdc848e58eb65fa",
+              "survivor_key_stream_sha256": "36c17b585e0c46057414ccda88f66b8d75bdc19c7183c366f2ac479092136864",
+              "v2_root_method_counts": {
+                "exact_endpoint": 39
+              }
+            },
+            {
+              "candidate_count": 25686,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "63129fc5d59fb93eb4c21a2e46fe9f5de2a27710e7aa7e05f4f7e022ab0c0600",
+              "independent_v2_evidence_sha256": "2655e14e76690997ccce1f8f22ddb4c7b3f0907cdaa048af9781e6fb2aa9baa1",
+              "independent_v2_stationary_count_stream_sha256": "a4d1438aacfa0d095b6de155c21977207793ee2608d220e113ace816c965d65a",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "83693ef08a329901f1df7ef37c33fb5566828c69ebf6a967466a404a4017e3d5",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "f09f24420688f3b4d690abd78ed7e6ed071fedb0d4c13685adb932a02f4cea1a",
+              "primary_stationary_count_stream_sha256": "a4d1438aacfa0d095b6de155c21977207793ee2608d220e113ace816c965d65a",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "be7eb4d273ba4b404f8211917247ec2aee36494cd593ff8d047fa29440df1240",
+              "survivor_key_stream_sha256": "987d6c9ba5587d33630ea46c96c2e51dcda956b4279f62f4bf8022b507ae205e",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 21347,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "c8684ee1f75f835a8500a8b3e13467fbb1be233edb60cf67e046d1fb82717b49",
+              "independent_v2_evidence_sha256": "3206b68dc6fb0a2cbd78374ac0eb6592866822125566567849b29e24d39f12dd",
+              "independent_v2_stationary_count_stream_sha256": "735bbc7cfa2579347a8437521506f89609447aee62e8b384b355df2ae4580631",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "ca6f707f8b968530f5e18c203e7bda96339346884dc373449f46e693dc48aba8",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "a67e131f3bddb6837f9f4ccbe93726f391fbcf40e8d287b0dd00422ec6a2e81a",
+              "primary_stationary_count_stream_sha256": "735bbc7cfa2579347a8437521506f89609447aee62e8b384b355df2ae4580631",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "5bd0e3e76f571855c8024c8b5e8cffe67833c615a38de7dac5ebc9a981949d14",
+              "survivor_key_stream_sha256": "44edc0173a706d1f8f08f2fecef87bf23714c97a64557e371d25f934d4a4ac4c",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "461ed0a38b2212ba826227a46eb811a111ff75f2f307078ebed3e3bd6d7acee7",
+          "retry": 3
+        },
+        {
+          "PREF1_independent_evidence_sha256": "ede6ee4cade23e16c66437782c0b640c618eea7147b328888bb3293e6a2aaab3",
+          "PREF1_primary_evidence_sha256": "485e601a5eaaa1cb7600cab0bc495f89922a81c3bf9a9fdfaed1fd722c6e8a6f",
+          "PREF1_row_stream_sha256": "0db26b0b3fbecac8781bf83edd394e1daaf2b4871396f8a3d063f1bd7fd247b2",
+          "channel": "u:alpha",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": false,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "4fd0cf6e5af7c22d38f99105f1322a314fe517f46768cff154f373838fde2606",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 3,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "173ae0a1235ef93a2658a4c3b3d6c7b44a6218e781c51df5857f977bb5cdebf7",
+              "independent_v2_evidence_sha256": "f5948381c1706cecaf7e3059dd87cd69a0da0bbf982a38c21f629180d6af67e1",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "32aff3006823f6de8345326c5b2b32aec9d6020fc86afa4f40c54e528a34c4f3",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "79eaaa6238d5ec84aeaa044d721db92d9c3242fb35c0968b805e83e78456b203",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "4aed0d11b2a72abfce94237ccaed59bcafc7523fd019ee5308aead250ea017ca",
+              "survivor_key_stream_sha256": "bdfb313c56a289d8b7d795ffbe09a3d208d9a58450245c4cbba5ff15364fd01e",
+              "v2_root_method_counts": {
+                "exact_endpoint": 3
+              }
+            },
+            {
+              "candidate_count": 13260,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "41f32c67d68025dbb7387e711902bee13101efa9a8055d50a7c9a4e91d4499bb",
+              "independent_v2_evidence_sha256": "32efc767bf9bf3fdbe8527f8ad5561c0c2bf1b5a770c2c36a4205ed4aa5ceb6f",
+              "independent_v2_stationary_count_stream_sha256": "b7bbc436377bb98b34dc46265715da24ae81c66005e80ec66d91037fd6c3fe4f",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "d7e11d20a1e21c75007098a9af9740b8ab9f241a48cb398cfb9a181ae07e9107",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "0ea454ebbd1e5fee7dc3690297d22b326787692a3155f36c5619e6875584e694",
+              "primary_stationary_count_stream_sha256": "b7bbc436377bb98b34dc46265715da24ae81c66005e80ec66d91037fd6c3fe4f",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "36adb35494d6fcfbd890a2c41140dea8c55a5e6bc9ab44045260fae21ba3e08f",
+              "survivor_key_stream_sha256": "a2d11058c178dbbb04b7d17bdc6c22a41d6be068dde3cf01e1677519ce6796eb",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 1
+              }
+            },
+            {
+              "candidate_count": 11118,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 3,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "d8fedc4b8b96f42016bc307c235d35f5d58ced71bae9c0e6c50683ca51f9e018",
+              "independent_v2_evidence_sha256": "f8821a0da7bb0d2114ba47936968bc65bfe123e8908d99de28abbdb752d98e4e",
+              "independent_v2_stationary_count_stream_sha256": "c97e40ab7acb6a18b6c100e6d5726e9f1920a824cc5540f5f7965e92ce1f9495",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "32aff3006823f6de8345326c5b2b32aec9d6020fc86afa4f40c54e528a34c4f3",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "0daa1fbeaf8744872b72f253ed1cf70198103c8008d34b5c62fa45602b5b1446",
+              "primary_stationary_count_stream_sha256": "c97e40ab7acb6a18b6c100e6d5726e9f1920a824cc5540f5f7965e92ce1f9495",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "8ca3291c1423659a89c50c3c65b56dd1b0c1f606ec90ce996070c144784fa1c5",
+              "survivor_key_stream_sha256": "c6e7dbe8302b4409bcd5ed93c0b7d1be9f7e9b747f568ff2183302e831a54bd9",
+              "v2_root_method_counts": {
+                "exact_endpoint": 3
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 196,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "173ae0a1235ef93a2658a4c3b3d6c7b44a6218e781c51df5857f977bb5cdebf7",
+              "independent_v2_evidence_sha256": "3f15adec60bf1f0ffb90772b5e9995b671217655479332e32d0b67ee1e09586d",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "71c11209ef21fe77d659d2bf823042b63c8c7fd3e5a7d0a7705f52f04b685d8e",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "7eac3a17470b4802efa938472609d2933ce8de26ac8e099a9d4f9f62f9221764",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "b6f6e3e97ecfa7702f0490633dad1b682194362dcc8574f797d2c8839deb2b0d",
+              "survivor_key_stream_sha256": "bfa25ec215fa3ac866462d609167a1773a758c95b1b8dc66f4df45a6b14abbe8",
+              "v2_root_method_counts": {
+                "exact_endpoint": 196
+              }
+            },
+            {
+              "candidate_count": 27434,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "41f32c67d68025dbb7387e711902bee13101efa9a8055d50a7c9a4e91d4499bb",
+              "independent_v2_evidence_sha256": "c48786fb751696df666d7f1ae88de5fcd687df4efcd05867d120dece9d5221da",
+              "independent_v2_stationary_count_stream_sha256": "c52c6d126cc508617c39d35214600be736cfbf66ee776e55b66a9e9e1c3a1c36",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "90c6288815da782619bbda0c076c278a4e0ace3e75a08919b8ec8e478576bff5",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "ae5a094185af9ba732741406be716022873d9cc599c413fd250cf2c39c1fcf0b",
+              "primary_stationary_count_stream_sha256": "c52c6d126cc508617c39d35214600be736cfbf66ee776e55b66a9e9e1c3a1c36",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "52b80ae79287a74baeeebfea3eec8aa14fb7639093e00dbc22856d3e87f1b130",
+              "survivor_key_stream_sha256": "a1989674143be85e640615f1269ea29e4e3c0e1ffeefa23a374609fcc7c10e6c",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 23024,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "d8fedc4b8b96f42016bc307c235d35f5d58ced71bae9c0e6c50683ca51f9e018",
+              "independent_v2_evidence_sha256": "fb645b21c67a3556f15396f534f9c9489692ec26ddbd201df690fa37e386e166",
+              "independent_v2_stationary_count_stream_sha256": "4115ea8b5d2ac0c02064a2a8e7fdbe3935ef73b33163180839112a3fcc78269a",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "ab4aeb166dc064f95c44e0b9db35c53131bc661389babd0a23e5f985dfb99f72",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "3ba3b94a83228167b45778659e40b9b2252099ad509311901c56e21a7bc707f9",
+              "primary_stationary_count_stream_sha256": "4115ea8b5d2ac0c02064a2a8e7fdbe3935ef73b33163180839112a3fcc78269a",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "9cc58681b1c1596310925992374d2d6592bfdcc2187ce5d9aa920503f8918a8b",
+              "survivor_key_stream_sha256": "18bc00eb880e51582327e301cad85de7857f65305bb22793bdb27e9556bbb278",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "ea60071ebb0fee44cf55017cf920dfa5caa7462485f5dbefd033932db141798d",
+          "retry": 4
+        },
+        {
+          "PREF1_independent_evidence_sha256": "1c73760015f984487d68538b24bdb2717d9c2ab7d0b7cab4491240197002c498",
+          "PREF1_primary_evidence_sha256": "60f2f2e0b20a73f0bab5a06dc5c0acf7f207262b54cdf9ae12e5fbbdc476bf46",
+          "PREF1_row_stream_sha256": "2d49c3c318a81ca0866ec3b7d4231eb15c1f7ebb57b65ae24844692b4eb7e9a0",
+          "channel": "u:lambda",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 481,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "ac08ca77947c9abda1e872cd6ffb37b79e38718d5ea20246783adc8c4808a544",
+              "independent_v2_evidence_sha256": "afe8f70a8cee9011d987e97e29eae554b6b687571d8a4f48cfd1ee1f5049091e",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "84285799666d653f2ab9bfc7854364be2c4164da0ac7fa0adc39c3c658b42c77",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "44926d3001670671dff654e5e0804ac1ad5c7eea940d803cbdb61101772662a9",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "d3bccb2101e0c6e2f37ebdc20af48e035157b8e640b9fef20f8596c464fb7dcd",
+              "survivor_key_stream_sha256": "96129032c7ebf779fd9e74dd625ba1a4598c44d3ef450bb1e4dc8429b7153201",
+              "v2_root_method_counts": {
+                "exact_endpoint": 481
+              }
+            },
+            {
+              "candidate_count": 12689,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "afe48ecc475f77fcd67808b19b9a3de9ec30abfec2e6e02323f14ca682d1d2db",
+              "independent_v2_evidence_sha256": "b02c5e7d47b0f6d3492642eedec8e1acd19ed44dd1ab551a50ed39c3a06e7ddf",
+              "independent_v2_stationary_count_stream_sha256": "aa583e3f99a9e4251023926eb3ab7084472c9a452186d6864a066b21cfc804e4",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "1f1c9933ea97c5c2b09a310f2dbbc9f67674692d9b88bd635e2ba0612a0d72c8",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "ac7e1829aebe2429ecfc664933dc71c6e53a3331e5ad315282a2b832889895bd",
+              "primary_stationary_count_stream_sha256": "aa583e3f99a9e4251023926eb3ab7084472c9a452186d6864a066b21cfc804e4",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "23026208169bb2437c79bb4392a07a51e08765606638344713c27f92c933f5d1",
+              "survivor_key_stream_sha256": "fbbd9c6e60a4befe7d0e9c502204cf6143e7afde6900845e393675551c9aa901",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 10536,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "f900e56d517275c71194fff31b34684b78bae4bae18a07dab30542cbdc359b28",
+              "independent_v2_evidence_sha256": "114710a9aaf674f2c74c15f226ba7dda07fb76961957e7d1ede34003b95aec2d",
+              "independent_v2_stationary_count_stream_sha256": "d563507db9d11f6b7f5506389c4305add77c98ae74635339be39f4a13ec98d4e",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "21bb1ce501dc906d425c357ebf4078f311d656237e5fab6e864133ad5c03fa46",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "4f0c9c6c63d1d034b86dfec82cb0241b840c817dfc44df382c87f4df7fadd0f7",
+              "primary_stationary_count_stream_sha256": "d563507db9d11f6b7f5506389c4305add77c98ae74635339be39f4a13ec98d4e",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "6d3952013486d85a393d9f0f90d427647d128032a92a88db75dcb7efab483ade",
+              "survivor_key_stream_sha256": "ab31d5ffeda01a1c650295619a58966db0d3226be4d432138a44d5f8adc78ad5",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 80,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "ac08ca77947c9abda1e872cd6ffb37b79e38718d5ea20246783adc8c4808a544",
+              "independent_v2_evidence_sha256": "6e141671aac00e9900eb3a6c8bb009a4411af0b295c418b8d9961799cd99d37c",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "1ab463db3230e4c7998c633fc402302b0599553a1b240c2375203b1034f213de",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "2cc69d9ec2f69308ca7d678800df0509cf063411e55f1a2c32422f039bbd03e9",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "bd0c4a372981361a841968fb34d9c00b73511ee77e323ae3f4010d968d13d93b",
+              "survivor_key_stream_sha256": "829d816f8a1a37927ad87561dcdb708cebd02d528fc6687bd7cd85b2bb4535d8",
+              "v2_root_method_counts": {
+                "exact_endpoint": 80
+              }
+            },
+            {
+              "candidate_count": 25859,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "afe48ecc475f77fcd67808b19b9a3de9ec30abfec2e6e02323f14ca682d1d2db",
+              "independent_v2_evidence_sha256": "fd35e57db34a098d499aa1760903debfe1f1e1d60f4c09f75f56cde3a564c3e1",
+              "independent_v2_stationary_count_stream_sha256": "50f3bde9f657bd503da947cb0fd3d9fdc1fd3bd2e8803be1af27c5ce71d4f675",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "55f199a5106d4a2cb9348535f598a436339ff46ccb9d182db4b62ac21127bd0d",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "629e2c6e17af7284d8e841ab52bc443199599a94bd36c8ca0946131fc8e262cb",
+              "primary_stationary_count_stream_sha256": "50f3bde9f657bd503da947cb0fd3d9fdc1fd3bd2e8803be1af27c5ce71d4f675",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "238a84a77d830006319bcf061d8cf3f029d94488f2afdbf0a5873ab42f9c49d9",
+              "survivor_key_stream_sha256": "319c37851239351a7e9a22d5962a21826d36d54935cade45eb90d0d7c9fda8c9",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 21518,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "f900e56d517275c71194fff31b34684b78bae4bae18a07dab30542cbdc359b28",
+              "independent_v2_evidence_sha256": "69f66dc21c3739c1696c42e7429750b91267b7da58f076f2e62168610e99fc08",
+              "independent_v2_stationary_count_stream_sha256": "fad4a5e95d5dae1a5721a423c260c07bb79f7b4d1c14c83789b0ce4182ddc1d9",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "76a08086cf48c10ce8b2a031590bf06ac042b434dfe2f78473b0867619f20195",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "d73cad838ff86d2790b415b5341a8fbff3530ef1a1c54eea1815e71bc83c5cbf",
+              "primary_stationary_count_stream_sha256": "fad4a5e95d5dae1a5721a423c260c07bb79f7b4d1c14c83789b0ce4182ddc1d9",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "34cafd69255e28e0d9db58b80ed59905e3cec95fbaa92c6664afdef3ae334ad1",
+              "survivor_key_stream_sha256": "0d3d24e6040ff64fc740d835c82e1741ff41badbdf24ddaaf62a7c1ca2c9820f",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "db13f75b141e68473f42149a4cda0ee4bf3551740534b655ac3e5cd0b0ea4788",
+          "retry": 4
+        },
+        {
+          "PREF1_independent_evidence_sha256": "cca271f082eec04254d02dd3efb730f185cf646fdeecf7fd6f2245b1bc970d87",
+          "PREF1_primary_evidence_sha256": "6b5252e52d5d2fd3e953bbfe2eecb307d976e7e3a7e196bbc6b3689291b051c8",
+          "PREF1_row_stream_sha256": "59ac0fc9b8c6e4f2114c382a6c27ac90c66b730cbc90ea54cfbea5f4e5c3e7a0",
+          "channel": "u:R",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 268,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "baf68406149659d7e49ac16c7643b412404b1d95a9178034e06cb7c4adc26d07",
+              "independent_v2_evidence_sha256": "1dddc833cfa3d6d27bd8ecbdd90f9a5fa306291feaac0931499704912b5001d9",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "fabcac81b1cd697b18c13f390a33cb97367c3af959cce50cecbeab4cd4b98b48",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "e4d5704ecc34a0ed1e3aaf2785bedf2e156b9dfd70cf9347475337a3ce97ca14",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "c635d4cfb24f79f3abbbbed012b93e1b1cd851c141a3cc3ece29935f2227aa92",
+              "survivor_key_stream_sha256": "3f0ede16ad8193ec2edc1a48e76a43106141d3507498d71662d216a3302db992",
+              "v2_root_method_counts": {
+                "exact_endpoint": 268
+              }
+            },
+            {
+              "candidate_count": 12616,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "98a913999647642f3cb3668fa2c9a1bc3feced01b945ad008f0ca0b4eedd643b",
+              "independent_v2_evidence_sha256": "e92dad1f32c8e3dec2fcd7a2bf42208d6608f6978bba3d5d680f27d7bbf32de8",
+              "independent_v2_stationary_count_stream_sha256": "e53b9661522e02c23c72e0d61fe2148fcece9a400a1a1b61dc6a8e6a968b8460",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "83693ef08a329901f1df7ef37c33fb5566828c69ebf6a967466a404a4017e3d5",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "7b44c095645ee15ab68e58a474f2d117d73fbaf9f2232c9ca416d1cf0a955eac",
+              "primary_stationary_count_stream_sha256": "e53b9661522e02c23c72e0d61fe2148fcece9a400a1a1b61dc6a8e6a968b8460",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "2a6146e7811fcb60fd314f976aa94b13c91fa0f6ca73f75fbbedb24641366d06",
+              "survivor_key_stream_sha256": "ddb4e27e2d00310522e66ddc71255bceb277539d2d7333531c5f20427ed8e885",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 10428,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "1487504ca01614077af6a58b5087fdd7379c9a0c2c019b9326867d052911b803",
+              "independent_v2_evidence_sha256": "b131b4eeb9ff8a7996b7005d6a980a7ed75e86f63f209c220b8a7d667eb5ae01",
+              "independent_v2_stationary_count_stream_sha256": "f44cb8d3b57f0f2efb123f3b42e690128facbd13b6939aeaf11efe7dc7f472de",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "ea43e51d96c9dcf649942dccc6477e3718e62dc73fde4b58e29753925bd6eaa3",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "80212282825ba4b52027c30ca690a476bb95f0d6d10aba4a8717e68b1f59b1f0",
+              "primary_stationary_count_stream_sha256": "f44cb8d3b57f0f2efb123f3b42e690128facbd13b6939aeaf11efe7dc7f472de",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e1f9486b4263c2da340618d407e9a800821d8d537cc8125c336ac3a7d27261cb",
+              "survivor_key_stream_sha256": "2e5dee190594dff8e13116e334cf9a3d23b58abfa84333441dc548dd7227b128",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 53,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "baf68406149659d7e49ac16c7643b412404b1d95a9178034e06cb7c4adc26d07",
+              "independent_v2_evidence_sha256": "c7ca17100695991fe69e19f9334857255b140a987877370ffd21d4163f66d6eb",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "0bebd4ca287acbccb8abe27d8b4d6cedcdf8c8c34fc74783fceee1050fcce81b",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "9b413df9d882b33b366dc817cda3261d1f6b49c7949bc54283d635c4a0b1aaa3",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "650559b2b19f7251315987b98a30ad48986b773c6b85931d1319f4cefaad0f4c",
+              "survivor_key_stream_sha256": "80b9b97b5940e0b665cdeba7c4be8f2b06591e17116e9049267c42f093c827b3",
+              "v2_root_method_counts": {
+                "exact_endpoint": 53
+              }
+            },
+            {
+              "candidate_count": 25646,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "98a913999647642f3cb3668fa2c9a1bc3feced01b945ad008f0ca0b4eedd643b",
+              "independent_v2_evidence_sha256": "c1d2e0ff78b1d898051fa3c686614ced5d63c94a7774eaee9fefb71893535391",
+              "independent_v2_stationary_count_stream_sha256": "77cd8e35c715d869a09d9753ef4b23ba90b5fc4b6af4906fbc82dc36e1f311f2",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "508e0417aff72e727ab64b2fff14a7fd4cd76c2c2e5a98d880fba2ccbe5fe945",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "ff20e301a52d816a3a7c707d035385e26e7259d1a844df2379420a5eefd93629",
+              "primary_stationary_count_stream_sha256": "77cd8e35c715d869a09d9753ef4b23ba90b5fc4b6af4906fbc82dc36e1f311f2",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e64c72dbdd11d24d9126d7174450e860a223f4fffd42222723a8d4dbad09d1be",
+              "survivor_key_stream_sha256": "c37cc87f06db83a1a2a694a9a31b1b2a29c0fcc608d4b6ef1c63e9916d8c3f01",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 21342,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "1487504ca01614077af6a58b5087fdd7379c9a0c2c019b9326867d052911b803",
+              "independent_v2_evidence_sha256": "19c1d42a4f1e852dadff29e957f80d0015ad17e0e3820a941edef66cf553bc3f",
+              "independent_v2_stationary_count_stream_sha256": "63ac1037f592eaf29a514c20264e83392ae3e67109d61c3b45538d54907fe314",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "5bb0b82bf399430327f8120a6f56b49522d3c6011f211a8deccf690a21f660a9",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "861b94886ec942c0f005c8fbda4afe3852bfd9b787cc3ba20940cffdc671bdca",
+              "primary_stationary_count_stream_sha256": "63ac1037f592eaf29a514c20264e83392ae3e67109d61c3b45538d54907fe314",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "29acacb2272af86e568292abd4f361d332ce19af44706c8f406a8d7b7011397d",
+              "survivor_key_stream_sha256": "2870c880eeda6ebc5f45c22751351359918d1a50e597bf840309b98625e1ccef",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "ddeaa489a697cfcdbc6ff968e67379884b8d844867a791ffb7c3a78e768cb69f",
+          "retry": 4
+        },
+        {
+          "PREF1_independent_evidence_sha256": "748ad56a20aba0b8c2ec2fcb693a0407fc184e044875d29cd6af14ee5cd0b6f1",
+          "PREF1_primary_evidence_sha256": "632184599576ce17ec9ec736d0dedebb793234ab1a0014a45cef8d89999649b0",
+          "PREF1_row_stream_sha256": "5896b7db7e3a6a241b756ceaedefd28c719e0f4de326d3e11039d1727efc1d32",
+          "channel": "u:alpha",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 626,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "213ab024ea96e3c3d3edb15b0df0b5da5eb4fe599983e302e32ed348bd35f88a",
+              "independent_v2_evidence_sha256": "44989e5e228a739b813e6ff9b8d6007a507dfda0cc0e168d495cfbac0158bcbf",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "cbc373b395cdeb7e405e0e6f888ea8c74b5e1290f25bace837b22f7f914b9370",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "50798d2a3157e6188ae52d6ed2e39eb9207d8af0e1bc721e051494f5ec01355c",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "a25d0b41905a43d343e7a30db369f9b59c273110d59e18f781eb9cbe8195b0f1",
+              "survivor_key_stream_sha256": "b76d91318227ed197e60b62c04eda1066ddeca25a48dd59436befc74b101d676",
+              "v2_root_method_counts": {
+                "exact_endpoint": 626
+              }
+            },
+            {
+              "candidate_count": 13244,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "080ca37471e43b7e372c3027ad8ced7ad065b5f86dc73df86aacc364499c4b18",
+              "independent_v2_evidence_sha256": "1c52fc21dbdd51073efbc129cd21884e47d67ce0ded4121945f521c03c635eb2",
+              "independent_v2_stationary_count_stream_sha256": "7d1def2aa31c765e020e519d265471ff393174b59aa830e67788bd680512a8f8",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "16b3c9c231e08b0bc52887f93a00b2f124f5c14887b499594a27200ffe60c24c",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "18b706fce450f0f5e3a41673292bb36bccc0b98d3f320226eac517897bb7e7c1",
+              "primary_stationary_count_stream_sha256": "7d1def2aa31c765e020e519d265471ff393174b59aa830e67788bd680512a8f8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "2a0eb4e140dcf3a56813694fe674f96383af0ac0da4c28b886d9623088c34570",
+              "survivor_key_stream_sha256": "e2450f8c9b95ba66bec4c7bcad5a2caebbeb500982855f1056e6d3acb6a44bf6",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 10995,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "d5185ba622b2f7c6fc93000c7fe7510a0c36f5d5edaf9a3fa4dc411da3d6dcd0",
+              "independent_v2_evidence_sha256": "6dfa24f7f8437be3b4ca224ec9c7844549fa1d180b30274481b4243b175fa81c",
+              "independent_v2_stationary_count_stream_sha256": "298df41019d3183638cdf238c649840afaab3b797c2ab08ca640b00d596183e4",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "95e671ba9b5d2a471db24012f9d55939e85738d74990206ab59444292a80c57a",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "a138066b6f6e53deed0ad2bb5e88d2a9f398fc7d206040a749fdb456cb79dc18",
+              "primary_stationary_count_stream_sha256": "298df41019d3183638cdf238c649840afaab3b797c2ab08ca640b00d596183e4",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "83ffccfecfa971f8646b7ee18f4c879c2007fdb074d656078722bf4d4d56409d",
+              "survivor_key_stream_sha256": "a388a43926f391639baacbb471b641f0ed18c80a537c4bb2aa184032a75cc779",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "213ab024ea96e3c3d3edb15b0df0b5da5eb4fe599983e302e32ed348bd35f88a",
+              "independent_v2_evidence_sha256": "ddbebfdfb7ce2ff5172e1b446ea975d6c062626cb932bcced1258818c95e4627",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "e6a6a0feaa9399d32c46554237b72dfa7c90715a637ced6a20c80f913e158df6",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "9611489b429bf611d79c0c07c68f854316c3fe207739142dfa7ddce3871814e0",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "d521f23b77ba168c87e3b29c1531721ea849fa9f04b8fd0c76b97649f863bba0",
+              "survivor_key_stream_sha256": "f6df634016bf3e62d8c43766558060892556370e46cc816c56c30f123e1d556d",
+              "v2_root_method_counts": {
+                "exact_endpoint": 2
+              }
+            },
+            {
+              "candidate_count": 27552,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "080ca37471e43b7e372c3027ad8ced7ad065b5f86dc73df86aacc364499c4b18",
+              "independent_v2_evidence_sha256": "e5adecc88a27877101cd118a97ac96380ea0a2fb26d3f7910a297f7d652c2cee",
+              "independent_v2_stationary_count_stream_sha256": "06cbba6021dddcc1631ff4929e5ef75e69aa5470dc27826468395fa423c0125e",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "4ff74ca8ef604c234435a99e3036ec7841cc2d85981c454f306a797b7a97f889",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "3ad9dce84020ce85bd7088c00f6b377a043d95e23ddfe4edbae967ecc6098ba7",
+              "primary_stationary_count_stream_sha256": "06cbba6021dddcc1631ff4929e5ef75e69aa5470dc27826468395fa423c0125e",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "b0e19af62cfc1ec5256ec80d8c6b75bc4e89ac7ae74a78f354337dabdfa15dec",
+              "survivor_key_stream_sha256": "ffd953db75529bba4a69b3839a161f6f78f06dee468a2e2614e92cd99b8cd623",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 23148,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "d5185ba622b2f7c6fc93000c7fe7510a0c36f5d5edaf9a3fa4dc411da3d6dcd0",
+              "independent_v2_evidence_sha256": "efc86bfa6b44d519f1bbcd30ad99e9be9929b45489e9cad93826d2b7127bdf01",
+              "independent_v2_stationary_count_stream_sha256": "b8ab8de9d7d860c84100c49bd7a74a9aa73d14dabce61263199ff378c612715d",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "be94ebde7a6c49ca821acdaaff3ae5ab1e084667009a9ba03a2e0b39bec5ac0e",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "bcba4b6864cdd7a808939982012669589a14bc477fe08d5c09fc6f5a1bf6d893",
+              "primary_stationary_count_stream_sha256": "b8ab8de9d7d860c84100c49bd7a74a9aa73d14dabce61263199ff378c612715d",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e1e4f7e01d89da306543bdb59bac57cc027e8e9547f82a3d64cebf003435e12c",
+              "survivor_key_stream_sha256": "1a28de6b9e11f37f97013c99d5173ef13e28cba40a4ca17721579d8616962047",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "996f4f1c40a81dfa94167b12f1c3445796a63054c4d099e753ce93fb2bc5f3a1",
+          "retry": 5
+        },
+        {
+          "PREF1_independent_evidence_sha256": "2d3d1ae8e68bd6f3244b8c62e3543a9271313e8fec77adf7c8bf60fd85a25780",
+          "PREF1_primary_evidence_sha256": "86ba0a290d6bb5f949ded0b12a08d2d8f0a07ee5bf39b99ac8e5d9b6e292cbcf",
+          "PREF1_row_stream_sha256": "008a919ce9d477d1f75a5fc2a545ec9bf83ce74228295ab51f9bb935df342a39",
+          "channel": "u:v",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "769a1f3f33d0507ac309d76706888c69dad8528b7e521877679fdab486ef17dd",
+              "independent_v2_evidence_sha256": "1344edd1bfaa2498ed5dac5ec40d423c20083aaf39b502834cae7774306e6112",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "594e76692c71bf2957840bfcc2fd7f73554bb6ea5266ea815c2909bba720645a",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "0a79e3e5877861e41c8b184b2d208e005b7b33d0423c5662a2c2dc5f1521d6b0",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "316028fe3f3fdc8f068af27ced0006fa284dfb2ea5e2f658a6d51593edcc7ff1",
+              "survivor_key_stream_sha256": "309eab44932e8db512ab78d87e5f6db2b7dd8df342199bf1d3375e22042ba045",
+              "v2_root_method_counts": {
+                "exact_endpoint": 2
+              }
+            },
+            {
+              "candidate_count": 12649,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "820df7b529710ed4be8986a7c3897b372369553ede66037eb5d1dd9f1e1fea5f",
+              "independent_v2_evidence_sha256": "ad6dbf0462faed4d1705191120632f9ae00aa6b0e26a31e762b8e8a5be59bec3",
+              "independent_v2_stationary_count_stream_sha256": "be9a6d93426714ecdf5a9c50b8582e050c67367b489b68a18dd008e8ed835931",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "7667f49bcdc34f03807c4ac7325e56e6e46764c92e362df779a85255db61e9dd",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "12adf17b54332fef4bdd0348ccd38d0d4c28dd99f08561a208c6c4b3b345a251",
+              "primary_stationary_count_stream_sha256": "be9a6d93426714ecdf5a9c50b8582e050c67367b489b68a18dd008e8ed835931",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "01f1afe8e8cdbe58359a6482ef8d6ed7cd7b678dd842bde1955f977844ac0010",
+              "survivor_key_stream_sha256": "087e63f0e3b64c1d916e2de5ea3ebf5ed4203c59cc7491ed508219555a201245",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 10362,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "347e607c22b3711be3ae9b5571e5e49748361111a046654c3d9e4f87430dc3a0",
+              "independent_v2_evidence_sha256": "b8fdcd0083060e796b4e645f69f8742c0595dd0519b1124a0015044a9b778392",
+              "independent_v2_stationary_count_stream_sha256": "95d3bdc3053bd5deb196121676e3ce3e52f6a192ef0f26a3ae25e6870c879fd8",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "77596462e2f80e4f4080cfb6e0542edb14f8101003e2ae970ef9eec9c2e2cbe9",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "664dc4d3edcceebacca85924cc975e2fa1bc6b9ac9f066624455da3363654b4e",
+              "primary_stationary_count_stream_sha256": "95d3bdc3053bd5deb196121676e3ce3e52f6a192ef0f26a3ae25e6870c879fd8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "75eb5dacd1f454990c2abdcdbe058e682c7de85a8ac09196b1d4539378a8ff7a",
+              "survivor_key_stream_sha256": "d70ee115399768f90600a72af9840c8e9ab04b657dd4370973b9eeb55456d070",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "769a1f3f33d0507ac309d76706888c69dad8528b7e521877679fdab486ef17dd",
+              "independent_v2_evidence_sha256": "2f1a26e1780980eb716188fc7c398f0f9aee9af7090463d685015153c36b8979",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "3c7b39fe81451ef3bcbaa9aba29be2c413ec6500a78f794ce316e92c8d375918",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "0223795287bb690212803d9758dd8a6d4d797ed94e101783ff3d7246eb253abb",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "17d80a2e3bbe19b35f8505d763d66f7b069f475b18fda56d232cd9b6dae649e2",
+              "survivor_key_stream_sha256": "619dd7a654702646fc0eb6ed8865751ea778fde0c1938a6552e3519a48c05c04",
+              "v2_root_method_counts": {
+                "exact_endpoint": 2
+              }
+            },
+            {
+              "candidate_count": 25689,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "820df7b529710ed4be8986a7c3897b372369553ede66037eb5d1dd9f1e1fea5f",
+              "independent_v2_evidence_sha256": "c4b580d11de7f27ac4b64caa11911479537c7395173320aa07a55498ac7affb8",
+              "independent_v2_stationary_count_stream_sha256": "2dec532a10f500907564daca4b92ef0d65caa0d3d91ddfe76e0efd6bad2a0d28",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "b3d1778e85de583eee7371efcd88aad6f5949dbfafe4d484fed344b2879c6a48",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "a6cc18b9d6d4027374f6535e29129dfdd2c268fa6e7339b49e21a4bdcdae79f7",
+              "primary_stationary_count_stream_sha256": "2dec532a10f500907564daca4b92ef0d65caa0d3d91ddfe76e0efd6bad2a0d28",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "a447e64e52cb61ff9ba8bf08f0e8a746d9f7a49b24a013b9d03a48449f941b5e",
+              "survivor_key_stream_sha256": "dbde3ee004eab8a008a4d6a6fae3e12532cf521fb0ee1602c16d8c2f9347b612",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 1
+              }
+            },
+            {
+              "candidate_count": 21026,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "347e607c22b3711be3ae9b5571e5e49748361111a046654c3d9e4f87430dc3a0",
+              "independent_v2_evidence_sha256": "4b10c9246b87d392c847bfb5a7ded4bcb2b0dac9d8d4effe22b0c181f3352fdd",
+              "independent_v2_stationary_count_stream_sha256": "a95c8942fe44db88ba827d5e0c8ca769fd92dcc6cdada03803cc35a690442c8e",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "71d211f40859b8b1da74c6dcb4882dd28310b1c60db9efe27bd4bb50c93bdb60",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "a61961f681036455a02b7b22371f990cd9608cde89f2cfb97ba94c320be0ad70",
+              "primary_stationary_count_stream_sha256": "a95c8942fe44db88ba827d5e0c8ca769fd92dcc6cdada03803cc35a690442c8e",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "fbcc47fd1959783de70ab2543762ebf36a3cc264e8cbe571fd221402eda2dd2c",
+              "survivor_key_stream_sha256": "76455cc459638ee779d4fc6da7fed96c0672c9cb4cace8edc1115c45ee172e54",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "a82ad5c7c8802aa437408547b47fe04d3810bedb449084840baf818c148c4428",
+          "retry": 5
+        },
+        {
+          "PREF1_independent_evidence_sha256": "9b9839046262eebc5697b8f012f3d14ce6b68ee3bb8b648a0b025d77b2630227",
+          "PREF1_primary_evidence_sha256": "c5271619148244b86063bbf2d859a82b63a7f150a2e8861919c822b63e3aa889",
+          "PREF1_row_stream_sha256": "baa1953d6ab3769fc337549f146a418f47fe14de4c9d651122ddf9370188b78c",
+          "channel": "u:lambda",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 498,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "ac08ca77947c9abda1e872cd6ffb37b79e38718d5ea20246783adc8c4808a544",
+              "independent_v2_evidence_sha256": "b8c9d1637d1246d2b0d052d00ebcb7ddca279c6d6fc3c562517e8708db19a519",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "f39971c71e1caf43c875aa2eee3a24b9c0e3a33608c909ae3d338297174098b6",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "db049889e96facdce3c16726f1dc9b5722617574efbd669f59d413ba0429a1a7",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "76356f0848df2b519245e755411e4b9540bfa06d5586606f765c3cd64d16fd63",
+              "survivor_key_stream_sha256": "6c72755ecf0e5741a2295226213f68d35ba7c0244121f2415893badec133092b",
+              "v2_root_method_counts": {
+                "exact_endpoint": 498
+              }
+            },
+            {
+              "candidate_count": 12635,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "2f55965409c22229951bcfbc245b23fbcf4d62ef95fae864f44a932e7ceb58a2",
+              "independent_v2_evidence_sha256": "60dc522b409005b76f63f0468fccd280e8bf15a0e564e677cff4009d6d7c9204",
+              "independent_v2_stationary_count_stream_sha256": "6b9d9800805eee4ace95244e1cf039af8d373493290d33a80df98469e1e2fac1",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "7f26024ba6e535839ea57225ee6ac00d0026f3d66b7cb722894d81e3020c9747",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "efeab2374a0ebb1ece59044d65e8ae1bdc18176bf038479b22c017c253a05bfc",
+              "primary_stationary_count_stream_sha256": "6b9d9800805eee4ace95244e1cf039af8d373493290d33a80df98469e1e2fac1",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e72c120d5033f2244768b5e481ab0cea144193abf00049c1240a03d158067dd5",
+              "survivor_key_stream_sha256": "4a83efa822a7721a982bcf20ef0146d53f2eee25f29bb2d2eb63c197a79d158c",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 10475,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "d6bc52a54bf6ba36331ec863986f2799230db2b397f26f42a4806df372cd2196",
+              "independent_v2_evidence_sha256": "2733b41bef1ffb34c385fec969a46f80ee208b4821f4c9a626d655b793310bbd",
+              "independent_v2_stationary_count_stream_sha256": "f33f8879e3943e8e3644123b33bacbc45c5b03eb0c8e47bb197569a52dfe161d",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "f13f184f163beae344ea72a19371b926a924223c29a2a081b1ad0e983e31d1e5",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "f3e4947c43685e46916be9b0cc3d1ea5a057d00cbc9dc4a385d54e96f739ba60",
+              "primary_stationary_count_stream_sha256": "f33f8879e3943e8e3644123b33bacbc45c5b03eb0c8e47bb197569a52dfe161d",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "df4ba2597ae1e64f2b34e0bc6e51130e6e5ebd1b590357650cb26db1a8cd3401",
+              "survivor_key_stream_sha256": "0cacbf853081665d16879bd1ba4e0803b4c1b13d2448facc3209295c1d806935",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 101,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "ac08ca77947c9abda1e872cd6ffb37b79e38718d5ea20246783adc8c4808a544",
+              "independent_v2_evidence_sha256": "125d1242264da2639ae933aafa0a05258bd1fcc715c318e614149ed1beb0ce20",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "85555e921945e45641143d2586808fbd23eb531cb71a1dc8ebe94bdec1f4f7b7",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "8708d40c8392ac814edb3fa2c60f66f59660c30766411193240c73c1544c50da",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "8324ede514425c0bf0b3ec5338e7e310406c27d9a03097789a4d48b3f0312cfe",
+              "survivor_key_stream_sha256": "6f4c2173aa3824e442dec605b067de32be2981577538d397fe5e54a798bee0ec",
+              "v2_root_method_counts": {
+                "exact_endpoint": 101
+              }
+            },
+            {
+              "candidate_count": 25666,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "2f55965409c22229951bcfbc245b23fbcf4d62ef95fae864f44a932e7ceb58a2",
+              "independent_v2_evidence_sha256": "f6452d0cca0e097c5c263696975b0e4a3b566b49f7f11a180ee664e9a938584a",
+              "independent_v2_stationary_count_stream_sha256": "9c23b4c475e86e3bf9a7a00a22a5b22dba6b64771c4cf11690508afe17047cf9",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "ad4b2a9bbebe8459beff3e808509a8fdd22bc49b4580c7cf4e2d99064dd859b0",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "33def351460ab40d6b42123f4740623c11e94d7b690da9edf14da6b7c6b1aef6",
+              "primary_stationary_count_stream_sha256": "9c23b4c475e86e3bf9a7a00a22a5b22dba6b64771c4cf11690508afe17047cf9",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "0cab6258f7c27d8284b5cbac78aa31977fbfef7596349391e18497929c224fb1",
+              "survivor_key_stream_sha256": "cc99392e0f4a248e0323814126671394148b67df3edd8818e0f310dbdc7906eb",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 21370,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "d6bc52a54bf6ba36331ec863986f2799230db2b397f26f42a4806df372cd2196",
+              "independent_v2_evidence_sha256": "bbe119cc68f0dc83ba2832c3e9dd8469cc17a39e418d9db8113378b442668f81",
+              "independent_v2_stationary_count_stream_sha256": "06b4b88d4369383eae0825ff74505d952d81b07fd9585b9ca9b5b0395a7b17c8",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "bfa15f2e0ec4589b3fae1dc845261ae328ad09cf479e1077ab34264ea7bb1fdc",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "9f8f3dda1ea9d03cd5d6d200f405dd750642602585834012934bb3acc8cd4fb7",
+              "primary_stationary_count_stream_sha256": "06b4b88d4369383eae0825ff74505d952d81b07fd9585b9ca9b5b0395a7b17c8",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "8fe7e8e7296b630a258790fe08eee8116c06912083c0648bed2f6d838afd72e3",
+              "survivor_key_stream_sha256": "83119ea3e75c741ac2f785d97d15c35c17575e7abcb7aac81de41bad2b66bddd",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "729beb30f56eb10075732a5898a654d263d40338cb91a7512236ea072e602ae2",
+          "retry": 5
+        },
+        {
+          "PREF1_independent_evidence_sha256": "017813798e385df50f2de93039616b0de185cb7c7bb14d327a430ac7c0a0f530",
+          "PREF1_primary_evidence_sha256": "b5abee3393da2ed268d619aedfbca261a8495bf52e19764cfbfa2ab081f23f3a",
+          "PREF1_row_stream_sha256": "117f1cb06490b2ebd6f103214e401ca7885ba641f0b172f3694187a92abc2a7a",
+          "channel": "u:R",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 265,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "baf68406149659d7e49ac16c7643b412404b1d95a9178034e06cb7c4adc26d07",
+              "independent_v2_evidence_sha256": "c73309aa9db645457b09708529bf5b4f0290e42f3ccd729b81a39abddef5004f",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "2cd9af25661224757d7b195aa9cb2b7aaac73d98e5a0bdae89b4cbb74451a489",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "6e6dfb842ab34f02f2d5ff20c4e19953877a1c8f4f29c0622448da1f5cc8b408",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "6cc55cf8750578c381e9ab4283d41dadc4abae4233a9ae58a0f2a2a03f5c0dea",
+              "survivor_key_stream_sha256": "2119f695df93cb203262bf36377d54f4847f6c09b99ac9fb2d434c0202bb80cc",
+              "v2_root_method_counts": {
+                "exact_endpoint": 265
+              }
+            },
+            {
+              "candidate_count": 12595,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "54865c59afd64186e62a6e2c769b3e76aba08e13359870b17c26192191c5da1a",
+              "independent_v2_evidence_sha256": "89f4b03f0b44b74f7ee9c58784fe5047c26dd31d300438e4ff726d92062fd777",
+              "independent_v2_stationary_count_stream_sha256": "35aa3c2fbf1493144d58693c5258e5a3d885ed7653ea1499ef96165df3ef1737",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "0826ba1a88a12f95c092d853efc39537aa63a064bbdffedc0827063fbfaf1467",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "2bb961f18111d26d37bf175fd58bcdef8df34639b43d6735a844e46135254920",
+              "primary_stationary_count_stream_sha256": "35aa3c2fbf1493144d58693c5258e5a3d885ed7653ea1499ef96165df3ef1737",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "8c2f2b5cdcb78c9986193f55cc32c2fc8fe31b8979b140f57bcffcfe16baf3b1",
+              "survivor_key_stream_sha256": "0c3d5e5bb8f57b88f8bd335ba70fb0615eff2e493d0b0d40999e79c5b64990ac",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 10441,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "da301968e8cc395babc6e9bc68957bd19012a433b93fb7b9ad0fb7a988853524",
+              "independent_v2_evidence_sha256": "99c541e4a34b6bcca476b89f2f7015dc6ee19f67202724328b3dabb95553cb2d",
+              "independent_v2_stationary_count_stream_sha256": "65f9ead1ee00976c9f3e6042a506a8c3541a7f5a18c976c77b5b090fc8b12e00",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "2135eceb5858aae93f1d926f156ea684a70764286b9b9d1398f8b13540751f65",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "36e61b037d6475ea0186b1544cedbc858784cf22d507a485d4d89117d4f023eb",
+              "primary_stationary_count_stream_sha256": "65f9ead1ee00976c9f3e6042a506a8c3541a7f5a18c976c77b5b090fc8b12e00",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e81dadcc7a999c56cb65fee35f87c47f5c254e7cc50b92301475731b2669e629",
+              "survivor_key_stream_sha256": "3f62bcecdc49c3ecbcfb889d0191e65a5885957bbd1dd83438cedea3957e5e03",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 53,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "baf68406149659d7e49ac16c7643b412404b1d95a9178034e06cb7c4adc26d07",
+              "independent_v2_evidence_sha256": "1b7000814096dc2a4379ecdf741da3c38c9fd36acdc57ec42cfe835204889573",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "806e87bd70853e1614206639d4e3ede7829308dda347a59de4d730e5a1093acd",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "6a8c83d4a98bbb9e4cf6e63584d41fc94e696fa952abb2753d6b4ae5838d8e5c",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e869d490a561e6f91e5b955df4e69c1d05ad5fe4e74132e120a4c06e5eff4180",
+              "survivor_key_stream_sha256": "3717bd3937a759aa1b64c9af464efa583b8f2ebc95a89568bae2c7f1b44981f1",
+              "v2_root_method_counts": {
+                "exact_endpoint": 53
+              }
+            },
+            {
+              "candidate_count": 25648,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "54865c59afd64186e62a6e2c769b3e76aba08e13359870b17c26192191c5da1a",
+              "independent_v2_evidence_sha256": "dd047cc5adb50c832f528e2a4087606c2112e08caccda7e2f73cc1dd4438fba4",
+              "independent_v2_stationary_count_stream_sha256": "13c10ef70eeaf4a560d65827ff4b6469fe731efc8eb931221fb0c676fd3f1e16",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "750ba7197db5fe3604974b3a2660ed40077c60a8260f84051a0b9ef965869c44",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "7ceb35435d27bf9b824c31b950c05f20bedecbb76ef7d524544bf62a20a4dab2",
+              "primary_stationary_count_stream_sha256": "13c10ef70eeaf4a560d65827ff4b6469fe731efc8eb931221fb0c676fd3f1e16",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "9509e9709dff02cc76e78d31bdb44c8df1c2277e68b4170e85349149ad1f82a4",
+              "survivor_key_stream_sha256": "2f42e553ffeacbddedcbcf0dafd3d5a7eee650ce3ffd19062298112712851909",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 21381,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "da301968e8cc395babc6e9bc68957bd19012a433b93fb7b9ad0fb7a988853524",
+              "independent_v2_evidence_sha256": "5ae97915b191b974f9263c7afaeedcc9f6fbebc534b46dca53d25691c1eb1976",
+              "independent_v2_stationary_count_stream_sha256": "d98b4c70f407be182b425ff4cb43cb8787cfe9f7015581f12c71694ba7eab918",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "7e19c2b2876e7a5111ae461f75d13e9700afbe80902cbb9503a5e8e3787da621",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "e717b67bca173c6adf6eeb5316b0e3b8968fec382fe4d7e8f55b129ae29790e5",
+              "primary_stationary_count_stream_sha256": "d98b4c70f407be182b425ff4cb43cb8787cfe9f7015581f12c71694ba7eab918",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "9c521552670cfbded10419d04a5915a5b16b17c656e0f92534a894a3c4646911",
+              "survivor_key_stream_sha256": "f0e745a45536f6b6fcb653808380f5007ba0cd8944bd93dd78afd9b81cb511bd",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "96887e899cf060cadf8aacb1cd08d80995f725b6e0eebe9f78ff34ad46e3ce19",
+          "retry": 5
+        },
+        {
+          "PREF1_independent_evidence_sha256": "d960749c008849009d5095a3a3876f9bbc7a8ddbb635270500b78043d844c729",
+          "PREF1_primary_evidence_sha256": "d72fd856f8409c2d3bafc800024377fd8693a3cdd32054d5428877bd97d2d1d4",
+          "PREF1_row_stream_sha256": "94b41be15e0b31832e2ecc3e0d004826bf47632578da885eac65a7256c83e3d1",
+          "channel": "q:R",
+          "component_ownership": {
+            "both_components_independently_fail": true,
+            "cancellation_certified_by_level": {
+              "D01": false,
+              "D12": false
+            },
+            "classification": "both_components_independently_fail",
+            "mixed_only_failure": false,
+            "reinforcement_certified_by_level": {
+              "D01": true,
+              "D12": true
+            },
+            "slope_only_failure": false,
+            "value_only_failure": false
+          },
+          "component_ownership_sha256": "9d6aced4102638b95b608f1f315e76eccb3b6c7c9f2670616ae649dae94b36b9",
+          "components": [
+            {
+              "candidate_count": 8176,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "cc8161df2aaf3218eaf564030db34761265ac2bb807ffd40e9b04e27cb945a6d",
+              "independent_v2_evidence_sha256": "3065c3088bc544e8c18384ee2a4859e1fb20dab1308c4a5754245b129fdb7347",
+              "independent_v2_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "999093439117b1233c8bf76be6a32f668826a19c39d3f023dc5335fa5bad76e6",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "fe5c0c9ec44904993f4938aacc02bbc0f8aeb610a3a10906c5e700c0273fd39a",
+              "primary_stationary_count_stream_sha256": "1aab806e3afa1e292306a00fd48c8d55521754303b37017dd67c0227d042cea5",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "73ffed8e9d98651539e90cb61edf2f4eacb049071fa345b8225778168e8f1dd7",
+              "survivor_key_stream_sha256": "dfc8127a95a53d6b6b42a1ed2c9ee4207dda319bd7f3e2a33a207f3355e3eb4d",
+              "v2_root_method_counts": {
+                "exact_endpoint": 2
+              }
+            },
+            {
+              "candidate_count": 12896,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 2,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "808447746ce9fcef3edfbaa1a82aa2bf587be002cf573cfcefc85b2e66b36dc6",
+              "independent_v2_evidence_sha256": "1334ceaf44d7696ccfedc2f15b830639f60e2f4fbd3fc32378c1145f23cbd425",
+              "independent_v2_stationary_count_stream_sha256": "5e1d6cb29c539a63098ef2d0ea8093923de8fe1c5cea9fc70cbac15892352625",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "a2394e0fc92796f649b91ea1d34da13980b5bcc95febc0d2bf1f7e1c3a226278",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "57a6b5eb84ed15b2d070d5f9ca75a17026b8707361ea3fb4610b416e291f650f",
+              "primary_stationary_count_stream_sha256": "5e1d6cb29c539a63098ef2d0ea8093923de8fe1c5cea9fc70cbac15892352625",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "0178fd701017010d3b56cb1adfdd233d42f0d1fb0d3d96f2e74a9077b8597eed",
+              "survivor_key_stream_sha256": "bcbf92de1a716857d70af04dea24b4a1682f5756b615aa73d1b6066c777f00e7",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 2
+              }
+            },
+            {
+              "candidate_count": 10741,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "508a0daf5f87e08c6c3a5216e28886ed11dbf875f1ecf0d1be0325ad758406ea",
+              "independent_v2_evidence_sha256": "98d554c3074158ff257ec4957c423d3f7158e5a4bdd5891050345fbad854c8ad",
+              "independent_v2_stationary_count_stream_sha256": "d7369a4f880cf971e2c5ad6c6b63db5bfa25a8a7daef322bee8a79fcb7609d6c",
+              "level": "D01",
+              "maximizer_input_decomposition_sha256": "eda1a5524caa4d277c13cad0c4e8b393de4cd2cf31441b4820c185c6776df19c",
+              "polynomial_count": 4088,
+              "primary_evidence_sha256": "8b20bb762989f1bafe10c1135d7fe5111cd49f3ab7967752d470ae32ad0cffe7",
+              "primary_stationary_count_stream_sha256": "d7369a4f880cf971e2c5ad6c6b63db5bfa25a8a7daef322bee8a79fcb7609d6c",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "e31b1e7e10e13ad279247f79ccdb574edd5b4a7b88c485250ef357f1ceae71de",
+              "survivor_key_stream_sha256": "0458865d33e2836b2902bdac51d67856479804423415634b137f82488c536155",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 1
+              }
+            },
+            {
+              "candidate_count": 16352,
+              "classification": "nonunique_or_interval_inconclusive",
+              "co_maximizer_count": 102,
+              "component": "value_V",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "cc8161df2aaf3218eaf564030db34761265ac2bb807ffd40e9b04e27cb945a6d",
+              "independent_v2_evidence_sha256": "983c60502a61bf5de99d2a47a59a208ebed79917035c61fe9ce3bf981394a154",
+              "independent_v2_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "f21e93d28cd01cf3e64bb1ebd2318c1816191e376f94af7d1dc079fe474e3d39",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "4503449af23d0cfad3bc1d35fec4cfb9d334f1d2ebfe38ded3e17d2064fa43e7",
+              "primary_stationary_count_stream_sha256": "8a8542103eed5d41110d3533552d231f99caebd3e2dd6f289dd4952017544a96",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "7d51ef84f6fb84c40bd6dea069b3bcdf9e01c8138975310113abb2ee9d02caef",
+              "survivor_key_stream_sha256": "efd1d98b6484d53e5d4356e572910a0ce46629050ecb379c30e9c2d805b3ca14",
+              "v2_root_method_counts": {
+                "exact_endpoint": 102
+              }
+            },
+            {
+              "candidate_count": 26529,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "slope_S",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "808447746ce9fcef3edfbaa1a82aa2bf587be002cf573cfcefc85b2e66b36dc6",
+              "independent_v2_evidence_sha256": "694574dc83590006ac510303799dddeac8fb9a73d3900de2050f5607bf5f9d8a",
+              "independent_v2_stationary_count_stream_sha256": "8bc6a1a72585bae4777f1166092406916a370137680ab04e1003d60b3f500dd7",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "95529a3eb424dbf9221141c5c34773d2184b1cb665906439fdc89a9d9f1bce39",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "36196d92cefb81fde5ac6e0735639a417f10dc05cb446f9c29c86f3aebe1666c",
+              "primary_stationary_count_stream_sha256": "8bc6a1a72585bae4777f1166092406916a370137680ab04e1003d60b3f500dd7",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "6480a85d040b9edaaee18a2111e72c0d5b037f87ea79cc4bd03c85c0a6b75938",
+              "survivor_key_stream_sha256": "d83f50ecbd7fd873aaae02691d3ac21d888b9b028e817b9a0e1c2a7d4493285a",
+              "v2_root_method_counts": {
+                "exact_endpoint_deflation": 1
+              }
+            },
+            {
+              "candidate_count": 22146,
+              "classification": "unique_maximum",
+              "co_maximizer_count": 1,
+              "component": "complete_C",
+              "contraction": "sufficient_contraction_failure",
+              "contraction_evidence_sha256": "508a0daf5f87e08c6c3a5216e28886ed11dbf875f1ecf0d1be0325ad758406ea",
+              "independent_v2_evidence_sha256": "069677dd8254e2173060c728effc090089aa1f17f59da197d18175eff87dd878",
+              "independent_v2_stationary_count_stream_sha256": "9545a8d8870b93aa3de2de4a5e1acb5c6a93357ef2a2b106ae5276d23485db99",
+              "level": "D12",
+              "maximizer_input_decomposition_sha256": "a922bdd4ad98a5b5d3fb9dc3a85c30f3132eb8fc4e4609fae68ef21613388a60",
+              "polynomial_count": 8176,
+              "primary_evidence_sha256": "9b805d51281d1f4cfdc6b0ed14a62fa439ee538a30820c27e219345285b32ad8",
+              "primary_stationary_count_stream_sha256": "9545a8d8870b93aa3de2de4a5e1acb5c6a93357ef2a2b106ae5276d23485db99",
+              "route_agreement": {
+                "candidate_count_agrees": true,
+                "classification_agrees": true,
+                "global_intervals_overlap": true,
+                "polynomial_count_agrees": true,
+                "stationary_count_digest_agrees": true,
+                "survivor_intervals_overlap": true,
+                "survivor_keys_agree": true
+              },
+              "survivor_interval_pair_stream_sha256": "2a86c7ddc3cfa48f8b71e3e1ca6ea190968c4b72df5a070f75629ccbe7b10a17",
+              "survivor_key_stream_sha256": "f58b2c48dff795b99ed677eb75ec951a07cbb5358cd257aee4e5790e547a7c04",
+              "v2_root_method_counts": {
+                "adaptive_nonsquare": 1
+              }
+            }
+          ],
+          "raw_occurrence_sha256": "66f65b5323ee61b43cf99f6b64974c3b842e298257acfd7f7d922e4a4c10ec41",
+          "retry": 5
+        }
+      ],
+      "route_agreement_count": 60,
+      "route_classification_counts": {
+        "nonunique_or_interval_inconclusive": 31,
+        "unique_maximum": 29
+      },
+      "survivor_count": 3062,
+      "total_VSC_candidate_count": 963235,
+      "v2_root_method_counts": {
+        "adaptive_nonsquare": 21,
+        "exact_endpoint": 3013,
+        "exact_endpoint_deflation": 28
+      }
+    },
+    "raw": {
+      "authority_commit": "1cd78ee20100ae4ae6495161146c6f2fcf7de1bf",
+      "classification": "bounded_exact_localization_completed",
+      "leaf_count": 2,
+      "manifest_sha256": "8189b030180444fdeaa8c7df7238550316ae0613efb7f1f8a1466d49b327858f",
+      "namespace": "runs/fgc-2-sf1/tdg9-loc2/rcv3-retries-3-5",
+      "runner_id": "FGC-1-TDG9-LOC2-RUN1",
+      "schema": "FGC-1-TDG9-LOC2-raw-v1",
+      "terminal_sha256": "571bb2979bd73229fbefe07d5a2d137a8e68b68661e94b7dce67f63ac8f04232"
+    },
+    "raw_binding": {
+      "canonical_duplicate_free_schema_verified": true,
+      "leaf_count": 2,
+      "manifest_sha256": "8189b030180444fdeaa8c7df7238550316ae0613efb7f1f8a1466d49b327858f",
+      "raw_namespace_unchanged": true,
+      "terminal_sha256": "571bb2979bd73229fbefe07d5a2d137a8e68b68661e94b7dce67f63ac8f04232"
+    },
+    "schema_version": 1,
+    "scope": {
+      "LOC2_runner_decision_code_imported": false,
+      "PDE_state_commit_authorized": false,
+      "SSPRK3_comparator_authorized": false,
+      "campaign_store_mutation_authorized": false,
+      "candidate_branches_authorized": false,
+      "continuation_authorized": false,
+      "fourth_width_authorized": false,
+      "mechanism_result_authorized": false,
+      "one_time_live_raw_and_store_reconstruction": true,
+      "ordinary_verifier_raw_blind": true,
+      "ordinary_verifier_store_blind": true,
+      "physical_result_authorized": false,
+      "raw_namespace_mutation_authorized": false,
+      "stage2_source_decomposition_authorized": false,
+      "successor_remedy_selected": false
+    },
+    "selection": {
+      "failed_occurrences": [
+        {
+          "channel": "u:alpha",
+          "retry": 3
+        },
+        {
+          "channel": "u:R",
+          "retry": 3
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 4
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 4
+        },
+        {
+          "channel": "u:R",
+          "retry": 4
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 5
+        },
+        {
+          "channel": "u:v",
+          "retry": 5
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 5
+        },
+        {
+          "channel": "u:R",
+          "retry": 5
+        },
+        {
+          "channel": "q:R",
+          "retry": 5
+        }
+      ],
+      "grid_spacing_hex": "0x1.0000000000000p-4",
+      "member_key": "RK4-2049",
+      "method": "RK4",
+      "outer_radius_hex": "0x1.0000000000000p+7",
+      "owned_row_count": 2044,
+      "point_count": 2049,
+      "retries": [
+        3,
+        4,
+        5
+      ]
+    },
+    "store": {
+      "leaf_count": 115,
+      "path": "runs/fgc-2-sf1/tdg8-rcv3/calibration",
+      "snapshot_algorithm": "TDG9-LOC1-STORE-SNAPSHOT-v1",
+      "snapshot_sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+    },
+    "store_binding": {
+      "binder_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "binder_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "store_unchanged": true
+    },
+    "target_protocol": "FGC-2-SF1-PROTO18",
+    "work_budget": {
+      "aggregate_candidate_ceiling": 1471680,
+      "base_cubic_count": 122640,
+      "component_cubic_count": 367920,
+      "family_candidate_ceiling": 490560,
+      "primary_refinement_depth": 160,
+      "v2_global_proof_bit_ceiling": 9216,
+      "v2_initial_refinement_bits": 192
+    }
+  }
+}

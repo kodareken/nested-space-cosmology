@@ -1,0 +1,62 @@
+{
+  "artifact_id": "FGC-1-FGCQR-TRIGGER-A6042-DEV1",
+  "schema": "FGC-1-FGCQR-TRIGGER-A6042-DEV1-v1",
+  "classification": "fixed_action_curvature_trigger_absent_in_trapped_region",
+  "background": {
+    "branch": "GR-0",
+    "amplitude": 6.042,
+    "method": "RK4",
+    "point_count": 4097,
+    "coordinate_time_hex": "0x1.47ae147ae147bp-6",
+    "accepted_steps": 12,
+    "cfl_retries": 11,
+    "state_sha256": "01aa16e26f9fa2eb1cf26c5ef7963ce7757add29855acf7545a8ab44332e9916"
+  },
+  "candidate_action": {
+    "branch": "FGC-QR",
+    "planck_mass": 2.0,
+    "mu": 3.0,
+    "g4": 0.5,
+    "beta": -0.25,
+    "eta": 0.5,
+    "alpha": 0.0,
+    "linear_trigger_formula": "m_lin_squared=9+R/4-GB/8"
+  },
+  "measurement": {
+    "radius_maximum": 24.0,
+    "measured_point_count": 768,
+    "trapped_point_count": 2,
+    "negative_m_lin_squared_point_count": 0,
+    "negative_m_lin_squared_trapped_point_count": 0,
+    "minimum_m_lin_squared": 8.989468464009072,
+    "minimum_m_lin_squared_radius": 13.59375,
+    "minimum_trapped_m_lin_squared": 8.998849092820947,
+    "minimum_trapped_m_lin_squared_radius": 13.8125,
+    "theta_plus_at_minimum_trapped_m_lin_squared": -0.00014035258764560874,
+    "theta_minus_at_minimum_trapped_m_lin_squared": -0.12584073238165855,
+    "maximum_R": 0.021820881116604823,
+    "minimum_R": -0.04323405206992138,
+    "maximum_GB": 0.0004092163033075878,
+    "minimum_GB": -0.0022966904387151763,
+    "maximum_checked_R_route_difference": 1.734723475976807e-18,
+    "maximum_checked_GB_route_difference": 1.214306433183765e-17
+  },
+  "raw_evidence": {
+    "path": "runs/fgc-2-sf1/fgcqr-trigger-a6042-dev1.json",
+    "sha256": "22dd959299d8e6bb0771808f334c961c648617f19f80e2a826862ae92a1e5086",
+    "source_trapped_origin_sha256": "5334e859a1835e1b220fb1861ddc2bb206737193b2aa9f7919eeeff35a2229b0"
+  },
+  "next_measured_intervention": {
+    "owner": "candidate regulator mass relative to the observed curvature band",
+    "trapped_cell_mu_threshold": 0.03392502290424875,
+    "selected_development_mu": 0.02,
+    "selection_rule": "choose a positive mass below the measured trapped-cell zero crossing while retaining positive asymptotic weak-field mass squared"
+  },
+  "nonclaims": {
+    "nonlinear_FGCQR_trajectory_executed": false,
+    "regulator_activation_observed": false,
+    "metric_null_defocusing_demonstrated": false,
+    "child_domain_demonstrated": false
+  },
+  "terminal": true
+}

@@ -1,0 +1,125 @@
+{
+  "comparison": {
+    "exact": "structure, strings, non-float values, source and input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "construction": {
+    "Fredholm_modulus": "Gamma_heat=-(1/2)log det_F exp[-E1(D^2/Lambda^2)] when E1(D^2/Lambda^2) is trace class",
+    "kinetic": "K_Lambda(D)=D exp[-Ein(D^2/Lambda^2)/2]",
+    "negative_log_Grassmann_Jacobian": "Tr sigma + (1/2)Tr Ein(D_s^2/Lambda^2)",
+    "normalized_positive_operator": "K_Lambda^2/(Lambda^2 exp(-EulerGamma))=exp[-E1(D^2/Lambda^2)]",
+    "raw_action": "Gamma_heat=-log|det(K_Lambda/M)|-N[log(M/Lambda)+EulerGamma/2]",
+    "scale_covariance": "K_(Omega Lambda)(Omega U D U\u2020)=Omega U K_Lambda(D) U\u2020 for unitary U",
+    "source_variation_fixed_rank_cutoff_M": "-Tr[exp(-D^2/Lambda^2) D^-1 delta D]",
+    "warp_order": "D_s=W D0 W; W=exp(-sigma/2); chi=W F_s^(1/2) psi"
+  },
+  "exact_identities": {
+    "cutoff_derivative_with_normalization": "0",
+    "fixed_cutoff_logarithmic_derivative": "0",
+    "profile_reconstruction": "0"
+  },
+  "example": {
+    "canonical_action": -1.8732432259533156,
+    "cutoff": 1.6,
+    "dimension": 4,
+    "euclidean_kinetic_bound": 1.1988896020615185,
+    "jacobian_action_error": -4.496403249731884e-15,
+    "measure_action": 1.482977235345371,
+    "noncommuting_warp_factor_norm": 0.003205009827975745,
+    "normalization": 0.9,
+    "normalization_shift": -1.1470252498111815,
+    "normalized_action": -0.39026599060793965,
+    "normalized_determinant_error": -4.996003610813204e-16,
+    "ordered_action_error": 3.5527137052702805e-15,
+    "raw_heat_action": 0.7567592592032418,
+    "raw_heat_reconstruction_error": -4.9960036108132044e-15,
+    "reference_imag": [
+      [
+        0.0,
+        0.2,
+        0.0,
+        0.0
+      ],
+      [
+        -0.2,
+        0.0,
+        0.2,
+        0.0
+      ],
+      [
+        0.0,
+        -0.2,
+        0.0,
+        -0.25
+      ],
+      [
+        0.0,
+        0.0,
+        0.25,
+        0.0
+      ]
+    ],
+    "reference_real": [
+      [
+        1.2,
+        0.4,
+        -0.1,
+        0.3
+      ],
+      [
+        0.4,
+        -1.7,
+        0.0,
+        0.1
+      ],
+      [
+        -0.1,
+        -0.0,
+        2.1,
+        -0.0
+      ],
+      [
+        0.3,
+        0.1,
+        0.0,
+        -0.8
+      ]
+    ],
+    "sigma_diagonal": [
+      0.13,
+      -0.07,
+      0.04,
+      -0.11
+    ]
+  },
+  "input_hashes": {
+    "results/development/canonical-spectral-bridge.json": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74",
+    "results/development/compact-anomaly-bridge.json": "38c8e98052671c5c852e272a611da8a9f376d8ca683e9f91b0b8f5ae0977d13f"
+  },
+  "primary_identity": "DLMF 6.2.3-6.2.4: Ein(z)=E1(z)+log(z)+EulerGamma",
+  "primary_url": "https://dlmf.nist.gov/6.2",
+  "schema": "NSC-GAUSSIAN-CUTOFF-MEASURE-v1",
+  "scope": {
+    "canonical_real_time_Hamiltonian_replaced": false,
+    "continuum_normalized_modulus_has_trace_class_condition": true,
+    "continuum_trace_terms_separately_finite": false,
+    "extra_zero_of_entire_factor": false,
+    "full_physical_closure_derived": false,
+    "new_parameters_or_fields": false,
+    "pole_agreement_proves_state_equivalence": false,
+    "real_time_contour_initial_state_and_observables_fixed": false
+  },
+  "source_hashes": {
+    "docs/nsc-gaussian-cutoff-measure.md": "6a2c715652ec974efe9336d40ddba4a6921d48bdffb2e00cb0464e4c0594c270",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "scripts/derive_nsc_gaussian_measure.py": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907",
+    "src/recursive_horizons/nsc_gaussian_measure.py": "8f1508ee0c4c70ff5efd52a954e0784fb83242dd72711fe251cd87fb5929e971",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+  },
+  "status": "exact finite Gaussian kinetic representation and ordered measure Jacobian"
+}

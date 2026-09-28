@@ -1,0 +1,16 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO18"
+protocol_version = 18
+frozen = true
+purpose = "prospective_one_event_GR0_progression_from_authenticated_PROTO17_generation_zero"
+predecessor_protocol = "FGC-2-SF1-PROTO17"
+branch = "GR-0"
+amplitude = "3"
+start_time = "23/16"
+target_time = "3/2"
+common_event_index = 23
+event_count = 1
+members = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193", "SSPRK3-16385"]
+candidate_forbidden = true
+arrays_inspected = false
+trajectory_read = false

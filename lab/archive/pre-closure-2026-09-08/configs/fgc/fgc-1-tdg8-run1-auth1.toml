@@ -1,0 +1,136 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-RUN1-AUTH1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_committed_fresh_gr0_successor_authority"
+nonclaims = [
+  "This authority does not mutate, resume, roll back, or reclassify the locked PROTO17 campaign.",
+  "This authority permits at most one fresh GR-0 common event and opens no SGB-L or FGC-QR candidate.",
+  "This authority records no common event, calibration, trapping, DEF1, retained-EFT, transition, mechanism, or physical result.",
+]
+
+[predecessor]
+repair_commit = "f1e96c5e3406705bbf3354a18e5458334e923119"
+must_be_ancestor_of_authority_commit = true
+
+[[immutable_bindings]]
+name = "pref28"
+artifact_id = "FGC-1-PRO19-PREF28"
+path = "results/fgc-1-pro19-pref28.json"
+sha256 = "c53482e7965e5e3ed79bad5abcd7323a28868801ef82392360916ae8979659e2"
+
+[[immutable_bindings]]
+name = "tdg8_diag1"
+artifact_id = "FGC-1-TDG8-DIAG1"
+path = "results/fgc-1-tdg8-diag1.json"
+sha256 = "9605fd52383cd5722ad8d48e41b2ebca4a3ce6415eaa91cd6b5e5715106c896f"
+
+[[immutable_bindings]]
+name = "pref27"
+artifact_id = "FGC-1-PRO18-PREF27"
+path = "results/fgc-1-pro18-pref27.json"
+sha256 = "102b385d058066d668e9e8541c974c736c583f6d5c4afaf9b99e95a16aabeb83"
+
+[[immutable_bindings]]
+name = "auth1"
+artifact_id = "FGC-1-PRO18-AUTH1"
+path = "results/fgc-1-pro18-auth1.json"
+sha256 = "dd967568fbae0bd19e063af94ea8e2d53480c98afec5c78bd86601c20faf4efa"
+
+[[implementation_inventory]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_tdg8_run1_auth1.py"
+sha256 = "f0ff81f5d84dc87628fcf4c2220b8b5e5996d32af045f58c354c36df26f592f1"
+
+[[implementation_inventory]]
+role = "runner"
+path = "scripts/run_fgc_tdg8_successor_event.py"
+sha256 = "9d46a674499a596a2c74d0a4648e4e38defbcbcc4d95d9bbf24ee81a66394238"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+sha256 = "0d4d4aeeefebce967d7adfe3cf06752030b0165ff99407dc534d7c0b3134a02d"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+sha256 = "4625441983d0e014bf7d8b1bfdee512e2781ccf88213e2ccae3474317b22ee7e"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+sha256 = "3ff843c599cf731d156091c4d5c9158dce910a1a43cd7b0912fa91577c45ff75"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_member_codec.py"
+sha256 = "1a9b79c28c41e6f4c47386dfa6b8e00c73409948fb94d766c1b5d4488060394d"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+sha256 = "fe2dd4070b7978cba1e3e507acdd344844c2778cef52771d0ecdfd900c0f99f6"
+
+[[implementation_inventory]]
+role = "authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_successor_authority.py"
+sha256 = "6d7adcafecaefe0642f4a374a60b91a15870f99d0e8ae926a83ad83e01929070"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_successor_runtime.py"
+sha256 = "d1ea159ff6965bd2b6c7be9fbc6aa4a4e2b3876ed0147e0b17b1b2879d6f9edd"
+
+[environment]
+implementation = "CPython"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+system = "Darwin"
+machine = "arm64"
+platform = "darwin"
+byteorder = "little"
+
+[progression]
+protocol = "FGC-2-SF1-PROTO18"
+campaign_id = "FGC-2-SF1-PROTO18-GR0-A3-TDG8-SUCCESSOR-1"
+branch = "GR-0"
+amplitude = "3"
+event = 23
+start_rational = "23/16"
+start_binary64_hex = "0x1.7000000000000p+0"
+target_rational = "3/2"
+target_binary64_hex = "0x1.8000000000000p+0"
+event_count = 1
+candidate_branches_forbidden = true
+
+[stores]
+source_path = "runs/fgc-2-sf1/proto17/calibration"
+source_disposition = "terminal_read_only"
+source_resume_forbidden = true
+destination_path = "runs/fgc-2-sf1/proto19/calibration"
+destination_initially_absent_required = true
+destination_creation_mode = "fresh_authenticated_generation_zero"
+
+[scope]
+one_common_event_only = true
+candidate_branches_forbidden = true
+locked_source_mutation_authorized = false
+locked_source_resume_authorized = false
+postexecution_destination_absence_reobservation = false
+threshold_or_retry_rule_change_authorized = false
+TDG6_or_TDG7_rule_change_authorized = false
+physical_input_change_authorized = false
+
+[claims]
+predecessor_repair_bound = true
+immutable_evidence_bound = true
+committed_execution_image_required = true
+successor_execution_authorized_by_artifact_alone = false
+source_terminal_retroactively_reclassified = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

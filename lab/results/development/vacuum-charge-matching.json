@@ -1,0 +1,90 @@
+{
+  "RN_de_Sitter_control": {
+    "bound": "Xi <= 1/4",
+    "double_horizon_identity": "f+r*f_prime=1-rQ2/r^2-lambda4*r^2",
+    "extremal_relation": "Xi=z*(1-z), z=lambda4*r_horizon^2",
+    "lapse": "-2*GM/r - lambda4*r**2/3 + 1 + rQ2/r**2",
+    "square_identity": "1/4-z*(1-z)=(z-1/2)^2"
+  },
+  "assumptions": [
+    "N identical unit-charge complex Dirac fields with a common positive scalar spectral profile",
+    "five-dimensional leading interior heat coefficients and a fixed Y-dependent common conformal warp",
+    "four-dimensional metric and gauge field independent of Y, A_Y=0; compact size held fixed in this coefficient projection",
+    "the displayed vacuum, Einstein and gauge channels do not include an independently evaluated scalar-link potential",
+    "standard local Lorentzian Einstein-Maxwell interpretation with positive A and C",
+    "nonzero integer magnetic flux q; rQ is a charge radius, not a particle Compton length",
+    "finite completion, bosonic/ghost loops, boundary action and higher-curvature terms are not silently included"
+  ],
+  "coefficient_definitions": {
+    "A_bulk": "N*Lambda^3*f3*I3/[3*(4*pi)^(5/2)]",
+    "C_bulk": "2*N*Lambda*f1*I1/[3*(4*pi)^(5/2)]",
+    "GN": "1/(16*pi*A)",
+    "V_volume": "4*N*Lambda^5*f5*I5/(4*pi)^(5/2)",
+    "gauge_coupling_squared": "1/(4*C)",
+    "lambda4": "V/(2*A)",
+    "lorentzian_action": "integral sqrt(-g)*(A*R-C*F_mn*F^mn-V)",
+    "rQ_squared": "q^2*C/(4*A)"
+  },
+  "comparison": {
+    "exact": "identities, keys, types, source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "input_hashes": {
+    "results/development/charged-sector.json": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+    "results/development/compact-interaction.json": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f",
+    "results/development/torsion-uv-map.json": "74784cddf2a95d11f4412d6fba11001494a882e53f233534d1f0d2338f3e71e8"
+  },
+  "matching_invariant": {
+    "Xi_volume": "3*I1*I5*f1*f5*q**2/(I3**2*f3**2)",
+    "copy_count_and_overall_scale_cancel": true,
+    "definition": "lambda4*rQ_squared=q^2*V*C/(8*A^2)",
+    "general_nonnegative_profile_lower_bound": "Xi_volume >= q^2",
+    "mellin_gamma_factor": "1/3",
+    "nonnegative_proper_time_weight_lower_bound": "Xi_volume >= 3*q^2",
+    "normalization_residual": "0",
+    "warp_moment_bound": "I5*I1/I3^2 >= 1"
+  },
+  "proper_time_window": {
+    "Xi_volume": "(27/5)*q^2*(1-u^5)*(1-u)/(1-u^3)^2 * I5*I1/I3^2",
+    "domain": "0<u=nu_match/Lambda<1",
+    "positive_polynomial_identity": "9*(1-u^5)*(1-u)-5*(1-u^3)^2=(1-u)^4*(4*u^2+7*u+4)"
+  },
+  "required_completion": {
+    "if_only_V_changes_from_positive_proper_time_baseline": "V_full/V_volume <= 1/(12*q^2) is necessary, not sufficient",
+    "no_finite_coefficient_assigned": true,
+    "positive_vacuum_seed_condition": "V_full*C_full/A_full^2 <= 2/q^2"
+  },
+  "schema": "NSC-VACUUM-CHARGE-MATCHING-v2",
+  "scope": {
+    "all_charged_solutions_excluded": false,
+    "boson_ghost_cancellation_computed": false,
+    "complete_quantum_measure_or_vacuum_coefficient_fixed": false,
+    "controlled_direct_MMP_matching_from_raw_positive_bulk_supported": false,
+    "full_NSC_excluded": false,
+    "new_to_world_priority_claim": false
+  },
+  "source_hashes": {
+    "docs/nsc-vacuum-charge-matching.md": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917"
+  },
+  "specified_warp_check": {
+    "A5_definition": "A_bulk/I3, including the same N Dirac copies",
+    "K_bulk": 0.023502985877453555,
+    "K_with_standard_GHY": 0.000418230858371984,
+    "NSC_boundary_action_derived": false,
+    "adaptive_K_bulk": 0.023502985877453562,
+    "adaptive_K_with_standard_GHY": 0.000418230858371984,
+    "bulk_geometric_volume_contribution": "A5*(8*B-12*J), B=[exp(3*sigma)*sigma_prime]_ends, J=integral exp(3*sigma)*sigma_prime^2 dY",
+    "bulk_ratio": "V_warp_bulk/V_volume=-(f3/f5)*K_bulk/zeta",
+    "corrected_lower_bound_for_zeta_ge_1": 2.882485070612732,
+    "corrected_lower_bound_units": "Xi_retained >= this coefficient times q^2, retaining only the stated bulk terms",
+    "maximum_window_bulk_warp_correction_factor": 0.03917164312908926,
+    "scalar_curvature_formula": "R5=exp(-2*sigma)*(R4-8*sigma_second-12*sigma_prime^2)",
+    "sigma": "-18*(Y/L_star)^2/1015",
+    "standard_GHY_is_only_a_comparison": true
+  },
+  "status": "leading-coefficient compatibility obstruction; full functional remains open"
+}

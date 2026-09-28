@@ -1,0 +1,86 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO9"
+protocol_version = 9
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO8"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v8.toml"
+predecessor_protocol_sha256 = "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab"
+diagnosis_artifact_id = "FGC-1-CAL5-PREF7"
+diagnosis_config = "configs/fgc/fgc-1-cal5-pref7.toml"
+diagnosis_config_sha256 = "02ab7bbe58d42661cbf40017acf4e7d935a82d47f3a4f5cf2ea52a03a56a1732"
+diagnosis_result = "results/fgc-1-cal5-pref7.json"
+diagnosis_result_sha256 = "66404f44dae76021eb98268e6c48e72f17058423837177c410445d20c178b6fa"
+diagnosis_checkpoint_commit = "a2c929e33ec8f2ee5464b086a57db8ed7f9277f0"
+revision_classification = "premise_only_post_calibration_resolution_ladder_revision"
+revision_reasons = ["PROTO8_campaign_terminated_normally_with_no_eligible_GR0_case", "PROTO8_common_event_ownership_repair_passed_on_evolved_amplitude_5over2_data", "CAL5_all_owned_constraint_norms_contract_monotonically", "CAL5_existing_2049_states_clear_the_unchanged_prospective_coarsest_guards", "CAL5_existing_4097_states_clear_all_unchanged_absolute_spectral_budgets", "CAL5_conditional_8193_projections_are_planning_only_not_admission", "CAL5_new_8193_constraint_and_tail_data_are_required", "CAL5_amplitude_3_phi_derivative_tail_failure_remains_public_and_unresolved"]
+revision_changes = ["calibration_resolution_ladder_from_1025_2049_4097_to_2049_4097_8193", "versioned_manifest_and_output_namespace"]
+all_unlisted_PROTO8_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_initial_data_and_holdout_cases_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+source_solver_raw_residual_kinetic_transaction_and_retry_rules_unchanged = true
+methods_CFL_dissipation_and_final_time_unchanged = true
+constraint_ownership_magnitude_and_order_rules_unchanged = true
+spectral_ownership_absolute_and_nested_tail_rules_unchanged = true
+trapped_boundary_candidate_health_and_scale_stops_unchanged = true
+eligible_calibration_amplitudes_in_frozen_order = ["5/2", "3"]
+PROTO1_through_PROTO8_preserved = true
+PROTO8_GR0_calibration_trajectory_inspected_before_revision = true
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+mechanism_question_answered_before_revision = false
+
+[replacement.resolution_ladder]
+old_point_counts = [1025, 2049, 4097]
+point_counts = [2049, 4097, 8193]
+entire_nested_ladder_shifted_one_level = true
+coarsest_grid_remains_public_convergence_witness = true
+medium_and_finest_grids_own_unchanged_absolute_spectral_budgets = true
+all_adjacent_tail_ratios_remain_required = true
+coarsest_and_finest_constraint_magnitude_guards_unchanged = true
+minimum_finest_pair_constraint_order = "3/2"
+conditional_Richardson_projection_is_not_admission = true
+new_8193_data_must_be_observed_before_any_pass = true
+no_old_state_may_be_relabelled_as_a_PROTO9_outcome = true
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro9-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto9/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto9/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+PROTO8_outputs_are_immutable_diagnostic_history_and_forbidden_as_PROTO9_outcomes = true
+
+[inheritance]
+PROTO8_common_event_constraint_ownership_inherited_unchanged = true
+PROTO8_common_event_spectral_ownership_inherited_unchanged = true
+PROTO7_general_transaction_stop_ownership_inherited_unchanged = true
+PROTO7_source_solver_raw_threshold_and_retry_budget_inherited_unchanged = true
+PROTO7_native_semidiscrete_initialization_inherited_unchanged = true
+PROTO8_stop_applicability_partition_inherited_except_resolution_ladder = true
+PROTO8_calibration_selection_and_trapped_sign_rules_inherited_unchanged = true
+PROTO8_boundary_health_scale_affine_and_outcome_rules_inherited_unchanged = true
+HLT6_runtime_evidence_remains_valid_for_unchanged_common_event_rules_only = true
+new_8193_inputs_and_runner_require_a_separate_HLT7_certificate = true
+CAL5_is_design_evidence_not_calibration_or_mechanism_evidence = true
+successor_runtime_owner = "FGC-1-HLT7-MON7"
+
+[claims]
+PROTO9_successor_runtime_implemented = false
+PROTO9_fresh_GR0_dynamic_calibration_authorized = false
+PROTO9_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

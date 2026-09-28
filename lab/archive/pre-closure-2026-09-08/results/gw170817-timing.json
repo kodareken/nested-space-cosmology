@@ -1,0 +1,42 @@
+{
+  "artifact": "GW170817_GRB170817A_published_timing_input_reconstruction",
+  "classification": "published_timing_input_reconstruction_not_raw_reanalysis",
+  "nonclaims": [
+    "Not a raw gravitational-wave strain or gamma-ray light-curve reanalysis.",
+    "Does not remove the intrinsic source-emission-lag assumption.",
+    "Does not measure a raw dimensionful local c or an inaccessible parent-domain speed.",
+    "Does not establish an external origin for dark energy or a black-hole-to-child transition."
+  ],
+  "primary_paper": {
+    "arxiv": "1710.05834v2",
+    "doi": "10.3847/2041-8213/aa920c",
+    "url": "https://arxiv.org/abs/1710.05834v2"
+  },
+  "project_version": "0.11.0",
+  "published_constraints": {
+    "filename": "published-constraints.json",
+    "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
+  },
+  "schema_version": 1,
+  "validation": {
+    "classification": "published_timing_input_reconstruction_not_raw_reanalysis",
+    "combined_input_uncertainty_seconds": 0.048041648597857256,
+    "gbm_object": "GRB170817529",
+    "gbm_trigger_met_seconds": 524666471.474598,
+    "gcn_trigger_utc_rounded": "12:41:06.47",
+    "gwosc_gps_seconds": 1187008882.4,
+    "limitation": "published timing-input reconstruction only; intrinsic source emission lag remains an assumption",
+    "lvc_notice_utc": "12:41:04.445710",
+    "published_geocentric_delay_seconds": 1.74,
+    "published_geocentric_delay_uncertainty_seconds": 0.05,
+    "published_rounded_delta_v_over_v_em_interval": [
+      -3e-15,
+      7e-16
+    ],
+    "reconstructed_delta_v_over_v_em": {
+      "lower": -3.08657516203416e-15,
+      "upper": 6.501986418812904e-16
+    },
+    "reconstructed_geocentric_delay_seconds": 1.7377740000000002
+  }
+}

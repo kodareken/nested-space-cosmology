@@ -1,0 +1,179 @@
+{
+  "artifact_id": "FGC-1-PRO16-PREF24",
+  "artifact_payload": {
+    "decision": {
+      "HLT14_implementation_and_synthetic_qualification_authorized": false,
+      "PROTO17_successor_freeze_design_authorized": true,
+      "calibration_authorized": false,
+      "candidate_execution_authorized": false,
+      "pretrajectory_authorized": false,
+      "runtime_implemented": false
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "8a1bb20ba43484685dad7eff39e300d61504b01c",
+      "records": [
+        {
+          "matches_commit_and_worktree": true,
+          "path": "configs/fgc/fgc-2-sf1-protocol-v16.toml",
+          "sha256": "3b0ab8663ed0568f03841167a2db096419b0978a71b534eefa9f9bb9a6787c75"
+        },
+        {
+          "matches_commit_and_worktree": true,
+          "path": "configs/fgc/fgc-1-pro16-frz1.toml",
+          "sha256": "5c296d158e02b40faf576be3ff3261f9ccf76f9c6f01025c489e6b0aba5aaea4"
+        },
+        {
+          "matches_commit_and_worktree": true,
+          "path": "results/fgc-1-pro16-frz1.json",
+          "sha256": "f8e14deda1638bda6e98831ae1ea80c8d1fdffb23957e183acd8b57a154ce43f"
+        },
+        {
+          "matches_commit_and_worktree": true,
+          "path": "src/recursive_horizons/fgc/evolution/protocol_v16.py",
+          "sha256": "c1755e917649a9e1d81ff5fe250847d5b9bc9e273d2c3cc6dba689119d6b0318"
+        },
+        {
+          "matches_commit_and_worktree": true,
+          "path": "results/fgc-1-hlt13-mon13.json",
+          "sha256": "de55f8d55a1db0043945d3553c7d2070703809b82c1f7141bf923c036b9df5b7"
+        },
+        {
+          "matches_commit_and_worktree": true,
+          "path": "src/recursive_horizons/fgc/evolution/proto15_runtime.py",
+          "sha256": "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+        }
+      ]
+    },
+    "static_completeness_audit": {
+      "conclusion": {
+        "HLT14_implementation_and_synthetic_qualification_authorized": false,
+        "PROTO16_exact_successor_and_genesis_derivation_not_frozen": true,
+        "PROTO16_receipt_hash_cycle_removed": true,
+        "PROTO17_successor_freeze_design_authorized": true
+      },
+      "genesis_schema": {
+        "exact_derivation_frozen": false,
+        "missing_exact_rules": [
+          "complete_initial_TDG6_ledger_mapping_bytes",
+          "canonical_state_object_descriptor_bytes",
+          "cursor_origin_construction_rule",
+          "pure_generation_zero_checkpoint_algorithm",
+          "derived_checkpoint_byte_equality_rule"
+        ],
+        "present_frozen_rules": [
+          "genesis_spec_required_fields",
+          "member_descriptor_required_fields",
+          "genesis_checkpoint_is_derivable_without_namespace_generated_value",
+          "genesis_spec_and_checkpoint_must_not_embed_genesis_spec_sha256"
+        ]
+      },
+      "receipt": {
+        "payload_sequence": 1,
+        "present_payload_fields": [
+          "protocol_artifact_id",
+          "campaign_id",
+          "previous_campaign_generation",
+          "previous_checkpoint_sha256",
+          "previous_committed_common_event_index",
+          "completed_common_event_index",
+          "completed_event_time",
+          "next_event_target_time",
+          "member_keys",
+          "prior_cursor_set_sha256",
+          "prior_ledger_set_sha256",
+          "prior_accepted_state_set_sha256"
+        ],
+        "receipt_acyclic": true,
+        "record_sha256": "d1e747074929b0f69fcdee23e8bb3da5457c526f2fd4b57027390ee872162e75",
+        "sealed_payload_fields_match": true
+      },
+      "successor_schema": {
+        "exact_derivation_frozen": false,
+        "missing_exact_rules": [
+          "complete_byte_for_byte_successor_cursor_copy_set",
+          "attempt_high_water_map_rule",
+          "cursor_high_water_map_rule",
+          "exact_checkpoint_payload_construction",
+          "exact_successor_cursor_set_byte_equality"
+        ],
+        "present_frozen_rules": [
+          "new_checkpoint_binds_derived_successor_cursor_set_after_receipt_hash_exists",
+          "new_cursor_generation_and_attempt_serial_are_prior_plus_one",
+          "new_attempt_id_uses_completed_common_event_index",
+          "new_cursor_parent_is_prior_cursor_hash",
+          "new_cursor_journal_tip_is_commit_record_hash"
+        ]
+      }
+    }
+  },
+  "classification": "independent_PROTO16_hash_cycle_and_under_specification_diagnosis_without_runtime_or_trajectory",
+  "derivation_document": "docs/fgc-pro16-pref24.md",
+  "derivation_document_sha256": "4d31bbae1ee24ffc2566a4c64ddbbbfa5c2b5d7062041e56a984b37fd0d12482",
+  "gate_status": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "HLT14_implementation_and_synthetic_qualification_authorized": false,
+    "PROTO16_calibration_completed": false,
+    "PROTO16_exact_successor_and_genesis_derivation_not_frozen": true,
+    "PROTO16_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO16_independent_transition_theorem_bound": false,
+    "PROTO16_output_namespace_created": false,
+    "PROTO16_pretrajectory_runtime_authorized": false,
+    "PROTO16_receipt_hash_cycle_removed": true,
+    "PROTO16_successor_runtime_implemented": false,
+    "PROTO16_trajectory_read": false,
+    "PROTO17_successor_freeze_design_authorized": true,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro16_pref24.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro16_pref24.py": "2a652bff46876b1eaaba6a8f914d73f686807669dee037f1896c36494a3e64f0",
+    "src/recursive_horizons/fgc/evolution/proto16_transition_theorem.py": "3daa3fb4ebd08ffe1797946a313095f295d6e91599fda70f52552666afcfca51"
+  },
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "HLT14_implementation_and_synthetic_qualification_authorized": false,
+    "PROTO16_calibration_completed": false,
+    "PROTO16_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO16_independent_transition_theorem_bound": false,
+    "PROTO16_output_namespace_created": false,
+    "PROTO16_pretrajectory_runtime_authorized": false,
+    "PROTO16_successor_runtime_implemented": false,
+    "PROTO16_trajectory_read": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "mechanism_question_answered": false,
+    "raw_history_or_namespace_opened": false,
+    "role": "independent_static_PROTO16_receipt_and_schema_completeness_audit",
+    "runtime_or_runner_implemented": false,
+    "target_protocol": "FGC-2-SF1-PROTO16",
+    "trajectory_read": false
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro16-pref24.toml": "c8d983513d123b9d04b8a0574bfea1ce2184f9c9cd1c853a156830cb60f9dc10"
+  }
+}

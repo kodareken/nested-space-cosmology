@@ -1,0 +1,497 @@
+{
+  "artifact_id": "NSC-12-WEYL-COCYCLE",
+  "classical_state_control": {
+    "Hamiltonian_difference_norm": 2.873741046359687e-15,
+    "classical_history_amplitude": {
+      "imag": -5.442694905877233e-17,
+      "real": 0.9999999999999964
+    },
+    "covariance_difference_norm": 7.712338949543481e-15,
+    "raw_action_change": 1.2183746172013752,
+    "same_classical_propagation_does_not_imply_measure_invariance": true,
+    "time": 0.7,
+    "unitary_difference_norm": 4.044174860340936e-15
+  },
+  "classification": "computed_same_prescription_Weyl_anomaly_integrand_and_conditional_compensator_lift",
+  "composition": {
+    "combined_path": 1.3312787512800957,
+    "first_path": 1.218374617201271,
+    "residual": 0.0,
+    "second_path": 0.11290413407882471
+  },
+  "conditional_lift": {
+    "Ward_residual": 4.440892098500626e-16,
+    "base_energy": 8.511879781109004,
+    "compensating_action": 1.2183746172013752,
+    "energy_difference": 1.0658141036401503e-14,
+    "gauge_interpretation_is_conditional": true,
+    "gauge_shifted_energy": 9.73025439831039,
+    "lift_is_a_stationary_solution": false,
+    "lifted_energy": 9.730254398310379,
+    "metric_gradient_norm": 5.259096944518222,
+    "phi_gradient_norm": 10.061837003863037
+  },
+  "constant_Weyl_and_profile_weights": {
+    "angular_max": 20,
+    "cutoff": 2.0,
+    "direct_cocycle": 3.3462097004420492,
+    "finite_cutoff_remainder": 0.00010734652119559485,
+    "frequency_points": 64,
+    "hard_projector_a0_exponential_denominator": 8,
+    "local_heat_approximation": 3.3461023539208536,
+    "operator_scaling_identity_residual": 5.329070518200751e-15,
+    "phi": 0.08,
+    "points": 32,
+    "proper_time_a0_exponential_denominator": 4,
+    "raised_cutoff_energy": 11.874159582427875,
+    "scaled_metric_energy": 11.87415958242788
+  },
+  "conventions": {
+    "Weyl": "N,q,r multiply by exp(phi); M,Lambda held fixed, no Omega or zeta identification",
+    "angular_counting": "representative2N spinor block times4kappa",
+    "conditional_lift": "E_hat[g,phi]=E[g_phi]; phi gauge interpretation conditional, no measure selected",
+    "discretization": "ratio form is an explicit finite representation preserving common Weyl covariance; prior records unchanged",
+    "geometry": "smooth R2 axial circle, a=1, static positive N,q,r, AP symmetric Fourier grids",
+    "operator": "H=rho2{N/q,P}/2+rho1*N*kappa/r; D=N^-1/2 beta(omega+iH)N^-1/2",
+    "regulator": "four-dimensional proper-time modulus only; no unregulated rank integral or separate heat action",
+    "units": "hbar=c=a=1; energy and cocycle per coordinate time in inverse a"
+  },
+  "development_settings": {
+    "angular_max": 6,
+    "cutoff": 2.0,
+    "frequency_points": 48,
+    "lapse": [
+      0.9231163463866358,
+      0.9486672641704601,
+      0.9737812961484865,
+      0.9906425845055475,
+      1.0,
+      1.009445803805338,
+      1.026924632825886,
+      1.0541103691128486,
+      1.0832870676749586,
+      1.0997947440077847,
+      1.0904261056822004,
+      1.0531944490026857,
+      1.0,
+      0.9494922812657647,
+      0.9170726881803446,
+      0.9092605738011434
+    ],
+    "metric_owner": "nsc_covariant_operator.smooth_metric(points=16,general=True)",
+    "points": 16,
+    "radial_scale": [
+      0.9801986733067553,
+      0.9635767454093923,
+      0.958460999069284,
+      0.959550209269179,
+      0.9607894391523232,
+      0.959550209269179,
+      0.958460999069284,
+      0.9635767454093923,
+      0.9801986733067553,
+      1.0088578711183804,
+      1.0433392709469165,
+      1.0720523630392793,
+      1.0832870676749586,
+      1.0720523630392793,
+      1.0433392709469165,
+      1.0088578711183804
+    ],
+    "sphere_radius": [
+      1.6189931866062328,
+      1.599824368908815,
+      1.5439328474352303,
+      1.456283274558576,
+      1.345574029601754,
+      1.2248991642246945,
+      1.1123894555810685,
+      1.030388726123746,
+      1.0,
+      1.030388726123746,
+      1.1123894555810685,
+      1.2248991642246945,
+      1.345574029601754,
+      1.456283274558576,
+      1.5439328474352303,
+      1.599824368908815
+    ]
+  },
+  "direct_cocycle": 1.2183746172013752,
+  "discretization_refinement": [
+    {
+      "energy_difference": -3.247108253390252e-07,
+      "full_H_difference_norm": 0.036211269782765794,
+      "new_energy": 9.730253279395424,
+      "points": 12,
+      "prior_energy": 9.730253604106249,
+      "resolved_H_difference_norm": 4.9825466558982844e-08,
+      "resolved_energy_window": 3.0,
+      "resolved_rank": 8
+    },
+    {
+      "energy_difference": -2.6999380509096227e-10,
+      "full_H_difference_norm": 0.048281693072831464,
+      "new_energy": 9.730254398310379,
+      "points": 16,
+      "prior_energy": 9.730254398580373,
+      "resolved_H_difference_norm": 2.984300123344552e-11,
+      "resolved_energy_window": 3.0,
+      "resolved_rank": 8
+    },
+    {
+      "energy_difference": 1.0658141036401503e-14,
+      "full_H_difference_norm": 0.07242253960924659,
+      "new_energy": 9.730254399283574,
+      "points": 24,
+      "prior_energy": 9.730254399283563,
+      "resolved_H_difference_norm": 1.0999605980193656e-15,
+      "resolved_energy_window": 3.0,
+      "resolved_rank": 8
+    },
+    {
+      "energy_difference": -8.881784197001252e-15,
+      "full_H_difference_norm": 0.0965633861456616,
+      "new_energy": 9.730254399283618,
+      "points": 32,
+      "prior_energy": 9.730254399283627,
+      "resolved_H_difference_norm": 1.0425027115967353e-15,
+      "resolved_energy_window": 3.0,
+      "resolved_rank": 8
+    }
+  ],
+  "exact_continuum_identities": {
+    "angular_ratio": "0",
+    "principal_ratio": "0",
+    "radial_connection": "0"
+  },
+  "gate": {
+    "conditional_gauge_lift_verified": true,
+    "covariant_source_local_Ward": true,
+    "cutoff6_spatial_refinement": true,
+    "finite_invariant_shape_equation_remains": true,
+    "heat_path_cocycle_composes": true,
+    "heat_path_matches_action": true,
+    "high_cutoff_quadratures_resolved": true,
+    "local_anomaly_approached": true,
+    "metric_gradient_and_hessian_agree": true,
+    "normalization_and_compensator_square_closes": true,
+    "ratio_discretization_preserves_Weyl": true,
+    "relative_phase_preserved": true,
+    "same_classical_history": true,
+    "same_continuum_as_prior_scheme": true
+  },
+  "high_cutoff_angular_frequency_controls": {
+    "cutoff": 8.0,
+    "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+    "points": 64,
+    "rows": [
+      {
+        "angular_max": 65,
+        "frequency_points": 96,
+        "subtracted_cocycle": -0.0027925626181968255
+      },
+      {
+        "angular_max": 65,
+        "frequency_points": 128,
+        "subtracted_cocycle": -0.002792562565446133
+      },
+      {
+        "angular_max": 73,
+        "frequency_points": 128,
+        "subtracted_cocycle": -0.0027925623280680156
+      }
+    ]
+  },
+  "independent_differences": [
+    {
+      "first": 5.9354251711492,
+      "first_error": 3.402071925506789e-06,
+      "second": 3.6022095567522783,
+      "second_error": -5.209427258456856e-07,
+      "step": 0.004
+    },
+    {
+      "first": 5.935422619594455,
+      "first_error": 8.505171802397626e-07,
+      "second": 3.602209953434965,
+      "second_error": -1.2426003914711714e-07,
+      "step": 0.002
+    }
+  ],
+  "independent_heat_path": [
+    {
+      "heat_integral": 1.218374617201992,
+      "minus_direct": 6.16839912481737e-13,
+      "points": 4
+    },
+    {
+      "heat_integral": 1.218374617201271,
+      "minus_direct": -1.0413891970983968e-13,
+      "points": 8
+    }
+  ],
+  "input_hashes": {
+    "results/nsc-10-influence.json": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1",
+    "results/nsc-10-measure-normalization.json": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f",
+    "results/nsc-11-response-matching.json": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4",
+    "results/nsc-12-normalization-flow.json": "e36334450f31935f1435a625ac5619799063def0b92406462567a2a0b750a717",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "local_Weyl_residuals": [
+    2.220446049250313e-15,
+    1.7763568394002505e-15,
+    2.220446049250313e-15
+  ],
+  "metric_derivative_settings": {
+    "angular_max": 4,
+    "cutoff": 2.0,
+    "frequency_points": 48,
+    "log_metric_directions_N_q_r": [
+      [
+        -0.3,
+        -0.2598076211353316,
+        -0.14999999999999994,
+        1.8369701987210297e-17,
+        0.15000000000000002,
+        0.2598076211353316,
+        0.3,
+        0.2598076211353316,
+        0.15000000000000002,
+        1.8369701987210297e-17,
+        -0.14999999999999994,
+        -0.2598076211353316
+      ],
+      [
+        -2.4492935982947065e-17,
+        -0.09999999999999999,
+        -0.17320508075688776,
+        -0.2,
+        -0.17320508075688773,
+        -0.09999999999999999,
+        0.0,
+        0.09999999999999999,
+        0.17320508075688773,
+        0.2,
+        0.17320508075688776,
+        0.09999999999999999
+      ],
+      [
+        0.5,
+        0.45000000000000007,
+        0.35,
+        0.30000000000000004,
+        0.35000000000000003,
+        0.45000000000000007,
+        0.5,
+        0.45000000000000007,
+        0.35000000000000003,
+        0.30000000000000004,
+        0.35,
+        0.45000000000000007
+      ]
+    ],
+    "points": 12
+  },
+  "metric_derivatives": {
+    "first": 5.935421769077275,
+    "independent_spectral_gradient": 5.935421769077294,
+    "second": 3.602210077695004
+  },
+  "nonclaims": {
+    "finite_invariant_coefficients_selected": false,
+    "fixed_background_average_regularized": false,
+    "full_in_in_compensator_or_relative_scale_action": false,
+    "full_scale_field_measure_derived": false,
+    "new_to_world_Weyl_anomaly_mechanism": false,
+    "physical_Weyl_gauge_status_proved": false,
+    "physical_mass_or_Omega_derived": false,
+    "rigorous_continuum_error_bound": false,
+    "self_sourced_geometry": false
+  },
+  "normalization_Weyl_square": {
+    "derived_finite_increment_difference": -3.572021257796378e-11,
+    "initial_coefficients": null,
+    "matched_square_residual": 5.470884162361855e-16,
+    "metric_gradient_square_max_by_field": [
+      1.5714262655531826e-16,
+      1.5105997808888293e-16,
+      2.0787981966802546e-16
+    ],
+    "normalization_ratio": 2.3,
+    "phi_gradient_square_max": 2.5911620105130827e-16,
+    "ratio_identified_with_Omega": false,
+    "subtracted_cocycle_after": -0.0017834965660128432,
+    "subtracted_cocycle_before": -0.001783496601733603
+  },
+  "phi_profile": [
+    -0.030000000000000006,
+    -0.024671567275790084,
+    -0.009497474683058324,
+    0.013212159734443719,
+    0.04000000000000001,
+    0.06678784026555629,
+    0.08949747468305833,
+    0.10467156727579008,
+    0.11000000000000001,
+    0.10467156727579008,
+    0.08949747468305833,
+    0.06678784026555629,
+    0.04000000000000001,
+    0.013212159734443719,
+    -0.009497474683058324,
+    -0.024671567275790084
+  ],
+  "raw_actions": [
+    8.511879781109004,
+    9.730254398310379,
+    9.843158532389223
+  ],
+  "relative_phase": [
+    {
+      "kappa": 1,
+      "negative_count_after": 16,
+      "negative_count_before": 16,
+      "relative_unwrapped_phase": 0.0,
+      "smallest_absolute_eigenvalue": 1.2062060725444592
+    },
+    {
+      "kappa": 2,
+      "negative_count_after": 16,
+      "negative_count_before": 16,
+      "relative_unwrapped_phase": 0.0,
+      "smallest_absolute_eigenvalue": 1.69593104769298
+    }
+  ],
+  "remaining_Weyl_invariant_term": {
+    "C2_Weyl_difference": 2.842170943040401e-14,
+    "C2_energy": 82.00602287717284,
+    "C2_radius_shape_response": -69.42484935663876,
+    "coefficient_selected": false
+  },
+  "schema": "nsc-weyl-cocycle-v1",
+  "sigma_profile": [
+    -0.020000000000000004,
+    -0.025622638594683646,
+    -0.021213203435596423,
+    -0.013574250351607647,
+    -0.009999999999999998,
+    -0.013574250351607652,
+    -0.021213203435596423,
+    -0.025622638594683646,
+    -0.02,
+    -0.002661632652778259,
+    0.021213203435596423,
+    0.041858521599069554,
+    0.05,
+    0.041858521599069554,
+    0.02121320343559643,
+    -0.0026616326527782504
+  ],
+  "source_hashes": {
+    "docs/nsc-weyl-cocycle.md": "c235fd2979d5cd7d2ad89c74611876174dbaab7cdec566f5884d2559e41619e4",
+    "scripts/check_nsc_weyl_cocycle.py": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_normalization_flow.py": "c866f133a804ff7f5d4c6c6f276f111329b4f1c6a6cfd5a34ad37c457df7147c",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_weyl_cocycle.py": "4d6a508aa80044318b2e970838fbda759fbe647a9a75b23d92453cabc1c5509b",
+    "tests/test_nsc_weyl_cocycle.py": "e03f36f9adac5204a0ef5c99b20fb99b7f9a5e14f2ae9a7714aed37e9eda50ff"
+  },
+  "subtracted_anomaly_limit": [
+    {
+      "angular_max": 49,
+      "cutoff": 6.0,
+      "difference_from_anomaly_limit": -0.5928143391188425,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041480653544764,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 16,
+      "raw_cocycle": 141.03632877959308,
+      "resolved_spatial_control": false,
+      "subtracted_cocycle": -0.595618487184197,
+      "subtraction_difference": 141.63194726677727
+    },
+    {
+      "angular_max": 49,
+      "cutoff": 6.0,
+      "difference_from_anomaly_limit": 9.426192964446384e-06,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041479413514654,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 32,
+      "raw_cocycle": 141.62915254510483,
+      "resolved_spatial_control": false,
+      "subtracted_cocycle": -0.002794721748387019,
+      "subtraction_difference": 141.63194726685322
+    },
+    {
+      "angular_max": 16,
+      "cutoff": 2.0,
+      "difference_from_anomaly_limit": 0.00015635712764754464,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041479413514654,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 48,
+      "raw_cocycle": 1.7250922807549482,
+      "resolved_spatial_control": true,
+      "subtracted_cocycle": -0.0026477908137039208,
+      "subtraction_difference": 1.7277400715686522
+    },
+    {
+      "angular_max": 32,
+      "cutoff": 4.0,
+      "difference_from_anomaly_limit": 4.467118016697816e-05,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041479413514654,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 48,
+      "raw_cocycle": 27.921915246636047,
+      "resolved_spatial_control": true,
+      "subtracted_cocycle": -0.0027594767611844873,
+      "subtraction_difference": 27.92467472339723
+    },
+    {
+      "angular_max": 49,
+      "cutoff": 6.0,
+      "difference_from_anomaly_limit": 2.0397697558172806e-05,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041479413514654,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 48,
+      "raw_cocycle": 141.62916351660965,
+      "resolved_spatial_control": true,
+      "subtracted_cocycle": -0.0027837502437932926,
+      "subtraction_difference": 141.63194726685344
+    },
+    {
+      "angular_max": 49,
+      "cutoff": 6.0,
+      "difference_from_anomaly_limit": 2.0397701196152914e-05,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041479413514667,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 64,
+      "raw_cocycle": 141.62916351661306,
+      "resolved_spatial_control": true,
+      "subtracted_cocycle": -0.002783750240155314,
+      "subtraction_difference": 141.63194726685322
+    },
+    {
+      "angular_max": 65,
+      "cutoff": 8.0,
+      "difference_from_anomaly_limit": 1.1585323154641222e-05,
+      "frequency_points": 96,
+      "local_anomaly_integral": -0.0028041479413514667,
+      "phi_formula": "0.05+0.04*cos(2*pi*x/L)",
+      "points": 64,
+      "raw_cocycle": 447.9153373249319,
+      "resolved_spatial_control": true,
+      "subtracted_cocycle": -0.0027925626181968255,
+      "subtraction_difference": 447.9181298875501
+    }
+  ],
+  "terminal": true
+}

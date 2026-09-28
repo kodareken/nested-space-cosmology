@@ -1,0 +1,203 @@
+{
+  "artifact_id": "FGC-1-TDG1-FRZ1",
+  "artifact_payload": {
+    "claim_boundary": {
+      "candidate_branch_opened": false,
+      "historical_PROTO13_result_reclassified": false,
+      "historical_threshold_changed": false,
+      "new_trajectory_authorized": false,
+      "raw_terminal_histories_diagnosed": false,
+      "replacement_temporal_admission_defined": false
+    },
+    "frozen_diagnostic": {
+      "comparator_method": "SSPRK3",
+      "comparator_point_counts": [
+        4097,
+        8193,
+        16385
+      ],
+      "cross_resolution_histories_use_common_proper_time_intersection": true,
+      "cutoff": "16",
+      "declared_absolute_FFT_amplitude_floor": "1e-30",
+      "diagnosis_module_sha256": "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44",
+      "field_names": [
+        "alpha_minus_1",
+        "shift_over_r",
+        "lambda_minus_1",
+        "R_over_r_minus_1",
+        "phi_over_Lambda",
+        "chi_over_Lambda"
+      ],
+      "fixed_resampling_sensitivity_counts": [
+        16,
+        32,
+        64
+      ],
+      "fixed_signal_views": [
+        "inherited_compact",
+        "rectangular",
+        "mean_centered_compact",
+        "affine_detrended_compact"
+      ],
+      "historical_maximum_nested_tail_ratio": "1/4",
+      "historical_threshold_must_not_change": true,
+      "minimum_raw_history_difference_order": "3/2",
+      "primary_method": "RK4",
+      "primary_point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "raw_history_difference_order_is_diagnostic_not_replacement_admission": true,
+      "resampling_sensitivity_is_not_independent_temporal_convergence_evidence": true,
+      "round_trip_interpolation_debit_must_remain_public": true,
+      "sample_count": 64,
+      "taper_fraction": "1/8",
+      "tracer_count": 48
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "fa56acf4d8c6297eb6f9b5dc8afdb5e2b5ce9020",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "source_checkpoint_history_arrays_loaded": false,
+      "source_checkpoint_resumed": false,
+      "source_checkpoint_sha256": "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97",
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-cal10-pref15.toml": "3661ba8cb6b933ab47daf8897c577b4631544605175dbe15d0c084542cf6c9eb",
+        "results/fgc-1-cal10-pref15.json": "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18",
+        "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545"
+      }
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "historical_threshold_mutation_rejected": true,
+      "raw_history_read_promotion_rejected": true,
+      "replacement_gate_promotion_rejected": true,
+      "source_checkpoint_hash_mutation_rejected": true,
+      "synthetic_control_removal_rejected": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG1_actual_history_execution_authorized": true,
+      "TDG1_actual_history_execution_completed": false,
+      "TDG1_diagnostic_contract_frozen": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_gate_design_authorized": false
+    },
+    "synthetic_preflight": {
+      "controls": {
+        "affine": {
+          "admission_passed": false,
+          "all_field_and_derivative_ratios_equal": 1.0,
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": false,
+          "ratio_identity_verified": true
+        },
+        "amplitude_scaled_low_sine": {
+          "admission_passed": false,
+          "all_field_and_derivative_ratios_equal": 1.0,
+          "amplitude_error_contracts_by_four_per_resolution": true,
+          "amplitude_sequence": [
+            1.0,
+            0.25,
+            0.0625
+          ],
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": false,
+          "power_error_contracts_by_sixteen_per_resolution": true,
+          "ratio_identity_verified": true
+        },
+        "constant": {
+          "admission_passed": false,
+          "all_field_and_derivative_ratios_equal": 1.0,
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": false,
+          "ratio_identity_verified": true
+        },
+        "low_sine": {
+          "admission_passed": false,
+          "all_field_and_derivative_ratios_equal": 1.0,
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": false,
+          "ratio_identity_verified": true
+        },
+        "smooth_pulse": {
+          "admission_passed": false,
+          "all_field_and_derivative_ratios_equal": 1.0,
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": false,
+          "ratio_identity_verified": true
+        },
+        "zero": {
+          "admission_passed": true,
+          "all_field_and_derivative_ratios_equal": 0.0,
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "ratio_identity_verified": true
+        }
+      },
+      "historical_threshold_unchanged": 0.25,
+      "mathematical_consequence": "normalized_raw_temporal_tail_fractions_are_not_a_general_spatial_convergence_observable_for_nonzero_continuum_histories",
+      "structural_counterexample_confirmed": true
+    }
+  },
+  "classification": "prospective_TDG1_temporal_gate_diagnosis_freeze",
+  "derivation_document": "docs/fgc-tdg1-frz1.md",
+  "derivation_document_sha256": "b95060e0423fa256ae236fb8006f7f71968167a0f0c5049f1c79347353c2aeaa",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG1_diagnostic_contract_frozen": true,
+    "TDG1_synthetic_counterexample_confirmed": true,
+    "TDG1_terminal_histories_diagnosed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "inherited_normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg1_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg1_frz1.py": "00256721f72d696360407aab161f057ef0dbbc7a4795f87f8b63edd6a1ab8b2b",
+    "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545",
+    "src/recursive_horizons/fgc/evolution/tdg1_temporal_diagnosis.py": "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG1_terminal_histories_diagnosed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "inherited_normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg1-frz1.toml": "4a1f41a40fedb4aecc2adafd79d90a5b96c81d9aaf5001bac1bcfd243d92e4e3"
+  }
+}

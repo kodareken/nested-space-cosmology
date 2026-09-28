@@ -1,0 +1,408 @@
+{
+  "local_cross": {
+    "angular_sign_norm_symmetry": "c_n(-lambda)=(-1)^n conjugate(c_n(lambda))",
+    "c1": "L+i*m",
+    "constant_coefficient_exact": 0.0,
+    "cross_numerator_coefficient_upper": [
+      7.911435284136592,
+      110.66196458675765,
+      1961.7451086071924,
+      28660.88874691807,
+      464715.7316465953,
+      7188496.278021128,
+      118569867.14306717,
+      1965993797.3775609,
+      34092621936.676743,
+      607943167364.6486,
+      11225202822645.707,
+      214918321430457.7,
+      4242409751153511.5,
+      8.6979742823911e+16,
+      1.8364518317556567e+18,
+      4.023838655127466e+19,
+      9.080801789612493e+20,
+      2.1235523288927283e+22,
+      5.1168391448502324e+23,
+      1.275671214632863e+25,
+      3.2775597664201416e+26,
+      8.700416570078352e+27,
+      2.3796274645964595e+29,
+      3.400871282208205e+30,
+      3.5107972726099746e+30,
+      1.872672477899847e+31,
+      1.6686823285635902e+32,
+      1.4195802117177474e+33,
+      1.513456864197075e+34,
+      6.76106186656422e+35,
+      1.867725198344965e+36,
+      1.961914607983637e+38,
+      3.076239849205152e+38,
+      5.744842184059193e+40,
+      6.555294105075385e+40,
+      1.8640930828737595e+43,
+      1.6935068807027522e+43,
+      6.874914971784335e+45,
+      5.003244021238345e+45,
+      2.895587362238131e+48,
+      1.6238990086867316e+48,
+      1.3914978063522119e+51,
+      5.584211519360476e+50,
+      7.614737391279668e+53,
+      1.9162584478937645e+53,
+      4.734683459041734e+56,
+      5.505379257378545e+55,
+      3.3360615413816334e+59
+    ],
+    "first_inverse_power": 1,
+    "last_inverse_power": 48,
+    "normalization_denominator_lower": 1.0,
+    "physical_Riccati_order": 24
+  },
+  "provenance": {
+    "channel": {
+      "angular_eigenvalue": 10.816653826391969,
+      "angular_level": 9,
+      "compact_level": 2,
+      "compact_mass": 3.141592653589793,
+      "copy_count": 2,
+      "degeneracy": 44,
+      "factor": 1.1569010040770848,
+      "family": 2,
+      "index": 32,
+      "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+      "sample_count": 64,
+      "sample_offset": 1840
+    },
+    "config": {
+      "angular_levels": 9,
+      "compact_levels": [
+        1,
+        2
+      ],
+      "cutoff": 3.973074368754331,
+      "evolution_steps": 6000,
+      "frequency_max": 40.0,
+      "frequency_points": 8,
+      "horizon_offset": 1e-10,
+      "horizon_rho": 1.9006916054701435,
+      "magnetic_flux": 4,
+      "omega": 3.973074368754331,
+      "outer_floor": 60.0,
+      "scattering_tolerance": 1e-09,
+      "surface_gravity": 0.23832579963401956
+    },
+    "input_payloads": [
+      {
+        "bytes": 92552,
+        "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+        "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+      },
+      {
+        "bytes": 14789190,
+        "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+        "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+      },
+      {
+        "bytes": 32367990,
+        "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+        "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+      },
+      {
+        "bytes": 428603,
+        "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+        "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+      },
+      {
+        "bytes": 849780,
+        "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+        "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+      }
+    ],
+    "low": [
+      {
+        "interval": [
+          32.0,
+          40.0
+        ],
+        "measure_residual": 0.0,
+        "panel": "low_ref/32_1",
+        "rows": 32,
+        "sign": 1
+      },
+      {
+        "interval": [
+          32.0,
+          40.0
+        ],
+        "measure_residual": 0.0,
+        "panel": "low_ref/32_-1",
+        "rows": 32,
+        "sign": -1
+      }
+    ],
+    "low_measure_residual": 0.0,
+    "middle": {
+      "group": 32,
+      "left": 40.0,
+      "right": 320.0,
+      "signed_selected_panels": [
+        {
+          "endpoint_measure_residual": 0.0,
+          "left": 40.0,
+          "panel": "mid_ref/32_1",
+          "right": 320.0,
+          "rows": 840,
+          "sign": 1
+        },
+        {
+          "endpoint_measure_residual": 0.0,
+          "left": 40.0,
+          "panel": "mid_ref/32_-1",
+          "right": 320.0,
+          "rows": 840,
+          "sign": -1
+        }
+      ]
+    }
+  },
+  "radial": {
+    "bound_method": "frozen trimmed24 jets, centered degree4 interval remainder, fixed128 cells",
+    "centered_remainder_depth": 4,
+    "directed_precision": 40,
+    "endpoint_weight_upper": 2.7492708411573745,
+    "finite_offset_archive_accuracy_certified": false,
+    "finite_offset_initial_projector_term_bound": null,
+    "first_inverse_power": 24,
+    "group": 32,
+    "horizon_enclosure": [
+      "1.900691605470150253001825084782803569673490976616944681",
+      "1.900691605470150253001825084782803586217103227677498178"
+    ],
+    "initial_projector_difference": 0.0,
+    "initial_scope": "same declared affine-horizon vacuum; explicit numerical order24 only",
+    "intervals": 128,
+    "last_inverse_power": 48,
+    "lower": 320.0,
+    "per_sign": [
+      {
+        "coefficient_integral_upper": [
+          3.7860999833338465e+29,
+          1.4607674879530704e+30,
+          4.77118260551152e+30,
+          9.29740121260144e+31,
+          8.135968315648766e+32,
+          1.371931588359973e+34,
+          1.773745426288457e+35,
+          2.9360269229262045e+36,
+          4.588780883848036e+37,
+          7.898571494770675e+38,
+          1.3697460844023514e+40,
+          2.4872279997817044e+41,
+          4.6153594637269234e+42,
+          8.813463402553465e+43,
+          1.7190656503621573e+45,
+          3.4225452169581956e+46,
+          6.928160944342896e+47,
+          1.4217125712233077e+49,
+          2.9447383127004606e+50,
+          6.122837898806638e+51,
+          1.2676662819041073e+53,
+          2.579665943562751e+54,
+          5.037564638372382e+55,
+          8.950903460130866e+56,
+          1.22113493243853e+58
+        ],
+        "natural_coefficient_integral_upper": [
+          1.3578319415767237e+30,
+          6.732971753126747e+30,
+          1.906619581237685e+31,
+          4.075628589803173e+32,
+          3.319295089303392e+33,
+          5.889929922326035e+34,
+          7.469177792043239e+35,
+          1.2824904438125522e+37,
+          2.035045332876081e+38,
+          3.6448044008985075e+39,
+          6.5630869270887245e+40,
+          1.2528252714922743e+42,
+          2.4536165396378366e+43,
+          4.984824311865695e+44,
+          1.0398837040936239e+46,
+          2.22862167122245e+47,
+          4.881984478589291e+48,
+          1.0906848648948357e+50,
+          2.4701959866845872e+51,
+          5.649172517240746e+52,
+          1.2912583938306007e+54,
+          2.918642216532872e+55,
+          6.348795939178892e+56,
+          1.2650793208940197e+58,
+          1.9352808150774906e+59
+        ],
+        "sign": 1
+      },
+      {
+        "coefficient_integral_upper": [
+          3.7860999833338465e+29,
+          1.4607674879530704e+30,
+          4.77118260551152e+30,
+          9.29740121260144e+31,
+          8.135968315648766e+32,
+          1.371931588359973e+34,
+          1.773745426288457e+35,
+          2.9360269229262045e+36,
+          4.588780883848036e+37,
+          7.898571494770675e+38,
+          1.3697460844023514e+40,
+          2.4872279997817044e+41,
+          4.6153594637269234e+42,
+          8.813463402553465e+43,
+          1.7190656503621573e+45,
+          3.4225452169581956e+46,
+          6.928160944342896e+47,
+          1.4217125712233077e+49,
+          2.9447383127004606e+50,
+          6.122837898806638e+51,
+          1.2676662819041073e+53,
+          2.579665943562751e+54,
+          5.037564638372382e+55,
+          8.950903460130866e+56,
+          1.22113493243853e+58
+        ],
+        "natural_coefficient_integral_upper": [
+          1.3578319415767237e+30,
+          6.732971753126747e+30,
+          1.906619581237685e+31,
+          4.075628589803173e+32,
+          3.319295089303392e+33,
+          5.889929922326035e+34,
+          7.469177792043239e+35,
+          1.2824904438125522e+37,
+          2.035045332876081e+38,
+          3.6448044008985075e+39,
+          6.5630869270887245e+40,
+          1.2528252714922743e+42,
+          2.4536165396378366e+43,
+          4.984824311865695e+44,
+          1.0398837040936239e+46,
+          2.22862167122245e+47,
+          4.881984478589291e+48,
+          1.0906848648948357e+50,
+          2.4701959866845872e+51,
+          5.649172517240746e+52,
+          1.2912583938306007e+54,
+          2.918642216532872e+55,
+          6.348795939178892e+56,
+          1.2650793208940197e+58,
+          1.9352808150774906e+59
+        ],
+        "sign": -1
+      }
+    ],
+    "physical_Riccati_order": 24,
+    "physical_state_or_action_changed": false,
+    "source_correction_applied": false,
+    "source_correction_required": true
+  },
+  "radial_preparation_passes": 1,
+  "signature": {
+    "docs/nsc-incoming-group32-order24-bound.md": "646d4e9c86bb9953726be76cfba9326f82405086082376d1aaee7896eaf1b043",
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "scripts/derive_nsc_incoming_group32_order24_bound.py": "037eea3e1c8c522b04b445fd39210fc2b9103ceecb117702532f985ceb991112",
+    "src/recursive_horizons/nsc_incoming_centered_order24.py": "aafc22426efee88a83d9f2a9c26f064a2a32fb9907b1ba67f2e59121f1178396",
+    "src/recursive_horizons/nsc_incoming_defect_taylor_bound.py": "37ebb921300a7d561ba31506f62d5498129b4dd9d62472974c60f31b4cee790a",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_retained_order24_bound.py": "026749501b84c7e308c04a7f08e7ca6e54d98a9f843c23bec609bd25ca34bca7",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "tests/test_nsc_incoming_group32_order24_bound.py": "33830c315e8ed52a9381f6b0ee484e10901ce0fe1e21debc7895b2bc02b9aa33"
+  },
+  "windows": {
+    "combined": {
+      "conditional_constraint_action_error_upper": [
+        2.1336305732738716e-13,
+        1.6425601865381046e-90
+      ],
+      "energy_interval": [
+        32.0,
+        320.0
+      ],
+      "explicit_matching_order24_source_correction_required": true,
+      "thermal_stress_upper": [
+        1.1165541070563332e-91,
+        9.174116255711781e-92,
+        9.174116255711781e-92,
+        9.210438740841278e-93
+      ],
+      "vacuum_energy": {
+        "density_error_upper": 1.0058211641808096e-14,
+        "lapse_action_error_upper": 2.1336305732738713e-13,
+        "linear_transverse_density_upper": 1.0058211641780568e-14,
+        "physical_Riccati_order": 24,
+        "quadratic_longitudinal_density_upper": 2.7528120732305374e-26,
+        "thermal_quadrature_low_band_errors_included": false,
+        "vacuum_current_error": 0.0
+      },
+      "within_component_tolerance": true
+    },
+    "low": {
+      "conditional_constraint_action_error_upper": [
+        2.1242263967602161e-13,
+        1.6425601865381046e-90
+      ],
+      "energy_interval": [
+        32.0,
+        40.0
+      ],
+      "explicit_matching_order24_source_correction_required": true,
+      "thermal_stress_upper": [
+        1.1165541070563332e-91,
+        9.174116255711781e-92,
+        9.174116255711781e-92,
+        9.210438740841278e-93
+      ],
+      "vacuum_energy": {
+        "density_error_upper": 1.0013879132293045e-14,
+        "lapse_action_error_upper": 2.124226396760216e-13,
+        "linear_transverse_density_upper": 1.0013879132265519e-14,
+        "physical_Riccati_order": 24,
+        "quadratic_longitudinal_density_upper": 2.752721843104105e-26,
+        "thermal_quadrature_low_band_errors_included": false,
+        "vacuum_current_error": 0.0
+      },
+      "within_component_tolerance": true
+    },
+    "middle": {
+      "conditional_constraint_action_error_upper": [
+        9.404176513655352e-16,
+        1.809199733754859e-113
+      ],
+      "energy_interval": [
+        40.0,
+        320.0
+      ],
+      "explicit_matching_order24_source_correction_required": true,
+      "thermal_stress_upper": [
+        1.1861252729765068e-114,
+        1.0104840494308936e-114,
+        1.0104840494308936e-114,
+        8.123493881208228e-116
+      ],
+      "vacuum_energy": {
+        "density_error_upper": 4.433250951505048e-17,
+        "lapse_action_error_upper": 9.40417651365535e-16,
+        "linear_transverse_density_upper": 4.433250951504957e-17,
+        "physical_Riccati_order": 24,
+        "quadratic_longitudinal_density_upper": 9.023012643249685e-31,
+        "thermal_quadrature_low_band_errors_included": false,
+        "vacuum_current_error": 0.0
+      },
+      "within_component_tolerance": true
+    }
+  }
+}

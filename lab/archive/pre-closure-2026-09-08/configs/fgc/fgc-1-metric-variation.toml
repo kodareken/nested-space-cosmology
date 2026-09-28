@@ -1,0 +1,14 @@
+schema_version = 1
+artifact_id = "FGC-1-VAR1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+
+[fixture_generator]
+dimension = 4
+algorithm = "lcg64_v1"
+seed = 20260821
+fixture_count = 8
+integer_bound = 3
+kulkarni_nomizu_pair_count = 2

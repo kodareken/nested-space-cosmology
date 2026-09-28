@@ -1,0 +1,102 @@
+schema_version = 1
+artifact_id = "FGC-1-NUM1-VAL1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+nonlinear_source_config = "configs/fgc/fgc-1-src1-nl1.toml"
+nonlinear_source_result = "results/fgc-1-src1-nl1.json"
+physical_constraints_config = "configs/fgc/fgc-1-con4-phy1.toml"
+physical_constraints_result = "results/fgc-1-con4-phy1.json"
+regular_center_config = "configs/fgc/fgc-1-ctr1-reg1.toml"
+regular_center_result = "results/fgc-1-ctr1-reg1.json"
+initial_data_config = "configs/fgc/fgc-1-id1-fam1.toml"
+initial_data_result = "results/fgc-1-id1-fam1.json"
+run_domain_config = "configs/fgc/fgc-1-dom4-run1.toml"
+run_domain_result = "results/fgc-1-dom4-run1.json"
+multidirectional_health_config = "configs/fgc/fgc-1-hyp2-md1.toml"
+multidirectional_health_result = "results/fgc-1-hyp2-md1.json"
+boundary_control_config = "configs/fgc/fgc-1-bnd2-cp1.toml"
+boundary_control_result = "results/fgc-1-bnd2-cp1.json"
+health_monitor_config = "configs/fgc/fgc-1-hlt1-mon1.toml"
+health_monitor_result = "results/fgc-1-hlt1-mon1.json"
+observable_config = "configs/fgc/fgc-1-def0-obs1.toml"
+observable_result = "results/fgc-1-def0-obs1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+validation_role = "outcome_blind_numerical_engine_source_adapter_and_affine_measurement_controls"
+FGCQR_trajectory_evaluated = false
+collapse_evolution_performed = false
+holdout_outcome_inspected = false
+retained_EFT_remainder_control_supplied = false
+
+[methods]
+primary = "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4"
+comparator = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+array_backend = "numpy_binary64"
+only_new_numerical_runtime_dependency = "numpy==2.5.1"
+
+[controls]
+convergence_point_counts = [33, 65, 129]
+convergence_final_time = "1/5"
+wave_domain_minimum = "0"
+wave_domain_maximum = "3141592653589793/1000000000000000"
+Minkowski_point_count = 65
+Minkowski_step_count = 16
+checkpoint_total_steps = 16
+boundary_aligned_spacing = "1/32"
+boundary_outer_radii = ["6", "8"]
+boundary_measurement_radius = "5/2"
+affine_history_time_count = 65
+affine_history_radius_count = 129
+affine_final_time = "1/4"
+affine_maximum_radius = "4"
+affine_launch_radius = "1"
+affine_step_size = "1/2048"
+center_limit_spacings = ["1/8", "1/16", "1/32"]
+typed_stop_count = 26
+
+[thresholds]
+SBP_identity_residual_max = "1/100000000000000"
+Minkowski_binary64_drift_max = "0"
+primary_minimum_solution_order = "5/2"
+comparator_minimum_solution_order = "19/10"
+minimum_reduction_constraint_order = "3/2"
+exact_scalar_batch_root_absolute_error_max = "1/1000000000000"
+batch_REF1_residual_infinity_max = "1/1000000000000"
+center_limit_minimum_observed_order = "5"
+boundary_measurement_difference_max = "1/10000000000000"
+affine_normalization_residual_max = "1/10000000000"
+affine_geodesic_residual_max = "1/10000000000"
+null_residual_max = "1/1000000000000"
+direct_Raychaudhuri_agreement_residual_max = "1/100000000"
+cross_method_theta_difference_max = "1/100000000"
+
+[proof_contract]
+both_frozen_methods_required = true
+candidate_endpoint_evaluated_separately = true
+regular_center_parity_and_limit_controls_required = true
+same_unredefined_REF1_evaluator_required = true
+exact_scalar_and_batched_ADM_source_routes_required = true
+all_HLT1_typed_stops_and_atomic_runtime_composition_required = true
+checkpoint_restart_must_be_bitwise = true
+outer_boundary_isolation_must_use_aligned_spacing = true
+physical_metric_null_and_affine_residuals_required = true
+direct_and_complete_Raychaudhuri_routes_required = true
+canonical_hash_bound_result_required = true
+no_FGCQR_holdout_execution = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

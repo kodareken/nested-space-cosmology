@@ -1,0 +1,487 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, labels, structure, counting and scope",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-12
+  },
+  "computation": {
+    "archived_contour_reflections_used": 360,
+    "history_horizon_scattering_solves": 0,
+    "old_generators_rerun": false,
+    "preparation_function_evaluations": 5870,
+    "preparation_short_stationary_solves_0_to_1": 19,
+    "replay_stationary_solves": 0
+  },
+  "current_identity_pointer": {
+    "exact_identities": {
+      "horizon_coherence_overlap": "0",
+      "trace_mod_current_unitarity": "0"
+    },
+    "old_generator_rerun": false,
+    "path": "results/development/nsc-incoming-constraint-gate.json",
+    "sha256": "44ee42d0b0cd2143397616cfe57bde7a1c88be9bc36c637feaa3d6abfe1ad62c"
+  },
+  "diagnostics": {
+    "T01_coherence_overlap": 6.3766884948398795e-15,
+    "T01_diagonal_difference": 3.9745984281580604e-14,
+    "canonical_frame_vs_real_owner": 0.0,
+    "complex_bilinear_adjoint": 4.577566798522237e-16,
+    "complex_cross_Gram": 7.43011577224575e-12,
+    "complex_interpolation": 2.7953123014442994e-10,
+    "cross_current": 3.808069020464414e-14,
+    "normalization_control_at_zero": 9.607479339486406e-15,
+    "normalization_control_reflection_modulus": 1.0658141036401503e-14,
+    "real8_bilinear_interpolation": 2.883324467993122e-11,
+    "real8_formula_vs_archived": 4.2120712299975605e-15,
+    "real8_formula_vs_direct": 4.2120712299975605e-15,
+    "real_basis_unitarity": 1.1213252548714081e-13,
+    "smooth_imaginary": 1.0955702455279978e-17
+  },
+  "domain": {
+    "angular": 0.0,
+    "basis_order": [
+      "v",
+      "w"
+    ],
+    "canonical_frame": "exact owned trace inverse and exp(i E S(1))",
+    "clock_shift": 1.0568780671724793,
+    "complex_control": "separately archived conjugate-frequency bases; analytic bilinear, never a Gaussian state",
+    "current_identity": "Tr(S Csrc Sdagger)-1=T(n_in-f_H); T=0 for the whole open subgap interval",
+    "error_scope": "measured interpolation/quadrature/deformation controls, not a rigorous uniform remainder bound",
+    "group": 13,
+    "incoming_surface_rho": 1.0,
+    "interpolation": "17 archived real unsewn bilinear nodes, nested 9 control; never interpolate reflection",
+    "mass": 1.5707963267948966,
+    "normalization": "raw dE integral times incoming_group_factor; no history-action -1/pi",
+    "physical_real_columns": "(R v,w,0)",
+    "positive_energy_panel": [
+      1.0,
+      1.5707963267948966
+    ],
+    "reference_subtraction": "existing incoming ad4 evaluated only on the real axis",
+    "source_law": "d(Bvv-Bww)+2 Re[-i s R Bwv]+Tr(V)/2-Tr(Pad4 V)",
+    "state": "unchanged C_H; closed incoming infinity channel"
+  },
+  "error_indicators_physical": {
+    "contour24_to48": [
+      2.6804871376679743e-17,
+      2.847732875560829e-17,
+      2.5662022776104294e-18,
+      0.0
+    ],
+    "height_kappa3_to4": [
+      4.0672601627639813e-20,
+      5.531473821359015e-19,
+      1.8939656032081606e-31,
+      0.0
+    ],
+    "nested9_to17": [
+      6.778220840475449e-15,
+      4.660961707911583e-14,
+      9.243401000987265e-17,
+      0.0
+    ]
+  },
+  "failures": {},
+  "gate": {
+    "PDF_or_public_release_changed": false,
+    "compact_induced_added": false,
+    "constraints_solved": false,
+    "full_33_group_source_convergence": "OPEN",
+    "full_stress_tensor": null,
+    "group13_local_subgap_refinement": "PASS",
+    "local_restoration_added": false,
+    "metric_evolution": false,
+    "other_37_compact_signed_family_refinements": "OPEN: not evaluated here",
+    "state_changed": false
+  },
+  "input_payloads": [
+    {
+      "bytes": 112085,
+      "path": "results/development/artifacts/nsc-subgap-history-response.3620a74c4778b7e03c5fd931df81c37ca57511015687c75e9dfa09b248adcc74.npz",
+      "sha256": "3620a74c4778b7e03c5fd931df81c37ca57511015687c75e9dfa09b248adcc74"
+    },
+    {
+      "bytes": 4965711,
+      "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
+      "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
+    },
+    {
+      "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+      "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+    }
+  ],
+  "maxima": {
+    "T01_coherence_overlap": 6.3766884948398795e-15,
+    "T01_diagonal_difference": 3.9745984281580604e-14,
+    "canonical_frame_vs_real_owner": 0.0,
+    "complex_bilinear_adjoint": 4.577566798522237e-16,
+    "complex_cross_Gram": 7.43011577224575e-12,
+    "complex_interpolation": 2.7953123014442994e-10,
+    "contour24_to48": 2.847732875560829e-17,
+    "cross_current": 3.808069020464414e-14,
+    "height_kappa3_to4": 5.531473821359015e-19,
+    "integrated_T01_zero_identity": 9.852373963653396e-16,
+    "nested9_to17": 4.660961707911583e-14,
+    "normalization_control_at_zero": 9.607479339486406e-15,
+    "normalization_control_reflection_modulus": 1.0658141036401503e-14,
+    "real8_bilinear_interpolation": 2.883324467993122e-11,
+    "real8_formula_vs_archived": 4.2120712299975605e-15,
+    "real8_formula_vs_direct": 4.2120712299975605e-15,
+    "real_basis_unitarity": 1.1213252548714081e-13,
+    "smooth_imaginary": 1.0955702455279978e-17
+  },
+  "payload": {
+    "bytes": 34612,
+    "path": "results/development/artifacts/nsc-incoming-subgap-source.97054f5d41d4fc9711b111d0482760f3fe59d0eee8b092a28603da6c3cad8817.npz",
+    "sha256": "97054f5d41d4fc9711b111d0482760f3fe59d0eee8b092a28603da6c3cad8817"
+  },
+  "prepared_dependency_hashes": {
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-massive-mode-resolution.json": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce",
+    "results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_incoming_subgap_source.py": "241dde7610c538a404fe2ef43c96b1731dcc8144e87dcbeffd8e08f85dd3aa3c",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_subgap_history_response.py": "3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "quadrature_tables": {
+    "n17_q24_h3": {
+      "integral": [
+        9.92400688184916e-05,
+        -0.0004266739244237719,
+        8.18590249357828e-15,
+        0.0
+      ],
+      "reference": [
+        1.2471149185305075,
+        0.6113508836083036,
+        -2.645619762419873e-18,
+        0.0
+      ],
+      "reflected": {
+        "imag": [
+          -9.917480148875301e-09,
+          4.987468337565304e-08,
+          -4.7149410127965334e-23,
+          0.0
+        ],
+        "real": [
+          9.059925718664565e-09,
+          5.0263601546894685e-08,
+          -1.8537385165136014e-22,
+          0.0
+        ]
+      },
+      "smooth": {
+        "imag": [
+          4.993700197812297e-18,
+          3.227052111823527e-18,
+          -7.546041136058422e-18,
+          0.0
+        ],
+        "real": [
+          -1.2470156965815404,
+          -0.6117776580599305,
+          8.188548484088403e-15,
+          0.0
+        ]
+      },
+      "smooth_imaginary_residual": 7.546041136058422e-18
+    },
+    "n17_q48_h3": {
+      "integral": [
+        9.924006881826831e-05,
+        -0.00042667392442353465,
+        8.207279615193022e-15,
+        0.0
+      ],
+      "reference": [
+        1.2471149185305084,
+        0.6113508836083038,
+        1.827329183019762e-17,
+        0.0
+      ],
+      "reflected": {
+        "imag": [
+          -9.917480150119563e-09,
+          4.987468337241996e-08,
+          -4.714941080328898e-23,
+          0.0
+        ],
+        "real": [
+          9.059925718036802e-09,
+          5.026360155449797e-08,
+          -1.8537385282190107e-22,
+          0.0
+        ]
+      },
+      "smooth": {
+        "imag": [
+          4.993700197812269e-18,
+          3.227052111823506e-18,
+          -7.546041136058442e-18,
+          0.0
+        ],
+        "real": [
+          -1.2470156965815415,
+          -0.6117776580599305,
+          8.18900669411053e-15,
+          0.0
+        ]
+      },
+      "smooth_imaginary_residual": 7.546041136058442e-18
+    },
+    "n17_q48_h4": {
+      "integral": [
+        9.924006881826865e-05,
+        -0.00042667392442353926,
+        8.207279615193024e-15,
+        0.0
+      ],
+      "reference": [
+        1.2471149185305084,
+        0.6113508836083038,
+        1.827329183019762e-17,
+        0.0
+      ],
+      "reflected": {
+        "imag": [
+          -9.917480149684312e-09,
+          4.9874683373228706e-08,
+          -4.714941131584345e-23,
+          0.0
+        ],
+        "real": [
+          9.059925718208319e-09,
+          5.0263601552180634e-08,
+          -1.8537385193996151e-22,
+          0.0
+        ]
+      },
+      "smooth": {
+        "imag": [
+          4.993700197812269e-18,
+          3.227052111823506e-18,
+          -7.546041136058442e-18,
+          0.0
+        ],
+        "real": [
+          -1.2470156965815415,
+          -0.6117776580599305,
+          8.18900669411053e-15,
+          0.0
+        ]
+      },
+      "smooth_imaginary_residual": 7.546041136058442e-18
+    },
+    "n9_q24_h3": {
+      "integral": [
+        9.924006876158321e-05,
+        -0.0004266739248119309,
+        7.402601561522619e-15,
+        0.0
+      ],
+      "reference": [
+        1.2471149185305075,
+        0.6113508836083036,
+        -2.645619762419873e-18,
+        0.0
+      ],
+      "reflected": {
+        "imag": [
+          -9.917480332387472e-09,
+          4.9874683944298736e-08,
+          -1.0546466704586893e-22,
+          0.0
+        ],
+        "real": [
+          9.059925908223194e-09,
+          5.026360236702868e-08,
+          -2.1161069061863742e-22,
+          0.0
+        ]
+      },
+      "smooth": {
+        "imag": [
+          -7.18175571978897e-18,
+          1.6856074107191709e-18,
+          -1.0955702455279973e-17,
+          0.0
+        ],
+        "real": [
+          -1.2470156965815977,
+          -0.6117776580603203,
+          7.40524760450642e-15,
+          0.0
+        ]
+      },
+      "smooth_imaginary_residual": 1.0955702455279973e-17
+    },
+    "n9_q48_h3": {
+      "integral": [
+        9.9240068761804e-05,
+        -0.0004266739248118047,
+        7.437280659709541e-15,
+        0.0
+      ],
+      "reference": [
+        1.2471149185305084,
+        0.6113508836083038,
+        1.827329183019762e-17,
+        0.0
+      ],
+      "reflected": {
+        "imag": [
+          -9.917480333631746e-09,
+          4.9874683941065645e-08,
+          -1.0546466703413586e-22,
+          0.0
+        ],
+        "real": [
+          9.059925907595421e-09,
+          5.026360237463196e-08,
+          -2.1161069064244419e-22,
+          0.0
+        ]
+      },
+      "smooth": {
+        "imag": [
+          -7.181755719788901e-18,
+          1.6856074107191676e-18,
+          -1.0955702455279978e-17,
+          0.0
+        ],
+        "real": [
+          -1.2470156965815984,
+          -0.6117776580603204,
+          7.419007791100725e-15,
+          0.0
+        ]
+      },
+      "smooth_imaginary_residual": 1.0955702455279978e-17
+    },
+    "n9_q48_h4": {
+      "integral": [
+        9.924006876180435e-05,
+        -0.0004266739248118093,
+        7.437280659709541e-15,
+        0.0
+      ],
+      "reference": [
+        1.2471149185305084,
+        0.6113508836083038,
+        1.827329183019762e-17,
+        0.0
+      ],
+      "reflected": {
+        "imag": [
+          -9.917480333196496e-09,
+          4.987468394187444e-08,
+          -1.054646670388831e-22,
+          0.0
+        ],
+        "real": [
+          9.05992590776695e-09,
+          5.026360237231459e-08,
+          -2.1161069063154098e-22,
+          0.0
+        ]
+      },
+      "smooth": {
+        "imag": [
+          -7.181755719788901e-18,
+          1.6856074107191676e-18,
+          -1.0955702455279978e-17,
+          0.0
+        ],
+        "real": [
+          -1.2470156965815984,
+          -0.6117776580603204,
+          7.419007791100725e-15,
+          0.0
+        ]
+      },
+      "smooth_imaginary_residual": 1.0955702455279978e-17
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_subgap_source.py --check",
+  "schema": "NSC-INCOMING-GROUP13-SUBGAP-SOURCE-v1",
+  "source": {
+    "coarse8_physical_contribution": [
+      1.1913174387252112e-05,
+      -5.121902592083641e-05,
+      0.0,
+      0.0
+    ],
+    "coarse8_positive_energy_integral": [
+      9.923979100005421e-05,
+      -0.000426667591892995,
+      0.0,
+      0.0
+    ],
+    "exact_physical_subgap_T01": 0.0,
+    "group_factor": 0.12004433168592227,
+    "kernel_order": [
+      "rho",
+      "p_parallel",
+      "T01",
+      "p_perp"
+    ],
+    "raw_T01_interpretation": "nonzero floating-point zero-identity residual, not a physical flux",
+    "raw_positive_energy_integral": [
+      9.924006881826831e-05,
+      -0.00042667392442353465,
+      8.207279615193022e-15,
+      0.0
+    ],
+    "refined_minus_coarse8": [
+      3.335050184169548e-11,
+      -7.601843965138009e-10,
+      9.852373963653396e-16,
+      0.0
+    ],
+    "refined_physical_contribution": [
+      1.1913207737753953e-05,
+      -5.121978610523292e-05,
+      9.852373963653396e-16,
+      0.0
+    ]
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-subgap-source.md": "7941681374e0e25089ba4f79f896c0c756f48a20456c1a3de24a73c908505daa",
+    "scripts/derive_nsc_incoming_subgap_source.py": "2e886c0b053148888eb7a3ba5894a676e9a072a1728507ae84bdca1984d941a6",
+    "src/recursive_horizons/nsc_incoming_subgap_source.py": "241dde7610c538a404fe2ef43c96b1731dcc8144e87dcbeffd8e08f85dd3aa3c",
+    "tests/test_nsc_incoming_subgap_source.py": "e973ae2ff3499ab2a3099bce6a17d87baffa948961ccd8f0f283cda9b4acfd23"
+  },
+  "status": "PASS: refined group13 incoming local subgap source panel",
+  "tolerances": {
+    "T01_coherence_overlap": 3e-11,
+    "T01_diagonal_difference": 3e-11,
+    "canonical_frame_vs_real_owner": 3e-11,
+    "complex_bilinear_adjoint": 3e-11,
+    "complex_cross_Gram": 3e-11,
+    "complex_interpolation": 3e-10,
+    "contour24_to48": 3e-11,
+    "cross_current": 3e-11,
+    "height_kappa3_to4": 3e-11,
+    "integrated_T01_zero_identity": 3e-11,
+    "nested9_to17": 3e-11,
+    "normalization_control_at_zero": 3e-11,
+    "normalization_control_reflection_modulus": 3e-11,
+    "real8_bilinear_interpolation": 3e-10,
+    "real8_formula_vs_archived": 3e-11,
+    "real8_formula_vs_direct": 3e-11,
+    "real_basis_unitarity": 3e-11,
+    "smooth_imaginary": 3e-11
+  }
+}

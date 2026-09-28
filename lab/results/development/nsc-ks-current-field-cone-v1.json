@@ -1,0 +1,170 @@
+{
+  "apis": [
+    "WholeConeFieldConfig",
+    "WholeConeAccumulator",
+    "WholeConeCheckpoint",
+    "WholeConeFieldResult",
+    "accumulate_segment",
+    "finalize_family",
+    "restore_v4_profile_payload",
+    "whole_cone_propagate_difference_error",
+    "whole_cone_difference_matter_error"
+  ],
+  "certificate_use": false,
+  "checkpoint_path": "results/development/nsc-ks-current-field-cone-v1.checkpoint.json",
+  "checkpoint_sha256": "1c39f473a45e42898cf3f873345b904496a7efec910d4efbf6c52ba99d46847f",
+  "coverage": {
+    "all_history_cells": false,
+    "all_source_families": false,
+    "family_14_1_scientific_run": false,
+    "source_columns_v4_cell": 12,
+    "whole_spatial_period": true,
+    "whole_time_cell": true
+  },
+  "family_14_1_scientific_run": false,
+  "input_hashes": {
+    "results/development/nsc-ks-current-field-pilot-v4.json": "a10407eebb68e9c70666119a2429769ee1b59d16b235af6a3321ac07177ef0a1",
+    "results/development/nsc-ks-current-trajectory-pilot-v2.json": "cf452980bb43cce9b4fa8d7edbcce7e01f7039dc2c8d6ad6daf4040c2fc34cc5",
+    "src/recursive_horizons/nsc_ks_difference_error.py": "eb8b87abfb72d63721303fef9f04c22d8444cfe44ca109ccc5fc3fb55a83f871",
+    "src/recursive_horizons/nsc_ks_difference_residual_polynomial.py": "7917c0b4c3ebb87b06c2a4be8cec9b3ac5741dfc6735f616c953613dbde2b303"
+  },
+  "memory": {
+    "tracemalloc_current_bytes": 394108,
+    "tracemalloc_peak_bytes": 1664764533
+  },
+  "method": "hash-validated v4 local-Fourier payload, streamed history-minus-reference residual cells, directed totals, prefix-bound checkpoint resume",
+  "next_required_step": "stream every accepted current-history cell for representative families after the 60 GiB free-space guard is met, then enclose physical rho=1 source error",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_rho1_source_error": null,
+  "residual_integral_measure": "S=X_xi-h*L*X; integral_abs_R_d_rho=integral_abs_S_d_xi; no_second_cell_width_factor",
+  "runtime": {
+    "CPU_seconds": 1157.765625,
+    "python": "3.12.10",
+    "wall_seconds": 1163.625
+  },
+  "schema": "NSC-KS-CURRENT-FIELD-CONE-v1",
+  "scientific_digest": "d2ac11298bb953da05b3ef6f6412747cb9d1930df8e9319b3c26ef308958b29f",
+  "settings": {
+    "bits": 80,
+    "exterior_panels": 16,
+    "interior_panels": 16,
+    "retained_index": 4,
+    "taylor_order": 5,
+    "transition_panels": 16
+  },
+  "small_slab": {
+    "bounds": {
+      "last_cell_total": [
+        {
+          "exponent": -57,
+          "mantissa": "2622833176009111"
+        },
+        {
+          "exponent": -51,
+          "mantissa": "1287480237322745"
+        }
+      ],
+      "polynomial_sum": [
+        {
+          "exponent": -84,
+          "mantissa": "1173438685823031645183943"
+        },
+        {
+          "exponent": -79,
+          "mantissa": "1152020735881155524170217"
+        }
+      ],
+      "remainder_sum": [
+        {
+          "exponent": -114,
+          "mantissa": "741610794122904621895309"
+        },
+        {
+          "exponent": -105,
+          "mantissa": "810401286641676815122379"
+        }
+      ],
+      "residual_integrals": [
+        {
+          "exponent": -84,
+          "mantissa": "1173438686513710519329117"
+        },
+        {
+          "exponent": -79,
+          "mantissa": "1152020747957075728119383"
+        }
+      ],
+      "total_continuous_normalized_residual_sum": [
+        {
+          "exponent": -84,
+          "mantissa": "1173438686513710519329117"
+        },
+        {
+          "exponent": -79,
+          "mantissa": "1152020747957075728119383"
+        }
+      ]
+    },
+    "checkpoint_resume_agreement": true,
+    "completed_cells": 3,
+    "config_digest": "75ab1f2287129ca53acf89de3f0d8a1953166c5de43ea90be6b6482cffd19876",
+    "dense_streamed_agreement": true,
+    "prefix_digest": "aefb117667502ed08e94a1ec48a396daf28f304f1202f445e25fad5b721d0d42"
+  },
+  "source_accuracy_included": false,
+  "source_hashes": {
+    "docs/nsc-ks-current-field-cone-v1.md": "b66c0740b1cc477f8413381f9d1d03e16a47dc8721d240412551c7b894576135",
+    "scripts/validate_nsc_ks_current_field_cone_v1.py": "afd2d69180d5cf88ce6a455b819a98a966673e695eed7b4646d8c7f895339e1c",
+    "src/recursive_horizons/nsc_ks_current_field_cone.py": "dd38cfa2bc6a3665d7f83f2df2f30f10c404ff42b7521def57a22ce5d32e0119",
+    "src/recursive_horizons/nsc_ks_local_profile_fourier_bound.py": "1d938da698b743112664a47eedb338f8e2756fa8f4010ee2af3475d2733ba3d5",
+    "tests/test_nsc_ks_current_field_cone.py": "13146c85dfae93f323ac4365616fd0fbc8e5580a8be5ffcb012fcfc1274e0126",
+    "tests/test_nsc_ks_local_profile_fourier_bound.py": "395e2fbe4506aad3e2b23ed1dd828c8d699e0f410a4a09b1f865039e93ccc3e9"
+  },
+  "status": "OPEN: whole-cone field core and one restored v4 cell; family 14_1 scientific run was not completed; physical rho=1 source error unresolved",
+  "v4_cell": {
+    "cell_index": 122,
+    "config_digest": "625d697a5af72fc8ed6fcce29e39804f41cceaa42ddabc84400087d51a4e75af",
+    "coverage": {
+      "all_history_cells": false,
+      "all_source_families": false,
+      "completed_cells": 1,
+      "family_14_1_scientific_run": false,
+      "physical_rho1_source_error": null,
+      "source_columns": 12,
+      "whole_spatial_period": true
+    },
+    "difference_matter_error_applied": false,
+    "family": [
+      14,
+      1
+    ],
+    "physical_rho1_source_error": null,
+    "prefix_digest": "e98ac98ce69d36428d61d4468979cbf63946271738e28c43f54ada9fda392b99",
+    "profile_payload_sha256": "8c9d732d0022dce3c5469d42922fdd00a3bff1c10ef8136312531320cdb0e778",
+    "propagate_difference_error_applied": true,
+    "recorded_total_continuous_normalized_residual": [
+      {
+        "exponent": -104,
+        "mantissa": "6101926367124269"
+      },
+      {
+        "exponent": -91,
+        "mantissa": "3376434565585883"
+      }
+    ],
+    "restored_contains_recorded": true,
+    "restored_last_cell_total": [
+      {
+        "exponent": -104,
+        "mantissa": "6101926369371623"
+      },
+      {
+        "exponent": -91,
+        "mantissa": "3376434565605529"
+      }
+    ],
+    "source_accuracy_included": false,
+    "status": "OPEN: whole-cone field core accumulated; physical rho=1 source error unresolved"
+  }
+}

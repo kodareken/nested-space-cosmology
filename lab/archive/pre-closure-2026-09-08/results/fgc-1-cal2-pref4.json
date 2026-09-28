@@ -1,0 +1,504 @@
+{
+  "artifact_id": "FGC-1-CAL2-PREF4",
+  "artifact_payload": {
+    "amplitude_stop_evidence": [
+      {
+        "amplitude": "5/2",
+        "cross_amplitude_relative_residual_difference": 1.847988451616487e-07,
+        "last_fully_completed_common_event_index": 0,
+        "observed_residual_infinity": 1.0511642392237476e-12,
+        "raw_residual_tolerance": 1e-12,
+        "reason": "newton_residual_limit",
+        "refinement_iterations": 2,
+        "relative_excess_over_raw_tolerance": 0.05116423922374769
+      },
+      {
+        "amplitude": "3",
+        "cross_amplitude_relative_residual_difference": 1.847988451616487e-07,
+        "last_fully_completed_common_event_index": 0,
+        "observed_residual_infinity": 1.0511640449698101e-12,
+        "raw_residual_tolerance": 1e-12,
+        "reason": "newton_residual_limit",
+        "refinement_iterations": 2,
+        "relative_excess_over_raw_tolerance": 0.051164044969810085
+      }
+    ],
+    "decision": {
+      "PROTO5_GR0_source_stop_ownership_contract_obstructed": true,
+      "new_protocol_required": "FGC-2-SF1-PROTO6",
+      "prospective_repair": {
+        "accepted_state_source_failure_remains_terminal": true,
+        "amplitude_order_unchanged": true,
+        "candidate_action_health_stops_unchanged": true,
+        "constraint_spectral_trapped_and_boundary_rules_unchanged": true,
+        "fresh_output_namespace_and_new_protocol_version_required": true,
+        "maximum_retries_inherited": 32,
+        "minimum_step_size_inherited": "1/1073741824",
+        "only_internal_unaccepted_stage_source_failure_becomes_retryable": true,
+        "physical_inputs_unchanged": true,
+        "raw_source_residual_tolerance_unchanged": true,
+        "retry_factor_inherited": "1/2"
+      },
+      "reason": "an_unaccepted_internal_RK_stage_missed_an_absolute_binary64_source_residual_gate_while_the_last_accepted_state_passed_and_a_smaller_trial_restored_the_same_gate"
+    },
+    "diagnostic_replay": {
+      "accepted_state_source_evidence": {
+        "coordinate_time": 0.039062486812590794,
+        "kinetic_condition_infinity": 2835841.6197018796,
+        "maximum_residual_point_index": 0,
+        "maximum_residual_radius": 0.03125,
+        "maximum_residual_row_index": 2,
+        "raw_source_gate_passed": true,
+        "raw_source_residual_infinity": 5.98348393942695e-13,
+        "refinement_iterations": 0,
+        "relative_acceleration_correction": 6.304777935963829e-14,
+        "roundoff_floor_reached": false,
+        "stage_name": "rk4_k1"
+      },
+      "base_proposed_step_size": 0.0032552049472280367,
+      "checkpoint_member": "RK4-4097",
+      "failed_unit_proposal_stage_names": [
+        "rk4_k4"
+      ],
+      "failure_localizes_to_first_annular_node": true,
+      "first_retry_factor_that_passes_every_stage": "1/2",
+      "grid_spacing": 0.03125,
+      "kinetic_condition_limit": 10000000000.0,
+      "last_accepted_coordinate_time": 0.039062486812590794,
+      "previous_accepted_speed_upper": 1.200001248255155,
+      "proposals": [
+        {
+          "all_stage_raw_source_gates_passed": false,
+          "maximum_kinetic_condition_infinity": 2835841.6197018796,
+          "maximum_raw_source_residual_infinity": 1.0511640449698101e-12,
+          "maximum_relative_acceleration_correction": 1.3314872548333118e-13,
+          "proposed_step_size": 0.0032552049472280367,
+          "stages": [
+            {
+              "coordinate_time": 0.039062486812590794,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 5.98348393942695e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.304777935963829e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k1"
+            },
+            {
+              "coordinate_time": 0.04069008928620481,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 4.838118273401905e-13,
+              "refinement_iterations": 2,
+              "relative_acceleration_correction": 1.0954425839542064e-13,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k2"
+            },
+            {
+              "coordinate_time": 0.04069008928620481,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 4.875543363719586e-13,
+              "refinement_iterations": 2,
+              "relative_acceleration_correction": 1.101728167463652e-13,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k3"
+            },
+            {
+              "coordinate_time": 0.04231769175981883,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 0,
+              "raw_source_gate_passed": false,
+              "raw_source_residual_infinity": 1.0511640449698101e-12,
+              "refinement_iterations": 1,
+              "relative_acceleration_correction": 6.86654658899144e-14,
+              "roundoff_floor_reached": true,
+              "stage_name": "rk4_k4"
+            },
+            {
+              "coordinate_time": 0.04231769175981883,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 7.44670396397181e-13,
+              "refinement_iterations": 1,
+              "relative_acceleration_correction": 1.3314872548333118e-13,
+              "roundoff_floor_reached": false,
+              "stage_name": "candidate_endpoint"
+            }
+          ],
+          "step_factor": "1"
+        },
+        {
+          "all_stage_raw_source_gates_passed": true,
+          "maximum_kinetic_condition_infinity": 2835841.6197018796,
+          "maximum_raw_source_residual_infinity": 9.841483078758433e-13,
+          "maximum_relative_acceleration_correction": 1.0957917247762017e-13,
+          "proposed_step_size": 0.0016276024736140184,
+          "stages": [
+            {
+              "coordinate_time": 0.039062486812590794,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 5.98348393942695e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.304777935963829e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k1"
+            },
+            {
+              "coordinate_time": 0.0398762880493978,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 0,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 9.838757197969717e-13,
+              "refinement_iterations": 1,
+              "relative_acceleration_correction": 9.620135809869494e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k2"
+            },
+            {
+              "coordinate_time": 0.0398762880493978,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 0,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 9.841483078758433e-13,
+              "refinement_iterations": 1,
+              "relative_acceleration_correction": 9.607622524917028e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k3"
+            },
+            {
+              "coordinate_time": 0.04069008928620481,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 4.829130377733934e-13,
+              "refinement_iterations": 2,
+              "relative_acceleration_correction": 1.0943904275989887e-13,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k4"
+            },
+            {
+              "coordinate_time": 0.04069008928620481,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 4.838385757614954e-13,
+              "refinement_iterations": 2,
+              "relative_acceleration_correction": 1.0957917247762017e-13,
+              "roundoff_floor_reached": false,
+              "stage_name": "candidate_endpoint"
+            }
+          ],
+          "step_factor": "1/2"
+        },
+        {
+          "all_stage_raw_source_gates_passed": true,
+          "maximum_kinetic_condition_infinity": 2835841.6197018796,
+          "maximum_raw_source_residual_infinity": 9.840205779077915e-13,
+          "maximum_relative_acceleration_correction": 9.613700344330394e-14,
+          "proposed_step_size": 0.0008138012368070092,
+          "stages": [
+            {
+              "coordinate_time": 0.039062486812590794,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 5.98348393942695e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.304777935963829e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k1"
+            },
+            {
+              "coordinate_time": 0.0394693874309943,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 6.420361715928364e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.687287867918018e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k2"
+            },
+            {
+              "coordinate_time": 0.0394693874309943,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 6.423306535359614e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.690437051385509e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k3"
+            },
+            {
+              "coordinate_time": 0.0398762880493978,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 0,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 9.840205779077915e-13,
+              "refinement_iterations": 1,
+              "relative_acceleration_correction": 9.613611820331144e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k4"
+            },
+            {
+              "coordinate_time": 0.0398762880493978,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 0,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 9.840177453213206e-13,
+              "refinement_iterations": 1,
+              "relative_acceleration_correction": 9.613700344330394e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "candidate_endpoint"
+            }
+          ],
+          "step_factor": "1/4"
+        },
+        {
+          "all_stage_raw_source_gates_passed": true,
+          "maximum_kinetic_condition_infinity": 2835841.6197018796,
+          "maximum_raw_source_residual_infinity": 6.421867710787643e-13,
+          "maximum_relative_acceleration_correction": 6.688887892779579e-14,
+          "proposed_step_size": 0.0004069006184035046,
+          "stages": [
+            {
+              "coordinate_time": 0.039062486812590794,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 5.98348393942695e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.304777935963829e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k1"
+            },
+            {
+              "coordinate_time": 0.03926593712179255,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 6.201922827677661e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.496132906191965e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k2"
+            },
+            {
+              "coordinate_time": 0.03926593712179255,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 6.202659032535455e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.496919099625294e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k3"
+            },
+            {
+              "coordinate_time": 0.0394693874309943,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 6.421867710787643e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.688887892779579e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "rk4_k4"
+            },
+            {
+              "coordinate_time": 0.0394693874309943,
+              "kinetic_condition_infinity": 2835841.6197018796,
+              "maximum_residual_point_index": 0,
+              "maximum_residual_radius": 0.03125,
+              "maximum_residual_row_index": 2,
+              "raw_source_gate_passed": true,
+              "raw_source_residual_infinity": 6.421856559648031e-13,
+              "refinement_iterations": 0,
+              "relative_acceleration_correction": 6.688879439926949e-14,
+              "roundoff_floor_reached": false,
+              "stage_name": "candidate_endpoint"
+            }
+          ],
+          "step_factor": "1/8"
+        }
+      ],
+      "relative_acceleration_correction_limit": 1e-12,
+      "target_common_event_time": 0.0625
+    },
+    "epistemic_boundary": {
+      "GR0_amplitude_selected": false,
+      "GR0_calibration_completed": false,
+      "SGBL_or_FGCQR_trajectory_read": false,
+      "candidate_or_general_gradient_route_rejected": false,
+      "dynamic_trapped_sphere_classified": false,
+      "mechanism_question_answered": false
+    },
+    "immutable_campaign": {
+      "event_log_line_count": 2,
+      "manifest": {
+        "authorization_path": "results/fgc-1-hlt3-mon3.json",
+        "authorization_sha256": "80ba72924b0fc7509b97105ba881e1df9951f5e935bf5429d9b10672bb236ec6",
+        "campaign_id": "9df7046b47a044df920bfe192e6b63fbda7953ab97d9174850927afec10177be",
+        "created_unix_time": 1787447960.189985,
+        "git_commit": "fb7d1dc2499438ac639e6a1686cd3f5561fa93bc",
+        "implementation_sha256": {
+          "scripts/reproduce_fgc_hlt3_mon3.py": "ff9de5623f8304a8cd7f0df5696057b26b526b68fdc3645b47fac0412ac5e8e2",
+          "scripts/run_fgc_gr0_calibration.py": "4e3734495edc0a289e5c61dc68e193cbe19629582234dd04c0c20a46d52774b3",
+          "src/recursive_horizons/fgc/evolution/calibration_runtime.py": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9",
+          "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545"
+        },
+        "input_manifest_sha256": "decc10d47bbb6af03177b243642c55137444576e1b06b878245de939632e531f",
+        "ordered_amplitudes": [
+          "5/2",
+          "3"
+        ],
+        "outcome_fields_present_at_creation": false,
+        "plan_path": "configs/fgc/fgc-1-cal2-run1.toml",
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "runner_id": "FGC-1-CAL2-RUN1-RUNNER",
+        "schema_version": 1
+      },
+      "terminal_checkpoint": {
+        "amplitude": "3",
+        "completed_common_event_index": 0,
+        "member_times": {
+          "RK4-1025": 0.0625,
+          "RK4-2049": 0.0625,
+          "RK4-4097": 0.039062486812590794,
+          "SSPRK3-1025": 0.0,
+          "SSPRK3-2049": 0.0,
+          "SSPRK3-4097": 0.0
+        },
+        "terminal": true
+      },
+      "terminal_classification": "calibration_failed_no_eligible_GR0_case"
+    }
+  },
+  "certificate_contract": [
+    "accepted_fine_state_must_pass_the_original_raw_source_gate",
+    "both_amplitudes_must_stop_on_the_same_universal_source_gate",
+    "canonical_hash_bound_result_required",
+    "checkpoint_must_bind_the_terminal_mixed_member_state_without_claiming_a_common_event",
+    "diagnosis_must_not_answer_the_mechanism_question",
+    "diagnosis_must_not_read_SGBL_or_FGCQR",
+    "event_log_must_contain_only_two_passing_t0_common_events",
+    "full_unaccepted_proposal_must_reproduce_a_raw_source_gate_miss",
+    "kinetic_condition_and_acceleration_correction_margins_must_be_serialized",
+    "manifest_must_bind_HLT3_plan_inputs_implementations_and_commit",
+    "one_eighth_unaccepted_proposal_must_pass_the_unchanged_raw_source_gate",
+    "one_half_unaccepted_proposal_must_pass_the_unchanged_raw_source_gate",
+    "raw_campaign_files_must_match_the_frozen_hashes"
+  ],
+  "classification": "post_calibration_numerical_trial_stop_ownership_obstruction_not_mechanism_result",
+  "derivation_document": "docs/fgc-cal2-pref4.md",
+  "derivation_document_sha256": "d9bc14ae8f0fa95045b5338135c6bc2baaca51b16b4ee51d58ab68b1a10edefb",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO5_GR0_source_stop_ownership_contract_obstructed": true,
+    "PROTO5_resolved_holdout_manifest_authorized": false,
+    "PROTO6_premise_revision_required": true,
+    "both_amplitudes_reached_only_t0_common_event": true,
+    "both_amplitudes_share_threshold_adjacent_source_stop": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "kinetic_condition_stop_reached": false,
+    "last_accepted_fine_state_passes_original_source_gate": true,
+    "one_eighth_proposal_passes_unchanged_source_gate": true,
+    "one_half_proposal_passes_unchanged_source_gate": true,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "unaccepted_full_proposal_misses_original_source_gate": true,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_cal2_pref4.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_cal2_pref4.py": "f1c5a2f6044a827704b8a4ec837004b4c330d3169d350313c8d62985d693738d",
+    "src/recursive_horizons/fgc/evolution/cal2_source_diagnosis.py": "506764b60d767affb7db067b8bb3e7e92f4d6a6d0c163a5af6a6772fae29c976"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "FGCQR_mechanism_rejected": false,
+    "SGBL_control_completed": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "trapped_sphere_observed": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal2-run1.toml": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+    "results/fgc-1-hlt3-mon3.json": "80ba72924b0fc7509b97105ba881e1df9951f5e935bf5429d9b10672bb236ec6"
+  },
+  "project_version": "0.11.0",
+  "raw_campaign_sha256": {
+    "runs/fgc-2-sf1/proto5/calibration/campaign-result.json": "9cbd2cdd44a85bb7c3d65b2c13c7b6f192e4d38375f8e4efc642208717be2296",
+    "runs/fgc-2-sf1/proto5/calibration/events.jsonl": "022ca3629134eb710df931aeef03ccba91c288856473696bf7a6ddeaf9e1b2d1",
+    "runs/fgc-2-sf1/proto5/calibration/latest-checkpoint.npz": "8607800ada752c7571b00e975399b8c038c145fa8635b3ffaedf4a010c1e7f12",
+    "runs/fgc-2-sf1/proto5/calibration/manifest.json": "f47c9c54c9ddccb9c1b97807512c3ed1ae93f6692030e0d583ac8b71c6ba55d0"
+  },
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "GR0_calibration_trajectory_read": true,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "first_nonzero_common_event_completed": false,
+    "target_protocol": "FGC-2-SF1-PROTO5"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal2-pref4.toml": "d596a45899baecbb5ea1f9d5d26409782376327ce6ddb2fc961e03626abc5a55"
+  }
+}

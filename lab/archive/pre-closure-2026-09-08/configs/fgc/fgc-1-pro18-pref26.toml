@@ -1,0 +1,182 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO18-PREF26"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO17"
+
+[scope]
+role = "prospective_read_only_actual_source_container_and_legacy_history_binder"
+PREF26_read_only_source_execution_authorized = true
+raw_source_checkpoint_opening_permitted_only_for_declared_read_only_verification = true
+historical_event_log_opening_permitted_only_for_declared_read_only_semantic_replay = true
+future_PROTO17_output_root_observation = false
+future_namespace_created = false
+pretrajectory_operation = false
+trajectory_read = false
+mechanism_question_answered = false
+
+[predecessor]
+sealed_commit = "8a41a70606dbdc0092e45eed215fd108b35fac9b"
+sealed_commit_must_be_ancestor_of_HEAD = true
+predecessor_artifact = "FGC-1-PRO18-FRZ1"
+target_protocol = "FGC-2-SF1-PROTO17"
+predecessor_config = "configs/fgc/fgc-1-pro18-frz1.toml"
+predecessor_config_sha256 = "f0997e28bd92c013dac34e8c4c0bc39de4ac7db882a6dc40708724bf58df4a60"
+predecessor_result = "results/fgc-1-pro18-frz1.json"
+predecessor_result_sha256 = "d9aaad258ee9a6faddef445a998fda0faeb925351b412f2ae714b1ff41238698"
+predecessor_reproducer = "scripts/reproduce_fgc_pro18_frz1.py"
+predecessor_reproducer_sha256 = "2159834037ced5c57fbe7ced91ccfb83eec5b98d62232bef15a2d56014029d60"
+predecessor_contract = "src/recursive_horizons/fgc/evolution/proto18_prelaunch_contract.py"
+predecessor_contract_sha256 = "e7a86c5d52ce6e020ae5316038518b960d608e8467622dd8cb129a85cc5bfa21"
+predecessor_document = "docs/fgc-pro18-frz1.md"
+predecessor_document_sha256 = "4fc2b5850918c3d1ab7555646304374210e7e2a6118bbfabd578d544bd3cc2fb"
+authority_identity = "FGC-1-PRO18-AUTH1"
+
+[construction_inputs]
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v17.toml"
+protocol_config_sha256 = "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+protocol_schema_module = "src/recursive_horizons/fgc/evolution/protocol_v17.py"
+protocol_schema_module_sha256 = "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+protocol_construction_module = "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py"
+protocol_construction_module_sha256 = "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d"
+restart_lineage_result = "results/fgc-1-pro15-frz1.json"
+restart_lineage_result_sha256 = "99d24425cb5d40da2e248605265b83bcdc82a2126cfa4b5bce4239c6ef30635c"
+initial_TDG6_ledger_policy = "exact_zero_initialization_at_23_over_16"
+final_PROTO17_GenesisSpec_construction_deferred_to_AUTH1 = true
+
+[source_contract]
+container_format = "NPZ"
+source_container_count = 2
+legacy_event_log_count = 2
+logical_selector_count = 6
+selector_authority = "FGC-1-PRO18-FRZ1 selectors.member"
+source_container_grammar = "exactly_two_shared_NPZ_containers_plus_matching_legacy_events_jsonl; six selectors may share a container but never a selector identity"
+canonical_selector_order = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193", "SSPRK3-16385"]
+restart_coordinate_time = "23/16"
+active_target_time = "3/2"
+
+[[source_contract.source]]
+source_id = "PROTO12"
+checkpoint = "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz"
+checkpoint_sha256 = "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17"
+checkpoint_byte_count = 4481907
+checkpoint_npz_member_count = 44
+checkpoint_total_uncompressed_byte_count = 25630600
+checkpoint_largest_member_uncompressed_byte_count = 21096578
+event_log = "runs/fgc-2-sf1/proto12/calibration/events.jsonl"
+event_log_sha256 = "c2d35d07db2f6c983a449cdcf2db469360565cf392d78348dcafbd1d81234ba7"
+event_log_byte_count = 21096450
+event_log_line_count = 49
+legacy_terminal_classification = "calibration_failed_no_eligible_GR0_case"
+selector_keys = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193"]
+
+[[source_contract.source]]
+source_id = "RSP2"
+checkpoint = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz"
+checkpoint_sha256 = "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34"
+checkpoint_byte_count = 1460326
+checkpoint_npz_member_count = 9
+checkpoint_total_uncompressed_byte_count = 2452515
+checkpoint_largest_member_uncompressed_byte_count = 786608
+event_log = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/events.jsonl"
+event_log_sha256 = "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937"
+event_log_byte_count = 15060
+event_log_line_count = 25
+legacy_terminal_classification = "completed_target_and_complete_constraint_pass"
+selector_keys = ["SSPRK3-16385"]
+
+[resource_bounds]
+maximum_total_source_container_bytes = 5942233
+maximum_total_legacy_event_log_bytes = 21111510
+maximum_total_source_bytes = 27053743
+maximum_total_NPZ_members = 53
+maximum_total_uncompressed_NPZ_bytes = 28083115
+maximum_single_uncompressed_NPZ_member_bytes = 21096578
+maximum_legacy_event_log_lines = 74
+network_access_permitted = false
+write_access_to_source_containers_or_logs = false
+write_access_to_future_output_roots = false
+
+[semantic_replay]
+source_specific_legacy_grammar_required = true
+append_only_order_required = true
+terminal_identity_required = true
+checkpoint_embedded_history_linkage_required = true
+full_prior_PDE_step_reexecution_claimed = false
+PROTO14_must_not_be_used_as_source = true
+semantic_replay_must_not_normalize_or_rewrite_history = true
+
+[future_chain]
+PREF26 = "FGC-1-PRO18-PREF26"
+AUTH1 = "FGC-1-PRO18-AUTH1"
+HLT15_GEN1 = "FGC-1-HLT15-GEN1"
+PREF27 = "FGC-1-PRO18-PREF27"
+required_order = ["PREF26", "AUTH1", "HLT15_GEN1", "PREF27"]
+PREF26_must_not_authorize_AUTH1_or_later = true
+AUTH1_must_be_committed_before_HLT15_GEN1 = true
+HLT15_GEN1_must_recheck_authority_and_import_in_one_isolated_invocation = true
+PREF27_owns_actual_namespace_reuse_and_foreign_store_rejection = true
+
+[typed_stops]
+predecessor_lineage_drift = "PREF26_PREDECESSOR_LINEAGE_DRIFT"
+source_path_missing_or_unsafe = "PREF26_DECLARED_SOURCE_PATH_MISSING_OR_UNSAFE"
+source_byte_or_hash_drift = "PREF26_SOURCE_BYTE_OR_HASH_DRIFT"
+resource_bound_exceeded = "PREF26_SOURCE_RESOURCE_BOUND_EXCEEDED"
+NPZ_schema_or_selector_drift = "PREF26_NPZ_SCHEMA_OR_SELECTOR_DRIFT"
+legacy_history_malformed_or_semantically_inconsistent = "PREF26_LEGACY_HISTORY_SEMANTIC_REPLAY_FAILED"
+legacy_history_write_attempt = "PREF26_LEGACY_HISTORY_WRITE_FORBIDDEN"
+future_output_root_access_attempt = "PREF26_FUTURE_OUTPUT_ROOT_ACCESS_FORBIDDEN"
+authority_or_launch_promotion = "PREF26_AUTHORITY_OR_LAUNCH_PROMOTION_FORBIDDEN"
+invalid_or_nonconverged_binder = "PREF26_INVALID_OR_NONCONVERGED_BINDER"
+
+[duty_transition_on_success]
+raw_bundle_byte_and_hash_recomputation_required = true
+raw_bundle_byte_and_hash_recomputation_completed = true
+semantic_historical_journal_payload_replay_required = true
+semantic_historical_journal_payload_replay_completed = true
+external_Git_authority_blob_and_live_import_validation_required = true
+external_Git_authority_blob_and_live_import_validation_completed = false
+namespace_reuse_and_foreign_store_rejection_required = true
+namespace_reuse_and_foreign_store_rejection_completed = false
+
+[authorization_on_success]
+PREF26_completed = true
+AUTH1_implementation_or_design_authorized = true
+AUTH1_authorized = false
+HLT15_GEN1_authorized = false
+PREF27_authorized = false
+fresh_GR0_calibration_authorized = false
+
+[claims]
+PRO18_predecessor_bound = true
+PREF26_contract_frozen = true
+PREF26_read_only_source_execution_authorized = true
+PREF26_completed = false
+actual_raw_bundle_byte_and_hash_recomputed = false
+actual_legacy_history_semantically_replayed = false
+AUTH1_input_evidence_derived = false
+PROTO17_genesis_spec_constructed = false
+AUTH1_implementation_or_design_authorized = false
+AUTH1_authorized = false
+AUTH1_committed = false
+HLT15_GEN1_authorized = false
+PREF27_authorized = false
+future_output_roots_reobserved = false
+future_namespace_created = false
+pretrajectory_operation_authorized = false
+trajectory_read = false
+fresh_GR0_calibration_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+candidate_execution_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+global_continuation_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

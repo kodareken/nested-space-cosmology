@@ -1,0 +1,584 @@
+{
+  "artifact_id": "FGC-1-CAL8-PREF10",
+  "artifact_payload": {
+    "campaign_diagnosis": {
+      "amplitude_five_halves_first_evolved_event_fully_admitted": true,
+      "amplitude_five_halves_source_obstruction": {
+        "accepted_increment_time_ulp_budget": 2,
+        "accepted_time_group_count": 16,
+        "all_inferred_accepted_advances_match_the_next_half_step": true,
+        "all_rejections_are_raw_newton_residual_limit_only": true,
+        "all_rejections_member": "RK4-8193",
+        "all_rejections_preserve_the_complete_accepted_boundary": true,
+        "all_retry_sequences_are_exact_binary_halvings": true,
+        "amplitude": "5/2",
+        "cross_member_rollback_verified": true,
+        "first_failed_stage_time": 0.07063802008964708,
+        "first_failed_step_size": 0.0008138020013099967,
+        "first_to_last_failed_step_ratio": 524288.00096006,
+        "frozen_minimum_step_size": 9.313225746154785e-10,
+        "groups": [
+          {
+            "accepted_state_sha256": "a21d18009b48bded1e41eb8b5c5863bb1687a0d9136215fcfbf7c389d88cd8a3",
+            "accepted_step_index": 82,
+            "accepted_time": 0.06982421808833708,
+            "accepted_transaction_serial": 410,
+            "failed_retry_count": 1,
+            "first_failed_step_size": 0.0008138020013099967,
+            "group_index": 0,
+            "inferred_next_accepted_advance": 0.000406901000655005,
+            "last_failed_step_size": 0.0008138020013099967,
+            "maximum_failed_residual": 1.06623436343361e-12,
+            "maximum_failed_stage_time": 0.07063802008964708,
+            "minimum_failed_residual": 1.0660548321449683e-12,
+            "minimum_failed_stage_time": 0.07063802008964708,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "338ef56cb753909fce1811bbfccfbbdd9dc5ee195fb9dcf92ec73f7b2d2acd25",
+            "accepted_step_index": 83,
+            "accepted_time": 0.07023111908899209,
+            "accepted_transaction_serial": 415,
+            "failed_retry_count": 2,
+            "first_failed_step_size": 0.0008138020005529287,
+            "group_index": 1,
+            "inferred_next_accepted_advance": 0.0002034505001382303,
+            "last_failed_step_size": 0.00040690100027646433,
+            "maximum_failed_residual": 1.1822072681653149e-12,
+            "maximum_failed_stage_time": 0.07104492108954502,
+            "minimum_failed_residual": 1.066276225541681e-12,
+            "minimum_failed_stage_time": 0.07063802008926855,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "74c2343c060eddd5d6fe3b276ff657911592c1f755d305aa28d20b9374c5e2a6",
+            "accepted_step_index": 84,
+            "accepted_time": 0.07043456958913032,
+            "accepted_transaction_serial": 420,
+            "failed_retry_count": 3,
+            "first_failed_step_size": 0.0008138020001814227,
+            "group_index": 2,
+            "inferred_next_accepted_advance": 0.00010172525002268007,
+            "last_failed_step_size": 0.00020345050004535567,
+            "maximum_failed_residual": 1.241182372883351e-12,
+            "maximum_failed_stage_time": 0.07124837158931174,
+            "minimum_failed_residual": 1.0664921688622595e-12,
+            "minimum_failed_stage_time": 0.07063802008917568,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "4217e3da4e2e06d41685e0502b3182cbf9c2d4446a5f23ab0aaab0b1795d19d7",
+            "accepted_step_index": 85,
+            "accepted_time": 0.070536294839153,
+            "accepted_transaction_serial": 425,
+            "failed_retry_count": 4,
+            "first_failed_step_size": 0.000813801999997486,
+            "group_index": 3,
+            "inferred_next_accepted_advance": 5.086262499984229e-05,
+            "last_failed_step_size": 0.00010172524999968575,
+            "maximum_failed_residual": 1.2710040789752645e-12,
+            "maximum_failed_stage_time": 0.07135009683915049,
+            "minimum_failed_residual": 1.0666546173081888e-12,
+            "minimum_failed_stage_time": 0.07063802008915268,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "ea897abe6512ceea8036f76c40d575fc05fc400acc5be8ef3fa1ddec9d9ec59e",
+            "accepted_step_index": 86,
+            "accepted_time": 0.07058715746415284,
+            "accepted_transaction_serial": 430,
+            "failed_retry_count": 5,
+            "first_failed_step_size": 0.0008138019999059793,
+            "group_index": 4,
+            "inferred_next_accepted_advance": 2.543131249706232e-05,
+            "last_failed_step_size": 5.0862624994123704e-05,
+            "maximum_failed_residual": 1.285974134853375e-12,
+            "maximum_failed_stage_time": 0.07140095946405882,
+            "minimum_failed_residual": 1.0666969355207447e-12,
+            "minimum_failed_stage_time": 0.07063802008914696,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "ebffc11f31394ae2b95460c8d5d5da78172a09a7925a5d89cee964c31620f2c7",
+            "accepted_step_index": 87,
+            "accepted_time": 0.0706125887766499,
+            "accepted_transaction_serial": 435,
+            "failed_retry_count": 6,
+            "first_failed_step_size": 0.0008138019998603423,
+            "group_index": 5,
+            "inferred_next_accepted_advance": 1.2715656247816454e-05,
+            "last_failed_step_size": 2.5431312495635696e-05,
+            "maximum_failed_residual": 1.2934742959374458e-12,
+            "maximum_failed_stage_time": 0.07142639077651024,
+            "minimum_failed_residual": 1.0667077288906265e-12,
+            "minimum_failed_stage_time": 0.07063802008914553,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "ea3ede9314490182d249b8b413789babdb0d950703420d391f57ae08acc6b9a1",
+            "accepted_step_index": 88,
+            "accepted_time": 0.07062530443289772,
+            "accepted_transaction_serial": 440,
+            "failed_retry_count": 7,
+            "first_failed_step_size": 0.000813801999837553,
+            "group_index": 6,
+            "inferred_next_accepted_advance": 6.3578281237347545e-06,
+            "last_failed_step_size": 1.2715656247461765e-05,
+            "maximum_failed_residual": 1.2972282014305195e-12,
+            "maximum_failed_stage_time": 0.07143910643273527,
+            "minimum_failed_residual": 1.0667104539955585e-12,
+            "minimum_failed_stage_time": 0.07063802008914517,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "064458e8416cf66ffe973d622ae3bc885217a8bd300f0d9537f6a18b2b280e77",
+            "accepted_step_index": 89,
+            "accepted_time": 0.07063166226102145,
+            "accepted_transaction_serial": 445,
+            "failed_retry_count": 8,
+            "first_failed_step_size": 0.0008138019998261657,
+            "group_index": 7,
+            "inferred_next_accepted_advance": 3.178914061818805e-06,
+            "last_failed_step_size": 6.35782812364192e-06,
+            "maximum_failed_residual": 1.299106115629878e-12,
+            "maximum_failed_stage_time": 0.07144546426084762,
+            "minimum_failed_residual": 1.0667111386193331e-12,
+            "minimum_failed_stage_time": 0.07063802008914509,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "31b93ad9c6d519de21f312b05f07e21ae53bfa08338c61c09bf813653a54b06c",
+            "accepted_step_index": 90,
+            "accepted_time": 0.07063484117508327,
+            "accepted_transaction_serial": 450,
+            "failed_retry_count": 12,
+            "first_failed_step_size": 0.000813801999820474,
+            "group_index": 8,
+            "inferred_next_accepted_advance": 1.9868212886020586e-07,
+            "last_failed_step_size": 3.973642577248408e-07,
+            "maximum_failed_residual": 1.3000453137450844e-12,
+            "maximum_failed_stage_time": 0.07144864317490375,
+            "minimum_failed_residual": 1.0659180876489722e-12,
+            "minimum_failed_stage_time": 0.07063523853934099,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "5f1043660625ad46c7d028dea0bc32d13ac7865a51955a1819b099f1de0d8bb4",
+            "accepted_step_index": 91,
+            "accepted_time": 0.07063503985721213,
+            "accepted_transaction_serial": 455,
+            "failed_retry_count": 13,
+            "first_failed_step_size": 0.0008138019998201179,
+            "group_index": 9,
+            "inferred_next_accepted_advance": 9.934106443010293e-08,
+            "last_failed_step_size": 1.9868212886233348e-07,
+            "maximum_failed_residual": 1.300104018966776e-12,
+            "maximum_failed_stage_time": 0.07144884185703225,
+            "minimum_failed_residual": 1.0659180883197983e-12,
+            "minimum_failed_stage_time": 0.07063523853934099,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "80e497892146528fe0ede111f6eee525dd6857f0164f5c43a148f8fae00ed460",
+            "accepted_step_index": 92,
+            "accepted_time": 0.07063513919827656,
+            "accepted_transaction_serial": 460,
+            "failed_retry_count": 14,
+            "first_failed_step_size": 0.0008138019998199401,
+            "group_index": 10,
+            "inferred_next_accepted_advance": 4.9670532215051466e-08,
+            "last_failed_step_size": 9.934106443114503e-08,
+            "maximum_failed_residual": 1.3001333718142685e-12,
+            "maximum_failed_stage_time": 0.0714489411980965,
+            "minimum_failed_residual": 1.0659180884875144e-12,
+            "minimum_failed_stage_time": 0.07063523853934099,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "378210eae7140a8ead16914106fe37a49d30f7b572ccf98193e0695fe8ada6a3",
+            "accepted_step_index": 93,
+            "accepted_time": 0.07063518886880878,
+            "accepted_transaction_serial": 465,
+            "failed_retry_count": 15,
+            "first_failed_step_size": 0.0008138019998198513,
+            "group_index": 11,
+            "inferred_next_accepted_advance": 2.4835266107525733e-08,
+            "last_failed_step_size": 4.96705322155671e-08,
+            "maximum_failed_residual": 1.3001480482969566e-12,
+            "maximum_failed_stage_time": 0.07144899086862863,
+            "minimum_failed_residual": 1.0659180885294482e-12,
+            "minimum_failed_stage_time": 0.07063523853934099,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "065423a9ac2de32245167284b687dd6d5f2374462d836153767405b78cfaf23f",
+            "accepted_step_index": 94,
+            "accepted_time": 0.07063521370407488,
+            "accepted_transaction_serial": 470,
+            "failed_retry_count": 17,
+            "first_failed_step_size": 0.0008138019998198069,
+            "group_index": 12,
+            "inferred_next_accepted_advance": 6.20881653035088e-09,
+            "last_failed_step_size": 1.2417633053891096e-08,
+            "maximum_failed_residual": 1.300155386553033e-12,
+            "maximum_failed_stage_time": 0.0714490157038947,
+            "minimum_failed_residual": 1.065914547315444e-12,
+            "minimum_failed_stage_time": 0.07063522612170794,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "f3c27239a4d5a7111055da821fc378cb14dd8db5a5fce23d4a42536629a450e6",
+            "accepted_step_index": 95,
+            "accepted_time": 0.07063521991289141,
+            "accepted_transaction_serial": 475,
+            "failed_retry_count": 18,
+            "first_failed_step_size": 0.0008138019998197957,
+            "group_index": 13,
+            "inferred_next_accepted_advance": 3.104408258236546e-09,
+            "last_failed_step_size": 6.208816526945463e-09,
+            "maximum_failed_residual": 1.3001572211185879e-12,
+            "maximum_failed_stage_time": 0.07144902191271121,
+            "minimum_failed_residual": 1.0659145473160983e-12,
+            "minimum_failed_stage_time": 0.07063522612170794,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "4f33ff920409a9f40aa3870261c784cc510c5edbd3a583c522b7f80e64de72fb",
+            "accepted_step_index": 96,
+            "accepted_time": 0.07063522301729967,
+            "accepted_transaction_serial": 480,
+            "failed_retry_count": 19,
+            "first_failed_step_size": 0.0008138019998197903,
+            "group_index": 14,
+            "inferred_next_accepted_advance": 1.552204129118273e-09,
+            "last_failed_step_size": 3.1044082634727107e-09,
+            "maximum_failed_residual": 1.3001581384015929e-12,
+            "maximum_failed_stage_time": 0.07144902501711946,
+            "minimum_failed_residual": 1.0659145473162622e-12,
+            "minimum_failed_stage_time": 0.07063522612170793,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": true
+          },
+          {
+            "accepted_state_sha256": "414e3805cd2693d73770f6f7222ea27cdaf568299c7f913e6029457320792bab",
+            "accepted_step_index": 97,
+            "accepted_time": 0.0706352245695038,
+            "accepted_transaction_serial": 485,
+            "failed_retry_count": 20,
+            "first_failed_step_size": 0.0008138019998197875,
+            "group_index": 15,
+            "inferred_next_accepted_advance": null,
+            "last_failed_step_size": 1.55220413173635e-09,
+            "maximum_failed_residual": 1.3001585970431562e-12,
+            "maximum_failed_stage_time": 0.07144902656932359,
+            "minimum_failed_residual": 1.0659145473163054e-12,
+            "minimum_failed_stage_time": 0.07063522612170793,
+            "next_accepted_advance_matches_exact_half_step_within_time_ULP_budget": null
+          }
+        ],
+        "last_accepted_step_index": 97,
+        "last_accepted_time": 0.0706352245695038,
+        "last_accepted_transaction_serial": 485,
+        "last_failed_stage_time": 0.07063522612170793,
+        "last_legal_failed_step_size": 1.55220413173635e-09,
+        "maximum_failed_source_residual": 1.3001585970431562e-12,
+        "minimum_failed_source_residual": 1.065914547315444e-12,
+        "minimum_residual_over_raw_limit": 1.0659145473154439,
+        "next_forbidden_step_size": 7.76102065868175e-10,
+        "raw_source_residual_limit": 1e-12,
+        "rejected_source_only_proposal_count": 164,
+        "terminal_classification": "scientific_source_retry_exhausted",
+        "terminal_exhaustion_kind": "minimum_step_size"
+      },
+      "amplitude_three_direct_spectral_obstruction": {
+        "amplitude": "3",
+        "both_constraint_admissions_passed": true,
+        "both_spatial_admissions_passed": false,
+        "comparator_trapped_scores": [
+          -0.07432782743130237,
+          -0.07432763536648483,
+          -0.07432761224249804
+        ],
+        "coordinate_time": 0.0625,
+        "direct_tail_ceiling": 0.25,
+        "event_index": 1,
+        "interior_q_reprojected": false,
+        "methods": {
+          "RK4": {
+            "all_coarse_to_medium_field_tails_passed_directly": true,
+            "coarse_to_medium_phi_derivative_tail_passed": false,
+            "constraint_admission_passed": true,
+            "derivative_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                0.001205802986705017,
+                42.77668917800263
+              ],
+              "alpha_minus_1": [
+                0.003342262901046483,
+                0.7204806873526213
+              ],
+              "chi_over_Lambda": [
+                0.06277011652058005,
+                0.4989466788197822
+              ],
+              "lambda_minus_1": [
+                0.008540496077968187,
+                7.302675422095383
+              ],
+              "phi_over_Lambda": [
+                0.326717281113685,
+                0.22812049822366257
+              ],
+              "shift_over_r": [
+                0.006388982384503344,
+                0.34742720131896143
+              ]
+            },
+            "direct_tail_ceiling": 0.25,
+            "every_whole_profile_contracted": true,
+            "failed_coarse_to_medium_derivative_fields": [
+              "phi_over_Lambda"
+            ],
+            "field_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                0.0002984992847626219,
+                10.515830320638543
+              ],
+              "alpha_minus_1": [
+                0.0008377122786269719,
+                0.1826547856440661
+              ],
+              "chi_over_Lambda": [
+                0.014953321263508162,
+                0.12253166246353876
+              ],
+              "lambda_minus_1": [
+                0.0022166560357810053,
+                1.7724997726950051
+              ],
+              "phi_over_Lambda": [
+                0.08205783940839324,
+                0.057642556282393856
+              ],
+              "shift_over_r": [
+                0.001619442850449679,
+                0.08487935439961611
+              ]
+            },
+            "finest_pair_individual_budgets_passed": true,
+            "maximum_spatial_round_trip_interpolation_infinity": 0.0005493054633368914,
+            "medium_to_fine_phi_derivative_tail_passed": true,
+            "minimum_finite_constraint_order": 3.5135589461630876,
+            "phi_derivative_tail_ratios": [
+              0.326717281113685,
+              0.22812049822366257
+            ],
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          },
+          "SSPRK3": {
+            "all_coarse_to_medium_field_tails_passed_directly": true,
+            "coarse_to_medium_phi_derivative_tail_passed": false,
+            "constraint_admission_passed": true,
+            "derivative_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                0.002264473560088764,
+                20.781237839561964
+              ],
+              "alpha_minus_1": [
+                0.003887436492716233,
+                0.6419272513742811
+              ],
+              "chi_over_Lambda": [
+                0.06724761971328813,
+                0.3749869988390259
+              ],
+              "lambda_minus_1": [
+                0.008722672466387634,
+                9.149994492304108
+              ],
+              "phi_over_Lambda": [
+                0.26675704013240803,
+                0.2142551901915683
+              ],
+              "shift_over_r": [
+                0.005501326640558336,
+                0.4324495613256886
+              ]
+            },
+            "direct_tail_ceiling": 0.25,
+            "every_whole_profile_contracted": true,
+            "failed_coarse_to_medium_derivative_fields": [
+              "phi_over_Lambda"
+            ],
+            "field_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                0.0005590168814718953,
+                5.070942763250259
+              ],
+              "alpha_minus_1": [
+                0.0009764570919899801,
+                0.16287524169804254
+              ],
+              "chi_over_Lambda": [
+                0.01611705954020194,
+                0.09117827541989863
+              ],
+              "lambda_minus_1": [
+                0.002257352238083121,
+                2.216323964912389
+              ],
+              "phi_over_Lambda": [
+                0.06589203548661351,
+                0.05419365444261706
+              ],
+              "shift_over_r": [
+                0.001392121959875732,
+                0.1054982127824658
+              ]
+            },
+            "finest_pair_individual_budgets_passed": true,
+            "maximum_spatial_round_trip_interpolation_infinity": 0.000566407457486452,
+            "medium_to_fine_phi_derivative_tail_passed": true,
+            "minimum_finite_constraint_order": 1.822132270031224,
+            "phi_derivative_tail_ratios": [
+              0.26675704013240803,
+              0.2142551901915683
+            ],
+            "point_counts": [
+              2049,
+              4097,
+              8193
+            ]
+          }
+        },
+        "primary_trapped_scores": [
+          -0.07432761961457084,
+          -0.07432760893094136,
+          -0.07432760891975138
+        ],
+        "sole_direct_coarse_to_medium_veto": "phi_over_Lambda derivative tail",
+        "source_only_rejection_count": 0,
+        "temporal_spectrum_available": false,
+        "terminal_classification": "common_event_constraint_or_spectral_stop",
+        "terminal_reason": "common_event_constraint_or_spatial_spectral_admission",
+        "trapped_sign_passed": false
+      },
+      "both_amplitudes_reached_one_evolved_common_event": true,
+      "candidate_or_mechanism_outcome_read": false,
+      "common_event_count": 4,
+      "event_log_line_count": 168,
+      "no_GR0_amplitude_eligible": true,
+      "source_only_rejection_count": 164
+    },
+    "epistemic_boundary": {
+      "localized_numerical_questions": [
+        "whether stable affine source arithmetic can satisfy the unchanged complete raw 1e-12 residual gate",
+        "whether the amplitude-3 coarse phi derivative tail is pre-asymptotic or a persistent continuum-resolution obstruction"
+      ],
+      "not_observed": [
+        "an eligible GR-0 calibration case",
+        "a qualified trapped common event",
+        "SGB-L or FGC-QR dynamics",
+        "regulator activation or metric-null defocusing",
+        "a continuum branch or hyperbolicity loss",
+        "a retained-EFT or physical transition"
+      ],
+      "observed_results": [
+        "amplitude 5/2 passed one fully admitted evolved common event before a repeatable RK4-8193 affine source residual wall exhausted the frozen binary-halving budget",
+        "amplitude 3 reached the same evolved event without source retry and failed only the unchanged direct coarse-to-medium phi derivative-tail veto"
+      ],
+      "successor_status": "SRC2 replay and arithmetic preflight is required; PROTO12 is not frozen"
+    },
+    "immutable_campaign": {
+      "authorization_commit": "199c86e55a7504e780ccce5a840648528482f819",
+      "campaign_id": "63ea00c3a781d3a024c69d9841cadc74bf994cd7ed3750bc12cd29bbf24c6548",
+      "campaign_result_sha256": "d9abdcb813b30999c1c1d439808f5a0bd38baf1762276c690687a9d01d374a08",
+      "checkpoint_sha256": "f8d8d8768559ff3acd120b559c7f6444467bcdd9fcc217e3048cf30c51fb1017",
+      "classification": "calibration_failed_no_eligible_GR0_case",
+      "elapsed_wall_seconds": 5217.217679416994,
+      "event_log_sha256": "c76d8f3b35e7319351b33a33f3c42ccd2f81741d43f9d7978246ff9daf42b9f5",
+      "manifest_sha256": "3ab6ea9e4286dfc412aae98f515cb9ca0e231da6280b55edb2e2f4bd47c53d03"
+    },
+    "prospective_revision": {
+      "PROTO11_reference_state_derivative_map_remains_unchanged": true,
+      "PROTO12_may_be_frozen_only_after_a_nontrivial_source_arithmetic_control_passes": true,
+      "amplitude_three_spectral_failure_may_not_be_relabelled_or_saturated_away": true,
+      "constraint_spectrum_health_boundary_and_observable_rules_remain_unchanged": true,
+      "direct_coarse_to_medium_one_quarter_veto_remains_binding": true,
+      "fresh_namespace_and_fresh_campaign_required_after_any_freeze": true,
+      "next_gate": "FGC-1-SRC2-PREF11",
+      "no_resolution_shift_or_threshold_change_is_authorized": true,
+      "physical_inputs_amplitude_order_methods_grids_CFL_retries_and_minimum_step_remain_unchanged": true,
+      "purpose": "capture_and_attack_the_evolved_affine_source_arithmetic_wall_before_any_successor_protocol",
+      "raw_complete_unredefined_source_residual_and_1e_minus_12_ceiling_remain_unchanged": true,
+      "source_wall_fixture_must_bind_complete_affine_matrix_constant_term_state_and_residual_authority": true,
+      "source_wall_replay_must_reproduce_the_immutable_first_common_event_and_terminal_trace": true,
+      "stable_arithmetic_candidates_must_be_compared_without_changing_the_continuum_equations": true
+    }
+  },
+  "classification": "post_calibration_PROTO11_evolved_source_arithmetic_and_direct_spectral_obstruction_diagnosis",
+  "derivation_document": "docs/fgc-cal8-pref10.md",
+  "derivation_document_sha256": "f52af9e205d9f634dfa72e81aaa81ba519f28f49f103f3a12c9f2c373ed488f0",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO11_GR0_case_eligible": false,
+    "PROTO11_both_amplitudes_reached_evolved_common_event": true,
+    "PROTO11_campaign_terminated_normally": true,
+    "PROTO11_direct_coarse_phi_derivative_veto_localized": true,
+    "PROTO11_evolved_affine_source_arithmetic_obstruction_localized": true,
+    "PROTO12_frozen": false,
+    "SRC2_affine_source_arithmetic_preflight_required": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_cal8_pref10.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_cal8_pref10.py": "240442e62d4cff80bf3cb55494ea500888c2002b2f66629b20cfc6b4cb4a947c",
+    "src/recursive_horizons/fgc/evolution/cal8_proto11_campaign_diagnosis.py": "ef5e75a418764576d52e7a576f4b4657efa62c54ab156f7586d68d94ac3c0b3f"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO11_GR0_case_eligible": false,
+    "PROTO12_frozen": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal8-run1.toml": "db3d28ffac36fe4e9720d81ea849cdd7262f876810e30ed2cd1cd8176891d42f",
+    "results/fgc-1-hlt9-mon9.json": "1902cedb853643c445ece733c57d4cc3815c11d48a1d123aefa12c009368893e"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "GR0_calibration_trajectory_read": true,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "mechanism_question_answered": false,
+    "role": "post_calibration_evolved_source_arithmetic_and_direct_spectral_obstruction_diagnosis",
+    "target_protocol": "FGC-2-SF1-PROTO11"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal8-pref10.toml": "a7646fb7ef2b229c36981a2f4a87e4428de1bdc5cbe324baedc965097c674cb3"
+  }
+}

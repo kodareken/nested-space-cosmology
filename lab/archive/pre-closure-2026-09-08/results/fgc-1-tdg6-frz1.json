@@ -1,0 +1,293 @@
+{
+  "artifact_id": "FGC-1-TDG6-FRZ1",
+  "artifact_payload": {
+    "alternative_decision": {
+      "fixed_absolute_or_relative_state_tolerance_selected": false,
+      "fixed_tolerance_rejection_reason": "arbitrary_scale_choice_and_no_direct_mapping_to_the_physical_sign_ledger",
+      "full_nonlinear_a_posteriori_PDE_stability_bound_selected": false,
+      "full_stability_bound_status": "stronger_route_deferred_until_a_useful_energy_estimate_exists",
+      "more_finite_history_samples_selected": false,
+      "more_samples_rejection_reason": "TDG4_sampling_kernel_theorem",
+      "single_coarse_fine_pair_selected": false,
+      "single_pair_rejection_reason": "cannot_test_the_asymptotic_assumption_used_by_its_Richardson_denominator",
+      "three_level_order_plus_debit_route_selected": true
+    },
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "TDG6_independent_binder_completed": false,
+      "absolute_state_error_threshold_defined": false,
+      "actual_PROTO13_history_arrays_consumed": false,
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "candidate_branch_opened": false,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "physical_question_answered": false,
+      "physical_signal_used_for_threshold_selection": false,
+      "production_compositor_implementation_authorized": false,
+      "production_compositor_implemented": false,
+      "production_state_advanced": false,
+      "replacement_temporal_admission_defined": true,
+      "rigorous_global_PDE_error_bound_proved": false,
+      "runtime_thresholds_frozen": true
+    },
+    "error_ledger": {
+      "accepted_macro_step_debits_accumulate_by_nonnegative_addition_without_cancellation": true,
+      "common_event_temporal_debit_vector_has_18_channels": true,
+      "debit_divided_by_formal_method_order_denominator_for_admission": false,
+      "debit_is_proof_of_trajectory_asymptotics": false,
+      "debit_is_rigorous_global_PDE_error_bound": false,
+      "formal_RK4_denominator_15_remains_separate_conditional_diagnostic": true,
+      "formal_SSPRK3_denominator_7_remains_separate_conditional_diagnostic": true,
+      "future_constraint_to_Raychaudhuri_stability_map_remains_required": true,
+      "future_trapped_and_DEF1_sign_margins_must_pay_the_temporal_debit": true,
+      "large_convergent_debit_is_not_hidden_by_an_absolute_pass_threshold": true,
+      "per_channel_finest_pair_debit": "D12_certified_upper",
+      "small_nonconvergent_difference_fails_even_when_its_absolute_magnitude_is_tiny": true
+    },
+    "exact_design_preflight": {
+      "complete_state_channel_count": 18,
+      "controls": {
+        "RK4_formal_contraction": {
+          "admission_passed": true,
+          "classification": "resolved_order_pass",
+          "finest_pair_debit": "1",
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        "SSPRK3_formal_contraction": {
+          "admission_passed": true,
+          "classification": "resolved_order_pass",
+          "finest_pair_debit": "1",
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        "enclosure_dominated": {
+          "admission_passed": true,
+          "classification": "enclosure_dominated_debit_only",
+          "finest_pair_debit": "1/2199023255552",
+          "order_threshold_passed": null,
+          "order_threshold_resolved": false,
+          "temporal_retry_permitted": false
+        },
+        "exact_boundary_passed": true,
+        "exact_zero": {
+          "admission_passed": true,
+          "classification": "exact_zero",
+          "finest_pair_debit": "0",
+          "order_threshold_passed": null,
+          "order_threshold_resolved": false,
+          "temporal_retry_permitted": false
+        },
+        "large_convergent": {
+          "admission_passed": true,
+          "classification": "resolved_order_pass",
+          "finest_pair_debit": "10",
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        "one_rational_unit_below_boundary_rejected": true,
+        "order_inconclusive": {
+          "admission_passed": false,
+          "classification": "order_inconclusive",
+          "finest_pair_debit": "1/549755813888",
+          "order_threshold_passed": null,
+          "order_threshold_resolved": false,
+          "temporal_retry_permitted": true
+        },
+        "small_nonconvergent": {
+          "admission_passed": false,
+          "classification": "resolved_order_failure",
+          "finest_pair_debit": "9/10000000000000",
+          "order_threshold_passed": false,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": true
+        }
+      },
+      "controls_passed": true,
+      "exact_squared_order_inequality": "8*D12_upper_squared<=D01_lower_squared",
+      "minimum_observed_order": "3/2",
+      "no_absolute_state_tolerance": true,
+      "path_accounting": {
+        "RK4": {
+          "coarse_proposals": 1,
+          "committed_fine_proposals": 4,
+          "committed_fine_stage_records": 20,
+          "fine_proposals": 4,
+          "medium_proposals": 2,
+          "total_shadow_proposals": 7,
+          "total_shadow_stage_records": 35
+        },
+        "SSPRK3": {
+          "coarse_proposals": 1,
+          "committed_fine_proposals": 4,
+          "committed_fine_stage_records": 16,
+          "fine_proposals": 4,
+          "medium_proposals": 2,
+          "total_shadow_proposals": 7,
+          "total_shadow_stage_records": 28
+        }
+      },
+      "physical_signal_used_for_normalization": false
+    },
+    "immutable_lineage": {
+      "bound_source_sha256": {
+        "configs/fgc/fgc-1-tdg5-imp1.toml": "96e31b0178c91dc86563cc745d16fa1b34c76f433829d410a772a3e567ea523a",
+        "configs/fgc/fgc-2-sf1-protocol-v13.toml": "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692",
+        "docs/fgc-tdg5-imp1.md": "60e42dde3766b3f2d071ac379f7adb6fefb1bcdb203c6273d12e9a6992a5f31f",
+        "results/fgc-1-tdg5-imp1.json": "cc95b04f5cea1c1f36443bea78d3851cba4e763a09551fb208f795cdbe232921",
+        "scripts/reproduce_fgc_tdg5_imp1.py": "f3291ff4e8508b491df8bbb1e3438a06c69d89200e0d19f6205a325ad6637694",
+        "scripts/run_fgc_gr0_calibration_v13.py": "bdc31c8ab4205ff86a134e9744aaaf8d085344aa1ba6a19cebb3fdbad94286d7",
+        "scripts/run_fgc_gr0_calibration_v7.py": "04324e7066dc5a3c4ea3f6200612cc6c1a51fae5adba0c28ecb10ebec2f5d2e7",
+        "src/recursive_horizons/fgc/evolution/proto7_runtime.py": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734",
+        "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py": "75fc11943f459ca7549f75a812fe961e55ae04bbdb13450c1fdd509b5b53a080"
+      },
+      "checkpoint_commit": "986ceb1afb7fa7574c3cda7c623cc94df69471ce",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "raw_campaign_bundle_loaded": false
+    },
+    "mutation_controls": {
+      "PROTO14_promotion_rejected": true,
+      "absolute_tolerance_injection_rejected": true,
+      "candidate_promotion_rejected": true,
+      "lineage_hash_mutation_rejected": true,
+      "medium_commit_mutation_rejected": true,
+      "minimum_order_mutation_rejected": true,
+      "outcome_scaling_injection_rejected": true,
+      "retry_count_mutation_rejected": true,
+      "squared_boundary_mutation_rejected": true,
+      "two_level_path_mutation_rejected": true
+    },
+    "production_compositor_contract": {
+      "any_non_source_failure_remains_terminal": true,
+      "checkpoint_must_include_debit_vector_retry_count_and_complete_rejection_evidence": true,
+      "coarse_medium_and_fine_transactions_have_independent_monitor_causal_and_tracer_shadows": true,
+      "commit_revalidates_state_time_step_serial_monitor_causal_tracer_and_debit_ledgers": true,
+      "every_level_must_pass_unchanged_source_health_CFL_boundary_scale_and_transaction_gates": true,
+      "macro_step_is_selected_only_from_inherited_CFL_and_target_event_distance_before_refinement": true,
+      "normal_flow_tracer_preview_must_follow_every_shadow_path": true,
+      "only_fine_tracer_monitor_causal_state_and_fields_commit": true,
+      "source_only_shadow_failure_uses_existing_source_retry_ownership": true,
+      "temporal_order_or_inconclusive_retry_serialized_before_next_attempt": true,
+      "temporal_retry_counter_is_separate_from_source_and_CFL_counters": true,
+      "unexpected_exception_is_invalid_not_physical": true
+    },
+    "proof_contract": {
+      "TDG5_IMP1_must_remain_canonical_and_threshold_design_only": true,
+      "absence_of_absolute_or_outcome_scaled_tolerance_must_be_mutation_attacked": true,
+      "all_exact_controls_must_pass": true,
+      "canonical_hash_bound_result_required": true,
+      "checkpoint_commit_and_every_bound_blob_must_match": true,
+      "design_module_must_use_exact_rational_threshold_controls": true,
+      "minimum_order_and_squared_boundary_must_be_mutation_attacked": true,
+      "no_raw_campaign_path_may_be_read_or_written": true,
+      "production_compositor_must_not_be_implemented_by_this_freeze": true,
+      "retry_factor_count_and_minimum_step_must_be_mutation_attacked": true,
+      "three_level_path_and_fine_only_commit_ownership_must_be_mutation_attacked": true,
+      "threshold_binder_must_be_a_separate_post_commit_artifact": true
+    },
+    "selected_route": {
+      "all_four_fine_steps_commit_atomically_or_none_commits": true,
+      "all_levels_start_from_one_bitwise_identical_accepted_state": true,
+      "channel_reduction": "maximum_continuous_outward_difference_over_owned_rows_and_subintervals",
+      "complete_state_channel_order": [
+        "u:alpha",
+        "u:v",
+        "u:lambda",
+        "u:R",
+        "u:phi",
+        "u:chi",
+        "p:alpha",
+        "p:v",
+        "p:lambda",
+        "p:R",
+        "p:phi",
+        "p:chi",
+        "q:alpha",
+        "q:v",
+        "q:lambda",
+        "q:R",
+        "q:phi",
+        "q:chi"
+      ],
+      "fine_level": "four_quarter_steps_of_width_Delta_t_over_4",
+      "level_proposal_counts": [
+        1,
+        2,
+        4
+      ],
+      "medium_level": "two_half_steps_of_width_Delta_t_over_2",
+      "name": "three_level_same_grid_refinement_with_order_gate_and_public_debit",
+      "old_64_sample_temporal_spectrum_is_admission_veto": false,
+      "old_64_sample_temporal_spectrum_remains_public_diagnostic": true,
+      "only_the_complete_four_quarter_step_fine_level_is_committable": true,
+      "outer_and_medium_levels_are_evidence_only": true,
+      "outer_level": "one_full_step_of_width_Delta_t",
+      "owned_rows": "noncentre_rows_excluding_four_projector_owned_outer_rows",
+      "same_method_source_projector_spatial_operator_and_macro_interval_required": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG5_runtime_refinement_pair_implemented": true,
+      "TDG5_runtime_refinement_pair_synthetic_validation_passed": true,
+      "TDG6_independent_binder_completed": false,
+      "TDG6_threshold_and_admission_design_frozen": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "production_compositor_implementation_authorized": false,
+      "production_compositor_implemented": false,
+      "replacement_temporal_admission_defined": true,
+      "runtime_thresholds_frozen": true
+    },
+    "threshold_contract": {
+      "absolute_state_error_threshold_defined": false,
+      "absolute_state_error_threshold_required": false,
+      "enclosure_dominated_class_makes_no_order_claim": true,
+      "enclosure_dominated_class_requires_both_intervals_to_include_zero": true,
+      "enclosure_dominated_class_requires_fine_upper_not_above_outer_upper": true,
+      "enclosure_dominated_complete_fine_upper_is_retained_as_debit": true,
+      "equality_at_three_halves_passes": true,
+      "exact_zero_outer_and_fine_pairs_pass_without_inventing_infinite_order": true,
+      "historical_CAL10_values_used_to_choose_threshold": false,
+      "maximum_temporal_retries_per_macro_step": 32,
+      "minimum_macro_step": "1/1073741824",
+      "minimum_observed_temporal_refinement_order": "3/2",
+      "observed_trapped_or_Raychaudhuri_margin_used_to_choose_threshold": false,
+      "order_inconclusive_is_retryable_numerical_admission_not_physics": true,
+      "resolved_order_failure_is_retryable_numerical_admission_not_physics": true,
+      "resolved_order_test": "8*D12_upper_squared<=D01_lower_squared",
+      "temporal_retry_factor": "1/2"
+    }
+  },
+  "classification": "prospective_three_level_temporal_admission_threshold_freeze",
+  "derivation_document": "docs/fgc-tdg6-frz1.md",
+  "derivation_document_sha256": "c97e224956a150a750ae83391c2e2bb94cef180c92e342210ff7fc8c3a05c422",
+  "gate_status": "PASS_THRESHOLD_AND_ADMISSION_DESIGN_FROZEN",
+  "generated_by": "scripts/reproduce_fgc_tdg6_frz1.py",
+  "implementation_sha256": {
+    "configs/fgc/fgc-1-tdg6-frz1.toml": "407143881d2b15ca1837da8f2b7830d5bcaba74e6a7283b7519eec6262303349",
+    "docs/fgc-tdg6-frz1.md": "c97e224956a150a750ae83391c2e2bb94cef180c92e342210ff7fc8c3a05c422",
+    "scripts/reproduce_fgc_tdg6_frz1.py": "274a8e0157021a5ce496b385f101337ff8f6457c88b7d83ab0e83e00c2535a63",
+    "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py": "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": [
+    "The prospective threshold freeze reads no PROTO13 history or checkpoint and does not resume CAL10.",
+    "The three-level piecewise-cubic discriminator is a numerical class, not the exact PDE history.",
+    "The finest-pair debit is not a rigorous global PDE error bound or a replacement for the DEF1 stability map.",
+    "No production compositor or successor trajectory is implemented or authorized by this freeze.",
+    "CAL10 remains historical and unreclassified; no GR-0 case is eligible.",
+    "No SGB-L, FGC-QR, collapse, defocusing, transition, retained-EFT, dark-sector, child-domain, or varying-local-c claim follows."
+  ],
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": "407143881d2b15ca1837da8f2b7830d5bcaba74e6a7283b7519eec6262303349"
+}

@@ -1,0 +1,45 @@
+{
+  "accountable_author": "Douglas Ek",
+  "certified_det_excludes_zero": true,
+  "certified_determinant_interval": [
+    -0.0029161631968961416,
+    -0.0029161631968961255
+  ],
+  "compact_support_forces_zero_multiplier": true,
+  "continuous_cokernel_trivial": true,
+  "geometry_killed": false,
+  "input_hashes": {
+    "results/development/nsc-incoming-surface-principal.json": "60400854b887a3cc35fc623807484ced7dc6549518bf001683b76c6ee523db6e",
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-fourier-leftover-null.json": "4754f7a0206544eabc88b5c180dc1d0ea63c6f7130171fafc77bdf7896564093"
+  },
+  "is_L_or_flux_again": false,
+  "iterate4_principal_det_max": -0.002915984084,
+  "iterate4_principal_det_min": -0.002916592102,
+  "locked_current_identified": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "pointwise_principal_det_max": -0.002915984084,
+  "pointwise_principal_det_min": -0.002916592102,
+  "pointwise_principal_excludes_zero": true,
+  "principal_det_excludes_zero": true,
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "recovered_L_E": false,
+  "recovered_flux_divergence": false,
+  "same_sign_as_certified_det": true,
+  "schema": "NSC-KS-DECLARED-WU-COKERNEL-v1",
+  "scope": {
+    "finite_leftover_is_not_class_identity": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "no_class_rewrite": true,
+    "physical_EXISTENCE_certificate": false,
+    "physical_local_gate": "OPEN",
+    "principal_det_is_invertibility_not_existence": true
+  },
+  "source_hashes": {
+    "docs/nsc-ks-declared-wu-cokernel.md": "ad78b5446417619d162f9b1ec249947eea88ef7147ed3b7a2f49afb15c3a8c93",
+    "scripts/derive_nsc_ks_declared_wu_cokernel.py": "2a5df654177bda48aaa5285b5d6b14faf3cdbb8a8828915addfcbcf5f2a50d44"
+  },
+  "status": "OPEN: continuous cokernel of compact (w,U) geometry is trivial; not L(E), not flux, not NON-EXISTENCE",
+  "unenclosed_edge_tail": null
+}

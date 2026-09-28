@@ -1,0 +1,105 @@
+schema_version = 1
+artifact_id = "FGC-1-RUN1-SYM1"
+project_version = "0.11.0"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+protocol_preflight_config = "configs/fgc/fgc-1-id0-pref1.toml"
+protocol_preflight_result = "results/fgc-1-id0-pref1.json"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+uhyp1_config = "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml"
+uhyp1_result = "results/fgc-1-hyp1-dom3-uhyp1.json"
+con2_config = "configs/fgc/fgc-1-hyp1-con2-mprop1.toml"
+con2_result = "results/fgc-1-hyp1-con2-mprop1.json"
+con3_config = "configs/fgc/fgc-1-hyp1-con3-cau1.toml"
+con3_result = "results/fgc-1-hyp1-con3-cau1.json"
+bnd1_config = "configs/fgc/fgc-1-hyp1-bnd1-md1.toml"
+bnd1_result = "results/fgc-1-hyp1-bnd1-md1.json"
+def0_config = "configs/fgc/fgc-1-def0-obs1.toml"
+def0_result = "results/fgc-1-def0-obs1.json"
+eft1_config = "configs/fgc/fgc-1-eft1-open1.toml"
+eft1_result = "results/fgc-1-eft1-open1.json"
+
+[authorization_contract]
+all_scoped_predicates_must_pass = true
+one_false_scoped_predicate_stops_holdout_execution = true
+scoped_classical_diagnostic_is_not_retained_EFT_evolution = true
+scoped_classical_diagnostic_is_not_a_physical_transition_claim = true
+physical_transition_implies_retained_EFT_and_scoped_authorization = true
+no_reverse_implication_is_assumed = true
+missing_evidence_is_false_not_inferred = true
+bare_config_booleans_cannot_substitute_for_hashed_evidence = true
+
+[future_evidence.protocol_holdout]
+artifact_id = "FGC-1-PRO3-HLD1"
+config = "configs/fgc/fgc-1-pro3-hld1.toml"
+result = "results/fgc-1-pro3-hld1.json"
+required_gate = "resolved_holdout_manifest_frozen_before_FGCQR_outcomes"
+
+[future_evidence.run_domain]
+artifact_id = "FGC-1-DOM4-RUN1"
+config = "configs/fgc/fgc-1-dom4-run1.toml"
+result = "results/fgc-1-dom4-run1.json"
+required_gate = "nonzero_classical_spherical_run_envelope_passed"
+
+[future_evidence.multidirectional_health]
+artifact_id = "FGC-1-HYP2-MD1"
+config = "configs/fgc/fgc-1-hyp2-md1.toml"
+result = "results/fgc-1-hyp2-md1.json"
+required_gate = "quantitative_all_covector_weak_coupling_health_envelope_passed"
+
+[future_evidence.nonlinear_source]
+artifact_id = "FGC-1-SRC1-NL1"
+config = "configs/fgc/fgc-1-src1-nl1.toml"
+result = "results/fgc-1-src1-nl1.json"
+required_gate = "nonlinear_REF1_source_and_branch_solver_verified"
+
+[future_evidence.physical_constraints]
+artifact_id = "FGC-1-CON4-PHY1"
+config = "configs/fgc/fgc-1-con4-phy1.toml"
+result = "results/fgc-1-con4-phy1.json"
+required_gate = "physical_gauge_reduction_constraint_system_closed"
+
+[future_evidence.regular_center]
+artifact_id = "FGC-1-CTR1-REG1"
+config = "configs/fgc/fgc-1-ctr1-reg1.toml"
+result = "results/fgc-1-ctr1-reg1.json"
+required_gate = "regular_center_formulation_verified"
+
+[future_evidence.initial_data]
+artifact_id = "FGC-1-ID1-FAM1"
+config = "configs/fgc/fgc-1-id1-fam1.toml"
+result = "results/fgc-1-id1-fam1.json"
+required_gate = "nonzero_width_finite_mass_constraint_compatible_family_constructed"
+
+[future_evidence.boundary_control]
+artifact_id = "FGC-1-BND2-CP1"
+config = "configs/fgc/fgc-1-bnd2-cp1.toml"
+result = "results/fgc-1-bnd2-cp1.json"
+required_gate = "spherical_boundary_or_domain_of_dependence_control_passed"
+
+[future_evidence.health_monitor]
+artifact_id = "FGC-1-HLT1-MON1"
+config = "configs/fgc/fgc-1-hlt1-mon1.toml"
+result = "results/fgc-1-hlt1-mon1.json"
+required_gate = "classical_health_and_typed_stop_monitoring_verified"
+
+[future_evidence.numerical_validation]
+artifact_id = "FGC-1-NUM1-VAL1"
+config = "configs/fgc/fgc-1-num1-val1.toml"
+result = "results/fgc-1-num1-val1.json"
+required_gate = "independent_solver_validation_and_measurement_contract_passed"
+
+[claims]
+complete_Wilsonian_EFT_defined = false
+UV_completion_derived = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+collapse_solution_derived = false
+affine_null_defocusing_derived = false
+finite_invariant_transition_surface_derived = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

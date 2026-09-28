@@ -1,0 +1,63 @@
+{
+  "artifact": "nested_gradient_spectral_recurrence_probability_controls",
+  "classification": "conditional_mathematical_controls_not_nested_cosmology",
+  "eternal_opportunity_control": {
+    "classification": "conditional_independent_trial_control_not_inevitable_life",
+    "ergodicity_derived": false,
+    "fixed_probability_assumed": true,
+    "independence_assumed": true,
+    "infinite_independent_trial_limit": 1.0,
+    "logical_necessity_proven": false,
+    "normalization_residual": 0.0,
+    "probability_at_least_one": 0.632120742768355,
+    "probability_none": 0.3678792572316451,
+    "probability_per_trial": 1e-06,
+    "trial_count": 1000000
+  },
+  "finite_band_selection": {
+    "alpha": 2.0,
+    "beta": 1.0,
+    "classification": "spatial_scale_selection_control_not_covariant_gravity",
+    "ell_star": 1.0,
+    "energy_coefficient_at_k_star": -1.0,
+    "k_star": 1.0,
+    "k_star_squared": 1.0,
+    "nonzero_finite_scale_selected": true,
+    "stationary_derivative_residual": 0.0
+  },
+  "model_id": "NGS-0",
+  "nonclaims": {
+    "covariant_fgc_action_derived": false,
+    "dark_energy_identified": false,
+    "dark_matter_identified": false,
+    "finite_cross_domain_spectrum_derived": false,
+    "golden_ratio_cosmology_derived": false,
+    "metaphysical_plan_proven": false,
+    "nested_spacetime_constructed": false,
+    "observers_guaranteed": false,
+    "universal_hertz_increment_derived": false
+  },
+  "project_version": "0.11.0",
+  "recurrence_controls": {
+    "golden_fixture": {
+      "a": 1.0,
+      "b": 1.0,
+      "classification": "conditional_recurrence_eigenvalue_not_cosmological_prediction",
+      "coefficients_derived_from_physics": false,
+      "golden_ratio_fixture": true,
+      "positive_ratio": 1.618033988749895,
+      "scaled_characteristic_residual": 0.0
+    },
+    "non_golden_fixture": {
+      "a": 2.0,
+      "b": 1.0,
+      "classification": "conditional_recurrence_eigenvalue_not_cosmological_prediction",
+      "coefficients_derived_from_physics": false,
+      "golden_ratio_fixture": false,
+      "positive_ratio": 2.414213562373095,
+      "scaled_characteristic_residual": 0.0
+    }
+  },
+  "schema_version": 1,
+  "scope": "NGS-0 executes a spatial finite-band selector, a conditional two-level recurrence eigenvalue, and a finite independent-trial probability. It does not derive a covariant FGC action, nested spacetime, dark sector, universal hertz, cosmological golden ratio, inevitable observers, or plan."
+}

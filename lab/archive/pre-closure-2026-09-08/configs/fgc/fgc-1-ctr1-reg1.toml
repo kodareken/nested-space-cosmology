@@ -1,0 +1,142 @@
+schema_version = 1
+artifact_id = "FGC-1-CTR1-REG1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+ref1_config = "configs/fgc/fgc-1-hyp1-mhg-reference.toml"
+ref1_result = "results/fgc-1-hyp1-mhg-reference.json"
+src1_config = "configs/fgc/fgc-1-src1-nl1.toml"
+src1_result = "results/fgc-1-src1-nl1.json"
+con4_config = "configs/fgc/fgc-1-con4-phy1.toml"
+con4_result = "results/fgc-1-con4-phy1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_formulation = "metric_defined_reference_modified_harmonic"
+regular_variables = ["alpha", "V", "lambda", "A", "phi", "chi"]
+shift_formula = "v=r*V"
+areal_radius_formula = "R=r*A"
+primitive_parity = "all_six_regular_variables_even"
+radial_derivative_parity = "all_six_radial_derivatives_odd"
+elementary_flatness = "A(t,0)=lambda(t,0)_through_two_time_derivatives"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+affected_REF1_descendants_rederived = true
+existing_annular_reference_not_evaluated_at_r_equals_zero = true
+
+[series]
+computed_minimum_power = -12
+computed_maximum_power = 20
+certified_minimum_power = -4
+certified_maximum_power = 4
+regular_equation_order = ["metric_tt", "metric_tr_over_r", "metric_rr", "metric_angular_over_r_squared", "scalar_phi", "scalar_chi"]
+curvature_controls = ["Ricci_scalar", "Ricci_squared", "Kretschmann", "Gauss_Bonnet"]
+require_no_negative_certified_powers = true
+require_even_regularized_equations = true
+require_even_regularized_gauge_components = true
+
+[convergence]
+radii = ["1/16", "1/32", "1/64"]
+minimum_coarse_to_fine_error_ratio = "15/4"
+interpretation = "exact_first_positive_grid_point_approach_to_formal_center_limit"
+not_a_PDE_discretization_convergence_claim = true
+
+[negative_controls]
+conical_A0_replacement = "11/10"
+odd_phi_r_coefficient = "1/17"
+elementary_flatness_dt_A0_replacement = "1/39"
+require_nonzero_Ricci_r_minus_2_defect = true
+require_nonzero_box_phi_r_minus_1_defect = true
+all_invalid_profiles_fail_before_certificate = true
+
+[proof_contract]
+R_equals_r_times_A_and_v_equals_r_times_V = true
+reference_one_over_r_and_one_over_r_squared_differences_rederived = true
+complete_unredefined_ACT1_VAR1_residual_consumed = true
+complete_affected_REF1_extension_rederived = true
+all_removable_singular_limits_checked_in_exact_Laurent_arithmetic = true
+negative_power_guard_edge_fails_closed = true
+center_Taylor_system_serialized = true
+Minkowski_series_control_exact = true
+smooth_nontrivial_series_control_exact = true
+parity_and_elementary_flatness_mutations_fail_closed = true
+finite_curvature_series_required = true
+first_grid_point_convergence_required = true
+canonical_hash_bound_result_required = true
+no_initial_data_family_inferred = true
+no_holdout_execution = true
+
+[controls.minkowski.fields.alpha]
+value = ["1"]
+dt = ["0"]
+dtt = ["0"]
+
+[controls.minkowski.fields.lambda]
+value = ["1"]
+dt = ["0"]
+dtt = ["0"]
+
+[controls.minkowski.fields.A]
+value = ["1"]
+dt = ["0"]
+dtt = ["0"]
+
+[controls.minkowski.fields.V]
+value = ["0"]
+dt = ["0"]
+dtt = ["0"]
+
+[controls.minkowski.fields.phi]
+value = ["0"]
+dt = ["0"]
+dtt = ["0"]
+
+[controls.minkowski.fields.chi]
+value = ["0"]
+dt = ["0"]
+dtt = ["0"]
+
+[controls.nontrivial.fields.alpha]
+value = ["1", "1/20", "-1/500"]
+dt = ["1/30", "-1/700", "1/9000"]
+dtt = ["1/80", "1/1000", "-1/11000"]
+
+[controls.nontrivial.fields.lambda]
+value = ["1", "1/25", "1/600"]
+dt = ["1/40", "1/800", "-1/12000"]
+dtt = ["1/90", "-1/1300", "1/14000"]
+
+[controls.nontrivial.fields.A]
+value = ["1", "-1/30", "1/700"]
+dt = ["1/40", "-1/900", "1/13000"]
+dtt = ["1/90", "1/1500", "-1/15000"]
+
+[controls.nontrivial.fields.V]
+value = ["1/10", "-1/200", "1/5000"]
+dt = ["1/60", "1/1500", "-1/20000"]
+dtt = ["1/100", "-1/1700", "1/25000"]
+
+[controls.nontrivial.fields.phi]
+value = ["1/20", "1/80", "-1/2000"]
+dt = ["1/70", "-1/1900", "1/30000"]
+dtt = ["1/110", "1/2100", "-1/35000"]
+
+[controls.nontrivial.fields.chi]
+value = ["-1/25", "1/90", "1/2500"]
+dt = ["-1/75", "1/2300", "-1/40000"]
+dtt = ["1/120", "-1/2700", "1/45000"]
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

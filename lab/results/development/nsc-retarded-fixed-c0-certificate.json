@@ -1,0 +1,117 @@
+{
+  "schema": "NSC-RETARDED-FIXED-C0-CERTIFICATE-v1",
+  "accountable_author": "Douglas Ek",
+  "status": "CERTIFIED: nonzero coherent diagonal response; specified fixed-C0 tangent excluded",
+  "source_and_input_sha256": {
+    "scripts/derive_nsc_retarded_fixed_c0_certificate.py": "7173b7583eda6dc24416eda53669b07ed221fa9e843a449354c234ffb97bf61c",
+    "tests/test_nsc_retarded_fixed_c0_certificate.py": "cca4461d788d26de88402611eb6a38b32041b94ef8dd232efb7e02babc6e6080",
+    "docs/nsc-retarded-fixed-c0-certificate.md": "9347ba7e76fe215b53289bde75da8583b2d2bfbeeac110c5d229f3924a0fa263",
+    "results/development/nsc-incoming-low-energy-vacuum-enclosure.json": "4eef52f9a995fc1b244a37dd064875a87ae889540305b2163f216bb9a1a9c0df",
+    "scripts/derive_nsc_incoming_low_energy_vacuum_enclosure.py": "d614bc8487aa2a76e03fd1db0c6988804c341a2764105fcf41b916e3def8bc3b",
+    "docs/nsc-retarded-diagonal-sign-bound.md": "9956a2d329cf7748a1f9393fb7b1470ffbeab605a231a185415d7b72f4d68a57",
+    "docs/nsc-incoming-fourier-matching.md": "1b06a749df98210d9eb276b27c9148fcf05106c100b95d0665546d72f999a289",
+    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec"
+  },
+  "projector_payload": {
+    "path": "results/development/artifacts/nsc-incoming-low-energy-vacuum-enclosure.a0ab4f4d88c9acdee6ccf3353e0cbc0a1cdf7a9579c7ef0143344fe7dbcd316c.json.gz",
+    "sha256": "a0ab4f4d88c9acdee6ccf3353e0cbc0a1cdf7a9579c7ef0143344fe7dbcd316c",
+    "bytes": 2096631
+  },
+  "group": 14,
+  "angular_sign": 1,
+  "energy": 0.5562120090641313,
+  "certificate": {
+    "projector_lower_exact": {
+      "numerator": 2147396289135884393163921633439036590604661069366270936728051,
+      "denominator": 6427752177035961102167848369364650410088811975131171341205504
+    },
+    "projector_upper_exact": {
+      "numerator": 79608316183284398568675932199979430073651924365271804756123,
+      "denominator": 200867255532373784442745261542645325315275374222849104412672
+    },
+    "strict_projector_predicate": true,
+    "parameter_guards": {
+      "selected_energy_range": true,
+      "positive_source_kappa_upper": true,
+      "positive_mass_upper": true,
+      "closed_infinity_channel": true,
+      "positive_angular_bounds": true,
+      "same_outer_radius": true,
+      "same_inner_plateau": true,
+      "same_axial_halfwidth": true,
+      "exact_euler_lower_check": true
+    },
+    "exact_constants": {
+      "generator_norm_squared_upper": {
+        "numerator": 2273,
+        "denominator": 256
+      },
+      "occupation_exponent_lower": {
+        "numerator": 1727,
+        "denominator": 120
+      },
+      "occupation_upper": {
+        "numerator": 1,
+        "denominator": 1000000
+      },
+      "rotation_allowance_over_I": {
+        "numerator": 9,
+        "denominator": 50
+      },
+      "vacuum_commutator_allowance_over_I": {
+        "numerator": 9,
+        "denominator": 25
+      },
+      "full_coherent_remainder_allowance_over_I": {
+        "numerator": 1,
+        "denominator": 500
+      },
+      "negative_margin_over_I": {
+        "numerator": 69,
+        "denominator": 500
+      },
+      "positive_insertion_lower": {
+        "numerator": 1,
+        "denominator": 1750000
+      }
+    },
+    "full_coherent_response_00_strict_upper": {
+      "numerator": -69,
+      "denominator": 875000000
+    },
+    "response_upper_outward_float": -7.885714285714284e-08,
+    "strict_absolute_response_lower": {
+      "numerator": 69,
+      "denominator": 875000000
+    }
+  },
+  "physical_scope": {
+    "object": "first derivative of full incoming covariance Fourier kernel at Eo=Ei=selected E, spin00",
+    "variation": "the unchanged compact positive radius direction s*chi(s)*w(z), U=0",
+    "phase_uncertainty": "all allowed subgap reflection and coherent horizon phases covered",
+    "source_coherence": "retained through the exact operator-norm remainder bound",
+    "source_energy_integral": "exact first-order Fourier collapse; no energy quadrature omission",
+    "projector_is_a_component_not_a_replacement_state": true,
+    "linearized_fixed_C0_matching": "EXCLUDED for this specified tangent",
+    "other_parent_extensions": "OPEN",
+    "finite_amplitude_global_matching": "OPEN",
+    "global_constraint_solution": "OPEN",
+    "extended_stationarity": "OPEN",
+    "NSC_architecture": "not excluded",
+    "new_field_or_radial_solves": 0,
+    "metric_timestep": false,
+    "stress_inserted": false,
+    "source_or_coupling_change": false,
+    "additional_action_term": false,
+    "publication": false
+  },
+  "reproducer": "python3 scripts/derive_nsc_retarded_fixed_c0_certificate.py --check"
+}

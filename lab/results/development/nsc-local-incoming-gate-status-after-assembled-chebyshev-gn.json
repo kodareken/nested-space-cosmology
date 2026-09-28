@@ -1,0 +1,39 @@
+{
+  "accountable_author": "Douglas Ek",
+  "assembled_unclipped_leftover": [
+    0.0001318944269235291,
+    0.0006335944911131271
+  ],
+  "existence_tolerance": 3e-11,
+  "families_evolved": 0,
+  "fas_c_cause": "insufficient representation / leftover floor of the declared class",
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-assembled-chebyshev-gn-stall.json": "08c8102b4b56c497a1459f9a18df2c961dd19738160cd87e1f427454b1cd8e83",
+    "results/development/nsc-ks-deciding-bounds-after-assembled-chebyshev-gn.json": "17b17819c533aa4eac7feb957cb60683b01b367edaed49bfb7bca33ecf2ade14",
+    "results/development/nsc-local-incoming-gate-status-after-assembled-search.json": "818b18a53cdddb388960dc0dbcc30b3ded744e3b516723a0a0ab7e2a9cdc9786"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "next_named_owner": "same declared (w,U) class on I; no class rewrite",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-ASSEMBLED-CHEBYSHEV-GN-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "no_class_rewrite": true,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-assembled-chebyshev-gn.md": "098101d356a614cb4f5dc991eb56ae9dccc380ae6b35d374102fcd4c7d8a9880",
+    "scripts/derive_nsc_local_incoming_gate_status_after_assembled_chebyshev_gn.py": "5750c1a064f77342d8bd10438169492443e1b2c5db79d13e58865a0c9ecac0cd"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: assembled Chebyshev leftover cannot reach EXISTENCE; finite image, not a class identity"
+}

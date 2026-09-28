@@ -1,0 +1,180 @@
+{
+  "artifact_id": "FGC-1-PRO6-FRZ1",
+  "artifact_payload": {
+    "decision": "PROTO6_is_frozen_but_HLT4_fresh_calibration_and_every_candidate_outcome_remain_closed",
+    "epistemic_boundary": {
+      "FGCQR_outcome_read": false,
+      "PROTO5_GR0_calibration_trajectory_was_seen": true,
+      "PROTO6_trajectory_read": false,
+      "SGBL_outcome_read": false,
+      "first_nonzero_common_event_completed": false,
+      "mechanism_question_answered": false,
+      "physical_experiment_changed": false
+    },
+    "frozen_repair": {
+      "accepted_state_source_failure_is_terminal": true,
+      "all_non_source_stops_are_unchanged": true,
+      "eligible_amplitudes_in_order": [
+        "5/2",
+        "3"
+      ],
+      "maximum_retry_count": 32,
+      "minimum_step_size": "1/1073741824",
+      "only_internal_unaccepted_stage_source_failure_is_retryable": true,
+      "raw_source_residual_tolerance_is_unchanged": true,
+      "retry_factor": "1/2",
+      "retry_restarts_from_bitwise_last_accepted_state": true,
+      "source_refinement_algorithm_is_unchanged": true
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "47f4c83bae2df26c51c3544eed8c06507a0cd9eb",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "diagnosis": {
+        "FGCQR_outcome_read": false,
+        "PROTO5_source_stop_ownership_obstructed": true,
+        "accepted_state_source_gate_passed": true,
+        "artifact_id": "FGC-1-CAL2-PREF4",
+        "classification": "post_calibration_numerical_trial_stop_ownership_obstruction_not_mechanism_result",
+        "config_blob_sha256": "d596a45899baecbb5ea1f9d5d26409782376327ce6ddb2fc961e03626abc5a55",
+        "first_nonzero_common_event_completed": false,
+        "first_retry_factor_passed": "1/2",
+        "mechanism_question_answered": false,
+        "premise_revision_required": true,
+        "result_blob_sha256": "0e56f3b91205d68a6f81f4dad56f8ecce6d93ce0184a5899a1bace6d42aca11b",
+        "unit_proposal_source_gate_missed": true
+      },
+      "predecessor_protocol": {
+        "artifact_id": "FGC-2-SF1-PROTO5",
+        "blob_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "claims_all_false": true,
+        "protocol_version": 5,
+        "semantic_holdout_contract_sha256": "af1252b55c653c1e99d921eb026270f2c86d635986346dfa0f455c8ce163b18b"
+      }
+    },
+    "protocol_certificate": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "PROTO5_calibration_trajectory_inspected_before_revision": true,
+      "SGBL_outcomes_inspected_before_revision": false,
+      "accepted_state_source_failure_terminal": true,
+      "all_non_source_stops_unchanged": true,
+      "artifact_id": "FGC-2-SF1-PROTO6",
+      "calibration_output_root": "runs/fgc-2-sf1/proto6/calibration",
+      "claims": {
+        "FGCQR_holdout_execution_authorized": false,
+        "FGCQR_mechanism_rejected": false,
+        "PROTO6_fresh_GR0_dynamic_calibration_authorized": false,
+        "PROTO6_resolved_holdout_manifest_authorized": false,
+        "PROTO6_successor_runtime_compositor_implemented": false,
+        "child_domain_or_topology_derived": false,
+        "classical_spherical_diagnostic_authorized": false,
+        "dark_sector_mechanism_derived": false,
+        "general_gradient_route_rejected": false,
+        "physical_transition_claim_authorized": false,
+        "retained_EFT_evolution_authorized": false,
+        "singularity_resolution_derived": false,
+        "varying_locally_measured_c_derived": false
+      },
+      "diagnosis_artifact_id": "FGC-1-CAL2-PREF4",
+      "diagnosis_checkpoint_commit": "47f4c83bae2df26c51c3544eed8c06507a0cd9eb",
+      "eligible_calibration_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "first_nonzero_common_event_completed_before_revision": false,
+      "frozen": true,
+      "holdout_output_root": "runs/fgc-2-sf1/proto6/holdout",
+      "internal_unaccepted_stage_source_failure_retryable": true,
+      "maximum_retry_count": 32,
+      "mechanism_question_answered_before_revision": false,
+      "minimum_step_size": "1/1073741824",
+      "outcome_neutral_contract_validated": true,
+      "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO5",
+      "premise_revision_only": true,
+      "protocol_version": 6,
+      "raw_source_residual_tolerance_unchanged": true,
+      "resolved_holdout_manifest": "configs/fgc/fgc-1-pro6-hld1.toml",
+      "resolved_holdout_manifest_present": false,
+      "retry_factor": "1/2",
+      "semantic_holdout_contract_sha256": "d4a197bfdaa608677719e2f183c893f6f3f52c568312da1bfe81604b2423e3b9"
+    }
+  },
+  "certificate_contract": [
+    "PROTO6_overlay_must_validate_exactly",
+    "accepted_state_source_failure_must_remain_terminal",
+    "all_non_source_physical_and_numerical_gates_must_remain_unchanged",
+    "canonical_hash_bound_result_required",
+    "checkpoint_must_be_ancestor_of_HEAD",
+    "immutable_CAL2_must_be_canonical_and_nonmechanism",
+    "immutable_PROTO5_must_validate_unchanged",
+    "immutable_blob_hashes_must_match_PROTO6_amendment",
+    "new_output_namespaces_must_be_declared_but_not_accessed",
+    "only_internal_unaccepted_stage_source_failure_may_retry",
+    "predecessor_and_diagnosis_must_be_read_from_checkpoint",
+    "raw_source_threshold_and_solver_must_remain_unchanged"
+  ],
+  "classification": "immutable_outcome_neutral_PROTO6_source_stop_ownership_protocol_freeze_not_run_authorization",
+  "derivation_document": "docs/fgc-pro6-frz1.md",
+  "derivation_document_sha256": "1c7c0ddda8a7fda01d5f6deb7205d52a12e4936b05cdd869e5817d59675ffce1",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO6_accepted_state_source_terminal_contract_frozen": true,
+    "PROTO6_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO6_immutable_lineage_verified": true,
+    "PROTO6_internal_trial_source_retry_contract_frozen": true,
+    "PROTO6_non_source_gates_inherited_unchanged": true,
+    "PROTO6_outcome_neutral_protocol_frozen": true,
+    "PROTO6_resolved_holdout_manifest_authorized": false,
+    "PROTO6_successor_runtime_compositor_implemented": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro6_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro6_frz1.py": "3eebcef80da35cace218b3c5eb1ff1086d373e2b8729abfcb433434d4b8c2f60",
+    "src/recursive_horizons/fgc/evolution/protocol_v5.py": "afbd440c9ddcea10a42c2ca51d92a271e169ffe7edab73a9fe4f6326d15a908d",
+    "src/recursive_horizons/fgc/evolution/protocol_v6.py": "eda57f09725bde26805413bc36682b580f8a0909048ebc8d05331375eb432123"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "FGCQR_mechanism_rejected": false,
+    "SGBL_comparison_completed": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "trapped_sphere_observed": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal2-pref4.toml": "d596a45899baecbb5ea1f9d5d26409782376327ce6ddb2fc961e03626abc5a55",
+    "configs/fgc/fgc-2-sf1-protocol-v5.toml": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+    "results/fgc-1-cal2-pref4.json": "0e56f3b91205d68a6f81f4dad56f8ecce6d93ce0184a5899a1bace6d42aca11b"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_evolution_outcomes_inspected": false,
+    "PROTO5_GR0_calibration_trajectory_disclosed": true,
+    "SGBL_evolution_outcomes_inspected": false,
+    "calibration_branch": "GR-0",
+    "diagnosis_artifact": "FGC-1-CAL2-PREF4",
+    "first_nonzero_common_event_completed": false,
+    "freeze_role": "premise_only_post_calibration_trial_stage_stop_ownership_protocol_and_lineage_certificate",
+    "holdout_branch": "FGC-QR",
+    "mechanism_question_answered": false,
+    "predecessor_protocol": "FGC-2-SF1-PROTO5",
+    "target_protocol": "FGC-2-SF1-PROTO6"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro6-frz1.toml": "7c78f645d3e5974a94b0787b000dbc9257a36458da576ec2055f6f93ef2b7a06",
+    "configs/fgc/fgc-2-sf1-protocol-v6.toml": "e50093914f7b84a88bd593361f8b3eb43942cf9a8502f637fc38d8e61dd82448"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "accountable_author": "Douglas Ek",
+  "dropped_jet_clipped_all_node_leftover": [
+    0.003956410359,
+    0.00558605161
+  ],
+  "dropped_jet_clipped_beats_measured": true,
+  "dropped_jet_clipped_is_order_below_measured": false,
+  "dropped_jet_clipped_step_norm": 1.0,
+  "dropped_jet_step_norm": 28.247049066335,
+  "dropped_jet_unclipped_all_node_leftover": [
+    0.000151976924,
+    7.770624e-06
+  ],
+  "dropped_jet_unclipped_reaches_existence": false,
+  "evolve_authorized": false,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-n16-leftover-anatomy.json": "62d6c3e6ce6370cabcf6a87f56c87ae80a5aaa1ba02f0d4d4f6df6599a0dbf56"
+  },
+  "jet_rows_do_not_own_leftover": true,
+  "locked_current_identified": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "residual_split_maxima": {
+    "assembled": [
+      0.004107193193,
+      0.005790788098
+    ],
+    "baseline": [
+      0.695930571717,
+      0.057120986994
+    ],
+    "edge": [
+      0.027159130651,
+      0.019528183501
+    ],
+    "geometry": [
+      0.739834218766,
+      0.081054245006
+    ],
+    "leftover_direction_dot_baseline": 0.260519594412,
+    "leftover_direction_dot_edge": 0.011543123685,
+    "leftover_direction_dot_geometry": -0.231102626426,
+    "leftover_direction_dot_matter": -0.021826041421,
+    "matter": [
+      0.071911347694,
+      0.044327254058
+    ],
+    "raw": [
+      0.028007700644,
+      0.020776769176
+    ]
+  },
+  "schema": "NSC-KS-N16-LEFTOVER-IDENTIFICATION-v1",
+  "scope": {
+    "failed_optimization_is_not_NONEXISTENCE": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true,
+    "sign_stability_is_not_a_class_proof": true
+  },
+  "solve_leftover_is_orthogonal_leftover": true,
+  "source_hashes": {
+    "docs/nsc-ks-n16-leftover-identification.md": "e6ecac327ae2ab52a0f847d3a4832e82926bad72a1ab873d2dd5fb16f6fff76b",
+    "scripts/derive_nsc_ks_n16_leftover_identification.py": "57f48810547cf313378e3aec684044b874de0dfaf41dceec05485767131278dc",
+    "src/recursive_horizons/nsc_local_history_newton.py": "1b55fac1ef1217556e04c9b2231dd15fd9eb30e81039c84fa09223434fc76495"
+  },
+  "status": "OPEN: leftover direction is not sign-stable; no scoped NON-EXISTENCE certificate",
+  "walk_projection_max": 0.00018681826,
+  "walk_projection_min": -0.000425807559,
+  "walk_projection_sign_stable": false,
+  "winning_linearization": null
+}

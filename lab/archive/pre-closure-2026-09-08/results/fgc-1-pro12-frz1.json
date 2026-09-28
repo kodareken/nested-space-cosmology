@@ -1,0 +1,1998 @@
+{
+  "artifact_id": "FGC-1-PRO12-FRZ1",
+  "artifact_payload": {
+    "RSP1_pairwise_conditioning_recomputation": {
+      "RSP1_generic_all_field_raw_admission_remains_public_and_false": true,
+      "all_pairwise_conditioning_admissions_passed": true,
+      "classification": "high_ladder_pairwise_diagnostic_conditioning_qualified_for_protocol_design",
+      "is_calibration_or_mechanism_evidence": false,
+      "maximum_erasure_over_round_trip": 0.006089408482817964,
+      "methods": {
+        "RK4": {
+          "constraint_admission_passed": true,
+          "coordinate_time": 0.0625,
+          "diagnostic_saturation_is_physical_resolution_evidence": false,
+          "maximum_erasure_over_round_trip": 0.006089408482817964,
+          "method": "RK4",
+          "pairwise_admission": {
+            "admission_passed": true,
+            "derivative_pair_classification": {
+              "R_over_r_minus_1": [
+                "diagnostically_saturated",
+                "diagnostically_saturated"
+              ],
+              "alpha_minus_1": [
+                "diagnostically_saturated",
+                "diagnostically_saturated"
+              ],
+              "chi_over_Lambda": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "lambda_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "phi_over_Lambda": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "shift_over_r": [
+                "diagnostically_saturated",
+                "diagnostically_saturated"
+              ]
+            },
+            "derivative_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                42.77668917800263,
+                0.25008310243544946
+              ],
+              "alpha_minus_1": [
+                0.7204806873526213,
+                0.4885330972341566
+              ],
+              "chi_over_Lambda": [
+                0.4989466788197822,
+                0.13756978069500686
+              ],
+              "lambda_minus_1": [
+                7.302675422095383,
+                0.1131360109974937
+              ],
+              "phi_over_Lambda": [
+                0.22812049822366257,
+                0.18656614804836605
+              ],
+              "shift_over_r": [
+                0.3474272013178824,
+                0.5316628499525214
+              ]
+            },
+            "every_profile_contracted": true,
+            "every_tail_resolved_or_saturated": true,
+            "field_pair_classification": {
+              "R_over_r_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "alpha_minus_1": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "chi_over_Lambda": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "lambda_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "phi_over_Lambda": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "shift_over_r": [
+                "directly_resolved",
+                "directly_resolved"
+              ]
+            },
+            "field_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                10.515830320638543,
+                0.06189443259009762
+              ],
+              "alpha_minus_1": [
+                0.1826547856440661,
+                0.12186205162595071
+              ],
+              "chi_over_Lambda": [
+                0.12253166246353876,
+                0.03443555558160387
+              ],
+              "lambda_minus_1": [
+                1.7724997726950051,
+                0.027884631972099026
+              ],
+              "phi_over_Lambda": [
+                0.057642556282393856,
+                0.046582122691985306
+              ],
+              "shift_over_r": [
+                0.0848793543993436,
+                0.13347388601692145
+              ]
+            },
+            "medium_and_fine_individual_budgets_passed": true,
+            "pair_saturation_available": {
+              "R_over_r_minus_1": [
+                true,
+                true
+              ],
+              "alpha_minus_1": [
+                true,
+                true
+              ],
+              "chi_over_Lambda": [
+                true,
+                true
+              ],
+              "lambda_minus_1": [
+                true,
+                true
+              ],
+              "phi_over_Lambda": [
+                true,
+                true
+              ],
+              "shift_over_r": [
+                true,
+                true
+              ]
+            },
+            "point_counts": [
+              4097,
+              8193,
+              16385
+            ],
+            "saturation_used": true
+          },
+          "point_counts": [
+            4097,
+            8193,
+            16385
+          ],
+          "profile_convergence": {
+            "adjacent_differences": [
+              {
+                "coarse_point_count": 4097,
+                "common_proper_radius_maximum": 25.33540127877282,
+                "comparison_sample_count": 769,
+                "fine_point_count": 8193,
+                "infinity_by_field": {
+                  "R_over_r_minus_1": 2.6428770255199763e-07,
+                  "alpha_minus_1": 4.244211635577385e-08,
+                  "chi_over_Lambda": 8.341380734321817e-06,
+                  "lambda_minus_1": 7.03233576675455e-05,
+                  "phi_over_Lambda": 1.9785731446967394e-10,
+                  "shift_over_r": 7.488550383186448e-07
+                },
+                "rms_by_field": {
+                  "R_over_r_minus_1": 3.082667916569113e-08,
+                  "alpha_minus_1": 3.8695650023278545e-09,
+                  "chi_over_Lambda": 7.320761390382568e-07,
+                  "lambda_minus_1": 6.889247453904125e-06,
+                  "phi_over_Lambda": 2.0670113170081833e-11,
+                  "shift_over_r": 6.218297643229867e-08
+                }
+              },
+              {
+                "coarse_point_count": 8193,
+                "common_proper_radius_maximum": 25.335401500525787,
+                "comparison_sample_count": 1537,
+                "fine_point_count": 16385,
+                "infinity_by_field": {
+                  "R_over_r_minus_1": 1.0564176843082403e-07,
+                  "alpha_minus_1": 1.125622589268858e-08,
+                  "chi_over_Lambda": 2.0197104510252892e-06,
+                  "lambda_minus_1": 1.5309339646644386e-05,
+                  "phi_over_Lambda": 5.7990674081726465e-11,
+                  "shift_over_r": 2.2533669435967105e-07
+                },
+                "rms_by_field": {
+                  "R_over_r_minus_1": 8.156164887024602e-09,
+                  "alpha_minus_1": 8.919685208327842e-10,
+                  "chi_over_Lambda": 1.9128319463822548e-07,
+                  "lambda_minus_1": 1.5366087343159968e-06,
+                  "phi_over_Lambda": 5.280844892167636e-12,
+                  "shift_over_r": 1.480357143323497e-08
+                }
+              }
+            ],
+            "complete_profile_contraction_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            },
+            "every_field_contracted": true,
+            "exact_zero_by_field": {
+              "R_over_r_minus_1": false,
+              "alpha_minus_1": false,
+              "chi_over_Lambda": false,
+              "lambda_minus_1": false,
+              "phi_over_Lambda": false,
+              "shift_over_r": false
+            },
+            "infinity_contracted_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            },
+            "point_counts": [
+              4097,
+              8193,
+              16385
+            ],
+            "rms_contracted_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            },
+            "round_trip_contracted_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            }
+          },
+          "raw_generic_all_field_admission_passed": false,
+          "raw_spatial_spectral_admission": {
+            "admission_passed": false,
+            "coarsest_individual_budget_passed": true,
+            "derivative_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                42.77668917800263,
+                0.25008310243544946
+              ],
+              "alpha_minus_1": [
+                0.7204806873526213,
+                0.4885330972341566
+              ],
+              "chi_over_Lambda": [
+                0.4989466788197822,
+                0.13756978069500686
+              ],
+              "lambda_minus_1": [
+                7.302675422095383,
+                0.1131360109974937
+              ],
+              "phi_over_Lambda": [
+                0.22812049822366257,
+                0.18656614804836605
+              ],
+              "shift_over_r": [
+                0.3474272013178824,
+                0.5316628499525214
+              ]
+            },
+            "every_nested_tail_ratio_passed": false,
+            "field_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                10.515830320638543,
+                0.06189443259009762
+              ],
+              "alpha_minus_1": [
+                0.1826547856440661,
+                0.12186205162595071
+              ],
+              "chi_over_Lambda": [
+                0.12253166246353876,
+                0.03443555558160387
+              ],
+              "lambda_minus_1": [
+                1.7724997726950051,
+                0.027884631972099026
+              ],
+              "phi_over_Lambda": [
+                0.057642556282393856,
+                0.046582122691985306
+              ],
+              "shift_over_r": [
+                0.0848793543993436,
+                0.13347388601692145
+              ]
+            },
+            "finest_pair_individual_budgets_passed": true,
+            "grid_point_counts": [
+              4097,
+              8193,
+              16385
+            ],
+            "individual_budget_passed_by_grid": {
+              "16385": {
+                "R_over_r_minus_1": true,
+                "alpha_minus_1": true,
+                "chi_over_Lambda": true,
+                "lambda_minus_1": true,
+                "phi_over_Lambda": true,
+                "shift_over_r": true
+              },
+              "4097": {
+                "R_over_r_minus_1": true,
+                "alpha_minus_1": true,
+                "chi_over_Lambda": true,
+                "lambda_minus_1": true,
+                "phi_over_Lambda": true,
+                "shift_over_r": true
+              },
+              "8193": {
+                "R_over_r_minus_1": true,
+                "alpha_minus_1": true,
+                "chi_over_Lambda": true,
+                "lambda_minus_1": true,
+                "phi_over_Lambda": true,
+                "shift_over_r": true
+              }
+            }
+          },
+          "round_trip_is_a_continuum_error_bound": false,
+          "spectral_budgets": [
+            {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.48805128178356,
+                "rms_scale_over_cutoff": 0.0305032051114725,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 2.904449710101929e-10,
+                "top_band_field_power_fraction": 8.872765012375849e-15,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.0080350106708923e-08,
+                "total_field_power": 4.2319906614866716e-08
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 3.157541092604228,
+                "rms_scale_over_cutoff": 0.19734631828776425,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.402357695132754e-08,
+                "top_band_field_power_fraction": 4.26056396867658e-11,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 3.405831685848573e-11,
+                "total_field_power": 3.416057396955007e-12
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.8273212721718272,
+                "rms_scale_over_cutoff": 0.0517075795107392,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 2.6917558997913994e-08,
+                "top_band_field_power_fraction": 2.3541984019248397e-12,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.418061317148623e-05,
+                "total_field_power": 2.071794271952977e-05
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.3379869928140637,
+                "rms_scale_over_cutoff": 0.02112418705087898,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 1.866382088829898e-09,
+                "top_band_field_power_fraction": 2.7707359822924154e-14,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 0.0006330818958189515,
+                "total_field_power": 0.005541915760634796
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.8092325681519753,
+                "rms_scale_over_cutoff": 0.05057703550949846,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.108972618450227e-08,
+                "top_band_field_power_fraction": 2.5753394106409745e-12,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.1934415825321794e-14,
+                "total_field_power": 1.8224451228996334e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 2.612621138322974,
+                "rms_scale_over_cutoff": 0.16328882114518586,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 9.286368082689701e-08,
+                "top_band_field_power_fraction": 8.194134336429202e-11,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 8.352624077770106e-09,
+                "total_field_power": 1.2236862021144275e-09
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.48853955478276573,
+                "rms_scale_over_cutoff": 0.030533722173922858,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 1.2424274248217007e-08,
+                "top_band_field_power_fraction": 9.330449134504276e-14,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 1.0107620948404939e-08,
+                "total_field_power": 4.234961653443992e-08
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 3.169183894041779,
+                "rms_scale_over_cutoff": 0.1980739933776112,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 2.451333010808727e-08,
+                "top_band_field_power_fraction": 7.782123984214522e-12,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 3.4404146611721144e-11,
+                "total_field_power": 3.4254364080780325e-12
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.8276039488384307,
+                "rms_scale_over_cutoff": 0.05172524680240192,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 1.3430426663944733e-08,
+                "top_band_field_power_fraction": 2.884638439568568e-13,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 1.4201156920732747e-05,
+                "total_field_power": 2.0733786296917574e-05
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.33823062314975977,
+                "rms_scale_over_cutoff": 0.021139413946859986,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 1.3629582608337138e-08,
+                "top_band_field_power_fraction": 4.9111288988111784e-14,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 0.0006344208768026801,
+                "total_field_power": 0.0055456392437295676
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.8094924131408261,
+                "rms_scale_over_cutoff": 0.05059327582130163,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 7.0922038268459064e-09,
+                "top_band_field_power_fraction": 1.484491469241394e-13,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 1.1951072436088965e-14,
+                "total_field_power": 1.8238172255407126e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 2.6236574878439693,
+                "rms_scale_over_cutoff": 0.16397859299024808,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 3.226336873376592e-08,
+                "top_band_field_power_fraction": 6.955128323376045e-12,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 8.441545152414894e-09,
+                "total_field_power": 1.2263308994300193e-09
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.4886678871139011,
+                "rms_scale_over_cutoff": 0.030541742944618817,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 3.1071010495029704e-09,
+                "top_band_field_power_fraction": 5.775028549909096e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 1.0116337905093252e-08,
+                "total_field_power": 4.236387975872381e-08
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 3.172313332268651,
+                "rms_scale_over_cutoff": 0.1982695832667907,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.1975573081227176e-08,
+                "top_band_field_power_fraction": 9.483455947238993e-13,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 3.44898012266258e-11,
+                "total_field_power": 3.427192814284711e-12
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.8276860816888798,
+                "rms_scale_over_cutoff": 0.05173038010555499,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.8476208507992493e-09,
+                "top_band_field_power_fraction": 9.933412731859449e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 1.4208969043875398e-05,
+                "total_field_power": 2.0741075085406758e-05
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.33828165753441464,
+                "rms_scale_over_cutoff": 0.021142603595900915,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.5419966078680793e-09,
+                "top_band_field_power_fraction": 1.3694502191088968e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 0.0006348216003227015,
+                "total_field_power": 0.0055474678724259895
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.8095594883473127,
+                "rms_scale_over_cutoff": 0.050597468021707045,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.3231651491485216e-09,
+                "top_band_field_power_fraction": 6.915076375540815e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 1.1957236672708817e-14,
+                "total_field_power": 1.8244555668530584e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 2.6265789636896777,
+                "rms_scale_over_cutoff": 0.16416118523060486,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.7153234570063063e-08,
+                "top_band_field_power_fraction": 9.283280050673563e-13,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 8.463997103425632e-09,
+                "total_field_power": 1.2268588010290676e-09
+              }
+            }
+          ],
+          "spectral_tail_sensitivities": [
+            {
+              "R_over_r_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00018286706665413856,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23208775771276,
+                "round_trip_interpolation_infinity": 7.545545129195903e-07,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 1.7110777289520394e-09,
+                "top_band_erasure_perturbation_infinity": 1.3798317040824779e-10,
+                "top_band_field_rms_amplitude": 1.9377682697871866e-11,
+                "top_band_first_bin": 336
+              },
+              "alpha_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0012009010989020425,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23208775771276,
+                "round_trip_interpolation_infinity": 9.634858387502737e-08,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 1.0764691191424793e-09,
+                "top_band_erasure_perturbation_infinity": 1.1570512025317598e-10,
+                "top_band_field_rms_amplitude": 1.2064133230529913e-11,
+                "top_band_first_bin": 336
+              },
+              "chi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00393038977836423,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23208775771276,
+                "round_trip_interpolation_infinity": 1.6284296637937123e-05,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 6.17824806615983e-07,
+                "top_band_erasure_perturbation_infinity": 6.400363305359907e-08,
+                "top_band_field_rms_amplitude": 6.983849056321833e-09,
+                "top_band_first_bin": 336
+              },
+              "lambda_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0006576865616829675,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23208775771276,
+                "round_trip_interpolation_infinity": 0.0001391565491402221,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 1.0870017070451025e-06,
+                "top_band_erasure_perturbation_infinity": 9.152139233969958e-08,
+                "top_band_field_rms_amplitude": 1.2391604177355033e-08,
+                "top_band_first_bin": 336
+              },
+              "phi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.005136981637380834,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23208775771276,
+                "round_trip_interpolation_infinity": 4.079468549421823e-10,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 1.926233942648829e-11,
+                "top_band_erasure_perturbation_infinity": 2.0956155028652536e-12,
+                "top_band_field_rms_amplitude": 2.1664290315479666e-13,
+                "top_band_first_bin": 336
+              },
+              "shift_over_r": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0016012219544303346,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23208775771276,
+                "round_trip_interpolation_infinity": 1.5983176756526095e-06,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 2.78505909528882e-08,
+                "top_band_erasure_perturbation_infinity": 2.559261352409021e-09,
+                "top_band_field_rms_amplitude": 3.1665516142580835e-10,
+                "top_band_first_bin": 336
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0037540391236682335,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46417384835124,
+                "round_trip_interpolation_infinity": 2.2933002915807758e-07,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 1.1206241772334123e-08,
+                "top_band_erasure_perturbation_infinity": 8.609139016914e-10,
+                "top_band_field_rms_amplitude": 6.286023726811353e-11,
+                "top_band_first_bin": 672
+              },
+              "alpha_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.001712236978181745,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46417384835124,
+                "round_trip_interpolation_infinity": 3.2000111644484236e-08,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 9.18346450409731e-10,
+                "top_band_erasure_perturbation_infinity": 5.479177446363016e-11,
+                "top_band_field_rms_amplitude": 5.163058282423868e-12,
+                "top_band_first_bin": 672
+              },
+              "chi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00493945493335787,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46417384835124,
+                "round_trip_interpolation_infinity": 5.112864072209984e-06,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 4.367237073563472e-07,
+                "top_band_erasure_perturbation_infinity": 2.5254761665065815e-08,
+                "top_band_field_rms_amplitude": 2.4455976151012346e-09,
+                "top_band_first_bin": 672
+              },
+              "lambda_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.006089408482817964,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46417384835124,
+                "round_trip_interpolation_infinity": 3.678169757803619e-05,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 2.9405597679414383e-06,
+                "top_band_erasure_perturbation_infinity": 2.239787812441385e-07,
+                "top_band_field_rms_amplitude": 1.6503135808767267e-08,
+                "top_band_first_bin": 672
+              },
+              "phi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.005064483299599289,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46417384835124,
+                "round_trip_interpolation_infinity": 1.2264899789111738e-10,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 9.206489106393533e-12,
+                "top_band_erasure_perturbation_infinity": 6.211538015321524e-13,
+                "top_band_field_rms_amplitude": 5.2033077102653607e-14,
+                "top_band_first_bin": 672
+              },
+              "shift_over_r": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00162109402415998,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46417384835124,
+                "round_trip_interpolation_infinity": 5.704899912522402e-07,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 1.6503111341050088e-08,
+                "top_band_erasure_perturbation_infinity": 9.248179156620857e-10,
+                "top_band_field_rms_amplitude": 9.235414864778381e-11,
+                "top_band_first_bin": 672
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.005167425940919331,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283468755813,
+                "round_trip_interpolation_infinity": 4.8925315154973255e-08,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 5.6064680612701185e-09,
+                "top_band_erasure_perturbation_infinity": 2.5281794269946245e-10,
+                "top_band_field_rms_amplitude": 1.564137510232224e-11,
+                "top_band_first_bin": 1344
+              },
+              "alpha_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.002793070562017532,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283468755813,
+                "round_trip_interpolation_infinity": 9.193186779019915e-09,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 6.426780960531142e-10,
+                "top_band_erasure_perturbation_infinity": 2.56772193636093e-11,
+                "top_band_field_rms_amplitude": 1.8028209028343076e-12,
+                "top_band_first_bin": 1344
+              },
+              "chi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0035921976626678556,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283468755813,
+                "round_trip_interpolation_infinity": 1.534094285896557e-06,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 1.6202711956282275e-07,
+                "top_band_erasure_perturbation_infinity": 5.510769908109725e-09,
+                "top_band_field_rms_amplitude": 4.5390490119168387e-10,
+                "top_band_first_bin": 1344
+              },
+              "lambda_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0038119306283284984,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283468755813,
+                "round_trip_interpolation_infinity": 9.474391042143746e-06,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 9.893900920764223e-07,
+                "top_band_erasure_perturbation_infinity": 3.61157213983089e-08,
+                "top_band_field_rms_amplitude": 2.756262159772422e-09,
+                "top_band_first_bin": 1344
+              },
+              "phi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.005204435851117698,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283468755813,
+                "round_trip_interpolation_infinity": 2.7897051785670944e-11,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 3.977612204004927e-12,
+                "top_band_erasure_perturbation_infinity": 1.4518841645383286e-13,
+                "top_band_field_rms_amplitude": 1.1232207970194244e-14,
+                "top_band_first_bin": 1344
+              },
+              "shift_over_r": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00371290978720945,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283468755813,
+                "round_trip_interpolation_infinity": 1.3573405859920033e-07,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 1.2049270837498598e-08,
+                "top_band_erasure_perturbation_infinity": 5.039683146306319e-10,
+                "top_band_field_rms_amplitude": 3.37479982111331e-11,
+                "top_band_first_bin": 1344
+              }
+            }
+          ]
+        },
+        "SSPRK3": {
+          "constraint_admission_passed": true,
+          "coordinate_time": 0.0625,
+          "diagnostic_saturation_is_physical_resolution_evidence": false,
+          "maximum_erasure_over_round_trip": 0.006036752800406762,
+          "method": "SSPRK3",
+          "pairwise_admission": {
+            "admission_passed": true,
+            "derivative_pair_classification": {
+              "R_over_r_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "alpha_minus_1": [
+                "diagnostically_saturated",
+                "diagnostically_saturated"
+              ],
+              "chi_over_Lambda": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "lambda_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "phi_over_Lambda": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "shift_over_r": [
+                "diagnostically_saturated",
+                "diagnostically_saturated"
+              ]
+            },
+            "derivative_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                20.781237839561964,
+                0.2495012003688842
+              ],
+              "alpha_minus_1": [
+                0.6419272513742811,
+                0.4834330846908587
+              ],
+              "chi_over_Lambda": [
+                0.3749869988390259,
+                0.14188504390701512
+              ],
+              "lambda_minus_1": [
+                9.149994492304108,
+                0.11380950062009007
+              ],
+              "phi_over_Lambda": [
+                0.2142551901915683,
+                0.18877527466403243
+              ],
+              "shift_over_r": [
+                0.4324495613248842,
+                0.528298938729694
+              ]
+            },
+            "every_profile_contracted": true,
+            "every_tail_resolved_or_saturated": true,
+            "field_pair_classification": {
+              "R_over_r_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "alpha_minus_1": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "chi_over_Lambda": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "lambda_minus_1": [
+                "diagnostically_saturated",
+                "directly_resolved"
+              ],
+              "phi_over_Lambda": [
+                "directly_resolved",
+                "directly_resolved"
+              ],
+              "shift_over_r": [
+                "directly_resolved",
+                "directly_resolved"
+              ]
+            },
+            "field_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                5.070942763250259,
+                0.061740651742899444
+              ],
+              "alpha_minus_1": [
+                0.16287524169804254,
+                0.12061642394116008
+              ],
+              "chi_over_Lambda": [
+                0.09117827541989863,
+                0.0355321231028195
+              ],
+              "lambda_minus_1": [
+                2.216323964912389,
+                0.028061714529925678
+              ],
+              "phi_over_Lambda": [
+                0.05419365444261706,
+                0.04713568767542718
+              ],
+              "shift_over_r": [
+                0.10549821278223753,
+                0.13234289847254277
+              ]
+            },
+            "medium_and_fine_individual_budgets_passed": true,
+            "pair_saturation_available": {
+              "R_over_r_minus_1": [
+                true,
+                true
+              ],
+              "alpha_minus_1": [
+                true,
+                true
+              ],
+              "chi_over_Lambda": [
+                true,
+                true
+              ],
+              "lambda_minus_1": [
+                true,
+                true
+              ],
+              "phi_over_Lambda": [
+                true,
+                true
+              ],
+              "shift_over_r": [
+                true,
+                true
+              ]
+            },
+            "point_counts": [
+              4097,
+              8193,
+              16385
+            ],
+            "saturation_used": true
+          },
+          "point_counts": [
+            4097,
+            8193,
+            16385
+          ],
+          "profile_convergence": {
+            "adjacent_differences": [
+              {
+                "coarse_point_count": 4097,
+                "common_proper_radius_maximum": 25.33539446410168,
+                "comparison_sample_count": 769,
+                "fine_point_count": 8193,
+                "infinity_by_field": {
+                  "R_over_r_minus_1": 2.4611867638569184e-07,
+                  "alpha_minus_1": 4.5389402160306186e-08,
+                  "chi_over_Lambda": 7.383656476569686e-06,
+                  "lambda_minus_1": 5.6166058875539715e-05,
+                  "phi_over_Lambda": 1.8138691612176935e-10,
+                  "shift_over_r": 6.913995922846463e-07
+                },
+                "rms_by_field": {
+                  "R_over_r_minus_1": 2.85253164504641e-08,
+                  "alpha_minus_1": 4.812330062780144e-09,
+                  "chi_over_Lambda": 7.283683542439604e-07,
+                  "lambda_minus_1": 5.933613621132309e-06,
+                  "phi_over_Lambda": 2.0182545391020303e-11,
+                  "shift_over_r": 5.412419212577486e-08
+                }
+              },
+              {
+                "coarse_point_count": 8193,
+                "common_proper_radius_maximum": 25.33540063549566,
+                "comparison_sample_count": 1537,
+                "fine_point_count": 16385,
+                "infinity_by_field": {
+                  "R_over_r_minus_1": 7.063566767520777e-08,
+                  "alpha_minus_1": 1.538085622203254e-08,
+                  "chi_over_Lambda": 1.7518093245987518e-06,
+                  "lambda_minus_1": 1.0093252045401124e-05,
+                  "phi_over_Lambda": 3.3675615708102266e-11,
+                  "shift_over_r": 1.5066066746867332e-07
+                },
+                "rms_by_field": {
+                  "R_over_r_minus_1": 6.949799937151596e-09,
+                  "alpha_minus_1": 1.221826020206761e-09,
+                  "chi_over_Lambda": 1.6282712377201654e-07,
+                  "lambda_minus_1": 1.3206121989881432e-06,
+                  "phi_over_Lambda": 4.347995161380822e-12,
+                  "shift_over_r": 1.1113391270650613e-08
+                }
+              }
+            ],
+            "complete_profile_contraction_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            },
+            "every_field_contracted": true,
+            "exact_zero_by_field": {
+              "R_over_r_minus_1": false,
+              "alpha_minus_1": false,
+              "chi_over_Lambda": false,
+              "lambda_minus_1": false,
+              "phi_over_Lambda": false,
+              "shift_over_r": false
+            },
+            "infinity_contracted_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            },
+            "point_counts": [
+              4097,
+              8193,
+              16385
+            ],
+            "rms_contracted_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            },
+            "round_trip_contracted_by_field": {
+              "R_over_r_minus_1": true,
+              "alpha_minus_1": true,
+              "chi_over_Lambda": true,
+              "lambda_minus_1": true,
+              "phi_over_Lambda": true,
+              "shift_over_r": true
+            }
+          },
+          "raw_generic_all_field_admission_passed": false,
+          "raw_spatial_spectral_admission": {
+            "admission_passed": false,
+            "coarsest_individual_budget_passed": true,
+            "derivative_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                20.781237839561964,
+                0.2495012003688842
+              ],
+              "alpha_minus_1": [
+                0.6419272513742811,
+                0.4834330846908587
+              ],
+              "chi_over_Lambda": [
+                0.3749869988390259,
+                0.14188504390701512
+              ],
+              "lambda_minus_1": [
+                9.149994492304108,
+                0.11380950062009007
+              ],
+              "phi_over_Lambda": [
+                0.2142551901915683,
+                0.18877527466403243
+              ],
+              "shift_over_r": [
+                0.4324495613248842,
+                0.528298938729694
+              ]
+            },
+            "every_nested_tail_ratio_passed": false,
+            "field_power_tail_ratios": {
+              "R_over_r_minus_1": [
+                5.070942763250259,
+                0.061740651742899444
+              ],
+              "alpha_minus_1": [
+                0.16287524169804254,
+                0.12061642394116008
+              ],
+              "chi_over_Lambda": [
+                0.09117827541989863,
+                0.0355321231028195
+              ],
+              "lambda_minus_1": [
+                2.216323964912389,
+                0.028061714529925678
+              ],
+              "phi_over_Lambda": [
+                0.05419365444261706,
+                0.04713568767542718
+              ],
+              "shift_over_r": [
+                0.10549821278223753,
+                0.13234289847254277
+              ]
+            },
+            "finest_pair_individual_budgets_passed": true,
+            "grid_point_counts": [
+              4097,
+              8193,
+              16385
+            ],
+            "individual_budget_passed_by_grid": {
+              "16385": {
+                "R_over_r_minus_1": true,
+                "alpha_minus_1": true,
+                "chi_over_Lambda": true,
+                "lambda_minus_1": true,
+                "phi_over_Lambda": true,
+                "shift_over_r": true
+              },
+              "4097": {
+                "R_over_r_minus_1": true,
+                "alpha_minus_1": true,
+                "chi_over_Lambda": true,
+                "lambda_minus_1": true,
+                "phi_over_Lambda": true,
+                "shift_over_r": true
+              },
+              "8193": {
+                "R_over_r_minus_1": true,
+                "alpha_minus_1": true,
+                "chi_over_Lambda": true,
+                "lambda_minus_1": true,
+                "phi_over_Lambda": true,
+                "shift_over_r": true
+              }
+            }
+          },
+          "round_trip_is_a_continuum_error_bound": false,
+          "spectral_budgets": [
+            {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.48818246102133783,
+                "rms_scale_over_cutoff": 0.030511403813833615,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 5.991374749034727e-10,
+                "top_band_field_power_fraction": 1.844301464855691e-14,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.0085716706293191e-08,
+                "total_field_power": 4.2319684414356325e-08
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 3.1533779899286065,
+                "rms_scale_over_cutoff": 0.1970861243705379,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.8567185159282084e-08,
+                "top_band_field_power_fraction": 4.823622366281406e-11,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 3.396828321134944e-11,
+                "total_field_power": 3.416028880966636e-12
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.8274889943098976,
+                "rms_scale_over_cutoff": 0.0517180621443686,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.452245402543829e-08,
+                "top_band_field_power_fraction": 3.0476195522104455e-12,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.4186438697839677e-05,
+                "total_field_power": 2.0718052683102446e-05
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.3380529500992854,
+                "rms_scale_over_cutoff": 0.021128309381205336,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 1.483329801550436e-09,
+                "top_band_field_power_fraction": 2.206014528160021e-14,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 0.0006333229506052467,
+                "total_field_power": 0.0055418627512325465
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 0.8093454846453684,
+                "rms_scale_over_cutoff": 0.05058409279033552,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 3.2615909321052096e-08,
+                "top_band_field_power_fraction": 2.6989103258367845e-12,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 1.193780244543542e-14,
+                "total_field_power": 1.8224536481225174e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 384,
+                "nyquist_bin": 384,
+                "rms_angular_scale": 2.6169851935313586,
+                "rms_scale_over_cutoff": 0.1635615745957099,
+                "sample_count": 769,
+                "top_band_derivative_weighted_power_fraction": 7.49143333946681e-08,
+                "top_band_field_power_fraction": 6.636320302827099e-11,
+                "top_band_first_bin": 336,
+                "total_derivative_weighted_power": 8.381404239219843e-09,
+                "total_field_power": 1.2238107294229947e-09
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.4885729544778117,
+                "rms_scale_over_cutoff": 0.03053580965486323,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 1.2450818364563652e-08,
+                "top_band_field_power_fraction": 9.352347166461819e-14,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 1.0108989789746089e-08,
+                "total_field_power": 4.234956102877455e-08
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 3.168137612527905,
+                "rms_scale_over_cutoff": 0.19800860078299407,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 2.4757327162540914e-08,
+                "top_band_field_power_fraction": 7.856486587681678e-12,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 3.438142943108811e-11,
+                "total_field_power": 3.425435969160033e-12
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.8276472307047062,
+                "rms_scale_over_cutoff": 0.05172795191904414,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 1.2945471427557353e-08,
+                "top_band_field_power_fraction": 2.7787669490651213e-13,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 1.4202661884120051e-05,
+                "total_field_power": 2.073381483122816e-05
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.3382483330676859,
+                "rms_scale_over_cutoff": 0.02114052081673037,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 1.3572459514457034e-08,
+                "top_band_field_power_fraction": 4.8892428657059513e-14,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 0.0006344866280366181,
+                "total_field_power": 0.005545633233262045
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 0.8095208915485625,
+                "rms_scale_over_cutoff": 0.05059505572178516,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 6.9881278548529624e-09,
+                "top_band_field_power_fraction": 1.4626381357000972e-13,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 1.1951927815200544e-14,
+                "total_field_power": 1.823819434088269e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 768,
+                "nyquist_bin": 768,
+                "rms_angular_scale": 2.6250252708757222,
+                "rms_scale_over_cutoff": 0.16406407942973264,
+                "sample_count": 1537,
+                "top_band_derivative_weighted_power_fraction": 3.2396670613470345e-08,
+                "top_band_field_power_fraction": 7.001199313987363e-12,
+                "top_band_first_bin": 672,
+                "total_derivative_weighted_power": 8.450599645664725e-09,
+                "total_field_power": 1.226367265692742e-09
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.48867631760201663,
+                "rms_scale_over_cutoff": 0.03054226985012604,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 3.106494127533579e-09,
+                "top_band_field_power_fraction": 5.774200093832116e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 1.0116683624430153e-08,
+                "total_field_power": 4.2363865783396025e-08
+              },
+              "alpha_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 3.1720519004632615,
+                "rms_scale_over_cutoff": 0.19825324377895384,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.1968511038887939e-08,
+                "top_band_field_power_fraction": 9.476213169478514e-13,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 3.448411618215364e-11,
+                "total_field_power": 3.4271927508927573e-12
+              },
+              "chi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.8276970991676775,
+                "rms_scale_over_cutoff": 0.051731068697979846,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.8367687818959848e-09,
+                "top_band_field_power_fraction": 9.873548930822805e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 1.4209352257181761e-05,
+                "total_field_power": 2.0741082288169355e-05
+              },
+              "lambda_minus_1": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.3382861881010231,
+                "rms_scale_over_cutoff": 0.021142886756313945,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.5446748395267452e-09,
+                "top_band_field_power_fraction": 1.3720053756491616e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 0.0006348385361676442,
+                "total_field_power": 0.005547467274269433
+              },
+              "phi_over_Lambda": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 0.8095667094657505,
+                "rms_scale_over_cutoff": 0.050597919341609406,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.3191857551872438e-09,
+                "top_band_field_power_fraction": 6.8942454346528866e-15,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 1.1957453636496826e-14,
+                "total_field_power": 1.8244561238014985e-14
+              },
+              "shift_over_r": {
+                "individual_admission_passed": true,
+                "last_bin_alias_diagnostic": true,
+                "last_occupied_bin": 1536,
+                "nyquist_bin": 1536,
+                "rms_angular_scale": 2.626946040789333,
+                "rms_scale_over_cutoff": 0.16418412754933331,
+                "sample_count": 3073,
+                "top_band_derivative_weighted_power_fraction": 1.711512670347185e-08,
+                "top_band_field_power_fraction": 9.265590099970656e-13,
+                "top_band_first_bin": 1344,
+                "total_derivative_weighted_power": 8.466428285922951e-09,
+                "total_field_power": 1.226868256132919e-09
+              }
+            }
+          ],
+          "spectral_tail_sensitivities": [
+            {
+              "R_over_r_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00024374543829006786,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23211337307711,
+                "round_trip_interpolation_infinity": 7.5318594519461e-07,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 2.4581966642236484e-09,
+                "top_band_erasure_perturbation_infinity": 1.8358563832537926e-10,
+                "top_band_field_rms_amplitude": 2.7937475898446503e-11,
+                "top_band_first_bin": 336
+              },
+              "alpha_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0011408091990738173,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23211337307711,
+                "round_trip_interpolation_infinity": 9.688658612860937e-08,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 1.144578991662457e-09,
+                "top_band_erasure_perturbation_infinity": 1.1052910872237529e-10,
+                "top_band_field_rms_amplitude": 1.2836523405538553e-11,
+                "top_band_first_bin": 336
+              },
+              "chi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.004176759839217571,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23211337307711,
+                "round_trip_interpolation_infinity": 1.620904056596204e-05,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 6.998218900054991e-07,
+                "top_band_erasure_perturbation_infinity": 6.77012696681587e-08,
+                "top_band_field_rms_amplitude": 7.9461149274818e-09,
+                "top_band_first_bin": 336
+              },
+              "lambda_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0006236864293505337,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23211337307711,
+                "round_trip_interpolation_infinity": 0.0001406542383928411,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 9.692403245009037e-07,
+                "top_band_erasure_perturbation_infinity": 8.772413971624982e-08,
+                "top_band_field_rms_amplitude": 1.1056866528220309e-08,
+                "top_band_first_bin": 336
+              },
+              "phi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.005359551553132518,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23211337307711,
+                "round_trip_interpolation_infinity": 4.078620846352096e-10,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 1.9732265000575974e-11,
+                "top_band_erasure_perturbation_infinity": 2.185957869170504e-12,
+                "top_band_field_rms_amplitude": 2.2178004800425084e-13,
+                "top_band_first_bin": 336
+              },
+              "shift_over_r": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0013866857637697622,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 95.23211337307711,
+                "round_trip_interpolation_infinity": 1.5968250167167303e-06,
+                "sample_count": 769,
+                "top_band_derivative_rms_amplitude": 2.505767969091312e-08,
+                "top_band_erasure_perturbation_infinity": 2.2142945179125023e-09,
+                "top_band_field_rms_amplitude": 2.849842099220141e-10,
+                "top_band_first_bin": 336
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0037494614582785496,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46418035139615,
+                "round_trip_interpolation_infinity": 2.2990159985470335e-07,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 1.121896589358204e-08,
+                "top_band_erasure_perturbation_infinity": 8.620071878517876e-10,
+                "top_band_field_rms_amplitude": 6.293391749195037e-11,
+                "top_band_first_bin": 672
+              },
+              "alpha_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.001709570270450031,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46418035139615,
+                "round_trip_interpolation_infinity": 3.2148228815816935e-08,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 9.22600832831437e-10,
+                "top_band_erasure_perturbation_infinity": 5.4959656231145636e-11,
+                "top_band_field_rms_amplitude": 5.187667274283133e-12,
+                "top_band_first_bin": 672
+              },
+              "chi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.004881197847583105,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46418035139615,
+                "round_trip_interpolation_infinity": 5.144932527350265e-06,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 4.2878917152387836e-07,
+                "top_band_erasure_perturbation_infinity": 2.5113433578462414e-08,
+                "top_band_field_rms_amplitude": 2.4003008015882723e-09,
+                "top_band_first_bin": 672
+              },
+              "lambda_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.006036752800406762,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46418035139615,
+                "round_trip_interpolation_infinity": 3.703889396727746e-05,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 2.9345432475074137e-06,
+                "top_band_erasure_perturbation_infinity": 2.2359464688093134e-07,
+                "top_band_field_rms_amplitude": 1.6466313406937293e-08,
+                "top_band_first_bin": 672
+              },
+              "phi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.005036608227607788,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46418035139615,
+                "round_trip_interpolation_infinity": 1.229267291393945e-10,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 9.139015246983387e-12,
+                "top_band_erasure_perturbation_infinity": 6.191337753763883e-13,
+                "top_band_field_rms_amplitude": 5.164869656562954e-14,
+                "top_band_first_bin": 672
+              },
+              "shift_over_r": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0015998668182375922,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 190.46418035139615,
+                "round_trip_interpolation_infinity": 5.801884615150785e-07,
+                "sample_count": 1537,
+                "top_band_derivative_rms_amplitude": 1.654603557372307e-08,
+                "top_band_erasure_perturbation_infinity": 9.282242679022924e-10,
+                "top_band_field_rms_amplitude": 9.266089606335881e-11,
+                "top_band_first_bin": 672
+              }
+            },
+            {
+              "R_over_r_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0051691446383978915,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283485379213,
+                "round_trip_interpolation_infinity": 4.890327490358117e-08,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 5.606016256612836e-09,
+                "top_band_erasure_perturbation_infinity": 2.5278810126794476e-10,
+                "top_band_field_rms_amplitude": 1.5640250566457574e-11,
+                "top_band_first_bin": 1344
+              },
+              "alpha_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0027881667646820893,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283485379213,
+                "round_trip_interpolation_infinity": 9.200260315561535e-09,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 6.42435619492257e-10,
+                "top_band_erasure_perturbation_infinity": 2.5651860038272223e-11,
+                "top_band_field_rms_amplitude": 1.802132322565445e-12,
+                "top_band_first_bin": 1344
+              },
+              "chi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0035731564613624626,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283485379213,
+                "round_trip_interpolation_infinity": 1.5393971590387835e-06,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 1.6155276115546495e-07,
+                "top_band_erasure_perturbation_infinity": 5.5005069054224476e-09,
+                "top_band_field_rms_amplitude": 4.5253518189248264e-10,
+                "top_band_first_bin": 1344
+              },
+              "lambda_minus_1": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0038202622336180017,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283485379213,
+                "round_trip_interpolation_infinity": 9.475331090910005e-06,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 9.902621440710281e-07,
+                "top_band_erasure_perturbation_infinity": 3.6198249517629955e-08,
+                "top_band_field_rms_amplitude": 2.758832166249963e-09,
+                "top_band_first_bin": 1344
+              },
+              "phi_over_Lambda": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.00520550424032608,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283485379213,
+                "round_trip_interpolation_infinity": 2.7883058219192735e-11,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 3.971662436005674e-12,
+                "top_band_erasure_perturbation_infinity": 1.4514537779326675e-13,
+                "top_band_field_rms_amplitude": 1.1215278998867118e-14,
+                "top_band_first_bin": 1344
+              },
+              "shift_over_r": {
+                "derivative_tail_within_nyquist_round_trip_scale": true,
+                "diagnostically_saturated": true,
+                "erasure_over_round_trip": 0.0036851852919008825,
+                "erasure_within_round_trip_scale": true,
+                "field_tail_within_round_trip_scale": true,
+                "nyquist_angular_frequency": 380.9283485379213,
+                "round_trip_interpolation_infinity": 1.366110388725728e-07,
+                "sample_count": 3073,
+                "top_band_derivative_rms_amplitude": 1.2037607438333803e-08,
+                "top_band_erasure_perturbation_infinity": 5.03436991164505e-10,
+                "top_band_field_rms_amplitude": 3.371595819192069e-11,
+                "top_band_first_bin": 1344
+              }
+            }
+          ]
+        }
+      },
+      "source_checkpoint": "runs/fgc-2-sf1/rsp1/amplitude3-spectrum/latest-checkpoint.npz",
+      "source_checkpoint_sha256": "0d5d613b6067b17dda35eb2c180a4540cd99b020edec7e4fd56f24f1ef4123f9",
+      "source_study_result_sha256": "0bb184a519230d1b221d20fb88df70841800575b886df0b0642837deb26e4551",
+      "terminal_states_restored_and_hash_matched": true
+    },
+    "decision": "PROTO12_is_frozen_but_HLT10_runtime_fresh_calibration_and_every_candidate_or_physical_outcome_remain_closed",
+    "epistemic_boundary": {
+      "GR0_calibration_authorized": false,
+      "GR0_calibration_completed": false,
+      "PROTO12_runtime_implemented": false,
+      "PROTO12_trajectory_read": false,
+      "SGBL_or_FGCQR_trajectory_read": false,
+      "collapse_or_trapped_outcome_classified": false,
+      "fresh_state_constructed_under_PROTO12": false,
+      "mechanism_question_answered": false,
+      "round_trip_residual_used_as_continuum_error_bound": false
+    },
+    "immutable_lineage": {
+      "calibration_diagnosis": {
+        "GR0_case_eligible": false,
+        "artifact_id": "FGC-1-CAL8-PREF10",
+        "classification": "post_calibration_PROTO11_evolved_source_arithmetic_and_direct_spectral_obstruction_diagnosis",
+        "config_sha256": "a7646fb7ef2b229c36981a2f4a87e4428de1bdc5cbe324baedc965097c674cb3",
+        "is_mechanism_evidence": false,
+        "result_sha256": "10c6898e1ec6e7c07793180c4a4f8fa26a1b2f660115a0b2bc54497ff8bbb89d"
+      },
+      "checkpoint_commit": "ffcc445354dc2bb2ee09afc3296f35ac8e473f46",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "predecessor_protocol_validation": {
+        "FGCQR_outcomes_inspected_before_revision": false,
+        "PROTO10_GR0_calibration_inspected_before_revision": true,
+        "SGBL_outcomes_inspected_before_revision": false,
+        "artifact_id": "FGC-2-SF1-PROTO11",
+        "calibration_output_root": "runs/fgc-2-sf1/proto11/calibration",
+        "candidate_or_holdout_outcome_observed_before_revision": false,
+        "claims": {
+          "FGCQR_holdout_execution_authorized": false,
+          "FGCQR_mechanism_rejected": false,
+          "PROTO11_fresh_GR0_dynamic_calibration_authorized": false,
+          "PROTO11_resolved_holdout_manifest_authorized": false,
+          "PROTO11_successor_runtime_implemented": false,
+          "child_domain_or_topology_derived": false,
+          "classical_spherical_diagnostic_authorized": false,
+          "dark_sector_mechanism_derived": false,
+          "general_gradient_route_rejected": false,
+          "physical_transition_claim_authorized": false,
+          "retained_EFT_evolution_authorized": false,
+          "singularity_resolution_derived": false,
+          "varying_locally_measured_c_derived": false
+        },
+        "diagnosis_artifact_id": "FGC-1-CAL7-PREF9",
+        "diagnosis_checkpoint_commit": "3e34c5e1b0f4193b1178f09725be6e72e462c119",
+        "eligible_calibration_amplitudes": [
+          "5/2",
+          "3"
+        ],
+        "frozen": true,
+        "holdout_output_root": "runs/fgc-2-sf1/proto11/holdout",
+        "initial_q_rule": "D_h(u-u_ref)+q_ref",
+        "interior_q_reprojection_permitted": false,
+        "mechanism_question_answered_before_revision": false,
+        "new_numeric_tolerance_added": false,
+        "only_reference_state_differentiation_changes": true,
+        "outcome_neutral_contract_validated": true,
+        "physical_and_numerical_thresholds_unchanged": true,
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO10",
+        "premise_revision_only": true,
+        "protocol_version": 11,
+        "raw_source_residual_maximum": "1/1000000000000",
+        "reduction_constraint_rule": "q-(D_h(u-u_ref)+q_ref)",
+        "reference_q": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "reference_u": [
+          "1",
+          "0",
+          "1",
+          "r",
+          "0",
+          "0"
+        ],
+        "resolution_ladder_unchanged": true,
+        "resolved_holdout_manifest": "configs/fgc/fgc-1-pro11-hld1.toml",
+        "resolved_holdout_manifest_present": false,
+        "semantic_holdout_contract_sha256": "2ecd63df56139a2e36c163acd73e6b8c0af9c0c1c8682bdad459b2e29dc2fc28",
+        "source_q_r_rule": "D_h(q-q_ref)"
+      },
+      "resolution_evidence": {
+        "artifact_id": "FGC-1-RSP1-PREF12",
+        "classification": "post_run_amplitude_three_direct_spectrum_clearance_for_successor_design",
+        "config_sha256": "10248e01e83714a3e0b83d213748be8d5c6e1b234133b7bbe35a2809515e5bd1",
+        "generic_all_field_raw_admission": false,
+        "is_mechanism_evidence": false,
+        "result_sha256": "0bb184a519230d1b221d20fb88df70841800575b886df0b0642837deb26e4551"
+      },
+      "source_instrument": {
+        "artifact_id": "FGC-1-SRC4-VEC1",
+        "classification": "prospectively_frozen_tensor_contraction_backend_for_unchanged_SRC3_GR0_REF1",
+        "config_sha256": "39c1c11c703c58cf884e4f0f240db0dd1eaa085494e6d2cb14761fbcc48681d2",
+        "equations_or_thresholds_changed": false,
+        "is_mechanism_evidence": false,
+        "result_sha256": "fb510b0232ac956a73321b63a31d1f52a7732132ff736d41f6d08a4da125aa7a"
+      }
+    },
+    "namespace_precondition": {
+      "both_fresh_namespaces_absent": true,
+      "freeze_created_no_namespace": true,
+      "records": [
+        {
+          "exists": false,
+          "path": "runs/fgc-2-sf1/proto12/calibration"
+        },
+        {
+          "exists": false,
+          "path": "runs/fgc-2-sf1/proto12/holdout"
+        }
+      ]
+    },
+    "protocol_validation": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "PROTO11_GR0_calibration_inspected_before_revision": true,
+      "RSP1_GR0_resolution_trajectory_inspected_before_revision": true,
+      "RSP1_qualification_point_counts": [
+        4097,
+        8193,
+        16385
+      ],
+      "SGBL_outcomes_inspected_before_revision": false,
+      "artifact_id": "FGC-2-SF1-PROTO12",
+      "calibration_output_root": "runs/fgc-2-sf1/proto12/calibration",
+      "claims": {
+        "FGCQR_holdout_execution_authorized": false,
+        "FGCQR_mechanism_rejected": false,
+        "PROTO12_fresh_GR0_dynamic_calibration_authorized": false,
+        "PROTO12_resolved_holdout_manifest_authorized": false,
+        "PROTO12_successor_runtime_implemented": false,
+        "SGBL_execution_authorized": false,
+        "child_domain_or_topology_derived": false,
+        "classical_spherical_diagnostic_authorized": false,
+        "dark_sector_mechanism_derived": false,
+        "general_gradient_route_rejected": false,
+        "physical_transition_claim_authorized": false,
+        "retained_EFT_evolution_authorized": false,
+        "singularity_resolution_derived": false,
+        "varying_locally_measured_c_derived": false
+      },
+      "diagnostic_saturation_is_physical_resolution_evidence": false,
+      "direct_ratio_ceiling": "1/4",
+      "eligible_calibration_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "evidence_artifact_ids": [
+        "FGC-1-CAL8-PREF10",
+        "FGC-1-RSP1-PREF12",
+        "FGC-1-SRC4-VEC1"
+      ],
+      "evidence_checkpoint_commit": "ffcc445354dc2bb2ee09afc3296f35ac8e473f46",
+      "frozen": true,
+      "holdout_output_root": "runs/fgc-2-sf1/proto12/holdout",
+      "mechanism_question_answered_before_revision": false,
+      "new_numeric_tolerance_added": false,
+      "outcome_neutral_contract_validated": true,
+      "pairwise_spectral_rule": "direct_ratio_below_one_quarter_or_conditioning_guarded_diagnostic_saturation",
+      "physical_and_numerical_thresholds_unchanged": true,
+      "point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO11",
+      "premise_revision_only": true,
+      "protocol_version": 12,
+      "raw_ratios_remain_public": true,
+      "resolution_ladder_unchanged": true,
+      "resolved_holdout_manifest": "configs/fgc/fgc-1-pro12-hld1.toml",
+      "resolved_holdout_manifest_present": false,
+      "round_trip_is_a_continuum_error_bound": false,
+      "semantic_holdout_contract_sha256": "608bb6f2024a5af8c6c4b562fea622093b5bd2b6ac67d88d78ed991f5528f4de",
+      "source_backend": "NumPy_tensor_contractions_over_only_four_dimensional_spacetime_indices",
+      "source_equations_thresholds_and_branch_unchanged": true
+    }
+  },
+  "classification": "outcome_neutral_PROTO12_source_instrument_and_pairwise_spectral_freeze",
+  "derivation_document": "docs/fgc-pro12-frz1.md",
+  "derivation_document_sha256": "c2660d00453e21530b41dc38351d48a3b89f5bff9c77c895d1015d9913da11f1",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO12_SRC4_source_backend_contract_frozen": true,
+    "PROTO12_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO12_frozen": true,
+    "PROTO12_pairwise_spectral_classifier_derived": true,
+    "PROTO12_resolved_holdout_manifest_authorized": false,
+    "PROTO12_successor_runtime_implemented": false,
+    "RSP1_generic_all_field_raw_spectral_admission_passed": false,
+    "RSP1_pairwise_conditioning_recomputed": true,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro12_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro12_frz1.py": "2a0f876af432f0908df4309a3d02eee07819dc2b945a16ae9c0b3d6d468cd373",
+    "scripts/run_fgc_rsp1_resolution_study.py": "4b4f1a86fd6c0d74c37b34f27807a5bd0e660eec140a97d4b87d298b0773acd9",
+    "src/recursive_horizons/fgc/evolution/health_monitor.py": "b364b94745a808313248b442417aacd73a7a8035a5ff9fc1a2bd4829e7d55784",
+    "src/recursive_horizons/fgc/evolution/proto4_admission.py": "f3c3973a58b9f81d820b84845615034c01457767102e41b50d9b095997d7765f",
+    "src/recursive_horizons/fgc/evolution/protocol_v12.py": "9b46fd2630474a4aebf5f1728289d1dec05a2ca3e33f8305b98ade58062a9ea0",
+    "src/recursive_horizons/fgc/evolution/rsp1_resolution_runtime.py": "341475bf8030d847ddf023f20466aad0f397a08e5b680e10604d2fc670e11411",
+    "src/recursive_horizons/fgc/evolution/spectral_sensitivity.py": "58e1edcaf5aacfe39e26b4dd3fe3c4de291db5eca0ec7921d4395f389d5a1bad",
+    "src/recursive_horizons/fgc/evolution/spectral_sensitivity_v12.py": "2c6fb316d5218e6e05c4290f04c7999e6c2c91999419fb084f4de8d9ea68691d"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO12_runtime_implemented": false,
+    "SGBL_control_completed": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "trapped_sphere_observed": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "PROTO11_GR0_calibration_trajectory_inspected": true,
+    "PROTO12_trajectory_read": false,
+    "RSP1_GR0_resolution_trajectory_inspected": true,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "calibration_diagnosis_artifact": "FGC-1-CAL8-PREF10",
+    "collapse_or_trapped_outcome_classified": false,
+    "freeze_role": "premise_only_source_instrument_and_pairwise_spectral_protocol_certificate",
+    "holdout_branch": "FGC-QR",
+    "mechanism_question_answered": false,
+    "predecessor_protocol": "FGC-2-SF1-PROTO11",
+    "resolution_evidence_artifact": "FGC-1-RSP1-PREF12",
+    "source_instrument_artifact": "FGC-1-SRC4-VEC1",
+    "target_protocol": "FGC-2-SF1-PROTO12"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro12-frz1.toml": "29c7a12eb91108f2df5ff1f8e8888435ed41064a30b9bdeb70bbacaced6b91fa",
+    "configs/fgc/fgc-2-sf1-protocol-v12.toml": "2c33ef4a703e918683c886eb216bfc77af5a48d477c1e1556e0b5176d44fbe7f"
+  }
+}

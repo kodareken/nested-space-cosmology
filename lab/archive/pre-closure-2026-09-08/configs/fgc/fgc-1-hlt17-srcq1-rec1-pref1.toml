@@ -1,0 +1,14 @@
+artifact_id = "FGC-1-HLT17-SRCQ1-REC1-PREF1"
+schema_version = 1
+classification = "independently_bound_all_six_source_c1r1_qualified_no_state_advance"
+authority_commit = "be6a1792a30c39fc48ea7435368cbc8c17718d4c"
+authority_parent = "1fc17e5e2327cb3d8776386fc12d92a48af07f9c"
+freeze_config_path = "configs/fgc/fgc-1-hlt17-srcq1-rec1-frz1.toml"
+freeze_config_sha256 = "6a11a65dd7de04b36dcf02c5b1774e031efe7cb1638b0445c465045086989525"
+result_path = "results/fgc-1-hlt17-srcq1-rec1-pref1.json"
+owner_document = "docs/fgc-hlt17-srcq1-rec1-pref1.md"
+accepted_state_advanced = false
+campaign_store_written = false
+endpoint_adopted_or_serialized = false
+pro20_event_execution_authorized = false
+written = false

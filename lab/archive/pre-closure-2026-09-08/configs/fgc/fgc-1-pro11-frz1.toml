@@ -1,0 +1,63 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO11-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v11.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO11"
+predecessor_protocol = "FGC-2-SF1-PROTO10"
+diagnosis_artifact = "FGC-1-CAL7-PREF9"
+calibration_branch = "GR-0"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_well_balanced_reference_map_protocol_and_lineage_certificate"
+PROTO10_GR0_calibration_trajectory_inspected = true
+PROTO10_candidate_or_holdout_outcome_observed = false
+collapse_or_trapped_outcome_classified = false
+FGCQR_evolution_outcomes_inspected = false
+SGBL_evolution_outcomes_inspected = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "3e34c5e1b0f4193b1178f09725be6e72e462c119"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v10.toml"
+predecessor_protocol_sha256 = "f06ea93e82a4cdda2a0474623bc0db9ac679e4044657afb32be0d5342fe437fa"
+diagnosis_config = "configs/fgc/fgc-1-cal7-pref9.toml"
+diagnosis_config_sha256 = "f7d20efe795a0dd33264ef9cca4ae7977461fa5750eea2a01098b42a0b7c4544"
+diagnosis_result = "results/fgc-1-cal7-pref9.json"
+diagnosis_result_sha256 = "aab4ea62d569e224bf0bff0f7c3368b2d8dd07007735c1d1993ea3f9ef5b5d2a"
+
+[proof_contract]
+PROTO11_overlay_must_validate_exactly = true
+checkpoint_must_be_ancestor_of_HEAD = true
+predecessor_and_diagnosis_must_be_read_from_checkpoint = true
+immutable_blob_hashes_must_match_PROTO11_amendment = true
+immutable_PROTO10_must_validate_unchanged = true
+immutable_CAL7_must_be_canonical_and_hash_bound = true
+CAL7_must_remain_a_numerical_premise_diagnosis_not_a_mechanism_result = true
+only_semidiscrete_reference_state_differentiation_may_change = true
+reference_state_and_field_order_must_be_exact_and_fixed = true
+initial_q_q_r_and_reduction_rules_must_match_the_frozen_algebra = true
+interior_q_reprojection_damping_and_constraint_cleaning_are_forbidden = true
+raw_source_gate_and_complete_unredefined_source_must_remain_unchanged = true
+all_physical_inputs_equations_solvers_methods_CFL_retries_stops_spectra_observables_and_claims_must_remain_unchanged = true
+projected_input_hashes_must_be_rebuilt_under_PROTO11 = true
+exact_Minkowski_and_nontrivial_REF1_controls_are_required_before_runtime = true
+new_output_namespaces_must_be_declared_but_not_accessed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO11_successor_runtime_implemented = false
+PROTO11_fresh_GR0_dynamic_calibration_authorized = false
+PROTO11_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

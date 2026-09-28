@@ -1,0 +1,45 @@
+{
+  "comparison": "all exact fields and authenticated source hashes; no numerical evolution",
+  "conclusions": {
+    "finite_torsion_matching_datum_fixed": false,
+    "published_d4_fixed_point_is_NSC_d5_prediction": false,
+    "published_fermion_contribution_preserves_visible_subspace": true,
+    "quoted_Palatini_flow_preserves_selected_subspace": false,
+    "this_is_a_derived_NSC_beta_function": false
+  },
+  "field_space": "source contortion beta_abc=-beta_acb; current candidate uses only K=beta_[abc]",
+  "imported_flow": {
+    "C_fermion_d5_one_Dirac": "1/(24*pi**3)",
+    "beta_u_d5_on_visible_subspace": "-14*g1*kappa_loop",
+    "beta_u_on_visible_subspace": "-2*g1*kappa_loop*(d + 2)",
+    "dimensionless_gi": "gi/k^(d-2)",
+    "fermion_offsets": "(-C_fermion,+2*C_fermion)",
+    "fermion_only_beta_u": "0",
+    "metric_lambda1": "(d**2 - 7*d - 12)/4",
+    "metric_lambda2": "(d - 4)*(d + 1)/4"
+  },
+  "next_action": "define the flow Hessian on metric, skew 3-form, physical fermions and links, with the actual measure/constraints before taking the trace",
+  "projection": {
+    "embedding_of_C_K_squared": "g1=C/3, g2=-2*C/3, g3=0",
+    "norm_identity": "||K||^2=(I1-2*I2)/3",
+    "norm_identity_residual": "0",
+    "orthogonality_residual": "0",
+    "visible_subspace_condition": "u=2*g1+g2=0"
+  },
+  "reuse_conditions": [
+    "published generalized Palatini field space",
+    "connection has mass terms only and no regulating kernel",
+    "one-loop approximation; specified graviton gauge and cutoff",
+    "NSC proper-time regulator, boundary domain and constrained measure not matched"
+  ],
+  "schema": "NSC-PUBLISHED-FLOW-COMPATIBILITY-v2",
+  "source_hashes": {
+    "docs/nsc-flow-compatibility.md": "0524fee024e305b039e634790428806e3b39d594c443cf1b4051279b09716dc7",
+    "scripts/check_nsc_flow_compatibility.py": "4a526141ce337f763c26aa9aa1a841c682319c28b3de60ccefc7cc896cd7fac8"
+  },
+  "sources": [
+    "https://arxiv.org/html/1506.02882v3",
+    "https://arxiv.org/html/1101.1424v3"
+  ],
+  "status": "exact source-compatibility test, not an NSC renormalization flow"
+}

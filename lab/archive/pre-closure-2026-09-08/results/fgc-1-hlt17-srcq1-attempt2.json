@@ -1,0 +1,40 @@
+{
+  "artifact_id": "FGC-1-HLT17-SRCQ1-ATTEMPT2",
+  "authority_commit": "f3a31dc6fce35baa90d305a61e89cee9706fed38",
+  "classification": "completed_terminal_reports_cfl_evidence_incomplete_no_state_advance",
+  "derivation_document": "docs/fgc-hlt17-srcq1-frz1.md",
+  "completed_member_count": 4,
+  "implementation_commit": "7123aa385b3f4165186acd241f532b58ebbb3a9b",
+  "implementation_sha256": "e801532e01061122b03bd2e5b8b1359926a65445b676d695fcdc6da371784bab",
+  "member_outcomes": [
+    {"member_key": "RK4-2049", "outcome": "prepared", "source_evaluation_recorded": true},
+    {"member_key": "RK4-4097", "outcome": "prepared", "source_evaluation_recorded": true},
+    {"member_key": "RK4-8193", "outcome": "prepared", "source_evaluation_recorded": true},
+    {"cfl_ratio_evidence_recorded": false, "member_key": "SSPRK3-4097", "outcome": "runner_reported_cfl", "source_evaluation_recorded": true}
+  ],
+  "nonclaims": {
+    "cfl_terminal_independently_reproduced": false,
+    "physical_source_all_six_qualified": false,
+    "production_resource_nonpass": false,
+    "scientific_nonpass": false,
+    "sf1_implication": false
+  },
+  "origin_capture_sha256": "2824af06c674336d479ec53faa4269f02fb598055860ec22f2ad84602a83fe72",
+  "raw_terminal": {
+    "directory_payload_sha256": "7b06deb68c989734f8dd669f2f1a8f4531aa90b82cc0e9ff34330db363123009",
+    "leaf_bytes": 45589,
+    "leaf_path": "runs/fgc-2-sf1/hlt17-srcq1-source-origin-qualification/qualification.json",
+    "leaf_sha256": "889a8d17551a1eea6ed56f43f602fefb3f61ab78637bbdd0c995905e22259d89"
+  },
+  "resource_facts": {"max_rss_bytes": 981663744, "total_wall_seconds": 206.5545453329978},
+  "retry_authorized": false,
+  "schema_version": 1,
+  "source_closure_sha256": "616fc0c740d6b00cf2983c4e19b576ad25441904e81a2853229f59055d57f3ab",
+  "state_boundary": {
+    "accepted_state_advanced": false,
+    "campaign_store_written": false,
+    "endpoint_adopted_or_serialized": false,
+    "pro20_namespace_absent": true
+  },
+  "typed_owner": "SRCQ1 CFL evidence and qualification sequencing"
+}

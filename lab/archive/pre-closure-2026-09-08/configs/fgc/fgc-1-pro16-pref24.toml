@@ -1,0 +1,63 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO16-PREF24"
+project_version = "0.11.0"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v16.toml"
+protocol_freeze_config = "configs/fgc/fgc-1-pro16-frz1.toml"
+protocol_freeze_result = "results/fgc-1-pro16-frz1.json"
+theorem_module = "src/recursive_horizons/fgc/evolution/proto16_transition_theorem.py"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO16"
+role = "independent_static_PROTO16_receipt_and_schema_completeness_audit"
+raw_history_or_namespace_opened = false
+runtime_or_runner_implemented = false
+trajectory_read = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "8a1bb20ba43484685dad7eff39e300d61504b01c"
+protocol_sha256 = "3b0ab8663ed0568f03841167a2db096419b0978a71b534eefa9f9bb9a6787c75"
+freeze_config_sha256 = "5c296d158e02b40faf576be3ff3261f9ccf76f9c6f01025c489e6b0aba5aaea4"
+freeze_result_sha256 = "f8e14deda1638bda6e98831ae1ea80c8d1fdffb23957e183acd8b57a154ce43f"
+protocol_module_sha256 = "c1755e917649a9e1d81ff5fe250847d5b9bc9e273d2c3cc6dba689119d6b0318"
+proto15_runtime_sha256 = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+hlt13_result = "results/fgc-1-hlt13-mon13.json"
+hlt13_result_sha256 = "de55f8d55a1db0043945d3553c7d2070703809b82c1f7141bf923c036b9df5b7"
+checkpoint_must_be_ancestor_of_HEAD = true
+
+[theorem_contract]
+event_index = 23
+event_target_time = "3/2"
+next_target_time = "25/16"
+member_count = 6
+canonical_duplicate_safe_json = true
+exact_dyadic_time_identity = true
+receipt_outer_record_shape_and_sequence_checked = true
+sealed_event_and_genesis_present_missing_rule_inventory_checked = true
+no_legal_successor_or_genesis_completion_claimed = true
+
+[claims]
+PROTO16_receipt_hash_cycle_removed = true
+PROTO16_exact_successor_and_genesis_derivation_not_frozen = true
+PROTO17_successor_freeze_design_authorized = true
+PROTO16_independent_transition_theorem_bound = false
+HLT14_implementation_and_synthetic_qualification_authorized = false
+PROTO16_successor_runtime_implemented = false
+PROTO16_pretrajectory_runtime_authorized = false
+PROTO16_fresh_GR0_dynamic_calibration_authorized = false
+PROTO16_trajectory_read = false
+PROTO16_output_namespace_created = false
+PROTO16_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

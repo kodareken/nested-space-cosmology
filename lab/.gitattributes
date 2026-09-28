@@ -1,0 +1,8 @@
+*.docx binary
+*.fits binary
+*.pdf binary
+
+# Exact third-party payloads retain source whitespace and are hash-verified.
+collected-data/desi-dr2-bao/chain.margestats binary
+collected-data/gw170817/G298048.lvc binary
+collected-data/gw170817/glg_tcat_all_bn170817529_v03.fit binary

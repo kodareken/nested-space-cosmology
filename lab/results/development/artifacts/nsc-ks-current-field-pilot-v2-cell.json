@@ -1,0 +1,50 @@
+{
+  "CPU_seconds": 97.46316399999999,
+  "bounds": {
+    "polynomial_and_profile_tail": [
+      {
+        "exponent": -107,
+        "mantissa": "50648439375595724766618865274127949"
+      },
+      {
+        "exponent": -99,
+        "mantissa": "232045278789669457843392017291413067"
+      }
+    ],
+    "polynomial_finite_band": [
+      {
+        "exponent": -133,
+        "mantissa": "99318694054440268855552333617558853"
+      },
+      {
+        "exponent": -127,
+        "mantissa": "786094171123667768511338412255665027"
+      }
+    ],
+    "time_coefficient_and_radius_remainder": [
+      {
+        "exponent": -159,
+        "mantissa": "50523582700023570662036563121468421"
+      },
+      {
+        "exponent": -153,
+        "mantissa": "925893006024553793778268461350223529"
+      }
+    ],
+    "total_continuous_normalized_residual": [
+      {
+        "exponent": -108,
+        "mantissa": "101296878751191471970215650596016563"
+      },
+      {
+        "exponent": -100,
+        "mantissa": "464090557579339018481557397368666097"
+      }
+    ]
+  },
+  "cell_index": 122,
+  "named_obstruction": "cheb32_mixed_profile_fourier_omitted_band_from_global_derivative_l1",
+  "physical_local_gate": "OPEN",
+  "schema": "NSC-KS-CURRENT-FIELD-PILOT-CELL-v2",
+  "signature_digest": "42607ecf826292ec673b37acd7875fd46482d2ba25b40c5de477b51f1212500b"
+}

@@ -1,0 +1,209 @@
+{
+  "artifact_id": "FGC-1-EFT1-OPEN1",
+  "classification": "fail_closed_retained_EFT_open_run_authorization_audit_not_an_EFT_validity_or_evolution_certificate",
+  "derivation_document": "docs/fgc-eft1-open1.md",
+  "derivation_document_sha256": "d725a4bd7df93d96ce70d683ca90fa9ca56204306daef287fddc733d435deb08",
+  "frozen_configuration": {
+    "artifact_id": "FGC-1-EFT1-OPEN1",
+    "authorization_contract": {
+      "all_required_predicates_must_pass": true,
+      "conditional_Cauchy_uniqueness_is_not_solution_existence": true,
+      "frozen_main_boundary_dissipation_is_not_constraint_preserving_IBVP": true,
+      "local_component_bounds_are_not_frequency_bounds": true,
+      "one_false_predicate_stops_the_run": true,
+      "radial_hyperbolicity_is_not_multidirectional_hyperbolicity": true
+    },
+    "bnd1_config": "configs/fgc/fgc-1-hyp1-bnd1-md1.toml",
+    "bnd1_result": "results/fgc-1-hyp1-bnd1-md1.json",
+    "claims": {
+      "UV_completion_derived": false,
+      "affine_null_defocusing_derived": false,
+      "collapse_solution_derived": false,
+      "complete_Wilsonian_EFT_defined": false,
+      "constraint_complete_IBVP_proven": false,
+      "evolution_authorized": false,
+      "finite_invariant_transition_surface_derived": false,
+      "initial_data_constructed": false,
+      "radiative_stability_proven": false,
+      "retained_EFT_open_run_envelope_proven": false,
+      "singularity_resolution_derived": false
+    },
+    "con3_config": "configs/fgc/fgc-1-hyp1-con3-cau1.toml",
+    "con3_result": "results/fgc-1-hyp1-con3-cau1.json",
+    "eft0_config": "configs/fgc/fgc-1-eft0-led1.toml",
+    "eft0_result": "results/fgc-1-eft0-led1.json",
+    "project_version": "0.11.0",
+    "schema_version": 1,
+    "uhyp1_config": "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml",
+    "uhyp1_result": "results/fgc-1-hyp1-dom3-uhyp1.json"
+  },
+  "gate_status": {
+    "DEF1_authorized": false,
+    "audit_definition_and_fail_closed_composition_passed": true,
+    "collapse_authorized": false,
+    "evolution_authorized": false,
+    "initial_data_authorized": false,
+    "retained_EFT_open_run_envelope_passed": false
+  },
+  "generated_by": "scripts/reproduce_fgc_eft1_open1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_eft1_open1.py": "5ffb9aaa94621c8644bf8b3dd5612769119b6d5a90ae46f9d20c30d4e704fb19",
+    "src/recursive_horizons/fgc/eft_run_envelope.py": "f0ceb410d123436a89067930b4ba38b8a2c285e342ff06ae810cdc2cd0e94dc8"
+  },
+  "nonclaims": {
+    "UV_completion_derived": false,
+    "affine_null_defocusing_derived": false,
+    "collapse_solution_derived": false,
+    "complete_Wilsonian_EFT_defined": false,
+    "constraint_complete_IBVP_proven": false,
+    "evolution_authorized": false,
+    "finite_invariant_transition_surface_derived": false,
+    "initial_data_constructed": false,
+    "radiative_stability_proven": false,
+    "retained_EFT_open_run_envelope_proven": false,
+    "singularity_resolution_derived": false
+  },
+  "open_run_authorization_audit": {
+    "artifact_id": "FGC-1-EFT1-OPEN1",
+    "authorization_logic": "all_required_predicates_must_pass; one_false_predicate_stops_the_run",
+    "classification": "fail_closed_retained_EFT_open_run_authorization_audit_not_an_EFT_validity_or_evolution_certificate",
+    "evolution_authorized": false,
+    "minimum_next_evidence": [
+      "complete symmetry-reduced operator basis through a declared target order with matched or bounded coefficients",
+      "covariant field-gradient, curvature, and proper-frequency bounds on a nonzero spacetime run domain",
+      "uniform total omitted-remainder estimate below a predeclared tolerance",
+      "multidirectional full-system hyperbolicity plus physical/gauge constraint-complete local existence or IBVP",
+      "regular-centre or declared-boundary data and a bootstrap monitor that stops before any bound is crossed"
+    ],
+    "missing_predicate_ids": [
+      "complete_symmetry_reduced_basis_through_target_order",
+      "coefficient_bounds_or_matching_for_complete_omitted_basis",
+      "invariant_proper_frequency_and_wavenumber_bound",
+      "covariant_field_gradient_and_curvature_bounds",
+      "uniform_total_omitted_remainder_bound",
+      "multidirectional_full_system_strong_hyperbolicity",
+      "constraint_complete_local_existence_or_IBVP",
+      "nonzero_spacetime_run_domain_with_regular_center_or_declared_boundaries",
+      "evolution_bootstrap_monitor_and_fail_closed_stop_rule"
+    ],
+    "nonclaims": {
+      "UV_completion_derived": false,
+      "affine_null_defocusing_derived": false,
+      "collapse_solution_derived": false,
+      "complete_Wilsonian_EFT_defined": false,
+      "constraint_complete_IBVP_proven": false,
+      "evolution_authorized": false,
+      "finite_invariant_transition_surface_derived": false,
+      "initial_data_constructed": false,
+      "radiative_stability_proven": false,
+      "retained_EFT_open_run_envelope_proven": false,
+      "singularity_resolution_derived": false
+    },
+    "partial_positive_evidence": {
+      "compact_nonflat_radial_strong_hyperbolicity": true,
+      "conditional_boundary_free_gauge_Cauchy_uniqueness": true,
+      "exact_local_component_controls": true,
+      "externally_declared_cutoff": true,
+      "uniform_frozen_radial_main_system_maximal_dissipation": true
+    },
+    "passed_predicate_count": 3,
+    "required_predicate_count": 12,
+    "required_predicates": [
+      {
+        "evidence": "EFT0-LED1 records Lambda=16 as an external assumption",
+        "failure_consequence": "no dimensionless EFT hierarchy can be evaluated",
+        "id": "declared_cutoff_and_matching_scale",
+        "passed": true
+      },
+      {
+        "evidence": "EFT0-LED1 explicitly separates Lambda from code-unit fixture couplings",
+        "failure_consequence": "the EFT scale would be circularly assigned",
+        "id": "cutoff_not_inferred_from_fixture",
+        "passed": true
+      },
+      {
+        "evidence": "all exact EFT0-LED1 F and scalar-amplitude inequalities pass",
+        "failure_consequence": "the retained local action leaves its declared component bounds",
+        "id": "declared_local_component_controls",
+        "passed": true
+      },
+      {
+        "evidence": "EFT0-LED1 labels its omitted set representative_only",
+        "failure_consequence": "unlisted allowed operators can dominate the claimed truncation error",
+        "id": "complete_symmetry_reduced_basis_through_target_order",
+        "passed": false
+      },
+      {
+        "evidence": "only representative order-one Wilson bounds are assumed",
+        "failure_consequence": "no bound exists on the total omitted contribution",
+        "id": "coefficient_bounds_or_matching_for_complete_omitted_basis",
+        "passed": false
+      },
+      {
+        "evidence": "a finite local component/jet box does not bound proper frequency or Fourier support",
+        "failure_consequence": "short-wavelength data can violate the cutoff inside a small component box",
+        "id": "invariant_proper_frequency_and_wavenumber_bound",
+        "passed": false
+      },
+      {
+        "evidence": "EFT0-LED1 explicitly records full_jet_box=false",
+        "failure_consequence": "derivative and curvature expansion parameters are uncontrolled",
+        "id": "covariant_field_gradient_and_curvature_bounds",
+        "passed": false
+      },
+      {
+        "evidence": "the component-only box lacks the covariant derivative, curvature, and frequency data needed for omitted-operator remainder bounds",
+        "failure_consequence": "the retained equations have no quantified truncation error",
+        "id": "uniform_total_omitted_remainder_bound",
+        "passed": false
+      },
+      {
+        "evidence": "DOM3-UHYP1 proves only the compact radial branch graph",
+        "failure_consequence": "a radial mode theorem cannot authorize a general Cauchy evolution",
+        "id": "multidirectional_full_system_strong_hyperbolicity",
+        "passed": false
+      },
+      {
+        "evidence": "BND1-MD1 is frozen main-system dissipation and CON3-CAU1 is boundary-free conditional gauge uniqueness",
+        "failure_consequence": "there is no proved physical/gauge constraint-preserving evolution problem",
+        "id": "constraint_complete_local_existence_or_IBVP",
+        "passed": false
+      },
+      {
+        "evidence": "the current compatible solution witness is one local jet at r=4 on a reference annulus",
+        "failure_consequence": "no collapse initial slice or finite run region exists",
+        "id": "nonzero_spacetime_run_domain_with_regular_center_or_declared_boundaries",
+        "passed": false
+      },
+      {
+        "evidence": "no nonlinear evolution has been constructed on which to propagate the bounds",
+        "failure_consequence": "even initially valid inequalities are not known to remain valid",
+        "id": "evolution_bootstrap_monitor_and_fail_closed_stop_rule",
+        "passed": false
+      }
+    ],
+    "retained_EFT_open_run_envelope_passed": false,
+    "stop_mask": {
+      "claim_finite_transition_surface": false,
+      "claim_singularity_resolution": false,
+      "construct_or_tune_collapse_data_as_an_FGC_result": false,
+      "promote_point_Raychaudhuri_diagnostic_to_DEF1": false,
+      "run_nonlinear_FGC_collapse_evolution": false
+    }
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-eft0-led1.toml": "78e9d81b1e5b221f29cfb8f2230897a890faa839e11453cda050c18c1aa0c9fe",
+    "configs/fgc/fgc-1-hyp1-bnd1-md1.toml": "eaee566b39f8be2d6068c50d5a8498e60b21b947c3de62e5e8863da707af0e1d",
+    "configs/fgc/fgc-1-hyp1-con3-cau1.toml": "d693e4901d97447f6f3c23a5a3dbd3c2a2f72ccfd32fad23ef65ef3366ddfc13",
+    "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml": "cd7516d0a913c811569cf8f08ac08d8b47f63c409ce9188b0770638777f743c6",
+    "results/fgc-1-eft0-led1.json": "685170be9eda886889138b0755fcd104cf385259dd2962f9c63f2532ee474b77",
+    "results/fgc-1-hyp1-bnd1-md1.json": "9de22d1e406132f0c0626ee2695a557e36cc74ef7f2604a404b36966d5cfc764",
+    "results/fgc-1-hyp1-con3-cau1.json": "8c90f9b2b35fdbe61c200f66b3c4aa2fb69a2d51680b573474c12ad688213cee",
+    "results/fgc-1-hyp1-dom3-uhyp1.json": "71c04e5e19ca5fc39b6fc4e3bee36b852965a559b3e031148d32ae230f30f6b0"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-eft1-open1.toml": "6d3c0c41e1efe798254e7fb62004fd4d26f7c7ca6d6e4b5734132b9527a0520f"
+  }
+}

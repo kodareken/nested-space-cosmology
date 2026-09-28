@@ -1,0 +1,234 @@
+{
+  "accountable_author": "Douglas Ek",
+  "coefficient_involution": "A_j(-ell)=(-1)^j*(s*S3)*conjugate(A_j(ell))",
+  "exact_identity_residuals": {
+    "s+1/N_p1": "0",
+    "s+1/N_p2": "0",
+    "s+1/N_p3": "0",
+    "s+1/beta_p1": "0",
+    "s+1/beta_p2": "0",
+    "s+1/beta_p3": "0",
+    "s+1/generator_involution": [
+      "0",
+      "0"
+    ],
+    "s+1/initial_Riccati_involution": "0",
+    "s-1/N_p1": "0",
+    "s-1/N_p2": "0",
+    "s-1/N_p3": "0",
+    "s-1/beta_p1": "0",
+    "s-1/beta_p2": "0",
+    "s-1/beta_p3": "0",
+    "s-1/generator_involution": [
+      "0",
+      "0"
+    ],
+    "s-1/initial_Riccati_involution": "0"
+  },
+  "exponential_coherent_source_remainder_retained": true,
+  "first_allowed_raw_paired_power": 3,
+  "full_N_beta_coefficient_parity": "at e^-p: (-1)^(p+1)",
+  "full_inverse_cubic_coefficient_proven_nonzero": false,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-ks-cutoff-bridge-control.json": "04c376aa9ce588129ae7b6890a2689a586a05cc110703acb300b49699143b07e",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-source-cutoff-bridge.json": "dcb5974f5924af830b45657d2af179e80899c30eb623a4beb41c712cf2357b48"
+  },
+  "leading_changed_current_cancellation": "owned intrinsic match and delta n2_s=s*f_z_s",
+  "new_field_or_source_evolutions": 0,
+  "numerical_tail_constant": null,
+  "numerical_tail_tangent_constant": null,
+  "paired_source_checks": [
+    {
+      "group": 1,
+      "multiplicity_per_signed_family": 6.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 2,
+      "multiplicity_per_signed_family": 8.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 3,
+      "multiplicity_per_signed_family": 10.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 4,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 5,
+      "multiplicity_per_signed_family": 14.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 6,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_rows_per_angular_sign": 1200,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 7,
+      "multiplicity_per_signed_family": 18.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 8,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 9,
+      "multiplicity_per_signed_family": 22.0,
+      "positive_rows_per_angular_sign": 768,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 10,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_rows_per_angular_sign": 1088,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 11,
+      "multiplicity_per_signed_family": 26.0,
+      "positive_rows_per_angular_sign": 1088,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 12,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_rows_per_angular_sign": 1368,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 14,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_rows_per_angular_sign": 584,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 15,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 16,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 17,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 18,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 19,
+      "multiplicity_per_signed_family": 32.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 20,
+      "multiplicity_per_signed_family": 36.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 21,
+      "multiplicity_per_signed_family": 40.0,
+      "positive_rows_per_angular_sign": 728,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 22,
+      "multiplicity_per_signed_family": 44.0,
+      "positive_rows_per_angular_sign": 1220,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 24,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 25,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 26,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 27,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 28,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 29,
+      "multiplicity_per_signed_family": 32.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 30,
+      "multiplicity_per_signed_family": 36.0,
+      "positive_rows_per_angular_sign": 572,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 31,
+      "multiplicity_per_signed_family": 40.0,
+      "positive_rows_per_angular_sign": 892,
+      "source_grid_and_weight_residual": 0.0
+    },
+    {
+      "group": 32,
+      "multiplicity_per_signed_family": 44.0,
+      "positive_rows_per_angular_sign": 1400,
+      "source_grid_and_weight_residual": 0.0
+    }
+  ],
+  "physical_input_energy_replaced_by_outgoing_momentum": false,
+  "physical_local_gate": "OPEN",
+  "schema": "NSC-SOURCE-TAIL-ANGULAR-PARITY-v1",
+  "scope": "same smooth compact radius history for each original angular family; unchanged source and intrinsic Sigma data",
+  "source_hashes": {
+    "docs/nsc-source-tail-angular-parity.md": "8243f6e36c035a843709d1ce4642d471606b02cde0bdcb1d0d5692ef7b2299ad",
+    "scripts/check_nsc_source_tail_angular_parity.py": "e377fbbac54cb4dc930a4dab108b719ef8d7cda266db96b27c30890d3fc4aef1"
+  },
+  "status": "PASS: paired raw source tail is O(Lambda^-2); numerical bound and local gate OPEN",
+  "sufficient_uniform_remainder_expansion_order": 4
+}

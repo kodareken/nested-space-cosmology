@@ -1,0 +1,42 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-DOM3-UHYP1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+mode1_config = "configs/fgc/fgc-1-hyp1-dom2-mode1.toml"
+mode1_result = "results/fgc-1-hyp1-dom2-mode1.json"
+qift1_config = "configs/fgc/fgc-1-hyp1-dom1-qift1.toml"
+qift1_result = "results/fgc-1-hyp1-dom1-qift1.json"
+comp1_config = "configs/fgc/fgc-1-hyp1-con1-comp1.toml"
+comp1_result = "results/fgc-1-hyp1-con1-comp1.json"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+coordinate_radius = "4"
+tilde_normal_factor = "4"
+hat_normal_factor = "9"
+
+[box]
+parameter_half_width = "1/2037035976334486086268445688409378161051468393665936250636140449354381299763336706183397376"
+acceleration_half_width = "1/1989292945639146568621528992587283360401824603189390869761855907572637988050133502132224"
+root_bracket_half_width = "1/1606938044258990275541962092341162602522202993782792835301376"
+hat_mode_displacement_width = "1/1393796574908163946345982392040522594123776"
+regulator_mode_displacement_width = "1/295147905179352825856"
+
+[proof_contract]
+certificate = "complete_REF1_interval_branch_plus_explicit_sector_modes_plus_frame_Neumann"
+radial_only = true
+all_axes_strictly_nonzero = true
+exact_rational_intervals_only = true
+no_determinant_factor_or_interval_residual_zero_shortcut = true
+
+[open_gates]
+multidirectional_strong_hyperbolicity_proven = false
+constraint_propagation_proven = false
+IBVP_proven = false
+retained_EFT_domain_proven = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

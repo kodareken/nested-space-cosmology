@@ -1,0 +1,441 @@
+{
+  "cold_flat_control": {
+    "actual_curved_source_error_bound": false,
+    "calculation": {
+      "alternating_remainder_bound": {
+        "free_energy": 5e-324,
+        "log10_free_energy": -318844.41674703406,
+        "log10_rho": -318838.2499324016,
+        "rho": 5e-324,
+        "scope": "analytic image truncation only; positive underflow floor; excludes floating-point roundoff"
+      },
+      "canonical": {
+        "entropy": 8.378356642730737e-05,
+        "free_energy": -7.944929398374381e-07,
+        "pressure": 7.944929398374381e-07,
+        "rho": 2.383478819512314e-06,
+        "trace": 0.0
+      },
+      "cutoff": 1.0,
+      "endpoint_minus_canonical": {
+        "entropy": -4.637775275841045e-76,
+        "free_energy": 5.0327674747368515e-80,
+        "pressure": -5.0327674747368515e-80,
+        "rho": -1.754109207654839e-77,
+        "trace": -1.7390109052306283e-77
+      },
+      "finite_endpoint": {
+        "entropy": 8.378356642730737e-05,
+        "free_energy": -7.944929398374381e-07,
+        "pressure": 7.944929398374381e-07,
+        "rho": 2.383478819512314e-06,
+        "trace": 0.0
+      },
+      "temperature": 0.037930729078082835,
+      "terms": 64,
+      "vacuum_free_energy": 0.006332573977646111
+    },
+    "log10_abs_density_conversion": -76.75594337174225,
+    "temperature_reused": 0.037930729078082835
+  },
+  "comparison": {
+    "exact": "keys, strings, structures, hashes and scope",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08,
+    "tiny_field_control": "log10_abs_density_conversion preserves the tiny cold mismatch"
+  },
+  "domain": {
+    "field": "one massless four-component Dirac field",
+    "metric": "flat R3 times antiperiodic Euclidean thermal S1; no identification with the expanding child",
+    "nu": "auxiliary light-sector matching cutoff, distinct from carrier Lambda and temperature",
+    "physical_comparison": "canonical Gaussian/CAR state from the existing influence functional",
+    "units": "hbar=c=k_B=1; tabulated nu=1"
+  },
+  "exact_checks": {
+    "canonical_thermal_trace": "0",
+    "local_vacuum_shift_cancels_between_states": "0",
+    "one_image_lapse_variation": "0",
+    "one_image_scale_trace": "0",
+    "unit_residue_of_finite_proper_time_inverse": "0"
+  },
+  "formulae": {
+    "canonical_free_energy": "-7*pi\u00b2*T^4/180",
+    "canonical_pair_excitation": "2*E/(exp(E/T)+1)>=0",
+    "physical_density": "F-T*dF/dT",
+    "thermal_C_nu_mu": "-4*T^4/pi\u00b2 sum_n>=1 (-1)^n/n^4 (1+x_n)exp(-x_n)",
+    "thermal_endpoint_free_energy": "4*T^4/pi\u00b2 sum_n>=1 (-1)^n/n^4 [1-(1+x_n)exp(-x_n)]",
+    "thermal_trace": "nu^4/(2*pi\u00b2) sum_n>=1 (-1)^n exp(-x_n)",
+    "x_n": "n\u00b2*nu\u00b2/(4*T\u00b2)"
+  },
+  "input_hashes": {
+    "results/development/compact-matching.json": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+    "results/development/unruh-state.json": "98d4659674ad7f7f6b474b7abcc448518bda6861bbafe3ff98c129918dd21343",
+    "results/nsc-10-influence.json": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1"
+  },
+  "mode_residue_and_state_controls": [
+    {
+      "canonical_CAR_excitation_energy": 0.08025384625841624,
+      "canonical_thermal_derivative": 0.11464835179773751,
+      "derivative_difference": 0.0,
+      "difference": -0.001803923335789534,
+      "direct_Matsubara_thermal_derivative": 0.11284442846194798,
+      "energy_over_nu": 0.7,
+      "expected_excitation_energy": 0.08025384625841625,
+      "finite_thermal_derivative": 0.11284442846194798,
+      "temperature_over_nu": 0.25,
+      "vacuum_derivative": -0.32219880616258156
+    },
+    {
+      "canonical_CAR_excitation_energy": 0.27694255601798556,
+      "canonical_thermal_derivative": 0.3956322228828365,
+      "derivative_difference": 0.0,
+      "difference": -0.0980277371558898,
+      "direct_Matsubara_thermal_derivative": 0.2976044857269467,
+      "energy_over_nu": 0.7,
+      "expected_excitation_energy": 0.2769425560179855,
+      "finite_thermal_derivative": 0.2976044857269467,
+      "temperature_over_nu": 0.5,
+      "vacuum_derivative": -0.32219880616258156
+    },
+    {
+      "canonical_CAR_excitation_energy": 0.4645371189645674,
+      "canonical_thermal_derivative": 0.6636244556636679,
+      "derivative_difference": -5.551115123125783e-17,
+      "difference": -0.3414342138792162,
+      "direct_Matsubara_thermal_derivative": 0.32219024178445166,
+      "energy_over_nu": 0.7,
+      "expected_excitation_energy": 0.4645371189645675,
+      "finite_thermal_derivative": 0.3221902417844517,
+      "temperature_over_nu": 1.0,
+      "vacuum_derivative": -0.32219880616258156
+    }
+  ],
+  "negative_thermal_energy_control": {
+    "high_T_light_limit_rho_over_nu4": -0.006332573977646111,
+    "physical_temperature_limit_claimed": false,
+    "root_residual": -1.3877787807814457e-17,
+    "thermal_energy_zero_T_over_nu": 0.4653671425788688
+  },
+  "parent_source_reused": {
+    "canonical_neck_tensor": {
+      "H_parallel": 1.5570211692905311,
+      "H_sphere": 1.179797831238261e-16,
+      "R_L": -26.27433388230814,
+      "T_hatT_hatz": -3.048592736196303e-06,
+      "local_anomaly_rho": 0.004903465324393183,
+      "null_minus": -0.05279539564381099,
+      "null_plus": -0.052807590014755774,
+      "p_parallel": -0.0494945965853303,
+      "p_sphere": -0.04299577129168967,
+      "q": 1.5707963267948966,
+      "radial_null": -0.052801492829283384,
+      "rho": -0.003306896243953082,
+      "rho_coordinate": -6.123233995736766e-17,
+      "sphere_radius": 1.0,
+      "trace": 0.13217924292475655,
+      "transported_bar_rho": -0.008210361568346265
+    },
+    "canonical_source_unchanged": true,
+    "full_finite_cutoff_source_identified_with_this_tensor": false,
+    "parent_Killing_power": 0.00014222067954246644,
+    "source_or_scattering_generator_rerun": false
+  },
+  "raw_carrier_high_temperature_constraint": {
+    "conditional_high_T_thermal_density_limit": -0.17887343726846303,
+    "conditions": "positive finite free Euclidean modulus; no fermionic Matsubara zero mode; F_raw and T*dF_raw/dT tend to zero",
+    "finite_temperature_warped_integral_rerun": false,
+    "full_vacuum_density": 0.17887343726846303,
+    "matching_split_reconstruction": [
+      {
+        "difference_from_refined_moment": -1.304512053934559e-15,
+        "full_raw_vacuum_density": 0.17887343726846172,
+        "nu": 0.5
+      },
+      {
+        "difference_from_refined_moment": -1.3322676295501878e-15,
+        "full_raw_vacuum_density": 0.1788734372684617,
+        "nu": 1.0
+      },
+      {
+        "difference_from_refined_moment": -1.3322676295501878e-15,
+        "full_raw_vacuum_density": 0.1788734372684617,
+        "nu": 1.4
+      }
+    ],
+    "reused_Lambda": 2.0,
+    "reused_Q2_h": 14.12328050962243,
+    "reused_interval": 2.0,
+    "validity_of_physical_NSC_at_arbitrary_T_assumed": false,
+    "weight_control": "the existing positive weighted compact heat operator has exponentially suppressed large-frequency modes"
+  },
+  "remaining_owner": "common closed-time-path and initial-state prescription, with the derived state conversion and remaining sectors, before the full metric source solve",
+  "schema": "NSC-STATE-REGULATOR-v1",
+  "scope": {
+    "complete_theory_disproved": false,
+    "new_general_thermal_theorem_claimed": false,
+    "new_scalar_source_inserted": false,
+    "old_physical_record_modified": false,
+    "raw_finite_modulus_alone_is_the_unchanged_canonical_state_functional": false,
+    "self_sourcing_derived": false
+  },
+  "source_hashes": {
+    "docs/nsc-state-regulator.md": "8aca94f35304d5e2d16cd9f4111d85f8ceba939164d8f68f41a54607b10ba528",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_state_regulator.py": "0bd9d5ff0aaeef0f230f0de8ba540658cf323bff70cb00562eb9d9ba28d9fb9d",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_state_regulator.py": "0eef4c2faf315691e0617ea26dbd64bbafd71471220d0329be11dc6fd787ab5b"
+  },
+  "source_matching_contract": {
+    "C_nu_mu_can_be_declared_state_independent": false,
+    "allocation": "Gamma5_CTP=Gamma_light_ren_CTP[C]+Gamma_H_CTP[C]+C_nu_mu_CTP[C]",
+    "canonical_completion_condition": "Delta Gamma_completion=Delta Gamma_canonical-Delta Gamma_raw for a retained canonical sector and common state/contour",
+    "completion_is_a_fitted_stress": false,
+    "nonthermal_curved_completion_evaluated": false,
+    "normalized_relative_functional_alone_proves_full_positivity": false,
+    "state_independent_local_terms_repair_fixed_background_thermal_difference": false,
+    "unit_pole_residue_proves_thermal_matching": false
+  },
+  "status": "computed state-dependent endpoint conversion and a canonical thermal-source incompatibility of the raw finite determinant",
+  "thermal_source_rows": [
+    {
+      "canonical_occupation_integral": {
+        "pressure": 3.83817948931253e-05,
+        "rho": 0.0001151453846793759
+      },
+      "density_derivative_error": -1.5794115147682586e-16,
+      "direct_Matsubara": {
+        "entropy": 0.001535271788103915,
+        "free_energy": -3.8381794878489944e-05,
+        "full_free_energy": 0.006294192182767621,
+        "full_rho": 0.0064477193615780125,
+        "pressure": 3.8381794878489944e-05,
+        "rho": 0.00011514538393190155,
+        "trace": -7.035691473866734e-13,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "images": {
+        "alternating_remainder_bound": {
+          "free_energy": 5e-324,
+          "log10_free_energy": -45878.974773378,
+          "log10_rho": -45873.649974604516,
+          "rho": 5e-324,
+          "scope": "analytic image truncation only; positive underflow floor; excludes floating-point roundoff"
+        },
+        "canonical": {
+          "entropy": 0.0015352717957250112,
+          "free_energy": -3.8381794893125285e-05,
+          "pressure": 3.8381794893125285e-05,
+          "rho": 0.00011514538467937585,
+          "trace": 0.0
+        },
+        "cutoff": 1.0,
+        "endpoint_minus_canonical": {
+          "entropy": -7.621086004657194e-12,
+          "free_energy": 1.463428627186758e-14,
+          "pressure": -1.463428627186758e-14,
+          "rho": -7.474743141938518e-13,
+          "trace": -7.035714553782491e-13
+        },
+        "finite_endpoint": {
+          "entropy": 0.0015352717881039252,
+          "free_energy": -3.8381794878491e-05,
+          "pressure": 3.8381794878491e-05,
+          "rho": 0.00011514538393190153,
+          "trace": -7.035714784213443e-13
+        },
+        "temperature": 0.1,
+        "terms": 64,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "independent_density_derivative": 0.00011514538393174358,
+      "representation_difference": {
+        "entropy": -1.0191500421363742e-17,
+        "free_energy": 1.0570971181733668e-18,
+        "pressure": -1.0570971181733668e-18,
+        "rho": 2.710505431213761e-20,
+        "trace": 2.3310346708438345e-18
+      }
+    },
+    {
+      "canonical_occupation_integral": {
+        "pressure": 0.0014992888630127068,
+        "rho": 0.00449786658903812
+      },
+      "density_derivative_error": -9.020562075079397e-17,
+      "direct_Matsubara": {
+        "entropy": 0.01795742045434648,
+        "free_energy": -0.001354307629543543,
+        "full_free_energy": 0.004978266348102568,
+        "full_rho": 0.009467621461689188,
+        "pressure": 0.001354307629543543,
+        "rho": 0.0031350474840430766,
+        "trace": -0.0009278754045875526,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "images": {
+        "alternating_remainder_bound": {
+          "free_energy": 5e-324,
+          "log10_free_energy": -7345.400964909147,
+          "log10_rho": -7340.8720353585895,
+          "rho": 5e-324,
+          "scope": "analytic image truncation only; positive underflow floor; excludes floating-point roundoff"
+        },
+        "canonical": {
+          "entropy": 0.0239886218082033,
+          "free_energy": -0.0014992888630127063,
+          "pressure": 0.0014992888630127063,
+          "rho": 0.004497866589038119,
+          "trace": 0.0
+        },
+        "cutoff": 1.0,
+        "endpoint_minus_canonical": {
+          "entropy": -0.006031201353856819,
+          "free_energy": 0.00014498123346916381,
+          "pressure": -0.00014498123346916381,
+          "rho": -0.0013628191049950408,
+          "trace": -0.0009278754045875493
+        },
+        "finite_endpoint": {
+          "entropy": 0.017957420454346482,
+          "free_energy": -0.0013543076295435424,
+          "pressure": 0.0013543076295435424,
+          "rho": 0.0031350474840430784,
+          "trace": -0.0009278754045875491
+        },
+        "temperature": 0.25,
+        "terms": 64,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "independent_density_derivative": 0.003135047484042988,
+      "representation_difference": {
+        "entropy": -3.469446951953614e-18,
+        "free_energy": -6.505213034913027e-19,
+        "pressure": 6.505213034913027e-19,
+        "rho": -1.734723475976807e-18,
+        "trace": -3.469446951953614e-18
+      }
+    },
+    {
+      "canonical_occupation_integral": {
+        "pressure": 0.023988621808203308,
+        "rho": 0.07196586542460992
+      },
+      "density_derivative_error": 1.10397802011164e-14,
+      "direct_Matsubara": {
+        "entropy": 0.008539107446670233,
+        "free_energy": -0.005496227284887937,
+        "full_free_energy": 0.0008363466927581733,
+        "full_rho": 0.005105900416093289,
+        "pressure": 0.005496227284887937,
+        "rho": -0.0012266735615528218,
+        "trace": -0.017715355416216633,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "images": {
+        "alternating_remainder_bound": {
+          "free_energy": 5e-324,
+          "log10_free_energy": -1840.1162697118098,
+          "log10_rho": -1836.189361585784,
+          "rho": 5e-324,
+          "scope": "analytic image truncation only; positive underflow floor; excludes floating-point roundoff"
+        },
+        "canonical": {
+          "entropy": 0.1919089744656264,
+          "free_energy": -0.0239886218082033,
+          "pressure": 0.0239886218082033,
+          "rho": 0.0719658654246099,
+          "trace": 0.0
+        },
+        "cutoff": 1.0,
+        "endpoint_minus_canonical": {
+          "entropy": -0.18336986701895622,
+          "free_energy": 0.01849239452331537,
+          "pressure": -0.01849239452331537,
+          "rho": -0.07319253898616274,
+          "trace": -0.017715355416216633
+        },
+        "finite_endpoint": {
+          "entropy": 0.008539107446670205,
+          "free_energy": -0.005496227284887932,
+          "pressure": 0.005496227284887932,
+          "rho": -0.0012266735615528296,
+          "trace": -0.017715355416216626
+        },
+        "temperature": 0.5,
+        "terms": 64,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "independent_density_derivative": -0.0012266735615417898,
+      "representation_difference": {
+        "entropy": 2.7755575615628914e-17,
+        "free_energy": -5.204170427930421e-18,
+        "pressure": 5.204170427930421e-18,
+        "rho": 7.806255641895632e-18,
+        "trace": -6.938893903907228e-18
+      }
+    },
+    {
+      "canonical_occupation_integral": {
+        "pressure": 0.38381794893125293,
+        "rho": 1.1514538467937587
+      },
+      "density_derivative_error": -2.1255219806448622e-13,
+      "direct_Matsubara": {
+        "entropy": 7.764813449534467e-06,
+        "free_energy": -0.006332192976469123,
+        "full_free_energy": 3.8100117698807755e-07,
+        "full_rho": 8.145814626522545e-06,
+        "pressure": 0.006332192976469123,
+        "rho": -0.006324428163019588,
+        "trace": -0.025321007092426958,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "images": {
+        "alternating_remainder_bound": {
+          "free_energy": 5e-324,
+          "log10_free_energy": -463.34326199712257,
+          "log10_rho": -460.01825935623987,
+          "rho": 5e-324,
+          "scope": "analytic image truncation only; positive underflow floor; excludes floating-point roundoff"
+        },
+        "canonical": {
+          "entropy": 1.5352717957250113,
+          "free_energy": -0.3838179489312528,
+          "pressure": 0.3838179489312528,
+          "rho": 1.1514538467937585,
+          "trace": 0.0
+        },
+        "cutoff": 1.0,
+        "endpoint_minus_canonical": {
+          "entropy": -1.535264030911562,
+          "free_energy": 0.37748575595478373,
+          "pressure": -0.37748575595478373,
+          "rho": -1.1577782749567782,
+          "trace": -0.025321007092427017
+        },
+        "finite_endpoint": {
+          "entropy": 7.764813449384622e-06,
+          "free_energy": -0.0063321929764690865,
+          "pressure": 0.0063321929764690865,
+          "rho": -0.006324428163019702,
+          "trace": -0.02532100709242696
+        },
+        "temperature": 1.0,
+        "terms": 64,
+        "vacuum_free_energy": 0.006332573977646111
+      },
+      "independent_density_derivative": -0.006324428163232254,
+      "representation_difference": {
+        "entropy": 1.4984521056696926e-16,
+        "free_energy": -3.642919299551295e-17,
+        "pressure": 3.642919299551295e-17,
+        "rho": 1.1362438767648086e-16,
+        "trace": 3.469446951953614e-18
+      }
+    }
+  ]
+}

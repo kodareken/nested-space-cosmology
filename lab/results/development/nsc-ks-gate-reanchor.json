@@ -1,0 +1,121 @@
+{
+  "accountable_author": "Douglas Ek",
+  "campaign_best_merit": 0.0005881485884118953,
+  "campaign_best_name": "trial",
+  "campaign_best_profile_identity": "a9572341fe01e157cb0d9e2176e022e49277304f560a40ec73231ae3825e4508",
+  "input_hashes": {
+    "results/development/nsc-ks-gate-numerical-floor.json": "946349481bd43e850e31b0af078431aeb7d3221fab6f0db7633457a86084f48d"
+  },
+  "loop_numerics": null,
+  "named_gap": "value_only_indicator_floor_above_1e-10",
+  "pending": [],
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "rows": [
+    {
+      "name": "trial",
+      "nodes": 47,
+      "profile_identity": "a9572341fe01e157cb0d9e2176e022e49277304f560a40ec73231ae3825e4508",
+      "tangent_mode_constraint_maxima": [
+        0.0002720340765980673,
+        8.324756271260378e-05
+      ],
+      "value_only_constraint_maxima": [
+        0.0005881485884118953,
+        8.324749011222668e-05
+      ],
+      "value_only_merit": 0.0005881485884118953
+    },
+    {
+      "name": "iterate3",
+      "nodes": 47,
+      "profile_identity": "e55968b6b0890174b12efe9b8c76e886b77b07bba56633371cdc6295cbccc560",
+      "tangent_mode_constraint_maxima": [
+        3.3176810525573086e-07,
+        5.478125919396171e-06
+      ],
+      "value_only_constraint_maxima": [
+        0.0008028302239073866,
+        5.478333948080727e-06
+      ],
+      "value_only_merit": 0.0008028302239073866
+    },
+    {
+      "name": "iterate4",
+      "nodes": 47,
+      "profile_identity": "f8ca457b6ab64801579c40c7578415ddaea83a5ff8427fe75657755e465bbccc",
+      "tangent_mode_constraint_maxima": [
+        3.346714566691833e-07,
+        5.327855110266733e-06
+      ],
+      "value_only_constraint_maxima": [
+        0.0008028247396643928,
+        5.3280558785714915e-06
+      ],
+      "value_only_merit": 0.0008028247396643928
+    },
+    {
+      "name": "iterate5",
+      "nodes": 47,
+      "profile_identity": "07b16f6ecb10ac358f9b054f94ada34c9729db52df41597381c84aa833b7589c",
+      "tangent_mode_constraint_maxima": [
+        1.70448376507204e-05,
+        3.432025596000407e-06
+      ],
+      "value_only_constraint_maxima": [
+        0.0008196405623996372,
+        3.4310387592422636e-06
+      ],
+      "value_only_merit": 0.0008196405623996372
+    },
+    {
+      "name": "iterate6",
+      "nodes": 47,
+      "profile_identity": "b4b53f0bba7290cfde14af741c82fda9af1b49a13f7a3b207a7230f39ea106e9",
+      "tangent_mode_constraint_maxima": [
+        2.6269966908396003e-07,
+        3.615304013840359e-06
+      ],
+      "value_only_constraint_maxima": [
+        0.0008027787732239888,
+        3.614316421384628e-06
+      ],
+      "value_only_merit": 0.0008027787732239888
+    },
+    {
+      "name": "iterate7",
+      "nodes": 47,
+      "profile_identity": "e0fca7679b148a331a4e1c9ea4373954cc3ccabfb9ab9cbc1edba270db72becb",
+      "tangent_mode_constraint_maxima": [
+        0.0004127139981390249,
+        2.479490202045298e-06
+      ],
+      "value_only_constraint_maxima": [
+        0.0007883481174702778,
+        2.479164759011665e-06
+      ],
+      "value_only_merit": 0.0007883481174702778
+    },
+    {
+      "name": "iterate8",
+      "nodes": 47,
+      "profile_identity": "46d410ad0678edd5177f721ee48172d87e0c3e87ac1b5e41d37c49424936e867",
+      "tangent_mode_constraint_maxima": [
+        0.00031715559756089265,
+        8.72501580928553e-07
+      ],
+      "value_only_constraint_maxima": [
+        0.0008025967314743282,
+        8.72892252097579e-07
+      ],
+      "value_only_merit": 0.0008025967314743282
+    }
+  ],
+  "schema": "NSC-KS-GATE-REANCHOR-v1",
+  "solver": "base value-only: grid 64, degree 32, rtol 2e-11, 47 nodes",
+  "source_hashes": {
+    "docs/nsc-ks-gate-reanchor.md": "2af493c283270425327f4078f0cca3e25871a0e831f9099b76803ba337648661",
+    "scripts/derive_nsc_ks_gate_reanchor.py": "773329a5e311a998b487575067486c3ca7d6eaa7bc05c040193eb67a91677979"
+  },
+  "status": "OPEN: value-only merits at the base solver; loop numerics were not declared"
+}

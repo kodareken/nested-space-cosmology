@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recursive-horizons"
+version = "0.11.0"
+description = "Finite Gradient Closure and controlled horizon, information, and perturbation calculations for Recursive Horizons"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "BlackHoles-Infinity Project" }]
+keywords = ["cosmology", "black holes", "finite gradient closure", "nested gradient spectrum", "horizon thermodynamics", "Einstein-Cartan"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = []
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+  "archive",
+  "build",
+  "runs",
+  "paper/.build",
+  ".git",
+  ".pytest_cache",
+  ".ruff_cache",
+]
+
+[tool.ruff]
+extend-exclude = [
+  "archive",
+  "build",
+  "runs",
+  "paper/.build",
+]

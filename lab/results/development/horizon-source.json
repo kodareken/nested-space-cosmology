@@ -1,0 +1,172 @@
+{
+  "benchmark_Unruh_per_abs_q": {
+    "Hawking_temperature": 0.037930729078082835,
+    "cosmological_density_rate_Q_derived": false,
+    "future_horizon_null_stress": -6.498193779863979e-06,
+    "outgoing_channel_entropy_rate": 0.019860483302834964,
+    "parent_Killing_power": 0.0003766613057598104,
+    "power_formula": "|q_mag|*kappa_h^2/(48*pi)",
+    "power_in_ordinary_units": "|q_mag|*hbar*c_light^2*kappa_h^2/(48*pi), with kappa_h in inverse length",
+    "reused_horizon_areal_radius": 2.147703093796876,
+    "reused_horizon_rho": 1.9006916054701435,
+    "reused_surface_gravity": 0.23832579963401956
+  },
+  "clock_flux_map": {
+    "actual_interroom_clock_map_derived": false,
+    "composition": "{U(V(u)),u}=V_prime^2*{U,V}+{V,u}",
+    "entropy": "S_rad=-c_eff*log(U_prime)/12 up to the specified reference constant",
+    "flux": "-c_eff*{U,u}/(24*pi)",
+    "global_entropy_or_Page_curve_derived": false,
+    "passive_coordinate_change_creates_flux": false,
+    "peeling": "kappa(u)=-U_second/U_prime; flux=c_eff*(kappa^2+2*kappa_prime)/(48*pi)",
+    "state_ray_map": "physical propagation from incoming affine vacuum coordinate U to outgoing parent retarded time u"
+  },
+  "comparison": {
+    "exact": "keys, types, strings and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "conventions": {
+    "curvature": "R2=A_second",
+    "normal_nulls": "l_plus/minus=partial_tau+(-beta+/-1)*partial_rho",
+    "projected_fourD_source": "T_ab^LLL=t_ab/(4*pi*r^2) in the spherical reduced sector",
+    "scope": "free massless magnetic LLL; no link mass, gauge-dynamical gap or higher-mode contribution included",
+    "signature": "+---; reduced radial metric ds2=A du dv",
+    "units": "hbar=c_light=kB=L_throat=1; numerical source is per |q_mag|"
+  },
+  "domain": {
+    "actual_patch": "R_rho x S2 x I_Y on the stated PG Cauchy slice; no radial endpoint identification",
+    "development_cell": "S1_axial x S2 x I_Y; its AP holonomy result is a different global domain",
+    "flat_axial_U1_Wilson_modulus_present": false,
+    "magnetic_S2_flux_allowed": "H2 includes Z; F=(q_mag/2) sin(theta) dtheta wedge dphi",
+    "magnetic_zero_sector": "|q_mag| complex 2D Dirac fields per one massless 4D Dirac",
+    "neutral_branch": "q_mag=0 has no angular zero mode; neutral greybody factors remain required",
+    "q_mag_selected": false,
+    "quantization": "integral F=2*pi*q_mag for unit electric charge",
+    "transparency": "free massless angular-zero sector has transmission one on the unwrapped radial channel",
+    "two_bulk_copies_counted_again": false
+  },
+  "exact_residuals": {
+    "PG_Killing_current": "0",
+    "affine_state_map_has_zero_Schwarzian": "0",
+    "classical_RN_dS_A_equation": "0",
+    "classical_RN_dS_constraint": "0",
+    "classical_RN_dS_radius_equation": "0",
+    "energy_entropy_rate": "0",
+    "entropy_rate": "0",
+    "exponential_peeling_Schwarzian": "0",
+    "future_horizon_regular_outgoing_limit": "0",
+    "independent_angular_source_assembly": "0",
+    "independent_rr_source_assembly": "0",
+    "independent_tt_source_assembly": "0",
+    "magnetic_flux_normalization": "0",
+    "neck_constraint": "0",
+    "neck_curvature_reconstruction": "0",
+    "neck_flare_reconstruction": "0",
+    "source_free_angular_Maxwell_density": "0",
+    "state_map_composition": "0",
+    "static_angular_equation": "0",
+    "static_constraint_propagates": "0",
+    "static_null_difference_equation": "0",
+    "twoD_radial_Ward": "0",
+    "twoD_trace_anomaly": "0"
+  },
+  "input_hashes": {
+    "results/development/charged-sector.json": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+    "results/development/compact-casimir.json": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447",
+    "results/nsc-5-clock-horizon.json": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f"
+  },
+  "neutral_flux_normalization": {
+    "exact_neutral_transmission_computed_here": false,
+    "magnetic_abs_q_multiplies_neutral_kappa_sum": false,
+    "one_complex_4D_Dirac": "sum_{kappa>0} [8*kappa/(2*pi)] integral omega*Gamma_kappa/(exp(omega/T_H)+1) d omega",
+    "signs_of_kappa_are_antiparticles": false
+  },
+  "original_neck_comparison": {
+    "fixed_benchmark_sourced_by_this_minimal_sector": false,
+    "geometric_CFT_null_base": "(-36 - 6*pi + 9*pi**2)/(192*pi)",
+    "geometric_null_definition": "G(l_plus/minus,l_plus/minus), before division by 8*pi*G",
+    "magnetic_and_potential_radial_nulls": "0 for static radial Lorentz-invariant potential terms",
+    "nonzero_Unruh_flux_allows_exact_static_solution_without_other_flux": false,
+    "per_abs_q": [
+      {
+        "T_rho_rho_2D": 0.10919530976052108,
+        "T_tau_rho_2D": 0.20155158530140266,
+        "T_tau_tau_2D": 0.3446824152291647,
+        "fourD_null_minus": 0.013080198950838376,
+        "fourD_null_plus": 0.001783379784349937,
+        "parent_Killing_power": 0.0,
+        "state": "Boulware"
+      },
+      {
+        "T_rho_rho_2D": 0.10947008828551923,
+        "T_tau_rho_2D": 0.2018732970326475,
+        "T_tau_tau_2D": 0.3450590765349245,
+        "fourD_null_minus": 0.013167663671856289,
+        "fourD_null_plus": 0.001783379784349937,
+        "parent_Killing_power": 0.0003766613057598104,
+        "state": "Unruh"
+      },
+      {
+        "T_rho_rho_2D": 0.10950755212444836,
+        "T_tau_rho_2D": 0.2019920875141257,
+        "T_tau_tau_2D": 0.3454357378406844,
+        "fourD_null_minus": 0.013167663671856289,
+        "fourD_null_plus": 0.0017953048946554768,
+        "parent_Killing_power": 0.0,
+        "state": "Hartle-Hawking"
+      }
+    ],
+    "required_Einstein_nulls": [
+      -2.741562906070168,
+      -20.10799301546859
+    ]
+  },
+  "reduced_closure_interface": {
+    "A_second": "(-2*A1*r*r1 - U1*r - xi*(A1**2 - 4*k_state**2)/(2*A0))/(r**2 - xi)",
+    "U": "8*pi*G*r^2*rho_pot(r); an unmatched source output, not a fitted dark function",
+    "conditional_bounce_test": "at r_prime=0, A0<0, 0<alpha=xi/r0^2<1: r_second>0 iff 2*(1-U0)+alpha*r0*U1<0",
+    "constraint": "-A0*r1**2 - A1*r*r1 - U0 + 1 - xi*(A1**2 - 4*k_state**2)/(4*A0)",
+    "example_potential_structure": "Lambda4*r^2+rQ^2/r^2+u0; u0 and other finite matching terms are NOT set to zero",
+    "global_self_sourced_solution_derived": false,
+    "neck_A": "-xi*(A1 - 2*k_state)*(A1 + 2*k_state)/(4*(U0 - 1))",
+    "neck_A_second": "-(-2*U0 + U1*r + 2)/(r**2 - xi)",
+    "neck_radius_second": "2*(U0 - 1)*(2*U0*r - U1*xi - 2*r)/(xi*(A1 - 2*k_state)*(A1 + 2*k_state)*(r**2 - xi))",
+    "potential_or_coefficients_assigned_to_obtain_bounce": false,
+    "radius_second": "-xi*(2*A0*(-2*A1*r*r1 - U1*r - xi*(A1**2 - 4*k_state**2)/(2*A0))/(r**2 - xi) - A1**2 + 4*k_state**2)/(4*A0**2*r)",
+    "regular_local_ODE_domain": "A0!=0, r0>0, r0^2!=xi; global horizon and state matching still required",
+    "xi": "G*c_eff/(12*pi)"
+  },
+  "schema": "NSC-HORIZON-SOURCE-v1",
+  "scope": {
+    "Dirac_self_sourced_black_universe_completed": false,
+    "LLL_saturates_complete_stress": false,
+    "full_finite_cutoff_action_matched": false,
+    "interacting_LLL_masslessness_proved": false,
+    "magnetic_flux_generation_derived": false,
+    "new_universal_Hawking_or_CFT_law_claimed": false
+  },
+  "source_hashes": {
+    "docs/nsc-horizon-source.md": "f77031e2ee09109e27cc351bf4a6b87027b758e98e4b9243062575aa538bdf28",
+    "docs/nsc-lorentzian-transport.md": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_horizon_source.py": "35bd9b54620df7c9dd776fe5757f4169147dee85d5b633a7c66e4e8c5aadf974",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+  },
+  "state_source": {
+    "Boulware": "t_u=t_v=0; no net flux, but singular on the fixed horizon",
+    "Hartle_Hawking": "t_u=t_v=c_eff*kappa_h^2/(48*pi); equilibrium incoming bath",
+    "T_uu": "c_eff*(2*A*A_second-A_prime^2)/(192*pi)+t_u",
+    "T_uv": "c_eff*A*A_second/(96*pi)",
+    "T_vv": "c_eff*(2*A*A_second-A_prime^2)/(192*pi)+t_v",
+    "Unruh": "t_u=c_eff*kappa_h^2/(48*pi), t_v=0; future-horizon regular outgoing sector and no incoming parent particles",
+    "full_Killing_power": "4*pi*r^2*T^rho_tau=t_u-t_v",
+    "future_Hadamard_theorem_for_full_NSC": false,
+    "local_matching_term": "a term proportional to g2 is retained as an unresolved potential contribution; it does not change these null or Killing-flux projections"
+  },
+  "status": "domain/state match and conditional magnetic Dirac source; full closure open"
+}

@@ -1,0 +1,47 @@
+schema_version = 1
+artifact_id = "FGC-1-DEF0-OBS1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+physical_metric_reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+physical_metric_reduction_result = "results/fgc-1-hyp1-reduction.json"
+
+[controls.minkowski_spherical]
+areal_radius = "4"
+branch = "outgoing"
+
+[controls.contracting_flat_de_sitter]
+Hubble_rate = "-1"
+comoving_radius = "2"
+branch = "outgoing"
+
+[controls.synthetic_negative_Rkk]
+areal_radius = "4"
+areal_radius_dt = "-1"
+areal_radius_dr = "1"
+areal_radius_dtt = "1"
+branch = "outgoing"
+
+[proof_contract]
+physical_metric_only = true
+both_radial_null_directions_and_cross_normalization_exact = true
+supplied_generator_null_and_affine_residuals_exact = true
+complete_twist_free_spherical_Raychaudhuri_rhs = true
+independent_trajectory_derivative_and_curvature_rhs_routes = true
+separate_expansion_shear_twist_and_Ricci_terms = true
+exact_rational_controls_only = true
+positive_rhs_control_is_synthetic_geometry_not_FGC_solution = true
+
+[open_gates]
+HYP1_complete = false
+constraint_preserving_ACT1_IBVP_proven = false
+COL1_evolution_solution_consumed = false
+finite_trapped_interval_derived = false
+resolution_independent_positive_Raychaudhuri_margin_derived = false
+metric_null_affine_defocusing_DEF1_derived = false
+ROB1_open_parameter_neighborhood_derived = false
+non_spherical_shear_robustness_derived = false
+finite_invariant_transition_surface_derived = false
+trapped_to_anti_trapped_transition_derived = false
+singularity_resolution_derived = false
+physical_wall_derived = false

@@ -1,0 +1,202 @@
+{
+  "artifact": "DESI_DR2_BAO_only_flat_constant_w_profile",
+  "best_fit": {
+    "H0rd_km_s": 9975.090949218249,
+    "amplitude_c_over_H0rd": 30.05410772956359,
+    "chi2": 9.04104660669552,
+    "omega_m": 0.29769348683733504,
+    "w": -0.911899150828803
+  },
+  "convergence_refinement": {
+    "abs_best_chi2_difference": 3.9440379850930185e-09,
+    "abs_best_omega_m_difference": 0.0,
+    "abs_best_w_difference": 5.990663787258654e-08,
+    "coarse_simpson_intervals": 128,
+    "fine_simpson_intervals": 256
+  },
+  "data_points": [
+    {
+      "observable": "DV_over_rs",
+      "value": 7.94167639,
+      "z": 0.295
+    },
+    {
+      "observable": "DM_over_rs",
+      "value": 13.58758434,
+      "z": 0.51
+    },
+    {
+      "observable": "DH_over_rs",
+      "value": 21.86294686,
+      "z": 0.51
+    },
+    {
+      "observable": "DM_over_rs",
+      "value": 17.35069094,
+      "z": 0.706
+    },
+    {
+      "observable": "DH_over_rs",
+      "value": 19.45534918,
+      "z": 0.706
+    },
+    {
+      "observable": "DM_over_rs",
+      "value": 21.57563956,
+      "z": 0.934
+    },
+    {
+      "observable": "DH_over_rs",
+      "value": 17.64149464,
+      "z": 0.934
+    },
+    {
+      "observable": "DM_over_rs",
+      "value": 27.60085612,
+      "z": 1.321
+    },
+    {
+      "observable": "DH_over_rs",
+      "value": 14.17602155,
+      "z": 1.321
+    },
+    {
+      "observable": "DM_over_rs",
+      "value": 30.51190063,
+      "z": 1.484
+    },
+    {
+      "observable": "DH_over_rs",
+      "value": 12.81699964,
+      "z": 1.484
+    },
+    {
+      "observable": "DH_over_rs",
+      "value": 8.631545674846294,
+      "z": 2.33
+    },
+    {
+      "observable": "DM_over_rs",
+      "value": 38.988973961958784,
+      "z": 2.33
+    }
+  ],
+  "declared_search": {
+    "golden_tolerance": 1e-07,
+    "omega_m_bounds": [
+      0.05,
+      0.7
+    ],
+    "one_parameter_delta_chi2": {
+      "68_percent": 1.0,
+      "95_percent": 3.841458820694124
+    },
+    "simpson_intervals": 256,
+    "w_bounds": [
+      -2.0,
+      0.0
+    ]
+  },
+  "dof": 10,
+  "fixed_w_candidates": {
+    "-0.3333333333333333": {
+      "H0rd_km_s": 8895.289413087128,
+      "amplitude_c_over_H0rd": 33.70238382114162,
+      "chi2": 78.88393297302022,
+      "delta_chi2_from_best": 69.8428863663247,
+      "omega_m": 0.11367651973219466,
+      "w": -0.3333333333333333
+    },
+    "-0.6666666666666666": {
+      "H0rd_km_s": 9491.233258946817,
+      "amplitude_c_over_H0rd": 31.586249101759623,
+      "chi2": 20.373541802491367,
+      "delta_chi2_from_best": 11.332495195795847,
+      "omega_m": 0.28103764160761824,
+      "w": -0.6666666666666666
+    },
+    "-1.0": {
+      "H0rd_km_s": 10153.977266952434,
+      "amplitude_c_over_H0rd": 29.524633561640645,
+      "chi2": 10.271041004421779,
+      "delta_chi2_from_best": 1.2299943977262586,
+      "omega_m": 0.2974618259738686,
+      "w": -1.0
+    }
+  },
+  "input_files": [
+    {
+      "bytes": 472,
+      "filename": "desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585"
+    },
+    {
+      "bytes": 2547,
+      "filename": "desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+    },
+    {
+      "bytes": 1573,
+      "filename": "chain.margestats",
+      "sha256": "f698464a169a5895bab18788ec9bb997848d95e168ef908db50b20e1d565215a"
+    },
+    {
+      "bytes": 934,
+      "filename": "bestfit.minimum.txt",
+      "sha256": "1be9545d7d8276c8b6ef98a81c5fd36ff0d94f883028f16c6cfdd12a2f49e72b"
+    },
+    {
+      "bytes": 4513,
+      "filename": "chain.updated.yaml",
+      "sha256": "b83bc1b7bef4ad531993481ea47d93eb9c2d38e820bdb7d97ee954758886b9f7"
+    }
+  ],
+  "model": {
+    "E_squared": "Omega_m*(1+z)^3 + (1-Omega_m)*(1+z)^(3*(1+w))",
+    "c_km_s": 299792.458,
+    "constant_w": true,
+    "flat": true,
+    "nuisance": "A=c/(H0*r_d), profiled analytically with A>0",
+    "radiation": "omitted; sub-percent late-time approximation over z<=2.33"
+  },
+  "nonclaims": [
+    "Not a full DESI+CMB or DESI+supernova likelihood.",
+    "Not a DESI full-shape calculation.",
+    "Does not determine H0 without an independently modeled sound horizon.",
+    "Does not establish an external or boundary origin for dark energy.",
+    "Does not apply the separately conserved DEB-1 identity to a flux-fed Q != 0 component."
+  ],
+  "official_cross_check": {
+    "MAP_from_bestfit_minimum": {
+      "H0rd_km_s": 9974.6091,
+      "chi2_BAO": 9.0335199,
+      "omega_m": 0.29740107,
+      "w": -0.91129473
+    },
+    "interpretation": "Cross-check only: chain.updated.yaml fixes H0 and samples hrdrag, so H0*r_d is effectively free there. The official posterior nevertheless uses its full CAMB radiation/neutrino implementation and stated priors/MCMC sampling; this artifact is a late-time BAO-distance profile.",
+    "margestats": {
+      "H0rd_km_s_68": "9984 +160 -180",
+      "omega_m_68": "0.2969 +/- 0.0089",
+      "w_68": "-0.916 +/- 0.078"
+    }
+  },
+  "official_likelihood_source": {
+    "configuration": "chain.updated.yaml",
+    "covariance": "desi_gaussian_bao_ALL_GCcomb_cov.txt",
+    "mean_vector": "desi_gaussian_bao_ALL_GCcomb_mean.txt",
+    "repository_commit": "b7b8a36e9bccb063081f811f323cada21ab5fbdd"
+  },
+  "one_parameter_w_profile_intervals": {
+    "68_percent": [
+      -0.9911265126793869,
+      -0.8360521123536151
+    ],
+    "95_percent": [
+      -1.0710253447518847,
+      -0.7658563289583065
+    ]
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope": "Real 13-point Gaussian BAO distance likelihood only; not DESI+CMB/SN, not full-shape, not an external-origin inference."
+}

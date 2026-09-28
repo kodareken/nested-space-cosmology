@@ -1,0 +1,61 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO10-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v10.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO10"
+predecessor_protocol = "FGC-2-SF1-PROTO9"
+diagnosis_artifact = "FGC-1-CAL6-PREF8"
+calibration_branch = "GR-0"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_finest_pair_spectral_interpretation_protocol_and_lineage_certificate"
+PROTO9_GR0_trajectory_inspected = false
+FGCQR_evolution_outcomes_inspected = false
+SGBL_evolution_outcomes_inspected = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "dd3f5adb22f08aa7950b74cef2595aaca2e8cd6e"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v9.toml"
+predecessor_protocol_sha256 = "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e"
+diagnosis_config = "configs/fgc/fgc-1-cal6-pref8.toml"
+diagnosis_config_sha256 = "940238188ac8c76527165be6d48fcd1ef0e9b84565a9fe7a7e53b12a8e8559ea"
+diagnosis_result = "results/fgc-1-cal6-pref8.json"
+diagnosis_result_sha256 = "3d4624cca60363c9daf6f65f9393d959d7a7fafbcf6eac7f8dc9c2f237c24f5e"
+
+[proof_contract]
+PROTO10_overlay_must_validate_exactly = true
+checkpoint_must_be_ancestor_of_HEAD = true
+predecessor_and_diagnosis_must_be_read_from_checkpoint = true
+immutable_blob_hashes_must_match_PROTO10_amendment = true
+immutable_PROTO9_must_validate_unchanged = true
+immutable_CAL6_must_be_canonical_pre_trajectory_and_nonmechanism = true
+resolution_ladder_must_remain_2049_4097_8193 = true
+only_finest_pair_nested_tail_interpretation_may_change = true
+raw_one_quarter_ratio_ceiling_must_remain_unchanged = true
+coarse_to_medium_field_and_derivative_ratios_must_remain_direct_vetoes = true
+medium_and_fine_absolute_budgets_must_remain_unchanged = true
+guarded_saturation_must_require_tail_erasure_map_and_complete_profile_witnesses = true
+round_trip_must_not_be_promoted_to_a_continuum_error_bound = true
+diagnostic_saturation_must_not_be_promoted_to_physical_resolution = true
+all_physical_inputs_equations_solvers_methods_CFL_retries_stops_and_claims_must_remain_unchanged = true
+new_output_namespaces_must_be_declared_but_not_accessed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO10_successor_runtime_implemented = false
+PROTO10_fresh_GR0_dynamic_calibration_authorized = false
+PROTO10_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

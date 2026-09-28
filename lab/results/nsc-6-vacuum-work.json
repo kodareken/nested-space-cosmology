@@ -1,0 +1,427 @@
+{
+  "angular_refinement": [
+    {
+      "cumulative_energy_coefficient": 0.3501981515901282,
+      "kappa": 1,
+      "multiplicity": 4,
+      "one_channel": {
+        "energy_coefficient": 0.08754953789753205,
+        "hole_energy_coefficient": 0.04377476894876605,
+        "minimum_pair_frequency": 2.023709992787385,
+        "pair_number_coefficient": 0.03534173444856095,
+        "particle_energy_coefficient": 0.043774768948766,
+        "transition_vertex_norm": 3.101762516817756
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.5871633981125655,
+      "kappa": 2,
+      "multiplicity": 8,
+      "one_channel": {
+        "energy_coefficient": 0.029620655815304667,
+        "hole_energy_coefficient": 0.014810327907652396,
+        "minimum_pair_frequency": 3.093476689149572,
+        "pair_number_coefficient": 0.007926785696526247,
+        "particle_energy_coefficient": 0.014810327907652264,
+        "transition_vertex_norm": 6.121906694841918
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.6111023258892568,
+      "kappa": 3,
+      "multiplicity": 12,
+      "one_channel": {
+        "energy_coefficient": 0.0019949106480576136,
+        "hole_energy_coefficient": 0.000997455324028809,
+        "minimum_pair_frequency": 4.299407307474453,
+        "pair_number_coefficient": 0.00039366149517091275,
+        "particle_energy_coefficient": 0.0009974553240288046,
+        "transition_vertex_norm": 9.06412905707954
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.6118750049768944,
+      "kappa": 4,
+      "multiplicity": 16,
+      "one_channel": {
+        "energy_coefficient": 4.829244297734902e-05,
+        "hole_energy_coefficient": 2.414622148867451e-05,
+        "minimum_pair_frequency": 5.533748379253829,
+        "pair_number_coefficient": 7.620620114144671e-06,
+        "particle_energy_coefficient": 2.414622148867451e-05,
+        "transition_vertex_norm": 11.930232620062144
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.6118864710242834,
+      "kappa": 5,
+      "multiplicity": 20,
+      "one_channel": {
+        "energy_coefficient": 5.733023694495768e-07,
+        "hole_energy_coefficient": 2.866511847247885e-07,
+        "minimum_pair_frequency": 6.772647280386202,
+        "pair_number_coefficient": 7.604082042082124e-08,
+        "particle_energy_coefficient": 2.866511847247883e-07,
+        "transition_vertex_norm": 14.722826971758034
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.6118865577591389,
+      "kappa": 6,
+      "multiplicity": 24,
+      "one_channel": {
+        "energy_coefficient": 3.613952314274766e-09,
+        "hole_energy_coefficient": 1.8069761571373797e-09,
+        "minimum_pair_frequency": 8.011259433864927,
+        "pair_number_coefficient": 4.142666937108303e-10,
+        "particle_energy_coefficient": 1.806976157137387e-09,
+        "transition_vertex_norm": 17.44467811623195
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.6118865580856654,
+      "kappa": 7,
+      "multiplicity": 28,
+      "one_channel": {
+        "energy_coefficient": 1.1661658691370426e-11,
+        "hole_energy_coefficient": 5.8308293456852116e-12,
+        "minimum_pair_frequency": 9.248981565263206,
+        "pair_number_coefficient": 1.1757335113995573e-12,
+        "particle_energy_coefficient": 5.830829345685214e-12,
+        "transition_vertex_norm": 20.09845617639827
+      }
+    },
+    {
+      "cumulative_energy_coefficient": 0.6118865580862568,
+      "kappa": 8,
+      "multiplicity": 32,
+      "one_channel": {
+        "energy_coefficient": 1.8482658432698933e-14,
+        "hole_energy_coefficient": 9.241329216349496e-15,
+        "minimum_pair_frequency": 10.485969511914583,
+        "pair_number_coefficient": 1.6609784598050682e-15,
+        "particle_energy_coefficient": 9.241329216349435e-15,
+        "transition_vertex_norm": 22.6867055208222
+      }
+    }
+  ],
+  "artifact_id": "NSC-6-VACUUM-WORK",
+  "classification": "finite_and_perturbative_Dirac_vacuum_response_to_prescribed_geometric_work_not_self_sourced_cosmology",
+  "conventions": {
+    "comparison": "all keys and integers exact, floats rtol=1e-7,atol=5e-10",
+    "full_angular_multiplier": "4*kappa per radial representative; energy already counts particle and hole",
+    "metric": "ds\u00b2=dt\u00b2-dx\u00b2-r(t,x)\u00b2 dOmega\u00b2, compact axial AP circle, original a=1,R=2",
+    "perturbative_domain": "coefficients multiply epsilon\u00b2, generic omitted order epsilon\u00b3; sign average removes odd powers",
+    "pulse": "g(t)=exp(-t\u00b2/(2*width\u00b2)), prescribed rather than action-derived",
+    "radius": "r(t,x)=r0(x)/(1+epsilon*s(x)*g(t)); no added scalar matter",
+    "real_time_domain": "one kappa=1 representative, 32 axial points, interaction-picture DOP853, endpoints +/-7*width",
+    "regional_ledger": "x>=0 half-link energy; integrated inflow includes throat and compact seam together; explicit geometric work is separate",
+    "spatial_profile": "s=exp(2*(cos(2*pi*(x+0.6)/L)-1))",
+    "state": "initial static vacuum; final particles defined relative to the same static H0",
+    "time_reduction": "u=r(t,x)*psi removes both temporal and spatial radius connections",
+    "units": "hbar=c=a_throat=1, width in a_throat, energy in 1/a_throat"
+  },
+  "duration_controls": [
+    {
+      "energy_coefficient": 0.1946326395998663,
+      "hole_energy_coefficient": 0.09731631979993301,
+      "minimum_pair_frequency": 2.023709992787385,
+      "pair_number_coefficient": 0.05175306903891652,
+      "particle_energy_coefficient": 0.09731631979993327,
+      "transition_vertex_norm": 3.101762516817756,
+      "width": 0.25
+    },
+    {
+      "energy_coefficient": 0.08754953789753205,
+      "hole_energy_coefficient": 0.04377476894876605,
+      "minimum_pair_frequency": 2.023709992787385,
+      "pair_number_coefficient": 0.03534173444856095,
+      "particle_energy_coefficient": 0.043774768948766,
+      "transition_vertex_norm": 3.101762516817756,
+      "width": 0.5
+    },
+    {
+      "energy_coefficient": 0.006623539188486313,
+      "hole_energy_coefficient": 0.0033117695942431642,
+      "minimum_pair_frequency": 2.023709992787385,
+      "pair_number_coefficient": 0.003001709275267328,
+      "particle_energy_coefficient": 0.0033117695942431473,
+      "transition_vertex_norm": 3.101762516817756,
+      "width": 1.0
+    },
+    {
+      "energy_coefficient": 1.2121601465785111e-08,
+      "hole_energy_coefficient": 6.060800732892601e-09,
+      "minimum_pair_frequency": 2.023709992787385,
+      "pair_number_coefficient": 5.495365275655928e-09,
+      "particle_energy_coefficient": 6.060800732892512e-09,
+      "transition_vertex_norm": 3.101762516817756,
+      "width": 2.0
+    }
+  ],
+  "even_perturbation_controls": [
+    {
+      "difference_from_leading": 9.601880284496045e-06,
+      "epsilon": 0.04,
+      "even_work_coefficient": 0.0877386303033725
+    },
+    {
+      "difference_from_leading": 2.399995475216299e-06,
+      "epsilon": 0.02,
+      "even_work_coefficient": 0.08773142841856323
+    },
+    {
+      "difference_from_leading": 5.981970505747336e-07,
+      "epsilon": 0.01,
+      "even_work_coefficient": 0.08772962662013858
+    }
+  ],
+  "exact_reduction_residuals": {
+    "t": "0",
+    "x": "0"
+  },
+  "finite_real_time_controls": [
+    {
+      "endpoint_interaction_correction": -2.37355474891716e-15,
+      "epsilon": 0.04,
+      "excitation_energy": 0.00013695355255549657,
+      "external_work": 0.00013695353718790756,
+      "finite_lattice_omitted_pulse_unitary_bound": 1.0395114167403689e-13,
+      "hole_number": 5.5430365961228745e-05,
+      "initial_metric_pulse_magnitude": 9.158939382582212e-13,
+      "integrated_regional_inflow": 2.186201309336861e-05,
+      "orthonormality_residual": 9.625633623500107e-14,
+      "pair_number": 5.543036488505263e-05,
+      "regional_balance_residual": 1.0005537006286657e-10,
+      "regional_endpoint_correction": -3.852481141754656e-16,
+      "regional_energy_change": 3.899617757952001e-05,
+      "regional_geometric_work": 1.7134064430396086e-05,
+      "relative_integration_tolerance": 2e-11,
+      "width": 0.5,
+      "work_balance_residual": 1.5365215455390862e-11
+    },
+    {
+      "endpoint_interaction_correction": -5.940662448075786e-16,
+      "epsilon": 0.02,
+      "excitation_energy": 3.4664013355723e-05,
+      "external_work": 3.466400504001138e-05,
+      "finite_lattice_omitted_pulse_unitary_bound": 5.1975570837018445e-14,
+      "hole_number": 1.4018114619318567e-05,
+      "initial_metric_pulse_magnitude": 4.579469691291106e-13,
+      "integrated_regional_inflow": 1.0593601502581859e-06,
+      "orthonormality_residual": 5.262457136723242e-14,
+      "pair_number": 1.401811404044748e-05,
+      "regional_balance_residual": 9.685729997601836e-11,
+      "regional_endpoint_correction": -9.680654437006329e-17,
+      "regional_energy_change": 5.387322346450674e-06,
+      "regional_geometric_work": 4.327865338795705e-06,
+      "relative_integration_tolerance": 2e-11,
+      "width": 0.5,
+      "work_balance_residual": 8.315117551320472e-12
+    },
+    {
+      "endpoint_interaction_correction": -1.486018559734309e-16,
+      "epsilon": 0.01,
+      "excitation_energy": 8.719395282241749e-06,
+      "external_work": 8.719390858057214e-06,
+      "finite_lattice_omitted_pulse_unitary_bound": 2.5987785418509223e-14,
+      "hole_number": 3.5246511629338784e-06,
+      "initial_metric_pulse_magnitude": 2.289734845645553e-13,
+      "integrated_regional_inflow": -1.992164225035999e-06,
+      "orthonormality_residual": 2.8310687127941492e-14,
+      "pair_number": 3.524650846332356e-06,
+      "regional_balance_residual": 9.067257731377974e-11,
+      "regional_endpoint_correction": -2.4263867666272178e-17,
+      "regional_energy_change": -9.045420767961332e-07,
+      "regional_geometric_work": 1.0875314756382883e-06,
+      "relative_integration_tolerance": 2e-11,
+      "width": 0.5,
+      "work_balance_residual": 4.424035932696321e-12
+    },
+    {
+      "endpoint_interaction_correction": -2.384566509355996e-15,
+      "epsilon": -0.04,
+      "excitation_energy": 0.00014381009521002852,
+      "external_work": 0.00014381007978288445,
+      "finite_lattice_omitted_pulse_unitary_bound": 1.0395114167403689e-13,
+      "hole_number": 5.8012861053668985e-05,
+      "initial_metric_pulse_magnitude": -9.158939382582212e-13,
+      "integrated_regional_inflow": 6.058448812790851e-05,
+      "orthonormality_residual": 9.703349235223868e-14,
+      "pair_number": 5.801285997058131e-05,
+      "regional_balance_residual": 1.0238406617738699e-10,
+      "regional_endpoint_correction": -3.932679224097793e-16,
+      "regional_energy_change": 7.843346710956212e-05,
+      "regional_geometric_work": 1.7849081365326516e-05,
+      "relative_integration_tolerance": 2e-11,
+      "width": 0.5,
+      "work_balance_residual": 1.5424759506334725e-11
+    },
+    {
+      "endpoint_interaction_correction": -5.954418585300016e-16,
+      "epsilon": -0.02,
+      "excitation_energy": 3.552114588956101e-05,
+      "external_work": 3.55211376948392e-05,
+      "finite_lattice_omitted_pulse_unitary_bound": 5.1975570837018445e-14,
+      "hole_number": 1.4340949533675484e-05,
+      "initial_metric_pulse_magnitude": -4.579469691291106e-13,
+      "integrated_regional_inflow": 1.9549919881313603e-05,
+      "orthonormality_residual": 5.162537064506978e-14,
+      "pair_number": 1.4340948955973105e-05,
+      "regional_balance_residual": 9.667470145319554e-11,
+      "regional_endpoint_correction": -9.780898218609436e-17,
+      "regional_energy_change": 2.3967069353147963e-05,
+      "regional_geometric_work": 4.417246146438004e-06,
+      "relative_integration_tolerance": 2e-11,
+      "width": 0.5,
+      "work_balance_residual": 8.194126368991707e-12
+    },
+    {
+      "endpoint_interaction_correction": -1.487737809202423e-16,
+      "epsilon": -0.01,
+      "excitation_energy": 8.826538930861716e-06,
+      "external_work": 8.826534465970502e-06,
+      "finite_lattice_omitted_pulse_unitary_bound": 2.5987785418509223e-14,
+      "hole_number": 3.5650062457648346e-06,
+      "initial_metric_pulse_magnitude": -2.289734845645553e-13,
+      "integrated_regional_inflow": 7.144339079342727e-06,
+      "orthonormality_residual": 2.786659791809143e-14,
+      "pair_number": 3.5650059304874885e-06,
+      "regional_balance_residual": 8.9147596102956e-11,
+      "regional_endpoint_correction": -2.4389171198821384e-17,
+      "regional_energy_change": 8.242954123716117e-06,
+      "regional_geometric_work": 1.0987041919451041e-06,
+      "relative_integration_tolerance": 2e-11,
+      "width": 0.5,
+      "work_balance_residual": 4.464742439657336e-12
+    }
+  ],
+  "independent_constant_geometry_controls": [
+    {
+      "energy_residual": 1.1102230246251565e-16,
+      "eta": 0.0,
+      "independent_Fourier_energy_coefficient": 0.2605823654735063,
+      "matrix": {
+        "energy_coefficient": 0.2605823654735062,
+        "hole_energy_coefficient": 0.13029118273675303,
+        "minimum_pair_frequency": 2.0000000000000036,
+        "pair_number_coefficient": 0.06997143558499438,
+        "particle_energy_coefficient": 0.13029118273675314,
+        "transition_vertex_norm": 5.478623419517641
+      }
+    },
+    {
+      "energy_residual": 1.887379141862766e-15,
+      "eta": 0.5,
+      "independent_Fourier_energy_coefficient": 0.6248434980676846,
+      "matrix": {
+        "energy_coefficient": 0.6248434980676827,
+        "hole_energy_coefficient": 0.3124217490338421,
+        "minimum_pair_frequency": 2.5425374341820968,
+        "pair_number_coefficient": 0.24187170323153925,
+        "particle_energy_coefficient": 0.31242174903384057,
+        "transition_vertex_norm": 5.491992735895693
+      }
+    }
+  ],
+  "leading_identity": "P_nm/epsilon\u00b2=2*pi*width\u00b2*|V_nm|\u00b2*exp[-(E_n-E_m)\u00b2*width\u00b2]; DeltaE=sum_(n>0,m<0)(E_n-E_m)P_nm>=0",
+  "nonclaims": {
+    "absolute_vacuum_stress_derived": false,
+    "baryonic_dust_produced": false,
+    "external_geometry_work_source_solved": false,
+    "infinite_angular_remainder_bound_proved": false,
+    "new_to_world_particle_creation_mechanism": false,
+    "stationary_recursive_solution": false,
+    "sustained_cosmological_Q_derived": false
+  },
+  "pure_clock_control": {
+    "energy_coefficient": 9.832298888839961e-29,
+    "hole_energy_coefficient": 4.892485743843707e-29,
+    "minimum_pair_frequency": 2.023709992787385,
+    "pair_number_coefficient": 4.3669056905283766e-29,
+    "particle_energy_coefficient": 4.939813144996255e-29,
+    "transition_vertex_norm": 6.880879095765771e-13
+  },
+  "schema": "nsc-vacuum-work-v1",
+  "source_hashes": {
+    "scripts/check_nsc_vacuum_work.py": "f75ea645710751521bcd22c880a59d570664f47439d334d5e51595edbb3b0db9",
+    "src/recursive_horizons/nsc_energy_transfer.py": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_vacuum_work.py": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c"
+  },
+  "spatial_refinement": [
+    {
+      "exact_geometric_affinity_residual": 1.6696713456276768e-15,
+      "full_angular_through_kappa8_energy_coefficient": 0.617448767939956,
+      "points": 32,
+      "response": {
+        "energy_coefficient": 0.08772902842308801,
+        "hole_energy_coefficient": 0.04386451421154402,
+        "minimum_pair_frequency": 2.0230591162574854,
+        "pair_number_coefficient": 0.03544810225431917,
+        "particle_energy_coefficient": 0.04386451421154398,
+        "transition_vertex_norm": 1.4764249929131192
+      }
+    },
+    {
+      "exact_geometric_affinity_residual": 3.3757718842508666e-15,
+      "full_angular_through_kappa8_energy_coefficient": 0.6129904710819848,
+      "points": 64,
+      "response": {
+        "energy_coefficient": 0.08758584512517019,
+        "hole_energy_coefficient": 0.04379292256258519,
+        "minimum_pair_frequency": 2.0235799733820947,
+        "pair_number_coefficient": 0.03536312332811751,
+        "particle_energy_coefficient": 0.04379292256258502,
+        "transition_vertex_norm": 2.1587317057888056
+      }
+    },
+    {
+      "exact_geometric_affinity_residual": 6.130512764102036e-15,
+      "full_angular_through_kappa8_energy_coefficient": 0.6118865580862569,
+      "points": 128,
+      "response": {
+        "energy_coefficient": 0.08754953789753205,
+        "hole_energy_coefficient": 0.04377476894876605,
+        "minimum_pair_frequency": 2.023709992787385,
+        "pair_number_coefficient": 0.03534173444856095,
+        "particle_energy_coefficient": 0.043774768948766,
+        "transition_vertex_norm": 3.101762516817756
+      }
+    },
+    {
+      "exact_geometric_affinity_residual": 1.4011361515464671e-14,
+      "full_angular_through_kappa8_energy_coefficient": 0.6116112347043091,
+      "points": 256,
+      "response": {
+        "energy_coefficient": 0.08754042932748278,
+        "hole_energy_coefficient": 0.04377021466374201,
+        "minimum_pair_frequency": 2.023742485455692,
+        "pair_number_coefficient": 0.0353363782905453,
+        "particle_energy_coefficient": 0.04377021466374077,
+        "transition_vertex_norm": 4.420567185372803
+      }
+    }
+  ],
+  "terminal": true,
+  "tighter_integrator_control": {
+    "endpoint_interaction_correction": -5.940662442809029e-16,
+    "epsilon": 0.02,
+    "excitation_energy": 3.466400534080094e-05,
+    "external_work": 3.4664005413111994e-05,
+    "finite_lattice_omitted_pulse_unitary_bound": 5.1975570837018445e-14,
+    "hole_number": 1.4018114036673524e-05,
+    "initial_metric_pulse_magnitude": 4.579469691291106e-13,
+    "integrated_regional_inflow": 1.059451260544751e-06,
+    "orthonormality_residual": 1.6653345369377348e-15,
+    "pair_number": 1.4018114040441248e-05,
+    "regional_balance_residual": 3.217595418550964e-13,
+    "regional_endpoint_correction": -9.680654437019041e-17,
+    "regional_energy_change": 5.387316946325882e-06,
+    "regional_geometric_work": 4.3278653639247824e-06,
+    "relative_integration_tolerance": 2e-13,
+    "width": 0.5,
+    "work_balance_residual": 7.29051198735818e-14
+  },
+  "work_identity": "d< H(t) >/dt=Tr(C dot H); for equal endpoint Hamiltonians, supplied work becomes excitation energy"
+}

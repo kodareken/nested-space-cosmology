@@ -1,0 +1,256 @@
+{
+  "artifact_id": "FGC-1-BND2-CP1",
+  "artifact_payload": {
+    "SBP_stencil_reach_included": true,
+    "evolving_physical_and_auxiliary_cones_included": true,
+    "incoming_constraint_characteristics_controlled": true,
+    "measured_affine_interval_outside_boundary_domain_of_dependence": true,
+    "outer_boundary_move_check_passed": true,
+    "quantitative_evidence": {
+      "causal_budget_contract": {
+        "candidate_endpoint_speed_is_evaluated_explicitly": true,
+        "formula": "r_outer-r_measure-stencil_reach-integral_v_coordinate_max_dt",
+        "minimum_remaining_buffer": "16",
+        "runtime_controls": {
+          "accepted_control": {
+            "accepted_endpoint_speed_upper": 1.3,
+            "accepted_time": 1.0,
+            "accumulated_characteristic_distance": 1.3
+          },
+          "injected_failure": {
+            "candidate_margin": -100.67500000000001,
+            "candidate_remaining_buffer": -84.67500000000001,
+            "trial_rejected": true,
+            "trial_time": 32.0,
+            "typed_reason": "boundary_causal_buffer"
+          },
+          "last_accepted_state_unchanged_by_failed_pure_transaction": true
+        },
+        "strict_inequality_required": true,
+        "trial_stage_maximum_is_debited_before_acceptance": true
+      },
+      "epistemic_boundary": {
+        "FGCQR_holdout_outcome_inspected": false,
+        "actual_boundary_move_solution_agreement_is_deferred_to_NUM1_and_ROB1": true,
+        "complete_nonlinear_constraint_preserving_IBVP_proved": false,
+        "stencil_pad_is_not_exact_semidiscrete_compact_support": true,
+        "time_evolution_performed": false,
+        "trajectory_speed_envelope_is_deferred_to_HLT1": true
+      },
+      "incoming_constraint_control": {
+        "BND1_main_incoming_rank_inner": 6,
+        "BND1_main_incoming_rank_outer": 6,
+        "CON4_gauge_incoming_components_inner": 2,
+        "CON4_gauge_incoming_components_outer": 2,
+        "CON4_reduction_constraints_zero_speed": true,
+        "control_mechanism": "exclude_boundary_domain_of_dependence_from_retained_measurement_interval",
+        "nonlinear_constraint_preserving_boundary_map_proved": false
+      },
+      "orthonormal_to_coordinate_cone_map": {
+        "absolute_envelope": "abs(shift)+(lapse/Lambda)*6/5",
+        "evolving_metric_values_required_at_runtime": true,
+        "formula": "dr/dt=-shift+(lapse/Lambda)z",
+        "hat_local_absolute_bound": "23/60",
+        "physical_local_absolute_bound": "6/5",
+        "tilde_local_absolute_bound": "11/20"
+      },
+      "outer_boundary_move_control": {
+        "actual_evolved_observable_move_agreement_deferred_to_NUM1_and_ROB1": true,
+        "fixed_interior_spacing_at_each_resolution": true,
+        "grid_records": [
+          {
+            "interval_count": 768,
+            "measurement_index": 192,
+            "outer_radius": "96",
+            "point_count": 769,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "1329/40",
+              "strict_margin_over_required_buffer": "689/40"
+            },
+            "spacing": "1/8",
+            "stencil_reach": "3/8"
+          },
+          {
+            "interval_count": 1024,
+            "measurement_index": 192,
+            "outer_radius": "128",
+            "point_count": 1025,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "2609/40",
+              "strict_margin_over_required_buffer": "1969/40"
+            },
+            "spacing": "1/8",
+            "stencil_reach": "3/8"
+          },
+          {
+            "interval_count": 1280,
+            "measurement_index": 192,
+            "outer_radius": "160",
+            "point_count": 1281,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "3889/40",
+              "strict_margin_over_required_buffer": "3249/40"
+            },
+            "spacing": "1/8",
+            "stencil_reach": "3/8"
+          },
+          {
+            "interval_count": 1536,
+            "measurement_index": 384,
+            "outer_radius": "96",
+            "point_count": 1537,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "2673/80",
+              "strict_margin_over_required_buffer": "1393/80"
+            },
+            "spacing": "1/16",
+            "stencil_reach": "3/16"
+          },
+          {
+            "interval_count": 2048,
+            "measurement_index": 384,
+            "outer_radius": "128",
+            "point_count": 2049,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "5233/80",
+              "strict_margin_over_required_buffer": "3953/80"
+            },
+            "spacing": "1/16",
+            "stencil_reach": "3/16"
+          },
+          {
+            "interval_count": 2560,
+            "measurement_index": 384,
+            "outer_radius": "160",
+            "point_count": 2561,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "7793/80",
+              "strict_margin_over_required_buffer": "6513/80"
+            },
+            "spacing": "1/16",
+            "stencil_reach": "3/16"
+          },
+          {
+            "interval_count": 3072,
+            "measurement_index": 768,
+            "outer_radius": "96",
+            "point_count": 3073,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "5361/160",
+              "strict_margin_over_required_buffer": "2801/160"
+            },
+            "spacing": "1/32",
+            "stencil_reach": "3/32"
+          },
+          {
+            "interval_count": 4096,
+            "measurement_index": 768,
+            "outer_radius": "128",
+            "point_count": 4097,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "10481/160",
+              "strict_margin_over_required_buffer": "7921/160"
+            },
+            "spacing": "1/32",
+            "stencil_reach": "3/32"
+          },
+          {
+            "interval_count": 5120,
+            "measurement_index": 768,
+            "outer_radius": "160",
+            "point_count": 5121,
+            "reference_budget": {
+              "characteristic_travel": "192/5",
+              "passed": true,
+              "remaining_causal_buffer": "15601/160",
+              "strict_margin_over_required_buffer": "13041/160"
+            },
+            "spacing": "1/32",
+            "stencil_reach": "3/32"
+          }
+        ],
+        "smallest_reference_margin_over_required_buffer": "689/40",
+        "smallest_reference_remaining_buffer": "1329/40"
+      }
+    },
+    "run_envelope_semantic_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee"
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "spherical_domain_of_dependence_and_boundary_certificate",
+  "derivation_document": "docs/fgc-bnd2-cp1.md",
+  "derivation_document_sha256": "93fc3b1852e11b40747c7fad77453ed5699bdd70efd96e20b50f0627359f63bb",
+  "gate_status": {
+    "spherical_boundary_or_domain_of_dependence_control_passed": true
+  },
+  "generated_by": "scripts/reproduce_fgc_bnd2_cp1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_bnd2_cp1.py": "08a7bf9327bd19ccc25e3974514cc2c501a37f71c71502d9aae205bf14c67176",
+    "src/recursive_horizons/fgc/evolution/boundary_domain.py": "062d9f07387d78079213bddfc718168be2f2402a77c9e0107e9a2ca04ece5cb1"
+  },
+  "nonclaims": {
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-con4-phy1.toml": "1b2d8441a96c392c0a0948c9a111e7bfc0fc3df3a31fc63f177768bb29b80255",
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4",
+    "configs/fgc/fgc-1-hyp1-bnd1-md1.toml": "eaee566b39f8be2d6068c50d5a8498e60b21b947c3de62e5e8863da707af0e1d",
+    "configs/fgc/fgc-1-hyp2-md1.toml": "c3fcb05d4ca3b8df72b1659e24178c66e44f7033e11df998a6bc855f6a230382",
+    "configs/fgc/fgc-1-id1-fam1.toml": "fe61161c651af606476f498c4c0a1b99a4034d7a5dd0c3ac9d7f581ba7992a3c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-con4-phy1.json": "ab1964af57666e51491026ac279a119b061f17cc55f1ec8ffbc31a45c97ea47b",
+    "results/fgc-1-dom4-run1.json": "238847f4af182fa423a91b381cae65217a76965b7b979ea26b29778781f0ac94",
+    "results/fgc-1-hyp1-bnd1-md1.json": "9de22d1e406132f0c0626ee2695a557e36cc74ef7f2604a404b36966d5cfc764",
+    "results/fgc-1-hyp2-md1.json": "159e966f2279cc534d663a0e9f4abd0c6d429751bb8f6d266bebe5c65d53ad67",
+    "results/fgc-1-id1-fam1.json": "b410741dfc7f58041df0eab45d956687947157747a69a5f5247792607139f4a8",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "action_artifact_id": "FGC-1-ACT1",
+    "action_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "action_result_sha256": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_artifact_id": "FGC-2-SF1-PROTO3",
+    "protocol_config_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+    "protocol_semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "target_branch": "FGC-QR",
+    "variation_artifact_id": "FGC-1-VAR1",
+    "variation_config_sha256": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "variation_result_sha256": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-bnd2-cp1.toml": "f91ddded93f162b43250b15197bfaa6df360a1e6ec60a5138ca88e7f88ccbca4"
+  }
+}

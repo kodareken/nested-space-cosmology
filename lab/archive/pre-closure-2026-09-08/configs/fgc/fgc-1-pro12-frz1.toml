@@ -1,0 +1,85 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO12-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v12.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO12"
+predecessor_protocol = "FGC-2-SF1-PROTO11"
+calibration_diagnosis_artifact = "FGC-1-CAL8-PREF10"
+resolution_evidence_artifact = "FGC-1-RSP1-PREF12"
+source_instrument_artifact = "FGC-1-SRC4-VEC1"
+calibration_branch = "GR-0"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_source_instrument_and_pairwise_spectral_protocol_certificate"
+PROTO11_GR0_calibration_trajectory_inspected = true
+RSP1_GR0_resolution_trajectory_inspected = true
+PROTO12_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "ffcc445354dc2bb2ee09afc3296f35ac8e473f46"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v11.toml"
+predecessor_protocol_sha256 = "31d21bf6257d6afe033ea8a0d48b59360187a1d9baf2bc95c2fcb086e39ce440"
+calibration_diagnosis_config = "configs/fgc/fgc-1-cal8-pref10.toml"
+calibration_diagnosis_config_sha256 = "a7646fb7ef2b229c36981a2f4a87e4428de1bdc5cbe324baedc965097c674cb3"
+calibration_diagnosis_result = "results/fgc-1-cal8-pref10.json"
+calibration_diagnosis_result_sha256 = "10c6898e1ec6e7c07793180c4a4f8fa26a1b2f660115a0b2bc54497ff8bbb89d"
+resolution_evidence_config = "configs/fgc/fgc-1-rsp1-pref12.toml"
+resolution_evidence_config_sha256 = "10248e01e83714a3e0b83d213748be8d5c6e1b234133b7bbe35a2809515e5bd1"
+resolution_evidence_result = "results/fgc-1-rsp1-pref12.json"
+resolution_evidence_result_sha256 = "0bb184a519230d1b221d20fb88df70841800575b886df0b0642837deb26e4551"
+resolution_checkpoint = "runs/fgc-2-sf1/rsp1/amplitude3-spectrum/latest-checkpoint.npz"
+resolution_checkpoint_sha256 = "0d5d613b6067b17dda35eb2c180a4540cd99b020edec7e4fd56f24f1ef4123f9"
+source_instrument_config = "configs/fgc/fgc-1-src4-vec1.toml"
+source_instrument_config_sha256 = "39c1c11c703c58cf884e4f0f240db0dd1eaa085494e6d2cb14761fbcc48681d2"
+source_instrument_result = "results/fgc-1-src4-vec1.json"
+source_instrument_result_sha256 = "fb510b0232ac956a73321b63a31d1f52a7732132ff736d41f6d08a4da125aa7a"
+
+[proof_contract]
+PROTO12_overlay_must_validate_exactly = true
+checkpoint_must_be_ancestor_of_HEAD = true
+all_tracked_lineage_must_be_read_from_the_immutable_checkpoint = true
+immutable_blob_hashes_must_match_PROTO12_amendment = true
+immutable_PROTO11_must_validate_unchanged = true
+CAL8_RSP1_and_SRC4_must_remain_numerical_premise_evidence = true
+SRC4_equations_branch_thresholds_and_reference_map_must_remain_unchanged = true
+RSP1_terminal_checkpoint_must_recompute_before_conditioning = true
+RSP1_generic_all_field_raw_failure_must_remain_public = true
+every_raw_power_fraction_and_adjacent_ratio_must_be_serialized = true
+direct_ratio_below_one_quarter_must_remain_primary_on_each_pair = true
+pairwise_saturation_requires_both_pair_budgets_and_map_witnesses = true
+pairwise_saturation_requires_complete_three_grid_profile_contraction = true
+round_trip_residual_must_not_be_called_a_continuum_error_bound = true
+no_epsilon_floor_new_tolerance_asymptote_or_hidden_ratio_is_permitted = true
+RSP1_high_ladder_must_not_replace_the_PROTO12_calibration_ladder = true
+original_amplitudes_ladder_methods_schedule_stops_observables_and_claims_must_remain_unchanged = true
+new_output_namespaces_must_be_declared_but_not_accessed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO12_frozen = true
+PROTO12_SRC4_source_backend_contract_frozen = true
+PROTO12_pairwise_spectral_classifier_derived = true
+RSP1_pairwise_conditioning_recomputed = true
+RSP1_generic_all_field_raw_spectral_admission_passed = false
+PROTO12_successor_runtime_implemented = false
+PROTO12_fresh_GR0_dynamic_calibration_authorized = false
+PROTO12_resolved_holdout_manifest_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

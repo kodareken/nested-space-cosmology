@@ -1,0 +1,136 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.6195212665669487e-09,
+    7.292716100448793e-08
+  ],
+  "best_prediction_minus_measured": [
+    5.795011845502008e-16,
+    -6.837701524676717e-16
+  ],
+  "best_profile_identity": "ad75942438dad1de599ee260e5d9aa7f17d60af26b533bee2b0691f2a6dec777",
+  "comparison_direction": "rejected five-times step baf90351; coefficient is not remeasured on the unevolved directions",
+  "damped_truncations_at_linear_norm": [
+    {
+      "both_components_improve": false,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 56,
+      "predicted_gain": [
+        -4.576523782221939e-12,
+        -1.2665982243532775e-10
+      ],
+      "raw_step_norm": 3.6507309209983226e-08,
+      "singular_ratio": 132856.91536526426
+    },
+    {
+      "both_components_improve": false,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 64,
+      "predicted_gain": [
+        -4.649547657221268e-12,
+        -1.286816130593473e-10
+      ],
+      "raw_step_norm": 3.593638039241339e-08,
+      "singular_ratio": 8341710.450458757
+    },
+    {
+      "both_components_improve": false,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 70,
+      "predicted_gain": [
+        -3.9249450830197e-12,
+        -1.083878523742222e-10
+      ],
+      "raw_step_norm": 4.25703647827082e-08,
+      "singular_ratio": 88559806.86542083
+    },
+    {
+      "both_components_improve": true,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 74,
+      "predicted_gain": [
+        2.597067536369464e-18,
+        4.452026346592284e-17
+      ],
+      "raw_step_norm": 0.30020254659787626,
+      "singular_ratio": 674877288.5644106
+    },
+    {
+      "both_components_improve": true,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 80,
+      "predicted_gain": [
+        8.546533486474451e-19,
+        2.3907663754930237e-17
+      ],
+      "raw_step_norm": 0.7904751332884365,
+      "singular_ratio": 11155572104.635927
+    },
+    {
+      "both_components_improve": true,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 88,
+      "predicted_gain": [
+        5.291019429164814e-20,
+        1.472659423030207e-18
+      ],
+      "raw_step_norm": 12.812171474178452,
+      "singular_ratio": 7060675228641.984
+    },
+    {
+      "both_components_improve": true,
+      "damped_step_norm": 2.585996190224001e-10,
+      "kept_modes": 94,
+      "predicted_gain": [
+        4.9216419266292594e-20,
+        1.3701816713022376e-18
+      ],
+      "raw_step_norm": 13.763818600688648,
+      "singular_ratio": 4391096926631395.0
+    }
+  ],
+  "direction_quadratic_n_coefficient": 91035029.26861152,
+  "enclosed_error": null,
+  "evolve_authorized": false,
+  "families_evolved": 0,
+  "half_crossover_net_n_gain": 8.291357357783794e-13,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust03.json": "fcadd08f2f80ff4c4fa4866aab4571fe31a42a93835b4286a7c7f3c6baefa7c5",
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust05-quadratic.json": "150e765a7ff1ce8330544bb66a40dfbf0ee18242b89a84b127a4f7999c317930"
+  },
+  "joint_crossover_against_measured_coefficient": {
+    "can_reach_existence": false,
+    "predicted_n_gain": 3.3165429431135174e-12,
+    "residual_after_gain": 2.6162047236238353e-09,
+    "step_norm": 1.9087038275563002e-10
+  },
+  "joint_n_slope": 0.01737589088066986,
+  "linear_norm": 2.585996190224001e-10,
+  "modes_1_48_singular_ratio": 1278.110563011974,
+  "modes_1_48_width": 41,
+  "modes_74_94_n_lipschitz": 1.341170581118271e-07,
+  "modes_74_94_width": 21,
+  "n_gain_with_beta_held": 4.60865857528337e-12,
+  "n_gain_with_required_beta_gain": 4.4933987619160225e-12,
+  "newton_step_accepted": false,
+  "next_owner": "declared (w,U) class on I=S(1)+[0.12,0.18]",
+  "nonexistence_not_claimed": "positive joint linear gain and the already recorded trivial geometry cokernel do not exclude the declared class",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "quadratic_spoilage_at_linear_norm": 6.08785496823201e-12,
+  "required_beta_gain": 1e-10,
+  "schema": "NSC-KS-N64-PRIMAL-NORM-JOINT-QUADRATIC-v1",
+  "source_hashes": {
+    "docs/nsc-ks-n64-primal-norm-joint-quadratic.md": "649b3b4314268c6dd8c28722194e014c511828bd221841979fbbcc40a27e80e1",
+    "scripts/derive_nsc_ks_n64_primal_norm_joint_quadratic.py": "911f4c857e58f953aaae0dfd8c73fc20b455a00e005bbd273ff5904e461b0803"
+  },
+  "stall": "n64_primal_norm_joint_gain_inside_quadratic",
+  "status": "OPEN: best joint linear N gain is inside the measured quadratic term",
+  "tail_crossover_against_measured_coefficient": {
+    "can_reach_existence": false,
+    "predicted_n_gain": 1.9758751571877814e-22,
+    "residual_after_gain": 2.619521266566751e-09,
+    "step_norm": 1.4732467182066374e-15
+  },
+  "uv_field_low_subgap_between_node": null
+}

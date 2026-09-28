@@ -1,0 +1,110 @@
+schema_version = 1
+artifact_id = "FGC-1-CAL11-PREF22"
+project_version = "0.11.0"
+
+run_plan_config = "configs/fgc/fgc-1-pro14-run1.toml"
+runtime_authorization_result = "results/fgc-1-hlt12-mon12.json"
+protocol_freeze_result = "results/fgc-1-pro14-frz1.json"
+campaign_manifest = "runs/fgc-2-sf1/proto14/calibration/manifest.json"
+campaign_event_log = "runs/fgc-2-sf1/proto14/calibration/events.jsonl"
+campaign_checkpoint = "runs/fgc-2-sf1/proto14/calibration/latest-checkpoint.npz"
+campaign_result = "runs/fgc-2-sf1/proto14/calibration/campaign-result.json"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO14"
+role = "post_run_terminal_checkpoint_recomputed_invalid_runtime_result"
+calibration_branch = "GR-0"
+amplitude = "3"
+GR0_numerical_trajectory_read = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+mechanism_question_answered = false
+physical_obstruction_inferred = false
+
+[immutable_campaign]
+authorization_commit = "7534a1662d8078a63c98025ecd464bb068fa012f"
+campaign_id = "038c0128e76f48118b97d985384a1e7239edf7c97349cfc7552ee7d33e289e98"
+manifest_sha256 = "9396faf40b6b3681087c6336ffe1163048a1a45ef1de1f8acbd4025a1768e261"
+event_log_sha256 = "99e08c042820f582d4dc8c54beb00b96111aa4241d1977db5152ddca84fe0071"
+checkpoint_sha256 = "e7dc31a25a775a9377fbc45d1b239deb492bdc9ebbef85f94913513f885b015d"
+campaign_result_sha256 = "3d15623004a2044030b9039842ddbce04273949fbeb12b6b65cd61e3137bec69"
+event_log_line_count = 2
+event_log_byte_count = 62410
+
+[terminal_identity]
+classification = "invalid_implementation_or_nonconverged_run"
+reason = "invalid_implementation_or_nonconverged_run"
+error_type = "ValueError"
+error_message = "TDG6 subdivision is not bitwise uniform"
+active_member = "RK4-2049"
+target_common_event_index = 24
+last_fully_completed_common_event_index = 23
+last_fully_completed_coordinate_time = "23/16"
+cross_member_state_rolled_back = true
+post_restart_accepted_macro_step_count_per_member = 0
+terminal_checkpoint_may_not_resume = true
+historical_abort_is_not_physical_classification = true
+
+[authorization_lineage]
+run_plan_sha256 = "76a8c07132b91cefc0cc466a6108557463841eca8ee1e4a081e718b9d9d472ba"
+runtime_authorization_sha256 = "7f4068a3116ff1838ce7f0165ae18e72d2eea68933b87f056b26d8149c935731"
+protocol_freeze_result_sha256 = "a0bac04e78fe9ed5af851694057e51a0de62e8682a2fbfb734e63c98537c305b"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v14.toml"
+protocol_config_sha256 = "3043cbc23e7a78af764b6e74397512cb3f7bc78eace64485ab188963ba35f3a3"
+runner = "scripts/run_fgc_gr0_calibration_v14.py"
+runner_sha256 = "4c13eaf86cf31f55e28b7f60661db78ad22e1bb5b7460adf7aeff455efdc8e45"
+runner_id = "FGC-1-CAL11-RUN1-RUNNER"
+runtime_module = "src/recursive_horizons/fgc/evolution/proto14_runtime.py"
+runtime_module_sha256 = "f5abcfcaf1d55c15fbb1b8825d348230f86c15f54dc50a2328533eb54b6ecca4"
+tdg6_runtime_module = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+tdg6_runtime_module_sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+protocol_module = "src/recursive_horizons/fgc/evolution/protocol_v14.py"
+protocol_module_sha256 = "a4d766baf1cafa87f32f93594d4c771ac0ada3225007312546afc9325208d86c"
+
+[source_pinned_replay]
+runtime_source = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+runtime_source_sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+required_function = "_subdivision_boundaries"
+required_guard = "if not _same_binary64(right - left, step):"
+required_exception = "raise ValueError(\"TDG6 subdivision is not bitwise uniform\")"
+execution_scope = "source_pinned_static_pre_shadow_arithmetic_guard_only"
+actual_arithmetic_invocation = false
+campaign_execution = false
+campaign_resume = false
+output_namespace_creation = false
+
+[successor_boundary]
+TDG7_subdivision_uniformity_diagnosis_design_authorized = true
+TDG7_runtime_repair_implemented = false
+PROTO14_runtime_mutation_authorized = false
+fresh_replacement_protocol_frozen = false
+fresh_GR0_calibration_authorized = false
+
+[claims]
+PROTO14_campaign_terminal_result_bound = true
+PROTO14_terminal_checkpoint_recomputed = true
+PROTO14_terminal_checkpoint_owns_external_result = true
+PROTO14_terminal_event_identity_bound = true
+PROTO14_terminal_abort_rolled_back_to_event_23 = true
+PROTO14_post_restart_accepted_macro_steps_zero = true
+PROTO14_invalid_runtime_or_nonconverged_terminal_observed = true
+PROTO14_runtime_fault_cause_fully_derived = false
+PROTO14_runtime_conformance_repaired = false
+PROTO14_terminal_checkpoint_may_resume = false
+historical_abort_is_scientific_GR0_stop = false
+historical_abort_is_temporal_admission_failure = false
+historical_abort_is_constraint_or_spatial_stop = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

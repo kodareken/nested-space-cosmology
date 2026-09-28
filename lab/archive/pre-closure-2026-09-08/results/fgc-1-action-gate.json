@@ -1,0 +1,397 @@
+{
+  "artifact": "fgc1_covariant_action_and_linear_activation_certificate",
+  "artifact_id": "FGC-1-ACT1",
+  "classification": "action_and_background_algebra_not_principal_symbol_or_collapse_result",
+  "development_status": "pre_publication_gate",
+  "fixtures": [
+    {
+      "action_gate": {
+        "candidate_covariant_action_declared": true,
+        "metric_equation_variationally_defined": true,
+        "scalar_equations_derived": true,
+        "separate_matter_and_regulator_fields": true
+      },
+      "background": {
+        "gauss_bonnet": 274.65820312500006,
+        "linear_effective_mass_squared": 9.0,
+        "linear_tachyonic_at_reference_point": false,
+        "ricci_scalar": 0.0,
+        "scalar_equation_algebraic_residual": 0.0
+      },
+      "classification": "covariant_action_and_linear_background_certificate_not_collapse_solution",
+      "convention": {
+        "action_density": "(M_Pl^2+beta*phi^2)*R/2-(nabla_phi)^2/2-V(phi)-(nabla_chi)^2/2+f(phi)*G",
+        "gauss_bonnet": "G=R^2-4*R_ab*R^ab+R_abcd*R^abcd",
+        "linear_effective_mass_squared": "V_second-beta*R-f_second*G",
+        "metric_signature": "-+++",
+        "potential": "V(phi)=mu^2*phi^2/2+g4*phi^4/4",
+        "scalar_equation": "Box(phi)-V_prime+beta*phi*R+f_prime*G=0",
+        "units": "natural_units_c_hbar_1"
+      },
+      "couplings_at_reference_field": {
+        "F": 4.0,
+        "F_prime": 0.0,
+        "F_second": 0.0,
+        "V": 0.0,
+        "V_prime": 0.0,
+        "V_second": 9.0,
+        "f_gb": 0.0,
+        "f_gb_prime": 0.0,
+        "f_gb_second": 0.0
+      },
+      "dimensionless_scan": {
+        "G_times_L0_fourth": 70312.50000000001,
+        "R_times_L0_squared": 0.0,
+        "alpha_over_L0": 0.0,
+        "areal_radius_over_schwarzschild_radius": 0.14836727511808045,
+        "beta": 0.0,
+        "effective_planck_ratio": 1.0,
+        "eta_over_L0_squared": 0.0,
+        "g4": 0.5,
+        "mu_times_L0": 12.0,
+        "phi_over_planck_mass": 0.0
+      },
+      "low_gradient_reference_gate": {
+        "coupled_metric_chi_background_verified": false,
+        "effective_planck_mass_positive": true,
+        "effective_planck_mass_squared": 4.0,
+        "effective_planck_ratio": 1.0,
+        "exact_gr0_action": true,
+        "solution_level_gr_recovery_demonstrated": false,
+        "zero_regulator_reference": true,
+        "zero_regulator_solves_declared_scalar_equation": true
+      },
+      "model_id": "GR-0",
+      "nonclaims": {
+        "child_spacetime_constructed": false,
+        "constraint_propagation_proven": false,
+        "coupled_metric_chi_background_verified": false,
+        "dark_energy_derived": false,
+        "dark_matter_derived": false,
+        "finite_collapse_solution_constructed": false,
+        "full_covariant_metric_variation_expanded_and_cross_checked": false,
+        "global_flux_entropy_closure_derived": false,
+        "metric_null_defocusing_derived": false,
+        "nonlinear_ghost_freedom_proven": false,
+        "nonlinear_strong_hyperbolicity_proven": false,
+        "observational_confirmation_obtained": false,
+        "particle_spectrum_derived": false,
+        "shear_robustness_proven": false,
+        "singularity_resolution_proven": false,
+        "spherical_field_equations_derived": false,
+        "spherical_principal_symbol_derived": false,
+        "theory_of_everything_derived": false,
+        "variable_speed_of_light_derived": false
+      },
+      "open_gates": [
+        "expand and independently cross-check the full metric variation",
+        "derive the spherical equations and constraint propagation system",
+        "derive the unredefined nonlinear principal symbol and hyperbolicity domain",
+        "compute the physical affine Raychaudhuri sign and magnitude",
+        "construct convergent independent-matter collapse inside EFT control",
+        "close flux, entropy, shear, and any global continuation separately"
+      ],
+      "parameters": {
+        "linear_gb_coupling_alpha": 0.0,
+        "planck_mass": 2.0,
+        "pulse_width_L0": 4.0,
+        "quadratic_gb_coupling_eta": 0.0,
+        "quartic_coupling_g4": 0.5,
+        "reference_scalar_field": 0.0,
+        "ricci_coupling_beta": 0.0,
+        "scalar_mass_mu": 3.0
+      },
+      "schema_version": 1,
+      "weak_field_kinetic_reference": {
+        "canonical_chi_kinetic_coefficient": 1.0,
+        "canonical_phi_kinetic_coefficient": 1.0,
+        "full_coupled_quadratic_action_diagonalized": false,
+        "nonlinear_ghost_freedom_proven": false,
+        "positive_einstein_coefficient_at_reference": true
+      }
+    },
+    {
+      "action_gate": {
+        "candidate_covariant_action_declared": true,
+        "metric_equation_variationally_defined": true,
+        "scalar_equations_derived": true,
+        "separate_matter_and_regulator_fields": true
+      },
+      "background": {
+        "gauss_bonnet": 274.65820312500006,
+        "linear_effective_mass_squared": 9.0,
+        "linear_tachyonic_at_reference_point": false,
+        "ricci_scalar": 0.0,
+        "scalar_equation_algebraic_residual": -68.66455078125001
+      },
+      "classification": "covariant_action_and_linear_background_certificate_not_collapse_solution",
+      "convention": {
+        "action_density": "(M_Pl^2+beta*phi^2)*R/2-(nabla_phi)^2/2-V(phi)-(nabla_chi)^2/2+f(phi)*G",
+        "gauss_bonnet": "G=R^2-4*R_ab*R^ab+R_abcd*R^abcd",
+        "linear_effective_mass_squared": "V_second-beta*R-f_second*G",
+        "metric_signature": "-+++",
+        "potential": "V(phi)=mu^2*phi^2/2+g4*phi^4/4",
+        "scalar_equation": "Box(phi)-V_prime+beta*phi*R+f_prime*G=0",
+        "units": "natural_units_c_hbar_1"
+      },
+      "couplings_at_reference_field": {
+        "F": 4.0,
+        "F_prime": 0.0,
+        "F_second": 0.0,
+        "V": 0.0,
+        "V_prime": 0.0,
+        "V_second": 9.0,
+        "f_gb": -0.0,
+        "f_gb_prime": -0.25,
+        "f_gb_second": 0.0
+      },
+      "dimensionless_scan": {
+        "G_times_L0_fourth": 70312.50000000001,
+        "R_times_L0_squared": 0.0,
+        "alpha_over_L0": -0.0625,
+        "areal_radius_over_schwarzschild_radius": 0.14836727511808045,
+        "beta": 0.0,
+        "effective_planck_ratio": 1.0,
+        "eta_over_L0_squared": 0.0,
+        "g4": 0.5,
+        "mu_times_L0": 12.0,
+        "phi_over_planck_mass": 0.0
+      },
+      "low_gradient_reference_gate": {
+        "coupled_metric_chi_background_verified": false,
+        "effective_planck_mass_positive": true,
+        "effective_planck_mass_squared": 4.0,
+        "effective_planck_ratio": 1.0,
+        "exact_gr0_action": false,
+        "solution_level_gr_recovery_demonstrated": false,
+        "zero_regulator_reference": true,
+        "zero_regulator_solves_declared_scalar_equation": false
+      },
+      "model_id": "SGB-L",
+      "nonclaims": {
+        "child_spacetime_constructed": false,
+        "constraint_propagation_proven": false,
+        "coupled_metric_chi_background_verified": false,
+        "dark_energy_derived": false,
+        "dark_matter_derived": false,
+        "finite_collapse_solution_constructed": false,
+        "full_covariant_metric_variation_expanded_and_cross_checked": false,
+        "global_flux_entropy_closure_derived": false,
+        "metric_null_defocusing_derived": false,
+        "nonlinear_ghost_freedom_proven": false,
+        "nonlinear_strong_hyperbolicity_proven": false,
+        "observational_confirmation_obtained": false,
+        "particle_spectrum_derived": false,
+        "shear_robustness_proven": false,
+        "singularity_resolution_proven": false,
+        "spherical_field_equations_derived": false,
+        "spherical_principal_symbol_derived": false,
+        "theory_of_everything_derived": false,
+        "variable_speed_of_light_derived": false
+      },
+      "open_gates": [
+        "expand and independently cross-check the full metric variation",
+        "derive the spherical equations and constraint propagation system",
+        "derive the unredefined nonlinear principal symbol and hyperbolicity domain",
+        "compute the physical affine Raychaudhuri sign and magnitude",
+        "construct convergent independent-matter collapse inside EFT control",
+        "close flux, entropy, shear, and any global continuation separately"
+      ],
+      "parameters": {
+        "linear_gb_coupling_alpha": -0.25,
+        "planck_mass": 2.0,
+        "pulse_width_L0": 4.0,
+        "quadratic_gb_coupling_eta": 0.0,
+        "quartic_coupling_g4": 0.5,
+        "reference_scalar_field": 0.0,
+        "ricci_coupling_beta": 0.0,
+        "scalar_mass_mu": 3.0
+      },
+      "schema_version": 1,
+      "weak_field_kinetic_reference": {
+        "canonical_chi_kinetic_coefficient": 1.0,
+        "canonical_phi_kinetic_coefficient": 1.0,
+        "full_coupled_quadratic_action_diagonalized": false,
+        "nonlinear_ghost_freedom_proven": false,
+        "positive_einstein_coefficient_at_reference": true
+      }
+    },
+    {
+      "action_gate": {
+        "candidate_covariant_action_declared": true,
+        "metric_equation_variationally_defined": true,
+        "scalar_equations_derived": true,
+        "separate_matter_and_regulator_fields": true
+      },
+      "background": {
+        "gauss_bonnet": 274.65820312500006,
+        "linear_effective_mass_squared": -25.332275390625007,
+        "linear_tachyonic_at_reference_point": true,
+        "ricci_scalar": 0.0,
+        "scalar_equation_algebraic_residual": 0.0
+      },
+      "classification": "covariant_action_and_linear_background_certificate_not_collapse_solution",
+      "convention": {
+        "action_density": "(M_Pl^2+beta*phi^2)*R/2-(nabla_phi)^2/2-V(phi)-(nabla_chi)^2/2+f(phi)*G",
+        "gauss_bonnet": "G=R^2-4*R_ab*R^ab+R_abcd*R^abcd",
+        "linear_effective_mass_squared": "V_second-beta*R-f_second*G",
+        "metric_signature": "-+++",
+        "potential": "V(phi)=mu^2*phi^2/2+g4*phi^4/4",
+        "scalar_equation": "Box(phi)-V_prime+beta*phi*R+f_prime*G=0",
+        "units": "natural_units_c_hbar_1"
+      },
+      "couplings_at_reference_field": {
+        "F": 4.0,
+        "F_prime": -0.0,
+        "F_second": -0.5,
+        "V": 0.0,
+        "V_prime": 0.0,
+        "V_second": 9.0,
+        "f_gb": 0.0,
+        "f_gb_prime": 0.0,
+        "f_gb_second": 0.125
+      },
+      "dimensionless_scan": {
+        "G_times_L0_fourth": 70312.50000000001,
+        "R_times_L0_squared": 0.0,
+        "alpha_over_L0": 0.0,
+        "areal_radius_over_activation_radius": 0.8,
+        "areal_radius_over_schwarzschild_radius": 0.14836727511808045,
+        "beta": -0.25,
+        "effective_planck_ratio": 1.0,
+        "eta_over_L0_squared": 0.03125,
+        "g4": 0.5,
+        "mu_times_L0": 12.0,
+        "phi_over_planck_mass": 0.0
+      },
+      "low_gradient_reference_gate": {
+        "coupled_metric_chi_background_verified": false,
+        "effective_planck_mass_positive": true,
+        "effective_planck_mass_squared": 4.0,
+        "effective_planck_ratio": 1.0,
+        "exact_gr0_action": false,
+        "solution_level_gr_recovery_demonstrated": false,
+        "zero_regulator_reference": true,
+        "zero_regulator_solves_declared_scalar_equation": true
+      },
+      "model_id": "FGC-QR",
+      "nonclaims": {
+        "child_spacetime_constructed": false,
+        "constraint_propagation_proven": false,
+        "coupled_metric_chi_background_verified": false,
+        "dark_energy_derived": false,
+        "dark_matter_derived": false,
+        "finite_collapse_solution_constructed": false,
+        "full_covariant_metric_variation_expanded_and_cross_checked": false,
+        "global_flux_entropy_closure_derived": false,
+        "metric_null_defocusing_derived": false,
+        "nonlinear_ghost_freedom_proven": false,
+        "nonlinear_strong_hyperbolicity_proven": false,
+        "observational_confirmation_obtained": false,
+        "particle_spectrum_derived": false,
+        "shear_robustness_proven": false,
+        "singularity_resolution_proven": false,
+        "spherical_field_equations_derived": false,
+        "spherical_principal_symbol_derived": false,
+        "theory_of_everything_derived": false,
+        "variable_speed_of_light_derived": false
+      },
+      "open_gates": [
+        "expand and independently cross-check the full metric variation",
+        "derive the spherical equations and constraint propagation system",
+        "derive the unredefined nonlinear principal symbol and hyperbolicity domain",
+        "compute the physical affine Raychaudhuri sign and magnitude",
+        "construct convergent independent-matter collapse inside EFT control",
+        "close flux, entropy, shear, and any global continuation separately"
+      ],
+      "parameters": {
+        "linear_gb_coupling_alpha": 0.0,
+        "planck_mass": 2.0,
+        "pulse_width_L0": 4.0,
+        "quadratic_gb_coupling_eta": 0.5,
+        "quartic_coupling_g4": 0.5,
+        "reference_scalar_field": 0.0,
+        "ricci_coupling_beta": -0.25,
+        "scalar_mass_mu": 3.0
+      },
+      "schema_version": 1,
+      "schwarzschild_linear_activation_control": {
+        "activation_radius": 1.4836727511808045,
+        "gauss_bonnet_at_activation": 72.00000000000001,
+        "interpretation": "linear_instability_scale_not_transition_or_eft_cutoff",
+        "linear_effective_mass_squared_at_activation": -1.7763568394002505e-15,
+        "sample_areal_radius": 1.1869382009446436,
+        "sample_is_inside_activation_radius": true,
+        "sample_is_on_activation_radius": false,
+        "sample_is_outside_activation_radius": false,
+        "scaling": "r_star proportional to r_s^(1/3)*eta^(1/6)*mu^(-1/3)"
+      },
+      "weak_field_kinetic_reference": {
+        "canonical_chi_kinetic_coefficient": 1.0,
+        "canonical_phi_kinetic_coefficient": 1.0,
+        "full_coupled_quadratic_action_diagonalized": false,
+        "nonlinear_ghost_freedom_proven": false,
+        "positive_einstein_coefficient_at_reference": true
+      }
+    }
+  ],
+  "gate_status": {
+    "declared_action_and_scalar_algebra_certificate_passed": true,
+    "full_fgc1_health_gate_passed": false,
+    "publication_local_defocusing_gate_passed": false
+  },
+  "implementation_sources_sha256": {
+    "scripts/reproduce_fgc_action.py": "8ce5fc6b2b9fbda40816fddb7df64113f35dad9033cbb2ed5a7e1eafd79108e1",
+    "src/recursive_horizons/fgc/action.py": "138260a26b0e386044a68810978eba61742e5d9dcc3f372c7b89276f08fdfbb4"
+  },
+  "matter_regulator_assignment": {
+    "chi": "independent_canonical_collapsing_matter_control",
+    "phi": "curvature_sensitive_regulator_candidate",
+    "physical_metric": "g_ab_matter_coupled_metric"
+  },
+  "nonclaims": {
+    "child_spacetime_constructed": false,
+    "constraint_propagation_proven": false,
+    "coupled_metric_chi_background_verified": false,
+    "dark_energy_derived": false,
+    "dark_matter_derived": false,
+    "finite_collapse_solution_constructed": false,
+    "full_covariant_metric_variation_expanded_and_cross_checked": false,
+    "global_flux_entropy_closure_derived": false,
+    "metric_null_defocusing_derived": false,
+    "nonlinear_ghost_freedom_proven": false,
+    "nonlinear_strong_hyperbolicity_proven": false,
+    "observational_confirmation_obtained": false,
+    "particle_spectrum_derived": false,
+    "shear_robustness_proven": false,
+    "singularity_resolution_proven": false,
+    "spherical_field_equations_derived": false,
+    "spherical_principal_symbol_derived": false,
+    "theory_of_everything_derived": false,
+    "variable_speed_of_light_derived": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "schwarzschild_control": {
+    "activation_gauss_bonnet": 72.00000000000001,
+    "activation_mass_squared_relative_residual": 1.9737298215558337e-16,
+    "activation_radius": 1.4836727511808045,
+    "ricci_scalar": 0.0,
+    "sample_areal_radius": 1.1869382009446436,
+    "sample_gauss_bonnet": 274.65820312500006,
+    "sample_radius_over_activation": 0.8,
+    "schwarzschild_radius": 8.0
+  },
+  "scope": "Declares and checks the exact GR-0, SGB-L, and FGC-QR action fixtures, scalar equation, dimensions, and Schwarzschild linear activation scale. It does not derive the expanded metric source, spherical principal symbol, collapse, affine defocusing, singularity resolution, child spacetime, dark sector, variable c, particle spectrum, or a theory of everything.",
+  "source_config": "configs/fgc/fgc-1-action-gate.toml",
+  "source_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+  "verified_algebraic_checks": {
+    "all_required_nonclaims_false": true,
+    "fgc_qr_inside_sample_is_linearly_tachyonic": true,
+    "fgc_qr_zero_regulator_solves_declared_scalar_equation": true,
+    "frozen_branch_order": true,
+    "gr0_exact_action_at_zero_regulator": true,
+    "schwarzschild_activation_zero_within_relative_tolerance_1e_12": true,
+    "sgb_l_is_curvature_sourced_at_zero_regulator": true
+  }
+}

@@ -1,0 +1,125 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-RCV3-FRZ1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_generation9_prefix_projection_freeze"
+nonclaims = [
+  "FRZ1 freezes a byte-for-byte recovery projection input; it does not create, authenticate, or execute that projection.",
+  "The projected prefix deliberately preserves the source campaign identity internally; PROJECTION_ID and the fixed destination path provide its external fork identity.",
+  "Generation ten, sequence eleven, the terminal lock, four quarantined writer leases, and two coordination guards remain bound as source-terminal evidence but are excluded from the projected lineage.",
+  "FRZ1 binds one projection-only runtime and bootstrap script; no evolution or candidate entry point is authorized by those bytes.",
+  "FRZ1 records no common-event, calibration, trapping, activation, DEF1, retained-EFT, transition, mechanism, or physical result.",
+]
+
+[repair]
+commit = "cde091d018d4196f8ba212ce59d606b0fb8db992"
+
+[[repair.sources]]
+path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+sha256 = "d43f51ce92beda8843ea6d8bbef19f20af230d996611e3890cda43292f6e46fa"
+git_blob = "b9fae332e3e48d004f6edbf1ee6f61fad45c8bfc"
+
+[[repair.sources]]
+path = "src/recursive_horizons/fgc/evolution/tdg8_persisted_retry_replay.py"
+sha256 = "13b9de4dfee683afb405cbe17b007ffd8679b36bb946c43f0fdf469ee2dce9ee"
+git_blob = "7661293ac583f4434d8e1535735bb2a842ccc5db"
+
+[bootstrap]
+runtime_path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_fork_runtime.py"
+runtime_sha256 = "9c7e40dd76d126fa4ce708025483d0c15a65e9f36a80c5919335bd53c73dca36"
+script_path = "scripts/bootstrap_fgc_tdg8_rcv3.py"
+script_sha256 = "0e3bbfc4f23508c8a5a03764c54c56d60a3e6e9c7f2eeec53bc9e1a9f78b614a"
+production_install_function = "tdg8_rcv3_fork_runtime.install_recovery_fork"
+production_spec = "tdg8_rcv3_fork_runtime.PRODUCTION_SPEC"
+candidate_or_evolution_entrypoints = false
+
+[source]
+store_path = "runs/fgc-2-sf1/proto19/calibration"
+expected_directories = ["checkpoints", "journal", "locks", "payloads", "receipts", "states"]
+full_manifest_leaf_count = 59
+full_manifest_byte_count = 6342040
+full_manifest_sha256 = "b076b5233e5e2ee9898444f6cade495e2e0ed8d24697348f640485104d2cf145"
+
+[source.anchor]
+campaign_id = "FGC-2-SF1-PROTO18-GR0-A3-TDG8-SUCCESSOR-1"
+authorization_commit = "6df67967e6e0bc63eca4dc6951a60d3787368f26"
+plan_sha256 = "e649e477b98411a3051f9946f2a9248b875d2b598818b8983ce06caa969d2126"
+protocol = "FGC-2-SF1-PROTO18"
+branch = "GR-0"
+amplitude = "3"
+event = 23
+target_rational = "3/2"
+target_binary64_hex = "0x1.8000000000000p+0"
+generation9_checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+generation9_raw_sha256 = "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846"
+sequence10_journal_sha256 = "5b533eb7009a9c7c3f353d26813f9cbbde8574afae77492929b435b4c701c5ff"
+sequence10_raw_sha256 = "b50dc39ebd8bbdd3729d40d9e9ae4b223ff2ef19389d4ca74f9a316bac72202f"
+generation10_terminal_sha256 = "291eb466d5cb566b1f03822bf109c0c9e0f6ff930e9be496d26309b53b5005ea"
+sequence11_terminal_sha256 = "394c803df15f0b73827425dec4c914a1dd998aad8de23d8a8ecf3d637e1cf340"
+terminal_lock_sha256 = "3bfb54c0e23d0940d52418402cdd24e8444a843398f3bbfb194d32eac05e8606"
+member_key = "RK4-2049"
+member_descriptor_sha256 = "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4"
+member_physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+member_accepted_time_hex = "0x1.78554de5a30e0p+0"
+member_cursor_sha256 = "8f17e3efd76df310c97229672363609881c32cd063cd2386d6086387181a95c4"
+member_mode = "RETRY_PENDING"
+pending_owner = "temporal"
+retry_depth = 2
+pending_cap_binary64_hex = "0x1.aaa9612df8000p-11"
+generation9_disposition = "nonterminal"
+generation10_disposition = "invalid_terminal"
+
+[projection]
+projection_id = "FGC-1-TDG8-RCV3-PROJECTION-1"
+destination_wrapper_path = "runs/fgc-2-sf1/tdg8-rcv3"
+destination_store_path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+prefix_manifest_leaf_count = 50
+prefix_manifest_byte_count = 6201938
+prefix_manifest_sha256 = "d84e85c3dd29ac1554111ed00b37289d2b89273e7a7c2c47e3d21f5b9fda9e0b"
+
+[projection.exclusion]
+excluded_paths = [
+  "checkpoints/00000000000000000010-291eb466d5cb566b1f03822bf109c0c9e0f6ff930e9be496d26309b53b5005ea.json",
+  "journal/00000000000000000011-394c803df15f0b73827425dec4c914a1dd998aad8de23d8a8ecf3d637e1cf340.journal",
+  "locks/.active-write.lock.hlt16-quarantine-1d1ebcfbcb57ecf91adb191815acd57c1137609cd50f35fa98e7d18d2c91086c",
+  "locks/.active-write.lock.hlt16-quarantine-2f76eeac85746761d38617804da02f0d520676a86a243a5e29b2a9f0fdfa71e9",
+  "locks/.active-write.lock.hlt16-quarantine-6c409d46d6c049cced6a26d9ad733911070dad9d53e966674a7fdce4ba372946",
+  "locks/.active-write.lock.hlt16-quarantine-f474863d36b1c0312ff677560f1385c2913add7353bde694f08e69161bcef5ec",
+  "locks/bootstrap.guard",
+  "locks/terminal.lock",
+  "locks/writer.guard",
+]
+excluded_leaf_count = 9
+projected_lock_leaf_count = 0
+destination_locks_start_empty = true
+terminal_lineage_excluded = true
+retired_or_coordination_locks_excluded = true
+
+[scope]
+source_store_read_only = true
+source_terminal_tree_bound = true
+projection_prefix_selected = true
+destination_absence_one_time = true
+bootstrap_projection_authorized = true
+bootstrap_completed = false
+destination_store_created = false
+bounded_execution_authorized = false
+source_campaign_resume_authorized = false
+threshold_or_retry_rule_change = false
+candidate_branches_forbidden = true
+
+[claims]
+source_terminal_bound = true
+last_valid_generation9_bound = true
+prefix_manifest_frozen = true
+destination_absence_observed = true
+bootstrap_authorized = true
+bootstrap_completed = false
+projection_authenticated = false
+bounded_execution_authorized = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

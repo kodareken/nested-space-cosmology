@@ -1,0 +1,316 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG9-AR1-AUTH1"
+classification = "premise_only_read_only_three_width_exact_arithmetic_authority"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg9-ar1-auth1.md"
+output_namespace = "runs/fgc-2-sf1/tdg9-ar1/rcv3-retries-3-5"
+channel_order = [
+  "u:alpha",
+  "u:v",
+  "u:lambda",
+  "u:R",
+  "u:phi",
+  "u:chi",
+  "p:alpha",
+  "p:v",
+  "p:lambda",
+  "p:R",
+  "p:phi",
+  "p:chi",
+  "q:alpha",
+  "q:v",
+  "q:lambda",
+  "q:R",
+  "q:phi",
+  "q:chi",
+]
+
+[predecessor]
+pref2_commit = "8c3a3bbe3476284ed46b50bc363eec7cf40405b3"
+pref2_config_path = "configs/fgc/fgc-1-tdg8-rcv3-pref2.toml"
+pref2_config_sha256 = "9957ef6901dc2e332acd07a5812d975e08651d3ea7d80a1b19e9469c89c79f72"
+pref2_result_path = "results/fgc-1-tdg8-rcv3-pref2.json"
+pref2_result_sha256 = "7e676cb40fd83deeff0912603641fd93ec139f274287b1d092aa8eccd2c1231f"
+pref2_binder_path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_pref2_binder.py"
+pref2_binder_sha256 = "4fedf666dfe5dfc34e17a2a55495b0109fde36d6a90747f4dc5a48921262ea4a"
+store_path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+store_manifest_sha256 = "46b57bc38f3bbfbec70c4b6b11a089cb799dc73135af0d9dac0e3dc289b952d4"
+store_leaf_count = 115
+store_byte_count = 25734805
+accepted_physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+
+[exact_arithmetic]
+evaluator_commit = "3e37e3baa5a7cf862c4c0c004c7f43dcfa1313b2"
+primary_path = "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic.py"
+primary_sha256 = "2c9a0c1a9c6560ed787a605ef508ede7471953ceb222527889c5622ea6d8e82d"
+primary_id = "tdg9_exact_bernstein_de_casteljau_v1"
+independent_path = "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic_independent.py"
+independent_sha256 = "851c1c69daa7366c90798b7fe7ba11e2e5150c06450ae0fc209a926cc7e62850"
+independent_id = "tdg9_exact_derivative_isolation_interval_horner_v1"
+test_path = "tests/test_fgc_tdg9_exact_temporal_arithmetic.py"
+test_sha256 = "7d44f1bc4c5929520bd0ef13ca23294aca39e7c9f34cd72dc620c8c78f6445ec"
+order_threshold = "3/2"
+squared_multiplier = 8
+max_depth = 64
+max_nodes_per_channel_per_evaluator = 4194304
+max_evaluator_calls = 108
+automatic_resource_escalation = false
+
+[environment]
+python_implementation = "CPython"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+system = "Darwin"
+sys_platform = "darwin"
+machine = "arm64"
+byteorder = "little"
+
+[selection]
+protocol = "FGC-2-SF1-PROTO18"
+campaign_id = "FGC-2-SF1-PROTO18-GR0-A3-TDG8-SUCCESSOR-1"
+campaign_plan_sha256 = "e649e477b98411a3051f9946f2a9248b875d2b598818b8983ce06caa969d2126"
+campaign_authorization_commit = "6df67967e6e0bc63eca4dc6951a60d3787368f26"
+branch = "GR-0"
+amplitude = "3"
+method = "RK4"
+member_key = "RK4-2049"
+point_count = 2049
+owned_row_count = 2044
+event = 23
+target_rational = "3/2"
+target_binary64_hex = "0x1.8000000000000p+0"
+
+[committed_image]
+base_commit = "3e37e3baa5a7cf862c4c0c004c7f43dcfa1313b2"
+authority_delta_paths = [
+  "Makefile",
+  "README.md",
+  "configs/fgc/fgc-1-tdg9-ar1-auth1.toml",
+  "docs/claim-ledger.md",
+  "docs/fgc-runtime-matrix.md",
+  "docs/fgc-tdg9-ar1-auth1.md",
+  "docs/research-roadmap.md",
+  "paper/fgc-local-defocusing/README.md",
+  "results/README.md",
+  "results/fgc-1-tdg9-ar1-auth1.json",
+  "scripts/check_repo.py",
+  "scripts/reproduce_fgc_tdg9_ar1_auth1.py",
+  "scripts/run_fgc_tdg9_ar1.py",
+  "src/recursive_horizons/fgc/evolution/tdg9_ar1_authority.py",
+  "tests/test_check_repo_tdg9_ar1_auth1.py",
+  "tests/test_fgc_tdg9_ar1_authority.py",
+  "tests/test_fgc_tdg9_ar1_runner.py",
+]
+allowed_untracked_paths = [".qdrant-initialized"]
+prelaunch_requires_base_commit_at_HEAD = true
+execution_requires_authority_commit_at_clean_tracked_HEAD = true
+authority_commit_must_be_single_direct_successor_of_base = true
+predecessor_commits_must_be_ancestors = true
+replace_refs_forbidden = true
+exact_delta_locks_unlisted_transitive_modules = true
+
+[[replays]]
+retry = 3
+prior_retry_count = 2
+predecessor_generation = 9
+checkpoint_sha256 = "eb6fddc480c94aa7ed15c80399fc2b26637693efef02399f267075fc6c258e56"
+checkpoint_raw_sha256 = "07572d4450829ff2e2bad65e217a917b0d31ba677a3b8fc20a3be43e849ba846"
+journal_sequence = 11
+journal_sha256 = "341cd8cd328434d85774bcb452889ac1886c520a72e945a92337b72cf564161a"
+journal_raw_sha256 = "e4f9ca42f2d014d4bdbd875a0f24a9bbb9c04159fb0d9e0e7de8d0d72db61fdf"
+attempted_width_hex = "0x1.aaa9612df8000p-11"
+
+[[replays]]
+retry = 4
+prior_retry_count = 3
+predecessor_generation = 10
+checkpoint_sha256 = "6dc263e7719c9a422e9fed1b81ac573f3127607a2285f3c55b095d9019f60187"
+checkpoint_raw_sha256 = "9abb59999809d22354d6b5f810bc592cd2673e5e4d354d0ec58e9ad53522dc4b"
+journal_sequence = 13
+journal_sha256 = "1bd21553f3b6e0af613997da094a46d4dcd966a0e4346692bae62b05046862ca"
+journal_raw_sha256 = "26542403a17b05664d5a447b88860186d5f554b1f4d555624493ed40b941694c"
+attempted_width_hex = "0x1.aaa9612df8000p-12"
+
+[[replays]]
+retry = 5
+prior_retry_count = 4
+predecessor_generation = 11
+checkpoint_sha256 = "11ec8a80d300de72075661a97b616aecead8ec78208bb541b93e62ca4c8124c8"
+checkpoint_raw_sha256 = "786bdcb835e043c65ddd33fad3a2af0e3d33e768dc26a9f9f00d2757b0da3ea5"
+journal_sequence = 15
+journal_sha256 = "475014d918952adef032d71b81073773364a37fa795491e739aae609f77e8537"
+journal_raw_sha256 = "1997342415f74f330ce6b45ca6fd550ad0e5e674b85148fea5047ff82ac3f152"
+attempted_width_hex = "0x1.aaa9612df0000p-13"
+
+[scope]
+live_store_read_only = true
+compact_verifier_store_blind = true
+authenticated_deterministic_replay_only = true
+exact_three_retries_only = true
+historical_proposal_arrays_persisted = false
+PDE_state_commit_authorized = false
+campaign_store_mutation_authorized = false
+automatic_resource_escalation_authorized = false
+fourth_retry_width_authorized = false
+continuation_authorized = false
+candidate_branches_authorized = false
+
+[claims]
+PREF2_terminal_bound = true
+exact_evaluator_implementation_bound = true
+read_only_AR1_execution_authorized = true
+raw_AR1_result_earned = false
+AR1_binder_completed = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+
+[[implementation_inventory]]
+role = "authority"
+path = "src/recursive_horizons/fgc/evolution/tdg9_ar1_authority.py"
+sha256 = "154c7dbe675bbf788cd199c6224f74e439b469cad0f6bf6b0f015a785001647d"
+
+[[implementation_inventory]]
+role = "runner"
+path = "scripts/run_fgc_tdg9_ar1.py"
+sha256 = "208e974332f109c258f7268defb5e336c2e210570648285d3e301c09ccec53d0"
+
+[[implementation_inventory]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_tdg9_ar1_auth1.py"
+sha256 = "bf4dfe0738f2f85c5d9d43b0cebed479419ade267e59fa3d9ed1661b640b558c"
+
+[[implementation_inventory]]
+role = "owner_document"
+path = "docs/fgc-tdg9-ar1-auth1.md"
+sha256 = "16e8b9a81d130f35d7c03f9f708338d489168de523cecfb72dab722a797a22bb"
+
+[[implementation_inventory]]
+role = "exact_evaluator"
+path = "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic.py"
+sha256 = "2c9a0c1a9c6560ed787a605ef508ede7471953ceb222527889c5622ea6d8e82d"
+
+[[implementation_inventory]]
+role = "exact_evaluator"
+path = "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic_independent.py"
+sha256 = "851c1c69daa7366c90798b7fe7ba11e2e5150c06450ae0fc209a926cc7e62850"
+
+[[implementation_inventory]]
+role = "predecessor_binder"
+path = "src/recursive_horizons/fgc/evolution/tdg8_rcv3_pref2_binder.py"
+sha256 = "4fedf666dfe5dfc34e17a2a55495b0109fde36d6a90747f4dc5a48921262ea4a"
+
+[[implementation_inventory]]
+role = "store"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+sha256 = "4625441983d0e014bf7d8b1bfdee512e2781ccf88213e2ccae3474317b22ee7e"
+
+[[implementation_inventory]]
+role = "store"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py"
+sha256 = "2b6884aaedecfeeaf82a633f92c3418ef0b5889fc620b90faa84bdc714694d48"
+
+[[implementation_inventory]]
+role = "store"
+path = "src/recursive_horizons/fgc/evolution/hlt16_member_codec.py"
+sha256 = "1a9b79c28c41e6f4c47386dfa6b8e00c73409948fb94d766c1b5d4488060394d"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+sha256 = "ff60118a431aa99ea3b69bc8dfc3a38f1cde2d7bd2b7a9e9f3e7269a4d498d72"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+sha256 = "3ff843c599cf731d156091c4d5c9158dce910a1a43cd7b0912fa91577c45ff75"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto15_runtime.py"
+sha256 = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py"
+sha256 = "735545419a39e3fa5417c020d688cfa4b0ce4770446ae1083d0f4b41e039a5ad"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py"
+sha256 = "75fc11943f459ca7549f75a812fe961e55ae04bbdb13450c1fdd509b5b53a080"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py"
+sha256 = "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py"
+sha256 = "2bc86880d46a3b4c6cd743559d0bc4b51b09058382341dfffe6358b4565e44a9"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py"
+sha256 = "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_persisted_retry_replay.py"
+sha256 = "13b9de4dfee683afb405cbe17b007ffd8679b36bb946c43f0fdf469ee2dce9ee"
+
+[[implementation_inventory]]
+role = "publication"
+path = "src/recursive_horizons/fgc/evolution/proto17_hlt15_runtime.py"
+sha256 = "950fcbcd57ac3aa71d46330ae6ee1a87349b73c7b879aa48170d863e3c4d3139"
+
+[[implementation_inventory]]
+role = "numerical"
+path = "src/recursive_horizons/fgc/evolution/numerical_engine.py"
+sha256 = "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+
+[[implementation_inventory]]
+role = "numerical"
+path = "src/recursive_horizons/fgc/evolution/proto5_runtime.py"
+sha256 = "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545"
+
+[[implementation_inventory]]
+role = "numerical"
+path = "src/recursive_horizons/fgc/evolution/proto6_runtime.py"
+sha256 = "f0d63c3b1bd17891ac1cb21969ec6b3454cac4adc6d4c116979626b0d82d77f5"
+
+[[implementation_inventory]]
+role = "numerical"
+path = "src/recursive_horizons/fgc/evolution/proto7_runtime.py"
+sha256 = "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734"
+
+[[implementation_inventory]]
+role = "source"
+path = "src/recursive_horizons/fgc/evolution/proto11_runtime.py"
+sha256 = "4aa3b1360543c4da1b8297dd43cea85fe0e2af6bf0ce7a30f54d0d7eb7e12950"
+
+[[implementation_inventory]]
+role = "source"
+path = "src/recursive_horizons/fgc/evolution/proto12_runtime.py"
+sha256 = "3a16b186e6ac25ccbaaad68e1600790b21208b0295ba4776a7d58b5baa4be5ae"
+
+[[implementation_inventory]]
+role = "source"
+path = "src/recursive_horizons/fgc/evolution/src4_vectorized_reference_source.py"
+sha256 = "78ea8a907f9a28658582c4e89380496e80c36f7648014ec89f29dac42d7ce415"
+
+[[implementation_inventory]]
+role = "source"
+path = "src/recursive_horizons/fgc/evolution/vectorized_source.py"
+sha256 = "bfc855b2cc2fd87e2523b4572f68fe3e3c1fd0a0c250f7fef0346d0dc5525e99"

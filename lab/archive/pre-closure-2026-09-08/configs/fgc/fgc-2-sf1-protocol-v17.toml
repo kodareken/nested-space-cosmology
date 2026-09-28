@@ -1,0 +1,128 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO17"
+protocol_version = 17
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO16"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v16.toml"
+predecessor_protocol_sha256 = "3b0ab8663ed0568f03841167a2db096419b0978a71b534eefa9f9bb9a6787c75"
+predecessor_freeze_artifact_id = "FGC-1-PRO16-FRZ1"
+predecessor_freeze_result = "results/fgc-1-pro16-frz1.json"
+predecessor_freeze_result_sha256 = "f8e14deda1638bda6e98831ae1ea80c8d1fdffb23957e183acd8b57a154ce43f"
+predecessor_completeness_artifact_id = "FGC-1-PRO16-PREF24"
+predecessor_completeness_result = "results/fgc-1-pro16-pref24.json"
+predecessor_completeness_result_sha256 = "168f995ee03851d62154661a8575d4af0aa068af128be5874f8e333e4341995f"
+revision_classification = "premise_only_exact_common_event_successor_and_externally_authenticated_generation_zero_freeze"
+all_physical_numerical_TDG6_TDG7_and_non_event_PROTO16_rules_inherited_unchanged = true
+historical_raw_campaign_bundle_must_not_be_read_by_this_freeze = true
+SGBL_evolution_outcomes_inspected_before_revision = false
+FGCQR_evolution_outcomes_inspected_before_revision = false
+mechanism_question_answered_before_revision = false
+
+[restart_inputs]
+restart_coordinate_time = "23/16"
+genesis_accepted_boundary_time = "23/16"
+genesis_active_event_target_time = "3/2"
+branch = "GR-0"
+amplitude = "3"
+member_keys_in_canonical_order = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193", "SSPRK3-16385"]
+six_restart_descriptors_inherited_by_exact_PROTO15_hash = true
+no_state_reinitialization_reprojection_interpolation_or_refitting_is_permitted = true
+
+[common_event_successor]
+journal_record_kind = "COMMON_EVENT_COMMIT"
+predecessor_required_mode = "FRESH_READY"
+predecessor_requires_zero_current_TDG6_retry = true
+predecessor_requires_all_six_members_at_active_target = true
+receipt_is_predecessor_only = true
+receipt_self_successor_and_checkpoint_hashes_forbidden = true
+outer_record_sha256_must_exist_before_successor_construction = true
+successor_cursor_preserves_state_ledger_time_method_grid_and_accepted_serials = true
+successor_cursor_accepted_state_sha256_is_persisted_state_object_content_address = true
+successor_event_index_is_prior_plus_one = true
+successor_target_is_exact_prior_target_plus_one_sixteenth = true
+successor_cursor_generation_and_attempt_serial_are_prior_plus_one = true
+successor_attempt_id_uses_completed_common_event_index = true
+successor_cursor_parent_is_prior_cursor_hash = true
+successor_cursor_journal_tip_is_outer_record_hash = true
+successor_high_water_maps_equal_new_cursor_values = true
+successor_checkpoint_increments_generation_and_binds_new_cursor_set = true
+successor_checkpoint_preserves_complete_state_and_ledger_sets = true
+only_one_lone_durable_common_event_suffix_is_reconstructible = true
+all_other_uncheckpointed_suffixes_are_invalid = true
+receipt_sequence_is_hash_contiguous_supplied_prior_journal_length_plus_one = true
+generation_zero_first_common_event_sequence_is_one_only_when_journal_is_empty = true
+prior_journal_record_payload_semantics_and_replay_are_deferred_to_HLT14_runtime = true
+
+[trusted_genesis]
+authority_artifact_id = "FGC-1-HLT14-MON14"
+authority_must_be_committed_before_namespace_creation = true
+trusted_Git_history_is_external_root_assumption = true
+launch_authority_tuple_required_fields = ["authorization_commit", "authorization_result_path", "authorization_result_sha256", "genesis_spec_sha256"]
+authorization_commit_must_be_full_lowercase_40_hex_commit = true
+authorization_result_must_be_one_tracked_regular_blob_at_authorization_commit = true
+authorization_result_must_be_loaded_from_authorization_commit_not_worktree = true
+authorization_result_must_not_self_reference_its_own_commit_result_or_spec_hash = true
+loaded_runtime_modules_must_be_repository_local_and_byte_hash_pinned = true
+genesis_spec_must_not_embed_genesis_spec_sha256 = true
+genesis_checkpoint_must_not_embed_genesis_spec_sha256 = true
+genesis_is_purely_derived_before_namespace_materialization = true
+namespace_manifest_is_audit_receipt_not_authority = true
+foreign_self_consistent_store_is_not_authenticated_without_external_authority = true
+
+genesis_spec_required_fields = ["genesis_algorithm_id", "canonical_json_encoding", "state_object_schema_id", "tdg6_ledger_schema_id", "cursor_schema_id", "checkpoint_schema_id", "protocol_artifact_id", "protocol_config_sha256", "protocol_freeze_result_sha256", "hlt13_result_sha256", "run_plan_sha256", "runtime_module_sha256", "adapter_module_sha256", "runner_sha256", "numerical_environment", "campaign_id", "namespace", "journal_root_parent_sha256", "common_event_index", "restart_coordinate_time", "active_event_target_time", "member_keys_in_canonical_order", "physical_input_manifest", "physical_input_manifest_sha256", "member_descriptors", "member_descriptor_set_sha256", "genesis_checkpoint_sha256", "cursor_set_sha256", "ledger_set_sha256", "accepted_state_set_sha256"]
+member_descriptor_required_fields = ["member_key", "method", "point_count", "source_checkpoint", "source_bundle_key", "accepted_boundary_time", "step_index", "transaction_serial", "state_object", "state_object_canonical_sha256", "initial_TDG6_ledger", "initial_TDG6_ledger_sha256"]
+state_object_required_fields = ["schema_id", "member_key", "method", "point_count", "coordinate_time", "accepted_boundary_time", "step_index", "transaction_serial", "input_hash", "source_retry_count", "CFL_retry_count", "runtime_monitor_state", "causal_state", "tracer_state", "event_history_state", "physical_arrays", "physical_state_sha256", "restart_payload_sha256"]
+physical_array_required_fields = ["logical_name", "source_bundle_key", "npz_storage_key", "dtype", "layout", "shape", "little_endian_c_bytes_sha256"]
+tdg6_ledger_required_fields = ["last_accepted_time_hex", "accepted_macro_step_count", "cumulative_temporal_retry_count", "current_macro_step_temporal_retry_count", "last_accepted_macro_step_temporal_retry_count", "accumulated_debit_vector_hex", "serialized_temporal_rejections"]
+physical_input_manifest_required_fields = ["format", "relative_input_root", "bundle_members"]
+physical_input_manifest_sha256_is_sha256_of_canonical_embedded_manifest_without_its_sibling_field = true
+physical_bundle_member_required_fields = ["source_bundle_key", "source_checkpoint", "relative_input_path", "raw_file_sha256", "required_npz_member_keys"]
+member_descriptors_are_complete_canonical_six_member_collection = true
+member_descriptor_set_sha256_is_checksum_not_substitute = true
+all_state_objects_and_ledgers_are_visible_construction_inputs = true
+physical_array_raw_byte_hashes_and_semantic_descriptors_are_required_as_declared_external_inputs = true
+physical_array_raw_bytes_are_not_opened_or_recomputed_by_this_freeze = true
+physical_state_sha256_is_u_p_q_array_content_hash_not_cursor_content_address = true
+physical_state_and_restart_payload_hashes_are_not_recomputed_without_the_raw_bundle = true
+state_object_canonical_sha256_is_cursor_and_checkpoint_accepted_state_content_address = true
+root_cursor_origin_is_fresh_ready_zero_retry_and_zero_high_water = true
+generation_zero_checkpoint_is_byte_derivable_without_namespace_generated_value = true
+generation_zero_store_paths_are_derived_not_supplied = true
+
+[namespace]
+calibration_output_root = "runs/fgc-2-sf1/proto17/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto17/holdout"
+both_roots_must_be_absent = true
+freeze_must_create_neither_root = true
+namespace_absence_is_one_time_temporal_evidence = true
+
+[claims]
+PROTO17_frozen = true
+PROTO17_exact_common_event_successor_construction_frozen = true
+PROTO17_external_trusted_genesis_construction_frozen = true
+PROTO16_under_specification_preserved = true
+PROTO17_successor_runtime_implemented = false
+HLT14_implementation_and_synthetic_qualification_authorized = false
+PROTO17_pretrajectory_runtime_authorized = false
+PROTO17_fresh_GR0_dynamic_calibration_authorized = false
+PROTO17_output_namespace_created = false
+PROTO17_trajectory_read = false
+PROTO17_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

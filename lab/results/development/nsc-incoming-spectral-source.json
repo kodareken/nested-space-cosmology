@@ -1,0 +1,5505 @@
+{
+  "acceptance_tolerance": 3e-11,
+  "accountable_author": "Douglas Ek",
+  "arithmetic_indicator_not_error_bound": [
+    1.695961119423573e-10,
+    1.4648276568603104e-10,
+    6.915236740816588e-18,
+    1.067059858729491e-11
+  ],
+  "base_mode_sum": [
+    0.0048535557775592495,
+    0.0016312178847292594,
+    0.001946168176771301,
+    0.0008210775343911726
+  ],
+  "comparison": {
+    "exact": "hashes, masks, labels, inventory and scope",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "domain": {
+    "canonical_frame": "same incoming KS normal and half-density",
+    "changed_normal_jets_evaluated": false,
+    "compact_induced_terms": "excluded, remain on local-action side",
+    "error_indicators": "arithmetic and measured quadrature differences, not total or rigorous source bounds",
+    "geometry": {
+      "axial_squared": 0.7123889803846897,
+      "radius_squared": 2.0,
+      "rho": 1.0
+    },
+    "old_generators_rerun": false,
+    "refined_panel_selection": "explicit new observable; frozen packet result not changed",
+    "selected_history": false,
+    "state": "unchanged global horizon/incoming source; seed covariance control only"
+  },
+  "failures": {},
+  "finite_mode_sum": [
+    0.0048535559727941316,
+    0.001631218069794827,
+    0.0019461681767713004,
+    0.0008210775382597894
+  ],
+  "finite_quantum_source_approximant": [
+    0.012259499816586885,
+    -0.003386530870633608,
+    0.003190352351246363,
+    0.001885978725231037
+  ],
+  "gate": {
+    "PDF_bumped": false,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "extended_stationarity": "OPEN",
+    "finite_panel_source": "PASS",
+    "full_renormalized_source": "OPEN",
+    "homogeneous_nonexistence": "preserved in original scope; not rerun",
+    "incoming_constraints": "OPEN",
+    "infinite_energy_tail": "OPEN",
+    "metric_timestep": false,
+    "physical_EndpointBranchJets": "OPEN",
+    "retained_angular_compact_remainder": "OPEN",
+    "selected_nulls": null,
+    "subgap_source_refinement": "OPEN",
+    "updated_constraints": null
+  },
+  "gate_residuals": {
+    "CAR_lower": 3.3425918246463456e-16,
+    "CAR_upper": 8.01136934569513e-13,
+    "Hermiticity": 2.220446049250313e-16,
+    "closed_source_projection": 0.0,
+    "kernel_imaginary": 1.2605127233425825e-15,
+    "outer_incoming_partition_defect": 4.8722137435674995e-12,
+    "partner_normdefect": 3.842148821320279e-12,
+    "reference_Hermiticity": 0.0,
+    "reference_trace": 0.0,
+    "source_coisometry": 4.869882275215787e-12,
+    "source_complement_CAR_lower": 6.688049503020797e-17,
+    "source_complement_projector": 4.8723247658462226e-12,
+    "source_horizon_incoming_correlation": 0.0,
+    "source_horizon_pair_trace": 0.0,
+    "source_sewing_orthogonality": 7.36464792735086e-14,
+    "source_support": 0.0,
+    "spectral_interval_measure": 0.0
+  },
+  "groups": {
+    "1": {
+      "angular_magnitude": 2.23606797749979,
+      "arithmetic_indicator_not_error_bound": [
+        1.2292853111343307e-12,
+        1.2145780350986435e-12,
+        4.081153437398535e-18,
+        7.353638017843497e-15
+      ],
+      "base_control_moments": [
+        0.002863939099609019,
+        0.0007920043540665555,
+        0.0011484462864252312,
+        0.0010359673727712332
+      ],
+      "direct_middle_minus_stable_middle": [
+        9.615243107513315e-13,
+        9.626881553191215e-13,
+        -3.935029518754158e-131,
+        -5.819222838944883e-16
+      ],
+      "factor": 0.0900332487644417,
+      "finite_moments": [
+        0.002863939099609019,
+        0.0007920043540665555,
+        0.0011484462864252312,
+        0.0010359673727712332
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -1.1048729000570012e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/1_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/1_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/1_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/1_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "10": {
+      "angular_magnitude": 11.832159566199232,
+      "arithmetic_indicator_not_error_bound": [
+        6.525980460498391e-12,
+        5.163476972743331e-12,
+        5.016388441663654e-22,
+        6.812517438775291e-13
+      ],
+      "base_control_moments": [
+        2.5240822865499265e-08,
+        1.0463447213450204e-06,
+        1.411987819788881e-07,
+        -5.105519492397595e-07
+      ],
+      "direct_middle_minus_stable_middle": [
+        1.6869155533890956e-11,
+        1.694850128877071e-11,
+        -1.6969608357188685e-130,
+        -3.967287743975214e-14
+      ],
+      "factor": 0.3601329950577668,
+      "finite_moments": [
+        2.5240822865499265e-08,
+        1.0463447213450204e-06,
+        1.411987819788881e-07,
+        -5.105519492397595e-07
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.7691284233953274e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/10_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/10_-1",
+              "selected_rows": 560
+            }
+          ],
+          "rows": 1088,
+          "upper_energy_endpoint": 320.0
+        },
+        "1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/10_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/10_1",
+              "selected_rows": 560
+            }
+          ],
+          "rows": 1088,
+          "upper_energy_endpoint": 320.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "11": {
+      "angular_magnitude": 12.84523257866513,
+      "arithmetic_indicator_not_error_bound": [
+        7.361840078245022e-12,
+        5.653866862494303e-12,
+        1.6775534393725588e-22,
+        8.539866078753598e-13
+      ],
+      "base_control_moments": [
+        -1.7831702118208132e-07,
+        7.909136670163949e-07,
+        4.721893152782719e-08,
+        -4.846153440992381e-07
+      ],
+      "direct_middle_minus_stable_middle": [
+        1.8466870176669117e-11,
+        1.855888166663866e-11,
+        -1.9607263160592393e-130,
+        -4.6005744984705445e-14
+      ],
+      "factor": 0.3901440779792474,
+      "finite_moments": [
+        -1.7831702118208132e-07,
+        7.909136670163949e-07,
+        4.721893152782719e-08,
+        -4.846153440992381e-07
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -4.026100021384559e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/11_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/11_-1",
+              "selected_rows": 560
+            }
+          ],
+          "rows": 1088,
+          "upper_energy_endpoint": 320.0
+        },
+        "1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/11_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/11_1",
+              "selected_rows": 560
+            }
+          ],
+          "rows": 1088,
+          "upper_energy_endpoint": 320.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "12": {
+      "angular_magnitude": 13.856406460551018,
+      "arithmetic_indicator_not_error_bound": [
+        8.26228967984107e-12,
+        6.158541946692955e-12,
+        5.557942075629879e-23,
+        1.0518738665740588e-12
+      ],
+      "base_control_moments": [
+        -2.1062893301466746e-07,
+        6.188621533697813e-07,
+        1.5644216162970953e-08,
+        -4.147455431922247e-07
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.0524845809436363e-11,
+        2.061606632915019e-11,
+        -1.5185710831868888e-130,
+        -4.561025985695723e-14
+      ],
+      "factor": 0.42015516090072796,
+      "finite_moments": [
+        -2.1062893181702047e-07,
+        6.188621550111467e-07,
+        1.5644216162970953e-08,
+        -4.14745543414084e-07
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        1.1976469891771674e-15,
+        1.6413654103545694e-15,
+        0.0,
+        -2.2185926352826023e-16
+      ],
+      "raw_low_current_minus_stable_current": -4.149025435263591e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/12_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid_ref/12_-1",
+              "selected_rows": 840
+            }
+          ],
+          "rows": 1368,
+          "upper_energy_endpoint": 320.0
+        },
+        "1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/12_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid_ref/12_1",
+              "selected_rows": 840
+            }
+          ],
+          "rows": 1368,
+          "upper_energy_endpoint": 320.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "13": {
+      "angular_magnitude": 0.0,
+      "arithmetic_indicator_not_error_bound": [
+        1.4111576784656682e-13,
+        1.313978578014611e-13,
+        6.760138410280135e-34,
+        0.0
+      ],
+      "base_control_moments": [
+        4.8110409609500884e-05,
+        -0.00027267320238991193,
+        1.723179012642992e-19,
+        0.0
+      ],
+      "direct_middle_minus_stable_middle": [
+        7.519078347437196e-13,
+        7.523771128515443e-13,
+        -1.8306924727044913e-62,
+        0.0
+      ],
+      "factor": 0.12004433168592227,
+      "finite_moments": [
+        4.811040960949228e-05,
+        -0.0002726732023899243,
+        1.723179012642992e-19,
+        0.0
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        -8.605854744103691e-18,
+        -1.235990476633475e-17,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": 4.518444210192694e-12,
+      "signed_inventory": {
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "group13/low",
+              "selected_rows": 192
+            },
+            {
+              "panel": "group13/mid",
+              "selected_rows": 432
+            },
+            {
+              "panel": "subgap8/13_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 632,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        1.1913174387252112e-05,
+        -5.121902592083641e-05,
+        0.0,
+        0.0
+      ]
+    },
+    "14": {
+      "angular_magnitude": 2.23606797749979,
+      "arithmetic_indicator_not_error_bound": [
+        4.555098807734687e-13,
+        4.0041613261136366e-13,
+        2.0280415230840334e-33,
+        1.6980350829155265e-14
+      ],
+      "base_control_moments": [
+        -0.00012570813720016305,
+        0.00031098767274717853,
+        1.1097129390671262e-19,
+        -0.0005036523377526432
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.166809482149518e-12,
+        2.1684218780755307e-12,
+        -4.771836655668378e-62,
+        -8.712137766883498e-17
+      ],
+      "factor": 0.1800664975288834,
+      "finite_moments": [
+        -0.00012570813653716654,
+        0.000310987673341705,
+        5.169537037928947e-19,
+        -0.000503652337710035
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        6.629965131586812e-13,
+        5.94526489670899e-13,
+        4.059824098861821e-19,
+        4.260816959672509e-14
+      ],
+      "raw_low_current_minus_stable_current": 1.6745887216829372e-11,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "group14/low16_-1",
+              "selected_rows": 48
+            },
+            {
+              "panel": "group14/low32_-1",
+              "selected_rows": 96
+            },
+            {
+              "panel": "group14/mid24_-1",
+              "selected_rows": 432
+            },
+            {
+              "panel": "subgap8/14_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 584,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "group14/low16_1",
+              "selected_rows": 48
+            },
+            {
+              "panel": "group14/low32_1",
+              "selected_rows": 96
+            },
+            {
+              "panel": "group14/mid24_1",
+              "selected_rows": 432
+            },
+            {
+              "panel": "subgap8/14_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 584,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -3.96292970305707e-05,
+        4.108923852493585e-05,
+        0.0,
+        -0.00012441796546840285
+      ]
+    },
+    "15": {
+      "angular_magnitude": 3.4641016151377544,
+      "arithmetic_indicator_not_error_bound": [
+        3.3694110176466193e-12,
+        3.2507789777794676e-12,
+        1.7648254420182638e-33,
+        4.766250928249096e-14
+      ],
+      "base_control_moments": [
+        -6.324764660906863e-05,
+        0.00014003012744376203,
+        4.249018846169073e-19,
+        -0.00017731573281194304
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.6971194406762187e-12,
+        2.7014488433693207e-12,
+        -9.676876041613193e-131,
+        -1.5943994480298068e-15
+      ],
+      "factor": 0.24008866337184454,
+      "finite_moments": [
+        -6.324764660906863e-05,
+        0.00014003012744376203,
+        4.249018846169073e-19,
+        -0.00017731573281194304
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -2.6729558094448755e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/15_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/15_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/15_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/15_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/15_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/15_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -2.649543258893085e-07,
+        -2.7842207345187195e-05,
+        0.0,
+        9.403424789549127e-07
+      ]
+    },
+    "16": {
+      "angular_magnitude": 4.58257569495584,
+      "arithmetic_indicator_not_error_bound": [
+        4.291946103091265e-12,
+        4.074681947094165e-12,
+        2.2060317454675435e-33,
+        9.480330512861634e-14
+      ],
+      "base_control_moments": [
+        -2.7176668088568116e-05,
+        5.657772440915294e-05,
+        5.311273718307781e-19,
+        -6.448981805929099e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.3808405703276153e-12,
+        3.382718706495066e-12,
+        -1.429903845085162e-130,
+        -2.3728524847620785e-16
+      ],
+      "factor": 0.3001108292148057,
+      "finite_moments": [
+        -2.7176668088568116e-05,
+        5.657772440915294e-05,
+        5.311273718307781e-19,
+        -6.448981805929099e-05
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.218497009776664e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/16_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/16_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/16_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/16_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/16_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/16_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        2.366455290287133e-06,
+        -1.6581086635982456e-06,
+        0.0,
+        1.680377228150843e-06
+      ]
+    },
+    "17": {
+      "angular_magnitude": 5.656854249492381,
+      "arithmetic_indicator_not_error_bound": [
+        5.263332237195823e-12,
+        4.906036251785657e-12,
+        2.6468503714735767e-33,
+        1.6267321995879728e-13
+      ],
+      "base_control_moments": [
+        -1.307032756775747e-05,
+        2.645055421489458e-05,
+        6.374619805439431e-19,
+        -2.8507649215013187e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        4.118267634594778e-12,
+        4.134200409618295e-12,
+        -1.5774277065010191e-130,
+        -7.10646374867366e-15
+      ],
+      "factor": 0.3601329950577668,
+      "finite_moments": [
+        -1.307032756775747e-05,
+        2.645055421489458e-05,
+        6.374619805439431e-19,
+        -2.8507649215013187e-05
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.7435477889465897e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/17_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/17_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/17_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/17_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/17_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/17_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        4.581003323000874e-07,
+        5.095179831566197e-07,
+        0.0,
+        -5.475026961138738e-07
+      ]
+    },
+    "18": {
+      "angular_magnitude": 6.708203932499369,
+      "arithmetic_indicator_not_error_bound": [
+        6.290994294361362e-12,
+        5.746313289717879e-12,
+        2.972896295154754e-33,
+        2.5426384208021145e-13
+      ],
+      "base_control_moments": [
+        -7.1053118219820085e-06,
+        1.4304819701475715e-05,
+        7.761022329710324e-19,
+        -1.4734409437790224e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        4.87586275765455e-12,
+        4.89792229168086e-12,
+        -1.8839810450841357e-130,
+        -1.0022177669389446e-14
+      ],
+      "factor": 0.42015516090072796,
+      "finite_moments": [
+        -7.1053118219820085e-06,
+        1.4304819701475715e-05,
+        7.761022329710324e-19,
+        -1.4734409437790224e-05
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -4.367249327182783e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/18_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/18_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/18_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/18_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/18_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/18_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -5.6784026865846944e-09,
+        -9.725509320560171e-08,
+        0.0,
+        -3.256698788205978e-07
+      ]
+    },
+    "19": {
+      "angular_magnitude": 7.745966692414834,
+      "arithmetic_indicator_not_error_bound": [
+        7.381982250802136e-12,
+        6.596974555415468e-12,
+        3.279061963181144e-33,
+        3.7237093254403803e-13
+      ],
+      "base_control_moments": [
+        -4.257413318048877e-06,
+        8.629091061925461e-06,
+        9.203382798955332e-19,
+        -8.522874089043034e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        5.2353844393738294e-12,
+        5.264076359933114e-12,
+        -2.0194585968625786e-130,
+        -1.3184257804662061e-14
+      ],
+      "factor": 0.48017732674368907,
+      "finite_moments": [
+        -4.257413318048877e-06,
+        8.629091061925461e-06,
+        9.203382798955332e-19,
+        -8.522874089043034e-06
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -4.872437899864101e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/19_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/19_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/19_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/19_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/19_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/19_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -4.9320888772879686e-08,
+        -1.9312980149375568e-07,
+        0.0,
+        -1.2903977000902255e-07
+      ]
+    },
+    "2": {
+      "angular_magnitude": 3.4641016151377544,
+      "arithmetic_indicator_not_error_bound": [
+        1.6663796755734818e-12,
+        1.622923443670207e-12,
+        1.7274473076492389e-18,
+        2.17281159516371e-14
+      ],
+      "base_control_moments": [
+        0.0013541863763328044,
+        0.0002404211097825621,
+        0.0004862315610043215,
+        0.0005568826332751219
+      ],
+      "direct_middle_minus_stable_middle": [
+        1.3327233710911034e-12,
+        1.3354776458929557e-12,
+        -7.749747204232557e-131,
+        -1.3771374009349225e-15
+      ],
+      "factor": 0.12004433168592227,
+      "finite_moments": [
+        0.0013541863763328044,
+        0.0002404211097825621,
+        0.0004862315610043215,
+        0.0005568826332751219
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -1.4022497173405943e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/2_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/2_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/2_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/2_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "20": {
+      "angular_magnitude": 8.774964387392123,
+      "arithmetic_indicator_not_error_bound": [
+        8.543023116846e-12,
+        7.459470103829808e-12,
+        3.6837888750614116e-33,
+        5.196310153586708e-13
+      ],
+      "base_control_moments": [
+        -2.746987290023776e-06,
+        5.632119360103288e-06,
+        1.0368318030017096e-18,
+        -5.353379361890008e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        5.991550634340595e-12,
+        6.04614123331335e-12,
+        -2.3107381469094763e-130,
+        -2.60042626957987e-14
+      ],
+      "factor": 0.5401994925866502,
+      "finite_moments": [
+        -2.746987290023776e-06,
+        5.632119360103288e-06,
+        1.0368318030017096e-18,
+        -5.353379361890008e-06
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -5.526529618490134e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/20_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/20_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/20_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/20_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/20_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/20_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -2.8087425454920867e-08,
+        -1.2671528465646777e-07,
+        0.0,
+        -5.481288409093412e-08
+      ]
+    },
+    "21": {
+      "angular_magnitude": 9.797958971132712,
+      "arithmetic_indicator_not_error_bound": [
+        9.780559405267933e-12,
+        8.335237052678387e-12,
+        4.092977288805697e-33,
+        6.985439715679691e-13
+      ],
+      "base_control_moments": [
+        -1.875906606514245e-06,
+        3.895321211209356e-06,
+        1.152069524974607e-18,
+        -3.5784062702347675e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        6.816428208118978e-12,
+        6.861063272978958e-12,
+        -2.622498335176893e-130,
+        -2.0863255730399225e-14
+      ],
+      "factor": 0.6002216584296114,
+      "finite_moments": [
+        -1.875906606514245e-06,
+        3.895321211209356e-06,
+        1.152069524974607e-18,
+        -3.5784062702347675e-06
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -6.29576310581684e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/21_-1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/21_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/21_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/21_1",
+              "selected_rows": 480
+            },
+            {
+              "panel": "mid/21_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/21_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 728,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -9.62227184429136e-09,
+        -5.974924179077686e-08,
+        0.0,
+        -3.0071162438526675e-08
+      ]
+    },
+    "22": {
+      "angular_magnitude": 10.816653826391969,
+      "arithmetic_indicator_not_error_bound": [
+        1.1100778630246298e-11,
+        9.225698133609353e-12,
+        7.085155065146571e-33,
+        9.11489322306738e-13
+      ],
+      "base_control_moments": [
+        -1.3391680837538892e-06,
+        2.815109529438768e-06,
+        1.2672771074878612e-18,
+        -2.5103410870936374e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        7.756402371990644e-12,
+        7.814245677355695e-12,
+        -3.0537552347683723e-130,
+        -2.7335276592736265e-14
+      ],
+      "factor": 0.6602438242725724,
+      "finite_moments": [
+        -1.3390817066344136e-06,
+        2.815190560856793e-06,
+        1.9942938387089663e-18,
+        -2.5103389669452337e-06
+      ],
+      "full_source_converged": false,
+      "mass": 1.5707963267948966,
+      "quadrature_change": [
+        8.637711947551523e-11,
+        8.103141802528392e-11,
+        7.270167312211051e-19,
+        2.120148403627481e-12
+      ],
+      "raw_low_current_minus_stable_current": -7.516518973764913e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low_ref/22_-1",
+              "selected_rows": 852
+            },
+            {
+              "panel": "mid_ref/22_-1",
+              "selected_rows": 360
+            },
+            {
+              "panel": "subgap8/22_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 1220,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low_ref/22_1",
+              "selected_rows": 852
+            },
+            {
+              "panel": "mid_ref/22_1",
+              "selected_rows": 360
+            },
+            {
+              "panel": "subgap8/22_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 1220,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        1.4443353415623722e-11,
+        -1.9101055307377766e-08,
+        0.0,
+        -2.0891937968194518e-08
+      ]
+    },
+    "23": {
+      "angular_magnitude": 0.0,
+      "arithmetic_indicator_not_error_bound": [
+        8.474143755911294e-13,
+        8.133884070538894e-13,
+        1.3966978762558933e-51,
+        0.0
+      ],
+      "base_control_moments": [
+        4.047396782295584e-06,
+        -2.3453044043206437e-05,
+        3.563941954609437e-37,
+        0.0
+      ],
+      "direct_middle_minus_stable_middle": [
+        7.003647887741552e-13,
+        7.015660585916058e-13,
+        -3.7690494326579616e-131,
+        0.0
+      ],
+      "factor": 0.12004433168592227,
+      "finite_moments": [
+        4.047396782295584e-06,
+        -2.3453044043206437e-05,
+        3.563941954609437e-37,
+        0.0
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -5.765414576572537e-11,
+      "signed_inventory": {
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/23_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/23_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/23_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        1.4684863769355768e-06,
+        -5.2957918622115275e-06,
+        0.0,
+        0.0
+      ]
+    },
+    "24": {
+      "angular_magnitude": 2.23606797749979,
+      "arithmetic_indicator_not_error_bound": [
+        2.5689191849013893e-12,
+        2.4439163465335533e-12,
+        4.190093628767684e-51,
+        2.3517911581449438e-14
+      ],
+      "base_control_moments": [
+        -9.765963892572742e-06,
+        2.2803376961815524e-05,
+        1.0691825863828328e-36,
+        -8.182359240782037e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.0576732219949985e-12,
+        2.0634475930605798e-12,
+        -9.38846160999537e-131,
+        -1.1592579549406295e-15
+      ],
+      "factor": 0.1800664975288834,
+      "finite_moments": [
+        -9.765963892572742e-06,
+        2.2803376961815524e-05,
+        1.0691825863828328e-36,
+        -8.182359240782037e-05
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -1.7038124091655474e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/24_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/24_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/24_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/24_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/24_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/24_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -8.201748700583315e-06,
+        2.6537394252487455e-05,
+        0.0,
+        -4.4906813591401925e-05
+      ]
+    },
+    "25": {
+      "angular_magnitude": 3.4641016151377544,
+      "arithmetic_indicator_not_error_bound": [
+        3.4737251298690916e-12,
+        3.265532234252645e-12,
+        5.586791505023585e-51,
+        5.6495966565312296e-14
+      ],
+      "base_control_moments": [
+        -1.9005267499299165e-05,
+        4.4654691402212274e-05,
+        1.4255767818437778e-36,
+        -9.623927234753722e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.695545905381742e-12,
+        2.709172706114183e-12,
+        -1.3827652764631616e-130,
+        -4.455020054068191e-15
+      ],
+      "factor": 0.24008866337184454,
+      "finite_moments": [
+        -1.9005267499299165e-05,
+        4.4654691402212274e-05,
+        1.4255767818437778e-36,
+        -9.623927234753722e-05
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -2.2177119399680463e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/25_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/25_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/25_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/25_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/25_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/25_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -1.1480011370473468e-05,
+        1.503054923651001e-05,
+        0.0,
+        -4.924469466618019e-05
+      ]
+    },
+    "26": {
+      "angular_magnitude": 4.58257569495584,
+      "arithmetic_indicator_not_error_bound": [
+        4.418057390679696e-12,
+        4.093112288769246e-12,
+        6.983489381279504e-51,
+        1.0632812675851307e-13
+      ],
+      "base_control_moments": [
+        -1.6855905957302186e-05,
+        3.658121322906607e-05,
+        1.781970977304728e-36,
+        -6.648841118961443e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.2658630809621173e-12,
+        3.2770477851219725e-12,
+        -1.4108933340419616e-130,
+        -2.6636152207311795e-15
+      ],
+      "factor": 0.3001108292148057,
+      "finite_moments": [
+        -1.6855905957302186e-05,
+        3.658121322906607e-05,
+        1.781970977304728e-36,
+        -6.648841118961443e-05
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -2.6978674662924857e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/26_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/26_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/26_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/26_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/26_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/26_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -6.831533793234993e-06,
+        -2.9580775863462437e-06,
+        0.0,
+        -2.3855371575891652e-05
+      ]
+    },
+    "27": {
+      "angular_magnitude": 5.656854249492381,
+      "arithmetic_indicator_not_error_bound": [
+        5.410061833695173e-12,
+        4.928133917419428e-12,
+        8.380187257535438e-51,
+        1.76437719363048e-13
+      ],
+      "base_control_moments": [
+        -1.1889846768425407e-05,
+        2.4237668772641648e-05,
+        2.1383651727656807e-36,
+        -3.915172375437738e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.980494157049212e-12,
+        4.001443999671925e-12,
+        -1.838033547992368e-130,
+        -6.963500438293432e-15
+      ],
+      "factor": 0.3601329950577668,
+      "finite_moments": [
+        -1.1889846768425407e-05,
+        2.4237668772641648e-05,
+        2.1383651727656807e-36,
+        -3.915172375437738e-05
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.129241914260551e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/27_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/27_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/27_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/27_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/27_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/27_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -2.3089749719407866e-06,
+        -7.077399480737304e-06,
+        0.0,
+        -6.592791488689424e-06
+      ]
+    },
+    "28": {
+      "angular_magnitude": 6.708203932499369,
+      "arithmetic_indicator_not_error_bound": [
+        6.4573619186059716e-12,
+        5.772066128688042e-12,
+        9.776885133791262e-51,
+        2.699103504099061e-13
+      ],
+      "base_control_moments": [
+        -7.856865841746098e-06,
+        1.531671300470254e-05,
+        2.4947593682266066e-36,
+        -2.26888445387199e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        4.595324240126543e-12,
+        4.607302331401523e-12,
+        -2.5006317242519885e-130,
+        -1.8890016332646403e-15
+      ],
+      "factor": 0.42015516090072796,
+      "finite_moments": [
+        -7.856865841746098e-06,
+        1.531671300470254e-05,
+        2.4947593682266066e-36,
+        -2.26888445387199e-05
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.5369569122131383e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/28_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/28_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/28_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/28_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/28_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/28_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        -2.6521654777149514e-07,
+        -4.425263280654811e-06,
+        0.0,
+        -9.465976728407829e-07
+      ]
+    },
+    "29": {
+      "angular_magnitude": 7.745966692414834,
+      "arithmetic_indicator_not_error_bound": [
+        7.567153565151287e-12,
+        6.62636805201839e-12,
+        1.1173583010047147e-50,
+        3.8961058869890493e-13
+      ],
+      "base_control_moments": [
+        -5.181604943199078e-06,
+        9.817444854160703e-06,
+        2.8511535636875498e-36,
+        -1.362156346541555e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        5.3497388167676755e-12,
+        5.370546679813243e-12,
+        -1.7012806271070516e-130,
+        -5.737901520900105e-15
+      ],
+      "factor": 0.48017732674368907,
+      "finite_moments": [
+        -5.181604943199078e-06,
+        9.817444854160703e-06,
+        2.8511535636875498e-36,
+        -1.362156346541555e-05
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -4.097500627399498e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/29_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/29_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/29_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/29_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/29_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/29_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        2.532737063692997e-07,
+        -1.768508209435598e-06,
+        0.0,
+        -3.495247254339068e-08
+      ]
+    },
+    "3": {
+      "angular_magnitude": 4.58257569495584,
+      "arithmetic_indicator_not_error_bound": [
+        2.1241325295303632e-12,
+        2.0342563522145586e-12,
+        6.90193228757816e-19,
+        4.4938088657902024e-14
+      ],
+      "base_control_moments": [
+        0.0005635693032920797,
+        8.992204108434153e-05,
+        0.0001942721112884312,
+        0.00023682363110386884
+      ],
+      "direct_middle_minus_stable_middle": [
+        1.5734382040601843e-12,
+        1.579954567264602e-12,
+        -7.18659413484006e-131,
+        -3.258181602208235e-15
+      ],
+      "factor": 0.15005541460740285,
+      "finite_moments": [
+        0.0005635693032920797,
+        8.992204108434153e-05,
+        0.0001942721112884312,
+        0.00023682363110386884
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -1.6760202011711877e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/3_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/3_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/3_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/3_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "30": {
+      "angular_magnitude": 8.774964387392123,
+      "arithmetic_indicator_not_error_bound": [
+        8.74627339846661e-12,
+        7.49248741732958e-12,
+        1.2570280886303108e-50,
+        5.382258946629776e-13
+      ],
+      "base_control_moments": [
+        -3.491706098969897e-06,
+        6.515825454247484e-06,
+        3.207547759148512e-36,
+        -8.576559358881515e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        5.960120661995496e-12,
+        5.996033942227389e-12,
+        -1.8275493761387187e-130,
+        -1.2596376705493768e-14
+      ],
+      "factor": 0.5401994925866502,
+      "finite_moments": [
+        -3.491706098969897e-06,
+        6.515825454247484e-06,
+        3.207547759148512e-36,
+        -8.576559358881515e-06
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -4.586128534875189e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/30_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/30_-1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/30_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/30_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/30_1",
+              "selected_rows": 240
+            },
+            {
+              "panel": "subgap8/30_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 572,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        2.448089700752231e-07,
+        -4.866525754776598e-07,
+        0.0,
+        -1.092686694323558e-07
+      ]
+    },
+    "31": {
+      "angular_magnitude": 9.797958971132712,
+      "arithmetic_indicator_not_error_bound": [
+        1.0434442093183053e-11,
+        8.51619811802328e-12,
+        1.3966978762549121e-50,
+        8.380457672144924e-13
+      ],
+      "base_control_moments": [
+        -2.421414207647475e-06,
+        4.495247556744292e-06,
+        3.5639419546122224e-36,
+        -5.654415314976868e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.859291634631007e-11,
+        2.8687117069363127e-11,
+        -2.874240337437942e-130,
+        -3.842107361094063e-14
+      ],
+      "factor": 0.6002216584296114,
+      "finite_moments": [
+        -2.421414207647475e-06,
+        4.495247556744292e-06,
+        3.5639419546122224e-36,
+        -5.654415314976868e-06
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -5.070127225618913e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/31_-1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/31_-1",
+              "selected_rows": 560
+            },
+            {
+              "panel": "subgap8/31_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 892,
+          "upper_energy_endpoint": 320.0
+        },
+        "1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low/31_1",
+              "selected_rows": 324
+            },
+            {
+              "panel": "mid/31_1",
+              "selected_rows": 560
+            },
+            {
+              "panel": "subgap8/31_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 892,
+          "upper_energy_endpoint": 320.0
+        }
+      },
+      "subgap8_contribution": [
+        1.4293674151021585e-07,
+        -6.28504519703075e-08,
+        0.0,
+        -1.90844771958378e-07
+      ]
+    },
+    "32": {
+      "angular_magnitude": 10.816653826391969,
+      "arithmetic_indicator_not_error_bound": [
+        1.1901232125798853e-11,
+        9.453458682024548e-12,
+        1.254807267709608e-50,
+        1.092748577612533e-12
+      ],
+      "base_control_moments": [
+        -1.7290663993568174e-06,
+        3.2158563155640075e-06,
+        3.9203361616318674e-36,
+        -3.8829478614273065e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.189649770010714e-11,
+        3.199732228580078e-11,
+        -3.029993541310107e-130,
+        -4.107211549578273e-14
+      ],
+      "factor": 0.6602438242725724,
+      "finite_moments": [
+        -1.729005642704701e-06,
+        3.215913518144174e-06,
+        3.127814113642103e-36,
+        -3.88294675609966e-06
+      ],
+      "full_source_converged": false,
+      "mass": 3.141592653589793,
+      "quadrature_change": [
+        6.075665211642997e-11,
+        5.720258016651196e-11,
+        -7.925220479897642e-37,
+        1.1053276468344113e-12
+      ],
+      "raw_low_current_minus_stable_current": -6.104723315907207e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low_ref/32_-1",
+              "selected_rows": 552
+            },
+            {
+              "panel": "mid_ref/32_-1",
+              "selected_rows": 840
+            },
+            {
+              "panel": "subgap8/32_-1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 1400,
+          "upper_energy_endpoint": 320.0
+        },
+        "1": {
+          "integrated_dE_measure": 320.0,
+          "pieces": [
+            {
+              "panel": "low_ref/32_1",
+              "selected_rows": 552
+            },
+            {
+              "panel": "mid_ref/32_1",
+              "selected_rows": 840
+            },
+            {
+              "panel": "subgap8/32_1",
+              "selected_rows": 8
+            }
+          ],
+          "rows": 1400,
+          "upper_energy_endpoint": 320.0
+        }
+      },
+      "subgap8_contribution": [
+        6.513773829551589e-08,
+        2.288365805508733e-08,
+        0.0,
+        -1.8756372086548235e-07
+      ]
+    },
+    "4": {
+      "angular_magnitude": 5.656854249492381,
+      "arithmetic_indicator_not_error_bound": [
+        2.6064655131996338e-12,
+        2.4493163119819145e-12,
+        2.642092399442793e-19,
+        7.857460060886002e-14
+      ],
+      "base_control_moments": [
+        0.0002199113754850911,
+        3.589656506212757e-05,
+        7.436828956837983e-05,
+        9.200740521148182e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        1.915575176100572e-12,
+        1.9163329047248854e-12,
+        -8.558801906064403e-131,
+        -3.7886431217338094e-16
+      ],
+      "factor": 0.1800664975288834,
+      "finite_moments": [
+        0.0002199113754850911,
+        3.589656506212757e-05,
+        7.436828956837983e-05,
+        9.200740521148182e-05
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -1.9727310853910617e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/4_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/4_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/4_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/4_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "5": {
+      "angular_magnitude": 6.708203932499369,
+      "arithmetic_indicator_not_error_bound": [
+        3.1170709715740295e-12,
+        2.8688390708064794e-12,
+        9.78757154153159e-20,
+        1.2411595038377607e-13
+      ],
+      "base_control_moments": [
+        8.189251642300325e-05,
+        1.5240333357615488e-05,
+        2.7549564716322027e-05,
+        3.332609153269381e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.3205860860348714e-12,
+        2.3265364405439894e-12,
+        -8.159761169372975e-131,
+        -2.9751772545174475e-15
+      ],
+      "factor": 0.21007758045036398,
+      "finite_moments": [
+        8.189251642300325e-05,
+        1.5240333357615488e-05,
+        2.7549564716322027e-05,
+        3.332609153269381e-05
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -2.2725044279178248e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/5_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/5_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/5_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/5_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "6": {
+      "angular_magnitude": 7.745966692414834,
+      "arithmetic_indicator_not_error_bound": [
+        3.659456937576005e-12,
+        3.293555622556163e-12,
+        3.532754598543374e-20,
+        1.829506575099212e-13
+      ],
+      "base_control_moments": [
+        2.9228683170086608e-05,
+        7.07896421284621e-06,
+        9.943820183489943e-06,
+        1.1074859478620191e-05
+      ],
+      "direct_middle_minus_stable_middle": [
+        2.443337631028158e-12,
+        2.4548189949088124e-12,
+        -1.008142906116767e-130,
+        -5.740681940330444e-15
+      ],
+      "factor": 0.24008866337184454,
+      "finite_moments": [
+        2.922873060700973e-05,
+        7.079010448259902e-06,
+        9.943820183488491e-06,
+        1.1074860079374894e-05
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        4.743692312331356e-11,
+        4.6235413691849e-11,
+        -1.4518144715938708e-18,
+        6.007547026032692e-13
+      ],
+      "raw_low_current_minus_stable_current": -3.1202183758459606e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low_ref/6_-1",
+              "selected_rows": 960
+            },
+            {
+              "panel": "mid/6_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 1200,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low_ref/6_1",
+              "selected_rows": 960
+            },
+            {
+              "panel": "mid/6_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 1200,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "7": {
+      "angular_magnitude": 8.774964387392123,
+      "arithmetic_indicator_not_error_bound": [
+        4.236973318172286e-12,
+        3.724191329243948e-12,
+        1.2485124620327846e-20,
+        2.5639099446416913e-13
+      ],
+      "base_control_moments": [
+        9.91434686956317e-06,
+        3.704073821883013e-06,
+        3.514250161736369e-06,
+        3.1051365238400764e-06
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.1663297463161198e-12,
+        3.1648865010809464e-12,
+        -8.490300638657628e-131,
+        7.21622617568898e-16
+      ],
+      "factor": 0.2700997462933251,
+      "finite_moments": [
+        9.91434686956317e-06,
+        3.704073821883013e-06,
+        3.514250161736369e-06,
+        3.1051365238400764e-06
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -2.990539065598657e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/7_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/7_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/7_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/7_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "8": {
+      "angular_magnitude": 9.797958971132712,
+      "arithmetic_indicator_not_error_bound": [
+        4.852830462855552e-12,
+        4.161465117064761e-12,
+        4.336111134901157e-21,
+        3.4568267289539537e-13
+      ],
+      "base_control_moments": [
+        3.082046615492681e-06,
+        2.201168204538196e-06,
+        1.2205067807111191e-06,
+        4.4043920547724273e-07
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.4952707015261982e-12,
+        3.519094007569733e-12,
+        -1.7835548557604185e-130,
+        -1.1911653021778259e-14
+      ],
+      "factor": 0.3001108292148057,
+      "finite_moments": [
+        3.082046615492681e-06,
+        2.201168204538196e-06,
+        1.2205067807111191e-06,
+        4.4043920547724273e-07
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.233724964027103e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/8_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/8_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/8_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/8_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "9": {
+      "angular_magnitude": 10.816653826391969,
+      "arithmetic_indicator_not_error_bound": [
+        5.510113284137413e-12,
+        4.6060887270281466e-12,
+        1.48405630185051e-21,
+        4.5201227855463305e-13
+      ],
+      "base_control_moments": [
+        7.631366960412822e-07,
+        1.458823797881185e-06,
+        4.1772471300067456e-07,
+        -3.478435509199509e-07
+      ],
+      "direct_middle_minus_stable_middle": [
+        3.6110671353325697e-12,
+        3.648408011004005e-12,
+        -1.4754731618219137e-130,
+        -1.86704378356628e-14
+      ],
+      "factor": 0.3301219121362862,
+      "finite_moments": [
+        7.631366960412822e-07,
+        1.458823797881185e-06,
+        4.1772471300067456e-07,
+        -3.478435509199509e-07
+      ],
+      "full_source_converged": false,
+      "mass": 0.0,
+      "quadrature_change": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "raw_low_current_minus_stable_current": -3.4427384171355017e-10,
+      "signed_inventory": {
+        "-1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/9_-1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/9_-1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        },
+        "1": {
+          "integrated_dE_measure": 160.0,
+          "pieces": [
+            {
+              "panel": "low/9_1",
+              "selected_rows": 528
+            },
+            {
+              "panel": "mid/9_1",
+              "selected_rows": 240
+            }
+          ],
+          "rows": 768,
+          "upper_energy_endpoint": 160.0
+        }
+      },
+      "subgap8_contribution": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-constraint-gate.json": "44ee42d0b0cd2143397616cfe57bde7a1c88be9bc36c637feaa3d6abfe1ad62c",
+    "results/development/nsc-magnetic-light-restoration.json": "850361f99833f8cfebc5eed85c945a27ad487e6119275778d39f5d5b5ba66d3e",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055"
+  },
+  "input_payloads": [
+    {
+      "bytes": 57351148,
+      "path": "results/development/artifacts/nsc-pg-spectral-mode-recovery.3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff.npz",
+      "sha256": "3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff"
+    },
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+    },
+    {
+      "bytes": 4965711,
+      "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
+      "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
+    },
+    {
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    }
+  ],
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "light_allocation": {
+    "LLL_count": 1,
+    "LLL_state": [
+      0.0014124841070505215,
+      0.0014124841070505215,
+      0.0012441841744750626,
+      0.0
+    ],
+    "compact_complement_included": false,
+    "nonzero_magnetic_angular_restoration": [
+      0.007221609142893208,
+      -0.008816693606925326,
+      0.0,
+      0.0010649011869712476
+    ],
+    "physical_LLL_geometry": [
+      -0.001228149406150977,
+      0.002386460559446369,
+      0.0,
+      0.0
+    ],
+    "restoration_details": {
+      "T01": 0.0,
+      "bar_fourth_order_harmonic": -0.2322255008825669,
+      "bar_p_parallel": -0.02088175380783255,
+      "bar_rho": 0.02171985674017904,
+      "bar_static_density": 0.02221005179479063,
+      "excluded_physical_LLL_trace": -0.0036146099655973486,
+      "gauge_WZ": {
+        "p_parallel": -0.002926270532195121,
+        "rho": 0.002926270532195121
+      },
+      "gauge_trace": 0.008443431970194818,
+      "magnetic_charge_abs": 4,
+      "neutral_4D_WZ_rho": 0.000600294424939869,
+      "neutral_gravitational_trace": 0.0018504584400838725,
+      "normalization_mu": 1.0,
+      "p_parallel": -0.008816693606925326,
+      "p_sphere": 0.0010649011869712476,
+      "physical_radial_R2": -1.7123889803846897,
+      "radius": 1.414213562373095,
+      "rho": 0.007221609142893208,
+      "rho_coordinate": 0.9999999999999999,
+      "scope": {
+        "LLL_state_or_geometric_source_included": false,
+        "compact_complement_included": false,
+        "full_stress_or_constraints_claimed": false,
+        "new_field_or_fitted_coefficient": false,
+        "nonzero_angular_restoration_only": true,
+        "state_integral_included": false
+      },
+      "static_density_series_error_bound": 3.836868674527547e-35,
+      "subtracted_LLL_Weyl_cocycle": {
+        "p_parallel": -0.0009830440127622216,
+        "rho": 0.0017349199992865436
+      },
+      "theta": 2.356194490192345,
+      "trace": 0.01390850037587604
+    },
+    "sum": [
+      0.007405943843792753,
+      -0.0050177489404284355,
+      0.0012441841744750626,
+      0.0010649011869712476
+    ]
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "low_modal_diagnostics": {
+    "CAR_lower": 3.3425918246463456e-16,
+    "CAR_upper": 8.01136934569513e-13,
+    "Hermiticity": 2.220446049250313e-16,
+    "closed_source_projection": 0.0,
+    "kernel_imaginary": 1.2605127233425825e-15,
+    "outer_incoming_partition_defect": 4.8722137435674995e-12,
+    "partner_normdefect": 3.842148821320279e-12,
+    "raw_flux_discrepancy": 1.8202808417892035e-10,
+    "reference_Hermiticity": 0.0,
+    "reference_trace": 0.0,
+    "source_coisometry": 4.869882275215787e-12,
+    "source_complement_CAR_lower": 6.688049503020797e-17,
+    "source_complement_projector": 4.8723247658462226e-12,
+    "source_horizon_incoming_correlation": 0.0,
+    "source_horizon_pair_trace": 0.0,
+    "source_sewing_orthogonality": 7.36464792735086e-14,
+    "source_support": 0.0
+  },
+  "middle_inherited_approximation_diagnostics": {
+    "canonical_partner_bloch_residual": 1.2212453270876722e-15,
+    "decomposition_residual": 1.3082854875100155e-45,
+    "direct_kernel_difference": 4.093179361726904e-13,
+    "producer_current_residual": 1.1129951219476096e-15,
+    "producer_order12_16_field_difference": 4.5817977991432024e-10,
+    "producer_riccati_residual": 4.4818684998006284e-10,
+    "source_covariance_change": 0.0,
+    "zeroth_reference_residual": 4.440892098500626e-16
+  },
+  "net_quadrature_change": [
+    1.9523488208050832e-10,
+    1.8506556768820015e-10,
+    -6.505213034913027e-19,
+    3.868616798435864e-12
+  ],
+  "numerical_owner_and_input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-massive-mode-resolution.json": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "results/development/nsc-pg-spectral-mode-recovery.json": "9ce20128975f73896908a0acc5a636bf468876e29d210129db0702cfe7ee284d",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_incoming_high_energy_source.py": "5c7712f9193b8374384a92f9a6bd5d631ba94012e750a7cf56ffb4f58c0d9502",
+    "src/recursive_horizons/nsc_incoming_spectral_panels.py": "f22e672a87753ea5f53c722718a726f0b44e09c418f9e4e9d449b3f79ec280d9",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py": "18624ecc149e1d3842523390b0a4ebaff135ec170f737fd2dac45f9f7d102b6b",
+    "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "panel_inventory": {
+    "group13/low": {
+      "angular": 0.0,
+      "energy_range": [
+        0.00034201726881480377,
+        15.994527723698964
+      ],
+      "group": 13,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 192,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "group13/mid": {
+      "angular": 0.0,
+      "energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "group": 13,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 432,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "group13/mid16": {
+      "angular": 0.0,
+      "energy_range": [
+        16.0423962600334,
+        159.9576037399666
+      ],
+      "group": 13,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "archived comparison-only middle quadrature, same source law",
+      "rows": 288,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "group14/low16_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        0.0013248831260437577,
+        15.9788018699833
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 96,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "group14/low16_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        0.0013248831260437577,
+        15.9788018699833
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 96,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "group14/low32_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        0.25102605180644444,
+        7.994527723698964
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 96,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "group14/low32_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        0.25102605180644444,
+        7.994527723698964
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 96,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "group14/mid16_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        16.0423962600334,
+        159.9576037399666
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "archived comparison-only middle quadrature, same source law",
+      "rows": 288,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "group14/mid16_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        16.0423962600334,
+        159.9576037399666
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "archived comparison-only middle quadrature, same source law",
+      "rows": 288,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "group14/mid24_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 432,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "group14/mid24_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 432,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/10_-1": {
+      "angular": -11.832159566199232,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 10,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/10_1": {
+      "angular": 11.832159566199232,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 10,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/11_-1": {
+      "angular": -12.84523257866513,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 11,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/11_1": {
+      "angular": 12.84523257866513,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 11,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/12_-1": {
+      "angular": -13.856406460551018,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 12,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/12_1": {
+      "angular": 13.856406460551018,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 12,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/15_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 15,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/15_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 15,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/16_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 16,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/16_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 16,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/17_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 17,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/17_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 17,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/18_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 18,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/18_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 18,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/19_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 19,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/19_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 19,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/1_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 1,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/1_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 1,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/20_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 20,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/20_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 20,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/21_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 21,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/21_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 21,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/22_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/22_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 480,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/23_1": {
+      "angular": 0.0,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 23,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/24_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 24,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/24_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 24,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/25_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 25,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/25_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 25,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/26_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 26,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/26_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 26,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/27_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 27,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/27_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 27,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/28_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 28,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/28_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 28,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/29_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 29,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/29_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 29,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/2_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 2,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/2_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 2,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/30_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 30,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/30_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 30,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/31_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 31,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/31_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 31,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/32_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/32_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 324,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/3_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 3,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/3_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 3,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/4_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 4,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/4_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 4,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/5_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 5,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/5_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 5,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/6_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 6,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/6_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 6,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/7_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 7,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/7_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 7,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/8_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 8,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/8_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 8,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low/9_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 9,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low/9_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 9,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 528,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low_ref/22_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 852,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low_ref/22_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 852,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low_ref/32_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 552,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low_ref/32_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 552,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "low_ref/6_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 6,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 960,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "low_ref/6_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 6,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 960,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/10_-1": {
+      "angular": -11.832159566199232,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 10,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/10_1": {
+      "angular": 11.832159566199232,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 10,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/11_-1": {
+      "angular": -12.84523257866513,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 11,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/11_1": {
+      "angular": 12.84523257866513,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 11,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/12_-1": {
+      "angular": -13.856406460551018,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 12,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/12_1": {
+      "angular": 13.856406460551018,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 12,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/15_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 15,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/15_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 15,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/16_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 16,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/16_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 16,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/17_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 17,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/17_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 17,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/18_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 18,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/18_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 18,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/19_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 19,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/19_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 19,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/1_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 1,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/1_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 1,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/20_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 20,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/20_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 20,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/21_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 21,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/21_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 21,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/22_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/22_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/23_1": {
+      "angular": 0.0,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 23,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/24_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 24,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/24_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 24,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/25_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 25,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/25_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 25,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/26_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 26,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/26_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 26,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/27_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 27,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/27_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 27,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/28_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 28,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/28_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 28,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/29_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 29,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/29_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 29,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/2_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 2,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/2_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 2,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/30_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 30,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/30_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 30,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/31_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 31,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/31_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 31,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/32_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/32_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 560,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/3_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 3,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/3_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 3,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/4_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 4,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/4_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 4,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/5_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 5,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/5_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 5,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/6_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 6,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/6_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 6,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/7_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 7,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/7_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 7,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/8_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 8,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/8_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 8,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid/9_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 9,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid/9_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 9,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 240,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid_ref/12_-1": {
+      "angular": -13.856406460551018,
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 12,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 840,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid_ref/12_1": {
+      "angular": 13.856406460551018,
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 12,
+      "local_restoration_included": false,
+      "mass": 0.0,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 840,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid_ref/22_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        40.019251120011916,
+        159.98074887998808
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 360,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid_ref/22_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        40.019251120011916,
+        159.98074887998808
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 360,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "mid_ref/32_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 840,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "mid_ref/32_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "same archived order16 boundary recipe; stable vacuum/thermal subtraction",
+      "provenance": "authenticated retained real-panel fields and original middle producer",
+      "rows": 840,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/13_1": {
+      "angular": 0.0,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 13,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/14_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/14_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 14,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/15_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 15,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/15_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 15,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/16_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 16,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/16_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 16,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/17_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 17,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/17_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 17,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/18_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 18,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/18_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 18,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/19_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 19,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/19_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 19,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/20_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 20,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/20_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 20,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/21_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 21,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/21_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 21,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/22_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/22_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        1.0113332020238524,
+        1.5594631247710442
+      ],
+      "group": 22,
+      "local_restoration_included": false,
+      "mass": 1.5707963267948966,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/23_1": {
+      "angular": 0.0,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 23,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/24_-1": {
+      "angular": -2.23606797749979,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 24,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/24_1": {
+      "angular": 2.23606797749979,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 24,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/25_-1": {
+      "angular": -3.4641016151377544,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 25,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/25_1": {
+      "angular": 3.4641016151377544,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 25,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/26_-1": {
+      "angular": -4.58257569495584,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 26,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/26_1": {
+      "angular": 4.58257569495584,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 26,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/27_-1": {
+      "angular": -5.656854249492381,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 27,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/27_1": {
+      "angular": 5.656854249492381,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 27,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/28_-1": {
+      "angular": -6.708203932499369,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 28,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/28_1": {
+      "angular": 6.708203932499369,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 28,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/29_-1": {
+      "angular": -7.745966692414834,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 29,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/29_1": {
+      "angular": 7.745966692414834,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 29,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/30_-1": {
+      "angular": -8.774964387392123,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 30,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/30_1": {
+      "angular": 8.774964387392123,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 30,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/31_-1": {
+      "angular": -9.797958971132712,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 31,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/31_1": {
+      "angular": 9.797958971132712,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 31,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    },
+    "subgap8/32_-1": {
+      "angular": -10.816653826391969,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": -1,
+      "whole_spectrum": false
+    },
+    "subgap8/32_1": {
+      "angular": 10.816653826391969,
+      "energy_range": [
+        1.0425214757989365,
+        3.0990711777908566
+      ],
+      "group": 32,
+      "local_restoration_included": false,
+      "mass": 3.141592653589793,
+      "method": "resolved physical columns minus existing ad4 reference",
+      "provenance": "eight authenticated physical subgap mode rows; coarse source control only",
+      "rows": 8,
+      "sign": 1,
+      "whole_spectrum": false
+    }
+  },
+  "payload": {
+    "bytes": 14789190,
+    "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+    "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_spectral_source.py --check",
+  "residuals": {
+    "spectral_interval_measure": 0.0
+  },
+  "schema": "NSC-INCOMING-SPECTRAL-SOURCE-v1",
+  "selected_spectral_rows": 49372,
+  "source_hashes": {
+    "docs/nsc-incoming-spectral-source.md": "f58566a59b57da8a330fb6f22efb68118393af50876c6e3e8c81d1046a989998",
+    "scripts/derive_nsc_incoming_spectral_source.py": "f960234e46ee7a37ba2bf756d12e78a47e907b8f46e347c07a6cc0f98d146ebf",
+    "src/recursive_horizons/nsc_incoming_high_energy_source.py": "5c7712f9193b8374384a92f9a6bd5d631ba94012e750a7cf56ffb4f58c0d9502",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_spectral_panels.py": "f22e672a87753ea5f53c722718a726f0b44e09c418f9e4e9d449b3f79ec280d9",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "tests/test_nsc_incoming_high_energy_source.py": "9ebd3db7a985cbe3618fd0ed848a3beca103c3dab5a4bd2915f6cb93011fdcb8",
+    "tests/test_nsc_incoming_source_assembly.py": "dfc33e4a057c2f54b2b591bd688be871293ee9f5e116c407069454b292acae99",
+    "tests/test_nsc_incoming_state_moments.py": "fda466c847d8cfdb37d5a5df47d828f83dd3a867ee36f0f6a41f674eca969921"
+  },
+  "status": "PASS: finite incoming source assembly; converged full source OPEN",
+  "sum_absolute_group_quadrature_changes": [
+    1.9523489748126137e-10,
+    1.850655920986309e-10,
+    2.5848136127011577e-18,
+    3.869060781925415e-12
+  ]
+}

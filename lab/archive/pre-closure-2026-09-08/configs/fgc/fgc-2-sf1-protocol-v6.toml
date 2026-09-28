@@ -1,0 +1,85 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO6"
+protocol_version = 6
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO5"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v5.toml"
+predecessor_protocol_sha256 = "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab"
+diagnosis_artifact_id = "FGC-1-CAL2-PREF4"
+diagnosis_config = "configs/fgc/fgc-1-cal2-pref4.toml"
+diagnosis_config_sha256 = "d596a45899baecbb5ea1f9d5d26409782376327ce6ddb2fc961e03626abc5a55"
+diagnosis_result = "results/fgc-1-cal2-pref4.json"
+diagnosis_result_sha256 = "0e56f3b91205d68a6f81f4dad56f8ecce6d93ce0184a5899a1bace6d42aca11b"
+diagnosis_checkpoint_commit = "47f4c83bae2df26c51c3544eed8c06507a0cd9eb"
+revision_classification = "premise_only_post_calibration_trial_stage_stop_ownership_revision"
+revision_reasons = ["PROTO5_treats_an_unaccepted_internal_stage_source_miss_as_terminal", "CAL2_last_accepted_state_passes_the_unchanged_raw_source_gate", "CAL2_first_inherited_half_step_retry_passes_the_unchanged_raw_source_gate"]
+revision_changes = ["accepted_state_source_precheck_remains_terminal", "internal_unaccepted_stage_source_miss_becomes_retryable", "inherited_half_step_retry_budget_and_minimum_step", "versioned_manifest_and_output_namespace"]
+all_unlisted_PROTO5_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_initial_data_and_holdout_cases_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+raw_source_residual_and_kinetic_condition_thresholds_unchanged = true
+constraint_spectral_trapped_boundary_and_candidate_health_stops_unchanged = true
+eligible_calibration_amplitudes_in_frozen_order = ["5/2", "3"]
+PROTO1_through_PROTO5_preserved = true
+PROTO5_GR0_calibration_trajectory_inspected_before_revision = true
+first_nonzero_common_event_completed_before_revision = false
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+mechanism_question_answered_before_revision = false
+
+[replacement.source_stop_ownership]
+accepted_state_source_gate_evaluated_before_each_proposal = true
+accepted_state_source_gate_failure_is_terminal = true
+accepted_state_source_gate_failure_reason = "newton_residual_limit"
+internal_unaccepted_stage_source_gate_failure_is_retryable = true
+retry_does_not_accept_or_advance_the_failed_trial = true
+retry_restarts_from_the_bitwise_last_accepted_state = true
+retry_factor = "1/2"
+maximum_retry_count = 32
+minimum_step_size = "1/1073741824"
+raw_source_residual_tolerance_is_unchanged = true
+source_refinement_algorithm_is_unchanged = true
+kinetic_condition_gate_is_unchanged_and_terminal = true
+non_source_stage_failures_retain_PROTO5_ownership = true
+first_scientific_failure_remains_immutable = true
+every_rejected_trial_residual_stage_and_step_size_must_be_serialized = true
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro6-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto6/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto6/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+PROTO5_outputs_are_immutable_diagnostic_history_and_forbidden_as_PROTO6_outcomes = true
+
+[inheritance]
+PROTO5_native_semidiscrete_initialization_inherited_unchanged = true
+PROTO5_method_owned_constraint_admission_inherited_unchanged = true
+PROTO5_roundoff_zero_classification_inherited_unchanged = true
+PROTO5_stop_applicability_partition_inherited_except_source_trial_ownership = true
+PROTO5_weighted_spectral_admission_inherited_unchanged = true
+PROTO5_calibration_selection_and_trapped_sign_rules_inherited_unchanged = true
+HLT3_runtime_evidence_remains_valid_for_unchanged_rules_only = true
+CAL2_replay_is_design_evidence_not_calibration_evidence = true
+successor_runtime_owner = "FGC-1-HLT4-MON4"
+
+[claims]
+PROTO6_successor_runtime_compositor_implemented = false
+PROTO6_fresh_GR0_dynamic_calibration_authorized = false
+PROTO6_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

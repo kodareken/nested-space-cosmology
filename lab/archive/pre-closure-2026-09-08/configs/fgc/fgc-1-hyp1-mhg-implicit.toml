@@ -1,0 +1,76 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-MHG3-IMP1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+symbol_config = "configs/fgc/fgc-1-hyp1-symbol.toml"
+modified_harmonic_config = "configs/fgc/fgc-1-hyp1-modified-harmonic.toml"
+reference_config = "configs/fgc/fgc-1-hyp1-mhg-reference.toml"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+coordinate_radius = "4"
+center_included = false
+
+[formulation]
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_equations = "REF1_full_reference_connection_modified_harmonic"
+acceleration_variables = "base_metric_and_scalar_coordinate_time_second_derivatives"
+acceleration_order = ["h_tt.dtt", "h_tr.dtt", "h_rr.dtt", "areal_radius.dtt", "phi.dtt", "chi.dtt"]
+equation_order = ["metric_tt_mhg", "metric_tr_mhg", "metric_rr_mhg", "metric_theta_theta_mhg", "scalar_phi", "scalar_chi"]
+differentiation_method = "exact_first_tangent_forward_ad"
+implicit_theorem = "finite_dimensional_real_implicit_function_theorem"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+
+[solution_fixture]
+fixture_id = "FGCQR_flat_reference_vacuum"
+model_id = "FGC-QR"
+purpose = "exact_flat_reference_gauge_vacuum_ift_root"
+
+[solution_fixture.action_parameters]
+planck_mass = "2"
+scalar_mass = "3"
+quartic_coupling = "1/2"
+ricci_coupling = "-1/4"
+linear_gb_coupling = "0"
+quadratic_gb_coupling = "1/2"
+
+[solution_fixture.state]
+alpha = { value = "1" }
+shift = { value = "0" }
+lambda = { value = "1" }
+areal_radius = { value = "4", dr = "1" }
+phi = { value = "0" }
+chi = { value = "0" }
+
+[proof_contract]
+require_exact_fgcqr_action_identity = true
+require_exact_flat_reference_gauge_root = true
+require_exact_complete_ref1_residual_zero = true
+require_exact_first_tangent_primal_regression = true
+require_exact_mhg1_coordinate_time_kinetic_regression = true
+require_exact_nonzero_acceleration_jacobian_determinant = true
+require_exact_full_rank_acceleration_jacobian = true
+require_exact_two_sided_inverse_identities = true
+require_all_smooth_domain_denominators_regular_at_root = true
+require_local_implicit_function_theorem_hypotheses = true
+
+[open_gates]
+quantified_implicit_branch_neighborhood_proven = false
+nonzero_activated_solution_on_branch_derived = false
+complete_lower_order_first_order_sources_derived = false
+gauge_constraint_lower_order_propagation_proven = false
+reduction_constraint_propagation_proven = false
+physical_initial_constraints_solved = false
+uniform_open_domain_symmetrizer_proven = false
+open_retained_eft_domain_proven = false
+boundary_or_regular_center_system_derived = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

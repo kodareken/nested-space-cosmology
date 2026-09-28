@@ -1,0 +1,260 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO18-FRZ1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO17"
+
+[scope]
+role = "static_production_prelaunch_overlay_without_raw_history_or_namespace_access"
+raw_archive_opened = false
+historical_event_log_opened = false
+future_namespace_created = false
+trajectory_read = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "4b27a48facf75b1c3186efed6cdfa752ce160e93"
+checkpoint_must_be_ancestor_of_HEAD = true
+authority_identity = "FGC-1-PRO18-AUTH1"
+detached_launch_image_required = true
+isolated_detached_launch_image_required = true
+same_invocation_authority_and_import_recheck_required = true
+external_Git_trust_is_not_cryptographically_authenticated = true
+TOCTOU_fully_eliminated = false
+authority_recheck_required_immediately_before_atomic_genesis = true
+
+[immutable_lineage.compact_files]
+"configs/fgc/fgc-1-hlt14-mon14.toml" = "dfbe77b9a67bfaa35d1404f9903970ae4a9f04f6ae12d97bc3b598fac47f9ecf"
+"results/fgc-1-hlt14-mon14.json" = "8f9d79baa9a9083954e6e20c030d530d76ffcb06ad83c8080d819397d27c0008"
+"configs/fgc/fgc-2-sf1-protocol-v17.toml" = "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+"configs/fgc/fgc-1-pro17-frz1.toml" = "6ff3cfad5eebb7824434e3b7f97da3ce7a8610312523e3461c8999532678d2ec"
+"results/fgc-1-pro17-frz1.json" = "8e4b3f77015374cf825c141dff34d343eb3d5f4ccebfed5082bc283c1d414fea"
+"configs/fgc/fgc-1-pro17-pref25.toml" = "60e78ac3778bd0411bc52dc8756396a18b8f3f1be54b18938fa5cdcb83c59279"
+"results/fgc-1-pro17-pref25.json" = "7bba3af7b18798496800cdc024168c5593d6cb39ac643c5933d4df101191b199"
+"configs/fgc/fgc-1-pro15-frz1.toml" = "1a45af49cca92701a79cf103fd6795ffebf6353af372bff779cd4aae90f71676"
+"src/recursive_horizons/fgc/evolution/proto15_runtime.py" = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+"configs/fgc/fgc-1-cal9-pref13.toml" = "bb4eeec316499c8e9e5d5709ab0f5e9c27a771d8b2c4146987d59e4b4e0143af"
+"results/fgc-1-cal9-pref13.json" = "69a2aeff732081d1d1be2e6fd49d020335e2fa13f737d5e21484d080fb1f5fd2"
+"configs/fgc/fgc-1-rsp2-frz1.toml" = "6f4e18b4e0bb82812faf4f23e70383f98f1aed21203e8816e6139140c8f90d39"
+"results/fgc-1-rsp2-frz1.json" = "a6c147d7b369387e70318ee42eb56c97332702a227fd93d7ad20a1cfe2c1aa22"
+"configs/fgc/fgc-1-rsp2-pref14.toml" = "d9d9a6ebae797f5f59646b7ae7d998740516c775038e2e2ff356577b35373b42"
+"results/fgc-1-rsp2-pref14.json" = "dd09cbfff2f3f22729adc6580fd577ab183a68960fedaefcc4e3a90d0bc1b0c1"
+"configs/fgc/fgc-1-pro13-frz1.toml" = "8a8e4a0e7b1de11fb27bae21eaff25ba29c234712b0aadac72e97ef121da92b7"
+"results/fgc-1-pro13-frz1.json" = "a6fd1ce1bf429fd39ff2d7975de009991199a0f41c73e44d46e57b88b35d74b4"
+"results/fgc-1-pro15-frz1.json" = "99d24425cb5d40da2e248605265b83bcdc82a2126cfa4b5bce4239c6ef30635c"
+
+[source_map]
+container_format = "NPZ"
+source_container_count = 2
+source_event_log_name = "events.jsonl"
+raw_archive_or_event_payload_must_not_be_opened_by_PRO18 = true
+shared_containers = [
+  "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz",
+  "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz",
+]
+legacy_event_logs = [
+  "runs/fgc-2-sf1/proto12/calibration/events.jsonl",
+  "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/events.jsonl",
+]
+source_container_grammar = "exactly_two_shared_NPZ_containers_plus_matching_legacy_events_jsonl; six selectors may share a container but never a selector identity"
+
+[selectors]
+canonical_order = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193", "SSPRK3-16385"]
+restart_coordinate_time = "23/16"
+accepted_boundary_time = "23/16"
+active_target_time = "3/2"
+
+[[selectors.member]]
+key="RK4-2049"
+source="PROTO12"
+archive_index=0
+method="RK4"
+point_count=2049
+array_prefix="RK4_2049"
+state_sha256="d119a3b0ab450b0f0916b801254bbbfa964c8e5e95223cb8e51d9034f62c665e"
+physical_state_sha256="d119a3b0ab450b0f0916b801254bbbfa964c8e5e95223cb8e51d9034f62c665e"
+restart_sha256="4bb04ae97c09f66881084b5816d14ce300c54152ae11c182f53b64d5e887c072"
+input_sha256="3bfc9a137f20353e9ead2f742f7780b049a11ab576f6e4de98fe4e5d0ad5c0d3"
+coordinate_time="23/16"
+source_retry_count=0
+CFL_retry_count=217
+accepted_stage_count=1710
+event_sample_count=24
+tracer_count=48
+state_shape=[2049, 6]
+step_index=342
+transaction_serial=1710
+[[selectors.member]]
+key="RK4-4097"
+source="PROTO12"
+archive_index=0
+method="RK4"
+point_count=4097
+array_prefix="RK4_4097"
+state_sha256="9d27ca221fbac2a5b3b86a8d9aef49a8b8ac451b255b80529563b8cb7f8b73a9"
+physical_state_sha256="9d27ca221fbac2a5b3b86a8d9aef49a8b8ac451b255b80529563b8cb7f8b73a9"
+restart_sha256="cc6d3b6fbb3a5b6abd93f69f7f59ba67c38e9b7d332fac991a88847970b57aac"
+input_sha256="ffbde443e99535e74900b1e04c1e60cc27da105dd5d605286e77a6c77620c0bb"
+coordinate_time="23/16"
+source_retry_count=0
+CFL_retry_count=443
+accepted_stage_count=3365
+event_sample_count=24
+tracer_count=48
+state_shape=[4097, 6]
+step_index=673
+transaction_serial=3365
+[[selectors.member]]
+key="RK4-8193"
+source="PROTO12"
+archive_index=0
+method="RK4"
+point_count=8193
+array_prefix="RK4_8193"
+state_sha256="d5b4cfe25199862fff5be7d524cc1c3a6030cc634d268cedb626c3ced7220f4a"
+physical_state_sha256="d5b4cfe25199862fff5be7d524cc1c3a6030cc634d268cedb626c3ced7220f4a"
+restart_sha256="b95ea0be0779f712fb0c354f9c10f28b9ccc6c737fb403d5710dbd07e0e506f9"
+input_sha256="076bebfc71482793017d2d306001b3416f5ad7a4088f35351d4d26322a09d12c"
+coordinate_time="23/16"
+source_retry_count=0
+CFL_retry_count=161
+accepted_stage_count=4880
+event_sample_count=24
+tracer_count=48
+state_shape=[8193, 6]
+step_index=976
+transaction_serial=4880
+[[selectors.member]]
+key="SSPRK3-4097"
+source="PROTO12"
+archive_index=0
+method="SSPRK3"
+point_count=4097
+array_prefix="SSPRK3_4097"
+state_sha256="ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162"
+physical_state_sha256="ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162"
+restart_sha256="dc056db806e5d983852135138dd48dbb9b995a8585f56900258bece7e16e7016"
+input_sha256="3cc3dc3a262f83cc19f07c49d477f5e43309f0c9e0f16bdeaf6d0c7dc02bd48f"
+coordinate_time="23/16"
+source_retry_count=0
+CFL_retry_count=358
+accepted_stage_count=2524
+event_sample_count=24
+tracer_count=48
+state_shape=[4097, 6]
+step_index=631
+transaction_serial=2524
+[[selectors.member]]
+key="SSPRK3-8193"
+source="PROTO12"
+archive_index=0
+method="SSPRK3"
+point_count=8193
+array_prefix="SSPRK3_8193"
+state_sha256="c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c"
+physical_state_sha256="c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c"
+restart_sha256="b262bf4bd180717d42a7fa4d502f006bac0950669bc9e86c474ad6e4a21ce7ad"
+input_sha256="d4bd39d36dfe749cc6ec04e5f112fc5544e3defdce67315ee871d2d8cfc75b5f"
+coordinate_time="23/16"
+source_retry_count=0
+CFL_retry_count=187
+accepted_stage_count=3948
+event_sample_count=24
+tracer_count=48
+state_shape=[8193, 6]
+step_index=987
+transaction_serial=3948
+[[selectors.member]]
+key="SSPRK3-16385"
+source="RSP2"
+archive_index=1
+method="SSPRK3"
+point_count=16385
+array_prefix="SSPRK3_16385"
+state_sha256="91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d"
+physical_state_sha256="91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d"
+restart_sha256="62784c8cc63eedc210366f146f28d535343b966e1f988a4298894e78ec560884"
+input_sha256="2946239e5d23b4e7a3cd74419a0b9c214eb89195f72bc84d4b89f39b6ef01963"
+coordinate_time="23/16"
+source_retry_count=0
+CFL_retry_count=0
+accepted_stage_count=7084
+event_sample_count=24
+tracer_count=48
+state_shape=[16385, 6]
+step_index=1771
+transaction_serial=7084
+
+[future_output_roots]
+calibration = "runs/fgc-2-sf1/proto17/calibration"
+holdout = "runs/fgc-2-sf1/proto17/holdout"
+temporal_absence_observation_at_freeze = true
+only_output_root_existence_may_be_inspected = true
+
+[future_chain]
+PREF26 = "FGC-1-PRO18-PREF26"
+AUTH1 = "FGC-1-PRO18-AUTH1"
+HLT15_GEN1 = "FGC-1-HLT15-GEN1"
+PREF27 = "FGC-1-PRO18-PREF27"
+required_order = ["PREF26", "AUTH1", "HLT15_GEN1", "PREF27"]
+
+[typed_stops]
+raw_archive_access = "PRO18_RAW_ARCHIVE_ACCESS_FORBIDDEN"
+historical_event_access = "PRO18_HISTORICAL_EVENT_ACCESS_FORBIDDEN"
+output_root_present = "PRO18_FUTURE_NAMESPACE_ALREADY_PRESENT"
+immutable_blob_drift = "PRO18_IMMUTABLE_COMPACT_BLOB_DRIFT"
+selector_drift = "PRO18_SELECTOR_IDENTITY_DRIFT"
+authority_or_image_drift = "PRO18_AUTHORITY_OR_DETACHED_IMAGE_DRIFT"
+unsafe_output_root = "PRO18_UNSAFE_OUTPUT_ROOT"
+
+[claims]
+PROTO17_target_identity_and_hash_bindings_frozen = true
+HLT14_synthetic_result_preserved = true
+PRO18_static_production_prelaunch_overlay_frozen = true
+PRO18_two_source_container_and_fresh_output_boundary_frozen = true
+PREF26_implementation_or_design_authorized = true
+PREF26_completed = false
+AUTH1_authorized = false
+HLT15_GEN1_authorized = false
+PREF27_authorized = false
+raw_archive_opened = false
+historical_event_log_opened = false
+future_namespace_created = false
+pretrajectory_operation_authorized = false
+trajectory_read = false
+candidate_execution_authorized = false
+physical_claim_authorized = false
+fresh_GR0_calibration_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+global_continuation_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false
+
+[authorization]
+PREF26_implementation_or_design_authorized = true
+AUTH1_authorized = false
+HLT15_GEN1_authorized = false
+PREF27_authorized = false
+
+[HLT14_production_duties.raw_bundle_byte_and_hash_recomputation]
+required = true
+completed = false
+[HLT14_production_duties.external_Git_authority_blob_and_live_import_validation]
+required = true
+completed = false
+[HLT14_production_duties.semantic_historical_journal_payload_replay]
+required = true
+completed = false
+[HLT14_production_duties.namespace_reuse_and_foreign_store_rejection]
+required = true
+completed = false

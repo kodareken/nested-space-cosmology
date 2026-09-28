@@ -1,0 +1,44 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-CON2-MPROP1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+
+[predecessors]
+fo1_config = "configs/fgc/fgc-1-hyp1-fo1-rc1.toml"
+fo1_result = "results/fgc-1-hyp1-fo1-rc1.json"
+qift1_config = "configs/fgc/fgc-1-hyp1-dom1-qift1.toml"
+qift1_result = "results/fgc-1-hyp1-dom1-qift1.json"
+comp1_config = "configs/fgc/fgc-1-hyp1-con1-comp1.toml"
+comp1_result = "results/fgc-1-hyp1-con1-comp1.json"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+coordinate_radius = "4"
+center_included = false
+tilde_normal_factor = "4"
+hat_normal_factor = "9"
+
+[controls]
+flat_id = "flat_zero_third_jet_reference"
+activated_id = "activated_comp1_deterministic_third_jet"
+third_derivative_formula = "dttt=i/17;dttr=-i/19;dtrr=i/23;drrr=-i/29_in_BASE_FIELD_ORDER_i=1_to_6"
+
+[proof_contract]
+metric_derived_C_through_second_partials = true
+act1_noether_sign_checked = true
+prop1_two_route_equality_checked = true
+complete_kinematic_1plus1_reduction_subsidiary_checked = true
+
+[open_gates]
+Cauchy_uniqueness_and_zero_constraint_propagation_proven = false
+physical_initial_constraint_hypersurface_solved = false
+physical_Hamiltonian_momentum_constraint_propagation_proven = false
+constraint_preserving_boundary_conditions_derived = false
+boundary_stability_or_Kreiss_estimate_proven = false
+initial_boundary_value_problem_proven = false
+evolution_authorized = false
+collapse_solution_derived = false
+finite_invariant_transition_surface_derived = false
+singularity_resolution_derived = false

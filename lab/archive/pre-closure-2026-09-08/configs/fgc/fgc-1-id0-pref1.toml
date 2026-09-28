@@ -1,0 +1,130 @@
+schema_version = 1
+artifact_id = "FGC-1-ID0-PREF1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol.toml"
+
+[historical_preflight_checkpoint]
+commit = "d4f0cc8f58408ef4ee12fb32fe3619916e231795"
+classification = "immutable_pre_PROTO2_ID0_checkpoint"
+id0_config_path = "configs/fgc/fgc-1-id0-pref1.toml"
+id0_config_sha256 = "305338f3b940f046b59072448dfb010b7fa2701e290573c08703a2cac59a7086"
+id0_result_path = "results/fgc-1-id0-pref1.json"
+id0_result_sha256 = "ac9f0726a1e336dc41dd100612d2ca3c64a1913449ac2d3844f42ee31d86ba22"
+run1_config_path = "configs/fgc/fgc-1-run1-sym1.toml"
+run1_config_sha256 = "7b4341bf5b9712648daff4d247de0a786e1b19fc0ea1aeac761a1f4da39424f0"
+run1_result_path = "results/fgc-1-run1-sym1.json"
+run1_result_sha256 = "269d0d4b594c87b6d54a84ef860056322d4c3174653af32ab06f9d02a84deca8"
+con4_config_path = "configs/fgc/fgc-1-con4-phy1.toml"
+con4_config_sha256 = "f438db34cf4895fa990f4574a6e3e32dfdf59a3bc864d3505e40a37de2c22b03"
+con4_result_path = "results/fgc-1-con4-phy1.json"
+con4_result_sha256 = "8fb15d3d7298b27a1607084bfc5acd8a88d67a427e9e4583ef6560000240d1e7"
+ctr1_config_path = "configs/fgc/fgc-1-ctr1-reg1.toml"
+ctr1_config_sha256 = "c4eb5a6d646ea6bb1d8bd43d3c3911ce4c2a5182c8dde6e25a5221e07f7415a8"
+ctr1_result_path = "results/fgc-1-ctr1-reg1.json"
+ctr1_result_sha256 = "998b3577556a79290da07eaeec90224406239a55560f4f9459b283d57f15979d"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO1"
+target_branch = "GR-0"
+physical_equations = "unredefined_ACT1_VAR1"
+initial_slice = "unit_lapse_zero_shift_maximal_polar_areal"
+areal_radius = "R=r"
+extrinsic_curvature_eigenvalues = ["K^r_r=-2*k", "K^theta_theta=k", "K^phi_phi=k"]
+regular_center_vacuum_interior = true
+asymptotically_finite_mass_vacuum_exterior = true
+FGCQR_holdout_outcomes_inspected = false
+SGBL_outcomes_inspected = false
+
+[protocol_diagnosis]
+declared_chi_profile = "r_times_chi=amplitude*B((r-center)/half_width)"
+declared_chi_momentum = "partial_t(r_chi)=partial_r(r_chi)"
+declared_phi_profile = "phi=amplitude*B((r-center)/half_width)"
+phi_unit_normal_momentum_frozen_by_PROTO1 = false
+minimal_preflight_completion = "Pi_phi=0"
+missing_phi_momentum_alone_prevents_executable_initial_data_contract = true
+original_chi_amplitudes_are_too_small_under_minimal_completion = true
+premise_based_protocol_revision_required = true
+outcome_based_parameter_change = false
+
+[exact_controls.fixture_A]
+radius = "5/2"
+radial_metric = "4/3"
+angular_extrinsic_curvature = "1/17"
+radial_metric_derivative = "-1/19"
+angular_extrinsic_curvature_derivative = "1/23"
+phi = "1/29"
+phi_r = "-1/31"
+phi_pi = "1/37"
+chi = "-1/41"
+chi_r = "1/43"
+chi_pi = "-1/47"
+
+[exact_controls.fixture_B]
+radius = "11/3"
+radial_metric = "7/6"
+angular_extrinsic_curvature = "-2/19"
+radial_metric_derivative = "3/29"
+angular_extrinsic_curvature_derivative = "-1/31"
+phi = "-2/37"
+phi_r = "1/41"
+phi_pi = "-1/43"
+chi = "3/47"
+chi_r = "-2/53"
+chi_pi = "1/59"
+
+[analytic_bound]
+amplitude_maximum = "1/8"
+phi_amplitude = "1/131072"
+support_minimum = "10"
+support_maximum = "14"
+planck_mass = "2"
+assumed_inverse_radial_metric_squared_upper_bound = "4"
+bump_absolute_bound = "1"
+bump_x_derivative_absolute_bound = "3"
+bump_r_derivative_absolute_bound = "3/2"
+required_compactness_upper_separator = "1/64"
+protocol_initial_compactness_minimum = "1/10"
+bootstrap_must_close_strictly = true
+regular_center_forbids_hidden_vacuum_mass_or_r_minus_3_momentum_seed = true
+
+[numerical_preflight]
+original_amplitude_candidates = ["1/64", "3/128", "1/32", "3/64", "1/16", "3/32", "1/8"]
+candidate_repair_scan = ["2", "5/2", "3", "7/2", "4", "9/2", "5"]
+methods = ["RK4", "SSPRK3"]
+nested_step_counts = [32, 64, 128]
+report_step_count = 4096
+minimum_observed_outer_mass_convergence_order = "5/2"
+maximum_cross_method_peak_compactness_difference = "1/100000000"
+original_box_peak_compactness_numerical_upper_bound = "1/2000"
+repair_scan_peak_compactness_minimum = "1/10"
+repair_scan_peak_compactness_maximum = "3/4"
+repair_scan_is_GR0_premise_design_only = true
+repair_scan_does_not_select_a_FGCQR_outcome = true
+
+[proof_contract]
+specialized_constraints_derived_from_declared_slice = true
+specialized_constraints_cross_checked_against_complete_unredefined_evaluator = true
+two_nontrivial_exact_rational_controls_required = true
+entire_original_amplitude_box_bounded_analytically = true
+inverse_metric_bootstrap_closed = true
+independent_RK4_and_SSPRK3_preflight_required = true
+all_original_candidates_checked_at_nested_resolutions = true
+successor_candidate_scan_uses_GR0_only = true
+PROTO1_file_preserved_unchanged = true
+no_FGCQR_holdout_execution = true
+protocol_failure_is_not_FGCQR_mechanism_failure = true
+canonical_hash_bound_result_required = true
+
+[claims]
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

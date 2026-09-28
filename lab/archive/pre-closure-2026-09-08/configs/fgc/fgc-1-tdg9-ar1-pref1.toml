@@ -1,0 +1,44 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG9-AR1-PREF1"
+classification = "independently_bound_exact_arithmetic_discriminator_terminal"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg9-ar1-pref1.md"
+
+[raw]
+namespace = "runs/fgc-2-sf1/tdg9-ar1/rcv3-retries-3-5"
+manifest_sha256 = "13f2bf0c89a2303da4c2b5b6a376688676b3b956abcfa52533c0c19fb6a0a77d"
+terminal_sha256 = "c864b2bffc61451b2f3e183e481425d07e19a1409ee81d327da958ab14994432"
+classification = "legacy_enclosure_not_sole_owner_on_frozen_samples"
+authority_commit = "fd475aee1870ad60fc8cbaeacb3e33d7b97f831e"
+leaf_count = 2
+
+[replay]
+retries = [3, 4, 5]
+channel_count_per_retry = 18
+owned_row_count = 2044
+evaluator_calls = 108
+max_depth = 64
+max_nodes_per_channel_per_evaluator = 4194304
+
+[scope]
+live_store_read_only = true
+raw_namespace_read_only = true
+compact_verifier_store_blind = true
+runner_decision_code_imported = false
+persisted_retry_wrapper_imported = false
+campaign_store_mutation_authorized = false
+PDE_state_commit_authorized = false
+continuation_authorized = false
+candidate_branches_authorized = false
+
+[claims]
+raw_AR1_result_independently_bound = true
+AR1_binder_completed = true
+legacy_enclosure_sole_owner_rejected_on_frozen_samples = true
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

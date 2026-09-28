@@ -1,0 +1,343 @@
+{
+  "artifact_id": "FGC-1-HLT14-MON14",
+  "artifact_payload": {
+    "decision": {
+      "HLT14_runtime_implemented": true,
+      "HLT14_synthetic_qualification_passed": true,
+      "candidate_execution_authorized": false,
+      "fresh_GR0_calibration_authorized": false,
+      "physical_claim_authorized": false,
+      "pretrajectory_operation_authorized": false,
+      "production_namespace_creation_authorized": false,
+      "production_prelaunch_successor_design_authorized": true
+    },
+    "evidence_partition": {
+      "external_production_launch_authority_validated": false,
+      "in_process_exception_recovery_exercised": true,
+      "power_loss_durability_qualified": false,
+      "real_NPZ_fixture_hashes_are_input_dependent": true,
+      "sealed_abstract_fixture_hash_vector_reproduced": true,
+      "synthetic_Git_authority_and_import_origin_preflight_exercised": true
+    },
+    "future_HLT14_boundary": {
+      "external_Git_authority_blob_and_live_import_validation": {
+        "completed": false,
+        "required": true
+      },
+      "namespace_reuse_and_foreign_store_rejection": {
+        "completed": false,
+        "required": true
+      },
+      "raw_bundle_byte_and_hash_recomputation": {
+        "completed": false,
+        "required": true
+      },
+      "semantic_historical_journal_payload_replay": {
+        "completed": false,
+        "required": true
+      }
+    },
+    "immutable_lineage": {
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "evidence_checkpoint_commit": "4da668fad42d4006d3e09f511eafa0ef0e69d7ed",
+      "tracked_compact_records": [
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "configs/fgc/fgc-1-pro17-pref25.toml",
+          "sha256": "60e78ac3778bd0411bc52dc8756396a18b8f3f1be54b18938fa5cdcb83c59279"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "results/fgc-1-pro17-pref25.json",
+          "sha256": "7bba3af7b18798496800cdc024168c5593d6cb39ac643c5933d4df101191b199"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "scripts/reproduce_fgc_pro17_pref25.py",
+          "sha256": "dcd0c0eee47724133b91e66b03d844c24fb23b489f05ebbf7c73438510431279"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "src/recursive_horizons/fgc/evolution/proto17_construction_theorem.py",
+          "sha256": "59b1eec6bcbde0bded065b281f6f2dc94615b0fd86e94e15e96a9ff756eb18ca"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "docs/fgc-pro17-pref25.md",
+          "sha256": "ca9ae473fffb268de12a3542211868a88cfcdb5150a15a85a65ef3cb4fcd3e04"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "tests/test_fgc_pro17_pref25_reproduction.py",
+          "sha256": "c1b2891459850dfae285982781be27e9d0490ff73f1275767c2c14fd2de3fcca"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "configs/fgc/fgc-2-sf1-protocol-v17.toml",
+          "sha256": "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "configs/fgc/fgc-1-pro17-frz1.toml",
+          "sha256": "6ff3cfad5eebb7824434e3b7f97da3ce7a8610312523e3461c8999532678d2ec"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "results/fgc-1-pro17-frz1.json",
+          "sha256": "8e4b3f77015374cf825c141dff34d343eb3d5f4ccebfed5082bc283c1d414fea"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "scripts/reproduce_fgc_pro17_frz1.py",
+          "sha256": "1481d8da60d2684a692fe9526236a0b82e6d63299e922545c9b9ee75b9c1a3cf"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "src/recursive_horizons/fgc/evolution/protocol_v17.py",
+          "sha256": "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+        },
+        {
+          "matches_checkpoint_and_worktree": true,
+          "path": "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py",
+          "sha256": "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d"
+        }
+      ]
+    },
+    "synthetic_adapter_contract": {
+      "all_six_raw_bundle_bytes_and_array_hashes_must_be_recomputed": true,
+      "authority_commit_blob_and_three_source_roles_must_be_checked": true,
+      "canonical_member_order": [
+        "RK4-2049",
+        "RK4-4097",
+        "RK4-8193",
+        "SSPRK3-4097",
+        "SSPRK3-8193",
+        "SSPRK3-16385"
+      ],
+      "common_event_completed_index": 24,
+      "common_event_next_target_time": "25/16",
+      "expected_common_event_receipt_sha256": "17f925e8489341392ac5df4fba1cc47b66a27153e64eca4455c3f701f37cbc17",
+      "expected_generation_zero_checkpoint_sha256": "01e8214dcbbef025fe7883670043659d3ec66bb47e9b3e9dd4b8089b8ba5f8de",
+      "expected_successor_checkpoint_sha256": "c4c31f53a6a97632addafd54d6b3ec08bdcffe4aa4321269f8c8bca957e5380b",
+      "generation_zero_accepted_boundary_time": "23/16",
+      "generation_zero_active_target_time": "3/2",
+      "generation_zero_event_index": 23,
+      "import_origin_check_is_preflight_not_TOCTOU_closure": true,
+      "real_NPZ_fixture_hashes_are_input_dependent": true,
+      "real_runs_namespace_must_not_be_created": true,
+      "sealed_abstract_fixture_must_match_pure_constructor_byte_for_byte": true,
+      "synthetic_store_must_be_temporary_and_isolated": true
+    },
+    "synthetic_qualification_contract": {
+      "accepted_prefix_common_event_and_generation_zero_exception_windows_exercised": true,
+      "all_qualification_cases_passed": true,
+      "authority_commit_schema_source_drift_and_import_origin_preflight_exercised": true,
+      "bundle_admission_case_count": 6,
+      "complete_visible_synthetic_genesis_and_store_plan_verified": true,
+      "content_addressed_state_store_and_checkpoint_reload_verified": true,
+      "exact_lone_receipt_recovery_only_verified": true,
+      "faults_are_in_process_exceptions_not_power_loss_proof": true,
+      "fully_rehashed_semantic_plan_and_high_water_forgeries_rejected": true,
+      "in_process_exception_fault_case_count": 44,
+      "mutation_case_count": 18,
+      "nominal_case_count": 4,
+      "predecessor_only_common_event_and_complete_successor_checkpoint_verified": true,
+      "preexisting_root_foreign_store_and_production_path_guards_exercised": true,
+      "qualification_case_count": 72,
+      "qualification_case_digest": "445765193eddba247b7452635ca382388950a55a3a2bfb128e0b125f530b6baf",
+      "raw_hash_array_shape_metadata_canonicality_and_symlink_mutations_rejected": true,
+      "sealed_PREF25_hash_vector_reproduced": true,
+      "structural_six_record_accepted_fine_prefix_verified": true
+    },
+    "synthetic_qualification_summary": {
+      "all_cases_passed": true,
+      "case_count": 72,
+      "case_digest": "445765193eddba247b7452635ca382388950a55a3a2bfb128e0b125f530b6baf",
+      "case_names": [
+        "bundle:RK4-2049",
+        "bundle:RK4-4097",
+        "bundle:RK4-8193",
+        "bundle:SSPRK3-16385",
+        "bundle:SSPRK3-4097",
+        "bundle:SSPRK3-8193",
+        "fault:accepted_checkpoint:after_dir_fsync:accepted_prefix",
+        "fault:accepted_checkpoint:after_flush:invalid_prefix",
+        "fault:accepted_checkpoint:after_fsync:invalid_prefix",
+        "fault:accepted_checkpoint:after_replace:accepted_prefix",
+        "fault:accepted_checkpoint:after_write:invalid_prefix",
+        "fault:accepted_checkpoint:before_dir_fsync:accepted_prefix",
+        "fault:accepted_checkpoint:before_flush:invalid_prefix",
+        "fault:accepted_checkpoint:before_fsync:invalid_prefix",
+        "fault:accepted_checkpoint:before_replace:invalid_prefix",
+        "fault:accepted_checkpoint:before_write:invalid_prefix",
+        "fault:accepted_journal:after_dir_fsync:invalid_prefix",
+        "fault:accepted_journal:after_flush:genesis",
+        "fault:accepted_journal:after_fsync:genesis",
+        "fault:accepted_journal:after_replace:invalid_prefix",
+        "fault:accepted_journal:after_write:genesis",
+        "fault:accepted_journal:before_dir_fsync:invalid_prefix",
+        "fault:accepted_journal:before_flush:genesis",
+        "fault:accepted_journal:before_fsync:genesis",
+        "fault:accepted_journal:before_replace:genesis",
+        "fault:accepted_journal:before_write:genesis",
+        "fault:common_event_checkpoint:after_dir_fsync:successor",
+        "fault:common_event_checkpoint:after_flush:successor",
+        "fault:common_event_checkpoint:after_fsync:successor",
+        "fault:common_event_checkpoint:after_replace:successor",
+        "fault:common_event_checkpoint:after_write:successor",
+        "fault:common_event_checkpoint:before_dir_fsync:successor",
+        "fault:common_event_checkpoint:before_flush:successor",
+        "fault:common_event_checkpoint:before_fsync:successor",
+        "fault:common_event_checkpoint:before_replace:successor",
+        "fault:common_event_checkpoint:before_write:successor",
+        "fault:common_event_receipt:after_dir_fsync:successor",
+        "fault:common_event_receipt:after_flush:predecessor",
+        "fault:common_event_receipt:after_fsync:predecessor",
+        "fault:common_event_receipt:after_replace:successor",
+        "fault:common_event_receipt:after_write:predecessor",
+        "fault:common_event_receipt:before_dir_fsync:successor",
+        "fault:common_event_receipt:before_flush:predecessor",
+        "fault:common_event_receipt:before_fsync:predecessor",
+        "fault:common_event_receipt:before_replace:predecessor",
+        "fault:common_event_receipt:before_write:predecessor",
+        "fault:generation_zero:genesis_checkpoint:after_fsync",
+        "fault:generation_zero:namespace:after_namespace_rename",
+        "fault:generation_zero:namespace:before_namespace_rename",
+        "fault:generation_zero:state_object:before_write",
+        "mutation:aggregate_hash",
+        "mutation:array_shape",
+        "mutation:authority_foreign_commit",
+        "mutation:authority_malformed_spec",
+        "mutation:authority_pinned_source_drift",
+        "mutation:bundle_symlink",
+        "mutation:foreign_store",
+        "mutation:fully_rehashed_high_water_forgery",
+        "mutation:fully_rehashed_semantic_plan_forgery",
+        "mutation:incomplete_accepted_prefix",
+        "mutation:invalid_accepted_suffix",
+        "mutation:metadata_duplicate_json",
+        "mutation:metadata_noncanonical_json",
+        "mutation:metadata_semantic_binding",
+        "mutation:preexisting_root",
+        "mutation:production_namespace_guard",
+        "mutation:raw_file_hash",
+        "mutation:semantic_six_record_replay",
+        "nominal:lone_receipt_recovery",
+        "nominal:sealed_PREF25_three_hash_vector",
+        "nominal:semantic_six_record_common_event",
+        "nominal:temporary_git_authority_full_six_member_genesis"
+      ],
+      "in_process_exception_faults_not_power_loss_proof": true,
+      "real_NPZ_authority_path_has_input_dependent_hashes": true,
+      "real_production_instance_requirements_completed": false,
+      "sealed_PREF25_hash_vector": {
+        "common_event_receipt_sha256": "17f925e8489341392ac5df4fba1cc47b66a27153e64eca4455c3f701f37cbc17",
+        "generation_zero_checkpoint_sha256": "01e8214dcbbef025fe7883670043659d3ec66bb47e9b3e9dd4b8089b8ba5f8de",
+        "successor_checkpoint_sha256": "c4c31f53a6a97632addafd54d6b3ec08bdcffe4aa4321269f8c8bca957e5380b"
+      },
+      "sealed_PREF25_hash_vector_reproduced": true,
+      "temporary_directories_only": true
+    }
+  },
+  "classification": "completed_synthetic_only_PROTO17_authority_bundle_and_durable_runtime_qualification_without_production_prelaunch_or_trajectory",
+  "derivation_document": "docs/fgc-hlt14-mon14.md",
+  "derivation_document_sha256": "d1fe0e1f77a2e73c632db1b0995eca404508bab9cda1d21fabf211ee77cad60e",
+  "gate_status": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "HLT14_calibration_completed": false,
+    "HLT14_external_production_launch_authority_validated": false,
+    "HLT14_fresh_GR0_dynamic_calibration_authorized": false,
+    "HLT14_implementation_and_synthetic_qualification_authorized": true,
+    "HLT14_power_loss_durability_qualified": false,
+    "HLT14_pretrajectory_operation_authorized": false,
+    "HLT14_production_filesystem_durability_or_restart_qualified": false,
+    "HLT14_production_namespace_materialized": false,
+    "HLT14_production_namespace_reuse_or_foreign_store_rejection_validated": false,
+    "HLT14_real_historical_journal_payload_semantics_replayed": false,
+    "HLT14_real_production_state_loaded": false,
+    "HLT14_real_raw_bundle_bytes_recomputed": false,
+    "HLT14_runtime_implemented": true,
+    "HLT14_sealed_PREF25_hash_vector_reproduced": true,
+    "HLT14_synthetic_Git_authority_and_import_origin_preflight_exercised": true,
+    "HLT14_synthetic_all_six_raw_bundle_admission_exercised": true,
+    "HLT14_synthetic_qualification_passed": true,
+    "HLT14_synthetic_runtime_contract_frozen": true,
+    "HLT14_synthetic_semantic_replay_and_exception_recovery_qualified": true,
+    "HLT14_trajectory_read": false,
+    "PROTO17_Pref25_authorization_consumed": true,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "production_prelaunch_successor_design_authorized": true,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hlt14_mon14.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt14_mon14.py": "6d96f39767046abea2b13737ec16b401563fceb0ad073b984f0d9cdd3fd9777b",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt14_inputs.py": "6885c812ba7c208d805eed6b4fd750d341c8d7e669a6e355ff0ed08c3c8d4842",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt14_qualification.py": "ccda03e41d33201682a3ac3b50f2176c8a2e89335ddc6152ec4dee78cdfd612a",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt14_runtime.py": "14334af147d958f569856b40ef39a128ab04cd455a2f0ce52ed6f3717fec740e",
+    "tests/test_fgc_hlt14_mon14_reproduction.py": "5f4bcf9fef7178d87b01665d023ac9f7a374dca6da96e3ac3e6d24146fa042fc",
+    "tests/test_fgc_proto17_hlt14_inputs.py": "1be094f382d6004407dd2ef971431e927a1c58e145a5427533bd8faf406000d5",
+    "tests/test_fgc_proto17_hlt14_runtime.py": "c30d4f211a3c38199332daa497b2e736d91f97d0d6ebbfc62dc60cf9c9ce348c"
+  },
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "HLT14_calibration_completed": false,
+    "HLT14_external_production_launch_authority_validated": false,
+    "HLT14_fresh_GR0_dynamic_calibration_authorized": false,
+    "HLT14_power_loss_durability_qualified": false,
+    "HLT14_pretrajectory_operation_authorized": false,
+    "HLT14_production_filesystem_durability_or_restart_qualified": false,
+    "HLT14_production_namespace_materialized": false,
+    "HLT14_production_namespace_reuse_or_foreign_store_rejection_validated": false,
+    "HLT14_real_historical_journal_payload_semantics_replayed": false,
+    "HLT14_real_production_state_loaded": false,
+    "HLT14_real_raw_bundle_bytes_recomputed": false,
+    "HLT14_trajectory_read": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "external_production_launch_authority_instance_validated": false,
+    "mechanism_question_answered": false,
+    "pretrajectory_operation": false,
+    "production_namespace_materialized": false,
+    "real_historical_journal_payload_semantics_replayed": false,
+    "real_production_state_or_raw_bundle_opened": false,
+    "role": "completed_synthetic_only_PROTO17_authority_bundle_and_durable_runtime_qualification",
+    "runtime_owner": "FGC-1-HLT14-MON14",
+    "sealed_compact_inputs_read_from_immutable_commit": true,
+    "synthetic_Git_authority_preflight_exercised": true,
+    "synthetic_real_NPZ_bundles_opened": true,
+    "synthetic_temporary_store_materialized": true,
+    "target_protocol": "FGC-2-SF1-PROTO17",
+    "trajectory_read": false
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-hlt14-mon14.toml": "dfbe77b9a67bfaa35d1404f9903970ae4a9f04f6ae12d97bc3b598fac47f9ecf",
+    "configs/fgc/fgc-1-pro17-frz1.toml": "6ff3cfad5eebb7824434e3b7f97da3ce7a8610312523e3461c8999532678d2ec",
+    "configs/fgc/fgc-1-pro17-pref25.toml": "60e78ac3778bd0411bc52dc8756396a18b8f3f1be54b18938fa5cdcb83c59279",
+    "configs/fgc/fgc-2-sf1-protocol-v17.toml": "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+  }
+}

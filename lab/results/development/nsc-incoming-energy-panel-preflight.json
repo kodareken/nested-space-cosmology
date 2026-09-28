@@ -1,0 +1,163 @@
+{
+  "accountable_author": "Douglas Ek",
+  "elapsed_seconds": 7.685738042011508,
+  "future_work": {
+    "authorized_full_panel": false,
+    "energy_operator_applications_per_sign_step": 2035,
+    "full_upper_vector_product_count": 73968180,
+    "geometry_preparations": 699,
+    "linear_runtime_estimate_seconds": 5285.4793249218055,
+    "padded_energy_vector_products_per_operator": 26,
+    "planning_allowance_seconds": 10570.958649843611,
+    "real_steps_at_current_spacing": 699,
+    "runtime_interpretation": "measured-first-step extrapolation and2x planning allowance, not a wall-clock guarantee",
+    "signs": 2
+  },
+  "identities": {
+    "Chebyshev_multiplication_residuals": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "endpoint_normalization_permitted": false,
+    "linear_vertex_kernel_degree": 49,
+    "phase_gauge": "G->G+(E/B)I, diag(0,2E/B), same projector",
+    "raw_covariance_degree": 48,
+    "residual_energy_degree": 25,
+    "retained_energy_degree": 24,
+    "scalar_commutator": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "uniform_norm": "sup_real_x norm(sum Rk Tk) <= sum norm(Rk)",
+    "unresolved_edge": "lower component degree25 is 4*(1/B)*c24_lower"
+  },
+  "initial_interpolation_source": "https://raw.githubusercontent.com/chebfun/ATAP/development/chap8.m (Theorem8.2 Eq8.3)",
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-matched-horizon-initializer.json": "7f6c5576a72b37172c40f76a82eaabce1243199857ded670a7e19d1c04536cff",
+    "results/development/nsc-incoming-validated-vacuum-propagation.json": "42e7719842936f818daca43ba4d35599162d53de9468dd8f8bbabc0351963a1f",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_matched_horizon_initializer.py": "0935e82bccdf6d3fa22517ca85c183842625fac772e0dac0a3bcb9a18d8087e8",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_incoming_validated_vacuum_propagation.py": "b5cbd35037eb1605317ffc352613da2656ba207dbdd4a6e6d219b8dd77bd247f"
+  },
+  "next_decision": "review full residual and measured cost before authorizing any whole-panel run",
+  "payload": {
+    "path": "results/development/artifacts/nsc-incoming-energy-panel-preflight.bbbce3cdf7d52a417383e0c763d998a52124a2cb7f2fd52064d63f8986eef9e7.json",
+    "sha256": "bbbce3cdf7d52a417383e0c763d998a52124a2cb7f2fd52064d63f8986eef9e7"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_energy_panel_preflight.py --check",
+  "schema": "NSC-INCOMING-ENERGY-PANEL-PREFLIGHT-v1",
+  "scope": {
+    "archived_modes_modified": false,
+    "endpoint_column_renormalized": false,
+    "full_panel_run": false,
+    "metric_or_physical_IV": false,
+    "one_time_step_each_sign": true,
+    "physical_source_integral": false,
+    "physical_state_scales_or_source_kappa_changed": false,
+    "push_or_PDF": false,
+    "shared_geometry_preparations": 1
+  },
+  "shared_geometry_seconds": 0.11877620799350552,
+  "signs": {
+    "-1": {
+      "analytic_temporal_generator_tail_upper": 7.794073933479517e-24,
+      "energy_degree25_residual_upper": 3.247894785157648e-34,
+      "inherited_projector_error_separate": {
+        "binary_interval": [
+          [
+            0,
+            105030831406432063041152814494787322651721556351589222850738291077653330421018631,
+            -340,
+            266
+          ],
+          [
+            0,
+            420123325625728252164611257979149290606886225406356891402953164310613321684074529,
+            -342,
+            268
+          ]
+        ],
+        "float_enclosure": [
+          4.6894107809939926e-23,
+          4.689410780993994e-23
+        ]
+      },
+      "initial_DCT_rounding_upper": 1.6054556006791547e-38,
+      "initial_interpolation_error_upper": 2.2675916047488434e-27,
+      "local_gate_pass": true,
+      "local_uniform_column_error_upper": 7.794073933804334e-24,
+      "local_uniform_column_tolerance": 1e-20,
+      "projected_low_order_arithmetic_upper": 2.747710245059341e-38,
+      "step_elapsed_seconds": 3.7675048330129357,
+      "temporal_polynomial_tail_upper": 3.100999881430109e-47
+    },
+    "1": {
+      "analytic_temporal_generator_tail_upper": 7.794073933479517e-24,
+      "energy_degree25_residual_upper": 3.2478947852777026e-34,
+      "inherited_projector_error_separate": {
+        "binary_interval": [
+          [
+            0,
+            840360728362318371460272755766985376630534141266839880556128101690290060976578449,
+            -343,
+            269
+          ],
+          [
+            0,
+            210090182090579592865068188941746344157633535316709970139032025422572515244144615,
+            -341,
+            267
+          ]
+        ],
+        "float_enclosure": [
+          4.6900474445650325e-23,
+          4.690047444565034e-23
+        ]
+      },
+      "initial_DCT_rounding_upper": 1.6054947734631248e-38,
+      "initial_interpolation_error_upper": 2.2686743654787903e-27,
+      "local_gate_pass": true,
+      "local_uniform_column_error_upper": 7.794073933804334e-24,
+      "local_uniform_column_tolerance": 1e-20,
+      "projected_low_order_arithmetic_upper": 2.748307545695311e-38,
+      "step_elapsed_seconds": 3.675205832987558,
+      "temporal_polynomial_tail_upper": 3.3488026048284984e-47
+    }
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-energy-panel-preflight.md": "73d9c1905d42526dc4eb38d403ce84e3e7988dae2c54b453773ef432d755f64c",
+    "scripts/derive_nsc_incoming_energy_panel_preflight.py": "f00081040056db081763130cee24f916c4c7712fba67e3630d18907e1217e93e",
+    "src/recursive_horizons/nsc_incoming_energy_panel.py": "6762e10364a9810cadc2a517cf006674db95cec3a2b5e019b58316d8d48e075b",
+    "tests/test_nsc_incoming_energy_panel.py": "147660e7b49621065c255f132fc8a05fdde354f71809fad923eaa32c51ff9290"
+  },
+  "status": "PASS: initial Cheb24 and one-step energy residual; full panel not run"
+}

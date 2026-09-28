@@ -1,0 +1,316 @@
+{
+  "accountable_author": "Douglas Ek",
+  "analytic_physical_bridge": {
+    "Duhamel": "C_g(T)-P_g(T)=U D_u U^dagger - int U R_g U^dagger; both terms map Hs to Hs+6",
+    "P16_per_sign": "angular",
+    "endpoint_coefficient_bridge": "C_g(Sigma)=C0 implies P_g(Sigma)-P_ref(Sigma) also Hs to Hs+6, so classical coefficients through degree -5 agree",
+    "finite_classical_projector": "existence through degree -6 using owned diagonal/off-diagonal compatibility; R_g in Psi^{-6}; not an evaluation of stored SymbolJets",
+    "negative_energy_cone": "charge conjugation of the existing source/mode owner: C(-E,ell)=I-sigma3*conj(C(E,-ell))*sigma3; not the tail per_sign label",
+    "remainder_constant": null,
+    "uniform_pointwise_energy_error": false,
+    "upstream_P16": "translation-invariant Fourier multiplier O(E^-16) from the positive full-collar bound; Hs to Hs+16. No energy-differentiability of that bound is used."
+  },
+  "assumptions": {
+    "amplitudes": "finite, not infinitesimal; no selected numerical duration",
+    "connected_PG_chart": "F>0, s_K>0 from the metric-pullback owner",
+    "energy_spectrum": "existing unbounded signed-real-energy continuum; no finite physical energy cutoff is introduced or covered; bounded-frequency partitions are estimate devices only",
+    "free_slots": "the twenty a/r normal/mixed slots of IncomingNormalJetChange",
+    "history_class": "smooth finite real metric histories on a compact KS slab between an unchanged upstream slice and incoming Sigma, inside the regular trapped chart, compact axial support, N,a,r positive",
+    "incoming_slice": "spacelike; g^(TT)=1/N^2>0; reference radial normal a0^2=beta_PG^2-1>0",
+    "intrinsic_and_N_beta": "N,beta,a,r fixed as functions along Sigma; N/beta normal jets through four also fixed",
+    "preparation": "same upstream state and original source law; C_g(Sigma)=C0 exactly"
+  },
+  "checked_finite_algebra": {
+    "calculus_scope": "finite coefficient and source identities only; the physical operator bridge and triangular derivative count are analytic arguments",
+    "exact_scalar_residual_count": 33,
+    "finite_endpoint_maps": [
+      {
+        "amplitude_derivative_used": false,
+        "coefficient_map_determinant": "I*a1**3*ell*m/(8*r1**2)",
+        "exact_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "finite_difference_of_p1_Tk": [
+          "(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(2*r1**2)",
+          "(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(2*r1**2)"
+        ],
+        "finite_endpoint_coefficient": [
+          "-I*a1*(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(4*r1**2)",
+          "I*a1*(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(4*r1**2)"
+        ],
+        "nonlinear_lower_jets_retained": true,
+        "normal_order": 1
+      },
+      {
+        "amplitude_derivative_used": false,
+        "coefficient_map_determinant": "I*a1**5*ell*m/(32*r1**2)",
+        "exact_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "finite_difference_of_p1_Tk": [
+          "(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(2*r1**2)",
+          "(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(2*r1**2)"
+        ],
+        "finite_endpoint_coefficient": [
+          "-a1**2*(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(8*r1**2)",
+          "-a1**2*(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(8*r1**2)"
+        ],
+        "nonlinear_lower_jets_retained": true,
+        "normal_order": 2
+      },
+      {
+        "amplitude_derivative_used": false,
+        "coefficient_map_determinant": "I*a1**7*ell*m/(128*r1**2)",
+        "exact_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "finite_difference_of_p1_Tk": [
+          "(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(2*r1**2)",
+          "(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(2*r1**2)"
+        ],
+        "finite_endpoint_coefficient": [
+          "I*a1**3*(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(16*r1**2)",
+          "-I*a1**3*(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(16*r1**2)"
+        ],
+        "nonlinear_lower_jets_retained": true,
+        "normal_order": 3
+      },
+      {
+        "amplitude_derivative_used": false,
+        "coefficient_map_determinant": "I*a1**9*ell*m/(512*r1**2)",
+        "exact_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "finite_difference_of_p1_Tk": [
+          "(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(2*r1**2)",
+          "(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(2*r1**2)"
+        ],
+        "finite_endpoint_coefficient": [
+          "a1**4*(I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 - I*Delta_r_k*a1*ell)/(32*r1**2)",
+          "a1**4*(-I*Delta_a_k*ell*r1 + Delta_a_k*m*r1**2 + I*Delta_r_k*a1*ell)/(32*r1**2)"
+        ],
+        "nonlinear_lower_jets_retained": true,
+        "normal_order": 4
+      }
+    ],
+    "signed_source": {
+      "exact_residuals": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "identity": "Csrc(-E)=I-conj(Csrc(E))",
+      "modal_identity": "C(-E,ell)=I-sigma3*conj(C(E,-ell))*sigma3 by the owned mode map and coisometry",
+      "tail_receipt_sign_meaning": "angular sign, not energy sign"
+    }
+  },
+  "independent_reviews": {
+    "finite_jet_triangularity": "69ac44c5-8b55-41bf-ba3c-200822a36b06",
+    "physical_projector_remainder_and_spacelike_KS": "a4589cc3-11b0-4c92-9dea-a7b98d37649b"
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-constraint-gate.json": "44ee42d0b0cd2143397616cfe57bde7a1c88be9bc36c637feaa3d6abfe1ad62c",
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "results/development/nsc-incoming-jet-rigidity.json": "c8047c0398d0bcd235a6218e7eec97339be137a294877123f2db2e1138d57ca0",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_constraint_gate.py": "79299ee5eef58bfe5124d7e88d981db6caa1d043ed3b8f71d1e76e04d4246eed",
+    "src/recursive_horizons/nsc_incoming_joint_constraints.py": "3fa6a90601d2217a8e13220d0cbad70ab2a2d568ddbf4bbdd686dd67a59f45a0",
+    "src/recursive_horizons/nsc_incoming_local_constraints.py": "820f43cbc4849074210b7298b1b9ac0c43abf22cb2b4f127ec407a0fc2519ac3",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_finite_preparation.py --check",
+  "residuals": {
+    "exact_symbolic_identities": 0
+  },
+  "result": {
+    "M": "5887634380411363/265464355000000000",
+    "M_denominator": 265464355000000000,
+    "M_numerator": 5887634380411363,
+    "classical_projector_extension": "analytic finite symbol through degree -6; distinct from implemented derivative-order-4 SymbolJet",
+    "executed_SymbolJet_at_order_six": false,
+    "finite_differences_not_amplitude_derivatives": true,
+    "finite_energy_threshold": null,
+    "finite_normal_identities": [
+      "partial_T^k a_g(z)=partial_T^k a_ref(z)",
+      "partial_T^k r_g(z)=partial_T^k r_ref(z)"
+    ],
+    "implemented_SymbolJet_derivative_order": 4,
+    "included_shift": "E_beta[g,C0]=E_beta[g_ref,C0]=P_K<-M",
+    "normal_mixed_slot_count": 20,
+    "normal_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "physical_remainder": "C_g-P_g : H^s -> H^{s+6}",
+    "physical_remainder_constant": null,
+    "sufficient_for_C0_matching": false,
+    "uniform_pointwise_energy_error_claimed": false
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 92552,
+      "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+      "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+    }
+  ],
+  "reused_physical_evidence": {
+    "background": {
+      "angular_signs": [
+        -1,
+        1
+      ],
+      "full_collar_I16_to_I32_upper_by_angular_sign": {
+        "-1": [
+          1.2829501037224872e+17,
+          5.0414788619716184e+16,
+          5.433790590110849e+16,
+          3.301698681452116e+17,
+          1.6419448058122076e+18,
+          1.1915543391062108e+19,
+          1.0281107167132869e+20,
+          1.0799939642095521e+21,
+          1.343036043306108e+22,
+          1.9313777359608018e+23,
+          3.120563385600728e+24,
+          5.516113106482915e+25,
+          1.0391820941823585e+27,
+          2.0321169693756413e+28,
+          3.989211750432136e+29,
+          7.397278704660649e+30,
+          1.0878129469371801e+32
+        ],
+        "1": [
+          1.2829501037224872e+17,
+          5.0414788619716184e+16,
+          5.433790590110849e+16,
+          3.301698681452116e+17,
+          1.6419448058122076e+18,
+          1.1915543391062108e+19,
+          1.0281107167132869e+20,
+          1.0799939642095521e+21,
+          1.343036043306108e+22,
+          1.9313777359608018e+23,
+          3.120563385600728e+24,
+          5.516113106482915e+25,
+          1.0391820941823585e+27,
+          2.0321169693756413e+28,
+          3.989211750432136e+29,
+          7.397278704660649e+30,
+          1.0878129469371801e+32
+        ]
+      },
+      "group": 14,
+      "starting_tail_domain": 160.0
+    },
+    "constraint_gate_record": "results/development/nsc-incoming-constraint-gate.json",
+    "fixed_transfer_record": "results/development/nsc-incoming-fixed-transfer.json",
+    "included_assembly_owner": "src/recursive_horizons/nsc_incoming_joint_constraints.py",
+    "jet_rigidity_record": "results/development/nsc-incoming-jet-rigidity.json",
+    "lapse_source_numerical_accuracy_used": false,
+    "physical_generators_rerun": false,
+    "raw_current_witness": "5887634380411363/265464355000000000",
+    "source_bindings": {
+      "channel": {
+        "angular_eigenvalue": 2.23606797749979,
+        "angular_level": 1,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 12,
+        "factor": 0.3155184556573868,
+        "family": 2,
+        "index": 14,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 688
+      },
+      "intrinsic_geometry": "rho1; a1\u00b2=3*pi/2-4, r1\u00b2=2",
+      "source_config": {
+        "angular_levels": 9,
+        "compact_levels": [
+          1,
+          2
+        ],
+        "cutoff": 3.973074368754331,
+        "evolution_steps": 6000,
+        "frequency_max": 40.0,
+        "frequency_points": 8,
+        "horizon_offset": 1e-10,
+        "horizon_rho": 1.9006916054701435,
+        "magnetic_flux": 4,
+        "omega": 3.973074368754331,
+        "outer_floor": 60.0,
+        "scattering_tolerance": 1e-09,
+        "surface_gravity": 0.23832579963401956
+      }
+    },
+    "vacuum_tail_record": "results/development/nsc-incoming-vacuum-tail-bound.json"
+  },
+  "schema": "NSC-INCOMING-FINITE-PREPARATION-v1",
+  "scope": {
+    "P16_per_sign_meaning": "angular",
+    "broader_NSC_architecture_excluded": false,
+    "classical_projector_is_implemented_SymbolJet": false,
+    "computed_Sobolev_constant": null,
+    "excluded_class": "smooth finite compact same-upstream/source histories with C_g(Sigma)=C0, fixed intrinsic N,a,r,beta on Sigma, and fixed N/beta normal jets through four",
+    "extended_transmitting_stationarity": "OPEN",
+    "finite_compact_prepared_fixed_C0_class": "NON-EXISTENCE",
+    "finite_energy_threshold": null,
+    "finite_physical_energy_cutoff_introduced": false,
+    "higher_normal_jets_classified": false,
+    "metric_evolution_or_publication": false,
+    "new_Hadamard_gate_or_cutoff": false,
+    "other_parent_data_or_evolved_incoming_covariance_excluded": false,
+    "physical_field_source_radial_producer_or_energy_scan_runs": 0,
+    "source_law_or_boundary_prescription_changed": false,
+    "sufficient_C0_matching": false,
+    "uniform_pointwise_energy_error": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-finite-preparation.md": "24a1805e9e2bad4c8925f4feadf678d0e35ba077a2aa6632342416d2944cc408",
+    "scripts/derive_nsc_incoming_finite_preparation.py": "af32b5727640d89121ac15f5d42244431f2c86ee75d08cd38e9ff8fd2defafbc",
+    "src/recursive_horizons/nsc_incoming_finite_preparation.py": "b2049372396303fd1f04475fc3389872baa4da0e4851a7d266f1d8a79d7b4b2f",
+    "tests/test_nsc_incoming_finite_preparation.py": "1efa1325c6c59766e9815e5f883f931a0d34fec82d62911a5ff848f9b02282ff"
+  },
+  "status": "NON-EXISTENCE PASS: declared incoming finite compact prepared fixed-C0 class; extended transmitting stationarity OPEN",
+  "verification_tolerances": {
+    "exact_symbolic_identities": 0
+  }
+}

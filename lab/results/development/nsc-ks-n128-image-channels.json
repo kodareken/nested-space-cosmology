@@ -1,0 +1,262 @@
+{
+  "accountable_author": "Douglas Ek",
+  "ball_screens": {
+    "beta_under_1e-9_n_held": [
+      {
+        "feasible": false,
+        "h": 1e-06
+      },
+      {
+        "feasible": false,
+        "h": 0.0001
+      },
+      {
+        "feasible": false,
+        "h": 0.01
+      }
+    ],
+    "beta_under_3e-11_n_held": [
+      {
+        "feasible": false,
+        "h": 1e-06
+      },
+      {
+        "feasible": false,
+        "h": 0.0001
+      },
+      {
+        "feasible": false,
+        "h": 0.01
+      }
+    ],
+    "both_under_1e-9": [
+      {
+        "feasible": false,
+        "h": 1e-06
+      },
+      {
+        "feasible": false,
+        "h": 0.0001
+      },
+      {
+        "feasible": false,
+        "h": 0.01
+      }
+    ],
+    "both_under_3e-11": [
+      {
+        "feasible": false,
+        "h": 1e-06
+      },
+      {
+        "feasible": false,
+        "h": 0.0001
+      },
+      {
+        "feasible": false,
+        "h": 0.01
+      }
+    ],
+    "n_down_1e-12_and_beta_at_most_2e-9": [
+      {
+        "feasible": true,
+        "h": 0.0001
+      }
+    ]
+  },
+  "best_constraint_maxima": [
+    2.6195212665669487e-09,
+    7.292716100448793e-08
+  ],
+  "beta_gap": 7.289716100448793e-08,
+  "beta_primary_floor": {
+    "beta_gain": 7.149873897156196e-08,
+    "h": 0.0001,
+    "n_gain": -6.026010762448807e-22,
+    "n_strictly_improved": false,
+    "predicted_maxima": [
+      2.6195212665675513e-09,
+      1.4284220329259707e-09
+    ],
+    "step_norm": 2.532522407930838e-06
+  },
+  "beta_primary_rows": [
+    {
+      "beta_gain": 6.535625940883743e-08,
+      "h": 1e-06,
+      "n_gain": -2.7379678275505216e-22,
+      "n_strictly_improved": false,
+      "predicted_maxima": [
+        2.6195212665672225e-09,
+        7.570901595650503e-09
+      ],
+      "step_norm": 1.0000000006404672e-06
+    },
+    {
+      "beta_gain": 7.149873897156196e-08,
+      "h": 0.0001,
+      "n_gain": -6.026010762448807e-22,
+      "n_strictly_improved": false,
+      "predicted_maxima": [
+        2.6195212665675513e-09,
+        1.4284220329259707e-09
+      ],
+      "step_norm": 2.532522407930838e-06
+    },
+    {
+      "beta_gain": 7.149873897145092e-08,
+      "h": 0.001,
+      "n_gain": -1.0989094437766973e-21,
+      "n_strictly_improved": false,
+      "predicted_maxima": [
+        2.6195212665680476e-09,
+        1.4284220330370115e-09
+      ],
+      "step_norm": 2.5325224079211737e-06
+    }
+  ],
+  "channels": {
+    "baseline_low_subgap": null,
+    "changed_history_UV_tail": null,
+    "field_error_bound": null,
+    "full_between_node_remainder": null,
+    "geometry_between_node_raw": [
+      2.0172752357439094e-13,
+      6.527672152811803e-11
+    ],
+    "geometry_between_node_remainder": [
+      2.1172752357439098e-13,
+      6.528672152811804e-11
+    ],
+    "geometry_remainder_shared_by_zero_pad": true,
+    "missing_paths": {
+      "baseline_low_subgap": "group13 subgap panel and the Pauli matrix identity are not a constraint error at ad759424",
+      "changed_history_UV_tail": "linear UV contraction is a coefficient identity with no numerical tail on I",
+      "field_error_bound": "fine-matter accuracy is bound to axial profile a4c061f297027bcb9934fa2338bb81fb799ca4ec26a025f6bc563384c70cd69d, not ad759424",
+      "full_between_node_remainder": "saved operators are the 47-node target; dense matter is not stored"
+    }
+  },
+  "cokernel": {
+    "certified_determinant_interval": [
+      -0.0029161631968961416,
+      -0.0029161631968961255
+    ],
+    "continuous_cokernel_trivial": true,
+    "pointwise_principal_det_max": -0.0029217611092754786,
+    "pointwise_principal_det_min": -0.0029226442238966836,
+    "principal_det_excludes_zero": true,
+    "principal_det_is_invertibility_not_existence": true,
+    "principal_det_max": -0.0029217611092754786,
+    "principal_det_min": -0.0029226442238966823,
+    "same_sign_as_certified_det": true
+  },
+  "existence_tolerance": 3e-11,
+  "extra_certificate": "Scoped NON-EXISTENCE needs a necessary relation on the evolved state with an error-controlled gap above zero for every history in the declared (w,U) class on I. The truncation image gap is representation evidence. The geometry principal cokernel is trivial. The Fourier leftover-null is a finite-span vector of an older geometry Jacobian. This coupled Jacobian has 94 positive equilibrated singular values; Newton rank 90 is the absolute floor, not a certified left null. L(E) changes sign on this residual. Pi-prime plus E_beta changes sign. The slot flux divergence is positive here and does not use the residual. None of these is the class relation.",
+  "families_evolved": 0,
+  "flux_first_integral": {
+    "dpi_plus_beta": {
+      "abs_max": 0.464519470402,
+      "abs_min": 0.003521260456,
+      "max": 0.464519470402,
+      "min": -0.346237541813,
+      "sign_stable": false
+    },
+    "flux_divergence": {
+      "abs_max": 0.01954522202,
+      "abs_min": 0.017814118038,
+      "max": 0.01954522202,
+      "min": 0.017814118038,
+      "sign_stable": true
+    },
+    "integrated_pi_plus_beta": 0.0030324914098667577
+  },
+  "higher_n_authorized": false,
+  "higher_n_note": "n=256 is the same subclass pattern and is not authorized by this image",
+  "image_short_of_existence_ball": {
+    "N": 2.5895212665675512e-09,
+    "beta": 1.3984220329259706e-09
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-principal.json": "60400854b887a3cc35fc623807484ced7dc6549518bf001683b76c6ee523db6e",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust03.json": "fcadd08f2f80ff4c4fa4866aab4571fe31a42a93835b4286a7c7f3c6baefa7c5",
+    "results/development/nsc-ks-fine-matter-accuracy.json": "1c8b1478f1e032c8b5108b3b6791e2fb19a6c9ffc04568bfd8ddbf1157101a03",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-n128-high-modes.json": "1e189fbcca2c77f3d482cbf615f0fda97ab6905ca85c47a4c5a0a7192d7f43f4",
+    "scripts/derive_nsc_ks_declared_wu_cokernel.py": "2a5df654177bda48aaa5285b5d6b14faf3cdbb8a8828915addfcbcf5f2a50d44",
+    "scripts/derive_nsc_ks_flux_first_integral.py": "a2b3aa22bd0ef77b801e2a9bcd4bf4a7443527a49e79cadf000a3c4557cb504d",
+    "scripts/derive_nsc_ks_n128_high_modes.py": "f96e9600cf19ce88b91dd0918c048ce30dac8d651430d1c06ced885cabccb064",
+    "scripts/derive_nsc_ks_n16_geometry_killing_current.py": "b1f65585bd422a6e45e4695f6d301477b0e8f8784968b865d595e6e0886c0b6a"
+  },
+  "jacobian_spectrum": {
+    "equilibrated": {
+      "count": 94,
+      "ratio": 43515505.70407297,
+      "s0": 3.975999103476516e-07,
+      "smin": 9.136970923687026e-15
+    },
+    "fat_system_not_a_left_null": true,
+    "left_cokernel_trivial": true,
+    "linear_step_delta_is_none": true,
+    "linear_step_n_equations": 94,
+    "linear_step_n_unknowns": 256,
+    "linear_step_rank": 90,
+    "linear_step_rank_or_conditioning": true,
+    "raw": {
+      "count": 94,
+      "ratio": 16167361627872.645,
+      "s0": 4249865983.401754,
+      "smin": 0.00026286700831105027
+    },
+    "singular_ratio_cut": 1000000.0,
+    "stable_rank": 90,
+    "whitened_width": 66
+  },
+  "joint_linear_gain_positive": true,
+  "joint_n_gain_at_beta_drop_1e-8": [
+    {
+      "h": 1e-08,
+      "n_gain": 1.3264190564075827e-11,
+      "required_beta_drop": 1e-08
+    },
+    {
+      "h": 1e-06,
+      "n_gain": 2.307044522921239e-11,
+      "required_beta_drop": 1e-08
+    },
+    {
+      "h": 0.0001,
+      "n_gain": 2.3080594045459785e-11,
+      "required_beta_drop": 1e-08
+    }
+  ],
+  "killing_current": {
+    "interval_excludes_zero": false,
+    "interval_max": 6.191243763496226e-05,
+    "interval_min": -6.0748488000255536e-05,
+    "max": 6.191243763496211e-05,
+    "min": -6.074848800025539e-05,
+    "sign_stable": false
+  },
+  "lifted_profile_identity": "3af275b0ee0d0d0237799290e7a76639513d47cc5f1bc6da1d4d33593392f888",
+  "n_gap": 2.5895212665669486e-09,
+  "new_best_residual": false,
+  "newton_rank_note": "Rank 90 of 94 because the solver floor is 1e-14 when the leading singular value is below 1. All 94 equilibrated singular values stay positive. The absent step is the fat shape: 256 unknowns, 94 equations.",
+  "newton_step_accepted": false,
+  "nodal_flatness": {
+    "beta_second_over_first": 0.9999999756420405,
+    "n_second_over_first": 0.9999999125857454
+  },
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "probe_authorized": false,
+  "profile_identity": "ad75942438dad1de599ee260e5d9aa7f17d60af26b533bee2b0691f2a6dec777",
+  "schema": "NSC-KS-N128-IMAGE-CHANNELS-v1",
+  "source_hashes": {
+    "docs/nsc-ks-n128-image-channels.md": "b3e436199e851efdce1e8a4f9339edd99451e27f03db360c6738d733976ead0c",
+    "scripts/derive_nsc_ks_n128_image_channels.py": "15fdacef14c6fa554275a0610932b23bc20e8fd9c26810eb57b69549cea51440"
+  },
+  "stall": "n128_sup_norm_image_outside_existence_ball",
+  "status": "OPEN: n=128 sup-norm image stays outside the 3e-11 ball; cokernel trivial; not NON-EXISTENCE"
+}

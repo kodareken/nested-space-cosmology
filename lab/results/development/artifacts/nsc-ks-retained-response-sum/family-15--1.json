@@ -1,0 +1,58 @@
+{
+  "CPU_seconds": 14.307275000000004,
+  "family_CPU_cap": 90.0,
+  "matter_change_maxima": [
+    0.0003811984786147846,
+    0.0001993686192587006
+  ],
+  "new_operator_solves": 1,
+  "operator_digest": "96534d18ccae7edbefbfc108319125fb53166cc21d451b26e76c5a72a3c2b7d8",
+  "operator_energy_interval": [
+    0.0,
+    160.0
+  ],
+  "payload": {
+    "bytes": 461555,
+    "path": "results/development/artifacts/nsc-ks-retained-response-sum/family-15--1.npz",
+    "sha256": "b63b383322adf8e66a567c0dc85ba6391c7f47ee416b164fa034a30523c1ddf7"
+  },
+  "physical_local_gate": "OPEN",
+  "positive_family": [
+    15,
+    -1
+  ],
+  "quadrature_measure": 160.0,
+  "schema": "NSC-KS-RETAINED-RESPONSE-FAMILY-v1",
+  "signed_families": [
+    "15_-1_E+1",
+    "15_1_E-1"
+  ],
+  "source_and_numerical_error_bound": null,
+  "source_hashes": {
+    "docs/nsc-ks-retained-response-control.md": "9b5269390c087c1c167c152cd7dbb0165c334d379e6c214314574a05897d9f9e",
+    "docs/nsc-ks-retained-response-sum.md": "25f6b9f04f789799bf696a2d676eeabd9b8080617cf8be5893f8687fac763e26",
+    "results/development/artifacts/nsc-ks-energy-propagator-control.npz": "3c65e9b3d8dacbd82620e5e48f10a0a4b62c19642b526f499d3cf0dbcfaee71b",
+    "results/development/artifacts/nsc-ks-retained-response-control.npz": "7b34d5ddf8fec8d4005280e294db68f6a3c3b21c584376210c44296dc0687cf5",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-energy-propagator-control.json": "c04c8e3d0315e6ce83d228c72ff63a7e96fd866474c57e547a9ff20647d03162",
+    "results/development/nsc-ks-retained-response-control.json": "bb8eca24b8b77d045c6a9d7fe6597cbedc2de96bb82c27e67afc0451531926f4",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "scripts/derive_nsc_ks_retained_response_control.py": "55cc045ee407dcd86b482f02bd140466e08cc233fb54441ea1a2b1bba1f3caba",
+    "scripts/derive_nsc_ks_retained_response_sum.py": "964784244c91cbaeb9e02502fdc09f442e6dd693e45f9e034892040d0910a833",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_energy_propagator.py": "5f75023efc8c2b637fc4983b414cab50f15f90f8abc1a24dbc1d23ecef9ecf94",
+    "src/recursive_horizons/nsc_ks_local_constraints.py": "ef09afe2ff77a76dba5fb1580c47efc82cd9e4c11f288144d64d98457232d56a",
+    "src/recursive_horizons/nsc_ks_matter_difference.py": "81b87ad8f903c9495b9a8c29825cfa9c1edb18f60677dab55939de43d537750c",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41"
+  },
+  "source_panels": [
+    "low/15_-1",
+    "mid/15_-1",
+    "subgap8/15_-1"
+  ],
+  "source_rows": 728,
+  "upstream_batches": 46
+}

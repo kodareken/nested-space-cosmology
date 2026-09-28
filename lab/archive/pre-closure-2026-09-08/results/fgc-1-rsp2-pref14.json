@@ -1,0 +1,235 @@
+{
+  "artifact_id": "FGC-1-RSP2-PREF14",
+  "artifact_payload": {
+    "epistemic_boundary": {
+      "CAL9_shortfall_was_preasymptotic_on_this_tested_ladder": true,
+      "PROTO13_requires_a_new_prospective_freeze": true,
+      "RSP2_does_not_select_an_eligible_GR0_case": true,
+      "RSP2_is_not_a_fresh_GR0_calibration": true,
+      "candidate_or_mechanism_outcome_read": false,
+      "retained_EFT_or_physical_transition_promoted": false
+    },
+    "exact_crosschecks": {
+      "checkpoint_event_log_matches_external": true,
+      "checkpoint_result_matches_external": true,
+      "independent_endpoint_matches_external_result": true,
+      "independent_endpoint_matches_terminal_event": true,
+      "raw_norms_preserved_before_roundoff_classification": true,
+      "terminal_event_matches_external_result": true
+    },
+    "immutable_study": {
+      "accepted_boundary_count": 23,
+      "authorization_blob_matches_commit": true,
+      "authorization_commit": "81412c1b6b86648a289e865d8ab40b9bbab26370",
+      "authorization_commit_is_ancestor_of_HEAD": true,
+      "authorization_sha256": "a6c147d7b369387e70318ee42eb56c97332702a227fd93d7ad20a1cfe2c1aa22",
+      "checkpoint_sha256": "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34",
+      "elapsed_wall_seconds": "8078.001129082986",
+      "event_log_byte_count": 15060,
+      "event_log_line_count": 25,
+      "event_log_sha256": "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937",
+      "launch_manifest_bound_before_outcome": true,
+      "manifest_sha256": "f547386ba7ccc8ddad7a264d24c66be1a6a601bef5ddad90ebb33ae9ddfcb52b",
+      "study_id": "a3a7b331d4fa72ff2e37fd674256a61b216c809539c7a0c4b154c76961355257",
+      "study_result_sha256": "3f32fd18d85eac826a253b97d073608111dcb582bbb1a1aa0a7490c7e2f04bf6",
+      "terminal_classification": "completed_target_and_complete_constraint_pass"
+    },
+    "independent_constraint_reduction": {
+      "accepted_stage_counts": [
+        2524,
+        3948,
+        7084
+      ],
+      "classification": "completed_target_and_complete_constraint_pass",
+      "complete_constraint_admission_passed": true,
+      "component_finest_pair_orders": {
+        "Hamiltonian": 2.1246424153634873,
+        "gauge_r": 1.8428133958883794,
+        "gauge_t": 1.8516167425060845,
+        "radial_momentum": 1.9817436463819333,
+        "reduction_R": null,
+        "reduction_alpha": null,
+        "reduction_chi": null,
+        "reduction_lambda": null,
+        "reduction_phi": null,
+        "reduction_shift": null
+      },
+      "component_status": {
+        "Hamiltonian": "finite_order",
+        "gauge_r": "finite_order",
+        "gauge_t": "finite_order",
+        "radial_momentum": "finite_order",
+        "reduction_R": "accumulated_roundoff_enclosed_zero_pair",
+        "reduction_alpha": "accumulated_roundoff_enclosed_zero_pair",
+        "reduction_chi": "accumulated_roundoff_enclosed_zero_pair",
+        "reduction_lambda": "accumulated_roundoff_enclosed_zero_pair",
+        "reduction_phi": "accumulated_roundoff_enclosed_zero_pair",
+        "reduction_shift": "accumulated_roundoff_enclosed_zero_pair"
+      },
+      "coordinate_time": 1.4375,
+      "method": "SSPRK3",
+      "minimum_finest_pair_order": 1.5,
+      "minimum_finite_finest_pair_order": 1.8428133958883794,
+      "point_counts": [
+        4097,
+        8193,
+        16385
+      ],
+      "state_sha256": [
+        "ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162",
+        "c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c",
+        "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d"
+      ],
+      "target_accumulated_roundoff_enclosures": [
+        2.296474121976644e-09,
+        3.5915945773012936e-09,
+        6.4437699620611966e-09
+      ],
+      "target_adjacent_pair_margins": [
+        -0.0009052615636708783,
+        0.48174364638193334
+      ],
+      "target_adjacent_pair_orders": [
+        1.4990947384363291,
+        1.9817436463819333
+      ],
+      "target_component": "radial_momentum",
+      "target_effective_norms_for_order_only": [
+        0.0060603957083072545,
+        0.0021440183565819993,
+        0.0005428304709059429
+      ],
+      "target_finest_pair_passed": true,
+      "target_preasymptotic_on_tested_ladder": true,
+      "target_previous_pair_failed": true,
+      "target_raw_owned_norms": [
+        0.0060603980047813765,
+        0.0021440219481765766,
+        0.000542836914675905
+      ]
+    },
+    "mutation_controls": {
+      "accepted_stage_count": true,
+      "claim": true,
+      "component": true,
+      "grid": true,
+      "one_bit_state": true,
+      "threshold": true,
+      "time": true
+    },
+    "runtime_provenance": {
+      "CFL_retry_count": 0,
+      "accepted_boundary_count": 23,
+      "elapsed_wall_seconds": 8078.001129082986,
+      "event_log_line_count": 25,
+      "resume_recovery": null,
+      "source_retry_count": 0,
+      "stop": null
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO13_design_may_begin": true,
+      "PROTO13_frozen": false,
+      "PROTO13_must_use_method_owned_resolution_ladders": true,
+      "SGBL_execution_authorized": false,
+      "amplitude_three_is_the_only_prospectively_designated_calibration_case": true,
+      "fresh_GR0_dynamic_calibration_completed": false
+    },
+    "terminal_member": {
+      "CFL_retry_count": 0,
+      "accepted_stage_count": 7084,
+      "accumulated_characteristic_distance": "1.7250000000008527",
+      "coordinate_time": "23/16",
+      "key": "SSPRK3-16385",
+      "point_count": 16385,
+      "remaining_boundary_margin": "86.26718749999915",
+      "source_retry_count": 0,
+      "state_sha256": "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d",
+      "step_index": 1771,
+      "transaction_serial": 7084
+    }
+  },
+  "classification": "post_run_checkpoint_recomputed_target_and_complete_constraint_pass",
+  "derivation_document": "docs/fgc-rsp2-pref14.md",
+  "derivation_document_sha256": "f899acc88b4ac7fc60d4e64de3f45cf88c2c4957d4984d70ae8e6c462b657683",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO13_design_may_begin": true,
+    "PROTO13_frozen": false,
+    "RSP2_CFL_retry_total_zero": true,
+    "RSP2_complete_constraint_admission_passed": true,
+    "RSP2_new_member_reached_endpoint": true,
+    "RSP2_outcome_read": true,
+    "RSP2_source_retry_total_zero": true,
+    "RSP2_study_terminated_normally": true,
+    "RSP2_target_order_cleared": true,
+    "RSP2_target_persistent_through_tested_ladder": false,
+    "RSP2_target_preasymptotic_on_tested_ladder": true,
+    "RSP2_terminal_checkpoint_recomputed": true,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_rsp2_pref14.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_rsp2_pref14.py": "cfad436199e10d7962ef1d8465e8be568cd154065b5c9a47d1e2265ecedacebc",
+    "src/recursive_horizons/fgc/evolution/cal4_common_event_diagnosis.py": "0add38fadebbe07b021ccd3c421ced6519efea9f233ad09d447fbc3241041741",
+    "src/recursive_horizons/fgc/evolution/rsp2_checkpoint.py": "f53458619902f454611736bb66bdf3515b7e05225aec93723b495a9281f8f6b0",
+    "src/recursive_horizons/fgc/evolution/rsp2_pref14_diagnosis.py": "5d6989c0e85d43995fdb23219d9b1822a7778131d5346ee29b813a6bcc4a14b3"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO13_frozen": false,
+    "RSP2_target_persistent_through_tested_ladder": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "results/fgc-1-rsp2-frz1.json": "a6c147d7b369387e70318ee42eb56c97332702a227fd93d7ad20a1cfe2c1aa22",
+    "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17"
+  },
+  "project_version": "0.11.0",
+  "raw_evidence_sha256": {
+    "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/events.jsonl": "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937",
+    "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz": "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34",
+    "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/manifest.json": "f547386ba7ccc8ddad7a264d24c66be1a6a601bef5ddad90ebb33ae9ddfcb52b",
+    "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/study-result.json": "3f32fd18d85eac826a253b97d073608111dcb582bbb1a1aa0a7490c7e2f04bf6"
+  },
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "GR0_numerical_trajectory_read": true,
+    "SGBL_trajectory_read": false,
+    "amplitude": "3",
+    "calibration_branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "mechanism_question_answered": false,
+    "method": "SSPRK3",
+    "role": "post_run_checkpoint_recomputed_one_finer_grid_constraint_order_result",
+    "target_protocol": "FGC-1-RSP2-FRZ1"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-rsp2-pref14.toml": "d9d9a6ebae797f5f59646b7ae7d998740516c775038e2e2ff356577b35373b42"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "artifact_id": "FGC-1-FGCQR-A6042-DEV-SERIES1",
+  "schema": "FGC-1-FGCQR-A6042-DEV-SERIES1-v1",
+  "classification": "positive_activation_observed_but_physical_null_defocusing_not_yet_established",
+  "background": {
+    "initial_data_amplitude": 6.042,
+    "initial_state": "constraint_solved_FGCQR_initial_data",
+    "initially_untrapped": true,
+    "evolution_method": "RK4",
+    "spatial_order": 4,
+    "point_count": 513
+  },
+  "original_action_result": {
+    "parameters": {
+      "M_Pl": 2.0,
+      "mu": 3.0,
+      "g4": 0.5,
+      "beta": -0.25,
+      "eta": 0.5,
+      "alpha": 0.0
+    },
+    "minimum_trapped_m_lin_squared": 8.998849543386603,
+    "curvature_trigger_present": false
+  },
+  "equation_directed_development_action": {
+    "parameters": {
+      "M_Pl": 2.0,
+      "mu": 0.02,
+      "g4": 256.0,
+      "beta": -128.0,
+      "eta": 16384.0,
+      "alpha": 0.0
+    },
+    "design": "make_both_measured_trapped_cells_order_one_tachyonic_and_place_quartic_saturation_below_F_zero",
+    "complete_local_source_solve_converged": true,
+    "maximum_local_source_condition": 798.9383308802988,
+    "positive_local_phi_growth_drive_at_both_trapped_cells": true
+  },
+  "finite_trajectory_result": {
+    "activation_factor": 130.60704423885937,
+    "activation_time": 1.5855631171985884,
+    "phi_peak": 0.0009964526690586805,
+    "phi_peak_radius": 13.5,
+    "trapped_point_count": 6,
+    "maximum_compactness": 1.4725077413572314,
+    "minimum_effective_planck_coefficient": 3.9998729065060257,
+    "kinetic_condition_infinity": 2599577.122317111,
+    "source_residual_infinity": 3.183231456205249e-12,
+    "retries": 0
+  },
+  "complete_Q_result": {
+    "deepest_trapped_ray_minimum_Q": -0.045394305815061195,
+    "deepest_trapped_ray_maximum_Q": -0.029782958096703747,
+    "positive_Q_samples_on_that_ray": 0,
+    "dominant_focusing_term": "positive_R_ab_k_a_k_b",
+    "R_ab_k_a_k_b_range": [
+      0.028940169783818137,
+      0.04444239570464127
+    ],
+    "slice_positive_Q_cells_observed": true,
+    "slice_positive_Q_values": [
+      0.028019940905321512,
+      0.030105871453611627
+    ],
+    "slice_positive_Q_physical_attribution_valid": false,
+    "reason": "negative_null_Ricci_at_the_positive_Q_cells_is_dominated_by_modified_harmonic_gauge_extension_mismatch_rather_than_the_reconstructed_physical_action_terms"
+  },
+  "raw_evidence": [
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-trigger-a6042-dev2.json",
+      "sha256": "0f7e35ff233dc1b4c325957f19c3c4cca12446a3daa6347ea292f33618196e5b"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-local-response-a6042-dev3.json",
+      "sha256": "174336fe21457fa006d4a301060b92ab783f213fa42eef3c02276776d399e652"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-activation-a6042-dev1.json",
+      "sha256": "69b06f3f9f20c9e5ed309e55be6a1802d1d92e8a532b309f81f2502cbccc9e9c"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-activation-a6042-dev2.json",
+      "sha256": "3962ffa0201f03d986b43d849b154aecf3607e4db83767dce104cc74fb8e5564"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-activation-a6042-dev3.json",
+      "sha256": "0f0840c46f07c62eda5e3082ff7f2993c0298227c43e475d5da43a699783ceed"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-q-a6042-dev3.json",
+      "sha256": "18838457d6477a566ca81d8266520de48a567e467e9c83f8c3e45e5aa12f2c82"
+    },
+    {
+      "path": "runs/fgc-2-sf1/fgcqr-null-decomposition-a6042-dev1.json",
+      "sha256": "e76e735e52dc41dff75fb70151724c91e92cf259812ab3b011ed4709f1ee2b26"
+    }
+  ],
+  "next_result_test": "rerun_the_same_action_at_higher_resolution_and_require_positive_Q_to_persist_while_gauge_and_reduction_mismatch_contract_before_any_defocusing_claim",
+  "nonclaims": {
+    "physical_metric_null_defocusing_demonstrated": false,
+    "nested_space_transition_demonstrated": false,
+    "global_child_space_demonstrated": false,
+    "one_local_action_establishes_the_whole_model": false
+  },
+  "terminal": true
+}

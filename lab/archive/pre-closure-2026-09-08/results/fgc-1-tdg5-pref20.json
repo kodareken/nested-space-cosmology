@@ -1,0 +1,466 @@
+{
+  "artifact_id": "FGC-1-TDG5-PREF20",
+  "artifact_payload": {
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "actual_terminal_history_arrays_consumed": false,
+      "campaign_checkpoint_loaded": false,
+      "candidate_branch_opened": false,
+      "declared_cubic_is_exact_PDE_history": false,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "new_production_trajectory_authorized": false,
+      "physical_question_answered": false,
+      "replacement_temporal_admission_defined": false,
+      "rigorous_global_PDE_error_bound_proved": false,
+      "runtime_refinement_pair_implementation_authorized": true,
+      "runtime_refinement_pair_implemented": false,
+      "runtime_thresholds_frozen": false,
+      "stage_complete_refinement_theorem_completed": true,
+      "state_advanced": false,
+      "trajectory_asymptotic_regime_proved": false
+    },
+    "freeze_crosscheck": {
+      "actual_terminal_histories_consumed": false,
+      "both_method_orders_and_Richardson_denominators_match": true,
+      "endpoint_alias_maximum_matches_frozen_midpoint_control": true,
+      "freeze_exact_preflight_reexecuted": true,
+      "freeze_preflight_is_a_crosscheck_not_the_theorem_authority": true,
+      "independent_basis_expansion_matches_frozen_Hermite_map": true,
+      "independent_elimination_matches_frozen_determinant_and_norms": true
+    },
+    "immutable_lineage": {
+      "actual_terminal_history_arrays_consumed": false,
+      "bound_blob_sha256": {
+        "configs/fgc/fgc-1-tdg5-frz1.toml": "90f2d548a0cc9062615e69b16c175ad9ecf2db6d49d97ecf35697b9173a50878",
+        "docs/fgc-tdg5-frz1.md": "f549406b381e1be70d04ea741c7c86d9c0e09140fdc104f876697bae4389c795",
+        "results/fgc-1-tdg5-frz1.json": "2af573edda929424542129a8391c8bcf34c081206ec73d8c4dd040fbe47a4c04",
+        "scripts/reproduce_fgc_tdg5_frz1.py": "c976d553d9bbf8c730f0fe0c7f5eb2ef0f5fcbb28b59b10e48b7e5ebb1a2d303",
+        "src/recursive_horizons/fgc/evolution/numerical_engine.py": "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf",
+        "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement.py": "56cf8607adf6aa769eeade329feadf1dd0fc963002de7cc970961b1aa9ba6d55"
+      },
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "freeze_commit": "1716cc4acbc95a5b11e6e162e405c43330d389a6",
+      "freeze_commit_is_ancestor_of_HEAD": true,
+      "freeze_result_verified_canonical_and_prospective": true,
+      "frozen_Richardson_denominators": {
+        "RK4": 15,
+        "SSPRK3": 7
+      },
+      "frozen_complete_state": "dimensionless_u_p_q",
+      "frozen_method_orders": {
+        "RK4": 4,
+        "SSPRK3": 3
+      },
+      "frozen_same_initial_state_required": true,
+      "frozen_same_spatial_operator_required": true,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "state_advanced": false
+    },
+    "limitation_audit": {
+      "Hermite_extension_is_a_declared_numerical_object_not_the_exact_PDE_history": true,
+      "Richardson_debit_is_not_a_rigorous_global_PDE_bound": true,
+      "Richardson_factor_assumes_a_shared_leading_error_coefficient": true,
+      "Richardson_factor_assumes_the_tested_step_is_in_the_asymptotic_regime": true,
+      "binary64_continuous_extremum_implementation_remains_open": true,
+      "complete_DEF1_error_ledger_remains_required": true,
+      "finite_dimensional_injectivity_does_not_prove_PDE_accuracy": true,
+      "observed_trapped_or_Raychaudhuri_margin_may_not_set_the_threshold": true,
+      "spatial_ladders_and_cross_method_agreement_remain_required": true
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "Hermite_determinant_mutation_rejected": true,
+      "candidate_endpoint_stage_mutation_rejected": true,
+      "candidate_promotion_rejected": true,
+      "endpoint_RHS_mutation_rejected": true,
+      "freeze_commit_mutation_rejected": true,
+      "freeze_result_hash_mutation_rejected": true,
+      "historical_reclassification_mutation_rejected": true,
+      "implemented_runtime_promotion_rejected": true,
+      "invalid_half_interval_mutation_rejected": true,
+      "irrational_root_requires_future_outward_evaluator": true,
+      "replacement_admission_promotion_rejected": true,
+      "restriction_determinant_mutation_rejected": true,
+      "short_Hermite_data_mutation_rejected": true,
+      "threshold_promotion_rejected": true
+    },
+    "proof_contract": {
+      "Hermite_map_must_be_rederived_by_independent_basis_expansion_and_elimination": true,
+      "canonical_hash_bound_result_required": true,
+      "continuous_cubic_extremum_candidate_theorem_must_be_completed": true,
+      "endpoint_only_alias_control_must_have_exact_interior_maximum_one": true,
+      "freeze_commit_and_all_bound_blobs_must_match": true,
+      "freeze_preflight_must_be_reexecuted_only_as_an_independent_crosscheck": true,
+      "freeze_result_must_preserve_the_unexecuted_theorem_and_runtime_boundary": true,
+      "half_interval_restrictions_and_determinants_must_be_rederived_exactly": true,
+      "immutable_engine_stage_and_fresh_endpoint_RHS_shape_must_be_checked_syntactically": true,
+      "lineage_theorem_engine_authorization_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "method_owned_Richardson_relations_and_assumptions_must_be_explicit": true,
+      "no_history_checkpoint_state_or_candidate_data_may_be_loaded": true
+    },
+    "runtime_authorization": {
+      "authorized_object": "implementation_and_synthetic_validation_of_the_frozen_same_grid_refinement_pair",
+      "binary64_root_and_value_evaluation_must_add_an_outward_arithmetic_debit": true,
+      "coarse_one_full_step_is_evidence_only": true,
+      "complete_dimensionless_u_p_q_owned_state_required": true,
+      "continuous_difference_must_include_all_endpoints_and_real_interior_derivative_roots": true,
+      "fine_two_half_step_path_is_the_only_eventual_committable_path": true,
+      "fine_two_half_steps_must_commit_atomically_or_neither_commits": true,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "production_trajectory_authorized": false,
+      "same_bitwise_initial_state_required": true,
+      "same_source_projector_and_spatial_operator_required": true,
+      "thresholds_require_a_separate_prospective_freeze": true,
+      "unchanged_stage_source_health_CFL_boundary_scale_and_transaction_guards_required": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG4_sampling_identifiability_theorem_completed": true,
+      "TDG5_exact_no_history_controls_pass": true,
+      "TDG5_replacement_design_frozen": true,
+      "TDG5_stage_complete_refinement_theorem_completed": true,
+      "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+      "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": true,
+      "runtime_refinement_pair_implementation_authorized": true,
+      "runtime_refinement_pair_implemented": false,
+      "runtime_thresholds_frozen": false
+    },
+    "theorem_certificate": {
+      "FGCQR_trajectory_read": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_trajectory_read": false,
+      "TDG5_stage_complete_refinement_theorem_completed": true,
+      "actual_terminal_history_arrays_consumed": false,
+      "all_independent_theorem_controls_pass": true,
+      "campaign_checkpoint_loaded": false,
+      "continuous_extremum_theorem": {
+        "binary64_extremum_evaluator_implemented": false,
+        "binary64_root_and_value_evaluation_requires_outward_debit": true,
+        "coarse_minus_fine_difference_remains_cubic_on_each_half_interval": true,
+        "compact_interval_extreme_value_theorem_supplies_a_maximum": true,
+        "complete_candidate_set_is_endpoints_plus_real_interior_derivative_roots": true,
+        "continuous_piecewise_cubic_extremum_theorem_completed": true,
+        "cubic_derivative_degree_is_at_most_two": true,
+        "endpoint_only_bump_control": {
+          "absolute_maximum": "1",
+          "absolute_values": [
+            "0",
+            "1",
+            "0"
+          ],
+          "candidate_points": [
+            "0",
+            "1/2",
+            "1"
+          ],
+          "maximizers": [
+            "1/2"
+          ]
+        },
+        "every_nonzero_interior_absolute_maximizer_has_zero_polynomial_derivative": true,
+        "genuine_cubic_two_stationary_point_control": {
+          "absolute_maximum": "1/16",
+          "absolute_values": [
+            "0",
+            "1/16",
+            "0",
+            "1/16"
+          ],
+          "candidate_points": [
+            "0",
+            "1/4",
+            "3/4",
+            "1"
+          ],
+          "maximizers": [
+            "1/4",
+            "1"
+          ]
+        },
+        "maximum_candidate_count_per_half_interval": 4,
+        "zero_polynomial_case_is_trivial": true
+      },
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "half_interval_restriction": {
+        "all_basis_and_probe_composition_controls_pass": true,
+        "coarse_cubic_restricts_exactly_to_each_fine_half_interval": true,
+        "control_count": 8,
+        "left_restriction_determinant": "1/64",
+        "left_restriction_matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/4",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/8"
+          ]
+        ],
+        "right_restriction_determinant": "1/64",
+        "right_restriction_matrix": [
+          [
+            "1",
+            "1/2",
+            "1/4",
+            "1/8"
+          ],
+          [
+            "0",
+            "1/2",
+            "1/2",
+            "3/8"
+          ],
+          [
+            "0",
+            "0",
+            "1/4",
+            "3/8"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/8"
+          ]
+        ]
+      },
+      "immutable_numerical_engine_shape": {
+        "all_required_internal_and_endpoint_stage_names_present": true,
+        "atomic_coarse_fine_transaction_implemented": false,
+        "candidate_endpoint_call_uses_final_time_and_candidate_state": true,
+        "class_fields": {
+          "StageRecord": [
+            "stage_name",
+            "time",
+            "state",
+            "rhs"
+          ],
+          "StepProposal": [
+            "method",
+            "initial_time",
+            "final_time",
+            "initial_state",
+            "candidate_state",
+            "stages"
+          ]
+        },
+        "evaluate_function_appends_StageRecord": true,
+        "evaluate_function_calls_RHS": true,
+        "fresh_candidate_endpoint_RHS_record_is_available": true,
+        "observed_evaluate_stage_names": [
+          "candidate_endpoint",
+          "rk4_k1",
+          "rk4_k2",
+          "rk4_k3",
+          "rk4_k4",
+          "ssprk3_s0",
+          "ssprk3_s1",
+          "ssprk3_s2"
+        ],
+        "required_stage_names": [
+          "rk4_k1",
+          "rk4_k2",
+          "rk4_k3",
+          "rk4_k4",
+          "ssprk3_s0",
+          "ssprk3_s1",
+          "ssprk3_s2",
+          "candidate_endpoint"
+        ],
+        "runtime_pair_can_be_built_without_mutating_the_existing_step_proposal_shape": true,
+        "stage_and_proposal_fields_match_frozen_shape": true
+      },
+      "independent_Hermite_map": {
+        "all_four_unit_data_round_trip_exactly": true,
+        "basis_determinant_by_fraction_Gaussian_elimination": "1",
+        "basis_expansion_matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "-3",
+            "-2",
+            "3",
+            "-1"
+          ],
+          [
+            "2",
+            "1",
+            "-2",
+            "1"
+          ]
+        ],
+        "basis_infinity_norm": "9",
+        "condition_number_infinity_upper_bound": "54",
+        "data_order": [
+          "left_value",
+          "left_scaled_slope",
+          "right_value",
+          "right_scaled_slope"
+        ],
+        "finite_dimensional_data_map_is_stably_injective": true,
+        "sampling_determinant_by_fraction_Gaussian_elimination": "1",
+        "sampling_infinity_norm": "6",
+        "sampling_matrix": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "1",
+            "2",
+            "3"
+          ]
+        ]
+      },
+      "method_owned_Richardson_debits": {
+        "RK4": {
+          "Richardson_denominator": 15,
+          "coarse_leading_error_coefficient": "1",
+          "derivation_assumes_a_shared_leading_local_error_coefficient": true,
+          "derivation_assumes_the_tested_step_is_in_the_asymptotic_regime": true,
+          "fine_error_over_difference_factor": "1/15",
+          "fine_minus_coarse_leading_difference_magnitude": "15/16",
+          "formal_order": 4,
+          "method": "RK4",
+          "rigorous_global_PDE_error_bound_proved": false,
+          "trajectory_asymptotic_regime_proved": false,
+          "two_half_step_leading_error_coefficient": "1/16"
+        },
+        "SSPRK3": {
+          "Richardson_denominator": 7,
+          "coarse_leading_error_coefficient": "1",
+          "derivation_assumes_a_shared_leading_local_error_coefficient": true,
+          "derivation_assumes_the_tested_step_is_in_the_asymptotic_regime": true,
+          "fine_error_over_difference_factor": "1/7",
+          "fine_minus_coarse_leading_difference_magnitude": "7/8",
+          "formal_order": 3,
+          "method": "SSPRK3",
+          "rigorous_global_PDE_error_bound_proved": false,
+          "trajectory_asymptotic_regime_proved": false,
+          "two_half_step_leading_error_coefficient": "1/8"
+        }
+      },
+      "physical_or_candidate_question_answered": false,
+      "replacement_temporal_admission_defined": false,
+      "runtime_refinement_pair_implementation_authorized": true,
+      "runtime_refinement_pair_implemented": false,
+      "runtime_thresholds_frozen": false,
+      "state_advanced": false
+    }
+  },
+  "classification": "completed_TDG5_stage_complete_refinement_theorem_runtime_pair_implementation_authorized",
+  "derivation_document": "docs/fgc-tdg5-pref20.md",
+  "derivation_document_sha256": "7f9fbf8022ae3680bcf6fdee73ee7d150d33cfdccfc3c8afae9eeef61f63e45a",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG4_sampling_identifiability_theorem_completed": true,
+    "TDG5_exact_no_history_controls_pass": true,
+    "TDG5_replacement_design_frozen": true,
+    "TDG5_stage_complete_refinement_theorem_completed": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+    "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+    "dark_sector_mechanism_derived": false,
+    "finite_samples_alone_proved_insufficient_for_continuum_top_band_bound": true,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "replacement_temporal_gate_design_authorized": true,
+    "retained_EFT_evolution_authorized": false,
+    "runtime_refinement_pair_implementation_authorized": true,
+    "runtime_refinement_pair_implemented": false,
+    "runtime_thresholds_frozen": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg5_pref20.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg5_pref20.py": "c2f1e3b61ac51ddcf21840bc0cabbb6b88d76bcb7b8f9d83c6d0155b39dc6220",
+    "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_theorem.py": "07bd73402b750f51961cf580072144b332c2a384f6240b9f28f61ef0f613bff7"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "runtime_refinement_pair_implemented": false,
+    "runtime_thresholds_frozen": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg5-pref20.toml": "cb22ee7ca18ddd07b9b0f1ad411428c030d4a4d4a203caebe3c853251389f082"
+  }
+}

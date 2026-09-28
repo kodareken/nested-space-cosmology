@@ -1,0 +1,113 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO19-SID2-PREF1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "post_recovery_generation8_metadata_only_binder"
+nonclaims = [
+  "SID2 binds one completed metadata-only recovery; it does not advance a physical state or replay the rejected proposal.",
+  "SID2 does not authorize trajectory resume by itself; a later committed-image authority and read-only resume preflight remain mandatory.",
+  "SID2 does not complete a common event or GR-0 calibration and does not authorize SGB-L, FGC-QR, DEF1, retained-EFT, transition, or physical claims.",
+]
+
+[predecessor]
+artifact_id = "FGC-1-PRO19-SID1-FRZ1"
+authority_commit = "c83ef958283be5e36ca31dd1f13df4a1b74f8696"
+config_path = "configs/fgc/fgc-1-pro19-sid1-frz1.toml"
+config_sha256 = "5019067dd56445b33f270a2b6531572ee2e8e3b2318dc5f82e70d0f554b3c394"
+result_path = "results/fgc-1-pro19-sid1-frz1.json"
+result_sha256 = "e8f937f8513c0ccb5d7c02bb1d83c4320c7ef0ded26a5461a212abf766882465"
+historical_launch_manifest_path = "configs/fgc/fgc-1-pro19-launch-authority.toml"
+historical_launch_manifest_sha256 = "c3084ce9024319cde337603a00f052a6c7aefb04ad4dbc8cf475f5b7997fbd7d"
+original_authorization_commit = "c11ba422ce49ddd6f6175de1a9d2da675b97f2de"
+original_plan_sha256 = "f3b365978aeb2ae6063742807a3161bf5d6aa0c8392cd283fdec2a79d3e46060"
+campaign_id = "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683"
+
+[store]
+path = "runs/fgc-2-sf1/proto17/calibration"
+regular_leaf_count = 52
+lexical_inventory_sha256 = "8196b088a19f70ae1016a3d9dddb508add1ce1ce5cd227d105c954bd0c151c27"
+nonfollowing_traversal_required = true
+active_writer_absent = true
+terminal_lock_absent = true
+staging_absent = true
+orphan_absent = true
+fork_absent = true
+symlink_and_special_file_absent = true
+
+[generation7]
+generation = 7
+checkpoint_sha256 = "c0ebfe09ef4058e117e46d34424edc8139419bfb4680cec979a1f5ab64d37be9"
+checkpoint_raw_sha256 = "209f673ad78d96553e26965c7ecf00953b7e9b57ece0b14d00e92e20a0623b21"
+journal_sequence = 7
+journal_sha256 = "e23d81705f1038f8240249658d0160cd5ca8ea8e33969cb4b32de3f03d426473"
+journal_raw_sha256 = "d1d929378bb0d9ca5146a9f83acf2d4f6be986503720596a93a5ae2b5f81292f"
+
+[generation8]
+generation = 8
+checkpoint_sha256 = "6d2b6e37e7c7cfd4ce64504353d886099003f959ea2aaee1a14fc778ce14fa46"
+checkpoint_raw_sha256 = "dca398efa21d699ed09060c2afd1a13b7b3672ca62573c24bd846a0ff6a3ef7d"
+parent_checkpoint_sha256 = "c0ebfe09ef4058e117e46d34424edc8139419bfb4680cec979a1f5ab64d37be9"
+journal_sequence = 8
+journal_sha256 = "949b29e46081bf5a42c34461b3894419db86aeca6c733b7a2636c91c6cb2ee4a"
+journal_raw_sha256 = "8facb8cb67e6b9a891f1a8cb63056cc0b00f142592085ef21d3c9f1ced7c6d3c"
+journal_parent_sha256 = "e23d81705f1038f8240249658d0160cd5ca8ea8e33969cb4b32de3f03d426473"
+event = 23
+target_rational = "3/2"
+disposition = "nonterminal"
+suffix_classification = "clean"
+
+[member_descriptors]
+RK4_2049 = "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56"
+RK4_4097 = "540ed681955f244c82b9f91538f9d797e5237b04fcdd7011826efcade53f9388"
+RK4_8193 = "53b8413090d5af595d2bbcbc58a7ead07a9ab8c37aa90847dc669bd3e4bfa058"
+SSPRK3_4097 = "d4376e1025c1e5579d2816c87fbd32b46c3768a72c6e7753dd1c83d3d8ec14d5"
+SSPRK3_8193 = "070427ff80ee72eb16396f6d651e020ad6423b5068da8388e5e6fed994608f32"
+SSPRK3_16385 = "e7e2d42df4aa77301fe7b42fc8c64158bd4b3327ad402d55f3bd5f9ae7969564"
+
+[physical_identity]
+member_key = "RK4-2049"
+accepted_time_hex = "0x1.78554de5a30e0p+0"
+descriptor_sha256 = "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56"
+semantic_payload_sha256 = "0e48e0e2396ea7d9ef79d1641e6944a2dfdaa3716bb65e0b882b97156ff9372f"
+raw_archive_sha256 = "f47a4f533eb8e0ed9f8ea337d520fa6f4e0bb6c1b27a4ef8023ee78bc830f5a4"
+evolution_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+u_bytes_sha256 = "856fc327d3163d038f9fdbfc660968509dd7360faa0bb9d158721eb3049c2fe4"
+p_bytes_sha256 = "32939115b86938cf8a813bbf9a50a8c90bbaceaee161fa65695deb435d1243b7"
+q_bytes_sha256 = "48ec07bcace3935173c06e7b41915cacb17f14e1c9d3500522d4eb59a205c4a3"
+
+[retry_state]
+member_key = "RK4-2049"
+cursor_sha256 = "6d594999f6aaebb5d56f0fd6ff12499e2b22a47e3daf74ac8b13b15d273fa177"
+mode = "RETRY_PENDING"
+owner = "temporal"
+pending_cap_hex = "0x1.aaa9612df9000p-10"
+successor_macro_width_hex = "0x1.aaa9612df8000p-10"
+rejected_macro_width_hex = "0x1.aaa9612df9000p-9"
+cfl_current = 1
+cfl_total = 1
+temporal_retry_total = 1
+TDG6_ledger_sha256 = "bc8a19299a3eb7f9ff57939a9c9c3c59943387a6644fc2c3be903258527eb0bc"
+
+[scope]
+raw_store_mutation = false
+writer_lease_acquisition = false
+PDE_proposal_execution = false
+GEN0_reimport = false
+trajectory_resume = false
+candidate_branch_opened = false
+
+[claims]
+post_recovery_boundary_bound = true
+metadata_only_recovery_bound = true
+physical_state_advanced = false
+rejected_proposal_replayed = false
+recovery_boundary_frozen = true
+trajectory_resume_authorized = false
+safe_to_resume_trajectory = false
+committed_resume_authority_present = false
+committed_resume_image_authenticated = false
+committed_resume_image_authentication_required = true
+resume_authorized_by_artifact_alone = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false

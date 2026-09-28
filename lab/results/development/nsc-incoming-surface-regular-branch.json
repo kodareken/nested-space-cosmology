@@ -1,0 +1,595 @@
+{
+  "accountable_author": "Douglas Ek",
+  "branch": {
+    "A1_reference_groups": [
+      {
+        "A1_interval": [
+          -0.005373270687629092,
+          -0.005373270687629083
+        ],
+        "group": 1
+      },
+      {
+        "A1_interval": [
+          -0.002985150382016163,
+          -0.0029851503820161576
+        ],
+        "group": 2
+      },
+      {
+        "A1_interval": [
+          -0.0021322502728686873,
+          -0.002132250272868684
+        ],
+        "group": 3
+      },
+      {
+        "A1_interval": [
+          -0.001679147089884091,
+          -0.0016791470898840884
+        ],
+        "group": 4
+      },
+      {
+        "A1_interval": [
+          -0.001393070178274209,
+          -0.0013930701782742068
+        ],
+        "group": 5
+      },
+      {
+        "A1_interval": [
+          -0.0011940601528064648,
+          -0.001194060152806463
+        ],
+        "group": 6
+      },
+      {
+        "A1_interval": [
+          -0.0010467410430446283,
+          -0.0010467410430446266
+        ],
+        "group": 7
+      },
+      {
+        "A1_interval": [
+          -0.0009328594943800509,
+          -0.0009328594943800493
+        ],
+        "group": 8
+      },
+      {
+        "A1_interval": [
+          -0.0008419654923635329,
+          -0.0008419654923635314
+        ],
+        "group": 9
+      },
+      {
+        "A1_interval": [
+          -0.0007676100982327273,
+          -0.0007676100982327264
+        ],
+        "group": 10
+      },
+      {
+        "A1_interval": [
+          -0.0007055809993856383,
+          -0.0007055809993856372
+        ],
+        "group": 11
+      },
+      {
+        "A1_interval": [
+          -0.0006530016460660355,
+          -0.0006530016460660346
+        ],
+        "group": 12
+      },
+      {
+        "A1_interval": [
+          -5e-324,
+          5e-324
+        ],
+        "group": 13
+      },
+      {
+        "A1_interval": [
+          -0.008130313698431191,
+          -0.00813031369843118
+        ],
+        "group": 14
+      },
+      {
+        "A1_interval": [
+          -0.006491973341257184,
+          -0.006491973341257173
+        ],
+        "group": 15
+      },
+      {
+        "A1_interval": [
+          -0.0049241026264464464,
+          -0.004924102626446437
+        ],
+        "group": 16
+      },
+      {
+        "A1_interval": [
+          -0.0038680787823246973,
+          -0.003868078782324691
+        ],
+        "group": 17
+      },
+      {
+        "A1_interval": [
+          -0.003157103571738321,
+          -0.003157103571738316
+        ],
+        "group": 18
+      },
+      {
+        "A1_interval": [
+          -0.002658742445956698,
+          -0.0026587424459566943
+        ],
+        "group": 19
+      },
+      {
+        "A1_interval": [
+          -0.0022943275871872733,
+          -0.0022943275871872694
+        ],
+        "group": 20
+      },
+      {
+        "A1_interval": [
+          -0.002017807059432261,
+          -0.002017807059432257
+        ],
+        "group": 21
+      },
+      {
+        "A1_interval": [
+          -0.0018013710003409573,
+          -0.001801371000340954
+        ],
+        "group": 22
+      },
+      {
+        "A1_interval": [
+          -5e-324,
+          5e-324
+        ],
+        "group": 23
+      },
+      {
+        "A1_interval": [
+          -0.0018399816586015865,
+          -0.0018399816586015842
+        ],
+        "group": 24
+      },
+      {
+        "A1_interval": [
+          -0.0029764768796069086,
+          -0.002976476879606904
+        ],
+        "group": 25
+      },
+      {
+        "A1_interval": [
+          -0.0033292682569059586,
+          -0.0033292682569059542
+        ],
+        "group": 26
+      },
+      {
+        "A1_interval": [
+          -0.0032450529389047964,
+          -0.003245052938904791
+        ],
+        "group": 27
+      },
+      {
+        "A1_interval": [
+          -0.002987931716034459,
+          -0.0029879317160344545
+        ],
+        "group": 28
+      },
+      {
+        "A1_interval": [
+          -0.002690971117376885,
+          -0.002690971117376881
+        ],
+        "group": 29
+      },
+      {
+        "A1_interval": [
+          -0.002408824107657291,
+          -0.002408824107657287
+        ],
+        "group": 30
+      },
+      {
+        "A1_interval": [
+          -0.002159256807527882,
+          -0.002159256807527878
+        ],
+        "group": 31
+      },
+      {
+        "A1_interval": [
+          -0.0019447286108935388,
+          -0.0019447286108935358
+        ],
+        "group": 32
+      }
+    ],
+    "binary_intervals": {
+      "A1_local": [
+        [
+          0,
+          619863340161491974344891024841579799165215942162044368212256641025398633682643941,
+          -274,
+          269
+        ],
+        [
+          0,
+          309931670080746356573052007927612460540177908315317921314037827593639547917908981,
+          -273,
+          268
+        ]
+      ],
+      "A1_reference": [
+        [
+          1,
+          9323366456288545252880205862469527052946290823029262084164429014736645575573495,
+          -266,
+          263
+        ],
+        [
+          1,
+          149173863300616533504598143520099657558635305767966138055536078403640124864658289,
+          -270,
+          267
+        ]
+      ],
+      "A1_total": [
+        [
+          1,
+          441729618162093902598110418987654781597258627133361681333459296686795658416042695,
+          -272,
+          268
+        ],
+        [
+          1,
+          883459236324185911463733140233184799928904537828411183130250799635481450999357331,
+          -273,
+          269
+        ]
+      ],
+      "A_at_principal_root": [
+        [
+          0,
+          91186079325646069546264067105325905422202483360961765856776613460673845559217583,
+          -273,
+          266
+        ],
+        [
+          0,
+          91186079325653240681180685343857471473475895115358020991653055152416057776226923,
+          -273,
+          266
+        ]
+      ],
+      "B_at_lapse_pivot": [
+        [
+          0,
+          696754416952465750535558383678486805468337959186093848052761801954764193746315511,
+          -275,
+          269
+        ],
+        [
+          0,
+          348377208476238007364447010598041244465433858099079747003294931574622009248061597,
+          -274,
+          268
+        ]
+      ],
+      "C_implied_for_independent_check": [
+        [
+          0,
+          421907961211399806477807484286929480595073397883077871693400725470358572456356671,
+          -271,
+          268
+        ],
+        [
+          0,
+          421907961211401001212157770112964165897673993853762877826831693724663233369913867,
+          -271,
+          268
+        ]
+      ],
+      "R0": [
+        [
+          0,
+          90781254623455162794257413832411,
+          -110,
+          107
+        ],
+        [
+          0,
+          363125018493821491673507192199741,
+          -112,
+          109
+        ]
+      ],
+      "R1": [
+        [
+          1,
+          300562582303573179484938841332380332191508449238043881678290215880819429004429399,
+          -271,
+          268
+        ],
+        [
+          1,
+          300562582303572486511102339232177314450687510555261100609169385948351135254035307,
+          -271,
+          268
+        ]
+      ],
+      "determinant_at_lapse_pivot": [
+        [
+          0,
+          331155576944213075452390145797526619644504068795024322841795255857660788880427551,
+          -279,
+          268
+        ],
+        [
+          0,
+          662311153888437686870810156414055814270026464454074651465466588070687012724138299,
+          -280,
+          269
+        ]
+      ],
+      "determinant_at_zero": [
+        [
+          1,
+          177035610226989621582119338567654076133088270598159795665425697281960563474457649,
+          -275,
+          267
+        ],
+        [
+          1,
+          354071220453977286184231297761144259229691369972264816916357829674470952424274097,
+          -276,
+          268
+        ]
+      ],
+      "w_lapse_pivot": [
+        [
+          0,
+          935357344808888130704972170419589690541524971958398050360954248717331605222126111,
+          -269,
+          269
+        ],
+        [
+          0,
+          116919668101111521376103141245072011690665775684790654507243582380385292279081339,
+          -266,
+          266
+        ]
+      ],
+      "w_principal": [
+        [
+          0,
+          837450994596831001686612347448053242409337414438893224863568516506020451977893063,
+          -269,
+          269
+        ],
+        [
+          0,
+          837450994596834870885491049279374489893557844977704059722493645802602868765213403,
+          -269,
+          269
+        ]
+      ]
+    },
+    "coefficient_derivation": "new analytic slope only, using stored d components; A0,d,e producers not rerun",
+    "imported_unchanged": {
+      "A0": [
+        0.05739927758627631,
+        0.057399277586276436
+      ],
+      "d": [
+        -0.029705191751120807,
+        -0.029705191751120727
+      ],
+      "e": [
+        0.04169799445112124,
+        0.04169799445112138
+      ]
+    },
+    "intervals": {
+      "A1_local": [
+        0.020421006342920257,
+        0.020421006342920288
+      ],
+      "A1_reference": [
+        -0.07863101974357566,
+        -0.07863101974357553
+      ],
+      "A1_total": [
+        -0.05821001340065539,
+        -0.05821001340065525
+      ],
+      "A_at_principal_root": [
+        0.0060081356119880075,
+        0.006008135611988482
+      ],
+      "B_at_lapse_pivot": [
+        0.011477067158332915,
+        0.011477067158333088
+      ],
+      "C_implied_for_independent_check": [
+        0.11119593102288505,
+        0.11119593102288539
+      ],
+      "R0": [
+        0.06993533466734178,
+        0.06993533466734198
+      ],
+      "R1": [
+        -0.07921475592431962,
+        -0.07921475592431941
+      ],
+      "determinant_at_lapse_pivot": [
+        0.0003409284806787695,
+        0.00034092848067877554
+      ],
+      "determinant_at_zero": [
+        -0.002916163196896142,
+        -0.002916163196896125
+      ],
+      "w_lapse_pivot": [
+        0.9860722276629823,
+        0.9860722276629867
+      ],
+      "w_principal": [
+        0.8828574152795067,
+        0.882857415279511
+      ]
+    },
+    "intrinsic_intervals": {
+      "Hr": [
+        -0.42201569295012303,
+        -0.4220156929501229
+      ],
+      "a": [
+        0.8440313859002458,
+        0.8440313859002461
+      ],
+      "r": [
+        1.414213562373095,
+        1.4142135623730954
+      ]
+    },
+    "lapse_pivot_classification": "A=0 but determinant>0 and B>0; this elimination pivot fails, original principal matrix remains invertible",
+    "precision": 80,
+    "principal_classification": "determinant=0 with A>0 and d<0; rank1 highest-spatial-derivative matrix in this family",
+    "regular_component_containing_zero": {
+      "exact": "(-infinity,w_principal)",
+      "guaranteed_numeric_subinterval": {
+        "lower": "-infinity",
+        "upper_exclusive": 0.8828574152795067
+      },
+      "signs": {
+        "A": "positive",
+        "determinant": "negative",
+        "eliminated_K": "negative"
+      },
+      "upper_root_enclosure": [
+        0.8828574152795067,
+        0.882857415279511
+      ]
+    },
+    "root_role": "finite normal-data values delta(r_T), not z or time endpoints",
+    "spacetime_singularity_claimed": false,
+    "strict_root_order": "0 < w_principal < w_lapse_pivot"
+  },
+  "independent_C_crosscheck": {
+    "C_D_F_producer_called": false,
+    "C_used_to_compute_roots": false,
+    "derived_from_new_A1": [
+      0.11119593102288505,
+      0.11119593102288539
+    ],
+    "imported_C_interval": [
+      0.11119593102288508,
+      0.11119593102288536
+    ],
+    "intersection": [
+      0.11119593102288508,
+      0.11119593102288536
+    ],
+    "record": "results/development/nsc-incoming-surface-coefficients.json"
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-cauchy-data.json": "f6a33544301f56a43a7643f815a526c67721de27047b406dde7d2bc144653fae",
+    "results/development/nsc-incoming-lapse-coefficient.json": "fb593804b945fab5dbaf5f54031b64ce963139fb8f5a857276896f61fc0d4fc3",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-principal.json": "60400854b887a3cc35fc623807484ced7dc6549518bf001683b76c6ee523db6e",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_surface_quadratic_lapse.py": "98a1a52275bfb198d671d493541548774589f09db57f9fbeabcc3a7ba635b529",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "proof": {
+    "A": "A0+A1*w",
+    "A1_local": "a*(K - 1/(60*pi))",
+    "A1_reference": "-D*L**2*a*(L**2 + 5*m**2)/(120*pi*r**2*(L**2 + m**2)**3)",
+    "B": "-(2*A+(Hr+w/r)*d)/a^2",
+    "C_consistency": "A1+d/r=-a^2*C",
+    "Cu_Cv_producers_called": false,
+    "determinant": "d*(A0+Hr*d+(A1+d/r)*w)/a^2",
+    "e": "-d/a^2",
+    "residuals": {
+      "determinant_at_lapse_root": "0",
+      "determinant_slope_from_C": "0",
+      "lapse_root": "0",
+      "local_affine_remainder": "0",
+      "local_derivative": "0",
+      "local_independent_C": "0",
+      "local_reused_d": "0",
+      "principal_determinant": "0",
+      "principal_root": "0",
+      "reference_affine_remainder": "0",
+      "reference_derivative": "0",
+      "reference_independent_C": "0",
+      "reference_reused_d": "0"
+    },
+    "roots": {
+      "lapse_pivot": "-A0/A1",
+      "principal": "-(A0+Hr*d)/(A1+d/r)"
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_surface_regular_branch.py --check",
+  "residuals": {
+    "exact_C_consistency_identities": 0.0,
+    "exact_affine_derivative_identities": 0.0,
+    "exact_principal_root_identities": 0.0
+  },
+  "reused_baseline": {
+    "A0_d_e_producers_rerun": false,
+    "A0_record": "results/development/nsc-incoming-lapse-coefficient.json",
+    "principal_record": "results/development/nsc-incoming-surface-principal.json"
+  },
+  "schema": "NSC-INCOMING-SURFACE-REGULAR-BRANCH-v1",
+  "scope": {
+    "C_D_F_producers_rerun": false,
+    "Gamma_rest_assigned": false,
+    "included_retained_compatible_family_only": true,
+    "metric_evolution": false,
+    "normal_data_not_spatial_coordinates": true,
+    "old_probes_or_momentum_quadratures_run": false,
+    "physical_initial_data_selected": false,
+    "profile_or_global_solution_computed": false,
+    "push_or_PDF": false,
+    "rho0_seam_changed": false,
+    "source_or_state_changed": false,
+    "spacetime_singularity_claimed": false,
+    "spatial_domain_or_boundary_selected": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-surface-regular-branch.md": "b64748854d6fed8c994828b61f191a26a2cef545cd8bff18c4c16aaba9c2e0e7",
+    "scripts/derive_nsc_incoming_surface_regular_branch.py": "45576b313c8cbe14ae48185ec55c3b6d3fd218228516c9713edae7c1fa5b876d",
+    "src/recursive_horizons/nsc_incoming_surface_regular_branch.py": "f8491833f65315308a97f7ce7df39d3ab69dfd39c8750f6f07cfd97a7a0b01c0",
+    "tests/test_nsc_incoming_surface_regular_branch.py": "01d3e604a8c95d401cdd66676bb15e75d10c85e83fadda50c7697e6db5f79ddf"
+  },
+  "status": "PASS: affine normal-data roots and regular component containing zero certified",
+  "verification_tolerances": {
+    "exact_identities": 0.0
+  }
+}

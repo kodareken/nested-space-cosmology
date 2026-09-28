@@ -1,0 +1,25 @@
+# large public data (download per collected-data/README.md)
+collected-data/*.fits
+
+# macOS
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+*.egg-info/
+cmbvenv/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# builds
+build/
+dist/
+paper/.build/
+runs/
+snapshots/
+
+# local agent harness state
+.opencode/
+.qdrant-initialized

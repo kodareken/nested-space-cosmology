@@ -1,0 +1,35 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.619856949437338e-09,
+    7.306972166221115e-08
+  ],
+  "best_profile_identity": "6534e55b1f3dc3b968c2dfcdf56805113a5f4a354199e10a16704455b2316478",
+  "enclosed_error": null,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-beta48.json": "0489de61f55318bfe456bfe4704d29e010460527d1c0cf013a7bbf874e59cfe2",
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-beta48b.json": "b37b6a09f62d593fb5aebcaf1e6f120012daf01685a31b71b9677fc086a7ee20"
+  },
+  "newton_step_accepted": false,
+  "next_owner": "declared (w,U) class on I=S(1)+[0.12,0.18]",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "prediction_minus_measured": [
+    -1.8361293728002936e-10,
+    -4.586284315078505e-12
+  ],
+  "rejected_constraint_maxima": [
+    2.7823812247251833e-09,
+    7.007430794653269e-08
+  ],
+  "rejected_profile_identity": "b11573aac0542a24dddb9d02e1077b8b92ed1737b02876d35be977ae674e1a24",
+  "schema": "NSC-KS-N64-PRIMAL-NORM-BETA-NONLINEARITY-v1",
+  "singular_ratio": 1278.110563012654,
+  "source_hashes": {
+    "docs/nsc-ks-n64-primal-norm-beta-nonlinearity.md": "c3627b6ae84e6d39324be63ad8cf95d1479f8eca1b9dc3d4340f756c7cd0cc5a",
+    "scripts/derive_nsc_ks_n64_primal_norm_beta_nonlinearity.py": "2f433c27ee5cfc2536ed0de40f728c3764b95aa647383b28aa2b930ec48afdbd"
+  },
+  "stall": "n64_primal_norm_beta_step_n_nonlinearity",
+  "status": "OPEN: beta followed the Jacobian and N rose",
+  "step_norm": 9.999270463891507e-08
+}

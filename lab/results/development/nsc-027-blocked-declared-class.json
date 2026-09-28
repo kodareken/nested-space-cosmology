@@ -1,0 +1,26 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arxiv_metadata_prepared": false,
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-declared-class.json": "a945e484cab4609c61b81e8cc2cf0fc71cb171b2bdb43336eff65adfaa9e4696"
+  },
+  "manuscript_027_written": false,
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "public_checkout_unused": true,
+  "public_paper_exists": true,
+  "public_release_027_cut": false,
+  "schema": "NSC-027-BLOCKED-DECLARED-CLASS-v1",
+  "scope": {
+    "metric_timestep": false,
+    "no_class_rewrite": true,
+    "open_is_not_a_paper": true,
+    "open_is_not_done": true,
+    "public_checkout_not_edited_by_this_owner": true
+  },
+  "source_hashes": {
+    "docs/nsc-027-blocked-declared-class.md": "88fdd806514b1a9fccc3d733eff9df1b2a3eef882698d5d40e2ba4d8a09c4adf",
+    "scripts/derive_nsc_027_blocked_declared_class.py": "40645e0deebd46844a9c134a8aec64c25a25c29d1dfdf48c50b23dea23793345"
+  },
+  "status": "OPEN: 0.27.0, GitHub release and arXiv stay blocked"
+}

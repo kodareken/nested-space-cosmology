@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "classification": "published_multimessenger_timing_inputs_not_a_raw_reanalysis",
+  "GW170817_GRB170817A": {
+    "primary_paper": {
+      "arxiv": "1710.05834v2",
+      "url": "https://arxiv.org/abs/1710.05834v2",
+      "doi": "10.3847/2041-8213/aa920c"
+    },
+    "local_sources": {
+      "gwosc-event-v1.json": {
+        "sha256": "e84ec1f615e6d5f8b4d49a7358e3dc3699e5f41824d66d68b6dbf5269e7891f3",
+        "url": "https://gwosc.org/api/v2/event-versions/GW170817-v1?format=json"
+      },
+      "glg_tcat_all_bn170817529_v03.fit": {
+        "sha256": "db49f7e685d41b11847eeabd6d58f93a2ba1892aa6ac2810dee21fa90b9550fe",
+        "url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/gbm/triggers/2017/bn170817529/current/glg_tcat_all_bn170817529_v03.fit"
+      },
+      "G298048.lvc": {
+        "sha256": "f8f91ac9e862a389a6f1276e96ec5eeaeb9dfadb6b644a1564bb16cc830b0922",
+        "url": "https://gcn.gsfc.nasa.gov/notices_l/G298048.lvc"
+      },
+      "GCN-21520.txt": {
+        "sha256": "4f22671ad3855d863db139ceec412717a10f9349e83f2053af96958e2c264a1e",
+        "url": "https://gcn.nasa.gov/circulars/21520.txt"
+      }
+    },
+    "published_timing": {
+      "gw_geocentric_gps_seconds": 1187008882.430,
+      "gw_geocentric_uncertainty_seconds": 0.002,
+      "gw_geocentric_utc": "2017-08-17T12:41:04.430000Z",
+      "fermi_trigger_utc": "2017-08-17T12:41:06.474598Z",
+      "fermi_trigger_met_seconds": 524666471.474598,
+      "gamma_onset_before_trigger_seconds": 0.310,
+      "gamma_onset_uncertainty_seconds": 0.048,
+      "fermi_arrival_before_geocenter_seconds": 0.003176,
+      "published_geocentric_delay_seconds": 1.74,
+      "published_geocentric_delay_uncertainty_seconds": 0.05,
+      "definition": "gamma-ray onset at geocenter minus GW merger at geocenter"
+    },
+    "published_speed_constraint": {
+      "conservative_distance_mpc": 26.0,
+      "simultaneous_emission_assumption": "first photons and GW peak emitted simultaneously for the upper bound",
+      "source_lag_for_lower_bound_seconds": 10.0,
+      "source_lag_assumption": "gamma-ray signal emitted 10 seconds after the GW signal for the lower bound",
+      "delta_v_over_v_em_interval": [-3e-15, 7e-16],
+      "definition": "(v_GW-v_EM)/v_EM"
+    },
+    "limitations": [
+      "This validates a reconstruction of published timing inputs, not a raw strain or gamma-ray light-curve reanalysis.",
+      "The observed arrival difference equals source emission lag plus propagation delay; these compact inputs cannot remove the intrinsic source-lag assumption.",
+      "The resulting interval constrains the stated low-redshift common-path tensor/photon subclass, not raw local c, a parent speed, or an inaccessible domain."
+    ]
+  }
+}

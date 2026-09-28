@@ -1,0 +1,88 @@
+{
+  "accountable_author": "Douglas Ek",
+  "all_node_clipped_leftover": [
+    0.004107193193,
+    0.005790788098
+  ],
+  "all_node_clipped_step_norm": null,
+  "all_node_condition_number": 2.360516265322543e+16,
+  "all_node_rank_or_conditioning": true,
+  "all_node_unclipped_leftover": [
+    0.004107193193,
+    0.005790788098
+  ],
+  "all_node_unclipped_step_norm": null,
+  "clipped_beats_measured": false,
+  "current_profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "forbidden_identities": [
+    "2d2588c3c9b1c83fe1a3f291314b8030300c4f14d3b12c24eadd2664eb20231b",
+    "949a188181bd9ba0df43bc8ea00db2c89ce35a458017052b7af928059f819680"
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-n16-geometry-killing-current.json": "6d870a9c9bd0748155b1aebbc4bde75789336e46bfac51b163ea45bf071065cc",
+    "results/development/nsc-ks-n16-leftover-anatomy.json": "62d6c3e6ce6370cabcf6a87f56c87ae80a5aaa1ba02f0d4d4f6df6599a0dbf56"
+  },
+  "n16_all_node_leftover": [
+    0.000131894427,
+    0.000633594491
+  ],
+  "n32_coefficient_count": 32,
+  "n32_direction_count": 64,
+  "named_search_stall": "n32_geometry_leftover_cannot_reach_existence",
+  "padded_profile_identity": "49223e613233a84ece27eb4efd544eb462b4343453d7dcbc8f2cf0cfec9dff68",
+  "schema": "NSC-KS-N32-GEOMETRY-LEFTOVER-v1",
+  "scope": {
+    "full_scale_n16_not_evolved": true,
+    "high_mode_matter_columns_invented": false,
+    "metric_timestep": false,
+    "n8_next_not_evolved": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "solve_condition_number": 52563.13396871849,
+  "solve_unclipped_leftover": [
+    0.003054268198,
+    0.005311512436
+  ],
+  "solve_unclipped_step_norm": null,
+  "source_hashes": {
+    "docs/nsc-ks-n32-geometry-leftover.md": "63f0522224b322feb2cbd661b564641a2b40d4e3f271cf42da49ff12d8007b01",
+    "scripts/derive_nsc_ks_n32_geometry_leftover.py": "98f2c97b5c5625fdc4c96ff4cd09dcd47c930c59aae6d21cff121cf052499b0e",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "status": "OPEN: n=32 geometry leftover cannot reach EXISTENCE; no family evolved",
+  "truncated_svd_all_node": [
+    {
+      "N_max": 5.1073435e-05,
+      "beta_max": 0.000753438592,
+      "condition_cutoff": 10000.0,
+      "control_max": 0.000753438592,
+      "kept_modes": 29,
+      "step_norm": 0.050856686738
+    },
+    {
+      "N_max": 1.8375084e-05,
+      "beta_max": 0.000268356229,
+      "condition_cutoff": 1000000.0,
+      "control_max": 0.000268356229,
+      "kept_modes": 37,
+      "step_norm": 2.497648479855
+    },
+    {
+      "N_max": 1.2751262e-05,
+      "beta_max": 0.000127429339,
+      "condition_cutoff": 100000000.0,
+      "control_max": 0.000127429339,
+      "kept_modes": 41,
+      "step_norm": 15.577236383087
+    }
+  ],
+  "unclipped_is_order_below_n16_leftover": false,
+  "unclipped_reaches_existence": false
+}

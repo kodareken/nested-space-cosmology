@@ -1,0 +1,34 @@
+{
+  "accountable_author": "Douglas Ek",
+  "all_node_condition_number": 7589.213921587872,
+  "all_node_unclipped_leftover": [
+    0.000409198777,
+    0.003811452608
+  ],
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "families_evolved": 0,
+  "input_hashes": {
+    "results/development/nsc-ks-fourier-wu-leftover.json": "ffa386a1b0ae0a6e4e428f151be905ea7e45aae5910f8f0b4a446aaaf37a050f"
+  },
+  "named_search_stall": "fourier_wu_leftover_cannot_reach_existence",
+  "schema": "NSC-KS-FOURIER-WU-EVOLVE-REFUSAL-v1",
+  "scope": {
+    "chebyshev_family_not_widened": true,
+    "full_scale_n16_not_evolved": true,
+    "high_mode_matter_columns_invented": false,
+    "metric_timestep": false,
+    "n8_next_not_evolved": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "selected_mode_count": 8,
+  "source_hashes": {
+    "docs/nsc-ks-fourier-wu-evolve-refusal.md": "3b304c64e055cb9593a833c5cdcc433ba6079949b71717d566131285afb708a3",
+    "scripts/derive_nsc_ks_fourier_wu_evolve_refusal.py": "566aa773679ff5a1a0eba6b271983552b110e8e2079382d2068c050f8f5cf455"
+  },
+  "status": "OPEN: Fourier retarded evolve refused; leftover cannot reach 3e-11"
+}

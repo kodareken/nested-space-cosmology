@@ -1,0 +1,40 @@
+{
+  "accountable_author": "Douglas Ek",
+  "assembled_transfer_faithful": false,
+  "assembled_unclipped_leftover": [
+    0.003533911291,
+    0.019960582153
+  ],
+  "existence_tolerance": 3e-11,
+  "families_evolved": 0,
+  "fas_c_cause": "insufficient representation of the declared class: assembled leftover stays residual-scale",
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-bounds-after-assembled-search.json": "78f53adf82dd5c50bf2757bd42034719ae79fffa2f1e10579b23cf8badd1c65a",
+    "results/development/nsc-ks-fourier-assembled-search.json": "f85ba7227332239fb7d7f8c09d33a4a72244ad4576044e5e85fab4bd39b08d07",
+    "results/development/nsc-local-incoming-gate-status-declared-class.json": "a945e484cab4609c61b81e8cc2cf0fc71cb171b2bdb43336eff65adfaa9e4696"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "next_named_owner": "same declared (w,U) class on I; no class rewrite",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-ASSEMBLED-SEARCH-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "no_class_rewrite": true,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-assembled-search.md": "878261130ca20e3982ba107414d0d8121e8085a926a61791c066c8772acf6872",
+    "scripts/derive_nsc_local_incoming_gate_status_after_assembled_search.py": "baa93a98aa609f18da5e32ee6aba5325a237dc3a272484a449464f2b36bc9777"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: assembled Fourier leftover cannot reach EXISTENCE; finite image, not a class identity"
+}

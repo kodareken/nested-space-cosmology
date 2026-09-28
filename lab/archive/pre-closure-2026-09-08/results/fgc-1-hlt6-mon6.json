@@ -1,0 +1,732 @@
+{
+  "artifact_id": "FGC-1-HLT6-MON6",
+  "artifact_payload": {
+    "accepted_state_source_prechecks": [
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "RK4",
+        "point_count": 1025,
+        "source_residual_infinity": 1.9539925233402755e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "RK4",
+        "point_count": 2049,
+        "source_residual_infinity": 4.9145872556740196e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "RK4",
+        "point_count": 4097,
+        "source_residual_infinity": 1.9658349022696078e-13,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "SSPRK3",
+        "point_count": 1025,
+        "source_residual_infinity": 1.0658141036401503e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "SSPRK3",
+        "point_count": 2049,
+        "source_residual_infinity": 2.3092638912203256e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "5/2",
+        "method": "SSPRK3",
+        "point_count": 4097,
+        "source_residual_infinity": 1.8947806286935998e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "RK4",
+        "point_count": 1025,
+        "source_residual_infinity": 3.907985046680551e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "RK4",
+        "point_count": 2049,
+        "source_residual_infinity": 4.9145872556740196e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "RK4",
+        "point_count": 4097,
+        "source_residual_infinity": 1.9658349022696078e-13,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "SSPRK3",
+        "point_count": 1025,
+        "source_residual_infinity": 1.5987211554602254e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "SSPRK3",
+        "point_count": 2049,
+        "source_residual_infinity": 4.263256414560601e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_state_source_gate_passed": true,
+        "amplitude": "3",
+        "method": "SSPRK3",
+        "point_count": 4097,
+        "source_residual_infinity": 2.220446049250313e-14,
+        "source_residual_maximum": 1e-12,
+        "trajectory_advanced": false
+      }
+    ],
+    "common_event_adapter_controls": {
+      "all_controls_passed": true,
+      "interior_defect": {
+        "accumulated_roundoff_enclosure": 1.9099388737231493e-11,
+        "interior_veto_control_passed": true,
+        "owned_maximum_radius": 2.5,
+        "owned_raw_component_infinity": 4e-06
+      },
+      "outer_projector_defect": {
+        "accumulated_roundoff_enclosure": 1.9099388737231493e-11,
+        "full_maximum_radius": 7.5,
+        "full_raw_component_infinity": 0.0004,
+        "last_owned_radius": 7.125,
+        "owned_raw_component_infinity": 0.0,
+        "public_but_not_owned_control_passed": true
+      },
+      "spatial_spectrum": {
+        "coarse_witness_finest_pair_control_passed": true,
+        "medium_absolute_miss_vetoed": true,
+        "noncontracting_tail_vetoed": true
+      }
+    },
+    "decision": "HLT6_implements_only_PROTO8_common_event_ownership_and_authorizes_one_fresh_GR0_recalibration",
+    "epistemic_boundary": {
+      "PROTO7_calibration_history_disclosed": true,
+      "PROTO8_trajectory_advanced": false,
+      "PROTO8_trajectory_read": false,
+      "SGBL_or_FGCQR_outcome_read": false,
+      "fresh_GR0_recalibration_is_now_authorized_but_not_completed": true,
+      "mechanism_question_answered": false,
+      "resolved_holdout_manifest_exists": false,
+      "synthetic_failures_used_only_for_adapter_controls": true,
+      "t0_physical_inputs_reconstructed": true,
+      "trapped_or_collapse_outcome_classified": false
+    },
+    "frozen_run_inputs": [
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "044fea04f0f61565d34b96a019bde02de3f232ddedb29341f6ee6805a2e701ab",
+        "expanded_run_config_sha256": "f298a619c84e6b8938520ff8439fdad06f3b830f295de864d65a3dc596099893",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 1025,
+        "projected_state_sha256": "fcbe4e2f7325b68e59967c3fcfcb8cc09f22b956d4fa1698b1b2db625fe63586",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "437629ab67ee26f18d4ec8c8fce7120f37d9f4b56a45ac7598f747aec1f98acc",
+        "expanded_run_config_sha256": "35934bae521715e3541a9cee8111fe3f87eca591570e816a5f1358b5b1f77524",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 2049,
+        "projected_state_sha256": "d711694d4c9665de85edfe90470b738922d99a73614bb7bf6e6f3d19881a7671",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "43d5382bcf8b945f6fa6469bfe1befe318daaa0c57e211c48950c4b786681dbc",
+        "expanded_run_config_sha256": "dfa8baa320fd68480ad280afdbd48c5f992fd2da544fafd7156e9d739ded8738",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 4097,
+        "projected_state_sha256": "07eb8019a624bdb6e7b56cd28031d3462208afb2d32cb81344404fee32b244bd",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "14b7b6055514d14179c0061add60f46009b15daca117ea9dc07f39d1ad9121c9",
+        "expanded_run_config_sha256": "ed762cbbb4d1db472eeb27f60be2fe6818d5337d9412d4189347ccdb9240d10d",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 1025,
+        "projected_state_sha256": "563c463d8bd4067dfde3d18928e7d15eedee40e26c420150299314a5ec1c2803",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "35756f656088c974fb0e1020bf7cdddd5621fe5db05df44cf93df23ac50e0228",
+        "expanded_run_config_sha256": "929ec579f26125f148f7b06e4a12ec9bb5d49d8ad4a1b788dc2656037a7328f4",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 2049,
+        "projected_state_sha256": "5482e6e7fbd202110463b6f278d533e33c6a86849a66709a2c6c611975bcdbd3",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "2558a7976e5001a36d30a1a41ddeb9b1a5e659fc292890c048a492984fdfc895",
+        "expanded_run_config_sha256": "42a06b3d6a16f06666795845f5921d3b85809190827b5b21205990279a68642f",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 4097,
+        "projected_state_sha256": "01ffe9b8c63293b2cf79a88a68183d31bb53ee78e3524d5bbeb41ef27118dbad",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "4832f14ee4c089ed77d0282ecff09644f09f9e609d6cb135e69e054608f828ac",
+        "expanded_run_config_sha256": "a537fc655359ae86817ca9760156a9f5bf034632b088248b3e77ecb3ed635e7e",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 1025,
+        "projected_state_sha256": "723e10734f1a03c3330aad62e1146e810a11cf2af3817ddfa10f401f3ba9abbd",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "a9612b111e963b08bea5684cf45c5bd7bdc6e7c6a74fa921f1a1a045d906d2ca",
+        "expanded_run_config_sha256": "b1d8870a6e608228d68fc9a112ead15b778709b860ddcb25f5680b6c9f175f8a",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 2049,
+        "projected_state_sha256": "c331752451584c41fd8dba3bca4d4e6050617d640e27fc4fd45cb6b1e72bd8ce",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "6d055cbf0a50c2cfd9037be354896312e5ab50b758d510c4fe681f1228b00262",
+        "expanded_run_config_sha256": "a8801dfb586bb22c737751f2107a59cee0aba46b5119fdcbb48aa832c9e50175",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 4097,
+        "projected_state_sha256": "b84fa78009b0cd48b7ed85344b2c58ecb006027f37af3da69dcdc3dcc20677d3",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "dcb34bab65b52105fd86be7a0381e51bb440e1260d50eba067b8f0fd5dd96df6",
+        "expanded_run_config_sha256": "f386b658dfb771b6c5e9cf24f0a4f0e5f6c0b6edaade23857bc2cae5ea555440",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 1025,
+        "projected_state_sha256": "b37eefa96f775a70fc3004624bbfd7b8885e6feaff410967e52d3b026700f383",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "d87f10c7c908c0a1b9885d31e1522836ecd66d7167162f69cf40eb0abba6f1a1",
+        "expanded_run_config_sha256": "e69eb3e976de907784f8f5e4589c7ecde6e8061a5c949251fbfe1bd280510ecf",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 2049,
+        "projected_state_sha256": "39edf10cea7b9ccfc8d131f7713e040509dcf0f698ddfc1cbaab09e4413f3732",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_event_constraint_domain": "evolution_owned_rows_excluding_projector_and_stencil_reach",
+        "common_event_constraint_roundoff": "4096*binary64_epsilon*(1+accepted_stage_count)_order_only",
+        "common_event_spatial_spectral_roles": "coarse_witness_medium_fine_absolute_all_adjacent_contraction",
+        "common_output_interval": "1/16",
+        "complete_failure_observability": true,
+        "continuum_ID2_state_sha256": "f68b2223da0b90a55dc67adbb8a56c37b5543d954cb773860c667ee4ba31d35e",
+        "expanded_run_config_sha256": "df4d2d42642ef443d479c142fb021f25f86630288d482b9a2155200ab2e7cc8e",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+        "point_count": 4097,
+        "projected_state_sha256": "fe61b334f97dd2f41b1e14620e854efbf1366c4dcc17dda9ad105ad20cb41c36",
+        "protocol_sha256": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "source_stop_ownership": "accepted_terminal_all_unaccepted_proposal_source_only_retry",
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      }
+    ],
+    "frozen_run_plan": {
+      "artifact_id": "FGC-1-CAL5-RUN1-PLAN",
+      "campaign_id": "721dd0f590c2546d2fd9c5b8b2e7d0185938da9bf1ea38e45a8ddde2de4e0ffb",
+      "expanded_input_count": 12,
+      "first_eligible_candidate_stops_later_candidates": true,
+      "input_manifest_sha256": "081940310d21a1d6bd3a46b4aa38c55f1c7ed8308af582cc2d817bcb095f3556",
+      "ordered_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "run_plan_sha256": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75"
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "b4c3cdcd216e305ef55e2f2700fbee4111afc95c",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "freeze": {
+        "artifact_id": "FGC-1-PRO8-FRZ1",
+        "claims_all_false": true,
+        "result_sha256": "e6fc8a94518a3458fb139773f20f0f3009940006c9571c30e75ba4a8f45c5c64"
+      },
+      "predecessor_run_plan_sha256": "c5f289a9be96134364f028cd808c24d418c428614ad5ce6a3878258d5fcab8ac",
+      "predecessor_runtime": {
+        "artifact_id": "FGC-1-HLT5-MON5",
+        "implementation_files_hash_matched": 9,
+        "result_sha256": "d32104f266feb81b1f9ca00a7d3e080dccb7a362d1775e252e307fe0e8c0daf9"
+      },
+      "protocol": {
+        "artifact_id": "FGC-2-SF1-PROTO8",
+        "protocol_version": 8,
+        "semantic_holdout_contract_sha256": "4c112c9d99a08bd11d5f98bc909a6f11ddb8c43f24b419609acc199ce76191c8"
+      },
+      "static_input": {
+        "artifact_id": "FGC-1-ID2-ALL1",
+        "result_sha256": "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981"
+      }
+    },
+    "inherited_PROTO7_transaction": {
+      "inherited_implementation_files_hash_matched": 9,
+      "source_solver_transaction_retry_and_non_source_stops_unchanged": true
+    },
+    "initial_common_events": [
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": true,
+        "all_adjacent_spatial_tail_ratios_passed": true,
+        "amplitude": "5/2",
+        "coarsest_spatial_individual_budget_passed": true,
+        "coordinate_time": 0.0,
+        "excluded_outer_rows": [
+          7,
+          7,
+          7
+        ],
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "method": "RK4",
+        "owned_raw_global_norms": [
+          0.01034840701666545,
+          0.003070602382053849,
+          0.00027315334869367283
+        ],
+        "point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": true,
+        "all_adjacent_spatial_tail_ratios_passed": true,
+        "amplitude": "5/2",
+        "coarsest_spatial_individual_budget_passed": true,
+        "coordinate_time": 0.0,
+        "excluded_outer_rows": [
+          5,
+          5,
+          5
+        ],
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "method": "SSPRK3",
+        "owned_raw_global_norms": [
+          0.026226174017628334,
+          0.010994902547784086,
+          0.002961522233503138
+        ],
+        "point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": true,
+        "all_adjacent_spatial_tail_ratios_passed": true,
+        "amplitude": "3",
+        "coarsest_spatial_individual_budget_passed": true,
+        "coordinate_time": 0.0,
+        "excluded_outer_rows": [
+          7,
+          7,
+          7
+        ],
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "method": "RK4",
+        "owned_raw_global_norms": [
+          0.014936654566134161,
+          0.004403392529741985,
+          0.00039181498070268994
+        ],
+        "point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "trajectory_advanced": false
+      },
+      {
+        "accepted_stage_counts": [
+          0,
+          0,
+          0
+        ],
+        "admission_passed": true,
+        "all_adjacent_spatial_tail_ratios_passed": true,
+        "amplitude": "3",
+        "coarsest_spatial_individual_budget_passed": true,
+        "coordinate_time": 0.0,
+        "excluded_outer_rows": [
+          5,
+          5,
+          5
+        ],
+        "finest_pair_spatial_individual_budgets_passed": true,
+        "method": "SSPRK3",
+        "owned_raw_global_norms": [
+          0.03704657493089081,
+          0.01584987288839588,
+          0.004268031920641638
+        ],
+        "point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "trajectory_advanced": false
+      }
+    ],
+    "namespace_precondition": {
+      "authorization_created_no_namespace": true,
+      "both_fresh_namespaces_empty": true,
+      "records": [
+        {
+          "created_by_authorization": false,
+          "empty": true,
+          "entry_count": 0,
+          "existed_before_authorization": false,
+          "path": "runs/fgc-2-sf1/proto8/calibration"
+        },
+        {
+          "created_by_authorization": false,
+          "empty": true,
+          "entry_count": 0,
+          "existed_before_authorization": false,
+          "path": "runs/fgc-2-sf1/proto8/holdout"
+        }
+      ]
+    }
+  },
+  "classification": "pre_trajectory_PROTO8_GR0_common_event_ownership_runtime_and_fresh_calibration_authorization",
+  "derivation_document": "docs/fgc-hlt6-mon6.md",
+  "derivation_document_sha256": "827aa5433dfa1aba5c8d176ca45b93e616e23461667701657bcf57c258005d9d",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO8_fresh_GR0_dynamic_calibration_authorized": true,
+    "PROTO8_resolved_holdout_manifest_authorized": false,
+    "PROTO8_successor_runtime_compositor_implemented": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hlt6_mon6.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt6_mon6.py": "75ccf591a8cceae80b2fa1c6a849aaf080ed24133a28203aab0d648610d92985",
+    "scripts/run_fgc_gr0_calibration.py": "4e3734495edc0a289e5c61dc68e193cbe19629582234dd04c0c20a46d52774b3",
+    "scripts/run_fgc_gr0_calibration_v6.py": "8bc140d0c6c2fbc65f13d4b84ca78277652c9fd04e4748b134ade9f38fddd8ce",
+    "scripts/run_fgc_gr0_calibration_v7.py": "04324e7066dc5a3c4ea3f6200612cc6c1a51fae5adba0c28ecb10ebec2f5d2e7",
+    "scripts/run_fgc_gr0_calibration_v8.py": "7d5c936ea319862432838385c249b64091357f526303dcc79776d97d5b7f166d",
+    "src/recursive_horizons/fgc/evolution/cal2_source_diagnosis.py": "506764b60d767affb7db067b8bb3e7e92f4d6a6d0c163a5af6a6772fae29c976",
+    "src/recursive_horizons/fgc/evolution/cal4_common_event_diagnosis.py": "0add38fadebbe07b021ccd3c421ced6519efea9f233ad09d447fbc3241041741",
+    "src/recursive_horizons/fgc/evolution/calibration_runtime.py": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9",
+    "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545",
+    "src/recursive_horizons/fgc/evolution/proto6_runtime.py": "f0d63c3b1bd17891ac1cb21969ec6b3454cac4adc6d4c116979626b0d82d77f5",
+    "src/recursive_horizons/fgc/evolution/proto7_runtime.py": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734",
+    "src/recursive_horizons/fgc/evolution/proto8_runtime.py": "6cfe110c15ca6d31b4023d86d8a3e40f4e36df39058b3cd8bf06db06ffac133e"
+  },
+  "nonclaims": {
+    "FGCQR_trajectory_opened": false,
+    "SGBL_comparison_completed": false,
+    "SGBL_health_definition_supplied": false,
+    "child_domain_or_topology": false,
+    "constraint_to_DEF1_stability_map_supplied": false,
+    "dark_sector_mechanism": false,
+    "fresh_GR0_recalibration_completed": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_measured": false,
+    "retained_EFT_validity": false,
+    "singularity_resolution": false,
+    "trapped_sphere_formed_dynamically": false,
+    "varying_locally_measured_c": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-cal4-run1.toml": "c5f289a9be96134364f028cd808c24d418c428614ad5ce6a3878258d5fcab8ac",
+    "configs/fgc/fgc-1-pro8-frz1.toml": "ec62cc24dc6127520bccb296488798602fa83bbe1af3b8044b4193584c122ae9",
+    "configs/fgc/fgc-2-sf1-protocol-v8.toml": "5de88456ed041f8a4293150f49b4caea057560dd796c8ea2b9a8110ecf7770ab",
+    "results/fgc-1-hlt5-mon5.json": "d32104f266feb81b1f9ca00a7d3e080dccb7a362d1775e252e307fe0e8c0daf9",
+    "results/fgc-1-id2-all1.json": "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981",
+    "results/fgc-1-pro8-frz1.json": "e6fc8a94518a3458fb139773f20f0f3009940006c9571c30e75ba4a8f45c5c64"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "PROTO7_calibration_history_disclosed": true,
+    "PROTO8_trajectory_read": false,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "candidate_action_health_values_invented_for_GR0": false,
+    "collapse_or_trapped_outcome_classified": false,
+    "role": "pre_trajectory_common_event_diagnostic_ownership_runtime_compositor_and_fresh_input_freeze",
+    "runtime_owner": "FGC-1-HLT6-MON6",
+    "target_protocol": "FGC-2-SF1-PROTO8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal5-run1.toml": "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75",
+    "configs/fgc/fgc-1-hlt6-mon6.toml": "562d030387665088fb4f7b05009b5deddbf660add7b43c93411f1e25e8a088e3"
+  }
+}

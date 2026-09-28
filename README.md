@@ -22,10 +22,14 @@ the broader manuscript or claim that the cosmology has been proved.
 [Current scientific status](docs/current-result.md) ·
 [Verification and reproducibility](docs/reproducing.md)
 
-This is the curated public repository for the same work developed in the
-research laboratory. The publication boundary keeps raw experiments separate
-from cited evidence. Working copies and branches are implementation workspaces,
-not additional NSC theories. Published results are traced to their source commits.
+This repository now contains the publication and active laboratory together.
+The papers stay in `paper/`; current scientific code and evidence are in `lab/`.
+Start with [AGENTS.md](AGENTS.md), [the accepted plan](docs/PLAN.md) and
+[the handover](docs/handover.md). Work on `codex/work-branch`, integrate verified
+changes into `main`, and push both to this GitHub repository.
+[Consolidation and historical data](docs/repository-consolidation.md) explains
+what was retained and why old search arrays are excluded. Published scientific
+claims remain tied to their specific evidence, not merely to GitHub availability.
 
 ## What if reality is one inherited spectrum?
 

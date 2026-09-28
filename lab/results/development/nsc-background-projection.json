@@ -1,0 +1,208 @@
+{
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 2e-12,
+    "float_rtol": 2e-12
+  },
+  "completed_tensor_input": {
+    "T01": 0.0012238701558050947,
+    "p_parallel": -0.34978809526912713,
+    "p_sphere": 0.1295896223176723,
+    "parent_Killing_power": -0.057095079694874526,
+    "rho": 0.10074836288678615
+  },
+  "deposition_decision": {
+    "formation_surface_impulse_determined_by_neck_snapshot": false,
+    "parent_Killing_power_is_child_energy_injection": false,
+    "parent_Killing_power_maps_to": "minus the conserved child spatial-Killing momentum charge: P_parent=-P_z=-a_parallel*V*T01, with the sign fixed by dT=-d rho/a_parallel",
+    "proper_cell_energy_change_is_pressure_work": true,
+    "regular_child_bulk_Q": 0.0
+  },
+  "gate": {
+    "declared_tolerance": 2e-12,
+    "global_H_of_z_authorized": false,
+    "local_conservation_residual_below_tolerance": true,
+    "next_owner": "metric backreaction and same-state CTP tensor evolution on the locked Bronnikov child branch",
+    "proper_volume_and_clock_projection_complete_at_neck": true
+  },
+  "geometry_at_neck": {
+    "A": -3.7123889803846897,
+    "A_prime": 6.0,
+    "H_parallel": 1.557021169290531,
+    "H_sphere": -0.0,
+    "a_parallel": 1.9267560770332839,
+    "d_rho_d_child_time": -1.9267560770332839,
+    "proper_volume_per_coordinate_dz": 24.212330947469017,
+    "proper_volume_rate_per_coordinate_dz": 37.69911184307752,
+    "rho_coordinate": 0.0,
+    "sphere_radius": 1.0,
+    "volume_expansion": 1.557021169290531,
+    "volume_scale_H": 0.519007056430177
+  },
+  "homogeneous_output": {
+    "global_rho_or_pressure_history_determined": false,
+    "normalized_volume_scale_aV_T": "1+0.51900705643017697*T+O(T^2), aV=(V/V_neck)^(1/3)",
+    "p_parallel_at_neck": -0.34978809526912713,
+    "p_sphere_at_neck": 0.1295896223176723,
+    "pressure_time_derivatives": null,
+    "rho_T": "0.10074836288678615+0.38776013531375342*T+O(T^2)",
+    "rho_aV": "0.10074836288678615+0.74711919714702291*log(aV)+O(log(aV)^2)",
+    "scope_boundary": "one neck tensor fixes the conserved first density derivative but not the later pressure functions; evolve the same CTP state and metric together before constructing a background history",
+    "type": "local first-order Cauchy jet at child time T=0"
+  },
+  "imported_ledger": {
+    "child_clock": "dT=-d rho/sqrt(-A)",
+    "derivation_repeated": false,
+    "energy_conservation": "rho_dot+H_parallel*(rho+p_parallel)+2*H_sphere*(rho+p_sphere)=Q",
+    "geometry": "ds^2=dT^2-a_parallel(T)^2 dz^2-r(T)^2 dOmega_2^2",
+    "momentum_conservation": "j_dot+2*(H_parallel+H_sphere)*j=S_j",
+    "proper_volume_per_coordinate_dz": "V=4*pi*a_parallel*r^2"
+  },
+  "input_hashes": {
+    "results/development/adm-neck-source-map.json": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe",
+    "results/development/charged-compact-ctp-completion.json": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6",
+    "results/development/charged-ctp-neck-source.json": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90",
+    "results/development/child-state.json": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/nsc-5-clock-horizon.json": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f"
+  },
+  "locked_inputs": {
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "dark_fraction_fit_used": false,
+    "fourteen_over_nineteen_fit_used": false,
+    "q": 4,
+    "zeta": 15.785319939652627
+  },
+  "proper_volume_clock_projection": {
+    "child_spatial_Killing_charge_per_coordinate_dz": 0.05709507969487496,
+    "child_spatial_Killing_charge_rate": 0.0,
+    "density_derivative_per_log_volume": 0.24903973238234095,
+    "density_derivative_per_log_volume_scale": 0.7471191971470229,
+    "density_rate_child_time": 0.3877601353137534,
+    "directional_pressure_work_density_rate": 0.5446274690998439,
+    "directional_pressure_work_rate_per_coordinate_dz": 13.186700524927877,
+    "energy_conservation_residual": -5.551115123125783e-17,
+    "energy_transfer_Q": 0.0,
+    "integrated_energy_ledger_residual": 0.0,
+    "momentum_conservation_residual": 0.0,
+    "momentum_density_rate_child_time": -0.0038111834821028655,
+    "momentum_transfer": 0.0,
+    "oriented_parent_power_from_child_momentum": -0.05709507969487496,
+    "proper_energy_per_coordinate_dz": 2.439352704630571,
+    "proper_energy_rate_per_coordinate_dz": 13.186700524927877,
+    "stored_Killing_power_map_residual": -4.371503159461554e-16,
+    "volume_dilution_density_rate": -0.1568673337860905
+  },
+  "residuals": {
+    "Killing_power_to_child_spatial_charge": -4.371503159461554e-16,
+    "energy_conservation": -5.551115123125783e-17,
+    "integrated_energy_ledger": 0.0,
+    "maximum_absolute": 4.371503159461554e-16,
+    "momentum_conservation": 0.0,
+    "tensor_reconstruction": {
+      "T01": 0.0,
+      "p_parallel": 0.0,
+      "p_sphere": 0.0,
+      "parent_Killing_power": 0.0,
+      "rho": 0.0
+    }
+  },
+  "schema": "NSC-BACKGROUND-PROJECTION-v1",
+  "scope": {
+    "CTP_Hessian_or_perturbations_computed": false,
+    "dark_fraction_or_H_of_z_fitted": false,
+    "global_background_claimed": false,
+    "new_metric_ansatz_or_equation": false,
+    "new_source_computed": false,
+    "old_scientific_generator_rerun": false,
+    "q_Omega_or_zeta_changed": false,
+    "vacuum_subtraction_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-background-projection.md": "f6d0d4e3274976a41ed899f0deb178311d691448e9dcf8c3191e36b38d66921e",
+    "scripts/derive_nsc_background_projection.py": "afd0bebf79fd7f06174b6694057fe0e05ab66adc51d7a3dcd401615e33a52eb9",
+    "src/recursive_horizons/nsc_background_projection.py": "2f1fc3594ff81af9e09390d5c0f7716a23e313a9edf9cd1a09307acb05b31550"
+  },
+  "spectrum_component_ledger": {
+    "allocation_is_a_renormalized_functional_split_not_a_dark_fluid_split": true,
+    "explicit_free_compact_block_transfer_Q": 0.0,
+    "reason": "the accepted free Gaussian Hamiltonian is block diagonal in compact level and the interacting compact vertex is disabled",
+    "reconstruction_residuals": {
+      "T01": 0.0,
+      "p_parallel": 0.0,
+      "p_sphere": 0.0,
+      "parent_Killing_power": 0.0,
+      "rho": 0.0
+    },
+    "rows": [
+      {
+        "allocation": "LLL plus nonzero magnetic angular modes at compact level zero",
+        "name": "compact_zero_charged_angular_sector",
+        "no_exchange_local_jet": {
+          "child_spatial_Killing_charge_per_coordinate_dz": 0.05709507969487463,
+          "child_spatial_Killing_charge_rate": 0.0,
+          "density_derivative_per_log_volume": 0.02583932429728909,
+          "density_derivative_per_log_volume_scale": 0.07751797289186728,
+          "density_rate_child_time": 0.040232374931042286,
+          "directional_pressure_work_density_rate": 0.05003595171997932,
+          "directional_pressure_work_rate_per_coordinate_dz": 1.2114870223157208,
+          "energy_conservation_residual": 0.0,
+          "energy_transfer_Q": 0.0,
+          "integrated_energy_ledger_residual": 0.0,
+          "momentum_conservation_residual": 0.0,
+          "momentum_density_rate_child_time": -0.0038111834821028434,
+          "momentum_transfer": 0.0,
+          "oriented_parent_power_from_child_momentum": -0.05709507969487463,
+          "proper_energy_per_coordinate_dz": 0.1524497228196502,
+          "proper_energy_rate_per_coordinate_dz": 1.2114870223157208,
+          "stored_Killing_power_map_residual": -4.440892098500626e-16,
+          "volume_dilution_density_rate": -0.009803576788937035
+        },
+        "tensor_at_neck": {
+          "T01": 0.0012238701558050875,
+          "p_parallel": -0.032135691348871384,
+          "p_sphere": -0.026979224375664516,
+          "parent_Killing_power": -0.057095079694874186,
+          "rho": 0.006296367051582293
+        }
+      },
+      {
+        "allocation": "j=1,2 nonlocal CTP covariance plus the locked local compact response",
+        "name": "positive_compact_and_Wilsonian_complement",
+        "no_exchange_local_jet": {
+          "child_spatial_Killing_charge_per_coordinate_dz": 3.3734855868069257e-16,
+          "child_spatial_Killing_charge_rate": 0.0,
+          "density_derivative_per_log_volume": 0.2232004080850519,
+          "density_derivative_per_log_volume_scale": 0.6696012242551557,
+          "density_rate_child_time": 0.34752776038271116,
+          "directional_pressure_work_density_rate": 0.4945915173798646,
+          "directional_pressure_work_rate_per_coordinate_dz": 11.975213502612156,
+          "energy_conservation_residual": 0.0,
+          "energy_transfer_Q": 0.0,
+          "integrated_energy_ledger_residual": 0.0,
+          "momentum_conservation_residual": 0.0,
+          "momentum_density_rate_child_time": -2.2518529817736168e-17,
+          "momentum_transfer": 0.0,
+          "oriented_parent_power_from_child_momentum": -3.3734855868069257e-16,
+          "proper_energy_per_coordinate_dz": 2.286902981810921,
+          "proper_energy_rate_per_coordinate_dz": 11.975213502612156,
+          "stored_Killing_power_map_residual": -4.930380657631324e-32,
+          "volume_dilution_density_rate": -0.14706375699715346
+        },
+        "tensor_at_neck": {
+          "T01": 7.231285695363062e-18,
+          "p_parallel": -0.31765240392025573,
+          "p_sphere": 0.15656884669333682,
+          "parent_Killing_power": -3.373485586806925e-16,
+          "rho": 0.09445199583520386
+        }
+      }
+    ],
+    "visible_dark_assignment_made": false,
+    "visible_dark_component_Q": null
+  },
+  "status": "PASS: the completed neck tensor has a covariantly conserved proper-volume/child-clock first jet; global background evolution requires metric backreaction with the same CTP source"
+}

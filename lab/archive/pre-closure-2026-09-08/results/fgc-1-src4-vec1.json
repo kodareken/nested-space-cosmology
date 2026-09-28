@@ -1,0 +1,192 @@
+{
+  "artifact_id": "FGC-1-SRC4-VEC1",
+  "artifact_payload": {
+    "CAP1_full_grid_control": {
+      "SRC3_kinetic_condition_infinity_maximum": 2859227.196975944,
+      "SRC3_residual_infinity": 3.296668493746324e-14,
+      "SRC4_acceleration_delta_from_SRC3": 4.440892098500626e-16,
+      "SRC4_acceleration_sha256": "289d732bfde3184257d1fc45430884ff215a1ff8aa7725c78d7c3e5fdb239fcf",
+      "SRC4_condition_delta_from_SRC3": 0.0,
+      "SRC4_kinetic_condition_infinity_maximum": 2859227.196975944,
+      "SRC4_residual_infinity": 2.4197549346183234e-14,
+      "SRC4_residual_sha256": "e7e74b2a4d9a26dd4445a2e59df54686b83c2def17384dfe92bbae996356a43e",
+      "both_strict_raw_gates_passed_in_frozen_CAP1_evidence": true,
+      "hash_mismatched_raw_fixture_fails_closed": true,
+      "point_count": 8192,
+      "raw_fixture_optional_for_clean_clone_reproduction": true,
+      "raw_fixture_validation_contract": "recomputed_when_present_otherwise_bound_by_frozen_hash"
+    },
+    "PREF11_exact_dyadic_control": {
+      "SRC3_acceleration_delta_infinity": 7.573064690121713e-29,
+      "acceleration_sha256": "576721ce4868400d0fddbbd7a58be5bec69aea157ae6a74d9f2f3d51d91b6932",
+      "exact_dyadic_residual_infinity": 4.007125026476324e-27,
+      "maximum_ULP_distance_from_rounded_exact_root": 1,
+      "radius_binary64_hex": "0x1.0000000000000p-6",
+      "residual_infinity": 2.8272774843121063e-27,
+      "residual_sha256": "73f21ac64e31dec02253f2b84e45bb98e2399cd9f070a247dc7bcb5028d19ac5",
+      "strict_raw_gate_passed": true
+    },
+    "adversarial_controls": {
+      "baseline_acceleration_sha256": "576721ce4868400d0fddbbd7a58be5bec69aea157ae6a74d9f2f3d51d91b6932",
+      "mutated_acceleration_sha256": "a16d329d37cc12138e036a14260b81b3e673ae9266867b302dc97e069cda180f",
+      "one_bit_alpha_mutation_visible": true,
+      "typed_failure_controls": {
+        "condition_limit": true,
+        "invalid_auxiliary_factors": true,
+        "nonpositive_radius": true
+      }
+    },
+    "epistemic_boundary": {
+      "disallowed_implications": [
+        "wall-clock timing is not a scientific result or source of authorization",
+        "SRC4 does not change an equation, threshold, root branch, field, coupling, or reference geometry",
+        "RSP1 generic all-field raw spectral admission remains false",
+        "PROTO12 is not frozen and no fresh calibration or candidate trajectory is authorized",
+        "no collapse, defocusing, retained-EFT, singularity-resolution, child-domain, dark-sector, or varying-c claim follows"
+      ],
+      "observed_results": [
+        "the tensor contractions preserve exact spherical Minkowski bitwise",
+        "PREF11 and two independent dyadic controls agree with the exact oracle and independent SRC3 backend within frozen binary64 bounds",
+        "the captured 8192-point CAP1 state preserves the unchanged strict source and kinetic gates",
+        "a one-bit mutation remains visible and typed invalid domains fail closed"
+      ]
+    },
+    "evaluator_contract": {
+      "arithmetic": "IEEE_754_binary64",
+      "connection_backend": "explicit_NumPy_Einstein_contractions_over_spacetime_indices",
+      "continuum_equation_change_forbidden": true,
+      "continuum_equations": "unredefined_ACT1_VAR1_GR0_REF1",
+      "fitted_coefficient_or_epsilon_floor_added": false,
+      "higher_precision_runtime_fallback_used": false,
+      "independent_differential_oracle": "FGC-1-SRC3_explicit_index_loop_backend",
+      "kinetic_condition_number_maximum": "10000000000",
+      "maximum_complete_refinement_iterations": 16,
+      "point_and_acceleration_seed_axes_are_never_contracted": true,
+      "raw_complete_residual_maximum": "1/1000000000000",
+      "reference_derivative_map_change_forbidden": true,
+      "reference_geometry_change_forbidden": true,
+      "reference_identity": "C^a_bc=one_half_g^ad_times_bar_nabla_b_h_dc_plus_bar_nabla_c_h_db_minus_bar_nabla_d_h_bc",
+      "ricci_backend": "explicit_NumPy_Einstein_contractions_over_spacetime_indices",
+      "root_branch_change_forbidden": true,
+      "source_threshold_change_forbidden": true,
+      "strict_raw_gate": true
+    },
+    "exact_reference_control": {
+      "acceleration_bitwise_zero": true,
+      "complete_residual_bitwise_zero": true,
+      "radius_count": 7
+    },
+    "immutable_checkpoint_commit": "2e827682ae7af6a96a41e35f5bb18ddf3ec6ec9b",
+    "independent_controls": [
+      {
+        "SRC3_root_acceleration_delta_infinity": 1.1102230246251565e-16,
+        "SRC3_seed_normalized_delta": 1.8328134334311188e-16,
+        "acceleration_sha256": "152ad2755b577ea0873675a09f19ea17329e4aaea52643f2344c028a7644bf6e",
+        "control_id": "DYADIC-A",
+        "exact_seed_normalized_error": 1.8328134334311188e-16,
+        "kinetic_condition_infinity_maximum": 190.65764306426124,
+        "radius_binary64_hex": "0x1.0000000000000p-1",
+        "residual_infinity": 4.440892098500626e-16,
+        "residual_sha256": "7c9fec638d4a1afcfa87d530f17819558832d002cb75f467ecba5d285fa004cc",
+        "strict_raw_gate_passed": true
+      },
+      {
+        "SRC3_root_acceleration_delta_infinity": 4.163336342344337e-17,
+        "SRC3_seed_normalized_delta": 1.336729336234298e-16,
+        "acceleration_sha256": "037396891b640e1e0086fd9355442e01722c95a79fd513af9d1efec284e08154",
+        "control_id": "DYADIC-B",
+        "exact_seed_normalized_error": 3.564611563291462e-16,
+        "kinetic_condition_infinity_maximum": 117.23819702784205,
+        "radius_binary64_hex": "0x1.4000000000000p+0",
+        "residual_infinity": 1.2073675392798577e-15,
+        "residual_sha256": "b5fa8ea31f69d99d53bb146a6a452616f9a5e2c1314cefbba99aed9894adcd5a",
+        "strict_raw_gate_passed": true
+      }
+    ],
+    "successor_boundary": {
+      "PROTO12_must_freeze_any_spectral_conditioning_change_before_fresh_trajectory": true,
+      "PROTO12_must_inherit_RSP1_without_relabelling_generic_raw_spectral_admission": true,
+      "SRC4_may_be_consumed_only_after_this_certificate_passes": true,
+      "fresh_GR0_outcomes_must_not_be_tuned_after_inspection": true,
+      "next_gate": "FGC-1-PRO12-FRZ1"
+    },
+    "tensor_contraction_differential": {
+      "Ricci_normalized_delta_infinity": 5.624874626979208e-17,
+      "connection_difference_delta_infinity": 8.673617379884035e-19,
+      "connection_difference_derivative_delta_infinity": 2.220446049250313e-16,
+      "point_and_seed_axes_contracted": false,
+      "reference_connection_bitwise_equal": true,
+      "reference_connection_derivative_bitwise_equal": true
+    }
+  },
+  "classification": "prospectively_frozen_tensor_contraction_backend_for_unchanged_SRC3_GR0_REF1",
+  "derivation_document": "docs/fgc-src4-vec1.md",
+  "derivation_document_sha256": "e2ff54d84a26840f876004801406691ac1b5484d13a7adbeb000d2ccf9b610dd",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO12_frozen": false,
+    "SGBL_execution_authorized": false,
+    "SRC4_CAP1_full_grid_strict_source_gate_passed": true,
+    "SRC4_exact_reference_and_exact_oracle_controls_passed": true,
+    "SRC4_independent_SRC3_differential_controls_passed": true,
+    "SRC4_runtime_source_instrument_authorized_for_a_separately_frozen_GR0_protocol": true,
+    "SRC4_tensor_contraction_evaluator_derived": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false,
+    "wall_clock_speedup_is_a_scientific_result": false
+  },
+  "generated_by": "scripts/reproduce_fgc_src4_vec1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_src4_vec1.py": "f6a0a4f3c15dfc86d22380b9c0a05bd1f1ed075e4548e9c1881bd9c356beac29",
+    "src/recursive_horizons/fgc/evolution/gr0_direct_source.py": "57942aebc126135425e70bf0fb4bb9d1b541137734ea7421ebe1395917bee1f0",
+    "src/recursive_horizons/fgc/evolution/src2_exact_oracle.py": "401f5449472fbfa45cb2243df9e7ea8204acc90b251c8174676ee3d519035089",
+    "src/recursive_horizons/fgc/evolution/src3_reference_balanced_source.py": "c55366173351b7ea19f951a6a500ebc8e00afc3b988ee2dc90221fe30631f719",
+    "src/recursive_horizons/fgc/evolution/src4_vectorized_reference_source.py": "78ea8a907f9a28658582c4e89380496e80c36f7648014ec89f29dac42d7ce415"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO12_frozen": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false,
+    "wall_clock_speedup_is_a_scientific_result": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-src2-pref11-point0.json": "d3eef30ce918cd03c44968656d9d2d01d4a7c41c91ece0681a88405d176f9354",
+    "configs/fgc/fgc-1-src3-controls.json": "2987770d68fd922aa56ef61b3a0a63064ea9e3461bf670eca765c217800c6e5e",
+    "results/fgc-1-rsp1-pref12.json": "0bb184a519230d1b221d20fb88df70841800575b886df0b0642837deb26e4551",
+    "results/fgc-1-src3.json": "dea22654cb70b555053941009037c8b5c58e98dfc5a692dc27620e83363765e9",
+    "src/recursive_horizons/fgc/evolution/src3_reference_balanced_source.py": "c55366173351b7ea19f951a6a500ebc8e00afc3b988ee2dc90221fe30631f719"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "SGBL_trajectory_read": false,
+    "branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "existing_SRC3_and_RSP1_outputs_used_as_design_evidence": true,
+    "fresh_GR0_trajectory_read": false,
+    "mechanism_question_answered": false,
+    "role": "prospectively_frozen_tensor_contraction_backend_for_unchanged_SRC3_GR0_REF1_evaluator"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-src4-vec1.toml": "39c1c11c703c58cf884e4f0f240db0dd1eaa085494e6d2cb14761fbcc48681d2"
+  }
+}

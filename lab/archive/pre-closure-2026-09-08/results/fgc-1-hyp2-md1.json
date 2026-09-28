@@ -1,0 +1,454 @@
+{
+  "artifact_id": "FGC-1-HYP2-MD1",
+  "artifact_payload": {
+    "all_nonzero_spatial_covectors_covered": true,
+    "classical_principal_health_only_not_EFT_validity": true,
+    "independent_chi_sector_included": true,
+    "quantitative_evidence": {
+      "domain_definition_sha256": "fc27f0f6617e6739807af17fca6219da5d9064ea1a3a5a782778532cb6f5164e",
+      "epistemic_boundary": {
+        "FGCQR_holdout_outcome_inspected": false,
+        "nonspherical_evolution_or_robustness_proven": false,
+        "retained_EFT_remainder_or_frequency_control_supplied": false,
+        "time_evolution_performed": false,
+        "trajectory_containment_is_deferred_to_HLT1": true,
+        "witnesses_do_not_enclose_the_complete_initial_hypersurfaces": true
+      },
+      "independent_exact_radial_crosscheck": {
+        "fixture_id": "COMP1-activated-compatible-radial-restriction",
+        "independent_exact_spherical_symbol_agreement": true,
+        "maximum_absolute_root_difference": 1.3322676295501878e-15,
+        "root_count": 12,
+        "tolerance": 2e-13
+      },
+      "open_health_ball": {
+        "every_nonzero_spatial_covector_covered_by_homogeneity": true,
+        "finite_directional_sampling_used_for_candidate_backgrounds": false,
+        "reference_contours_use_binary64_SVD_with_Lipschitz_chord_and_roundoff_allowance": true,
+        "strict_inequalities_and_continuous_coefficient_map_give_nonzero_open_state_neighborhoods": true
+      },
+      "reference_cluster_certificate": {
+        "classification": "binary64_with_Lipschitz_chord_and_roundoff_allowance",
+        "clusters": {
+          "hat_minus": {
+            "center": -0.3333333333333333,
+            "certified_lower_bound": 0.0011547999649092844,
+            "eigenvalue_count": 4,
+            "expected_eigenvalue_count": 4,
+            "locked_resolvent_singular_lower_bound": 0.0009765625,
+            "maximum_unsampled_chord": 0.0003067956762965976,
+            "radius": 0.05,
+            "roundoff_allowance": 4.902973057041369e-12,
+            "sampled_minimum_singular_value": 0.001461595646108855
+          },
+          "hat_plus": {
+            "center": 0.3333333333333333,
+            "certified_lower_bound": 0.0011547999649093043,
+            "eigenvalue_count": 4,
+            "expected_eigenvalue_count": 4,
+            "locked_resolvent_singular_lower_bound": 0.0009765625,
+            "maximum_unsampled_chord": 0.0003067956762965976,
+            "radius": 0.05,
+            "roundoff_allowance": 4.902973057041369e-12,
+            "sampled_minimum_singular_value": 0.001461595646108875
+          },
+          "physical_minus": {
+            "center": -1.0,
+            "certified_lower_bound": 0.035171716569362195,
+            "eigenvalue_count": 4,
+            "expected_eigenvalue_count": 4,
+            "locked_resolvent_singular_lower_bound": 0.03125,
+            "maximum_unsampled_chord": 0.0012271827051863905,
+            "radius": 0.2,
+            "roundoff_allowance": 4.902973057041369e-12,
+            "sampled_minimum_singular_value": 0.03639889927945156
+          },
+          "physical_plus": {
+            "center": 1.0,
+            "certified_lower_bound": 0.03517171656936215,
+            "eigenvalue_count": 4,
+            "expected_eigenvalue_count": 4,
+            "locked_resolvent_singular_lower_bound": 0.03125,
+            "maximum_unsampled_chord": 0.0012271827051863905,
+            "radius": 0.2,
+            "roundoff_allowance": 4.902973057041369e-12,
+            "sampled_minimum_singular_value": 0.036398899279451516
+          },
+          "tilde_minus": {
+            "center": -0.5,
+            "certified_lower_bound": 0.001181247576830112,
+            "eigenvalue_count": 4,
+            "expected_eigenvalue_count": 4,
+            "locked_resolvent_singular_lower_bound": 0.0009765625,
+            "maximum_unsampled_chord": 0.0003067956762965976,
+            "radius": 0.05,
+            "roundoff_allowance": 4.902973057041369e-12,
+            "sampled_minimum_singular_value": 0.0014880432580296826
+          },
+          "tilde_plus": {
+            "center": 0.5,
+            "certified_lower_bound": 0.0011812475768301,
+            "eigenvalue_count": 4,
+            "expected_eigenvalue_count": 4,
+            "locked_resolvent_singular_lower_bound": 0.0009765625,
+            "maximum_unsampled_chord": 0.0003067956762965976,
+            "radius": 0.05,
+            "roundoff_allowance": 4.902973057041369e-12,
+            "sampled_minimum_singular_value": 0.0014880432580296706
+          }
+        },
+        "contour_sample_count": 512,
+        "direction_representative": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "kinetic": {
+          "kinetic_condition_infinity": 55.99999999999999,
+          "kinetic_determinant": 1679615.9999999965,
+          "kinetic_smallest_singular_value": 0.9999999999999997
+        },
+        "locked_physical_energy_coercivity_lower": 0.9375,
+        "locked_physical_energy_operator_norm_upper": 3.0,
+        "physical_energy": {
+          "physical_minus": {
+            "dimension": 4,
+            "maximum_eigenvalue": 1.0000000000000009,
+            "minimum_eigenvalue": 1.0
+          },
+          "physical_plus": {
+            "dimension": 4,
+            "maximum_eigenvalue": 1.0000000000000007,
+            "minimum_eigenvalue": 0.9999999999999997
+          }
+        },
+        "rotation_covariance_uses_Frobenius_normalized_tensor_basis": true,
+        "six_contours_partition_all_24_characteristics": true
+      },
+      "strict_all_covector_margins_passed": true,
+      "theorem_specialization": {
+        "all_direction_mechanism": "Frobenius_orthogonal_rotation_covariance_plus_complete_covector_coefficient_tensor_norm",
+        "first_order_dimension": 24,
+        "full_field_content": "ten_metric_components_plus_phi_plus_independent_chi",
+        "physical_reality_and_diagonalizability": "positive_ungauged_action_energy_form_on_transported_physical_Riesz_subspaces",
+        "source": "Kovacs_and_Reall_modified_harmonic_weak_coupling_continuity_argument",
+        "spectral_separation": "six_Riesz_contours_with_Neumann_resolvent_margin",
+        "sufficient_binary64_certificate_not_universal_Horndeski_epsilon": true
+      },
+      "witness_extrema": {
+        "maximum_action_energy_deformation_operator_2": 2.2791301028158203e-05,
+        "maximum_action_hessian_symmetry_defect": 0.0,
+        "maximum_companion_deformation_operator_2": 0.00015438464311832197,
+        "maximum_kinetic_deformation_operator_2": 6.607156118155292e-06,
+        "maximum_physical_projector_displacement_upper": 0.031774952983478925,
+        "maximum_pure_gauge_identity_coefficient_bound": 3.4943235430141114e-15,
+        "minimum_cluster_resolvent_singular_margin": 0.000822177856881678,
+        "minimum_physical_energy_coercivity_lower": 0.6791091698799382
+      },
+      "witness_records": [
+        {
+          "background": {
+            "effective_planck_prime": -3.814697265625e-06,
+            "effective_planck_squared": 3.999999999985448,
+            "gb_coupling_prime": 9.5367431640625e-07,
+            "hessian_gb_component_infinity": 6.890724767690578e-11,
+            "riemann_component_infinity": 0.0004368215423025485
+          },
+          "case_id": "CENTRAL-SEED",
+          "cluster_resolvent_singular_margins": {
+            "hat_minus": 0.0008993701784540658,
+            "hat_plus": 0.0008993701784540658,
+            "physical_minus": 0.031172807678454068,
+            "physical_plus": 0.031172807678454068,
+            "tilde_minus": 0.0008993701784540658,
+            "tilde_plus": 0.0008993701784540658
+          },
+          "coordinate_radius": 12.0,
+          "deformation_bounds": {
+            "action_energy_operator_2": 1.1395649161762866e-05,
+            "action_hessian_symmetry_defect": 0.0,
+            "companion_operator_2": 7.719232154593418e-05,
+            "companion_space_space_sum_2": 4.4824031553113214e-05,
+            "companion_time_space_sum_2": 3.236828999282097e-05,
+            "gauge_identity_defect": 2.4774357349298977e-15,
+            "kinetic_operator_2": 3.3035766846245806e-06,
+            "kinetic_smallest_singular_value": 0.9999999980992906
+          },
+          "initial_outer_mass": 0.7541344460697263,
+          "initial_peak_compactness": 0.10907885330304734,
+          "monitor_values": {
+            "action_energy_deformation_operator_2": 1.1395649161762866e-05,
+            "companion_deformation_operator_2": 7.719232154593418e-05,
+            "kinetic_deformation_operator_2": 3.3035766846245806e-06,
+            "kinetic_smallest_singular_value": 0.9999999980992906,
+            "minimum_cluster_resolvent_singular_margin": 0.0008993701784540658,
+            "physical_energy_coercivity_lower": 0.8106595381519692
+          },
+          "passed": true,
+          "physical_energy_coercivity_lower": 0.8106595381519692,
+          "physical_energy_transport_error_upper": 1.1395649161762866e-05,
+          "physical_projector_displacement_upper": 0.015848134790740764,
+          "predicates": {
+            "action_energy_deformation_inside_ball": true,
+            "all_direction_companion_deformation_inside_ball": true,
+            "auxiliary_cones_are_exact_real_nested_and_disjoint": true,
+            "coordinate_time_kinetic_deformation_inside_ball": true,
+            "diffeomorphism_pure_gauge_principal_identity_holds": true,
+            "independent_chi_principal_sector_is_canonical_direct_sum": true,
+            "physical_Kovacs_Reall_form_remains_positive": true,
+            "physical_Riesz_projector_transport_is_invertible": true,
+            "positive_effective_planck_coefficient": true,
+            "six_Riesz_cluster_contours_remain_separated": true,
+            "ungauged_action_Hessian_is_symmetric": true
+          },
+          "source_kinetic_condition_infinity": 1122.9517272403195,
+          "source_residual_infinity": 3.9077035368394865e-17,
+          "transported_reference_energy_coercivity_lower": 0.810670933801131
+        },
+        {
+          "background": {
+            "effective_planck_prime": -7.62939453125e-06,
+            "effective_planck_squared": 3.9999999999417923,
+            "gb_coupling_prime": 1.9073486328125e-06,
+            "hessian_gb_component_infinity": 2.756289906787928e-10,
+            "riemann_component_infinity": 0.0004368214595189344
+          },
+          "case_id": "CENTRAL-SEED-DOUBLE",
+          "cluster_resolvent_singular_margins": {
+            "hat_minus": 0.000822177856881678,
+            "hat_plus": 0.000822177856881678,
+            "physical_minus": 0.031095615356881677,
+            "physical_plus": 0.031095615356881677,
+            "tilde_minus": 0.000822177856881678,
+            "tilde_plus": 0.000822177856881678
+          },
+          "coordinate_radius": 12.0,
+          "deformation_bounds": {
+            "action_energy_operator_2": 2.2791301028158203e-05,
+            "action_hessian_symmetry_defect": 0.0,
+            "companion_operator_2": 0.00015438464311832197,
+            "companion_space_space_sum_2": 8.96480631418851e-05,
+            "companion_time_space_sum_2": 6.473657997643686e-05,
+            "gauge_identity_defect": 1.7763574047436147e-15,
+            "kinetic_operator_2": 6.607156118155292e-06,
+            "kinetic_smallest_singular_value": 0.9999999961961201
+          },
+          "initial_outer_mass": 0.75413447532947,
+          "initial_peak_compactness": 0.10907885754295099,
+          "monitor_values": {
+            "action_energy_deformation_operator_2": 2.2791301028158203e-05,
+            "companion_deformation_operator_2": 0.00015438464311832197,
+            "kinetic_deformation_operator_2": 6.607156118155292e-06,
+            "kinetic_smallest_singular_value": 0.9999999961961201,
+            "minimum_cluster_resolvent_singular_margin": 0.000822177856881678,
+            "physical_energy_coercivity_lower": 0.6791091698799382
+          },
+          "passed": true,
+          "physical_energy_coercivity_lower": 0.6791091698799382,
+          "physical_energy_transport_error_upper": 2.2791301028158203e-05,
+          "physical_projector_displacement_upper": 0.031774952983478925,
+          "predicates": {
+            "action_energy_deformation_inside_ball": true,
+            "all_direction_companion_deformation_inside_ball": true,
+            "auxiliary_cones_are_exact_real_nested_and_disjoint": true,
+            "coordinate_time_kinetic_deformation_inside_ball": true,
+            "diffeomorphism_pure_gauge_principal_identity_holds": true,
+            "independent_chi_principal_sector_is_canonical_direct_sum": true,
+            "physical_Kovacs_Reall_form_remains_positive": true,
+            "physical_Riesz_projector_transport_is_invertible": true,
+            "positive_effective_planck_coefficient": true,
+            "six_Riesz_cluster_contours_remain_separated": true,
+            "ungauged_action_Hessian_is_symmetric": true
+          },
+          "source_kinetic_condition_infinity": 1122.9566595598792,
+          "source_residual_infinity": 9.889235705865602e-17,
+          "transported_reference_energy_coercivity_lower": 0.6791319611809663
+        },
+        {
+          "background": {
+            "effective_planck_prime": -7.62939453125e-06,
+            "effective_planck_squared": 3.9999999999417923,
+            "gb_coupling_prime": 1.9073486328125e-06,
+            "hessian_gb_component_infinity": 2.7195849084470987e-10,
+            "riemann_component_infinity": 0.0024063974899611097
+          },
+          "case_id": "STRESS-CENTER",
+          "cluster_resolvent_singular_margins": {
+            "hat_minus": 0.0008221848470935801,
+            "hat_plus": 0.0008221848470935801,
+            "physical_minus": 0.03109562234709358,
+            "physical_plus": 0.03109562234709358,
+            "tilde_minus": 0.0008221848470935801,
+            "tilde_plus": 0.0008221848470935801
+          },
+          "coordinate_radius": 12.0,
+          "deformation_bounds": {
+            "action_energy_operator_2": 2.2790103971802725e-05,
+            "action_hessian_symmetry_defect": 0.0,
+            "companion_operator_2": 0.00015437765290641999,
+            "companion_space_space_sum_2": 8.964457338528714e-05,
+            "companion_time_space_sum_2": 6.473307952113283e-05,
+            "gauge_identity_defect": 3.4943235430141114e-15,
+            "kinetic_operator_2": 6.606829326428446e-06,
+            "kinetic_smallest_singular_value": 0.9999999788040372
+          },
+          "initial_outer_mass": 4.1625327055865835,
+          "initial_peak_compactness": 0.5923895358493777,
+          "monitor_values": {
+            "action_energy_deformation_operator_2": 2.2790103971802725e-05,
+            "companion_deformation_operator_2": 0.00015437765290641999,
+            "kinetic_deformation_operator_2": 6.606829326428446e-06,
+            "kinetic_smallest_singular_value": 0.9999999788040372,
+            "minimum_cluster_resolvent_singular_margin": 0.0008221848470935801,
+            "physical_energy_coercivity_lower": 0.6791212979040555
+          },
+          "passed": true,
+          "physical_energy_coercivity_lower": 0.6791212979040555,
+          "physical_energy_transport_error_upper": 2.2790103971802725e-05,
+          "physical_projector_displacement_upper": 0.03177350713784428,
+          "predicates": {
+            "action_energy_deformation_inside_ball": true,
+            "all_direction_companion_deformation_inside_ball": true,
+            "auxiliary_cones_are_exact_real_nested_and_disjoint": true,
+            "coordinate_time_kinetic_deformation_inside_ball": true,
+            "diffeomorphism_pure_gauge_principal_identity_holds": true,
+            "independent_chi_principal_sector_is_canonical_direct_sum": true,
+            "physical_Kovacs_Reall_form_remains_positive": true,
+            "physical_Riesz_projector_transport_is_invertible": true,
+            "positive_effective_planck_coefficient": true,
+            "six_Riesz_cluster_contours_remain_separated": true,
+            "ungauged_action_Hessian_is_symmetric": true
+          },
+          "source_kinetic_condition_infinity": 810.0935483104936,
+          "source_residual_infinity": 4.520700764360777e-16,
+          "transported_reference_energy_coercivity_lower": 0.6791440880080273
+        },
+        {
+          "background": {
+            "effective_planck_prime": -0.0,
+            "effective_planck_squared": 4.0,
+            "gb_coupling_prime": 0.0,
+            "hessian_gb_component_infinity": 0.0,
+            "riemann_component_infinity": 0.0030131405748561385
+          },
+          "case_id": "STRESS-PEAK",
+          "cluster_resolvent_singular_margins": {
+            "hat_minus": 0.0009765625,
+            "hat_plus": 0.0009765625,
+            "physical_minus": 0.03125,
+            "physical_plus": 0.03125,
+            "tilde_minus": 0.0009765625,
+            "tilde_plus": 0.0009765625
+          },
+          "coordinate_radius": 14.021484375,
+          "deformation_bounds": {
+            "action_energy_operator_2": 0.0,
+            "action_hessian_symmetry_defect": 0.0,
+            "companion_operator_2": 0.0,
+            "companion_space_space_sum_2": 0.0,
+            "companion_time_space_sum_2": 0.0,
+            "gauge_identity_defect": 0.0,
+            "kinetic_operator_2": 0.0,
+            "kinetic_smallest_singular_value": 0.9999999999999997
+          },
+          "initial_outer_mass": 4.1625327055865835,
+          "initial_peak_compactness": 0.5923895358493777,
+          "monitor_values": {
+            "action_energy_deformation_operator_2": 0.0,
+            "companion_deformation_operator_2": 0.0,
+            "kinetic_deformation_operator_2": 0.0,
+            "kinetic_smallest_singular_value": 0.9999999999999997,
+            "minimum_cluster_resolvent_singular_margin": 0.0009765625,
+            "physical_energy_coercivity_lower": 0.9375
+          },
+          "passed": true,
+          "physical_energy_coercivity_lower": 0.9375,
+          "physical_energy_transport_error_upper": 0.0,
+          "physical_projector_displacement_upper": 0.0,
+          "predicates": {
+            "action_energy_deformation_inside_ball": true,
+            "all_direction_companion_deformation_inside_ball": true,
+            "auxiliary_cones_are_exact_real_nested_and_disjoint": true,
+            "coordinate_time_kinetic_deformation_inside_ball": true,
+            "diffeomorphism_pure_gauge_principal_identity_holds": true,
+            "independent_chi_principal_sector_is_canonical_direct_sum": true,
+            "physical_Kovacs_Reall_form_remains_positive": true,
+            "physical_Riesz_projector_transport_is_invertible": true,
+            "positive_effective_planck_coefficient": true,
+            "six_Riesz_cluster_contours_remain_separated": true,
+            "ungauged_action_Hessian_is_symmetric": true
+          },
+          "source_kinetic_condition_infinity": 900.4496014986574,
+          "source_residual_infinity": 8.380593107970798e-15,
+          "transported_reference_energy_coercivity_lower": 0.9375
+        }
+      ]
+    },
+    "run_envelope_semantic_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "strong_hyperbolicity_margin_positive": true
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "classical_all_covector_early_kill_certificate",
+  "derivation_document": "docs/fgc-hyp2-md1.md",
+  "derivation_document_sha256": "2977616b9645f260266e6610f808ed5cfaaf44a9b52469baa623de810bdf7345",
+  "gate_status": {
+    "quantitative_all_covector_weak_coupling_health_envelope_passed": true
+  },
+  "generated_by": "scripts/reproduce_fgc_hyp2_md1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hyp2_md1.py": "77d4330543dd135459cacb19c57cf0b421e4212bca455c2b767cfd7f60996997",
+    "src/recursive_horizons/fgc/evolution/covariant_principal_health.py": "e4d319fadb63e08b8988c9fecfb46995bd826ff650d0221016bb0135283455fd",
+    "src/recursive_horizons/fgc/evolution/initial_state_bridge.py": "c67cfaee65232091baddf23901d0540f52fa6929fd6a60e1a6f7a54f826f9107",
+    "src/recursive_horizons/fgc/evolution/multidirectional_health.py": "04e415a9061df5a692d2eb84fbf621f686db57ccfb51638bee6998eee14a2109",
+    "src/recursive_horizons/fgc/modified_harmonic.py": "8896a0c266d4c6904e5432a6c96c03386ab3f2d3321250738ad63f869732c00f",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+  },
+  "nonclaims": {
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4",
+    "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml": "cd7516d0a913c811569cf8f08ac08d8b47f63c409ce9188b0770638777f743c6",
+    "configs/fgc/fgc-1-hyp1-modified-harmonic.toml": "9d492be33aaec0dc033ffc643d35ecd1f69b3c71928a297687e08219b216a2b6",
+    "configs/fgc/fgc-1-id1-fam1.toml": "fe61161c651af606476f498c4c0a1b99a4034d7a5dd0c3ac9d7f581ba7992a3c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-dom4-run1.json": "238847f4af182fa423a91b381cae65217a76965b7b979ea26b29778781f0ac94",
+    "results/fgc-1-hyp1-dom3-uhyp1.json": "71c04e5e19ca5fc39b6fc4e3bee36b852965a559b3e031148d32ae230f30f6b0",
+    "results/fgc-1-hyp1-modified-harmonic.json": "68a787e619c22ac91d1f488c92e4ea2d651c3325fc2b435f22db54bb78f0433f",
+    "results/fgc-1-id1-fam1.json": "b410741dfc7f58041df0eab45d956687947157747a69a5f5247792607139f4a8",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "action_artifact_id": "FGC-1-ACT1",
+    "action_config_sha256": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "action_result_sha256": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_artifact_id": "FGC-2-SF1-PROTO3",
+    "protocol_config_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+    "protocol_semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "target_branch": "FGC-QR",
+    "variation_artifact_id": "FGC-1-VAR1",
+    "variation_config_sha256": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "variation_result_sha256": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-hyp2-md1.toml": "c3fcb05d4ca3b8df72b1659e24178c66e44f7033e11df998a6bc855f6a230382"
+  }
+}

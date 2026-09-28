@@ -1,0 +1,234 @@
+{
+  "artifact_id": "FGC-1-PRO10-FRZ1",
+  "artifact_payload": {
+    "decision": "PROTO10_is_frozen_but_HLT8_fresh_calibration_and_every_candidate_outcome_remain_closed",
+    "epistemic_boundary": {
+      "GR0_calibration_completed": false,
+      "PROTO10_trajectory_advanced": false,
+      "PROTO10_trajectory_read": false,
+      "SGBL_or_FGCQR_trajectory_read": false,
+      "fresh_state_constructed": false,
+      "mechanism_question_answered": false
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "dd3f5adb22f08aa7950b74cef2595aaca2e8cd6e",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "diagnosis": {
+        "all_prospective_design_admissions_passed": true,
+        "artifact_id": "FGC-1-CAL6-PREF8",
+        "case_count": 4,
+        "claims_candidate_and_physical_remain_false": true,
+        "classification": "pre_trajectory_proper_spectral_ratio_conditioning_diagnosis",
+        "config_sha256": "940238188ac8c76527165be6d48fcd1ef0e9b84565a9fe7a7e53b12a8e8559ea",
+        "current_campaign_authorized": false,
+        "diagnostically_saturated_metric_count": 16,
+        "directly_resolved_finest_pair_metric_count": 32,
+        "maximum_complete_profile_finest_pair_difference_ratio": 0.5688752672787875,
+        "maximum_round_trip_adjacent_ratio": 0.4058474790390016,
+        "maximum_top_band_erasure_over_round_trip": 0.005555029138034002,
+        "raw_failed_finest_pair_metric_count": 16,
+        "result_sha256": "3d4624cca60363c9daf6f65f9393d959d7a7fafbcf6eac7f8dc9c2f237c24f5e"
+      },
+      "predecessor_protocol": {
+        "FGCQR_outcomes_inspected_before_revision": false,
+        "PROTO8_calibration_trajectory_inspected_before_revision": true,
+        "SGBL_outcomes_inspected_before_revision": false,
+        "artifact_id": "FGC-2-SF1-PROTO9",
+        "calibration_output_root": "runs/fgc-2-sf1/proto9/calibration",
+        "claims": {
+          "FGCQR_holdout_execution_authorized": false,
+          "FGCQR_mechanism_rejected": false,
+          "PROTO9_fresh_GR0_dynamic_calibration_authorized": false,
+          "PROTO9_resolved_holdout_manifest_authorized": false,
+          "PROTO9_successor_runtime_implemented": false,
+          "child_domain_or_topology_derived": false,
+          "classical_spherical_diagnostic_authorized": false,
+          "dark_sector_mechanism_derived": false,
+          "general_gradient_route_rejected": false,
+          "physical_transition_claim_authorized": false,
+          "retained_EFT_evolution_authorized": false,
+          "singularity_resolution_derived": false,
+          "varying_locally_measured_c_derived": false
+        },
+        "conditional_projection_is_admission": false,
+        "constraint_rules_unchanged": true,
+        "diagnosis_artifact_id": "FGC-1-CAL5-PREF7",
+        "diagnosis_checkpoint_commit": "a2c929e33ec8f2ee5464b086a57db8ed7f9277f0",
+        "eligible_calibration_amplitudes": [
+          "5/2",
+          "3"
+        ],
+        "frozen": true,
+        "holdout_output_root": "runs/fgc-2-sf1/proto9/holdout",
+        "mechanism_question_answered_before_revision": false,
+        "new_8193_data_required": true,
+        "old_point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "only_resolution_ladder_changes": true,
+        "outcome_neutral_contract_validated": true,
+        "physical_and_numerical_thresholds_unchanged": true,
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO8",
+        "premise_revision_only": true,
+        "protocol_version": 9,
+        "resolved_holdout_manifest": "configs/fgc/fgc-1-pro9-hld1.toml",
+        "resolved_holdout_manifest_present": false,
+        "semantic_holdout_contract_sha256": "72f5b06bca88386cabde0b51fafbdc5a45a644b19b4da8476e39962032d75aea",
+        "spectral_rules_unchanged": true
+      },
+      "predecessor_protocol_sha256": "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e"
+    },
+    "namespace_precondition": {
+      "both_fresh_namespaces_absent": true,
+      "freeze_created_no_namespace": true,
+      "records": [
+        {
+          "exists": false,
+          "path": "runs/fgc-2-sf1/proto10/calibration"
+        },
+        {
+          "exists": false,
+          "path": "runs/fgc-2-sf1/proto10/holdout"
+        }
+      ]
+    },
+    "protocol_validation": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "PROTO9_GR0_trajectory_inspected_before_revision": false,
+      "SGBL_outcomes_inspected_before_revision": false,
+      "artifact_id": "FGC-2-SF1-PROTO10",
+      "calibration_output_root": "runs/fgc-2-sf1/proto10/calibration",
+      "claims": {
+        "FGCQR_holdout_execution_authorized": false,
+        "FGCQR_mechanism_rejected": false,
+        "PROTO10_fresh_GR0_dynamic_calibration_authorized": false,
+        "PROTO10_resolved_holdout_manifest_authorized": false,
+        "PROTO10_successor_runtime_implemented": false,
+        "child_domain_or_topology_derived": false,
+        "classical_spherical_diagnostic_authorized": false,
+        "dark_sector_mechanism_derived": false,
+        "general_gradient_route_rejected": false,
+        "physical_transition_claim_authorized": false,
+        "retained_EFT_evolution_authorized": false,
+        "singularity_resolution_derived": false,
+        "varying_locally_measured_c_derived": false
+      },
+      "coarse_to_medium_direct_ratio_veto": true,
+      "diagnosis_artifact_id": "FGC-1-CAL6-PREF8",
+      "diagnosis_checkpoint_commit": "dd3f5adb22f08aa7950b74cef2595aaca2e8cd6e",
+      "diagnostic_saturation_is_physical_resolution_evidence": false,
+      "eligible_calibration_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "finest_pair_direct_ratio_remains_primary": true,
+      "finest_pair_rule": "direct_ratio_below_one_quarter_or_conditioning_guarded_diagnostic_saturation",
+      "frozen": true,
+      "guarded_saturation_requires_complete_profile_contraction": true,
+      "guarded_saturation_requires_round_trip_contraction": true,
+      "guarded_saturation_requires_tail_erasure_map_witness": true,
+      "holdout_output_root": "runs/fgc-2-sf1/proto10/holdout",
+      "maximum_nested_tail_ratio": "1/4",
+      "mechanism_question_answered_before_revision": false,
+      "medium_and_fine_absolute_budgets_unchanged": true,
+      "new_numeric_tolerance_added": false,
+      "only_finest_pair_spectral_interpretation_changes": true,
+      "outcome_neutral_contract_validated": true,
+      "physical_and_numerical_thresholds_unchanged": true,
+      "point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO9",
+      "premise_revision_only": true,
+      "protocol_version": 10,
+      "resolution_ladder_unchanged": true,
+      "resolved_holdout_manifest": "configs/fgc/fgc-1-pro10-hld1.toml",
+      "resolved_holdout_manifest_present": false,
+      "round_trip_is_a_continuum_error_bound": false,
+      "semantic_holdout_contract_sha256": "0ad9f09e144af742f3629a83da8d054e6ee8f4a255d212647b0f7fdb0201afff"
+    },
+    "spectral_revision": {
+      "coarse_to_medium_direct_ratio_veto_unchanged": true,
+      "complete_profile_infinity_and_RMS_contraction_required": true,
+      "diagnostic_saturation_is_physical_resolution_evidence": false,
+      "finest_pair_direct_route_remains_primary": true,
+      "finest_pair_guarded_saturation_route_added": true,
+      "immutable_design_witness": {
+        "diagnostically_saturated_metric_count": 16,
+        "directly_resolved_finest_pair_metric_count": 32,
+        "is_calibration_or_mechanism_evidence": false,
+        "maximum_complete_profile_finest_pair_difference_ratio": 0.5688752672787875,
+        "maximum_round_trip_adjacent_ratio": 0.4058474790390016,
+        "maximum_top_band_erasure_over_round_trip": 0.005555029138034002,
+        "raw_failed_finest_pair_metric_count": 16
+      },
+      "maximum_nested_tail_ratio": "1/4",
+      "medium_and_fine_absolute_budgets_unchanged": true,
+      "new_epsilon_floor_or_numeric_tolerance_added": false,
+      "point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "raw_ratio_ceiling_unchanged": true,
+      "resolution_ladder_unchanged": true,
+      "round_trip_contraction_required": true,
+      "round_trip_is_a_continuum_error_bound": false,
+      "tail_erasure_map_witness_required": true
+    }
+  },
+  "classification": "outcome_neutral_PROTO10_finest_pair_spectral_interpretation_freeze",
+  "derivation_document": "docs/fgc-pro10-frz1.md",
+  "derivation_document_sha256": "826954a21ad749cf9ccd25bded3b227fedb9247824ccd8678303e28b9e42fac0",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO10_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO10_resolved_holdout_manifest_authorized": false,
+    "PROTO10_successor_runtime_implemented": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro10_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro10_frz1.py": "491cf222596a1acc4866d2b8d7ee2ee34371ef68650f9d8291f2857110af9827",
+    "src/recursive_horizons/fgc/evolution/protocol_v10.py": "eaf965133497014f6109252581834cc00cc13a7049b0db1574bd827275294912"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_evolved": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO10_runtime_implemented": false,
+    "SGBL_control_completed": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_observed": false,
+    "regulator_activation_observed": false,
+    "retained_EFT_validity": false,
+    "trapped_sphere_observed": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro10-frz1.toml": "ed75ba9be8f9dbcb11a1a9e40a1ce3bcaa7e36688ac80b2ed2c13a3ab285b23a",
+    "configs/fgc/fgc-2-sf1-protocol-v10.toml": "f06ea93e82a4cdda2a0474623bc0db9ac679e4044657afb32be0d5342fe437fa"
+  }
+}

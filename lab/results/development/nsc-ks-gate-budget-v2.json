@@ -1,0 +1,101 @@
+{
+  "allocation_changed": false,
+  "allocation_total": 2e-11,
+  "components": {
+    "arithmetic": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "baseline_low_subgap": {
+      "allocation_per_component": 3e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "between_node": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "changed_history_UV_tail": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "covered_regions": {
+      "allocation_excess": [
+        7.916253820835393e-12,
+        0.0
+      ],
+      "allocation_per_component": 1e-12,
+      "bound": [
+        8.916253820835393e-12,
+        3.882373567206641e-18
+      ],
+      "evidence": {
+        "field": "partial_error_budget.covered_spectral_regions_action_error_upper",
+        "path": "results/development/nsc-incoming-source-update-v5.json",
+        "sha256": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d"
+      },
+      "scope": "only the unchanged V5 covered baseline spectral regions",
+      "status": "REUSE: bound exceeds provisional allocation"
+    },
+    "energy_interpolation": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "field_space_time": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "phase_value": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "upstream": {
+      "allocation_per_component": 2e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    }
+  },
+  "constraint_order": [
+    "N",
+    "beta"
+  ],
+  "full_error_sum": null,
+  "input_hashes": {
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-ks-gate-budget-independent.json": "285595b4b6c6db6af0cb0b37f2e1d1ead4c2cd6382121002754c2deda2f982d2",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "missing_components": [
+    "field_space_time",
+    "changed_history_UV_tail",
+    "baseline_low_subgap",
+    "upstream",
+    "energy_interpolation",
+    "phase_value",
+    "between_node",
+    "arithmetic"
+  ],
+  "named_gap": "field_source_and_continuous_residual_enclosures_missing",
+  "numerical_indicators_used_as_bounds": false,
+  "partial_known_error_sum": [
+    8.916253820835393e-12,
+    3.882373567206641e-18
+  ],
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_tolerance": 3e-11,
+  "residual_reserve": 1e-11,
+  "reuse_condition": "same baseline action/source and spectral region allocation; no transfer of background bounds to changed-history matter or upstream propagation",
+  "schema": "NSC-KS-GATE-ERROR-BUDGET-v2",
+  "source_hashes": {
+    "scripts/derive_nsc_ks_gate_budget_v2.py": "91009a27b727104523861787cbacc76500798c19d7a195973731b894988b5ef1",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d"
+  },
+  "status": "OPEN: retained baseline bound; history/source bounds missing"
+}

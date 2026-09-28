@@ -1,0 +1,107 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG9-TI2-PREF1"
+classification = "independently_bound_same_state_tableau_shadow_terminal"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg9-ti2-pref1.md"
+
+[raw]
+namespace = "runs/fgc-2-sf1/tdg9-ti2/ssprk3-tableau-on-rk4-2049-retries-3-5"
+schema = "FGC-1-TDG9-TI2-raw-v1"
+classification = "completed_one_or_more_complete_failures_persist_under_tableau_shadow"
+runner_id = "FGC-1-TDG9-TI2-RUN1"
+authority_commit = "963f772c7fd5de676c37c3ee385a930701df6341"
+manifest_sha256 = "afa3d26975c116dfdd350e409c39462769f8b8b5e96e22902496a7704b43e883"
+terminal_sha256 = "e5e8dd4e8d0dee3d32fefc170a5ed0e4f07c0c249200d74d4296ee9a3a601311"
+leaf_count = 2
+
+[authority]
+parent_commit = "8a32636654dbd6479fcb91a88d4557a8090041d3"
+blob_count = 6
+blobs = [
+  { path = "configs/fgc/fgc-1-tdg9-ti2-frz1.toml", sha256 = "8631ce20e22a56b00f4a9580df1ec2e2e98176b14c4761dc78e316cb4a771546" },
+  { path = "results/fgc-1-tdg9-ti2-frz1.json", sha256 = "2f2f2f844e9611b1023cee869e9f01ce33cfdef2df01cf488302eaaa28a1e3f5" },
+  { path = "docs/fgc-tdg9-ti2-frz1.md", sha256 = "91f0f9fbf410e6e896d12c5bf01d0c7105f6681114caded73ad21c0a1f668080" },
+  { path = "scripts/run_fgc_tdg9_ti2.py", sha256 = "488f05b65b71dd2617d1d77c2efa49496aa1a62698b37866e07bbb9c5792cd57" },
+  { path = "src/recursive_horizons/fgc/evolution/tdg9_ti2_authority.py", sha256 = "7715685100e56434a36edbec73ca684fe2fd88010af3eaeae1a59761884512b5" },
+  { path = "scripts/reproduce_fgc_tdg9_ti2_frz1.py", sha256 = "42bef89656720404668e3d4daab60295d7b06b9a85d79410bc197de41ece97c4" },
+]
+
+[store]
+path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+leaf_count = 115
+snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+snapshot_algorithm = "TDG9-LOC1-STORE-SNAPSHOT-v1"
+
+[selection]
+experiment_label = "same_state_SSPRK3_tableau_counterfactual_on_RK4_2049_SBP4_operator"
+tableau_selector = "SSPRK3"
+tableau_runtime_selector = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+actual_spatial_operator = "inherited_RK4_2049_SBP4"
+production_SSPRK3_comparator = false
+independent_method_agreement = false
+member_key = "RK4-2049"
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+accepted_time_hex = "0x1.78554de5a30e0p+0"
+point_count = 2049
+owned_row_count = 2044
+retries = [3, 4, 5]
+failed_occurrences = [
+  { retry = 3, channel = "u:alpha" },
+  { retry = 3, channel = "u:R" },
+  { retry = 4, channel = "u:alpha" },
+  { retry = 4, channel = "u:lambda" },
+  { retry = 4, channel = "u:R" },
+  { retry = 5, channel = "u:alpha" },
+  { retry = 5, channel = "u:v" },
+  { retry = 5, channel = "u:lambda" },
+  { retry = 5, channel = "u:R" },
+  { retry = 5, channel = "q:R" },
+]
+
+[work_budget]
+base_cubic_count = 122640
+component_cubic_count = 367920
+family_candidate_ceiling = 490560
+aggregate_candidate_ceiling = 1471680
+primary_refinement_depth = 160
+v2_global_proof_bit_ceiling = 9216
+shadow_proposal_count = 21
+SSPRK3_stage_and_endpoint_record_count = 84
+route_count = 60
+
+[scope]
+one_time_live_raw_and_store_reconstruction = true
+ordinary_verifier_raw_blind = true
+ordinary_verifier_store_blind = true
+TI2_runner_decision_code_imported = false
+same_state_tableau_counterfactual_only = true
+production_SSPRK3_comparator = false
+independent_method_agreement = false
+campaign_store_mutation_authorized = false
+raw_namespace_mutation_authorized = false
+temporal_retry_admission_authorized = false
+PDE_state_commit_authorized = false
+successor_remedy_selected = false
+common_event_authorized = false
+GR0_calibration_authorized = false
+candidate_branches_authorized = false
+mechanism_result_authorized = false
+physical_result_authorized = false
+
+[claims]
+TI2_raw_result_independently_bound = true
+same_state_tableau_sensitivity_measured = true
+all_ten_complete_failures_cleared = false
+one_or_more_complete_failures_persist = true
+shadow_complete_failure_count = 6
+shadow_complete_pass_count = 4
+shadow_complete_inconclusive_count = 0
+state_advance_authorized = false
+successor_remedy_selected = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

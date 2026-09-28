@@ -1,0 +1,86 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO19-SID3-AUTH1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_committed_gr0_resume_image_authority"
+nonclaims = ["SID3 binds a committed GR-0 execution image and immutable inputs; it does not inspect or authorize the live mutable store by artifact alone.", "A passing SID3 artifact leaves safe_to_resume false until a separate guarded read-only preflight authenticates generation eight and every runtime premise.", "SID3 does not complete a common event or GR-0 calibration and does not authorize SGB-L, FGC-QR, DEF1, retained-EFT, transition, or physical claims.", "The committed GR-0 image loads shared analytic modules that also contain dormant candidate-capable definitions and may instantiate their default parameter records; SID3 proves that no candidate-only module, runtime configuration, initial/evolution state, branch selection, or outcome is opened, not that every loaded source file contains only GR-0 definitions."]
+
+[predecessor]
+artifact_id = "FGC-1-PRO19-SID2-PREF1"
+sealed_commit = "c0ac458517025d44a020b0b0c3417ca1b844429b"
+config_path = "configs/fgc/fgc-1-pro19-sid2-pref1.toml"
+config_sha256 = "e00ae01660ae9467c121b9c7190554dcdaf154ff292a0e7f013a614401e2c58d"
+result_path = "results/fgc-1-pro19-sid2-pref1.json"
+result_sha256 = "2c70d87f6f5dd022330492562fd395004c7ec1eb9ec1d9e714ee0f0ceceb7738"
+
+[execution_closure]
+path = "configs/fgc/fgc-1-pro19-sid3-execution-closure.json"
+raw_sha256 = "494842c38faa4337544259b0f204dc285a1ff3b7be50061187b959cb5ca3b136"
+canonical_sha256 = "37d54a056ea0888fc8e4f592eb09f60a9a419fde9f3b0bd2b46798ad6f825c57"
+implementation_commit = "4d7133c0737524712220f77ee5ae4d9c3550c75a"
+authority_module = "recursive_horizons.fgc.evolution.proto19_resume_authority"
+runner_module = "scripts.run_fgc_pro19_event1"
+required_import_modules = ["recursive_horizons.fgc.action", "recursive_horizons.fgc.evolution.boundary_domain", "recursive_horizons.fgc.evolution.cal2_source_diagnosis", "recursive_horizons.fgc.evolution.cal4_common_event_diagnosis", "recursive_horizons.fgc.evolution.calibration_runtime", "recursive_horizons.fgc.evolution.floating_jet", "recursive_horizons.fgc.evolution.gr0_calibration", "recursive_horizons.fgc.evolution.gr0_direct_source", "recursive_horizons.fgc.evolution.health_monitor", "recursive_horizons.fgc.evolution.hlt16_campaign_recovery", "recursive_horizons.fgc.evolution.hlt16_campaign_runtime", "recursive_horizons.fgc.evolution.hlt16_campaign_schema", "recursive_horizons.fgc.evolution.hlt16_campaign_store", "recursive_horizons.fgc.evolution.hlt16_lifecycle", "recursive_horizons.fgc.evolution.hlt16_member_codec", "recursive_horizons.fgc.evolution.hlt16_progression_attempt", "recursive_horizons.fgc.evolution.hlt16_state_store", "recursive_horizons.fgc.evolution.numerical_engine", "recursive_horizons.fgc.evolution.proto10_runtime", "recursive_horizons.fgc.evolution.proto11_runtime", "recursive_horizons.fgc.evolution.proto12_runtime", "recursive_horizons.fgc.evolution.proto14_runtime", "recursive_horizons.fgc.evolution.proto15_runtime", "recursive_horizons.fgc.evolution.proto17_pure_construction", "recursive_horizons.fgc.evolution.proto19_cfl_continuation_authority", "recursive_horizons.fgc.evolution.proto19_execution_closure", "recursive_horizons.fgc.evolution.proto19_gr0_static_factory", "recursive_horizons.fgc.evolution.proto19_launch_authority", "recursive_horizons.fgc.evolution.proto19_progression_contract", "recursive_horizons.fgc.evolution.proto19_resume_authority", "recursive_horizons.fgc.evolution.proto19_sid1_authority", "recursive_horizons.fgc.evolution.proto19_sid2_binder", "recursive_horizons.fgc.evolution.proto4_admission", "recursive_horizons.fgc.evolution.proto5_runtime", "recursive_horizons.fgc.evolution.proto6_runtime", "recursive_horizons.fgc.evolution.proto7_runtime", "recursive_horizons.fgc.evolution.proto8_runtime", "recursive_horizons.fgc.evolution.proto9_runtime", "recursive_horizons.fgc.evolution.protocol_v17", "recursive_horizons.fgc.evolution.protocol_v8", "recursive_horizons.fgc.evolution.spectral_sensitivity", "recursive_horizons.fgc.evolution.spectral_sensitivity_v12", "recursive_horizons.fgc.evolution.src3_reference_balanced_source", "recursive_horizons.fgc.evolution.src4_vectorized_reference_source", "recursive_horizons.fgc.evolution.tdg5_stage_complete_refinement_runtime", "recursive_horizons.fgc.evolution.tdg6_temporal_admission_design", "recursive_horizons.fgc.evolution.tdg6_temporal_admission_runtime", "recursive_horizons.fgc.evolution.tdg7_binary64_subdivision_lattice", "recursive_horizons.fgc.evolution.tdg7_stage_safe_runtime", "recursive_horizons.fgc.evolution.vectorized_source", "recursive_horizons.fgc.exact_interval", "recursive_horizons.fgc.exact_linear_algebra", "recursive_horizons.fgc.exact_tangent", "recursive_horizons.fgc.initial_data_family", "recursive_horizons.fgc.initial_data_preflight", "recursive_horizons.fgc.interval_tangent", "recursive_horizons.fgc.modified_harmonic", "recursive_horizons.fgc.modified_harmonic_constraints", "recursive_horizons.fgc.modified_harmonic_first_order", "recursive_horizons.fgc.modified_harmonic_implicit", "recursive_horizons.fgc.modified_harmonic_reference", "recursive_horizons.fgc.reference_connection", "recursive_horizons.fgc.scoped_run_authorization", "recursive_horizons.fgc.spherical_reduction", "recursive_horizons.fgc.spherical_symbol", "scripts.run_fgc_pro19_event1"]
+required_namespaces = ["recursive_horizons", "recursive_horizons.fgc", "recursive_horizons.fgc.evolution", "scripts"]
+required_forbidden_module_prefixes = ["recursive_horizons.fgc.evolution.covariant_principal_health", "recursive_horizons.fgc.evolution.initial_state_bridge", "recursive_horizons.fgc.evolution.nonlinear_source", "recursive_horizons.fgc.evolution.proto19_progression_inputs", "recursive_horizons.fgc.evolution.static_initial_admission", "scripts.run_fgc_gr0_calibration"]
+required_forbidden_script_prefixes = ["scripts/run_fgc_gr0_calibration.py", "src/recursive_horizons/fgc/evolution/proto19_progression_inputs.py", "src/recursive_horizons/fgc/evolution/static_initial_admission.py"]
+authority_delta_paths = ["CHANGELOG.md", "Makefile", "README.md", "configs/fgc/fgc-1-hlt16-mon16.toml", "configs/fgc/fgc-1-pro19-launch-authority.toml", "configs/fgc/fgc-1-pro19-sid3-auth1.toml", "configs/fgc/fgc-1-pro19-sid3-execution-closure.json", "configs/fgc/fgc-runtime-matrix.toml", "docs/claim-ledger.md", "docs/fgc-pro19-sid3-auth1.md", "docs/fgc-runtime-matrix.md", "docs/finite-gradient-closure.md", "docs/research-roadmap.md", "docs/review-summary.md", "paper/fgc-local-defocusing/README.md", "paper/recursive-horizons.md", "paper/recursive-horizons.pdf", "results/README.md", "results/fgc-1-hlt16-mon16.json", "results/fgc-1-pro19-sid3-auth1.json"]
+static_input_paths = ["configs/fgc/fgc-1-cal9-run1.toml", "configs/fgc/fgc-1-pro19-sid2-pref1.toml", "configs/fgc/fgc-1-rsp2-run1.toml", "results/fgc-1-hlt10-mon10.json", "results/fgc-1-pro18-auth1.json", "results/fgc-1-pro19-frz1.json", "results/fgc-1-pro19-sid2-pref1.json", "results/fgc-1-rsp2-frz1.json"]
+
+[progression]
+original_authorization_commit = "c11ba422ce49ddd6f6175de1a9d2da675b97f2de"
+original_plan_sha256 = "f3b365978aeb2ae6063742807a3161bf5d6aa0c8392cd283fdec2a79d3e46060"
+campaign_id = "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683"
+branch = "GR-0"
+amplitude = "3"
+event = 23
+start_rational = "23/16"
+target_rational = "3/2"
+candidate_branch_opened = false
+
+[recovered_generation]
+generation = 8
+checkpoint_sha256 = "6d2b6e37e7c7cfd4ce64504353d886099003f959ea2aaee1a14fc778ce14fa46"
+journal_sequence = 8
+journal_sha256 = "949b29e46081bf5a42c34461b3894419db86aeca6c733b7a2636c91c6cb2ee4a"
+member_key = "RK4-2049"
+member_accepted_time_hex = "0x1.78554de5a30e0p+0"
+member_cursor_sha256 = "6d594999f6aaebb5d56f0fd6ff12499e2b22a47e3daf74ac8b13b15d273fa177"
+member_mode = "RETRY_PENDING"
+pending_owner = "temporal"
+pending_cap_hex = "0x1.aaa9612df9000p-10"
+disposition = "nonterminal"
+candidate_branch_opened = false
+physical_state_advanced_by_recovery = false
+
+[numpy_runtime]
+version = "2.5.1"
+package_origin_realpath = "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages/numpy/__init__.py"
+package_origin_sha256 = "09295a80660f17925ae23765ce8cbd7ff7ceae968d5f2f89349f1cb74c0b9e11"
+core_extension_origin_realpath = "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so"
+core_extension_sha256 = "08cc79db709635a4e0a8d59f227b566d322a561dc9f45ab5ddc335419bfa85fc"
+distribution_metadata_realpath = "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages/numpy-2.5.1.dist-info/METADATA"
+distribution_metadata_sha256 = "6ae45122ee97050e48849438320430d05f01814f72e66e69cbeed027d2c6a1e8"
+
+[scope]
+raw_store_mutation = false
+writer_lease_acquisition = false
+PDE_proposal_execution = false
+GEN0_reimport = false
+trajectory_resume = false
+candidate_branch_opened = false
+shared_candidate_capable_definitions_loaded = true
+read_only_runtime_preflight_required = true
+runtime_recheck_before_mutation_required = true
+
+[claims]
+committed_resume_contract_frozen = true
+committed_resume_authority_present = true
+committed_resume_image_authenticated_by_artifact_alone = false
+exact_generation8_inputs_bound = true
+safe_to_resume_trajectory = false
+trajectory_resume_authorized_by_artifact_alone = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+candidate_runtime_configuration_state_or_outcome_opened = false
+physical_result_earned = false

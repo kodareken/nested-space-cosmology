@@ -1,0 +1,158 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG2-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+source_result = "results/fgc-1-tdg1-pref16.json"
+source_config = "configs/fgc/fgc-1-tdg1-pref16.toml"
+source_checkpoint = "runs/fgc-2-sf1/proto13/calibration/latest-checkpoint.npz"
+
+[scope]
+target = "FGC-2-SF1-TDG2"
+role = "prospective_no_history_absolute_tail_discriminator_freeze"
+calibration_branch = "GR-0"
+source_terminal_event = 63
+source_terminal_coordinate_time = "63/16"
+TDG1_terminal_diagnosis_already_bound = true
+source_checkpoint_history_arrays_loaded = false
+source_checkpoint_resumed = false
+state_advanced = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+replacement_temporal_admission_defined = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "873e13b5ce74624e2cbc096694eb1180b4dbc0a3"
+source_result_sha256 = "1713a05b6442461962253ec9abb84f50dd6c376e91e7e13447c4682256b0c3a6"
+source_config_sha256 = "d598b9f59fc50dab23f05150cd6471ec66e28f36cddfe60438c8402bdf70a519"
+source_reproducer_sha256 = "2fd21140147b8ddf326cc61fe4ecc29832cbad775a0af03a3854e40f4e209c00"
+source_diagnosis_module_sha256 = "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44"
+source_checkpoint_sha256 = "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97"
+checkpoint_commit_must_be_ancestor_of_HEAD = true
+tracked_source_blobs_must_match_checkpoint_commit_and_worktree = true
+source_checkpoint_is_read_only = true
+source_checkpoint_may_not_resume = true
+
+[frozen_discriminator]
+sample_count = 64
+tracer_count = 48
+field_names = ["alpha_minus_1", "shift_over_r", "lambda_minus_1", "R_over_r_minus_1", "phi_over_Lambda", "chi_over_Lambda"]
+primary_method = "RK4"
+primary_point_counts = [2049, 4097, 8193]
+comparator_method = "SSPRK3"
+comparator_point_counts = [4097, 8193, 16385]
+taper_fraction = "1/8"
+unresolved_top_fraction = "1/8"
+top_band_first_bin = 28
+nyquist_bin = 32
+top_band_bin_count = 5
+declared_absolute_DFT_amplitude_floor = "1e-30"
+minimum_history_difference_order = "3/2"
+minimum_zero_power_order = "3"
+power_measures = ["field_tail_power", "derivative_tail_power"]
+normalization_by_total_power_forbidden = true
+common_proper_time_intersection_required = true
+exactly_64_uniform_aligned_samples_required = true
+classification_is_per_method_per_tracer_per_field_per_measure = true
+
+[arithmetic_contract]
+low_decimal_precision = 72
+high_decimal_precision = 96
+independent_DFT_uses_only_top_band_bins = true
+binary64_rFFT_is_audited_against_decimal_DFT = true
+power_interval_contains_binary64_decimal_disagreement = true
+power_interval_uses_outward_binary64_rounding = true
+coefficient_interval_contains_binary64_decimal_disagreement = true
+two_decimal_precisions_must_agree_within_public_debit = true
+arithmetic_disagreement_may_not_be_silently_dropped = true
+
+[interpolation_contract]
+alignment = "piecewise_linear_on_common_proper_time_intersection"
+round_trip_infinity_debit_is_public = true
+round_trip_debit_is_used_only_as_conditional_pointwise_perturbation_radius = true
+round_trip_debit_is_not_claimed_as_continuum_interpolation_theorem = true
+coefficient_perturbation_bound = "E_k <= ||window||_1 delta"
+field_power_perturbation_bound = "sum m_k (2 |F_k| E_k + E_k^2) / N^2"
+derivative_power_perturbation_bound = "sum omega_k^2 m_k (2 |F_k| E_k + E_k^2) / N^2"
+arithmetic_and_interpolation_debits_remain_separate = true
+
+[classification_contract]
+class_names = ["contracts_to_zero_at_required_power_order", "nonzero_resolution_independent_within_enclosure", "converges_to_nonzero_resolved_power", "instrument_floor_or_interpolation_enclosure_dominated", "unresolved_absolute_tail_behavior"]
+zero_class_requires_both_power_ratios_to_have_conservative_order_at_least_3 = true
+resolution_independent_nonzero_class_requires_positive_three_interval_intersection = true
+nonzero_convergent_class_requires_same_direction_difference_contraction_at_order_at_least_3_over_2 = true
+nonzero_convergent_decreasing_class_requires_positive_geometric_continuum_lower_bound = true
+floor_class_requires_all_three_top_band_coefficient_intervals_below_1e_minus_30 = true
+finest_interval_touching_zero_is_enclosure_dominated = true
+nonmonotone_or_below_order_evidence_is_unresolved = true
+field_and_derivative_power_are_classified_separately = true
+no_class_is_a_pass_fail_temporal_admission = true
+
+[synthetic_controls]
+control_names = ["exact_zero", "subfloor_nonzero", "power_contracts_to_zero", "nonzero_resolution_independent", "nonzero_convergent", "unresolved_nonmonotone", "interpolation_enclosure_dominated"]
+exact_zero_expected = "instrument_floor_or_interpolation_enclosure_dominated"
+subfloor_nonzero_expected = "instrument_floor_or_interpolation_enclosure_dominated"
+power_contracts_to_zero_expected = "contracts_to_zero_at_required_power_order"
+nonzero_resolution_independent_expected = "nonzero_resolution_independent_within_enclosure"
+nonzero_convergent_expected = "converges_to_nonzero_resolved_power"
+unresolved_nonmonotone_expected = "unresolved_absolute_tail_behavior"
+interpolation_enclosure_dominated_expected = "instrument_floor_or_interpolation_enclosure_dominated"
+both_power_measures_must_match_every_expected_class = true
+controls_consume_no_campaign_histories = true
+
+[outcome_classes]
+synthetic_discriminator_validated = "freeze_contract_reproduces_and_actual_history_diagnosis_may_execute"
+synthetic_discriminator_not_validated = "implementation_or_contract_failure_no_actual_history_read"
+actual_history_diagnosis_pending = "no_terminal_history_conclusion_at_freeze"
+actual_history_result_must_preserve_all_per_signal_classes = true
+actual_history_result_may_not_retroactively_pass_PROTO13 = true
+actual_history_result_may_not_directly_define_replacement_gate = true
+
+[proof_contract]
+checkpoint_commit_and_all_tracked_source_blobs_must_match = true
+source_checkpoint_hash_must_match_when_present_but_arrays_may_not_load = true
+config_constants_must_match_implementation = true
+all_seven_synthetic_controls_must_match_both_power_measure_classes = true
+decimal_and_binary64_power_evidence_must_share_public_intervals = true
+one_bit_signal_evidence_mutation_must_be_detectable_and_contract_mutations_must_fail_closed = true
+no_actual_history_array_may_be_loaded_before_freeze_commit = true
+no_result_may_define_a_replacement_gate_or_authorize_a_trajectory = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG1_terminal_histories_diagnosed = true
+TDG2_absolute_tail_discriminator_frozen = true
+TDG2_actual_history_execution_authorized = true
+TDG2_actual_history_execution_completed = false
+replacement_temporal_gate_design_authorized = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG1_diagnostic_contract_frozen = true
+TDG1_terminal_histories_diagnosed = true
+normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test = false
+TDG2_absolute_tail_discriminator_frozen = true
+TDG2_actual_histories_diagnosed = false
+individual_temporal_budget_failure_cause_fully_derived = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

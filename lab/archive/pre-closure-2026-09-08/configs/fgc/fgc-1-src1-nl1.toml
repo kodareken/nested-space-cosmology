@@ -1,0 +1,82 @@
+schema_version = 1
+artifact_id = "FGC-1-SRC1-NL1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+reference_config = "configs/fgc/fgc-1-hyp1-mhg-reference.toml"
+reference_result = "results/fgc-1-hyp1-mhg-reference.json"
+first_order_config = "configs/fgc/fgc-1-hyp1-fo1-rc1.toml"
+first_order_result = "results/fgc-1-hyp1-fo1-rc1.json"
+quantified_domain_config = "configs/fgc/fgc-1-hyp1-dom1-qift1.toml"
+quantified_domain_result = "results/fgc-1-hyp1-dom1-qift1.json"
+compatible_point_config = "configs/fgc/fgc-1-hyp1-con1-comp1.toml"
+compatible_point_result = "results/fgc-1-hyp1-con1-comp1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+reference_id = "flat_spherical_annulus"
+coordinate_radius = "4"
+radial_domain_minimum = "1/2"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+scope_is_QIFT1_local_branch_not_run_domain = true
+
+[solver]
+residual_infinity_tolerance = "1/1000000000000"
+maximum_iterations = 16
+condition_number_infinity_maximum = "10000000000"
+normalized_branch_displacement_maximum = "1/16"
+parameter_half_width = "1/65536"
+acceleration_half_width = "1/128"
+maximum_backtracks = 24
+minimum_step_fraction = "1/16777216"
+strict_residual_decrease_required = true
+branch_continuity_from_warm_start_required = true
+stop_before_crossing_any_limit = true
+
+[backend]
+residual = "same_modified_harmonic_full_residuals_REF1_evaluator"
+floating_state = "FloatJet2_subclass_of_established_Jet2_interface"
+analytic_acceleration_jacobian = "six_binary64_first_tangent_forward_AD_columns_through_same_REF1_evaluator"
+linear_solve = "numpy_linalg_solve"
+condition_estimator = "numpy_linalg_cond_infinity_norm"
+no_second_field_equation_implementation = true
+exact_package_remains_numpy_free = true
+
+[controls]
+rational_fixture_ids = ["IMP1-flat-zero-root", "COMP1-zero-acceleration", "COMP1-exact-root"]
+continuation_path_point_count = 5
+continuation_path_max_fraction_of_parameter_half_width = "1/4"
+exact_float_absolute_tolerance = "1/10000000000"
+exact_float_relative_tolerance = "1/10000000000"
+finite_difference_step = "1/1048576"
+finite_difference_absolute_tolerance = "1/1000000"
+finite_difference_relative_tolerance = "1/1000000"
+nonrational_control_scale_fraction_of_parameter_half_width = "1/8"
+typed_failure_reasons = ["nonfinite_input", "parameter_box_violation", "initial_acceleration_outside_authorized_box", "kinetic_condition_limit", "iteration_limit"]
+
+[proof_contract]
+require_same_REF1_residual_code_path = true
+require_exact_fraction_controls = true
+require_exact_COMP1_root_agreement = true
+require_nonrational_finite_difference_Jacobian_crosscheck = true
+require_monotonic_residual_history = true
+require_branch_continuity_path = true
+require_typed_failure_injection = true
+require_canonical_hash_bound_result = true
+require_no_holdout_execution = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,188 @@
+schema_version = 1
+artifact_id = "FGC-1-EFT0-LED1"
+project_version = "0.11.0"
+units = "c=hbar=1; four spacetime dimensions"
+frame = "Jordan frame; physical metric g_ab; signature -+++"
+
+[model]
+id = "FGC-QR"
+planck_mass = "2"
+mu = "3"
+g4 = "1/2"
+beta = "-1/4"
+eta = "1/2"
+fixture_values_are_not_cutoff = true
+
+[cutoff]
+Lambda = "16"
+origin = "externally_assumed_reference_scale_for_this_local_ledger"
+external_assumption = true
+inferred_from_fixture = false
+
+[operator_basis]
+basis_scope = "representative_only"
+field_redefinition_convention = "declared Jordan-frame local basis modulo integrations by parts and total derivatives only; no completeness claim"
+phi_symmetry = "phi_Z2"
+chi_symmetry = "chi_shift_symmetry"
+complete_wilsonian_basis = false
+
+[local_comp1_centered_component_box]
+source_artifact = "FGC-1-HYP1-CON1-COMP1"
+qift1_source_artifact = "FGC-1-HYP1-DOM1-QIFT1"
+qift1_parameter_half_width = "1/65536"
+coordinate_radius = "4"
+phi_center = "1/131072"
+phi_half_width = "1/262144"
+phi_radial_derivative_center = "1/131072"
+phi_radial_derivative_half_width = "1/262144"
+full_jet_box = false
+frequency_bound_available = false
+
+[[retained_operators]]
+id = "einstein_hilbert"
+operator = "R"
+canonical_dimension = "2"
+coefficient_dimension = "2"
+coefficient = "M_Pl^2/2"
+parameter_references = ["M_Pl"]
+status = "retained"
+
+[[retained_operators]]
+id = "phi2_ricci"
+operator = "phi^2 R"
+canonical_dimension = "4"
+coefficient_dimension = "0"
+coefficient = "beta/2"
+parameter_references = ["beta"]
+status = "retained"
+
+[[retained_operators]]
+id = "phi_kinetic"
+operator = "(nabla phi)^2"
+canonical_dimension = "4"
+coefficient_dimension = "0"
+coefficient = "-1/2"
+parameter_references = []
+status = "retained"
+
+[[retained_operators]]
+id = "chi_kinetic"
+operator = "(nabla chi)^2"
+canonical_dimension = "4"
+coefficient_dimension = "0"
+coefficient = "-1/2"
+parameter_references = []
+status = "retained"
+
+[[retained_operators]]
+id = "phi_mass"
+operator = "phi^2"
+canonical_dimension = "2"
+coefficient_dimension = "2"
+coefficient = "-mu^2/2"
+parameter_references = ["mu"]
+status = "retained"
+
+[[retained_operators]]
+id = "phi_quartic"
+operator = "phi^4"
+canonical_dimension = "4"
+coefficient_dimension = "0"
+coefficient = "-g4/4"
+parameter_references = ["g4"]
+status = "retained"
+
+[[retained_operators]]
+id = "phi2_gauss_bonnet"
+operator = "phi^2 G"
+canonical_dimension = "6"
+coefficient_dimension = "-2"
+coefficient = "eta/8"
+parameter_references = ["eta"]
+status = "retained"
+
+[[omitted_operators]]
+id = "x_phi_squared"
+operator = "X_phi^2"
+canonical_dimension = "8"
+coefficient_dimension = "-4"
+coefficient = "c_phi4/Lambda^4"
+status = "omitted_representative_only"
+wilson_bound = "1"
+suppression_power = "4"
+basis_scope = "representative_only"
+
+[[omitted_operators]]
+id = "x_chi_squared"
+operator = "X_chi^2"
+canonical_dimension = "8"
+coefficient_dimension = "-4"
+coefficient = "c_chi4/Lambda^4"
+status = "omitted_representative_only"
+wilson_bound = "1"
+suppression_power = "4"
+basis_scope = "representative_only"
+
+[[omitted_operators]]
+id = "x_phi_x_chi"
+operator = "X_phi X_chi"
+canonical_dimension = "8"
+coefficient_dimension = "-4"
+coefficient = "c_phi_chi/Lambda^4"
+status = "omitted_representative_only"
+wilson_bound = "1"
+suppression_power = "4"
+basis_scope = "representative_only"
+
+[[omitted_operators]]
+id = "phi6"
+operator = "phi^6"
+canonical_dimension = "6"
+coefficient_dimension = "-2"
+coefficient = "c_phi6/Lambda^2"
+status = "omitted_representative_only"
+wilson_bound = "1"
+suppression_power = "2"
+basis_scope = "representative_only"
+
+[[controls]]
+id = "F_over_Mpl_squared_lower"
+definition = "[M_Pl^2-|beta|(|phi_center|+phi_half_width)^2]/M_Pl^2"
+comparison = "greater_than"
+strict_lower_bound = "99/100"
+computable_on_component_box = true
+
+[[controls]]
+id = "epsilon_F"
+definition = "|beta|(|phi_center|+phi_half_width)^2/M_Pl^2"
+comparison = "less_than"
+strict_upper_bound = "1/100"
+computable_on_component_box = true
+
+[[controls]]
+id = "epsilon_eta_phi2"
+definition = "eta(|phi_center|+phi_half_width)^2"
+comparison = "less_than"
+strict_upper_bound = "1/100"
+computable_on_component_box = true
+
+[[controls]]
+id = "epsilon_phi_amplitude"
+definition = "(|phi_center|+phi_half_width)/Lambda under the declared field-amplitude power-counting assumption"
+comparison = "less_than"
+strict_upper_bound = "1/100"
+computable_on_component_box = true
+
+[claims]
+retained_eft_validity = false
+complete_wilsonian_basis = false
+uv_completion = false
+wilson_coefficients_predicted = false
+radiative_stability = false
+frequency_control = false
+global_or_open_eft_validity = false
+initial_data = false
+evolution = false
+collapse = false
+defocusing = false
+singularity_resolution = false

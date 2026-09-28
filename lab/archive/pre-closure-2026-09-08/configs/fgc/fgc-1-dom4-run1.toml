@@ -1,0 +1,107 @@
+schema_version = 1
+artifact_id = "FGC-1-DOM4-RUN1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+radial_domain_config = "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml"
+radial_domain_result = "results/fgc-1-hyp1-dom3-uhyp1.json"
+nonlinear_source_config = "configs/fgc/fgc-1-src1-nl1.toml"
+nonlinear_source_result = "results/fgc-1-src1-nl1.json"
+physical_constraints_config = "configs/fgc/fgc-1-con4-phy1.toml"
+physical_constraints_result = "results/fgc-1-con4-phy1.json"
+regular_center_config = "configs/fgc/fgc-1-ctr1-reg1.toml"
+regular_center_result = "results/fgc-1-ctr1-reg1.json"
+initial_data_config = "configs/fgc/fgc-1-id1-fam1.toml"
+initial_data_result = "results/fgc-1-id1-fam1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+formulation = "metric_defined_reference_modified_harmonic"
+state = "u_p_q_with_six_REF1_accelerations"
+initial_slice = "unit_lapse_zero_shift_maximal_polar_areal"
+run_envelope_is_classical_not_retained_EFT = true
+trajectory_containment_is_deferred_to_HLT1 = true
+holdout_execution_performed = false
+
+[parameter_envelope]
+chi_amplitude_minimum = "2"
+chi_amplitude_maximum = "5"
+chi_amplitude_candidates = ["2", "5/2", "3", "7/2", "4", "9/2", "5"]
+chi_half_width_minimum = "7/4"
+chi_half_width_central = "2"
+chi_half_width_maximum = "9/4"
+phi_seed_base_amplitude = "1/131072"
+phi_seed_factor_minimum = "1/2"
+phi_seed_factor_central = "1"
+phi_seed_factor_maximum = "2"
+dimensionless_coordinate_volume = "9/4"
+physical_phi_amplitude_coordinate_volume = "9/524288"
+initial_compactness_minimum = "1/10"
+initial_compactness_maximum = "3/4"
+parameter_container_does_not_waive_per_case_static_admission = true
+resolved_selected_amplitude_is_deferred_to_PRO3_HLD1 = true
+
+[spacetime_envelope]
+radial_domain_minimum = "0"
+radial_domain_maximum = "128"
+measurement_radius_maximum = "24"
+final_time = "32"
+minimum_boundary_causal_buffer = "16"
+length_unit_L0 = "4"
+
+[formulation]
+tilde_normal_factor = 4
+hat_normal_factor = 9
+normal_factor_order = "1<tilde<hat"
+independent_chi_sector = "canonical_scalar_direct_sum"
+reference = "flat_spherical_reference_with_exact_regular_center_descendant"
+
+[source_branch]
+residual_infinity_maximum = "1/1000000000000"
+maximum_iterations = 16
+kinetic_condition_infinity_maximum = "10000000000"
+branch_displacement_infinity_maximum = "1/16"
+acceleration_infinity_maximum = "4"
+parameter_half_width_for_same_state_solve = "1"
+maximum_backtracks = 24
+minimum_step_fraction = "1/16777216"
+strict_residual_decrease_required = true
+stop_before_crossing_any_limit = true
+
+[witnesses]
+constraint_step_count = 512
+branch_seed_factors = ["0", "1", "2"]
+branch_witness_chi_amplitude = "2"
+branch_witness_chi_half_width = "2"
+stress_chi_amplitude = "5"
+stress_chi_half_width = "9/4"
+stress_phi_seed_factor = "2"
+support_points = ["profile_center", "peak_compactness"]
+strict_witness_plus_continuity_establishes_only_local_open_state_neighborhoods = true
+
+[proof_contract]
+all_protocol_parameter_coordinates_must_lie_inside_container = true
+container_membership_must_not_substitute_for_static_case_admission = true
+strict_nonsingular_REF1_witnesses_required = true
+seed_continuation_must_preserve_one_acceleration_branch = true
+stress_initial_slice_must_be_regular_finite_mass_and_untrapped = true
+radial_DOM3_is_consumed_but_not_promoted_to_all_covectors = true
+HYP2_must_independently_close_all_covectors = true
+HLT1_must_monitor_trajectory_containment_at_every_accepted_stage = true
+canonical_hash_bound_result_required = true
+no_evolution_or_holdout_outcome_access = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

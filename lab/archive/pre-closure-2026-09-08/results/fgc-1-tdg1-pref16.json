@@ -1,0 +1,2319 @@
+{
+  "artifact_id": "FGC-1-TDG1-PREF16",
+  "artifact_payload": {
+    "actual_history_diagnosis": {
+      "aggregate": {
+        "above_floor_inherited_individual_failure_count": 395,
+        "individual_budget_failure_cause_fully_derived": false,
+        "inherited_raw_tail_ratio_gate_structurally_invalid": true,
+        "new_trajectory_authorized": false,
+        "replacement_temporal_admission_defined": false,
+        "subfloor_inherited_individual_failure_count": 149
+      },
+      "methods": {
+        "RK4": {
+          "diagnostic_does_not_authorize_a_replacement_gate": true,
+          "field_names": [
+            "alpha_minus_1",
+            "shift_over_r",
+            "lambda_minus_1",
+            "R_over_r_minus_1",
+            "phi_over_Lambda",
+            "chi_over_Lambda"
+          ],
+          "history_difference_classification_counts": {
+            "exactly_resolution_identical": 15,
+            "fine_pair_exact_after_nonzero_coarse_difference": 8,
+            "raw_difference_nonmonotone": 0,
+            "raw_order_below_required": 28,
+            "raw_order_pass": 237
+          },
+          "history_difference_counts_by_field": {
+            "R_over_r_minus_1": {
+              "interpolation_limited": 19,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 7,
+              "raw_order_pass": 34
+            },
+            "alpha_minus_1": {
+              "interpolation_limited": 19,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 3,
+              "raw_order_pass": 37
+            },
+            "chi_over_Lambda": {
+              "interpolation_limited": 12,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 0,
+              "raw_order_pass": 48
+            },
+            "lambda_minus_1": {
+              "interpolation_limited": 14,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 11,
+              "raw_order_pass": 29
+            },
+            "phi_over_Lambda": {
+              "interpolation_limited": 12,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 0,
+              "raw_order_pass": 48
+            },
+            "shift_over_r": {
+              "interpolation_limited": 7,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 7,
+              "raw_order_pass": 41
+            }
+          },
+          "history_difference_interpolation_limited_count": 83,
+          "history_difference_raw_order_summary": {
+            "finite_count": 265,
+            "maximum": 81.20172996109214,
+            "median": 3.1363426937448518,
+            "minimum": 0.3379239712914877
+          },
+          "individual_signal_views_by_resolution": {
+            "2049": {
+              "downsampled_view_classification_changes": {
+                "16": 3,
+                "32": 3
+              },
+              "failed_above_declared_absolute_amplitude_floor": 107,
+              "failed_below_declared_absolute_amplitude_floor": 3,
+              "failed_persisting_under_all_fixed_views": 89,
+              "failures_by_field": {
+                "R_over_r_minus_1": 10,
+                "alpha_minus_1": 10,
+                "chi_over_Lambda": 28,
+                "lambda_minus_1": 9,
+                "phi_over_Lambda": 38,
+                "shift_over_r": 15
+              },
+              "failures_rescued_by_fixed_view": {
+                "affine_detrended_compact": 20,
+                "mean_centered_compact": 7,
+                "rectangular": 0
+              },
+              "inherited_individual_failure_count": 110,
+              "maximum_round_trip_interpolation_infinity": 2.9385154242533504e-05,
+              "signal_count": 288,
+              "subfloor_failures_by_field": {
+                "R_over_r_minus_1": 0,
+                "alpha_minus_1": 0,
+                "chi_over_Lambda": 0,
+                "lambda_minus_1": 0,
+                "phi_over_Lambda": 1,
+                "shift_over_r": 2
+              },
+              "total_power_bins": {
+                "at_or_above_epsilon": 190,
+                "below_epsilon_squared": 32,
+                "between_epsilon_squared_and_epsilon": 51,
+                "exact_zero": 15,
+                "subnormal_power": 0
+              },
+              "worst_twelve_inherited_failures": [
+                {
+                  "FFT_peak_amplitude": 2.517912704211867e-18,
+                  "RMS_scale_over_cutoff": 1.8142421323023865,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.3658491947291362,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "R_over_r_minus_1",
+                  "field_tail_fraction": 0.14062500000000003,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 9.906069353174242e-38,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 3.975651638229264e-19,
+                  "RMS_scale_over_cutoff": 1.814242132302386,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.36584919472913613,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "alpha_minus_1",
+                  "field_tail_fraction": 0.140625,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.4696571794617225e-39,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 3.710608195680646e-18,
+                  "RMS_scale_over_cutoff": 1.814242132302386,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.36584919472913613,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "lambda_minus_1",
+                  "field_tail_fraction": 0.14062499999999997,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.151345809664434e-37,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 3.315942631556257e-34,
+                  "RMS_scale_over_cutoff": 1.2582200354667572,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.1991819976403324,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.03695823995195836,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 8.331551773397803e-70,
+                  "tracer": 1
+                },
+                {
+                  "FFT_peak_amplitude": 2.17085600219133e-29,
+                  "RMS_scale_over_cutoff": 1.2424335812331397,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.20274580355250857,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.036666113063029374,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.4511770606044744e-60,
+                  "tracer": 2
+                },
+                {
+                  "FFT_peak_amplitude": 2.3486713448697356e-39,
+                  "RMS_scale_over_cutoff": 1.2403743217536194,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.1785981821108223,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.03224662031172465,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 4.2051909631989206e-80,
+                  "tracer": 0
+                },
+                {
+                  "FFT_peak_amplitude": 5.658467659652859e-25,
+                  "RMS_scale_over_cutoff": 1.18597192370381,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.18901417713696114,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.03115149837818387,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.185613006848075e-51,
+                  "tracer": 3
+                },
+                {
+                  "FFT_peak_amplitude": 5.134147047873636e-21,
+                  "RMS_scale_over_cutoff": 1.081426384831078,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.15501784940498908,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.021260388987348174,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.6072318103098875e-43,
+                  "tracer": 4
+                },
+                {
+                  "FFT_peak_amplitude": 5.774293138802685e-24,
+                  "RMS_scale_over_cutoff": 1.000345975325721,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.08377221721419735,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.009874561299938266,
+                  "round_trip_interpolation_infinity": 3.1953941237884735e-27,
+                  "total_field_power": 2.1943294488769095e-49,
+                  "tracer": 45
+                },
+                {
+                  "FFT_peak_amplitude": 1.6146909677795766e-06,
+                  "RMS_scale_over_cutoff": 0.9509046340043043,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.046000987960447964,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.004926672295447965,
+                  "round_trip_interpolation_infinity": 3.0965289510783713e-09,
+                  "total_field_power": 1.6958156660870125e-14,
+                  "tracer": 12
+                },
+                {
+                  "FFT_peak_amplitude": 1.6687208577618204e-17,
+                  "RMS_scale_over_cutoff": 0.9458035023398659,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.09666263045048858,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.01016536538620829,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.496942728542892e-36,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 5.836622026476877e-06,
+                  "RMS_scale_over_cutoff": 0.9257992041273108,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.04593412408479457,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "alpha_minus_1",
+                  "field_tail_fraction": 0.004662866726617667,
+                  "round_trip_interpolation_infinity": 1.0311656545292352e-08,
+                  "total_field_power": 1.955907790297359e-13,
+                  "tracer": 12
+                }
+              ]
+            },
+            "4097": {
+              "downsampled_view_classification_changes": {
+                "16": 2,
+                "32": 0
+              },
+              "failed_above_declared_absolute_amplitude_floor": 90,
+              "failed_below_declared_absolute_amplitude_floor": 16,
+              "failed_persisting_under_all_fixed_views": 77,
+              "failures_by_field": {
+                "R_over_r_minus_1": 7,
+                "alpha_minus_1": 7,
+                "chi_over_Lambda": 32,
+                "lambda_minus_1": 7,
+                "phi_over_Lambda": 38,
+                "shift_over_r": 15
+              },
+              "failures_rescued_by_fixed_view": {
+                "affine_detrended_compact": 27,
+                "mean_centered_compact": 20,
+                "rectangular": 0
+              },
+              "inherited_individual_failure_count": 106,
+              "maximum_round_trip_interpolation_infinity": 3.8505708826981795e-05,
+              "signal_count": 288,
+              "subfloor_failures_by_field": {
+                "R_over_r_minus_1": 0,
+                "alpha_minus_1": 0,
+                "chi_over_Lambda": 5,
+                "lambda_minus_1": 0,
+                "phi_over_Lambda": 7,
+                "shift_over_r": 4
+              },
+              "total_power_bins": {
+                "at_or_above_epsilon": 181,
+                "below_epsilon_squared": 39,
+                "between_epsilon_squared_and_epsilon": 44,
+                "exact_zero": 24,
+                "subnormal_power": 0
+              },
+              "worst_twelve_inherited_failures": [
+                {
+                  "FFT_peak_amplitude": 1.4344636090591407e-16,
+                  "RMS_scale_over_cutoff": 1.7748155826497996,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.35605472649125003,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "alpha_minus_1",
+                  "field_tail_fraction": 0.13099986109040862,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.002847045401611e-34,
+                  "tracer": 8
+                },
+                {
+                  "FFT_peak_amplitude": 4.707955205179284e-13,
+                  "RMS_scale_over_cutoff": 1.6234999785239115,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.005215280290050187,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.00173440658959587,
+                  "round_trip_interpolation_infinity": 7.799612600291515e-16,
+                  "total_field_power": 7.6380769669334285e-28,
+                  "tracer": 34
+                },
+                {
+                  "FFT_peak_amplitude": 1.4158885102574487e-65,
+                  "RMS_scale_over_cutoff": 1.6161646512458399,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3101111664517727,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.09470146654161317,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.331278478460838e-132,
+                  "tracer": 0
+                },
+                {
+                  "FFT_peak_amplitude": 4.688386359179246e-13,
+                  "RMS_scale_over_cutoff": 1.499880044796984,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.016686550805105244,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.0047154713115344455,
+                  "round_trip_interpolation_infinity": 6.401536826108851e-23,
+                  "total_field_power": 8.420849313873967e-28,
+                  "tracer": 11
+                },
+                {
+                  "FFT_peak_amplitude": 1.3696197929340237e-55,
+                  "RMS_scale_over_cutoff": 1.4781122176063468,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.25869728756215066,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.06617720586560459,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.873294686048525e-112,
+                  "tracer": 1
+                },
+                {
+                  "FFT_peak_amplitude": 7.634395500791951e-23,
+                  "RMS_scale_over_cutoff": 1.440328857778543,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.21509673921065753,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.05228573097322277,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 5.767388283815012e-47,
+                  "tracer": 4
+                },
+                {
+                  "FFT_peak_amplitude": 2.823554396056031e-13,
+                  "RMS_scale_over_cutoff": 1.3505785153070757,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.002329476223194688,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.0005344098998183025,
+                  "round_trip_interpolation_infinity": 1.8920039950820747e-26,
+                  "total_field_power": 3.1614369593314035e-28,
+                  "tracer": 10
+                },
+                {
+                  "FFT_peak_amplitude": 3.0940109532175146e-13,
+                  "RMS_scale_over_cutoff": 1.3502835285533064,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.0014949986992248566,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.0003394747951117832,
+                  "round_trip_interpolation_infinity": 8.649823999740193e-17,
+                  "total_field_power": 3.1762316519409966e-28,
+                  "tracer": 35
+                },
+                {
+                  "FFT_peak_amplitude": 4.1278829365442917e-16,
+                  "RMS_scale_over_cutoff": 1.3308683220194635,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.18893753434414723,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "R_over_r_minus_1",
+                  "field_tail_fraction": 0.039304070674162514,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.4883584643414885e-33,
+                  "tracer": 8
+                },
+                {
+                  "FFT_peak_amplitude": 2.1120459110067e-24,
+                  "RMS_scale_over_cutoff": 1.2874987992546234,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.21035109113269243,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.04085368230887299,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.4833074873124405e-50,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 2.359551616869502e-46,
+                  "RMS_scale_over_cutoff": 1.2706913591450972,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.15125814590820957,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.028769842837495906,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 4.6536770533176376e-94,
+                  "tracer": 2
+                },
+                {
+                  "FFT_peak_amplitude": 9.447628918050106e-40,
+                  "RMS_scale_over_cutoff": 1.2569957605861992,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.19572130420557385,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.03625339005583624,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 6.7923569191237315e-81,
+                  "tracer": 0
+                }
+              ]
+            },
+            "8193": {
+              "downsampled_view_classification_changes": {
+                "16": 0,
+                "32": 0
+              },
+              "failed_above_declared_absolute_amplitude_floor": 66,
+              "failed_below_declared_absolute_amplitude_floor": 27,
+              "failed_persisting_under_all_fixed_views": 48,
+              "failures_by_field": {
+                "R_over_r_minus_1": 3,
+                "alpha_minus_1": 3,
+                "chi_over_Lambda": 32,
+                "lambda_minus_1": 3,
+                "phi_over_Lambda": 38,
+                "shift_over_r": 14
+              },
+              "failures_rescued_by_fixed_view": {
+                "affine_detrended_compact": 44,
+                "mean_centered_compact": 35,
+                "rectangular": 0
+              },
+              "inherited_individual_failure_count": 93,
+              "maximum_round_trip_interpolation_infinity": 3.8191300573326564e-05,
+              "signal_count": 288,
+              "subfloor_failures_by_field": {
+                "R_over_r_minus_1": 0,
+                "alpha_minus_1": 0,
+                "chi_over_Lambda": 10,
+                "lambda_minus_1": 0,
+                "phi_over_Lambda": 11,
+                "shift_over_r": 6
+              },
+              "total_power_bins": {
+                "at_or_above_epsilon": 181,
+                "below_epsilon_squared": 53,
+                "between_epsilon_squared_and_epsilon": 18,
+                "exact_zero": 36,
+                "subnormal_power": 0
+              },
+              "worst_twelve_inherited_failures": [
+                {
+                  "FFT_peak_amplitude": 7.993062389121258e-16,
+                  "RMS_scale_over_cutoff": 2.7888509908639536,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.8798449447866907,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.7786565048638112,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.316765179085462e-33,
+                  "tracer": 10
+                },
+                {
+                  "FFT_peak_amplitude": 1.3580736957143786e-15,
+                  "RMS_scale_over_cutoff": 2.594309104488286,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.6914643352821837,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.5579617204147768,
+                  "round_trip_interpolation_infinity": 1.6590335060745276e-17,
+                  "total_field_power": 5.3677150965231806e-33,
+                  "tracer": 34
+                },
+                {
+                  "FFT_peak_amplitude": 1.2517573808741393e-15,
+                  "RMS_scale_over_cutoff": 2.57839485412699,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.7325042163306615,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.5894572459832024,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.851651934766532e-33,
+                  "tracer": 11
+                },
+                {
+                  "FFT_peak_amplitude": 2.1749720747410033e-16,
+                  "RMS_scale_over_cutoff": 2.4009518663270875,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.4804984783054506,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.3246561769319153,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.985734519252537e-34,
+                  "tracer": 9
+                },
+                {
+                  "FFT_peak_amplitude": 4.1785623704429466e-16,
+                  "RMS_scale_over_cutoff": 2.2255796559737706,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.34807668552260135,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.20087401699590826,
+                  "round_trip_interpolation_infinity": 3.220323615770507e-19,
+                  "total_field_power": 1.0915133912702992e-33,
+                  "tracer": 35
+                },
+                {
+                  "FFT_peak_amplitude": 9.546807663890998e-29,
+                  "RMS_scale_over_cutoff": 2.077264558834463,
+                  "below_declared_absolute_amplitude_floor": false,
+                  "derivative_tail_fraction": 0.35595113622744823,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.17956411341565373,
+                  "round_trip_interpolation_infinity": 1.6300813257766688e-28,
+                  "total_field_power": 9.709051462759354e-59,
+                  "tracer": 41
+                },
+                {
+                  "FFT_peak_amplitude": 1.3024283771209848e-33,
+                  "RMS_scale_over_cutoff": 1.8626967938976182,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3297004999795726,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.13377796635348124,
+                  "round_trip_interpolation_infinity": 1.2151768532114634e-33,
+                  "total_field_power": 2.143183187315444e-68,
+                  "tracer": 41
+                },
+                {
+                  "FFT_peak_amplitude": 4.622016677110269e-115,
+                  "RMS_scale_over_cutoff": 1.813656100500735,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3657082771128957,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.14048038712145652,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.3344328400972094e-231,
+                  "tracer": 0
+                },
+                {
+                  "FFT_peak_amplitude": 3.839389452333123e-95,
+                  "RMS_scale_over_cutoff": 1.812485628463117,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36542645297506804,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.14019170819925392,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.2959595396827487e-191,
+                  "tracer": 1
+                },
+                {
+                  "FFT_peak_amplitude": 7.568876161997722e-77,
+                  "RMS_scale_over_cutoff": 1.8086376846939518,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3644964454562411,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.13924411843880174,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 8.861316391709363e-155,
+                  "tracer": 2
+                },
+                {
+                  "FFT_peak_amplitude": 2.0416793703590478e-60,
+                  "RMS_scale_over_cutoff": 1.7946125768918382,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36106049282512276,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.13580905166383725,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 6.290353248385728e-122,
+                  "tracer": 3
+                },
+                {
+                  "FFT_peak_amplitude": 3.7087319103544306e-46,
+                  "RMS_scale_over_cutoff": 1.734444507623235,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.34544419955156735,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.12140440407923524,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.8818481443432459e-93,
+                  "tracer": 4
+                }
+              ]
+            }
+          },
+          "method": "RK4",
+          "point_counts": [
+            2049,
+            4097,
+            8193
+          ],
+          "sample_count": 64,
+          "tracer_count": 48,
+          "worst_twelve_nonpassing_history_differences": [
+            {
+              "classification": "raw_order_below_required",
+              "field": "lambda_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                6.730465212934078e-10,
+                6.725513757022128e-10
+              ],
+              "raw_difference_infinity": [
+                4.117658389951595e-07,
+                1.4641459460118522e-07
+              ],
+              "raw_observed_order": 1.4917647771865985,
+              "tracer": 38
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "shift_over_r",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                7.469613415213988e-12,
+                7.467277067952499e-12
+              ],
+              "raw_difference_infinity": [
+                2.187625237318365e-09,
+                7.964985571052782e-10
+              ],
+              "raw_observed_order": 1.4576219574575318,
+              "tracer": 41
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "R_over_r_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                2.0333453323861939e-10,
+                2.0330284157543677e-10
+              ],
+              "raw_difference_infinity": [
+                3.300407122076854e-08,
+                1.2222713697065957e-08
+              ],
+              "raw_observed_order": 1.4330793701779239,
+              "tracer": 41
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                1.5776684232843893e-11,
+                1.5776155518266348e-11
+              ],
+              "raw_difference_infinity": [
+                8.648413915148347e-10,
+                3.242160900916811e-10
+              ],
+              "raw_observed_order": 1.415479882216076,
+              "tracer": 45
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "lambda_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                5.44934417034959e-10,
+                5.445729839292923e-10
+              ],
+              "raw_difference_infinity": [
+                3.347948191873007e-07,
+                1.3503882810572687e-07
+              ],
+              "raw_observed_order": 1.3099029137335514,
+              "tracer": 39
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "shift_over_r",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                5.60387820132055e-12,
+                5.602171667101058e-12
+              ],
+              "raw_difference_infinity": [
+                1.7846969988010233e-09,
+                7.264201814399275e-10
+              ],
+              "raw_observed_order": 1.296802968725047,
+              "tracer": 42
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "lambda_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                3.426595646805787e-05,
+                3.9013884438401925e-05
+              ],
+              "raw_difference_infinity": [
+                0.00021838282254499353,
+                9.00575032348732e-05
+              ],
+              "raw_observed_order": 1.277940995986757,
+              "tracer": 16
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "R_over_r_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                1.6433269849069898e-10,
+                1.6430937513356447e-10
+              ],
+              "raw_difference_infinity": [
+                2.7137816292766015e-08,
+                1.1197046781950826e-08
+              ],
+              "raw_observed_order": 1.2771863636013432,
+              "tracer": 42
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                1.217798786955931e-11,
+                1.2177614436449788e-11
+              ],
+              "raw_difference_infinity": [
+                6.90536175549511e-10,
+                2.864343747133397e-10
+              ],
+              "raw_observed_order": 1.2695123563945911,
+              "tracer": 46
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "lambda_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                4.427887223545923e-10,
+                4.425153438125662e-10
+              ],
+              "raw_difference_infinity": [
+                2.713077281446541e-07,
+                1.228567023808802e-07
+              ],
+              "raw_observed_order": 1.14295357778177,
+              "tracer": 40
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "shift_over_r",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                4.2324629586677764e-12,
+                4.231229082385379e-12
+              ],
+              "raw_difference_infinity": [
+                1.4572010605009948e-09,
+                6.63799599055076e-10
+              ],
+              "raw_observed_order": 1.134380287018077,
+              "tracer": 43
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                9.451558049530578e-12,
+                9.451292330212827e-12
+              ],
+              "raw_difference_infinity": [
+                5.534497827885216e-10,
+                2.5366235218408527e-10
+              ],
+              "raw_observed_order": 1.1255430053931599,
+              "tracer": 47
+            }
+          ]
+        },
+        "SSPRK3": {
+          "diagnostic_does_not_authorize_a_replacement_gate": true,
+          "field_names": [
+            "alpha_minus_1",
+            "shift_over_r",
+            "lambda_minus_1",
+            "R_over_r_minus_1",
+            "phi_over_Lambda",
+            "chi_over_Lambda"
+          ],
+          "history_difference_classification_counts": {
+            "exactly_resolution_identical": 33,
+            "fine_pair_exact_after_nonzero_coarse_difference": 1,
+            "raw_difference_nonmonotone": 0,
+            "raw_order_below_required": 21,
+            "raw_order_pass": 233
+          },
+          "history_difference_counts_by_field": {
+            "R_over_r_minus_1": {
+              "interpolation_limited": 13,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 2,
+              "raw_order_pass": 35
+            },
+            "alpha_minus_1": {
+              "interpolation_limited": 14,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 12,
+              "raw_order_pass": 25
+            },
+            "chi_over_Lambda": {
+              "interpolation_limited": 3,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 0,
+              "raw_order_pass": 48
+            },
+            "lambda_minus_1": {
+              "interpolation_limited": 11,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 2,
+              "raw_order_pass": 35
+            },
+            "phi_over_Lambda": {
+              "interpolation_limited": 9,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 3,
+              "raw_order_pass": 45
+            },
+            "shift_over_r": {
+              "interpolation_limited": 1,
+              "raw_difference_nonmonotone": 0,
+              "raw_order_below_required": 2,
+              "raw_order_pass": 45
+            }
+          },
+          "history_difference_interpolation_limited_count": 51,
+          "history_difference_raw_order_summary": {
+            "finite_count": 254,
+            "maximum": 473.56975740094236,
+            "median": 2.2145472414982805,
+            "minimum": 0.8184631772323848
+          },
+          "individual_signal_views_by_resolution": {
+            "16385": {
+              "downsampled_view_classification_changes": {
+                "16": 1,
+                "32": 1
+              },
+              "failed_above_declared_absolute_amplitude_floor": 37,
+              "failed_below_declared_absolute_amplitude_floor": 22,
+              "failed_persisting_under_all_fixed_views": 22,
+              "failures_by_field": {
+                "R_over_r_minus_1": 3,
+                "alpha_minus_1": 3,
+                "chi_over_Lambda": 19,
+                "lambda_minus_1": 3,
+                "phi_over_Lambda": 24,
+                "shift_over_r": 7
+              },
+              "failures_rescued_by_fixed_view": {
+                "affine_detrended_compact": 37,
+                "mean_centered_compact": 30,
+                "rectangular": 0
+              },
+              "inherited_individual_failure_count": 59,
+              "maximum_round_trip_interpolation_infinity": 3.8662865363504884e-05,
+              "signal_count": 288,
+              "subfloor_failures_by_field": {
+                "R_over_r_minus_1": 0,
+                "alpha_minus_1": 0,
+                "chi_over_Lambda": 9,
+                "lambda_minus_1": 0,
+                "phi_over_Lambda": 10,
+                "shift_over_r": 3
+              },
+              "total_power_bins": {
+                "at_or_above_epsilon": 181,
+                "below_epsilon_squared": 26,
+                "between_epsilon_squared_and_epsilon": 9,
+                "exact_zero": 71,
+                "subnormal_power": 1
+              },
+              "worst_twelve_inherited_failures": [
+                {
+                  "FFT_peak_amplitude": 6.383829858635352e-136,
+                  "RMS_scale_over_cutoff": 1.814232949208337,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3658469875120029,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.14062273352506888,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 6.367594571533114e-273,
+                  "tracer": 8
+                },
+                {
+                  "FFT_peak_amplitude": 8.050038331279826e-88,
+                  "RMS_scale_over_cutoff": 1.8141989740239943,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36583882108494425,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.1406143482352219,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.0124694937634294e-176,
+                  "tracer": 9
+                },
+                {
+                  "FFT_peak_amplitude": 7.340536362759443e-159,
+                  "RMS_scale_over_cutoff": 1.8139863280758928,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36578481161936727,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.1405616123899936,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 8.41547e-319,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 2.8240597566918128e-126,
+                  "RMS_scale_over_cutoff": 1.8133569355482895,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36563629279743437,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.1404065835060754,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.2441466752470095e-253,
+                  "tracer": 6
+                },
+                {
+                  "FFT_peak_amplitude": 3.617571846789097e-131,
+                  "RMS_scale_over_cutoff": 1.813350709919106,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3656347944508399,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.14040504779078283,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.0415182093554305e-263,
+                  "tracer": 6
+                },
+                {
+                  "FFT_peak_amplitude": 1.0902618759669087e-48,
+                  "RMS_scale_over_cutoff": 1.8129108276994714,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3655288828709441,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.14029655097472757,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.8528281956095707e-98,
+                  "tracer": 10
+                },
+                {
+                  "FFT_peak_amplitude": 1.2609386456999034e-132,
+                  "RMS_scale_over_cutoff": 1.8125378632198537,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3654260230449784,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.1401912546874682,
+                  "round_trip_interpolation_infinity": 1.798825797780976e-129,
+                  "total_field_power": 2.476431328525593e-266,
+                  "tracer": 39
+                },
+                {
+                  "FFT_peak_amplitude": 4.4591111058245115e-136,
+                  "RMS_scale_over_cutoff": 1.8124825083375848,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36541267614545325,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.14017760521732778,
+                  "round_trip_interpolation_infinity": 6.361212296961149e-133,
+                  "total_field_power": 3.096646121790201e-273,
+                  "tracer": 39
+                },
+                {
+                  "FFT_peak_amplitude": 2.6976635706532377e-96,
+                  "RMS_scale_over_cutoff": 1.8109716674336624,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.365061201953271,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.1398186229131343,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.1303950545933683e-193,
+                  "tracer": 7
+                },
+                {
+                  "FFT_peak_amplitude": 3.3609023649513595e-101,
+                  "RMS_scale_over_cutoff": 1.810946385567587,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36505509546227694,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.1398123956044847,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.7544730803114087e-203,
+                  "tracer": 7
+                },
+                {
+                  "FFT_peak_amplitude": 4.8737715155105084e-105,
+                  "RMS_scale_over_cutoff": 1.807645586113311,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.364240602703264,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.1389847467681501,
+                  "round_trip_interpolation_infinity": 2.241141310586322e-102,
+                  "total_field_power": 3.6673002634039542e-211,
+                  "tracer": 38
+                },
+                {
+                  "FFT_peak_amplitude": 9.861967616882449e-102,
+                  "RMS_scale_over_cutoff": 1.807098896158997,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36410782173920875,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.1388503878428137,
+                  "round_trip_interpolation_infinity": 4.122200398938212e-99,
+                  "total_field_power": 1.5000977466959092e-204,
+                  "tracer": 38
+                }
+              ]
+            },
+            "4097": {
+              "downsampled_view_classification_changes": {
+                "16": 1,
+                "32": 0
+              },
+              "failed_above_declared_absolute_amplitude_floor": 52,
+              "failed_below_declared_absolute_amplitude_floor": 44,
+              "failed_persisting_under_all_fixed_views": 44,
+              "failures_by_field": {
+                "R_over_r_minus_1": 4,
+                "alpha_minus_1": 4,
+                "chi_over_Lambda": 32,
+                "lambda_minus_1": 4,
+                "phi_over_Lambda": 38,
+                "shift_over_r": 14
+              },
+              "failures_rescued_by_fixed_view": {
+                "affine_detrended_compact": 52,
+                "mean_centered_compact": 45,
+                "rectangular": 0
+              },
+              "inherited_individual_failure_count": 96,
+              "maximum_round_trip_interpolation_infinity": 2.9937371026826946e-05,
+              "signal_count": 288,
+              "subfloor_failures_by_field": {
+                "R_over_r_minus_1": 0,
+                "alpha_minus_1": 0,
+                "chi_over_Lambda": 17,
+                "lambda_minus_1": 0,
+                "phi_over_Lambda": 18,
+                "shift_over_r": 9
+              },
+              "total_power_bins": {
+                "at_or_above_epsilon": 182,
+                "below_epsilon_squared": 55,
+                "between_epsilon_squared_and_epsilon": 16,
+                "exact_zero": 34,
+                "subnormal_power": 1
+              },
+              "worst_twelve_inherited_failures": [
+                {
+                  "FFT_peak_amplitude": 1.9901215866889847e-122,
+                  "RMS_scale_over_cutoff": 1.7140489821238045,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.33988879609290984,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.11667197523161045,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 5.253665340862125e-246,
+                  "tracer": 3
+                },
+                {
+                  "FFT_peak_amplitude": 9.610667034489332e-140,
+                  "RMS_scale_over_cutoff": 1.7137917004991612,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.33981779238004883,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.11661275175842954,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.2247398059428086e-280,
+                  "tracer": 2
+                },
+                {
+                  "FFT_peak_amplitude": 5.6270574773112596e-157,
+                  "RMS_scale_over_cutoff": 1.7130096522329776,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.33959923317203955,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.11643192967693011,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 4.193712546e-315,
+                  "tracer": 1
+                },
+                {
+                  "FFT_peak_amplitude": 3.832734357102792e-105,
+                  "RMS_scale_over_cutoff": 1.7044623779056554,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.33717758381314605,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.11445659172256718,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.9215643807771536e-211,
+                  "tracer": 4
+                },
+                {
+                  "FFT_peak_amplitude": 2.873258822220058e-88,
+                  "RMS_scale_over_cutoff": 1.6585986769699705,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3236347278428416,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.10405676145961112,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.0134285949997586e-177,
+                  "tracer": 5
+                },
+                {
+                  "FFT_peak_amplitude": 2.921089282344375e-72,
+                  "RMS_scale_over_cutoff": 1.5490707100162038,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.2867816265232906,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.0805048352600684,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 9.17401727802345e-146,
+                  "tracer": 6
+                },
+                {
+                  "FFT_peak_amplitude": 5.983654096645608e-127,
+                  "RMS_scale_over_cutoff": 1.3561355257645904,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.20143573397697198,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.04348043730629252,
+                  "round_trip_interpolation_infinity": 8.989022714810144e-127,
+                  "total_field_power": 3.198216645377108e-255,
+                  "tracer": 47
+                },
+                {
+                  "FFT_peak_amplitude": 1.9217962597321264e-57,
+                  "RMS_scale_over_cutoff": 1.3363680427384077,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.19039555905385908,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.03993462600176358,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.247834382437545e-116,
+                  "tracer": 7
+                },
+                {
+                  "FFT_peak_amplitude": 3.115452977696179e-123,
+                  "RMS_scale_over_cutoff": 1.3226288290248716,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.18301683922917694,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.0376180402183338,
+                  "round_trip_interpolation_infinity": 4.1166818495017754e-123,
+                  "total_field_power": 8.436733989338695e-248,
+                  "tracer": 47
+                },
+                {
+                  "FFT_peak_amplitude": 1.9258004991349767e-95,
+                  "RMS_scale_over_cutoff": 1.2588933661268447,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.14467659108168332,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.02702586727645459,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 3.068524500584666e-192,
+                  "tracer": 0
+                },
+                {
+                  "FFT_peak_amplitude": 2.351306618544926e-100,
+                  "RMS_scale_over_cutoff": 1.2545310304203579,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.141858125108531,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.0263238472092004,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 4.559535944247152e-202,
+                  "tracer": 0
+                },
+                {
+                  "FFT_peak_amplitude": 2.9875648604463385e-44,
+                  "RMS_scale_over_cutoff": 1.251323151452548,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.20024766352864629,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.03674191680730077,
+                  "round_trip_interpolation_infinity": 2.739672489438252e-45,
+                  "total_field_power": 6.667568923429437e-90,
+                  "tracer": 39
+                }
+              ]
+            },
+            "8193": {
+              "downsampled_view_classification_changes": {
+                "16": 4,
+                "32": 1
+              },
+              "failed_above_declared_absolute_amplitude_floor": 43,
+              "failed_below_declared_absolute_amplitude_floor": 37,
+              "failed_persisting_under_all_fixed_views": 26,
+              "failures_by_field": {
+                "R_over_r_minus_1": 4,
+                "alpha_minus_1": 4,
+                "chi_over_Lambda": 27,
+                "lambda_minus_1": 4,
+                "phi_over_Lambda": 32,
+                "shift_over_r": 9
+              },
+              "failures_rescued_by_fixed_view": {
+                "affine_detrended_compact": 53,
+                "mean_centered_compact": 47,
+                "rectangular": 0
+              },
+              "inherited_individual_failure_count": 80,
+              "maximum_round_trip_interpolation_infinity": 3.662282903059769e-05,
+              "signal_count": 288,
+              "subfloor_failures_by_field": {
+                "R_over_r_minus_1": 0,
+                "alpha_minus_1": 0,
+                "chi_over_Lambda": 16,
+                "lambda_minus_1": 0,
+                "phi_over_Lambda": 16,
+                "shift_over_r": 5
+              },
+              "total_power_bins": {
+                "at_or_above_epsilon": 181,
+                "below_epsilon_squared": 42,
+                "between_epsilon_squared_and_epsilon": 14,
+                "exact_zero": 50,
+                "subnormal_power": 1
+              },
+              "worst_twelve_inherited_failures": [
+                {
+                  "FFT_peak_amplitude": 8.669291648016417e-132,
+                  "RMS_scale_over_cutoff": 1.8132345762932751,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36560684192372706,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.14037640158341463,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.1721816511451307e-264,
+                  "tracer": 6
+                },
+                {
+                  "FFT_peak_amplitude": 3.892032170663063e-102,
+                  "RMS_scale_over_cutoff": 1.8105214688013949,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36495242636851344,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.13970774592020427,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.351017467266362e-205,
+                  "tracer": 7
+                },
+                {
+                  "FFT_peak_amplitude": 9.33470461635365e-161,
+                  "RMS_scale_over_cutoff": 1.7995575172982152,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3346692607003891,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.12903225806451613,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.53e-322,
+                  "tracer": 1
+                },
+                {
+                  "FFT_peak_amplitude": 2.7269781627014313e-140,
+                  "RMS_scale_over_cutoff": 1.7942987522006593,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.36098421439494877,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.13573306129393956,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.1215629946806013e-281,
+                  "tracer": 2
+                },
+                {
+                  "FFT_peak_amplitude": 3.5594276596236406e-145,
+                  "RMS_scale_over_cutoff": 1.7941357968505376,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3609438646561228,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.13569333880770598,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.9102839787874324e-291,
+                  "tracer": 2
+                },
+                {
+                  "FFT_peak_amplitude": 6.854977350977943e-76,
+                  "RMS_scale_over_cutoff": 1.7883126896398245,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3594905243346007,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.13427469327987926,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 7.014582608489416e-153,
+                  "tracer": 8
+                },
+                {
+                  "FFT_peak_amplitude": 3.554890520804975e-146,
+                  "RMS_scale_over_cutoff": 1.782757396911924,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3580945809374267,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.13292250594417193,
+                  "round_trip_interpolation_infinity": 1.815892177058002e-144,
+                  "total_field_power": 1.8685354336044717e-293,
+                  "tracer": 43
+                },
+                {
+                  "FFT_peak_amplitude": 4.443473143041478e-150,
+                  "RMS_scale_over_cutoff": 1.7815785145784402,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.35779728676220984,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.13263728904692032,
+                  "round_trip_interpolation_infinity": 2.18052777313412e-148,
+                  "total_field_power": 2.91359198526853e-301,
+                  "tracer": 43
+                },
+                {
+                  "FFT_peak_amplitude": 1.0320924798400454e-120,
+                  "RMS_scale_over_cutoff": 1.7781277419618111,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3569317876720478,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.13181091954656798,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 1.562866562826453e-242,
+                  "tracer": 3
+                },
+                {
+                  "FFT_peak_amplitude": 1.3172864150635295e-125,
+                  "RMS_scale_over_cutoff": 1.7778155691906128,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3568525779838016,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "phi_over_Lambda",
+                  "field_tail_fraction": 0.13173559407316807,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 2.544590809190019e-252,
+                  "tracer": 3
+                },
+                {
+                  "FFT_peak_amplitude": 2.2596985155830547e-51,
+                  "RMS_scale_over_cutoff": 1.7734630244856817,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.3557384557301924,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "shift_over_r",
+                  "field_tail_fraction": 0.13068478501030154,
+                  "round_trip_interpolation_infinity": 0.0,
+                  "total_field_power": 7.433939703991042e-104,
+                  "tracer": 9
+                },
+                {
+                  "FFT_peak_amplitude": 4.822785698176687e-126,
+                  "RMS_scale_over_cutoff": 1.7574078353027573,
+                  "below_declared_absolute_amplitude_floor": true,
+                  "derivative_tail_fraction": 0.35158386470477554,
+                  "failure_reasons": [
+                    "field_tail",
+                    "derivative_tail",
+                    "RMS_scale"
+                  ],
+                  "field": "chi_over_Lambda",
+                  "field_tail_fraction": 0.12683559521998836,
+                  "round_trip_interpolation_infinity": 1.5509576321152703e-124,
+                  "total_field_power": 3.2983432103640224e-253,
+                  "tracer": 42
+                }
+              ]
+            }
+          },
+          "method": "SSPRK3",
+          "point_counts": [
+            4097,
+            8193,
+            16385
+          ],
+          "sample_count": 64,
+          "tracer_count": 48,
+          "worst_twelve_nonpassing_history_differences": [
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                1.2177254306839735e-11,
+                1.2177407885771534e-11
+              ],
+              "raw_difference_infinity": [
+                1.1084837903938037e-10,
+                3.9961429801891376e-11
+              ],
+              "raw_observed_order": 1.4719075653647173,
+              "tracer": 46
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "R_over_r_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                1.377675412986279e-09,
+                1.3775853374697888e-09
+              ],
+              "raw_difference_infinity": [
+                4.245547328973753e-08,
+                1.5685990343433653e-08
+              ],
+              "raw_observed_order": 1.4364739382541405,
+              "tracer": 33
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                4.716088981062414e-11,
+                4.716029917793815e-11
+              ],
+              "raw_difference_infinity": [
+                3.5087017638519387e-10,
+                1.3157223937741366e-10
+              ],
+              "raw_observed_order": 1.4150822005052799,
+              "tracer": 41
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "shift_over_r",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                1.1568866539659467e-09,
+                8.69142687291366e-10
+              ],
+              "raw_difference_infinity": [
+                7.681650093742344e-06,
+                2.9022013270892707e-06
+              ],
+              "raw_observed_order": 1.4042686459551346,
+              "tracer": 30
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "phi_over_Lambda",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                8.982146098670518e-10,
+                8.971789215114113e-10
+              ],
+              "raw_difference_infinity": [
+                3.78375940835894e-09,
+                1.4295464622004562e-09
+              ],
+              "raw_observed_order": 1.4042628470560403,
+              "tracer": 20
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "lambda_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                4.6910988898973827e-08,
+                3.5430711947670446e-08
+              ],
+              "raw_difference_infinity": [
+                0.00033321836869379395,
+                0.00012593868954546839
+              ],
+              "raw_observed_order": 1.40374637101038,
+              "tracer": 30
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                5.990044865152163e-10,
+                5.989891184915224e-10
+              ],
+              "raw_difference_infinity": [
+                3.536187755196754e-08,
+                1.3432277977073505e-08
+              ],
+              "raw_observed_order": 1.3964908853403277,
+              "tracer": 33
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                4.227986402687489e-10,
+                4.227888232111003e-10
+              ],
+              "raw_difference_infinity": [
+                1.4367893106417536e-09,
+                5.743224607912892e-10
+              ],
+              "raw_observed_order": 1.3229156326051668,
+              "tracer": 34
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "shift_over_r",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                7.617591069053204e-09,
+                8.203808444000725e-09
+              ],
+              "raw_difference_infinity": [
+                1.7529184543658527e-05,
+                7.013575146741833e-06
+              ],
+              "raw_observed_order": 1.321536937718619,
+              "tracer": 12
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                2.5303099656837536e-08,
+                2.716305393472547e-08
+              ],
+              "raw_difference_infinity": [
+                5.7397754946412045e-05,
+                2.297495935418034e-05
+              ],
+              "raw_observed_order": 1.3209319992926305,
+              "tracer": 12
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "R_over_r_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                3.745643563085458e-08,
+                4.045563831371992e-08
+              ],
+              "raw_difference_infinity": [
+                9.057040405559974e-05,
+                3.6812959249732705e-05
+              ],
+              "raw_observed_order": 1.2988259667924649,
+              "tracer": 12
+            },
+            {
+              "classification": "raw_order_below_required",
+              "field": "alpha_minus_1",
+              "interpolation_limited": false,
+              "pairwise_interpolation_debits": [
+                2.1675131814716773e-10,
+                2.1674715748067324e-10
+              ],
+              "raw_difference_infinity": [
+                9.632054229869813e-10,
+                3.958813991276596e-10
+              ],
+              "raw_observed_order": 1.2827752321722787,
+              "tracer": 36
+            }
+          ]
+        }
+      },
+      "synthetic_controls": {
+        "controls": {
+          "affine": {
+            "admission_passed": false,
+            "all_field_and_derivative_ratios_equal": 1.0,
+            "every_individual_budget_passed": true,
+            "every_nested_tail_ratio_passed": false,
+            "ratio_identity_verified": true
+          },
+          "amplitude_scaled_low_sine": {
+            "admission_passed": false,
+            "all_field_and_derivative_ratios_equal": 1.0,
+            "amplitude_error_contracts_by_four_per_resolution": true,
+            "amplitude_sequence": [
+              1.0,
+              0.25,
+              0.0625
+            ],
+            "every_individual_budget_passed": true,
+            "every_nested_tail_ratio_passed": false,
+            "power_error_contracts_by_sixteen_per_resolution": true,
+            "ratio_identity_verified": true
+          },
+          "constant": {
+            "admission_passed": false,
+            "all_field_and_derivative_ratios_equal": 1.0,
+            "every_individual_budget_passed": true,
+            "every_nested_tail_ratio_passed": false,
+            "ratio_identity_verified": true
+          },
+          "low_sine": {
+            "admission_passed": false,
+            "all_field_and_derivative_ratios_equal": 1.0,
+            "every_individual_budget_passed": true,
+            "every_nested_tail_ratio_passed": false,
+            "ratio_identity_verified": true
+          },
+          "smooth_pulse": {
+            "admission_passed": false,
+            "all_field_and_derivative_ratios_equal": 1.0,
+            "every_individual_budget_passed": true,
+            "every_nested_tail_ratio_passed": false,
+            "ratio_identity_verified": true
+          },
+          "zero": {
+            "admission_passed": true,
+            "all_field_and_derivative_ratios_equal": 0.0,
+            "every_individual_budget_passed": true,
+            "every_nested_tail_ratio_passed": true,
+            "ratio_identity_verified": true
+          }
+        },
+        "historical_threshold_unchanged": 0.25,
+        "mathematical_consequence": "normalized_raw_temporal_tail_fractions_are_not_a_general_spatial_convergence_observable_for_nonzero_continuum_histories",
+        "structural_counterexample_confirmed": true
+      }
+    },
+    "claim_boundary": {
+      "GR0_case_eligible": false,
+      "candidate_branch_opened": false,
+      "historical_PROTO13_failure_reclassified": false,
+      "individual_budget_obstruction_resolved": false,
+      "new_trajectory_authorized": false,
+      "normalized_ratio_instrument_defect_confirmed": true,
+      "physical_question_answered": false,
+      "replacement_temporal_admission_defined": false
+    },
+    "compact_findings": {
+      "RK4": {
+        "above_floor_failure_counts": [
+          107,
+          90,
+          66
+        ],
+        "all_view_persistent_failure_counts": [
+          89,
+          77,
+          48
+        ],
+        "history_difference_exactly_identical": 15,
+        "history_difference_fine_pair_exact": 8,
+        "history_difference_interpolation_limited": 83,
+        "history_difference_nonmonotone": 0,
+        "history_difference_raw_order_below_required": 28,
+        "history_difference_raw_order_pass": 237,
+        "individual_failure_counts": [
+          110,
+          106,
+          93
+        ],
+        "point_counts": [
+          2049,
+          4097,
+          8193
+        ],
+        "subfloor_failure_counts": [
+          3,
+          16,
+          27
+        ]
+      },
+      "SSPRK3": {
+        "above_floor_failure_counts": [
+          52,
+          43,
+          37
+        ],
+        "all_view_persistent_failure_counts": [
+          44,
+          26,
+          22
+        ],
+        "history_difference_exactly_identical": 33,
+        "history_difference_fine_pair_exact": 1,
+        "history_difference_interpolation_limited": 51,
+        "history_difference_nonmonotone": 0,
+        "history_difference_raw_order_below_required": 21,
+        "history_difference_raw_order_pass": 233,
+        "individual_failure_counts": [
+          96,
+          80,
+          59
+        ],
+        "point_counts": [
+          4097,
+          8193,
+          16385
+        ],
+        "subfloor_failure_counts": [
+          44,
+          37,
+          22
+        ]
+      },
+      "failed_above_declared_absolute_amplitude_floor": 395,
+      "failed_below_declared_absolute_amplitude_floor": 149,
+      "history_difference_is_replacement_admission": false,
+      "individual_budget_failure_cause_fully_derived": false,
+      "inherited_individual_failure_count": 544,
+      "method_count": 2,
+      "normalized_raw_tail_ratio_gate_structurally_invalid": true,
+      "resolution_count": 6,
+      "signals_per_resolution": 288,
+      "total_signal_resolution_records": 1728
+    },
+    "conclusions": {
+      "PROTO14_design_may_not_yet_begin": true,
+      "TDG2_absolute_tail_discriminator_design_may_begin": true,
+      "absolute_tail_convergence_not_yet_diagnosed": true,
+      "historical_PROTO13_failure_preserved": true,
+      "individual_budget_obstruction_remains": true,
+      "individual_failures_contract_with_resolution_but_do_not_vanish": true,
+      "interpolation_limits_a_nonzero_subset": true,
+      "normalized_ratio_cause_derived_structurally": true,
+      "raw_history_differences_are_mostly_convergent_but_not_complete": true,
+      "replacement_gate_design_may_not_yet_begin": true
+    },
+    "immutable_freeze_lineage": {
+      "freeze_commit": "e8310bdbc893f76c67daf8fc993bdcd35259184d",
+      "freeze_commit_is_ancestor_of_HEAD": true,
+      "source_freeze_authorized_actual_history_execution": true,
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-tdg1-frz1.toml": "4a1f41a40fedb4aecc2adafd79d90a5b96c81d9aaf5001bac1bcfd243d92e4e3",
+        "results/fgc-1-tdg1-frz1.json": "11beff809d1c1af277e119dfc9fd54b571c2c7bd70de3da96c47e9945b28b7f3",
+        "scripts/reproduce_fgc_cal10_pref15.py": "71e1e4d211e46d9679e9772eefb0ab90440a648c009efbe570716b5dcf2659e6",
+        "scripts/reproduce_fgc_tdg1_frz1.py": "00256721f72d696360407aab161f057ef0dbbc7a4795f87f8b63edd6a1ab8b2b",
+        "src/recursive_horizons/fgc/evolution/tdg1_temporal_diagnosis.py": "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44"
+      }
+    },
+    "immutable_raw_bundle": {
+      "history_arrays_loaded_read_only": true,
+      "numerical_runtime_contract": {
+        "blas_name": "accelerate",
+        "blas_version": "unknown",
+        "full_runtime_metadata_must_be_recorded_in_manifest_and_result": true,
+        "machine": "arm64",
+        "numpy_version": "2.5.1",
+        "python_implementation": "CPython",
+        "python_version": "3.14.3",
+        "runtime_drift_must_fail_before_state_advance": true,
+        "system": "Darwin"
+      },
+      "raw_sha256": {
+        "campaign_result": "83475a061e2dd4e354e357a3c0cca66e44c60312f9c420585dd989598779aa0b",
+        "checkpoint": "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97",
+        "event_log": "cc26095e48de376f0e7924a8b5f2c5126e3a0f21f6d6036942cfc4031d248bdd",
+        "manifest": "7fbe3835da9d23ed868bf5862250a9c9cad31bfb948091fc1290454867f084f6"
+      },
+      "runtime_environment": {
+        "blas": {
+          "detection method": "system",
+          "found": true,
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "name": "accelerate",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "version": "unknown"
+        },
+        "lapack": {
+          "detection method": "system",
+          "found": true,
+          "include directory": "unknown",
+          "lib directory": "unknown",
+          "name": "accelerate",
+          "openblas configuration": "unknown",
+          "pc file directory": "unknown",
+          "version": "unknown"
+        },
+        "numpy_build_configuration": {
+          "Build Dependencies": {
+            "blas": {
+              "detection method": "system",
+              "found": true,
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "name": "accelerate",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "version": "unknown"
+            },
+            "lapack": {
+              "detection method": "system",
+              "found": true,
+              "include directory": "unknown",
+              "lib directory": "unknown",
+              "name": "accelerate",
+              "openblas configuration": "unknown",
+              "pc file directory": "unknown",
+              "version": "unknown"
+            }
+          },
+          "Compilers": {
+            "c": {
+              "commands": "cc",
+              "linker": "ld64",
+              "name": "clang",
+              "version": "15.0.0"
+            },
+            "c++": {
+              "commands": "c++",
+              "linker": "ld64",
+              "name": "clang",
+              "version": "15.0.0"
+            },
+            "cython": {
+              "commands": "cython",
+              "linker": "cython",
+              "name": "cython",
+              "version": "3.2.8"
+            }
+          },
+          "Machine Information": {
+            "build": {
+              "cpu": "aarch64",
+              "endian": "little",
+              "family": "aarch64",
+              "system": "darwin"
+            },
+            "host": {
+              "cpu": "aarch64",
+              "endian": "little",
+              "family": "aarch64",
+              "system": "darwin"
+            }
+          },
+          "Python Information": {
+            "path": "/private/var/folders/g3/pffjr_y96bq06blnkf72x_hw0000gn/T/build-env-64cg25w5/bin/python",
+            "version": "3.14"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "NEON",
+              "NEON_FP16",
+              "NEON_VFPV4",
+              "ASIMD"
+            ],
+            "found": [
+              "ASIMDHP",
+              "ASIMDDP"
+            ],
+            "not found": [
+              "ASIMDFHM"
+            ]
+          }
+        },
+        "numpy_version": "2.5.1",
+        "platform": {
+          "machine": "arm64",
+          "processor": "arm",
+          "release": "27.0.0",
+          "system": "Darwin",
+          "version": "Darwin Kernel Version 27.0.0: Tue Aug 11 22:02:53 PDT 2026; root:xnu-13432.1.9~3/RELEASE_ARM64_T8132"
+        },
+        "python_build": [
+          "main",
+          "Feb 24 2026 22:43:19"
+        ],
+        "python_compiler": "Clang 20.1.8 ",
+        "python_executable": "/opt/homebrew/Caskroom/miniconda/base/bin/python3.14",
+        "python_implementation": "CPython",
+        "python_version": "3.14.3"
+      },
+      "state_advanced": false,
+      "terminal_checkpoint_resumed": false,
+      "terminal_coordinate_time": 3.9375,
+      "terminal_event_index": 63
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "freeze_hash_mutation_rejected": true,
+      "method_ladder_mutation_rejected": true,
+      "method_order_mutation_rejected": true,
+      "observed_count_mutation_rejected": true,
+      "one_bit_history_mutation_detected": true,
+      "replacement_gate_promotion_rejected": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG1_terminal_histories_diagnosed": true,
+      "TDG2_absolute_tail_discriminator_design_may_begin": true,
+      "TDG2_frozen": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": false
+    }
+  },
+  "classification": "completed_TDG1_history_diagnosis_TDG2_required",
+  "derivation_document": "docs/fgc-tdg1-pref16.md",
+  "derivation_document_sha256": "ea426a4faa8145177a3a4121b25b8d2c99d450b7d353869d92883cce99e36654",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG1_diagnostic_contract_frozen": true,
+    "TDG1_synthetic_counterexample_confirmed": true,
+    "TDG1_terminal_histories_diagnosed": true,
+    "TDG2_frozen": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "individual_temporal_budget_failure_cause_fully_derived": false,
+    "normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg1_pref16.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_cal10_pref15.py": "71e1e4d211e46d9679e9772eefb0ab90440a648c009efbe570716b5dcf2659e6",
+    "scripts/reproduce_fgc_tdg1_pref16.py": "2fd21140147b8ddf326cc61fe4ecc29832cbad775a0af03a3854e40f4e209c00",
+    "src/recursive_horizons/fgc/evolution/tdg1_temporal_diagnosis.py": "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG2_frozen": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "individual_temporal_budget_failure_cause_fully_derived": false,
+    "normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg1-pref16.toml": "d598b9f59fc50dab23f05150cd6471ec66e28f36cddfe60438c8402bdf70a519"
+  }
+}

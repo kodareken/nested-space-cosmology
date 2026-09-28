@@ -1,0 +1,53 @@
+{
+  "accountable_author": "Douglas Ek",
+  "already_rebuilt_operator_solves": 60,
+  "existence_tolerance": 3e-11,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-coupled-newton-n16-damped-next5.json": "46b9e22e3aa06fc6c2b37ed81b97f5d6e7ed68076b73607becefa0a07353ca5c"
+  },
+  "interpolated_residual_maxima_on_dense_nodes": [
+    0.004107193193,
+    0.005960656127
+  ],
+  "jacobian_reused_from": "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json",
+  "measured_constraint_maxima": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "n32_basis_motivated_by_residual_tail": false,
+  "named_search_stall": "n16_damped_frozen_jacobian_leftover_cannot_reach_existence",
+  "new_operator_solves_in_this_owner": 0,
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "rectangular_condition_number": 705069850.42489,
+  "residual_chebyshev_tail_max_last4": [
+    5.701e-09,
+    1.0634e-08
+  ],
+  "schema": "NSC-KS-COUPLED-NEWTON-N16-JACOBIAN-REFRESH-v1",
+  "scope": {
+    "failed_optimization_is_not_NONEXISTENCE": true,
+    "forbidden_identities_not_evolved": true,
+    "jacobian_already_rebuilt_at_accepted_g": true,
+    "metric_timestep": false,
+    "n32_not_opened": true,
+    "new_field_or_source_evolutions": 0,
+    "no_repeated_sixty_family_evolution": true,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "source_hashes": {
+    "docs/nsc-ks-coupled-newton-n16-jacobian-refresh.md": "dc972d5c4c474c8edd640ca6c31c804cb99f98fd6e1732df9ee9d53e129d9759",
+    "scripts/derive_nsc_ks_coupled_newton_n16_jacobian_refresh.py": "f55a89946368b2ccec744313223ea94e1083020f6f26ed37042baf9d07d26e76",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "status": "OPEN: Jacobian at the fifth clipped g is already rebuilt; unclipped leftover cannot reach EXISTENCE",
+  "unclipped_leftover_reaches_existence_tolerance": false,
+  "unclipped_linear_predicted_all_node_residual_maxima": [
+    0.0001318944269235291,
+    0.0006335944911131271
+  ],
+  "unclipped_step_norm": 14.847933022441246
+}

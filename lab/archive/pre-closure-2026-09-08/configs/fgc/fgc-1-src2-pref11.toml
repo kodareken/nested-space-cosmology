@@ -1,0 +1,116 @@
+schema_version = 1
+artifact_id = "FGC-1-SRC2-PREF11"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+
+[scope]
+role = "hash_bound_exact_rational_diagnosis_of_the_captured_PROTO11_GR0_point_zero_source_wall"
+branch = "GR-0"
+amplitude = "5/2"
+member = "RK4-8193"
+captured_point_index = 0
+captured_coordinate_radius = "1/64"
+GR0_trajectory_read = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[lineage]
+cal8_result = "results/fgc-1-cal8-pref10.json"
+cal8_result_sha256 = "10c6898e1ec6e7c07793180c4a4f8fa26a1b2f660115a0b2bc54497ff8bbb89d"
+cap1_config = "configs/fgc/fgc-1-src2-cap1.toml"
+cap1_config_sha256 = "5f5d2701701876aa403b67cd4e16bb7aa185de3ffd5b87c3cbb1e07ae1b1c10d"
+cap1_git_commit = "241e9b99a44985202ad35bdfaf9e6e1cf2d2c3d6"
+cap1_manifest = "runs/fgc-2-sf1/src2/affine-wall-capture/manifest.json"
+cap1_manifest_sha256 = "b750680d08d7916c26ae0999a3c84bc3a620a2858c630e7d00d3066f9f5ea675"
+cap1_replay_result = "runs/fgc-2-sf1/src2/affine-wall-capture/replay-result.json"
+cap1_replay_result_sha256 = "438569d232df14ecfcaec10a73e7064b003d8f2481ac7dfdd9d22456394b16c2"
+cap1_raw_fixture = "runs/fgc-2-sf1/src2/affine-wall-capture/affine-wall-fixture.npz"
+cap1_raw_fixture_sha256 = "b55191c052672c195bd3795e8ff1338549eab91c384ef567f817b650c8a4e56e"
+cap1_arithmetic_result = "runs/fgc-2-sf1/src2/affine-wall-capture/arithmetic-result.json"
+cap1_arithmetic_result_sha256 = "b4c7cc342ee24105535ac873242eae185e4b2d59f14164820c9407423785bed9"
+compact_point_fixture = "configs/fgc/fgc-1-src2-pref11-point0.json"
+compact_point_fixture_sha256 = "d3eef30ce918cd03c44968656d9d2d01d4a7c41c91ece0681a88405d176f9354"
+
+[cap1_outcome]
+complete_rejection_trace_reproduced = true
+source_only_rejection_count = 164
+target_source_call_matches = 2
+baseline_complete_residual_infinity = "1.0659145473163184e-12"
+raw_complete_residual_maximum = "1e-12"
+best_frozen_route = "PROTO11_binary64_baseline"
+best_frozen_route_passed = false
+power_two_equilibration_passed = false
+symmetric_affine_extraction_passed = false
+captured_coefficient_exact_binary_refinement_passed = false
+maximum_captured_kinetic_condition_infinity = "2859227.196975944"
+
+[exact_oracle]
+binary64_literals_are_reconstructed_as_exact_dyadic_rationals = true
+continuum_equations = "unredefined_ACT1_VAR1_GR0_REF1"
+affine_extraction = "exact_zero_plus_six_exact_unit_accelerations"
+linear_solve = "exact_fraction_gaussian_elimination"
+root_rounding = "correctly_rounded_binary64_per_component"
+reference_connection = "flat_spherical_annulus"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+exact_root_residual_required_to_be_zero = true
+exact_rounded_root_residual_maximum = "1e-26"
+floating_evaluator_false_rejection_minimum = "1e-12"
+raw_threshold_change_forbidden = true
+continuum_equation_change_forbidden = true
+reference_derivative_map_change_forbidden = true
+
+[proof_contract]
+compact_fixture_must_be_canonical_JSON = true
+compact_fixture_must_match_the_raw_fixture_point_when_raw_bundle_is_present = true
+raw_bundle_is_optional_for_clean_clone_reproduction = true
+raw_bundle_must_match_all_frozen_hashes_when_present = true
+raw_bundle_partial_presence_must_fail_closed = true
+CAP1_manifest_must_bind_the_immutable_git_commit_and_config = true
+CAP1_replay_must_bind_the_raw_fixture_and_reproduce_the_complete_trace = true
+CAP1_arithmetic_result_must_report_no_frozen_route_pass = true
+exact_affine_matrix_must_be_nonsingular = true
+exact_root_must_zero_all_six_exact_rows = true
+binary64_rounded_exact_root_must_pass_the_exact_rational_residual_bound = true
+direct_and_generic_binary64_evaluators_must_both_false_reject_the_rounded_exact_root = true
+captured_baseline_and_forward_coefficients_must_match_the_compact_fixture_bits = true
+result_must_bind_config_fixture_implementation_and_authority_hashes = true
+amplitude_three_direct_coarse_phi_derivative_veto_remains_binding = true
+no_successor_protocol_or_trajectory_is_authorized = true
+no_SGBL_or_FGCQR_outcome_may_be_read = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+next_gate = "FGC-1-SRC3"
+purpose = "derive_and_predeclare_a_cancellation_resistant_runtime_REF1_source_evaluator"
+must_match_exact_oracle_on_compact_point_and_independent_nontrivial_controls = true
+must_preserve_unredefined_equations_reference_map_thresholds_and_protocol_inputs = true
+must_be_frozen_before_any_new_GR0_campaign = true
+PROTO12_may_be_considered_only_after_SRC3_passes = true
+amplitude_three_resolution_spectrum_veto_requires_an_independent_prospective_resolution_study = true
+
+[claims]
+PROTO11_source_wall_replayed = true
+CAP1_frozen_arithmetic_routes_cleared_the_wall = false
+captured_GR0_point0_exact_affine_system_nonsingular = true
+captured_GR0_point0_exact_root_exists = true
+captured_GR0_point0_binary64_residual_evaluator_incomplete = true
+captured_GR0_point0_wall_is_a_floating_cancellation_instrument_failure = true
+captured_GR0_point0_physical_or_structural_breakdown_demonstrated = false
+cancellation_resistant_source_evaluator_required = true
+amplitude_three_spectral_veto_cleared = false
+PROTO12_frozen = false
+GR0_calibration_completed = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

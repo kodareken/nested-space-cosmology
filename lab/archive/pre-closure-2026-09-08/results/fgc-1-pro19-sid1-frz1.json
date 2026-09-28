@@ -1,0 +1,98 @@
+{
+  "artifact_id": "FGC-1-PRO19-SID1-FRZ1",
+  "artifact_payload": {
+    "claims": {
+      "GR0_calibration_completed": false,
+      "SID1_contract_frozen": true,
+      "candidate_execution_authorized": false,
+      "corrected_decoder_image_authenticated": false,
+      "physical_result_earned": false,
+      "runtime_recovery_receipt_required": true
+    },
+    "decoder_contract": {
+      "PDE_proposal_execution": false,
+      "in_memory_only": true,
+      "recovery_publication": false,
+      "recursive_envelope_decode_required": true
+    },
+    "expected_recovery": {
+      "accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "candidate_branch_opened": false,
+      "cfl_current": 1,
+      "cfl_total": 1,
+      "checkpoint_sha256": "6d2b6e37e7c7cfd4ce64504353d886099003f959ea2aaee1a14fc778ce14fa46",
+      "evolution_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+      "generation": 8,
+      "journal_sequence": 8,
+      "member_cursor_sha256": "6d594999f6aaebb5d56f0fd6ff12499e2b22a47e3daf74ac8b13b15d273fa177",
+      "member_descriptor_sha256": "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56",
+      "pending_cap_hex": "0x1.aaa9612df9000p-10",
+      "pending_owner": "temporal",
+      "physical_state_advanced": false,
+      "rejected_proposal_replayed": false,
+      "temporal_retry_total": 1,
+      "transition_record_sha256": "949b29e46081bf5a42c34461b3894419db86aeca6c733b7a2636c91c6cb2ee4a"
+    },
+    "live_anchor": {
+      "amplitude": "3",
+      "authorization_commit": "c11ba422ce49ddd6f6175de1a9d2da675b97f2de",
+      "branch": "GR-0",
+      "campaign_id": "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683",
+      "candidate_branch_opened": false,
+      "cfl_record_sequence": 6,
+      "cfl_record_sha256": "78e65c08380a4fc979269e21db314232fd3fdc0e428c7e259f2031e66bd30bf7",
+      "checkpoint_disposition": "nonterminal",
+      "checkpoint_generation": 7,
+      "checkpoint_inventory_count": 8,
+      "checkpoint_inventory_sha256": "301b1ec030b820565bbd7856811160d613a1cc1301ea141a12d9bbf13088966c",
+      "checkpoint_journal_sequence": 6,
+      "checkpoint_journal_tip_sha256": "78e65c08380a4fc979269e21db314232fd3fdc0e428c7e259f2031e66bd30bf7",
+      "checkpoint_sha256": "c0ebfe09ef4058e117e46d34424edc8139419bfb4680cec979a1f5ab64d37be9",
+      "checkpoint_suffix_kinds": [
+        "tdg6_rejection"
+      ],
+      "descriptor_sha256": "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56",
+      "event": 23,
+      "evolution_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+      "historical_commit": "5d913f84260a4ed0e3058d53ef7dcb18cab79d58",
+      "journal_inventory_count": 8,
+      "journal_inventory_sha256": "7c60adf94e78b76bc62856fd59c1b8b8cfbd099a696f2a74d4b226f8f94604da",
+      "member_accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "member_key": "RK4-2049",
+      "parent_checkpoint_sha256": "6277b3be4ffe1bd79b858e2b4770c244b88b9971cbff67ffb1a40d40f14e2e63",
+      "physical_result_earned": false,
+      "plan_sha256": "f3b365978aeb2ae6063742807a3161bf5d6aa0c8392cd283fdec2a79d3e46060",
+      "protocol": "FGC-2-SF1-PROTO18",
+      "raw_archive_sha256": "f47a4f533eb8e0ed9f8ea337d520fa6f4e0bb6c1b27a4ef8023ee78bc830f5a4",
+      "semantic_payload_sha256": "0e48e0e2396ea7d9ef79d1641e6944a2dfdaa3716bb65e0b882b97156ff9372f",
+      "state_advanced": false,
+      "target_rational": "3/2",
+      "tdg6_ledger_sha256": "2763399f9824fcb476dc2e617d35cf1510ef08f11e65757ed5ef7e7840fd4984",
+      "tdg6_suffix_sequence": 7,
+      "tdg6_suffix_sha256": "e23d81705f1038f8240249658d0160cd5ca8ea8e33969cb4b32de3f03d426473",
+      "upq_bytes_sha256": {
+        "p": "32939115b86938cf8a813bbf9a50a8c90bbaceaee161fa65695deb435d1243b7",
+        "q": "48ec07bcace3935173c06e7b41915cacb17f14e1c9d3500522d4eb59a205c4a3",
+        "u": "856fc327d3163d038f9fdbfc660968509dd7360faa0bb9d158721eb3049c2fe4"
+      }
+    },
+    "nonclaims": [
+      "SID1 does not reconcile, advance, or alter the campaign store.",
+      "SID1 does not rerun the rejected TDG6 proposal or revise any numerical threshold.",
+      "SID1 does not authorize SGB-L, FGC-QR, DEF1, retained-EFT, or a physical claim."
+    ],
+    "scope": {
+      "GEN0_reimport": false,
+      "candidate_branch_opened": false,
+      "checkpoint_reconciliation": false,
+      "raw_store_mutation": false,
+      "writer_lease_acquisition": false
+    }
+  },
+  "classification": "premise_only_exact_generation7_suffix_identity_and_decoder_contract_frozen",
+  "gate_status": "pass",
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": "5019067dd56445b33f270a2b6531572ee2e8e3b2318dc5f82e70d0f554b3c394",
+  "target_protocol": "FGC-2-SF1-PROTO18"
+}

@@ -1,0 +1,133 @@
+schema_version = 1
+artifact_id = "FGC-RUNTIME-MATRIX-1"
+project_version = "0.11.0"
+
+[analytic]
+python_version = "3.14.6"
+python_implementation = "CPython"
+numpy_version = "2.5.1"
+blas_name = "openblas"
+blas_version = "0.3.33"
+system = "Darwin"
+machine = "arm64"
+
+[evolution_restart]
+python_version = "3.14.3"
+python_implementation = "CPython"
+numpy_version = "2.5.1"
+blas_name = "accelerate"
+blas_version = "unknown"
+system = "Darwin"
+machine = "arm64"
+
+[partition]
+runtime_bound_test_modules = [
+  "test_fgc_rsp2_pref14_diagnosis",
+  "test_fgc_rsp2_pref14_reproduction",
+  "test_fgc_rsp2_runner",
+  "test_fgc_hlt11_mon11_reproduction",
+  "test_fgc_gr0_campaign_runner_v13",
+  "test_fgc_cal10_pref15_reproduction",
+  "test_fgc_tdg1_pref16_reproduction",
+  "test_fgc_tdg2_pref17_reproduction",
+  "test_fgc_tdg3_pref18_reproduction",
+  "test_fgc_pro14_frz1_reproduction",
+  "test_fgc_hlt12_mon12_reproduction",
+  "test_fgc_gr0_campaign_runner_v14",
+  "test_fgc_cal11_pref22_reproduction",
+  "test_fgc_proto18_auth1_inputs",
+  "test_fgc_proto18_authority",
+  "test_fgc_pro18_auth1_reproduction",
+  "test_fgc_proto17_hlt15_runtime",
+  "test_fgc_proto17_hlt15_runner",
+  "test_hlt16_lifecycle",
+  "test_hlt16_progression_attempt",
+  "test_fgc_hlt16_member_codec",
+  "test_fgc_hlt16_state_store",
+  "test_fgc_hlt16_campaign_schema",
+  "test_fgc_hlt16_campaign_store",
+  "test_fgc_hlt16_campaign_recovery",
+  "test_fgc_hlt16_campaign_runtime",
+  "test_fgc_proto19_progression_contract",
+  "test_fgc_proto19_progression_inputs",
+  "test_fgc_proto19_launch_authority",
+  "test_fgc_proto19_launch_manifest",
+  "test_fgc_pro19_event1_status",
+  "test_fgc_pro19_event1_runner",
+  "test_fgc_hlt16_mon16_artifact",
+  "test_fgc_proto19_sid2_binder",
+  "test_fgc_proto19_execution_closure",
+  "test_fgc_proto19_gr0_static_factory",
+  "test_fgc_proto19_resume_authority",
+  "test_fgc_pro19_sid3_bootstrap",
+  "test_fgc_pro19_sid3_runner",
+  "test_check_repo_pro19_sid3_prelaunch",
+  "test_fgc_proto19_pref28_binder",
+  "test_check_repo_pro19_pref28",
+]
+raw_bundle_paths = [
+  "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz",
+  "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/manifest.json",
+  "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/events.jsonl",
+  "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz",
+  "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/study-result.json",
+  "runs/fgc-2-sf1/proto13/calibration/manifest.json",
+  "runs/fgc-2-sf1/proto13/calibration/events.jsonl",
+  "runs/fgc-2-sf1/proto13/calibration/latest-checkpoint.npz",
+  "runs/fgc-2-sf1/proto13/calibration/campaign-result.json",
+  "runs/fgc-2-sf1/proto14/calibration/manifest.json",
+  "runs/fgc-2-sf1/proto14/calibration/events.jsonl",
+  "runs/fgc-2-sf1/proto14/calibration/latest-checkpoint.npz",
+  "runs/fgc-2-sf1/proto14/calibration/campaign-result.json",
+]
+complete_raw_absence_skips_only_runtime_bound_tests = true
+partial_raw_presence_fails_closed = true
+
+[partition.proto14_postlaunch]
+cal11_pref22_reproducer = "scripts/reproduce_fgc_cal11_pref22.py"
+cal11_pref22_result = "results/fgc-1-cal11-pref22.json"
+sealed_prelaunch_test_ids = [
+  "tests.test_fgc_pro14_frz1_reproduction.PRO14FreezeReproductionTests.test_canonical_record_reproduces",
+  "tests.test_fgc_hlt12_mon12_reproduction.FGCHLT12MON12ReproductionTests.test_canonical_result_is_checked_when_sealed",
+  "tests.test_fgc_gr0_campaign_runner_v14.FGCGR0CampaignRunnerV14Tests.test_frozen_run_plan_is_strict_and_candidate_closed",
+]
+
+[partition.proto18_pref27_postlaunch]
+sealed_prelaunch_test_ids = [
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_actual_canonical_store_is_exact_and_build_is_nonmutating",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_arriving_foreign_root_wins_exclusive_rename_without_clobber",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_authority_receipt_checkpoint_state_tree_and_claim_mutations_fail_closed",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_byte_identical_copy_is_admitted_but_is_not_a_reusable_result",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_config_scope_and_claim_promotions_fail_before_store_access",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_content_address_filename_and_empty_directory_mutations_fail_closed",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_partial_file_and_symlink_store_shapes_fail_closed_without_adoption",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_partial_hlt15_store_availability_is_not_silently_accepted",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_repository_root_nested_directory_and_leaf_symlinks_fail_closed",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_semantically_promoted_receipt_and_authority_are_rejected_after_rehash",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_special_store_entry_fails_closed_when_supported",
+  "tests.test_fgc_proto18_pref27_binder.Pref27BinderTests.test_staging_residue_is_rejected_even_when_the_eight_store_leaves_are_valid",
+  "tests.test_fgc_pro18_pref27_reproduction.Pref27ReproductionTests.test_fixed_pref27_result_reproduces_without_advancing_canonical_store",
+]
+
+[partition.tdg9_ur1_pref1_postlaunch]
+ur1_pref1_reproducer = "scripts/reproduce_fgc_tdg9_ur1_pref1.py"
+sealed_prelaunch_test_ids = [
+  "tests.test_fgc_tdg8_rcv3_execution_authority.TDG8RCV3ExecutionAuthorityTests.test_live_projection_is_a_safe_generation_nine_retry_boundary",
+  "tests.test_fgc_tdg8_rcv3_freeze.TDG8RCV3FreezeTests.test_repair_sources_are_still_exact_commit_bytes",
+  "tests.test_fgc_tdg8_rcv3_pref1_binder.TDG8RCV3PREF1BinderTests.test_live_projection_passes_independent_full_binding",
+  "tests.test_fgc_tdg8_rcv3_rec1_authority.TDG8RCV3REC1AuthorityTests.test_exact_entry_and_two_phase_recovery_use_only_a_copy",
+  "tests.test_fgc_tdg8_rcv3_rec1_authority.TDG8RCV3REC1AuthorityTests.test_owner_token_is_absent_from_tracked_contract",
+  "tests.test_fgc_tdg8_rcv3_rec1_authority.TDG8RCV3REC1AuthorityTests.test_repeated_takeover_crash_cuts_remain_bounded",
+  "tests.test_fgc_tdg8_rcv3_rec1_event_runner.TDG8RCV3REC1RunnerTests.test_real_copied_store_reconciles_to_clean_exact_gen10_without_PDE",
+  "tests.test_fgc_tdg9_ac1_authority.AC1AuthorityTests.test_output_absence_is_prelaunch_only",
+  "tests.test_fgc_tdg9_ti2_authority.TI2AuthorityTests.test_old_and_new_output_absence_is_prelaunch_only",
+]
+evolution_restart_reconstruction_test_ids = [
+  "tests.test_fgc_tdg9_loc1_err1.LOC1ERR1Tests.test_sealed_tuple_is_reconstructed_without_loc2",
+  "tests.test_fgc_tdg9_loc2_runner.LOC2RunnerTests.test_retry3_value_D01_hash_bound_family_matches",
+]
+
+[paper]
+python_version = "3.12.13"
+reportlab_version = "4.4.9"
+exact_dependency_is_required = true

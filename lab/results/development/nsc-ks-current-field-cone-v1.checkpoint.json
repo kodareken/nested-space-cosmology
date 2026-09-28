@@ -1,0 +1,107 @@
+{
+  "cells": [
+    {
+      "cell_index": 0,
+      "integral": [
+        {
+          "exponent": -53,
+          "mantissa": "182142090245755"
+        },
+        {
+          "exponent": -53,
+          "mantissa": "5722162582869253"
+        }
+      ],
+      "polynomial": [
+        {
+          "exponent": -58,
+          "mantissa": "5828546884433521"
+        },
+        {
+          "exponent": -53,
+          "mantissa": "5722162522887509"
+        }
+      ],
+      "remainder": [
+        {
+          "exponent": -89,
+          "mantissa": "7367241324215181"
+        },
+        {
+          "exponent": -78,
+          "mantissa": "2012653367324861"
+        }
+      ],
+      "rho_end": "0x1.07a6147ae147bp+0",
+      "rho_start": "0x1.07ae147ae147bp+0",
+      "segment_sha256": "2c6586f7faed3b587226b14da117da486cbb5fbbc421b924829347992a9ec4c5",
+      "total": [
+        {
+          "exponent": -53,
+          "mantissa": "182142090245755"
+        },
+        {
+          "exponent": -53,
+          "mantissa": "5722162582869253"
+        }
+      ],
+      "width": {
+        "exponent": -13,
+        "mantissa": "1"
+      }
+    }
+  ],
+  "completed_cells": 1,
+  "config_digest": "75ab1f2287129ca53acf89de3f0d8a1953166c5de43ea90be6b6482cffd19876",
+  "history_minus_reference_before_norms": true,
+  "last_cell_index": 0,
+  "last_rho_end": "0x1.07a6147ae147bp+0",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_rho1_source_error": null,
+  "polynomial_sum": [
+    {
+      "exponent": -84,
+      "mantissa": "391147160185072871065919"
+    },
+    {
+      "exponent": -79,
+      "mantissa": "384007826534354688228493"
+    }
+  ],
+  "prefix_digest": "b3e13fd9c1510c56c81127456895f7ddd9355a52618ec6acb322ce3702a3472a",
+  "profile_payload_sha256": "e2bf7006e472c16686a699dffff379b0456530be38f018a6513ccb2c7264bfed",
+  "remainder_sum": [
+    {
+      "exponent": -116,
+      "mantissa": "988814392163872915175271"
+    },
+    {
+      "exponent": -106,
+      "mantissa": "540267524427784526749931"
+    }
+  ],
+  "residual_integrals": [
+    {
+      "exponent": -85,
+      "mantissa": "782294320830598324895287"
+    },
+    {
+      "exponent": -79,
+      "mantissa": "384007830559661422878215"
+    }
+  ],
+  "schema": "NSC-KS-CURRENT-FIELD-CONE-CHECKPOINT-v1",
+  "settings_digest": "6f9f111c3864f586444fac7ab4244029163bcad01d5e51d5dfe15ea40e5348c4",
+  "source_binding_sha256": "5bbd9bb3b6c0a7c2e67ddeb11a730a781a16cd6a16d6aa88f2a81412811fba70",
+  "total_sum": [
+    {
+      "exponent": -85,
+      "mantissa": "782294320830598324895287"
+    },
+    {
+      "exponent": -79,
+      "mantissa": "384007830559661422878215"
+    }
+  ]
+}

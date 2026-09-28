@@ -1,0 +1,130 @@
+schema_version = 1
+artifact_id = "FGC-1-CAL5-RUN1-PLAN"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v8.toml"
+protocol_freeze_result = "results/fgc-1-pro8-frz1.json"
+runtime_authorization_result = "results/fgc-1-hlt6-mon6.json"
+static_input_result = "results/fgc-1-id2-all1.json"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO8"
+branch = "GR-0"
+role = "fresh_outcome_neutral_dynamic_amplitude_recalibration_after_common_event_ownership_repair"
+physical_equations = "unredefined_GR0_specialization_of_REF1"
+candidate_action_fields_or_health_stops_forbidden = true
+retained_EFT_interpretation = false
+
+[candidate_selection]
+ordered_amplitudes = ["5/2", "3"]
+first_eligible_candidate_stops_later_candidates = true
+minimum_consecutive_trapped_common_events = 8
+trapped_sign_margin_over_combined_error_factor = 4
+primary_and_comparator_confirmation_required = true
+all_three_nested_resolutions_required = true
+no_candidate_parameter_may_change_after_first_trajectory = true
+no_eligible_outcome = "calibration_failed_no_eligible_GR0_case"
+
+[physical_inputs]
+length_unit_L0 = "4"
+cutoff_Lambda = "16"
+planck_mass = "2"
+scalar_mass = "3"
+quartic_coupling = "1/2"
+chi_center = "12"
+chi_half_width = "2"
+phi_seed_amplitude = "1/131072"
+outer_radius = "128"
+measurement_radius_maximum = "24"
+
+[primary_method]
+method_label = "RK4"
+integrator_id = "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4"
+constraint_solve_method = "RK4"
+spatial_order = 4
+coarsest_constraint_guard = "1/50"
+finest_constraint_guard = "1/1000"
+
+[comparator_method]
+method_label = "SSPRK3"
+integrator_id = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+constraint_solve_method = "SSPRK3"
+spatial_order = 2
+coarsest_constraint_guard = "1/10"
+finest_constraint_guard = "1/200"
+
+[numerics]
+resolutions = [1025, 2049, 4097]
+cfl_maximum = "1/8"
+retry_factor = "1/2"
+maximum_CFL_retries_per_step = 32
+maximum_source_retries_per_step = 32
+minimum_step_size = "1/1073741824"
+ko_dissipation = "1/64"
+fixed_outer_rows = 4
+final_coordinate_time = "32"
+common_output_interval = "1/16"
+checkpoint_interval = "1/4"
+minimum_constraint_finest_pair_order = "3/2"
+proper_spectral_taper_fraction = "1/8"
+temporal_history_minimum_samples = 64
+normal_flow_tracer_radius_minimum = "1/2"
+normal_flow_tracer_radius_maximum = "24"
+normal_flow_tracer_spacing = "1/2"
+normal_flow_tracer_integrator = "explicit_trapezoid_with_Euler_predictor_on_dr_dt_minus_shift_and_dtau_dt_lapse"
+monitor_every_proposed_Runge_Kutta_stage = true
+accepted_state_source_precheck_before_every_proposal = true
+serialize_every_rejected_source_trial = true
+candidate_endpoint_source_only_failure_retryable = true
+complete_terminal_and_exhaustion_failure_evidence = true
+common_event_constraints_and_spatial_spectra = true
+common_event_constraint_domain = "evolution_owned_rows_excluding_fixed_projector_and_stencil_reach"
+common_event_full_and_owned_constraint_residuals_serialized = true
+common_event_constraint_roundoff_formula = "4096*binary64_epsilon*(1+accepted_stage_count)"
+common_event_constraint_roundoff_changes_order_only = true
+common_event_spatial_coarse_role = "public_convergence_witness"
+common_event_spatial_medium_and_finest_absolute_budgets_required = true
+common_event_spatial_all_adjacent_tail_ratios_required = true
+causal_past_temporal_spectra_after_minimum_samples = true
+common_event_endpoint_is_bitwise_target_time = true
+no_excision_in_measurement_region = true
+
+[universal_thresholds]
+source_residual_infinity_max = "1/1000000000000"
+source_iteration_max = 16
+source_residual_must_decrease_monotonically = true
+kinetic_condition_number_max = "10000000000"
+hat_normal_factor = "9"
+minimum_boundary_causal_buffer = "16"
+
+[trapped_sign_error]
+observable = "maximum_over_common_measurement_nodes_of_minimum_of_minus_theta_plus_and_minus_theta_minus"
+assumed_minimum_Richardson_order = "3/2"
+components = ["primary_finest_pair_Richardson", "comparator_finest_pair_Richardson", "fine_cross_method_disagreement", "binary64_roundoff_enclosure"]
+combination = "nonnegative_addition_only"
+constraint_and_spectral_admission_are_vetoes_not_dimensionally_arbitrary_error_conversions = true
+constraint_to_Raychaudhuri_stability_map_is_not_inferred = true
+
+[provenance]
+output_root = "runs/fgc-2-sf1/proto8/calibration"
+campaign_manifest = "runs/fgc-2-sf1/proto8/calibration/manifest.json"
+append_only_event_log_name = "events.jsonl"
+checkpoint_extension = ".npz"
+fresh_output_root_required_at_campaign_start = true
+runner_refuses_overwrite = true
+resume_requires_matching_plan_and_manifest_hashes = true
+PROTO7_outputs_forbidden_as_PROTO8_outcomes = true
+canonical_reduced_result_is_tracked_only_after_campaign_classification = true
+
+[claims]
+FGCQR_holdout_execution_authorized = false
+classical_spherical_diagnostic_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

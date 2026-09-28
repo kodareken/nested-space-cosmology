@@ -1,0 +1,4445 @@
+{
+  "coarse_bound_fits_remaining_N": false,
+  "coverage": {
+    "ell0_zero_response_groups": [
+      0,
+      13,
+      23
+    ],
+    "identities_that_are_not_error_bounds": [
+      "Pauli 4-component subgap covariance reconstruction",
+      "negative-source complement I-conj(C_src)",
+      "ell=0 Dirac r-independence of the radius-history response",
+      "nested-node / nested-gradient algebraic identities",
+      "quadrature-node or refinement movement"
+    ],
+    "pauli_or_nested_node_relabelled_as_bound": false,
+    "remaining_low_subgap_source_error_bound": null,
+    "unbounded_reconstruction_rows": 49372,
+    "unbounded_reconstruction_windows": 164,
+    "windows": [
+      {
+        "baseline_action_region": "analytic_LLL_owner",
+        "energy_interval": null,
+        "error_bound": null,
+        "group": 0,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "lll_analytic",
+        "notes": "group 0 has no synthetic mode panel; exact ell=0 zero radius-history response",
+        "panel": null,
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "not_applicable"
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 1,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/1_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 1,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/1_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 1,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/1_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 1,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/1_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 2,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/2_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 2,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/2_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 2,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/2_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 2,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/2_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 3,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/3_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 3,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/3_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 3,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/3_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 3,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/3_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 4,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/4_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 4,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/4_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 4,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/4_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 4,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/4_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 5,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/5_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 5,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/5_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 5,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/5_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 5,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/5_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0005762301797900236,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 6,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 960,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low_ref/6_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 6,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/6_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0005762301797900236,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 6,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 960,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low_ref/6_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 6,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/6_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 7,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/7_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 7,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/7_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 7,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/7_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 7,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/7_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 8,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/8_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 8,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/8_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 8,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/8_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 8,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/8_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 9,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/9_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 9,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/9_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 9,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/9_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 9,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/9_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 10,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/10_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 10,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 560,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/10_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 10,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/10_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 10,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 560,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/10_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 11,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/11_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 11,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 560,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/11_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 11,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/11_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 11,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 560,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/11_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 12,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/12_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 12,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 840,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid_ref/12_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 12,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 528,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/12_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 12,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 840,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid_ref/12_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.00034201726881480377,
+          15.994527723698964
+        ],
+        "error_bound": null,
+        "group": 13,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 192,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "group13/low",
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          16.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 13,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 432,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "group13/mid",
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 13,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/13_1",
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0013248831260437577,
+          15.9788018699833
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 48,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "group14/low16_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.25102605180644444,
+          7.994527723698964
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 96,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "group14/low32_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          16.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 432,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "group14/mid24_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/14_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0013248831260437577,
+          15.9788018699833
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 48,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "group14/low16_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.25102605180644444,
+          7.994527723698964
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 96,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "group14/low32_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          16.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 432,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "group14/mid24_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/14_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/15_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/15_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/15_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/15_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/15_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/15_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/16_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/16_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/16_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/16_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/16_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/16_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/17_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/17_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/17_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/17_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/17_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/17_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/18_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/18_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/18_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/18_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/18_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/18_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/19_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/19_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/19_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/19_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/19_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/19_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/20_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/20_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/20_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/20_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/20_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/20_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/21_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/21_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/21_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 480,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/21_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/21_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/21_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0005762301797900236,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 852,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low_ref/22_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 360,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid_ref/22_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/22_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0005762301797900236,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 852,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low_ref/22_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 360,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid_ref/22_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/22_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 23,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/23_1",
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 23,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/23_1",
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 23,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/23_1",
+        "radius_history_response": "exact_zero",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/24_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/24_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/24_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/24_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/24_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/24_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/25_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/25_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/25_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/25_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/25_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/25_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/26_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/26_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/26_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/26_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/26_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/26_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/27_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/27_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/27_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/27_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/27_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/27_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/28_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/28_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/28_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/28_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/28_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/28_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/29_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/29_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/29_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/29_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/29_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/29_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/30_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/30_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/30_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/30_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 240,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/30_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/30_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/31_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 560,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/31_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/31_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0011524603595800473,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 324,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low/31_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 560,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid/31_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/31_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0005762301797900236,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 552,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low_ref/32_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 840,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid_ref/32_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/32_-1",
+        "radius_history_response": "nontrivial",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          0.0005762301797900236,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "low_mode_reconstruction",
+        "method": "accepted physical low-mode reconstruction",
+        "n_rows": 552,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "low_ref/32_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "middle_mode_columns",
+        "method": "same original middle producer as the incoming baseline",
+        "n_rows": 840,
+        "notes": "V5 covers the baseline action on this energy window; mode columns remain unbounded",
+        "panel": "mid_ref/32_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "not_covered",
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "subgap_rows",
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "n_rows": 8,
+        "notes": "source reconstruction of stored rho=1 columns is unbounded",
+        "panel": "subgap8/32_1",
+        "radius_history_response": "nontrivial",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 1,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 2,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 3,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 4,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 5,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 6,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 7,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 8,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 9,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 10,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          320.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 11,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          320.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 12,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          320.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          16.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 13,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "exact_zero",
+        "sign": [
+          1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          16,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 14,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 15,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 16,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 17,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 18,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 19,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 20,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 21,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 22,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 23,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "exact_zero",
+        "sign": [
+          1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 24,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 25,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 26,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 27,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 28,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 29,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 30,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          160.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          32.0,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 31,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          320.0,
+          "infinity"
+        ],
+        "validated_lower_window": null
+      },
+      {
+        "baseline_action_region": "covered_v5_joined",
+        "energy_interval": [
+          24,
+          "infinity"
+        ],
+        "error_bound": "v5_covered_spectral_regions_action_error_upper",
+        "group": 32,
+        "identity_is_not_a_source_error_bound": true,
+        "kind": "covered_baseline_action",
+        "notes": "existing V5 action certificate; not a KS mode-column reconstruction bound",
+        "panel": null,
+        "radius_history_response": "nontrivial",
+        "sign": [
+          1,
+          -1
+        ],
+        "source_reconstruction": "not_a_mode_column_certificate",
+        "tail": [
+          320.0,
+          "infinity"
+        ],
+        "validated_lower_window": [
+          24,
+          32
+        ]
+      }
+    ]
+  },
+  "covered_region_action_bound_N_beta": [
+    8.916253820835393e-12,
+    3.882373567206641e-18
+  ],
+  "decision": "derive window-specific source reconstruction bounds for groups12/32 and complete group14; do not scale the unchanged coarse enclosure",
+  "dominant_existing_coarse_groups": [
+    12,
+    32,
+    14
+  ],
+  "existing_conditional_coarse_lapse_bound": 4.99798288526775e-09,
+  "input_hashes": {
+    "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940",
+    "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b",
+    "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa",
+    "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd",
+    "results/development/artifacts/nsc-pg-spectral-mode-recovery.3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff.npz": "3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff",
+    "results/development/nsc-incoming-energy-error-budget.json": "ca028c2e636d5598597e098c4187cde944677ed3041b298546cb2788b344ae27",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "physical_EXISTENCE_certificate": false,
+  "remaining_N_after_known_components": 1.1000847019829912e-11,
+  "remaining_low_subgap_source_error_bound": null,
+  "schema": "NSC-KS-LOW-SUBGAP-DECISION-v1",
+  "source_hashes": {
+    "docs/nsc-ks-low-subgap-decision.md": "f84ef4d4e3a7ede754b9a144166110a3a47753e403d93c105323d6c926872131",
+    "scripts/derive_nsc_ks_low_subgap_decision.py": "b8ca6e486d0bd1e82cdb6e40c48fee2e11292791bef83b4078b45ec0f824b76e",
+    "src/recursive_horizons/nsc_ks_upstream_error.py": "61de8daf45106357571a0056df4f3542455f7844dc5188d3a282f819fde2e425",
+    "tests/test_nsc_ks_upstream_error.py": "738018c83db5ca9a4e48a4638e8619dd8c54c60af290fdc64687a7436c78b3a5"
+  },
+  "status": "OPEN: covered baseline regions and ell=0 zero response reusable; remaining low/subgap source reconstruction has no directed bound"
+}

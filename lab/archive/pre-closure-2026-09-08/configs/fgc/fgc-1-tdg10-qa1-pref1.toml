@@ -1,0 +1,239 @@
+artifact_id = "FGC-1-TDG10-QA1-PREF1"
+classification = "independently_bound_retry3_ssprk3_sbp4_exact_complete_C_all_channel_pass_terminal"
+owner_document = "docs/fgc-tdg10-qa1-pref1.md"
+schema_version = 1
+target_protocol = "FGC-2-SF1-PROTO18"
+
+[authority]
+blob_count = 20
+parent_commit = "49c514ac283ae3ec8091a6638442da6fdaf58db0"
+
+[[authority.blobs]]
+path = "Makefile"
+sha256 = "ee9ffbe0edef2a9365ce0d3fadb8c6d7e4f6bcff2b552746d863479f3d389b4e"
+
+[[authority.blobs]]
+path = "README.md"
+sha256 = "33080916f125a1e8042bf40abef1c3ee4dc9066ee4dc559b6230f1becff10ab4"
+
+[[authority.blobs]]
+path = "configs/fgc/fgc-1-tdg10-qa1-frz1.toml"
+sha256 = "0d171c3caea98c4efa9f44c90e666d8a665ecc99ab273f2470d57e5d297f64b3"
+
+[[authority.blobs]]
+path = "docs/claim-ledger.md"
+sha256 = "d43d03a3899eaef883633c0552f5e6c7ab11429a9fc35005cbd1c9c7739d7174"
+
+[[authority.blobs]]
+path = "docs/fgc-runtime-matrix.md"
+sha256 = "3b65c09b916f9ce0751b4ce731d7b575ac38c073fa30622dd361b314660205c0"
+
+[[authority.blobs]]
+path = "docs/fgc-tdg10-qa1-frz1.md"
+sha256 = "d27e5a1f3b3f22ab017be0df3aa34a68410151f82977a8d8664a94650ac55b14"
+
+[[authority.blobs]]
+path = "docs/research-roadmap.md"
+sha256 = "da59eb2f0f8e512b2ed06e45f30fe8a200731913b527dd7700b5ad10240acbc0"
+
+[[authority.blobs]]
+path = "results/README.md"
+sha256 = "2dbdf191a16085d964162d85ae91d1ba68bd0c429cab661f1ce52ac1b181139a"
+
+[[authority.blobs]]
+path = "results/fgc-1-tdg10-qa1-frz1.json"
+sha256 = "87fd4fd750c176e17dbcdf2abeac48a7faa4d3e28f4071ba191b85103f9463ef"
+
+[[authority.blobs]]
+path = "scripts/check_repo.py"
+sha256 = "e5d53694bce58c8624241cd947fe6c4f662a535242c92b95660c7110385a48a5"
+
+[[authority.blobs]]
+path = "scripts/reproduce_fgc_tdg10_qa1_frz1.py"
+sha256 = "8d7849e3a80ad0041ece1228f727316089bf123a51bb8e9de668a6bd1ae6f876"
+
+[[authority.blobs]]
+path = "scripts/run_fgc_tdg10_qa1.py"
+sha256 = "036097ee42fba5602df521bac8b3fbd50100c9beeecd9ee118bdcfbe390a0576"
+
+[[authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg10_exact_complete_c_admission.py"
+sha256 = "16d3f231c90eaa0b769a680cef0ae555b0f29fb3e2b9c551c9b51f3a290358af"
+
+[[authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg10_exact_complete_c_runtime.py"
+sha256 = "8b4be91addd5d5927a63bc55e759f77369e3a29dabc8f0d350b73ab2b39ee352"
+
+[[authority.blobs]]
+path = "src/recursive_horizons/fgc/evolution/tdg10_qa1_authority.py"
+sha256 = "c2b164b449afb427a3d162aa2284d9b39777d8fdd5ff9b99cf5bd79a249a7b4e"
+
+[[authority.blobs]]
+path = "tests/test_check_repo_tdg10_qa1_frz1.py"
+sha256 = "ffb8e7ed7c4bd27c8cc8b6078229673317604676b38aa2c2097696848dbcfed8"
+
+[[authority.blobs]]
+path = "tests/test_fgc_tdg10_exact_complete_c_admission.py"
+sha256 = "2f0c7b006ec8d77c04ce3f61a633ed661b306a97926f416161d582bcf56bf946"
+
+[[authority.blobs]]
+path = "tests/test_fgc_tdg10_exact_complete_c_runtime.py"
+sha256 = "ac49d4c3925fa73bbd92a900d46b5159fe2265a39ee3ecbbe11ac635f3de10df"
+
+[[authority.blobs]]
+path = "tests/test_fgc_tdg10_qa1_authority.py"
+sha256 = "e326efb463f82262eaaa9061ec1e99ffe357d9e46510e68d13a6c579d079a2ee"
+
+[[authority.blobs]]
+path = "tests/test_fgc_tdg10_qa1_runner.py"
+sha256 = "9934a5f9b6770d84a7c1f3e5be1cf684a1ab3173ec5628723f3de8ee9f0e0a30"
+
+[claims]
+FGCQR_authorized = false
+GR0_calibration_completed = false
+QA1_raw_result_independently_bound = true
+SGBL_authorized = false
+accepted_state = false
+all_eighteen_channels_admitted = true
+candidate_execution_authorized = false
+common_event_completed = false
+diagnostic_fine_endpoint_only = true
+exact_complete_C_all_channel_pass = true
+external_publication_authorized = false
+independent_method_agreement = false
+mechanism_result_earned = false
+physical_result_earned = false
+physical_transition_claim_authorized = false
+production_SSPRK3_comparator = false
+production_method_earned = false
+retained_EFT_evolution_authorized = false
+state_advance_authorized = false
+successor_remedy_selected = false
+
+[decision]
+checkpoint_journal_is_sequence_10 = true
+classifier_owner = "classify_tdg6_channel"
+complete_admission_is_all_of = true
+diagnostic_fine_endpoint_is_accepted_state = false
+equality_passes = true
+historical_retry3_rejection_is_sequence_11 = true
+interval_owner = "exact_radius_free_complete_C_dual_rational_localizer"
+later_state_adoption_requires_separate_freeze = true
+retry3_never_restores_generation_10 = true
+retry3_restores_generation = 9
+successor_remedy_selected = false
+sufficient_condition = "8*U12^2 <= L01^2"
+
+[raw]
+authority_commit = "aeaf0498fd37a51d0e2c7efcf695147f7a9822e7"
+classification = "completed_exact_all_channel_pass_no_state_advance"
+descriptor_content_address = "69478ba14677cec5dfcc7a2f802f2e5a5fe729907a225a42b560d489c55e2c3e"
+descriptor_raw_sha256 = "2c4a560c87d08f43dec5644d5af65c44663fbd77cb07476742f58a9a0e448532"
+leaf_count = 4
+manifest_sha256 = "cdea5f1148486b6d0c2c5a3fee222a224ede758680e481efb8d6a78672c52b36"
+namespace = "runs/fgc-2-sf1/tdg10-qa1/retry3-ssprk3-sbp4-exact-complete-c"
+payload_raw_sha256 = "740b371a9720b53e28164d67d22364172df17a2a30a738043c12033a722eed4f"
+payload_semantic_sha256 = "ea961ef96a03ccfd572c53e5bfac56cd9898cbe464a5f10d928022c9a7359a9e"
+runner_id = "FGC-1-TDG10-QA1-RUN1"
+schema = "FGC-1-TDG10-QA1-raw-v1"
+terminal_sha256 = "c0aea714469dd79874220f12011fb6c46a8468c7d5866fcffa6daffe06427c98"
+
+[scope]
+FGCQR_authorized = false
+GR0_calibration_authorized = false
+PDE_state_commit_authorized = false
+QA1_authority_imported = false
+QA1_exact_admission_imported = false
+QA1_exact_runtime_imported = false
+QA1_runner_decision_code_imported = false
+SGBL_authorized = false
+TI2_runner_imported = false
+campaign_store_mutation_authorized = false
+candidate_branches_authorized = false
+common_event_authorized = false
+generation_10_restored = false
+independent_method_agreement = false
+lower_level_exact_arithmetic_and_dual_localizers_reused = true
+mechanism_result_authorized = false
+one_time_live_raw_and_store_authentication = true
+ordinary_verifier_raw_blind = true
+ordinary_verifier_shadow_blind = true
+ordinary_verifier_store_blind = true
+physical_result_authorized = false
+production_SSPRK3_comparator = false
+raw_namespace_mutation_authorized = false
+retry_4_authorized = false
+retry_5_authorized = false
+seven_proposals_reconstructed = true
+successor_remedy_selected = false
+temporal_retry_admission_authorized = false
+
+[selection]
+UR1_PREF1_result_sha256 = "27c2aef9b033092285b868f583441842de99f61941ff57aa7e62749cc8d91300"
+accepted_time_hex = "0x1.78554de5a30e0p+0"
+actual_spatial_operator = "inherited_RK4_2049_SBP4"
+attempted_width_hex = "0x1.aaa9612df8000p-11"
+channel_order = [
+    "u:alpha",
+    "u:v",
+    "u:lambda",
+    "u:R",
+    "u:phi",
+    "u:chi",
+    "p:alpha",
+    "p:v",
+    "p:lambda",
+    "p:R",
+    "p:phi",
+    "p:chi",
+    "q:alpha",
+    "q:v",
+    "q:lambda",
+    "q:R",
+    "q:phi",
+    "q:chi",
+]
+checkpoint_journal_sequence = 10
+classifier_owner = "classify_tdg6_channel"
+experiment_label = "retry3_SSPRK3_on_inherited_SBP4_exact_complete_C_all_18_channel_qualification"
+forbidden_retry3_generation = 10
+historical_retry3_rejection_sequence = 11
+independent_method_agreement = false
+interval_owner = "exact_radius_free_complete_C_dual_rational_localizer"
+member_key = "RK4-2049"
+owned_row_count = 2044
+per_channel_maximum_candidates_D01 = 16352
+per_channel_maximum_candidates_D12 = 32704
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+point_count = 2049
+predecessor_generation = 9
+primary_refinement_depth = 160
+prior_retry_count = 2
+production_SSPRK3_comparator = false
+retry = 3
+tableau_runtime_selector = "second_order_diagonal_norm_SBP_plus_SSPRK3"
+tableau_selector = "SSPRK3"
+
+[store]
+leaf_count = 115
+path = "runs/fgc-2-sf1/tdg8-rcv3/calibration"
+snapshot_algorithm = "TDG9-LOC1-STORE-SNAPSHOT-v1"
+snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+
+[work_budget]
+SSPRK3_records_per_proposal = 4
+channel_count = 18
+fourth_width_authorized = false
+generation_10_authorized = false
+maximum_stage_and_endpoint_RHS_records = 28
+owned_row_count = 2044
+per_channel_maximum_candidates_D01 = 16352
+per_channel_maximum_candidates_D12 = 32704
+primary_refinement_depth = 160
+resource_escalation_authorized = false
+retry = 3
+retry_4_authorized = false
+retry_5_authorized = false
+retry_count = 1
+shadow_paths = 7
+shadow_proposals = 7

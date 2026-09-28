@@ -1,0 +1,140 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO17-PREF25"
+project_version = "0.11.0"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v17.toml"
+protocol_freeze_config = "configs/fgc/fgc-1-pro17-frz1.toml"
+protocol_freeze_result = "results/fgc-1-pro17-frz1.json"
+protocol_freeze_reproducer = "scripts/reproduce_fgc_pro17_frz1.py"
+protocol_schema_module = "src/recursive_horizons/fgc/evolution/protocol_v17.py"
+protocol_construction_module = "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py"
+protocol_freeze_document = "docs/fgc-pro17-frz1.md"
+protocol_schema_test = "tests/test_fgc_protocol_v17.py"
+protocol_construction_test = "tests/test_fgc_proto17_pure_construction.py"
+protocol_freeze_test = "tests/test_fgc_pro17_frz1_reproduction.py"
+binder_module = "src/recursive_horizons/fgc/evolution/proto17_construction_theorem.py"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO17"
+role = "post_freeze_independent_abstract_schema_genesis_and_common_event_construction_theorem_binder"
+sealed_compact_PROTO17_blobs_read_from_immutable_commit = true
+raw_history_or_physical_bundle_opened = false
+campaign_checkpoint_loaded = false
+runtime_or_runner_implemented = false
+namespace_created = false
+trajectory_read = false
+synthetic_structural_fixtures_only = true
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "f4d6e766aeb6351dc34ea482ddb3bd8eaac8d96d"
+checkpoint_must_be_ancestor_of_HEAD = true
+all_bound_PROTO17_blobs_must_match_checkpoint_commit_and_worktree = true
+protocol_config_sha256 = "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+protocol_freeze_config_sha256 = "6ff3cfad5eebb7824434e3b7f97da3ce7a8610312523e3461c8999532678d2ec"
+protocol_freeze_result_sha256 = "8e4b3f77015374cf825c141dff34d343eb3d5f4ccebfed5082bc283c1d414fea"
+protocol_freeze_reproducer_sha256 = "1481d8da60d2684a692fe9526236a0b82e6d63299e922545c9b9ee75b9c1a3cf"
+protocol_schema_module_sha256 = "2933d60d90607e0361d7deaec5395d8ad70a15ec41ab98ba2dd6aedbe9c5085c"
+protocol_construction_module_sha256 = "5fbd7f990d9f821344bbaae80840070386b3ae483fc278a85ae2a3ee5de8fa1d"
+protocol_freeze_document_sha256 = "9b24df6c00860a5f00fe777d5efe32971b007493aef71cf8f27fc29a1b6efe20"
+protocol_schema_test_sha256 = "e3e9c769f34768cd235a7c36b73f9a0df4c66abdf431fa5a04d43026e0b1c975"
+protocol_construction_test_sha256 = "76d628b352cfd35c362a04a686ef51f4685ddbd551945ff04b78e2471cdcf2ab"
+protocol_freeze_test_sha256 = "44dfee4557784d16e99e044f381fcad5f433b4d5f4a7aa2e1d45d41ac0638061"
+sealed_result_must_be_duplicate_safe_canonical_JSON = true
+sealed_result_namespace_absence_is_historical_not_reobserved = true
+trusted_Git_history_remains_an_explicit_external_assumption = true
+
+[independent_theorem]
+stdlib_only = true
+must_not_import_protocol_v17_or_proto17_pure_construction = true
+must_parse_sealed_TOML_bytes_independently = true
+must_bind_all_five_exact_schema_field_tuples = true
+must_bind_canonical_six_member_order = true
+must_construct_complete_visible_synthetic_GenesisSpec = true
+must_construct_generation_zero_checkpoint_and_store_plan = true
+must_construct_structural_six_record_accepted_fine_prefix = true
+must_construct_predecessor_only_COMMON_EVENT_COMMIT = true
+must_construct_exact_successor_checkpoint = true
+must_recover_only_one_exact_lone_receipt_suffix = true
+must_match_sealed_genesis_receipt_and_successor_hashes = true
+historical_record_payload_semantics_are_not_replayed = true
+raw_physical_array_bytes_are_not_opened_or_recomputed = true
+
+[qualified_controls]
+sealed_control_count = 14
+sealed_control_names = ["array_storage_key", "foreign_protocol", "frozen_restart", "input_hash", "manifest_digest", "nonzero_generation_root_journal", "physical_state_digest", "receipt_cycle_injection", "receipt_sequence", "state_object_digest", "successor_checkpoint_hash", "successor_high_water", "successor_untouched_method", "zero_ledger"]
+independent_equivalent_control_corpus_required = true
+duplicate_safe_canonical_JSON_control_required = true
+sealed_blob_and_commit_mutation_controls_required = true
+schema_tuple_and_member_order_mutation_controls_required = true
+deferred_requirement_promotion_control_required = true
+runtime_claim_promotion_control_required = true
+
+[future_HLT14_runtime_requirements.raw_bundle_byte_and_hash_recomputation]
+required = true
+completed = false
+
+[future_HLT14_runtime_requirements.external_Git_authority_blob_and_live_import_validation]
+required = true
+completed = false
+
+[future_HLT14_runtime_requirements.semantic_historical_journal_payload_replay]
+required = true
+completed = false
+
+[future_HLT14_runtime_requirements.namespace_reuse_and_foreign_store_rejection]
+required = true
+completed = false
+
+[authorization]
+authorized_object = "implementation_and_synthetic_qualification_of_FGC-1-HLT14-MON14_against_the_sealed_PROTO17_construction"
+HLT14_implementation_and_synthetic_qualification_authorized = true
+HLT14_runtime_implemented = false
+pretrajectory_operation_authorized = false
+production_namespace_creation_authorized = false
+fresh_GR0_calibration_authorized = false
+candidate_execution_authorized = false
+physical_claim_authorized = false
+
+[proof_contract]
+immutable_PROTO17_commit_and_all_bound_blobs_must_match = true
+independent_module_import_ast_must_exclude_PROTO17_implementation = true
+sealed_schema_bindings_and_qualification_must_be_rederived_not_trusted_by_name = true
+independent_fixture_must_match_all_three_sealed_construction_hashes = true
+all_listed_independent_and_binder_mutations_must_fail_closed = true
+four_future_HLT14_requirements_must_remain_required_and_uncompleted = true
+no_run_directory_or_raw_campaign_bundle_may_be_opened = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO17_immutable_freeze_independently_bound = true
+PROTO17_independent_schema_and_construction_theorem_bound = true
+PROTO17_independent_generation_zero_abstract_fixture_bound = true
+PROTO17_independent_common_event_abstract_fixture_bound = true
+PROTO17_all_listed_synthetic_mutations_rejected = true
+PROTO17_future_HLT14_requirements_preserved_uncompleted = true
+HLT14_implementation_and_synthetic_qualification_authorized = true
+HLT14_runtime_implemented = false
+PROTO17_successor_runtime_implemented = false
+PROTO17_pretrajectory_runtime_authorized = false
+PROTO17_output_namespace_created = false
+PROTO17_real_production_state_loaded = false
+PROTO17_raw_physical_array_bytes_recomputed = false
+PROTO17_historical_journal_payload_semantics_replayed = false
+PROTO17_filesystem_durability_or_restart_qualified = false
+PROTO17_external_Git_authority_validated_at_launch = false
+PROTO17_trajectory_read = false
+PROTO17_fresh_GR0_dynamic_calibration_authorized = false
+PROTO17_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

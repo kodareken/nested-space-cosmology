@@ -1,0 +1,875 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, coverage, indices and scope",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "counts": {
+    "all_real_rows_available": false,
+    "completed_panels": 14,
+    "completed_rows": 3188,
+    "prior_inverse_rows": 51360,
+    "total_archived_real_rows": 54548
+  },
+  "domain": {
+    "approximation": "original vacuum-mode approximation; order comparison is not a rigorous stress-tail bound",
+    "history_selected": false,
+    "horizon_scattering_rerun": false,
+    "old_inverse_certificate": "unchanged; its rejected rows remain rejected by that inverse",
+    "operator": "same pinned massive PG Riccati expansion, order16, rho=1",
+    "packet_integrals_rerun": false,
+    "panel_accounting": "base/refinement panels kept separate; completion is row coverage, not a spectral sum",
+    "phase": "exact archived middle-panel producer; no added PG clock phase",
+    "source_column_order": [
+      "zero",
+      "partner",
+      "incoming_one"
+    ],
+    "source_covariance": "unchanged C_H and inherited incoming occupation; no occupation fitting or clipping"
+  },
+  "failures": {
+    "mid/10_-1": {
+      "order12_16_difference": 7.62394015086714e-11
+    },
+    "mid/10_1": {
+      "order12_16_difference": 7.62394015086714e-11
+    },
+    "mid/11_-1": {
+      "order12_16_difference": 1.685051177598563e-10,
+      "riccati_equation": 5.105824458491322e-11
+    },
+    "mid/11_1": {
+      "order12_16_difference": 1.685051177598563e-10,
+      "riccati_equation": 5.105824458491322e-11
+    },
+    "mid/12_-1": {
+      "order12_16_difference": 3.563008366475249e-10,
+      "riccati_equation": 1.2763746524148852e-10
+    },
+    "mid/12_1": {
+      "order12_16_difference": 3.563008366475249e-10,
+      "riccati_equation": 1.2763746524148852e-10
+    },
+    "mid/32_-1": {
+      "order12_16_difference": 5.974784139720708e-11
+    },
+    "mid/32_1": {
+      "order12_16_difference": 5.98954624402795e-11
+    },
+    "mid_ref/12_-1": {
+      "order12_16_difference": 3.5896404310742254e-10,
+      "riccati_equation": 1.288216741598552e-10
+    },
+    "mid_ref/12_1": {
+      "order12_16_difference": 3.5896404310742254e-10,
+      "riccati_equation": 1.288216741598552e-10
+    },
+    "mid_ref/32_-1": {
+      "order12_16_difference": 6.019534659948514e-11
+    },
+    "mid_ref/32_1": {
+      "order12_16_difference": 6.034422527368082e-11
+    }
+  },
+  "gate": {
+    "PDF_bumped": false,
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "archived_real_input_fields": "OPEN",
+    "extended_stationarity": "OPEN",
+    "full_spectral_source": "OPEN: subgap/infinite-tail differentiated source, common nonlinear subtraction and convergence",
+    "homogeneous_nonexistence": "preserved in original scope; not rerun",
+    "metric_timestep": false,
+    "nulls": null,
+    "physical_EndpointBranchJets": "OPEN",
+    "stress": null,
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "results/development/nsc-pg-spectral-mode-recovery.json": "9ce20128975f73896908a0acc5a636bf468876e29d210129db0702cfe7ee284d",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "input_payloads": [
+    {
+      "bytes": 57351148,
+      "path": "results/development/artifacts/nsc-pg-spectral-mode-recovery.3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff.npz",
+      "sha256": "3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff"
+    },
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+    }
+  ],
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "accepted_inverse_overlap": 4.015279221767605e-12,
+    "current_coisometry": 1.1129951219476096e-15,
+    "order12_16_difference": 3.5896404310742254e-10,
+    "projection": 3.46186746513496e-14,
+    "riccati_equation": 1.288216741598552e-10,
+    "source_covariance_change": 0.0
+  },
+  "panels": {
+    "mid/10_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 361,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 199,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.9982814558317936e-12,
+        "current_coisometry": 1.1129951219476096e-15,
+        "order12_16_difference": 7.62394015086714e-11,
+        "projection": 3.449158004308145e-14,
+        "riccati_equation": 1.948942894044559e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/10_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 361,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 199,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 4.006144756657877e-12,
+        "current_coisometry": 1.1129951219476096e-15,
+        "order12_16_difference": 7.62394015086714e-11,
+        "projection": 3.4525366710207094e-14,
+        "riccati_equation": 1.948942894044559e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/11_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 360,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 200,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.929619160853077e-12,
+        "current_coisometry": 8.985264786042902e-16,
+        "order12_16_difference": 1.685051177598563e-10,
+        "projection": 3.446034533851366e-14,
+        "riccati_equation": 5.105824458491322e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/11_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 360,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 200,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.968711310536952e-12,
+        "current_coisometry": 8.985264786042904e-16,
+        "order12_16_difference": 1.685051177598563e-10,
+        "projection": 3.442206178356262e-14,
+        "riccati_equation": 5.105824458491322e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/12_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 361,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 199,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.99006757996355e-12,
+        "current_coisometry": 1.0677783137191154e-15,
+        "order12_16_difference": 3.563008366475249e-10,
+        "projection": 3.445052464550788e-14,
+        "riccati_equation": 1.2763746524148852e-10,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/12_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 361,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 199,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.9494869603093e-12,
+        "current_coisometry": 1.0677783137191154e-15,
+        "order12_16_difference": 3.563008366475249e-10,
+        "projection": 3.443433043478393e-14,
+        "riccati_equation": 1.2763746524148852e-10,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/31_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 360,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 200,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.802941156340432e-12,
+        "current_coisometry": 1.005438540943928e-15,
+        "order12_16_difference": 2.6500868081507837e-11,
+        "projection": 3.44348378237103e-14,
+        "riccati_equation": 5.233011324914838e-12,
+        "source_covariance_change": 0.0
+      },
+      "status": "PASS",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/31_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 360,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 200,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.878512211966016e-12,
+        "current_coisometry": 1.0266274007505147e-15,
+        "order12_16_difference": 2.6568961460871917e-11,
+        "projection": 3.448086253265961e-14,
+        "riccati_equation": 5.235356528747186e-12,
+        "source_covariance_change": 0.0
+      },
+      "status": "PASS",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/32_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 361,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 199,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.8594175266952e-12,
+        "current_coisometry": 9.021294767246442e-16,
+        "order12_16_difference": 5.974784139720708e-11,
+        "projection": 3.450176076433259e-14,
+        "riccati_equation": 1.4005165508308505e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid/32_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 361,
+      "all_panel_rows": 560,
+      "energy_range": [
+        202.1679328893711,
+        319.9576037399666
+      ],
+      "new_rows": 199,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.929562661812934e-12,
+        "current_coisometry": 9.678777155103394e-16,
+        "order12_16_difference": 5.98954624402795e-11,
+        "projection": 3.4458886716388996e-14,
+        "riccati_equation": 1.4012928713158591e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid_ref/12_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 542,
+      "all_panel_rows": 840,
+      "energy_range": [
+        202.26482596949583,
+        319.9807488799881
+      ],
+      "new_rows": 298,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 4.015279221767605e-12,
+        "current_coisometry": 1.0053497135488234e-15,
+        "order12_16_difference": 3.5896404310742254e-10,
+        "projection": 3.443845782418495e-14,
+        "riccati_equation": 1.288216741598552e-10,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid_ref/12_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 542,
+      "all_panel_rows": 840,
+      "energy_range": [
+        202.26482596949583,
+        319.9807488799881
+      ],
+      "new_rows": 298,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 4.009334796422617e-12,
+        "current_coisometry": 1.0053497135488234e-15,
+        "order12_16_difference": 3.5896404310742254e-10,
+        "projection": 3.4478618346578975e-14,
+        "riccati_equation": 1.288216741598552e-10,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid_ref/32_-1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 541,
+      "all_panel_rows": 840,
+      "energy_range": [
+        202.26482596949583,
+        319.9807488799881
+      ],
+      "new_rows": 299,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.945124296901594e-12,
+        "current_coisometry": 9.930137603167251e-16,
+        "order12_16_difference": 6.019534659948514e-11,
+        "projection": 3.46186746513496e-14,
+        "riccati_equation": 1.4137397236085275e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    },
+    "mid_ref/32_1": {
+      "accepted_inverse_unchanged": true,
+      "accepted_overlap_rows": 541,
+      "all_panel_rows": 840,
+      "energy_range": [
+        202.26482596949583,
+        319.9807488799881
+      ],
+      "new_rows": 299,
+      "provenance": {
+        "boundary_phase": "exact archived project_many convention; no added clock factor",
+        "column_order": [
+          "zero",
+          "partner",
+          "incoming_one"
+        ],
+        "comparison_order": 12,
+        "history_selected": false,
+        "horizon_scattering_rerun": false,
+        "order": 16,
+        "order_difference_is_rigorous_bound": false,
+        "packet_integrals_rerun": false,
+        "producer": "FastVacuumPacketProjector.project_many",
+        "rho": 1.0,
+        "scope": "same middle-panel vacuum-mode approximation; thermal/reflection and local stress-tail bounds remain separate",
+        "source_hashes": {
+          "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+          "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+          "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+          "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+          "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+        },
+        "state_covariance_changed": false
+      },
+      "residuals": {
+        "accepted_inverse_overlap": 3.884823633109484e-12,
+        "current_coisometry": 9.155136009420113e-16,
+        "order12_16_difference": 6.034422527368082e-11,
+        "projection": 3.4510384717326963e-14,
+        "riccati_equation": 1.414014660997221e-11,
+        "source_covariance_change": 0.0
+      },
+      "status": "OPEN",
+      "tolerances": {
+        "accepted_inverse_overlap": 3e-08,
+        "current_coisometry": 3e-11,
+        "order12_16_difference": 3e-11,
+        "projection": 3e-11,
+        "riccati_equation": 3e-11,
+        "source_covariance_change": 0.0
+      }
+    }
+  },
+  "payload": {
+    "bytes": 369694,
+    "path": "results/development/artifacts/nsc-pg-high-energy-inputs.28b5b848887f7d85fdc378d1dcd0025b2a90da15fa8fa955003e9213592c567c.npz",
+    "sha256": "28b5b848887f7d85fdc378d1dcd0025b2a90da15fa8fa955003e9213592c567c"
+  },
+  "reproducer": "python3 scripts/derive_nsc_pg_high_energy_inputs.py --check",
+  "schema": "NSC-PG-HIGH-ENERGY-INPUTS-v1",
+  "source_hashes": {
+    "docs/nsc-pg-high-energy-inputs.md": "a0c3e3e753ee95ca2bca15c2a0503e493fc501f65a50dea5cefdca68a222e7c7",
+    "scripts/derive_nsc_pg_high_energy_inputs.py": "e32b2c9b3bce8b034729d07d1e917ca3b03777b75812efbec896cda67a908db5",
+    "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py": "18624ecc149e1d3842523390b0a4ebaff135ec170f737fd2dac45f9f7d102b6b",
+    "tests/test_nsc_pg_archived_high_energy_modes.py": "00814adfc15292f31dfa85045e2612ef3634b2a170d8f02f24b9c267959e29d6"
+  },
+  "status": "OPEN"
+}

@@ -1,0 +1,275 @@
+{
+  "artifact_id": "NSC-3-GEOMETRIC-CHAIN",
+  "classification": "periodic_repetition_of_the_spatial_throat_generates_a_band_gap_without_an_inserted_mass_and_geometric_links_close_finite_recursion",
+  "declared_geometry": {
+    "Omega_is_input": true,
+    "R_is_input": true,
+    "independent_mass_inserted": false,
+    "motif": "rho in [-R,R], w=1/sqrt(1+rho\u00b2), repeated periodically",
+    "seams": "w is continuous and periodic; derivative of metric profile changes at seams; no gravitational junction equations solved"
+  },
+  "gap_families": [
+    {
+      "absolute_errors": [
+        0.00011008407661305952,
+        2.752698216201832e-05,
+        6.882116450279696e-06
+      ],
+      "analytic_zero_discriminant": 18.0,
+      "continuum": {
+        "band_edge": 0.7034881641265661,
+        "bracket": [
+          0.703125,
+          0.7109375
+        ],
+        "discriminant_residual": 3.1086244689504383e-15,
+        "monodromy_determinant": 0.999999999999793
+      },
+      "lattice": [
+        {
+          "intervals": 32,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.7035982482031792,
+          "phase_samples": 33,
+          "spacing": 0.125,
+          "zero_transfer": 0.0555852588080031
+        },
+        {
+          "intervals": 64,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.7035156911087281,
+          "phase_samples": 33,
+          "spacing": 0.0625,
+          "zero_transfer": 0.055692390988593805
+        },
+        {
+          "intervals": 128,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.7034950462430164,
+          "phase_samples": 33,
+          "spacing": 0.03125,
+          "zero_transfer": 0.055719165796157995
+        }
+      ],
+      "observed_orders": [
+        1.999687443577043,
+        1.9999222442518436
+      ],
+      "radius": 2.0,
+      "zero_discriminant": 17.99999999999923
+    },
+    {
+      "absolute_errors": [
+        9.902318247523301e-05,
+        2.4778141668346798e-05,
+        6.19592549033765e-06
+      ],
+      "analytic_zero_discriminant": 65.99999999999999,
+      "continuum": {
+        "band_edge": 0.45526553767475103,
+        "bracket": [
+          0.453125,
+          0.4609375
+        ],
+        "discriminant_residual": -8.881784197001252e-15,
+        "monodromy_determinant": 0.9999999999998663
+      },
+      "lattice": [
+        {
+          "intervals": 32,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.45536456085722626,
+          "phase_samples": 33,
+          "spacing": 0.25,
+          "zero_transfer": 0.01499717114553019
+        },
+        {
+          "intervals": 64,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.4552903158164194,
+          "phase_samples": 33,
+          "spacing": 0.125,
+          "zero_transfer": 0.015115570716924449
+        },
+        {
+          "intervals": 128,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.45527173360024137,
+          "phase_samples": 33,
+          "spacing": 0.0625,
+          "zero_transfer": 0.015145140935144104
+        }
+      ],
+      "observed_orders": [
+        1.9986983252773616,
+        1.9996762910098314
+      ],
+      "radius": 4.0,
+      "zero_discriminant": 65.99999999999059
+    },
+    {
+      "absolute_errors": [
+        3.8720654965129775e-05,
+        9.702426633700911e-06,
+        2.42682620057999e-06
+      ],
+      "analytic_zero_discriminant": 258.0,
+      "continuum": {
+        "band_edge": 0.2479700182657252,
+        "bracket": [
+          0.2421875,
+          0.25
+        ],
+        "discriminant_residual": -1.3500311979441904e-13,
+        "monodromy_determinant": 0.999999999999877
+      },
+      "lattice": [
+        {
+          "intervals": 32,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.24800873892069034,
+          "phase_samples": 33,
+          "spacing": 0.5,
+          "zero_transfer": 0.003713867370191037
+        },
+        {
+          "intervals": 64,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.2479797206923589,
+          "phase_samples": 33,
+          "spacing": 0.25,
+          "zero_transfer": 0.003835613086726199
+        },
+        {
+          "intervals": 128,
+          "minimum_phase": 0.0,
+          "minimum_sampled_bloch_gap": 0.24797244509192579,
+          "phase_samples": 33,
+          "spacing": 0.125,
+          "zero_transfer": 0.0038659316662410085
+        }
+      ],
+      "observed_orders": [
+        1.9966858321833003,
+        1.9992748266665412
+      ],
+      "radius": 8.0,
+      "zero_discriminant": 257.9999999999872
+    }
+  ],
+  "geometric_link": {
+    "entry": 2.248069469178417,
+    "formula": "B[last_edge,first_node]=(1/h)+w_last/2; all other entries zero",
+    "independently_fitted_link": false,
+    "intervals": 8,
+    "normalized_finite_chain_controls": [
+      {
+        "Omega": 1.0,
+        "Schur_residual": 2.753348023474475e-15,
+        "depth": 2,
+        "depth_change": null,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.0,
+        "Schur_residual": 3.2642286874592175e-15,
+        "depth": 4,
+        "depth_change": 0.04383814588733765,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.0,
+        "Schur_residual": 3.1620864737629544e-15,
+        "depth": 8,
+        "depth_change": 1.2560906717501527e-07,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.0,
+        "Schur_residual": 3.1633769506423642e-15,
+        "depth": 16,
+        "depth_change": 0.0,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.3,
+        "Schur_residual": 3.1964374619872933e-15,
+        "depth": 2,
+        "depth_change": null,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.3,
+        "Schur_residual": 2.713081718821112e-15,
+        "depth": 4,
+        "depth_change": 0.08586262822681241,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.3,
+        "Schur_residual": 3.839350077908514e-15,
+        "depth": 8,
+        "depth_change": 1.4831629566536654e-06,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "Omega": 1.3,
+        "Schur_residual": 3.8225699886220415e-15,
+        "depth": 16,
+        "depth_change": 2.3914935841127266e-15,
+        "response_00": [
+          0.3,
+          0.4
+        ]
+      }
+    ],
+    "radius": 2.0
+  },
+  "nonclaims": {
+    "infinite_unequal_scale_tail_solved": false,
+    "new_to_world_mechanism_established": false,
+    "particle_species_or_cosmological_constant_predicted": false,
+    "periodic_spatial_array_is_a_Lorentzian_nested_cosmology": false,
+    "physical_metric_stability_or_conservation_proved": false,
+    "stationary_geometry_or_R_Omega_derived": false
+  },
+  "removed_angular_potential_control": {
+    "interpretation": "formal control with w removed; kappa=0 is not a spinor-sphere eigenvalue",
+    "kappa": 0.0,
+    "zero_phase_gap": 1.0575841779158651e-15
+  },
+  "schema": "nsc-geometric-chain-v1",
+  "source_hashes": {
+    "scripts/check_nsc_geometric_chain.py": "fd996be9e7d15d3a2ab07e7b7516619970fed5e27e660b26d4e29ca72509d19b",
+    "src/recursive_horizons/nsc_geometric_chain.py": "4eb6f80a055ebdfdca3953429c72d8414dc8d324bb09b318f1d2393949e2362d",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+  },
+  "terminal": true,
+  "zero_gap_exclusion": {
+    "argument": "neither multiplier has modulus 1 for R>0; zero is outside every real Bloch fiber; compact phase and continuity give an open spectral gap",
+    "continuum_transfer_eigenvalues": "exp(plus_or_minus 2 asinh(R))",
+    "discrete_transfer": "product[(1-h*w/2)/(1+h*w/2)] in (0,1)",
+    "scope": "equal-scale periodic spatial family only"
+  }
+}

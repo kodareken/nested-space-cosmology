@@ -1,0 +1,116 @@
+schema_version = 1
+artifact_id = "FGC-1-HLT1-MON1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+nonlinear_source_config = "configs/fgc/fgc-1-src1-nl1.toml"
+nonlinear_source_result = "results/fgc-1-src1-nl1.json"
+physical_constraints_config = "configs/fgc/fgc-1-con4-phy1.toml"
+physical_constraints_result = "results/fgc-1-con4-phy1.json"
+run_domain_config = "configs/fgc/fgc-1-dom4-run1.toml"
+run_domain_result = "results/fgc-1-dom4-run1.json"
+multidirectional_health_config = "configs/fgc/fgc-1-hyp2-md1.toml"
+multidirectional_health_result = "results/fgc-1-hyp2-md1.json"
+boundary_control_config = "configs/fgc/fgc-1-bnd2-cp1.toml"
+boundary_control_result = "results/fgc-1-bnd2-cp1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+monitor_role = "pre_acceptance_classical_health_and_scale_stop_transaction"
+accepted_trajectory_evaluated = false
+holdout_execution_performed = false
+retained_EFT_remainder_control_supplied = false
+
+[canonical_norms]
+field_order = ["alpha", "shift", "lambda", "R", "phi", "chi"]
+field_mass_dimensions = [0, 0, 0, -1, 1, 1]
+state_formula = "u_i_times_L0_pow_d_i_and_p_i_q_i_times_L0_pow_d_i_plus_1"
+matrix_formula = "max_row_sum_abs_of_diag_row_scale_times_A_times_diag_inverse_column_scale"
+branch_formula = "max_abs_candidate_minus_previous_accepted_root_div_component_scale"
+constraint_formula = "max_i_abs_C_i_div_max_abs_source_i_and_floor"
+constraint_floor = "1/1000000000000000000000000000000"
+zero_denominator_policy = "zero_over_zero_is_zero_otherwise_fail_closed"
+
+[spectral_estimators]
+minimum_samples = 16
+proper_coordinate_requirement = "strictly_increasing_uniform_or_explicitly_resampled"
+spatial_window = "C_infinity_compact_vacuum_buffer_window"
+temporal_window = "causal_past_only_proper_time_window"
+relative_amplitude_floor = "1/1099511627776"
+absolute_amplitude_floor = "1/1000000000000000000000000000000"
+unresolved_top_fraction = "1/8"
+support_frequency = "largest_rfft_bin_above_max_absolute_and_relative_floor"
+angular_conversion = "omega_or_k_equals_2pi_times_cycles_per_proper_coordinate"
+alias_rule = "support_in_top_one_eighth_is_a_stop"
+
+[curvature_estimator]
+linear_scale = "kappa=max_abs_Kretschmann_pow_one_quarter_and_sqrt_abs_Ricci_eigenvalue"
+dimensionless_monitor = "kappa_squared_over_Lambda_squared"
+protocol_key_interpretation = "curvature_scale_over_Lambda_squared_means_square_of_linear_scale_ratio"
+
+[thresholds]
+newton_residual_infinity_max = "1/1000000000000"
+newton_iteration_max = 16
+kinetic_condition_number_max = "10000000000"
+normalized_branch_displacement_max = "1/16"
+acceleration_infinity_max = "4"
+companion_deformation_operator_2_max = "1/4096"
+action_energy_deformation_operator_2_max = "1/8192"
+kinetic_deformation_operator_2_max = "1/64"
+effective_planck_ratio_min = "1/2"
+characteristic_imaginary_part_max = "1/10000000000"
+eigenframe_condition_number_max = "100000000"
+symmetrizer_coercivity_min = "1/10000000000"
+normalized_constraint_infinity_max = "1/10000000"
+minimum_observed_constraint_convergence_order = "3/2"
+phi_over_Lambda_max = "1/4"
+proper_frequency_over_Lambda_max = "1/4"
+proper_wavenumber_over_Lambda_max = "1/4"
+curvature_scale_squared_over_Lambda_squared_max = "1/4"
+boundary_margin_over_required_buffer_min = "0"
+
+[strict_comparison]
+continuous_maximum_rule = "value_strictly_less_than_limit"
+continuous_minimum_rule = "value_strictly_greater_than_limit"
+integer_iteration_rule = "value_less_than_or_equal_to_limit"
+boolean_premise_rule = "required_boolean_must_be_true"
+alias_rule = "occupied_must_be_false"
+
+[transaction]
+monitor_every_proposed_accepted_Runge_Kutta_stage = true
+stage_index_is_a_global_transaction_serial = true
+stage_index_must_increase_strictly = true
+physical_stage_abscissae_may_be_nonmonotone = true
+evaluate_all_premises_before_state_commit = true
+failed_trial_never_advances_last_accepted_state = true
+first_failed_premise_uses_frozen_priority = true
+first_failed_premise_is_immutable_after_stop = true
+further_acceptance_after_stop_forbidden = true
+
+[proof_contract]
+all_PROTO3_health_thresholds_must_be_consumed = true
+SRC1_branch_thresholds_must_be_consumed = true
+HYP2_sufficient_ball_thresholds_must_be_consumed = true
+BND2_causal_margin_must_be_consumed = true
+canonical_norms_must_have_direct_controls = true
+proper_spectral_estimators_must_have_low_and_alias_controls = true
+every_stop_reason_must_be_injected_independently = true
+simultaneous_failures_must_preserve_frozen_priority = true
+equal_continuous_threshold_must_fail = true
+canonical_hash_bound_result_required = true
+no_holdout_execution = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

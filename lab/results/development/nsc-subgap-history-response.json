@@ -1,0 +1,491 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, scope, structure",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-10
+  },
+  "domain": {
+    "angular": 0.0,
+    "causal_scope": "compact perturbation in trapped patch; exterior u=0 in its initial domain of dependence",
+    "complex_frequency": "analytic bilinear using independently propagated conjugate-energy dual, never a Gaussian state",
+    "group": 13,
+    "history": {
+      "amplitudes": [
+        0.002,
+        0.001,
+        0.003,
+        0.001
+      ],
+      "coordinates": [
+        0.0,
+        0.05
+      ],
+      "omega": 0.4,
+      "selected": false
+    },
+    "interpolation": "17 unsewn real Chebyshev nodes; nested9 control; reflection never interpolated",
+    "mass": 1.5707963267948966,
+    "normalization": "bare Gaussian derivative per reduced radial family; no angular/copy/compact multiplier",
+    "signed_panels": [
+      [
+        -1.5707963267948966,
+        -1.0
+      ],
+      [
+        1.0,
+        1.5707963267948966
+      ]
+    ],
+    "source_formula": "-(smooth+2*Re(reflected))/pi; exact signed pair, not a new subtraction",
+    "state": "owned horizon pair and whole-line subgap reflection; seed covariance not input"
+  },
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_term": "none introduced",
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "extended_stationarity": "OPEN",
+    "finite_group13_subgap_source": "PASS",
+    "full_spectral_reference_source": "OPEN: remaining panels/families and inhomogeneous reference/local variation",
+    "homogeneous_nonexistence": "preserved, not rerun",
+    "metric_timestep": false,
+    "nulls": null,
+    "physical_EndpointBranchJets": "OPEN",
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-pg-retained-subgap.json": "e5c021b53e038295b4906292fe2b194be73aa55407df5dcd1252b404a520bb6d",
+    "results/development/nsc-transmitting-history-jets.json": "8368c9cf87f984389d8e16417f0841fcdcd4ef98dbca97bd24fe37c86138774e",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_complex_horizon_modes.py": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_pg_threshold_projection.py": "56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "analytic_adjoint_residual": 1.0408340855860843e-16,
+    "complex_pair_adjoint": 1.0061396160665481e-16,
+    "contour_deformation": 0.0,
+    "contour_quadrature": 3.469446951953614e-18,
+    "independent_complex_pair": 1.489858274053625e-12,
+    "metric_flux_tangent": 0.0,
+    "norm_flux": 2.6645352591003757e-15,
+    "owned_Gaussian_overlap": 6.661428497319261e-16,
+    "owned_column_normalization": 9.607479339486406e-15,
+    "owned_control_reflection_modulus": 1.0658141036401503e-14,
+    "spatial_source_refinement": 9.153303620292779e-11,
+    "spectral_interpolation": 4.3281350725621337e-16,
+    "tangent_boundary_trace": 5.026957924739065e-11,
+    "time_source_refinement": 8.051339490944276e-10
+  },
+  "numerics": {
+    "configurations": [
+      [
+        401,
+        64
+      ],
+      [
+        801,
+        64
+      ],
+      [
+        801,
+        128
+      ]
+    ],
+    "old_generators_rerun": false,
+    "reflection_samples": 360,
+    "reused_reflections": 360
+  },
+  "payload": {
+    "bytes": 112085,
+    "path": "results/development/artifacts/nsc-subgap-history-response.3620a74c4778b7e03c5fd931df81c37ca57511015687c75e9dfa09b248adcc74.npz",
+    "sha256": "3620a74c4778b7e03c5fd931df81c37ca57511015687c75e9dfa09b248adcc74"
+  },
+  "reproducer": "python3 scripts/derive_nsc_subgap_history_response.py --check",
+  "schema": "NSC-SUBGAP-HISTORY-RESPONSE-v1",
+  "source_hashes": {
+    "docs/nsc-subgap-history-response.md": "8acc50b42e01a45bea8ce39d0ce8c06842c564a60081f76463f6495055777428",
+    "scripts/derive_nsc_subgap_history_response.py": "e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+    "src/recursive_horizons/nsc_subgap_history_response.py": "3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+    "tests/test_nsc_subgap_history_response.py": "7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e"
+  },
+  "source_integrals": {
+    "401_64/q24_h3": {
+      "reflected_integral": {
+        "imag": [
+          9.434327737563261e-11,
+          5.0575719620460393e-14,
+          3.9782413426227803e-10,
+          0.0
+        ],
+        "real": [
+          -2.2455004708038986e-10,
+          -8.054356578249158e-13,
+          -9.653956778530521e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.0062901322495337265,
+        8.049002676447816e-06,
+        -0.0009417196812459775,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 2.523225250041985e-18,
+      "smooth_integral": {
+        "imag": [
+          2.523225250041985e-18,
+          1.2728001391586215e-18,
+          -8.727239870225434e-19,
+          0.0
+        ],
+        "real": [
+          -0.0197610328161433,
+          -2.5286686066181728e-05,
+          0.0029584998254224204,
+          0.0
+        ]
+      }
+    },
+    "401_64/q48_h3": {
+      "reflected_integral": {
+        "imag": [
+          9.434327740104696e-11,
+          5.0575719715311716e-14,
+          3.978241342809658e-10,
+          0.0
+        ],
+        "real": [
+          -2.245500470722143e-10,
+          -8.054356578342482e-13,
+          -9.653956774216185e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290132249533728,
+        8.049002676447868e-06,
+        -0.000941719681245978,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 2.5232252500419893e-18,
+      "smooth_integral": {
+        "imag": [
+          2.5232252500419893e-18,
+          1.2728001391586404e-18,
+          -8.727239870225467e-19,
+          0.0
+        ],
+        "real": [
+          -0.019761032816143307,
+          -2.528668606618189e-05,
+          0.0029584998254224217,
+          0.0
+        ]
+      }
+    },
+    "401_64/q48_h4": {
+      "reflected_integral": {
+        "imag": [
+          9.43432773926164e-11,
+          5.057571968957132e-14,
+          3.9782413427183264e-10,
+          0.0
+        ],
+        "real": [
+          -2.245500470716472e-10,
+          -8.054356578233891e-13,
+          -9.653956775301568e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290132249533728,
+        8.049002676447868e-06,
+        -0.000941719681245978,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 2.5232252500419893e-18,
+      "smooth_integral": {
+        "imag": [
+          2.5232252500419893e-18,
+          1.2728001391586404e-18,
+          -8.727239870225467e-19,
+          0.0
+        ],
+        "real": [
+          -0.019761032816143307,
+          -2.528668606618189e-05,
+          0.0029584998254224217,
+          0.0
+        ]
+      }
+    },
+    "801_128/q24_h3": {
+      "reflected_integral": {
+        "imag": [
+          9.434326432619634e-11,
+          5.0566325625511343e-14,
+          3.9782408633838576e-10,
+          0.0
+        ],
+        "real": [
+          -2.2455003504496116e-10,
+          -8.054528363795178e-13,
+          -9.65395402030584e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290131411972533,
+        8.049100106984988e-06,
+        -0.0009417195303574582,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 1.3705076522752828e-17,
+      "smooth_integral": {
+        "imag": [
+          1.3705076522752828e-17,
+          -1.630194993213144e-18,
+          -2.0423461972647506e-18,
+          0.0
+        ],
+        "real": [
+          -0.019761030184867235,
+          -2.528699215320718e-05,
+          0.0029584993513921015,
+          0.0
+        ]
+      }
+    },
+    "801_128/q48_h3": {
+      "reflected_integral": {
+        "imag": [
+          9.43432643516107e-11,
+          5.0566325720364484e-14,
+          3.9782408635707373e-10,
+          0.0
+        ],
+        "real": [
+          -2.2455003503678557e-10,
+          -8.054528363888524e-13,
+          -9.653954015991511e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290131411972537,
+        8.049100106985073e-06,
+        -0.0009417195303574584,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 1.3705076522752831e-17,
+      "smooth_integral": {
+        "imag": [
+          1.3705076522752831e-17,
+          -1.630194993213157e-18,
+          -2.0423461972647637e-18,
+          0.0
+        ],
+        "real": [
+          -0.019761030184867245,
+          -2.5286992153207452e-05,
+          0.002958499351392102,
+          0.0
+        ]
+      }
+    },
+    "801_128/q48_h4": {
+      "reflected_integral": {
+        "imag": [
+          9.434326434318015e-11,
+          5.056632569462379e-14,
+          3.978240863479404e-10,
+          0.0
+        ],
+        "real": [
+          -2.245500350362184e-10,
+          -8.054528363779932e-13,
+          -9.653954017076895e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290131411972537,
+        8.049100106985073e-06,
+        -0.0009417195303574584,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 1.3705076522752831e-17,
+      "smooth_integral": {
+        "imag": [
+          1.3705076522752831e-17,
+          -1.630194993213157e-18,
+          -2.0423461972647637e-18,
+          0.0
+        ],
+        "real": [
+          -0.019761030184867245,
+          -2.5286992153207452e-05,
+          0.002958499351392102,
+          0.0
+        ]
+      }
+    },
+    "801_64/q24_h3": {
+      "reflected_integral": {
+        "imag": [
+          9.434327635620508e-11,
+          5.056727040853849e-14,
+          3.978241371750062e-10,
+          0.0
+        ],
+        "real": [
+          -2.2455006295905746e-10,
+          -8.054514557448905e-13,
+          -9.653955386471958e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290132217106486,
+        8.049094209484163e-06,
+        -0.0009417196489592522,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 3.545368159610041e-18,
+      "smooth_integral": {
+        "imag": [
+          3.545368159610041e-18,
+          1.195360215859911e-18,
+          -2.331749933632285e-18,
+          0.0
+        ],
+        "real": [
+          -0.01976103271427009,
+          -2.5286973625664674e-05,
+          0.0029584997239906533,
+          0.0
+        ]
+      }
+    },
+    "801_64/q48_h3": {
+      "reflected_integral": {
+        "imag": [
+          9.434327638161944e-11,
+          5.056727050339163e-14,
+          3.9782413719369425e-10,
+          0.0
+        ],
+        "real": [
+          -2.245500629508821e-10,
+          -8.054514557542248e-13,
+          -9.65395538215762e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290132217106486,
+        8.049094209484071e-06,
+        -0.0009417196489592525,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 3.545368159610025e-18,
+      "smooth_integral": {
+        "imag": [
+          3.545368159610025e-18,
+          1.1953602158599198e-18,
+          -2.33174993363229e-18,
+          0.0
+        ],
+        "real": [
+          -0.01976103271427009,
+          -2.5286973625664386e-05,
+          0.002958499723990654,
+          0.0
+        ]
+      }
+    },
+    "801_64/q48_h4": {
+      "reflected_integral": {
+        "imag": [
+          9.434327637318886e-11,
+          5.0567270477650796e-14,
+          3.978241371845608e-10,
+          0.0
+        ],
+        "real": [
+          -2.2455006295031478e-10,
+          -8.054514557433653e-13,
+          -9.65395538324302e-11,
+          0.0
+        ]
+      },
+      "signed_action_derivative": [
+        0.006290132217106486,
+        8.049094209484071e-06,
+        -0.0009417196489592525,
+        -0.0
+      ],
+      "smooth_imaginary_residual": 3.545368159610025e-18,
+      "smooth_integral": {
+        "imag": [
+          3.545368159610025e-18,
+          1.1953602158599198e-18,
+          -2.33174993363229e-18,
+          0.0
+        ],
+        "real": [
+          -0.01976103271427009,
+          -2.5286973625664386e-05,
+          0.002958499723990654,
+          0.0
+        ]
+      }
+    }
+  },
+  "status": "PASS: group13 finite subgap Gaussian history variation",
+  "tolerances": {
+    "analytic_adjoint_residual": 3e-11,
+    "complex_pair_adjoint": 3e-11,
+    "contour_deformation": 3e-11,
+    "contour_quadrature": 3e-11,
+    "independent_complex_pair": 3e-11,
+    "metric_flux_tangent": 3e-11,
+    "norm_flux": 3e-11,
+    "owned_Gaussian_overlap": 3e-11,
+    "owned_column_normalization": 3e-11,
+    "owned_control_reflection_modulus": 3e-11,
+    "spatial_source_refinement": 3e-08,
+    "spectral_interpolation": 3e-11,
+    "tangent_boundary_trace": 3e-08,
+    "time_source_refinement": 3e-08
+  }
+}

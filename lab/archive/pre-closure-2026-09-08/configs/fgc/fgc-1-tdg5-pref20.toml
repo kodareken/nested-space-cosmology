@@ -1,0 +1,154 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG5-PREF20"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+freeze_result = "results/fgc-1-tdg5-frz1.json"
+freeze_config = "configs/fgc/fgc-1-tdg5-frz1.toml"
+freeze_reproducer = "scripts/reproduce_fgc_tdg5_frz1.py"
+freeze_module = "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement.py"
+freeze_document = "docs/fgc-tdg5-frz1.md"
+numerical_engine = "src/recursive_horizons/fgc/evolution/numerical_engine.py"
+
+[scope]
+target = "FGC-2-SF1-TDG5"
+role = "post_freeze_stage_complete_refinement_theorem_binder"
+calibration_branch = "GR-0"
+freeze_compact_result_read = true
+actual_terminal_history_arrays_consumed = false
+campaign_checkpoint_loaded = false
+campaign_checkpoint_resumed = false
+state_advanced = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+runtime_refinement_pair_implemented = false
+runtime_thresholds_frozen = false
+replacement_temporal_admission_defined = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+freeze_commit = "1716cc4acbc95a5b11e6e162e405c43330d389a6"
+freeze_config_sha256 = "90f2d548a0cc9062615e69b16c175ad9ecf2db6d49d97ecf35697b9173a50878"
+freeze_result_sha256 = "2af573edda929424542129a8391c8bcf34c081206ec73d8c4dd040fbe47a4c04"
+freeze_reproducer_sha256 = "c976d553d9bbf8c730f0fe0c7f5eb2ef0f5fcbb28b59b10e48b7e5ebb1a2d303"
+freeze_module_sha256 = "56cf8607adf6aa769eeade329feadf1dd0fc963002de7cc970961b1aa9ba6d55"
+freeze_document_sha256 = "f549406b381e1be70d04ea741c7c86d9c0e09140fdc104f876697bae4389c795"
+numerical_engine_sha256 = "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+freeze_commit_must_be_ancestor_of_HEAD = true
+all_bound_blobs_must_match_freeze_commit_and_worktree = true
+freeze_result_must_be_canonical_and_prospective = true
+raw_campaign_bundle_must_not_be_loaded = true
+
+[theorem_result]
+declared_interval_class = "P3_on_each_accepted_normalized_time_interval"
+data_order = ["left_value", "left_scaled_slope", "right_value", "right_scaled_slope"]
+sampling_determinant = "1"
+basis_determinant = "1"
+sampling_infinity_norm = "6"
+basis_infinity_norm = "9"
+condition_number_infinity_upper_bound = "54"
+left_half_restriction_determinant = "1/64"
+right_half_restriction_determinant = "1/64"
+maximum_candidate_count_per_half_interval = 4
+complete_candidate_set = "endpoints_plus_every_real_interior_derivative_root"
+endpoint_only_bump_absolute_maximum = "1"
+RK4_formal_order = 4
+RK4_Richardson_denominator = 15
+SSPRK3_formal_order = 3
+SSPRK3_Richardson_denominator = 7
+immutable_engine_exposes_complete_stage_and_endpoint_records = true
+fresh_candidate_endpoint_RHS_record_is_available = true
+runtime_pair_can_be_built_without_mutating_existing_step_proposal_shape = true
+declared_cubic_is_exact_PDE_history = false
+trajectory_asymptotic_regime_proved = false
+rigorous_global_PDE_error_bound_proved = false
+binary64_extremum_evaluator_implemented = false
+atomic_coarse_fine_transaction_implemented = false
+
+[runtime_authorization]
+authorized_object = "implementation_and_synthetic_validation_of_the_frozen_same_grid_refinement_pair"
+complete_dimensionless_u_p_q_owned_state_required = true
+same_bitwise_initial_state_required = true
+same_source_projector_and_spatial_operator_required = true
+coarse_one_full_step_is_evidence_only = true
+fine_two_half_step_path_is_the_only_eventual_committable_path = true
+fine_two_half_steps_must_commit_atomically_or_neither_commits = true
+unchanged_stage_source_health_CFL_boundary_scale_and_transaction_guards_required = true
+continuous_difference_must_include_all_endpoints_and_real_interior_derivative_roots = true
+binary64_root_and_value_evaluation_must_add_an_outward_arithmetic_debit = true
+thresholds_require_a_separate_prospective_freeze = true
+production_trajectory_authorized = false
+historical_PROTO13_stop_preserved = true
+historical_CAL10_result_reclassified = false
+
+[limitation_audit]
+Hermite_extension_is_a_declared_numerical_object_not_the_exact_PDE_history = true
+finite_dimensional_injectivity_does_not_prove_PDE_accuracy = true
+Richardson_factor_assumes_a_shared_leading_error_coefficient = true
+Richardson_factor_assumes_the_tested_step_is_in_the_asymptotic_regime = true
+Richardson_debit_is_not_a_rigorous_global_PDE_bound = true
+binary64_continuous_extremum_implementation_remains_open = true
+spatial_ladders_and_cross_method_agreement_remain_required = true
+complete_DEF1_error_ledger_remains_required = true
+observed_trapped_or_Raychaudhuri_margin_may_not_set_the_threshold = true
+
+[proof_contract]
+freeze_commit_and_all_bound_blobs_must_match = true
+freeze_result_must_preserve_the_unexecuted_theorem_and_runtime_boundary = true
+Hermite_map_must_be_rederived_by_independent_basis_expansion_and_elimination = true
+half_interval_restrictions_and_determinants_must_be_rederived_exactly = true
+continuous_cubic_extremum_candidate_theorem_must_be_completed = true
+endpoint_only_alias_control_must_have_exact_interior_maximum_one = true
+method_owned_Richardson_relations_and_assumptions_must_be_explicit = true
+immutable_engine_stage_and_fresh_endpoint_RHS_shape_must_be_checked_syntactically = true
+freeze_preflight_must_be_reexecuted_only_as_an_independent_crosscheck = true
+no_history_checkpoint_state_or_candidate_data_may_be_loaded = true
+lineage_theorem_engine_authorization_nonclaim_and_claim_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG4_sampling_identifiability_theorem_completed = true
+current_temporal_spectral_rule_retired_as_continuum_admission = true
+current_temporal_spectral_rule_retained_as_sampled_diagnostic = true
+replacement_temporal_gate_design_authorized = true
+TDG5_replacement_design_frozen = true
+TDG5_exact_no_history_controls_pass = true
+TDG5_stage_complete_refinement_theorem_completed = true
+runtime_refinement_pair_implementation_authorized = true
+runtime_refinement_pair_implemented = false
+runtime_thresholds_frozen = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG4_sampling_identifiability_theorem_completed = true
+finite_samples_alone_proved_insufficient_for_continuum_top_band_bound = true
+current_temporal_spectral_rule_retired_as_continuum_admission = true
+current_temporal_spectral_rule_retained_as_sampled_diagnostic = true
+replacement_temporal_gate_design_authorized = true
+TDG5_replacement_design_frozen = true
+TDG5_exact_no_history_controls_pass = true
+TDG5_stage_complete_refinement_theorem_completed = true
+runtime_refinement_pair_implementation_authorized = true
+runtime_refinement_pair_implemented = false
+runtime_thresholds_frozen = false
+replacement_temporal_admission_defined = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,255 @@
+{
+  "artifact_id": "FGC-1-PRO16-FRZ1",
+  "artifact_payload": {
+    "decision": {
+      "PROTO16_frozen": true,
+      "calibration_authorized": false,
+      "candidate_execution_authorized": false,
+      "pretrajectory_authorized": false,
+      "successor_runtime_implemented": false,
+      "successor_runtime_owner": "FGC-1-HLT14-MON14"
+    },
+    "event_commit_contract": {
+      "accepted_boundary_time_must_equal_active_event_target": true,
+      "all_cursor_generations_and_attempt_ids_are_new": true,
+      "all_six_members_required": true,
+      "any_other_uncheckpointed_suffix_is_invalid": true,
+      "checkpoint_must_follow_fsynced_commit_record": true,
+      "completed_common_event_index_is_previous_plus_one": true,
+      "completed_event_time_is_prior_active_event_target": true,
+      "current_temporal_retry_count_must_equal_zero": true,
+      "durable_canonical_journal_record_before_checkpoint": true,
+      "frozen_common_event_cadence": "1/16",
+      "future_runtime_fault_injects_common_event_commit_record_and_checkpoint_windows": true,
+      "journal_record_kind": "COMMON_EVENT_COMMIT",
+      "new_attempt_id_uses_completed_common_event_index": true,
+      "new_checkpoint_binds_derived_successor_cursor_set_after_receipt_hash_exists": true,
+      "new_checkpoint_increments_committed_event_index": true,
+      "new_checkpoint_keeps_state_and_ledger_set_hashes_unchanged": true,
+      "new_cursor_generation_and_attempt_serial_are_prior_plus_one": true,
+      "new_cursor_journal_tip_is_commit_record_hash": true,
+      "new_cursor_parent_is_prior_cursor_hash": true,
+      "new_target_is_exact_prior_target_plus_cadence": true,
+      "only_lone_durable_common_event_commit_suffix_is_exactly_reconstructible": true,
+      "receipt_journal_parent_is_prior_checkpoint_journal_tip": true,
+      "receipt_payload_required_fields": [
+        "protocol_artifact_id",
+        "campaign_id",
+        "previous_campaign_generation",
+        "previous_checkpoint_sha256",
+        "previous_committed_common_event_index",
+        "completed_common_event_index",
+        "completed_event_time",
+        "next_event_target_time",
+        "member_keys",
+        "prior_cursor_set_sha256",
+        "prior_ledger_set_sha256",
+        "prior_accepted_state_set_sha256"
+      ],
+      "receipt_sha256_is_outer_journal_record_sha256": true,
+      "required_member_mode": "FRESH_READY",
+      "self_successor_cursor_set_and_checkpoint_hashes_forbidden_in_receipt_payload": true
+    },
+    "immutable_lineage": {
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "evidence_checkpoint_commit": "fddc7455621e805f833bc7a89bcf6712f27c6204",
+      "tracked_compact_records": [
+        {
+          "matches_sealed_commit_and_worktree": true,
+          "path": "configs/fgc/fgc-2-sf1-protocol-v15.toml",
+          "sha256": "f1f1849d85b6cbe1eb61267392a63ca11389f551df127033ddf905abb38fdc3b"
+        },
+        {
+          "matches_sealed_commit_and_worktree": true,
+          "path": "configs/fgc/fgc-1-pro15-frz1.toml",
+          "sha256": "1a45af49cca92701a79cf103fd6795ffebf6353af372bff779cd4aae90f71676"
+        },
+        {
+          "matches_sealed_commit_and_worktree": true,
+          "path": "results/fgc-1-pro15-frz1.json",
+          "sha256": "99d24425cb5d40da2e248605265b83bcdc82a2126cfa4b5bce4239c6ef30635c"
+        },
+        {
+          "matches_sealed_commit_and_worktree": true,
+          "path": "results/fgc-1-hlt13-mon13.json",
+          "sha256": "de55f8d55a1db0043945d3553c7d2070703809b82c1f7141bf923c036b9df5b7"
+        },
+        {
+          "matches_sealed_commit_and_worktree": true,
+          "path": "src/recursive_horizons/fgc/evolution/proto15_runtime.py",
+          "sha256": "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+        }
+      ]
+    },
+    "mutation_controls": {
+      "cadence": true,
+      "claim": true,
+      "event_kind": true,
+      "genesis": true,
+      "genesis_self_hash": true,
+      "hidden_member_descriptors": true,
+      "launch_tuple": true,
+      "receipt_cycle": true
+    },
+    "namespace_precondition": {
+      "both_new_namespaces_absent": true,
+      "freeze_created_no_namespace": true,
+      "records": [
+        {
+          "absent_before_freeze": true,
+          "path": "runs/fgc-2-sf1/proto16/calibration"
+        },
+        {
+          "absent_before_freeze": true,
+          "path": "runs/fgc-2-sf1/proto16/holdout"
+        }
+      ]
+    },
+    "restart_descriptor_contract": {
+      "amplitude": "3",
+      "branch": "GR-0",
+      "member_keys_in_canonical_order": [
+        "RK4-2049",
+        "RK4-4097",
+        "RK4-8193",
+        "SSPRK3-4097",
+        "SSPRK3-8193",
+        "SSPRK3-16385"
+      ],
+      "no_state_reinitialization_reprojection_interpolation_or_refitting_is_permitted": true,
+      "restart_coordinate_time": "23/16",
+      "six_restart_descriptors_inherited_by_exact_PROTO15_hash": true
+    },
+    "trusted_genesis_contract": {
+      "authority_artifact_id": "FGC-1-HLT14-MON14",
+      "authority_binds_external_immutable_manifest_or_commit": true,
+      "authority_must_be_committed_before_namespace_creation": true,
+      "authorization_result_must_not_self_reference_its_own_commit_or_result_hash": true,
+      "genesis_checkpoint_is_derivable_without_namespace_generated_value": true,
+      "genesis_spec_and_checkpoint_must_not_embed_genesis_spec_sha256": true,
+      "genesis_spec_location": "embedded_in_future_HLT14_result",
+      "genesis_spec_required_fields": [
+        "protocol_artifact_id",
+        "protocol_config_sha256",
+        "protocol_freeze_result_sha256",
+        "hlt13_result_sha256",
+        "run_plan_sha256",
+        "runtime_module_sha256",
+        "adapter_module_sha256",
+        "runner_sha256",
+        "numerical_environment",
+        "campaign_id",
+        "namespace",
+        "journal_root_parent_sha256",
+        "common_event_index",
+        "active_event_target_time",
+        "member_descriptors",
+        "member_descriptor_set_sha256",
+        "physical_bundle_location",
+        "physical_bundle_sha256",
+        "genesis_checkpoint_sha256",
+        "cursor_set_sha256",
+        "ledger_set_sha256",
+        "accepted_state_set_sha256"
+      ],
+      "launch_authority_tuple_required_fields": [
+        "authorization_commit",
+        "authorization_result_path",
+        "authorization_result_sha256",
+        "genesis_spec_sha256"
+      ],
+      "member_descriptor_required_fields": [
+        "member_key",
+        "method",
+        "point_count",
+        "source_checkpoint",
+        "state_sha256",
+        "restart_payload_sha256",
+        "state_shape",
+        "state_dtype",
+        "state_layout",
+        "accepted_boundary_time",
+        "step_index",
+        "transaction_serial",
+        "initial_TDG6_ledger_sha256",
+        "physical_bundle_member_sha256"
+      ],
+      "member_descriptor_set_sha256_is_checksum_not_substitute": true,
+      "member_descriptors_are_complete_canonical_six_member_collection": true,
+      "runner_must_prove_authorization_result_blob_is_tracked_at_launch_authorization_commit": true,
+      "trusted_Git_history_is_external_root_assumption": true,
+      "wholesale_self_consistent_store_replacement_is_not_authenticated_without_authority": true
+    }
+  },
+  "classification": "prospective_common_event_commit_and_external_trusted_genesis_protocol_freeze_without_runtime_or_trajectory",
+  "derivation_document": "docs/fgc-pro16-frz1.md",
+  "derivation_document_sha256": "013744085c5b7ec971f12c09547294cb6e0220bfccbdfff60932120339d8b9d3",
+  "gate_status": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO15_runtime_implementation_reused_but_PROTO16_transition_unimplemented": true,
+    "PROTO16_calibration_completed": false,
+    "PROTO16_common_event_commit_contract_frozen": true,
+    "PROTO16_external_trusted_genesis_contract_frozen": true,
+    "PROTO16_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO16_frozen": true,
+    "PROTO16_output_namespace_created": false,
+    "PROTO16_pretrajectory_runtime_authorized": false,
+    "PROTO16_successor_runtime_implemented": false,
+    "PROTO16_trajectory_read": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro16_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro16_frz1.py": "6affd3e0138ea3fba8f0ceb092b97fdd92ffa8fa00983117ad3053c22a21bf8a",
+    "src/recursive_horizons/fgc/evolution/protocol_v16.py": "c1755e917649a9e1d81ff5fe250847d5b9bc9e273d2c3cc6dba689119d6b0318"
+  },
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO16_calibration_completed": false,
+    "PROTO16_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO16_output_namespace_created": false,
+    "PROTO16_pretrajectory_runtime_authorized": false,
+    "PROTO16_successor_runtime_implemented": false,
+    "PROTO16_trajectory_read": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "PROTO16_trajectory_read": false,
+    "SGBL_trajectory_read": false,
+    "historical_raw_campaign_or_checkpoint_opened": false,
+    "mechanism_question_answered": false,
+    "predecessor_protocol": "FGC-2-SF1-PROTO15",
+    "role": "premise_only_common_event_commit_and_external_trusted_genesis_contract_certificate",
+    "successor_runtime_owner": "FGC-1-HLT14-MON14",
+    "target_protocol": "FGC-2-SF1-PROTO16"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro16-frz1.toml": "5c296d158e02b40faf576be3ff3261f9ccf76f9c6f01025c489e6b0aba5aaea4",
+    "configs/fgc/fgc-2-sf1-protocol-v16.toml": "3b0ab8663ed0568f03841167a2db096419b0978a71b534eefa9f9bb9a6787c75"
+  }
+}

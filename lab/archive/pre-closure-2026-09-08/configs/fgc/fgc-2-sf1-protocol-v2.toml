@@ -1,0 +1,266 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO2"
+protocol_version = 2
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO1"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol.toml"
+preflight_artifact_id = "FGC-1-ID0-PREF1"
+preflight_config = "configs/fgc/fgc-1-id0-pref1.toml"
+preflight_result = "results/fgc-1-id0-pref1.json"
+revision_classification = "premise_based_pre_holdout_revision"
+revision_reason = "PROTO1_omitted_Pi_phi_and_original_r_chi_amplitudes_missed_initial_compactness_floor"
+minimal_completion_used_for_preflight = "Pi_phi=0"
+original_protocol_preserved = true
+FGCQR_outcomes_inspected_before_revision = false
+SGBL_outcomes_inspected_before_revision = false
+repair_scan_source = "GR0_constraints_only"
+repair_scan_candidate_amplitudes = ["2", "5/2", "3", "7/2", "4", "9/2", "5"]
+preflight_compactness_absolute_upper_bound = "3927454576397784264080597/276701161105643274240000000"
+protocol_initial_compactness_minimum = "1/10"
+
+[action]
+branch_order = ["GR-0", "SGB-L", "FGC-QR"]
+physics_holdout_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_extension_role = "formulation_only_and_zero_on_the_metric_defined_gauge_surface"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+eft_cutoff_config = "configs/fgc/fgc-1-eft0-led1.toml"
+
+[dimensionless_parameters]
+cutoff_Lambda = "16"
+M_Pl_over_Lambda = "1/8"
+mu_over_Lambda = "3/16"
+beta = "-1/4"
+g4 = "1/2"
+eta_times_Lambda_squared = "128"
+alpha_times_Lambda_SGB_L = "-4"
+mu_times_L0 = "12"
+eta_over_L0_squared = "1/32"
+fixture_values_are_not_physical_matching = true
+cutoff_is_external_and_not_inferred_from_fixture = true
+
+[initial_data.chi]
+profile = "compact_C_infinity_bump_of_r_times_chi"
+unit_bump_formula = "B(x)=exp(1-1/(1-x^2))_for_abs(x)<1_and_0_otherwise"
+profile_formula = "r_times_chi(r)=amplitude*B((r-center)/half_width)"
+center_value_rule = "chi(0)=0_because_the_declared_support_has_a_strict_center_buffer"
+amplitude_candidates = ["2", "5/2", "3", "7/2", "4", "9/2", "5"]
+amplitude_selection_rule = "smallest_GR0_candidate_with_no_initial_trapped_sphere_and_a_converged_trapped_sphere_before_final_time"
+center_over_L0 = "3"
+half_width_over_L0 = "1/2"
+momentum_relation = "partial_t(r_chi)=partial_r(r_chi)_for_the_declared_future_ingoing_orientation"
+momentum_scale = "1"
+compactness_definition = "max_r(2*m_Misner_Sharp/R)"
+initial_compactness_min = "1/10"
+initial_compactness_max = "3/4"
+minimum_center_buffer_over_L0 = "5/2"
+minimum_outer_vacuum_buffer_over_L0 = "8"
+require_no_initial_trapped_sphere = true
+require_GR0_trapped_sphere_before_final_time = true
+same_physical_data_across_branches = "same_areal_radius_chi_profile_and_future_unit_normal_derivative_before_each_branch_constraint_solve"
+constraint_solve_may_change_geometry_but_not_declared_chi_profile = true
+
+[initial_data.phi_seed]
+profile = "compact_C_infinity_bump"
+unit_bump_formula = "B(x)=exp(1-1/(1-x^2))_for_abs(x)<1_and_0_otherwise"
+profile_formula = "phi(r)=amplitude*B((r-center)/half_width)"
+amplitude = "1/131072"
+center_over_L0 = "3"
+half_width_over_L0 = "1/2"
+unit_normal_momentum = "0"
+unit_normal_momentum_frame = "future_slice_unit_normal"
+nonzero_seed_required = true
+roundoff_activation_forbidden = true
+
+[calibration]
+branch = "GR-0"
+candidate_order = "strictly_ascending_as_declared_in_initial_data.chi.amplitude_candidates"
+uses_only_GR0_outcomes = true
+primary_method = "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4"
+selected_case_requires_comparator_confirmation = true
+required_nested_resolutions = 3
+trapped_detection = "theta_plus_and_theta_minus_each_strictly_negative_by_more_than_four_times_their_combined_error_bound_at_eight_consecutive_common_events"
+minimum_consecutive_trapped_samples = 8
+all_RUN1_health_and_constraint_stops_apply = true
+tie_break = "first_eligible_amplitude_in_declared_order"
+no_eligible_outcome = "calibration_failed_no_eligible_GR0_case"
+no_eligible_outcome_forbids_FGCQR_execution = true
+selected_amplitude_is_not_a_fit_to_FGCQR_outcomes = true
+manifest_must_serialize_every_candidate_config_result_hash_and_eligibility_reason = true
+
+[gauge]
+formulation = "metric_defined_reference_modified_harmonic"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+normal_factor_order = "1<tilde<hat"
+reference_policy = "derive_a_regular_center_reference_or_rederive_every_affected_REF1_descendant"
+physical_metric_defines_null_observables = true
+auxiliary_cones_are_not_physical_light_cones = true
+
+[numerics]
+radial_domain_min_over_L0 = "0"
+radial_domain_max_over_L0 = "32"
+measurement_radius_max_over_L0 = "6"
+final_time_over_L0 = "8"
+resolutions = [1025, 2049, 4097]
+cfl = "1/8"
+ko_dissipation = "1/64"
+checkpoint_interval_over_L0 = "1/16"
+output_interval_over_L0 = "1/64"
+primary_spatial_method = "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure"
+primary_time_method = "RK4"
+comparator_spatial_method = "second_order_diagonal_norm_SBP"
+comparator_time_method = "SSPRK3"
+no_excision_in_measurement_region = true
+monitor_every_accepted_stage = true
+numpy_is_only_planned_numerical_dependency = true
+
+[health_stops]
+newton_residual_infinity_max = "1/1000000000000"
+newton_iteration_max = 16
+newton_residual_must_decrease_monotonically = true
+kinetic_condition_number_max = "10000000000"
+normalized_branch_displacement_max = "1/16"
+effective_planck_ratio_min = "1/2"
+characteristic_imaginary_part_max = "1/10000000000"
+eigenframe_condition_number_max = "100000000"
+symmetrizer_coercivity_min = "1/10000000000"
+normalized_constraint_infinity_max = "1/10000000"
+minimum_observed_constraint_convergence_order = "3/2"
+phi_over_Lambda_max = "1/4"
+proper_frequency_over_Lambda_max = "1/4"
+proper_wavenumber_over_Lambda_max = "1/4"
+curvature_scale_over_Lambda_squared_max = "1/4"
+minimum_boundary_causal_buffer_over_L0 = "4"
+boundary_isolation_uses_evolving_all_cone_speed_envelope = true
+boundary_isolation_includes_SBP_stencil_reach = true
+outer_boundary_move_check_required = true
+stop_before_threshold_crossing = true
+first_failed_premise_determines_stop = true
+declared_scale_stops_are_not_a_complete_EFT_remainder_bound = true
+
+[analysis]
+future_null_orientation = "outgoing_k_plus_has_positive_areal_derivative_in_the_Minkowski_control"
+null_generator = "affinely_normalized_physical_metric_radial_null_generator"
+affine_launch_slice = "initial_constraint_solved_slice_t=0"
+affine_generator_label = "initial_areal_radius_R0"
+affine_initial_normalization = "minus_g_ab_k_plus^a_n_slice^b=1_at_the_launch_slice"
+affine_origin = "lambda_plus=0_at_the_launch_slice"
+affine_transport_equation = "k_plus^b*nabla_b*k_plus^a=0"
+affine_normalization_residual_max = "1/10000000000"
+cross_resolution_trajectory_alignment = "same_initial_areal_radius_R0_and_same_affine_origin"
+expansion_definition = "theta_plus=(2/R)*dR/dlambda_plus"
+trapped_definition = "theta_plus<0_and_theta_minus<0_with_one_fixed_orientation"
+raychaudhuri_rhs = "-theta_squared/2-shear_squared-R_ab_k^a_k^b"
+activation_observable = "max_measurement_domain_abs_phi_divided_by_initial_seed_peak"
+minimum_resolved_activation_factor = "2"
+activation_requires_growth_over_seed_and_matched_controls = true
+matched_GR0_and_SGBL_controls_required = true
+error_components = ["spatial_temporal_Richardson", "constraint", "initial_data", "nonlinear_source", "gauge", "affine", "null", "trajectory_alignment", "interpolation", "extraction_window", "boundary"]
+error_combination = "conservative_sum_of_componentwise_upper_bounds"
+direct_Raychaudhuri_agreement_residual_max = "1/100000000"
+positive_margin_over_error_factor = 4
+minimum_consecutive_positive_samples = 8
+minimum_affine_interval_over_L0 = "1/64"
+minimum_nested_resolutions = 3
+minimum_independent_methods = 2
+minimum_observed_solution_convergence_order = "3/2"
+direct_and_Raychaudhuri_routes_must_agree = true
+Ricci_term_alone_is_not_defocusing = true
+
+[norms_and_estimators]
+state_scaling = "dimensionless_U_uses_L0_and_canonical_mass_dimensions_for_u_p_q"
+matrix_norm = "induced_infinity_norm_after_declared_dimensionless_row_and_column_scaling"
+branch_displacement_reference = "continuation_root_from_the_preceding_accepted_Runge_Kutta_stage"
+constraint_normalization = "componentwise_max_of_declared_physical_source_scale_and_1e-30_before_infinity_norm"
+zero_denominator_policy = "zero_numerator_and_denominator_maps_to_zero_otherwise_fail_closed"
+curvature_scale = "maximum_measurement_domain_fourth_root_of_abs_Kretschmann_and_square_root_of_abs_Ricci_eigenvalues"
+proper_frequency = "maximum_over_declared_fields_of_windowed_local_orthonormal_normal_derivative_spectral_support"
+proper_wavenumber = "maximum_over_declared_fields_of_windowed_proper_radial_derivative_spectral_support"
+window_and_alias_policy = "compact_vacuum_buffer_window_with_top_one_eighth_of_resolved_spectrum_treated_as_unresolved_and_stopped"
+definition_owner = "FGC-1-HLT1-MON1_must_serialize_executable_formulas_before_holdout"
+thresholds_are_classical_stop_proxies_not_complete_EFT_control = true
+
+[partition]
+development_control_ids = ["MINKOWSKI-EXACT", "MMS-CENTER", "SYNTHETIC-STOP-INJECTION"]
+calibration_case_ids = ["GR0-AMPLITUDE-SELECTION", "GR0-BOUNDARY-ISOLATION", "GR0-RESTART"]
+held_out_case_ids = ["FGCQR-CENTRAL", "FGCQR-SEED-HALF", "FGCQR-SEED-DOUBLE", "FGCQR-WIDTH-SEVEN-EIGHTHS", "FGCQR-WIDTH-NINE-EIGHTHS"]
+held_out_phi_seed_factors = ["1", "1/2", "2"]
+held_out_chi_width_factors = ["1", "7/8", "9/8"]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro2-hld1.toml"
+resolved_holdout_manifest_required_before_authorization = true
+held_out_outcomes_inspected_before_freeze = false
+
+[provenance]
+machine_claim_scope = "repository_level_sequencing_not_private_human_blindness"
+human_private_observation_not_machine_verifiable = true
+holdout_output_root = "runs/fgc-2-sf1/proto2/holdout"
+manifest_requires_preexisting_output_inventory_to_be_empty = true
+runner_refuses_existing_output_or_overwrite = true
+manifest_requires_ordered_expanded_case_config_hashes = true
+manifest_requires_append_only_event_log_hash = true
+every_holdout_result_embeds_manifest_result_hash = true
+all_scope_bindings_precede_FGCQR_execution = true
+
+[robustness]
+physical_box_design = "closed_rational_relative_box_around_the_resolved_central_case"
+finite_samples_alone_do_not_prove_an_open_neighborhood = true
+open_neighborhood_requires_interval_or_continuity_certificate = true
+all_declared_physical_box_axes_have_nonzero_half_width = true
+ROB1_separates_physical_box_from_numerical_gauge_diagnostics = true
+gauge_cone_pairs = ["3:7", "4:9", "5:11"]
+cfl_values = ["1/16", "3/32", "1/8"]
+ko_dissipation_values = ["1/128", "1/64", "3/128"]
+outer_boundary_radius_over_L0_values = ["24", "32", "40"]
+
+[robustness.relative_half_widths]
+mu = "1/32"
+beta = "1/32"
+g4 = "1/32"
+eta = "1/32"
+resolved_chi_amplitude = "1/32"
+chi_half_width = "1/32"
+phi_seed_amplitude = "1/32"
+
+[negative_scope]
+completed_no_defocusing_scope = "only_the_frozen_finite_holdout_cases_time_window_and_measurement_domain"
+branch_rejection_scope = "explicit_parameter_box_times_data_family_times_formulation_named_by_the_obstruction_certificate"
+single_stop_or_solver_failure_cannot_reject_branch = true
+general_gradient_phase_transition_variable_cone_or_nested_domain_rejection_forbidden = true
+obstruction_requires_invariant_or_canonical_dimensionless_quantity = true
+obstruction_location_and_threshold_must_converge_under_refinement = true
+obstruction_requires_both_numerical_methods = true
+obstruction_requires_gauge_domain_and_boundary_perturbation = true
+obstruction_requires_analytic_inequality_or_independent_solver_formulation = true
+obstruction_certificate_required_for_branch_rejected_label = true
+
+[classification]
+positive_label = "completed_defocusing_candidate"
+negative_labels = ["completed_no_defocusing", "branch_rejected_by_converged_health_or_constraint_obstruction"]
+invalid_label = "invalid_implementation_or_nonconverged_run"
+typed_stop_labels = ["stopped_branch_loss", "stopped_hyperbolicity_loss", "stopped_constraint_loss", "stopped_scale_control", "stopped_boundary_contamination", "stopped_affine_or_measurement_contract_loss"]
+calibration_failure_label = "calibration_failed_no_eligible_GR0_case"
+measurement_stop_label = "stopped_affine_or_measurement_contract_loss"
+single_stop_is_only_an_obstruction_candidate = true
+scientific_negative_requires_family_completion_or_robust_converged_obstruction = true
+
+[revision_policy]
+outcome_based_parameter_changes_forbidden = true
+premise_based_revision_requires_new_protocol_version = true
+post_unblinding_revision_reclassifies_affected_cases_as_exploratory = true
+implementation_fault_rerun_requires_identical_configuration_hash = true
+all_resolved_holdout_hashes_must_precede_FGCQR_execution = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

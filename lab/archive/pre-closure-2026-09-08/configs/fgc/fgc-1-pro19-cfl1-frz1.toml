@@ -1,0 +1,80 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO19-CFL1-FRZ1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_exact_checkpoint_continuation_frozen"
+nonclaims = [
+  "The earlier stop is not a GR-0, trapping, FGC-QR, or physical result.",
+  "This authority does not adopt another plan, checkpoint, campaign, or branch.",
+  "This authority does not authorize SGB-L, FGC-QR, DEF1, or retained-EFT evolution.",
+]
+
+[original_campaign]
+authorization_commit = "c11ba422ce49ddd6f6175de1a9d2da675b97f2de"
+plan_sha256 = "f3b365978aeb2ae6063742807a3161bf5d6aa0c8392cd283fdec2a79d3e46060"
+campaign_id = "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683"
+branch = "GR-0"
+amplitude = "3"
+event = 23
+target_rational = "3/2"
+
+[safe_recovery_ancestor]
+checkpoint_generation = 6
+checkpoint_sha256 = "6277b3be4ffe1bd79b858e2b4770c244b88b9971cbff67ffb1a40d40f14e2e63"
+journal_sequence = 5
+journal_tip_sha256 = "bf92cbbab28fc55259f1d6cd1249fa73d5e740f067e4e4204e0dd3d1cfb854e5"
+disposition = "nonterminal"
+suffix_classification = "clean"
+suffix_kinds = []
+staging_paths = []
+terminal_lock_present = false
+writer_state = "stale_verified_lock"
+active_write = true
+member_key = "RK4-2049"
+member_descriptor_sha256 = "6b0dd985ab95ac52950348df5079a6b8fc4f5e7a78cf95031237cb0155c49c56"
+member_accepted_time_hex = "0x1.78554de5a30e0p+0"
+member_mode = "FRESH_READY"
+source_retry_total = 0
+cfl_retry_total = 0
+temporal_retry_total = 0
+pending_owner = "none"
+pending_cap_hex = "none"
+durable_cfl_rejection_exists = false
+durable_terminal_exists = false
+
+[diagnosed_stop]
+classification = "invalid_implementation_or_nonconverged_run"
+detail = "cfl_rejection cap reduction differs"
+owner_layer = "HLT16_source_CFL_rejection_serialization"
+accepted_fine_steps_before_stop = 5
+outer_requested_cap_hex = "0x1.aaa9612df9ba5p-8"
+actual_macro_width_hex = "0x1.aaa9612df9800p-8"
+correct_successor_cap_hex = "0x1.aaa9612df9800p-9"
+observed_CFL_ratio_hex = "0x1.000004e8e3345p-3"
+maximum_CFL_ratio_hex = "0x1.0000000000000p-3"
+accepted_boundary_restored = true
+durable_rejection_published = false
+physical_inference_earned = false
+
+[scope]
+permitted_action = "repair_retry_record_identity_and_resume_exact_generation_6_edge"
+target_or_threshold_change = false
+retry_cap_change = false
+physical_input_change = false
+plan_change = false
+checkpoint_rollback = false
+candidate_branch_opened = false
+raw_GEN0_reimport_permitted = false
+manual_stale_lock_removal_permitted = false
+
+[claims]
+continuation_contract_frozen = true
+corrected_execution_image_authenticated = false
+corrected_execution_image_authentication_required = true
+exact_generation_6_continuation_authorized_by_artifact_alone = false
+original_campaign_identity_preserved = true
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

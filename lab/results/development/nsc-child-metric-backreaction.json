@@ -1,0 +1,124 @@
+{
+  "comparison": {
+    "exact": "keys, types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 2e-13,
+    "float_rtol": 2e-13
+  },
+  "decision": {
+    "failure_owner": "constraint-complete same-action neck assembly: the source or source-determined initial geometry must supply the recorded density and momentum residuals before evolution",
+    "longer_background_or_CTP_Hessian_authorized": false,
+    "negative_null_signs_present_at_T0": true,
+    "null_sign_break_time": null,
+    "required_constraint_completion": {
+      "delta_T01": -0.0012238701558050947,
+      "delta_rho": -0.010709639230263857
+    },
+    "short_background_trajectory_defined": false
+  },
+  "imported_owners": {
+    "geometry": "stored Bronnikov child neck and child clock",
+    "gravity": "existing ADM/spherical two-derivative owner",
+    "standard_GR_rederived": false,
+    "state": "completed charged angular+compact CTP tensor"
+  },
+  "initial_constraint_gate": {
+    "component_residual_required_minus_CTP": {
+      "T01": -0.0012238701558050947,
+      "p_parallel": -0.4087681594081465,
+      "p_sphere": -0.888145876994946,
+      "rho": -0.010709639230263857
+    },
+    "declared_tolerance": 2e-10,
+    "diagnostic_repairs_not_applied": {
+      "Einstein_coefficient_fractional_change": 0.11894481391271983,
+      "Einstein_coefficient_required_by_density": 0.050374181443393076,
+      "corresponding_r_dot_at_unit_radius": 0.03773891784846328,
+      "keeps_a_minimum_sphere": false,
+      "momentum_constraint_repaired": false,
+      "nearest_H_sphere_satisfying_only_Hamiltonian": 0.03773891784846328
+    },
+    "maximum_absolute_normalized_constraint_residual": 0.11894481391271983,
+    "normalization_crosscheck": {
+      "G_N": 0.441906928009764,
+      "G_N_minus_one_over_16piA": 0.0,
+      "eight_pi_G_times_CTP_rho": 1.1189448139127198
+    },
+    "normalized_constraints": {
+      "geometric_hamiltonian": 1.0,
+      "hamiltonian_geometry_minus_source": -0.11894481391271983,
+      "momentum_geometry_minus_source": -0.013592708849071286,
+      "source_hamiltonian": 1.1189448139127198
+    },
+    "passes": false,
+    "radial_nulls": {
+      "minus": -0.25148747269395116,
+      "plus": -0.2465919920707308
+    },
+    "required_two_derivative_neck_tensor": {
+      "T01": 0.0,
+      "p_parallel": -0.7585562546772736,
+      "p_sphere": -0.7585562546772736,
+      "rho": 0.0900387236565223
+    }
+  },
+  "input_hashes": {
+    "results/development/adm-source-constraints.json": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56",
+    "results/development/charged-compact-ctp-completion.json": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6",
+    "results/development/nsc-background-projection.json": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48",
+    "results/development/scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+    "results/development/spherical-action.json": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456",
+    "results/development/unruh-state.json": "98d4659674ad7f7f6b474b7abcc448518bda6861bbafe3ff98c129918dd21343"
+  },
+  "locked_inputs": {
+    "A_at_magnetic_scale": 0.04501936182826115,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "metric_Cauchy_jet_changed": false,
+    "q": 4,
+    "state_or_scale_refitted": false,
+    "zeta": 15.785319939652627
+  },
+  "schema": "NSC-CHILD-METRIC-BACKREACTION-v1",
+  "scope": {
+    "CTP_Hessian_or_perturbations_computed": false,
+    "Einstein_or_ADM_equations_rederived": false,
+    "H_of_z_or_likelihood_computed": false,
+    "dark_fraction_or_fourteen_over_nineteen_fit": false,
+    "new_metric_ansatz": false,
+    "new_vacuum_subtraction_or_compensator": false,
+    "old_CTP_source_generator_rerun": false,
+    "q_Omega_zeta_or_V_full_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-child-metric-backreaction.md": "7fe2e56865cf8f72010672260f6d584a6d93af128775ffb2fd9d6772883fa7b9",
+    "scripts/derive_nsc_child_metric_backreaction.py": "66d396110777aee297ed7554f3bc06f3d0c94018f3e4ee72244902d93998258a",
+    "src/recursive_horizons/nsc_child_metric_backreaction.py": "442536050c1aa7602fcdf9939c982f475b5d52c1b6ca5ee96144681bb30909ca"
+  },
+  "status": "FAIL AT T=0: the locked Bronnikov neck and completed charged CTP tensor do not lie on the same Hamiltonian/momentum constraint surface",
+  "trajectory": {
+    "reason_covariance_not_replayed": "the algebraic initial constraint fails before a pressure or covariance update can affect the decision",
+    "requested_time_steps_started": 0,
+    "rows": [
+      {
+        "H_parallel": 1.557021169290531,
+        "H_sphere": -0.0,
+        "T": 0.0,
+        "T01": 0.0012238701558050947,
+        "a_parallel": 1.9267560770332839,
+        "hamiltonian_constraint_residual": -0.11894481391271983,
+        "momentum_constraint_residual": -0.013592708849071286,
+        "null_minus": -0.25148747269395116,
+        "null_plus": -0.2465919920707308,
+        "p_parallel": -0.34978809526912713,
+        "p_sphere": 0.1295896223176723,
+        "r": 1.0,
+        "rho": 0.10074836288678615
+      }
+    ],
+    "same_CTP_covariance_replayed": false,
+    "stop_reason": "ADM constraints precede evolution; stepping this slice would propagate invalid initial data rather than produce backreaction",
+    "stopped_at_T": 0.0
+  }
+}

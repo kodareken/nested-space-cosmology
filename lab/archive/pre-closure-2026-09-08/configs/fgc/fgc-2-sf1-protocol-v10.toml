@@ -1,0 +1,88 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO10"
+protocol_version = 10
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO9"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v9.toml"
+predecessor_protocol_sha256 = "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e"
+diagnosis_artifact_id = "FGC-1-CAL6-PREF8"
+diagnosis_config = "configs/fgc/fgc-1-cal6-pref8.toml"
+diagnosis_config_sha256 = "940238188ac8c76527165be6d48fcd1ef0e9b84565a9fe7a7e53b12a8e8559ea"
+diagnosis_result = "results/fgc-1-cal6-pref8.json"
+diagnosis_result_sha256 = "3d4624cca60363c9daf6f65f9393d959d7a7fafbcf6eac7f8dc9c2f237c24f5e"
+diagnosis_checkpoint_commit = "dd3f5adb22f08aa7950b74cef2595aaca2e8cd6e"
+revision_classification = "premise_only_post_preflight_finest_pair_spectral_interpretation_revision"
+revision_reasons = ["PROTO9_preflight_constructed_all_twelve_direct_states_without_opening_a_trajectory", "HLT7_all_raw_source_constraint_and_absolute_spectrum_gates_passed", "HLT7_all_four_t0_admissions_failed_only_the_finest_pair_nested_tail_ratio", "CAL6_preserved_all_sixteen_raw_finest_pair_failures", "CAL6_every_coarse_pair_ratio_passed_directly", "CAL6_every_medium_and_fine_absolute_spectrum_budget_passed_unchanged", "CAL6_all_failed_finest_pair_ratios_are_conditioned_below_the_measured_map_non_idempotence", "CAL6_complete_profiles_and_round_trip_residuals_contract_strictly", "CAL6_guarded_saturation_is_design_evidence_only"]
+revision_changes = ["finest_pair_nested_tail_admission_from_direct_only_to_direct_or_conditioning_guarded_saturation", "versioned_manifest_and_output_namespace"]
+all_unlisted_PROTO9_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_initial_data_and_resolution_ladder_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+source_solver_raw_residual_kinetic_transaction_and_retry_rules_unchanged = true
+methods_CFL_dissipation_and_final_time_unchanged = true
+constraint_ownership_magnitude_and_order_rules_unchanged = true
+absolute_spectral_budgets_and_direct_ratio_ceiling_unchanged = true
+coarse_to_medium_direct_ratio_veto_unchanged = true
+trapped_boundary_candidate_health_and_scale_stops_unchanged = true
+eligible_calibration_amplitudes_in_frozen_order = ["5/2", "3"]
+PROTO1_through_PROTO9_preserved = true
+PROTO9_GR0_trajectory_inspected_before_revision = false
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+mechanism_question_answered_before_revision = false
+
+[replacement.spectral_interpretation]
+point_counts = [2049, 4097, 8193]
+maximum_nested_tail_ratio = "1/4"
+coarse_to_medium_field_and_derivative_ratios_must_pass_directly = true
+medium_and_fine_individual_absolute_budgets_must_pass = true
+finest_pair_rule = "direct_ratio_below_one_quarter_or_conditioning_guarded_diagnostic_saturation"
+finest_pair_direct_ratio_remains_primary = true
+failed_finest_pair_ratio_may_only_use_guarded_saturation = true
+medium_and_fine_top_band_erasure_must_fit_inside_each_measured_round_trip_scale = true
+all_three_round_trip_residuals_must_contract_strictly_or_be_exact_zero = true
+whole_profile_infinity_and_RMS_differences_must_contract_strictly_or_be_exact_zero = true
+all_raw_power_fractions_ratios_residuals_and_erasure_witnesses_must_be_serialized = true
+tail_erasure_is_an_orthogonal_FFT_diagnostic_input_witness = true
+round_trip_interpolation_diagnostic_is_not_a_continuum_error_bound = true
+diagnostic_saturation_is_not_physical_resolution_or_mechanism_evidence = true
+no_epsilon_floor_or_new_numeric_tolerance_is_permitted = true
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro10-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto10/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto10/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+PROTO9_outputs_are_immutable_diagnostic_history_and_forbidden_as_PROTO10_outcomes = true
+
+[inheritance]
+PROTO9_resolution_ladder_inherited_unchanged = true
+PROTO9_constraint_ownership_magnitude_and_order_rules_inherited_unchanged = true
+PROTO9_absolute_spectral_budgets_and_direct_ratio_ceiling_inherited_unchanged = true
+PROTO9_coarse_to_medium_direct_ratio_veto_inherited_unchanged = true
+PROTO9_physical_numerical_transaction_and_stop_rules_inherited_unchanged = true
+HLT7_direct_state_hashes_and_raw_admissions_remain_valid_as_diagnostic_inputs_only = true
+CAL6_is_design_evidence_not_calibration_or_mechanism_evidence = true
+fresh_evolved_states_must_reassess_every_saturation_guard = true
+successor_runtime_owner = "FGC-1-HLT8-MON8"
+
+[claims]
+PROTO10_successor_runtime_implemented = false
+PROTO10_fresh_GR0_dynamic_calibration_authorized = false
+PROTO10_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

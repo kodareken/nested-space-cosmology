@@ -1,0 +1,190 @@
+{
+  "artifact_id": "FGC-1-TDG9-LOC1-FRZ1",
+  "artifact_payload": {
+    "PREF1_commit_bound": true,
+    "artifact_id": "FGC-1-TDG9-LOC1-FRZ1",
+    "claims": {
+      "GR0_calibration_completed": false,
+      "PREF1_terminal_bound": true,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "localization_execution_authorized": true,
+      "localization_result_earned": false,
+      "mechanism_result_earned": false,
+      "physical_result_earned": false
+    },
+    "classification": "premise_only_exact_failed_cubic_localization_authority",
+    "committed_image": {
+      "allowed_untracked_paths": [
+        ".qdrant-initialized"
+      ],
+      "base_commit": "e6052fe62c4e8eb54b64f92fe501a923f3d0e087",
+      "delta_paths": [
+        "Makefile",
+        "README.md",
+        "configs/fgc/fgc-1-tdg9-loc1-frz1.toml",
+        "docs/claim-ledger.md",
+        "docs/fgc-runtime-matrix.md",
+        "docs/fgc-tdg9-loc1-frz1.md",
+        "docs/research-roadmap.md",
+        "results/README.md",
+        "results/fgc-1-tdg9-loc1-frz1.json",
+        "scripts/check_repo.py",
+        "scripts/reproduce_fgc_tdg9_loc1_frz1.py",
+        "scripts/run_fgc_tdg9_loc1.py",
+        "src/recursive_horizons/fgc/evolution/tdg9_loc1_authority.py",
+        "src/recursive_horizons/fgc/evolution/tdg9_local_extrema.py",
+        "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent.py",
+        "tests/test_check_repo_tdg9_loc1_frz1.py",
+        "tests/test_fgc_tdg9_loc1_authority.py",
+        "tests/test_fgc_tdg9_loc1_runner.py",
+        "tests/test_fgc_tdg9_local_extrema.py"
+      ],
+      "single_direct_successor_required": true
+    },
+    "diagnostic_executed": false,
+    "environment": {
+      "byteorder": "little",
+      "machine": "arm64",
+      "numpy_version": "2.5.1",
+      "python_implementation": "CPython",
+      "python_version": "3.14.3",
+      "sys_platform": "darwin",
+      "system": "Darwin"
+    },
+    "output_namespace": "runs/fgc-2-sf1/tdg9-loc1/rcv3-retries-3-5",
+    "output_namespace_absent_at_prelaunch": true,
+    "owner_document": "docs/fgc-tdg9-loc1-frz1.md",
+    "predecessor": {
+      "binder_path": "src/recursive_horizons/fgc/evolution/tdg9_ar1_pref1_binder.py",
+      "binder_sha256": "59c9d1f52263fa58775e228f62a868d427e661b5d2c29e3ab5628f2abd61b4a6",
+      "commit": "e6052fe62c4e8eb54b64f92fe501a923f3d0e087",
+      "config_path": "configs/fgc/fgc-1-tdg9-ar1-pref1.toml",
+      "config_sha256": "c9a87856988f807c60bd44ac5eca1428402e7b2aa2eff51984b9899ce878dd79",
+      "owner_path": "docs/fgc-tdg9-ar1-pref1.md",
+      "owner_sha256": "735dfbec447a25e8046ad27d7578f13cd9056b1900266be7f7e0b75c1300b8a1",
+      "result_path": "results/fgc-1-tdg9-ar1-pref1.json",
+      "result_sha256": "e061bcbcebf0919ef237cb1e757b0fd9c40c0b37348b3bfb3409354c97b84bdf"
+    },
+    "project_version": "0.11.0",
+    "row_regions": [
+      {
+        "name": "centre_parity_derivative_row",
+        "owned_end": 0,
+        "owned_start": 0
+      },
+      {
+        "name": "inner_stencil_transition",
+        "owned_end": 2,
+        "owned_start": 1
+      },
+      {
+        "name": "smooth_interior",
+        "owned_end": 2040,
+        "owned_start": 3
+      },
+      {
+        "name": "outer_dissipation_transition",
+        "owned_end": 2041,
+        "owned_start": 2041
+      },
+      {
+        "name": "outer_projector_influenced",
+        "owned_end": 2043,
+        "owned_start": 2042
+      }
+    ],
+    "schema_version": 1,
+    "scope": {
+      "PDE_state_commit_authorized": false,
+      "SSPRK3_comparator_authorized": false,
+      "ULP_used_as_tolerance": false,
+      "campaign_store_mutation_authorized": false,
+      "candidate_branches_authorized": false,
+      "compact_verifier_store_blind": true,
+      "continuation_authorized": false,
+      "exact_failed_occurrences_only": true,
+      "exact_retries_3_4_5_only": true,
+      "fourth_width_authorized": false,
+      "historical_threshold_changed": false,
+      "live_store_read_only": true,
+      "resource_escalation_authorized": false,
+      "stage2_source_decomposition_authorized": false
+    },
+    "selection": {
+      "failed_occurrences": [
+        {
+          "channel": "u:alpha",
+          "retry": 3
+        },
+        {
+          "channel": "u:R",
+          "retry": 3
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 4
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 4
+        },
+        {
+          "channel": "u:R",
+          "retry": 4
+        },
+        {
+          "channel": "u:alpha",
+          "retry": 5
+        },
+        {
+          "channel": "u:v",
+          "retry": 5
+        },
+        {
+          "channel": "u:lambda",
+          "retry": 5
+        },
+        {
+          "channel": "u:R",
+          "retry": 5
+        },
+        {
+          "channel": "q:R",
+          "retry": 5
+        }
+      ],
+      "grid_spacing_hex": "0x1.0000000000000p-4",
+      "member_key": "RK4-2049",
+      "method": "RK4",
+      "outer_radius_hex": "0x1.0000000000000p+7",
+      "owned_row_count": 2044,
+      "point_count": 2049,
+      "retries": [
+        3,
+        4,
+        5
+      ]
+    },
+    "target_protocol": "FGC-2-SF1-PROTO18",
+    "work_budget": {
+      "base_cubic_count": 122640,
+      "complete_C_component_cubic_count": 122640,
+      "complete_C_maximum_candidates": 490560,
+      "component_polynomials_per_base_cubic": 3,
+      "executed_component_cubic_count": 367920,
+      "independent_refinement_bits": 192,
+      "polynomials_per_occurrence": 12264,
+      "primary_refinement_depth": 160,
+      "slope_S_component_cubic_count": 122640,
+      "slope_S_maximum_candidates": 490560,
+      "total_VSC_maximum_candidates": 1471680,
+      "value_V_component_cubic_count": 122640,
+      "value_V_maximum_candidates": 490560
+    }
+  },
+  "classification": "premise_only_exact_failed_cubic_localization_authority",
+  "gate_status": "pass",
+  "schema_version": 1,
+  "source_config_sha256": "0d1ddd4825fba479f8b0b245790ee4cc712d5ba0d0878fde0e9cc7c914e3a099"
+}

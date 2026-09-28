@@ -1,0 +1,120 @@
+{
+  "artifact_id": "FGC-1-TDG9-LOC1-ERR1",
+  "authority_commit": "14e26c43edbc88003d68cbcf24681bb090d98534",
+  "classification": "independent_root_enclosure_false_candidate_diagnosis",
+  "construction_evidence": {
+    "LOC1_manifest_absent": true,
+    "LOC1_output_namespace_absent": true,
+    "LOC1_staging_paths_absent": true,
+    "LOC1_terminal_absent": true,
+    "PREF2_owner_result_path": "results/fgc-1-tdg8-rcv3-pref2.json",
+    "PREF2_owner_result_sha256": "7e676cb40fd83deeff0912603641fd93ec139f274287b1d092aa8eccd2c1231f",
+    "PREF2_store_manifest_sha256": "46b57bc38f3bbfbec70c4b6b11a089cb799dc73135af0d9dac0e3dc289b952d4",
+    "campaign_store_current_snapshot_sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445",
+    "campaign_store_leaf_count": 115,
+    "current_snapshot_matches_sealed_PREF_lineage": true
+  },
+  "diagnosis": {
+    "affected_cubic_count": 184,
+    "co_maximizers": [
+      {
+        "global_index": 143,
+        "location": "right_endpoint",
+        "location_ordinal": 0,
+        "owned_row": 142,
+        "parameter": "1",
+        "polynomial_ordinal": 284,
+        "radius_hex": "0x1.1e00000000000p+3",
+        "row_region": "smooth_interior"
+      },
+      {
+        "global_index": 143,
+        "location": "left_endpoint",
+        "location_ordinal": 0,
+        "owned_row": 142,
+        "parameter": "0",
+        "polynomial_ordinal": 285,
+        "radius_hex": "0x1.1e00000000000p+3",
+        "row_region": "smooth_interior"
+      }
+    ],
+    "false_extra_candidate_count": 368,
+    "first_witness": {
+      "component": "value_V",
+      "delta": {
+        "denominator": "338460656020607282663380637712778772392143197677711984273740183180495765112991409062496875745134225841966700556811959451779072",
+        "numerator": "21210020543942968745638655"
+      },
+      "derivative_factorization": "V'(t)=6*delta*t*(t-1)",
+      "exact_derivative_roots": [
+        "0",
+        "1"
+      ],
+      "false_independent_root_intervals": [
+        {
+          "lower": "0",
+          "root_ordinal": 0,
+          "upper": "1/2"
+        },
+        {
+          "lower": "1/2",
+          "root_ordinal": 1,
+          "upper": "1"
+        }
+      ],
+      "global_index": 1,
+      "level": "D01",
+      "owned_row": 0,
+      "polynomial_factorization": "V(t)=delta*t^2*(2*t-3)",
+      "polynomial_ordinal": 0,
+      "primary_interior_roots": [],
+      "subinterval": 0
+    },
+    "independent_candidate_count": 8544,
+    "independent_classification": "nonunique_or_interval_inconclusive",
+    "owner": "tdg9_local_extrema_independent_v1_fixed_absolute_sqrt_enclosure",
+    "physical_or_model_breakdown": false,
+    "primary_candidate_count": 8176,
+    "primary_classification": "nonunique_or_interval_inconclusive",
+    "same_co_maximizer_count": 2,
+    "same_exact_maximum": {
+      "denominator": "10384593717069655257060992658440192",
+      "numerator": "7421011090394622581"
+    }
+  },
+  "exception": {
+    "code": "independent_disagreement",
+    "detail": [
+      3,
+      "u:alpha",
+      "value_V",
+      "D01"
+    ],
+    "observation_kind": "operator_observed_unserialized",
+    "owner": "localization",
+    "raw_exception_terminal_present": false
+  },
+  "gate_status": "pass",
+  "schema_version": 1,
+  "scope": {
+    "GR0_calibration_completed": false,
+    "LOC1_executed_successfully": false,
+    "LOC2_executed": false,
+    "PDE_state_committed": false,
+    "SSPRK3_comparator_executed": false,
+    "candidate_branch_opened": false,
+    "diagnosis_only": true,
+    "fourth_width_executed": false,
+    "mechanism_result_earned": false,
+    "ordinary_verification_store_blind": true,
+    "physical_result_earned": false,
+    "stage2_source_decomposition_executed": false
+  },
+  "sealed_LOC1_sha256": {
+    "configs/fgc/fgc-1-tdg9-loc1-frz1.toml": "0d1ddd4825fba479f8b0b245790ee4cc712d5ba0d0878fde0e9cc7c914e3a099",
+    "docs/fgc-tdg9-loc1-frz1.md": "a43e262f639899c1cd4788a191ee84ba18a5bf3e4004e1439b2361569235f2e9",
+    "results/fgc-1-tdg9-loc1-frz1.json": "1e43d81eb077563e824b661b4a7049cdf13f96d14a710695f7ae74576d9ebd1b",
+    "scripts/run_fgc_tdg9_loc1.py": "19d12813b7ee3fde6b044b224124d62909170fdfaffb728414a378984bac0996",
+    "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent.py": "d02fc7e719f962eb038e2704b004cff2b5ea11fa5f9b1584e82b3869a06f90c7"
+  }
+}

@@ -1,0 +1,978 @@
+#!/usr/bin/env python3
+"""Run deterministic structural checks for the canonical public surface."""
+
+from __future__ import annotations
+
+import argparse
+import ast
+from collections import Counter
+import json
+import os
+import re
+import stat
+import subprocess
+import sys
+import tomllib
+from fractions import Fraction
+from hashlib import sha256
+from math import gcd, isfinite, sqrt
+from pathlib import Path
+from urllib.parse import unquote
+
+Q = Fraction
+
+REPOSITORY = Path(__file__).resolve().parents[2]
+CANONICAL_ROOTS = (
+    REPOSITORY / "README.md",
+    REPOSITORY / "CHANGELOG.md",
+    REPOSITORY / "CONTRIBUTING.md",
+    REPOSITORY / "docs",
+    REPOSITORY / "paper",
+    REPOSITORY / "src",
+    REPOSITORY / "scripts",
+    REPOSITORY / "tests",
+    REPOSITORY / "pyproject.toml",
+    REPOSITORY / "CITATION.cff",
+)
+REQUIRED = (
+    "AGENTS.md",
+    "PLAN.md",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    ".rgignore",
+    ".github/workflows/verify.yml",
+    "Makefile",
+    "mk/current-foundation.mk",
+    "mk/historical-certificates.mk",
+    "mk/closed-live-targets.mk",
+    "archive/historical-tests/README.md",
+    "archive/historical-tests/test_fgc_pro19_sid3_real_store_preflight.py",
+    "archive/reviews/review-summary-2026-08-21.md",
+    "scripts/build_artifact_catalog.py",
+    "scripts/check_repo.py",
+    "scripts/repo_checks/__init__.py",
+    "scripts/repo_checks/_shared.py",
+    "scripts/repo_checks/core.py",
+    "scripts/repo_checks/public.py",
+    "scripts/repo_checks/calibration.py",
+    "scripts/repo_checks/progression.py",
+    "scripts/repo_checks/temporal_diagnostics.py",
+    "scripts/repo_checks/catalog.py",
+    "tests/test_historical_runner_import_boundary.py",
+    "tests/test_phase_minus1_artifact_catalog.py",
+    "tests/test_phase_minus1_check_repo_dispatcher.py",
+    "tests/test_phase_minus1_make_routing.py",
+    "tests/test_phase_minus1_public_authority.py",
+    "tests/test_evidence_io.py",
+    "pyproject.toml",
+    "requirements-paper.txt",
+    "requirements-evolution.txt",
+    "paper/recursive-horizons.md",
+    "paper/recursive-horizons.pdf",
+    "paper/references.bib",
+    "paper/fgc-local-defocusing/README.md",
+    "configs/fgc/artifact-catalog.json",
+    "docs/active-code-map.md",
+    "docs/evidence-io.md",
+    "docs/cleanup-baseline-2026-08-30.md",
+    "docs/finite-gradient-closure.md",
+    "docs/fgc-action-gate.md",
+    "docs/fgc-metric-variation.md",
+    "docs/fgc-hyp1-reduction.md",
+    "docs/fgc-hyp1-symbol.md",
+    "docs/fgc-hyp1-modified-harmonic.md",
+    "docs/fgc-hyp1-mhg-reference.md",
+    "docs/fgc-hyp1-mhg-implicit.md",
+    "docs/fgc-hyp1-mhg-propagation.md",
+    "docs/fgc-hyp1-fo1-rc1.md",
+    "docs/fgc-hyp1-dom1-qift1.md",
+    "docs/fgc-hyp1-con1-comp1.md",
+    "docs/fgc-eft0-led1.md",
+    "docs/fgc-hyp1-dom2-mode1.md",
+    "docs/fgc-hyp1-dom3-uhyp1.md",
+    "docs/fgc-hyp1-con2-mprop1.md",
+    "docs/fgc-hyp1-con3-cau1.md",
+    "docs/fgc-hyp1-bnd1-md1.md",
+    "docs/fgc-def0-obs1.md",
+    "docs/fgc-eft1-open1.md",
+    "docs/fgc-run1-sym1.md",
+    "docs/fgc-src1-nl1.md",
+    "docs/fgc-con4-phy1.md",
+    "docs/fgc-ctr1-reg1.md",
+    "docs/fgc-id0-pref1.md",
+    "docs/fgc-id1-fam1.md",
+    "docs/fgc-dom4-run1.md",
+    "docs/fgc-hyp2-md1.md",
+    "docs/fgc-cal0-pref2.md",
+    "docs/fgc-pro4-frz1.md",
+    "docs/fgc-hlt2-mon2.md",
+    "docs/fgc-id2-all1.md",
+    "docs/fgc-cal1-pref3.md",
+    "docs/fgc-pro5-frz1.md",
+    "docs/fgc-hlt3-mon3.md",
+    "docs/fgc-cal2-pref4.md",
+    "docs/fgc-pro6-frz1.md",
+    "docs/fgc-hlt4-mon4.md",
+    "docs/fgc-cal3-pref5.md",
+    "docs/fgc-pro7-frz1.md",
+    "docs/fgc-hlt5-mon5.md",
+    "docs/fgc-cal4-pref6.md",
+    "docs/fgc-pro8-frz1.md",
+    "docs/fgc-hlt6-mon6.md",
+    "docs/fgc-cal5-pref7.md",
+    "docs/fgc-pro9-frz1.md",
+    "docs/fgc-hlt7-mon7.md",
+    "docs/fgc-cal6-pref8.md",
+    "docs/fgc-pro10-frz1.md",
+    "docs/fgc-hlt8-mon8.md",
+    "docs/fgc-cal7-pref9.md",
+    "docs/fgc-pro11-frz1.md",
+    "docs/fgc-hlt9-mon9.md",
+    "docs/fgc-cal8-pref10.md",
+    "docs/fgc-src2-cap1.md",
+    "docs/fgc-src2-pref11.md",
+    "docs/fgc-src3.md",
+    "docs/fgc-rsp1-frz1.md",
+    "docs/fgc-rsp1-pref12.md",
+    "docs/fgc-src4-vec1.md",
+    "docs/fgc-pro12-frz1.md",
+    "docs/fgc-hlt10-mon10.md",
+    "docs/fgc-cal9-pref13.md",
+    "docs/fgc-rsp2-frz1.md",
+    "docs/fgc-rsp2-pref14.md",
+    "docs/fgc-pro13-frz1.md",
+    "docs/fgc-hlt11-mon11.md",
+    "docs/fgc-cal10-pref15.md",
+    "docs/fgc-tdg1-frz1.md",
+    "docs/fgc-tdg1-pref16.md",
+    "docs/fgc-tdg2-frz1.md",
+    "docs/fgc-tdg2-pref17.md",
+    "docs/fgc-tdg3-frz1.md",
+    "docs/fgc-tdg3-pref18.md",
+    "docs/fgc-tdg4-frz1.md",
+    "docs/fgc-tdg4-pref19.md",
+    "docs/fgc-tdg5-frz1.md",
+    "docs/fgc-tdg5-pref20.md",
+    "docs/fgc-tdg5-imp1.md",
+    "docs/fgc-tdg6-frz1.md",
+    "docs/fgc-tdg6-pref21.md",
+    "docs/fgc-tdg6-imp2.md",
+    "docs/fgc-pro14-frz1.md",
+    "docs/fgc-hlt12-mon12.md",
+    "docs/fgc-cal11-pref22.md",
+    "docs/fgc-tdg7-frz1.md",
+    "docs/fgc-tdg7-pref23.md",
+    "docs/fgc-tdg7-imp3.md",
+    "docs/fgc-pro15-frz1.md",
+    "docs/fgc-hlt13-mon13.md",
+    "docs/fgc-pro16-frz1.md",
+    "docs/fgc-pro16-pref24.md",
+    "docs/fgc-pro17-frz1.md",
+    "docs/fgc-pro17-pref25.md",
+    "docs/fgc-hlt14-mon14.md",
+    "docs/fgc-pro18-frz1.md",
+    "docs/fgc-pro18-pref26.md",
+    "docs/fgc-pro18-auth1.md",
+    "docs/fgc-hlt15-gen1.md",
+    "docs/fgc-pro18-pref27.md",
+    "docs/fgc-pro19-frz1.md",
+    "docs/fgc-hlt16-mon16.md",
+    "docs/fgc-pro19-cfl1-frz1.md",
+    "docs/fgc-pro19-sid1-frz1.md",
+    "docs/fgc-pro19-sid2-pref1.md",
+    "docs/fgc-pro19-pref28.md",
+    "docs/fgc-tdg8-rcv2-auth1.md",
+    "docs/fgc-tdg8-rcv3.md",
+    "docs/fgc-tdg8-rcv3-pref1.md",
+    "docs/fgc-tdg8-rcv3-auth1.md",
+    "docs/fgc-tdg8-rcv3-rec1-auth1.md",
+    "docs/fgc-tdg8-rcv3-pref2.md",
+    "docs/fgc-tdg9-ar1-auth1.md",
+    "docs/fgc-tdg9-ar1-pref1.md",
+    "docs/fgc-runtime-matrix.md",
+    "docs/fgc-literature-ledger.md",
+    "docs/nested-gradient-spectrum.md",
+    "docs/epistemic-status.md",
+    "docs/claim-ledger.md",
+    "docs/research-roadmap.md",
+    "docs/data-provenance.md",
+    "docs/controlled-transition-model.md",
+    "docs/information-map.md",
+    "docs/perturbations-and-discriminator.md",
+    "docs/domain-settings.md",
+    "docs/desi-dr2-bao-likelihood.md",
+    "docs/gw170817-relative-cone-data.md",
+    "docs/global-matching-flux-closure.md",
+    "docs/einstein-cartan-collapse.md",
+    "docs/gmf-1b-preflight.md",
+    "docs/gmf-1b-ecd-symmetry.md",
+    "docs/gmf-1b-ecd-identity.md",
+    "docs/gmf-1b-ecd-torsion.md",
+    "docs/gmf-1b-ecd-kinetic.md",
+    "collected-data/manifest.csv",
+    "collected-data/published-constraints.json",
+    "configs/fgc/fgc-1-action-gate.toml",
+    "configs/fgc/fgc-1-metric-variation.toml",
+    "configs/fgc/fgc-1-hyp1-reduction.toml",
+    "configs/fgc/fgc-1-hyp1-symbol.toml",
+    "configs/fgc/fgc-1-hyp1-modified-harmonic.toml",
+    "configs/fgc/fgc-1-hyp1-mhg-reference.toml",
+    "configs/fgc/fgc-1-hyp1-mhg-implicit.toml",
+    "configs/fgc/fgc-1-hyp1-mhg-propagation.toml",
+    "configs/fgc/fgc-1-hyp1-fo1-rc1.toml",
+    "configs/fgc/fgc-1-hyp1-dom1-qift1.toml",
+    "configs/fgc/fgc-1-hyp1-con1-comp1.toml",
+    "configs/fgc/fgc-1-eft0-led1.toml",
+    "configs/fgc/fgc-1-hyp1-dom2-mode1.toml",
+    "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml",
+    "configs/fgc/fgc-1-hyp1-con2-mprop1.toml",
+    "configs/fgc/fgc-1-hyp1-con3-cau1.toml",
+    "configs/fgc/fgc-1-hyp1-bnd1-md1.toml",
+    "configs/fgc/fgc-1-def0-obs1.toml",
+    "configs/fgc/fgc-1-eft1-open1.toml",
+    "configs/fgc/fgc-1-run1-sym1.toml",
+    "configs/fgc/fgc-1-src1-nl1.toml",
+    "configs/fgc/fgc-1-con4-phy1.toml",
+    "configs/fgc/fgc-1-ctr1-reg1.toml",
+    "configs/fgc/fgc-1-id0-pref1.toml",
+    "configs/fgc/fgc-1-id1-fam1.toml",
+    "configs/fgc/fgc-1-dom4-run1.toml",
+    "configs/fgc/fgc-1-hyp2-md1.toml",
+    "configs/fgc/fgc-2-sf1-protocol.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v2.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v3.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v4.toml",
+    "configs/fgc/fgc-1-pro4-frz1.toml",
+    "configs/fgc/fgc-1-hlt2-mon2.toml",
+    "configs/fgc/fgc-1-id2-all1.toml",
+    "configs/fgc/fgc-1-cal1-pref3.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v5.toml",
+    "configs/fgc/fgc-1-pro5-frz1.toml",
+    "configs/fgc/fgc-1-cal2-run1.toml",
+    "configs/fgc/fgc-1-hlt3-mon3.toml",
+    "configs/fgc/fgc-1-cal2-pref4.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v6.toml",
+    "configs/fgc/fgc-1-pro6-frz1.toml",
+    "configs/fgc/fgc-1-cal3-run1.toml",
+    "configs/fgc/fgc-1-hlt4-mon4.toml",
+    "configs/fgc/fgc-1-cal3-pref5.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v7.toml",
+    "configs/fgc/fgc-1-pro7-frz1.toml",
+    "configs/fgc/fgc-1-cal4-run1.toml",
+    "configs/fgc/fgc-1-hlt5-mon5.toml",
+    "configs/fgc/fgc-1-cal4-pref6.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v8.toml",
+    "configs/fgc/fgc-1-pro8-frz1.toml",
+    "configs/fgc/fgc-1-cal5-run1.toml",
+    "configs/fgc/fgc-1-hlt6-mon6.toml",
+    "configs/fgc/fgc-1-cal5-pref7.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v9.toml",
+    "configs/fgc/fgc-1-pro9-frz1.toml",
+    "configs/fgc/fgc-1-cal6-run1.toml",
+    "configs/fgc/fgc-1-hlt7-mon7.toml",
+    "configs/fgc/fgc-1-cal6-pref8.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v10.toml",
+    "configs/fgc/fgc-1-pro10-frz1.toml",
+    "configs/fgc/fgc-1-cal7-run1.toml",
+    "configs/fgc/fgc-1-hlt8-mon8.toml",
+    "configs/fgc/fgc-1-cal7-pref9.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v11.toml",
+    "configs/fgc/fgc-1-pro11-frz1.toml",
+    "configs/fgc/fgc-1-cal8-run1.toml",
+    "configs/fgc/fgc-1-hlt9-mon9.toml",
+    "configs/fgc/fgc-1-cal8-pref10.toml",
+    "configs/fgc/fgc-1-src2-cap1.toml",
+    "configs/fgc/fgc-1-src2-pref11-point0.json",
+    "configs/fgc/fgc-1-src2-pref11.toml",
+    "configs/fgc/fgc-1-src3-controls.json",
+    "configs/fgc/fgc-1-src3.toml",
+    "configs/fgc/fgc-1-rsp1-frz1.toml",
+    "configs/fgc/fgc-1-rsp1-run1.toml",
+    "configs/fgc/fgc-1-rsp1-pref12.toml",
+    "configs/fgc/fgc-1-src4-vec1.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v12.toml",
+    "configs/fgc/fgc-1-pro12-frz1.toml",
+    "configs/fgc/fgc-1-cal9-run1.toml",
+    "configs/fgc/fgc-1-hlt10-mon10.toml",
+    "configs/fgc/fgc-1-cal9-pref13.toml",
+    "configs/fgc/fgc-1-rsp2-frz1.toml",
+    "configs/fgc/fgc-1-rsp2-run1.toml",
+    "configs/fgc/fgc-1-rsp2-pref14.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v13.toml",
+    "configs/fgc/fgc-1-pro13-frz1.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v14.toml",
+    "configs/fgc/fgc-1-pro14-frz1.toml",
+    "configs/fgc/fgc-1-pro14-run1.toml",
+    "configs/fgc/fgc-1-hlt12-mon12.toml",
+    "configs/fgc/fgc-1-cal11-pref22.toml",
+    "configs/fgc/fgc-1-tdg7-frz1.toml",
+    "configs/fgc/fgc-1-tdg7-pref23.toml",
+    "configs/fgc/fgc-1-tdg7-imp3.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v15.toml",
+    "configs/fgc/fgc-1-pro15-frz1.toml",
+    "configs/fgc/fgc-1-hlt13-mon13.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v16.toml",
+    "configs/fgc/fgc-1-pro16-frz1.toml",
+    "configs/fgc/fgc-1-pro16-pref24.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v17.toml",
+    "configs/fgc/fgc-1-pro17-frz1.toml",
+    "configs/fgc/fgc-1-pro17-pref25.toml",
+    "configs/fgc/fgc-1-hlt14-mon14.toml",
+    "configs/fgc/fgc-1-pro18-frz1.toml",
+    "configs/fgc/fgc-1-pro18-pref26.toml",
+    "configs/fgc/fgc-1-pro18-auth1.toml",
+    "configs/fgc/fgc-1-pro18-pref27.toml",
+    "configs/fgc/fgc-2-sf1-protocol-v18.toml",
+    "configs/fgc/fgc-1-pro19-frz1.toml",
+    "configs/fgc/fgc-1-hlt16-mon16.toml",
+    "configs/fgc/fgc-1-pro19-launch-authority.toml",
+    "configs/fgc/fgc-1-pro19-cfl1-frz1.toml",
+    "configs/fgc/fgc-1-pro19-sid1-frz1.toml",
+    "configs/fgc/fgc-1-pro19-sid2-pref1.toml",
+    "configs/fgc/fgc-1-pro19-pref28.toml",
+    "configs/fgc/fgc-1-tdg8-run1-auth1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv1-auth1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv2-auth1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv3-frz1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv3-pref1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv3-auth1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv3-rec1-auth1.toml",
+    "configs/fgc/fgc-1-tdg8-rcv3-pref2.toml",
+    "configs/fgc/fgc-1-tdg9-ar1-auth1.toml",
+    "configs/fgc/fgc-1-tdg9-ar1-pref1.toml",
+    "configs/fgc/fgc-1-pro13-run1.toml",
+    "configs/fgc/fgc-1-hlt11-mon11.toml",
+    "configs/fgc/fgc-1-cal10-pref15.toml",
+    "configs/fgc/fgc-1-tdg1-frz1.toml",
+    "configs/fgc/fgc-1-tdg1-pref16.toml",
+    "configs/fgc/fgc-1-tdg2-frz1.toml",
+    "configs/fgc/fgc-1-tdg2-pref17.toml",
+    "configs/fgc/fgc-1-tdg3-frz1.toml",
+    "configs/fgc/fgc-1-tdg3-pref18.toml",
+    "configs/fgc/fgc-1-tdg4-frz1.toml",
+    "configs/fgc/fgc-1-tdg4-pref19.toml",
+    "configs/fgc/fgc-1-tdg5-frz1.toml",
+    "configs/fgc/fgc-1-tdg5-pref20.toml",
+    "configs/fgc/fgc-1-tdg5-imp1.toml",
+    "configs/fgc/fgc-1-tdg6-frz1.toml",
+    "configs/fgc/fgc-1-tdg6-pref21.toml",
+    "configs/fgc/fgc-1-tdg6-imp2.toml",
+    "configs/fgc/fgc-runtime-matrix.toml",
+    "scripts/run_fgc_src2_affine_capture.py",
+    "scripts/reproduce_fgc_src2_pref11.py",
+    "scripts/reproduce_fgc_src3.py",
+    "scripts/reproduce_fgc_rsp1_frz1.py",
+    "scripts/run_fgc_rsp1_resolution_study.py",
+    "scripts/reproduce_fgc_rsp1_pref12.py",
+    "scripts/reproduce_fgc_src4_vec1.py",
+    "scripts/reproduce_fgc_pro12_frz1.py",
+    "scripts/reproduce_fgc_hlt10_mon10.py",
+    "scripts/run_fgc_gr0_calibration_v12.py",
+    "scripts/reproduce_fgc_cal9_pref13.py",
+    "scripts/reproduce_fgc_rsp2_frz1.py",
+    "scripts/run_fgc_rsp2_constraint_study.py",
+    "scripts/reproduce_fgc_rsp2_pref14.py",
+    "scripts/reproduce_fgc_pro13_frz1.py",
+    "scripts/reproduce_fgc_hlt11_mon11.py",
+    "scripts/run_fgc_gr0_calibration_v13.py",
+    "scripts/reproduce_fgc_cal10_pref15.py",
+    "scripts/reproduce_fgc_tdg1_frz1.py",
+    "scripts/reproduce_fgc_tdg1_pref16.py",
+    "scripts/reproduce_fgc_tdg2_frz1.py",
+    "scripts/reproduce_fgc_tdg2_pref17.py",
+    "scripts/reproduce_fgc_tdg3_frz1.py",
+    "scripts/reproduce_fgc_tdg3_pref18.py",
+    "scripts/reproduce_fgc_tdg4_frz1.py",
+    "scripts/reproduce_fgc_tdg4_pref19.py",
+    "scripts/reproduce_fgc_tdg5_frz1.py",
+    "scripts/reproduce_fgc_tdg5_pref20.py",
+    "scripts/reproduce_fgc_tdg5_imp1.py",
+    "scripts/reproduce_fgc_tdg6_frz1.py",
+    "scripts/reproduce_fgc_tdg6_pref21.py",
+    "scripts/reproduce_fgc_tdg6_imp2.py",
+    "scripts/reproduce_fgc_pro14_frz1.py",
+    "scripts/reproduce_fgc_hlt12_mon12.py",
+    "scripts/run_fgc_gr0_calibration_v14.py",
+    "scripts/reproduce_fgc_cal11_pref22.py",
+    "scripts/reproduce_fgc_tdg7_frz1.py",
+    "scripts/reproduce_fgc_tdg7_pref23.py",
+    "scripts/reproduce_fgc_pro15_frz1.py",
+    "scripts/reproduce_fgc_hlt13_mon13.py",
+    "scripts/reproduce_fgc_pro16_frz1.py",
+    "scripts/reproduce_fgc_pro16_pref24.py",
+    "scripts/reproduce_fgc_pro17_frz1.py",
+    "scripts/reproduce_fgc_hlt14_mon14.py",
+    "scripts/reproduce_fgc_pro17_pref25.py",
+    "scripts/reproduce_fgc_pro18_frz1.py",
+    "scripts/reproduce_fgc_pro18_pref26.py",
+    "scripts/reproduce_fgc_pro18_auth1.py",
+    "scripts/reproduce_fgc_pro18_pref27.py",
+    "scripts/run_fgc_proto17_hlt15_gen1.py",
+    "scripts/reproduce_fgc_pro19_frz1.py",
+    "scripts/reproduce_fgc_hlt16_mon16.py",
+    "scripts/reproduce_fgc_pro19_launch_manifest.py",
+    "scripts/reproduce_fgc_pro19_cfl1_frz1.py",
+    "scripts/reproduce_fgc_pro19_sid1_frz1.py",
+    "scripts/reproduce_fgc_pro19_sid2_pref1.py",
+    "scripts/reproduce_fgc_pro19_sid3_auth1.py",
+    "scripts/reproduce_fgc_pro19_pref28.py",
+    "scripts/reproduce_fgc_tdg8_run1_auth1.py",
+    "scripts/run_fgc_tdg8_successor_event.py",
+    "scripts/reproduce_fgc_tdg8_rcv1_auth1.py",
+    "scripts/run_fgc_tdg8_retry_recovery.py",
+    "scripts/reproduce_fgc_tdg8_rcv2_auth1.py",
+    "scripts/run_fgc_tdg8_bounded_retry.py",
+    "scripts/reproduce_fgc_tdg8_rcv3_frz1.py",
+    "scripts/reproduce_fgc_tdg8_rcv3_pref1.py",
+    "scripts/bootstrap_fgc_tdg8_rcv3.py",
+    "scripts/reproduce_fgc_tdg9_ar1_auth1.py",
+    "scripts/run_fgc_tdg9_ar1.py",
+    "scripts/reproduce_fgc_tdg9_ar1_pref1.py",
+    "scripts/bootstrap_fgc_pro19_sid3.py",
+    "scripts/status_fgc_pro19_event1.py",
+    "scripts/run_fgc_pro19_event1.py",
+    "scripts/run_fgc_test_partition.py",
+    "src/recursive_horizons/evidence_io.py",
+    "src/recursive_horizons/fgc/evolution/src2_affine_arithmetic.py",
+    "src/recursive_horizons/fgc/evolution/src2_exact_oracle.py",
+    "src/recursive_horizons/fgc/evolution/src3_reference_balanced_source.py",
+    "src/recursive_horizons/fgc/evolution/rsp1_resolution_runtime.py",
+    "src/recursive_horizons/fgc/evolution/rsp1_campaign_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/src4_vectorized_reference_source.py",
+    "src/recursive_horizons/fgc/evolution/protocol_v12.py",
+    "src/recursive_horizons/fgc/evolution/proto12_runtime.py",
+    "src/recursive_horizons/fgc/evolution/cal9_proto12_campaign_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/rsp2_checkpoint.py",
+    "src/recursive_horizons/fgc/evolution/rsp2_constraint_runtime.py",
+    "src/recursive_horizons/fgc/evolution/rsp2_pref14_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/protocol_v13.py",
+    "src/recursive_horizons/fgc/evolution/proto13_runtime.py",
+    "src/recursive_horizons/fgc/evolution/cal10_proto13_campaign_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/tdg1_temporal_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/tdg2_absolute_tail_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/tdg3_native_tail_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/tdg4_sampling_identifiability.py",
+    "src/recursive_horizons/fgc/evolution/tdg4_sampling_identifiability_theorem.py",
+    "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement.py",
+    "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_theorem.py",
+    "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py",
+    "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py",
+    "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_theorem.py",
+    "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py",
+    "src/recursive_horizons/fgc/evolution/protocol_v14.py",
+    "src/recursive_horizons/fgc/evolution/proto14_runtime.py",
+    "src/recursive_horizons/fgc/evolution/cal11_proto14_campaign_diagnosis.py",
+    "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py",
+    "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_lattice_theorem.py",
+    "src/recursive_horizons/fgc/evolution/protocol_v15.py",
+    "src/recursive_horizons/fgc/evolution/proto15_runtime.py",
+    "src/recursive_horizons/fgc/evolution/protocol_v17.py",
+    "src/recursive_horizons/fgc/evolution/proto17_pure_construction.py",
+    "src/recursive_horizons/fgc/evolution/proto17_construction_theorem.py",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt14_inputs.py",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt14_runtime.py",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt14_qualification.py",
+    "src/recursive_horizons/fgc/evolution/proto18_prelaunch_contract.py",
+    "src/recursive_horizons/fgc/evolution/proto18_production_inputs.py",
+    "src/recursive_horizons/fgc/evolution/proto18_historical_replay.py",
+    "src/recursive_horizons/fgc/evolution/proto18_pref26_binder.py",
+    "src/recursive_horizons/fgc/evolution/proto18_auth1_inputs.py",
+    "src/recursive_horizons/fgc/evolution/proto18_authority.py",
+    "src/recursive_horizons/fgc/evolution/proto17_hlt15_runtime.py",
+    "src/recursive_horizons/fgc/evolution/proto18_pref27_binder.py",
+    "src/recursive_horizons/fgc/evolution/proto19_progression_freeze.py",
+    "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py",
+    "src/recursive_horizons/fgc/evolution/proto19_progression_inputs.py",
+    "src/recursive_horizons/fgc/evolution/proto19_launch_manifest.py",
+    "src/recursive_horizons/fgc/evolution/proto19_launch_authority.py",
+    "src/recursive_horizons/fgc/evolution/proto19_cfl_continuation_authority.py",
+    "src/recursive_horizons/fgc/evolution/proto19_sid1_authority.py",
+    "src/recursive_horizons/fgc/evolution/proto19_sid2_binder.py",
+    "src/recursive_horizons/fgc/evolution/proto19_pref28_binder.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_successor_authority.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_successor_runtime.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_retry_recovery_authority.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_bounded_retry_authority.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_rcv3_freeze.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_rcv3_fork_runtime.py",
+    "src/recursive_horizons/fgc/evolution/tdg8_rcv3_pref1_binder.py",
+    "src/recursive_horizons/fgc/evolution/tdg9_ar1_authority.py",
+    "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic.py",
+    "src/recursive_horizons/fgc/evolution/tdg9_exact_temporal_arithmetic_independent.py",
+    "src/recursive_horizons/fgc/evolution/tdg9_ar1_pref1_binder.py",
+    "src/recursive_horizons/fgc/evolution/proto19_execution_closure.py",
+    "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py",
+    "src/recursive_horizons/fgc/evolution/proto19_resume_authority.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_member_codec.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_state_store.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_campaign_schema.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py",
+    "src/recursive_horizons/fgc/evolution/hlt16_mon16_artifact.py",
+    "src/recursive_horizons/fgc/evolution/proto16_transition_theorem.py",
+    "src/recursive_horizons/fgc/evolution/protocol_v16.py",
+    "src/recursive_horizons/fgc/evolution/spectral_sensitivity.py",
+    "src/recursive_horizons/fgc/evolution/spectral_sensitivity_v12.py",
+    "tests/test_fgc_src2_affine_arithmetic.py",
+    "tests/test_fgc_src2_capture_runner.py",
+    "tests/test_fgc_src2_exact_oracle.py",
+    "tests/test_fgc_src2_pref11_reproduction.py",
+    "tests/test_fgc_src3_reference_balanced_source.py",
+    "tests/test_fgc_src3_reproduction.py",
+    "tests/test_fgc_rsp1_resolution_runtime.py",
+    "tests/test_fgc_rsp1_frz1_reproduction.py",
+    "tests/test_fgc_rsp1_runner.py",
+    "tests/test_fgc_rsp1_campaign_diagnosis.py",
+    "tests/test_fgc_rsp1_pref12_reproduction.py",
+    "tests/test_fgc_src4_vectorized_reference_source.py",
+    "tests/test_fgc_src4_vec1_reproduction.py",
+    "tests/test_fgc_protocol_v12.py",
+    "tests/test_fgc_spectral_sensitivity.py",
+    "tests/test_fgc_spectral_sensitivity_v12.py",
+    "tests/test_fgc_pro12_frz1_reproduction.py",
+    "tests/test_fgc_proto12_runtime.py",
+    "tests/test_fgc_hlt10_mon10_reproduction.py",
+    "tests/test_fgc_gr0_campaign_runner_v12.py",
+    "tests/test_fgc_cal9_proto12_campaign_diagnosis.py",
+    "tests/test_fgc_cal9_pref13_reproduction.py",
+    "tests/test_fgc_rsp2_constraint_runtime.py",
+    "tests/test_fgc_rsp2_frz1_reproduction.py",
+    "tests/test_fgc_rsp2_runner.py",
+    "tests/test_fgc_rsp2_pref14_diagnosis.py",
+    "tests/test_fgc_rsp2_pref14_reproduction.py",
+    "tests/test_fgc_protocol_v13.py",
+    "tests/test_fgc_pro13_frz1_reproduction.py",
+    "tests/test_fgc_proto13_runtime.py",
+    "tests/test_fgc_hlt11_mon11_reproduction.py",
+    "tests/test_fgc_gr0_campaign_runner_v13.py",
+    "tests/test_fgc_cal10_proto13_campaign_diagnosis.py",
+    "tests/test_fgc_cal10_pref15_reproduction.py",
+    "tests/test_fgc_tdg1_temporal_diagnosis.py",
+    "tests/test_fgc_tdg1_frz1_reproduction.py",
+    "tests/test_fgc_tdg1_pref16_reproduction.py",
+    "tests/test_fgc_tdg2_absolute_tail_diagnosis.py",
+    "tests/test_fgc_tdg2_frz1_reproduction.py",
+    "tests/test_fgc_tdg2_pref17_reproduction.py",
+    "tests/test_fgc_tdg3_native_tail_diagnosis.py",
+    "tests/test_fgc_tdg3_frz1_reproduction.py",
+    "tests/test_fgc_tdg3_pref18_reproduction.py",
+    "tests/test_fgc_tdg4_sampling_identifiability.py",
+    "tests/test_fgc_tdg4_frz1_reproduction.py",
+    "tests/test_fgc_tdg4_sampling_identifiability_theorem.py",
+    "tests/test_fgc_tdg4_pref19_reproduction.py",
+    "tests/test_fgc_tdg5_stage_complete_refinement.py",
+    "tests/test_fgc_tdg5_frz1_reproduction.py",
+    "tests/test_fgc_tdg5_stage_complete_refinement_theorem.py",
+    "tests/test_fgc_tdg5_pref20_reproduction.py",
+    "tests/test_fgc_tdg5_stage_complete_refinement_runtime.py",
+    "tests/test_fgc_tdg5_imp1_reproduction.py",
+    "tests/test_fgc_tdg6_temporal_admission_design.py",
+    "tests/test_fgc_tdg6_frz1_reproduction.py",
+    "tests/test_fgc_tdg6_temporal_admission_theorem.py",
+    "tests/test_fgc_tdg6_pref21_reproduction.py",
+    "tests/test_fgc_tdg6_temporal_admission_runtime.py",
+    "tests/test_fgc_tdg6_imp2_reproduction.py",
+    "tests/test_fgc_protocol_v14.py",
+    "tests/test_fgc_pro14_frz1_reproduction.py",
+    "tests/test_fgc_proto14_runtime.py",
+    "tests/test_fgc_hlt12_mon12_reproduction.py",
+    "tests/test_fgc_gr0_campaign_runner_v14.py",
+    "tests/test_fgc_cal11_pref22_reproduction.py",
+    "tests/test_fgc_tdg7_binary64_subdivision_lattice.py",
+    "tests/test_fgc_tdg7_frz1_reproduction.py",
+    "tests/test_fgc_tdg7_stage_safe_lattice_theorem.py",
+    "tests/test_fgc_tdg7_pref23_reproduction.py",
+    "tests/test_fgc_protocol_v15.py",
+    "tests/test_fgc_pro15_frz1_reproduction.py",
+    "tests/test_fgc_proto15_runtime.py",
+    "tests/test_fgc_hlt13_mon13_reproduction.py",
+    "tests/test_fgc_protocol_v16.py",
+    "tests/test_fgc_pro16_frz1_reproduction.py",
+    "tests/test_fgc_proto16_transition_theorem.py",
+    "tests/test_fgc_pro16_pref24_reproduction.py",
+    "tests/test_fgc_protocol_v17.py",
+    "tests/test_fgc_proto17_pure_construction.py",
+    "tests/test_fgc_pro17_frz1_reproduction.py",
+    "tests/test_fgc_proto17_construction_theorem.py",
+    "tests/test_fgc_pro17_pref25_reproduction.py",
+    "tests/test_fgc_proto17_hlt14_inputs.py",
+    "tests/test_fgc_proto17_hlt14_runtime.py",
+    "tests/test_fgc_hlt14_mon14_reproduction.py",
+    "tests/test_fgc_pro18_frz1_reproduction.py",
+    "tests/test_fgc_proto18_production_inputs.py",
+    "tests/test_fgc_proto18_historical_replay.py",
+    "tests/test_fgc_proto18_pref26_binder.py",
+    "tests/test_fgc_pro18_pref26_reproduction.py",
+    "tests/test_fgc_proto18_auth1_inputs.py",
+    "tests/test_fgc_proto18_authority.py",
+    "tests/test_fgc_pro18_auth1_reproduction.py",
+    "tests/test_fgc_proto17_hlt15_runtime.py",
+    "tests/test_fgc_proto17_hlt15_runner.py",
+    "tests/test_fgc_proto18_pref27_binder.py",
+    "tests/test_fgc_pro18_pref27_reproduction.py",
+    "tests/test_check_repo_pro18_pref27.py",
+    "tests/test_fgc_proto19_progression_freeze.py",
+    "tests/test_fgc_proto19_progression_contract.py",
+    "tests/test_fgc_proto19_progression_inputs.py",
+    "tests/test_fgc_proto19_launch_manifest.py",
+    "tests/test_fgc_proto19_launch_authority.py",
+    "tests/test_fgc_proto19_cfl_continuation_authority.py",
+    "tests/test_fgc_proto19_sid1_authority.py",
+    "tests/test_check_repo_pro19_sid1_prelaunch.py",
+    "tests/test_fgc_proto19_sid2_binder.py",
+    "tests/test_check_repo_pro19_sid2_postrecovery.py",
+    "tests/test_check_repo_pro19_sid3_prelaunch.py",
+    "tests/test_fgc_proto19_pref28_binder.py",
+    "tests/test_check_repo_pro19_pref28.py",
+    "tests/test_fgc_tdg8_successor_authority.py",
+    "tests/test_fgc_tdg8_successor_runtime.py",
+    "tests/test_fgc_tdg8_successor_runner.py",
+    "tests/test_fgc_tdg8_retry_recovery_authority.py",
+    "tests/test_fgc_tdg8_retry_recovery_runner.py",
+    "tests/test_fgc_tdg8_bounded_retry_authority.py",
+    "tests/test_fgc_tdg8_bounded_retry_runner.py",
+    "tests/test_fgc_tdg8_rcv3_freeze.py",
+    "tests/test_fgc_tdg8_rcv3_fork_runtime.py",
+    "tests/test_check_repo_tdg8_rcv3_prelaunch.py",
+    "tests/test_fgc_tdg8_rcv3_pref1_binder.py",
+    "tests/test_check_repo_tdg8_rcv3_pref1.py",
+    "tests/test_fgc_tdg9_exact_temporal_arithmetic.py",
+    "tests/test_fgc_tdg9_ar1_authority.py",
+    "tests/test_fgc_tdg9_ar1_runner.py",
+    "tests/test_check_repo_tdg9_ar1_auth1.py",
+    "tests/test_fgc_tdg9_ar1_pref1_binder.py",
+    "tests/test_check_repo_tdg9_ar1_pref1.py",
+    "tests/test_fgc_proto19_execution_closure.py",
+    "tests/test_fgc_proto19_gr0_static_factory.py",
+    "tests/test_fgc_proto19_resume_authority.py",
+    "tests/test_fgc_pro19_sid3_bootstrap.py",
+    "tests/test_fgc_pro19_sid3_runner.py",
+    "tests/fgc_gen0_fixture.py",
+    "tests/test_hlt16_lifecycle.py",
+    "tests/test_hlt16_progression_attempt.py",
+    "tests/test_fgc_hlt16_member_codec.py",
+    "tests/test_fgc_hlt16_state_store.py",
+    "tests/test_fgc_hlt16_campaign_schema.py",
+    "tests/test_fgc_hlt16_campaign_store.py",
+    "tests/test_fgc_hlt16_campaign_recovery.py",
+    "tests/test_fgc_hlt16_campaign_runtime.py",
+    "tests/test_fgc_hlt16_mon16_artifact.py",
+    "tests/test_fgc_pro19_event1_status.py",
+    "tests/test_fgc_pro19_event1_runner.py",
+    "tests/test_check_repo_hlt16_prelaunch.py",
+    "tests/test_fgc_test_partition.py",
+    "results/fgc-1-rsp1-frz1.json",
+    "results/fgc-1-rsp1-pref12.json",
+    "results/fgc-1-tdg4-frz1.json",
+    "results/core-identities.json",
+    "results/controlled-model.json",
+    "results/desi-dr2-bao-profile.json",
+    "results/gw170817-timing.json",
+    "results/gmf-1-spherical-matching.json",
+    "results/einstein-cartan-collapse.json",
+    "results/gmf-1b-preflight.json",
+    "results/gmf-1b-ecd-symmetry.json",
+    "results/gmf-1b-ecd-identity.json",
+    "results/gmf-1b-ecd-torsion.json",
+    "results/gmf-1b-ecd-kinetic.json",
+    "results/fgc-1-action-gate.json",
+    "results/fgc-1-metric-variation.json",
+    "results/fgc-1-hyp1-reduction.json",
+    "results/fgc-1-hyp1-symbol.json",
+    "results/fgc-1-hyp1-modified-harmonic.json",
+    "results/fgc-1-hyp1-mhg-reference.json",
+    "results/fgc-1-hyp1-mhg-implicit.json",
+    "results/fgc-1-hyp1-mhg-propagation.json",
+    "results/fgc-1-hyp1-fo1-rc1.json",
+    "results/fgc-1-hyp1-dom1-qift1.json",
+    "results/fgc-1-hyp1-con1-comp1.json",
+    "results/fgc-1-eft0-led1.json",
+    "results/fgc-1-hyp1-dom2-mode1.json",
+    "results/fgc-1-hyp1-dom3-uhyp1.json",
+    "results/fgc-1-hyp1-con2-mprop1.json",
+    "results/fgc-1-hyp1-con3-cau1.json",
+    "results/fgc-1-hyp1-bnd1-md1.json",
+    "results/fgc-1-def0-obs1.json",
+    "results/fgc-1-eft1-open1.json",
+    "results/fgc-1-run1-sym1.json",
+    "results/fgc-1-src1-nl1.json",
+    "results/fgc-1-con4-phy1.json",
+    "results/fgc-1-ctr1-reg1.json",
+    "results/fgc-1-id0-pref1.json",
+    "results/fgc-1-id1-fam1.json",
+    "results/fgc-1-dom4-run1.json",
+    "results/fgc-1-hyp2-md1.json",
+    "results/fgc-1-cal0-pref2.json",
+    "results/fgc-1-pro4-frz1.json",
+    "results/fgc-1-hlt2-mon2.json",
+    "results/fgc-1-id2-all1.json",
+    "results/fgc-1-cal1-pref3.json",
+    "results/fgc-1-pro5-frz1.json",
+    "results/fgc-1-hlt3-mon3.json",
+    "results/fgc-1-cal2-pref4.json",
+    "results/fgc-1-pro6-frz1.json",
+    "results/fgc-1-hlt4-mon4.json",
+    "results/fgc-1-cal3-pref5.json",
+    "results/fgc-1-pro7-frz1.json",
+    "results/fgc-1-hlt5-mon5.json",
+    "results/fgc-1-cal4-pref6.json",
+    "results/fgc-1-pro8-frz1.json",
+    "results/fgc-1-hlt6-mon6.json",
+    "results/fgc-1-cal5-pref7.json",
+    "results/fgc-1-pro9-frz1.json",
+    "results/fgc-1-hlt7-mon7.json",
+    "results/fgc-1-cal6-pref8.json",
+    "results/fgc-1-pro10-frz1.json",
+    "results/fgc-1-hlt8-mon8.json",
+    "results/fgc-1-cal7-pref9.json",
+    "results/fgc-1-pro11-frz1.json",
+    "results/fgc-1-hlt9-mon9.json",
+    "results/fgc-1-cal8-pref10.json",
+    "results/fgc-1-src2-pref11.json",
+    "results/fgc-1-src3.json",
+    "results/fgc-1-src4-vec1.json",
+    "results/fgc-1-pro12-frz1.json",
+    "results/fgc-1-hlt10-mon10.json",
+    "results/fgc-1-cal9-pref13.json",
+    "results/fgc-1-rsp2-frz1.json",
+    "results/fgc-1-rsp2-pref14.json",
+    "results/fgc-1-pro13-frz1.json",
+    "results/fgc-1-hlt11-mon11.json",
+    "results/fgc-1-cal10-pref15.json",
+    "results/fgc-1-tdg1-frz1.json",
+    "results/fgc-1-tdg1-pref16.json",
+    "results/fgc-1-tdg2-frz1.json",
+    "results/fgc-1-tdg2-pref17.json",
+    "results/fgc-1-tdg3-frz1.json",
+    "results/fgc-1-tdg3-pref18.json",
+    "results/fgc-1-tdg4-pref19.json",
+    "results/fgc-1-tdg5-frz1.json",
+    "results/fgc-1-tdg5-pref20.json",
+    "results/fgc-1-tdg5-imp1.json",
+    "results/fgc-1-tdg6-frz1.json",
+    "results/fgc-1-tdg6-pref21.json",
+    "results/fgc-1-tdg6-imp2.json",
+    "results/fgc-1-pro14-frz1.json",
+    "results/fgc-1-hlt12-mon12.json",
+    "results/fgc-1-cal11-pref22.json",
+    "results/fgc-1-tdg7-frz1.json",
+    "results/fgc-1-tdg7-pref23.json",
+    "results/fgc-1-tdg7-imp3.json",
+    "results/fgc-1-pro15-frz1.json",
+    "results/fgc-1-hlt13-mon13.json",
+    "results/fgc-1-pro16-frz1.json",
+    "results/fgc-1-pro16-pref24.json",
+    "results/fgc-1-pro17-frz1.json",
+    "results/fgc-1-pro17-pref25.json",
+    "results/fgc-1-hlt14-mon14.json",
+    "results/fgc-1-pro18-frz1.json",
+    "results/fgc-1-pro18-pref26.json",
+    "results/fgc-1-pro18-auth1.json",
+    "results/fgc-1-pro18-pref27.json",
+    "results/fgc-1-pro19-frz1.json",
+    "results/fgc-1-hlt16-mon16.json",
+    "results/fgc-1-pro19-cfl1-frz1.json",
+    "results/fgc-1-pro19-sid1-frz1.json",
+    "results/fgc-1-pro19-sid2-pref1.json",
+    "results/fgc-1-pro19-pref28.json",
+    "results/fgc-1-tdg8-run1-auth1.json",
+    "results/fgc-1-tdg8-rcv1-auth1.json",
+    "results/fgc-1-tdg8-rcv2-auth1.json",
+    "results/fgc-1-tdg8-rcv3-frz1.json",
+    "results/fgc-1-tdg8-rcv3-pref1.json",
+    "results/fgc-1-tdg8-rcv3-auth1.json",
+    "results/fgc-1-tdg8-rcv3-rec1-auth1.json",
+    "results/fgc-1-tdg8-rcv3-pref2.json",
+    "results/fgc-1-tdg9-ar1-auth1.json",
+    "results/fgc-1-tdg9-ar1-pref1.json",
+    "results/nested-gradient-spectrum.json",
+)
+LINK_PATTERN = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+
+
+def _reject_duplicate_json_pairs(pairs: list[tuple[str, object]]) -> dict[str, object]:
+    result: dict[str, object] = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate JSON object key: {key}")
+        result[key] = value
+    return result
+
+
+def canonical_files() -> list[Path]:
+    files: list[Path] = []
+    for root in CANONICAL_ROOTS:
+        if root.is_file():
+            files.append(root)
+        elif root.is_dir():
+            files.extend(path for path in root.rglob("*") if path.is_file())
+    return files
+
+
+
+
+_MAX_HISTORICAL_AUTHORITY_BYTES = 64 * 1024 * 1024
+
+
+def _historical_authority_parts(relative: str, label: str) -> tuple[str, ...]:
+    path = Path(relative)
+    if (
+        path.is_absolute()
+        or not path.parts
+        or any(part in {"", ".", ".."} for part in path.parts)
+    ):
+        raise ValueError(f"{label} has an unsafe repository-relative path")
+    return tuple(path.parts)
+
+
+def _historical_directory_flags() -> int:
+    return (
+        os.O_RDONLY
+        | getattr(os, "O_DIRECTORY", 0)
+        | getattr(os, "O_NOFOLLOW", 0)
+    )
+
+
+def _open_historical_authority_parent(relative: str, label: str) -> tuple[int, str]:
+    """Open a repository-relative parent chain without following any link."""
+
+    parts = _historical_authority_parts(relative, label)
+    root_before = REPOSITORY.lstat()
+    if stat.S_ISLNK(root_before.st_mode) or not stat.S_ISDIR(root_before.st_mode):
+        raise ValueError(f"{label} repository root is unsafe")
+    current = os.open(REPOSITORY, _historical_directory_flags())
+    try:
+        root_opened = os.fstat(current)
+        if (
+            not stat.S_ISDIR(root_opened.st_mode)
+            or (root_before.st_dev, root_before.st_ino)
+            != (root_opened.st_dev, root_opened.st_ino)
+        ):
+            raise ValueError(f"{label} repository root changed before access")
+        for component in parts[:-1]:
+            before = os.stat(component, dir_fd=current, follow_symlinks=False)
+            if stat.S_ISLNK(before.st_mode) or not stat.S_ISDIR(before.st_mode):
+                raise ValueError(f"{label} ancestor is unsafe: {component}")
+            child = os.open(
+                component,
+                _historical_directory_flags(),
+                dir_fd=current,
+            )
+            opened = os.fstat(child)
+            if (
+                not stat.S_ISDIR(opened.st_mode)
+                or (before.st_dev, before.st_ino) != (opened.st_dev, opened.st_ino)
+            ):
+                os.close(child)
+                raise ValueError(f"{label} ancestor changed: {component}")
+            os.close(current)
+            current = child
+        return current, parts[-1]
+    except BaseException:
+        os.close(current)
+        raise
+
+
+def _historical_leaf_identity(metadata: os.stat_result) -> tuple[int, ...]:
+    return (
+        metadata.st_dev,
+        metadata.st_ino,
+        metadata.st_mode,
+        metadata.st_size,
+        metadata.st_mtime_ns,
+        metadata.st_ctime_ns,
+        metadata.st_nlink,
+    )
+
+
+def _probe_unique_regular_leaf(relative: str, label: str) -> bool:
+    """Probe one bounded repository leaf through a no-follow parent chain."""
+
+    try:
+        parent, leaf = _open_historical_authority_parent(relative, label)
+    except FileNotFoundError:
+        return False
+    descriptor = -1
+    try:
+        try:
+            before = os.stat(leaf, dir_fd=parent, follow_symlinks=False)
+        except FileNotFoundError:
+            return False
+        if (
+            not stat.S_ISREG(before.st_mode)
+            or before.st_nlink != 1
+            or before.st_size < 0
+            or before.st_size > _MAX_HISTORICAL_AUTHORITY_BYTES
+        ):
+            raise ValueError(f"{label} is not a unique bounded regular file")
+        descriptor = os.open(
+            leaf,
+            os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
+            dir_fd=parent,
+        )
+        opened = os.fstat(descriptor)
+        if _historical_leaf_identity(before) != _historical_leaf_identity(opened):
+            raise ValueError(f"{label} changed before probe")
+        after = os.stat(leaf, dir_fd=parent, follow_symlinks=False)
+        if _historical_leaf_identity(opened) != _historical_leaf_identity(after):
+            raise ValueError(f"{label} changed during probe")
+        return True
+    finally:
+        if descriptor != -1:
+            os.close(descriptor)
+        os.close(parent)
+
+
+def _read_unique_regular_bytes(relative: str, label: str) -> bytes:
+    """Read one bounded repository leaf through a no-follow parent chain."""
+
+    parent, leaf = _open_historical_authority_parent(relative, label)
+    descriptor = -1
+    try:
+        before = os.stat(leaf, dir_fd=parent, follow_symlinks=False)
+        if (
+            not stat.S_ISREG(before.st_mode)
+            or before.st_nlink != 1
+            or before.st_size < 0
+            or before.st_size > _MAX_HISTORICAL_AUTHORITY_BYTES
+        ):
+            raise ValueError(f"{label} is not a unique bounded regular file")
+        descriptor = os.open(
+            leaf,
+            os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0),
+            dir_fd=parent,
+        )
+        opened = os.fstat(descriptor)
+        identity = _historical_leaf_identity(before)
+        if identity != _historical_leaf_identity(opened):
+            raise ValueError(f"{label} changed before read")
+        chunks: list[bytes] = []
+        remaining = before.st_size
+        while remaining:
+            block = os.read(descriptor, min(1024 * 1024, remaining))
+            if not block:
+                raise ValueError(f"{label} ended early")
+            chunks.append(block)
+            remaining -= len(block)
+        if os.read(descriptor, 1):
+            raise ValueError(f"{label} grew during read")
+        after = os.fstat(descriptor)
+        if identity != _historical_leaf_identity(after):
+            raise ValueError(f"{label} changed during read")
+        path_after = os.stat(leaf, dir_fd=parent, follow_symlinks=False)
+        if identity != _historical_leaf_identity(path_after):
+            raise ValueError(f"{label} path changed during read")
+        return b"".join(chunks)
+    finally:
+        if descriptor != -1:
+            os.close(descriptor)
+        os.close(parent)
+
+__all__ = tuple(name for name in globals() if not name.startswith("__"))

@@ -1,0 +1,192 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG6-IMP2"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+PREF21_config = "configs/fgc/fgc-1-tdg6-pref21.toml"
+PREF21_result = "results/fgc-1-tdg6-pref21.json"
+PREF21_reproducer = "scripts/reproduce_fgc_tdg6_pref21.py"
+PREF21_module = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_theorem.py"
+PREF21_document = "docs/fgc-tdg6-pref21.md"
+TDG6_design_module = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py"
+TDG5_runtime = "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py"
+PROTO7_runtime = "src/recursive_horizons/fgc/evolution/proto7_runtime.py"
+normal_flow_tracer_owner = "scripts/run_fgc_gr0_calibration.py"
+implementation_module = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+
+[scope]
+target = "FGC-2-SF1-TDG6"
+role = "production_shaped_three_level_temporal_compositor_implementation_and_synthetic_qualification"
+calibration_branch = "GR-0"
+PREF21_compact_result_read = true
+actual_PROTO13_history_arrays_consumed = false
+campaign_checkpoint_loaded = false
+campaign_checkpoint_resumed = false
+production_state_advanced = false
+synthetic_runtime_controls_only = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+PREF21_commit = "b42f9548715ece3cd6ed5751c4f0b9aa8ead3ce3"
+PREF21_config_sha256 = "2138c4064126b7da9910e86d5bdf466f7a90391030e1d25b97779258b006d313"
+PREF21_result_sha256 = "88adb24e3b2fe32d29052defe9eed6481c7a20462386ef70a8fc5cd633aa1c1b"
+PREF21_reproducer_sha256 = "f7a37603dd78988b776019a1740e16e8e034498f37687b5731bd328c84196988"
+PREF21_module_sha256 = "629c7b832abd5967ee522074b4f31496be97d92b8a13a43447c3fc4d171a84d5"
+PREF21_document_sha256 = "d2a5d97b11ddbc7939dc81210d8fd44fb3f7d40ed87412fea7147b7cada40ef5"
+TDG6_design_module_sha256 = "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+TDG5_runtime_sha256 = "75fc11943f459ca7549f75a812fe961e55ae04bbdb13450c1fdd509b5b53a080"
+PROTO7_runtime_sha256 = "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734"
+normal_flow_tracer_owner_sha256 = "4e3734495edc0a289e5c61dc68e193cbe19629582234dd04c0c20a46d52774b3"
+PREF21_commit_must_be_ancestor_of_HEAD = true
+all_bound_predecessor_blobs_must_match_commit_and_worktree = true
+PREF21_result_must_be_canonical_and_authorize_only_implementation = true
+raw_campaign_bundle_must_not_be_loaded = true
+
+[three_level_compositor]
+level_names = ["outer", "medium", "fine"]
+level_step_counts = [1, 2, 4]
+all_levels_start_from_one_bitwise_accepted_state = true
+all_levels_use_same_method_source_projector_spatial_grid_and_macro_interval = true
+outer_and_medium_are_evidence_only = true
+only_complete_fine_four_quarter_path_is_committable = true
+all_seven_proposals_use_unchanged_PROTO7_transaction_gates = true
+RK4_total_shadow_stage_records = 35
+RK4_committed_fine_stage_records = 20
+SSPRK3_total_shadow_stage_records = 28
+SSPRK3_committed_fine_stage_records = 16
+production_trajectory_executed = false
+
+[continuous_interval]
+channel_order = [
+  "u:alpha", "u:v", "u:lambda", "u:R", "u:phi", "u:chi",
+  "p:alpha", "p:v", "p:lambda", "p:R", "p:phi", "p:chi",
+  "q:alpha", "q:v", "q:lambda", "q:R", "q:phi", "q:chi",
+]
+channel_count = 18
+D01_subinterval_count = 2
+D12_subinterval_count = 4
+endpoint_and_all_numerically_real_stationary_candidates_retained = true
+Bernstein_convex_hull_certification_retained = true
+coefficient_and_evaluation_debits_retained = true
+lower_bound_subtracts_complete_coefficient_and_evaluation_debits_outward = true
+upper_bound_is_complete_certified_continuous_upper = true
+classification_uses_exact_Fraction_images_of_binary64_bounds = true
+exact_squared_admission = "8*U12^2<=L01^2"
+complete_admission_is_all_of = true
+per_channel_debit_is_full_D12_upper = true
+debit_divided_by_Richardson_denominator = false
+absolute_or_outcome_scaled_tolerance_used = false
+
+[transaction_and_tracer]
+outer_medium_and_fine_have_independent_monitor_ledgers = true
+outer_medium_and_fine_have_independent_causal_ledgers = true
+outer_medium_and_fine_have_independent_normal_flow_tracers = true
+tracer_preview_runs_before_every_shadow_acceptance = true
+shadow_tracer_commit_mutates_only_its_level_clone = true
+prepare_revalidates_real_state_monitor_causal_tracer_and_debit_boundaries = true
+commit_revalidates_real_time_state_step_serial_monitor_causal_tracer_and_debit_boundaries = true
+late_commit_exception_rolls_back_monitor_causal_and_complete_tracer_state = true
+fine_state_monitor_causal_tracer_and_debit_are_one_return_boundary = true
+source_only_shadow_retry_remains_owned_by_PROTO7 = true
+non_source_shadow_failure_remains_inherited_terminal_evidence = true
+
+[temporal_retry_and_checkpoint]
+temporal_retry_factor = "1/2"
+maximum_temporal_retries_per_macro_step = 32
+minimum_macro_step = "1/1073741824"
+temporal_retry_counter_is_separate_from_source_and_CFL_counters = true
+rejection_evidence_contains_all_18_channel_decisions = true
+durable_sink_must_return_before_retry_ledger_exists = true
+failed_durable_sink_leaves_retry_ledger_unchanged = true
+accepted_step_resets_only_current_retry_counter = true
+cumulative_retry_count_and_complete_rejection_history_are_retained = true
+debit_accumulation_is_componentwise_nonnegative_and_outward = true
+checkpoint_round_trips_debit_vector_retry_counts_and_complete_rejection_history = true
+checkpoint_debit_vector_is_content_hashed = true
+checkpoint_claim_promotion_fails_closed = true
+
+[synthetic_qualification]
+both_methods_must_prepare_all_seven_paths = true
+both_methods_must_commit_only_the_fine_path = true
+exact_zero_and_resolved_pass_classes_required = true
+one_tiny_nonconvergent_channel_must_veto_all_of_admission = true
+large_convergent_difference_must_pass_and_retain_large_debit = true
+late_fine_non_source_failure_must_leave_every_real_ledger_unchanged = true
+source_only_fine_failure_must_retain_PROTO7_ownership = true
+tracer_or_debit_boundary_drift_must_fail_before_commit = true
+tracer_commit_failure_must_roll_back_every_mutable_real_ledger = true
+durable_temporal_retry_and_exhaustion_controls_required = true
+checkpoint_round_trip_and_mutation_controls_required = true
+dense_continuous_polynomial_audit_required = true
+implementation_and_claim_mutations_must_fail_closed = true
+
+[limitations]
+piecewise_cubic_extension_is_not_exact_PDE_history = true
+three_level_pass_does_not_prove_trajectory_asymptotics = true
+local_accumulated_debit_is_not_global_PDE_error_bound = true
+future_constraint_to_Raychaudhuri_stability_map_required = true
+spatial_ladders_and_cross_method_agreement_remain_required = true
+synthetic_runtime_qualification_is_not_production_trajectory = true
+historical_CAL10_and_PROTO13_results_are_not_reclassified = true
+no_GR0_SGBL_or_FGCQR_outcome_is_classified = true
+
+[proof_contract]
+PREF21_commit_and_all_bound_blobs_must_match = true
+PREF21_result_must_be_canonical_and_authorize_implementation_only = true
+both_methods_must_execute_all_seven_synthetic_shadow_paths = true
+only_the_complete_fine_path_may_commit = true
+complete_18_channel_continuous_interval_evidence_required = true
+frozen_exact_classifier_must_consume_binary64_interval_images = true
+one_failed_channel_must_veto_the_complete_admission = true
+large_convergent_difference_must_pass_without_magnitude_tolerance = true
+source_and_non_source_shadow_failures_must_retain_separate_ownership = true
+temporal_retry_must_be_durable_separate_bounded_and_nonphysical = true
+checkpoint_must_round_trip_debit_retry_and_rejection_ledgers = true
+boundary_drift_and_late_commit_failure_must_fail_atomically = true
+implementation_protocol_nonclaim_and_claim_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+TDG6_independent_binder_completed = true
+production_compositor_implementation_authorized = true
+production_compositor_implemented = true
+production_compositor_synthetic_qualification_passed = true
+PROTO14_freeze_design_authorized = true
+production_trajectory_authorized = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+TDG4_sampling_identifiability_theorem_completed = true
+current_temporal_spectral_rule_retired_as_continuum_admission = true
+current_temporal_spectral_rule_retained_as_sampled_diagnostic = true
+TDG5_runtime_refinement_pair_implemented = true
+TDG6_threshold_and_admission_design_frozen = true
+runtime_thresholds_frozen = true
+replacement_temporal_admission_defined = true
+TDG6_independent_binder_completed = true
+production_compositor_implementation_authorized = true
+production_compositor_implemented = true
+production_compositor_synthetic_qualification_passed = true
+PROTO14_freeze_design_authorized = true
+production_trajectory_authorized = false
+PROTO14_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,67 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-DOM1-QIFT1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+first_order_config = "configs/fgc/fgc-1-hyp1-fo1-rc1.toml"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+coordinate_radius = "4"
+center_included = false
+
+[formulation]
+residual = "complete_REF1_residual_R(a;z)=0"
+parameter_definition = "z=(u,p,q,p_r,q_r)_in_frozen_base_field_order"
+acceleration_definition = "a=p_t_in_frozen_base_field_order"
+parameter_order = ["u.h_tt", "u.h_tr", "u.h_rr", "u.areal_radius", "u.phi", "u.chi", "p.h_tt", "p.h_tr", "p.h_rr", "p.areal_radius", "p.phi", "p.chi", "q.h_tt", "q.h_tr", "q.h_rr", "q.areal_radius", "q.phi", "q.chi", "p_r.h_tt", "p_r.h_tr", "p_r.h_rr", "p_r.areal_radius", "p_r.phi", "p_r.chi", "q_r.h_tt", "q_r.h_tr", "q_r.h_rr", "q_r.areal_radius", "q_r.phi", "q_r.chi"]
+acceleration_order = ["p_t.h_tt", "p_t.h_tr", "p_t.h_rr", "p_t.areal_radius", "p_t.phi", "p_t.chi"]
+norm = "unscaled_componentwise_infinity_norm_in_frozen_field_order"
+theorem_route = "uniform_banach_contraction_with_krawczyk_box_inclusion"
+interval_arithmetic = "closed_exact_rational_endpoints_no_floating_point"
+differentiation_method = "exact_rational_interval_first_tangent_forward_ad"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+
+[quantified_parameter_box]
+dimension = 30
+uniform_half_width = "1/65536"
+all_axes_have_nonzero_width = true
+coordinate_radius_is_fixed_not_an_axis = true
+
+[acceleration_box]
+dimension = 6
+uniform_half_width = "1/128"
+center_is_flat_root_zero_acceleration = true
+
+[proof_contract]
+require_exact_imp1_flat_root_and_inverse = true
+require_full_thirty_dimensional_parameter_box = true
+require_every_parameter_axis_nonzero_width = true
+require_exact_interval_ref1_residual_enclosure = true
+require_exact_interval_acceleration_jacobian_enclosure = true
+require_center_jacobian_containment = true
+require_strict_regular_chart_margins = true
+require_contraction_infinity_norm_strictly_below_one = true
+require_krawczyk_image_strictly_inside_acceleration_box = true
+require_unique_acceleration_root_for_every_parameter_point = true
+require_no_floating_point_or_sampled_proof = true
+
+[open_gates]
+exact_closed_form_nonlinear_acceleration_map_derived = false
+full_quasilinear_first_order_evolution_system_derived = false
+metric_derived_gauge_constraint_propagation_proven = false
+complete_reduction_constraint_system_propagation_proven = false
+physical_hamiltonian_momentum_constraints_derived = false
+physical_initial_constraints_solved = false
+constraint_preserving_initial_boundary_value_problem_proven = false
+uniform_open_domain_symmetrizer_proven = false
+uniform_radial_strong_hyperbolicity_box_proven = false
+retained_eft_cutoff_and_omitted_operator_envelope_defined = false
+open_retained_eft_domain_proven = false
+boundary_or_regular_center_system_derived = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

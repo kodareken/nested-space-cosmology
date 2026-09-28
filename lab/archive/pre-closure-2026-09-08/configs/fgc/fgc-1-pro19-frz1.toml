@@ -1,0 +1,109 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO19-FRZ1"
+protocol_artifact_id = "FGC-2-SF1-PROTO18"
+frozen = true
+sealed_foundation_commit = "142733cc2a26407e7150962879fb6a760001ea18"
+
+[scope]
+arrays_inspected = false
+namespace_created = false
+state_advanced = false
+candidate_execution = false
+holdout_opened = false
+trajectory_read = false
+
+[[bindings]]
+path = "results/fgc-1-pro18-pref27.json"
+sha256 = "102b385d058066d668e9e8541c974c736c583f6d5c4afaf9b99e95a16aabeb83"
+[[bindings]]
+path = "configs/fgc/fgc-2-sf1-protocol-v18.toml"
+sha256 = "609e4f8cd63a118a7d2fea8d315315ec1ec3f17801536f47ea1ba0739c5c0511"
+[[bindings]]
+path = "configs/fgc/fgc-2-sf1-protocol-v17.toml"
+sha256 = "520466fb2f798159f7d0183938327eec0fa1ccf8b49c41101924f1ff01fcd484"
+[[bindings]]
+path = "configs/fgc/fgc-1-pro15-frz1.toml"
+sha256 = "1a45af49cca92701a79cf103fd6795ffebf6353af372bff779cd4aae90f71676"
+[[bindings]]
+path = "results/fgc-1-hlt13-mon13.json"
+sha256 = "de55f8d55a1db0043945d3553c7d2070703809b82c1f7141bf923c036b9df5b7"
+[[bindings]]
+path = "results/fgc-1-tdg6-imp2.json"
+sha256 = "6a2cac24f65e067aed7ff7de299f9c1f0f3c3319e9aee692763b8df1db4fd5b5"
+[[bindings]]
+path = "results/fgc-1-tdg7-imp3.json"
+sha256 = "364223f0f0f93c446b9d5b6cf09d3aa3cbe5b48bd1c175faf96a34459fd5b779"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/proto15_runtime.py"
+sha256 = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py"
+sha256 = "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/gr0_calibration.py"
+sha256 = "60c5e86fc4676da32fb76fea47158634bf4e76d0787901489bb8925e8212ec91"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/calibration_runtime.py"
+sha256 = "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/health_monitor.py"
+sha256 = "b364b94745a808313248b442417aacd73a7a8035a5ff9fc1a2bd4829e7d55784"
+[[bindings]]
+path = "src/recursive_horizons/fgc/evolution/numerical_engine.py"
+sha256 = "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+
+[sealed_genesis]
+campaign_id = "FGC-2-SF1-PROTO17-GR0-A3-CAL-290a65bcd6a2ba820683"
+namespace = "runs/fgc-2-sf1/proto17/calibration"
+checkpoint_sha256 = "7c059dcc2197a9f57baf8012f4113c240917090171ee06cc639e9e8734603d2d"
+receipt_sha256 = "78ae89a9f74193658003cf51f8567c4088db80fd6fb86867c2d581a0c16d5baf"
+store_tree_sha256 = "95a1bb96570216b8007e32a0cc05f4c31f420052f1d90c1b7134fa27ce958585"
+generation = 0
+journal_tip_sha256 = "0000000000000000000000000000000000000000000000000000000000000000"
+terminal_lock = false
+cursor_mode = "FRESH_READY"
+zero_accepted_macro_steps = true
+zero_source_retries = true
+zero_CFL_retries = true
+zero_temporal_retries = true
+zero_debits = true
+
+[compact_input_evidence]
+auth1_result = { path = "results/fgc-1-pro18-auth1.json", sha256 = "dd967568fbae0bd19e063af94ea8e2d53480c98afec5c78bd86601c20faf4efa" }
+pref26_evidence_sha256 = "64d903b4e0e95eefef95d60df4cafeadb709ab6200831fdc0b025c5313842968"
+proto12_container_sha256 = "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17"
+rsp2_container_sha256 = "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+system = "Darwin"
+machine = "arm64"
+
+[first_edge]
+branch = "GR-0"
+amplitude = "3"
+start_time = "23/16"
+target_time = "3/2"
+common_event_index = 23
+event_count = 1
+members = ["RK4-2049", "RK4-4097", "RK4-8193", "SSPRK3-4097", "SSPRK3-8193", "SSPRK3-16385"]
+state_hashes = ["b19d22516a4c8a517e20e651a6f7a15fd68e11e7bfc74fe4d25eba13e4d8d40d", "61a19b6758c13105268fcca090fc29139e8b238cb4ceb8227c7d25bfde455e15", "671f49ea5820c797305cc3fba1a7f4ea1b4a9d29d50e2caf9aff7722d41a7fb1", "1ab7f9fbd4e75a0409c700674d81bb536ce30f5ff25f354b4cd40e0bfbad4b6c", "bca065fd543ff8c4629584d64f8a1ec49d2ab5a653e73bfad08b1fb5ad66d25d", "783844bc83ce2b55c9f16b343d3f081b381159a70cd16578f04692b0273a2447"]
+candidate_forbidden = true
+raw_import_permitted = false
+run_permitted = false
+
+[claims]
+PROTO18_first_edge_frozen = true
+PROTO18_runtime_implemented = false
+PROTO18_preflight_authorized = false
+PROTO18_state_advance_authorized = false
+fresh_GR0_dynamic_calibration_authorized = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+ROB1_authorized = false
+candidate_execution_authorized = false
+physical_transition_claim_authorized = false

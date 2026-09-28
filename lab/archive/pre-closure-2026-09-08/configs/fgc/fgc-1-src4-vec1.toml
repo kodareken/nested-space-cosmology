@@ -1,0 +1,133 @@
+schema_version = 1
+artifact_id = "FGC-1-SRC4-VEC1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+
+[scope]
+role = "prospectively_frozen_tensor_contraction_backend_for_unchanged_SRC3_GR0_REF1_evaluator"
+branch = "GR-0"
+existing_SRC3_and_RSP1_outputs_used_as_design_evidence = true
+fresh_GR0_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[immutable_lineage]
+checkpoint_commit = "2e827682ae7af6a96a41e35f5bb18ddf3ec6ec9b"
+SRC3_result = "results/fgc-1-src3.json"
+SRC3_result_sha256 = "dea22654cb70b555053941009037c8b5c58e98dfc5a692dc27620e83363765e9"
+RSP1_result = "results/fgc-1-rsp1-pref12.json"
+RSP1_result_sha256 = "0bb184a519230d1b221d20fb88df70841800575b886df0b0642837deb26e4551"
+SRC3_source = "src/recursive_horizons/fgc/evolution/src3_reference_balanced_source.py"
+SRC3_source_sha256 = "c55366173351b7ea19f951a6a500ebc8e00afc3b988ee2dc90221fe30631f719"
+PREF11_point_fixture = "configs/fgc/fgc-1-src2-pref11-point0.json"
+PREF11_point_fixture_sha256 = "d3eef30ce918cd03c44968656d9d2d01d4a7c41c91ece0681a88405d176f9354"
+SRC3_control_fixture = "configs/fgc/fgc-1-src3-controls.json"
+SRC3_control_fixture_sha256 = "2987770d68fd922aa56ef61b3a0a63064ea9e3461bf670eca765c217800c6e5e"
+CAP1_raw_fixture = "runs/fgc-2-sf1/src2/affine-wall-capture/affine-wall-fixture.npz"
+CAP1_raw_fixture_sha256 = "b55191c052672c195bd3795e8ff1338549eab91c384ef567f817b650c8a4e56e"
+
+[evaluator]
+continuum_equations = "unredefined_ACT1_VAR1_GR0_REF1"
+arithmetic = "IEEE_754_binary64"
+reference_identity = "C^a_bc=one_half_g^ad_times_bar_nabla_b_h_dc_plus_bar_nabla_c_h_db_minus_bar_nabla_d_h_bc"
+connection_backend = "explicit_NumPy_Einstein_contractions_over_spacetime_indices"
+ricci_backend = "explicit_NumPy_Einstein_contractions_over_spacetime_indices"
+independent_differential_oracle = "FGC-1-SRC3_explicit_index_loop_backend"
+point_and_acceleration_seed_axes_are_never_contracted = true
+raw_complete_residual_maximum = "1/1000000000000"
+kinetic_condition_number_maximum = "10000000000"
+maximum_complete_refinement_iterations = 16
+strict_raw_gate = true
+continuum_equation_change_forbidden = true
+reference_geometry_change_forbidden = true
+reference_derivative_map_change_forbidden = true
+source_threshold_change_forbidden = true
+root_branch_change_forbidden = true
+higher_precision_runtime_fallback_used = false
+fitted_coefficient_or_epsilon_floor_added = false
+
+[proof_contract]
+exact_reference_must_be_bitwise_zero_at_all_frozen_radii = true
+PREF11_exact_dyadic_root_residual_maximum = "1/1000000000000000000000000"
+PREF11_maximum_ULP_distance_from_rounded_exact_root = 16
+independent_nontrivial_control_count = 2
+independent_control_normalized_residual_error_maximum = "1/70368744177664"
+vectorized_connection_difference_maximum_absolute_delta_from_SRC3 = "1/1000000000000000"
+vectorized_connection_derivative_maximum_absolute_delta_from_SRC3 = "1/50000000000000"
+vectorized_Ricci_normalized_delta_maximum = "1/70368744177664"
+compact_root_acceleration_delta_from_SRC3_maximum = "1/500000000000000"
+CAP1_full_grid_raw_gate_must_pass_unchanged = true
+CAP1_acceleration_delta_from_SRC3_maximum = "1/500000000000000"
+CAP1_condition_delta_from_SRC3_maximum = "1/500000000"
+CAP1_raw_bundle_is_optional_for_clean_clone_reproduction = true
+CAP1_partial_presence_must_fail_closed = true
+one_bit_input_mutation_must_change_the_result = true
+invalid_shapes_factors_radii_and_condition_limits_must_fail_closed = true
+wall_clock_speed_is_context_not_a_scientific_gate = true
+no_fresh_trajectory_or_successor_protocol_is_authorized = true
+canonical_hash_bound_result_required = true
+
+[expected.PREF11]
+residual_infinity = "2.8272774843121063e-27"
+kinetic_condition_infinity_maximum = "2451788.4999999995"
+acceleration_sha256 = "576721ce4868400d0fddbbd7a58be5bec69aea157ae6a74d9f2f3d51d91b6932"
+residual_sha256 = "73f21ac64e31dec02253f2b84e45bb98e2399cd9f070a247dc7bcb5028d19ac5"
+
+[expected.DYADIC_A]
+control_id = "DYADIC-A"
+residual_infinity = "4.440892098500626e-16"
+kinetic_condition_infinity_maximum = "190.65764306426124"
+acceleration_sha256 = "152ad2755b577ea0873675a09f19ea17329e4aaea52643f2344c028a7644bf6e"
+residual_sha256 = "7c9fec638d4a1afcfa87d530f17819558832d002cb75f467ecba5d285fa004cc"
+
+[expected.DYADIC_B]
+control_id = "DYADIC-B"
+residual_infinity = "1.2073675392798577e-15"
+kinetic_condition_infinity_maximum = "117.23819702784205"
+acceleration_sha256 = "037396891b640e1e0086fd9355442e01722c95a79fd513af9d1efec284e08154"
+residual_sha256 = "b5fa8ea31f69d99d53bb146a6a452616f9a5e2c1314cefbba99aed9894adcd5a"
+
+[expected.CAP1]
+point_count = 8192
+residual_infinity = "2.4197549346183234e-14"
+kinetic_condition_infinity_maximum = "2859227.196975944"
+maximum_residual_point_index = 875
+maximum_residual_row_index = 3
+maximum_residual_radius_binary64_hex = "0x1.b600000000000p+3"
+acceleration_sha256 = "289d732bfde3184257d1fc45430884ff215a1ff8aa7725c78d7c3e5fdb239fcf"
+residual_sha256 = "e7e74b2a4d9a26dd4445a2e59df54686b83c2def17384dfe92bbae996356a43e"
+SRC3_residual_infinity = "3.296668493746324e-14"
+SRC3_kinetic_condition_infinity_maximum = "2859227.196975944"
+SRC4_acceleration_delta_from_SRC3 = "4.440892098500626e-16"
+SRC4_condition_delta_from_SRC3 = "0"
+
+[successor_boundary]
+next_gate = "FGC-1-PRO12-FRZ1"
+SRC4_may_be_consumed_only_after_this_certificate_passes = true
+PROTO12_must_inherit_RSP1_without_relabelling_generic_raw_spectral_admission = true
+PROTO12_must_freeze_any_spectral_conditioning_change_before_fresh_trajectory = true
+fresh_GR0_outcomes_must_not_be_tuned_after_inspection = true
+
+[claims]
+SRC4_tensor_contraction_evaluator_derived = true
+SRC4_exact_reference_and_exact_oracle_controls_passed = true
+SRC4_independent_SRC3_differential_controls_passed = true
+SRC4_CAP1_full_grid_strict_source_gate_passed = true
+SRC4_runtime_source_instrument_authorized_for_a_separately_frozen_GR0_protocol = true
+wall_clock_speedup_is_a_scientific_result = false
+PROTO12_frozen = false
+fresh_GR0_calibration_completed = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

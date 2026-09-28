@@ -1,0 +1,143 @@
+{
+  "accountable_author": "Douglas Ek",
+  "computation": "exact2x2 coefficient algebra; imported existing UV rows; no reference quadrature or probe",
+  "exact_residuals": "all matrix, trace and retained first-Weyl residuals exactly zero",
+  "input_hashes": {
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-reference-band-bulk.json": "fdbe2110608002707e8b29af07164a0287d25fc2c887f360fa0a132944a06e68",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_reference_response.py": "1db8825d0840717c360a38685a016219000359e76a582f339913dc0d5a29ba12",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_surface_integrability.py --check",
+  "result": {
+    "LLL": "owned constant nonzero-k chiral charts; geometric allocation remains separate once",
+    "compatible_family": "delta r=T*w(z)+T^3*U(z)/6; delta a=0",
+    "constraints": [
+      "N",
+      "beta"
+    ],
+    "exact": {
+      "Moyal_scope": "bare vertex trace; nonconstant test-envelope derivatives use the existing compact-test bulk identity",
+      "P0": "(I-H/omega)/2; omega^2=m^2+ell^2/r^2+k^2/a^2",
+      "delta_P1": "ell*w*(k*sigma1/a+m*sigma3)/(4*r^2*omega^3)",
+      "first_projector_generically_nonzero": true,
+      "intrinsic_assumption": "all pure spatial metric jets unchanged; N=1,beta=0,a,r constant on T=0",
+      "mixed_jets_retained": "w,w_z,w_zz,w_zzz,U,U_z; Pj_z need not vanish",
+      "raw_vertices": {
+        "N": "H",
+        "beta": "-k*I"
+      },
+      "residuals": {
+        "N_first_order_insertion": [
+          "0"
+        ],
+        "N_symmetric_first_Moyal_trace": [
+          "0"
+        ],
+        "N_vertex_second_k_derivative": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "beta_first_order_insertion": [
+          "0"
+        ],
+        "beta_symmetric_first_Moyal_trace": [
+          "0"
+        ],
+        "beta_vertex_second_k_derivative": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_Weyl_idempotence": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_Weyl_transport_commutator": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_projector_formula": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "first_projector_trace": [
+          "0"
+        ],
+        "intrinsic_H_z": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "intrinsic_P0_z": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "finite_momentum_domain": "32 retained non-LLL groups, each m^2+ell^2/r^2>0",
+    "first_order_constraint_insertions": {
+      "N": 0,
+      "beta": 0
+    },
+    "imported_tail_powers": [
+      {
+        "constraint_insertion_power_upper": -2,
+        "formal_order": 2,
+        "projector_power": -3,
+        "raw_vertex_power_upper": 1
+      },
+      {
+        "constraint_insertion_power_upper": -3,
+        "formal_order": 3,
+        "projector_power": -4,
+        "raw_vertex_power_upper": 1
+      },
+      {
+        "constraint_insertion_power_upper": -4,
+        "formal_order": 4,
+        "projector_power": -5,
+        "raw_vertex_power_upper": 1
+      }
+    ],
+    "reference_change_absolutely_integrable": true,
+    "scope": {
+      "Gamma_rest_assigned": false,
+      "endpoint_terms_removed": false,
+      "full4D_Hadamard_gate_added": false,
+      "local_finite_compatible_jets": true,
+      "metric_evolution": false,
+      "occupation_symmetry_assumed": false,
+      "physical_surface_solution": false,
+      "pressure_direction_integrability_claimed": false,
+      "reference_quadrature_run": false,
+      "rho0_seam_changed": false,
+      "source_C0_changed": false,
+      "spatial_domain_or_boundary_selected": false
+    },
+    "zeroth_reference_change": 0
+  },
+  "schema": "NSC-INCOMING-SURFACE-INTEGRABILITY-v1",
+  "source_hashes": {
+    "docs/nsc-incoming-surface-integrability.md": "2396023d787e25d7d5db9bee2282a3f266a7ca994d24f9a63495642008f00fcb",
+    "scripts/derive_nsc_incoming_surface_integrability.py": "a6cec9dd2026e044fb001406dff1ff03e7e2209e558d9266ac43457ec462bf30",
+    "src/recursive_horizons/nsc_incoming_surface_integrability.py": "c2026d0b61e02688847a014cdb8591bf25be89426d6f1364537ae40b98fb1bec",
+    "tests/test_nsc_incoming_surface_integrability.py": "0b77e470829df45ce52e8eae63afdd49d19aa641ddaa22c1e56f746d7b83a4f1"
+  },
+  "status": "PASS: included lapse/shift reference changes integrable for finite compatible incoming jets",
+  "tolerance": 0
+}

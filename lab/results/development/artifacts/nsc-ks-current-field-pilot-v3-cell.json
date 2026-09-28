@@ -1,0 +1,52 @@
+{
+  "CPU_seconds": 121.847641,
+  "bounds": {
+    "polynomial_and_profile_tail": [
+      {
+        "exponent": -130,
+        "mantissa": "746071409320935762563444686119606657"
+      },
+      {
+        "exponent": -119,
+        "mantissa": "427264764523965827678803905896308621"
+      }
+    ],
+    "polynomial_finite_band": [
+      {
+        "exponent": -155,
+        "mantissa": "766256124656419895504977623282125483"
+      },
+      {
+        "exponent": -145,
+        "mantissa": "403756220097193647741045028441925603"
+      }
+    ],
+    "time_coefficient_and_radius_remainder": [
+      {
+        "exponent": -184,
+        "mantissa": "813873781149127908475591350398226807"
+      },
+      {
+        "exponent": -171,
+        "mantissa": "116564797488374281259310333826741339"
+      }
+    ],
+    "total_continuous_normalized_residual": [
+      {
+        "exponent": -130,
+        "mantissa": "746071409320935807742515234644481601"
+      },
+      {
+        "exponent": -120,
+        "mantissa": "854529529047931707122776624737315209"
+      }
+    ]
+  },
+  "cell_index": 122,
+  "dominating_continuous_contribution": "omitted_profile_Fourier_band",
+  "free_contains_zero_used_as_proof": false,
+  "named_obstruction": "cheb32_mixed_profile_fourier_omitted_band_from_midpoint_jet_l1",
+  "physical_local_gate": "OPEN",
+  "schema": "NSC-KS-CURRENT-FIELD-PILOT-CELL-v3",
+  "signature_digest": "c953a48542b970c38d4b6de6d2a24a4012775449cff78edd30aba04156329245"
+}

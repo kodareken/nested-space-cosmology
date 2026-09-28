@@ -1,0 +1,102 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO5"
+protocol_version = 5
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO4"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v4.toml"
+predecessor_protocol_sha256 = "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a"
+diagnosis_artifact_id = "FGC-1-CAL1-PREF3"
+diagnosis_config = "configs/fgc/fgc-1-cal1-pref3.toml"
+diagnosis_config_sha256 = "514861c679272cd182da9674e7640734a427c0349157c03f0899cbe439b475ff"
+diagnosis_result = "results/fgc-1-cal1-pref3.json"
+diagnosis_result_sha256 = "3ea43baf0fb9830b348fc49a79af5c535d8f7089aa03a957a22f6927528a4395"
+diagnosis_checkpoint_commit = "0781d7d218e9c129858b134c3181fad07ac692b0"
+revision_classification = "premise_based_pre_trajectory_semidiscrete_contract_revision"
+revision_reasons = ["PROTO4_omits_continuum_to_semidiscrete_q_initialization", "PROTO4_uses_one_constraint_magnitude_budget_for_different_method_orders", "PROTO4_exact_zero_only_convergence_logic_misclassifies_binary64_roundoff"]
+revision_changes = ["native_SBP_q_initialization_before_first_stage", "method_owned_raw_constraint_magnitude_guards", "public_roundoff_zero_enclosure_for_convergence_classification_only", "monotone_three_grid_refinement_with_finest_pair_order", "versioned_manifest_and_output_namespace"]
+all_unlisted_PROTO4_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_and_holdout_cases_unchanged = true
+physical_u_and_p_initial_data_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+eligible_calibration_amplitudes_in_frozen_order = ["5/2", "3"]
+PROTO1_through_PROTO4_preserved = true
+initial_common_event_diagnostics_inspected_before_revision = true
+fresh_GR0_calibration_trajectories_inspected_before_revision = false
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+
+[replacement.initial_state]
+physical_u_source = "FGC-1-ID2-ALL1_complete_grid_state"
+physical_p_source = "FGC-1-ID2-ALL1_complete_grid_state"
+physical_u_and_p_must_be_bitwise_preserved = true
+auxiliary_q_initialization = "q_equals_native_SBP_D_h_u_before_first_stage"
+projection_applies_only_to_the_kinematic_auxiliary_q = true
+projection_is_a_discrete_reduction_constraint_initialization_not_a_physical_field_change = true
+primary_native_spatial_operator = "D4_2_SBP"
+comparator_native_spatial_operator = "D2_1_SBP"
+projection_must_be_hash_bound_at_every_resolution = true
+
+[replacement.constraint_admission]
+fields = ["Hamiltonian", "radial_momentum", "gauge_t", "gauge_r", "six_kinematic_reduction_fields"]
+normalization = "max_absolute_unredefined_projection_term_sum_or_M_Pl_squared_over_L0_squared_or_1e-30_componentwise"
+common_event_alignment = "same_coordinate_time_for_GR0_calibration_and_same_affine_label_and_origin_for_DEF1"
+raw_normalized_residuals_decide_all_magnitude_guards = true
+roundoff_zero_enclosure_formula = "4096_times_binary64_machine_epsilon"
+roundoff_operation_budget = 4096
+roundoff_enclosure_use = "convergence_zero_classification_only_and_public_nonnegative_error_component"
+roundoff_enclosure_must_not_be_subtracted_from_any_observable_or_residual = true
+primary_method = "RK4"
+primary_spatial_order = 4
+primary_coarsest_normalized_guard_max = "1/50"
+primary_finest_normalized_guard_max = "1/1000"
+comparator_method = "SSPRK3"
+comparator_spatial_order = 2
+comparator_coarsest_normalized_guard_max = "1/10"
+comparator_finest_normalized_guard_max = "1/200"
+minimum_nested_resolutions = 3
+all_three_resolutions_must_refine_monotonically = true
+convergence_order_pair = "finest_adjacent_pair_after_monotone_three_grid_refinement"
+minimum_finest_adjacent_pair_order = "3/2"
+coarse_to_middle_order_is_serialized_diagnostic_not_admission_boolean = true
+Richardson_error_enters_conservative_observable_error_sum = true
+constraint_error_must_not_be_subtracted_from_observable_margin = true
+single_resolution_smallness_cannot_establish_admission = true
+propagation_theorem_not_inferred_from_numerical_smallness = true
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro5-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto5/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto5/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+earlier_proto4_outputs_if_any_are_development_only_and_forbidden_as_PROTO5_evidence = true
+
+[inheritance]
+PROTO4_stop_applicability_partition_inherited_unchanged = true
+PROTO4_weighted_spectral_admission_inherited_unchanged = true
+PROTO4_calibration_selection_and_trapped_sign_rules_inherited_unchanged = true
+HLT2_formula_evidence_remains_valid_for_unchanged_rules = true
+ID2_static_candidate_ledger_remains_valid = true
+CAL1_prospective_repair_is_design_evidence_not_calibration_evidence = true
+successor_runtime_owner = "FGC-1-HLT3-MON3"
+
+[claims]
+PROTO5_successor_runtime_compositor_implemented = false
+PROTO5_fresh_GR0_dynamic_calibration_authorized = false
+PROTO5_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

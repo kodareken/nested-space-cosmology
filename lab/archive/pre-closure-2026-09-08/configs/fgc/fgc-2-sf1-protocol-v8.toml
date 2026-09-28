@@ -1,0 +1,101 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO8"
+protocol_version = 8
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO7"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v7.toml"
+predecessor_protocol_sha256 = "ea0563b205bf5c6c90d8f728afc56a13f624953fffc67c6d6b9a97c03c35f3fb"
+diagnosis_artifact_id = "FGC-1-CAL4-PREF6"
+diagnosis_config = "configs/fgc/fgc-1-cal4-pref6.toml"
+diagnosis_config_sha256 = "687322014f16a5c48f6b3947f4cfd18a0f60f603f3c4a3abda842b19e3c8f1e2"
+diagnosis_result = "results/fgc-1-cal4-pref6.json"
+diagnosis_result_sha256 = "e03d647e9d068b35be79ba817a3ab6c36b93f29c29de5e395a2106030d958815"
+diagnosis_checkpoint_commit = "219ba9493899029bc51bd313e3c5f689f3809c2c"
+revision_classification = "premise_only_post_calibration_common_event_diagnostic_ownership_revision"
+revision_reasons = ["PROTO7_constraint_convergence_includes_projector_owned_outer_rows", "CAL4_localizes_all_old_reduction_order_failures_to_the_fixed_row_stencil_interface", "CAL4_evolution_owned_constraints_pass_for_amplitude_5over2_under_unchanged_guards_and_order", "PROTO7_requires_the_coarsest_convergence_witness_to_pass_resolved_grid_absolute_spectral_budgets", "CAL4_amplitude_5over2_has_a_resolved_medium_fine_pair_and_all_nested_tails_contract", "CAL4_amplitude_3_remains_inadmissible_under_independent_unchanged_guards"]
+revision_changes = ["evolution_owned_constraint_diagnostic_domain", "accumulated_stage_count_roundoff_enclosure_for_order_classification_only", "coarsest_spectral_grid_as_public_convergence_witness", "medium_and_finest_absolute_spectral_admission_with_all_adjacent_nested_contraction", "versioned_manifest_and_output_namespace"]
+all_unlisted_PROTO7_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_initial_data_and_holdout_cases_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+source_solver_raw_residual_kinetic_and_retry_rules_unchanged = true
+constraint_magnitude_and_order_thresholds_unchanged = true
+spectral_absolute_and_nested_tail_thresholds_unchanged = true
+trapped_boundary_candidate_health_and_scale_stops_unchanged = true
+eligible_calibration_amplitudes_in_frozen_order = ["5/2", "3"]
+PROTO1_through_PROTO7_preserved = true
+PROTO7_GR0_calibration_trajectory_inspected_before_revision = true
+first_nonzero_common_event_completed_before_revision = true
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+mechanism_question_answered_before_revision = false
+
+[replacement.common_event_constraint_ownership]
+applies_only_to_committed_synchronized_common_events = true
+projector_fixed_outer_rows = 4
+owned_domain_excludes_fixed_rows_and_every_derivative_stencil_that_touches_them = true
+RK4_derivative_stencil_reach_rows = 3
+SSPRK3_derivative_stencil_reach_rows = 1
+full_domain_and_owned_domain_raw_residuals_must_be_serialized = true
+owned_domain_raw_norms_decide_unchanged_magnitude_guards = true
+coarsest_and_finest_constraint_magnitude_guards_unchanged = true
+minimum_finest_pair_constraint_order = "3/2"
+roundoff_operation_budget_per_diagnostic_evaluation = 4096
+accumulated_roundoff_formula = "4096*binary64_epsilon*(1+accepted_stage_count)"
+accumulated_roundoff_may_change_only_convergence_order_classification = true
+raw_magnitude_may_not_be_subtracted_from_physical_or_observable_margins = true
+interior_reduction_defect_above_the_enclosure_must_fail = true
+projector_owned_outer_defects_remain_public = true
+common_event_time_alignment_and_monotone_refinement_required = true
+
+[replacement.common_event_spectral_ownership]
+coarsest_grid_role = "public_convergence_witness"
+coarsest_absolute_budget_failure_alone_does_not_veto = true
+medium_and_finest_grids_each_must_pass_every_unchanged_absolute_budget = true
+all_adjacent_field_and_derivative_tail_ratios_must_pass = true
+unresolved_top_fraction = "1/8"
+maximum_top_band_field_power_fraction = "1/1048576"
+maximum_top_band_derivative_power_fraction = "1/1024"
+maximum_rms_scale_over_cutoff = "1/4"
+maximum_nested_tail_ratio = "1/4"
+noncontracting_tail_remains_terminal = true
+all_per_grid_budgets_and_tail_ratios_remain_public = true
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro8-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto8/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto8/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+PROTO7_outputs_are_immutable_diagnostic_history_and_forbidden_as_PROTO8_outcomes = true
+
+[inheritance]
+PROTO7_general_transaction_stop_ownership_inherited_unchanged = true
+PROTO7_source_solver_raw_threshold_and_retry_budget_inherited_unchanged = true
+PROTO7_native_semidiscrete_initialization_inherited_unchanged = true
+PROTO7_stop_applicability_partition_inherited_except_common_event_diagnostic_ownership = true
+PROTO7_calibration_selection_and_trapped_sign_rules_inherited_unchanged = true
+PROTO7_boundary_health_scale_affine_and_outcome_rules_inherited_unchanged = true
+HLT5_runtime_evidence_remains_valid_for_unchanged_rules_only = true
+CAL4_replay_is_design_evidence_not_calibration_or_mechanism_evidence = true
+successor_runtime_owner = "FGC-1-HLT6-MON6"
+
+[claims]
+PROTO8_successor_runtime_compositor_implemented = false
+PROTO8_fresh_GR0_dynamic_calibration_authorized = false
+PROTO8_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,348 @@
+{
+  "base_source": {
+    "d_cutoff": 5.370718658375979,
+    "d_interval": 1.0301804001810815,
+    "d_path": -0.06242437993592346,
+    "d_radius": 4.371115397270044,
+    "dual_heat_path_derivative": -0.06242434171675073,
+    "path_variation_residual": -3.821917272939235e-08,
+    "potential": 2.1549805595608786,
+    "quadrature_error_estimate": 4.462921895642063e-10,
+    "scaling_residual": 2.007283228522283e-12
+  },
+  "bound_scope": "positive continuum-sector tail comparisons, evaluated in floating point; retained Galerkin eigenvalue errors are assessed separately and not bounded by those tails",
+  "compact_convergence": [
+    {
+      "compact_modes": 12,
+      "response": {
+        "d_cutoff": 5.3707181750976165,
+        "d_interval": 1.030180287629047,
+        "d_path": -0.06242473110615765,
+        "d_radius": 4.371115020358785,
+        "dual_heat_path_derivative": -0.062424360470335824,
+        "path_variation_residual": -3.7063582182528254e-07,
+        "potential": 2.1549803772901663,
+        "quadrature_error_estimate": 4.4629219683516235e-10,
+        "scaling_residual": 1.978861519091879e-12
+      }
+    },
+    {
+      "compact_modes": 18,
+      "response": {
+        "d_cutoff": 5.370718556247168,
+        "d_interval": 1.0301803780449215,
+        "d_path": -0.06242445583276479,
+        "d_radius": 4.371115315932703,
+        "dual_heat_path_derivative": -0.06242434297774053,
+        "path_variation_residual": -1.1285502426322536e-07,
+        "potential": 2.1549805202368812,
+        "quadrature_error_estimate": 4.4629219178362976e-10,
+        "scaling_residual": 1.971756091734278e-12
+      }
+    },
+    {
+      "compact_modes": 26,
+      "response": {
+        "d_cutoff": 5.370718658375979,
+        "d_interval": 1.0301804001810815,
+        "d_path": -0.06242437993592346,
+        "d_radius": 4.371115397270044,
+        "dual_heat_path_derivative": -0.06242434171675073,
+        "path_variation_residual": -3.821917272939235e-08,
+        "potential": 2.1549805595608786,
+        "quadrature_error_estimate": 4.462921895642063e-10,
+        "scaling_residual": 2.007283228522283e-12
+      }
+    }
+  ],
+  "comparison": {
+    "exact": "keys, lengths, non-float types, strings and source/input hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-09,
+    "float_rtol": 3e-08
+  },
+  "complex_spinor_mixing_control": {
+    "direct_complex_field_norm": 11.916078096586114,
+    "error_if_mixing_discarded": 0.032155463468937384,
+    "matrix_norm": 11.916078096586109,
+    "norm_if_mixing_discarded": 11.948233560055051,
+    "quadrature_error_estimate": 4.5398849520650045e-09,
+    "trial": "lambda=1, ell=2, f=1, g=sqrt(2)*sin(2*pi*x), chi=(f,i*g)"
+  },
+  "domain": {
+    "Y_interval": "[-ell/2,ell/2], reflecting paired chiral domains",
+    "fourD_reduction": "+(1/2) Tr4 h_Lambda(D4^2), with compact generalized eigenproblem",
+    "functional": "+(1/2) Tr integral_{Lambda^-2}^infinity dt exp(-t Ddagger D)/t",
+    "g4_for_potential": "Euclidean R2 x S2(r)",
+    "kernel_projector": "no L2 zero projector density on noncompact R2; separate prescription on a compact radial box",
+    "metric": "exp(2*s*sigma(Y))*(g4+dY^2); sigma=-18*(2Y/ell)^2/1015",
+    "parameters": {
+      "amplitude": 0.017733990147783252,
+      "angular_max": 10,
+      "compact_modes": 26,
+      "compact_points": 96,
+      "cutoff": 2.0,
+      "interval": 2.0,
+      "momentum_extent": 12.0,
+      "quadrature_atol": 2e-09,
+      "radius": 1.0,
+      "warp_path": 1.0
+    },
+    "potential_units": "inverse length squared per reference R2 area; hbar=c_light=1",
+    "quantum_fields": "two free massless complex 5D Dirac copies; unit U(1) charge; no link mass or torsion"
+  },
+  "exact_matching_residuals": {
+    "complex_spinor_quadratic_form": "0",
+    "magnetic_source_normalization": "0",
+    "matching_scale_cancels_between_low_and_rest": "0",
+    "spherical_Einstein_term_counted_once": "0"
+  },
+  "first_variation_check_point": {
+    "cutoff": 2.0,
+    "interval": 2.0,
+    "path": 0.8,
+    "radius": 1.0
+  },
+  "first_variations": {
+    "cutoff": {
+      "finite_difference": 5.402452584392092,
+      "functional_derivative": 5.402452472891762,
+      "residual": 1.115003307461393e-07,
+      "step": 0.0002
+    },
+    "interval": {
+      "finite_difference": 1.0363973499427637,
+      "functional_derivative": 1.0363973513693454,
+      "residual": -1.4265817416259097e-09,
+      "step": 0.0002
+    },
+    "path": {
+      "finite_difference": -0.0630073313490076,
+      "functional_derivative": -0.06300733131291344,
+      "residual": -3.609415544225669e-11,
+      "step": 0.0002
+    },
+    "radius": {
+      "finite_difference": 4.397063065546547,
+      "functional_derivative": 4.397063074055988,
+      "residual": -8.509441151716146e-09,
+      "step": 0.0002
+    }
+  },
+  "flat_spectral_controls": [
+    {
+      "D4_squared": 0.25,
+      "computed": {
+        "d_cutoff": 2.120028735907724,
+        "d_interval": 1.0833198422939385,
+        "d_path": -0.02506437914373656,
+        "d_squared": -4.146835574455116,
+        "dual_heat_path_derivative": -0.02506437914373652,
+        "weight": 3.083536184513335
+      },
+      "expected_KK_weight": 3.0835361845133424
+    },
+    {
+      "D4_squared": 1.3,
+      "computed": {
+        "d_cutoff": 1.6305699940056169,
+        "d_interval": 0.6243810776879187,
+        "d_path": -0.019277674805977807,
+        "d_squared": -0.773991474090544,
+        "dual_heat_path_derivative": -0.019277674805977706,
+        "weight": 1.3661501289449776
+      },
+      "expected_KK_weight": 1.366150128944969
+    },
+    {
+      "D4_squared": 5.0,
+      "computed": {
+        "d_cutoff": 0.646572233624147,
+        "d_interval": 0.1362688994133437,
+        "d_path": -0.007644203747280522,
+        "d_squared": -0.10206066684216067,
+        "dual_heat_path_derivative": -0.007644203747280516,
+        "weight": 0.2751329033104335
+      },
+      "expected_KK_weight": 0.27513290331043333
+    }
+  ],
+  "flux_cases": {
+    "0": {
+      "flat_lower_cutoff_comparison": 1.9491063843025265,
+      "flat_upper_comparison": 2.1356626977437236,
+      "response": {
+        "d_cutoff": 5.339341833572446,
+        "d_interval": 1.0109063537970078,
+        "d_path": -0.06205504912163438,
+        "d_radius": 4.5126072247777484,
+        "dual_heat_path_derivative": -0.062055011130956676,
+        "path_variation_residual": -3.799067770093867e-08,
+        "potential": 2.07213186738658,
+        "quadrature_error_estimate": 1.0602767367403853e-09,
+        "scaling_residual": 3.197442310920451e-14
+      },
+      "warp_change_from_product": -0.06353083035714358
+    },
+    "1": {
+      "flat_lower_cutoff_comparison": 2.0312162352415806,
+      "flat_upper_comparison": 2.21888250508735,
+      "response": {
+        "d_cutoff": 5.370718658375979,
+        "d_interval": 1.0301804001810815,
+        "d_path": -0.06242437993592346,
+        "d_radius": 4.371115397270044,
+        "dual_heat_path_derivative": -0.06242434171675073,
+        "path_variation_residual": -3.821917272939235e-08,
+        "potential": 2.1549805595608786,
+        "quadrature_error_estimate": 4.462921895642063e-10,
+        "scaling_residual": 2.007283228522283e-12
+      },
+      "warp_change_from_product": -0.06390194552647133
+    },
+    "2": {
+      "flat_lower_cutoff_comparison": 2.1964334751975723,
+      "flat_upper_comparison": 2.3874131128925034,
+      "response": {
+        "d_cutoff": 5.464388588653265,
+        "d_interval": 1.083765707523853,
+        "d_path": -0.06352688115151182,
+        "d_radius": 4.116439291826347,
+        "dual_heat_path_derivative": -0.06352684225028708,
+        "path_variation_residual": -3.8901224741483276e-08,
+        "potential": 2.3224032352182364,
+        "quadrature_error_estimate": 1.016615950789498e-09,
+        "scaling_residual": 3.995026531811163e-12
+      },
+      "warp_change_from_product": -0.06500987767426691
+    }
+  },
+  "homogeneous_variational_source": {
+    "p_parallel": -0.1714879041605262,
+    "p_sphere": -0.17392115557515533,
+    "radial_null": 0.0,
+    "rho": 0.1714879041605262,
+    "scope": "Euclidean homogeneous projections integrated over compact Y; not the in-in stress on a varying Lorentzian throat",
+    "sphere_null": -0.002433251414629134
+  },
+  "independent_resolution_changes": {
+    "angular_max_12": {
+      "difference_from_base": {
+        "d_cutoff": 1.0658141036401503e-13,
+        "d_interval": 1.3322676295501878e-15,
+        "d_path": -1.0200174038743626e-15,
+        "d_radius": 2.0516921495072893e-13,
+        "potential": 2.6645352591003757e-15
+      },
+      "response": {
+        "d_cutoff": 5.370718658376085,
+        "d_interval": 1.0301804001810828,
+        "d_path": -0.06242437993592448,
+        "d_radius": 4.371115397270249,
+        "dual_heat_path_derivative": -0.062424341716751715,
+        "path_variation_residual": -3.821917276408682e-08,
+        "potential": 2.1549805595608813,
+        "quadrature_error_estimate": 4.462921892867718e-10,
+        "scaling_residual": 2.007283228522283e-12
+      }
+    },
+    "compact_quadrature_128": {
+      "difference_from_base": {
+        "d_cutoff": -4.440892098500626e-15,
+        "d_interval": -3.774758283725532e-15,
+        "d_path": 6.938893903907228e-17,
+        "d_radius": 5.684341886080802e-14,
+        "potential": -1.7763568394002505e-15
+      },
+      "response": {
+        "d_cutoff": 5.370718658375974,
+        "d_interval": 1.0301804001810777,
+        "d_path": -0.06242437993592339,
+        "d_radius": 4.371115397270101,
+        "dual_heat_path_derivative": -0.06242434171675199,
+        "path_variation_residual": -3.821917139712472e-08,
+        "potential": 2.154980559560877,
+        "quadrature_error_estimate": 4.4629219092802944e-10,
+        "scaling_residual": 2.0614621121239907e-12
+      }
+    },
+    "momentum_extent_14": {
+      "difference_from_base": {
+        "d_cutoff": 7.105427357601002e-15,
+        "d_interval": 3.9968028886505635e-15,
+        "d_path": -9.71445146547012e-17,
+        "d_radius": 0.0,
+        "potential": 3.6060043839825084e-13
+      },
+      "response": {
+        "d_cutoff": 5.370718658375986,
+        "d_interval": 1.0301804001810855,
+        "d_path": -0.062424379935923556,
+        "d_radius": 4.371115397270044,
+        "dual_heat_path_derivative": -0.06242434171675082,
+        "path_variation_residual": -3.821917273633124e-08,
+        "potential": 2.1549805595612392,
+        "quadrature_error_estimate": 6.143749668394048e-10,
+        "scaling_residual": 2.7213786779611837e-12
+      }
+    },
+    "quadrature_tolerance_2e-10": {
+      "difference_from_base": {
+        "d_cutoff": 0.0,
+        "d_interval": 0.0,
+        "d_path": 0.0,
+        "d_radius": 0.0,
+        "potential": -7.429612480791548e-13
+      },
+      "response": {
+        "d_cutoff": 5.370718658375979,
+        "d_interval": 1.0301804001810815,
+        "d_path": -0.06242437993592346,
+        "d_radius": 4.371115397270044,
+        "dual_heat_path_derivative": -0.06242434171675073,
+        "path_variation_residual": -3.821917272939235e-08,
+        "potential": 2.1549805595601357,
+        "quadrature_error_estimate": 1.0899303267634298e-10,
+        "scaling_residual": 5.213607323639735e-13
+      }
+    }
+  },
+  "input_hashes": {
+    "results/development/compact-boundary-action.json": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce",
+    "results/development/horizon-source.json": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+    "results/development/vacuum-charge-matching.json": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b"
+  },
+  "schema": "NSC-WARPED-SOURCE-v1",
+  "scope": {
+    "Lorentzian_state_or_transmission_phase_selected": false,
+    "all_localized_a5_gauge_invariants_checked": false,
+    "classical_KK_masses_changed_by_warp": false,
+    "cosmological_Q_or_dark_fraction_predicted": false,
+    "finite_cutoff_determinant_is_warp_invariant": false,
+    "full_quantum_compensator_or_finite_coefficients_matched": false,
+    "joint_self_sourced_geometry_solved": false,
+    "new_universal_heat_or_monopole_spectrum_claimed": false
+  },
+  "source_hashes": {
+    "docs/nsc-compact-mass-map.md": "44342c8707a8ff36eaa4f8c2911e39198053f5e5af173d132cf08a245bdaf073",
+    "docs/nsc-warped-source.md": "5e5ac433c2af3bc6f6a6433d9f50dfaa2c06b6c012a018a19bfd21f31e3c12dc",
+    "scripts/check_nsc_compact_boundary_action.py": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505",
+    "scripts/check_nsc_compact_casimir.py": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501",
+    "scripts/check_nsc_vacuum_charge_matching.py": "1a22122f835e25f02d45d98d2f85907d544a7461d0a0cf0ff6437ee951dbb917",
+    "scripts/check_nsc_warped_source.py": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb",
+    "src/recursive_horizons/nsc_warped_source.py": "97730058a09ddfc77a8ad59b97f7a85f8879082b646ca6c2aa2605e5b5e7250b"
+  },
+  "source_partition": {
+    "Einstein_sphere_potential": "-8*pi*A4; adding this to U while retaining the same induced Einstein term double-counts it",
+    "full_U_from_this_potential_alone": false,
+    "low_canonical_LLL_potential": "abs(q)*nu^2/(4*pi)",
+    "rest": "V5_Lambda - V_low_nu, before moving the same induced geometric functional to the left-hand side"
+  },
+  "status": "finite-cutoff two-copy Dirac modulus matched to the Gaussian compact warp",
+  "tail_bounds": {
+    "angular_potential_bound": 6.5512928708013355e-12,
+    "momentum_potential_bound": 1.2832768238979162e-15,
+    "omitted_compact_level_potential_bound": 1.2217065400267035e-182
+  }
+}

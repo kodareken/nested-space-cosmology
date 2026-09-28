@@ -1,0 +1,837 @@
+{
+  "artifact_id": "FGC-1-ID0-PREF1",
+  "artifact_payload": {
+    "analytic_entire_box_obstruction": {
+      "applies_to_every_original_amplitude_under_Pi_phi_zero_completion": true,
+      "bound": {
+        "assumed_inverse_radial_metric_squared_upper_bound": "4",
+        "bump_absolute_bound": "1",
+        "bump_r_derivative_absolute_bound": "3/2",
+        "bump_x_derivative_absolute_bound": "3",
+        "chi_pi_absolute_bound": "3/160",
+        "chi_r_absolute_bound": "1/50",
+        "classification": "conditional_exact_maximal_polar_areal_GR0_compactness_bound",
+        "compactness_absolute_bound": "3927454576397784264080597/276701161105643274240000000",
+        "compactness_bound_below_one_over_64": true,
+        "energy_density_absolute_bound": "1439999732348065153649/1475739525896764129280000",
+        "improved_inverse_radial_metric_squared_upper_bound": "35078960499193305358973039617/34587645138205409280000000000",
+        "inverse_metric_bootstrap_closed": true,
+        "k_times_r_cubed_absolute_bound": "333/1000",
+        "mass_absolute_bound": "3927454576397784264080597/55340232221128654848000000",
+        "momentum_density_absolute_bound": "3/8000",
+        "one_over_64_below_protocol_minimum_one_over_10": true,
+        "outer_vacuum_compactness_decreases_as_two_m_over_r": true,
+        "regular_center_removes_vacuum_mass_and_r_minus_3_momentum_constants": true
+      },
+      "comparisons": {
+        "amplitude_maximum_matches": true,
+        "bump_bound_matches": true,
+        "bump_derivative_bounds_match": true,
+        "compactness_strictly_below_separator": true,
+        "inverse_metric_bootstrap_assumption_matches": true,
+        "inverse_metric_bootstrap_closed": true,
+        "phi_amplitude_matches": true,
+        "separator_strictly_below_protocol_floor": true,
+        "support_matches": true
+      },
+      "derivation": {
+        "bootstrap_logic": "a_first_exit_from_lambda^-2<=4_is_excluded_by_the_stronger_derived_bound",
+        "bump_derivative_bound": "for_y=1/(1-x^2)>=1,_abs(B_x)<=2*y^2*exp(1-y)<=8/e<3",
+        "compactness_identity": "2*m/r=1+r^2*k^2-lambda^-2",
+        "mass_integral": "abs(m)<=integral((r^2*rho+abs(r^3*k*P))/(2*M_Pl^2),dr)",
+        "momentum_integral": "abs(r^3*k)<=integral(abs(P)*r^3/(2*M_Pl^2),dr)"
+      }
+    },
+    "decision": {
+      "PROTO1_calibration_or_holdout_may_execute": false,
+      "PROTO1_initial_data_contract_executable": false,
+      "PROTO1_original_amplitude_box_can_reach_declared_initial_compactness_floor_under_minimal_completion": false,
+      "new_versioned_protocol_required": true,
+      "repair_may_use_only_the_reported_GR0_premise_scan_before_refreezing": true,
+      "repair_must_freeze_Pi_phi": true
+    },
+    "epistemic_boundary": {
+      "FGCQR_action_or_mechanism_rejected": false,
+      "FGCQR_action_or_mechanism_tested": false,
+      "general_gradient_mechanism_rejected": false,
+      "general_gradient_mechanism_tested": false,
+      "protocol_design_route_closed": "PROTO1_as_written",
+      "scientific_role": "prevent_a_false_negative_or_non_event_from_being_misread_as_physics"
+    },
+    "exact_constraint_specialization": {
+      "all_exact_pair_equalities_passed": true,
+      "constraint_ODE": {
+        "k_r": "P/(2*M_Pl^2)-3*k/r",
+        "lambda_r": "r*lambda^3*(rho/M_Pl^2-(1-lambda^-2)/r^2+3*k^2)/2"
+      },
+      "constraint_formulae": {
+        "Hamiltonian": "M_Pl^2*((1-lambda^-2)/r^2+2*lambda_r/(r*lambda^3)-3*k^2)-rho=0",
+        "P": "Pi_phi*phi_r+Pi_chi*chi_r",
+        "radial_momentum": "2*M_Pl^2*(k_r+3*k/r)-P=0",
+        "rho": "((Pi_phi)^2+(Pi_chi)^2+lambda^-2*((phi_r)^2+(chi_r)^2))/2+V(phi)"
+      },
+      "fixture_count": 2,
+      "fixtures": {
+        "fixture_A": {
+          "coordinate_time_accelerations_set_to_zero_only_for_control": true,
+          "exact_pair_equality": true,
+          "full_unredefined_H": "1344281178785986237812823/8347624200922016428999600",
+          "full_unredefined_M": "4141660648/4531860085",
+          "source_is_unredefined_ACT1_VAR1": true,
+          "specialized_H": "1344281178785986237812823/8347624200922016428999600",
+          "specialized_M": "4141660648/4531860085",
+          "state": {
+            "alpha": "0",
+            "areal_radius": {
+              "dr": "1",
+              "drr": "0",
+              "dt": "-5/34",
+              "dtr": "-131/782",
+              "dtt": "0",
+              "value": "5/2"
+            },
+            "beta": "0",
+            "branch": "GR-0",
+            "chi": {
+              "dr": "1/43",
+              "drr": "0",
+              "dt": "-1/47",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "-1/41"
+            },
+            "eta": "0",
+            "g4": "1/2",
+            "h_rr": {
+              "dr": "-8/57",
+              "drr": "0",
+              "dt": "64/153",
+              "dtr": "18464/66861",
+              "dtt": "0",
+              "value": "16/9"
+            },
+            "h_tr": {
+              "dr": "0",
+              "drr": "0",
+              "dt": "0",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "0"
+            },
+            "h_tt": {
+              "dr": "0",
+              "drr": "0",
+              "dt": "0",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "-1"
+            },
+            "mu": "3",
+            "phi": {
+              "dr": "-1/31",
+              "drr": "0",
+              "dt": "1/37",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "1/29"
+            },
+            "planck_mass": "2"
+          }
+        },
+        "fixture_B": {
+          "coordinate_time_accelerations_set_to_zero_only_for_control": true,
+          "exact_pair_equality": true,
+          "full_unredefined_H": "1826456406073405405890468279/24748676195435958361148564627",
+          "full_unredefined_M": "-33784055749/35718085579",
+          "source_is_unredefined_ACT1_VAR1": true,
+          "specialized_H": "1826456406073405405890468279/24748676195435958361148564627",
+          "specialized_M": "-33784055749/35718085579",
+          "state": {
+            "alpha": "0",
+            "areal_radius": {
+              "dr": "1",
+              "drr": "0",
+              "dt": "22/57",
+              "dtr": "395/1767",
+              "dtt": "0",
+              "value": "11/3"
+            },
+            "beta": "0",
+            "branch": "GR-0",
+            "chi": {
+              "dr": "-2/53",
+              "drr": "0",
+              "dt": "1/59",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "3/47"
+            },
+            "eta": "0",
+            "g4": "1/2",
+            "h_rr": {
+              "dr": "7/29",
+              "drr": "0",
+              "dt": "-98/171",
+              "dtr": "-42623/153729",
+              "dtt": "0",
+              "value": "49/36"
+            },
+            "h_tr": {
+              "dr": "0",
+              "drr": "0",
+              "dt": "0",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "0"
+            },
+            "h_tt": {
+              "dr": "0",
+              "drr": "0",
+              "dt": "0",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "-1"
+            },
+            "mu": "3",
+            "phi": {
+              "dr": "1/41",
+              "drr": "0",
+              "dt": "-1/43",
+              "dtr": "0",
+              "dtt": "0",
+              "value": "-2/37"
+            },
+            "planck_mass": "2"
+          }
+        }
+      }
+    },
+    "independent_numerical_preflight": {
+      "interpretation": "floating_GR0_preflight_supporting_an_independent_exact_analytic_obstruction",
+      "methods": [
+        "RK4",
+        "SSPRK3"
+      ],
+      "nested_step_counts": [
+        32,
+        64,
+        128
+      ],
+      "numerics_are_not_needed_for_the_entire_box_rejection": true,
+      "original_box": {
+        "all_candidates_below_declared_upper_bound": true,
+        "all_methods_pass_outer_mass_convergence_threshold": true,
+        "declared_numerical_upper_bound": 0.0005,
+        "maximum_peak_compactness": 0.00042748453012197984,
+        "records": [
+          {
+            "amplitude": "1/64",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 1.2878587085651816e-14,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  4.6180403059370434e-05,
+                  4.619018482576731e-05,
+                  4.619023650820342e-05
+                ],
+                "observed_outer_mass_convergence_order": 7.564277126505594,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.0005541617009213272,
+                  "outer_mass": 4.6190236567267284e-05,
+                  "peak_compactness": 6.680983159479403e-06,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  4.6180185089617076e-05,
+                  4.619018365692451e-05,
+                  4.619023642427056e-05
+                ],
+                "observed_outer_mass_convergence_order": 7.565932151495371,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.0005541617009215131,
+                  "outer_mass": 4.619023646157405e-05,
+                  "peak_compactness": 6.680983146600816e-06,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          },
+          {
+            "amplitude": "3/128",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 2.4424906541753444e-14,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.00010389324557968926,
+                  0.00010391525432307258,
+                  0.00010391537057863331
+                ],
+                "observed_outer_mass_convergence_order": 7.564633240049154,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.0012468638270729802,
+                  "outer_mass": 0.0001039153705257867,
+                  "peak_compactness": 1.5030377915392634e-05,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.00010389275425848332,
+                  0.00010391525157815718,
+                  0.0001039153704107676
+                ],
+                "observed_outer_mass_convergence_order": 7.564678519678342,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.0012468638270734086,
+                  "outer_mass": 0.00010391537069676104,
+                  "peak_compactness": 1.503037793981754e-05,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          },
+          {
+            "amplitude": "1/32",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 1.9095836023552692e-14,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.00018469116945474262,
+                  0.00018473029601207003,
+                  0.00018473050269829372
+                ],
+                "observed_outer_mass_convergence_order": 7.564562133904131,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.002216646803685309,
+                  "outer_mass": 0.0001847305026703161,
+                  "peak_compactness": 2.671952257105037e-05,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0001846902937839845,
+                  0.00018473029082766157,
+                  0.00018473050232525878
+                ],
+                "observed_outer_mass_convergence_order": 7.563108285787262,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.0022166468036860522,
+                  "outer_mass": 0.00018473050253353662,
+                  "peak_compactness": 2.6719522551954533e-05,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          },
+          {
+            "amplitude": "3/64",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 3.1086244689504383e-15,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0004155420229619011,
+                  0.0004156300575017813,
+                  0.0004156305225387902
+                ],
+                "observed_outer_mass_convergence_order": 7.564580323908364,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.004987455308291921,
+                  "outer_mass": 0.0004156305225792023,
+                  "peak_compactness": 6.0117027084083396e-05,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.00041554003832355857,
+                  0.00041563004387279445,
+                  0.0004156305214422229
+                ],
+                "observed_outer_mass_convergence_order": 7.558159656819928,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.0049874553082936346,
+                  "outer_mass": 0.0004156305225512247,
+                  "peak_compactness": 6.011702708097477e-05,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          },
+          {
+            "amplitude": "1/16",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 1.6431300764452317e-14,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0007387323279673952,
+                  0.0007388888336620214,
+                  0.0007388896603828243
+                ],
+                "observed_outer_mass_convergence_order": 7.56459924672066,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.008866587214741236,
+                  "outer_mass": 0.0007388896605693418,
+                  "peak_compactness": 0.00010687340489445862,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0007387287638579432,
+                  0.0007388888047020759,
+                  0.0007388896578593984
+                ],
+                "observed_outer_mass_convergence_order": 7.551412628305242,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.008866587214744209,
+                  "outer_mass": 0.0007388896606781437,
+                  "peak_compactness": 0.00010687340491088992,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          },
+          {
+            "amplitude": "3/32",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 1.3322676295501878e-15,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0016621274800617813,
+                  0.00166247961752497,
+                  0.0016624814777312924
+                ],
+                "observed_outer_mass_convergence_order": 7.5645322657213905,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.019949821233167683,
+                  "outer_mass": 0.00166248147808723,
+                  "peak_compactness": 0.00024046222985552035,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0016621192304050458,
+                  0.001662479521756799,
+                  0.0016624814681085454
+                ],
+                "observed_outer_mass_convergence_order": 7.532247753422872,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.019949821233174538,
+                  "outer_mass": 0.0016624814780219488,
+                  "peak_compactness": 0.00024046222985418808,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          },
+          {
+            "amplitude": "1/8",
+            "both_methods_below_one_over_2000": true,
+            "cross_method_peak_compactness_difference": 6.217248937900877e-15,
+            "methods": {
+              "RK4": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.0029548664643245237,
+                  0.0029554924860119014,
+                  0.0029554957932207415
+                ],
+                "observed_outer_mass_convergence_order": 7.564454677148971,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "RK4",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.03546634885896494,
+                  "outer_mass": 0.0029554957938665583,
+                  "peak_compactness": 0.0004274845301157626,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              },
+              "SSPRK3": {
+                "minimum_required_order": 2.5,
+                "nested_outer_masses": [
+                  0.002954851224821531,
+                  0.0029554922396658467,
+                  0.002955495766481131
+                ],
+                "observed_outer_mass_convergence_order": 7.505847939163499,
+                "report_solution": {
+                  "finite_mass": true,
+                  "method": "SSPRK3",
+                  "no_initial_trapped_sphere": true,
+                  "outer_k_times_r_cubed": 0.035466348858976836,
+                  "outer_mass": 0.002955495793875884,
+                  "peak_compactness": 0.00042748453012197984,
+                  "peak_radius": 13.8037109375,
+                  "step_count": 4096
+                }
+              }
+            }
+          }
+        ]
+      },
+      "premise_repair_scan": {
+        "FGCQR_outcomes_used": false,
+        "all_candidates_inside_original_initial_compactness_window": true,
+        "does_not_freeze_or_authorize_a_successor_protocol": true,
+        "records": [
+          {
+            "amplitude": "2",
+            "cross_method_peak_compactness_difference": 5.523248525207691e-12,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 9.079385307895025,
+                "outer_mass": 0.7541344460701211,
+                "peak_compactness": 0.1090789331462293,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 9.07938530789807,
+                "outer_mass": 0.7541344460265235,
+                "peak_compactness": 0.10907893314070605,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          },
+          {
+            "amplitude": "5/2",
+            "cross_method_peak_compactness_difference": 1.3950507415927405e-11,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 14.186539543585965,
+                "outer_mass": 1.176641649337602,
+                "peak_compactness": 0.17019114373109923,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 14.186539543590795,
+                "outer_mass": 1.1766416492322196,
+                "peak_compactness": 0.17019114371714872,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          },
+          {
+            "amplitude": "3",
+            "cross_method_peak_compactness_difference": 2.932387666021441e-11,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 20.428616942763707,
+                "outer_mass": 1.692045757778617,
+                "peak_compactness": 0.24474009973268107,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 20.428616942770727,
+                "outer_mass": 1.6920457575622132,
+                "peak_compactness": 0.2447400997033572,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          },
+          {
+            "amplitude": "7/2",
+            "cross_method_peak_compactness_difference": 5.471156860892279e-11,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 27.80561750542849,
+                "outer_mass": 2.3005711523798222,
+                "peak_compactness": 0.3327579011441817,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 27.805617505437922,
+                "outer_mass": 2.3005711519817544,
+                "peak_compactness": 0.3327579010894701,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          },
+          {
+            "amplitude": "4",
+            "cross_method_peak_compactness_difference": 9.400058509356768e-11,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 36.3175412315801,
+                "outer_mass": 3.0031692714662466,
+                "peak_compactness": 0.434381476351691,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 36.31754123159228,
+                "outer_mass": 3.003169270788618,
+                "peak_compactness": 0.4343814762576904,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          },
+          {
+            "amplitude": "9/2",
+            "cross_method_peak_compactness_difference": 1.5296597322134176e-10,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 45.96438812121852,
+                "outer_mass": 3.8017974375376644,
+                "peak_compactness": 0.5498928141802537,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 45.96438812123406,
+                "outer_mass": 3.801797436442372,
+                "peak_compactness": 0.5498928140272877,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          },
+          {
+            "amplitude": "5",
+            "cross_method_peak_compactness_difference": 2.414014543816734e-10,
+            "inside_original_initial_compactness_window": true,
+            "methods": {
+              "RK4": {
+                "finite_mass": true,
+                "method": "RK4",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 56.74615817434386,
+                "outer_mass": 4.699697927397443,
+                "peak_compactness": 0.6797592394397571,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              },
+              "SSPRK3": {
+                "finite_mass": true,
+                "method": "SSPRK3",
+                "no_initial_trapped_sphere": true,
+                "outer_k_times_r_cubed": 56.74615817436318,
+                "outer_mass": 4.69969792567814,
+                "peak_compactness": 0.6797592391983557,
+                "peak_radius": 13.8037109375,
+                "step_count": 4096
+              }
+            }
+          }
+        ],
+        "uses_only_GR0_constraint_solutions": true
+      },
+      "report_step_count": 4096
+    },
+    "protocol_diagnosis": {
+      "declared_chi_momentum": "partial_t(r_chi)=partial_r(r_chi)",
+      "declared_chi_profile": "r_times_chi=amplitude*B((r-center)/half_width)",
+      "declared_phi_profile": "phi=amplitude*B((r-center)/half_width)",
+      "minimal_preflight_completion": "Pi_phi=0",
+      "missing_phi_momentum_alone_prevents_executable_initial_data_contract": true,
+      "original_chi_amplitudes_are_too_small_under_minimal_completion": true,
+      "outcome_based_parameter_change": false,
+      "phi_unit_normal_momentum_frozen_by_PROTO1": false,
+      "premise_based_protocol_revision_required": true
+    }
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "frozen_PROTO1_preserved": true,
+    "historical_pre_PROTO2_checkpoint_verified": true,
+    "outcome_data_not_used_to_revise_protocol": true,
+    "premise_failure_found_before_FGCQR_holdout": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "pre_holdout_GR0_protocol_obstruction_not_an_FGCQR_mechanism_result",
+  "derivation_document": "docs/fgc-id0-pref1.md",
+  "derivation_document_sha256": "e562e155960782085f65948e0d299d78a7c2ded539bdab2acb42884e67ed61d8",
+  "gate_status": {
+    "PROTO1_FGCQR_holdout_execution_authorized": false,
+    "PROTO1_initial_data_calibration_authorized": false,
+    "PROTO1_initial_data_preflight_obstruction_verified": true,
+    "PROTO2_premise_revision_required": true,
+    "classical_spherical_diagnostic_authorized": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false
+  },
+  "generated_by": "scripts/reproduce_fgc_id0_pref1.py",
+  "historical_preflight_checkpoint": {
+    "FGCQR_holdout_outcomes_inspected_before_ID0": false,
+    "classification": "immutable_pre_PROTO2_ID0_checkpoint",
+    "commit": "d4f0cc8f58408ef4ee12fb32fe3619916e231795",
+    "commit_is_ancestor_of_HEAD": true,
+    "file_sha256": {
+      "configs/fgc/fgc-1-con4-phy1.toml": "f438db34cf4895fa990f4574a6e3e32dfdf59a3bc864d3505e40a37de2c22b03",
+      "configs/fgc/fgc-1-ctr1-reg1.toml": "c4eb5a6d646ea6bb1d8bd43d3c3911ce4c2a5182c8dde6e25a5221e07f7415a8",
+      "configs/fgc/fgc-1-id0-pref1.toml": "305338f3b940f046b59072448dfb010b7fa2701e290573c08703a2cac59a7086",
+      "configs/fgc/fgc-1-run1-sym1.toml": "7b4341bf5b9712648daff4d247de0a786e1b19fc0ea1aeac761a1f4da39424f0",
+      "results/fgc-1-con4-phy1.json": "8fb15d3d7298b27a1607084bfc5acd8a88d67a427e9e4583ef6560000240d1e7",
+      "results/fgc-1-ctr1-reg1.json": "998b3577556a79290da07eaeec90224406239a55560f4f9459b283d57f15979d",
+      "results/fgc-1-id0-pref1.json": "ac9f0726a1e336dc41dd100612d2ca3c64a1913449ac2d3844f42ee31d86ba22",
+      "results/fgc-1-run1-sym1.json": "269d0d4b594c87b6d54a84ef860056322d4c3174653af32ab06f9d02a84deca8"
+    },
+    "original_CON4_and_CTR1_positive_gates_verified_at_commit": true,
+    "original_ID0_canonical_ledgers_verified_at_commit": true,
+    "original_RUN1_two_of_eight_stop_verified_at_commit": true
+  },
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_id0_pref1.py": "7cd95b05ff48ee0fcc90f24580e9a76b3ec1627b0b3c64232de14e2beb7f0436",
+    "src/recursive_horizons/fgc/constraint_system.py": "945788d4c5d1e1064be0048bb5a63267dd95028621b3559f4040fd54b2401ba3",
+    "src/recursive_horizons/fgc/initial_data_preflight.py": "8d13506cc5d0e459edef63349e32b124f0c75ecd8ce6761a965b539aca1ae256",
+    "src/recursive_horizons/fgc/modified_harmonic_constraints.py": "428ddbe6325a43d905d5da880d0b67922b5448d38e69a2461e84003348708783",
+    "src/recursive_horizons/fgc/scoped_run_authorization.py": "c47fade97823566caeebc21583c074fce62c4e296ea717babc40bf11be91e2bf",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-2-sf1-protocol.toml": "0eb3a4cbf08f5c88b65f4ea8abd69c90e40bd1a6f32c8246fb445dd90546f395"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_holdout_outcomes_inspected": false,
+    "historical_checkpoint_commit": "d4f0cc8f58408ef4ee12fb32fe3619916e231795",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "protocol_config_sha256": "0eb3a4cbf08f5c88b65f4ea8abd69c90e40bd1a6f32c8246fb445dd90546f395",
+    "protocol_semantic_holdout_contract_sha256": "f0e10ec5712a7bfa93e4e00fcf5fe843bf0690c0b97bbeea2054846b85720119",
+    "run1_artifact_id": "FGC-1-RUN1-SYM1",
+    "run1_config_sha256": "7b4341bf5b9712648daff4d247de0a786e1b19fc0ea1aeac761a1f4da39424f0",
+    "run1_result_sha256": "269d0d4b594c87b6d54a84ef860056322d4c3174653af32ab06f9d02a84deca8",
+    "target_branch": "GR-0",
+    "target_protocol_artifact_id": "FGC-2-SF1-PROTO1",
+    "target_protocol_version": 1
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-id0-pref1.toml": "1b1531b9501b0caf65a11fa5d58c35579207022340c3ed0a65ff60b68c155652"
+  }
+}

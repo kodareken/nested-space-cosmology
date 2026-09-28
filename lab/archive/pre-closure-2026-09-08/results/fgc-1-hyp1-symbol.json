@@ -1,0 +1,4835 @@
+{
+  "adm_preflight": {
+    "candidate_constraint_order": [
+      "E_nn",
+      "E_ns"
+    ],
+    "chart": "generalized_radial_adm_dynamic_lambda_dynamic_areal_radius",
+    "evolution_projection_order": [
+      "E_ss",
+      "E_theta_theta",
+      "E_phi",
+      "E_chi"
+    ],
+    "extrinsic_curvature_sign": "K_ij=-one_half_L_n_gamma_ij",
+    "gauge_source_second_jet_order": [
+      "alpha.dtt",
+      "alpha.dtr",
+      "alpha.drr",
+      "shift.dtt",
+      "shift.dtr",
+      "shift.drr"
+    ],
+    "kinetic_variable_order": [
+      "A_perp",
+      "B_perp",
+      "P_phi_perp",
+      "P_chi_perp"
+    ],
+    "naive_comparator": "prescribed_lapse_shift_unconstrained_dynamic_R_first_order_reduction",
+    "normal_derivative": "partial_perp=partial_t-shift*partial_r",
+    "normal_variable_order": [
+      "A_perp",
+      "A_r",
+      "L_r",
+      "B_perp",
+      "B_r",
+      "S_r",
+      "P_phi_perp",
+      "P_phi_r",
+      "Q_phi_r",
+      "P_chi_perp",
+      "P_chi_r",
+      "Q_chi_r"
+    ]
+  },
+  "artifact_id": "FGC-1-HYP1-SYM1",
+  "artifact_label": "FGC-1 HYP1 exact covariant physical-symbol and ADM formulation preflight",
+  "classification": "exact_pointwise_covariant_scalar_quotient_and_adm_formulation_preflight_not_full_hyperbolicity_or_evolution",
+  "derivation_document": "docs/fgc-hyp1-symbol.md",
+  "derivation_document_sha256": "282074becfb1f064b7266833314fd64153a8aab6e78c05e05fe717ab682ac0eb",
+  "development_status": "pointwise_physical_scalar_quotient_complete_full_hyp1_open",
+  "formulation": {
+    "alternate_metric_patch": "metric_tt_row_covers_c_equals_minus_shift",
+    "base_field_order": [
+      "h_tt",
+      "h_tr",
+      "h_rr",
+      "areal_radius",
+      "phi",
+      "chi"
+    ],
+    "covector": "xi_A=(-c,1)",
+    "equation_modification": "none_unredefined_covariant_equations",
+    "equation_order": [
+      "metric_tt",
+      "metric_tr",
+      "metric_rr",
+      "metric_theta_theta",
+      "scalar_phi",
+      "scalar_chi"
+    ],
+    "left_bianchi_generator_order": [
+      "b=t",
+      "b=r"
+    ],
+    "metric_elimination_variable_order": [
+      "h_tt_representative",
+      "areal_radius"
+    ],
+    "metric_patch_singularity": "c=-shift",
+    "physical_metric": "g_ab_matter_coupled_metric",
+    "quotient_rr_equation_order": [
+      "metric_rr",
+      "metric_theta_theta",
+      "scalar_phi",
+      "scalar_chi"
+    ],
+    "quotient_tt_equation_order": [
+      "metric_tt",
+      "metric_theta_theta",
+      "scalar_phi",
+      "scalar_chi"
+    ],
+    "quotient_variable_order": [
+      "h_tt_representative",
+      "areal_radius",
+      "phi",
+      "chi"
+    ],
+    "right_gauge_generator_order": [
+      "X_t",
+      "X_r"
+    ],
+    "scalar_order": [
+      "phi",
+      "chi"
+    ]
+  },
+  "gate_status": {
+    "adm_principal_constraint_kinetic_preflight_passed": true,
+    "evolution_authorized": false,
+    "exact_covariant_physical_scalar_quotient_passed": true,
+    "full_fgc1_hyp1_health_gate_passed": false,
+    "naive_fixed_gauge_comparator_rejected": true,
+    "pointwise_scalar_companion_symmetrizers_passed": true,
+    "publication_local_defocusing_gate_passed": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hyp1_symbol.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_action.py": "8ce5fc6b2b9fbda40816fddb7df64113f35dad9033cbb2ed5a7e1eafd79108e1",
+    "scripts/reproduce_fgc_hyp1_reduction.py": "5767d1cb540a958985d27b0dab38997669435fcbbd06eb0c23d4f805a107973f",
+    "scripts/reproduce_fgc_hyp1_symbol.py": "03af25c8d14c605fd6bb85927635b93e8380ead36f4b0318caff470c2df965b4",
+    "scripts/reproduce_fgc_metric_variation.py": "cd0f46288ff7dfb8c9a785e0a2c46a72150c310ff16caf4b5e377187443ff1df",
+    "src/recursive_horizons/fgc/__init__.py": "2b665e6ecef01c52d2780a950203b553355a97bd6658f149c46ef0c00a3b9f0c",
+    "src/recursive_horizons/fgc/exact_linear_algebra.py": "ea7036e9ab846ffd0804fc184ce5af1e59be5715584871608e7116d13d2731fe",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c",
+    "src/recursive_horizons/fgc/spherical_symbol.py": "5add74bdc40f71c720d5739ded449262f1bd4e9586464f95ac16d123e290c19d"
+  },
+  "input_branch_order": [
+    "GR-0",
+    "SGB-L",
+    "FGC-QR",
+    "FGC-QR"
+  ],
+  "input_fixture_ids": [
+    "GR0_regular",
+    "SGBL_constant_f",
+    "FGCQR_schwarzschild_exterior",
+    "FGCQR_activated_generic"
+  ],
+  "nonclaims": {
+    "collapse_solution_derived": false,
+    "constraint_propagation_proven": false,
+    "evolution_authorized": false,
+    "full_strong_hyperbolicity_proven": false,
+    "gauge_preservation_proven": false,
+    "lower_order_radial_constraints_derived": false,
+    "metric_null_affine_defocusing_derived": false,
+    "nonlinear_first_order_evolution_system_derived": false,
+    "open_retained_eft_domain_proven": false,
+    "regular_center_boundary_system_derived": false,
+    "uniform_full_system_symmetrizer_proven": false
+  },
+  "project_version": "0.11.0",
+  "proof_contract": {
+    "branch_order": [
+      "GR-0",
+      "SGB-L",
+      "FGC-QR",
+      "FGC-QR"
+    ],
+    "fixture_ids": [
+      "GR0_regular",
+      "SGBL_constant_f",
+      "FGCQR_schwarzschild_exterior",
+      "FGCQR_activated_generic"
+    ],
+    "rational_encoding": "canonical_fraction_string_numerator_over_denominator",
+    "require_candidate_constraints_free_of_gauge_source_second_jets": true,
+    "require_candidate_constraints_free_of_normal_accelerations": true,
+    "require_chi_metric_null_factor": true,
+    "require_exact_left_bianchi_null_identity": true,
+    "require_exact_right_gauge_null_identity": true,
+    "require_metric_block_invertible_at_physical_roots": true,
+    "require_metric_block_patch_factor": true,
+    "require_naive_gr_comparator_rejected": true,
+    "require_nonzero_pointwise_metric_phi_kinetic_determinant": true,
+    "require_positive_exact_scalar_companion_symmetrizers": true,
+    "require_positive_pointwise_discriminants": true,
+    "require_quadratic_regulator_factor": true
+  },
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-hyp1-reduction.toml": "6d1820ffb3dd4505990274cf4a3d76d1bbea78cc18484a29419b8101207ab50e",
+    "configs/fgc/fgc-1-hyp1-symbol.toml": "f6a03db3987dcf6a81a6a65d651ecf145f6d7682487d1227a08a4388328d822c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97"
+  },
+  "source_configs": {
+    "action": "configs/fgc/fgc-1-action-gate.toml",
+    "reduction": "configs/fgc/fgc-1-hyp1-reduction.toml",
+    "symbol": "configs/fgc/fgc-1-hyp1-symbol.toml",
+    "variation": "configs/fgc/fgc-1-metric-variation.toml"
+  },
+  "symbol_certificate": {
+    "all_declared_exact_checks_pass": true,
+    "artifact_id": "FGC-1-HYP1-SYM1",
+    "classification": "exact_pointwise_covariant_scalar_quotient_and_adm_formulation_preflight_not_full_hyperbolicity_or_evolution",
+    "fixture_records": [
+      {
+        "adm_normal_preflight": {
+          "candidate_constraint_rows": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "candidate_constraints_free_of_gauge_source_second_jets": true,
+          "candidate_constraints_free_of_normal_accelerations": true,
+          "gauge_source_matrix_at_fixed_normal_variables": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "4",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "gauge_source_second_jet_order": [
+            "alpha.dtt",
+            "alpha.dtr",
+            "alpha.drr",
+            "shift.dtt",
+            "shift.dtr",
+            "shift.drr"
+          ],
+          "kinetic_determinant": "-32",
+          "kinetic_matrix": [
+            [
+              "0",
+              "8",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "4",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ]
+          ],
+          "kinetic_variable_order": [
+            "A_perp",
+            "B_perp",
+            "P_phi_perp",
+            "P_chi_perp"
+          ],
+          "matrix": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "0",
+              "0",
+              "4",
+              "0",
+              "4",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "0",
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "0",
+              "1"
+            ]
+          ],
+          "normal_variable_order": [
+            "A_perp",
+            "A_r",
+            "L_r",
+            "B_perp",
+            "B_r",
+            "S_r",
+            "P_phi_perp",
+            "P_phi_r",
+            "Q_phi_r",
+            "P_chi_perp",
+            "P_chi_r",
+            "Q_chi_r"
+          ],
+          "projection_order": [
+            "E_nn",
+            "E_ns",
+            "E_ss",
+            "E_theta_theta_orthonormal",
+            "E_phi",
+            "E_chi"
+          ]
+        },
+        "alternate_metric_block_nonzero_at_patch": "-64",
+        "branch": "GR-0",
+        "cone_resultant": "0",
+        "cones_share_no_root": false,
+        "fixture_id": "GR0_regular",
+        "left_bianchi_generators": [
+          [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "left_bianchi_null_identity_exact": true,
+        "left_bianchi_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "metric_block_invertible_at_physical_roots": true,
+        "metric_null_certificate": {
+          "companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "discriminant": "4",
+          "expected_symmetrizer_determinant": "1",
+          "polynomial": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-1"
+            },
+            {
+              "exact": "1"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "symmetrizer_determinant": "1",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        },
+        "metric_null_factor": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "metric_null_nonzero_at_patch": "-1",
+        "metric_patch_factor": [
+          "0",
+          "0",
+          "1"
+        ],
+        "metric_patch_nonzero_constant": "-64",
+        "metric_patch_speed": "0",
+        "quotient_atlas": {
+          "rr_patch": {
+            "equation_order": [
+              "metric_rr",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0",
+                    "-2"
+                  ]
+                ],
+                [
+                  [
+                    "-32"
+                  ],
+                  [
+                    "16",
+                    "0",
+                    "-16"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "0",
+                "0",
+                "-64"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "0",
+                "0",
+                "-64",
+                "0",
+                "128",
+                "0",
+                "-64"
+              ],
+              "scalar_determinant": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "1"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "0",
+                "0",
+                "-64"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "0",
+                    "0",
+                    "-64",
+                    "0",
+                    "64"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0",
+                    "-64",
+                    "0",
+                    "64"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0",
+                  "0",
+                  "-2"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-32"
+                ],
+                [
+                  "16",
+                  "0",
+                  "-16"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ]
+              ]
+            ],
+            "validity": "c+shift_nonzero"
+          },
+          "tt_patch": {
+            "equation_order": [
+              "metric_tt",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-2"
+                  ]
+                ],
+                [
+                  [
+                    "-32"
+                  ],
+                  [
+                    "16",
+                    "0",
+                    "-16"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "-64"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "-64",
+                "0",
+                "128",
+                "0",
+                "-64"
+              ],
+              "scalar_determinant": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "1"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "-64"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "-64",
+                    "0",
+                    "64"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-64",
+                    "0",
+                    "64"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "-2"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-32"
+                ],
+                [
+                  "16",
+                  "0",
+                  "-16"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ]
+              ]
+            ],
+            "validity": "covers_c_equals_minus_shift"
+          }
+        },
+        "quotient_atlas_covers_patch_boundary": true,
+        "quotient_atlas_scalar_determinants_agree_exactly": true,
+        "quotient_variable_order": [
+          "h_tt_representative",
+          "areal_radius",
+          "phi",
+          "chi"
+        ],
+        "radial_covector": "xi_A=(-c,1)",
+        "raw_symbol": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0",
+              "2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-32"
+            ],
+            [
+              "0",
+              "-64"
+            ],
+            [
+              "0",
+              "0",
+              "-32"
+            ],
+            [
+              "16",
+              "0",
+              "-16"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "-1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "-1"
+            ]
+          ]
+        ],
+        "regulator_certificate": {
+          "companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "discriminant": "4",
+          "expected_symmetrizer_determinant": "1",
+          "polynomial": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-1"
+            },
+            {
+              "exact": "1"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "symmetrizer_determinant": "1",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        },
+        "regulator_cone_proportional_to_metric": true,
+        "regulator_factor": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "regulator_nonzero_at_patch": "-1",
+        "right_gauge_generators": [
+          [
+            [
+              "0",
+              "-2"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "1"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "2"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "right_gauge_null_identity_exact": true,
+        "right_gauge_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_determinant_factorization_exact": true
+      },
+      {
+        "adm_normal_preflight": {
+          "candidate_constraint_rows": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "candidate_constraints_free_of_gauge_source_second_jets": true,
+          "candidate_constraints_free_of_normal_accelerations": true,
+          "gauge_source_matrix_at_fixed_normal_variables": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "4",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "gauge_source_second_jet_order": [
+            "alpha.dtt",
+            "alpha.dtr",
+            "alpha.drr",
+            "shift.dtt",
+            "shift.dtr",
+            "shift.drr"
+          ],
+          "kinetic_determinant": "-32",
+          "kinetic_matrix": [
+            [
+              "0",
+              "8",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "4",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ]
+          ],
+          "kinetic_variable_order": [
+            "A_perp",
+            "B_perp",
+            "P_phi_perp",
+            "P_chi_perp"
+          ],
+          "matrix": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "0",
+              "0",
+              "4",
+              "0",
+              "4",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "0",
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "0",
+              "1"
+            ]
+          ],
+          "normal_variable_order": [
+            "A_perp",
+            "A_r",
+            "L_r",
+            "B_perp",
+            "B_r",
+            "S_r",
+            "P_phi_perp",
+            "P_phi_r",
+            "Q_phi_r",
+            "P_chi_perp",
+            "P_chi_r",
+            "Q_chi_r"
+          ],
+          "projection_order": [
+            "E_nn",
+            "E_ns",
+            "E_ss",
+            "E_theta_theta_orthonormal",
+            "E_phi",
+            "E_chi"
+          ]
+        },
+        "alternate_metric_block_nonzero_at_patch": "-80",
+        "branch": "SGB-L",
+        "cone_resultant": "0",
+        "cones_share_no_root": false,
+        "fixture_id": "SGBL_constant_f",
+        "left_bianchi_generators": [
+          [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "left_bianchi_null_identity_exact": true,
+        "left_bianchi_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "metric_block_invertible_at_physical_roots": true,
+        "metric_null_certificate": {
+          "companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "discriminant": "4",
+          "expected_symmetrizer_determinant": "1",
+          "polynomial": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-1"
+            },
+            {
+              "exact": "1"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "symmetrizer_determinant": "1",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        },
+        "metric_null_factor": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "metric_null_nonzero_at_patch": "-1",
+        "metric_patch_factor": [
+          "0",
+          "0",
+          "1"
+        ],
+        "metric_patch_nonzero_constant": "-80",
+        "metric_patch_speed": "0",
+        "quotient_atlas": {
+          "rr_patch": {
+            "equation_order": [
+              "metric_rr",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0",
+                    "-8/5"
+                  ]
+                ],
+                [
+                  [
+                    "-50"
+                  ],
+                  [
+                    "20",
+                    "0",
+                    "-20"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "0",
+                "0",
+                "-80"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "0",
+                "0",
+                "-80",
+                "0",
+                "160",
+                "0",
+                "-80"
+              ],
+              "scalar_determinant": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "1"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "0",
+                "0",
+                "-80"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "0",
+                    "0",
+                    "-80",
+                    "0",
+                    "80"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0",
+                    "0",
+                    "-80",
+                    "0",
+                    "80"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0",
+                  "0",
+                  "-8/5"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-50"
+                ],
+                [
+                  "20",
+                  "0",
+                  "-20"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ]
+              ]
+            ],
+            "validity": "c+shift_nonzero"
+          },
+          "tt_patch": {
+            "equation_order": [
+              "metric_tt",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "1",
+                    "0",
+                    "-1"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-8/5"
+                  ]
+                ],
+                [
+                  [
+                    "-50"
+                  ],
+                  [
+                    "20",
+                    "0",
+                    "-20"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "-80"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "-80",
+                "0",
+                "160",
+                "0",
+                "-80"
+              ],
+              "scalar_determinant": [
+                "1",
+                "0",
+                "-2",
+                "0",
+                "1"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "-80"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "-80",
+                    "0",
+                    "80"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-80",
+                    "0",
+                    "80"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "-8/5"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-50"
+                ],
+                [
+                  "20",
+                  "0",
+                  "-20"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "1",
+                  "0",
+                  "-1"
+                ]
+              ]
+            ],
+            "validity": "covers_c_equals_minus_shift"
+          }
+        },
+        "quotient_atlas_covers_patch_boundary": true,
+        "quotient_atlas_scalar_determinants_agree_exactly": true,
+        "quotient_variable_order": [
+          "h_tt_representative",
+          "areal_radius",
+          "phi",
+          "chi"
+        ],
+        "radial_covector": "xi_A=(-c,1)",
+        "raw_symbol": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-8/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0",
+              "8/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-8/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-50"
+            ],
+            [
+              "0",
+              "-100"
+            ],
+            [
+              "0",
+              "0",
+              "-50"
+            ],
+            [
+              "20",
+              "0",
+              "-20"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "-1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "-1"
+            ]
+          ]
+        ],
+        "regulator_certificate": {
+          "companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "discriminant": "4",
+          "expected_symmetrizer_determinant": "1",
+          "polynomial": [
+            "-1",
+            "0",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-1"
+            },
+            {
+              "exact": "1"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "symmetrizer_determinant": "1",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ]
+        },
+        "regulator_cone_proportional_to_metric": true,
+        "regulator_factor": [
+          "-1",
+          "0",
+          "1"
+        ],
+        "regulator_nonzero_at_patch": "-1",
+        "right_gauge_generators": [
+          [
+            [
+              "0",
+              "-2"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "1"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "2"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "right_gauge_null_identity_exact": true,
+        "right_gauge_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_determinant_factorization_exact": true
+      },
+      {
+        "adm_normal_preflight": {
+          "candidate_constraint_rows": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "candidate_constraints_free_of_gauge_source_second_jets": true,
+          "candidate_constraints_free_of_normal_accelerations": true,
+          "gauge_source_matrix_at_fixed_normal_variables": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "4",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "gauge_source_second_jet_order": [
+            "alpha.dtt",
+            "alpha.dtr",
+            "alpha.drr",
+            "shift.dtt",
+            "shift.dtr",
+            "shift.drr"
+          ],
+          "kinetic_determinant": "-32",
+          "kinetic_matrix": [
+            [
+              "0",
+              "8",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "4",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "-1"
+            ]
+          ],
+          "kinetic_variable_order": [
+            "A_perp",
+            "B_perp",
+            "P_phi_perp",
+            "P_chi_perp"
+          ],
+          "matrix": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "8",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "0",
+              "0",
+              "4",
+              "0",
+              "4",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "0",
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "0",
+              "1"
+            ]
+          ],
+          "normal_variable_order": [
+            "A_perp",
+            "A_r",
+            "L_r",
+            "B_perp",
+            "B_r",
+            "S_r",
+            "P_phi_perp",
+            "P_phi_r",
+            "Q_phi_r",
+            "P_chi_perp",
+            "P_chi_r",
+            "Q_chi_r"
+          ],
+          "projection_order": [
+            "E_nn",
+            "E_ns",
+            "E_ss",
+            "E_theta_theta_orthonormal",
+            "E_phi",
+            "E_chi"
+          ]
+        },
+        "alternate_metric_block_nonzero_at_patch": "-128",
+        "branch": "FGC-QR",
+        "cone_resultant": "0",
+        "cones_share_no_root": false,
+        "fixture_id": "FGCQR_schwarzschild_exterior",
+        "left_bianchi_generators": [
+          [
+            [
+              "1/2",
+              "1"
+            ],
+            [
+              "3/4",
+              "-1/2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "1/2",
+              "1"
+            ],
+            [
+              "3/4",
+              "-1/2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "left_bianchi_null_identity_exact": true,
+        "left_bianchi_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "metric_block_invertible_at_physical_roots": true,
+        "metric_null_certificate": {
+          "companion": [
+            [
+              "0",
+              "3/4"
+            ],
+            [
+              "1",
+              "-1"
+            ]
+          ],
+          "discriminant": "4",
+          "expected_symmetrizer_determinant": "1",
+          "polynomial": [
+            "-3/4",
+            "1",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-3/2"
+            },
+            {
+              "exact": "1/2"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "5/4"
+            ]
+          ],
+          "symmetrizer_determinant": "1",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "-1/2",
+              "5/4"
+            ],
+            [
+              "5/4",
+              "-13/8"
+            ]
+          ]
+        },
+        "metric_null_factor": [
+          "-3/4",
+          "1",
+          "1"
+        ],
+        "metric_null_nonzero_at_patch": "-1",
+        "metric_patch_factor": [
+          "1/4",
+          "1",
+          "1"
+        ],
+        "metric_patch_nonzero_constant": "-128",
+        "metric_patch_speed": "-1/2",
+        "quotient_atlas": {
+          "rr_patch": {
+            "equation_order": [
+              "metric_rr",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "3/4",
+                    "-1",
+                    "-1"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "3/4",
+                    "-1",
+                    "-1"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-1/4",
+                    "-1",
+                    "-1"
+                  ]
+                ],
+                [
+                  [
+                    "-128"
+                  ],
+                  [
+                    "24",
+                    "-32",
+                    "-32"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "-32",
+                "-128",
+                "-128"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "-18",
+                "-24",
+                "136",
+                "192",
+                "-224",
+                "-384",
+                "-128"
+              ],
+              "scalar_determinant": [
+                "9/16",
+                "-3/2",
+                "-1/2",
+                "2",
+                "1"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "-32",
+                "-128",
+                "-128"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "-24",
+                    "-64",
+                    "64",
+                    "256",
+                    "128"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-24",
+                    "-64",
+                    "64",
+                    "256",
+                    "128"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "-1/4",
+                  "-1",
+                  "-1"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-128"
+                ],
+                [
+                  "24",
+                  "-32",
+                  "-32"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "3/4",
+                  "-1",
+                  "-1"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "3/4",
+                  "-1",
+                  "-1"
+                ]
+              ]
+            ],
+            "validity": "c+shift_nonzero"
+          },
+          "tt_patch": {
+            "equation_order": [
+              "metric_tt",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "3/4",
+                    "-1",
+                    "-1"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "3/4",
+                    "-1",
+                    "-1"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-9/16",
+                    "3/4",
+                    "-1/4"
+                  ]
+                ],
+                [
+                  [
+                    "-128"
+                  ],
+                  [
+                    "24",
+                    "-32",
+                    "-32"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "-72",
+                "96",
+                "-32"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "-81/2",
+                "162",
+                "-126",
+                "-144",
+                "136",
+                "32",
+                "-32"
+              ],
+              "scalar_determinant": [
+                "9/16",
+                "-3/2",
+                "-1/2",
+                "2",
+                "1"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "-72",
+                "96",
+                "-32"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "-54",
+                    "144",
+                    "-48",
+                    "-64",
+                    "32"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-54",
+                    "144",
+                    "-48",
+                    "-64",
+                    "32"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "-9/16",
+                  "3/4",
+                  "-1/4"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-128"
+                ],
+                [
+                  "24",
+                  "-32",
+                  "-32"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "3/4",
+                  "-1",
+                  "-1"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "3/4",
+                  "-1",
+                  "-1"
+                ]
+              ]
+            ],
+            "validity": "covers_c_equals_minus_shift"
+          }
+        },
+        "quotient_atlas_covers_patch_boundary": true,
+        "quotient_atlas_scalar_determinants_agree_exactly": true,
+        "quotient_variable_order": [
+          "h_tt_representative",
+          "areal_radius",
+          "phi",
+          "chi"
+        ],
+        "radial_covector": "xi_A=(-c,1)",
+        "raw_symbol": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-9/16",
+              "3/4",
+              "-1/4"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "3/8",
+              "1/2",
+              "-1/2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-1/4",
+              "-1",
+              "-1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-128"
+            ],
+            [
+              "0",
+              "-256"
+            ],
+            [
+              "0",
+              "0",
+              "-128"
+            ],
+            [
+              "24",
+              "-32",
+              "-32"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "3/4",
+              "-1",
+              "-1"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "3/4",
+              "-1",
+              "-1"
+            ]
+          ]
+        ],
+        "regulator_certificate": {
+          "companion": [
+            [
+              "0",
+              "3/4"
+            ],
+            [
+              "1",
+              "-1"
+            ]
+          ],
+          "discriminant": "4",
+          "expected_symmetrizer_determinant": "1",
+          "polynomial": [
+            "-3/4",
+            "1",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-3/2"
+            },
+            {
+              "exact": "1/2"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "-1/2"
+            ],
+            [
+              "-1/2",
+              "5/4"
+            ]
+          ],
+          "symmetrizer_determinant": "1",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "-1/2",
+              "5/4"
+            ],
+            [
+              "5/4",
+              "-13/8"
+            ]
+          ]
+        },
+        "regulator_cone_proportional_to_metric": true,
+        "regulator_factor": [
+          "-3/4",
+          "1",
+          "1"
+        ],
+        "regulator_nonzero_at_patch": "-1",
+        "right_gauge_generators": [
+          [
+            [
+              "0",
+              "-2"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "1"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "2"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "right_gauge_null_identity_exact": true,
+        "right_gauge_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_determinant_factorization_exact": true
+      },
+      {
+        "adm_normal_preflight": {
+          "candidate_constraint_rows": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-53354372/8103375",
+              "0",
+              "0",
+              "384968774/1406514375",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "53354372/8103375",
+              "0",
+              "0",
+              "384968774/1406514375",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "candidate_constraints_free_of_gauge_source_second_jets": true,
+          "candidate_constraints_free_of_normal_accelerations": true,
+          "gauge_source_matrix_at_fixed_normal_variables": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "213417488/94539375",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "3079750192/16409334375",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          ],
+          "gauge_source_second_jet_order": [
+            "alpha.dtt",
+            "alpha.dtr",
+            "alpha.drr",
+            "shift.dtt",
+            "shift.dtr",
+            "shift.drr"
+          ],
+          "kinetic_determinant": "-35632367235848452305025680500992/2824563799176208585345458984375",
+          "kinetic_matrix": [
+            [
+              "0",
+              "106708744/17364375",
+              "769937548/3013959375",
+              "0"
+            ],
+            [
+              "53354372/17364375",
+              "7617125948/2703826125",
+              "264745988876/981278195625",
+              "0"
+            ],
+            [
+              "769937548/3013959375",
+              "529491977752/981278195625",
+              "-4/5",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "-4/5"
+            ]
+          ],
+          "kinetic_variable_order": [
+            "A_perp",
+            "B_perp",
+            "P_phi_perp",
+            "P_chi_perp"
+          ],
+          "matrix": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-53354372/8103375",
+              "0",
+              "0",
+              "384968774/1406514375",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "53354372/8103375",
+              "0",
+              "0",
+              "384968774/1406514375",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "106708744/17364375",
+              "0",
+              "0",
+              "769937548/3013959375",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "53354372/17364375",
+              "0",
+              "0",
+              "7617125948/2703826125",
+              "-3417944/60085025",
+              "20475688/5942475",
+              "264745988876/981278195625",
+              "-115731472/26652000375",
+              "-2152183654/7907736375",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "769937548/3013959375",
+              "0",
+              "0",
+              "529491977752/981278195625",
+              "-231462944/26652000375",
+              "4304367308/7907736375",
+              "-4/5",
+              "0",
+              "6/7",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "-4/5",
+              "0",
+              "6/7"
+            ]
+          ],
+          "normal_variable_order": [
+            "A_perp",
+            "A_r",
+            "L_r",
+            "B_perp",
+            "B_r",
+            "S_r",
+            "P_phi_perp",
+            "P_phi_r",
+            "Q_phi_r",
+            "P_chi_perp",
+            "P_chi_r",
+            "Q_chi_r"
+          ],
+          "projection_order": [
+            "E_nn",
+            "E_ns",
+            "E_ss",
+            "E_theta_theta_orthonormal",
+            "E_phi",
+            "E_chi"
+          ]
+        },
+        "alternate_metric_block_nonzero_at_patch": "-1423344505757192/39723081890625",
+        "branch": "FGC-QR",
+        "cone_resultant": "807714535234744807183067871596552544410870233041608766464/148212858449253382749567591296553420441537046741891755908203125",
+        "cones_share_no_root": true,
+        "fixture_id": "FGCQR_activated_generic",
+        "left_bianchi_generators": [
+          [
+            [
+              "-16/75",
+              "16/25"
+            ],
+            [
+              "7316/11025",
+              "16/75"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "-16/75",
+              "16/25"
+            ],
+            [
+              "7316/11025",
+              "16/75"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "left_bianchi_null_identity_exact": true,
+        "left_bianchi_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "metric_block_invertible_at_physical_roots": true,
+        "metric_null_certificate": {
+          "companion": [
+            [
+              "0",
+              "1829/1764"
+            ],
+            [
+              "1",
+              "2/3"
+            ]
+          ],
+          "discriminant": "225/49",
+          "expected_symmetrizer_determinant": "225/196",
+          "polynomial": [
+            "-1829/1764",
+            "-2/3",
+            "1"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "exact": "-31/42"
+            },
+            {
+              "exact": "59/42"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "1/3"
+            ],
+            [
+              "1/3",
+              "2221/1764"
+            ]
+          ],
+          "symmetrizer_determinant": "225/196",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "1/3",
+              "2221/1764"
+            ],
+            [
+              "2221/1764",
+              "6271/5292"
+            ]
+          ]
+        },
+        "metric_null_factor": [
+          "-1829/1764",
+          "-2/3",
+          "1"
+        ],
+        "metric_null_nonzero_at_patch": "-225/196",
+        "metric_patch_factor": [
+          "1/9",
+          "-2/3",
+          "1"
+        ],
+        "metric_patch_nonzero_constant": "-22773512092115072/837559775390625",
+        "metric_patch_speed": "1/3",
+        "quotient_atlas": {
+          "rr_patch": {
+            "equation_order": [
+              "metric_rr",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "7316/11025",
+                    "32/75",
+                    "-16/25"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "7316/11025",
+                    "32/75",
+                    "-16/25"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-213417488/1291696875",
+                    "426834976/430565625",
+                    "-213417488/143521875"
+                  ]
+                ],
+                [
+                  [
+                    "-960378696/52521875"
+                  ],
+                  [
+                    "15032977744/1229011875",
+                    "383709856/58524375",
+                    "-15234251896/1502125625"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "-22773512092115072/7538037978515625",
+                "45547024184230144/2512679326171875",
+                "-22773512092115072/837559775390625"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "769937548/24911296875",
+                    "-1539875096/8303765625",
+                    "769937548/2767921875"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "-101013933623/23702371875",
+                    "-35303093272/12415528125",
+                    "264745988876/60572728125"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "-38264271772843966322072145104963584/27694401479571076766887664794921875",
+                "220338409994088543044231184920793088/33848712919475760492862701416015625",
+                "1633338337759130131560165200324608/4718305437260257523247528076171875",
+                "-60685634677780074010444232102600704/2256580861298384032857513427734375",
+                "41890201955080425204319173001760768/5766817756651425861746978759765625",
+                "4559508200525717124419954590416896/196150263831681151760101318359375",
+                "-2280471503094300947521643552063488/196150263831681151760101318359375"
+              ],
+              "scalar_determinant": [
+                "298939623225343486891188633632528/653662702060695668337108648046875",
+                "201784318103015212000997363333504/342394748698459635795628339453125",
+                "-4254216482619544201454616256394912/6125061615605777929232906961328125",
+                "-71231106213973042798567005211904/125001257461342406719038917578125",
+                "17816183617924226152512840250496/41667085820447468906346305859375"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "-6159500384/82046671875"
+                  ],
+                  [
+                    "1616222937968/17279029096875",
+                    "564849492352/9050920003125",
+                    "-4235935822016/44157518803125"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "-22773512092115072/7538037978515625",
+                "45547024184230144/2512679326171875",
+                "-22773512092115072/837559775390625"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "-5230217574199557999189740993024/2511963853022319888153076171875",
+                    "102682616553042592332246884555776/9210534127748506256561279296875",
+                    "-203711917893033638892746851285504/23538031659801738211212158203125",
+                    "-569848849711784342388536041695232/23538031659801738211212158203125",
+                    "142529468943393809220102722003968/7846010553267246070404052734375"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-166611014465913866752/83106868713134765625",
+                    "297513161971391300608/27702289571044921875",
+                    "-25779615688274261504/3078032174560546875",
+                    "-1457504773895364608/62816983154296875",
+                    "364376193473841152/20938994384765625"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "-213417488/1291696875",
+                  "426834976/430565625",
+                  "-213417488/143521875"
+                ],
+                [
+                  "769937548/24911296875",
+                  "-1539875096/8303765625",
+                  "769937548/2767921875"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-960378696/52521875"
+                ],
+                [
+                  "15032977744/1229011875",
+                  "383709856/58524375",
+                  "-15234251896/1502125625"
+                ],
+                [
+                  "-101013933623/23702371875",
+                  "-35303093272/12415528125",
+                  "264745988876/60572728125"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-6159500384/82046671875"
+                ],
+                [
+                  "1616222937968/17279029096875",
+                  "564849492352/9050920003125",
+                  "-4235935822016/44157518803125"
+                ],
+                [
+                  "7316/11025",
+                  "32/75",
+                  "-16/25"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "7316/11025",
+                  "32/75",
+                  "-16/25"
+                ]
+              ]
+            ],
+            "validity": "c+shift_nonzero"
+          },
+          "tt_patch": {
+            "equation_order": [
+              "metric_tt",
+              "metric_theta_theta",
+              "scalar_phi",
+              "scalar_chi"
+            ],
+            "metric_schur": {
+              "bare_scalar_block": [
+                [
+                  [
+                    "7316/11025",
+                    "32/75",
+                    "-16/25"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "7316/11025",
+                    "32/75",
+                    "-16/25"
+                  ]
+                ]
+              ],
+              "metric_block": [
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-44620808185913/27912277771875",
+                    "-195170292776/189879440625",
+                    "-213417488/1291696875"
+                  ]
+                ],
+                [
+                  [
+                    "-960378696/52521875"
+                  ],
+                  [
+                    "15032977744/1229011875",
+                    "383709856/58524375",
+                    "-15234251896/1502125625"
+                  ]
+                ]
+              ],
+              "metric_block_determinant": [
+                "-4761430397783694723272/162889462677744140625",
+                "-20826376808239233344/1108091582841796875",
+                "-22773512092115072/7538037978515625"
+              ],
+              "metric_to_scalar_block": [
+                [
+                  [
+                    "643906663252267/2153232856687500",
+                    "704107887646/3661960640625",
+                    "769937548/24911296875"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "-101013933623/23702371875",
+                    "-35303093272/12415528125",
+                    "264745988876/60572728125"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "quotient_determinant": [
+                "-8000200673103770171450934047692092793984/598448321572051397855675548553466796875",
+                "-2698191161964818946997873523834914082816/104490976782421672641467159271240234375",
+                "8798044336213059447673392524110308217088/1121536484131325953018414176177978515625",
+                "639293247896271865299134449733404475392/22888499676149509245273758697509765625",
+                "71607904239153274781383747655744512/231196966425752618639128875732421875",
+                "-23749705672546366551825083647434752/3760968102163973388095855712890625",
+                "-2280471503094300947521643552063488/1765352374485130365840911865234375"
+              ],
+              "scalar_determinant": [
+                "298939623225343486891188633632528/653662702060695668337108648046875",
+                "201784318103015212000997363333504/342394748698459635795628339453125",
+                "-4254216482619544201454616256394912/6125061615605777929232906961328125",
+                "-71231106213973042798567005211904/125001257461342406719038917578125",
+                "17816183617924226152512840250496/41667085820447468906346305859375"
+              ],
+              "scalar_offdiagonal_numerators_zero": true,
+              "scalar_to_metric_block": [
+                [
+                  [
+                    "-6159500384/82046671875"
+                  ],
+                  [
+                    "1616222937968/17279029096875",
+                    "564849492352/9050920003125",
+                    "-4235935822016/44157518803125"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "0"
+                  ]
+                ]
+              ],
+              "schur_denominator": [
+                "-4761430397783694723272/162889462677744140625",
+                "-20826376808239233344/1108091582841796875",
+                "-22773512092115072/7538037978515625"
+              ],
+              "schur_determinant_identity": true,
+              "schur_numerator": [
+                [
+                  [
+                    "-1093521141758306475047968021827787424/54281026899959310463099822998046875",
+                    "-738127035620829645499648355073957632/28432918852359638814004669189453125",
+                    "4620341417056656101853543044367586496/508633326136655761006083526611328125",
+                    "116388493669308799058315739985951232/10380271961972566551144561767578125",
+                    "142529468943393809220102722003968/70614094979405214633636474609375"
+                  ],
+                  [
+                    "0"
+                  ]
+                ],
+                [
+                  [
+                    "0"
+                  ],
+                  [
+                    "-34834624790185510595457952/1795856326022129150390625",
+                    "-304731545458156462289408/12216709700830810546875",
+                    "11787729273463406072704/1357412188981201171875",
+                    "297513161971391300608/27702289571044921875",
+                    "364376193473841152/188450949462890625"
+                  ]
+                ]
+              ]
+            },
+            "quotient_symbol": [
+              [
+                [
+                  "0"
+                ],
+                [
+                  "-44620808185913/27912277771875",
+                  "-195170292776/189879440625",
+                  "-213417488/1291696875"
+                ],
+                [
+                  "643906663252267/2153232856687500",
+                  "704107887646/3661960640625",
+                  "769937548/24911296875"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-960378696/52521875"
+                ],
+                [
+                  "15032977744/1229011875",
+                  "383709856/58524375",
+                  "-15234251896/1502125625"
+                ],
+                [
+                  "-101013933623/23702371875",
+                  "-35303093272/12415528125",
+                  "264745988876/60572728125"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "-6159500384/82046671875"
+                ],
+                [
+                  "1616222937968/17279029096875",
+                  "564849492352/9050920003125",
+                  "-4235935822016/44157518803125"
+                ],
+                [
+                  "7316/11025",
+                  "32/75",
+                  "-16/25"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              [
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "0"
+                ],
+                [
+                  "7316/11025",
+                  "32/75",
+                  "-16/25"
+                ]
+              ]
+            ],
+            "validity": "covers_c_equals_minus_shift"
+          }
+        },
+        "quotient_atlas_covers_patch_boundary": true,
+        "quotient_atlas_scalar_determinants_agree_exactly": true,
+        "quotient_variable_order": [
+          "h_tt_representative",
+          "areal_radius",
+          "phi",
+          "chi"
+        ],
+        "radial_covector": "xi_A=(-c,1)",
+        "raw_symbol": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-44620808185913/27912277771875",
+              "-195170292776/189879440625",
+              "-213417488/1291696875"
+            ],
+            [
+              "643906663252267/2153232856687500",
+              "704107887646/3661960640625",
+              "769937548/24911296875"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-97585146388/189879440625",
+              "87127689476/63293146875",
+              "213417488/430565625"
+            ],
+            [
+              "352053943823/3661960640625",
+              "-314327003971/1220653546875",
+              "-769937548/8303765625"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "-213417488/1291696875",
+              "426834976/430565625",
+              "-213417488/143521875"
+            ],
+            [
+              "769937548/24911296875",
+              "-1539875096/8303765625",
+              "769937548/2767921875"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-960378696/52521875"
+            ],
+            [
+              "0",
+              "-1920757392/52521875"
+            ],
+            [
+              "0",
+              "0",
+              "-960378696/52521875"
+            ],
+            [
+              "15032977744/1229011875",
+              "383709856/58524375",
+              "-15234251896/1502125625"
+            ],
+            [
+              "-101013933623/23702371875",
+              "-35303093272/12415528125",
+              "264745988876/60572728125"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-6159500384/82046671875"
+            ],
+            [
+              "0",
+              "-12319000768/82046671875"
+            ],
+            [
+              "0",
+              "0",
+              "-6159500384/82046671875"
+            ],
+            [
+              "1616222937968/17279029096875",
+              "564849492352/9050920003125",
+              "-4235935822016/44157518803125"
+            ],
+            [
+              "7316/11025",
+              "32/75",
+              "-16/25"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "7316/11025",
+              "32/75",
+              "-16/25"
+            ]
+          ]
+        ],
+        "regulator_certificate": {
+          "companion": [
+            [
+              "0",
+              "2584462981000953464443368107881/2505400821270594302697118160226"
+            ],
+            [
+              "1",
+              "278115148266598363230791599304/417566803545099050449519693371"
+            ]
+          ],
+          "discriminant": "840892661821725681949881052648393810456386133884326256738304/1006461472909295375678392096340429398358951750687384033203125",
+          "expected_symmetrizer_determinant": "44266962940749414104112085443679178559486879911818322536425/38747118982860298872492506065312342589714388850746191409698",
+          "polynomial": [
+            "-653777196774944749898717624128/1482228349343981107340382421875",
+            "-221110179988351493748703880192/776405325846847246702105078125",
+            "17816183617924226152512840250496/41667085820447468906346305859375"
+          ],
+          "product_is_symmetric": true,
+          "roots": [
+            {
+              "lower": "-3086335/4194304",
+              "upper": "-12345339/16777216"
+            },
+            {
+              "lower": "11759797/8388608",
+              "upper": "23519595/16777216"
+            }
+          ],
+          "symmetrizer": [
+            [
+              "1",
+              "139057574133299181615395799652/417566803545099050449519693371"
+            ],
+            [
+              "139057574133299181615395799652/417566803545099050449519693371",
+              "437076684314420722219035476429369811122612639713013949470033/348724070845742689852432554587811083307429499656715722687282"
+            ]
+          ],
+          "symmetrizer_determinant": "44266962940749414104112085443679178559486879911818322536425/38747118982860298872492506065312342589714388850746191409698",
+          "symmetrizer_first_minor_positive": true,
+          "symmetrizer_positive_definite": true,
+          "symmetrizer_times_companion": [
+            [
+              "139057574133299181615395799652/417566803545099050449519693371",
+              "437076684314420722219035476429369811122612639713013949470033/348724070845742689852432554587811083307429499656715722687282"
+            ],
+            [
+              "437076684314420722219035476429369811122612639713013949470033/348724070845742689852432554587811083307429499656715722687282",
+              "85790320042598004383256430776644978861846158685547814340262302168619830179218981773831158/72807797791145720524603088886513008551384600293333058734822512634116833352700836380703811"
+            ]
+          ]
+        },
+        "regulator_cone_proportional_to_metric": false,
+        "regulator_factor": [
+          "-653777196774944749898717624128/1482228349343981107340382421875",
+          "-221110179988351493748703880192/776405325846847246702105078125",
+          "17816183617924226152512840250496/41667085820447468906346305859375"
+        ],
+        "regulator_nonzero_at_patch": "-20876146569146596702610147392/42735472636356378365483390625",
+        "right_gauge_generators": [
+          [
+            [
+              "0",
+              "-2"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "1"
+            ],
+            [
+              "0",
+              "-1"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "2"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "right_gauge_null_identity_exact": true,
+        "right_gauge_residual": [
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_determinant_factorization_exact": true
+      }
+    ],
+    "naive_fixed_gauge_gr_comparator": {
+      "defective_zero_speed_sector": true,
+      "normal_principal_matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "state_order": [
+        "A",
+        "B",
+        "P_phi",
+        "P_chi",
+        "L",
+        "S",
+        "Q_phi",
+        "Q_chi"
+      ],
+      "strong_hyperbolicity_rejected": true,
+      "zero_speed_generalized_multiplicity": 4,
+      "zero_speed_geometric_multiplicity": 1
+    },
+    "nonclaims": {
+      "collapse_solution_derived": false,
+      "constraint_propagation_proven": false,
+      "evolution_authorized": false,
+      "full_strong_hyperbolicity_proven": false,
+      "gauge_preservation_proven": false,
+      "lower_order_radial_constraints_derived": false,
+      "metric_null_affine_defocusing_derived": false,
+      "nonlinear_first_order_evolution_system_derived": false,
+      "open_retained_eft_domain_proven": false,
+      "regular_center_boundary_system_derived": false,
+      "uniform_full_system_symmetrizer_proven": false
+    },
+    "verified_exact_checks": {
+      "candidate_constraints_free_of_gauge_source_second_jets": true,
+      "candidate_constraints_free_of_normal_accelerations": true,
+      "exact_positive_scalar_companion_symmetrizers": true,
+      "left_bianchi_null_identities": true,
+      "metric_blocks_invertible_at_physical_roots": true,
+      "metric_schur_identities": true,
+      "naive_fixed_gauge_gr_comparator_rejected": true,
+      "pointwise_metric_phi_kinetic_blocks_nonsingular": true,
+      "positive_metric_null_discriminants": true,
+      "positive_regulator_discriminants": true,
+      "quotient_atlas_scalar_determinants_agree": true,
+      "right_gauge_null_identities": true,
+      "scalar_determinant_factorization": true,
+      "scalar_schur_offdiagonal_zero": true
+    }
+  },
+  "symbol_certificate_sha256": "8d97603c1117730023e55ab088f01742edf508646f5765c5275806343bcb90c3"
+}

@@ -1,0 +1,35 @@
+{
+  "artifact_id": "FGC-1-HLT17-SRCQ1-ATTEMPT1",
+  "authority_commit": "271ab71b6bc169c2d1d318b46ca06e60b65d61ae",
+  "classification": "invalid_implementation_no_terminal_no_state_advance",
+  "derivation_document": "docs/fgc-hlt17-srcq1-frz1.md",
+  "exception": {
+    "message": "'str' object has no attribute 'last_accepted_time'",
+    "source_path": "src/recursive_horizons/fgc/evolution/hlt17_srcq1.py",
+    "source_symbol": "check_inherited_counters",
+    "type": "AttributeError"
+  },
+  "implementation_commit": "0430d25ac1f30294620821469e98f2d013c99ee2",
+  "implementation_sha256": "bbffb7986ece12d1c7d30f2f019f1d60bc144be9a8ab643735fc7f386779a34f",
+  "measurement_scope": {
+    "accepted_state_advanced": false,
+    "campaign_store_written": false,
+    "completed_member_count": 0,
+    "endpoint_adopted_or_serialized": false,
+    "output_namespace_absent_after_stop": true,
+    "physical_static_factory_construction_may_have_executed": true,
+    "pro20_namespace_absent_after_stop": true,
+    "qualification_terminal_published": false
+  },
+  "nonclaims": {
+    "physical_source_nonpass": false,
+    "production_resource_nonpass": false,
+    "scientific_nonpass": false,
+    "sf1_implication": false
+  },
+  "origin_capture_sha256": "2824af06c674336d479ec53faa4269f02fb598055860ec22f2ad84602a83fe72",
+  "retry_authorized": false,
+  "schema_version": 1,
+  "source_closure_sha256": "a1ee5298f18d759493172d1c120210182f0f99c1b1f991d2ee1af1e4ce5a9e36",
+  "typed_owner": "SRCQ1 implementation validation"
+}

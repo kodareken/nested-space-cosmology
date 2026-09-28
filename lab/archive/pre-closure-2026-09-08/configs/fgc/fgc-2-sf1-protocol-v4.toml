@@ -1,0 +1,109 @@
+schema_version = 1
+artifact_id = "FGC-2-SF1-PROTO4"
+protocol_version = 4
+project_version = "0.11.0"
+frozen = true
+units = "c=hbar=1; code length L0=4"
+purpose = "outcome-neutral_constraint-controlled_spherical_mechanism_falsification"
+
+[amendment]
+predecessor_protocol_artifact_id = "FGC-2-SF1-PROTO3"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+predecessor_protocol_sha256 = "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b"
+diagnosis_artifact_id = "FGC-1-CAL0-PREF2"
+diagnosis_config = "configs/fgc/fgc-1-cal0-pref2.toml"
+diagnosis_result = "results/fgc-1-cal0-pref2.json"
+diagnosis_result_sha256 = "d952e737d22d63b33e8d87e366538925bd28acbf82a3062563de49867a229138"
+diagnosis_checkpoint_commit = "b5aa4934b58afd505b22e008202285c475942892"
+revision_classification = "premise_based_pre_holdout_numerical_contract_revision"
+revision_reasons = ["PROTO3_last_bin_alias_rule_rejects_declared_compact_pulse_at_t0", "PROTO3_conflates_GR0_calibration_with_FGCQR_target_health", "PROTO3_constraint_admission_lacks_common_event_error_budget"]
+revision_changes = ["branch_specific_stop_applicability", "weighted_spectral_tail_and_RMS_admission", "nested_common_event_constraint_admission", "versioned_manifest_and_output_namespace"]
+all_unlisted_contract_fields_inherited_by_exact_predecessor_hash = true
+action_couplings_profiles_amplitude_order_and_holdout_cases_unchanged = true
+physical_equations_null_observable_outcome_and_robustness_rules_unchanged = true
+PROTO1_PROTO2_and_PROTO3_preserved = true
+GR0_exploratory_outcomes_inspected_before_revision = true
+GR0_exploratory_runs_are_development_only_and_cannot_enter_calibration_result = true
+FGCQR_evolution_outcomes_inspected_before_revision = false
+SGBL_evolution_outcomes_inspected_before_revision = false
+
+[replacement.calibration]
+all_RUN1_health_and_constraint_stops_apply = false
+stop_applicability_table_required = true
+three_nested_common_event_admission_required = true
+selected_case_requires_fresh_primary_and_comparator_runs = true
+development_runs_forbidden_as_calibration_evidence = true
+
+[replacement.norms_and_estimators]
+window_and_alias_policy = "compact_window_with_RMS_scale_top_band_power_budget_and_nested_convergence_last_bin_is_diagnostic_only"
+constraint_normalization = "componentwise_max_of_absolute_unredefined_projection_term_sum_M_Pl_squared_over_L0_squared_and_1e-30"
+definition_owner = "FGC-1-HLT2-MON2_must_serialize_executable_formulas_before_calibration"
+
+[replacement.partition]
+resolved_holdout_manifest = "configs/fgc/fgc-1-pro4-hld1.toml"
+
+[replacement.provenance]
+calibration_output_root = "runs/fgc-2-sf1/proto4/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto4/holdout"
+both_output_roots_must_be_empty_before_their_first_authorized_run = true
+
+[stop_applicability]
+legacy_monitor_artifact_id = "FGC-1-HLT1-MON1"
+successor_monitor_artifact_id = "FGC-1-HLT2-MON2"
+universal_runtime_stop_ids = ["nonpositive_lapse", "nonpositive_radial_metric", "nonpositive_areal_radius_away_from_center", "hat_cone_not_Lorentzian", "newton_residual_limit", "newton_iteration_limit", "newton_residual_not_monotonic", "kinetic_condition_limit", "boundary_causal_buffer"]
+candidate_branch_only_stop_ids = ["branch_displacement_limit", "acceleration_limit", "all_covector_companion_deformation_limit", "action_energy_deformation_limit", "kinetic_deformation_limit", "effective_planck_ratio_limit", "characteristic_imaginary_part_limit", "eigenframe_condition_limit", "symmetrizer_coercivity_limit", "phi_cutoff_proxy_limit", "curvature_cutoff_proxy_limit"]
+replaced_by_PROTO4_convergent_admission_ids = ["normalized_constraint_limit", "constraint_convergence_order_limit", "proper_frequency_cutoff_proxy_limit", "proper_wavenumber_cutoff_proxy_limit", "temporal_alias_band_occupied", "radial_alias_band_occupied"]
+all_legacy_stop_ids_partitioned_exactly_once = true
+universal_stops_apply_to_GR0_SGBL_and_FGCQR = true
+candidate_branch_stops_require_branch_owned_definitions_for_SGBL_and_FGCQR = true
+candidate_branch_stops_forbidden_as_GR0_calibration_rejection_reasons = true
+replaced_stops_remain_historical_controls_not_active_PROTO4_decisions = true
+
+[numerical_admission.spectrum]
+representation = "dimensionless_Minkowski_reference_deviations_alpha_minus_1_shift_over_r_lambda_minus_1_R_over_r_minus_1_phi_over_Lambda_chi_over_Lambda_with_analytic_center_limits"
+spatial_window = "C_infinity_compact_vacuum_buffer_window"
+temporal_window = "causal_past_only_proper_time_window"
+relative_amplitude_floor_for_last_bin_diagnostic = "1/1099511627776"
+absolute_amplitude_floor_for_last_bin_diagnostic = "1/1000000000000000000000000000000"
+unresolved_top_fraction = "1/8"
+maximum_top_band_field_power_fraction = "1/1048576"
+maximum_top_band_derivative_weighted_power_fraction = "1/1024"
+maximum_nested_refinement_tail_ratio = "1/4"
+maximum_RMS_proper_frequency_over_Lambda = "1/4"
+maximum_RMS_proper_wavenumber_over_Lambda = "1/4"
+minimum_temporal_samples = 64
+last_bin_alias_boolean_is_diagnostic_only = true
+zero_signal_has_zero_tail_and_RMS_scale = true
+every_nonzero_denominator_must_be_finite_and_positive = true
+
+[numerical_admission.constraints]
+fields = ["Hamiltonian", "radial_momentum", "gauge_t", "gauge_r", "six_kinematic_reduction_fields"]
+normalization = "max_absolute_unredefined_projection_term_sum_or_M_Pl_squared_over_L0_squared_or_1e-30_componentwise"
+common_event_alignment = "same_coordinate_time_for_GR0_calibration_and_same_affine_label_and_origin_for_DEF1"
+coarsest_normalized_guard_max = "1/50"
+finest_normalized_guard_max = "1/1000"
+minimum_observed_convergence_order = "3/2"
+minimum_nested_resolutions = 3
+Richardson_error_enters_conservative_observable_error_sum = true
+constraint_error_must_not_be_subtracted_from_observable_margin = true
+single_resolution_smallness_cannot_establish_admission = true
+propagation_theorem_not_inferred_from_numerical_smallness = true
+
+[numerical_admission.calibration]
+static_initial_admission_required_for_every_declared_candidate = true
+dynamic_candidates_run_in_strict_declared_amplitude_order = true
+first_eligible_candidate_stops_later_calibration_runs = true
+minimum_consecutive_trapped_common_events = 8
+trapped_sign_margin_over_total_error_factor = 4
+primary_and_comparator_agreement_required_for_selected_candidate = true
+no_candidate_outcome_can_change_this_protocol = true
+
+[claims]
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

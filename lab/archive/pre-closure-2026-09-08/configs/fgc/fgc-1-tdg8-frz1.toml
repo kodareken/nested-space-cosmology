@@ -1,0 +1,68 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-FRZ1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "prospective_retry_evidence_representation_diagnosis_freeze"
+
+[predecessor]
+commit = "0ba8b0fa5c9d683905ff92f901ab31718f4b1cb7"
+artifact_id = "FGC-1-PRO19-PREF28"
+result_path = "results/fgc-1-pro19-pref28.json"
+result_sha256 = "c53482e7965e5e3ed79bad5abcd7323a28868801ef82392360916ae8979659e2"
+terminal_campaign_path = "runs/fgc-2-sf1/proto17/calibration"
+terminal_generation = 9
+diagnostic_generation = 8
+affected_member_key = "RK4-2049"
+event = 23
+target_rational = "3/2"
+
+[bindings]
+attempt_path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+attempt_sha256 = "e6624b2fe477c6f24b7015c5864786c8d3c929fcb6804d90b3677f0b0daa11f3"
+lifecycle_path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+lifecycle_sha256 = "9b4e1b82c04433bcd2b6f75640ab549094ec74e8f6032a055bd6ddfbebfbb7b7"
+persistence_path = "src/recursive_horizons/fgc/evolution/proto15_runtime.py"
+persistence_sha256 = "73f07ae26e90642bc6e5158d9a85bfa499d8082c13e082fc8f19e968d8e624bc"
+
+[question]
+observed_error = "pending TDG6 replay evidence differs from the durable cursor"
+current_comparison = "seen[0] != dict(evidence)"
+hypotheses = [
+  "representation_only_tuple_list_drift",
+  "semantic_value_or_order_drift",
+  "different_replay_classification_or_runtime_stop",
+]
+required_observation = "compare the exact generation-eight durable mapping with one independently reconstructed replay mapping before changing runtime code"
+
+[conditional_repair]
+authorized_only_if = "canonical JSON bytes are equal and the complete raw difference is limited to tuple-versus-list containers"
+owner_symbol = "_replay_pending_rejection"
+replacement_comparison = "p15._json_safe(seen[0]) != dict(evidence)"
+preserve_scalar_types = true
+preserve_array_order = true
+preserve_all_TDG6_thresholds = true
+preserve_retry_counts_and_lattice = true
+preserve_health_constraints_and_physical_rules = true
+forbid_persisted_validator_weakening = true
+forbid_locked_campaign_mutation = true
+
+[successor]
+fresh_campaign_required = true
+fresh_namespace = "runs/fgc-2-sf1/proto19/calibration"
+restart_source = "authenticated_generation_zero"
+branch = "GR-0"
+amplitude = "3"
+start_rational = "23/16"
+target_rational = "3/2"
+event_count = 1
+candidate_branches_forbidden = true
+execution_requires_separate_committed_image_authority = true
+
+[claims]
+root_cause_localized = false
+repair_applied = false
+successor_campaign_authorized = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false

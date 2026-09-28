@@ -1,0 +1,382 @@
+{
+  "artifact_id": "FGC-1-TDG6-PREF21",
+  "artifact_payload": {
+    "claim_boundary": {
+      "FGCQR_holdout_execution_authorized": false,
+      "FGCQR_mechanism_rejected": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG4_sampling_identifiability_theorem_completed": true,
+      "TDG5_runtime_refinement_pair_implemented": true,
+      "TDG6_independent_binder_completed": true,
+      "TDG6_threshold_and_admission_design_frozen": true,
+      "child_domain_or_topology_derived": false,
+      "classical_spherical_diagnostic_authorized": false,
+      "current_temporal_spectral_rule_retained_as_sampled_diagnostic": true,
+      "current_temporal_spectral_rule_retired_as_continuum_admission": true,
+      "dark_sector_mechanism_derived": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "general_gradient_route_rejected": false,
+      "physical_transition_claim_authorized": false,
+      "production_compositor_implementation_authorized": true,
+      "production_compositor_implemented": false,
+      "replacement_temporal_admission_defined": true,
+      "retained_EFT_evolution_authorized": false,
+      "runtime_thresholds_frozen": true,
+      "singularity_resolution_derived": false,
+      "varying_locally_measured_c_derived": false
+    },
+    "freeze_crosscheck": {
+      "complete_channel_order_matches": true,
+      "debit_semantics_match": true,
+      "equality_semantics_match": true,
+      "minimum_order_matches": true,
+      "no_absolute_threshold_matches": true,
+      "noncancellation_matches": true,
+      "production_remains_unimplemented": true,
+      "quarter_maps_supply_the_frozen_fine_partition": true,
+      "squared_test_matches": true,
+      "three_level_counts_match": true
+    },
+    "immutable_lineage": {
+      "bound_source_sha256": {
+        "configs/fgc/fgc-1-tdg6-frz1.toml": "407143881d2b15ca1837da8f2b7830d5bcaba74e6a7283b7519eec6262303349",
+        "docs/fgc-tdg6-frz1.md": "c97e224956a150a750ae83391c2e2bb94cef180c92e342210ff7fc8c3a05c422",
+        "results/fgc-1-tdg6-frz1.json": "3723532961c9d10bce9df2b96e0068437652d657a50d1d60036360c7acb417eb",
+        "scripts/reproduce_fgc_tdg6_frz1.py": "274a8e0157021a5ce496b385f101337ff8f6457c88b7d83ab0e83e00c2535a63",
+        "scripts/run_fgc_gr0_calibration_v13.py": "bdc31c8ab4205ff86a134e9744aaaf8d085344aa1ba6a19cebb3fdbad94286d7",
+        "scripts/run_fgc_gr0_calibration_v7.py": "04324e7066dc5a3c4ea3f6200612cc6c1a51fae5adba0c28ecb10ebec2f5d2e7",
+        "src/recursive_horizons/fgc/evolution/proto7_runtime.py": "ffa75767c1fdbae42a09c8ef50276183861fc9255ad0061e5a1ee3673f142734",
+        "src/recursive_horizons/fgc/evolution/tdg5_stage_complete_refinement_runtime.py": "75fc11943f459ca7549f75a812fe961e55ae04bbdb13450c1fdd509b5b53a080",
+        "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_design.py": "87d9a90e272a89479690c0d432f2d5cd979d88841615aaaeb9b49a2c0cca651e"
+      },
+      "freeze_commit": "dff13cfc55e93124aa1fec3e350eae12dd0c6213",
+      "freeze_commit_is_ancestor_of_HEAD": true,
+      "freeze_result_verified_canonical_and_unimplemented": true,
+      "raw_campaign_bundle_loaded": false
+    },
+    "implementation_authorization": {
+      "all_shadow_paths_require_independent_monitor_causal_and_tracer_state": true,
+      "authorized_object": "implementation_and_synthetic_qualification_of_the_frozen_TDG6_three_level_GR0_production_compositor",
+      "checkpoint_must_round_trip_debit_retry_and_rejection_ledgers": true,
+      "coarse_and_medium_paths_are_evidence_only": true,
+      "complete_18_channel_D01_and_D12_interval_evidence_required": true,
+      "fine_state_monitor_causal_tracer_and_debit_ledgers_commit_atomically": true,
+      "historical_CAL10_result_reclassified": false,
+      "historical_PROTO13_stop_preserved": true,
+      "only_complete_four_quarter_step_path_is_committable": true,
+      "production_trajectory_authorized": false,
+      "rejection_evidence_must_be_durable_before_retry": true,
+      "same_bitwise_initial_state_for_all_three_levels_required": true,
+      "same_method_source_projector_spatial_operator_and_macro_interval_required": true,
+      "temporal_retry_counter_separate_from_source_and_CFL_counters": true,
+      "threshold_or_protocol_mutation_authorized": false,
+      "unchanged_source_health_CFL_boundary_scale_and_transaction_gates_required": true,
+      "unexpected_exception_is_invalid_not_physical": true
+    },
+    "independent_binder": {
+      "FGCQR_trajectory_read": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_trajectory_read": false,
+      "TDG6_independent_binder_completed": true,
+      "actual_PROTO13_history_arrays_consumed": false,
+      "all_independent_binder_controls_pass": true,
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "immutable_runtime_extension_audit": {
+        "PROTO13_checkpoint_exposes_state_monitor_causal_and_tracer_extension_surface": true,
+        "PROTO7_exposes_tracer_preview_commit_and_rollback_inputs": true,
+        "TDG5_commit_revalidates_boundary_and_adopts_only_fine_monitor_causal_state": true,
+        "TDG5_prepare_preserves_real_monitor_causal_and_state_boundary": true,
+        "TDG5_prepared_field_contract_present": true,
+        "TDG5_prepared_fields": [
+          "accepted_state_advanced_during_prepare",
+          "coarse",
+          "coarse_path_is_evidence_only",
+          "continuous_difference",
+          "final_time",
+          "fine_causal_state",
+          "fine_left",
+          "fine_monitor_state",
+          "fine_right",
+          "initial_state_sha256",
+          "initial_time",
+          "method",
+          "only_fine_path_is_committable",
+          "original_causal_state",
+          "original_monitor_state",
+          "previous_step_index",
+          "previous_transaction_serial",
+          "real_transaction_advanced_during_prepare"
+        ],
+        "TDG5_shadow_attempt_deliberately_has_no_tracer_preaccept": true,
+        "TDG5_two_transaction_clones_and_three_shadow_attempts_present": true,
+        "TDG6_debit_and_temporal_retry_fields_are_not_yet_in_PROTO13": true,
+        "production_compositor_extension_is_source_shape_feasible": true,
+        "production_compositor_implemented": false,
+        "production_trajectory_authorized": false
+      },
+      "independent_channel_debit_reduction": {
+        "accepted_debits_accumulate_by_componentwise_nonnegative_addition": true,
+        "accumulation_uses_no_cancellation": true,
+        "all_of_reduction_passes_when_all_channels_pass": true,
+        "channel_count": 18,
+        "channel_order": [
+          "u:alpha",
+          "u:v",
+          "u:lambda",
+          "u:R",
+          "u:phi",
+          "u:chi",
+          "p:alpha",
+          "p:v",
+          "p:lambda",
+          "p:R",
+          "p:phi",
+          "p:chi",
+          "q:alpha",
+          "q:v",
+          "q:lambda",
+          "q:R",
+          "q:phi",
+          "q:chi"
+        ],
+        "controls_passed": true,
+        "debit_is_not_a_global_PDE_error_bound": true,
+        "finest_upper_bound_is_retained_per_channel": true,
+        "formal_Richardson_division_is_not_used_for_admission_debit": true,
+        "future_observable_stability_map_remains_required": true,
+        "one_failed_channel_vetoes_complete_admission": true
+      },
+      "independent_interval_order_theorem": {
+        "conservative_test": "8*U12^2<=L01^2",
+        "controls_passed": true,
+        "enclosure_dominated_passes_without_order_claim_and_retains_debit": true,
+        "exact_boundary_passes": true,
+        "exact_zero_passes_without_order_claim": true,
+        "implication_chain": "8*d12^2<=8*U12^2<=L01^2<=d01^2",
+        "minimum_observed_order": "3/2",
+        "no_absolute_magnitude_threshold_is_used": true,
+        "no_physical_signal_normalizes_the_test": true,
+        "one_rational_unit_below_boundary_fails": true,
+        "order_inconclusive_pair_retries": true,
+        "squared_multiplier_rederived_as_2_to_the_power_2p": 8,
+        "tiny_nonconvergent_pair_fails": true,
+        "universal_nonnegative_interval_implication": true
+      },
+      "independent_quarter_restriction": {
+        "all_basis_and_probe_controls_pass": true,
+        "all_quarter_determinants_are_1_over_4096": true,
+        "basis_control_count": 16,
+        "derivation": "b_k=sum_n>=k[a_n*C(n,k)*j^(n-k)/4^n]",
+        "direct_quarter_maps_equal_two_composed_half_maps": true,
+        "expected_quarter_determinant": "1/4096",
+        "four_quarter_maps_are_exact_and_injective": true,
+        "quarter_determinants": [
+          "1/4096",
+          "1/4096",
+          "1/4096",
+          "1/4096"
+        ],
+        "quarter_matrices": [
+          [
+            [
+              "1",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1/4",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1/16",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "1/64"
+            ]
+          ],
+          [
+            [
+              "1",
+              "1/4",
+              "1/16",
+              "1/64"
+            ],
+            [
+              "0",
+              "1/4",
+              "1/8",
+              "3/64"
+            ],
+            [
+              "0",
+              "0",
+              "1/16",
+              "3/64"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "1/64"
+            ]
+          ],
+          [
+            [
+              "1",
+              "1/2",
+              "1/4",
+              "1/8"
+            ],
+            [
+              "0",
+              "1/4",
+              "1/4",
+              "3/16"
+            ],
+            [
+              "0",
+              "0",
+              "1/16",
+              "3/32"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "1/64"
+            ]
+          ],
+          [
+            [
+              "1",
+              "3/4",
+              "9/16",
+              "27/64"
+            ],
+            [
+              "0",
+              "1/4",
+              "3/8",
+              "27/64"
+            ],
+            [
+              "0",
+              "0",
+              "1/16",
+              "9/64"
+            ],
+            [
+              "0",
+              "0",
+              "0",
+              "1/64"
+            ]
+          ]
+        ]
+      },
+      "physical_or_candidate_question_answered": false,
+      "production_compositor_implementation_authorized": true,
+      "production_compositor_implemented": false,
+      "production_state_advanced": false
+    },
+    "limitation_audit": {
+      "complete_DEF1_error_ledger_remains_required": true,
+      "local_debit_does_not_prove_a_global_error_bound": true,
+      "no_GR0_SGBL_or_FGCQR_outcome_is_classified": true,
+      "piecewise_cubic_extension_is_not_exact_PDE_history": true,
+      "source_shape_feasibility_is_not_runtime_implementation": true,
+      "spatial_ladders_and_cross_method_agreement_remain_required": true,
+      "three_level_order_pass_does_not_prove_trajectory_asymptotics": true,
+      "tracer_and_checkpoint_extensions_remain_to_be_implemented": true
+    },
+    "mutation_controls": {
+      "all_of_mutation_rejected": true,
+      "candidate_promotion_mutation_rejected": true,
+      "channel_drop_mutation_rejected": true,
+      "checkpoint_obligation_mutation_rejected": true,
+      "checkpoint_writer_source_mutation_rejected": true,
+      "equality_mutation_rejected": true,
+      "fine_commit_mutation_rejected": true,
+      "fine_monitor_source_mutation_rejected": true,
+      "freeze_commit_mutation_rejected": true,
+      "freeze_result_hash_mutation_rejected": true,
+      "historical_reclassification_mutation_rejected": true,
+      "invalid_quarter_index_rejected": true,
+      "physical_normalization_mutation_rejected": true,
+      "quarter_composition_mutation_rejected": true,
+      "quarter_determinant_mutation_rejected": true,
+      "squared_multiplier_mutation_rejected": true,
+      "tracer_obligation_mutation_rejected": true,
+      "tracer_preview_source_mutation_rejected": true,
+      "trajectory_authorization_mutation_rejected": true
+    },
+    "proof_contract": {
+      "canonical_hash_bound_result_required": true,
+      "channel_all_of_and_nonnegative_debit_semantics_must_be_independently_controlled": true,
+      "freeze_commit_and_all_bound_blobs_must_match": true,
+      "freeze_crosscheck_may_not_replace_independent_derivation": true,
+      "freeze_result_must_be_canonical_and_preserve_the_unimplemented_boundary": true,
+      "interval_implication_and_squared_multiplier_must_be_rederived_exactly": true,
+      "lineage_theorem_runtime_authorization_nonclaim_and_claim_mutations_must_fail_closed": true,
+      "no_history_checkpoint_state_or_candidate_data_may_be_loaded": true,
+      "quarter_determinants_and_basis_controls_must_be_exact": true,
+      "quarter_maps_must_be_derived_directly_without_importing_the_freeze_design_module": true,
+      "quarter_maps_must_match_two_independently_composed_half_maps": true,
+      "runtime_feasibility_must_be_checked_against_immutable_source_syntax": true,
+      "tracer_and_checkpoint_missing-production-fields_must_remain_explicit": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG5_runtime_refinement_pair_implemented": true,
+      "TDG6_independent_binder_completed": true,
+      "TDG6_threshold_and_admission_design_frozen": true,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "production_compositor_implementation_authorized": true,
+      "production_compositor_implemented": false,
+      "replacement_temporal_admission_defined": true,
+      "runtime_thresholds_frozen": true
+    }
+  },
+  "classification": "independent_temporal_admission_binder_and_runtime_implementation_authorization",
+  "derivation_document": "docs/fgc-tdg6-pref21.md",
+  "derivation_document_sha256": "d2a5d97b11ddbc7939dc81210d8fd44fb3f7d40ed87412fea7147b7cada40ef5",
+  "gate_status": "PASS_PRODUCTION_COMPOSITOR_IMPLEMENTATION_AUTHORIZED",
+  "generated_by": "scripts/reproduce_fgc_tdg6_pref21.py",
+  "implementation_sha256": {
+    "configs/fgc/fgc-1-tdg6-pref21.toml": "2138c4064126b7da9910e86d5bdf466f7a90391030e1d25b97779258b006d313",
+    "docs/fgc-tdg6-pref21.md": "d2a5d97b11ddbc7939dc81210d8fd44fb3f7d40ed87412fea7147b7cada40ef5",
+    "scripts/reproduce_fgc_tdg6_pref21.py": "f7a37603dd78988b776019a1740e16e8e034498f37687b5731bd328c84196988",
+    "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_theorem.py": "629c7b832abd5967ee522074b4f31496be97d92b8a13a43447c3fc4d171a84d5"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": [
+    "PREF21 reads no PROTO13 history or checkpoint and advances no state.",
+    "The quarter restriction and interval theorem apply to the declared numerical extension, not the exact PDE history.",
+    "Source-shape feasibility is not a production compositor implementation or runtime qualification.",
+    "The temporal debit is not a rigorous global PDE error bound and still requires the future observable stability map.",
+    "CAL10 remains historical and unreclassified; no GR-0 case is eligible.",
+    "No SGB-L, FGC-QR, collapse, defocusing, transition, retained-EFT, dark-sector, child-domain, or varying-local-c claim follows."
+  ],
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": "2138c4064126b7da9910e86d5bdf466f7a90391030e1d25b97779258b006d313"
+}

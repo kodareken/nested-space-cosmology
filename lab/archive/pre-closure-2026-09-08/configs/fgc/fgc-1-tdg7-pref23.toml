@@ -1,0 +1,178 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG7-PREF23"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+freeze_result = "results/fgc-1-tdg7-frz1.json"
+freeze_config = "configs/fgc/fgc-1-tdg7-frz1.toml"
+freeze_reproducer = "scripts/reproduce_fgc_tdg7_frz1.py"
+freeze_module = "src/recursive_horizons/fgc/evolution/tdg7_binary64_subdivision_lattice.py"
+freeze_document = "docs/fgc-tdg7-frz1.md"
+historical_TDG6_runtime = "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py"
+historical_numerical_engine = "src/recursive_horizons/fgc/evolution/numerical_engine.py"
+historical_PROTO14_runner = "scripts/run_fgc_gr0_calibration_v14.py"
+historical_run_config = "configs/fgc/fgc-1-cal9-run1.toml"
+runtime_authorization_result = "results/fgc-1-hlt12-mon12.json"
+cal11_result = "results/fgc-1-cal11-pref22.json"
+cal11_config = "configs/fgc/fgc-1-cal11-pref22.toml"
+binder_module = "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_lattice_theorem.py"
+
+[scope]
+target = "FGC-2-SF1-TDG7"
+role = "post_freeze_independent_stage_safe_exact_binary64_shared_lattice_theorem_and_runtime_repair_feasibility_binder"
+calibration_branch = "GR-0"
+freeze_compact_result_read = true
+historical_source_blobs_read_from_immutable_commits = true
+CAL11_compact_result_read = true
+actual_campaign_history_arrays_consumed = false
+campaign_checkpoint_loaded = false
+campaign_checkpoint_resumed = false
+production_state_advanced = false
+output_namespace_created = false
+synthetic_exact_and_source_shape_controls_only = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+physical_or_candidate_question_answered = false
+
+[immutable_lineage]
+freeze_commit = "ec403c3dbcec27babb861cfc8587d53a0136cfa0"
+historical_authorization_commit = "7534a1662d8078a63c98025ecd464bb068fa012f"
+cal11_checkpoint_commit = "b59d214832a1d3429f624579a93c6b9e1f544cf5"
+freeze_config_sha256 = "28a05df475e93c39805627cd05208c0078fbf0071a8ff90526a3dbc696c4619d"
+freeze_result_sha256 = "9d6e4426653fe159338a12513e9e5e0e5d6b57e59dae210b008e8a6ea6928ff7"
+freeze_reproducer_sha256 = "72bfc07a3f949429e406eede93d4056e1ac5b1f37568c4be3ea4328560ab7b4f"
+freeze_module_sha256 = "2bc86880d46a3b4c6cd743559d0bc4b51b09058382341dfffe6358b4565e44a9"
+freeze_document_sha256 = "3a4a8ae70d418b2d9d32a8209a0235051f3d1df8b776bfb4a9d4616a48b2b75d"
+historical_TDG6_runtime_sha256 = "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+historical_numerical_engine_sha256 = "8ea99604a85b4e1acbf869ed2462ea4aa8301c06e068330a1d0ce66a51a0bebf"
+historical_PROTO14_runner_sha256 = "4c13eaf86cf31f55e28b7f60661db78ad22e1bb5b7460adf7aeff455efdc8e45"
+historical_run_config_sha256 = "8e6fafff638ffd49549efab8b6f969a01964c915116db9ce3698953201172176"
+runtime_authorization_result_sha256 = "7f4068a3116ff1838ce7f0165ae18e72d2eea68933b87f056b26d8149c935731"
+cal11_result_sha256 = "1339792198ec78ad83bc3e11a2805f09f961607ab6c1f6f06e79bb88ba6b58b8"
+cal11_config_sha256 = "685ee05442d7c92ce83994d923890f4fa208b10ffbf2946026b07e9a9cf4d34d"
+freeze_commit_must_be_ancestor_of_HEAD = true
+historical_authorization_commit_must_be_ancestor_of_freeze_commit = true
+cal11_checkpoint_commit_must_be_ancestor_of_freeze_commit = true
+all_freeze_blobs_must_match_freeze_commit_and_worktree = true
+historical_source_blobs_must_match_historical_commit = true
+historical_numerical_engine_must_be_read_from_historical_commit_not_live_worktree = true
+CAL11_blobs_must_match_CAL11_commit_and_worktree = true
+freeze_result_must_be_canonical_and_authorize_independent_binder_only = true
+raw_campaign_bundle_must_not_be_loaded = true
+
+[independent_stage_safe_theorem]
+theorem_must_not_import_TDG7_design_helper = true
+event_quantum = "max_binary64_ulp_of_current_time_and_event_target"
+endpoint_only_macro_quantum = "4*Q"
+stage_safe_macro_quantum = "8*Q"
+selected_width = "floor(min(requested_cap,target-current)/(8*Q))*(8*Q)"
+fine_width = "selected_width/4"
+fine_width_must_be_even_multiple_of_Q = true
+stage_abscissae = ["0", "1/2", "1"]
+all_stage_times_must_be_exact_binary64_shared_lattice_coordinates = true
+positive_fine_midpoints_must_be_strictly_interior = true
+four_Q_endpoint_only_midpoint_alias_must_be_independently_reproduced = true
+rounding_up_is_forbidden = true
+target_stage_lattice_alignment_required = true
+typed_coordinate_lattice_stop_precedes_shadow_or_real_state_operation = true
+
+[historical_event24_witness]
+current_time_hex = "0x1.7000000000000p+0"
+target_time_hex = "0x1.8000000000000p+0"
+requested_macro_width_hex = "0x1.aaa90b0fb5c26p-8"
+historical_expected_macro_endpoint_hex = "0x1.71aaa90b0fb5cp+0"
+event_quantum_hex = "0x1.0000000000000p-52"
+stage_safe_macro_quantum_hex = "0x1.0000000000000p-49"
+stage_safe_eight_Q_tick_count = 3664984285035
+selected_macro_width_exact = "3664984285035/562949953421312"
+selected_macro_width_hex = "0x1.aaa90b0fb5800p-8"
+selected_fine_width_exact = "3664984285035/2251799813685248"
+selected_fine_width_hex = "0x1.aaa90b0fb5800p-10"
+selected_fine_width_over_Q = 7329968570070
+selected_aligned_macro_endpoint_hex = "0x1.71aaa90b0fb58p+0"
+conservative_reduction_exact = "531/576460752303423488"
+conservative_reduction_hex = "0x1.0980000000000p-50"
+selected_boundaries_hex = ["0x1.7000000000000p+0", "0x1.706aaa42c3ed6p+0", "0x1.70d5548587dacp+0", "0x1.713ffec84bc82p+0", "0x1.71aaa90b0fb58p+0"]
+selected_fine_midpoints_hex = ["0x1.7035552161f6bp+0", "0x1.709fff6425e41p+0", "0x1.710aa9a6e9d17p+0", "0x1.717553e9adbedp+0"]
+historical_guard_fails_for_counts = [1, 2, 4]
+historical_and_selected_first_macro_endpoints_are_equal = false
+event_target_is_unchanged = true
+
+[runtime_repair_authorization]
+authorized_object = "implementation_and_synthetic_qualification_of_the_frozen_TDG7_stage_safe_exact_binary64_shared_lattice_runtime_repair"
+independent_binder_completed = true
+TDG7_runtime_repair_implementation_authorized = true
+one_shared_stage_safe_plan_must_own_all_one_two_four_paths = true
+actual_RK4_and_SSPRK3_stage_times_must_use_shared_plan_coordinates = true
+typed_lattice_stop_must_precede_shadow_source_projector_tracer_monitor_or_state_work = true
+physical_equations_source_projector_spatial_operator_and_TDG6_threshold_unchanged = true
+historical_PROTO14_runtime_mutation_authorized = false
+historical_terminal_checkpoint_may_resume = false
+new_protocol_or_output_namespace_authorized = false
+fresh_GR0_calibration_authorized = false
+candidate_execution_authorized = false
+production_trajectory_authorized = false
+
+[limitation_audit]
+independent_theorem_is_not_runtime_repair_implementation = true
+historical_CAL11_abort_remains_invalid_runtime_not_physics = true
+stage_safe_coordinate_plan_is_not_TDG6_temporal_admission_result = true
+source_shape_feasibility_is_not_synthetic_qualification = true
+new_runtime_must_be_qualified_on_synthetic_controls = true
+historical_checkpoint_may_not_resume = true
+new_protocol_namespace_and_runtime_authorization_remain_required_before_calibration = true
+no_GR0_SGBL_or_FGCQR_outcome_is_classified = true
+
+[proof_contract]
+freeze_commit_and_all_freeze_blobs_must_match = true
+CAL11_and_historical_source_blobs_must_match_their_immutable_commits = true
+theorem_must_rederive_eight_Q_without_importing_freeze_design_helper = true
+historical_one_two_four_guard_failures_must_be_rederived_from_source_expression = true
+historical_numerical_engine_stage_abscissae_must_be_inspected_directly = true
+four_Q_midpoint_alias_and_eight_Q_stage_exactness_must_be_mutation_attacked = true
+all_witness_fractions_boundaries_and_midpoints_must_match_exactly = true
+runtime_repair_authorization_must_not_promote_calibration_or_candidate_execution = true
+no_history_checkpoint_state_tracer_or_debit_array_may_be_loaded = true
+lineage_theorem_authorization_nonclaim_and_claim_mutations_must_fail_closed = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+CAL11_terminal_invalid_runtime_result_preserved = true
+PROTO14_runtime_fault_cause_fully_derived = true
+TDG7_subdivision_lattice_design_frozen = true
+TDG7_independent_binder_completed = true
+TDG7_runtime_repair_implementation_authorized = true
+TDG7_runtime_repair_implemented = false
+PROTO14_runtime_mutation_authorized = false
+PROTO14_terminal_checkpoint_may_resume = false
+fresh_replacement_protocol_frozen = false
+fresh_GR0_calibration_authorized = false
+
+[claims]
+CAL11_terminal_invalid_runtime_result_preserved = true
+PROTO14_runtime_fault_cause_fully_derived = true
+historical_requested_width_and_rounded_boundary_difference_are_bitwise_distinct = true
+historical_failure_is_binary64_scheduler_contract_not_TDG6_temporal_admission = true
+historical_failure_is_not_constraint_spatial_source_health_or_physical_model = true
+TDG7_subdivision_lattice_design_frozen = true
+TDG7_independent_binder_completed = true
+TDG7_runtime_repair_implementation_authorized = true
+TDG7_runtime_repair_implemented = false
+PROTO14_runtime_mutation_authorized = false
+PROTO14_terminal_checkpoint_may_resume = false
+fresh_replacement_protocol_frozen = false
+fresh_GR0_calibration_authorized = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+DEF1_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

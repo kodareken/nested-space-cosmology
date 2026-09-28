@@ -1,0 +1,118 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG8-RCV1-AUTH1"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+classification = "premise_only_exact_retry_recovery_and_same_event_resume_authority"
+nonclaims = [
+  "This authority preserves the original append-only TDG8 attempt and does not reclassify its numerical stop as physics.",
+  "Recovery may publish only the uniquely derived metadata successor; it cannot advance or replace an accepted state.",
+  "Resume remains GR-0-only, uses the original event plan, and opens no SGB-L or FGC-QR branch.",
+  "This authority records no common-event, calibration, trapping, DEF1, retained-EFT, transition, mechanism, or physical result.",
+]
+
+[predecessor]
+original_execution_commit = "6df67967e6e0bc63eca4dc6951a60d3787368f26"
+original_plan_sha256 = "e649e477b98411a3051f9946f2a9248b875d2b598818b8983ce06caa969d2126"
+original_authority_result_path = "results/fgc-1-tdg8-run1-auth1.json"
+original_authority_result_sha256 = "6ee22000bb76ac9f69ed3fe1056a7be319d24dcbfe37b6160eb8e9d0e3ec40de"
+
+[live_anchor]
+destination_path = "runs/fgc-2-sf1/proto19/calibration"
+campaign_id = "FGC-2-SF1-PROTO18-GR0-A3-TDG8-SUCCESSOR-1"
+branch = "GR-0"
+amplitude = "3"
+event = 23
+target_rational = "3/2"
+checkpoint_generation = 7
+checkpoint_sha256 = "51aec0cdc38d8fbfa6c5f81dc4f2f20e7332cc392a8621c2126c706fd9e3e3fd"
+journal_sequence = 7
+journal_sha256 = "6e8b55b6f9a4920046f15f3591968144664d0647aecfd4b962d85ad0e96ff981"
+member_key = "RK4-2049"
+physical_state_sha256 = "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+writer_state = "stale_verified_lock"
+
+[diagnosis]
+classification = "omitted_frozen_minimum_width_metadata_only"
+field = "minimum_width_hex_or_none"
+observed_buggy_value = "none"
+required_value = "0x1.0000000000000p-30"
+all_other_plan_fields_equal = true
+threshold_or_rule_change = false
+
+[expected_recovery]
+checkpoint_generation = 8
+checkpoint_sha256 = "a6401ff970aea002f8991c745a4cf7fe91c6d0a556907b04280d87e2c04d8936"
+journal_sequence = 8
+journal_sha256 = "63af61720215223eb3a660b055a07fa897a317b9580128d1b8f79a7022bab86f"
+member_mode = "RETRY_PENDING"
+pending_owner = "temporal"
+pending_cap_hex = "0x1.aaa9612df9000p-10"
+physical_state_advanced = false
+
+[[implementation_inventory]]
+role = "authority"
+path = "src/recursive_horizons/fgc/evolution/tdg8_retry_recovery_authority.py"
+
+[[implementation_inventory]]
+role = "runner"
+path = "scripts/run_fgc_tdg8_retry_recovery.py"
+
+[[implementation_inventory]]
+role = "reproducer"
+path = "scripts/reproduce_fgc_tdg8_rcv1_auth1.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_runtime.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_recovery.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_campaign_store.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_lifecycle.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/hlt16_progression_attempt.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/tdg8_successor_runtime.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_progression_contract.py"
+
+[[implementation_inventory]]
+role = "runtime"
+path = "src/recursive_horizons/fgc/evolution/proto19_gr0_static_factory.py"
+
+[[implementation_inventory]]
+role = "orchestrator"
+path = "scripts/run_fgc_pro19_event1.py"
+
+[scope]
+status_read_only = true
+recovery_metadata_only = true
+same_event_resume_only = true
+destination_absence_recheck = false
+generation_zero_reimport = false
+accepted_step_replay = false
+threshold_or_retry_rule_change = false
+candidate_branches_forbidden = true
+
+[claims]
+original_attempt_preserved = true
+physical_state_advanced_by_recovery = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+physical_result_earned = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false

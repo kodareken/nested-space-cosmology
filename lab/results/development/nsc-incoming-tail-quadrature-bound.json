@@ -1,0 +1,440 @@
+{
+  "accountable_author": "Douglas Ek",
+  "analytic_adapter": {
+    "branch": "E/sqrt(C)*sqrt(1+C*B/E^2); positive real agreement",
+    "generated_source_sha256": "7cf24d2031ebce2546d91c4a9bcbecfaae3fd87f975910f9374b0d4c84c30da2",
+    "integer_power_policy": "integer multiplication; reciprocal base before powers; divide by power rewritten as multiply by inverse power",
+    "replacement_whitelist": {
+      "odd_gap_root_powers": [
+        -3,
+        -5,
+        -7,
+        9
+      ],
+      "square_roots": 1
+    }
+  },
+  "archived_numerical_action_error_upper": [
+    1.6541135543594675e-15,
+    0.0
+  ],
+  "archived_numerical_stress_error_upper": [
+    7.797706134198424e-17,
+    6.738619181430176e-17,
+    0.0,
+    4.534082664731537e-18
+  ],
+  "archived_order13_source": [
+    1.1061100947544799e-12,
+    -7.951389880727708e-12,
+    0.0,
+    4.434256431665878e-12
+  ],
+  "archived_source_unchanged": true,
+  "certified_integral": {
+    "analytic_quadrature_error_upper": [
+      [
+        [
+          0,
+          491095919588685028343840966452536738104866719434532517019899339027065861691924429,
+          -322,
+          269
+        ],
+        [
+          0,
+          61386989948585628542980120806567092263108339929316564627487417378383232711490581,
+          -319,
+          266
+        ]
+      ],
+      [
+        [
+          0,
+          471189637776405913434900939978939329106259058034932840614812257925562192108884973,
+          -322,
+          268
+        ],
+        [
+          0,
+          942379275552811826869801879957878658212518116069865681229624515851124384217770365,
+          -323,
+          269
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          544543952672825964814649889295465911757491704472177710303128584672272066680537453,
+          -327,
+          269
+        ],
+        [
+          0,
+          17016998521025811400457809040483309742421615764755553446972768271008502083766803,
+          -322,
+          264
+        ]
+      ]
+    ],
+    "integral_interval": [
+      [
+        [
+          0,
+          576774975707405219279054782601984293678267908359480923718254868702367311441298377,
+          -308,
+          269
+        ],
+        [
+          0,
+          72107036764188968567230743970849587799006780252804759162399600721844350186861695,
+          -305,
+          266
+        ]
+      ],
+      [
+        [
+          1,
+          64789618068005413655937131511405420538556681296441803044002781942675736525734643,
+          -302,
+          266
+        ],
+        [
+          1,
+          259154088228769034942146294323740356627212047724455470223275195384911694500581927,
+          -304,
+          268
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          578094778878477142295870532708974931443219339439326068975799648669605886800361557,
+          -306,
+          269
+        ],
+        [
+          0,
+          578095943403870952763330046064804783237761844302707163458683285861197991801915457,
+          -306,
+          269
+        ]
+      ]
+    ],
+    "quadrature_interval": [
+      [
+        [
+          0,
+          576804949823591052105491784614096875266287004228587035322076884042884100129145785,
+          -308,
+          269
+        ],
+        [
+          0,
+          72103289999665739463926118719335515100504393269166495211921848804279751600880769,
+          -305,
+          266
+        ]
+      ],
+      [
+        [
+          1,
+          259156674826198838133905405848554501752122895767363453429518303932438764728609543,
+          -304,
+          268
+        ],
+        [
+          1,
+          64788971418647962857997353630201884257328969285714807242442004805793968968727739,
+          -302,
+          266
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          289047519268634025751598905101199505541782875450984481902705785735928057905964499,
+          -305,
+          268
+        ],
+        [
+          0,
+          36130980234067502722250173035711293974838464552504016789316960191184235174396751,
+          -302,
+          265
+        ]
+      ]
+    ]
+  },
+  "combined_action_error_upper": [
+    2.2128257483631066e-15,
+    5e-324
+  ],
+  "endpoint_certificate": {
+    "endpoint_g0": 0,
+    "higher_adiabatic_grade_certificate": {
+      "ad2_ad4_have_no_remaining_poles": true,
+      "leading_b0": "transverse O(x); longitudinal 1+O(x^2), leading1 independent of q",
+      "owner": "nsc_compact_ctp_neck._adiabatic_bloch_function",
+      "recurrence": "b_n=-h cross d(b_(n-1))/(2 energy^2)-sum_(i=1..n-1)(b_i dot b_(n-i))*b0/2",
+      "rows": [
+        {
+          "grade_residuals": [
+            0,
+            0
+          ],
+          "longitudinal_power": 3,
+          "order": 1,
+          "source_over_x_squared_minimum_power": 0,
+          "transverse_power": 2
+        },
+        {
+          "grade_residuals": [
+            0,
+            0
+          ],
+          "longitudinal_power": 4,
+          "order": 2,
+          "source_over_x_squared_minimum_power": 1,
+          "transverse_power": 3
+        },
+        {
+          "grade_residuals": [
+            0,
+            0
+          ],
+          "longitudinal_power": 5,
+          "order": 3,
+          "source_over_x_squared_minimum_power": 2,
+          "transverse_power": 4
+        },
+        {
+          "grade_residuals": [
+            0,
+            0
+          ],
+          "longitudinal_power": 6,
+          "order": 4,
+          "source_over_x_squared_minimum_power": 3,
+          "transverse_power": 5
+        }
+      ]
+    },
+    "meromorphic_to_analytic": "only finite integer x poles after root factoring; owned source=x^2*g removes them",
+    "numerical_chopping": false,
+    "reused_c1_c2_ad1": {
+      "c1": "L+i*m",
+      "clock": "dot(a)=A_rho/2; dot(L)=-a*L_rho; A=-a^2",
+      "powers": [
+        2,
+        2,
+        3
+      ],
+      "reduced_endpoint": "source(x)/x^2 -> 0 after P0 and ad1 subtraction",
+      "scope": "each angular sign; local existing Riccati/ad1 coefficient identity",
+      "vacuum_minus_ad1": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "stable_rearrangement_residuals": [
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "group": 22,
+  "imported_vacuum_physical_stress_error_upper": [
+    2.6338418489779527e-17,
+    2.5363298311250394e-17,
+    0.0,
+    4.775922158259751e-19
+  ],
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-source-tail.json": "fc4b55b21dae0bd4ad97cabd46a22e27bf7f66728b420e3811ce35ef9b8bcaf0",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_source_tail.py": "38d4add4f497f7e5bd3736a4d90c3edef93abb7c983315abc76c9b533fbd585e",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "integral_float_enclosure": [
+    [
+      1.1060321344501864e-12,
+      1.106188071815822e-12
+    ],
+    [
+      -7.951457266919524e-12,
+      -7.951322756431502e-12
+    ],
+    [
+      -5e-324,
+      5e-324
+    ],
+    [
+      4.434252033304791e-12,
+      4.434260965748543e-12
+    ]
+  ],
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "lower_energy": 160.0,
+  "payload": {
+    "path": "results/development/artifacts/nsc-incoming-tail-quadrature-bound.a574ce1a2ac5fefb676e0ec5f6767635c29412d2bfe91b15edc8f43b1e6d3988.json",
+    "sha256": "a574ce1a2ac5fefb676e0ec5f6767635c29412d2bfe91b15edc8f43b1e6d3988"
+  },
+  "reference_order": 4,
+  "reproducer": "python3 scripts/derive_nsc_incoming_tail_quadrature_bound.py --check",
+  "residuals": {
+    "exact_endpoint_identities": 0.0,
+    "saved_gauss_weight_replay": 0.0,
+    "thermal_replay": 0.0
+  },
+  "riccati_order": 16,
+  "schema": "NSC-INCOMING-TAIL-QUADRATURE-BOUND-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "complete32_group_tail_certified": false,
+    "constraints_solved": false,
+    "finite_offset_low_modes_certified": false,
+    "groups_calculated": 1,
+    "metric_evolution": false,
+    "new_source_value_composed": false,
+    "old_Taylor_regenerated": false,
+    "push_or_PDF": false,
+    "radial_or_mode_solves": false,
+    "source_recipe_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-tail-quadrature-bound.md": "c9d059bc511731ed4fc26462b986a8eaad0ab12680cd009bf3dc77c27ed0c0bb",
+    "scripts/derive_nsc_incoming_tail_quadrature_bound.py": "314b2b19ecc30ecb17f7a2b17e90b8898db39b2f3284ae4fdd2eb403acaaf459",
+    "src/recursive_horizons/nsc_incoming_tail_quadrature_bound.py": "d82cc551bdf6cfd4c4030b72c236bccd0360e3bb9b3b554cedc684e12dbf6b6d",
+    "tests/test_nsc_incoming_tail_quadrature_bound.py": "5c54b63dc7eda44a84df0ea6762d72ff75ed3764d2f493065c32d13471a5e145"
+  },
+  "stationarity_tolerance": 3e-11,
+  "status": "PASS: group22 archived order16 infinite tail numerical and physical budget; full source OPEN",
+  "thermal_tail": {
+    "display_is_not_proof": "lossless interval endpoints own outward rounding",
+    "exact_zero_components": [],
+    "intervals": [
+      [
+        [
+          0,
+          356122270756910782878470105960849440934966878299132721399898292522003907624353061,
+          -1794,
+          268
+        ],
+        [
+          0,
+          712244541513821567867778623536413298726052623905767206340212712042043637318965069,
+          -1795,
+          269
+        ]
+      ],
+      [
+        [
+          0,
+          684093525600997720999314862629446184836144830613537135229444751455893230344849071,
+          -1795,
+          269
+        ],
+        [
+          0,
+          684093525600997720999314862629446184836144830613537135229444751455893230344852059,
+          -1795,
+          269
+        ]
+      ],
+      [
+        [
+          0,
+          684093525600997720999314862629446184836144830613537135229444751455893230344849071,
+          -1795,
+          269
+        ],
+        [
+          0,
+          684093525600997720999314862629446184836144830613537135229444751455893230344852059,
+          -1795,
+          269
+        ]
+      ],
+      [
+        [
+          0,
+          882415529152126978210456134670422693835537721748594184768463616473973846967113901,
+          -1801,
+          269
+        ],
+        [
+          0,
+          882415529152127045716226775200380724990973965263256937776804786866829583312811183,
+          -1801,
+          269
+        ]
+      ]
+    ],
+    "source_law": "2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))",
+    "upper_display": [
+      "3.189972306213007316719869e-460",
+      "3.063890664417894860725903e-460",
+      "3.063890664417894860725903e-460",
+      "6.175198914531092674300382e-462"
+    ]
+  },
+  "verification_tolerances": {
+    "exact_endpoint_identities": 0.0,
+    "saved_gauss_weight_replay": 0.0,
+    "thermal_replay": 0.0
+  }
+}

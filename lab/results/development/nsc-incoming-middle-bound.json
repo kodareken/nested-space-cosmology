@@ -1,0 +1,1843 @@
+{
+  "accountable_author": "Douglas Ek",
+  "aggregate": {
+    "combined_stress_error_upper": [
+      1.9705885008545614e-06,
+      1.770800566197418e-06,
+      2.1543060718230268e-46,
+      7.290433416564062e-08
+    ],
+    "constraint_action_error_upper": [
+      4.180174391328876e-05,
+      3.857131613075748e-45
+    ],
+    "fits_stationarity_tolerance": false,
+    "ratio_to_stationarity_tolerance": [
+      1393391.463776292,
+      1.285710537691916e-34
+    ],
+    "stationarity_tolerance": 3e-11,
+    "thermal_scattering_stress_error_upper": [
+      2.3867092040674663e-46,
+      2.1543060718230264e-46,
+      2.1543060718230264e-46,
+      6.67537826953122e-48
+    ],
+    "vacuum_stress_error_upper": [
+      1.970588500854561e-06,
+      1.7708005661974177e-06,
+      0.0,
+      7.290433416564061e-08
+    ]
+  },
+  "constraint_order": [
+    "N",
+    "beta"
+  ],
+  "density_bound_ranking": [
+    {
+      "density_error_upper": 1.8595813100714766e-06,
+      "group": 14,
+      "lapse_action_error_upper": 3.9446968088891225e-05
+    },
+    {
+      "density_error_upper": 3.345637681827825e-08,
+      "group": 12,
+      "lapse_action_error_upper": 7.097041799531826e-07
+    },
+    {
+      "density_error_upper": 2.4332621408721334e-08,
+      "group": 32,
+      "lapse_action_error_upper": 5.161635767311559e-07
+    },
+    {
+      "density_error_upper": 1.3737093825108703e-08,
+      "group": 11,
+      "lapse_action_error_upper": 2.914025317518056e-07
+    },
+    {
+      "density_error_upper": 9.80483021507434e-09,
+      "group": 31,
+      "lapse_action_error_upper": 2.079881221199022e-07
+    },
+    {
+      "density_error_upper": 8.213893109173174e-09,
+      "group": 22,
+      "lapse_action_error_upper": 1.7423985582575234e-07
+    },
+    {
+      "density_error_upper": 5.5319647038144795e-09,
+      "group": 10,
+      "lapse_action_error_upper": 1.1734858484453938e-07
+    },
+    {
+      "density_error_upper": 3.8502375767056636e-09,
+      "group": 30,
+      "lapse_action_error_upper": 8.167440595384365e-08
+    },
+    {
+      "density_error_upper": 3.2711972176392704e-09,
+      "group": 21,
+      "lapse_action_error_upper": 6.939132564831285e-08
+    },
+    {
+      "density_error_upper": 2.199665274433417e-09,
+      "group": 9,
+      "lapse_action_error_upper": 4.6661108829644014e-08
+    },
+    {
+      "density_error_upper": 1.4762061841414985e-09,
+      "group": 29,
+      "lapse_action_error_upper": 3.1314499625840684e-08
+    },
+    {
+      "density_error_upper": 1.2921335159330264e-09,
+      "group": 20,
+      "lapse_action_error_upper": 2.7409798804461932e-08
+    },
+    {
+      "density_error_upper": 8.723678264577945e-10,
+      "group": 8,
+      "lapse_action_error_upper": 1.85053837794989e-08
+    },
+    {
+      "density_error_upper": 6.607674222871351e-10,
+      "group": 13,
+      "lapse_action_error_upper": 1.401674198378433e-08
+    },
+    {
+      "density_error_upper": 5.540393885525123e-10,
+      "group": 28,
+      "lapse_action_error_upper": 1.1752739157923518e-08
+    },
+    {
+      "density_error_upper": 5.105220167777423e-10,
+      "group": 19,
+      "lapse_action_error_upper": 1.0829612878682852e-08
+    },
+    {
+      "density_error_upper": 3.4965664220063744e-10,
+      "group": 7,
+      "lapse_action_error_upper": 7.417204255740366e-09
+    },
+    {
+      "density_error_upper": 2.0369764323147695e-10,
+      "group": 27,
+      "lapse_action_error_upper": 4.321001931357103e-09
+    },
+    {
+      "density_error_upper": 2.035272316153714e-10,
+      "group": 18,
+      "lapse_action_error_upper": 4.317387020007927e-09
+    },
+    {
+      "density_error_upper": 1.4366824417859946e-10,
+      "group": 6,
+      "lapse_action_error_upper": 3.047608949824524e-09
+    },
+    {
+      "density_error_upper": 8.226403008432263e-11,
+      "group": 17,
+      "lapse_action_error_upper": 1.7450522609711173e-09
+    },
+    {
+      "density_error_upper": 7.310265913522471e-11,
+      "group": 26,
+      "lapse_action_error_upper": 1.5507137259889228e-09
+    },
+    {
+      "density_error_upper": 6.115118842791356e-11,
+      "group": 5,
+      "lapse_action_error_upper": 1.2971893003274818e-09
+    },
+    {
+      "density_error_upper": 3.351561938315587e-11,
+      "group": 16,
+      "lapse_action_error_upper": 7.109608819610888e-10
+    },
+    {
+      "density_error_upper": 2.6965236474685793e-11,
+      "group": 4,
+      "lapse_action_error_upper": 5.72008772601318e-10
+    },
+    {
+      "density_error_upper": 2.5404802854514993e-11,
+      "group": 25,
+      "lapse_action_error_upper": 5.389075713328752e-10
+    },
+    {
+      "density_error_upper": 1.334042792012548e-11,
+      "group": 15,
+      "lapse_action_error_upper": 2.8298812835299806e-10
+    },
+    {
+      "density_error_upper": 1.210819697174732e-11,
+      "group": 3,
+      "lapse_action_error_upper": 2.5684903207602535e-10
+    },
+    {
+      "density_error_upper": 7.57177384626614e-12,
+      "group": 24,
+      "lapse_action_error_upper": 1.606186939351854e-10
+    },
+    {
+      "density_error_upper": 5.292215772322896e-12,
+      "group": 2,
+      "lapse_action_error_upper": 1.1226283333764198e-10
+    },
+    {
+      "density_error_upper": 1.997467207226108e-12,
+      "group": 1,
+      "lapse_action_error_upper": 4.2371917138179e-11
+    },
+    {
+      "density_error_upper": 1.0900682447649475e-14,
+      "group": 23,
+      "lapse_action_error_upper": 2.312342409179396e-13
+    }
+  ],
+  "group_count": 32,
+  "groups": [
+    {
+      "combined_stress_error_upper": [
+        1.997467207226108e-12,
+        1.937145950304434e-12,
+        1.3779327946784912e-115,
+        3.016062846083703e-14
+      ],
+      "constraint_action_error_upper": [
+        4.2371917138179e-11,
+        2.4670905460293533e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 1,
+      "middle_interval": {
+        "group": 1,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/1_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/1_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.4237325859281602e-115,
+        1.377932794678491e-115,
+        1.377932794678491e-115,
+        2.2899895624834577e-117
+      ],
+      "vacuum_stress_error_upper": [
+        1.9974672072261076e-12,
+        1.9371459503044337e-12,
+        0.0,
+        3.0160628460837024e-14
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        5.292215772322896e-12,
+        5.0486625434767106e-12,
+        1.8372437262379884e-115,
+        1.2177661442309302e-13
+      ],
+      "constraint_action_error_upper": [
+        1.1226283333764198e-10,
+        3.289454061372471e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 2,
+      "middle_interval": {
+        "group": 2,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/2_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/2_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.9318473682485186e-115,
+        1.8372437262379882e-115,
+        1.8372437262379882e-115,
+        4.730182100526528e-117
+      ],
+      "vacuum_stress_error_upper": [
+        5.292215772322895e-12,
+        5.04866254347671e-12,
+        0.0,
+        1.21776614423093e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.210819697174732e-11,
+        1.138183325670453e-11,
+        2.2965546577974858e-115,
+        3.6318185752139476e-13
+      ],
+      "constraint_action_error_upper": [
+        2.5684903207602535e-10,
+        4.1118175767155896e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 3,
+      "middle_interval": {
+        "group": 3,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/3_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/3_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        2.452990726473014e-115,
+        2.2965546577974853e-115,
+        2.2965546577974853e-115,
+        7.82180343377645e-117
+      ],
+      "vacuum_stress_error_upper": [
+        1.2108196971747319e-11,
+        1.1381833256704529e-11,
+        0.0,
+        3.631818575213947e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        2.6965236474685793e-11,
+        2.4996054418307376e-11,
+        2.7558655893569825e-115,
+        9.845910281892097e-13
+      ],
+      "constraint_action_error_upper": [
+        5.72008772601318e-10,
+        4.9341810920587065e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 4,
+      "middle_interval": {
+        "group": 4,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/4_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/4_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        2.9875962400917084e-115,
+        2.755865589356982e-115,
+        2.755865589356982e-115,
+        1.1586532536736319e-116
+      ],
+      "vacuum_stress_error_upper": [
+        2.696523647468579e-11,
+        2.4996054418307373e-11,
+        0.0,
+        9.845910281892095e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        6.115118842791356e-11,
+        5.592636529004115e-11,
+        3.2151765209164796e-115,
+        2.6124115689362034e-12
+      ],
+      "constraint_action_error_upper": [
+        1.2971893003274818e-09,
+        5.756544607401824e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 5,
+      "middle_interval": {
+        "group": 5,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/5_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/5_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        3.535775059664163e-115,
+        3.215176520916479e-115,
+        3.215176520916479e-115,
+        1.6029926937384204e-116
+      ],
+      "vacuum_stress_error_upper": [
+        6.115118842791355e-11,
+        5.5926365290041146e-11,
+        0.0,
+        2.612411568936203e-12
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.4366824417859946e-10,
+        1.2967866409709388e-10,
+        3.6744874524759768e-115,
+        6.994790040752792e-12
+      ],
+      "constraint_action_error_upper": [
+        3.047608949824524e-09,
+        6.578908122744942e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 6,
+      "middle_interval": {
+        "group": 6,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/6_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/6_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        4.097567801385179e-115,
+        3.6744874524759763e-115,
+        3.6744874524759763e-115,
+        2.1154017445460122e-116
+      ],
+      "vacuum_stress_error_upper": [
+        1.4366824417859944e-10,
+        1.2967866409709386e-10,
+        0.0,
+        6.994790040752791e-12
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        3.4965664220063744e-10,
+        3.11577571129152e-10,
+        4.133798384035474e-115,
+        1.9039535535742713e-11
+      ],
+      "constraint_action_error_upper": [
+        7.417204255740366e-09,
+        7.401271638088062e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 7,
+      "middle_interval": {
+        "group": 7,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/7_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/7_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        4.672992462046294e-115,
+        4.1337983840354735e-115,
+        4.1337983840354735e-115,
+        2.6959703900541055e-116
+      ],
+      "vacuum_stress_error_upper": [
+        3.496566422006374e-10,
+        3.1157757112915195e-10,
+        0.0,
+        1.903953553574271e-11
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        8.723678264577945e-10,
+        7.676140171191099e-10,
+        4.5931093155949715e-115,
+        5.237690466934232e-11
+      ],
+      "constraint_action_error_upper": [
+        1.85053837794989e-08,
+        8.223635153431179e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 8,
+      "middle_interval": {
+        "group": 8,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/8_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/8_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        5.262058083500878e-115,
+        4.593109315594971e-115,
+        4.593109315594971e-115,
+        3.3447438395295357e-116
+      ],
+      "vacuum_stress_error_upper": [
+        8.723678264577944e-10,
+        7.676140171191098e-10,
+        0.0,
+        5.237690466934231e-11
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        2.199665274433417e-09,
+        1.9116525979651796e-09,
+        5.052420247154469e-115,
+        1.4400633823411868e-10
+      ],
+      "constraint_action_error_upper": [
+        4.6661108829644014e-08,
+        9.045998668774297e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 9,
+      "middle_interval": {
+        "group": 9,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/9_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/9_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        5.86476963527529e-115,
+        5.052420247154468e-115,
+        5.052420247154468e-115,
+        4.061746940604114e-116
+      ],
+      "vacuum_stress_error_upper": [
+        2.1996652744334167e-09,
+        1.9116525979651792e-09,
+        0.0,
+        1.4400633823411866e-10
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        5.5319647038144795e-09,
+        4.749226560216111e-09,
+        5.511731178713965e-115,
+        3.913690717991842e-10
+      ],
+      "constraint_action_error_upper": [
+        1.1734858484453938e-07,
+        9.868362184117413e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 10,
+      "middle_interval": {
+        "group": 10,
+        "left": 40.0,
+        "right": 320.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/10_1",
+            "right": 320.0,
+            "rows": 560,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/10_-1",
+            "right": 320.0,
+            "rows": 560,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        6.481130040676338e-115,
+        5.511731178713964e-115,
+        5.511731178713964e-115,
+        4.846994309811869e-116
+      ],
+      "vacuum_stress_error_upper": [
+        5.531964703814479e-09,
+        4.74922656021611e-09,
+        0.0,
+        3.9136907179918417e-10
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.3737093825108703e-08,
+        1.1652132190768067e-08,
+        5.971042110273462e-115,
+        1.0424808171703181e-09
+      ],
+      "constraint_action_error_upper": [
+        2.914025317518056e-07,
+        1.069072569946053e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 11,
+      "middle_interval": {
+        "group": 11,
+        "left": 40.0,
+        "right": 320.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/11_1",
+            "right": 320.0,
+            "rows": 560,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/11_-1",
+            "right": 320.0,
+            "rows": 560,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        7.111141113745846e-115,
+        5.971042110273461e-115,
+        5.971042110273461e-115,
+        5.700495017361922e-116
+      ],
+      "vacuum_stress_error_upper": [
+        1.3737093825108701e-08,
+        1.1652132190768065e-08,
+        0.0,
+        1.042480817170318e-09
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        3.345637681827825e-08,
+        2.8043212978148618e-08,
+        6.430353041832959e-115,
+        2.706581920064815e-09
+      ],
+      "constraint_action_error_upper": [
+        7.097041799531826e-07,
+        1.1513089214803648e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 12,
+      "middle_interval": {
+        "group": 12,
+        "left": 40.0,
+        "right": 320.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid_ref/12_1",
+            "right": 320.0,
+            "rows": 840,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid_ref/12_-1",
+            "right": 320.0,
+            "rows": 840,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        7.754804029980386e-115,
+        6.430353041832958e-115,
+        6.430353041832958e-115,
+        6.62225494073714e-116
+      ],
+      "vacuum_stress_error_upper": [
+        3.345637681827824e-08,
+        2.8043212978148615e-08,
+        0.0,
+        2.7065819200648144e-09
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        6.607674222871351e-10,
+        6.133321770872141e-10,
+        5.385765179557566e-47,
+        1.5e-323
+      ],
+      "constraint_action_error_upper": [
+        1.401674198378433e-08,
+        9.642829032689367e-46
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 13,
+      "middle_interval": {
+        "group": 13,
+        "left": 16.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 16.0,
+            "panel": "group13/mid",
+            "right": 160.0,
+            "rows": 432,
+            "sign": 1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        5.827879410399132e-47,
+        5.385765179557565e-47,
+        5.385765179557565e-47,
+        5e-324
+      ],
+      "vacuum_stress_error_upper": [
+        6.60767422287135e-10,
+        6.13332177087214e-10,
+        0.0,
+        5e-324
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.8595813100714766e-06,
+        1.6756914668056504e-06,
+        1.6157295538672695e-46,
+        6.522786095102128e-08
+      ],
+      "constraint_action_error_upper": [
+        3.9446968088891225e-05,
+        2.8928487098068096e-45
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 14,
+      "middle_interval": {
+        "group": 14,
+        "left": 16.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 16.0,
+            "panel": "group14/mid24_1",
+            "right": 160.0,
+            "rows": 432,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 16.0,
+            "panel": "group14/mid24_-1",
+            "right": 160.0,
+            "rows": 432,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.8039212630275527e-46,
+        1.6157295538672693e-46,
+        1.6157295538672693e-46,
+        6.675378269531218e-48
+      ],
+      "vacuum_stress_error_upper": [
+        1.8595813100714764e-06,
+        1.6756914668056502e-06,
+        0.0,
+        6.522786095102126e-08
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.334042792012548e-11,
+        1.2617334552281048e-11,
+        3.6744874524759768e-115,
+        3.0434413814007e-13
+      ],
+      "constraint_action_error_upper": [
+        2.8298812835299806e-10,
+        6.578908122744942e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 15,
+      "middle_interval": {
+        "group": 15,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/15_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/15_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        3.8992569076388023e-115,
+        3.6744874524759763e-115,
+        3.6744874524759763e-115,
+        9.460364201053056e-117
+      ],
+      "vacuum_stress_error_upper": [
+        1.3340427920125478e-11,
+        1.2617334552281046e-11,
+        0.0,
+        3.0434413814006993e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        3.351561938315587e-11,
+        3.129601223487628e-11,
+        4.5931093155949715e-115,
+        9.986522767699521e-13
+      ],
+      "constraint_action_error_upper": [
+        7.109608819610888e-10,
+        8.223635153431179e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 16,
+      "middle_interval": {
+        "group": 16,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/16_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/16_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        4.940804528791734e-115,
+        4.593109315594971e-115,
+        4.593109315594971e-115,
+        1.56436068675529e-116
+      ],
+      "vacuum_stress_error_upper": [
+        3.3515619383155865e-11,
+        3.129601223487627e-11,
+        0.0,
+        9.98652276769952e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        8.226403008432263e-11,
+        7.584456473082303e-11,
+        5.511731178713965e-115,
+        2.987624168253724e-12
+      ],
+      "constraint_action_error_upper": [
+        1.7450522609711173e-09,
+        9.868362184117413e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 17,
+      "middle_interval": {
+        "group": 17,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/17_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/17_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        6.009647516231409e-115,
+        5.511731178713964e-115,
+        5.511731178713964e-115,
+        2.3173065073472638e-116
+      ],
+      "vacuum_stress_error_upper": [
+        8.226403008432262e-11,
+        7.584456473082302e-11,
+        0.0,
+        2.9876241682537235e-12
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        2.035272316153714e-10,
+        1.8529137341840258e-10,
+        6.430353041832959e-115,
+        8.655672197198226e-12
+      ],
+      "constraint_action_error_upper": [
+        4.317387020007927e-09,
+        1.1513089214803648e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 18,
+      "middle_interval": {
+        "group": 18,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/18_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/18_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        7.10579330315092e-115,
+        6.430353041832958e-115,
+        6.430353041832958e-115,
+        3.205985387476841e-116
+      ],
+      "vacuum_stress_error_upper": [
+        2.0352723161537138e-10,
+        1.8529137341840256e-10,
+        0.0,
+        8.655672197198225e-12
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        5.105220167777423e-10,
+        4.5900611611062745e-10,
+        7.3489749049519535e-115,
+        2.4759858914135172e-11
+      ],
+      "constraint_action_error_upper": [
+        1.0829612878682852e-08,
+        1.3157816245489885e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 19,
+      "middle_interval": {
+        "group": 19,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/19_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/19_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        8.22924507548075e-115,
+        7.348974904951953e-115,
+        7.348974904951953e-115,
+        4.2308034890920243e-116
+      ],
+      "vacuum_stress_error_upper": [
+        5.105220167777422e-10,
+        4.590061161106274e-10,
+        0.0,
+        2.475985891413517e-11
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.2921335159330264e-09,
+        1.1474649572046414e-09,
+        8.267596768070949e-115,
+        7.012216509232065e-11
+      ],
+      "constraint_action_error_upper": [
+        2.7409798804461932e-08,
+        1.4802543276176123e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 20,
+      "middle_interval": {
+        "group": 20,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/20_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/20_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        9.380004378959855e-115,
+        8.267596768070947e-115,
+        8.267596768070947e-115,
+        5.391940780108211e-116
+      ],
+      "vacuum_stress_error_upper": [
+        1.2921335159330262e-09,
+        1.1474649572046412e-09,
+        0.0,
+        7.012216509232063e-11
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        3.2711972176392704e-09,
+        2.8696246492141223e-09,
+        9.186218631189943e-115,
+        1.958164581888762e-10
+      ],
+      "constraint_action_error_upper": [
+        6.939132564831285e-08,
+        1.6447270306862358e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 21,
+      "middle_interval": {
+        "group": 21,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/21_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/21_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.0558072035941564e-114,
+        9.186218631189941e-115,
+        9.186218631189941e-115,
+        6.689487679059071e-116
+      ],
+      "vacuum_stress_error_upper": [
+        3.27119721763927e-09,
+        2.869624649214122e-09,
+        0.0,
+        1.9581645818887618e-10
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        8.213893109173174e-09,
+        7.11889330376139e-09,
+        1.0104840494308937e-114,
+        5.363065957515725e-10
+      ],
+      "constraint_action_error_upper": [
+        1.7423985582575234e-07,
+        1.8091997337548594e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 22,
+      "middle_interval": {
+        "group": 22,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid_ref/22_1",
+            "right": 160.0,
+            "rows": 360,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid_ref/22_-1",
+            "right": 160.0,
+            "rows": 360,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.176344851622244e-114,
+        1.0104840494308936e-114,
+        1.0104840494308936e-114,
+        8.123493881208228e-116
+      ],
+      "vacuum_stress_error_upper": [
+        8.213893109173172e-09,
+        7.1188933037613894e-09,
+        0.0,
+        5.363065957515724e-10
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.0900682447649475e-14,
+        1.0265520234903907e-14,
+        9.186218631189942e-116,
+        1.5e-323
+      ],
+      "constraint_action_error_upper": [
+        2.312342409179396e-13,
+        1.6447270306862356e-114
+      ],
+      "fits_stationarity_tolerance": true,
+      "group": 23,
+      "middle_interval": {
+        "group": 23,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/23_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        9.79288805615644e-116,
+        9.186218631189941e-116,
+        9.186218631189941e-116,
+        5e-324
+      ],
+      "vacuum_stress_error_upper": [
+        1.0900682447649474e-14,
+        1.0265520234903905e-14,
+        0.0,
+        5e-324
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        7.57177384626614e-12,
+        7.081263664517166e-12,
+        2.7558655893569825e-115,
+        1.1025800499700032e-13
+      ],
+      "constraint_action_error_upper": [
+        1.606186939351854e-10,
+        4.9341810920587065e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 24,
+      "middle_interval": {
+        "group": 24,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/24_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/24_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        2.9596173616709415e-115,
+        2.755865589356982e-115,
+        2.755865589356982e-115,
+        4.579979124966915e-117
+      ],
+      "vacuum_stress_error_upper": [
+        7.571773846266138e-12,
+        7.081263664517165e-12,
+        0.0,
+        1.1025800499700031e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        2.5404802854514993e-11,
+        2.3556529850968385e-11,
+        3.6744874524759768e-115,
+        5.682359407733896e-13
+      ],
+      "constraint_action_error_upper": [
+        5.389075713328752e-10,
+        6.578908122744942e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 25,
+      "middle_interval": {
+        "group": 25,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/25_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/25_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        3.9822000503930837e-115,
+        3.6744874524759763e-115,
+        3.6744874524759763e-115,
+        9.460364201053056e-117
+      ],
+      "vacuum_stress_error_upper": [
+        2.540480285451499e-11,
+        2.3556529850968382e-11,
+        0.0,
+        5.682359407733895e-13
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        7.310265913522471e-11,
+        6.713473077089033e-11,
+        4.5931093155949715e-115,
+        2.142382232953006e-12
+      ],
+      "constraint_action_error_upper": [
+        1.5507137259889228e-09,
+        8.223635153431179e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 26,
+      "middle_interval": {
+        "group": 26,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/26_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/26_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        5.028885545015432e-115,
+        4.593109315594971e-115,
+        4.593109315594971e-115,
+        1.56436068675529e-116
+      ],
+      "vacuum_stress_error_upper": [
+        7.31026591352247e-11,
+        6.713473077089032e-11,
+        0.0,
+        2.1423822329530056e-12
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        2.0369764323147695e-10,
+        1.851488389683384e-10,
+        5.511731178713965e-115,
+        7.293752466274043e-12
+      ],
+      "constraint_action_error_upper": [
+        4.321001931357103e-09,
+        9.868362184117413e-114
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 27,
+      "middle_interval": {
+        "group": 27,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/27_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/27_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        6.101047378039814e-115,
+        5.511731178713964e-115,
+        5.511731178713964e-115,
+        2.3173065073472638e-116
+      ],
+      "vacuum_stress_error_upper": [
+        2.0369764323147693e-10,
+        1.8514883896833838e-10,
+        0.0,
+        7.293752466274041e-12
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        5.540393885525123e-10,
+        4.982059801993336e-10,
+        6.430353041832959e-115,
+        2.3274840188926908e-11
+      ],
+      "constraint_action_error_upper": [
+        1.1752739157923518e-08,
+        1.1513089214803648e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 28,
+      "middle_interval": {
+        "group": 28,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/28_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/28_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        7.199428532192195e-115,
+        6.430353041832958e-115,
+        6.430353041832958e-115,
+        3.205985387476841e-116
+      ],
+      "vacuum_stress_error_upper": [
+        5.540393885525122e-10,
+        4.982059801993335e-10,
+        0.0,
+        2.3274840188926905e-11
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        1.4762061841414985e-09,
+        1.3129052655163231e-09,
+        7.3489749049519535e-115,
+        7.082691019987204e-11
+      ],
+      "constraint_action_error_upper": [
+        3.1314499625840684e-08,
+        1.3157816245489885e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 29,
+      "middle_interval": {
+        "group": 29,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/29_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/29_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        8.32444326061174e-115,
+        7.348974904951953e-115,
+        7.348974904951953e-115,
+        4.2308034890920243e-116
+      ],
+      "vacuum_stress_error_upper": [
+        1.4762061841414983e-09,
+        1.312905265516323e-09,
+        0.0,
+        7.082691019987203e-11
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        3.8502375767056636e-09,
+        3.386295030397669e-09,
+        8.267596768070949e-115,
+        2.0695613403494839e-10
+      ],
+      "constraint_action_error_upper": [
+        8.167440595384365e-08,
+        1.4802543276176123e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 30,
+      "middle_interval": {
+        "group": 30,
+        "left": 40.0,
+        "right": 160.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/30_1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/30_-1",
+            "right": 160.0,
+            "rows": 240,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        9.47633153050272e-115,
+        8.267596768070947e-115,
+        8.267596768070947e-115,
+        5.391940780108211e-116
+      ],
+      "vacuum_stress_error_upper": [
+        3.850237576705663e-09,
+        3.3862950303976685e-09,
+        0.0,
+        2.0695613403494836e-10
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        9.80483021507434e-09,
+        8.526945514561074e-09,
+        9.186218631189943e-115,
+        5.819116297505066e-10
+      ],
+      "constraint_action_error_upper": [
+        2.079881221199022e-07,
+        1.6447270306862358e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 31,
+      "middle_interval": {
+        "group": 31,
+        "left": 40.0,
+        "right": 320.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/31_1",
+            "right": 320.0,
+            "rows": 560,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid/31_-1",
+            "right": 320.0,
+            "rows": 560,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.0655237898429314e-114,
+        9.186218631189941e-115,
+        9.186218631189941e-115,
+        6.689487679059071e-116
+      ],
+      "vacuum_stress_error_upper": [
+        9.804830215074339e-09,
+        8.526945514561072e-09,
+        0.0,
+        5.819116297505065e-10
+      ]
+    },
+    {
+      "combined_stress_error_upper": [
+        2.4332621408721334e-08,
+        2.092406084310142e-08,
+        1.0104840494308937e-114,
+        1.5764762018610182e-09
+      ],
+      "constraint_action_error_upper": [
+        5.161635767311559e-07,
+        1.8091997337548594e-113
+      ],
+      "fits_stationarity_tolerance": false,
+      "group": 32,
+      "middle_interval": {
+        "group": 32,
+        "left": 40.0,
+        "right": 320.0,
+        "signed_selected_panels": [
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid_ref/32_1",
+            "right": 320.0,
+            "rows": 840,
+            "sign": 1
+          },
+          {
+            "endpoint_measure_residual": 0.0,
+            "left": 40.0,
+            "panel": "mid_ref/32_-1",
+            "right": 320.0,
+            "rows": 840,
+            "sign": -1
+          }
+        ]
+      },
+      "thermal_scattering_stress_error_upper": [
+        1.1861252729765068e-114,
+        1.0104840494308936e-114,
+        1.0104840494308936e-114,
+        8.123493881208228e-116
+      ],
+      "vacuum_stress_error_upper": [
+        2.433262140872133e-08,
+        2.0924060843101416e-08,
+        0.0,
+        1.576476201861018e-09
+      ]
+    }
+  ],
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "scripts/derive_nsc_incoming_source_tail.py": "39acfa3e41133cd361a81d53f155d7ee2661d444c9e4e6f59e0593def9ffb92c",
+    "src/recursive_horizons/nsc_incoming_high_energy_source.py": "5c7712f9193b8374384a92f9a6bd5d631ba94012e750a7cf56ffb4f58c0d9502",
+    "src/recursive_horizons/nsc_incoming_joint_constraints.py": "3fa6a90601d2217a8e13220d0cbad70ab2a2d568ddbf4bbdd686dd67a59f45a0",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py": "18624ecc149e1d3842523390b0a4ebaff135ec170f737fd2dac45f9f7d102b6b"
+  },
+  "input_payloads": [
+    {
+      "bytes": 92552,
+      "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+      "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+    },
+    {
+      "bytes": 14789190,
+      "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+      "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+    },
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+    },
+    {
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    }
+  ],
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "next_gap": "The interval/Riccati defect enclosure on the ranked finite middle bands is too broad. A sharper physical approximation bound is required; the enclosure does not establish the actual error. Low-panel quadrature and modal accuracy remain independent gaps.",
+  "physical_NON_EXISTENCE_claimed": false,
+  "reproducer": "python3 scripts/derive_nsc_incoming_middle_bound.py --check",
+  "residuals": {
+    "middle_endpoint_measure": 0.0,
+    "selected_panel_endpoint_or_label_mismatches": 0
+  },
+  "schema": "NSC-INCOMING-MIDDLE-BOUND-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "angular_compact_complement_covered": false,
+    "changed_normal_jets_covered": false,
+    "constraint_root_selected": false,
+    "field_or_scattering_solve": false,
+    "finite_start_error_assigned_to_infinite_tail": false,
+    "full_source_convergence_claimed": false,
+    "low_subgap_modal_accuracy_covered": false,
+    "metric_evolution": false,
+    "middle_recipe_uses_finite_offset_initialization": false,
+    "new_energy_partition": false,
+    "quadrature_error_covered": false,
+    "radial_coefficient_preparation_rerun": false,
+    "same_affine_horizon_vacuum_definition": true,
+    "scales_seeds_state_stress_or_archived_outputs_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-middle-bound.md": "2e3101a52e4ad1664f738e97f18908c312af271a32be8c0057d0eae875f98b20",
+    "scripts/derive_nsc_incoming_middle_bound.py": "4526aff7ac7a2c4ccc689e6f5b0e48eb15c8bdc0bf478a01f4e8a712a7673832",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "tests/test_nsc_incoming_middle_bound.py": "96c675f996933c9526682e6ada281c991f5d195883be867a2fd7f0712d983a25"
+  },
+  "status": "OPEN: valid middle-band enclosure is too broad for existing constraint tolerance",
+  "thermal_bound": {
+    "difference_rule": "triangle bound: actual and archived-recipe departures each satisfy b(E), hence difference <=2*b(E)",
+    "finite_exponential_primitives": true,
+    "source_horizon_coherence_retained_in_bound": true,
+    "trace_norm_of_each_departure": "2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))"
+  },
+  "valid_enclosure": true,
+  "verification_tolerances": {
+    "middle_endpoint_measure": 3e-11,
+    "selected_panel_endpoint_or_label_mismatches": 0
+  }
+}

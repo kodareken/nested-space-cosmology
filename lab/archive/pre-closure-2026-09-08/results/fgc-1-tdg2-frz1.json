@@ -1,0 +1,401 @@
+{
+  "artifact_id": "FGC-1-TDG2-FRZ1",
+  "artifact_payload": {
+    "claim_boundary": {
+      "actual_terminal_histories_diagnosed": false,
+      "candidate_branch_opened": false,
+      "historical_PROTO13_result_reclassified": false,
+      "new_trajectory_authorized": false,
+      "physical_or_candidate_question_answered": false,
+      "replacement_temporal_admission_defined": false
+    },
+    "frozen_discriminator": {
+      "arithmetic_contract": {
+        "arithmetic_disagreement_may_not_be_silently_dropped": true,
+        "binary64_rFFT_is_audited_against_decimal_DFT": true,
+        "coefficient_interval_contains_binary64_decimal_disagreement": true,
+        "high_decimal_precision": 96,
+        "independent_DFT_uses_only_top_band_bins": true,
+        "low_decimal_precision": 72,
+        "power_interval_contains_binary64_decimal_disagreement": true,
+        "power_interval_uses_outward_binary64_rounding": true,
+        "two_decimal_precisions_must_agree_within_public_debit": true
+      },
+      "classification_contract": {
+        "class_names": [
+          "contracts_to_zero_at_required_power_order",
+          "nonzero_resolution_independent_within_enclosure",
+          "converges_to_nonzero_resolved_power",
+          "instrument_floor_or_interpolation_enclosure_dominated",
+          "unresolved_absolute_tail_behavior"
+        ],
+        "field_and_derivative_power_are_classified_separately": true,
+        "finest_interval_touching_zero_is_enclosure_dominated": true,
+        "floor_class_requires_all_three_top_band_coefficient_intervals_below_1e_minus_30": true,
+        "no_class_is_a_pass_fail_temporal_admission": true,
+        "nonmonotone_or_below_order_evidence_is_unresolved": true,
+        "nonzero_convergent_class_requires_same_direction_difference_contraction_at_order_at_least_3_over_2": true,
+        "nonzero_convergent_decreasing_class_requires_positive_geometric_continuum_lower_bound": true,
+        "resolution_independent_nonzero_class_requires_positive_three_interval_intersection": true,
+        "zero_class_requires_both_power_ratios_to_have_conservative_order_at_least_3": true
+      },
+      "classification_is_per_method_per_tracer_per_field_per_measure": true,
+      "common_proper_time_intersection_required": true,
+      "comparator_method": "SSPRK3",
+      "comparator_point_counts": [
+        4097,
+        8193,
+        16385
+      ],
+      "declared_absolute_DFT_amplitude_floor": "1e-30",
+      "discriminator_module_sha256": "d8332ab5b6a3d3ba9db3a129e71a4147c88a3da5c89624914f2f9c757ac74595",
+      "exactly_64_uniform_aligned_samples_required": true,
+      "field_names": [
+        "alpha_minus_1",
+        "shift_over_r",
+        "lambda_minus_1",
+        "R_over_r_minus_1",
+        "phi_over_Lambda",
+        "chi_over_Lambda"
+      ],
+      "interpolation_contract": {
+        "alignment": "piecewise_linear_on_common_proper_time_intersection",
+        "arithmetic_and_interpolation_debits_remain_separate": true,
+        "coefficient_perturbation_bound": "E_k <= ||window||_1 delta",
+        "derivative_power_perturbation_bound": "sum omega_k^2 m_k (2 |F_k| E_k + E_k^2) / N^2",
+        "field_power_perturbation_bound": "sum m_k (2 |F_k| E_k + E_k^2) / N^2",
+        "round_trip_debit_is_not_claimed_as_continuum_interpolation_theorem": true,
+        "round_trip_debit_is_used_only_as_conditional_pointwise_perturbation_radius": true,
+        "round_trip_infinity_debit_is_public": true
+      },
+      "minimum_history_difference_order": "3/2",
+      "minimum_zero_power_order": "3",
+      "normalization_by_total_power_forbidden": true,
+      "nyquist_bin": 32,
+      "power_measures": [
+        "field_tail_power",
+        "derivative_tail_power"
+      ],
+      "primary_method": "RK4",
+      "primary_point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "sample_count": 64,
+      "taper_fraction": "1/8",
+      "top_band_bin_count": 5,
+      "top_band_first_bin": 28,
+      "tracer_count": 48,
+      "unresolved_top_fraction": "1/8"
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "873e13b5ce74624e2cbc096694eb1180b4dbc0a3",
+      "checkpoint_commit_is_ancestor_of_HEAD": true,
+      "source_checkpoint_history_arrays_loaded": false,
+      "source_checkpoint_present_and_hash_verified": true,
+      "source_checkpoint_resumed": false,
+      "source_checkpoint_sha256": "0432b266081b1ec1af3ac2a9efb99bcdd67dc8afef837241ec27fe5d37432f97",
+      "tracked_blob_sha256": {
+        "configs/fgc/fgc-1-tdg1-pref16.toml": "d598b9f59fc50dab23f05150cd6471ec66e28f36cddfe60438c8402bdf70a519",
+        "results/fgc-1-tdg1-pref16.json": "1713a05b6442461962253ec9abb84f50dd6c376e91e7e13447c4682256b0c3a6",
+        "scripts/reproduce_fgc_tdg1_pref16.py": "2fd21140147b8ddf326cc61fe4ecc29832cbad775a0af03a3854e40f4e209c00",
+        "src/recursive_horizons/fgc/evolution/tdg1_temporal_diagnosis.py": "3aaf100a8c9abb691978ac3ddf1f58210ed59107dc6018cf3f8b70c99de8ba44"
+      }
+    },
+    "mutation_controls": {
+      "GR0_eligibility_promotion_rejected": true,
+      "decimal_precision_mutation_rejected": true,
+      "interpolation_theorem_promotion_rejected": true,
+      "method_ladder_mutation_rejected": true,
+      "one_bit_signal_evidence_mutation_detected": true,
+      "raw_history_read_promotion_rejected": true,
+      "replacement_gate_promotion_rejected": true,
+      "source_hash_mutation_rejected": true,
+      "zero_power_order_mutation_rejected": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_frozen": false,
+      "SGBL_execution_authorized": false,
+      "TDG1_terminal_histories_diagnosed": true,
+      "TDG2_absolute_tail_discriminator_frozen": true,
+      "TDG2_actual_history_execution_authorized": true,
+      "TDG2_actual_history_execution_completed": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "replacement_temporal_admission_defined": false,
+      "replacement_temporal_gate_design_authorized": false
+    },
+    "synthetic_preflight": {
+      "actual_terminal_histories_consumed": false,
+      "all_control_classes_separated": true,
+      "controls": {
+        "exact_zero": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "expected_classification": "instrument_floor_or_interpolation_enclosure_dominated",
+          "field_difference_order_lower_bound": null,
+          "field_observed_powers": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "field_zero_power_order_lower_bounds": [
+            null,
+            null
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "instrument_floor_or_interpolation_enclosure_dominated",
+            "field_tail_power": "instrument_floor_or_interpolation_enclosure_dominated"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "interpolation_enclosure_dominated": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            9.286674523859959e-14,
+            3.276242551032648e-14,
+            3.372134481441613e-14
+          ],
+          "expected_classification": "instrument_floor_or_interpolation_enclosure_dominated",
+          "field_difference_order_lower_bound": null,
+          "field_observed_powers": [
+            4.339639717117489e-17,
+            1.5267522077249674e-17,
+            1.557741101904649e-17
+          ],
+          "field_zero_power_order_lower_bounds": [
+            null,
+            null
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "instrument_floor_or_interpolation_enclosure_dominated",
+            "field_tail_power": "instrument_floor_or_interpolation_enclosure_dominated"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            7.665471363228463e-09,
+            8.13617160733294e-09
+          ]
+        },
+        "nonzero_convergent": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            0.0013035485868115211,
+            0.0009418138539713241,
+            0.0008605457467622933
+          ],
+          "expected_classification": "converges_to_nonzero_resolved_power",
+          "field_difference_order_lower_bound": 2.1541709301277403,
+          "field_observed_powers": [
+            6.282024412266449e-07,
+            4.53876263786251e-07,
+            4.147117678410273e-07
+          ],
+          "field_zero_power_order_lower_bounds": [
+            0.46893050727404395,
+            0.130190056443769
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "converges_to_nonzero_resolved_power",
+            "field_tail_power": "converges_to_nonzero_resolved_power"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "nonzero_resolution_independent": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            0.0008342710955593735,
+            0.0008342710955593735,
+            0.0008342710955593735
+          ],
+          "expected_classification": "nonzero_resolution_independent_within_enclosure",
+          "field_difference_order_lower_bound": null,
+          "field_observed_powers": [
+            4.0204956238505274e-07,
+            4.0204956238505274e-07,
+            4.0204956238505274e-07
+          ],
+          "field_zero_power_order_lower_bounds": [
+            null,
+            null
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "nonzero_resolution_independent_within_enclosure",
+            "field_tail_power": "nonzero_resolution_independent_within_enclosure"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "power_contracts_to_zero": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            0.0008342710955593735,
+            1.303548586811521e-05,
+            2.0367946668930017e-07
+          ],
+          "expected_classification": "contracts_to_zero_at_required_power_order",
+          "field_difference_order_lower_bound": null,
+          "field_observed_powers": [
+            4.0204956238505274e-07,
+            6.282024412266449e-09,
+            9.815663144166327e-11
+          ],
+          "field_zero_power_order_lower_bounds": [
+            6.0,
+            6.0
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "contracts_to_zero_at_required_power_order",
+            "field_tail_power": "contracts_to_zero_at_required_power_order"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "subfloor_nonzero": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            8.342710955593735e-78,
+            8.342710955593735e-78,
+            8.342710955593735e-78
+          ],
+          "expected_classification": "instrument_floor_or_interpolation_enclosure_dominated",
+          "field_difference_order_lower_bound": null,
+          "field_observed_powers": [
+            4.020495623850527e-81,
+            4.020495623850527e-81,
+            4.020495623850527e-81
+          ],
+          "field_zero_power_order_lower_bounds": [
+            null,
+            null
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "instrument_floor_or_interpolation_enclosure_dominated",
+            "field_tail_power": "instrument_floor_or_interpolation_enclosure_dominated"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "unresolved_nonmonotone": {
+          "classification_is_not_a_replacement_admission": true,
+          "classification_matched": true,
+          "derivative_observed_powers": [
+            0.0008342710955593735,
+            0.00020856777388984337,
+            0.0004692774912521476
+          ],
+          "expected_classification": "unresolved_absolute_tail_behavior",
+          "field_difference_order_lower_bound": null,
+          "field_observed_powers": [
+            4.0204956238505274e-07,
+            1.0051239059626318e-07,
+            2.2615287884159217e-07
+          ],
+          "field_zero_power_order_lower_bounds": [
+            1.9999999999999993,
+            null
+          ],
+          "observed_classifications": {
+            "derivative_tail_power": "unresolved_absolute_tail_behavior",
+            "field_tail_power": "unresolved_absolute_tail_behavior"
+          },
+          "round_trip_interpolation_debits": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "mathematical_consequence": "absolute_unnormalized_tail_power_preserves_amplitude_convergence_and_separates_zero_nonzero_enclosure_and_unresolved_controls",
+      "replacement_temporal_admission_defined": false
+    }
+  },
+  "classification": "prospective_TDG2_absolute_tail_discriminator_freeze",
+  "derivation_document": "docs/fgc-tdg2-frz1.md",
+  "derivation_document_sha256": "0c0030ec93202641331836dee1d3263c9ebe2440cc378805254b4e25ef53839d",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG1_diagnostic_contract_frozen": true,
+    "TDG1_terminal_histories_diagnosed": true,
+    "TDG2_absolute_tail_discriminator_frozen": true,
+    "TDG2_actual_histories_diagnosed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "individual_temporal_budget_failure_cause_fully_derived": false,
+    "normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg2_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_tdg2_frz1.py": "2544cca6f4b4a0a541aade3d0dd4369636e5c163a798d28b7cad180e67adb46b",
+    "src/recursive_horizons/fgc/evolution/tdg2_absolute_tail_diagnosis.py": "d8332ab5b6a3d3ba9db3a129e71a4147c88a3da5c89624914f2f9c757ac74595"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_frozen": false,
+    "SGBL_execution_authorized": false,
+    "TDG2_actual_histories_diagnosed": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "individual_temporal_budget_failure_cause_fully_derived": false,
+    "normalized_raw_temporal_tail_ratio_is_valid_general_spatial_convergence_test": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_temporal_admission_defined": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg2-frz1.toml": "9b3472b54819109ba485f654ff5915c8d96c6fc2d9d14496d6db97985568a179"
+  }
+}

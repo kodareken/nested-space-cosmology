@@ -1,0 +1,25 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arxiv_metadata_prepared": false,
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-after-fourier.json": "acbbb33cd981848268843829c828cbe8ccec051364b58c1a335fbfd25083d453"
+  },
+  "manuscript_027_written": false,
+  "named_search_stall": "declared_wu_image_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "public_checkout_unused": true,
+  "public_paper_exists": true,
+  "public_release_027_cut": false,
+  "schema": "NSC-027-BLOCKED-AFTER-FOURIER-v1",
+  "scope": {
+    "metric_timestep": false,
+    "open_is_not_a_paper": true,
+    "open_is_not_done": true,
+    "public_checkout_not_edited_by_this_owner": true
+  },
+  "source_hashes": {
+    "docs/nsc-027-blocked-after-fourier.md": "b420110404cc179f3e81b7ac9435084d7f1b3a8486bbd090821bf04793dc1c0d",
+    "scripts/derive_nsc_027_blocked_after_fourier.py": "0cbb690f20b8c492cc30121ff65c904810869ffd3611788e086442e6c24220e0"
+  },
+  "status": "OPEN: 0.27.0, GitHub release and arXiv stay blocked"
+}

@@ -1,0 +1,121 @@
+{
+  "allocation_changed": false,
+  "allocation_total": 2e-11,
+  "components": {
+    "arithmetic": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "baseline_low_subgap": {
+      "allocation_per_component": 3e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "between_node": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "changed_history_UV_tail": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "covered_regions": {
+      "allocation_excess": [
+        7.916253820835393e-12,
+        0.0
+      ],
+      "allocation_per_component": 1e-12,
+      "bound": [
+        8.916253820835393e-12,
+        3.882373567206641e-18
+      ],
+      "evidence": {
+        "field": "partial_error_budget.covered_spectral_regions_action_error_upper",
+        "path": "results/development/nsc-incoming-source-update-v5.json",
+        "sha256": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d"
+      },
+      "scope": "only the unchanged V5 covered baseline spectral regions",
+      "status": "REUSE: bound exceeds provisional allocation"
+    },
+    "energy_interpolation": {
+      "allocation_per_component": 1e-12,
+      "bound": [
+        4.831544943811172e-26,
+        3.7840291005960114e-26
+      ],
+      "evidence": {
+        "field": "total_N_beta_interpolation_error_upper",
+        "path": "results/development/nsc-ks-difference-interpolation-d48-v3.json",
+        "sha256": "4a0f524c86a98c19c8ec1eaa57b15e3c303192f66f61ddf3e98dc87b86bc8268"
+      },
+      "exact_upper_evidence": [
+        {
+          "exponent": -241,
+          "mantissa": "170732020046352255259968496515477806790233676431"
+        },
+        {
+          "exponent": -243,
+          "mantissa": "534864056753924120233991382699230321686467122599"
+        }
+      ],
+      "status": "ENCLOSED: ideal difference interpolation, not node or arithmetic error"
+    },
+    "field_space_time": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "phase_value": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    },
+    "upstream": {
+      "allocation_per_component": 2e-12,
+      "bound": null,
+      "status": "OPEN: no verified bound for the current history"
+    }
+  },
+  "constraint_order": [
+    "N",
+    "beta"
+  ],
+  "degree": 48,
+  "full_error_sum": null,
+  "input_hashes": {
+    "results/development/nsc-ks-difference-interpolation-d48-v3.json": "4a0f524c86a98c19c8ec1eaa57b15e3c303192f66f61ddf3e98dc87b86bc8268",
+    "results/development/nsc-ks-gate-budget-v2.json": "ece433707ab2450ffc51f8559b2467542b89a485345107b23f2083ce81f02300"
+  },
+  "missing_components": [
+    "arithmetic",
+    "baseline_low_subgap",
+    "between_node",
+    "changed_history_UV_tail",
+    "field_space_time",
+    "phase_value",
+    "upstream"
+  ],
+  "named_gap": "field_source_and_continuous_residual_enclosures_missing",
+  "numerical_indicators_used_as_bounds": false,
+  "partial_known_error_sum": [
+    8.916253820835443e-12,
+    3.882373605046933e-18
+  ],
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_tolerance": 3e-11,
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "reference_mode": "direct-original-energies",
+  "residual_reserve": 1e-11,
+  "reuse_condition": "same baseline action/source and spectral region allocation; no transfer of background bounds to changed-history matter or upstream propagation",
+  "schema": "NSC-KS-GATE-ERROR-BUDGET-v3",
+  "source_hashes": {
+    "requirements-validation.txt": "f52f64eea410f540f2c325e55cfc2f609465094e9caec8533931345cee2a91e5",
+    "scripts/derive_nsc_ks_gate_budget_v3.py": "f18ccf8bf6d0b0ef6d073b98a7ac233336e72f0838c0d8c570e53a41b7d1f0f3",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7"
+  },
+  "status": "OPEN: baseline and ideal interpolation enclosed; seven components missing"
+}

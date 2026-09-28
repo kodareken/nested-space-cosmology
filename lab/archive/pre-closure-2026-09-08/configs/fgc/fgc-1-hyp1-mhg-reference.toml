@@ -1,0 +1,66 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-MHG2-REF1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+symbol_config = "configs/fgc/fgc-1-hyp1-symbol.toml"
+modified_harmonic_config = "configs/fgc/fgc-1-hyp1-modified-harmonic.toml"
+
+[reference]
+reference_id = "flat_spherical_annulus"
+coordinate_order = ["t", "r", "theta", "phi"]
+angular_evaluation = "theta=pi/2"
+radial_domain_minimum = "1/2"
+prescribed_gauge_source = "zero"
+center_included = false
+
+[formulation]
+physical_equations = "unredefined_ACT1_VAR1"
+gauge_constraint = "C^mu=-tilde_g^rho_sigma*(Gamma^mu_rho_sigma-bar_Gamma^mu_rho_sigma)"
+gauge_fixing = "F*hat_P_alpha^beta_mu_nu*nabla_beta_C^alpha"
+auxiliary_metric_family = "g_aux^mu_nu=g^mu_nu-(q-1)*n^mu*n^nu"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+normal_factor_order = "1<tilde<hat"
+field_order = ["h_tt", "h_tr", "h_rr", "areal_radius", "phi", "chi"]
+equation_order = ["metric_tt_mhg", "metric_tr_mhg", "metric_rr_mhg", "metric_theta_theta_mhg", "scalar_phi", "scalar_chi"]
+gauge_constraint_order = ["C^t", "C^r", "C^theta", "C^phi"]
+scalar_equations = "unmodified"
+equation_modification_on_gauge_surface = "none"
+
+[coordinate_radii]
+GR0_regular = "4"
+SGBL_constant_f = "5"
+FGCQR_schwarzschild_exterior = "8"
+FGCQR_activated_generic = "9/2"
+
+[proof_contract]
+fixture_ids = ["GR0_regular", "SGBL_constant_f", "FGCQR_schwarzschild_exterior", "FGCQR_activated_generic"]
+gauge_surface_fixture_ids = ["GR0_regular", "SGBL_constant_f"]
+off_gauge_fixture_ids = ["FGCQR_schwarzschild_exterior", "FGCQR_activated_generic"]
+require_positive_reference_annulus = true
+require_positive_effective_planck_coefficient = true
+require_exact_gauge_surface_extension_zero = true
+require_nonzero_off_gauge_extension = true
+require_exact_full_residual_decomposition = true
+require_unmodified_scalar_equations = true
+require_symmetric_spherical_extension = true
+require_exact_mhg1_principal_regression = true
+require_schwarzschild_unredefined_solution_control = true
+require_spherical_contravariant_gauge_components = true
+
+[open_gates]
+implicit_second_time_derivative_branch_proven = false
+complete_lower_order_first_order_sources_derived = false
+gauge_constraint_lower_order_propagation_proven = false
+reduction_constraint_propagation_proven = false
+uniform_open_domain_symmetrizer_proven = false
+open_retained_eft_domain_proven = false
+boundary_or_regular_center_system_derived = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+singularity_resolution_derived = false

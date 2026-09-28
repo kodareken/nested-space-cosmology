@@ -1,0 +1,137 @@
+schema_version = 1
+artifact_id = "FGC-1-RSP2-PREF14"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+runtime_authorization_result = "results/fgc-1-rsp2-frz1.json"
+run_plan_config = "configs/fgc/fgc-1-rsp2-run1.toml"
+predecessor_checkpoint = "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz"
+study_manifest = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/manifest.json"
+study_event_log = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/events.jsonl"
+study_checkpoint = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz"
+study_result = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/study-result.json"
+
+[scope]
+target_protocol = "FGC-1-RSP2-FRZ1"
+role = "post_run_checkpoint_recomputed_one_finer_grid_constraint_order_result"
+calibration_branch = "GR-0"
+amplitude = "3"
+method = "SSPRK3"
+GR0_numerical_trajectory_read = true
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+mechanism_question_answered = false
+
+[immutable_study]
+authorization_commit = "81412c1b6b86648a289e865d8ab40b9bbab26370"
+authorization_sha256 = "a6c147d7b369387e70318ee42eb56c97332702a227fd93d7ad20a1cfe2c1aa22"
+study_id = "a3a7b331d4fa72ff2e37fd674256a61b216c809539c7a0c4b154c76961355257"
+manifest_sha256 = "f547386ba7ccc8ddad7a264d24c66be1a6a601bef5ddad90ebb33ae9ddfcb52b"
+event_log_sha256 = "ca9168c36ae0592fc69d20bfb32f1b501100d162b50d500a2f6b9529cdac2937"
+checkpoint_sha256 = "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34"
+study_result_sha256 = "3f32fd18d85eac826a253b97d073608111dcb582bbb1a1aa0a7490c7e2f04bf6"
+event_log_line_count = 25
+event_log_byte_count = 15060
+accepted_boundary_count = 23
+terminal_classification = "completed_target_and_complete_constraint_pass"
+elapsed_wall_seconds = "8078.001129082986"
+
+[terminal_member]
+key = "SSPRK3-16385"
+point_count = 16385
+coordinate_time = "23/16"
+step_index = 1771
+transaction_serial = 7084
+accepted_stage_count = 7084
+source_retry_count = 0
+CFL_retry_count = 0
+state_sha256 = "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d"
+accumulated_characteristic_distance = "1.7250000000008527"
+remaining_boundary_margin = "86.26718749999915"
+
+[constraint_reduction]
+method = "SSPRK3"
+point_counts = [4097, 8193, 16385]
+accepted_stage_counts = [2524, 3948, 7084]
+state_sha256 = [
+  "ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162",
+  "c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c",
+  "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d",
+]
+coordinate_time = "23/16"
+fixed_outer_rows = 4
+coarsest_guard_maximum = "1/10"
+finest_guard_maximum = "1/200"
+target_component = "radial_momentum"
+minimum_finest_pair_order = "3/2"
+target_raw_owned_norms = ["0.0060603980047813765", "0.0021440219481765766", "0.000542836914675905"]
+target_accumulated_roundoff_enclosures = ["2.296474121976644e-9", "3.5915945773012936e-9", "6.4437699620611966e-9"]
+target_effective_norms_for_order_only = ["0.0060603957083072545", "0.0021440183565819993", "0.0005428304709059429"]
+target_adjacent_pair_orders = ["1.4990947384363291", "1.9817436463819333"]
+target_adjacent_pair_margins = ["-0.0009052615636708783", "0.48174364638193334"]
+minimum_finite_finest_pair_order = "1.8428133958883794"
+
+[constraint_reduction.component_finest_pair_orders]
+Hamiltonian = "2.1246424153634873"
+radial_momentum = "1.9817436463819333"
+gauge_t = "1.8516167425060845"
+gauge_r = "1.8428133958883794"
+
+[proof_contract]
+raw_bundle_must_match_all_four_frozen_hashes = true
+authorization_commit_must_precede_raw_namespace_creation = true
+manifest_must_bind_authorization_plan_implementation_and_commit = true
+event_log_must_be_canonical_initial_plus_23_boundaries_plus_terminal = true
+terminal_checkpoint_must_embed_the_exact_event_log = true
+terminal_checkpoint_result_must_equal_external_result = true
+terminal_checkpoint_must_restore_the_exact_16385_state_hash = true
+CAL9_checkpoint_must_restore_the_exact_4097_and_8193_state_hashes = true
+independent_constraint_reduction_must_not_call_the_runner_classifier = true
+both_adjacent_target_orders_must_be_reconstructed = true
+raw_norms_must_remain_unmodified = true
+roundoff_enclosures_may_be_subtracted_only_for_order_classification = true
+three_halves_threshold_must_remain_unchanged = true
+complete_constraint_admission_must_pass = true
+source_and_CFL_retry_counts_must_both_be_zero = true
+threshold_grid_time_component_claim_and_state_mutations_must_fail_closed = true
+target_pass_must_not_be_promoted_to_GR0_calibration_or_candidate_physics = true
+canonical_hash_bound_result_required = true
+
+[successor_boundary]
+PROTO13_design_may_begin = true
+PROTO13_frozen = false
+PROTO13_must_use_method_owned_resolution_ladders = true
+amplitude_three_is_the_only_prospectively_designated_calibration_case = true
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+DEF1_execution_authorized = false
+
+[claims]
+RSP2_study_terminated_normally = true
+RSP2_new_member_reached_endpoint = true
+RSP2_terminal_checkpoint_recomputed = true
+RSP2_source_retry_total_zero = true
+RSP2_CFL_retry_total_zero = true
+RSP2_outcome_read = true
+RSP2_target_order_cleared = true
+RSP2_complete_constraint_admission_passed = true
+RSP2_target_preasymptotic_on_tested_ladder = true
+RSP2_target_persistent_through_tested_ladder = false
+PROTO13_design_may_begin = true
+PROTO13_frozen = false
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+FGCQR_mechanism_rejected = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

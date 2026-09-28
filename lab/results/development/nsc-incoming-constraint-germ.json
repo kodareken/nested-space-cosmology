@@ -1,0 +1,525 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline_Jacobian_from_structure": [
+    [
+      0.05739927761912888,
+      0.0
+    ],
+    [
+      0.0,
+      16.575975622040477
+    ]
+  ],
+  "input_hashes": {
+    "results/development/nsc-incoming-joint-constraints.json": "490345b115bb7243c5af6665c86f68f4c980ab81da6b72cb94d08120aa5f659a",
+    "results/development/nsc-incoming-local-constraints.json": "a0c61be6ce7a03793e0b2afe091efcd8bb12d7ee35aa727800b66986d8617f1c",
+    "results/development/nsc-reference-band-bulk.json": "fdbe2110608002707e8b29af07164a0287d25fc2c887f360fa0a132944a06e68",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_local_constraints.py": "820f43cbc4849074210b7298b1b9ac0c43abf22cb2b4f127ec407a0fc2519ac3",
+    "src/recursive_horizons/nsc_incoming_reference_response.py": "1db8825d0840717c360a38685a016219000359e76a582f339913dc0d5a29ba12",
+    "src/recursive_horizons/nsc_light_restoration_action.py": "68b2d11ee79a1e1b1ba42eaa71354266fe26e0341e219771a5e5f67473c12bdc",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9"
+  },
+  "local_probe_records": {
+    "mixed": {
+      "Euler_bulk_identity_residual": 4.4342168012499045e-14,
+      "channel_action_gradients": {
+        "compact/einstein_bulk": [
+          0.06549637271281512,
+          0.013505565961090465
+        ],
+        "compact/euler_bulk_diagnostic": [
+          4.4342168012499045e-14,
+          4.236509146965384e-14
+        ],
+        "compact/maxwell_bulk": [
+          -0.4774938637543132,
+          -2.7242875737646214e-13
+        ],
+        "compact/weyl_bulk": [
+          -0.024676431884002818,
+          0.0006485620481754361
+        ],
+        "light/LLL_geometry_bar": [
+          0.0628550650882594,
+          -0.0003166230117033821
+        ],
+        "light/WZ_Euler": [
+          0.008890042731384155,
+          -7.872377039095703e-05
+        ],
+        "light/WZ_Weyl": [
+          -0.021118851606757763,
+          0.00025390285547290646
+        ],
+        "light/WZ_boxR": [
+          -0.00065251342903133,
+          3.5758065146350695e-05
+        ],
+        "light/WZ_gauge": [
+          -0.06207445712526545,
+          -7.192986682155805e-15
+        ],
+        "light/bar_radial_R2_squared": [
+          0.002669443261330874,
+          -5.649514265878476e-05
+        ],
+        "light/cylinder": [
+          -0.11778447111414544,
+          -4.6846465578812884e-14
+        ]
+      },
+      "channel_forces": {
+        "compact/einstein_bulk": [
+          -0.06549637271281512,
+          -0.013505565961090465
+        ],
+        "compact/euler_bulk_diagnostic": [
+          -4.4342168012499045e-14,
+          -4.236509146965384e-14
+        ],
+        "compact/maxwell_bulk": [
+          0.4774938637543132,
+          2.7242875737646214e-13
+        ],
+        "compact/weyl_bulk": [
+          0.024676431884002818,
+          -0.0006485620481754361
+        ],
+        "light/LLL_geometry_bar": [
+          -0.0628550650882594,
+          0.0003166230117033821
+        ],
+        "light/WZ_Euler": [
+          -0.008890042731384155,
+          7.872377039095703e-05
+        ],
+        "light/WZ_Weyl": [
+          0.021118851606757763,
+          -0.00025390285547290646
+        ],
+        "light/WZ_boxR": [
+          0.00065251342903133,
+          -3.5758065146350695e-05
+        ],
+        "light/WZ_gauge": [
+          0.06207445712526545,
+          7.192986682155805e-15
+        ],
+        "light/bar_radial_R2_squared": [
+          -0.002669443261330874,
+          5.649514265878476e-05
+        ],
+        "light/cylinder": [
+          0.11778447111414544,
+          4.6846465578812884e-14
+        ]
+      },
+      "channel_numerical_indicators": {
+        "compact/einstein_bulk": [
+          2.422875149138555e-12,
+          1.8318897147050305e-12
+        ],
+        "compact/euler_bulk_diagnostic": [
+          1.3480420696351542e-13,
+          9.655794698190981e-14
+        ],
+        "compact/maxwell_bulk": [
+          3.7760359263341723e-13,
+          3.781573894802559e-13
+        ],
+        "compact/weyl_bulk": [
+          7.499561362679425e-14,
+          3.7958712835932717e-14
+        ],
+        "light/LLL_geometry_bar": [
+          8.111614630570658e-14,
+          8.008717641032495e-14
+        ],
+        "light/WZ_Euler": [
+          2.2414664986116757e-14,
+          4.393837724214755e-15
+        ],
+        "light/WZ_Weyl": [
+          4.956229918179734e-14,
+          8.946521189293172e-15
+        ],
+        "light/WZ_boxR": [
+          1.9498798098799086e-14,
+          8.050745865201167e-15
+        ],
+        "light/WZ_gauge": [
+          4.7462926035028186e-14,
+          4.7495972993335083e-14
+        ],
+        "light/bar_radial_R2_squared": [
+          2.7019493721296503e-14,
+          1.0926533768963241e-14
+        ],
+        "light/cylinder": [
+          9.141988377267125e-14,
+          9.156628443153315e-14
+        ]
+      },
+      "compact_action_gradient": [
+        -0.4366739229255009,
+        0.014154128008993473
+      ],
+      "constraint_order": [
+        "N",
+        "beta"
+      ],
+      "differentiation": {
+        "coordinate_radius": 0.03125,
+        "dtype": "complex128",
+        "jet_radius": 0.015625,
+        "refined_samples": 16,
+        "samples": 12
+      },
+      "light_action_gradient": [
+        -0.12721574219422555,
+        -0.00016218100418790616
+      ],
+      "local_action_gradient": [
+        -0.5638896651197265,
+        0.013991947004805567
+      ],
+      "local_force": [
+        0.5638896651197265,
+        -0.013991947004805567
+      ],
+      "maximum_numerical_indicator": 2.422875149138555e-12,
+      "numerical_tolerance": 3e-11,
+      "numerically_resolved": true,
+      "scope": {
+        "boundary": "Euler and constant BoxR have no bulk force; endpoint variations remain separate",
+        "compact_action_included_once": true,
+        "constraint_roots_or_four_metric_equations_solved": false,
+        "endpoint_forces_evaluated": false,
+        "light_geometry_included_once": true,
+        "local_lapse_shift_forces_evaluated": true,
+        "normalization": "delta S = integral dT dz sum_B E_B delta B; local_force=-E_B",
+        "physical_history_or_normal_data_selected": false,
+        "physical_state_reference_or_band_included": false
+      }
+    },
+    "u": {
+      "Euler_bulk_identity_residual": 7.395334139743865e-14,
+      "channel_action_gradients": {
+        "compact/einstein_bulk": [
+          0.06549637271101218,
+          5.685682920450542e-14
+        ],
+        "compact/euler_bulk_diagnostic": [
+          -4.862948695642432e-14,
+          -7.395334139743865e-14
+        ],
+        "compact/maxwell_bulk": [
+          -0.4774938637542873,
+          -2.4653852166324796e-13
+        ],
+        "compact/weyl_bulk": [
+          -0.02427472469676399,
+          1.8578966682629458e-14
+        ],
+        "light/LLL_geometry_bar": [
+          0.06285506508829064,
+          2.5811755681706608e-14
+        ],
+        "light/WZ_Euler": [
+          0.008890042731382301,
+          -7.563256785140493e-16
+        ],
+        "light/WZ_Weyl": [
+          -0.02106662945802479,
+          1.0684569218041803e-15
+        ],
+        "light/WZ_boxR": [
+          -0.000630935021238374,
+          -1.0044735264070396e-18
+        ],
+        "light/WZ_gauge": [
+          -0.06207445712524123,
+          1.702632803261369e-14
+        ],
+        "light/bar_radial_R2_squared": [
+          0.0026344512279367293,
+          -2.0387125183937473e-15
+        ],
+        "light/cylinder": [
+          -0.11778447111408388,
+          1.4712095846761146e-14
+        ]
+      },
+      "channel_forces": {
+        "compact/einstein_bulk": [
+          -0.06549637271101218,
+          -5.685682920450542e-14
+        ],
+        "compact/euler_bulk_diagnostic": [
+          4.862948695642432e-14,
+          7.395334139743865e-14
+        ],
+        "compact/maxwell_bulk": [
+          0.4774938637542873,
+          2.4653852166324796e-13
+        ],
+        "compact/weyl_bulk": [
+          0.02427472469676399,
+          -1.8578966682629458e-14
+        ],
+        "light/LLL_geometry_bar": [
+          -0.06285506508829064,
+          -2.5811755681706608e-14
+        ],
+        "light/WZ_Euler": [
+          -0.008890042731382301,
+          7.563256785140493e-16
+        ],
+        "light/WZ_Weyl": [
+          0.02106662945802479,
+          -1.0684569218041803e-15
+        ],
+        "light/WZ_boxR": [
+          0.000630935021238374,
+          1.0044735264070396e-18
+        ],
+        "light/WZ_gauge": [
+          0.06207445712524123,
+          -1.702632803261369e-14
+        ],
+        "light/bar_radial_R2_squared": [
+          -0.0026344512279367293,
+          2.0387125183937473e-15
+        ],
+        "light/cylinder": [
+          0.11778447111408388,
+          -1.4712095846761146e-14
+        ]
+      },
+      "channel_numerical_indicators": {
+        "compact/einstein_bulk": [
+          1.0002374764264893e-12,
+          6.226057271895869e-13
+        ],
+        "compact/euler_bulk_diagnostic": [
+          3.8907827340406703e-14,
+          4.8244469289936455e-14
+        ],
+        "compact/maxwell_bulk": [
+          3.7137230116690166e-13,
+          3.7203843498167675e-13
+        ],
+        "compact/weyl_bulk": [
+          1.4319341690330888e-13,
+          3.1759317398183384e-14
+        ],
+        "light/LLL_geometry_bar": [
+          9.88836159045103e-14,
+          9.903809150866167e-14
+        ],
+        "light/WZ_Euler": [
+          1.0229963299694185e-14,
+          6.1360695175740496e-15
+        ],
+        "light/WZ_Weyl": [
+          1.471913725193015e-14,
+          1.0019272097885538e-14
+        ],
+        "light/WZ_boxR": [
+          8.616620343067604e-15,
+          8.243211035739862e-15
+        ],
+        "light/WZ_gauge": [
+          5.4705755582028356e-14,
+          5.473512034713694e-14
+        ],
+        "light/bar_radial_R2_squared": [
+          5.514309620218873e-15,
+          4.447830992404533e-15
+        ],
+        "light/cylinder": [
+          7.886521709180856e-14,
+          7.890632781304093e-14
+        ]
+      },
+      "compact_action_gradient": [
+        -0.43627221574003916,
+        -1.7110272577611307e-13
+      ],
+      "constraint_order": [
+        "N",
+        "beta"
+      ],
+      "differentiation": {
+        "coordinate_radius": 0.03125,
+        "dtype": "complex128",
+        "jet_radius": 0.015625,
+        "refined_samples": 16,
+        "samples": 12
+      },
+      "light_action_gradient": [
+        -0.1271769336709786,
+        5.5822593812451414e-14
+      ],
+      "local_action_gradient": [
+        -0.5634491494110178,
+        -1.1528013196366165e-13
+      ],
+      "local_force": [
+        0.5634491494110178,
+        1.1528013196366165e-13
+      ],
+      "maximum_numerical_indicator": 1.0002374764264893e-12,
+      "numerical_tolerance": 3e-11,
+      "numerically_resolved": true,
+      "scope": {
+        "boundary": "Euler and constant BoxR have no bulk force; endpoint variations remain separate",
+        "compact_action_included_once": true,
+        "constraint_roots_or_four_metric_equations_solved": false,
+        "endpoint_forces_evaluated": false,
+        "light_geometry_included_once": true,
+        "local_lapse_shift_forces_evaluated": true,
+        "normalization": "delta S = integral dT dz sum_B E_B delta B; local_force=-E_B",
+        "physical_history_or_normal_data_selected": false,
+        "physical_state_reference_or_band_included": false
+      }
+    }
+  },
+  "mixed_control_prediction": [
+    0.0011507654510155131,
+    -0.08287987811020239
+  ],
+  "mixed_control_residual": [
+    1.0164948310159572e-12,
+    -2.639000129533997e-13
+  ],
+  "mixed_control_response": [
+    0.001150765452032008,
+    -0.08287987811046629
+  ],
+  "numerical_Jacobian_determinant": 0.9514490265374139,
+  "numerical_coefficients": {
+    "c_u": 0.05739927761912888,
+    "c_v": 16.575975622040477,
+    "c_v2": 0.11119594531750897
+  },
+  "numerical_tolerance": 3e-11,
+  "payload": {
+    "path": "results/development/artifacts/nsc-incoming-constraint-germ.7c9600576f9453d85868371b8a0bf37680f011d364337460591c824c1277c02a.json",
+    "sha256": "7c9600576f9453d85868371b8a0bf37680f011d364337460591c824c1277c02a"
+  },
+  "rank_evidence": "two numerically resolved independent action responses; not an interval nonsingularity certificate",
+  "reference_integrability": {
+    "Delta_P0_and_P1": "0",
+    "first_changed_order": 2,
+    "fixed_grade0_and_grade1_metric_data": true,
+    "insertion_tail": "O(abs(k)^-2)",
+    "inventory": "same finite retained33 groups; exact LLL fixed nonzero-k charts",
+    "owner": "results/development/nsc-reference-band-bulk.json",
+    "raw_vertices": "O(abs(k))",
+    "reference_difference": "O(abs(k)^-3)"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_constraint_germ.py --check",
+  "residuals": {
+    "first_reference_order_unchanged": 0.0,
+    "homogeneous_shift_zero_identity": 2.784845208047804e-13,
+    "independent_mixed_control": 1.0164948310159572e-12,
+    "local_Euler_identity": 7.395334139743865e-14,
+    "local_resolution_indicator": 2.422875149138555e-12,
+    "normal_slot_roundoff": 4.683753385137379e-17,
+    "reference16_24_difference": 1.0625181290357943e-17,
+    "reference_node_replay": 8.673617379884035e-19
+  },
+  "schema": "NSC-INCOMING-CONSTRAINT-GERM-v1",
+  "scope": {
+    "Cauchy_surface_constraints_solved": false,
+    "Gamma_rest_assigned": false,
+    "extended_stationarity": "OPEN",
+    "matter_source_cancels_in_response_difference": true,
+    "metric_evolution": false,
+    "numerical_root_selected": false,
+    "parent_preparation_or_endpoint_completed": false,
+    "physical_initial_data_selected": false,
+    "physical_state_or_couplings_refit": false,
+    "source_accuracy_certified": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-constraint-germ.md": "c2e8c6c9f8b0b9eb92c3bf485955cf2cdda15dc306a509870c73114a57736d03",
+    "scripts/derive_nsc_incoming_constraint_germ.py": "be2e9327cc9cdb46cc5e4069093983838693b4bb7e692c6504ef373f3881896b",
+    "src/recursive_horizons/nsc_incoming_constraint_germ.py": "b5b3c84fe6989408fd30d91ad22277dcd56f9284c1612000223456c0c248fd47",
+    "tests/test_nsc_incoming_constraint_germ.py": "24daae98ed734ab517ea8d08b68510086e2704c084fbdd26bdcba3c417c14000"
+  },
+  "status": "PASS: structural plane and numerically independent responses; physical root OPEN",
+  "structure": {
+    "allowed_lapse_monomials": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "allowed_shift_response_monomials": [
+      [
+        0,
+        1
+      ]
+    ],
+    "coefficients_are_action_responses_not_adjustable_couplings": true,
+    "conditional_relation": {
+      "requires": [
+        "c_u != 0",
+        "c_v != 0",
+        "finite retained source and reference insertion"
+      ],
+      "substitution_residuals": [
+        "0",
+        "0"
+      ],
+      "u": "-(S_N+c_v2*v^2)/c_u",
+      "v": "-S_beta/c_v"
+    },
+    "constraint_form": {
+      "N": "S_N+c_u*u+c_v2*v^2",
+      "beta": "S_beta+c_v*v"
+    },
+    "derivative_grades": {
+      "u": 3,
+      "v": 2
+    },
+    "physical_initial_data_or_surface_solution": false,
+    "reflection": {
+      "Hamiltonian_residual": "0",
+      "coordinates": "z -> -z; k -> -k; ell -> -ell; beta -> -beta",
+      "matrix": "sigma1",
+      "state_enters_fixed_constants": true,
+      "state_reflection_required": false,
+      "vertex_residuals": [
+        "0",
+        "0"
+      ]
+    },
+    "retained_maximum_grade": 4,
+    "variables": {
+      "u": "delta r_TTT",
+      "v": "delta r_Tz"
+    }
+  },
+  "u_probe_response": [
+    0.0005739927761912861,
+    2.784845208047804e-13
+  ],
+  "v_probe_response": [
+    1.1119594531750897e-05,
+    0.16575975622040479
+  ]
+}

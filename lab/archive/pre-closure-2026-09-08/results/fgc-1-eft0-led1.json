@@ -1,0 +1,462 @@
+{
+  "artifact_id": "FGC-1-EFT0-LED1",
+  "artifact_label": "FGC-1 conditional local retained-EFT declaration and component-box ledger",
+  "classification": "conditional_declared_local_power_counting_ledger_not_an_eft_validity_certificate",
+  "conditional_local_ledger_certificate": {
+    "action_parameters": {
+      "M_Pl": "2",
+      "beta": "-1/4",
+      "eta": "1/2",
+      "g4": "1/2",
+      "mu": "3"
+    },
+    "artifact_id": "FGC-1-EFT0-LED1",
+    "classification": "conditional_declared_local_retained_eft_ledger_only",
+    "component_box": {
+      "F_lower": "1099511627767/274877906944",
+      "F_lower_over_M_Pl_squared": "1099511627767/1099511627776",
+      "full_jet_box": false,
+      "phi_absolute_upper": "3/262144",
+      "phi_center": "1/131072",
+      "phi_half_width": "1/262144",
+      "phi_radial_derivative_absolute_upper": "3/262144",
+      "phi_radial_derivative_center": "1/131072",
+      "phi_radial_derivative_half_width": "1/262144",
+      "source_artifact": "FGC-1-HYP1-CON1-COMP1"
+    },
+    "cutoff": {
+      "Lambda": "16",
+      "external_assumption": true,
+      "inferred_from_fixture": false,
+      "origin": "externally_assumed_reference_scale_for_this_local_ledger"
+    },
+    "exact_arithmetic": true,
+    "frequency_control": {
+      "available": false,
+      "reason": "a finite local component/jet box does not bound proper frequency or Fourier support"
+    },
+    "local_controls": {
+      "F_over_Mpl_squared_lower": {
+        "comparison": "greater_than",
+        "passes": true,
+        "strict_lower_bound": "99/100",
+        "value": "1099511627767/1099511627776"
+      },
+      "epsilon_F": {
+        "comparison": "less_than",
+        "passes": true,
+        "strict_upper_bound": "1/100",
+        "value": "9/1099511627776"
+      },
+      "epsilon_eta_phi2": {
+        "comparison": "less_than",
+        "passes": true,
+        "strict_upper_bound": "1/100",
+        "value": "9/137438953472"
+      },
+      "epsilon_phi_amplitude": {
+        "comparison": "less_than",
+        "passes": true,
+        "strict_upper_bound": "1/100",
+        "value": "3/4194304"
+      }
+    },
+    "nonclaims": {
+      "collapse": false,
+      "complete_wilsonian_basis": false,
+      "defocusing": false,
+      "evolution": false,
+      "frequency_control": false,
+      "global_or_open_eft_validity": false,
+      "initial_data": false,
+      "radiative_stability": false,
+      "singularity_resolution": false,
+      "uv_completion": false,
+      "wilson_coefficients_predicted": false
+    },
+    "operator_basis": {
+      "complete_wilsonian_basis": false,
+      "representative_omitted_operators": [
+        {
+          "basis_scope": "representative_only",
+          "canonical_dimension": "8",
+          "coefficient": "c_phi4/Lambda^4",
+          "coefficient_dimension": "-4",
+          "id": "x_phi_squared",
+          "operator": "X_phi^2",
+          "status": "omitted_representative_only",
+          "suppression_power": "4",
+          "wilson_bound": "1"
+        },
+        {
+          "basis_scope": "representative_only",
+          "canonical_dimension": "8",
+          "coefficient": "c_chi4/Lambda^4",
+          "coefficient_dimension": "-4",
+          "id": "x_chi_squared",
+          "operator": "X_chi^2",
+          "status": "omitted_representative_only",
+          "suppression_power": "4",
+          "wilson_bound": "1"
+        },
+        {
+          "basis_scope": "representative_only",
+          "canonical_dimension": "8",
+          "coefficient": "c_phi_chi/Lambda^4",
+          "coefficient_dimension": "-4",
+          "id": "x_phi_x_chi",
+          "operator": "X_phi X_chi",
+          "status": "omitted_representative_only",
+          "suppression_power": "4",
+          "wilson_bound": "1"
+        },
+        {
+          "basis_scope": "representative_only",
+          "canonical_dimension": "6",
+          "coefficient": "c_phi6/Lambda^2",
+          "coefficient_dimension": "-2",
+          "id": "phi6",
+          "operator": "phi^6",
+          "status": "omitted_representative_only",
+          "suppression_power": "2",
+          "wilson_bound": "1"
+        }
+      ],
+      "representative_omitted_remainders_locally_evaluated": false,
+      "representative_omitted_remainders_reason": "the component-only box lacks the covariant derivative, curvature, and frequency data needed for omitted-operator remainder bounds",
+      "retained_operators": [
+        {
+          "canonical_dimension": "2",
+          "coefficient": "M_Pl^2/2",
+          "coefficient_dimension": "2",
+          "id": "einstein_hilbert",
+          "operator": "R",
+          "parameter_references": [
+            "M_Pl"
+          ],
+          "status": "retained"
+        },
+        {
+          "canonical_dimension": "4",
+          "coefficient": "beta/2",
+          "coefficient_dimension": "0",
+          "id": "phi2_ricci",
+          "operator": "phi^2 R",
+          "parameter_references": [
+            "beta"
+          ],
+          "status": "retained"
+        },
+        {
+          "canonical_dimension": "4",
+          "coefficient": "-1/2",
+          "coefficient_dimension": "0",
+          "id": "phi_kinetic",
+          "operator": "(nabla phi)^2",
+          "parameter_references": [],
+          "status": "retained"
+        },
+        {
+          "canonical_dimension": "4",
+          "coefficient": "-1/2",
+          "coefficient_dimension": "0",
+          "id": "chi_kinetic",
+          "operator": "(nabla chi)^2",
+          "parameter_references": [],
+          "status": "retained"
+        },
+        {
+          "canonical_dimension": "2",
+          "coefficient": "-mu^2/2",
+          "coefficient_dimension": "2",
+          "id": "phi_mass",
+          "operator": "phi^2",
+          "parameter_references": [
+            "mu"
+          ],
+          "status": "retained"
+        },
+        {
+          "canonical_dimension": "4",
+          "coefficient": "-g4/4",
+          "coefficient_dimension": "0",
+          "id": "phi_quartic",
+          "operator": "phi^4",
+          "parameter_references": [
+            "g4"
+          ],
+          "status": "retained"
+        },
+        {
+          "canonical_dimension": "6",
+          "coefficient": "eta/8",
+          "coefficient_dimension": "-2",
+          "id": "phi2_gauss_bonnet",
+          "operator": "phi^2 G",
+          "parameter_references": [
+            "eta"
+          ],
+          "status": "retained"
+        }
+      ],
+      "scope": "representative_only"
+    },
+    "retained_eft_validity": false
+  },
+  "conditional_local_ledger_certificate_sha256": "ca6d912eb177cfffa10ec79cde53e534f99deac7eb16258be39dd8447adbfac5",
+  "configuration": {
+    "artifact_id": "FGC-1-EFT0-LED1",
+    "claims": {
+      "collapse": false,
+      "complete_wilsonian_basis": false,
+      "defocusing": false,
+      "evolution": false,
+      "frequency_control": false,
+      "global_or_open_eft_validity": false,
+      "initial_data": false,
+      "radiative_stability": false,
+      "retained_eft_validity": false,
+      "singularity_resolution": false,
+      "uv_completion": false,
+      "wilson_coefficients_predicted": false
+    },
+    "controls": [
+      {
+        "comparison": "greater_than",
+        "computable_on_component_box": true,
+        "definition": "[M_Pl^2-|beta|(|phi_center|+phi_half_width)^2]/M_Pl^2",
+        "id": "F_over_Mpl_squared_lower",
+        "strict_lower_bound": "99/100"
+      },
+      {
+        "comparison": "less_than",
+        "computable_on_component_box": true,
+        "definition": "|beta|(|phi_center|+phi_half_width)^2/M_Pl^2",
+        "id": "epsilon_F",
+        "strict_upper_bound": "1/100"
+      },
+      {
+        "comparison": "less_than",
+        "computable_on_component_box": true,
+        "definition": "eta(|phi_center|+phi_half_width)^2",
+        "id": "epsilon_eta_phi2",
+        "strict_upper_bound": "1/100"
+      },
+      {
+        "comparison": "less_than",
+        "computable_on_component_box": true,
+        "definition": "(|phi_center|+phi_half_width)/Lambda under the declared field-amplitude power-counting assumption",
+        "id": "epsilon_phi_amplitude",
+        "strict_upper_bound": "1/100"
+      }
+    ],
+    "cutoff": {
+      "Lambda": "16",
+      "external_assumption": true,
+      "inferred_from_fixture": false,
+      "origin": "externally_assumed_reference_scale_for_this_local_ledger"
+    },
+    "frame": "Jordan frame; physical metric g_ab; signature -+++",
+    "local_comp1_centered_component_box": {
+      "coordinate_radius": "4",
+      "frequency_bound_available": false,
+      "full_jet_box": false,
+      "phi_center": "1/131072",
+      "phi_half_width": "1/262144",
+      "phi_radial_derivative_center": "1/131072",
+      "phi_radial_derivative_half_width": "1/262144",
+      "qift1_parameter_half_width": "1/65536",
+      "qift1_source_artifact": "FGC-1-HYP1-DOM1-QIFT1",
+      "source_artifact": "FGC-1-HYP1-CON1-COMP1"
+    },
+    "model": {
+      "beta": "-1/4",
+      "eta": "1/2",
+      "fixture_values_are_not_cutoff": true,
+      "g4": "1/2",
+      "id": "FGC-QR",
+      "mu": "3",
+      "planck_mass": "2"
+    },
+    "omitted_operators": [
+      {
+        "basis_scope": "representative_only",
+        "canonical_dimension": "8",
+        "coefficient": "c_phi4/Lambda^4",
+        "coefficient_dimension": "-4",
+        "id": "x_phi_squared",
+        "operator": "X_phi^2",
+        "status": "omitted_representative_only",
+        "suppression_power": "4",
+        "wilson_bound": "1"
+      },
+      {
+        "basis_scope": "representative_only",
+        "canonical_dimension": "8",
+        "coefficient": "c_chi4/Lambda^4",
+        "coefficient_dimension": "-4",
+        "id": "x_chi_squared",
+        "operator": "X_chi^2",
+        "status": "omitted_representative_only",
+        "suppression_power": "4",
+        "wilson_bound": "1"
+      },
+      {
+        "basis_scope": "representative_only",
+        "canonical_dimension": "8",
+        "coefficient": "c_phi_chi/Lambda^4",
+        "coefficient_dimension": "-4",
+        "id": "x_phi_x_chi",
+        "operator": "X_phi X_chi",
+        "status": "omitted_representative_only",
+        "suppression_power": "4",
+        "wilson_bound": "1"
+      },
+      {
+        "basis_scope": "representative_only",
+        "canonical_dimension": "6",
+        "coefficient": "c_phi6/Lambda^2",
+        "coefficient_dimension": "-2",
+        "id": "phi6",
+        "operator": "phi^6",
+        "status": "omitted_representative_only",
+        "suppression_power": "2",
+        "wilson_bound": "1"
+      }
+    ],
+    "operator_basis": {
+      "basis_scope": "representative_only",
+      "chi_symmetry": "chi_shift_symmetry",
+      "complete_wilsonian_basis": false,
+      "field_redefinition_convention": "declared Jordan-frame local basis modulo integrations by parts and total derivatives only; no completeness claim",
+      "phi_symmetry": "phi_Z2"
+    },
+    "project_version": "0.11.0",
+    "retained_operators": [
+      {
+        "canonical_dimension": "2",
+        "coefficient": "M_Pl^2/2",
+        "coefficient_dimension": "2",
+        "id": "einstein_hilbert",
+        "operator": "R",
+        "parameter_references": [
+          "M_Pl"
+        ],
+        "status": "retained"
+      },
+      {
+        "canonical_dimension": "4",
+        "coefficient": "beta/2",
+        "coefficient_dimension": "0",
+        "id": "phi2_ricci",
+        "operator": "phi^2 R",
+        "parameter_references": [
+          "beta"
+        ],
+        "status": "retained"
+      },
+      {
+        "canonical_dimension": "4",
+        "coefficient": "-1/2",
+        "coefficient_dimension": "0",
+        "id": "phi_kinetic",
+        "operator": "(nabla phi)^2",
+        "parameter_references": [],
+        "status": "retained"
+      },
+      {
+        "canonical_dimension": "4",
+        "coefficient": "-1/2",
+        "coefficient_dimension": "0",
+        "id": "chi_kinetic",
+        "operator": "(nabla chi)^2",
+        "parameter_references": [],
+        "status": "retained"
+      },
+      {
+        "canonical_dimension": "2",
+        "coefficient": "-mu^2/2",
+        "coefficient_dimension": "2",
+        "id": "phi_mass",
+        "operator": "phi^2",
+        "parameter_references": [
+          "mu"
+        ],
+        "status": "retained"
+      },
+      {
+        "canonical_dimension": "4",
+        "coefficient": "-g4/4",
+        "coefficient_dimension": "0",
+        "id": "phi_quartic",
+        "operator": "phi^4",
+        "parameter_references": [
+          "g4"
+        ],
+        "status": "retained"
+      },
+      {
+        "canonical_dimension": "6",
+        "coefficient": "eta/8",
+        "coefficient_dimension": "-2",
+        "id": "phi2_gauss_bonnet",
+        "operator": "phi^2 G",
+        "parameter_references": [
+          "eta"
+        ],
+        "status": "retained"
+      }
+    ],
+    "schema_version": 1,
+    "units": "c=hbar=1; four spacetime dimensions"
+  },
+  "derivation_document": "docs/fgc-eft0-led1.md",
+  "derivation_document_sha256": "c3e2f63095bc8522dc697b2984534bea6ab2d415c0388eaee3a8f7154091c27c",
+  "development_status": "exact_local_component_controls_passed_under_external_cutoff_and_representative_wilson_assumptions_global_eft_validity_open",
+  "gate_status": {
+    "conditional_declared_local_component_controls_passed": true,
+    "frequency_or_covariant_derivative_norm_control_passed": false,
+    "global_or_open_eft_validity_passed": false,
+    "initial_data_or_evolution_authorized": false,
+    "representative_omitted_remainder_bounds_passed": false,
+    "retained_eft_validity_envelope_passed": false
+  },
+  "generated_by": "scripts/reproduce_fgc_eft0_led1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_eft0_led1.py": "a6d5bc0ae9874df683dbbe216f2a4f3050219d6b5160a8e249cad4567e14f6fe",
+    "src/recursive_horizons/fgc/eft_ledger.py": "78c78874f0ac68c845e27e78a8401d8eaf2e4382951b7aff03e34feda2f48df3"
+  },
+  "nonclaims": {
+    "collapse": false,
+    "complete_wilsonian_basis": false,
+    "defocusing": false,
+    "evolution": false,
+    "frequency_control": false,
+    "global_or_open_eft_validity": false,
+    "initial_data": false,
+    "radiative_stability": false,
+    "singularity_resolution": false,
+    "uv_completion": false,
+    "wilson_coefficients_predicted": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-eft0-led1.toml": "78e9d81b1e5b221f29cfb8f2230897a890faa839e11453cda050c18c1aa0c9fe",
+    "configs/fgc/fgc-1-hyp1-con1-comp1.toml": "3b52649856dc37d12da912846a0739216e183114d01a14b4b3fa1cea6ce41291"
+  },
+  "source_configs": {
+    "act1_action_predecessor": "configs/fgc/fgc-1-action-gate.toml",
+    "comp1_predecessor": "configs/fgc/fgc-1-hyp1-con1-comp1.toml",
+    "eft0_ledger": "configs/fgc/fgc-1-eft0-led1.toml"
+  },
+  "source_results": {
+    "act1_action_predecessor": "results/fgc-1-action-gate.json",
+    "comp1_predecessor": "results/fgc-1-hyp1-con1-comp1.json"
+  },
+  "source_results_sha256": {
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-hyp1-con1-comp1.json": "8bdf33ed4480b171955628f266af413752f69b61019911b3216bfc847a493680"
+  }
+}

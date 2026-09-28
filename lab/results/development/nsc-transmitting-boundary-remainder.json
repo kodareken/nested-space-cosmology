@@ -1,0 +1,135 @@
+{
+  "comparison": {
+    "exact": "types, keys, strings, integers, booleans, nulls and hashes",
+    "exceptions": [],
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "endpoint_basis": {
+    "derivative_kind": "discrete action gradient, not a continuum boundary momentum",
+    "fields": [
+      "N",
+      "beta",
+      "q_ADM",
+      "r"
+    ],
+    "history": "33-node subsample of authenticated endpoint_control_duration_0.5",
+    "history_nodes": 33,
+    "id": "KS-local-nodal-endpoints:b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+    "local_fields": [
+      "lapse",
+      "beta",
+      "q_ADM",
+      "r"
+    ],
+    "node_indices": [
+      0,
+      32
+    ],
+    "orientation": "increasing stored time; signs already included in dS/dg",
+    "physical_history": false,
+    "units": "dimensionless recorded action per unit homogeneous axial coordinate; derivatives with respect to raw metric nodes"
+  },
+  "existing_EndpointBranchJets_used": true,
+  "full_physical_jets": null,
+  "input_hashes": {
+    "results/development/nsc-extended-action-completion-gate.json": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464",
+    "results/development/nsc-landau-cauchy-isometry.json": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-transmitting-ctp-variation.json": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3",
+    "results/development/nsc-weyl-endpoint-match.json": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_landau_cauchy_isometry.py": "c03e5eb46c8be3078087b5f6be768c0045d350f68ff2d457eafd1c0987baac00",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602"
+  },
+  "locked_extraction_residual": {
+    "maximum_absolute": 0.0,
+    "status": "PASS",
+    "tolerance": 0.0
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "locked_local_components": {
+    "N": [
+      -1.6709564486074024,
+      -1.7122278287564878
+    ],
+    "beta": [
+      0.0,
+      0.0
+    ],
+    "q_ADM": [
+      -43.58985597013112,
+      45.868233687373596
+    ],
+    "r": [
+      83.87051420812537,
+      -93.54264532195464
+    ]
+  },
+  "normal_jet_and_boundary_allocation": {
+    "available": false,
+    "components": {
+      "N": [
+        null,
+        null
+      ],
+      "beta": [
+        null,
+        null
+      ],
+      "q_ADM": [
+        null,
+        null
+      ],
+      "r": [
+        null,
+        null
+      ]
+    },
+    "reason": "the existing nodal schema varies metric values, not independently specified normal derivatives; a boundary-jet decomposition and its admissible variations are not supplied"
+  },
+  "partial_bulk_contraction": {
+    "record": "nsc-dirac-endpoint-jets.json",
+    "status": "diagnostic derivative only; not an allocated transmitting boundary term"
+  },
+  "physical_boundary_remainder": null,
+  "preserved_Weyl_value": 93.54264532195464,
+  "reason": "neither a transmitting boundary action density nor its endpoint/normal-jet variation is supplied; the bulk control cannot cancel the Weyl vector",
+  "schema": "NSC-TRANSMITTING-BOUNDARY-REMAINDER-v1",
+  "scope": {
+    "finite_stress_fabricated": false,
+    "metric_timestep_started": false,
+    "new_physical_term": false,
+    "old_generator_rerun": false,
+    "parameters_refitted": false,
+    "physical_duration_selected": false,
+    "vacuum_stress_integration_run": false
+  },
+  "source_hashes": {
+    "docs/nsc-dirac-endpoint-jets.md": "1d34b51bcfc2a6b91d40df4a579d5081f0048893d917d84d4965366a5cf98062",
+    "docs/nsc-physical-jet-extended-gate.md": "45a71d5c678a1d5531dc3a5715b98c47c8088b28a61777d4bb6f61c67a4320d4",
+    "docs/nsc-transmitting-boundary-remainder.md": "8ebb6dbc193e4484b333e61b943e8d3b4f54ac8f4d77ade9b6f25c8b55995b54",
+    "scripts/derive_nsc_dirac_endpoint_jets.py": "1be894ff668404925ee94693226dc96a883c2b9a4341885876b6e2ec75583ca0",
+    "src/recursive_horizons/nsc_dirac_endpoint_jets.py": "25438ce7c0e812bd51e20009b6d01e470d062e3349a291da4b4bf9031c75d3f0"
+  },
+  "status": "OPEN",
+  "two_sided_mismatch": {
+    "status": "OPEN",
+    "tolerance": 3e-11,
+    "value": null
+  }
+}

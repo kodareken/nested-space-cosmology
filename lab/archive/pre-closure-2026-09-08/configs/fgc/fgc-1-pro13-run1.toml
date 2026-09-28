@@ -1,0 +1,95 @@
+schema_version = 1
+artifact_id = "FGC-1-CAL10-RUN1-PLAN"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v13.toml"
+protocol_freeze_result = "results/fgc-1-pro13-frz1.json"
+runtime_authorization_result = "results/fgc-1-hlt11-mon11.json"
+inherited_run_plan = "configs/fgc/fgc-1-cal9-run1.toml"
+inherited_runtime_authorization = "results/fgc-1-hlt10-mon10.json"
+rsp2_run_plan = "configs/fgc/fgc-1-rsp2-run1.toml"
+rsp2_runtime_authorization = "results/fgc-1-rsp2-frz1.json"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO13"
+branch = "GR-0"
+role = "method_owned_ladder_restart_calibration_after_RSP2"
+physical_equations = "unredefined_GR0_specialization_of_REF1"
+amplitude = "3"
+candidate_action_fields_or_health_stops_forbidden = true
+retained_EFT_interpretation = false
+
+[numerical_runtime]
+python_version = "3.14.3"
+python_implementation = "CPython"
+numpy_version = "2.5.1"
+blas_name = "accelerate"
+blas_version = "unknown"
+system = "Darwin"
+machine = "arm64"
+full_runtime_metadata_must_be_recorded_in_manifest_and_result = true
+runtime_drift_must_fail_before_state_advance = true
+
+[method_owned_ladders]
+primary_method = "RK4"
+primary_point_counts = [2049, 4097, 8193]
+comparator_method = "SSPRK3"
+comparator_point_counts = [4097, 8193, 16385]
+common_physical_point_count = 2049
+each_method_must_pass_its_own_complete_admission = true
+raw_unequal_finest_grid_collocation_forbidden = true
+
+[restart]
+coordinate_time = "23/16"
+primary_and_comparator_4097_8193_checkpoint = "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz"
+comparator_16385_checkpoint = "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz"
+complete_state_tracer_history_monitor_and_causal_payload_required = true
+continue_step_stage_transaction_source_retry_CFL_retry_and_causal_ledgers = true
+reinitialization_reprojection_interpolation_and_refit_forbidden = true
+restart_source_and_complete_common_event_prechecks_required = true
+
+[schedule]
+first_new_common_event_coordinate_time = "3/2"
+final_coordinate_time = "32"
+common_output_interval = "1/16"
+checkpoint_interval = "1/4"
+minimum_consecutive_trapped_common_events = 8
+trapped_sign_margin_over_combined_error_factor = 4
+temporal_history_minimum_samples = 64
+
+[assessment]
+minimum_constraint_finest_pair_order = "3/2"
+maximum_nested_tail_ratio = "1/4"
+trapped_scores_use_exact_common_physical_nodes = true
+each_method_supplies_own_finest_pair_Richardson_interval = true
+cross_method_Richardson_intervals_must_overlap = true
+constraint_and_spectral_admissions_are_hard_vetoes = true
+no_threshold_reduction_fitted_asymptote_or_post_outcome_change = true
+
+[provenance]
+output_root = "runs/fgc-2-sf1/proto13/calibration"
+campaign_manifest = "runs/fgc-2-sf1/proto13/calibration/manifest.json"
+append_only_event_log_name = "events.jsonl"
+checkpoint_name = "latest-checkpoint.npz"
+result_name = "campaign-result.json"
+fresh_output_root_required_at_campaign_start = true
+runner_refuses_overwrite = true
+resume_requires_matching_plan_authorization_manifest_and_checkpoint = true
+authorization_commit_must_equal_manifest_git_commit = true
+canonical_reduced_result_is_tracked_only_after_campaign_classification = true
+
+[claims]
+fresh_GR0_dynamic_calibration_completed = false
+GR0_case_eligible = false
+classical_spherical_diagnostic_authorized = false
+SGBL_execution_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,99 @@
+{
+  "artifact_id": "FGC-1-PRO18-PREF27",
+  "artifact_payload": {
+    "authority_binding": {
+      "artifact_id": "FGC-1-PRO18-AUTH1",
+      "authorization_commit": "2e3373ae84e6f69ffc4339096ad163a014f3a985",
+      "authorization_result_path": "results/fgc-1-pro18-auth1.json",
+      "authorization_result_sha256": "dd967568fbae0bd19e063af94ea8e2d53480c98afec5c78bd86601c20faf4efa",
+      "genesis_spec_sha256": "e9082294a2ebaa30df648596ccbb4597f80159c3a1824ae30955ea0432b3ed72",
+      "numerical_environment_sha256": "2c6c7c55f0a595c44f4b49dd1b531724f43d4ec4986349c1281f961e73804602",
+      "pref26_auth1_input_evidence_sha256": "64d903b4e0e95eefef95d60df4cafeadb709ab6200831fdc0b025c5313842968",
+      "source_closure_sha256": "37e812cb356a9c4b7fce026c3a1fa7bd104cffc7398aa0c8647d75551b4df952"
+    },
+    "checkpoint_sha256": "7c059dcc2197a9f57baf8012f4113c240917090171ee06cc639e9e8734603d2d",
+    "claims": {
+      "HLT15_generation_zero_store_authenticated": true,
+      "all_four_HLT14_production_duties_completed": true,
+      "candidate_execution_authorized": false,
+      "foreign_store_adoption_refusal_verified": true,
+      "fresh_GR0_dynamic_calibration_authorized": false,
+      "physical_transition_claim_authorized": false,
+      "production_namespace_reuse_refusal_verified": true,
+      "state_advanced": false
+    },
+    "receipt_sha256": "78ae89a9f74193658003cf51f8567c4088db80fd6fb86867c2d581a0c16d5baf",
+    "store_leaves": [
+      {
+        "content_sha256": "7c059dcc2197a9f57baf8012f4113c240917090171ee06cc639e9e8734603d2d",
+        "path": "runs/fgc-2-sf1/proto17/calibration/checkpoints/00000000000000000000-7c059dcc2197a9f57baf8012f4113c240917090171ee06cc639e9e8734603d2d.json",
+        "raw_sha256": "9bcbc68ca2f168d9f7ae87c37346d9ebf90aeaf2568f26546441634734511b3b"
+      },
+      {
+        "content_sha256": "78ae89a9f74193658003cf51f8567c4088db80fd6fb86867c2d581a0c16d5baf",
+        "path": "runs/fgc-2-sf1/proto17/calibration/receipts/generation-zero.json",
+        "raw_sha256": "7e99fb5fb70b6d2d590232d21222e9aa510b823dfdb3342aa86489b21d4d2f4a"
+      },
+      {
+        "content_sha256": "1ab7f9fbd4e75a0409c700674d81bb536ce30f5ff25f354b4cd40e0bfbad4b6c",
+        "path": "runs/fgc-2-sf1/proto17/calibration/states/1ab7f9fbd4e75a0409c700674d81bb536ce30f5ff25f354b4cd40e0bfbad4b6c.json",
+        "raw_sha256": "1ab7f9fbd4e75a0409c700674d81bb536ce30f5ff25f354b4cd40e0bfbad4b6c"
+      },
+      {
+        "content_sha256": "61a19b6758c13105268fcca090fc29139e8b238cb4ceb8227c7d25bfde455e15",
+        "path": "runs/fgc-2-sf1/proto17/calibration/states/61a19b6758c13105268fcca090fc29139e8b238cb4ceb8227c7d25bfde455e15.json",
+        "raw_sha256": "61a19b6758c13105268fcca090fc29139e8b238cb4ceb8227c7d25bfde455e15"
+      },
+      {
+        "content_sha256": "671f49ea5820c797305cc3fba1a7f4ea1b4a9d29d50e2caf9aff7722d41a7fb1",
+        "path": "runs/fgc-2-sf1/proto17/calibration/states/671f49ea5820c797305cc3fba1a7f4ea1b4a9d29d50e2caf9aff7722d41a7fb1.json",
+        "raw_sha256": "671f49ea5820c797305cc3fba1a7f4ea1b4a9d29d50e2caf9aff7722d41a7fb1"
+      },
+      {
+        "content_sha256": "783844bc83ce2b55c9f16b343d3f081b381159a70cd16578f04692b0273a2447",
+        "path": "runs/fgc-2-sf1/proto17/calibration/states/783844bc83ce2b55c9f16b343d3f081b381159a70cd16578f04692b0273a2447.json",
+        "raw_sha256": "783844bc83ce2b55c9f16b343d3f081b381159a70cd16578f04692b0273a2447"
+      },
+      {
+        "content_sha256": "b19d22516a4c8a517e20e651a6f7a15fd68e11e7bfc74fe4d25eba13e4d8d40d",
+        "path": "runs/fgc-2-sf1/proto17/calibration/states/b19d22516a4c8a517e20e651a6f7a15fd68e11e7bfc74fe4d25eba13e4d8d40d.json",
+        "raw_sha256": "b19d22516a4c8a517e20e651a6f7a15fd68e11e7bfc74fe4d25eba13e4d8d40d"
+      },
+      {
+        "content_sha256": "bca065fd543ff8c4629584d64f8a1ec49d2ab5a653e73bfad08b1fb5ad66d25d",
+        "path": "runs/fgc-2-sf1/proto17/calibration/states/bca065fd543ff8c4629584d64f8a1ec49d2ab5a653e73bfad08b1fb5ad66d25d.json",
+        "raw_sha256": "bca065fd543ff8c4629584d64f8a1ec49d2ab5a653e73bfad08b1fb5ad66d25d"
+      }
+    ],
+    "store_tree_sha256": "95a1bb96570216b8007e32a0cc05f4c31f420052f1d90c1b7134fa27ce958585",
+    "temporary_refusal_controls": {
+      "arriving_foreign_root_at_exclusive_rename": true,
+      "arriving_foreign_root_no_staging_residue": true,
+      "byte_identical_actual_store_copy": true,
+      "byte_identical_actual_store_copy_no_staging_residue": true,
+      "extra": true,
+      "file": true,
+      "internally_self_consistent_foreign_store": true,
+      "internally_self_consistent_foreign_store_no_staging_residue": true,
+      "partial": true,
+      "symlink": true
+    }
+  },
+  "classification": "completed_read_only_generation_zero_store_binder",
+  "gate_status": {
+    "candidate_execution_authorized": false,
+    "state_advance_authorized": false
+  },
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro18_pref27.py": "8e61b45d195c2a72b4760ae829a8301116ade1034f42bf0a6b12f0716dfddd8c",
+    "src/recursive_horizons/fgc/evolution/proto18_pref27_binder.py": "dd013fb25f95ede2b5b17b8e88389aa514d9f4bb02bd7cd4108bfcd5616d505d"
+  },
+  "nonclaims": {
+    "holdout_opened": false,
+    "physical_transition_claim": false,
+    "state_advanced": false
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": "df3a7dd456bb07effc6bab74f8b3586f705a0c7cb480a7a1d1753f2422e473da"
+}

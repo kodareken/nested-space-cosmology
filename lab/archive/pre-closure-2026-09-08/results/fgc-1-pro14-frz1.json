@@ -1,0 +1,404 @@
+{
+  "artifact_id": "FGC-1-PRO14-FRZ1",
+  "artifact_payload": {
+    "decision": {
+      "PROTO14_calibration_authorized": false,
+      "PROTO14_frozen": true,
+      "PROTO14_runtime_implemented": false,
+      "PROTO14_runtime_owner": "FGC-1-HLT12-MON12",
+      "candidate_execution_authorized": false,
+      "replacement_temporal_admission_frozen": true
+    },
+    "epistemic_boundary": {
+      "PROTO14_freeze_advances_no_trajectory": true,
+      "TDG6_debit_is_global_PDE_or_Raychaudhuri_error_bound": false,
+      "candidate_or_mechanism_outcome_read": false,
+      "eligible_GR0_case_selected": false,
+      "historical_PROTO13_and_CAL10_results_reclassified": false,
+      "restart_manifest_is_not_a_fresh_calibration": true,
+      "restart_state_has_pre_restart_temporal_error_bound": false,
+      "restart_state_may_seed_candidate_or_physical_claim": false,
+      "sampled_64_history_rule_is_nonveto_diagnostic_only": true
+    },
+    "evidence_boundary": {
+      "PROTO14_freeze_design_authorized": true,
+      "actual_PROTO13_history_arrays_consumed_by_TDG6_IMP2": false,
+      "historical_GR0_case_eligible": false,
+      "historical_PROTO13_temporal_stop_preserved": true,
+      "historical_stop_is_physical_obstruction": false,
+      "historical_terminal_artifact_id": "FGC-1-CAL10-PREF15",
+      "historical_terminal_checkpoint_may_resume": false,
+      "production_compositor_implemented": true,
+      "production_compositor_synthetic_qualification_passed": true,
+      "production_trajectory_advanced": false,
+      "replacement_instrument_artifact_id": "FGC-1-TDG6-IMP2",
+      "replacement_temporal_admission_defined": true
+    },
+    "immutable_lineage": {
+      "PROTO12_checkpoint": "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz",
+      "PROTO12_checkpoint_sha256": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+      "RSP2_checkpoint": "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz",
+      "RSP2_checkpoint_sha256": "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34",
+      "checkpoint_commit": "27badf9ad3c0bc3aa1c8a4153a42a26bdaf4c00f",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "tracked_blobs": [
+        {
+          "path": "configs/fgc/fgc-2-sf1-protocol-v13.toml",
+          "sha256": "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692"
+        },
+        {
+          "path": "results/fgc-1-pro13-frz1.json",
+          "sha256": "a6fd1ce1bf429fd39ff2d7975de009991199a0f41c73e44d46e57b88b35d74b4"
+        },
+        {
+          "path": "results/fgc-1-cal10-pref15.json",
+          "sha256": "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18"
+        },
+        {
+          "path": "configs/fgc/fgc-1-tdg6-imp2.toml",
+          "sha256": "89803b43e9243558aed33473bd9ebd010142b02302f1a5b0b380e8c4f4d7d8c0"
+        },
+        {
+          "path": "results/fgc-1-tdg6-imp2.json",
+          "sha256": "6a2cac24f65e067aed7ff7de299f9c1f0f3c3319e9aee692763b8df1db4fd5b5"
+        },
+        {
+          "path": "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py",
+          "sha256": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+        }
+      ]
+    },
+    "mutation_controls": {
+      "claim": true,
+      "namespace": true,
+      "restart_error_promotion": true,
+      "restart_state_hash": true,
+      "sampled_diagnostic_veto": true,
+      "terminal_candidate_promotion": true,
+      "threshold": true
+    },
+    "namespace_precondition": {
+      "both_new_namespaces_absent": true,
+      "freeze_created_no_namespace": true,
+      "records": [
+        {
+          "absent_before_freeze": true,
+          "created_by_freeze": false,
+          "path": "runs/fgc-2-sf1/proto14/calibration"
+        },
+        {
+          "absent_before_freeze": true,
+          "created_by_freeze": false,
+          "path": "runs/fgc-2-sf1/proto14/holdout"
+        }
+      ]
+    },
+    "protocol_validation": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "SGBL_outcomes_inspected_before_revision": false,
+      "artifact_id": "FGC-2-SF1-PROTO14",
+      "claims": {
+        "DEF1_execution_authorized": false,
+        "FGCQR_holdout_execution_authorized": false,
+        "FGCQR_mechanism_rejected": false,
+        "GR0_case_eligible": false,
+        "PROTO14_fresh_GR0_dynamic_calibration_authorized": false,
+        "PROTO14_resolved_holdout_manifest_authorized": false,
+        "PROTO14_successor_runtime_implemented": false,
+        "SGBL_execution_authorized": false,
+        "child_domain_or_topology_derived": false,
+        "classical_spherical_diagnostic_authorized": false,
+        "dark_sector_mechanism_derived": false,
+        "fresh_GR0_dynamic_calibration_completed": false,
+        "general_gradient_route_rejected": false,
+        "physical_transition_claim_authorized": false,
+        "retained_EFT_evolution_authorized": false,
+        "singularity_resolution_derived": false,
+        "varying_locally_measured_c_derived": false
+      },
+      "contract_sha256": "30a05fb752225cc07535c5112bb1b1a88ed91761f17a25b8a6e417635963e20e",
+      "final_coordinate_time": "32",
+      "frozen": true,
+      "historical_PROTO13_result_reclassified": false,
+      "mechanism_question_answered_before_revision": false,
+      "outcome_neutral_contract_validated": true,
+      "premise_revision_only": true,
+      "production_trajectory_authorized": false,
+      "protocol_version": 14,
+      "replacement_temporal_admission_defined": true,
+      "restart_coordinate_time": "23/16"
+    },
+    "restart_contract": {
+      "PROTO13_terminal_checkpoint_may_not_resume": true,
+      "checkpoint_interval": "1/4",
+      "common_output_interval": "1/16",
+      "comparator_method": "SSPRK3",
+      "comparator_point_counts": [
+        4097,
+        8193,
+        16385
+      ],
+      "continue_source_and_CFL_retry_counters_without_reclassification": true,
+      "cross_method_observables_must_be_extrapolated_or_interval_enclosed": true,
+      "each_method_must_pass_its_own_complete_spatial_admission": true,
+      "final_coordinate_time": "32",
+      "first_new_common_event_coordinate_time": "3/2",
+      "maximum_nested_spatial_tail_ratio": "1/4",
+      "minimum_consecutive_qualified_trapped_common_events": 8,
+      "minimum_constraint_finest_pair_order": "3/2",
+      "no_reinitialization_reprojection_interpolation_or_refit": true,
+      "pre_restart_temporal_error_bound_proved": false,
+      "primary_method": "RK4",
+      "primary_point_counts": [
+        2049,
+        4097,
+        8193
+      ],
+      "restart_arrays_are_fixed_discrete_calibration_inputs": true,
+      "restart_coordinate_time": "23/16",
+      "restart_may_seed_candidate_or_physical_claim": false,
+      "restore_state_tracers_history_runtime_monitor_and_causal_debit": true,
+      "trapped_sign_margin_over_combined_spatial_error_factor": 4
+    },
+    "restart_members": [
+      {
+        "CFL_retry_count": 217,
+        "accepted_stage_count": 1710,
+        "accumulated_characteristic_distance": 1.7250865100612265,
+        "coordinate_time": 1.4375,
+        "event_sample_count": 24,
+        "input_hash": "3bfc9a137f20353e9ead2f742f7780b049a11ab576f6e4de98fe4e5d0ad5c0d3",
+        "key": "RK4-2049",
+        "method": "RK4",
+        "point_count": 2049,
+        "restart_payload_sha256": "4bb04ae97c09f66881084b5816d14ce300c54152ae11c182f53b64d5e887c072",
+        "source_checkpoint": "PROTO12",
+        "source_retry_count": 0,
+        "state_sha256": "d119a3b0ab450b0f0916b801254bbbfa964c8e5e95223cb8e51d9034f62c665e",
+        "state_shape": [
+          2049,
+          6
+        ],
+        "step_index": 342,
+        "tracer_count": 48,
+        "transaction_serial": 1710
+      },
+      {
+        "CFL_retry_count": 443,
+        "accepted_stage_count": 3365,
+        "accumulated_characteristic_distance": 1.7250013442364578,
+        "coordinate_time": 1.4375,
+        "event_sample_count": 24,
+        "input_hash": "ffbde443e99535e74900b1e04c1e60cc27da105dd5d605286e77a6c77620c0bb",
+        "key": "RK4-4097",
+        "method": "RK4",
+        "point_count": 4097,
+        "restart_payload_sha256": "cc6d3b6fbb3a5b6abd93f69f7f59ba67c38e9b7d332fac991a88847970b57aac",
+        "source_checkpoint": "PROTO12",
+        "source_retry_count": 0,
+        "state_sha256": "9d27ca221fbac2a5b3b86a8d9aef49a8b8ac451b255b80529563b8cb7f8b73a9",
+        "state_shape": [
+          4097,
+          6
+        ],
+        "step_index": 673,
+        "tracer_count": 48,
+        "transaction_serial": 3365
+      },
+      {
+        "CFL_retry_count": 161,
+        "accepted_stage_count": 4880,
+        "accumulated_characteristic_distance": 1.7250000240636434,
+        "coordinate_time": 1.4375,
+        "event_sample_count": 24,
+        "input_hash": "076bebfc71482793017d2d306001b3416f5ad7a4088f35351d4d26322a09d12c",
+        "key": "RK4-8193",
+        "method": "RK4",
+        "point_count": 8193,
+        "restart_payload_sha256": "b95ea0be0779f712fb0c354f9c10f28b9ccc6c737fb403d5710dbd07e0e506f9",
+        "source_checkpoint": "PROTO12",
+        "source_retry_count": 0,
+        "state_sha256": "d5b4cfe25199862fff5be7d524cc1c3a6030cc634d268cedb626c3ced7220f4a",
+        "state_shape": [
+          8193,
+          6
+        ],
+        "step_index": 976,
+        "tracer_count": 48,
+        "transaction_serial": 4880
+      },
+      {
+        "CFL_retry_count": 358,
+        "accepted_stage_count": 2524,
+        "accumulated_characteristic_distance": 1.725000020060358,
+        "coordinate_time": 1.4375,
+        "event_sample_count": 24,
+        "input_hash": "3cc3dc3a262f83cc19f07c49d477f5e43309f0c9e0f16bdeaf6d0c7dc02bd48f",
+        "key": "SSPRK3-4097",
+        "method": "SSPRK3",
+        "point_count": 4097,
+        "restart_payload_sha256": "dc056db806e5d983852135138dd48dbb9b995a8585f56900258bece7e16e7016",
+        "source_checkpoint": "PROTO12",
+        "source_retry_count": 0,
+        "state_sha256": "ab96602c0f05633375710efee2be01be84e24c32a31d07d6ef23390788a72162",
+        "state_shape": [
+          4097,
+          6
+        ],
+        "step_index": 631,
+        "tracer_count": 48,
+        "transaction_serial": 2524
+      },
+      {
+        "CFL_retry_count": 187,
+        "accepted_stage_count": 3948,
+        "accumulated_characteristic_distance": 1.725000000264817,
+        "coordinate_time": 1.4375,
+        "event_sample_count": 24,
+        "input_hash": "d4bd39d36dfe749cc6ec04e5f112fc5544e3defdce67315ee871d2d8cfc75b5f",
+        "key": "SSPRK3-8193",
+        "method": "SSPRK3",
+        "point_count": 8193,
+        "restart_payload_sha256": "b262bf4bd180717d42a7fa4d502f006bac0950669bc9e86c474ad6e4a21ce7ad",
+        "source_checkpoint": "PROTO12",
+        "source_retry_count": 0,
+        "state_sha256": "c46abc3f0f72fa2a13c1fee7bb329b94698cc2c26003406ae3eb1592f11b648c",
+        "state_shape": [
+          8193,
+          6
+        ],
+        "step_index": 987,
+        "tracer_count": 48,
+        "transaction_serial": 3948
+      },
+      {
+        "CFL_retry_count": 0,
+        "accepted_stage_count": 7084,
+        "accumulated_characteristic_distance": 1.7250000000008527,
+        "coordinate_time": 1.4375,
+        "event_sample_count": 24,
+        "input_hash": "2946239e5d23b4e7a3cd74419a0b9c214eb89195f72bc84d4b89f39b6ef01963",
+        "key": "SSPRK3-16385",
+        "method": "SSPRK3",
+        "point_count": 16385,
+        "restart_payload_sha256": "62784c8cc63eedc210366f146f28d535343b966e1f988a4298894e78ec560884",
+        "source_checkpoint": "RSP2",
+        "source_retry_count": 0,
+        "state_sha256": "91e64d0864390cb4ac63cfdbdbbcb8ca5ad6c2f47cdd4d6741e05ef560adad0d",
+        "state_shape": [
+          16385,
+          6
+        ],
+        "step_index": 1771,
+        "tracer_count": 48,
+        "transaction_serial": 7084
+      }
+    ],
+    "temporal_contract": {
+      "TDG6_ledger_starts_zero_at_restart": true,
+      "absolute_or_signal_scaled_tolerance_permitted": false,
+      "all_channels_must_pass_every_accepted_post_restart_macro_step": true,
+      "complete_state_channel_count": 18,
+      "debit_cancellation_permitted": false,
+      "durable_rejection_before_retry_required": true,
+      "exact_outward_order_test": "8*U12^2<=L01^2",
+      "finest_pair_debits_accumulate_componentwise_outward": true,
+      "global_PDE_error_bound_proved": false,
+      "level_step_counts": [
+        1,
+        2,
+        4
+      ],
+      "maximum_temporal_retries_per_macro_step": 32,
+      "minimum_macro_step": "1/1073741824",
+      "minimum_observed_order": "3/2",
+      "only_four_quarter_fine_path_may_commit": true,
+      "sampled_64_history_rule_is_nonveto_diagnostic": true,
+      "sampled_64_history_rule_may_admit_or_reject": false,
+      "temporal_retry_exhaustion_is_invalid_not_physical": true,
+      "temporal_retry_factor": "1/2"
+    }
+  },
+  "classification": "prospective_TDG6_post_restart_GR0_calibration_protocol_freeze",
+  "derivation_document": "docs/fgc-pro14-frz1.md",
+  "derivation_document_sha256": "11e65631817540ebf97f5a89ec39911c9123490a4cd94059e344a7a4c56b8081",
+  "gate_status": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO14_frozen": true,
+    "PROTO14_replacement_temporal_admission_frozen": true,
+    "PROTO14_resolved_holdout_manifest_authorized": false,
+    "PROTO14_restart_manifest_frozen": true,
+    "PROTO14_successor_runtime_implemented": false,
+    "PROTO14_terminal_classification_frozen": true,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro14_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro14_frz1.py": "e6438dfc4786746e77341e00e9a15076ff30c0437964c2acf4acb1ce3fe9cc9b",
+    "src/recursive_horizons/fgc/evolution/protocol_v14.py": "a4d766baf1cafa87f32f93594d4c771ac0ada3225007312546afc9325208d86c"
+  },
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "GR0_case_eligible": false,
+    "PROTO14_fresh_GR0_dynamic_calibration_authorized": false,
+    "PROTO14_resolved_holdout_manifest_authorized": false,
+    "PROTO14_successor_runtime_implemented": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-tdg6-imp2.toml": "89803b43e9243558aed33473bd9ebd010142b02302f1a5b0b380e8c4f4d7d8c0",
+    "configs/fgc/fgc-2-sf1-protocol-v13.toml": "fc9398bad6ea4448f659188641e6da6bd7c2e295a443fe73bf73eb0308480692",
+    "results/fgc-1-cal10-pref15.json": "1ebbdc7222baee8134a6d466589770ee445aee594f10630fc09aa6264cb4ac18",
+    "results/fgc-1-pro13-frz1.json": "a6fd1ce1bf429fd39ff2d7975de009991199a0f41c73e44d46e57b88b35d74b4",
+    "results/fgc-1-tdg6-imp2.json": "6a2cac24f65e067aed7ff7de299f9c1f0f3c3319e9aee692763b8df1db4fd5b5",
+    "runs/fgc-2-sf1/proto12/calibration/latest-checkpoint.npz": "c784d4706911029883d14e1763c2d36c5dbe0e619a4e50416cc6d666d5b7ea17",
+    "runs/fgc-2-sf1/rsp2/amplitude3-ssprk3-momentum/latest-checkpoint.npz": "000546dcf3726c7882e80b7e70b64a5d2e060e2e0f7a567e174f714432ae7f34",
+    "src/recursive_horizons/fgc/evolution/tdg6_temporal_admission_runtime.py": "039de0bd008a2536bea6f7187afc3856bfc841d14790cbae5ca2fe27f7eb8e2d"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "PROTO13_GR0_trajectory_inspected": true,
+    "PROTO14_trajectory_read": false,
+    "SGBL_trajectory_read": false,
+    "calibration_amplitude": "3",
+    "calibration_branch": "GR-0",
+    "collapse_or_trapped_outcome_classified": false,
+    "freeze_role": "premise_only_TDG6_post_restart_calibration_protocol_certificate",
+    "historical_terminal_artifact": "FGC-1-CAL10-PREF15",
+    "holdout_branch": "FGC-QR",
+    "mechanism_question_answered": false,
+    "predecessor_protocol": "FGC-2-SF1-PROTO13",
+    "replacement_instrument_artifact": "FGC-1-TDG6-IMP2",
+    "target_protocol": "FGC-2-SF1-PROTO14"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro14-frz1.toml": "646d4a88986d77934b6fe80bee50f997ee2397eace5b540b771332c2179525e1",
+    "configs/fgc/fgc-2-sf1-protocol-v14.toml": "3043cbc23e7a78af764b6e74397512cb3f7bc78eace64485ab188963ba35f3a3"
+  }
+}

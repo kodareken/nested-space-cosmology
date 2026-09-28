@@ -1,0 +1,859 @@
+{
+  "artifact_id": "FGC-1-TDG7-IMP3",
+  "artifact_payload": {
+    "claim_boundary": {
+      "CAL11_terminal_invalid_runtime_result_preserved": true,
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_runtime_mutation_authorized": false,
+      "PROTO14_terminal_checkpoint_may_resume": false,
+      "SGBL_execution_authorized": false,
+      "TDG6_threshold_and_all_of_admission_unchanged": true,
+      "TDG7_independent_binder_completed": true,
+      "TDG7_runtime_repair_implementation_authorized": true,
+      "TDG7_runtime_repair_implemented": true,
+      "TDG7_runtime_repair_synthetic_qualification_passed": true,
+      "child_domain_or_topology_derived": false,
+      "dark_sector_mechanism_derived": false,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_GR0_dynamic_calibration_completed": false,
+      "fresh_replacement_protocol_frozen": false,
+      "fresh_vs_retry_protocol_discriminator_implemented": false,
+      "future_protocol_cursor_required_before_calibration": true,
+      "new_output_namespace_authorized": false,
+      "new_protocol_authorized": false,
+      "one_shared_stage_safe_plan_owns_all_paths": true,
+      "physical_or_cosmological_claim_derived": false,
+      "physical_transition_claim_authorized": false,
+      "replacement_protocol_freeze_design_authorized": true,
+      "retained_EFT_evolution_authorized": false,
+      "singularity_resolution_derived": false,
+      "stateless_adapter_cannot_detect_discarded_external_retry": true,
+      "typed_lattice_stops_precede_work": true,
+      "varying_locally_measured_c_derived": false
+    },
+    "immutable_lineage": {
+      "CAL11_history_arrays_loaded": false,
+      "CAL11_invalid_runtime_status_preserved": true,
+      "PREF23_authorized_runtime_repair_only": true,
+      "PREF23_git_and_worktree_sha256": {
+        "configs/fgc/fgc-1-tdg7-pref23.toml": "410e6e3451f53dd6d262a2e1c409773955f5d27621b3d95c5e977d7e244643e7",
+        "docs/fgc-tdg7-pref23.md": "ef0673f179139ff10c6f3b906d3fd362ac2fd53fd8d1ae265fbb47a70b91bfc7",
+        "results/fgc-1-tdg7-pref23.json": "09b40197f043026c59fb1efff2b6d24197ad7aeca03b784da32b602165e97843",
+        "scripts/reproduce_fgc_tdg7_pref23.py": "4055de98048d7f40cee67e9768fd3b2d453406e26d85f982a205f95a882ddf47",
+        "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_lattice_theorem.py": "f9d3ec171d9250b8998d53459de9ee2fe01ec1c4315c25782d97f4b85056454f",
+        "tests/test_fgc_tdg7_pref23_reproduction.py": "32bf4f2d3a932937d08cd926654e57b78accade4ad1c8f79dc782d0a6b269534"
+      },
+      "PREF23_independent_binder_completed": true,
+      "PREF23_result_canonical": true,
+      "PROTO14_history_arrays_loaded": false,
+      "campaign_checkpoint_loaded": false,
+      "campaign_checkpoint_resumed": false,
+      "current_core_sha256": {
+        "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py": "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1",
+        "tests/test_fgc_tdg7_stage_safe_runtime.py": "2665b88f3549739fc97f1d838d82abacb3da0b52cbfa7497f02b14f06724e929"
+      },
+      "runs_namespace_created": false,
+      "sealed_predecessor_commit": "e9289ce479a2cd720d6c58f2ca3d653f573d8eec",
+      "sealed_predecessor_is_ancestor_of_HEAD": true
+    },
+    "limitations": {
+      "current_runtime_repair_does_not_mutate_or_resume_historical_PROTO14": true,
+      "fresh_vs_retry_protocol_discriminator_implemented": false,
+      "future_protocol_cursor_required_before_calibration": true,
+      "historical_CAL11_invalid_runtime_is_not_physics": true,
+      "no_SGBL_or_FGCQR_or_DEF1_execution_is_authorized": true,
+      "no_calibration_or_candidate_eligibility_is_derived": true,
+      "no_new_protocol_or_output_namespace_is_created": true,
+      "no_retained_EFT_or_physical_transition_or_cosmological_claim_is_derived": true,
+      "prospective_replacement_protocol_design_only_no_protocol_file_runtime_or_run": true,
+      "stateless_adapter_cannot_detect_discarded_external_retry": true,
+      "synthetic_controls_are_not_PROTO14_trajectory_execution": true
+    },
+    "mutation_controls": {
+      "FGCQR_promotion_rejected": true,
+      "PREF23_result_hash_mutation_rejected": true,
+      "PROTO14_mutation_promotion_rejected": true,
+      "TDG6_all_of_contract_mutation_rejected": true,
+      "calibration_promotion_rejected": true,
+      "core_runtime_hash_mutation_rejected": true,
+      "namespace_promotion_rejected": true,
+      "new_protocol_promotion_rejected": true,
+      "physical_claim_promotion_rejected": true,
+      "reordered_TDG6_channel_map_rejected": true,
+      "replacement_protocol_freeze_promotion_rejected": true,
+      "sealed_predecessor_commit_mutation_rejected": true,
+      "shared_plan_contract_mutation_rejected": true
+    },
+    "proof_contract": {
+      "TDG6_all_of_thresholds_and_retry_evidence_must_remain_unchanged": true,
+      "all_actual_method_stages_must_match_one_shared_plan": true,
+      "canonical_PREF23_boundary_must_authorize_repair_only": true,
+      "canonical_hash_bound_result_required": true,
+      "current_core_runtime_and_test_hashes_must_match": true,
+      "disjoint_entrypoints_and_protocol_discriminator_limitation_must_be_explicit": true,
+      "fine_only_commit_late_shadow_ownership_and_tracer_rollback_must_pass": true,
+      "mutation_nonpromotion_lineage_and_hash_attacks_must_fail_closed": true,
+      "predecessor_and_all_PREF23_hashes_must_match_git_and_worktree": true,
+      "replacement_protocol_design_authorization_must_not_promote_freeze_runtime_or_calibration": true,
+      "retry_successor_lineage_and_frozen_minimum_width_must_fail_closed": true,
+      "synthetic_controls_must_not_load_CAL11_or_PROTO14_arrays_or_create_runs_namespace": true,
+      "typed_stops_must_precede_every_runtime_hook": true,
+      "valid_retry_replan_TDG6_minimum_exhaustion_and_defensive_TDG7_stop_must_pass": true
+    },
+    "stage_safe_runtime_contract": {
+      "RK4_fine_shadow_stage_records": 20,
+      "RK4_total_shadow_stage_records": 35,
+      "SSPRK3_fine_shadow_stage_records": 16,
+      "SSPRK3_total_shadow_stage_records": 28,
+      "TDG6_minimum_width_is_frozen_and_not_caller_overridable": true,
+      "actual_RK4_and_SSPRK3_stage_names_and_times_rechecked_against_plan": true,
+      "all_typed_lattice_stops_are_exercised_with_zero_hooks": true,
+      "fresh_entrypoint_rejects_active_retry_ledger": true,
+      "one_immutable_shared_TDG7_plan_owns_one_two_four_paths": true,
+      "only_complete_fine_path_commits_atomically": true,
+      "outer_and_medium_paths_are_evidence_only": true,
+      "typed_coordinate_lattice_stops_precede_shadow_source_projector_tracer_monitor_or_state_work": true
+    },
+    "successor_boundary": {
+      "DEF1_execution_authorized": false,
+      "FGCQR_holdout_execution_authorized": false,
+      "GR0_case_eligible": false,
+      "PROTO14_runtime_mutation_authorized": false,
+      "PROTO14_terminal_checkpoint_may_resume": false,
+      "SGBL_execution_authorized": false,
+      "TDG7_independent_binder_completed": true,
+      "TDG7_runtime_repair_implementation_authorized": true,
+      "TDG7_runtime_repair_implemented": true,
+      "TDG7_runtime_repair_synthetic_qualification_passed": true,
+      "fresh_GR0_calibration_authorized": false,
+      "fresh_replacement_protocol_frozen": false,
+      "new_output_namespace_authorized": false,
+      "new_protocol_authorized": false,
+      "new_protocol_or_output_namespace_authorized": false,
+      "physical_transition_claim_authorized": false,
+      "replacement_protocol_freeze_design_authorized": true,
+      "retained_EFT_evolution_authorized": false
+    },
+    "synthetic_qualification": {
+      "CAL11_history_arrays_loaded": false,
+      "PROTO14_history_arrays_loaded": false,
+      "TDG6_all_of_interval_controls": {
+        "absolute_or_magnitude_tolerance_used": false,
+        "channel_count": 18,
+        "complete_admission_is_all_of": true,
+        "exact_zero_classification": "exact_zero",
+        "exact_zero_complete_admission_passed": true,
+        "large_convergent_complete_admission_passed": true,
+        "large_convergent_minimum_retained_debit": 10.000000000000039,
+        "one_channel_veto_channel": "p:v",
+        "one_channel_veto_classification": "resolved_order_failure",
+        "one_channel_veto_complete_admission_passed": false
+      },
+      "all_synthetic_controls_pass": true,
+      "frozen_minimum_width_control": {
+        "caller_minimum_width_override_rejected": true,
+        "frozen_minimum_width_hex": "0x1.0000000000000p-30",
+        "runtime_hook_count": 0
+      },
+      "late_shadow_and_tracer_controls": {
+        "late_tracer_commit_rollback_passed": true,
+        "non_source": {
+          "path": "fine_2",
+          "real_boundaries_unchanged": true,
+          "source_retry_owned_by_PROTO7": false
+        },
+        "precommit_tracer_drift_rejected": true,
+        "source_only": {
+          "path": "fine_2",
+          "real_boundaries_unchanged": true,
+          "source_retry_owned_by_PROTO7": true
+        }
+      },
+      "method_controls": {
+        "RK4": {
+          "actual_shadow_stage_records": {
+            "fine": [
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7000000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7200000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7200000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7400000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7600000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7600000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7800000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7a00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7a00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7c00000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7e00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7e00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.8000000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.8000000000000p+0"
+                }
+              ]
+            ],
+            "medium": [
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7000000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7800000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.8000000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.8000000000000p+0"
+                }
+              ]
+            ],
+            "outer": [
+              [
+                {
+                  "stage_name": "rk4_k1",
+                  "time_hex": "0x1.7000000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k2",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k3",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "rk4_k4",
+                  "time_hex": "0x1.8000000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.8000000000000p+0"
+                }
+              ]
+            ]
+          },
+          "classification_counts": {
+            "exact_zero": 13,
+            "resolved_order_pass": 5
+          },
+          "committed_state_sha256": "15a7659766bdeecd4c56a3fbec7d74c2555d952bc6f4d389c4accdaf59d8a731",
+          "committed_time_hex": "0x1.8000000000000p+0",
+          "committed_tracer_snapshot": {
+            "cutoff": 1.0,
+            "event_count": 1,
+            "event_history_sha256": "d90c20f38352bcc4950a5f11ac68f47cad65cdbf0ad6c055a77732b237510ed7",
+            "labels_sha256": "330e51affaf2d995ea14d816324db0a635f1617374c8d49b6c228821b8cf2b9f",
+            "outer_radius": 128.0,
+            "positions_sha256": "269c7515342d76d9c02458e1ae01918ec60eb0ae7d1fa88a59b00ceff645c24d",
+            "proper_times_sha256": "6061ad14b9f179b41e6f0ef34c9228e69be371ad6a18b857138328b7e6459732"
+          },
+          "complete_admission_passed": true,
+          "failed_channels": [],
+          "fine_quarter_steps_committed_atomically": true,
+          "fine_shadow_state_sha256": "15a7659766bdeecd4c56a3fbec7d74c2555d952bc6f4d389c4accdaf59d8a731",
+          "fine_shadow_tracer_snapshot": {
+            "cutoff": 1.0,
+            "event_count": 1,
+            "event_history_sha256": "d90c20f38352bcc4950a5f11ac68f47cad65cdbf0ad6c055a77732b237510ed7",
+            "labels_sha256": "330e51affaf2d995ea14d816324db0a635f1617374c8d49b6c228821b8cf2b9f",
+            "outer_radius": 128.0,
+            "positions_sha256": "269c7515342d76d9c02458e1ae01918ec60eb0ae7d1fa88a59b00ceff645c24d",
+            "proper_times_sha256": "6061ad14b9f179b41e6f0ef34c9228e69be371ad6a18b857138328b7e6459732"
+          },
+          "fine_stage_records": 20,
+          "medium_stage_records": 10,
+          "method": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+          "one_shared_plan_owns_all_paths": true,
+          "outer_and_medium_committed": false,
+          "outer_stage_records": 5,
+          "plan": {
+            "boundaries_hex": [
+              "0x1.7000000000000p+0",
+              "0x1.7400000000000p+0",
+              "0x1.7800000000000p+0",
+              "0x1.7c00000000000p+0",
+              "0x1.8000000000000p+0"
+            ],
+            "current_hex": "0x1.7000000000000p+0",
+            "fine_width_hex": "0x1.0000000000000p-6",
+            "four_quarter_stage_times_hex": [
+              [
+                "0x1.7000000000000p+0",
+                "0x1.7200000000000p+0",
+                "0x1.7400000000000p+0"
+              ],
+              [
+                "0x1.7400000000000p+0",
+                "0x1.7600000000000p+0",
+                "0x1.7800000000000p+0"
+              ],
+              [
+                "0x1.7800000000000p+0",
+                "0x1.7a00000000000p+0",
+                "0x1.7c00000000000p+0"
+              ],
+              [
+                "0x1.7c00000000000p+0",
+                "0x1.7e00000000000p+0",
+                "0x1.8000000000000p+0"
+              ]
+            ],
+            "macro_width_hex": "0x1.0000000000000p-4",
+            "minimum_width_hex": "0x1.0000000000000p-30",
+            "one_full_stage_times_hex": [
+              [
+                "0x1.7000000000000p+0",
+                "0x1.7800000000000p+0",
+                "0x1.8000000000000p+0"
+              ]
+            ],
+            "quantum_hex": "0x1.0000000000000p-52",
+            "requested_cap_hex": "0x1.0000000000000p-3",
+            "target_hex": "0x1.8000000000000p+0",
+            "two_half_stage_times_hex": [
+              [
+                "0x1.7000000000000p+0",
+                "0x1.7400000000000p+0",
+                "0x1.7800000000000p+0"
+              ],
+              [
+                "0x1.7800000000000p+0",
+                "0x1.7c00000000000p+0",
+                "0x1.8000000000000p+0"
+              ]
+            ]
+          },
+          "real_boundary_unchanged_during_prepare": true,
+          "shadow_proposal_count": 7,
+          "total_shadow_stage_records": 35
+        },
+        "SSPRK3": {
+          "actual_shadow_stage_records": {
+            "fine": [
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7000000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7200000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7400000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7600000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7800000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7a00000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7c00000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.8000000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7e00000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.8000000000000p+0"
+                }
+              ]
+            ],
+            "medium": [
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7000000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7400000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.7800000000000p+0"
+                }
+              ],
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.8000000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7c00000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.8000000000000p+0"
+                }
+              ]
+            ],
+            "outer": [
+              [
+                {
+                  "stage_name": "ssprk3_s0",
+                  "time_hex": "0x1.7000000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s1",
+                  "time_hex": "0x1.8000000000000p+0"
+                },
+                {
+                  "stage_name": "ssprk3_s2",
+                  "time_hex": "0x1.7800000000000p+0"
+                },
+                {
+                  "stage_name": "candidate_endpoint",
+                  "time_hex": "0x1.8000000000000p+0"
+                }
+              ]
+            ]
+          },
+          "classification_counts": {
+            "exact_zero": 13,
+            "resolved_order_pass": 5
+          },
+          "committed_state_sha256": "47ab7ad44808398551c095752c35a23285cc6c229824f88bff67bea8c5a7a260",
+          "committed_time_hex": "0x1.8000000000000p+0",
+          "committed_tracer_snapshot": {
+            "cutoff": 1.0,
+            "event_count": 1,
+            "event_history_sha256": "d90c20f38352bcc4950a5f11ac68f47cad65cdbf0ad6c055a77732b237510ed7",
+            "labels_sha256": "330e51affaf2d995ea14d816324db0a635f1617374c8d49b6c228821b8cf2b9f",
+            "outer_radius": 128.0,
+            "positions_sha256": "0f8d13d3e64e502637658f4f77c4e4ac30ee303a129d64d528e938b0181fc25e",
+            "proper_times_sha256": "2a28be86d794cdd132c28ebbc8153c6bbdb67440b442adecd904d8f73855779d"
+          },
+          "complete_admission_passed": true,
+          "failed_channels": [],
+          "fine_quarter_steps_committed_atomically": true,
+          "fine_shadow_state_sha256": "47ab7ad44808398551c095752c35a23285cc6c229824f88bff67bea8c5a7a260",
+          "fine_shadow_tracer_snapshot": {
+            "cutoff": 1.0,
+            "event_count": 1,
+            "event_history_sha256": "d90c20f38352bcc4950a5f11ac68f47cad65cdbf0ad6c055a77732b237510ed7",
+            "labels_sha256": "330e51affaf2d995ea14d816324db0a635f1617374c8d49b6c228821b8cf2b9f",
+            "outer_radius": 128.0,
+            "positions_sha256": "0f8d13d3e64e502637658f4f77c4e4ac30ee303a129d64d528e938b0181fc25e",
+            "proper_times_sha256": "2a28be86d794cdd132c28ebbc8153c6bbdb67440b442adecd904d8f73855779d"
+          },
+          "fine_stage_records": 16,
+          "medium_stage_records": 8,
+          "method": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+          "one_shared_plan_owns_all_paths": true,
+          "outer_and_medium_committed": false,
+          "outer_stage_records": 4,
+          "plan": {
+            "boundaries_hex": [
+              "0x1.7000000000000p+0",
+              "0x1.7400000000000p+0",
+              "0x1.7800000000000p+0",
+              "0x1.7c00000000000p+0",
+              "0x1.8000000000000p+0"
+            ],
+            "current_hex": "0x1.7000000000000p+0",
+            "fine_width_hex": "0x1.0000000000000p-6",
+            "four_quarter_stage_times_hex": [
+              [
+                "0x1.7000000000000p+0",
+                "0x1.7200000000000p+0",
+                "0x1.7400000000000p+0"
+              ],
+              [
+                "0x1.7400000000000p+0",
+                "0x1.7600000000000p+0",
+                "0x1.7800000000000p+0"
+              ],
+              [
+                "0x1.7800000000000p+0",
+                "0x1.7a00000000000p+0",
+                "0x1.7c00000000000p+0"
+              ],
+              [
+                "0x1.7c00000000000p+0",
+                "0x1.7e00000000000p+0",
+                "0x1.8000000000000p+0"
+              ]
+            ],
+            "macro_width_hex": "0x1.0000000000000p-4",
+            "minimum_width_hex": "0x1.0000000000000p-30",
+            "one_full_stage_times_hex": [
+              [
+                "0x1.7000000000000p+0",
+                "0x1.7800000000000p+0",
+                "0x1.8000000000000p+0"
+              ]
+            ],
+            "quantum_hex": "0x1.0000000000000p-52",
+            "requested_cap_hex": "0x1.0000000000000p-3",
+            "target_hex": "0x1.8000000000000p+0",
+            "two_half_stage_times_hex": [
+              [
+                "0x1.7000000000000p+0",
+                "0x1.7400000000000p+0",
+                "0x1.7800000000000p+0"
+              ],
+              [
+                "0x1.7800000000000p+0",
+                "0x1.7c00000000000p+0",
+                "0x1.8000000000000p+0"
+              ]
+            ]
+          },
+          "real_boundary_unchanged_during_prepare": true,
+          "shadow_proposal_count": 7,
+          "total_shadow_stage_records": 28
+        }
+      },
+      "protocol_discriminator_limitation": {
+        "fresh_vs_retry_protocol_discriminator_implemented": false,
+        "future_protocol_cursor_required_before_calibration": true,
+        "stateless_adapter_cannot_detect_discarded_external_retry": true
+      },
+      "retry_replan_controls": {
+        "TDG6_minimum_macro_step_exhaustion_is_physical": false,
+        "TDG6_minimum_macro_step_exhaustion_reason": "minimum_macro_step",
+        "TDG7_lattice_exhaustion_is_defensive_forged_wrapper_only": true,
+        "active_retry_ledger_rejected_by_fresh_entrypoint": true,
+        "canonical_durable_TDG6_evidence_retained": true,
+        "defensive_lattice_reason": "below_minimum_aligned_width",
+        "defensive_lattice_stop": "TDG7RetryLatticeExhausted",
+        "defensive_lattice_stop_is_physical_classification": false,
+        "defensive_lattice_stop_retains_TDG6_evidence": true,
+        "first_retry_channel_decision_count": 18,
+        "forged_canonical_retry_evidence_rejected": true,
+        "forged_full_ledger_prefix_rejected": true,
+        "full_ledger_prefix_retained": true,
+        "last_accepted_retry_count_retained": true,
+        "mismatched_method_retry_lineage_rejected": true,
+        "original_macro_width_hex": "0x1.0000000000000p-4",
+        "over_limit_retry_lineage_rejected": true,
+        "replan_strictly_reduced": true,
+        "replanned_macro_width_hex": "0x1.0000000000000p-5",
+        "retry_is_physical_classification": false,
+        "retry_successor_binds_predecessor_plan_and_exact_updated_ledger": true,
+        "retry_successor_resume_uses_exact_updated_ledger": true,
+        "two_minimum_to_minimum_successor": true
+      },
+      "runs_namespace_created": false,
+      "runtime_environment": {
+        "binary64_epsilon": 2.220446049250313e-16,
+        "numpy": "2.5.1",
+        "python_implementation": "cpython",
+        "python_major_minor": "3.14"
+      },
+      "synthetic_states_only": true,
+      "typed_lattice_stop_controls": {
+        "below_frozen_minimum": {
+          "case": "below_frozen_minimum",
+          "hook_count": 0,
+          "reason": "below_minimum_aligned_width",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "endpoint_not_q_aligned": {
+          "case": "endpoint_not_q_aligned",
+          "hook_count": 0,
+          "reason": "endpoint_not_q_aligned",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "negative_cap": {
+          "case": "negative_cap",
+          "hook_count": 0,
+          "reason": "nonpositive_requested_cap",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "no_positive_width": {
+          "case": "no_positive_width",
+          "hook_count": 0,
+          "reason": "no_positive_aligned_width",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "nonfinite_cap_inf": {
+          "case": "nonfinite_cap_inf",
+          "hook_count": 0,
+          "reason": "nonfinite_coordinate",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "nonfinite_cap_nan": {
+          "case": "nonfinite_cap_nan",
+          "hook_count": 0,
+          "reason": "nonfinite_coordinate",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "nonfinite_time": {
+          "case": "nonfinite_time",
+          "hook_count": 0,
+          "reason": "nonfinite_coordinate",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "outside_envelope": {
+          "case": "outside_envelope",
+          "hook_count": 0,
+          "reason": "outside_frozen_time_envelope",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "target_not_ahead": {
+          "case": "target_not_ahead",
+          "hook_count": 0,
+          "reason": "target_not_ahead",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "target_not_stage_aligned": {
+          "case": "target_not_stage_aligned",
+          "hook_count": 0,
+          "reason": "target_not_stage_lattice_aligned",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        },
+        "zero_cap": {
+          "case": "zero_cap",
+          "hook_count": 0,
+          "reason": "nonpositive_requested_cap",
+          "typed_stop": "TDG7CoordinateLatticeStop"
+        }
+      }
+    },
+    "tdg6_inheritance": {
+      "TDG6_owns_normal_minimum_macro_step_exhaustion": true,
+      "TDG7_lattice_exhaustion_is_defensive_for_forged_required_wrapper_only": true,
+      "complete_channel_count": 18,
+      "exact_zero_classification_preserved": true,
+      "large_convergent_debit_remains_outward_and_greater_than_nine": true,
+      "large_convergent_difference_passes_without_magnitude_tolerance": true,
+      "non_source_late_shadow_stop_remains_nonretry_terminal_evidence": true,
+      "one_channel_resolved_order_failure_vetoes_all_of_admission": true,
+      "retry_successor_binds_predecessor_plan_retry_and_exact_updated_ledger": true,
+      "retry_successor_rejects_mismatched_method_over_limit_and_forged_evidence_and_prefix": true,
+      "source_only_late_shadow_stop_remains_PROTO7_owned": true,
+      "tracer_commit_exception_rolls_back_real_monitor_causal_and_tracer_boundaries": true,
+      "two_minimum_to_minimum_successor_is_valid": true,
+      "valid_TDG6_retry_is_replanned_through_TDG7": true
+    }
+  },
+  "classification": "authorized_TDG7_stage_safe_runtime_repair_implemented_and_synthetically_qualified_without_history_execution",
+  "derivation_document": "docs/fgc-tdg7-imp3.md",
+  "derivation_document_sha256": "7d2cf4027e00443d8531b1c53c0426772fb48cd253c383e5b4b52126c383469c",
+  "gate_status": {
+    "CAL11_terminal_invalid_runtime_result_preserved": true,
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "GR0_case_eligible": false,
+    "PROTO14_runtime_mutation_authorized": false,
+    "PROTO14_terminal_checkpoint_may_resume": false,
+    "SGBL_execution_authorized": false,
+    "TDG6_threshold_and_all_of_admission_unchanged": true,
+    "TDG7_independent_binder_completed": true,
+    "TDG7_runtime_repair_implementation_authorized": true,
+    "TDG7_runtime_repair_implemented": true,
+    "TDG7_runtime_repair_synthetic_qualification_passed": true,
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "fresh_replacement_protocol_frozen": false,
+    "fresh_vs_retry_protocol_discriminator_implemented": false,
+    "future_protocol_cursor_required_before_calibration": true,
+    "new_output_namespace_authorized": false,
+    "new_protocol_authorized": false,
+    "one_shared_stage_safe_plan_owns_all_paths": true,
+    "physical_or_cosmological_claim_derived": false,
+    "physical_transition_claim_authorized": false,
+    "replacement_protocol_freeze_design_authorized": true,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "stateless_adapter_cannot_detect_discarded_external_retry": true,
+    "typed_lattice_stops_precede_work": true,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_tdg7_imp3.py",
+  "implementation_sha256": {
+    "configs/fgc/fgc-1-tdg7-imp3.toml": "1c989c6e698e40a3237931508b558fe1c8528316e35e8c29c8fc0e2e320c85e8",
+    "docs/fgc-tdg7-imp3.md": "7d2cf4027e00443d8531b1c53c0426772fb48cd253c383e5b4b52126c383469c",
+    "scripts/reproduce_fgc_tdg7_imp3.py": "6df59754204f759e3d71f23da60abf41395791df01ad5e725f2f21a14d8779dd",
+    "src/recursive_horizons/fgc/evolution/tdg7_stage_safe_runtime.py": "751ceb0e209d65ee9e215188326cd20add7a189730b2fadbe1974bcb0d0150a1",
+    "tests/test_fgc_tdg7_stage_safe_runtime.py": "2665b88f3549739fc97f1d838d82abacb3da0b52cbfa7497f02b14f06724e929"
+  },
+  "metric_signature": "-+++",
+  "nonclaims": {
+    "DEF1_execution_authorized": false,
+    "FGCQR_holdout_execution_authorized": false,
+    "GR0_case_eligible": false,
+    "PROTO14_runtime_mutation_authorized": false,
+    "PROTO14_terminal_checkpoint_may_resume": false,
+    "SGBL_execution_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "dark_sector_mechanism_derived": false,
+    "fresh_GR0_calibration_authorized": false,
+    "fresh_GR0_dynamic_calibration_completed": false,
+    "fresh_replacement_protocol_frozen": false,
+    "fresh_vs_retry_protocol_discriminator_implemented": false,
+    "new_output_namespace_authorized": false,
+    "new_protocol_authorized": false,
+    "physical_or_cosmological_claim_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "project_version": "0.11.0",
+  "riemann_convention": "plus_partial_mu_gamma_nu",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-tdg7-imp3.toml": "1c989c6e698e40a3237931508b558fe1c8528316e35e8c29c8fc0e2e320c85e8"
+  }
+}

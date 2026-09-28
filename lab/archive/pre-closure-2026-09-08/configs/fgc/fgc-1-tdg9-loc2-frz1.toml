@@ -1,0 +1,126 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG9-LOC2-FRZ1"
+classification = "premise_only_scale_invariant_independent_localization_authority"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO18"
+owner_document = "docs/fgc-tdg9-loc2-frz1.md"
+output_namespace = "runs/fgc-2-sf1/tdg9-loc2/rcv3-retries-3-5"
+
+[predecessor]
+commit = "14e26c43edbc88003d68cbcf24681bb090d98534"
+ERR1_result_path = "results/fgc-1-tdg9-loc1-err1.json"
+ERR1_result_sha256 = "07f85b3692b22235380965a9cd6656f1dbdb4948386956d4769a58ea45ef0890"
+ERR1_reproducer_path = "scripts/reproduce_fgc_tdg9_loc1_err1.py"
+ERR1_reproducer_sha256 = "7ad83e4ce8797f3ea88109259c252ecb1e602a1e52dbe03d6dfbdf63b8b18cfd"
+sealed_store_leaf_count = 115
+sealed_store_snapshot_sha256 = "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+
+[implementation]
+evaluator_path = "src/recursive_horizons/fgc/evolution/tdg9_local_extrema_independent_v2.py"
+evaluator_sha256 = "750c38bb6bad4b37d946f66708055f3dc0835c807244e9c25c6e87e4e87e0511"
+evaluator_id = "tdg9_loc2_endpoint_deflated_adaptive_discriminant_v2"
+runner_path = "scripts/run_fgc_tdg9_loc2.py"
+runner_sha256 = "e3ad84f818fe33afce707bcbec1e21a99e0892b3d924536549e0ead740351122"
+initial_refinement_bits = 192
+refinement_schedule = "doubling_plus_exact_proof_cap"
+proof_bit_formula = "2*h+8"
+global_proof_bit_ceiling = 9216
+typed_root_stops = [
+  "root_proof_cap_exceeded",
+  "root_location_inconclusive",
+  "root_separation_inconclusive",
+  "root_count_invariant_failure",
+]
+boundary_clipping_authorized = false
+
+[selection]
+method = "RK4"
+member_key = "RK4-2049"
+point_count = 2049
+owned_row_count = 2044
+grid_spacing_hex = "0x1.0000000000000p-4"
+outer_radius_hex = "0x1.0000000000000p+7"
+retries = [3, 4, 5]
+failed_occurrences = [
+  { retry = 3, channel = "u:alpha" },
+  { retry = 3, channel = "u:R" },
+  { retry = 4, channel = "u:alpha" },
+  { retry = 4, channel = "u:lambda" },
+  { retry = 4, channel = "u:R" },
+  { retry = 5, channel = "u:alpha" },
+  { retry = 5, channel = "u:v" },
+  { retry = 5, channel = "u:lambda" },
+  { retry = 5, channel = "u:R" },
+  { retry = 5, channel = "q:R" },
+]
+
+[work_budget]
+base_cubic_count = 122640
+component_cubic_count = 367920
+value_V_cubic_count = 122640
+slope_S_cubic_count = 122640
+complete_C_cubic_count = 122640
+family_candidate_ceiling = 490560
+aggregate_candidate_ceiling = 1471680
+primary_refinement_depth = 160
+
+[coefficient_depth_audit]
+maximum_proof_owner = [3, "u:alpha", "D12", "complete_C", 458]
+initial_refinement_bits = 192
+refinement_schedule = "doubling_plus_exact_proof_cap"
+global_proof_bit_ceiling = 9216
+all_proof_caps_within_global_ceiling = true
+localization_executed = false
+
+[coefficient_depth_audit.counts]
+base_cubics = 122640
+component_cubics = 367920
+endpoint_deflated = 278706
+positive_rational_square = 278706
+positive_nonsquare = 89207
+negative_discriminant = 7
+zero_discriminant = 0
+
+[coefficient_depth_audit.maxima]
+coefficient_numerator_bits = 95
+coefficient_denominator_bits = 427
+derivative_numerator_bits = 96
+derivative_denominator_bits = 427
+discriminant_numerator_bits = 190
+discriminant_denominator_bits = 851
+primitive_height_bits = 96
+proof_bits = 200
+
+[environment]
+python_implementation = "CPython"
+python_version = "3.14.3"
+numpy_version = "2.5.1"
+system = "Darwin"
+sys_platform = "darwin"
+machine = "arm64"
+byteorder = "little"
+
+[scope]
+live_store_read_only = true
+compact_verifier_store_blind = true
+historical_threshold_changed = false
+ULP_used_as_tolerance = false
+fourth_width_authorized = false
+stage2_source_decomposition_authorized = false
+SSPRK3_comparator_authorized = false
+campaign_store_mutation_authorized = false
+PDE_state_commit_authorized = false
+continuation_authorized = false
+candidate_branches_authorized = false
+mechanism_result_authorized = false
+physical_result_authorized = false
+
+[claims]
+ERR1_diagnosis_bound = true
+LOC2_execution_authorized = true
+LOC2_result_earned = false
+common_event_completed = false
+GR0_calibration_completed = false
+candidate_execution_authorized = false
+mechanism_result_earned = false
+physical_result_earned = false

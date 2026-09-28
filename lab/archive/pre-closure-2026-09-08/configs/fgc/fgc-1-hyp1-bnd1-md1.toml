@@ -1,0 +1,49 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-BND1-MD1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+uniform_domain_config = "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml"
+uniform_domain_result = "results/fgc-1-hyp1-dom3-uhyp1.json"
+metric_subsidiary_config = "configs/fgc/fgc-1-hyp1-con2-mprop1.toml"
+metric_subsidiary_result = "results/fgc-1-hyp1-con2-mprop1.json"
+first_order_config = "configs/fgc/fgc-1-hyp1-fo1-rc1.toml"
+first_order_result = "results/fgc-1-hyp1-fo1-rc1.json"
+
+[boundary]
+spatial_domain = "finite_spherical_annulus"
+inner_outward_normal = "-partial_r"
+outer_outward_normal = "+partial_r"
+operator = "homogeneous_incoming_modal_absorption"
+expected_inner_incoming_propagating_modes = 6
+expected_outer_incoming_propagating_modes = 6
+expected_zero_speed_u_variables = 6
+conditions_on_zero_speed_u_variables = 0
+
+[proof_contract]
+same_compact_REF1_branch_graph_as_UHYP1 = true
+strict_interval_speed_sign_classification = true
+exact_incoming_selector_rank = true
+exact_modal_energy_flux_identity = true
+normalized_modal_Lopatinski_identity = true
+uniform_propagating_symmetrizer_coercivity = true
+complete_kinematic_reduction_subsidiary_consumed = true
+zero_incoming_kinematic_reduction_constraint_fields = true
+frozen_1plus1_principal_main_system_only = true
+exact_rational_arithmetic_only = true
+
+[open_gates]
+complete_nonlinear_lower_order_first_order_sources_derived = false
+quasilinear_local_existence_or_IBVP_proven = false
+metric_derived_gauge_constraint_boundary_map_proven = false
+physical_Hamiltonian_momentum_constraint_boundary_map_proven = false
+constraint_preserving_ACT1_IBVP_proven = false
+initial_boundary_corner_compatibility_constructed = false
+regular_center_or_asymptotic_boundary_treatment_proven = false
+multidirectional_boundary_stability_proven = false
+retained_EFT_domain_proven = false
+evolution_authorized = false
+collapse_solution_derived = false
+metric_null_affine_defocusing_derived = false
+finite_invariant_transition_surface_derived = false
+singularity_resolution_derived = false

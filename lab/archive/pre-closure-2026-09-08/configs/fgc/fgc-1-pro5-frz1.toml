@@ -1,0 +1,57 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO5-FRZ1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v5.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO5"
+predecessor_protocol = "FGC-2-SF1-PROTO4"
+diagnosis_artifact = "FGC-1-CAL1-PREF3"
+calibration_branch = "GR-0"
+holdout_branch = "FGC-QR"
+freeze_role = "premise_only_pre_trajectory_semidiscrete_protocol_and_lineage_certificate"
+initial_common_event_diagnostics_disclosed = true
+fresh_GR0_calibration_trajectory_inspected = false
+FGCQR_evolution_outcomes_inspected = false
+SGBL_evolution_outcomes_inspected = false
+
+[immutable_lineage]
+checkpoint_commit = "0781d7d218e9c129858b134c3181fad07ac692b0"
+predecessor_protocol_config = "configs/fgc/fgc-2-sf1-protocol-v4.toml"
+predecessor_protocol_sha256 = "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a"
+diagnosis_config = "configs/fgc/fgc-1-cal1-pref3.toml"
+diagnosis_config_sha256 = "514861c679272cd182da9674e7640734a427c0349157c03f0899cbe439b475ff"
+diagnosis_result = "results/fgc-1-cal1-pref3.json"
+diagnosis_result_sha256 = "3ea43baf0fb9830b348fc49a79af5c535d8f7089aa03a957a22f6927528a4395"
+
+[proof_contract]
+PROTO5_overlay_must_validate_exactly = true
+checkpoint_must_be_ancestor_of_HEAD = true
+predecessor_and_diagnosis_must_be_read_from_checkpoint = true
+immutable_blob_hashes_must_match_PROTO5_amendment = true
+immutable_PROTO4_must_validate_unchanged = true
+immutable_CAL1_must_be_canonical_and_premise_only = true
+physical_experiment_and_outcome_rules_must_be_inherited = true
+only_q_may_be_projected_and_u_p_must_be_bitwise_preserved = true
+raw_residuals_must_decide_magnitude_guards = true
+roundoff_enclosure_must_be_public_nonnegative_and_zero_classification_only = true
+method_owned_guards_and_finest_pair_rule_must_be_frozen = true
+new_output_namespaces_must_be_declared_but_not_accessed = true
+canonical_hash_bound_result_required = true
+
+[claims]
+PROTO5_successor_runtime_compositor_implemented = false
+PROTO5_fresh_GR0_dynamic_calibration_authorized = false
+PROTO5_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

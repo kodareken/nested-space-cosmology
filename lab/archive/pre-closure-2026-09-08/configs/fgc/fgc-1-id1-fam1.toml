@@ -1,0 +1,150 @@
+schema_version = 1
+artifact_id = "FGC-1-ID1-FAM1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+reference_config = "configs/fgc/fgc-1-hyp1-mhg-reference.toml"
+reference_result = "results/fgc-1-hyp1-mhg-reference.json"
+physical_constraints_config = "configs/fgc/fgc-1-con4-phy1.toml"
+physical_constraints_result = "results/fgc-1-con4-phy1.json"
+regular_center_config = "configs/fgc/fgc-1-ctr1-reg1.toml"
+regular_center_result = "results/fgc-1-ctr1-reg1.json"
+protocol_preflight_config = "configs/fgc/fgc-1-id0-pref1.toml"
+protocol_preflight_result = "results/fgc-1-id0-pref1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+initial_slice = "unit_lapse_zero_shift_maximal_polar_areal"
+areal_radius = "R=r"
+extrinsic_curvature_eigenvalues = ["K^r_r=-2*k", "K^theta_theta=k", "K^phi_phi=k"]
+reference_id = "flat_spherical_reference_with_Ct_Cr_solved_on_the_annular_support"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+regular_center_is_exact_vacuum_buffer = true
+asymptotic_end_is_exact_finite_mass_vacuum = true
+constraint_family_is_initial_data_not_evolution = true
+FGCQR_holdout_outcomes_inspected = false
+
+[action]
+planck_mass = "2"
+beta = "-1/4"
+scalar_mass = "3"
+quartic_coupling = "1/2"
+eta = "1/2"
+
+[profiles]
+chi_profile = "r_times_chi=amplitude*B((r-center)/half_width)"
+chi_momentum = "partial_t(r*chi)=partial_r(r*chi)"
+chi_center = "12"
+phi_profile = "phi=amplitude*B((r-center)/half_width)"
+phi_half_width = "2"
+phi_unit_normal_momentum = "0"
+outer_radius = "128"
+minimum_center_buffer = "10"
+minimum_outer_vacuum_buffer = "32"
+
+[family_box]
+chi_amplitude_minimum = "2"
+chi_amplitude_maximum = "9/4"
+chi_amplitude_nodes = ["2", "17/8", "9/4"]
+chi_half_width_minimum = "15/8"
+chi_half_width_maximum = "2"
+chi_half_width_nodes = ["15/8", "31/16", "2"]
+phi_seed_base_amplitude = "1/131072"
+phi_seed_factor_minimum = "1/2"
+phi_seed_factor_maximum = "2"
+phi_seed_factor_nodes = ["1/2", "1", "2"]
+physical_parameter_volume = "3/8388608"
+sampled_tensor_grid_size = 27
+sampled_tensor_grid_is_not_a_global_interval_enclosure = true
+positive_local_family_uses_ODE_continuous_dependence = true
+qualification_box_does_not_cover_PROTO3_width_nine_eighths_case = true
+
+[continuation]
+central_chi_amplitude = "2"
+central_chi_half_width = "2"
+phi_seed_factors_from_GR0 = ["0", "1/4", "1/2", "3/4", "1"]
+zero_seed_is_GR0_constraint_start = true
+nonzero_seed_is_required_for_certified_FGCQR_members = true
+branch_continuity_requires_all_stages = true
+
+[numerics]
+methods = ["RK4", "SSPRK3"]
+nested_step_counts = [64, 128, 256]
+report_step_count = 2048
+minimum_RK4_common_grid_profile_order = "3"
+minimum_SSPRK3_common_grid_profile_order = "5/2"
+maximum_cross_method_outer_mass_difference = "1/100000000"
+maximum_cross_method_peak_compactness_difference = "1/100000000"
+maximum_constraint_residual_infinity = "1/1000000000000"
+minimum_abs_constraint_jacobian_determinant = "3"
+maximum_constraint_jacobian_condition_infinity = "20"
+minimum_effective_planck_coefficient = "39/10"
+minimum_vacuum_metric_denominator = "1/2"
+minimum_peak_compactness = "1/10"
+maximum_peak_compactness = "3/4"
+require_no_initial_trapped_sphere = true
+
+[exact_controls.fixture_A]
+radius = "5/2"
+radial_metric = "4/3"
+angular_extrinsic_curvature = "1/17"
+radial_metric_derivative = "-1/19"
+angular_extrinsic_curvature_derivative = "1/23"
+phi = "1/29"
+phi_r = "-1/31"
+phi_rr = "1/37"
+phi_pi = "1/41"
+phi_pi_r = "-1/43"
+chi = "-1/47"
+chi_r = "1/53"
+chi_rr = "-1/59"
+chi_pi = "-1/61"
+chi_pi_r = "1/67"
+
+[exact_controls.fixture_B]
+radius = "11/3"
+radial_metric = "7/6"
+angular_extrinsic_curvature = "-2/19"
+radial_metric_derivative = "3/29"
+angular_extrinsic_curvature_derivative = "-1/31"
+phi = "-2/37"
+phi_r = "1/41"
+phi_rr = "-1/43"
+phi_pi = "-1/47"
+phi_pi_r = "1/53"
+chi = "3/59"
+chi_r = "-2/61"
+chi_rr = "1/67"
+chi_pi = "1/71"
+chi_pi_r = "-1/73"
+
+[proof_contract]
+complete_unredefined_constraints_specialized = true
+two_exact_rational_full_tensor_crosschecks_required = true
+affine_radial_constraint_Jacobian_derived = true
+direct_constraint_solve_used_instead_of_generic_optimizer = true
+physical_Hamiltonian_and_momentum_constraints_solved = true
+metric_defined_gauge_Ct_and_Cr_solved = true
+normal_gauge_propagation_remains_conditional_on_CON4 = true
+regular_center_and_exact_vacuum_exterior_required = true
+independent_RK4_and_SSPRK3_methods_required = true
+nonzero_width_three_axis_family_required = true
+typed_continuation_failures_required = true
+canonical_hash_bound_result_required = true
+no_evolution_or_holdout_execution = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

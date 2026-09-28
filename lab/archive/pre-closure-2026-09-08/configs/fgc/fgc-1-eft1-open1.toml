@@ -1,0 +1,32 @@
+schema_version = 1
+artifact_id = "FGC-1-EFT1-OPEN1"
+project_version = "0.11.0"
+eft0_config = "configs/fgc/fgc-1-eft0-led1.toml"
+eft0_result = "results/fgc-1-eft0-led1.json"
+uhyp1_config = "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml"
+uhyp1_result = "results/fgc-1-hyp1-dom3-uhyp1.json"
+bnd1_config = "configs/fgc/fgc-1-hyp1-bnd1-md1.toml"
+bnd1_result = "results/fgc-1-hyp1-bnd1-md1.json"
+con3_config = "configs/fgc/fgc-1-hyp1-con3-cau1.toml"
+con3_result = "results/fgc-1-hyp1-con3-cau1.json"
+
+[authorization_contract]
+all_required_predicates_must_pass = true
+one_false_predicate_stops_the_run = true
+local_component_bounds_are_not_frequency_bounds = true
+radial_hyperbolicity_is_not_multidirectional_hyperbolicity = true
+frozen_main_boundary_dissipation_is_not_constraint_preserving_IBVP = true
+conditional_Cauchy_uniqueness_is_not_solution_existence = true
+
+[claims]
+complete_Wilsonian_EFT_defined = false
+UV_completion_derived = false
+radiative_stability_proven = false
+retained_EFT_open_run_envelope_proven = false
+constraint_complete_IBVP_proven = false
+initial_data_constructed = false
+evolution_authorized = false
+collapse_solution_derived = false
+affine_null_defocusing_derived = false
+finite_invariant_transition_surface_derived = false
+singularity_resolution_derived = false

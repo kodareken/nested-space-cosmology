@@ -1,0 +1,76 @@
+schema_version = 1
+artifact_id = "FGC-1-HYP1-SYM1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+reduction_config = "configs/fgc/fgc-1-hyp1-reduction.toml"
+
+[symbol]
+covector = "xi_A=(-c,1)"
+base_field_order = ["h_tt", "h_tr", "h_rr", "areal_radius", "phi", "chi"]
+equation_order = ["metric_tt", "metric_tr", "metric_rr", "metric_theta_theta", "scalar_phi", "scalar_chi"]
+right_gauge_generator_order = ["X_t", "X_r"]
+left_bianchi_generator_order = ["b=t", "b=r"]
+quotient_variable_order = ["h_tt_representative", "areal_radius", "phi", "chi"]
+quotient_rr_equation_order = ["metric_rr", "metric_theta_theta", "scalar_phi", "scalar_chi"]
+quotient_tt_equation_order = ["metric_tt", "metric_theta_theta", "scalar_phi", "scalar_chi"]
+metric_elimination_variable_order = ["h_tt_representative", "areal_radius"]
+scalar_order = ["phi", "chi"]
+metric_patch_singularity = "c=-shift"
+alternate_metric_patch = "metric_tt_row_covers_c_equals_minus_shift"
+physical_metric = "g_ab_matter_coupled_metric"
+equation_modification = "none_unredefined_covariant_equations"
+
+[adm_preflight]
+chart = "generalized_radial_adm_dynamic_lambda_dynamic_areal_radius"
+normal_derivative = "partial_perp=partial_t-shift*partial_r"
+extrinsic_curvature_sign = "K_ij=-one_half_L_n_gamma_ij"
+normal_variable_order = ["A_perp", "A_r", "L_r", "B_perp", "B_r", "S_r", "P_phi_perp", "P_phi_r", "Q_phi_r", "P_chi_perp", "P_chi_r", "Q_chi_r"]
+candidate_constraint_order = ["E_nn", "E_ns"]
+evolution_projection_order = ["E_ss", "E_theta_theta", "E_phi", "E_chi"]
+kinetic_variable_order = ["A_perp", "B_perp", "P_phi_perp", "P_chi_perp"]
+gauge_source_second_jet_order = ["alpha.dtt", "alpha.dtr", "alpha.drr", "shift.dtt", "shift.dtr", "shift.drr"]
+naive_comparator = "prescribed_lapse_shift_unconstrained_dynamic_R_first_order_reduction"
+
+[proof_contract]
+rational_encoding = "canonical_fraction_string_numerator_over_denominator"
+fixture_ids = ["GR0_regular", "SGBL_constant_f", "FGCQR_schwarzschild_exterior", "FGCQR_activated_generic"]
+branch_order = ["GR-0", "SGB-L", "FGC-QR", "FGC-QR"]
+require_exact_right_gauge_null_identity = true
+require_exact_left_bianchi_null_identity = true
+require_metric_block_patch_factor = true
+require_metric_block_invertible_at_physical_roots = true
+require_chi_metric_null_factor = true
+require_quadratic_regulator_factor = true
+require_positive_pointwise_discriminants = true
+require_positive_exact_scalar_companion_symmetrizers = true
+require_candidate_constraints_free_of_normal_accelerations = true
+require_candidate_constraints_free_of_gauge_source_second_jets = true
+require_nonzero_pointwise_metric_phi_kinetic_determinant = true
+require_naive_gr_comparator_rejected = true
+
+[[fixture_expectations]]
+fixture_id = "GR0_regular"
+branch = "GR-0"
+regulator_factor_relation = "proportional_to_metric_null"
+regulator_cone_distinct_from_metric = false
+
+[[fixture_expectations]]
+fixture_id = "SGBL_constant_f"
+branch = "SGB-L"
+regulator_factor_relation = "proportional_to_metric_null"
+regulator_cone_distinct_from_metric = false
+
+[[fixture_expectations]]
+fixture_id = "FGCQR_schwarzschild_exterior"
+branch = "FGC-QR"
+regulator_factor_relation = "proportional_to_metric_null"
+regulator_cone_distinct_from_metric = false
+
+[[fixture_expectations]]
+fixture_id = "FGCQR_activated_generic"
+branch = "FGC-QR"
+regulator_factor_relation = "not_proportional_to_metric_null"
+regulator_cone_distinct_from_metric = true

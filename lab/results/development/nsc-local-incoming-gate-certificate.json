@@ -1,0 +1,46 @@
+{
+  "accountable_author": "Douglas Ek",
+  "class": "delta r = chi(s)[s w(z) + s^3 U(z)/6]",
+  "epsilons": {
+    "arithmetic": null,
+    "baseline_low_subgap": null,
+    "between_node": null,
+    "changed_history_UV_tail": null,
+    "covered_regions": null,
+    "energy_interpolation": null,
+    "field_space_time": null,
+    "phase_value": null,
+    "upstream": null
+  },
+  "input_hashes": {
+    "results/development/nsc-ks-gate-budget-feasibility.json": "343bf645fc86df6c032495bff749ca6ea5045e14d4255c63b75c9ce47afdd6e4",
+    "results/development/nsc-ks-gate-reanchor.json": "d89ab134c33aead5660eeeeb49762a0086d279a3e2e02d8660a80b5ff139e58a",
+    "results/development/nsc-ks-gate-search-stall.json": "5f59d3bbfce55c0dd48dd2ac4e2b4492e45b7bd2901498f41913c28ad1eb0436"
+  },
+  "interval": "S(1)+[0.12,0.18]",
+  "merit": 0.0005881485884118953,
+  "mutations_cannot_pass": [
+    "drop-delta-C",
+    "drop-coherence",
+    "double-weights",
+    "k=-E",
+    "drop-minus-E-sector"
+  ],
+  "named_gap": "value_only_indicator_floor_above_1e-10",
+  "nodal_constraint_maxima": [
+    0.0005881485884118953,
+    8.324749011222668e-05
+  ],
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "profile_identity": "a9572341fe01e157cb0d9e2176e022e49277304f560a40ec73231ae3825e4508",
+  "schema": "NSC-LOCAL-INCOMING-GATE-CERTIFICATE-v1",
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-certificate.md": "52bcfb45a10858294fae818b15d4211285e77450a55e9943f1452b0e6619e581",
+    "scripts/derive_nsc_local_incoming_gate_certificate.py": "442396b4fe0d3e32eed665e3a2652ea120da40a9e0d266cbd07de9e08d231ff0"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020",
+  "status": "OPEN: certificate blocked; merit and epsilons miss 3e-11",
+  "tolerance": 3e-11,
+  "verdict": "OPEN"
+}

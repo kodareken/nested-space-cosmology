@@ -1,0 +1,60 @@
+schema_version = 1
+artifact_id = "FGC-1-DEF1-STAB1-FRZ1"
+classification = "candidate_blind_conversion_error_map_instrument_freeze_no_trajectory"
+project_version = "0.11.0"
+base_commit = "c4feb941e408a7c72913b49071801b7531183c1a"
+owner_document = "docs/fgc-def1-stab1-frz1.md"
+predecessor_artifact_id = "FGC-1-DEF1-STAB1"
+pref1_artifact_id = "FGC-1-DEF1-STAB1-PREF1"
+freeze_contract_payload_sha256 = "589a8897a8aa4c43daeee6d6e29f8385061bf34a954eff957cc2796c0ab6486c"
+conversion_instrument_contract_complete = true
+def1_error_map_passed = false
+def1_booleans_evaluated = false
+candidate_or_control_trajectory_read = false
+global_pde_error_certified = false
+rob1_passed = false
+holdout_authorized = false
+physical_claimed = false
+pref1_implemented = false
+def1_boolean_names = ["resolved_activation","control_dominance","resolved_trapped_interval","resolved_complete_defocusing","direct_Raychaudhuri_agreement","all_health_constraints_scales_valid","mass_flux_ledger_valid","three_resolution_convergence","two_method_agreement"]
+error_budget_component_order = ["spatial_temporal","physical_constraint","gauge_constraint","reduction_constraint","initial_data","nonlinear_source","affine","nullness","trajectory_alignment","interpolation","extraction","boundary","conservation","arithmetic"]
+
+[owner_hashes]
+"src/recursive_horizons/fgc/def1_stab1.py" = "7f51be0fd4b16ad1aac61596e9a5fa4ec99c29a1bf403e82aeb205f287b4e0d6"
+"src/recursive_horizons/fgc/def1_geometry_error.py" = "0bc0bd22d0beb946ce7ddae04b71e721e305cbe0e83c18aa274c815f6e1d7025"
+"src/recursive_horizons/fgc/def1_stab1_providers.py" = "1fe193fe9f37c5b5ed591cb382934d476972df94ecd83eb7e4ce055c7659cfe4"
+"src/recursive_horizons/fgc/def1_stab1_qualification.py" = "185054a64134bc9870e6232e73d3f7365c7e91e26ac766d8eefd3eee48bbcb16"
+
+[conversion_identity_hashes]
+"red1_mhg2_equation_order_identity" = "f048eebfe088af748d3e29d4558ae94493867130c6c1d8d2c2ef70b78e93f1cf"
+"fo1_adm_26_input_geometry_slot" = "c195b7d6fe6a2f3d0c9a0cb36fb9449cdbf8bbe78279e1f30d5ab0c9ba99b708"
+"base_to_adm_two_jet_inverse" = "e798f81a2b6882b544a8ed3e6d390f1d9594b95f422db43797333965bae34892"
+"imp1_18_channel_to_q" = "2aff672033947f86ac002da5e19cfbff4948e0b5852ab721c5124cd2104218a4"
+"def1_14_component_route_coverage" = "07c32a2085617a414454271b567aa900968a4f222676a10664dbc1b2cc232092"
+
+[claims]
+"conversion_instrument_contract_complete" = true
+"directly_exercised_conversion_identities" = true
+"directly_exercised_provider_route_coverage" = true
+"directly_exercised_q_error_assembly" = true
+"directly_exercised_misner_sharp_enclosure" = true
+"directly_exercised_activation_controls" = true
+"directly_exercised_trappedness_and_complete_q_margins" = true
+"directly_exercised_base_to_adm_roundtrip" = true
+"directly_exercised_imp1_to_q_debit" = true
+"licenses_separate_independent_pref1_binder" = true
+"def1_error_map_passed" = false
+"def1_booleans_evaluated" = false
+"candidate_or_control_trajectory_read" = false
+"global_pde_error_certified" = false
+"used_measured_q" = false
+"richardson_treated_as_global_pde_error" = false
+"imp1_admission_debit_treated_as_global_pde_error" = false
+"rob1_passed" = false
+"holdout_authorized" = false
+"physical_claimed" = false
+"mechanism_claimed" = false
+"pref1_implemented" = false
+"universal_pde_theorem" = false
+"fitted_threshold" = false
+"measured_q_dependent_error_shrinkage" = false

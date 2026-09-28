@@ -1,0 +1,40 @@
+{
+  "accountable_author": "Douglas Ek",
+  "components": [
+    "N",
+    "beta"
+  ],
+  "drift_subtracted_as_physics": false,
+  "families_evolved": 0,
+  "indicator_not_a_bound": true,
+  "input_directories": [
+    "results/development/artifacts/nsc-ks-coupled-newton-n32-truncated-iterate6",
+    "results/development/artifacts/nsc-ks-coupled-newton-n64-high-modes"
+  ],
+  "named_gap": "value_only_evaluator_then_numerical_floor",
+  "node_count": 47,
+  "per_family_relative": {
+    "maximum": [
+      0.004068431732078137,
+      5.731492080672437e-08
+    ],
+    "median": [
+      2.6060179339744686e-05,
+      1.7359777619685798e-09
+    ]
+  },
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "positive_families": 60,
+  "profile_identity": "b4b53f0bba7290cfde14af741c82fda9af1b49a13f7a3b207a7230f39ea106e9",
+  "schema": "NSC-KS-GATE-RULER-DRIFT-v1",
+  "source_hashes": {
+    "docs/nsc-ks-gate-ruler-drift.md": "b4999c04657762b17e5807896081e557fae72c771227d42e828f52aac3b8c3e7",
+    "scripts/derive_nsc_ks_gate_ruler_drift.py": "4e0081fb2095a320eb173507d2fa227e816a55ed6ec0289e66956c9cbf422b25"
+  },
+  "status": "OPEN: same-history matter sums differ by 5.78e-5 in N; N below that scale is not reproducible on these numerics",
+  "sum_difference_max_abs": [
+    5.784441548212227e-05,
+    1.2840968566241173e-10
+  ]
+}

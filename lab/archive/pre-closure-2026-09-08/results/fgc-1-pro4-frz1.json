@@ -1,0 +1,202 @@
+{
+  "artifact_id": "FGC-1-PRO4-FRZ1",
+  "artifact_payload": {
+    "epistemic_boundary": {
+      "FGCQR_action_or_mechanism_rejected": false,
+      "FGCQR_action_or_mechanism_tested": false,
+      "FGCQR_evolution_outcome_inspected": false,
+      "GR0_exploratory_outcomes_were_seen_before_freeze": true,
+      "GR0_exploratory_runs_admissible_as_calibration_evidence": false,
+      "HLT2_monitor_implemented": false,
+      "SGBL_evolution_outcome_inspected": false,
+      "collapse_or_trapped_interval_derived": false,
+      "fresh_primary_and_comparator_calibration_runs_required": true,
+      "general_gradient_route_rejected": false,
+      "regulator_activation_or_defocusing_tested": false,
+      "resolved_holdout_manifest_constructed": false
+    },
+    "immutable_lineage": {
+      "checkpoint_commit": "b5aa4934b58afd505b22e008202285c475942892",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "diagnosis": {
+        "FGCQR_outcome_inspected": false,
+        "PROTO3_obstruction_verified": true,
+        "SGBL_outcome_inspected": false,
+        "artifact_id": "FGC-1-CAL0-PREF2",
+        "blob_sha256": "d952e737d22d63b33e8d87e366538925bd28acbf82a3062563de49867a229138",
+        "classification": "pre_holdout_protocol_numerical_contract_obstruction",
+        "premise_revision_required": true
+      },
+      "predecessor_protocol": {
+        "artifact_id": "FGC-2-SF1-PROTO3",
+        "blob_sha256": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b",
+        "protocol_version": 3,
+        "semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee"
+      }
+    },
+    "inherited_physical_contract": {
+      "action_couplings_profiles_and_equations_changed": false,
+      "immutable_case_coordinates": {
+        "amplitude_candidates": [
+          "2",
+          "5/2",
+          "3",
+          "7/2",
+          "4",
+          "9/2",
+          "5"
+        ],
+        "held_out_case_ids": [
+          "FGCQR-CENTRAL",
+          "FGCQR-SEED-HALF",
+          "FGCQR-SEED-DOUBLE",
+          "FGCQR-WIDTH-SEVEN-EIGHTHS",
+          "FGCQR-WIDTH-NINE-EIGHTHS"
+        ],
+        "held_out_chi_width_factors": [
+          "1",
+          "7/8",
+          "9/8"
+        ],
+        "held_out_phi_seed_factors": [
+          "1",
+          "1/2",
+          "2"
+        ]
+      },
+      "inheritance_is_by_exact_PROTO3_blob_hash": true,
+      "null_observable_outcome_rules_and_robustness_changed": false,
+      "section_semantic_sha256": {
+        "action": "e90829055695a2783c1938a4f71f2fcc8bb76899737f50ce6166137456583585",
+        "analysis": "965391df650a512e9f67147eb107ea091983a7758aea351beebbe969573a5f00",
+        "classification": "10f137142c567e56960cfe64c115c02cf92246061ddbe64459f82a543ec317af",
+        "dimensionless_parameters": "4a64c81093a7d9a94d57c0b01ddcd4304a0b244d00230fa3af41df20f1da8ea4",
+        "gauge": "b2f71e131f9a14749355c6301a9db1f69a87153fd5e75a181d01aa6af8714310",
+        "initial_data": "a41a5f1257ad5153daf2fe8f058a2086f23c211f731214c5c86e47e675a560eb",
+        "negative_scope": "272ecce6ab78e28eca50c1985716681b0086498115fd02f8d54a43169c8a26b0",
+        "numerics": "837d1231a682df6d585f45efc392090ad9f1f4b9393bd71cca1d54903c613a71",
+        "revision_policy": "1b9cc9e801271e964b796dc2306ff8c38af7b62203ecc0d7355e1e5e1340f610",
+        "robustness": "1997ff9cff05389fb7895dcd88bc7de025d2eb5fba2e258a7dd02a3cc5812ec2"
+      }
+    },
+    "namespace_contract": {
+      "calibration_output_root": "runs/fgc-2-sf1/proto4/calibration",
+      "emptiness_must_be_proved_by_future_manifest_before_first_run": true,
+      "holdout_output_root": "runs/fgc-2-sf1/proto4/holdout",
+      "output_namespace_contents_accessed_by_this_certificate": false,
+      "resolved_holdout_manifest": "configs/fgc/fgc-1-pro4-hld1.toml"
+    },
+    "numerical_contract_revision": {
+      "Richardson_error_enters_conservative_observable_error_sum": true,
+      "calibration_admission_semantic_sha256": "8c9c138d82d7b9381bbe26e2aaae6eb065bb9ab5113d9186d8f6f76b5d329a36",
+      "candidate_branch_only_stop_count": 11,
+      "constraint_admission_semantic_sha256": "74b26af124ae5a2b3ce39a360a9b9379b344f3312acc61fe8ab95f9a292757d9",
+      "last_bin_boolean_is_diagnostic_only": true,
+      "legacy_stop_count": 26,
+      "partition_is_exact_and_disjoint": true,
+      "replaced_stop_count": 6,
+      "spectral_admission_semantic_sha256": "b5a84c65ac16ca9d6fb7d2c06232a19d1ee32896c395236695abfe986d3b44d2",
+      "three_nested_common_event_admission_required": true,
+      "universal_runtime_stop_count": 9
+    },
+    "protocol_certificate": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "GR0_exploratory_outcomes_disclosed": true,
+      "SGBL_outcomes_inspected_before_revision": false,
+      "amplitude_candidates": [
+        "2",
+        "5/2",
+        "3",
+        "7/2",
+        "4",
+        "9/2",
+        "5"
+      ],
+      "artifact_id": "FGC-2-SF1-PROTO4",
+      "branch_specific_stop_partition_validated": true,
+      "calibration_output_root": "runs/fgc-2-sf1/proto4/calibration",
+      "claims": {
+        "FGCQR_holdout_execution_authorized": false,
+        "child_domain_or_topology_derived": false,
+        "classical_spherical_diagnostic_authorized": false,
+        "dark_sector_mechanism_derived": false,
+        "physical_transition_claim_authorized": false,
+        "retained_EFT_evolution_authorized": false,
+        "singularity_resolution_derived": false,
+        "varying_locally_measured_c_derived": false
+      },
+      "common_event_constraint_admission_validated": true,
+      "development_runs_forbidden_as_calibration_evidence": true,
+      "diagnosis_artifact_id": "FGC-1-CAL0-PREF2",
+      "diagnosis_checkpoint_commit": "b5aa4934b58afd505b22e008202285c475942892",
+      "frozen": true,
+      "held_out_case_ids": [
+        "FGCQR-CENTRAL",
+        "FGCQR-SEED-HALF",
+        "FGCQR-SEED-DOUBLE",
+        "FGCQR-WIDTH-SEVEN-EIGHTHS",
+        "FGCQR-WIDTH-NINE-EIGHTHS"
+      ],
+      "holdout_output_root": "runs/fgc-2-sf1/proto4/holdout",
+      "legacy_stop_count": 26,
+      "outcome_neutral_contract_validated": true,
+      "overlay_schema_and_hash_binding_validated": true,
+      "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO3",
+      "premise_revision_only": true,
+      "protocol_version": 4,
+      "resolved_holdout_manifest": "configs/fgc/fgc-1-pro4-hld1.toml",
+      "resolved_holdout_manifest_present": false,
+      "semantic_holdout_contract_sha256": "015c3a7dcab4c2feeff164810036326d8a933589ec547cb445fecf527d909704",
+      "weighted_spectral_admission_validated": true
+    }
+  },
+  "certificate_contract": {
+    "artifact_specific_payload_validated": true,
+    "canonical_reproduction_passed": true,
+    "outcome_data_not_used_to_select_certificate_contract": true,
+    "scope_bindings_verified": true
+  },
+  "classification": "outcome_neutral_successor_protocol_freeze_certificate",
+  "derivation_document": "docs/fgc-pro4-frz1.md",
+  "derivation_document_sha256": "b2b7e7e3dfdbfba2df7e8caa52892d2384f9e78647a761c1a7db8f5e23cc776c",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "HLT2_successor_monitor_implemented": false,
+    "PROTO4_branch_specific_stop_partition_verified": true,
+    "PROTO4_convergent_admission_contract_frozen": true,
+    "PROTO4_immutable_lineage_verified": true,
+    "PROTO4_outcome_neutral_protocol_frozen": true,
+    "PROTO4_resolved_holdout_manifest_authorized": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false
+  },
+  "generated_by": "scripts/reproduce_fgc_pro4_frz1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_pro4_frz1.py": "c714fa480c1c1c4b181cfe94fdf1f65792164da33bbae0e3048c57ca3e5334f6",
+    "src/recursive_horizons/fgc/scoped_run_authorization.py": "c47fade97823566caeebc21583c074fce62c4e296ea717babc40bf11be91e2bf"
+  },
+  "nonclaims": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "HLT2_successor_monitor_implemented": false,
+    "PROTO4_resolved_holdout_manifest_authorized": false,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-2-sf1-protocol-v3.toml": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-pro4-frz1.toml": "950013a5d96e84d283513c5ec3d890ac5ecbad05ef31611cae2e0134414d504e",
+    "configs/fgc/fgc-2-sf1-protocol-v4.toml": "02a25337e040b97fdd115bc7da4aa87fd09755366599bcade064644ffb3cb87a"
+  }
+}

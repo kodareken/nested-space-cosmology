@@ -1,0 +1,1212 @@
+{
+  "artifact_id": "FGC-1-HLT3-MON3",
+  "artifact_payload": {
+    "decision": "HLT3_implements_the_PROTO5_GR0_runtime_contract_and_authorizes_only_the_fresh_calibration_campaign",
+    "epistemic_boundary": {
+      "SGBL_or_FGCQR_outcome_read": false,
+      "fresh_GR0_calibration_is_now_authorized_but_not_completed": true,
+      "fresh_GR0_trajectory_advanced": false,
+      "fresh_GR0_trajectory_read": false,
+      "mechanism_question_answered": false,
+      "resolved_holdout_manifest_exists": false,
+      "synthetic_zero_dynamics_used_only_for_transaction_controls": true,
+      "t0_physical_inputs_reconstructed": true,
+      "trapped_or_collapse_outcome_classified": false
+    },
+    "frozen_run_inputs": [
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "044fea04f0f61565d34b96a019bde02de3f232ddedb29341f6ee6805a2e701ab",
+        "expanded_run_config_sha256": "c1a30022013fd203bdacefa845dcfd9577ba36020b6d1a031294de193d123fa5",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 1025,
+        "projected_state_sha256": "fcbe4e2f7325b68e59967c3fcfcb8cc09f22b956d4fa1698b1b2db625fe63586",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "437629ab67ee26f18d4ec8c8fce7120f37d9f4b56a45ac7598f747aec1f98acc",
+        "expanded_run_config_sha256": "6fd8a7f449d51e46e1dc7c68a0d8e7e87d5c3869ec4a2dd37cb1516806bd1cf3",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 2049,
+        "projected_state_sha256": "d711694d4c9665de85edfe90470b738922d99a73614bb7bf6e6f3d19881a7671",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "43d5382bcf8b945f6fa6469bfe1befe318daaa0c57e211c48950c4b786681dbc",
+        "expanded_run_config_sha256": "d7e6dd2e1078551ae9b9e393c374ad902a0f0aa530870d2d3875cee158b0a466",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 4097,
+        "projected_state_sha256": "07eb8019a624bdb6e7b56cd28031d3462208afb2d32cb81344404fee32b244bd",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "14b7b6055514d14179c0061add60f46009b15daca117ea9dc07f39d1ad9121c9",
+        "expanded_run_config_sha256": "9b5380cafa45bc8f0011b16c4cae57da6c2056aded32e1b7fcc1d0cbeb959bc0",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 1025,
+        "projected_state_sha256": "563c463d8bd4067dfde3d18928e7d15eedee40e26c420150299314a5ec1c2803",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "35756f656088c974fb0e1020bf7cdddd5621fe5db05df44cf93df23ac50e0228",
+        "expanded_run_config_sha256": "5fa9560cce83b4ab274803d2111a865c38df3d2a648e8928e9c0303442c50a85",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 2049,
+        "projected_state_sha256": "5482e6e7fbd202110463b6f278d533e33c6a86849a66709a2c6c611975bcdbd3",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "5/2",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "2558a7976e5001a36d30a1a41ddeb9b1a5e659fc292890c048a492984fdfc895",
+        "expanded_run_config_sha256": "15abfae2d1006c87aea9dfa1af90f376a800daece6f729384b3513eaa46456d0",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 4097,
+        "projected_state_sha256": "01ffe9b8c63293b2cf79a88a68183d31bb53ee78e3524d5bbeb41ef27118dbad",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "4832f14ee4c089ed77d0282ecff09644f09f9e609d6cb135e69e054608f828ac",
+        "expanded_run_config_sha256": "05f6de5c99b1fbb98cc17744524679fea3ca988ef548dd77538cb394db127407",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 1025,
+        "projected_state_sha256": "723e10734f1a03c3330aad62e1146e810a11cf2af3817ddfa10f401f3ba9abbd",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "a9612b111e963b08bea5684cf45c5bd7bdc6e7c6a74fa921f1a1a045d906d2ca",
+        "expanded_run_config_sha256": "99b5827247516213c81c45f8367de49102e29be34e9bdfd4a87b6383c2d5e868",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 2049,
+        "projected_state_sha256": "c331752451584c41fd8dba3bca4d4e6050617d640e27fc4fd45cb6b1e72bd8ce",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "6d055cbf0a50c2cfd9037be354896312e5ab50b758d510c4fe681f1228b00262",
+        "expanded_run_config_sha256": "736588df9a358363ee897204a4a25d145a8ca4e79e3d7cb8043186965fa7e46e",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "fourth_order_diagonal_norm_SBP_with_second_order_boundary_closure_plus_RK4",
+        "ko_dissipation": "1/64",
+        "method": "RK4",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 4097,
+        "projected_state_sha256": "b84fa78009b0cd48b7ed85344b2c58ecb006027f37af3da69dcdc3dcc20677d3",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 4,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "dcb34bab65b52105fd86be7a0381e51bb440e1260d50eba067b8f0fd5dd96df6",
+        "expanded_run_config_sha256": "a0d5c3eee730af745352d88d655bddf5fa4551a26b258fec71928ef16fa6a9e2",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 1025,
+        "projected_state_sha256": "b37eefa96f775a70fc3004624bbfd7b8885e6feaff410967e52d3b026700f383",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "d87f10c7c908c0a1b9885d31e1522836ecd66d7167162f69cf40eb0abba6f1a1",
+        "expanded_run_config_sha256": "6ee1a6bc89c73c6db8be03852c33c8d6b5bee8b30dfb13a1de349f1730e83a9b",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.0625,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 2049,
+        "projected_state_sha256": "39edf10cea7b9ccfc8d131f7713e040509dcf0f698ddfc1cbaab09e4413f3732",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      },
+      {
+        "amplitude": "3",
+        "branch": "GR-0",
+        "cfl_maximum": "1/8",
+        "common_output_interval": "1/16",
+        "continuum_ID2_state_sha256": "f68b2223da0b90a55dc67adbb8a56c37b5543d954cb773860c667ee4ba31d35e",
+        "expanded_run_config_sha256": "03bf162b7fcd3486d376879fa7820687c1ec97c0a1e4be8dfee411735b569b2f",
+        "final_coordinate_time": "32",
+        "grid_spacing": 0.03125,
+        "integrator_id": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+        "ko_dissipation": "1/64",
+        "method": "SSPRK3",
+        "p_bitwise_preserved": true,
+        "plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+        "point_count": 4097,
+        "projected_state_sha256": "fe61b334f97dd2f41b1e14620e854efbf1366c4dcc17dda9ad105ad20cb41c36",
+        "protocol_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+        "q_initialized_by_native_SBP_operator": true,
+        "spatial_order": 2,
+        "trajectory_advanced": false,
+        "u_bitwise_preserved": true
+      }
+    ],
+    "frozen_run_plan": {
+      "artifact_id": "FGC-1-CAL2-RUN1-PLAN",
+      "campaign_id": "9df7046b47a044df920bfe192e6b63fbda7953ab97d9174850927afec10177be",
+      "expanded_input_count": 12,
+      "first_eligible_candidate_stops_later_candidates": true,
+      "input_manifest_sha256": "decc10d47bbb6af03177b243642c55137444576e1b06b878245de939632e531f",
+      "ordered_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "run_plan_sha256": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541"
+    },
+    "immutable_lineage": {
+      "HLT2_monitor_gate_passed": true,
+      "checkpoint_commit": "cf48cf729ff1c3a6effce6ecd3fdbeaf8d9645bf",
+      "checkpoint_is_ancestor_of_HEAD": true,
+      "diagnosis_artifact_id": "FGC-1-CAL1-PREF3",
+      "diagnosis_is_pre_trajectory": true,
+      "eligible_amplitudes": [
+        "5/2",
+        "3"
+      ],
+      "freeze_artifact_id": "FGC-1-PRO5-FRZ1",
+      "freeze_gate_passed": true,
+      "protocol": {
+        "FGCQR_outcomes_inspected_before_revision": false,
+        "SGBL_outcomes_inspected_before_revision": false,
+        "artifact_id": "FGC-2-SF1-PROTO5",
+        "calibration_output_root": "runs/fgc-2-sf1/proto5/calibration",
+        "claims": {
+          "FGCQR_holdout_execution_authorized": false,
+          "FGCQR_mechanism_rejected": false,
+          "PROTO5_fresh_GR0_dynamic_calibration_authorized": false,
+          "PROTO5_resolved_holdout_manifest_authorized": false,
+          "PROTO5_successor_runtime_compositor_implemented": false,
+          "child_domain_or_topology_derived": false,
+          "classical_spherical_diagnostic_authorized": false,
+          "dark_sector_mechanism_derived": false,
+          "general_gradient_route_rejected": false,
+          "physical_transition_claim_authorized": false,
+          "retained_EFT_evolution_authorized": false,
+          "singularity_resolution_derived": false,
+          "varying_locally_measured_c_derived": false
+        },
+        "diagnosis_artifact_id": "FGC-1-CAL1-PREF3",
+        "diagnosis_checkpoint_commit": "0781d7d218e9c129858b134c3181fad07ac692b0",
+        "eligible_calibration_amplitudes": [
+          "5/2",
+          "3"
+        ],
+        "fresh_calibration_trajectories_inspected_before_revision": false,
+        "frozen": true,
+        "holdout_output_root": "runs/fgc-2-sf1/proto5/holdout",
+        "method_owned_raw_constraint_guards_validated": true,
+        "monotone_three_grid_finest_pair_order_validated": true,
+        "native_semidiscrete_q_initialization_validated": true,
+        "outcome_neutral_contract_validated": true,
+        "physical_u_and_p_unchanged": true,
+        "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO4",
+        "premise_revision_only": true,
+        "protocol_version": 5,
+        "resolved_holdout_manifest": "configs/fgc/fgc-1-pro5-hld1.toml",
+        "resolved_holdout_manifest_present": false,
+        "roundoff_zero_classification_only_validated": true,
+        "semantic_holdout_contract_sha256": "af1252b55c653c1e99d921eb026270f2c86d635986346dfa0f455c8ce163b18b"
+      },
+      "protocol_blob_sha256": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+      "static_input_artifact_id": "FGC-1-ID2-ALL1",
+      "successor_monitor_artifact_id": "FGC-1-HLT2-MON2"
+    },
+    "initial_common_events": [
+      {
+        "admission_passed": true,
+        "amplitude": "5/2",
+        "constraint_admission": {
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_finest_pair_orders": {
+            "Hamiltonian": 3.418628778261949,
+            "gauge_r": 3.4907386967328167,
+            "gauge_t": null,
+            "radial_momentum": 3.4197481036130783,
+            "reduction_R": null,
+            "reduction_alpha": null,
+            "reduction_chi": null,
+            "reduction_lambda": null,
+            "reduction_phi": null,
+            "reduction_shift": null
+          },
+          "component_status": {
+            "Hamiltonian": "finite_order",
+            "gauge_r": "finite_order",
+            "gauge_t": "roundoff_enclosed_zero_pair",
+            "radial_momentum": "finite_order",
+            "reduction_R": "roundoff_enclosed_zero_pair",
+            "reduction_alpha": "roundoff_enclosed_zero_pair",
+            "reduction_chi": "roundoff_enclosed_zero_pair",
+            "reduction_lambda": "roundoff_enclosed_zero_pair",
+            "reduction_phi": "roundoff_enclosed_zero_pair",
+            "reduction_shift": "roundoff_enclosed_zero_pair"
+          },
+          "coordinate_time": 0.0,
+          "finest_guard_passed": true,
+          "finest_pair_order_passed": true,
+          "method": "RK4",
+          "minimum_finite_finest_pair_order": 3.418628778261949,
+          "monotone_refinement_passed": true,
+          "point_counts": [
+            1025,
+            2049,
+            4097
+          ],
+          "raw_global_norms": [
+            0.01034840701666545,
+            0.003070602382053849,
+            0.00027315334869367283
+          ]
+        },
+        "coordinate_time": 0.0,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.0012041758364015054,
+        "method": "RK4",
+        "spatial_spectral_admission": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.006574706351881495,
+              0.0016422223830557096
+            ],
+            "lambda_minus_1": [
+              0.0013989549359256686,
+              0.0011974827544511376
+            ],
+            "phi_over_Lambda": [
+              0.007985137970772514,
+              0.0022662652284018182
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.0017225816249768094,
+              0.0003975259433754689
+            ],
+            "lambda_minus_1": [
+              0.00036802203065239487,
+              0.00028876169283684276
+            ],
+            "phi_over_Lambda": [
+              0.0021116876822877104,
+              0.0005443864645316788
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "trajectory_advanced": false
+      },
+      {
+        "admission_passed": true,
+        "amplitude": "5/2",
+        "constraint_admission": {
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_finest_pair_orders": {
+            "Hamiltonian": 1.873135037938822,
+            "gauge_r": 1.8924239951321613,
+            "gauge_t": null,
+            "radial_momentum": 1.872117052038071,
+            "reduction_R": null,
+            "reduction_alpha": null,
+            "reduction_chi": null,
+            "reduction_lambda": null,
+            "reduction_phi": null,
+            "reduction_shift": null
+          },
+          "component_status": {
+            "Hamiltonian": "finite_order",
+            "gauge_r": "finite_order",
+            "gauge_t": "roundoff_enclosed_zero_pair",
+            "radial_momentum": "finite_order",
+            "reduction_R": "roundoff_enclosed_zero_pair",
+            "reduction_alpha": "roundoff_enclosed_zero_pair",
+            "reduction_chi": "roundoff_enclosed_zero_pair",
+            "reduction_lambda": "roundoff_enclosed_zero_pair",
+            "reduction_phi": "roundoff_enclosed_zero_pair",
+            "reduction_shift": "roundoff_enclosed_zero_pair"
+          },
+          "coordinate_time": 0.0,
+          "finest_guard_passed": true,
+          "finest_pair_order_passed": true,
+          "method": "SSPRK3",
+          "minimum_finite_finest_pair_order": 1.872117052038071,
+          "monotone_refinement_passed": true,
+          "point_counts": [
+            1025,
+            2049,
+            4097
+          ],
+          "raw_global_norms": [
+            0.026226174017628334,
+            0.010994902547784086,
+            0.002961522233503138
+          ]
+        },
+        "coordinate_time": 0.0,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.0012045873724992745,
+        "method": "SSPRK3",
+        "spatial_spectral_admission": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.00658868677669271,
+              0.001645682778870077
+            ],
+            "lambda_minus_1": [
+              0.0013988285155141647,
+              0.0012111130180470255
+            ],
+            "phi_over_Lambda": [
+              0.00800433427085383,
+              0.002271781530747811
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.0017262690866208382,
+              0.00039835320626232596
+            ],
+            "lambda_minus_1": [
+              0.00036797322270309843,
+              0.0002919551087244521
+            ],
+            "phi_over_Lambda": [
+              0.00211677383310872,
+              0.000545698984044257
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "trajectory_advanced": false
+      },
+      {
+        "admission_passed": true,
+        "amplitude": "3",
+        "constraint_admission": {
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_finest_pair_orders": {
+            "Hamiltonian": 3.4179964109475813,
+            "gauge_r": 3.490370994652515,
+            "gauge_t": null,
+            "radial_momentum": 3.4197481020172082,
+            "reduction_R": null,
+            "reduction_alpha": null,
+            "reduction_chi": null,
+            "reduction_lambda": null,
+            "reduction_phi": null,
+            "reduction_shift": null
+          },
+          "component_status": {
+            "Hamiltonian": "finite_order",
+            "gauge_r": "finite_order",
+            "gauge_t": "roundoff_enclosed_zero_pair",
+            "radial_momentum": "finite_order",
+            "reduction_R": "roundoff_enclosed_zero_pair",
+            "reduction_alpha": "roundoff_enclosed_zero_pair",
+            "reduction_chi": "roundoff_enclosed_zero_pair",
+            "reduction_lambda": "roundoff_enclosed_zero_pair",
+            "reduction_phi": "roundoff_enclosed_zero_pair",
+            "reduction_shift": "roundoff_enclosed_zero_pair"
+          },
+          "coordinate_time": 0.0,
+          "finest_guard_passed": true,
+          "finest_pair_order_passed": true,
+          "method": "RK4",
+          "minimum_finite_finest_pair_order": 3.4179964109475813,
+          "monotone_refinement_passed": true,
+          "point_counts": [
+            1025,
+            2049,
+            4097
+          ],
+          "raw_global_norms": [
+            0.014936654566134161,
+            0.004403392529741985,
+            0.00039181498070268994
+          ]
+        },
+        "coordinate_time": 0.0,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.00179816759964776,
+        "method": "RK4",
+        "spatial_spectral_admission": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.005874321283991797,
+              0.09896865599132262
+            ],
+            "lambda_minus_1": [
+              0.0014011941077176435,
+              0.027965339937480495
+            ],
+            "phi_over_Lambda": [
+              0.004709180589574213,
+              0.09724709104208377
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.0015097502356533163,
+              0.024902807490005865
+            ],
+            "lambda_minus_1": [
+              0.0003439058717187999,
+              0.007207975635491164
+            ],
+            "phi_over_Lambda": [
+              0.0012146718136770785,
+              0.024689858551566697
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "trajectory_advanced": false
+      },
+      {
+        "admission_passed": true,
+        "amplitude": "3",
+        "constraint_admission": {
+          "admission_passed": true,
+          "coarsest_guard_passed": true,
+          "common_event_alignment_passed": true,
+          "component_finest_pair_orders": {
+            "Hamiltonian": 1.8736028866524395,
+            "gauge_r": 1.892828399377868,
+            "gauge_t": null,
+            "radial_momentum": 1.872117051899812,
+            "reduction_R": null,
+            "reduction_alpha": null,
+            "reduction_chi": null,
+            "reduction_lambda": null,
+            "reduction_phi": null,
+            "reduction_shift": null
+          },
+          "component_status": {
+            "Hamiltonian": "finite_order",
+            "gauge_r": "finite_order",
+            "gauge_t": "roundoff_enclosed_zero_pair",
+            "radial_momentum": "finite_order",
+            "reduction_R": "roundoff_enclosed_zero_pair",
+            "reduction_alpha": "roundoff_enclosed_zero_pair",
+            "reduction_chi": "roundoff_enclosed_zero_pair",
+            "reduction_lambda": "roundoff_enclosed_zero_pair",
+            "reduction_phi": "roundoff_enclosed_zero_pair",
+            "reduction_shift": "roundoff_enclosed_zero_pair"
+          },
+          "coordinate_time": 0.0,
+          "finest_guard_passed": true,
+          "finest_pair_order_passed": true,
+          "method": "SSPRK3",
+          "minimum_finite_finest_pair_order": 1.872117051899812,
+          "monotone_refinement_passed": true,
+          "point_counts": [
+            1025,
+            2049,
+            4097
+          ],
+          "raw_global_norms": [
+            0.03704657493089081,
+            0.01584987288839588,
+            0.004268031920641638
+          ]
+        },
+        "coordinate_time": 0.0,
+        "maximum_spatial_round_trip_interpolation_infinity": 0.0017934042664484525,
+        "method": "SSPRK3",
+        "spatial_spectral_admission": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.005857340733921878,
+              0.09830788107115966
+            ],
+            "lambda_minus_1": [
+              0.0013797045638099547,
+              0.028138534871145832
+            ],
+            "phi_over_Lambda": [
+              0.004692471224599105,
+              0.09693296217991254
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "chi_over_Lambda": [
+              0.001505173576001101,
+              0.024745391862664484
+            ],
+            "lambda_minus_1": [
+              0.00033874734034237844,
+              0.007250923488649599
+            ],
+            "phi_over_Lambda": [
+              0.0012101653986283558,
+              0.02462018576216842
+            ],
+            "shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "trajectory_advanced": false
+      }
+    ],
+    "namespace_precondition": {
+      "authorization_created_no_namespace": true,
+      "both_fresh_namespaces_empty": true,
+      "records": [
+        {
+          "created_by_authorization": false,
+          "empty": true,
+          "entry_count": 0,
+          "existed_before_authorization": false,
+          "name": "calibration_output_root",
+          "path": "runs/fgc-2-sf1/proto5/calibration"
+        },
+        {
+          "created_by_authorization": false,
+          "empty": true,
+          "entry_count": 0,
+          "existed_before_authorization": false,
+          "name": "holdout_output_root",
+          "path": "runs/fgc-2-sf1/proto5/holdout"
+        }
+      ]
+    },
+    "runtime_composition": {
+      "CFL_retry_control": {
+        "causal_or_stage_acceptance_advanced": false,
+        "maximum_ratio": 0.125,
+        "observed_ratio": 0.16,
+        "retry_required": true,
+        "scientific_failure_latched": false
+      },
+      "all_controls_passed": true,
+      "boundary_failure_reason": "boundary_causal_buffer",
+      "boundary_failure_rolled_back": true,
+      "candidate_action_stop_count": 0,
+      "event_log_recovery_controls": {
+        "actions": {
+          "absent": "restored_missing_log_from_checkpoint",
+          "ahead": "archived_uncommitted_tail_and_restored_checkpoint",
+          "behind": "completed_checkpoint_owned_log_write",
+          "matching": "event_log_already_matches_checkpoint"
+        },
+        "ahead_orphaned_tail_sha256": "4402efdab13ba4b0d4c7af426780b1fa4aa7f9798c6b1e5c97cc0c592ed4fb6a",
+        "all_recovery_controls_passed": true,
+        "divergent_history_rejected": true
+      },
+      "first_scientific_failure_immutable": true,
+      "healthy_receipt": {
+        "accepted_stage_count": 5,
+        "courant_ratio": 0.08,
+        "first_transaction_serial": 0,
+        "interval_speed_upper": 1.0,
+        "last_transaction_serial": 4,
+        "remaining_causal_buffer": 103.615,
+        "strict_margin_over_required_buffer": 87.615
+      },
+      "late_failure_rolled_back": true,
+      "late_scientific_failure_reason": "nonpositive_lapse",
+      "universal_stop_ids": [
+        "nonpositive_lapse",
+        "nonpositive_radial_metric",
+        "nonpositive_areal_radius_away_from_center",
+        "hat_cone_not_Lorentzian",
+        "newton_residual_limit",
+        "newton_iteration_limit",
+        "newton_residual_not_monotonic",
+        "kinetic_condition_limit",
+        "boundary_causal_buffer"
+      ]
+    },
+    "temporal_spectral_controls": {
+      "Nyquist_alias_injection": {
+        "admission_passed": false,
+        "field_names": [
+          "alpha_minus_1",
+          "shift_over_r",
+          "lambda_minus_1",
+          "R_over_r_minus_1",
+          "phi_over_Lambda",
+          "chi_over_Lambda"
+        ],
+        "maximum_round_trip_interpolation_infinity": 0.0,
+        "nested_admission": {
+          "admission_passed": false,
+          "derivative_power_tail_ratios": {
+            "tracer_0000:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:alpha_minus_1": [
+              1.0,
+              1.0
+            ],
+            "tracer_0000:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:shift_over_r": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:alpha_minus_1": [
+              1.0,
+              1.0
+            ],
+            "tracer_0001:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": false,
+          "every_nested_tail_ratio_passed": false,
+          "field_power_tail_ratios": {
+            "tracer_0000:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:alpha_minus_1": [
+              1.0,
+              1.0
+            ],
+            "tracer_0000:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:shift_over_r": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:alpha_minus_1": [
+              1.0,
+              1.0
+            ],
+            "tracer_0001:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "sample_count": 64,
+        "tracer_count": 2
+      },
+      "alias_injection_rejected": true,
+      "low_frequency_control_passed": true,
+      "minimum_sample_count": 64,
+      "zero_history_control": {
+        "admission_passed": true,
+        "field_names": [
+          "alpha_minus_1",
+          "shift_over_r",
+          "lambda_minus_1",
+          "R_over_r_minus_1",
+          "phi_over_Lambda",
+          "chi_over_Lambda"
+        ],
+        "maximum_round_trip_interpolation_infinity": 0.0,
+        "nested_admission": {
+          "admission_passed": true,
+          "derivative_power_tail_ratios": {
+            "tracer_0000:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:shift_over_r": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "every_individual_budget_passed": true,
+          "every_nested_tail_ratio_passed": true,
+          "field_power_tail_ratios": {
+            "tracer_0000:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0000:shift_over_r": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:R_over_r_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:alpha_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:chi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:lambda_minus_1": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:phi_over_Lambda": [
+              0.0,
+              0.0
+            ],
+            "tracer_0001:shift_over_r": [
+              0.0,
+              0.0
+            ]
+          },
+          "grid_point_counts": [
+            1025,
+            2049,
+            4097
+          ]
+        },
+        "point_counts": [
+          1025,
+          2049,
+          4097
+        ],
+        "sample_count": 64,
+        "tracer_count": 2
+      }
+    }
+  },
+  "classification": "pre_trajectory_PROTO5_GR0_runtime_compositor_and_fresh_calibration_authorization",
+  "derivation_document": "docs/fgc-hlt3-mon3.md",
+  "derivation_document_sha256": "1da150a311ae23aea118ec49a7d509de350b1c85af606c1f5e1a0fde17e6f784",
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "FGCQR_mechanism_rejected": false,
+    "PROTO5_fresh_GR0_dynamic_calibration_authorized": true,
+    "PROTO5_resolved_holdout_manifest_authorized": false,
+    "PROTO5_successor_runtime_compositor_implemented": true,
+    "child_domain_or_topology_derived": false,
+    "classical_spherical_diagnostic_authorized": false,
+    "dark_sector_mechanism_derived": false,
+    "general_gradient_route_rejected": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hlt3_mon3.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_hlt3_mon3.py": "ff9de5623f8304a8cd7f0df5696057b26b526b68fdc3645b47fac0412ac5e8e2",
+    "scripts/run_fgc_gr0_calibration.py": "4e3734495edc0a289e5c61dc68e193cbe19629582234dd04c0c20a46d52774b3",
+    "src/recursive_horizons/fgc/evolution/calibration_runtime.py": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9",
+    "src/recursive_horizons/fgc/evolution/proto5_runtime.py": "607c9d5c353e37f8c68c032ec70df773c326335ba723a7db7317191bc7260545"
+  },
+  "nonclaims": {
+    "FGCQR_trajectory_opened": false,
+    "SGBL_comparison_completed": false,
+    "SGBL_health_definition_supplied": false,
+    "child_domain_or_topology": false,
+    "constraint_to_DEF1_stability_map_supplied": false,
+    "dark_sector_mechanism": false,
+    "fresh_GR0_calibration_completed": false,
+    "physical_transition": false,
+    "positive_Raychaudhuri_margin_measured": false,
+    "retained_EFT_validity": false,
+    "singularity_resolution": false,
+    "trapped_sphere_formed_dynamically": false,
+    "varying_locally_measured_c": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-2-sf1-protocol-v5.toml": "516061e19ac14857eda26076fa18d9163db2fcc7c9d31aa6aebefd698377c9ab",
+    "results/fgc-1-cal1-pref3.json": "3ea43baf0fb9830b348fc49a79af5c535d8f7089aa03a957a22f6927528a4395",
+    "results/fgc-1-hlt2-mon2.json": "61a9843a7fe7374c74373fea5580bd83e558d42faff3dd724f01e12b2411061a",
+    "results/fgc-1-id2-all1.json": "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981",
+    "results/fgc-1-pro5-frz1.json": "7810557ed2eb82d9d484b0aeb65b75bbe3fd9565a4a52c5305c07144614add16",
+    "src/recursive_horizons/fgc/evolution/calibration_runtime.py": "e05c91116a64587dc763145117bcf6c35289f7c1a0f9e4eb7ad5c697aecef5f9"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope_bindings": {
+    "FGCQR_trajectory_read": false,
+    "SGBL_trajectory_read": false,
+    "calibration_branch": "GR-0",
+    "candidate_action_health_values_invented_for_GR0": false,
+    "collapse_or_trapped_outcome_classified": false,
+    "fresh_GR0_trajectory_read": false,
+    "role": "pre_trajectory_runtime_compositor_and_fresh_input_freeze",
+    "runtime_owner": "FGC-1-HLT3-MON3",
+    "target_protocol": "FGC-2-SF1-PROTO5"
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-cal2-run1.toml": "f058c291e60b6663d546001df5bc6e33aebc2b31fd1fcb21dd163ad05eb17541",
+    "configs/fgc/fgc-1-hlt3-mon3.toml": "1d9827448c3e675e6c21cb15bb445941c5a0654098abf5b9a38ec3207610c23a"
+  }
+}

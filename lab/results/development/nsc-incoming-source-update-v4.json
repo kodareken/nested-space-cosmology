@@ -1,0 +1,835 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline": {
+    "action_gradient_approximant": [
+      -0.6959305725037183,
+      -0.05712098699380451
+    ],
+    "certified_constraint_residual": null,
+    "constraint_order": [
+      "N",
+      "beta"
+    ],
+    "extended_stationarity_status": "OPEN",
+    "force_approximant": [
+      0.6959305725037183,
+      0.05712098699380451
+    ],
+    "full_source_error_bound": null,
+    "local_action_gradient": [
+      -0.563010381252666,
+      -3.9376569882053535e-13
+    ],
+    "matter_baseline_action_gradient": [
+      -0.13292019125105228,
+      -0.05712098699341074
+    ],
+    "maximum_absolute_approximant": 0.6959305725037183,
+    "metric_timestep": false,
+    "normal_data_selected_as_physical": false,
+    "physical_constraint_status": "OPEN",
+    "reference_action_gradient_change": [
+      0.0,
+      0.0
+    ],
+    "stationarity_tolerance": 3e-11
+  },
+  "coverage": {
+    "1": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "2": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "3": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "4": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "5": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "6": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "7": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "8": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "9": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "10": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        320.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        320.0,
+        "infinity"
+      ]
+    },
+    "11": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        320.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        320.0,
+        "infinity"
+      ]
+    },
+    "12": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        320.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        320.0,
+        "infinity"
+      ]
+    },
+    "13": {
+      "actual_signs": [
+        1
+      ],
+      "finite_high": [
+        16.0,
+        160.0
+      ],
+      "joined": [
+        16.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "14": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        16,
+        160
+      ],
+      "joined": [
+        16,
+        "infinity"
+      ],
+      "tail": [
+        160,
+        "infinity"
+      ]
+    },
+    "15": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "16": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "17": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "18": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "19": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "20": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "21": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "22": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "23": {
+      "actual_signs": [
+        1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "24": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "25": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "26": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "27": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "28": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "29": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "30": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        160.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        160.0,
+        "infinity"
+      ]
+    },
+    "31": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        320.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        320.0,
+        "infinity"
+      ]
+    },
+    "32": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "finite_high": [
+        32.0,
+        320.0
+      ],
+      "joined": [
+        32.0,
+        "infinity"
+      ],
+      "tail": [
+        320.0,
+        "infinity"
+      ]
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-source-update-v3.json": "fc003233fee27b46e7ad75a5263de411bd0bbfe2980ee4bac837b5929696799c",
+    "results/development/nsc-incoming-tail-quadrature-batch.json": "d5e9824aafbc06c05af4d761226382752a9d2ac78b5f904edce51da83e70f105",
+    "scripts/derive_nsc_incoming_source_update_v3.py": "6018a80d9e55d5e8fa2bc0dc523f2a11c2ff7c7a217708f3ebc923072099bc49",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "matter": {
+    "direct_high_vacuum_source_added": [
+      1.3921365586928563e-07,
+      -9.266106384002253e-07,
+      0.0,
+      4.735498372957672e-07
+    ],
+    "explicit_high_replacement_delta": [
+      -9.66593632970446e-09,
+      -9.346595415802436e-09,
+      -1.07715303591151e-46,
+      -1.4470106705918116e-10
+    ],
+    "full_source_error_bound": null,
+    "group13_raw_current_zero_residual": 9.852373963653396e-16,
+    "original_high_source_removed": [
+      1.4887959219899008e-07,
+      -9.172640429844229e-07,
+      1.07715303591151e-46,
+      4.736945383628264e-07
+    ],
+    "original_stress_approximant": [
+      0.006266040120408469,
+      0.0030437013636665823,
+      0.003190352351246363,
+      0.0008210775662986419
+    ],
+    "parts": {
+      "LLL_state": [
+        0.0014124841070505215,
+        0.0014124841070505215,
+        0.0012441841744750626,
+        0.0
+      ],
+      "direct_high_replacement": [
+        -9.66593632970446e-09,
+        -9.346595415802436e-09,
+        -1.07715303591151e-46,
+        -1.4470106705918116e-10
+      ],
+      "finite_nonLLL": [
+        0.0048535559727941316,
+        0.001631218069794827,
+        0.0019461681767713004,
+        0.0008210775382597894
+      ],
+      "group13_replacement": [
+        3.335050184169548e-11,
+        -7.601843965138009e-10,
+        0.0,
+        0.0
+      ],
+      "paired_approximate_tail": [
+        7.213313839758272e-12,
+        -5.2994369647130365e-11,
+        0.0,
+        2.8038852444289067e-11
+      ]
+    },
+    "stress_approximant": [
+      0.006266030454472139,
+      0.0030436920170711667,
+      0.003190352351246363,
+      0.0008210774215975748
+    ],
+    "unresolved": [
+      "remaining low/subgap physical and numerical errors",
+      "retained angular/compact scope versus complete physical inventory"
+    ]
+  },
+  "mixed_normal_probe": {
+    "action_gradient_approximant": [
+      -0.6959194529091866,
+      0.10863876922660026
+    ],
+    "certified_constraint_residual": null,
+    "constraint_order": [
+      "N",
+      "beta"
+    ],
+    "extended_stationarity_status": "OPEN",
+    "force_approximant": [
+      0.6959194529091866,
+      -0.10863876922660026
+    ],
+    "full_source_error_bound": null,
+    "local_action_gradient": [
+      -0.5630173714581604,
+      -0.02798389401132041
+    ],
+    "matter_baseline_action_gradient": [
+      -0.13292019125105228,
+      -0.05712098699341074
+    ],
+    "maximum_absolute_approximant": 0.6959194529091866,
+    "metric_timestep": false,
+    "normal_data_selected_as_physical": false,
+    "physical_constraint_status": "OPEN",
+    "reference_action_gradient_change": [
+      1.810980002619019e-05,
+      0.19374365023133142
+    ],
+    "stationarity_tolerance": 3e-11
+  },
+  "partial_error_budget": {
+    "constraint_order": [
+      "N",
+      "beta"
+    ],
+    "covered_domain_status": "PASS",
+    "covered_high_to_infinity_action_error_upper": [
+      8.916062442936519e-12,
+      3.8823735672066405e-18
+    ],
+    "covered_high_to_infinity_action_error_upper_binary": [
+      [
+        [
+          0,
+          581194878832205859835922243063043654413811429210481569374277836807719415207415811,
+          -305,
+          269
+        ],
+        [
+          0,
+          145298719708051464958980560765760913603452857302620392343569459201929853801853953,
+          -303,
+          267
+        ]
+      ],
+      [
+        [
+          0,
+          2519804509583211,
+          -109,
+          52
+        ],
+        [
+          0,
+          530732774921945639004159144961958103741104607582847878196410189214296938687496193,
+          -326,
+          269
+        ]
+      ]
+    ],
+    "finite_high_physical_pressure_error_certified": false,
+    "full_source_error_bound": null,
+    "full_source_status": "OPEN",
+    "high_finite_plus_source_sum_rounding_action_error_upper": [
+      8.903043658214025e-12,
+      3.8823735672066405e-18
+    ],
+    "joint_local_reference_action_arithmetic_certified": false,
+    "remaining_low_subgap_source_error_bound": null,
+    "stationarity_tolerance": 3e-11,
+    "tail_action_error_upper_binary": [
+      [
+        [
+          0,
+          27156206436224063293767608255272977945458491532049903208759808430841399604805729,
+          -310,
+          264
+        ],
+        [
+          0,
+          27156206436224063293767608255272977945458491532049903208759808430841399604805729,
+          -310,
+          264
+        ]
+      ],
+      [
+        [
+          0,
+          602406508978729912546512494073511323572837709549081198717570502326033343340679987,
+          -1787,
+          269
+        ],
+        [
+          0,
+          602406508978729912546512494073511323572837709549081198717570502326033343340679987,
+          -1787,
+          269
+        ]
+      ]
+    ],
+    "tail_physical_numerical_thermal_action_error_upper": [
+      1.3018784722494495e-14,
+      5e-324
+    ]
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_source_update_v4.py --check",
+  "schema": "NSC-INCOMING-SOURCE-UPDATE-v4",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "extended_stationarity": "OPEN",
+    "finite_high_source_preserved": true,
+    "metric_evolution": false,
+    "original_tail_source_preserved": true,
+    "physical_IV_selected": false,
+    "push_or_PDF": false,
+    "scientific_producers_run": false,
+    "tail_physical_error_counted_once": true,
+    "thermal_declared_zero": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-source-update-v4.md": "af3c40a22f01ce9cdaa14022cf9f2482bff04343f6020317c00c490e21eb3396",
+    "scripts/derive_nsc_incoming_source_update_v4.py": "8e7f202938fad8cd7e69a7c0adb0886cba2d5e844352927805e84c6c5806d645",
+    "tests/test_nsc_incoming_source_update_v4.py": "7f4a28a1748cdce05c082d00de7df7d9965a57ce5de78c10edf718309f0add94"
+  },
+  "source_value_change": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "status": "PASS: high constraint-source budget through infinity certified; lower source and constraints OPEN"
+}

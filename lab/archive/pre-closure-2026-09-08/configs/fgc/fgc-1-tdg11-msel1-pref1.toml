@@ -1,0 +1,79 @@
+schema_version = 1
+artifact_id = "FGC-1-TDG11-MSEL1-PREF1"
+authority_commit = "a04265794fe0a3266e34b50fcf034b9dcb462263"
+authority_parent = "dbfe92df40bf18fd287663e0b9997a812fe4ccb2"
+freeze_config_sha256 = "4d468b3569b34eea77fe5613bfb733c1db05321118ae2dad266474317997b717"
+freeze_result_sha256 = "69acb67a760e0a8e43223e13e2fa6ed1c0234b7e26e9ea93d4f8a5366250a561"
+source_tree_sha256 = "d33a52b6ca096884b826748484ac5671a8c3fa775a5ec1d48c978b8f319cd0c8"
+source_tree_blob_count = 211
+candidate_precedence = ["exact_accumulation_reconstruction_with_debit", "compensated_coherent_RK_accumulation", "embedded_RK_quadrature_defect"]
+selected_retries = [3, 4, 5]
+restored_generations = [9, 10, 11]
+complete_state_channels = ["u:alpha", "u:v", "u:lambda", "u:R", "u:phi", "u:chi", "p:alpha", "p:v", "p:lambda", "p:R", "p:phi", "p:chi", "q:alpha", "q:v", "q:lambda", "q:R", "q:phi", "q:chi"]
+
+[raw]
+manifest_sha256 = "26737b5dd3d437ec4e7da4844667565e2b9e255afb769afe4c73f052b2977911"
+terminal_sha256 = "29c1f3a33757bd83c5a2b19d6b18e873c8fd0b5b4efae72865894adaefa5a221"
+
+[limits]
+maximum_compact_bytes = 16777216
+maximum_guarded_families = 6
+maximum_rational_bits = 32768
+maximum_raw_bytes = 16777216
+maximum_shadow_proposals = 42
+maximum_shadow_rhs_calls = 252
+maximum_stage_and_endpoint_records = 210
+maximum_wall_seconds = 14400
+
+[environment]
+blas_name = "accelerate"
+blas_version = "unknown"
+byteorder = "little"
+kernel_release = "27.0.0"
+kernel_version = "Darwin Kernel Version 27.0.0: Tue Aug 11 22:02:53 PDT 2026; root:xnu-13432.1.9~3/RELEASE_ARM64_T8132"
+machine = "arm64"
+macos_version = "27.0"
+numpy_extension = "/opt/homebrew/Caskroom/miniconda/base/lib/python3.14/site-packages/numpy/_core/_multiarray_umath.cpython-314-darwin.so"
+numpy_extension_sha256 = "08cc79db709635a4e0a8d59f227b566d322a561dc9f45ab5ddc335419bfa85fc"
+numpy_version = "2.5.1"
+python_executable = "/opt/homebrew/Caskroom/miniconda/base/bin/python3.14"
+python_executable_sha256 = "cbfd244fbeb046203838f0b60a86bc444e3028b4ec3d36c4312af081bbc04804"
+python_implementation = "CPython"
+python_version = "3.14.3"
+system = "Darwin"
+
+[[implementation]]
+path = "scripts/reproduce_fgc_tdg11_msel1_pref1.py"
+sha256 = "f8d1730ecca07f80457474a3721dbbd7828b5a058017b9bab80192b9faa5c46c"
+
+[[implementation]]
+path = "src/recursive_horizons/fgc/evolution/tdg11_msel1_pref1_binder.py"
+sha256 = "f0f23487b7dece5491e8ef7274a0174883e6cacbc684bed202af66f5bdc7434d"
+
+[[implementation]]
+path = "src/recursive_horizons/fgc/evolution/tdg11_msel1_pref1_localization.py"
+sha256 = "aeb22791bda7ac8841bbbae767c9d968fc7efd5d06c7e14e7b400328d5116193"
+
+[[implementation]]
+path = "src/recursive_horizons/fgc/evolution/tdg11_msel1_pref1_protocol.py"
+sha256 = "efd3e6aef1874f0d086612f57a4a31d99a08d0f94af1a74d2a2aac5bd8223f3b"
+
+[[implementation]]
+path = "src/recursive_horizons/fgc/evolution/tdg11_msel1_pref1_reconstruction.py"
+sha256 = "659e820ec34c7488410235811a357e7cb7a2fbddeb2e503a3a12a14540968799"
+
+[[implementation]]
+path = "tests/test_fgc_tdg11_msel1_pref1_binder.py"
+sha256 = "c351dc6f7b85ada6572d3435f096f729fee8fc127a2dfa943bd8a5b762811347"
+
+[[implementation]]
+path = "tests/test_fgc_tdg11_msel1_pref1_localization.py"
+sha256 = "f5e64881151372cab1a8476b66063908430100f065a566a155d75c2acdd4e885"
+
+[[implementation]]
+path = "tests/test_fgc_tdg11_msel1_pref1_protocol.py"
+sha256 = "d412195351ac37ccdc54e7a2be1471bbfb64641ca286e3c55bf81b20c5f41c98"
+
+[[implementation]]
+path = "tests/test_fgc_tdg11_msel1_pref1_reconstruction.py"
+sha256 = "9e011fbc04fd7c3280c8eee64f595a8a8529779396077d0158919697ecf392e4"

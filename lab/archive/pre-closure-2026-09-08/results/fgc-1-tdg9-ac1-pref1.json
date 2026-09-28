@@ -1,0 +1,383 @@
+{
+  "artifact_id": "FGC-1-TDG9-AC1-PREF1",
+  "artifact_payload": {
+    "artifact_id": "FGC-1-TDG9-AC1-PREF1",
+    "authority": {
+      "blob_count": 6,
+      "blobs": [
+        {
+          "path": "configs/fgc/fgc-1-tdg9-ac1-frz1.toml",
+          "sha256": "aab7b3931a43131f57af035063033ae285f0f196a34c32d81ba7f4c99fe5eaf0"
+        },
+        {
+          "path": "results/fgc-1-tdg9-ac1-frz1.json",
+          "sha256": "e0019fb6e22d5213a6b170d866af3965c45dbb1b83a1c9d612f1218df520b8af"
+        },
+        {
+          "path": "docs/fgc-tdg9-ac1-frz1.md",
+          "sha256": "9dc2a2f7bb2f9df89a93acd25fb7d22b41eba490449e06914b6b33f0b0fbebfb"
+        },
+        {
+          "path": "scripts/run_fgc_tdg9_ac1.py",
+          "sha256": "bc2f28e99a747caabac3f419b05574bfe06fcddc5e7b5f1d21879e3639e77605"
+        },
+        {
+          "path": "src/recursive_horizons/fgc/evolution/tdg9_ac1_authority.py",
+          "sha256": "3ccd293ff67413466af9390065357e68226ddd46ee23df7bceda10aec6dc4c19"
+        },
+        {
+          "path": "scripts/reproduce_fgc_tdg9_ac1_frz1.py",
+          "sha256": "d7911135924eaddb25a09d29534b1f121f229b2df58df16656bca96778334f99"
+        }
+      ],
+      "parent_commit": "660f369365ab8417f4c68eded46acb9bb2b05a5b"
+    },
+    "authority_binding": {
+      "all_committed_blob_hashes_verified": true,
+      "blob_count": 6,
+      "commit": "ec4195d5f09788bad3e08936b9506716a9eafa3d",
+      "parent_commit": "660f369365ab8417f4c68eded46acb9bb2b05a5b"
+    },
+    "claims": {
+      "AC1_raw_result_independently_bound": true,
+      "GR0_calibration_completed": false,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "independent_method_agreement": false,
+      "mechanism_result_earned": false,
+      "only_u_R_nonadmitted": true,
+      "physical_result_earned": false,
+      "physical_transition_claim_authorized": false,
+      "production_SSPRK3_comparator": false,
+      "production_method_earned": false,
+      "retained_EFT_evolution_authorized": false,
+      "seventeen_of_eighteen_channels_admitted": true,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false,
+      "u_R_class_order_inconclusive": true
+    },
+    "classification": "independently_bound_retry3_all_channel_production_classifier_terminal",
+    "conclusion": {
+      "PDE_or_candidate_state_opened": false,
+      "frozen_SSPRK3_on_inherited_SBP4_state_width_has_one_unresolved_u_R_channel": true,
+      "independent_method_agreement": false,
+      "licenses_only_separately_frozen_diagnosis_of_u_R_or_sharper_discriminator": true,
+      "physics_inference_permitted": false,
+      "production_SSPRK3_comparator": false,
+      "production_method_earned": false,
+      "state_advance_authorized": false,
+      "successor_remedy_selected": false
+    },
+    "independent_replay": {
+      "SSPRK3_stage_and_endpoint_record_count": 28,
+      "admitted_count": 17,
+      "all_of_identity_verified": true,
+      "channel_count": 18,
+      "channels": [
+        {
+          "admission_passed": true,
+          "channel": "u:alpha",
+          "classification": "enclosure_dominated_debit_only",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": null,
+          "order_threshold_resolved": false,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "u:v",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "u:lambda",
+          "classification": "enclosure_dominated_debit_only",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": null,
+          "order_threshold_resolved": false,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": false,
+          "channel": "u:R",
+          "classification": "order_inconclusive",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": null,
+          "order_threshold_resolved": false,
+          "temporal_retry_permitted": true
+        },
+        {
+          "admission_passed": true,
+          "channel": "u:phi",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "u:chi",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "p:alpha",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "p:v",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "p:lambda",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "p:R",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "p:phi",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "p:chi",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "q:alpha",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "q:v",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "q:lambda",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "q:R",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "q:phi",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        },
+        {
+          "admission_passed": true,
+          "channel": "q:chi",
+          "classification": "resolved_order_pass",
+          "debit_equals_finest_upper": true,
+          "order_threshold_passed": true,
+          "order_threshold_resolved": true,
+          "temporal_retry_permitted": false
+        }
+      ],
+      "classification_counts": {
+        "enclosure_dominated_debit_only": 2,
+        "order_inconclusive": 1,
+        "resolved_order_pass": 15
+      },
+      "complete_admission_passed": false,
+      "debit_equals_finest_upper_count": 18,
+      "failed_channels": [
+        "u:R"
+      ],
+      "failed_channels_match_admission_flags": true,
+      "failed_count": 1,
+      "raw_terminal_class_matches_independent_reduction": true,
+      "replay_receipt": {
+        "accepted_time_hex": "0x1.78554de5a30e0p+0",
+        "attempted_width_hex": "0x1.aaa9612df8000p-11",
+        "descriptor_sha256": "77847126340e78c8ac300fac2795bceda724c15e0894e34444b0da42a84166b4",
+        "historical_journal_sha256": "0d21f650ccc46db778fd81fbebf5acab6394e1c2f7972b7940e24c76af9e1f59",
+        "member_key": "RK4-2049",
+        "retry": 3,
+        "state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+        "transaction_sha256": "7a90163d2eb4252fa7a1bbdf55d12f92a9127ed7cba5a37c28456e72d732b22b"
+      },
+      "shadow_path_count": 7,
+      "shadow_proposal_count": 7
+    },
+    "raw": {
+      "authority_commit": "ec4195d5f09788bad3e08936b9506716a9eafa3d",
+      "classification": "completed_retry3_one_or_more_channels_fail",
+      "leaf_count": 2,
+      "manifest_sha256": "5cd74aa33555c6253353311c246515680b50c8c908a4ff295949a98a7e8f0912",
+      "namespace": "runs/fgc-2-sf1/tdg9-ac1/ssprk3-sbp4-retry3-all-channels",
+      "runner_id": "FGC-1-TDG9-AC1-RUN1",
+      "schema": "FGC-1-TDG9-AC1-raw-v1",
+      "terminal_sha256": "515ddf31d2fe919e4228668bea8701f282931d45e462542c26675382c95b834c"
+    },
+    "raw_binding": {
+      "canonical_duplicate_free_schema_verified": true,
+      "leaf_count": 2,
+      "manifest_sha256": "5cd74aa33555c6253353311c246515680b50c8c908a4ff295949a98a7e8f0912",
+      "raw_namespace_unchanged": true,
+      "terminal_sha256": "515ddf31d2fe919e4228668bea8701f282931d45e462542c26675382c95b834c"
+    },
+    "schema_version": 1,
+    "scope": {
+      "AC1_runner_decision_code_imported": false,
+      "GR0_calibration_authorized": false,
+      "PDE_state_commit_authorized": false,
+      "TI2_shadow_restore_or_prepare_imported": false,
+      "campaign_store_mutation_authorized": false,
+      "candidate_branches_authorized": false,
+      "common_event_authorized": false,
+      "independent_method_agreement": false,
+      "mechanism_result_authorized": false,
+      "one_time_live_raw_and_store_authentication": true,
+      "ordinary_verifier_raw_blind": true,
+      "ordinary_verifier_store_blind": true,
+      "physical_result_authorized": false,
+      "production_SSPRK3_comparator": false,
+      "raw_namespace_mutation_authorized": false,
+      "same_state_tableau_counterfactual_only": true,
+      "seven_proposals_reconstructed": false,
+      "successor_remedy_selected": false,
+      "temporal_retry_admission_authorized": false
+    },
+    "selection": {
+      "accepted_time_hex": "0x1.78554de5a30e0p+0",
+      "actual_spatial_operator": "inherited_RK4_2049_SBP4",
+      "attempted_width_hex": "0x1.aaa9612df8000p-11",
+      "channel_order": [
+        "u:alpha",
+        "u:v",
+        "u:lambda",
+        "u:R",
+        "u:phi",
+        "u:chi",
+        "p:alpha",
+        "p:v",
+        "p:lambda",
+        "p:R",
+        "p:phi",
+        "p:chi",
+        "q:alpha",
+        "q:v",
+        "q:lambda",
+        "q:R",
+        "q:phi",
+        "q:chi"
+      ],
+      "experiment_label": "retry3_SSPRK3_tableau_on_inherited_SBP4_all_18_channel_production_classifier_audit",
+      "independent_method_agreement": false,
+      "member_key": "RK4-2049",
+      "owned_row_count": 2044,
+      "physical_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a",
+      "point_count": 2049,
+      "production_SSPRK3_comparator": false,
+      "retry": 3,
+      "tableau_runtime_selector": "second_order_diagonal_norm_SBP_plus_SSPRK3",
+      "tableau_selector": "SSPRK3"
+    },
+    "store": {
+      "leaf_count": 115,
+      "path": "runs/fgc-2-sf1/tdg8-rcv3/calibration",
+      "snapshot_algorithm": "TDG9-LOC1-STORE-SNAPSHOT-v1",
+      "snapshot_sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+    },
+    "store_binding": {
+      "binder_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "binder_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_after": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "raw_snapshot_before": {
+        "leaf_count": 115,
+        "sha256": "5917d70de3080dcc6b7abeb7fdb7cc3370c6140cbeb37bde0c142d6a2d36a445"
+      },
+      "store_unchanged": true
+    },
+    "target_protocol": "FGC-2-SF1-PROTO18",
+    "work_budget": {
+      "FAILED_OCCURRENCES_filter_applied": false,
+      "LOC1_exact_localization_authorized": false,
+      "LOC2_exact_localization_authorized": false,
+      "SSPRK3_records_per_proposal": 4,
+      "channel_count": 18,
+      "fourth_width_authorized": false,
+      "maximum_stage_and_endpoint_RHS_records": 28,
+      "resource_escalation_authorized": false,
+      "retry": 3,
+      "retry_4_authorized": false,
+      "retry_5_authorized": false,
+      "retry_count": 1,
+      "shadow_paths": 7,
+      "shadow_proposals": 7
+    }
+  }
+}

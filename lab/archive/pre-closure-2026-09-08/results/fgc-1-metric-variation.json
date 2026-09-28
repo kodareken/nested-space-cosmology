@@ -1,0 +1,661 @@
+{
+  "artifact": "fgc1_covariant_metric_variation_and_exact_identity_certificate",
+  "artifact_id": "FGC-1-VAR1",
+  "classification": "covariant_metric_equation_derivation_and_crosschecks_not_principal_symbol_or_collapse",
+  "derivation_document": "docs/fgc-metric-variation.md",
+  "derivation_document_sha256": "f08f6e7db1100d40f3d8e4088550ab7bcd2f9fcbf4138a8a0b5c1a369abd3cb4",
+  "development_status": "pre_publication_gate",
+  "expanded_gb_coefficient_order": [
+    "riemann_hessian",
+    "metric_ricci_hessian",
+    "ricci_b_hessian_a",
+    "ricci_a_hessian_b",
+    "ricci_ab_box",
+    "scalar_metric_box",
+    "scalar_hessian"
+  ],
+  "fixture_contract": {
+    "algorithm": "lcg64_v1",
+    "dimension": 4,
+    "fixture_count": 8,
+    "integer_bound": 3,
+    "kulkarni_nomizu_pair_count": 2,
+    "metric_signature": "-+++",
+    "riemann_convention": "plus_partial_mu_gamma_nu",
+    "seed": 20260821
+  },
+  "gate_status": {
+    "act1_action_and_scalar_algebra_certificate_passed": true,
+    "full_fgc1_health_gate_passed": false,
+    "publication_local_defocusing_gate_passed": false,
+    "var1_covariant_metric_equation_derived_and_cross_checked": true
+  },
+  "implementation_sources_sha256": {
+    "scripts/reproduce_fgc_metric_variation.py": "cd0f46288ff7dfb8c9a785e0a2c46a72150c310ff16caf4b5e377187443ff1df",
+    "src/recursive_horizons/fgc/action.py": "138260a26b0e386044a68810978eba61742e5d9dcc3f372c7b89276f08fdfbb4",
+    "src/recursive_horizons/fgc/metric_variation.py": "55d2833ac68362b87b3732b71d182b4630a814a7f5e5248eab30b0baa5644525"
+  },
+  "nonclaims": {
+    "boundary_or_junction_variation_completed": false,
+    "child_spacetime_constructed": false,
+    "constraint_propagation_proven": false,
+    "coupled_metric_chi_background_verified": false,
+    "dark_energy_derived": false,
+    "dark_matter_derived": false,
+    "differential_bianchi_or_full_divergence_fixture_evaluated": false,
+    "finite_collapse_solution_constructed": false,
+    "full_coupled_quadratic_action_diagonalized": false,
+    "global_flux_entropy_closure_derived": false,
+    "metric_null_defocusing_derived": false,
+    "nonlinear_ghost_freedom_proven": false,
+    "nonlinear_strong_hyperbolicity_proven": false,
+    "observational_confirmation_obtained": false,
+    "particle_spectrum_derived": false,
+    "shear_robustness_proven": false,
+    "singularity_resolution_proven": false,
+    "spherical_field_equations_derived": false,
+    "spherical_principal_symbol_derived": false,
+    "tensor_cas_or_second_independent_functional_variation_performed": false,
+    "theory_of_everything_derived": false,
+    "variable_speed_of_light_derived": false
+  },
+  "primary_source_crosscheck": {
+    "coefficient_and_sign_match": true,
+    "mapping": "f_T=alpha_T*phi^2/2_and_double_epsilon_term_equals_-8*P_acbd*nabla^c*nabla^d*f_T",
+    "source": "Thaalba_et_al_arXiv_2306.01695_equations_1_and_3",
+    "unsafe_normalization_warning": "Lara_et_al_arXiv_2403.08705_equation_6_is_not_used_as_coefficient_authority",
+    "url": "https://arxiv.org/abs/2306.01695"
+  },
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "scope": "Derives the complete covariant bulk metric equation for the frozen action and cross-checks the Gauss-Bonnet sign, factor, expansion, trace, Noether curvature-contraction identity, nonminimal source, branch specializations, and exact automatic FLRW lapse variation. It does not numerically evaluate the differential Bianchi identity or full divergence, and does not derive boundary or junction terms, the spherical system, principal symbol, constraints, nonlinear health, collapse, affine defocusing, singularity resolution, child spacetime, dark sector, variable c, particle spectrum, or a theory of everything.",
+  "source_config": "configs/fgc/fgc-1-metric-variation.toml",
+  "source_configs_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97"
+  },
+  "variation_certificate": {
+    "aggregate": {
+      "all_required_coverage": true,
+      "fixture_count": 8,
+      "maximum_exact_residual": "0",
+      "maximum_exact_residual_by_identity": {
+        "compact_expanded_gb_source": "0",
+        "flrw_lapse": "0",
+        "noether_curvature_contraction": "0",
+        "p_trace": "0",
+        "quadratic_nonminimal_source": "0",
+        "trace": "0"
+      }
+    },
+    "branch_coverage": {
+      "FGC-QR": {
+        "gb_nonzero": true,
+        "nonminimal_nonzero": true
+      },
+      "GR-0": {
+        "gb_zero": true,
+        "nonminimal_zero": true
+      },
+      "SGB-L": {
+        "gb_nonzero": true,
+        "nonminimal_zero": true
+      }
+    },
+    "convention_locked_equations": {
+      "antisymmetrization_weight": "one_half",
+      "compact_gb_source": "T_GB_ab=-8*P_acbd*nabla^c*nabla^d*f",
+      "double_dual_p": "P_abcd=R_abcd-2*g_a[c*R_d]b+2*g_b[c*R_d]a+R*g_a[c*g_d]b",
+      "expanded_gb_coefficients": {
+        "metric_ricci_hessian": "8",
+        "ricci_a_hessian_b": "-8",
+        "ricci_ab_box": "8",
+        "ricci_b_hessian_a": "-8",
+        "riemann_hessian": "-8",
+        "scalar_hessian": "4",
+        "scalar_metric_box": "-4"
+      },
+      "full_metric_equation": "F*G_ab+(g_ab*Box-nabla_a*nabla_b)F=T_phi_ab+T_chi_ab-8*P_acbd*nabla^c*nabla^d*f",
+      "gauss_bonnet": "G=R_abcd*R^abcd-4*R_ab*R^ab+R^2",
+      "nonminimal_source": "(g_ab*Box-nabla_a*nabla_b)F",
+      "riemann": "R^rho_sigma_mu_nu=partial_mu_Gamma^rho_nu_sigma-partial_nu_Gamma^rho_mu_sigma+Gamma^rho_mu_lambda*Gamma^lambda_nu_sigma-Gamma^rho_nu_lambda*Gamma^lambda_mu_sigma",
+      "stress_definition": "T_GB_ab=-2/sqrt(-g)*delta(int_sqrt(-g)*f*G)/delta_g^ab"
+    },
+    "fixture_generator": {
+      "algorithm": "lcg64_v1",
+      "curvature_construction": "sum_of_two_kulkarni_nomizu_products",
+      "increment": 1442695040888963407,
+      "modulus": "2^64",
+      "multiplier": 6364136223846793005
+    },
+    "fixture_records": [
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "1",
+            "F_second": "-1/2",
+            "f_prime": "-1/4",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-00-draw-01",
+        "fixture_source_sha256": "6551b8447a137c622cb2aa057ef3a7ae470c9a1911465e42d65d2188ffe94006",
+        "gauss_bonnet_invariant": "2648",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "-1/2",
+            "F_second": "-1/2",
+            "f_prime": "1/8",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-01-draw-02",
+        "fixture_source_sha256": "d17d4611c389098558595e84c82485d9d2853904c243f1956e918a6f1ee8e925",
+        "gauss_bonnet_invariant": "-2888",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "-1",
+            "F_second": "-1/2",
+            "f_prime": "1/4",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-02-draw-03",
+        "fixture_source_sha256": "8261a44a5b2aebc2e4d75e4d3873ad5dbc4289611b6b57cc59da5a4349571b5f",
+        "gauss_bonnet_invariant": "-6336",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "1/2",
+            "F_second": "-1/2",
+            "f_prime": "-1/8",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-03-draw-04",
+        "fixture_source_sha256": "4687abf3ceaa7c6508e740b2b3213237cc93aa4706b461d96d6be94c43dcff0a",
+        "gauss_bonnet_invariant": "8784",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "-3/2",
+            "F_second": "-1/2",
+            "f_prime": "3/8",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-04-draw-05",
+        "fixture_source_sha256": "a27edf21354514cf6931ef8be6a7c2a6a66151329be0fb08c0b3c955064e3780",
+        "gauss_bonnet_invariant": "-5936",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "-3/2",
+            "F_second": "-1/2",
+            "f_prime": "3/8",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-05-draw-08",
+        "fixture_source_sha256": "c0bfd8f9e4b28e2b2b1d301806ec25b76aebe15a75c89cd008c3d43fdda6ff98",
+        "gauss_bonnet_invariant": "2688",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "-1/2",
+            "F_second": "-1/2",
+            "f_prime": "1/8",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-06-draw-09",
+        "fixture_source_sha256": "0d80982995f7dd66d51d7e17a8f374ead579eef73239d8680ef2af8c05e782aa",
+        "gauss_bonnet_invariant": "104",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      },
+      {
+        "branches": [
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "0",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": false,
+            "model_id": "GR-0",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "0",
+            "F_second": "0",
+            "f_prime": "-1/4",
+            "f_second": "0",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "SGB-L",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": false
+          },
+          {
+            "F_prime": "-1/2",
+            "F_second": "-1/2",
+            "f_prime": "1/8",
+            "f_second": "1/8",
+            "gb_compact_expanded_max_exact_residual": "0",
+            "gb_source_nonzero": true,
+            "model_id": "FGC-QR",
+            "nonminimal_compact_expanded_max_exact_residual": "0",
+            "nonminimal_source_nonzero": true
+          }
+        ],
+        "fixture_id": "lcg64-07-draw-10",
+        "fixture_source_sha256": "3bf066766a6c5cd0eb0b1ac486d913d46a51e448df3fb2eef74b484b5690ce76",
+        "gauss_bonnet_invariant": "-14464",
+        "generic_compact_expanded_max_exact_residual": "0",
+        "trace_identity_exact_residual": "0",
+        "validation": {
+          "generic_gb_source_nonzero": true,
+          "generic_gb_source_symmetric": true,
+          "metric_is_minkowski_diagonal": true,
+          "noether_curvature_contraction_max_exact_residual": "0",
+          "nonzero_curvature": true,
+          "nonzero_gauss_bonnet_invariant": true,
+          "nonzero_scalar_field": true,
+          "nonzero_scalar_gradient": true,
+          "nonzero_scalar_hessian": true,
+          "p_trace_max_exact_residual": "0",
+          "ricci_symmetric": true,
+          "riemann_first_bianchi": true,
+          "riemann_first_pair_antisymmetric": true,
+          "riemann_pair_exchange_symmetric": true,
+          "riemann_second_pair_antisymmetric": true
+        }
+      }
+    ],
+    "flrw_lapse_crosscheck": {
+      "boundary_reduced_lagrangian": "-1323/25",
+      "compact_T_GB_00": "-405/7",
+      "exact_automatic_lapse_derivative": "3969/25",
+      "expected_formula": "T_GB_00=-24*H^3*f_dot",
+      "independent_lapse_variation_T_GB_00": "-405/7",
+      "inputs": {
+        "f_second_time_derivative": "-11/13",
+        "f_time_derivative": "5/7",
+        "hubble": "3/2",
+        "hubble_derivative": "-2/3",
+        "lapse": "1",
+        "scale_factor": "7/5"
+      },
+      "max_exact_residual": "0",
+      "scale_factor_velocity": "21/10",
+      "stress_conversion_factor": "-N^2/a^3"
+    },
+    "nonclaims": {
+      "boundary_or_junction_variation_completed": false,
+      "child_spacetime_constructed": false,
+      "constraint_propagation_proven": false,
+      "coupled_metric_chi_background_verified": false,
+      "dark_energy_derived": false,
+      "dark_matter_derived": false,
+      "differential_bianchi_or_full_divergence_fixture_evaluated": false,
+      "finite_collapse_solution_constructed": false,
+      "full_coupled_quadratic_action_diagonalized": false,
+      "global_flux_entropy_closure_derived": false,
+      "metric_null_defocusing_derived": false,
+      "nonlinear_ghost_freedom_proven": false,
+      "nonlinear_strong_hyperbolicity_proven": false,
+      "observational_confirmation_obtained": false,
+      "particle_spectrum_derived": false,
+      "shear_robustness_proven": false,
+      "singularity_resolution_proven": false,
+      "spherical_field_equations_derived": false,
+      "spherical_principal_symbol_derived": false,
+      "tensor_cas_or_second_independent_functional_variation_performed": false,
+      "theory_of_everything_derived": false,
+      "variable_speed_of_light_derived": false
+    },
+    "verified_exact_checks": {
+      "all_algebraic_curvature_fixtures_valid": true,
+      "all_branch_source_coverage": true,
+      "all_var1_nonclaims_false": true,
+      "compact_expanded_gb_source_identity": true,
+      "constant_f_topological_bulk_source_zero": true,
+      "flrw_lapse_sign_and_factor": true,
+      "gb_metric_source_symmetric": true,
+      "noether_curvature_contraction_identity": true,
+      "p_trace_identity": true,
+      "quadratic_nonminimal_source_identity": true,
+      "trace_identity": true
+    }
+  }
+}

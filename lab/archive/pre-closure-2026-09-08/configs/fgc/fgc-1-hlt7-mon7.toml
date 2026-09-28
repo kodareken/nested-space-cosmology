@@ -1,0 +1,97 @@
+schema_version = 1
+artifact_id = "FGC-1-HLT7-MON7"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v9.toml"
+protocol_freeze_config = "configs/fgc/fgc-1-pro9-frz1.toml"
+protocol_freeze_result = "results/fgc-1-pro9-frz1.json"
+predecessor_runtime_result = "results/fgc-1-hlt6-mon6.json"
+static_input_result = "results/fgc-1-id2-all1.json"
+predecessor_run_plan = "configs/fgc/fgc-1-cal5-run1.toml"
+run_plan_config = "configs/fgc/fgc-1-cal6-run1.toml"
+
+[scope]
+target_protocol = "FGC-2-SF1-PROTO9"
+runtime_owner = "FGC-1-HLT7-MON7"
+calibration_branch = "GR-0"
+role = "pre_trajectory_resolution_ladder_runtime_binding_and_fresh_input_freeze"
+PROTO8_calibration_history_disclosed = true
+PROTO9_trajectory_read = false
+SGBL_trajectory_read = false
+FGCQR_trajectory_read = false
+collapse_or_trapped_outcome_classified = false
+conditional_8193_projection_used_as_evidence = false
+
+[immutable_lineage]
+checkpoint_commit = "833910d1b31ed820745d61e0ce7976965e37b487"
+protocol_config_sha256 = "81ce8426b006518d58accae50e43fcbfe942d013dfd010a716ff265b57afb48e"
+protocol_freeze_config_sha256 = "92f00e53585dc74e7438c353d4fdbcfc0b3b2e634e134cc15e26d7700dea7f1e"
+protocol_freeze_result_sha256 = "cccda72803bd4b6bbdbc091a90e9746e1cc4b7952ef9f4dd9b684aee962b892d"
+predecessor_runtime_result_sha256 = "cda19a43fc08d6100511be046fb12a178adb29848429aa656a07160cf6787cbc"
+static_input_result_sha256 = "10e2661be521087467b970f1cd877311bd63a0cb6874a1ee745ca00ec74ab981"
+predecessor_run_plan_sha256 = "7967c1a785e9b6afcac3d516a426db4ed3652d58ab87fddb8b8874d824129e75"
+checkpoint_must_be_ancestor_of_HEAD = true
+all_predecessor_blobs_must_be_read_from_checkpoint = true
+
+[runtime_binding]
+inherited_PROTO8_common_event_compositor_byte_unchanged = true
+inherited_PROTO7_evolution_transaction_and_source_retry_byte_unchanged = true
+exact_point_counts_required = [2049, 4097, 8193]
+new_8193_state_required_for_each_amplitude_and_method = true
+conditional_projection_is_not_runtime_evidence = true
+common_event_constraints_spectra_and_thresholds_unchanged = true
+physical_inputs_equations_methods_CFL_and_stops_unchanged = true
+runner_binds_and_restores_immutable_predecessor_engine = true
+
+[input_freeze]
+eligible_amplitudes_in_order = ["5/2", "3"]
+methods_in_order = ["RK4", "SSPRK3"]
+resolutions_in_order = [2049, 4097, 8193]
+expected_run_input_count = 12
+overlapping_2049_and_4097_state_hashes_must_match_HLT6 = true
+four_new_8193_states_must_be_constructed_directly = true
+physical_u_p_and_initial_profiles_unchanged = true
+q_must_be_initialized_by_native_SBP_operator = true
+expanded_PROTO9_run_config_hashes_must_be_serialized = true
+all_twelve_accepted_state_source_prechecks_must_pass = true
+both_amplitudes_and_methods_must_be_evaluated_at_the_PROTO9_t0_common_event = true
+first_eligible_candidate_stops_later_candidates = true
+
+[namespace]
+calibration_output_root = "runs/fgc-2-sf1/proto9/calibration"
+holdout_output_root = "runs/fgc-2-sf1/proto9/holdout"
+both_roots_must_be_absent_or_empty_at_authorization = true
+authorization_must_not_create_either_root = true
+runner_must_refuse_overwrite = true
+
+[proof_contract]
+PROTO9_and_PRO9_FRZ1_must_validate_from_immutable_checkpoint = true
+HLT6_ID2_and_CAL5_plan_must_be_canonical_and_hash_matched_from_immutable_checkpoint = true
+CAL6_plan_must_differ_from_CAL5_only_by_the_frozen_ladder_protocol_and_namespace = true
+old_PROTO8_ladder_must_fail_the_PROTO9_runtime_adapter = true
+all_overlapping_projected_inputs_must_match_HLT6 = true
+all_four_new_8193_inputs_must_be_constructed_without_projection = true
+all_twelve_t0_accepted_source_prechecks_must_pass = true
+all_four_PROTO9_t0_common_events_must_be_serialized_without_reinterpretation = true
+inherited_constraint_and_spectral_thresholds_must_remain_unchanged = true
+inherited_transaction_source_boundary_health_and_affine_stops_must_remain_hash_bound = true
+authorized_runner_must_be_hash_bound_and_refuse_drift_overwrite_or_dirty_tracked_state = true
+fresh_namespaces_must_be_observed_empty_without_creation = true
+canonical_hash_bound_result_required = true
+no_PROTO9_trajectory_may_be_read_or_advanced = true
+
+[claims]
+PROTO9_successor_runtime_implemented = true
+PROTO9_fresh_GR0_dynamic_calibration_authorized = false
+PROTO9_resolved_holdout_manifest_authorized = false
+classical_spherical_diagnostic_authorized = false
+FGCQR_holdout_execution_authorized = false
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+FGCQR_mechanism_rejected = false
+general_gradient_route_rejected = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

@@ -1,0 +1,586 @@
+{
+  "accountable_author": "Douglas Ek",
+  "geometry_box": {
+    "period_left_exact": "2266848039411641/2251799813685248",
+    "period_length_exact": "205/512",
+    "rho_center": "259/256",
+    "rho_radius": "1/1048576",
+    "whole_axial_cell": true
+  },
+  "global_P4_operator_upper": {
+    "exponent": -143,
+    "mantissa": "800249631410391881007264970451183692775559948165"
+  },
+  "global_P4_zz_operator_upper": {
+    "exponent": -122,
+    "mantissa": "877911208653492358458523388917801031066080553345"
+  },
+  "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-fine-prepared.npz": "162ad8484b6650106657fae60bf681852695fbb523048e9ed0ce1a2bfb82160c",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-radius-covariance-bounds.json": "e7175ee86abe2475e8115139f0adeb8c2022f2d293fcae6228eb50ab25db5737"
+  },
+  "reproducer": "python scripts/derive_nsc_weyl_integrated_moment_control.py --check",
+  "rows": [
+    {
+      "auxiliary": "P0+P1+P2+P3+P4",
+      "auxiliary_cutoff": null,
+      "auxiliary_reconstruction_correction_required": false,
+      "canonical_momentum_split": 256,
+      "channel_multiplicity_included": false,
+      "first_moment_density_upper": {
+        "exponent": -130,
+        "mantissa": "436283448415379448967530535235555743121442570659"
+      },
+      "initial_covariance_error_bound": null,
+      "low_canonical_momenta_need_separate_evaluation": true,
+      "momentum_measure_included": "dk/(2pi), both signs exactly once",
+      "physical_local_gate": "OPEN",
+      "physical_subtraction_changed": false,
+      "rho_integral_included": false,
+      "rows": [
+        {
+          "kinetic_time_upper": {
+            "exponent": -156,
+            "mantissa": "216131499824943232349539413345453368655761795191"
+          },
+          "large_Taylor_upper": {
+            "exponent": -173,
+            "mantissa": "1000651325651237109716646165677530241721582131885"
+          },
+          "large_shifted_upper": {
+            "exponent": -140,
+            "mantissa": "504086141824933092673732888544971439534968890951"
+          },
+          "moment_order": 0,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -175,
+            "mantissa": "226664940077554227746979950111170729387364530639"
+          },
+          "total_upper": {
+            "exponent": -140,
+            "mantissa": "504089439852986647336931910198636805240847757331"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -150,
+            "mantissa": "1152701332399697239197543537842417966164062907685"
+          },
+          "large_Taylor_upper": {
+            "exponent": -161,
+            "mantissa": "107863319014250165473802938937262401846554895845"
+          },
+          "large_shifted_upper": {
+            "exponent": -132,
+            "mantissa": "872562499414449389050633928023265514490176770033"
+          },
+          "moment_order": 1,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -169,
+            "mantissa": "1206388765403765893263498004773293033963761015145"
+          },
+          "total_upper": {
+            "exponent": -131,
+            "mantissa": "436283448415379448967530535235555743121442570659"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -156,
+            "mantissa": "216131499824943232349539413345453368655761795191"
+          },
+          "large_Taylor_upper": {
+            "exponent": -173,
+            "mantissa": "1000651325651237109716646165677530241721582131885"
+          },
+          "large_shifted_upper": {
+            "exponent": -140,
+            "mantissa": "504086141824933092673732888544971439534968890951"
+          },
+          "moment_order": 0,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -175,
+            "mantissa": "226664940077554227746979950111170729387364530639"
+          },
+          "total_upper": {
+            "exponent": -140,
+            "mantissa": "504089439852986647336931910198636805240847757331"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -150,
+            "mantissa": "1152701332399697239197543537842417966164062907685"
+          },
+          "large_Taylor_upper": {
+            "exponent": -161,
+            "mantissa": "107863319014250165473802938937262401846554895845"
+          },
+          "large_shifted_upper": {
+            "exponent": -132,
+            "mantissa": "872562499414449389050633928023265514490176770033"
+          },
+          "moment_order": 1,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -169,
+            "mantissa": "1206388765403765893263498004773293033963761015143"
+          },
+          "total_upper": {
+            "exponent": -131,
+            "mantissa": "436283448415379448967530535235555743121442570659"
+          }
+        }
+      ],
+      "schema": "NSC-WEYL-INTEGRATED-MOMENTS-v1",
+      "source_energy_tail_identified_with_canonical_cut": false,
+      "time_box_integral_uppers": [
+        {
+          "exponent": -158,
+          "mantissa": "504089439852986647336931910198636805240847757331"
+        },
+        {
+          "exponent": -149,
+          "mantissa": "436283448415379448967530535235555743121442570659"
+        }
+      ],
+      "zeroth_moment_density_upper": {
+        "exponent": -139,
+        "mantissa": "504089439852986647336931910198636805240847757331"
+      }
+    },
+    {
+      "auxiliary": "P0+chi_K*(P1+P2+P3+P4)",
+      "auxiliary_cutoff": {
+        "one_from": "K/2",
+        "smooth_even_between": true,
+        "zero_through": "K/4"
+      },
+      "auxiliary_reconstruction_correction_required": true,
+      "canonical_momentum_split": 256,
+      "channel_multiplicity_included": false,
+      "first_moment_density_upper": {
+        "exponent": -149,
+        "mantissa": "1152815111316623364607074545336650094227897270169"
+      },
+      "initial_covariance_error_bound": null,
+      "low_canonical_momenta_need_separate_evaluation": true,
+      "momentum_measure_included": "dk/(2pi), both signs exactly once",
+      "physical_local_gate": "OPEN",
+      "physical_subtraction_changed": false,
+      "rho_integral_included": false,
+      "rows": [
+        {
+          "kinetic_time_upper": {
+            "exponent": -156,
+            "mantissa": "216131499824943232349539413345453368655761795191"
+          },
+          "large_Taylor_upper": {
+            "exponent": -173,
+            "mantissa": "1000651325651237109716646165677530241721582131885"
+          },
+          "large_shifted_upper": {
+            "exponent": -172,
+            "mantissa": "556648926936803194005972254898211895514705380387"
+          },
+          "moment_order": 0,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -175,
+            "mantissa": "226664940077554227746979950111170729387364530639"
+          },
+          "total_upper": {
+            "exponent": -158,
+            "mantissa": "864592241225265612261154032033638479100436641031"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -150,
+            "mantissa": "1152701332399697239197543537842417966164062907685"
+          },
+          "large_Taylor_upper": {
+            "exponent": -161,
+            "mantissa": "107863319014250165473802938937262401846554895845"
+          },
+          "large_shifted_upper": {
+            "exponent": -163,
+            "mantissa": "481773786942384850900559480675960787889194105201"
+          },
+          "moment_order": 1,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -169,
+            "mantissa": "1206388765403765893263498004773293033963761015145"
+          },
+          "total_upper": {
+            "exponent": -150,
+            "mantissa": "1152815111316623364607074545336650094227897270169"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -156,
+            "mantissa": "216131499824943232349539413345453368655761795191"
+          },
+          "large_Taylor_upper": {
+            "exponent": -173,
+            "mantissa": "1000651325651237109716646165677530241721582131885"
+          },
+          "large_shifted_upper": {
+            "exponent": -172,
+            "mantissa": "556648926936803194005972254898211895514705380387"
+          },
+          "moment_order": 0,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -175,
+            "mantissa": "226664940077554227746979950111170729387364530639"
+          },
+          "total_upper": {
+            "exponent": -158,
+            "mantissa": "864592241225265612261154032033638479100436641031"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -150,
+            "mantissa": "1152701332399697239197543537842417966164062907685"
+          },
+          "large_Taylor_upper": {
+            "exponent": -161,
+            "mantissa": "107863319014250165473802938937262401846554895845"
+          },
+          "large_shifted_upper": {
+            "exponent": -163,
+            "mantissa": "481773786942384850900559480675960787889194105201"
+          },
+          "moment_order": 1,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -169,
+            "mantissa": "1206388765403765893263498004773293033963761015143"
+          },
+          "total_upper": {
+            "exponent": -150,
+            "mantissa": "1152815111316623364607074545336650094227897270169"
+          }
+        }
+      ],
+      "schema": "NSC-WEYL-INTEGRATED-MOMENTS-v1",
+      "source_energy_tail_identified_with_canonical_cut": false,
+      "time_box_integral_uppers": [
+        {
+          "exponent": -176,
+          "mantissa": "864592241225265612261154032033638479100436641031"
+        },
+        {
+          "exponent": -168,
+          "mantissa": "1152815111316623364607074545336650094227897270169"
+        }
+      ],
+      "zeroth_moment_density_upper": {
+        "exponent": -157,
+        "mantissa": "864592241225265612261154032033638479100436641031"
+      }
+    },
+    {
+      "auxiliary": "P0+P1+P2+P3+P4",
+      "auxiliary_cutoff": null,
+      "auxiliary_reconstruction_correction_required": false,
+      "canonical_momentum_split": 1024,
+      "channel_multiplicity_included": false,
+      "first_moment_density_upper": {
+        "exponent": -134,
+        "mantissa": "498846656554913288751209008318677497097136534407"
+      },
+      "initial_covariance_error_bound": null,
+      "low_canonical_momenta_need_separate_evaluation": true,
+      "momentum_measure_included": "dk/(2pi), both signs exactly once",
+      "physical_local_gate": "OPEN",
+      "physical_subtraction_changed": false,
+      "rho_integral_included": false,
+      "rows": [
+        {
+          "kinetic_time_upper": {
+            "exponent": -166,
+            "mantissa": "214230024050366315863089649722420189566788194793"
+          },
+          "large_Taylor_upper": {
+            "exponent": -178,
+            "mantissa": "755052639137784625548716889066833676593863050507"
+          },
+          "large_shifted_upper": {
+            "exponent": -146,
+            "mantissa": "773077665048868034263544095941342349573201048019"
+          },
+          "moment_order": 0,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -183,
+            "mantissa": "284662536114969848358026392865244746075502792555"
+          },
+          "total_upper": {
+            "exponent": -146,
+            "mantissa": "773077869532410358701259024824728770794735080505"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -158,
+            "mantissa": "1142560128268620351269811465186241011022870372229"
+          },
+          "large_Taylor_upper": {
+            "exponent": -167,
+            "mantissa": "487128095607442409963579302840386225140437551469"
+          },
+          "large_shifted_upper": {
+            "exponent": -133,
+            "mantissa": "124711630059084757611464342938819670589262642991"
+          },
+          "moment_order": 1,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -173,
+            "mantissa": "377888488184281645620880749955077124536817211107"
+          },
+          "total_upper": {
+            "exponent": -135,
+            "mantissa": "498846656554913288751209008318677497097136534407"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -166,
+            "mantissa": "214230024050366315863089649722420189566788194793"
+          },
+          "large_Taylor_upper": {
+            "exponent": -178,
+            "mantissa": "755052639137784625548716889066833676593863050507"
+          },
+          "large_shifted_upper": {
+            "exponent": -146,
+            "mantissa": "773077665048868034263544095941342349573201048019"
+          },
+          "moment_order": 0,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -183,
+            "mantissa": "284662536114969848358026392865244746075502792555"
+          },
+          "total_upper": {
+            "exponent": -146,
+            "mantissa": "773077869532410358701259024824728770794735080505"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -158,
+            "mantissa": "1142560128268620351269811465186241011022870372229"
+          },
+          "large_Taylor_upper": {
+            "exponent": -167,
+            "mantissa": "487128095607442409963579302840386225140437551469"
+          },
+          "large_shifted_upper": {
+            "exponent": -133,
+            "mantissa": "124711630059084757611464342938819670589262642991"
+          },
+          "moment_order": 1,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -173,
+            "mantissa": "377888488184281645620880749955077124536817211107"
+          },
+          "total_upper": {
+            "exponent": -135,
+            "mantissa": "498846656554913288751209008318677497097136534407"
+          }
+        }
+      ],
+      "schema": "NSC-WEYL-INTEGRATED-MOMENTS-v1",
+      "source_energy_tail_identified_with_canonical_cut": false,
+      "time_box_integral_uppers": [
+        {
+          "exponent": -164,
+          "mantissa": "773077869532410358701259024824728770794735080505"
+        },
+        {
+          "exponent": -153,
+          "mantissa": "498846656554913288751209008318677497097136534407"
+        }
+      ],
+      "zeroth_moment_density_upper": {
+        "exponent": -145,
+        "mantissa": "773077869532410358701259024824728770794735080505"
+      }
+    },
+    {
+      "auxiliary": "P0+chi_K*(P1+P2+P3+P4)",
+      "auxiliary_cutoff": {
+        "one_from": "K/2",
+        "smooth_even_between": true,
+        "zero_through": "K/4"
+      },
+      "auxiliary_reconstruction_correction_required": true,
+      "canonical_momentum_split": 1024,
+      "channel_multiplicity_included": false,
+      "first_moment_density_upper": {
+        "exponent": -157,
+        "mantissa": "1144473353456678103655904504315056166588305710919"
+      },
+      "initial_covariance_error_bound": null,
+      "low_canonical_momenta_need_separate_evaluation": true,
+      "momentum_measure_included": "dk/(2pi), both signs exactly once",
+      "physical_local_gate": "OPEN",
+      "physical_subtraction_changed": false,
+      "rho_integral_included": false,
+      "rows": [
+        {
+          "kinetic_time_upper": {
+            "exponent": -166,
+            "mantissa": "214230024050366315863089649722420189566788194793"
+          },
+          "large_Taylor_upper": {
+            "exponent": -178,
+            "mantissa": "755052639137784625548716889066833676593863050507"
+          },
+          "large_shifted_upper": {
+            "exponent": -178,
+            "mantissa": "754003849923645146105848608929311286429874575689"
+          },
+          "moment_order": 0,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -183,
+            "mantissa": "284662536114969848358026392865244746075502792555"
+          },
+          "total_upper": {
+            "exponent": -166,
+            "mantissa": "214600617847562366297517323995558173907935313223"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -158,
+            "mantissa": "1142560128268620351269811465186241011022870372229"
+          },
+          "large_Taylor_upper": {
+            "exponent": -167,
+            "mantissa": "487128095607442409963579302840386225140437551469"
+          },
+          "large_shifted_upper": {
+            "exponent": -168,
+            "mantissa": "973077386100494822006460938789850688583136174653"
+          },
+          "moment_order": 1,
+          "sign_k": -1,
+          "small_transfer_upper": {
+            "exponent": -173,
+            "mantissa": "377888488184281645620880749955077124536817211107"
+          },
+          "total_upper": {
+            "exponent": -158,
+            "mantissa": "1144473353456678103655904504315056166588305710919"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -166,
+            "mantissa": "214230024050366315863089649722420189566788194793"
+          },
+          "large_Taylor_upper": {
+            "exponent": -178,
+            "mantissa": "755052639137784625548716889066833676593863050507"
+          },
+          "large_shifted_upper": {
+            "exponent": -178,
+            "mantissa": "754003849923645146105848608929311286429874575689"
+          },
+          "moment_order": 0,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -183,
+            "mantissa": "284662536114969848358026392865244746075502792555"
+          },
+          "total_upper": {
+            "exponent": -166,
+            "mantissa": "214600617847562366297517323995558173907935313223"
+          }
+        },
+        {
+          "kinetic_time_upper": {
+            "exponent": -158,
+            "mantissa": "1142560128268620351269811465186241011022870372229"
+          },
+          "large_Taylor_upper": {
+            "exponent": -167,
+            "mantissa": "487128095607442409963579302840386225140437551469"
+          },
+          "large_shifted_upper": {
+            "exponent": -168,
+            "mantissa": "973077386100494822006460938789850688583136174653"
+          },
+          "moment_order": 1,
+          "sign_k": 1,
+          "small_transfer_upper": {
+            "exponent": -173,
+            "mantissa": "377888488184281645620880749955077124536817211107"
+          },
+          "total_upper": {
+            "exponent": -158,
+            "mantissa": "1144473353456678103655904504315056166588305710919"
+          }
+        }
+      ],
+      "schema": "NSC-WEYL-INTEGRATED-MOMENTS-v1",
+      "source_energy_tail_identified_with_canonical_cut": false,
+      "time_box_integral_uppers": [
+        {
+          "exponent": -184,
+          "mantissa": "214600617847562366297517323995558173907935313223"
+        },
+        {
+          "exponent": -176,
+          "mantissa": "1144473353456678103655904504315056166588305710919"
+        }
+      ],
+      "zeroth_moment_density_upper": {
+        "exponent": -165,
+        "mantissa": "214600617847562366297517323995558173907935313223"
+      }
+    }
+  ],
+  "runtime": {
+    "CPU_cap": 180.0,
+    "CPU_seconds": 5.801642
+  },
+  "schema": "NSC-WEYL-INTEGRATED-MOMENT-CONTROL-v1",
+  "scope": {
+    "initial_covariance_error_bound": null,
+    "low_canonical_momentum_residual_bound": null,
+    "metric_timestep": false,
+    "new_field_or_source_runs": 0,
+    "physical_local_gate": "OPEN",
+    "physical_subtraction_changed": false,
+    "source_energy_tail_bound": null,
+    "source_value_error_bound": null,
+    "whole_time_domain_covered": false
+  },
+  "source_family_control": "14_1",
+  "source_hashes": {
+    "docs/nsc-weyl-integrated-moments.md": "7d2b96d074298af3b19bd43833b99680a10ab680e3c7a44908d94ad6ae4a292b",
+    "scripts/derive_nsc_weyl_integrated_moment_control.py": "05a05c3112173b205760fc1f6f2b2176b0a4a0e792d1db3d1f573bcdd94d1175",
+    "src/recursive_horizons/nsc_global_projector_bounds.py": "d7fc924dbde401e37d524eb77ed2a7fe544b4f5702a0b0c2d6f1b2ce5b30bf82",
+    "src/recursive_horizons/nsc_ks_uniform_axial_geometry.py": "996bf12223ed4a170ab137e79cf36fd1a914b47c5cb24c17246099e28c953e95",
+    "src/recursive_horizons/nsc_radius_transfer_sums.py": "85d037c296639b15fc1a529691fb6e56e0dbb313102c086efc26c89c7eaf3497",
+    "src/recursive_horizons/nsc_scaled_reference_projector.py": "a6eb3f45d6ce9baa256457c06b6ab61830097acf7394924de74feda9dc113407",
+    "src/recursive_horizons/nsc_weyl_integrated_moments.py": "01dc6e0cee94e91e804169f1cae837bff44cd8a1d762ee404b918f124ae4b012"
+  },
+  "status": "OPEN: high-k defect moments on one time box; no physical UV/gate certificate"
+}

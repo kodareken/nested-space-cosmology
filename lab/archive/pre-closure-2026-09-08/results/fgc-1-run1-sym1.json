@@ -1,0 +1,500 @@
+{
+  "artifact_id": "FGC-1-RUN1-SYM1",
+  "classification": "fail_closed_scoped_classical_spherical_diagnostic_authorization_contract_not_EFT_validity_evolution_or_physical_transition_certificate",
+  "derivation_document": "docs/fgc-run1-sym1.md",
+  "derivation_document_sha256": "34f4957e39840ee737feb7df6f2a00627bdb741cff2e340f8c573dbf6c31160d",
+  "frozen_configuration": {
+    "action_config": "configs/fgc/fgc-1-action-gate.toml",
+    "action_result": "results/fgc-1-action-gate.json",
+    "artifact_id": "FGC-1-RUN1-SYM1",
+    "authorization_contract": {
+      "all_scoped_predicates_must_pass": true,
+      "bare_config_booleans_cannot_substitute_for_hashed_evidence": true,
+      "missing_evidence_is_false_not_inferred": true,
+      "no_reverse_implication_is_assumed": true,
+      "one_false_scoped_predicate_stops_holdout_execution": true,
+      "physical_transition_implies_retained_EFT_and_scoped_authorization": true,
+      "scoped_classical_diagnostic_is_not_a_physical_transition_claim": true,
+      "scoped_classical_diagnostic_is_not_retained_EFT_evolution": true
+    },
+    "bnd1_config": "configs/fgc/fgc-1-hyp1-bnd1-md1.toml",
+    "bnd1_result": "results/fgc-1-hyp1-bnd1-md1.json",
+    "claims": {
+      "UV_completion_derived": false,
+      "affine_null_defocusing_derived": false,
+      "child_domain_or_topology_derived": false,
+      "collapse_solution_derived": false,
+      "complete_Wilsonian_EFT_defined": false,
+      "dark_sector_mechanism_derived": false,
+      "finite_invariant_transition_surface_derived": false,
+      "physical_transition_claim_authorized": false,
+      "retained_EFT_evolution_authorized": false,
+      "singularity_resolution_derived": false,
+      "varying_locally_measured_c_derived": false
+    },
+    "con2_config": "configs/fgc/fgc-1-hyp1-con2-mprop1.toml",
+    "con2_result": "results/fgc-1-hyp1-con2-mprop1.json",
+    "con3_config": "configs/fgc/fgc-1-hyp1-con3-cau1.toml",
+    "con3_result": "results/fgc-1-hyp1-con3-cau1.json",
+    "def0_config": "configs/fgc/fgc-1-def0-obs1.toml",
+    "def0_result": "results/fgc-1-def0-obs1.json",
+    "eft1_config": "configs/fgc/fgc-1-eft1-open1.toml",
+    "eft1_result": "results/fgc-1-eft1-open1.json",
+    "future_evidence": {
+      "boundary_control": {
+        "artifact_id": "FGC-1-BND2-CP1",
+        "config": "configs/fgc/fgc-1-bnd2-cp1.toml",
+        "required_gate": "spherical_boundary_or_domain_of_dependence_control_passed",
+        "result": "results/fgc-1-bnd2-cp1.json"
+      },
+      "health_monitor": {
+        "artifact_id": "FGC-1-HLT1-MON1",
+        "config": "configs/fgc/fgc-1-hlt1-mon1.toml",
+        "required_gate": "classical_health_and_typed_stop_monitoring_verified",
+        "result": "results/fgc-1-hlt1-mon1.json"
+      },
+      "initial_data": {
+        "artifact_id": "FGC-1-ID1-FAM1",
+        "config": "configs/fgc/fgc-1-id1-fam1.toml",
+        "required_gate": "nonzero_width_finite_mass_constraint_compatible_family_constructed",
+        "result": "results/fgc-1-id1-fam1.json"
+      },
+      "multidirectional_health": {
+        "artifact_id": "FGC-1-HYP2-MD1",
+        "config": "configs/fgc/fgc-1-hyp2-md1.toml",
+        "required_gate": "quantitative_all_covector_weak_coupling_health_envelope_passed",
+        "result": "results/fgc-1-hyp2-md1.json"
+      },
+      "nonlinear_source": {
+        "artifact_id": "FGC-1-SRC1-NL1",
+        "config": "configs/fgc/fgc-1-src1-nl1.toml",
+        "required_gate": "nonlinear_REF1_source_and_branch_solver_verified",
+        "result": "results/fgc-1-src1-nl1.json"
+      },
+      "numerical_validation": {
+        "artifact_id": "FGC-1-NUM1-VAL1",
+        "config": "configs/fgc/fgc-1-num1-val1.toml",
+        "required_gate": "independent_solver_validation_and_measurement_contract_passed",
+        "result": "results/fgc-1-num1-val1.json"
+      },
+      "physical_constraints": {
+        "artifact_id": "FGC-1-CON4-PHY1",
+        "config": "configs/fgc/fgc-1-con4-phy1.toml",
+        "required_gate": "physical_gauge_reduction_constraint_system_closed",
+        "result": "results/fgc-1-con4-phy1.json"
+      },
+      "protocol_holdout": {
+        "artifact_id": "FGC-1-PRO3-HLD1",
+        "config": "configs/fgc/fgc-1-pro3-hld1.toml",
+        "required_gate": "resolved_holdout_manifest_frozen_before_FGCQR_outcomes",
+        "result": "results/fgc-1-pro3-hld1.json"
+      },
+      "regular_center": {
+        "artifact_id": "FGC-1-CTR1-REG1",
+        "config": "configs/fgc/fgc-1-ctr1-reg1.toml",
+        "required_gate": "regular_center_formulation_verified",
+        "result": "results/fgc-1-ctr1-reg1.json"
+      },
+      "run_domain": {
+        "artifact_id": "FGC-1-DOM4-RUN1",
+        "config": "configs/fgc/fgc-1-dom4-run1.toml",
+        "required_gate": "nonzero_classical_spherical_run_envelope_passed",
+        "result": "results/fgc-1-dom4-run1.json"
+      }
+    },
+    "project_version": "0.11.0",
+    "protocol_config": "configs/fgc/fgc-2-sf1-protocol-v3.toml",
+    "protocol_preflight_config": "configs/fgc/fgc-1-id0-pref1.toml",
+    "protocol_preflight_result": "results/fgc-1-id0-pref1.json",
+    "schema_version": 1,
+    "uhyp1_config": "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml",
+    "uhyp1_result": "results/fgc-1-hyp1-dom3-uhyp1.json",
+    "variation_config": "configs/fgc/fgc-1-metric-variation.toml",
+    "variation_result": "results/fgc-1-metric-variation.json"
+  },
+  "gate_status": {
+    "FGCQR_holdout_execution_authorized": false,
+    "authorization_contract_and_protocol_validation_passed": true,
+    "classical_spherical_diagnostic_authorized": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false
+  },
+  "generated_by": "scripts/reproduce_fgc_run1_sym1.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_run1_sym1.py": "f57bbdc0fa9e2a85298c272b948f11a11d485a796feb8871f5e60d23392ccc0a",
+    "src/recursive_horizons/fgc/scoped_run_authorization.py": "c47fade97823566caeebc21583c074fce62c4e296ea717babc40bf11be91e2bf"
+  },
+  "nonclaims": {
+    "UV_completion_derived": false,
+    "affine_null_defocusing_derived": false,
+    "child_domain_or_topology_derived": false,
+    "collapse_solution_derived": false,
+    "complete_Wilsonian_EFT_defined": false,
+    "dark_sector_mechanism_derived": false,
+    "finite_invariant_transition_surface_derived": false,
+    "physical_transition_claim_authorized": false,
+    "retained_EFT_evolution_authorized": false,
+    "singularity_resolution_derived": false,
+    "varying_locally_measured_c_derived": false
+  },
+  "predecessor_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-bnd2-cp1.toml": "f91ddded93f162b43250b15197bfaa6df360a1e6ec60a5138ca88e7f88ccbca4",
+    "configs/fgc/fgc-1-con4-phy1.toml": "1b2d8441a96c392c0a0948c9a111e7bfc0fc3df3a31fc63f177768bb29b80255",
+    "configs/fgc/fgc-1-ctr1-reg1.toml": "1f512304a9cf432576c9b7afd8b24670ecfd6cb6a793172f2e4e162319318bbe",
+    "configs/fgc/fgc-1-def0-obs1.toml": "17853fe5280eeb5e08b07fda9c28d55e687c48ad311a440ff9c3971c2e489578",
+    "configs/fgc/fgc-1-dom4-run1.toml": "21adb1d7e21aee166123d014adb99bb78570d2b61b604be2bf7b9d4e0d462cd4",
+    "configs/fgc/fgc-1-eft1-open1.toml": "6d3c0c41e1efe798254e7fb62004fd4d26f7c7ca6d6e4b5734132b9527a0520f",
+    "configs/fgc/fgc-1-hlt1-mon1.toml": "a9ba9f95ebdf0e1ec16ddc8098b8e5f9873f0b4c23f7077a9a1ca443b3ad7dbb",
+    "configs/fgc/fgc-1-hyp1-bnd1-md1.toml": "eaee566b39f8be2d6068c50d5a8498e60b21b947c3de62e5e8863da707af0e1d",
+    "configs/fgc/fgc-1-hyp1-con2-mprop1.toml": "4dc1c897d0df09656a0a8d0e93f7b4e033d63b2f36c443f7b653878f5dff9402",
+    "configs/fgc/fgc-1-hyp1-con3-cau1.toml": "d693e4901d97447f6f3c23a5a3dbd3c2a2f72ccfd32fad23ef65ef3366ddfc13",
+    "configs/fgc/fgc-1-hyp1-dom3-uhyp1.toml": "cd7516d0a913c811569cf8f08ac08d8b47f63c409ce9188b0770638777f743c6",
+    "configs/fgc/fgc-1-hyp2-md1.toml": "c3fcb05d4ca3b8df72b1659e24178c66e44f7033e11df998a6bc855f6a230382",
+    "configs/fgc/fgc-1-id0-pref1.toml": "1b1531b9501b0caf65a11fa5d58c35579207022340c3ed0a65ff60b68c155652",
+    "configs/fgc/fgc-1-id1-fam1.toml": "fe61161c651af606476f498c4c0a1b99a4034d7a5dd0c3ac9d7f581ba7992a3c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97",
+    "configs/fgc/fgc-1-num1-val1.toml": "2b00d268191905b6212f2ed4858344f810c082190940e64fc82da334bd528c11",
+    "configs/fgc/fgc-1-src1-nl1.toml": "0048eb844d32bf9d32a4cfddbda242ea99043f2ddfe5ec72c5a8fd551fc6195d",
+    "results/fgc-1-action-gate.json": "c0afaec4c7d18132b4c1b6edd2611faf8d88ba46b81584400d3252e88e78d142",
+    "results/fgc-1-bnd2-cp1.json": "154e6740c941e4e4014bb2d1381f633e5f375ab46ae3ad50d629a0363a56a15b",
+    "results/fgc-1-con4-phy1.json": "ab1964af57666e51491026ac279a119b061f17cc55f1ec8ffbc31a45c97ea47b",
+    "results/fgc-1-ctr1-reg1.json": "a60f27ed3a31d6135079881ef06b093b0fb0240b4b3ae0be9e6ca3e91a35736b",
+    "results/fgc-1-def0-obs1.json": "c0d98d7c297335d06501f1ca9b0694fe9fe5c3b956e8e6416b8932bc19bb8626",
+    "results/fgc-1-dom4-run1.json": "238847f4af182fa423a91b381cae65217a76965b7b979ea26b29778781f0ac94",
+    "results/fgc-1-eft1-open1.json": "40e3f0df46431ba9a09eef39e5b4538f94fc2fa90a54a5f55b4387bab222b471",
+    "results/fgc-1-hlt1-mon1.json": "3d07822cdf1cb54080b8d615bb71cb962721172407959888b2902999943e0db1",
+    "results/fgc-1-hyp1-bnd1-md1.json": "9de22d1e406132f0c0626ee2695a557e36cc74ef7f2604a404b36966d5cfc764",
+    "results/fgc-1-hyp1-con2-mprop1.json": "9df6af7e1906972dbac48aa2459ea462b2636cac40a3b9560ca46f2e4355868f",
+    "results/fgc-1-hyp1-con3-cau1.json": "8c90f9b2b35fdbe61c200f66b3c4aa2fb69a2d51680b573474c12ad688213cee",
+    "results/fgc-1-hyp1-dom3-uhyp1.json": "71c04e5e19ca5fc39b6fc4e3bee36b852965a559b3e031148d32ae230f30f6b0",
+    "results/fgc-1-hyp2-md1.json": "159e966f2279cc534d663a0e9f4abd0c6d429751bb8f6d266bebe5c65d53ad67",
+    "results/fgc-1-id0-pref1.json": "b484e9cce3fec93b1c7f6e701022aeb17cede0facf99f645aeafcb582595beea",
+    "results/fgc-1-id1-fam1.json": "b410741dfc7f58041df0eab45d956687947157747a69a5f5247792607139f4a8",
+    "results/fgc-1-metric-variation.json": "584ce2dd1d2eccf3cd79d2139c64b7e816e91c35b50f7e57bac4d3429be086d8",
+    "results/fgc-1-num1-val1.json": "d27e0c8643ec6f678f1b42dcb9122b6c690d4cf50d62f4eda179390b889c68ab",
+    "results/fgc-1-src1-nl1.json": "e3605b74b40fefde9f62fdc529a454a8f4609479522fe029864bb088db9b2d3d"
+  },
+  "project_version": "0.11.0",
+  "protocol_amendment_diagnosis": {
+    "FGCQR_evolution_outcomes_inspected_before_revision": false,
+    "PROTO2_width_nine_eighths_case_unqualified_at_checkpoint": true,
+    "PROTO3_revision_is_premise_only": true,
+    "SGBL_evolution_outcomes_inspected_before_revision": false,
+    "artifact_id": "FGC-1-ID1-FAM1",
+    "historical_checkpoint_commit": "fae2c5b76ba53680f9e70188f79784b160826734",
+    "immutable_ID1_result_sha256": "aeda6543854ca54456dc58648ffc6824be297eb3930f0fbe7c8b8beae5e8075f",
+    "immutable_PROTO2_config_sha256": "091d6d7dc8109d21d9297ea6eb37a7296e0ea45fc5e05269bba1b488159f09ba"
+  },
+  "protocol_amendment_preflight": {
+    "FGCQR_outcomes_inspected_before_revision": false,
+    "PROTO1_initial_data_preflight_obstruction_verified": true,
+    "PROTO2_revision_is_premise_only": true,
+    "PROTO3_preserves_PROTO2_ID0_lineage": true,
+    "SGBL_outcomes_inspected_before_revision": false,
+    "artifact_id": "FGC-1-ID0-PREF1",
+    "historical_checkpoint_commit": "d4f0cc8f58408ef4ee12fb32fe3619916e231795"
+  },
+  "schema_version": 1,
+  "scoped_run_authorization_audit": {
+    "artifact_id": "FGC-1-RUN1-SYM1",
+    "authorization_audits": {
+      "classical_spherical_diagnostic": {
+        "authorized": false,
+        "logic": "all_required_predicates_must_pass",
+        "missing_predicate_ids": [
+          "frozen_outcome_neutral_protocol_and_resolved_holdout_hash"
+        ],
+        "passed_predicate_count": 7,
+        "required_predicate_count": 8,
+        "required_predicates": [
+          {
+            "evidence": [
+              "PROTO3 schema, immutable amendment provenance, and semantic holdout contract hash validate",
+              "PRO3-HLD1 status=absent"
+            ],
+            "failure_consequence": "the FGC-QR cases are not fully resolved and sealed before outcome access",
+            "id": "frozen_outcome_neutral_protocol_and_resolved_holdout_hash",
+            "passed": false
+          },
+          {
+            "evidence": [
+              "DOM3 supplies a compact radial branch graph only",
+              "DOM4-RUN1 status=scope_bound_hash_bound_gate_passed",
+              "HYP2-MD1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "the intended run can leave the healthy branch or fail in an untested covector direction",
+            "id": "classical_spherical_domain_branch_and_multidirectional_early_kill_envelope",
+            "passed": true
+          },
+          {
+            "evidence": [
+              "ACT1/VAR1 equations are frozen and REF1 is the gauge formulation",
+              "SRC1-NL1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "a numerical trajectory would not be a verified solution of the declared equations",
+            "id": "nonlinear_unredefined_REF1_source_and_acceleration_solver_verified",
+            "passed": true
+          },
+          {
+            "evidence": [
+              "CON2 supplies local identities and CON3 only conditional boundary-free uniqueness",
+              "CON4-PHY1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "constraint drift could masquerade as the proposed mechanism",
+            "id": "physical_gauge_and_reduction_constraint_system_closed",
+            "passed": true
+          },
+          {
+            "evidence": [
+              "COMP1 is one activated two-jet at r=4, not initial data",
+              "CTR1-REG1 status=scope_bound_hash_bound_gate_passed",
+              "ID1-FAM1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "the collapse problem lacks a regular centre or a nonzero-width admissible data family",
+            "id": "regular_center_finite_mass_constraint_compatible_initial_data_family",
+            "passed": true
+          },
+          {
+            "evidence": [
+              "BND1 supplies frozen annular main-system dissipation only",
+              "BND2-CP1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "incoming or reflected boundary error could contaminate the measured interval",
+            "id": "spherical_boundary_or_domain_of_dependence_control",
+            "passed": true
+          },
+          {
+            "evidence": [
+              "PROTO3 preserves the frozen branch, constraint, characteristic, invariant, scale, and boundary stops",
+              "HLT1-MON1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "a run could cross a failed premise and continue as if it remained interpretable",
+            "id": "classical_health_and_typed_fail_closed_monitoring",
+            "passed": true
+          },
+          {
+            "evidence": [
+              "DEF0 supplies the affine physical-null observable but no ACT1 trajectory",
+              "NUM1-VAL1 status=scope_bound_hash_bound_gate_passed"
+            ],
+            "failure_consequence": "implementation or measurement error could be mistaken for a scientific outcome",
+            "id": "independent_solver_validation_and_affine_measurement_contract",
+            "passed": true
+          }
+        ]
+      },
+      "physical_transition_claim": {
+        "RUN1_can_never_set_this_gate_true": true,
+        "authorized": false,
+        "logic": "reserved_false_in_RUN1; a_future_artifact_requires_all_local_global_flux_entropy_handoff_predicates_plus_both_prior_authorizations",
+        "missing_predicate_ids": [
+          "retained_EFT_evolution_authorized",
+          "COL1_converged_constraint_controlled_evolution",
+          "finite_trapped_interval_with_fixed_orientation",
+          "affine_null_and_complete_Raychaudhuri_route_agreement",
+          "strict_positive_complete_Raychaudhuri_margin",
+          "combined_error_budget_below_one_quarter_margin",
+          "three_resolution_convergence",
+          "independent_method_agreement",
+          "no_health_constraint_branch_scale_or_boundary_stop",
+          "ROB1_nonzero_open_neighborhood_persistence",
+          "finite_invariant_transition_layer_derived",
+          "regular_trapped_to_expanding_causal_continuation_derived",
+          "exterior_junction_and_quasilocal_flux_closure_derived",
+          "generalized_entropy_ledger_closed",
+          "upper_closure_or_finite_handoff_derived"
+        ],
+        "required_predicate_ids": [
+          "retained_EFT_evolution_authorized",
+          "COL1_converged_constraint_controlled_evolution",
+          "finite_trapped_interval_with_fixed_orientation",
+          "affine_null_and_complete_Raychaudhuri_route_agreement",
+          "strict_positive_complete_Raychaudhuri_margin",
+          "combined_error_budget_below_one_quarter_margin",
+          "three_resolution_convergence",
+          "independent_method_agreement",
+          "no_health_constraint_branch_scale_or_boundary_stop",
+          "ROB1_nonzero_open_neighborhood_persistence",
+          "finite_invariant_transition_layer_derived",
+          "regular_trapped_to_expanding_causal_continuation_derived",
+          "exterior_junction_and_quasilocal_flux_closure_derived",
+          "generalized_entropy_ledger_closed",
+          "upper_closure_or_finite_handoff_derived"
+        ]
+      },
+      "retained_EFT_evolution": {
+        "EFT1_passed_predicate_count": 3,
+        "EFT1_required_predicate_count": 12,
+        "RUN1_version_locked_to_current_EFT1_negative_state": true,
+        "authorized": false,
+        "logic": "delegated_without_relaxation_to_FGC-1-EFT1-OPEN1"
+      }
+    },
+    "authorization_logic": "all_eight_scoped_predicates_must_pass; one_false_predicate_stops_FGCQR_holdout_execution",
+    "claim_scope": {
+      "allowed_only_if_scoped_gate_later_becomes_true": [
+        "bounded classical spherical diagnostic of the frozen FGC-QR equations",
+        "outcome-neutral numerical mechanism test",
+        "typed fail-closed stop classification"
+      ],
+      "never_implied_by_RUN1": [
+        "retained EFT validity",
+        "UV completion",
+        "physical transition",
+        "singularity resolution",
+        "child domain",
+        "dark-sector mechanism",
+        "varying locally measured c",
+        "observational applicability"
+      ]
+    },
+    "classification": "fail_closed_scoped_classical_spherical_diagnostic_authorization_contract_not_EFT_validity_evolution_or_physical_transition_certificate",
+    "future_evidence_status": {
+      "boundary_control": {
+        "artifact_id": "FGC-1-BND2-CP1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "spherical_boundary_or_domain_of_dependence_control_passed",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "health_monitor": {
+        "artifact_id": "FGC-1-HLT1-MON1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "classical_health_and_typed_stop_monitoring_verified",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "initial_data": {
+        "artifact_id": "FGC-1-ID1-FAM1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "nonzero_width_finite_mass_constraint_compatible_family_constructed",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "multidirectional_health": {
+        "artifact_id": "FGC-1-HYP2-MD1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "quantitative_all_covector_weak_coupling_health_envelope_passed",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "nonlinear_source": {
+        "artifact_id": "FGC-1-SRC1-NL1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "nonlinear_REF1_source_and_branch_solver_verified",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "numerical_validation": {
+        "artifact_id": "FGC-1-NUM1-VAL1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "independent_solver_validation_and_measurement_contract_passed",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "physical_constraints": {
+        "artifact_id": "FGC-1-CON4-PHY1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "physical_gauge_reduction_constraint_system_closed",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "protocol_holdout": {
+        "artifact_id": "FGC-1-PRO3-HLD1",
+        "passed": false,
+        "required_gate": "resolved_holdout_manifest_frozen_before_FGCQR_outcomes",
+        "status": "absent"
+      },
+      "regular_center": {
+        "artifact_id": "FGC-1-CTR1-REG1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "regular_center_formulation_verified",
+        "status": "scope_bound_hash_bound_gate_passed"
+      },
+      "run_domain": {
+        "artifact_id": "FGC-1-DOM4-RUN1",
+        "declared_run_envelope_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+        "passed": true,
+        "required_gate": "nonzero_classical_spherical_run_envelope_passed",
+        "status": "scope_bound_hash_bound_gate_passed"
+      }
+    },
+    "gate_status": {
+      "FGCQR_holdout_execution_authorized": false,
+      "authorization_contract_and_protocol_validation_passed": true,
+      "classical_spherical_diagnostic_authorized": false,
+      "physical_transition_claim_authorized": false,
+      "retained_EFT_evolution_authorized": false
+    },
+    "protocol_validation": {
+      "FGCQR_outcomes_inspected_before_revision": false,
+      "PROTO1_and_PROTO2_preserved": true,
+      "PROTO2_amendment_validated": true,
+      "SGBL_outcomes_inspected_before_revision": false,
+      "amendment_validated": true,
+      "amplitude_candidates": [
+        "2",
+        "5/2",
+        "3",
+        "7/2",
+        "4",
+        "9/2",
+        "5"
+      ],
+      "artifact_id": "FGC-2-SF1-PROTO3",
+      "calibration_case_count": 3,
+      "calibration_case_ids": [
+        "GR0-AMPLITUDE-SELECTION",
+        "GR0-BOUNDARY-ISOLATION",
+        "GR0-RESTART"
+      ],
+      "diagnosis_artifact_id": "FGC-1-ID1-FAM1",
+      "exact_widest_center_buffer_over_L0": "39/16",
+      "explicit_nonzero_phi_seed": "1/131072",
+      "explicit_phi_unit_normal_momentum": "0",
+      "frozen": true,
+      "held_out_case_count": 5,
+      "held_out_case_ids": [
+        "FGCQR-CENTRAL",
+        "FGCQR-SEED-HALF",
+        "FGCQR-SEED-DOUBLE",
+        "FGCQR-WIDTH-SEVEN-EIGHTHS",
+        "FGCQR-WIDTH-NINE-EIGHTHS"
+      ],
+      "held_out_outcomes_inspected_before_freeze": false,
+      "outcome_neutral_contract_validated": true,
+      "predecessor_protocol_artifact_id": "FGC-2-SF1-PROTO2",
+      "preflight_artifact_id": "FGC-1-ID0-PREF1",
+      "premise_revision_only": true,
+      "protocol_version": 3,
+      "resolved_holdout_manifest_present": false,
+      "resolved_holdout_manifest_required": true,
+      "roundoff_activation_forbidden": true,
+      "semantic_holdout_contract_sha256": "d18950ffea629e64c3b67d5f6fec7f989255d7db4e9b8aecdd681988d64ca9ee",
+      "static_all_case_initial_premises_required_before_GR0_dynamic_eligibility": true,
+      "widest_case_coarsest_grid_intervals": 78
+    },
+    "stop_mask": {
+      "execute_FGCQR_holdout": false,
+      "report_physical_transition": false,
+      "report_retained_EFT_evolution": false,
+      "report_scoped_classical_mechanism_result": false,
+      "report_singularity_resolution": false
+    },
+    "validated_predecessor_evidence": {
+      "ACT1_VAR1_unredefined_equations_frozen": true,
+      "BND1_frozen_radial_main_system_dissipation": true,
+      "CON2_metric_gauge_and_kinematic_identities": true,
+      "CON3_conditional_boundary_free_gauge_uniqueness": true,
+      "DEF0_affine_physical_null_observable_contract": true,
+      "DOM3_compact_radial_branch_graph": true,
+      "EFT1_negative_3_of_12_state_preserved": true
+    }
+  },
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-run1-sym1.toml": "dd2a730cfe3a804b6d888edc32189e3e5d52e9843a3f3281bb751c051a9df44e",
+    "configs/fgc/fgc-2-sf1-protocol-v3.toml": "57b28eb9abe80c81f9e47ae6bea6ce2d69e103542df500e97c6c93805a8ac13b"
+  }
+}

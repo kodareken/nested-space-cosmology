@@ -1,0 +1,1923 @@
+{
+  "artifact_id": "FGC-1-HYP1-MHG2-REF1",
+  "artifact_label": "FGC-1 HYP1 exact full reference-connection modified-harmonic residual gate",
+  "classification": "exact_reference_connection_modified_harmonic_residual_not_implicit_solve_propagation_domain_or_evolution",
+  "derivation_document": "docs/fgc-hyp1-mhg-reference.md",
+  "derivation_document_sha256": "2a772d0567871b6bba8db65516e036588c39826bfc39f41240b658408387f360",
+  "development_status": "complete_reference_gauge_residual_implicit_propagation_and_domain_gates_open",
+  "formulation": {
+    "auxiliary_metric_family": "g_aux^mu_nu=g^mu_nu-(q-1)*n^mu*n^nu",
+    "equation_modification_on_gauge_surface": "none",
+    "equation_order": [
+      "metric_tt_mhg",
+      "metric_tr_mhg",
+      "metric_rr_mhg",
+      "metric_theta_theta_mhg",
+      "scalar_phi",
+      "scalar_chi"
+    ],
+    "field_order": [
+      "h_tt",
+      "h_tr",
+      "h_rr",
+      "areal_radius",
+      "phi",
+      "chi"
+    ],
+    "gauge_constraint": "C^mu=-tilde_g^rho_sigma*(Gamma^mu_rho_sigma-bar_Gamma^mu_rho_sigma)",
+    "gauge_constraint_order": [
+      "C^t",
+      "C^r",
+      "C^theta",
+      "C^phi"
+    ],
+    "gauge_fixing": "F*hat_P_alpha^beta_mu_nu*nabla_beta_C^alpha",
+    "hat_normal_factor": 9,
+    "normal_factor_order": "1<tilde<hat",
+    "physical_equations": "unredefined_ACT1_VAR1",
+    "scalar_equations": "unmodified",
+    "tilde_normal_factor": 4
+  },
+  "gate_status": {
+    "complete_first_order_reduction_passed": false,
+    "complete_gauge_propagation_passed": false,
+    "complete_reference_gauge_residual_passed": true,
+    "evolution_authorized": false,
+    "exact_gauge_surface_equivalence_controls_passed": true,
+    "full_fgc1_hyp1_health_gate_passed": false,
+    "implicit_second_time_derivative_branch_passed": false,
+    "mhg1_principal_gauge_block_regression_passed": true,
+    "publication_local_defocusing_gate_passed": false,
+    "uniform_open_domain_hyperbolicity_gate_passed": false
+  },
+  "generated_by": "scripts/reproduce_fgc_hyp1_mhg_reference.py",
+  "implementation_sha256": {
+    "scripts/reproduce_fgc_action.py": "8ce5fc6b2b9fbda40816fddb7df64113f35dad9033cbb2ed5a7e1eafd79108e1",
+    "scripts/reproduce_fgc_hyp1_mhg_reference.py": "46dc9d7e44633a50e53abaec0fa2370f5517aa4436df2dfeec982c8101b2f289",
+    "scripts/reproduce_fgc_hyp1_modified_harmonic.py": "54bf54498ab73cfb2689f6daddaa922d60e3a2f5a80c66102eae2c058604c682",
+    "scripts/reproduce_fgc_hyp1_reduction.py": "5767d1cb540a958985d27b0dab38997669435fcbbd06eb0c23d4f805a107973f",
+    "scripts/reproduce_fgc_hyp1_symbol.py": "03af25c8d14c605fd6bb85927635b93e8380ead36f4b0318caff470c2df965b4",
+    "scripts/reproduce_fgc_metric_variation.py": "cd0f46288ff7dfb8c9a785e0a2c46a72150c310ff16caf4b5e377187443ff1df",
+    "src/recursive_horizons/fgc/__init__.py": "2b665e6ecef01c52d2780a950203b553355a97bd6658f149c46ef0c00a3b9f0c",
+    "src/recursive_horizons/fgc/exact_linear_algebra.py": "ea7036e9ab846ffd0804fc184ce5af1e59be5715584871608e7116d13d2731fe",
+    "src/recursive_horizons/fgc/modified_harmonic.py": "8896a0c266d4c6904e5432a6c96c03386ab3f2d3321250738ad63f869732c00f",
+    "src/recursive_horizons/fgc/modified_harmonic_reference.py": "1cb40b5a00c1651eb2c08cd3c78e7749e274d3954026e293975b4937a6ff7cbb",
+    "src/recursive_horizons/fgc/reference_connection.py": "1353ba305fb23122ae426983c74919a96272e2ffa8cd5c46c880bd96c6e46ad1",
+    "src/recursive_horizons/fgc/spherical_reduction.py": "60273f9842ab221ef55abd0d9d6af133cf7ec300b49f4142d159ffaf6f8f295c",
+    "src/recursive_horizons/fgc/spherical_symbol.py": "5add74bdc40f71c720d5739ded449262f1bd4e9586464f95ac16d123e290c19d"
+  },
+  "input_branch_order": [
+    "GR-0",
+    "SGB-L",
+    "FGC-QR",
+    "FGC-QR"
+  ],
+  "input_fixture_ids": [
+    "GR0_regular",
+    "SGBL_constant_f",
+    "FGCQR_schwarzschild_exterior",
+    "FGCQR_activated_generic"
+  ],
+  "nonclaims": {
+    "boundary_or_regular_center_system_derived": false,
+    "collapse_solution_derived": false,
+    "complete_lower_order_first_order_sources_derived": false,
+    "evolution_authorized": false,
+    "gauge_constraint_lower_order_propagation_proven": false,
+    "implicit_second_time_derivative_branch_proven": false,
+    "metric_null_affine_defocusing_derived": false,
+    "open_retained_eft_domain_proven": false,
+    "reduction_constraint_propagation_proven": false,
+    "singularity_resolution_derived": false,
+    "uniform_open_domain_symmetrizer_proven": false
+  },
+  "project_version": "0.11.0",
+  "proof_contract": {
+    "fixture_ids": [
+      "GR0_regular",
+      "SGBL_constant_f",
+      "FGCQR_schwarzschild_exterior",
+      "FGCQR_activated_generic"
+    ],
+    "gauge_surface_fixture_ids": [
+      "GR0_regular",
+      "SGBL_constant_f"
+    ],
+    "off_gauge_fixture_ids": [
+      "FGCQR_schwarzschild_exterior",
+      "FGCQR_activated_generic"
+    ],
+    "require_exact_full_residual_decomposition": true,
+    "require_exact_gauge_surface_extension_zero": true,
+    "require_exact_mhg1_principal_regression": true,
+    "require_nonzero_off_gauge_extension": true,
+    "require_positive_effective_planck_coefficient": true,
+    "require_positive_reference_annulus": true,
+    "require_schwarzschild_unredefined_solution_control": true,
+    "require_spherical_contravariant_gauge_components": true,
+    "require_symmetric_spherical_extension": true,
+    "require_unmodified_scalar_equations": true
+  },
+  "reference": {
+    "angular_evaluation": "theta=pi/2",
+    "center_included": false,
+    "coordinate_order": [
+      "t",
+      "r",
+      "theta",
+      "phi"
+    ],
+    "prescribed_gauge_source": "zero",
+    "radial_domain_minimum": "1/2",
+    "reference_id": "flat_spherical_annulus"
+  },
+  "reference_gauge_certificate": {
+    "all_declared_exact_checks_pass": true,
+    "artifact_id": "FGC-1-HYP1-MHG2-REF1",
+    "classification": "exact_reference_connection_modified_harmonic_residual_not_implicit_solve_propagation_domain_or_evolution",
+    "fixture_records": [
+      {
+        "constraint_down": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "constraint_up": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "coordinate_radius": "4",
+        "covariant_constraint_derivative": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "effective_planck_coefficient": "4",
+        "equatorial_angular_isotropy": true,
+        "extension_covariant": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "extension_nonzero": false,
+        "extension_residual_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "extension_tensor_symmetric": true,
+        "fixture_id": "GR0_regular",
+        "full_equals_unredefined_plus_extension": true,
+        "full_residual_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "gauge_surface_at_evaluation_jet": true,
+        "gauge_surface_extension_zero": true,
+        "gauge_surface_full_equals_unredefined": true,
+        "mhg1_principal_gauge_symbol": [
+          [
+            [
+              "-36",
+              "0",
+              "36"
+            ],
+            [
+              "0",
+              "-54"
+            ],
+            [
+              "-9",
+              "0",
+              "9"
+            ],
+            [
+              "9",
+              "0",
+              "9"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "32"
+            ],
+            [
+              "-2",
+              "0",
+              "72"
+            ],
+            [
+              "0",
+              "8"
+            ],
+            [
+              "0",
+              "-10"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-4",
+              "0",
+              "4"
+            ],
+            [
+              "0",
+              "-6"
+            ],
+            [
+              "-1",
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0",
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "64",
+              "0",
+              "64"
+            ],
+            [
+              "0",
+              "160"
+            ],
+            [
+              "16",
+              "0",
+              "16"
+            ],
+            [
+              "-16",
+              "0",
+              "16"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "model_id": "GR-0",
+        "partial_constraint_up": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "purpose": "exact_gr_control_regular_nonzero_radius",
+        "reference_extension_principal_regression_exact": true,
+        "reference_extension_principal_symbol": [
+          [
+            [
+              "-36",
+              "0",
+              "36"
+            ],
+            [
+              "0",
+              "-54"
+            ],
+            [
+              "-9",
+              "0",
+              "9"
+            ],
+            [
+              "9",
+              "0",
+              "9"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "32"
+            ],
+            [
+              "-2",
+              "0",
+              "72"
+            ],
+            [
+              "0",
+              "8"
+            ],
+            [
+              "0",
+              "-10"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-4",
+              "0",
+              "4"
+            ],
+            [
+              "0",
+              "-6"
+            ],
+            [
+              "-1",
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0",
+              "1"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "64",
+              "0",
+              "64"
+            ],
+            [
+              "0",
+              "160"
+            ],
+            [
+              "16",
+              "0",
+              "16"
+            ],
+            [
+              "-16",
+              "0",
+              "16"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_equations_unmodified": true,
+        "unredefined_residual_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "constraint_down": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "constraint_up": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "coordinate_radius": "5",
+        "covariant_constraint_derivative": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "effective_planck_coefficient": "4",
+        "equatorial_angular_isotropy": true,
+        "extension_covariant": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "extension_nonzero": false,
+        "extension_residual_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "extension_tensor_symmetric": true,
+        "fixture_id": "SGBL_constant_f",
+        "full_equals_unredefined_plus_extension": true,
+        "full_residual_vector": [
+          "-1377/128",
+          "0",
+          "1377/128",
+          "34425/128",
+          "-243/16",
+          "0"
+        ],
+        "gauge_surface_at_evaluation_jet": true,
+        "gauge_surface_extension_zero": true,
+        "gauge_surface_full_equals_unredefined": true,
+        "mhg1_principal_gauge_symbol": [
+          [
+            [
+              "-36",
+              "0",
+              "36"
+            ],
+            [
+              "0",
+              "-54"
+            ],
+            [
+              "-9",
+              "0",
+              "9"
+            ],
+            [
+              "36/5",
+              "0",
+              "36/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "32"
+            ],
+            [
+              "-2",
+              "0",
+              "72"
+            ],
+            [
+              "0",
+              "8"
+            ],
+            [
+              "0",
+              "-8"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-4",
+              "0",
+              "4"
+            ],
+            [
+              "0",
+              "-6"
+            ],
+            [
+              "-1",
+              "0",
+              "1"
+            ],
+            [
+              "4/5",
+              "0",
+              "4/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "100",
+              "0",
+              "100"
+            ],
+            [
+              "0",
+              "250"
+            ],
+            [
+              "25",
+              "0",
+              "25"
+            ],
+            [
+              "-20",
+              "0",
+              "20"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "model_id": "SGB-L",
+        "partial_constraint_up": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "purpose": "constant_regulator_topological_bulk_control",
+        "reference_extension_principal_regression_exact": true,
+        "reference_extension_principal_symbol": [
+          [
+            [
+              "-36",
+              "0",
+              "36"
+            ],
+            [
+              "0",
+              "-54"
+            ],
+            [
+              "-9",
+              "0",
+              "9"
+            ],
+            [
+              "36/5",
+              "0",
+              "36/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "32"
+            ],
+            [
+              "-2",
+              "0",
+              "72"
+            ],
+            [
+              "0",
+              "8"
+            ],
+            [
+              "0",
+              "-8"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-4",
+              "0",
+              "4"
+            ],
+            [
+              "0",
+              "-6"
+            ],
+            [
+              "-1",
+              "0",
+              "1"
+            ],
+            [
+              "4/5",
+              "0",
+              "4/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "100",
+              "0",
+              "100"
+            ],
+            [
+              "0",
+              "250"
+            ],
+            [
+              "25",
+              "0",
+              "25"
+            ],
+            [
+              "-20",
+              "0",
+              "20"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_equations_unmodified": true,
+        "unredefined_residual_vector": [
+          "-1377/128",
+          "0",
+          "1377/128",
+          "34425/128",
+          "-243/16",
+          "0"
+        ]
+      },
+      {
+        "constraint_down": [
+          "-1/16",
+          "1/16",
+          "0",
+          "0"
+        ],
+        "constraint_up": [
+          "3/32",
+          "1/64",
+          "0",
+          "0"
+        ],
+        "coordinate_radius": "8",
+        "covariant_constraint_derivative": [
+          [
+            "1/1024",
+            "1/1024",
+            "0",
+            "0"
+          ],
+          [
+            "-1/64",
+            "-5/1024",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/512",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/512"
+          ]
+        ],
+        "effective_planck_coefficient": "4",
+        "equatorial_angular_isotropy": true,
+        "extension_covariant": [
+          [
+            "-161/1024",
+            "75/512",
+            "0",
+            "0"
+          ],
+          [
+            "75/512",
+            "-13/256",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1/2",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1/2"
+          ]
+        ],
+        "extension_nonzero": true,
+        "extension_residual_vector": [
+          "-161/1024",
+          "75/512",
+          "-13/256",
+          "1/2",
+          "0",
+          "0"
+        ],
+        "extension_tensor_symmetric": true,
+        "fixture_id": "FGCQR_schwarzschild_exterior",
+        "full_equals_unredefined_plus_extension": true,
+        "full_residual_vector": [
+          "-161/1024",
+          "75/512",
+          "-13/256",
+          "1/2",
+          "0",
+          "0"
+        ],
+        "gauge_surface_at_evaluation_jet": false,
+        "gauge_surface_extension_zero": true,
+        "gauge_surface_full_equals_unredefined": true,
+        "mhg1_principal_gauge_symbol": [
+          [
+            [
+              "-47/4",
+              "69",
+              "37"
+            ],
+            [
+              "0",
+              "-105/2",
+              "35"
+            ],
+            [
+              "0",
+              "105/4",
+              "-35/2"
+            ],
+            [
+              "105/32",
+              "-3/8",
+              "37/8"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "29/2",
+              "34",
+              "2"
+            ],
+            [
+              "0",
+              "35",
+              "70"
+            ],
+            [
+              "0",
+              "-35/2",
+              "-35"
+            ],
+            [
+              "-35/16",
+              "-19/4",
+              "1/4"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-3",
+              "4",
+              "4"
+            ],
+            [
+              "0",
+              "-10",
+              "-4"
+            ],
+            [
+              "0",
+              "5",
+              "2"
+            ],
+            [
+              "5/8",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "320",
+              "256",
+              "256"
+            ],
+            [
+              "0",
+              "384",
+              "-256"
+            ],
+            [
+              "0",
+              "-192",
+              "128"
+            ],
+            [
+              "-24",
+              "32",
+              "32"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "model_id": "FGC-QR",
+        "partial_constraint_up": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-9/512",
+            "-1/256",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "purpose": "zero_regulator_ricci_flat_schwarzschild_exterior_control",
+        "reference_extension_principal_regression_exact": true,
+        "reference_extension_principal_symbol": [
+          [
+            [
+              "-47/4",
+              "69",
+              "37"
+            ],
+            [
+              "0",
+              "-105/2",
+              "35"
+            ],
+            [
+              "0",
+              "105/4",
+              "-35/2"
+            ],
+            [
+              "105/32",
+              "-3/8",
+              "37/8"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "29/2",
+              "34",
+              "2"
+            ],
+            [
+              "0",
+              "35",
+              "70"
+            ],
+            [
+              "0",
+              "-35/2",
+              "-35"
+            ],
+            [
+              "-35/16",
+              "-19/4",
+              "1/4"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-3",
+              "4",
+              "4"
+            ],
+            [
+              "0",
+              "-10",
+              "-4"
+            ],
+            [
+              "0",
+              "5",
+              "2"
+            ],
+            [
+              "5/8",
+              "1/2",
+              "1/2"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "320",
+              "256",
+              "256"
+            ],
+            [
+              "0",
+              "384",
+              "-256"
+            ],
+            [
+              "0",
+              "-192",
+              "128"
+            ],
+            [
+              "-24",
+              "32",
+              "32"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_equations_unmodified": true,
+        "unredefined_residual_vector": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "constraint_down": [
+          "404848/2321865",
+          "-52999/59535",
+          "0",
+          "0"
+        ],
+        "constraint_up": [
+          "505136/6449625",
+          "-595336636/948094875",
+          "0",
+          "0"
+        ],
+        "coordinate_radius": "9/2",
+        "covariant_constraint_derivative": [
+          [
+            "20609039608/135577567125",
+            "-3872210770669/17082773457750",
+            "0",
+            "0"
+          ],
+          [
+            "-2301389978/68088691125",
+            "696911253928016/2805333057231705",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-16843335806/127992808125",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-16843335806/127992808125"
+          ]
+        ],
+        "effective_planck_coefficient": "35/9",
+        "equatorial_angular_isotropy": true,
+        "extension_covariant": [
+          [
+            "-978440289323469677/1123674614682369750",
+            "-1899487275495452959/397490339887641000",
+            "0",
+            "0"
+          ],
+          [
+            "-1899487275495452959/397490339887641000",
+            "16750453640713358/16562097495318375",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "-270035512251361/17126575440975",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-270035512251361/17126575440975"
+          ]
+        ],
+        "extension_nonzero": true,
+        "extension_residual_vector": [
+          "-978440289323469677/1123674614682369750",
+          "-1899487275495452959/397490339887641000",
+          "16750453640713358/16562097495318375",
+          "-270035512251361/17126575440975",
+          "0",
+          "0"
+        ],
+        "extension_tensor_symmetric": true,
+        "fixture_id": "FGCQR_activated_generic",
+        "full_equals_unredefined_plus_extension": true,
+        "full_residual_vector": [
+          "-236363017064568087967451/66072067343323341300000",
+          "-4040222806736201098889/730388499543540337500",
+          "8075570565277681489/2484314624297756250",
+          "788378773536760992017/27274071389752687500",
+          "-40236529367553081315079/6892146380496642890625",
+          "13911004/364651875"
+        ],
+        "gauge_surface_at_evaluation_jet": false,
+        "gauge_surface_extension_zero": true,
+        "gauge_surface_full_equals_unredefined": true,
+        "mhg1_principal_gauge_symbol": [
+          [
+            [
+              "-109366436/5740875",
+              "-7755104/273375",
+              "2063152/91125"
+            ],
+            [
+              "-5095546/2460375",
+              "-218079406/5740875",
+              "-4038496/273375"
+            ],
+            [
+              "-40922025881/10126903500",
+              "-304008728/17222625",
+              "-5409011/5740875"
+            ],
+            [
+              "32975041/4133430",
+              "51212/98415",
+              "257894/32805"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1609552/273375",
+              "1858304/91125",
+              "-21952/30375"
+            ],
+            [
+              "-4539578/5740875",
+              "-4107992/273375",
+              "4038496/91125"
+            ],
+            [
+              "-22373989/17222625",
+              "-8165272/5740875",
+              "4003748/273375"
+            ],
+            [
+              "252406/98415",
+              "-278012/32805",
+              "-2744/10935"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-204848/91125",
+              "-43904/30375",
+              "21952/10125"
+            ],
+            [
+              "-69496/273375",
+              "-428008/91125",
+              "43904/30375"
+            ],
+            [
+              "-2756261/5740875",
+              "-497504/273375",
+              "78652/91125"
+            ],
+            [
+              "31094/32805",
+              "-5488/10935",
+              "2744/3645"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "35536/875",
+              "-2688/125",
+              "4032/125"
+            ],
+            [
+              "-9928/2625",
+              "68456/875",
+              "2688/125"
+            ],
+            [
+              "2269789/385875",
+              "58528/2625",
+              "11236/875"
+            ],
+            [
+              "-3658/315",
+              "-112/15",
+              "56/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "model_id": "FGC-QR",
+        "partial_constraint_up": [
+          [
+            "240812905174/2614710223125",
+            "-142254769085593/768724805598750",
+            "0",
+            "0"
+          ],
+          [
+            "-352174988302/5560576441875",
+            "1753066071900532/8991452106511875",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "purpose": "nonzero_regulator_gradient_hessian_principal_part_control",
+        "reference_extension_principal_regression_exact": true,
+        "reference_extension_principal_symbol": [
+          [
+            [
+              "-109366436/5740875",
+              "-7755104/273375",
+              "2063152/91125"
+            ],
+            [
+              "-5095546/2460375",
+              "-218079406/5740875",
+              "-4038496/273375"
+            ],
+            [
+              "-40922025881/10126903500",
+              "-304008728/17222625",
+              "-5409011/5740875"
+            ],
+            [
+              "32975041/4133430",
+              "51212/98415",
+              "257894/32805"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1609552/273375",
+              "1858304/91125",
+              "-21952/30375"
+            ],
+            [
+              "-4539578/5740875",
+              "-4107992/273375",
+              "4038496/91125"
+            ],
+            [
+              "-22373989/17222625",
+              "-8165272/5740875",
+              "4003748/273375"
+            ],
+            [
+              "252406/98415",
+              "-278012/32805",
+              "-2744/10935"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "-204848/91125",
+              "-43904/30375",
+              "21952/10125"
+            ],
+            [
+              "-69496/273375",
+              "-428008/91125",
+              "43904/30375"
+            ],
+            [
+              "-2756261/5740875",
+              "-497504/273375",
+              "78652/91125"
+            ],
+            [
+              "31094/32805",
+              "-5488/10935",
+              "2744/3645"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "35536/875",
+              "-2688/125",
+              "4032/125"
+            ],
+            [
+              "-9928/2625",
+              "68456/875",
+              "2688/125"
+            ],
+            [
+              "2269789/385875",
+              "58528/2625",
+              "11236/875"
+            ],
+            [
+              "-3658/315",
+              "-112/15",
+              "56/5"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ],
+          [
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ],
+            [
+              "0"
+            ]
+          ]
+        ],
+        "scalar_equations_unmodified": true,
+        "unredefined_residual_vector": [
+          "-10519454591314592409403/3886592196666078900000",
+          "-4976605773876074993/6609850674602175000",
+          "1936304392332293/864710972606250",
+          "17658120678218164993/395276396952937500",
+          "-40236529367553081315079/6892146380496642890625",
+          "13911004/364651875"
+        ]
+      }
+    ],
+    "formulation": {
+      "gauge_constraint": "C^mu=-tilde_g^rho_sigma*(Gamma^mu_rho_sigma-bar_Gamma^mu_rho_sigma)",
+      "hat_normal_factor": "9",
+      "metric_extension": "E_mhg^mu_nu=E^mu_nu+F*hat_P_alpha^beta_mu_nu*nabla_beta_C^alpha",
+      "physical_equations": "unredefined_ACT1_VAR1",
+      "reference_connection": "flat_spherical_annulus",
+      "reference_domain": "positive_radius_spherical_annulus_without_center",
+      "reference_radial_domain_minimum": "1/2",
+      "scalar_equations": "unmodified",
+      "tilde_normal_factor": "4"
+    },
+    "nonclaims": {
+      "boundary_or_regular_center_system_derived": false,
+      "collapse_solution_derived": false,
+      "complete_lower_order_first_order_sources_derived": false,
+      "evolution_authorized": false,
+      "gauge_constraint_lower_order_propagation_proven": false,
+      "implicit_second_time_derivative_branch_proven": false,
+      "metric_null_affine_defocusing_derived": false,
+      "open_retained_eft_domain_proven": false,
+      "reduction_constraint_propagation_proven": false,
+      "singularity_resolution_derived": false,
+      "uniform_open_domain_symmetrizer_proven": false
+    },
+    "verified_exact_checks": {
+      "contravariant_spherical_gauge_components_only": true,
+      "declared_gauge_surface_jets_exact": true,
+      "declared_off_gauge_jets_exercise_extension": true,
+      "extension_tensors_symmetric_and_spherical": true,
+      "full_residual_decomposition_exact": true,
+      "positive_effective_planck_coefficients": true,
+      "reference_annulus_strictly_positive": true,
+      "reference_extension_directional_symbol_matches_mhg1_gauge_block": true,
+      "scalar_equations_unmodified": true,
+      "schwarzschild_unredefined_solution_control_retained": true
+    }
+  },
+  "reference_gauge_certificate_sha256": "d075a3533610d09e28733a314cfd9943c24e49a08b238bd11f3dbe012ff9b4a6",
+  "schema_version": 1,
+  "source_config_sha256": {
+    "configs/fgc/fgc-1-action-gate.toml": "95ff765f420a1cb308af5dfd4d9873ecc708c484aaca33e34391f282e531da55",
+    "configs/fgc/fgc-1-hyp1-mhg-reference.toml": "878690ce00209b3572687d6ac0896ea70b7a82429803e221693c8de5455df12a",
+    "configs/fgc/fgc-1-hyp1-modified-harmonic.toml": "9d492be33aaec0dc033ffc643d35ecd1f69b3c71928a297687e08219b216a2b6",
+    "configs/fgc/fgc-1-hyp1-reduction.toml": "6d1820ffb3dd4505990274cf4a3d76d1bbea78cc18484a29419b8101207ab50e",
+    "configs/fgc/fgc-1-hyp1-symbol.toml": "f6a03db3987dcf6a81a6a65d651ecf145f6d7682487d1227a08a4388328d822c",
+    "configs/fgc/fgc-1-metric-variation.toml": "c3f4aff79511db55fceffcb3fccecfa1b1146b0bc318745482bc6af20dc3db97"
+  },
+  "source_configs": {
+    "action": "configs/fgc/fgc-1-action-gate.toml",
+    "modified_harmonic": "configs/fgc/fgc-1-hyp1-modified-harmonic.toml",
+    "reduction": "configs/fgc/fgc-1-hyp1-reduction.toml",
+    "reference": "configs/fgc/fgc-1-hyp1-mhg-reference.toml",
+    "symbol": "configs/fgc/fgc-1-hyp1-symbol.toml",
+    "variation": "configs/fgc/fgc-1-metric-variation.toml"
+  }
+}

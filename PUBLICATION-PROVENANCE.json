@@ -1,6 +1,7 @@
 {
   "boundary_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
   "excluded_category_summaries": [
+    "active lab subtree authenticated separately by docs/lab-snapshot.json",
     "historical FGC configurations, runners, certificates, and tests",
     "raw campaign stores and local scientific data",
     "superseded manuscripts, generated previews, and caches",
@@ -16,9 +17,9 @@
   "historical_archive_location": "not_public",
   "included_paths": [
     {
-      "bytes": 85,
+      "bytes": 170,
       "path": ".gitattributes",
-      "sha256": "6e1ffb5720e44588b8e152911f85984135d3d0d597efff05acdabb44f4f4df8a"
+      "sha256": "473e69cad53517e1ff2fcb972c61dc1df6dd388017262c606de419f8c339161e"
     },
     {
       "bytes": 13,
@@ -41,9 +42,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 1699,
+      "bytes": 2656,
       "path": "AGENTS.md",
-      "sha256": "7555363f7cb3bad3931945cf29a754d2f6928e1108464190f5b632163b30748b"
+      "sha256": "98a8d238c56e971bdec6a33f515fa4d7efc98c90c001d1620002155531b90d0a"
     },
     {
       "bytes": 1056,
@@ -66,14 +67,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 2886,
+      "bytes": 2927,
       "path": "Makefile",
-      "sha256": "8897371cd7a0f20d6ab5e4bd7061ea938659d588511ba8ba521e4305c7574d29"
+      "sha256": "3ddf1b0ec5f3adbbd4e94a14eb7bfed83574ecaee8c6c44541c9ae65001d4be4"
     },
     {
-      "bytes": 17389,
+      "bytes": 17691,
       "path": "README.md",
-      "sha256": "b59af8a64f3c990cf91a6e5723803592f41b10892f6a1ad939efd3fc9c33b388"
+      "sha256": "d18b740aaec8433c125c17bc476e586b6ab0676fd1a61074fd233648df52c98a"
     },
     {
       "bytes": 629,
@@ -86,6 +87,11 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
+      "bytes": 15816,
+      "path": "docs/PLAN.md",
+      "sha256": "cb2a43f23a1a47a87cd6f07a2a2d23cda90eb5047b562f992d47b254f3a4554a"
+    },
+    {
       "bytes": 45121,
       "path": "docs/current-result.md",
       "sha256": "367077e70114765f2a8d75e29de081154aab1c9a2e38122f3dbf2169d13a0f09"
@@ -96,9 +102,19 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 4897,
+      "bytes": 2405,
+      "path": "docs/handover.md",
+      "sha256": "b449a0ab8795ddee8e940c04b0b3e5018007f90f1b9b05cd50d83e57130bc1ee"
+    },
+    {
+      "bytes": 5128,
       "path": "docs/instructions.md",
-      "sha256": "e62c72520cd1ef9b31732ec8a799fea7e557b41df9f3982b828730ddebc8b879"
+      "sha256": "62fd3ac6492b213b9cd005729252d580b7fb8eca63e15487f768ca8ecdd1bc94"
+    },
+    {
+      "bytes": 4577606,
+      "path": "docs/lab-snapshot.json",
+      "sha256": "842461cc4d43e8733a21a5b56a7bdea2eaa12530ddc9d0bf7115c4364f855cd9"
     },
     {
       "bytes": 4771,
@@ -679,6 +695,11 @@
       "bytes": 12814,
       "path": "docs/prior-art-and-open-claim.md",
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
+    },
+    {
+      "bytes": 3642,
+      "path": "docs/repository-consolidation.md",
+      "sha256": "b4dd769b1ad7f708013f589701410da3c0c5f5fa7b84e92ed06cbc22fa358539"
     },
     {
       "bytes": 12546,
@@ -1736,14 +1757,19 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 3506,
+      "bytes": 3802,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "c2ee1a414c4638f62ef89090aca15eafe447dfaa9bf85a5240b399dc982f7760"
+      "sha256": "98118692c4d6e6c9a88cbdf2052d3a30459514854331595f96f4d9fa43d5015e"
     },
     {
       "bytes": 17236,
       "path": "scripts/build_result_manifest.py",
       "sha256": "6565c9ff68bd23703f9ebb287a341c1d21e8e15720403941d9750312f4e67053"
+    },
+    {
+      "bytes": 4554,
+      "path": "scripts/check_lab_snapshot.py",
+      "sha256": "fe58e1d6cbf7eecfeaa307da9c3c300486e1fcb9369861dfae10fe9a71434691"
     },
     {
       "bytes": 13561,
@@ -1981,9 +2007,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 21479,
+      "bytes": 21618,
       "path": "scripts/check_publication.py",
-      "sha256": "727ecc5dc1be3703b6ac05fdf83430472c40470d3b588f8ef48376d207877588"
+      "sha256": "816eee265222821e204f6a23294b0640c188daaaedb3a1bdd84c7919c107bf47"
     },
     {
       "bytes": 12921,
@@ -2244,6 +2270,11 @@
       "bytes": 7086,
       "path": "scripts/derive_nsc_weyl_boundary_jets.py",
       "sha256": "efe623da3299e5ef7182cb065c2e173e8b02da951ebb020d02f7437d007d3895"
+    },
+    {
+      "bytes": 941,
+      "path": "scripts/lab.py",
+      "sha256": "84d376438614872cc477501de233c9a3b0dac12bec82136c5884d68e73e03ee4"
     },
     {
       "bytes": 14202,
@@ -3056,6 +3087,11 @@
       "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
     },
     {
+      "bytes": 2209,
+      "path": "tests/test_lab_consolidation.py",
+      "sha256": "8d80a3cc61e3a17c738332d7afbfea0560b6b168c715707f9182d49dfb69fb26"
+    },
+    {
       "bytes": 4256,
       "path": "tests/test_local_gate_draft.py",
       "sha256": "156e985ba293cbaec0f9da2bc107b71a673fb0d57e0284d036d4963ad3c75048"
@@ -3321,6 +3357,7 @@
       "sha256": "55224209078cd78c7a433d679ac8748e2f6c7206b1fb295d41fc2ce196ae86c6"
     }
   ],
+  "lab_snapshot_sha256": "842461cc4d43e8733a21a5b56a7bdea2eaa12530ddc9d0bf7115c4364f855cd9",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.26.0",

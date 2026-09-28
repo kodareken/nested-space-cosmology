@@ -1,0 +1,72 @@
+schema_version = 1
+artifact_id = "FGC-1-CON4-PHY1"
+project_version = "0.11.0"
+metric_signature = "-+++"
+riemann_convention = "plus_partial_mu_gamma_nu"
+protocol_config = "configs/fgc/fgc-2-sf1-protocol-v3.toml"
+run1_config = "configs/fgc/fgc-1-run1-sym1.toml"
+action_config = "configs/fgc/fgc-1-action-gate.toml"
+action_result = "results/fgc-1-action-gate.json"
+variation_config = "configs/fgc/fgc-1-metric-variation.toml"
+variation_result = "results/fgc-1-metric-variation.json"
+compatible_point_config = "configs/fgc/fgc-1-hyp1-con1-comp1.toml"
+compatible_point_result = "results/fgc-1-hyp1-con1-comp1.json"
+metric_subsidiary_config = "configs/fgc/fgc-1-hyp1-con2-mprop1.toml"
+metric_subsidiary_result = "results/fgc-1-hyp1-con2-mprop1.json"
+gauge_cauchy_config = "configs/fgc/fgc-1-hyp1-con3-cau1.toml"
+gauge_cauchy_result = "results/fgc-1-hyp1-con3-cau1.json"
+
+[scope]
+target_branch = "FGC-QR"
+physical_equations = "unredefined_ACT1_VAR1"
+reference_id = "flat_spherical_annulus"
+radial_domain_minimum = "1/2"
+tilde_normal_factor = 4
+hat_normal_factor = 9
+boundary_free_domain_of_dependence_only = true
+smooth_solution_is_a_conditional_premise = true
+
+[controls]
+exact_state_ids = ["COMP1-compatible", "nonflat-shifted-A", "nonflat-shifted-B"]
+exact_state_count = 3
+acceleration_directions_per_state = 6
+expected_double_dual_H_support_count = 36
+expected_double_dual_M_support_count = 36
+expected_active_spherical_gauge_components = 2
+expected_hat_root_signs_at_each_control = [-1, 1]
+on_shell_and_off_shell_reduction_monitor_controls = true
+
+[monitor_contract]
+formula = "abs(sum_signed_terms)/sum_abs_signed_terms"
+zero_scale_policy = "all_terms_exactly_zero_returns_zero_with_explicit_flag"
+raw_value_and_denominator_recorded = true
+common_rescaling_invariant = true
+absolute_error_scale_supplied_here = false
+HLT1_and_NUM1_must_add_absolute_thresholds = true
+smallness_on_one_run_is_not_proof = true
+
+[proof_contract]
+Hamiltonian_and_momentum_use_unredefined_ACT1_VAR1_equations = true
+normal_projections_derived_in_spacelike_spherical_split = true
+coordinate_time_acceleration_absence_derived_structurally = true
+double_dual_Gauss_Bonnet_index_support_enumerated = true
+independent_exact_acceleration_controls_required = true
+general_REF1_shell_physical_to_normal_gauge_map_derived = true
+normal_gauge_map_determinant_proved_nonzero_on_declared_domain = true
+CON2_homogeneous_metric_defined_subsidiary_identity_consumed = true
+CON3_boundary_free_uniqueness_theorem_consumed = true
+FO1_reduction_subsidiary_identity_consumed = true
+gauge_and_reduction_characteristic_families_classified = true
+canonical_dimensionless_monitors_executable = true
+constraint_preserving_boundary_map_deferred_to_BND2 = true
+compatible_nonzero_width_slice_deferred_to_ID1 = true
+canonical_hash_bound_result_required = true
+no_holdout_execution = true
+
+[claims]
+retained_EFT_evolution_authorized = false
+physical_transition_claim_authorized = false
+singularity_resolution_derived = false
+child_domain_or_topology_derived = false
+dark_sector_mechanism_derived = false
+varying_locally_measured_c_derived = false

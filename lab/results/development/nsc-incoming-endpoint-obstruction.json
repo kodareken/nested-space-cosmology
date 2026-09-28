@@ -1,0 +1,484 @@
+{
+  "accountable_author": "Douglas Ek",
+  "actual_bindings": {
+    "channel": {
+      "angular_eigenvalue": 2.23606797749979,
+      "angular_level": 1,
+      "compact_level": 1,
+      "compact_mass": 1.5707963267948966,
+      "copy_count": 2,
+      "degeneracy": 12,
+      "factor": 0.3155184556573868,
+      "family": 2,
+      "index": 14,
+      "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+      "sample_count": 64,
+      "sample_offset": 688
+    },
+    "compensator_support": {
+      "all_compensator_incoming_jets": "exact zero by vanishing on an open neighborhood of rho1",
+      "compensator_support": [
+        1.015,
+        1.025
+      ],
+      "final_time": 0.3,
+      "incoming_jet_neighborhood_rho": [
+        1.0,
+        1.015
+      ],
+      "initial_time": 0.0,
+      "support_exact_rationals": [
+        [
+          203,
+          200
+        ],
+        [
+          41,
+          40
+        ]
+      ],
+      "unchanged_initial_inflow_source_tangents": true,
+      "union_PG_time_support": [
+        0.04317508716798679,
+        0.25620332026786774
+      ],
+      "union_radial_support": [
+        0.9743860383229925,
+        1.0250344273443701
+      ],
+      "upstream_right_edge": 1.2
+    },
+    "finite_pair_selected_compensation_context": {
+      "coefficient_frozen_before_validation": true,
+      "coefficients_N_a_r": [
+        -0.00025577978816508726,
+        -0.0013170636112115617,
+        0.024314276182675922
+      ],
+      "energy": 0.5562120090641313,
+      "energy_index": 3,
+      "family": "14_1",
+      "fit": {
+        "Pauli_coefficient_imaginary": 0.0,
+        "condition_number": 3.8207380275710205,
+        "linear_system_residual": 1.6940658945086007e-21,
+        "matrix": [
+          [
+            -0.0008285298106323908,
+            3.258172509230789e-05,
+            -1.668959411501504e-05
+          ],
+          [
+            0.0008250882783455067,
+            3.150661928354644e-05,
+            -0.0005758411691762617
+          ],
+          [
+            -0.0003534787530069146,
+            0.00042443742046364833,
+            4.401616751289176e-05
+          ]
+        ],
+        "selected_antiHermitian": 1.0842021724855044e-19,
+        "selected_trace": 1.0842021724855044e-19,
+        "singular_values": [
+          0.001294897575795626,
+          0.00046536889082891093,
+          0.0003389129446854116
+        ],
+        "target": [
+          -2.3678642574680306e-07,
+          -1.425369835153e-05,
+          6.016228922471728e-07
+        ]
+      },
+      "same_coefficients_all_cases": true,
+      "small_amplitude_chart_range": {
+        "bounds": "b,w<=1; rawN>.99; rawa>.99*a0; outside compensator N,a unchanged; r>.5; F=q_PG\u00b2>0",
+        "conservative_display_upper": 0.00798947735010957,
+        "physical_amplitude_selected": false,
+        "q_PG_squared_lower_on_compensator": {
+          "denominator": 15625,
+          "numerator": 9176
+        },
+        "radius_lower": 0.5,
+        "strict_abs_eta_upper": {
+          "denominator": 144304996945893492125,
+          "numerator": 1152921504606846976
+        }
+      }
+    },
+    "pulse": {
+      "PG_time_support": [
+        0.043175087167987014,
+        0.25620332026786774
+      ],
+      "S1": 1.0568780671724793,
+      "T1": -0.8017223766635779,
+      "axial_center": 1.2068780671724793,
+      "axial_halfwidth": 0.06,
+      "final_support_margin": 0.04379667973213225,
+      "final_time": 0.3,
+      "guard_kind": "numerical support bounds with strict margins; analytic monotonicity and fixed-radius-only principal speeds",
+      "initial_support_margin": 0.043175087167987014,
+      "initial_time": 0.0,
+      "maximum_checked_characteristic_speed": -0.21880440668708911,
+      "normal_inner": 0.007,
+      "normal_outer": 0.03,
+      "radial_support": [
+        0.9743860383229925,
+        1.0250344273443701
+      ],
+      "right_support_margin": 0.17496557265562984
+    },
+    "source_config": {
+      "angular_levels": 9,
+      "compact_levels": [
+        1,
+        2
+      ],
+      "cutoff": 3.973074368754331,
+      "evolution_steps": 6000,
+      "frequency_max": 40.0,
+      "frequency_points": 8,
+      "horizon_offset": 1e-10,
+      "horizon_rho": 1.9006916054701435,
+      "magnetic_flux": 4,
+      "omega": 3.973074368754331,
+      "outer_floor": 60.0,
+      "scattering_tolerance": 1e-09,
+      "surface_gravity": 0.23832579963401956
+    },
+    "source_kappa": 0.23832579963401956,
+    "source_omega": 3.973074368754331
+  },
+  "analytic_uniform_proof": {
+    "coefficient_compactness": "finite recurrence coefficients and their real-parameter derivatives are bounded; projector denominator>=1",
+    "explicit_linearized_projector_defect": "deltaR4=O(E^-4), by differentiating the explicit residual matrix",
+    "finite_background_truncation": "P16-P4=O(E^-5)",
+    "imported_background": "Paff-P16=O(E^-16), uniformly on the compact slab by positive full-collar domination",
+    "parameter_generator": "deltaG=O(E)",
+    "physical_vacuum_endpoint": "deltaPaff_01=L/E\u00b2+O(E^-3)",
+    "proof_not_just_a_formal_reference_change": true,
+    "retained_coherence": "deltaC-deltaPaff=O(E*exp(-cE)), c>0",
+    "true_background_error": "Paff-P4=O(E^-5)",
+    "uniform_orders_are_analytic_not_numerically_estimated": true,
+    "zero_upstream_and_unitarity": "X-deltaP4=O(E^-4)"
+  },
+  "assumptions": [
+    "the existing unbounded signed-real-energy continuum source/C0 prescription",
+    "fixed angular/compact group14 and original affine-horizon/infinity coherent state law",
+    "real smooth energy-independent metric tangent, compact radial support below rho=103/100",
+    "uniformly positive N,a,r and bounded required derivatives on a fixed compact real-parameter slab",
+    "operator and preparation unchanged near the upstream endpoint and beyond",
+    "original radius direction has positive W0 and delta r_rho(1)=-W0/a1",
+    "parent N/a/r compensators vanish on an open neighborhood of Sigma, preserving all incoming jets"
+  ],
+  "auxiliary_zero_transfer": {
+    "actual_retarded_pulse_kept": true,
+    "delta_zero_used": false,
+    "energy_quadrature_or_angular_multiplicity_inserted": false,
+    "exact_connection": "omega=0 Fourier vertex equals the radial real-parameter derivative with integrated metric directions",
+    "stationary_family_is_coefficient_device_only": true
+  },
+  "checked_finite_algebra": {
+    "checked_scalar_residual_count": 40,
+    "endpoint": {
+      "delta_c2_general": "-(-I*Amean*ell*r1 + Amean*m*r1**2 + I*Rmean*a1*ell)/r1**2",
+      "flat_endpoint_limit_residual": "0",
+      "general_limit": "a1*(Amean*ell*r1 - I*Amean*m*r1**2 - Rmean*a1*ell)/(4*r1**2)",
+      "general_limit_identity_residual": "0",
+      "means": "Amean=integral delta(a_T) dz; Rmean=integral delta(r_T) dz, real; intrinsic deltaN=deltaa=deltar=0",
+      "no_pointwise_or_all_jet_claim": true,
+      "original_case": "Amean=0, Rmean=W0>0; compensators vanish on an open neighborhood of Sigma",
+      "original_delta_c2": "-I*W0*a1*ell/r1**2",
+      "original_limit": "-W0*a1**2*ell/(4*r1**2)",
+      "original_limit_identity_residual": "0",
+      "two_mean_necessary_conditions": [
+        {
+          "Amean": "0",
+          "Rmean": "0"
+        }
+      ]
+    },
+    "flat_shift_zero_transfer": {
+      "commutator_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "nonzero_transfer_claimed": false,
+      "scope": "flat raw beta_K control at zero energy transfer only; the scalar phase has zero diagonal covariance commutator",
+      "vertex": "Matrix([[E, 0], [0, E]])",
+      "vertex_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "linearized_bridge": {
+      "background_orders": [
+        "Paff-P16=O(E^-16) uniformly from the positive full-collar bound",
+        "P16-P4=O(E^-5) on the compact slab from the finite series and bounded coefficients",
+        "hence Paff-P4=O(E^-5), stronger than the direct P4 defect bound"
+      ],
+      "differentiated_defect_order": "deltaR4=O(E^-4) by differentiating its displayed finite rational expression, not an error inequality",
+      "endpoint_expansion": "deltaP4_01=L/E\u00b2+O(E^-3); full coherent response has the same limit",
+      "exact_error_equation": "(X-Q)_rho=[G,X-Q]+[deltaG,P-P4]-deltaR4",
+      "initial_error": "X=Q=0 upstream because the physical family and all coefficient jets are unchanged there",
+      "physical_linearized_error_order": "X-deltaP4=O(E^-4) uniformly on the compact slab",
+      "proof_kind": "analytic uniform Big-O proof; exact algebra checks its finite identities, not numerical constants or a finite-energy threshold",
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "unitary_estimate": "norm(X-Q)(1)<=2 integral norm(deltaG)*norm(P-P4) drho+integral norm(deltaR4) drho",
+      "variation_size": "deltaG=O(E) for fixed energy-independent raw N,a,r directions"
+    },
+    "projector": {
+      "denominator": "(1+abs(z)^2)^2 >= 1 for the real parameter family",
+      "interpretation": "zbar/ebar/ubar denote conjugates on the real metric family; no scalar-only surrogate for projector defect",
+      "matrix": [
+        [
+          "(-e*zbar - ebar*z)/(z*zbar + 1)**2",
+          "(-e*zbar**2 + ebar)/(z*zbar + 1)**2"
+        ],
+        [
+          "(e - ebar*z**2)/(z*zbar + 1)**2",
+          "(e*zbar + ebar*z)/(z*zbar + 1)**2"
+        ]
+      ],
+      "residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "recurrence": {
+      "orders_0_through_3_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "remaining_coefficients": {
+        "4": "I*(-2*I*Ubar*c1*c3*d - I*Ubar*c2**2*d + c4*q + dc4*p)",
+        "5": "2*Ubar*d*(c1*c4 + c2*c3)",
+        "6": "Ubar*d*(2*c2*c4 + c3**2)",
+        "7": "2*Ubar*c3*c4*d",
+        "8": "Ubar*c4**2*d"
+      },
+      "rules": {
+        "c1": "U",
+        "c2": "-I*(c1*q + dc1*p)",
+        "c3": "-Ubar*c1**2*d - I*(c2*q + dc2*p)",
+        "c4": "-2*Ubar*c1*c2*d - I*(c3*q + dc3*p)"
+      },
+      "small_parameter": "x=1/(2E)",
+      "uniformity_reason": "finite coefficient functions and their real-parameter derivatives are bounded on the fixed compact positive-metric slab; remaining powers begin at E^-4"
+    },
+    "scalar": {
+      "U": "L + I*m",
+      "antiHermitian_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "clock_policy": "a0 is the unchanged reference dT/drho clock; N,a,r are varied raw fields",
+      "d": "a**2",
+      "energy_degree_of_G": 1,
+      "generator": [
+        [
+          "-I*E*N/(a*a0)",
+          "I*N*(-I*L - m)/a0"
+        ],
+        [
+          "I*N*(I*L - m)/a0",
+          "I*E*N/(a*a0)"
+        ]
+      ],
+      "p": "a*a0/N",
+      "q": "a0*ap/N",
+      "ratio_residual_identity": "z_prime-Riccati_G(z)=-(N/a0)*F",
+      "residual": "0",
+      "scalar_F": "2*E*S - L + S**2*a**2*(L - I*m) - I*m + I*(S*a0*ap/N + Sprime*a*a0/N)",
+      "z": "-i*a*S"
+    },
+    "source": {
+      "K_bound": "norm(K)<=integral norm(deltaG) drho=O(E) on the fixed slab",
+      "coherence_and_Jost_phase": "retained in the bounded remainder; no phase is set to zero or fitted",
+      "horizon_remainder_square_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "positive_energy_full_source_remainder_bound": "norm(Csrc-diag(0,1,0))=max(sqrt(f_H),n_in) on an open fiber; <= same bound after canonical coisometry",
+      "response_remainder": "norm([K,C_Sigma]-[K,Pv_Sigma])<=2*norm(K)*max(sqrt(f_H),n_in)=O(E*exp(-c*E)), c>0",
+      "sewing_coisometry_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sewing_vacuum_residuals": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "source_decay": "sqrt(f_H)<=exp(-pi*E/kappa); n_in<=exp(-2*pi*E/(Omega*kappa)) for sufficiently large positive E"
+    }
+  },
+  "conclusion": {
+    "finite_energy_threshold": null,
+    "finite_pair_calibration_can_still_hold": true,
+    "fixed_C0_linear_matching_in_this_class": false,
+    "numerical_Big_O_constant": null,
+    "physical_limit": "lim(E\u2192+infinity) E\u00b2 deltaChat(E,E)[0,1] = -ell*a1\u00b2*W0/(4*r1\u00b2)",
+    "strict_upper_rational": {
+      "denominator": 375,
+      "numerator": -2
+    }
+  },
+  "input_hashes": {
+    "docs/nsc-incoming-fourier-matching.md": "1b06a749df98210d9eb276b27c9148fcf05106c100b95d0665546d72f999a289",
+    "docs/nsc-incoming-vacuum-tail-bound.md": "ae2fd1e7bb1faffc6c76945e79fb738e7cb237a673794521a175031f81804318",
+    "docs/nsc-pg-massive-mode-resolution.md": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a",
+    "docs/nsc-retarded-compatible-preparation.md": "6970d00ef8008b9afa66aac6b4b4c4bc6fc05713de84eb6df37058b3d7108eb8",
+    "docs/nsc-retarded-diagonal-sign-bound.md": "9956a2d329cf7748a1f9393fb7b1470ffbeab605a231a185415d7b72f4d68a57",
+    "docs/nsc-upstream-compensator.md": "cd713c2876208e70fde57e3bf2095bd00797756f13e765d793756abd1b000586",
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
+    "results/development/nsc-upstream-compensator.json": "d7e07b91446abfcb8c9dfe7783687600028260e73794ca8aea803dae2af8e2aa",
+    "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_upstream_compensator.py": "b9ff215d5759089278b81e63d01a2c34b5cb74ae8595f5417f0ee32cf5628b35"
+  },
+  "rational_guards": {
+    "Big_O_constant": null,
+    "W0_strict_lower": {
+      "denominator": 30,
+      "numerator": 1
+    },
+    "a_squared_lower_from_pi": {
+      "denominator": 100,
+      "numerator": 71
+    },
+    "a_squared_used_strict_lower": {
+      "denominator": 25,
+      "numerator": 16
+    },
+    "actual_common_coefficients_context_only": [
+      -0.00025577978816508726,
+      -0.0013170636112115617,
+      0.024314276182675922
+    ],
+    "angular_strict_lower": 2,
+    "bump_bound": "on |u|<=1/2, exp(1-1/(1-u\u00b2))>=exp(-1/3)>2/3; actual halfwidth>1/20",
+    "finite_energy_threshold": null,
+    "intrinsic_geometry": "rho1, a1\u00b2=3*pi/2-4, r1\u00b2=2",
+    "limit_upper_strict": {
+      "denominator": 375,
+      "numerator": -2
+    },
+    "pi_bound": "pi>157/50",
+    "radius_squared": 2
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_endpoint_obstruction.py --check",
+  "residuals": {
+    "checked_symbolic_identities": 0.0,
+    "rational_limit_bound": 0.0
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 92552,
+      "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+      "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+    },
+    {
+      "bytes": 85712,
+      "path": "results/development/artifacts/nsc-upstream-compensator.npz",
+      "sha256": "957997e9b2462bb43dcf8c7ae491a349786e0448e63137743dcc8fb7a606f790"
+    },
+    {
+      "bytes": 5889941,
+      "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
+      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+    }
+  ],
+  "reused_physical_background": {
+    "finite_offset_archived_modes_used_as_exact": false,
+    "group": 14,
+    "new_tail_or_coefficient_producer_run": false,
+    "partial_integral_domination": "[rho,rho_h] is a subset of [1,rho_h]; each integrated coefficient majorant is nonnegative",
+    "positive_full_collar_I16_to_I32_upper": [
+      1.2829501037224872e+17,
+      5.0414788619716184e+16,
+      5.433790590110849e+16,
+      3.301698681452116e+17,
+      1.6419448058122076e+18,
+      1.1915543391062108e+19,
+      1.0281107167132869e+20,
+      1.0799939642095521e+21,
+      1.343036043306108e+22,
+      1.9313777359608018e+23,
+      3.120563385600728e+24,
+      5.516113106482915e+25,
+      1.0391820941823585e+27,
+      2.0321169693756413e+28,
+      3.989211750432136e+29,
+      7.397278704660649e+30,
+      1.0878129469371801e+32
+    ],
+    "record": "results/development/nsc-incoming-vacuum-tail-bound.json",
+    "sign": 1,
+    "starting_tail_domain": 160.0
+  },
+  "schema": "NSC-INCOMING-ENDPOINT-OBSTRUCTION-v1",
+  "scope": {
+    "ad4_reference_change_used_as_exclusion": false,
+    "all_positive_energies_bounded_above_by_cutoff": false,
+    "alternate_source_boundary_prescriptions_excluded": false,
+    "broader_NSC_architecture_excluded": false,
+    "field_radial_source_or_old_producer_runs": 0,
+    "full_global_constraints_or_stationarity": "OPEN",
+    "metric_evolution_or_publication": false,
+    "new_Hadamard_gate_or_state_law": false,
+    "new_action_term_or_counterforce": false,
+    "other_incoming_tangents_or_zero_mean_variations_decided": false,
+    "physical_exact_state_linear_response": true,
+    "pointwise_or_all_normal_jet_conditions_proved": false,
+    "source_coherence_or_Jost_phase_discarded": false,
+    "undeclared_Planck_cutoff_assumed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-endpoint-obstruction.md": "13fdab6ec71a089ab0c0f146941551b7d468aa8d18002d7df078dafdb9440aee",
+    "scripts/derive_nsc_incoming_endpoint_obstruction.py": "9830e7af82bdad8f875870e1b287a30666ff95dcee428e4c4d13ee2fe94207dc",
+    "src/recursive_horizons/nsc_incoming_endpoint_obstruction.py": "5de5195e61ff5a72a8d960600b47a5a2d1b6e03e7dcb27f93dc1b5fc7248846c",
+    "tests/test_nsc_incoming_endpoint_obstruction.py": "8b33c02e39db0b32e42a261b798dc0686f839133cb2447ea650277d833efa630"
+  },
+  "status": "PASS: physical high-energy endpoint obstruction for the declared flat-parent-control class",
+  "verification_tolerances": {
+    "checked_symbolic_identities": 0.0,
+    "rational_limit_bound": 0.0
+  }
+}

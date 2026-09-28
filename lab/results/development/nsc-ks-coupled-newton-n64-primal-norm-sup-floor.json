@@ -1,0 +1,57 @@
+{
+  "accountable_author": "Douglas Ek",
+  "blocks": [
+    {
+      "kept_modes": 16,
+      "largest_gain_factor": 2.033843994140625,
+      "predicted_gain": [
+        2.5301732966429445e-10,
+        5.4814997312841e-13
+      ],
+      "step_norm": 2.9768579163840688e-08
+    },
+    {
+      "kept_modes": 32,
+      "largest_gain_factor": 2.854156494140625,
+      "predicted_gain": [
+        3.550670831548184e-10,
+        7.692358945699754e-13
+      ],
+      "step_norm": 3.496975672199832e-08
+    },
+    {
+      "kept_modes": 48,
+      "largest_gain_factor": 3.24371337890625,
+      "predicted_gain": [
+        4.0352932658140384e-10,
+        8.742270328421818e-13
+      ],
+      "step_norm": 1.1894381337282489e-07
+    }
+  ],
+  "enclosed_error": null,
+  "error_term_at_1e-8_can_reach_existence": false,
+  "existence_tolerance": 3e-11,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-sup16.json": "e146b4c402e5cbc6964951b2cac92bc3eeefccbdae797b56f81a46b02af9550b"
+  },
+  "last_prediction_error_abs": [
+    1.2440350901702512e-10,
+    2.695142669579701e-13
+  ],
+  "next_owner": "declared (w,U) class on I=S(1)+[0.12,0.18]",
+  "parent_constraint_maxima": [
+    2.988849744089972e-09,
+    8.306893431713619e-08
+  ],
+  "parent_profile_identity": "3ba9f4c2fddecddd55d2017431bff71768501b99084815e0d229967fd10e4ea3",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "schema": "NSC-KS-N64-PRIMAL-NORM-SUP-FLOOR-v1",
+  "source_hashes": {
+    "docs/nsc-ks-n64-primal-norm-sup-floor.md": "9887212ef3e044022dad24addf43d9edcfa5028169329e4673309b41c5de0d34",
+    "scripts/derive_nsc_ks_n64_primal_norm_sup_floor.py": "3cb7edcb183aef439f5e5581dcbbabc4c270b10d7c330e8edfff8fe643ca33d9"
+  },
+  "stall": "n64_primal_norm_sup_gain_inside_prediction_error",
+  "status": "OPEN: well-conditioned sup-norm gain is inside the last N prediction error"
+}

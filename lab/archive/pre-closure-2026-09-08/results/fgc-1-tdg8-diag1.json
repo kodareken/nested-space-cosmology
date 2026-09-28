@@ -1,0 +1,60 @@
+{
+  "artifact_id": "FGC-1-TDG8-DIAG1",
+  "artifact_payload": {
+    "claims": {
+      "GR0_calibration_completed": false,
+      "PREF28_terminal_retroactively_reclassified": false,
+      "candidate_execution_authorized": false,
+      "common_event_completed": false,
+      "physical_result_earned": false,
+      "repair_applied": false,
+      "root_cause_mechanism_reproduced": true
+    },
+    "comparison": {
+      "canonical_JSON_equal": true,
+      "container_differences": [
+        {
+          "durable_type": "list",
+          "live_type": "tuple",
+          "path": "$.channel_admissions"
+        },
+        {
+          "durable_type": "list",
+          "live_type": "tuple",
+          "path": "$.failed_channels"
+        }
+      ],
+      "raw_mapping_equal": false,
+      "replay_classification": "TDG6TemporalRetryRequired",
+      "replayed_ledger_equal": true,
+      "replayed_successor_plan_equal": true,
+      "semantic_difference_paths": []
+    },
+    "decision": {
+      "TDG6_or_TDG7_rule_change_permitted": false,
+      "conditional_representation_repair_permitted": true,
+      "permitted_expression": "p15._json_safe(seen[0]) != dict(evidence)",
+      "successor_campaign_authorized": false
+    },
+    "freeze_commit": "1496542cb1489e158d9edb2925fd54cad34d1f8d",
+    "freeze_result_sha256": "5801422b4dfe0c9a4f1a9934139918f9f72c1ebb5f75cbc98f1a1881b752e28c",
+    "source_checkpoint": {
+      "checkpoint_sha256": "6d2b6e37e7c7cfd4ce64504353d886099003f959ea2aaee1a14fc778ce14fa46",
+      "cursor_sha256": "6d594999f6aaebb5d56f0fd6ff12499e2b22a47e3daf74ac8b13b15d273fa177",
+      "generation": 8,
+      "journal_sequence": 8,
+      "journal_tip_sha256": "949b29e46081bf5a42c34461b3894419db86aeca6c733b7a2636c91c6cb2ee4a",
+      "member_key": "RK4-2049",
+      "physical_state_sha256": "3cd9f576d079595343e8cdaabd33dd0153763b88d1beecd7d85717bdba4b6c9a"
+    },
+    "store": {
+      "locked_campaign_mutated": false,
+      "locked_terminal_boundary_equal_before_after": true
+    }
+  },
+  "classification": "representation_only_tuple_list_drift",
+  "gate_status": "pass",
+  "project_version": "0.11.0",
+  "schema_version": 1,
+  "target_protocol": "FGC-2-SF1-PROTO18"
+}

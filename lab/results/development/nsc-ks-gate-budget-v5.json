@@ -1,0 +1,116 @@
+{
+  "all_declared_source_paths_closed": false,
+  "allocation_changed": false,
+  "allocation_total": 2e-11,
+  "arithmetic_scope": "remaining geometry, field and assembly arithmetic; phase arithmetic is already in phase_value",
+  "components": {
+    "arithmetic": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "baseline_low_subgap": {
+      "allocation_per_component": 3e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "between_node": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "changed_history_UV_tail": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "covered_regions": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "energy_interpolation": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "field_space_time": {
+      "allocation_per_component": 5e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "phase_value": {
+      "allocation_per_component": 1e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    },
+    "upstream": {
+      "allocation_per_component": 2e-12,
+      "bound": null,
+      "status": "OPEN: no authenticated PASS enclosure for the current history"
+    }
+  },
+  "constraint_order": [
+    "N",
+    "beta"
+  ],
+  "covered_positive_families": 60,
+  "covered_signed_families": 120,
+  "enclosure_record": {
+    "arithmetic": null,
+    "between_node": null,
+    "certificate_use": false,
+    "path": "results/development/nsc-ks-continuous-constraint-enclosure.json",
+    "sha256": "5e7bbf621ce72e08ef9ffd2065aef6b8fbfbfca54c1e9582d3f96c28afaff738"
+  },
+  "filled_from_pass": [],
+  "full_error_sum": null,
+  "input_hashes": {
+    "results/development/nsc-ks-continuous-constraint-enclosure.json": "5e7bbf621ce72e08ef9ffd2065aef6b8fbfbfca54c1e9582d3f96c28afaff738",
+    "results/development/nsc-ks-gate-budget-v4.json": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0",
+    "results/development/nsc-ks-gate-reanchor-v2.json": "f5914559d7b9570ff16bea1c50a0417a16d0bbcd2384999ce8bc98a108f9ea6f",
+    "scripts/derive_nsc_ks_gate_budget_v2.py": "91009a27b727104523861787cbacc76500798c19d7a195973731b894988b5ef1",
+    "scripts/derive_nsc_ks_gate_budget_v4.py": "978fae008b86ac93364aa29e8d22b4d7e70ca9f86023a5fd40fa811135765f2a",
+    "src/recursive_horizons/nsc_local_gate_certificate_v2.py": "c86dad610106ecf76f9a272a1f0480a9891744e9c8f291fff33984b0e314833f"
+  },
+  "interval": "I=S(1)+[.12,.18]",
+  "missing_components": [
+    "field_space_time",
+    "changed_history_UV_tail",
+    "baseline_low_subgap",
+    "upstream",
+    "energy_interpolation",
+    "covered_regions",
+    "phase_value",
+    "between_node",
+    "arithmetic"
+  ],
+  "named_gap": "pass_enclosures_missing_for_null_v5_components",
+  "numerical_indicators_used_as_bounds": false,
+  "partial_known_error_sum": null,
+  "phase_continuous_remainder_included": false,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_tolerance": 3e-11,
+  "predecessor_bounds_are_not_v5_pass_fills": true,
+  "predecessor_enclosed_components": [
+    "energy_interpolation",
+    "covered_regions",
+    "phase_value"
+  ],
+  "predecessor_schema": "NSC-KS-GATE-ERROR-BUDGET-v4",
+  "predecessor_sha256": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0",
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "residual_reserve": 1e-11,
+  "schema": "NSC-KS-GATE-ERROR-BUDGET-v5",
+  "source_hashes": {
+    "docs/nsc-ks-gate-budget-v5.md": "de54d47bbd616f9d416a8c572ffcf3ba08d7400e62f05f59df3f7b8f08578b3f",
+    "scripts/derive_nsc_ks_gate_budget_v5.py": "b6ba8cba18b23b2d3862d6a2b864458e83c936dca69b98e8ea5c1acd6911d084",
+    "src/recursive_horizons/nsc_ks_gate_budget_v5.py": "1f2565a2412c15b90ffc12c56edc2c2d94aa127a93b98c576dc995411ba64505",
+    "tests/test_nsc_ks_gate_budget_v5.py": "45c18746cae19b1c63f0b9b7251cbd5f2073e751ae1ccccefaff5d1b664c4a1a"
+  },
+  "source_identity": "ed6330bb7f905975c11a05696d3fff7a2763ea1fd05fdb5d0aff3b319793becf",
+  "state_law": "C_Sigma[g]=U_g C_up U_g^dagger",
+  "status": "OPEN: nine-component v5 composer; components fill only from authenticated PASS enclosures; 9 remain null",
+  "v4_bytes_preserved": true
+}

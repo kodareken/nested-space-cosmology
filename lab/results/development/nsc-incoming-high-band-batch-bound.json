@@ -1,0 +1,3309 @@
+{
+  "accountable_author": "Douglas Ek",
+  "aggregate_constraint_action_error_upper": [
+    1.1985498272105825e-12,
+    9.642829032689367e-46
+  ],
+  "batch_complete": true,
+  "combined_intervals_added_once_per_group": true,
+  "group_count": 28,
+  "groups": [
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.0853851988180539e-20,
+        2.239854799824688e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 1,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group01.539e61b3b05bed1ce1e657a15f905f62d331e5dd7242a3cdb169b6c39ed37def.json",
+        "sha256": "539e61b3b05bed1ce1e657a15f905f62d331e5dd7242a3cdb169b6c39ed37def"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 5.4072740137825225e-37
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.0853851988180539e-20,
+            2.239854799824688e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.3029437769002616e-92,
+            1.2510158530516066e-92,
+            1.2510158530516066e-92,
+            2.596396192432753e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.116646798816114e-22,
+            "lapse_action_error_upper": 1.0853851988180537e-20,
+            "linear_transverse_density_upper": 5.116646798816114e-22,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.6541997379095104e-38,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.080317210822363e-20,
+            2.239854799824688e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.3029437769002616e-92,
+            1.2510158530516066e-92,
+            1.2510158530516066e-92,
+            2.596396192432753e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.092755645165937e-22,
+            "lapse_action_error_upper": 1.0803172108223629e-20,
+            "linear_transverse_density_upper": 5.092755645165936e-22,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.6541425845930094e-38,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            5.0679879956908255e-23,
+            2.4670905460293525e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.4237325859281602e-115,
+            1.377932794678491e-115,
+            1.377932794678491e-115,
+            2.2899895624834577e-117
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.3891153650176924e-24,
+            "lapse_action_error_upper": 5.067987995690825e-23,
+            "linear_transverse_density_upper": 2.3891153650176924e-24,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.715331650129766e-43,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        6.258136477614168e-20,
+        2.9864730664329175e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 2,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group02.ba6994fc300c558ef31c5114b0dbc529ed08b9df915a051354000e75e4a41411.json",
+        "sha256": "ba6994fc300c558ef31c5114b0dbc529ed08b9df915a051354000e75e4a41411"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.1503248602037305e-36
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            6.258136477614168e-20,
+            2.9864730664329175e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.775282995678925e-92,
+            1.668021137402142e-92,
+            1.668021137402142e-92,
+            5.363092913839147e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.9501668172376276e-21,
+            "lapse_action_error_upper": 6.258136477614167e-20,
+            "linear_transverse_density_upper": 2.9501668172376276e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.6852560586931948e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            6.22906810775268e-20,
+            2.9864730664329175e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.775282995678925e-92,
+            1.668021137402142e-92,
+            1.668021137402142e-92,
+            5.363092913839147e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.9364636101402262e-21,
+            "lapse_action_error_upper": 6.229068107752679e-20,
+            "linear_transverse_density_upper": 2.936463610140226e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.685198168160643e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.906836986148743e-22,
+            3.2894540613724705e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.9318473682485186e-115,
+            1.8372437262379882e-115,
+            1.8372437262379882e-115,
+            4.730182100526528e-117
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.3703207097401637e-23,
+            "lapse_action_error_upper": 2.9068369861487424e-22,
+            "linear_transverse_density_upper": 1.3703207097401637e-23,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.789053255180517e-42,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        9.078033639182894e-19,
+        3.7330913330411473e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 3,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group03.2b238d511953ebfaf62b2b883cdbbc62a0daa869f03c4a6fce84d90c358742f4.json",
+        "sha256": "2b238d511953ebfaf62b2b883cdbbc62a0daa869f03c4a6fce84d90c358742f4"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.504632769052528e-35
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            9.078033639182894e-19,
+            3.7330913330411473e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.2623940481045668e-92,
+            2.0850264217526778e-92,
+            2.0850264217526778e-92,
+            8.86838131759446e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.2795029644822464e-20,
+            "lapse_action_error_upper": 9.078033639182892e-19,
+            "linear_transverse_density_upper": 4.279502964482245e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.5854232613698402e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            9.036094458769587e-19,
+            3.7330913330411473e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.2623940481045668e-92,
+            2.0850264217526778e-92,
+            2.0850264217526778e-92,
+            8.86838131759446e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.259732290122545e-20,
+            "lapse_action_error_upper": 9.036094458769585e-19,
+            "linear_transverse_density_upper": 4.259732290122543e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.5853690904347118e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            4.193918041330729e-21,
+            4.111817576715588e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.452990726473014e-115,
+            2.2965546577974853e-115,
+            2.2965546577974853e-115,
+            7.82180343377645e-117
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.9770674359701874e-22,
+            "lapse_action_error_upper": 4.193918041330728e-21,
+            "linear_transverse_density_upper": 1.9770674359701874e-22,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.417093512835853e-40,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        8.413654856538565e-18,
+        4.479709599649376e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 4,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group04.4ff1e9a8002e8a3147b36357b7b9f119d5b4c02ee1ea488037c83e04665a651d.json",
+        "sha256": "4ff1e9a8002e8a3147b36357b7b9f119d5b4c02ee1ea488037c83e04665a651d"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.6111186457260672e-34
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            8.413654856538565e-18,
+            4.479709599649376e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.764768527744056e-92,
+            2.5020317061032132e-92,
+            2.5020317061032132e-92,
+            1.3136841082042136e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 3.9663061772844604e-19,
+            "lapse_action_error_upper": 8.413654856538564e-18,
+            "linear_transverse_density_upper": 3.966306177284453e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 7.2702175213893646e-34,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            8.37500621462314e-18,
+            4.479709599649376e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.764768527744056e-92,
+            2.5020317061032132e-92,
+            2.5020317061032132e-92,
+            1.3136841082042136e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 3.9480867055107078e-19,
+            "lapse_action_error_upper": 8.375006214623139e-18,
+            "linear_transverse_density_upper": 3.9480867055107005e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 7.269970434242704e-34,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            3.864864191542485e-20,
+            4.934181092058705e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.9875962400917084e-115,
+            2.755865589356982e-115,
+            2.755865589356982e-115,
+            1.1586532536736319e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.821947177375306e-21,
+            "lapse_action_error_upper": 3.864864191542484e-20,
+            "linear_transverse_density_upper": 1.821947177375306e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.4708714666015197e-38,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        6.07481642850996e-17,
+        5.226327866257606e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 5,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group05.465fce5b5890ce100070c8f8e021a5fc841defc1a9a3a2eeac011cea78322acb.json",
+        "sha256": "465fce5b5890ce100070c8f8e021a5fc841defc1a9a3a2eeac011cea78322acb"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 6.45186531369724e-33
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            6.07481642850996e-17,
+            5.226327866257606e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.282532457394334e-92,
+            2.9190369904537486e-92,
+            2.9190369904537486e-92,
+            1.817477334702927e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.863747365099411e-18,
+            "lapse_action_error_upper": 6.074816428509959e-17,
+            "linear_transverse_density_upper": 2.8637473650993883e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.251425521895935e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            6.047080378762874e-17,
+            5.226327866257606e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.282532457394334e-92,
+            2.9190369904537486e-92,
+            2.9190369904537486e-92,
+            1.817477334702927e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.8506722310083272e-18,
+            "lapse_action_error_upper": 6.047080378762873e-17,
+            "linear_transverse_density_upper": 2.850672231008305e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.251349424214155e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.7736049747086277e-19,
+            5.7565446074018234e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.535775059664163e-115,
+            3.215176520916479e-115,
+            3.215176520916479e-115,
+            1.6029926937384204e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.307513409108347e-20,
+            "lapse_action_error_upper": 2.773604974708627e-19,
+            "linear_transverse_density_upper": 1.307513409108347e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 7.609768177987592e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        3.728471868785731e-16,
+        5.972946132865835e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 6,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group06.df0777c4f3d19e40b194746160c3197599f343069c704a81e9abd8b7dbc7b383.json",
+        "sha256": "df0777c4f3d19e40b194746160c3197599f343069c704a81e9abd8b7dbc7b383"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 7.51112678311022e-33
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            3.728471868785731e-16,
+            5.972946132865835e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.815731887803955e-92,
+            3.336042274804284e-92,
+            3.336042274804284e-92,
+            2.398448064998351e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.75765006494219e-17,
+            "lapse_action_error_upper": 3.7284718687857304e-16,
+            "linear_transverse_density_upper": 1.757650064942136e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.415912663173993e-31,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            3.7115583776530296e-16,
+            5.972946132865835e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.815731887803955e-92,
+            3.336042274804284e-92,
+            3.336042274804284e-92,
+            2.398448064998351e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.749676825547072e-17,
+            "lapse_action_error_upper": 3.711558377653029e-16,
+            "linear_transverse_density_upper": 1.749676825547018e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.415730650709764e-31,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.6913491132701315e-18,
+            6.578908122744941e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.097567801385179e-115,
+            3.6744874524759763e-115,
+            3.6744874524759763e-115,
+            2.1154017445460122e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 7.973239395118001e-20,
+            "lapse_action_error_upper": 1.6913491132701313e-18,
+            "linear_transverse_density_upper": 7.973239395117998e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.820124642293306e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        2.0327479258878844e-15,
+        6.719564399474064e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 7,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group07.95dc71a2a5610697f89bf6630c4d66b6f6b3d43b3a8c2947565f6b56363d29ba.json",
+        "sha256": "95dc71a2a5610697f89bf6630c4d66b6f6b3d43b3a8c2947565f6b56363d29ba"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 2.619264724366641e-32
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            2.0327479258878844e-15,
+            6.719564399474064e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.364387223782526e-92,
+            3.75304755915482e-92,
+            3.75304755915482e-92,
+            3.0566983231385307e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.582637739228891e-17,
+            "lapse_action_error_upper": 2.032747925887884e-15,
+            "linear_transverse_density_upper": 9.582637739227808e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.0833508941559663e-29,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            2.023589974871984e-15,
+            6.719564399474064e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.364387223782526e-92,
+            3.75304755915482e-92,
+            3.75304755915482e-92,
+            3.0566983231385307e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.539465968690423e-17,
+            "lapse_action_error_upper": 2.0235899748719835e-15,
+            "linear_transverse_density_upper": 9.53946596868934e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.08331470261023e-29,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            9.157951015900534e-18,
+            7.401271638088059e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.672992462046294e-115,
+            4.1337983840354735e-115,
+            4.1337983840354735e-115,
+            2.6959703900541055e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.317177053846777e-19,
+            "lapse_action_error_upper": 9.157951015900532e-18,
+            "linear_transverse_density_upper": 4.3171770538467736e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.6191545736312366e-34,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.0091887808834894e-14,
+        7.466182666082295e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 8,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group08.cb67880a42a786291ea8496f100fe27af92f7cafe0445418b8c4636d33ff102a.json",
+        "sha256": "cb67880a42a786291ea8496f100fe27af92f7cafe0445418b8c4636d33ff102a"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 7.8269792939897265e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.0091887808834894e-14,
+            7.466182666082295e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.9285087170071916e-92,
+            4.1700528435053556e-92,
+            4.1700528435053556e-92,
+            3.7922793675091807e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.757446988158387e-16,
+            "lapse_action_error_upper": 1.0091887808834892e-14,
+            "linear_transverse_density_upper": 4.757446988156517e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.8699268548851142e-28,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.0046752678796471e-14,
+            7.466182666082295e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.9285087170071916e-92,
+            4.1700528435053556e-92,
+            4.1700528435053556e-92,
+            3.7922793675091807e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.736169701635894e-16,
+            "lapse_action_error_upper": 1.004675267879647e-14,
+            "linear_transverse_density_upper": 4.736169701634024e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.869864774036017e-28,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            4.513513003842371e-17,
+            8.223635153431176e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.262058083500878e-115,
+            4.593109315594971e-115,
+            4.593109315594971e-115,
+            3.3447438395295357e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.127728652249319e-18,
+            "lapse_action_error_upper": 4.51351300384237e-17,
+            "linear_transverse_density_upper": 2.127728652249313e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 6.208084909719495e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        4.63304145036204e-14,
+        8.212800932690523e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 9,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group09.e71e978c7be60486f654ae370eac058eed66b760dd4b7fccfcc0fbfc888551be.json",
+        "sha256": "e71e978c7be60486f654ae370eac058eed66b760dd4b7fccfcc0fbfc888551be"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 7.888609052210118e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            4.63304145036204e-14,
+            8.212800932690523e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.508102001940019e-92,
+            4.587058127855891e-92,
+            4.587058127855891e-92,
+            4.605219370420639e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.1840759143935164e-15,
+            "lapse_action_error_upper": 4.633041450362039e-14,
+            "linear_transverse_density_upper": 2.184075914390669e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.8473587492444374e-27,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            4.612480410490234e-14,
+            8.212800932690523e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.508102001940019e-92,
+            4.587058127855891e-92,
+            4.587058127855891e-92,
+            4.605219370420639e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.1743831731478306e-15,
+            "lapse_action_error_upper": 4.6124804104902335e-14,
+            "linear_transverse_density_upper": 2.174383173144983e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.8472648302984674e-27,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.0561039871805898e-16,
+            9.045998668774295e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.86476963527529e-115,
+            5.052420247154468e-115,
+            5.052420247154468e-115,
+            4.061746940604114e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.692741245685781e-18,
+            "lapse_action_error_upper": 2.0561039871805895e-16,
+            "linear_transverse_density_upper": 9.692741245685687e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 9.39189459701878e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.9871440756940704e-13,
+        8.959419199298752e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 10,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group10.b51f9e490a04e085871e31c9af65bfda4807ab2e3c4e59fa1e70c5f39f678d67.json",
+        "sha256": "b51f9e490a04e085871e31c9af65bfda4807ab2e3c4e59fa1e70c5f39f678d67"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 6.508102468073347e-30
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.9871440756940704e-13,
+            8.959419199298752e-91
+          ],
+          "consumer_endpoint_tag": 320.0,
+          "interval": [
+            32.0,
+            320.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.103170393033957e-92,
+            5.0040634122064264e-92,
+            5.0040634122064264e-92,
+            5.495534904137653e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.367655266313318e-15,
+            "lapse_action_error_upper": 1.98714407569407e-13,
+            "linear_transverse_density_upper": 9.367655266274513e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.8804534594909074e-26,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.978397299845316e-13,
+            8.959419199298752e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.103170393033957e-92,
+            5.0040634122064264e-92,
+            5.0040634122064264e-92,
+            5.495534904137653e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.326421828916874e-15,
+            "lapse_action_error_upper": 1.9783972998453156e-13,
+            "linear_transverse_density_upper": 9.326421828878071e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.8803263281799856e-26,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            8.746775848754387e-16,
+            9.86836218411741e-114
+          ],
+          "consumer_endpoint_tag": 320.0,
+          "interval": [
+            40.0,
+            320.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.481130040676338e-115,
+            5.511731178713964e-115,
+            5.511731178713964e-115,
+            4.846994309811869e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.1233437396444076e-17,
+            "lapse_action_error_upper": 8.746775848754386e-16,
+            "linear_transverse_density_upper": 4.1233437396442806e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.2713131092159109e-30,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        8.02172438490923e-13,
+        9.706037465906981e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 11,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group11.32bb24a969d61b25556568f0b7f0532cf5ab008ebe6a1eec8337471609e96423.json",
+        "sha256": "32bb24a969d61b25556568f0b7f0532cf5ab008ebe6a1eec8337471609e96423"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.076557530361946e-29
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            8.02172438490923e-13,
+            9.706037465906981e-91
+          ],
+          "consumer_endpoint_tag": 320.0,
+          "interval": [
+            32.0,
+            320.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.713715947054401e-92,
+            5.4210686965569615e-92,
+            5.4210686965569615e-92,
+            6.463236252487194e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 3.7815450625019394e-14,
+            "lapse_action_error_upper": 8.021724384909229e-13,
+            "linear_transverse_density_upper": 3.781545062454123e-14,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 4.781624899161709e-25,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            7.986719948277698e-13,
+            9.706037465906981e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.713715947054401e-92,
+            5.4210686965569615e-92,
+            5.4210686965569615e-92,
+            6.463236252487194e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 3.765043516430542e-14,
+            "lapse_action_error_upper": 7.986719948277697e-13,
+            "linear_transverse_density_upper": 3.765043516382727e-14,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 4.781469343873986e-25,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            3.500443663153225e-15,
+            1.0690725699460529e-113
+          ],
+          "consumer_endpoint_tag": 320.0,
+          "interval": [
+            40.0,
+            320.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.111141113745846e-115,
+            5.971042110273461e-115,
+            5.971042110273461e-115,
+            5.700495017361922e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.6501546071397545e-16,
+            "lapse_action_error_upper": 3.5004436631532244e-15,
+            "linear_transverse_density_upper": 1.650154607139599e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.555552877235165e-29,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        4.144966668237588e-14,
+        9.642829032689365e-46
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 13,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group13.ec17663c4a98365afe88601206596cfd64e940a7bc9645896d9ff7f19e1deb52.json",
+        "sha256": "ec17663c4a98365afe88601206596cfd64e940a7bc9645896d9ff7f19e1deb52"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 0.0
+      },
+      "source_windows_count": 1,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "middle": {
+          "constraint_action_error_upper": [
+            4.144966668237588e-14,
+            9.642829032689365e-46
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            16.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.827879410399132e-47,
+            5.385765179557565e-47,
+            5.385765179557565e-47,
+            5e-324
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.9539911229057177e-15,
+            "lapse_action_error_upper": 4.144966668237587e-14,
+            "linear_transverse_density_upper": 1.9539911226972123e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.085055426854626e-25,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        3.4461964006947287e-19,
+        5.972946132865835e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 15,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group15.85ad6b0955f536fd27dcc01b3a28407880046c5b4809e3e5fccb9dedcfc1619e.json",
+        "sha256": "85ad6b0955f536fd27dcc01b3a28407880046c5b4809e3e5fccb9dedcfc1619e"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.3635734469538535e-36
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            3.4461964006947287e-19,
+            5.972946132865835e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.590886474586161e-92,
+            3.336042274804284e-92,
+            3.336042274804284e-92,
+            1.0726185827678293e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.624581743044587e-20,
+            "lapse_action_error_upper": 3.446196400694728e-19,
+            "linear_transverse_density_upper": 1.624581743044587e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.1624789172580547e-36,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            3.4302342278801856e-19,
+            5.972946132865835e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.590886474586161e-92,
+            3.336042274804284e-92,
+            3.336042274804284e-92,
+            1.0726185827678293e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.6170569674605253e-20,
+            "lapse_action_error_upper": 3.430234227880185e-19,
+            "linear_transverse_density_upper": 1.617056967460525e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.162404871995894e-36,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.596217281454317e-21,
+            6.578908122744941e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.8992569076388023e-115,
+            3.6744874524759763e-115,
+            3.6744874524759763e-115,
+            9.460364201053056e-117
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 7.524775584061834e-23,
+            "lapse_action_error_upper": 1.5962172814543168e-21,
+            "linear_transverse_density_upper": 7.524775584061834e-23,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 7.404526216042065e-41,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        3.2888975173939916e-18,
+        7.466182666082295e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 16,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group16.6abd0e82d49570101f050d3348766a8fab6f7df6e79612fda1f8349b803f9f97.json",
+        "sha256": "6abd0e82d49570101f050d3348766a8fab6f7df6e79612fda1f8349b803f9f97"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 4.513898307157584e-35
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            3.2888975173939916e-18,
+            7.466182666082295e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.5642705912457205e-92,
+            4.1700528435053556e-92,
+            4.1700528435053556e-92,
+            1.773676263518892e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.550429006433243e-19,
+            "lapse_action_error_upper": 3.288897517393991e-18,
+            "linear_transverse_density_upper": 1.550429006433242e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 9.398805602795945e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            3.273740158465703e-18,
+            7.466182666082295e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.5642705912457205e-92,
+            4.1700528435053556e-92,
+            4.1700528435053556e-92,
+            1.773676263518892e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.5432836305682148e-19,
+            "lapse_action_error_upper": 3.2737401584657025e-18,
+            "linear_transverse_density_upper": 1.5432836305682138e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 9.39848528978213e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.5157358928288702e-20,
+            8.223635153431176e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.940804528791734e-115,
+            4.593109315594971e-115,
+            4.593109315594971e-115,
+            1.56436068675529e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 7.145375865028351e-22,
+            "lapse_action_error_upper": 1.51573589282887e-20,
+            "linear_transverse_density_upper": 7.145375865028351e-22,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.203130138145997e-39,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        2.6033604951954247e-17,
+        8.959419199298752e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 17,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group17.5044edd8b10cd7441fd354403a078f07eeb9594f93a36941eef75c0b96be58eb.json",
+        "sha256": "5044edd8b10cd7441fd354403a078f07eeb9594f93a36941eef75c0b96be58eb"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 8.907425992790966e-34
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            2.6033604951954247e-17,
+            8.959419199298752e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.5686022660334916e-92,
+            5.0040634122064264e-92,
+            5.0040634122064264e-92,
+            2.627368216408427e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.227257950302946e-18,
+            "lapse_action_error_upper": 2.6033604951954244e-17,
+            "linear_transverse_density_upper": 1.2272579503029427e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.2449693992283336e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            2.5914280254977706e-17,
+            8.959419199298752e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.5686022660334916e-92,
+            5.0040634122064264e-92,
+            5.0040634122064264e-92,
+            2.627368216408427e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.2216328291066225e-18,
+            "lapse_action_error_upper": 2.5914280254977703e-17,
+            "linear_transverse_density_upper": 1.2216328291066192e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.2448593613529176e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.1932469697653973e-19,
+            9.86836218411741e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.009647516231409e-115,
+            5.511731178713964e-115,
+            5.511731178713964e-115,
+            2.3173065073472638e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.625121196323422e-21,
+            "lapse_action_error_upper": 1.193246969765397e-19,
+            "linear_transverse_density_upper": 5.625121196323422e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.100378754155484e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.7310671698580551e-16,
+        1.0452655732515212e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 18,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group18.dbc44ef21dc1f3e7a53319cc1902fa835847a65e47cafa361587507bf86f74ac.json",
+        "sha256": "dbc44ef21dc1f3e7a53319cc1902fa835847a65e47cafa361587507bf86f74ac"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 6.740754805355325e-33
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.7310671698580551e-16,
+            1.0452655732515212e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.603889926723368e-92,
+            5.838073980907497e-92,
+            5.838073980907497e-92,
+            3.634954669405854e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 8.160475472519e-18,
+            "lapse_action_error_upper": 1.731067169858055e-16,
+            "linear_transverse_density_upper": 8.160475472518914e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 8.678153958035491e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.7231796324570243e-16,
+            1.0452655732515212e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.603889926723368e-92,
+            5.838073980907497e-92,
+            5.838073980907497e-92,
+            3.634954669405854e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 8.123292596764408e-18,
+            "lapse_action_error_upper": 1.723179632457024e-16,
+            "linear_transverse_density_upper": 8.12329259676432e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 8.677861229026005e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            7.887537401030791e-19,
+            1.1513089214803647e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.10579330315092e-115,
+            6.430353041832958e-115,
+            6.430353041832958e-115,
+            3.205985387476841e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 3.71828757545936e-20,
+            "lapse_action_error_upper": 7.88753740103079e-19,
+            "linear_transverse_density_upper": 3.7182875754593594e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.927290094866274e-36,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.008206872427488e-15,
+        1.194589226573167e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 19,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group19.cbc5f54a0e380e84073824b89454c142d6a6b81b4a5a7daa7ed7278906c360c3.json",
+        "sha256": "cbc5f54a0e380e84073824b89454c142d6a6b81b4a5a7daa7ed7278906c360c3"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.09392820841195e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.008206872427488e-15,
+            1.194589226573167e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.670137185531713e-92,
+            6.672084549608568e-92,
+            6.672084549608568e-92,
+            4.796896129996702e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.7528181441649344e-17,
+            "lapse_action_error_upper": 1.0082068724274877e-15,
+            "linear_transverse_density_upper": 4.752818144164744e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.901318754683417e-30,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.0036421077390052e-15,
+            1.194589226573167e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.670137185531713e-92,
+            6.672084549608568e-92,
+            6.672084549608568e-92,
+            4.796896129996702e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.731299250544395e-17,
+            "lapse_action_error_upper": 1.003642107739005e-15,
+            "linear_transverse_density_upper": 4.731299250544205e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.9012549758962975e-30,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            4.564764688482614e-18,
+            1.3157816245489882e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            8.22924507548075e-115,
+            7.348974904951953e-115,
+            7.348974904951953e-115,
+            4.2308034890920243e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.1518893620539115e-19,
+            "lapse_action_error_upper": 4.564764688482613e-18,
+            "linear_transverse_density_upper": 2.1518893620539107e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 6.377878711944456e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        5.2942529929676236e-15,
+        1.3439128798948129e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 20,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group20.1a082bfee4259c55af474221f2f82f5747ad94bb3933b924d4de8042a7c7d1b6.json",
+        "sha256": "1a082bfee4259c55af474221f2f82f5747ad94bb3933b924d4de8042a7c7d1b6"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.389636702121535e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            5.2942529929676236e-15,
+            1.3439128798948129e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            8.76734579502142e-92,
+            7.50609511830964e-92,
+            7.50609511830964e-92,
+            6.1133966462770614e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.4957796235004117e-16,
+            "lapse_action_error_upper": 5.294252992967623e-15,
+            "linear_transverse_density_upper": 2.495779623500056e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.555346603765576e-29,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            5.270444970082116e-15,
+            1.3439128798948129e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            8.76734579502142e-92,
+            7.50609511830964e-92,
+            7.50609511830964e-92,
+            6.1133966462770614e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.4845562122897257e-16,
+            "lapse_action_error_upper": 5.270444970082115e-15,
+            "linear_transverse_density_upper": 2.48455621228937e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.5552280373749235e-29,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.380802288550716e-17,
+            1.4802543276176117e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.380004378959855e-115,
+            8.267596768070947e-115,
+            8.267596768070947e-115,
+            5.391940780108211e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.1223411210685909e-18,
+            "lapse_action_error_upper": 2.3808022885507157e-17,
+            "linear_transverse_density_upper": 1.1223411210685895e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.1856639065209262e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        2.55344631824529e-14,
+        1.493236533216459e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 21,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group21.3b67fd6264d1b86b47cd4be3c6619cb8e18420e1c5494e6b960893b7eec8e9e3.json",
+        "sha256": "3b67fd6264d1b86b47cd4be3c6619cb8e18420e1c5494e6b960893b7eec8e9e3"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 6.933347799794049e-32
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            2.55344631824529e-14,
+            1.493236533216459e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.895516687578864e-92,
+            8.340105687010711e-92,
+            8.340105687010711e-92,
+            7.5845587350183615e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.2037277589952367e-15,
+            "lapse_action_error_upper": 2.5534463182452897e-14,
+            "linear_transverse_density_upper": 1.2037277589946545e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.823119243265962e-28,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            2.542046407872272e-14,
+            1.493236533216459e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.895516687578864e-92,
+            8.340105687010711e-92,
+            8.340105687010711e-92,
+            7.5845587350183615e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.1983536931815135e-15,
+            "lapse_action_error_upper": 2.5420464078722716e-14,
+            "linear_transverse_density_upper": 1.1983536931809313e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.822926238158446e-28,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.139991037301809e-16,
+            1.6447270306862353e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.0558072035941564e-114,
+            9.186218631189941e-115,
+            9.186218631189941e-115,
+            6.689487679059071e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.374065813723291e-18,
+            "lapse_action_error_upper": 1.1399910373018087e-16,
+            "linear_transverse_density_upper": 5.374065813723272e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.9300510751642622e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        4.332937130391867e-20,
+        1.4932365332164588e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 23,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group23.45fe565e2cb0b9f8e65e9bed2fbf69eed237c78e7d5574c73a46ae1f57559426.json",
+        "sha256": "45fe565e2cb0b9f8e65e9bed2fbf69eed237c78e7d5574c73a46ae1f57559426"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 9.168855936413843e-37
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            4.332937130391867e-20,
+            1.4932365332164588e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.02794907758938e-93,
+            8.34010568701071e-93,
+            8.34010568701071e-93,
+            5e-324
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.0426028401560562e-21,
+            "lapse_action_error_upper": 4.3329371303918666e-20,
+            "linear_transverse_density_upper": 2.042602840156056e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.336966343078737e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            4.3128904106077855e-20,
+            1.4932365332164588e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.02794907758938e-93,
+            8.34010568701071e-93,
+            8.34010568701071e-93,
+            5e-324
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.033152556079796e-21,
+            "lapse_action_error_upper": 4.312890410607785e-20,
+            "linear_transverse_density_upper": 2.033152556079796e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.336886416172061e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.004671978408184e-22,
+            1.6447270306862353e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.79288805615644e-116,
+            9.186218631189941e-116,
+            9.186218631189941e-116,
+            5e-324
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.450284076260048e-24,
+            "lapse_action_error_upper": 2.0046719784081837e-22,
+            "linear_transverse_density_upper": 9.450284076260048e-24,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 7.992690667608271e-42,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        4.1476368220452505e-19,
+        4.479709599649376e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 24,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group24.164330d12837f6a8023ec0ff68fe7fae3d616ac0f975c1a5e07cc870b8393daf.json",
+        "sha256": "164330d12837f6a8023ec0ff68fe7fae3d616ac0f975c1a5e07cc870b8393daf"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.5798644075051544e-35
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            4.1476368220452505e-19,
+            4.479709599649376e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.7330460017595105e-92,
+            2.5020317061032132e-92,
+            2.5020317061032132e-92,
+            5.192792384865506e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.95524986809104e-20,
+            "lapse_action_error_upper": 4.14763682204525e-19,
+            "linear_transverse_density_upper": 1.9552498680910395e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 4.3848624736501166e-36,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            4.128500036482919e-19,
+            4.479709599649376e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.7330460017595105e-92,
+            2.5020317061032132e-92,
+            2.5020317061032132e-92,
+            5.192792384865506e-94
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.946228538825286e-20,
+            "lapse_action_error_upper": 4.1285000364829187e-19,
+            "linear_transverse_density_upper": 1.9462285388252858e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 4.3847129310822277e-36,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.913678556233147e-21,
+            4.934181092058705e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            2.9596173616709415e-115,
+            2.755865589356982e-115,
+            2.755865589356982e-115,
+            4.579979124966915e-117
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 9.021329265753852e-23,
+            "lapse_action_error_upper": 1.9136785562331467e-21,
+            "linear_transverse_density_upper": 9.021329265753852e-23,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.4954256788894695e-40,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        2.363641884879917e-18,
+        5.972946132865835e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 25,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group25.70dd380d7867df3e39e9c6358162386e17a2237309c126bd5b142d22a377793b.json",
+        "sha256": "70dd380d7867df3e39e9c6358162386e17a2237309c126bd5b142d22a377793b"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.2037062152420224e-34
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            2.363641884879917e-18,
+            5.972946132865835e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.684927628119663e-92,
+            3.336042274804284e-92,
+            3.336042274804284e-92,
+            1.0726185827678293e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.1142514838960735e-19,
+            "lapse_action_error_upper": 2.3636418848799167e-18,
+            "linear_transverse_density_upper": 1.1142514838960728e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 6.872462477612511e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            2.3527760342029775e-18,
+            5.972946132865835e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.684927628119663e-92,
+            3.336042274804284e-92,
+            3.336042274804284e-92,
+            1.0726185827678293e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.1091291807595354e-19,
+            "lapse_action_error_upper": 2.352776034202977e-18,
+            "linear_transverse_density_upper": 1.1091291807595347e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 6.872228917141283e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.0865850676939719e-20,
+            6.578908122744941e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            3.9822000503930837e-115,
+            3.6744874524759763e-115,
+            3.6744874524759763e-115,
+            9.460364201053056e-117
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.122303136538104e-22,
+            "lapse_action_error_upper": 1.0865850676939717e-20,
+            "linear_transverse_density_upper": 5.122303136538104e-22,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.335604712276962e-39,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.4531928474270354e-17,
+        7.466182666082295e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 26,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group26.61e9406516a8bf9f5afece28285d0aa8f3ceb4d8a6c9998ab5840383abfdda4a.json",
+        "sha256": "61e9406516a8bf9f5afece28285d0aa8f3ceb4d8a6c9998ab5840383abfdda4a"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.6851887013388314e-34
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.4531928474270354e-17,
+            7.466182666082295e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.6641370792400155e-92,
+            4.1700528435053556e-92,
+            4.1700528435053556e-92,
+            1.773676263518892e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 6.850539825812053e-19,
+            "lapse_action_error_upper": 1.453192847427035e-17,
+            "linear_transverse_density_upper": 6.850539825812039e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.4110564967342055e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.4465414541068456e-17,
+            7.466182666082295e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            4.6641370792400155e-92,
+            4.1700528435053556e-92,
+            4.1700528435053556e-92,
+            1.773676263518892e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 6.81918429380694e-19,
+            "lapse_action_error_upper": 1.4465414541068453e-17,
+            "linear_transverse_density_upper": 6.819184293806926e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.4110087329128885e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            6.651393320189739e-20,
+            8.223635153431176e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.028885545015432e-115,
+            4.593109315594971e-115,
+            4.593109315594971e-115,
+            1.56436068675529e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 3.1355532005113258e-21,
+            "lapse_action_error_upper": 6.651393320189738e-20,
+            "linear_transverse_density_upper": 3.1355532005113258e-21,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 4.776382131710774e-38,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        8.609643056087838e-17,
+        8.959419199298752e-91
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 27,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group27.89d8d02c97726bd6f86f14a5137a51e02600a925faafab612540aa73f96d768f.json",
+        "sha256": "89d8d02c97726bd6f86f14a5137a51e02600a925faafab612540aa73f96d768f"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.22593265684862e-33
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            8.609643056087838e-17,
+            8.959419199298752e-91
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.672231669885824e-92,
+            5.0040634122064264e-92,
+            5.0040634122064264e-92,
+            2.627368216408427e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.058697560078471e-18,
+            "lapse_action_error_upper": 8.609643056087836e-17,
+            "linear_transverse_density_upper": 4.058697560078442e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.934874663270407e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            8.570431293453338e-17,
+            8.959419199298752e-91
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            5.672231669885824e-92,
+            5.0040634122064264e-92,
+            5.0040634122064264e-92,
+            2.627368216408427e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 4.0402126258838436e-18,
+            "lapse_action_error_upper": 8.570431293453337e-17,
+            "linear_transverse_density_upper": 4.040212625883814e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.934775756979029e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            3.921176263449882e-19,
+            9.86836218411741e-114
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.101047378039814e-115,
+            5.511731178713964e-115,
+            5.511731178713964e-115,
+            2.3173065073472638e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.8484934194627643e-20,
+            "lapse_action_error_upper": 3.9211762634498813e-19,
+            "linear_transverse_density_upper": 1.8484934194627643e-20,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 9.890629137753943e-37,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        4.733821237396061e-16,
+        1.0452655732515212e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 28,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group28.dc8dfff183d36a49e5d7e1e090257f95f73b9de14c4f22244eb28280895bfc9a.json",
+        "sha256": "dc8dfff183d36a49e5d7e1e090257f95f73b9de14c4f22244eb28280895bfc9a"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.3096323621833204e-32
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            4.733821237396061e-16,
+            1.0452655732515212e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.71005379582707e-92,
+            5.838073980907497e-92,
+            5.838073980907497e-92,
+            3.634954669405854e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.2315848149455526e-17,
+            "lapse_action_error_upper": 4.73382123739606e-16,
+            "linear_transverse_density_upper": 2.2315848149454966e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.612799651121335e-31,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            4.712380424281521e-16,
+            1.0452655732515212e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            6.71005379582707e-92,
+            5.838073980907497e-92,
+            5.838073980907497e-92,
+            3.634954669405854e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.2214773371666046e-17,
+            "lapse_action_error_upper": 4.71238042428152e-16,
+            "linear_transverse_density_upper": 2.2214773371665485e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.612611409474984e-31,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.14408131145398e-18,
+            1.1513089214803647e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.199428532192195e-115,
+            6.430353041832958e-115,
+            6.430353041832958e-115,
+            3.205985387476841e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.010747777894793e-19,
+            "lapse_action_error_upper": 2.1440813114539797e-18,
+            "linear_transverse_density_upper": 1.0107477778947927e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.88241646351925e-35,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        2.410232913060971e-15,
+        1.194589226573167e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 29,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group29.705e163f881308b9018f685db4431dd00b3cc8b9d0d81152a8dfefa3c4ad4b7b.json",
+        "sha256": "705e163f881308b9018f685db4431dd00b3cc8b9d0d81152a8dfefa3c4ad4b7b"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 1.7102257906158654e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            2.410232913060971e-15,
+            1.194589226573167e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.77807313836311e-92,
+            6.672084549608568e-92,
+            6.672084549608568e-92,
+            4.796896129996702e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.1362150997124433e-16,
+            "lapse_action_error_upper": 2.4102329130609704e-15,
+            "linear_transverse_density_upper": 1.1362150997123466e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 9.680571497952666e-30,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            2.3993822187194574e-15,
+            1.194589226573167e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            7.77807313836311e-92,
+            6.672084549608568e-92,
+            6.672084549608568e-92,
+            4.796896129996702e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.1310999414692782e-16,
+            "lapse_action_error_upper": 2.399382218719457e-15,
+            "linear_transverse_density_upper": 1.1310999414691813e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 9.680248520024441e-30,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            1.0850694341513562e-17,
+            1.3157816245489882e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            8.32444326061174e-115,
+            7.348974904951953e-115,
+            7.348974904951953e-115,
+            4.2308034890920243e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.115158243165274e-19,
+            "lapse_action_error_upper": 1.085069434151356e-17,
+            "linear_transverse_density_upper": 5.115158243165271e-19,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 3.229779282249809e-34,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        1.1432578921148994e-14,
+        1.3439128798948129e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 30,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group30.b3ddb16ab843403bf9b63ad7aed6828e01b55025964fb353a69cfb80723db1b1.json",
+        "sha256": "b3ddb16ab843403bf9b63ad7aed6828e01b55025964fb353a69cfb80723db1b1"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.6361557350031013e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            1.1432578921148994e-14,
+            1.3439128798948129e-90
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            32.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            8.876561772941666e-92,
+            7.50609511830964e-92,
+            7.50609511830964e-92,
+            6.1133966462770614e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.389466191616595e-16,
+            "lapse_action_error_upper": 1.1432578921148993e-14,
+            "linear_transverse_density_upper": 5.389466191615087e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.5077760903483636e-28,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            1.138144703359544e-14,
+            1.3439128798948129e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            8.876561772941666e-92,
+            7.50609511830964e-92,
+            7.50609511830964e-92,
+            6.1133966462770614e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 5.365361955714611e-16,
+            "lapse_action_error_upper": 1.1381447033595438e-14,
+            "linear_transverse_density_upper": 5.365361955713104e-16,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 1.5077260651681903e-28,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            5.1131887553554384e-17,
+            1.4802543276176117e-113
+          ],
+          "consumer_endpoint_tag": 160.0,
+          "interval": [
+            40.0,
+            160.0
+          ],
+          "original_endpoint_tag": 160.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            9.47633153050272e-115,
+            8.267596768070947e-115,
+            8.267596768070947e-115,
+            5.391940780108211e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.4104235901983794e-18,
+            "lapse_action_error_upper": 5.113188755355438e-17,
+            "linear_transverse_density_upper": 2.4104235901983744e-18,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 5.0025180173249044e-33,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    },
+    {
+      "aggregate_constraint_action_error_upper": [
+        5.0855933046065984e-14,
+        1.493236533216459e-90
+      ],
+      "combined_is_alternative_not_additional": true,
+      "group": 31,
+      "receipt": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group31.9f1d1058ba66140232e234385f532aad7e66fb6e483ac94dd2da5d60741b9008.json",
+        "sha256": "9f1d1058ba66140232e234385f532aad7e66fb6e483ac94dd2da5d60741b9008"
+      },
+      "residuals": {
+        "centered_excess_over_natural": 0.0,
+        "interval_additivity": 3.4512664603419266e-31
+      },
+      "source_windows_count": 2,
+      "stationarity_tolerance": 3e-11,
+      "status": "PASS conditional on matching order24 source corrections",
+      "windows": {
+        "combined": {
+          "constraint_action_error_upper": [
+            5.0855933046065984e-14,
+            1.493236533216459e-90
+          ],
+          "consumer_endpoint_tag": 320.0,
+          "interval": [
+            32.0,
+            320.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.0005683598175628e-91,
+            8.340105687010711e-92,
+            8.340105687010711e-92,
+            7.5845587350183615e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.3974147363011917e-15,
+            "lapse_action_error_upper": 5.085593304606598e-14,
+            "linear_transverse_density_upper": 2.39741473629906e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.132226699758365e-27,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "low": {
+          "constraint_action_error_upper": [
+            5.063008150757924e-14,
+            1.493236533216459e-90
+          ],
+          "consumer_endpoint_tag": 40.0,
+          "interval": [
+            32.0,
+            40.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.0005683598175628e-91,
+            8.340105687010711e-92,
+            8.340105687010711e-92,
+            7.5845587350183615e-93
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 2.38676780143729e-15,
+            "lapse_action_error_upper": 5.063008150757923e-14,
+            "linear_transverse_density_upper": 2.386767801435158e-15,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 2.1321563734987775e-27,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        },
+        "middle": {
+          "constraint_action_error_upper": [
+            2.258515384867452e-16,
+            1.6447270306862353e-113
+          ],
+          "consumer_endpoint_tag": 320.0,
+          "interval": [
+            40.0,
+            320.0
+          ],
+          "original_endpoint_tag": 320.0,
+          "radial_coefficients_changed": false,
+          "thermal_stress_upper": [
+            1.0655237898429314e-114,
+            9.186218631189941e-115,
+            9.186218631189941e-115,
+            6.689487679059071e-116
+          ],
+          "vacuum_energy": {
+            "density_error_upper": 1.064693486390186e-17,
+            "lapse_action_error_upper": 2.2585153848674517e-16,
+            "linear_transverse_density_upper": 1.0646934863901789e-17,
+            "physical_Riccati_order": 24,
+            "quadratic_longitudinal_density_upper": 7.032625958755066e-32,
+            "thermal_quadrature_low_band_errors_included": false,
+            "vacuum_current_error": 0.0
+          },
+          "within_component_tolerance": true
+        }
+      }
+    }
+  ],
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-centered-order24.json": "8cc644d154620aedaed8e9c104bbe6e22b7b2222e71085bcd1b7d4a63f73be1b",
+    "results/development/nsc-incoming-group32-order24-bound.json": "0747f2469afd2126ccdb5df86b125c15ac334fe2f631ce249b00c2235f788b04",
+    "results/development/nsc-incoming-low-high-source.json": "42592b84656fb902fe64eba55c21aa34b621287b5a66076fe1165a921bff4cdd",
+    "results/development/nsc-incoming-retained-order24-bound.json": "e2dd066d67c582e059a6cba19002d18a1156ea0429a2b3847aadbb8798852754",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "src/recursive_horizons/nsc_incoming_centered_order24.py": "aafc22426efee88a83d9f2a9c26f064a2a32fb9907b1ba67f2e59121f1178396",
+    "src/recursive_horizons/nsc_incoming_defect_taylor_bound.py": "37ebb921300a7d561ba31506f62d5498129b4dd9d62472974c60f31b4cee790a",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "manifest": {
+    "group6_gate_closed": true,
+    "input_payloads": [
+      {
+        "bytes": 92552,
+        "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+        "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+      },
+      {
+        "bytes": 14789190,
+        "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+        "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+      },
+      {
+        "bytes": 32367990,
+        "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+        "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+      },
+      {
+        "bytes": 428603,
+        "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+        "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+      },
+      {
+        "bytes": 849780,
+        "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+        "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+      }
+    ],
+    "proof": {
+      "archived_norm_control": {
+        "existing_bounds_rerun": false,
+        "groups": [
+          14,
+          12,
+          22,
+          32
+        ],
+        "norm_array_difference": 0.0
+      },
+      "exact": {
+        "base_residual": "0",
+        "coefficient_identity": "c_n(-lambda)=(-1)^n conjugate(c_n(lambda))",
+        "defect_identity": "f_p(-lambda)=(-1)^(p+1) conjugate(f_p(lambda))",
+        "defect_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "norm_squared_residual": "0",
+        "physical_occupation_symmetry_assumed": false,
+        "recurrence_residuals": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "interval_control": {
+        "all_25_defect_coefficients_and_five_coordinate_jets_checked": true,
+        "depth": 4,
+        "interval": [
+          1.2,
+          1.201
+        ],
+        "maximum_endpoint_difference": 0.0,
+        "order": 24
+      }
+    },
+    "receipts": {
+      "1": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group01.539e61b3b05bed1ce1e657a15f905f62d331e5dd7242a3cdb169b6c39ed37def.json",
+        "sha256": "539e61b3b05bed1ce1e657a15f905f62d331e5dd7242a3cdb169b6c39ed37def"
+      },
+      "10": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group10.b51f9e490a04e085871e31c9af65bfda4807ab2e3c4e59fa1e70c5f39f678d67.json",
+        "sha256": "b51f9e490a04e085871e31c9af65bfda4807ab2e3c4e59fa1e70c5f39f678d67"
+      },
+      "11": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group11.32bb24a969d61b25556568f0b7f0532cf5ab008ebe6a1eec8337471609e96423.json",
+        "sha256": "32bb24a969d61b25556568f0b7f0532cf5ab008ebe6a1eec8337471609e96423"
+      },
+      "13": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group13.ec17663c4a98365afe88601206596cfd64e940a7bc9645896d9ff7f19e1deb52.json",
+        "sha256": "ec17663c4a98365afe88601206596cfd64e940a7bc9645896d9ff7f19e1deb52"
+      },
+      "15": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group15.85ad6b0955f536fd27dcc01b3a28407880046c5b4809e3e5fccb9dedcfc1619e.json",
+        "sha256": "85ad6b0955f536fd27dcc01b3a28407880046c5b4809e3e5fccb9dedcfc1619e"
+      },
+      "16": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group16.6abd0e82d49570101f050d3348766a8fab6f7df6e79612fda1f8349b803f9f97.json",
+        "sha256": "6abd0e82d49570101f050d3348766a8fab6f7df6e79612fda1f8349b803f9f97"
+      },
+      "17": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group17.5044edd8b10cd7441fd354403a078f07eeb9594f93a36941eef75c0b96be58eb.json",
+        "sha256": "5044edd8b10cd7441fd354403a078f07eeb9594f93a36941eef75c0b96be58eb"
+      },
+      "18": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group18.dbc44ef21dc1f3e7a53319cc1902fa835847a65e47cafa361587507bf86f74ac.json",
+        "sha256": "dbc44ef21dc1f3e7a53319cc1902fa835847a65e47cafa361587507bf86f74ac"
+      },
+      "19": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group19.cbc5f54a0e380e84073824b89454c142d6a6b81b4a5a7daa7ed7278906c360c3.json",
+        "sha256": "cbc5f54a0e380e84073824b89454c142d6a6b81b4a5a7daa7ed7278906c360c3"
+      },
+      "2": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group02.ba6994fc300c558ef31c5114b0dbc529ed08b9df915a051354000e75e4a41411.json",
+        "sha256": "ba6994fc300c558ef31c5114b0dbc529ed08b9df915a051354000e75e4a41411"
+      },
+      "20": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group20.1a082bfee4259c55af474221f2f82f5747ad94bb3933b924d4de8042a7c7d1b6.json",
+        "sha256": "1a082bfee4259c55af474221f2f82f5747ad94bb3933b924d4de8042a7c7d1b6"
+      },
+      "21": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group21.3b67fd6264d1b86b47cd4be3c6619cb8e18420e1c5494e6b960893b7eec8e9e3.json",
+        "sha256": "3b67fd6264d1b86b47cd4be3c6619cb8e18420e1c5494e6b960893b7eec8e9e3"
+      },
+      "23": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group23.45fe565e2cb0b9f8e65e9bed2fbf69eed237c78e7d5574c73a46ae1f57559426.json",
+        "sha256": "45fe565e2cb0b9f8e65e9bed2fbf69eed237c78e7d5574c73a46ae1f57559426"
+      },
+      "24": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group24.164330d12837f6a8023ec0ff68fe7fae3d616ac0f975c1a5e07cc870b8393daf.json",
+        "sha256": "164330d12837f6a8023ec0ff68fe7fae3d616ac0f975c1a5e07cc870b8393daf"
+      },
+      "25": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group25.70dd380d7867df3e39e9c6358162386e17a2237309c126bd5b142d22a377793b.json",
+        "sha256": "70dd380d7867df3e39e9c6358162386e17a2237309c126bd5b142d22a377793b"
+      },
+      "26": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group26.61e9406516a8bf9f5afece28285d0aa8f3ceb4d8a6c9998ab5840383abfdda4a.json",
+        "sha256": "61e9406516a8bf9f5afece28285d0aa8f3ceb4d8a6c9998ab5840383abfdda4a"
+      },
+      "27": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group27.89d8d02c97726bd6f86f14a5137a51e02600a925faafab612540aa73f96d768f.json",
+        "sha256": "89d8d02c97726bd6f86f14a5137a51e02600a925faafab612540aa73f96d768f"
+      },
+      "28": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group28.dc8dfff183d36a49e5d7e1e090257f95f73b9de14c4f22244eb28280895bfc9a.json",
+        "sha256": "dc8dfff183d36a49e5d7e1e090257f95f73b9de14c4f22244eb28280895bfc9a"
+      },
+      "29": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group29.705e163f881308b9018f685db4431dd00b3cc8b9d0d81152a8dfefa3c4ad4b7b.json",
+        "sha256": "705e163f881308b9018f685db4431dd00b3cc8b9d0d81152a8dfefa3c4ad4b7b"
+      },
+      "3": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group03.2b238d511953ebfaf62b2b883cdbbc62a0daa869f03c4a6fce84d90c358742f4.json",
+        "sha256": "2b238d511953ebfaf62b2b883cdbbc62a0daa869f03c4a6fce84d90c358742f4"
+      },
+      "30": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group30.b3ddb16ab843403bf9b63ad7aed6828e01b55025964fb353a69cfb80723db1b1.json",
+        "sha256": "b3ddb16ab843403bf9b63ad7aed6828e01b55025964fb353a69cfb80723db1b1"
+      },
+      "31": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group31.9f1d1058ba66140232e234385f532aad7e66fb6e483ac94dd2da5d60741b9008.json",
+        "sha256": "9f1d1058ba66140232e234385f532aad7e66fb6e483ac94dd2da5d60741b9008"
+      },
+      "4": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group04.4ff1e9a8002e8a3147b36357b7b9f119d5b4c02ee1ea488037c83e04665a651d.json",
+        "sha256": "4ff1e9a8002e8a3147b36357b7b9f119d5b4c02ee1ea488037c83e04665a651d"
+      },
+      "5": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group05.465fce5b5890ce100070c8f8e021a5fc841defc1a9a3a2eeac011cea78322acb.json",
+        "sha256": "465fce5b5890ce100070c8f8e021a5fc841defc1a9a3a2eeac011cea78322acb"
+      },
+      "6": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group06.df0777c4f3d19e40b194746160c3197599f343069c704a81e9abd8b7dbc7b383.json",
+        "sha256": "df0777c4f3d19e40b194746160c3197599f343069c704a81e9abd8b7dbc7b383"
+      },
+      "7": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group07.95dc71a2a5610697f89bf6630c4d66b6f6b3d43b3a8c2947565f6b56363d29ba.json",
+        "sha256": "95dc71a2a5610697f89bf6630c4d66b6f6b3d43b3a8c2947565f6b56363d29ba"
+      },
+      "8": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group08.cb67880a42a786291ea8496f100fe27af92f7cafe0445418b8c4636d33ff102a.json",
+        "sha256": "cb67880a42a786291ea8496f100fe27af92f7cafe0445418b8c4636d33ff102a"
+      },
+      "9": {
+        "path": "results/development/artifacts/nsc-incoming-high-band-group09.e71e978c7be60486f654ae370eac058eed66b760dd4b7fccfcc0fbfc888551be.json",
+        "sha256": "e71e978c7be60486f654ae370eac058eed66b760dd4b7fccfcc0fbfc888551be"
+      }
+    },
+    "signature": {
+      "docs/nsc-incoming-high-band-batch-bound.md": "01e0d3c813e6666f81dc236d868f5d620328355fea836ee7c7603282582eca43",
+      "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+      "results/development/nsc-incoming-centered-order24.json": "8cc644d154620aedaed8e9c104bbe6e22b7b2222e71085bcd1b7d4a63f73be1b",
+      "results/development/nsc-incoming-group32-order24-bound.json": "0747f2469afd2126ccdb5df86b125c15ac334fe2f631ce249b00c2235f788b04",
+      "results/development/nsc-incoming-low-high-source.json": "42592b84656fb902fe64eba55c21aa34b621287b5a66076fe1165a921bff4cdd",
+      "results/development/nsc-incoming-retained-order24-bound.json": "e2dd066d67c582e059a6cba19002d18a1156ea0429a2b3847aadbb8798852754",
+      "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+      "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+      "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+      "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+      "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+      "scripts/derive_nsc_incoming_high_band_batch_bound.py": "d97d4b7447dfa9b927aeb943994e152424f0c1f5ad8b425333539a575ba2b831",
+      "src/recursive_horizons/nsc_incoming_centered_order24.py": "aafc22426efee88a83d9f2a9c26f064a2a32fb9907b1ba67f2e59121f1178396",
+      "src/recursive_horizons/nsc_incoming_defect_taylor_bound.py": "37ebb921300a7d561ba31506f62d5498129b4dd9d62472974c60f31b4cee790a",
+      "src/recursive_horizons/nsc_incoming_high_band_batch_bound.py": "e692d0524a3d7cfd626b5089e18362481963b95d1794f66409c93ee243de7352",
+      "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+      "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+      "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+      "tests/test_nsc_incoming_high_band_batch_bound.py": "cb3a65e914b0d094a4b6c68c3115b6f9022dbf2ab02c2c27e17ec0a7320d6e82"
+    },
+    "workers_max": 3
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_high_band_batch_bound.py --check",
+  "requested_groups": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "residuals": {
+    "maximum_centered_excess_over_natural": 0.0,
+    "maximum_interval_additivity": 3.076557530361946e-29,
+    "saved_coefficient_replay": 0.0,
+    "sign_interval_endpoint_control": 0.0
+  },
+  "schema": "NSC-INCOMING-HIGH-BAND-BATCH-BOUND-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "completed_groups_recomputed": false,
+    "constraints_solved": false,
+    "full_source_convergence": false,
+    "metric_evolution": false,
+    "modes_or_scattering_solved": 0,
+    "occupation_symmetry_assumed": false,
+    "physical_source_signs_remain_distinct": true,
+    "push_or_PDF": false,
+    "source_corrections_applied": false,
+    "source_quadrature_certified": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-high-band-batch-bound.md": "01e0d3c813e6666f81dc236d868f5d620328355fea836ee7c7603282582eca43",
+    "scripts/derive_nsc_incoming_high_band_batch_bound.py": "d97d4b7447dfa9b927aeb943994e152424f0c1f5ad8b425333539a575ba2b831",
+    "src/recursive_horizons/nsc_incoming_high_band_batch_bound.py": "e692d0524a3d7cfd626b5089e18362481963b95d1794f66409c93ee243de7352",
+    "tests/test_nsc_incoming_high_band_batch_bound.py": "cb3a65e914b0d094a4b6c68c3115b6f9022dbf2ab02c2c27e17ec0a7320d6e82"
+  },
+  "source_window_count": 55,
+  "stationarity_tolerance": 3e-11,
+  "status": "PASS: retained high-band energy budget conditional on explicit order24 source corrections; full source OPEN",
+  "verification_tolerances": {
+    "centered_excess_over_natural": 3e-15,
+    "interval_additivity": 1e-24,
+    "saved_coefficient_replay": 0.0,
+    "sign_interval_endpoint_control": 0.0
+  },
+  "within_aggregate_tolerance": true
+}

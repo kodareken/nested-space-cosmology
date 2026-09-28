@@ -1,0 +1,30 @@
+schema_version = 1
+artifact_id = "FGC-1-PRO18-PREF27"
+project_version = "0.11.0"
+target_protocol = "FGC-2-SF1-PROTO17"
+
+[scope]
+role = "read_only_HLT15_generation_zero_store_authentication_and_temporary_no_adoption_controls"
+real_store_write_access = false
+holdout_root_observed = false
+state_advance = false
+candidate_execution = false
+
+[predecessor]
+authority_artifact = "FGC-1-PRO18-AUTH1"
+authority_result = "results/fgc-1-pro18-auth1.json"
+calibration_root = "runs/fgc-2-sf1/proto17/calibration"
+expected_leaf_count = 8
+expected_state_count = 6
+absent_or_partial_hlt15_store_is_rejected = true
+raw_predecessors_not_reopened = true
+
+[claims]
+HLT15_generation_zero_store_authenticated = true
+production_namespace_reuse_refusal_verified = true
+foreign_store_adoption_refusal_verified = true
+all_four_HLT14_production_duties_completed = true
+state_advanced = false
+fresh_GR0_dynamic_calibration_authorized = false
+candidate_execution_authorized = false
+physical_transition_claim_authorized = false

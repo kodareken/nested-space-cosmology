@@ -1,0 +1,35 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline_low_subgap": null,
+  "bounds_spent": false,
+  "changed_history_UV_tail": null,
+  "field_error_bound": null,
+  "full_between_node_remainder": null,
+  "geometry_between_node_remainder": [
+    1e-13,
+    1e-13
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-error-budget.json": "59cd4d166ba6161d0dc0e663884dc0dc09115c7e6cd7d0cedd77a60ab0e474e4",
+    "results/development/nsc-ks-n32-evolve-refusal.json": "88b8895574375c2666209d3e394363aeaf4612d656393d3c17c4261493d431f5"
+  },
+  "schema": "NSC-KS-DECIDING-BOUNDS-AFTER-N32-v1",
+  "scope": {
+    "metric_timestep": false,
+    "missing_bounds_cannot_create_EXISTENCE_against_residual_scale_leftover": true,
+    "missing_bounds_left_none": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-ks-deciding-bounds-after-n32.md": "a15c1b560e5b7bf47db4683363d29a937f3a35a5cbf0b6c5e67296154857c5de",
+    "scripts/derive_nsc_ks_deciding_bounds_after_n32.py": "20bc730fb81707781460f578d515d7068b69e9b842641a3745c519aae99650f5"
+  },
+  "status": "OPEN: leftover stays on the residual scale; UV, full between-node, field and low/subgap remain None",
+  "unclipped_all_node_leftover": [
+    0.004107193193,
+    0.005790788098
+  ]
+}

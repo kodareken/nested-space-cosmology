@@ -1,0 +1,1116 @@
+{
+  "accountable_author": "Douglas Ek",
+  "chart_controls": {
+    "-0.8": {
+      "inverse_field_map": 4.440892098500626e-16,
+      "jacobian_vs_finite_difference": 2.3745894139892698e-11,
+      "metric_tensor_reconstruction": 1.7763568394002505e-15
+    },
+    "0.0": {
+      "inverse_field_map": 1.1015494072452725e-16,
+      "jacobian_vs_finite_difference": 2.2670754162845697e-11,
+      "metric_tensor_reconstruction": 0.0
+    },
+    "0.8": {
+      "inverse_field_map": 7.78023478975598e-16,
+      "jacobian_vs_finite_difference": 4.8193449231348495e-11,
+      "metric_tensor_reconstruction": 4.440892098500626e-16
+    }
+  },
+  "comparison": {
+    "exact": "source/input hashes and domain labels",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "domain": {
+    "chart": "dT=-d rho/a_ref, dz=d tau+beta_ref*d rho/a_ref^2; chart held fixed during metric variation",
+    "moving_surface": false,
+    "new_metric_solution": false,
+    "normal": "fixed rho=0 normal metric variation; not a Cauchy-state isometry",
+    "q_ADM": "a_parallel, not q_PG",
+    "raw_KS_fields": [
+      "N",
+      "beta",
+      "q_ADM",
+      "r"
+    ],
+    "reference": "a_ref=sqrt(beta_ref^2-1) on the already owned trapped geometry",
+    "time_dependent_directions": "may use the conditional PG-time insertion; this is not a homogeneous KS two-endpoint interpolation",
+    "variation_profile": "existing s(rho) applied to raw KS metric coefficients through the reference chart"
+  },
+  "failures": {},
+  "gate": {
+    "B1_full": "OPEN: actual two-endpoint history/Cauchy embedding remains to be supplied",
+    "Gamma_rest": "OPEN",
+    "Weyl_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "history_selected": false,
+    "metric_timestep": false,
+    "physical_two_sided_Weyl_mismatch": null,
+    "stationarity": "OPEN",
+    "stress_computed": false
+  },
+  "input_hashes": {
+    "docs/nsc-adm-neck-source-map.md": "46dbac919b5d6566ad6819b81a3af6cde6894fd41d053c06997e094bcbe2235b",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "scripts/derive_nsc_transmitting_boundary_binding.py": "68fb6143e6e139dde622f6a3a13c2f08bfe6148fb621d81cf49a63a13e942019",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "jet_inventory": {
+    "KS_two_endpoint_shape_and_embedding": null,
+    "PG_source_mode_history_kernel": "imported computed",
+    "fixed_surface_normal_derivative": "computed at the neck",
+    "full_EndpointBranchJets": null,
+    "raw_KS_metric_profile_kernel": "computed with rho-dependent Jacobian"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "CTP_tangent": 2.0816681711721685e-17,
+    "CTP_trace": 3.3148634390797044e-18,
+    "Hermiticity": 1.831026719408895e-15,
+    "weak_vs_direct": 2.177104930721438e-09
+  },
+  "payload": {
+    "bytes": 1194377,
+    "path": "results/development/artifacts/nsc-pg-ks-metric-pullback.191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76.npz",
+    "sha256": "191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76"
+  },
+  "per_family": {
+    "0_1": {
+      "CTP_tangent": 2.2061915819741345e-19,
+      "CTP_trace": 3.819811044183833e-20,
+      "Hermiticity": 2.964296775167217e-17,
+      "constant_neck_matrix_error_control": 0.47582122899941476,
+      "group": 0,
+      "sign": 1,
+      "source_differential_control": [
+        0.007217028227817488,
+        -0.00045881896657840233,
+        -0.0047487141820407985,
+        0.0
+      ],
+      "weak_vs_direct": 3.189274175848594e-10
+    },
+    "10_-1": {
+      "CTP_tangent": 6.992893892674703e-18,
+      "CTP_trace": 6.882539743135216e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 6.199835616154226,
+      "group": 10,
+      "sign": -1,
+      "source_differential_control": [
+        0.27606032908963457,
+        9.948639134726989e-16,
+        -0.0001795413219698715,
+        -0.25830434007533914
+      ],
+      "weak_vs_direct": 1.8562620819565027e-09
+    },
+    "10_1": {
+      "CTP_tangent": 6.992893892674703e-18,
+      "CTP_trace": 2.448719310952979e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 6.199835616154226,
+      "group": 10,
+      "sign": 1,
+      "source_differential_control": [
+        0.2760603290896344,
+        9.80118763926896e-16,
+        -0.00017954132196986876,
+        -0.2583043400753391
+      ],
+      "weak_vs_direct": 1.8562620819565027e-09
+    },
+    "11_-1": {
+      "CTP_tangent": 4.9065389333867974e-18,
+      "CTP_trace": 1.1596379424230435e-18,
+      "Hermiticity": 1.2560739669470201e-15,
+      "constant_neck_matrix_error_control": 6.7282377417730705,
+      "group": 11,
+      "sign": -1,
+      "source_differential_control": [
+        0.2996762264574623,
+        6.600622826091751e-16,
+        -0.00016554493881086466,
+        -0.28043887699843006
+      ],
+      "weak_vs_direct": 2.013514525995757e-09
+    },
+    "11_1": {
+      "CTP_tangent": 1.0417371955916405e-17,
+      "CTP_trace": 3.161550475626676e-19,
+      "Hermiticity": 1.7798229048217483e-15,
+      "constant_neck_matrix_error_control": 6.728237741773068,
+      "group": 11,
+      "sign": 1,
+      "source_differential_control": [
+        0.2996762264574623,
+        6.696032617270475e-16,
+        -0.0001655449388108647,
+        -0.2804388769984301
+      ],
+      "weak_vs_direct": 2.0192933268827137e-09
+    },
+    "12_-1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 9.570924618100664e-19,
+      "Hermiticity": 1.7772239894833365e-15,
+      "constant_neck_matrix_error_control": 7.2558256559829255,
+      "group": 12,
+      "sign": -1,
+      "source_differential_control": [
+        0.32324925887358097,
+        6.132247487578013e-16,
+        -0.00015358403536681187,
+        -0.30253066442533616
+      ],
+      "weak_vs_direct": 2.177104930721438e-09
+    },
+    "12_1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 3.1572425915925827e-19,
+      "Hermiticity": 1.7772239894833365e-15,
+      "constant_neck_matrix_error_control": 7.255825655982926,
+      "group": 12,
+      "sign": 1,
+      "source_differential_control": [
+        0.323249258873581,
+        6.132247487578013e-16,
+        -0.00015358403536682135,
+        -0.30253066442533627
+      ],
+      "weak_vs_direct": 2.177104930721438e-09
+    },
+    "13_1": {
+      "CTP_tangent": 1.7649532655793076e-18,
+      "CTP_trace": 6.122278564357046e-19,
+      "Hermiticity": 2.2887833992611187e-16,
+      "constant_neck_matrix_error_control": 0.974085436607127,
+      "group": 13,
+      "sign": 1,
+      "source_differential_control": [
+        0.05891966914199172,
+        1.9168694409543718e-16,
+        -0.0016032783581627886,
+        0.0
+      ],
+      "weak_vs_direct": 3.124056955739327e-10
+    },
+    "14_-1": {
+      "CTP_tangent": 3.469446951953614e-18,
+      "CTP_trace": 6.598386659111e-19,
+      "Hermiticity": 2.482534153247273e-16,
+      "constant_neck_matrix_error_control": 1.4954830233719707,
+      "group": 14,
+      "sign": -1,
+      "source_differential_control": [
+        0.09678214331628299,
+        -1.9767174008755717e-15,
+        -0.000945192341708341,
+        -0.058450249661192
+      ],
+      "weak_vs_direct": 4.5542793589130484e-10
+    },
+    "14_1": {
+      "CTP_tangent": 3.469446951953614e-18,
+      "CTP_trace": 1.0842021724855044e-19,
+      "Hermiticity": 2.482534153247273e-16,
+      "constant_neck_matrix_error_control": 1.4954830233719707,
+      "group": 14,
+      "sign": 1,
+      "source_differential_control": [
+        0.09678214331628308,
+        2.041769531224702e-15,
+        -0.0009451923417083557,
+        -0.05845024966119233
+      ],
+      "weak_vs_direct": 4.5542793589130484e-10
+    },
+    "15_-1": {
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 5.285485590866834e-19,
+      "Hermiticity": 6.280369834735101e-16,
+      "constant_neck_matrix_error_control": 2.0285398829067396,
+      "group": 15,
+      "sign": -1,
+      "source_differential_control": [
+        0.13292564501650567,
+        2.089474426814064e-15,
+        -0.0007073615153493522,
+        -0.10081953614930689
+      ],
+      "weak_vs_direct": 5.647252014106462e-10
+    },
+    "15_1": {
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 5.099138342470888e-19,
+      "Hermiticity": 6.280369834735101e-16,
+      "constant_neck_matrix_error_control": 2.0285398829067396,
+      "group": 15,
+      "sign": 1,
+      "source_differential_control": [
+        0.1329256450165056,
+        -1.56472057533108e-15,
+        -0.0007073615153493731,
+        -0.10081953614930701
+      ],
+      "weak_vs_direct": 5.647252014106462e-10
+    },
+    "16_-1": {
+      "CTP_tangent": 1.0408340855860843e-17,
+      "CTP_trace": 7.623296525288703e-19,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 2.5591214754101075,
+      "group": 16,
+      "sign": -1,
+      "source_differential_control": [
+        0.16829833017939963,
+        4.521556740133548e-15,
+        -0.0005687008214869606,
+        -0.13872340776089023
+      ],
+      "weak_vs_direct": 6.826307227459165e-10
+    },
+    "16_1": {
+      "CTP_tangent": 1.0408340855860843e-17,
+      "CTP_trace": 6.674619624363887e-19,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 2.559121475410108,
+      "group": 16,
+      "sign": 1,
+      "source_differential_control": [
+        0.16829833017939969,
+        -4.432218481120742e-15,
+        -0.0005687008214869719,
+        -0.13872340776089048
+      ],
+      "weak_vs_direct": 6.826307227459165e-10
+    },
+    "17_-1": {
+      "CTP_tangent": 1.4821483875836085e-17,
+      "CTP_trace": 1.2150687628362938e-18,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 3.08494815226337,
+      "group": 17,
+      "sign": -1,
+      "source_differential_control": [
+        0.20331997615716849,
+        2.364428097756388e-15,
+        -0.00047570654146671457,
+        -0.1746641497086222
+      ],
+      "weak_vs_direct": 8.551258793897599e-10
+    },
+    "17_1": {
+      "CTP_tangent": 1.4821483875836085e-17,
+      "CTP_trace": 1.3675346933420679e-18,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 3.08494815226337,
+      "group": 17,
+      "sign": 1,
+      "source_differential_control": [
+        0.20331997615716874,
+        -2.1120258320017626e-15,
+        -0.00047570654146672454,
+        -0.17466414970862254
+      ],
+      "weak_vs_direct": 8.551258793897599e-10
+    },
+    "18_-1": {
+      "CTP_tangent": 5.204170427930421e-18,
+      "CTP_trace": 8.394096507290116e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 3.6099801703189978,
+      "group": 18,
+      "sign": -1,
+      "source_differential_control": [
+        0.23815189798207287,
+        -2.332335713450817e-15,
+        -0.00040882676158780204,
+        -0.20952276262404068
+      ],
+      "weak_vs_direct": 1.0229421974573898e-09
+    },
+    "18_1": {
+      "CTP_tangent": 5.204170427930421e-18,
+      "CTP_trace": 1.7487062859478014e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 3.609980170318998,
+      "group": 18,
+      "sign": 1,
+      "source_differential_control": [
+        0.23815189798207292,
+        2.6428512156506656e-15,
+        -0.0004088267615878069,
+        -0.20952276262404085
+      ],
+      "weak_vs_direct": 1.0229421974573898e-09
+    },
+    "19_-1": {
+      "CTP_tangent": 9.813077866773595e-18,
+      "CTP_trace": 1.342547221398066e-18,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 4.136112320071981,
+      "group": 19,
+      "sign": -1,
+      "source_differential_control": [
+        0.27286895576398573,
+        -2.095545958979983e-15,
+        -0.0003583928302474323,
+        -0.24371429972237246
+      ],
+      "weak_vs_direct": 1.192185171957394e-09
+    },
+    "19_1": {
+      "CTP_tangent": 9.813077866773595e-18,
+      "CTP_trace": 7.513182242145644e-19,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 4.136112320071981,
+      "group": 19,
+      "sign": 1,
+      "source_differential_control": [
+        0.27286895576398607,
+        2.444225377651321e-15,
+        -0.00035839283024743777,
+        -0.24371429972237266
+      ],
+      "weak_vs_direct": 1.192185171957394e-09
+    },
+    "1_-1": {
+      "CTP_tangent": 9.69739903612216e-19,
+      "CTP_trace": 2.193815333388638e-19,
+      "Hermiticity": 2.482534153247273e-16,
+      "constant_neck_matrix_error_control": 1.2626090128019727,
+      "group": 1,
+      "sign": -1,
+      "source_differential_control": [
+        0.0518398275641974,
+        -0.00023905293856053622,
+        -0.0007529775038002593,
+        -0.047587577616276105
+      ],
+      "weak_vs_direct": 3.9390422294993936e-10
+    },
+    "1_1": {
+      "CTP_tangent": 9.69739903612216e-19,
+      "CTP_trace": 5.082197683525802e-20,
+      "Hermiticity": 2.482534153247273e-16,
+      "constant_neck_matrix_error_control": 1.2626090128019727,
+      "group": 1,
+      "sign": 1,
+      "source_differential_control": [
+        0.0518398275641974,
+        -0.00023905293856054147,
+        -0.0007529775038002598,
+        -0.04758757761627612
+      ],
+      "weak_vs_direct": 3.9390422294993936e-10
+    },
+    "20_-1": {
+      "CTP_tangent": 1.0551910960100404e-17,
+      "CTP_trace": 2.0784070943252395e-19,
+      "Hermiticity": 1.831026719408895e-15,
+      "constant_neck_matrix_error_control": 4.662135940309871,
+      "group": 20,
+      "sign": -1,
+      "source_differential_control": [
+        0.3075109592560723,
+        -2.0990154059319366e-15,
+        -0.00031900347020859493,
+        -0.27746371698615957
+      ],
+      "weak_vs_direct": 1.3539438680166098e-09
+    },
+    "20_1": {
+      "CTP_tangent": 1.0551910960100404e-17,
+      "CTP_trace": 9.774949351618019e-19,
+      "Hermiticity": 1.831026719408895e-15,
+      "constant_neck_matrix_error_control": 4.662135940309872,
+      "group": 20,
+      "sign": 1,
+      "source_differential_control": [
+        0.3075109592560721,
+        1.9654416982817224e-15,
+        -0.0003190034702086022,
+        -0.2774637169861601
+      ],
+      "weak_vs_direct": 1.3539438680166098e-09
+    },
+    "21_-1": {
+      "CTP_tangent": 1.3985787785349405e-17,
+      "CTP_trace": 9.21995363086306e-19,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.187060536932708,
+      "group": 21,
+      "sign": -1,
+      "source_differential_control": [
+        0.34210113328198927,
+        5.0497800385684855e-15,
+        -0.000287392486435948,
+        -0.310904424599335
+      ],
+      "weak_vs_direct": 1.5176938893345075e-09
+    },
+    "21_1": {
+      "CTP_tangent": 1.5515838457795457e-17,
+      "CTP_trace": 3.3148634390797044e-18,
+      "Hermiticity": 1.831026719408895e-15,
+      "constant_neck_matrix_error_control": 5.187060536932706,
+      "group": 21,
+      "sign": 1,
+      "source_differential_control": [
+        0.3421011332819889,
+        -4.947431353485854e-15,
+        -0.0002873924864359499,
+        -0.3109044245993349
+      ],
+      "weak_vs_direct": 1.5190321351739232e-09
+    },
+    "22_-1": {
+      "CTP_tangent": 1.3904866443919908e-17,
+      "CTP_trace": 2.8767621168920192e-18,
+      "Hermiticity": 1.7798229048217483e-15,
+      "constant_neck_matrix_error_control": 5.711273076381964,
+      "group": 22,
+      "sign": -1,
+      "source_differential_control": [
+        0.37665397544432666,
+        -5.4643789493269423e-17,
+        -0.00026146615383566634,
+        -0.34412083206342314
+      ],
+      "weak_vs_direct": 1.6823584911242554e-09
+    },
+    "22_1": {
+      "CTP_tangent": 1.5515838457795457e-17,
+      "CTP_trace": 7.560212531562615e-19,
+      "Hermiticity": 1.2560739669470201e-15,
+      "constant_neck_matrix_error_control": 5.711273076381968,
+      "group": 22,
+      "sign": 1,
+      "source_differential_control": [
+        0.3766539754443261,
+        4.597017211338539e-16,
+        -0.0002614661538356674,
+        -0.34412083206342275
+      ],
+      "weak_vs_direct": 1.6828991550257087e-09
+    },
+    "23_1": {
+      "CTP_tangent": 3.127317220692751e-18,
+      "CTP_trace": 3.0166426276505243e-19,
+      "Hermiticity": 3.1401849173675503e-16,
+      "constant_neck_matrix_error_control": 1.7738939967580045,
+      "group": 23,
+      "sign": 1,
+      "source_differential_control": [
+        0.11643299678178352,
+        5.117434254131581e-17,
+        -0.0008121787544078552,
+        0.0
+      ],
+      "weak_vs_direct": 5.036507619470945e-10
+    },
+    "24_-1": {
+      "CTP_tangent": 6.938893903907228e-18,
+      "CTP_trace": 6.039344913923161e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 2.09264112470316,
+      "group": 24,
+      "sign": -1,
+      "source_differential_control": [
+        0.13948499917036003,
+        5.611830444784971e-16,
+        -0.0006775297321554112,
+        -0.04095615784910483
+      ],
+      "weak_vs_direct": 5.857908052128761e-10
+    },
+    "24_1": {
+      "CTP_tangent": 6.938893903907228e-18,
+      "CTP_trace": 2.846030702774449e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 2.09264112470316,
+      "group": 24,
+      "sign": 1,
+      "source_differential_control": [
+        0.1394849991703601,
+        -3.400058012914542e-16,
+        -0.0006775297321554268,
+        -0.04095615784910506
+      ],
+      "weak_vs_direct": 5.857908052128761e-10
+    },
+    "25_-1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 5.488773498207866e-19,
+      "Hermiticity": 8.95090418262362e-16,
+      "constant_neck_matrix_error_control": 2.4912540285909834,
+      "group": 25,
+      "sign": -1,
+      "source_differential_control": [
+        0.16657170745291922,
+        1.4172690798730514e-15,
+        -0.0005713192444454953,
+        -0.08115424026495817
+      ],
+      "weak_vs_direct": 6.68809169817423e-10
+    },
+    "25_1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 1.4941661189565858e-18,
+      "Hermiticity": 8.95090418262362e-16,
+      "constant_neck_matrix_error_control": 2.4912540285909834,
+      "group": 25,
+      "sign": 1,
+      "source_differential_control": [
+        0.16657170745291944,
+        -1.1960918366860085e-15,
+        -0.0005713192444455067,
+        -0.08115424026495857
+      ],
+      "weak_vs_direct": 6.68809169817423e-10
+    },
+    "26_-1": {
+      "CTP_tangent": 1.4719616800160393e-17,
+      "CTP_trace": 9.994988777600744e-19,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 2.9275854829522876,
+      "group": 26,
+      "sign": -1,
+      "source_differential_control": [
+        0.1959712492975982,
+        2.51014486973844e-15,
+        -0.0004895374035145618,
+        -0.11982892370766812
+      ],
+      "weak_vs_direct": 7.668529727143898e-10
+    },
+    "26_1": {
+      "CTP_tangent": 1.4719616800160393e-17,
+      "CTP_trace": 8.470329472543003e-19,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 2.9275854829522876,
+      "group": 26,
+      "sign": 1,
+      "source_differential_control": [
+        0.19597124929759815,
+        -2.3479482247346084e-15,
+        -0.0004895374035145791,
+        -0.11982892370766843
+      ],
+      "weak_vs_direct": 7.668529727143898e-10
+    },
+    "27_-1": {
+      "CTP_tangent": 5.204170427930421e-18,
+      "CTP_trace": 3.3315322230061243e-19,
+      "Hermiticity": 1.3322676295501878e-15,
+      "constant_neck_matrix_error_control": 3.3859746910955897,
+      "group": 27,
+      "sign": -1,
+      "source_differential_control": [
+        0.22677213083489023,
+        3.2291877505308264e-15,
+        -0.00042593189423634887,
+        -0.15719614830039352
+      ],
+      "weak_vs_direct": 8.57644444247952e-10
+    },
+    "27_1": {
+      "CTP_tangent": 5.204170427930421e-18,
+      "CTP_trace": 4.609623514177637e-19,
+      "Hermiticity": 1.3322676295501878e-15,
+      "constant_neck_matrix_error_control": 3.3859746910955892,
+      "group": 27,
+      "sign": 1,
+      "source_differential_control": [
+        0.2267721308348904,
+        -2.7590776885411117e-15,
+        -0.000425931894236358,
+        -0.15719614830039358
+      ],
+      "weak_vs_direct": 8.57644444247952e-10
+    },
+    "28_-1": {
+      "CTP_tangent": 6.952433221959954e-18,
+      "CTP_trace": 3.8285889215894375e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 3.8644512896237577,
+      "group": 28,
+      "sign": -1,
+      "source_differential_control": [
+        0.2584735172485402,
+        -2.5804011705155006e-15,
+        -0.0003756800460052413,
+        -0.1935412837338907
+      ],
+      "weak_vs_direct": 9.57465610663262e-10
+    },
+    "28_1": {
+      "CTP_tangent": 6.952433221959954e-18,
+      "CTP_trace": 2.3310346708438345e-18,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 3.864451289623758,
+      "group": 28,
+      "sign": 1,
+      "source_differential_control": [
+        0.25847351724854045,
+        2.9021923753091983e-15,
+        -0.00037568004600524625,
+        -0.19354128373389126
+      ],
+      "weak_vs_direct": 9.57465610663262e-10
+    },
+    "29_-1": {
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 2.040559550011591e-19,
+      "Hermiticity": 1.2560739669470201e-15,
+      "constant_neck_matrix_error_control": 4.357886323403841,
+      "group": 29,
+      "sign": -1,
+      "source_differential_control": [
+        0.2907822678292342,
+        5.130444680201407e-15,
+        -0.00033530103382484097,
+        -0.22910493817901018
+      ],
+      "weak_vs_direct": 1.123404708072226e-09
+    },
+    "29_1": {
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 1.74319380544935e-18,
+      "Hermiticity": 1.2560739669470201e-15,
+      "constant_neck_matrix_error_control": 4.357886323403841,
+      "group": 29,
+      "sign": 1,
+      "source_differential_control": [
+        0.29078226782923416,
+        -4.850286838831153e-15,
+        -0.0003353010338248524,
+        -0.2291049381790105
+      ],
+      "weak_vs_direct": 1.123404708072226e-09
+    },
+    "2_-1": {
+      "CTP_tangent": 3.878959614448864e-18,
+      "CTP_trace": 7.017667968001878e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 1.8683028787297993,
+      "group": 2,
+      "sign": -1,
+      "source_differential_control": [
+        0.08106436754723167,
+        -2.214022456223895e-05,
+        -0.0005726984372219032,
+        -0.07518580394334183
+      ],
+      "weak_vs_direct": 5.429121170113672e-10
+    },
+    "2_1": {
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 3.1403746519453185e-19,
+      "Hermiticity": 8.95090418262362e-16,
+      "constant_neck_matrix_error_control": 1.8683028787297993,
+      "group": 2,
+      "sign": 1,
+      "source_differential_control": [
+        0.08106436754723167,
+        -2.2140224562238082e-05,
+        -0.0005726984372219025,
+        -0.07518580394334186
+      ],
+      "weak_vs_direct": 5.426721331439947e-10
+    },
+    "30_-1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 1.302736672877114e-18,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 4.858386283260817,
+      "group": 30,
+      "sign": -1,
+      "source_differential_control": [
+        0.3235174569793753,
+        3.6056227448177935e-15,
+        -0.0003023195663464512,
+        -0.26407121808319123
+      ],
+      "weak_vs_direct": 1.2936516751526166e-09
+    },
+    "30_1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 2.0032329202564203e-18,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 4.858386283260817,
+      "group": 30,
+      "sign": 1,
+      "source_differential_control": [
+        0.3235174569793758,
+        -3.0791341698588326e-15,
+        -0.000302319566346454,
+        -0.2640712180831917
+      ],
+      "weak_vs_direct": 1.2936516751526166e-09
+    },
+    "31_-1": {
+      "CTP_tangent": 2.0816681711721685e-17,
+      "CTP_trace": 1.3493234849761004e-18,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.36219442997507,
+      "group": 31,
+      "sign": -1,
+      "source_differential_control": [
+        0.3565623120652215,
+        -1.1770098784502636e-15,
+        -0.00027497082476669746,
+        -0.29857670252760554
+      ],
+      "weak_vs_direct": 1.4595429093583019e-09
+    },
+    "31_1": {
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 9.253834948753231e-19,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 5.362194429975072,
+      "group": 31,
+      "sign": 1,
+      "source_differential_control": [
+        0.35656231206522204,
+        1.4727802311043092e-15,
+        -0.0002749708247667067,
+        -0.2985767025276064
+      ],
+      "weak_vs_direct": 1.460880073781283e-09
+    },
+    "32_-1": {
+      "CTP_tangent": 1.3877787807814457e-17,
+      "CTP_trace": 1.9452111633695007e-18,
+      "Hermiticity": 9.930136612989092e-16,
+      "constant_neck_matrix_error_control": 5.869418560351266,
+      "group": 32,
+      "sign": -1,
+      "source_differential_control": [
+        0.3898385189125293,
+        3.5908775952719907e-16,
+        -0.0002519823401853957,
+        -0.3327222633873839
+      ],
+      "weak_vs_direct": 1.6281777139638642e-09
+    },
+    "32_1": {
+      "CTP_tangent": 1.3879481770324007e-17,
+      "CTP_trace": 3.257265198666412e-18,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.8694185603512725,
+      "group": 32,
+      "sign": 1,
+      "source_differential_control": [
+        0.3898385189125291,
+        -9.540979117872439e-17,
+        -0.00025198234018540056,
+        -0.3327222633873842
+      ],
+      "weak_vs_direct": 1.6313745063022011e-09
+    },
+    "3_-1": {
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 3.202313936213289e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 2.4353463733445833,
+      "group": 3,
+      "sign": -1,
+      "source_differential_control": [
+        0.1071823672893445,
+        -1.2855217335940028e-08,
+        -0.0004472548120298085,
+        -0.09980541086480237
+      ],
+      "weak_vs_direct": 7.181682159787055e-10
+    },
+    "3_1": {
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 2.703093892925286e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 2.4353463733445833,
+      "group": 3,
+      "sign": 1,
+      "source_differential_control": [
+        0.10718236728934444,
+        -1.2855217335072666e-08,
+        -0.00044725481202981016,
+        -0.09980541086480235
+      ],
+      "weak_vs_direct": 7.181682159787055e-10
+    },
+    "4_-1": {
+      "CTP_tangent": 3.576224061345498e-18,
+      "CTP_trace": 4.206510064196231e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 2.9879274574376393,
+      "group": 4,
+      "sign": -1,
+      "source_differential_control": [
+        0.13217913831786698,
+        -5.6977330839536044e-12,
+        -0.00036752274597338886,
+        -0.12331706920688754
+      ],
+      "weak_vs_direct": 8.877079223351737e-10
+    },
+    "4_1": {
+      "CTP_tangent": 3.878959614448864e-18,
+      "CTP_trace": 9.160661324555258e-19,
+      "Hermiticity": 8.881784197001252e-16,
+      "constant_neck_matrix_error_control": 2.987927457437636,
+      "group": 4,
+      "sign": 1,
+      "source_differential_control": [
+        0.1321791383178669,
+        -5.6977313492301285e-12,
+        -0.00036752274597338626,
+        -0.12331706920688751
+      ],
+      "weak_vs_direct": 8.877969930138301e-10
+    },
+    "5_-1": {
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 8.042048438587548e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 3.532606823907222,
+      "group": 5,
+      "sign": -1,
+      "source_differential_control": [
+        0.15665865587710295,
+        -1.960237527853792e-15,
+        -0.00031240765872005523,
+        -0.14631295605352468
+      ],
+      "weak_vs_direct": 1.0524396314710267e-09
+    },
+    "5_1": {
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 3.0948466310304e-19,
+      "Hermiticity": 9.155133597044475e-16,
+      "constant_neck_matrix_error_control": 3.532606823907222,
+      "group": 5,
+      "sign": 1,
+      "source_differential_control": [
+        0.15665865587710293,
+        -1.9654416982817224e-15,
+        -0.000312407658720055,
+        -0.14631295605352468
+      ],
+      "weak_vs_direct": 1.0524396314710267e-09
+    },
+    "6_-1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 1.0047928336804138e-19,
+      "Hermiticity": 1.7798229048217483e-15,
+      "constant_neck_matrix_error_control": 4.071687553865128,
+      "group": 6,
+      "sign": -1,
+      "source_differential_control": [
+        0.1808316760556552,
+        9.775166787129308e-16,
+        -0.00027190004204786903,
+        -0.16900315422294715
+      ],
+      "weak_vs_direct": 1.2139905292923405e-09
+    },
+    "6_1": {
+      "CTP_tangent": 7.757919228897728e-18,
+      "CTP_trace": 1.4399560103323106e-19,
+      "Hermiticity": 1.7798229048217483e-15,
+      "constant_neck_matrix_error_control": 4.071687553865128,
+      "group": 6,
+      "sign": 1,
+      "source_differential_control": [
+        0.18083167605565517,
+        9.6710833785707e-16,
+        -0.00027190004204786817,
+        -0.16900315422294712
+      ],
+      "weak_vs_direct": 1.2139905292923405e-09
+    },
+    "7_-1": {
+      "CTP_tangent": 6.992893892674703e-18,
+      "CTP_trace": 7.938551600344913e-19,
+      "Hermiticity": 1.790180836524724e-15,
+      "constant_neck_matrix_error_control": 4.606871577108384,
+      "group": 7,
+      "sign": -1,
+      "source_differential_control": [
+        0.2048069411818679,
+        2.975050761300224e-16,
+        -0.00024081229001797906,
+        -0.19149611180007914
+      ],
+      "weak_vs_direct": 1.3768568631018365e-09
+    },
+    "7_1": {
+      "CTP_tangent": 6.992893892674703e-18,
+      "CTP_trace": 3.926030797748184e-19,
+      "Hermiticity": 1.790180836524724e-15,
+      "constant_neck_matrix_error_control": 4.606871577108384,
+      "group": 7,
+      "sign": 1,
+      "source_differential_control": [
+        0.20480694118186799,
+        2.896988204881268e-16,
+        -0.00024081229001797534,
+        -0.19149611180007917
+      ],
+      "weak_vs_direct": 1.3768568631018365e-09
+    },
+    "8_-1": {
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 4.233659356419092e-20,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.13950963713465,
+      "group": 8,
+      "sign": -1,
+      "source_differential_control": [
+        0.22864674882221003,
+        4.735795089416683e-16,
+        -0.00021617176396007736,
+        -0.2138539655854239
+      ],
+      "weak_vs_direct": 1.5367973571365424e-09
+    },
+    "8_1": {
+      "CTP_tangent": 7.152448122690996e-18,
+      "CTP_trace": 4.892674061577652e-19,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.139509637134649,
+      "group": 8,
+      "sign": 1,
+      "source_differential_control": [
+        0.22864674882220992,
+        4.675079767757495e-16,
+        -0.000216171763960081,
+        -0.2138539655854237
+      ],
+      "weak_vs_direct": 1.5367973571365424e-09
+    },
+    "9_-1": {
+      "CTP_tangent": 9.813077866773595e-18,
+      "CTP_trace": 4.339455667902187e-19,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.670364013826422,
+      "group": 9,
+      "sign": -1,
+      "source_differential_control": [
+        0.25238952562831884,
+        7.572067972638763e-16,
+        -0.00019614607458222152,
+        -0.23611504396104846
+      ],
+      "weak_vs_direct": 1.70089197092556e-09
+    },
+    "9_1": {
+      "CTP_tangent": 9.813077866773595e-18,
+      "CTP_trace": 7.381164216382181e-19,
+      "Hermiticity": 1.7763568394002505e-15,
+      "constant_neck_matrix_error_control": 5.670364013826422,
+      "group": 9,
+      "sign": 1,
+      "source_differential_control": [
+        0.25238952562831873,
+        7.520026268359459e-16,
+        -0.00019614607458222274,
+        -0.23611504396104843
+      ],
+      "weak_vs_direct": 1.70089197092556e-09
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_pg_ks_metric_pullback.py --check",
+  "schema": "NSC-PG-KS-METRIC-PULLBACK-v1",
+  "seed_event": {
+    "PG_log_by_KS_raw_jacobian": [
+      [
+        1.269368324624317,
+        1.1266624714724092,
+        -0.1398040612587952,
+        0.0
+      ],
+      [
+        1.1694915458184867,
+        2.9647701898936383,
+        -0.6069743647152306,
+        0.0
+      ],
+      [
+        -0.269368324624317,
+        -1.1266624714724092,
+        0.6588111176889723,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "coordinate_jacobian": [
+      [
+        0.0,
+        -0.5190070564301771
+      ],
+      [
+        1.0,
+        0.5847457729092433
+      ]
+    ],
+    "determinant": 1.0000000000000004,
+    "fixed_normal": {
+      "normal": [
+        1.126662471472409,
+        -1.9267560770332834
+      ],
+      "normal_geometry_residual": 2.220446049250313e-16,
+      "normal_tangent_residual": 5.963664990784441e-16,
+      "normal_unit_residual": 0.0,
+      "raw_KS_derivative": [
+        [
+          -1.126662471472409,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.9267560770332834,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "source_hashes": {
+    "docs/nsc-pg-ks-metric-pullback.md": "397d44e013cd939493538f1b8fce8d0c709560c1d0a944be5f04d40a3e50669b",
+    "scripts/derive_nsc_pg_ks_metric_pullback.py": "a129a100d72db3044b27712e577247c7c317f46dd2bddd18091ee0ff0903be16",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "tests/test_nsc_pg_ks_metric_pullback.py": "9e9df086159b35b2ddf73dd9010aa316f46fe9c43fa283c1072339237084c661"
+  },
+  "status": "PASS: raw KS metric directions on the reference chart; two-endpoint history pullback OPEN",
+  "tolerances": {
+    "coordinate_and_CTP_algebra": 3e-11,
+    "independent_finite_difference": 3e-08
+  }
+}
