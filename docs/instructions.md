@@ -1,45 +1,48 @@
-# Instructions for the public NSC repository
+# Instructions for the unified NSC repository
 
-This repository is the curated publication of the same programme developed in
-the research laboratory. The boundary keeps experimental runs and private
-working state separate from cited, authenticated public evidence. Working
-clones and Git worktrees are implementation copies, not additional theories.
+The laboratory and publication now belong to **one checkout and one Git history**.
+The maintained branches are `main` and `codex/work-branch` at
+`kodareken/nested-space-cosmology`. Work on `codex/work-branch`, test the relevant
+changes, fast-forward `main`, and push both. No force-push is needed.
 
-## GitHub and the maintained branch
+## Establish context after compaction
 
-The project's GitHub destination is `kodareken/nested-space-cosmology`.
-Douglas selected `main` as the single maintained public branch on 28 September
-2026. This checkout publishes the curated paper/evidence tree there. Keep its
-status aligned with the displayed result; pushing current work does not turn an
-OPEN physical gate into a closed result or issue release 0.27.0. The local
-laboratory retains the larger experimental history and supplies reviewed imports.
+Read the root AGENTS index, [PLAN.md](PLAN.md), and [handover](handover.md).
+The active numerical owners are in `lab/`; root `src/`, `scripts/`, `tests/`
+and `results/` retain the curated publication chain. Do not mix the two Python
+package versions. Launch scientific Python commands from the repository root:
 
-## Establish context after compaction or a new task
+```sh
+python scripts/lab.py scripts/derive_nsc_ks_gate_budget_v4.py --check
+python scripts/lab.py -m pytest tests/test_nsc_ks_endpoint_contraction.py -q
+```
 
-Use `AGENTS.md` as the maintained index throughout the task. Read this instructions
-page and follow the index to the relevant owners. Update both the owning docs
-and index whenever work changes relevant files, responsibilities or behavior.
-A fresh agent is not assumed to discover a README or handover automatically.
-`docs/current-result.md` owns the current public scientific checkpoint;
-later dated sections retain history. `docs/papers.md` and `paper/catalog.json`
-identify both manuscripts and their roles. Use those files and live Git rather
-than a remembered path, title, version or result.
+The launcher uses the caller's interpreter, sets the lab source path and working
+directory, and provides the four pinned historical sources needed by the active
+evidence closure. Use the existing validation environment for scientific work;
+its requirements remain in `lab/pyproject.toml`. The root publication environment
+has its own pinned requirements. Neither launcher starts a campaign by itself.
 
-Run `python scripts/check_publication.py` and
-`python scripts/verify_local_gate_draft.py` when verifying a publication copy.
-These check file identity and presentation contracts. They do not certify the
-physics. For new laboratory calculations, consult that laboratory's current
-handover and registered working checkout. The selected evidence snapshot here
-does not contain its complete active code or replace its work cursor. A missing
-experimental input is not a reason to reconstruct it from public prose.
+[Consolidation and recovery](repository-consolidation.md) explains the old paths,
+removed search arrays and historical replay limits. Older lab README, PLAN and
+handover copies are retained as historical input; this root index and the active
+pages under root `docs/` own current navigation. Never resume an old Windows or
+archived campaign solely because a search found its instructions.
+
+`make check test paper-check draft-check` verifies the public surface, imported
+lab integrity and both papers. It does not close the scientific gate. Keep
+scientific original bytes intact; new results use successors with explicit
+provenance. When intentionally updating imported lab code, update the import
+receipt's current hashes and record the new source revision without altering
+its original import hashes. The receipt is an integrity check, not a proof.
 
 ## Current nested-quality result
 
 The focused companion now leads with the finite construction in
 [nsc-nested-qualities.md](nsc-nested-qualities.md). The previous numerical
 application remains OPEN in its appendix. That finite result does not require
-eternity, heat-death or a full incoming-gate campaign. The laboratory has
-separately resumed its approved source-fixed local-gate programme; this public
+eternity, heat-death or a full incoming-gate campaign. The laboratory section has
+resumed its approved source-fixed local-gate programme; this public
 checkpoint does not mark that programme complete. Preserve different
 regional states under common laws. Before claiming two descriptions conflict,
 identify their region, scale, observer, state and compared quantity.
@@ -83,6 +86,7 @@ scientific dependency chain. Ordinary documentation of OPEN work does not claim
 that release or authorize arXiv submission.
 
 Use relative repository links and GitHub-compatible dollar-delimited math.
-Private plans, machine paths, credentials and runtime state stay outside this
-public repository. Douglas Ek is the accountable author; significant AI
+Credentials and private runtime state stay outside this repository. Historical
+lab records retain their original machine paths as provenance; those paths are
+not active routing instructions. New instructions use repository-relative links. Douglas Ek is the accountable author; significant AI
 assistance is disclosed without listing AI tools as authors.

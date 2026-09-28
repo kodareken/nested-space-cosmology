@@ -186,6 +186,9 @@ def public_files() -> list[Path]:
     paths = []
     for path in ROOT.rglob("*"):
         relative = path.relative_to(ROOT)
+        # The active lab is authenticated separately by check_lab_snapshot.py.
+        if relative.parts[0] == "lab":
+            continue
         if any(
             part in IGNORED_PARTS or part.endswith(".egg-info")
             for part in relative.parts

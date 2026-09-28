@@ -3,3 +3,6 @@
 *.md text eol=lf
 *.py text eol=lf
 *.pdf binary
+
+# Imported scientific sources and records retain exact original bytes.
+lab/** -text

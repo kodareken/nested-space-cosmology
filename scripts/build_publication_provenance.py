@@ -31,6 +31,9 @@ def included_files() -> list[Path]:
         if not path.is_file() or path == OUTPUT:
             continue
         relative = path.relative_to(ROOT)
+        # The active lab is authenticated separately by check_lab_snapshot.py.
+        if relative.parts[0] == "lab":
+            continue
         if any(
             part in IGNORED_PARTS or part.endswith(".egg-info")
             for part in relative.parts
@@ -66,7 +69,9 @@ def main() -> int:
         "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
         "follow_up_sha256": sha256(ROOT / "results" / "nsc-2-zeta1-unit-closure-check.json"),
         "historical_archive_location": "not_public",
+        "lab_snapshot_sha256": sha256(ROOT / "docs/lab-snapshot.json"),
         "excluded_category_summaries": [
+            "active lab subtree authenticated separately by docs/lab-snapshot.json",
             "historical FGC configurations, runners, certificates, and tests",
             "raw campaign stores and local scientific data",
             "superseded manuscripts, generated previews, and caches",
