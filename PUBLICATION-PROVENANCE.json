@@ -86,9 +86,9 @@
       "sha256": "27a4eef1fa709bcb4b74f6a3a8399141a479238e5feb0e072c67f71e36220bfc"
     },
     {
-      "bytes": 45134,
+      "bytes": 45121,
       "path": "docs/current-result.md",
-      "sha256": "a9b4f9f562831669c1ebd092e3c127b8f7efbdc3186d542276b2fe3ef4de47c5"
+      "sha256": "367077e70114765f2a8d75e29de081154aab1c9a2e38122f3dbf2169d13a0f09"
     },
     {
       "bytes": 14497,
@@ -96,9 +96,9 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 4393,
+      "bytes": 4897,
       "path": "docs/instructions.md",
-      "sha256": "c66ef43cb7ed52bcaa5d329ee55a0250080fd73597cc6ed2267f058e401ee0c9"
+      "sha256": "e62c72520cd1ef9b31732ec8a799fea7e557b41df9f3982b828730ddebc8b879"
     },
     {
       "bytes": 4771,

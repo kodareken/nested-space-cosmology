@@ -5,6 +5,15 @@ the research laboratory. The boundary keeps experimental runs and private
 working state separate from cited, authenticated public evidence. Working
 clones and Git worktrees are implementation copies, not additional theories.
 
+## GitHub and the maintained branch
+
+The project's GitHub destination is `kodareken/nested-space-cosmology`.
+Douglas selected `main` as the single maintained public branch on 28 September
+2026. This checkout publishes the curated paper/evidence tree there. Keep its
+status aligned with the displayed result; pushing current work does not turn an
+OPEN physical gate into a closed result or issue release 0.27.0. The local
+laboratory retains the larger experimental history and supplies reviewed imports.
+
 ## Establish context after compaction or a new task
 
 Use `AGENTS.md` as the maintained index throughout the task. Read this instructions
