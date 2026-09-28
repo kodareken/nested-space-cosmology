@@ -1,5 +1,11 @@
 # What the calculations show
 
+The active task follows Douglas's approved conversation plan. NSC seeks a larger
+nested realization of familiar local laws through effective regional response;
+falsifying LambdaCDM is not a completion requirement. Full cosmological matching
+remains subsequent research. The local gate tests the declared construction's
+self-consistency with its fixed source and action.
+
 ## Nested qualities: finite mathematical construction, 27 September 2026
 
 The [connected proof](nsc-nested-qualities.md) and [focused article](../paper/local-incoming-gate-draft.pdf)
@@ -22,8 +28,10 @@ public status; dated checkpoints later in the file remain historical.
 
 ## Active checkpoint: source-fixed local incoming gate
 
-The current laboratory snapshot is indexed in the
-[draft evidence manifest](../paper/local-gate-evidence/snapshot.json).
+The active laboratory is in `lab/`, with its current owners indexed in the
+[code map](../lab/docs/active-code-map.md). The
+[draft evidence manifest](../paper/local-gate-evidence/snapshot.json) is a frozen
+selection supporting the existing article, not the full current lab.
 Its state law and test domain are
 
 $$

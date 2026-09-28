@@ -24,12 +24,26 @@ the broader manuscript or claim that the cosmology has been proved.
 
 This repository now contains the publication and active laboratory together.
 The papers stay in `paper/`; current scientific code and evidence are in `lab/`.
-Start with [AGENTS.md](AGENTS.md), [the accepted plan](docs/PLAN.md) and
-[the handover](docs/handover.md). Work on `codex/work-branch`, integrate verified
+Start with [AGENTS.md](AGENTS.md) and [instructions](docs/instructions.md).
+The current plan is the one approved by the author in the conversation; old
+repository plans do not select the task. Work on `codex/work-branch`, integrate verified
 changes into `main`, and push both to this GitHub repository.
 [Consolidation and historical data](docs/repository-consolidation.md) explains
 what was retained and why old search arrays are excluded. Published scientific
 claims remain tied to their specific evidence, not merely to GitHub availability.
+
+## Local physics within a larger nested description
+
+NSC asks whether familiar local laws and effective sources admit a larger nested
+realization. The local equations are retained; unresolved regions enter through
+an effective response derived from the same action. Contradicting LambdaCDM is
+not a goal or a condition for success. The local incoming gate tests one declared
+geometry and evolved field state for self-consistency.
+
+The sphere's interior and surroundings are the organizing picture: study their
+coupling and inherited law together. Spherical symmetry is the first controlled
+class. The full dark-energy/dark-matter background and perturbation identification
+remains to be derived; the current Schur identities do not alone establish it.
 
 ## What if reality is one inherited spectrum?
 
@@ -125,14 +139,14 @@ law—remain the same.
 
 ## One spectrum, many familiar names
 
-| What we observe | What it is in the spectral picture |
+| What we observe | Field description or proposed NSC identification |
 |---|---|
 | **Wave** | The extended amplitude and phase of a field pattern |
 | **Particle** | A stable pole or localized resonance of that same field |
 | **Matter and antimatter** | The positive- and negative-frequency Dirac sectors, related by charge conjugation |
 | **Mass** | The rest-frequency gap of a physical pole |
-| **Dark energy** | The smooth, near-zero-momentum part of the response inherited from unresolved rooms |
-| **Dark matter** | The finite-wavelength part of that response, acting through clustering and lensing |
+| **Dark energy** | Proposed identification with the smooth outside response; cosmological matching remains open |
+| **Dark matter** | Proposed identification with finite-wavelength outside response; clustering and lensing matching remain open |
 | **Black hole** | A causal and resolution boundary reached by a sufficiently compressed gradient |
 | **Child universe** | The continuation of that gradient in a new room with inherited spectral law |
 | **Complexity** | More distinguishable modes and stable combinations within a wider resolved spectrum |
@@ -219,7 +233,8 @@ G_{pp}(E)^{-1}
 $$
 
 This one formula explains how something outside local resolution can still
-change local motion. Its momentum limits have different appearances:
+change local response, wherever the displayed inverses exist. The proposed
+cosmological identification of its momentum limits is:
 
 $$
 \Pi_{\rm outside}(k\rightarrow0)
@@ -232,7 +247,8 @@ $$
 $$
 
 That is the proposed common origin of dark energy and dark matter: two ranges
-of one boundary response rather than two unrelated invisible substances.
+of one regional response. Deriving the required stress and perturbation laws
+would establish that identification; it is not supplied by the block identity alone.
 
 The familiar rounded $5\%/25\%/70\%$ split is used only as an observational
 target from a $\Lambda$CDM fit. It suggests a concrete hierarchy to calculate:
@@ -292,7 +308,7 @@ without changing $G_N$, the gauge coefficient, charge radius, or throat length.
 | Geometry can become particles | A smooth radius pulse creates Dirac pairs and its work equals their energy | [Vacuum-work experiment](docs/nsc-vacuum-work.md) |
 | Parent data determine child stress | Both recorded radial null contractions are about $-0.05280$ and the parent power is $1.4222\times10^{-4}$ | [Parent-matched source](docs/nsc-unruh-state.md) |
 | Causal response and geometric source share one state | Canonical CTP returns metric forces, retarded response, noise, and energy balance from one covariance | [Causal common functional](docs/nsc-causal-common-functional.md) |
-| Homogeneous vacuum has a unique relational zero | The idempotent $a_0$ projector sets $V_{\rm full}=0$ while preserving gradient response | [Relational vacuum law](docs/nsc-relational-vacuum-normalization.md) |
+| The recorded model chooses a homogeneous-vacuum normalization | The idempotent $a_0$ projector sets $V_{\rm full}=0$ while preserving gradient response | [Relational vacuum law](docs/nsc-relational-vacuum-normalization.md) |
 | The charged radius fixes a candidate inherited scale | The first cutoff-resolved branch among the checked $q=2,3,4$ sectors gives $\Omega=3.9730743688$ and $\zeta=15.7853199397$ | [Scale binding](docs/nsc-scale-binding.md) |
 | The simplest recursive LLL source is decisively testable | Its inherited power closes exactly, but its two null signs do not source the black-universe neck | [Source binding](docs/nsc-recursive-source-binding.md) |
 | Positive compact modes complete the free CTP neck source | The completed tensor has $T_{++}=-0.246592$ and $T_{--}=-0.251487$ at the locked scale | [Compact CTP completion](docs/nsc-compact-ctp-completion.md) |

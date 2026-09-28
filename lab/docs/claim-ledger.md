@@ -2,10 +2,23 @@
 
 ## Active scope: correspondence and closed local gate, 28 September 2026
 
-Douglas reactivated the complete road-to-arXiv plan in PLAN.md. The finite
+Douglas approved the road-to-arXiv plan in the conversation. Repository plan
+and handover copies are historical and do not own the active task. The finite
 nested-quality result below is reused. Six error components, the coupled solve,
 closed certificate and matching publication remain required. Global cosmological
 matching and charge-conjugation identification remain subsequent research.
+
+## Relation to familiar local physics
+
+The intended claim is an inherited nested realization that reduces to familiar
+local equations with an effective source. Contradicting LambdaCDM is not a
+success condition. The unchanged-action local gate tests self-consistency of the
+declared geometry and evolved state. Its outcome is scoped to that class.
+The exact Schur identity supplies a reduced response; identifying its stress,
+background and perturbations with the complete cosmological dark sectors remains
+subsequent work, as the approved plan states. Spherical inside/outside coupling
+is the physical motivation and controlled symmetry assumption here, not a new
+requirement to prove universal sphericity or eternal dynamics.
 
 ## Current focus: nested qualities
 
@@ -20,7 +33,7 @@ model result, not a change to the OPEN gravitational gate or a derivation of
 cosmological abundance fractions.
 
 The paragraph below records the completed 27 September finite-model scope.
-The local PLAN.md and current handover now govern the reactivated full sprint.
+The latest user-approved conversation plan governs the full sprint.
 
 | Quality | Existing mathematical statement / owner | Task |
 |---|---|---|
@@ -107,7 +120,7 @@ fields. The principal nonclaims are that there is no complete
 \(\Lambda\)CDM background or perturbation match and that sheet exchange
 is not antimatter. The local incoming gate remains OPEN.
 
-The [handover](../handover.md) owns current implementation status. The entries
+The [code map](active-code-map.md) and versioned records own implementation evidence. The entries
 below retain the history and scope of their respective calculations.
 
 ## Recorded calculations and their domains

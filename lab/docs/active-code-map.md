@@ -19,7 +19,8 @@ six-packet inverse does not supply that missing physical input. The declared
 
 ## Reactivated full gate workflow, 2026-09-28
 
-PLAN.md again requires the local gate and its publication. Stage 1 correspondence
+The user-approved conversation plan requires the local gate and its publication.
+Repository PLAN/handover files are historical, not the task authority. Stage 1 correspondence
 replay passes. Targeted scientific owners from Windows commit `984b46e7` are reused;
 Windows repository routing and paper rewrites are not imported.
 
@@ -108,8 +109,8 @@ antimatter. The local incoming gate remains OPEN. This is not a roadmap.
 
 ## Active continuation: evaluator repair and calibration, 2026-09-25
 
-The [root handover](../handover.md#aktuell-fortsättning-2026-09-25) owns the
-current work cursor. The [claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation)
+The [historical handover](../handover.md#aktuell-fortsättning-2026-09-25) recorded
+that dated checkpoint; it does not own the current task. The [claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation)
 connects the inherited operator law and regenerative interpretation to the
 existing transfer, evolved-state and incoming-constraint calculations.
 
@@ -142,8 +143,8 @@ primal-control values quoted in the historical account below.
 The following account preserves the earlier search state. It is not the
 current run-driver assignment or instruction to resume a high-mode campaign.
 
-The latest [root handover](../handover.md) is the live interruption
-point. One Cursor session drives Dirac runs. Value-only iterate6 at 47
+The [historical handover](../handover.md) recorded the interruption
+point at that time. One Cursor session then drove Dirac runs. Value-only iterate6 at 47
 nodes measures `(8.02778773e-4, 3.61431642e-6)` in 105.3 wall seconds.
 The numerical-floor ladder did not declare loop or certificate
 numerics. The largest one-knob movement is `8.124e-4`. The value-only

@@ -1,7 +1,8 @@
 # Laboratory subtree
 
 Current navigation: [root index](../AGENTS.md), [instructions](../docs/instructions.md),
-[plan](../docs/PLAN.md), [handover](../docs/handover.md). The text below preserves
+and the user-approved plan in the conversation. No repository plan or handover
+owns the current task. The text below preserves
 the original laboratory checkpoint; old branch and sibling-repository routes are
 historical. Use root `scripts/lab.py` to run scientific Python commands.
 

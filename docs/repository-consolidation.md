@@ -57,8 +57,9 @@ Git by default. Use external content-addressed payload storage with a recorded
 recovery location if future campaigns need it.
 
 Both PDF manifests authenticate the same PDFs as before consolidation. Current
-workflow changes are ordinary commits, not a v0.27.0 release. Research continues
-from the [handover](handover.md), and the accepted [plan](PLAN.md) is unchanged.
+workflow changes are ordinary commits, not a v0.27.0 release. Research follows the author-approved plan in the conversation. Douglas later
+removed the handover and retired repository plan copies as authorities; see
+[instructions](instructions.md#scientific-framing-and-authority).
 
 ## Completed local checks
 

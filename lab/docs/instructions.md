@@ -1,7 +1,8 @@
 # Routing notice after repository consolidation
 
 Current instructions are [at the repository root](../../docs/instructions.md),
-with [the plan](../../docs/PLAN.md) and [handover](../../docs/handover.md).
+with the latest user-approved plan in the conversation. The old PLAN/handover
+copies below are historical; do not recreate a handover or use them as task authority.
 This lab is a subtree of the same main/work-branch repository as the papers.
 The dated text below is preserved for historical context and does not select
 machines, branches, sibling checkouts or restoration commands for new work.

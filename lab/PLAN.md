@@ -1,3 +1,8 @@
+> Historical plan copy — not the active task authority. Douglas's latest
+> approved plan is supplied in the conversation. This file is retained as
+> historical text, not a requirement to maintain a repository roadmap or handover.
+> Later user instructions supersede the dated execution cursor below.
+
 # NSC road to arXiv: prove the nonlocal-to-local correspondence and one self-consistent realization
 
 ## Summary and claim contract

@@ -1,5 +1,17 @@
 # The theory in one story
 
+This page explains the proposed interpretation and its existing mathematical
+building blocks. The active task is the author-approved conversation plan.
+NSC seeks a nested realization of familiar local physics; it does not require
+LambdaCDM to be locally wrong. The exact regional reductions and the physical
+identification of their effective sources have distinct evidential status.
+
+The sphere's inside and surrounding region are the organizing motivation:
+consider their coupled fields, stresses and geometry together. The present model
+uses spherical symmetry as a controlled assumption. Extending that motif across
+scales is the proposed interpretation; a universal fractal geometry, inevitable
+collapse and eternal regeneration are not conclusions of the existing local test.
+
 ## What if one spectrum is enough?
 
 Strike one piano string and you do not create a separate object called a
@@ -13,7 +25,7 @@ Nested-Space Cosmology asks the same question about reality:
 > between notes, space is the instrument that defines their spectrum, and a
 > black hole is the point where one instrument hands the pattern to another?
 
-The theory proposes an eternal sequence of finite spaces:
+The broader motivation is a possibly continuing sequence of nested regions:
 
 ```text
 parent room
@@ -24,8 +36,8 @@ parent room
                 └── ...
 ```
 
-No single room must contain an infinite distance or an infinite density.
-Infinity is the continuation of the process.
+The organizing idea places further regions beyond a local description. The
+finite inherited constructions do not establish an infinite dynamical continuation.
 
 ## 1. A gradient becomes an oscillation
 
@@ -173,8 +185,9 @@ G_{pp}(E)^{-1}
 $$
 
 The child disappears from view but leaves a self-energy in the parent. This
-is how an unseen space can have a visible gravitational effect without being
-inserted as a second substance.
+is the exact reduced operator response. Its gravitational stress must be
+obtained from the same effective action; identifying that stress with the
+observed dark sectors remains a further calculation.
 
 Write the complete local quadratic response as
 
@@ -183,7 +196,7 @@ $$
 =K_{\rm local}(k)+\Pi_{\rm outside,\Theta}(k).
 $$
 
-The same outside kernel has different observable ranges:
+The proposed mapping of the outside kernel to observable ranges is:
 
 | Spectral range | Local appearance |
 |---|---|
@@ -301,9 +314,9 @@ $$
 The field does not vanish at the boundary. Its energy changes form, location,
 and resolution while the complete account remains conserved.
 
-## 7. Homogeneous nothing is the zero, gradients are the source
+## 7. The recorded model's homogeneous-vacuum normalization
 
-The theory now has an explicit relational normalization. Let $\mathcal P_0$
+The existing calculation adopts an explicit relational normalization. Let $\mathcal P_0$
 extract only the homogeneous local zero-derivative gravitational tadpole from
 the completed common action. Define
 
@@ -325,9 +338,12 @@ $$
 $$
 
 This fixes $V_{\rm full}=0$ while preserving Einstein response, gauge
-response, curvature, Casimir energy, and boundary links. The observed
-acceleration must therefore come from a physical gradient or inherited
-boundary response rather than an absolute homogeneous offset.
+response, curvature, Casimir energy, and boundary links within that prescription.
+This is a model normalization condition, not a measurement that the physical
+cosmological constant vanishes. It does not authorize deleting a Lambda term
+from a local cosmological equation. A cosmological identification would need
+the full effective stress and its background/perturbation matching. The active
+local calculation keeps its already declared action and parameters unchanged.
 
 ## 8. Geometry and matter close the same feedback loop
 
@@ -410,3 +426,14 @@ These are one integration chain. They are not five independent theories.
 For the general status and attribution of the working programme, see the
 [README](README.md#research-status). For the source code and stored evidence,
 start with [the result index](results/manifest.json).
+
+## Computational emergence as related motivation
+
+Agüera y Arcas and collaborators' [Computational Life](https://arxiv.org/abs/2406.19108)
+studies self-replicating programs emerging through interactions and self-modification
+in initially random computational systems. It supplies a concrete example of
+organized structure emerging under fixed rules. Its demonstrated domain is those
+computational substrates; it does not establish NSC's gravitational source,
+spherical geometry or cosmological recurrence. It is related motivation for
+studying inherited rules and emergent complexity, not a substitute for the
+correspondence and local consistency calculation.

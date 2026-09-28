@@ -1,3 +1,8 @@
+> Historical plan copy — not the active task authority. Douglas's latest
+> approved plan is supplied in the conversation. This file is retained as
+> historical text, not a requirement to maintain a repository roadmap or handover.
+> Later user instructions supersede the dated execution cursor below.
+
 # NSC road to arXiv: prove the nonlocal-to-local correspondence and one self-consistent realization
 
 ## Summary and claim contract
@@ -68,7 +73,7 @@ Antimatter will remain a charge-conjugate field excitation. The repository’s t
 
 ### 1. Consolidate the exact correspondence before more numerical work
 
-Use the existing [claim ledger](../lab/docs/claim-ledger.md) and [handover](handover.md). Do not create another roadmap.
+Use the existing [claim ledger](../lab/docs/claim-ledger.md) and former handover (removed by the author). Do not create another roadmap.
 
 Create one compact, reproducible correspondence record that binds the existing:
 

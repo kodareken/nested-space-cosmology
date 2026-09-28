@@ -1,3 +1,7 @@
+> Historical checkpoint only. Current task authority is the user-approved plan
+> in the conversation. This preserved lab history does not replace the deleted
+> active handover, select a work queue, or authorize a new plan document.
+
 # NSC — active Mac continuation, 2026-09-28
 
 Douglas explicitly reactivated the full **NSC road to arXiv** plan in PLAN.md.
