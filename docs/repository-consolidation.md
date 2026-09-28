@@ -59,3 +59,33 @@ recovery location if future campaigns need it.
 Both PDF manifests authenticate the same PDFs as before consolidation. Current
 workflow changes are ordinary commits, not a v0.27.0 release. Research continues
 from the [handover](handover.md), and the accepted [plan](PLAN.md) is unchanged.
+
+## Completed local checks
+
+The import includes 11,544 original resident lab files; 11,541 are byte-identical
+to their original Git blobs and three navigation files carry explicit new routing.
+The receipt also includes 19 source-cache files (manifest plus 18 exact objects).
+No scientific record or payload was rewritten.
+
+- Full Git object verification passed on the new repository, without the old
+  object database or permanent Git alternates.
+- 356 focused publication/consolidation tests passed (one pre-existing skip),
+  including isolated source-object replay and missing/corrupt-object controls.
+- 12 focused radius, reference-defect and endpoint-contraction tests passed.
+- Component-budget, whole-cone binding, current UV-v3 and endpoint-pilot replay
+  passed in the consolidated lab; the physical gate remains OPEN.
+- All 60 source families loaded: 6,092 signed batches, 96,336 signed energy rows,
+  64 history coordinates. No evolution or nonlinear search was launched.
+- The foundation PDF rebuilt to its existing hash; the companion's source,
+  selected evidence and PDF manifest passed authentication.
+- After the directory swap, lab integrity and component-budget replay passed again.
+
+The two unmerged historical FGC worktree commits have separate patches and all
+four former worktrees have compressed snapshots in the local consolidation
+state directory. The 24 untracked files (four experiment entries) also have a
+separate checked copy there, outside Trash. The swap receipt records the exact
+retired paths and successful repair of their worktree connections. Retiring the
+old Git database therefore does not discard those uncommitted or unmerged files.
+
+A bounded Grok review attempt timed out with malformed output; it is not counted
+as independent approval. The checks above were executed directly by the integrator.
