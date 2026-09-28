@@ -62,6 +62,25 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Cubic UV method continuation, 29 September 2026
+
+The [massless cubic-current calculation](../lab/docs/nsc-ks-cubic-uv-current.md)
+now evaluates the generated third-order inverse-energy coefficient for the
+original group-1 pair, retaining the linked transport terms and actual action
+signs. Its finite quadrature remains unvalidated. C4, C_M and the physical UV
+budget are still OPEN; sampled coefficients and refinement differences are
+not error bounds.
+
+## Horizon source-method continuation, 29 September 2026
+
+The [full-profile horizon series](../lab/docs/nsc-metric-horizon-frame.md) now
+has an analytic remainder bound, rather than a finite-collar comparison alone.
+It connects the existing representative exterior phase enclosure to a horizon
+reflection. The series tail at that endpoint is below 2.50e-22; the reflection
+uncertainty is still dominated by the earlier phase bound. Production-frame
+matching, interior transport and the saved physical source-column error remain
+OPEN. No completed component has been added to the nine-component budget.
+
 ## Later Stage-2 continuation, 28 September 2026
 
 A new [formal UV identity](../lab/docs/nsc-ks-uv-upstream-invariance.md) proves
