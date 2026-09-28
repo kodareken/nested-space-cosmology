@@ -14,7 +14,7 @@ proof, implementation and control record to an immutable laboratory commit.
 The separate source-fixed gravitational gate remains OPEN. No cosmological
 abundance, physical c/Lambda value, or eternal dynamics is derived by this result.
 The numerical checkpoint below is retained history, not a requirement for the
-finite theorem. This is an unpublished working-article update, not release 0.27.0.
+finite theorem. This is a working-article update, not release 0.27.0.
 
 Read [the paper guide](papers.md) for the relationship between the preserved
 foundational manuscript and the focused companion. This page owns current
