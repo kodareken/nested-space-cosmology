@@ -36,6 +36,19 @@ provenance. When intentionally updating imported lab code, update the import
 receipt's current hashes and record the new source revision without altering
 its original import hashes. The receipt is an integrity check, not a proof.
 
+For an intentional lab edit, use explicit paths (no blanket re-import):
+
+```sh
+python scripts/update_lab_snapshot.py lab/src/recursive_horizons/changed_owner.py
+python scripts/build_publication_provenance.py
+make check
+```
+
+The helper preserves original import hashes and rejects historical excluded
+payloads and the pinned source cache. Review its diff and run the checks relevant
+to the actual change before committing. Removing evidence needs a separate
+dependency decision; this helper does not silently drop missing files.
+
 ## Current nested-quality result
 
 The focused companion now leads with the finite construction in
