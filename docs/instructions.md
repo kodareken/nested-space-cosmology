@@ -28,8 +28,10 @@ experimental input is not a reason to reconstruct it from public prose.
 
 The focused companion now leads with the finite construction in
 [nsc-nested-qualities.md](nsc-nested-qualities.md). The previous numerical
-application remains OPEN in its appendix. The current work does not require
-eternity, heat-death or a new full incoming-gate campaign. Preserve different
+application remains OPEN in its appendix. That finite result does not require
+eternity, heat-death or a full incoming-gate campaign. The laboratory has
+separately resumed its approved source-fixed local-gate programme; this public
+checkpoint does not mark that programme complete. Preserve different
 regional states under common laws. Before claiming two descriptions conflict,
 identify their region, scale, observer, state and compared quantity.
 
