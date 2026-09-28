@@ -1,0 +1,1641 @@
+{
+  "analytic_parameter_cover": "pi/2 and signed sqrt(5), together with binary source labels",
+  "cases": [
+    {
+      "angular_hex": "-0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.5b4f66ca1e080p-10",
+      "initializer_phase_hex": "0x1.90a2d6bca8f04p-6",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -201,
+          "mantissa": "87285356943584933510330871754491068150597"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -241,
+          "mantissa": "4827150746554639009786937161788797469185580000924412964489"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -241,
+          "mantissa": "4831353787060676313346156226974993817592553909911234178697"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -224,
+          "mantissa": "32066654251383236383202096452303683524886390585489"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6067856285990313154791845068040183011706498111570328460345"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "-3509006545501629005238077881512404563030638679136513072275"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "-3509006545501628834748378369378812764968018121266578365587"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -236,
+          "mantissa": "473269396011356158547301080447444731696677884323798644287"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4923418062514263198359156691760461261554198561086495073105"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+5",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.fffff4108c8bcp-1",
+          "0x1.ba35832c52fcdp-11"
+        ],
+        [
+          "-0x1.3aef2f5313cf7p-10",
+          "0x1.6ca3620ea153dp+0"
+        ],
+        [
+          "-0x1.03977fa24b379p+0",
+          "-0x1.d0ba482945e27p-2"
+        ],
+        [
+          "0x1.4af5230cee729p-1",
+          "-0x1.695b906eb48b0p+0"
+        ],
+        [
+          "0x1.648be21b9ec70p+0",
+          "0x1.c045372507668p+0"
+        ],
+        [
+          "-0x1.3d360eea150bfp+1",
+          "0x1.687213d65ae91p-1"
+        ],
+        [
+          "-0x1.de9892b767f26p-10",
+          "-0x1.39aaea728b6b0p+1"
+        ],
+        [
+          "0x1.6f36897735490p+1",
+          "-0x1.149778033fe37p-1"
+        ],
+        [
+          "-0x1.04dc10826113ep-2",
+          "0x1.e079b28d4fc2fp+2"
+        ]
+      ],
+      "source_panel": "group14/low16_-1",
+      "source_row": 0
+    },
+    {
+      "angular_hex": "-0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.5b4f66ca1e080p-10",
+      "initializer_phase_hex": "0x1.9f8993eae6141p-7",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -201,
+          "mantissa": "87285356943584933510330871754491068150597"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -249,
+          "mantissa": "4385374190645128540989842631973726115954827860666486804119"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -249,
+          "mantissa": "4740276311381307158695793219702304002050606491734317649559"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -224,
+          "mantissa": "10576907418256360820113139978902872982495386334295"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6172482280706112667227632629710858802271244334909715717357"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "-3509006545501629005238077881512404563030638679136513072275"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "-3509006545501628834748378369378812764968018121266578365587"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 3,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 3,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -245,
+          "mantissa": "860758289004605494979669413200575864599057552976960887023"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4928261183444816836918126004812401961228156710281207157759"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+6",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.fffff4108c8bcp-1",
+          "0x1.ba35832c52fcdp-11"
+        ],
+        [
+          "-0x1.3aef2f5313cf7p-10",
+          "0x1.6ca3620ea153dp+0"
+        ],
+        [
+          "-0x1.03977fa24b379p+0",
+          "-0x1.d0ba482945e27p-2"
+        ],
+        [
+          "0x1.4af5230cee729p-1",
+          "-0x1.695b906eb48b0p+0"
+        ],
+        [
+          "0x1.648be21b9ec70p+0",
+          "0x1.c045372507668p+0"
+        ],
+        [
+          "-0x1.3d360eea150bfp+1",
+          "0x1.687213d65ae91p-1"
+        ],
+        [
+          "-0x1.de9892b767f26p-10",
+          "-0x1.39aaea728b6b0p+1"
+        ],
+        [
+          "0x1.6f36897735490p+1",
+          "-0x1.149778033fe37p-1"
+        ],
+        [
+          "-0x1.04dc10826113ep-2",
+          "0x1.e079b28d4fc2fp+2"
+        ]
+      ],
+      "source_panel": "group14/low16_-1",
+      "source_row": 0
+    },
+    {
+      "angular_hex": "-0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.cf5a853312ac1p-4",
+      "initializer_phase_hex": "0x1.8cd3792512f0ap-4",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -195,
+          "mantissa": "556155590708393937171414632410000463708123"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -241,
+          "mantissa": "4709218505152916050574244415541468067019287888230796572849"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -241,
+          "mantissa": "4710185676893288202876947403395831463663808658353833457841"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -221,
+          "mantissa": "922366848346855452254283766139408726235170481717"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6067856285990313154791845068040183011706498111570328460345"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "-3509006545501629005238077881512404563030638679136513072275"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "-3509006545501628834748378369378812764968018121266578365587"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            },
+            "upper": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -238,
+          "mantissa": "1832216400453508608895148303277264116676819949337678069751"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4884465961520381773397020214390184924712480345384892199919"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+5",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.feaba9a63e09ep-1",
+          "0x1.26fae538d9354p-4"
+        ],
+        [
+          "-0x1.b935d540b22c8p-4",
+          "0x1.7de994eaad295p+0"
+        ],
+        [
+          "-0x1.157844e977c75p+0",
+          "-0x1.0af768519827fp-1"
+        ],
+        [
+          "0x1.8488ae00f97a2p-1",
+          "-0x1.5466980bbcb20p+0"
+        ],
+        [
+          "0x1.3056196fbfae7p+0",
+          "0x1.15f464ebaef16p+1"
+        ],
+        [
+          "-0x1.84d1a259460cdp+1",
+          "0x1.5117dbe7a4c8cp-1"
+        ],
+        [
+          "0x1.d54d23bf6fdb7p-4",
+          "-0x1.36d1b64f1ee3cp+1"
+        ],
+        [
+          "0x1.4f3c706382d5dp+1",
+          "0x1.a2ebaddded1e9p-1"
+        ],
+        [
+          "-0x1.4f3dbc8c37bebp+1",
+          "0x1.1fecd326097d2p+3"
+        ]
+      ],
+      "source_panel": "group14/low16_-1",
+      "source_row": 7
+    },
+    {
+      "angular_hex": "-0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.cf5a853312ac1p-4",
+      "initializer_phase_hex": "0x1.5a2986d4c20afp-4",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -195,
+          "mantissa": "556155590708393937171414632410000463708123"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -246,
+          "mantissa": "1732010387085077371231724626490688772159127934728366772367"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -246,
+          "mantissa": "2993861644622475088807857203845127675787584909903052460175"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -220,
+          "mantissa": "18803048991224135720374175568736179227060928570847"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6172482280706112667227632629710858802271244334909715717357"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "-3509006545501629005238077881512404563030638679136513072275"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "-3509006545501628834748378369378812764968018121266578365587"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            },
+            "upper": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 3,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 3,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -246,
+          "mantissa": "5410867041907389038505300583061731057610807773954740057697"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4902476791127221498014848910059318672485070028658215257543"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+6",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.feaba9a63e09ep-1",
+          "0x1.26fae538d9354p-4"
+        ],
+        [
+          "-0x1.b935d540b22c8p-4",
+          "0x1.7de994eaad295p+0"
+        ],
+        [
+          "-0x1.157844e977c75p+0",
+          "-0x1.0af768519827fp-1"
+        ],
+        [
+          "0x1.8488ae00f97a2p-1",
+          "-0x1.5466980bbcb20p+0"
+        ],
+        [
+          "0x1.3056196fbfae7p+0",
+          "0x1.15f464ebaef16p+1"
+        ],
+        [
+          "-0x1.84d1a259460cdp+1",
+          "0x1.5117dbe7a4c8cp-1"
+        ],
+        [
+          "0x1.d54d23bf6fdb7p-4",
+          "-0x1.36d1b64f1ee3cp+1"
+        ],
+        [
+          "0x1.4f3c706382d5dp+1",
+          "0x1.a2ebaddded1e9p-1"
+        ],
+        [
+          "-0x1.4f3dbc8c37bebp+1",
+          "0x1.1fecd326097d2p+3"
+        ]
+      ],
+      "source_panel": "group14/low16_-1",
+      "source_row": 7
+    },
+    {
+      "angular_hex": "-0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.fd4961326bc3fp-3",
+      "initializer_phase_hex": "0x1.7b672b1bc711ap-3",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -193,
+          "mantissa": "68035559324228991947327454784337098886075"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -241,
+          "mantissa": "4936221926773517188856415859446631514887602034504439483511"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -241,
+          "mantissa": "4960302044878194997834558468664237392993879239503534673015"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -221,
+          "mantissa": "22964590172460373857634171693426015955235676764579"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6067856285990313154791845068040183011706498111570328460345"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "-3509006545501629005238077881512404563030638679136513072275"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "-3509006545501628834748378369378812764968018121266578365587"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -239,
+          "mantissa": "3775950800615113809670567185640952243359301850510578315569"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4801653506443603115166540812789477350650385837597683861203"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+5",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.f98b14698bc00p-1",
+          "0x1.4438d15970352p-3"
+        ],
+        [
+          "-0x1.00c2c6a1520ddp-2",
+          "0x1.905ac16dbb518p+0"
+        ],
+        [
+          "-0x1.2b9b1330ce89ep+0",
+          "-0x1.3f4c5f2a5ceb8p-1"
+        ],
+        [
+          "0x1.c63cae4b101f2p-1",
+          "-0x1.39f9114843d9ap+0"
+        ],
+        [
+          "0x1.b25e42a50b532p-1",
+          "0x1.566d2e7fd1321p+1"
+        ],
+        [
+          "-0x1.e86663c372f40p+1",
+          "0x1.c485ce65ee774p-2"
+        ],
+        [
+          "0x1.0f732f20dea1fp-2",
+          "-0x1.3e92f3456de52p+1"
+        ],
+        [
+          "0x1.edf9659b17d9dp+0",
+          "0x1.3cdd605d0e881p+1"
+        ],
+        [
+          "-0x1.9555110463fb8p+2",
+          "0x1.46050e53bf06fp+3"
+        ]
+      ],
+      "source_panel": "group14/low16_-1",
+      "source_row": 15
+    },
+    {
+      "angular_hex": "-0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.fd4961326bc3fp-3",
+      "initializer_phase_hex": "0x1.608f984068576p-3",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -193,
+          "mantissa": "68035559324228991947327454784337098886075"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -245,
+          "mantissa": "551596079312444739839831151960881990121838120037269866033"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -245,
+          "mantissa": "2361280029892836140465194343000853700100237841845782021681"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -222,
+          "mantissa": "215731138060139584615869902496334518191623654581131"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6172482280706112667227632629710858802271244334909715717357"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "-3509006545501629005238077881512404563030638679136513072275"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "-3509006545501628834748378369378812764968018121266578365587"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 3,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 3,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -241,
+          "mantissa": "106250223283091509850263946434706154562940494445652343385"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4836462665121549570365605653053280088845557051268856493425"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+6",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.f98b14698bc00p-1",
+          "0x1.4438d15970352p-3"
+        ],
+        [
+          "-0x1.00c2c6a1520ddp-2",
+          "0x1.905ac16dbb518p+0"
+        ],
+        [
+          "-0x1.2b9b1330ce89ep+0",
+          "-0x1.3f4c5f2a5ceb8p-1"
+        ],
+        [
+          "0x1.c63cae4b101f2p-1",
+          "-0x1.39f9114843d9ap+0"
+        ],
+        [
+          "0x1.b25e42a50b532p-1",
+          "0x1.566d2e7fd1321p+1"
+        ],
+        [
+          "-0x1.e86663c372f40p+1",
+          "0x1.c485ce65ee774p-2"
+        ],
+        [
+          "0x1.0f732f20dea1fp-2",
+          "-0x1.3e92f3456de52p+1"
+        ],
+        [
+          "0x1.edf9659b17d9dp+0",
+          "0x1.3cdd605d0e881p+1"
+        ],
+        [
+          "-0x1.9555110463fb8p+2",
+          "0x1.46050e53bf06fp+3"
+        ]
+      ],
+      "source_panel": "group14/low16_-1",
+      "source_row": 15
+    },
+    {
+      "angular_hex": "0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.5b4f66ca1e080p-10",
+      "initializer_phase_hex": "-0x1.7489304602ef5p-6",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -201,
+          "mantissa": "87285356943584933510330871754491068150597"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -241,
+          "mantissa": "4825965690654935525692478095643691185117694466227493551463"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -241,
+          "mantissa": "4829969260567020886530142314434510924263595936942922415463"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -224,
+          "mantissa": "30544814392741095258058309866483605544292226527625"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6067856285990313154791845068040183011706498111570328460345"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378369378812764968018121266578365587"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077881512404563030638679136513072275"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -239,
+          "mantissa": "3785688287007885438777022911189804328288759523048087267579"
+        },
+        "phase_derivative_lower": {
+          "exponent": -189,
+          "mantissa": "2462009889753828005569688414142993683904403719123054566365"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+5",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.fffff4108c8bcp-1",
+          "0x1.ba35832c52fcdp-11"
+        ],
+        [
+          "0x1.3a8fb3b655437p-10",
+          "-0x1.6c34d4add63f0p+0"
+        ],
+        [
+          "-0x1.032c37e59c8d2p+0",
+          "0x1.cf44bba72c2bbp-2"
+        ],
+        [
+          "0x1.498daa87d1e40p-1",
+          "0x1.69d8736144471p+0"
+        ],
+        [
+          "0x1.659409dbe6b4bp+0",
+          "-0x1.bdb4af24cbcdfp+0"
+        ],
+        [
+          "-0x1.3ba116209810ap+1",
+          "-0x1.68515ca2eb079p-1"
+        ],
+        [
+          "-0x1.2f806a5eb083dp-8",
+          "0x1.39d6087d0486cp+1"
+        ],
+        [
+          "0x1.6f8dc7e86d2acp+1",
+          "0x1.250c252ed4368p-1"
+        ],
+        [
+          "-0x1.a5f181f8c1afdp-3",
+          "-0x1.dde91a128daf6p+2"
+        ]
+      ],
+      "source_panel": "group14/low16_1",
+      "source_row": 0
+    },
+    {
+      "angular_hex": "0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.5b4f66ca1e080p-10",
+      "initializer_phase_hex": "-0x1.67ccc95943ae5p-7",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -201,
+          "mantissa": "87285356943584933510330871754491068150597"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -250,
+          "mantissa": "6249727897513430332281649707307445065230823272024652877029"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -249,
+          "mantissa": "4830352206777238130078914055431858989483047946705700243059"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -224,
+          "mantissa": "50827510893956511138024604373518718983758578023117"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6172482280706112667227632629710858802271244334909715717357"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378369378812764968018121266578365587"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077881512404563030638679136513072275"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 3,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 3,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -243,
+          "mantissa": "153345832042400987830567841324776510880965180803528595891"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4928559600481268596645297718421379160582589496455943905845"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+6",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.fffff4108c8bcp-1",
+          "0x1.ba35832c52fcdp-11"
+        ],
+        [
+          "0x1.3a8fb3b655437p-10",
+          "-0x1.6c34d4add63f0p+0"
+        ],
+        [
+          "-0x1.032c37e59c8d2p+0",
+          "0x1.cf44bba72c2bbp-2"
+        ],
+        [
+          "0x1.498daa87d1e40p-1",
+          "0x1.69d8736144471p+0"
+        ],
+        [
+          "0x1.659409dbe6b4bp+0",
+          "-0x1.bdb4af24cbcdfp+0"
+        ],
+        [
+          "-0x1.3ba116209810ap+1",
+          "-0x1.68515ca2eb079p-1"
+        ],
+        [
+          "-0x1.2f806a5eb083dp-8",
+          "0x1.39d6087d0486cp+1"
+        ],
+        [
+          "0x1.6f8dc7e86d2acp+1",
+          "0x1.250c252ed4368p-1"
+        ],
+        [
+          "-0x1.a5f181f8c1afdp-3",
+          "-0x1.dde91a128daf6p+2"
+        ]
+      ],
+      "source_panel": "group14/low16_1",
+      "source_row": 0
+    },
+    {
+      "angular_hex": "0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.cf5a853312ac1p-4",
+      "initializer_phase_hex": "0x1.97124ca44ea89p-5",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -195,
+          "mantissa": "556155590708393937171414632410000463708123"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -240,
+          "mantissa": "2712351783648428960825508115326872846392737834422611357481"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -240,
+          "mantissa": "2723373925472822465514923186215243840122601706371295358761"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -219,
+          "mantissa": "5255766784855606407840285724816796173984466528265"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6067856285990313154791845068040183011706498111570328460345"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378369378812764968018121266578365587"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077881512404563030638679136513072275"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            },
+            "upper": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -238,
+          "mantissa": "2117347935646365672546974913600473398046798916942804598277"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4900104950024411367428687713724855025065384093422311281473"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+5",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.feaba9a63e09ep-1",
+          "0x1.26fae538d9354p-4"
+        ],
+        [
+          "0x1.8e9cdcf040eabp-4",
+          "-0x1.590a38439202ap+0"
+        ],
+        [
+          "-0x1.e376d69d64bd7p-1",
+          "0x1.99388b25ddf8ep-2"
+        ],
+        [
+          "0x1.0c7d24f1a91dbp-1",
+          "0x1.7e1830df602a1p+0"
+        ],
+        [
+          "0x1.88a3e9984545cp+0",
+          "-0x1.50f0b807fb0dcp+0"
+        ],
+        [
+          "-0x1.fbc8ca27ac2f8p+0",
+          "-0x1.4802a185d1493p-1"
+        ],
+        [
+          "-0x1.0c224378752bcp-3",
+          "0x1.45559bc3e13c2p+1"
+        ],
+        [
+          "0x1.6cd244e4fb085p+1",
+          "0x1.edb74d3c7b7d3p+0"
+        ],
+        [
+          "0x1.8b354e02bcb0bp+0",
+          "-0x1.66448b91d5275p+2"
+        ]
+      ],
+      "source_panel": "group14/low16_1",
+      "source_row": 7
+    },
+    {
+      "angular_hex": "0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.cf5a853312ac1p-4",
+      "initializer_phase_hex": "0x1.f27dce12e4fc7p-5",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -195,
+          "mantissa": "556155590708393937171414632410000463708123"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -247,
+          "mantissa": "3349734439039392914218916610249783787035622860189663618669"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -247,
+          "mantissa": "4694530777875639666640465544949387873958820785130935543405"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -221,
+          "mantissa": "20039027017895083910547926048928560121703116967399"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6172482280706112667227632629710858802271244334909715717357"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378369378812764968018121266578365587"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077881512404563030638679136513072275"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            },
+            "upper": {
+              "exponent": -56,
+              "mantissa": "8151402646940353"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 3,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 3,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -245,
+          "mantissa": "2619556869606314822865879821006463991274934547454080376559"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4908814496012806848196924865031468821105769454653800397041"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+6",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.feaba9a63e09ep-1",
+          "0x1.26fae538d9354p-4"
+        ],
+        [
+          "0x1.8e9cdcf040eabp-4",
+          "-0x1.590a38439202ap+0"
+        ],
+        [
+          "-0x1.e376d69d64bd7p-1",
+          "0x1.99388b25ddf8ep-2"
+        ],
+        [
+          "0x1.0c7d24f1a91dbp-1",
+          "0x1.7e1830df602a1p+0"
+        ],
+        [
+          "0x1.88a3e9984545cp+0",
+          "-0x1.50f0b807fb0dcp+0"
+        ],
+        [
+          "-0x1.fbc8ca27ac2f8p+0",
+          "-0x1.4802a185d1493p-1"
+        ],
+        [
+          "-0x1.0c224378752bcp-3",
+          "0x1.45559bc3e13c2p+1"
+        ],
+        [
+          "0x1.6cd244e4fb085p+1",
+          "0x1.edb74d3c7b7d3p+0"
+        ],
+        [
+          "0x1.8b354e02bcb0bp+0",
+          "-0x1.66448b91d5275p+2"
+        ]
+      ],
+      "source_panel": "group14/low16_1",
+      "source_row": 7
+    },
+    {
+      "angular_hex": "0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.fd4961326bc3fp-3",
+      "initializer_phase_hex": "0x1.1ac3578cd72fep-3",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -193,
+          "mantissa": "68035559324228991947327454784337098886075"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -233,
+          "mantissa": "25171767844266160881479842035135288916671437230347683003"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -233,
+          "mantissa": "25336005344606313805002087478125770663593738151172902075"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -222,
+          "mantissa": "80194091962965294688596407710196165489404746496689"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6067856285990313154791845068040183011706498111570328460345"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378369378812764968018121266578365587"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077881512404563030638679136513072275"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -239,
+          "mantissa": "4961075830015424165323687118168204723881652308495330889627"
+        },
+        "phase_derivative_lower": {
+          "exponent": -188,
+          "mantissa": "1208151391580232197125136427336349579784643914624288738163"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+5",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.f98b14698bc00p-1",
+          "0x1.4438d15970352p-3"
+        ],
+        [
+          "0x1.998df0dba2ba7p-3",
+          "-0x1.3f4c8d175f444p+0"
+        ],
+        [
+          "-0x1.bad6336e41ee6p-1",
+          "0x1.6b65bc442587bp-2"
+        ],
+        [
+          "0x1.7a0efe9908721p-2",
+          "0x1.95f70e3abef1ap+0"
+        ],
+        [
+          "0x1.9cff84be7cb17p+0",
+          "-0x1.970cf6fbaece0p-1"
+        ],
+        [
+          "-0x1.820dbf0199621p+0",
+          "-0x1.bc187f3f8f4c3p-2"
+        ],
+        [
+          "-0x1.4e28f7afeeb3dp-2",
+          "0x1.5f8eae101ac3fp+1"
+        ],
+        [
+          "0x1.3c13c9f8866e7p+1",
+          "0x1.cac7f88fa7450p+1"
+        ],
+        [
+          "0x1.6be34e51d1534p+1",
+          "-0x1.740ebef589292p+1"
+        ]
+      ],
+      "source_panel": "group14/low16_1",
+      "source_row": 15
+    },
+    {
+      "angular_hex": "0x1.1e3779b97f4a8p+1",
+      "energy_hex": "0x1.fd4961326bc3fp-3",
+      "initializer_phase_hex": "0x1.301a9e0dc9b2dp-3",
+      "mass_hex": "0x1.921fb54442d18p+0",
+      "proof": {
+        "all_exterior_radii": true,
+        "asymptotic_branch_gap_upper": {
+          "exponent": -193,
+          "mantissa": "68035559324228991947327454784337098886075"
+        },
+        "asymptotic_phase_error_upper": {
+          "exponent": -246,
+          "mantissa": "1149756968493674286474472984289423454698540898658302217821"
+        },
+        "bits": 192,
+        "combined_phase_initial_error_upper": {
+          "exponent": -246,
+          "mantissa": "3105815557248353644773932362650871878803292026896631385693"
+        },
+        "horizon_sewing_error": null,
+        "initializer_rounding_upper": {
+          "exponent": -220,
+          "mantissa": "29147544335643639539174130236528045298229919794773"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_lower": {
+          "exponent": -192,
+          "mantissa": "6172482280706112667227632629710858802271244334909715717357"
+        },
+        "metric_terms": 12,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378369378812764968018121266578365587"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077881512404563030638679136513072275"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "8959465309518911"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "radius": {
+            "lower": {
+              "exponent": 3,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 3,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_defect_upper": {
+          "exponent": -246,
+          "mantissa": "3553709541725020715194220584123429573155593843139462216307"
+        },
+        "phase_derivative_lower": {
+          "exponent": -190,
+          "mantissa": "4850372066160924033797747184977017453346404808376276712227"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "radial_transport_error": null,
+        "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+        "taylor_degree": 12
+      },
+      "radius_hex": "0x1.e000000000000p+6",
+      "ratio_polynomial_hex": [
+        [
+          "0x1.f98b14698bc00p-1",
+          "0x1.4438d15970352p-3"
+        ],
+        [
+          "0x1.998df0dba2ba7p-3",
+          "-0x1.3f4c8d175f444p+0"
+        ],
+        [
+          "-0x1.bad6336e41ee6p-1",
+          "0x1.6b65bc442587bp-2"
+        ],
+        [
+          "0x1.7a0efe9908721p-2",
+          "0x1.95f70e3abef1ap+0"
+        ],
+        [
+          "0x1.9cff84be7cb17p+0",
+          "-0x1.970cf6fbaece0p-1"
+        ],
+        [
+          "-0x1.820dbf0199621p+0",
+          "-0x1.bc187f3f8f4c3p-2"
+        ],
+        [
+          "-0x1.4e28f7afeeb3dp-2",
+          "0x1.5f8eae101ac3fp+1"
+        ],
+        [
+          "0x1.3c13c9f8866e7p+1",
+          "0x1.cac7f88fa7450p+1"
+        ],
+        [
+          "0x1.6be34e51d1534p+1",
+          "-0x1.740ebef589292p+1"
+        ]
+      ],
+      "source_panel": "group14/low16_1",
+      "source_row": 15
+    }
+  ],
+  "full_family_coverage": false,
+  "horizon_sewing_error": null,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "physical_local_gate": "OPEN",
+  "physical_rho1_source_error": null,
+  "radial_transport_error": null,
+  "schema": "NSC-MASSIVE-JOST-PHASE-BOUND-v1",
+  "source_columns_replaced": false,
+  "source_hashes": {
+    "docs/nsc-massive-jost-phase-bound.md": "25c3f82d5bc09f2dbea3052e2ef6e92729bcbfbed6e8475e9272071e953a4778",
+    "scripts/derive_nsc_massive_jost_phase_bound.py": "9949b26829ab44ef35e039068dacd85215d1174c90ec31ac10fbaaf45291f961",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_massive_jost_modes.py": "b027182d2aebfa407a2abf7dd7bafb717dfbd1b455490af74390442bc1060ea6",
+    "src/recursive_horizons/nsc_massive_jost_phase_bound.py": "4dfd7dce2ce4030b95882cb2d6e2605a32c2e8d058f6a6067e3c686d49c5e78b",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+    "tests/test_nsc_massive_jost_phase_bound.py": "cf9cd1f33cf393ada40c6055e5c02a12504ec5f54f64d76de713b942dd5d37c8"
+  },
+  "source_inventory_unchanged": true,
+  "status": "ENCLOSED: exterior subgap phase initializer for declared pilot inputs"
+}

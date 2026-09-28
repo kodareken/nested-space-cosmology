@@ -1,5 +1,33 @@
 # Active code and evidence map
 
+## New Stage-2 primitives, 2026-09-28
+
+The [exterior Jost phase method](nsc-massive-jost-phase-bound.md) gives a directed
+finite-starting-radius error over the entire exterior half-line. Twelve pilot
+cases use three original group-14 energies, both angular signs, and R=60/120.
+At R=60 their combined initializer phase bounds are below 1.84e-15. The
+independent Grok review found no blocking defect in the comparison argument;
+14 focused controls pass. Radial transport, horizon sewing and physical rho=1
+source-column accuracy still need bounds. Existing source columns are unchanged.
+
+The [minor-A3 UV primitive](nsc-ks-uv-minor-a3.md) supplies explicit second
+geometry/phase jets and bounds the jet part of the massless minor A3. It isolates
+an unowned upstream major-A2 coefficient multiplying delta(1/r); that coefficient
+is not set to zero. The complete minor A3, C4 and C_M remain missing. The numerical
+difference-coupling helper rejects massive channels outside this derived scope.
+
+The [active-ramp field pilot](nsc-ks-field-ramp-pilot.md) captures and encloses
+cell 150 with the same source/history and authenticated profile payload. Its
+order-0/order-1 residual integrals are about (2.73e-16, 1.24e-12). One cell and
+four selected energy rows do not certify the whole history or family. The
+polynomial contribution dominates this cell's time/radius remainder.
+
+The next missing source connection is propagation of the outer-phase uncertainty
+through the original radial integration, horizon collar and interior mode map.
+For UV, determine the common upstream major-A2 contribution or prove its
+cancellation in the final contracted coefficient before seeking a finite C4.
+No bound above is inserted as a completed physical error-budget component.
+
 ## Endpoint contraction and original-source route, 2026-09-28
 
 The [continuous endpoint contraction](nsc-ks-endpoint-contraction.md) now supplies

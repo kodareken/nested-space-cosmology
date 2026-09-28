@@ -62,6 +62,17 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Stage-2 method advances, 28 September 2026
+
+The active lab now has a directed exterior subgap phase bound, new massless
+minor-A3 jet bounds, and an enclosed field cell in the active cutoff transition.
+See the [source method](../lab/docs/nsc-massive-jost-phase-bound.md),
+[UV derivation](../lab/docs/nsc-ks-uv-minor-a3.md) and
+[field pilot](../lab/docs/nsc-ks-field-ramp-pilot.md).
+These are sub-bound and method results. Radial/source transport, the remaining
+UV constants, full field coverage and the complete local certificate stay OPEN.
+The measured seed residuals and the nine-component physical budget are unchanged.
+
 ## Earlier public checkpoints
 
 The sections below preserve their original scope and recorded numbers. They
