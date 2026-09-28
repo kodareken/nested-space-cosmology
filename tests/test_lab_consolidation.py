@@ -1,6 +1,5 @@
 """Protect the migration boundary without running scientific campaigns."""
 import hashlib
-import importlib.util
 import json
 from pathlib import Path
 import shutil
@@ -13,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import check_lab_snapshot as snapshot
 import lab as launcher
+import update_lab_snapshot as updater
 
 
 def isolated_cache(tmp_path):
@@ -62,3 +62,29 @@ def test_snapshot_rejects_modified_payload(tmp_path):
 def test_snapshot_rejects_escaping_path(tmp_path):
     with pytest.raises(ValueError, match="invalid snapshot path"):
         snapshot.safe_path(tmp_path, "../outside")
+
+
+def test_successor_update_keeps_original_identity(tmp_path):
+    (tmp_path / "docs").mkdir()
+    (tmp_path / "lab").mkdir()
+    (tmp_path / "lab/value.txt").write_text("new")
+    target = tmp_path / "docs/lab-snapshot.json"
+    original = {"path": "lab/value.txt", "sha256": "old", "bytes": 3,
+                "original_sha256": "original", "original_git_blob": "blob"}
+    target.write_text(json.dumps({"files": [original], "intentionally_omitted": []}))
+    updater.update(tmp_path, ["lab/value.txt"], "parent")
+    row = json.loads(target.read_text())["files"][0]
+    assert row["original_sha256"] == "original"
+    assert row["original_git_blob"] == "blob"
+    assert row["sha256"] == hashlib.sha256(b"new").hexdigest()
+    assert row["changed_from_commit"] == "parent"
+
+
+def test_successor_cannot_silently_import_omitted_payload(tmp_path):
+    (tmp_path / "docs").mkdir()
+    target = tmp_path / "docs/lab-snapshot.json"
+    target.write_text(json.dumps({"files": [], "intentionally_omitted": ["old.npz"]}))
+    before = target.read_bytes()
+    with pytest.raises(ValueError, match="current lab files"):
+        updater.update(tmp_path, ["lab/old.npz"], "parent")
+    assert target.read_bytes() == before

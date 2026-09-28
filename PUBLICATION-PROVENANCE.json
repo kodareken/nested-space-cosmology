@@ -107,9 +107,9 @@
       "sha256": "b449a0ab8795ddee8e940c04b0b3e5018007f90f1b9b05cd50d83e57130bc1ee"
     },
     {
-      "bytes": 5128,
+      "bytes": 5657,
       "path": "docs/instructions.md",
-      "sha256": "62fd3ac6492b213b9cd005729252d580b7fb8eca63e15487f768ca8ecdd1bc94"
+      "sha256": "ed163cb48a627b263f27ffa2e15045bbe6a3bc84fa666733c28f3398806b940b"
     },
     {
       "bytes": 4577606,
@@ -2587,6 +2587,11 @@
       "sha256": "8812132adf2cdecfccb36711da280a8cc6b0a5d92f441ce8b413c8ebe65a772e"
     },
     {
+      "bytes": 1949,
+      "path": "scripts/update_lab_snapshot.py",
+      "sha256": "c442182bf7932419c53e6dd379a6192902000d17eaf7256ecbdad79a76c73cfa"
+    },
+    {
       "bytes": 237,
       "path": "scripts/verify_local_gate_draft.py",
       "sha256": "cf12bfbdb9c7015a59d83c99e42922785c5c0d222275b8927437dc3311df7539"
@@ -3087,9 +3092,9 @@
       "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
     },
     {
-      "bytes": 2209,
+      "bytes": 3437,
       "path": "tests/test_lab_consolidation.py",
-      "sha256": "8d80a3cc61e3a17c738332d7afbfea0560b6b168c715707f9182d49dfb69fb26"
+      "sha256": "d860697f4ddb9c231733c6cc680d4c241cec6b6c1157a475535572063c60b78f"
     },
     {
       "bytes": 4256,
