@@ -1,5 +1,42 @@
 # Active code and evidence map
 
+## Generated cubic UV coefficient, 2026-09-29
+
+The [massless cubic-current owner](nsc-ks-cubic-uv-current.md) now constructs
+minor A3, the linked h3/n4 transport and the e^-3 N/beta contractions for the
+original group-1 angular pair on the current history. Algebraic identities
+retain the common upstream representative consistently. Actual action signs
+are checked against `source_column_matter`; no physical source is replaced.
+The 24-versus-16 characteristic-step calculation is diagnostic only. Its
+pointwise changes are about 7.55e-4 and 6.18e-4, so its small N integral cannot
+be treated as a resolved cancellation. Numerical C4, C_M and all physical UV
+budget components remain null. The next UV connection is directed transport
+quadrature and higher-order remainder control, followed by massive channels.
+Six additional exact identities reduce the observable transport to a triangular
+system for q_z, q_zz and J3 and give the surface N contraction directly. That
+reduction preserves the retarded history and cancels the common upstream k;
+it offers a smaller Volterra-quadrature target for the missing C4 enclosure.
+
+## Full-profile horizon series, 2026-09-29
+
+The [exact horizon-frame owner](nsc-metric-horizon-frame.md) now uses the full
+compact metric, a directed horizon root and a convergent Frobenius series with
+a Cauchy majorant. For the existing group14/low16_1 row0 radial-phase endpoint,
+the frame remainder is below 2.50e-22. The same record maps the bounded phase
+to an asymptotic reflection in the explicitly defined direct horizon frame.
+This covers the remaining local collar for that mathematical reflection.
+Matching the production phase convention, interior transport and errors in the
+actual saved rho=1 source columns are still missing.
+
+The original inventory row comes from `solve_jost`,
+`MassivePGModeResolution.section(jost=...)` and PG packet recovery/restriction.
+It is not `PairedHorizonSeedMap.at_radius` or a row in the separate A2 mesh.
+Do not substitute the latter's `_massive_reflection` or its energy nodes.
+The new proof leaves occupations, coherence, all saved columns and the physical
+error budget unchanged. Current conserved-current and chart controls live in
+`tests/test_nsc_metric_horizon_frame.py`; the new record is
+`results/development/nsc-metric-horizon-frame-v1.json`.
+
 ## Surface UV invariance and extended source transport, 2026-09-28
 
 The [upstream invariance identity](nsc-ks-uv-upstream-invariance.md) removes common

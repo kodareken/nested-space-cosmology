@@ -8,6 +8,14 @@ nested-quality result below is reused. Six error components, the coupled solve,
 closed certificate and matching publication remain required. Global cosmological
 matching and charge-conjugation identification remain subsequent research.
 
+The [full-profile horizon-frame result](nsc-metric-horizon-frame.md) encloses
+the local Frobenius series and a representative affine reflection. Its analytic
+tail is a source-method sub-bound; it does not certify the full physical source
+at rho=1. The original source preparation and the current error-budget nulls
+are preserved. The [cubic UV construction](nsc-ks-cubic-uv-current.md) now
+retains generated massless A3/n4 in the actual N/beta contraction. Its finite
+quadrature is diagnostic; it supplies neither a validated C4 nor C_M.
+
 ## Relation to familiar local physics
 
 The intended claim is an inherited nested realization that reduces to familiar

@@ -1,0 +1,364 @@
+{
+  "affine_reflection_direct_frame": {
+    "imag": {
+      "lower": {
+        "exponent": -192,
+        "mantissa": "-3666063256302744181658745552299010633663218423825176190495"
+      },
+      "upper": {
+        "exponent": -192,
+        "mantissa": "-3666063256198013744533393593059293411767067471389862125087"
+      }
+    },
+    "real": {
+      "lower": {
+        "exponent": -192,
+        "mantissa": "5095290609690288838237105353157480802204447689325363079351"
+      },
+      "upper": {
+        "exponent": -192,
+        "mantissa": "5095290609762377320024127589341006341255413560750308862135"
+      }
+    }
+  },
+  "analytic_generator_majorant_upper": {
+    "exponent": -192,
+    "mantissa": "5394320456410881521133689671412278043789383731098926889109"
+  },
+  "analytic_t_radius": "0.1",
+  "angular": {
+    "lower": {
+      "exponent": -190,
+      "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+    },
+    "upper": {
+      "exponent": -190,
+      "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+    }
+  },
+  "bits": 192,
+  "compact_distance": {
+    "lower": {
+      "exponent": -196,
+      "mantissa": "2224746465925273145889791011103189970743510727083028713"
+    },
+    "upper": {
+      "exponent": -196,
+      "mantissa": "2224746465925273145889791011103189970743510727083029911"
+    }
+  },
+  "energy_hex": "0x1.5b4f66ca1e080p-10",
+  "exact_horizon_q": {
+    "lower": {
+      "exponent": -188,
+      "mantissa": "1042495055570281591525255677017773380721489856137279857271"
+    },
+    "upper": {
+      "exponent": -189,
+      "mantissa": "2084990111140563183050511354035546761442979712274559714551"
+    }
+  },
+  "exact_metric_slope": {
+    "lower": {
+      "exponent": -193,
+      "mantissa": "5983981161880442915590773719979618010610071300088685707179"
+    },
+    "upper": {
+      "exponent": -193,
+      "mantissa": "5983981161880442915590773719979618010610071300088685708173"
+    }
+  },
+  "exterior_frame": [
+    [
+      {
+        "imag": {
+          "lower": {
+            "exponent": -195,
+            "mantissa": "-1498867027550832625928796924596126121583784564277568744321"
+          },
+          "upper": {
+            "exponent": -195,
+            "mantissa": "-1498867027550832619496919570275367668311522339413021305729"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -190,
+            "mantissa": "1570967063367008850370759515163387565221543329231872736713"
+          },
+          "upper": {
+            "exponent": -190,
+            "mantissa": "1570967063367008850578873769100213466114055132037828853193"
+          }
+        }
+      },
+      {
+        "imag": {
+          "lower": {
+            "exponent": -194,
+            "mantissa": "-812448480784237152258829395387857980018596899211066718975"
+          },
+          "upper": {
+            "exponent": -194,
+            "mantissa": "-812448480784237113118167892648725868673462406589475437311"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -196,
+            "mantissa": "-4492629602224811383696020533124152047113617504701583610373"
+          },
+          "upper": {
+            "exponent": -196,
+            "mantissa": "-4492629602224811197088839974775135978169410647506960404997"
+          }
+        }
+      }
+    ],
+    [
+      {
+        "imag": {
+          "lower": {
+            "exponent": -194,
+            "mantissa": "812448480784237113118167892648725868673462406589475437311"
+          },
+          "upper": {
+            "exponent": -194,
+            "mantissa": "812448480784237152258829395387857980018596899211066718975"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -196,
+            "mantissa": "-4492629602224811383696020533124152047113617504701583610373"
+          },
+          "upper": {
+            "exponent": -196,
+            "mantissa": "-4492629602224811197088839974775135978169410647506960404997"
+          }
+        }
+      },
+      {
+        "imag": {
+          "lower": {
+            "exponent": -195,
+            "mantissa": "1498867027550832619496919570275367668311522339413021305729"
+          },
+          "upper": {
+            "exponent": -195,
+            "mantissa": "1498867027550832625928796924596126121583784564277568744321"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -190,
+            "mantissa": "1570967063367008850370759515163387565221543329231872736713"
+          },
+          "upper": {
+            "exponent": -190,
+            "mantissa": "1570967063367008850578873769100213466114055132037828853193"
+          }
+        }
+      }
+    ]
+  ],
+  "frame_column_l1_tail_upper": {
+    "exponent": -263,
+    "mantissa": "3700154870537922664662213411875996587354494546171818213899"
+  },
+  "full_source_coverage": false,
+  "input_hashes": {
+    "results/development/artifacts/nsc-massive-jost-transport-bound-v1.npz": "3cf18ba5a346aaa9cf5f7ccf1c4f864e6e098d495ea5e184df04ee023650e467",
+    "results/development/nsc-massive-jost-transport-bound-v1.json": "e36cd872207082ab63e437b11bf61953ba86f8d552d5f8c0210cca51610d76da"
+  },
+  "interior_frame_same_compact_distance": [
+    [
+      {
+        "imag": {
+          "lower": {
+            "exponent": -195,
+            "mantissa": "-1492638342207927504675518676714480245911587006689793243029"
+          },
+          "upper": {
+            "exponent": -195,
+            "mantissa": "-1492638342207927498243641322393721792639324781825245804437"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -191,
+            "mantissa": "3132385363835476754634639638066708551827487593082338374833"
+          },
+          "upper": {
+            "exponent": -191,
+            "mantissa": "3132385363835476755050868145940360353612511198694250607793"
+          }
+        }
+      },
+      {
+        "imag": {
+          "lower": {
+            "exponent": -196,
+            "mantissa": "4487821768979958680130091292491765451004251724925883753029"
+          },
+          "upper": {
+            "exponent": -196,
+            "mantissa": "4487821768979958866737271850840781519948458582120506958405"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -196,
+            "mantissa": "-3246380133615004782564619899838879315886700462384413460245"
+          },
+          "upper": {
+            "exponent": -196,
+            "mantissa": "-3246380133615004626001973888882350870506162491898048333589"
+          }
+        }
+      }
+    ],
+    [
+      {
+        "imag": {
+          "lower": {
+            "exponent": -196,
+            "mantissa": "4487821768979958680130091292491765451004251724925883753029"
+          },
+          "upper": {
+            "exponent": -196,
+            "mantissa": "4487821768979958866737271850840781519948458582120506958405"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -196,
+            "mantissa": "3246380133615004626001973888882350870506162491898048333589"
+          },
+          "upper": {
+            "exponent": -196,
+            "mantissa": "3246380133615004782564619899838879315886700462384413460245"
+          }
+        }
+      },
+      {
+        "imag": {
+          "lower": {
+            "exponent": -195,
+            "mantissa": "1492638342207927498243641322393721792639324781825245804437"
+          },
+          "upper": {
+            "exponent": -195,
+            "mantissa": "1492638342207927504675518676714480245911587006689793243029"
+          }
+        },
+        "real": {
+          "lower": {
+            "exponent": -191,
+            "mantissa": "3132385363835476754634639638066708551827487593082338374833"
+          },
+          "upper": {
+            "exponent": -191,
+            "mantissa": "3132385363835476755050868145940360353612511198694250607793"
+          }
+        }
+      }
+    ]
+  ],
+  "interior_transport_error": null,
+  "mass": {
+    "lower": {
+      "exponent": -190,
+      "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+    },
+    "upper": {
+      "exponent": -190,
+      "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+    }
+  },
+  "order": 16,
+  "phase": {
+    "lower": {
+      "exponent": -64,
+      "mantissa": "-10335832232369704261"
+    },
+    "upper": {
+      "exponent": -64,
+      "mantissa": "-10335832232036238011"
+    }
+  },
+  "phase_error_upper": {
+    "exponent": -227,
+    "mantissa": "1949445879137884458788980397206866094255859418428148068739"
+  },
+  "physical_local_gate": "OPEN",
+  "physical_rho1_source_error": null,
+  "physical_source_columns_replaced": false,
+  "radial_coordinate": {
+    "lower": {
+      "exponent": -189,
+      "mantissa": "1491434496588383406047562963509483600939251129608421913719"
+    },
+    "upper": {
+      "exponent": -186,
+      "mantissa": "186429312073547925755945370438685450117406391201052739215"
+    }
+  },
+  "reflection_modulus": {
+    "lower": {
+      "exponent": -62,
+      "mantissa": "4611686018383422751"
+    },
+    "upper": {
+      "exponent": -63,
+      "mantissa": "9223372036942706037"
+    }
+  },
+  "schema": "NSC-METRIC-HORIZON-FRAME-v1",
+  "source_hashes": {
+    "docs/nsc-metric-horizon-frame.md": "9787df3f4a845f3107cefe219006de9e7b2de27cf89e25107ec3c22097244f25",
+    "scripts/derive_nsc_metric_horizon_frame.py": "9176c05c7af7885c60b17179253d53b18a3bd5775a1b09953c751a536b4bab42",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_massive_jost_phase_bound.py": "4dfd7dce2ce4030b95882cb2d6e2605a32c2e8d058f6a6067e3c686d49c5e78b",
+    "src/recursive_horizons/nsc_metric_horizon_frame.py": "13302db0da160ef256a73f930e63ce94463d2b09ed7082731336e1f7d820dc92",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+    "tests/test_nsc_metric_horizon_frame.py": "aff7791e604b8bf78d5406702f0d8873d5cc6873bcb61b2efb9a7d2cfb85b836"
+  },
+  "source_inventory_unchanged": true,
+  "source_panel": "group14/low16_1",
+  "source_phase_convention_matched": false,
+  "source_row": 0,
+  "status": "ENCLOSED: exact-profile horizon series and representative affine reflection"
+}
