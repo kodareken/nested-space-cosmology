@@ -1874,3 +1874,7 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 - [Middle source coverage](nsc-middle-source-coverage.md): source-bound row checkpoints for group14 angular+1, 16<=E<32 and actual negative partners; 48-row window and its actual negative partners completed; saved witnesses replayed. Owner: `src/recursive_horizons/nsc_middle_source_coverage.py`, driver `scripts/derive_nsc_middle_source_coverage.py`.
 
 - [Expanded continuous source insertion](nsc-ks-source-operator-majorant-v2.md): 866 signed rows, replacing the old middle pair exactly once; 302 rows remain in this family. Full upstream budget stays OPEN. Owner: `scripts/derive_nsc_ks_source_operator_majorant_v2.py`.
+
+- [High-angular preparation pilot](nsc-high-angular-preparation-pilot.md): direct-series versus validated correction at the first E>=32 row in groups12/22/32. Identifies which source rows need corrected witnesses before scaling; not whole-family coverage.
+
+- Current middle-coverage tests: `tests/test_nsc_middle_source_coverage_v2.py` preserves production hashes before/after every test. The original test file remains frozen in row-record provenance; its pre-campaign absence assumption is excluded from default collection.

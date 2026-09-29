@@ -30,6 +30,9 @@ where = ["src"]
 recursive_horizons = ["_angular_transport.cpp"]
 
 [tool.pytest.ini_options]
+# Frozen pre-campaign test is replaced by test_nsc_middle_source_coverage_v2.py.
+# Its original bytes remain dependencies of the immutable row records.
+addopts = "--ignore=tests/test_nsc_middle_source_coverage.py"
 testpaths = ["tests"]
 norecursedirs = [
   "archive",
