@@ -12273,13 +12273,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 124217,
+      "bytes": 124586,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "8ccca306bcb3a39fc87fa791b391e6da64a24206",
+      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "8ffb807fb7f8315af4a496472bb5d972c3dd41dfa386619193f629218ac1b902"
+      "sha256": "32c5fd9d37c5e4b43801b1cc48a436feab73521914a8c3f0236d60fbff544533"
     },
     {
       "bytes": 47762,
@@ -15002,6 +15002,13 @@
       "sha256": "bedfdbdba790919c6f86260ea893afb2432988ef62569dcccc6d0d2cbb522ea7"
     },
     {
+      "bytes": 3482,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
+      "path": "lab/docs/nsc-source-occupation-enclosure.md",
+      "sha256": "d820c12c42bd2613cad98b6aaea678739c17ee94c7aaef2d6ec97a38fa3b2277"
+    },
+    {
       "bytes": 4379,
       "original_git_blob": "6993d67d3d9478fe88512088a6334535ef42d793",
       "original_sha256": "8243f6e36c035a843709d1ce4642d471606b02cde0bdcb1d0d5692ef7b2299ad",
@@ -15219,11 +15226,11 @@
       "sha256": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024"
     },
     {
-      "bytes": 2168,
+      "bytes": 2552,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d8ccbf596dc0ce682d6793c4bfacb6ffd7796bcf",
+      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
       "path": "lab/docs/nsc-vacuum-correction-range-pilot.md",
-      "sha256": "0108571935d4f8a89156c1fc726f9cf60fa0563778a32f5f64b26d4bab1eb5d1"
+      "sha256": "ee3172857330fd161634236e75ec2252e583f79831240b57c57186b8a9a7d101"
     },
     {
       "bytes": 8359,
@@ -78419,6 +78426,13 @@
       "sha256": "e26872d0989ee88230e5ecd2f77f43533ae97f1aaf5d43a3270936cd3640e637"
     },
     {
+      "bytes": 2571,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
+      "path": "lab/scripts/pilot_nsc_moderate_source_occupation.py",
+      "sha256": "20c6363e92f9e455d673ae9a20e87f1470c9cd555895b4b51107431ebae5900a"
+    },
+    {
       "bytes": 2497,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "d8ccbf596dc0ce682d6793c4bfacb6ffd7796bcf",
@@ -80139,6 +80153,13 @@
       "original_sha256": "dce729cfd3c32919e5109fe912bb6451cd910ac112795f98b8ba180d481296c3",
       "path": "lab/src/recursive_horizons/nsc_smooth_seam_variation.py",
       "sha256": "dce729cfd3c32919e5109fe912bb6451cd910ac112795f98b8ba180d481296c3"
+    },
+    {
+      "bytes": 1478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
+      "path": "lab/src/recursive_horizons/nsc_source_occupation_enclosure.py",
+      "sha256": "e683c0f453a2cf0a6c0442258cc990c2f24d923a3526d8aac1945d7b30a81c61"
     },
     {
       "bytes": 10884,
@@ -82113,6 +82134,13 @@
       "original_sha256": "36a7e277b43cc243e915276d1f6dcab589fc25517695eb940afef2ef6384fd45",
       "path": "lab/tests/test_nsc_source_control_v2.py",
       "sha256": "36a7e277b43cc243e915276d1f6dcab589fc25517695eb940afef2ef6384fd45"
+    },
+    {
+      "bytes": 3034,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
+      "path": "lab/tests/test_nsc_source_occupation_enclosure.py",
+      "sha256": "53e91d883ea7c68e535c7b790bee71a509a7dc79f38e656cf302f51252ca3d00"
     },
     {
       "bytes": 1771,

@@ -37,3 +37,9 @@ The [validated correction owner](nsc-vacuum-source-correction.md) and
 [continuous insertion](nsc-ks-source-operator-majorant.md) define their separate
 proof scopes. The resumable middle-energy coverage driver is being developed
 separately; this pilot does not claim its completion.
+
+A subsequent [source-occupation calculation](nsc-source-occupation-enclosure.md)
+uses the incoming mass threshold already present in the original source law.
+It removes the unnecessarily large incoming allowance at the tested E~2 row;
+a smaller-step correction then gives a positive covariance bound below
+1.969e-12. The table above remains the historical coarse-method measurement.
