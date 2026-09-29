@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 112091,
+      "bytes": 113266,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "882d0b2e8dc95dfda609456d1d6f20a54da9d8c8b0c07da5af265b2bd8ac5226"
+      "sha256": "a151e650f4a0e30f33cefe040235afe737505fd5b399825f74b767746f7ba3cd"
     },
     {
-      "bytes": 43840,
+      "bytes": 44153,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "e05113c5377ab9fd29b8c71ae47a69701ef02fa523cf50ec9bd9d014a26f362a"
+      "sha256": "e67a9bb735eeebc2389bfcee5d6ec720caa6db1fcd66ca4bdc88375681fb35d7"
     },
     {
       "bytes": 16589,
@@ -13509,6 +13509,13 @@
       "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
       "path": "lab/docs/nsc-ks-cubic-uv-current.md",
       "sha256": "096eb07b3087aad04ca12ed317f01a99c28f1d8f497df9288019d2d0ff0fba53"
+    },
+    {
+      "bytes": 6062,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
+      "path": "lab/docs/nsc-ks-cubic-uv-enclosure.md",
+      "sha256": "4f0b55baa20fd86ba5afa4ad211d364ff30a56e949523c2bfe77b93fc0497613"
     },
     {
       "bytes": 2177,
@@ -72887,6 +72894,13 @@
       "sha256": "4070dc137a1efce0056c70d73ad53c60dfbc51826911fdbba860478bb53c938e"
     },
     {
+      "bytes": 17299,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
+      "path": "lab/results/development/nsc-ks-cubic-uv-enclosure-v1.json",
+      "sha256": "56a8265e7677f1f75be4001ac03f3a29e50f51638830e2be40212a599f8575b6"
+    },
+    {
       "bytes": 771849,
       "original_git_blob": "8bdda7937a058618a0818a5fb7598a675c4d0349",
       "original_sha256": "d11039d10a585d031bbde2a25c933bcf714cae6f32f194402586463574122605",
@@ -76226,6 +76240,13 @@
       "sha256": "5d86e50c2b777b750ec17880443acf67505fc8705124312d0956e8527948d489"
     },
     {
+      "bytes": 5883,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
+      "path": "lab/scripts/derive_nsc_ks_cubic_uv_enclosure.py",
+      "sha256": "2d8e9fd2ca3a7f2b0652a0fb1d8910719132e4b3a1eb9fa93b4ee78fc9c3143f"
+    },
+    {
       "bytes": 34658,
       "original_git_blob": "d729b36027bcdb0d5c28509d676b22149fc55f70",
       "original_sha256": "ddbd5b0bb3020fc13d5851a9a1f1e15b0968861c53ca3e9dae7e2659860f3fd1",
@@ -78361,6 +78382,13 @@
       "sha256": "f6b8173afe8e536151861b64380c013ebd7aa7956283913363f4566ae498cb70"
     },
     {
+      "bytes": 13552,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
+      "path": "lab/src/recursive_horizons/nsc_ks_cubic_uv_enclosure.py",
+      "sha256": "2167314c6fb413585dec030299b443031933bb5ba4108a1dba3aac4ddfb73e16"
+    },
+    {
       "bytes": 34331,
       "original_git_blob": "0ec2a8f5f0848b675a4ee87d85f832bdf39bf1f7",
       "original_sha256": "22b1a4ed63376f2568d6f931f8f485483dbd5bcaf641987ac1ed40d328ecccc2",
@@ -80235,6 +80263,13 @@
       "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
       "path": "lab/tests/test_nsc_ks_cubic_uv_current.py",
       "sha256": "41a7d6bdfc8ab289dcd621aa2304a5432c97582c57e4093a41498529fdfc686d"
+    },
+    {
+      "bytes": 7685,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "22d6053849dab53c6a1233868b2ece4b6ff48ce5",
+      "path": "lab/tests/test_nsc_ks_cubic_uv_enclosure.py",
+      "sha256": "ee66f360583cab964a974caff3aef3c372b97f003cb21eb34062b9dccd5342f3"
     },
     {
       "bytes": 23694,

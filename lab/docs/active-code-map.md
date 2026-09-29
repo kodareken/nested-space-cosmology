@@ -1,5 +1,24 @@
 # Active code and evidence map
 
+## Directed cubic coefficient pilot, 2026-09-29
+
+The [Volterra enclosure](nsc-ks-cubic-uv-enclosure.md) now evaluates the reduced
+massless system using ball-valued coordinate jets, characteristic composition
+and explicit integral Taylor remainders. The original group-1 pair is enclosed
+at the current history's incoming center, retaining both source signs and the
+angular multiplicity. The paired coefficients are approximately
+N=1.48828818e-5 and beta=-0.003819785011, with interval widths about 3.14e-12
+and 2.65e-12. These are coefficients of E^-3, not new incoming residuals.
+The full incoming interval, massive channels and C_M remain unbounded.
+
+The record also integrates that formal leading term beyond the original
+cutoff. Its value and uncertainty are distinct. It has not been inserted into
+the physical residual, and the complete UV tail cannot be identified without
+the higher-order remainder. No physical budget component is closed here.
+The previous h3/n4 coefficient record remains immutable diagnostic evidence.
+Independent Grok review of that record and the horizon-frame record found no
+concrete algebraic defect; their stated OPEN gaps remain in force.
+
 ## Generated cubic UV coefficient, 2026-09-29
 
 The [massless cubic-current owner](nsc-ks-cubic-uv-current.md) now constructs

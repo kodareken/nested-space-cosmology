@@ -62,6 +62,16 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Directed UV coefficient pilot, 29 September 2026
+
+The [new enclosure](../lab/docs/nsc-ks-cubic-uv-enclosure.md) gives rigorous
+intervals for one original massless pair's formal cubic coefficient at one
+incoming point. It uses analytic geometry jets and explicit integration
+remainders. The leading term's integral and its uncertainty are recorded
+separately. Continuous coverage of I, the remaining families, higher UV terms
+and the physical error-budget component remain OPEN. The current candidate's
+residuals and both papers are unchanged.
+
 ## Cubic UV method continuation, 29 September 2026
 
 The [massless cubic-current calculation](../lab/docs/nsc-ks-cubic-uv-current.md)

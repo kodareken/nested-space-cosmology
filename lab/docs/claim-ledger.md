@@ -16,6 +16,11 @@ are preserved. The [cubic UV construction](nsc-ks-cubic-uv-current.md) now
 retains generated massless A3/n4 in the actual N/beta contraction. Its finite
 quadrature is diagnostic; it supplies neither a validated C4 nor C_M.
 
+The successor [directed cubic pilot](nsc-ks-cubic-uv-enclosure.md) now encloses
+that formal coefficient at one point for the original massless group-1 pair.
+Its explicit Taylor remainder replaces a refinement indicator for that scope.
+Uniform C4 on I, higher UV remainder and the physical UV budget remain OPEN.
+
 ## Relation to familiar local physics
 
 The intended claim is an inherited nested realization that reduces to familiar
