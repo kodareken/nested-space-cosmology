@@ -114,3 +114,20 @@ found no bound, phase, domain or input defect within this per-row contract.
 The occupation allowance must still be added once by the caller. Only the
 selected moderate-energy fiber has been demonstrated; a source-window recorder
 and per-row bindings are separate work.
+
+## Later enclosed initialization control
+
+Starting the same vacuum branch at log-distance -10 instead of -18 is allowed
+by the enclosed horizon-frame domain; it does not change the source law. Two
+original group14 controls used max_step=0.0125 and 192 bits:
+
+| Energy | Cells | Positive upper (rounded up) | Negative upper (rounded up) | Total CPU seconds |
+|---|---:|---:|---:|---:|
+| 2.071557525252559 | 700 | 2.402e-12 | 2.305e-12 | 0.59 |
+| 15.9788018699833 | 1932 | 7.753e-12 | 8.602e-12 | 1.64 |
+
+The upper-energy initialization error was 2.827e-14 (rounded up), retained by
+the validation. Adaptive stepping explains why the second row has more cells.
+These endpoint controls support a shorter initialization as an efficiency
+option, but do not certify intervening rows or change any recorded window's
+settings. Each production row still requires its own validation and binding.
