@@ -591,3 +591,17 @@ Evidence: [September 7 verification](nsc-closure-verification-2026-09-07.md).
 | Infinite room count proves infinite mapped duration | Not established | The clock-weighted duration series must diverge |
 | Infinite PG coordinate time proves affine completeness | False for the current horizon patch | Explicit exponential affine map; extension remains open, no curvature singularity inferred |
 | Observer position alone converts a point into an isotropic cosmos | Not established | Invariant metric, null expansions and actual observation maps required |
+
+## Source coverage and vacuum initial-column successor, 29 September 2026
+
+The middle window has 48 positive rows and 48 separately compared signed
+partners with replayable checkpoints. Source-operator majorant v2 combines
+these with the existing high-energy and low-row evidence: 866 signed rows,
+302 remaining in family14_1. Its continuous N/beta source-error bounds are
+1.792e-13 and 1.424e-13. Old single-pair coverage is replaced, not duplicated.
+The vacuum-spinor v1 record independently bounds phase-fixed initial columns
+for groups1/14, angular signs +/-, cutoffs160/320, with their A0..A4 data.
+These are local source-method results. Finite occupation, other source rows,
+changed-history transport and the complete gate retain their explicit gaps.
+See [source insertion](nsc-ks-source-operator-majorant-v2.md) and
+[initial column](nsc-vacuum-spinor-remainder.md).

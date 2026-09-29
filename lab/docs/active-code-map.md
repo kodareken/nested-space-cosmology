@@ -1864,3 +1864,13 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 ## Preparation-method range diagnostic
 
 - [Vacuum-correction range pilot](nsc-vacuum-correction-range-pilot.md): four bounded original-source checks distinguish enclosure refinement near E=4 from a finite-occupation limitation near E=2; no coverage or gate promotion. Owner: `scripts/pilot_nsc_vacuum_correction_range.py`.
+
+## Upstream vacuum-column remainder
+
+- [Phase-fixed spinor remainder](nsc-vacuum-spinor-remainder.md): converts the owned Bloch remainder to a uniform initial vacuum-column remainder. It retains finite-occupation and changed-history gaps; core and supplementary independent reviews passed. Owners: `src/recursive_horizons/nsc_vacuum_spinor_remainder.py`, `tests/test_nsc_vacuum_spinor_remainder.py`.
+
+## Resumable middle-energy preparation coverage
+
+- [Middle source coverage](nsc-middle-source-coverage.md): source-bound row checkpoints for group14 angular+1, 16<=E<32 and actual negative partners; 48-row window and its actual negative partners completed; saved witnesses replayed. Owner: `src/recursive_horizons/nsc_middle_source_coverage.py`, driver `scripts/derive_nsc_middle_source_coverage.py`.
+
+- [Expanded continuous source insertion](nsc-ks-source-operator-majorant-v2.md): 866 signed rows, replacing the old middle pair exactly once; 302 rows remain in this family. Full upstream budget stays OPEN. Owner: `scripts/derive_nsc_ks_source_operator_majorant_v2.py`.
