@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 130696,
+      "bytes": 131502,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e44b6767c188ef939ac5834c47b6ac37b5711ad8",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "011c9f4ee0ccb5f7058fbbbd3e68403bb15e642d50bd73136641ea86815933d6"
+      "sha256": "c96a5b84e86abb2d10873a80fad5f7da74ec88ddbfa7f27b7d0a24281d5b729f"
     },
     {
-      "bytes": 53038,
+      "bytes": 53999,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e44b6767c188ef939ac5834c47b6ac37b5711ad8",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "7423323d7b14d1a377d3969021f9c1ef5ac9a7b6e7178333a3a783b286a20e74"
+      "sha256": "04ccf71e82cde738cf0165f187cf48b6390ccb77f6234fcaa850aea357d34bfa"
     },
     {
       "bytes": 16589,
@@ -12732,6 +12732,13 @@
       "original_sha256": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135",
       "path": "lab/docs/nsc-finite-terms.md",
       "sha256": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135"
+    },
+    {
+      "bytes": 5619,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "path": "lab/docs/nsc-finite-turnover.md",
+      "sha256": "b642a4a0cc9e5d943803a0939f8ee6732d0af9e3ef8d34211b1d9187ffd75fba"
     },
     {
       "bytes": 5803,
@@ -73365,6 +73372,13 @@
       "sha256": "2adaeb34a04bbc4ab3b82607d1770941378b7df7a3bca63b7cbe2e23115c80fa"
     },
     {
+      "bytes": 4607,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "path": "lab/results/development/nsc-finite-turnover-v1.json",
+      "sha256": "2caa664b2c46994e503467e8f5703d801bfef17dca9c563174b8bb4915d3e382"
+    },
+    {
       "bytes": 6572,
       "original_git_blob": "82dd9bb793a9564ddf026386828f26ecc91061be",
       "original_sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106",
@@ -78762,6 +78776,13 @@
       "sha256": "daa26999b0234daf8b8ab92ed9592d41ad36a4db02f46fac6918e3d249bf7261"
     },
     {
+      "bytes": 4632,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "path": "lab/scripts/derive_nsc_finite_turnover.py",
+      "sha256": "d4515127d2462c73507c26f26264700809a1eebbfc8b5bf6979341ce012665d4"
+    },
+    {
       "bytes": 6527,
       "original_git_blob": "331f932331fd1a130b22c90778cd5f14be1a6044",
       "original_sha256": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907",
@@ -81184,6 +81205,13 @@
       "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
     },
     {
+      "bytes": 14342,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "path": "lab/src/recursive_horizons/nsc_finite_turnover.py",
+      "sha256": "778fd15a46dc421aa625e12aa27d16868f29b7d85430ed4c5555db4f5d744308"
+    },
+    {
       "bytes": 4256,
       "original_git_blob": "0e9c1074e0743f05e8fb221d8f03cb60435610af",
       "original_sha256": "7f4c07561ad35679dc82a74946991deb732b26b5771558f2047db1d8a6960805",
@@ -83128,6 +83156,13 @@
       "original_sha256": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1",
       "path": "lab/tests/test_nsc_finite_terms.py",
       "sha256": "49597ecc9c7c84301b753e2e93d69594aedf9a545934b95d277fd96d298d44f1"
+    },
+    {
+      "bytes": 6049,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "path": "lab/tests/test_nsc_finite_turnover.py",
+      "sha256": "b70f310b9f4cb7ffc3f21b599775e4dc66d418016f6af8f2b3893accd04b7e39"
     },
     {
       "bytes": 2600,

@@ -9,6 +9,13 @@ checkpoint is retained in an appendix and is not a prerequisite for this
 finite result. The [43-page foundation](paper/nested-space-cosmology.pdf)
 remains unchanged.
 
+**Current checkpoint, 30 September 2026.** A six-mode inherited finite
+example has nonzero channel currents, constant regional contents, and a
+derived local filtered response.
+[Finite turnover](lab/docs/nsc-finite-turnover.md). The geometry and the
+stationary preparation are fixed inputs. Broader regeneration remains
+research. The incoming gate remains OPEN and its campaign remains paused.
+
 ## One research programme, two complementary papers
 
 The original manuscript remains the foundation of this project. The focused

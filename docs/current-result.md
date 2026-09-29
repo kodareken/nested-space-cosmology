@@ -20,6 +20,15 @@ Those are proposals to test, not proved results. The paused incoming gate
 stays a retained OPEN application. Assessing its relevance is not a required
 step before this work, and later error-controlled numerical work is not banned.
 
+## Finite circulation and local response, 30 September 2026
+
+A six-mode inherited finite example has nonzero channel currents, constant
+regional contents, and a derived local filtered response. The
+[note](../lab/docs/nsc-finite-turnover.md) records it. The geometry and the
+stationary preparation are fixed inputs. Broader regeneration remains
+research. The incoming gate below remains OPEN and its campaign remains
+paused. This checkpoint does not change either PDF and is not release 0.27.0.
+
 ## Nested qualities: finite mathematical construction, 27 September 2026
 
 The [connected proof](nsc-nested-qualities.md) and [focused article](../paper/local-incoming-gate-draft.pdf)

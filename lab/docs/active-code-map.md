@@ -17,6 +17,25 @@ inside/outside or coin metaphors. Charge-conjugation terminology does not
 close a geometric question. Do not drop the recorded error gaps. Full
 statement: [scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
 
+## Finite channel turnover, 2026-09-30
+
+Completed and reusable. This finite case is not a new queue. Do not
+recompute the window or replace the record. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_finite_turnover.py`
+- `scripts/derive_nsc_finite_turnover.py`
+- `tests/test_nsc_finite_turnover.py`
+- `results/development/nsc-finite-turnover-v1.json`
+- [nsc-finite-turnover.md](nsc-finite-turnover.md)
+
+Verdict `PASS_FINITE_CHANNEL_TURNOVER`. Cut activity
+$G=8986745/950450651136$. Near filtered-response shift
+$6.879146355717442\times 10^{-5}$; far shift
+$2.8630169396700523\times 10^{-7}$. From the repository root, existing
+evidence is replayed by `--check`. `--record` is creation-only and refuses
+to overwrite the saved record. The incoming gate stays OPEN and its campaign
+stays paused.
+
 ## Continuous local source-error contribution, 2026-09-29
 
 The [exact-response majorant](nsc-ks-source-operator-majorant.md) now carries

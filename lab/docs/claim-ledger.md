@@ -179,6 +179,23 @@ separate OPEN application whose campaign is paused.
 The sections below retain earlier interpretation/model/evidence context and
 do not replace the current proof map. No existing physical result is relabeled.
 
+## Completed finite turnover, 30 September 2026
+
+One finite case is complete and reusable. It is not a new queue. Do not
+derive this window again. The five owners are the
+[module](../src/recursive_horizons/nsc_finite_turnover.py),
+[driver](../scripts/derive_nsc_finite_turnover.py),
+[tests](../tests/test_nsc_finite_turnover.py),
+[record](../results/development/nsc-finite-turnover-v1.json), and
+[note](nsc-finite-turnover.md). The saved record verdict is
+`PASS_FINITE_CHANNEL_TURNOVER`. On the fixed depth-3 window and stationary
+state, cut activity is \(G=8986745/950450651136\). The outside-only readout
+shifts are \(6.879146355717442\times 10^{-5}\) for the near probe and
+\(2.8630169396700523\times 10^{-7}\) for the far probe. Nonzero channel
+currents leave regional contents constant, and the filtered local response
+is the response of that preparation. Broader regeneration remains research.
+The incoming gate stays OPEN and its campaign stays paused.
+
 ## Regenerative interpretation and the local calculation
 
 NSC describes a proposed regenerative process across nested spacetime regions:
