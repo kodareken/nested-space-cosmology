@@ -57,8 +57,11 @@ Git by default. Use external content-addressed payload storage with a recorded
 recovery location if future campaigns need it.
 
 Both PDF manifests authenticate the same PDFs as before consolidation. Current
-workflow changes are ordinary commits, not a v0.27.0 release. Research follows the author-approved plan in the conversation. Douglas later
-removed the handover and retired repository plan copies as authorities; see
+workflow changes are ordinary commits, not a v0.27.0 release. Research follows
+the latest user instruction. An accepted conversation plan applies where it
+stays compatible with that instruction and does not override later steering.
+Douglas later removed the handover and retired repository plan copies as
+authorities; see
 [instructions](instructions.md#scientific-framing-and-authority).
 
 ## Completed local checks
@@ -98,7 +101,8 @@ each file's original import hashes. The completed family `(14, 1)` source
 insertion, including the direct, subgap and threshold witness trees, belongs
 in that receipt. `physical_upstream_budget_component` stays null. The cubic
 UV inventory and leading residual do not certify the ultraviolet tail. The
-local incoming gate remains OPEN. Public provenance remains
+local incoming gate remains OPEN and its campaign is paused
+([instructions](instructions.md#scientific-framing-and-authority)). Public provenance remains
 [PUBLICATION-PROVENANCE.json](../PUBLICATION-PROVENANCE.json), rebuilt by
 `scripts/build_publication_provenance.py`. That file does not copy the lab
 subtree.
