@@ -1,0 +1,426 @@
+{
+  "all_exact_target_nodes": false,
+  "approximate_is_enclosure": false,
+  "borrowed_inventory_sha256": {
+    "lab/docs/nsc-ks-cubic-inventory.md": "8c1c2b8d09a05351b8408b3c3f0c4446bfd8dd89835e0fac3f388f6d7790017e",
+    "lab/src/recursive_horizons/nsc_ks_cubic_inventory.py": "660ff0d286446f1b65a26f6c861602013fd4a8bb0d30f02d57538cff01ea9f9f",
+    "lab/tests/test_nsc_ks_cubic_inventory.py": "e9e15f918292c122c3b98db546fee123c1630812e98af1a14167ecda5767b61b"
+  },
+  "cells": 1024,
+  "center_was_broadcast": false,
+  "certification_blockers": [
+    "higher remainder C_M is None",
+    "higher remainder was not constructed",
+    "uniform C4 on I is None",
+    "cubic leading does not cover every exact target node"
+  ],
+  "certification_refusal": "certification blocked: higher remainder C_M is None; higher remainder was not constructed; uniform C4 on I is None; cubic leading does not cover every exact target node",
+  "certified": false,
+  "complete_UV_tail": null,
+  "completed_node_count": 7,
+  "completed_nodes": [
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        2.3095936407552007e-06,
+        -9.211060453945032e-05
+      ],
+      "approximate_leading_hex": [
+        "0x1.35fd0881f0f22p-19",
+        "-0x1.8257022ee2f55p-14"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -71,
+            "mantissa": "5453373708623245"
+          },
+          "radius_upper_float": 3.830807015004677e-14,
+          "upper": {
+            "exponent": -68,
+            "mantissa": "681671736190999"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -66,
+            "mantissa": "-6796562996041367"
+          },
+          "radius_upper_float": 3.233267151202054e-14,
+          "upper": {
+            "exponent": -65,
+            "mantissa": "-3398281495634953"
+          }
+        }
+      },
+      "node_index": 64,
+      "residual_after_hex": [
+        "0x1.467555ccb00d7p-11",
+        "-0x1.7bf398c954e15p-14"
+      ],
+      "residual_before_hex": [
+        "0x1.453f58c42e1c8p-11",
+        "0x1.98da596385000p-20"
+      ],
+      "z_hex": "0x1.34f5f604c3f72p+0"
+    },
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        -0.0022312874789598863,
+        0.0015861573038491621
+      ],
+      "approximate_leading_hex": [
+        "-0x1.247595800e065p-9",
+        "0x1.9fcd36fc4184fp-10"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -61,
+            "mantissa": "-5144998634994083"
+          },
+          "radius_upper_float": 3.8329325012490017e-14,
+          "upper": {
+            "exponent": -61,
+            "mantissa": "-5144998634817319"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -62,
+            "mantissa": "7314859461038473"
+          },
+          "radius_upper_float": 3.235018804749064e-14,
+          "upper": {
+            "exponent": -60,
+            "mantissa": "1828714865334213"
+          }
+        }
+      },
+      "node_index": 0,
+      "residual_after_hex": [
+        "-0x1.58d40efddbb6ap-10",
+        "0x1.6674ee045eacfp-10"
+      ],
+      "residual_before_hex": [
+        "0x1.e02e380480ac0p-11",
+        "-0x1.cac247bf16c00p-13"
+      ],
+      "z_hex": "0x1.2d47e189e2af7p+0"
+    },
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        -0.0011817281397482045,
+        -0.0009324687265980351
+      ],
+      "approximate_leading_hex": [
+        "-0x1.35c86eda17cf9p-10",
+        "-0x1.e8e1d57b74c6ap-11"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -62,
+            "mantissa": "-5449759139888263"
+          },
+          "radius_upper_float": 4.971318497867637e-14,
+          "upper": {
+            "exponent": -61,
+            "mantissa": "-2724879569714869"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -62,
+            "mantissa": "-4300252989266447"
+          },
+          "radius_upper_float": 4.195815836588671e-14,
+          "upper": {
+            "exponent": -62,
+            "mantissa": "-4300252988879451"
+          }
+        }
+      },
+      "node_index": 128,
+      "residual_after_hex": [
+        "-0x1.158ec6a919ee4p-12",
+        "-0x1.73a6570ee4d2ap-11"
+      ],
+      "residual_before_hex": [
+        "0x1.e0c97a5fa2a80p-11",
+        "0x1.d4edf9b23fd00p-13"
+      ],
+      "z_hex": "0x1.3ca40a7fa53edp+0"
+    },
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        -0.0022291362032722797,
+        0.001584250089131374
+      ],
+      "approximate_leading_hex": [
+        "-0x1.242d662ec9e3ep-9",
+        "0x1.9f4d3949386edp-10"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -56,
+            "mantissa": "-160626191593403"
+          },
+          "radius_upper_float": 3.831709221560533e-14,
+          "upper": {
+            "exponent": -59,
+            "mantissa": "-1285009532703047"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -62,
+            "mantissa": "7306063985590359"
+          },
+          "radius_upper_float": 3.233986398641303e-14,
+          "upper": {
+            "exponent": -62,
+            "mantissa": "7306063985888643"
+          }
+        }
+      },
+      "node_index": 1,
+      "residual_after_hex": [
+        "-0x1.58a9ac4fe5e5cp-10",
+        "0x1.67dc1f80dfe9dp-10"
+      ],
+      "residual_before_hex": [
+        "0x1.df62401b5bc40p-11",
+        "-0x1.bb88ce42c4280p-13"
+      ],
+      "z_hex": "0x1.2d487920cd0d9p+0"
+    },
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        -0.00222265935913076,
+        0.0015785124876934165
+      ],
+      "approximate_leading_hex": [
+        "-0x1.23541283e61acp-9",
+        "0x1.9dcc2e0b3befbp-10"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -58,
+            "mantissa": "-640637943150415"
+          },
+          "radius_upper_float": 3.827971715150553e-14,
+          "upper": {
+            "exponent": -61,
+            "mantissa": "-5125103545026785"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -62,
+            "mantissa": "7279603969259767"
+          },
+          "radius_upper_float": 3.230832100885287e-14,
+          "upper": {
+            "exponent": -62,
+            "mantissa": "7279603969557759"
+          }
+        }
+      },
+      "node_index": 2,
+      "residual_after_hex": [
+        "-0x1.582b7e7522f68p-10",
+        "0x1.6bd746b818afbp-10"
+      ],
+      "residual_before_hex": [
+        "0x1.dcf94d25527e0p-11",
+        "-0x1.8fa73a991a000p-13"
+      ],
+      "z_hex": "0x1.2d4a3fce2bf15p+0"
+    },
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        -0.0022117888256631855,
+        0.0015688973769589106
+      ],
+      "approximate_leading_hex": [
+        "-0x1.21e7515800de6p-9",
+        "0x1.9b46ebb303acbp-10"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -61,
+            "mantissa": "-5100037801600541"
+          },
+          "radius_upper_float": 3.821518864633648e-14,
+          "upper": {
+            "exponent": -57,
+            "mantissa": "-318752362589019"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -61,
+            "mantissa": "3617631048760033"
+          },
+          "radius_upper_float": 3.225386150196519e-14,
+          "upper": {
+            "exponent": -62,
+            "mantissa": "7235262097817557"
+          }
+        }
+      },
+      "node_index": 3,
+      "residual_after_hex": [
+        "-0x1.575c3f5f0cc2cp-10",
+        "0x1.71bf1c9c7663bp-10"
+      ],
+      "residual_before_hex": [
+        "0x1.d8e4c6a1e9f40p-11",
+        "-0x1.4c3e78b46a480p-13"
+      ],
+      "z_hex": "0x1.2d4d354be2515p+0"
+    },
+    {
+      "approximate_is_enclosure": false,
+      "approximate_leading_decimal": [
+        -0.002196414212508226,
+        0.0015553287523088063
+      ],
+      "approximate_leading_hex": [
+        "-0x1.1fe36e6c2169ep-9",
+        "0x1.97b85880b623cp-10"
+      ],
+      "leading_enclosure": {
+        "N": {
+          "lower": {
+            "exponent": -61,
+            "mantissa": "-5064586357337593"
+          },
+          "radius_upper_float": 3.811990691595147e-14,
+          "upper": {
+            "exponent": -61,
+            "mantissa": "-5064586357161795"
+          }
+        },
+        "beta": {
+          "lower": {
+            "exponent": -61,
+            "mantissa": "3586343930466131"
+          },
+          "radius_upper_float": 3.217344721150774e-14,
+          "upper": {
+            "exponent": -61,
+            "mantissa": "3586343930614505"
+          }
+        }
+      },
+      "node_index": 4,
+      "residual_after_hex": [
+        "-0x1.563fd129991fcp-10",
+        "0x1.789677006992cp-10"
+      ],
+      "residual_before_hex": [
+        "0x1.d30e175d53680p-11",
+        "-0x1.f21e1804c9100p-14"
+      ],
+      "z_hex": "0x1.2d51592521217p+0"
+    }
+  ],
+  "cpu_budget": 180.0,
+  "cpu_budget_kept": true,
+  "cpu_seconds": 178.015024,
+  "energy_folding_factor": 1,
+  "evaluation_identity": "96b7eaf9324e87d7c2f52d7edb9b8e7e4b08dd6cdd57e1f02e8e7fd9f0ce5531",
+  "field_or_source_evolutions": 0,
+  "full_successor_merit": null,
+  "higher_uv_remainder_C_M": null,
+  "history_path": "results/development/nsc-ks-gate-history-lm-broyden.json",
+  "large_cutoff_groups": [
+    10,
+    11,
+    12,
+    31,
+    32
+  ],
+  "max_abs_approximate_change_on_completed_nodes": 0.0022312874789598863,
+  "missing_node_count": 122,
+  "node_count": 129,
+  "order": 8,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "replay_merit_matches_register": true,
+  "saved_constraint_maxima": [
+    0.0009640931165493475,
+    0.00038096015963721627
+  ],
+  "saved_merit_decimal": 0.0009640931165493475,
+  "saved_merit_hex": "0x1.f976633f3d0d0p-11",
+  "source_identity_count": 60,
+  "source_identity_digest": "4e38f6ced7680f15aa8e337f19b9651450dd852657172749f6d8b69e2e270068",
+  "status": "OPEN: cubic leading added on completed exact target nodes; not a UV certificate",
+  "tiny_box_substituted": false,
+  "transport_cpu_seconds": [
+    {
+      "cpu_seconds": [
+        12.65888,
+        12.715497000000003
+      ],
+      "node_index": 64
+    },
+    {
+      "cpu_seconds": [
+        9.795765,
+        12.557299
+      ],
+      "node_index": 0
+    },
+    {
+      "cpu_seconds": [
+        12.704707999999997,
+        9.847054999999997
+      ],
+      "node_index": 128
+    },
+    {
+      "cpu_seconds": [
+        9.776415999999998,
+        12.824325000000002
+      ],
+      "node_index": 1
+    },
+    {
+      "cpu_seconds": [
+        10.050768000000005,
+        13.412337000000008
+      ],
+      "node_index": 2
+    },
+    {
+      "cpu_seconds": [
+        11.282774999999987,
+        13.293748999999991
+      ],
+      "node_index": 3
+    },
+    {
+      "cpu_seconds": [
+        9.962199999999996,
+        12.623131999999998
+      ],
+      "node_index": 4
+    }
+  ],
+  "uniform_C4_on_I": null,
+  "value_label": "v2-current-dop-g1024-d48-metadata2"
+}

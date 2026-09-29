@@ -10,3 +10,8 @@ paper/.build/
 .build/
 .DS_Store
 ._*
+
+# Generated witness rows. The summary JSON stays tracked.
+lab/results/development/nsc-direct-source-window-v1/
+lab/results/development/nsc-subgap-source-window-v1/
+lab/results/development/nsc-threshold18-import-v1/
