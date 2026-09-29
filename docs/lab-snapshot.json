@@ -12273,13 +12273,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 124586,
+      "bytes": 124834,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
+      "changed_from_commit": "cbba07c8466cfaabaf215863d685ea6b8885fde2",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "32c5fd9d37c5e4b43801b1cc48a436feab73521914a8c3f0236d60fbff544533"
+      "sha256": "a8ca7afb044f3b1d92eb31d2ffbb887d5562104c66e361e367b712825335cc0e"
     },
     {
       "bytes": 47762,
@@ -14638,6 +14638,13 @@
       "sha256": "877fe100b399d2a0493d9ee9fe28a02df5e087a461e2ac19b9819275b2df4ec9"
     },
     {
+      "bytes": 1862,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cbba07c8466cfaabaf215863d685ea6b8885fde2",
+      "path": "lab/docs/nsc-near-threshold-phase-pilot.md",
+      "sha256": "8c2d4692e183f054115105335504514dd149ba1ca5d3b14b4984f04df476ec44"
+    },
+    {
       "bytes": 7619,
       "original_git_blob": "d765ba39c1e09664e557b2e7ac90e3fa07bc49df",
       "original_sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
@@ -15002,11 +15009,11 @@
       "sha256": "bedfdbdba790919c6f86260ea893afb2432988ef62569dcccc6d0d2cbb522ea7"
     },
     {
-      "bytes": 3482,
+      "bytes": 3568,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
+      "changed_from_commit": "cbba07c8466cfaabaf215863d685ea6b8885fde2",
       "path": "lab/docs/nsc-source-occupation-enclosure.md",
-      "sha256": "d820c12c42bd2613cad98b6aaea678739c17ee94c7aaef2d6ec97a38fa3b2277"
+      "sha256": "e436274edc397bf8439ab5127b8648008405b634f258c9e830875d82c1e9fd21"
     },
     {
       "bytes": 4379,
@@ -78431,6 +78438,13 @@
       "changed_from_commit": "02bc6a34051eb5db7f37089aa4edb5e200cb2b98",
       "path": "lab/scripts/pilot_nsc_moderate_source_occupation.py",
       "sha256": "20c6363e92f9e455d673ae9a20e87f1470c9cd555895b4b51107431ebae5900a"
+    },
+    {
+      "bytes": 3216,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cbba07c8466cfaabaf215863d685ea6b8885fde2",
+      "path": "lab/scripts/pilot_nsc_near_threshold_source.py",
+      "sha256": "45699b5546f6e0b90e31c86cb50831120b676907c436faf83b844d6f218613a7"
     },
     {
       "bytes": 2497,

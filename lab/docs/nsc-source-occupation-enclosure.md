@@ -54,7 +54,7 @@ The eighth-order Bloch error was 7.5051e-13; the retained analytic occupation
 allowance was 1.38252e-12. This is a positive-row diagnostic, not a saved-witness
 source record. No negative partner or neighboring energy is counted by it.
 A separate near-threshold test at E=1.5594631247710442 failed the current phase
-tube check (cell1138 of1544); that row is not certified by the phase method.
+tube check (cell1138 of1544); that setting did not certify the row. A later [wider-tube control](nsc-near-threshold-phase-pilot.md) succeeds with explicit bounds.
 
 Reproduce the two positive-row diagnostics with
 `python scripts/lab.py scripts/pilot_nsc_moderate_source_occupation.py --run`
