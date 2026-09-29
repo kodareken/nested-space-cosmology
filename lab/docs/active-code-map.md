@@ -1860,3 +1860,7 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 
 - `src/recursive_horizons/nsc_measure_normalization.py` / `scripts/check_nsc_measure_normalization.py`: exact determinant-profile comparison, retained finite remainder, metric variation and sharp-cylinder cutoff-wall control. [Derivation](nsc-measure-normalization.md).
 - `src/recursive_horizons/nsc_influence.py` / `scripts/check_nsc_influence.py`: normalized Gaussian closed-time-path determinant, independent Fock trace, mean force, causal response, fluctuation-dissipation and geometric pair-production connection. [Derivation](nsc-influence.md).
+
+## Preparation-method range diagnostic
+
+- [Vacuum-correction range pilot](nsc-vacuum-correction-range-pilot.md): four bounded original-source checks distinguish enclosure refinement near E=4 from a finite-occupation limitation near E=2; no coverage or gate promotion. Owner: `scripts/pilot_nsc_vacuum_correction_range.py`.
