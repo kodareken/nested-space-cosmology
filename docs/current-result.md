@@ -62,6 +62,24 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Continuous preparation-error contribution, 29 September 2026
+
+The [source-response bound](../lab/docs/nsc-ks-source-operator-majorant.md)
+now connects 772 covered preparation rows to the actual local test: their
+combined error contributions are at most 4.064e-14 for N and 3.230e-14 for
+beta, continuously on I for the current history. These are partial error
+contributions, not new residual values. Remaining source rows/families,
+quadrature and the other error components still leave the gate OPEN.
+
+## Lower-middle source preparation, 29 September 2026
+
+The [new correction proof](../lab/docs/nsc-vacuum-source-correction.md)
+resolves the first retained group-14 middle-energy mode and its signed partner.
+The archived preparation's covariance error is enclosed near 1.003e-11,
+while the correction trajectory's Bloch error is below 4.076e-15. These
+source-input quantities still need contraction through the actual N/beta
+response. The original preparation remains intact and the gate remains OPEN.
+
 ## High-energy source preparation, 29 September 2026
 
 The [new preparation remainder](../lab/docs/nsc-vacuum-source-remainder.md)
