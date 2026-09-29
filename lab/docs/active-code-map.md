@@ -1890,3 +1890,5 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 - [Source insertion v3](nsc-ks-source-operator-majorant-v3.md): replays the low row15 witness and complete middle window; 868 signed rows covered, 300 still missing in family14_1. Earlier source-insertion records remain historical. Owner `scripts/derive_nsc_ks_source_operator_majorant_v3.py`.
 
 - [Direct homogeneous vacuum source](nsc-direct-vacuum-source.md): matching enclosed horizon frame, homogeneous Bloch transport, explicit CPU budget, saved-trace validation, separate signed archive comparisons and occupation allowance. Eight tests and independent review passed; not yet a production source window. Owner `src/recursive_horizons/nsc_direct_vacuum_source.py`.
+
+- [Shared cubic UV transport](nsc-ks-cubic-channel-basis.md): one unit-angular massless geometry march per characteristic sign, followed by algebraic mass/angular assembly. Existing factorization reused; 11 tests and independent review passed. Full I, cutoff-ledger aggregation and C_M remain open. Owner `src/recursive_horizons/nsc_ks_cubic_channel_basis.py`.

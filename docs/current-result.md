@@ -62,6 +62,15 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Shared UV coefficient transport, 29 September 2026
+
+The [shared channel basis](../lab/docs/nsc-ks-cubic-channel-basis.md) now implements
+the existing angular/mass factorization. It reuses one geometry-jet march per
+characteristic sign and assembles channel coefficients algebraically. Eleven
+tests and independent review passed; the group14 center enclosures retain the
+stored widths. This is not full-interval coverage or a higher UV remainder,
+and it has not been inserted into the physical residual.
+
 ## Low-energy transport method, 29 September 2026
 
 The independently reviewed [signed phase-transport successor](../lab/docs/nsc-massive-jost-mixed-transport.md)

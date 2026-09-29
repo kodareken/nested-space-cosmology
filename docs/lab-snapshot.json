@@ -12273,13 +12273,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 125862,
+      "bytes": 126224,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "21c3f8402204d81af174b8c23a51a9bf722943e0",
+      "changed_from_commit": "5e026eb836ff2796980d60b3efb6be20448ee2ac",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "ded2a935a70558479c7112fc1e94d58f4c37df2434702fd45bc90c98a6245eb5"
+      "sha256": "e28d1c731f888eb5298ab5b55c7a5a98f7711126d1b52b947c06520cf909db95"
     },
     {
       "bytes": 47762,
@@ -13523,6 +13523,13 @@
       "changed_from_commit": "65aec9ca3837060b5e1813413f93182259ca0d63",
       "path": "lab/docs/nsc-ks-covariance-insertion.md",
       "sha256": "6600ebe1a3430ee479e866cf7ed463d042b9a01f084a775e4d91588e80af0745"
+    },
+    {
+      "bytes": 5520,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5e026eb836ff2796980d60b3efb6be20448ee2ac",
+      "path": "lab/docs/nsc-ks-cubic-channel-basis.md",
+      "sha256": "3d1716b1a7a878188db5ef6e89279a4cb3a74d72be69870bd6027dbae1370a90"
     },
     {
       "bytes": 6187,
@@ -79399,6 +79406,13 @@
       "sha256": "dece2eb0315d7510574bc2660972ac1ae3e151c44eb940b428e01fe8cf25089f"
     },
     {
+      "bytes": 19868,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5e026eb836ff2796980d60b3efb6be20448ee2ac",
+      "path": "lab/src/recursive_horizons/nsc_ks_cubic_channel_basis.py",
+      "sha256": "70c05087519db995c3d5618b38a1e96ac63e6f6f79df967dc241d5409f23b47a"
+    },
+    {
       "bytes": 56567,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
@@ -81371,6 +81385,13 @@
       "changed_from_commit": "65aec9ca3837060b5e1813413f93182259ca0d63",
       "path": "lab/tests/test_nsc_ks_covariance_insertion.py",
       "sha256": "d13181411d1bbd2977c8cdfddbe86a8c67fc4248b44b7bcf49c3fa1c39f4c1d5"
+    },
+    {
+      "bytes": 18100,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5e026eb836ff2796980d60b3efb6be20448ee2ac",
+      "path": "lab/tests/test_nsc_ks_cubic_channel_basis.py",
+      "sha256": "1e15c60ec84839bd90d64ee29eeb263aae4c0feacec23dc1d4c473aba8b5dc64"
     },
     {
       "bytes": 10977,
