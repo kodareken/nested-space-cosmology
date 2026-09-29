@@ -62,6 +62,16 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Archived upstream source bound, 29 September 2026
+
+The [upstream successor](../lab/docs/nsc-subgap-upstream-covariance.md) bounds
+the original saved source on the production upstream slice, including its
+opposite-energy/opposite-angular partner. Both covariance errors are below
+6.03e-12 for this one low-energy row. No saved preparation is replaced. The
+proof replays a small stored curve and rejects changed payloads or a shifted
+initial time. Full source coverage and insertion into the local constraint
+budget remain unfinished.
+
 ## Massive UV coefficient extension, 29 September 2026
 
 The [massive-field extension](../lab/docs/nsc-ks-massive-cubic-uv.md) adds the
