@@ -1,5 +1,47 @@
 # Active code and evidence map
 
+## Continuous local source-error contribution, 2026-09-29
+
+The [exact-response majorant](nsc-ks-source-operator-majorant.md) now carries
+authenticated preparation errors into the actual history-minus-reference
+N/beta action for history 0b0e4ced. It uses characteristic row bounds and the
+existing continuous radius/coupling integrals. No numerical field norm or
+pointwise unitarity of the changed field is assumed. The full derivative
+retains both the energy carrier and the envelope derivative.
+
+For 772 covered signed rows in the original group14 positive-angular source
+family, the continuous contributions are at most 4.064e-14 (N) and
+3.230e-14 (beta), throughout I. The included preparation records cover the
+768 high-energy rows and the two low/middle signed pairs. The other 396
+signed rows in this family, its other positive angular family, other groups,
+quadrature and other numerical error components remain unbounded here.
+This partial result is not a complete upstream-budget certificate.
+
+The [numerical-endpoint insertion helper](nsc-ks-covariance-insertion.md)
+provides the alternative epsilon/gamma embedding through the original
+three-column source basis. It requires certified field errors to enlarge
+endpoint norms and keeps source-evidence authentication with the caller.
+Parent integration fixed denominator endpoint orientation and removed a
+panel-name-only implication of proof. Relative coherent phases are retained.
+The new correction and continuous-response proofs await independent review.
+
+## Enclosed lower-middle source correction, 2026-09-29
+
+The [correction owner](nsc-vacuum-source-correction.md) evolves the small
+difference from the vacuum covariance expansion, retaining its exact forcing
+and a nonzero horizon-to-start error bound. The first original group14/mid24_1
+row (E=16.019251120011916) now has a 484-cell proof witness with vacuum Bloch
+error below 4.076e-15. Replay validates the saved curve without a new solve.
+
+The resulting operator-distance intervals against the archived preparation
+are [1.0023109688e-11,1.0027187670e-11] for positive energy and
+[1.0023339345e-11,1.0027417327e-11] for its signed partner. Finite occupations
+and coherence are included separately. This resolves a small numerical source
+discrepancy; it is not an N/beta residual or an exclusion of the physical class.
+Original columns are preserved. The source error still needs the actual
+response-kernel contraction before a physical budget decision. Other lower
+rows and families remain uncovered.
+
 ## Uniform high-energy preparation remainder, 2026-09-29
 
 The [vacuum-source remainder owner](nsc-vacuum-source-remainder.md) derives
@@ -25,8 +67,11 @@ covariance errors through the actual local response, and complete the
 changed-history field remainder. Existing source columns and occupations stay
 unchanged. The source-method tests include exact nonconstant manufactured
 identities through order 8, a full-metric ODE comparison, and mutation controls.
-Parent tests and exact record replay passed; independent Grok review of this
-new preparation-remainder result is pending.
+Parent tests and exact record replay passed. Independent Grok review then
+found no under-enclosure in the finite-M recurrence, horizon limit, norm
+argument or thermal/coherent majorant; it independently ran all eight tests
+and the saved-record replay. The order-16 constant is conservative near E=32,
+so its bound is not a measurement of that large an actual source discrepancy.
 
 ## Archived upstream source and signed error, 2026-09-29
 

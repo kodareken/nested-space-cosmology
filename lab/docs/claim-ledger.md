@@ -50,6 +50,20 @@ It is compared directly with 768 original signed source rows in group14 at
 other rows/families, source quadrature and action contraction remain required.
 This preparation covariance bound is not the missing changed-history UV C_M.
 
+The [driven correction method](nsc-vacuum-source-correction.md) now resolves
+one lower-middle source row at E about 16.01925. Its validated trajectory is
+accurate enough to give a two-sided operator-distance bound of about 1.003e-11
+against the original preparation, including the signed partner. This is a
+numerical source discrepancy to be contracted through the local response;
+it is not itself a constraint residual or a failed physical class.
+
+The [continuous source insertion](nsc-ks-source-operator-majorant.md) now
+turns the covered preparation bounds into a bound on their actual local
+N/beta contribution for history 0b0e4ced. For 772 signed rows the uppers are
+4.064e-14 and 3.230e-14, respectively, continuously on I. The proof uses
+the exact pure-radius propagator's characteristic bounds. The uncovered
+rows/families and all other components still prevent full gate closure.
+
 ## Relation to familiar local physics
 
 The intended claim is an inherited nested realization that reduces to familiar
