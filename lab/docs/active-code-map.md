@@ -1,5 +1,50 @@
 # Active code and evidence map
 
+## Massive cubic effective-source coefficient, 2026-09-29
+
+The [massive extension](nsc-ks-massive-cubic-uv.md) derives the generic-mass
+coefficient from the same L0 operator, continuity and Pauli contractions.
+The massive h transport is retained until its observable contribution cancels.
+The reduced current gains $m^2(sq_{zz}-4bb_z)$, and its Sigma N bracket gains
+$-sam^2\Delta q_z$. The existing directed integrator handles the added
+forcing without modifying the historical massless owner.
+
+The group-14 pilot covers one incoming center and both source signs with the
+original angular pair and multiplicity 12. Its action coefficients of E^-3
+are N in [3.861017421e-5,3.861018049e-5] and beta in
+[-0.00763477229814,-0.00763477229284]. These are not the physical residuals
+or a complete high-energy tail. The explicit ell^2, ell^4 and m^2 ell^2
+factorization can reduce repeated family calculations, but has not been run
+as a full family campaign. C_M and uniform incoming-interval coverage remain
+the missing connections. The next task is those connections, not another
+massless derivation or an expansion to infinite nests.
+Parent checks passed, including all 52 related scientific tests and exact
+record replay. The independent massive-coefficient Grok audit timed out
+before returning its report; report recovery is pending. This checkpoint
+does not claim that independent review is complete.
+
+## Original subgap source covariance, 2026-09-29
+
+The [covariance enclosure](nsc-subgap-source-covariance.md) now connects the
+original group14/low16_1 row0 exterior reflection through the exact horizon
+frame and interior transport to the saved rho=1 source. It preserves the
+original coherence and source occupations. The actual PG-to-KS restriction
+cancels the spin-frame map and leaves a scalar phase that cancels in the
+covariance. A Bloch-vector defect bound uses the exact norm-preserving
+propagator, including metric-series tails and the endpoint bridge.
+
+The finer 381-cell witness bounds the original covariance's operator error
+by 6.03e-12; the 191-cell control gives 1.33e-11. These are source covariance
+errors for one energy and angular sign, not incoming N/beta errors. The
+record and compact NPZ are `nsc-subgap-source-covariance-v1`. Independent
+Grok review accepted the enclosure within this scope; focused controls also
+check the actual production frame restriction and deliberate coherence loss.
+
+Next source work is numerical continuation to rho_up, remaining source
+coverage and contraction into the changed-minus-reference effective source.
+No physical upstream budget entry is filled by this single-mode result.
+The older checkpoints below retain their original missing-step descriptions.
+
 ## Directed cubic coefficient pilot, 2026-09-29
 
 The [Volterra enclosure](nsc-ks-cubic-uv-enclosure.md) now evaluates the reduced

@@ -62,6 +62,26 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Massive UV coefficient extension, 29 September 2026
+
+The [massive-field extension](../lab/docs/nsc-ks-massive-cubic-uv.md) adds the
+mass terms derived from the same operator and action, with a directed pilot
+for the original group-14 pair at one incoming point. It also factors the
+formal coefficient into three shared geometric terms, offering a way to
+reduce later repeated calculations. The full high-energy remainder and
+continuous interval coverage remain OPEN. No physical residual or budget
+entry has been replaced by the formal coefficient.
+
+## Original source covariance bound, 29 September 2026
+
+The [source-preparation enclosure](../lab/docs/nsc-subgap-source-covariance.md)
+now reaches the original rho=1 data for one low-energy massive mode, with
+covariance operator error below 6.03e-12. It combines the exterior reflection,
+matched horizon conventions and continuous interior transport without changing
+the stored source. Remaining energies, angular partners, continuation to the
+upstream slice and constraint contraction are still required. This source
+sub-bound does not fill a complete error-budget component or change either PDF.
+
 ## Directed UV coefficient pilot, 29 September 2026
 
 The [new enclosure](../lab/docs/nsc-ks-cubic-uv-enclosure.md) gives rigorous

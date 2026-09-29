@@ -59,6 +59,9 @@ dependency decision; this helper does not silently drop missing files.
 ## Scientific framing and authority
 
 NSC investigates a proposed larger nested realization of familiar local physics.
+The inheritance relation is the organizing foundation. Numerical work computes
+its local reduction and effective source on the declared slice; it does not
+try to calculate the inheritance identity itself or an infinity of nests.
 The approved task is the nonlocal-to-local correspondence and one self-consistent
 local realization. It does not require contradicting or falsifying LambdaCDM,
 removing its local terms, or changing measured local laws to make NSC succeed.

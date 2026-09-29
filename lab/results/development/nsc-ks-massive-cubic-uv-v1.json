@@ -1,0 +1,431 @@
+{
+  "angular_enclosure": {
+    "lower": {
+      "exponent": -157,
+      "mantissa": "408502126287392903439279018525002525279771444461"
+    },
+    "upper": {
+      "exponent": -157,
+      "mantissa": "408502126287392923286892198739048247133683598573"
+    }
+  },
+  "angular_evenness_used": true,
+  "bits": 160,
+  "cases": [
+    {
+      "accepted_cells": 1024,
+      "cells": 1024,
+      "order": 8,
+      "sign": 1,
+      "values": {
+        "J3": {
+          "lower": {
+            "exponent": -169,
+            "mantissa": "-933519407869486337820766814742616967553752744659"
+          },
+          "upper": {
+            "exponent": -169,
+            "mantissa": "-933519407322828042111230970623257431557275108051"
+          }
+        },
+        "N_bracket3": {
+          "lower": {
+            "exponent": -171,
+            "mantissa": "-342159522378800185879002049263298863738306308893"
+          },
+          "upper": {
+            "exponent": -171,
+            "mantissa": "-342159519787905083240620450502886852736598027037"
+          }
+        },
+        "q_z": {
+          "lower": {
+            "exponent": -181,
+            "mantissa": "881830587542506050773142114693779453424694238327"
+          },
+          "upper": {
+            "exponent": -181,
+            "mantissa": "881830587542615433085951337734267083081603128439"
+          }
+        },
+        "q_zz": {
+          "lower": {
+            "exponent": -174,
+            "mantissa": "1133002806081142816668128928982963894589942141785"
+          },
+          "upper": {
+            "exponent": -174,
+            "mantissa": "1133002806096382505231801442221061636691490771801"
+          }
+        },
+        "surface_mass_correction": {
+          "lower": {
+            "exponent": -179,
+            "mantissa": "-459117152366776815088631777621881910341226421541"
+          },
+          "upper": {
+            "exponent": -179,
+            "mantissa": "-459117152366719830378046605108189263621231959333"
+          }
+        }
+      }
+    },
+    {
+      "accepted_cells": 1024,
+      "cells": 1024,
+      "order": 8,
+      "sign": -1,
+      "values": {
+        "J3": {
+          "lower": {
+            "exponent": -170,
+            "mantissa": "-1124288787609231098171211796903483137591203684513"
+          },
+          "upper": {
+            "exponent": -170,
+            "mantissa": "-1124288786626813670877265533048742671267910475937"
+          }
+        },
+        "N_bracket3": {
+          "lower": {
+            "exponent": -171,
+            "mantissa": "311904344057222489500864961911733891984386275173"
+          },
+          "upper": {
+            "exponent": -171,
+            "mantissa": "311904346385329092128689390049998379294393743205"
+          }
+        },
+        "q_z": {
+          "lower": {
+            "exponent": -178,
+            "mantissa": "389314431852094039454012283312845335842641013203"
+          },
+          "upper": {
+            "exponent": -178,
+            "mantissa": "389314431852106471789030701968276226840157612499"
+          }
+        },
+        "q_zz": {
+          "lower": {
+            "exponent": -176,
+            "mantissa": "1321313289628888647299942436819714477192099582353"
+          },
+          "upper": {
+            "exponent": -176,
+            "mantissa": "1321313289684181362671329306536186168992078156177"
+          }
+        },
+        "surface_mass_correction": {
+          "lower": {
+            "exponent": -178,
+            "mantissa": "810772208867545737628345938152814123240795566215"
+          },
+          "upper": {
+            "exponent": -178,
+            "mantissa": "810772208867571691972045723187972677569930752135"
+          }
+        }
+      }
+    }
+  ],
+  "channel": {
+    "absolute_angular_hex": "0x1.1e3779b97f4a8p+1",
+    "archived_thermal_splits_not_a_tail": [
+      160.0,
+      320.0
+    ],
+    "degeneracy": 12,
+    "group": 14,
+    "mass_hex": "0x1.921fb54442d18p+0",
+    "multiplicity_per_signed_family": 12,
+    "positive_mass": true,
+    "quadrature_cutoff": 160.0,
+    "quadrature_measure_by_sign": {
+      "-1": 160.0,
+      "1": 160.0
+    }
+  },
+  "complete_UV_tail": null,
+  "coverage": {
+    "all_source_families": false,
+    "cells": 1024,
+    "entire_incoming_interval": false,
+    "factorization_integrated_for_all_groups": false,
+    "group": 14,
+    "incoming_points": 1,
+    "order": 8,
+    "source_signs": [
+      1,
+      -1
+    ]
+  },
+  "formal_leading_term_at_cutoff_160": {
+    "N": {
+      "lower": {
+        "exponent": -186,
+        "mantissa": "73962399761240123662230922020393937664457891319"
+      },
+      "upper": {
+        "exponent": -186,
+        "mantissa": "73962411786329810851524727873703241907091070455"
+      }
+    },
+    "beta": {
+      "lower": {
+        "exponent": -179,
+        "mantissa": "-114260297875223768760287277907041560170346078365"
+      },
+      "upper": {
+        "exponent": -179,
+        "mantissa": "-114260297795936569063812786185282430185577406621"
+      }
+    },
+    "is_complete_uv_tail": false
+  },
+  "higher_uv_remainder_C_M": null,
+  "identities": {
+    "L_h_parent": "-m ell/4 (s a^2 r_rho + r_z)/r^2",
+    "Sigma_delta_N_bracket": "s delta(J3)/a + a^3/2 delta(b_rho^2) - 4 s b^2 delta(q_z)/a + s a b delta(b_rhoz) - s a m^2 delta(q_z)",
+    "Ts_J3_massive": "-a^2 b b_rhorhoz+a^2 b_rho b_rhoz-2 a a_rho b b_rhoz-s b b_rhozz+s b_z b_rhoz-16 b^3 b_z/a^2+4 s b^2 q_zz/a^2 + m^2 (s q_zz - 4 b b_z)",
+    "Ts_qz": "-4 b b_z/a^2",
+    "Ts_qzz": "-4 (b_z^2+b b_zz)/a^2",
+    "action_N": "-mu/(2 pi) N_bracket",
+    "action_beta": "+mu/(2 pi) J3",
+    "factorization": {
+      "J2_prime": "-a^2 b0 b0_rhorhoz + a^2 b0_rho b0_rhoz - 2 a a_rho b0 b0_rhoz - s b0 b0_rhozz + s b0_z b0_rhoz",
+      "J3": "ell^2 J2 + ell^4 J4 + m^2 ell^2 JM",
+      "J4_prime": "-16 b0^3 b0_z/a^2 + (4 s b0^2/a^2) Qzz",
+      "JM_prime": "-4 b0 b0_z + s Qzz",
+      "N_bracket": "ell^2 N2 + ell^4 N4 + m^2 ell^2 NM",
+      "Qz_prime": "-4 b0 b0_z/a^2",
+      "Qzz_prime": "-4 (b0_z^2 + b0 b0_zz)/a^2",
+      "b": "ell b0",
+      "q_z": "ell^2 Qz",
+      "q_zz": "ell^2 Qzz",
+      "upstream_differences": "zero, the same homogeneous representative"
+    },
+    "massless_Ts_J3": "-a^2 b b_rhorhoz+a^2 b_rho b_rhoz-2 a a_rho b b_rhoz-s b b_rhozz+s b_z b_rhoz-16 b^3 b_z/a^2+4 s b^2 q_zz/a^2",
+    "residuals": {
+      "s+1/J3_h_coefficient": "0",
+      "s+1/J3_hz_coefficient": "0",
+      "s+1/J3_pauli": "0",
+      "s+1/J_factor": "0",
+      "s+1/L_J3": "0",
+      "s+1/L_J3_massless_reduction": "0",
+      "s+1/L_commutes_with_z": "0",
+      "s+1/L_h3_from_V": "0",
+      "s+1/L_h3z_minus_s_n4": "0",
+      "s+1/L_h_massless_limit": "0",
+      "s+1/L_h_nonzero_unit_jet": "0",
+      "s+1/L_h_parent": "0",
+      "s+1/L_q": "0",
+      "s+1/L_qz": "0",
+      "s+1/L_qzz": "0",
+      "s+1/N_factor": "0",
+      "s+1/N_minus_s_J3_over_a": "0",
+      "s+1/Qz_factor": "0",
+      "s+1/Qzz_factor": "0",
+      "s+1/Re_lC_independent_of_h": "0",
+      "s+1/Sigma_common_k_cancels": "0",
+      "s+1/Sigma_difference": "0",
+      "s+1/Sigma_q_cancels": "0",
+      "s+1/b_matches_angular_square": "0",
+      "s+1/b_rhoz_survives": "0",
+      "s+1/continuity_n4": "0",
+      "s+1/even_in_ell": "0",
+      "s+1/generated_has_no_h": "0",
+      "s+1/mass_correction_not_zero": "0",
+      "s+1/minor_A1": "0",
+      "s+1/minor_A2_from_L0": "0",
+      "s+1/minor_A2_real_imag": "0",
+      "s+1/minor_A3_from_L0": "0",
+      "s+1/radius_z_vanishes_sets_b_z": "0",
+      "s+1/radius_zz_vanishes_sets_b_zz": "0",
+      "s+1/raw_h_coefficient_is_q_z": "0",
+      "s+1/raw_hz_coefficient_is_q": "0",
+      "s-1/J3_h_coefficient": "0",
+      "s-1/J3_hz_coefficient": "0",
+      "s-1/J3_pauli": "0",
+      "s-1/J_factor": "0",
+      "s-1/L_J3": "0",
+      "s-1/L_J3_massless_reduction": "0",
+      "s-1/L_commutes_with_z": "0",
+      "s-1/L_h3_from_V": "0",
+      "s-1/L_h3z_minus_s_n4": "0",
+      "s-1/L_h_massless_limit": "0",
+      "s-1/L_h_nonzero_unit_jet": "0",
+      "s-1/L_h_parent": "0",
+      "s-1/L_q": "0",
+      "s-1/L_qz": "0",
+      "s-1/L_qzz": "0",
+      "s-1/N_factor": "0",
+      "s-1/N_minus_s_J3_over_a": "0",
+      "s-1/Qz_factor": "0",
+      "s-1/Qzz_factor": "0",
+      "s-1/Re_lC_independent_of_h": "0",
+      "s-1/Sigma_common_k_cancels": "0",
+      "s-1/Sigma_difference": "0",
+      "s-1/Sigma_q_cancels": "0",
+      "s-1/b_matches_angular_square": "0",
+      "s-1/b_rhoz_survives": "0",
+      "s-1/continuity_n4": "0",
+      "s-1/even_in_ell": "0",
+      "s-1/generated_has_no_h": "0",
+      "s-1/mass_correction_not_zero": "0",
+      "s-1/minor_A1": "0",
+      "s-1/minor_A2_from_L0": "0",
+      "s-1/minor_A2_real_imag": "0",
+      "s-1/minor_A3_from_L0": "0",
+      "s-1/radius_z_vanishes_sets_b_z": "0",
+      "s-1/radius_zz_vanishes_sets_b_zz": "0",
+      "s-1/raw_h_coefficient_is_q_z": "0",
+      "s-1/raw_hz_coefficient_is_q": "0"
+    }
+  },
+  "incoming_point_hex": "0x1.34f5f604c3f72p+0",
+  "initial_difference_values": [
+    0,
+    0,
+    0
+  ],
+  "initial_physical_normalization_claimed_zero": false,
+  "input_hashes": {
+    "results/development/nsc-ks-cutoff-bridge-control.json": "04c376aa9ce588129ae7b6890a2689a586a05cc110703acb300b49699143b07e",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+  },
+  "leading_term_is_complete_uv_tail": false,
+  "mass_enclosure": {
+    "lower": {
+      "exponent": -159,
+      "mantissa": "1147860701762054685600618677739370107807182432005"
+    },
+    "upper": {
+      "exponent": -159,
+      "mantissa": "1147860701762054730346201369484633647927206684421"
+    }
+  },
+  "massless_h_equation_imposed": false,
+  "measure": "mu=12 twice for the angular pair, divided by 2 pi; source signs separate; N minus and beta plus",
+  "paired_action_cubic": {
+    "N": {
+      "lower": {
+        "exponent": -170,
+        "mantissa": "57783124813468864358226311023644384754202602857"
+      },
+      "upper": {
+        "exponent": -170,
+        "mantissa": "57783134208070146980645290456119036786070023529"
+      }
+    },
+    "beta": {
+      "lower": {
+        "exponent": -167,
+        "mantissa": "-1428253723440297108513238942409715282210026600363"
+      },
+      "upper": {
+        "exponent": -167,
+        "mantissa": "-1428253722449207114288011858744334597239016961963"
+      }
+    }
+  },
+  "physical_UV_budget_component": null,
+  "physical_local_gate": "OPEN",
+  "physical_source_error": null,
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "rho_up_hex": "0x1.07ae147ae147cp+0",
+  "schema": "NSC-KS-MASSIVE-CUBIC-UV-v1",
+  "source_hashes": {
+    "docs/nsc-ks-massive-cubic-uv.md": "05e520af8c05deea9445ac0a64487fdc3300511c3d4390a5b5684307c496d658",
+    "scripts/derive_nsc_ks_massive_cubic_uv.py": "d00de01028990a57ef5097cabf042108a89cced5adf28762de0aa3f2e5fb0331",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_complex_horizon_modes.py": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_dirac_source_phase.py": "39c36757c1fb38d200d050efc21e00f1913cac14a511a8f2b93e507267bf40fd",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_incoming_high_energy_source.py": "5c7712f9193b8374384a92f9a6bd5d631ba94012e750a7cf56ffb4f58c0d9502",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_spectral_panels.py": "f22e672a87753ea5f53c722718a726f0b44e09c418f9e4e9d449b3f79ec280d9",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_operator.py": "9b42c4a175a417f51bb955acfd7f4f8c6680a8034e2e351758c48d1e07ccc442",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_chebyshev_jet_bound.py": "9994f3fb4e1762b58157ef0077260bddedec2ae36fea44dc84861021620be520",
+    "src/recursive_horizons/nsc_ks_cubic_uv_current.py": "f6b8173afe8e536151861b64380c013ebd7aa7956283913363f4566ae498cb70",
+    "src/recursive_horizons/nsc_ks_cubic_uv_enclosure.py": "2167314c6fb413585dec030299b443031933bb5ba4108a1dba3aac4ddfb73e16",
+    "src/recursive_horizons/nsc_ks_current_history_bounds.py": "b91e67848da65a4603ed24fb09065b0f0abcedd7abfd6663d701747d890bc77a",
+    "src/recursive_horizons/nsc_ks_current_uv_transport.py": "cbd10a312cfd4f14ba122a5f32579870fda08ca9239f89e19b5a07b83c55d31e",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_energy_propagator.py": "9630ceb91eff6b9fcecbf79eccc61470d2f60622861f5f8d21c2b54f11a4b6cf",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_finite_history_uv_coefficients.py": "cf05d38d4862280b6a9fc161ea361c771cc25d70739685337aa7b291cc45f1ff",
+    "src/recursive_horizons/nsc_ks_finite_history_uv_remainder.py": "5ba807494545a0700f1a65643fcc36e156ca2998ca674e83262341590e728bca",
+    "src/recursive_horizons/nsc_ks_history_evaluator.py": "446ede4f0c05b1952476d89fdef85885c3acae0d588e4f92cd3de1b1c16fb5da",
+    "src/recursive_horizons/nsc_ks_local_constraints.py": "ef09afe2ff77a76dba5fb1580c47efc82cd9e4c11f288144d64d98457232d56a",
+    "src/recursive_horizons/nsc_ks_massive_cubic_uv.py": "3914040c7243b397945f429ee6268582fbc96b20d0a70a884c8e85052e4672da",
+    "src/recursive_horizons/nsc_ks_matter_difference.py": "81b87ad8f903c9495b9a8c29825cfa9c1edb18f60677dab55939de43d537750c",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_fourier_bound.py": "4189d40faf66f157056a2aee7cc06f51d7203e26ee2fced58dff98a647d76087",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_residual_error.py": "3733dfe52a38a076ff368ff90082b29f12bda27351204eec6dea20fcc98c1243",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_source_inventory.py": "e969f8a30c525a19c1abfd1bce49133484d03b10b7ebdabefcba2cb75b3bafd3",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_ks_uv_minor_a3.py": "09040ddcc575fb1780b70fd6f01f054b6aab2bc1c63c1ff822ae8a404af74e91",
+    "src/recursive_horizons/nsc_ks_value_evaluator.py": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4",
+    "src/recursive_horizons/nsc_local_history_newton.py": "1b55fac1ef1217556e04c9b2231dd15fd9eb30e81039c84fa09223434fc76495",
+    "src/recursive_horizons/nsc_local_incoming_constraints.py": "2dc5ed9f90db240ece33441d38b94e4cc636761b26b9918bf7b5e98909573111",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py": "18624ecc149e1d3842523390b0a4ebaff135ec170f737fd2dac45f9f7d102b6b",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_pg_packet_modes.py": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+    "src/recursive_horizons/nsc_pg_retarded_packets.py": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+    "tests/test_nsc_ks_massive_cubic_uv.py": "60f481f064a1d26a9247f4d2ac449bdd2b43126aaeaf6209ef9a177e391dad79"
+  },
+  "source_inventory_unchanged": true,
+  "source_signs": [
+    1,
+    -1
+  ],
+  "status": "ENCLOSED: formal massive cubic coefficient at one incoming point of original group 14; not a UV tail; physical gate OPEN",
+  "uniform_C4_on_I": null
+}

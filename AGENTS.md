@@ -26,7 +26,7 @@ AGENTS.md                 entry point and maintained index
 | Location, branches, commands and recovery | [Instructions](docs/instructions.md), [consolidation](docs/repository-consolidation.md) |
 | Task authority and scientific status | User-approved plan in the conversation; [scope](docs/instructions.md#scientific-framing-and-authority), [status](docs/current-result.md), [code map](lab/docs/active-code-map.md) |
 | Existing mathematics, assumptions and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
-| Source and UV certification methods | [Horizon/source](lab/docs/nsc-metric-horizon-frame.md), [UV coefficient enclosure](lab/docs/nsc-ks-cubic-uv-enclosure.md), [UV derivation](lab/docs/nsc-ks-cubic-uv-current.md), [full method map](lab/docs/active-code-map.md) |
+| Source and UV certification methods | [Source covariance](lab/docs/nsc-subgap-source-covariance.md), [massive UV coefficient](lab/docs/nsc-ks-massive-cubic-uv.md), [UV enclosure](lab/docs/nsc-ks-cubic-uv-enclosure.md), [full method map](lab/docs/active-code-map.md) |
 | Active field methods | [Whole cone](lab/docs/nsc-ks-whole-cone-field-v1.md), [radius coupling](lab/docs/nsc-ks-radius-coupling-bounds.md), [endpoint contraction](lab/docs/nsc-ks-endpoint-contraction.md) |
 | Both papers and public status | [Paper guide](docs/papers.md), [current result](docs/current-result.md), [catalog](paper/catalog.json) |
 | Finite nested-quality theorem | [Proof](docs/nsc-nested-qualities.md), [frozen evidence](paper/nested-quality-evidence/snapshot.json) |

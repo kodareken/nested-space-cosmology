@@ -1,0 +1,149 @@
+{
+  "all_source_families": false,
+  "angular_sign": 1,
+  "bits": 192,
+  "cases": [
+    {
+      "bloch_error_upper": {
+        "exponent": -226,
+        "mantissa": "2807397557375125129464555610772772387289381776986823343457"
+      },
+      "cells": 191,
+      "endpoint_bridge_upper": {
+        "exponent": -245,
+        "mantissa": "6113551089346806928361482557968116385670934260304370564183"
+      },
+      "initial_bloch_error_upper": {
+        "exponent": -227,
+        "mantissa": "2355907291632662634824713930491299833653903455160417411173"
+      },
+      "max_step_hex": "0x1.999999999999ap-5",
+      "name": "control",
+      "nfev": 2867,
+      "normalized_defect_integral_upper": {
+        "exponent": -226,
+        "mantissa": "1629432250885481917049970172850734744410363874071187726763"
+      },
+      "rho1_covariance_operator_error_upper": {
+        "exponent": -225,
+        "mantissa": "713024742412875101560408779421461575489167540367970818423"
+      }
+    },
+    {
+      "bloch_error_upper": {
+        "exponent": -228,
+        "mantissa": "5022707924018243777991626906485454817653790935737648656663"
+      },
+      "cells": 381,
+      "endpoint_bridge_upper": {
+        "exponent": -245,
+        "mantissa": "6113551089346806928361482557968116385670934260304370564183"
+      },
+      "initial_bloch_error_upper": {
+        "exponent": -227,
+        "mantissa": "2355907291632662634824713930491299833653903455160417411173"
+      },
+      "max_step_hex": "0x1.999999999999ap-6",
+      "name": "fine",
+      "nfev": 5717,
+      "normalized_defect_integral_upper": {
+        "exponent": -231,
+        "mantissa": "2486773584477367426666281238378433969101754592600849519097"
+      },
+      "rho1_covariance_operator_error_upper": {
+        "exponent": -229,
+        "mantissa": "5201524345828796498593693163494131512308923672835794577575"
+      }
+    }
+  ],
+  "changed_history_state_evaluated": false,
+  "coherence_dropped_operator_difference_lower": {
+    "exponent": -191,
+    "mantissa": "1569036142612798094659458482300059905182968375051197386711"
+  },
+  "defect_degree": 12,
+  "end_log_delta_hex": "-0x1.334e2f90f5194p+0",
+  "energy_hex": "0x1.5b4f66ca1e080p-10",
+  "energy_quadrature_error_included": false,
+  "energy_sign": 1,
+  "group": 14,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-metric-horizon-frame-v1.json": "6a4452f230ed96162ad09dff2db37384ef3523ddd62f465e47050cd1a4fe447a"
+  },
+  "metric_terms": 48,
+  "numerical_continuation_to_rho_up_error": null,
+  "payload": {
+    "bytes": 119444,
+    "path": "results/development/artifacts/nsc-subgap-source-covariance-v1.npz",
+    "sha256": "ae1eb4d926eff7996abb21deb5451be0241e576c962fdb8c0ea3fe73e8254bae"
+  },
+  "physical_local_gate": "OPEN",
+  "physical_upstream_budget_component": null,
+  "reference_preparation_only": true,
+  "schema": "NSC-SUBGAP-SOURCE-COVARIANCE-v1",
+  "source_columns_replaced": false,
+  "source_covariance_replaced": false,
+  "source_hashes": {
+    "docs/nsc-subgap-source-covariance.md": "ece42b1d9c9330355f89c955de376048a70151fe7092a32a1ab0763c23e2dbe5",
+    "scripts/derive_nsc_subgap_source_covariance.py": "bcf9931bcbbc6cb4fa0ac0d350a66eb187d9737b3e051d157eaf8813d7b5fba2",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_charged_ctp_neck.py": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_massive_jost_phase_bound.py": "4dfd7dce2ce4030b95882cb2d6e2605a32c2e8d058f6a6067e3c686d49c5e78b",
+    "src/recursive_horizons/nsc_metric_horizon_frame.py": "13302db0da160ef256a73f930e63ce94463d2b09ed7082731336e1f7d820dc92",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_subgap_source_covariance.py": "74548e6fc430e298091393d08834d4b82270db68c2c3c2ceb317917135979c87",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+    "tests/test_nsc_subgap_source_covariance.py": "1cbf63f7f1de8965675d44bec9af6fc3b7b5c03e5d608b059fb87a5f957c9a8b"
+  },
+  "source_kappa_hex": "0x1.e8175b59c4f10p-3",
+  "source_panel": "group14/low16_1",
+  "source_row": 0,
+  "start_log_delta_hex": "-0x1.56f6a800b64a7p+3",
+  "status": "ENCLOSED: one original subgap source covariance at rho=1; full preparation budget OPEN",
+  "target_rho_hex": "0x1.0000000000000p+0",
+  "trajectory_columns": [
+    "y0",
+    "y1",
+    "n_start[3]",
+    "n_end[3]",
+    "F1..F6[3]"
+  ]
+}

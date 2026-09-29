@@ -21,6 +21,21 @@ that formal coefficient at one point for the original massless group-1 pair.
 Its explicit Taylor remainder replaces a refinement indicator for that scope.
 Uniform C4 on I, higher UV remainder and the physical UV budget remain OPEN.
 
+The [source covariance successor](nsc-subgap-source-covariance.md) now completes
+phase matching and interior transport for one original subgap mode at rho=1.
+Its directed covariance operator error is below 6.03e-12. This is a prepared
+source sub-bound, not a constraint residual: continuation to rho_up, source
+coverage and its contraction into N/beta remain required. The exact
+inheritance relation is reused; these calculations concern only the effective
+source on the declared slice.
+
+The [massive UV extension](nsc-ks-massive-cubic-uv.md) now derives the generic
+mass terms and encloses the original group-14 pair at one incoming point.
+Its 74 symbolic residuals vanish, and a parameter factorization identifies
+three shared geometric coefficients. The higher-order remainder and full
+interval coverage remain unbounded. Its formal leading-term integral is
+neither an error budget nor a completed physical tail.
+
 ## Relation to familiar local physics
 
 The intended claim is an inherited nested realization that reduces to familiar
