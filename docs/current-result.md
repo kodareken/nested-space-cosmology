@@ -62,6 +62,24 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Expanded source coverage and initial vacuum columns, 29 September 2026
+
+The complete middle window now contains 48 original positive rows and their
+48 actual negative partners, saved and replayed without re-evolution. The
+[v2 response bound](../lab/docs/nsc-ks-source-operator-majorant-v2.md) replaces
+the earlier single middle pair, rather than adding it twice. Together with
+reused high-energy and low-row evidence it covers 866 signed rows of family
+14_1. The continuous source-error contributions are bounded by 1.792e-13 for N
+and 1.424e-13 for beta. Another 302 signed rows in this family, other families,
+quadrature and the other components remain missing. These are error bounds;
+the candidate residuals above have not changed.
+
+The independently reviewed [vacuum-column remainder](../lab/docs/nsc-vacuum-spinor-remainder.md)
+records eight original-channel cases and supplies phase-fixed initial
+coefficients through A4 with an explicit omitted-term bound. It does not yet
+supply the propagated changed-history remainder or finite-occupation errors.
+Neither result closes the full upstream budget or the incoming gate.
+
 ## Continuous preparation-error contribution, 29 September 2026
 
 The [source-response bound](../lab/docs/nsc-ks-source-operator-majorant.md)
