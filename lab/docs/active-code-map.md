@@ -1879,8 +1879,10 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 
 - Current middle-coverage tests: `tests/test_nsc_middle_source_coverage_v2.py` preserves production hashes before/after every test. The original test file remains frozen in row-record provenance; its pre-campaign absence assumption is excluded from default collection.
 
-- [Signed subgap phase transport](nsc-massive-jost-mixed-transport.md): permits finite growth where the predecessor required contraction; original low16_1 row15 pilot completed, 15 tests and independent review passed. Missing/boolean bounds are rejected. Owner: `src/recursive_horizons/nsc_massive_jost_mixed_transport.py`; no production row record yet.
+- [Signed subgap phase transport](nsc-massive-jost-mixed-transport.md): permits finite growth where the predecessor required contraction; original low16_1 row15 pilot completed, 15 tests and independent review passed. Missing/boolean bounds are rejected. Owner: `src/recursive_horizons/nsc_massive_jost_mixed_transport.py`; the saved row15 witness is now available; aggregate inclusion is separate.
 
 - [Source occupation norm](nsc-source-occupation-enclosure.md), independently reviewed: exact max(sqrt(f),n) source-to-vacuum norm with the existing incoming gap; moderate-energy positive-row pilot. Owners `src/recursive_horizons/nsc_source_occupation_enclosure.py`, `tests/test_nsc_source_occupation_enclosure.py`. Not yet part of the authenticated source aggregate.
 
 - [Near-threshold phase pilot](nsc-near-threshold-phase-pilot.md): the original subgap8/14_1 row7 is enclosed using a wider validated phase tube; two earlier tighter-tube controls failed. No production row record or aggregate coverage change yet.
+
+- [Saved low-row witness](nsc-subgap-row-witness.md): original low16_1 row15, 843 phase cells and 671 Bloch cells, actual signed source arrays, no-solve replay and 13 mutation/structural tests. Owner `scripts/derive_nsc_subgap_row15_upstream.py`; record `results/development/nsc-subgap-row15-upstream-v1.json`.
