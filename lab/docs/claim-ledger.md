@@ -43,6 +43,13 @@ covariance errors below 6.03e-12. The signed comparison includes numerical
 Gram/complement discrepancy. This advances the preparation method; remaining
 source coverage and its continuous constraint contraction are still required.
 
+The [high-energy preparation remainder](nsc-vacuum-source-remainder.md) now
+has a uniform inverse-energy defect bound and separate finite-occupation terms.
+It is compared directly with 768 original signed source rows in group14 at
+|E|>=32, whose unweighted covariance errors are each at most 9.87e-13. The
+other rows/families, source quadrature and action contraction remain required.
+This preparation covariance bound is not the missing changed-history UV C_M.
+
 ## Relation to familiar local physics
 
 The intended claim is an inherited nested realization that reduces to familiar

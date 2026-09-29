@@ -1,5 +1,33 @@
 # Active code and evidence map
 
+## Uniform high-energy preparation remainder, 2026-09-29
+
+The [vacuum-source remainder owner](nsc-vacuum-source-remainder.md) derives
+a finite inverse-energy covariance expansion and bounds its exact equation
+defect using norm-preserving homogeneous Bloch evolution. The directed
+constant is independent of energy. Thermal and coherent contributions use
+the original occupation law and flux conservation; reflection is not set
+to zero. The order-8 pilot bounds the source-to-expansion covariance error
+at E=160 by 8.46e-15, with an explicit bound for every higher energy.
+
+The owner also compares with the actual archived source, rather than treating
+that new expansion as a replacement preparation. An order-16 pilot covers
+384 positive rows in the original group14 positive-angular family with E>=32
+and their 384 signed partners. The largest unweighted source-covariance error
+is below 9.87e-13. All original per-row preparation/source digests are retained.
+The 400 lower-energy signed rows in that family, the other positive angular
+family, source quadrature and the remaining families are outside this pilot.
+
+This is a covariance preparation result. It is not the changed-history C_M,
+a same-column H2 certificate, or an integrated N/beta tail. The new scalar
+constant must not be copied into those missing slots. Next: insert the source
+covariance errors through the actual local response, and complete the
+changed-history field remainder. Existing source columns and occupations stay
+unchanged. The source-method tests include exact nonconstant manufactured
+identities through order 8, a full-metric ODE comparison, and mutation controls.
+Parent tests and exact record replay passed; independent Grok review of this
+new preparation-remainder result is pending.
+
 ## Archived upstream source and signed error, 2026-09-29
 
 The [upstream covariance successor](nsc-subgap-upstream-covariance.md) reaches

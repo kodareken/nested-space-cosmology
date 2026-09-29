@@ -62,6 +62,17 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## High-energy source preparation, 29 September 2026
+
+The [new preparation remainder](../lab/docs/nsc-vacuum-source-remainder.md)
+bounds a covariance expansion using its equation defect and the exact metric.
+Its comparison with the original archived data covers 768 signed rows in one
+group-14 source family at |E|>=32. Their largest unweighted covariance error
+is below 9.87e-13. The saved source arrays and occupations are unchanged.
+Lower energies, other families, quadrature and contraction into the physical
+constraints remain unfinished. This does not close the changed-history UV
+remainder or any complete local-gate budget component.
+
 ## Archived upstream source bound, 29 September 2026
 
 The [upstream successor](../lab/docs/nsc-subgap-upstream-covariance.md) bounds
