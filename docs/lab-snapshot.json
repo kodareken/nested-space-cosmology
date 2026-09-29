@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 117388,
+      "bytes": 119158,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "c6ae76d42161f2bb932fade3b050ae0ac016f2d30f3e3a32b9fc41a961e78470"
+      "sha256": "d89cd636a882994b53f3fca0de26bbe590407cd51f7ded9429fb98655d71a0d7"
     },
     {
-      "bytes": 45535,
+      "bytes": 45998,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "6c4dd4984e13221fb44f29a796a4883aa9b91c2cc01868aebbf8162b69752b78"
+      "sha256": "12c4005713f44fd0d3a28edc70e416d8274b79142cd1f479b5f34d54012fd142"
     },
     {
       "bytes": 16589,
@@ -15182,6 +15182,13 @@
       "original_sha256": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d",
       "path": "lab/docs/nsc-vacuum-matched-ctp.md",
       "sha256": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d"
+    },
+    {
+      "bytes": 6547,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
+      "path": "lab/docs/nsc-vacuum-source-remainder.md",
+      "sha256": "5a6ade8319e370443b9929cbfe6de91f794b52c741d1ea7548bece7e7a21fccb"
     },
     {
       "bytes": 8554,
@@ -74777,6 +74784,13 @@
       "sha256": "d7e07b91446abfcb8c9dfe7783687600028260e73794ca8aea803dae2af8e2aa"
     },
     {
+      "bytes": 572514,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
+      "path": "lab/results/development/nsc-vacuum-source-remainder-v1.json",
+      "sha256": "296821fd1b154c04f351c0438e59e7a4a83867b29608583de02666a2323098b5"
+    },
+    {
       "bytes": 26401,
       "original_git_blob": "5b90ce0c0a6e48e11ebda1d51dc5bb5e83f7a73d",
       "original_sha256": "66436d286f1feb79398745ed16aa0ce129fcd02ba2445d38c7b5aa81a317ac34",
@@ -77542,6 +77556,13 @@
       "sha256": "0e087b61ffffad4b00c91d5a34c9e6683a88f2dcedd8799c0ada5f0470305fb6"
     },
     {
+      "bytes": 8435,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
+      "path": "lab/scripts/derive_nsc_vacuum_source_remainder.py",
+      "sha256": "6d45720faaec2b092ef4f294ac41f65e4800a4db20b8c86e44ae11023e02046c"
+    },
+    {
       "bytes": 6465,
       "original_git_blob": "8b1bfa0cbc1f5c6be3c776bb02d642f062431a76",
       "original_sha256": "fcb6374a46742aead87223f6eb5e1dfc3524a6f0b4cdbb4af670c27075901ea5",
@@ -79418,6 +79439,13 @@
       "sha256": "a31e4dbc52fa241684a54a071bda254ecea5963bb1d25493b3c17d7200c09836"
     },
     {
+      "bytes": 9403,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
+      "path": "lab/src/recursive_horizons/nsc_vacuum_source_remainder.py",
+      "sha256": "84bd9fe4faafabd3fdf3dfbbdfff39e27920449bc8946f8c7704bcf518cb93dd"
+    },
+    {
       "bytes": 6533,
       "original_git_blob": "aef28d102bf9eb5bbc45c72175825f91aea7ba93",
       "original_sha256": "4505e3f66bd684855aae6dda842e1d9c94f288b2e3585293678d81694d9c514c",
@@ -81285,6 +81313,13 @@
       "original_sha256": "823102818db758193db82af216b7c2f4d410588d08aa8b513061589fdb9229dd",
       "path": "lab/tests/test_nsc_upstream_compensator.py",
       "sha256": "823102818db758193db82af216b7c2f4d410588d08aa8b513061589fdb9229dd"
+    },
+    {
+      "bytes": 8582,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "724a768c18f15f5bddc566e9690b98c7db5cf7f7",
+      "path": "lab/tests/test_nsc_vacuum_source_remainder.py",
+      "sha256": "0ad9abff9c40995537c12d293bf57ce611beb99811f5b5ec7460a66ea3b0a1d7"
     },
     {
       "bytes": 3681,
