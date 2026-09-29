@@ -1,11 +1,14 @@
 # Active code and evidence map
 
 Routing, 29 September 2026. This map indexes laboratory owners. It is not an
-order to run them. The intended claim is an effective local response under
-familiar local laws from specified nested surroundings. Reusable mathematics,
-proposed interpretations, and the chosen numerical application stay distinct.
-The local incoming gate remains OPEN. Its campaign is paused while that
-application's contribution is assessed. Its threshold, source, and history
+order to run them. Next research investigates sustained balanced turnover at
+stable overall regional size and content. Reuse existing inherited-law,
+regional-state, transfer and conservation results, and choose tests that
+serve that mechanism. Relate the question to time as registration of spatial
+change and to the matter–antimatter hypothesis. Those readings are not
+proved. The local incoming gate remains OPEN and its campaign is paused. It
+is a retained application. Its relevance can be reconsidered when useful,
+not as a compulsory assessment before this work. Its threshold, source, and history
 apply only to that application, not to every nested claim and not to arXiv
 generally. A later "next", "required", or "the plan requires the gate" line
 records a technical dependency or an older cursor. It does not authorize
@@ -500,10 +503,11 @@ statements below stay historical.
 The source-fixed incoming gate on `I=S(1)+[.12,.18]` is one chosen numerical
 application. It is not the compulsory sprint for every nested claim, and it
 is not an automatic path to a citable PDF or public release. The gate remains
-OPEN. The campaign is paused while its contribution to the intended claim is
-assessed. It may resume when that contribution is justified; there is no
-permanent ban. Global matching, extended stationarity, metric stepping, and
-observations are not current work and are not reasons to refute LambdaCDM.
+OPEN. The campaign is paused. Its relevance can be reconsidered when useful;
+that is not a required written assessment or a permission barrier. There is
+no permanent ban on later error-controlled numerical work. Global matching,
+extended stationarity, metric stepping, and observations are not current work
+and are not reasons to refute LambdaCDM.
 The latest user instruction controls; no local plan is maintained.
 
 While paused, do not launch the expensive generators. The law, source

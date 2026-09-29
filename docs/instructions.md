@@ -91,14 +91,24 @@ Keep three layers distinct:
   interval, residual threshold, source, and history apply only there.
 
 The gate remains OPEN: neither local existence nor a controlled exclusion is
-established. The campaign that continues its expensive error budget is paused
-while its contribution to the intended claim is assessed. It may resume when
-that contribution is justified. There is no permanent ban, and compaction is
-not a reason to restart it. Pausing does not discard that application's error
-bounds or locked parameters. A failure or gap in that class is not a verdict
-on LambdaCDM or on every nested interpretation, and it is not a prerequisite
-for other nested claims or for arXiv discussion in general. Release 0.27.0
-remains reserved for a closed result of this application.
+established. Its expensive error-budget campaign is paused. The gate is a
+retained application, not the centre of the next task. Its relevance can be
+reconsidered when useful. That reconsideration is not a compulsory essay,
+check, or permission barrier before other work. Pausing does not ban later
+error-controlled numerical work on an appropriate question, and compaction is
+not a reason to restart this campaign. Pausing does not discard that
+application's error bounds or locked parameters. A failure or gap in that
+class is not a verdict on LambdaCDM or on every nested interpretation, and it
+is not a prerequisite for other nested claims or for arXiv discussion in
+general. Release 0.27.0 remains reserved for a closed result of this
+application.
+
+Next research reuses existing inherited-law, regional-state, transfer and
+conservation results to investigate sustained balanced turnover at stable
+overall regional size and content. Relate that question to time as the
+registration of spatial change, and to the matter–antimatter hypothesis.
+Those readings are not proved. Choose tests that serve this mechanism. Do not
+make a written assessment of the paused gate the required next act.
 
 Pictures of an interior and its surroundings, a room, or two sides of a coin
 organize the question. They are not literal equations, and they are not claims

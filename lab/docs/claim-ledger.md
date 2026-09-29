@@ -4,17 +4,23 @@
 
 The latest user instruction controls. Repository plan and handover copies are
 historical and do not own the task. An older conversation plan treated closing
-the incoming gate as the compulsory sprint; that routing is superseded by the
-pause below. The intended claim is an effective local response, under familiar
-local laws, from specified nested surroundings. Reusable mathematics, proposed
-interpretations, and the chosen numerical application stay distinct. See
+the incoming gate as the compulsory sprint; that routing is superseded. Next
+research reuses existing inherited-law, regional-state, transfer and
+conservation results to investigate sustained balanced turnover at stable
+overall regional size and content. Relate that question to time as the
+registration of spatial change and to the matter–antimatter hypothesis.
+Those proposals are not proved. Choose tests that serve this mechanism.
+The intended claim remains an effective local response, under familiar local
+laws, from specified nested surroundings. Reusable mathematics, proposed
+interpretations, and the retained numerical application stay distinct. See
 [scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
 
 The finite nested-quality result below is reused. It remains valid within its
-stated domain and does not depend on the incoming-gate campaign. That gate remains OPEN. Its campaign is paused while
-its contribution to the intended claim is assessed, and it may resume when
-that contribution is justified. Six missing error components, the coupled
-solve, and a closed certificate still block a closed result for that
+stated domain and does not depend on the incoming-gate campaign. That gate
+remains OPEN and its campaign is paused. It is a retained application. Its
+relevance can be reconsidered when useful; that is not a compulsory
+assessment or permission check before the mechanism work. Six missing
+error components, the coupled solve, and a closed certificate still block a closed result for that
 application only. They are not prerequisites for every nested claim or for
 arXiv discussion in general. Global cosmological matching is not established
 and is not a demand to refute LambdaCDM. Charge conjugation, the standard
@@ -222,7 +228,8 @@ for \(B=N,\beta\). An alternative closed result is a necessary relation
 excluding this same local class with controlled error. A failed search is
 OPEN. Neither outcome proves or refutes the entire regenerative interpretation,
 LambdaCDM, or every nested claim. The campaign pursuing this question is
-paused until its contribution to the intended claim is justified. The target
+paused. Its relevance can be reconsidered when useful; that pause is not a
+compulsory assessment before the turnover investigation. The target
 and the recorded gaps stay in force for this class; they are not waived and
 not universal.
 
