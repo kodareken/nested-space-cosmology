@@ -92,9 +92,9 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 53752,
+      "bytes": 53759,
       "path": "docs/current-result.md",
-      "sha256": "217adccd0ff3b477aacda0f43169c163e508c1b322de7faeba8baae7557bffcf"
+      "sha256": "0a36c332a0d0108e6c5d3b9edb0a3a9b6d3bfc704b7ffb324a0a77ec434fb978"
     },
     {
       "bytes": 14497,
@@ -107,9 +107,9 @@
       "sha256": "2ef27eb7a54766f6f48d93f2cb5208a552102fd07f1ef20db367e7a47219e9ac"
     },
     {
-      "bytes": 4656248,
+      "bytes": 4657667,
       "path": "docs/lab-snapshot.json",
-      "sha256": "a6fc2fc3b3f40d25d93ae9672f1adb86f7bd09ff5617626b3dc1aafc369b6c9e"
+      "sha256": "174a9e4075aca0527073c282120628f7fc8bb306dd9be2ceebabe5f2937921f2"
     },
     {
       "bytes": 4771,
@@ -3357,7 +3357,7 @@
       "sha256": "55224209078cd78c7a433d679ac8748e2f6c7206b1fb295d41fc2ce196ae86c6"
     }
   ],
-  "lab_snapshot_sha256": "a6fc2fc3b3f40d25d93ae9672f1adb86f7bd09ff5617626b3dc1aafc369b6c9e",
+  "lab_snapshot_sha256": "174a9e4075aca0527073c282120628f7fc8bb306dd9be2ceebabe5f2937921f2",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.26.0",

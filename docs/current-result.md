@@ -71,18 +71,18 @@ frame and upstream Bloch transport, with signed source covariance errors about
 1.05e-10. Fifteen tests and an independent pilot replay passed. This remains a
 one-row result. Its [saved witness](../lab/docs/nsc-subgap-row-witness.md) now
 replays without either solver, with 13 structural and mutation tests passed.
-It has not yet been added to the 866-row source aggregate, and the full upstream
-budget remains OPEN.
+It is included in the 868-row v3 source aggregate; the full upstream budget
+remains OPEN.
 
 ## Expanded source coverage and initial vacuum columns, 29 September 2026
 
 The complete middle window now contains 48 original positive rows and their
 48 actual negative partners, saved and replayed without re-evolution. The
-[v2 response bound](../lab/docs/nsc-ks-source-operator-majorant-v2.md) replaces
+[v3 response bound](../lab/docs/nsc-ks-source-operator-majorant-v3.md) replaces
 the earlier single middle pair, rather than adding it twice. Together with
-reused high-energy and low-row evidence it covers 866 signed rows of family
-14_1. The continuous source-error contributions are bounded by 1.792e-13 for N
-and 1.424e-13 for beta. Another 302 signed rows in this family, other families,
+reused high-energy evidence and both verified low-row pairs it covers 868 signed
+rows of family14_1. The continuous source-error contributions are bounded by
+1.838e-13 for N and 1.461e-13 for beta. Another 300 signed rows in this family, other families,
 quadrature and the other components remain missing. These are error bounds;
 the candidate residuals above have not changed.
 
