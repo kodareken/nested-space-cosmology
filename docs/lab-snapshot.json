@@ -12273,13 +12273,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 121937,
+      "bytes": 122261,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "65aec9ca3837060b5e1813413f93182259ca0d63",
+      "changed_from_commit": "d8ccbf596dc0ce682d6793c4bfacb6ffd7796bcf",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "57ebcc30653aed24e35a8dec0fc55b7c68e0705e6fb697d30d9d299b95b65bad"
+      "sha256": "0f74de3adcfaf6887b5dd6a4c045e9ea4029c4841b3aa216402effad32fe4cee"
     },
     {
       "bytes": 46888,
@@ -15189,6 +15189,13 @@
       "original_sha256": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024",
       "path": "lab/docs/nsc-vacuum-charge-matching.md",
       "sha256": "6d1801dbe6bf129bad06e932c64f45fb175ea2b7a3be3b5bf142e1ba2ae43024"
+    },
+    {
+      "bytes": 2168,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d8ccbf596dc0ce682d6793c4bfacb6ffd7796bcf",
+      "path": "lab/docs/nsc-vacuum-correction-range-pilot.md",
+      "sha256": "0108571935d4f8a89156c1fc726f9cf60fa0563778a32f5f64b26d4bab1eb5d1"
     },
     {
       "bytes": 8359,
@@ -77652,6 +77659,13 @@
       "original_sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
       "path": "lab/scripts/map_nsc_adm_neck_source.py",
       "sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c"
+    },
+    {
+      "bytes": 2497,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d8ccbf596dc0ce682d6793c4bfacb6ffd7796bcf",
+      "path": "lab/scripts/pilot_nsc_vacuum_correction_range.py",
+      "sha256": "dda514c3e82ddbc4a6bc9e535861a586bffd616fd51fa61866467e59a948b2c4"
     },
     {
       "bytes": 11695,
