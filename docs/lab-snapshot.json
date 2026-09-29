@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 115981,
+      "bytes": 117388,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "b8e6624694fcf3a5b3acf237b963fac0b0c229a75a9510dafc36f74e7f987f1b"
+      "sha256": "c6ae76d42161f2bb932fade3b050ae0ac016f2d30f3e3a32b9fc41a961e78470"
     },
     {
-      "bytes": 45070,
+      "bytes": 45535,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "a8224cf361ceea1a9371f76eee36716c617b421efd8fe1c22f5b2988116a36ab"
+      "sha256": "6c4dd4984e13221fb44f29a796a4883aa9b91c2cc01868aebbf8162b69752b78"
     },
     {
       "bytes": 16589,
@@ -15028,6 +15028,13 @@
       "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
       "path": "lab/docs/nsc-subgap-source-covariance.md",
       "sha256": "ece42b1d9c9330355f89c955de376048a70151fe7092a32a1ab0763c23e2dbe5"
+    },
+    {
+      "bytes": 3179,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "path": "lab/docs/nsc-subgap-upstream-covariance.md",
+      "sha256": "97b2aaf199621e7d0985310952e8e5a10c6f41929288db55509ae6577203836d"
     },
     {
       "bytes": 5472,
@@ -71613,6 +71620,13 @@
       "sha256": "ae1eb4d926eff7996abb21deb5451be0241e576c962fdb8c0ea3fe73e8254bae"
     },
     {
+      "bytes": 80544,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "path": "lab/results/development/artifacts/nsc-subgap-upstream-covariance-v1.npz",
+      "sha256": "acdee6a1860f748bc265511b5f0b190668dc79cef57c8dd95f31220787220143"
+    },
+    {
       "bytes": 14321218,
       "original_git_blob": "855bc4358ca645b0d0a4a5fb2e2b5977b8aaff6f",
       "original_sha256": "0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4",
@@ -74665,6 +74679,13 @@
       "sha256": "18b3a83cda878cbc43f04ba6ea2cdfb557fff3ccc19ac8ed4424f5b1ca7e4937"
     },
     {
+      "bytes": 21380,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "path": "lab/results/development/nsc-subgap-upstream-covariance-v1.json",
+      "sha256": "8590404c131ce18b08d19d1f933c0a29bbe132e24870ef873719ae6a22644637"
+    },
+    {
       "bytes": 59802,
       "original_git_blob": "f0156b1f044b1a79abcb25ffaae7c35966c5503d",
       "original_sha256": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a",
@@ -77437,6 +77458,13 @@
       "sha256": "bcf9931bcbbc6cb4fa0ac0d350a66eb187d9737b3e051d157eaf8813d7b5fba2"
     },
     {
+      "bytes": 9610,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "path": "lab/scripts/derive_nsc_subgap_upstream_covariance.py",
+      "sha256": "1b924aaf50671f1790d87fcb390bd74deeadd154b196e05292cf562e75c6b361"
+    },
+    {
       "bytes": 16385,
       "original_git_blob": "92b81758edefe9fe11bc6c85c708214c8d5cb395",
       "original_sha256": "f8fb4e3ad94433f84931115b6ca8fa250900fb02a68a5984734c722209c49fd9",
@@ -79297,6 +79325,13 @@
       "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
       "path": "lab/src/recursive_horizons/nsc_subgap_source_covariance.py",
       "sha256": "74548e6fc430e298091393d08834d4b82270db68c2c3c2ceb317917135979c87"
+    },
+    {
+      "bytes": 2086,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "path": "lab/src/recursive_horizons/nsc_subgap_upstream_covariance.py",
+      "sha256": "74595ca4deee3b1209b7f034869885b2addd9ed446505b4c53ed5cd0c4094727"
     },
     {
       "bytes": 4481,
@@ -81173,6 +81208,13 @@
       "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
       "path": "lab/tests/test_nsc_subgap_source_covariance.py",
       "sha256": "1cbf63f7f1de8965675d44bec9af6fc3b7b5c03e5d608b059fb87a5f957c9a8b"
+    },
+    {
+      "bytes": 4357,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
+      "path": "lab/tests/test_nsc_subgap_upstream_covariance.py",
+      "sha256": "60af837a03c21abe2fbd92ce0fbbaa99ccd8dc6de43ef7ad1c83b68e1461cc54"
     },
     {
       "bytes": 1252,

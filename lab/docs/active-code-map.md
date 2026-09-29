@@ -1,5 +1,25 @@
 # Active code and evidence map
 
+## Archived upstream source and signed error, 2026-09-29
+
+The [upstream covariance successor](nsc-subgap-upstream-covariance.md) reaches
+the production rho_up=1.0300000000000002 slice and compares with the unchanged
+archived columns, rather than a fresh replacement preparation. For the same
+original group14/low16_1 row0, operator errors are bounded by 6.026e-12 for
+positive energy and 5.994e-12 for its opposite-angular negative partner.
+The numerical Gram discrepancy (Frobenius upper 1.261e-13) is retained by the
+signed comparison. A counterexample detects the incorrect shortcut of copying
+the positive scalar bound to the negative sector.
+
+The 379-cell witness is revalidated from its saved payload without rerunning
+DOP853. Payload, original-source and initial-time mutations are rejected.
+The result concerns one unweighted source covariance at each sign; quadrature
+and contraction into the effective source still have to be supplied, alongside
+remaining energies and the other positive angular family. No full upstream
+budget component is filled. The next implementation is the covariance-error
+insertion into the same changed-minus-reference N/beta action, with the source
+normalization and actual field derivative retained.
+
 ## Massive cubic effective-source coefficient, 2026-09-29
 
 The [massive extension](nsc-ks-massive-cubic-uv.md) derives the generic-mass
@@ -19,9 +39,11 @@ as a full family campaign. C_M and uniform incoming-interval coverage remain
 the missing connections. The next task is those connections, not another
 massless derivation or an expansion to infinite nests.
 Parent checks passed, including all 52 related scientific tests and exact
-record replay. The independent massive-coefficient Grok audit timed out
-before returning its report; report recovery is pending. This checkpoint
-does not claim that independent review is complete.
+record replay. The independent massive-coefficient Grok audit's recovered
+report found no algebra, sign, multiplicity or enclosure defect within the
+one-point scope. That was a static review; the tests and replay were run by
+the parent. The reusable mass-ball guard now also rejects an interval
+crossing below zero; the recorded positive-mass values are unchanged.
 
 ## Original subgap source covariance, 2026-09-29
 

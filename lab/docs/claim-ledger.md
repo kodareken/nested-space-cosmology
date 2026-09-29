@@ -36,6 +36,13 @@ three shared geometric coefficients. The higher-order remainder and full
 interval coverage remain unbounded. Its formal leading-term integral is
 neither an error budget nor a completed physical tail.
 
+The [archived upstream successor](nsc-subgap-upstream-covariance.md) now compares
+with the actual production preparation at rho_up, retaining its original
+digests and arrays. Both energy signs of one original subgap row have directed
+covariance errors below 6.03e-12. The signed comparison includes numerical
+Gram/complement discrepancy. This advances the preparation method; remaining
+source coverage and its continuous constraint contraction are still required.
+
 ## Relation to familiar local physics
 
 The intended claim is an inherited nested realization that reduces to familiar
