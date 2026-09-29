@@ -26,8 +26,11 @@ unresolved concern. Apply the same scope to delegated work.
 
 ## Current frontier
 
-The active question is the source-fixed local incoming gate on
-`I=S(1)+[0.12,0.18]`; its status is OPEN. Use
+The current objective is whether specified nested surroundings produce an
+effective local response under familiar local laws
+([scientific framing](docs/instructions.md#scientific-framing-and-authority)).
+The source-fixed local incoming gate on `I=S(1)+[0.12,0.18]` remains OPEN,
+and its campaign is paused. Use
 [the current result](docs/current-result.md) for evidence and missing bounds,
 and [the paper guide](docs/papers.md) for the preserved foundational manuscript
 and the focused companion. Finite operator, Schur and recursion results are
@@ -93,5 +96,5 @@ a relationship already made understandable, not replace the explanation.
 Keep each repository a coherent public object. Do not combine this programme with unrelated private infrastructure, internal authorization language, or unpublished chronology. Use only relative links inside the repository, plus ordinary literature citations.
 
 The [paper guide](docs/papers.md) identifies both sources, PDFs and manifests.
-The foundational manuscript is preserved; the local-gate companion develops the
-current narrower question without replacing it.
+The foundational manuscript is preserved; the focused companion does not
+replace it.

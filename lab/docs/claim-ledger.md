@@ -1,12 +1,56 @@
 # Current NSC claim ledger
 
-## Active scope: correspondence and closed local gate, 28 September 2026
+## Active scope, 29 September 2026
 
-Douglas approved the road-to-arXiv plan in the conversation. Repository plan
-and handover copies are historical and do not own the active task. The finite
-nested-quality result below is reused. Six error components, the coupled solve,
-closed certificate and matching publication remain required. Global cosmological
-matching and charge-conjugation identification remain subsequent research.
+The latest user instruction controls. Repository plan and handover copies are
+historical and do not own the task. An older conversation plan treated closing
+the incoming gate as the compulsory sprint; that routing is superseded by the
+pause below. The intended claim is an effective local response, under familiar
+local laws, from specified nested surroundings. Reusable mathematics, proposed
+interpretations, and the chosen numerical application stay distinct. See
+[scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
+
+The finite nested-quality result below is reused. It remains valid within its
+stated domain and does not depend on the incoming-gate campaign. That gate remains OPEN. Its campaign is paused while
+its contribution to the intended claim is assessed, and it may resume when
+that contribution is justified. Six missing error components, the coupled
+solve, and a closed certificate still block a closed result for that
+application only. They are not prerequisites for every nested claim or for
+arXiv discussion in general. Global cosmological matching is not established
+and is not a demand to refute LambdaCDM. Charge conjugation, the standard
+particle–antiparticle map, does not derive antimatter and does not forbid
+investigating a geometric origin.
+
+Douglas sets the research question. The agent accepts it, chooses useful
+tests, and reports evidence, without replacing the target by a LambdaCDM
+challenge or the paused gate. His proposed mechanism, in his words: time does
+not exist, it is part of space; thermal forces cause movement; the same
+process forms particle, sphere, matter and antimatter; the missing antimatter
+is the clock of time. He said to buy that direction and test it, not sneak
+back.
+
+That statement is a research hypothesis, not a demonstrated equality or an
+accepted universal law. Investigate gradients leading to spatial change and
+structure, time as the registration of that change rather than an independent
+driver, and whether matter–antimatter asymmetry expresses the direction of
+this process. It does not say a thermal force is necessary for every motion,
+and the words are not a mechanical identity.
+
+His final clarification is that the inheritance relation
+\(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\) (`T*D=D`) is
+intended as an inherited law across morphing and configuration changes.
+Structures break down and feed further configurations, like a fountain. A
+region can retain overall size and content through balanced continuous
+turnover. This is the proposed regenerative mechanism to investigate. It is
+not a proved dynamical result of the invariant equation, and it is not a new
+requirement to prove infinity or eternity. Douglas sets the direction; the
+assistant tests the proposed connection, without a silent LambdaCDM
+competition or an arbitrary replacement of the gate.
+
+The records immediately below are source and ultraviolet evidence for that
+paused application. Where they say a continuation is required, the requirement
+is internal to closing this application. It is not an instruction to resume
+the campaign now, and it does not discard the recorded gaps.
 
 The [full-profile horizon-frame result](nsc-metric-horizon-frame.md) encloses
 the local Frobenius series and a representative affine reflection. Its analytic
@@ -66,15 +110,34 @@ rows/families and all other components still prevent full gate closure.
 
 ## Relation to familiar local physics
 
-The intended claim is an inherited nested realization that reduces to familiar
-local equations with an effective source. Contradicting LambdaCDM is not a
-success condition. The unchanged-action local gate tests self-consistency of the
-declared geometry and evolved state. Its outcome is scoped to that class.
-The exact Schur identity supplies a reduced response; identifying its stress,
-background and perturbations with the complete cosmological dark sectors remains
-subsequent work, as the approved plan states. Spherical inside/outside coupling
-is the physical motivation and controlled symmetry assumption here, not a new
-requirement to prove universal sphericity or eternal dynamics.
+The intended claim is that specified nested surroundings reduce to familiar
+local equations plus an effective source. Familiar local laws are the local
+equations already in use. LambdaCDM — general relativity with a cosmological
+constant and cold dark matter — is that kind of description. Contradicting it
+is not a success condition, and a completed match to all of its observables
+is not claimed. The exact Schur identity supplies a reduced response.
+Identifying its stress, background, and perturbations with the cosmological
+dark sectors is not done.
+
+Inside and outside, and the two faces of a coin, are pictures of that
+reduction. They are not literal equations the author must defend. Spherical
+inside/outside coupling is the controlled symmetry assumption of the numerical
+application, not a requirement to prove that every structure is a sphere or
+that the dynamics are eternal.
+
+Charge conjugation is the standard map between particle and antiparticle
+sectors. The name does not mean antimatter has been derived here, and it does
+not mean a geometric origin is forbidden or already proved. Sheet exchange
+remains a different operation.
+
+The unchanged-action local gate is the chosen numerical test of one declared
+geometry and evolved state. Its source already comes from the parent, horizon
+and infinity state data of the declared shared KS/Dirac action
+(`nsc_ks_source_inventory`, `nsc_paired_horizon_preparation`,
+`nsc_common_ks_trace`). Operator self-energy \(\Sigma\) and state covariance
+\(C\) are different quantities; do not require \(\Sigma=C\). The gate remains
+OPEN. Its campaign is paused. Its outcome, threshold, source, and history are
+scoped to that class.
 
 ## Current focus: nested qualities
 
@@ -89,7 +152,8 @@ model result, not a change to the OPEN gravitational gate or a derivation of
 cosmological abundance fractions.
 
 The paragraph below records the completed 27 September finite-model scope.
-The latest user-approved conversation plan governs the full sprint.
+The latest user instruction governs. It does not restart the paused gate
+campaign.
 
 | Quality | Existing mathematical statement / owner | Task |
 |---|---|---|
@@ -102,9 +166,10 @@ Shared laws permit different regional states and behavior. A stable region
 and an unstable one can both be allowed; neither is a general disproof of the
 other. Keep occupation, temperature, density and boundary data explicit.
 
-Eternity, heat death, inevitable regeneration, a full cosmological likelihood
-fit were not prerequisites for that finite-model result. The local numerical
-gate is again required by the active 28 September plan.
+Eternity, heat death, inevitable regeneration, and a full cosmological
+likelihood fit were not prerequisites for that finite-model result. The local
+numerical gate is not a prerequisite for it either. That gate remains a
+separate OPEN application whose campaign is paused.
 The sections below retain earlier interpretation/model/evidence context and
 do not replace the current proof map. No existing physical result is relabeled.
 
@@ -122,8 +187,10 @@ $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-The definition of the region/domain map \(\mathcal T_\Theta\) carries the
-inside/outside interpretation; the equality states the proposed invariance.
+The definition of the region/domain map \(\mathcal T_\Theta\) is where an
+inside/outside picture can be given a domain. The equality states the proposed
+invariance of that map. The picture is not itself the equation, and it is not
+a literal claim that must be defended apart from the stated operator and domain.
 The existing exact reductions and recursion controls below are reusable
 results within their recorded domains. They are not tasks to derive again.
 The expression is retained in the public theory and manuscript. Its
@@ -138,10 +205,10 @@ relation or promote the record's broad interpretation to an observed fact.
 | Regional elimination | \(K_A-BK_B^{-1}B^\dagger\); [common-source derivation](nsc-common-source-derivation.md) and [energy transfer](nsc-energy-transfer.md#the-missing-part-of-boundary-elimination-is-explicit) | Eliminating a region leaves retarded memory and initial-state correlations. The retarded operator alone does not select an occupation state or energy current. |
 | State transport | \(C_\Sigma[g]=F[g]C_{\rm src}F[g]^\dagger\), \(\delta C_{\rm src}=0\); [evolved state](nsc-evolved-incoming-state.md) | The upstream preparation is fixed. Geometry changes both incoming fields and their retarded response. Numerical preparation and full field error bounds remain open; see the [current proof gap](nsc-ks-evaluator-repair-v2.md#prepared-source-error-that-remains-to-be-bounded). The finite control is not a solved metric history. |
 | Work and conservation | \(\dot E_A=\operatorname{Tr}(CJ_A)+\operatorname{Tr}(C\dot h_A)\); [transfer](nsc-energy-transfer.md) and [geometry work](nsc-vacuum-work.md) | Static equilibrium gives zero net continuing transfer; a prepared excitation transfers energy and a prescribed geometry pulse does work. Those existing controls do not supply self-consistent continuing regeneration. |
-| Geometry/state consistency | \(\mathcal E_N[g]=\mathcal E_\beta[g]=0\); [evolved constraints](nsc-evolved-incoming-constraints.md) | This is the active local incoming gate under the unchanged action and source. It includes the retarded state derivative and remains OPEN. |
-| Continuing regeneration | The connected mechanism proposed above | The global state, metric dynamics and entropy accounting of a continuing sequence are not established by the local gate. They remain subsequent research and are not added to this sprint's completion conditions. |
+| Geometry/state consistency | \(\mathcal E_N[g]=\mathcal E_\beta[g]=0\); [evolved constraints](nsc-evolved-incoming-constraints.md) | This is the chosen local incoming-gate application under the unchanged action and source. It includes the retarded state derivative and remains OPEN. Its threshold, source, and history are not prerequisites for the other rows. The campaign is paused. |
+| Continuing regeneration | The connected mechanism proposed above | The global state, metric dynamics and entropy accounting of a continuing sequence are not established by the local gate. They are not established results, and they are not completion conditions for the finite result or for the paused gate application. |
 
-The exact local question is whether
+For that application only, the local question is whether
 
 $$
 \delta r=\chi(s)\left[s\,w(z)+s^3U(z)/6\right],
@@ -153,17 +220,25 @@ whose two evolved incoming residuals satisfy
 \(\sup_I(|\widehat{\mathcal E}_B|+\epsilon_B)\le3\times10^{-11}\),
 for \(B=N,\beta\). An alternative closed result is a necessary relation
 excluding this same local class with controlled error. A failed search is
-OPEN. Neither outcome proves or refutes the entire regenerative interpretation.
+OPEN. Neither outcome proves or refutes the entire regenerative interpretation,
+LambdaCDM, or every nested claim. The campaign pursuing this question is
+paused until its contribution to the intended claim is justified. The target
+and the recorded gaps stay in force for this class; they are not waived and
+not universal.
 
 "Spacetime gradient transition" is descriptive language for the specified
 geometry and causal structure. The areal radius and metric fields must be
 identified in each application; a smooth horizon need not be a material
 discontinuity. Spherical symmetry is an input to this calculation, not a
 derived universal property of gradients. [Charge conjugation and sheet
-exchange](nsc-observable-bridge.md) retain their distinct operators; the
-inheritance condition does not equate antimatter with an interior or explain
-quantum interference by telescope resolution. No varying local light speed,
-new force, or adjustable source is introduced.
+exchange](nsc-observable-bridge.md) retain their distinct operators. Charge
+conjugation means the standard particle–antiparticle map. Naming it does not
+prove that antimatter has been derived from the nested geometry, and it does
+not prove that no deeper geometric origin can be studied. The inheritance
+condition does not equate antimatter with an interior or explain quantum
+interference by telescope resolution. Inside/outside and coin language stays
+pictorial here. No varying local light speed, new force, or adjustable source
+is introduced.
 
 The compact [local-observer correspondence](nsc-local-observer-correspondence.md)
 binds those existing identities without promoting them to a cosmological
@@ -173,8 +248,10 @@ variation and conservation, normalized \(1/\Omega\) recursion, and the
 tested two-sheet Dirac/charge-conjugation embedding. Imported algebra,
 repository identities, NSC interpretation and nonclaims are separate
 fields. The principal nonclaims are that there is no complete
-\(\Lambda\)CDM background or perturbation match and that sheet exchange
-is not antimatter. The local incoming gate remains OPEN.
+\(\Lambda\)CDM background or perturbation match — which is not a finding
+that LambdaCDM is false — and that sheet exchange is not antimatter. The
+local incoming gate remains OPEN and is not a prerequisite for this
+correspondence record. Its campaign is paused.
 
 The [code map](active-code-map.md) and versioned records own implementation evidence. The entries
 below retain the history and scope of their respective calculations.

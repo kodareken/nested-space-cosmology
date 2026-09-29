@@ -1,10 +1,16 @@
 # What the calculations show
 
-The active task follows Douglas's approved conversation plan. NSC seeks a larger
-nested realization of familiar local laws through effective regional response;
-falsifying LambdaCDM is not a completion requirement. Full cosmological matching
-remains subsequent research. The local gate tests the declared construction's
-self-consistency with its fixed source and action.
+The question is whether specified nested surroundings produce an effective
+local response under familiar local laws. Reusable mathematical results,
+proposed interpretations, and one chosen numerical application stay distinct.
+The governing statement is the
+[scientific framing](instructions.md#scientific-framing-and-authority).
+Falsifying LambdaCDM is not the task, and a full match to that standard
+cosmology is not established. Pictures of inside and outside, or of two sides
+of a coin, are motivation, not literal equations. Charge conjugation is the
+usual name for the particle–antiparticle map; it neither derives antimatter
+nor rules out a geometric question. The latest user instruction controls;
+an older plan does not resume the numerical campaign by itself.
 
 ## Nested qualities: finite mathematical construction, 27 September 2026
 
@@ -17,18 +23,32 @@ The proof holds at every finite depth; it is not a proof of infinite physical ti
 Twelve exact controls and four focused tests accompany the construction.
 The [source snapshot](../paper/nested-quality-evidence/snapshot.json) binds its
 proof, implementation and control record to an immutable laboratory commit.
-The separate source-fixed gravitational gate remains OPEN. No cosmological
-abundance, physical c/Lambda value, or eternal dynamics is derived by this result.
-The numerical checkpoint below is retained history, not a requirement for the
-finite theorem. This is a working-article update, not release 0.27.0.
+The separate source-fixed gravitational gate remains OPEN, and its campaign
+is paused. No cosmological abundance, physical c/Lambda value, dark matter,
+dark energy, antimatter, or eternal dynamics is derived by this result.
+The numerical checkpoint below keeps that application's interval, threshold,
+source, and history. Those choices are not requirements for this finite
+theorem or for nested claims in general. This is a working-article update,
+not release 0.27.0.
 
 Read [the paper guide](papers.md) for the relationship between the preserved
 foundational manuscript and the focused companion. This page owns current
-public status; dated checkpoints later in the file remain historical.
+public status. Sections after [Earlier public checkpoints](#earlier-public-checkpoints)
+keep their original scope. The source records between here and that heading
+are evidence and gaps for the paused gate application, not an order to
+continue its campaign.
 
-## Active checkpoint: source-fixed local incoming gate
+## Source-fixed local incoming gate (OPEN; campaign paused)
 
-The active laboratory is in `lab/`, with its current owners indexed in the
+This is the chosen numerical application, not a prerequisite for every
+nested-system claim or for arXiv discussion in general. The certification
+campaign is paused while its contribution to the intended claim is assessed.
+It may resume when that contribution is justified. There is no permanent ban.
+Do not continue the expensive search automatically. The state law, interval,
+threshold, and recorded seed below are unchanged and apply only here. Missing
+error bounds still block a closed claim for this application.
+
+The laboratory owners are in `lab/`, indexed in the
 [code map](../lab/docs/active-code-map.md). The
 [draft evidence manifest](../paper/local-gate-evidence/snapshot.json) is a frozen
 selection supporting the existing article, not the full current lab.
@@ -42,9 +62,10 @@ $$
 
 **Status: OPEN.** The evolved state and its retarded derivative are implemented
 in the laboratory. The earlier B1d implementation gaps described below are
-historical checkpoints. Current work concerns rigorous whole-cone field,
-physical-source, ultraviolet, continuous, and arithmetic bounds before a
-production nonlinear search can be certified.
+historical checkpoints. Unfinished bounds for this application — not a live
+campaign — are the rigorous whole-cone field, physical-source, ultraviolet,
+continuous, and arithmetic bounds required before a production nonlinear
+search could be certified.
 
 | Quantity | Recorded meaning |
 |---|---|
@@ -214,7 +235,8 @@ The measured seed residuals and the nine-component physical budget are unchanged
 ## Earlier public checkpoints
 
 The sections below preserve their original scope and recorded numbers. They
-are background for the active checkpoint above, not a current work queue.
+are background for the gate application above, not a current work queue and
+not permission to resume its campaign.
 
 
 **Actual geometric seam matching: PASS.** The [new boundary calculation](nsc-smooth-seam-variation.md)

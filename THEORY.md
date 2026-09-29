@@ -1,10 +1,12 @@
 # The theory in one story
 
 This page explains the proposed interpretation and its existing mathematical
-building blocks. The active task is the author-approved conversation plan.
-NSC seeks a nested realization of familiar local physics; it does not require
-LambdaCDM to be locally wrong. The exact regional reductions and the physical
-identification of their effective sources have distinct evidential status.
+building blocks. The latest user instruction directs the active task. An
+accepted conversation plan applies where it stays compatible with that
+instruction and does not override later steering. NSC seeks a nested
+realization of familiar local physics; it does not require LambdaCDM to be
+locally wrong. The exact regional reductions and the physical identification
+of their effective sources have distinct evidential status.
 
 The sphere's inside and surrounding region are the organizing motivation:
 consider their coupled fields, stresses and geometry together. The present model

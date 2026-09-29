@@ -1,10 +1,13 @@
 # Laboratory subtree
 
-Current navigation: [root index](../AGENTS.md), [instructions](../docs/instructions.md),
-and the user-approved plan in the conversation. No repository plan or handover
-owns the current task. The text below preserves
-the original laboratory checkpoint; old branch and sibling-repository routes are
-historical. Use root `scripts/lab.py` to run scientific Python commands.
+Current navigation is the [root index](../AGENTS.md),
+[root instructions](../docs/instructions.md),
+[current result](../docs/current-result.md), and the latest user instruction
+in the conversation. The entire dated body below is historical. It is not
+active continuation authority, including where it says to start from a plan
+or handover or where it makes the incoming gate a compulsory completion
+requirement. Do not recreate the deleted handover or another plan file.
+Use root `scripts/lab.py` to run scientific Python commands.
 
 ---
 

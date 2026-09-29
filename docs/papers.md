@@ -10,11 +10,12 @@ The relation is the inheritance postulate. Its recorded finite operator,
 Schur-complement, recursion and transfer calculations remain reusable within
 their stated domains. Continuing the local calculation does not erase them.
 
-The latest user-approved conversation plan governs the active task. NSC seeks
-a nested realization of familiar local physics; contradicting LambdaCDM is not
-a publication requirement. Dated manuscript wording and archived execution notes
-do not override that scope. Cosmological background/perturbation matching remains
-subsequent work under the approved plan.
+The latest user instruction directs the active task. An accepted conversation
+plan applies where it stays compatible with that instruction and does not
+override later steering. NSC seeks a nested realization of familiar local
+physics; contradicting LambdaCDM is not a publication requirement. Dated
+manuscript wording and archived execution notes do not override that scope.
+Cosmological background/perturbation matching remains subsequent work.
 
 ## Foundational manuscript
 
@@ -39,7 +40,9 @@ that dated version are historical; current work is described in
 The current edition presents a finite nested-operator theorem: coupled regions,
 normalized inheritance, corresponding spectra and an exact reduced local response.
 Regional states can differ under the same law. The earlier local incoming-gate
-framework is retained as an explicitly OPEN application checkpoint in an appendix.
+framework is retained as an explicitly OPEN application checkpoint in an appendix;
+its campaign is paused
+([scientific framing](instructions.md#scientific-framing-and-authority)).
 Its previous nine-page edition remains in Git history; this is a revision of the
 same companion, not a third paper or a replacement of the foundation.
 
@@ -59,5 +62,6 @@ verifier checks their sources, PDFs and manifests together.
 
 Successful file authentication and reproducible builds do not close the local
 gate. The former 0.27.0 closed-local-result promise is not silently relabeled by
-this mathematical companion update. Existing documents remain available while that
-research continues.
+this mathematical companion update. Existing documents remain available. The
+gate remains OPEN and its campaign is paused
+([scientific framing](instructions.md#scientific-framing-and-authority)).

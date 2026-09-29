@@ -7,12 +7,15 @@ changes, fast-forward `main`, and push both. No force-push is needed.
 
 ## Establish context after compaction
 
-Read the root AGENTS index and the latest plan approved by Douglas in the
-conversation. On 28 September 2026 Douglas removed the active handover and
+Read the root AGENTS index and Douglas's latest instruction in the
+conversation. That instruction overrides an older approved plan when they
+conflict. On 28 September 2026 Douglas removed the active handover and
 explicitly retired repository PLAN.md copies as task authorities. Do not restore
-the handover, duplicate the plan, or infer a new task from those old documents.
-If a future task lacks the approved plan, obtain it from Douglas instead of
-automatically resuming a historical file. Current evidence is owned by the
+the handover, duplicate a plan, or infer a new task from those old documents.
+The 28 September road-to-arXiv cursor, which made one incoming-gate campaign
+the compulsory next step, does not override the later pause of that campaign.
+If the current instruction is missing, ask Douglas instead of resuming a
+historical file or an expensive numerical run. Current evidence is owned by the
 [claim ledger](../lab/docs/claim-ledger.md), [code map](../lab/docs/active-code-map.md)
 and versioned result records.
 The active numerical owners are in `lab/`; root `src/`, `scripts/`, `tests/`
@@ -24,7 +27,8 @@ python scripts/lab.py scripts/derive_nsc_ks_gate_budget_v4.py --check
 python scripts/lab.py -m pytest tests/test_nsc_ks_endpoint_contraction.py -q
 ```
 
-The launcher uses the caller's interpreter, sets the lab source path and working
+These examples show the launcher. They are not an order to continue the paused
+gate campaign. The launcher uses the caller's interpreter, sets the lab source path and working
 directory, and provides the four pinned historical sources needed by the active
 evidence closure. Use the existing validation environment for scientific work;
 its requirements remain in `lab/pyproject.toml`. The root publication environment
@@ -58,41 +62,68 @@ dependency decision; this helper does not silently drop missing files.
 
 ## Scientific framing and authority
 
-NSC investigates a proposed larger nested realization of familiar local physics.
-The inheritance relation is the organizing foundation. Numerical work computes
-its local reduction and effective source on the declared slice; it does not
-try to calculate the inheritance identity itself or an infinity of nests.
-The approved task is the nonlocal-to-local correspondence and one self-consistent
-local realization. It does not require contradicting or falsifying LambdaCDM,
-removing its local terms, or changing measured local laws to make NSC succeed.
-Keep the declared action, preparation, source inventory and locked parameters.
-A new local gate result tests that declared construction; a failure in that class
-is not a general verdict on LambdaCDM or on every nested interpretation.
+The question is whether specified nested surroundings produce an effective
+local response under familiar local laws. Nested surroundings means structure
+that is not resolved in the local description. An effective local response is
+what remains in the local equations after that structure is reduced, usually
+as an extra source. Familiar local laws means the local equations a local
+observer already uses, not a demand for new local physics.
 
-The sphere and the relation between a region's interior and surroundings are
-Douglas's organizing motivation: examine the coupled system, the inherited law,
-and the effective response left when other regions are unresolved. The present
-spherical calculation supplies a controlled symmetry class. Regional conditions
-may differ under a common law. Reuse the established operator and transfer results.
+LambdaCDM is the standard cosmological model: general relativity with ordinary
+matter, cold dark matter, and a cosmological-constant-like term. It is one
+familiar description of that local response. Refuting it, or treating an open
+comparison as a conflict, is not the task. A completed match to every LambdaCDM
+observable is also not established. Same reduced equation form and full
+physical equivalence are separate claims. Do not remove local terms or change
+measured local laws. Do not claim dark matter, dark energy, antimatter, or
+eternity as results already derived.
 
-Same reduced equation form and complete physical equivalence are separate claims.
-Full LambdaCDM background/perturbation matching, a geometric derivation of charge
-conjugation and global recurrence stay subsequent research under the approved
-plan. Do not turn them into new completion requirements or claim them as results
-already established by Schur elimination. Geometry, pressure balance and
-inside/outside analogies motivate the model; their mathematical identifications
-must retain the domains and assumptions actually derived.
+Keep three layers distinct:
+
+- Reusable mathematics, including block reduction and the inheritance relation,
+  stands only inside its stated domain. Do not recalculate that relation, and
+  do not replace it with an infinity of nests.
+- A proposed interpretation, including regeneration or a dark-sector reading,
+  is not a theorem. Schur elimination does not by itself identify cosmological
+  dark sectors.
+- One chosen numerical application, the source-fixed local incoming gate, tests
+  one declared geometry, preparation, source inventory, and history. Its
+  interval, residual threshold, source, and history apply only there.
+
+The gate remains OPEN: neither local existence nor a controlled exclusion is
+established. The campaign that continues its expensive error budget is paused
+while its contribution to the intended claim is assessed. It may resume when
+that contribution is justified. There is no permanent ban, and compaction is
+not a reason to restart it. Pausing does not discard that application's error
+bounds or locked parameters. A failure or gap in that class is not a verdict
+on LambdaCDM or on every nested interpretation, and it is not a prerequisite
+for other nested claims or for arXiv discussion in general. Release 0.27.0
+remains reserved for a closed result of this application.
+
+Pictures of an interior and its surroundings, a room, or two sides of a coin
+organize the question. They are not literal equations, and they are not claims
+the author must defend as physical identities. The present spherical
+calculation is a controlled symmetry class. Regional states may differ under a
+common law. Reuse the established operator and transfer results. A mathematical
+identification must keep the domain and assumptions actually derived.
+
+Charge conjugation is the standard map between particle and antiparticle
+sectors, including reversal of gauge charge. Using that name does not derive
+antimatter from the nested geometry, and it does not forbid investigating a
+deeper geometric origin. It also does not make sheet exchange, an interior, or
+a metaphor into antimatter. Those remain distinct questions, not new
+completion requirements.
 
 ## Current nested-quality result
 
 The focused companion now leads with the finite construction in
 [nsc-nested-qualities.md](nsc-nested-qualities.md). The previous numerical
-application remains OPEN in its appendix. That finite result does not require
-eternity, heat-death or a full incoming-gate campaign. The laboratory section has
-resumed its approved source-fixed local-gate programme; this public
-checkpoint does not mark that programme complete. Preserve different
-regional states under common laws. Before claiming two descriptions conflict,
-identify their region, scale, observer, state and compared quantity.
+application remains OPEN in its appendix, and its campaign is paused. That
+finite result does not require eternity, heat death, or the incoming-gate
+campaign. This checkpoint does not mark the gate complete and does not make
+the gate a prerequisite for the finite result. Preserve different regional
+states under common laws. Before claiming two descriptions conflict, identify
+their region, scale, observer, state and compared quantity.
 
 ## Keep the papers connected
 
@@ -106,14 +137,17 @@ The broad manuscript contains the physical interpretation, operator/Schur/
 recursion calculations, source history and references. Its v0.26.0 source and
 PDF are preserved. The companion retains one source-fixed local incoming test as an application
 under `C_Sigma[g]=U_g C_up U_g†` on `I=S(1)+[0.12,0.18]`. That application is
-OPEN, separately from the finite nested-operator theorem. A later edition can incorporate verified new results with an explicit
+OPEN and its campaign is paused. It is separate from the finite nested-operator
+theorem, and its threshold is not a prerequisite for that theorem or for nested
+claims in general. A later edition can incorporate verified new results with an explicit
 change record; do not silently substitute a new PDF for a frozen version.
 
 Keep assumptions, imported identities, repository calculations, numerical
 diagnostics and interpretations distinct. Spatial inheritance, charge
-conjugation and interference retain distinct operators. The regeneration
-picture remains the motivation; global recurrence and cosmological matching
-are later research. Count the declared Gaussian action and induced terms once.
+conjugation and interference retain distinct operators. Charge-conjugation
+terminology does not close a geometric question. The regeneration picture
+remains motivation, not a literal proof; global recurrence and cosmological
+matching are not established. Count the declared Gaussian action and induced terms once.
 
 ## Reuse and verification
 
@@ -123,7 +157,8 @@ verification that leaves the physical gap unchanged. Historical derivations
 are reference material, not a queue to repeat after moving computers.
 
 Preserve scientific original bytes and their replay inputs. Routine edits run
-relevant tests and publication checks, not old numerical campaigns. Changed PDF
+relevant tests and publication checks, not the paused incoming-gate campaign
+or another expensive generator. Changed PDF
 source requires an updated bound build, deterministic-output check and visual
 review. An unchanged PDF does not need rebuilding simply because a task resumes.
 

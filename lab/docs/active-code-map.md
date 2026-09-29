@@ -1,5 +1,19 @@
 # Active code and evidence map
 
+Routing, 29 September 2026. This map indexes laboratory owners. It is not an
+order to run them. The intended claim is an effective local response under
+familiar local laws from specified nested surroundings. Reusable mathematics,
+proposed interpretations, and the chosen numerical application stay distinct.
+The local incoming gate remains OPEN. Its campaign is paused while that
+application's contribution is assessed. Its threshold, source, and history
+apply only to that application, not to every nested claim and not to arXiv
+generally. A later "next", "required", or "the plan requires the gate" line
+records a technical dependency or an older cursor. It does not authorize
+resuming the campaign, a LambdaCDM refutation, or a literal reading of
+inside/outside or coin metaphors. Charge-conjugation terminology does not
+close a geometric question. Do not drop the recorded error gaps. Full
+statement: [scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
+
 ## Continuous local source-error contribution, 2026-09-29
 
 The [exact-response majorant](nsc-ks-source-operator-majorant.md) now carries
@@ -62,9 +76,10 @@ family, source quadrature and the remaining families are outside this pilot.
 
 This is a covariance preparation result. It is not the changed-history C_M,
 a same-column H2 certificate, or an integrated N/beta tail. The new scalar
-constant must not be copied into those missing slots. Next: insert the source
-covariance errors through the actual local response, and complete the
-changed-history field remainder. Existing source columns and occupations stay
+constant must not be copied into those missing slots. The unfinished
+dependency, not a resumed campaign, is insertion of the source covariance
+errors through the actual local response and completion of the changed-history
+field remainder. Existing source columns and occupations stay
 unchanged. The source-method tests include exact nonconstant manufactured
 identities through order 8, a full-metric ODE comparison, and mutation controls.
 Parent tests and exact record replay passed. Independent Grok review then
@@ -109,8 +124,9 @@ are N in [3.861017421e-5,3.861018049e-5] and beta in
 or a complete high-energy tail. The explicit ell^2, ell^4 and m^2 ell^2
 factorization can reduce repeated family calculations, but has not been run
 as a full family campaign. C_M and uniform incoming-interval coverage remain
-the missing connections. The next task is those connections, not another
-massless derivation or an expansion to infinite nests.
+the missing connections. Those connections remain open for this application.
+They are not an order to start another massless derivation, an expansion to
+infinite nests, or the paused campaign.
 Parent checks passed, including all 52 related scientific tests and exact
 record replay. The independent massive-coefficient Grok audit's recovered
 report found no algebra, sign, multiplicity or enclosure defect within the
@@ -135,8 +151,9 @@ record and compact NPZ are `nsc-subgap-source-covariance-v1`. Independent
 Grok review accepted the enclosure within this scope; focused controls also
 check the actual production frame restriction and deliberate coherence loss.
 
-Next source work is numerical continuation to rho_up, remaining source
-coverage and contraction into the changed-minus-reference effective source.
+Still open for this single mode, and not a campaign order, are numerical
+continuation to rho_up, remaining source coverage, and contraction into the
+changed-minus-reference effective source.
 No physical upstream budget entry is filled by this single-mode result.
 The older checkpoints below retain their original missing-step descriptions.
 
@@ -216,10 +233,11 @@ instead of 6.40e-11 on the SAME numerical trajectory. The r>=8 control is about
 4.01e-13. These are phase errors, not N/beta errors. The small NPZ trace and
 source-inventory bindings are retained; original physical columns are unchanged.
 
-Next source work is the remaining collar, matched horizon sewing and interior
-transport to rho=1. Next UV work is the generated characteristic contribution
-to A3/n4 and its contracted difference on I; a common scalar integration
-constant is no longer a prerequisite for that formal surface coefficient.
+Still open, and not a campaign order, are the remaining collar, matched
+horizon sewing, and interior transport to rho=1, plus the generated
+characteristic contribution to A3/n4 and its contracted difference on I. A
+common scalar integration constant is no longer a prerequisite for that
+formal surface coefficient.
 C_M still needs a controlled higher-order remainder and upstream matching.
 No numerical C4, physical source-column bound or closed gate is claimed.
 
@@ -270,7 +288,8 @@ six-packet inverse does not supply that missing physical input. The declared
 
 ## Reactivated full gate workflow, 2026-09-28
 
-The user-approved conversation plan requires the local gate and its publication.
+This section records the workflow reactivated on that date. It is not the
+current order to continue. The gate remains OPEN and the campaign is paused.
 Repository PLAN/handover files are historical, not the task authority. Stage 1 correspondence
 replay passes. Targeted scientific owners from Windows commit `984b46e7` are reused;
 Windows repository routing and paper rewrites are not imported.
@@ -356,12 +375,16 @@ conservation, normalized inherited recursion, and the two-sheet
 Dirac/charge-conjugation embedding. The record distinguishes imported
 algebra, repository identities, NSC interpretation and nonclaims. It does
 not claim \(\Lambda\)CDM equivalence or identify sheet exchange with
-antimatter. The local incoming gate remains OPEN. This is not a roadmap.
+antimatter. Absence of that match is not a refutation of LambdaCDM.
+Charge-conjugation terminology does not forbid a geometric question. The
+local incoming gate remains OPEN and its campaign is paused. This is not a
+roadmap or an order to resume.
 
-## Active continuation: evaluator repair and calibration, 2026-09-25
+## Evaluator repair and calibration, 2026-09-25
 
 The [historical handover](../handover.md#aktuell-fortsättning-2026-09-25) recorded
-that dated checkpoint; it does not own the current task. The [claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation)
+that dated checkpoint; it does not own the current task, and it does not
+resume the paused gate campaign. The [claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation)
 connects the inherited operator law and regenerative interpretation to the
 existing transfer, evolved-state and incoming-constraint calculations.
 
@@ -385,8 +408,8 @@ The two older leaders have also been re-evaluated on the same settings;
 The remaining dependency is the continuous/source error budget and a new
 closed local result. The UV coefficient owner now proves a leading paired
 vacuum cancellation; its numerical tail constant remains unbounded.
-Codex in the current task is the single scientific-run driver; Grok Fleet
-owns bounded code/review slices. No new search is justified by the small
+The dated assignment of a single scientific-run driver does not restart the
+paused campaign. No new search is justified by the small
 primal-control values quoted in the historical account below.
 
 ## Historical search measurements
@@ -467,17 +490,30 @@ Named stall: `declared_class_certificate_tools_exhausted`. The missing
 primitive is a necessary relation, or a residual-image lower bound, on
 evolved `C_Σ` for every declared `(w,U)` history on `I`, strictly above
 `3.91720329e-11` after the edge and UV tail is enclosed. Do not evolve
-the beta-primary ray. Do not open n=256. 0.27.0 and arXiv stay blocked.
-Read the handover before following older continuation statements below.
+the beta-primary ray. Do not open n=256. For this historical search, release
+0.27.0 stays reserved and the search does not authorize arXiv submission.
+Do not read the removed handover as the current task. Older continuation
+statements below stay historical.
 
-## Current incoming-constraint work cursor
+## Incoming-gate application cursor
 
-The approved sprint is the LOCAL source-fixed incoming gate on
-`I=S(1)+[.12,.18]`, followed by its citable PDF and public release. Global
-matching, extended stationarity, metric stepping and observations are later
-work. The approved plan stays in the conversation; no local plan is maintained.
+The source-fixed incoming gate on `I=S(1)+[.12,.18]` is one chosen numerical
+application. It is not the compulsory sprint for every nested claim, and it
+is not an automatic path to a citable PDF or public release. The gate remains
+OPEN. The campaign is paused while its contribution to the intended claim is
+assessed. It may resume when that contribution is justified; there is no
+permanent ban. Global matching, extended stationarity, metric stepping, and
+observations are not current work and are not reasons to refute LambdaCDM.
+The latest user instruction controls; no local plan is maintained.
 
-The active law is `C_Sigma[g]=U_g C_up U_g†`, including the retarded state
+While paused, do not launch the expensive generators. The law, source
+parameters, and recorded evidence below still define this application if it
+resumes. Missing error bounds still prevent a physical gate claim. They do
+not prevent other nested-system work. Release 0.27.0 remains reserved for a
+closed result of this application; that reservation is not a block on
+unrelated claims.
+
+The law for this application is `C_Sigma[g]=U_g C_up U_g†`, including the retarded state
 variation in both N,beta constraints. Source parameters, seam identification
 and A/q/Omega/zeta/V_full remain fixed. Frozen-C0 and homogeneous exclusions
 are locked regressions, not the active history class.
@@ -685,9 +721,10 @@ for this still-open local gate.
 ## Historical incoming-constraint records
 
 The entries below preserve the earlier evidence and its then-current holes.
-Their old “next” statements are historical; the current cursor above owns
-continuation. In particular, the earlier CF4 value floor and partial fine
-validation status are superseded by the completed KS field evidence.
+Their old “next” statements are historical and are not a campaign to resume.
+The cursor above says the gate campaign is paused. In particular, the earlier
+CF4 value floor and partial fine validation status are superseded by the
+completed KS field evidence.
 
 The [finite-energy operator adapter](nsc-ks-energy-propagator.md) now reuses
 two Dirac basis columns per energy and reconstructs the original `A_up`,

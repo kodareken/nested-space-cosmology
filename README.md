@@ -4,8 +4,10 @@
 gives an explicit finite-window construction, a proof of inherited scale relations,
 ordered regional reduction and distinct regional states under the same law.
 [Proof and scope](docs/nsc-nested-qualities.md). The separate gravitational
-incoming gate remains OPEN; its historical checkpoint is retained in an appendix.
-The [43-page foundation](paper/nested-space-cosmology.pdf) remains unchanged.
+incoming gate remains OPEN and its campaign is paused. Its historical
+checkpoint is retained in an appendix and is not a prerequisite for this
+finite result. The [43-page foundation](paper/nested-space-cosmology.pdf)
+remains unchanged.
 
 ## One research programme, two complementary papers
 
@@ -25,8 +27,8 @@ the broader manuscript or claim that the cosmology has been proved.
 This repository now contains the publication and active laboratory together.
 The papers stay in `paper/`; current scientific code and evidence are in `lab/`.
 Start with [AGENTS.md](AGENTS.md) and [instructions](docs/instructions.md).
-The current plan is the one approved by the author in the conversation; old
-repository plans do not select the task. Work on `codex/work-branch`, integrate verified
+The latest user instruction controls. An older conversation plan does not
+override it, and old repository plans do not select the task. Work on `codex/work-branch`, integrate verified
 changes into `main`, and push both to this GitHub repository.
 [Consolidation and historical data](docs/repository-consolidation.md) explains
 what was retained and why old search arrays are excluded. Published scientific
@@ -34,16 +36,32 @@ claims remain tied to their specific evidence, not merely to GitHub availability
 
 ## Local physics within a larger nested description
 
-NSC asks whether familiar local laws and effective sources admit a larger nested
-realization. The local equations are retained; unresolved regions enter through
-an effective response derived from the same action. Contradicting LambdaCDM is
-not a goal or a condition for success. The local incoming gate tests one declared
-geometry and evolved field state for self-consistency.
+The question is whether specified nested surroundings — structure not resolved
+in the local description — produce an effective local response that still
+follows familiar local laws. Those laws are the local equations a local
+observer already uses. LambdaCDM, the standard cosmology with a cosmological
+constant and cold dark matter, is one such description. It is not an opponent
+to refute, and this repository does not claim to have reproduced every
+LambdaCDM observable.
 
-The sphere's interior and surroundings are the organizing picture: study their
-coupling and inherited law together. Spherical symmetry is the first controlled
-class. The full dark-energy/dark-matter background and perturbation identification
-remains to be derived; the current Schur identities do not alone establish it.
+Three layers stay distinct. Reusable mathematics, such as block reduction and
+the inherited-law relation, holds only in its stated domain. A proposed
+interpretation, including dark matter, dark energy, antimatter, or an eternal
+continuation, is not a derived result. One chosen numerical application, the
+local incoming gate, tests one declared geometry and evolved state. Its
+threshold, source, and history belong to that application. The gate remains
+OPEN, and its expensive campaign is paused while its contribution to the
+question above is assessed. It can resume if that contribution is justified.
+It is not a prerequisite for every nested-system claim.
+
+Pictures of an interior and its surroundings, a room, or two sides of a coin
+organize that question. They are not literal equations and not claims that
+must be defended as physical identities. Spherical symmetry is the first
+controlled class, not a universal theorem. Charge conjugation — the standard
+map between particle and antiparticle sectors — neither derives antimatter
+from geometry nor forbids asking whether a geometric origin exists. The full
+dark-energy and dark-matter identification remains to be derived; the current
+Schur identities do not alone establish it.
 
 ## What if reality is one inherited spectrum?
 
@@ -77,11 +95,15 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Read the foundational manuscript](paper/nested-space-cosmology.pdf)
 
-## Current local test: OPEN
+## Chosen numerical application: local incoming gate (OPEN, campaign paused)
 
-The active question is precise: can two incoming gravitational constraints
-close on $I=S(1)+[0.12,0.18]$ when a fixed upstream quantum source is
-transported along a changed metric history?
+This application is not the definition of every nested-system claim, and the
+campaign is paused while its contribution to the intended claim is assessed.
+It may resume when that contribution is justified. The question it poses is
+whether two incoming gravitational constraints can close on
+$I=S(1)+[0.12,0.18]$ when a fixed upstream quantum source is transported
+along a changed metric history. That interval, source, and threshold belong
+only to this application.
 
 $$
 C_\Sigma[g]=U_g C_{\mathrm{up}} U_g^\dagger,
@@ -90,12 +112,13 @@ C_\Sigma[g]=U_g C_{\mathrm{up}} U_g^\dagger,
 $$
 
 The source stays fixed; its state on the incoming surface responds to the
-history. The two unknown functions are $w(z)$ and $U(z)$. A successful local
-existence test needs **both** residuals, including every error term, below
-$3\times10^{-11}$ throughout the interval. The current candidate is a solver
-seed: its sampled maxima are about $9.64\times10^{-4}$ and
-$3.81\times10^{-4}$, well above that target. No closed local result or arXiv
-submission is claimed.
+history. The two unknown functions are $w(z)$ and $U(z)$. For this
+application, a successful local existence test needs **both** residuals,
+including every error term, below $3\times10^{-11}$ throughout the interval.
+The current candidate is a solver seed: its sampled maxima are about
+$9.64\times10^{-4}$ and $3.81\times10^{-4}$, well above that target. No
+closed local result or arXiv submission is claimed. Pausing does not loosen
+this error target and does not impose it on other claims.
 
 - [Focused research draft (PDF)](paper/local-incoming-gate-draft.pdf): English explanations, equations, notation, evidence, and original-source attribution.
 - [Current result and exact remaining gaps](docs/current-result.md).
@@ -143,7 +166,7 @@ law—remain the same.
 |---|---|
 | **Wave** | The extended amplitude and phase of a field pattern |
 | **Particle** | A stable pole or localized resonance of that same field |
-| **Matter and antimatter** | The positive- and negative-frequency Dirac sectors, related by charge conjugation |
+| **Matter and antimatter** | Proposed reading of the positive- and negative-frequency Dirac sectors, usually related by charge conjugation; not a derived geometric origin |
 | **Mass** | The rest-frequency gap of a physical pole |
 | **Dark energy** | Proposed identification with the smooth outside response; cosmological matching remains open |
 | **Dark matter** | Proposed identification with finite-wavelength outside response; clustering and lensing matching remain open |
@@ -169,6 +192,10 @@ representation. A real sine wave displays both orientations:
 $$
 \sin(\omega t)=\frac{e^{i\omega t}-e^{-i\omega t}}{2i}.
 $$
+
+Charge conjugation here means that standard map. It does not derive antimatter
+from nested geometry, and it does not forbid asking whether a geometric origin
+exists. The sine-wave picture is an illustration, not a literal identity.
 
 ## A black hole already plays a cosmic bass note
 
@@ -251,15 +278,18 @@ of one regional response. Deriving the required stress and perturbation laws
 would establish that identification; it is not supplied by the block identity alone.
 
 The familiar rounded $5\%/25\%/70\%$ split is used only as an observational
-target from a $\Lambda$CDM fit. It suggests a concrete hierarchy to calculate:
+target from a $\Lambda$CDM fit. It suggests a later hierarchy, not a present
+campaign and not a refutation of that fit:
 
-| Observation | NSC interpretation to test | What must be calculated |
+| Observation | NSC interpretation to test | What would have to be calculated |
 |---|---|---|
 | $\sim5\%$ baryons | Locally resolved spectrum | Physical poles, residues, charges, and sector assignments |
 | $\sim25\%$ dark matter | Nearest unresolved room response and finite-$k$ Schur projection | Pressure perturbations, anisotropic stress, clustering, and growth |
 | $\sim70\%$ dark energy | More distant recursive tail and zero-momentum projection | Background density and pressure, conservation, and $H(z)$ |
 
-This ordering is a measurable hypothesis. The fractions do not prove it, and
+This ordering is a measurable hypothesis, not a derived dark-sector result and
+not a requirement to refute LambdaCDM. It is separate from the paused
+incoming-gate application. The fractions do not prove it, and
 the fixed-$q$ scale candidate does not determine these cosmological weights.
 
 ## The law that every room inherits
@@ -331,9 +361,10 @@ again as a continuing child energy source.
 
 These are recorded foundations within their stated classes. The full
 chronological discussion remains in [earlier public checkpoints](docs/current-result.md#earlier-public-checkpoints)
-and the original manuscript. The current work cursor is the source-fixed
-incoming gate described above; those older checkpoints are not a queue of
-derivations to restart.
+and the original manuscript. The source-fixed incoming gate above is one
+chosen application: OPEN, with its campaign paused. Those older checkpoints
+are not a queue of derivations to restart, and that gate is not a prerequisite
+for the records above.
 
 ## Explore at your own depth
 
@@ -356,10 +387,12 @@ the expensive scientific generators.
 
 NSC is an active theoretical programme and working preprint. Its exact
 identities and numerical results apply to the operators, states, domains, and
-approximations named in their records. The common recursive interpretation is
-the theory being assembled from those results. A complete self-sourced
-parent-to-child solution, identified particle spectrum, and independent
-cosmological prediction remain the final integration targets.
+approximations named in their records. Reusable identities, proposed
+interpretations, and the paused numerical application remain separate. Dark
+matter, dark energy, antimatter, and eternity are not claimed as derived.
+The common recursive interpretation is the theory being assembled from those
+results. A complete self-sourced parent-to-child solution, identified particle
+spectrum, and independent cosmological prediction are not established.
 
 ## Authorship
 
