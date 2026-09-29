@@ -42,9 +42,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 3235,
+      "bytes": 3482,
       "path": "AGENTS.md",
-      "sha256": "290b6b30fe24b4ecda142f2c4313f8b137e637da98b4217f7de0a5d42c8e8ba7"
+      "sha256": "ed46dfb41ecd3281c5d4cfd0da8761d1208879b40238b986dc6325b8f2e7cec2"
     },
     {
       "bytes": 1056,
@@ -107,9 +107,9 @@
       "sha256": "2ef27eb7a54766f6f48d93f2cb5208a552102fd07f1ef20db367e7a47219e9ac"
     },
     {
-      "bytes": 4659741,
+      "bytes": 4793359,
       "path": "docs/lab-snapshot.json",
-      "sha256": "13ec5f5d3b26c36031d9592428ae19bc8c671202503ba26bb2bf7fcdaa05a0e3"
+      "sha256": "b5b92604ecb4d253da6b10c1406bf22683321482e3c8b5ec61ee565420938b9d"
     },
     {
       "bytes": 4771,
@@ -692,9 +692,9 @@
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
     },
     {
-      "bytes": 5601,
+      "bytes": 6239,
       "path": "docs/repository-consolidation.md",
-      "sha256": "8bc7bcd8e1962b7a9019efb8c0d7976416c3241ecc3cb2f0dbcf8e9e5a688489"
+      "sha256": "d29cae4fce885d5682a7b32e66f0f50b460e0763dca8d5845dcf3310e143abda"
     },
     {
       "bytes": 12546,
@@ -3357,7 +3357,7 @@
       "sha256": "55224209078cd78c7a433d679ac8748e2f6c7206b1fb295d41fc2ce196ae86c6"
     }
   ],
-  "lab_snapshot_sha256": "13ec5f5d3b26c36031d9592428ae19bc8c671202503ba26bb2bf7fcdaa05a0e3",
+  "lab_snapshot_sha256": "b5b92604ecb4d253da6b10c1406bf22683321482e3c8b5ec61ee565420938b9d",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.26.0",

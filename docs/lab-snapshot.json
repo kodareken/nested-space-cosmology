@@ -12273,13 +12273,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 126224,
+      "bytes": 128143,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "5e026eb836ff2796980d60b3efb6be20448ee2ac",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "e28d1c731f888eb5298ab5b55c7a5a98f7711126d1b52b947c06520cf909db95"
+      "sha256": "41b2120050f62f68b544cfb0c115a71be945a7cda7f94f774a947e5bca4449ea"
     },
     {
       "bytes": 47762,
@@ -12648,6 +12648,13 @@
       "original_sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1",
       "path": "lab/docs/nsc-dirac-tetrad.md",
       "sha256": "252735be6024332bcc04fd82dd9906faa6d89d2e740efecd8e9eb8ec568ea1f1"
+    },
+    {
+      "bytes": 5485,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/docs/nsc-direct-source-window.md",
+      "sha256": "da4b144e4a7bfbe4ea938ec43b75afffd79cefb8499a94343d7ac44567454520"
     },
     {
       "bytes": 6512,
@@ -13532,6 +13539,20 @@
       "sha256": "3d1716b1a7a878188db5ef6e89279a4cb3a74d72be69870bd6027dbae1370a90"
     },
     {
+      "bytes": 1651,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/docs/nsc-ks-cubic-inventory.md",
+      "sha256": "8c1c2b8d09a05351b8408b3c3f0c4446bfd8dd89835e0fac3f388f6d7790017e"
+    },
+    {
+      "bytes": 2847,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/docs/nsc-ks-cubic-residual.md",
+      "sha256": "1e39f39502f05782c692a21ee8ff511d52242df86595fdd20508a9cdd3e96b0b"
+    },
+    {
       "bytes": 6187,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
@@ -14321,6 +14342,20 @@
       "changed_from_commit": "2c12305b93d037b336db132c3d7ab5c57822c941",
       "path": "lab/docs/nsc-ks-source-operator-majorant-v3.md",
       "sha256": "c424aac76c4fd5d0e5f29dcf8ed33c9694f42bc7fffff58bdc22e8422be6c5f8"
+    },
+    {
+      "bytes": 5130,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/docs/nsc-ks-source-operator-majorant-v4.md",
+      "sha256": "48f56bd7475ccff3390b7918c157d482c620feccdbca969635698e57239f9959"
+    },
+    {
+      "bytes": 4009,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/docs/nsc-ks-source-operator-majorant-v7.md",
+      "sha256": "91f65a7bc039c941ea17d74c53f58f5f7a6292d3c5a17894dec7e63ff5f48bd9"
     },
     {
       "bytes": 4350,
@@ -15133,6 +15168,13 @@
       "original_sha256": "6e24744f080d3063600ed913b87372393890598bf9693a6fd96d0b322fe60a2d",
       "path": "lab/docs/nsc-threshold-response.md",
       "sha256": "6e24744f080d3063600ed913b87372393890598bf9693a6fd96d0b322fe60a2d"
+    },
+    {
+      "bytes": 1749,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/docs/nsc-threshold18-integration.md",
+      "sha256": "cb40403a016d545aa9bace7d83f3472cc1bc6faead1c039001f7c30013a6ce13"
     },
     {
       "bytes": 3785,
@@ -72063,6 +72105,1224 @@
       "sha256": "0c43e06174755ed655434f6127e51d0d9833b6a9a6cc982c6ae2f7b6a00780e9"
     },
     {
+      "bytes": 25476,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00016/record.json",
+      "sha256": "1147cc0786ebd8fcd1936ee9234cc3d8906ef7ab42f03864284dd1225eaa45e4"
+    },
+    {
+      "bytes": 419168,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00016/witness.npz",
+      "sha256": "4d9bd2d4df5a1f2c00a8789d1003e5fb3151c485e1a448e15d84bee63abdba9b"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00017/record.json",
+      "sha256": "d653c2da0914fcd1740cdbdd2bb845a238a49431da6309c9fedb7c7b59dbe559"
+    },
+    {
+      "bytes": 421872,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00017/witness.npz",
+      "sha256": "3aa270a5c3bbe379af2ddeb948f445662b29154fb40504ee9603e1d83c54c5a1"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00018/record.json",
+      "sha256": "55fff46e41d9d0aa0516a7d3fb5db5bf4f29b413805d18fb2380b97dbbc5dd91"
+    },
+    {
+      "bytes": 426656,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00018/witness.npz",
+      "sha256": "f710466444b8fd8992c4ae55bc04b34b172390fdb7f86334c79bbc58f784d57d"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00019/record.json",
+      "sha256": "d670f62951e58e1a9c2f4985c41eaa5ac5fc881e0ee13bfd37930d2ee36860ac"
+    },
+    {
+      "bytes": 433104,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00019/witness.npz",
+      "sha256": "00c1df22d1ae366a73efe7cc9de44ee4bcaa0675500a49a88c556982a0846845"
+    },
+    {
+      "bytes": 25475,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00020/record.json",
+      "sha256": "172993d5be4a653af459dfef57379a62e2e2c2273abbd74469aa12e913aa2ae0"
+    },
+    {
+      "bytes": 441216,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00020/witness.npz",
+      "sha256": "4932ae506964f2cb3b8eafca8f95cb96bf4a54c0528d21a5485a3035cb7ade14"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00021/record.json",
+      "sha256": "bb67d05e3261e30cdaec70a1d6f22f3e0a482f64c59aad7067638eebc9447377"
+    },
+    {
+      "bytes": 450368,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00021/witness.npz",
+      "sha256": "b73cdca35a64c150342054e4dcc4c14c537f41725639f6e803f3f40609be1db4"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00022/record.json",
+      "sha256": "7876cf937e4a147e7eb42f87a1a9ae929ec37c1ff4a36553f826630683766705"
+    },
+    {
+      "bytes": 460352,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00022/witness.npz",
+      "sha256": "a135ecad209ae618af539ef02e02067704e7f2a94c04c6d05643fe1b721af35f"
+    },
+    {
+      "bytes": 25477,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00023/record.json",
+      "sha256": "954cfec63db76a827ce3495adc17cdf1b04982183278a75b9429bfb0e381e493"
+    },
+    {
+      "bytes": 470960,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00023/witness.npz",
+      "sha256": "a16350870f34a4fc984c94a52e7c1bd26fbce76830fae816e75d84fb6370f3a7"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00024/record.json",
+      "sha256": "c073292a7ae5fa3cd1fac640ff97d87a0e3aaf5f9222e1f4d741918e7e9d7a36"
+    },
+    {
+      "bytes": 481568,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00024/witness.npz",
+      "sha256": "de033b96fabdf275a55f9761af4ba5423457812ddd91f02ef70e2437a99a88b3"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00025/record.json",
+      "sha256": "f512f5e2772db3ea06fb83b10c7181ff2a74ffddf92ea62ed37e5e9e25be71fa"
+    },
+    {
+      "bytes": 491760,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00025/witness.npz",
+      "sha256": "d8a6224744a9c133d8d3c68795ff30fc8dbafbcb3c384c5667e4028fde9f5d15"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00026/record.json",
+      "sha256": "35a737fc73d15e4b30f7817ee1e63858176abd1fd5e0978a7e16da4c9c700968"
+    },
+    {
+      "bytes": 501328,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00026/witness.npz",
+      "sha256": "c78e33ccae58ee7ce4ee24177f725eb76402301bf9e9045cef78935296d2f86a"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00027/record.json",
+      "sha256": "f796b351c758e5bf55ebcf1943d00d465cfc6101a6e7889b6f8618daa689087c"
+    },
+    {
+      "bytes": 509856,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00027/witness.npz",
+      "sha256": "8eb958ea8cad9c03dd0d617c11bf01ace5044106eac7ada32df074ede740c2bc"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00028/record.json",
+      "sha256": "ea2cec542bd6f75dcf177465c640adae427a80b6ac68504ba152f3728c22f28a"
+    },
+    {
+      "bytes": 517136,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00028/witness.npz",
+      "sha256": "f6e38b4fd742a5b1b5a9f525038c9a88a8841000b09cdfb64bf3d0c4176e20eb"
+    },
+    {
+      "bytes": 25474,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00029/record.json",
+      "sha256": "f97c628855ebc0d111d70aab37113a7b5b903dbd9f28ac322fb62ba5408b2ebf"
+    },
+    {
+      "bytes": 522960,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00029/witness.npz",
+      "sha256": "6ea31984821f9bf8a33998cc4a34f81cf991061db5983949996cd65e62f63811"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00030/record.json",
+      "sha256": "0127ab89c6a907bdfe3f2c7dbe9587d964fabf55bb82688f273e1be41389cbaf"
+    },
+    {
+      "bytes": 527120,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00030/witness.npz",
+      "sha256": "4a51e4c92785375e7ff2ea6c930ecfe6b0443bcec3c506db3103e9de02af8618"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00031/record.json",
+      "sha256": "a317562d0841e79c2ff7871887e88173fc7979fe160074785777d221e811896a"
+    },
+    {
+      "bytes": 529408,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00031/witness.npz",
+      "sha256": "864df13a715a57c49a95d06705cf1fb3fd25436c80470cfd5cf60e2243948cc5"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00032/record.json",
+      "sha256": "27fc7596e0d7a7ff9004697b4a9a2c5a79a66dec6eebd6480556c337f1c890dd"
+    },
+    {
+      "bytes": 530448,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00032/witness.npz",
+      "sha256": "0f9818170af0b39a154bcb4606426ab873e8291d720106c1099f2416d7fac6ef"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00033/record.json",
+      "sha256": "88ddec437d5bf233ef29b06ab4c7ba0010734c0a86d8f5fb5f50af12091f8553"
+    },
+    {
+      "bytes": 532736,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00033/witness.npz",
+      "sha256": "6a9298229903a61a09a61b068c49ddc0063a42c57d15cc8eef7b36db19ec3037"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00034/record.json",
+      "sha256": "b9418abc72602ec04b727cda79b73cf8c0c59714d4f1c0371dce8a2a732e30ec"
+    },
+    {
+      "bytes": 536896,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00034/witness.npz",
+      "sha256": "e10d829e55cf381d6aaad337f6fdf8fd0fdaeb1d850ef6d56a789eec3e2826ae"
+    },
+    {
+      "bytes": 25477,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00035/record.json",
+      "sha256": "e0410e6944cfcde3d36135e69bb613e2dde475948b7de76e0c75248cd76bf422"
+    },
+    {
+      "bytes": 542512,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00035/witness.npz",
+      "sha256": "659ded5566052c5b4072b9f3075e1d10a83a71ae3fbde28b7a3503b672f12e02"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00036/record.json",
+      "sha256": "ea1bcbba5c256e7bec1c42d43ff70f89d9fbecd0d489b3dfb61945668b41662c"
+    },
+    {
+      "bytes": 549376,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00036/witness.npz",
+      "sha256": "75ba9fc8a705b50c45196a4ae1323920367e7c339c77c4a00b1e9e888fc6c730"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00037/record.json",
+      "sha256": "40a8881b444c694543a2017aa6b0a9992f3a2d6454708d1998357f09b7b582c9"
+    },
+    {
+      "bytes": 557280,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00037/witness.npz",
+      "sha256": "96cec37f2d2c2718f19bdeed311250cb76a2bd544bc999853c851dbe2ec2367d"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00038/record.json",
+      "sha256": "ed43932d0ba717780c312cd14fa583bd5e112207fd8d294c44edd4e3ab99831a"
+    },
+    {
+      "bytes": 566016,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00038/witness.npz",
+      "sha256": "18aff401e9fcf328e682040ba6e16a42ce5f7ff17b70fe782218483e799ee538"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00039/record.json",
+      "sha256": "6c21d0167ba8308b4b9a6b66a8c056cfe36d49f2e22c756df979ce039c525126"
+    },
+    {
+      "bytes": 575168,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00039/witness.npz",
+      "sha256": "653289e25b73a5de97e9565306b13278860d4fd622866b346b0f5d30fdd92419"
+    },
+    {
+      "bytes": 25476,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00040/record.json",
+      "sha256": "69dc1da692cf6085510efc4cbfc4ba029add3fb65bffb57f6cb1b0ec47289790"
+    },
+    {
+      "bytes": 584112,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00040/witness.npz",
+      "sha256": "54bd523ae040d65bd9ecbe54029fcc89ca1812a75c0c7c0b79a8755690769839"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00041/record.json",
+      "sha256": "80f5e03d81bf9b0fac21efaa08c07dd87b56b5ba005c6b8e637bd3f0b670c8bb"
+    },
+    {
+      "bytes": 592848,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00041/witness.npz",
+      "sha256": "473dba53d8efc72cadfc52df16dd12305a67e0a80d08b01fe0cd494823ba0aea"
+    },
+    {
+      "bytes": 25477,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00042/record.json",
+      "sha256": "f176b24978ba3382502fe00ecab1537a0c5af926ccbd884db1c7d51e3c714d03"
+    },
+    {
+      "bytes": 601168,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00042/witness.npz",
+      "sha256": "e0744383ed182e78a4afbd5442690d25b412317124de826edb1cbec50f52084c"
+    },
+    {
+      "bytes": 25482,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00043/record.json",
+      "sha256": "49096f42afebbe52a9c58eb305bfd6849e031b569c0c59e0a1cfe77b9c8ee809"
+    },
+    {
+      "bytes": 608448,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00043/witness.npz",
+      "sha256": "25af1aa29ab5cfec1364b8d04e790e0576ddfd119b2cdb06f7bd428a4532e5aa"
+    },
+    {
+      "bytes": 25474,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00044/record.json",
+      "sha256": "03a1b69d7aabf06adb84fe2bd31092566b65179f9a9f69bf230f92d2c4baedc6"
+    },
+    {
+      "bytes": 614688,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00044/witness.npz",
+      "sha256": "66e909f45bf474185f991e616ba7e93c5b685d0cd9e6724422a8539749e57046"
+    },
+    {
+      "bytes": 25477,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00045/record.json",
+      "sha256": "575204b1fd3c08437feb8aa514dcb1d37ef048e0bef00140ec679b5285bee281"
+    },
+    {
+      "bytes": 619680,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00045/witness.npz",
+      "sha256": "2ab535272f4641c30c1007bc330dfc8d11534499183e8d90664c3aa0d2e7f1f5"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00046/record.json",
+      "sha256": "396900d054706077b31515fac922a50fbb5ec7a1aa6a8e78d0f32f5d980492da"
+    },
+    {
+      "bytes": 623216,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00046/witness.npz",
+      "sha256": "db292000c1a23ef2017bc89eb483b79726d5be3b1e6c7b1f7c2546d2b5e90e1f"
+    },
+    {
+      "bytes": 25482,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00047/record.json",
+      "sha256": "cf5e0bfb01756a5cc70b56ddb98917d636bcf8f222d640fbb50c1ba99aba3d22"
+    },
+    {
+      "bytes": 625296,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low16_1-00047/witness.npz",
+      "sha256": "4fdf0de597d25600565bcd2afd3b5375a6b2032000cb43c20bf9c731d0661847"
+    },
+    {
+      "bytes": 25415,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00041/record.json",
+      "sha256": "9247daf22941e8501f29ffea6e3ff731e2d4697a9ecd3dfbf54be73382b71414"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00041/witness.npz",
+      "sha256": "9debce03bfdc1f40d4ca1e8425ead56d40d5dc5a3b0aa681ee8c4a8c25648006"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00042/record.json",
+      "sha256": "a378c5102d466c354b15674183374e0dd901148129395d4ad681b7a9d09ee443"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00042/witness.npz",
+      "sha256": "6baea0df98fd3c9722ad84fc7f5b4baa3057e107b0f86d0b39c54c9ac02837f0"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00043/record.json",
+      "sha256": "f8f81e4abd7c7113941241b7d9c6337fec04a1424d51e60bf04f86616d0cf248"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00043/witness.npz",
+      "sha256": "8cd14d1b6a36b0752d6f2404677251c0d6b6efc5aa62b01a68f89528f430e2ed"
+    },
+    {
+      "bytes": 25413,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00044/record.json",
+      "sha256": "323a9e9a2c70d334d84b9cdba8a660654525db124fdc763cc305f2140b3d8a7a"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00044/witness.npz",
+      "sha256": "a5d96a1f7024320733c43c5e79689c1a18d987786990d27f37f356da659dda64"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00045/record.json",
+      "sha256": "78e0de14ddf8899170ec18f53bd240b31e166235b0fcea658a42a6b9fa2fabe6"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00045/witness.npz",
+      "sha256": "0772bc079a87d7847d0bdb513910ca24f4a578e8bc127d8c58f6040c7ce147a3"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00046/record.json",
+      "sha256": "2dd8b90a09597b641068f85fddf63afbf0129a847579699cb242c922361f6ec9"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00046/witness.npz",
+      "sha256": "3c94d5bd489bb9e58805cbfa13dda9392408b7413c1e4d46cb509b41c6c2d98f"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00047/record.json",
+      "sha256": "09066b7c816f751fe6c6326e21202c3c527b6d2e587c64a50c555fa724b8af72"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00047/witness.npz",
+      "sha256": "685767d38e6dc81968f3ce19e8e24074b7dcb62b1a4e897aac650afc0e4aa662"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00048/record.json",
+      "sha256": "5a214127c06bec9e7a975c2f40c26d4de3f58d39adfcf776ad68bf7ae36ae256"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00048/witness.npz",
+      "sha256": "4d2912f346620d0369fb1606ce7da5cb5af66f145ed94c9c91b6f8331792776b"
+    },
+    {
+      "bytes": 25419,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00049/record.json",
+      "sha256": "94df2f43f56f78c44b9889c5cbb177c7c5adb4990a568bd0540407704e9f1d84"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00049/witness.npz",
+      "sha256": "cff9df1747abdda61a150c7c388256bba3691ef1d47c17063a0ba02ff85e251d"
+    },
+    {
+      "bytes": 25417,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00050/record.json",
+      "sha256": "065f82630dee821f7d19cdde3d3aea30cdd629d71d836b05619e99517e571fe1"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00050/witness.npz",
+      "sha256": "dbd6a80dd49d1aefaddb165f75d6aa76faac65a0ade81c6026c88e69b77f48fb"
+    },
+    {
+      "bytes": 25417,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00051/record.json",
+      "sha256": "97df0e5f40c0d27a6984c3c16c80b2a7eb415b5463ce2443ad1e0a45a3aa3acd"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00051/witness.npz",
+      "sha256": "fdd833bb5a871efea3558b8db3f191f688d31021312bdbb8e77e85d95379fa0a"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00052/record.json",
+      "sha256": "8ea7ceea3a2a21346f93fcab3befb192b7795421172ae1c26e7df3db1e592791"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00052/witness.npz",
+      "sha256": "c136bc66d9978c92cbd44fa0ca60d04e88150279ae9ce7ad866d296558caa1fd"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00053/record.json",
+      "sha256": "e592e293f8140fa8e8dd4ffb28d68d98c853c49a11d17a827544fb26423e3a72"
+    },
+    {
+      "bytes": 280848,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00053/witness.npz",
+      "sha256": "5c80e37381182724352024fb158fe61dd783691ee45d68557ddb2f59c4fa60ab"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00054/record.json",
+      "sha256": "7a86f0e5f897dae93ad1e65cedeeea705f2a2d14c245f936f9011276bb4e04cc"
+    },
+    {
+      "bytes": 281888,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00054/witness.npz",
+      "sha256": "9a3a19fa398e05c1e68352544a8d492903003d13253c4de45250f81450c2969d"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00055/record.json",
+      "sha256": "2d5ee5e93b2d27ce00305a5f2877845e2fea0daa50f4f3b157654f3cac49354b"
+    },
+    {
+      "bytes": 283552,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00055/witness.npz",
+      "sha256": "3b92e43c5bd9f390cbcd78c30ef5dfe830b31ec4d0c5dc48ae7cb9a2d4d9c573"
+    },
+    {
+      "bytes": 25416,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00056/record.json",
+      "sha256": "f0e011cb62515ba9754d5c79e19975480a441c66590f5218bb31c432c0a768c0"
+    },
+    {
+      "bytes": 285216,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00056/witness.npz",
+      "sha256": "2a68d48a48acb5eaf86e5e84455fb235d4193a0fc402b5d8f93eb133e4676438"
+    },
+    {
+      "bytes": 25415,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00057/record.json",
+      "sha256": "7f80433512f7ffb6d3427765223f393ee5b7aedd766c1b01d638e2d91ea1deca"
+    },
+    {
+      "bytes": 286880,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00057/witness.npz",
+      "sha256": "4ade28e538c948e6b556ef52f19b51f2decb20dcb83bc1a4a002de01dcf2a505"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00058/record.json",
+      "sha256": "b82d578a3ff710cf395da9c0bc98f670aeb28599adee5f6c465ac4d1393106ac"
+    },
+    {
+      "bytes": 288336,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00058/witness.npz",
+      "sha256": "42f188f223bc1942f82e13d1e508bc2be6900925eb1005d10c361f42d1ee9a8d"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00059/record.json",
+      "sha256": "043ecd34e65f59fa131e3855dc48b214bcd50ff01e4653eb0cd84ffade12d62e"
+    },
+    {
+      "bytes": 289792,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00059/witness.npz",
+      "sha256": "4c5bef194fff515a67229b92a82e40bf91da08245d1c3ac62bb33dc140f5567a"
+    },
+    {
+      "bytes": 25421,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00060/record.json",
+      "sha256": "c9da965eebf15caef8fdaa93d5eeeb8a95a166d67f45ec7ae29e2f3b5279d9df"
+    },
+    {
+      "bytes": 291040,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00060/witness.npz",
+      "sha256": "4b324a9e3bd8dca68e30d4cc525373c6559c8c9864c32d7ac20b46b3d2c1e8cb"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00061/record.json",
+      "sha256": "1b1388916e6c3de7fbd0b3acd89fb97f6cc3ba0c9e6dbec0ca408442c1900cf9"
+    },
+    {
+      "bytes": 291872,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00061/witness.npz",
+      "sha256": "39a37eb1f986127bb6cd174ee8ccf5aac46a0519844449b89193e3651bdb8d76"
+    },
+    {
+      "bytes": 25416,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00062/record.json",
+      "sha256": "5e239dec57bbda1da73f36f5dc17cec91931041c80bdd5dc6f6cfc3aa1e69ad2"
+    },
+    {
+      "bytes": 292704,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00062/witness.npz",
+      "sha256": "47cdbcedc4e04ed0a2c6dc437ae73aa0805983723f72dda89090cc3dae7623b3"
+    },
+    {
+      "bytes": 25415,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00063/record.json",
+      "sha256": "0cd1b3fca858d96ff9859b8fe83bf3c1801ffe2b8e90b55f5b86e76852527a41"
+    },
+    {
+      "bytes": 292912,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00063/witness.npz",
+      "sha256": "7f96c00f979957b7c3ff707e98e2abdf2170dd92894f1093f6121d59e2f1ea11"
+    },
+    {
+      "bytes": 25415,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00064/record.json",
+      "sha256": "86645c9905cfd00aff0db62e44e9c7abae0558532c11a8f141a9e7528cdb8624"
+    },
+    {
+      "bytes": 293328,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00064/witness.npz",
+      "sha256": "1f0d0bb4842839880cde8a6d2d56f5a9057656e23b1f0eace8157dd4f055d59a"
+    },
+    {
+      "bytes": 25419,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00065/record.json",
+      "sha256": "3f6c3bce15b2b9a69b3a73613ef0398b9b4b5062faa438d2bf27de1965739ce3"
+    },
+    {
+      "bytes": 293952,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00065/witness.npz",
+      "sha256": "0797ea02ad1fdfde480972955b382116fb99f0ff06564921d4fd57384792179d"
+    },
+    {
+      "bytes": 25415,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00066/record.json",
+      "sha256": "cfa71c4f668b3cbf2504081ef20eea8409895f0dbeb7ea15e22749aac8729be2"
+    },
+    {
+      "bytes": 294992,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00066/witness.npz",
+      "sha256": "616f66f6d273f91cca450329065cdb6bc5f3e8df0c7689a37d3c8398da9cf42e"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00067/record.json",
+      "sha256": "696d2beaa8d5fb04d3818aa4d83f8bbe641d6d6f7044fc24221a711879b3b8d6"
+    },
+    {
+      "bytes": 296656,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00067/witness.npz",
+      "sha256": "49200390d0b7c3417db91be139108f9aee194544c3a97a2df6f81fd9c052ca70"
+    },
+    {
+      "bytes": 25416,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00068/record.json",
+      "sha256": "76f1fe9ea8d42f43f265b9ddc4030902a9969d6949c82d74620488c8179ea662"
+    },
+    {
+      "bytes": 298944,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00068/witness.npz",
+      "sha256": "cabda19e9b9b30d29244e639ab9b7f85197a7c2d65ebacdb5eff07255fe2e7fd"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00069/record.json",
+      "sha256": "e28ca0df181abcb504ac23227f643e7a994cecb0b852f2385d01f90f8b4f09e2"
+    },
+    {
+      "bytes": 301648,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00069/witness.npz",
+      "sha256": "5299996f4882906d89caf7273dd8552ccbc2bd9bb2d4bca6122d91af9b649602"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00070/record.json",
+      "sha256": "18de7ead930b7c7869db1e8d98f1ec2fa908025b51b81f95c217f4bed4ba67d4"
+    },
+    {
+      "bytes": 304976,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00070/witness.npz",
+      "sha256": "acd567e3285a5f55ae2121d8b48a5c068152ed6a67f72c87498520e038a77990"
+    },
+    {
+      "bytes": 25415,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00071/record.json",
+      "sha256": "dbbb8c04377deba7ad06a67d748c04be01c4ed0fd0f3120cd888fd9121510cb1"
+    },
+    {
+      "bytes": 308928,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00071/witness.npz",
+      "sha256": "f4e2711f4d101caf4a1d1d362698bdbb5c57a49cd6c5ab4bf5fdf4a63e0c7ad6"
+    },
+    {
+      "bytes": 25417,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00072/record.json",
+      "sha256": "30e6ec660d5b89d7838e3bb0478ec58f0b420a7d193ff4c9e293ab676fc7a74c"
+    },
+    {
+      "bytes": 313088,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00072/witness.npz",
+      "sha256": "5252bf0809992b1fbfd25d9219c6510042cdb49f296635f2501b58ec4b68e4e3"
+    },
+    {
+      "bytes": 25416,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00073/record.json",
+      "sha256": "cb26ffb881e607ac87fd1c518d49c6dd4cb6f949a9bb87e9007511830405cd79"
+    },
+    {
+      "bytes": 317872,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00073/witness.npz",
+      "sha256": "51c7a1b770441f97e7898415550b78ec61b2d464982d758083485c72a39b8065"
+    },
+    {
+      "bytes": 25419,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00074/record.json",
+      "sha256": "d19d2eae6fbe723285b08b35a0741d907e0b22b77274440ec6da534d5c01931d"
+    },
+    {
+      "bytes": 323072,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00074/witness.npz",
+      "sha256": "9c980a9c3eef76a1c986ea584d534a33dc1cd9472c568aa19de860c61507f1d2"
+    },
+    {
+      "bytes": 25420,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00075/record.json",
+      "sha256": "f82f5860205429a9d188f48212e9ea288fbe88d2087766885f51282865c17454"
+    },
+    {
+      "bytes": 328688,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00075/witness.npz",
+      "sha256": "ec13de5393cd4a2bba66e558e8393ca64855713d200ff8c705f5c336eedaef37"
+    },
+    {
+      "bytes": 25419,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00076/record.json",
+      "sha256": "06b4799d8acf63452ebdc0cbe48ee7aab7c1dc28b85fd3fc812a598bd1555bb7"
+    },
+    {
+      "bytes": 334512,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00076/witness.npz",
+      "sha256": "981f748d91e0c223d6a0cea9f59ccf3d73b1245f457c1f9ca540daf7e5aa6988"
+    },
+    {
+      "bytes": 25417,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00077/record.json",
+      "sha256": "e4d56aefadb93d0feb30d9ef563e0b36075740c75e077dcbd734247b4c0c0614"
+    },
+    {
+      "bytes": 340544,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00077/witness.npz",
+      "sha256": "0697f5a77aa27558f5b372ff1e65857549787981a498a8860e01185b2dd08491"
+    },
+    {
+      "bytes": 25419,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00078/record.json",
+      "sha256": "68d8bd3196267efe205c3284a70b514e2218b4ae006f4903191e7f7295e0ebad"
+    },
+    {
+      "bytes": 346784,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00078/witness.npz",
+      "sha256": "b2f145eff93ecc54432f6d52daeb0d8c0c563bca393abd13e286d56f3a9bf657"
+    },
+    {
+      "bytes": 25418,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00079/record.json",
+      "sha256": "764cc8d0982a0bbddfb8983721d5fc2b63f8ea139e19ced18f4908283d6324ec"
+    },
+    {
+      "bytes": 353024,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00079/witness.npz",
+      "sha256": "5a6ace1b4596cbbbb39baeb427d24aaba6e04d6ecf9d6e266a7150755461c755"
+    },
+    {
+      "bytes": 25419,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00080/record.json",
+      "sha256": "c834cce369b3ac8fe77258c53f883d48fb7f1403f9721a29df67088dea2ceb00"
+    },
+    {
+      "bytes": 359264,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00080/witness.npz",
+      "sha256": "945bdc5e8a16d9f4a10c0be25b974e5bef93944bda63fec42255519e5cb0051f"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00081/record.json",
+      "sha256": "5d1718b9d213d8aaf1d123292833449c2635eec44f66323b388ef9b37a28b676"
+    },
+    {
+      "bytes": 365504,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00081/witness.npz",
+      "sha256": "d5a9454afbd1e93e492213099c8e549b5102313ef0f495af5268e89a00b73fbe"
+    },
+    {
+      "bytes": 25475,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00082/record.json",
+      "sha256": "e4272f8d0bc4d0adf097e2acde0514cfc3d914e3204ac06de4a23c701e99ea48"
+    },
+    {
+      "bytes": 371536,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00082/witness.npz",
+      "sha256": "ccc17e5f615d88bfe3c241e5800e878c27457e51cc39a8aa1b7f30ff861e6296"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00083/record.json",
+      "sha256": "a37c5190187cc750aac8b177929ad826a7638cfe11057a11e1a9945475b7c704"
+    },
+    {
+      "bytes": 377568,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00083/witness.npz",
+      "sha256": "b7b3353043b1fa2e736f3f11f8ff933bd94ff5915b0705bbdc98df1f33128a6c"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00084/record.json",
+      "sha256": "7f68b3402d98298192a651ebc2a4fcbe4fb725d494dc42fb9cd00b9a48e14252"
+    },
+    {
+      "bytes": 383184,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00084/witness.npz",
+      "sha256": "c9748267653eb900a511a40e304366a81a5c458556c282fc454ac8ee9cb44e12"
+    },
+    {
+      "bytes": 25475,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00085/record.json",
+      "sha256": "b536804c5379a29c134af21147a2ce2ba531a948fd2769d2ae02adbd1d694447"
+    },
+    {
+      "bytes": 388592,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00085/witness.npz",
+      "sha256": "fe2e59dcdcf26f3b391a15d3084521ae857760ccd614792ab1c6d262f72f5a51"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00086/record.json",
+      "sha256": "4f2e3e47c7cfdbe18a5d4bff40719b75ef25dca1d408b2a70ef92113865cb64c"
+    },
+    {
+      "bytes": 393584,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00086/witness.npz",
+      "sha256": "0d808882fe12514937b33984f9ef63f2831f5d0b36879811afdc76726c72bf53"
+    },
+    {
+      "bytes": 25476,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00087/record.json",
+      "sha256": "e23beabde977aa943069d2513005ed18f743acb1c22155f11abb5da580755f94"
+    },
+    {
+      "bytes": 398160,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00087/witness.npz",
+      "sha256": "2af54f283470d27bb8678aca2ad29f3cd818b40ed0abf529c995d7b8c7465635"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00088/record.json",
+      "sha256": "a60ea48ff1b9f092a998a608d96e13a7752f0c4ed8ca3b744bb89be38e1c7608"
+    },
+    {
+      "bytes": 402320,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00088/witness.npz",
+      "sha256": "80254358d1bdac05f335427386bfd28b9f20164468175c8974554032d25d2e38"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00089/record.json",
+      "sha256": "00cb003152141a45ea3b9951a160c5a7116760dd1f9c7f94551c2ed9a7c83957"
+    },
+    {
+      "bytes": 406272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00089/witness.npz",
+      "sha256": "a627b57e2f384dabbe9a7e41bb921fe6186b9cd7887d98ef9e9ff0182bd1387b"
+    },
+    {
+      "bytes": 25480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00090/record.json",
+      "sha256": "af16547edeea138eb459931e8104e4c89f31beedf520d832fe992a31054ae7b3"
+    },
+    {
+      "bytes": 409600,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00090/witness.npz",
+      "sha256": "8e92f8beeef150ab45c22d6ab4fc99cf73909bf73b747d684b7b290b0c22921d"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00091/record.json",
+      "sha256": "e534f1b0a79fd27bd51df373d1d7d8a63a88450ada8b5e29b69b75d2baaf63c2"
+    },
+    {
+      "bytes": 412304,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00091/witness.npz",
+      "sha256": "597e0e115e1bcf3328189ddc551319c3d6567149e2e0b721e872d7d9ca4ec5e2"
+    },
+    {
+      "bytes": 25481,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00092/record.json",
+      "sha256": "b9db2bb60abd918eaf22e39aa17e08fb6c782da7f7115d6dc13a5a801f5b4e2e"
+    },
+    {
+      "bytes": 414800,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00092/witness.npz",
+      "sha256": "d08eef5ceb75513e0731f4c1742f91547df502ac6b3ffa98d74f1325c3855bcd"
+    },
+    {
+      "bytes": 25479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00093/record.json",
+      "sha256": "6821743a2e2e47e4b7f58e31ec449ad9df0127098834f61243836c35ca160c1c"
+    },
+    {
+      "bytes": 416464,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00093/witness.npz",
+      "sha256": "09048e405cb23b6e4528b678375f9622fe6bb5f2e6c9dc3d1106e435c544a6b3"
+    },
+    {
+      "bytes": 25478,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00094/record.json",
+      "sha256": "61886e00b1a73d275b99180a173b82b7fe9a6f8d61e92dcabd89a3a4fe552323"
+    },
+    {
+      "bytes": 417712,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00094/witness.npz",
+      "sha256": "59a2f409bcd4469306764874a18d233d74bf8df1ee2f8627fe657a6c0363bb1a"
+    },
+    {
+      "bytes": 25482,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00095/record.json",
+      "sha256": "be0d0ac3d23efb8396ddc1c3222f50adb9df26c7ed34cebe7bb80660fe3da164"
+    },
+    {
+      "bytes": 418544,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-direct-source-window-v1/rows/row-group14__low32_1-00095/witness.npz",
+      "sha256": "eeff940e2bccd14580d91271003dfa242a737c292648887e8cdf3da0cac4abc1"
+    },
+    {
       "bytes": 28541,
       "original_git_blob": "82f20783a8c666e91755872cf7413ec5b132063f",
       "original_sha256": "a738e839459e907017ff6844ef2faca34fd21e28b28fe1c5135703d76a1ebee5",
@@ -73048,6 +74308,13 @@
       "original_sha256": "d9c4edd93dcdf4720065a2cc4cd1dfa16ac30c6ada4a3268c388bfe64f62b825",
       "path": "lab/results/development/nsc-ks-coupled-retained-control.json",
       "sha256": "d9c4edd93dcdf4720065a2cc4cd1dfa16ac30c6ada4a3268c388bfe64f62b825"
+    },
+    {
+      "bytes": 11447,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-ks-cubic-residual-v1.json",
+      "sha256": "53474c24c7a9ab8ad3a58a92a8fc29b0dd78d73f8f7e5ed580e3215d6268718f"
     },
     {
       "bytes": 23597,
@@ -74387,6 +75654,34 @@
       "sha256": "ce07c42a53d749d04843309ce094a315e227af181cad4b41c2c16dcc28166f20"
     },
     {
+      "bytes": 817680,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-ks-source-operator-majorant-v4.json",
+      "sha256": "4b2462987f7784ee77b58687521226f274400ac6b0924bdf493428037aabbdf1"
+    },
+    {
+      "bytes": 911926,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-ks-source-operator-majorant-v5.json",
+      "sha256": "21f9eb1214126c513e80470fa67b9e2075252beeb93a76491769607d067122ca"
+    },
+    {
+      "bytes": 839074,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-ks-source-operator-majorant-v6.json",
+      "sha256": "15615d1ee0206ed0fb6b8c3a10df8d860c581b2ebc206bef2242492f0154d517"
+    },
+    {
+      "bytes": 933633,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-ks-source-operator-majorant-v7.json",
+      "sha256": "c9a98578bf53ee02903403f4b63550ddb1d67ecf870d656f7b1f2ee74de44c12"
+    },
+    {
       "bytes": 51474,
       "original_git_blob": "71db2f0f15fdf3ee77eb16db3716a90140ea33a7",
       "original_sha256": "f52a2438e2e8eda39acbcdd7c1d06329941b06c5c8cee761d03a1fe3f7000f40",
@@ -75507,11 +76802,949 @@
       "sha256": "18b3a83cda878cbc43f04ba6ea2cdfb557fff3ccc19ac8ed4424f5b1ca7e4937"
     },
     {
+      "bytes": 1596,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/proof-freeze.json",
+      "sha256": "eda1b110099b05d4b3c130e7618081828c9b9ceb79179bc96cb6cb15ef9977bf"
+    },
+    {
+      "bytes": 27263,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00001/record.json",
+      "sha256": "7facdf3773098e76cb1e779291c7d2d507b3cde7f0151afd4f2bdd7e536e1ee9"
+    },
+    {
+      "bytes": 222684,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00001/witness.npz",
+      "sha256": "c3155683016b5b303ded26fd00ee4ca7ce481c6bcc52a896efa76cea3355c430"
+    },
+    {
+      "bytes": 27268,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00002/record.json",
+      "sha256": "73eead6d11bbeb0def85dde202da9041d7363edd04b044b96f33ac4dc4491cab"
+    },
+    {
+      "bytes": 224268,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00002/witness.npz",
+      "sha256": "1ef5faf9ecebd4d9966a0475a7f3dc78696e95a575fb3f0d6094852e9bc72171"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00003/record.json",
+      "sha256": "0bfdb923621056040829a3149b01b9a42d76c8590c4e6aca5ab664443a0d4d84"
+    },
+    {
+      "bytes": 232892,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00003/witness.npz",
+      "sha256": "ab032a4e2ecb54f9aa54ee96d80ab263d31586b3961dfef0b78f93d858220c68"
+    },
+    {
+      "bytes": 27272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00004/record.json",
+      "sha256": "fc3ea851d3ae66b027691e998874488f77e6008096632a501a31d035a8206b32"
+    },
+    {
+      "bytes": 230692,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00004/witness.npz",
+      "sha256": "bfd5d7611c477fd498af519f2d04168d387215c74741c1870e7c89b563fb8b06"
+    },
+    {
+      "bytes": 27270,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00005/record.json",
+      "sha256": "ed415a84bec895a7950e38d33212fee3c70a7de10332ef67e947963cd9da0e8b"
+    },
+    {
+      "bytes": 230780,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00005/witness.npz",
+      "sha256": "4788c0d1461095bc93e7f699bb8c180b81132d4b22ffa05a33ea9a494e87cdef"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00006/record.json",
+      "sha256": "bc5088d76b4854752c350a764aa4b679c3efc801d216112b20572fb54614526b"
+    },
+    {
+      "bytes": 229372,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00006/witness.npz",
+      "sha256": "2381054f635103ad4a5dddd7e6d559d022a5f3d8f26457a27eb51e09df873aa4"
+    },
+    {
+      "bytes": 27269,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00007/record.json",
+      "sha256": "6ad13d94408f0b509aeb30f24986472865f50ded16ff490ba2c392c55cb6c8cc"
+    },
+    {
+      "bytes": 227436,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00007/witness.npz",
+      "sha256": "64330c68479827bf31235dfcc138de1c5d63db9594d52e605438f6d9a04c777a"
+    },
+    {
+      "bytes": 27272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00008/record.json",
+      "sha256": "f455af3311d9f9048c9df139a05be49b56cd3b0ad2dfe14d86f15859bc7529ce"
+    },
+    {
+      "bytes": 225236,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00008/witness.npz",
+      "sha256": "71c02a424f5f4120e53372924955a37854075f290d4470fac4dd76ff68692ac3"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00009/record.json",
+      "sha256": "017a45abff1ec87575d6872eaa4a6d2a0fdd38235af99a45f83d181bbd8c1598"
+    },
+    {
+      "bytes": 223036,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00009/witness.npz",
+      "sha256": "e8bf4421debc59a03ba187b72cf4f19c83873ed2d72ed867769e7fbb761cb20f"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00010/record.json",
+      "sha256": "f34d98e3deabc39529a8e15c18307ef5ff36b1abe17b1f80d903b6ddae6ce9dd"
+    },
+    {
+      "bytes": 221276,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00010/witness.npz",
+      "sha256": "95981d68f620e923792de478f5e9c5abfba095d7f31ed64064bea0bcb65768c3"
+    },
+    {
+      "bytes": 27275,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00011/record.json",
+      "sha256": "cd0438f46cd91a75d71ab9513c25cec3d1b233665df6b91857064de641a7cf12"
+    },
+    {
+      "bytes": 219692,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00011/witness.npz",
+      "sha256": "72cb9ae82414eca96bef73afcf74c2325f01d1e3a73bc7126c191dbc7b9be785"
+    },
+    {
+      "bytes": 27272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00012/record.json",
+      "sha256": "2ce7adda01fd0a40935aec3b38354a8ecf7c2a8727ab543d125fa7105c5874c0"
+    },
+    {
+      "bytes": 218372,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00012/witness.npz",
+      "sha256": "3761c4ee2af1a4f097a786c60329748f6f775b5b25b78ea7737d30abc79d3617"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00013/record.json",
+      "sha256": "b07a3b8effc977f09af1583b23f4a5e3184693fd8b0684ad2451587fb0f69d63"
+    },
+    {
+      "bytes": 217492,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00013/witness.npz",
+      "sha256": "7e8f279a7f70d05a43ff3c45db37c712c5509f923c4de15c225f5615595abf32"
+    },
+    {
+      "bytes": 27270,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00014/record.json",
+      "sha256": "95e713b3a1c4111134fb7873075743d55b1ba01590041af5d506be8d6e998486"
+    },
+    {
+      "bytes": 216876,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low16_1-00014/witness.npz",
+      "sha256": "cbf0812d00aaeaf6b48e8c695aa577d7a69c8e8a5460e9c5873bacf7896fed6f"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00000/record.json",
+      "sha256": "8b656584cc05ce91d7a46f98836f4207c90e7fbeaa9edd5129b61a15a42f1f60"
+    },
+    {
+      "bytes": 216348,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00000/witness.npz",
+      "sha256": "f7b26fbe8c4ea51bdc74de20baa86b8ff5483f7acdd6fdfa08968e15281b9c6a"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00001/record.json",
+      "sha256": "226f62c77ab03403a6d79166eaf50c45fbdd9c22491a6a0f7567f22d7ab6eb03"
+    },
+    {
+      "bytes": 215996,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00001/witness.npz",
+      "sha256": "5bf4e0a4f0a92dcc6194948e9841edee7a5bb0e531551c5b75594ea66ffb18be"
+    },
+    {
+      "bytes": 27267,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00002/record.json",
+      "sha256": "a6443b8a9e37ea028ecb303fa1933e3882c7522e2526a0b27f246ffd55b018dc"
+    },
+    {
+      "bytes": 215556,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00002/witness.npz",
+      "sha256": "2ca0ae7f3541b5433ce8f55dca805d8975739f9ecc74f344e1d13980d738a416"
+    },
+    {
+      "bytes": 27272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00003/record.json",
+      "sha256": "efe45ea8109035a7660d620c104f2b9597ea7c87f9b10d76409847534f959f6f"
+    },
+    {
+      "bytes": 214940,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00003/witness.npz",
+      "sha256": "b364df1980343ba317d94301ab93a62ec5cc7c4e195c8b9899ade66d40eb55bd"
+    },
+    {
+      "bytes": 27269,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00004/record.json",
+      "sha256": "96b6a3312ccd7fcd7e97ead18a187f51e66bbcde1787d3c43d479bee3194cc3c"
+    },
+    {
+      "bytes": 214060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00004/witness.npz",
+      "sha256": "46ff5b87832e73dacd36a4b541373e902b21fb7ac0a086a75fe823cbfbfde4d7"
+    },
+    {
+      "bytes": 27275,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00005/record.json",
+      "sha256": "9dd9e07ec9efdf69330946700302cd8ce2ff971145ad545a28dc1009d1858886"
+    },
+    {
+      "bytes": 213092,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00005/witness.npz",
+      "sha256": "c8fcf6a58027fcfc6bcf2eace475f1ae3de95b52ba16ed1a965a5ff971ef978e"
+    },
+    {
+      "bytes": 27272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00006/record.json",
+      "sha256": "e2216d59c594b8422f5f3bfd33359328199b36aabfdb35c7c9aff893e5c798e4"
+    },
+    {
+      "bytes": 212124,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00006/witness.npz",
+      "sha256": "84f3161f6905761e90b795c3a49b5021907e39ed66e29996d0d41b242c6be711"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00007/record.json",
+      "sha256": "7d4301b647834ba2d903884638ddeef0148b8f0914e800a65ac7313a6ce0ad02"
+    },
+    {
+      "bytes": 211068,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00007/witness.npz",
+      "sha256": "3c2840dd1c60be8d722a3156097085c5461eb3c3693ff478380321756af59b0b"
+    },
+    {
+      "bytes": 27271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00008/record.json",
+      "sha256": "65cd7fe4e3461b05d011b59493105bafb4110b6b9751d333eefdbb9a593be61a"
+    },
+    {
+      "bytes": 210100,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00008/witness.npz",
+      "sha256": "9e9eef1bec453817a825bf5973ef615cb8a0d3fc97fecd6d0c4fafb4b8437a54"
+    },
+    {
+      "bytes": 27270,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00009/record.json",
+      "sha256": "84296289ee9c73d28dcd49e8a7f91b2be217fd5dc74e5c550cac8d46ad48d5fe"
+    },
+    {
+      "bytes": 208868,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00009/witness.npz",
+      "sha256": "0b0c59c656d4dc1a6dbc61235c14ca07a2946c9b4a8729629b4b95ca0d9f21d8"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00010/record.json",
+      "sha256": "f691a91b561bff5f2af1ff258a6ce7e821c5457f38e8c78bfdb6bf3a19efa64e"
+    },
+    {
+      "bytes": 206580,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00010/witness.npz",
+      "sha256": "58228ad10c7c4a48a48bf2d283d84997610a4b12bb6e3be310f81de3ce96a4dd"
+    },
+    {
+      "bytes": 27276,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00011/record.json",
+      "sha256": "873b1ee79fb26940c17a91de43c12f27e2d1f9c253a8ec9dcfaeb7cbbc15832c"
+    },
+    {
+      "bytes": 204644,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00011/witness.npz",
+      "sha256": "311187e3d621d32870efd838c1d915032fa8136bcb6d4b878c21fe66eded1d15"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00012/record.json",
+      "sha256": "27d69a9ecd3e065e43b3d941cb8bec731f21c3a3058851551300ab6282406e60"
+    },
+    {
+      "bytes": 202884,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00012/witness.npz",
+      "sha256": "5a8e56f7e0cf545db360532c61877756fcd6a9abbda7ea2a017e12af9b650ec0"
+    },
+    {
+      "bytes": 27276,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00013/record.json",
+      "sha256": "a3edc3d6e322ba6b96c3d073542a3857f8bb68b543e02a4f999abf080c5809ad"
+    },
+    {
+      "bytes": 201212,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00013/witness.npz",
+      "sha256": "ea0b36bcec9a8155f41e341f254c885c852a2adcbaf580775881f4a9cd5835da"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00014/record.json",
+      "sha256": "870017026bb557e67e591c975131c0b41aedeb31fdd4356afb1d5d7bc61b0f68"
+    },
+    {
+      "bytes": 199628,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00014/witness.npz",
+      "sha256": "6cef996a8d4b4bf6cb64a520fd11c9bd8ab5e45e060798ab6570fc5162d9964b"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00015/record.json",
+      "sha256": "8dc7104952e950071506fe6b9387f6d3cac12fa54c0510a3ae10f2caceb78047"
+    },
+    {
+      "bytes": 198220,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00015/witness.npz",
+      "sha256": "ab28f83830cb9d7532e5157b8599e0dad0d552ae330bd4a585569e727d890937"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00016/record.json",
+      "sha256": "43cdd6bbeb1b30a53742eefa77301c13d07e658effdec9db6106fddb8b262321"
+    },
+    {
+      "bytes": 196724,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00016/witness.npz",
+      "sha256": "f1da5cd8e3f4690e6c634f8757c25ce7119e257cafae7b722962a09a4f7fd36f"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00017/record.json",
+      "sha256": "37aef13c6b5a6978026f754e9a323acbaed2f2605ec07694e057bb7fdb2aba9b"
+    },
+    {
+      "bytes": 195316,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00017/witness.npz",
+      "sha256": "cf458c7196c106e96ff1d00b1370b86224d8692b1fcab9be6aee22077e163b76"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00018/record.json",
+      "sha256": "e9ac1b7660764bd7495715efadc094ac8493e0e14cfff6d70fec1f1064c7d728"
+    },
+    {
+      "bytes": 193908,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00018/witness.npz",
+      "sha256": "0e04d7ccf096f038419428e38e9b9a1c910a9ff56e5517ebec75097dd77b9b1b"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00019/record.json",
+      "sha256": "f136edef6cbee21a0f1db2eeca3fe17424950cf8ebfea759f9a92fd6928ea85d"
+    },
+    {
+      "bytes": 192324,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00019/witness.npz",
+      "sha256": "d0134ffdc0952ca0b4ba132dd3424cf836955be36e9df66d6b307f8c7fc0035d"
+    },
+    {
+      "bytes": 27268,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00020/record.json",
+      "sha256": "4e1dccee9f6b8d15f9e061295a6f64940ac61d37f7946e4662dbc0a9b5336d99"
+    },
+    {
+      "bytes": 190740,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00020/witness.npz",
+      "sha256": "5ac212238c5db42ef30d5b34eb671d65b66e853b297528ecf8bb6e66d9a9c2ab"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00021/record.json",
+      "sha256": "7c71ff7675d0a92cf9edb66c766e117a72adfd3afa57b1cad7a203f784ae4493"
+    },
+    {
+      "bytes": 189332,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00021/witness.npz",
+      "sha256": "e13594e5c47567cd4b1e22f1260726ca201249251022e3d472a4af02a3263624"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00022/record.json",
+      "sha256": "7968b5cb3161e3fedc45d5949cb851761cf5349320654b8d3aac1a57724d2b2b"
+    },
+    {
+      "bytes": 188100,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00022/witness.npz",
+      "sha256": "37bf499bbeedb9fe81cdd19907e247fb27b0dfbf8bc081185493f477d3fd931e"
+    },
+    {
+      "bytes": 27276,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00023/record.json",
+      "sha256": "b61db32e1fd65cb062851a43796168f9f23fd31d3817be23e1232ed90ae2649a"
+    },
+    {
+      "bytes": 186748,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00023/witness.npz",
+      "sha256": "42efa67b299f1e75bf5d49bb693bbc1363dbf276016e52f8577bef99d1ebebcf"
+    },
+    {
+      "bytes": 27276,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00024/record.json",
+      "sha256": "365f23539775e66755f99b2ecc429c23e19667aa8e4889ae2fad1a6903d9a555"
+    },
+    {
+      "bytes": 185692,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00024/witness.npz",
+      "sha256": "e85803982b24374a4e9b859217bbe4b25870cee24b1e177357cd6e483ce3ad77"
+    },
+    {
+      "bytes": 27273,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00025/record.json",
+      "sha256": "297836fdd8fe6513a848c4dc754f55d5f40122633c0046c77a1d03e77aa71219"
+    },
+    {
+      "bytes": 184932,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00025/witness.npz",
+      "sha256": "12a7e7c4bb3e0a174f5bf228cba71570552864e3601151ed3696d7ca788fbf24"
+    },
+    {
+      "bytes": 27275,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00026/record.json",
+      "sha256": "11b2e25bafe44d56c28afee1a3fa87aaee8a401e8c42d739d39d956a00301473"
+    },
+    {
+      "bytes": 183932,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00026/witness.npz",
+      "sha256": "7f476e91ea633fd3173d2a2aad7c6db72d0f97d8a677f9668f5089e2501a2825"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00027/record.json",
+      "sha256": "2f0e5ea5cef82b00d591d9efddf010400ee71bea41844c1fe6f69569475b7924"
+    },
+    {
+      "bytes": 183140,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00027/witness.npz",
+      "sha256": "6db702523934b85aa7ebb40c4310afebb86529fbcf94d06e9215d6197766d6d5"
+    },
+    {
+      "bytes": 27275,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00028/record.json",
+      "sha256": "cd3efb9f506e910a2515e73c4067cffa13fb063fe01e4a51b814381e8c76265b"
+    },
+    {
+      "bytes": 182612,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00028/witness.npz",
+      "sha256": "e7bb9ad2f89c9091aef52fbd8faa57c47e35c85a2176eff1ef78f6d5cc6cb46b"
+    },
+    {
+      "bytes": 27272,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00029/record.json",
+      "sha256": "d348d347a4c7bcff906a6dfdfc7441bf77c72780642bf9303390273bb32d1d06"
+    },
+    {
+      "bytes": 182084,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00029/witness.npz",
+      "sha256": "a0cc4e08534db5d6e36b289ce4badbdb9f7f5df866fc20a18ae3f2fc2ce3ff01"
+    },
+    {
+      "bytes": 27275,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00030/record.json",
+      "sha256": "2649581e6107f44080ebe13acc3e9043a77faa1317e160c1eaf39497a0af59d4"
+    },
+    {
+      "bytes": 181732,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00030/witness.npz",
+      "sha256": "725b593b666e11d18584b5d7b83ffaac1bc1508a36779f56b2640130185d7aaf"
+    },
+    {
+      "bytes": 27274,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00031/record.json",
+      "sha256": "91d444000f9aa8ec9a2a7183e91cab65c4a05cc96d746fa02ccb7c4b86f0d1ab"
+    },
+    {
+      "bytes": 181644,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-group14__low32_1-00031/witness.npz",
+      "sha256": "629e33668a85bbb63ddfc524715bef3745db87723b52764a4e6253e83421cdf5"
+    },
+    {
+      "bytes": 27263,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00000/record.json",
+      "sha256": "8358909d9124b6b768cb32e932e6f4c6eba9eee3d63a84068580ca894fc64062"
+    },
+    {
+      "bytes": 181116,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00000/witness.npz",
+      "sha256": "f07586db79503fd74648ee26b81fc16827a86afef1339c448b06bf8c6a64ca8d"
+    },
+    {
+      "bytes": 27265,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00001/record.json",
+      "sha256": "7905400e6d39f70cf04913e97c2282d8121bb7b78d402775d5fb0dbadbb95ada"
+    },
+    {
+      "bytes": 179092,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00001/witness.npz",
+      "sha256": "db66e2e8a125a509a6837647cf52cd79d10557fea6b24f4091d842481d91cbc7"
+    },
+    {
+      "bytes": 27291,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00002/record.json",
+      "sha256": "f6af0d71273837211014312dde523386174abdd24479f0b30ad756a444283097"
+    },
+    {
+      "bytes": 176452,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00002/witness.npz",
+      "sha256": "c55b19a9a92536c88c62b472b6279aa0847f2ea37cc184b57b1eb5777a7ce52e"
+    },
+    {
+      "bytes": 27299,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00003/record.json",
+      "sha256": "e525c8d4d0127d20f022b162f5174792c01a9e12dbd528ed5a71ee50c7b39b40"
+    },
+    {
+      "bytes": 174956,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00003/witness.npz",
+      "sha256": "0ebf3490f0459cf84bbfa8d1d7b5f017aa1dc585361b50d2b016ba1230374633"
+    },
+    {
+      "bytes": 27294,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00004/record.json",
+      "sha256": "f7e39e4aa445b8cc27b811d6dec4c44bd83b993361fa8761bbe760e70d7b77c4"
+    },
+    {
+      "bytes": 182524,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00004/witness.npz",
+      "sha256": "e5101c23db82875c87dfceb43ed99825b4447fc64922e45fafc4913bcc17191d"
+    },
+    {
+      "bytes": 27301,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00005/record.json",
+      "sha256": "016d031c5c95a2a8b7c7223bda885a01e2155912fd02a015e6cc814bcbe94fab"
+    },
+    {
+      "bytes": 206812,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00005/witness.npz",
+      "sha256": "44949d3eb65fde651dca784f97dbf0769c807df7216cff342478b529f85d687c"
+    },
+    {
+      "bytes": 27293,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00006/record.json",
+      "sha256": "8e1f976d673e15f536e745acb582acb88e2c574fe2dbcd033a3e974750be8d51"
+    },
+    {
+      "bytes": 216932,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00006/witness.npz",
+      "sha256": "36b11c2359b9b43d2115d8a4a63352a5cf0dc20d8cf115d8be07d7e9579ce688"
+    },
+    {
+      "bytes": 27304,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00007/record.json",
+      "sha256": "47d5742653a27ad59f0ce284a63614fc397f4d3f29a5ba6ea1a1fbc33f3425c3"
+    },
+    {
+      "bytes": 277916,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-subgap-source-window-v1/rows/row-subgap8__14_1-00007/witness.npz",
+      "sha256": "e090d553c85b6172c123b0149bda81138384ae10640b93ffa35814477ce0581d"
+    },
+    {
       "bytes": 21380,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
       "path": "lab/results/development/nsc-subgap-upstream-covariance-v1.json",
       "sha256": "8590404c131ce18b08d19d1f933c0a29bbe132e24870ef873719ae6a22644637"
+    },
+    {
+      "bytes": 4103,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/docs/nsc-threshold18-actual-source.md",
+      "sha256": "311bb8e201727598834236119f327e3496e3e869eeae70f52bbde987d67fba90"
+    },
+    {
+      "bytes": 59095,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/evidence/actual18-replay.json",
+      "sha256": "1708ac804c931b594b64bf13842ec6d66325dacc1543b7c78f0d879f702b5405"
+    },
+    {
+      "bytes": 59103,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/evidence/actual18-report.json",
+      "sha256": "b65ccf7752db441c635f4ea6f8b5efd7faed735048cef1d3c3155c1bbad12601"
+    },
+    {
+      "bytes": 110,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/requirements.txt",
+      "sha256": "39cff9e84d4e7073b9653af9da7bae7e1b75615e07de5cf374ad6ed3ae94a171"
+    },
+    {
+      "bytes": 28386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00032/record.json",
+      "sha256": "2f8bb6658ee169cb29a0aaac15eabe86338c61fa942d2b59c0ac61ea24d66387"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00032/witness.npz",
+      "sha256": "b026a8d25fb90e00eb220f9910cd3fd3623708ecda52b4155a5fc14628e18d47"
+    },
+    {
+      "bytes": 28386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00033/record.json",
+      "sha256": "c7353c65e79d97cdfbf70b234b03f669a54c9dc6a386b21320f8432442ed9119"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00033/witness.npz",
+      "sha256": "a86166370f6aa4ff4dcb38e66c623c70fd4119ec37b02c4f08c5efc8f8457377"
+    },
+    {
+      "bytes": 28386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00034/record.json",
+      "sha256": "a5b179caa03d917f57c96847137deeadf62259bd466bf2a28fbf6612ddea3c52"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00034/witness.npz",
+      "sha256": "149eff74e15360a7491f4b2dd7311752ebaa0502830142f014281366449f8465"
+    },
+    {
+      "bytes": 28384,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00035/record.json",
+      "sha256": "0c09c980e746a1ccff54d97f6e80c7295427a161a215350166f2bc34121e3956"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00035/witness.npz",
+      "sha256": "74f0751e0e2bcabbe0a54824a6882a5af9fbcec9241b804118c8c1a162132524"
+    },
+    {
+      "bytes": 28386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00036/record.json",
+      "sha256": "6635aaeb51721d3b25622cf2a7e139f071a91cb382ebd869157a2a5515d77fd3"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00036/witness.npz",
+      "sha256": "7f1826e88f60f065b3a42580b52c876287ae74d723e344e3dfacb99b79ac25d3"
+    },
+    {
+      "bytes": 28386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00037/record.json",
+      "sha256": "7be7001163be98c5460e4c3dfb0eb91e783ffa5f097a3a81aa6622211b15e3e4"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00037/witness.npz",
+      "sha256": "735c27bd74249fc26dfcef7446a1377aef2180f6b53f691ad16ea1fece3337b5"
+    },
+    {
+      "bytes": 28386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00038/record.json",
+      "sha256": "4b5f6a0194e3f6b50697fb7592357ffb6081111f6232a123f5405cfa0ebdcbf0"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00038/witness.npz",
+      "sha256": "9e4b1a24b2412d1d3b1bec8b0cb26cd3edbafa80e96be4f83b0d1656fe98b8c4"
+    },
+    {
+      "bytes": 28383,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00039/record.json",
+      "sha256": "3f66bb4a2b2b033258bd0dc5a7c2716a547731c169c5880fd7e0570b6263ad1e"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00039/witness.npz",
+      "sha256": "1c08aa8550b11cf6b778df0d0d86f95dd2a384d4ad03b3c7a32a5e92032b63da"
+    },
+    {
+      "bytes": 28384,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00040/record.json",
+      "sha256": "2f0ea6e118d36864ce904688eef5b4ebbe6c7c5132bbd22c904d3f873d3fc6fe"
+    },
+    {
+      "bytes": 280432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/results/development/nsc-threshold18-actual18-v1/rows/row-group14__low32_1-00040/witness.npz",
+      "sha256": "b4485861e4277bde7bded82d4428501d564959f015d64c0a5d1f48989253050d"
+    },
+    {
+      "bytes": 2977,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/scripts/derive_nsc_threshold18_source.py",
+      "sha256": "69a87128953c570ff46b257e382949993707b891b292e8c45d1d3f5292c5aff8"
+    },
+    {
+      "bytes": 52715,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/src/nsc_threshold18_source.py",
+      "sha256": "368fe648de84000e828efb0a35d69600419d2349461fe87d3ac38be696034ea4"
+    },
+    {
+      "bytes": 17985,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/results/development/nsc-threshold18-import-v1/tests/test_nsc_threshold18_source.py",
+      "sha256": "2ba5b73502820f3e4fd6493802d92b92aa56c066dbcead0e01696f96547324ef"
     },
     {
       "bytes": 59802,
@@ -76487,6 +78720,13 @@
       "sha256": "125b27a3b08f5e19e60e01ee9f5e5e1468c9cf502f1717e1248c9faedf80697f"
     },
     {
+      "bytes": 2221,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_direct_source_window.py",
+      "sha256": "2325292a5b06ecdd2a4d6b4c67dcf55ca6072ec8818e90253f87cade957b6b4a"
+    },
+    {
       "bytes": 13381,
       "original_git_blob": "fed95aaa0bd0fc0f1ca50a994343a69c229ca96c",
       "original_sha256": "ce53587f3077cf4a8de7f8042a5e532319fac9635757b8a48205683e34b4710c",
@@ -77136,6 +79376,13 @@
       "original_sha256": "3f92a0e1836e1335d66a7ca8ad8a83a230c8c6b9b64c7f1ec761400542663234",
       "path": "lab/scripts/derive_nsc_ks_coupled_retained_control.py",
       "sha256": "3f92a0e1836e1335d66a7ca8ad8a83a230c8c6b9b64c7f1ec761400542663234"
+    },
+    {
+      "bytes": 9315,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_ks_cubic_residual.py",
+      "sha256": "59f4eb5fb623a7e37b938298abfad0fd6e5e0ef7e917669dbb80e3ef34e0bf0f"
     },
     {
       "bytes": 5840,
@@ -77852,6 +80099,34 @@
       "sha256": "e8e5e3b709edb4c784846c0d25330a400728d486a65c567a798a1038687d79d5"
     },
     {
+      "bytes": 16381,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_ks_source_operator_majorant_v4.py",
+      "sha256": "9e44955ed64c3753837c8337284e044e613d1ed95c5038cf450302268d409d06"
+    },
+    {
+      "bytes": 20845,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_ks_source_operator_majorant_v5.py",
+      "sha256": "e01c0b0c9c0e0abab71262e4387c0206bb0eeb4e2711be1407d87a8c47b8a789"
+    },
+    {
+      "bytes": 14590,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_ks_source_operator_majorant_v6.py",
+      "sha256": "531f022309d8626e5fb666b8bab0937262c9b0fb9fc141d856fd8257db993235"
+    },
+    {
+      "bytes": 33467,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_ks_source_operator_majorant_v7.py",
+      "sha256": "ddd6f68c859bd1a5c958ccc723a79038650db1acc1839dd6b1c79ba5eee783ab"
+    },
+    {
       "bytes": 11093,
       "original_git_blob": "ee6778e649340bdb3c1192a6dfe535690caca54a",
       "original_sha256": "d717793d31ad8ac3f15f9edc26ff23f2c18fccd91e6775b8bffe88314fd55ab1",
@@ -78340,6 +80615,13 @@
       "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
       "path": "lab/scripts/derive_nsc_subgap_source_covariance.py",
       "sha256": "bcf9931bcbbc6cb4fa0ac0d350a66eb187d9737b3e051d157eaf8813d7b5fba2"
+    },
+    {
+      "bytes": 1754,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/scripts/derive_nsc_subgap_source_window.py",
+      "sha256": "cd5c8df008323451c1d6c858ee131343497777d1d7ea515fc726449c8ee4c9c5"
     },
     {
       "bytes": 9610,
@@ -78844,6 +81126,13 @@
       "original_sha256": "c9182d66d7544fcebbca450dadb4b141f7e8c4252b01c3afd042fafb16c814b6",
       "path": "lab/src/recursive_horizons/nsc_dirac_source_phase_bound.py",
       "sha256": "c9182d66d7544fcebbca450dadb4b141f7e8c4252b01c3afd042fafb16c814b6"
+    },
+    {
+      "bytes": 38587,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/src/recursive_horizons/nsc_direct_source_window.py",
+      "sha256": "4d800586e435fb25e03056caaef501895d811ebaf6c28edb38f5ec8cf8633dc6"
     },
     {
       "bytes": 12939,
@@ -79411,6 +81700,20 @@
       "changed_from_commit": "5e026eb836ff2796980d60b3efb6be20448ee2ac",
       "path": "lab/src/recursive_horizons/nsc_ks_cubic_channel_basis.py",
       "sha256": "70c05087519db995c3d5618b38a1e96ac63e6f6f79df967dc241d5409f23b47a"
+    },
+    {
+      "bytes": 6554,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/src/recursive_horizons/nsc_ks_cubic_inventory.py",
+      "sha256": "660ff0d286446f1b65a26f6c861602013fd4a8bb0d30f02d57538cff01ea9f9f"
+    },
+    {
+      "bytes": 22145,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/src/recursive_horizons/nsc_ks_cubic_residual.py",
+      "sha256": "525062b229c46b7abb0225ddc09ccf6e6f6530f7f9254d45e6fcc0b8ce035e5c"
     },
     {
       "bytes": 56567,
@@ -80323,6 +82626,13 @@
       "sha256": "74548e6fc430e298091393d08834d4b82270db68c2c3c2ceb317917135979c87"
     },
     {
+      "bytes": 63757,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/src/recursive_horizons/nsc_subgap_source_window.py",
+      "sha256": "1feab0ab18362edd2d7f196ed73ad8ea208d32c37e820e68d9a4b5d6e6b02056"
+    },
+    {
       "bytes": 2086,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "e2b2cb123f6b59fd382793bd54a5b024c1de4993",
@@ -80335,6 +82645,13 @@
       "original_sha256": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded",
       "path": "lab/src/recursive_horizons/nsc_tail_limit.py",
       "sha256": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded"
+    },
+    {
+      "bytes": 18993,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/src/recursive_horizons/nsc_threshold18_replay.py",
+      "sha256": "07b06dd55398cfab4ebee587297599319e3b88f5aefbe95ef831b3fd081fee77"
     },
     {
       "bytes": 6839,
@@ -80755,6 +83072,13 @@
       "original_sha256": "a3b9677030604ab176ae2442ab1bf265bfeb070a8ca211e2894b2e2433e5262e",
       "path": "lab/tests/test_nsc_dirac_source_phase_bound.py",
       "sha256": "a3b9677030604ab176ae2442ab1bf265bfeb070a8ca211e2894b2e2433e5262e"
+    },
+    {
+      "bytes": 24929,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_direct_source_window.py",
+      "sha256": "368a9f5d26a85cf04a79393fd2254ab349cfb6030e763526b882e038e1c0ee9f"
     },
     {
       "bytes": 16647,
@@ -81394,6 +83718,20 @@
       "sha256": "1e15c60ec84839bd90d64ee29eeb263aae4c0feacec23dc1d4c473aba8b5dc64"
     },
     {
+      "bytes": 2498,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_ks_cubic_inventory.py",
+      "sha256": "e9e15f918292c122c3b98db546fee123c1630812e98af1a14167ecda5767b61b"
+    },
+    {
+      "bytes": 8248,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_ks_cubic_residual.py",
+      "sha256": "ef6551012f4ae79bc24bd3aee821505c0638229881aaf7f880daf1b3b67fee95"
+    },
+    {
       "bytes": 10977,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "1dd8981a3aa14a027408a2b3dfe83f762952d9cb",
@@ -81770,6 +84108,34 @@
       "changed_from_commit": "2c12305b93d037b336db132c3d7ab5c57822c941",
       "path": "lab/tests/test_nsc_ks_source_operator_majorant_v3.py",
       "sha256": "62f57094515e067005f2dab890575ebc28e6959dd23fbcf1ea20ab56ea891e2e"
+    },
+    {
+      "bytes": 7602,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_ks_source_operator_majorant_v4.py",
+      "sha256": "bd980eb08325cc4ffcd9a5eb9339a4dab98f19dd3e72029cf358a96f5c779a62"
+    },
+    {
+      "bytes": 7619,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_ks_source_operator_majorant_v5.py",
+      "sha256": "17efa80530e3c7502d9e03c8844c73a6ccb58708e2b4135ab56040cdbcb08a68"
+    },
+    {
+      "bytes": 6517,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_ks_source_operator_majorant_v6.py",
+      "sha256": "62381e712cd06c6e5738c8af41c3f29809ff0f49d04b305222da3cee9f02fe0c"
+    },
+    {
+      "bytes": 9943,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_ks_source_operator_majorant_v7.py",
+      "sha256": "f8e91ba4e048f04e99668c81a983032e283fde4daa112ddc06c2b57e3f177d28"
     },
     {
       "bytes": 4069,
@@ -82302,6 +84668,13 @@
       "changed_from_commit": "46fca81a5c2d135b673e6fe1c100af09043f6ea2",
       "path": "lab/tests/test_nsc_subgap_source_covariance.py",
       "sha256": "1cbf63f7f1de8965675d44bec9af6fc3b7b5c03e5d608b059fb87a5f957c9a8b"
+    },
+    {
+      "bytes": 2333,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "d73d8faa96ffdb4d1913ed7e2e38bbc7eb166184",
+      "path": "lab/tests/test_nsc_subgap_source_window.py",
+      "sha256": "424589bbe28fb128e1143a38da6bd92dcb40a74a793ab13510269ddcefda01f1"
     },
     {
       "bytes": 4357,
