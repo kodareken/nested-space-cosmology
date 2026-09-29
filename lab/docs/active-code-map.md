@@ -1888,3 +1888,5 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 - [Saved low-row witness](nsc-subgap-row-witness.md): original low16_1 row15, 843 phase cells and 671 Bloch cells, actual signed source arrays, no-solve replay and 13 mutation/structural tests. Owner `scripts/derive_nsc_subgap_row15_upstream.py`; record `results/development/nsc-subgap-row15-upstream-v1.json`.
 
 - [Source insertion v3](nsc-ks-source-operator-majorant-v3.md): replays the low row15 witness and complete middle window; 868 signed rows covered, 300 still missing in family14_1. Earlier source-insertion records remain historical. Owner `scripts/derive_nsc_ks_source_operator_majorant_v3.py`.
+
+- [Direct homogeneous vacuum source](nsc-direct-vacuum-source.md): matching enclosed horizon frame, homogeneous Bloch transport, explicit CPU budget, saved-trace validation, separate signed archive comparisons and occupation allowance. Eight tests and independent review passed; not yet a production source window. Owner `src/recursive_horizons/nsc_direct_vacuum_source.py`.
