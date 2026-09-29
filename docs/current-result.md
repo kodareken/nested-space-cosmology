@@ -69,8 +69,10 @@ allows bounded growth in exterior cells where the old contraction-only proof
 stopped. Original group14/low16_1 row15 completed through the existing horizon
 frame and upstream Bloch transport, with signed source covariance errors about
 1.05e-10. Fifteen tests and an independent pilot replay passed. This remains a
-one-row method pilot; its saved-witness record is not yet part of the source
-aggregate, and the full upstream budget remains OPEN.
+one-row result. Its [saved witness](../lab/docs/nsc-subgap-row-witness.md) now
+replays without either solver, with 13 structural and mutation tests passed.
+It has not yet been added to the 866-row source aggregate, and the full upstream
+budget remains OPEN.
 
 ## Expanded source coverage and initial vacuum columns, 29 September 2026
 
