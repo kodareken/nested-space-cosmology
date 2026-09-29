@@ -1886,3 +1886,5 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 - [Near-threshold phase pilot](nsc-near-threshold-phase-pilot.md): the original subgap8/14_1 row7 is enclosed using a wider validated phase tube; two earlier tighter-tube controls failed. No production row record or aggregate coverage change yet.
 
 - [Saved low-row witness](nsc-subgap-row-witness.md): original low16_1 row15, 843 phase cells and 671 Bloch cells, actual signed source arrays, no-solve replay and 13 mutation/structural tests. Owner `scripts/derive_nsc_subgap_row15_upstream.py`; record `results/development/nsc-subgap-row15-upstream-v1.json`.
+
+- [Source insertion v3](nsc-ks-source-operator-majorant-v3.md): replays the low row15 witness and complete middle window; 868 signed rows covered, 300 still missing in family14_1. Earlier source-insertion records remain historical. Owner `scripts/derive_nsc_ks_source_operator_majorant_v3.py`.
