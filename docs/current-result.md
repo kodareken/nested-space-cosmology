@@ -12,6 +12,14 @@ usual name for the particle–antiparticle map; it neither derives antimatter
 nor rules out a geometric question. The latest user instruction controls;
 an older plan does not resume the numerical campaign by itself.
 
+Next research reuses existing inherited-law, regional-state, transfer and
+conservation results to investigate sustained balanced turnover at stable
+overall regional size and content. Relate that question to time as the
+registration of a spatial process and to the matter–antimatter hypothesis.
+Those are proposals to test, not proved results. The paused incoming gate
+stays a retained OPEN application. Assessing its relevance is not a required
+step before this work, and later error-controlled numerical work is not banned.
+
 ## Nested qualities: finite mathematical construction, 27 September 2026
 
 The [connected proof](nsc-nested-qualities.md) and [focused article](../paper/local-incoming-gate-draft.pdf)
@@ -40,10 +48,11 @@ continue its campaign.
 
 ## Source-fixed local incoming gate (OPEN; campaign paused)
 
-This is the chosen numerical application, not a prerequisite for every
-nested-system claim or for arXiv discussion in general. The certification
-campaign is paused while its contribution to the intended claim is assessed.
-It may resume when that contribution is justified. There is no permanent ban.
+This is a retained numerical application, not a prerequisite for every
+nested-system claim or for arXiv discussion in general, and not a permission
+barrier for the turnover investigation above. The certification campaign is
+paused. Its relevance can be reconsidered when useful. There is no permanent
+ban on later error-controlled numerical work.
 Do not continue the expensive search automatically. The state law, interval,
 threshold, and recorded seed below are unchanged and apply only here. Missing
 error bounds still block a closed claim for this application.

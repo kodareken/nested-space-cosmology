@@ -50,9 +50,14 @@ interpretation, including dark matter, dark energy, antimatter, or an eternal
 continuation, is not a derived result. One chosen numerical application, the
 local incoming gate, tests one declared geometry and evolved state. Its
 threshold, source, and history belong to that application. The gate remains
-OPEN, and its expensive campaign is paused while its contribution to the
-question above is assessed. It can resume if that contribution is justified.
+OPEN and its campaign is paused. It is a retained application, not the
+required next step, and judging its relevance is not a permission barrier.
 It is not a prerequisite for every nested-system claim.
+
+Next research reuses inherited-law, regional-state, transfer and conservation
+results to investigate sustained balanced turnover at stable overall regional
+size and content. Relate that to time as registration of spatial change and
+to the matter–antimatter hypothesis. Neither reading is claimed as proved.
 
 Pictures of an interior and its surroundings, a room, or two sides of a coin
 organize that question. They are not literal equations and not claims that
@@ -97,9 +102,10 @@ dimensionless relationships while expressing a wider range of structure.
 
 ## Chosen numerical application: local incoming gate (OPEN, campaign paused)
 
-This application is not the definition of every nested-system claim, and the
-campaign is paused while its contribution to the intended claim is assessed.
-It may resume when that contribution is justified. The question it poses is
+This application is a retained OPEN test, not the centre of the next task,
+and its campaign is paused. Its relevance can be reconsidered when useful;
+that reconsideration is not required before work on sustained balanced
+turnover. The question it poses is
 whether two incoming gravitational constraints can close on
 $I=S(1)+[0.12,0.18]$ when a fixed upstream quantum source is transported
 along a changed metric history. That interval, source, and threshold belong
