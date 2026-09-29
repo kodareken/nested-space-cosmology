@@ -26,7 +26,7 @@ AGENTS.md                 entry point and maintained index
 | Location, branches, commands and recovery | [Instructions](docs/instructions.md), [consolidation](docs/repository-consolidation.md) |
 | Task authority and scientific status | User-approved plan in the conversation; [scope](docs/instructions.md#scientific-framing-and-authority), [status](docs/current-result.md), [code map](lab/docs/active-code-map.md) |
 | Existing mathematics, assumptions and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
-| Source and UV certification methods | [Continuous source-error insertion](lab/docs/nsc-ks-source-operator-majorant.md), [preparation correction](lab/docs/nsc-vacuum-source-correction.md), [high-energy remainder](lab/docs/nsc-vacuum-source-remainder.md), [full method map](lab/docs/active-code-map.md) |
+| Source and UV certification methods | [Continuous source-error insertion](lab/docs/nsc-ks-source-operator-majorant.md), [family 14_1 completion](lab/docs/nsc-ks-source-operator-majorant-v7.md), [preparation correction](lab/docs/nsc-vacuum-source-correction.md), [high-energy remainder](lab/docs/nsc-vacuum-source-remainder.md), [full method map](lab/docs/active-code-map.md) |
 | Active field methods | [Whole cone](lab/docs/nsc-ks-whole-cone-field-v1.md), [radius coupling](lab/docs/nsc-ks-radius-coupling-bounds.md), [endpoint contraction](lab/docs/nsc-ks-endpoint-contraction.md) |
 | Both papers and public status | [Paper guide](docs/papers.md), [current result](docs/current-result.md), [catalog](paper/catalog.json) |
 | Finite nested-quality theorem | [Proof](docs/nsc-nested-qualities.md), [frozen evidence](paper/nested-quality-evidence/snapshot.json) |
@@ -34,7 +34,10 @@ AGENTS.md                 entry point and maintained index
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 
 Work on `codex/work-branch`; integrate verified work into `main` and push both
-to `kodareken/nested-space-cosmology`. The local incoming gate remains OPEN.
+to `kodareken/nested-space-cosmology`. Family `(14, 1)` signed-row source
+insertion is complete. Other source families, quadrature, numerical field
+error, the UV tail, and the global upstream budget remain open. The local
+incoming gate remains OPEN.
 The finite theorem does not complete the accepted local-gate plan. Different
 regions can have different states under the same law; eternity is not a proof
 target. Scientific work uses `lab/` owners, not the older root publication code.

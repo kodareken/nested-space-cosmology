@@ -1,0 +1,68 @@
+{
+  "energy_endpoints": {
+    "group14/low16_1:1": "0x1.c60a99e906500p-8",
+    "group14/low16_1:14": "0x1.f1cfab30b7cd8p-3",
+    "group14/low32_1:0": "0x1.010cf92bcf8b8p-2",
+    "group14/low32_1:31": "0x1.ff79836a183a4p-1",
+    "subgap8/14_1:0": "0x1.02e6bb940d290p+0",
+    "subgap8/14_1:7": "0x1.8f38f9b035a88p+0"
+  },
+  "excluded_low32_rows": [
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "loose_covariance_hex": "0x1.0624dd2f1a9fcp-10",
+  "near_threshold_profile": {
+    "defect_subdivisions": 16,
+    "transport_profile": "near-threshold-wider-tube",
+    "tube": "0.001"
+  },
+  "panels": [
+    {
+      "count": 14,
+      "first_row": 1,
+      "last_row": 14,
+      "panel": "group14/low16_1"
+    },
+    {
+      "count": 32,
+      "first_row": 0,
+      "last_row": 31,
+      "panel": "group14/low32_1"
+    },
+    {
+      "count": 8,
+      "first_row": 0,
+      "last_row": 7,
+      "panel": "subgap8/14_1"
+    }
+  ],
+  "phase_separation_hex": "0x1.a36e2eb1c432dp-14",
+  "positive_rows": 54,
+  "preserved_low16_rows": [
+    0,
+    15
+  ],
+  "proof": "src/recursive_horizons/nsc_subgap_source_window.py",
+  "schema": "NSC-SUBGAP-SOURCE-WINDOW-PROOF-FREEZE-v1",
+  "sha256": "1feab0ab18362edd2d7f196ed73ad8ea208d32c37e820e68d9a4b5d6e6b02056",
+  "signed_rows": 108,
+  "solver": {
+    "atol_hex": "0x1.203af9ee75616p-49",
+    "order": 8,
+    "radial_collar_hex": "0x1.b7cdfd9d7bdbbp-34",
+    "rtol_hex": "0x1.c25c268497682p-43"
+  },
+  "standard_profile": {
+    "defect_subdivisions": 4,
+    "transport_profile": "row15-mixed-transport",
+    "tube": "0.00001"
+  }
+}

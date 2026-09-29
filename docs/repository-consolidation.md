@@ -90,3 +90,15 @@ old Git database therefore does not discard those uncommitted or unmerged files.
 
 A bounded Grok review attempt timed out with malformed output; it is not counted
 as independent approval. The checks above were executed directly by the integrator.
+
+## Later explicit receipt successors
+
+`scripts/update_lab_snapshot.py` registers deliberate lab successors and keeps
+each file's original import hashes. The completed family `(14, 1)` source
+insertion, including the direct, subgap and threshold witness trees, belongs
+in that receipt. `physical_upstream_budget_component` stays null. The cubic
+UV inventory and leading residual do not certify the ultraviolet tail. The
+local incoming gate remains OPEN. Public provenance remains
+[PUBLICATION-PROVENANCE.json](../PUBLICATION-PROVENANCE.json), rebuilt by
+`scripts/build_publication_provenance.py`. That file does not copy the lab
+subtree.
