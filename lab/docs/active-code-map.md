@@ -1878,3 +1878,5 @@ Boundary and regulated-matrix calculations extend this map when verified. Histor
 - [High-angular preparation pilot](nsc-high-angular-preparation-pilot.md): direct-series versus validated correction at the first E>=32 row in groups12/22/32. Identifies which source rows need corrected witnesses before scaling; not whole-family coverage.
 
 - Current middle-coverage tests: `tests/test_nsc_middle_source_coverage_v2.py` preserves production hashes before/after every test. The original test file remains frozen in row-record provenance; its pre-campaign absence assumption is excluded from default collection.
+
+- [Signed subgap phase transport](nsc-massive-jost-mixed-transport.md): permits finite growth where the predecessor required contraction; original low16_1 row15 pilot completed, 15 tests and independent review passed. Missing/boolean bounds are rejected. Owner: `src/recursive_horizons/nsc_massive_jost_mixed_transport.py`; no production row record yet.

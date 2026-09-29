@@ -62,6 +62,16 @@ all active laboratory code. The historical manifests and notebook below stay
 unchanged. Frozen-state non-existence results apply to their own declared
 classes and do not decide this switched-state gate.
 
+## Low-energy transport method, 29 September 2026
+
+The independently reviewed [signed phase-transport successor](../lab/docs/nsc-massive-jost-mixed-transport.md)
+allows bounded growth in exterior cells where the old contraction-only proof
+stopped. Original group14/low16_1 row15 completed through the existing horizon
+frame and upstream Bloch transport, with signed source covariance errors about
+1.05e-10. Fifteen tests and an independent pilot replay passed. This remains a
+one-row method pilot; its saved-witness record is not yet part of the source
+aggregate, and the full upstream budget remains OPEN.
+
 ## Expanded source coverage and initial vacuum columns, 29 September 2026
 
 The complete middle window now contains 48 original positive rows and their
