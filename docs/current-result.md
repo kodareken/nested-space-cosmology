@@ -19,11 +19,19 @@ registration of a spatial process and to the matter–antimatter hypothesis.
 Those are proposals to test, not proved results. One completed calculation
 inside that question is the incoherent imbalance mean circulation below.
 Its geometry is still fixed. The spherical feedback action and the direct
-conformal ADM source below are checked primitives, not yet the physical
-feedback join. Cauchy evolution, source coupling, and embedding of the
-frozen window remain open.
-The next connection is that physical feedback join, not a new gate. The
-paused incoming gate stays a retained OPEN application. Assessing its
+conformal ADM source below are checked primitives. The provisional
+spherical coupling v1 below is `PROVISIONAL_CONSTRAINT_DRIFT`, not a
+self-consistent solution or a renewal. Initial constraints pass and the
+work balances, but the N=64 Hamilton constraint reaches
+36.98886722265645 by $T=0.005$ and is unchanged by timestep halving.
+Spatial diagnostics reduce it to 2.330762882869135 at N=128 and
+0.575679312602035 at N=256, still above $10^{-3}$. The odd-lobe phase fix
+is a successor and does not overwrite v1. The evolving reduction below is
+prescribed-control convergence and is not an accepted coupled trajectory.
+Passing tests of these owners do not validate that failed physical
+trajectory. Embedding of the frozen window remains open. The resolved
+active action remains $\Gamma_{\mathrm{one}}$.
+The paused incoming gate stays a retained OPEN application. Assessing its
 relevance is not a required step before this work, and later
 error-controlled numerical work is not banned.
 
@@ -92,6 +100,52 @@ Gaussian plus the same-spectrum local induced term, counted once. These
 records are equations and interfaces, not yet autonomous regeneration.
 The incoming gate remains OPEN and its campaign remains paused. This page
 does not change either PDF and is not release 0.27.0.
+
+## Provisional spherical coupling v1, 30 September 2026
+
+The [note](../lab/docs/nsc-spherical-coupling.md) owns the failed v1 control.
+The module sha256 is
+`8727a46aa7785a326e301eeeee370a77aeaa066ddb1dbaee022a255616887dbf`.
+The test sha256 is
+`379fc239a1a3279a842db48e92d41c5be326ac85f616c773f420cd94ffa28083`.
+The [record](../lab/results/development/nsc-spherical-coupling-control-v1.json)
+sha256 is
+`88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60`.
+The saved verdict is `PROVISIONAL_CONSTRAINT_DRIFT`. Seven tests passed.
+They check that the record reports this failure. They do not make the
+physical trajectory valid.
+
+Initial N=64 constraints pass: the Hamilton residual maximum is
+$9.556799795973347\times 10^{-12}$, and the field energy
+$24.7195086$ cancels the gravitational energy, with total
+$-1.4\times 10^{-14}$. By $T=0.005$ the N=64 Hamilton maximum is
+$36.98886722265645$. Halving the timestep leaves
+$36.988867326189634$. The same short interval gives
+$2.330762882869135$ at N=128 and $0.575679312602035$ at N=256. N=256
+still fails the validation tolerance $10^{-3}$. This is not a
+self-consistent solution and not a renewal.
+
+The calibration phase is on the odd spatial lobe. That preparation error
+does not select the constraint drift. Its correction is a successor record.
+These v1 bytes stay checkpointed.
+
+The [evolving reduction](../lab/docs/nsc-evolving-reduction.md) is a separate
+prescribed-control owner. The module sha256 is
+`e47bcac929f2fee054ad42770e78a34b329b95152fc6d144f5849888f90c0014`.
+The test sha256 is
+`2473425909c3fb67f786daa482e2cadb7ddf7052975976d51d1e81098fe68f97`.
+The note sha256 is
+`505a8bb3c9c24ab5829c1483c6b5fb1b67bfa0818034bbe678b2f651e80c9ee5`.
+Thirteen tests passed. The sine schedule is a prescribed $H(t)$. It is not
+an autonomous trajectory, not regeneration, and not a coupled geometry.
+No actual $H(g(t))$ was consumed, and no coupled trajectory is accepted.
+Those tests do not validate the failed coupling trajectory.
+
+The vacuum-matched CTP branch remains a separate historical choice, not a
+prerequisite. The resolved active action remains $\Gamma_{\mathrm{one}}$:
+the canonical Gaussian plus the same-spectrum local induced term, counted
+once. The incoming gate remains OPEN and its campaign remains paused. This
+page does not change either PDF and is not release 0.27.0.
 
 ## Nested qualities: finite mathematical construction, 27 September 2026
 
