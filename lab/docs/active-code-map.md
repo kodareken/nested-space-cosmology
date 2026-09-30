@@ -11,9 +11,15 @@ is a retained application. Its relevance can be reconsidered when useful,
 not as a compulsory assessment before this work. Its threshold, source, and history
 apply only to that application, not to every nested claim and not to arXiv
 generally. The imbalance note below is one completed calculation inside this
-turnover question. Autonomous regeneration is still missing: the next scientific
-blocker is geometry feedback in the complete action, including the CW mapping,
-not a new gate. A later "next", "required", or "the plan requires the gate" line
+turnover question. The spherical feedback action and the direct conformal ADM
+source are checked primitives after it. Cauchy evolution, source coupling, and
+embedding of the frozen window are not complete. That physical feedback
+connection is next, not a new gate. The vacuum-matched CTP branch remains
+a separate historical choice in its own note, not a prerequisite of these
+primitives or of every model. The resolved active action is
+$\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the same-spectrum
+local induced term, counted once. Autonomous regeneration is still missing.
+A later "next", "required", or "the plan requires the gate" line
 records a technical dependency or an older cursor. It does not authorize
 resuming the campaign, a LambdaCDM refutation, or a literal reading of
 inside/outside or coin metaphors. Charge-conjugation terminology does not
@@ -66,6 +72,57 @@ projection is not relaxation. The channel current is not by itself heat or
 energy flow. The filtered covariance is not a stress. Geometry is an input,
 so autonomous regeneration is still missing. The incoming gate stays OPEN
 and its campaign stays paused.
+
+## Spherical feedback action, 2026-09-30
+
+Checked bulk and boundary primitive. Not a coupled Cauchy problem, not a
+renewal, and not a replacement for the finite witnesses above. Owners,
+relative to `lab/`:
+
+- `src/recursive_horizons/nsc_spherical_feedback_action.py`
+- `tests/test_nsc_spherical_feedback_action.py`
+- [nsc-spherical-feedback-action.md](nsc-spherical-feedback-action.md)
+
+Module sha256
+`708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f`.
+Note sha256
+`cfb3c02b0e5c683d6319e35b6910a4d7ad5abb03e6fe42435e02461dac52fce2`.
+Seventeen tests passed. The chart is the spherical Einstein–Maxwell–Weyl
+reduction with lapse and shift free. $C_W=0$ is rejected. The checked
+content is the auxiliary bulk, periodic $x$ with Dirichlet $Q$, $r$, and
+$\chi$ on the time caps, Euler and box cap cancellation, an extra Weyl cap
+that does not double the Einstein–Hilbert Gibbons–Hawking–York term, six
+Hamilton right-hand sides, and conditional nonuniform initial constraints.
+The matter source is not coupled. Discrete constraint preservation is not
+owned.
+
+## Direct conformal ADM source, 2026-09-30
+
+Separate from the chart above and from the historical
+`src/recursive_horizons/nsc_adm_source.py` bytes. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_conformal_adm_source.py`
+- `tests/test_nsc_conformal_adm_source.py`
+- [nsc-conformal-adm-source.md](nsc-conformal-adm-source.md)
+
+Module sha256
+`7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea`.
+Ten tests passed. The direct ordering fixes the finite-grid conformal Ward
+identity. The historical $\sqrt{N}$ product rule is preserved and is not
+marked false. Returned quantities are raw nodal canonical forces with one
+$4\kappa$ weight. They are not an absolute renormalized stress. `frame_mapping`
+is missing. There is no six-mode embedding and no common-action closure.
+
+The frozen six-mode generator is not embedded in either primitive. A direct
+site copy is obstructed. A localized countercarrier compression matches the
+onsite block $H$ and does not match the link $B$. The full mapping is
+pending. Those comparison residuals are not recorded as immutable data.
+The vacuum-matched CTP branch stays a separate historical choice in
+[nsc-vacuum-matched-ctp.md](nsc-vacuum-matched-ctp.md), not a prerequisite
+of this source or of every model. The resolved active action is
+$\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the same-spectrum
+local induced term, counted once. The incoming gate stays OPEN and its
+campaign stays paused.
 
 ## Continuous local source-error contribution, 2026-09-29
 

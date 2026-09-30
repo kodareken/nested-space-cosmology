@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 133252,
+      "bytes": 136202,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "610701da5f31217606b7d6c61c24ff3bdf4b6bda23100c63df5986590298d87f"
+      "sha256": "6e298478c85491767470eadedcb24e324bf8890cf7729e9710d5070c569014b6"
     },
     {
-      "bytes": 55789,
+      "bytes": 58961,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "8f7369eb9f2de88f6a7ebd1ba0d649be033f32e8887cba2df70b6545cf2e92f5"
+      "sha256": "7f93987680c46c735130d90a59750085b518c0752ee06a398eaf4e595cca35e7"
     },
     {
       "bytes": 16589,
@@ -12571,6 +12571,13 @@
       "original_sha256": "ea4689c019bd434c44cbfb39fcd7ccf4e16e35d40fceca8a6188ad438a3f965a",
       "path": "lab/docs/nsc-compatible-prepared-history.md",
       "sha256": "ea4689c019bd434c44cbfb39fcd7ccf4e16e35d40fceca8a6188ad438a3f965a"
+    },
+    {
+      "bytes": 8332,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
+      "path": "lab/docs/nsc-conformal-adm-source.md",
+      "sha256": "794eaee5c07ebe0e08233d97da48cbb1d37c912169b97588f010b5e41ed89f50"
     },
     {
       "bytes": 3180,
@@ -15112,6 +15119,13 @@
       "original_sha256": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292",
       "path": "lab/docs/nsc-spherical-action.md",
       "sha256": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292"
+    },
+    {
+      "bytes": 7695,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
+      "path": "lab/docs/nsc-spherical-feedback-action.md",
+      "sha256": "cfb3c02b0e5c683d6319e35b6910a4d7ad5abb03e6fe42435e02461dac52fce2"
     },
     {
       "bytes": 3759,
@@ -81107,6 +81121,13 @@
       "sha256": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2"
     },
     {
+      "bytes": 23728,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
+      "path": "lab/src/recursive_horizons/nsc_conformal_adm_source.py",
+      "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+    },
+    {
       "bytes": 4075,
       "original_git_blob": "cdd4d77fb4ac143c220e95e97af7d6282ef5720b",
       "original_sha256": "fa581fdad34579f0144d338c679a1706a94896df7ef4cdecb7f1849ee262d295",
@@ -82633,6 +82654,13 @@
       "sha256": "66b11798bf42ca758eebdf7479b10d5dedb0094db0c8f4ef8d18bc2f2fe13512"
     },
     {
+      "bytes": 37269,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
+      "path": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py",
+      "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+    },
+    {
       "bytes": 14472,
       "original_git_blob": "ee3396c06dc761b1a3489ec69fee16f7c7cb5567",
       "original_sha256": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9",
@@ -82988,6 +83016,13 @@
       "original_sha256": "c9dc67841801f640e86c0468c146615c94490f81a339eaaa0b8af497397be2c2",
       "path": "lab/tests/test_nsc_complex_horizon_modes.py",
       "sha256": "c9dc67841801f640e86c0468c146615c94490f81a339eaaa0b8af497397be2c2"
+    },
+    {
+      "bytes": 15364,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
+      "path": "lab/tests/test_nsc_conformal_adm_source.py",
+      "sha256": "27aa469b8bdec245597bd17a44f17d24244c629cbc2f5ad2628e0aeb43423cc9"
     },
     {
       "bytes": 1052,
@@ -84703,6 +84738,13 @@
       "original_sha256": "c6940d1651ffa8d69174db0bf70a05ec905438b553b1d062ecb7ead38e262ea7",
       "path": "lab/tests/test_nsc_spatial_reference_symbol.py",
       "sha256": "c6940d1651ffa8d69174db0bf70a05ec905438b553b1d062ecb7ead38e262ea7"
+    },
+    {
+      "bytes": 11386,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
+      "path": "lab/tests/test_nsc_spherical_feedback_action.py",
+      "sha256": "2f53b2109d1012ed3dc220bd6bddbe9060bbd78b1d87518d404fd949ff78bacf"
     },
     {
       "bytes": 2483,
