@@ -18,11 +18,14 @@ overall regional size and content. Relate that question to time as the
 registration of a spatial process and to the matter–antimatter hypothesis.
 Those are proposals to test, not proved results. One completed calculation
 inside that question is the incoherent imbalance mean circulation below.
-Its geometry is still fixed. The paused incoming gate stays a retained OPEN
-application. Assessing its relevance is not a required step before this work,
-and later error-controlled numerical work is not banned. The next scientific
-blocker is geometry feedback in the complete action, including the CW mapping,
-not a new gate.
+Its geometry is still fixed. The spherical feedback action and the direct
+conformal ADM source below are checked primitives, not yet the physical
+feedback join. Cauchy evolution, source coupling, and embedding of the
+frozen window remain open.
+The next connection is that physical feedback join, not a new gate. The
+paused incoming gate stays a retained OPEN application. Assessing its
+relevance is not a required step before this work, and later
+error-controlled numerical work is not banned.
 
 ## Finite circulation and local response, 30 September 2026
 
@@ -50,11 +53,45 @@ optional-failure semantics. Trace 3 and energy 99/16 are conserved;
 instantaneous regional populations are not fixed. Cesaro averaging is not
 relaxation. The channel current is not by itself heat or energy flow. The
 filtered covariance is not a stress. Geometry remains an input, so
-autonomous regeneration is not obtained. The incoming gate remains OPEN and
-its campaign remains paused.
-The next scientific blocker is geometry feedback in the complete action,
-including the CW mapping, not a new gate. This page does not change either
-PDF and is not release 0.27.0.
+autonomous regeneration is not obtained. The primitives in the next section
+do not close that gap. The incoming gate remains OPEN and its campaign
+remains paused. This page does not change either PDF and is not release
+0.27.0.
+
+## Spherical feedback action and direct conformal source, 30 September 2026
+
+The [spherical feedback action](../lab/docs/nsc-spherical-feedback-action.md)
+is a checked first-order chart for the spherical Einstein–Maxwell–Weyl bulk
+and boundary. Lapse and shift stay free. Seventeen tests passed. The module
+sha256 is `708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f`.
+The check covers the auxiliary bulk, periodic $x$ with Dirichlet data
+$Q$, $r$, and $\chi$ on the time caps, cancellation of the Euler and box
+cap ledger, and an extra Weyl cap that does not double the Einstein–Hilbert
+Gibbons–Hawking–York term. Six Hamilton right-hand sides match the chart.
+Conditional nonuniform initial data solve the constraints. This is not a
+coupled Cauchy problem and not a renewal. $C_W=0$ is rejected. The matter
+source is not coupled.
+
+The [direct conformal ADM source](../lab/docs/nsc-conformal-adm-source.md)
+is a separate owner. Ten tests passed. The module sha256 is
+`7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea`.
+It fixes the finite-grid conformal Ward identity and leaves the historical
+$\sqrt{N}$ source bytes unchanged. The result is raw nodal canonical forces
+with one $4\kappa$ weight. It is not an absolute renormalized stress. Frame
+mapping is absent.
+
+Neither primitive embeds the frozen six-mode generator. A direct copy of
+those sites into this chart is obstructed. A localized countercarrier
+compression matches the onsite block $H$ and does not match the link $B$.
+The full mapping is pending. The comparison residuals are not frozen data.
+
+The vacuum-matched CTP branch remains a separate historical choice in
+[its own note](../lab/docs/nsc-vacuum-matched-ctp.md), not a prerequisite.
+The resolved active action is $\Gamma_{\mathrm{one}}$: the canonical
+Gaussian plus the same-spectrum local induced term, counted once. These
+records are equations and interfaces, not yet autonomous regeneration.
+The incoming gate remains OPEN and its campaign remains paused. This page
+does not change either PDF and is not release 0.27.0.
 
 ## Nested qualities: finite mathematical construction, 27 September 2026
 
