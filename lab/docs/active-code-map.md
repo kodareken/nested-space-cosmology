@@ -12,9 +12,16 @@ not as a compulsory assessment before this work. Its threshold, source, and hist
 apply only to that application, not to every nested claim and not to arXiv
 generally. The imbalance note below is one completed calculation inside this
 turnover question. The spherical feedback action and the direct conformal ADM
-source are checked primitives after it. Cauchy evolution, source coupling, and
-embedding of the frozen window are not complete. That physical feedback
-connection is next, not a new gate. The vacuum-matched CTP branch remains
+source are checked primitives after it. The provisional spherical coupling v1
+is `PROVISIONAL_CONSTRAINT_DRIFT`, not a self-consistent solution or a
+renewal. Initial constraints pass and the work balances. The N=64 Hamilton
+constraint reaches 36.98886722265645 by $T=0.005$ and is unchanged by
+timestep halving. Spatial diagnostics reduce it to 2.330762882869135 at
+N=128 and 0.575679312602035 at N=256, still above $10^{-3}$. The odd-lobe
+phase fix is a successor and does not overwrite v1. The evolving reduction
+is prescribed-control convergence with no accepted coupled trajectory.
+Passing tests do not validate that failed trajectory. Embedding of the
+frozen window is not complete. The vacuum-matched CTP branch remains
 a separate historical choice in its own note, not a prerequisite of these
 primitives or of every model. The resolved active action is
 $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the same-spectrum
@@ -123,6 +130,64 @@ of this source or of every model. The resolved active action is
 $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the same-spectrum
 local induced term, counted once. The incoming gate stays OPEN and its
 campaign stays paused.
+
+## Provisional spherical coupling v1, 2026-09-30
+
+Failed short-validation control. Not a self-consistent solution, not a
+renewal, and not a replacement for the primitives or finite witnesses above.
+Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_spherical_coupling.py`
+- `tests/test_nsc_spherical_coupling.py`
+- `results/development/nsc-spherical-coupling-control-v1.json`
+- [nsc-spherical-coupling.md](nsc-spherical-coupling.md)
+
+Module sha256
+`8727a46aa7785a326e301eeeee370a77aeaa066ddb1dbaee022a255616887dbf`.
+Test sha256
+`379fc239a1a3279a842db48e92d41c5be326ac85f616c773f420cd94ffa28083`.
+Record sha256
+`88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60`.
+Note sha256
+`bd84c977965922694f8514db604476353375e1741e9966f5508e97d19a1d2ec7`.
+Verdict `PROVISIONAL_CONSTRAINT_DRIFT`. Seven tests passed. They require
+the record to report this failure and do not make the physical trajectory
+valid.
+
+Initial N=64 Hamilton residual maximum
+$9.556799795973347\times 10^{-12}$. Field energy $24.7195086$ cancels the
+gravitational energy. By $T=0.005$ the N=64 Hamilton maximum is
+$36.98886722265645$. The halved-timestep maximum is
+$36.988867326189634$. Spatial diagnostics give $2.330762882869135$ at
+N=128 and $0.575679312602035$ at N=256. N=256 still fails $10^{-3}$.
+The calibration phase is on the odd lobe
+(`phase_applied_to_odd_lobe_after_real_normalization`). That correction is
+a successor. Do not overwrite these v1 bytes. The vacuum-matched CTP
+branch stays a separate historical choice, not a prerequisite. The resolved
+active action remains $\Gamma_{\mathrm{one}}$. The incoming gate stays OPEN
+and its campaign stays paused.
+
+## Evolving retained-region reduction, 2026-09-30
+
+Prescribed-control reduction. Not an autonomous trajectory, not
+regeneration, and not an accepted coupled geometry. Owners, relative to
+`lab/`:
+
+- `src/recursive_horizons/nsc_evolving_reduction.py`
+- `tests/test_nsc_evolving_reduction.py`
+- [nsc-evolving-reduction.md](nsc-evolving-reduction.md)
+
+Module sha256
+`e47bcac929f2fee054ad42770e78a34b329b95152fc6d144f5849888f90c0014`.
+Test sha256
+`2473425909c3fb67f786daa482e2cadb7ddf7052975976d51d1e81098fe68f97`.
+Note sha256
+`505a8bb3c9c24ab5829c1483c6b5fb1b67bfa0818034bbe678b2f651e80c9ee5`.
+Thirteen tests passed. The sine schedule is a prescribed $H(t)$. No actual
+$H(g(t))$ was consumed. No coupled trajectory is accepted. These tests do
+not validate the failed spherical-coupling trajectory. The resolved active
+action remains $\Gamma_{\mathrm{one}}$. The incoming gate stays OPEN and
+its campaign stays paused.
 
 ## Continuous local source-error contribution, 2026-09-29
 

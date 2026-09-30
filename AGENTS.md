@@ -35,6 +35,8 @@ AGENTS.md                 entry point and maintained index
 | Incoherent imbalance mean circulation | [Note](lab/docs/nsc-imbalance-turnover.md), [record](lab/results/development/nsc-imbalance-turnover-v1.json) |
 | Spherical feedback action | [Note](lab/docs/nsc-spherical-feedback-action.md), [module](lab/src/recursive_horizons/nsc_spherical_feedback_action.py) |
 | Direct conformal ADM source | [Note](lab/docs/nsc-conformal-adm-source.md), [module](lab/src/recursive_horizons/nsc_conformal_adm_source.py) |
+| Provisional spherical coupling v1 | [Note](lab/docs/nsc-spherical-coupling.md), [module](lab/src/recursive_horizons/nsc_spherical_coupling.py), [record](lab/results/development/nsc-spherical-coupling-control-v1.json) |
+| Evolving retained-region reduction | [Note](lab/docs/nsc-evolving-reduction.md), [module](lab/src/recursive_horizons/nsc_evolving_reduction.py) |
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 
@@ -49,8 +51,18 @@ incoherent-imbalance calculation is the
 [record](lab/results/development/nsc-imbalance-turnover-v1.json), not a new
 roadmap. The [spherical feedback action](lab/docs/nsc-spherical-feedback-action.md)
 and the [direct conformal ADM source](lab/docs/nsc-conformal-adm-source.md)
-are checked primitives. Cauchy evolution, source coupling, and embedding of
-the frozen window are not complete. The next connection is that physical
-feedback join. The numerical incoming-gate campaign is paused; the gate
-remains OPEN.
+are checked primitives. The
+[provisional spherical coupling v1](lab/docs/nsc-spherical-coupling.md) is
+`PROVISIONAL_CONSTRAINT_DRIFT`, not a self-consistent solution or a renewal.
+Initial constraints pass and the work balances. The N=64 Hamilton constraint
+reaches 36.98886722265645 by T=0.005 and is unchanged by timestep halving.
+Spatial diagnostics reduce it to 2.330762882869135 at N=128 and
+0.575679312602035 at N=256, still above 1e-3. The odd-lobe phase fix is a
+successor and does not overwrite v1. The
+[evolving reduction](lab/docs/nsc-evolving-reduction.md) is prescribed-control
+convergence with no accepted coupled trajectory. Passing tests do not
+validate that failed trajectory. Embedding of the frozen window is not
+complete. The resolved active action remains `Gamma_one`: the canonical
+Gaussian plus the same-spectrum local induced term, counted once. The numerical
+incoming-gate campaign is paused; the gate remains OPEN.
 [Scope](docs/instructions.md#scientific-framing-and-authority).
