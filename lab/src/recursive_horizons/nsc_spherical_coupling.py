@@ -358,15 +358,16 @@ def build_system(points=64):
 
 
 def prepare_rank6(xi, dx):
-    """Three two-lobe packets, real envelopes before carrier phases, conjugate pairs.
+    """Three real two-lobe packets, then region-local carriers and one minus-column phase.
 
-    Complement occupations are zero. That is the finite Gaussian support, not a
-    physical vacuum identification.
+    The recorded phase multiplies the minus spinor column. It is not a phase of
+    the odd spatial lobe. A constant column phase does not change
+    C = Φ diag(c) Φ†. Complement occupation 0 is the finite Gaussian support,
+    not a physical vacuum identification.
     """
     norms = _lobe_norms()
     phase = CALIBRATION["phase"]
     real_packets = []
-    complex_packets = []
     lobe_norms = []
     for region in range(PACKET_COUNT):
         left = region * ELL
@@ -374,24 +375,31 @@ def prepare_rank6(xi, dx):
         odd = _sample_lobe(xi, left + ELL, "odd", dx, norms)
         even_norm = np.linalg.norm(even)
         odd_norm = np.linalg.norm(odd)
+        if even_norm == 0 or odd_norm == 0:
+            raise ValueError("packet lobe is unresolved on this grid")
         lobe_norms.append({"even_ell2_before": float(even_norm), "odd_ell2_before": float(odd_norm)})
         even = even / even_norm
         odd = odd / odd_norm
         real_packets.append((even + odd) / np.sqrt(2))
-        complex_packets.append((even + np.exp(1j * phase) * odd) / np.sqrt(2))
     real = np.column_stack(real_packets)
-    complex_env = np.column_stack(complex_packets)
     real_gram = real.conj().T @ real
-    complex_env, complex_gram = lowdin(complex_env)
-    carrier = np.exp(1j * CARRIER_K * xi)[:, None] * complex_env
-    plus0 = carrier / np.sqrt(2)
-    plus1 = 1j * carrier / np.sqrt(2)
+    envelopes, _ = lowdin(real)
+    envelope_imag = float(np.max(np.abs(np.imag(envelopes))))
+    if envelope_imag > 1e-10:
+        raise ValueError("real packet envelopes did not stay real")
+    envelopes = np.real(envelopes)
     phi0 = np.empty((xi.size, 6), dtype=complex)
     phi1 = np.empty((xi.size, 6), dtype=complex)
-    phi0[:, 0::2] = plus0
-    phi1[:, 0::2] = plus1
-    phi0[:, 1::2] = np.conjugate(plus0)
-    phi1[:, 1::2] = np.conjugate(plus1)
+    minus_phase = np.exp(1j * phase)
+    for region in range(PACKET_COUNT):
+        local = xi - region * ELL
+        carrier = np.exp(1j * CARRIER_K * local) * envelopes[:, region]
+        plus0 = carrier / np.sqrt(2)
+        plus1 = 1j * carrier / np.sqrt(2)
+        phi0[:, 2 * region] = plus0
+        phi1[:, 2 * region] = plus1
+        phi0[:, 2 * region + 1] = minus_phase * np.conjugate(plus0)
+        phi1[:, 2 * region + 1] = minus_phase * np.conjugate(plus1)
     gram = phi0.conj().T @ phi0 + phi1.conj().T @ phi1
     preparation = {
         "occupations": OCCUPATIONS.tolist(),
@@ -402,17 +410,20 @@ def prepare_rank6(xi, dx):
         "sea_subtracted": False,
         "gaussian_form": "C=Phi diag(c) Phi^H",
         "half_density": "sqrt(dx) samples, ell2 orthonormal",
-        "minus_columns": "conjugate of plus columns",
+        "real_envelopes_remain_real": True,
+        "carrier": "exp(+i k (x-n*ell)) on plus; minus is exp(i phase) times the conjugate",
+        "minus_columns": "exp(i*recorded_phase) times conjugate of plus columns",
         "real_envelope_gram_before_phase": {
             "real": np.real(real_gram).tolist(),
             "imag": np.imag(real_gram).tolist(),
         },
         "real_envelope_orthonormal_defect": float(np.max(np.abs(real_gram - np.eye(3)))),
-        "complex_lowdin_input_defect": float(np.max(np.abs(complex_gram - np.eye(3)))),
+        "real_envelope_imag_after_lowdin": envelope_imag,
         "column_orthonormal_defect": float(np.max(np.abs(gram - np.eye(6)))),
         "lobe_sample_norms": lobe_norms,
         "continuum_lobe_norms": {"even": norms[0], "odd": norms[1]},
-        "phase_applied_to_odd_lobe_after_real_normalization": True,
+        "phase_applied_to_odd_lobe": False,
+        "phase_on_minus_spinor_column": True,
     }
     return phi0, phi1, preparation
 
@@ -1019,29 +1030,37 @@ def reduced_dirac(system, state):
     }
 
 
+def _frozen_onsite():
+    return np.array([[1, 1j / 5], [-1j / 5, 2]], dtype=complex)
+
+
+def _old_link():
+    """Hand-set window link. Compared, never copied into the state or the Hamiltonian."""
+    return np.array(
+        [[0.25, 1j / 7], [1 / 9, 1 / 6]],
+        dtype=complex,
+    )
+
+
 def continuum_packet_diagnostic(coefficients=None):
-    """One continuum packet. Diagonals use the executed weight; links are not old B."""
+    """Real envelopes, region-local carriers, and the minus-column phase.
+
+    Each onsite block is compared with Ω^n H. The old hand-set link is not used.
+    """
     del coefficients
     norms = _lobe_norms()
     count = 2 ** 14
     length = PERIOD
     dx = length / count
     xi = np.arange(count) * dx
-    even = _bump(xi) / norms[0]
-    odd = (xi - 1.0 - 0.5) * _bump(xi - 1.0) / norms[1]
-    odd = np.where((xi > 1) & (xi < 2), odd, 0.0)
-    even = np.where((xi > 0) & (xi < 1), even, 0.0)
     phase = CALIBRATION["phase"]
-    spatial_plus = np.exp(1j * CARRIER_K * xi) * (even + np.exp(1j * phase) * odd) / np.sqrt(2)
-    spatial_minus = np.conjugate(spatial_plus)
     scale = np.exp(np.log(OMEGA) * xi)
     a = CALIBRATION["a0"] * scale
     beta = CALIBRATION["beta0"] * scale
     length_density = CALIBRATION["b0"] * scale
-    Mweight = float(np.sum(scale * np.abs(spatial_plus) ** 2) * dx)
+    symbol = 2 * np.pi * np.fft.fftfreq(count, d=dx)
 
     def derivative(values):
-        symbol = 2 * np.pi * np.fft.fftfreq(count, d=dx)
         return np.fft.ifft(1j * symbol * np.fft.fft(values))
 
     def momentum(values):
@@ -1052,37 +1071,98 @@ def continuum_packet_diagnostic(coefficients=None):
         antic_b = 0.5 * (beta * momentum(spatial) + momentum(beta * spatial))
         sigma2 = np.array([[0, -1j], [1j, 0]], dtype=complex)
         sigma1 = np.array([[0, 1], [1, 0]], dtype=complex)
-        image = (
+        return (
             (sigma2 @ spinor)[:, None] * antic_a
             + (sigma1 @ spinor)[:, None] * (length_density * spatial)
             - spinor[:, None] * antic_b
         )
-        return image
 
     plus = np.array([1, 1j]) / np.sqrt(2)
     minus = np.array([1, -1j]) / np.sqrt(2)
-    image_plus = apply_scalar(spatial_plus, plus)
-    image_minus = apply_scalar(spatial_minus, minus)
 
     def braket(left_spatial, left_spinor, image):
         density = np.conjugate(left_spatial) * np.einsum("a,an->n", np.conjugate(left_spinor), image)
         return complex(np.sum(density) * dx)
 
-    block = np.array([
-        [braket(spatial_plus, plus, image_plus), braket(spatial_plus, plus, image_minus)],
-        [braket(spatial_minus, minus, image_plus), braket(spatial_minus, minus, image_minus)],
-    ])
-    frozen = np.array([[1, 1j / 5], [-1j / 5, 2]], dtype=complex)
+    regions = []
+    reference = _frozen_onsite()
+    mweight = None
+    for region in range(PACKET_COUNT):
+        left = region * ELL
+        even = np.where((xi > left) & (xi < left + ELL), _bump(xi - left) / norms[0], 0.0)
+        odd = np.where(
+            (xi > left + ELL) & (xi < left + 2 * ELL),
+            ((xi - left - ELL) - 0.5) * _bump(xi - left - ELL) / norms[1],
+            0.0,
+        )
+        envelope = (even + odd) / np.sqrt(2)
+        spatial_plus = np.exp(1j * CARRIER_K * (xi - left)) * envelope
+        spatial_minus = np.exp(1j * phase) * np.conjugate(spatial_plus)
+        if region == 0:
+            mweight = float(np.sum(scale * np.abs(spatial_plus) ** 2) * dx)
+        image_plus = apply_scalar(spatial_plus, plus)
+        image_minus = apply_scalar(spatial_minus, minus)
+        block = np.array([
+            [braket(spatial_plus, plus, image_plus), braket(spatial_plus, plus, image_minus)],
+            [braket(spatial_minus, minus, image_plus), braket(spatial_minus, minus, image_minus)],
+        ])
+        target = OMEGA ** region * reference
+        regions.append({
+            "region": region,
+            "scale": float(OMEGA ** region),
+            "diagonal_abs_error": [
+                float(abs(block[0, 0] - target[0, 0])),
+                float(abs(block[1, 1] - target[1, 1])),
+            ],
+            "offdiag_abs_error": float(abs(block[0, 1] - target[0, 1])),
+            "onsite_real": block.real.tolist(),
+            "onsite_imag": block.imag.tolist(),
+        })
     return {
-        "Mweight": Mweight,
-        "Mweight_minus_executed": Mweight - CALIBRATION["Mweight_executed"],
-        "onsite_real": block.real.tolist(),
-        "onsite_imag": block.imag.tolist(),
-        "diagonal_abs_error": [float(abs(block[0, 0] - 1)), float(abs(block[1, 1] - 2))],
-        "offdiag_abs_error": float(abs(block[0, 1] - 1j / 5)),
-        "matches_frozen_offdiag": False,
+        "Mweight": mweight,
+        "Mweight_minus_executed": mweight - CALIBRATION["Mweight_executed"],
+        "phase_on_minus_spinor_column": True,
+        "phase_applied_to_odd_lobe": False,
+        "carrier": "exp(±i k (x-n*ell))",
+        "regions": regions,
+        "onsite_real": regions[0]["onsite_real"],
+        "onsite_imag": regions[0]["onsite_imag"],
+        "diagonal_abs_error": regions[0]["diagonal_abs_error"],
+        "offdiag_abs_error": regions[0]["offdiag_abs_error"],
+        "matches_frozen_offdiag": all(row["offdiag_abs_error"] < 1e-8 for row in regions),
+        "omega_scaled_onsite": True,
         "old_B_not_used": True,
     }
+
+
+def packet_onsite_report(system, state):
+    """Onsite blocks versus Ω^n H. Link blocks are reported against the old B and not replaced by it."""
+    source = source_from_columns(system, state)
+    matrix = state.phi0.conj().T @ source["image0"] + state.phi1.conj().T @ source["image1"]
+    reference = _frozen_onsite()
+    old = _old_link()
+    onsite = []
+    for region in range(PACKET_COUNT):
+        block = matrix[2 * region: 2 * region + 2, 2 * region: 2 * region + 2]
+        target = OMEGA ** region * reference
+        onsite.append({
+            "region": region,
+            "diagonal_abs_error": [
+                float(abs(block[0, 0] - target[0, 0])),
+                float(abs(block[1, 1] - target[1, 1])),
+            ],
+            "offdiag_abs_error": float(abs(block[0, 1] - target[0, 1])),
+        })
+    links = []
+    for region in range(PACKET_COUNT - 1):
+        block = matrix[2 * region: 2 * region + 2, 2 * region + 2: 2 * region + 4]
+        target = OMEGA ** region * old
+        links.append({
+            "region": region,
+            "difference_from_old_B": float(np.linalg.norm(block - target)),
+            "copied_from_old_B": False,
+        })
+    return {"onsite": onsite, "links": links, "old_B_not_used": True}
 
 
 def observability(system, state, rate=None):
@@ -1272,10 +1352,18 @@ def _jsonable(value):
 
 
 def run_bounded_control(path=None, points=64):
-    """N=64, T=0.005 validation. Refine only if that run stays on the chart."""
+    """N=64, T=0.005 validation. Refine only if that run stays on the chart.
+
+    The checkpointed v1 JSON is not a writable destination. A successor record
+    is not created here.
+    """
     started = time.perf_counter()
     cpu = time.process_time()
     path = Path(path) if path is not None else CONTROL_RECORD
+    if path.resolve() == CONTROL_RECORD.resolve():
+        raise ValueError(
+            "nsc-spherical-coupling-control-v1.json is checkpointed and cannot be overwritten"
+        )
     system, bare = build_system(points)
     solved, solve_info = solve_initial_radius(system, bare)
     initial = None if not solve_info["converged"] else constraint_residuals(system, solved)

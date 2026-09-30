@@ -2,6 +2,7 @@
 import inspect
 
 import numpy as np
+import pytest
 
 from recursive_horizons import nsc_spherical_coupling as coupling
 from recursive_horizons.nsc_covariant_operator import CovariantStaticMetric
@@ -130,6 +131,56 @@ def test_discrete_hamiltonian_fd_signs_and_mutation():
     assert mutation["breaks_balance"] is True
     assert mutation["fieldwork_identity_error"] < 1e-6
     assert abs(mutation["intact_power"]) < 1e-6
+
+
+def test_minus_column_phase_keeps_real_envelopes_and_covariance():
+    system, state = coupling.build_system(64)
+    preparation = system.preparation
+    assert preparation["phase_applied_to_odd_lobe"] is False
+    assert preparation["phase_on_minus_spinor_column"] is True
+    assert preparation["real_envelopes_remain_real"] is True
+    assert preparation["real_envelope_imag_after_lowdin"] < 1e-12
+    assert list(system.occupations) == [0.75, 0.75, 0.5, 0.5, 0.25, 0.25]
+    assert system.multiplicity == 4
+    base = coupling.covariance_matrix(system, state)
+    phased = state.copy()
+    extra = np.exp(0.37j)
+    phased.phi0[:, 1::2] *= extra
+    phased.phi1[:, 1::2] *= extra
+    assert np.allclose(coupling.covariance_matrix(system, phased), base, atol=1e-12)
+    removed = state.copy()
+    recorded = np.exp(-1j * coupling.CALIBRATION["phase"])
+    removed.phi0[:, 1::2] *= recorded
+    removed.phi1[:, 1::2] *= recorded
+    assert np.allclose(coupling.covariance_matrix(system, removed), base, atol=1e-12)
+    report = coupling.packet_onsite_report(system, state)
+    bare = coupling.packet_onsite_report(system, removed)
+    assert report["onsite"][0]["offdiag_abs_error"] < bare["onsite"][0]["offdiag_abs_error"]
+
+
+def test_continuum_and_resolved_grid_onsite_scale_without_copying_old_link():
+    continuum = coupling.continuum_packet_diagnostic()
+    assert continuum["phase_applied_to_odd_lobe"] is False
+    assert continuum["old_B_not_used"] is True
+    assert abs(continuum["Mweight_minus_executed"]) < 1e-9
+    for region in continuum["regions"]:
+        assert region["offdiag_abs_error"] < 1e-8
+        assert max(region["diagonal_abs_error"]) < 1e-8
+    system, state = coupling.build_system(128)
+    grid = coupling.packet_onsite_report(system, state)
+    for row in grid["onsite"]:
+        assert row["offdiag_abs_error"] < 1e-5
+        assert max(row["diagonal_abs_error"]) < 1e-5
+    assert all(link["difference_from_old_B"] > 1e-2 for link in grid["links"])
+    assert all(link["copied_from_old_B"] is False for link in grid["links"])
+
+
+def test_v1_record_cannot_be_overwritten():
+    with pytest.raises(ValueError, match="checkpointed"):
+        coupling.run_bounded_control()
+    with pytest.raises(ValueError, match="checkpointed"):
+        coupling.run_bounded_control(coupling.CONTROL_RECORD)
+    assert coupling.CONTROL_RECORD.is_file()
 
 
 def test_bounded_control_reports_constraints_refinement_and_does_not_invent_success(tmp_path):

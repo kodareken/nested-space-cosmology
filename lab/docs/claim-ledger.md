@@ -34,10 +34,13 @@ renewal. Initial constraints pass and the work balances. The N=64 Hamilton
 constraint reaches 36.98886722265645 by \(T=0.005\) and is unchanged by
 timestep halving. Spatial diagnostics reduce it to 2.330762882869135 at
 N=128 and 0.575679312602035 at N=256, still above \(10^{-3}\). The
-odd-lobe phase fix is a successor and does not overwrite v1. The evolving
-reduction is prescribed-control convergence with no accepted coupled
-trajectory. Passing tests do not validate that failed trajectory.
-Embedding of the frozen window is not complete. The vacuum-matched CTP
+odd-lobe phase fix is a successor and does not overwrite v1. The corrected
+source puts that phase on the minus column. The variational Galerkin
+coupling v2 is `FAIL_HELD_OUT_CONSTRAINT`; a projected residual is not a
+pass. The matched refinement v3 is `FAIL_INITIAL_SOLVE` and has no
+full-source result. The evolving reduction is prescribed-control
+convergence with no accepted coupled trajectory. Passing tests do not
+validate these failed trajectories. Embedding of the frozen window is not complete. The vacuum-matched CTP
 branch stays a separate historical choice in
 [nsc-vacuum-matched-ctp.md](nsc-vacuum-matched-ctp.md), not a prerequisite
 of these primitives or of every model. The resolved active action is
@@ -292,18 +295,26 @@ and its campaign stays paused.
 
 The failed control is recorded in
 [nsc-spherical-coupling.md](nsc-spherical-coupling.md). The
-[module](../src/recursive_horizons/nsc_spherical_coupling.py) sha256 is
-`8727a46aa7785a326e301eeeee370a77aeaa066ddb1dbaee022a255616887dbf`. The
-[tests](../tests/test_nsc_spherical_coupling.py) sha256 is
-`379fc239a1a3279a842db48e92d41c5be326ac85f616c773f420cd94ffa28083`. The
 [record](../results/development/nsc-spherical-coupling-control-v1.json)
 sha256 is
 `88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60`.
-The note sha256 is
+The checkpoint that wrote it had module sha256
+`8727a46aa7785a326e301eeeee370a77aeaa066ddb1dbaee022a255616887dbf`,
+test sha256
+`379fc239a1a3279a842db48e92d41c5be326ac85f616c773f420cd94ffa28083`,
+and note sha256
 `bd84c977965922694f8514db604476353375e1741e9966f5508e97d19a1d2ec7`.
-The saved verdict is `PROVISIONAL_CONSTRAINT_DRIFT`. Seven tests passed.
-They require the record to report this failure. They do not make the
-physical trajectory valid, and they are not a renewal.
+The current source is the minus-column phase correction. Its
+[module](../src/recursive_horizons/nsc_spherical_coupling.py) sha256 is
+`64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5`,
+its [tests](../tests/test_nsc_spherical_coupling.py) sha256 is
+`da3f0b0a50e61487de017e04311acba0e90781d759ed41a4a174dbaf2a97f163`,
+and the note sha256 is
+`a0b7e8207c6ef6f0d17addd549d8cd4d8e5f02dcacd62449714d78b2ec700499`.
+The saved verdict is `PROVISIONAL_CONSTRAINT_DRIFT`. Ten tests in the
+current file passed. Seven require the record to report this failure.
+Three check the column phase and the refusal to overwrite the v1 JSON.
+They do not make the physical trajectory valid, and they are not a renewal.
 
 Initial N=64 constraints pass. The Hamilton residual maximum is
 \(9.556799795973347\times 10^{-12}\), and the field energy \(24.7195086\)
@@ -314,13 +325,44 @@ is \(36.98886722265645\). Halving the timestep leaves
 still fails the validation tolerance \(10^{-3}\). This is not a
 self-consistent solution.
 
-The calibration phase is applied to the odd spatial lobe. That preparation
-error does not select the constraint drift. The correction is a successor.
-These v1 bytes stay checkpointed and are not overwritten. The
-vacuum-matched CTP branch stays a separate historical choice, not a
-prerequisite. The resolved active action remains
+The calibration phase is applied to the odd spatial lobe in the v1 JSON.
+That preparation error does not select the constraint drift. The current
+source puts the recorded phase on the minus column and does not rewrite
+the v1 JSON. These v1 bytes stay checkpointed. Collocation constraint
+algebra is a separate check, sha256
+`eefadb1bdf863da6c1e487304fe816bc1ae6514a6570b85431893b7d97b9db78`.
+It does not load the saved trajectory and does not certify the Galerkin
+discretization. The vacuum-matched CTP branch stays a separate historical
+choice, not a prerequisite. The resolved active action remains
 \(\Gamma_{\mathrm{one}}\). The incoming gate stays OPEN and its campaign
 stays paused.
+
+## Variational Fourier–Galerkin coupling v2, 1 October 2026
+
+The failed subspace control is recorded in
+[nsc-spherical-galerkin-coupling.md](nsc-spherical-galerkin-coupling.md)
+and
+[nsc-spherical-coupling-control-v2.json](../results/development/nsc-spherical-coupling-control-v2.json).
+The saved verdict is `FAIL_HELD_OUT_CONSTRAINT`. Renewal is false.
+\(T=0.05\) was not run. A projected residual is not a physical pass.
+This is not a filter of the v1 radius, not a constraint projection, and
+not a renewal. The v1 JSON bytes stay unchanged. The frozen six-mode
+embedding is still unfinished. The vacuum-matched CTP branch stays a
+separate historical choice, not a prerequisite. The resolved active
+action remains \(\Gamma_{\mathrm{one}}\). The incoming gate stays OPEN
+and its campaign stays paused.
+
+## Matched Galerkin refinement v3, 1 October 2026
+
+The failed matched refinement is recorded in the same
+[note](nsc-spherical-galerkin-coupling.md#matched-refinement-v3). The
+[driver](../scripts/derive_nsc_spherical_galerkin_refinement.py) and
+[record](../results/development/nsc-spherical-coupling-refinement-v3.json)
+are immutable. The verdict is `FAIL_INITIAL_SOLVE`. Internal Newton
+stopped at rho \(0.5\) with residual
+\(1.2876060991167562\times 10^{-10}\). No full-source result was
+produced. The v1 and v2 JSON bytes stay unchanged. Renewal is false.
+The incoming gate stays OPEN and its campaign stays paused.
 
 ## Evolving retained-region reduction, 30 September 2026
 
@@ -332,12 +374,15 @@ A separate prescribed-control owner is
 `2473425909c3fb67f786daa482e2cadb7ddf7052975976d51d1e81098fe68f97`. The
 note sha256 is
 `505a8bb3c9c24ab5829c1483c6b5fb1b67bfa0818034bbe678b2f651e80c9ee5`.
-Thirteen tests passed. The sine schedule is a prescribed \(H(t)\). It is
-not an autonomous trajectory, not regeneration, and not a coupled geometry.
-No actual \(H(g(t))\) was consumed. No coupled trajectory is accepted.
-These tests do not validate the failed spherical-coupling trajectory. The
-resolved active action remains \(\Gamma_{\mathrm{one}}\). The incoming
-gate stays OPEN and its campaign stays paused.
+Thirteen tests passed. Nine further independent tests, sha256
+`bba311f6ee90acd2fecf631b0e5f5cb193a98b6726ae6cf4b1da2e56a67fe5d6`,
+use one prescribed generator and an exterior integrator. The sine
+schedule is a prescribed \(H(t)\). It is not an autonomous trajectory,
+not regeneration, and not a coupled geometry. No actual \(H(g(t))\) was
+consumed. No coupled trajectory is accepted. These tests do not validate
+these failed spherical-coupling trajectories. The resolved active action
+remains \(\Gamma_{\mathrm{one}}\). The incoming gate stays OPEN and its
+campaign stays paused.
 
 ## Regenerative interpretation and the local calculation
 

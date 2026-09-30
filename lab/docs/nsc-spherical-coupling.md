@@ -131,11 +131,13 @@ of either derivative (`7.95` against `7346` for `dH/dt` at N=64).
 ## Phase mistake, separate from the propagation failure
 
 The calibration number `phase = -0.842669616901` is the constant relative
-phase of the minus spinor column. v1 instead multiplies the odd spatial lobe
-by that phase and then takes the minus column to be the conjugate. The
-preparation flag `phase_applied_to_odd_lobe_after_real_normalization` is
-true. That changes the packet. Its overlap with the real-envelope packet is
-`0.8327 + 0.3732 i`, not 1.
+phase of the minus spinor column. The checkpointed v1 source multiplied the
+odd spatial lobe by that phase and then took the minus column to be the
+conjugate. Its preparation flag
+`phase_applied_to_odd_lobe_after_real_normalization` is true in the v1 JSON.
+That changes the packet. Its overlap with the real-envelope packet is
+`0.8327 + 0.3732 i`, not 1. The corrected source is described below and does
+not rewrite this JSON.
 
 Continuum packet on `[0, 2]`, same geometry coefficients:
 
@@ -163,6 +165,28 @@ the right way up. Both fall from N=64 to N=256 (`37.0` to `0.576`, and
 tolerance `1e-3` on the Hamilton residual, so the interval remains a failed
 short validation.
 
-The separate preparation correction, after these bytes are checkpointed, is
-to put `exp(i phase)` on the minus column of a real envelope and not on the
-odd lobe. That needs a new record. It is not a repair of this trajectory.
+## Preparation correction after the v1 checkpoint
+
+The v1 JSON is unchanged and still records the odd-lobe phase. After that
+file was checkpointed, the source was corrected without touching the
+Hamiltonian or the derivative. Real lobes stay real. The plus carrier on
+region `n` is `exp(+i k (x - n ell))`. The minus column is
+`exp(i phase)` times the conjugate, which is the carrier
+`exp(-i k (x - n ell))` with the recorded constant phase. That column phase
+does not change `C`. The old hand-set link is still not copied.
+
+Continuum onsite error against `Ω^n H`, three regions, maximum absolute
+entry error `3.2e-12`. Region-0 off-diagonal error is
+`1.099741404857301e-13`. Executed weight residual is `1.05e-13`.
+
+Discrete onsite off-diagonal error against `Ω^n i/5`:
+
+| N | Region 0 | Region 1 | Region 2 |
+|---:|---:|---:|---:|
+| 64 | `1.90e-4` | `2.86e-4` | `4.28e-4` |
+| 128 | `2.91e-7` | `4.37e-7` | `6.56e-7` |
+| 256 | `9.75e-11` | `1.46e-10` | `2.19e-10` |
+
+Link difference from the old `B`, N=128: `5.9845119231619615` and
+`8.97676788474295`. No successor result record is written. The v1 entry
+point refuses to overwrite `nsc-spherical-coupling-control-v1.json`.

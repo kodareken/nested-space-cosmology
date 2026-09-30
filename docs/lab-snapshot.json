@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 139276,
+      "bytes": 142050,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ddd9d90d98248927e2d87905d4b580e900405b7b",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "d593535409b986cc935ccc6ad566ff964c87b928d21c2d6902c2bae13c2e0797"
+      "sha256": "4fb16383143e4a60f51af6702271da0bef80d3a74b75a1f3c490a3f1b56fa35f"
     },
     {
-      "bytes": 62186,
+      "bytes": 64726,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ddd9d90d98248927e2d87905d4b580e900405b7b",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "1c1003b973f0f3f230dc6fb81b50845165396b2ef16e4d66eb459b5bc4010216"
+      "sha256": "fcfb46d82a3fc58d745c76366181442143bab3c67a29d55df93e572b84c944ea"
     },
     {
       "bytes": 16589,
@@ -15128,11 +15128,11 @@
       "sha256": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292"
     },
     {
-      "bytes": 8675,
+      "bytes": 9727,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ddd9d90d98248927e2d87905d4b580e900405b7b",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
       "path": "lab/docs/nsc-spherical-coupling.md",
-      "sha256": "bd84c977965922694f8514db604476353375e1741e9966f5508e97d19a1d2ec7"
+      "sha256": "a0b7e8207c6ef6f0d17addd549d8cd4d8e5f02dcacd62449714d78b2ec700499"
     },
     {
       "bytes": 7695,
@@ -15140,6 +15140,13 @@
       "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
       "path": "lab/docs/nsc-spherical-feedback-action.md",
       "sha256": "cfb3c02b0e5c683d6319e35b6910a4d7ad5abb03e6fe42435e02461dac52fce2"
+    },
+    {
+      "bytes": 8633,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/docs/nsc-spherical-galerkin-coupling.md",
+      "sha256": "1f68140475d86b055d2c51f5446335eb86f87c45260d595451fda10c63154461"
     },
     {
       "bytes": 3759,
@@ -76830,6 +76837,27 @@
       "sha256": "88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60"
     },
     {
+      "bytes": 67601,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/results/development/nsc-spherical-coupling-control-v2.json",
+      "sha256": "26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c"
+    },
+    {
+      "bytes": 7574,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/results/development/nsc-spherical-coupling-refinement-v3.json",
+      "sha256": "5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97"
+    },
+    {
+      "bytes": 10548,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/results/development/nsc-spherical-coupling-refinement-v4.json",
+      "sha256": "6153075b68a822078a1016c0484dacf87c9083117076fcdba2b1aca9ab645739"
+    },
+    {
       "bytes": 10947,
       "original_git_blob": "70bc3a8338c49a6c06ef03f6d35c5f00e154dc73",
       "original_sha256": "306e6b6f2370e7c4f5e608dccfc2ebd4d3f968d99e4785b7ed9215b1b865fddc",
@@ -80659,6 +80687,20 @@
       "sha256": "7eaf802997704b800629e99aa4c46e3f5828da44e059bffa62122acc2ff19cb1"
     },
     {
+      "bytes": 30199,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py",
+      "sha256": "2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c"
+    },
+    {
+      "bytes": 12557,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v4.py",
+      "sha256": "450f9ed468303f42cd62d812848eff83261b7a5256e642f7c291cb95f35703f5"
+    },
+    {
       "bytes": 10350,
       "original_git_blob": "4d4cd05b32f3a98e82afda1ed4196b47d328166f",
       "original_sha256": "33574b1cc634dabd8ccfc7134afbbf3e4c2a65f579c2c2f69b34bf54af0de39a",
@@ -82682,11 +82724,11 @@
       "sha256": "66b11798bf42ca758eebdf7479b10d5dedb0094db0c8f4ef8d18bc2f2fe13512"
     },
     {
-      "bytes": 55468,
+      "bytes": 58981,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ddd9d90d98248927e2d87905d4b580e900405b7b",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
       "path": "lab/src/recursive_horizons/nsc_spherical_coupling.py",
-      "sha256": "8727a46aa7785a326e301eeeee370a77aeaa066ddb1dbaee022a255616887dbf"
+      "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5"
     },
     {
       "bytes": 37269,
@@ -82694,6 +82736,13 @@
       "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
       "path": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py",
       "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+    },
+    {
+      "bytes": 52028,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+      "sha256": "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab"
     },
     {
       "bytes": 14472,
@@ -83247,6 +83296,13 @@
       "changed_from_commit": "ddd9d90d98248927e2d87905d4b580e900405b7b",
       "path": "lab/tests/test_nsc_evolving_reduction.py",
       "sha256": "2473425909c3fb67f786daa482e2cadb7ddf7052975976d51d1e81098fe68f97"
+    },
+    {
+      "bytes": 30486,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/tests/test_nsc_evolving_reduction_independent.py",
+      "sha256": "bba311f6ee90acd2fecf631b0e5f5cb193a98b6726ae6cf4b1da2e56a67fe5d6"
     },
     {
       "bytes": 13974,
@@ -84782,11 +84838,18 @@
       "sha256": "c6940d1651ffa8d69174db0bf70a05ec905438b553b1d062ecb7ead38e262ea7"
     },
     {
-      "bytes": 8707,
+      "bytes": 11093,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ddd9d90d98248927e2d87905d4b580e900405b7b",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
       "path": "lab/tests/test_nsc_spherical_coupling.py",
-      "sha256": "379fc239a1a3279a842db48e92d41c5be326ac85f616c773f420cd94ffa28083"
+      "sha256": "da3f0b0a50e61487de017e04311acba0e90781d759ed41a4a174dbaf2a97f163"
+    },
+    {
+      "bytes": 12040,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/tests/test_nsc_spherical_coupling_constraint_algebra.py",
+      "sha256": "eefadb1bdf863da6c1e487304fe816bc1ae6514a6570b85431893b7d97b9db78"
     },
     {
       "bytes": 11386,
@@ -84794,6 +84857,20 @@
       "changed_from_commit": "ac5c83801cee2b3f4be611e3991c25c76dbfcb6f",
       "path": "lab/tests/test_nsc_spherical_feedback_action.py",
       "sha256": "2f53b2109d1012ed3dc220bd6bddbe9060bbd78b1d87518d404fd949ff78bacf"
+    },
+    {
+      "bytes": 8326,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/tests/test_nsc_spherical_galerkin_coupling.py",
+      "sha256": "e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19"
+    },
+    {
+      "bytes": 15833,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "08d8c88e0b12e29320dc54ca0d0413724cd26ce0",
+      "path": "lab/tests/test_nsc_spherical_galerkin_independent.py",
+      "sha256": "01afcc16c4dda9447ab7072a87dc50c3c5a74eb5470518793c5b00054a82abbb"
     },
     {
       "bytes": 2483,

@@ -1,0 +1,275 @@
+#!/usr/bin/env python3
+"""Partial archive of the nf256 probes that already ran.
+
+Running this file only rewrites the partial JSON from values already printed.
+It does not import the solver, prolongate, or evolve.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+LAB = Path(__file__).resolve().parents[1]
+OUT = LAB / "results" / "development" / "nsc-spherical-coupling-refinement-v4.json"
+
+RECORD = {
+    "schema": "NSC-SPHERICAL-COUPLING-REFINEMENT-v4",
+    "status": "PARTIAL",
+    "verdict": "NONCONVERGED_PARTIAL",
+    "pass": False,
+    "counts_projected_success_as_full_pass": False,
+    "science_campaign_finished": False,
+    "full_source_nf256_seed_persisted": False,
+    "seed_existed_only_in_probe_process_memory": True,
+    "module_unchanged": True,
+    "v3_driver_not_modified_by_these_probes": True,
+    "v3_record_not_modified_by_these_probes": True,
+    "filtered_or_reset": False,
+    "time_extension_T_0_05": False,
+    "question": (
+        "Partial only: prolong the converged nf128 geometry as the Newton seed "
+        "and re-solve the full nf256 source. Doubled quadrature and the short "
+        "window were not run."
+    ),
+    "tolerances_read_from_source_not_retuned": {
+        "initial_full": 1e-8,
+        "window_full": 1e-3,
+        "newton_internal": 1e-10,
+        "projected_residual_satisfies_full_initial_criterion": False,
+    },
+    "commands_completed": [
+        {
+            "command": "PYTHONPATH=src:. python3 -B /tmp/nf256_seed_probe.py",
+            "cwd": "/Users/admin/Documents/BlackHoles-Infinity",
+            "exit": 1,
+            "science": False,
+            "result": "ImportError: recursive_horizons resolved to the repository src package, not lab/src",
+        },
+        {
+            "command": "PYTHONPATH=/Users/admin/Documents/BlackHoles-Infinity/lab/src python3 -B /tmp/nf256_seed_probe.py",
+            "exit": 1,
+            "science": True,
+            "result": "Newton history printed, then KeyError 'r_min' before constraint diagnostics on the stalled iterate and before any file write",
+        },
+        {
+            "command": "PYTHONPATH=/Users/admin/Documents/BlackHoles-Infinity/lab/src python3 -B /tmp/nf256_compensate_probe.py",
+            "exit": 0,
+            "science": True,
+            "result": "Kept the best full-source iterate, printed cancellation and constraint diagnostics, wrote nothing",
+        },
+    ],
+    "hashes_checked_at_archive_time_not_during_probes": {
+        "v3_driver": "2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+        "v3_driver_matches_hash_stored_inside_v3_record": True,
+        "v3_record": "5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+    },
+    "platform_printed": {
+        "np_longdouble_equals_float64": True,
+        "np_longdouble_eps": 2.220446049250313e-16,
+    },
+    "nf128_reproduced_with_existing_solve_initial_radius": {
+        "nf": 128,
+        "nq": 512,
+        "preparation_problems": [],
+        "converged": True,
+        "residual_max": 8.47342311333793e-11,
+        "r_min_coarse": 4.210509470582931,
+        "r_max_coarse": 4.876526603084984,
+        "cpu_seconds_through_this_solve_only": 0.282953,
+        "matches_v2_residual_max_printed_in_v3_record": True,
+    },
+    "prolongation_of_that_nf128_radius_onto_ng255": {
+        "ng": 255,
+        "nf": 256,
+        "nq": 1024,
+        "high_mode_coefficient_max": 0.0,
+        "embedding_imaginary_max": 1.4567530957896988e-15,
+        "nodal_r_min": 4.210503203062415,
+        "nodal_r_max": 4.876803917099084,
+        "preparation_problems": [],
+        "rho_max_of_full_source_from_blank_state": 48.99044011867928,
+        "seed_before_newton": {
+            "projected_radius_operator_max": 0.04693371984875769,
+            "full_radius_operator_max": 0.04824978760877485,
+            "constraint_diagnostics_projected_hamilton_max": 0.046933719845399645,
+            "constraint_diagnostics_full_hamilton_max": 0.048249787606081895,
+            "positive_r": True,
+            "positive_Q": True,
+            "r_min_quadrature": 4.210503161404547,
+        },
+    },
+    "full_source_newton_probe_1_line_search": {
+        "target": "full rho, scale 1, not the v3 continuation",
+        "jacobian_condition_estimate_first_step": 180697.99936509843,
+        "jacobian_condition_estimate_at_stall": 180698.00804731098,
+        "stalled": True,
+        "internal_newton_1e-10_met": False,
+        "stalled_projected_max": 2.3188625838089735e-10,
+        "stalled_full_operator_max": 0.0017681406439891134,
+        "constraint_diagnostics_on_stalled_iterate": None,
+        "reason_diagnostics_missing": "probe raised KeyError on diagnostics['r_min'] and exited",
+        "steps": [
+            {
+                "iteration": 0,
+                "projected": 0.04693371984875769,
+                "full_operator": 0.04824978760877485,
+                "linear_residual_max": 3.903127820947816e-16,
+                "delta_max": 1.6589863907494627e-06,
+                "accepted_step": 1.0,
+                "trial_projected": 1.5375669793357702e-08,
+            },
+            {
+                "iteration": 1,
+                "projected": 1.5375669793357702e-08,
+                "full_operator": 0.001768146147874461,
+                "linear_residual_max": 6.437450399132683e-20,
+                "delta_max": 1.7210946432441948e-10,
+                "accepted_step": 1.0,
+                "trial_projected": 9.608390314276184e-10,
+            },
+            {
+                "iteration": 2,
+                "projected": 9.608390314276184e-10,
+                "full_operator": 0.0017681375243085995,
+                "linear_residual_max": 3.618915179919496e-24,
+                "delta_max": 1.1992274986770664e-14,
+                "accepted_step": 1.0,
+                "trial_projected": 5.422037489070665e-10,
+            },
+            {
+                "iteration": 3,
+                "projected": 5.422037489070665e-10,
+                "full_operator": 0.0017681314340833865,
+                "linear_residual_max": 3.0502285087892896e-24,
+                "delta_max": 1.131416649127233e-14,
+                "accepted_step": 0.5,
+                "trial_projected": 3.974275396630481e-10,
+            },
+            {
+                "iteration": 4,
+                "projected": 3.974275396630481e-10,
+                "full_operator": 0.0017681311709480951,
+                "linear_residual_max": 1.8611563782443123e-24,
+                "delta_max": 6.696264858150394e-15,
+                "accepted_step": 0.5,
+                "trial_projected": 3.5547320156734596e-10,
+            },
+            {
+                "iteration": 5,
+                "projected": 3.5547320156734596e-10,
+                "full_operator": 0.0017681370071471747,
+                "linear_residual_max": 1.0856745539758488e-24,
+                "delta_max": 5.80102655703138e-15,
+                "accepted_step": 0.125,
+                "trial_projected": 2.842036273222486e-10,
+            },
+            {
+                "iteration": 6,
+                "projected": 2.842036273222486e-10,
+                "full_operator": 0.0017681368944053588,
+                "linear_residual_max": 3.7481621506309067e-25,
+                "delta_max": 2.3544006161436133e-15,
+                "accepted_step": 0.5,
+                "trial_projected": 2.3188625838089735e-10,
+            },
+            {
+                "iteration": 7,
+                "projected": 2.3188625838089735e-10,
+                "full_operator": 0.0017681406439891134,
+                "linear_residual_max": 9.822769774067204e-25,
+                "delta_max": 4.432701309163673e-15,
+                "accepted_step": None,
+                "trial_projected": None,
+                "stalled": True,
+            },
+        ],
+    },
+    "kept_full_source_state_probe_2": {
+        "label": "NONCONVERGED",
+        "which_state": "best projected residual before a step that did not decrease it; not the probe-1 stalled iterate",
+        "internal_newton_1e-10_met": False,
+        "best_blas_projected_radius_operator_max": 9.608390314276184e-10,
+        "iterations_printed": [
+            {"iteration": 0, "projected": 0.04693371984875769, "delta_max": 1.6589863907494627e-06, "trial_projected": 1.5375669793357702e-08, "accepted": True},
+            {"iteration": 1, "projected": 1.5375669793357702e-08, "delta_max": 1.7210946432441948e-10, "trial_projected": 9.608390314276184e-10, "accepted": True},
+            {"iteration": 2, "projected": 9.608390314276184e-10, "delta_max": 1.1992274986770664e-14, "trial_projected": 5.422037489070665e-10, "accepted": False},
+        ],
+        "cancellation_on_kept_state": {
+            "formula_match_max_against_existing_radius_residual": 0.0,
+            "term_d_max": 1.6081172652099478,
+            "term_v_max": 6.47877009948517,
+            "term_f_max": 42.43657702262315,
+            "rho_max": 48.99044011867928,
+            "blas_full_operator_max": 0.0017681375243085995,
+            "compensated_full_operator_max": 0.0017681379523537544,
+            "compensated_minus_blas_full_max": 2.2823707368502255e-09,
+            "derivative_fsum_minus_blas_max": 5.753175713607561e-13,
+            "blas_projected_max": 9.608390314276184e-10,
+            "compensated_projection_of_blas_fine_max": 9.60839031439557e-10,
+            "compensated_projected_max": 9.765070453569455e-10,
+        },
+        "one_iterative_refinement_of_the_same_projected_jacobian": {
+            "polish_delta_max": 1.8497912532485898e-14,
+            "compensated_linear_residual_max": 3.2182495707141233e-24,
+            "correction_max": 1.8307852344107278e-26,
+            "polished_blas_full_operator_max": 0.0017681320586220295,
+            "polished_compensated_full_operator_max": 0.0017681323675091676,
+            "polished_blas_projected_max": 8.367805898946743e-10,
+            "polished_compensated_projected_max": 8.712702306490362e-10,
+            "internal_newton_1e-10_met": False,
+            "constraint_diagnostics": None,
+            "positivity_checked": False,
+        },
+        "constraint_diagnostics_on_kept_state_not_on_polished_state": {
+            "projected_hamilton_max": 9.518771155652591e-10,
+            "projected_momentum_max": 2.611924956422674e-12,
+            "full_hamilton_max": 0.001768137526894975,
+            "full_momentum_max": 3.2542857299044724e-12,
+            "held_out_hamilton_max": 0.001768137541165852,
+            "held_out_momentum_max": 2.489029399344586e-12,
+            "positive_r": True,
+            "positive_Q": True,
+            "r_min_quadrature": 4.210504071404775,
+            "Q_min_quadrature": None,
+            "hamilton_unresolved_fraction": 0.9999999999995276,
+            "hamilton_unresolved_max_mode": 512,
+            "note": "projected_hamilton_max here is constraint_diagnostics, which rebuilds the column source. It is not the same printed number as the frozen-rho projected_radius_operator max 9.608390314276184e-10.",
+        },
+    },
+    "comparison_operands_already_on_record": {
+        "v2_initial_full_hamilton_max_as_copied_in_v3": 0.03413556103820986,
+        "this_partial_nf256_full_hamilton_max": 0.001768137526894975,
+        "ratio_not_computed_in_the_probes": True,
+    },
+    "declared_initial_1e-8_met": False,
+    "declared_window_1e-3_met": None,
+    "missing": [
+        "persisted nf256 radius coefficients",
+        "doubled quadrature nq=2048 constraint diagnostics",
+        "T=0.005 evolution at dt=0.0005",
+        "T=0.005 evolution at dt=0.00025",
+        "energy",
+        "work_balance",
+        "total cpu and wall time of either probe",
+        "constraint diagnostics and positivity on the probe-1 iterate at projected 2.3188625838089735e-10",
+        "constraint diagnostics and positivity on the polished radius",
+    ],
+    "why_nothing_was_saved_during_the_probe_session": (
+        "Both probes lived under /tmp and only printed. The first exited on KeyError "
+        "before its final print. The second exited 0 after printing. No write to the "
+        "owned v4 script or record was reached before that session ended."
+    ),
+}
+
+
+def main():
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    temporary = OUT.with_suffix(".json.tmp")
+    temporary.write_text(json.dumps(RECORD, indent=2) + "\n")
+    temporary.replace(OUT)
+    print(json.dumps({"status": RECORD["status"], "verdict": RECORD["verdict"], "wrote": str(OUT)}))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
