@@ -13,8 +13,14 @@ remains unchanged.
 example has nonzero channel currents, constant regional contents, and a
 derived local filtered response.
 [Finite turnover](lab/docs/nsc-finite-turnover.md). The geometry and the
-stationary preparation are fixed inputs. Broader regeneration remains
-research. The incoming gate remains OPEN and its campaign remains paused.
+stationary preparation are fixed inputs. On that same frozen window, an
+incoherent regional imbalance starts with no interregion channel current;
+its Cesaro mean still carries inflow into the region-0 plus mode from the
+region-1 plus mode.
+[Imbalance mean circulation](lab/docs/nsc-imbalance-turnover.md).
+That average is not relaxation, and the geometry stays an input. Broader
+regeneration remains research. The incoming gate remains OPEN and its
+campaign remains paused.
 
 ## One research programme, two complementary papers
 

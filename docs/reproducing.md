@@ -46,7 +46,11 @@ an execution limit, not a claimed measured runtime.
 notebook and focused draft. It does not rerun historical scientific campaigns.
 Those remain available through `make reproduce` or the manually dispatched
 GitHub workflow with `reproduce_history` enabled. The new OPEN draft has its
-own [reproduction guide](local-gate-draft.md).
+own [reproduction guide](local-gate-draft.md). `make reproduce` does not
+replay the laboratory finite-turnover witness or the incoherent-imbalance
+mean circulation. Their commands are in
+[finite turnover](../lab/docs/nsc-finite-turnover.md) and
+[imbalance mean circulation](../lab/docs/nsc-imbalance-turnover.md).
 
 `make test` uses pytest to run both pytest functions and unittest classes.
 On Windows, the historical retained-tail exact JSON test is replaced by an

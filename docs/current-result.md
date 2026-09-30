@@ -16,18 +16,45 @@ Next research reuses existing inherited-law, regional-state, transfer and
 conservation results to investigate sustained balanced turnover at stable
 overall regional size and content. Relate that question to time as the
 registration of a spatial process and to the matter–antimatter hypothesis.
-Those are proposals to test, not proved results. The paused incoming gate
-stays a retained OPEN application. Assessing its relevance is not a required
-step before this work, and later error-controlled numerical work is not banned.
+Those are proposals to test, not proved results. One completed calculation
+inside that question is the incoherent imbalance mean circulation below.
+Its geometry is still fixed. The paused incoming gate stays a retained OPEN
+application. Assessing its relevance is not a required step before this work,
+and later error-controlled numerical work is not banned. The next scientific
+blocker is geometry feedback in the complete action, including the CW mapping,
+not a new gate.
 
 ## Finite circulation and local response, 30 September 2026
 
 A six-mode inherited finite example has nonzero channel currents, constant
 regional contents, and a derived local filtered response. The
 [note](../lab/docs/nsc-finite-turnover.md) records it. The geometry and the
-stationary preparation are fixed inputs. Broader regeneration remains
-research. The incoming gate below remains OPEN and its campaign remains
-paused. This checkpoint does not change either PDF and is not release 0.27.0.
+stationary preparation are fixed inputs. That prepared-current witness remains
+valid. Broader regeneration remains research. The incoming gate below remains
+OPEN and its campaign remains paused. This checkpoint does not change either
+PDF and is not release 0.27.0.
+
+## Incoherent imbalance mean circulation, 30 September 2026
+
+On the same frozen six-mode window,
+$C_0=I/2+(1/4)(P_0-P_2)$ starts with zero interregion channel current.
+The executed Cesaro mean still carries inflow
+$j_{(0,+),(1,+)}=0.0012511140479781876$, into $0+$ from $1+$. The
+[note](../lab/docs/nsc-imbalance-turnover.md) is the scientific owner.
+The [record](../lab/results/development/nsc-imbalance-turnover-v1.json)
+replays 34/34 checks, with verdict `PASS_IMBALANCE_MEAN_CIRCULATION`.
+Seven focused tests and the six existing finite-turnover tests passed, and
+`--check` replayed the same four source bindings. An independent review
+accepted the 34 conditions, the finite-time bound, and the forced
+optional-failure semantics. Trace 3 and energy 99/16 are conserved;
+instantaneous regional populations are not fixed. Cesaro averaging is not
+relaxation. The channel current is not by itself heat or energy flow. The
+filtered covariance is not a stress. Geometry remains an input, so
+autonomous regeneration is not obtained. The incoming gate remains OPEN and
+its campaign remains paused.
+The next scientific blocker is geometry feedback in the complete action,
+including the CW mapping, not a new gate. This page does not change either
+PDF and is not release 0.27.0.
 
 ## Nested qualities: finite mathematical construction, 27 September 2026
 

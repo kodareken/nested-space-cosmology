@@ -10,7 +10,10 @@ proved. The local incoming gate remains OPEN and its campaign is paused. It
 is a retained application. Its relevance can be reconsidered when useful,
 not as a compulsory assessment before this work. Its threshold, source, and history
 apply only to that application, not to every nested claim and not to arXiv
-generally. A later "next", "required", or "the plan requires the gate" line
+generally. The imbalance note below is one completed calculation inside this
+turnover question. Autonomous regeneration is still missing: the next scientific
+blocker is geometry feedback in the complete action, including the CW mapping,
+not a new gate. A later "next", "required", or "the plan requires the gate" line
 records a technical dependency or an older cursor. It does not authorize
 resuming the campaign, a LambdaCDM refutation, or a literal reading of
 inside/outside or coin metaphors. Charge-conjugation terminology does not
@@ -34,7 +37,35 @@ $6.879146355717442\times 10^{-5}$; far shift
 $2.8630169396700523\times 10^{-7}$. From the repository root, existing
 evidence is replayed by `--check`. `--record` is creation-only and refuses
 to overwrite the saved record. The incoming gate stays OPEN and its campaign
-stays paused.
+stays paused. This witness is not replaced by the imbalance calculation.
+
+## Incoherent imbalance mean circulation, 2026-09-30
+
+Completed on this fixed window and reusable as a calculation, not as a new
+campaign. Do not replace the finite-turnover witness above. Owners, relative
+to `lab/`:
+
+- `src/recursive_horizons/nsc_imbalance_turnover.py`
+- `scripts/derive_nsc_imbalance_turnover.py`
+- `tests/test_nsc_imbalance_turnover.py`
+- `results/development/nsc-imbalance-turnover-v1.json`
+- [nsc-imbalance-turnover.md](nsc-imbalance-turnover.md)
+
+Verdict `PASS_IMBALANCE_MEAN_CIRCULATION`. The saved record replays 34/34
+checks. From the repository root, existing evidence is replayed by
+`--check`. `--record` is creation-only and refuses to overwrite the saved
+record. An independent review accepted the 34 conditions, the finite-time
+bound, and the forced optional-failure semantics. Same frozen
+`finite_window(H, B, 3/2, 0, 3)`. Preparation
+$C_0=I/2+\delta(P_0-P_2)$ at $\delta=1/4$ has zero initial interregion
+channel current. Executed Cesaro inflow
+$j_{(0,+),(1,+)}=0.0012511140479781876$, into $0+$ from $1+$. Trace $3$,
+energy $99/16$. Mean regional populations differ from the initial
+populations, so instantaneous regional occupation is not fixed. The Cesaro
+projection is not relaxation. The channel current is not by itself heat or
+energy flow. The filtered covariance is not a stress. Geometry is an input,
+so autonomous regeneration is still missing. The incoming gate stays OPEN
+and its campaign stays paused.
 
 ## Continuous local source-error contribution, 2026-09-29
 

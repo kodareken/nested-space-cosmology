@@ -32,6 +32,7 @@ AGENTS.md                 entry point and maintained index
 | Both papers and public status | [Paper guide](docs/papers.md), [current result](docs/current-result.md), [catalog](paper/catalog.json) |
 | Finite nested-quality theorem | [Proof](docs/nsc-nested-qualities.md), [frozen evidence](paper/nested-quality-evidence/snapshot.json) |
 | Finite circulation and local response | [Note](lab/docs/nsc-finite-turnover.md), [record](lab/results/development/nsc-finite-turnover-v1.json) |
+| Incoherent imbalance mean circulation | [Note](lab/docs/nsc-imbalance-turnover.md), [record](lab/results/development/nsc-imbalance-turnover-v1.json) |
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 
@@ -40,6 +41,9 @@ to `kodareken/nested-space-cosmology`. Scientific work uses `lab/` owners, not
 the older root publication code.
 
 Current question: Douglas's proposed mechanism in the
-[claim ledger](lab/docs/claim-ledger.md). The numerical incoming-gate campaign
-is paused; the gate remains OPEN.
+[claim ledger](lab/docs/claim-ledger.md). Regeneration stays first. The
+incoherent-imbalance calculation is the
+[note](lab/docs/nsc-imbalance-turnover.md) and
+[record](lab/results/development/nsc-imbalance-turnover-v1.json), not a new
+roadmap. The numerical incoming-gate campaign is paused; the gate remains OPEN.
 [Scope](docs/instructions.md#scientific-framing-and-authority).

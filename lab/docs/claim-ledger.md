@@ -193,8 +193,37 @@ state, cut activity is \(G=8986745/950450651136\). The outside-only readout
 shifts are \(6.879146355717442\times 10^{-5}\) for the near probe and
 \(2.8630169396700523\times 10^{-7}\) for the far probe. Nonzero channel
 currents leave regional contents constant, and the filtered local response
-is the response of that preparation. Broader regeneration remains research.
-The incoming gate stays OPEN and its campaign stays paused.
+is the response of that preparation. This stationary witness remains valid
+for a preparation whose current is already present. Broader regeneration
+remains research. The incoming gate stays OPEN and its campaign stays paused.
+
+## Incoherent imbalance mean circulation, 30 September 2026
+
+One further finite calculation is recorded in
+[nsc-imbalance-turnover.md](nsc-imbalance-turnover.md). The owners are the
+[module](../src/recursive_horizons/nsc_imbalance_turnover.py)
+at sha256 `565221169e8d188eb464928f51f980ae4d96974a635e0662b00110c24039ab32`,
+the [driver](../scripts/derive_nsc_imbalance_turnover.py),
+the [tests](../tests/test_nsc_imbalance_turnover.py),
+the [record](../results/development/nsc-imbalance-turnover-v1.json), and
+the note. The saved record verdict is `PASS_IMBALANCE_MEAN_CIRCULATION`,
+with 34/34 checks. On the same frozen window,
+\(C_0=I/2+(1/4)(P_0-P_2)\) starts with zero interregion channel current.
+The executed Cesaro inflow is
+\(j_{(0,+),(1,+)}=0.0012511140479781876\), into \(0+\) from \(1+\).
+Trace \(3\) and energy \(99/16\) stay fixed; instantaneous regional
+populations do not. The average is not relaxation, the channel current is
+not by itself heat or energy flow, and the filtered covariance is not a
+stress. Geometry stays an input, so autonomous regeneration is still
+missing. This calculation removes the need for the presupposed initial
+current in the witness above. It does not replace that witness. An
+independent review accepted the 34 conditions, the finite-time bound, and
+the forced optional-failure semantics. Seven focused tests passed together
+with the six existing finite-turnover tests, and `--check` replayed the
+record. The research direction remains regeneration. The next scientific blocker
+is geometry feedback in the complete action, including the CW mapping, not
+a new gate and not a LambdaCDM comparison. The incoming gate stays OPEN
+and its campaign stays paused.
 
 ## Regenerative interpretation and the local calculation
 
