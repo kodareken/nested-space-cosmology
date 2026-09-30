@@ -12273,22 +12273,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 131502,
+      "bytes": 133252,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "c96a5b84e86abb2d10873a80fad5f7da74ec88ddbfa7f27b7d0a24281d5b729f"
+      "sha256": "610701da5f31217606b7d6c61c24ff3bdf4b6bda23100c63df5986590298d87f"
     },
     {
-      "bytes": 53999,
+      "bytes": 55789,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "5214fd02ce7a99e492e733623b67ae3961ce0c53",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "04ccf71e82cde738cf0165f187cf48b6390ccb77f6234fcaa850aea357d34bfa"
+      "sha256": "8f7369eb9f2de88f6a7ebd1ba0d649be033f32e8887cba2df70b6545cf2e92f5"
     },
     {
       "bytes": 16589,
@@ -12837,6 +12837,13 @@
       "original_sha256": "f77031e2ee09109e27cc351bf4a6b87027b758e98e4b9243062575aa538bdf28",
       "path": "lab/docs/nsc-horizon-source.md",
       "sha256": "f77031e2ee09109e27cc351bf4a6b87027b758e98e4b9243062575aa538bdf28"
+    },
+    {
+      "bytes": 11885,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "path": "lab/docs/nsc-imbalance-turnover.md",
+      "sha256": "a58ed51e76fecb419b5b94bc333efc11f580fe629c91e5ef288ec3fd8aeca6b7"
     },
     {
       "bytes": 3257,
@@ -73421,6 +73428,13 @@
       "sha256": "452d8d7c24e06b01d24ec337aa131154973e46a29c6b230acd4e42c8e6f95886"
     },
     {
+      "bytes": 56085,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "path": "lab/results/development/nsc-imbalance-turnover-v1.json",
+      "sha256": "7c86876f61b4af4b58e50da43ba12324b13154e830a1a0d8d9eed37721bc5e8e"
+    },
+    {
       "bytes": 33869,
       "original_git_blob": "64680cd129d5c0cd0da9cf2e10340f94c37e32f7",
       "original_sha256": "89d0aab320d4396dddc5f82ec235640c887299b5e24e68e80ff6b88cb6084663",
@@ -78818,6 +78832,13 @@
       "sha256": "a2395001314782745592e12871082329eb0a43e03a9eadf5d33523e0ab7c4875"
     },
     {
+      "bytes": 6828,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "path": "lab/scripts/derive_nsc_imbalance_turnover.py",
+      "sha256": "8afc016f7299ff270a7cd3745dca7aadd8e68e40bcb5272ad85c0e802a17770f"
+    },
+    {
       "bytes": 23821,
       "original_git_blob": "15d9ce1ef19a39c398ac4947d77647ef29fdffba",
       "original_sha256": "fbb2a8d4c1fe7fec07d2c2475f38a24ee021dbce7c2ec2301cf1a3c83ad73b12",
@@ -81275,6 +81296,13 @@
       "sha256": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721"
     },
     {
+      "bytes": 40465,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "path": "lab/src/recursive_horizons/nsc_imbalance_turnover.py",
+      "sha256": "565221169e8d188eb464928f51f980ae4d96974a635e0662b00110c24039ab32"
+    },
+    {
       "bytes": 15254,
       "original_git_blob": "4c492f340b21f96203b8a41aa3c37beaa85069c7",
       "original_sha256": "c9f4862fbdae151bfd1d8a004c931739ed3ebf387a2ddc95dc5db4328ecfa813",
@@ -83247,6 +83275,13 @@
       "original_sha256": "886e37a89d8f50967c0ca74fe2a5f891a1caba6cbd0919a948005ac030869fc6",
       "path": "lab/tests/test_nsc_global_projector_bounds.py",
       "sha256": "886e37a89d8f50967c0ca74fe2a5f891a1caba6cbd0919a948005ac030869fc6"
+    },
+    {
+      "bytes": 10613,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e195d0d246d96c0cb3f72124e2cce4e2fb2a47a2",
+      "path": "lab/tests/test_nsc_imbalance_turnover.py",
+      "sha256": "8376fbf04be650c39864a353299a2240fb3adb53cc0643b134cb580f15e23f8c"
     },
     {
       "bytes": 3509,
