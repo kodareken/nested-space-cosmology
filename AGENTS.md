@@ -24,7 +24,7 @@ AGENTS.md                 this index
    docs/                  derivations, claim ledger, and scientific code map
    results/               retained source, calibration, and numerical evidence
    archive/               historical material inside its recorded domain
-   .source-history/       exact historical source objects for current replay
+   .source-history/       exact historical source objects, plus one content carrier for two recovered local-boundary sources
 ```
 
 | Need | Owner |
@@ -39,9 +39,9 @@ AGENTS.md                 this index
 | Regeneration-controls successor | [Status](docs/current-result.md#regeneration-controls-successor-1-october-2026), [record](lab/results/development/nsc-regeneration-controls-v2.json), [independent tests](lab/tests/test_nsc_regeneration_uniform_independent.py) |
 | Conditional local response | [Status](docs/current-result.md#conditional-local-response-1-october-2026), [note](lab/docs/nsc-coupled-local-response.md), [module](lab/src/recursive_horizons/nsc_coupled_local_response.py), [driver](lab/scripts/derive_nsc_coupled_local_response.py), [record](lab/results/development/nsc-coupled-local-response-v1.json), [series](lab/results/development/nsc-coupled-local-response-v1.npz) |
 | Spherical null expansion | [Status](docs/current-result.md#spherical-null-expansion-1-october-2026), [note](lab/docs/nsc-spherical-null-expansion.md), [module](lab/src/recursive_horizons/nsc_spherical_null_expansion.py), [driver](lab/scripts/derive_nsc_spherical_null_expansion.py), [record](lab/results/development/nsc-spherical-null-expansion-v1.json) |
-| Local-boundary review | [Status](docs/current-result.md#local-boundary-review-1-october-2026), [record](lab/results/development/nsc-local-boundary-review-v1.json), [independent tests](lab/tests/test_nsc_local_boundary_independent.py) |
+| Local-boundary review | [Status](docs/current-result.md#local-boundary-review-1-october-2026), [v1 record](lab/results/development/nsc-local-boundary-review-v1.json), [v2 binding](lab/results/development/nsc-local-boundary-review-v2.json), [independent tests](lab/tests/test_nsc_local_boundary_independent.py) |
 | Initial geometry-graded window | [Status](docs/current-result.md#initial-geometry-graded-window-1-october-2026), [note](lab/docs/nsc-geometry-graded-window.md), [module](lab/src/recursive_horizons/nsc_geometry_graded_window.py), [driver](lab/scripts/derive_nsc_geometry_graded_window.py), [record](lab/results/development/nsc-geometry-graded-window-v1.json), [tests](lab/tests/test_nsc_geometry_graded_window.py) |
-| Weak spherical Cauchy residual | [Note](lab/docs/nsc-spherical-cauchy-weak.md), [module](lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py), [driver](lab/scripts/derive_nsc_spherical_cauchy_weak.py), [record](lab/results/development/nsc-spherical-cauchy-weak-v1.json) |
+| Weak spherical Cauchy residual | [Note](lab/docs/nsc-spherical-cauchy-weak.md), [module](lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py), [driver](lab/scripts/derive_nsc_spherical_cauchy_weak.py), [record](lab/results/development/nsc-spherical-cauchy-weak-v1.json), [tests](lab/tests/test_nsc_spherical_cauchy_weak.py) |
 | Source and UV certification methods | [Continuous source-error insertion](lab/docs/nsc-ks-source-operator-majorant.md), [family 14_1 completion](lab/docs/nsc-ks-source-operator-majorant-v7.md), [preparation correction](lab/docs/nsc-vacuum-source-correction.md), [high-energy remainder](lab/docs/nsc-vacuum-source-remainder.md), [full method map](lab/docs/active-code-map.md) |
 | Field method owners | [Whole cone](lab/docs/nsc-ks-whole-cone-field-v1.md), [radius coupling](lab/docs/nsc-ks-radius-coupling-bounds.md), [endpoint contraction](lab/docs/nsc-ks-endpoint-contraction.md) |
 | Both papers and public status | [Paper guide](docs/papers.md), [current result](docs/current-result.md), [catalog](paper/catalog.json) |

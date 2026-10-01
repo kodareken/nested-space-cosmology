@@ -115,11 +115,14 @@ pressures.
 
 The saved consumers below have completed checks inside named domains.
 Their comparison floors stay in the owning notes and are not programme
-requirements. Renewal remains false. The next physical question, one
-invariant relating the periodic-bridge curvature proxy and the growth of
-\(q\) to the packet arc's matter and inward motion, is recorded in
+requirements. Renewal remains false. The next physical question is the
+read-only chart identity
+\(\dot Q=L p_\chi/(2F_\chi)+\partial_x(\beta Q)\),
+and a later episode that records \(p_\chi\), \(\dot Q\), and the realized
+increment of the rate on the actual regions and proper clocks. Metric
+curvature at \(T=0.10\) is uncomputed. The curvature proxy is a separate
+quantity. No new run is opened. The statement is in
 [current result](../../docs/current-result.md#present-spherical-loop).
-Metric curvature at \(T=0.10\) is uncomputed. No new run is opened.
 
 The [regeneration controls](nsc-regeneration-controls.md) and
 [record](../results/development/nsc-regeneration-controls-v1.json) have
@@ -170,21 +173,29 @@ The Galerkin half-identity is stationary on \(H_G\). The fine embedding of
 that identity is a different congruence. A missed proxy and the cap label
 leave the maintained-drift reading in place.
 
-The local-boundary review
+The local-boundary review v1
 [nsc-local-boundary-review-v1.json](../results/development/nsc-local-boundary-review-v1.json)
-binds those immutable v1 files and the current owners. Its domain is the
-stored payloads, the projected endpoint, a small causal ODE, the
-boost-return mutation, and the nonvacuous initial extrema. The live
-observer label is columns 0 and 1 with weights \(0.75\) and \(0.75\). The
-stored local-response JSON keeps its original observer string. The
-\(1024\)-dimensional series was not re-integrated for that review.
-The review's unchanged-test hash is
-`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
-The delivered independent test is
+stays sealed. Its domain is the stored payloads, the projected endpoint, a
+small causal ODE, the boost-return mutation, and the nonvacuous initial
+extrema. The live observer label is columns 0 and 1 with weights \(0.75\)
+and \(0.75\). The stored local-response JSON keeps its original observer
+string. The \(1024\)-dimensional series was not re-integrated. v2,
+[nsc-local-boundary-review-v2.json](../results/development/nsc-local-boundary-review-v2.json),
+binds the immutable v1 payloads and the current audited owners. The sealed
+independent-test hash
+`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`
+and the pre-correction module
+`1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`
+are pinned on carrier commit `594a11caeee760d172c4a4f73a7615b05cf30282`.
+That carrier is not a historical laboratory commit. The current independent
+test is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
-The review record stays on the earlier hash. The weak helper's saved
-checkpoint head remains `9a9090a`. Its writer stamps the live Git HEAD, so
-that native CLI replay is not byte-stable.
+The v1-epoch note, the v1-epoch null-expansion test, and the other
+consumer hashes from that epoch stay unpinned. The weak helper's saved
+checkpoint head remains `9a9090a`. `--check` remeasures without writing.
+The current helper, owned test, and driver differ from the three sealed
+generator hashes. That limit is not a reexecution of the original
+producer, and `total_certified` stays false.
 
 The geometry-graded window
 [nsc-geometry-graded-window-v1.json](../results/development/nsc-geometry-graded-window-v1.json)

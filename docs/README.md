@@ -12,7 +12,7 @@ constrained calculation into a settled theory.
 | Regeneration-controls successor | [Record](../lab/results/development/nsc-regeneration-controls-v2.json) |
 | Conditional local response | [Note](../lab/docs/nsc-coupled-local-response.md), [record](../lab/results/development/nsc-coupled-local-response-v1.json) |
 | Spherical null expansion | [Note](../lab/docs/nsc-spherical-null-expansion.md), [record](../lab/results/development/nsc-spherical-null-expansion-v1.json) |
-| Local-boundary review | [Record](../lab/results/development/nsc-local-boundary-review-v1.json) |
+| Local-boundary review | [v1 record](../lab/results/development/nsc-local-boundary-review-v1.json), [v2 binding](../lab/results/development/nsc-local-boundary-review-v2.json) |
 | Initial geometry-graded window | [Note](../lab/docs/nsc-geometry-graded-window.md), [record](../lab/results/development/nsc-geometry-graded-window-v1.json) |
 | Both papers | [papers.md](papers.md) |
 | Reproduction | [reproducing.md](reproducing.md) |

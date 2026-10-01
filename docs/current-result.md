@@ -127,9 +127,14 @@ $P=2rr''-(r')^2-Q^2 r^2+G$ stays from
 $5.068517579063356\times 10^{-6}$ to
 $5.400936559883778\times 10^{-6}$. That movement is a conditioning
 indicator. `rounding_enclosure` is null. The v5 bytes are unchanged.
-The saved record's `checkpoint_head` is `9a9090a`. `build_record` writes
-that field from the live Git HEAD, so the native writer is not a
-byte-stable replay on this branch. The saved JSON remains the record.
+The saved record's `checkpoint_head` is `9a9090a`. `--check` and
+`verify_saved` remeasure the scientific fields from the declared v5 bytes
+and do not write. A live HEAD other than `9a9090a` is execution metadata.
+The sealed generator hashes of the helper, the owned test, and the driver
+differ from the current files, so replay reports those three limits. That
+report is not a reexecution of the original producer. `total_certified`
+stays false. The only write is an explicit `--output` path, and that path
+cannot be the sealed JSON.
 
 ### Streamed retained-region reduction
 
@@ -170,10 +175,21 @@ radius as a function of energy is unnecessary. The recorded outcome
 guides the next model step. A candidate may be chosen creatively. The
 computation and its error statement stay checkable.
 
-Next physical question: metric curvature at $T=0.10$ is uncomputed. The
-question is whether one invariant of the saved chart relates the periodic
-bridge, where the curvature proxy and $q$ grow, to the packet arc, where
-the matter and the inward motion sit.
+Next physical question. A read-only chart identity, with no new saved
+record, is
+$\dot Q=L p_\chi/(2F_\chi)+\partial_x(\beta Q)$.
+$F_Q$ enters $\dot p_Q$, and from there the second time derivatives of
+$\chi$ and $R_h$ and the fourth time derivative of $Q$. At the stored
+endpoint that $\dot Q$ is recovered to at most $8\times 10^{-12}$ from the
+stored momenta, without re-evolving the spinors. The frames spaced by
+$0.005$ do not carry $p_\chi$, so the exact nodal rates are not recovered
+there. $R_h=\chi+2$ is the on-shell relation from the action. Substituting
+the Euler–Lagrange $\dot p_\chi$ into that relation is not an independent
+metric check. The curvature proxy stays distinct from the metric curvature,
+which is still uncomputed at $T=0.10$. The concrete next episode records
+$p_\chi$, $\dot Q$, and the realized increment of the rate on the actual
+regions and proper clocks, so that increment can be compared with the
+metric curvature.
 
 The source-fixed incoming gate remains OPEN and its campaign remains paused.
 It is not a prerequisite for this loop. This page does not change either
@@ -544,31 +560,26 @@ identification of these expansions with $\chi$.
 ## Local-boundary review, 1 October 2026
 
 [nsc-local-boundary-review-v1.json](../lab/results/development/nsc-local-boundary-review-v1.json)
-is the successor for three corrections. It binds the immutable episode,
-null-expansion, and local-response v1 hashes to the current owners. The
-independent tests are
-[test_nsc_local_boundary_independent.py](../lab/tests/test_nsc_local_boundary_independent.py).
-The boost flag compares the expansions returned by the rescaling, so a
-return that flips both signs fails while the product stays put. The
-$T=0$ areal-maximum node is opposite in sign, with nonzero $r_x$. The
-interpolated $r_x$ zeros stay inside the expansion margin, so the initial
-extrema remain marginal. Later frames carry a normal change outside that
-margin. The historical JSON and NPZ bytes stay the files hashed in the
-review. The v1 null-expansion record keeps the pre-correction module hash.
-The current module hash is the review's `current_owner_sha256`. The writer
-`derive_nsc_spherical_null_expansion.py` would replace that v1 JSON, so
-the replay is the in-memory measurement. The pre-correction module bytes
-are absent from `lab/.source-history/`. The review's
-`reference_unchanged.independent_test_sha256` is
-`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
-The delivered independent test hashes to
+stays the sealed correction record. Its `reference_unchanged` hash is
+`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`, and its
+recorded null-expansion module hash is
+`1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`.
+[nsc-local-boundary-review-v2.json](../lab/results/development/nsc-local-boundary-review-v2.json)
+binds those immutable v1 payloads and the current audited owners. The
+current independent test is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
-That later edit adds the dense-derivative sample-count comparison and the
-stored-endpoint controls successor checks. Those sealed test bytes are not
-in the pinned source cache, and this page does not rebind the review JSON
-to the later hash. The review also leaves the hand-applied negative
-rescaling, the unreintegrated $1024$-dimensional midpoint series, and the
-absent stress outside the correction.
+The two recovered files are pinned in `lab/.source-history` on carrier
+commit `594a11caeee760d172c4a4f73a7615b05cf30282`. That carrier is a
+content object, not a historical laboratory commit. The original eighteen
+objects and four evidence pins stay in place. The v1-epoch note, the
+v1-epoch null-expansion test, and the other consumer hashes from that
+epoch remain unpinned. The in-memory measurement is the sample replay.
+The null-expansion writer still replaces the v1 JSON, so it is not the
+replay. The review domain remains the stored payloads, the projected
+endpoint, a small causal ODE, the boost-return mutation, and the
+nonvacuous initial extrema. The $1024$-dimensional series, a kernel
+stress, and a negative rescaling inside `boosted_expansions` stay outside
+that correction.
 
 <a id="initial-geometry-graded-window-1-october-2026"></a>
 

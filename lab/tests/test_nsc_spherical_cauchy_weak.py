@@ -1,7 +1,11 @@
 """Independent checks for the weak spherical initial residual. No evolution."""
+import copy
+import hashlib
 import math
 import os
 from pathlib import Path
+
+import pytest
 
 for _thread_var in (
     "OMP_NUM_THREADS",
@@ -17,6 +21,7 @@ import sympy as sp
 
 from recursive_horizons.nsc_spherical_cauchy_weak import (
     RECORD_PATH,
+    SCHEMA,
     V5_JSON,
     V5_NPZ,
     action_functional,
@@ -24,7 +29,6 @@ from recursive_horizons.nsc_spherical_cauchy_weak import (
     action_total,
     algebraic_total,
     bracket_G,
-    build_record,
     coefficient_c,
     coercivity_witness,
     compare_owner_and_action,
@@ -35,13 +39,25 @@ from recursive_horizons.nsc_spherical_cauchy_weak import (
     observe_discrete_inequality,
     owner_total,
     represented_dual_matrix,
+    scientific_mismatches,
+    verify_saved,
     weak_pairing,
+    write_record,
 )
 from recursive_horizons.nsc_spherical_coupling import _radius_residual
 from recursive_horizons.nsc_spherical_feedback_action import lapse_constraint
 from recursive_horizons.nsc_spherical_galerkin_coupling import build_grid
 
+_SEALED_SHA256 = "ce5e4345f75b187661f965f96c680a3076331e2df709845c22251edb99b3f148"
+_REPLAY = None
 _MODULE = Path(__file__).resolve().parents[1] / "src" / "recursive_horizons" / "nsc_spherical_cauchy_weak.py"
+
+
+def _replay():
+    global _REPLAY
+    if _REPLAY is None:
+        _REPLAY = verify_saved()
+    return _REPLAY
 
 
 def _integrand_J(system, y, G, Q):
@@ -237,9 +253,24 @@ def test_omitted_mode_is_invisible_to_the_represented_residual():
 def test_saved_v5_assessment_keeps_partial_terms_and_original_bytes():
     npz_before = V5_NPZ.read_bytes()
     json_before = V5_JSON.read_bytes()
-    record = build_record()
+    record_before = RECORD_PATH.read_bytes()
+    assert hashlib.sha256(record_before).hexdigest() == _SEALED_SHA256
+    report = _replay()
+    record = report["sealed"]
     assert V5_NPZ.read_bytes() == npz_before
     assert V5_JSON.read_bytes() == json_before
+    assert RECORD_PATH.read_bytes() == record_before
+    assert report["wrote"] is False
+    assert report["record_bytes_unchanged"] is True
+    assert report["v5_bytes_unchanged"] is True
+    assert report["head_equality_required"] is False
+    assert report["fabricated_hash"] is False
+    assert report["historical_checkpoint_head"] == "9a9090a"
+    assert report["current_checkpoint_head"] != "9a9090a"
+    assert report["limits"]
+    assert all(item["role"] == "generator" for item in report["limits"])
+    assert all(item["fabricated_hash"] is False for item in report["limits"])
+    assert all(item["current_hash"] != item["declared_hash"] for item in report["limits"])
     assert record["v5_bytes_unchanged"] is True
     assert RECORD_PATH.is_file()
     assert record["schema"] == "NSC-SPHERICAL-CAUCHY-WEAK-v1"
@@ -334,3 +365,48 @@ def test_saved_v5_assessment_keeps_partial_terms_and_original_bytes():
     assert record["nf512"]["source_rho_assessment"]["coercivity"]["uniform_mu_requires_y_star"] is False
     assert record["nf512"]["source_rho_assessment"]["coercivity"]["total_bound"] is None
     assert record["nf512"]["geometry_error_upper_bound"] is None
+    assert RECORD_PATH.read_bytes() == record_before
+    assert hashlib.sha256(V5_JSON.read_bytes()).hexdigest() == record["v5_json_sha256_before"]
+    assert hashlib.sha256(V5_NPZ.read_bytes()).hexdigest() == record["v5_npz_sha256_before"]
+
+
+def test_volatile_execution_metadata_is_separate_from_scientific_settings():
+    report = _replay()
+    fresh = report["measured"]
+    sealed_bytes = RECORD_PATH.read_bytes()
+    volatile = copy.deepcopy(report["sealed"])
+    volatile["checkpoint_head"] = "e62f804"
+    volatile["cpu_seconds"] = 0.25
+    volatile["wall_seconds"] = 0.5
+    volatile["cpu_budget_exceeded"] = True
+    assert scientific_mismatches(volatile, fresh) == []
+
+    independence = copy.deepcopy(report["sealed"])
+    independence["nf512"]["rho_independent_assumption"] = False
+    assert "nf512.rho_independent_assumption" in scientific_mismatches(independence, fresh)
+
+    mu = copy.deepcopy(report["sealed"])
+    mu["nf512"]["source_rho_assessment"]["coercivity"]["uniform_mu"] = 1.0
+    assert "nf512.source_rho_assessment.coercivity.uniform_mu" in scientific_mismatches(mu, fresh)
+
+    profile = copy.deepcopy(report["sealed"])
+    profile["saved_v5_reference"]["nf512_nq2048_full_C"] = 1.0
+    assert "saved_v5_reference.nf512_nq2048_full_C" in scientific_mismatches(profile, fresh)
+    assert RECORD_PATH.read_bytes() == sealed_bytes
+    assert hashlib.sha256(sealed_bytes).hexdigest() == _SEALED_SHA256
+
+
+def test_fresh_write_refuses_the_sealed_record(tmp_path):
+    sealed_before = RECORD_PATH.read_bytes()
+    json_before = V5_JSON.read_bytes()
+    npz_before = V5_NPZ.read_bytes()
+    payload = {"schema": SCHEMA, "checkpoint_head": "e62f804", "total_certified": False}
+    destination = write_record(payload, tmp_path / "fresh-weak.json")
+    written = destination.read_text()
+    assert '"checkpoint_head": "e62f804"' in written
+    assert destination.resolve() != RECORD_PATH.resolve()
+    with pytest.raises(FileExistsError):
+        write_record(payload, RECORD_PATH)
+    assert RECORD_PATH.read_bytes() == sealed_before
+    assert V5_JSON.read_bytes() == json_before
+    assert V5_NPZ.read_bytes() == npz_before

@@ -1,6 +1,6 @@
 {
   "schema": "NSC-PINNED-SOURCE-OBJECTS-v1",
-  "scope": "Exact Merkle paths for four source files required by current evidence manifests; not full historical Git ancestry.",
+  "scope": "Exact Merkle paths for four historical source files required by current evidence manifests, plus one content carrier for two hash-verified recovered local-boundary sources. The carrier commit is not historical laboratory ancestry. The original eighteen objects stay in place.",
   "pins": [
     {
       "commit": "09f3faa364ca88b8ff482c413022ce38f40bef0d",
@@ -25,6 +25,18 @@
       "path": "src/recursive_horizons/nsc_ks_difference_envelope.py",
       "blob": "9efa09bd82b7003391890f1a19828de04148173f",
       "sha256": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196"
+    },
+    {
+      "commit": "594a11caeee760d172c4a4f73a7615b05cf30282",
+      "path": "src/recursive_horizons/nsc_spherical_null_expansion.py",
+      "blob": "ac014452bed434cff03de0fcd52379c187098247",
+      "sha256": "1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5"
+    },
+    {
+      "commit": "594a11caeee760d172c4a4f73a7615b05cf30282",
+      "path": "tests/test_nsc_local_boundary_independent.py",
+      "blob": "2c586ad3fc31fe9e6a8fb4dba97fe8323bbec2f8",
+      "sha256": "68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9"
     }
   ],
   "objects": [
@@ -135,6 +147,48 @@
       "type": "blob",
       "sha256": "dfb09f21ba206c4b7272d98dc3270ae902f6ade26c2b203596723c0e1b218cfd",
       "bytes": 9693
+    },
+    {
+      "oid": "594a11caeee760d172c4a4f73a7615b05cf30282",
+      "type": "commit",
+      "sha256": "80b9c075e51f4c813ec2a5c435d17097ef8b511d16b6e17115e42d4c918c93e0",
+      "bytes": 346
+    },
+    {
+      "oid": "44213ba9359d7471e706bfd5f4a7aad4037c48f7",
+      "type": "tree",
+      "sha256": "cb372173fd0ef692774aa2e65c9f79fbbd661df160860f03f5cdaabe1da628fd",
+      "bytes": 62
+    },
+    {
+      "oid": "6fc2bdf653edfc55a8f5114574db501b36a3f10b",
+      "type": "tree",
+      "sha256": "0ea5209e62d3cf1308c910da07dc0c7c9bbc12030cdd58851b779c67a6c0be30",
+      "bytes": 59
+    },
+    {
+      "oid": "8e3a203f5b4e75b857a11ad9af4649bd2e7fa180",
+      "type": "tree",
+      "sha256": "67d530b675f11645ae39a8fb597f309529ad44cfb24828f2ce4efcf341e7c775",
+      "bytes": 66
+    },
+    {
+      "oid": "dfb09789eccd7110dbbfc3f2b1512f825f227925",
+      "type": "tree",
+      "sha256": "de23c4ce11b99610e70d16c1e359c4acf76eeb03fc2cfb684b646ff0e1904812",
+      "bytes": 45
+    },
+    {
+      "oid": "2c586ad3fc31fe9e6a8fb4dba97fe8323bbec2f8",
+      "type": "blob",
+      "sha256": "b429ab88bef171c4d8103edf99c28589d11cf8c3574228aa8abb15af17c951a1",
+      "bytes": 37911
+    },
+    {
+      "oid": "ac014452bed434cff03de0fcd52379c187098247",
+      "type": "blob",
+      "sha256": "b33c69fb4f82f684d6547a74391c1532c1c6c9eb5b6ebdf3c0b3d3f5c8368b99",
+      "bytes": 46817
     }
   ]
 }

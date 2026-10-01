@@ -25,6 +25,10 @@ a critical point only on the space over which the supremum is taken, and
 only while ``Q^2 + 3 G / z^4`` stays positive on the segment. A geometry-band
 weak number omits held-out modes. The quadrature grid omits the continuum
 tail. No tail majorant is constructed here.
+
+``assemble_record`` only measures. ``verify_saved`` reads a sealed record and
+does not write it. ``write_record`` stores a fresh assembly only at an
+explicit new path.
 """
 from __future__ import annotations
 
@@ -72,6 +76,25 @@ _REPO_ROOT = _LAB_ROOT.parent
 RECORD_PATH = _LAB_ROOT / "results" / "development" / "nsc-spherical-cauchy-weak-v1.json"
 V5_JSON = _LAB_ROOT / "results" / "development" / "nsc-spherical-coupling-refinement-v5.json"
 V5_NPZ = _LAB_ROOT / "results" / "development" / "nsc-spherical-coupling-refinement-v5.npz"
+VOLATILE_EXECUTION_FIELDS = frozenset({
+    "checkpoint_head",
+    "cpu_seconds",
+    "wall_seconds",
+    "cpu_budget_exceeded",
+})
+SCIENTIFIC_SOURCE_PATHS = (
+    "src/recursive_horizons/nsc_spherical_coupling.py",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py",
+    "src/recursive_horizons/nsc_spherical_cauchy_data.py",
+)
+GENERATOR_SOURCE_PATHS = (
+    "src/recursive_horizons/nsc_spherical_cauchy_weak.py",
+    "tests/test_nsc_spherical_cauchy_weak.py",
+    "scripts/derive_nsc_spherical_cauchy_weak.py",
+)
+REPLAY_ABSOLUTE_TOLERANCE = 0.0
+REPLAY_RELATIVE_TOLERANCE = 1e-12
 
 STATEMENT = {
     "functional": "J(y)=integral[2 (y')^2 + Q^2 y^2/2 + G/(2 y^2)] dx",
@@ -1166,8 +1189,21 @@ def _replay_gap(measured, saved):
     return float(measured) - float(saved)
 
 
-def build_record():
-    """Assess the saved v5 seeds and write the partial-term record."""
+class InputBindingError(ValueError):
+    """Declared scientific input does not match the bytes available now."""
+
+    def __init__(self, message, limits):
+        super().__init__(message)
+        self.limits = list(limits)
+
+
+def _source_hashes():
+    paths = GENERATOR_SOURCE_PATHS + SCIENTIFIC_SOURCE_PATHS
+    return {relative: _sha256(_LAB_ROOT / relative) for relative in paths}
+
+
+def assemble_record():
+    """Measure the saved v5 seeds. Does not write."""
     started = time.process_time()
     wall = time.perf_counter()
     npz_hash_before = _sha256(V5_NPZ)
@@ -1236,37 +1272,266 @@ def build_record():
             ),
         }
     payload = _jsonable(record)
-    RECORD_PATH.parent.mkdir(parents=True, exist_ok=True)
-    RECORD_PATH.write_text(json.dumps(payload, indent=2) + "\n")
-    payload["source_hashes"] = {
-        "src/recursive_horizons/nsc_spherical_cauchy_weak.py": _sha256(Path(__file__)),
-        "tests/test_nsc_spherical_cauchy_weak.py": _sha256(
-            _LAB_ROOT / "tests" / "test_nsc_spherical_cauchy_weak.py"
-        ),
-        "scripts/derive_nsc_spherical_cauchy_weak.py": _sha256(
-            _LAB_ROOT / "scripts" / "derive_nsc_spherical_cauchy_weak.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_coupling.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_coupling.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_galerkin_coupling.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_feedback_action.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_feedback_action.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_cauchy_data.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_cauchy_data.py"
-        ),
-    }
+    payload["source_hashes"] = _source_hashes()
     payload["v5_npz_sha256_after"] = _sha256(V5_NPZ)
     payload["v5_json_sha256_after"] = _sha256(V5_JSON)
     payload["v5_bytes_unchanged"] = bool(
         payload["v5_npz_sha256_before"] == payload["v5_npz_sha256_after"]
         and payload["v5_json_sha256_before"] == payload["v5_json_sha256_after"]
     )
-    RECORD_PATH.write_text(json.dumps(payload, indent=2) + "\n")
     return payload
+
+
+def build_record():
+    """Assemble a fresh record. Does not write."""
+    return assemble_record()
+
+
+def write_record(payload, path):
+    """Write a fresh assembly to an explicit new path.
+
+    The sealed development record is never the destination. Verification
+    does not call this function.
+    """
+    destination = Path(path)
+    if destination.resolve() == RECORD_PATH.resolve():
+        raise FileExistsError(
+            f"{destination} is the sealed weak record; write an explicit new path"
+        )
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(json.dumps(_jsonable(payload), indent=2) + "\n")
+    return destination
+
+
+def _declared_hash(value):
+    if isinstance(value, str) and value:
+        return value
+    return None
+
+
+def _identity_entry(path, declared, *, role, current):
+    """Describe one declared hash without inventing a missing digest."""
+    declared_hash = _declared_hash(declared)
+    available = current is not None
+    matches = bool(available and declared_hash is not None and current == declared_hash)
+    return {
+        "path": path,
+        "role": role,
+        "available": available,
+        "historical_bytes_available": matches,
+        "declared_hash": declared_hash,
+        "current_hash": current,
+        "matches_declared": matches,
+        "fabricated_hash": False,
+    }
+
+
+def declared_input_context(saved):
+    """Historical inputs declared by a sealed record.
+
+    ``checkpoint_head`` is the execution HEAD stored with that record. It is
+    not a scientific input and it is not compared with the live HEAD.
+    """
+    hashes = saved.get("source_hashes")
+    if not isinstance(hashes, dict):
+        hashes = {}
+    return {
+        "schema": saved.get("schema"),
+        "v5_json_sha256": saved.get("v5_json_sha256_before"),
+        "v5_npz_sha256": saved.get("v5_npz_sha256_before"),
+        "v5_json_sha256_after": saved.get("v5_json_sha256_after"),
+        "v5_npz_sha256_after": saved.get("v5_npz_sha256_after"),
+        "v5_bytes_unchanged": saved.get("v5_bytes_unchanged"),
+        "source_hashes": hashes,
+        "historical_checkpoint_head": saved.get("checkpoint_head"),
+        "checkpoint_expected": saved.get("checkpoint_expected"),
+    }
+
+
+def binding_report(saved, *, source_root=None):
+    """Check declared v5 bytes and source hashes. Does not write or remeasure."""
+    context = declared_input_context(saved)
+    root = _LAB_ROOT if source_root is None else Path(source_root)
+    entries = []
+    if context["schema"] != SCHEMA:
+        entries.append({
+            "path": "schema",
+            "role": "scientific_setting",
+            "available": True,
+            "historical_bytes_available": False,
+            "declared_hash": None,
+            "current_hash": None,
+            "matches_declared": False,
+            "fabricated_hash": False,
+            "reason": f"schema is {context['schema']!r}",
+        })
+    blob_specs = (
+        ("v5_json", V5_JSON, context["v5_json_sha256"]),
+        ("v5_npz", V5_NPZ, context["v5_npz_sha256"]),
+    )
+    for name, file_path, declared in blob_specs:
+        current = _sha256(file_path)
+        entries.append(_identity_entry(name, declared, role="scientific_input", current=current))
+    if context["v5_bytes_unchanged"] is not True:
+        entries.append({
+            "path": "v5_bytes_unchanged",
+            "role": "scientific_setting",
+            "available": True,
+            "historical_bytes_available": False,
+            "declared_hash": None,
+            "current_hash": None,
+            "matches_declared": False,
+            "fabricated_hash": False,
+            "reason": "declared v5 bytes were not unchanged",
+        })
+    after_pairs = (
+        ("v5_json_sha256_after", context["v5_json_sha256_after"], context["v5_json_sha256"]),
+        ("v5_npz_sha256_after", context["v5_npz_sha256_after"], context["v5_npz_sha256"]),
+    )
+    for name, after, before in after_pairs:
+        if _declared_hash(after) != _declared_hash(before):
+            entries.append({
+                "path": name,
+                "role": "scientific_setting",
+                "available": True,
+                "historical_bytes_available": False,
+                "declared_hash": _declared_hash(before),
+                "current_hash": _declared_hash(after),
+                "matches_declared": False,
+                "fabricated_hash": False,
+                "reason": "declared before and after hashes differ",
+            })
+    hashes = context["source_hashes"]
+    known = set(SCIENTIFIC_SOURCE_PATHS + GENERATOR_SOURCE_PATHS)
+    ordered = list(SCIENTIFIC_SOURCE_PATHS) + list(GENERATOR_SOURCE_PATHS)
+    ordered.extend(sorted(set(hashes) - known))
+    for relative in ordered:
+        role = "generator" if relative in GENERATOR_SOURCE_PATHS else "scientific_source"
+        file_path = root / relative
+        current = _sha256(file_path)
+        entries.append(_identity_entry(
+            relative, hashes.get(relative), role=role, current=current,
+        ))
+    blocking = [
+        item for item in entries
+        if item["role"] != "generator" and item["matches_declared"] is not True
+    ]
+    limits = [item for item in entries if item["matches_declared"] is not True]
+    message = "declared input mismatch: " + ", ".join(item["path"] for item in blocking[:12])
+    return {
+        "ok": not blocking,
+        "message": message if blocking else "declared inputs match",
+        "head_equality_required": False,
+        "historical_checkpoint_head": context["historical_checkpoint_head"],
+        "entries": entries,
+        "blocking": blocking,
+        "limits": limits,
+        "fabricated_hash": False,
+        "scientific_sources_match": not any(
+            item["role"] == "scientific_source" and item["matches_declared"] is not True
+            for item in entries
+        ),
+    }
+
+
+def _numbers_differ(saved, fresh):
+    left = float(saved)
+    right = float(fresh)
+    scale = max(1.0, abs(left), abs(right))
+    return abs(left - right) > REPLAY_ABSOLUTE_TOLERANCE + REPLAY_RELATIVE_TOLERANCE * scale
+
+
+def _compare_scientific(saved, fresh, path, mismatches, root=False):
+    if isinstance(fresh, dict):
+        if not isinstance(saved, dict):
+            mismatches.append(path or "root")
+            return
+        saved_keys = set(saved)
+        fresh_keys = set(fresh)
+        if root:
+            saved_keys -= VOLATILE_EXECUTION_FIELDS
+            fresh_keys -= VOLATILE_EXECUTION_FIELDS
+            saved_keys.discard("source_hashes")
+            fresh_keys.discard("source_hashes")
+        for key in sorted(saved_keys - fresh_keys):
+            mismatches.append(f"{path}.{key}" if path else key)
+        for key in sorted(fresh_keys - saved_keys):
+            mismatches.append(f"{path}.{key}" if path else key)
+        for key in sorted(saved_keys & fresh_keys):
+            child = f"{path}.{key}" if path else key
+            _compare_scientific(saved[key], fresh[key], child, mismatches)
+        return
+    if isinstance(fresh, list):
+        if not isinstance(saved, list) or len(saved) != len(fresh):
+            mismatches.append(path or "root")
+            return
+        for index, (left, right) in enumerate(zip(saved, fresh)):
+            _compare_scientific(left, right, f"{path}[{index}]", mismatches)
+        return
+    if isinstance(fresh, bool) or isinstance(saved, bool):
+        if saved is not fresh:
+            mismatches.append(path or "root")
+        return
+    if isinstance(fresh, (int, float)) and isinstance(saved, (int, float)):
+        if _numbers_differ(saved, fresh):
+            mismatches.append(path or "root")
+        return
+    if fresh is None or saved is None or isinstance(fresh, str):
+        if saved != fresh:
+            mismatches.append(path or "root")
+        return
+    mismatches.append(path or "root")
+
+
+def scientific_mismatches(saved, fresh):
+    """Paths whose scientific values differ.
+
+    Live checkpoint, CPU, and wall time are omitted. Source identity is
+    ``binding_report``, not this comparison.
+    """
+    mismatches = []
+    _compare_scientific(saved, fresh, "", mismatches, root=True)
+    return mismatches
+
+
+def verify_saved(path=RECORD_PATH):
+    """Remeasure scientific fields against a sealed record. Does not write."""
+    path = Path(path)
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    saved_bytes = path.read_bytes()
+    v5_json_bytes = V5_JSON.read_bytes()
+    v5_npz_bytes = V5_NPZ.read_bytes()
+    saved = json.loads(saved_bytes)
+    report = binding_report(saved)
+    if not report["ok"]:
+        raise InputBindingError(report["message"], report["blocking"])
+    fresh = assemble_record()
+    mismatches = scientific_mismatches(saved, fresh)
+    record_unchanged = path.read_bytes() == saved_bytes
+    v5_unchanged = V5_JSON.read_bytes() == v5_json_bytes and V5_NPZ.read_bytes() == v5_npz_bytes
+    if not record_unchanged or not v5_unchanged:
+        raise RuntimeError("verification rewrote a sealed input")
+    if mismatches:
+        raise AssertionError("scientific field mismatch: " + ", ".join(mismatches[:12]))
+    if float(fresh["cpu_seconds"]) > CPU_BUDGET_S:
+        raise AssertionError("CPU limit exceeded during remeasurement")
+    generator_limits = [item for item in report["limits"] if item["role"] == "generator"]
+    return {
+        "status": saved.get("status"),
+        "ok": True,
+        "wrote": False,
+        "head_equality_required": False,
+        "historical_checkpoint_head": saved.get("checkpoint_head"),
+        "current_checkpoint_head": fresh.get("checkpoint_head"),
+        "cpu_seconds": fresh["cpu_seconds"],
+        "v5_bytes_unchanged": True,
+        "record_bytes_unchanged": True,
+        "limits": generator_limits,
+        "fabricated_hash": False,
+        "measured": fresh,
+        "sealed": saved,
+    }
 
 
 def _jsonable(value):

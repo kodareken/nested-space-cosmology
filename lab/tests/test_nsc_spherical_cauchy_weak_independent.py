@@ -13,9 +13,12 @@ with r = y^2, y > 0, and
 
 A green result is a discrete identity or a conditional indicator. It is
 not a continuum enclosure and it does not replay the v5 diagnostic.
+Declared-input binding is checked separately and does not remeasure.
 """
 from __future__ import annotations
 
+import copy
+import json
 import math
 import os
 from functools import lru_cache
@@ -34,10 +37,12 @@ import sympy as sp
 
 from recursive_horizons.nsc_spherical_cauchy_data import shift_momentum, shift_residual
 from recursive_horizons.nsc_spherical_cauchy_weak import (
+    RECORD_PATH,
     action_functional,
     action_ry,
     action_total,
     assess_radius,
+    binding_report,
     bracket_G,
     coefficient_c,
     coercivity_witness,
@@ -454,3 +459,71 @@ def test_mean_current_remains_and_the_source_array_is_unchanged():
     assert built["projected_momentum_mean_gap"] < 1e-12
     assert built["radius_newton_rerun"] is False
     assert built["current_unchanged"] is True
+
+
+def test_declared_inputs_reject_source_and_setting_changes_without_a_fake_hash(tmp_path):
+    sealed_before = RECORD_PATH.read_bytes()
+    saved = json.loads(sealed_before)
+    report = binding_report(saved)
+    assert report["ok"] is True
+    assert report["head_equality_required"] is False
+    assert report["fabricated_hash"] is False
+    assert report["scientific_sources_match"] is True
+    assert report["historical_checkpoint_head"] == "9a9090a"
+    generator_limits = [item for item in report["limits"] if item["role"] == "generator"]
+    assert len(generator_limits) == 3
+    assert all(item["fabricated_hash"] is False for item in generator_limits)
+    assert all(item["current_hash"] is not None for item in generator_limits)
+    assert all(item["current_hash"] != item["declared_hash"] for item in generator_limits)
+    assert all(item["historical_bytes_available"] is False for item in generator_limits)
+
+    shifted = copy.deepcopy(saved)
+    shifted["checkpoint_head"] = "e62f804"
+    shifted["cpu_seconds"] = 0.01
+    shifted["wall_seconds"] = 0.02
+    shifted_report = binding_report(shifted)
+    assert shifted_report["ok"] is True
+    assert shifted_report["head_equality_required"] is False
+    assert shifted_report["historical_checkpoint_head"] == "e62f804"
+
+    key = "src/recursive_horizons/nsc_spherical_coupling.py"
+    mismatched = copy.deepcopy(saved)
+    mismatched["source_hashes"][key] = "0" * 64
+    mismatch_report = binding_report(mismatched)
+    assert mismatch_report["ok"] is False
+    entry = next(item for item in mismatch_report["blocking"] if item["path"] == key)
+    assert entry["fabricated_hash"] is False
+    assert entry["current_hash"] is not None
+    assert entry["current_hash"] != entry["declared_hash"]
+    assert entry["matches_declared"] is False
+
+    absent = copy.deepcopy(saved)
+    absent["source_hashes"].pop(key)
+    absent_report = binding_report(absent)
+    assert absent_report["ok"] is False
+    absent_entry = next(item for item in absent_report["blocking"] if item["path"] == key)
+    assert absent_entry["declared_hash"] is None
+    assert absent_entry["current_hash"] is not None
+    assert absent_entry["fabricated_hash"] is False
+    assert absent_entry["matches_declared"] is False
+
+    missing = binding_report(saved, source_root=tmp_path)
+    assert missing["ok"] is False
+    assert missing["fabricated_hash"] is False
+    missing_sources = [
+        item for item in missing["blocking"] if item["role"] == "scientific_source"
+    ]
+    assert missing_sources
+    assert all(item["available"] is False for item in missing_sources)
+    assert all(item["current_hash"] is None for item in missing_sources)
+    assert all(item["declared_hash"] is not None for item in missing_sources)
+    assert all(item["fabricated_hash"] is False for item in missing_sources)
+    assert all(item["current_hash"] != item["declared_hash"] for item in missing_sources)
+
+    schema = copy.deepcopy(saved)
+    schema["schema"] = "NSC-SPHERICAL-CAUCHY-WEAK-v0"
+    assert binding_report(schema)["ok"] is False
+    opened = copy.deepcopy(saved)
+    opened["v5_bytes_unchanged"] = False
+    assert binding_report(opened)["ok"] is False
+    assert RECORD_PATH.read_bytes() == sealed_before

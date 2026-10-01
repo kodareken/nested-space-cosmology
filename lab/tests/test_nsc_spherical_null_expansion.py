@@ -2,6 +2,8 @@
 import hashlib
 import json
 import os
+import subprocess
+import zlib
 from pathlib import Path
 
 for _thread_var in (
@@ -34,6 +36,46 @@ from recursive_horizons.nsc_spherical_null_expansion import (
 
 _MODULE = Path(__file__).resolve().parents[1] / "src" / "recursive_horizons" / "nsc_spherical_null_expansion.py"
 _REVIEW = Path(__file__).resolve().parents[1] / "results" / "development" / "nsc-local-boundary-review-v1.json"
+_REVIEW_V2 = Path(__file__).resolve().parents[1] / "results" / "development" / "nsc-local-boundary-review-v2.json"
+_SOURCE_HISTORY = Path(__file__).resolve().parents[1] / ".source-history"
+_V1_REVIEW_SHA256 = "0d43accbc5d46407c094890a9722c1e78842224313580044df0d4b641dff8d9b"
+_OLD_MODULE_SHA256 = "1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5"
+_SEALED_INDEPENDENT_SHA256 = "68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9"
+_STORED_OBSERVER = "initial region-0 plus and minus source columns, unphased"
+_LATER_INDEPENDENT_TESTS = (
+    "test_control_policy_keeps_g_initial_and_proxies_off_the_gate",
+    "test_v2_reads_stored_endpoint_without_touching_v1",
+)
+_ORIGINAL_SOURCE_OBJECTS = (
+    ("09f3faa364ca88b8ff482c413022ce38f40bef0d", "commit", 339, "f17ca2a8a430a11161f005be9dac2178f391565c884d3a4475abcee7db6f1f98"),
+    ("6be0057f68cc1ca3fc021b0a2865ad87ea79f5c1", "tree", 847, "62fa898de8369496dd1ef1df07113bee809954000a74e71dbe7534176d16ec08"),
+    ("22993e882ceb7032db8b233fb71231ee3b226316", "tree", 45, "08ee451400f015721b2ef91e55dcfc0f94eadab268d1618bc4fd6ea4bc93a6a7"),
+    ("61286d365dbda4cf1e19b8f154d6f2a298bf92de", "tree", 9458, "2ef8afced2e0123b7a1245674fd78af1f58456751fcd544c3ea509e0539ee0a4"),
+    ("a5a85acef3d98a8d6ff66f928a30725856a1ac6c", "blob", 7350, "d6f31c307705b49371242f04c4cd44ae326593b068904cd3d71506751b0a42d9"),
+    ("750f08abd50ef461600baf9dd319d1ac38b50ca3", "commit", 317, "6b9db11f0a897997fd1532d39e5062584dafc601376b7f89eb3b591c2192ebb8"),
+    ("157a55cdf6ceaf2f69350914046c54fe059855e1", "tree", 882, "8532e5f38ada1e2c1312d753781d953850512c5ba7661034c7fdde06b5c64f87"),
+    ("f7b6d43cae388b9e87a586e1bc87ee62327ab96d", "blob", 1262, "935a7d3b693692d5e91d3710934ec68af4e3a532dfba6e905fc5985b89b356c1"),
+    ("c7dc0f98cacb28afd030b089bdb9e1369288120c", "commit", 334, "b08c61f8d20dde6afb8eea725ba7ed4ad3d012ee509004e4b1593298316fbadb"),
+    ("201a906a41d70ca033fb19f4bf7f1483f1fa2552", "tree", 902, "529fb8a47bc619d56cc636a3c3a1392020bc22c4973edf80bff6b8167636e9cc"),
+    ("d778878f61150cfa0dd2cd3b4024aea276001d46", "tree", 45, "0d60fb8d81e087c2e4c67afdd49c86fcf9660dcad1d329ae65d4365e465d7abb"),
+    ("4dc21108424b29558c9092c703184543721f5248", "tree", 11006, "db08f2b7c71150db61d7f4f08b3c9760e15fc05e484e5007355430525c0341ff"),
+    ("31818fdd6b8cc9c4d8b9d33f41e0f241b2dd1227", "blob", 10229, "42cc1f09dd49d9c3ee0eeab22fe3b778f0562729e05414e82e0ef19658c82971"),
+    ("e62d28f3230ae6ddb2712df71eb7c61a8ed65ad6", "commit", 341, "6b51fb912f469919df458c2a14b97c8a5e2ce69ff7f8929126cfae19a98d38ef"),
+    ("d482613c0af362b6b7440788b335b136e24b8b4f", "tree", 847, "a123fa73f023a45a743a9a7d0712d28038e090a7118cccb0d746b948e0867e5a"),
+    ("f2556bf248ef23192a4c864cb816090cb8641931", "tree", 45, "675dfff3c855ac4228ad398fbf28962e7b169d2fb770f0fb5d38b6ff1f38d23b"),
+    ("826473ae9a2ff7a3da07718738ae48be7badcd68", "tree", 9798, "c360866cd2d48b03a62f39b9f376a619c24596cd2169862764988ceb2e813e99"),
+    ("9efa09bd82b7003391890f1a19828de04148173f", "blob", 9693, "dfb09f21ba206c4b7272d98dc3270ae902f6ade26c2b203596723c0e1b218cfd"),
+)
+_ORIGINAL_PINS = (
+    ("09f3faa364ca88b8ff482c413022ce38f40bef0d", "src/recursive_horizons/nsc_local_incoming_family.py", "a5a85acef3d98a8d6ff66f928a30725856a1ac6c", "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"),
+    ("750f08abd50ef461600baf9dd319d1ac38b50ca3", "pyproject.toml", "f7b6d43cae388b9e87a586e1bc87ee62327ab96d", "b5bfe97f7225d19d6036e05d3199376885d4d626db05d49013495c94ec3e400e"),
+    ("c7dc0f98cacb28afd030b089bdb9e1369288120c", "src/recursive_horizons/nsc_ks_energy_propagator.py", "31818fdd6b8cc9c4d8b9d33f41e0f241b2dd1227", "5f75023efc8c2b637fc4983b414cab50f15f90f8abc1a24dbc1d23ecef9ecf94"),
+    ("e62d28f3230ae6ddb2712df71eb7c61a8ed65ad6", "src/recursive_horizons/nsc_ks_difference_envelope.py", "9efa09bd82b7003391890f1a19828de04148173f", "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196"),
+)
+_HISTORICAL_PIN_PATHS = {
+    "src/recursive_horizons/nsc_spherical_null_expansion.py": _OLD_MODULE_SHA256,
+    "tests/test_nsc_local_boundary_independent.py": _SEALED_INDEPENDENT_SHA256,
+}
 _RESPONSE_JSON = Path(__file__).resolve().parents[1] / "results" / "development" / "nsc-coupled-local-response-v1.json"
 _RESPONSE_NPZ = Path(__file__).resolve().parents[1] / "results" / "development" / "nsc-coupled-local-response-v1.npz"
 _RESPONSE_MODULE = Path(__file__).resolve().parents[1] / "src" / "recursive_horizons" / "nsc_coupled_local_response.py"
@@ -335,31 +377,193 @@ def test_observer_label_names_initial_mode_columns():
     assert "plus and minus" not in label
 
 
+def _file_sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _owner_paths():
+    return {
+        "nsc_spherical_null_expansion.py": _MODULE,
+        "test_nsc_spherical_null_expansion.py": Path(__file__),
+        "nsc-spherical-null-expansion.md": _NULL_DOC,
+        "nsc_coupled_local_response.py": _RESPONSE_MODULE,
+        "nsc-coupled-local-response.md": _RESPONSE_DOC,
+    }
+
+
+def _payload_paths():
+    return {
+        "episode_json_sha256": EPISODE_JSON,
+        "episode_npz_sha256": EPISODE_NPZ,
+        "null_expansion_json_sha256": RECORD_PATH,
+        "coupled_response_json_sha256": _RESPONSE_JSON,
+        "coupled_response_npz_sha256": _RESPONSE_NPZ,
+    }
+
+
+def _show_pinned_source(commit, path):
+    env = os.environ.copy()
+    env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(_SOURCE_HISTORY / "objects")
+    return subprocess.check_output(
+        ["git", "-C", str(_SOURCE_HISTORY.parent), "show", f"{commit}:{path}"],
+        env=env,
+        stderr=subprocess.PIPE,
+    )
+
+
+def _successor_binding_errors(review):
+    """Current v2 dependencies and recovered historical pins. Empty means bound."""
+    errors = []
+    immutable = review.get("immutable_v1")
+    if not isinstance(immutable, dict):
+        return ["immutable_v1"]
+    for key, path in _payload_paths().items():
+        if key not in immutable or not path.is_file() or _file_sha256(path) != immutable[key]:
+            errors.append(key)
+    if immutable.get("null_expansion_recorded_module_sha256") != _OLD_MODULE_SHA256:
+        errors.append("null_expansion_recorded_module_sha256")
+    if immutable.get("stored_observer_label") != _STORED_OBSERVER:
+        errors.append("stored_observer_label")
+    owners = review.get("current_owner_sha256")
+    if not isinstance(owners, dict):
+        errors.append("current_owner_sha256")
+        owners = {}
+    for name, path in _owner_paths().items():
+        if name not in owners or not path.is_file() or _file_sha256(path) != owners[name]:
+            errors.append(name)
+    independent = _SOURCE_HISTORY.parent / "tests" / "test_nsc_local_boundary_independent.py"
+    current = review.get("reference_current")
+    if not isinstance(current, dict) or current.get("independent_test_sha256") != _file_sha256(independent):
+        errors.append("reference_current.independent_test_sha256")
+    sealed = review.get("reference_at_v1_seal")
+    if not isinstance(sealed, dict) or sealed.get("independent_test_sha256") != _SEALED_INDEPENDENT_SHA256:
+        errors.append("reference_at_v1_seal")
+    historical = review.get("historical_sources")
+    if not isinstance(historical, dict):
+        errors.append("historical_sources")
+        return errors
+    if historical.get("recovered") is not True or historical.get("archived") is not True:
+        errors.append("historical_recovery")
+    if historical.get("carrier_is_historical_commit") is not False:
+        errors.append("historical_carrier")
+    if historical.get("null_expansion_module_sha256") != _OLD_MODULE_SHA256:
+        errors.append("historical_module")
+    if historical.get("independent_test_sha256") != _SEALED_INDEPENDENT_SHA256:
+        errors.append("historical_test")
+    pins = historical.get("pins")
+    if not isinstance(pins, list):
+        errors.append("historical_pins")
+        return errors
+    seen = {}
+    for pin in pins:
+        if not isinstance(pin, dict):
+            errors.append("historical_pin")
+            continue
+        path = pin.get("path")
+        digest = pin.get("sha256")
+        commit = pin.get("commit")
+        blob = pin.get("blob")
+        if path not in _HISTORICAL_PIN_PATHS or digest != _HISTORICAL_PIN_PATHS[path] or not commit or not blob:
+            errors.append("historical_pin:" + str(path))
+            continue
+        try:
+            raw = _show_pinned_source(commit, path)
+            framed = zlib.decompress((_SOURCE_HISTORY / "objects" / blob[:2] / blob[2:]).read_bytes())
+            header, blob_raw = framed.split(b"\0", 1)
+        except (OSError, subprocess.CalledProcessError, zlib.error, ValueError):
+            errors.append("historical_replay:" + path)
+            continue
+        if hashlib.sha1(framed).hexdigest() != blob or not header.startswith(b"blob "):
+            errors.append("historical_replay:" + path)
+        elif hashlib.sha256(raw).hexdigest() != digest or hashlib.sha256(blob_raw).hexdigest() != digest:
+            errors.append("historical_replay:" + path)
+        else:
+            seen[path] = digest
+    if set(seen) != set(_HISTORICAL_PIN_PATHS):
+        errors.append("historical_pin_paths")
+    return errors
+
+
 def test_successor_review_binds_immutable_v1(measurement, saved_record):
-    review = json.loads(_REVIEW.read_text())
-    immutable = review["immutable_v1"]
-    assert immutable["episode_json_sha256"] == hashlib.sha256(EPISODE_JSON.read_bytes()).hexdigest()
-    assert immutable["episode_npz_sha256"] == hashlib.sha256(EPISODE_NPZ.read_bytes()).hexdigest()
-    assert immutable["null_expansion_json_sha256"] == hashlib.sha256(RECORD_PATH.read_bytes()).hexdigest()
+    v1_bytes = _REVIEW.read_bytes()
+    assert _file_sha256(_REVIEW) == _V1_REVIEW_SHA256
+    v1 = json.loads(v1_bytes)
+    v2 = json.loads(_REVIEW_V2.read_text())
+    assert v2["schema"] == "NSC-LOCAL-BOUNDARY-REVIEW-SUCCESSOR-v2"
+    assert v2["predecessor"]["path"] == "lab/results/development/nsc-local-boundary-review-v1.json"
+    assert v2["predecessor"]["sha256"] == _V1_REVIEW_SHA256
+    assert v2["predecessor"]["immutable"] is True
+    assert v2["predecessor"]["rebound"] is False
+    assert v2["immutable_v1"] == v1["immutable_v1"]
+    assert v2["controls"] == v1["controls"]
+    assert v2["domain"]["later_independent_tests"] == list(_LATER_INDEPENDENT_TESTS)
+    independent = _SOURCE_HISTORY.parent / "tests" / "test_nsc_local_boundary_independent.py"
+    independent_text = independent.read_text()
+    for name in _LATER_INDEPENDENT_TESTS:
+        assert f"def {name}(" in independent_text
+    assert _successor_binding_errors(v2) == []
+    sealed_pin = next(
+        pin for pin in v2["historical_sources"]["pins"]
+        if pin["path"] == "tests/test_nsc_local_boundary_independent.py"
+    )
+    sealed_text = _show_pinned_source(sealed_pin["commit"], sealed_pin["path"]).decode()
+    for name in _LATER_INDEPENDENT_TESTS:
+        assert f"def {name}(" not in sealed_text
+    owners = v2["current_owner_sha256"]
+    assert owners["nsc_spherical_null_expansion.py"] == v1["current_owner_sha256"]["nsc_spherical_null_expansion.py"]
+    assert owners["nsc_coupled_local_response.py"] == v1["current_owner_sha256"]["nsc_coupled_local_response.py"]
+    assert owners["test_nsc_spherical_null_expansion.py"] != v1["current_owner_sha256"]["test_nsc_spherical_null_expansion.py"]
+    assert owners["nsc-spherical-null-expansion.md"] != v1["current_owner_sha256"]["nsc-spherical-null-expansion.md"]
+    assert owners["nsc-coupled-local-response.md"] != v1["current_owner_sha256"]["nsc-coupled-local-response.md"]
+    assert v1["reference_unchanged"]["independent_test_sha256"] == _SEALED_INDEPENDENT_SHA256
+    assert v2["reference_current"]["independent_test_sha256"] != _SEALED_INDEPENDENT_SHA256
+    immutable = v2["immutable_v1"]
     assert immutable["null_expansion_recorded_module_sha256"] == saved_record["source_bindings"]["module_sha256"]
-    assert immutable["coupled_response_json_sha256"] == hashlib.sha256(_RESPONSE_JSON.read_bytes()).hexdigest()
-    assert immutable["coupled_response_npz_sha256"] == hashlib.sha256(_RESPONSE_NPZ.read_bytes()).hexdigest()
     stored = json.loads(_RESPONSE_JSON.read_text())
     assert stored["finite_approximation_domain"]["observer"] == immutable["stored_observer_label"]
-    assert immutable["stored_observer_label"] == "initial region-0 plus and minus source columns, unphased"
-    owners = review["current_owner_sha256"]
-    assert owners["nsc_spherical_null_expansion.py"] == hashlib.sha256(_MODULE.read_bytes()).hexdigest()
-    assert owners["nsc_coupled_local_response.py"] == hashlib.sha256(_RESPONSE_MODULE.read_bytes()).hexdigest()
-    assert owners["test_nsc_spherical_null_expansion.py"] == hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-    assert owners["nsc-spherical-null-expansion.md"] == hashlib.sha256(_NULL_DOC.read_bytes()).hexdigest()
-    assert owners["nsc-coupled-local-response.md"] == hashlib.sha256(_RESPONSE_DOC.read_bytes()).hexdigest()
     saved_fine = next(run for run in saved_record["runs"] if run["name"] == "nf512_dt_0_0005")
     peak = saved_fine["frames"][0]["areal_maximum"]
-    assert review["controls"]["positive_boost_preserves_each_sign"] is True
-    assert review["controls"]["wrong_return_preserves_each_sign"] is False
-    assert review["controls"]["boost_product_gap"] == measurement["controls"]["boost_product_gap"]
-    assert review["controls"]["t0_areal_maximum_theta_plus"] == peak["theta_plus"]
-    assert review["controls"]["t0_areal_maximum_theta_minus"] == peak["theta_minus"]
-    assert review["controls"]["absolute_expansion_margin"] == saved_record["margin"]["absolute_expansion_margin"]
-    independent = Path(__file__).resolve().parents[1] / "tests" / "test_nsc_local_boundary_independent.py"
-    assert review["reference_unchanged"]["independent_test_sha256"] == hashlib.sha256(independent.read_bytes()).hexdigest()
+    assert v2["controls"]["positive_boost_preserves_each_sign"] is True
+    assert v2["controls"]["wrong_return_preserves_each_sign"] is False
+    assert v2["controls"]["boost_product_gap"] == measurement["controls"]["boost_product_gap"]
+    assert v2["controls"]["t0_areal_maximum_theta_plus"] == peak["theta_plus"]
+    assert v2["controls"]["t0_areal_maximum_theta_minus"] == peak["theta_minus"]
+    assert v2["controls"]["absolute_expansion_margin"] == saved_record["margin"]["absolute_expansion_margin"]
+    manifest = json.loads((_SOURCE_HISTORY / "manifest.json").read_text())
+    assert manifest["schema"] == "NSC-PINNED-SOURCE-OBJECTS-v1"
+    rows = manifest["objects"]
+    assert len(_ORIGINAL_SOURCE_OBJECTS) == 18
+    assert [(row["oid"], row["type"], row["bytes"], row["sha256"]) for row in rows[:18]] == list(_ORIGINAL_SOURCE_OBJECTS)
+    assert [(row["commit"], row["path"], row["blob"], row["sha256"]) for row in manifest["pins"][:4]] == list(_ORIGINAL_PINS)
+    for row in rows[:18]:
+        oid = row["oid"]
+        framed = zlib.decompress((_SOURCE_HISTORY / "objects" / oid[:2] / oid[2:]).read_bytes())
+        assert hashlib.sha1(framed).hexdigest() == oid
+        assert hashlib.sha256(framed).hexdigest() == row["sha256"]
+    object_ids = {row["oid"] for row in rows}
+    for pin in v2["historical_sources"]["pins"]:
+        assert pin["commit"] in object_ids
+        assert pin["blob"] in object_ids
+        match = next(row for row in manifest["pins"] if row["path"] == pin["path"] and row["commit"] == pin["commit"])
+        assert match["blob"] == pin["blob"]
+        assert match["sha256"] == pin["sha256"]
+
+
+def test_successor_review_rejects_changed_or_missing_current_dependency():
+    review = json.loads(_REVIEW_V2.read_text())
+    assert _successor_binding_errors(review) == []
+    changed = json.loads(_REVIEW_V2.read_text())
+    changed["current_owner_sha256"]["nsc_coupled_local_response.py"] = "0" * 64
+    assert "nsc_coupled_local_response.py" in _successor_binding_errors(changed)
+    missing = json.loads(_REVIEW_V2.read_text())
+    del missing["current_owner_sha256"]["test_nsc_spherical_null_expansion.py"]
+    assert "test_nsc_spherical_null_expansion.py" in _successor_binding_errors(missing)
+    dropped_payload = json.loads(_REVIEW_V2.read_text())
+    del dropped_payload["immutable_v1"]["episode_npz_sha256"]
+    assert "episode_npz_sha256" in _successor_binding_errors(dropped_payload)
+    bad_pin = json.loads(_REVIEW_V2.read_text())
+    bad_pin["historical_sources"]["pins"][0]["sha256"] = "1" * 64
+    assert any(item.startswith("historical_pin") for item in _successor_binding_errors(bad_pin))
+    missing_object = json.loads(_REVIEW_V2.read_text())
+    missing_object["historical_sources"]["pins"][0]["commit"] = "0" * 40
+    assert any(item.startswith("historical_replay") for item in _successor_binding_errors(missing_object))

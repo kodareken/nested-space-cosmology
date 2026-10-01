@@ -151,29 +151,35 @@ Status `MEASURED_SAMPLE_TRAPPING_CHARACTER_CHANGES`. The episode JSON
 and NPZ are inputs and stay unchanged. Initial areal extrema are
 marginal. Later stored frames have one both-negative arc and one
 both-positive arc, and the sampled signs agree under refinement. The v1
-JSON keeps the pre-correction module hash. Current owners are bound by
-the review below. The writer replaces the v1 JSON, so replay is the
-in-memory measurement.
+JSON keeps the pre-correction module hash. Current owners and the
+recovered bytes are bound by the review below. The sample replay is the
+in-memory measurement. The writer replaces the v1 JSON.
 
 ## Local-boundary review, 2026-10-01
 
-Successor correction record. It does not rewrite the scientific v1 files.
-Owners, relative to `lab/`:
+v1 stays sealed. v2 binds the immutable payloads and the current audited
+owners. Owners, relative to `lab/`:
 
 - `results/development/nsc-local-boundary-review-v1.json`
+- `results/development/nsc-local-boundary-review-v2.json`
 - `tests/test_nsc_local_boundary_independent.py`
 - `tests/test_nsc_spherical_null_expansion.py`
 - `src/recursive_horizons/nsc_spherical_null_expansion.py`
 - `src/recursive_horizons/nsc_coupled_local_response.py`
+- `.source-history/manifest.json`
 
 The boost flag compares the returned rescaling. The initial areal
-extrema are nonvacuous and marginal. The review stores both the immutable
-v1 hashes and `current_owner_sha256`. The pre-correction null-expansion
-module is not a pinned source object. `reference_unchanged.independent_test_sha256`
-is `68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
-The delivered independent test is
+extrema are nonvacuous and marginal. v1 `reference_unchanged` remains
+`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
+The current independent test is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
-The review JSON is not rebound to that later hash.
+The pre-correction module
+`1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`
+and that sealed test are pinned on carrier commit
+`594a11caeee760d172c4a4f73a7615b05cf30282`, which is not a historical
+laboratory commit. The original eighteen objects and four pins remain.
+The v1-epoch note, the v1-epoch null-expansion test, and the other
+consumer hashes from that epoch stay unpinned.
 
 ## Initial geometry-graded window, 2026-10-01
 
@@ -209,12 +215,17 @@ Diagnostic helper. It does not step a state. Owners, relative to `lab/`:
 - [nsc-spherical-cauchy-weak.md](nsc-spherical-cauchy-weak.md)
 
 Status `PARTIAL_TERMS_NO_TOTAL_BOUND`. The saved `checkpoint_head` is
-`9a9090a`. `build_record` stamps the live Git HEAD and writes the JSON, so
-the native CLI is not a byte-stable replay after that checkpoint. Declared positive $G$ with
+`9a9090a`. `--check` and `verify_saved` remeasure from the declared v5
+bytes and do not write. Live HEAD may differ from that checkpoint; the
+difference is execution metadata. The sealed generator hash of this module
+is `14e8c4de9028385a44b903391d07815b300a55caf82a158767141593757e3051`.
+The current helper, owned test, and driver differ from the three sealed
+generator hashes. Those limits are not a reexecution of the original
+producer. `total_certified` stays false. `--output` is the only write, and
+it refuses the sealed path. Declared positive $G$ with
 `rho_independent` true exposes $\mu=Q^2=0.0631642220827373$. The
 dense-versus-Fourier-product movement is a conditioning indicator, not a
-rounding enclosure. Module sha256
-`14e8c4de9028385a44b903391d07815b300a55caf82a158767141593757e3051`.
+rounding enclosure.
 
 ## Finite channel turnover, 2026-09-30
 

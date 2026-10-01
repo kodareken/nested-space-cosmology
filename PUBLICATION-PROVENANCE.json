@@ -42,9 +42,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 9685,
+      "bytes": 9863,
       "path": "AGENTS.md",
-      "sha256": "38fe804d532ff5a40297a6a907111d29e80f33786a1ab12ee3176734f65464c3"
+      "sha256": "d1f2793accb1ab81e0b72b2784aed435890d049711db119667f84165935c63e1"
     },
     {
       "bytes": 1056,
@@ -92,14 +92,14 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 4522,
+      "bytes": 4601,
       "path": "docs/README.md",
-      "sha256": "9652d8b39019b87fa01bb5585d5bdf8a6177eb6c504645a09dbf6c976545c598"
+      "sha256": "259518496be1a606113df013661320c13acfdec66c911a8628f3416d8d4ad4ba"
     },
     {
-      "bytes": 87623,
+      "bytes": 88283,
       "path": "docs/current-result.md",
-      "sha256": "3064dd356221e2a98f18bfd23a0a7c2f33422b6f52562d1fb4f11bb370a69951"
+      "sha256": "4e74ac7f2449208ef626c230ee07e20972adebfd7f0442525fe6dcb03f189456"
     },
     {
       "bytes": 14497,
@@ -112,9 +112,9 @@
       "sha256": "7007bae73f913eae04dfe78af1dec861fdbeec76af66f3e96a2e7a5793aff273"
     },
     {
-      "bytes": 4827204,
+      "bytes": 4829368,
       "path": "docs/lab-snapshot.json",
-      "sha256": "ce3850f74d55b5cfbb8b8ca6c486f5f1839f16a83cb4f7f208b75a08958dc7e3"
+      "sha256": "81dd5bdb5334afd0f4f3b0fdb9a7c310786ae67d37827b6d9fa8faaddfc9e90f"
     },
     {
       "bytes": 5006,
@@ -3092,9 +3092,9 @@
       "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
     },
     {
-      "bytes": 3437,
+      "bytes": 8465,
       "path": "tests/test_lab_consolidation.py",
-      "sha256": "d860697f4ddb9c231733c6cc680d4c241cec6b6c1157a475535572063c60b78f"
+      "sha256": "8dd97607fe0e996f03fc35b3a0e8d39ae35209716a8470fa6de2d708ebf986f0"
     },
     {
       "bytes": 4256,
@@ -3362,7 +3362,7 @@
       "sha256": "55224209078cd78c7a433d679ac8748e2f6c7206b1fb295d41fc2ce196ae86c6"
     }
   ],
-  "lab_snapshot_sha256": "ce3850f74d55b5cfbb8b8ca6c486f5f1839f16a83cb4f7f208b75a08958dc7e3",
+  "lab_snapshot_sha256": "81dd5bdb5334afd0f4f3b0fdb9a7c310786ae67d37827b6d9fa8faaddfc9e90f",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.26.0",

@@ -22,7 +22,7 @@ Paths are relative to `lab/`.
 | Geometry | [nsc-spherical-feedback-episode-v1.npz](../results/development/nsc-spherical-feedback-episode-v1.npz) |
 | Reducer | [nsc_evolving_reduction.py](../src/recursive_horizons/nsc_evolving_reduction.py), called with `backend="streamed"` and not edited |
 
-Module sha256 `1bfaf2661eb8b278c199c52c048edde3e85ba33ad68860b2127c54a8b47851e2`.
+Module sha256 `3e4942a3462962a6e308f14a2eb71e9629d14909824e444d78ad3eece5b34a15`.
 Test sha256 `d349a4fe488d7f77c666c431a494c41bcd1f0af99b9ecbb548b9c30e9b62a5c4`.
 Driver sha256 `29c0053260223acd0e27602037af28a198f1dbe23563d09ef39bc6d042deedb7`.
 JSON sha256 `33fe043b30b037432801f12905b3545a20ca2070b9edc46bd3a11aa0d76201a1`.
@@ -286,3 +286,13 @@ python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --domain stor
 source, and declared settings match. A different request is rejected and
 does not rewrite the record. Sixteen tests passed in \(1.22\) seconds
 after the appended window.
+
+## Local-boundary successor
+
+The JSON and NPZ hashes above remain the immutable v1 payloads. The v1
+review is not rewritten. `results/development/nsc-local-boundary-review-v2.json`
+binds those payloads and the current bytes of this note and of the consumer
+module. The live finite-domain label remains initial mode columns 0 and 1,
+weights \(0.75\) and \(0.75\), with no phase QR. The stored JSON keeps its
+original observer string. This note adds no stress and no
+\(1024\)-dimensional reintegration.

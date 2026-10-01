@@ -207,3 +207,35 @@ itself. \(\theta_+\theta_-=4r^{-2}g^{ab}\partial_a r\,\partial_b r\) is the
 causal character of the areal gradient. Its zero is that boundary on this
 chart. The saved samples move it from the initial critical points, marginal
 within the normal-velocity noise, onto the edges of the two finite arcs.
+
+## Local-boundary successor
+
+`results/development/nsc-local-boundary-review-v1.json` stays immutable.
+Later independent checks are not written back into that review. The
+successor is `results/development/nsc-local-boundary-review-v2.json`. It
+binds the same episode JSON and NPZ, null-expansion JSON, coupled-response
+JSON and NPZ, stored observer string, and pre-correction module hash.
+
+That pre-correction module hash is
+`1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`.
+Those bytes are the current module with the boost-return edit inverted, so
+the flag again compares `factor * theta` and `theta / factor`. The current
+module hash is
+`5c57b61c30008f994e1e889b93584488a5ea1675580ab6dfa68281bfc833e89a`.
+The flag on the current module reads the arrays returned by
+`boosted_expansions`. Saved samples and control arrays are unchanged. The
+replay is the in-memory measurement. The writer is not used, because it
+would replace the v1 JSON.
+
+The independent test named by the v1 review is
+`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
+The current independent test is
+`d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
+The later file adds
+`test_control_policy_keeps_g_initial_and_proxies_off_the_gate` and
+`test_v2_reads_stored_endpoint_without_touching_v1`. Both recovered files
+are pinned in `.source-history` as content carriers. The original eighteen
+cache objects stay in place. The carrier commit is not an earlier
+laboratory commit. The v2 review binds the current bytes of this note, the
+null-expansion module, the null-expansion tests, the coupled-response
+module, and the coupled-response note.

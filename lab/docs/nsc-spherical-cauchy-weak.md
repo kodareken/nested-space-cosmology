@@ -4,14 +4,44 @@ Diagnostic only. The production evolution remains
 `nsc_spherical_galerkin_coupling`. This helper does not step a state, rerun
 the radius Newton, or retune a tolerance. Record
 `lab/results/development/nsc-spherical-cauchy-weak-v1.json`, status
-`PARTIAL_TERMS_NO_TOTAL_BOUND`. Checkpoint `9a9090a`. The saved v5 JSON and
-NPZ bytes are unchanged. Assessment CPU `6.787458` s.
+`PARTIAL_TERMS_NO_TOTAL_BOUND`. Historical execution checkpoint `9a9090a`.
+The saved v5 JSON and NPZ bytes are unchanged. Sealed assessment CPU
+`6.549308` s.
+
+`--check` reads that sealed record. It remeasures the scientific fields
+from the declared v5 bytes and does not write the record, the v5 files, or
+a PDF. `checkpoint_head`, `cpu_seconds`, and `wall_seconds` are historical
+execution metadata. The live Git HEAD is not required to equal `9a9090a`.
+A fresh assembly records the live checkpoint only through `--output` on a
+new path. That path cannot be the sealed JSON.
+
+The sealed generator hashes are the helper, driver, and owned test that
+wrote the record. Those historical bytes are not stored again. The current
+files differ, so replay reports that limit and does not invent a matching
+hash. The coupling, Galerkin, feedback-action, and Cauchy-data hashes remain
+binding. A missing declared source is an unavailable-byte limit. A changed
+declared hash or a changed scientific field is rejected. No total bound is
+added.
 
 ```sh
 python scripts/lab.py -m pytest tests/test_nsc_spherical_cauchy_weak.py tests/test_nsc_spherical_cauchy_weak_independent.py -q
+python scripts/lab.py scripts/derive_nsc_spherical_cauchy_weak.py --check
 ```
 
-Owned and independent tests passed together in 7.48 s.
+Owned and independent tests passed together in 6.34 s. `--check` on live
+HEAD `e62f804` remeasured in 5.822429 s, kept historical head `9a9090a`,
+reported three generator limits, and did not write. Scientific comparison
+uses a relative tolerance of `1e-12` and an absolute tolerance of `0`.
+That tolerance is not a geometry bound.
+
+Current measurement files differ from the sealed generator hashes:
+
+| Path | sha256 |
+|---|---|
+| `lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py` | `36b42e610bb85fb28b234c706b7e86afe8f7fd73b6737ebab114cc1a191ab017` |
+| `lab/tests/test_nsc_spherical_cauchy_weak.py` | `78867955ba8dbdc20682d6d779d0cb36ed818e8769a007abe56b2a8f11486d1a` |
+| `lab/tests/test_nsc_spherical_cauchy_weak_independent.py` | `3599ae84d911f88138a01bd3876c28253c2afd29d294d08961152fb30ed50b76` |
+| `lab/scripts/derive_nsc_spherical_cauchy_weak.py` | `3b2554a6e23fd15eb25f82f536471299e13a692a3e372466c231e9645e084fd7` |
 
 ## Reduction
 
@@ -118,9 +148,13 @@ follows. The \(n_f=512\) dense maximum moves from
 maximum stays from `5.068517579063356e-06` to `5.400936559883778e-06`.
 That movement is a conditioning indicator. It is not a rounding enclosure.
 
+The sealed record keeps the generator hashes below. They are not the
+current files. Replay does not rewrite them. The record bytes are
+`ce5e4345f75b187661f965f96c680a3076331e2df709845c22251edb99b3f148`.
+
 | Path | sha256 |
 |---|---|
 | `lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py` | `14e8c4de9028385a44b903391d07815b300a55caf82a158767141593757e3051` |
 | `lab/tests/test_nsc_spherical_cauchy_weak.py` | `0b82dbad4ad5ba74c066831be350a12199b2da299f3ceea8b611f8bb344de790` |
 | `lab/scripts/derive_nsc_spherical_cauchy_weak.py` | `c699f641b1a246e3336548bb0063fdc39cc2f3da5802e0c5715d4976500f7582` |
-| `lab/results/development/nsc-spherical-cauchy-weak-v1.json` | `974c1614468ae3dbfb1f4e13d1be026b0aa2f99489ac258287fbdfcfc097da72` |
+| `lab/results/development/nsc-spherical-cauchy-weak-v1.json` | `ce5e4345f75b187661f965f96c680a3076331e2df709845c22251edb99b3f148` |
