@@ -9,29 +9,49 @@ checkpoint is retained in an appendix and is not a prerequisite for this
 finite result. The [43-page foundation](paper/nested-space-cosmology.pdf)
 remains unchanged.
 
-**Current checkpoint, 30 September 2026.** A six-mode inherited finite
-example has nonzero channel currents, constant regional contents, and a
-derived local filtered response.
-[Finite turnover](lab/docs/nsc-finite-turnover.md). The geometry and the
-stationary preparation are fixed inputs. On that same frozen window, an
-incoherent regional imbalance starts with no interregion channel current;
-its Cesaro mean still carries inflow into the region-0 plus mode from the
-region-1 plus mode.
+**Starting checkpoint `9a9090a`.** The programme is finite nested
+regeneration under familiar local laws. The executed calculation is the
+spherical Galerkin loop: `compose_fine_hamiltonian` recomputes the source
+and the rates and feeds $F_Q$ into $\dot p_Q$; $Q$, $r$, $\chi$
+and the momenta evolve; $L$ and $\beta$ stay gauge controls; the initial
+radius uses the source. That module is the code owner. The v5 replay
+remains the self-contained $T=0.005$ seed: full Hamilton about
+$9.98\times 10^{-6}$, momentum about $1.38\times 10^{-6}$, maximum
+absolute proper radial velocity about $0.0079505$. Signed motion is not
+inferred from that maximum.
+The saved $T=0.05$ measurement is
+`lab/scripts/derive_nsc_spherical_feedback_episode.py`. Four runs reach
+the requested time. Proper radial velocity on the fine primary run ends
+near $[-0.061956, 0.088159]$, $Q$ stays near $0.2195$ at its minimum, and
+$\chi$ reaches about $11.148$. Field and gravitational energy exchange
+about $0.4123$. All 62 physical refinement rows meet one percent, worst
+relative movement about $5.55\times 10^{-4}$. The fine full Hamilton
+residual ends near $2.83\times 10^{-5}$ and the fine momentum residual
+near $4.30\times 10^{-6}$; the coarse residual is higher. A
+constraint-consistent continuum solution and renewal are not validated.
+The historical tolerance $10^{-8}$ is not an automatic veto.
+[Present loop](docs/current-result.md#present-spherical-loop).
+
+A six-mode inherited finite example remains a fixed-geometry witness, with
+nonzero channel currents and a derived local filtered response.
+[Finite turnover](lab/docs/nsc-finite-turnover.md). On that same frozen
+window, an incoherent regional imbalance has a Cesaro mean that still
+carries inflow into the region-0 plus mode from the region-1 plus mode.
 [Imbalance mean circulation](lab/docs/nsc-imbalance-turnover.md).
-That average is not relaxation, and the geometry stays an input. Broader
-regeneration remains research. The incoming gate remains OPEN and its
-campaign remains paused.
+The geometry of that witness stays an input. The incoming gate remains
+OPEN and its campaign remains paused. It is not a prerequisite.
 
 ## One research programme, two complementary papers
 
 The original manuscript remains the foundation of this project. The focused
-article develops one local consistency test from that work; it does not replace
-the broader manuscript or claim that the cosmology has been proved.
+article is the finite nested-qualities result named above. It does not replace
+the broader manuscript, and it does not claim that the cosmology has been proved.
+The source-fixed incoming gate is an OPEN appendix of that companion.
 
 | Read | Purpose | Status |
 |---|---|---|
-| [Foundational manuscript: PDF](paper/nested-space-cosmology.pdf) · [Markdown](paper/nested-space-cosmology.md) | The broad NSC idea, inheritance relation, existing operator calculations, source history and references | Preserved v0.26.0, 15 September 2026, 43 pages |
-| [Focused companion: PDF](paper/local-incoming-gate-draft.pdf) · [LaTeX](paper/local-gate-draft/main.tex) | The source-fixed local incoming-gate formulation, current evidence and missing bounds | OPEN research draft; no certified local solution or arXiv submission |
+| [Foundational manuscript: PDF](paper/nested-space-cosmology.pdf) · [Markdown](paper/nested-space-cosmology.md) | The broad NSC idea, inheritance relation, existing operator calculations, source history and references | Frozen v0.26.0, 15 September 2026, 43 pages |
+| [Focused companion: PDF](paper/local-incoming-gate-draft.pdf) · [LaTeX](paper/local-gate-draft/main.tex) | Finite-window nested qualities: inherited scale relations, ordered regional reduction, and distinct regional states under the same law. The incoming gate is an OPEN appendix | Finite construction recorded; gate appendix OPEN and paused. Frozen foundation remains v0.26.0 |
 
 [How the papers fit together](docs/papers.md) ·
 [Current scientific status](docs/current-result.md) ·
@@ -49,37 +69,25 @@ claims remain tied to their specific evidence, not merely to GitHub availability
 
 ## Local physics within a larger nested description
 
-The question is whether specified nested surroundings — structure not resolved
-in the local description — produce an effective local response that still
-follows familiar local laws. Those laws are the local equations a local
-observer already uses. LambdaCDM, the standard cosmology with a cosmological
-constant and cold dark matter, is one such description. It is not an opponent
-to refute, and this repository does not claim to have reproduced every
-LambdaCDM observable.
+The question is the nested mechanism. Structure that a region does not
+resolve can still change the local response, and the same relations can
+appear across regional gradients. Familiar local laws are the equations a
+local observer already uses.
 
-Three layers stay distinct. Reusable mathematics, such as block reduction and
-the inherited-law relation, holds only in its stated domain. A proposed
-interpretation, including dark matter, dark energy, antimatter, or an eternal
-continuation, is not a derived result. One chosen numerical application, the
-local incoming gate, tests one declared geometry and evolved state. Its
-threshold, source, and history belong to that application. The gate remains
-OPEN and its campaign is paused. It is a retained application, not the
-required next step, and judging its relevance is not a permission barrier.
-It is not a prerequisite for every nested-system claim.
-
-Next research reuses inherited-law, regional-state, transfer and conservation
-results to investigate sustained balanced turnover at stable overall regional
-size and content. Relate that to time as registration of spatial change and
-to the matter–antimatter hypothesis. Neither reading is claimed as proved.
+The inherited-law relation is reused inside its stated domain. Time,
+antimatter, dark-sector, and continuing-gradient readings stay open
+research. A finite candidate can be chosen creatively. Its computation and
+its error statement stay checkable. The current finite realization is the
+spherical Galerkin loop, because its geometry and state forces already come
+from the same action.
+[Present loop](docs/current-result.md#present-spherical-loop).
+The local incoming gate remains a separate OPEN application, campaign paused.
 
 Pictures of an interior and its surroundings, a room, or two sides of a coin
-organize that question. They are not literal equations and not claims that
-must be defended as physical identities. Spherical symmetry is the first
-controlled class, not a universal theorem. Charge conjugation — the standard
-map between particle and antiparticle sectors — neither derives antimatter
-from geometry nor forbids asking whether a geometric origin exists. The full
-dark-energy and dark-matter identification remains to be derived; the current
-Schur identities do not alone establish it.
+organize that question. They are motivation. Spherical symmetry is the first
+controlled class. Charge conjugation remains the standard map between
+particle and antiparticle sectors. A geometric reading of antimatter, and a
+dark-sector reading, stay open beside that map.
 
 ## What if reality is one inherited spectrum?
 
@@ -91,6 +99,9 @@ Nested-Space Cosmology asks whether nature works the same way at every scale:
 
 > **One field. One spectrum. Different stable patterns that we call particles,
 > forces, matter, antimatter, dark gravity, black holes, and expanding space.**
+
+The picture is the proposal. Time, antimatter, and further gradients stay
+open research beside it.
 
 ```mermaid
 flowchart TD
@@ -113,13 +124,12 @@ dimensionless relationships while expressing a wider range of structure.
 [Follow the equations and evidence](docs/current-result.md) ·
 [Read the foundational manuscript](paper/nested-space-cosmology.pdf)
 
-## Chosen numerical application: local incoming gate (OPEN, campaign paused)
+## Retained application: local incoming gate (OPEN, campaign paused)
 
-This application is a retained OPEN test, not the centre of the next task,
-and its campaign is paused. Its relevance can be reconsidered when useful;
-that reconsideration is not required before work on sustained balanced
-turnover. The question it poses is
-whether two incoming gravitational constraints can close on
+The present evolution is the spherical Galerkin loop linked above. This
+gate is a retained OPEN test. Its campaign is paused, and it is not a
+prerequisite for the finite companion or for that loop. The question it
+poses is whether two incoming gravitational constraints can close on
 $I=S(1)+[0.12,0.18]$ when a fixed upstream quantum source is transported
 along a changed metric history. That interval, source, and threshold belong
 only to this application.
@@ -145,10 +155,12 @@ this error target and does not impose it on other claims.
 - [Foundational manuscript v0.26.0](paper/nested-space-cosmology.pdf): the preserved broader exposition and existing calculations.
 
 The draft includes a **selected evidence snapshot**, not the full dependency
-closure required for a final certificate. Release `0.27.0` remains reserved
-for that closed local result. Global matching and observational fitting are
-later research. The conceptual picture below describes the proposal; the
-linked records distinguish identities, numerical diagnostics, and open claims.
+closure required for a final certificate of that application. The next
+release version follows a demonstrated result. This page does not assign
+it, and the OPEN gate is not a publication prerequisite. Global matching
+and observational fitting are later research. The conceptual picture below
+describes the proposal; the linked records distinguish identities,
+numerical diagnostics, and open claims.
 
 ## From a note to a universe
 
@@ -296,9 +308,8 @@ That is the proposed common origin of dark energy and dark matter: two ranges
 of one regional response. Deriving the required stress and perturbation laws
 would establish that identification; it is not supplied by the block identity alone.
 
-The familiar rounded $5\%/25\%/70\%$ split is used only as an observational
-target from a $\Lambda$CDM fit. It suggests a later hierarchy, not a present
-campaign and not a refutation of that fit:
+The familiar rounded $5\%/25\%/70\%$ split is an observational dictionary
+for a later hierarchy:
 
 | Observation | NSC interpretation to test | What would have to be calculated |
 |---|---|---|
@@ -306,8 +317,7 @@ campaign and not a refutation of that fit:
 | $\sim25\%$ dark matter | Nearest unresolved room response and finite-$k$ Schur projection | Pressure perturbations, anisotropic stress, clustering, and growth |
 | $\sim70\%$ dark energy | More distant recursive tail and zero-momentum projection | Background density and pressure, conservation, and $H(z)$ |
 
-This ordering is a measurable hypothesis, not a derived dark-sector result and
-not a requirement to refute LambdaCDM. It is separate from the paused
+This ordering is a measurable hypothesis. It is separate from the paused
 incoming-gate application. The fractions do not prove it, and
 the fixed-$q$ scale candidate does not determine these cosmological weights.
 
@@ -406,12 +416,14 @@ the expensive scientific generators.
 
 NSC is an active theoretical programme and working preprint. Its exact
 identities and numerical results apply to the operators, states, domains, and
-approximations named in their records. Reusable identities, proposed
-interpretations, and the paused numerical application remain separate. Dark
-matter, dark energy, antimatter, and eternity are not claimed as derived.
-The common recursive interpretation is the theory being assembled from those
-results. A complete self-sourced parent-to-child solution, identified particle
-spectrum, and independent cosmological prediction are not established.
+approximations named in their records. The present numerical step is the
+spherical Galerkin diagnostic in
+[the current result](docs/current-result.md#present-spherical-loop).
+Reusable identities, proposed interpretations, and the paused incoming-gate
+application remain separate. Time, antimatter, dark-sector, and
+continuing-gradient readings remain open research. A complete self-sourced
+parent-to-child solution, an identified particle spectrum, and an independent
+cosmological prediction are not yet recorded.
 
 ## Authorship
 

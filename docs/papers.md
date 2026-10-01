@@ -12,10 +12,10 @@ their stated domains. Continuing the local calculation does not erase them.
 
 The latest user instruction directs the active task. An accepted conversation
 plan applies where it stays compatible with that instruction and does not
-override later steering. NSC seeks a nested realization of familiar local
-physics; contradicting LambdaCDM is not a publication requirement. Dated
-manuscript wording and archived execution notes do not override that scope.
-Cosmological background/perturbation matching remains subsequent work.
+override later steering. NSC seeks the shared structure of nested regions and
+the local response that structure leaves. Dated manuscript wording and
+archived execution notes do not override that scope. Cosmological
+background/perturbation matching remains subsequent work.
 
 ## Foundational manuscript
 
@@ -50,7 +50,11 @@ The [proof note](nsc-nested-qualities.md) states the construction and domain.
 The [new source snapshot](../paper/nested-quality-evidence/snapshot.json) binds
 its small exact controls independently of the old physical error budget.
 The organizing equation is realized as a normalized map between equal-depth
-windows; adding further regions can change the dressed spectrum.
+windows; adding further regions can change the dressed spectrum. That map is
+reused. It is not an infinite nest. The present numerical programme is the
+spherical Galerkin loop in
+[the current result](current-result.md#present-spherical-loop), not a rewrite
+of either frozen PDF.
 
 ## Source of current status
 
@@ -61,7 +65,10 @@ identifies both document roles for tools and fresh contributors. The publication
 verifier checks their sources, PDFs and manifests together.
 
 Successful file authentication and reproducible builds do not close the local
-gate. The former 0.27.0 closed-local-result promise is not silently relabeled by
-this mathematical companion update. Existing documents remain available. The
-gate remains OPEN and its campaign is paused
+gate. The former 0.27.0 closed-local-result promise is dated history. It is
+not silently relabeled by this mathematical companion, and it is not a
+publication requirement for later work. The next release version follows a
+demonstrated result. Existing documents remain available. The
+gate remains OPEN, its campaign paused, and outside the prerequisite list for
+the finite theorem and for the spherical loop
 ([scientific framing](instructions.md#scientific-framing-and-authority)).

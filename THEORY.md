@@ -3,16 +3,27 @@
 This page explains the proposed interpretation and its existing mathematical
 building blocks. The latest user instruction directs the active task. An
 accepted conversation plan applies where it stays compatible with that
-instruction and does not override later steering. NSC seeks a nested
-realization of familiar local physics; it does not require LambdaCDM to be
-locally wrong. The exact regional reductions and the physical identification
-of their effective sources have distinct evidential status.
+instruction and does not override later steering. NSC seeks the nested mechanism and the structure shared across regional
+gradients. The exact regional reductions and the physical identification
+of their effective sources have distinct evidential status. Time, antimatter,
+and further-gradient readings stay open research.
+
+The inheritance relation $\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta$
+is reused inside its stated domain. It is not recomputed as an infinite nest.
+The executed calculation is the spherical Galerkin loop in
+[the current result](docs/current-result.md#present-spherical-loop).
+`compose_fine_hamiltonian` recomputes the column source and the geometric
+rates, and feeds $F_Q$ into $\dot p_Q$. $Q$, $r$, $\chi$, the
+momenta and the spinor columns evolve. $L$ and $\beta$ stay gauge
+controls. The initial radius uses that source. The $n_f=512$, $T=0.005$
+record is a geometric diagnostic. Its proper radial velocity, about
+$0.0079505$, is a maximum of the absolute value; signed motion is not
+inferred from it.
 
 The sphere's inside and surrounding region are the organizing motivation:
 consider their coupled fields, stresses and geometry together. The present model
-uses spherical symmetry as a controlled assumption. Extending that motif across
-scales is the proposed interpretation; a universal fractal geometry, inevitable
-collapse and eternal regeneration are not conclusions of the existing local test.
+uses spherical symmetry as one finite realization. Extending that motif across
+scales, including time, antimatter, and further gradients, stays open research.
 
 ## What if one spectrum is enough?
 
@@ -39,7 +50,8 @@ parent room
 ```
 
 The organizing idea places further regions beyond a local description. The
-finite inherited constructions do not establish an infinite dynamical continuation.
+recorded constructions stay finite. They reuse the inheritance relation and
+do not establish an infinite dynamical continuation.
 
 ## 1. A gradient becomes an oscillation
 
@@ -372,7 +384,7 @@ $$
 }
 $$
 
-The loop is now explicit:
+Within this action the proposed closure is:
 
 ```text
 geometry defines the Dirac spectrum
@@ -380,6 +392,34 @@ geometry defines the Dirac spectrum
 → stress changes the geometry
 → the changed geometry defines the next spectrum
 ```
+
+That diagram is the common-action stationarity condition above, inside its
+CTP domain. The calculation that currently runs is narrower. In
+`compose_fine_hamiltonian` the fine-grid source and geometric rates are
+recomputed from the prolonged state, and $F_Q$ enters $\dot p_Q$. The
+integrated fields are $Q$, $r$, $\chi$, the momenta and the spinor
+columns. $L$ and $\beta$ remain the gauge controls sampled on the
+quadrature grid. `solve_initial_radius` sets $r$ from the column source
+$\rho=F_L/\Delta x_Q$. This loop is the code owner. The v5 replay
+`lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py` remains the
+self-contained $T=0.005$ seed. The saved $T=0.05$ measurement is
+`lab/scripts/derive_nsc_spherical_feedback_episode.py`.
+
+The independently replayed $n_f=512$, $T=0.005$ window is a geometric
+diagnostic: full Hamilton residual about $9.98\times 10^{-6}$, full
+momentum residual about $1.38\times 10^{-6}$, maximum absolute proper
+radial velocity about $0.0079505$. The sign of the radial motion is not
+inferred from that maximum. The $T=0.05$ episode reaches the requested
+time on four runs. Proper velocity on the fine primary run ends near
+$[-0.061956, 0.088159]$, and field and gravitational energy exchange
+about $0.4123$. All 62 physical refinement rows meet one percent. The
+fine full Hamilton residual ends near $2.83\times 10^{-5}$; the coarse
+residual is higher. Continuum constraint control and renewal are not
+proved. The historical initial tolerance $10^{-8}$ is not an automatic
+veto, and a weak residual alone would not decide the window.
+The toy $H$ and $B$ fractions are an optional witness. Geometry-derived
+links are the target. Numbers and owners:
+[present spherical loop](docs/current-result.md#present-spherical-loop).
 
 ## 9. What the mathematics already demonstrates
 
@@ -423,7 +463,13 @@ One solved state must supply, with the same $\Theta$:
 4. background expansion, clustering, and lensing;
 5. one dimensionless relation connecting particle and cosmological scales.
 
-These are one integration chain. They are not five independent theories.
+These five items remain the longer chain, inside the domains already stated
+on this page. The present step is the finite spherical dynamics recorded in
+[the current result](docs/current-result.md#present-spherical-loop): longer
+evolution assessed by its effect in space and time, then controls and
+renewal, a same-model local reduction, a quantitative local response, and
+publication after a result. Further constructions stay finite. The recorded
+outcome of the present realization guides the next model step.
 
 For the general status and attribution of the working programme, see the
 [README](README.md#research-status). For the source code and stored evidence,

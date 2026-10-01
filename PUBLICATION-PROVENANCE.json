@@ -42,9 +42,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 9125,
+      "bytes": 7938,
       "path": "AGENTS.md",
-      "sha256": "1dcee77f0c639cf17e3fcd4f0fb1dd228938d0f4901250c44b276a00e755cd67"
+      "sha256": "bdb802062dcf5e243e5b0fdab43b5487aea40c1d4b066286c7d324dce62cd587"
     },
     {
       "bytes": 1056,
@@ -72,9 +72,9 @@
       "sha256": "3ddf1b0ec5f3adbbd4e94a14eb7bfed83574ecaee8c6c44541c9ae65001d4be4"
     },
     {
-      "bytes": 22062,
+      "bytes": 22671,
       "path": "README.md",
-      "sha256": "1ffe713c918076d610e8c510bce6d48fbf9a2311684337e5a08fbc4d5f68f0ff"
+      "sha256": "e4738a5e1f60c6ee81ba634701892729ddedb90f36ca70a059c64c8501401ee5"
     },
     {
       "bytes": 629,
@@ -82,9 +82,9 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 17450,
+      "bytes": 20393,
       "path": "THEORY.md",
-      "sha256": "cf93e88b5d2e9000ef6d48197aaece94aea62b080e16d05ec84ce62f73482337"
+      "sha256": "cfcb74dcadf7c8ede4fec2b582946d562635e411d10dc657e44a1f8bd6b08295"
     },
     {
       "bytes": 16135,
@@ -92,9 +92,9 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 70332,
+      "bytes": 73805,
       "path": "docs/current-result.md",
-      "sha256": "00625b259abf4fae1353b6debd91574f2779627ec5e617fcd4692191dc30e162"
+      "sha256": "6849f7e91fb2849cadcc12c6ccd394947a0dfad236437054bd5012a691c5e2ef"
     },
     {
       "bytes": 14497,
@@ -102,19 +102,19 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 10525,
+      "bytes": 10655,
       "path": "docs/instructions.md",
-      "sha256": "35696e88211052a7d5e5441a7d9c6fe521820c0c7b6be85e894ce5b272fd70c6"
+      "sha256": "5ae9876b4ceea4a48ffcdce8fd687607f4d2ce6cadb6a02931d14a49244505d7"
     },
     {
-      "bytes": 4813834,
+      "bytes": 4818074,
       "path": "docs/lab-snapshot.json",
-      "sha256": "7e34280519307563b62bb061f3208a16f4ae0296590514ad80baf81cf38fbb72"
+      "sha256": "3a0368afd86abd777012e88083d0fe515bc792a3a483d0f80f3bee3c8c14c9fc"
     },
     {
-      "bytes": 4771,
+      "bytes": 5006,
       "path": "docs/local-gate-draft.md",
-      "sha256": "d923f734800e25b26d12884707d1a1eb625ee721ad0863fa2c1564ec19198f99"
+      "sha256": "8ddb45a3787516820fae60ab10458ba596bec5c63c33490720a2865bebd62327"
     },
     {
       "bytes": 3154,
@@ -682,9 +682,9 @@
       "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
     },
     {
-      "bytes": 3516,
+      "bytes": 3914,
       "path": "docs/papers.md",
-      "sha256": "b44f48da0de560433145f3652ebb7f8f9f2d4dbd875cff2631e167491dfa6082"
+      "sha256": "2fa99ab097fb380f08bb0f1f5865d989f94802236fefececaaeaa2cee7337c83"
     },
     {
       "bytes": 12814,
@@ -692,14 +692,14 @@
       "sha256": "91107c6d15d8e7f74caeb88ae280ccd85f168ad600544bf7a0779599267bb78d"
     },
     {
-      "bytes": 6440,
+      "bytes": 6462,
       "path": "docs/repository-consolidation.md",
-      "sha256": "15dd5817268443640122dc48774e52890787ad900befe3ab81b0767febaa6ea4"
+      "sha256": "b6c97233424c0e5bce39f0982a9ad931e8d30142b39b87e66e2096e3f7731432"
     },
     {
-      "bytes": 12813,
+      "bytes": 13168,
       "path": "docs/reproducing.md",
-      "sha256": "7a3b17479e0170def3b4016c54db06a8e38d02fd91f95fb11f50d9c623f5eea0"
+      "sha256": "7a850c85ab8e4ff666e31627faebeb10634a85c577a8beee156ebfa87e8167c1"
     },
     {
       "bytes": 7378,
@@ -3357,7 +3357,7 @@
       "sha256": "55224209078cd78c7a433d679ac8748e2f6c7206b1fb295d41fc2ce196ae86c6"
     }
   ],
-  "lab_snapshot_sha256": "7e34280519307563b62bb061f3208a16f4ae0296590514ad80baf81cf38fbb72",
+  "lab_snapshot_sha256": "3a0368afd86abd777012e88083d0fe515bc792a3a483d0f80f3bee3c8c14c9fc",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.26.0",
