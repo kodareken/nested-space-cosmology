@@ -13,29 +13,38 @@ Use root `scripts/lab.py` to run scientific Python commands.
 
 # Nested-Space Cosmology — research laboratory
 
-**Current work is on this Mac**, in `/Users/admin/Documents/BlackHoles-Infinity`,
-by Douglas's explicit instruction. Start with [AGENTS.md](AGENTS.md),
-[the local plan](PLAN.md) and [the current handover](handover.md).
+Historical location note, 2026-09-28: this body was written for
+`/Users/admin/Documents/BlackHoles-Infinity`. That path is provenance for the
+dated text, not a second checkout. Current navigation is the root index
+above. The [historical plan](PLAN.md) and [historical handover](handover.md)
+remain as records. They do not assign the next task.
 
-On 2026-09-28 Douglas reactivated the full **NSC road to arXiv** plan:
-nonlocal-to-local correspondence and a closed source-fixed incoming-gate result,
-followed by its matching article and authenticated public evidence.
+On 2026-09-28 the full **NSC road to arXiv** plan was reactivated in those
+historical files: nonlocal-to-local correspondence and a closed source-fixed
+incoming-gate result, followed by its matching article and authenticated
+public evidence. Later instructions paused that gate campaign. Sentences
+below that call the gate a completion requirement belong to the dated
+reactivation.
+
 Different regions may have different states and outcomes under the same law.
-Eternity and an eternal engine are not proof targets for this task.
+Eternity and an eternal engine were not proof targets for that task.
 
-Reuse [the proof map](docs/claim-ledger.md#current-focus-nested-qualities) and
-[the existing correspondence](docs/nsc-local-observer-correspondence.md).
-The public foundation and focused OPEN companion remain in the sibling
-`nested-space-cosmology` repository. Later Windows numerical work remains
-available for specific reuse; this chat does not automatically continue there.
+The [proof map](docs/claim-ledger.md#current-focus-nested-qualities) and
+[the existing correspondence](docs/nsc-local-observer-correspondence.md)
+remain scientific notes. This dated text described the public foundation and
+focused OPEN companion as a sibling `nested-space-cosmology` repository.
+After consolidation they live in this same repository. Later Windows
+numerical work remains available for specific reuse; this page does not
+continue it.
 
 ## Historical numerical programme and evidence
 
 The dated descriptions below retain the earlier scientific work. The old local
-incoming gate remains OPEN, with its original source and error requirements.
-It is again an explicit completion requirement of the reactivated plan.
-The completed finite nested-quality theorem is reusable background, not a
-substitute for that physical result.
+incoming gate remained OPEN, with its original source and error requirements.
+The 2026-09-28 reactivation text treated that gate as an explicit completion
+requirement. Current authority pauses the campaign; see the root instructions.
+The completed finite nested-quality theorem is reusable background. This
+historical page does not make the gate a prerequisite for that theorem.
 
 **The active problem keeps the upstream/source state fixed and evolves its
 incoming covariance through the metric history:**

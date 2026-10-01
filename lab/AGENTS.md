@@ -7,6 +7,8 @@ conversation applies where it stays compatible with that instruction and does
 not override later steering. Do not use the historical lab PLAN/handover as
 current task instructions or recreate the deleted handover. These pages
 supersede old machine, branch and sibling-repository routes below.
+`docs/instructions.md` in this subtree is a historical route record.
+Root `docs/instructions.md` is the current operating note.
 
 | Area | Owner |
 |---|---|
