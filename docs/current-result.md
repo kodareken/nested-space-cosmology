@@ -1,55 +1,161 @@
 # What the calculations show
 
-The question is whether specified nested surroundings produce an effective
-local response under familiar local laws. Reusable mathematical results,
-proposed interpretations, and one chosen numerical application stay distinct.
-The governing statement is the
-[scientific framing](instructions.md#scientific-framing-and-authority).
-Falsifying LambdaCDM is not the task, and a full match to that standard
-cosmology is not established. Pictures of inside and outside, or of two sides
-of a coin, are motivation, not literal equations. Charge conjugation is the
-usual name for the particle–antiparticle map; it neither derives antimatter
-nor rules out a geometric question. The latest user instruction controls;
-an older plan does not resume the numerical campaign by itself.
+Starting checkpoint `9a9090a`. The current question is the nested mechanism
+and what stays common across regional gradients.
+[Scientific framing](instructions.md#scientific-framing-and-authority).
+Time, antimatter, and gradient readings remain open research. Rooms, coins,
+fountains, and clocks are motivation for that question.
 
-Next research reuses existing inherited-law, regional-state, transfer and
-conservation results to investigate sustained balanced turnover at stable
-overall regional size and content. Relate that question to time as the
-registration of a spatial process and to the matter–antimatter hypothesis.
-Those are proposals to test, not proved results. One completed calculation
-inside that question is the incoherent imbalance mean circulation below.
-Its geometry is still fixed. The spherical feedback action and the direct
-conformal ADM source below are checked primitives. The provisional
-spherical coupling v1 below is `PROVISIONAL_CONSTRAINT_DRIFT`, not a
-self-consistent solution or a renewal. Initial constraints pass and the
-work balances, but the N=64 Hamilton constraint reaches
-36.98886722265645 by $T=0.005$ and is unchanged by timestep halving.
-Spatial diagnostics reduce it to 2.330762882869135 at N=128 and
-0.575679312602035 at N=256, still above $10^{-3}$. The odd-lobe phase fix
-is a successor and does not overwrite v1. The corrected source puts that
-phase on the minus column. The variational Galerkin coupling v2 below is
-`FAIL_HELD_OUT_CONSTRAINT`; a projected residual is not a pass. The matched
-refinement v3 below is `FAIL_INITIAL_SOLVE` and has no full-source result.
-The evolving reduction below is prescribed-control convergence and is not
-an accepted coupled trajectory. Passing tests of these owners do not
-validate these failed physical trajectories. The coupled state and geometry
-loop already executes. Fixed $L$ and $\beta$ are gauge; $Q$, $r$, $\chi$
-and the momenta evolve. The v5 short response below was independently
-replayed and remains a diagnostic, not an initial $10^{-8}$ pass and not a
-renewal. The original $H$ and $B$ fractions are one witness. Embedding v1
-and the seam-regular v2 compression are an optional bridge, not a further
-fitting prerequisite. The corrected regional ledger separates
-$dx$-normalized proper pressure and normal energy from coordinate metric
-work $F_Q\dot Q$. Historical vacuum branch $B$ is not a prerequisite. Next
-diagnostic: the same coupled loop to $T=0.05$ with geometry-derived $B$,
-effect and spacetime convergence, and full, projected, and weak diagnostics.
-A small weak residual alone does not prove accuracy. Strong residuals stay
-reported. The old initial $10^{-8}$ line is not a blind veto. Renewal is
-not demonstrated. The resolved active action remains
-$\Gamma_{\mathrm{one}}$.
-The paused incoming gate stays a retained OPEN application. Assessing its
-relevance is not a required step before this work, and later
-error-controlled numerical work is not banned.
+The inheritance relation
+
+$$
+\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta
+$$
+
+is reused inside its stated domain. It is not expanded into an infinite nest.
+The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
+same-spectrum local induced term, counted once. The vacuum-matched CTP branch
+remains a separate historical choice.
+
+## Present spherical loop
+
+The code owner is
+[nsc_spherical_galerkin_coupling.py](../lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py).
+The v5 replay,
+[derive_nsc_spherical_galerkin_refinement_v5.py](../lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
+remains the self-contained $T=0.005$ seed. The saved $T=0.05$ measurement
+is [derive_nsc_spherical_feedback_episode.py](../lab/scripts/derive_nsc_spherical_feedback_episode.py),
+which reuses that preparation. The weak residual and the streamed reducer
+are separate method owners, linked below.
+
+`compose_fine_hamiltonian` recomputes the column source and the geometric
+rates on the current prolonged state. With the matter force included it feeds
+`force_Q` into the conjugate momentum,
+
+$$
+\dot p_Q \leftarrow \dot p_Q - F_Q/\Delta x_Q.
+$$
+
+$Q$, $r$, $\chi$, the momenta and the spinor columns evolve. $L$ and $\beta$
+stay gauge controls. `solve_initial_radius`, and the v5 replay's full-source
+Newton (`full_source_rho`), set the initial radius from that source,
+$\rho = F_L/\Delta x_Q$.
+
+### Recorded $n_f=512$, $T=0.005$ diagnostic
+
+The [v5 record](../lab/results/development/nsc-spherical-coupling-refinement-v5.json)
+`nf512.window_dt_0_0005` was independently replayed. The stored window maxima
+are
+
+| Diagnostic | Recorded maximum |
+|---|---:|
+| Full Hamilton, `full_C_hamilton_max` | $9.981468739539423\times 10^{-6}$ |
+| Full momentum, `full_D_momentum_max` | $1.3753934746951746\times 10^{-6}$ |
+| Chart proper speed, `chart_proper_velocity_max` | $0.007950515372629119$ |
+| Lifted proper speed, `lifted_normal_velocity_max` | $0.007950515381253666$ |
+
+In short: full Hamilton about $9.98\times 10^{-6}$, momentum about
+$1.38\times 10^{-6}$, maximum absolute proper radial velocity about
+$0.0079505$. Both velocity entries are maxima of absolute values. Signed
+radial motion is not inferred from them. The stored verdict is
+`DIAGNOSTIC_MEASURED`, and `time_extension_T_0_05` is false. Renewal is
+not demonstrated. The historical initial tolerance $10^{-8}$ is not an
+automatic veto of this diagnostic. A weak residual alone would not be
+sufficient; these full residuals stay reported.
+
+### Recorded $T=0.05$ feedback episode
+
+The [episode record](../lab/results/development/nsc-spherical-feedback-episode-v1.json)
+and [payload](../lab/results/development/nsc-spherical-feedback-episode-v1.npz)
+store four runs, $n_f\in\{256,512\}$ and $dt\in\{5\times 10^{-4},2.5\times 10^{-4}\}$.
+Each reaches $T=0.05$. Campaign CPU is $179.444027$ s. The verdict is
+`MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL`. Renewal is false.
+`constraint_consistent_solution` is false. Continuum error is unknown.
+
+On the fine primary run, `nf512_dt_0_0005`, the final proper radial
+velocity runs from $-0.06195632555218566$ to $0.0881593239017512$. Final
+$Q_{\min}$ is $0.2195220548716644$. Final $\chi_{\max}$ is
+$11.148261641496925$. Field energy changes by $-0.4123021259213786$ and
+gravitational energy by $0.4123020914983755$. Their sum changes by
+$-3.442300311462532\times 10^{-8}$, which is
+$8.348975411586745\times 10^{-8}$ of the field exchange. That comparison
+is against the exchange, not one percent of the near-zero balance.
+
+All 62 time and space comparisons of the 31 physical observables meet the
+one-percent test. The largest relative movement is
+$5.546186987854776\times 10^{-4}$, on `observer_K_perp_min` in space.
+The one-percent target applies to those claimed physical effects. The
+assessment metadata was rewritten from the saved four-run arrays. The
+evolution was not rerun, and the historical v5 JSON and NPZ bytes are
+unchanged.
+
+| Constraint diagnostic | $n_f=512$ final | $n_f=256$ final |
+|---|---:|---:|
+| Full Hamilton | $2.825670750915076\times 10^{-5}$ | $0.0068275893562912415$ |
+| Full momentum | $4.294300980589583\times 10^{-6}$ | $0.001504909818827671$ |
+
+Full, projected, and held-out residuals remain. The coarse Hamilton
+residual stays far above the fine residual. No real bound validates a
+constraint-consistent solution. Those residual changes do not veto the
+physical effects. The historical initial tolerance $10^{-8}$ did not
+abort the run and is not an automatic veto.
+
+Owned tests are
+[test_nsc_spherical_feedback_episode.py](../lab/tests/test_nsc_spherical_feedback_episode.py).
+Independent tests are
+[test_nsc_spherical_feedback_episode_independent.py](../lab/tests/test_nsc_spherical_feedback_episode_independent.py).
+
+### Weak initial residual
+
+The [weak note](../lab/docs/nsc-spherical-cauchy-weak.md),
+[helper](../lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py)
+and [record](../lab/results/development/nsc-spherical-cauchy-weak-v1.json)
+assess the saved seed. Status `PARTIAL_TERMS_NO_TOTAL_BOUND`. No state
+is stepped. Declared $G>0$ with `rho_independent` exactly true exposes
+$\mu=\min(4,Q^2)=Q^2=0.0631642220827373$ without $y_*$. An omitted
+independence flag does not establish the hypothesis. The total bound
+stays open: the full residual dual, a continuum positivity enclosure of
+$G$, and a rounding enclosure are absent.
+
+On $n_f=512$ the dense owner maximum moves from
+$9.981455056262689\times 10^{-6}$ at $n_q=2048$ to
+$4.539313647278211\times 10^{-5}$ at $n_q=4096$. The Fourier product
+$P=2rr''-(r')^2-Q^2 r^2+G$ stays from
+$5.068517579063356\times 10^{-6}$ to
+$5.400936559883778\times 10^{-6}$. That movement is a conditioning
+indicator. `rounding_enclosure` is null. The v5 bytes are unchanged.
+
+### Streamed retained-region reduction
+
+[nsc_evolving_reduction.py](../lab/src/recursive_horizons/nsc_evolving_reduction.py)
+keeps the dense prescribed-control owner and adds `backend="streamed"`.
+The streamed path matches the dense history and the independent exterior
+sample on the same prescribed controls. It does not store a time-indexed
+exterior propagator, and it does not consume a coupled $H(g(t))$
+trajectory. The sine schedule remains a prescribed $H(t)$.
+
+The toy $H$ and $B$ fractions are an optional witness.
+Geometry-derived links are the target. Embedding v1 and the seam-regular v2
+compression are an optional bridge. Neither that witness nor the historical
+$10^{-8}$ tolerance sets the objective.
+
+This loop is the present finite realization because its geometry and its
+state forces already come from the same action. An invented rule for the
+radius as a function of energy is unnecessary. The recorded outcome
+guides the next model step. A candidate may be chosen creatively. The
+computation and its error statement stay checkable.
+
+The source-fixed incoming gate remains OPEN and its campaign remains paused.
+It is not a prerequisite for this loop. This page does not change either
+frozen PDF and does not assign the next release version. Frozen v0.26.0
+remains the foundation.
+
+The dated sections through the regional ledger are evidence for this
+programme. [Nested qualities](#nested-qualities-finite-mathematical-construction-27-september-2026)
+records the finite theorem. From
+[the incoming gate](#source-fixed-local-incoming-gate-open-campaign-paused)
+through the Stage-2 notes, the text is that retained application.
+[Earlier public checkpoints](#earlier-public-checkpoints) are history.
 
 ## Finite circulation and local response, 30 September 2026
 
@@ -57,9 +163,7 @@ A six-mode inherited finite example has nonzero channel currents, constant
 regional contents, and a derived local filtered response. The
 [note](../lab/docs/nsc-finite-turnover.md) records it. The geometry and the
 stationary preparation are fixed inputs. That prepared-current witness remains
-valid. Broader regeneration remains research. The incoming gate below remains
-OPEN and its campaign remains paused. This checkpoint does not change either
-PDF and is not release 0.27.0.
+valid for that fixed window. The present evolution is the spherical loop above.
 
 ## Incoherent imbalance mean circulation, 30 September 2026
 
@@ -76,11 +180,8 @@ accepted the 34 conditions, the finite-time bound, and the forced
 optional-failure semantics. Trace 3 and energy 99/16 are conserved;
 instantaneous regional populations are not fixed. Cesaro averaging is not
 relaxation. The channel current is not by itself heat or energy flow. The
-filtered covariance is not a stress. Geometry remains an input, so
-autonomous regeneration is not obtained. The primitives in the next section
-do not close that gap. The incoming gate remains OPEN and its campaign
-remains paused. This page does not change either PDF and is not release
-0.27.0.
+filtered covariance is not a stress. Geometry remains an input in this
+witness. The average does not by itself give autonomous regeneration.
 
 ## Spherical feedback action and direct conformal source, 30 September 2026
 
@@ -109,13 +210,9 @@ those sites into this chart is obstructed. A localized countercarrier
 compression matches the onsite block $H$ and does not match the link $B$.
 The full mapping is pending. The comparison residuals are not frozen data.
 
-The vacuum-matched CTP branch remains a separate historical choice in
-[its own note](../lab/docs/nsc-vacuum-matched-ctp.md), not a prerequisite.
-The resolved active action is $\Gamma_{\mathrm{one}}$: the canonical
-Gaussian plus the same-spectrum local induced term, counted once. These
-records are equations and interfaces, not yet autonomous regeneration.
-The incoming gate remains OPEN and its campaign remains paused. This page
-does not change either PDF and is not release 0.27.0.
+The vacuum-matched CTP branch remains the separate historical choice in
+[its own note](../lab/docs/nsc-vacuum-matched-ctp.md). These records are
+equations and interfaces for the loop above.
 
 ## Provisional spherical coupling v1, 30 September 2026
 
@@ -161,24 +258,22 @@ discretization.
 
 The [evolving reduction](../lab/docs/nsc-evolving-reduction.md) is a separate
 prescribed-control owner. The module sha256 is
-`e47bcac929f2fee054ad42770e78a34b329b95152fc6d144f5849888f90c0014`.
-The test sha256 is
+`17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d`.
+The dense-test sha256 is
 `2473425909c3fb67f786daa482e2cadb7ddf7052975976d51d1e81098fe68f97`.
 The note sha256 is
-`505a8bb3c9c24ab5829c1483c6b5fb1b67bfa0818034bbe678b2f651e80c9ee5`.
-Thirteen tests passed. Nine further independent tests, sha256
+`e679c08abd76278e08d2fa49ab41cb21cc93da25e16c74a670f7c72ad4f56f6e`.
+The streamed-test sha256 is
+`9debf8b7b11b676f83e2577939f95896926296f6f36a2ad910da6346329e3edf`.
+Thirteen dense tests and nine independent tests, sha256
 `bba311f6ee90acd2fecf631b0e5f5cb193a98b6726ae6cf4b1da2e56a67fe5d6`,
-use one prescribed generator and an exterior integrator. The sine schedule
-is a prescribed $H(t)$. It is not an autonomous trajectory, not
-regeneration, and not a coupled geometry. No actual $H(g(t))$ was
+use one prescribed generator and an exterior integrator. Eleven streamed
+tests check the same controls without a stored exterior propagator. The
+sine schedule is a prescribed $H(t)$. It is not an autonomous trajectory,
+not regeneration, and not a coupled geometry. No actual $H(g(t))$ was
 consumed, and no coupled trajectory is accepted. Those tests do not
-validate these failed coupling trajectories.
-
-The vacuum-matched CTP branch remains a separate historical choice, not a
-prerequisite. The resolved active action remains $\Gamma_{\mathrm{one}}$:
-the canonical Gaussian plus the same-spectrum local induced term, counted
-once. The incoming gate remains OPEN and its campaign remains paused. This
-page does not change either PDF and is not release 0.27.0.
+validate these failed coupling trajectories. The vacuum-matched CTP branch
+remains a separate historical choice.
 
 ## Variational Fourier–Galerkin coupling v2, 1 October 2026
 
@@ -189,9 +284,7 @@ own the failed subspace control. The saved verdict is
 A projected residual is not a physical pass. This is not a filter of the
 v1 radius, not a constraint projection, and not a renewal. The v1 JSON
 is unchanged. The Dirac compression of that window is recorded below and
-is not an accepted coupled trajectory. The incoming gate remains OPEN and
-its campaign remains paused. This page does not change either PDF and is
-not release 0.27.0.
+is not an accepted coupled trajectory.
 
 ## Matched Galerkin refinement v3, 1 October 2026
 
@@ -202,24 +295,25 @@ the [record](../lab/results/development/nsc-spherical-coupling-refinement-v3.jso
 are immutable. The verdict is `FAIL_INITIAL_SOLVE`. Internal Newton
 stopped at rho $=0.5$ with residual $1.2876060991167562\times 10^{-10}$.
 No full-source result was produced. The v1 and v2 JSON bytes are
-unchanged. The incoming gate remains OPEN and its campaign remains
-paused. This page does not change either PDF and is not release 0.27.0.
+unchanged. Renewal is false. $T=0.05$ was not run for this refinement.
 
 ## Galerkin refinement v5, 1 October 2026
 
 The [driver](../lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
-[record](../lab/results/development/nsc-spherical-coupling-refinement-v5.json)
-and [payload](../lab/results/development/nsc-spherical-coupling-refinement-v5.npz)
-are a completed diagnostic. Independent review is in
-[test_nsc_spherical_galerkin_independent.py](../lab/tests/test_nsc_spherical_galerkin_independent.py),
-now ten tests. At $n_f=512$ and $T=0.005$ the Hamilton residual is about
-$9.98\times 10^{-6}$, the momentum residual about $1.38\times 10^{-6}$, and
-the proper radial velocity about $0.0079505$. This is not the old initial
-or Newton acceptance and not a renewal. Fixed $L$ and $\beta$ are gauge;
-$Q$, $r$, $\chi$ and the momenta evolve. The next diagnostic is this same
-loop to $T=0.05$ with geometry-derived $B$. The old initial $10^{-8}$ line
-is not a veto. Report the strong residual as well as the projected and weak
-residuals.
+[record](../lab/results/development/nsc-spherical-coupling-refinement-v5.json),
+[payload](../lab/results/development/nsc-spherical-coupling-refinement-v5.npz)
+and
+[independent tests](../lab/tests/test_nsc_spherical_galerkin_independent.py)
+are the completed $n_f=512$, $T=0.005$ geometric diagnostic summarized in
+[the present loop](#present-spherical-loop). `compose_fine_hamiltonian`
+recomputes the source and the rates and feeds $F_Q$ into $\dot p_Q$.
+$Q$, $r$, $\chi$, the momenta and the spinor columns evolve. $L$ and
+$\beta$ stay gauge. The initial radius uses the column source. The recorded
+proper radial velocity is a maximum of the absolute value, about $0.0079505$.
+Signed motion is not inferred from it. The saved $T=0.05$ episode and the
+weak assessment are the present-loop sections above. This v5 record does
+not itself contain $T=0.05$. The historical initial tolerance
+$10^{-8}$ is not an automatic veto. A weak residual alone is not sufficient.
 
 ## Finite-window embedding v1, 1 October 2026
 
@@ -232,8 +326,8 @@ matches the original $H$ and $B$ at about $4.45\times 10^{-14}$; a direct
 analytic integral agrees at about $4.9\times 10^{-14}$. Modes are supported
 on $(n,n+2)$. The subspace is not invariant, outside coupling is strong, and
 the closed-window evolution is not transferred. Derivative jumps at the lobe
-joins make the Fourier error decay as $N^{-2}$. This match is one witness,
-not a requirement for every later realization.
+joins make the Fourier error decay as $N^{-2}$. This toy $H$/$B$ match is
+an optional witness. Geometry-derived links are the target.
 
 ## Seam-regular embedding v2, 1 October 2026
 
@@ -242,8 +336,7 @@ The [note](../lab/docs/nsc-finite-window-embedding-smooth.md),
 [tests](../lab/tests/test_nsc_finite_window_embedding_smooth.py) and
 [record](../lab/results/development/nsc-finite-window-embedding-v2.json)
 are the optional seam-regular bridge. The saved status is
-`SEAM_REGULAR_COMPRESSION_NOT_INVARIANT`. It is not a further fitting
-prerequisite and not a renewal.
+`SEAM_REGULAR_COMPRESSION_NOT_INVARIANT`. Renewal is not claimed.
 
 ## Spherical Cauchy data, 1 October 2026
 
@@ -278,31 +371,28 @@ The proof holds at every finite depth; it is not a proof of infinite physical ti
 Twelve exact controls and four focused tests accompany the construction.
 The [source snapshot](../paper/nested-quality-evidence/snapshot.json) binds its
 proof, implementation and control record to an immutable laboratory commit.
-The separate source-fixed gravitational gate remains OPEN, and its campaign
-is paused. No cosmological abundance, physical c/Lambda value, dark matter,
+No cosmological abundance, physical $c$ or $\Lambda$ value, dark matter,
 dark energy, antimatter, or eternal dynamics is derived by this result.
-The numerical checkpoint below keeps that application's interval, threshold,
-source, and history. Those choices are not requirements for this finite
-theorem or for nested claims in general. This is a working-article update,
-not release 0.27.0.
+The incoming-gate interval, threshold, source and history below belong to
+that application. This finite theorem does not use them. This is a
+working-article update. It does not assign the next release version.
+The former reservation of 0.27.0 for a closed gate result is dated history.
 
-Read [the paper guide](papers.md) for the relationship between the preserved
-foundational manuscript and the focused companion. This page owns current
-public status. Sections after [Earlier public checkpoints](#earlier-public-checkpoints)
-keep their original scope. The source records between here and that heading
-are evidence and gaps for the paused gate application, not an order to
-continue its campaign.
+Read [the paper guide](papers.md). The opening of this page owns the present
+programme. This section is the finite theorem.
+[The incoming-gate record](#source-fixed-local-incoming-gate-open-campaign-paused)
+through the Stage-2 notes is the retained paused application.
+[Earlier public checkpoints](#earlier-public-checkpoints) are history and
+keep their original numbers.
 
 ## Source-fixed local incoming gate (OPEN; campaign paused)
 
-This is a retained numerical application, not a prerequisite for every
-nested-system claim or for arXiv discussion in general, and not a permission
-barrier for the turnover investigation above. The certification campaign is
-paused. Its relevance can be reconsidered when useful. There is no permanent
-ban on later error-controlled numerical work.
-Do not continue the expensive search automatically. The state law, interval,
-threshold, and recorded seed below are unchanged and apply only here. Missing
-error bounds still block a closed claim for this application.
+Retained application record. The certification campaign is paused. This
+section is not the current regeneration programme, and it is not a
+prerequisite for the spherical loop or for the finite theorem above.
+The state law, interval, threshold and recorded seed below are unchanged
+and apply only here. Missing error bounds still block a closed claim for
+this application. Do not continue the expensive search from this page.
 
 The laboratory owners are in `lab/`, indexed in the
 [code map](../lab/docs/active-code-map.md). The
@@ -320,8 +410,8 @@ $$
 in the laboratory. The earlier B1d implementation gaps described below are
 historical checkpoints. Unfinished bounds for this application — not a live
 campaign — are the rigorous whole-cone field, physical-source, ultraviolet,
-continuous, and arithmetic bounds required before a production nonlinear
-search could be certified.
+continuous, and arithmetic bounds required before a nonlinear search on
+this application could be certified.
 
 | Quantity | Recorded meaning |
 |---|---|
@@ -490,9 +580,9 @@ The measured seed residuals and the nine-component physical budget are unchanged
 
 ## Earlier public checkpoints
 
-The sections below preserve their original scope and recorded numbers. They
-are background for the gate application above, not a current work queue and
-not permission to resume its campaign.
+History. The sections below keep their original scope and recorded numbers.
+They are background for the retained gate application above. They are not
+the current regeneration programme and not a work queue.
 
 
 **Actual geometric seam matching: PASS.** The [new boundary calculation](nsc-smooth-seam-variation.md)

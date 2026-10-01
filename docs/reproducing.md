@@ -2,7 +2,7 @@
 
 This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and nineteen nested development records 82–100. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
 
-The live scientific checkpoint is [docs/current-result.md](current-result.md). Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
+The live scientific status is [docs/current-result.md](current-result.md#present-spherical-loop). The v5 replay `lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py` remains the self-contained $T=0.005$ seed. The saved $T=0.05$ measurement is `lab/scripts/derive_nsc_spherical_feedback_episode.py`. Both are outside `make reproduce`. Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 The nested records live under `results/development/`:
 [compact interaction](nsc-compact-interaction.md),
@@ -47,10 +47,11 @@ notebook and focused draft. It does not rerun historical scientific campaigns.
 Those remain available through `make reproduce` or the manually dispatched
 GitHub workflow with `reproduce_history` enabled. The new OPEN draft has its
 own [reproduction guide](local-gate-draft.md). `make reproduce` does not
-replay the laboratory finite-turnover witness or the incoherent-imbalance
-mean circulation. Their commands are in
-[finite turnover](../lab/docs/nsc-finite-turnover.md) and
-[imbalance mean circulation](../lab/docs/nsc-imbalance-turnover.md).
+replay the laboratory finite-turnover witness, the incoherent-imbalance
+mean circulation, or the spherical Galerkin v5 record. Their owners are
+[finite turnover](../lab/docs/nsc-finite-turnover.md),
+[imbalance mean circulation](../lab/docs/nsc-imbalance-turnover.md), and
+[the present loop](current-result.md#present-spherical-loop).
 
 `make test` uses pytest to run both pytest functions and unittest classes.
 On Windows, the historical retained-tail exact JSON test is replaced by an

@@ -1,4 +1,73 @@
-# Variational Fourier–Galerkin coupling, v2
+# Variational Fourier–Galerkin coupling
+
+## Current execution
+
+`nsc_spherical_galerkin_coupling.evolve` is the state-and-geometry step.
+[derive_nsc_spherical_galerkin_refinement_v5.py](../scripts/derive_nsc_spherical_galerkin_refinement_v5.py)
+owns the self-contained saved diagnostic and preparation. It is not a
+permanent production-driver requirement. The episode driver
+`scripts/derive_nsc_spherical_feedback_episode.py` reuses that preparation.
+The saved \(T=0.05\) record is
+`results/development/nsc-spherical-feedback-episode-v1.json`, with payload
+`results/development/nsc-spherical-feedback-episode-v1.npz`. Verdict
+`MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL`. Four runs reach
+\(T=0.05\). All 62 physical refinement rows meet one percent. Renewal is
+false, and a constraint-consistent solution is not validated. This note's
+v1, v2, and v3 records remain the earlier failed controls. They did not
+produce that episode.
+
+Each rate evaluation prolongs the state and recomputes the column source
+with `source_from_columns`. Geometric rates come from the summation-by-parts
+chart. With the matter force on,
+\(\dot p_Q\leftarrow\dot p_Q-F_Q/\Delta x_Q\) before the adjoint pullback.
+The initial radius uses \(\rho=F_L/\Delta x_Q\) from that source.
+`solve_initial_radius` does this when \(\rho\) is omitted. The v5 replay's
+`full_source_rho` does it and holds \(\rho\) fixed while Newton updates
+\(r\). \(L\) and \(\beta\) stay the sampled calibration gauge. \(Q\), \(r\),
+\(\chi\), the momenta, and the columns evolve. That gauge is not frozen
+physical geometry: the shift still drags \(Q\), and \(F_Q\dot Q\) is the
+coordinate work of that drag.
+
+v5 already measured \(T=0.005\) at \(n_f=512\), \(n_q=2048\), ten steps of
+\(dt=5\times 10^{-4}\). The record verdict is `DIAGNOSTIC_MEASURED`.
+Renewal is false. `time_extension_T_0_05` is false in this record.
+Window maxima of absolute values are Hamilton
+`9.981468739539423e-06`, momentum `1.3753934746951746e-06`, chart proper
+speed `0.007950515372629119`, and lifted proper speed
+`0.007950515381253666`. Those speed fields are max-abs. They are not
+signed radial velocities. The initial Hamilton
+residual has that same maximum and is held-out
+(`9.978646438460075e-06`). The initial momentum residual is
+`9.184208948907546e-12`. `measured_within_window_1e-3` is true.
+`labeled_as_window_pass` is false.
+
+Full and projected strong residuals both remain. The initial `1e-8` flag
+is false and did not stop the run. It is not an automatic veto. A
+weak-form error statement still needs the unresolved complement, a
+quadrature comparison, roundoff, and observable convergence. The projected
+residual is not that statement. At \(n_f=256\), doubling quadrature moves
+full Hamilton by `4.177484925094177e-06`. No doubled-quadrature pair is
+stored at \(n_f=512\).
+
+The stored radius is the retained best projected iterate. The last
+accepted Newton trial is smaller by `1.610240673480347e-09` and is not
+the evolved state. Both values sit above the Newton `1e-10` line. The
+independent file now has ten tests, sha256
+`dde0ca7dcd8d870f772aff3f6069286cddb8493c291bddb715232b493b44f55f`.
+
+The chart sample in `normal_velocities` is
+\((\dot r_{\mathrm{unprojected}}-\beta r_x)/(r L)\) from `geometric_rates`,
+which includes \(\Pi\). The returned `chart_proper_max` and
+`lifted_proper_max` are maxima of absolute values. The chart sample is zero
+on the initial slice because \(\Pi=0\). The function comment that the chart
+velocity uses \(p=0\) matches that slice and not a later state whose
+\(\Pi\) is nonzero. At the end of the \(n_f=512\) window the two max-abs
+speeds agree near `0.00795051538`.
+
+The sections below are the v2 control and the v3 initial solve. Their
+verdicts and JSON bytes stay historical.
+
+## v2 control
 
 This is a fixed subspace of the existing spherical Hamiltonian. It is not a
 filter of the v1 radius, not a constraint projection, and not a renewal.
@@ -24,11 +93,11 @@ transferred.
 | `lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py` | `85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab` |
 | `lab/tests/test_nsc_spherical_galerkin_coupling.py` | `e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19` |
 | `lab/src/recursive_horizons/nsc_spherical_coupling.py` | `64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5` |
-| `lab/tests/test_nsc_spherical_galerkin_independent.py` | `01afcc16c4dda9447ab7072a87dc50c3c5a74eb5470518793c5b00054a82abbb` |
+| `lab/tests/test_nsc_spherical_galerkin_independent.py` at the v2 note (6 tests) | `01afcc16c4dda9447ab7072a87dc50c3c5a74eb5470518793c5b00054a82abbb` |
 | `lab/results/development/nsc-spherical-coupling-control-v2.json` | `26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c` |
 
-Ten tests passed in 0.35 s. The control took 0.820 s wall and 0.843 s CPU.
-Verdict `FAIL_HELD_OUT_CONSTRAINT`. `T=0.05` was not run. Renewal is false.
+Ten tests in `test_nsc_spherical_galerkin_coupling.py` passed in 0.35 s. The control took 0.820 s wall and 0.843 s CPU.
+Verdict `FAIL_HELD_OUT_CONSTRAINT`. This v2 control did not run `T=0.05`. Renewal is false.
 The saved record still has `independent_review` false. This note does not
 rewrite that JSON.
 
@@ -122,7 +191,7 @@ so the drop is not a single-cause claim.
 The physical constraint is the full quadrature residual, including modes
 outside the odd subspace. That residual is `2.375108194941006` at
 `ng=63` and `0.034135561038210` at `ng=127`. Doubled quadrature does not
-remove it. `T=0.05` was not started. A short step with a tiny projected
+remove it. This v2 control did not start `T=0.05`. A short step with a tiny projected
 residual is not a renewal.
 
 ## Matched refinement v3
@@ -132,7 +201,7 @@ brings the full quadrature constraints under the declared initial and
 window tolerances. It does not. The driver and record below are immutable
 failed evidence. They do not rewrite the module or the v1 and v2 JSON
 files. `module_unchanged`, `v1_bytes_preserved`, and `v2_bytes_preserved`
-are true. Renewal is false. `T=0.05` was not run.
+are true. Renewal is false. This v3 record did not run `T=0.05`.
 
 | Path | sha256 |
 |---|---|

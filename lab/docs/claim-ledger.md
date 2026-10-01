@@ -1,63 +1,113 @@
 # Current NSC claim ledger
 
-## Active scope, 29 September 2026
+## Active scope
 
 The latest user instruction controls. Repository plan and handover copies are
-historical and do not own the task. An older conversation plan treated closing
-the incoming gate as the compulsory sprint; that routing is superseded. Next
-research reuses existing inherited-law, regional-state, transfer and
-conservation results to investigate sustained balanced turnover at stable
-overall regional size and content. Relate that question to time as the
-registration of spatial change and to the matter–antimatter hypothesis.
-Those proposals are not proved. Choose tests that serve this mechanism.
-The intended claim remains an effective local response, under familiar local
-laws, from specified nested surroundings. Reusable mathematics, proposed
-interpretations, and the retained numerical application stay distinct. See
+historical and do not own the task. The intended claim is an effective local
+response, under familiar local laws, from specified nested surroundings.
+LambdaCDM is one familiar local description. Comparing an open question with
+it is not a conflict, and a completed match to its observables is not
+established. The inheritance relation
+\(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\) is reused inside its
+stated domain. It is not recomputed as an infinity of nests. Regeneration,
+time as the registration of spatial change, and a matter–antimatter reading
+are active questions. Charge conjugation does not derive antimatter and does
+not close a geometric question. Pictures of an interior, a room, or a coin
+are not equations. Full statement:
 [scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
 
-The finite nested-quality result below is reused. It remains valid within its
-stated domain and does not depend on the incoming-gate campaign. That gate
-remains OPEN and its campaign is paused. It is a retained application. Its
-relevance can be reconsidered when useful; that is not a compulsory
-assessment or permission check before the mechanism work. Six missing
-error components, the coupled solve, and a closed certificate still block a closed result for that
-application only. They are not prerequisites for every nested claim or for
-arXiv discussion in general. Global cosmological matching is not established
-and is not a demand to refute LambdaCDM. Charge conjugation, the standard
-particle–antiparticle map, does not derive antimatter and does not forbid
-investigating a geometric origin.
+The source-fixed incoming gate remains OPEN and its campaign is paused. It
+is a retained application, not a prerequisite for the mechanism work below.
+This paragraph is the ledger's statement of that fact.
 
-The spherical feedback action and the direct conformal ADM source indexed
-below are checked primitives. The provisional spherical coupling v1 is
-`PROVISIONAL_CONSTRAINT_DRIFT`, not a self-consistent solution or a
-renewal. Initial constraints pass and the work balances. The N=64 Hamilton
-constraint reaches 36.98886722265645 by \(T=0.005\) and is unchanged by
-timestep halving. Spatial diagnostics reduce it to 2.330762882869135 at
-N=128 and 0.575679312602035 at N=256, still above \(10^{-3}\). The
-odd-lobe phase fix is a successor and does not overwrite v1. The corrected
-source puts that phase on the minus column. The variational Galerkin
-coupling v2 is `FAIL_HELD_OUT_CONSTRAINT`; a projected residual is not a
-pass. The matched refinement v3 is `FAIL_INITIAL_SOLVE` and has no
-full-source result. The evolving reduction is prescribed-control
-convergence with no accepted coupled trajectory. Passing tests do not
-validate these failed trajectories. The coupled state and geometry loop
-already executes. Fixed \(L\) and \(\beta\) are gauge; \(Q\), \(r\), \(\chi\)
-and the momenta evolve. Refinement v5 is an independently replayed
-diagnostic, not an initial \(10^{-8}\) pass and not a renewal. The original
-\(H\) and \(B\) fractions are one witness. Embedding v1 and seam-regular v2
-are an optional bridge, not a further fitting prerequisite. The corrected
-regional ledger uses \(dx\)-normalized proper pressure and normal energy;
-\(F_Q\dot Q\) is coordinate metric work. Historical vacuum branch \(B\) is
-not a prerequisite. Next diagnostic: the same loop to \(T=0.05\) with
-geometry-derived \(B\), effect and spacetime convergence, and full,
-projected, and weak diagnostics. A small weak residual alone does not prove
-accuracy. Strong residuals stay reported. The old initial \(10^{-8}\) line
-is not a blind veto. Renewal is not demonstrated. The vacuum-matched CTP
-branch stays a separate historical choice in
-[nsc-vacuum-matched-ctp.md](nsc-vacuum-matched-ctp.md), not a prerequisite
-of these primitives or of every model. The resolved active action is
-\(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus the same-spectrum
-local induced term, counted once.
+## Scientific gap map
+
+Present status of the turnover question. This table is not a new roadmap
+and not a handover.
+
+| Piece | Status | Where it lives |
+|---|---|---|
+| Incoherent imbalance mean flow | Complete on the frozen depth-3 window. Geometry there is an input. | [Note](nsc-imbalance-turnover.md), [record](../results/development/nsc-imbalance-turnover-v1.json) |
+| Coupled short episode | Real saved diagnostic. v5 evolved the state and the geometry through \(T=0.005\). It is the self-contained preparation, not a permanent production-driver requirement. | [Replay](../scripts/derive_nsc_spherical_galerkin_refinement_v5.py), [record](../results/development/nsc-spherical-coupling-refinement-v5.json) |
+| \(T=0.05\) feedback episode | Four runs reach \(T=0.05\). All 62 physical refinement rows meet one percent. Verdict `MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL`. | [Driver](../scripts/derive_nsc_spherical_feedback_episode.py), [record](../results/development/nsc-spherical-feedback-episode-v1.json) |
+| Renewal, or a constraint-consistent continuum solution | Unresolved. Fine full Hamilton ends at \(2.825670750915076\times 10^{-5}\); coarse ends at \(0.0068275893562912415\). Continuum error is unknown. | Same episode record |
+| Weak initial residual | Conditional coercivity is recorded when \(G>0\) and \(\rho\) independence is true. The total bound is not certified. The dense-versus-product movement is a conditioning indicator. | [Note](nsc-spherical-cauchy-weak.md), [record](../results/development/nsc-spherical-cauchy-weak-v1.json) |
+| Streamed retained-region reducer | Dense and streamed prescribed controls agree. No coupled \(H(g(t))\) trajectory is in this record. | [Module](../src/recursive_horizons/nsc_evolving_reduction.py), [note](nsc-evolving-reduction.md) |
+
+## Coupled loop, as the source executes it
+
+v5 is the self-contained saved diagnostic and preparation. It is not a
+permanent production-driver requirement. The episode driver
+`scripts/derive_nsc_spherical_feedback_episode.py` reuses that preparation.
+The saved \(T=0.05\) record is
+`results/development/nsc-spherical-feedback-episode-v1.json`. Renewal
+remains false. A constraint-consistent solution is not validated.
+
+Each rate evaluation prolongs the state and recomputes the column source
+with `source_from_columns`. Geometric rates come from the summation-by-parts
+chart. With the matter force on,
+\(\dot p_Q\leftarrow\dot p_Q-F_Q/\Delta x_Q\) before the adjoint pullback.
+The initial radius uses that same column source, \(\rho=F_L/\Delta x_Q\).
+`solve_initial_radius` does this when \(\rho\) is not supplied. The v5
+replay's `full_source_rho` does it and holds \(\rho\) fixed while Newton
+updates \(r\). \(L\) and \(\beta\) stay the calibration gauge. \(Q\), \(r\),
+\(\chi\), the momenta, and the columns evolve. Fixed gauge is not frozen
+physical geometry: the shift still drags \(Q\).
+
+Three readings stay separate.
+
+- Diagnostic. At \(n_f=512\), \(n_q=2048\), the saved run reached \(T=0.005\)
+  in 10 steps of \(dt=5\times 10^{-4}\). Window maxima of absolute values
+  are Hamilton \(9.981468739539423\times 10^{-6}\), momentum
+  \(1.3753934746951746\times 10^{-6}\), chart proper speed
+  \(0.007950515372629119\), and lifted proper speed
+  \(0.007950515381253666\). Those speed entries are
+  `chart_proper_velocity_max` and `lifted_normal_velocity_max`. They are
+  not signed radial velocities. The initial Hamilton residual equals that
+  Hamilton figure and is held-out,
+  \(9.978646438460075\times 10^{-6}\), with unresolved fraction about \(1\).
+  The initial momentum residual is \(9.184208948907546\times 10^{-12}\).
+  `measured_within_window_1e-3` is true. `labeled_as_window_pass` is false.
+  Verdict `DIAGNOSTIC_MEASURED`. Passing tests do not promote it.
+- Error statement. Full and projected strong residuals both remain. The
+  initial \(10^{-8}\) flag is false because the full Hamilton residual is
+  about \(10^{-5}\). The flag did not stop the short run, and it is not an
+  automatic veto. A weak-form statement still needs the unresolved
+  complement, a quadrature comparison, roundoff, and observable
+  convergence. The projected residual is not that statement. At \(n_f=256\),
+  doubling quadrature moves full Hamilton by
+  \(4.177484925094177\times 10^{-6}\). No doubled-quadrature pair is stored
+  at \(n_f=512\).
+- Renewal. Unresolved. The record sets renewal false.
+
+The original \(H\) and \(B\) fractions are one optional witness in the
+finite-window embedding. They are not a mandatory embedding of later
+realizations. The seam-regular compression is an optional bridge.
+
+The resolved active action is \(\Gamma_{\mathrm{one}}\): the finite
+canonical Gaussian CTP plus the declared same-spectrum induced terms,
+counted once. In this loop the coupling record writes
+\(S_{\mathrm{induced}}[g_+]-S_{\mathrm{induced}}[g_-]+\Gamma_{\mathrm{Gaussian}}(C_0)\).
+The varied generator is the spherical summation-by-parts chart plus the
+nodal derivatives of \(M\operatorname{Tr}(CH)\), \(M=4\kappa\) once. Sea
+subtraction, an extra heat kernel, and \(\Gamma_{\mathrm{rest}}\) are off.
+The historical vacuum-matched four-order-subtracted KS branch \(B\) is not
+called and is not a prerequisite. That other branch does not insert a
+missing term into this varied action. The feedback-action module does not
+itself attach the matter source; the coupling does.
+
+The regional ledger uses the names in
+[nsc-regional-energy-exchange.md](nsc-regional-energy-exchange.md).
+\(e=LF_L+\beta F_\beta\) is the nodal coordinate generator. \(F_Q\dot Q\) is
+coordinate metric work and includes \(\dot Q=\partial_x(\beta Q)\). Proper
+\(\rho\), \(p_r\), \(p_\perp\), and \(j\) divide by \(dx\). The observer
+balance also carries the lapse gradient \(-V(j/q)\partial_x N\). Normal
+shell energy is \(F_L/r=V\rho\,dx\). Hamiltonian derivatives are not those
+pressures.
+
+Historical controls stay in the dated sections below. Archived candidate
+notes in the [code map](active-code-map.md#archived-candidate-notes) are not
+this queue.
 
 Douglas sets the research question. The agent accepts it, chooses useful
 tests, and reports evidence, without replacing the target by a LambdaCDM
@@ -85,10 +135,12 @@ requirement to prove infinity or eternity. Douglas sets the direction; the
 assistant tests the proposed connection, without a silent LambdaCDM
 competition or an arbitrary replacement of the gate.
 
-The records immediately below are source and ultraviolet evidence for that
-paused application. Where they say a continuation is required, the requirement
-is internal to closing this application. It is not an instruction to resume
-the campaign now, and it does not discard the recorded gaps.
+## Paused-application records
+
+The following source and ultraviolet paragraphs are historical evidence for
+the paused incoming-gate application. A continuation named inside them is
+internal to that application. It does not order a run, and it does not
+discard the recorded gaps.
 
 The [full-profile horizon-frame result](nsc-metric-horizon-frame.md) encloses
 the local Frobenius series and a representative affine reflection. Its analytic
@@ -227,7 +279,7 @@ shifts are \(6.879146355717442\times 10^{-5}\) for the near probe and
 currents leave regional contents constant, and the filtered local response
 is the response of that preparation. This stationary witness remains valid
 for a preparation whose current is already present. Broader regeneration
-remains research. The incoming gate stays OPEN and its campaign stays paused.
+remains research.
 
 ## Incoherent imbalance mean circulation, 30 September 2026
 
@@ -254,8 +306,7 @@ the forced optional-failure semantics. Seven focused tests passed together
 with the six existing finite-turnover tests, and `--check` replayed the
 record. The research direction remains regeneration. The checked primitives
 below do not yet make this frozen window a coupled source or a Cauchy
-evolution, and they are not a LambdaCDM comparison. The incoming gate stays
-OPEN and its campaign stays paused.
+evolution.
 
 ## Spherical feedback action, 30 September 2026
 
@@ -295,13 +346,10 @@ countercarrier compression matches the onsite block \(H\) and does not match
 the link \(B\). The full mapping is pending. The numerical residuals of that
 comparison are not immutable data and are not recorded here.
 
-The [vacuum-matched CTP](nsc-vacuum-matched-ctp.md) branch remains a
-separate historical choice, not a prerequisite of this source, of the
-spherical chart, or of every model. The resolved active action is
-\(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus the same-spectrum
-local induced term, counted once. These owners are equations and
-interfaces, not yet autonomous regeneration. The incoming gate stays OPEN
-and its campaign stays paused.
+These owners are the chart and the nodal force. The matter source is
+attached by the coupling, not by the feedback-action module. Autonomous
+regeneration is unresolved. The action count is the
+[gap map](#scientific-gap-map).
 
 ## Provisional spherical coupling v1, 30 September 2026
 
@@ -344,10 +392,7 @@ the v1 JSON. These v1 bytes stay checkpointed. Collocation constraint
 algebra is a separate check, sha256
 `eefadb1bdf863da6c1e487304fe816bc1ae6514a6570b85431893b7d97b9db78`.
 It does not load the saved trajectory and does not certify the Galerkin
-discretization. The vacuum-matched CTP branch stays a separate historical
-choice, not a prerequisite. The resolved active action remains
-\(\Gamma_{\mathrm{one}}\). The incoming gate stays OPEN and its campaign
-stays paused.
+discretization. These v1 bytes stay the historical control.
 
 ## Variational Fourier–Galerkin coupling v2, 1 October 2026
 
@@ -356,14 +401,10 @@ The failed subspace control is recorded in
 and
 [nsc-spherical-coupling-control-v2.json](../results/development/nsc-spherical-coupling-control-v2.json).
 The saved verdict is `FAIL_HELD_OUT_CONSTRAINT`. Renewal is false.
-\(T=0.05\) was not run. A projected residual is not a physical pass.
-This is not a filter of the v1 radius, not a constraint projection, and
-not a renewal. The v1 JSON bytes stay unchanged. The Dirac compression of
+This v2 control did not run \(T=0.05\). A projected residual is not a
+physical pass. This is not a filter of the v1 radius and not a constraint
+projection. The v1 JSON bytes stay unchanged. The Dirac compression of
 that window is recorded below and is not an accepted coupled trajectory.
-The vacuum-matched CTP branch stays a
-separate historical choice, not a prerequisite. The resolved active
-action remains \(\Gamma_{\mathrm{one}}\). The incoming gate stays OPEN
-and its campaign stays paused.
 
 ## Matched Galerkin refinement v3, 1 October 2026
 
@@ -375,7 +416,6 @@ are immutable. The verdict is `FAIL_INITIAL_SOLVE`. Internal Newton
 stopped at rho \(0.5\) with residual
 \(1.2876060991167562\times 10^{-10}\). No full-source result was
 produced. The v1 and v2 JSON bytes stay unchanged. Renewal is false.
-The incoming gate stays OPEN and its campaign stays paused.
 
 ## Galerkin refinement v5, 1 October 2026
 
@@ -385,11 +425,14 @@ The completed diagnostic is the
 and [payload](../results/development/nsc-spherical-coupling-refinement-v5.npz).
 Independent review is
 [test_nsc_spherical_galerkin_independent.py](../tests/test_nsc_spherical_galerkin_independent.py),
-now ten tests. At \(n_f=512\) and \(T=0.005\) the Hamilton residual is about
-\(9.98\times 10^{-6}\), the momentum residual about \(1.38\times 10^{-6}\),
-and the proper radial velocity about \(0.0079505\). This is not the old
-initial or Newton acceptance and not a renewal. The same loop is the next
-\(T=0.05\) diagnostic. The initial \(10^{-8}\) line is not a veto.
+now ten tests. The \(T=0.005\) numbers and the false renewal flag are
+the [gap map](#scientific-gap-map). This v5 record does not contain
+\(T=0.05\). The episode driver and its saved record are that separate
+measurement. The saved
+Newton state is the retained best iterate. The last accepted trial is
+smaller by about \(1.610240673480347\times 10^{-9}\) and is not the stored
+radius. Both sit above the Newton \(10^{-10}\) line. The initial
+\(10^{-8}\) flag is false and did not veto the measurement.
 
 ## Finite-window embedding v1, 1 October 2026
 
@@ -441,29 +484,32 @@ Six tests are in
 [test_nsc_regional_energy_exchange.py](../tests/test_nsc_regional_energy_exchange.py)
 and eight independent tests are in
 [test_nsc_regional_energy_exchange_independent.py](../tests/test_nsc_regional_energy_exchange_independent.py).
-Normal energy is \(F_L/r=V\rho\,dx\). Proper pressures divide by \(dx\).
-\(F_Q\dot Q\) is coordinate metric work. Hamiltonian derivatives are not
-pressures. Historical vacuum branch \(B\) is not a prerequisite.
+Normal energy is \(F_L/r=V\rho\,dx\). Proper \(\rho\), \(p_r\), \(p_\perp\),
+and \(j\) divide by \(dx\). The observer balance also has the lapse gradient
+\(-V(j/q)\partial_x N\). \(F_Q\dot Q\) is coordinate metric work. Hamiltonian
+derivatives are not pressures.
 
 ## Evolving retained-region reduction, 30 September 2026
 
 A separate prescribed-control owner is
 [nsc-evolving-reduction.md](nsc-evolving-reduction.md). The
 [module](../src/recursive_horizons/nsc_evolving_reduction.py) sha256 is
-`e47bcac929f2fee054ad42770e78a34b329b95152fc6d144f5849888f90c0014`. The
-[tests](../tests/test_nsc_evolving_reduction.py) sha256 is
+`17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d`. The
+[dense tests](../tests/test_nsc_evolving_reduction.py) sha256 is
 `2473425909c3fb67f786daa482e2cadb7ddf7052975976d51d1e81098fe68f97`. The
 note sha256 is
-`505a8bb3c9c24ab5829c1483c6b5fb1b67bfa0818034bbe678b2f651e80c9ee5`.
-Thirteen tests passed. Nine further independent tests, sha256
+`e679c08abd76278e08d2fa49ab41cb21cc93da25e16c74a670f7c72ad4f56f6e`.
+The streamed tests, sha256
+`9debf8b7b11b676f83e2577939f95896926296f6f36a2ad910da6346329e3edf`,
+are [test_nsc_evolving_reduction_streamed.py](../tests/test_nsc_evolving_reduction_streamed.py).
+Thirteen dense tests passed. Nine further independent tests, sha256
 `bba311f6ee90acd2fecf631b0e5f5cb193a98b6726ae6cf4b1da2e56a67fe5d6`,
-use one prescribed generator and an exterior integrator. The sine
+use one prescribed generator and an exterior integrator. Eleven streamed
+tests check dense agreement on those controls. The sine
 schedule is a prescribed \(H(t)\). It is not an autonomous trajectory,
 not regeneration, and not a coupled geometry. No actual \(H(g(t))\) was
 consumed. No coupled trajectory is accepted. These tests do not validate
-these failed spherical-coupling trajectories. The resolved active action
-remains \(\Gamma_{\mathrm{one}}\). The incoming gate stays OPEN and its
-campaign stays paused.
+the failed spherical-coupling trajectories.
 
 ## Regenerative interpretation and the local calculation
 

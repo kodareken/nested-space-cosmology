@@ -16,7 +16,8 @@ Paths are relative to this directory.
 | Role | Owner |
 |---|---|
 | Core | [nsc_evolving_reduction.py](../src/recursive_horizons/nsc_evolving_reduction.py) |
-| Tests | [test_nsc_evolving_reduction.py](../tests/test_nsc_evolving_reduction.py) |
+| Dense tests | [test_nsc_evolving_reduction.py](../tests/test_nsc_evolving_reduction.py) |
+| Streamed-backend tests | [test_nsc_evolving_reduction_streamed.py](../tests/test_nsc_evolving_reduction_streamed.py) |
 | Note | [nsc-evolving-reduction.md](nsc-evolving-reduction.md) |
 
 The frozen window and correlated Gaussian state are reused from
@@ -109,9 +110,16 @@ The callable contract for a future geometry is
 
 ```python
 evolve_retained_region(lambda t: operator(g(t)), local_basis, times, columns)
+evolve_retained_region(
+    lambda t: operator(g(t)),
+    local_basis,
+    times,
+    columns,
+    backend="streamed",
+)
 ```
 
-This module does not build \(g(t)\). None was passed.
+`backend="dense"` is the default and stores \(W(t)\). `backend="streamed"` is the opt-in column transport below. This module does not build \(g(t)\). None was passed, and no generated \(H(g(t))\) was compared. The active spherical loop already evolves geometry; that comparison belongs to a later trajectory consumer.
 
 ## Method control
 
@@ -185,14 +193,41 @@ Exterior kernels at the final time and the midpoint were occupied
 Occupied and empty differ. They match the fixed-frame boundary-state
 kernels and are not a second copy of \(C_A\).
 
+## Streamed column backend
+
+`backend="streamed"` solves the same retained history. It does not replace that history by a full-system ODE. With \(U_E(t,s)\) the exterior propagator of \(E(t)\),
+
+\[
+\dot X=-iAX-\int_{t_0}^{t}B(t)U_E(t,s)B(s)^\dagger X(s)\,ds-iB(t)U_E(t,t_0)Y_0.
+\]
+
+The causal kernel in the integral is \(B(t)U_E(t,s)B(s)^\dagger\). Its source cohort is the set of columns of \(B^\dagger\). Adjoint midpoint transport to \(t_0\) gives \(G(t)=U_E(t,t_0)^\dagger B(t)^\dagger\), and
+
+\[
+B(t)U_E(t,s)B(s)^\dagger=G(t)^\dagger G(s).
+\]
+
+`causal_memory_kernel` returns that product and the two cohorts. It does not form \(W\). Occupied, empty, and initial-cross kernels are then \(G(t)^\dagger C_{EE} G(s)\), \(G(t)^\dagger(I-C_{EE})G(s)\), and \(G(t)^\dagger C_{EA}\). `exterior_kernels_from_cohorts` keeps \(\theta(0)=1/2\). These are the same blocks as \(F=BW\), because \(F(t)^\dagger=G(t)\).
+
+Each output step advances only the current memory image \(S=UZ\), the drive columns \(UY_0\), and the source cohort, using `expm_multiply` on the same midpoint product as the dense propagator. The generator at one time may be the dense block \(E(t)\) or a `LinearOperator`. The multiply is that product's action, not a commutator-free or averaged surrogate. The returned `history` is still the interaction-picture accumulator \(Z\), rebuilt by the adjoint product on the new cohort. `memory=False`, `outside_drive=False`, `coupling=False`, and `drop_cross_covariance=True` keep the dense meanings, including the recorded initial exterior amplitude when the drive term is omitted.
+
+The output grid stores \(A(t_n)\), \(B(t_n)\), \(X(t_n)\), and \(Z(t_n)\). \(Z\) has shape `(times, exterior_dimension, columns)`. The allocation record sets `time_indexed_exterior_propagator_bytes` to zero. Replaying \(Z\) from \(t_0\) grows quadratically with the number of output nodes. That cost is recomputation, not a stored \(W(t)\), and it is not a large-exterior timing claim.
+
+The constructor still completes the observer with one dense `null_space`. A dense callable \(H(t)\) still forms the current exterior block at a midpoint and drops it. Those two arrays are not a time-indexed propagator. The fixed columns of \(V\) are copied into the frame unchanged.
+
+No coupled trajectory is claimed. The incoming-gate campaign stays paused. The streamed tests are methodology checks on prescribed controls.
+
 ## Reproduction
 
-From the repository root, the existing test is
+From the repository root, the dense control and the streamed backend are
 
 ```sh
 python scripts/lab.py -m pytest tests/test_nsc_evolving_reduction.py -q
+python scripts/lab.py -m pytest tests/test_nsc_evolving_reduction_streamed.py -q
 ```
 
-That run reported 13 passed. The comparison above is what that test
-checks. It does not close the paused incoming gate and does not identify
-this reduced covariance with a metric source.
+The dense file reported 13 passed. That comparison is the table above.
+The streamed file reported 11 passed. It checks dense agreement, the
+independent DOP853 sample, the omission controls, and the absence of a
+time-indexed exterior propagator. Neither run closes the paused incoming
+gate or identifies this reduced covariance with a metric source.

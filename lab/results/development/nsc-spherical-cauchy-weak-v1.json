@@ -1,0 +1,1250 @@
+{
+  "schema": "NSC-SPHERICAL-CAUCHY-WEAK-v1",
+  "status": "PARTIAL_TERMS_NO_TOTAL_BOUND",
+  "role": "weak initial residual of the saved spherical seed; not an evolution step",
+  "evolution_performed": false,
+  "production_evolution_owner": "nsc_spherical_galerkin_coupling",
+  "source_changed": false,
+  "coefficients_changed": false,
+  "action_changed": false,
+  "inheritance_recomputed": false,
+  "tolerance_used_as_proof": false,
+  "total_certified": false,
+  "represented_weak_certifies_total": false,
+  "geometry_error_upper_bound": null,
+  "statement": {
+    "functional": "J(y)=integral[2 (y')^2 + Q^2 y^2/2 + G/(2 y^2)] dx",
+    "euler_lagrange": "Ry=-4 y'' + Q^2 y - G/y^3",
+    "owner_link": "C_tot=-(8 pi A/Q) y^3 Ry when r=y^2 and the spectral product rule holds",
+    "algebra_without_product_rule": "C_tot=(8 pi A/Q)[D^2(r^2)-3 (Dr)^2 - Q^2 r^2 + G] with G=Q^2 r_mag^2 + Q rho/(8 pi A)",
+    "hessian": "H(v,v)=4 ||v'||^2 + integral (Q^2 + 3 G/y^4) v^2",
+    "energy_norm": "||v||_E^2 = ||v'||^2 + ||v||^2",
+    "dual": "||R||_*=sup |integral v Ry dx| / ||v||_E",
+    "error_inequality": "If y_* is critical in the tested space, G is independent of y, and c=Q^2+3G/z^4 stays at least c_seg>0 on the segment, then ||y-y_*||_E <= ||R_y||_* / min(4, c_seg).",
+    "conservative_mu": "Declared G>0 and rho_independent is True give H>=4||v'||^2+Q^2||v||^2, so mu=min(4,Q^2) does not depend on y_*. Unknown rho independence does not establish this. A total bound still needs the full residual, continuum positivity of G, and a rounding enclosure.",
+    "polynomial_owner": "P=2*r*r''-(r')^2-Q^2*r^2+G and C=(8*pi*A/Q)*P. Degree at most nf-1 from the antiperiodic column band and the odd radius band.",
+    "not_sufficient": "A represented weak number does not control held-out modes, the continuum tail, the product-rule defect, quadrature, roundoff, or the shift current. This helper stores those partial terms and does not emit a total enclosure."
+  },
+  "checkpoint_expected": "9a9090a",
+  "checkpoint_head": "9a9090a",
+  "cpu_budget_seconds": 60.0,
+  "cpu_seconds": 6.549308,
+  "wall_seconds": 6.6306411669938825,
+  "cpu_budget_exceeded": false,
+  "v5_npz_sha256_before": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+  "v5_json_sha256_before": "1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+  "saved_v5_reference": {
+    "schema": "NSC-SPHERICAL-COUPLING-REFINEMENT-v5",
+    "nf256_nq1024_full_C": 0.001768137526894975,
+    "nf256_nq1024_frozen_full_operator": 0.0017681375243085995,
+    "nf256_nq1024_projected_C": 9.518771155652591e-10,
+    "nf256_nq2048_full_C": 0.0017723150118200692,
+    "nf256_current_max": 3.2542857299044724e-12,
+    "nf512_nq2048_full_C": 9.981468739539423e-06,
+    "nf512_nq2048_projected_C": 8.52043675013457e-09,
+    "nf512_current_max": 9.184208948907546e-12
+  },
+  "manufactured": {
+    "grid": {
+      "nf": 32,
+      "ng": 31,
+      "nq": 128
+    },
+    "smooth_equivalence": {
+      "algebraic_gap_max": 1.460520593354886e-11,
+      "action_gap_max": 1.825933182431072e-09,
+      "scaled_product_rule_defect_max": 1.8237801175690762e-09,
+      "defect_explains_action_gap_max": 1.460605499128288e-11,
+      "G_min": 0.08537666792138204,
+      "G_max": 0.1075891137600269,
+      "owner_max": 12.866052479772195,
+      "action_max": 12.86605247931931
+    },
+    "rough_mode": 40,
+    "rough_equivalence": {
+      "algebraic_gap_max": 1.0913936421275139e-11,
+      "action_gap_max": 3143.991531266489,
+      "scaled_product_rule_defect_max": 3143.991531266487,
+      "defect_explains_action_gap_max": 8.185452315956354e-12,
+      "G_min": 0.08537666792138204,
+      "G_max": 0.1075891137600269,
+      "owner_max": 11417.216946279044,
+      "action_max": 14561.208477544395
+    },
+    "weak_versus_strong_pairing_gap": 1.0408340855860843e-17,
+    "hessian_second_difference_gap": 2.867259787079149e-06,
+    "positive_G": {
+      "positive_y": true,
+      "positive_G": true,
+      "G_min": 0.08537666792138204,
+      "G_max": 0.1075891137600269,
+      "c_min": 0.0939109967055159,
+      "c_max": 0.10002453756344586,
+      "frozen_alpha": 0.0939109967055159,
+      "frozen_alpha_is_not_the_segment_constant": true,
+      "strict_convexity_assumption": true,
+      "error_inequality_applicable": false,
+      "error_inequality_reason": "Declared G>0 and rho_independent is True give uniform mu=min(4,Q^2) without y_*. Unknown rho independence does not establish that hypothesis. No total bound is emitted: the full residual, continuum positivity of G, and a rounding enclosure are still open.",
+      "rho_independent_of_y": true,
+      "blocker": null,
+      "uniform_mu": 0.0631642220827373,
+      "uniform_mu_requires_y_star": false,
+      "uniform_mu_declared": true,
+      "total_bound": null,
+      "total_bound_gaps": [
+        "full residual dual",
+        "continuum positivity of G",
+        "rounding enclosure"
+      ],
+      "continuum_positivity_enclosed": false,
+      "rounding_enclosed": false
+    },
+    "positive_hessian_on_mode": 0.009231967859044973,
+    "discrete_segment_inequality": {
+      "holds": true,
+      "error_norm_E": 0.0025431085506270297,
+      "dual_E": 0.00427832010942433,
+      "alpha": 0.25227837625680094,
+      "c_seg_supplied": 0.25227837625680094,
+      "upper_bound": 0.016958726993982685,
+      "critical_gap": 1.052039566573626e-10,
+      "critical_gap_gate": 1e-08,
+      "critical_gap_gate_is_stationarity_of_this_example": true,
+      "is_continuum_certificate": false,
+      "total_certified": false,
+      "reason": null
+    },
+    "negative_G": {
+      "positive_y": true,
+      "positive_G": false,
+      "G_min": -1.0,
+      "G_max": -1.0,
+      "c_min": -2.936835777917263,
+      "c_max": -2.936835777917263,
+      "frozen_alpha": null,
+      "frozen_alpha_is_not_the_segment_constant": true,
+      "strict_convexity_assumption": false,
+      "error_inequality_applicable": false,
+      "error_inequality_reason": "Declared G>0 and rho_independent is True give uniform mu=min(4,Q^2) without y_*. Unknown rho independence does not establish that hypothesis. No total bound is emitted: the full residual, continuum positivity of G, and a rounding enclosure are still open.",
+      "rho_independent_of_y": true,
+      "blocker": "G is not positive",
+      "uniform_mu": null,
+      "uniform_mu_requires_y_star": false,
+      "uniform_mu_declared": false,
+      "total_bound": null,
+      "total_bound_gaps": [
+        "full residual dual",
+        "continuum positivity of G",
+        "rounding enclosure"
+      ],
+      "continuum_positivity_enclosed": false,
+      "rounding_enclosed": false
+    },
+    "negative_hessian_on_constants": -23.494686223338096,
+    "omitted_unresolved_mode": {
+      "mode": 20,
+      "amplitude": 0.02,
+      "represented_weak_dual_E": 0.00010721334128839067,
+      "represented_fourier_dual_E": 0.00010721334128801553,
+      "unresolved_weak_dual_E": 2.508838799404291,
+      "unresolved_strong_max": 19.744301113926195,
+      "full_strong_max": 19.744339019566794,
+      "omitted_energy_norm_E": 0.6295904828089242,
+      "represented_pull_max": 3.7905641160795867e-05,
+      "total_certified": false,
+      "represented_weak_certifies_total": false,
+      "geometry_error_upper_bound": null,
+      "tail_bound": null,
+      "represented_piece_is_nonlinear_image": true
+    },
+    "constructor_constant_current": {
+      "current_unchanged": true,
+      "source_mean_subtracted": false,
+      "current_mean": 0.29999999999999993,
+      "residual_mean": 0.29999999999999993,
+      "residual_minus_mean_max": 8.326672684688674e-16,
+      "p_Q_max": 4.856358361614592e-16,
+      "mean_remains": true
+    },
+    "total_certified": false
+  },
+  "nf256": {
+    "nf": 256,
+    "ng": 255,
+    "nq": 1024,
+    "evolution_performed": false,
+    "radius_newton_rerun": false,
+    "source_columns_unchanged": true,
+    "ansatz": {
+      "Q_minus_gauge_max": 0.0,
+      "chi_max": 0.0,
+      "p_r_max": 0.0,
+      "p_chi_max": 0.0,
+      "p_Q_max": 0.0,
+      "holds": true
+    },
+    "stored_quadrature_radius_gap": 0.0,
+    "stored_npz_projected_residual": 9.608390314276184e-10,
+    "stored_npz_full_operator": 0.0017681375243085995,
+    "frozen_rho_gap_max": 0.0,
+    "rho_independent_of_r_max": 0.0,
+    "rho_independent_assumption": true,
+    "frozen_rho_assessment": {
+      "total_certified": false,
+      "represented_weak_certifies_total": false,
+      "geometry_error_upper_bound": null,
+      "tail_bound": null,
+      "tail_bound_reason": "no decay hypothesis was proved for this residual; highest-mode amplitude and held-out power are grid samples only",
+      "Q": 0.25132493326913924,
+      "A": 0.04501936182826115,
+      "rmag2": 0.9999999999999984,
+      "y_min": 2.0519512838770746,
+      "y_max": 2.2083520504732954,
+      "r_min": 4.210504071404775,
+      "r_max": 4.876818778829609,
+      "coercivity": {
+        "positive_y": true,
+        "positive_G": true,
+        "G_min": 0.06316419930011759,
+        "G_max": 10.94513919955811,
+        "c_min": 0.07126986300473899,
+        "c_max": 1.4494238087916391,
+        "frozen_alpha": 0.07126986300473899,
+        "frozen_alpha_is_not_the_segment_constant": true,
+        "strict_convexity_assumption": true,
+        "error_inequality_applicable": false,
+        "error_inequality_reason": "Declared G>0 and rho_independent is True give uniform mu=min(4,Q^2) without y_*. Unknown rho independence does not establish that hypothesis. No total bound is emitted: the full residual, continuum positivity of G, and a rounding enclosure are still open.",
+        "rho_independent_of_y": true,
+        "blocker": null,
+        "uniform_mu": 0.0631642220827373,
+        "uniform_mu_requires_y_star": false,
+        "uniform_mu_declared": true,
+        "total_bound": null,
+        "total_bound_gaps": [
+          "full residual dual",
+          "continuum positivity of G",
+          "rounding enclosure"
+        ],
+        "continuum_positivity_enclosed": false,
+        "rounding_enclosed": false
+      },
+      "roundoff": {
+        "algebraic_identity_gap_max": 3.345977266902469e-09,
+        "defect_explains_action_gap_max": 6.041960952144319e-09,
+        "largest_D2_r2_term": 9.426201686802028,
+        "cancellation_condition": 24000.72113124389,
+        "unit_roundoff_times_condition": 2.399209290239975e-11,
+        "gap_is_not_a_new_acceptance_line": true
+      },
+      "product_rule": {
+        "scaled_defect_max": 2.746484871086371e-06,
+        "action_minus_owner_max": 2.748635332338288e-06
+      },
+      "represented": {
+        "owner_pull_max": 9.608390314276184e-10,
+        "action_pull_max": 2.828863000653912e-07,
+        "weak_dual_E_matrix": 5.6611510229305975e-09,
+        "weak_dual_E_fourier": 5.6611510229305214e-09,
+        "matrix_fourier_gap": 7.610061635487855e-23,
+        "matrix_solver": null
+      },
+      "unresolved": {
+        "owner_max": 0.0017681375412189999,
+        "action_ry_max": 3.6821403273654235e-05,
+        "weak_dual_E": 2.372862711697149e-07,
+        "power": 1.7338105850394364e-07,
+        "fraction": 0.9999999999995287,
+        "max_mode": 512,
+        "highest_mode_amplitude": 3.3964321157373294e-11
+      },
+      "full_strong": {
+        "owner_max": 0.0017681375243085995,
+        "owner_l2": 0.0011777302186970506,
+        "action_max": 0.0017675559939394998,
+        "ry_max": 3.650976482860724e-05,
+        "weak_dual_E": 2.3735379313702133e-07
+      },
+      "partial_terms": {
+        "represented_weak_dual_E": 5.6611510229305975e-09,
+        "represented_owner_pull_max": 9.608390314276184e-10,
+        "unresolved_owner_max": 0.0017681375412189999,
+        "unresolved_weak_dual_E": 2.372862711697149e-07,
+        "full_strong_owner_max": 0.0017681375243085995,
+        "full_weak_dual_E": 2.3735379313702133e-07,
+        "product_rule_scaled_defect_max": 2.746484871086371e-06,
+        "algebraic_roundoff_gap_max": 3.345977266902469e-09,
+        "highest_mode_amplitude": 3.3964321157373294e-11,
+        "tail_bound": null
+      }
+    },
+    "source_rho_assessment": {
+      "total_certified": false,
+      "represented_weak_certifies_total": false,
+      "geometry_error_upper_bound": null,
+      "tail_bound": null,
+      "tail_bound_reason": "no decay hypothesis was proved for this residual; highest-mode amplitude and held-out power are grid samples only",
+      "Q": 0.25132493326913924,
+      "A": 0.04501936182826115,
+      "rmag2": 0.9999999999999984,
+      "y_min": 2.0519512838770746,
+      "y_max": 2.2083520504732954,
+      "r_min": 4.210504071404775,
+      "r_max": 4.876818778829609,
+      "coercivity": {
+        "positive_y": true,
+        "positive_G": true,
+        "G_min": 0.06316419930011759,
+        "G_max": 10.94513919955811,
+        "c_min": 0.07126986300473899,
+        "c_max": 1.4494238087916391,
+        "frozen_alpha": 0.07126986300473899,
+        "frozen_alpha_is_not_the_segment_constant": true,
+        "strict_convexity_assumption": true,
+        "error_inequality_applicable": false,
+        "error_inequality_reason": "Declared G>0 and rho_independent is True give uniform mu=min(4,Q^2) without y_*. Unknown rho independence does not establish that hypothesis. No total bound is emitted: the full residual, continuum positivity of G, and a rounding enclosure are still open.",
+        "rho_independent_of_y": true,
+        "blocker": null,
+        "uniform_mu": 0.0631642220827373,
+        "uniform_mu_requires_y_star": false,
+        "uniform_mu_declared": true,
+        "total_bound": null,
+        "total_bound_gaps": [
+          "full residual dual",
+          "continuum positivity of G",
+          "rounding enclosure"
+        ],
+        "continuum_positivity_enclosed": false,
+        "rounding_enclosed": false
+      },
+      "roundoff": {
+        "algebraic_identity_gap_max": 3.345977266902469e-09,
+        "defect_explains_action_gap_max": 6.041960952144319e-09,
+        "largest_D2_r2_term": 9.426201686802028,
+        "cancellation_condition": 24000.72113124389,
+        "unit_roundoff_times_condition": 2.399209290239975e-11,
+        "gap_is_not_a_new_acceptance_line": true
+      },
+      "product_rule": {
+        "scaled_defect_max": 2.746484871086371e-06,
+        "action_minus_owner_max": 2.748635332338288e-06
+      },
+      "represented": {
+        "owner_pull_max": 9.608390314276184e-10,
+        "action_pull_max": 2.828863000653912e-07,
+        "weak_dual_E_matrix": 5.6611510229305975e-09,
+        "weak_dual_E_fourier": 5.6611510229305214e-09,
+        "matrix_fourier_gap": 7.610061635487855e-23,
+        "matrix_solver": null
+      },
+      "unresolved": {
+        "owner_max": 0.0017681375412189999,
+        "action_ry_max": 3.6821403273654235e-05,
+        "weak_dual_E": 2.372862711697149e-07,
+        "power": 1.7338105850394364e-07,
+        "fraction": 0.9999999999995287,
+        "max_mode": 512,
+        "highest_mode_amplitude": 3.3964321157373294e-11
+      },
+      "full_strong": {
+        "owner_max": 0.0017681375243085995,
+        "owner_l2": 0.0011777302186970506,
+        "action_max": 0.0017675559939394998,
+        "ry_max": 3.650976482860724e-05,
+        "weak_dual_E": 2.3735379313702133e-07
+      },
+      "partial_terms": {
+        "represented_weak_dual_E": 5.6611510229305975e-09,
+        "represented_owner_pull_max": 9.608390314276184e-10,
+        "unresolved_owner_max": 0.0017681375412189999,
+        "unresolved_weak_dual_E": 2.372862711697149e-07,
+        "full_strong_owner_max": 0.0017681375243085995,
+        "full_weak_dual_E": 2.3735379313702133e-07,
+        "product_rule_scaled_defect_max": 2.746484871086371e-06,
+        "algebraic_roundoff_gap_max": 3.345977266902469e-09,
+        "highest_mode_amplitude": 3.3964321157373294e-11,
+        "tail_bound": null
+      }
+    },
+    "constructor_current": {
+      "radius_newton_rerun": false,
+      "source_mean_subtracted": false,
+      "current_unchanged": true,
+      "current_mean": -2.2413621942646887e-14,
+      "current_integral": -1.793089755411751e-13,
+      "current_max": 3.2542857299044724e-12,
+      "mean_compatible_at_constructor_tolerance": true,
+      "constructor_tolerance": 1e-08,
+      "tolerance_is_not_a_proof": true,
+      "p_Q_max": 4.0590995871288394e-13,
+      "p_Q_mean": 6.335635819186793e-30,
+      "antiderivative_accepted": true,
+      "full_momentum_max": 2.466615777402166e-12,
+      "represented_momentum_max": 2.2413621942663946e-14,
+      "held_out_momentum_max": 2.489029399344809e-12,
+      "projected_momentum_mean": -2.2413621942646976e-14,
+      "projected_momentum_mean_gap": 8.835242138475332e-29,
+      "projected_shift_beyond_mean_max": 2.1763094653237274e-26,
+      "hamilton_gap_against_zero_p_Q": 0.0,
+      "multiplicity_applied_once": true
+    },
+    "quadrature": {
+      "computed": true,
+      "reason": "same coarse seed on nq and 2 nq; source recomputed, not prolonged",
+      "stored_nq": {
+        "nq": 1024,
+        "full_strong_owner_max": 0.0017681375243085995,
+        "represented_owner_pull_max": 9.608390314276184e-10,
+        "unresolved_owner_max": 0.0017681375412189999,
+        "rho_independent_of_r_max": 0.0,
+        "tail_bound": null
+      },
+      "doubled_nq": {
+        "nq": 2048,
+        "full_strong_owner_max": 0.0017723150093473805,
+        "represented_owner_pull_max": 4.3022570441742905e-09,
+        "unresolved_owner_max": 0.0017723144297701315,
+        "rho_independent_of_r_max": 0.0,
+        "tail_bound": null
+      },
+      "difference_of_full_strong_maxima": 4.177485038781015e-06,
+      "tail_bound": null,
+      "difference_is_not_a_tail_bound": true
+    },
+    "polynomial": {
+      "baseline_stored_rho": {
+        "nf": 256,
+        "ng": 255,
+        "nq": 1024,
+        "dense_max": 0.0017681375243085995,
+        "fft_product_max": 0.0017682771029842645,
+        "dense_minus_fft_max": 8.599248497484339e-07,
+        "G_min": 0.06316419930011759,
+        "G_max": 10.94513919955811,
+        "alias_guard": {
+          "degree_r_band": 127,
+          "degree_source_band": 255,
+          "degree_P": 255,
+          "nyquist": 512,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 127,
+          "represented_max_coeff": 4.501445302893218,
+          "heldout_max_coeff": 3.40144914234632e-16,
+          "power_above_predicted_degree": 9.993763955450771e-30,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 253,
+          "represented_max_coeff": 1.3888850056990791,
+          "heldout_max_coeff": 2.9659895032519123e-05,
+          "power_above_predicted_degree": 2.1702862849135482e-23,
+          "nyquist_coeff": 4.3853809472693683e-14
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 512,
+          "represented_max_coeff": 1.4493846221843058e-10,
+          "heldout_max_coeff": 2.9649582270986686e-05,
+          "power_above_predicted_degree": 5.585114107801129e-18,
+          "nyquist_coeff": 9.87691298106469e-12
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 511,
+          "highest_above_1e-12": 512,
+          "represented_max_coeff": 5.244138771425367e-11,
+          "heldout_max_coeff": 0.00013348196055056632,
+          "power_above_predicted_degree": 9.242582705849828e-14,
+          "nyquist_coeff": 3.3964321157373294e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      "doubled_resampled_rho": {
+        "nf": 256,
+        "ng": 255,
+        "nq": 2048,
+        "dense_max": 0.0017723151474413612,
+        "fft_product_max": 0.0017729790475452562,
+        "dense_minus_fft_max": 7.96112523264786e-06,
+        "G_min": 0.06316419416526327,
+        "G_max": 10.951876006168607,
+        "alias_guard": {
+          "degree_r_band": 127,
+          "degree_source_band": 255,
+          "degree_P": 255,
+          "nyquist": 1024,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 127,
+          "represented_max_coeff": 4.501445302893218,
+          "heldout_max_coeff": 2.5929813169322035e-16,
+          "power_above_predicted_degree": 1.1688448349145422e-29,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 253,
+          "represented_max_coeff": 1.3888850056990791,
+          "heldout_max_coeff": 2.9659895032532262e-05,
+          "power_above_predicted_degree": 2.1702005769049308e-23,
+          "nyquist_coeff": 1.1102230246251565e-16
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 1.4608638851897373e-10,
+          "heldout_max_coeff": 2.9649575191912397e-05,
+          "power_above_predicted_degree": 9.315796147349051e-17,
+          "nyquist_coeff": 4.043585364005113e-11
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 1023,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 6.338780248163224e-10,
+          "heldout_max_coeff": 0.00013348186013915713,
+          "power_above_predicted_degree": 7.47052155763185e-12,
+          "nyquist_coeff": 5.115352760449196e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      "doubled_recomputed_source": {
+        "nf": 256,
+        "ng": 255,
+        "nq": 2048,
+        "dense_max": 0.0017723150093473805,
+        "fft_product_max": 0.0017729789094509188,
+        "dense_minus_fft_max": 7.96112523266991e-06,
+        "G_min": 0.06316419416616156,
+        "G_max": 10.951876006222982,
+        "alias_guard": {
+          "degree_r_band": 127,
+          "degree_source_band": 255,
+          "degree_P": 255,
+          "nyquist": 1024,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 127,
+          "represented_max_coeff": 4.501445302893218,
+          "heldout_max_coeff": 2.5929813169322035e-16,
+          "power_above_predicted_degree": 1.1688448349145422e-29,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 1003,
+          "represented_max_coeff": 1.3888850056990785,
+          "heldout_max_coeff": 2.9659895033013024e-05,
+          "power_above_predicted_degree": 3.464174409609679e-22,
+          "nyquist_coeff": 1.6209256159527285e-14
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 1.4608024661314786e-10,
+          "heldout_max_coeff": 2.9649575192406563e-05,
+          "power_above_predicted_degree": 9.316816854536386e-17,
+          "nyquist_coeff": 4.0419649974309056e-11
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 1023,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 6.338508629198893e-10,
+          "heldout_max_coeff": 0.00013348186014137752,
+          "power_above_predicted_degree": 7.47051330561897e-12,
+          "nyquist_coeff": 5.108061841812344e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      "resampled_minus_recomputed_rho_max": 7.96863020013916e-10,
+      "baseline_polynomial_on_fine_max": 0.0017730400662858282,
+      "fine_fft_minus_resampled_baseline_max": 1.905917715161313e-07,
+      "rounding_enclosure": null,
+      "source_rho_modified": false,
+      "current_modified": false
+    },
+    "total_certified": false,
+    "geometry_error_upper_bound": null
+  },
+  "nf512": {
+    "nf": 512,
+    "ng": 511,
+    "nq": 2048,
+    "evolution_performed": false,
+    "radius_newton_rerun": false,
+    "source_columns_unchanged": true,
+    "ansatz": {
+      "Q_minus_gauge_max": 0.0,
+      "chi_max": 0.0,
+      "p_r_max": 0.0,
+      "p_chi_max": 0.0,
+      "p_Q_max": 0.0,
+      "holds": true
+    },
+    "stored_quadrature_radius_gap": 0.0,
+    "stored_npz_projected_residual": 8.49761520175214e-09,
+    "stored_npz_full_operator": 9.981455056262689e-06,
+    "frozen_rho_gap_max": 0.0,
+    "rho_independent_of_r_max": 0.0,
+    "rho_independent_assumption": true,
+    "frozen_rho_assessment": {
+      "total_certified": false,
+      "represented_weak_certifies_total": false,
+      "geometry_error_upper_bound": null,
+      "tail_bound": null,
+      "tail_bound_reason": "no decay hypothesis was proved for this residual; highest-mode amplitude and held-out power are grid samples only",
+      "Q": 0.25132493326913924,
+      "A": 0.04501936182826115,
+      "rmag2": 0.9999999999999984,
+      "y_min": 2.051951284105388,
+      "y_max": 2.2083522441898227,
+      "r_min": 4.210504072341751,
+      "r_max": 4.876819634418227,
+      "coercivity": {
+        "positive_y": true,
+        "positive_G": true,
+        "G_min": 0.06316422208266698,
+        "G_max": 10.951431857279351,
+        "c_min": 0.07127002523127005,
+        "c_max": 1.4499465331836898,
+        "frozen_alpha": 0.07127002523127005,
+        "frozen_alpha_is_not_the_segment_constant": true,
+        "strict_convexity_assumption": true,
+        "error_inequality_applicable": false,
+        "error_inequality_reason": "Declared G>0 and rho_independent is True give uniform mu=min(4,Q^2) without y_*. Unknown rho independence does not establish that hypothesis. No total bound is emitted: the full residual, continuum positivity of G, and a rounding enclosure are still open.",
+        "rho_independent_of_y": true,
+        "blocker": null,
+        "uniform_mu": 0.0631642220827373,
+        "uniform_mu_requires_y_star": false,
+        "uniform_mu_declared": true,
+        "total_bound": null,
+        "total_bound_gaps": [
+          "full residual dual",
+          "continuum positivity of G",
+          "rounding enclosure"
+        ],
+        "continuum_positivity_enclosed": false,
+        "rounding_enclosed": false
+      },
+      "roundoff": {
+        "algebraic_identity_gap_max": 2.5966427413993834e-08,
+        "defect_explains_action_gap_max": 2.619030770393642e-08,
+        "largest_D2_r2_term": 9.43418275132038,
+        "cancellation_condition": 4254982.461408816,
+        "unit_roundoff_times_condition": 4.253452800603874e-09,
+        "gap_is_not_a_new_acceptance_line": true
+      },
+      "product_rule": {
+        "scaled_defect_max": 2.3743109576536128e-05,
+        "action_minus_owner_max": 2.3732155979705896e-05
+      },
+      "represented": {
+        "owner_pull_max": 8.49761520175214e-09,
+        "action_pull_max": 2.500146997510907e-09,
+        "weak_dual_E_matrix": 1.5869576914267803e-11,
+        "weak_dual_E_fourier": 1.5869576914254995e-11,
+        "matrix_fourier_gap": 1.2808374797500788e-23,
+        "matrix_solver": null
+      },
+      "unresolved": {
+        "owner_max": 9.97865903324404e-06,
+        "action_ry_max": 7.044559997949814e-07,
+        "weak_dual_E": 1.0211731126606429e-09,
+        "power": 8.689575452574225e-12,
+        "fraction": 0.9999994984448146,
+        "max_mode": 1024,
+        "highest_mode_amplitude": 5.220894150511344e-11
+      },
+      "full_strong": {
+        "owner_max": 9.981455056262689e-06,
+        "owner_l2": 8.337663850685293e-06,
+        "action_max": 3.1415529112885785e-05,
+        "ry_max": 7.045268414669625e-07,
+        "weak_dual_E": 1.0212964160773616e-09
+      },
+      "partial_terms": {
+        "represented_weak_dual_E": 1.5869576914267803e-11,
+        "represented_owner_pull_max": 8.49761520175214e-09,
+        "unresolved_owner_max": 9.97865903324404e-06,
+        "unresolved_weak_dual_E": 1.0211731126606429e-09,
+        "full_strong_owner_max": 9.981455056262689e-06,
+        "full_weak_dual_E": 1.0212964160773616e-09,
+        "product_rule_scaled_defect_max": 2.3743109576536128e-05,
+        "algebraic_roundoff_gap_max": 2.5966427413993834e-08,
+        "highest_mode_amplitude": 5.220894150511344e-11,
+        "tail_bound": null
+      }
+    },
+    "source_rho_assessment": {
+      "total_certified": false,
+      "represented_weak_certifies_total": false,
+      "geometry_error_upper_bound": null,
+      "tail_bound": null,
+      "tail_bound_reason": "no decay hypothesis was proved for this residual; highest-mode amplitude and held-out power are grid samples only",
+      "Q": 0.25132493326913924,
+      "A": 0.04501936182826115,
+      "rmag2": 0.9999999999999984,
+      "y_min": 2.051951284105388,
+      "y_max": 2.2083522441898227,
+      "r_min": 4.210504072341751,
+      "r_max": 4.876819634418227,
+      "coercivity": {
+        "positive_y": true,
+        "positive_G": true,
+        "G_min": 0.06316422208266698,
+        "G_max": 10.951431857279351,
+        "c_min": 0.07127002523127005,
+        "c_max": 1.4499465331836898,
+        "frozen_alpha": 0.07127002523127005,
+        "frozen_alpha_is_not_the_segment_constant": true,
+        "strict_convexity_assumption": true,
+        "error_inequality_applicable": false,
+        "error_inequality_reason": "Declared G>0 and rho_independent is True give uniform mu=min(4,Q^2) without y_*. Unknown rho independence does not establish that hypothesis. No total bound is emitted: the full residual, continuum positivity of G, and a rounding enclosure are still open.",
+        "rho_independent_of_y": true,
+        "blocker": null,
+        "uniform_mu": 0.0631642220827373,
+        "uniform_mu_requires_y_star": false,
+        "uniform_mu_declared": true,
+        "total_bound": null,
+        "total_bound_gaps": [
+          "full residual dual",
+          "continuum positivity of G",
+          "rounding enclosure"
+        ],
+        "continuum_positivity_enclosed": false,
+        "rounding_enclosed": false
+      },
+      "roundoff": {
+        "algebraic_identity_gap_max": 2.5966427413993834e-08,
+        "defect_explains_action_gap_max": 2.619030770393642e-08,
+        "largest_D2_r2_term": 9.43418275132038,
+        "cancellation_condition": 4254982.461408816,
+        "unit_roundoff_times_condition": 4.253452800603874e-09,
+        "gap_is_not_a_new_acceptance_line": true
+      },
+      "product_rule": {
+        "scaled_defect_max": 2.3743109576536128e-05,
+        "action_minus_owner_max": 2.3732155979705896e-05
+      },
+      "represented": {
+        "owner_pull_max": 8.49761520175214e-09,
+        "action_pull_max": 2.500146997510907e-09,
+        "weak_dual_E_matrix": 1.5869576914267803e-11,
+        "weak_dual_E_fourier": 1.5869576914254995e-11,
+        "matrix_fourier_gap": 1.2808374797500788e-23,
+        "matrix_solver": null
+      },
+      "unresolved": {
+        "owner_max": 9.97865903324404e-06,
+        "action_ry_max": 7.044559997949814e-07,
+        "weak_dual_E": 1.0211731126606429e-09,
+        "power": 8.689575452574225e-12,
+        "fraction": 0.9999994984448146,
+        "max_mode": 1024,
+        "highest_mode_amplitude": 5.220894150511344e-11
+      },
+      "full_strong": {
+        "owner_max": 9.981455056262689e-06,
+        "owner_l2": 8.337663850685293e-06,
+        "action_max": 3.1415529112885785e-05,
+        "ry_max": 7.045268414669625e-07,
+        "weak_dual_E": 1.0212964160773616e-09
+      },
+      "partial_terms": {
+        "represented_weak_dual_E": 1.5869576914267803e-11,
+        "represented_owner_pull_max": 8.49761520175214e-09,
+        "unresolved_owner_max": 9.97865903324404e-06,
+        "unresolved_weak_dual_E": 1.0211731126606429e-09,
+        "full_strong_owner_max": 9.981455056262689e-06,
+        "full_weak_dual_E": 1.0212964160773616e-09,
+        "product_rule_scaled_defect_max": 2.3743109576536128e-05,
+        "algebraic_roundoff_gap_max": 2.5966427413993834e-08,
+        "highest_mode_amplitude": 5.220894150511344e-11,
+        "tail_bound": null
+      }
+    },
+    "constructor_current": {
+      "radius_newton_rerun": false,
+      "source_mean_subtracted": false,
+      "current_unchanged": true,
+      "current_mean": 1.3585588092395491e-14,
+      "current_integral": 1.0868470473916393e-13,
+      "current_max": 9.184208948907546e-12,
+      "mean_compatible_at_constructor_tolerance": true,
+      "constructor_tolerance": 1e-08,
+      "tolerance_is_not_a_proof": true,
+      "p_Q_max": 3.8862963552072595e-13,
+      "p_Q_mean": 1.5808093286620666e-30,
+      "antiderivative_accepted": true,
+      "full_momentum_max": 7.2553676756023295e-12,
+      "represented_momentum_max": 1.3585588092447115e-14,
+      "held_out_momentum_max": 7.241782087509932e-12,
+      "projected_momentum_mean": 1.358558809239529e-14,
+      "projected_momentum_mean_gap": 2.00370669926137e-28,
+      "projected_shift_beyond_mean_max": 5.182500602939959e-26,
+      "hamilton_gap_against_zero_p_Q": 0.0,
+      "multiplicity_applied_once": true
+    },
+    "quadrature": {
+      "computed": true,
+      "reason": "same coarse seed on nq and 2 nq; source recomputed, not prolonged",
+      "stored_nq": {
+        "nq": 2048,
+        "full_strong_owner_max": 9.981455056262689e-06,
+        "represented_owner_pull_max": 8.49761520175214e-09,
+        "unresolved_owner_max": 9.97865903324404e-06,
+        "rho_independent_of_r_max": 0.0,
+        "tail_bound": null
+      },
+      "doubled_nq": {
+        "nq": 4096,
+        "full_strong_owner_max": 4.539313647278211e-05,
+        "represented_owner_pull_max": 2.8611728914071384e-08,
+        "unresolved_owner_max": 4.538906450203227e-05,
+        "rho_independent_of_r_max": 0.0,
+        "tail_bound": null
+      },
+      "difference_of_full_strong_maxima": 3.541168141651942e-05,
+      "tail_bound": null,
+      "difference_is_not_a_tail_bound": true
+    },
+    "polynomial": {
+      "baseline_stored_rho": {
+        "nf": 512,
+        "ng": 511,
+        "nq": 2048,
+        "dense_max": 9.981455056262689e-06,
+        "fft_product_max": 5.068517579063356e-06,
+        "dense_minus_fft_max": 7.978065183599058e-06,
+        "G_min": 0.06316422208266698,
+        "G_max": 10.951431857279351,
+        "alias_guard": {
+          "degree_r_band": 255,
+          "degree_source_band": 511,
+          "degree_P": 511,
+          "nyquist": 1024,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 161,
+          "represented_max_coeff": 4.501445303655121,
+          "heldout_max_coeff": 2.901152573456526e-16,
+          "power_above_predicted_degree": 2.014988191869948e-29,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 1003,
+          "represented_max_coeff": 1.388885006112028,
+          "heldout_max_coeff": 7.963597711491264e-08,
+          "power_above_predicted_degree": 3.3705490032687607e-22,
+          "nyquist_coeff": 9.43689570931383e-15
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 7.586347052164508e-10,
+          "heldout_max_coeff": 7.965164543723101e-08,
+          "power_above_predicted_degree": 1.8803098680340297e-16,
+          "nyquist_coeff": 2.3267297566713016e-11
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 1023,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 3.370995549850408e-10,
+          "heldout_max_coeff": 1.413590492198048e-06,
+          "power_above_predicted_degree": 7.383829587868655e-12,
+          "nyquist_coeff": 5.220894150511344e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      "doubled_resampled_rho": {
+        "nf": 512,
+        "ng": 511,
+        "nq": 4096,
+        "dense_max": 4.5393137815707973e-05,
+        "fft_product_max": 5.400936559883778e-06,
+        "dense_minus_fft_max": 4.526152018715751e-05,
+        "G_min": 0.0631642220785055,
+        "G_max": 10.951431857279353,
+        "alias_guard": {
+          "degree_r_band": 255,
+          "degree_source_band": 511,
+          "degree_P": 511,
+          "nyquist": 2048,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 161,
+          "represented_max_coeff": 4.501445303655121,
+          "heldout_max_coeff": 4.440892098500626e-16,
+          "power_above_predicted_degree": 2.3279237698006084e-29,
+          "nyquist_coeff": 4.440892098500626e-16
+        },
+        "degree_G": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 1003,
+          "represented_max_coeff": 1.388885006112028,
+          "heldout_max_coeff": 7.963597711732748e-08,
+          "power_above_predicted_degree": 3.3705351910061973e-22,
+          "nyquist_coeff": 1.1102230246251565e-16
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 7.716391379220252e-10,
+          "heldout_max_coeff": 7.961810005582388e-08,
+          "power_above_predicted_degree": 3.0084505572259415e-15,
+          "nyquist_coeff": 4.002293285063898e-12
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 2047,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 4.0280077493608695e-09,
+          "heldout_max_coeff": 3.036006390528289e-06,
+          "power_above_predicted_degree": 1.6982880468623943e-10,
+          "nyquist_coeff": 4.09003815688392e-12
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      "doubled_recomputed_source": {
+        "nf": 512,
+        "ng": 511,
+        "nq": 4096,
+        "dense_max": 4.539313647278211e-05,
+        "fft_product_max": 5.400487193488524e-06,
+        "dense_minus_fft_max": 4.526152018718618e-05,
+        "G_min": 0.06316422208266698,
+        "G_max": 10.9514318577357,
+        "alias_guard": {
+          "degree_r_band": 255,
+          "degree_source_band": 511,
+          "degree_P": 511,
+          "nyquist": 2048,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 161,
+          "represented_max_coeff": 4.501445303655121,
+          "heldout_max_coeff": 4.440892098500626e-16,
+          "power_above_predicted_degree": 2.3279237698006084e-29,
+          "nyquist_coeff": 4.440892098500626e-16
+        },
+        "degree_G": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 1.3888850061120284,
+          "heldout_max_coeff": 7.963598951684567e-08,
+          "power_above_predicted_degree": 5.250462450348326e-21,
+          "nyquist_coeff": 1.7099655025276661e-12
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 7.716220120658739e-10,
+          "heldout_max_coeff": 7.961811243965648e-08,
+          "power_above_predicted_degree": 3.0085267424520714e-15,
+          "nyquist_coeff": 5.7121892834560446e-12
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 2047,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 4.027930429510369e-09,
+          "heldout_max_coeff": 3.0360075037376933e-06,
+          "power_above_predicted_degree": 1.6982863908125531e-10,
+          "nyquist_coeff": 3.607876431465721e-12
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      "resampled_minus_recomputed_rho_max": 3.136996440389339e-09,
+      "baseline_polynomial_on_fine_max": 5.068517579063356e-06,
+      "fine_fft_minus_resampled_baseline_max": 1.0415741649133184e-06,
+      "rounding_enclosure": null,
+      "source_rho_modified": false,
+      "current_modified": false
+    },
+    "total_certified": false,
+    "geometry_error_upper_bound": null
+  },
+  "polynomial_control": {
+    "temporary_script_required": false,
+    "comparisons": [
+      {
+        "label": "nf256_nq1024",
+        "rho": "stored",
+        "nf": 256,
+        "ng": 255,
+        "nq": 1024,
+        "dense_max": 0.0017681375243085995,
+        "fft_product_max": 0.0017682771029842645,
+        "dense_minus_fft_max": 8.599248497484339e-07,
+        "G_min": 0.06316419930011759,
+        "G_max": 10.94513919955811,
+        "alias_guard": {
+          "degree_r_band": 127,
+          "degree_source_band": 255,
+          "degree_P": 255,
+          "nyquist": 512,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 127,
+          "represented_max_coeff": 4.501445302893218,
+          "heldout_max_coeff": 3.40144914234632e-16,
+          "power_above_predicted_degree": 9.993763955450771e-30,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 253,
+          "represented_max_coeff": 1.3888850056990791,
+          "heldout_max_coeff": 2.9659895032519123e-05,
+          "power_above_predicted_degree": 2.1702862849135482e-23,
+          "nyquist_coeff": 4.3853809472693683e-14
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 512,
+          "represented_max_coeff": 1.4493846221843058e-10,
+          "heldout_max_coeff": 2.9649582270986686e-05,
+          "power_above_predicted_degree": 5.585114107801129e-18,
+          "nyquist_coeff": 9.87691298106469e-12
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 511,
+          "highest_above_1e-12": 512,
+          "represented_max_coeff": 5.244138771425367e-11,
+          "heldout_max_coeff": 0.00013348196055056632,
+          "power_above_predicted_degree": 9.242582705849828e-14,
+          "nyquist_coeff": 3.3964321157373294e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      {
+        "label": "nf256_nq2048",
+        "rho": "fft_resample_of_baseline_source_rho",
+        "nf": 256,
+        "ng": 255,
+        "nq": 2048,
+        "dense_max": 0.0017723151474413612,
+        "fft_product_max": 0.0017729790475452562,
+        "dense_minus_fft_max": 7.96112523264786e-06,
+        "G_min": 0.06316419416526327,
+        "G_max": 10.951876006168607,
+        "alias_guard": {
+          "degree_r_band": 127,
+          "degree_source_band": 255,
+          "degree_P": 255,
+          "nyquist": 1024,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 127,
+          "represented_max_coeff": 4.501445302893218,
+          "heldout_max_coeff": 2.5929813169322035e-16,
+          "power_above_predicted_degree": 1.1688448349145422e-29,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 253,
+          "represented_max_coeff": 1.3888850056990791,
+          "heldout_max_coeff": 2.9659895032532262e-05,
+          "power_above_predicted_degree": 2.1702005769049308e-23,
+          "nyquist_coeff": 1.1102230246251565e-16
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 200,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 1.4608638851897373e-10,
+          "heldout_max_coeff": 2.9649575191912397e-05,
+          "power_above_predicted_degree": 9.315796147349051e-17,
+          "nyquist_coeff": 4.043585364005113e-11
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 1023,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 6.338780248163224e-10,
+          "heldout_max_coeff": 0.00013348186013915713,
+          "power_above_predicted_degree": 7.47052155763185e-12,
+          "nyquist_coeff": 5.115352760449196e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      {
+        "label": "nf512_nq2048",
+        "rho": "stored",
+        "nf": 512,
+        "ng": 511,
+        "nq": 2048,
+        "dense_max": 9.981455056262689e-06,
+        "fft_product_max": 5.068517579063356e-06,
+        "dense_minus_fft_max": 7.978065183599058e-06,
+        "G_min": 0.06316422208266698,
+        "G_max": 10.951431857279351,
+        "alias_guard": {
+          "degree_r_band": 255,
+          "degree_source_band": 511,
+          "degree_P": 511,
+          "nyquist": 1024,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 161,
+          "represented_max_coeff": 4.501445303655121,
+          "heldout_max_coeff": 2.901152573456526e-16,
+          "power_above_predicted_degree": 2.014988191869948e-29,
+          "nyquist_coeff": 0.0
+        },
+        "degree_G": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 1003,
+          "represented_max_coeff": 1.388885006112028,
+          "heldout_max_coeff": 7.963597711491264e-08,
+          "power_above_predicted_degree": 3.3705490032687607e-22,
+          "nyquist_coeff": 9.43689570931383e-15
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 7.586347052164508e-10,
+          "heldout_max_coeff": 7.965164543723101e-08,
+          "power_above_predicted_degree": 1.8803098680340297e-16,
+          "nyquist_coeff": 2.3267297566713016e-11
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 1023,
+          "highest_above_1e-12": 1024,
+          "represented_max_coeff": 3.370995549850408e-10,
+          "heldout_max_coeff": 1.413590492198048e-06,
+          "power_above_predicted_degree": 7.383829587868655e-12,
+          "nyquist_coeff": 5.220894150511344e-11
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      },
+      {
+        "label": "nf512_nq4096",
+        "rho": "fft_resample_of_baseline_source_rho",
+        "nf": 512,
+        "ng": 511,
+        "nq": 4096,
+        "dense_max": 4.5393137815707973e-05,
+        "fft_product_max": 5.400936559883778e-06,
+        "dense_minus_fft_max": 4.526152018715751e-05,
+        "G_min": 0.0631642220785055,
+        "G_max": 10.951431857279353,
+        "alias_guard": {
+          "degree_r_band": 255,
+          "degree_source_band": 511,
+          "degree_P": 511,
+          "nyquist": 2048,
+          "alias_free": true
+        },
+        "degree_r": {
+          "highest_above_1e-8": 72,
+          "highest_above_1e-12": 161,
+          "represented_max_coeff": 4.501445303655121,
+          "heldout_max_coeff": 4.440892098500626e-16,
+          "power_above_predicted_degree": 2.3279237698006084e-29,
+          "nyquist_coeff": 4.440892098500626e-16
+        },
+        "degree_G": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 1003,
+          "represented_max_coeff": 1.388885006112028,
+          "heldout_max_coeff": 7.963597711732748e-08,
+          "power_above_predicted_degree": 3.3705351910061973e-22,
+          "nyquist_coeff": 1.1102230246251565e-16
+        },
+        "degree_numerator": {
+          "highest_above_1e-8": 274,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 7.716391379220252e-10,
+          "heldout_max_coeff": 7.961810005582388e-08,
+          "power_above_predicted_degree": 3.0084505572259415e-15,
+          "nyquist_coeff": 4.002293285063898e-12
+        },
+        "degree_dense_C": {
+          "highest_above_1e-8": 2047,
+          "highest_above_1e-12": 2048,
+          "represented_max_coeff": 4.0280077493608695e-09,
+          "heldout_max_coeff": 3.036006390528289e-06,
+          "power_above_predicted_degree": 1.6982880468623943e-10,
+          "nyquist_coeff": 4.09003815688392e-12
+        },
+        "source_rho_modified": false,
+        "current_modified": false,
+        "rounding_enclosure": null,
+        "conditioning_indicator": true
+      }
+    ],
+    "comparison_count": 4,
+    "source_rho_modified": false,
+    "current_modified": false,
+    "rounding_enclosure": null,
+    "conditioning_indicator": {
+      "nf512_dense_nq2048": 9.981455056262689e-06,
+      "nf512_dense_nq4096": 4.539313647278211e-05,
+      "nf512_product_nq2048": 5.068517579063356e-06,
+      "nf512_product_nq4096": 5.400936559883778e-06,
+      "statement": "The dense owner maximum moves from about 9.98e-6 at nq=2048 to about 4.54e-5 at nq=4096, while the Fourier product residual stays near 5.07e-6 to 5.40e-6. This is a conditioning indicator, not a rounding enclosure."
+    }
+  },
+  "replay_gaps": {
+    "nf256_frozen_minus_saved_frozen_operator": 0.0,
+    "nf256_source_minus_saved_full_C": -2.5863755581667647e-12,
+    "nf256_doubled_minus_saved_nq2048": -2.4726887204451486e-12,
+    "nf512_source_minus_saved_full_C": -1.368327673390013e-11,
+    "nf256_constructor_current_minus_saved_current_max": 0.0
+  },
+  "source_hashes": {
+    "src/recursive_horizons/nsc_spherical_cauchy_weak.py": "14e8c4de9028385a44b903391d07815b300a55caf82a158767141593757e3051",
+    "tests/test_nsc_spherical_cauchy_weak.py": "0b82dbad4ad5ba74c066831be350a12199b2da299f3ceea8b611f8bb344de790",
+    "scripts/derive_nsc_spherical_cauchy_weak.py": "c699f641b1a246e3336548bb0063fdc39cc2f3da5802e0c5715d4976500f7582",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_cauchy_data.py": "067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3"
+  },
+  "v5_npz_sha256_after": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+  "v5_json_sha256_after": "1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+  "v5_bytes_unchanged": true
+}

@@ -4,6 +4,25 @@ Diagnostic only. The global number near zero is the constrained coordinate
 Hamiltonian. Renewal, a continuum limit, and a frozen-link embedding are not
 claimed. Geometry-derived \(B\) is not used. Six owned tests passed in 0.42 s.
 
+\(F_L\), \(F_Q\), and \(F_\beta\) are nodal partials of \(M\operatorname{Tr}(CH)\),
+with \(M=4\kappa\) once. The coordinate generator is the nodal sample
+\(e=LF_L+\beta F_\beta\). \(F_Q\dot Q\) is coordinate metric work and includes
+\(\dot Q=\partial_x(\beta Q)\). It is not observer pressure work. Proper
+densities divide by the node spacing:
+
+\[
+\rho=\frac{F_L}{4\pi r^4 Q\,dx},\quad
+p_r=-\frac{F_Q}{4\pi r^4 L\,dx},\quad
+p_\perp=\frac{L F_L+Q F_Q}{8\pi r^4 LQ\,dx},\quad
+j=-\frac{F_\beta}{4\pi r^4 Q^2\,dx}.
+\]
+
+The observer balance is proper pressure work plus the spatial lapse gradient
+\(-V(j/q)\partial_x N\). The checked residual is that identity on the nodal
+shell \(F_L/r=V\rho\,dx\), so the discrete flux and the lapse-gradient sample
+both carry \(dx\). Hamiltonian derivatives, including \(F_Q/r\) and the
+chain-rule \(\partial E/\partial r\), are not \(p_r\) or \(p_\perp\).
+
 | Path | sha256 |
 |---|---|
 | `lab/src/recursive_horizons/nsc_regional_energy_exchange.py` | `9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7` |
@@ -21,7 +40,8 @@ Nodal \(F_L,F_Q,F_\beta\) are partial derivatives of \(M\operatorname{Tr}(CH)\),
 \(M=4\kappa\) once. A density divides by the node spacing \(dx\).
 \(N=rL\), \(q=rQ\), and \(V=4\pi q r^2\).
 
-The coordinate matter integrand is the generator density
+The coordinate generator is the nodal sample. It sums directly to the matter
+trace. It is not the proper density \(\rho\):
 
 \[
 e=L F_L+\beta F_\beta=M(aK+mS-\beta J),\qquad a=L/Q,\quad m=\kappa L.
@@ -129,8 +149,11 @@ Regional coordinate totals move by \(0.00378\), \(-0.01305\), \(0.00597\), and
 
 The packet alias and the manufactured Galerkin lift are explicit extra
 exchange. The v5 state is the saved diagnostic initial slice; this note does
-not rerun \(T=0.005\) or change its full-\(C\) status. Vacuum branch \(B\),
-embedding, and a continuum renewal stay open.
+not rerun \(T=0.005\) or change its full-\(C\) status. Historical vacuum
+branch \(B\) is not a prerequisite. Embedding stays optional. Continuum
+renewal is not claimed. The saved \(T=0.05\) episode is the separate
+record `results/development/nsc-spherical-feedback-episode-v1.json`. This
+note does not rerun it.
 
 ```sh
 python scripts/lab.py -m pytest tests/test_nsc_regional_energy_exchange.py -q

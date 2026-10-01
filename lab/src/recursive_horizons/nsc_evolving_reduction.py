@@ -6,6 +6,11 @@ Schrödinger equation rewritten in retained labels. A later geometry enters
 only by supplying the callable ``H(t)``. This module does not build that
 trajectory, and the prescribed six-mode pulse below is not regeneration.
 
+``backend="dense"`` stores the free exterior propagator. ``backend="streamed"``
+is opt-in: it applies the same midpoint product, through ``expm_multiply``,
+only to the source columns of ``B(s)†``, the drive columns, and the running
+memory image. It does not store ``W(t)``.
+
 Units are ``hbar = 1``. The local basis is fixed. A moving projector would
 need a Berry term and is rejected. Occupied and empty kernels use ``C_EE``
 and ``I-C_EE``. Initial cross blocks stay in the covariance assembly.
@@ -17,6 +22,7 @@ from functools import lru_cache
 import numpy as np
 import sympy as sp
 from scipy.linalg import expm, null_space
+from scipy.sparse.linalg import LinearOperator, expm_multiply
 
 from .nsc_influence import _covariance
 from .nsc_nested_qualities import finite_window
@@ -163,6 +169,485 @@ def free_exterior_propagator(exterior_hamiltonian, times, substeps=1):
             current = expm(-1j * sample * generator) @ current
         propagator[left + 1] = current
     return propagator
+
+
+def _backend_name(backend):
+    if not isinstance(backend, str) or backend not in ("dense", "streamed"):
+        raise ValueError("backend must be 'dense' or 'streamed'")
+    return backend
+
+
+def _grid_index(index, size, label):
+    if isinstance(index, bool) or not isinstance(index, int):
+        raise ValueError(f"{label} must be an output-node index")
+    if index < 0 or index >= size:
+        raise ValueError(f"{label} is outside the time grid")
+    return index
+
+
+def _interval_midpoints(t_left, t_right, substeps):
+    width = float(t_right - t_left)
+    sample = width / substeps
+    return [
+        (float(t_left + (part + 0.5) * sample), sample)
+        for part in range(substeps)
+    ]
+
+
+def _grid_midpoints(times, index, substeps):
+    pairs = []
+    for left in range(index):
+        pairs.extend(_interval_midpoints(float(times[left]), float(times[left + 1]), substeps))
+    return pairs
+
+
+def _linear_operator_trace(operator):
+    dimension = operator.shape[0]
+    total = 0j
+    basis_vector = np.zeros(dimension, dtype=np.complex128)
+    for index in range(dimension):
+        basis_vector[index] = 1.0
+        total += complex(np.vdot(basis_vector, operator.matvec(basis_vector)))
+        basis_vector[index] = 0.0
+    return total
+
+
+def _note_generator(workspace, matrix):
+    if workspace is None:
+        return
+    workspace["current_exterior_block_bytes"] = max(
+        workspace["current_exterior_block_bytes"],
+        int(np.asarray(matrix).nbytes),
+    )
+
+
+def _note_columns(workspace, *arrays):
+    if workspace is None:
+        return
+    total = sum(int(np.asarray(array).nbytes) for array in arrays)
+    workspace["peak_column_workspace_bytes"] = max(
+        workspace["peak_column_workspace_bytes"],
+        total,
+    )
+    width = max(int(np.asarray(array).shape[1]) for array in arrays)
+    workspace["max_transported_columns"] = max(
+        workspace["max_transported_columns"],
+        width,
+    )
+
+
+def _expm_multiply_columns(operator, coefficient, columns, workspace):
+    """Action of ``exp(coefficient * E)`` on columns.
+
+    A dense block is checked Hermitian and discarded after the multiply.
+    A ``LinearOperator`` is the same action without a formed block. The
+    trace passed to ``expm_multiply`` is the exact trace of the scaled
+    operator; it fixes the scaling input and is not a surrogate evolution.
+    """
+    if isinstance(operator, LinearOperator):
+        if operator.shape != (columns.shape[0], columns.shape[0]):
+            raise ValueError("exterior Hamiltonian changed dimension")
+        scaled = coefficient * operator
+        produced = expm_multiply(scaled, columns, traceA=_linear_operator_trace(scaled))
+    else:
+        matrix = _hermitian_matrix(operator, "exterior Hamiltonian")
+        if matrix.shape != (columns.shape[0], columns.shape[0]):
+            raise ValueError("exterior Hamiltonian changed dimension")
+        _note_generator(workspace, matrix)
+        scaled = coefficient * matrix
+        produced = expm_multiply(scaled, columns, traceA=np.trace(scaled))
+    produced = np.asarray(produced, dtype=np.complex128)
+    if produced.shape != columns.shape:
+        raise RuntimeError("exterior column action changed shape")
+    return np.ascontiguousarray(produced)
+
+
+def _act_on_midpoints(generator, samples, columns, *, adjoint, workspace):
+    ordered = list(samples)
+    if adjoint:
+        ordered.reverse()
+    current = np.array(columns, dtype=np.complex128, copy=True)
+    if current.ndim != 2 or current.shape[1] < 1 or not np.isfinite(current).all():
+        raise ValueError("exterior columns must be a finite matrix with one or more columns")
+    _note_columns(workspace, current)
+    for time, width in ordered:
+        coefficient = (1j * width) if adjoint else (-1j * width)
+        current = _expm_multiply_columns(generator(float(time)), coefficient, current, workspace)
+    return current
+
+
+def midpoint_exponential_action(
+    generator,
+    t_left,
+    t_right,
+    state,
+    *,
+    substeps=1,
+    adjoint=False,
+    workspace=None,
+):
+    """Apply one midpoint interval of ``i Wdot = E(t) W`` to columns.
+
+    ``generator(t)`` returns the exterior block as a Hermitian matrix or as
+    a ``LinearOperator``. ``adjoint=False`` applies the forward product used
+    by ``free_exterior_propagator``. ``adjoint=True`` applies the conjugate
+    transpose of that same product. No propagator matrix is stored.
+    ``workspace`` is the reducer's allocation record; callers omit it.
+    """
+    if not callable(generator):
+        raise TypeError("exterior generator must be a callable E(t)")
+    left = float(t_left)
+    right = float(t_right)
+    if not np.isfinite(left) or not np.isfinite(right) or right < left:
+        raise ValueError("midpoint interval must be finite and ordered")
+    refinement = _positive_substeps(substeps)
+    if right == left:
+        current = np.array(state, dtype=np.complex128, copy=True)
+        if current.ndim != 2 or not np.isfinite(current).all():
+            raise ValueError("exterior columns must be a finite matrix")
+        return current
+    return _act_on_midpoints(
+        generator,
+        _interval_midpoints(left, right, refinement),
+        state,
+        adjoint=bool(adjoint),
+        workspace=workspace,
+    )
+
+
+def exterior_column_transport(
+    generator,
+    times,
+    index,
+    state,
+    *,
+    substeps=1,
+    adjoint=False,
+    workspace=None,
+):
+    """Apply ``W(times[index], times[0])`` or its adjoint to columns.
+
+    The product is the same midpoint composition as
+    ``free_exterior_propagator``. ``index`` is an output node. The action
+    is recomputed from ``generator`` and is not read from a stored ``W``.
+    """
+    if not callable(generator):
+        raise TypeError("exterior generator must be a callable E(t)")
+    grid = _uniform_times(times)
+    refinement = _positive_substeps(substeps)
+    node = _grid_index(index, grid.size, "transport index")
+    return _act_on_midpoints(
+        generator,
+        _grid_midpoints(grid, node, refinement),
+        state,
+        adjoint=bool(adjoint),
+        workspace=workspace,
+    )
+
+
+def _exterior_generator(hamiltonian, frame, retained_dimension):
+    dimension = frame.shape[0]
+
+    def generator(time):
+        matrix = _hermitian_matrix(hamiltonian(float(time)), "H(t)")
+        if matrix.shape != (dimension, dimension):
+            raise ValueError("H(t) changed dimension")
+        _local, _coupling, exterior = hamiltonian_blocks(matrix, frame, retained_dimension)
+        return exterior
+
+    return generator
+
+
+def _coupling_at(hamiltonian, frame, retained_dimension, time, *, coupling):
+    matrix = _hermitian_matrix(hamiltonian(float(time)), "H(t)")
+    if matrix.shape[0] != frame.shape[0]:
+        raise ValueError("H(t) changed dimension")
+    _local, link, _exterior = hamiltonian_blocks(matrix, frame, retained_dimension)
+    if not coupling:
+        link = np.zeros_like(link)
+    return link
+
+
+def causal_memory_kernel(
+    hamiltonian,
+    frame,
+    retained_dimension,
+    times,
+    later,
+    earlier,
+    *,
+    substeps=1,
+    coupling=True,
+):
+    """Assemble ``B(t) U_E(t, s) B(s)†`` from source-column cohorts.
+
+    ``later`` and ``earlier`` are indices into ``times``. Each cohort is
+    ``B†`` adjoint-propagated back to ``times[0]`` by the midpoint product.
+    The kernel is ``cohort_later† @ cohort_earlier``. This is the integrand
+    factor in the retained history, without the retarded ``-i θ`` of the
+    boundary-state kernel. No exterior propagator is stored.
+
+    The frame must already be the fixed completion of the observer. This
+    function does not rebuild or rephase ``V``.
+    """
+    _require_callable_hamiltonian(hamiltonian)
+    grid = _uniform_times(times)
+    refinement = _positive_substeps(substeps)
+    later_index = _grid_index(later, grid.size, "later")
+    earlier_index = _grid_index(earlier, grid.size, "earlier")
+    basis = np.asarray(frame, dtype=np.complex128)
+    link_later = _coupling_at(
+        hamiltonian,
+        basis,
+        retained_dimension,
+        grid[later_index],
+        coupling=bool(coupling),
+    )
+    link_earlier = _coupling_at(
+        hamiltonian,
+        basis,
+        retained_dimension,
+        grid[earlier_index],
+        coupling=bool(coupling),
+    )
+    generator = _exterior_generator(hamiltonian, basis, retained_dimension)
+    cohort_later = exterior_column_transport(
+        generator,
+        grid,
+        later_index,
+        link_later.conj().T,
+        substeps=refinement,
+        adjoint=True,
+    )
+    cohort_earlier = exterior_column_transport(
+        generator,
+        grid,
+        earlier_index,
+        link_earlier.conj().T,
+        substeps=refinement,
+        adjoint=True,
+    )
+    return {
+        "kernel": cohort_later.conj().T @ cohort_earlier,
+        "cohort_later": cohort_later,
+        "cohort_earlier": cohort_earlier,
+        "time_later": float(grid[later_index]),
+        "time_earlier": float(grid[earlier_index]),
+        "stores_exterior_propagator": False,
+    }
+
+
+def _causal_theta(t, s):
+    if t > s:
+        return 1.0
+    if t == s:
+        return 0.5
+    return 0.0
+
+
+def _stream_workspace(frame, exterior_dimension, retained_dimension, output_times):
+    return {
+        "backend": "streamed",
+        "dense_exterior_propagator_frames": 0,
+        "time_indexed_exterior_propagator_bytes": 0,
+        "history_bytes": 0,
+        "amplitude_bytes": 0,
+        "coupling_bytes": 0,
+        "retained_block_bytes": 0,
+        "current_exterior_block_bytes": 0,
+        "peak_column_workspace_bytes": 0,
+        "max_transported_columns": 0,
+        "required_exterior_columns": 0,
+        "frame_bytes": int(np.asarray(frame).nbytes),
+        "frame_completion": "dense-null-space-once",
+        "exterior_dimension": int(exterior_dimension),
+        "retained_dimension": int(retained_dimension),
+        "column_count": 0,
+        "output_times": int(output_times),
+        "source_cohort_width": int(retained_dimension),
+        "propagator_storage": "none",
+        "history_replay": "adjoint-midpoint-on-source-cohorts",
+    }
+
+
+def _column_derivative(
+    local,
+    amplitude,
+    coupling,
+    memory_columns,
+    drive_columns,
+    *,
+    memory,
+    outside_drive,
+):
+    """Retained derivative with the causal column images already applied.
+
+    ``memory_columns`` is ``S = U Z``, so ``B S`` is the history integral
+    against ``B(t) U_E(t, s) B(s)†``. ``drive_columns`` is ``U Y_0``.
+    """
+    derivative = -1j * (local @ amplitude)
+    if memory:
+        derivative = derivative - coupling @ memory_columns
+    if outside_drive:
+        derivative = derivative - 1j * (coupling @ drive_columns)
+    return derivative
+
+
+def _split_transport(moved, pieces):
+    advanced = {}
+    cursor = 0
+    for label, part in pieces:
+        width = part.shape[1]
+        advanced[label] = moved[:, cursor : cursor + width]
+        cursor += width
+    return advanced
+
+
+def _volterra_streamed(
+    local_blocks,
+    coupling_blocks,
+    exterior_at,
+    times,
+    initial_retained,
+    initial_exterior,
+    step,
+    *,
+    substeps,
+    memory,
+    outside_drive,
+    coupling_active,
+    workspace,
+):
+    """Trapezoid step whose exterior actions are column transports.
+
+    The linear unknown at each step is only the retained matrix. Each
+    column of ``X`` contributes one drive column and one memory column.
+    The source cohort is ``B†``, so its width is the retained dimension.
+    One midpoint interval advances those columns. The interaction-picture
+    history reapplies the adjoint of that product to the new source cohort
+    and does not read a stored ``W``.
+    """
+    count = local_blocks.shape[0]
+    retained_dimension = local_blocks.shape[1]
+    exterior_dimension = initial_exterior.shape[0]
+    column_count = initial_retained.shape[1]
+    amplitudes = np.empty((count, retained_dimension, column_count), dtype=np.complex128)
+    history = np.zeros((count, exterior_dimension, column_count), dtype=np.complex128)
+    amplitude = np.array(initial_retained, dtype=np.complex128, copy=True)
+    accumulator = np.zeros((exterior_dimension, column_count), dtype=np.complex128)
+    memory_columns = np.zeros((exterior_dimension, column_count), dtype=np.complex128)
+    drive_columns = np.array(initial_exterior, dtype=np.complex128, copy=True)
+    amplitudes[0] = amplitude
+    residual = 0.0
+    cached_cohort = None
+    transport = bool(coupling_active) and (bool(memory) or bool(outside_drive))
+    if transport:
+        workspace["required_exterior_columns"] = max(
+            int(workspace["required_exterior_columns"]),
+            int(column_count),
+        )
+    workspace["column_count"] = max(int(workspace["column_count"]), int(column_count))
+    for index in range(count - 1):
+        local_now = local_blocks[index]
+        local_new = local_blocks[index + 1]
+        coupling_now = coupling_blocks[index]
+        coupling_new = coupling_blocks[index + 1]
+        current_derivative = _column_derivative(
+            local_now,
+            amplitude,
+            coupling_now,
+            memory_columns,
+            drive_columns,
+            memory=memory,
+            outside_drive=outside_drive,
+        )
+        step_matrix = np.eye(retained_dimension, dtype=np.complex128) + 1j * (step / 2.0) * local_new
+        bracket = current_derivative
+        advanced = {}
+        if transport and memory:
+            cohort_now = coupling_now.conj().T
+            pieces = [("memory", memory_columns), ("cohort", cohort_now)]
+            if outside_drive:
+                pieces.append(("drive", drive_columns))
+            bundle = np.concatenate([part for _label, part in pieces], axis=1)
+            _note_columns(workspace, bundle)
+            moved = midpoint_exponential_action(
+                exterior_at,
+                times[index],
+                times[index + 1],
+                bundle,
+                substeps=substeps,
+                workspace=workspace,
+            )
+            advanced = _split_transport(moved, pieces)
+            step_matrix = step_matrix + (step * step / 4.0) * (
+                coupling_new @ coupling_new.conj().T
+            )
+            remembered_image = advanced["memory"] + (step / 2.0) * (advanced["cohort"] @ amplitude)
+            bracket = bracket - coupling_new @ remembered_image
+        elif transport and outside_drive:
+            _note_columns(workspace, drive_columns)
+            advanced["drive"] = midpoint_exponential_action(
+                exterior_at,
+                times[index],
+                times[index + 1],
+                drive_columns,
+                substeps=substeps,
+                workspace=workspace,
+            )
+        if transport and outside_drive:
+            bracket = bracket - 1j * (coupling_new @ advanced["drive"])
+        right_hand = amplitude + (step / 2.0) * bracket
+        try:
+            updated = np.linalg.solve(step_matrix, right_hand)
+        except np.linalg.LinAlgError as error:
+            raise np.linalg.LinAlgError(
+                "retained trapezoid matrix is singular; refine the uniform step"
+            ) from error
+        if transport and memory:
+            if index == 0:
+                interaction_now = coupling_now.conj().T @ amplitude
+            else:
+                interaction_now = cached_cohort @ amplitude
+            cohort_new = exterior_column_transport(
+                exterior_at,
+                times,
+                index + 1,
+                coupling_new.conj().T,
+                substeps=substeps,
+                adjoint=True,
+                workspace=workspace,
+            )
+            interaction_new = cohort_new @ updated
+            updated_history = accumulator + (step / 2.0) * (interaction_now + interaction_new)
+            updated_memory = advanced["memory"] + (step / 2.0) * (
+                advanced["cohort"] @ amplitude + coupling_new.conj().T @ updated
+            )
+            cached_cohort = cohort_new
+        else:
+            updated_history = accumulator
+            updated_memory = memory_columns
+        updated_drive = advanced["drive"] if transport and outside_drive else drive_columns
+        updated_derivative = _column_derivative(
+            local_new,
+            updated,
+            coupling_new,
+            updated_memory,
+            updated_drive,
+            memory=memory,
+            outside_drive=outside_drive,
+        )
+        discrepancy = updated - amplitude - (step / 2.0) * (current_derivative + updated_derivative)
+        residual = max(residual, float(np.linalg.norm(discrepancy, ord="fro")))
+        amplitude = updated
+        accumulator = updated_history
+        memory_columns = updated_memory
+        drive_columns = updated_drive
+        amplitudes[index + 1] = amplitude
+        history[index + 1] = accumulator
+    workspace["history_bytes"] += int(history.nbytes)
+    workspace["amplitude_bytes"] += int(amplitudes.nbytes)
+    return amplitudes, history, residual
 
 
 def _require_callable_hamiltonian(hamiltonian):
@@ -361,14 +846,54 @@ def exterior_kernels(
     identity = np.eye(exterior.shape[0], dtype=np.complex128)
     occupied = source_t @ exterior @ source_s.conj().T
     empty = source_t @ (identity - exterior) @ source_s.conj().T
-    if t > s:
-        theta = 1.0
-    elif t == s:
-        theta = 0.5
-    else:
-        theta = 0.0
+    theta = _causal_theta(t, s)
     retarded = -1j * theta * (source_t @ source_s.conj().T)
     initial = source_t @ cross
+    return {
+        "occupied": occupied,
+        "empty": empty,
+        "retarded": retarded,
+        "lesser": 1j * occupied,
+        "greater": -1j * empty,
+        "keldysh": -1j * (empty - occupied),
+        "initial_occupied": initial,
+        "initial_empty": -initial,
+    }
+
+
+def exterior_kernels_from_cohorts(
+    t,
+    s,
+    cohort_t,
+    cohort_s,
+    exterior_covariance,
+    initial_cross,
+):
+    """Occupied, empty, and retarded kernels from adjoint source cohorts.
+
+    ``cohort(t) = U_E(t, t_0)† B(t)†``. Then ``B(t) U_E(t, s) B(s)†`` is
+    ``cohort(t)† cohort(s)``, and ``F(t) C F(s)†`` is ``cohort(t)† C cohort(s)``.
+    ``θ(0) = 1/2``, as in ``exterior_kernels``. ``initial_cross`` is ``C_EA``.
+    """
+    if not np.isfinite(t) or not np.isfinite(s):
+        raise ValueError("kernel times must be finite")
+    later = np.asarray(cohort_t, dtype=np.complex128)
+    earlier = np.asarray(cohort_s, dtype=np.complex128)
+    if later.ndim != 2 or later.shape != earlier.shape:
+        raise ValueError("source cohorts must be matching exterior-by-retained matrices")
+    exterior = _hermitian_matrix(exterior_covariance, "exterior covariance")
+    if later.shape[0] != exterior.shape[0]:
+        raise ValueError("kernel factors must match the exterior covariance")
+    cross = np.asarray(initial_cross, dtype=np.complex128)
+    if cross.shape != (exterior.shape[0], later.shape[1]):
+        raise ValueError("initial cross block must be C_EA")
+    identity = np.eye(exterior.shape[0], dtype=np.complex128)
+    gram = later.conj().T @ earlier
+    occupied = later.conj().T @ exterior @ earlier
+    empty = later.conj().T @ (identity - exterior) @ earlier
+    theta = _causal_theta(t, s)
+    retarded = -1j * theta * gram
+    initial = later.conj().T @ cross
     return {
         "occupied": occupied,
         "empty": empty,
@@ -420,6 +945,7 @@ def evolve_retained_region(
     coupling=True,
     drop_cross_covariance=False,
     propagator_substeps=1,
+    backend="dense",
 ):
     """Evolve retained amplitudes, and optionally the retained covariance.
 
@@ -430,11 +956,18 @@ def evolve_retained_region(
     check ``R R†`` against ``I``.
 
     ``memory=False`` drops the history accumulator. ``outside_drive=False``
-    drops the initial exterior amplitude. ``coupling=False`` zeroes ``H_AE``
-    only. ``drop_cross_covariance=True`` drops ``C_AE`` and ``C_EA`` in the
+    drops the initial exterior amplitude from the derivative but still
+    records it. ``coupling=False`` zeroes ``H_AE`` only.
+    ``drop_cross_covariance=True`` drops ``C_AE`` and ``C_EA`` in the
     covariance assembly and does not change the amplitudes.
+
+    ``backend="dense"`` stores ``W(t)``. ``backend="streamed"`` keeps that
+    map's retained equation but transports only source, drive, and memory
+    columns. A later trajectory can pass ``lambda t: operator(g(t))`` and
+    ``backend="streamed"``; this function does not build ``g(t)``.
     """
     _require_callable_hamiltonian(hamiltonian)
+    backend_name = _backend_name(backend)
     if weights is not None and initial_columns is None:
         raise ValueError("weights require initial columns")
     if initial_columns is None and covariance is None:
@@ -453,11 +986,33 @@ def evolve_retained_region(
         grid,
         coupling=bool(coupling),
     )
-    propagator = free_exterior_propagator(
-        exterior_at,
-        grid,
-        substeps=propagator_substeps,
-    )
+    refinement = _positive_substeps(propagator_substeps)
+    if backend_name == "dense":
+        propagator = free_exterior_propagator(
+            exterior_at,
+            grid,
+            substeps=refinement,
+        )
+        allocation = {
+            "backend": "dense",
+            "dense_exterior_propagator_frames": int(grid.size),
+            "time_indexed_exterior_propagator_bytes": int(propagator.nbytes),
+            "frame_bytes": int(frame.nbytes),
+            "frame_completion": "dense-null-space-once",
+            "exterior_dimension": int(propagator.shape[-1]),
+            "output_times": int(grid.size),
+            "propagator_storage": "time-indexed-dense-W",
+        }
+    else:
+        propagator = None
+        allocation = _stream_workspace(
+            frame,
+            dimension - retained_dimension,
+            retained_dimension,
+            grid.size,
+        )
+        allocation["coupling_bytes"] = int(coupling_blocks.nbytes)
+        allocation["retained_block_bytes"] = int(local_blocks.nbytes)
     step = float(grid[1] - grid[0])
     result = {
         "times": grid,
@@ -486,11 +1041,49 @@ def evolve_retained_region(
             "outside_drive": bool(outside_drive),
             "coupling": bool(coupling),
             "drop_cross_covariance": bool(drop_cross_covariance),
-            "propagator_substeps": _positive_substeps(propagator_substeps),
-            "history_integrator": "uniform-trapezoid-semiseparable",
-            "exterior_integrator": "midpoint-expm",
+            "propagator_substeps": refinement,
+            "backend": backend_name,
+            "history_integrator": (
+                "uniform-trapezoid-causal-columns"
+                if backend_name == "streamed"
+                else "uniform-trapezoid-semiseparable"
+            ),
+            "exterior_integrator": (
+                "midpoint-expm-multiply" if backend_name == "streamed" else "midpoint-expm"
+            ),
+            "stores_dense_exterior_propagator": backend_name == "dense",
         },
     }
+    if backend_name == "streamed":
+        result["flags"]["memory_kernel"] = "B(t) U_E(t,s) B(s)†"
+
+    def integrate(initial_retained, initial_exterior):
+        if backend_name == "dense":
+            return _volterra(
+                local_blocks,
+                coupling_blocks,
+                propagator,
+                initial_retained,
+                initial_exterior,
+                step,
+                memory=bool(memory),
+                outside_drive=bool(outside_drive),
+            )
+        return _volterra_streamed(
+            local_blocks,
+            coupling_blocks,
+            exterior_at,
+            grid,
+            initial_retained,
+            initial_exterior,
+            step,
+            substeps=refinement,
+            memory=bool(memory),
+            outside_drive=bool(outside_drive),
+            coupling_active=bool(coupling),
+            workspace=allocation,
+        )
+
     residuals = []
     if initial_columns is not None:
         columns, coefficients = _initial_coefficients(frame, initial_columns, dimension)
@@ -498,16 +1091,7 @@ def evolve_retained_region(
         weight_scale = None
         if weights is not None:
             weight_scale = _column_covariance(columns, weights)[1]
-        amplitudes, history, residual = _volterra(
-            local_blocks,
-            coupling_blocks,
-            propagator,
-            initial_retained,
-            initial_exterior,
-            step,
-            memory=bool(memory),
-            outside_drive=bool(outside_drive),
-        )
+        amplitudes, history, residual = integrate(initial_retained, initial_exterior)
         residuals.append(residual)
         result["amplitudes"] = amplitudes
         result["history"] = history
@@ -531,16 +1115,7 @@ def evolve_retained_region(
         blocks = _frame_blocks(validated, frame, retained_dimension)
         coefficients = frame.conj().T @ frame
         initial_retained, initial_exterior = _split_coefficients(coefficients, retained_dimension)
-        amplitudes, history, residual = _volterra(
-            local_blocks,
-            coupling_blocks,
-            propagator,
-            initial_retained,
-            initial_exterior,
-            step,
-            memory=bool(memory),
-            outside_drive=bool(outside_drive),
-        )
+        amplitudes, history, residual = integrate(initial_retained, initial_exterior)
         residuals.append(residual)
         parent = amplitudes[:, :, :retained_dimension]
         child = amplitudes[:, :, retained_dimension:]
@@ -588,6 +1163,7 @@ def evolve_retained_region(
         )
     if residuals:
         result["trapezoid_residual_max"] = max(residuals)
+    result["allocation"] = allocation
     return result
 
 

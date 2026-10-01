@@ -62,123 +62,138 @@ dependency decision; this helper does not silently drop missing files.
 
 ## Scientific framing and authority
 
-The question is whether specified nested surroundings produce an effective
-local response under familiar local laws. Nested surroundings means structure
-that is not resolved in the local description. An effective local response is
-what remains in the local equations after that structure is reduced, usually
-as an extra source. Familiar local laws means the local equations a local
-observer already uses, not a demand for new local physics.
+The question is the nested mechanism. Structure that one region does not
+resolve can still leave a local response, and the same relations can recur
+across regional gradients. Familiar local laws are the equations a local
+observer already uses. Comparing or fitting LambdaCDM is not this task.
 
-LambdaCDM is the standard cosmological model: general relativity with ordinary
-matter, cold dark matter, and a cosmological-constant-like term. It is one
-familiar description of that local response. Refuting it, or treating an open
-comparison as a conflict, is not the task. A completed match to every LambdaCDM
-observable is also not established. Same reduced equation form and full
-physical equivalence are separate claims. Do not remove local terms or change
-measured local laws. Do not claim dark matter, dark energy, antimatter, or
-eternity as results already derived.
+The inheritance relation below is reused inside its stated domain. Further
+constructions stay finite. Readings in terms of time, antimatter, a dark
+sector, or a continuing gradient stay open research. Rooms, coins, fountains,
+and clocks are motivation for that research. A finite candidate can be chosen
+creatively. What gets reported is the computation and an error statement that
+another person can check, in a named domain.
 
-Keep three layers distinct:
+The source-fixed local incoming gate is one retained application. It remains
+OPEN, and its error-budget campaign is paused. Its interval, threshold, and
+source apply only there. The pause does not create a new compulsory gate, and
+the gate is not a prerequisite for the finite nested-quality theorem or for
+the spherical evolution below. The next release version follows a
+demonstrated result. This instruction does not reserve a version for
+closure of the paused gate. Frozen v0.26.0 remains the recorded
+foundation. Before treating two descriptions as the same
+claim, name the region, scale, observer, state, and compared quantity.
 
-- Reusable mathematics, including block reduction and the inheritance relation,
-  stands only inside its stated domain. Do not recalculate that relation, and
-  do not replace it with an infinity of nests.
-- A proposed interpretation, including regeneration or a dark-sector reading,
-  is not a theorem. Schur elimination does not by itself identify cosmological
-  dark sectors.
-- One chosen numerical application, the source-fixed local incoming gate, tests
-  one declared geometry, preparation, source inventory, and history. Its
-  interval, residual threshold, source, and history apply only there.
+## Present regeneration programme
 
-The gate remains OPEN: neither local existence nor a controlled exclusion is
-established. Its expensive error-budget campaign is paused. The gate is a
-retained application, not the centre of the next task. Its relevance can be
-reconsidered when useful. That reconsideration is not a compulsory essay,
-check, or permission barrier before other work. Pausing does not ban later
-error-controlled numerical work on an appropriate question, and compaction is
-not a reason to restart this campaign. Pausing does not discard that
-application's error bounds or locked parameters. A failure or gap in that
-class is not a verdict on LambdaCDM or on every nested interpretation, and it
-is not a prerequisite for other nested claims or for arXiv discussion in
-general. Release 0.27.0 remains reserved for a closed result of this
-application.
+The current programme is finite nested regeneration under those local laws.
+Starting checkpoint `9a9090a`. The executed loop, and the code owner, is
+`lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py`.
+The v5 replay,
+`lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py`,
+remains the self-contained historical seed. The saved \(T=0.05\)
+measurement is `lab/scripts/derive_nsc_spherical_feedback_episode.py`,
+which reuses that preparation. Its four runs are the recorded episode.
 
-Next research reuses existing inherited-law, regional-state, transfer and
-conservation results to investigate sustained balanced turnover at stable
-overall regional size and content. Relate that question to time as the
-registration of spatial change, and to the matter–antimatter hypothesis.
-Those readings are not proved. Choose tests that serve this mechanism. Do not
-make a written assessment of the paused gate the required next act.
+`compose_fine_hamiltonian` recomputes the column source and the geometric
+rates on the prolonged state. With the matter force included it feeds
+`force_Q` into the conjugate momentum,
 
-Pictures of an interior and its surroundings, a room, or two sides of a coin
-organize the question. They are not literal equations, and they are not claims
-the author must defend as physical identities. The present spherical
-calculation is a controlled symmetry class. Regional states may differ under a
-common law. Reuse the established operator and transfer results. A mathematical
-identification must keep the domain and assumptions actually derived.
+$$
+\dot p_Q \leftarrow \dot p_Q - F_Q/\Delta x_Q.
+$$
 
-Charge conjugation is the standard map between particle and antiparticle
-sectors, including reversal of gauge charge. Using that name does not derive
-antimatter from the nested geometry, and it does not forbid investigating a
-deeper geometric origin. It also does not make sheet exchange, an interior, or
-a metaphor into antimatter. Those remain distinct questions, not new
-completion requirements.
+\(Q\), \(r\), \(\chi\), the momenta and the spinor columns evolve. \(L\) and
+\(\beta\) stay gauge controls. `solve_initial_radius`, and the v5 replay's
+full-source Newton, set the initial radius from that source
+(\(\rho = F_L/\Delta x_Q\)).
 
-## Current nested-quality result
-
-The focused companion now leads with the finite construction in
-[nsc-nested-qualities.md](nsc-nested-qualities.md). The previous numerical
-application remains OPEN in its appendix, and its campaign is paused. That
-finite result does not require eternity, heat death, or the incoming-gate
-campaign. This checkpoint does not mark the gate complete and does not make
-the gate a prerequisite for the finite result. Preserve different regional
-states under common laws. Before claiming two descriptions conflict, identify
-their region, scale, observer, state and compared quantity.
-
-## Keep the papers connected
-
-The organizing inheritance postulate remains
+The inheritance postulate used by this work is
 
 $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-The broad manuscript contains the physical interpretation, operator/Schur/
-recursion calculations, source history and references. Its v0.26.0 source and
-PDF are preserved. The companion retains one source-fixed local incoming test as an application
-under `C_Sigma[g]=U_g C_up U_g†` on `I=S(1)+[0.12,0.18]`. That application is
-OPEN and its campaign is paused. It is separate from the finite nested-operator
-theorem, and its threshold is not a prerequisite for that theorem or for nested
-claims in general. A later edition can incorporate verified new results with an explicit
-change record; do not silently substitute a new PDF for a frozen version.
+The active action is \(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus
+the same-spectrum local induced term, counted once. The vacuum-matched CTP
+branch remains a separate historical choice.
 
-Keep assumptions, imported identities, repository calculations, numerical
-diagnostics and interpretations distinct. Spatial inheritance, charge
-conjugation and interference retain distinct operators. Charge-conjugation
-terminology does not close a geometric question. The regeneration picture
-remains motivation, not a literal proof; global recurrence and cosmological
-matching are not established. Count the declared Gaussian action and induced terms once.
+The independently replayed \(n_f=512\), \(T=0.005\) window in the v5 record
+is a geometric diagnostic. Its stored maxima are a full Hamilton residual of
+about \(9.98\times 10^{-6}\), a full momentum residual of about
+\(1.38\times 10^{-6}\), and a maximum absolute proper radial velocity of
+about \(0.0079505\). That velocity figure is a max-abs value. Signed motion
+is not read from it. The saved \(T=0.05\) episode reaches the requested
+time. All 62 physical refinement rows meet one percent. Proper velocity
+on the fine primary run ends near \([-0.061956,0.088159]\), and the field
+and gravitational energies exchange about \(0.4123\). The fine full
+Hamilton residual ends near \(2.83\times 10^{-5}\) and the fine momentum
+residual near \(4.30\times 10^{-6}\); the coarse residual is higher.
+Continuum constraint control and renewal are not proved. The weak helper
+records a conditional coercivity constant and a Fourier-product
+conditioning comparison. It does not certify a total initial-error bound.
+The historical initial tolerance \(10^{-8}\) is not an
+automatic veto of this diagnostic. A weak residual alone is not sufficient;
+the full residuals stay reported. The toy \(H\) and \(B\) fractions are an
+optional witness. Geometry-derived links are the target.
+
+This loop is the present finite realization because its geometry and its
+state forces already come from the same action. An extra invented rule for
+the radius as a function of energy is unnecessary. The historical hand-set
+\(H\) and \(B\) fractions, and the historical strong tolerance \(10^{-8}\),
+do not set the objective.
+
+Construction stays flexible. Identify the shared structure, propose one
+finite realization, and check feasibility, CPU, and the scale of the effect
+before any larger run. The recorded outcome guides the next model step.
+Progress is an effect, a derived relation, a removed assumption, or a named
+blocker. A passing label, a test count, or a longer document is not that
+progress.
+
+Recorded numbers and owners:
+[current result](current-result.md#present-spherical-loop).
+
+## Papers
+
+The [focused companion](nsc-nested-qualities.md) leads with the finite
+nested-operator construction: coupled regions, normalized inheritance,
+corresponding spectra and an exact reduced local response on a finite window.
+Regional states may differ under the same law. The construction is not a
+proof of infinite physical time, and it does not depend on the incoming-gate
+campaign. The gate remains an OPEN appendix of that companion.
+
+The broad manuscript, v0.26.0 source and PDF, stays frozen. It holds the
+physical motivation, operator and Schur calculations, source history and
+references. Statements in that dated file about the next step are history.
+A later edition can take a verified result only with an explicit change
+record. Do not replace a frozen PDF in place.
+
+Assumptions, imported identities, repository calculations, numerical
+diagnostics and interpretations stay distinct. Spatial inheritance, charge
+conjugation and interference keep distinct operators. Global recurrence and
+cosmological matching are not established.
 
 ## Reuse and verification
 
 Consult the prior-art reuse map and existing evidence before compute. Name the
 missing connection and the smallest check that can resolve it. Stop repeated
 verification that leaves the physical gap unchanged. Historical derivations
-are reference material, not a queue to repeat after moving computers.
+are reference material.
 
 Preserve scientific original bytes and their replay inputs. Routine edits run
-relevant tests and publication checks, not the paused incoming-gate campaign
-or another expensive generator. Changed PDF
-source requires an updated bound build, deterministic-output check and visual
-review. An unchanged PDF does not need rebuilding simply because a task resumes.
+the relevant tests and publication checks. The paused incoming-gate campaign
+and any new expensive generator stay off that path. Changed PDF source
+requires an updated bound build, a deterministic-output check and visual
+review. An unchanged PDF does not need rebuilding because a task resumes.
 
-Present both papers from the same front page with dates, roles, source links and
-status. Release 0.27.0 remains reserved for a closed local result and complete
-scientific dependency chain. Ordinary documentation of OPEN work does not claim
-that release or authorize arXiv submission.
+Present both papers from the same front page with dates, roles, source links
+and status. Ordinary documentation of OPEN work does not assign the next
+release version or authorize arXiv submission. Frozen v0.26.0 stays the
+recorded foundation. Historical release plans remain dated history.
 
 Use relative repository links and GitHub-compatible dollar-delimited math.
 Credentials and private runtime state stay outside this repository. Historical
 lab records retain their original machine paths as provenance; those paths are
-not active routing instructions. New instructions use repository-relative links. Douglas Ek is the accountable author; significant AI
-assistance is disclosed without listing AI tools as authors.
+not active routing instructions. New instructions use repository-relative
+links. Douglas Ek is the accountable author; significant AI assistance is
+disclosed without listing AI tools as authors.

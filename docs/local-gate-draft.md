@@ -11,6 +11,9 @@ specified finite coupled-operator family. It permits different regional states
 under a shared law. The earlier source-fixed incoming calculation remains an
 OPEN application checkpoint in an appendix. Its source records and numerical
 claims retain their original meanings. The 43-page foundation is unchanged.
+This page verifies that frozen companion. The live evolution is the spherical
+Galerkin loop in [the current result](current-result.md#present-spherical-loop).
+The appendix is not a prerequisite for the finite theorem or for that loop.
 
 The prior nine-page companion remains in Git history at `134962d`. The revised
 PDF is the same paper location with a new title and result focus, not a third
