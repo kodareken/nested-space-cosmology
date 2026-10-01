@@ -1,0 +1,82 @@
+{
+  "schema": "NSC-PUBLICATION-RELEASE-RECEIPT-v1",
+  "version": "0.27.0",
+  "status": "MEASURED_FINITE_REALIZATION",
+  "verified_at_utc": "2026-10-01T19:51:36.299173+00:00",
+  "science_commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+  "publication_commit": "9449da6662bfc4c46915eb4ce9a027c792b1baf8",
+  "tag": "v0.27.0",
+  "annotated_tag_object": "eea83b2ae41b5e55adf1f217732750443cae8a97",
+  "peeled_tag_commit": "9449da6662bfc4c46915eb4ce9a027c792b1baf8",
+  "branch_heads_at_release_verification": {
+    "main": "9449da6662bfc4c46915eb4ce9a027c792b1baf8",
+    "codex/work-branch": "9449da6662bfc4c46915eb4ce9a027c792b1baf8"
+  },
+  "release_url": "https://github.com/kodareken/nested-space-cosmology/releases/tag/v0.27.0",
+  "release_id": 401299594,
+  "research_prerelease": true,
+  "ci": {
+    "run_id": 36916539547,
+    "url": "https://github.com/kodareken/nested-space-cosmology/actions/runs/36916539547",
+    "conclusion": "success",
+    "head_sha": "9449da6662bfc4c46915eb4ce9a027c792b1baf8"
+  },
+  "local_verification": {
+    "make_verify": "PASS",
+    "tests_passed": 368,
+    "tests_skipped": 1,
+    "subtests_passed": 6,
+    "clean_pdf_builds_byte_identical": true,
+    "every_page_independent_review": "PASS"
+  },
+  "assets": [
+    {
+      "name": "finite-regeneration.pdf",
+      "repository_path": "paper/finite-regeneration.pdf",
+      "bytes": 223030,
+      "sha256": "416cb4f9ade29bad6f279174b94ba81ccf4d1bf0ea4092259c714fb0a6fd92ce",
+      "release_asset_id": 604012885,
+      "download_url": "https://github.com/kodareken/nested-space-cosmology/releases/download/v0.27.0/finite-regeneration.pdf",
+      "downloaded_bytes_match_pinned_commit": true
+    },
+    {
+      "name": "finite-regeneration-arxiv.tar.gz",
+      "repository_path": "paper/finite-regeneration-arxiv.tar.gz",
+      "bytes": 105847,
+      "sha256": "1bf31d077b94f90426ff10ca4187515f0b187ace2ff5a620b684dafed618ac3f",
+      "release_asset_id": 604012888,
+      "download_url": "https://github.com/kodareken/nested-space-cosmology/releases/download/v0.27.0/finite-regeneration-arxiv.tar.gz",
+      "downloaded_bytes_match_pinned_commit": true
+    },
+    {
+      "name": "finite-regeneration-manifest.json",
+      "repository_path": "paper/finite-regeneration-manifest.json",
+      "bytes": 3309,
+      "sha256": "cb67871c4949b3e4a5a82e44301a93de67b53be1dc5cbfcb6cfb42da8c10cb80",
+      "release_asset_id": 604012891,
+      "download_url": "https://github.com/kodareken/nested-space-cosmology/releases/download/v0.27.0/finite-regeneration-manifest.json",
+      "downloaded_bytes_match_pinned_commit": true
+    },
+    {
+      "name": "snapshot.json",
+      "repository_path": "paper/finite-regeneration/evidence/snapshot.json",
+      "bytes": 188998,
+      "sha256": "2f926c196caf7ff3e9e7e4ccd413609b82e888d2bc74c1351a6c8ba2ffb170ac",
+      "release_asset_id": 604012898,
+      "download_url": "https://github.com/kodareken/nested-space-cosmology/releases/download/v0.27.0/snapshot.json",
+      "downloaded_bytes_match_pinned_commit": true
+    },
+    {
+      "name": "nested-space-cosmology.pdf",
+      "repository_path": "paper/nested-space-cosmology.pdf",
+      "bytes": 2076644,
+      "sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf",
+      "release_asset_id": 604012890,
+      "download_url": "https://github.com/kodareken/nested-space-cosmology/releases/download/v0.27.0/nested-space-cosmology.pdf",
+      "downloaded_bytes_match_pinned_commit": true
+    }
+  ],
+  "author_review": "pending",
+  "arxiv_processor_verified": false,
+  "arxiv_submission_performed": false
+}
