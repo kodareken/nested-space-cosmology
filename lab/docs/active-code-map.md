@@ -24,8 +24,19 @@ is `FAIL_HELD_OUT_CONSTRAINT`; a projected residual is not a pass. The
 matched refinement v3 is `FAIL_INITIAL_SOLVE` and has no full-source
 result. The evolving reduction is prescribed-control convergence with no
 accepted coupled trajectory. Passing tests do not validate these failed
-trajectories.
-Embedding of the frozen window is not complete. The vacuum-matched CTP branch remains
+trajectories. The coupled state and geometry loop already executes. Fixed
+$L$ and $\beta$ are gauge; $Q$, $r$, $\chi$ and the momenta evolve.
+Refinement v5 is an independently replayed diagnostic, not an initial
+$10^{-8}$ pass and not a renewal. The original $H$ and $B$ fractions are
+one witness. Embedding v1 and seam-regular v2 are an optional bridge, not
+a further fitting prerequisite. The corrected regional ledger uses
+$dx$-normalized proper pressure and normal energy; $F_Q\dot Q$ is
+coordinate metric work. Historical vacuum branch $B$ is not a prerequisite.
+Next diagnostic: the same loop to $T=0.05$ with geometry-derived $B$,
+effect and spacetime convergence, and full, projected, and weak
+diagnostics. A small weak residual alone does not prove accuracy. Strong
+residuals stay reported. The old initial $10^{-8}$ line is not a blind
+veto. Renewal is not demonstrated. The vacuum-matched CTP branch remains
 a separate historical choice in its own note, not a prerequisite of these
 primitives or of every model. The resolved active action is
 $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the same-spectrum
@@ -198,8 +209,9 @@ witnesses above. Owners, relative to `lab/`:
 Verdict `FAIL_HELD_OUT_CONSTRAINT`. Renewal is false. $T=0.05$ was not
 run. A projected residual is not a physical pass. Residuals, review, and
 hashes stay in the note and the record. Do not rewrite that JSON. The v1
-JSON bytes stay unchanged. The frozen six-mode embedding is still
-unfinished. The incoming gate stays OPEN and its campaign stays paused.
+JSON bytes stay unchanged. The Dirac compression of that window is
+recorded below and is not an accepted coupled trajectory. The incoming
+gate stays OPEN and its campaign stays paused.
 
 ## Matched Galerkin refinement v3, 2026-10-01
 
@@ -215,6 +227,82 @@ Verdict `FAIL_INITIAL_SOLVE`. Internal Newton stopped at rho $0.5$ with
 residual $1.2876060991167562\times 10^{-10}$. Full-source diagnostics are
 absent. The v1 and v2 JSON bytes stay unchanged. The incoming gate stays
 OPEN and its campaign stays paused.
+
+## Galerkin refinement v5, 2026-10-01
+
+Completed diagnostic. Not the old initial or Newton acceptance, and not a
+renewal. Owners, relative to `lab/`:
+
+- `scripts/derive_nsc_spherical_galerkin_refinement_v5.py`
+- `results/development/nsc-spherical-coupling-refinement-v5.json`
+- `results/development/nsc-spherical-coupling-refinement-v5.npz`
+- `tests/test_nsc_spherical_galerkin_independent.py`
+
+The independent file now has ten tests. At $n_f=512$ and $T=0.005$ the
+Hamilton residual is about $9.98\times 10^{-6}$, the momentum residual
+about $1.38\times 10^{-6}$, and the proper radial velocity about
+$0.0079505$. The same executable loop is the $T=0.05$ diagnostic. The
+initial $10^{-8}$ line is not a veto. Archived probe bytes are mapped in
+[probes/README.md](../archive/probes/README.md); v4 only reprints its
+partial archive.
+
+## Finite-window embedding v1, 2026-10-01
+
+Completed compression of the frozen window. Not an invariant subspace and
+not a transfer of the closed-window evolution. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_finite_window_embedding.py`
+- `tests/test_nsc_finite_window_embedding.py`
+- `tests/test_nsc_finite_window_embedding_independent.py`
+- `results/development/nsc-finite-window-embedding-v1.json`
+- [nsc-finite-window-embedding.md](nsc-finite-window-embedding.md)
+
+Eight independent tests. Quadrature matches the original $H$ and $B$ at
+about $4.45\times 10^{-14}$; a direct analytic integral agrees at about
+$4.9\times 10^{-14}$. Modes are supported on $(n,n+2)$. Outside coupling is
+strong. Lobe derivative jumps give Fourier error decaying as $N^{-2}$. This
+match is one witness, not a requirement for every later realization.
+
+## Seam-regular embedding v2, 2026-10-01
+
+Optional bridge. Not a further fitting prerequisite and not a renewal.
+Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_finite_window_embedding_smooth.py`
+- `tests/test_nsc_finite_window_embedding_smooth.py`
+- `results/development/nsc-finite-window-embedding-v2.json`
+- [nsc-finite-window-embedding-smooth.md](nsc-finite-window-embedding-smooth.md)
+
+Status `SEAM_REGULAR_COMPRESSION_NOT_INVARIANT`.
+
+## Spherical Cauchy data, 2026-10-01
+
+Completed initial data for prepared columns. Not an accepted coupled
+trajectory. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_spherical_cauchy_data.py`
+- `tests/test_nsc_spherical_cauchy_data.py`
+- `results/development/nsc-spherical-cauchy-data-v1.json`
+- [nsc-spherical-cauchy-data.md](nsc-spherical-cauchy-data.md)
+
+Three tests pass. For $\chi=p_r=p_\chi=0$ and constant $Q$, $p_Q$ is the
+mean-free antiderivative of the current. The mean and held-out current
+residual stay explicit.
+
+## Regional coordinate and normal-observer ledger, 2026-10-01
+
+Corrected diagnostic. Not a renewal, and not a use of historical vacuum
+branch $B$ as a prerequisite. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_regional_energy_exchange.py`
+- `tests/test_nsc_regional_energy_exchange.py`
+- `tests/test_nsc_regional_energy_exchange_independent.py`
+- `results/development/nsc-regional-energy-exchange-v1.json`
+- [nsc-regional-energy-exchange.md](nsc-regional-energy-exchange.md)
+
+Six owned tests and eight independent tests. Normal energy is
+$F_L/r=V\rho\,dx$. Proper pressures divide by $dx$. $F_Q\dot Q$ is
+coordinate metric work. Hamiltonian derivatives are not pressures.
 
 ## Evolving retained-region reduction, 2026-09-30
 

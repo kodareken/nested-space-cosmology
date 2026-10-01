@@ -3,12 +3,15 @@
 These checks recompute pullback weights, symplectic factors, the lifted
 work sum, the held-out Hamilton residual, the chart velocity, and the
 frozen link. A green result is not a physical pass. The saved v2 verdict
-stays FAIL_HELD_OUT_CONSTRAINT.
+stays FAIL_HELD_OUT_CONSTRAINT. The v5 diagnostic is a measured short
+response with separate tolerances, not a renewal or a frozen-B embedding.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from functools import lru_cache
+from pathlib import Path
 
 import numpy as np
 
@@ -368,3 +371,268 @@ def test_physical_slice_keeps_the_held_out_failure_and_a_different_link():
     assert record["verdict"] == "FAIL_HELD_OUT_CONSTRAINT"
     assert record["renewal"] is False
     assert galerkin.RENEWAL is False
+
+
+_LAB = Path(__file__).resolve().parents[1]
+_V5_JSON = _LAB / "results" / "development" / "nsc-spherical-coupling-refinement-v5.json"
+_V5_NPZ = _LAB / "results" / "development" / "nsc-spherical-coupling-refinement-v5.npz"
+_V5_DRIVER = _LAB / "scripts" / "derive_nsc_spherical_galerkin_refinement_v5.py"
+
+
+def _sha256(path):
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(1 << 20), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _velocity_parts(grid, state):
+    """Chart uses the fine rate. Normal and coordinate use the lifted coarse rate."""
+    fine = galerkin.prolong_state(grid, state)
+    _q_dot, r_dot, _chi, _p_q, _p_r, _p_chi = geometric_rates(grid.fine, fine)
+    radius_derivative = grid.derivative @ fine.r
+    denominator = fine.r * grid.fine.length_density
+    shift_piece = (grid.fine.shift * radius_derivative) / denominator
+    lifted_rate = grid.A_g @ _pull(grid, r_dot)
+    coordinate = lifted_rate / denominator
+    normal = coordinate - shift_piece
+    chart = (r_dot - grid.fine.shift * radius_derivative) / denominator
+    return chart, normal, coordinate, shift_piece
+
+
+def _retained_versus_last_trial(history):
+    """Best is updated only when the next loop re-evaluates ``current``.
+
+    An accepted trial at the exit, including ``delta_max < 1e-12`` and the
+    round limit, stays out of the saved best.
+    """
+    retained = None
+    last_trial = None
+    last_delta = None
+    for entry in history:
+        if entry.get("retained_as_best"):
+            retained = float(entry["projected"])
+        if entry.get("accepted"):
+            last_trial = float(entry["trial_projected"])
+            last_delta = float(entry["delta_max"])
+    return retained, last_trial, last_delta
+
+
+@lru_cache(maxsize=1)
+def _v5_record():
+    record = json.loads(_V5_JSON.read_text(encoding="utf-8"))
+    archive = np.load(_V5_NPZ)
+    return record, archive
+
+
+def _saved_state(grid, archive, prefix):
+    return CauchyState(
+        Q=np.array(archive[prefix + "geometry_Q"], dtype=float, copy=True),
+        r=np.array(archive[prefix + "geometry_r"], dtype=float, copy=True),
+        chi=np.array(archive[prefix + "geometry_chi"], dtype=float, copy=True),
+        p_Q=np.array(archive[prefix + "geometry_p_Q"], dtype=float, copy=True),
+        p_r=np.array(archive[prefix + "geometry_p_r"], dtype=float, copy=True),
+        p_chi=np.array(archive[prefix + "geometry_p_chi"], dtype=float, copy=True),
+        phi0=np.array(archive[prefix + "columns_phi0"], dtype=complex, copy=True),
+        phi1=np.array(archive[prefix + "columns_phi1"], dtype=complex, copy=True),
+    )
+
+
+@lru_cache(maxsize=1)
+def _v5_nf512():
+    """Saved nf512 state, recomputed constraints, and one T=0.005 replay."""
+    record, archive = _v5_record()
+    grid = galerkin.build_grid(512, quadrature=2048)
+    state = _saved_state(grid, archive, "nf512_")
+    fine = galerkin.prolong_state(grid, state)
+    source = source_from_columns(grid.fine, fine)
+    rho = source["force_L"] / grid.dx_q
+    residual = hamilton_constraint(grid.fine, fine) + rho
+    projected = _pull(grid, residual)
+    held = residual - grid.A_g @ projected
+    chart, normal, coordinate, shift_piece = _velocity_parts(grid, state)
+    dt = 0.0005
+    steps = 10
+    current = state.copy()
+    series = []
+    for step in range(steps + 1):
+        rate, bundle = galerkin.compose_fine_hamiltonian(grid, current)
+        step_chart, step_normal, step_coordinate, step_shift = _velocity_parts(grid, current)
+        diagnostics = galerkin.constraint_diagnostics(
+            grid, current, bundle["source"], bundle["fine_state"]
+        )
+        lifted_power = float(np.sum(bundle["source"]["force_Q"] * bundle["lifted_Q"]))
+        series.append({
+            "chart": float(np.max(np.abs(step_chart))),
+            "normal": float(np.max(np.abs(step_normal))),
+            "coordinate": float(np.max(np.abs(step_coordinate))),
+            "shift": float(np.max(np.abs(step_shift))),
+            "full_c": float(diagnostics["full_hamilton_max"]),
+            "full_d": float(diagnostics["full_momentum_max"]),
+            "energy": galerkin.energy(grid, current),
+            "lifted_power": lifted_power,
+            "stored_power": float(rate.fieldwork_power),
+            "unprojected_power": float(bundle["unprojected_fieldwork"]),
+        })
+        if step < steps:
+            current = galerkin.rk4_step(grid, current, dt)
+    lifted_integral = 0.0
+    unprojected_integral = 0.0
+    for index in range(len(series) - 1):
+        left = series[index]
+        right = series[index + 1]
+        lifted_integral += 0.5 * dt * (left["lifted_power"] + right["lifted_power"])
+        unprojected_integral += 0.5 * dt * (left["unprojected_power"] + right["unprojected_power"])
+    return {
+        "grid": grid,
+        "state": state,
+        "rho": rho,
+        "full_c": float(np.max(np.abs(residual))),
+        "projected_c": float(np.max(np.abs(projected))),
+        "held_c": float(np.max(np.abs(held))),
+        "momentum": float(np.max(np.abs(
+            coupling.shift_constraint(grid.fine, fine) + source["force_beta"] / grid.dx_q
+        ))),
+        "chart0": float(np.max(np.abs(chart))),
+        "normal0": float(np.max(np.abs(normal))),
+        "coordinate0": float(np.max(np.abs(coordinate))),
+        "shift0": float(np.max(np.abs(shift_piece))),
+        "series": series,
+        "lifted_integral": float(lifted_integral),
+        "unprojected_integral": float(unprojected_integral),
+        "final_r_min": float(np.min(galerkin.prolong_state(grid, current).r)),
+    }
+
+
+def test_v5_hashes_bind_the_saved_source_and_occupations():
+    record, archive = _v5_record()
+    hashes = record["hashes_after"]
+    assert _sha256(_V5_DRIVER) == hashes["driver"]
+    assert _sha256(galerkin._MODULE_PATH) == hashes["galerkin"]
+    assert _sha256(galerkin._COUPLING_PATH) == hashes["coupling"]
+    assert _sha256(_V5_NPZ) == hashes["npz"]
+    assert hashes["npz"] != record["npz_sha256_after_state"]
+    assert str(archive["schema"]) == "NSC-SPHERICAL-COUPLING-REFINEMENT-v5"
+    assert int(archive["nf512_nf"]) == 512
+    assert int(archive["nf512_ng"]) == 511
+    assert int(archive["nf512_nq"]) == 2048
+    assert np.array_equal(archive["nf512_occupations"], galerkin.OCCUPATIONS)
+    phi0, phi1, preparation, problems = galerkin.load_physical_columns(512)
+    assert problems == []
+    assert preparation["phase_on_minus_spinor_column"] is True
+    assert preparation["phase_applied_to_odd_lobe"] is False
+    assert np.allclose(archive["nf512_columns_phi0"], phi0)
+    assert np.allclose(archive["nf512_columns_phi1"], phi1)
+    values = np.sort(np.real(galerkin.occupation_eigenvalues(
+        archive["nf512_columns_phi0"], archive["nf512_columns_phi1"]
+    )))
+    declared = np.sort(galerkin.OCCUPATIONS)
+    assert np.max(np.abs(values[-declared.size :] - declared)) < 1e-12
+    assert np.max(np.abs(values[: -declared.size])) < 1e-12
+    coefficients = galerkin.locked_coefficients()
+    stored = {
+        str(name): float(value)
+        for name, value in zip(archive["nf512_binding_names"], archive["nf512_binding_values"], strict=True)
+    }
+    for name, value in coefficients.items():
+        assert abs(stored["coefficient:" + name] - float(value)) < 1e-15
+    for name, value in coupling.CALIBRATION.items():
+        if name in ("Mweight_executed", "a0", "beta0", "b0", "phase", "kappa", "Omega", "k", "ell", "length"):
+            assert abs(stored["calibration:" + name] - float(value)) < 1e-15
+    assert record["verdict"] == "DIAGNOSTIC_MEASURED"
+    assert record["pass"] is False
+    assert record["renewal"] is False
+    assert record["frozen_B_embedding_claimed"] is False
+    assert record["continuum_limit_claimed"] is False
+    assert record["time_extension_T_0_05"] is False
+
+
+def test_v5_nf512_constraints_do_not_conflate_the_three_tolerances():
+    record, archive = _v5_record()
+    measured = _v5_nf512()
+    reported = record["nf512"]["nq2048"]
+    assert abs(measured["full_c"] - 9.981468739539423e-06) < 1e-12
+    assert abs(measured["full_c"] - reported["full_C_hamilton_max"]) < 1e-12
+    assert abs(measured["projected_c"] - reported["projected_C_hamilton_max"]) < 1e-12
+    assert abs(measured["held_c"] - reported["held_out_C_hamilton_max"]) < 1e-12
+    assert measured["held_c"] > 0.99 * measured["full_c"]
+    assert abs(measured["momentum"] - reported["full_D_momentum_max"]) < 1e-14
+    assert np.allclose(archive["nf512_quadrature_radius"], galerkin.prolong_geometry(measured["grid"], measured["state"].r))
+    assert np.max(np.abs(measured["state"].p_r)) == 0.0
+    assert measured["full_c"] > galerkin.TOL_INITIAL_CONSTRAINT
+    assert measured["projected_c"] > galerkin.TOL_NEWTON
+    assert measured["full_c"] < galerkin.TOL_CONSTRAINT_VALIDATION
+    assert record["full_initial_1e-8_passed"] is False
+    assert record["newton_1e-10_passed"] is False
+    assert reported["full_C_leq_1e-8"] is False
+    window = record["nf512"]["window_dt_0_0005"]
+    assert window["measured_within_window_1e-3"] is True
+    assert window["labeled_as_window_pass"] is False
+    assert window["full_D_momentum_max"] < galerkin.TOL_CONSTRAINT_VALIDATION
+    assert abs(window["full_D_momentum_max"] - 1.3753934746951746e-06) < 1e-15
+    assert window["full_C_hamilton_max"] > galerkin.TOL_INITIAL_CONSTRAINT
+    grid256 = galerkin.build_grid(256, quadrature=1024)
+    state256 = _saved_state(grid256, archive, "")
+    fine256 = galerkin.prolong_state(grid256, state256)
+    source256 = source_from_columns(grid256.fine, fine256)
+    residual256 = hamilton_constraint(grid256.fine, fine256) + source256["force_L"] / grid256.dx_q
+    full256 = float(np.max(np.abs(residual256)))
+    assert full256 > galerkin.TOL_CONSTRAINT_VALIDATION
+    assert abs(full256 - record["nq1024"]["full_C_hamilton_max"]) < 1e-12
+
+
+def test_v5_saved_newton_best_lags_the_last_accepted_trial():
+    record, archive = _v5_record()
+    for label, construction, stored in (
+        ("nf512", record["nf512"]["construction"], float(archive["nf512_projected_residual"])),
+        ("nf256", record["nf256_construction"], float(archive["projected_residual"])),
+    ):
+        retained, trial, delta = _retained_versus_last_trial(construction["newton_history"])
+        assert construction["newton_history"][-1]["accepted"] is True
+        assert retained == construction["best_projected_operator_max"]
+        assert stored == retained
+        assert trial < retained
+        assert delta < 1e-12
+        assert trial > galerkin.TOL_NEWTON
+        assert retained > galerkin.TOL_NEWTON
+        assert label in ("nf512", "nf256")
+    retained, trial, delta = _retained_versus_last_trial(record["nf512"]["construction"]["newton_history"])
+    assert abs((retained - trial) - 1.610240673480347e-09) < 1e-18
+    assert abs(delta - 8.991499056296992e-14) < 1e-24
+    nf256_retained, nf256_trial, nf256_delta = _retained_versus_last_trial(
+        record["nf256_construction"]["newton_history"]
+    )
+    assert abs((nf256_retained - nf256_trial) - 4.186352825205519e-10) < 1e-20
+    assert nf256_delta < 1e-13
+
+
+def test_v5_proper_velocity_is_normal_change_and_work_uses_the_lifted_rate():
+    record = _v5_record()[0]
+    measured = _v5_nf512()
+    window = record["nf512"]["window_dt_0_0005"]
+    assert measured["chart0"] == 0.0
+    assert measured["normal0"] < 1e-9
+    assert measured["coordinate0"] > 0.05
+    assert abs(measured["coordinate0"] - measured["shift0"]) < 1e-8
+    assert abs(measured["coordinate0"] - 0.09843166411997688) < 1e-12
+    final = measured["series"][-1]
+    assert abs(final["normal"] - 0.007950515381253666) < 1e-12
+    assert abs(final["normal"] - window["lifted_normal_velocity_max"]) < 1e-12
+    assert abs(final["normal"] - final["chart"]) < 1e-9
+    assert final["coordinate"] > 0.05
+    assert final["normal"] < 0.2 * final["coordinate"]
+    assert max(sample["normal"] for sample in measured["series"]) == final["normal"]
+    assert abs(measured["series"][0]["full_c"] - 9.981468739539423e-06) < 1e-12
+    assert abs(max(sample["full_d"] for sample in measured["series"]) - window["full_D_momentum_max"]) < 1e-12
+    assert abs(max(sample["full_c"] for sample in measured["series"]) - window["full_C_hamilton_max"]) < 1e-12
+    assert all(abs(sample["lifted_power"] - sample["stored_power"]) < 1e-10 for sample in measured["series"])
+    assert abs(measured["lifted_integral"] - window["work_fieldwork_integral"]) < 1e-9
+    power_gap = abs(measured["unprojected_integral"] - measured["lifted_integral"])
+    if power_gap > 1e-8:
+        assert abs(measured["unprojected_integral"] - window["work_fieldwork_integral"]) > power_gap / 2
+    energy_drift = abs(measured["series"][-1]["energy"] - measured["series"][0]["energy"])
+    assert energy_drift < 1e-8
+    assert energy_drift < 1e-6 * abs(measured["lifted_integral"])
+    assert window["labeled_as_window_pass"] is False
+    assert record["renewal"] is False

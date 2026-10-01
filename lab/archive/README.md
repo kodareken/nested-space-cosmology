@@ -30,6 +30,13 @@ Retired raw FITS/HEALPix and Kantowski–Sachs utilities. They contain hard-code
 
 Two historical HTML visualizations. `presentation.html` is notable for correctly labeling the parent→child map and entropy equality as conjectures and explicitly listing the missing transition, information, dark-matter, and observational work. Its visual cycle remains an analogy, not a derivation.
 
+### `probes/`
+
+Byte copies of the temporary nf256 seed and compensate probes, with the
+mapping in [`probes/README.md`](probes/README.md). They are not the v5
+measurement. v4 only reprints its partial archive; v5 is the executable
+record.
+
 ### `historical-tests/`
 
 Transient or live-fixture tests that no longer describe the current store tip

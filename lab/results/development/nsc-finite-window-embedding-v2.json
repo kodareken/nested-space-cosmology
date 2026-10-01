@@ -1,0 +1,632 @@
+{
+  "schema": "NSC-FINITE-WINDOW-EMBEDDING-SMOOTH-v2",
+  "status": "SEAM_REGULAR_COMPRESSION_NOT_INVARIANT",
+  "predecessor": "NSC-FINITE-WINDOW-EMBEDDING-v1",
+  "operator": "sigma2/2*{a,P}+sigma1*kappa*L-1/2*{beta,P}",
+  "operator_owner": "nsc_spherical_coupling.apply_dirac",
+  "window_owner": "nsc_nested_qualities.finite_window",
+  "representative": {
+    "family": "u^m(1-u)^m times Legendre P_k(2u-1)",
+    "flat_power": 4,
+    "poly_terms": 6,
+    "parameter_count": 26,
+    "plus_right_phase": 0.676570503790893,
+    "minus_right_phase": 0.0,
+    "column_phase": 0.6147015926934642,
+    "carrier_k": 1.0,
+    "coefficients": {
+      "plus_left": [
+        -1683.4107793328951,
+        5209.608693512998,
+        -5589.839675130047,
+        6316.105191378781,
+        -2142.0059037955266,
+        2033.20858983868
+      ],
+      "plus_right": [
+        317.7402916214957,
+        13788.350607675666,
+        1036.920508528061,
+        15264.496553978537,
+        354.5198134482947,
+        5204.38595092735
+      ],
+      "minus_left": [
+        3395.5062879364787,
+        1284.2773803753407,
+        10026.235004540604,
+        1136.0672836432964,
+        4249.945575829088,
+        146.4973680878261
+      ],
+      "minus_right": [
+        -348.9687130715829,
+        8734.114036024734,
+        -529.4848286855786,
+        9534.229617201054,
+        -465.00553822467464,
+        3474.225185491635
+      ]
+    },
+    "normalization": "continuum L2 of the scalar profile; half-density sqrt(dx) on the Fourier grid",
+    "spin_frame": "sigma2 eigen-spinors [1, i]/sqrt(2) and [1, -i]/sqrt(2)",
+    "support": "(n, n+2) for region n, zero on the open bridge (4, 8)"
+  },
+  "tolerances": {
+    "continuum_matrix_error": 1e-12,
+    "continuum_gram_defect": 1e-12,
+    "continuum_hermiticity_defect": 1e-12,
+    "continuum_block_error": 1e-12,
+    "quadrature_matrix_gap": 1e-12,
+    "seam_value": 1e-12,
+    "seam_derivative": 1e-12,
+    "seam_cauchy_jet": 1e-08,
+    "near_seam_derivative": 0.0005,
+    "derivative_shrink_per_decade": 200.0,
+    "discrete_matrix_error_n256": 0.0005,
+    "discrete_matrix_error_n512": 5e-06,
+    "discrete_gram_defect_n256": 5e-06,
+    "discrete_gram_defect_n512": 5e-08,
+    "discrete_error_ratio_256_over_512": 20.0,
+    "classical_derivative_agreement": 1e-06
+  },
+  "quadrature_refinement": [
+    {
+      "quad": 64,
+      "matrix_error": 7.721884926240916e-14,
+      "hermiticity_defect": 5.4984232836404603e-14,
+      "gram_defect": 1.1546319456112486e-14,
+      "onsite_frobenius": [
+        2.4131274965003803e-14,
+        3.5431184500251045e-14,
+        5.496865733643508e-14
+      ],
+      "link_frobenius": [
+        9.567342167498832e-15,
+        2.584532757921918e-14
+      ],
+      "corner_frobenius": 0.0,
+      "leak_fraction": [
+        0.9950419790509418,
+        0.9934853497209069,
+        0.9948947270827352,
+        0.9934510425652148,
+        0.9952616934297676,
+        0.9935153170610382
+      ],
+      "captured_fraction": [
+        0.09945581896694165,
+        0.11395990474692153,
+        0.10091819470724712,
+        0.1142585927888484,
+        0.09723251303607969,
+        0.1136983498785478
+      ],
+      "support": [
+        {
+          "region": 0,
+          "spin": "plus",
+          "interval": [
+            0,
+            2
+          ],
+          "mass": 1.000000000000011,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 0,
+          "spin": "minus",
+          "interval": [
+            0,
+            2
+          ],
+          "mass": 1.0000000000000102,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 1,
+          "spin": "plus",
+          "interval": [
+            1,
+            3
+          ],
+          "mass": 1.0000000000000113,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 1,
+          "spin": "minus",
+          "interval": [
+            1,
+            3
+          ],
+          "mass": 1.0000000000000102,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 2,
+          "spin": "plus",
+          "interval": [
+            2,
+            4
+          ],
+          "mass": 1.0000000000000115,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 2,
+          "spin": "minus",
+          "interval": [
+            2,
+            4
+          ],
+          "mass": 1.0000000000000104,
+          "mass_outside_interval": 0.0
+        }
+      ],
+      "bridge_component_of_classical_image": 0.0,
+      "sign_control_current": {
+        "state": "projected coefficient vector [1, 0, i, 0, 0, 0]/sqrt(2)",
+        "meaning": "Instantaneous regional trace of the compressed generator V\u2020 H V. This is not the current of the full Dirac evolution.",
+        "real": 0.2500000000000071,
+        "imag": -0.0,
+        "frozen_value": 0.25
+      },
+      "subspace_population_second_derivative": {
+        "meaning": "Second derivative of subspace population for the projected sign-control state, equal to -2||(1-P) H psi||^2. It is not a closed evolution.",
+        "minus_two_leak_norm_squared": -387.1035346142592,
+        "leak_norm_squared": 193.5517673071296
+      }
+    },
+    {
+      "quad": 128,
+      "matrix_error": 2.7541733819492414e-14,
+      "hermiticity_defect": 5.353712814489493e-14,
+      "gram_defect": 9.856160834467555e-16,
+      "onsite_frobenius": [
+        1.9732083027029265e-15,
+        6.667833869162029e-15,
+        9.77126542051718e-15
+      ],
+      "link_frobenius": [
+        7.691418866866122e-15,
+        1.425307356348496e-14
+      ],
+      "corner_frobenius": 0.0,
+      "leak_fraction": [
+        0.995041979050942,
+        0.9934853497209069,
+        0.9948947270827351,
+        0.9934510425652149,
+        0.9952616934297673,
+        0.993515317061038
+      ],
+      "captured_fraction": [
+        0.09945581896693942,
+        0.11395990474692153,
+        0.10091819470724823,
+        0.11425859278884742,
+        0.09723251303608196,
+        0.11369834987854975
+      ],
+      "support": [
+        {
+          "region": 0,
+          "spin": "plus",
+          "interval": [
+            0,
+            2
+          ],
+          "mass": 1.0000000000000007,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 0,
+          "spin": "minus",
+          "interval": [
+            0,
+            2
+          ],
+          "mass": 0.9999999999999998,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 1,
+          "spin": "plus",
+          "interval": [
+            1,
+            3
+          ],
+          "mass": 1.0000000000000004,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 1,
+          "spin": "minus",
+          "interval": [
+            1,
+            3
+          ],
+          "mass": 0.9999999999999996,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 2,
+          "spin": "plus",
+          "interval": [
+            2,
+            4
+          ],
+          "mass": 1.0000000000000004,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 2,
+          "spin": "minus",
+          "interval": [
+            2,
+            4
+          ],
+          "mass": 0.9999999999999996,
+          "mass_outside_interval": 0.0
+        }
+      ],
+      "bridge_component_of_classical_image": 0.0,
+      "sign_control_current": {
+        "state": "projected coefficient vector [1, 0, i, 0, 0, 0]/sqrt(2)",
+        "meaning": "Instantaneous regional trace of the compressed generator V\u2020 H V. This is not the current of the full Dirac evolution.",
+        "real": 0.2499999999999996,
+        "imag": -3.3306690738754696e-16,
+        "frozen_value": 0.25
+      },
+      "subspace_population_second_derivative": {
+        "meaning": "Second derivative of subspace population for the projected sign-control state, equal to -2||(1-P) H psi||^2. It is not a closed evolution.",
+        "minus_two_leak_norm_squared": -387.1035346142554,
+        "leak_norm_squared": 193.5517673071277
+      }
+    },
+    {
+      "quad": 256,
+      "matrix_error": 5.559950713426307e-14,
+      "hermiticity_defect": 2.2221408060595165e-14,
+      "gram_defect": 8.881785873244357e-15,
+      "onsite_frobenius": [
+        1.8557496252536052e-14,
+        2.7641432028053144e-14,
+        4.1892654937706646e-14
+      ],
+      "link_frobenius": [
+        5.842375861765292e-15,
+        7.608551400269215e-15
+      ],
+      "corner_frobenius": 0.0,
+      "leak_fraction": [
+        0.995041979050942,
+        0.9934853497209069,
+        0.994894727082735,
+        0.9934510425652145,
+        0.9952616934297676,
+        0.9935153170610381
+      ],
+      "captured_fraction": [
+        0.09945581896693942,
+        0.11395990474692153,
+        0.10091819470724933,
+        0.11425859278885034,
+        0.09723251303607969,
+        0.11369834987854877
+      ],
+      "support": [
+        {
+          "region": 0,
+          "spin": "plus",
+          "interval": [
+            0,
+            2
+          ],
+          "mass": 1.0000000000000089,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 0,
+          "spin": "minus",
+          "interval": [
+            0,
+            2
+          ],
+          "mass": 1.0000000000000078,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 1,
+          "spin": "plus",
+          "interval": [
+            1,
+            3
+          ],
+          "mass": 1.0000000000000089,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 1,
+          "spin": "minus",
+          "interval": [
+            1,
+            3
+          ],
+          "mass": 1.0000000000000075,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 2,
+          "spin": "plus",
+          "interval": [
+            2,
+            4
+          ],
+          "mass": 1.0000000000000089,
+          "mass_outside_interval": 0.0
+        },
+        {
+          "region": 2,
+          "spin": "minus",
+          "interval": [
+            2,
+            4
+          ],
+          "mass": 1.0000000000000075,
+          "mass_outside_interval": 0.0
+        }
+      ],
+      "bridge_component_of_classical_image": 0.0,
+      "sign_control_current": {
+        "state": "projected coefficient vector [1, 0, i, 0, 0, 0]/sqrt(2)",
+        "meaning": "Instantaneous regional trace of the compressed generator V\u2020 H V. This is not the current of the full Dirac evolution.",
+        "real": 0.2500000000000039,
+        "imag": -0.0,
+        "frozen_value": 0.25
+      },
+      "subspace_population_second_derivative": {
+        "meaning": "Second derivative of subspace population for the projected sign-control state, equal to -2||(1-P) H psi||^2. It is not a closed evolution.",
+        "minus_two_leak_norm_squared": -387.10353461425734,
+        "leak_norm_squared": 193.55176730712867
+      }
+    }
+  ],
+  "quadrature_gaps": [
+    {
+      "from_quad": 64,
+      "to_quad": 128,
+      "matrix_gap": 7.631387610103254e-14
+    },
+    {
+      "from_quad": 128,
+      "to_quad": 256,
+      "matrix_gap": 6.1114139796286e-14
+    }
+  ],
+  "seams": {
+    "cauchy_jet_max_through_order_3": 9.984757302269112e-12,
+    "max_exact_seam_value": 0.0,
+    "max_exact_seam_derivative": 0.0,
+    "max_derivative_at_1e-3": 0.0001412652295117061,
+    "min_derivative_shrink": 842.6045862320477,
+    "assembled_seams": [
+      {
+        "spin": "plus",
+        "seam": 0.0,
+        "value": 0.0,
+        "derivative": 0.0,
+        "value_jump_at_0.01": 0.00020000595468443722,
+        "derivative_jump_at_0.01": 0.0772042185577398,
+        "value_scale_at_0.01": 0.00020000595468443722,
+        "derivative_scale_at_0.01": 0.0772042185577398,
+        "value_jump_at_0.001": 2.2660562841642485e-08,
+        "derivative_jump_at_0.001": 9.033050049300122e-05,
+        "value_scale_at_0.001": 2.2660562841642485e-08,
+        "derivative_scale_at_0.001": 9.033050049300122e-05,
+        "derivative_shrink": 854.6860488581215
+      },
+      {
+        "spin": "plus",
+        "seam": 1.0,
+        "value": 0.0,
+        "derivative": 0.0,
+        "value_jump_at_0.01": 0.00030645605481845645,
+        "derivative_jump_at_0.01": 0.0985114273066809,
+        "value_scale_at_0.01": 0.0002801144493290406,
+        "derivative_scale_at_0.01": 0.10779959856863415,
+        "value_jump_at_0.001": 3.5317546367540665e-08,
+        "derivative_jump_at_0.001": 0.00011567634392674034,
+        "value_scale_at_0.001": 3.206740082091416e-08,
+        "derivative_scale_at_0.001": 0.00012779205506018915,
+        "derivative_shrink": 843.5547774692354
+      },
+      {
+        "spin": "plus",
+        "seam": 2.0,
+        "value": 0.0,
+        "derivative": 0.0,
+        "value_jump_at_0.01": 0.00031046591859253613,
+        "derivative_jump_at_0.01": 0.11957621185724802,
+        "value_scale_at_0.01": 0.00031046591859253613,
+        "derivative_scale_at_0.01": 0.11957621185724802,
+        "value_jump_at_0.001": 3.5445667449998325e-08,
+        "derivative_jump_at_0.001": 0.0001412652295117061,
+        "value_scale_at_0.001": 3.5445667449998325e-08,
+        "derivative_scale_at_0.001": 0.0001412652295117061,
+        "derivative_shrink": 846.465986503347
+      },
+      {
+        "spin": "minus",
+        "seam": 0.0,
+        "value": 0.0,
+        "derivative": 0.0,
+        "value_jump_at_0.01": 0.00013348957880368625,
+        "derivative_jump_at_0.01": 0.05173131211317307,
+        "value_scale_at_0.01": 0.00013348957880368625,
+        "derivative_scale_at_0.01": 0.05173131211317307,
+        "value_jump_at_0.001": 1.4920829289491255e-08,
+        "derivative_jump_at_0.001": 5.9500264553711555e-05,
+        "value_scale_at_0.001": 1.4920829289491255e-08,
+        "derivative_scale_at_0.001": 5.9500264553711555e-05,
+        "derivative_shrink": 869.4299512983616
+      },
+      {
+        "spin": "minus",
+        "seam": 1.0,
+        "value": 0.0,
+        "derivative": 0.0,
+        "value_jump_at_0.01": 0.0003778329661209912,
+        "derivative_jump_at_0.01": 0.007421661944251079,
+        "value_scale_at_0.01": 0.00019888261694808113,
+        "derivative_scale_at_0.01": 0.07655937362993127,
+        "value_jump_at_0.001": 4.274037556850805e-08,
+        "derivative_jump_at_0.001": 1.0926345620096894e-05,
+        "value_scale_at_0.001": 2.2747286527644256e-08,
+        "derivative_scale_at_0.001": 9.065258506189441e-05,
+        "derivative_shrink": 844.536022636963
+      },
+      {
+        "spin": "minus",
+        "seam": 2.0,
+        "value": 0.0,
+        "derivative": 0.0,
+        "value_jump_at_0.01": 0.00017538400154818443,
+        "derivative_jump_at_0.01": 0.06747761993048859,
+        "value_scale_at_0.01": 0.00017538400154818443,
+        "derivative_scale_at_0.01": 0.06747761993048859,
+        "value_jump_at_0.001": 2.0095864736978545e-08,
+        "derivative_jump_at_0.001": 8.008218924161623e-05,
+        "value_scale_at_0.001": 2.0095864736978545e-08,
+        "derivative_scale_at_0.001": 8.008218924161623e-05,
+        "derivative_shrink": 842.6045862320477
+      }
+    ],
+    "classical_derivative_agreement": {
+      "step": 0.001,
+      "max_abs": 6.102929128632061e-08
+    }
+  },
+  "discrete_apply_dirac": [
+    {
+      "points": 128,
+      "matrix_error": 0.010838594026637356,
+      "gram_defect": 9.336700162476674e-05,
+      "onsite_frobenius": [
+        0.000447217830743915,
+        0.0006708267461075044,
+        0.0010062401191582246
+      ],
+      "link_frobenius": [
+        0.0036204219659845324,
+        0.005430632948974169
+      ],
+      "corner_frobenius": 0.0039124244471229926,
+      "leak_fraction": [
+        0.9950696394369412,
+        0.993505236606238,
+        0.9949246918190183,
+        0.9934712675946955,
+        0.9952839668181965,
+        0.9935341558862295
+      ],
+      "bridge_image_max": 0.32869759365962326,
+      "sampled_mass_outside_packet_arc": 0.0,
+      "operator": "nsc_spherical_coupling.apply_dirac"
+    },
+    {
+      "points": 256,
+      "matrix_error": 7.746956440221127e-05,
+      "gram_defect": 4.0662163769411563e-07,
+      "onsite_frobenius": [
+        2.259750810927003e-06,
+        3.3896262131247335e-06,
+        5.084439322920372e-06
+      ],
+      "link_frobenius": [
+        2.7657507268800823e-05,
+        4.148626090338589e-05
+      ],
+      "corner_frobenius": 2.221475570164232e-05,
+      "leak_fraction": [
+        0.9950421530913736,
+        0.9934854356730406,
+        0.9948949246810653,
+        0.9934511308803209,
+        0.9952618317440926,
+        0.9935153990100734
+      ],
+      "bridge_image_max": 0.04186908812033639,
+      "sampled_mass_outside_packet_arc": 0.0,
+      "operator": "nsc_spherical_coupling.apply_dirac"
+    },
+    {
+      "points": 512,
+      "matrix_error": 3.24320182936768e-07,
+      "gram_defect": 5.122049451244948e-10,
+      "onsite_frobenius": [
+        1.0081236207453953e-08,
+        1.512185743607302e-08,
+        2.2682786890746336e-08
+      ],
+      "link_frobenius": [
+        1.1651043081098615e-07,
+        1.7476565173610988e-07
+      ],
+      "corner_frobenius": 8.973110841393251e-08,
+      "leak_fraction": [
+        0.9950419791148989,
+        0.9934853492474169,
+        0.9948947272317811,
+        0.9934510420979864,
+        0.9952616933816426,
+        0.9935153165773398
+      ],
+      "bridge_image_max": 0.003623808036605499,
+      "sampled_mass_outside_packet_arc": 0.0,
+      "operator": "nsc_spherical_coupling.apply_dirac"
+    }
+  ],
+  "discrete_error_ratio_256_over_512": 238.8675404062514,
+  "inherited_law": {
+    "recomputed": false,
+    "normalized_shift_exact": true,
+    "omega": "3/2",
+    "depth": 3
+  },
+  "interpretation": {
+    "matches_frozen_blocks_in_continuum": true,
+    "projected_initial_generator_is_window": true,
+    "projected_sign_current_matches_one_quarter": true,
+    "full_dirac_evolution_is_this_compression": false,
+    "invariant_subspace": false,
+    "complement_leak_required_small": false,
+    "reason": "V\u2020 H V reproduces the frozen window in the continuum inner product, so the projected initial generator and its sign-control current agree with that window. The complement of H psi is retained memory, not a defect to be removed. The modes still vanish together on an open arc, so they are not an invariant subspace, and e^{-i J t} is not the Dirac solution."
+  },
+  "fit_statement": "Coefficients were accepted only after the continuum constraint residual was small under quadrature refinement. The Fourier grids are checks, not the objective. Flat power 4 with 4 or 5 Legendre terms, continued from a solved power-3 lobe and supplemented with random starts, stalled near 1.7e-2 and 4.3e-3. Six Legendre terms reached the continuum residual. That is the smallest count this search found, not a certificate that every other 5-coefficient chart is empty.",
+  "smaller_counts": {
+    "poly_terms_4": {
+      "stalled_residual": 0.0172,
+      "flat_power": 4
+    },
+    "poly_terms_5": {
+      "stalled_residual": 0.004349,
+      "flat_power": 4,
+      "longest_nfev": 1200
+    },
+    "poly_terms_6": {
+      "accepted_residual": 1e-14,
+      "flat_power": 4
+    }
+  },
+  "field_equations_changed": false,
+  "hand_inserted_matrix_couplings": false,
+  "target_B_substituted": false,
+  "all_nsc_claimed": false,
+  "source_hashes": {
+    "src/recursive_horizons/nsc_finite_window_embedding_smooth.py": "147781b7e613c1eb9e61fae15dcce78fd59e13b659d289010068a1cc7b46e4d5",
+    "tests/test_nsc_finite_window_embedding_smooth.py": "9254d4a575a8c1628cdc762387ad36221690ef476de91505a70c820299ab0d7e",
+    "docs/nsc-finite-window-embedding-smooth.md": "c09a2f91521538eafa23dc4ff00bcb484e94662eb401a0babf01ce2502ed7891"
+  }
+}

@@ -32,8 +32,20 @@ phase on the minus column. The variational Galerkin coupling v2 below is
 refinement v3 below is `FAIL_INITIAL_SOLVE` and has no full-source result.
 The evolving reduction below is prescribed-control convergence and is not
 an accepted coupled trajectory. Passing tests of these owners do not
-validate these failed physical trajectories. Embedding of the frozen
-window remains open. The resolved active action remains
+validate these failed physical trajectories. The coupled state and geometry
+loop already executes. Fixed $L$ and $\beta$ are gauge; $Q$, $r$, $\chi$
+and the momenta evolve. The v5 short response below was independently
+replayed and remains a diagnostic, not an initial $10^{-8}$ pass and not a
+renewal. The original $H$ and $B$ fractions are one witness. Embedding v1
+and the seam-regular v2 compression are an optional bridge, not a further
+fitting prerequisite. The corrected regional ledger separates
+$dx$-normalized proper pressure and normal energy from coordinate metric
+work $F_Q\dot Q$. Historical vacuum branch $B$ is not a prerequisite. Next
+diagnostic: the same coupled loop to $T=0.05$ with geometry-derived $B$,
+effect and spacetime convergence, and full, projected, and weak diagnostics.
+A small weak residual alone does not prove accuracy. Strong residuals stay
+reported. The old initial $10^{-8}$ line is not a blind veto. Renewal is
+not demonstrated. The resolved active action remains
 $\Gamma_{\mathrm{one}}$.
 The paused incoming gate stays a retained OPEN application. Assessing its
 relevance is not a required step before this work, and later
@@ -176,9 +188,10 @@ own the failed subspace control. The saved verdict is
 `FAIL_HELD_OUT_CONSTRAINT`. Renewal is false. $T=0.05$ was not run.
 A projected residual is not a physical pass. This is not a filter of the
 v1 radius, not a constraint projection, and not a renewal. The v1 JSON
-is unchanged. The frozen six-mode embedding is still unfinished. The
-incoming gate remains OPEN and its campaign remains paused. This page
-does not change either PDF and is not release 0.27.0.
+is unchanged. The Dirac compression of that window is recorded below and
+is not an accepted coupled trajectory. The incoming gate remains OPEN and
+its campaign remains paused. This page does not change either PDF and is
+not release 0.27.0.
 
 ## Matched Galerkin refinement v3, 1 October 2026
 
@@ -191,6 +204,68 @@ stopped at rho $=0.5$ with residual $1.2876060991167562\times 10^{-10}$.
 No full-source result was produced. The v1 and v2 JSON bytes are
 unchanged. The incoming gate remains OPEN and its campaign remains
 paused. This page does not change either PDF and is not release 0.27.0.
+
+## Galerkin refinement v5, 1 October 2026
+
+The [driver](../lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
+[record](../lab/results/development/nsc-spherical-coupling-refinement-v5.json)
+and [payload](../lab/results/development/nsc-spherical-coupling-refinement-v5.npz)
+are a completed diagnostic. Independent review is in
+[test_nsc_spherical_galerkin_independent.py](../lab/tests/test_nsc_spherical_galerkin_independent.py),
+now ten tests. At $n_f=512$ and $T=0.005$ the Hamilton residual is about
+$9.98\times 10^{-6}$, the momentum residual about $1.38\times 10^{-6}$, and
+the proper radial velocity about $0.0079505$. This is not the old initial
+or Newton acceptance and not a renewal. Fixed $L$ and $\beta$ are gauge;
+$Q$, $r$, $\chi$ and the momenta evolve. The next diagnostic is this same
+loop to $T=0.05$ with geometry-derived $B$. The old initial $10^{-8}$ line
+is not a veto. Report the strong residual as well as the projected and weak
+residuals.
+
+## Finite-window embedding v1, 1 October 2026
+
+The [note](../lab/docs/nsc-finite-window-embedding.md),
+[module](../lab/src/recursive_horizons/nsc_finite_window_embedding.py),
+[record](../lab/results/development/nsc-finite-window-embedding-v1.json)
+and [independent tests](../lab/tests/test_nsc_finite_window_embedding_independent.py)
+compress the frozen window onto the existing Dirac operator. Quadrature
+matches the original $H$ and $B$ at about $4.45\times 10^{-14}$; a direct
+analytic integral agrees at about $4.9\times 10^{-14}$. Modes are supported
+on $(n,n+2)$. The subspace is not invariant, outside coupling is strong, and
+the closed-window evolution is not transferred. Derivative jumps at the lobe
+joins make the Fourier error decay as $N^{-2}$. This match is one witness,
+not a requirement for every later realization.
+
+## Seam-regular embedding v2, 1 October 2026
+
+The [note](../lab/docs/nsc-finite-window-embedding-smooth.md),
+[module](../lab/src/recursive_horizons/nsc_finite_window_embedding_smooth.py),
+[tests](../lab/tests/test_nsc_finite_window_embedding_smooth.py) and
+[record](../lab/results/development/nsc-finite-window-embedding-v2.json)
+are the optional seam-regular bridge. The saved status is
+`SEAM_REGULAR_COMPRESSION_NOT_INVARIANT`. It is not a further fitting
+prerequisite and not a renewal.
+
+## Spherical Cauchy data, 1 October 2026
+
+The [module](../lab/src/recursive_horizons/nsc_spherical_cauchy_data.py),
+[note](../lab/docs/nsc-spherical-cauchy-data.md),
+[tests](../lab/tests/test_nsc_spherical_cauchy_data.py) and
+[record](../lab/results/development/nsc-spherical-cauchy-data-v1.json)
+provide a $p_Q$ antiderivative for $\chi=p_r=p_\chi=0$ and constant $Q$.
+Three tests pass. The mean and held-out current residual stay explicit.
+
+## Regional coordinate and normal-observer ledger, 1 October 2026
+
+The [note](../lab/docs/nsc-regional-energy-exchange.md),
+[module](../lab/src/recursive_horizons/nsc_regional_energy_exchange.py),
+[record](../lab/results/development/nsc-regional-energy-exchange-v1.json),
+[tests](../lab/tests/test_nsc_regional_energy_exchange.py) and
+[independent tests](../lab/tests/test_nsc_regional_energy_exchange_independent.py)
+are a diagnostic. Six owned tests and eight independent tests. Normal energy
+is $F_L/r=V\rho\,dx$, and the proper pressures divide by $dx$. $F_Q\dot Q$
+is coordinate metric work, not observer pressure work. Hamiltonian
+derivatives are not pressures. Historical vacuum branch $B$ is not a
+prerequisite. Renewal is not claimed.
 
 ## Nested qualities: finite mathematical construction, 27 September 2026
 

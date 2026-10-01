@@ -1,0 +1,297 @@
+{
+  "schema": "NSC-FINITE-WINDOW-EMBEDDING-v1",
+  "status": "CONSTRUCTED_COMPRESSION_NOT_INVARIANT",
+  "operator": "sigma2/2*{a,P}+sigma1*kappa*L-1/2*{beta,P}",
+  "operator_owner": "nsc_spherical_coupling.apply_dirac",
+  "window_owner": "nsc_nested_qualities.finite_window",
+  "geometry": {
+    "Q": 0.25132493326913924,
+    "length_density": "b0*Omega**s",
+    "shift": "beta0*Omega**s",
+    "s": "x on the packet arc [0,4], circle length 8",
+    "kappa": 1,
+    "Omega": 1.5,
+    "a0": 0.977957402407,
+    "beta0": 0.325985800803,
+    "b0": 0.2457850789
+  },
+  "domains": {
+    "packet_arc": [
+      0.0,
+      4.0
+    ],
+    "regions": 3,
+    "modes_per_region": 2,
+    "mode_support": "(n, n+2)",
+    "lobes": "degree-4 sine series on (n,n+1) and (n+1,n+2); values vanish at the endpoints",
+    "seam_regularity": "The profile is continuous. Derivatives may jump at the lobe seams and at the outer endpoints. Continuum quadrature uses the piecewise classical derivative and is not an N=512 Fourier evolution.",
+    "plus_right_lobe_phase": 0.6332154732379276,
+    "minus_right_lobe_phase": 0.0,
+    "column_phase": 0.5298187870937372,
+    "carrier": "plus exp(+i k (x-n)), minus exp(i*column_phase) exp(-i k (x-n)), k=1",
+    "spin_frame": "sigma2 eigen-spinors [1, i]/sqrt(2) and [1, -i]/sqrt(2)",
+    "complement": "L2 orthogonal of these six modes; bridge component of H psi is zero in the continuum operator"
+  },
+  "restrictive_packet": {
+    "points": 128,
+    "column_orthonormal_defect": 3.3306690738754696e-16,
+    "gram_defect": 3.3306690738754696e-16,
+    "onsite_frobenius": [
+      1.1265104997340944e-06,
+      1.6897657448487115e-06,
+      2.5346486206910493e-06
+    ],
+    "link_frobenius": [
+      5.9845119231619615,
+      8.97676788474295
+    ],
+    "corner_frobenius": 5.9988673665777526e-06,
+    "max_onsite": 2.5346486206910493e-06,
+    "min_link": 5.9845119231619615,
+    "conjugate": {
+      "link_plus_minus": [
+        0.043082853080371075,
+        0.023020548139953245
+      ],
+      "link_minus_plus": [
+        0.043082853080371075,
+        -0.0230205481399528
+      ],
+      "conjugate_defect": 4.440892098500626e-16,
+      "scope": "minus spatial column equals one constant phase times the conjugate of the plus spatial column, in the sigma2-eigen spin frame"
+    },
+    "frozen_conjugate": {
+      "link_plus_minus": [
+        0.0,
+        0.14285714285714285
+      ],
+      "link_minus_plus": [
+        0.1111111111111111,
+        0.0
+      ],
+      "conjugate_defect": 0.18098022620621237,
+      "scope": "minus spatial column equals one constant phase times the conjugate of the plus spatial column, in the sigma2-eigen spin frame"
+    },
+    "leak_fraction": [
+      0.9314803854449656,
+      0.9316193860010396,
+      0.9032400349066686,
+      0.903341585352608,
+      0.9656199777291113,
+      0.965802932476073
+    ],
+    "bridge_image_max": 0.05204686748543349,
+    "phase_on_minus_spinor_column": true,
+    "same_real_envelope": true
+  },
+  "real_lobe_necessary_relation": {
+    "carrier_k": 1.0,
+    "required_weighted_overlap": 0.2071801534525706,
+    "maximum_real_orthogonal_overlap": 0.1875,
+    "gap": 0.019680153452570598,
+    "obstruction": true,
+    "scope": "real left and right lobes, recorded k, sigma2-eigen spinors, neighbor L2 orthogonality, target B++=1/4, stored a0 and beta0"
+  },
+  "construction": {
+    "quad": 256,
+    "matrix_error": 4.450601090179064e-14,
+    "hermiticity_defect": 4.8827941617840446e-14,
+    "gram_defect": 1.7763578458222943e-15,
+    "onsite_frobenius": [
+      4.532007909366637e-15,
+      5.989528721713037e-15,
+      1.0010738080823815e-14
+    ],
+    "link_frobenius": [
+      4.0728963507907126e-15,
+      7.797470374409826e-15
+    ],
+    "corner_frobenius": 0.0,
+    "leak_fraction": [
+      0.9935883520726915,
+      0.9901997608910049,
+      0.9933977839337103,
+      0.9901480649567598,
+      0.9938726829069158,
+      0.9902449166016346
+    ],
+    "captured_fraction": [
+      0.11305833284403789,
+      0.1396582741243663,
+      0.11472071685442649,
+      0.14002431739660168,
+      0.11053094666838452,
+      0.13933773769019536
+    ],
+    "support": [
+      {
+        "region": 0,
+        "spin": "plus",
+        "interval": [
+          0,
+          2
+        ],
+        "mass": 1.0000000000000018,
+        "mass_outside_interval": 0.0
+      },
+      {
+        "region": 0,
+        "spin": "minus",
+        "interval": [
+          0,
+          2
+        ],
+        "mass": 1.0000000000000013,
+        "mass_outside_interval": 0.0
+      },
+      {
+        "region": 1,
+        "spin": "plus",
+        "interval": [
+          1,
+          3
+        ],
+        "mass": 1.0000000000000018,
+        "mass_outside_interval": 0.0
+      },
+      {
+        "region": 1,
+        "spin": "minus",
+        "interval": [
+          1,
+          3
+        ],
+        "mass": 1.0000000000000013,
+        "mass_outside_interval": 0.0
+      },
+      {
+        "region": 2,
+        "spin": "plus",
+        "interval": [
+          2,
+          4
+        ],
+        "mass": 1.0000000000000018,
+        "mass_outside_interval": 0.0
+      },
+      {
+        "region": 2,
+        "spin": "minus",
+        "interval": [
+          2,
+          4
+        ],
+        "mass": 1.0000000000000013,
+        "mass_outside_interval": 0.0
+      }
+    ],
+    "bridge_component_of_image": 0.0,
+    "sign_control_current": {
+      "real": 0.2499999999999967,
+      "imag": -1.1102230246251565e-16,
+      "frozen_value": 0.25
+    },
+    "subspace_population_second_derivative": {
+      "minus_two_leak_norm_squared": -306.29864965687835,
+      "leak_norm_squared": 153.14932482843918
+    },
+    "conjugate": {
+      "link_plus_minus": [
+        -1.3877787807814457e-17,
+        0.14285714285714304
+      ],
+      "link_minus_plus": [
+        0.11111111111111137,
+        -1.6046192152785466e-17
+      ],
+      "conjugate_defect": 0.18098022620621268,
+      "scope": "minus spatial column equals one constant phase times the conjugate of the plus spatial column, in the sigma2-eigen spin frame"
+    },
+    "plus_right_phase": 0.6332154732379276,
+    "minus_right_phase": 0.0,
+    "column_phase": 0.5298187870937372,
+    "carrier_k": 1.0
+  },
+  "discrete_apply_dirac": [
+    {
+      "points": 128,
+      "matrix_error": 0.21315073261549564,
+      "gram_defect": 5.329070518200751e-15,
+      "onsite_frobenius": [
+        0.008707124826952295,
+        0.013060687240429292,
+        0.019591030860642476
+      ],
+      "link_frobenius": [
+        0.06385171593926063,
+        0.09577757390888736
+      ],
+      "corner_frobenius": 0.0956615392043077,
+      "leak_fraction": [
+        0.9940202306012531,
+        0.9905150833737553,
+        0.9939147905403485,
+        0.9904627537994171,
+        0.9942249629622176,
+        0.990552446628543
+      ],
+      "bridge_image_max": 1.58985696475869,
+      "sampled_mass_outside_packet_arc": 0.0
+    },
+    {
+      "points": 256,
+      "matrix_error": 0.053042488066192287,
+      "gram_defect": 5.329070518200751e-15,
+      "onsite_frobenius": [
+        0.0012523355342747885,
+        0.0018785033014151191,
+        0.0028177549521128777
+      ],
+      "link_frobenius": [
+        0.016305948285521465,
+        0.024458922428277213
+      ],
+      "corner_frobenius": 0.023154081785432205,
+      "leak_fraction": [
+        0.9937909366547567,
+        0.9903303532351662,
+        0.9936206328760994,
+        0.990277226740361,
+        0.994043425747788,
+        0.9903724333547614
+      ],
+      "bridge_image_max": 1.1018190190645016,
+      "sampled_mass_outside_packet_arc": 0.0
+    }
+  ],
+  "inherited_law": {
+    "recomputed": false,
+    "normalized_shift_exact": true,
+    "omega": "3/2",
+    "depth": 3
+  },
+  "interpretation": {
+    "matches_frozen_blocks": true,
+    "instantaneous_projected_generator_is_J": true,
+    "sign_control_current_matches_one_quarter": true,
+    "invariant_subspace": false,
+    "closed_stage1_evolution_retained": false,
+    "reason": "V\u2020 H V equals the frozen window, so subspace quadratic forms and the finite-window currents agree at that instant. ||(1-P) H V|| is a positive fraction of ||H V|| and the modes vanish on a common open arc, so the Dirac evolution leaves the window."
+  },
+  "scope_limits": [
+    "Not a statement about every NSC operator or every finite window.",
+    "The conjugate-column obstruction is only for minus = phase * conjugate(plus).",
+    "The real-lobe overlap obstruction is only at the recorded carrier, spin frame and B++.",
+    "Unique continuation bars an invariant subspace for modes with a common open zero set of this first-order operator. It does not bar the compression.",
+    "A spectral basis without regional support is not this construction."
+  ],
+  "field_equations_changed": false,
+  "hand_inserted_matrix_couplings": false,
+  "target_B_substituted": false,
+  "all_nsc_claimed": false,
+  "source_hashes": {
+    "src/recursive_horizons/nsc_finite_window_embedding.py": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+    "tests/test_nsc_finite_window_embedding.py": "b7a5dbd6e8b0f9afbc7c3b150ab71525489c217a72f33c1233cfc43f676aa002",
+    "docs/nsc-finite-window-embedding.md": "89b2165214605acaff4e549eed06a074a0182600b558fde188f5663b4c65b853"
+  }
+}
