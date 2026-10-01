@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import re
 import sys
+import tomllib
 from urllib.parse import unquote
 
 
@@ -313,6 +314,15 @@ def check_provenance(errors: list[str], files: list[Path]) -> None:
         return
     if value.get("source_commit") != "ff2cf2722b966589b98a61accdbb6cee819a58c7":
         errors.append("publication provenance has the wrong source commit")
+    try:
+        project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+        metadata = json.loads((ROOT / "paper/metadata.json").read_text())
+        if value.get("public_version") != project["project"]["version"]:
+            errors.append("publication provenance has the wrong current package version")
+        if value.get("foundation_version", metadata["version"]) != metadata["version"]:
+            errors.append("publication provenance has the wrong frozen foundation version")
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("publication version routing: " + str(error))
     declared = {entry["path"]: entry for entry in value.get("included_paths", [])}
     actual = {
         path.relative_to(ROOT).as_posix()
@@ -346,20 +356,27 @@ def check_paper(errors: list[str]) -> None:
 
 
 def check_paper_catalog(errors: list[str]) -> None:
-    """Both papers and their distinct roles must survive a publication update."""
+    """Bind two active roles and preserve historical companion editions."""
     try:
         catalog = json.loads((ROOT / 'paper/catalog.json').read_text(encoding='utf-8'))
-        if (catalog.get('schema') != 'NSC-PAPER-CATALOG-v1'
-                or catalog.get('current_status') != 'OPEN'):
-            raise ValueError('unexpected catalog or scientific status')
+        schema = catalog.get('schema')
+        measured = schema == 'NSC-PAPER-CATALOG-v2'
+        if schema not in {'NSC-PAPER-CATALOG-v1', 'NSC-PAPER-CATALOG-v2'}:
+            raise ValueError('unexpected catalog schema')
+        status = 'MEASURED_FINITE_REALIZATION' if measured else 'OPEN'
+        if catalog.get('current_status') != status:
+            raise ValueError('unexpected active scientific status')
+        if measured and (catalog.get('finite_result_status') != status
+                         or catalog.get('physical_local_gate_status') != 'OPEN'):
+            raise ValueError('finite result and retained application must have separate statuses')
         rows = catalog.get('documents', [])
         documents = {row['id']: row for row in rows}
         if len(rows) != 2 or set(documents) != {'foundation', 'local-gate'}:
             raise ValueError('both unique paper roles are required')
-        roles = {'foundation': 'foundational_manuscript', 'local-gate': 'focused_open_companion'}
-        for name, row in documents.items():
-            if row['role'] != roles[name]:
-                raise ValueError('paper role differs')
+        roles = {'foundation': 'foundational_manuscript',
+                 'local-gate': 'focused_companion' if measured else 'focused_open_companion'}
+
+        def paths_for(row):
             paths = {}
             for field in ('source', 'pdf', 'manifest'):
                 relative = Path(row[field])
@@ -367,6 +384,12 @@ def check_paper_catalog(errors: list[str]) -> None:
                 if relative.is_absolute() or not candidate.resolve().is_relative_to(ROOT.resolve()) or not candidate.is_file():
                     raise ValueError('missing or invalid paper path: ' + row[field])
                 paths[field] = candidate
+            return paths
+
+        for name, row in documents.items():
+            if row['role'] != roles[name]:
+                raise ValueError('paper role differs')
+            paths = paths_for(row)
             record = json.loads(paths['manifest'].read_text(encoding='utf-8'))
             if sha256(paths['pdf']) != record['pdf_sha256']:
                 raise ValueError('paper PDF differs from build manifest')
@@ -376,10 +399,36 @@ def check_paper_catalog(errors: list[str]) -> None:
                         or record['source_sha256'] != row['source_sha256']
                         or record['pdf_sha256'] != row['pdf_sha256']):
                     raise ValueError('preserved foundation differs')
-            elif (row.get('status') != 'OPEN' or row.get('submission_ready') is not False
-                  or record.get('status') != 'OPEN' or record.get('submission_ready') is not False
-                  or record['inputs'].get(row['source']) != sha256(paths['source'])):
+                continue
+            if (row.get('status') != status or row.get('submission_ready') is not False
+                    or record.get('status') != status or record.get('submission_ready') is not False
+                    or record['inputs'].get(row['source']) != sha256(paths['source'])):
                 raise ValueError('companion status/source differs from its build')
+            if measured:
+                if (record.get('schema') != 'NSC-FINITE-REGENERATION-MANIFEST-v1'
+                        or row.get('author_review') != 'pending'
+                        or record.get('author_review') != 'pending'
+                        or not re.fullmatch('[0-9a-f]{40}', record.get('science_commit', ''))):
+                    raise ValueError('finite companion needs its pinned science and pending author review')
+                active_archive = ROOT / row['source_archive']
+                if (not active_archive.resolve().is_relative_to(ROOT.resolve()) or not active_archive.is_file()
+                        or sha256(active_archive) != record['source_archive_sha256']):
+                    raise ValueError('active companion source archive differs')
+                history = row.get('historical_editions')
+                if not isinstance(history, list) or not history:
+                    raise ValueError('historical companion edition must remain available')
+                for edition in history:
+                    historical_paths = paths_for(edition)
+                    if historical_paths['pdf'] == paths['pdf']:
+                        raise ValueError('new edition must not overwrite the historical PDF')
+                    prior = json.loads(historical_paths['manifest'].read_text(encoding='utf-8'))
+                    if (sha256(historical_paths['pdf']) != prior['pdf_sha256']
+                            or prior['inputs'].get(edition['source']) != sha256(historical_paths['source'])):
+                        raise ValueError('historical companion bytes differ')
+                    archive = ROOT / edition['source_archive']
+                    if (not archive.resolve().is_relative_to(ROOT.resolve()) or not archive.is_file()
+                            or sha256(archive) != prior['source_archive_sha256']):
+                        raise ValueError('historical source archive differs')
         if documents['foundation']['pdf'] == documents['local-gate']['pdf']:
             raise ValueError('companion cannot replace the foundational PDF')
     except (OSError, ValueError, KeyError, TypeError) as error:

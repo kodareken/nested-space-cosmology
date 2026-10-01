@@ -1,0 +1,25 @@
+{
+  "schema": "NSC-FINITE-ARXIV-DRYRUN-v1",
+  "local_checks": {
+    "ASCII_metadata": true,
+    "abstract_characters": 1517,
+    "abstract_limit": 1920,
+    "sole_human_author": true,
+    "AI_assistance_disclosed": true,
+    "metadata_matches_source": true
+  },
+  "official_requirements_checked": "2026-10-01",
+  "requirement_sources": {
+    "metadata": "https://info.arxiv.org/help/prep.html",
+    "TeX": "https://info.arxiv.org/help/submit_tex.html",
+    "processor": "https://info.arxiv.org/help/faq/texlive.html",
+    "license": "https://info.arxiv.org/help/license/index.html"
+  },
+  "arxiv_default_documented": "TeX Live 2025",
+  "arxiv_processor_verified": false,
+  "local_compiler_only": true,
+  "author_review": "pending",
+  "license_choice": "proposed; human approval pending",
+  "submission_performed": false,
+  "account_or_UI_accessed": false
+}

@@ -23,10 +23,10 @@ constrained calculation into a settled theory.
 | Spherical null expansion | [Note](../lab/docs/nsc-spherical-null-expansion.md), [record](../lab/results/development/nsc-spherical-null-expansion-v1.json) |
 | Local-boundary review | [v1 record](../lab/results/development/nsc-local-boundary-review-v1.json), [v2 binding](../lab/results/development/nsc-local-boundary-review-v2.json) |
 | Initial geometry-graded window | [Note](../lab/docs/nsc-geometry-graded-window.md), [record](../lab/results/development/nsc-geometry-graded-window-v1.json) |
-| Both papers | [papers.md](papers.md) |
+| Current paper and preserved foundation | [papers.md](papers.md), [current PDF](../paper/finite-regeneration.pdf), [build/evidence](../paper/finite-regeneration-manifest.json) |
 | Reproduction | [reproducing.md](reproducing.md) |
 | How the laboratory was imported | [repository-consolidation.md](repository-consolidation.md) |
-| Focused OPEN draft notes | [local-gate-draft.md](local-gate-draft.md) |
+| Historical OPEN companion edition | [local-gate-draft.md](local-gate-draft.md) |
 | Finite nested-quality construction | [nsc-nested-qualities.md](nsc-nested-qualities.md) |
 | Prior art and the open claim | [prior-art-and-open-claim.md](prior-art-and-open-claim.md) |
 | 10 September 2026 development record | [development-update-2026-09-10.md](development-update-2026-09-10.md) |

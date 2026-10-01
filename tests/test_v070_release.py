@@ -39,10 +39,24 @@ class V070ReleaseTests(unittest.TestCase):
             self.assertEqual('0.7.0',version)
         self.assertIn('version: 0.7.0',tagged('CITATION.cff'))
 
-    def test_current_notebook_metadata_is_consistent(self):
-        version=json.loads((ROOT/'paper/metadata.json').read_text())['version']
-        self.assertEqual(version,tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version'])
-        self.assertIn('version: '+version,(ROOT/'CITATION.cff').read_text())
+    def test_frozen_notebook_and_current_publication_metadata_are_consistent(self):
+        metadata_bytes=(ROOT/'paper/metadata.json').read_bytes()
+        metadata=json.loads(metadata_bytes)
+        build=json.loads((ROOT/'paper/build-manifest.json').read_text())
+        catalog=json.loads((ROOT/'paper/catalog.json').read_text())
+        documents={item['id']:item for item in catalog['documents']}
+        foundation=documents['foundation']
+        self.assertEqual(metadata['version'],build['version'])
+        self.assertEqual(metadata['version'],foundation['version'])
+        self.assertEqual(metadata['date_iso'],foundation['date'])
+        self.assertEqual(hashlib.sha256(metadata_bytes).hexdigest(),build['metadata_sha256'])
+        self.assertEqual(foundation['source'],build['source'])
+        self.assertEqual(foundation['pdf'],build['output'])
+
+        current_version=tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version']
+        self.assertEqual(current_version,catalog['publication_version'])
+        self.assertEqual(current_version,documents['local-gate']['version'])
+        self.assertIn('version: '+current_version,(ROOT/'CITATION.cff').read_text().splitlines())
 
     def test_new_policies_preserve_the_recorded_tolerances(self):
         self.assertEqual(['results/development/'+n+'.json' for n in NAMES],

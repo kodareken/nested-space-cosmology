@@ -1,13 +1,16 @@
 # Nested-Space Cosmology
 
-**New focused mathematical result:** [Nested Qualities and Local Responses](paper/local-incoming-gate-draft.pdf)
-gives an explicit finite-window construction, a proof of inherited scale relations,
-ordered regional reduction and distinct regional states under the same law.
-[Proof and scope](docs/nsc-nested-qualities.md). The separate gravitational
-incoming gate remains OPEN and its campaign is paused. Its historical
-checkpoint is retained in an appendix and is not a prerequisite for this
-finite result. The [43-page foundation](paper/nested-space-cosmology.pdf)
-remains unchanged.
+**Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
+presents the measured finite spherical realization, source controls, actual
+metric curvature, and a local response on the same generated trajectory.
+The 14-page companion is dated 1 October 2026, with
+[LaTeX source](paper/finite-regeneration/main.tex),
+[arXiv source package](paper/finite-regeneration-arxiv.tar.gz), and
+[build/evidence manifest](paper/finite-regeneration-manifest.json).
+Author review and the actual arXiv processor remain pending. The
+[43-page foundation](paper/nested-space-cosmology.pdf) stays frozen at v0.26.0.
+The [historical 5-page companion](paper/local-incoming-gate-draft.pdf)
+preserves the finite operator construction and OPEN application checkpoint.
 
 **Measured finite realization:** regional source differences produce transfer,
 the same action couples the state and geometry, a localized structure persists
@@ -41,14 +44,15 @@ OPEN and its campaign remains paused. It is not a prerequisite.
 ## One research programme, two complementary papers
 
 The original manuscript remains the foundation of this project. The focused
-article is the finite nested-qualities result named above. It does not replace
-the broader manuscript, and it does not claim that the cosmology has been proved.
-The source-fixed incoming gate is an OPEN appendix of that companion.
+article now connects the inherited finite construction to measured transfer,
+geometry, maintained structure, and local memory. Its scope is the declared
+finite realization. The historical incoming-gate application remains OPEN
+and paused separately.
 
 | Read | Purpose | Status |
 |---|---|---|
 | [Foundational manuscript: PDF](paper/nested-space-cosmology.pdf) · [Markdown](paper/nested-space-cosmology.md) | The broad NSC idea, inheritance relation, existing operator calculations, source history and references | Frozen v0.26.0, 15 September 2026, 43 pages |
-| [Focused companion: PDF](paper/local-incoming-gate-draft.pdf) · [LaTeX](paper/local-gate-draft/main.tex) | Finite-window nested qualities: inherited scale relations, ordered regional reduction, and distinct regional states under the same law. The incoming gate is an OPEN appendix | Finite construction recorded; gate appendix OPEN and paused. Frozen foundation remains v0.26.0 |
+| [Current companion: PDF](paper/finite-regeneration.pdf) · [LaTeX](paper/finite-regeneration/main.tex) | Finite spherical realization with source-dependent transfer, actual geometric feedback, maintained localization, and same-realization local response | Measured finite result, v0.27.0, 1 October 2026, 14 pages; author review/submission pending |
 
 [How the papers fit together](docs/papers.md) ·
 [Current scientific status](docs/current-result.md) ·
@@ -411,17 +415,21 @@ the expensive scientific generators.
 
 ## Research status
 
-NSC is an active theoretical programme and working preprint. Its exact
-identities and numerical results apply to the operators, states, domains, and
-approximations named in their records. The present numerical records are the
-spherical Galerkin loop, the $T=0.10$ controls, the stored-frame local
-response, and the sampled null expansion in
-[the current result](docs/current-result.md#present-spherical-loop).
-Renewal is not closed. Reusable identities, proposed interpretations, and the
-paused incoming-gate application remain separate. Time, antimatter,
-dark-sector, and continuing-gradient readings remain open research. A complete
-self-sourced parent-to-child solution, an identified particle spectrum, and an
-independent cosmological prediction are not yet recorded.
+NSC is an active theoretical programme with a measured finite realization.
+The current coupled chain reaches $T=0.3$: source-dependent regional flow,
+generated geometry, maintained localization, and local response on the same
+trajectory. Its numerical comparisons meet the stated one-percent effect
+criterion and retain their indicator domains. The demonstrated branch is
+maintained structure; renewal is unclaimed. The
+[current companion](paper/finite-regeneration.pdf) and
+[scientific status](docs/current-result.md#present-spherical-loop) give the
+operators, states, domains, and error comparisons.
+
+The incoming-gate application remains OPEN and paused. Time, antimatter,
+dark-sector, and continuing-gradient interpretations remain research questions.
+A total unknown-path error certificate, a complete parent-to-child physical
+solution, an identified particle spectrum, and independent cosmological
+predictions are stronger claims than this recorded finite result.
 
 ## Authorship
 

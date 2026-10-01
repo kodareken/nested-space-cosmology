@@ -1,0 +1,14 @@
+{
+  "title": "Regional Transfer, Geometric Feedback, and Local Memory: A Finite Spherical Realization of Nested-Space Inheritance",
+  "authors": [
+    "Douglas Ek"
+  ],
+  "abstract": "We construct a finite spherical realization in which regional state differences, energy exchange, geometric feedback, maintained localization, and a measurable local response occur under one action. Six Gaussian fermion columns and the metric evolve together on a periodic radial chart. A conformal gauge gives wave transport for the continuum constraints and an explicit forcing budget for the projected finite dynamics. Four matched runs reach coordinate time 0.3 without a state reset. A localized region remains the leader while normal energy flows across three natural regional surfaces; the associated space, time, and quadrature indicators are below one percent. Curvature is computed from the realized metric and the actual projected time jet, rather than inferred from an auxiliary field. On the active interval 0.2 to 0.3, reduction to the original two-mode observer reproduces the generated occupation and coherence. Memory, initial exterior drive, and actual initial cross correlations each produce a local effect larger than its independently measured comparison discrepancy. Source-imbalance controls change transfer and leadership under the same law. The construction reuses finite normalized inheritance and standard operator elimination. It demonstrates maintained structure with regional transport and local memory on a declared finite realization, with numerical precision indicators; it does not infer a periodic return, new matter, an eternal continuation, or a continuum state-error certificate.",
+  "comments": "14 pages, 4 figures. Finite numerical realization; author review pending.",
+  "primary_category_proposed": "gr-qc",
+  "cross_lists_proposed": [],
+  "license_proposed": "arXiv non-exclusive distribution license",
+  "license_url": "https://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+  "human_author_review_pending": true,
+  "submission_performed": false
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "NSC-FINITE-REGENERATION-FIGURES-v1",
+  "science_commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+  "matplotlib": "3.11.1",
+  "numpy": "2.5.1",
+  "font": "DejaVu Sans",
+  "figure_inches": [
+    7.2,
+    2.65
+  ],
+  "producer_sha256": "61300b0d7d67917a800f754c4b8bd279b78a4a2ae37526e2efb1953f13fc0db7",
+  "figures": {
+    "regional-transfer.pdf": {
+      "sha256": "cc4c56ee4f4b1cc5621fecd95f9fbb2383dc0efcf10a237c6666a7e196e0c7b6",
+      "bytes": 24490,
+      "sources": {
+        "lab/results/development/nsc-spherical-conformal-episode-v2.json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d"
+      },
+      "transformations": "Absolute physical surface fluxes from physical_series, whose producer already divides flux_nodal by dx; stored region-0 shares. Grey interval is local-response window.",
+      "vector_pdf": true,
+      "metadata_epoch": 0,
+      "embedded_searchable_font_requested": true
+    },
+    "geometry-curvature.pdf": {
+      "sha256": "2af54a703fd0411a4efe17df6bc28bda5b302747c97f8c7da17ee4bafd3e55dc",
+      "bytes": 28083,
+      "sources": {
+        "lab/results/development/nsc-spherical-conformal-episode-v2.json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+        "lab/results/development/nsc-spherical-conformal-curvature-v1.json": "bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459"
+      },
+      "transformations": "Recorded normal-velocity extrema and metric Weyl invariant maxima from actual projected ODE jets; no auxiliary-field substitution.",
+      "vector_pdf": true,
+      "metadata_epoch": 0,
+      "embedded_searchable_font_requested": true
+    },
+    "normal-ledger.pdf": {
+      "sha256": "b3370a73414dd3389d9bc037d4e597bb00d4f07f0f053d319642750f49e9ad3e",
+      "bytes": 24969,
+      "sources": {
+        "lab/results/development/nsc-spherical-conformal-episode-v2.json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d"
+      },
+      "transformations": "Independent frame-trapezoid cumulative normal balance terms; all numerical-step samples for R and forcing. Sampled integrals are indicators, not continuum/time enclosures.",
+      "vector_pdf": true,
+      "metadata_epoch": 0,
+      "embedded_searchable_font_requested": true
+    },
+    "local-response.pdf": {
+      "sha256": "aa2a943a433893bffda1d60aeb6c76295e1bd731cc1eb56c837e6e29f8375559",
+      "bytes": 24724,
+      "sources": {
+        "lab/results/development/nsc-conformal-local-response-v2.json": "2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+        "lab/results/development/nsc-conformal-local-response-v2.npz": "32c9dce390c06fb03ea9938c6c8c41e2be638463556c851f303da70eb61713bf",
+        "lab/results/development/nsc-conformal-memory-control-v1.json": "3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+        "lab/results/development/nsc-conformal-memory-control-v1.npz": "402917f0c84292cb9f2f5943393c4f76c7ae2739637f36e1fbe7e3db4018cf74"
+      },
+      "transformations": "Left: actual autonomous occupations of modes 0/1, with mode-0 causal omission curves. Right: absolute max errors over both retained modes, using independent full drive/cross and triangular memory references. Initial roundoff sample and exact zeros omitted from logarithmic panel.",
+      "vector_pdf": true,
+      "metadata_epoch": 0,
+      "embedded_searchable_font_requested": true
+    }
+  }
+}

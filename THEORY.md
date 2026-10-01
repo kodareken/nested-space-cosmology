@@ -10,15 +10,16 @@ and further-gradient readings stay open research.
 
 The inheritance relation $\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta$
 is reused inside its stated domain. It is not recomputed as an infinite nest.
-The executed calculation is the spherical Galerkin loop in
-[the current result](docs/current-result.md#present-spherical-loop).
-`compose_fine_hamiltonian` recomputes the column source and the geometric
-rates, and feeds $F_Q$ into $\dot p_Q$. $Q$, $r$, $\chi$, the
-momenta and the spinor columns evolve. $L$ and $\beta$ stay gauge
-controls. The initial radius uses that source. The $n_f=512$, $T=0.005$
-record is a geometric diagnostic. Its proper radial velocity, about
-$0.0079505$, is a maximum of the absolute value; signed motion is not
-inferred from it.
+The current finite realization is the conformal spherical Galerkin loop
+through $T=0.3$ in [the current result](docs/current-result.md#present-spherical-loop).
+It measures source-dependent regional transfer, generated geometry, maintained
+localization, and a local response on that same trajectory. The same-action
+choice $L=Q$, $\beta=0$ includes the lapse chain-rule force and
+$F_L\dot L$ work. The [owning note](lab/docs/nsc-spherical-conformal-continuation.md)
+states the source controls, numerical indicators, and finite constraint domain.
+The [focused article](paper/finite-regeneration.pdf) presents this result;
+human author review and the actual arXiv processor check remain pending.
+Earlier prescribed-gauge diagnostics keep their dated evidence below.
 
 The sphere's inside and surrounding region are the organizing motivation:
 consider their coupled fields, stresses and geometry together. The present model
@@ -394,7 +395,22 @@ geometry defines the Dirac spectrum
 ```
 
 That diagram is the common-action stationarity condition above, inside its
-CTP domain. The calculation that currently runs is narrower. `rk4_step`
+CTP domain. The finite calculation is narrower. In the same-action conformal
+realization, the projected geometric rate also evolves the lapse, and the
+field work includes both $F_Q\dot Q$ and $F_L\dot L$. Four matched runs
+reach $T=0.3$ with resolved surface flows at $x=0,2,4$, maintained regional
+localization, and a streamed local response on $[0.2,0.3]$. Source reversal
+reverses signed transfer, while $\pm5\%$ imbalance changes it by about
+$\pm5.04\%$ in the recorded exploratory control domain. The actual metric
+curvature and the local memory, drive, and cross controls are measured from
+this realization. Numerical movements are below one percent of their own
+claimed effects. They remain indicators; renewal and continuum conclusions
+are separate claims. The [continuation note](lab/docs/nsc-spherical-conformal-continuation.md)
+owns the domains and the [current article](paper/finite-regeneration.pdf)
+connects the finite chain.
+
+The following prescribed-gauge results, recorded on 1 October 2026, are
+historical predecessors. In that default gauge, `rk4_step`
 calls `rates` on each stage state, and `rates` calls
 `compose_fine_hamiltonian`. The fine-grid source and geometric rates are
 recomputed from that prolonged state, and $F_Q$ enters $\dot p_Q$. The
@@ -419,7 +435,7 @@ residual is higher. Continuum constraint control and renewal are not
 proved. The historical initial tolerance $10^{-8}$ is not an automatic
 veto, and a weak residual alone would not decide the window.
 
-Three saved consumers sit on that same loop and do not replace the
+Three historical saved consumers sit on that same prescribed loop and do not replace the
 broader stationarity question above. The
 [regeneration controls](lab/docs/nsc-regeneration-controls.md) continue
 the saved state to $T=0.10$. The leader's shell content rises by about
@@ -456,6 +472,7 @@ links are the target. Numbers and owners:
 
 | Result | Meaning |
 |---|---|
+| Finite conformal spherical realization | Source-dependent surface transfer, generated metric response, maintained localization, and measured local memory coexist on one trajectory through $T=0.3$ |
 | Exact scalar-link Dirac reduction | One $\Phi$ gives a mass gap and visible self-energy |
 | Evaluated full-spinor boundary maps | Geometry produces a definite energy-dependent transmission kernel |
 | Vacuum-work identity | A changing geometry creates Dirac excitations and supplies their energy |
@@ -495,12 +512,15 @@ One solved state must supply, with the same $\Theta$:
 5. one dimensionless relation connecting particle and cosmological scales.
 
 These five items remain the longer chain, inside the domains already stated
-on this page. The recorded finite realization is the spherical dynamics in
-[the current result](docs/current-result.md#present-spherical-loop): the
-$T=0.05$ episode, the $T=0.10$ control continuation, the stored-frame
-local response, and the sampled null expansion. Renewal is not closed.
-Further constructions stay finite. The recorded outcome of the present
-realization guides the next model step.
+on this page. The current finite realization is the conformal spherical
+dynamics through $T=0.3$ in [the current result](docs/current-result.md#present-spherical-loop).
+It connects source differences, resolved regional transfer, generated
+geometry, maintained structure, and local memory on the same realization.
+The maintained branch is measured; renewal is not claimed. The
+[owning note](lab/docs/nsc-spherical-conformal-continuation.md) and
+[focused article](paper/finite-regeneration.pdf) state the finite evidence
+and its numerical domains. The earlier prescribed episodes remain historical
+results, and further constructions stay finite.
 
 For the general status and attribution of the working programme, see the
 [README](README.md#research-status). For the source code and stored evidence,

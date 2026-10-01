@@ -1,9 +1,9 @@
 {
-  "schema": "NSC-PAPER-CATALOG-v1",
+  "schema": "NSC-PAPER-CATALOG-v2",
   "project": "Nested-Space Cosmology",
-  "current_status": "OPEN",
+  "current_status": "MEASURED_FINITE_REALIZATION",
   "status_document": "docs/current-result.md",
-  "relationship": "One research programme; preserved foundation and focused nested-qualities companion with historical OPEN application",
+  "relationship": "One programme: preserved foundation and current finite-realization companion; historical companion editions retained",
   "documents": [
     {
       "id": "foundation",
@@ -18,15 +18,40 @@
     },
     {
       "id": "local-gate",
-      "role": "focused_open_companion",
-      "status": "OPEN",
+      "role": "focused_companion",
+      "version": "0.27.0",
+      "date": "2026-10-01",
+      "status": "MEASURED_FINITE_REALIZATION",
       "submission_ready": false,
-      "source": "paper/local-gate-draft/main.tex",
-      "pdf": "paper/local-incoming-gate-draft.pdf",
-      "manifest": "paper/local-gate-draft-manifest.json",
-      "title": "Nested Qualities and Local Responses: An Inherited Finite-Operator Construction"
+      "author_review": "pending",
+      "title": "Regional Transfer, Geometric Feedback, and Local Memory: A Finite Spherical Realization of Nested-Space Inheritance",
+      "pages": 14,
+      "source": "paper/finite-regeneration/main.tex",
+      "pdf": "paper/finite-regeneration.pdf",
+      "manifest": "paper/finite-regeneration-manifest.json",
+      "source_archive": "paper/finite-regeneration-arxiv.tar.gz",
+      "science_commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "historical_editions": [
+        {
+          "id": "local-gate",
+          "role": "focused_open_companion",
+          "status": "OPEN",
+          "submission_ready": false,
+          "source": "paper/local-gate-draft/main.tex",
+          "pdf": "paper/local-incoming-gate-draft.pdf",
+          "manifest": "paper/local-gate-draft-manifest.json",
+          "title": "Nested Qualities and Local Responses: An Inherited Finite-Operator Construction",
+          "date": "2026-09-27",
+          "pages": 5,
+          "source_archive": "paper/local-incoming-gate-draft-source.tar.gz"
+        }
+      ]
     }
   ],
   "mathematical_result": "finite nested-operator construction with explicit proof",
-  "physical_local_gate_status": "OPEN"
+  "physical_local_gate_status": "OPEN",
+  "finite_result_status": "MEASURED_FINITE_REALIZATION",
+  "publication_version": "0.27.0",
+  "publication_date": "2026-10-01",
+  "physical_local_gate_campaign": "PAUSED"
 }

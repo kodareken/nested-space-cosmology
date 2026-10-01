@@ -29,6 +29,14 @@ claimed effects. They are refinement indicators, while stronger propagated
 state-error and continuum certificates remain separate claims. Renewal is
 false. The earlier prescribed-gauge records below keep their original domains.
 
+The [14-page focused article](../paper/finite-regeneration.pdf), dated
+1 October 2026, presents this measured finite result. Its
+[source](../paper/finite-regeneration/main.tex) and
+[manifest](../paper/finite-regeneration-manifest.json) bind the pinned
+scientific evidence; human author review and the actual arXiv processor
+check remain pending. The [paper guide](papers.md) preserves the foundation
+and earlier focused edition.
+
 The code owner is
 [nsc_spherical_galerkin_coupling.py](../lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py).
 The v5 replay,

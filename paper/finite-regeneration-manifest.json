@@ -1,0 +1,64 @@
+{
+  "schema": "NSC-FINITE-REGENERATION-MANIFEST-v1",
+  "status": "MEASURED_FINITE_REALIZATION",
+  "submission_ready": false,
+  "author_review": "pending",
+  "science_commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+  "title": "Regional Transfer, Geometric Feedback, and Local Memory: A Finite Spherical Realization of Nested-Space Inheritance",
+  "authors": [
+    "Douglas Ek"
+  ],
+  "pages": 14,
+  "inputs": {
+    "paper/finite-regeneration/main.tex": "39108ca99fe7851951000901ca4b25f953e666787f44990d64e3585d6aec3400",
+    "paper/finite-regeneration/references.bib": "5be8c68800abed387f4fa5820bf360c69de7a7ec8bd437c908625f2da2a29cdb",
+    "paper/finite-regeneration/figures/regional-transfer.pdf": "cc4c56ee4f4b1cc5621fecd95f9fbb2383dc0efcf10a237c6666a7e196e0c7b6",
+    "paper/finite-regeneration/figures/normal-ledger.pdf": "b3370a73414dd3389d9bc037d4e597bb00d4f07f0f053d319642750f49e9ad3e",
+    "paper/finite-regeneration/figures/geometry-curvature.pdf": "2af54a703fd0411a4efe17df6bc28bda5b302747c97f8c7da17ee4bafd3e55dc",
+    "paper/finite-regeneration/figures/local-response.pdf": "aa2a943a433893bffda1d60aeb6c76295e1bd731cc1eb56c837e6e29f8375559",
+    "paper/finite-regeneration/evidence/snapshot.json": "2f926c196caf7ff3e9e7e4ccd413609b82e888d2bc74c1351a6c8ba2ffb170ac",
+    "paper/finite-regeneration/arxiv-metadata.json": "b5f7bcfdc1189197c9a313773baf789e991a7389a83fe65bee6848419678c6d5",
+    "paper/finite-regeneration/arxiv-dryrun.json": "a397bf8399dd758e5930865c84035a65420c0ef1d47520be7138c392128f3b4a",
+    "paper/finite-regeneration/figure-manifest.json": "590a04244100eb5da774be96d956d613611a9b957d9fc2d730f3336e10f9b152",
+    "scripts/finite_regeneration.py": "c95c13e91824d2c0afc01dfb91f6862bfa4a6202e9497d46572fb74cbf8f3e3c",
+    "scripts/finite_regeneration_figures.py": "61300b0d7d67917a800f754c4b8bd279b78a4a2ae37526e2efb1953f13fc0db7"
+  },
+  "pdf_sha256": "416cb4f9ade29bad6f279174b94ba81ccf4d1bf0ea4092259c714fb0a6fd92ce",
+  "source_archive_sha256": "1bf31d077b94f90426ff10ca4187515f0b187ace2ff5a620b684dafed618ac3f",
+  "bbl_sha256": "f55ae0dc665756a91580fa54f335d57a6c931e0c8ea3af16e9030a42a936bd65",
+  "archive_members": [
+    "figures/geometry-curvature.pdf",
+    "figures/local-response.pdf",
+    "figures/normal-ledger.pdf",
+    "figures/regional-transfer.pdf",
+    "main.bbl",
+    "main.tex",
+    "references.bib"
+  ],
+  "compiler": {
+    "engine": "Tectonic 0.17.0",
+    "binary_sha256": "b52b5a730e2b0b33087304f7720f649603953f270a6b1c88bb031e1ae01f7f9c",
+    "metadata_epoch": 0,
+    "untrusted": true,
+    "only_cached_packages": true,
+    "clean_builds": 2,
+    "standard_resource_bundle": [
+      {
+        "cache_entry": "https,58,,47,,47,relay.fullyjustified.net,47,default_bundle_v33.tar",
+        "resource_digest": "6ffe055852f8faf66c0acbe1a7fb27f87b869a90bad1204f3bf4d9683f597c7c",
+        "entry_sha256": "1f94cb6e6893fb09037585fdde65d436f90e2d726175e06363723529f52c880e"
+      }
+    ],
+    "pdf_and_bibliography_byte_identical": true,
+    "arxiv_TeX_Live_2025_processor_verified": false
+  },
+  "pdf_quality": {
+    "embedded_fonts": true,
+    "searchable_text": true,
+    "pages": 14
+  },
+  "complete_declared_scientific_dependency_graph": true,
+  "arxiv_processor_verified": false,
+  "historical_artifacts_unchanged": true,
+  "simulation_reexecuted": false
+}

@@ -79,12 +79,36 @@ Its large angular integration and the parent-state calculation dominate the
 new runtime; the Linux reproduction job has a 120-minute ceiling. This is
 an execution limit, not a claimed measured runtime.
 
+## Current finite article
+
+The [14-page current companion](../paper/finite-regeneration.pdf) has a
+[build manifest](../paper/finite-regeneration-manifest.json),
+[arXiv source archive](../paper/finite-regeneration-arxiv.tar.gz), and
+[declared evidence graph](../paper/finite-regeneration/evidence/snapshot.json).
+Its complete declared graph pins science commit
+8a52257fc2829c73d485c7b4c6e310baadfe3c38. Numerical bytes belong to that
+snapshot; older source bytes are authenticated in their recorded contexts.
+The current publication is v0.27.0; both historical PDFs and foundation
+v0.26.0 metadata remain unchanged.
+
+~~~sh
+make finite-check
+~~~
+
+This is a read-only graph, source-archive and PDF check. It does not run a
+trajectory or need TeX. make finite-paper is the explicit reproducible project
+build, with the existing Tectonic 0.17.0 runtime, two clean builds, cached
+resources and disabled unsafe TeX execution. Its deterministic local build
+does not claim verification by arXiv's actual processor. The package includes
+only the used manuscript/bibliography/figure sources; the scientific data and
+code remain in their pinned repository graph.
+
 ## Routine verification and deliberate recomputation
 
 `make verify` authenticates locked records, runs focused tests, and checks the
 notebook and focused draft. It does not rerun historical scientific campaigns.
 Those remain available through `make reproduce` or the manually dispatched
-GitHub workflow with `reproduce_history` enabled. The new OPEN draft has its
+GitHub workflow with `reproduce_history` enabled. The historical OPEN edition has its
 own [reproduction guide](local-gate-draft.md). `make reproduce` does not
 replay the laboratory finite-turnover witness, the incoherent-imbalance
 mean circulation, or the spherical Galerkin v5 record. Their owners are
