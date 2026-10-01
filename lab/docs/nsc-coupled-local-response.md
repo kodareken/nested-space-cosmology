@@ -19,14 +19,20 @@ Paths are relative to `lab/`.
 | Tests | [test_nsc_coupled_local_response.py](../tests/test_nsc_coupled_local_response.py) |
 | Record | [nsc-coupled-local-response-v1.json](../results/development/nsc-coupled-local-response-v1.json) |
 | Series | [nsc-coupled-local-response-v1.npz](../results/development/nsc-coupled-local-response-v1.npz) |
+| Successor record | [nsc-coupled-local-response-v2.json](../results/development/nsc-coupled-local-response-v2.json) |
+| Successor series | [nsc-coupled-local-response-v2.npz](../results/development/nsc-coupled-local-response-v2.npz) |
 | Geometry | [nsc-spherical-feedback-episode-v1.npz](../results/development/nsc-spherical-feedback-episode-v1.npz) |
+| Successor geometry | [nsc-regeneration-episode-v1.npz](../results/development/nsc-regeneration-episode-v1.npz), \(T=0.05\) to \(T=0.085\) |
 | Reducer | [nsc_evolving_reduction.py](../src/recursive_horizons/nsc_evolving_reduction.py), called with `backend="streamed"` and not edited |
 
-Module sha256 `3e4942a3462962a6e308f14a2eb71e9629d14909824e444d78ad3eece5b34a15`.
+The v1 seal is unchanged. Module sha256
+`3e4942a3462962a6e308f14a2eb71e9629d14909824e444d78ad3eece5b34a15`.
 Test sha256 `d349a4fe488d7f77c666c431a494c41bcd1f0af99b9ecbb548b9c30e9b62a5c4`.
 Driver sha256 `29c0053260223acd0e27602037af28a198f1dbe23563d09ef39bc6d042deedb7`.
 JSON sha256 `33fe043b30b037432801f12905b3545a20ca2070b9edc46bd3a11aa0d76201a1`.
 NPZ sha256 `6f4bfce40a4e34a958f0ac1e3b6f763484505a9800b3e34c7362125cbe160ad1`.
+Those module, test, and driver hashes are the bytes that wrote v1. The
+current bytes are in the successor section.
 
 ## Operator
 
@@ -291,8 +297,237 @@ after the appended window.
 
 The JSON and NPZ hashes above remain the immutable v1 payloads. The v1
 review is not rewritten. `results/development/nsc-local-boundary-review-v2.json`
-binds those payloads and the current bytes of this note and of the consumer
-module. The live finite-domain label remains initial mode columns 0 and 1,
-weights \(0.75\) and \(0.75\), with no phase QR. The stored JSON keeps its
-original observer string. This note adds no stress and no
-\(1024\)-dimensional reintegration.
+binds those payloads and the bytes of this note and of the consumer module
+as they were when that review was written. The successor below changes this
+note and the consumer. The live finite-domain label for v1 remains initial
+mode columns 0 and 1, weights \(0.75\) and \(0.75\), with no phase QR. The
+stored v1 JSON keeps its original observer string. This note adds no stress
+and no \(1024\)-dimensional reintegration.
+
+## Successor on the regeneration window
+
+The v1 comparison is not rerun. The successor reads the completed
+regeneration episode, case `nf512_dtmax_0_00025`, from \(T=0.05\) to
+\(T=0.085\). The requested job id is
+`634b7687-d576-4638-9dcd-101c8fe7d646`. The consumed payload is the on-disk
+FINAL record: episode NPZ sha256
+`17364df24efead5814c3ab2a2ab5f82d9e09bf412c8c82e68d57a3b38498d7a1`.
+
+No new autonomous step is taken. The observer is still the \(T=0\) region-0
+pair, columns 0 and 1, with no phase QR. It is not the \(\Phi(0.05)\)
+basis. The weights remain \((0.75,0.75,0.5,0.5,0.25,0.25)\). The initial
+columns are the bitwise transported \(\Phi(0.05)\) from the spherical
+episode handoff `nf512_dt_0_0005`. The initial blocks are that state's
+actual \(C_{AA}\), \(C_{EE}\), and \(C_{AE}\). \(C_{AE}\) is nonzero, so
+the cross omission uses this state. The prescribed six-mode covariance is
+not substituted.
+
+The episode stop is `BRIDGE_ARC_ENTERED_PACKET`. On this \(n_f=512\) run
+the both-positive arc at \(T=0.085\) starts at \(x=3.96875\) and ends at
+\(x=5.91796875\). The slice ledger keeps the same leader, balanced
+throughflow, and `renewed: false`. Joined renewal is false. Old \(B\) is
+not calibrated. This reduction does not adopt the episode goal as
+regeneration.
+
+The Dirac matrix still uses the stored quadrature \(Q\), with static lapse
+and shift. Coarse \(\dot Q\) is the Galerkin pullback. Prolonging it and
+pulling back reproduces the coarse rate to
+\(1.496580637194711\times 10^{-13}\). That prolonged rate is the Hermite
+slope. It is not a matrix entry. \(p_\chi\) is carried and is not a matrix
+entry. The declared schedule between the eight stored frames remains
+piecewise linear. The rate-Hermite curve stays positive. Its midpoint
+differs from the linear samples by at most \(0.00013413806818857177\).
+The saved final secant differs from the saved coarse rate by
+\(0.10836848874980065\). The frame indicator, maximum absolute value
+\(44.146896868497265\), is the realized one-step average of the rate's
+derivative over \(dt=0.00025\). It is not a curvature bound and it is not
+inserted into \(H\).
+
+The initial one-body eigenvalues are the six weights, to about
+\(2\times 10^{-10}\). They lie in \([0,1]\). The Hermitian defect is \(0\).
+\(C_{AA}\) eigenvalues are \(0.4193978304297541\) and
+\(0.6474479155567984\). \(C_{AE}\) has Frobenius norm
+\(0.4422387105894591\). \(C_{EE}\) has Frobenius norm \(0.87393735591168\).
+Its nonzero eigenvalues are at most \(0.5359707462297544\). The dense
+exterior block is not stored. Along the evolved retained covariance the
+eigenvalues stay inside \((0.152,0.648)\).
+
+The autonomous occupations on this fixed observer move from
+\((0.6474379909205333,0.41940775506601946)\) to
+\((0.49336345847086976,0.15191882776316884)\). The maximum change is
+\(0.2674889273028506\). Coherence moves by
+\(0.0023126276926820712\), and its peak absolute value is
+\(0.0034553018382765485\).
+
+The conditional full-band evolution on the linear \(Q(t)\) differs from
+those autonomous frames by at most \(1.1666190363746054\times 10^{-7}\) in
+occupation, which is \(4.361373190800383\times 10^{-7}\) of the change.
+The streamed occupations differ from the conditional full series by at
+most \(0.0002570304093015008\), which is \(0.0009609011180133498\) of the
+autonomous change and \(0.0003969961801840707\) of the occupation level.
+Coherence error is \(3.188670300122499\times 10^{-6}\), which is
+\(0.0013788083184390293\) of its change. The phase error is
+\(0.0006422511458929266\) radians. The trapezoid residual is
+\(2.1523101832189388\times 10^{-16}\). History shape is \((8,1022,6)\),
+\(784896\) bytes. The time-indexed exterior propagator is \(0\) bytes.
+The dense \(W\) that was not stored would have been \(133693952\) bytes.
+
+The same-observer clock is separate from this probability. Proper time
+advances from \(0\) to \(0.10672977454752697\), and the leader-window
+clock to \(0.06438327637953754\). Field energy changes by
+\(-0.2860794297480709\). The four normal-window contents change by
+\(0.08117494576648099\), \(-0.10907076601177712\),
+\(0.0033064116676532473\), and \(0.029133179310250112\). None of those
+energy ledgers is the occupation.
+
+On the first two stored steps, \([0.05,0.06]\), the autonomous occupation
+change is \(0.09199981716377081\). Doubling the output nodes moves the
+conditional occupation by \(2.9622115760297163\times 10^{-8}\). Two
+exterior substeps move it by \(2.9622115871319465\times 10^{-8}\). The
+rate-Hermite schedule moves it by \(6.213524350595634\times 10^{-8}\).
+On the full window, one exterior substep versus two moves the occupation
+by \(5.816159104332641\times 10^{-8}\), and the rate-Hermite schedule
+moves it by \(1.402669437267079\times 10^{-7}\). The partner run
+`nf512_dtmax_0_0005` differs in \(Q\) by \(7.8008710602262\times 10^{-12}\)
+and in the autonomous occupation by \(2.0993762284149398\times 10^{-11}\).
+Each of these movements is below one percent of the occupation and
+coherence changes on the window where it was measured. The confirmation
+ceiling was not opened. The 100-node streamed forecast is \(4555.545\)
+seconds and was not run.
+
+The omissions below are against the conditional full series. The headline
+streamed discrepancy is \(0.0002570304093015008\). The cross split's
+\(4.863427137322251\times 10^{-16}\) superposition/assembly residual checks
+linear algebra within the same discrete reducer. It is not its error
+against full-band evolution. The independent control replay below measures
+that error in occupation units, and measures the drive-off error separately.
+
+| Control | Occupation movement | Fraction of the occupation change | Above the numerical error |
+|---|---:|---:|---|
+| Memory omitted | \(0.06952775462900784\) | \(0.2599276800305488\) | yes |
+| Exterior initial drive omitted | \(0.15526034047924991\) | \(0.580436694912154\) | yes |
+| Actual initial cross omitted | \(0.2043417632796783\) | \(0.763926063557475\) | yes |
+
+The drive row is the exterior-to-local number on this realization. The
+initial exterior column norm is \(2.133604923066649\), and removing that
+amplitude moves the local occupation by \(0.15526034047924991\). With the
+drive and memory on, the history norm is \(0.7277439974014597\). The cross
+row drops only the actual \(C_{AE}\) terms in the retained covariance. Its
+Frobenius separation is \(0.2351316538667172\). No synthetic cross was
+used. All three controls are active.
+
+No \(\Gamma\) kernel variation was computed, so no force or stress is
+claimed. The run does not declare renewal or global regeneration.
+
+The pilot used \(66.430384\) process seconds, inside the \(600\)-second
+ceiling. Hamiltonian builds were \(31\) and cache hits \(415\). A repeated
+time returns the same matrix object. `--check` rereads the bindings and
+does not write. Payload is \(36208\) bytes. Successor JSON sha256
+`5330ccef1ba2fc4d80e0e0bdc0a98b1117e851f3873a46a0e057d63aae7457bb`.
+Successor NPZ sha256
+`84c09302413d48c2f5dfaba32090b8169d0a4c1dbbe9dfc7a971debaaa525d14`.
+Current module sha256
+`a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2`.
+Current driver sha256
+`cf1a2760c81ec60d885b737dd7f0fbd551d6beebbf46db6d85bf0328159a93f1`.
+Current test sha256
+`c087510f68c024a8ce9456d1ff5b4600064c814d5a9a52b984b129b2ac1e3bde`.
+
+```sh
+python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --successor --budget-s 600 --confirm-budget-s 1800
+python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --check
+python scripts/lab.py -m pytest tests/test_nsc_coupled_local_response.py -q
+```
+
+## Independent control replay
+
+The sealed v2 files remain unchanged. The full cross series is already in
+that NPZ: `covariance_retained - covariance_without_cross` has eight
+\(2\times2\) samples on \([0.05,0.085]\). Its diagonal gives the reported
+maximum occupation movement \(0.2043417632796783\); its maximum Frobenius
+norm is \(0.2351316538667172\). `probe_cross_occupation_movement` is the
+three-sample probe on \([0.05,0.06]\), with maximum
+\(0.08797142267734728\). These are two domains of the same control.
+
+The supplemental
+`results/development/nsc-coupled-local-response-audit-v1.json` and `.npz`
+bind those sealed sources. The independent driver uses the checked
+Galerkin matrix representation, then implements its own temporal
+propagation, covariance assembly, and memoryless recurrence. It evolves
+the original state's projected retained and exterior columns under the
+same linear \(Q(t)\), with two midpoint substeps. The observer remains the
+original \(T=0\) pair, and the transported state and weights remain the
+saved preparation. The full split transports twelve columns; the free
+exterior transports six. It stores only local output arrays and no
+time-indexed propagator.
+
+| Quantity on the full window | Independent value or comparison |
+|---|---:|
+| Full occupation versus the saved conditional full series | \(7.77\times10^{-16}\) |
+| Cross omission's maximum occupation movement | \(0.20437297122219308\) |
+| Streamed cross occupation series versus the independent full split | \(0.00011957683234331551\) |
+| Streamed cross covariance series versus the independent full split, Frobenius norm | \(0.00012160312363621512\) |
+| Exterior-drive omission's maximum occupation movement | \(0.1549746431210934\) |
+| Streamed drive-off occupation versus independent full drive-off occupation | \(0.00028569735815653363\) |
+| Independent memoryless recurrence versus saved memoryless occupation | \(4.44\times10^{-16}\) |
+| Memory omission's maximum occupation movement | \(0.06952775462900784\) |
+
+The cross error is about \(0.0585\%\) of its effect. The drive-off error
+is about \(0.1844\%\) of its effect; it is slightly larger than the
+headline reducer discrepancy, so that discrepancy alone does not cover
+the omitted-drive run. Memory and drive are tested with the original
+columns and geometry. Dropping the cross retains both diagonal initial
+blocks; dropping the drive removes the initial exterior amplitude. They
+are different causal controls. They do not reintegrate geometry with
+their altered conditional states.
+
+The two-step pilot took about \(2.49\) process seconds and forecast the
+full replay at \(11.20\) seconds before it was admitted. The pilot and
+full replay together took about \(9.10\) seconds, inside the
+\(300\)-second limit. The supplemental data is below \(10\) KiB. The
+independent tests also reject observer resets, weight refits, geometry
+substitution, a corrupted full covariance, and substitution of the probe
+scalar for the full-window scalar.
+
+```sh
+python scripts/lab.py scripts/derive_nsc_coupled_local_response_audit.py --budget-s 300
+python scripts/lab.py -m pytest tests/test_nsc_coupled_local_response_independent.py -q
+```
+
+## Conditional geometry-to-occupation error relation
+
+There is a direct relation for a future geometry error bound. Put
+\(A=\Phi W^{1/2}\), with the original weights, and let \(A\) and
+\(\widetilde A\) evolve under Hermitian \(H\) and \(\widetilde H\)
+on the same finite Hilbert space. With
+\(\delta H=\widetilde H-H\), unitary Duhamel transport gives
+
+$$
+e(t)=\|\widetilde A(t)-A(t)\|_F
+\le e(t_0)+\int_{t_0}^t\|\delta H(s)A(s)\|_F\,ds.
+$$
+
+For the same fixed contraction \(P=V^\dagger\), the retained covariance
+then obeys
+
+$$
+\|P(\widetilde A\widetilde A^\dagger-AA^\dagger)P^\dagger\|_F
+\le 2a\,e(t)+e(t)^2,
+\qquad a=\|A(t_0)\|_F\simeq\sqrt{3},\quad t_0=0.05.
+$$
+
+Expand \(\widetilde A=A+\delta A\) to obtain this inequality. Every
+occupation-entry error is bounded by that covariance norm. The source
+defect is state dependent; a maximum high-mode operator norm and an
+exponential growth factor are unnecessary for this Hermitian comparison.
+\(e\) and \(a\) have amplitude units; \(2ae+e^2\) has occupation units.
+An integral of a Hamiltonian defect carries the time factor required to
+produce the amplitude error.
+
+This relation is conditional. A bound for the unknown geometric path must
+first imply a bound for \(\delta H A\), and the initial state discrepancy
+must be controlled. The saved midpoint/Hermite comparisons are measured
+occupation indicators. Their raw \(Q\) differences, a radius distance,
+and a Hamilton-constraint residual cannot be substituted directly as
+occupation errors. The relation does not certify that the coupled
+trajectory remains in its initial-constraint uncertainty.

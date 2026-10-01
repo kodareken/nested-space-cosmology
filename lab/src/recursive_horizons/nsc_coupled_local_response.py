@@ -1,17 +1,22 @@
 """Conditional retained-region consumer of a stored spherical geometry.
 
-The geometry schedule is read from the saved T=0.05 episode. This module
-does not regenerate that trajectory and does not launch the campaign driver.
-The field operator is the same Fourier–Galerkin Dirac map as
-``apply_dirac``: static lapse and shift, evolved conformal factor ``Q``.
-The matrix is the band-limited Fourier multiplication on the fermion
-prolongation. It is not the fine-grid identity image.
+The geometry schedule is read from a saved episode. This module does not
+regenerate that trajectory and does not launch a campaign driver. The field
+operator is the same Fourier–Galerkin Dirac map as ``apply_dirac``: static
+lapse and shift, evolved conformal factor ``Q``. The matrix is the
+band-limited Fourier multiplication on the fermion prolongation. It is not
+the fine-grid identity image.
 
 The retained observer is the initial pair of modes in the first packet,
-columns 0 and 1, copied with no phase QR. Their weights stay 0.75 and 0.75.
-Memory, the exterior drive, and the source weights stay on that preparation.
-The streamed reducer is called unchanged. A dense time-indexed exterior
-propagator is not stored.
+columns 0 and 1 of the T=0 source, copied with no phase QR. Their weights
+stay the original six Gaussian values. Memory, the exterior drive, and the
+source weights stay on that preparation. The streamed reducer is called
+unchanged. A dense time-indexed exterior propagator is not stored.
+
+``execute_successor`` reads the saved regeneration episode on
+``[0.05, 0.085]``. The observer is still the T=0 pair. The initial columns
+and the initial ``C_AA``, ``C_EE``, and ``C_AE`` are the transported state
+at ``T=0.05``.
 """
 from __future__ import annotations
 
@@ -1618,6 +1623,1284 @@ def next_commands(case, full_window, substeps):
         f"--domain stored-frames --case {partner} --substeps 2 --budget-s 600"
     )
     return commands
+
+
+SCHEMA_V2 = "NSC-COUPLED-LOCAL-RESPONSE-v2"
+REGENERATION_NPZ = _LAB / "results" / "development" / "nsc-regeneration-episode-v1.npz"
+REGENERATION_JSON = _LAB / "results" / "development" / "nsc-regeneration-episode-v1.json"
+DEFAULT_JSON_V2 = _LAB / "results" / "development" / "nsc-coupled-local-response-v2.json"
+DEFAULT_NPZ_V2 = _LAB / "results" / "development" / "nsc-coupled-local-response-v2.npz"
+SUCCESSOR_CASE = "nf512_dtmax_0_00025"
+SUCCESSOR_PARTNER = "nf512_dtmax_0_0005"
+SUCCESSOR_HANDOFF = "nf512_dt_0_0005"
+SUCCESSOR_ORIGIN = "nf512"
+SUCCESSOR_T0 = 0.05
+SUCCESSOR_T1 = 0.085
+SUCCESSOR_PROBE_STEPS = 2
+SUCCESSOR_DECLARED_SUBSTEPS = 2
+SUCCESSOR_PILOT_BUDGET_S = 600.0
+SUCCESSOR_CONFIRM_BUDGET_S = 1800.0
+SUCCESSOR_ONE_PERCENT = 0.01
+SUCCESSOR_GRAM_GATE = 1e-8
+SUCCESSOR_JOB = "634b7687-d576-4638-9dcd-101c8fe7d646"
+SUCCESSOR_INTERPOLATION = "piecewise-linear-stored-quad-Q"
+HUNDRED_NODE_OUTPUTS = 100
+
+
+def array_id(values):
+    array = np.ascontiguousarray(values)
+    digest = hashlib.sha256()
+    digest.update(str(array.dtype).encode("ascii"))
+    digest.update(str(array.shape).encode("ascii"))
+    digest.update(array.view(np.uint8))
+    return digest.hexdigest()
+
+
+def fraction_of_effect(movement, effect):
+    movement = float(movement)
+    effect = float(effect)
+    if not np.isfinite(movement) or not np.isfinite(effect):
+        raise ValueError("movement and effect must be finite")
+    if effect <= 0.0:
+        return {
+            "movement": movement,
+            "effect": effect,
+            "fraction": None,
+            "within_one_percent": None,
+            "reason": "effect is zero",
+        }
+    fraction = movement / effect
+    return {
+        "movement": movement,
+        "effect": effect,
+        "fraction": float(fraction),
+        "within_one_percent": bool(fraction <= SUCCESSOR_ONE_PERCENT),
+        "reason": None,
+    }
+
+
+def hermite_with_slopes(times, values, slopes, query):
+    """Cubic Hermite samples that use supplied nodal slopes.
+
+    Stored nodes are returned exactly. ``slopes`` are time derivatives in
+    the same layout as ``values``, not finite differences of those values.
+    """
+    times = np.asarray(times, dtype=float)
+    values = np.asarray(values, dtype=float)
+    slopes = np.asarray(slopes, dtype=float)
+    query = np.atleast_1d(np.asarray(query, dtype=float))
+    if values.shape != slopes.shape or values.shape[0] != times.shape[0]:
+        raise ValueError("slopes must share the stored value layout")
+    if times.size < 2 or np.any(np.diff(times) <= 0):
+        raise ValueError("Hermite samples need increasing times")
+    if np.any(query < times[0] - 1e-12) or np.any(query > times[-1] + 1e-12):
+        raise ValueError("query leaves the stored geometry window")
+    index = np.searchsorted(times, query, side="right") - 1
+    index = np.clip(index, 0, times.size - 2)
+    width = times[index + 1] - times[index]
+    fraction = np.clip((query - times[index]) / width, 0.0, 1.0)
+    cube = fraction ** 3
+    square = fraction ** 2
+    h00 = 2.0 * cube - 3.0 * square + 1.0
+    h10 = cube - 2.0 * square + fraction
+    h01 = -2.0 * cube + 3.0 * square
+    h11 = cube - square
+    return (
+        h00[:, None] * values[index]
+        + (h10 * width)[:, None] * slopes[index]
+        + h01[:, None] * values[index + 1]
+        + (h11 * width)[:, None] * slopes[index + 1]
+    )
+
+
+def prolonged_nodal_rates(grid, coarse_rates):
+    """Prolong coarse Galerkin rates and record the pullback defect.
+
+    ``pull(prolong(rate))`` must reproduce the coarse rate. A nonzero defect
+    means the saved rate is not a nodal field in the prolongation range.
+    """
+    coarse = np.asarray(coarse_rates, dtype=float)
+    fine = np.stack([prolong_geometry(grid, row) for row in coarse])
+    pulled = np.stack([pull_geometry(grid, row) for row in fine])
+    if pulled.shape != coarse.shape:
+        raise ValueError("pulled nodal rate does not match the coarse rate")
+    gap = float(np.max(np.abs(pulled - coarse)))
+    return fine, {
+        "projection": "prolong_geometry of the coarse Galerkin Q_dot; pull_geometry checks the range",
+        "pullback_max_abs": gap,
+        "rate_max_abs": float(np.max(np.abs(coarse))),
+        "usable": bool(gap <= 1e-8 * max(1.0, float(np.max(np.abs(coarse))))),
+    }
+
+
+def one_body_blocks(observer, columns, weights):
+    """Initial ``C_AA``, ``C_EE``, and ``C_AE`` of one weighted column state.
+
+    The exterior block is not formed as a dense matrix. Its nonzero
+    eigenvalues are the spectrum of the weighted exterior column Gram.
+    """
+    weights = np.asarray(weights, dtype=float)
+    columns = np.asarray(columns, dtype=np.complex128)
+    observer = np.asarray(observer, dtype=np.complex128)
+    if columns.ndim != 2 or observer.ndim != 2 or observer.shape[0] != columns.shape[0]:
+        raise ValueError("observer and columns must share the spinor dimension")
+    if weights.shape != (columns.shape[1],):
+        raise ValueError("weights must match the column count")
+    covariance = source_covariance(columns, weights)
+    coefficients = observer.conj().T @ columns
+    parent = (coefficients * weights) @ coefficients.conj().T
+    parent = 0.5 * (parent + parent.conj().T)
+    product = observer.conj().T @ covariance
+    parent_norm = float(np.linalg.norm(parent, ord="fro"))
+    product_norm = float(np.linalg.norm(product, ord="fro"))
+    cross = math.sqrt(max(0.0, product_norm * product_norm - parent_norm * parent_norm))
+    covariance_norm = float(np.linalg.norm(covariance, ord="fro"))
+    exterior_norm = math.sqrt(max(0.0, covariance_norm * covariance_norm - parent_norm * parent_norm - 2.0 * cross * cross))
+    scale = np.sqrt(np.clip(weights, 0.0, None))
+    weighted = columns * scale
+    gram = weighted.conj().T @ weighted
+    gram = 0.5 * (gram + gram.conj().T)
+    eigenvalues = np.linalg.eigvalsh(gram).real
+    parent_eigenvalues = np.linalg.eigvalsh(parent).real
+    exterior_columns = columns - observer @ coefficients
+    exterior_weighted = exterior_columns * scale
+    exterior_gram = exterior_weighted.conj().T @ exterior_weighted
+    exterior_gram = 0.5 * (exterior_gram + exterior_gram.conj().T)
+    exterior_eigenvalues = np.linalg.eigvalsh(exterior_gram).real
+    hermitian = float(np.linalg.norm(covariance - covariance.conj().T, ord="fro"))
+    admissible = bool(
+        hermitian <= 1e-8
+        and float(np.min(eigenvalues)) >= -1e-8
+        and float(np.max(eigenvalues)) <= 1.0 + 1e-8
+        and float(np.min(parent_eigenvalues)) >= -1e-8
+        and float(np.max(parent_eigenvalues)) <= 1.0 + 1e-8
+        and float(np.min(exterior_eigenvalues)) >= -1e-8
+        and float(np.max(exterior_eigenvalues)) <= 1.0 + 1e-8
+    )
+    return {
+        "parent": parent,
+        "parent_eigenvalues": np.array(parent_eigenvalues, dtype=float, copy=True),
+        "cross_frobenius": float(cross),
+        "exterior_frobenius": float(exterior_norm),
+        "covariance_frobenius": covariance_norm,
+        "covariance_eigenvalues": np.array(eigenvalues, dtype=float, copy=True),
+        "exterior_eigenvalues": np.array(exterior_eigenvalues, dtype=float, copy=True),
+        "hermitian_defect": hermitian,
+        "exterior_column_norm": float(np.linalg.norm(exterior_columns)),
+        "admissible": admissible,
+        "dense_exterior_block_stored": False,
+    }
+
+
+def _complex_pair(value):
+    number = complex(value)
+    return {"real": float(number.real), "imag": float(number.imag)}
+
+
+def _block_record(blocks):
+    parent = blocks["parent"]
+    return {
+        "C_AA": {
+            "real": np.real(parent).tolist(),
+            "imag": np.imag(parent).tolist(),
+        },
+        "C_AA_eigenvalues": [float(item) for item in blocks["parent_eigenvalues"]],
+        "C_AA_frobenius": float(np.linalg.norm(parent, ord="fro")),
+        "C_AE_frobenius": float(blocks["cross_frobenius"]),
+        "C_EE_frobenius": float(blocks["exterior_frobenius"]),
+        "covariance_eigenvalues": [float(item) for item in blocks["covariance_eigenvalues"]],
+        "exterior_eigenvalues": [float(item) for item in blocks["exterior_eigenvalues"]],
+        "hermitian_defect": float(blocks["hermitian_defect"]),
+        "exterior_column_norm": float(blocks["exterior_column_norm"]),
+        "admissible": bool(blocks["admissible"]),
+        "dense_C_EE_stored": False,
+        "cross_active_as_a_block": bool(blocks["cross_frobenius"] > 1e-8),
+    }
+
+
+def _sample_series(times, values, query):
+    times = np.asarray(times, dtype=float)
+    values = np.asarray(values)
+    query = np.asarray(query, dtype=float)
+    selected = []
+    for mark in query:
+        index = int(np.argmin(np.abs(times - float(mark))))
+        if abs(float(times[index]) - float(mark)) > 1e-12:
+            raise ValueError(f"series has no sample at {mark}")
+        selected.append(values[index])
+    return np.stack(selected)
+
+
+def load_successor_inputs(case=SUCCESSOR_CASE, regeneration_npz=REGENERATION_NPZ, regeneration_json=REGENERATION_JSON, origin_npz=EPISODE_NPZ):
+    """Load the fixed T=0 observer and the transported T=0.05 state.
+
+    No geometry step is taken. The observer is not rebuilt from ``Φ(0.05)``.
+    """
+    case = str(case)
+    if case == SUCCESSOR_CASE:
+        partner = SUCCESSOR_PARTNER
+    elif case == SUCCESSOR_PARTNER:
+        partner = SUCCESSOR_CASE
+    else:
+        raise ValueError(f"successor case must be an nf512 regeneration run, not {case}")
+    resolution = SUCCESSOR_ORIGIN
+    with np.load(origin_npz, allow_pickle=False) as origin:
+        origin_phi0 = np.array(origin[resolution + "_initial_phi0"], copy=True)
+        origin_phi1 = np.array(origin[resolution + "_initial_phi1"], copy=True)
+        weights = np.array(origin[resolution + "_occupations"], dtype=float, copy=True)
+        names = np.array(origin[resolution + "_binding_names"])
+        values = np.array(origin[resolution + "_binding_values"], dtype=float, copy=True)
+        handoff_phi0 = np.array(origin[SUCCESSOR_HANDOFF + "_final_phi0"], copy=True)
+        handoff_phi1 = np.array(origin[SUCCESSOR_HANDOFF + "_final_phi1"], copy=True)
+    with np.load(regeneration_npz, allow_pickle=False) as payload:
+        prefix = case + "_"
+        other = partner + "_"
+        frame_time = np.array(payload[prefix + "frame_time"], dtype=float, copy=True)
+        frame_q = np.array(payload[prefix + "frame_quad_Q"], dtype=float, copy=True)
+        coarse_q = np.array(payload[prefix + "frame_coarse_Q"], dtype=float, copy=True)
+        coarse_rate = np.array(payload[prefix + "frame_Q_dot"], dtype=float, copy=True)
+        p_chi = np.array(payload[prefix + "frame_coarse_p_chi"], dtype=float, copy=True)
+        p_chi_dot = np.array(payload[prefix + "frame_p_chi_dot"], dtype=float, copy=True)
+        increment_q_dot = np.array(payload[prefix + "frame_increment_Q_dot"], dtype=float, copy=True)
+        increment_dt = np.array(payload[prefix + "frame_increment_dt"], dtype=float, copy=True)
+        indicator_q = np.array(payload[prefix + "frame_indicator_Q_dot"], dtype=float, copy=True)
+        phi0 = np.array(payload[prefix + "frame_phi0"], copy=True)
+        phi1 = np.array(payload[prefix + "frame_phi1"], copy=True)
+        partner_phi0 = np.array(payload[other + "frame_phi0"], copy=True)
+        partner_phi1 = np.array(payload[other + "frame_phi1"], copy=True)
+        partner_q = np.array(payload[other + "frame_quad_Q"], dtype=float, copy=True)
+        partner_time = np.array(payload[other + "frame_time"], dtype=float, copy=True)
+        series_time = np.array(payload[prefix + "time"], dtype=float, copy=True)
+        proper_clock = np.array(payload[prefix + "proper_clock"], dtype=float, copy=True)
+        leader_clock = np.array(payload[prefix + "leader_clock"], dtype=float, copy=True)
+        field_energy = np.array(payload[prefix + "field_energy"], dtype=float, copy=True)
+        window_normal = np.array(payload[prefix + "window_normal"], dtype=float, copy=True)
+        leader = np.array(payload[prefix + "leader"], dtype=float, copy=True)
+        leader_share = np.array(payload[prefix + "leader_share"], dtype=float, copy=True)
+        gram_gap = np.array(payload[prefix + "gram_gap"], dtype=float, copy=True)
+    if not np.array_equal(weights, np.array([0.75, 0.75, 0.5, 0.5, 0.25, 0.25])):
+        raise RuntimeError("origin occupations are not the original six Gaussian weights")
+    if frame_time.size < 3 or abs(float(frame_time[0]) - SUCCESSOR_T0) > 1e-12:
+        raise RuntimeError("successor frames do not start at T=0.05")
+    if abs(float(frame_time[-1]) - SUCCESSOR_T1) > 1e-12:
+        raise RuntimeError("successor frames do not end at the declared comparison time")
+    if phi0.shape[0] != frame_time.size or phi1.shape != phi0.shape:
+        raise RuntimeError("stored spinor frames do not match the geometry frames")
+    if not np.array_equal(phi0[0], handoff_phi0) or not np.array_equal(phi1[0], handoff_phi1):
+        raise RuntimeError("T=0.05 spinor is not the bitwise spherical-episode handoff")
+    if not np.array_equal(partner_time, frame_time):
+        raise RuntimeError("partner frames do not share the primary times")
+    if float(np.min(frame_q)) <= 0.0 or float(np.max(gram_gap)) > SUCCESSOR_GRAM_GATE:
+        raise RuntimeError("stored chart or Gram leaves the admitted window")
+    observer, origin_columns, origin_gram = region_observer(origin_phi0, origin_phi1, region=0)
+    if not np.array_equal(observer, origin_columns[:, :2]):
+        raise RuntimeError("observer is not the T=0 region-0 pair")
+    transported = np.concatenate((phi0[0], phi1[0]), axis=0)
+    if np.array_equal(observer, transported[:, :2]):
+        raise RuntimeError("observer was replaced by the transported T=0.05 basis")
+    episode = json.loads(Path(regeneration_json).read_text())
+    run = episode["runs"][case]
+    expansion = run["expansion_frames"][-1]
+    anti = expansion["anti_trapped_intervals"][0]
+    structure = episode["structures"][case]["slice_ledgers"]
+    clock = episode["clocks"][case]
+    blocks = one_body_blocks(observer, transported, weights)
+    if not blocks["admissible"]:
+        raise RuntimeError("initial one-body covariance is not admissible")
+    if blocks["cross_frobenius"] <= 1e-8:
+        raise RuntimeError("actual C_AE at T=0.05 is inactive; a synthetic cross would be a substitution")
+    return {
+        "case": case,
+        "partner_case": partner,
+        "handoff": SUCCESSOR_HANDOFF,
+        "requested_job_id": SUCCESSOR_JOB,
+        "frame_time": frame_time,
+        "frame_Q": frame_q,
+        "coarse_Q": coarse_q,
+        "coarse_Q_dot": coarse_rate,
+        "coarse_p_chi": p_chi,
+        "coarse_p_chi_dot": p_chi_dot,
+        "increment_Q_dot": increment_q_dot,
+        "increment_dt": increment_dt,
+        "indicator_Q_dot": indicator_q,
+        "phi0_frames": phi0,
+        "phi1_frames": phi1,
+        "partner_phi0": partner_phi0,
+        "partner_phi1": partner_phi1,
+        "partner_Q": partner_q,
+        "phi0": origin_phi0,
+        "phi1": origin_phi1,
+        "weights": weights,
+        "observer": observer,
+        "origin_columns": origin_columns,
+        "origin_gram_defect": float(np.max(np.abs(origin_gram - np.eye(origin_gram.shape[0])))),
+        "transported_columns": transported,
+        "binding_names": [str(item) for item in names.tolist()],
+        "binding_values": values,
+        "initial_blocks": blocks,
+        "proper_clock": _sample_series(series_time, proper_clock, frame_time),
+        "leader_clock": _sample_series(series_time, leader_clock, frame_time),
+        "field_energy": _sample_series(series_time, field_energy, frame_time),
+        "window_normal": _sample_series(series_time, window_normal, frame_time),
+        "leader": _sample_series(series_time, leader, frame_time),
+        "leader_share": _sample_series(series_time, leader_share, frame_time),
+        "series_count": int(series_time.size),
+        "clock_protocol": str(clock["protocol"]),
+        "episode_stop_reason": str(run["stop_reason"]),
+        "episode_attained_T": float(run["attained_T"]),
+        "arc_x_start": float(anti["x_start"]),
+        "arc_x_end": float(anti["x_end"]),
+        "structure_maintained": bool(structure["content"]["maintained"]),
+        "structure_renewed": bool(structure["reversal"]["renewed"]),
+        "balanced_flow": bool(structure["flux"]["balanced"]),
+        "joined_renewal_proxy": bool(episode["goal"]["joined_renewal_proxy"]),
+        "old_toy_B_not_used": bool(episode["link_reports"]["512"]["old_B_not_used"]),
+        "state_reset": bool(episode["state_reset"]),
+        "new_force_added": bool(episode["new_force_added"]),
+        "indicator_versus_bound": str(episode["indicator_versus_bound"]),
+        "partner_phi_gap": float(np.max(np.abs(phi0 - partner_phi0) + np.abs(phi1 - partner_phi1))),
+        "partner_Q_gap": float(np.max(np.abs(frame_q - partner_q))),
+        "interpolation": interpolation_scale(frame_time, frame_q),
+        "observer_id": array_id(observer),
+        "weights_id": array_id(weights),
+        "initial_state_id": array_id(transported),
+        "geometry_id": array_id(frame_q),
+        "episode_sha256": sha256_file(regeneration_npz),
+        "episode_json_sha256": sha256_file(regeneration_json),
+        "origin_sha256": sha256_file(origin_npz),
+        "origin_json_sha256": sha256_file(_LAB / "results" / "development" / "nsc-spherical-feedback-episode-v1.json"),
+    }
+
+
+def successor_identity(inputs, substeps=SUCCESSOR_DECLARED_SUBSTEPS):
+    return {
+        "domain": "successor",
+        "case": str(inputs["case"]),
+        "partner_case": str(inputs["partner_case"]),
+        "substeps": int(substeps),
+        "observer": str(inputs["observer_id"]),
+        "weights": str(inputs["weights_id"]),
+        "initial_state": str(inputs["initial_state_id"]),
+        "geometry": str(inputs["geometry_id"]),
+        "episode_npz": str(inputs["episode_sha256"]),
+        "origin_npz": str(inputs["origin_sha256"]),
+        "backend": BACKEND,
+        "interpolation": SUCCESSOR_INTERPOLATION,
+        "memory": True,
+        "outside_drive": True,
+        "coupling": True,
+        "drop_cross_covariance": False,
+        "observer_protocol": "t0-region-0-columns-0-1-no-rephase",
+        "initial_covariance": "actual-transported-phi-0.05",
+    }
+
+
+def successor_resume_disposition(previous, identity):
+    """Return a finished successor only when every typed binding matches."""
+    if not isinstance(previous, dict):
+        return "continue"
+    if previous.get("status") != "MEASURED_SUCCESSOR_RESPONSE":
+        return "continue"
+    if previous.get("schema") != SCHEMA_V2:
+        return "reject"
+    stored = previous.get("request")
+    if stored != identity:
+        return "reject"
+    full = previous.get("phases", {}).get("full_window", {})
+    if full.get("complete") is True and int(full.get("substeps", -1)) == int(identity["substeps"]):
+        return "return"
+    return "reject"
+
+
+def autonomous_series(observer, phi0, phi1, weights):
+    stacked = np.concatenate((np.asarray(phi0), np.asarray(phi1)), axis=1)
+    projected = np.einsum("ij,tjk->tik", np.asarray(observer).conj().T, stacked)
+    return occupations_and_coherence(projected, weights)
+
+
+def _covariance_from_amplitudes(amplitudes, weights):
+    scale = np.asarray(weights, dtype=float)
+    covariances = np.empty((amplitudes.shape[0], amplitudes.shape[1], amplitudes.shape[1]), dtype=np.complex128)
+    for index, sample in enumerate(amplitudes):
+        matrix = (sample * scale) @ sample.conj().T
+        covariances[index] = 0.5 * (matrix + matrix.conj().T)
+    return covariances
+
+
+def _matrix_series_gap(left, right):
+    return float(np.max(np.linalg.norm(np.asarray(left) - np.asarray(right), axis=(1, 2), ord="fro")))
+
+
+def column_cross_control(hamiltonian, observer, times, columns, weights, substeps=1, baseline=None):
+    """Drop the actual initial cross by splitting retained and exterior columns.
+
+    The split is the linear decomposition of the same weighted state. It is
+    not a second source. Superposition against the unsplit evolution is the
+    numerical error of this control.
+    """
+    coefficients = np.asarray(observer).conj().T @ np.asarray(columns)
+    retained_columns = np.asarray(observer) @ coefficients
+    exterior_columns = np.asarray(columns) - retained_columns
+    if baseline is None:
+        baseline, _occupation, _coherence = evolve_streamed(
+            hamiltonian,
+            observer,
+            times,
+            columns,
+            weights,
+            propagator_substeps=int(substeps),
+        )
+    retained, _occupation_a, _coherence_a = evolve_streamed(
+        hamiltonian,
+        observer,
+        times,
+        retained_columns,
+        weights,
+        propagator_substeps=int(substeps),
+    )
+    exterior, _occupation_e, _coherence_e = evolve_streamed(
+        hamiltonian,
+        observer,
+        times,
+        exterior_columns,
+        weights,
+        propagator_substeps=int(substeps),
+    )
+    combined = retained["amplitudes"] + exterior["amplitudes"]
+    superposition = float(np.max(np.abs(combined - baseline["amplitudes"])))
+    parent = _covariance_from_amplitudes(retained["amplitudes"], weights)
+    child = _covariance_from_amplitudes(exterior["amplitudes"], weights)
+    mixed = np.empty_like(parent)
+    scale = np.asarray(weights, dtype=float)
+    for index in range(parent.shape[0]):
+        left = retained["amplitudes"][index]
+        right = exterior["amplitudes"][index]
+        term = (left * scale) @ right.conj().T + (right * scale) @ left.conj().T
+        mixed[index] = 0.5 * (term + term.conj().T)
+    total = parent + child + mixed
+    dropped = parent + child
+    direct = _covariance_from_amplitudes(baseline["amplitudes"], weights)
+    assembly = _matrix_series_gap(direct, total)
+    separation = _matrix_series_gap(total, dropped)
+    diagonal = np.real(np.diagonal(mixed, axis1=1, axis2=2))
+    occupation_movement = float(np.max(np.abs(diagonal)))
+    numerical = max(superposition, assembly)
+    return {
+        "covariance_total": total,
+        "covariance_without_cross": dropped,
+        "cross_covariance": mixed,
+        "superposition_max_abs": superposition,
+        "assembly_max_frobenius": assembly,
+        "separation_max_frobenius": separation,
+        "occupation_diagonal_movement": occupation_movement,
+        "numerical_error": float(numerical),
+        "active": bool(separation > 10.0 * max(numerical, 0.0) and occupation_movement > 10.0 * max(numerical, 0.0)),
+        "synthetic_six_mode_substituted": False,
+        "stores_dense_exterior_propagator": False,
+        "history_width": int(baseline["history"].shape[-1]),
+    }
+
+
+def _effect_scale(reference):
+    change = np.asarray(reference) - np.asarray(reference)[0]
+    return float(np.max(np.abs(change)))
+
+
+def _timed_comparison(hamiltonian, observer, times, columns, weights, substeps):
+    started = time.process_time()
+    result, occupation, coherence = evolve_streamed(
+        hamiltonian,
+        observer,
+        times,
+        columns,
+        weights,
+        propagator_substeps=int(substeps),
+    )
+    streamed_seconds = float(time.process_time() - started)
+    started = time.process_time()
+    full = evolve_full_columns(hamiltonian, times, columns, substeps=int(substeps))
+    full_seconds = float(time.process_time() - started)
+    projected = np.einsum("ij,tjk->tik", observer.conj().T, full)
+    full_occupation, full_coherence = occupations_and_coherence(projected, weights)
+    comparison = {
+        "result": result,
+        "occupation_retained": occupation,
+        "occupation_full": full_occupation,
+        "coherence_retained": coherence,
+        "coherence_full": full_coherence,
+        "occupation_error": signal_error(occupation, full_occupation),
+        "coherence_error": signal_error(coherence, full_coherence),
+        "phase_error": phase_error(coherence, full_coherence),
+        "allocation": allocation_report(result),
+        "trapezoid_residual_max": float(result["trapezoid_residual_max"]),
+        "history_norm": float(np.linalg.norm(result["history"])),
+        "initial_exterior_norm": float(np.linalg.norm(result["initial_exterior"])),
+        "observer_preserved": bool(np.array_equal(result["local_basis"], observer)),
+        "streamed_seconds": streamed_seconds,
+        "full_seconds": full_seconds,
+    }
+    return comparison
+
+
+def _forecast_streamed(probe_seconds, probe_steps, steps, substeps, probe_substeps=1):
+    return quadratic_estimate(probe_seconds, probe_steps, steps, substeps=substeps, probe_substeps=probe_substeps)
+
+
+def _forecast_full(probe_seconds, probe_steps, steps, substeps, probe_substeps=1):
+    if probe_steps < 1 or steps < 1 or substeps < 1 or probe_substeps < 1:
+        raise ValueError("step counts must be positive")
+    return float(probe_seconds) * (float(steps) / float(probe_steps)) * (float(substeps) / float(probe_substeps))
+
+
+def _indicator_status(movement, effect, numerical):
+    report = fraction_of_effect(movement, effect)
+    report["numerical_error"] = float(numerical)
+    if effect <= max(float(numerical), 0.0):
+        report["status"] = "inactive_effect_not_above_numerical_error"
+        report["within_one_percent"] = None
+        return report
+    report["status"] = "resolved" if report["within_one_percent"] else "above_one_percent"
+    return report
+
+
+def _omission_against(occupation, reference, numerical):
+    error = signal_error(occupation, reference)
+    effect = _effect_scale(reference)
+    return {
+        "occupation_error_against_reference": error,
+        "effect": _indicator_status(error["max_abs"], effect, numerical),
+        "exceeds_numerical_error": bool(error["max_abs"] > 10.0 * max(float(numerical), 0.0)),
+    }
+
+
+def _clock_record(inputs, occupation):
+    energy = np.asarray(inputs["field_energy"], dtype=float)
+    normal = np.asarray(inputs["window_normal"], dtype=float)
+    return {
+        "protocol": inputs["clock_protocol"],
+        "same_observer_as_probability": True,
+        "canonical_probability": "observer occupation from the original column weights",
+        "normal_energy": "episode window_normal shell content; not the occupation",
+        "field_energy": "episode field_energy scalar; not the occupation",
+        "proper_clock": [float(item) for item in inputs["proper_clock"]],
+        "leader_clock": [float(item) for item in inputs["leader_clock"]],
+        "field_energy_samples": [float(item) for item in energy],
+        "field_energy_change": float(energy[-1] - energy[0]),
+        "window_normal_initial": [float(item) for item in normal[0]],
+        "window_normal_final": [float(item) for item in normal[-1]],
+        "window_normal_change": [float(item) for item in (normal[-1] - normal[0])],
+        "leader_initial": float(inputs["leader"][0]),
+        "leader_final": float(inputs["leader"][-1]),
+        "leader_share_initial": float(inputs["leader_share"][0]),
+        "leader_share_final": float(inputs["leader_share"][-1]),
+        "occupation_initial": [float(item) for item in occupation[0]],
+        "occupation_final": [float(item) for item in occupation[-1]],
+        "identified_with_each_other": False,
+    }
+
+
+def _rate_schedule_report(grid, inputs):
+    slopes, projection = prolonged_nodal_rates(grid, inputs["coarse_Q_dot"])
+    times = inputs["frame_time"]
+    values = inputs["frame_Q"]
+    midpoints = 0.5 * (times[:-1] + times[1:])
+    linear = interpolate_rows(times, values, midpoints)
+    finite = hermite_rows(times, values, midpoints)
+    if projection["usable"]:
+        rated = hermite_with_slopes(times, values, slopes, midpoints)
+        nodes = hermite_with_slopes(times, values, slopes, times)
+        node_gap = float(np.max(np.abs(nodes - values)))
+        minimum = float(np.min(hermite_with_slopes(
+            times,
+            values,
+            slopes,
+            np.linspace(float(times[0]), float(times[-1]), 4 * (times.size - 1) + 1),
+        )))
+    else:
+        rated = None
+        node_gap = None
+        minimum = None
+    secant = (values[-1] - values[-2]) / float(times[-1] - times[-2])
+    secant_gap = float(np.max(np.abs(pull_geometry(grid, secant) - inputs["coarse_Q_dot"][-1])))
+    return slopes, projection, {
+        "declared_geometry": SUCCESSOR_INTERPOLATION,
+        "nodal_rate_projection": projection,
+        "rate_hermite_node_gap": node_gap,
+        "rate_hermite_minimum": minimum,
+        "rate_hermite_stays_positive": None if minimum is None else bool(minimum > 0.0),
+        "midpoint_linear_versus_rate_hermite": None if rated is None else float(np.max(np.abs(linear - rated))),
+        "midpoint_linear_versus_finite_difference_hermite": float(np.max(np.abs(linear - finite))),
+        "final_secant_versus_saved_rate_max_abs": secant_gap,
+        "saved_rate_max_abs": float(np.max(np.abs(inputs["coarse_Q_dot"][-1]))),
+        "increment_dt_max": float(np.max(inputs["increment_dt"])),
+        "indicator_max_abs": float(np.nanmax(np.abs(inputs["indicator_Q_dot"]))),
+        "indicator_role": inputs["indicator_versus_bound"],
+        "p_chi_is_dirac_matrix_entry": False,
+        "Q_dot_is_dirac_matrix_entry": False,
+    }
+
+
+def code_identities():
+    root = _LAB
+    paths = {
+        "nsc_coupled_local_response.py": root / "src" / "recursive_horizons" / "nsc_coupled_local_response.py",
+        "derive_nsc_coupled_local_response.py": root / "scripts" / "derive_nsc_coupled_local_response.py",
+        "test_nsc_coupled_local_response.py": root / "tests" / "test_nsc_coupled_local_response.py",
+    }
+    return {name: sha256_file(path) for name, path in paths.items()}
+
+
+def _reject_successor(identity, reason, output_json):
+    return {
+        "schema": SCHEMA_V2,
+        "status": "REJECTED_REQUEST_MISMATCH",
+        "resumed_complete": False,
+        "preserved_record": True,
+        "record_path": str(output_json),
+        "rejected_identity": identity,
+        "reason": reason,
+    }
+
+
+def execute_successor(
+    budget_s=SUCCESSOR_PILOT_BUDGET_S,
+    confirm_budget_s=SUCCESSOR_CONFIRM_BUDGET_S,
+    resume=False,
+    output_json=DEFAULT_JSON_V2,
+    output_npz=DEFAULT_NPZ_V2,
+):
+    """Conditional response on the saved ``[0.05, 0.085]`` regeneration geometry.
+
+    The pilot ceiling is 600 process seconds. A named method error above one
+    percent of the measured effect may use the 1800-second confirmation
+    ceiling. One hundred output nodes are forecast and not run.
+    """
+    output_json = Path(output_json)
+    output_npz = Path(output_npz)
+    if output_json.resolve() == DEFAULT_JSON.resolve() or output_npz.resolve() == DEFAULT_NPZ.resolve():
+        raise RuntimeError("successor output must not replace the v1 records")
+    budget = MeasuredBudget(float(budget_s))
+    confirm_ceiling = float(confirm_budget_s)
+    if confirm_ceiling < float(budget_s):
+        raise ValueError("confirmation ceiling must cover the pilot ceiling")
+    inputs = load_successor_inputs()
+    identity = successor_identity(inputs, SUCCESSOR_DECLARED_SUBSTEPS)
+    if resume and output_json.is_file():
+        previous = json.loads(output_json.read_text())
+        disposition = successor_resume_disposition(previous, identity)
+        if disposition == "return":
+            previous["resumed_complete"] = True
+            return previous
+        if disposition == "reject":
+            return _reject_successor(identity, "finished successor bindings differ", output_json)
+    grid, factors = build_case_grid({
+        "phi0": inputs["phi0"],
+        "frame_Q": inputs["frame_Q"],
+        "coarse_Q": inputs["coarse_Q"][0],
+    })
+    observer = inputs["observer"]
+    columns = inputs["transported_columns"]
+    weights = np.array(inputs["weights"], dtype=float, copy=True)
+    times = np.array(inputs["frame_time"], dtype=float, copy=True)
+    if not np.array_equal(observer, region_observer(inputs["phi0"], inputs["phi1"], region=0)[0]):
+        raise RuntimeError("observer bytes changed after loading")
+    action0 = action_residual(grid, factors, inputs["frame_Q"][0], inputs["phi0_frames"][0], inputs["phi1_frames"][0])
+    action1 = action_residual(grid, factors, inputs["frame_Q"][-1], inputs["phi0_frames"][-1], inputs["phi1_frames"][-1])
+    prolong_gap = float(np.max(np.abs(prolong_geometry(grid, inputs["coarse_Q"][0]) - inputs["frame_Q"][0])))
+    if action0["relative"] > ACTION_GATE or action1["relative"] > ACTION_GATE or prolong_gap > PROLONGATION_GATE:
+        raise RuntimeError("stored regeneration geometry failed the Galerkin gate")
+    slopes, _projection, geometry_report = _rate_schedule_report(grid, inputs)
+    autonomous_occupation, autonomous_coherence = autonomous_series(
+        observer, inputs["phi0_frames"], inputs["phi1_frames"], weights
+    )
+    partner_occupation, partner_coherence = autonomous_series(
+        observer, inputs["partner_phi0"], inputs["partner_phi1"], weights
+    )
+    initial_occupation = np.real(np.diag(inputs["initial_blocks"]["parent"]))
+    if float(np.max(np.abs(initial_occupation - autonomous_occupation[0]))) > 1e-12:
+        raise RuntimeError("initial occupation is not the diagonal of C_AA")
+    record = {
+        "schema": SCHEMA_V2,
+        "status": "RUNNING",
+        "request": identity,
+        "requested_job_id": SUCCESSOR_JOB,
+        "renewal": False,
+        "regeneration": False,
+        "global_regeneration": False,
+        "old_toy_B_calibrated": False,
+        "stress_claimed": False,
+        "force_claimed": False,
+        "gamma_kernel_variation": False,
+        "stress_gap": STRESS_GAP,
+        "backend": BACKEND,
+        "budget_s": float(budget_s),
+        "confirm_budget_s": confirm_ceiling,
+        "safety": BUDGET_SAFETY,
+        "hundred_node_executed": False,
+        "phases": {},
+        "admissions": [],
+    }
+
+    def checkpoint():
+        record["cpu_seconds_this_process"] = budget.elapsed()
+        write_json(output_json, record)
+
+    def admit(estimate, label, confirmation=False):
+        ceiling = confirm_ceiling if confirmation else float(budget_s)
+        allowed = budget.elapsed() + BUDGET_SAFETY * float(estimate) < ceiling
+        record["admissions"].append({
+            "label": label,
+            "estimate_s": float(estimate),
+            "admitted": bool(allowed),
+            "confirmation": bool(confirmation),
+            "elapsed_s": budget.elapsed(),
+            "ceiling_s": float(ceiling),
+        })
+        checkpoint()
+        return bool(allowed)
+
+    checkpoint()
+    probe_steps = SUCCESSOR_PROBE_STEPS
+    probe_times = np.array(times[: probe_steps + 1], dtype=float, copy=True)
+    print("successor probe", probe_times[0], probe_times[-1], flush=True)
+    radial = stored_radial({"frame_time": times, "frame_Q": inputs["frame_Q"]})
+    hamiltonian = hamiltonian_from_radial(factors, radial)
+    probe = _timed_comparison(hamiltonian, observer, probe_times, columns, weights, substeps=1)
+    if not probe["observer_preserved"] or probe["allocation"]["time_indexed_exterior_propagator_bytes"] != 0:
+        raise RuntimeError("probe did not keep the fixed observer and the streamed allocation")
+    if probe["allocation"]["history_shape"][-1] != 6:
+        raise RuntimeError("probe history is not the six source columns")
+    probe_effect = _effect_scale(autonomous_occupation[: probe_steps + 1])
+    probe_coherence_effect = _effect_scale(autonomous_coherence[: probe_steps + 1])
+    record["phases"]["probe"] = {
+        "complete": True,
+        "steps": probe_steps,
+        "substeps": 1,
+        "t_start": float(probe_times[0]),
+        "t_end": float(probe_times[-1]),
+        "streamed_seconds": probe["streamed_seconds"],
+        "full_seconds": probe["full_seconds"],
+        "occupation_error": probe["occupation_error"],
+        "coherence_error": probe["coherence_error"],
+        "occupation_effect": probe_effect,
+        "coherence_effect": probe_coherence_effect,
+        "allocation": probe["allocation"],
+        "hamiltonian_builds": int(hamiltonian.stats["builds"]),
+        "hamiltonian_hits": int(hamiltonian.stats["hits"]),
+        "matrix_bytes": int(hamiltonian.stats["matrix_bytes"]),
+    }
+    checkpoint()
+    available = int(times.size - 1)
+    streamed_probe = float(probe["streamed_seconds"])
+    full_probe = float(probe["full_seconds"])
+    record["forecast"] = {
+        "probe_streamed_s": streamed_probe,
+        "probe_full_s": full_probe,
+        "full_window_substeps_2_s": (
+            _forecast_streamed(streamed_probe, probe_steps, available, 2)
+            + _forecast_full(full_probe, probe_steps, available, 2)
+        ),
+        "full_window_substeps_1_s": (
+            _forecast_streamed(streamed_probe, probe_steps, available, 1)
+            + _forecast_full(full_probe, probe_steps, available, 1)
+        ),
+        "hundred_output_nodes_streamed_s": _forecast_streamed(streamed_probe, probe_steps, HUNDRED_NODE_OUTPUTS, 1),
+        "hundred_node_geometry": "not stored; the forecast is not a run",
+        "rule": "streamed replay scales as steps squared times substeps; full-band evolution scales linearly",
+    }
+    arrays = {
+        "probe_times": probe_times,
+        "probe_occupation_retained": probe["occupation_retained"],
+        "probe_occupation_full": probe["occupation_full"],
+        "probe_coherence_retained": probe["coherence_retained"],
+        "probe_coherence_full": probe["coherence_full"],
+    }
+    method = {}
+    fine_steps = probe_steps * 2
+    fine_times = np.linspace(float(probe_times[0]), float(probe_times[-1]), fine_steps + 1)
+    output_estimate = _forecast_streamed(streamed_probe, probe_steps, fine_steps, 1) + _forecast_full(full_probe, probe_steps, fine_steps, 1)
+    if admit(output_estimate, "probe_output_sampling"):
+        print("successor output sampling", fine_steps, flush=True)
+        refined = _timed_comparison(hamiltonian, observer, fine_times, columns, weights, substeps=1)
+        movement = float(np.max(np.abs(probe["occupation_full"] - refined["occupation_full"][::2])))
+        coherence_movement = float(np.max(np.abs(probe["coherence_full"] - refined["coherence_full"][::2])))
+        method["output_sampling"] = {
+            "window": [float(probe_times[0]), float(probe_times[-1])],
+            "coarse_nodes": int(probe_times.size),
+            "fine_nodes": int(fine_times.size),
+            "occupation": _indicator_status(movement, probe_effect, probe["occupation_error"]["max_abs"]),
+            "coherence": _indicator_status(coherence_movement, probe_coherence_effect, probe["coherence_error"]["max_abs"]),
+        }
+        arrays["probe_output_occupation_full"] = refined["occupation_full"]
+    substep_estimate = _forecast_streamed(streamed_probe, probe_steps, probe_steps, 2) + _forecast_full(full_probe, probe_steps, probe_steps, 2)
+    if admit(substep_estimate, "probe_substeps_2"):
+        print("successor probe substeps 2", flush=True)
+        refined_sub = _timed_comparison(hamiltonian, observer, probe_times, columns, weights, substeps=2)
+        movement = float(np.max(np.abs(probe["occupation_full"] - refined_sub["occupation_full"])))
+        coherence_movement = float(np.max(np.abs(probe["coherence_full"] - refined_sub["coherence_full"])))
+        method["substeps"] = {
+            "window": [float(probe_times[0]), float(probe_times[-1])],
+            "occupation": _indicator_status(movement, probe_effect, refined_sub["occupation_error"]["max_abs"]),
+            "coherence": _indicator_status(coherence_movement, probe_coherence_effect, refined_sub["coherence_error"]["max_abs"]),
+        }
+    if geometry_report["rate_hermite_stays_positive"] and admit(_forecast_full(full_probe, probe_steps, probe_steps, 1), "probe_rate_hermite"):
+        print("successor probe rate hermite", flush=True)
+        rate_radial = lambda time: hermite_with_slopes(times, inputs["frame_Q"], slopes, [float(time)])[0]
+        rate_hamiltonian = hamiltonian_from_radial(factors, rate_radial)
+        rate_occupation, rate_coherence = project_full_occupation(
+            rate_hamiltonian, observer, probe_times, columns, weights, substeps=1
+        )
+        method["rate_hermite"] = {
+            "window": [float(probe_times[0]), float(probe_times[-1])],
+            "occupation": _indicator_status(
+                float(np.max(np.abs(rate_occupation - probe["occupation_full"]))),
+                probe_effect,
+                probe["occupation_error"]["max_abs"],
+            ),
+            "coherence": _indicator_status(
+                float(np.max(np.abs(rate_coherence - probe["coherence_full"]))),
+                probe_coherence_effect,
+                probe["coherence_error"]["max_abs"],
+            ),
+            "slopes": "prolonged saved coarse Q_dot",
+        }
+        arrays["probe_rate_hermite_occupation"] = rate_occupation
+    timestep_movement = float(np.max(np.abs(partner_occupation - autonomous_occupation)))
+    method["timestep_autonomous"] = {
+        "cases": [inputs["case"], inputs["partner_case"]],
+        "phi_gap": inputs["partner_phi_gap"],
+        "Q_gap": inputs["partner_Q_gap"],
+        "occupation": _indicator_status(
+            timestep_movement,
+            _effect_scale(autonomous_occupation),
+            float(np.max(inputs["initial_blocks"]["hermitian_defect"])),
+        ),
+        "conditional_rerun": False,
+    }
+    record["phases"]["method"] = method
+    checkpoint()
+    named_error = [
+        name
+        for name, item in method.items()
+        for piece in (item.get("occupation"), item.get("coherence"))
+        if isinstance(piece, dict) and piece.get("status") == "above_one_percent"
+    ]
+    record["named_method_error"] = named_error
+    confirmation = bool(named_error)
+    if "timestep_autonomous" in named_error and admit(
+        _forecast_full(full_probe, probe_steps, probe_steps, 1),
+        "partner_conditional_probe",
+        confirmation=True,
+    ):
+        print("successor partner conditional probe", flush=True)
+        partner_radial = stored_radial({"frame_time": times, "frame_Q": inputs["partner_Q"]})
+        partner_hamiltonian = hamiltonian_from_radial(factors, partner_radial)
+        partner_conditional, _partner_coherence = project_full_occupation(
+            partner_hamiltonian, observer, probe_times, columns, weights, substeps=1
+        )
+        method["timestep_conditional_probe"] = {
+            "occupation": _indicator_status(
+                float(np.max(np.abs(partner_conditional - probe["occupation_full"]))),
+                probe_effect,
+                probe["occupation_error"]["max_abs"],
+            ),
+            "conditional_rerun": True,
+        }
+        record["phases"]["method"] = method
+        named_error = [
+            name
+            for name, item in method.items()
+            for piece in (item.get("occupation"), item.get("coherence"))
+            if isinstance(piece, dict) and piece.get("status") == "above_one_percent"
+        ]
+        record["named_method_error"] = named_error
+        confirmation = bool(named_error)
+        arrays["probe_partner_occupation"] = partner_conditional
+    print("successor omissions and actual cross", flush=True)
+    panel = {}
+    for name, flags in (("memory", {"memory": False}), ("outside_drive", {"outside_drive": False})):
+        estimate = streamed_probe
+        if not admit(estimate, "probe_" + name, confirmation=confirmation and name in named_error):
+            continue
+        omitted, occupation, _coherence = evolve_streamed(
+            hamiltonian, observer, probe_times, columns, weights, **flags
+        )
+        panel[name] = _omission_against(occupation, probe["occupation_full"], probe["occupation_error"]["max_abs"])
+        panel[name]["history_norm"] = float(np.linalg.norm(omitted["history"]))
+        panel[name]["initial_exterior_norm"] = float(np.linalg.norm(omitted["initial_exterior"]))
+        arrays["probe_occupation_" + name + "_off"] = occupation
+    if admit(2.0 * streamed_probe, "probe_cross", confirmation=confirmation):
+        cross = column_cross_control(
+            hamiltonian, observer, probe_times, columns, weights, substeps=1, baseline=probe["result"]
+        )
+        panel["initial_cross"] = {
+            "separation_max_frobenius": cross["separation_max_frobenius"],
+            "occupation_diagonal_movement": cross["occupation_diagonal_movement"],
+            "numerical_error": cross["numerical_error"],
+            "active": cross["active"],
+            "synthetic_six_mode_substituted": False,
+            "effect": _indicator_status(cross["occupation_diagonal_movement"], probe_effect, cross["numerical_error"]),
+        }
+        arrays["probe_cross_occupation_movement"] = np.real(np.diagonal(cross["cross_covariance"], axis1=1, axis2=2))
+    else:
+        cross = None
+    record["phases"]["probe_controls"] = {
+        "complete": True,
+        "omissions": panel,
+        "active": [name for name, item in panel.items() if item.get("exceeds_numerical_error") or item.get("active")],
+    }
+    checkpoint()
+    full_estimate = record["forecast"]["full_window_substeps_2_s"]
+    full_comparison = None
+    if admit(full_estimate, "full_window_substeps_2"):
+        print("successor full window", times[0], times[-1], flush=True)
+        full_comparison = _timed_comparison(
+            hamiltonian, observer, times, columns, weights, substeps=SUCCESSOR_DECLARED_SUBSTEPS
+        )
+        if full_comparison["allocation"]["time_indexed_exterior_propagator_bytes"] != 0:
+            raise RuntimeError("full window stored a time-indexed exterior propagator")
+        arrays["times"] = times
+        arrays["occupation_retained"] = full_comparison["occupation_retained"]
+        arrays["occupation_full"] = full_comparison["occupation_full"]
+        arrays["occupation_autonomous"] = autonomous_occupation
+        arrays["coherence_retained"] = full_comparison["coherence_retained"]
+        arrays["coherence_full"] = full_comparison["coherence_full"]
+        arrays["coherence_autonomous"] = autonomous_coherence
+        record["phases"]["full_window"] = {
+            "complete": True,
+            "substeps": SUCCESSOR_DECLARED_SUBSTEPS,
+            "t_start": float(times[0]),
+            "t_end": float(times[-1]),
+            "steps": available,
+            "streamed_seconds": full_comparison["streamed_seconds"],
+            "full_seconds": full_comparison["full_seconds"],
+            "occupation_error": full_comparison["occupation_error"],
+            "coherence_error": full_comparison["coherence_error"],
+            "phase_error": full_comparison["phase_error"],
+            "allocation": full_comparison["allocation"],
+            "history_norm": full_comparison["history_norm"],
+            "initial_exterior_norm": full_comparison["initial_exterior_norm"],
+            "trapezoid_residual_max": full_comparison["trapezoid_residual_max"],
+        }
+    else:
+        record["phases"]["full_window"] = {"complete": False, "reason": "forecast exceeded the pilot ceiling"}
+    checkpoint()
+    if full_comparison is not None:
+        effect = _effect_scale(autonomous_occupation)
+        coherence_effect = _effect_scale(autonomous_coherence)
+        numerical = full_comparison["occupation_error"]["max_abs"]
+        coherence_numerical = full_comparison["coherence_error"]["max_abs"]
+        record["phases"]["full_window"]["reduction_versus_effect"] = {
+            "occupation": _indicator_status(numerical, effect, 0.0),
+            "coherence": _indicator_status(coherence_numerical, coherence_effect, 0.0),
+        }
+        record["phases"]["conditional_versus_autonomous"] = {
+            "full": signal_error(full_comparison["occupation_full"], autonomous_occupation),
+            "retained": signal_error(full_comparison["occupation_retained"], autonomous_occupation),
+            "coherence_full": signal_error(full_comparison["coherence_full"], autonomous_coherence),
+            "occupation_effect": effect,
+            "coherence_effect": coherence_effect,
+            "full_fraction": fraction_of_effect(
+                signal_error(full_comparison["occupation_full"], autonomous_occupation)["max_abs"],
+                effect,
+            ),
+        }
+        substep_estimate = _forecast_streamed(streamed_probe, probe_steps, available, 1) + _forecast_full(full_probe, probe_steps, available, 1)
+        if admit(substep_estimate, "full_substeps_1"):
+            print("successor full substeps 1", flush=True)
+            coarse_full_occupation, coarse_full_coherence = project_full_occupation(
+                hamiltonian, observer, times, columns, weights, substeps=1
+            )
+            method["full_substeps"] = {
+                "occupation": _indicator_status(
+                    float(np.max(np.abs(coarse_full_occupation - full_comparison["occupation_full"]))),
+                    effect,
+                    numerical,
+                ),
+                "coherence": _indicator_status(
+                    float(np.max(np.abs(coarse_full_coherence - full_comparison["coherence_full"]))),
+                    coherence_effect,
+                    coherence_numerical,
+                ),
+            }
+            arrays["occupation_full_substeps_1"] = coarse_full_occupation
+        hermite_estimate = _forecast_full(full_probe, probe_steps, available, SUCCESSOR_DECLARED_SUBSTEPS)
+        run_hermite = geometry_report["rate_hermite_stays_positive"] and admit(hermite_estimate, "full_rate_hermite")
+        if geometry_report["rate_hermite_stays_positive"] and not run_hermite and confirmation:
+            run_hermite = admit(hermite_estimate, "full_rate_hermite_confirmation", confirmation=True)
+        if run_hermite:
+            print("successor full rate hermite", flush=True)
+            rate_radial = lambda time: hermite_with_slopes(times, inputs["frame_Q"], slopes, [float(time)])[0]
+            rate_hamiltonian = hamiltonian_from_radial(factors, rate_radial)
+            rate_occupation, rate_coherence = project_full_occupation(
+                rate_hamiltonian,
+                observer,
+                times,
+                columns,
+                weights,
+                substeps=SUCCESSOR_DECLARED_SUBSTEPS,
+            )
+            method["full_rate_hermite"] = {
+                "occupation": _indicator_status(
+                    float(np.max(np.abs(rate_occupation - full_comparison["occupation_full"]))),
+                    effect,
+                    numerical,
+                ),
+                "coherence": _indicator_status(
+                    float(np.max(np.abs(rate_coherence - full_comparison["coherence_full"]))),
+                    coherence_effect,
+                    coherence_numerical,
+                ),
+                "against_autonomous": signal_error(rate_occupation, autonomous_occupation),
+            }
+            arrays["occupation_rate_hermite"] = rate_occupation
+            arrays["coherence_rate_hermite"] = rate_coherence
+        full_panel = {}
+        for name, flags in (("memory", {"memory": False}), ("outside_drive", {"outside_drive": False})):
+            estimate = _forecast_streamed(streamed_probe, probe_steps, available, SUCCESSOR_DECLARED_SUBSTEPS)
+            if not admit(estimate, "full_" + name):
+                continue
+            print("successor full omission", name, flush=True)
+            omitted, occupation, _coherence = evolve_streamed(
+                hamiltonian,
+                observer,
+                times,
+                columns,
+                weights,
+                propagator_substeps=SUCCESSOR_DECLARED_SUBSTEPS,
+                **flags,
+            )
+            full_panel[name] = _omission_against(occupation, full_comparison["occupation_full"], numerical)
+            full_panel[name]["history_norm"] = float(np.linalg.norm(omitted["history"]))
+            full_panel[name]["initial_exterior_norm"] = float(np.linalg.norm(omitted["initial_exterior"]))
+            arrays["occupation_" + name + "_off"] = occupation
+        if admit(2.0 * _forecast_streamed(streamed_probe, probe_steps, available, SUCCESSOR_DECLARED_SUBSTEPS), "full_cross"):
+            print("successor full cross", flush=True)
+            full_cross = column_cross_control(
+                hamiltonian,
+                observer,
+                times,
+                columns,
+                weights,
+                substeps=SUCCESSOR_DECLARED_SUBSTEPS,
+                baseline=full_comparison["result"],
+            )
+            full_panel["initial_cross"] = {
+                "separation_max_frobenius": full_cross["separation_max_frobenius"],
+                "occupation_diagonal_movement": full_cross["occupation_diagonal_movement"],
+                "numerical_error": full_cross["numerical_error"],
+                "active": full_cross["active"],
+                "synthetic_six_mode_substituted": False,
+                "effect": _indicator_status(full_cross["occupation_diagonal_movement"], effect, full_cross["numerical_error"]),
+            }
+            arrays["covariance_retained"] = full_cross["covariance_total"]
+            arrays["covariance_without_cross"] = full_cross["covariance_without_cross"]
+            arrays["covariance_eigenvalues"] = np.linalg.eigvalsh(full_cross["covariance_total"]).real
+        else:
+            full_cross = None
+        record["phases"]["full_controls"] = {
+            "complete": True,
+            "omissions": full_panel,
+            "active": [
+                name for name, item in full_panel.items() if item.get("exceeds_numerical_error") or item.get("active")
+            ],
+            "inactive": [
+                name for name, item in full_panel.items() if not (item.get("exceeds_numerical_error") or item.get("active"))
+            ],
+        }
+        record["phases"]["method"] = method
+    named_error = [
+        name
+        for name, item in record["phases"].get("method", {}).items()
+        for piece in (item.get("occupation"), item.get("coherence"))
+        if isinstance(piece, dict) and piece.get("status") == "above_one_percent"
+    ]
+    record["named_method_error"] = named_error
+    record["method_error_within_one_percent"] = not bool(named_error)
+    record["finite_domain"] = {
+        "case": inputs["case"],
+        "partner_case": inputs["partner_case"],
+        "fermion_band": int(factors["nf"]),
+        "quadrature": int(factors["nq"]),
+        "length": float(factors["length"]),
+        "spinor_dimension": int(2 * factors["nf"]),
+        "observer": "T=0 initial mode columns 0 and 1, no phase QR; not the Phi(0.05) basis",
+        "weights": [float(item) for item in weights],
+        "initial_state": "bitwise transported Phi(0.05) from the spherical episode handoff",
+        "time_window": [float(times[0]), float(times[-1])],
+        "stored_frames": int(times.size),
+        "geometry": SUCCESSOR_INTERPOLATION,
+        "reference": "independent full-band midpoint evolution on H(Q(t)), compared with stored autonomous Phi frames",
+        "reduction": "nsc_evolving_reduction.evolve_retained_region backend='streamed'",
+        "regeneration_declared": False,
+        "production_rk4_rerun": False,
+        "stress": False,
+    }
+    record["initial_blocks"] = _block_record(inputs["initial_blocks"])
+    record["geometry"] = geometry_report
+    record["clock"] = _clock_record(inputs, autonomous_occupation)
+    record["episode_citation"] = {
+        "protocol_id": "nsc-regeneration-episode-v1",
+        "requested_job_id": SUCCESSOR_JOB,
+        "stop_reason": inputs["episode_stop_reason"],
+        "attained_T": inputs["episode_attained_T"],
+        "arc_x_start": inputs["arc_x_start"],
+        "arc_x_end": inputs["arc_x_end"],
+        "structure_maintained": inputs["structure_maintained"],
+        "balanced_flow": inputs["balanced_flow"],
+        "renewed": inputs["structure_renewed"],
+        "joined_renewal_proxy": inputs["joined_renewal_proxy"],
+        "old_toy_B_not_used": inputs["old_toy_B_not_used"],
+        "state_reset": inputs["state_reset"],
+        "new_force_added": inputs["new_force_added"],
+        "episode_goal_is_not_this_reduction": True,
+    }
+    record["bindings"] = {
+        "names": inputs["binding_names"],
+        "values": [float(item) for item in inputs["binding_values"]],
+        "observer_id": inputs["observer_id"],
+        "weights_id": inputs["weights_id"],
+        "initial_state_id": inputs["initial_state_id"],
+        "geometry_id": inputs["geometry_id"],
+        "episode_npz_sha256": inputs["episode_sha256"],
+        "episode_json_sha256": inputs["episode_json_sha256"],
+        "origin_npz_sha256": inputs["origin_sha256"],
+        "origin_json_sha256": inputs["origin_json_sha256"],
+        "handoff_bitwise": True,
+        "observer_rephased": False,
+    }
+    record["operator_gate"] = {
+        "initial_action_relative": action0["relative"],
+        "final_action_relative": action1["relative"],
+        "initial_prolongation_gap": prolong_gap,
+        "origin_gram_defect": inputs["origin_gram_defect"],
+        "fine_identity_image": False,
+    }
+    record["immutable_v1"] = {
+        "json_sha256": sha256_file(DEFAULT_JSON),
+        "npz_sha256": sha256_file(DEFAULT_NPZ),
+    }
+    record["code_identities"] = code_identities()
+    record["hamiltonian_builds"] = int(hamiltonian.stats["builds"])
+    record["hamiltonian_hits"] = int(hamiltonian.stats["hits"])
+    record["cache_key"] = "float.hex of t; a repeated sample is the same matrix object"
+    if record["phases"].get("full_window", {}).get("complete") and record["phases"].get("full_controls", {}).get("complete"):
+        record["status"] = "MEASURED_SUCCESSOR_RESPONSE"
+        record["stop_reason"] = None
+    else:
+        record["status"] = "BUDGET_EXCEEDED"
+        record["stop_reason"] = "a required full-window phase was not admitted"
+    record["cpu_seconds_this_process"] = budget.elapsed()
+    record["confirmation_ceiling_used"] = bool(any(item["confirmation"] and item["admitted"] for item in record["admissions"]))
+    write_npz(output_npz, arrays)
+    record["payload_sha256"] = {"npz": sha256_file(output_npz)}
+    record["payload_bytes"] = int(output_json.stat().st_size + output_npz.stat().st_size)
+    write_json(output_json, record)
+    record["payload_bytes"] = int(output_json.stat().st_size + output_npz.stat().st_size)
+    record["payload_within_64MiB"] = bool(record["payload_bytes"] <= PAYLOAD_LIMIT_BYTES)
+    write_json(output_json, record)
+    if not record["payload_within_64MiB"]:
+        raise RuntimeError(f"payload {record['payload_bytes']} exceeds 64MiB")
+    print("successor", record["status"], "cpu", record["cpu_seconds_this_process"], flush=True)
+    return record
+
+
+def _same_token(left, right):
+    if isinstance(left, bool) or isinstance(right, bool):
+        return isinstance(left, bool) and isinstance(right, bool) and bool(left) is bool(right)
+    if isinstance(left, (int, float, np.floating)) and not isinstance(left, bool):
+        if isinstance(right, (int, float, np.floating)) and not isinstance(right, bool):
+            return math.isclose(float(left), float(right), rel_tol=1e-12, abs_tol=1e-12)
+    return left == right
+
+
+def successor_consistency_errors(record, arrays, inputs):
+    """Typed checks. This function does not write and does not evolve."""
+    errors = []
+    if not isinstance(record, dict) or record.get("schema") != SCHEMA_V2:
+        return ["schema"]
+    identity = successor_identity(inputs, SUCCESSOR_DECLARED_SUBSTEPS)
+    if record.get("request") != identity:
+        errors.append("request")
+    if record.get("renewal") is not False or record.get("global_regeneration") is not False:
+        errors.append("regeneration_claim")
+    if record.get("old_toy_B_calibrated") is not False or record.get("stress_claimed") is not False:
+        errors.append("forbidden_claim")
+    if record.get("force_claimed") is not False or record.get("gamma_kernel_variation") is not False:
+        errors.append("force_claim")
+    if record.get("hundred_node_executed") is not False:
+        errors.append("hundred_node")
+    blocks = record.get("initial_blocks") or {}
+    fresh = _block_record(inputs["initial_blocks"])
+    for key in ("C_AE_frobenius", "C_EE_frobenius", "admissible", "cross_active_as_a_block"):
+        if not _same_token(blocks.get(key), fresh[key]):
+            errors.append("initial_" + key)
+    if not fresh["cross_active_as_a_block"]:
+        errors.append("actual_cross_inactive")
+    allocation = ((record.get("phases") or {}).get("full_window") or {}).get("allocation") or {}
+    if allocation and int(allocation.get("time_indexed_exterior_propagator_bytes", -1)) != 0:
+        errors.append("dense_propagator")
+    if arrays is not None and "occupation_autonomous" in arrays and "occupation_full" in arrays:
+        autonomous = np.asarray(arrays["occupation_autonomous"])
+        conditional = np.asarray(arrays["occupation_full"])
+        retained = np.asarray(arrays["occupation_retained"])
+        reported = (record.get("phases") or {}).get("conditional_versus_autonomous") or {}
+        full_gap = signal_error(conditional, autonomous)["max_abs"]
+        retained_gap = signal_error(retained, autonomous)["max_abs"]
+        if not _same_token(reported.get("full", {}).get("max_abs"), full_gap):
+            errors.append("autonomous_gap")
+        if not _same_token(reported.get("retained", {}).get("max_abs"), retained_gap):
+            errors.append("retained_autonomous_gap")
+        if "occupation_outside_drive_off" in arrays:
+            drive = signal_error(arrays["occupation_outside_drive_off"], conditional)
+            stored = (((record.get("phases") or {}).get("full_controls") or {}).get("omissions") or {}).get("outside_drive")
+            stored_gap = None if not stored else stored["occupation_error_against_reference"]["max_abs"]
+            if not _same_token(stored_gap, drive["max_abs"]):
+                errors.append("drive_omission")
+        if "covariance_retained" in arrays and "covariance_without_cross" in arrays:
+            separation = _matrix_series_gap(arrays["covariance_retained"], arrays["covariance_without_cross"])
+            stored_cross = (((record.get("phases") or {}).get("full_controls") or {}).get("omissions") or {}).get("initial_cross")
+            if not stored_cross or stored_cross.get("synthetic_six_mode_substituted") is not False:
+                errors.append("cross_control")
+            elif not _same_token(stored_cross.get("separation_max_frobenius"), separation):
+                errors.append("cross_separation")
+    identities = record.get("code_identities") or {}
+    for name, digest in code_identities().items():
+        if identities.get(name) != digest:
+            errors.append("code:" + name)
+    immutable = record.get("immutable_v1") or {}
+    if immutable.get("json_sha256") != sha256_file(DEFAULT_JSON) or immutable.get("npz_sha256") != sha256_file(DEFAULT_NPZ):
+        errors.append("immutable_v1")
+    return errors
+
+
+def verify_successor(output_json=DEFAULT_JSON_V2, output_npz=DEFAULT_NPZ_V2):
+    """Read the successor. Inputs are hashed and no output file is written."""
+    output_json = Path(output_json)
+    output_npz = Path(output_npz)
+    watched = (
+        output_json,
+        output_npz,
+        DEFAULT_JSON,
+        DEFAULT_NPZ,
+        REGENERATION_JSON,
+        REGENERATION_NPZ,
+        EPISODE_NPZ,
+    )
+    before = {path: sha256_file(path) for path in watched}
+    record = json.loads(output_json.read_text())
+    with np.load(output_npz, allow_pickle=False) as stored:
+        arrays = {key: np.array(stored[key]) for key in stored.files}
+    inputs = load_successor_inputs()
+    errors = successor_consistency_errors(record, arrays, inputs)
+    if record.get("payload_sha256", {}).get("npz") != sha256_file(output_npz):
+        errors.append("payload_npz_sha")
+    after = {path: sha256_file(path) for path in watched}
+    if before != after:
+        errors.append("readonly")
+    if errors:
+        raise RuntimeError("successor check failed: " + ", ".join(errors))
+    return record
 
 
 def reject_linear_operator_hamiltonian():

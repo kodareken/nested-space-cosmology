@@ -464,7 +464,9 @@ def test_mean_current_remains_and_the_source_array_is_unchanged():
 def test_declared_inputs_reject_source_and_setting_changes_without_a_fake_hash(tmp_path):
     sealed_before = RECORD_PATH.read_bytes()
     saved = json.loads(sealed_before)
-    report = binding_report(saved)
+    source_ref = "5f10ecd365843d1616e50eb16a20d7acd8377e2c"
+    assert binding_report(saved)["ok"] is False
+    report = binding_report(saved, source_ref=source_ref)
     assert report["ok"] is True
     assert report["head_equality_required"] is False
     assert report["fabricated_hash"] is False
@@ -481,7 +483,7 @@ def test_declared_inputs_reject_source_and_setting_changes_without_a_fake_hash(t
     shifted["checkpoint_head"] = "e62f804"
     shifted["cpu_seconds"] = 0.01
     shifted["wall_seconds"] = 0.02
-    shifted_report = binding_report(shifted)
+    shifted_report = binding_report(shifted, source_ref=source_ref)
     assert shifted_report["ok"] is True
     assert shifted_report["head_equality_required"] is False
     assert shifted_report["historical_checkpoint_head"] == "e62f804"
@@ -489,7 +491,7 @@ def test_declared_inputs_reject_source_and_setting_changes_without_a_fake_hash(t
     key = "src/recursive_horizons/nsc_spherical_coupling.py"
     mismatched = copy.deepcopy(saved)
     mismatched["source_hashes"][key] = "0" * 64
-    mismatch_report = binding_report(mismatched)
+    mismatch_report = binding_report(mismatched, source_ref=source_ref)
     assert mismatch_report["ok"] is False
     entry = next(item for item in mismatch_report["blocking"] if item["path"] == key)
     assert entry["fabricated_hash"] is False
@@ -499,7 +501,7 @@ def test_declared_inputs_reject_source_and_setting_changes_without_a_fake_hash(t
 
     absent = copy.deepcopy(saved)
     absent["source_hashes"].pop(key)
-    absent_report = binding_report(absent)
+    absent_report = binding_report(absent, source_ref=source_ref)
     assert absent_report["ok"] is False
     absent_entry = next(item for item in absent_report["blocking"] if item["path"] == key)
     assert absent_entry["declared_hash"] is None
@@ -519,6 +521,10 @@ def test_declared_inputs_reject_source_and_setting_changes_without_a_fake_hash(t
     assert all(item["declared_hash"] is not None for item in missing_sources)
     assert all(item["fabricated_hash"] is False for item in missing_sources)
     assert all(item["current_hash"] != item["declared_hash"] for item in missing_sources)
+
+    historical_missing = binding_report(saved, source_ref="0" * 40)
+    assert historical_missing["ok"] is False
+    assert any(item["historical_bytes_available"] is False for item in historical_missing["blocking"])
 
     schema = copy.deepcopy(saved)
     schema["schema"] = "NSC-SPHERICAL-CAUCHY-WEAK-v0"

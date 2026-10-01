@@ -4,6 +4,29 @@ This repository publishes the original 58 v0.1.0 compact JSON records, preserved
 
 The live scientific status is [docs/current-result.md](current-result.md#present-spherical-loop). The v5 replay `lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py` remains the self-contained $T=0.005$ seed. The saved $T=0.05$ measurement is `lab/scripts/derive_nsc_spherical_feedback_episode.py`. Both are outside `make reproduce`. Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
 
+The [maintained continuation](../lab/docs/nsc-regeneration-episode.md) and
+[same-trajectory response](../lab/docs/nsc-coupled-local-response.md) are
+saved laboratory evidence, also outside `make reproduce`. Read-only
+binding and payload checks use the lab launcher:
+
+```sh
+python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --check
+python scripts/lab.py scripts/derive_nsc_spherical_cauchy_weak.py --check
+python scripts/lab.py -m pytest tests/test_provenance.py tests/test_nsc_spherical_null_expansion.py -q
+python scripts/lab.py -m pytest tests/test_nsc_spherical_conformal_episode.py -q
+```
+
+The weak and null-expansion replays explicitly name the sealed formula
+domain at full commit `5f10ecd365843d1616e50eb16a20d7acd8377e2c`. Their
+current/new-request binding paths remain strict. Sealed numerical payloads
+and the original source-cache pins keep their hashes. Independent local
+omission controls and episode-assessment commands are in their owning
+notes; routine verification does not open another evolution campaign.
+The conformal-episode test reads the saved four-case arrays and independently
+checks the frozen group, initial-data identity, sampled forcing integrals,
+energy changes, and clock protocol. Running its driver writes a new
+evolution record and is outside that read-only check.
+
 The nested records live under `results/development/`:
 [compact interaction](nsc-compact-interaction.md),
 [five-dimensional UV matching](nsc-torsion-uv-map.md),

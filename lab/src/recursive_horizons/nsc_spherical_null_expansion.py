@@ -46,6 +46,7 @@ for _thread_var in (
 
 import numpy as np
 
+from .provenance import resolve_pinned_source_bytes
 from .nsc_spherical_coupling import (
     CALIBRATION,
     PERIOD,
@@ -952,8 +953,12 @@ def _status(pattern, comparison):
     return "NO_SAMPLE_CHARACTER_CHANGE"
 
 
-def build_record():
-    """Read the saved episode and classify spherical expansions. Does not write."""
+def build_record(*, source_ref=None):
+    """Classify saved samples with strict current or explicit historical sources.
+
+    A historical ``source_ref`` authenticates formula bytes only; saved
+    numerical episode bytes remain resident and hash-bound. Does not write.
+    """
     started = time.process_time()
     wall = time.perf_counter()
     hashes_before = {name: sha256_file(path) for name, path in SOURCE_FILES.items()}
@@ -1004,6 +1009,28 @@ def build_record():
             hashes_after["episode_driver"] == metadata["hashes_after"]["driver"]
         ),
     }
+    current_hash_match = dict(hash_match)
+    historical_hashes = {}
+    if source_ref is not None:
+        for name, metadata_name, agreement_name in (
+            ("coupling", "coupling", "coupling"),
+            ("galerkin", "galerkin", "galerkin"),
+            ("regional_ledger", "regional_module", "ledger"),
+            ("feedback_action", "feedback_action", "feedback_action"),
+            ("conformal_source", "conformal_source", "conformal_source"),
+            ("episode_driver", "driver", "episode_driver"),
+        ):
+            expected = metadata["hashes_after"][metadata_name]
+            relative = SOURCE_FILES[name].relative_to(_LAB_ROOT.parent).as_posix()
+            try:
+                raw = resolve_pinned_source_bytes(
+                    _LAB_ROOT.parent, relative, expected, commit=source_ref)
+            except (ValueError, RuntimeError):
+                matches = False
+            else:
+                historical_hashes[name] = hashlib.sha256(raw).hexdigest()
+                matches = True
+            hash_match[agreement_name + "_matches_episode_hashes_after"] = matches
     status = _status(pattern, comparison)
     cpu = time.process_time() - started
     record = {
@@ -1080,6 +1107,9 @@ def build_record():
             "episode_metadata_schema": metadata["schema"],
             "episode_npz_sha256_recorded_in_metadata": metadata["npz_sha256_recorded"],
             "hash_agreement": hash_match,
+            "current_hash_agreement": current_hash_match,
+            "source_ref": source_ref,
+            "historical_source_hashes": historical_hashes,
             "setup_length": metadata["setup_length"],
             "episode_files_unchanged": bool(episode_unchanged),
         },

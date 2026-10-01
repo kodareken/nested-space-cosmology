@@ -56,7 +56,7 @@ _MODULE = Path(__file__).resolve().parents[1] / "src" / "recursive_horizons" / "
 def _replay():
     global _REPLAY
     if _REPLAY is None:
-        _REPLAY = verify_saved()
+        _REPLAY = verify_saved(source_ref="5f10ecd365843d1616e50eb16a20d7acd8377e2c")
     return _REPLAY
 
 

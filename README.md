@@ -9,45 +9,35 @@ checkpoint is retained in an appendix and is not a prerequisite for this
 finite result. The [43-page foundation](paper/nested-space-cosmology.pdf)
 remains unchanged.
 
-**Starting checkpoint `9a9090a`.** The programme is finite nested
-regeneration under familiar local laws. The executed calculation is the
-spherical Galerkin loop: each Runge–Kutta stage calls
-`compose_fine_hamiltonian`, which recomputes the source and the rates
-and feeds $F_Q$ into $\dot p_Q$; $Q$, $r$, $\chi$ and the momenta
-evolve; $L$ and $\beta$ stay gauge controls; the initial radius uses the
-source. That module is the code owner. The v5 replay
-remains the self-contained $T=0.005$ seed: full Hamilton about
-$9.98\times 10^{-6}$, momentum about $1.38\times 10^{-6}$, maximum
-absolute proper radial velocity about $0.0079505$. Signed motion is not
-inferred from that maximum.
-The saved $T=0.05$ measurement is
-`lab/scripts/derive_nsc_spherical_feedback_episode.py`. Four runs reach
-the requested time. Proper radial velocity on the fine primary run ends
-near $[-0.061956, 0.088159]$, $Q$ stays near $0.2195$ at its minimum, and
-$\chi$ reaches about $11.148$. Field and gravitational energy exchange
-about $0.4123$. All 62 physical refinement rows meet one percent, worst
-relative movement about $5.55\times 10^{-4}$. The fine full Hamilton
-residual ends near $2.83\times 10^{-5}$ and the fine momentum residual
-near $4.30\times 10^{-6}$; the coarse residual is higher. A
-constraint-consistent continuum solution and renewal are not validated.
-The historical tolerance $10^{-8}$ is not an automatic veto.
-Saved consumers of that episode are recorded and do not close renewal.
-The [controls](lab/docs/nsc-regeneration-controls.md) continue the saved
-state to $T=0.10$: the leader's shell content rises by about $0.117$,
-packet and reservoir fluxes end opposite near $5.534$, and the field
-and gravitational energies exchange about $0.396$. On all eleven stored
-frames the [conditional local response](lab/docs/nsc-coupled-local-response.md)
-moves the fixed region-0 occupation by about $0.33059$. The
-[spherical null expansion](lab/docs/nsc-spherical-null-expansion.md)
-records a local change in trapping character on the saved chart. The
-[controls successor](lab/results/development/nsc-regeneration-controls-v2.json)
-reads that stored endpoint. The
-[local-boundary review](lab/results/development/nsc-local-boundary-review-v1.json)
-checks the saved payloads, the projected endpoint, and a small causal ODE.
-The [initial geometry-graded window](lab/docs/nsc-geometry-graded-window.md)
-is a completed measurement: leakage about $0.966$ leaves the six columns
-outside a closed dynamics.
-[Present loop](docs/current-result.md#present-spherical-loop).
+**Current finite mechanism:** regional differences produce transfer, the
+same action couples the state and geometry, a localized structure persists
+with throughflow, and a fixed observer registers a changed local response.
+The [saved continuation](lab/docs/nsc-regeneration-episode.md) starts from
+the $T=0.05$ feedback state and ends at $T=0.085$ when the bridge's
+both-positive expansion arc enters the packet. Four space and time
+refinements agree within one percent of the claimed effects. The leader
+keeps its location and gains about $0.0812$ in shell content while field
+and gravitational energy exchange a further $0.2861$. This is maintained
+structure; renewal is false.
+
+The [same-trajectory local response](lab/docs/nsc-coupled-local-response.md)
+uses the original $T=0$ observer on that continuation. Its occupation
+changes by about $0.26749$. Memory, the exterior drive, and the actual
+initial cross correlations each change that response beyond the reduction
+error. A separate [initial-chart certificate](lab/docs/nsc-spherical-cauchy-weak.md#initial-lapse-component)
+bounds the fine initial radius distance and supports a nearby exact
+initial state. An evolved error estimate at the observable scale remains
+open. The [assessment](lab/docs/nsc-spherical-episode-assessment.md) and
+[independent audit](lab/docs/nsc-regeneration-realization-audit.md) record
+their specific domains. Code owners, historical controls, and constraint
+residuals are in the [present loop](docs/current-result.md#present-spherical-loop).
+
+The [same-action conformal episode](docs/current-result.md#same-action-conformal-episode-1-october-2026)
+uses the same initial data with $L=Q$ and $\beta=0$. Four runs reach
+$T=0.05$ and resolve geometric feedback at a declared proper clock.
+The finite constraint-forcing identity now has a measured time budget;
+its sampled integral and observable error remain uncertified. This
+realization keeps its own gauge, clocks, and regional ledger.
 
 A six-mode inherited finite example remains a fixed-geometry witness, with
 nonzero channel currents and a derived local filtered response.

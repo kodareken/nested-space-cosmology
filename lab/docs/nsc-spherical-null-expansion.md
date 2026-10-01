@@ -193,7 +193,8 @@ and that split remains through \(T=0.05\). The \(dt\) pairs agree in counts.
 The `nf512` and `nf256` shared nodes agree in sign. The product, null norms,
 and positive boost identity hold on the manufactured controls. Source hashes
 of the coupling, Galerkin owner, regional ledger, feedback action, conformal
-source, and episode driver match `hashes_after` in the episode JSON, and
+source, and episode driver at the recorded source domain match
+`hashes_after` in the episode JSON, and
 the NPZ hash matches the hash recorded there.
 
 Open: the instant inside \((0,0.005)\) when the product first becomes
@@ -218,24 +219,31 @@ JSON and NPZ, stored observer string, and pre-correction module hash.
 
 That pre-correction module hash is
 `1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`.
-Those bytes are the current module with the boost-return edit inverted, so
-the flag again compares `factor * theta` and `theta / factor`. The current
-module hash is
+Those recovered bytes invert the boost-return edit on the audited module,
+so the flag again compares `factor * theta` and `theta / factor`. The
+module hash at the v2 audit is
 `5c57b61c30008f994e1e889b93584488a5ea1675580ab6dfa68281bfc833e89a`.
-The flag on the current module reads the arrays returned by
+The corrected flag reads the arrays returned by
 `boosted_expansions`. Saved samples and control arrays are unchanged. The
 replay is the in-memory measurement. The writer is not used, because it
 would replace the v1 JSON.
 
 The independent test named by the v1 review is
 `68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
-The current independent test is
+The independent test at the v2 audit is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
 The later file adds
 `test_control_policy_keeps_g_initial_and_proxies_off_the_gate` and
 `test_v2_reads_stored_endpoint_without_touching_v1`. Both recovered files
 are pinned in `.source-history` as content carriers. The original eighteen
 cache objects stay in place. The carrier commit is not an earlier
-laboratory commit. The v2 review binds the current bytes of this note, the
+laboratory commit. The v2 review binds the audited bytes of this note, the
 null-expansion module, the null-expansion tests, the coupled-response
 module, and the coupled-response note.
+
+Those owner bytes are authenticated at full commit
+`5f10ecd365843d1616e50eb16a20d7acd8377e2c`. The sample replay calls
+`build_record(source_ref=...)` to name that historical formula domain
+explicitly. It reports resident hashes separately from historical formula
+hashes and leaves all sealed files unchanged. The default current mode
+still reports a source mismatch when a current formula changes.

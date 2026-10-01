@@ -3,11 +3,10 @@
 ## Active scope
 
 The latest user instruction controls. Repository plan and handover copies are
-historical and do not own the task. The intended claim is an effective local
-response, under familiar local laws, from specified nested surroundings.
-LambdaCDM is one familiar local description. Comparing an open question with
-it is not a conflict, and a completed match to its observables is not
-established. The inheritance relation
+historical and do not own the task. The intended finite chain is regional
+differences, transfer, geometric response, maintained or renewed structure,
+and an effective local response under familiar local laws. A LambdaCDM fit
+and infinite physical time are outside this task. The inheritance relation
 \(\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta\) is reused inside its
 stated domain. It is not recomputed as an infinity of nests. Regeneration,
 time as the registration of spatial change, and a matter–antimatter reading
@@ -29,14 +28,21 @@ and not a handover.
 |---|---|---|
 | Incoherent imbalance mean flow | Complete on the frozen depth-3 window. Geometry there is an input. | [Note](nsc-imbalance-turnover.md), [record](../results/development/nsc-imbalance-turnover-v1.json) |
 | Coupled short episode | Real saved diagnostic. v5 evolved the state and the geometry through \(T=0.005\). It is the self-contained preparation, not a permanent production-driver requirement. | [Replay](../scripts/derive_nsc_spherical_galerkin_refinement_v5.py), [record](../results/development/nsc-spherical-coupling-refinement-v5.json) |
+| Same-action conformal episode | Unchanged initial Cauchy data, explicit \(L=Q,\beta=0\), four runs through \(T=0.05\). Geometric response and equal-proper-clock occupation effect resolve below one percent under the measured refinements. | [Proof](nsc-spherical-conformal-gauge.md), [record](../results/development/nsc-spherical-conformal-episode-v1.json) |
+| Actual finite constraint forcing | Derived \(R'\le\|f\|_2\) uses quadrature plus rate-projection forcing. Recorded time integral is a sampled indicator. Observable and continuum errors remain uncertified. | [Proof](nsc-spherical-conformal-gauge.md#actual-finite-forcing-and-the-energy-estimate), same conformal record |
 | \(T=0.05\) feedback episode | Four runs reach \(T=0.05\). All 62 physical refinement rows meet one percent. Verdict `MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL`. | [Driver](../scripts/derive_nsc_spherical_feedback_episode.py), [record](../results/development/nsc-spherical-feedback-episode-v1.json) |
+| Maintained continuation, \(T=0.05\) to \(0.085\) | Exact predecessor handoff, four refinements within one percent, leader localization and throughflow maintained. Stops when the bridge's both-positive arc enters the packet. Renewal false. | [Note](nsc-regeneration-episode.md), [record](../results/development/nsc-regeneration-episode-v1.json), [audit](nsc-regeneration-realization-audit.md) |
+| Saved metric and proper-arc assessment | Consumes frame rates and realized one-step increments from the four continuations. Canonical half-density measure, localization, ledger, and direct metric/proxy comparison have separate domains. Refinement and increment errors are indicators. | [Note](nsc-spherical-episode-assessment.md), [module](../src/recursive_horizons/nsc_spherical_episode_assessment.py) |
 | Regeneration controls, \(T=0.10\) | Saved continuation. Maintained localization of one drift. Renewal false. `candidate_regime` is false and is not a programme requirement. | [Note](nsc-regeneration-controls.md), [record](../results/development/nsc-regeneration-controls-v1.json) |
 | Controls successor | Endpoint assessment of the immutable v1 files. \(G>0\) is the initial convex ansatz. The dynamic chart is \(r\), \(Q\), \(L\). The cap label is not a physical failure. | [Record](../results/development/nsc-regeneration-controls-v2.json) |
 | Conditional local response | Stored-frame reduction on the episode geometry. Review domain: payloads, projected endpoint, and a small causal ODE. The \(1024\) series remains the saved record. No stress and no renewal. | [Note](nsc-coupled-local-response.md), [record](../results/development/nsc-coupled-local-response-v1.json), [review](../results/development/nsc-local-boundary-review-v1.json) |
+| Same-trajectory local response v2 | Original observer on the continuation. Occupation change \(0.26749\); streamed discrepancy \(0.00025703\). Memory, exterior drive, and actual cross omission each move the response beyond that error. | [Note](nsc-coupled-local-response.md), [record](../results/development/nsc-coupled-local-response-v2.json), [series](../results/development/nsc-coupled-local-response-v2.npz) |
+| Independent local-response controls | Full cross and drive omissions independently replayed on the same stored geometry and observer, each resolved below one percent of its own effect. A conditional Duhamel relation connects a future Hamiltonian-path defect to occupation error. | [Note](nsc-coupled-local-response.md#independent-control-replay), [record](../results/development/nsc-coupled-local-response-audit-v1.json) |
 | Spherical null expansion | Sampled local trapping character. Initial extrema marginal. Review binds immutable v1 bytes. Not a global horizon or a child region. | [Note](nsc-spherical-null-expansion.md), [record](../results/development/nsc-spherical-null-expansion-v1.json), [review](../results/development/nsc-local-boundary-review-v1.json) |
 | Initial geometry-graded window | Completed initial-packet measurement. Leakage about \(0.966\), so the six columns are not closed dynamics. Evolved \(Q\) breaks the kinetic grading. The action functional stays the same. | [Note](nsc-geometry-graded-window.md), [record](../results/development/nsc-geometry-graded-window-v1.json) |
-| Renewal, or a constraint-consistent continuum solution | Unresolved. Fine full Hamilton ends at \(2.825670750915076\times 10^{-5}\); coarse ends at \(0.0068275893562912415\). Continuum error is unknown. The \(T=0.10\) continuation does not close it. | Same episode record; [controls](nsc-regeneration-controls.md) |
-| Weak initial residual | Conditional coercivity is recorded when \(G>0\) and \(\rho\) independence is true. The total bound is not certified. The dense-versus-product movement is a conditioning indicator. | [Note](nsc-spherical-cauchy-weak.md), [record](../results/development/nsc-spherical-cauchy-weak-v1.json) |
+| Renewal and evolved observable error | Renewal false. The maintained chain is measured. `evolution_error_bound` is null; full/projected/held-out residuals and source-normalized budgets do not by themselves bound geometry or occupation error. | [Audit](nsc-regeneration-realization-audit.md), [weak note](nsc-spherical-cauchy-weak.md#constraint-transport) |
+| Weak initial residual | Sealed partial diagnostic. Conditional coercivity and the dense-versus-product conditioning comparison remain its recorded domain. | [Note](nsc-spherical-cauchy-weak.md), [record](../results/development/nsc-spherical-cauchy-weak-v1.json) |
+| Initial-chart bound and nearby exact initial state | Fine initial radius distance bounded by \(4.06085\times10^{-6}\). The note proves a unique positive critical radius and a nearby exact initial state under the sealed positivity hypotheses. The saved correction is not installed; this is not an evolved bound. | [Note](nsc-spherical-cauchy-weak.md#initial-lapse-component), [certificate](../results/development/nsc-spherical-cauchy-error-v1.json) |
 | Streamed retained-region reducer | Dense and streamed prescribed controls agree. No coupled \(H(g(t))\) trajectory is in this record. | [Module](../src/recursive_horizons/nsc_evolving_reduction.py), [note](nsc-evolving-reduction.md) |
 
 ## Coupled loop, as the source executes it
@@ -45,8 +51,10 @@ v5 is the self-contained saved diagnostic and preparation. It is not a
 permanent production-driver requirement. The episode driver
 `scripts/derive_nsc_spherical_feedback_episode.py` reuses that preparation.
 The saved \(T=0.05\) record is
-`results/development/nsc-spherical-feedback-episode-v1.json`. Renewal
-remains false. A constraint-consistent solution is not validated.
+`results/development/nsc-spherical-feedback-episode-v1.json`. Its exact final
+arrays seed `nsc-regeneration-episode-v1` through \(T=0.085\). Maintained
+structure is measured; renewal remains false. A propagated observable
+error estimate is not supplied.
 
 Each rate evaluation, including each stage inside `rk4_step`, prolongs
 the state and recomputes the column source with `source_from_columns`.
@@ -115,13 +123,12 @@ pressures.
 
 The saved consumers below have completed checks inside named domains.
 Their comparison floors stay in the owning notes and are not programme
-requirements. Renewal remains false. The next physical question is the
-read-only chart identity
-\(\dot Q=L p_\chi/(2F_\chi)+\partial_x(\beta Q)\),
-and a later episode that records \(p_\chi\), \(\dot Q\), and the realized
-increment of the rate on the actual regions and proper clocks. Metric
-curvature at \(T=0.10\) is uncomputed. The curvature proxy is a separate
-quantity. No new run is opened. The statement is in
+requirements. Renewal remains false. The maintained continuation now stores
+\(p_\chi\), \(\dot Q\), and a realized one-step rate increment on actual
+regions and proper clocks. Its assessment keeps metric curvature and the
+auxiliary curvature proxy separate. The older \(T=0.10\) control still
+has no independent metric-curvature calculation. The evolved error estimate
+at the observable scale remains open. Status is in
 [current result](../../docs/current-result.md#present-spherical-loop).
 
 The [regeneration controls](nsc-regeneration-controls.md) and
@@ -181,18 +188,20 @@ extrema. The live observer label is columns 0 and 1 with weights \(0.75\)
 and \(0.75\). The stored local-response JSON keeps its original observer
 string. The \(1024\)-dimensional series was not re-integrated. v2,
 [nsc-local-boundary-review-v2.json](../results/development/nsc-local-boundary-review-v2.json),
-binds the immutable v1 payloads and the current audited owners. The sealed
+binds the immutable v1 payloads and the owners audited at `5f10ecd`. The sealed
 independent-test hash
 `68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`
 and the pre-correction module
 `1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`
 are pinned on carrier commit `594a11caeee760d172c4a4f73a7615b05cf30282`.
-That carrier is not a historical laboratory commit. The current independent
-test is
+That carrier is not a historical laboratory commit. The independent
+test at that audit is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
-The v1-epoch note, the v1-epoch null-expansion test, and the other
-consumer hashes from that epoch stay unpinned. The weak helper's saved
-checkpoint head remains `9a9090a`. `--check` remeasures without writing.
+The v2 owner hashes resolve to exact bytes at full commit
+`5f10ecd365843d1616e50eb16a20d7acd8377e2c`. Historical replay names that
+domain explicitly; new requests still require current sources. The weak
+helper's saved checkpoint head remains `9a9090a`. Its CLI `--check` names
+the same historical formula domain and remeasures without writing.
 The current helper, owned test, and driver differ from the three sealed
 generator hashes. That limit is not a reexecution of the original
 producer, and `total_certified` stays false.

@@ -16,12 +16,15 @@ from __future__ import annotations
 import hashlib
 import json
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 import numpy as np
 
 from .nsc_conformal_adm_source import sector_multiplicity
+from .nsc_spherical_feedback_action import (
+    alpha_of, feedback_F, feedback_V, feedback_Z, partial_F,
+)
 from .nsc_spherical_coupling import (
     CALIBRATION,
     CARRIER_K,
@@ -183,6 +186,7 @@ class GalerkinGrid:
     isometry_geometry: float
     isometry_columns: float
     fine: CouplingSystem
+    gauge: str = "prescribed"
 
     @property
     def derivative(self):
@@ -193,8 +197,10 @@ class GalerkinGrid:
         return self.fine.momentum
 
 
-def build_grid(fermions, quadrature=None, length=PERIOD):
+def build_grid(fermions, quadrature=None, length=PERIOD, *, gauge="prescribed"):
     """Odd geometry ng = nf - 1, even AP count nf, quadrature default 4 nf."""
+    if gauge not in ("prescribed", "conformal"):
+        raise ValueError("gauge must be prescribed or conformal")
     nf = int(fermions)
     ng = nf - 1
     nq = int(4 * nf if quadrature is None else quadrature)
@@ -258,6 +264,7 @@ def build_grid(fermions, quadrature=None, length=PERIOD):
         isometry_geometry=geometry_error,
         isometry_columns=column_error,
         fine=fine,
+        gauge=gauge,
     )
 
 
@@ -351,6 +358,35 @@ def prolong_state(grid, state):
     )
 
 
+def active_fine_system(grid, fine_state):
+    """Stage-local gauge, leaving the stored prescribed calibration untouched.
+
+    The optional conformal chart has L=Q and beta=0. Its Hamiltonian is
+    obtained after retaining the lapse and shift constraints of the same
+    action. The extra chain-rule term in p_Q is applied by compose below.
+    """
+    if grid.gauge == "prescribed":
+        return grid.fine
+    if grid.gauge != "conformal":
+        raise ValueError("unknown Galerkin gauge")
+    if fine_state.Q.shape != (grid.nq,):
+        raise ValueError("conformal gauge requires Q on the quadrature grid")
+    if not np.isfinite(fine_state.Q).all():
+        raise PositiveChartExit("nonfinite_state", np.nan, fine_state.copy())
+    if np.min(fine_state.Q) <= 0:
+        raise PositiveChartExit("Q_left_positive_chart", np.nan, fine_state.copy())
+    return replace(grid.fine, length_density=fine_state.Q, shift=np.zeros(grid.nq))
+
+
+def _check_state_dimensions(grid, state):
+    for name in ("Q", "r", "chi", "p_Q", "p_r", "p_chi"):
+        if np.asarray(getattr(state, name)).shape != (grid.ng,):
+            raise ValueError(f"{name} must have shape (ng,)")
+    expected = (grid.nf, grid.fine.occupations.size)
+    if state.phi0.shape != expected or state.phi1.shape != expected:
+        raise ValueError("column arrays must have shape (nf, occupations.size)")
+
+
 def _pull_rate_fields(grid, fine_rate, force_q):
     """Adjoint pullback. Column rate is U†(-i H U Φ), already in fine_rate images."""
     return CauchyRate(
@@ -377,18 +413,26 @@ def compose_fine_hamiltonian(grid, state, include_matter_force=True):
     spacing only where the momentum equation needs a density. 4κ is the
     multiplicity already inside the existing nodal forces, once.
     """
+    _check_state_dimensions(grid, state)
     fine_state = prolong_state(grid, state)
-    failure = chart_failure(grid.fine, fine_state)
+    fine_system = active_fine_system(grid, fine_state)
+    failure = chart_failure(fine_system, fine_state)
     if failure is not None:
         raise PositiveChartExit(failure, np.nan, state.copy())
-    source = source_from_columns(grid.fine, fine_state)
+    source = source_from_columns(fine_system, fine_state)
     if source["multiplicity_applied_once"] is not True:
         raise ValueError("source multiplicity was not applied once")
     if int(grid.fine.multiplicity) != 4 * int(grid.fine.kappa):
         raise ValueError("4 kappa multiplicity drifted")
-    q_dot, r_dot, chi_dot, p_q_dot, p_r_dot, p_chi_dot = geometric_rates(grid.fine, fine_state)
+    q_dot, r_dot, chi_dot, p_q_dot, p_r_dot, p_chi_dot = geometric_rates(fine_system, fine_state)
+    if grid.gauge == "conformal":
+        # d/dQ H[Q] includes C_g dL/dQ. Constraints were varied before
+        # this gauge choice; this is not a constraint reset or projection.
+        p_q_dot = p_q_dot - hamilton_constraint(fine_system, fine_state)
     if include_matter_force:
         p_q_dot = p_q_dot - source["force_Q"] / grid.dx_q
+        if grid.gauge == "conformal":
+            p_q_dot = p_q_dot - source["force_L"] / grid.dx_q
     # Representative block evolves by -i H, then the column adjoint. Not -M i H.
     phi0_dot_fine = -1j * source["image0"]
     phi1_dot_fine = -1j * source["image1"]
@@ -399,14 +443,22 @@ def compose_fine_hamiltonian(grid, state, include_matter_force=True):
         source["force_Q"],
     )
     lifted_q = prolong_geometry(grid, coarse.Q)
-    coarse.fieldwork_power = float(np.sum(source["force_Q"] * lifted_q))
+    lapse_dot = lifted_q if grid.gauge == "conformal" else np.zeros(grid.nq)
+    unprojected_lapse_dot = q_dot if grid.gauge == "conformal" else np.zeros(grid.nq)
+    coarse.fieldwork_power = float(np.sum(source["force_Q"] * lifted_q + source["force_L"] * lapse_dot))
     bundle = {
+        "fine_system": fine_system,
         "fine_state": fine_state,
         "source": source,
         "unprojected_Q": q_dot,
         "unprojected_r": r_dot,
-        "unprojected_fieldwork": float(np.sum(source["force_Q"] * q_dot)),
+        "unprojected_rates": (q_dot, r_dot, chi_dot, p_q_dot, p_r_dot, p_chi_dot,
+                              phi0_dot_fine, phi1_dot_fine),
+        "unprojected_fieldwork": float(np.sum(source["force_Q"] * q_dot
+                                               + source["force_L"] * unprojected_lapse_dot)),
         "lifted_Q": lifted_q,
+        "lapse_dot": lapse_dot,
+        "shift_dot": np.zeros(grid.nq),
     }
     return coarse, bundle
 
@@ -417,8 +469,9 @@ def rates(grid, state, include_matter_force=True):
 
 
 def energy(grid, state):
+    _check_state_dimensions(grid, state)
     fine_state = prolong_state(grid, state)
-    return total_energy(grid.fine, fine_state)
+    return total_energy(active_fine_system(grid, fine_state), fine_state)
 
 
 def occupation_eigenvalues(phi0, phi1, occupations=None):
@@ -452,8 +505,9 @@ def constraint_diagnostics(grid, state, source=None, fine_state=None):
     """Projected coefficients and the full quadrature residual, including held-out modes."""
     if fine_state is None:
         fine_state = prolong_state(grid, state)
+    fine_system = active_fine_system(grid, fine_state)
     if source is None:
-        source = source_from_columns(grid.fine, fine_state)
+        source = source_from_columns(fine_system, fine_state)
     rho = source["force_L"] / grid.dx_q
     current = source["force_beta"] / grid.dx_q
     hamilton = hamilton_constraint(grid.fine, fine_state) + rho
@@ -480,19 +534,137 @@ def constraint_diagnostics(grid, state, source=None, fine_state=None):
     }
 
 
+def _constraint_directional(system, state, tangent, source=None):
+    """Exact directional derivative of the sampled pre-gauge constraints.
+
+    ``tangent`` contains six real geometry fields and two complex column
+    fields on this system's grid. This differentiates the existing D(F),
+    rather than replacing it with a continuum product rule.
+    """
+    if source is None:
+        source = source_from_columns(system, state)
+    q, r, chi, p_q, p_r, p_chi, phi0, phi1 = tangent
+    derivative = system.derivative
+    force_r, f_chi = partial_F(state.r, system.A, system.C_W)
+    f_chi = float(f_chi)
+    z = float(feedback_Z(system.A))
+    alpha = float(alpha_of(system.C_W))
+    pi = state.p_r - force_r * state.p_chi / f_chi
+    pi_dot = p_r - force_r * p_chi / f_chi + (8 * np.pi * system.A / f_chi) * state.p_chi * r
+    f = feedback_F(state.r, state.chi, system.A, system.C_W)
+    f_dot = force_r * r + f_chi * chi
+    potential = feedback_V(state.r, state.chi, system.A, system.C_W, system.C_F, system.flux)
+    potential_dot = 16 * np.pi * system.A * state.r * r - alpha * (4 + 2 * state.chi) * chi
+    radius_x = derivative @ state.r
+    geometric_dot = (
+        (p_q * state.p_chi + state.p_Q * p_chi) / (2 * f_chi)
+        + pi * pi_dot / (2 * z * state.Q) - pi ** 2 * q / (4 * z * state.Q ** 2)
+        + 2 * z * radius_x * (derivative @ r) / state.Q
+        - z * radius_x ** 2 * q / state.Q ** 2 - q * potential - state.Q * potential_dot
+        - 2 * (derivative @ ((derivative @ f_dot) / state.Q - (derivative @ f) * q / state.Q ** 2))
+    )
+    momentum_dot = (
+        p_r * radius_x + state.p_r * (derivative @ r)
+        + p_chi * (derivative @ state.chi) + state.p_chi * (derivative @ chi)
+        - q * (derivative @ state.p_Q) - state.Q * (derivative @ p_q)
+    )
+    # Polarization of the three column bilinears. The nodal-to-density
+    # conversion and isotropic copy multiplicity each appear once.
+    momentum = system.momentum
+    weighted = system.occupations[None, :]
+    k_dot = np.sum(weighted * (
+        np.conjugate(phi0) * (-1j * (momentum @ state.phi1))
+        + np.conjugate(state.phi0) * (-1j * (momentum @ phi1))
+        + np.conjugate(phi1) * (1j * (momentum @ state.phi0))
+        + np.conjugate(state.phi1) * (1j * (momentum @ phi0))
+    ), axis=1).real
+    s1_dot = np.sum(weighted * (
+        np.conjugate(phi0) * state.phi1 + np.conjugate(state.phi0) * phi1
+        + np.conjugate(phi1) * state.phi0 + np.conjugate(state.phi1) * phi0
+    ), axis=1).real
+    current_dot = -system.multiplicity / system.dx * np.sum(weighted * (
+        np.conjugate(phi0) * (momentum @ state.phi0)
+        + np.conjugate(state.phi0) * (momentum @ phi0)
+        + np.conjugate(phi1) * (momentum @ state.phi1)
+        + np.conjugate(state.phi1) * (momentum @ phi1)
+    ), axis=1).real
+    rho_dot = system.multiplicity / system.dx * (
+        k_dot / state.Q - source["K"] * q / state.Q ** 2 + system.kappa * s1_dot
+    )
+    constraint = hamilton_constraint(system, state) + source["force_L"] / system.dx
+    h = state.Q * constraint
+    d = shift_constraint(system, state) + source["force_beta"] / system.dx
+    h_dot = q * constraint + state.Q * (geometric_dot + rho_dot)
+    d_dot = momentum_dot + current_dot
+    return h, d, h_dot, d_dot
+
+
+def conformal_constraint_transport(grid, state, coarse_rate=None, bundle=None, *, include_vectors=False):
+    """Forcing of h_t=D_x, D_t=h_x by the actual Galerkin ODE.
+
+    On the periodic SBP grid, R=|| (h,D) ||_2 satisfies R'<=||f||_2
+    where f=(h_dot-D_x,D_dot-h_x). The unprojected quadrature defect and
+    the added rate-projection defect stay separate. Their sum is the
+    reported actual forcing; neither is silently discarded. Integrating
+    this sampled diagnostic is not itself a validated time or continuum
+    quadrature enclosure. See nsc-spherical-conformal-gauge.md.
+    """
+    if grid.gauge != "conformal":
+        raise ValueError("constraint transport identity requires the conformal gauge")
+    _check_state_dimensions(grid, state)
+    if coarse_rate is None or bundle is None:
+        coarse_rate, bundle = compose_fine_hamiltonian(grid, state)
+    names = ("Q", "r", "chi", "p_Q", "p_r", "p_chi")
+    lifted = tuple(prolong_geometry(grid, getattr(coarse_rate, name)) for name in names) + (
+        prolong_columns(grid, coarse_rate.phi0), prolong_columns(grid, coarse_rate.phi1),
+    )
+    system, fine, source = bundle["fine_system"], bundle["fine_state"], bundle["source"]
+    h, d, h_dot, d_dot = _constraint_directional(system, fine, lifted, source)
+    _, _, unprojected_h_dot, unprojected_d_dot = _constraint_directional(
+        system, fine, bundle["unprojected_rates"], source,
+    )
+    h_x, d_x = grid.derivative @ h, grid.derivative @ d
+    forcing_h, forcing_d = h_dot - d_x, d_dot - h_x
+    quadrature_h, quadrature_d = unprojected_h_dot - d_x, unprojected_d_dot - h_x
+    projection_h, projection_d = h_dot - unprojected_h_dot, d_dot - unprojected_d_dot
+
+    def pair_norm(first, second):
+        return float(np.sqrt(grid.dx_q * np.sum(first ** 2 + second ** 2)))
+
+    energy_rate = float(2 * grid.dx_q * np.sum(h * h_dot + d * d_dot))
+    forcing_rate = float(2 * grid.dx_q * np.sum(h * forcing_h + d * forcing_d))
+    report = {
+        "constraint_norm": pair_norm(h, d),
+        "forcing_norm": pair_norm(forcing_h, forcing_d),
+        "quadrature_forcing_norm": pair_norm(quadrature_h, quadrature_d),
+        "projection_forcing_norm": pair_norm(projection_h, projection_d),
+        "constraint_energy_rate": energy_rate,
+        "forcing_energy_rate": forcing_rate,
+        "sbp_identity_error": float(abs(energy_rate - forcing_rate)),
+        "continuum_constraint_certified": False,
+        "time_integral_certified": False,
+    }
+    if include_vectors:
+        report.update(h=h, d=d, h_dot=h_dot, d_dot=d_dot, forcing_h=forcing_h, forcing_d=forcing_d,
+                      quadrature_h=quadrature_h, quadrature_d=quadrature_d,
+                      projection_h=projection_h, projection_d=projection_d)
+    return report
+
+
 def normal_velocities(grid, state, coarse_rate=None, bundle=None):
     """Chart proper velocity uses p=0; lifted velocity uses the actual coarse r dot."""
     if bundle is None or coarse_rate is None:
         coarse_rate, bundle = compose_fine_hamiltonian(grid, state)
     fine_state = bundle["fine_state"]
+    fine_system = bundle["fine_system"]
     radius_derivative = grid.derivative @ fine_state.r
-    denominator = fine_state.r * grid.fine.length_density
+    denominator = fine_state.r * fine_system.length_density
     lifted = prolong_geometry(grid, coarse_rate.r)
     unprojected = bundle["unprojected_r"]
-    chart = (unprojected - grid.fine.shift * radius_derivative) / denominator
-    lifted_normal = (lifted - grid.fine.shift * radius_derivative) / denominator
+    chart = (unprojected - fine_system.shift * radius_derivative) / denominator
+    lifted_normal = (lifted - fine_system.shift * radius_derivative) / denominator
     coordinate = lifted / denominator
-    shift_piece = (grid.fine.shift * radius_derivative) / denominator
+    shift_piece = (fine_system.shift * radius_derivative) / denominator
     return {
         "chart_proper_max": float(np.max(np.abs(chart))),
         "lifted_proper_max": float(np.max(np.abs(lifted_normal))),
@@ -741,7 +913,8 @@ def hamiltonian_fd_errors(grid, state, seed=11, eps=1e-6):
         errors[name] = float(abs(numeric - analytic))
         samples[name] = float(abs(analytic))
     fine_state = bundle["fine_state"]
-    geometric = hamilton_constraint(grid.fine, fine_state)
+    fine_system = bundle["fine_system"]
+    geometric = hamilton_constraint(fine_system, fine_state)
     shift_density = shift_constraint(grid.fine, fine_state)
     parameter_rows = {
         "L": bundle["source"]["force_L"] + grid.dx_q * geometric,
@@ -753,13 +926,13 @@ def hamiltonian_fd_errors(grid, state, seed=11, eps=1e-6):
         lifted = prolong_geometry(grid, direction)
 
         def parameter_energy(sign, name=name, lifted=lifted):
-            length_density = grid.fine.length_density
-            shift = grid.fine.shift
+            length_density = fine_system.length_density
+            shift = fine_system.shift
             if name == "L":
                 length_density = length_density + sign * eps * lifted
             else:
                 shift = shift + sign * eps * lifted
-            cloned = CouplingSystem(**{**grid.fine.__dict__, "length_density": length_density, "shift": shift})
+            cloned = replace(fine_system, length_density=length_density, shift=shift)
             return total_energy(cloned, fine_state)
 
         numeric = (parameter_energy(1) - parameter_energy(-1)) / (2 * eps)
@@ -803,7 +976,8 @@ def work_balance(grid, state, dt=1e-6):
 def source_column_report(grid, state):
     """Column images, dense forces on a small grid, and occupation eigenvalues."""
     fine_state = prolong_state(grid, state)
-    image_gap = dense_hamiltonian_difference(grid.fine, fine_state)
+    fine_system = active_fine_system(grid, fine_state)
+    image_gap = dense_hamiltonian_difference(fine_system, fine_state)
     coarse_values = np.sort(np.real(occupation_eigenvalues(state.phi0, state.phi1)))
     fine_values = np.sort(np.real(occupation_eigenvalues(fine_state.phi0, fine_state.phi1)))
     declared = np.sort(OCCUPATIONS)
@@ -817,14 +991,14 @@ def source_column_report(grid, state):
         "phi_dot_not": "-M i H Phi",
     }
     if grid.nq <= 32:
-        report["dense_forces"] = dense_force_difference(grid.fine, fine_state)
+        report["dense_forces"] = dense_force_difference(fine_system, fine_state)
     return report
 
 
 def physical_link_report(grid, state):
     """Compare link blocks with the old hand-set B. Do not copy B into the state."""
     fine_state = prolong_state(grid, state)
-    report = packet_onsite_report(grid.fine, fine_state)
+    report = packet_onsite_report(active_fine_system(grid, fine_state), fine_state)
     differences = [row["difference_from_old_B"] for row in report["links"]]
     copied = any(row["copied_from_old_B"] for row in report["links"])
     return {
@@ -841,10 +1015,11 @@ def physical_link_report(grid, state):
 def subspace_frequency(grid, state):
     """Retained-band frequency. Quadrature Nyquist is not this number."""
     fine_state = prolong_state(grid, state)
+    fine_system = active_fine_system(grid, fine_state)
     wavenumber = float(np.max(np.abs(grid.modes_f)) * 2 * np.pi / grid.length)
-    conformal = np.max(grid.fine.length_density / fine_state.Q)
-    shift = np.max(np.abs(grid.fine.shift))
-    mass = np.max(np.abs(grid.fine.kappa * grid.fine.length_density))
+    conformal = np.max(fine_system.length_density / fine_state.Q)
+    shift = np.max(np.abs(fine_system.shift))
+    mass = np.max(np.abs(fine_system.kappa * fine_system.length_density))
     omega = float((conformal + shift) * wavenumber + mass)
     quadrature_wavenumber = np.pi * grid.nq / grid.length
     return omega, float(quadrature_wavenumber)
@@ -936,6 +1111,7 @@ def observation(grid, state):
     diagnostics = constraint_diagnostics(grid, state, bundle["source"], bundle["fine_state"])
     velocities = normal_velocities(grid, state, rate, bundle)
     fine_state = bundle["fine_state"]
+    fine_system = bundle["fine_system"]
     gram = fine_state.phi0.conj().T @ fine_state.phi0 + fine_state.phi1.conj().T @ fine_state.phi1
     number = float(np.sum(
         grid.fine.occupations * np.sum(np.abs(fine_state.phi0) ** 2 + np.abs(fine_state.phi1) ** 2, axis=0)
@@ -943,8 +1119,8 @@ def observation(grid, state):
     return {
         "time": None,
         "energy": energy(grid, state),
-        "field_energy": field_energy(grid.fine, fine_state),
-        "gravity_energy": gravity_energy(grid.fine, fine_state),
+        "field_energy": field_energy(fine_system, fine_state),
+        "gravity_energy": gravity_energy(fine_system, fine_state),
         "full_hamilton_max": diagnostics["full_hamilton_max"],
         "full_momentum_max": diagnostics["full_momentum_max"],
         "projected_hamilton_max": diagnostics["projected_hamilton_max"],

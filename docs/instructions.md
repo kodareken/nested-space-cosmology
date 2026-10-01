@@ -116,6 +116,12 @@ $$
 full-source Newton, set the initial radius from that source
 (\(\rho = F_L/\Delta x_Q\)).
 
+Those historical runs use the default `gauge="prescribed"`. The optional
+[conformal realization](../lab/docs/nsc-spherical-conformal-gauge.md) varies
+the same constraints before imposing $L=Q$, $\beta=0$, then retains the
+gauge chain rule and work $F_Q\dot Q+F_L\dot L$. Its saved four-run episode
+and normal-clock protocol have their own [status](current-result.md#same-action-conformal-episode-1-october-2026).
+
 The inheritance postulate used by this work is
 
 $$
@@ -126,65 +132,37 @@ The active action is \(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus
 the same-spectrum local induced term, counted once. The vacuum-matched CTP
 branch remains a separate historical choice.
 
-The independently replayed \(n_f=512\), \(T=0.005\) window in the v5 record
-is a geometric diagnostic. Its stored maxima are a full Hamilton residual of
-about \(9.98\times 10^{-6}\), a full momentum residual of about
-\(1.38\times 10^{-6}\), and a maximum absolute proper radial velocity of
-about \(0.0079505\). That velocity figure is a max-abs value. Signed motion
-is not read from it. The saved \(T=0.05\) episode reaches the requested
-time. All 62 physical refinement rows meet one percent. Proper velocity
-on the fine primary run ends near \([-0.061956,0.088159]\), and the field
-and gravitational energies exchange about \(0.4123\). The fine full
-Hamilton residual ends near \(2.83\times 10^{-5}\) and the fine momentum
-residual near \(4.30\times 10^{-6}\); the coarse residual is higher.
-Continuum constraint control and renewal are not proved. The saved
-consumers of that episode do not close either question. The
-[regeneration controls](../lab/docs/nsc-regeneration-controls.md) continue
-the saved fine state to \(T=0.10\) at \(n_f=512\) and \(n_f=256\). Window 0
-stays the leader, its shell content rises by about \(0.117\), packet and
-reservoir fluxes end opposite near \(5.534\), and the field and
-gravitational energies exchange about \(0.396\). The record calls that
-maintained localization of one drift. Renewal is false. The comparison
-floors in that note stay there. They are not programme requirements. The
-[conditional local response](../lab/docs/nsc-coupled-local-response.md)
-reads all eleven stored frames. The fixed region-0 occupation changes by
-about \(0.33059\). The streamed reduction stays within about
-\(7.353\times 10^{-4}\) of the conditional full series. That conditional
-series differs from the saved autonomous endpoint by about
-\(3.412\times 10^{-7}\). Omitting memory separates the occupation from
-the conditional full series by about \(0.367\), and omitting the exterior
-drive separates it by about \(0.02876\). Saved autonomous spinors
-exist at the endpoints only. No \(\dot Q\) series and no stress are
-derived. The
-[spherical null expansion](../lab/docs/nsc-spherical-null-expansion.md)
-is kinematic postprocessing. The initial areal extrema are marginal
-inside the initial normal-velocity noise. Later frames have one
-both-negative arc and one both-positive arc, and refinement agrees on
-the sampled signs. That is a local trapping character, not a global
-horizon or a child region. The controls successor keeps the v1 bytes and
-reads the stored endpoint: \(dt\,\omega\) is about \(1.4994\), above the
-owned cap \(1.4\) and below \(2\sqrt{2}\), with a positive chart and a
-Gram gap about \(1.307\times 10^{-9}\). A later stable step is at most
-\(4.6685\times 10^{-4}\). A missed reversal proxy, a missed leader-share proxy, and the cap label
-leave the maintained-drift reading in place. The local-response review checked the stored
-payloads, the projected endpoint, and a small causal ODE. The saved
-\(1024\)-dimensional series remains that record. The null-expansion review
-binds the immutable v1 files and the current owners; the historical JSON
-and NPZ stay unchanged. The initial geometry-graded window is measured.
-Leakage about \(0.966\) means the six columns are not closed dynamics.
-Direct Schur recurrence uses \(B_{01}\) with the factor \(1/\Omega\). The
-congruence \(\Omega^{-1/2}B_{01}\) is a different link. Evolved \(Q\)
-breaks the kinetic grading while the action functional stays the same.
-The next physical question is recorded in
-[current result](current-result.md#present-spherical-loop).
+The current saved continuation is
+[the regeneration episode](../lab/docs/nsc-regeneration-episode.md),
+$T=0.05$ to $T=0.085$, starting with the predecessor's exact Cauchy
+arrays. Its four space and time refinements meet one percent on the
+claimed physical movements. It stops when the bridge's both-positive arc
+enters the packet. Localization and throughflow are maintained; renewal
+is false. Frame momenta, $\dot Q$, and realized rate increments now
+support the [saved assessment](../lab/docs/nsc-spherical-episode-assessment.md).
+The [local-response successor](../lab/docs/nsc-coupled-local-response.md)
+uses the same continuation and original observer, carrying actual initial
+cross correlations. Memory, exterior drive, and cross omission each move
+the local occupation beyond the reduction error.
 
-The weak helper records a conditional coercivity constant and a
-Fourier-product conditioning comparison. It does not certify a total
-initial-error bound.
-The historical initial tolerance \(10^{-8}\) is not an
-automatic veto of this diagnostic. A weak residual alone is not sufficient;
-the full residuals stay reported. The toy \(H\) and \(B\) fractions are an
-optional witness. Geometry-derived links are the target.
+The [weak helper](../lab/docs/nsc-spherical-cauchy-weak.md) keeps its sealed
+partial diagnostic and a separate initial-chart certificate. Under the
+sealed positivity hypotheses, the owning note proves a unique positive
+critical radius and a nearby exact initial state with the same source.
+That correction is not installed in the saved trajectory. An evolved error
+estimate at the scale of the claimed observables remains open;
+`evolution_error_bound` is null. Constraint residuals, physical source
+budgets, and refinement indicators remain reported in their own units.
+A Hamilton residual is not compared directly with a radius distance.
+
+The earlier $T=0.10$ controls, v1 local response, null-expansion review,
+and initial geometry-graded compression retain their recorded domains.
+The immutable local-boundary v2 review authenticates its owner bytes at
+commit `5f10ecd` for historical replay. New requests keep strict current
+source bindings. Numbers, verdicts, and the next physical gap stay in
+[current result](current-result.md#present-spherical-loop) and the owning
+notes. A cosmological fit or a proof of infinite physical time is outside
+this finite chain.
 
 This loop is the present finite realization because its geometry and its
 state forces already come from the same action. An extra invented rule for

@@ -19,6 +19,15 @@ remains a separate historical choice.
 
 ## Present spherical loop
 
+The saved finite chain now runs from the initial regional difference through
+two connected transfer episodes to a changed local measurement. Its
+[continuation](#regeneration-episode-1-october-2026) maintains localization
+with throughflow until $T=0.085$; renewal is false. The
+[same-trajectory local response](#same-trajectory-local-response-successor-1-october-2026)
+resolves memory, exterior drive, and actual initial cross correlations.
+The initial-radius certificate and nearby-state proof are separate from
+the still-open evolved error estimate at the scale of those observables.
+
 The code owner is
 [nsc_spherical_galerkin_coupling.py](../lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py).
 The v5 replay,
@@ -41,6 +50,46 @@ $Q$, $r$, $\chi$, the momenta and the spinor columns evolve. $L$ and $\beta$
 stay gauge controls. `solve_initial_radius`, and the v5 replay's full-source
 Newton (`full_source_rho`), set the initial radius from that source,
 $\rho = F_L/\Delta x_Q$.
+
+The descriptions above refer to the historical default `prescribed`
+gauge. The same owner also exposes the explicit conformal realization
+below, whose dynamic lapse requires its additional chain-rule force and
+$F_L\dot L$ work term.
+
+<a id="same-action-conformal-episode-1-october-2026"></a>
+
+### Same-action conformal episode, 1 October 2026
+
+The [proof](../lab/docs/nsc-spherical-conformal-gauge.md) varies the same
+action before choosing $L=Q$, $\beta=0$. The
+[record](../lab/results/development/nsc-spherical-conformal-episode-v1.json)
+and [payload](../lab/results/development/nsc-spherical-conformal-episode-v1.npz)
+store four runs from the unchanged v5 initial Cauchy arrays, with
+$n_f\in\{256,512\}$ and $dt\in\{0.001,0.0005\}$. All reach $T=0.05$.
+CPU is $120.662$ s and payload size about $4.07$ MB. The source,
+preparation, initial-radius model, and eight initial fields are unchanged.
+
+The finite constraint pair $h_c=QC$, $D$ satisfies
+$R'\le\|f\|_2$ for its actual quadrature and projection forcing. On the
+fine confirmation run, $R$ starts near $2.09546\times10^{-6}$ and ends
+near $2.09543\times10^{-6}$. Its sampled forcing integral is
+$7.30987\times10^{-5}$; no sampled budget violation occurs. The integral
+is checked by timestep refinement and Simpson/trapezoid movement, with
+`forcing_time_integral_certified=false`. It is a finite constraint budget,
+not an observable-error certificate.
+
+Field and gravitational energy exchange about $1.41447\times10^{-7}$,
+with total-energy change about $-2.20\times10^{-12}$. Dynamic work includes
+$F_L\dot L$, with $\dot L=\dot Q$. The normal clock is explicitly the
+fixed worldline $x=1$, $d\tau=rQ\,dt$; it advances by about $0.0603183$.
+The original fixed observer's occupation changes by about $-0.0842690$.
+At equal proper time the coupled-minus-frozen occupation is about
+$-2.16786\times10^{-6}$. Its largest timestep movement is about $0.379$
+percent of that small effect. Field exchange moves by about $0.0477$
+percent under timestep halving, and the largest spatial movement of the
+compared radius/velocity changes is about $0.0287$ percent. The chart and
+Gram stay admissible. Renewal remains false; the regional ledger and
+constraint budget keep their own measurement domains.
 
 ### Recorded $n_f=512$, $T=0.005$ diagnostic
 
@@ -108,17 +157,55 @@ Owned tests are
 Independent tests are
 [test_nsc_spherical_feedback_episode_independent.py](../lab/tests/test_nsc_spherical_feedback_episode_independent.py).
 
-### Weak initial residual
+<a id="regeneration-episode-1-october-2026"></a>
+
+### Regeneration episode, 1 October 2026
+
+The [note](../lab/docs/nsc-regeneration-episode.md),
+[record](../lab/results/development/nsc-regeneration-episode-v1.json), and
+[payload](../lab/results/development/nsc-regeneration-episode-v1.npz) store
+four continuations, $n_f\in\{256,512\}$ and
+$dt_{\max}\in\{0.0005,0.00025\}$. Each begins with the predecessor's
+`dt=0.0005` final Cauchy arrays, unchanged, at $T=0.05$. Each stops at
+$T=0.085$ on `BRIDGE_ARC_ENTERED_PACKET`: the both-positive arc's left
+edge reaches $x=3.96875$ inside the packet $[0,4)$. The arc still spans
+the bridge. All four refinement pairs resolve the claimed physical
+changes within one percent.
+
+Window 0 stays the leader. Its share rises from about $0.60870$ to
+$0.61653$ and its shell content by $0.08117$. The packet proper flux ends
+near $-4.98756$, balanced by the reservoir partition. The normal-window
+balance also includes pressure and lapse work; its integrated residual is
+under about $10^{-5}$ of the exchange. Field energy changes by about
+$-0.28608$, with a compensating gravitational change. Proper time advances
+by about $0.10673$ and the leader clock by $0.06438$. The chart stays
+positive, the column Gram gap stays near $10^{-9}$, and the largest
+accepted $dt\,\omega$ is about $1.201$, below the declared $1.4$ cap.
+
+`maintained_structure` is true and `renewed_structure` is false. The
+joined trajectory is one drift with no reset. It carries frame $p_\chi$,
+$\dot Q$, and a realized one-step rate increment. The
+[assessment](../lab/docs/nsc-spherical-episode-assessment.md) reads those
+saved arrays for the metric/proxy comparison and proper-arc localization;
+the increments and refinement movements remain numerical indicators.
+The [independent audit](../lab/docs/nsc-regeneration-realization-audit.md)
+separates the handoff, covariance, ledger, geometry controls, and response.
+No propagated observable-error bound is supplied. Full, projected, and
+held-out constraints stay in the record; at $n_f=512$ the final full
+Hamilton maximum is about $1.396\times10^{-4}$, and at $n_f=256$ about
+$9.241\times10^{-3}$.
+
+### Weak initial residual and initial-chart certificate
 
 The [weak note](../lab/docs/nsc-spherical-cauchy-weak.md),
 [helper](../lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py)
 and [record](../lab/results/development/nsc-spherical-cauchy-weak-v1.json)
-assess the saved seed. Status `PARTIAL_TERMS_NO_TOTAL_BOUND`. No state
+assess the saved seed. The sealed v1 status is `PARTIAL_TERMS_NO_TOTAL_BOUND`. No state
 is stepped. Declared $G>0$ with `rho_independent` exactly true exposes
 $\mu=\min(4,Q^2)=Q^2=0.0631642220827373$ without $y_*$. An omitted
-independence flag does not establish the hypothesis. The total bound
-stays open: the full residual dual, a continuum positivity enclosure of
-$G$, and a rounding enclosure are absent.
+independence flag does not establish the hypothesis. The sealed diagnostic
+did not provide the full residual dual, a continuum positivity enclosure
+of $G$, or a rounding enclosure.
 
 On $n_f=512$ the dense owner maximum moves from
 $9.981455056262689\times 10^{-6}$ at $n_q=2048$ to
@@ -136,6 +223,18 @@ report is not a reexecution of the original producer. `total_certified`
 stays false. The only write is an explicit `--output` path, and that path
 cannot be the sealed JSON.
 
+The separate [initial certificate](../lab/results/development/nsc-spherical-cauchy-error-v1.json)
+has status `FINITE_CONDITIONAL_INITIAL_LAPSE_BOUND`. On the saved fine
+initial chart it encloses $G\ge0.0537330$ and a pointwise radius distance
+of at most $4.06085\times10^{-6}$. The owning note proves existence and
+uniqueness of the smooth positive critical radius under those hypotheses,
+then a nearby exact initial state using the same-action shift profile.
+The saved state retains $p_r=0$; that correction is not installed. The
+initial radius comparison is about $0.2196$ percent of the smaller saved
+radius effect. `evolution_error_bound` remains null. The helper's
+constraint-transport and source-normalized residual budgets are separate
+from a radius or occupation error estimate.
+
 ### Streamed retained-region reduction
 
 [nsc_evolving_reduction.py](../lab/src/recursive_horizons/nsc_evolving_reduction.py)
@@ -152,13 +251,14 @@ Geometry-derived links are the target. Embedding v1 and the seam-regular v2
 compression are an optional bridge. Neither that witness nor the historical
 $10^{-8}$ tolerance sets the objective.
 
-Four saved readings of the episode are recorded below. They leave renewal
-and continuum constraint control open. The completed checks have named
+The earlier controls and consumers are recorded below in their original
+domains. Renewal and continuum constraint control remain open. The completed checks have named
 domains. The controls successor reads the stored $T=0.10$ endpoint and
 leaves the v1 evolution unchanged. The local-boundary review checks stored
 payloads, the projected endpoint, and a small causal ODE; the saved
 $1024$-dimensional series remains that record. The same review binds the
-immutable null-expansion and local-response files to the current owners.
+immutable null-expansion and local-response files to their audited owners
+at commit `5f10ecd`, replayed explicitly as historical sources.
 The initial geometry-graded window is a completed measurement of the
 initial packets. The records are
 [regeneration controls](#regeneration-controls-1-october-2026),
@@ -175,21 +275,14 @@ radius as a function of energy is unnecessary. The recorded outcome
 guides the next model step. A candidate may be chosen creatively. The
 computation and its error statement stay checkable.
 
-Next physical question. A read-only chart identity, with no new saved
-record, is
-$\dot Q=L p_\chi/(2F_\chi)+\partial_x(\beta Q)$.
-$F_Q$ enters $\dot p_Q$, and from there the second time derivatives of
-$\chi$ and $R_h$ and the fourth time derivative of $Q$. At the stored
-endpoint that $\dot Q$ is recovered to at most $8\times 10^{-12}$ from the
-stored momenta, without re-evolving the spinors. The frames spaced by
-$0.005$ do not carry $p_\chi$, so the exact nodal rates are not recovered
-there. $R_h=\chi+2$ is the on-shell relation from the action. Substituting
-the Euler–Lagrange $\dot p_\chi$ into that relation is not an independent
-metric check. The curvature proxy stays distinct from the metric curvature,
-which is still uncomputed at $T=0.10$. The concrete next episode records
-$p_\chi$, $\dot Q$, and the realized increment of the rate on the actual
-regions and proper clocks, so that increment can be compared with the
-metric curvature.
+The chart identity
+$\dot Q=L p_\chi/(2F_\chi)+\partial_x(\beta Q)$ is now carried by the
+continuation's saved frame rates. The metric assessment consumes its
+realized increments; it does not substitute $\chi+2$ for an independent
+$R_h$. The remaining uncertainty is an evolved error estimate at the scale
+of the claimed geometry, transfer, and local-response changes. Constraint
+smearings and refinement agreement provide diagnostics with named norms;
+they do not by themselves bound trajectory or observable error.
 
 The source-fixed incoming gate remains OPEN and its campaign remains paused.
 It is not a prerequisite for this loop. This page does not change either
@@ -477,6 +570,48 @@ $4.668495940938623\times 10^{-4}$. A missed reversal proxy, a missed
 leader-share proxy, and the cap label leave the maintained-drift reading
 in place.
 
+<a id="same-trajectory-local-response-successor-1-october-2026"></a>
+
+## Same-trajectory local-response successor, 1 October 2026
+
+The [v2 record](../lab/results/development/nsc-coupled-local-response-v2.json)
+and [series](../lab/results/development/nsc-coupled-local-response-v2.npz)
+consume the fine confirmation continuation from $T=0.05$ to $T=0.085$.
+Status `MEASURED_SUCCESSOR_RESPONSE`. The fixed observer remains the two
+original $T=0$ mode columns. At the handoff its retained eigenvalues are
+about $0.41940$ and $0.64745$, and the actual initial cross block has
+Frobenius norm $0.44224$. The initial correlations are carried into the
+reduction.
+
+The saved autonomous occupation changes by $0.26748893$. Conditional
+full evolution on the stored linear $Q(t)$ differs from the autonomous
+frames by at most $1.16662\times10^{-7}$ in occupation. The streamed
+reduction differs from that conditional full series by $0.0002570304$,
+about $0.0961$ percent of the occupation change. Output, exterior-step,
+Hermite-schedule, and sibling-geometry movements stay below one percent
+on their measured windows.
+
+Omitting memory moves the occupation by $0.06952775$, omitting the
+exterior initial drive by $0.15526034$, and omitting only the actual
+initial cross correlations by $0.20434176$. Each exceeds the reduction
+error. The saved full-window retained and cross-omitted covariance arrays
+reproduce the last value directly. The local probability, proper clocks,
+and normal-energy ledger keep their separate measures. No effective-action
+kernel variation or stress is computed. The
+[owning note](../lab/docs/nsc-coupled-local-response.md) gives the source
+bindings and the independently checked causal reduction.
+
+The [independent supplement](../lab/results/development/nsc-coupled-local-response-audit-v1.json)
+propagates the same retained/exterior split with its own temporal and
+covariance assembly. Cross omission moves occupation by $0.20437297$;
+its streamed discrepancy is $0.0001195768$. Drive omission moves it by
+$0.15497464$, with a separate streamed discrepancy of $0.0002856974$.
+The memoryless recurrence reproduces the saved memory-off occupation to
+roundoff. These errors are below one percent of their own effects.
+The note also derives a conditional Duhamel relation from a future
+Hamiltonian-path defect to local occupation error. It does not supply the
+missing geometric-path bound.
+
 ## Conditional local response, 1 October 2026
 
 The [note](../lab/docs/nsc-coupled-local-response.md),
@@ -565,15 +700,17 @@ stays the sealed correction record. Its `reference_unchanged` hash is
 recorded null-expansion module hash is
 `1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`.
 [nsc-local-boundary-review-v2.json](../lab/results/development/nsc-local-boundary-review-v2.json)
-binds those immutable v1 payloads and the current audited owners. The
-current independent test is
+binds those immutable v1 payloads and the owners audited at `5f10ecd`. The
+independent test at that audit is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
 The two recovered files are pinned in `lab/.source-history` on carrier
 commit `594a11caeee760d172c4a4f73a7615b05cf30282`. That carrier is a
 content object, not a historical laboratory commit. The original eighteen
-objects and four evidence pins stay in place. The v1-epoch note, the
-v1-epoch null-expansion test, and the other consumer hashes from that
-epoch remain unpinned. The in-memory measurement is the sample replay.
+objects and four evidence pins stay in place. The v2 owner sources, including the notes and the null-expansion test,
+are authenticated at full commit
+`5f10ecd365843d1616e50eb16a20d7acd8377e2c` for historical replay. The
+current binding path remains strict for new requests and never substitutes
+history for a changed current source. The in-memory measurement is the sample replay.
 The null-expansion writer still replaces the v1 JSON, so it is not the
 replay. The review domain remains the stored payloads, the projected
 endpoint, a small causal ODE, the boost-return mutation, and the

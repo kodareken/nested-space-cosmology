@@ -8,9 +8,15 @@ constrained calculation into a settled theory.
 |---|---|
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
+| Same-action conformal gauge and episode | [Proof and scope](../lab/docs/nsc-spherical-conformal-gauge.md), [record](../lab/results/development/nsc-spherical-conformal-episode-v1.json) |
+| Maintained continuation to $T=0.085$ | [Note](../lab/docs/nsc-regeneration-episode.md), [record](../lab/results/development/nsc-regeneration-episode-v1.json) |
+| Saved episode assessment and independent audit | [Assessment](../lab/docs/nsc-spherical-episode-assessment.md), [audit](../lab/docs/nsc-regeneration-realization-audit.md) |
 | Regeneration controls on the saved episode | [Note](../lab/docs/nsc-regeneration-controls.md), [record](../lab/results/development/nsc-regeneration-controls-v1.json) |
 | Regeneration-controls successor | [Record](../lab/results/development/nsc-regeneration-controls-v2.json) |
 | Conditional local response | [Note](../lab/docs/nsc-coupled-local-response.md), [record](../lab/results/development/nsc-coupled-local-response-v1.json) |
+| Same-trajectory local-response successor | [Note](../lab/docs/nsc-coupled-local-response.md), [record](../lab/results/development/nsc-coupled-local-response-v2.json) |
+| Independent local-response controls | [Note](../lab/docs/nsc-coupled-local-response.md#independent-control-replay), [record](../lab/results/development/nsc-coupled-local-response-audit-v1.json) |
+| Initial lapse bound and nearby initial state | [Note](../lab/docs/nsc-spherical-cauchy-weak.md), [certificate](../lab/results/development/nsc-spherical-cauchy-error-v1.json) |
 | Spherical null expansion | [Note](../lab/docs/nsc-spherical-null-expansion.md), [record](../lab/results/development/nsc-spherical-null-expansion-v1.json) |
 | Local-boundary review | [v1 record](../lab/results/development/nsc-local-boundary-review-v1.json), [v2 binding](../lab/results/development/nsc-local-boundary-review-v2.json) |
 | Initial geometry-graded window | [Note](../lab/docs/nsc-geometry-graded-window.md), [record](../lab/results/development/nsc-geometry-graded-window-v1.json) |
@@ -55,6 +61,10 @@ series, and the saved consumers
 [nsc-spherical-null-expansion.md](../lab/docs/nsc-spherical-null-expansion.md),
 and
 [nsc-geometry-graded-window.md](../lab/docs/nsc-geometry-graded-window.md).
+The maintained successor and its assessment live in
+[nsc-regeneration-episode.md](../lab/docs/nsc-regeneration-episode.md),
+[nsc-spherical-episode-assessment.md](../lab/docs/nsc-spherical-episode-assessment.md),
+and [nsc-regeneration-realization-audit.md](../lab/docs/nsc-regeneration-realization-audit.md).
 Those notes have no `docs/` copy. The controls successor and the
 local-boundary review are JSON records under `lab/results/development/`.
 `lab/archive/` is historical material inside its recorded domain.

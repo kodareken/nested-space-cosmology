@@ -19,6 +19,7 @@ import numpy as np
 import pytest
 
 from recursive_horizons.nsc_spherical_coupling import CALIBRATION, PERIOD, periodic_derivative
+from recursive_horizons.provenance import resolve_pinned_source_bytes
 from recursive_horizons.nsc_spherical_null_expansion import (
     CPU_BUDGET_S,
     EPISODE_JSON,
@@ -38,6 +39,7 @@ _MODULE = Path(__file__).resolve().parents[1] / "src" / "recursive_horizons" / "
 _REVIEW = Path(__file__).resolve().parents[1] / "results" / "development" / "nsc-local-boundary-review-v1.json"
 _REVIEW_V2 = Path(__file__).resolve().parents[1] / "results" / "development" / "nsc-local-boundary-review-v2.json"
 _SOURCE_HISTORY = Path(__file__).resolve().parents[1] / ".source-history"
+_V2_SOURCE_COMMIT = "5f10ecd365843d1616e50eb16a20d7acd8377e2c"
 _V1_REVIEW_SHA256 = "0d43accbc5d46407c094890a9722c1e78842224313580044df0d4b641dff8d9b"
 _OLD_MODULE_SHA256 = "1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5"
 _SEALED_INDEPENDENT_SHA256 = "68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9"
@@ -85,7 +87,7 @@ _RESPONSE_DOC = Path(__file__).resolve().parents[1] / "docs" / "nsc-coupled-loca
 
 @pytest.fixture(scope="module")
 def measurement():
-    return build_record()
+    return build_record(source_ref=_V2_SOURCE_COMMIT)
 
 
 @pytest.fixture(scope="module")
@@ -339,7 +341,9 @@ def test_record_distinguishes_marginal_indicator_from_global_horizon(measurement
     frozen_module = saved_record["source_bindings"]["module_sha256"]
     review = json.loads(_REVIEW.read_text())
     assert review["immutable_v1"]["null_expansion_recorded_module_sha256"] == frozen_module
-    assert hashlib.sha256(_MODULE.read_bytes()).hexdigest() == review["current_owner_sha256"]["nsc_spherical_null_expansion.py"]
+    assert _source_matches(
+        _MODULE, review["current_owner_sha256"]["nsc_spherical_null_expansion.py"],
+        _V2_SOURCE_COMMIT)
     assert hashlib.sha256(_MODULE.read_bytes()).hexdigest() != frozen_module
 
 
@@ -411,8 +415,21 @@ def _show_pinned_source(commit, path):
     )
 
 
-def _successor_binding_errors(review):
-    """Current v2 dependencies and recovered historical pins. Empty means bound."""
+def _source_matches(path, expected, historical_commit):
+    if historical_commit is None:
+        return path.is_file() and _file_sha256(path) == expected
+    root = _SOURCE_HISTORY.parent.parent
+    try:
+        resolve_pinned_source_bytes(
+            root, path.resolve().relative_to(root).as_posix(), expected,
+            commit=historical_commit)
+    except (ValueError, RuntimeError):
+        return False
+    return True
+
+
+def _successor_binding_errors(review, *, historical_commit=None):
+    """Strict current binding, or explicit replay of a sealed review's sources."""
     errors = []
     immutable = review.get("immutable_v1")
     if not isinstance(immutable, dict):
@@ -429,11 +446,12 @@ def _successor_binding_errors(review):
         errors.append("current_owner_sha256")
         owners = {}
     for name, path in _owner_paths().items():
-        if name not in owners or not path.is_file() or _file_sha256(path) != owners[name]:
+        if name not in owners or not _source_matches(path, owners[name], historical_commit):
             errors.append(name)
     independent = _SOURCE_HISTORY.parent / "tests" / "test_nsc_local_boundary_independent.py"
     current = review.get("reference_current")
-    if not isinstance(current, dict) or current.get("independent_test_sha256") != _file_sha256(independent):
+    if not isinstance(current, dict) or not _source_matches(
+            independent, current.get("independent_test_sha256"), historical_commit):
         errors.append("reference_current.independent_test_sha256")
     sealed = review.get("reference_at_v1_seal")
     if not isinstance(sealed, dict) or sealed.get("independent_test_sha256") != _SEALED_INDEPENDENT_SHA256:
@@ -501,7 +519,7 @@ def test_successor_review_binds_immutable_v1(measurement, saved_record):
     independent_text = independent.read_text()
     for name in _LATER_INDEPENDENT_TESTS:
         assert f"def {name}(" in independent_text
-    assert _successor_binding_errors(v2) == []
+    assert _successor_binding_errors(v2, historical_commit=_V2_SOURCE_COMMIT) == []
     sealed_pin = next(
         pin for pin in v2["historical_sources"]["pins"]
         if pin["path"] == "tests/test_nsc_local_boundary_independent.py"
@@ -549,21 +567,46 @@ def test_successor_review_binds_immutable_v1(measurement, saved_record):
         assert match["sha256"] == pin["sha256"]
 
 
-def test_successor_review_rejects_changed_or_missing_current_dependency():
+def test_sealed_successor_review_rejects_changed_or_missing_dependency():
     review = json.loads(_REVIEW_V2.read_text())
-    assert _successor_binding_errors(review) == []
+    assert _successor_binding_errors(review, historical_commit=_V2_SOURCE_COMMIT) == []
     changed = json.loads(_REVIEW_V2.read_text())
     changed["current_owner_sha256"]["nsc_coupled_local_response.py"] = "0" * 64
-    assert "nsc_coupled_local_response.py" in _successor_binding_errors(changed)
+    assert "nsc_coupled_local_response.py" in _successor_binding_errors(changed, historical_commit=_V2_SOURCE_COMMIT)
     missing = json.loads(_REVIEW_V2.read_text())
     del missing["current_owner_sha256"]["test_nsc_spherical_null_expansion.py"]
-    assert "test_nsc_spherical_null_expansion.py" in _successor_binding_errors(missing)
+    assert "test_nsc_spherical_null_expansion.py" in _successor_binding_errors(missing, historical_commit=_V2_SOURCE_COMMIT)
     dropped_payload = json.loads(_REVIEW_V2.read_text())
     del dropped_payload["immutable_v1"]["episode_npz_sha256"]
-    assert "episode_npz_sha256" in _successor_binding_errors(dropped_payload)
+    assert "episode_npz_sha256" in _successor_binding_errors(dropped_payload, historical_commit=_V2_SOURCE_COMMIT)
     bad_pin = json.loads(_REVIEW_V2.read_text())
     bad_pin["historical_sources"]["pins"][0]["sha256"] = "1" * 64
-    assert any(item.startswith("historical_pin") for item in _successor_binding_errors(bad_pin))
+    assert any(item.startswith("historical_pin") for item in _successor_binding_errors(bad_pin, historical_commit=_V2_SOURCE_COMMIT))
     missing_object = json.loads(_REVIEW_V2.read_text())
     missing_object["historical_sources"]["pins"][0]["commit"] = "0" * 40
-    assert any(item.startswith("historical_replay") for item in _successor_binding_errors(missing_object))
+    assert any(item.startswith("historical_replay") for item in _successor_binding_errors(missing_object, historical_commit=_V2_SOURCE_COMMIT))
+
+
+def test_current_dependency_binding_does_not_fall_back_to_sealed_sources():
+    review = json.loads(_REVIEW_V2.read_text())
+    assert "test_nsc_spherical_null_expansion.py" in _successor_binding_errors(review)
+    review["current_owner_sha256"] = {
+        name: _file_sha256(path) for name, path in _owner_paths().items()
+    }
+    independent = _SOURCE_HISTORY.parent / "tests/test_nsc_local_boundary_independent.py"
+    review["reference_current"]["independent_test_sha256"] = _file_sha256(independent)
+    assert _successor_binding_errors(review) == []
+    review["current_owner_sha256"]["nsc_coupled_local_response.py"] = "0" * 64
+    assert "nsc_coupled_local_response.py" in _successor_binding_errors(review)
+
+
+def test_saved_sample_formula_binding_names_its_historical_domain(measurement):
+    assert measurement["source_bindings"]["source_ref"] == _V2_SOURCE_COMMIT
+    assert measurement["source_bindings"]["hash_agreement"]["galerkin_matches_episode_hashes_after"] is True
+    current = build_record()
+    assert current["status"] == "SOURCE_BINDING_MISMATCH"
+    assert current["source_bindings"]["source_ref"] is None
+    assert current["source_bindings"]["hash_agreement"]["galerkin_matches_episode_hashes_after"] is False
+    missing = build_record(source_ref="0" * 40)
+    assert missing["status"] == "SOURCE_BINDING_MISMATCH"
+    assert missing["source_bindings"]["historical_source_hashes"] == {}

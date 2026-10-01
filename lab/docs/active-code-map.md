@@ -1,9 +1,9 @@
 # Active code and evidence map
 
 Routing index. This map names laboratory owners. It is not an order to run
-them. The question is sustained balanced turnover at stable overall regional
-size and content, reusing inherited-law, regional-state, transfer, and
-conservation results. Time as registration of spatial change, and a
+them. The finite question connects regional differences, transfer,
+geometric response, maintained or renewed structure, and local response,
+reusing inherited-law and conservation results. Time as registration of spatial change, and a
 matter–antimatter reading, stay active questions. Full statement:
 [scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
 The claim status is the [gap map](claim-ledger.md#scientific-gap-map).
@@ -21,10 +21,11 @@ production-driver requirement. The episode driver
 `scripts/derive_nsc_spherical_feedback_episode.py` reuses that preparation.
 The saved $T=0.05$ record is
 `results/development/nsc-spherical-feedback-episode-v1.json`. Renewal is
-false, and a constraint-consistent solution is not validated. The saved
-consumers, the controls successor, the local-boundary review, and the
-initial geometry-graded window are indexed below. They do not close
-renewal. Each completed check keeps the domain named in its section.
+false. Its exact final arrays now seed the maintained continuation through
+$T=0.085$, whose original observer is read by local-response v2. The
+initial-chart certificate, saved episode assessment, and historical
+consumers are indexed below. An evolved observable-error estimate remains
+open. Each completed check keeps the domain named in its section.
 
 Each rate call, including each stage inside `rk4_step`, recomputes the
 column source on the prolonged state.
@@ -43,8 +44,8 @@ The speed entries are max-abs, not signed velocities. Verdict
 `DIAGNOSTIC_MEASURED`. Renewal is false. `time_extension_T_0_05` is false
 inside the v5 record. Full and projected strong residuals remain. The
 initial $10^{-8}$ flag is false and is not an automatic veto. The weak
-helper below records the conditional constant and leaves the total bound
-open. The original $H$ and $B$ fractions are an
+helper below preserves that sealed diagnostic and adds a separate
+initial-chart certificate and nearby-state proof. The original $H$ and $B$ fractions are an
 optional witness, not a mandatory embedding. $\Gamma_{\mathrm{one}}$ is the
 finite canonical Gaussian CTP plus the declared same-spectrum induced terms,
 counted once. The historical vacuum-matched four-order-subtracted KS branch
@@ -72,6 +73,63 @@ reported. Driver sha256
 `efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a`.
 The evolution code owner remains `nsc_spherical_galerkin_coupling.py`.
 v5 remains the seed replay.
+
+## Maintained continuation and saved assessment, 2026-10-01
+
+Owners, relative to `lab/`:
+
+- `scripts/derive_nsc_regeneration_episode.py`
+- `tests/test_nsc_regeneration_episode.py`
+- `results/development/nsc-regeneration-episode-v1.json`
+- `results/development/nsc-regeneration-episode-v1.npz`
+- `src/recursive_horizons/nsc_spherical_episode_assessment.py`
+- `tests/test_nsc_spherical_episode_assessment.py`
+- `tests/test_nsc_regeneration_realization_independent.py`
+- [Episode](nsc-regeneration-episode.md), [assessment](nsc-spherical-episode-assessment.md), [independent audit](nsc-regeneration-realization-audit.md)
+
+The saved four-case continuation has status `FINAL`. It starts with the
+predecessor `dt=0.0005` final arrays at $T=0.05$ and stops at $T=0.085$
+when the bridge's both-positive arc enters the packet. All four refinement
+pairs meet one percent on the physical movements. The leader remains
+window 0, shell content rises by about $0.08117$, and field/gravitational
+exchange is about $0.28608$. `maintained_structure` is true and renewal
+is false. `--check` reads the payload and bindings without another step.
+
+The assessment's `assess_saved_episode` consumes frame $\dot Q$ and its
+realized neighbor increment, the canonical half-density probability,
+proper clocks, and pressure-plus-lapse ledger. Direct metric curvature and
+the auxiliary proxy stay separate. The indicators are not a propagated
+initial or observable bound; `closed_regime` stays false.
+
+## Same-trajectory local-response successor, 2026-10-01
+
+Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_coupled_local_response.py`
+- `scripts/derive_nsc_coupled_local_response.py`
+- `tests/test_nsc_coupled_local_response.py`
+- `results/development/nsc-coupled-local-response-v2.json`
+- `results/development/nsc-coupled-local-response-v2.npz`
+- [nsc-coupled-local-response.md](nsc-coupled-local-response.md)
+
+Status `MEASURED_SUCCESSOR_RESPONSE`. The fine confirmation continuation
+is consumed on $[0.05,0.085]$ with the original $T=0$ observer. The actual
+initial cross block is active. Occupation moves by about $0.26749$;
+streamed/full discrepancy is $0.00025703$. Memory, exterior drive, and
+cross omission move it by about $0.06953$, $0.15526$, and $0.20434$.
+The full retained and cross-omitted covariance series are saved.
+`--check` authenticates v1 and v2 without reintegration. The existing
+streamed reducer remains the method owner. No kernel variation or stress
+is computed.
+
+The independent supplement uses
+`scripts/derive_nsc_coupled_local_response_audit.py`,
+`tests/test_nsc_coupled_local_response_independent.py`, and
+`results/development/nsc-coupled-local-response-audit-v1.json` / `.npz`.
+Its own temporal propagation and covariance assembly use the same stored
+geometry and original observer. Cross/drive errors are measured separately
+against those independent controls. The owning note's Duhamel relation is
+conditional on a future Hamiltonian-path error estimate.
 
 ## Regeneration controls, 2026-10-01
 
@@ -157,8 +215,8 @@ in-memory measurement. The writer replaces the v1 JSON.
 
 ## Local-boundary review, 2026-10-01
 
-v1 stays sealed. v2 binds the immutable payloads and the current audited
-owners. Owners, relative to `lab/`:
+v1 stays sealed. v2 binds the immutable payloads and the owners audited
+at `5f10ecd`, rather than each later working-tree successor. Owners, relative to `lab/`:
 
 - `results/development/nsc-local-boundary-review-v1.json`
 - `results/development/nsc-local-boundary-review-v2.json`
@@ -171,15 +229,17 @@ owners. Owners, relative to `lab/`:
 The boost flag compares the returned rescaling. The initial areal
 extrema are nonvacuous and marginal. v1 `reference_unchanged` remains
 `68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
-The current independent test is
+The independent test at that audit is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
 The pre-correction module
 `1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`
 and that sealed test are pinned on carrier commit
 `594a11caeee760d172c4a4f73a7615b05cf30282`, which is not a historical
 laboratory commit. The original eighteen objects and four pins remain.
-The v1-epoch note, the v1-epoch null-expansion test, and the other
-consumer hashes from that epoch stay unpinned.
+The v2 owner sources resolve at full commit
+`5f10ecd365843d1616e50eb16a20d7acd8377e2c` for explicit historical replay.
+`provenance.resolve_pinned_source_bytes` authenticates those exact bytes;
+the current binding mode remains strict for new requests.
 
 ## Initial geometry-graded window, 2026-10-01
 
@@ -226,6 +286,24 @@ it refuses the sealed path. Declared positive $G$ with
 `rho_independent` true exposes $\mu=Q^2=0.0631642220827373$. The
 dense-versus-Fourier-product movement is a conditioning indicator, not a
 rounding enclosure.
+
+## Initial-chart bound and nearby exact initial state, 2026-10-01
+
+The weak helper's separate certificate and proof owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_spherical_cauchy_weak.py`
+- `tests/test_nsc_spherical_cauchy_weak_bound.py`
+- `results/development/nsc-spherical-cauchy-error-v1.json`
+- [nsc-spherical-cauchy-weak.md](nsc-spherical-cauchy-weak.md#initial-lapse-component)
+
+Status `FINITE_CONDITIONAL_INITIAL_LAPSE_BOUND`. The fine initial radius
+is within $4.06085\times10^{-6}$ of the unique smooth positive critical
+point under the sealed positivity hypotheses. The owning note's existence
+and nearby exact initial-state arguments extend the proof without rewriting
+that record's null historical fields. The saved trajectory retains its
+initial $p_r=0$. `evolution_error_bound` remains null. Constraint-transport
+identities and source-normalized smearing budgets are diagnostics in their
+own units; they do not give a radius or occupation error bound.
 
 ## Finite channel turnover, 2026-09-30
 

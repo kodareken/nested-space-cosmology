@@ -15,31 +15,41 @@ from scipy.integrate import solve_ivp
 from recursive_horizons.nsc_coupled_local_response import (
     EPISODE_NPZ,
     DECLARED_INTERPOLATION,
+    DEFAULT_JSON,
+    DEFAULT_NPZ,
     MeasuredBudget,
     action_residual,
+    column_cross_control,
     correlated_cross_separation,
     compare_retained,
     evolve_streamed,
     fourier_galerkin_factors,
     frame_source_blocks,
     galerkin_matrix,
+    hermite_with_slopes,
     independent_control,
     independent_radial_density,
     interpolation_scale,
     hermite_rows,
     interpolate_rows,
     load_episode_case,
+    load_successor_inputs,
     multiplication_matrix,
     occupations_and_coherence,
+    one_body_blocks,
     plan_remaining,
+    prolonged_nodal_rates,
     quadratic_estimate,
     request_identity,
     region_observer,
     resume_disposition,
     reject_linear_operator_hamiltonian,
+    sha256_file,
     source_covariance,
     source_id,
     spinor_local_moments,
+    successor_identity,
+    successor_resume_disposition,
     verify_stored_operator,
     build_case_grid,
     hamiltonian_from_radial,
@@ -400,3 +410,120 @@ def test_saved_endpoint_spinor_projects_onto_the_initial_observer():
     final = spinor_local_moments(observer, case["final_phi0"], case["final_phi1"], case["weights"])
     np.testing.assert_allclose(initial["occupation"], case["weights"][:2], atol=1e-12)
     assert np.max(np.abs(np.asarray(final["occupation"]) - np.asarray(initial["occupation"]))) > 1e-3
+
+
+def test_v1_payload_hashes_stay_immutable():
+    assert sha256_file(DEFAULT_JSON) == "33fe043b30b037432801f12905b3545a20ca2070b9edc46bd3a11aa0d76201a1"
+    assert sha256_file(DEFAULT_NPZ) == "6f4bfce40a4e34a958f0ac1e3b6f763484505a9800b3e34c7362125cbe160ad1"
+
+
+def test_rate_hermite_uses_supplied_slopes_and_keeps_nodes():
+    times = np.linspace(0.0, 1.0, 5)
+    values = (times ** 2)[:, None]
+    slopes = (2.0 * times)[:, None]
+    assert np.allclose(hermite_with_slopes(times, values, slopes, times), values, rtol=0.0, atol=1e-12)
+    midpoint = hermite_with_slopes(times, values, slopes, [0.125])[0, 0]
+    assert midpoint == pytest.approx(0.125 ** 2, abs=1e-12)
+    finite = hermite_rows(times, values, [0.125])[0, 0]
+    assert abs(midpoint - finite) > 1e-4
+
+
+def test_hamiltonian_cache_returns_the_same_matrix(control):
+    radial = control["radial"]
+    hamiltonian = hamiltonian_from_radial(control["factors"], radial)
+    first = hamiltonian(0.2)
+    second = hamiltonian(0.2)
+    assert first is second
+    assert hamiltonian.stats["builds"] == 1
+    assert hamiltonian.stats["hits"] == 1
+    other = hamiltonian(0.4)
+    assert other is not first
+    assert hamiltonian.stats["builds"] == 2
+
+
+def test_successor_observer_is_the_t0_pair_and_the_cross_is_actual():
+    before = sha256_file(EPISODE_NPZ)
+    loaded = load_successor_inputs()
+    assert sha256_file(EPISODE_NPZ) == before
+    assert np.array_equal(loaded["observer"], loaded["origin_columns"][:, :2])
+    assert not np.array_equal(loaded["observer"], loaded["transported_columns"][:, :2])
+    assert np.array_equal(loaded["phi0_frames"][0], loaded["transported_columns"][: loaded["phi0"].shape[0]])
+    np.testing.assert_allclose(loaded["weights"], OCCUPATIONS)
+    blocks = loaded["initial_blocks"]
+    assert blocks["admissible"] is True
+    assert blocks["cross_frobenius"] > 1e-2
+    assert float(np.min(blocks["covariance_eigenvalues"])) >= -1e-8
+    assert float(np.max(blocks["covariance_eigenvalues"])) <= 1.0 + 1e-8
+    assert float(np.max(blocks["parent_eigenvalues"])) <= 1.0 + 1e-8
+    assert loaded["arc_x_start"] == pytest.approx(3.96875)
+    assert loaded["structure_renewed"] is False
+    assert loaded["old_toy_B_not_used"] is True
+    assert loaded["state_reset"] is False
+    identity = successor_identity(loaded)
+    finished = {
+        "schema": "NSC-COUPLED-LOCAL-RESPONSE-v2",
+        "status": "MEASURED_SUCCESSOR_RESPONSE",
+        "request": identity,
+        "phases": {"full_window": {"complete": True, "substeps": identity["substeps"]}},
+    }
+    assert successor_resume_disposition(finished, identity) == "return"
+    changed = dict(identity)
+    changed["observer"] = "0" * 64
+    assert successor_resume_disposition(finished, changed) == "reject"
+    assert successor_resume_disposition(finished, successor_identity(loaded, substeps=1)) == "reject"
+
+
+def test_prolonged_rate_reproduces_the_saved_coarse_sample():
+    loaded = load_successor_inputs()
+    grid, _factors = build_case_grid({
+        "phi0": loaded["phi0"],
+        "frame_Q": loaded["frame_Q"],
+        "coarse_Q": loaded["coarse_Q"][0],
+    })
+    _fine, report = prolonged_nodal_rates(grid, loaded["coarse_Q_dot"])
+    assert report["usable"] is True
+    assert report["pullback_max_abs"] < 1e-10
+
+
+def test_actual_column_cross_matches_the_covariance_omission(control):
+    columns = np.array(control["columns"], copy=True)
+    cosine = float(np.cos(0.4))
+    sine = float(np.sin(0.4))
+    rotated = np.array(columns, copy=True)
+    rotated[:, 0] = cosine * columns[:, 0] + sine * columns[:, 2]
+    rotated[:, 2] = -sine * columns[:, 0] + cosine * columns[:, 2]
+    weights = control["weights"]
+    blocks = one_body_blocks(control["observer"], rotated, weights)
+    assert blocks["cross_frobenius"] > 1e-3
+    assert blocks["admissible"] is True
+    times = np.linspace(0.0, 0.04, 3)
+    split = column_cross_control(
+        control["hamiltonian"],
+        control["observer"],
+        times,
+        rotated,
+        weights,
+        substeps=1,
+    )
+    assert split["superposition_max_abs"] < 1e-8
+    assert split["active"] is True
+    assert split["synthetic_six_mode_substituted"] is False
+    covariance = source_covariance(rotated, weights)
+    kept = evolve_retained_region(
+        control["hamiltonian"],
+        control["observer"],
+        times,
+        covariance=covariance,
+        backend="streamed",
+    )
+    dropped = evolve_retained_region(
+        control["hamiltonian"],
+        control["observer"],
+        times,
+        covariance=covariance,
+        drop_cross_covariance=True,
+        backend="streamed",
+    )
+    assert np.allclose(split["covariance_total"], kept["covariance_total"], rtol=0.0, atol=1e-8)
+    assert np.allclose(split["covariance_without_cross"], dropped["covariance_total"], rtol=0.0, atol=1e-8)
+    assert int(kept["allocation"]["time_indexed_exterior_propagator_bytes"]) == 0

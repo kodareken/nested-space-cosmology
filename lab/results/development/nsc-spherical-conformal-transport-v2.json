@@ -1,0 +1,748 @@
+{
+  "schema": "NSC-SPHERICAL-CONFORMAL-TRANSPORT-v2",
+  "gauge": "conformal",
+  "start": 0.05,
+  "end": 0.3,
+  "source_bindings": {
+    "episode_v2": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "payload_v2": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+    "producer_v2": "cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+    "surface_producer": "77cf27b83a3f809fbd317efc6e0af875dd0f5020fd0dfd7d1b0fd9b7e99d9f49"
+  },
+  "surface_assessments": [
+    {
+      "interval": [
+        0,
+        2
+      ],
+      "channel": "normal_left_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 0.03937711081086677,
+          "absolute_integral": 0.03937711089237095,
+          "signed_simpson": 0.03933966830821126,
+          "absolute_simpson": 0.039339668391524474,
+          "signed_frame_indicator": 3.744250265566573e-05,
+          "absolute_frame_indicator": 3.744250084663364e-05,
+          "peak_absolute": 0.9888361921416319,
+          "endpoint": 0.9888361921416319
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 0.039377111002723425,
+          "absolute_integral": 0.03937711108424332,
+          "signed_simpson": 0.039339668500374216,
+          "absolute_simpson": 0.0393396685837005,
+          "signed_frame_indicator": 3.744250234936214e-05,
+          "absolute_frame_indicator": 3.744250054297377e-05,
+          "peak_absolute": 0.9888361949267976,
+          "endpoint": 0.9888361949267976
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 0.03937795174899989,
+          "absolute_integral": 0.03937795174899989,
+          "signed_simpson": 0.03934052935147392,
+          "absolute_simpson": 0.03934052935147392,
+          "signed_frame_indicator": 3.74223975261323e-05,
+          "absolute_frame_indicator": 3.74223975261323e-05,
+          "peak_absolute": 0.9887861679735868,
+          "endpoint": 0.9887861679735868
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 0.0393779519225708,
+          "absolute_integral": 0.0393779519225708,
+          "signed_simpson": 0.039340529525016314,
+          "absolute_simpson": 0.039340529525016314,
+          "signed_frame_indicator": 3.742239755463728e-05,
+          "absolute_frame_indicator": 3.742239755463728e-05,
+          "peak_absolute": 0.9887861689013167,
+          "endpoint": 0.9887861689013167
+        }
+      },
+      "absolute_integral_effect": 0.0393779519225708,
+      "time_indicator": 1.735709076466918e-10,
+      "space_indicator": 8.408383274788322e-07,
+      "frame_quadrature_indicator": 3.742239755463728e-05,
+      "time_fraction_of_effect": 4.407819583608252e-09,
+      "space_fraction_of_effect": 2.1353023365262362e-05,
+      "frame_fraction_of_effect": 0.0009503388502332792,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        0,
+        2
+      ],
+      "channel": "normal_right_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 0.07025039335301225,
+          "absolute_integral": 0.07025039637456242,
+          "signed_simpson": 0.0702202779074499,
+          "absolute_simpson": 0.07022028084449917,
+          "signed_frame_indicator": 3.0115445562556298e-05,
+          "absolute_frame_indicator": 3.011553006346257e-05,
+          "peak_absolute": 1.3791091385316239,
+          "endpoint": 1.3791091385316239
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 0.07025039382138071,
+          "absolute_integral": 0.0702503968431224,
+          "signed_simpson": 0.07022027837673404,
+          "absolute_simpson": 0.07022028131399981,
+          "signed_frame_indicator": 3.0115444646858225e-05,
+          "absolute_frame_indicator": 3.011552912278448e-05,
+          "peak_absolute": 1.3791091488264289,
+          "endpoint": 1.3791091488264289
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 0.07025486702030193,
+          "absolute_integral": 0.07025486702030193,
+          "signed_simpson": 0.0702248500216283,
+          "absolute_simpson": 0.0702248500216283,
+          "signed_frame_indicator": 3.0016998673831896e-05,
+          "absolute_frame_indicator": 3.0016998673831896e-05,
+          "peak_absolute": 1.3789148529562718,
+          "endpoint": 1.3789148529562718
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 0.07025486742873092,
+          "absolute_integral": 0.07025486742873092,
+          "signed_simpson": 0.07022485042977658,
+          "absolute_simpson": 0.07022485042977658,
+          "signed_frame_indicator": 3.001699895453791e-05,
+          "absolute_frame_indicator": 3.001699895453791e-05,
+          "peak_absolute": 1.3789148529653903,
+          "endpoint": 1.3789148529653903
+        }
+      },
+      "absolute_integral_effect": 0.07025486742873092,
+      "time_indicator": 4.0842899895476847e-10,
+      "space_indicator": 4.470585608526423e-06,
+      "frame_quadrature_indicator": 3.001699895453791e-05,
+      "time_fraction_of_effect": 5.813533124506905e-09,
+      "space_fraction_of_effect": 6.363382029097907e-05,
+      "frame_fraction_of_effect": 0.00042725863777322244,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        0,
+        2
+      ],
+      "channel": "normal_boundary_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": -0.10962750416387904,
+          "absolute_integral": 0.1096275068431117,
+          "signed_simpson": -0.10955994621566117,
+          "absolute_simpson": 0.10955994867092807,
+          "signed_frame_indicator": 6.755794821820815e-05,
+          "absolute_frame_indicator": 6.755817218399851e-05,
+          "peak_absolute": 2.3679453306732556,
+          "endpoint": -2.3679453306732556
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": -0.10962750482410412,
+          "absolute_integral": 0.10962750750356925,
+          "signed_simpson": -0.10955994687710825,
+          "absolute_simpson": 0.10955994933263835,
+          "signed_frame_indicator": 6.755794699621342e-05,
+          "absolute_frame_indicator": 6.75581709312506e-05,
+          "peak_absolute": 2.3679453437532265,
+          "endpoint": -2.3679453437532265
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": -0.10963281876930181,
+          "absolute_integral": 0.10963281876930181,
+          "signed_simpson": -0.1095653793731022,
+          "absolute_simpson": 0.1095653793731022,
+          "signed_frame_indicator": 6.74393961999642e-05,
+          "absolute_frame_indicator": 6.74393961999642e-05,
+          "peak_absolute": 2.3677010209298586,
+          "endpoint": -2.3677010209298586
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": -0.10963281935130173,
+          "absolute_integral": 0.10963281935130173,
+          "signed_simpson": -0.1095653799547929,
+          "absolute_simpson": 0.1095653799547929,
+          "signed_frame_indicator": 6.743939650917519e-05,
+          "absolute_frame_indicator": 6.743939650917519e-05,
+          "peak_absolute": 2.367701021866707,
+          "endpoint": -2.367701021866707
+        }
+      },
+      "absolute_integral_effect": 0.10963281935130173,
+      "time_indicator": 5.819999204792481e-10,
+      "space_indicator": 5.311847732475394e-06,
+      "frame_quadrature_indicator": 6.743939650917519e-05,
+      "time_fraction_of_effect": 5.308628601571558e-09,
+      "space_fraction_of_effect": 4.8451255416996846e-05,
+      "frame_fraction_of_effect": 0.0006151387596179194,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        2,
+        4
+      ],
+      "channel": "normal_left_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": -0.07025039335301225,
+          "absolute_integral": 0.07025039637456242,
+          "signed_simpson": -0.0702202779074499,
+          "absolute_simpson": 0.07022028084449917,
+          "signed_frame_indicator": 3.0115445562556298e-05,
+          "absolute_frame_indicator": 3.011553006346257e-05,
+          "peak_absolute": 1.3791091385316239,
+          "endpoint": -1.3791091385316239
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": -0.07025039382138071,
+          "absolute_integral": 0.0702503968431224,
+          "signed_simpson": -0.07022027837673404,
+          "absolute_simpson": 0.07022028131399981,
+          "signed_frame_indicator": 3.0115444646858225e-05,
+          "absolute_frame_indicator": 3.011552912278448e-05,
+          "peak_absolute": 1.3791091488264289,
+          "endpoint": -1.3791091488264289
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": -0.07025486702030193,
+          "absolute_integral": 0.07025486702030193,
+          "signed_simpson": -0.0702248500216283,
+          "absolute_simpson": 0.0702248500216283,
+          "signed_frame_indicator": 3.0016998673831896e-05,
+          "absolute_frame_indicator": 3.0016998673831896e-05,
+          "peak_absolute": 1.3789148529562718,
+          "endpoint": -1.3789148529562718
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": -0.07025486742873092,
+          "absolute_integral": 0.07025486742873092,
+          "signed_simpson": -0.07022485042977658,
+          "absolute_simpson": 0.07022485042977658,
+          "signed_frame_indicator": 3.001699895453791e-05,
+          "absolute_frame_indicator": 3.001699895453791e-05,
+          "peak_absolute": 1.3789148529653903,
+          "endpoint": -1.3789148529653903
+        }
+      },
+      "absolute_integral_effect": 0.07025486742873092,
+      "time_indicator": 4.0842899895476847e-10,
+      "space_indicator": 4.470585608526423e-06,
+      "frame_quadrature_indicator": 3.001699895453791e-05,
+      "time_fraction_of_effect": 5.813533124506905e-09,
+      "space_fraction_of_effect": 6.363382029097907e-05,
+      "frame_fraction_of_effect": 0.00042725863777322244,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        2,
+        4
+      ],
+      "channel": "normal_right_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 0.0635174307356377,
+          "absolute_integral": 0.0635174307763673,
+          "signed_simpson": 0.06349747241259167,
+          "absolute_simpson": 0.06349747245713272,
+          "signed_frame_indicator": 1.9958323046201376e-05,
+          "absolute_frame_indicator": 1.995831923475022e-05,
+          "peak_absolute": 1.1713965867731102,
+          "endpoint": 1.1713965867731102
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 0.06351743115533777,
+          "absolute_integral": 0.06351743119609114,
+          "signed_simpson": 0.06349747283291311,
+          "absolute_simpson": 0.06349747287748254,
+          "signed_frame_indicator": 1.995832242480955e-05,
+          "absolute_frame_indicator": 1.995831860875097e-05,
+          "peak_absolute": 1.1713965874840628,
+          "endpoint": 1.1713965874840628
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 0.06351827995403797,
+          "absolute_integral": 0.06351827995403797,
+          "signed_simpson": 0.06349834034468345,
+          "absolute_simpson": 0.06349834034468345,
+          "signed_frame_indicator": 1.9939609354674426e-05,
+          "absolute_frame_indicator": 1.9939609354674426e-05,
+          "peak_absolute": 1.1713373211537612,
+          "endpoint": 1.1713373211537612
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 0.06351828034596349,
+          "absolute_integral": 0.06351828034596349,
+          "signed_simpson": 0.06349834073665273,
+          "absolute_simpson": 0.06349834073665273,
+          "signed_frame_indicator": 1.993960931093164e-05,
+          "absolute_frame_indicator": 1.993960931093164e-05,
+          "peak_absolute": 1.1713373204947182,
+          "endpoint": 1.1713373204947182
+        }
+      },
+      "absolute_integral_effect": 0.06351828034596349,
+      "time_indicator": 3.919255198159277e-10,
+      "space_indicator": 8.491498723478541e-07,
+      "frame_quadrature_indicator": 1.993960931093164e-05,
+      "time_fraction_of_effect": 6.170279133522451e-09,
+      "space_fraction_of_effect": 1.3368590391975505e-05,
+      "frame_fraction_of_effect": 0.0003139192245496422,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        2,
+        4
+      ],
+      "channel": "normal_boundary_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 0.006732962617374557,
+          "absolute_integral": 0.006734982240612833,
+          "signed_simpson": 0.006722805494858233,
+          "absolute_simpson": 0.0067248727403933905,
+          "signed_frame_indicator": 1.0157122516360126e-05,
+          "absolute_frame_indicator": 1.0109500219476417e-05,
+          "peak_absolute": 0.20771255175851366,
+          "endpoint": 0.20771255175851366
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 0.006732962666042936,
+          "absolute_integral": 0.006734982299968259,
+          "signed_simpson": 0.0067228055438209216,
+          "absolute_simpson": 0.006724872799840744,
+          "signed_frame_indicator": 1.0157122222047808e-05,
+          "absolute_frame_indicator": 1.0109500127548215e-05,
+          "peak_absolute": 0.20771256134236604,
+          "endpoint": 0.20771256134236604
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 0.00673658706626396,
+          "absolute_integral": 0.006737899260625257,
+          "signed_simpson": 0.006726509676944866,
+          "absolute_simpson": 0.006727807012642459,
+          "signed_frame_indicator": 1.0077389319129715e-05,
+          "absolute_frame_indicator": 1.0092247982832793e-05,
+          "peak_absolute": 0.2075775318025106,
+          "endpoint": 0.2075775318025106
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 0.006736587082767429,
+          "absolute_integral": 0.006737899279324893,
+          "signed_simpson": 0.006726509693123844,
+          "absolute_simpson": 0.006727807031147661,
+          "signed_frame_indicator": 1.0077389643619282e-05,
+          "absolute_frame_indicator": 1.0092248177265804e-05,
+          "peak_absolute": 0.20757753247067212,
+          "endpoint": 0.20757753247067212
+        }
+      },
+      "absolute_integral_effect": 0.006737899279324893,
+      "time_indicator": 1.8699636457342184e-11,
+      "space_indicator": 2.916979356634361e-06,
+      "frame_quadrature_indicator": 1.0092248177265804e-05,
+      "time_fraction_of_effect": 2.775291775987456e-09,
+      "space_fraction_of_effect": 0.00043292118740703836,
+      "frame_fraction_of_effect": 0.0014978330424489518,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        4,
+        6
+      ],
+      "channel": "normal_left_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": -0.0635174307356377,
+          "absolute_integral": 0.0635174307763673,
+          "signed_simpson": -0.06349747241259167,
+          "absolute_simpson": 0.06349747245713272,
+          "signed_frame_indicator": 1.9958323046201376e-05,
+          "absolute_frame_indicator": 1.995831923475022e-05,
+          "peak_absolute": 1.1713965867731102,
+          "endpoint": -1.1713965867731102
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": -0.06351743115533777,
+          "absolute_integral": 0.06351743119609114,
+          "signed_simpson": -0.06349747283291311,
+          "absolute_simpson": 0.06349747287748254,
+          "signed_frame_indicator": 1.995832242480955e-05,
+          "absolute_frame_indicator": 1.995831860875097e-05,
+          "peak_absolute": 1.1713965874840628,
+          "endpoint": -1.1713965874840628
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": -0.06351827995403797,
+          "absolute_integral": 0.06351827995403797,
+          "signed_simpson": -0.06349834034468345,
+          "absolute_simpson": 0.06349834034468345,
+          "signed_frame_indicator": 1.9939609354674426e-05,
+          "absolute_frame_indicator": 1.9939609354674426e-05,
+          "peak_absolute": 1.1713373211537612,
+          "endpoint": -1.1713373211537612
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": -0.06351828034596349,
+          "absolute_integral": 0.06351828034596349,
+          "signed_simpson": -0.06349834073665273,
+          "absolute_simpson": 0.06349834073665273,
+          "signed_frame_indicator": 1.993960931093164e-05,
+          "absolute_frame_indicator": 1.993960931093164e-05,
+          "peak_absolute": 1.1713373204947182,
+          "endpoint": -1.1713373204947182
+        }
+      },
+      "absolute_integral_effect": 0.06351828034596349,
+      "time_indicator": 3.919255198159277e-10,
+      "space_indicator": 8.491498723478541e-07,
+      "frame_quadrature_indicator": 1.993960931093164e-05,
+      "time_fraction_of_effect": 6.170279133522451e-09,
+      "space_fraction_of_effect": 1.3368590391975505e-05,
+      "frame_fraction_of_effect": 0.0003139192245496422,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        4,
+        6
+      ],
+      "channel": "normal_right_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 3.862011824501063e-15,
+          "absolute_integral": 3.8620128652257405e-15,
+          "signed_simpson": 3.868048994696251e-15,
+          "absolute_simpson": 3.8680503823291546e-15,
+          "signed_frame_indicator": 6.0371701951824424e-18,
+          "absolute_frame_indicator": 6.037517103408511e-18,
+          "peak_absolute": 5.092953320970278e-14,
+          "endpoint": 4.865452467246947e-14
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 3.86217230673495e-15,
+          "absolute_integral": 3.86217230673495e-15,
+          "signed_simpson": 3.868210002409929e-15,
+          "absolute_simpson": 3.868210002409929e-15,
+          "signed_frame_indicator": 6.037695674972284e-18,
+          "absolute_frame_indicator": 6.037695674972284e-18,
+          "peak_absolute": 5.0931530830379765e-14,
+          "endpoint": 4.8655340470432774e-14
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 6.3243997983296945e-21,
+          "absolute_integral": 6.876607319705772e-21,
+          "signed_simpson": 6.268880478825977e-21,
+          "absolute_simpson": 6.789508333757612e-21,
+          "signed_frame_indicator": 5.551931950371313e-23,
+          "absolute_frame_indicator": 8.709898594815604e-23,
+          "peak_absolute": 9.522246794039885e-20,
+          "endpoint": 2.4027041247755858e-20
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 6.333232703139096e-21,
+          "absolute_integral": 6.884819871134762e-21,
+          "signed_simpson": 6.27783222771937e-21,
+          "absolute_simpson": 6.79764343283539e-21,
+          "signed_frame_indicator": 5.540047541972007e-23,
+          "absolute_frame_indicator": 8.717643829936626e-23,
+          "peak_absolute": 9.529001826831669e-20,
+          "endpoint": 2.4163918941847728e-20
+        }
+      },
+      "absolute_integral_effect": 6.884819871134762e-21,
+      "time_indicator": 8.212551428989304e-24,
+      "space_indicator": 3.862165421915079e-15,
+      "frame_quadrature_indicator": 8.717643829936626e-23,
+      "time_fraction_of_effect": 0.0011928491351561976,
+      "space_fraction_of_effect": 560968.2597663247,
+      "frame_fraction_of_effect": 0.01266212332799896,
+      "resolved_one_percent_indicators": false,
+      "certified": false
+    },
+    {
+      "interval": [
+        4,
+        6
+      ],
+      "channel": "normal_boundary_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 0.06351743073563383,
+          "absolute_integral": 0.06351743077636361,
+          "signed_simpson": 0.0634974724125878,
+          "absolute_simpson": 0.06349747245712904,
+          "signed_frame_indicator": 1.9958323046201376e-05,
+          "absolute_frame_indicator": 1.9958319234736344e-05,
+          "peak_absolute": 1.1713965867730616,
+          "endpoint": 1.1713965867730616
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 0.0635174311553339,
+          "absolute_integral": 0.06351743119608745,
+          "signed_simpson": 0.06349747283290927,
+          "absolute_simpson": 0.06349747287747888,
+          "signed_frame_indicator": 1.995832242480955e-05,
+          "absolute_frame_indicator": 1.995831860873709e-05,
+          "peak_absolute": 1.1713965874840142,
+          "endpoint": 1.1713965874840142
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 0.06351827995403797,
+          "absolute_integral": 0.06351827995403797,
+          "signed_simpson": 0.06349834034468345,
+          "absolute_simpson": 0.06349834034468345,
+          "signed_frame_indicator": 1.9939609354674426e-05,
+          "absolute_frame_indicator": 1.9939609354674426e-05,
+          "peak_absolute": 1.1713373211537612,
+          "endpoint": 1.1713373211537612
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 0.06351828034596349,
+          "absolute_integral": 0.06351828034596349,
+          "signed_simpson": 0.06349834073665273,
+          "absolute_simpson": 0.06349834073665273,
+          "signed_frame_indicator": 1.993960931093164e-05,
+          "absolute_frame_indicator": 1.993960931093164e-05,
+          "peak_absolute": 1.1713373204947182,
+          "endpoint": 1.1713373204947182
+        }
+      },
+      "absolute_integral_effect": 0.06351828034596349,
+      "time_indicator": 3.919255198159277e-10,
+      "space_indicator": 8.491498760393457e-07,
+      "frame_quadrature_indicator": 1.993960931093164e-05,
+      "time_fraction_of_effect": 6.170279133522451e-09,
+      "space_fraction_of_effect": 1.33685904500925e-05,
+      "frame_fraction_of_effect": 0.0003139192245496422,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        6,
+        8
+      ],
+      "channel": "normal_left_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": -3.862011824501063e-15,
+          "absolute_integral": 3.8620128652257405e-15,
+          "signed_simpson": -3.868048994696251e-15,
+          "absolute_simpson": 3.8680503823291546e-15,
+          "signed_frame_indicator": 6.0371701951824424e-18,
+          "absolute_frame_indicator": 6.037517103408511e-18,
+          "peak_absolute": 5.092953320970278e-14,
+          "endpoint": -4.865452467246947e-14
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": -3.86217230673495e-15,
+          "absolute_integral": 3.86217230673495e-15,
+          "signed_simpson": -3.868210002409929e-15,
+          "absolute_simpson": 3.868210002409929e-15,
+          "signed_frame_indicator": 6.037695674972284e-18,
+          "absolute_frame_indicator": 6.037695674972284e-18,
+          "peak_absolute": 5.0931530830379765e-14,
+          "endpoint": -4.8655340470432774e-14
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": -6.3243997983296945e-21,
+          "absolute_integral": 6.876607319705772e-21,
+          "signed_simpson": -6.268880478825977e-21,
+          "absolute_simpson": 6.789508333757612e-21,
+          "signed_frame_indicator": 5.551931950371313e-23,
+          "absolute_frame_indicator": 8.709898594815604e-23,
+          "peak_absolute": 9.522246794039885e-20,
+          "endpoint": -2.4027041247755858e-20
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": -6.333232703139096e-21,
+          "absolute_integral": 6.884819871134762e-21,
+          "signed_simpson": -6.27783222771937e-21,
+          "absolute_simpson": 6.79764343283539e-21,
+          "signed_frame_indicator": 5.540047541972007e-23,
+          "absolute_frame_indicator": 8.717643829936626e-23,
+          "peak_absolute": 9.529001826831669e-20,
+          "endpoint": -2.4163918941847728e-20
+        }
+      },
+      "absolute_integral_effect": 6.884819871134762e-21,
+      "time_indicator": 8.212551428989304e-24,
+      "space_indicator": 3.862165421915079e-15,
+      "frame_quadrature_indicator": 8.717643829936626e-23,
+      "time_fraction_of_effect": 0.0011928491351561976,
+      "space_fraction_of_effect": 560968.2597663247,
+      "frame_fraction_of_effect": 0.01266212332799896,
+      "resolved_one_percent_indicators": false,
+      "certified": false
+    },
+    {
+      "interval": [
+        6,
+        8
+      ],
+      "channel": "normal_right_outward_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": -0.03937711081086677,
+          "absolute_integral": 0.03937711089237095,
+          "signed_simpson": -0.03933966830821126,
+          "absolute_simpson": 0.039339668391524474,
+          "signed_frame_indicator": 3.744250265566573e-05,
+          "absolute_frame_indicator": 3.744250084663364e-05,
+          "peak_absolute": 0.9888361921416319,
+          "endpoint": -0.9888361921416319
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": -0.039377111002723425,
+          "absolute_integral": 0.03937711108424332,
+          "signed_simpson": -0.039339668500374216,
+          "absolute_simpson": 0.0393396685837005,
+          "signed_frame_indicator": 3.744250234936214e-05,
+          "absolute_frame_indicator": 3.744250054297377e-05,
+          "peak_absolute": 0.9888361949267976,
+          "endpoint": -0.9888361949267976
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": -0.03937795174899989,
+          "absolute_integral": 0.03937795174899989,
+          "signed_simpson": -0.03934052935147392,
+          "absolute_simpson": 0.03934052935147392,
+          "signed_frame_indicator": 3.74223975261323e-05,
+          "absolute_frame_indicator": 3.74223975261323e-05,
+          "peak_absolute": 0.9887861679735868,
+          "endpoint": -0.9887861679735868
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": -0.0393779519225708,
+          "absolute_integral": 0.0393779519225708,
+          "signed_simpson": -0.039340529525016314,
+          "absolute_simpson": 0.039340529525016314,
+          "signed_frame_indicator": 3.742239755463728e-05,
+          "absolute_frame_indicator": 3.742239755463728e-05,
+          "peak_absolute": 0.9887861689013167,
+          "endpoint": -0.9887861689013167
+        }
+      },
+      "absolute_integral_effect": 0.0393779519225708,
+      "time_indicator": 1.735709076466918e-10,
+      "space_indicator": 8.408383274788322e-07,
+      "frame_quadrature_indicator": 3.742239755463728e-05,
+      "time_fraction_of_effect": 4.407819583608252e-09,
+      "space_fraction_of_effect": 2.1353023365262362e-05,
+      "frame_fraction_of_effect": 0.0009503388502332792,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    },
+    {
+      "interval": [
+        6,
+        8
+      ],
+      "channel": "normal_boundary_flux",
+      "per_case": {
+        "nf256_dt_0.0010": {
+          "signed_integral": 0.039377110810870634,
+          "absolute_integral": 0.039377110892374514,
+          "signed_simpson": 0.039339668308215135,
+          "absolute_simpson": 0.039339668391528054,
+          "signed_frame_indicator": 3.7442502655658794e-05,
+          "absolute_frame_indicator": 3.7442500846619764e-05,
+          "peak_absolute": 0.9888361921416805,
+          "endpoint": 0.9888361921416805
+        },
+        "nf256_dt_0.0005": {
+          "signed_integral": 0.03937711100272729,
+          "absolute_integral": 0.03937711108424689,
+          "signed_simpson": 0.03933966850037808,
+          "absolute_simpson": 0.03933966858370409,
+          "signed_frame_indicator": 3.74425023493552e-05,
+          "absolute_frame_indicator": 3.744250054294601e-05,
+          "peak_absolute": 0.9888361949268463,
+          "endpoint": 0.9888361949268463
+        },
+        "nf512_dt_0.0010": {
+          "signed_integral": 0.03937795174899989,
+          "absolute_integral": 0.03937795174899989,
+          "signed_simpson": 0.03934052935147392,
+          "absolute_simpson": 0.03934052935147392,
+          "signed_frame_indicator": 3.74223975261323e-05,
+          "absolute_frame_indicator": 3.74223975261323e-05,
+          "peak_absolute": 0.9887861679735868,
+          "endpoint": 0.9887861679735868
+        },
+        "nf512_dt_0.0005": {
+          "signed_integral": 0.0393779519225708,
+          "absolute_integral": 0.0393779519225708,
+          "signed_simpson": 0.039340529525016314,
+          "absolute_simpson": 0.039340529525016314,
+          "signed_frame_indicator": 3.742239755463728e-05,
+          "absolute_frame_indicator": 3.742239755463728e-05,
+          "peak_absolute": 0.9887861689013167,
+          "endpoint": 0.9887861689013167
+        }
+      },
+      "absolute_integral_effect": 0.0393779519225708,
+      "time_indicator": 1.735709076466918e-10,
+      "space_indicator": 8.408383239122408e-07,
+      "frame_quadrature_indicator": 3.742239755463728e-05,
+      "time_fraction_of_effect": 4.407819583608252e-09,
+      "space_fraction_of_effect": 2.135302327468905e-05,
+      "frame_fraction_of_effect": 0.0009503388502332792,
+      "resolved_one_percent_indicators": true,
+      "certified": false
+    }
+  ],
+  "localization": {
+    "nf256_dt_0.0010": {
+      "shell_leader_unchanged": true,
+      "probability_leader_unchanged": true,
+      "shell_leader_share_min": 0.6509790637589248,
+      "probability_leader_share_min": 0.6558454437538536
+    },
+    "nf256_dt_0.0005": {
+      "shell_leader_unchanged": true,
+      "probability_leader_unchanged": true,
+      "shell_leader_share_min": 0.6509790636666669,
+      "probability_leader_share_min": 0.6558454437345295
+    },
+    "nf512_dt_0.0010": {
+      "shell_leader_unchanged": true,
+      "probability_leader_unchanged": true,
+      "shell_leader_share_min": 0.6509785262282318,
+      "probability_leader_share_min": 0.6558454531615924
+    },
+    "nf512_dt_0.0005": {
+      "shell_leader_unchanged": true,
+      "probability_leader_unchanged": true,
+      "shell_leader_share_min": 0.6509785261434402,
+      "probability_leader_share_min": 0.6558454531429172
+    }
+  },
+  "resolved_regional_surface_exchange": true,
+  "maintained_localization": true,
+  "net_zero_is_a_veto": false,
+  "flow_effect": "time integral of absolute normal energy flux at each natural width-2 surface; signed/net quantities retained",
+  "refinement_domain": "nf256/nf512, dtcaps .001/.0005, .005 saved physical frames, same continuous original observer and Cauchy trajectory",
+  "criterion": "each surface uses its own absolute-flow effect and space/time/Simpson-trapezoid indicators below one percent",
+  "continuum_error_certified": false,
+  "observable_error_certified": false,
+  "renewal": false,
+  "verdict": "MEASURED_MAINTAINED_LOCALIZATION_WITH_RESOLVED_SURFACE_FLOW",
+  "producer_net_assessment_scope": "the sealed episode-v2 boundary_assessment measures net content-flux contribution; this record adds each surface without rewriting it",
+  "source_unchanged": true
+}

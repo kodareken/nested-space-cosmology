@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Replay or write the weak initial-residual record.
 
-``--check`` reads the sealed record, remeasures scientific fields, and does
-not write. A fresh record is written only to an explicit ``--output`` path,
+``--check`` names the sealed source domain at commit 5f10ecd, reads the
+record, remeasures scientific fields with the current helper, and does not
+write. A fresh record is written only to an explicit ``--output`` path,
 which cannot be the sealed JSON. The v5 JSON and NPZ are read and not
 rewritten.
 """
@@ -16,6 +17,8 @@ from recursive_horizons.nsc_spherical_cauchy_weak import (
     verify_saved,
     write_record,
 )
+
+SEALED_SOURCE_REF = "5f10ecd365843d1616e50eb16a20d7acd8377e2c"
 
 
 def main(argv=None):
@@ -39,7 +42,7 @@ def main(argv=None):
             record["total_certified"],
         )
         return 0
-    report = verify_saved()
+    report = verify_saved(source_ref=SEALED_SOURCE_REF)
     print(
         report["status"],
         "cpu",
@@ -56,6 +59,8 @@ def main(argv=None):
         report["record_bytes_unchanged"],
         "generator_limits",
         len(report["limits"]),
+        "source_ref",
+        report["source_ref"],
         "total_certified",
         report["sealed"]["total_certified"],
     )
