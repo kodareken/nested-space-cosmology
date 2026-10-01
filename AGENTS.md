@@ -38,6 +38,12 @@ AGENTS.md                 entry point and maintained index
 | Provisional spherical coupling v1 | [Note](lab/docs/nsc-spherical-coupling.md), [module](lab/src/recursive_horizons/nsc_spherical_coupling.py), [record](lab/results/development/nsc-spherical-coupling-control-v1.json) |
 | Variational spherical Galerkin coupling v2 | [Note](lab/docs/nsc-spherical-galerkin-coupling.md), [module](lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py), [record](lab/results/development/nsc-spherical-coupling-control-v2.json) |
 | Matched Galerkin refinement v3 | [Note](lab/docs/nsc-spherical-galerkin-coupling.md#matched-refinement-v3), [driver](lab/scripts/derive_nsc_spherical_galerkin_refinement.py), [record](lab/results/development/nsc-spherical-coupling-refinement-v3.json) |
+| Galerkin refinement v5 | [Driver](lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py), [record](lab/results/development/nsc-spherical-coupling-refinement-v5.json), [payload](lab/results/development/nsc-spherical-coupling-refinement-v5.npz), [independent tests](lab/tests/test_nsc_spherical_galerkin_independent.py) |
+| Finite-window embedding v1 | [Note](lab/docs/nsc-finite-window-embedding.md), [module](lab/src/recursive_horizons/nsc_finite_window_embedding.py), [record](lab/results/development/nsc-finite-window-embedding-v1.json) |
+| Seam-regular embedding v2 | [Note](lab/docs/nsc-finite-window-embedding-smooth.md), [module](lab/src/recursive_horizons/nsc_finite_window_embedding_smooth.py), [record](lab/results/development/nsc-finite-window-embedding-v2.json) |
+| Spherical Cauchy data | [Note](lab/docs/nsc-spherical-cauchy-data.md), [module](lab/src/recursive_horizons/nsc_spherical_cauchy_data.py), [record](lab/results/development/nsc-spherical-cauchy-data-v1.json) |
+| Regional coordinate and normal-observer ledger | [Note](lab/docs/nsc-regional-energy-exchange.md), [module](lab/src/recursive_horizons/nsc_regional_energy_exchange.py), [record](lab/results/development/nsc-regional-energy-exchange-v1.json) |
+| Archived nf256 probes | [Receipt](lab/archive/probes/README.md) |
 | Evolving retained-region reduction | [Note](lab/docs/nsc-evolving-reduction.md), [module](lab/src/recursive_horizons/nsc_evolving_reduction.py) |
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
@@ -69,8 +75,28 @@ is `FAIL_INITIAL_SOLVE`: internal Newton stopped at rho=0.5 with residual
 1.287606e-10 and wrote no full-source result. The
 [evolving reduction](lab/docs/nsc-evolving-reduction.md) is prescribed-control
 convergence with no accepted coupled trajectory. Passing tests do not
-validate these failed trajectories. Embedding of the frozen window is not
-complete. The resolved active action remains `Gamma_one`: the canonical
+validate these failed trajectories. The coupled state and geometry loop
+already executes. Fixed `L` and `beta` are gauge; `Q`, `r`, `chi` and the
+momenta evolve. The
+[v5 short response](lab/results/development/nsc-spherical-coupling-refinement-v5.json)
+was independently replayed. At nf=512 and T=0.005 it remains a diagnostic:
+Hamilton about 9.98e-6, momentum about 1.38e-6, proper radial velocity about
+0.0079505. It is not an initial 1e-8 pass and not a renewal. The original
+H and B fractions are one witness, not a physical requirement for every
+later realization.
+[Embedding v1](lab/docs/nsc-finite-window-embedding.md) and the
+[seam-regular v2](lab/docs/nsc-finite-window-embedding-smooth.md) compression
+are an optional bridge, not a further fitting prerequisite. The
+[Cauchy data](lab/docs/nsc-spherical-cauchy-data.md) leave the mean and
+held-out current explicit. The
+[regional ledger](lab/docs/nsc-regional-energy-exchange.md) uses
+dx-normalized proper pressure and normal energy; `F_Q Qdot` is coordinate
+metric work. Historical vacuum branch B is not a prerequisite. Next
+diagnostic: the same coupled loop to T=0.05 with geometry-derived B, effect
+and spacetime convergence, and full, projected, and weak diagnostics. A
+small weak residual alone does not prove accuracy. Strong residuals stay
+reported. The old initial 1e-8 line is not a blind veto. Renewal is not
+demonstrated. The resolved active action remains `Gamma_one`: the canonical
 Gaussian plus the same-spectrum local induced term, counted once. The numerical
 incoming-gate campaign is paused; the gate remains OPEN.
 [Scope](docs/instructions.md#scientific-framing-and-authority).
