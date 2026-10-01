@@ -9,35 +9,25 @@ checkpoint is retained in an appendix and is not a prerequisite for this
 finite result. The [43-page foundation](paper/nested-space-cosmology.pdf)
 remains unchanged.
 
-**Current finite mechanism:** regional differences produce transfer, the
-same action couples the state and geometry, a localized structure persists
-with throughflow, and a fixed observer registers a changed local response.
-The [saved continuation](lab/docs/nsc-regeneration-episode.md) starts from
-the $T=0.05$ feedback state and ends at $T=0.085$ when the bridge's
-both-positive expansion arc enters the packet. Four space and time
-refinements agree within one percent of the claimed effects. The leader
-keeps its location and gains about $0.0812$ in shell content while field
-and gravitational energy exchange a further $0.2861$. This is maintained
-structure; renewal is false.
+**Measured finite realization:** regional source differences produce transfer,
+the same action couples the state and geometry, a localized structure persists
+with surface flow, and its unresolved surroundings change a fixed observer's
+local response. The [conformal continuation](lab/docs/nsc-spherical-conformal-continuation.md)
+reaches $T=0.3$ with unchanged source and bitwise handoffs. Flow across
+$x=0,2,4$ resolves below one percent under the recorded numerical comparisons.
+Region 0 remains the leader. Reversing the source imbalance reverses signed
+flow, and five-percent perturbations produce measured five-percent responses.
+Actual metric curvature and the matched proper-clock control are recorded.
 
-The [same-trajectory local response](lab/docs/nsc-coupled-local-response.md)
-uses the original $T=0$ observer on that continuation. Its occupation
-changes by about $0.26749$. Memory, the exterior drive, and the actual
-initial cross correlations each change that response beyond the reduction
-error. A separate [initial-chart certificate](lab/docs/nsc-spherical-cauchy-weak.md#initial-lapse-component)
-bounds the fine initial radius distance and supports a nearby exact
-initial state. An evolved error estimate at the observable scale remains
-open. The [assessment](lab/docs/nsc-spherical-episode-assessment.md) and
-[independent audit](lab/docs/nsc-regeneration-realization-audit.md) record
-their specific domains. Code owners, historical controls, and constraint
-residuals are in the [present loop](docs/current-result.md#present-spherical-loop).
-
-The [same-action conformal episode](docs/current-result.md#same-action-conformal-episode-1-october-2026)
-uses the same initial data with $L=Q$ and $\beta=0$. Four runs reach
-$T=0.05$ and resolve geometric feedback at a declared proper clock.
-The finite constraint-forcing identity now has a measured time budget;
-its sampled integral and observable error remain uncertified. This
-realization keeps its own gauge, clocks, and regional ledger.
+On the [same realization](lab/docs/nsc-conformal-local-response-successor.md),
+the original observer's occupation changes by $0.07343$. Reduction error is
+$0.00865\%$ of that change. Memory, exterior drive, and the actual initial
+cross correlations each change the response beyond their own measured errors.
+These are finite measurements with refinement indicators. Renewal is false;
+stronger continuum and propagated state-error certificates remain separate
+claims. The older [prescribed-gauge continuation](lab/docs/nsc-regeneration-episode.md)
+and the finite mathematical theorem retain their recorded domains.
+[Owners and current evidence](docs/current-result.md#present-spherical-loop).
 
 A six-mode inherited finite example remains a fixed-geometry witness, with
 nonzero channel currents and a derived local filtered response.
