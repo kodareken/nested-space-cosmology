@@ -1,0 +1,716 @@
+{
+  "schema": "NSC-COUPLED-LOCAL-RESPONSE-v1",
+  "status": "MEASURED_CONDITIONAL_REDUCTION",
+  "renewal": false,
+  "regeneration": false,
+  "coupled_production_comparison": false,
+  "stress_claimed": false,
+  "stress_gap": "No effective-action variation is derived. Occupied and empty kernels are not converted into a stress. A force comparison would need a kernel metric variation; that variation is not computed.",
+  "interface_gaps": [
+    "evolve_retained_region requires a dense Hermitian callback. A LinearOperator is not a supported H(t), so each sample still forms the dense exterior block after the full matrix.",
+    "backend='streamed' completes one dense null_space frame and replays the interaction history from the initial time at every new output node. That replay grows quadratically with the number of output nodes and is recomputation, not a stored W.",
+    "Passing a full covariance evolves one column per Hilbert-space dimension and stores history with shape (time, N_outside, N). The rank-6 source is evolved with its column weights so that history stays (time, N_outside, 6)."
+  ],
+  "backend": "streamed",
+  "phases": {
+    "verify_small": {
+      "complete": true,
+      "nf": 24,
+      "nq": 96,
+      "action_relative_random": 4.531090817357182e-15,
+      "action_relative_packet": 3.753764274373907e-15,
+      "band_invariance": 1.9134213540303943e-14,
+      "band_reconstruction": 2.3830668946468854e-15,
+      "fine_identity_image": false,
+      "matrix_shape": [
+        48,
+        48
+      ],
+      "commutator_norm": 91.21078530359848,
+      "covariance_commutator_norm": 24.114781824373615,
+      "fine_operator_image": false
+    },
+    "verify_stored": {
+      "complete": true,
+      "initial_action_relative": 2.845628578658056e-13,
+      "final_action_relative": 2.5876300098573036e-13,
+      "final_rate_relative": 0.0,
+      "initial_prolongation_gap": 0.0,
+      "fine_identity_image": false
+    },
+    "probe": {
+      "complete": true,
+      "seconds": 1.9496839999999998,
+      "steps": 2,
+      "comparison": {
+        "complete": true,
+        "times": [
+          0.0,
+          0.005,
+          0.01
+        ],
+        "t_start": 0.0,
+        "t_end": 0.01,
+        "steps": 2,
+        "case": "nf512_dt_0_0005",
+        "occupation_error": {
+          "max_abs": 5.787699418158265e-05,
+          "signal_max_abs": 0.7499999999999998,
+          "relative_to_signal": 7.716932557544356e-05,
+          "change_from_initial_max_abs": 0.01764381842805629,
+          "relative_to_change": 0.003280298673304733
+        },
+        "coherence_error": {
+          "max_abs": 1.63246872483786e-07,
+          "signal_max_abs": 6.422768222849213e-05,
+          "relative_to_signal": 0.002541690231060025,
+          "change_from_initial_max_abs": 6.422768222844886e-05,
+          "relative_to_change": 0.002541690231061737
+        },
+        "phase_error": {
+          "defined": true,
+          "max_abs_radians": 0.00019172332841919015,
+          "samples": 2,
+          "reference_peak_abs": 6.422768222849213e-05
+        },
+        "occupation_change_max_abs": 0.01764381842805629,
+        "allocation": {
+          "backend": "streamed",
+          "time_indexed_exterior_propagator_bytes": 0,
+          "stores_dense_exterior_propagator": false,
+          "history_shape": [
+            3,
+            1022,
+            6
+          ],
+          "history_bytes": 294336,
+          "frame_bytes": 16777216,
+          "frame_completion": "dense-null-space-once",
+          "current_exterior_block_bytes": 16711744,
+          "peak_column_workspace_bytes": 228928,
+          "avoided_dense_propagator_bytes": 50135232,
+          "propagator_storage": "none",
+          "output_times": 3,
+          "exterior_dimension": 1022,
+          "retained_dimension": 2
+        },
+        "trapezoid_residual_max": 2.8118846054444253e-16,
+        "history_norm": 0.20008180604124381,
+        "initial_exterior_norm": 2.0,
+        "observer_preserved": true,
+        "weights": [
+          0.75,
+          0.75,
+          0.5,
+          0.5,
+          0.25,
+          0.25
+        ],
+        "backend": "streamed"
+      },
+      "hamiltonian_builds": 5,
+      "hamiltonian_hits": 6,
+      "matrix_bytes": 16777216
+    },
+    "plan": {
+      "main_steps": 7,
+      "refine": true,
+      "omissions": true,
+      "independent_full": true,
+      "estimate_s": 44.355311,
+      "admitted": true,
+      "forced_domain": "pilot"
+    },
+    "comparison": {
+      "complete": true,
+      "times": [
+        0.0,
+        0.005,
+        0.01,
+        0.015,
+        0.02,
+        0.025,
+        0.03,
+        0.035
+      ],
+      "t_start": 0.0,
+      "t_end": 0.035,
+      "steps": 7,
+      "case": "nf512_dt_0_0005",
+      "occupation_error": {
+        "max_abs": 0.0004995332964643495,
+        "signal_max_abs": 0.7499999999999998,
+        "relative_to_signal": 0.0006660443952857995,
+        "change_from_initial_max_abs": 0.1876529543525184,
+        "relative_to_change": 0.002662006032294826
+      },
+      "coherence_error": {
+        "max_abs": 2.560339698158102e-06,
+        "signal_max_abs": 0.0007659885446204019,
+        "relative_to_signal": 0.003342530010585106,
+        "change_from_initial_max_abs": 0.0007659885446202702,
+        "relative_to_change": 0.003342530010585681
+      },
+      "phase_error": {
+        "defined": true,
+        "max_abs_radians": 0.0012901833396748129,
+        "samples": 7,
+        "reference_peak_abs": 0.0007659885446204019
+      },
+      "occupation_change_max_abs": 0.1876529543525184,
+      "allocation": {
+        "backend": "streamed",
+        "time_indexed_exterior_propagator_bytes": 0,
+        "stores_dense_exterior_propagator": false,
+        "history_shape": [
+          8,
+          1022,
+          6
+        ],
+        "history_bytes": 784896,
+        "frame_bytes": 16777216,
+        "frame_completion": "dense-null-space-once",
+        "current_exterior_block_bytes": 16711744,
+        "peak_column_workspace_bytes": 228928,
+        "avoided_dense_propagator_bytes": 133693952,
+        "propagator_storage": "none",
+        "output_times": 8,
+        "exterior_dimension": 1022,
+        "retained_dimension": 2
+      },
+      "trapezoid_residual_max": 2.8118846054444253e-16,
+      "history_norm": 1.020114910796508,
+      "initial_exterior_norm": 2.0,
+      "observer_preserved": true,
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "backend": "streamed"
+    },
+    "refinement": {
+      "complete": true,
+      "fine_steps": 4,
+      "window": [
+        0.0,
+        0.01
+      ],
+      "coarse_against_fine_full": {
+        "max_abs": 5.788866508071866e-05,
+        "signal_max_abs": 0.7499999999999998,
+        "relative_to_signal": 7.718488677429157e-05,
+        "change_from_initial_max_abs": 0.017643830098955426,
+        "relative_to_change": 0.0032809579754537457
+      },
+      "fine_against_fine_full": {
+        "max_abs": 1.4486698050486524e-05,
+        "signal_max_abs": 0.7499999999999998,
+        "relative_to_signal": 1.9315597400648705e-05,
+        "change_from_initial_max_abs": 0.017643830098955426,
+        "relative_to_change": 0.0008210631121042241
+      },
+      "error_decreased": true
+    },
+    "omissions": {
+      "omissions": {
+        "memory": {
+          "occupation_error_against_full": {
+            "max_abs": 0.019196365211694877,
+            "signal_max_abs": 0.7499999999999998,
+            "relative_to_signal": 0.025595153615593176,
+            "change_from_initial_max_abs": 0.01764381842805629,
+            "relative_to_change": 1.0879938087080858
+          },
+          "history_norm": 0.0,
+          "initial_exterior_norm": 2.0,
+          "exceeds_reduction_error": true
+        },
+        "outside_drive": {
+          "occupation_error_against_full": {
+            "max_abs": 0.0014796716168330448,
+            "signal_max_abs": 0.7499999999999998,
+            "relative_to_signal": 0.001972895489110727,
+            "change_from_initial_max_abs": 0.01764381842805629,
+            "relative_to_change": 0.08386345749739452
+          },
+          "history_norm": 0.20002579315843946,
+          "initial_exterior_norm": 2.0,
+          "exceeds_reduction_error": true
+        },
+        "coupling": {
+          "occupation_error_against_full": {
+            "max_abs": 0.017643878295767523,
+            "signal_max_abs": 0.7499999999999998,
+            "relative_to_signal": 0.02352517106102337,
+            "change_from_initial_max_abs": 0.01764381842805629,
+            "relative_to_change": 1.0000033931266907
+          },
+          "history_norm": 0.0,
+          "initial_exterior_norm": 2.0,
+          "exceeds_reduction_error": true
+        }
+      },
+      "active": [
+        "memory",
+        "outside_drive",
+        "coupling"
+      ]
+    },
+    "full_window": {
+      "complete": true,
+      "case": "nf512_dt_0_0005",
+      "substeps": 2,
+      "seconds": 41.583679,
+      "additional_cpu_seconds": 93.13318899999999,
+      "t_start": 0.0,
+      "t_end": 0.05,
+      "steps": 10,
+      "declared_geometry": "piecewise-linear-stored-Q",
+      "comparison": {
+        "complete": true,
+        "times": [
+          0.0,
+          0.005,
+          0.01,
+          0.015,
+          0.02,
+          0.025,
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "t_start": 0.0,
+        "t_end": 0.05,
+        "steps": 10,
+        "case": "nf512_dt_0_0005",
+        "occupation_error": {
+          "max_abs": 0.0007353273811995242,
+          "signal_max_abs": 0.7499999999999998,
+          "relative_to_signal": 0.0009804365082660327,
+          "change_from_initial_max_abs": 0.3305919037025379,
+          "relative_to_change": 0.0022242752256303342
+        },
+        "coherence_error": {
+          "max_abs": 5.5090520756831094e-06,
+          "signal_max_abs": 0.001504387091847762,
+          "relative_to_signal": 0.003661991056382052,
+          "change_from_initial_max_abs": 0.001504387091847595,
+          "relative_to_change": 0.003661991056382459
+        },
+        "phase_error": {
+          "defined": true,
+          "max_abs_radians": 0.0014932598604091177,
+          "samples": 10,
+          "reference_peak_abs": 0.001504387091847762
+        },
+        "occupation_change_max_abs": 0.3305919037025379,
+        "allocation": {
+          "backend": "streamed",
+          "time_indexed_exterior_propagator_bytes": 0,
+          "stores_dense_exterior_propagator": false,
+          "history_shape": [
+            11,
+            1022,
+            6
+          ],
+          "history_bytes": 1079232,
+          "frame_bytes": 16777216,
+          "frame_completion": "dense-null-space-once",
+          "current_exterior_block_bytes": 16711744,
+          "peak_column_workspace_bytes": 228928,
+          "avoided_dense_propagator_bytes": 183829184,
+          "propagator_storage": "none",
+          "output_times": 11,
+          "exterior_dimension": 1022,
+          "retained_dimension": 2
+        },
+        "trapezoid_residual_max": 4.616179710183972e-16,
+        "history_norm": 1.630924524395458,
+        "initial_exterior_norm": 2.0,
+        "observer_preserved": true,
+        "weights": [
+          0.75,
+          0.75,
+          0.5,
+          0.5,
+          0.25,
+          0.25
+        ],
+        "backend": "streamed"
+      },
+      "saved_autonomous": {
+        "field_frames_stored": "initial and final spinors only",
+        "initial_occupation": [
+          0.7499999999999997,
+          0.7500000000000003
+        ],
+        "final_occupation": [
+          0.647437990920533,
+          0.41940775506601946
+        ],
+        "initial_coherence": {
+          "real": -4.1858731459339347e-35,
+          "imag": 8.326672684688674e-17
+        },
+        "final_coherence": {
+          "real": -0.0012257603282236258,
+          "imag": 0.000872196803783491
+        },
+        "occupation_change": [
+          -0.10256200907946667,
+          -0.33059224493398087
+        ],
+        "conditional_full_versus_saved": {
+          "max_abs": 3.4123144243558556e-07,
+          "signal_max_abs": 0.647437990920533,
+          "relative_to_signal": 5.270488405390295e-07,
+          "change_max_abs": 0.33059224493398087,
+          "relative_to_change": 1.0321822355625109e-06
+        },
+        "conditional_retained_versus_saved": {
+          "max_abs": 0.0007356686126419598,
+          "signal_max_abs": 0.647437990920533,
+          "relative_to_signal": 0.0011362765592361668,
+          "change_max_abs": 0.33059224493398087,
+          "relative_to_change": 0.0022253051120085183
+        },
+        "volterra_versus_conditional_full": {
+          "max_abs": 0.0007353273811995242,
+          "signal_max_abs": 0.7499999999999998,
+          "relative_to_signal": 0.0009804365082660327,
+          "change_from_initial_max_abs": 0.3305919037025379,
+          "relative_to_change": 0.0022242752256303342
+        },
+        "volterra_coherence": {
+          "max_abs": 5.5090520756831094e-06,
+          "signal_max_abs": 0.001504387091847762,
+          "relative_to_signal": 0.003661991056382052,
+          "change_from_initial_max_abs": 0.001504387091847595,
+          "relative_to_change": 0.003661991056382459
+        },
+        "volterra_phase": {
+          "defined": true,
+          "max_abs_radians": 0.0014932598604091177,
+          "samples": 10,
+          "reference_peak_abs": 0.001504387091847762
+        }
+      },
+      "interpolation_variants": {
+        "saved_nodal_Q_rate_series": false,
+        "declared_geometry": "piecewise-linear-stored-Q",
+        "hermite_slopes": "finite differences of stored Q frames, not saved Q_dot",
+        "rate_gap": "Q_dot is stored only as the final coarse sample. A Hermite curve through the frames is not determined by saved rates.",
+        "midpoint_max_abs_linear_versus_hermite": 8.693988543928555e-05,
+        "hermite_node_gap": 0.0,
+        "saved_final_rate_versus_last_secant": {
+          "saved_rate": "final coarse Q_dot only",
+          "max_abs": 0.07335046359043451,
+          "saved_rate_max_abs": 1.210763036349848,
+          "relative_to_saved_rate": 0.060582014306918446
+        }
+      },
+      "hermite_indicator": {
+        "occupation_error_against_declared_full": {
+          "max_abs": 2.915936925806939e-07,
+          "signal_max_abs": 0.6474382171022804,
+          "relative_to_signal": 4.5038072340828276e-07,
+          "change_max_abs": 0.3305919037025379,
+          "relative_to_change": 8.820351899575434e-07
+        },
+        "coherence_error_against_declared_full": {
+          "max_abs": 5.023419431878869e-10,
+          "signal_max_abs": 0.001504387091847762,
+          "relative_to_signal": 3.3391800947380227e-07,
+          "change_from_initial_max_abs": 0.001504387091847595,
+          "relative_to_change": 3.339180094738394e-07
+        },
+        "role": "indicator of a prescribed finite-difference Hermite Q, not the declared evolution"
+      },
+      "omissions": {
+        "omissions": {
+          "memory": {
+            "occupation_error_against_full": {
+              "max_abs": 0.36709975607817125,
+              "signal_max_abs": 0.7499999999999998,
+              "relative_to_signal": 0.4894663414375618,
+              "change_from_initial_max_abs": 0.3305919037025379,
+              "relative_to_change": 1.1104317799884253
+            },
+            "history_norm": 0.0,
+            "initial_exterior_norm": 2.0,
+            "exceeds_reduction_error": true
+          },
+          "outside_drive": {
+            "occupation_error_against_full": {
+              "max_abs": 0.028764901996227665,
+              "signal_max_abs": 0.7499999999999998,
+              "relative_to_signal": 0.0383532026616369,
+              "change_from_initial_max_abs": 0.3305919037025379,
+              "relative_to_change": 0.08701030386427713
+            },
+            "history_norm": 1.6219873421539772,
+            "initial_exterior_norm": 2.0,
+            "exceeds_reduction_error": true
+          }
+        },
+        "active": [
+          "memory",
+          "outside_drive"
+        ]
+      },
+      "field_cross_norm": 7.106664191995381e-16,
+      "field_cross_active": false,
+      "correlated_cross_control": {
+        "control": "prescribed_six_mode_problem",
+        "cross_norm": 0.0023549907515443206,
+        "covariance_separation": 0.0014197589797623497,
+        "active": true,
+        "stores_dense_exterior_propagator": false
+      },
+      "allocation": {
+        "backend": "streamed",
+        "time_indexed_exterior_propagator_bytes": 0,
+        "stores_dense_exterior_propagator": false,
+        "history_shape": [
+          11,
+          1022,
+          6
+        ],
+        "history_bytes": 1079232,
+        "frame_bytes": 16777216,
+        "frame_completion": "dense-null-space-once",
+        "current_exterior_block_bytes": 16711744,
+        "peak_column_workspace_bytes": 228928,
+        "avoided_dense_propagator_bytes": 183829184,
+        "propagator_storage": "none",
+        "output_times": 11,
+        "exterior_dimension": 1022,
+        "retained_dimension": 2
+      },
+      "pilot_window_unchanged": [
+        0.0,
+        0.035
+      ]
+    }
+  },
+  "budget_s": 60.0,
+  "safety": 1.15,
+  "requested_case": "nf512_dt_0_0005",
+  "requested_domain": "pilot",
+  "requested_substeps": 1,
+  "cpu_seconds_this_process": 18.504784,
+  "estimate_all_stored_frames_s": 48.74209999999999,
+  "estimate_all_stored_frames_substeps_2_s": 97.48419999999999,
+  "estimate_hundred_output_nodes_s": 4874.209999999999,
+  "hundred_node_geometry": "not stored; extrapolation assumes a Q sample at every output node",
+  "initial_source_blocks": {
+    "parent_norm": 1.0606601717798214,
+    "cross_norm": 7.106664191995381e-16,
+    "parent_diagonal": [
+      0.7500000000000004,
+      0.7499999999999997
+    ]
+  },
+  "finite_approximation_domain": {
+    "case": "nf512_dt_0_0005",
+    "fermion_band": 512,
+    "quadrature": 2048,
+    "length": 8.0,
+    "spinor_dimension": 1024,
+    "observer": "initial region-0 plus and minus source columns, unphased",
+    "source": "six initial episode columns and stored occupation weights",
+    "gram_defect": 2.220446049250313e-16,
+    "time_window": [
+      0.0,
+      0.035
+    ],
+    "output_steps": 7,
+    "stored_frame_count": 11,
+    "geometry": "piecewise linear stored fine Q; static calibration lapse and shift",
+    "interpolation_scale": 8.890157473947016e-05,
+    "time_resolution_geometry_gap": 4.8995807411245096e-12,
+    "reference": "independent full-band midpoint column evolution on the same H(Q(t))",
+    "reduction": "nsc_evolving_reduction.evolve_retained_region backend='streamed'",
+    "full_stored_window": false,
+    "regeneration": false,
+    "production_rk4_nodes": false,
+    "stress": false
+  },
+  "headline": {
+    "complete": true,
+    "times": [
+      0.0,
+      0.005,
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03,
+      0.035
+    ],
+    "t_start": 0.0,
+    "t_end": 0.035,
+    "steps": 7,
+    "case": "nf512_dt_0_0005",
+    "occupation_error": {
+      "max_abs": 0.0004995332964643495,
+      "signal_max_abs": 0.7499999999999998,
+      "relative_to_signal": 0.0006660443952857995,
+      "change_from_initial_max_abs": 0.1876529543525184,
+      "relative_to_change": 0.002662006032294826
+    },
+    "coherence_error": {
+      "max_abs": 2.560339698158102e-06,
+      "signal_max_abs": 0.0007659885446204019,
+      "relative_to_signal": 0.003342530010585106,
+      "change_from_initial_max_abs": 0.0007659885446202702,
+      "relative_to_change": 0.003342530010585681
+    },
+    "phase_error": {
+      "defined": true,
+      "max_abs_radians": 0.0012901833396748129,
+      "samples": 7,
+      "reference_peak_abs": 0.0007659885446204019
+    },
+    "occupation_change_max_abs": 0.1876529543525184,
+    "allocation": {
+      "backend": "streamed",
+      "time_indexed_exterior_propagator_bytes": 0,
+      "stores_dense_exterior_propagator": false,
+      "history_shape": [
+        8,
+        1022,
+        6
+      ],
+      "history_bytes": 784896,
+      "frame_bytes": 16777216,
+      "frame_completion": "dense-null-space-once",
+      "current_exterior_block_bytes": 16711744,
+      "peak_column_workspace_bytes": 228928,
+      "avoided_dense_propagator_bytes": 133693952,
+      "propagator_storage": "none",
+      "output_times": 8,
+      "exterior_dimension": 1022,
+      "retained_dimension": 2
+    },
+    "trapezoid_residual_max": 2.8118846054444253e-16,
+    "history_norm": 1.020114910796508,
+    "initial_exterior_norm": 2.0,
+    "observer_preserved": true,
+    "weights": [
+      0.75,
+      0.75,
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ],
+    "backend": "streamed"
+  },
+  "bindings": {
+    "names": [
+      "coefficient:A",
+      "coefficient:C_W",
+      "coefficient:C_F",
+      "coefficient:C_E",
+      "coefficient:C_box",
+      "coefficient:flux",
+      "coefficient:V_rel",
+      "calibration:Mweight_executed",
+      "calibration:a0",
+      "calibration:beta0",
+      "calibration:b0",
+      "calibration:phase",
+      "calibration:kappa",
+      "calibration:Omega",
+      "calibration:k",
+      "calibration:ell",
+      "calibration:length"
+    ],
+    "values": [
+      0.04501936182826115,
+      -0.0008441130342798952,
+      0.01125484045706527,
+      0.0005158468542821582,
+      -0.0005627420228532635,
+      4.0,
+      0.0,
+      1.533809137604,
+      0.977957402407,
+      0.325985800803,
+      0.2457850789,
+      -0.842669616901,
+      1.0,
+      1.5,
+      1.0,
+      1.0,
+      8.0
+    ],
+    "time_resolution_geometry_gap": 4.8995807411245096e-12,
+    "interpolation": {
+      "uniform_stored_frames": true,
+      "stored_frame_step": 0.005,
+      "max_abs_second_difference": 0.0007112125979157613,
+      "midpoint_linear_scale": 8.890157473947016e-05,
+      "meaning": "max |second difference| / 8 on the stored frames; linear midpoint scale for a uniform quadratic"
+    },
+    "geometry_rate_series_stored": false,
+    "final_coarse_Q_dot_norm": 6.84220242887295,
+    "dirac_geometry_argument": "stored fine Q",
+    "stored_but_not_dirac_matrix_entries": [
+      "r",
+      "chi",
+      "p_Q",
+      "p_r",
+      "p_chi"
+    ],
+    "episode_verdict_label": "MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL",
+    "episode_verdict_used_as_acceptance": false,
+    "episode_npz_sha256": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77"
+  },
+  "gram_defect": 2.220446049250313e-16,
+  "next_commands": [
+    "python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --domain stored-frames --case nf512_dt_0_0005 --substeps 2 --budget-s 600",
+    "python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --domain stored-frames --case nf512_dt_0_00025 --substeps 2 --budget-s 600"
+  ],
+  "next_command_claim": "On the full stored frame window, with the exterior midpoint refined by substeps=2, the streamed region-0 occupation and coherence agree with an independent full-band evolution of the same initial columns and weights to the measured truncation, at both saved resolutions. The geometry schedule stays the stored frames. The run does not regenerate a trajectory and does not certify a stress.",
+  "hamiltonian_builds": 19,
+  "hamiltonian_hits": 85,
+  "stop_reason": null,
+  "payload_bytes": 30058,
+  "payload_within_64MiB": true,
+  "requests": {
+    "stored-frames": {
+      "domain": "stored-frames",
+      "case": "nf512_dt_0_0005",
+      "substeps": 2,
+      "source": "30d8eb27a3c14b9201744b9ce5eadf0664470c99a1bff1700b11228629b5a59e",
+      "backend": "streamed",
+      "interpolation": "piecewise-linear-stored-Q",
+      "memory": true,
+      "outside_drive": true,
+      "coupling": true,
+      "drop_cross_covariance": false
+    },
+    "pilot": {
+      "domain": "pilot",
+      "case": "nf512_dt_0_0005",
+      "substeps": 1,
+      "source": "30d8eb27a3c14b9201744b9ce5eadf0664470c99a1bff1700b11228629b5a59e",
+      "backend": "streamed",
+      "interpolation": "piecewise-linear-stored-Q",
+      "memory": true,
+      "outside_drive": true,
+      "coupling": true,
+      "drop_cross_covariance": false
+    }
+  },
+  "full_window_cpu_seconds": 93.133264,
+  "full_window_status": "MEASURED_STORED_FRAMES"
+}

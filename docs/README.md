@@ -8,6 +8,12 @@ constrained calculation into a settled theory.
 |---|---|
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
+| Regeneration controls on the saved episode | [Note](../lab/docs/nsc-regeneration-controls.md), [record](../lab/results/development/nsc-regeneration-controls-v1.json) |
+| Regeneration-controls successor | [Record](../lab/results/development/nsc-regeneration-controls-v2.json) |
+| Conditional local response | [Note](../lab/docs/nsc-coupled-local-response.md), [record](../lab/results/development/nsc-coupled-local-response-v1.json) |
+| Spherical null expansion | [Note](../lab/docs/nsc-spherical-null-expansion.md), [record](../lab/results/development/nsc-spherical-null-expansion-v1.json) |
+| Local-boundary review | [Record](../lab/results/development/nsc-local-boundary-review-v1.json) |
+| Initial geometry-graded window | [Note](../lab/docs/nsc-geometry-graded-window.md), [record](../lab/results/development/nsc-geometry-graded-window-v1.json) |
 | Both papers | [papers.md](papers.md) |
 | Reproduction | [reproducing.md](reproducing.md) |
 | How the laboratory was imported | [repository-consolidation.md](repository-consolidation.md) |
@@ -42,8 +48,16 @@ Same name, different bytes:
 - `nsc-quantum-measure-reuse.md` — the laboratory copy adds a paragraph on the canonical spherical action map. The `docs/` copy does not.
 
 Notes that exist only under `lab/docs/` are later or laboratory-only strands,
-including the claim ledger, the active code map, and the spherical-coupling
-series. `lab/archive/` is historical material inside its recorded domain.
+including the claim ledger, the active code map, the spherical-coupling
+series, and the saved consumers
+[nsc-regeneration-controls.md](../lab/docs/nsc-regeneration-controls.md),
+[nsc-coupled-local-response.md](../lab/docs/nsc-coupled-local-response.md),
+[nsc-spherical-null-expansion.md](../lab/docs/nsc-spherical-null-expansion.md),
+and
+[nsc-geometry-graded-window.md](../lab/docs/nsc-geometry-graded-window.md).
+Those notes have no `docs/` copy. The controls successor and the
+local-boundary review are JSON records under `lab/results/development/`.
+`lab/archive/` is historical material inside its recorded domain.
 
 The public repository `nsc-public-polish` is a separate Git history, not a
 worktree of this one. It has no `lab/` tree. Its shared `docs/` names matched

@@ -1,0 +1,599 @@
+{
+  "schema": "NSC-GEOMETRY-GRADED-WINDOW-v1",
+  "status": "INITIAL_GRADED_COMPRESSION_NOT_INVARIANT",
+  "cpu_seconds": 2.248243,
+  "cpu_limit_seconds": 20.0,
+  "operator": "sigma2 {L/Q, P}/2 + sigma1 kappa L - {beta, P}/2",
+  "operator_owner": "nsc_spherical_coupling.apply_dirac",
+  "direct_operator_owner": "nsc_conformal_adm_source.direct_hamiltonian",
+  "packet_owner": "nsc_spherical_coupling.prepare_rank6",
+  "galerkin_owner": "nsc_spherical_galerkin_coupling.build_grid",
+  "action_owner": "nsc_spherical_feedback_action.first_order_density",
+  "theorem_owner": "docs/nsc-nested-qualities.md",
+  "omega": 1.5,
+  "kappa": 1,
+  "q0": 0.25132493326913924,
+  "calibration": {
+    "a0": 0.977957402407,
+    "beta0": 0.325985800803,
+    "b0": 0.2457850789,
+    "phase": -0.842669616901,
+    "k": 1.0,
+    "ell": 1.0,
+    "period": 8.0
+  },
+  "relation": {
+    "J_nn": "Omega^n H_derived",
+    "J_n_n1": "Omega^n B01_derived",
+    "block_coefficient": "B01_derived",
+    "congruence_normalized_B": "Omega^{-1/2} B01_derived",
+    "published_recurrence_uses": "B01_derived with the factor 1/Omega",
+    "normalized_B_is_not_the_block_coefficient": true
+  },
+  "translation": {
+    "identity": "H T_1 = Omega T_1 H for coefficients proportional to Omega^x and constant Q",
+    "quadrature_relative": 1.8325059743736778e-16,
+    "direct_operator_relative": 4.8221671819471065e-15,
+    "direct_versus_closed_relative": 6.569404826181978e-15,
+    "quadrature_nodes": 96,
+    "direct_points": 1024,
+    "direct_period": 4.0,
+    "gaussian_center": 0.5,
+    "gaussian_width": 0.08,
+    "kappa": 1,
+    "Q": 0.25132493326913924
+  },
+  "lowdin": {
+    "points": 512,
+    "problems": [],
+    "gram_offdiag_max": 0.0,
+    "lowdin_deviation_max": 0.0,
+    "envelope_imag_after_lowdin": 0.0,
+    "real_envelope_orthonormal_defect": 0.0,
+    "column_orthonormal_defect": 2.220446049250313e-16,
+    "phase_on_minus_spinor_column": true,
+    "phase_applied_to_odd_lobe": false,
+    "carrier": "exp(+i k (x-n*ell)) on plus; minus is exp(i phase) times the conjugate",
+    "minus_columns": "exp(i*recorded_phase) times conjugate of plus columns",
+    "half_density": "sqrt(dx) samples, ell2 orthonormal",
+    "support_outside_naive": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bridge_packet_mass": 0.0,
+    "reconstructed_envelope_max": 2.7755575615628914e-17,
+    "parity_even_odd_overlap": -1.4278559089343083e-22,
+    "continuum_lobe_norms": {
+      "even": 0.009848179605063468,
+      "odd": 0.0010645862905838113
+    }
+  },
+  "gauge_nf512": {
+    "profile_equals_x_on_packet_arc": 0.0,
+    "length_matches_supplied_gauge": 2.220446049250313e-16,
+    "shift_matches_supplied_gauge": 4.440892098500626e-16,
+    "initial_Q_span": [
+      0.25132493326910366,
+      0.251324933269177
+    ]
+  },
+  "continuum": {
+    "quadrature_gap_64_vs_96": 2.6362595803518882e-14,
+    "versus_nf512_max": 7.866272904338887e-14,
+    "gram_offdiag_max": 3.3306690738754696e-16,
+    "lowdin_deviation_max": 2.220446049250313e-16,
+    "support": [
+      {
+        "region": 0,
+        "mass": 1.0,
+        "mass_outside_naive_support": 0.0
+      },
+      {
+        "region": 1,
+        "mass": 1.0,
+        "mass_outside_naive_support": 0.0
+      },
+      {
+        "region": 2,
+        "mass": 1.0000000000000004,
+        "mass_outside_naive_support": 0.0
+      }
+    ],
+    "grading": {
+      "diagonal_scale_1": 1.109531845740197e-15,
+      "diagonal_scale_2": 2.7311356065596506e-15,
+      "link_scale_1": 1.9860273225978185e-15,
+      "corner_max": 0.0,
+      "corner_frobenius": 0.0,
+      "link_frobenius": 6.200536369515084,
+      "onsite_frobenius": 2.2538855339165216,
+      "hermiticity": 4.137098649770188e-15
+    },
+    "massless_kappa0_diagonal_scale_1": 1.2889432992603317e-15,
+    "massless_kappa0_corner": 0.0,
+    "massless_H": {
+      "real": [
+        [
+          0.999999999998596,
+          -4.1634364010468955e-17
+        ],
+        [
+          5.2393947122663546e-18,
+          2.00000000000026
+        ]
+      ],
+      "imag": [
+        [
+          -1.7633531895940024e-16,
+          1.2503288808291087e-17
+        ],
+        [
+          2.2208874365503462e-17,
+          5.12319407817291e-17
+        ]
+      ]
+    }
+  },
+  "nf256": {
+    "grading": {
+      "diagonal_scale_1": 1.921269153838553e-13,
+      "diagonal_scale_2": 8.148785449037319e-13,
+      "link_scale_1": 3.2052344940249964e-13,
+      "corner_max": 2.3090541752326173e-09,
+      "corner_frobenius": 2.581601008173463e-09,
+      "link_frobenius": 6.200536359599563,
+      "onsite_frobenius": 2.2538855327854743,
+      "hermiticity": 9.49159525931065e-15
+    },
+    "H": {
+      "real": [
+        [
+          0.9999999994813249,
+          2.8835100973623184e-11
+        ],
+        [
+          2.883550342946961e-11,
+          1.9999999989656392
+        ]
+      ],
+      "imag": [
+        [
+          -9.71445146547012e-16,
+          0.2000000000930699
+        ],
+        [
+          -0.20000000009307056,
+          4.440892098500626e-16
+        ]
+      ]
+    },
+    "B01": {
+      "real": [
+        [
+          2.3473135537181165,
+          0.043082867655204415
+        ],
+        [
+          0.04308286765520519,
+          4.69462710744344
+        ]
+      ],
+      "imag": [
+        [
+          1.4759725193544286,
+          0.023020565371242085
+        ],
+        [
+          -0.02302056537124164,
+          -2.951945038713355
+        ]
+      ]
+    },
+    "kinetic_diagonal_scale_1": 2.054943948681734e-14,
+    "mass_diagonal_scale_1": 1.921269153838553e-13,
+    "shift_diagonal_scale_1": 5.99588885117963e-15,
+    "kinetic_link_scale_1": 1.878896260701261e-13,
+    "mass_link_scale_1": 3.2052344940249964e-13,
+    "shift_link_scale_1": 6.449316033806172e-14,
+    "term_sum_gap": 4.440892098500626e-16,
+    "projection_leakage": [
+      0.9314881281104787,
+      0.9316271240699314,
+      0.9032511496844521,
+      0.9033527057588613,
+      0.9656238913100306,
+      0.9658068297187984
+    ],
+    "projection_leakage_max": 0.9658068297187984,
+    "captured_fraction_min": 0.259262738681292,
+    "gram_defect": 4.218847493575595e-15,
+    "bridge_image_fraction": 1.4302585671283081e-09,
+    "packet_bridge_mass": 1.2986293569402636e-11,
+    "direct_operator_gap": 1.7694739999866547e-14,
+    "corner_frobenius": 2.581601008173463e-09
+  },
+  "nf512": {
+    "grading": {
+      "diagonal_scale_1": 5.0753604913572506e-14,
+      "diagonal_scale_2": 6.750199678647375e-14,
+      "link_scale_1": 5.667664074431335e-14,
+      "corner_max": 1.0588534099594465e-14,
+      "corner_frobenius": 1.2001004173602996e-14,
+      "link_frobenius": 6.200536369515037,
+      "onsite_frobenius": 2.253885533916545,
+      "hermiticity": 8.188600426433447e-15
+    },
+    "H": {
+      "real": [
+        [
+          0.9999999999985746,
+          7.26640969617165e-14
+        ],
+        [
+          7.252531908363835e-14,
+          2.0000000000002967
+        ]
+      ],
+      "imag": [
+        [
+          -1.3877787807814457e-15,
+          0.19999999999991724
+        ],
+        [
+          -0.19999999999991772,
+          8.049116928532385e-16
+        ]
+      ]
+    },
+    "B01": {
+      "real": [
+        [
+          2.347313557748459,
+          0.04308286767320535
+        ],
+        [
+          0.04308286767320629,
+          4.694627115504107
+        ]
+      ],
+      "imag": [
+        [
+          1.4759725212754646,
+          0.023020565377586788
+        ],
+        [
+          -0.023020565377584346,
+          -2.9519450425554696
+        ]
+      ]
+    },
+    "kinetic_diagonal_scale_1": 3.9099296353765284e-14,
+    "mass_diagonal_scale_1": 4.20579940652362e-15,
+    "shift_diagonal_scale_1": 1.2006811979477666e-14,
+    "kinetic_link_scale_1": 4.369260109715201e-14,
+    "mass_link_scale_1": 8.989550626504553e-15,
+    "shift_link_scale_1": 1.3918141256587919e-14,
+    "term_sum_gap": 4.440892098500626e-16,
+    "projection_leakage": [
+      0.9314881316842005,
+      0.9316271276415251,
+      0.903251154830996,
+      0.9033527109078547,
+      0.9656238930995638,
+      0.9658068315009373
+    ],
+    "projection_leakage_max": 0.9658068315009373,
+    "captured_fraction_min": 0.2592627320424594,
+    "gram_defect": 6.661338147750939e-16,
+    "bridge_image_fraction": 8.594519890048562e-15,
+    "packet_bridge_mass": 1.9263307194859508e-17,
+    "direct_operator_gap": 2.630877300008159e-14,
+    "corner_frobenius": 1.2001004173602996e-14
+  },
+  "derived": {
+    "H": {
+      "real": [
+        [
+          0.9999999999985746,
+          7.26640969617165e-14
+        ],
+        [
+          7.252531908363835e-14,
+          2.0000000000002967
+        ]
+      ],
+      "imag": [
+        [
+          -1.3877787807814457e-15,
+          0.19999999999991724
+        ],
+        [
+          -0.19999999999991772,
+          8.049116928532385e-16
+        ]
+      ]
+    },
+    "B01": {
+      "real": [
+        [
+          2.347313557748459,
+          0.04308286767320535
+        ],
+        [
+          0.04308286767320629,
+          4.694627115504107
+        ]
+      ],
+      "imag": [
+        [
+          1.4759725212754646,
+          0.023020565377586788
+        ],
+        [
+          -0.023020565377584346,
+          -2.9519450425554696
+        ]
+      ]
+    },
+    "normalized_B": {
+      "real": [
+        [
+          1.9165734942669135,
+          0.035177014151733826
+        ],
+        [
+          0.0351770141517346,
+          3.833146988539697
+        ]
+      ],
+      "imag": [
+        [
+          1.2051265171646923,
+          0.018796212921822802
+        ],
+        [
+          -0.018796212921820807,
+          -2.410253034333092
+        ]
+      ]
+    },
+    "from": "nf512 prolonged prepare_rank6 columns, initial constant Q"
+  },
+  "algebra": {
+    "assembly_max": 6.750199678647375e-14,
+    "schur_matches_resolvent": 1.6667795129466247e-16,
+    "gamma_matches_schur": 4.742874840267547e-16,
+    "omitted_omega_factor": 0.10767642857443589,
+    "normalized_B_substituted_as_block_coefficient": 0.011716703402736967,
+    "reversed_link_on_terminal_block": 1.355682758883831,
+    "congruence_diagonal_max": 3.339277725354393e-14,
+    "congruence_link_max": 3.055191755197638e-14
+  },
+  "historical_rational_example": {
+    "fitted": false,
+    "role": "optional example in nsc_nested_qualities.exact_controls",
+    "example_checks_pass": true,
+    "example_omega": "3/2",
+    "H_gap": 1.425416016884065e-12,
+    "B_gap": 5.405220195376315
+  },
+  "comparison": {
+    "discrete_max_abs_nf256_vs_nf512": 1.339442162796698e-08,
+    "discrete_frobenius_nf256_vs_nf512": 2.5932242097692364e-08,
+    "continuum_vs_nf512_max": 7.866272904338887e-14,
+    "projection_leakage_max_nf512": 0.9658068315009373,
+    "projection_leakage_max_nf256": 0.9658068297187984,
+    "corner_frobenius_nf512": 1.2001004173602996e-14,
+    "corner_frobenius_continuum": 0.0,
+    "link_frobenius_nf512": 6.200536369515037,
+    "leakage_and_discrete_error_are_distinct": true
+  },
+  "feedback_T_0_05": {
+    "payload": "results/development/nsc-spherical-feedback-episode-v1.npz",
+    "run": "nf512_dt_0_0005",
+    "attained_T": 0.05,
+    "evolution_rerun": false,
+    "saved_episode_renewal": false,
+    "Q_min": 0.21952178011757864,
+    "Q_max": 0.26128329853590926,
+    "q0_over_Q_min": 0.9618863689339424,
+    "q0_over_Q_max": 1.144873272146014,
+    "frame_match": 0.0,
+    "initial_packets_on_final_Q": {
+      "grading": {
+        "diagonal_scale_1": 0.012665526439756825,
+        "diagonal_scale_2": 0.04785593836319979,
+        "link_scale_1": 0.04059408339655854,
+        "corner_max": 1.0494448790791337e-14,
+        "corner_frobenius": 1.1861916725684803e-14,
+        "link_frobenius": 6.130499238892588,
+        "onsite_frobenius": 2.232155609977621,
+        "hermiticity": 5.277940006822452e-15
+      },
+      "H": {
+        "real": [
+          [
+            0.9836641579460973,
+            7.155387393709134e-14
+          ],
+          [
+            7.287226377883371e-14,
+            1.9836641579478183
+          ]
+        ],
+        "imag": [
+          [
+            -8.881784197001252e-16,
+            0.19999999999991752
+          ],
+          [
+            -0.19999999999991777,
+            -6.106226635438361e-16
+          ]
+        ]
+      },
+      "B01": {
+        "real": [
+          [
+            2.302820251914687,
+            0.043082867673205905
+          ],
+          [
+            0.04308286767320568,
+            4.6501338096703355
+          ]
+        ],
+        "imag": [
+          [
+            1.448595061421185,
+            0.02302056537758279
+          ],
+          [
+            -0.023020565377583235,
+            -2.9245675827011905
+          ]
+        ]
+      },
+      "kinetic_diagonal_scale_1": 0.012665526439745278,
+      "mass_diagonal_scale_1": 1.5979689584851895e-15,
+      "shift_diagonal_scale_1": 1.2006811979477666e-14,
+      "kinetic_link_scale_1": 0.04059408339655866,
+      "mass_link_scale_1": 1.2269973711002135e-14,
+      "shift_link_scale_1": 1.3918141256587919e-14,
+      "term_sum_gap": 8.881784197001252e-16,
+      "projection_leakage": [
+        0.9315241820157883,
+        0.931647506814731,
+        0.9027869264318613,
+        0.9031266551915306,
+        0.9647720154043907,
+        0.965398541783828
+      ],
+      "projection_leakage_max": 0.965398541783828,
+      "captured_fraction_min": 0.26077893995040796,
+      "gram_defect": 6.661338147750939e-16,
+      "bridge_image_fraction": 9.051622667675526e-15,
+      "packet_bridge_mass": 1.9263307194859508e-17,
+      "direct_operator_gap": null,
+      "corner_frobenius": 1.1861916725684803e-14
+    },
+    "final_packets_on_final_Q": {
+      "grading": {
+        "diagonal_scale_1": 0.013033606091626515,
+        "diagonal_scale_2": 0.04964689834036573,
+        "link_scale_1": 0.04187667713241974,
+        "corner_max": 3.959249335135113e-10,
+        "corner_frobenius": 3.9592548404332886e-10,
+        "link_frobenius": 6.131371531563136,
+        "onsite_frobenius": 2.2322721070544276,
+        "hermiticity": 6.404745667978754e-15
+      },
+      "H": {
+        "real": [
+          [
+            0.9834771060450407,
+            -0.0006116441053463095
+          ],
+          [
+            -0.0006116441053456434,
+            1.9840311255112302
+          ]
+        ],
+        "imag": [
+          [
+            6.938893903907228e-17,
+            0.19928784032662694
+          ],
+          [
+            -0.19928784032663183,
+            -6.938893903907228e-16
+          ]
+        ]
+      },
+      "B01": {
+        "real": [
+          [
+            2.302254871334721,
+            0.04327044410562103
+          ],
+          [
+            0.04274206424111504,
+            4.651249283486424
+          ]
+        ],
+        "imag": [
+          [
+            1.4482547843173346,
+            0.021995761857894425
+          ],
+          [
+            -0.023850981453795717,
+            -2.925239417518282
+          ]
+        ]
+      },
+      "kinetic_diagonal_scale_1": 0.1384550467515591,
+      "mass_diagonal_scale_1": 0.1402672144953116,
+      "shift_diagonal_scale_1": 0.0009373166458716866,
+      "kinetic_link_scale_1": 0.0458236111698264,
+      "mass_link_scale_1": 0.028033355179643386,
+      "shift_link_scale_1": 0.0011587062371952782,
+      "term_sum_gap": 4.965068306494546e-16,
+      "projection_leakage": [
+        0.9315264143194408,
+        0.931647056755723,
+        0.9027742997694047,
+        0.9031413759200999,
+        0.9647429220717181,
+        0.9654367490726276
+      ],
+      "projection_leakage_max": 0.9654367490726276,
+      "captured_fraction_min": 0.26063745613414124,
+      "gram_defect": 6.962745935368275e-10,
+      "bridge_image_fraction": 0.0008516663550504538,
+      "packet_bridge_mass": 0.0001262165550879969,
+      "direct_operator_gap": null,
+      "corner_frobenius": 3.9592548404332886e-10
+    },
+    "action": {
+      "owner": "nsc_spherical_feedback_action.first_order_density",
+      "functional_edited": false,
+      "sample_Q_initial": 0.25132493326913924,
+      "sample_Q_final": 0.26052153565805414,
+      "density_initial": 0.11802876312270506,
+      "density_final": 0.112801577284782,
+      "density_changed": true
+    },
+    "input_sha256": {
+      "episode_json": "9fc9f460aa076db5eb67a3136d3e53797160f2885e124b62e6fb61ee247d9954",
+      "episode_npz": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77"
+    }
+  },
+  "closed_six_mode": false,
+  "closure_rule": "closed_six_mode requires projection leakage at or below 0.1 on every column",
+  "geometry_grading_is_supplied_input": true,
+  "universal_physical_fractality": false,
+  "incoming_gate_changed": false,
+  "infinite_nest_required": false,
+  "lambdacdm_required": false,
+  "renewal_established": false,
+  "new_evolution": false,
+  "assumptions": [
+    "One angular block of the owner ordering at the calibration kappa.",
+    "L and beta are the supplied samples b0*Omega**s and beta0*Omega**s.",
+    "s equals x on the packet arc [0, 4]; outside it, s is the owner bridge.",
+    "Initial Q is the constant b0/a0. Initial radius is 1 and cancels in L and Q.",
+    "Columns are prepare_rank6, prolonged by the Galerkin fermion map.",
+    "J is V dagger H V in that orthonormal frame. Occupations do not enter J.",
+    "The depth-3 shift covariance checked here is the scaling of these three regions.",
+    "The saved T=0.05 frame is read from the episode payload and is not recomputed."
+  ],
+  "missing_connection": "The theorem turns these derived blocks into a finite window and a Schur response. The Dirac image is mostly outside the six columns, so that window is not the evolution. At the saved T=0.05 frame the same action functional and the same supplied L and beta gauge remain, while nonconstant Q removes the Omega^n scaling of the kinetic block. Renewal, an invariant six-mode structure, and a local response that stays inside the window are not obtained. The geometric grading is the supplied initial gauge.",
+  "source_hashes": {
+    "src/recursive_horizons/nsc_geometry_graded_window.py": "55c4f640548a984178106ff8ed18b797e44d9d40bf66c385b96bbd3764d60ff1",
+    "scripts/derive_nsc_geometry_graded_window.py": "ee3e88b5c95a998fb74bf4d38a686bb668b6add6fe0916c7d6a686bd31033451",
+    "tests/test_nsc_geometry_graded_window.py": "434cd71d0dd3c382d49c63650d3ffc0ee60e973a730e0fe6bd49be65d5460c4d",
+    "docs/nsc-geometry-graded-window.md": "a5b2aaa21ebcf7fed838908b04b65850866b8137dad09dec6991f6ec887757ad"
+  }
+}

@@ -1,0 +1,4923 @@
+{
+  "schema": "NSC-SPHERICAL-NULL-EXPANSION-v1",
+  "status": "MEASURED_SAMPLE_TRAPPING_CHARACTER_CHANGES",
+  "role": "Kinematic spherical null expansion of the stored T=0.05 geometry. Independent of the chi curvature identification.",
+  "evolution_performed": false,
+  "inheritance_recomputed": false,
+  "source_recomputed": false,
+  "chi_used": false,
+  "historical_1e-8_used_as_veto": false,
+  "toy_B_or_lambda_comparison": false,
+  "global_event_horizon_claimed": false,
+  "black_hole_birth_claimed": false,
+  "child_region_claimed": false,
+  "regeneration_claimed": false,
+  "sampling_is_continuous_horizon_proof": false,
+  "equations": {
+    "signature": "+---",
+    "line_element": "g = r^2 [ L^2 dt^2 - Q^2 (dx + beta dt)^2 - dOmega^2 ]",
+    "lapse_and_radial_metric": "N = r L, q = r Q",
+    "normal": "n = (d_t - beta d_x) / N",
+    "radial_leg": "e1 = d_x / q",
+    "null_legs": "k_plus = n + e1, k_minus = n - e1",
+    "null_cross_norm": "g(k_plus, k_minus) = 2",
+    "expansions": "theta_plus/minus = 2/r * ((r_dot - beta r_x)/N \u00b1 r_x/q)",
+    "product": "theta_plus * theta_minus = 4/r^2 * g^{ab} d_a r d_b r",
+    "observer_link": "K_perp = (r_dot - beta r_x) / (N r), so theta_plus + theta_minus = 4 K_perp",
+    "classes": "trapped: both expansions negative; anti-trapped: both positive; untrapped: opposite signs; marginal indicator: an expansion zero",
+    "boost": "For lambda > 0, k_plus -> lambda k_plus and k_minus -> k_minus/lambda. The product is unchanged and each sign is unchanged.",
+    "angular_sector": "r is constant on each symmetry sphere, so dOmega does not enter g^{ab} d_a r d_b r"
+  },
+  "chart": {
+    "manifold": "finite periodic S^1 x S^2",
+    "period": 8.0,
+    "coordinate": "x on [0, period), quadrature nodes of the episode observer",
+    "sphere": "round symmetry sphere of areal radius r(t, x)",
+    "scope": "A scalar trapping label at a sample is a local property of the areal gradient. It does not identify a global causal interior, an exterior, or regeneration."
+  },
+  "clock": {
+    "owner": "nsc_spherical_coupling static calibration, the episode gauge",
+    "L": "b0 * Omega**s(x)",
+    "beta": "beta0 * Omega**s(x)",
+    "profile": "s=x on [0, 4], owner C^infty bridge on [4, period]",
+    "normal_velocity": "stored frame_proper = (r_dot_lifted - beta r_x) / N",
+    "K_perp": "stored frame_K_perp = normal_velocity / r",
+    "ledger": "K_perp = (r_dot - beta r_x) / (N r) in nsc_regional_energy_exchange"
+  },
+  "pattern": {
+    "positive_geometry": true,
+    "initial_samples_have_same_sign_expansion": false,
+    "later_frames_have_both_kinds": true,
+    "arcs_track_areal_extrema": true,
+    "sample_character_changes": true,
+    "strict_margin_agrees": true,
+    "absolute_expansion_margin": 1.8325977887805045e-06
+  },
+  "finding": "On every saved positive-geometry run, every quadrature sample at T=0 has opposite null expansions. The initial normal velocity reaches at most 1.665504e-10 on nf512, so a continuum areal critical point is a marginal surface within that noise: both expansions equal 2 v_n/r there. From the stored frame T=0.005 through T=0.05, each run has one both-negative arc at the areal maximum and one both-positive arc at the areal minimum, with the complementary samples untrapped. The primary final counts are 45 both-negative, 182 both-positive, and 1821 opposite-sign nodes out of 2048. At T=0.005 those counts are 4 and 8. Halving dt moves theta_plus by at most 2.163439e-09. Shared nf512 and nf256 nodes disagree in sign at 0 samples. The smallest same-sign expansion exceeds the comparison gap by 88.3555. Initial product max on the primary grid is -4.446198e-10.",
+  "resolved": [
+    "Initial quadrature samples are opposite-sign on every saved run while r and Q stay positive.",
+    "By each stored frame from T=0.005 through T=0.05, one both-negative arc lies at the areal maximum and one both-positive arc lies at the areal minimum.",
+    "That split is unchanged by dt halving and by the shared nodes of nf512 and nf256.",
+    "The product, null norms, and positive boost identity hold on the manufactured controls."
+  ],
+  "open": [
+    "The first time the product becomes positive lies somewhere in the unsampled interval (0, 0.005).",
+    "Each product zero lies between adjacent nodes, so its continuum coordinate is known only to one grid spacing.",
+    "A global event horizon, black-hole birth, a child region, and regeneration are outside this sample.",
+    "The sign of 2 v_n/r exactly at the initial areal critical points lies inside the initial normal-velocity noise.",
+    "No statement is made after T=0.05, or by identifying the expansions with chi."
+  ],
+  "local_consequence": "theta_plus * theta_minus = 4/r^2 g^{ab} partial_a r partial_b r is the causal character of the areal gradient on this chart. Its zero is the spherical gradient boundary. The saved samples move that boundary from the initial areal critical points, which are marginal within the normal velocity noise, onto the edges of a both-negative neighborhood of the maximum and a both-positive neighborhood of the minimum.",
+  "margin": {
+    "margin_factor": 10.0,
+    "comparison_theta_gap": 1.8325977887805045e-07,
+    "initial_normal_expansion_floor": 7.116032624162918e-09,
+    "absolute_expansion_margin": 1.8325977887805045e-06,
+    "rule": "A sample expansion is strict only outside ten times the larger of the measured dt/shared-node theta gap and the initial 2|v_n|/r floor. A sample inside the margin is a marginal indicator, not a horizon."
+  },
+  "clearance": {
+    "smallest_same_sign_abs_expansion": 1.6192002416757407e-05,
+    "theta_comparison_gap": 1.8325977887805045e-07,
+    "clearance_ratio": 88.3554619343523
+  },
+  "comparisons": {
+    "dt_nf512_theta_plus_max_abs_gap": 2.1634388863711607e-09,
+    "dt_nf512_product_max_abs_gap": 1.941607551819713e-10,
+    "dt_nf256_theta_plus_max_abs_gap": 2.1784517800771397e-09,
+    "dt_nf256_product_max_abs_gap": 1.9555486049926962e-10,
+    "dt_raw_counts_identical": true,
+    "shared_node_sign_disagreements_by_time": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "shared_node_sign_disagreements_max": 0,
+    "space_theta_plus_max_abs_gap_on_shared_nodes": 1.8325977887805045e-07,
+    "space_product_max_abs_gap_on_shared_nodes": 2.4278654453188664e-08
+  },
+  "controls": {
+    "inverse_metric_product_gap": 2.842170943040401e-14,
+    "null_norm_gap": 4.440892098500626e-16,
+    "boost_product_gap": 2.842170943040401e-14,
+    "positive_boost_preserves_each_sign": true,
+    "negative_unit_rescaling_flips_both_signs": true,
+    "analytic_sign_gap": 0.0,
+    "derivative_owner": {
+      "points": 64,
+      "field_gap": 8.362754932988992e-14,
+      "nyquist_symbol_max": 0.0,
+      "dense_nyquist_symbol_max": 2.1760371282653068e-13
+    },
+    "clock_arc_L_at_0": 0.2457850789,
+    "clock_arc_beta_at_0": 0.325985800803,
+    "clock_arc_L_at_2": 0.553016427525,
+    "clock_arc_beta_at_2": 0.73346805180675,
+    "samples": 12,
+    "saved_state_used": false
+  },
+  "metadata_normal_gap": 0.0,
+  "source_bindings": {
+    "hashes": {
+      "coupling": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "galerkin": "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "regional_ledger": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "feedback_action": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "conformal_source": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "episode_driver": "efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "episode_json": "9fc9f460aa076db5eb67a3136d3e53797160f2885e124b62e6fb61ee247d9954",
+      "episode_npz": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77"
+    },
+    "module_sha256": "1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5",
+    "episode_metadata_verdict": "MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL",
+    "episode_metadata_schema": "NSC-SPHERICAL-FEEDBACK-EPISODE-v1",
+    "episode_npz_sha256_recorded_in_metadata": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77",
+    "hash_agreement": {
+      "episode_npz_matches_metadata": true,
+      "coupling_matches_episode_hashes_after": true,
+      "galerkin_matches_episode_hashes_after": true,
+      "ledger_matches_episode_hashes_after": true,
+      "feedback_action_matches_episode_hashes_after": true,
+      "conformal_source_matches_episode_hashes_after": true,
+      "episode_driver_matches_episode_hashes_after": true
+    },
+    "setup_length": {
+      "nf512": 8.0,
+      "nf256": 8.0
+    },
+    "episode_files_unchanged": true
+  },
+  "runs": [
+    {
+      "name": "nf512_dt_0_0005",
+      "role": "primary",
+      "nf": 512,
+      "nq": 2048,
+      "ng": 511,
+      "dt": 0.0005,
+      "length": 8.0,
+      "dx": 0.00390625,
+      "frames_stored": 11,
+      "positive_r": true,
+      "positive_Q": true,
+      "positive_geometry": true,
+      "L_min": 0.19114480326227243,
+      "L_max": 1.599976373372201,
+      "beta_min": 0.25351616965379487,
+      "beta_max": 2.1220555034255035,
+      "observer_proper_gap": 1.3877787807814457e-17,
+      "geometry_mode_max": 255,
+      "high_mode_derivative_bound": 7.94694272106008e-11,
+      "initial_normal_abs_max": 1.6655044770048675e-10,
+      "frames": [
+        {
+          "time": 0.0,
+          "nodes": 2048,
+          "r_min": 4.210504072341751,
+          "r_max": 4.876819634418227,
+          "Q_min": 0.25132493326910366,
+          "Q_max": 0.251324933269177,
+          "normal_min": -1.5879781480872428e-10,
+          "normal_max": 1.6655044770048675e-10,
+          "product_min": -0.016155952937611233,
+          "product_max": -4.446198031841503e-10,
+          "theta_plus_min": -0.10511662342992267,
+          "theta_plus_max": 0.12710606961040022,
+          "theta_minus_min": -0.12710606965608903,
+          "theta_minus_max": 0.10511662342806952,
+          "raw_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 2048,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 2048,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": null,
+          "product_crossing_count": 0,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [],
+          "anti_trapped_intervals": [],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 395,
+            "x": 1.54296875,
+            "r": 4.876819634418227,
+            "r_x": 0.0009305250666967035,
+            "normal_velocity": 5.010885051862486e-11,
+            "theta_plus": 0.0003113501917378642,
+            "theta_minus": -0.0003113501506382507,
+            "product": -9.693892909883225e-08
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1454,
+            "x": 5.6796875,
+            "r": 4.210504072341751,
+            "r_x": 4.697514883301307e-05,
+            "normal_velocity": -5.392705974084136e-11,
+            "theta_plus": 2.108598403984454e-05,
+            "theta_minus": -2.1086035270821932e-05,
+            "product": -4.446198031841503e-10
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 395,
+              "right_index": 396,
+              "x": 1.5445406641422514,
+              "r": 4.876819288910303,
+              "normal_velocity": 2.037001841648126e-11,
+              "theta_both": 8.353813094039343e-12,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1453,
+              "right_index": 1454,
+              "x": 5.679313123916188,
+              "r": 4.210504146503711,
+              "normal_velocity": -4.133899569748557e-11,
+              "theta_both": -1.9636126344543498e-11,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.6281178228896486e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 6.661338147750939e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.3322676295501878e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.005,
+          "nodes": 2048,
+          "r_min": 4.210520714975591,
+          "r_max": 4.876794732569694,
+          "Q_min": 0.24943797554796762,
+          "Q_max": 0.2522875472973877,
+          "normal_min": -0.007950515381253666,
+          "normal_max": 0.004762685286136888,
+          "product_min": -0.016152475804199623,
+          "product_max": 3.2186960090945285e-06,
+          "theta_plus_min": -0.10556006553564715,
+          "theta_plus_max": 0.12748928738923662,
+          "theta_minus_min": -0.12672235368336565,
+          "theta_minus_max": 0.10467046832705008,
+          "raw_counts": {
+            "trapped": 4,
+            "anti_trapped": 8,
+            "untrapped": 2036,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 4,
+            "anti_trapped": 8,
+            "untrapped": 2036,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.0001498660298927524,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 393,
+              "end_index": 396,
+              "count": 4,
+              "wraps": false,
+              "x_start": 1.53515625,
+              "x_end": 1.546875,
+              "node_span": 0.01171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1449,
+              "end_index": 1456,
+              "count": 8,
+              "wraps": false,
+              "x_start": 5.66015625,
+              "x_end": 5.6875,
+              "node_span": 0.02734375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 395,
+            "x": 1.54296875,
+            "r": 4.876794732569694,
+            "r_x": -0.0010954237217963674,
+            "normal_velocity": -0.004464802252019477,
+            "theta_plus": -0.0021971136536850923,
+            "theta_minus": -0.001464965639668205,
+            "product": 3.2186960090945285e-06
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1453,
+            "x": 5.67578125,
+            "r": 4.210520714975591,
+            "r_x": 0.00017495251960365082,
+            "normal_velocity": 0.0019213309805110098,
+            "theta_plus": 0.0009916518053696643,
+            "theta_minus": 0.0008336150540735369,
+            "product": 8.266558733553532e-07
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 394,
+              "right_index": 395,
+              "x": 1.5411208977159256,
+              "r": 4.876794606704662,
+              "normal_velocity": -0.00439579201877157,
+              "theta_both": -0.0018027382218345613,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1452,
+              "right_index": 1453,
+              "x": 5.674371008469638,
+              "r": 4.2105208099577505,
+              "normal_velocity": 0.0019276846954480963,
+              "theta_both": 0.0009156514276757317,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.423544863740858e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.01,
+          "nodes": 2048,
+          "r_min": 4.210570879431892,
+          "r_max": 4.876721151361123,
+          "Q_min": 0.2475119878775936,
+          "Q_max": 0.25325892503396463,
+          "normal_min": -0.015604843737291043,
+          "normal_max": 0.009712574672534531,
+          "product_min": -0.016142022785869528,
+          "product_max": 1.3150207182761091e-05,
+          "theta_plus_min": -0.1059895205714778,
+          "theta_plus_max": 0.12787155742660494,
+          "theta_minus_min": -0.12633811049112104,
+          "theta_minus_max": 0.10423578316554549,
+          "raw_counts": {
+            "trapped": 9,
+            "anti_trapped": 17,
+            "untrapped": 2022,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 9,
+            "anti_trapped": 17,
+            "untrapped": 2022,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00011297010853139291,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 390,
+              "end_index": 398,
+              "count": 9,
+              "wraps": false,
+              "x_start": 1.5234375,
+              "x_end": 1.5546875,
+              "node_span": 0.03125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1443,
+              "end_index": 1459,
+              "count": 17,
+              "wraps": false,
+              "x_start": 5.63671875,
+              "x_end": 5.69921875,
+              "node_span": 0.0625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 393,
+            "x": 1.53515625,
+            "r": 4.876721151361123,
+            "r_x": 0.0011034095400909716,
+            "normal_velocity": -0.008616291704812687,
+            "theta_plus": -0.0031653453243397087,
+            "theta_minus": -0.00390193733331877,
+            "product": 1.235097909388712e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1452,
+            "x": 5.671875,
+            "r": 4.210570879431892,
+            "r_x": 0.00018642719466976931,
+            "normal_velocity": 0.0038765422466994883,
+            "theta_plus": 0.0019260379133326387,
+            "theta_minus": 0.001756638244084312,
+            "product": 3.3833518581164587e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 393,
+              "right_index": 394,
+              "x": 1.5369939371078862,
+              "r": 4.876721033815196,
+              "normal_velocity": -0.008749701655830035,
+              "theta_both": -0.003588354386137563,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1451,
+              "right_index": 1452,
+              "x": 5.670359103522017,
+              "r": 4.210570960949305,
+              "normal_velocity": 0.0038903486732820066,
+              "theta_both": 0.0018478960261507614,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.968179951296946e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.015,
+          "nodes": 2048,
+          "r_min": 4.2106555909351595,
+          "r_max": 4.87660015485071,
+          "Q_min": 0.2454672829652488,
+          "Q_max": 0.2542437821985944,
+          "normal_min": -0.022767766537265897,
+          "normal_max": 0.015059807925943072,
+          "product_min": -0.016125402845160074,
+          "product_max": 2.994326557539381e-05,
+          "theta_plus_min": -0.10639705583125698,
+          "theta_plus_max": 0.12825327813680676,
+          "theta_minus_min": -0.12595378104862515,
+          "theta_minus_max": 0.10382405914601293,
+          "raw_counts": {
+            "trapped": 14,
+            "anti_trapped": 26,
+            "untrapped": 2008,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 14,
+            "anti_trapped": 26,
+            "untrapped": 2008,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 5.6813178990722885e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 387,
+              "end_index": 400,
+              "count": 14,
+              "wraps": false,
+              "x_start": 1.51171875,
+              "x_end": 1.5625,
+              "node_span": 0.05078125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1437,
+              "end_index": 1462,
+              "count": 26,
+              "wraps": false,
+              "x_start": 5.61328125,
+              "x_end": 5.7109375,
+              "node_span": 0.09765625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 392,
+            "x": 1.53125,
+            "r": 4.87660015485071,
+            "r_x": 0.0006162628874571141,
+            "normal_velocity": -0.012939975210492003,
+            "theta_plus": -0.005101516428644715,
+            "theta_minus": -0.005512415244732876,
+            "product": 2.8121676932516342e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1451,
+            "x": 5.66796875,
+            "r": 4.2106555909351595,
+            "r_x": 7.78553562551243e-05,
+            "normal_velocity": 0.005901841425592434,
+            "theta_plus": 0.0028388605839848305,
+            "theta_minus": 0.0027677166324449496,
+            "product": 7.857161655487198e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 392,
+              "right_index": 393,
+              "x": 1.5322524109876,
+              "r": 4.876599573778028,
+              "normal_velocity": -0.013044903893481773,
+              "theta_both": -0.005350000013790572,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.6673319300361475,
+              "r": 4.210655693419712,
+              "normal_velocity": 0.005910713419326261,
+              "theta_both": 0.00280750260752184,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.0766001685454967e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.02,
+          "nodes": 2048,
+          "r_min": 4.210776516024163,
+          "r_max": 4.876431387717189,
+          "Q_min": 0.24317986762331373,
+          "Q_max": 0.25524188055252,
+          "normal_min": -0.02983675770410173,
+          "normal_max": 0.021035438407741056,
+          "product_min": -0.016102408369102348,
+          "product_max": 5.3960192853182044e-05,
+          "theta_plus_min": -0.10677472626310616,
+          "theta_plus_max": 0.1286360523255414,
+          "theta_minus_min": -0.12556865182400717,
+          "theta_minus_max": 0.10344836899684065,
+          "raw_counts": {
+            "trapped": 18,
+            "anti_trapped": 36,
+            "untrapped": 1994,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 18,
+            "anti_trapped": 36,
+            "untrapped": 1994,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00010088314190972306,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 384,
+              "end_index": 401,
+              "count": 18,
+              "wraps": false,
+              "x_start": 1.5,
+              "x_end": 1.56640625,
+              "node_span": 0.06640625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1430,
+              "end_index": 1465,
+              "count": 36,
+              "wraps": false,
+              "x_start": 5.5859375,
+              "x_end": 5.72265625,
+              "node_span": 0.13671875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 391,
+            "x": 1.52734375,
+            "r": 4.876431387717189,
+            "r_x": -0.00019486237653003682,
+            "normal_velocity": -0.017336009094360057,
+            "theta_plus": -0.007175007286777487,
+            "theta_minus": -0.007045235112634669,
+            "product": 5.054961327021436e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1450,
+            "x": 5.6640625,
+            "r": 4.210776516024163,
+            "r_x": -0.0001572296797487105,
+            "normal_velocity": 0.008035097441132089,
+            "theta_plus": 0.003744221056700048,
+            "theta_minus": 0.00388866794660319,
+            "product": 1.4560032408186203e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 390,
+              "right_index": 391,
+              "x": 1.527031086727338,
+              "r": 4.876431066850227,
+              "normal_velocity": -0.017297253127961286,
+              "theta_both": -0.007094226449973746,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.665352079555897,
+              "r": 4.210776620346717,
+              "normal_velocity": 0.008010595165782664,
+              "theta_both": 0.0038048065181491716,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.466912950640278e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.3322676295501878e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.025,
+          "nodes": 2048,
+          "r_min": 4.210934869602898,
+          "r_max": 4.8762142350878745,
+          "Q_min": 0.24051946795515466,
+          "Q_max": 0.25625082077529926,
+          "normal_min": -0.036493991291770306,
+          "normal_max": 0.027901430190693192,
+          "product_min": -0.016073701282415163,
+          "product_max": 8.584003564639747e-05,
+          "theta_plus_min": -0.10711364441143108,
+          "theta_plus_max": 0.12902115037388037,
+          "theta_minus_min": -0.1251816548368641,
+          "theta_minus_max": 0.10312572024484376,
+          "raw_counts": {
+            "trapped": 23,
+            "anti_trapped": 47,
+            "untrapped": 1978,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 23,
+            "anti_trapped": 47,
+            "untrapped": 1978,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.1945722924178744e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 381,
+              "end_index": 403,
+              "count": 23,
+              "wraps": false,
+              "x_start": 1.48828125,
+              "x_end": 1.57421875,
+              "node_span": 0.0859375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1422,
+              "end_index": 1468,
+              "count": 47,
+              "wraps": false,
+              "x_start": 5.5546875,
+              "x_end": 5.734375,
+              "node_span": 0.1796875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 390,
+            "x": 1.5234375,
+            "r": 4.8762142350878745,
+            "r_x": -0.0012755816120697087,
+            "normal_velocity": -0.021846006763361212,
+            "theta_plus": -0.009384483561579513,
+            "theta_minus": -0.008535981545276091,
+            "product": 8.010577849358957e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1450,
+            "x": 5.6640625,
+            "r": 4.210934869602898,
+            "r_x": -5.1891254883959514e-05,
+            "normal_velocity": 0.010220171208703326,
+            "theta_plus": 0.004830155554672027,
+            "theta_minus": 0.0048780650900867115,
+            "product": 2.356181319093403e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 389,
+              "right_index": 390,
+              "x": 1.5214810127503113,
+              "r": 4.87621423336602,
+              "normal_velocity": -0.021561362392556377,
+              "theta_both": -0.008843484457684585,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.66448784633245,
+              "r": 4.210934948879542,
+              "normal_velocity": 0.010209756038986446,
+              "theta_both": 0.004849163505460035,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.707971429900425e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.03,
+          "nodes": 2048,
+          "r_min": 4.21113267943441,
+          "r_max": 4.875952397909097,
+          "Q_min": 0.23739794177663914,
+          "Q_max": 0.25726686702263873,
+          "normal_min": -0.04266955513875619,
+          "normal_max": 0.035959856041417916,
+          "product_min": -0.016039893454094657,
+          "product_max": 0.00012552697627841132,
+          "theta_plus_min": -0.1074034874325123,
+          "theta_plus_max": 0.1294070379159928,
+          "theta_minus_min": -0.12479237103487559,
+          "theta_minus_max": 0.10286722415802467,
+          "raw_counts": {
+            "trapped": 27,
+            "anti_trapped": 59,
+            "untrapped": 1962,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 27,
+            "anti_trapped": 59,
+            "untrapped": 1962,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 1.6192002416757407e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 378,
+              "end_index": 404,
+              "count": 27,
+              "wraps": false,
+              "x_start": 1.4765625,
+              "x_end": 1.578125,
+              "node_span": 0.1015625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1413,
+              "end_index": 1471,
+              "count": 59,
+              "wraps": false,
+              "x_start": 5.51953125,
+              "x_end": 5.74609375,
+              "node_span": 0.2265625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 388,
+            "x": 1.515625,
+            "r": 4.875952397909097,
+            "r_x": 0.00011250318287831657,
+            "normal_velocity": -0.025871901993549388,
+            "theta_plus": -0.010574665398658723,
+            "theta_minus": -0.010649415463692406,
+            "product": 0.00011261400521984923
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1450,
+            "x": 5.6640625,
+            "r": 4.21113267943441,
+            "r_x": -9.14387313279072e-05,
+            "normal_velocity": 0.012547939594493344,
+            "theta_plus": 0.0059170059831868405,
+            "theta_minus": 0.006001820185148122,
+            "product": 3.551280594553299e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 388,
+              "right_index": 389,
+              "x": 1.5157890938197336,
+              "r": 4.875952196998527,
+              "normal_velocity": -0.02589848739404914,
+              "theta_both": -0.010622945569479283,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.664808816261546,
+              "r": 4.21113278978223,
+              "normal_velocity": 0.012525162385038431,
+              "theta_both": 0.0059485953116601405,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.2959746043559335e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.035,
+          "nodes": 2048,
+          "r_min": 4.2113717643449124,
+          "r_max": 4.875640174511689,
+          "Q_min": 0.23376655042260974,
+          "Q_max": 0.2582851147743613,
+          "normal_min": -0.04831552524027304,
+          "normal_max": 0.04556378878677808,
+          "product_min": -0.016001540639525733,
+          "product_max": 0.00017366367941520745,
+          "theta_plus_min": -0.10763257045699148,
+          "theta_plus_max": 0.1297941131276201,
+          "theta_minus_min": -0.12440038209303902,
+          "theta_minus_max": 0.10269723599070661,
+          "raw_counts": {
+            "trapped": 32,
+            "anti_trapped": 73,
+            "untrapped": 1943,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 32,
+            "anti_trapped": 73,
+            "untrapped": 1943,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 8.013673711997021e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 375,
+              "end_index": 406,
+              "count": 32,
+              "wraps": false,
+              "x_start": 1.46484375,
+              "x_end": 1.5859375,
+              "node_span": 0.12109375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1403,
+              "end_index": 1475,
+              "count": 73,
+              "wraps": false,
+              "x_start": 5.48046875,
+              "x_end": 5.76171875,
+              "node_span": 0.28125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 387,
+            "x": 1.51171875,
+            "r": 4.875640174511689,
+            "r_x": -0.0011777948833006611,
+            "normal_velocity": -0.030661616379530493,
+            "theta_plus": -0.012968305990880905,
+            "theta_minus": -0.012186640052774872,
+            "product": 0.00015804007720510955
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1451,
+            "x": 5.66796875,
+            "r": 4.2113717643449124,
+            "r_x": 0.0001961850136750834,
+            "normal_velocity": 0.014910539938180407,
+            "theta_plus": 0.007172449376562152,
+            "theta_minus": 0.006989719885642389,
+            "product": 5.013341203611983e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 386,
+              "right_index": 387,
+              "x": 1.5100804727781614,
+              "r": 4.87563980166225,
+              "normal_velocity": -0.030399536072405725,
+              "theta_both": -0.012469967966887801,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.666380757806324,
+              "r": 4.211371835974864,
+              "normal_velocity": 0.014969672640766745,
+              "theta_both": 0.007109166905135798,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.469446951953614e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.04,
+          "nodes": 2048,
+          "r_min": 4.211653667437436,
+          "r_max": 4.875279695105135,
+          "Q_min": 0.22959420368880384,
+          "Q_max": 0.2592992747232108,
+          "normal_min": -0.053419248876601835,
+          "normal_max": 0.05712695815770645,
+          "product_min": -0.015960277049830145,
+          "product_max": 0.00023029802718605873,
+          "theta_plus_min": -0.10778837307506196,
+          "theta_plus_max": 0.13018277149859675,
+          "theta_minus_min": -0.12400526708121372,
+          "theta_minus_max": 0.10262727573140308,
+          "raw_counts": {
+            "trapped": 36,
+            "anti_trapped": 91,
+            "untrapped": 1921,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 36,
+            "anti_trapped": 91,
+            "untrapped": 1921,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.0719660907887955e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 372,
+              "end_index": 407,
+              "count": 36,
+              "wraps": false,
+              "x_start": 1.453125,
+              "x_end": 1.58984375,
+              "node_span": 0.13671875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1388,
+              "end_index": 1478,
+              "count": 91,
+              "wraps": false,
+              "x_start": 5.421875,
+              "x_end": 5.7734375,
+              "node_span": 0.3515625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 385,
+            "x": 1.50390625,
+            "r": 4.875279695105135,
+            "r_x": 0.00043197852455748725,
+            "normal_velocity": -0.03501626133555013,
+            "theta_plus": -0.014221634929552009,
+            "theta_minus": -0.014508008106688196,
+            "product": 0.00020632759484830055
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1451,
+            "x": 5.66796875,
+            "r": 4.211653667437436,
+            "r_x": -0.0001614141540531855,
+            "normal_velocity": 0.01760859899270761,
+            "theta_plus": 0.008286376754902215,
+            "theta_minus": 0.008437314586434019,
+            "product": 6.991476746282426e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 385,
+              "right_index": 386,
+              "x": 1.5044739663139868,
+              "r": 4.875279096839995,
+              "normal_velocity": -0.03511022829558072,
+              "theta_both": -0.014403371621673142,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1451,
+              "right_index": 1452,
+              "x": 5.669258968060605,
+              "r": 4.211653774450711,
+              "normal_velocity": 0.017551215591902883,
+              "theta_both": 0.008334595639543963,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.122502256758253e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.045,
+          "nodes": 2048,
+          "r_min": 4.21198035325974,
+          "r_max": 4.874865653681426,
+          "Q_min": 0.22485466003248028,
+          "Q_max": 0.2603016677790175,
+          "normal_min": -0.0579473181993368,
+          "normal_max": 0.071135609497298,
+          "product_min": -0.015915724723597126,
+          "product_max": 0.0002961499563483988,
+          "theta_plus_min": -0.10785827086272025,
+          "theta_plus_max": 0.1305772470089045,
+          "theta_minus_min": -0.12360659802656768,
+          "theta_minus_max": 0.10268045042260035,
+          "raw_counts": {
+            "trapped": 40,
+            "anti_trapped": 117,
+            "untrapped": 1891,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 40,
+            "anti_trapped": 117,
+            "untrapped": 1891,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 6.786463939551033e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 369,
+              "end_index": 408,
+              "count": 40,
+              "wraps": false,
+              "x_start": 1.44140625,
+              "x_end": 1.59375,
+              "node_span": 0.15234375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1366,
+              "end_index": 1482,
+              "count": 117,
+              "wraps": false,
+              "x_start": 5.3359375,
+              "x_end": 5.7890625,
+              "node_span": 0.453125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 384,
+            "x": 1.5,
+            "r": 4.874865653681426,
+            "r_x": -0.000779269041829898,
+            "normal_velocity": -0.040229852139202604,
+            "theta_plus": -0.016763026403987507,
+            "theta_minus": -0.016246992740906564,
+            "product": 0.0002723487683012101
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1452,
+            "x": 5.671875,
+            "r": 4.21198035325974,
+            "r_x": -0.00020447554867643325,
+            "normal_velocity": 0.020356759310694986,
+            "theta_plus": 0.00957019112783752,
+            "theta_minus": 0.009762054137685107,
+            "product": 9.342472389794357e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 383,
+              "right_index": 384,
+              "x": 1.4990314275472623,
+              "r": 4.874864886790133,
+              "normal_velocity": -0.040082443466599484,
+              "theta_both": -0.01644453513992338,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1452,
+              "right_index": 1453,
+              "x": 5.67348170401648,
+              "r": 4.21198042412127,
+              "normal_velocity": 0.020272328102113407,
+              "theta_both": 0.009626031491512806,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.2959746043559335e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.05,
+          "nodes": 2048,
+          "r_min": 4.2123529367075765,
+          "r_max": 4.874395995293925,
+          "Q_min": 0.2195220548716644,
+          "Q_max": 0.26128339207850754,
+          "normal_min": -0.06195632555218566,
+          "normal_max": 0.0881593239017512,
+          "product_min": -0.01586935920781164,
+          "product_max": 0.00037204551501067413,
+          "theta_plus_min": -0.10783247215201033,
+          "theta_plus_max": 0.13097422026005898,
+          "theta_minus_min": -0.12320393511167968,
+          "theta_minus_max": 0.10288121160882642,
+          "raw_counts": {
+            "trapped": 45,
+            "anti_trapped": 182,
+            "untrapped": 1821,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 45,
+            "anti_trapped": 182,
+            "untrapped": 1821,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 1.6631721301506852e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 366,
+              "end_index": 410,
+              "count": 45,
+              "wraps": false,
+              "x_start": 1.4296875,
+              "x_end": 1.6015625,
+              "node_span": 0.171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1305,
+              "end_index": 1486,
+              "count": 182,
+              "wraps": false,
+              "x_start": 5.09765625,
+              "x_end": 5.8046875,
+              "node_span": 0.70703125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 382,
+            "x": 1.4921875,
+            "r": 4.874395995293925,
+            "r_x": 0.0013568653172784644,
+            "normal_velocity": -0.04508420707175369,
+            "theta_plus": -0.01804959505125036,
+            "theta_minus": -0.018947158692418444,
+            "product": 0.0003419885417699312
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1454,
+            "x": 5.6796875,
+            "r": 4.2123529367075765,
+            "r_x": 8.111841452243529e-05,
+            "normal_velocity": 0.023091164030471192,
+            "theta_plus": 0.0110017143306762,
+            "theta_minus": 0.010925379032511465,
+            "product": 0.00012019789907005066
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 382,
+              "right_index": 383,
+              "x": 1.4937879143223967,
+              "r": 4.874395514919243,
+              "normal_velocity": -0.04532308073910055,
+              "theta_both": -0.018596390301270596,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1453,
+              "right_index": 1454,
+              "x": 5.67906392292865,
+              "r": 4.212353044540889,
+              "normal_velocity": 0.023129569287048218,
+              "theta_both": 0.010981780986768712,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.382710778154774e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        }
+      ]
+    },
+    {
+      "name": "nf512_dt_0_00025",
+      "role": "time",
+      "nf": 512,
+      "nq": 2048,
+      "ng": 511,
+      "dt": 0.00025,
+      "length": 8.0,
+      "dx": 0.00390625,
+      "frames_stored": 11,
+      "positive_r": true,
+      "positive_Q": true,
+      "positive_geometry": true,
+      "L_min": 0.19114480326227243,
+      "L_max": 1.599976373372201,
+      "beta_min": 0.25351616965379487,
+      "beta_max": 2.1220555034255035,
+      "observer_proper_gap": 1.3877787807814457e-17,
+      "geometry_mode_max": 255,
+      "high_mode_derivative_bound": 8.121530851775981e-11,
+      "initial_normal_abs_max": 1.6655044770048675e-10,
+      "frames": [
+        {
+          "time": 0.0,
+          "nodes": 2048,
+          "r_min": 4.210504072341751,
+          "r_max": 4.876819634418227,
+          "Q_min": 0.25132493326910366,
+          "Q_max": 0.251324933269177,
+          "normal_min": -1.5879781480872428e-10,
+          "normal_max": 1.6655044770048675e-10,
+          "product_min": -0.016155952937611233,
+          "product_max": -4.446198031841503e-10,
+          "theta_plus_min": -0.10511662342992267,
+          "theta_plus_max": 0.12710606961040022,
+          "theta_minus_min": -0.12710606965608903,
+          "theta_minus_max": 0.10511662342806952,
+          "raw_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 2048,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 2048,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": null,
+          "product_crossing_count": 0,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [],
+          "anti_trapped_intervals": [],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 395,
+            "x": 1.54296875,
+            "r": 4.876819634418227,
+            "r_x": 0.0009305250666967035,
+            "normal_velocity": 5.010885051862486e-11,
+            "theta_plus": 0.0003113501917378642,
+            "theta_minus": -0.0003113501506382507,
+            "product": -9.693892909883225e-08
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1454,
+            "x": 5.6796875,
+            "r": 4.210504072341751,
+            "r_x": 4.697514883301307e-05,
+            "normal_velocity": -5.392705974084136e-11,
+            "theta_plus": 2.108598403984454e-05,
+            "theta_minus": -2.1086035270821932e-05,
+            "product": -4.446198031841503e-10
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 395,
+              "right_index": 396,
+              "x": 1.5445406641422514,
+              "r": 4.876819288910303,
+              "normal_velocity": 2.037001841648126e-11,
+              "theta_both": 8.353813094039343e-12,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1453,
+              "right_index": 1454,
+              "x": 5.679313123916188,
+              "r": 4.210504146503711,
+              "normal_velocity": -4.133899569748557e-11,
+              "theta_both": -1.9636126344543498e-11,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.6281178228896486e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 6.661338147750939e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.3322676295501878e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.005,
+          "nodes": 2048,
+          "r_min": 4.2105207149755515,
+          "r_max": 4.876794732569928,
+          "Q_min": 0.24943797554796454,
+          "Q_max": 0.25228754729728203,
+          "normal_min": -0.007950515425600619,
+          "normal_max": 0.004762685289155874,
+          "product_min": -0.01615247580410469,
+          "product_max": 3.218696005678327e-06,
+          "theta_plus_min": -0.10556006549340594,
+          "theta_plus_max": 0.12748928738938567,
+          "theta_minus_min": -0.12672235368227244,
+          "theta_minus_max": 0.1046704683260639,
+          "raw_counts": {
+            "trapped": 4,
+            "anti_trapped": 8,
+            "untrapped": 2036,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 4,
+            "anti_trapped": 8,
+            "untrapped": 2036,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.000149866030150865,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 393,
+              "end_index": 396,
+              "count": 4,
+              "wraps": false,
+              "x_start": 1.53515625,
+              "x_end": 1.546875,
+              "node_span": 0.01171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1449,
+              "end_index": 1456,
+              "count": 8,
+              "wraps": false,
+              "x_start": 5.66015625,
+              "x_end": 5.6875,
+              "node_span": 0.02734375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 395,
+            "x": 1.54296875,
+            "r": 4.876794732569928,
+            "r_x": -0.0010954237169573805,
+            "normal_velocity": -0.004464802248956648,
+            "theta_plus": -0.0021971136508117696,
+            "theta_minus": -0.0014649656400291867,
+            "product": 3.218696005678327e-06
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1453,
+            "x": 5.67578125,
+            "r": 4.2105207149755515,
+            "r_x": 0.00017495251848811955,
+            "normal_velocity": 0.0019213309813358975,
+            "theta_plus": 0.000991651805257658,
+            "theta_minus": 0.0008336150549692047,
+            "product": 8.266558741501735e-07
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 394,
+              "right_index": 395,
+              "x": 1.5411208977226922,
+              "r": 4.876794606704889,
+              "normal_velocity": -0.0043957920156305055,
+              "theta_both": -0.0018027382205463094,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1452,
+              "right_index": 1453,
+              "x": 5.674371008473889,
+              "r": 4.2105208099577105,
+              "normal_velocity": 0.0019276846961041342,
+              "theta_both": 0.0009156514279873588,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.5128150388530344e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.01,
+          "nodes": 2048,
+          "r_min": 4.210570879431833,
+          "r_max": 4.876721151361622,
+          "Q_min": 0.2475119878775683,
+          "Q_max": 0.2532589250336715,
+          "normal_min": -0.015604843825098707,
+          "normal_max": 0.009712574678610779,
+          "product_min": -0.01614202278602203,
+          "product_max": 1.3150207172391675e-05,
+          "theta_plus_min": -0.10598952048715182,
+          "theta_plus_max": 0.12787155742718317,
+          "theta_minus_min": -0.12633811049255314,
+          "theta_minus_max": 0.10423578316772635,
+          "raw_counts": {
+            "trapped": 9,
+            "anti_trapped": 17,
+            "untrapped": 2022,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 9,
+            "anti_trapped": 17,
+            "untrapped": 2022,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00011297010972691364,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 390,
+              "end_index": 398,
+              "count": 9,
+              "wraps": false,
+              "x_start": 1.5234375,
+              "x_end": 1.5546875,
+              "node_span": 0.03125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1443,
+              "end_index": 1459,
+              "count": 17,
+              "wraps": false,
+              "x_start": 5.63671875,
+              "x_end": 5.69921875,
+              "node_span": 0.0625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 393,
+            "x": 1.53515625,
+            "r": 4.876721151361622,
+            "r_x": 0.001103409545528647,
+            "normal_velocity": -0.008616291698476948,
+            "theta_plus": -0.003165345319926078,
+            "theta_minus": -0.0039019373325349565,
+            "product": 1.235097907418437e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1452,
+            "x": 5.671875,
+            "r": 4.210570879431833,
+            "r_x": 0.00018642719466323288,
+            "normal_velocity": 0.003876542247769134,
+            "theta_plus": 0.0019260379138377698,
+            "theta_minus": 0.0017566382445953859,
+            "product": 3.383351859988139e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 393,
+              "right_index": 394,
+              "x": 1.5369939371197923,
+              "r": 4.876721033815708,
+              "normal_velocity": -0.008749701651315583,
+              "theta_both": -0.003588354384285757,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1451,
+              "right_index": 1452,
+              "x": 5.670359103520666,
+              "r": 4.210570960949244,
+              "normal_velocity": 0.003890348674165312,
+              "theta_both": 0.0018478960265703537,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.9898639947466563e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.015,
+          "nodes": 2048,
+          "r_min": 4.210655590935091,
+          "r_max": 4.876600154851549,
+          "Q_min": 0.24546728296516662,
+          "Q_max": 0.2542437821980777,
+          "normal_min": -0.022767766561722143,
+          "normal_max": 0.015059807938342572,
+          "product_min": -0.016125402844829398,
+          "product_max": 2.994326555799858e-05,
+          "theta_plus_min": -0.10639705570315174,
+          "theta_plus_max": 0.12825327813752674,
+          "theta_minus_min": -0.12595378104935984,
+          "theta_minus_max": 0.10382405915070687,
+          "raw_counts": {
+            "trapped": 14,
+            "anti_trapped": 26,
+            "untrapped": 2008,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 14,
+            "anti_trapped": 26,
+            "untrapped": 2008,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 5.6813179605336496e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 387,
+              "end_index": 400,
+              "count": 14,
+              "wraps": false,
+              "x_start": 1.51171875,
+              "x_end": 1.5625,
+              "node_span": 0.05078125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1437,
+              "end_index": 1462,
+              "count": 26,
+              "wraps": false,
+              "x_start": 5.61328125,
+              "x_end": 5.7109375,
+              "node_span": 0.09765625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 392,
+            "x": 1.53125,
+            "r": 4.876600154851549,
+            "r_x": 0.000616262892998154,
+            "normal_velocity": -0.012939975203074475,
+            "theta_plus": -0.005101516423754517,
+            "theta_minus": -0.005512415243537066,
+            "product": 2.81216768994591e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1451,
+            "x": 5.66796875,
+            "r": 4.210655590935091,
+            "r_x": 7.785535617854666e-05,
+            "normal_velocity": 0.005901841427462831,
+            "theta_plus": 0.0028388605848382975,
+            "theta_minus": 0.0027677166333683963,
+            "product": 7.85716166047089e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 392,
+              "right_index": 393,
+              "x": 1.5322524109985602,
+              "r": 4.876599573778869,
+              "normal_velocity": -0.013044903887935128,
+              "theta_both": -0.005350000011514849,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.667331930034061,
+              "r": 4.2106556934196435,
+              "normal_velocity": 0.005910713421186424,
+              "theta_both": 0.0028075026084054358,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.599551212651875e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.881784197001252e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.02,
+          "nodes": 2048,
+          "r_min": 4.210776516024092,
+          "r_max": 4.876431387718385,
+          "Q_min": 0.24317986762312152,
+          "Q_max": 0.25524188055174385,
+          "normal_min": -0.029836757736711586,
+          "normal_max": 0.021035438423566644,
+          "product_min": -0.016102408368964222,
+          "product_max": 5.396019284661739e-05,
+          "theta_plus_min": -0.10677472609145987,
+          "theta_plus_max": 0.1286360523256953,
+          "theta_minus_min": -0.12556865182268817,
+          "theta_minus_max": 0.10344836900138368,
+          "raw_counts": {
+            "trapped": 18,
+            "anti_trapped": 36,
+            "untrapped": 1994,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 18,
+            "anti_trapped": 36,
+            "untrapped": 1994,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.0001008831429752967,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 384,
+              "end_index": 401,
+              "count": 18,
+              "wraps": false,
+              "x_start": 1.5,
+              "x_end": 1.56640625,
+              "node_span": 0.06640625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1430,
+              "end_index": 1465,
+              "count": 36,
+              "wraps": false,
+              "x_start": 5.5859375,
+              "x_end": 5.72265625,
+              "node_span": 0.13671875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 391,
+            "x": 1.52734375,
+            "r": 4.876431387718385,
+            "r_x": -0.0001948623687836517,
+            "normal_velocity": -0.017336009087820743,
+            "theta_plus": -0.007175007281514277,
+            "theta_minus": -0.007045235112530376,
+            "product": 5.0549613232385505e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1450,
+            "x": 5.6640625,
+            "r": 4.210776516024092,
+            "r_x": -0.00015722967968203466,
+            "normal_velocity": 0.008035097442461319,
+            "theta_plus": 0.0037442210573620897,
+            "theta_minus": 0.003888667947203971,
+            "product": 1.4560032413010118e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 390,
+              "right_index": 391,
+              "x": 1.5270310867401693,
+              "r": 4.876431066851433,
+              "normal_velocity": -0.017297253122933308,
+              "theta_both": -0.007094226447909836,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.6653520795541725,
+              "r": 4.210776620346645,
+              "normal_velocity": 0.008010595167391277,
+              "theta_both": 0.003804806518913282,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.122502256758253e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.025,
+          "nodes": 2048,
+          "r_min": 4.210934869602849,
+          "r_max": 4.876214235089442,
+          "Q_min": 0.24051946795479298,
+          "Q_max": 0.2562508207742275,
+          "normal_min": -0.03649399132979024,
+          "normal_max": 0.027901430210373567,
+          "product_min": -0.016073701282571243,
+          "product_max": 8.58400356735322e-05,
+          "theta_plus_min": -0.10711364419386003,
+          "theta_plus_max": 0.12902115037301606,
+          "theta_minus_min": -0.1251816548351753,
+          "theta_minus_max": 0.10312572025062135,
+          "raw_counts": {
+            "trapped": 23,
+            "anti_trapped": 47,
+            "untrapped": 1978,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 23,
+            "anti_trapped": 47,
+            "untrapped": 1978,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.1945724255606544e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 381,
+              "end_index": 403,
+              "count": 23,
+              "wraps": false,
+              "x_start": 1.48828125,
+              "x_end": 1.57421875,
+              "node_span": 0.0859375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1422,
+              "end_index": 1468,
+              "count": 47,
+              "wraps": false,
+              "x_start": 5.5546875,
+              "x_end": 5.734375,
+              "node_span": 0.1796875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 390,
+            "x": 1.5234375,
+            "r": 4.876214235089442,
+            "r_x": -0.0012755816054280129,
+            "normal_velocity": -0.021846006760590106,
+            "theta_plus": -0.009384483558230766,
+            "theta_minus": -0.008535981546345914,
+            "product": 8.010577847504447e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1450,
+            "x": 5.6640625,
+            "r": 4.210934869602849,
+            "r_x": -5.189125520474458e-05,
+            "normal_velocity": 0.010220171209689013,
+            "theta_plus": 0.004830155554992156,
+            "theta_minus": 0.004878065090703007,
+            "product": 2.356181319547244e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 389,
+              "right_index": 390,
+              "x": 1.5214810127621619,
+              "r": 4.87621423336757,
+              "normal_velocity": -0.021561362390198277,
+              "theta_both": -0.00884348445671459,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.66448784633684,
+              "r": 4.210934948879493,
+              "normal_velocity": 0.01020975603990201,
+              "theta_both": 0.0048491635058949415,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.469446951953614e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.03,
+          "nodes": 2048,
+          "r_min": 4.211132679434388,
+          "r_max": 4.875952397910997,
+          "Q_min": 0.2373979417760518,
+          "Q_max": 0.25726686702121027,
+          "normal_min": -0.04266955518045609,
+          "normal_max": 0.03595985606953905,
+          "product_min": -0.016039893453576294,
+          "product_max": 0.00012552697640688036,
+          "theta_plus_min": -0.10740348717099309,
+          "theta_plus_max": 0.12940703791567074,
+          "theta_minus_min": -0.12479237103770963,
+          "theta_minus_max": 0.10286722416489258,
+          "raw_counts": {
+            "trapped": 27,
+            "anti_trapped": 59,
+            "untrapped": 1962,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 27,
+            "anti_trapped": 59,
+            "untrapped": 1962,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 1.6192005399905827e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 378,
+              "end_index": 404,
+              "count": 27,
+              "wraps": false,
+              "x_start": 1.4765625,
+              "x_end": 1.578125,
+              "node_span": 0.1015625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1413,
+              "end_index": 1471,
+              "count": 59,
+              "wraps": false,
+              "x_start": 5.51953125,
+              "x_end": 5.74609375,
+              "node_span": 0.2265625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 388,
+            "x": 1.515625,
+            "r": 4.875952397910997,
+            "r_x": 0.00011250318487483583,
+            "normal_velocity": -0.02587190199305916,
+            "theta_plus": -0.010574665397790266,
+            "theta_minus": -0.010649415464150427,
+            "product": 0.00011261400521544409
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1450,
+            "x": 5.6640625,
+            "r": 4.211132679434388,
+            "r_x": -9.143873209319087e-05,
+            "normal_velocity": 0.012547939596859042,
+            "theta_plus": 0.005917005983955502,
+            "theta_minus": 0.006001820186626614,
+            "product": 3.55128059588946e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 388,
+              "right_index": 389,
+              "x": 1.5157890938225491,
+              "r": 4.875952197000424,
+              "normal_velocity": -0.025898487394160948,
+              "theta_both": -0.010622945569521012,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.664808816267546,
+              "r": 4.211132789782207,
+              "normal_velocity": 0.012525162387009773,
+              "theta_both": 0.005948595312596425,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.5561831257524545e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 6.661338147750939e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.035,
+          "nodes": 2048,
+          "r_min": 4.211371764344934,
+          "r_max": 4.875640174513889,
+          "Q_min": 0.23376655042173564,
+          "Q_max": 0.2582851147725004,
+          "normal_min": -0.048315525284764994,
+          "normal_max": 0.0455637888273435,
+          "product_min": -0.016001540639415026,
+          "product_max": 0.00017366367961617349,
+          "theta_plus_min": -0.1076325701472991,
+          "theta_plus_max": 0.12979411312808264,
+          "theta_minus_min": -0.12440038209164178,
+          "theta_minus_max": 0.10269723599896191,
+          "raw_counts": {
+            "trapped": 32,
+            "anti_trapped": 73,
+            "untrapped": 1943,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 32,
+            "anti_trapped": 73,
+            "untrapped": 1943,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 8.01367419408861e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 375,
+              "end_index": 406,
+              "count": 32,
+              "wraps": false,
+              "x_start": 1.46484375,
+              "x_end": 1.5859375,
+              "node_span": 0.12109375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1403,
+              "end_index": 1475,
+              "count": 73,
+              "wraps": false,
+              "x_start": 5.48046875,
+              "x_end": 5.76171875,
+              "node_span": 0.28125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 387,
+            "x": 1.51171875,
+            "r": 4.875640174513889,
+            "r_x": -0.0011777948894941773,
+            "normal_velocity": -0.03066161638537099,
+            "theta_plus": -0.012968305995325849,
+            "theta_minus": -0.01218664005311015,
+            "product": 0.00015804007726362648
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1451,
+            "x": 5.66796875,
+            "r": 4.211371764344934,
+            "r_x": 0.0001961850141196722,
+            "normal_velocity": 0.01491053994113924,
+            "theta_plus": 0.007172449378174316,
+            "theta_minus": 0.006989719886840481,
+            "product": 5.013341205598166e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 386,
+              "right_index": 387,
+              "x": 1.510080472772211,
+              "r": 4.875639801664459,
+              "normal_velocity": -0.03039953607589066,
+              "theta_both": -0.012469967968311681,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1450,
+              "right_index": 1451,
+              "x": 5.66638075780835,
+              "r": 4.2113718359748855,
+              "normal_velocity": 0.014969672643975227,
+              "theta_both": 0.007109166906659485,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.9898639947466563e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.04,
+          "nodes": 2048,
+          "r_min": 4.211653667437504,
+          "r_max": 4.875279695107613,
+          "Q_min": 0.22959420368757186,
+          "Q_max": 0.2592992747208266,
+          "normal_min": -0.053419248913751015,
+          "normal_max": 0.05712695820601466,
+          "product_min": -0.015960277049652475,
+          "product_max": 0.0002302980275032752,
+          "theta_plus_min": -0.10778837271930712,
+          "theta_plus_max": 0.1301827714996672,
+          "theta_minus_min": -0.12400526708035353,
+          "theta_minus_max": 0.10262727573838905,
+          "raw_counts": {
+            "trapped": 36,
+            "anti_trapped": 91,
+            "untrapped": 1921,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 36,
+            "anti_trapped": 91,
+            "untrapped": 1921,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.0719662500518855e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 372,
+              "end_index": 407,
+              "count": 36,
+              "wraps": false,
+              "x_start": 1.453125,
+              "x_end": 1.58984375,
+              "node_span": 0.13671875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1388,
+              "end_index": 1478,
+              "count": 91,
+              "wraps": false,
+              "x_start": 5.421875,
+              "x_end": 5.7734375,
+              "node_span": 0.3515625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 385,
+            "x": 1.50390625,
+            "r": 4.875279695107613,
+            "r_x": 0.00043197851401092884,
+            "normal_velocity": -0.03501626134649553,
+            "theta_plus": -0.014221634937530866,
+            "theta_minus": -0.014508008107675061,
+            "product": 0.00020632759497809272
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1451,
+            "x": 5.66796875,
+            "r": 4.211653667437504,
+            "r_x": -0.00016141415497580164,
+            "normal_velocity": 0.017608598995688236,
+            "theta_plus": 0.008286376755886143,
+            "theta_minus": 0.008437314588280658,
+            "product": 6.991476748642791e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 385,
+              "right_index": 386,
+              "x": 1.504473966299428,
+              "r": 4.87527909684248,
+              "normal_velocity": -0.035110228304688754,
+              "theta_both": -0.014403371625402214,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1451,
+              "right_index": 1452,
+              "x": 5.669258968064139,
+              "r": 4.211653774450779,
+              "normal_velocity": 0.017551215594728314,
+              "theta_both": 0.008334595640885548,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.8163916471489756e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 6.661338147750939e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.045,
+          "nodes": 2048,
+          "r_min": 4.211980353259871,
+          "r_max": 4.874865653684069,
+          "Q_min": 0.22485466003080967,
+          "Q_max": 0.2603016677759983,
+          "normal_min": -0.057947318224370416,
+          "normal_max": 0.07113560956499974,
+          "product_min": -0.015915724723571632,
+          "product_max": 0.0002961499568356704,
+          "theta_plus_min": -0.10785827046033122,
+          "theta_plus_max": 0.1305772470095316,
+          "theta_minus_min": -0.12360659802679551,
+          "theta_minus_max": 0.10268045043163057,
+          "raw_counts": {
+            "trapped": 40,
+            "anti_trapped": 117,
+            "untrapped": 1891,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 40,
+            "anti_trapped": 117,
+            "untrapped": 1891,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 6.786464699078286e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 369,
+              "end_index": 408,
+              "count": 40,
+              "wraps": false,
+              "x_start": 1.44140625,
+              "x_end": 1.59375,
+              "node_span": 0.15234375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1366,
+              "end_index": 1482,
+              "count": 117,
+              "wraps": false,
+              "x_start": 5.3359375,
+              "x_end": 5.7890625,
+              "node_span": 0.453125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 384,
+            "x": 1.5,
+            "r": 4.874865653684069,
+            "r_x": -0.0007792690614781394,
+            "normal_velocity": -0.04022985216089538,
+            "theta_plus": -0.01676302641938364,
+            "theta_minus": -0.016246992743292218,
+            "product": 0.0002723487685913417
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1452,
+            "x": 5.671875,
+            "r": 4.211980353259871,
+            "r_x": -0.00020447554935903306,
+            "normal_velocity": 0.0203567593145789,
+            "theta_plus": 0.009570191129361215,
+            "theta_minus": 0.009762054139849258,
+            "product": 9.34247239335293e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 383,
+              "right_index": 384,
+              "x": 1.4990314275237604,
+              "r": 4.874864886792776,
+              "normal_velocity": -0.04008244348353749,
+              "theta_both": -0.016444535146863587,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1452,
+              "right_index": 1453,
+              "x": 5.673481704026766,
+              "r": 4.211980424121399,
+              "normal_velocity": 0.02027232810545393,
+              "theta_both": 0.009626031493098713,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.9898639947466563e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 6.661338147750939e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.05,
+          "nodes": 2048,
+          "r_min": 4.212352936707774,
+          "r_max": 4.874395995296731,
+          "Q_min": 0.21952205486945653,
+          "Q_max": 0.26128339207472867,
+          "normal_min": -0.06195632557125051,
+          "normal_max": 0.08815932399166428,
+          "product_min": -0.015869359207878207,
+          "product_max": 0.0003720455157260058,
+          "theta_plus_min": -0.10783247168861515,
+          "theta_plus_max": 0.13097422026020522,
+          "theta_minus_min": -0.123203935110736,
+          "theta_minus_max": 0.10288121161956769,
+          "raw_counts": {
+            "trapped": 45,
+            "anti_trapped": 182,
+            "untrapped": 1821,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 45,
+            "anti_trapped": 182,
+            "untrapped": 1821,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 1.6631741551974306e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 366,
+              "end_index": 410,
+              "count": 45,
+              "wraps": false,
+              "x_start": 1.4296875,
+              "x_end": 1.6015625,
+              "node_span": 0.171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 1305,
+              "end_index": 1486,
+              "count": 182,
+              "wraps": false,
+              "x_start": 5.09765625,
+              "x_end": 5.8046875,
+              "node_span": 0.70703125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 382,
+            "x": 1.4921875,
+            "r": 4.874395995296731,
+            "r_x": 0.0013568652841267365,
+            "normal_velocity": -0.045084207100248054,
+            "theta_plus": -0.018049595073896644,
+            "theta_minus": -0.018947158693133754,
+            "product": 0.000341988542211925
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 1454,
+            "x": 5.6796875,
+            "r": 4.212352936707774,
+            "r_x": 8.111841287024302e-05,
+            "normal_velocity": 0.0230911640358083,
+            "theta_plus": 0.01100171433243232,
+            "theta_minus": 0.010925379035822374,
+            "product": 0.00012019789912566261
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 382,
+              "right_index": 383,
+              "x": 1.4937879142813888,
+              "r": 4.874395514922004,
+              "normal_velocity": -0.04532308076396611,
+              "theta_both": -0.01859639031146258,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 1453,
+              "right_index": 1454,
+              "x": 5.6790639229407445,
+              "r": 4.212353044541086,
+              "normal_velocity": 0.02312956929167318,
+              "theta_both": 0.010981780988964105,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.642919299551295e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        }
+      ]
+    },
+    {
+      "name": "nf256_dt_0_0005",
+      "role": "space",
+      "nf": 256,
+      "nq": 1024,
+      "ng": 255,
+      "dt": 0.0005,
+      "length": 8.0,
+      "dx": 0.0078125,
+      "frames_stored": 11,
+      "positive_r": true,
+      "positive_Q": true,
+      "positive_geometry": true,
+      "L_min": 0.19114480326227243,
+      "L_max": 1.599976373372201,
+      "beta_min": 0.25351616965379487,
+      "beta_max": 2.1220555034255035,
+      "observer_proper_gap": 1.3877787807814457e-17,
+      "geometry_mode_max": 127,
+      "high_mode_derivative_bound": 1.9996433179781972e-11,
+      "initial_normal_abs_max": 1.4981042168143584e-08,
+      "frames": [
+        {
+          "time": 0.0,
+          "nodes": 1024,
+          "r_min": 4.210504071404775,
+          "r_max": 4.876818778829609,
+          "Q_min": 0.2513249332691237,
+          "Q_max": 0.2513249332691511,
+          "normal_min": -1.4981042168143584e-08,
+          "normal_max": 1.494779904587289e-08,
+          "product_min": -0.016155949897064117,
+          "product_max": -4.4423421130627955e-10,
+          "theta_plus_min": -0.10511672631814567,
+          "theta_plus_max": 0.12710605654865886,
+          "theta_minus_min": -0.12710605879649237,
+          "theta_minus_max": 0.10511672804721767,
+          "raw_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 1024,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 1024,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": null,
+          "product_crossing_count": 0,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [],
+          "anti_trapped_intervals": [],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 198,
+            "x": 1.546875,
+            "r": 4.876818778829609,
+            "r_x": -0.0013814442812421519,
+            "normal_velocity": 2.48354692858901e-09,
+            "theta_plus": -0.0004622251801837423,
+            "theta_minus": 0.00046222721720585964,
+            "product": -2.1365305875880826e-07
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 727,
+            "x": 5.6796875,
+            "r": 4.210504071404775,
+            "r_x": 4.6954775123432546e-05,
+            "normal_velocity": -2.6383573909554512e-09,
+            "theta_plus": 2.1075611172215695e-05,
+            "theta_minus": -2.1078117624978792e-05,
+            "product": -4.4423421130627955e-10
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 197,
+              "right_index": 198,
+              "x": 1.5445064617331308,
+              "r": 4.876816600631413,
+              "normal_velocity": 2.995144723001581e-09,
+              "theta_both": 1.228319606119202e-09,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.679313289291729,
+              "r": 4.210504237251323,
+              "normal_velocity": -2.4305331249825333e-09,
+              "theta_both": -1.1545092882125776e-09,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.2488196683874046e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.005,
+          "nodes": 1024,
+          "r_min": 4.210520977037132,
+          "r_max": 4.876794466759101,
+          "Q_min": 0.24943803285788446,
+          "Q_max": 0.2522875447811818,
+          "normal_min": -0.007946197934523735,
+          "normal_max": 0.004762584813232447,
+          "product_min": -0.01615156476277146,
+          "product_max": 2.970943302278943e-06,
+          "theta_plus_min": -0.10555146457505608,
+          "theta_plus_max": 0.12748928510033186,
+          "theta_minus_min": -0.12672008731534384,
+          "theta_minus_max": 0.10466629354850861,
+          "raw_counts": {
+            "trapped": 2,
+            "anti_trapped": 4,
+            "untrapped": 1018,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 2,
+            "anti_trapped": 4,
+            "untrapped": 1018,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00015215626547733136,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 197,
+              "end_index": 198,
+              "count": 2,
+              "wraps": false,
+              "x_start": 1.5390625,
+              "x_end": 1.546875,
+              "node_span": 0.0078125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 725,
+              "end_index": 728,
+              "count": 4,
+              "wraps": false,
+              "x_start": 5.6640625,
+              "x_end": 5.6875,
+              "node_span": 0.0234375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 197,
+            "x": 1.5390625,
+            "r": 4.876794466759101,
+            "r_x": 0.0012205659328883471,
+            "normal_velocity": -0.004319007979562592,
+            "theta_plus": -0.0013633532345643273,
+            "theta_minus": -0.0021791442063276703,
+            "product": 2.970943302278943e-06
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.210520977037132,
+            "r_x": -0.0003096450252210309,
+            "normal_velocity": 0.0019389282228580548,
+            "theta_plus": 0.0007811359554620767,
+            "theta_minus": 0.0010608481918036557,
+            "product": 8.28666665904765e-07
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 197,
+              "right_index": 198,
+              "x": 1.5410905498495748,
+              "r": 4.876792221923944,
+              "normal_velocity": -0.004396898193378284,
+              "theta_both": -0.0018031927518304901,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.674370839480193,
+              "r": 4.2105214137418745,
+              "normal_velocity": 0.0019277213649574747,
+              "theta_both": 0.0009156687144095609,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.209238430557093e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.01,
+          "nodes": 1024,
+          "r_min": 4.2105708789918594,
+          "r_max": 4.876720900333242,
+          "Q_min": 0.24751198787765835,
+          "Q_max": 0.2532589250357033,
+          "normal_min": -0.015599329869549436,
+          "normal_max": 0.00971238017581417,
+          "product_min": -0.016141670565848865,
+          "product_max": 1.315085076696147e-05,
+          "theta_plus_min": -0.10598961129579351,
+          "theta_plus_max": 0.12787155076437642,
+          "theta_minus_min": -0.12633809955295724,
+          "theta_minus_max": 0.10423084845653077,
+          "raw_counts": {
+            "trapped": 5,
+            "anti_trapped": 8,
+            "untrapped": 1011,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 5,
+            "anti_trapped": 8,
+            "untrapped": 1011,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00031768444072622704,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 195,
+              "end_index": 199,
+              "count": 5,
+              "wraps": false,
+              "x_start": 1.5234375,
+              "x_end": 1.5546875,
+              "node_span": 0.03125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 722,
+              "end_index": 729,
+              "count": 8,
+              "wraps": false,
+              "x_start": 5.640625,
+              "x_end": 5.6953125,
+              "node_span": 0.0546875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 197,
+            "x": 1.5390625,
+            "r": 4.876720900333242,
+            "r_x": -0.0012421015631076384,
+            "normal_velocity": -0.0089000935252577,
+            "theta_plus": -0.004064618962366904,
+            "theta_minus": -0.003235444918385039,
+            "product": 1.315085076696147e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.2105708789918594,
+            "r_x": 0.000186461379639416,
+            "normal_velocity": 0.00387657348285234,
+            "theta_plus": 0.0019260682818829174,
+            "theta_minus": 0.001756637549950044,
+            "product": 3.3834038677232986e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 196,
+              "right_index": 197,
+              "x": 1.536966041086194,
+              "r": 4.876718608961604,
+              "normal_velocity": -0.008752640501203137,
+              "theta_both": -0.0035895614256352716,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.67035873213267,
+              "r": 4.2105713246525145,
+              "normal_velocity": 0.0038904213957404376,
+              "theta_both": 0.001847930409330616,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.859759734048396e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.015,
+          "nodes": 1024,
+          "r_min": 4.210656219311701,
+          "r_max": 4.876600153579566,
+          "Q_min": 0.24546728296767084,
+          "Q_max": 0.25424359102541233,
+          "normal_min": -0.022767772015875192,
+          "normal_max": 0.015059710779397556,
+          "product_min": -0.01612540307466621,
+          "product_max": 2.9943769083917202e-05,
+          "theta_plus_min": -0.10638760923652525,
+          "theta_plus_max": 0.1282532680037817,
+          "theta_minus_min": -0.12595374853222813,
+          "theta_minus_max": 0.10382416334557203,
+          "raw_counts": {
+            "trapped": 7,
+            "anti_trapped": 13,
+            "untrapped": 1004,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 7,
+            "anti_trapped": 13,
+            "untrapped": 1004,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 5.697332074114019e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 194,
+              "end_index": 200,
+              "count": 7,
+              "wraps": false,
+              "x_start": 1.515625,
+              "x_end": 1.5625,
+              "node_span": 0.046875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 719,
+              "end_index": 731,
+              "count": 13,
+              "wraps": false,
+              "x_start": 5.6171875,
+              "x_end": 5.7109375,
+              "node_span": 0.09375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 196,
+            "x": 1.53125,
+            "r": 4.876600153579566,
+            "r_x": 0.0006158365557255279,
+            "normal_velocity": -0.012940004651678522,
+            "theta_plus": -0.005101670634648618,
+            "theta_minus": -0.005512285190440042,
+            "product": 2.812186348587643e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.210656219311701,
+            "r_x": -0.00039972167176323403,
+            "normal_velocity": 0.005956251205004011,
+            "theta_plus": 0.0026464881852405826,
+            "theta_minus": 0.0030117758902603667,
+            "product": 7.970629310166498e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 196,
+              "right_index": 197,
+              "x": 1.5322395253724983,
+              "r": 4.876598376898904,
+              "normal_velocity": -0.01304662663446217,
+              "theta_both": -0.005350707860735786,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.667331927117971,
+              "r": 4.210656473794433,
+              "normal_velocity": 0.00591081859765568,
+              "theta_both": 0.00280755204536035,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.469446951953614e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.02,
+          "nodes": 1024,
+          "r_min": 4.210776514984028,
+          "r_max": 4.876427379907479,
+          "Q_min": 0.24318015247168023,
+          "Q_max": 0.2552416252709936,
+          "normal_min": -0.029809528615442695,
+          "normal_max": 0.021035339524189848,
+          "product_min": -0.01610094933592073,
+          "product_max": 5.385400181131337e-05,
+          "theta_plus_min": -0.10677481198533721,
+          "theta_plus_max": 0.12863483080678584,
+          "theta_minus_min": -0.1255663040370122,
+          "theta_minus_max": 0.10344847683075055,
+          "raw_counts": {
+            "trapped": 9,
+            "anti_trapped": 18,
+            "untrapped": 997,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 9,
+            "anti_trapped": 18,
+            "untrapped": 997,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00011369943723962204,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 192,
+              "end_index": 200,
+              "count": 9,
+              "wraps": false,
+              "x_start": 1.5,
+              "x_end": 1.5625,
+              "node_span": 0.0625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 715,
+              "end_index": 732,
+              "count": 18,
+              "wraps": false,
+              "x_start": 5.5859375,
+              "x_end": 5.71875,
+              "node_span": 0.1328125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 195,
+            "x": 1.5234375,
+            "r": 4.876427379907479,
+            "r_x": 0.0022391810154028698,
+            "normal_velocity": -0.016851847525379958,
+            "theta_plus": -0.00616593575817704,
+            "theta_minus": -0.007657173836207765,
+            "product": 4.721364196325112e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.210776514984028,
+            "r_x": -0.00015726585415529876,
+            "normal_velocity": 0.00803506141257979,
+            "theta_plus": 0.003744187328349603,
+            "theta_minus": 0.003888667451748141,
+            "product": 1.455989939700093e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 195,
+              "right_index": 196,
+              "x": 1.5269954929262397,
+              "r": 4.876426656589284,
+              "normal_velocity": -0.017308328556128627,
+              "theta_both": -0.007098775302091627,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.665352258806994,
+              "r": 4.21077692644131,
+              "normal_velocity": 0.00801062994205794,
+              "theta_both": 0.003804822759313461,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.2959746043559335e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.025,
+          "nodes": 1024,
+          "r_min": 4.210934868620655,
+          "r_max": 4.876214234395069,
+          "Q_min": 0.24051946796351717,
+          "Q_max": 0.25625082077330313,
+          "normal_min": -0.03649396426926214,
+          "normal_max": 0.027900465806831913,
+          "product_min": -0.01607371192550741,
+          "product_max": 8.526193279274151e-05,
+          "theta_plus_min": -0.10710422336703179,
+          "theta_plus_max": 0.12901665376888466,
+          "theta_minus_min": -0.12518162612545983,
+          "theta_minus_max": 0.10311802112230621,
+          "raw_counts": {
+            "trapped": 11,
+            "anti_trapped": 24,
+            "untrapped": 989,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 11,
+            "anti_trapped": 24,
+            "untrapped": 989,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.192927859017006e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 191,
+              "end_index": 201,
+              "count": 11,
+              "wraps": false,
+              "x_start": 1.4921875,
+              "x_end": 1.5703125,
+              "node_span": 0.078125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 711,
+              "end_index": 734,
+              "count": 24,
+              "wraps": false,
+              "x_start": 5.5546875,
+              "x_end": 5.734375,
+              "node_span": 0.1796875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 195,
+            "x": 1.5234375,
+            "r": 4.876214234395069,
+            "r_x": -0.0012758188126362115,
+            "normal_velocity": -0.02184603082606947,
+            "theta_plus": -0.009384572323920662,
+            "theta_minus": -0.008535912524325253,
+            "product": 8.010588843519052e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.210934868620655,
+            "r_x": -5.184075038274644e-05,
+            "normal_velocity": 0.010220217547503983,
+            "theta_plus": 0.00483020087918334,
+            "theta_minus": 0.0048780637854294795,
+            "product": 2.3562027985093883e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 194,
+              "right_index": 195,
+              "x": 1.521466885906848,
+              "r": 4.87621174149481,
+              "normal_velocity": -0.021570433861510564,
+              "theta_both": -0.00884720968039756,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.664487409642783,
+              "r": 4.210935049090152,
+              "normal_velocity": 0.010209844651100154,
+              "theta_both": 0.004849205476729533,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.163336342344337e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.03,
+          "nodes": 1024,
+          "r_min": 4.2111326794625015,
+          "r_max": 4.87595239622817,
+          "Q_min": 0.2373984213671381,
+          "Q_max": 0.25726680096085375,
+          "normal_min": -0.0426534163872243,
+          "normal_max": 0.03595985027983757,
+          "product_min": -0.01603902288795543,
+          "product_max": 0.0001253487756557155,
+          "theta_plus_min": -0.10740356666654978,
+          "theta_plus_max": 0.12939978826019943,
+          "theta_minus_min": -0.12478727547812346,
+          "theta_minus_max": 0.10286695163703068,
+          "raw_counts": {
+            "trapped": 14,
+            "anti_trapped": 29,
+            "untrapped": 981,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 14,
+            "anti_trapped": 29,
+            "untrapped": 981,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.0001702568933037794,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 189,
+              "end_index": 202,
+              "count": 14,
+              "wraps": false,
+              "x_start": 1.4765625,
+              "x_end": 1.578125,
+              "node_span": 0.1015625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 707,
+              "end_index": 735,
+              "count": 29,
+              "wraps": false,
+              "x_start": 5.5234375,
+              "x_end": 5.7421875,
+              "node_span": 0.21875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 194,
+            "x": 1.515625,
+            "r": 4.87595239622817,
+            "r_x": 0.00011264332068980018,
+            "normal_velocity": -0.025872077479365877,
+            "theta_plus": -0.010574690826791529,
+            "theta_minus": -0.010649534003114046,
+            "product": 0.00011261552953233457
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.2111326794625015,
+            "r_x": -9.144519677640323e-05,
+            "normal_velocity": 0.012547943266577488,
+            "theta_plus": 0.0059170047286179065,
+            "theta_minus": 0.006001824927615177,
+            "product": 3.5512826477035825e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 194,
+              "right_index": 195,
+              "x": 1.5157884744622856,
+              "r": 4.87595197610343,
+              "normal_velocity": -0.02589949366929333,
+              "theta_both": -0.010623358800998964,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.664808889073094,
+              "r": 4.211132968410681,
+              "normal_velocity": 0.012525230795164708,
+              "theta_both": 0.005948627549460564,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.903127820947816e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.035,
+          "nodes": 1024,
+          "r_min": 4.211371939235732,
+          "r_max": 4.875639280857843,
+          "Q_min": 0.23376769646526557,
+          "Q_max": 0.2582851147697197,
+          "normal_min": -0.048310079586003196,
+          "normal_max": 0.0455628817517856,
+          "product_min": -0.01600155289528014,
+          "product_max": 0.00017366252127320892,
+          "theta_plus_min": -0.10762247791958508,
+          "theta_plus_max": 0.12979041903052516,
+          "theta_minus_min": -0.12440035855887419,
+          "theta_minus_max": 0.10269733952351759,
+          "raw_counts": {
+            "trapped": 16,
+            "anti_trapped": 36,
+            "untrapped": 972,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 16,
+            "anti_trapped": 36,
+            "untrapped": 972,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 8.029974875747152e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 188,
+              "end_index": 203,
+              "count": 16,
+              "wraps": false,
+              "x_start": 1.46875,
+              "x_end": 1.5859375,
+              "node_span": 0.1171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 702,
+              "end_index": 737,
+              "count": 36,
+              "wraps": false,
+              "x_start": 5.484375,
+              "x_end": 5.7578125,
+              "node_span": 0.2734375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 193,
+            "x": 1.5078125,
+            "r": 4.875639280857843,
+            "r_x": 0.0016307825270567688,
+            "normal_velocity": -0.03003682165416997,
+            "theta_plus": -0.011780025099824433,
+            "theta_minus": -0.012862340689701447,
+            "product": 0.00015151869616717616
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.211371939235732,
+            "r_x": -0.0002864747590076572,
+            "normal_velocity": 0.015055918374626952,
+            "theta_plus": 0.007016692975976776,
+            "theta_minus": 0.007283557480988809,
+            "product": 5.110648661697727e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 193,
+              "right_index": 194,
+              "x": 1.5100749106869549,
+              "r": 4.875636611443202,
+              "normal_velocity": -0.030413684282140557,
+              "theta_both": -0.012475779762076249,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.666381272645204,
+              "r": 4.211372394024794,
+              "normal_velocity": 0.014969873053111638,
+              "theta_both": 0.007109261139837117,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.163336342344337e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 4.440892098500626e-16,
+            "g_e1_e1_plus_one": 6.661338147750939e-16,
+            "g_k_plus": 8.881784197001252e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.04,
+          "nodes": 1024,
+          "r_min": 4.2116539910604756,
+          "r_max": 4.875275575419428,
+          "Q_min": 0.22959529025686787,
+          "Q_max": 0.25929865357627085,
+          "normal_min": -0.0534193630808084,
+          "normal_max": 0.05712654012337303,
+          "product_min": -0.01596028543956304,
+          "product_max": 0.00022984047880652495,
+          "theta_plus_min": -0.10778844726920252,
+          "theta_plus_max": 0.1301827658163341,
+          "theta_minus_min": -0.12399964110881123,
+          "theta_minus_max": 0.10262322573379512,
+          "raw_counts": {
+            "trapped": 18,
+            "anti_trapped": 46,
+            "untrapped": 960,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 18,
+            "anti_trapped": 46,
+            "untrapped": 960,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.070879414515613e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 186,
+              "end_index": 203,
+              "count": 18,
+              "wraps": false,
+              "x_start": 1.453125,
+              "x_end": 1.5859375,
+              "node_span": 0.1328125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 694,
+              "end_index": 739,
+              "count": 46,
+              "wraps": false,
+              "x_start": 5.421875,
+              "x_end": 5.7734375,
+              "node_span": 0.3515625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 193,
+            "x": 1.5078125,
+            "r": 4.875275575419428,
+            "r_x": -0.0025399273018281605,
+            "normal_velocity": -0.035662696955717894,
+            "theta_plus": -0.015471912552656265,
+            "theta_minus": -0.01378813349317143,
+            "product": 0.00021332879567069932
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.2116539910604756,
+            "r_x": 0.00032738211433746417,
+            "normal_velocity": 0.01743497503033229,
+            "theta_plus": 0.008432438421198498,
+            "theta_minus": 0.008126353034452152,
+            "product": 6.852497155193734e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 192,
+              "right_index": 193,
+              "x": 1.5044716854358307,
+              "r": 4.875274133979609,
+              "normal_velocity": -0.035133832769250195,
+              "theta_both": -0.01441306962592112,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.669258427451389,
+              "r": 4.211654413179096,
+              "normal_velocity": 0.01755175382826854,
+              "theta_both": 0.008334849969335398,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.946495907847236e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.045,
+          "nodes": 1024,
+          "r_min": 4.211980353437422,
+          "r_max": 4.8748656516377,
+          "Q_min": 0.2248546599642492,
+          "Q_max": 0.26030166777836883,
+          "normal_min": -0.05794160256759315,
+          "normal_max": 0.07113560691112893,
+          "product_min": -0.01591519964137827,
+          "product_max": 0.0002961553561424006,
+          "theta_plus_min": -0.10785533695320428,
+          "theta_plus_max": 0.13057724526996706,
+          "theta_minus_min": -0.12360656353164297,
+          "theta_minus_max": 0.10267863092999942,
+          "raw_counts": {
+            "trapped": 20,
+            "anti_trapped": 59,
+            "untrapped": 945,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 20,
+            "anti_trapped": 59,
+            "untrapped": 945,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 6.786737671939966e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 185,
+              "end_index": 204,
+              "count": 20,
+              "wraps": false,
+              "x_start": 1.4453125,
+              "x_end": 1.59375,
+              "node_span": 0.1484375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 683,
+              "end_index": 741,
+              "count": 59,
+              "wraps": false,
+              "x_start": 5.3359375,
+              "x_end": 5.7890625,
+              "node_span": 0.453125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 192,
+            "x": 1.5,
+            "r": 4.8748656516377,
+            "r_x": -0.0007791759636384329,
+            "normal_velocity": -0.040229556008131634,
+            "theta_plus": -0.01676287409979606,
+            "theta_minus": -0.016246902072900398,
+            "product": 0.00027234477395974503
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.211980353437422,
+            "r_x": -0.0002045768556184907,
+            "normal_velocity": 0.02035667239495045,
+            "theta_plus": 0.009570102327659317,
+            "theta_minus": 0.00976206039559484,
+            "product": 9.342391691463301e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 191,
+              "right_index": 192,
+              "x": 1.499032009456703,
+              "r": 4.8748633632214915,
+              "normal_velocity": -0.04008946974369458,
+              "theta_both": -0.016447422935440784,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.673482865522098,
+              "r": 4.211980823732799,
+              "normal_velocity": 0.020272485536696534,
+              "theta_both": 0.009626105333846405,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.122502256758253e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 6.661338147750939e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.05,
+          "nodes": 1024,
+          "r_min": 4.212352934498773,
+          "r_max": 4.874395996679539,
+          "Q_min": 0.21952205479249273,
+          "Q_max": 0.26128339207473184,
+          "normal_min": -0.0619256072948858,
+          "normal_max": 0.088156087536241,
+          "product_min": -0.01586817399501577,
+          "product_max": 0.00037204808428031606,
+          "theta_plus_min": -0.10783025874901551,
+          "theta_plus_max": 0.13097423515584364,
+          "theta_minus_min": -0.12320067808206299,
+          "theta_minus_max": 0.1028813096655046,
+          "raw_counts": {
+            "trapped": 23,
+            "anti_trapped": 91,
+            "untrapped": 910,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 23,
+            "anti_trapped": 91,
+            "untrapped": 910,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 5.260554170835321e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 183,
+              "end_index": 205,
+              "count": 23,
+              "wraps": false,
+              "x_start": 1.4296875,
+              "x_end": 1.6015625,
+              "node_span": 0.171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 653,
+              "end_index": 743,
+              "count": 91,
+              "wraps": false,
+              "x_start": 5.1015625,
+              "x_end": 5.8046875,
+              "node_span": 0.703125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 191,
+            "x": 1.4921875,
+            "r": 4.874395996679539,
+            "r_x": 0.001356846937338535,
+            "normal_velocity": -0.04508391090064037,
+            "theta_plus": -0.018049479604260572,
+            "theta_minus": -0.018947031086583375,
+            "product": 0.0003419840511585777
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 727,
+            "x": 5.6796875,
+            "r": 4.212352934498773,
+            "r_x": 8.119055910961459e-05,
+            "normal_velocity": 0.02309121132378182,
+            "theta_plus": 0.011001770736355157,
+            "theta_minus": 0.01092536754749279,
+            "product": 0.00012019838896793049
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 191,
+              "right_index": 192,
+              "x": 1.493791554595333,
+              "r": 4.874392864788519,
+              "normal_velocity": -0.04533368698345598,
+              "theta_both": -0.018600752233549327,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.679063640294495,
+              "r": 4.212353200926939,
+              "normal_velocity": 0.02312977747064353,
+              "theta_both": 0.010981879423384421,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.122502256758253e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        }
+      ]
+    },
+    {
+      "name": "nf256_dt_0_00025",
+      "role": "supporting_time",
+      "nf": 256,
+      "nq": 1024,
+      "ng": 255,
+      "dt": 0.00025,
+      "length": 8.0,
+      "dx": 0.0078125,
+      "frames_stored": 11,
+      "positive_r": true,
+      "positive_Q": true,
+      "positive_geometry": true,
+      "L_min": 0.19114480326227243,
+      "L_max": 1.599976373372201,
+      "beta_min": 0.25351616965379487,
+      "beta_max": 2.1220555034255035,
+      "observer_proper_gap": 1.3877787807814457e-17,
+      "geometry_mode_max": 127,
+      "high_mode_derivative_bound": 2.0701078082626492e-11,
+      "initial_normal_abs_max": 1.4981042168143584e-08,
+      "frames": [
+        {
+          "time": 0.0,
+          "nodes": 1024,
+          "r_min": 4.210504071404775,
+          "r_max": 4.876818778829609,
+          "Q_min": 0.2513249332691237,
+          "Q_max": 0.2513249332691511,
+          "normal_min": -1.4981042168143584e-08,
+          "normal_max": 1.494779904587289e-08,
+          "product_min": -0.016155949897064117,
+          "product_max": -4.4423421130627955e-10,
+          "theta_plus_min": -0.10511672631814567,
+          "theta_plus_max": 0.12710605654865886,
+          "theta_minus_min": -0.12710605879649237,
+          "theta_minus_max": 0.10511672804721767,
+          "raw_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 1024,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 0,
+            "anti_trapped": 0,
+            "untrapped": 1024,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": null,
+          "product_crossing_count": 0,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [],
+          "anti_trapped_intervals": [],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 198,
+            "x": 1.546875,
+            "r": 4.876818778829609,
+            "r_x": -0.0013814442812421519,
+            "normal_velocity": 2.48354692858901e-09,
+            "theta_plus": -0.0004622251801837423,
+            "theta_minus": 0.00046222721720585964,
+            "product": -2.1365305875880826e-07
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 727,
+            "x": 5.6796875,
+            "r": 4.210504071404775,
+            "r_x": 4.6954775123432546e-05,
+            "normal_velocity": -2.6383573909554512e-09,
+            "theta_plus": 2.1075611172215695e-05,
+            "theta_minus": -2.1078117624978792e-05,
+            "product": -4.4423421130627955e-10
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 197,
+              "right_index": 198,
+              "x": 1.5445064617331308,
+              "r": 4.876816600631413,
+              "normal_velocity": 2.995144723001581e-09,
+              "theta_both": 1.228319606119202e-09,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.679313289291729,
+              "r": 4.210504237251323,
+              "normal_velocity": -2.4305331249825333e-09,
+              "theta_both": -1.1545092882125776e-09,
+              "label": "marginal_within_margin",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.2488196683874046e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.005,
+          "nodes": 1024,
+          "r_min": 4.210520977037074,
+          "r_max": 4.87679446675932,
+          "Q_min": 0.24943803285788163,
+          "Q_max": 0.252287544781069,
+          "normal_min": -0.007946197974819493,
+          "normal_max": 0.004762584814076627,
+          "product_min": -0.016151564762780322,
+          "product_max": 2.9709432974431817e-06,
+          "theta_plus_min": -0.10555146453144872,
+          "theta_plus_max": 0.12748928510074867,
+          "theta_minus_min": -0.12672008731574938,
+          "theta_minus_max": 0.1046662935490675,
+          "raw_counts": {
+            "trapped": 2,
+            "anti_trapped": 4,
+            "untrapped": 1018,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 2,
+            "anti_trapped": 4,
+            "untrapped": 1018,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00015215626558097832,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 197,
+              "end_index": 198,
+              "count": 2,
+              "wraps": false,
+              "x_start": 1.5390625,
+              "x_end": 1.546875,
+              "node_span": 0.0078125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 725,
+              "end_index": 728,
+              "count": 4,
+              "wraps": false,
+              "x_start": 5.6640625,
+              "x_end": 5.6875,
+              "node_span": 0.0234375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 197,
+            "x": 1.5390625,
+            "r": 4.87679446675932,
+            "r_x": 0.0012205659356471403,
+            "normal_velocity": -0.004319007976751882,
+            "theta_plus": -0.0013633532324896494,
+            "theta_minus": -0.0021791442060968137,
+            "product": 2.9709432974431817e-06
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.210520977037074,
+            "r_x": -0.0003096450242968743,
+            "normal_velocity": 0.001938928225732301,
+            "theta_plus": 0.0007811359572447676,
+            "theta_minus": 0.0010608481927515273,
+            "product": 8.286666685363459e-07
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 197,
+              "right_index": 198,
+              "x": 1.5410905498549767,
+              "r": 4.876792221924164,
+              "normal_velocity": -0.004396898190914689,
+              "theta_both": -0.0018031927508200749,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.674370839468683,
+              "r": 4.210521413741819,
+              "normal_velocity": 0.0019277213680431904,
+              "theta_both": 0.0009156687158752896,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.3176586478056436e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.01,
+          "nodes": 1024,
+          "r_min": 4.210570878991833,
+          "r_max": 4.876720900333779,
+          "Q_min": 0.24751198787763323,
+          "Q_max": 0.25325892503541,
+          "normal_min": -0.015599329958745595,
+          "normal_max": 0.009712380195308914,
+          "product_min": -0.016141670565819517,
+          "product_max": 1.3150850753476836e-05,
+          "theta_plus_min": -0.1059896112114137,
+          "theta_plus_max": 0.12787155076389045,
+          "theta_minus_min": -0.12633809955266026,
+          "theta_minus_max": 0.10423084845770007,
+          "raw_counts": {
+            "trapped": 5,
+            "anti_trapped": 8,
+            "untrapped": 1011,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 5,
+            "anti_trapped": 8,
+            "untrapped": 1011,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.0003176844443818089,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 195,
+              "end_index": 199,
+              "count": 5,
+              "wraps": false,
+              "x_start": 1.5234375,
+              "x_end": 1.5546875,
+              "node_span": 0.03125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 722,
+              "end_index": 729,
+              "count": 8,
+              "wraps": false,
+              "x_start": 5.640625,
+              "x_end": 5.6953125,
+              "node_span": 0.0546875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 197,
+            "x": 1.5390625,
+            "r": 4.876720900333779,
+            "r_x": -0.0012421015573321169,
+            "normal_velocity": -0.00890009352022062,
+            "theta_plus": -0.004064618958372896,
+            "theta_minus": -0.003235444918246714,
+            "product": 1.3150850753476836e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.210570878991833,
+            "r_x": 0.00018646137740794405,
+            "normal_velocity": 0.0038765734807661542,
+            "theta_plus": 0.0019260682798781696,
+            "theta_minus": 0.0017566375499729599,
+            "product": 3.383403864245821e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 196,
+              "right_index": 197,
+              "x": 1.5369660410974537,
+              "r": 4.876718608962136,
+              "normal_velocity": -0.008752640496581185,
+              "theta_both": -0.003589561423739363,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.670358732145687,
+              "r": 4.210571324652485,
+              "normal_velocity": 0.003890421394229824,
+              "theta_both": 0.001847930408613095,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.8138576458356397e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.771561172376096e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.015,
+          "nodes": 1024,
+          "r_min": 4.210656219311607,
+          "r_max": 4.876600153580389,
+          "Q_min": 0.2454672829675888,
+          "Q_max": 0.25424359102490934,
+          "normal_min": -0.02276777204114856,
+          "normal_max": 0.015059710768623035,
+          "product_min": -0.016125403074474055,
+          "product_max": 2.994376906604319e-05,
+          "theta_plus_min": -0.10638760911402534,
+          "theta_plus_max": 0.12825326800500617,
+          "theta_minus_min": -0.125953748533155,
+          "theta_minus_max": 0.10382416334914905,
+          "raw_counts": {
+            "trapped": 7,
+            "anti_trapped": 13,
+            "untrapped": 1004,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 7,
+            "anti_trapped": 13,
+            "untrapped": 1004,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 5.697332110941533e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 194,
+              "end_index": 200,
+              "count": 7,
+              "wraps": false,
+              "x_start": 1.515625,
+              "x_end": 1.5625,
+              "node_span": 0.046875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 719,
+              "end_index": 731,
+              "count": 13,
+              "wraps": false,
+              "x_start": 5.6171875,
+              "x_end": 5.7109375,
+              "node_span": 0.09375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 196,
+            "x": 1.53125,
+            "r": 4.876600153580389,
+            "r_x": 0.000615836564938823,
+            "normal_velocity": -0.012940004646531288,
+            "theta_plus": -0.00510167062946528,
+            "theta_minus": -0.005512285191399603,
+            "product": 2.8121863462199755e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.210656219311607,
+            "r_x": -0.00039972167298935046,
+            "normal_velocity": 0.005956251205704837,
+            "theta_plus": 0.0026464881850132853,
+            "theta_minus": 0.0030117758911535537,
+            "product": 7.970629311845738e-06
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 196,
+              "right_index": 197,
+              "x": 1.5322395253869465,
+              "r": 4.87659837689971,
+              "normal_velocity": -0.013046626630843145,
+              "theta_both": -0.00535070785925066,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.667331927119582,
+              "r": 4.210656473794339,
+              "normal_velocity": 0.00591081859922608,
+              "theta_both": 0.0028075520461063297,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 4.163336342344337e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.02,
+          "nodes": 1024,
+          "r_min": 4.210776514983927,
+          "r_max": 4.876427379908641,
+          "Q_min": 0.2431801524714871,
+          "Q_max": 0.255241625270233,
+          "normal_min": -0.029809528648547905,
+          "normal_max": 0.021035339557967644,
+          "product_min": -0.016100949335931744,
+          "product_max": 5.385400181554964e-05,
+          "theta_plus_min": -0.10677481181012612,
+          "theta_plus_max": 0.12863483080487173,
+          "theta_minus_min": -0.12556630403783653,
+          "theta_minus_max": 0.10344847683451554,
+          "raw_counts": {
+            "trapped": 9,
+            "anti_trapped": 18,
+            "untrapped": 997,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 9,
+            "anti_trapped": 18,
+            "untrapped": 997,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00011369943884498749,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 192,
+              "end_index": 200,
+              "count": 9,
+              "wraps": false,
+              "x_start": 1.5,
+              "x_end": 1.5625,
+              "node_span": 0.0625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 715,
+              "end_index": 732,
+              "count": 18,
+              "wraps": false,
+              "x_start": 5.5859375,
+              "x_end": 5.71875,
+              "node_span": 0.1328125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 195,
+            "x": 1.5234375,
+            "r": 4.876427379908641,
+            "r_x": 0.0022391810254001904,
+            "normal_velocity": -0.016851847515658942,
+            "theta_plus": -0.006165935750859853,
+            "theta_minus": -0.0076571738355477766,
+            "product": 4.72136419031527e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.210776514983927,
+            "r_x": -0.00015726585549157707,
+            "normal_velocity": 0.00803506141072323,
+            "theta_plus": 0.0037441873268540646,
+            "theta_minus": 0.0038886674514802357,
+            "product": 1.4559899390182192e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 195,
+              "right_index": 196,
+              "x": 1.526995492940626,
+              "r": 4.876426656590472,
+              "normal_velocity": -0.017308328550429464,
+              "theta_both": -0.007098775299752462,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.6653522588148055,
+              "r": 4.210776926441211,
+              "normal_velocity": 0.0080106299402839,
+              "theta_both": 0.0038048227584709317,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.0357660829594124e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.326672684688674e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.025,
+          "nodes": 1024,
+          "r_min": 4.210934868620626,
+          "r_max": 4.876214234396622,
+          "Q_min": 0.24051946796315576,
+          "Q_max": 0.25625082077223116,
+          "normal_min": -0.03649396430730662,
+          "normal_max": 0.027900465860622274,
+          "product_min": -0.016073711925659328,
+          "product_max": 8.526193281912687e-05,
+          "theta_plus_min": -0.10710422315549427,
+          "theta_plus_max": 0.12901665377051558,
+          "theta_minus_min": -0.12518162612575068,
+          "theta_minus_max": 0.10311802112581253,
+          "raw_counts": {
+            "trapped": 11,
+            "anti_trapped": 24,
+            "untrapped": 989,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 11,
+            "anti_trapped": 24,
+            "untrapped": 989,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.1929277537442536e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 191,
+              "end_index": 201,
+              "count": 11,
+              "wraps": false,
+              "x_start": 1.4921875,
+              "x_end": 1.5703125,
+              "node_span": 0.078125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 711,
+              "end_index": 734,
+              "count": 24,
+              "wraps": false,
+              "x_start": 5.5546875,
+              "x_end": 5.734375,
+              "node_span": 0.1796875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 195,
+            "x": 1.5234375,
+            "r": 4.876214234396622,
+            "r_x": -0.0012758188073233607,
+            "normal_velocity": -0.021846030824838738,
+            "theta_plus": -0.0093845723216457,
+            "theta_minus": -0.008535912525584926,
+            "product": 8.010588842759314e-05
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.210934868620626,
+            "r_x": -5.184074248202469e-05,
+            "normal_velocity": 0.010220217559373296,
+            "theta_plus": 0.004830200888467994,
+            "theta_minus": 0.004878063787419646,
+            "product": 2.3562028039997925e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 194,
+              "right_index": 195,
+              "x": 1.5214668859176843,
+              "r": 4.876211741496359,
+              "normal_velocity": -0.0215704338611019,
+              "theta_both": -0.008847209680227135,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.664487409579193,
+              "r": 4.210935049090098,
+              "normal_velocity": 0.010209844664364254,
+              "theta_both": 0.00484920548302943,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.729655473350135e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.03,
+          "nodes": 1024,
+          "r_min": 4.21113267946258,
+          "r_max": 4.875952396230036,
+          "Q_min": 0.23739842136654965,
+          "Q_max": 0.2572668009594098,
+          "normal_min": -0.042653416434264686,
+          "normal_max": 0.03595985025609185,
+          "product_min": -0.016039022887766027,
+          "product_max": 0.00012534877570464064,
+          "theta_plus_min": -0.10740356640066681,
+          "theta_plus_max": 0.12939978826250242,
+          "theta_minus_min": -0.1247872754774177,
+          "theta_minus_max": 0.10286695164358893,
+          "raw_counts": {
+            "trapped": 14,
+            "anti_trapped": 29,
+            "untrapped": 981,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 14,
+            "anti_trapped": 29,
+            "untrapped": 981,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 0.00017025689563434921,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 189,
+              "end_index": 202,
+              "count": 14,
+              "wraps": false,
+              "x_start": 1.4765625,
+              "x_end": 1.578125,
+              "node_span": 0.1015625,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 707,
+              "end_index": 735,
+              "count": 29,
+              "wraps": false,
+              "x_start": 5.5234375,
+              "x_end": 5.7421875,
+              "node_span": 0.21875,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 194,
+            "x": 1.515625,
+            "r": 4.875952396230036,
+            "r_x": 0.00011264332697171614,
+            "normal_velocity": -0.02587207747725361,
+            "theta_plus": -0.010574690823834162,
+            "theta_minus": -0.010649534004330484,
+            "product": 0.00011261552951370345
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.21113267946258,
+            "r_x": -9.14452081487091e-05,
+            "normal_velocity": 0.012547943260380863,
+            "theta_plus": 0.0059170047204006255,
+            "theta_minus": 0.006001824929946292,
+            "product": 3.551282644151036e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 194,
+              "right_index": 195,
+              "x": 1.5157884744712207,
+              "r": 4.875951976105273,
+              "normal_velocity": -0.025899493668744455,
+              "theta_both": -0.010623358800769813,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.664808889167668,
+              "r": 4.211132968410785,
+              "normal_velocity": 0.012525230785573951,
+              "theta_both": 0.0059486275449054625,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.2959746043559335e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 8.881784197001252e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.035,
+          "nodes": 1024,
+          "r_min": 4.211371939235512,
+          "r_max": 4.875639280860051,
+          "Q_min": 0.23376769646439743,
+          "Q_max": 0.25828511476785826,
+          "normal_min": -0.04831007962604838,
+          "normal_max": 0.045562881799184614,
+          "product_min": -0.016001552895548724,
+          "product_max": 0.00017366252150562256,
+          "theta_plus_min": -0.10762247760142009,
+          "theta_plus_max": 0.12979041902644073,
+          "theta_minus_min": -0.12440035856205121,
+          "theta_minus_max": 0.10269733952938974,
+          "raw_counts": {
+            "trapped": 16,
+            "anti_trapped": 36,
+            "untrapped": 972,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 16,
+            "anti_trapped": 36,
+            "untrapped": 972,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 8.029975007251752e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 188,
+              "end_index": 203,
+              "count": 16,
+              "wraps": false,
+              "x_start": 1.46875,
+              "x_end": 1.5859375,
+              "node_span": 0.1171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 702,
+              "end_index": 737,
+              "count": 36,
+              "wraps": false,
+              "x_start": 5.484375,
+              "x_end": 5.7578125,
+              "node_span": 0.2734375,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 193,
+            "x": 1.5078125,
+            "r": 4.875639280860051,
+            "r_x": 0.001630782533235604,
+            "normal_velocity": -0.030036821648017693,
+            "theta_plus": -0.011780025095245334,
+            "theta_minus": -0.012862340689222025,
+            "product": 0.00015151869610263062
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 725,
+            "x": 5.6640625,
+            "r": 4.211371939235512,
+            "r_x": -0.00028647476212406014,
+            "normal_velocity": 0.015055918369479749,
+            "theta_plus": 0.007016692972081183,
+            "theta_minus": 0.007283557479996284,
+            "product": 5.1106486581639254e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 193,
+              "right_index": 194,
+              "x": 1.510074910692011,
+              "r": 4.875636611445409,
+              "normal_velocity": -0.030413684279615782,
+              "theta_both": -0.01247577976103493,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.666381272631073,
+              "r": 4.211372394024584,
+              "normal_velocity": 0.014969873053663171,
+              "theta_both": 0.007109261140099397,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.469446951953614e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 4.440892098500626e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.04,
+          "nodes": 1024,
+          "r_min": 4.2116539910608815,
+          "r_max": 4.875275575421909,
+          "Q_min": 0.22959529025564668,
+          "Q_max": 0.25929865357387427,
+          "normal_min": -0.0534193631109589,
+          "normal_max": 0.05712654022034114,
+          "product_min": -0.015960285439803303,
+          "product_max": 0.0002298404791497453,
+          "theta_plus_min": -0.10778844691555055,
+          "theta_plus_max": 0.1301827658156214,
+          "theta_minus_min": -0.12399964110650537,
+          "theta_minus_max": 0.10262322574250918,
+          "raw_counts": {
+            "trapped": 18,
+            "anti_trapped": 46,
+            "untrapped": 960,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 18,
+            "anti_trapped": 46,
+            "untrapped": 960,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 4.070878111522729e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 186,
+              "end_index": 203,
+              "count": 18,
+              "wraps": false,
+              "x_start": 1.453125,
+              "x_end": 1.5859375,
+              "node_span": 0.1328125,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 694,
+              "end_index": 739,
+              "count": 46,
+              "wraps": false,
+              "x_start": 5.421875,
+              "x_end": 5.7734375,
+              "node_span": 0.3515625,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 193,
+            "x": 1.5078125,
+            "r": 4.875275575421909,
+            "r_x": -0.0025399273208000853,
+            "normal_velocity": -0.03566269697499148,
+            "theta_plus": -0.015471912566843006,
+            "theta_minus": -0.01378813349478313,
+            "product": 0.0002133287958912441
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.2116539910608815,
+            "r_x": 0.00032738211985501586,
+            "normal_velocity": 0.017434975043348174,
+            "theta_plus": 0.008432438429957853,
+            "theta_minus": 0.00812635303805298,
+            "product": 6.85249716534827e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 192,
+              "right_index": 193,
+              "x": 1.5044716854204196,
+              "r": 4.875274133982119,
+              "normal_velocity": -0.035133832780324115,
+              "theta_both": -0.01441306963045659,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 725,
+              "right_index": 726,
+              "x": 5.669258427353364,
+              "r": 4.211654413179474,
+              "normal_velocity": 0.01755175385275865,
+              "theta_both": 0.008334849980964336,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.2959746043559335e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 6.661338147750939e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 8.881784197001252e-16,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.045,
+          "nodes": 1024,
+          "r_min": 4.2119803534373865,
+          "r_max": 4.874865651640368,
+          "Q_min": 0.22485465996257753,
+          "Q_max": 0.26030166777535085,
+          "normal_min": -0.05794160259776734,
+          "normal_max": 0.07113560687460917,
+          "product_min": -0.01591519964127715,
+          "product_max": 0.00029615535660735035,
+          "theta_plus_min": -0.10785533654264105,
+          "theta_plus_max": 0.13057724527211959,
+          "theta_minus_min": -0.12360656353204207,
+          "theta_minus_max": 0.10267863093982876,
+          "raw_counts": {
+            "trapped": 20,
+            "anti_trapped": 59,
+            "untrapped": 945,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 20,
+            "anti_trapped": 59,
+            "untrapped": 945,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 6.786734849786877e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 185,
+              "end_index": 204,
+              "count": 20,
+              "wraps": false,
+              "x_start": 1.4453125,
+              "x_end": 1.59375,
+              "node_span": 0.1484375,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 683,
+              "end_index": 741,
+              "count": 59,
+              "wraps": false,
+              "x_start": 5.3359375,
+              "x_end": 5.7890625,
+              "node_span": 0.453125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 192,
+            "x": 1.5,
+            "r": 4.874865651640368,
+            "r_x": -0.0007791759905654196,
+            "normal_velocity": -0.04022955603291513,
+            "theta_plus": -0.016762874118870133,
+            "theta_minus": -0.016246902074143994,
+            "product": 0.00027234477429048583
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 726,
+            "x": 5.671875,
+            "r": 4.2119803534373865,
+            "r_x": -0.0002045768885879859,
+            "normal_velocity": 0.020356672365441957,
+            "theta_plus": 0.009570102298179787,
+            "theta_minus": 0.009762060397051143,
+            "product": 9.342391664078903e-05
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 191,
+              "right_index": 192,
+              "x": 1.499032009425815,
+              "r": 4.8748633632241045,
+              "normal_velocity": -0.04008946976275923,
+              "theta_both": -0.016447422943253583,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.6734828657501195,
+              "r": 4.21198082373279,
+              "normal_velocity": 0.020272485499256046,
+              "theta_both": 0.009626105316068334,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.122502256758253e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 7.216449660063518e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        },
+        {
+          "time": 0.05,
+          "nodes": 1024,
+          "r_min": 4.212352934499011,
+          "r_max": 4.87439599668233,
+          "Q_min": 0.2195220547902816,
+          "Q_max": 0.2612833920709537,
+          "normal_min": -0.06192560732310438,
+          "normal_max": 0.08815608763539545,
+          "product_min": -0.015868173995237787,
+          "product_max": 0.00037204808490470765,
+          "theta_plus_min": -0.10783025830745632,
+          "theta_plus_max": 0.13097423516151607,
+          "theta_minus_min": -0.12320067808207485,
+          "theta_minus_max": 0.10288130967714938,
+          "raw_counts": {
+            "trapped": 23,
+            "anti_trapped": 91,
+            "untrapped": 910,
+            "marginal_indicator": 0
+          },
+          "strict_counts": {
+            "trapped": 23,
+            "anti_trapped": 91,
+            "untrapped": 910,
+            "within_margin": 0
+          },
+          "same_sign_min_abs_expansion": 5.260559369128159e-05,
+          "product_crossing_count": 4,
+          "nodal_marginal_count": 0,
+          "trapped_intervals": [
+            {
+              "start_index": 183,
+              "end_index": 205,
+              "count": 23,
+              "wraps": false,
+              "x_start": 1.4296875,
+              "x_end": 1.6015625,
+              "node_span": 0.171875,
+              "contains_marker": true
+            }
+          ],
+          "anti_trapped_intervals": [
+            {
+              "start_index": 653,
+              "end_index": 743,
+              "count": 91,
+              "wraps": false,
+              "x_start": 5.1015625,
+              "x_end": 5.8046875,
+              "node_span": 0.703125,
+              "contains_marker": true
+            }
+          ],
+          "areal_maximum": {
+            "kind": "maximum",
+            "index": 191,
+            "x": 1.4921875,
+            "r": 4.87439599668233,
+            "r_x": 0.0013568469044600694,
+            "normal_velocity": -0.04508391093145943,
+            "theta_plus": -0.018049479627770364,
+            "theta_minus": -0.01894703108834296,
+            "product": 0.000341984051635778
+          },
+          "areal_minimum": {
+            "kind": "minimum",
+            "index": 727,
+            "x": 5.6796875,
+            "r": 4.212352934499011,
+            "r_x": 8.119059811275559e-05,
+            "normal_velocity": 0.023091211369911227,
+            "theta_plus": 0.011001770776608162,
+            "theta_minus": 0.010925367551042479,
+            "product": 0.00012019838944676224
+          },
+          "critical_point_estimates": [
+            {
+              "left_index": 191,
+              "right_index": 192,
+              "x": 1.4937915545529763,
+              "r": 4.874392864791329,
+              "normal_velocity": -0.04533368700897957,
+              "theta_both": -0.01860075224401113,
+              "label": "both_negative",
+              "interpolation": "linear between adjacent samples"
+            },
+            {
+              "left_index": 726,
+              "right_index": 727,
+              "x": 5.679063639997579,
+              "r": 4.212353200927281,
+              "normal_velocity": 0.023129777534352546,
+              "theta_both": 0.010981879453632189,
+              "label": "both_positive",
+              "interpolation": "linear between adjacent samples"
+            }
+          ],
+          "observer_sum_gap": 3.2959746043559335e-17,
+          "spatial_difference_gap": 5.551115123125783e-17,
+          "norm_gaps": {
+            "g_nn_minus_one": 5.551115123125783e-16,
+            "g_e1_e1_plus_one": 4.440892098500626e-16,
+            "g_k_plus": 6.661338147750939e-16,
+            "g_k_minus": 1.1102230246251565e-15,
+            "g_k_cross_minus_two": 8.881784197001252e-16
+          }
+        }
+      ]
+    }
+  ],
+  "cpu_budget_seconds": 20.0,
+  "cpu_seconds": 0.07039700000000004,
+  "wall_seconds": 0.07399820799764711,
+  "cpu_budget_exceeded": false
+}

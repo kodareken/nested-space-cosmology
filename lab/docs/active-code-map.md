@@ -21,9 +21,13 @@ production-driver requirement. The episode driver
 `scripts/derive_nsc_spherical_feedback_episode.py` reuses that preparation.
 The saved $T=0.05$ record is
 `results/development/nsc-spherical-feedback-episode-v1.json`. Renewal is
-false, and a constraint-consistent solution is not validated.
+false, and a constraint-consistent solution is not validated. The saved
+consumers, the controls successor, the local-boundary review, and the
+initial geometry-graded window are indexed below. They do not close
+renewal. Each completed check keeps the domain named in its section.
 
-Each rate call recomputes the column source on the prolonged state.
+Each rate call, including each stage inside `rk4_step`, recomputes the
+column source on the prolonged state.
 Geometric rates come from the chart. With the matter force on,
 $\dot p_Q\leftarrow\dot p_Q-F_Q/\Delta x_Q$. The initial radius uses
 $\rho=F_L/\Delta x_Q$ from that source: `solve_initial_radius` when $\rho$
@@ -69,6 +73,130 @@ reported. Driver sha256
 The evolution code owner remains `nsc_spherical_galerkin_coupling.py`.
 v5 remains the seed replay.
 
+## Regeneration controls, 2026-10-01
+
+Saved consumer of the episode above. Not a renewal and not a programme
+requirement. The note's comparison floors stay in the note. Owners,
+relative to `lab/`:
+
+- `src/recursive_horizons/nsc_regeneration_controls.py`
+- `scripts/derive_nsc_regeneration_controls.py`
+- `tests/test_nsc_regeneration_controls.py`
+- `tests/test_nsc_regeneration_uniform_independent.py`
+- `results/development/nsc-regeneration-controls-v1.json`
+- `results/development/nsc-regeneration-controls-v1.npz`
+- [nsc-regeneration-controls.md](nsc-regeneration-controls.md)
+
+Status `MEASURED`. The second episode reaches $T=0.10$ at $n_f=512$ and
+$n_f=256$. `maintained_structure` is true, `renewed_structure` is false,
+and `candidate_regime` is false. The uniform independent test file checks
+the half-identity, the chart, and the proxy policy. It does not rerun the
+$T=0.10$ evolution. The column source, radius Newton, shift momentum, and
+`rk4_step` remain with the Galerkin owner.
+
+## Regeneration-controls successor, 2026-10-01
+
+Read-only assessment of the v1 JSON and NPZ. Owners, relative to `lab/`:
+
+- `results/development/nsc-regeneration-controls-v2.json`
+- `scripts/derive_nsc_regeneration_controls.py` (`--assess` writes; `--check` reads v1)
+- `tests/test_nsc_regeneration_controls.py`
+- `tests/test_nsc_regeneration_uniform_independent.py`
+- [nsc-regeneration-controls.md](nsc-regeneration-controls.md)
+
+Status `ASSESSED`. `dynamics_rerun` is false. \(G>0\) is the initial
+convex-radius ansatz. The dynamic chart is positive \(r\), \(Q\), and \(L\).
+The Galerkin half-identity commutes with \(H_G\) on the small control. The
+fine embedding of that identity is a different operator. At the stored
+endpoint \(dt\,\omega=1.4994122493748205\), above the owned cap \(1.4\) and
+below \(2\sqrt{2}\). Gram gap \(1.3069428872469757\times 10^{-9}\). The
+owned stable timestep is \(4.668495940938623\times 10^{-4}\). A missed
+proxy and the cap label leave the maintained-drift reading in place.
+
+## Conditional local response, 2026-10-01
+
+Saved streamed reduction on stored episode geometry. Not a stress, not a
+regenerated trajectory, and not an edit of the reducer. Owners, relative
+to `lab/`:
+
+- `src/recursive_horizons/nsc_coupled_local_response.py`
+- `scripts/derive_nsc_coupled_local_response.py`
+- `tests/test_nsc_coupled_local_response.py`
+- `results/development/nsc-coupled-local-response-v1.json`
+- `results/development/nsc-coupled-local-response-v1.npz`
+- [nsc-coupled-local-response.md](nsc-coupled-local-response.md)
+
+Status `MEASURED_CONDITIONAL_REDUCTION`. The stored-frame phase is
+`MEASURED_STORED_FRAMES`: eleven frames, $t=0$ through $t=0.05$. Renewal
+is false. Saved autonomous spinors exist at the endpoints only, and no
+nodal $\dot Q$ series is stored. The reducer is called with
+`backend="streamed"` and is not modified. The local-boundary review checks
+stored payloads, the projected endpoint, and a small causal ODE. The
+$1024$-dimensional series remains the saved record. Hermite interpolation
+is an indicator. The live observer label is columns 0 and 1 with weights
+$0.75$ and $0.75$. The stored JSON keeps its original observer string.
+
+## Spherical null expansion, 2026-10-01
+
+Kinematic postprocessing of the saved chart. Not an evolution and not a
+global horizon or child-region result. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_spherical_null_expansion.py`
+- `scripts/derive_nsc_spherical_null_expansion.py`
+- `tests/test_nsc_spherical_null_expansion.py`
+- `results/development/nsc-spherical-null-expansion-v1.json`
+- [nsc-spherical-null-expansion.md](nsc-spherical-null-expansion.md)
+
+Status `MEASURED_SAMPLE_TRAPPING_CHARACTER_CHANGES`. The episode JSON
+and NPZ are inputs and stay unchanged. Initial areal extrema are
+marginal. Later stored frames have one both-negative arc and one
+both-positive arc, and the sampled signs agree under refinement. The v1
+JSON keeps the pre-correction module hash. Current owners are bound by
+the review below. The writer replaces the v1 JSON, so replay is the
+in-memory measurement.
+
+## Local-boundary review, 2026-10-01
+
+Successor correction record. It does not rewrite the scientific v1 files.
+Owners, relative to `lab/`:
+
+- `results/development/nsc-local-boundary-review-v1.json`
+- `tests/test_nsc_local_boundary_independent.py`
+- `tests/test_nsc_spherical_null_expansion.py`
+- `src/recursive_horizons/nsc_spherical_null_expansion.py`
+- `src/recursive_horizons/nsc_coupled_local_response.py`
+
+The boost flag compares the returned rescaling. The initial areal
+extrema are nonvacuous and marginal. The review stores both the immutable
+v1 hashes and `current_owner_sha256`. The pre-correction null-expansion
+module is not a pinned source object. `reference_unchanged.independent_test_sha256`
+is `68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
+The delivered independent test is
+`d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
+The review JSON is not rebound to that later hash.
+
+## Initial geometry-graded window, 2026-10-01
+
+Completed initial-packet measurement. Not an evolution and not closed
+six-mode dynamics. Owners, relative to `lab/`:
+
+- `src/recursive_horizons/nsc_geometry_graded_window.py`
+- `scripts/derive_nsc_geometry_graded_window.py`
+- `tests/test_nsc_geometry_graded_window.py`
+- `results/development/nsc-geometry-graded-window-v1.json`
+- [nsc-geometry-graded-window.md](nsc-geometry-graded-window.md)
+
+Status `INITIAL_GRADED_COMPRESSION_NOT_INVARIANT`. `--check` recomputes
+and compares the stored record, including its source hashes, and does not
+write. Initial grading defects are about $5\times 10^{-14}$. The
+$n_f=256/512$ gap is $1.339442162796698\times 10^{-8}$. Corner Frobenius
+is $1.2001004173602996\times 10^{-14}$. Leakage reaches
+$0.9658068315009373$. Schur recurrence uses $B_{01}$ with $1/\Omega$.
+$\Omega^{-1/2}B_{01}$ is a different congruence. Evolved $Q$ breaks the
+kinetic grading by $0.012665526439756825$ on the diagonal and
+$0.04059408339655854$ on the link. The action functional stays
+`first_order_density`. The old rational $B$ is not a match requirement.
+
 ## Weak spherical Cauchy residual, 2026-10-01
 
 Diagnostic helper. It does not step a state. Owners, relative to `lab/`:
@@ -80,7 +208,9 @@ Diagnostic helper. It does not step a state. Owners, relative to `lab/`:
 - `results/development/nsc-spherical-cauchy-weak-v1.json`
 - [nsc-spherical-cauchy-weak.md](nsc-spherical-cauchy-weak.md)
 
-Status `PARTIAL_TERMS_NO_TOTAL_BOUND`. Declared positive $G$ with
+Status `PARTIAL_TERMS_NO_TOTAL_BOUND`. The saved `checkpoint_head` is
+`9a9090a`. `build_record` stamps the live Git HEAD and writes the JSON, so
+the native CLI is not a byte-stable replay after that checkpoint. Declared positive $G$ with
 `rho_independent` true exposes $\mu=Q^2=0.0631642220827373$. The
 dense-versus-Fourier-product movement is a conditioning indicator, not a
 rounding enclosure. Module sha256
@@ -359,8 +489,10 @@ Thirteen dense tests passed. Nine further independent tests, sha256
 use one prescribed generator and an exterior integrator. Eleven streamed
 tests check dense agreement and do not store a time-indexed exterior
 propagator. The sine schedule
-is a prescribed $H(t)$. No actual $H(g(t))$ was consumed. No coupled
-trajectory is accepted. These tests do not validate the failed
+is a prescribed $H(t)$. No actual $H(g(t))$ was consumed by these tests.
+The conditional local response above calls the streamed backend on
+stored episode frames and does not edit this reducer. No coupled
+trajectory is accepted by these tests. They do not validate the failed
 spherical-coupling trajectories.
 
 ## Continuous local source-error contribution, 2026-09-29

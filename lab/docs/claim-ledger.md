@@ -30,7 +30,12 @@ and not a handover.
 | Incoherent imbalance mean flow | Complete on the frozen depth-3 window. Geometry there is an input. | [Note](nsc-imbalance-turnover.md), [record](../results/development/nsc-imbalance-turnover-v1.json) |
 | Coupled short episode | Real saved diagnostic. v5 evolved the state and the geometry through \(T=0.005\). It is the self-contained preparation, not a permanent production-driver requirement. | [Replay](../scripts/derive_nsc_spherical_galerkin_refinement_v5.py), [record](../results/development/nsc-spherical-coupling-refinement-v5.json) |
 | \(T=0.05\) feedback episode | Four runs reach \(T=0.05\). All 62 physical refinement rows meet one percent. Verdict `MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL`. | [Driver](../scripts/derive_nsc_spherical_feedback_episode.py), [record](../results/development/nsc-spherical-feedback-episode-v1.json) |
-| Renewal, or a constraint-consistent continuum solution | Unresolved. Fine full Hamilton ends at \(2.825670750915076\times 10^{-5}\); coarse ends at \(0.0068275893562912415\). Continuum error is unknown. | Same episode record |
+| Regeneration controls, \(T=0.10\) | Saved continuation. Maintained localization of one drift. Renewal false. `candidate_regime` is false and is not a programme requirement. | [Note](nsc-regeneration-controls.md), [record](../results/development/nsc-regeneration-controls-v1.json) |
+| Controls successor | Endpoint assessment of the immutable v1 files. \(G>0\) is the initial convex ansatz. The dynamic chart is \(r\), \(Q\), \(L\). The cap label is not a physical failure. | [Record](../results/development/nsc-regeneration-controls-v2.json) |
+| Conditional local response | Stored-frame reduction on the episode geometry. Review domain: payloads, projected endpoint, and a small causal ODE. The \(1024\) series remains the saved record. No stress and no renewal. | [Note](nsc-coupled-local-response.md), [record](../results/development/nsc-coupled-local-response-v1.json), [review](../results/development/nsc-local-boundary-review-v1.json) |
+| Spherical null expansion | Sampled local trapping character. Initial extrema marginal. Review binds immutable v1 bytes. Not a global horizon or a child region. | [Note](nsc-spherical-null-expansion.md), [record](../results/development/nsc-spherical-null-expansion-v1.json), [review](../results/development/nsc-local-boundary-review-v1.json) |
+| Initial geometry-graded window | Completed initial-packet measurement. Leakage about \(0.966\), so the six columns are not closed dynamics. Evolved \(Q\) breaks the kinetic grading. The action functional stays the same. | [Note](nsc-geometry-graded-window.md), [record](../results/development/nsc-geometry-graded-window-v1.json) |
+| Renewal, or a constraint-consistent continuum solution | Unresolved. Fine full Hamilton ends at \(2.825670750915076\times 10^{-5}\); coarse ends at \(0.0068275893562912415\). Continuum error is unknown. The \(T=0.10\) continuation does not close it. | Same episode record; [controls](nsc-regeneration-controls.md) |
 | Weak initial residual | Conditional coercivity is recorded when \(G>0\) and \(\rho\) independence is true. The total bound is not certified. The dense-versus-product movement is a conditioning indicator. | [Note](nsc-spherical-cauchy-weak.md), [record](../results/development/nsc-spherical-cauchy-weak-v1.json) |
 | Streamed retained-region reducer | Dense and streamed prescribed controls agree. No coupled \(H(g(t))\) trajectory is in this record. | [Module](../src/recursive_horizons/nsc_evolving_reduction.py), [note](nsc-evolving-reduction.md) |
 
@@ -43,9 +48,10 @@ The saved \(T=0.05\) record is
 `results/development/nsc-spherical-feedback-episode-v1.json`. Renewal
 remains false. A constraint-consistent solution is not validated.
 
-Each rate evaluation prolongs the state and recomputes the column source
-with `source_from_columns`. Geometric rates come from the summation-by-parts
-chart. With the matter force on,
+Each rate evaluation, including each stage inside `rk4_step`, prolongs
+the state and recomputes the column source with `source_from_columns`.
+Geometric rates come from the summation-by-parts chart. With the matter
+force on,
 \(\dot p_Q\leftarrow\dot p_Q-F_Q/\Delta x_Q\) before the adjoint pullback.
 The initial radius uses that same column source, \(\rho=F_L/\Delta x_Q\).
 `solve_initial_radius` does this when \(\rho\) is not supplied. The v5
@@ -104,6 +110,101 @@ coordinate metric work and includes \(\dot Q=\partial_x(\beta Q)\). Proper
 balance also carries the lapse gradient \(-V(j/q)\partial_x N\). Normal
 shell energy is \(F_L/r=V\rho\,dx\). Hamiltonian derivatives are not those
 pressures.
+
+## Saved controls, local response, and null expansion, 1 October 2026
+
+The saved consumers below have completed checks inside named domains.
+Their comparison floors stay in the owning notes and are not programme
+requirements. Renewal remains false. The next physical question, one
+invariant relating the periodic-bridge curvature proxy and the growth of
+\(q\) to the packet arc's matter and inward motion, is recorded in
+[current result](../../docs/current-result.md#present-spherical-loop).
+Metric curvature at \(T=0.10\) is uncomputed. No new run is opened.
+
+The [regeneration controls](nsc-regeneration-controls.md) and
+[record](../results/development/nsc-regeneration-controls-v1.json) have
+status `MEASURED`. The second episode runs the saved fine state from
+\(T=0.05\) to \(T=0.10\). Window 0 stays the leader. Its share moves from
+\(0.6087043074743482\) to \(0.6198826640133578\), and its shell content
+rises by \(0.11695656049787839\). The joined series from \(T=0\) has
+reversal \(0\). Packet proper flux ends at \(-5.534007341562886\) and
+reservoir flux at \(5.534007341562912\). Field energy changes by
+\(-0.395776510604783\) and gravitational energy by
+\(0.3957764909408823\). The \(n_f=256\) leader-content change agrees to
+\(6\times 10^{-10}\). `maintained_structure` is true,
+`renewed_structure` is false, and `candidate_regime` is false. This is
+one finite drift, not autonomous regeneration closure. Whether \(G\) or
+\(Q\) later reaches the chart boundary is open in that record.
+
+The [conditional local response](nsc-coupled-local-response.md) and
+[record](../results/development/nsc-coupled-local-response-v1.json) have
+status `MEASURED_CONDITIONAL_REDUCTION`, with stored-frame status
+`MEASURED_STORED_FRAMES`. On all eleven frames the fixed region-0
+occupation changes by at most \(0.3305919037025379\). The streamed series
+differs by at most \(0.0007353273811995242\). The conditional full
+endpoint differs from the saved autonomous endpoint by
+\(3.4123144243558556\times 10^{-7}\). Omitting memory separates the
+occupation from the conditional full series by
+\(0.36709975607817125\), and omitting the exterior drive separates it by
+\(0.028764901996227665\). Autonomous spinors are stored at
+the endpoints only. No nodal \(\dot Q\) series is stored, and no stress
+is derived.
+
+The [spherical null expansion](nsc-spherical-null-expansion.md) and
+[record](../results/development/nsc-spherical-null-expansion-v1.json)
+have status `MEASURED_SAMPLE_TRAPPING_CHARACTER_CHANGES`. The initial
+areal extrema are marginal inside the initial normal-velocity noise.
+From \(T=0.005\) through \(T=0.05\), each run has one both-negative arc
+and one both-positive arc. Shared-node signs agree, and halving the
+timestep leaves the raw counts unchanged. The labels are local trapping
+character. A global horizon, a child region, and regeneration are
+outside the measurement.
+
+The controls successor
+[nsc-regeneration-controls-v2.json](../results/development/nsc-regeneration-controls-v2.json)
+has status `ASSESSED`. It reads the stored endpoint. \(dt\,\omega\) is
+\(1.4994122493748205\), above the owned cap \(1.4\) and below \(2\sqrt{2}\).
+The Gram gap is \(1.3069428872469757\times 10^{-9}\). The chart stays
+positive. The owned stable timestep is \(4.668495940938623\times 10^{-4}\).
+The Galerkin half-identity is stationary on \(H_G\). The fine embedding of
+that identity is a different congruence. A missed proxy and the cap label
+leave the maintained-drift reading in place.
+
+The local-boundary review
+[nsc-local-boundary-review-v1.json](../results/development/nsc-local-boundary-review-v1.json)
+binds those immutable v1 files and the current owners. Its domain is the
+stored payloads, the projected endpoint, a small causal ODE, the
+boost-return mutation, and the nonvacuous initial extrema. The live
+observer label is columns 0 and 1 with weights \(0.75\) and \(0.75\). The
+stored local-response JSON keeps its original observer string. The
+\(1024\)-dimensional series was not re-integrated for that review.
+The review's unchanged-test hash is
+`68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`.
+The delivered independent test is
+`d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
+The review record stays on the earlier hash. The weak helper's saved
+checkpoint head remains `9a9090a`. Its writer stamps the live Git HEAD, so
+that native CLI replay is not byte-stable.
+
+The geometry-graded window
+[nsc-geometry-graded-window-v1.json](../results/development/nsc-geometry-graded-window-v1.json)
+has status `INITIAL_GRADED_COMPRESSION_NOT_INVARIANT`. The initial grading
+defects are about \(5\times 10^{-14}\), the \(n_f=256/512\) gap is
+\(1.339\times 10^{-8}\), and the corner is about \(1.20\times 10^{-14}\).
+Leakage \(0.9658\) sets `closed_six_mode` false. Schur recurrence uses
+\(B_{01}\) with \(1/\Omega\). \(\Omega^{-1/2}B_{01}\) is a different
+congruence. On the saved \(T=0.05\) frame the kinetic grading breaks by
+\(0.01267\) on the diagonal and \(0.04059\) on the link. The action
+functional is unchanged.
+
+Public figures and the owner's open list:
+[controls](../../docs/current-result.md#regeneration-controls-1-october-2026),
+[successor](../../docs/current-result.md#regeneration-controls-successor-1-october-2026),
+[local response](../../docs/current-result.md#conditional-local-response-1-october-2026),
+[null expansion](../../docs/current-result.md#spherical-null-expansion-1-october-2026),
+[review](../../docs/current-result.md#local-boundary-review-1-october-2026),
+and
+[geometry-graded window](../../docs/current-result.md#initial-geometry-graded-window-1-october-2026).
 
 Historical controls stay in the dated sections below. Archived candidate
 notes in the [code map](active-code-map.md#archived-candidate-notes) are not
@@ -508,7 +609,9 @@ use one prescribed generator and an exterior integrator. Eleven streamed
 tests check dense agreement on those controls. The sine
 schedule is a prescribed \(H(t)\). It is not an autonomous trajectory,
 not regeneration, and not a coupled geometry. No actual \(H(g(t))\) was
-consumed. No coupled trajectory is accepted. These tests do not validate
+consumed by these tests. The conditional local response above calls the
+streamed backend on stored episode frames and does not edit this reducer.
+No coupled trajectory is accepted by these tests. They do not validate
 the failed spherical-coupling trajectories.
 
 ## Regenerative interpretation and the local calculation
@@ -544,7 +647,7 @@ relation or promote the record's broad interpretation to an observed fact.
 | State transport | \(C_\Sigma[g]=F[g]C_{\rm src}F[g]^\dagger\), \(\delta C_{\rm src}=0\); [evolved state](nsc-evolved-incoming-state.md) | The upstream preparation is fixed. Geometry changes both incoming fields and their retarded response. Numerical preparation and full field error bounds remain open; see the [current proof gap](nsc-ks-evaluator-repair-v2.md#prepared-source-error-that-remains-to-be-bounded). The finite control is not a solved metric history. |
 | Work and conservation | \(\dot E_A=\operatorname{Tr}(CJ_A)+\operatorname{Tr}(C\dot h_A)\); [transfer](nsc-energy-transfer.md) and [geometry work](nsc-vacuum-work.md) | Static equilibrium gives zero net continuing transfer; a prepared excitation transfers energy and a prescribed geometry pulse does work. Those existing controls do not supply self-consistent continuing regeneration. |
 | Geometry/state consistency | \(\mathcal E_N[g]=\mathcal E_\beta[g]=0\); [evolved constraints](nsc-evolved-incoming-constraints.md) | This is the chosen local incoming-gate application under the unchanged action and source. It includes the retarded state derivative and remains OPEN. Its threshold, source, and history are not prerequisites for the other rows. The campaign is paused. |
-| Continuing regeneration | The connected mechanism proposed above | The global state, metric dynamics and entropy accounting of a continuing sequence are not established by the local gate. They are not established results, and they are not completion conditions for the finite result or for the paused gate application. |
+| Continuing regeneration | The connected mechanism proposed above | The global state, metric dynamics and entropy accounting of a continuing sequence are not established by the local gate. The saved spherical continuation through \(T=0.10\) maintains one drift and does not establish that sequence. The sequence is not a completion condition for the finite result or for the paused gate application. |
 
 For that application only, the local question is whether
 

@@ -91,7 +91,10 @@ claim, name the region, scale, observer, state, and compared quantity.
 ## Present regeneration programme
 
 The current programme is finite nested regeneration under those local laws.
-Starting checkpoint `9a9090a`. The executed loop, and the code owner, is
+The active question is a finite chain: a regional difference, exchange,
+feedback between the state and the geometry, maintained or renewed
+structure, and a local measurement. Starting checkpoint `9a9090a`. The
+executed loop, and the code owner, is
 `lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py`.
 The v5 replay,
 `lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py`,
@@ -99,9 +102,10 @@ remains the self-contained historical seed. The saved \(T=0.05\)
 measurement is `lab/scripts/derive_nsc_spherical_feedback_episode.py`,
 which reuses that preparation. Its four runs are the recorded episode.
 
-`compose_fine_hamiltonian` recomputes the column source and the geometric
-rates on the prolonged state. With the matter force included it feeds
-`force_Q` into the conjugate momentum,
+`rk4_step` calls `rates` on each stage state. `rates` calls
+`compose_fine_hamiltonian`, which recomputes the column source and the
+geometric rates on that prolonged state. With the matter force included
+it feeds `force_Q` into the conjugate momentum,
 
 $$
 \dot p_Q \leftarrow \dot p_Q - F_Q/\Delta x_Q.
@@ -133,9 +137,50 @@ on the fine primary run ends near \([-0.061956,0.088159]\), and the field
 and gravitational energies exchange about \(0.4123\). The fine full
 Hamilton residual ends near \(2.83\times 10^{-5}\) and the fine momentum
 residual near \(4.30\times 10^{-6}\); the coarse residual is higher.
-Continuum constraint control and renewal are not proved. The weak helper
-records a conditional coercivity constant and a Fourier-product
-conditioning comparison. It does not certify a total initial-error bound.
+Continuum constraint control and renewal are not proved. The saved
+consumers of that episode do not close either question. The
+[regeneration controls](../lab/docs/nsc-regeneration-controls.md) continue
+the saved fine state to \(T=0.10\) at \(n_f=512\) and \(n_f=256\). Window 0
+stays the leader, its shell content rises by about \(0.117\), packet and
+reservoir fluxes end opposite near \(5.534\), and the field and
+gravitational energies exchange about \(0.396\). The record calls that
+maintained localization of one drift. Renewal is false. The comparison
+floors in that note stay there. They are not programme requirements. The
+[conditional local response](../lab/docs/nsc-coupled-local-response.md)
+reads all eleven stored frames. The fixed region-0 occupation changes by
+about \(0.33059\). The streamed reduction stays within about
+\(7.353\times 10^{-4}\) of the conditional full series. That conditional
+series differs from the saved autonomous endpoint by about
+\(3.412\times 10^{-7}\). Omitting memory separates the occupation from
+the conditional full series by about \(0.367\), and omitting the exterior
+drive separates it by about \(0.02876\). Saved autonomous spinors
+exist at the endpoints only. No \(\dot Q\) series and no stress are
+derived. The
+[spherical null expansion](../lab/docs/nsc-spherical-null-expansion.md)
+is kinematic postprocessing. The initial areal extrema are marginal
+inside the initial normal-velocity noise. Later frames have one
+both-negative arc and one both-positive arc, and refinement agrees on
+the sampled signs. That is a local trapping character, not a global
+horizon or a child region. The controls successor keeps the v1 bytes and
+reads the stored endpoint: \(dt\,\omega\) is about \(1.4994\), above the
+owned cap \(1.4\) and below \(2\sqrt{2}\), with a positive chart and a
+Gram gap about \(1.307\times 10^{-9}\). A later stable step is at most
+\(4.6685\times 10^{-4}\). A missed reversal proxy, a missed leader-share proxy, and the cap label
+leave the maintained-drift reading in place. The local-response review checked the stored
+payloads, the projected endpoint, and a small causal ODE. The saved
+\(1024\)-dimensional series remains that record. The null-expansion review
+binds the immutable v1 files and the current owners; the historical JSON
+and NPZ stay unchanged. The initial geometry-graded window is measured.
+Leakage about \(0.966\) means the six columns are not closed dynamics.
+Direct Schur recurrence uses \(B_{01}\) with the factor \(1/\Omega\). The
+congruence \(\Omega^{-1/2}B_{01}\) is a different link. Evolved \(Q\)
+breaks the kinetic grading while the action functional stays the same.
+The next physical question is recorded in
+[current result](current-result.md#present-spherical-loop).
+
+The weak helper records a conditional coercivity constant and a
+Fourier-product conditioning comparison. It does not certify a total
+initial-error bound.
 The historical initial tolerance \(10^{-8}\) is not an
 automatic veto of this diagnostic. A weak residual alone is not sufficient;
 the full residuals stay reported. The toy \(H\) and \(B\) fractions are an

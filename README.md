@@ -11,10 +11,11 @@ remains unchanged.
 
 **Starting checkpoint `9a9090a`.** The programme is finite nested
 regeneration under familiar local laws. The executed calculation is the
-spherical Galerkin loop: `compose_fine_hamiltonian` recomputes the source
-and the rates and feeds $F_Q$ into $\dot p_Q$; $Q$, $r$, $\chi$
-and the momenta evolve; $L$ and $\beta$ stay gauge controls; the initial
-radius uses the source. That module is the code owner. The v5 replay
+spherical Galerkin loop: each Runge–Kutta stage calls
+`compose_fine_hamiltonian`, which recomputes the source and the rates
+and feeds $F_Q$ into $\dot p_Q$; $Q$, $r$, $\chi$ and the momenta
+evolve; $L$ and $\beta$ stay gauge controls; the initial radius uses the
+source. That module is the code owner. The v5 replay
 remains the self-contained $T=0.005$ seed: full Hamilton about
 $9.98\times 10^{-6}$, momentum about $1.38\times 10^{-6}$, maximum
 absolute proper radial velocity about $0.0079505$. Signed motion is not
@@ -30,6 +31,22 @@ residual ends near $2.83\times 10^{-5}$ and the fine momentum residual
 near $4.30\times 10^{-6}$; the coarse residual is higher. A
 constraint-consistent continuum solution and renewal are not validated.
 The historical tolerance $10^{-8}$ is not an automatic veto.
+Saved consumers of that episode are recorded and do not close renewal.
+The [controls](lab/docs/nsc-regeneration-controls.md) continue the saved
+state to $T=0.10$: the leader's shell content rises by about $0.117$,
+packet and reservoir fluxes end opposite near $5.534$, and the field
+and gravitational energies exchange about $0.396$. On all eleven stored
+frames the [conditional local response](lab/docs/nsc-coupled-local-response.md)
+moves the fixed region-0 occupation by about $0.33059$. The
+[spherical null expansion](lab/docs/nsc-spherical-null-expansion.md)
+records a local change in trapping character on the saved chart. The
+[controls successor](lab/results/development/nsc-regeneration-controls-v2.json)
+reads that stored endpoint. The
+[local-boundary review](lab/results/development/nsc-local-boundary-review-v1.json)
+checks the saved payloads, the projected endpoint, and a small causal ODE.
+The [initial geometry-graded window](lab/docs/nsc-geometry-graded-window.md)
+is a completed measurement: leakage about $0.966$ leaves the six columns
+outside a closed dynamics.
 [Present loop](docs/current-result.md#present-spherical-loop).
 
 A six-mode inherited finite example remains a fixed-geometry witness, with
@@ -416,14 +433,15 @@ the expensive scientific generators.
 
 NSC is an active theoretical programme and working preprint. Its exact
 identities and numerical results apply to the operators, states, domains, and
-approximations named in their records. The present numerical step is the
-spherical Galerkin diagnostic in
+approximations named in their records. The present numerical records are the
+spherical Galerkin loop, the $T=0.10$ controls, the stored-frame local
+response, and the sampled null expansion in
 [the current result](docs/current-result.md#present-spherical-loop).
-Reusable identities, proposed interpretations, and the paused incoming-gate
-application remain separate. Time, antimatter, dark-sector, and
-continuing-gradient readings remain open research. A complete self-sourced
-parent-to-child solution, an identified particle spectrum, and an independent
-cosmological prediction are not yet recorded.
+Renewal is not closed. Reusable identities, proposed interpretations, and the
+paused incoming-gate application remain separate. Time, antimatter,
+dark-sector, and continuing-gradient readings remain open research. A complete
+self-sourced parent-to-child solution, an identified particle spectrum, and an
+independent cosmological prediction are not yet recorded.
 
 ## Authorship
 
