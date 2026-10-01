@@ -688,9 +688,9 @@
       "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
     },
     {
-      "bytes": 4619,
+      "bytes": 4925,
       "path": "docs/papers.md",
-      "sha256": "92070e17ffb97b9599366bde711de9f72a4b49b38f8cd578bb769b827808ff7a"
+      "sha256": "6f93ad39b7e582e17758efb9d9876a8e04c886eec879782fe0921d9af1d30461"
     },
     {
       "bytes": 12814,
@@ -1811,6 +1811,11 @@
       "bytes": 170273,
       "path": "results/release-spec.json",
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
+    },
+    {
+      "bytes": 3590,
+      "path": "results/releases/v0.27.0.json",
+      "sha256": "6c658ff8b7c0459af65b01a53067c8cd0e177e3df1abb0896bba3a6ab32442d5"
     },
     {
       "bytes": 1004,

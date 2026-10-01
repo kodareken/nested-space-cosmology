@@ -88,3 +88,8 @@ build uses the pinned project builder through make finite-paper. The historical
 [OPEN draft guide](local-gate-draft.md) remains its old edition's verification
 owner. [Reproduction](reproducing.md) explains both paths. The measured result
 supports the new v0.27.0 publication; the frozen foundation remains v0.26.0.
+
+The [v0.27.0 research release](https://github.com/kodareken/nested-space-cosmology/releases/tag/v0.27.0)
+is published. Its [verification receipt](../results/releases/v0.27.0.json)
+records the science and publication commits, annotated tag, successful CI run,
+and the hashes of all five downloaded assets.
