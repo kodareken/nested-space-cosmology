@@ -394,9 +394,10 @@ geometry defines the Dirac spectrum
 ```
 
 That diagram is the common-action stationarity condition above, inside its
-CTP domain. The calculation that currently runs is narrower. In
-`compose_fine_hamiltonian` the fine-grid source and geometric rates are
-recomputed from the prolonged state, and $F_Q$ enters $\dot p_Q$. The
+CTP domain. The calculation that currently runs is narrower. `rk4_step`
+calls `rates` on each stage state, and `rates` calls
+`compose_fine_hamiltonian`. The fine-grid source and geometric rates are
+recomputed from that prolonged state, and $F_Q$ enters $\dot p_Q$. The
 integrated fields are $Q$, $r$, $\chi$, the momenta and the spinor
 columns. $L$ and $\beta$ remain the gauge controls sampled on the
 quadrature grid. `solve_initial_radius` sets $r$ from the column source
@@ -417,6 +418,36 @@ fine full Hamilton residual ends near $2.83\times 10^{-5}$; the coarse
 residual is higher. Continuum constraint control and renewal are not
 proved. The historical initial tolerance $10^{-8}$ is not an automatic
 veto, and a weak residual alone would not decide the window.
+
+Three saved consumers sit on that same loop and do not replace the
+broader stationarity question above. The
+[regeneration controls](lab/docs/nsc-regeneration-controls.md) continue
+the saved state to $T=0.10$. The leader's shell content rises by about
+$0.117$, packet and reservoir fluxes end opposite near $5.534$, and the
+field and gravitational energies exchange about $0.396$. The record's
+conclusion is maintained localization of one drift. Renewal is false.
+The [conditional local response](lab/docs/nsc-coupled-local-response.md)
+uses all eleven stored frames. The fixed region-0 occupation changes by
+about $0.33059$. The reduced and full series differ by about
+$7.353\times 10^{-4}$, and the conditional full endpoint differs from
+the saved autonomous endpoint by about $3.412\times 10^{-7}$. Omitting
+memory separates the occupation from the conditional full series by
+about $0.367$; omitting the exterior drive separates it by about
+$0.02876$. Autonomous spinors are stored at the
+endpoints only. No $\dot Q$ series and no stress are derived. The
+[spherical null expansion](lab/docs/nsc-spherical-null-expansion.md)
+finds the initial areal extrema marginal, then one both-negative arc and
+one both-positive arc. Refinement agrees on the sampled signs. That is
+local trapping character, not a global horizon or a child region. The
+controls successor reads the stored $T=0.10$ endpoint: $G>0$ is the
+initial convex-radius ansatz, the dynamic chart is positive $r$, $Q$, and
+$L$, and $dt\,\omega\approx 1.4994$ sits above the owned cap $1.4$ and
+below $2\sqrt{2}$. The local-response review checks stored payloads, the
+projected endpoint, and a small causal ODE; the saved $1024$-dimensional
+series remains that record. The null-expansion review binds the immutable
+v1 files. The initial geometry-graded window is measured, and leakage
+about $0.966$ means those six columns are not closed dynamics.
+
 The toy $H$ and $B$ fractions are an optional witness. Geometry-derived
 links are the target. Numbers and owners:
 [present spherical loop](docs/current-result.md#present-spherical-loop).
@@ -464,12 +495,12 @@ One solved state must supply, with the same $\Theta$:
 5. one dimensionless relation connecting particle and cosmological scales.
 
 These five items remain the longer chain, inside the domains already stated
-on this page. The present step is the finite spherical dynamics recorded in
-[the current result](docs/current-result.md#present-spherical-loop): longer
-evolution assessed by its effect in space and time, then controls and
-renewal, a same-model local reduction, a quantitative local response, and
-publication after a result. Further constructions stay finite. The recorded
-outcome of the present realization guides the next model step.
+on this page. The recorded finite realization is the spherical dynamics in
+[the current result](docs/current-result.md#present-spherical-loop): the
+$T=0.05$ episode, the $T=0.10$ control continuation, the stored-frame
+local response, and the sampled null expansion. Renewal is not closed.
+Further constructions stay finite. The recorded outcome of the present
+realization guides the next model step.
 
 For the general status and attribution of the working programme, see the
 [README](README.md#research-status). For the source code and stored evidence,
