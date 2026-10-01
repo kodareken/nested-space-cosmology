@@ -107,3 +107,13 @@ local incoming gate remains OPEN and its campaign is paused
 [PUBLICATION-PROVENANCE.json](../PUBLICATION-PROVENANCE.json), rebuilt by
 `scripts/build_publication_provenance.py`. That file does not copy the lab
 subtree.
+
+The later local-boundary recovery added one content carrier for two exact
+pre-correction sources. The cache now contains 25 objects; the original
+18 object identities and four pins remain unchanged. The carrier is a
+content object, not recovered laboratory ancestry. The sealed v2 review's
+audited owner bytes resolve at
+`5f10ecd365843d1616e50eb16a20d7acd8377e2c` in the compact repository.
+Historical consumers name that full source reference explicitly. Current
+requests retain strict working-tree hash checks. No sealed review or
+source-cache object is rebound when a current implementation changes.
