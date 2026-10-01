@@ -20,7 +20,11 @@ historical file or an expensive numerical run. Current evidence is owned by the
 and versioned result records.
 The active numerical owners are in `lab/`; root `src/`, `scripts/`, `tests/`
 and `results/` retain the curated publication chain. Do not mix the two Python
-package versions. Launch scientific Python commands from the repository root:
+package versions. Many `docs/nsc-*.md` files are byte-identical copies of the
+same basename under `lab/docs/`. Those pairs are one imported strand with two
+paths. A same basename with different bytes, and any note that exists only
+under `lab/docs/`, is a separate text. The folder route is [docs/README.md](README.md).
+Launch scientific Python commands from the repository root:
 
 ```sh
 python scripts/lab.py scripts/derive_nsc_ks_gate_budget_v4.py --check
