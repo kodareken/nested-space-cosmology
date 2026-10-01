@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import tomllib
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,12 +46,23 @@ def included_files() -> list[Path]:
     return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
 
 
+def publication_versions(root: Path = ROOT) -> dict[str, str]:
+    """The current package version and frozen foundation version have distinct owners."""
+    project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
+    metadata = json.loads((root / "paper/metadata.json").read_text())
+    return {"public_version": project["project"]["version"],
+            "foundation_version": metadata["version"]}
+
+
 def main() -> int:
     release = json.loads((ROOT / "results/release-spec.json").read_text())
     metadata = json.loads((ROOT / "paper/metadata.json").read_text())
+    catalog = json.loads((ROOT / "paper/catalog.json").read_text())
+    versions = publication_versions(ROOT)
+    publication_date = catalog.get("publication_date", metadata["date_iso"])
     record = {
         "schema": "NSC-PUBLICATION-PROVENANCE-v1",
-        "public_version": metadata["version"],
+        **versions,
         "source_project": "BlackHoles-Infinity",
         "source_commit": "ff2cf2722b966589b98a61accdbb6cee819a58c7",
         "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
@@ -60,7 +72,7 @@ def main() -> int:
         "source_branch": "codex/nsc-closure-verification",
         "release_source_commit": release["source_commit"],
         "release_spec_sha256": sha256(ROOT / "results/release-spec.json"),
-        "export_timestamp_utc": metadata["date_iso"] + "T00:00:00Z",
+        "export_timestamp_utc": publication_date + "T00:00:00Z",
         "source_worktree_clean": None,
         "release_source_method": "immutable Git blobs at release_source_commit",
         "release_source_worktree_used": False,

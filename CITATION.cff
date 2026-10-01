@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this framework or its calculations, cite this repository and the primary sources for the established physics you rely on."
 title: "Nested-Space Cosmology"
 type: software
-version: 0.26.0
-date-released: 2026-09-15
+version: 0.27.0
+date-released: 2026-10-01
 authors:
   - given-names: "Douglas"
     family-names: "Ek"
@@ -21,7 +21,7 @@ keywords:
   - computational physics
 preferred-citation:
   type: report
-  title: "Nested-Space Cosmology: One Inherited Frequency Spectrum Across Matter, Geometry, and Nested Space"
+  title: "Regional Transfer, Geometric Feedback, and Local Memory: A Finite Spherical Realization of Nested-Space Inheritance"
   authors:
     - given-names: "Douglas"
       family-names: "Ek"

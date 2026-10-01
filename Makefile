@@ -16,6 +16,8 @@ help:
 	@echo "  make paper            rebuild the tracked paper PDF"
 	@echo "  make paper-check      rebuild twice and verify deterministic bytes"
 	@echo "  make draft-check      authenticate the focused OPEN draft and its evidence"
+	@echo "  make finite-check     authenticate the measured finite-realization article and complete evidence graph"
+	@echo "  make finite-paper     rebuild the finite article twice from its pinned science commit"
 	@echo "  make draft            rebuild the focused draft twice (requires pdflatex/bibtex)"
 	@echo "  make verify           validate locked evidence, tests, and both papers"
 
@@ -44,7 +46,14 @@ paper:
 paper-check:
 	$(PYTHON) scripts/build_paper.py --check
 
-verify: check test paper-check draft-check
+verify: check test paper-check draft-check finite-check
+
+.PHONY: finite-paper finite-check
+finite-paper:
+	$(PYTHON) scripts/build_finite_regeneration.py --science-commit 8a52257fc2829c73d485c7b4c6e310baadfe3c38
+
+finite-check:
+	$(PYTHON) scripts/verify_finite_regeneration.py
 
 .PHONY: draft draft-check
 draft:

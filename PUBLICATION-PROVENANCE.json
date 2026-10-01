@@ -8,10 +8,11 @@
     "private plans, host paths, refs, reflogs, and development history",
     "NSC experiments outside the current frontier dependency closure"
   ],
-  "export_timestamp_utc": "2026-09-15T00:00:00Z",
+  "export_timestamp_utc": "2026-10-01T00:00:00Z",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
   "follow_up_sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
   "follow_up_source_commit": "5f38712ca01ddd71e715fd265088925a73369aba",
+  "foundation_version": "0.26.0",
   "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
   "frontier_sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
   "historical_archive_location": "not_public",
@@ -32,9 +33,9 @@
       "sha256": "489e42c56d3d1dc265578156b310cd7724626446bcc029154d808f0c5f137a3a"
     },
     {
-      "bytes": 1791,
+      "bytes": 1804,
       "path": ".github/workflows/verify.yml",
-      "sha256": "b9f5aae550ac86a01b95e53e290971a0c76c9a2d4de7b423fdf0de9718e7273e"
+      "sha256": "524ffd865d1126ad1d5e489eaf3519008f8ecf7d7628db8e8681904388134d95"
     },
     {
       "bytes": 115,
@@ -42,14 +43,14 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 13734,
+      "bytes": 13857,
       "path": "AGENTS.md",
-      "sha256": "79d84ba9327c6a9817a5a71fd10d7ab992be0d9d9cd33cc5be40c2065cb18e8b"
+      "sha256": "647b1906bbea0ff0437c2f633023f4236f41c4a5df40459c0c14e9060529beef"
     },
     {
-      "bytes": 1056,
+      "bytes": 1073,
       "path": "CITATION.cff",
-      "sha256": "4b417f94cfc9746c9d7314e91ff112ac0f858a0c3724d7777b7e6903cdf633c3"
+      "sha256": "f49c8c5b2bd75514d8833077f68796770ffd1e45c26eda9b30c59dcb24d12875"
     },
     {
       "bytes": 606,
@@ -67,14 +68,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 2927,
+      "bytes": 3370,
       "path": "Makefile",
-      "sha256": "3ddf1b0ec5f3adbbd4e94a14eb7bfed83574ecaee8c6c44541c9ae65001d4be4"
+      "sha256": "91da8804befe8a2cd31c40f511a43114cbdaa4e46283b474b98786663a06d246"
     },
     {
-      "bytes": 22744,
+      "bytes": 23143,
       "path": "README.md",
-      "sha256": "8519bdd3e13ba895b523f97c7d945f30e801ac3370294a5208ed69f5db779ce4"
+      "sha256": "f84849128008bbcb95f6bf19a295edbdf4b5ab703f8cbf708fd1573ea0b9d095"
     },
     {
       "bytes": 629,
@@ -82,9 +83,9 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 22329,
+      "bytes": 24000,
       "path": "THEORY.md",
-      "sha256": "752679800cf9fcffc1e5ae5b58a529ee134fdadcff615bb5e3b36ab1e3f3afba"
+      "sha256": "c34a6abc016e9d59450c69c9c7ce783230db40913889f66270afcf9ff4057bfb"
     },
     {
       "bytes": 16135,
@@ -92,14 +93,14 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 6627,
+      "bytes": 6774,
       "path": "docs/README.md",
-      "sha256": "d4bffa0f249ffbdd3d46d287e81396918140c39af678b7395345887f5db048dd"
+      "sha256": "950de03cebf45d706df8b1b04265798e0e0a7c3376cb25407f7c2372e16a3b38"
     },
     {
-      "bytes": 98835,
+      "bytes": 99265,
       "path": "docs/current-result.md",
-      "sha256": "a00ff48cec8fc69c50e953ecfb3d44ac30e392ecee491e4d7f54bc789c081347"
+      "sha256": "be0ae428561712d0ddc271698ff7f63c1f70eaea1425c5b73967998da18cce38"
     },
     {
       "bytes": 14497,
@@ -107,9 +108,9 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 12905,
+      "bytes": 13331,
       "path": "docs/instructions.md",
-      "sha256": "2b019c93708d9885bc5d4f569ff61742dc01c89b21841c233fbfa8d2dc7ed49c"
+      "sha256": "d2c79c4b2ca401926b21501ed3417042162c6bbe14120631c24588e960c128e7"
     },
     {
       "bytes": 4853554,
@@ -687,9 +688,9 @@
       "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
     },
     {
-      "bytes": 3914,
+      "bytes": 4619,
       "path": "docs/papers.md",
-      "sha256": "2fa99ab097fb380f08bb0f1f5865d989f94802236fefececaaeaa2cee7337c83"
+      "sha256": "92070e17ffb97b9599366bde711de9f72a4b49b38f8cd578bb769b827808ff7a"
     },
     {
       "bytes": 12814,
@@ -702,9 +703,9 @@
       "sha256": "1aa80b08e5f5797af9f14673854f92d7e1dda5f94f79feccd7830bda7b9d7de8"
     },
     {
-      "bytes": 15300,
+      "bytes": 16461,
       "path": "docs/reproducing.md",
-      "sha256": "223c438d88013ff7c4d7aa32369c828724766911e0e7ac79a0b4483caf043baf"
+      "sha256": "ba94a2541c9cdad5b72aeedc35f21dc511277a02babc448c3ce8920303213deb"
     },
     {
       "bytes": 7378,
@@ -712,9 +713,74 @@
       "sha256": "2513127bb20752d00f9cda80dbf230a2131d1586ee100780aded26e94c583f19"
     },
     {
-      "bytes": 1290,
+      "bytes": 2385,
       "path": "paper/catalog.json",
-      "sha256": "69e298abb7606883ff8227d1223018317132a8313d89490f9897aacef62aa37e"
+      "sha256": "d637851d70c795eedccc60106115dbce9394ecd564a15c1be9356cf0726dd615"
+    },
+    {
+      "bytes": 105847,
+      "path": "paper/finite-regeneration-arxiv.tar.gz",
+      "sha256": "1bf31d077b94f90426ff10ca4187515f0b187ace2ff5a620b684dafed618ac3f"
+    },
+    {
+      "bytes": 3309,
+      "path": "paper/finite-regeneration-manifest.json",
+      "sha256": "cb67871c4949b3e4a5a82e44301a93de67b53be1dc5cbfcb6cfb42da8c10cb80"
+    },
+    {
+      "bytes": 223030,
+      "path": "paper/finite-regeneration.pdf",
+      "sha256": "416cb4f9ade29bad6f279174b94ba81ccf4d1bf0ea4092259c714fb0a6fd92ce"
+    },
+    {
+      "bytes": 857,
+      "path": "paper/finite-regeneration/arxiv-dryrun.json",
+      "sha256": "a397bf8399dd758e5930865c84035a65420c0ef1d47520be7138c392128f3b4a"
+    },
+    {
+      "bytes": 2077,
+      "path": "paper/finite-regeneration/arxiv-metadata.json",
+      "sha256": "b5f7bcfdc1189197c9a313773baf789e991a7389a83fe65bee6848419678c6d5"
+    },
+    {
+      "bytes": 188998,
+      "path": "paper/finite-regeneration/evidence/snapshot.json",
+      "sha256": "2f926c196caf7ff3e9e7e4ccd413609b82e888d2bc74c1351a6c8ba2ffb170ac"
+    },
+    {
+      "bytes": 3421,
+      "path": "paper/finite-regeneration/figure-manifest.json",
+      "sha256": "590a04244100eb5da774be96d956d613611a9b957d9fc2d730f3336e10f9b152"
+    },
+    {
+      "bytes": 28083,
+      "path": "paper/finite-regeneration/figures/geometry-curvature.pdf",
+      "sha256": "2af54a703fd0411a4efe17df6bc28bda5b302747c97f8c7da17ee4bafd3e55dc"
+    },
+    {
+      "bytes": 24724,
+      "path": "paper/finite-regeneration/figures/local-response.pdf",
+      "sha256": "aa2a943a433893bffda1d60aeb6c76295e1bd731cc1eb56c837e6e29f8375559"
+    },
+    {
+      "bytes": 24969,
+      "path": "paper/finite-regeneration/figures/normal-ledger.pdf",
+      "sha256": "b3370a73414dd3389d9bc037d4e597bb00d4f07f0f053d319642750f49e9ad3e"
+    },
+    {
+      "bytes": 24490,
+      "path": "paper/finite-regeneration/figures/regional-transfer.pdf",
+      "sha256": "cc4c56ee4f4b1cc5621fecd95f9fbb2383dc0efcf10a237c6666a7e196e0c7b6"
+    },
+    {
+      "bytes": 38838,
+      "path": "paper/finite-regeneration/main.tex",
+      "sha256": "39108ca99fe7851951000901ca4b25f953e666787f44990d64e3585d6aec3400"
+    },
+    {
+      "bytes": 2742,
+      "path": "paper/finite-regeneration/references.bib",
+      "sha256": "5be8c68800abed387f4fa5820bf360c69de7a7ec8bd437c908625f2da2a29cdb"
     },
     {
       "bytes": 1701,
@@ -854,7 +920,7 @@
     {
       "bytes": 1188,
       "path": "pyproject.toml",
-      "sha256": "f03677da2f7f7fbe3bf4f979f12abbfd6e796c574e8f798e42b60a59072dadfb"
+      "sha256": "7d83e5100901e26663114fb556a94720bbd4075d7d926fa5e015541b56b5b00d"
     },
     {
       "bytes": 36,
@@ -1747,6 +1813,11 @@
       "sha256": "23baf200e38ce9b5a57c02117be80f7ba95e4e1ffbbb69f0ca5e2e19b79830b6"
     },
     {
+      "bytes": 1004,
+      "path": "scripts/build_finite_regeneration.py",
+      "sha256": "0328d82e41c1b494956bdbdba76c13b6bfb64f3c7f6c4c2af13967ca29f584a1"
+    },
+    {
       "bytes": 2814,
       "path": "scripts/build_local_gate_draft.py",
       "sha256": "8eafb9080a5dd6ac005e9575af780280cef4413d91792b06af106cd1f8219e6a"
@@ -1757,9 +1828,9 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 3802,
+      "bytes": 4397,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "98118692c4d6e6c9a88cbdf2052d3a30459514854331595f96f4d9fa43d5015e"
+      "sha256": "2b360f44ef76da749fdfd7d61be30e9ba893763711fa4724e506015501d00b04"
     },
     {
       "bytes": 17236,
@@ -2007,9 +2078,9 @@
       "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
     },
     {
-      "bytes": 21618,
+      "bytes": 24861,
       "path": "scripts/check_publication.py",
-      "sha256": "816eee265222821e204f6a23294b0640c188daaaedb3a1bdd84c7919c107bf47"
+      "sha256": "c0ee4099d61d2eeb60b5e4514b121235ce883cb895185f6c3a8e4c6f16680eee"
     },
     {
       "bytes": 12921,
@@ -2270,6 +2341,16 @@
       "bytes": 7086,
       "path": "scripts/derive_nsc_weyl_boundary_jets.py",
       "sha256": "efe623da3299e5ef7182cb065c2e173e8b02da951ebb020d02f7437d007d3895"
+    },
+    {
+      "bytes": 25859,
+      "path": "scripts/finite_regeneration.py",
+      "sha256": "c95c13e91824d2c0afc01dfb91f6862bfa4a6202e9497d46572fb74cbf8f3e3c"
+    },
+    {
+      "bytes": 11372,
+      "path": "scripts/finite_regeneration_figures.py",
+      "sha256": "61300b0d7d67917a800f754c4b8bd279b78a4a2ae37526e2efb1953f13fc0db7"
     },
     {
       "bytes": 941,
@@ -2592,14 +2673,19 @@
       "sha256": "c442182bf7932419c53e6dd379a6192902000d17eaf7256ecbdad79a76c73cfa"
     },
     {
+      "bytes": 223,
+      "path": "scripts/verify_finite_regeneration.py",
+      "sha256": "ad900c849b641f979bc1f39fd9351ce94b844606f1d41ed6df0d025a26765a1b"
+    },
+    {
       "bytes": 237,
       "path": "scripts/verify_local_gate_draft.py",
       "sha256": "cf12bfbdb9c7015a59d83c99e42922785c5c0d222275b8927437dc3311df7539"
     },
     {
-      "bytes": 281,
+      "bytes": 282,
       "path": "src/recursive_horizons/__init__.py",
-      "sha256": "8ac35a8822ae3d761e9e14a768bfcfdbc32686eed23c097f5c43a8c60df6bcea"
+      "sha256": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf"
     },
     {
       "bytes": 2185,
@@ -3092,6 +3178,11 @@
       "sha256": "84305dbd1a5c9575fb4a13e665cb78168191d1ece9c52bfdc651a53d7bc3a932"
     },
     {
+      "bytes": 4045,
+      "path": "tests/test_finite_regeneration.py",
+      "sha256": "f1123eb63e9ebbd433cd8e93ead07060855e449f1cc8a10a1d1b346c8990801e"
+    },
+    {
       "bytes": 8465,
       "path": "tests/test_lab_consolidation.py",
       "sha256": "8dd97607fe0e996f03fc35b3a0e8d39ae35209716a8470fa6de2d708ebf986f0"
@@ -3322,9 +3413,9 @@
       "sha256": "8ddb6794de5db61bee7c4cc74bae077f00e4360ddcb4f3c6d8baafe70d28c83e"
     },
     {
-      "bytes": 2492,
+      "bytes": 5793,
       "path": "tests/test_paper_catalog.py",
-      "sha256": "bde84c15c47b1a6455832971f7c5d9d25de26adde38d70bb374ea3df24121fdf"
+      "sha256": "45378edc39f9546871fb5be34a605aca65dd38d1d8fb1043d7a0da0ec614df6a"
     },
     {
       "bytes": 804,
@@ -3335,6 +3426,11 @@
       "bytes": 21910,
       "path": "tests/test_publication.py",
       "sha256": "609b555fd14c6d8719ba0c50f64fb07b487f5d5129d60dd4f8d228efd54a797d"
+    },
+    {
+      "bytes": 1273,
+      "path": "tests/test_publication_versions.py",
+      "sha256": "f3985f44c672157f7d8c04f462af8fc686332cf3b66102df46254dad164af9ce"
     },
     {
       "bytes": 10127,
@@ -3357,15 +3453,15 @@
       "sha256": "82dead2a83e9869c7ee26d7e5ba82b508553747857b84524c265618584659cca"
     },
     {
-      "bytes": 5648,
+      "bytes": 6530,
       "path": "tests/test_v070_release.py",
-      "sha256": "55224209078cd78c7a433d679ac8748e2f6c7206b1fb295d41fc2ce196ae86c6"
+      "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
   "lab_snapshot_sha256": "b986e41f069d8fdf81fb35aee89f4116ab93f1369316a672553f9cb0846bb175",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
-  "public_version": "0.26.0",
+  "public_version": "0.27.0",
   "release_source_commit": "161028d52ef206a4bc99a25bf97ea467c30e7f16",
   "release_source_method": "immutable Git blobs at release_source_commit",
   "release_source_worktree_used": false,

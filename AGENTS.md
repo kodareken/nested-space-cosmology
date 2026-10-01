@@ -54,7 +54,7 @@ AGENTS.md                 this index
 | Initial lapse bound and nearby initial-state proof | [Note](lab/docs/nsc-spherical-cauchy-weak.md#initial-lapse-component), [certificate](lab/results/development/nsc-spherical-cauchy-error-v1.json), [tests](lab/tests/test_nsc_spherical_cauchy_weak_bound.py) |
 | Source and UV certification methods | [Continuous source-error insertion](lab/docs/nsc-ks-source-operator-majorant.md), [family 14_1 completion](lab/docs/nsc-ks-source-operator-majorant-v7.md), [preparation correction](lab/docs/nsc-vacuum-source-correction.md), [high-energy remainder](lab/docs/nsc-vacuum-source-remainder.md), [full method map](lab/docs/active-code-map.md) |
 | Field method owners | [Whole cone](lab/docs/nsc-ks-whole-cone-field-v1.md), [radius coupling](lab/docs/nsc-ks-radius-coupling-bounds.md), [endpoint contraction](lab/docs/nsc-ks-endpoint-contraction.md) |
-| Both papers and public status | [Paper guide](docs/papers.md), [current result](docs/current-result.md), [catalog](paper/catalog.json) |
+| Current finite article and preserved papers | [Paper guide](docs/papers.md), [current PDF](paper/finite-regeneration.pdf), [source](paper/finite-regeneration/main.tex), [build/evidence](paper/finite-regeneration-manifest.json), [catalog](paper/catalog.json) |
 | Finite nested-quality theorem | [Proof](docs/nsc-nested-qualities.md), [frozen evidence](paper/nested-quality-evidence/snapshot.json) |
 | Finite circulation and local response | [Note](lab/docs/nsc-finite-turnover.md), [record](lab/results/development/nsc-finite-turnover-v1.json) |
 | Incoherent imbalance mean circulation | [Note](lab/docs/nsc-imbalance-turnover.md), [record](lab/results/development/nsc-imbalance-turnover-v1.json) |

@@ -191,12 +191,20 @@ Recorded numbers and owners:
 
 ## Papers
 
-The [focused companion](nsc-nested-qualities.md) leads with the finite
-nested-operator construction: coupled regions, normalized inheritance,
-corresponding spectra and an exact reduced local response on a finite window.
-Regional states may differ under the same law. The construction is not a
-proof of infinite physical time, and it does not depend on the incoming-gate
-campaign. The gate remains an OPEN appendix of that companion.
+The current [focused companion](../paper/finite-regeneration.pdf), dated
+1 October 2026, reports the measured finite spherical realization: regional
+source differences, surface transfer, generated geometry, maintained
+localization, and local memory on the same trajectory. Its
+[source](../paper/finite-regeneration/main.tex) and
+[bound manifest](../paper/finite-regeneration-manifest.json) preserve the
+declared finite domains. Human author review and the actual arXiv processor
+check remain pending.
+
+The [27 September companion](../paper/local-incoming-gate-draft.pdf) remains
+a preserved edition, with its [finite nested-operator proof](nsc-nested-qualities.md)
+and OPEN incoming-gate appendix. That paused physical application does not
+block the measured finite result. The [paper guide](papers.md) routes both
+active roles and the dated focused edition.
 
 The broad manuscript, v0.26.0 source and PDF, stays frozen. It holds the
 physical motivation, operator and Schur calculations, source history and

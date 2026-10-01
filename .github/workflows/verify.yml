@@ -34,7 +34,7 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install -e '.[paper,dev]'
       - name: Verify repository boundary, focused tests, and paper
-        run: make check test paper-check draft-check PYTHON=python
+        run: make check test paper-check draft-check finite-check PYTHON=python
 
   result-reproduction:
     if: github.event_name == 'workflow_dispatch' && inputs.reproduce_history

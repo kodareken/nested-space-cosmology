@@ -1,0 +1,3203 @@
+{
+  "schema": "NSC-FINITE-REGENERATION-EVIDENCE-v1",
+  "science_commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+  "historical_source_commit": "c2d5fb6f02722d9f69ec70a7145ea3f2287266df",
+  "complete_declared_scientific_dependency_graph": true,
+  "numerical_history_substitution": false,
+  "simulation_reexecuted": false,
+  "scope": "Pinned finite-realization records, numerical payloads and declared producers/local imports; preserved finite-operator background and replay cache; byte authentication is not continuum certification",
+  "roots": [
+    "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+    "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+    "lab/results/development/nsc-spherical-conformal-clock-v2.json@ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+    "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+    "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+    "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+    "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+    "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+    "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc"
+  ],
+  "files": [
+    {
+      "path": "docs/nsc-local-observer-correspondence.md",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "11d75bda2f2f887f9b6b1f84b04a4722e5971f28",
+      "sha256": "4345b0ef91703c53ec879bfa9d3eeea4b07ee31209ad8a701f3fe17d5039f477",
+      "bytes": 5908
+    },
+    {
+      "path": "docs/nsc-nested-qualities.md",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d765ba39c1e09664e557b2e7ac90e3fa07bc49df",
+      "sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
+      "bytes": 7619
+    },
+    {
+      "path": "lab/.source-history/manifest.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "fdd6af73bea1d416e6c3a3ac678e00b387643bb4",
+      "sha256": "a08a954b421af53f25c2dd82e4464e54ed9cfc82e444ad3a07dda96b512b24cc",
+      "bytes": 6920
+    },
+    {
+      "path": "lab/.source-history/objects/09/f3faa364ca88b8ff482c413022ce38f40bef0d",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "8d5eb0f9f00657515296c651e3bf587a620c2f01",
+      "sha256": "0f9400c558de6ab6fd20910967df351c52e3dde6bda4746b54fe6f766d840d00",
+      "bytes": 221
+    },
+    {
+      "path": "lab/.source-history/objects/15/7a55cdf6ceaf2f69350914046c54fe059855e1",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "a69401794ab1311a59b0615095c0a1926537bb24",
+      "sha256": "6aeea0b6e6ee03a46f862c63da8a6e9caa0778d08f2c5279982d125f8efcbd81",
+      "bytes": 780
+    },
+    {
+      "path": "lab/.source-history/objects/20/1a906a41d70ca033fb19f4bf7f1483f1fa2552",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "28b4998fbb8e910ce2daa849b8aa0280be482d64",
+      "sha256": "8433752aeb932c0b130a56c53b0557e214e6426f0928e0f0ad6b39cf97d16ab4",
+      "bytes": 781
+    },
+    {
+      "path": "lab/.source-history/objects/22/993e882ceb7032db8b233fb71231ee3b226316",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "4b85683e712ebdef4d6cb3bf4a230e809c43a448",
+      "sha256": "a692efd32a01a59082038637fafde4073e0433d7eab0576d031d82b7f78bb75d",
+      "bytes": 61
+    },
+    {
+      "path": "lab/.source-history/objects/2c/586ad3fc31fe9e6a8fb4dba97fe8323bbec2f8",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "dfbe2277ac4dd25b8094c077312d87c0fc824c53",
+      "sha256": "2798f3fa09fff32fc36d77bc0f156ca911077619f3baa40c6e76bf5678d95ef1",
+      "bytes": 11492
+    },
+    {
+      "path": "lab/.source-history/objects/31/818fdd6b8cc9c4d8b9d33f41e0f241b2dd1227",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "28e3d3951507a23e1e111d5557f3e51d5ca1b9ff",
+      "sha256": "b3b452cb5a43f950bebd01ff5f61a4c0c7c10725bd76b2a2ae17f6e91d7904d4",
+      "bytes": 3327
+    },
+    {
+      "path": "lab/.source-history/objects/44/213ba9359d7471e706bfd5f4a7aad4037c48f7",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "08ebdbe2a389fca203e9ba07943ab497ce9232c6",
+      "sha256": "4739d838a35644808f303ad01d21c25f8e258a64197ba3fd3727e6fe5daafc3a",
+      "bytes": 74
+    },
+    {
+      "path": "lab/.source-history/objects/4d/c21108424b29558c9092c703184543721f5248",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "4638b2d13c9eb4af3a7bebe0518883a92fc331ad",
+      "sha256": "36b75417ccc0a40b8f0a229346498987f07c1999e1add3e7b3939d4499689956",
+      "bytes": 6198
+    },
+    {
+      "path": "lab/.source-history/objects/59/4a11caeee760d172c4a4f73a7615b05cf30282",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "a7c68b6aa33278e045d95afe47b8880d34c2eb4c",
+      "sha256": "1a5df3f5dd8e672e30e73f1eee36f4393a085a14c31a9e53776fde8684152a35",
+      "bytes": 216
+    },
+    {
+      "path": "lab/.source-history/objects/61/286d365dbda4cf1e19b8f154d6f2a298bf92de",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "dc7c7facd0da8aa920b716d1d3c5a919048f85e2",
+      "sha256": "7382df9c5cb0ecfc48784296a66aee040dac27ca3b0f1d08359c96284c9a45a4",
+      "bytes": 5361
+    },
+    {
+      "path": "lab/.source-history/objects/6b/e0057f68cc1ca3fc021b0a2865ad87ea79f5c1",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d4ccb1f88d37a4514f09d554cda8d678e75fd42a",
+      "sha256": "b743803055349e6a361b7accd0d714381abbd4de732ddf9a31a15386cd2967d0",
+      "bytes": 749
+    },
+    {
+      "path": "lab/.source-history/objects/6f/c2bdf653edfc55a8f5114574db501b36a3f10b",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "a8b71b6819b07b85a8059694268b05e5bc83c8a8",
+      "sha256": "c6b57450fb38defd23bf3c0fc682073b52b858de0bcc40a04e10fc2eb4501144",
+      "bytes": 76
+    },
+    {
+      "path": "lab/.source-history/objects/75/0f08abd50ef461600baf9dd319d1ac38b50ca3",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "c8ffa9270b02510578f432dab973977726a7fc23",
+      "sha256": "3e5c1d1c7290ce182883397a2c1537a4d9eb53a5d9a4a9a2439d62284282b02c",
+      "bytes": 207
+    },
+    {
+      "path": "lab/.source-history/objects/82/6473ae9a2ff7a3da07718738ae48be7badcd68",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "a9f376384dbe98992150c0aaa3ecaf24731aa4f3",
+      "sha256": "7216cf33fd7c909e4156258a63ca541f02f5d73216730edec42e0b7eb82b3b7a",
+      "bytes": 5543
+    },
+    {
+      "path": "lab/.source-history/objects/8e/3a203f5b4e75b857a11ad9af4649bd2e7fa180",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "05a6e0899c49467cd1497fc3358c94e0c2ad1c79",
+      "sha256": "165d4a0629b6e805d445e5c2db72e47d553d3f20c452c46fc9dfc5abea1c83c0",
+      "bytes": 82
+    },
+    {
+      "path": "lab/.source-history/objects/9e/fa09bd82b7003391890f1a19828de04148173f",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "354bd59d4bca22e3f4eb28d5da71d765a047648f",
+      "sha256": "0fd20be98cc53ddd4cbf86dfdbba048730ad86ae546d78b45814798354297393",
+      "bytes": 3416
+    },
+    {
+      "path": "lab/.source-history/objects/a5/a85acef3d98a8d6ff66f928a30725856a1ac6c",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b7dd37365df71943b91fa3d72fa2f3b9a81ec4e9",
+      "sha256": "73dd5a3828d6a62bf15faa83719d8faba1b8c0bc096985ac5e94ef645d58a725",
+      "bytes": 2531
+    },
+    {
+      "path": "lab/.source-history/objects/ac/014452bed434cff03de0fcd52379c187098247",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "603d50b33bd44799e5c22249f8533e3c0f7df334",
+      "sha256": "e49263353b9c3395d63e69215e9c3227286b7c07b9dea2d22fd5cb35bab08f64",
+      "bytes": 14407
+    },
+    {
+      "path": "lab/.source-history/objects/c7/dc0f98cacb28afd030b089bdb9e1369288120c",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "0b36185d0ca9a396269ff92c894cac73ae2dc5d3",
+      "sha256": "682ff6254b1bd7fdbcebf09f9562161aa24ca19f40655fa176ca8045b4aa4495",
+      "bytes": 220
+    },
+    {
+      "path": "lab/.source-history/objects/d4/82613c0af362b6b7440788b335b136e24b8b4f",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "f7f4846c37c2d71c39e4656d9885b2663974a14d",
+      "sha256": "fa659b9d286b76d3b2b56aa6b0e2ba0671000da09ae4672169a1d6a8fd9d3870",
+      "bytes": 749
+    },
+    {
+      "path": "lab/.source-history/objects/d7/78878f61150cfa0dd2cd3b4024aea276001d46",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "6e661e821897d4b8b4292b45dfa2604916c89761",
+      "sha256": "ec52f540bf0dde367602494aac82f0b7d2380d894d70c50c20e8c1461a2ce262",
+      "bytes": 60
+    },
+    {
+      "path": "lab/.source-history/objects/df/b09789eccd7110dbbfc3f2b1512f825f227925",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "ad5a65a0edeb8bcc6a36163a136ba81a1faf5312",
+      "sha256": "73603f317e7eba1c089d074bbf1b382b2f000b53f540934ba39bc04a33e64d08",
+      "bytes": 60
+    },
+    {
+      "path": "lab/.source-history/objects/e6/2d28f3230ae6ddb2712df71eb7c61a8ed65ad6",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "0eabf585812a13d7b0a3250339058901b281e192",
+      "sha256": "e8797f15ea671d17b2a8748884afb982b0002eaa64fbfd6226feafcc34a14012",
+      "bytes": 222
+    },
+    {
+      "path": "lab/.source-history/objects/f2/556bf248ef23192a4c864cb816090cb8641931",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "4a5ef2c19069f52ee3295d85967450d60f1727d3",
+      "sha256": "509f92fbcf10b337e5960aac942a9fa0039a3a8a8b0d39209eea462e3d797523",
+      "bytes": 60
+    },
+    {
+      "path": "lab/.source-history/objects/f7/b6d43cae388b9e87a586e1bc87ee62327ab96d",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "506e4b885447f408cfa19973aadb219817bb2f1f",
+      "sha256": "371642d718e700d640e2f40731f55f9eb56e3205e78db6e53a1f32b0350586b2",
+      "bytes": 686
+    },
+    {
+      "path": "lab/archive/probes/nf256_compensate_probe.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "231307af97d566587774251789e064816027727c",
+      "sha256": "3fa92afdcb292a81ac3ccd8b340ab4f3bb390e7e7e6e42e5ab787dfbe0e7f5b0",
+      "bytes": 7761
+    },
+    {
+      "path": "lab/archive/probes/nf256_seed_probe.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d1594bdfd3ad9409f0937b501ad2dffd6c8a85c2",
+      "sha256": "24957658ca54fdb97c791e1690c55d6b0eba544b044bd1a1d9183eaaa0e76dd7",
+      "bytes": 6153
+    },
+    {
+      "path": "lab/docs/nsc-spherical-conformal-gauge.md",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "621fbd198d351a82d1f9ed6899305a7aed5fcb7c",
+      "sha256": "dd42ce3c79d5bf55fe36fe19ebc980734f66dce83aad0659d85b6538291349e2",
+      "bytes": 8759
+    },
+    {
+      "path": "lab/docs/nsc-subgap-history-response.md",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "89c5c03370d77cf65cc06c9caa9558d343a27c38",
+      "sha256": "8acc50b42e01a45bea8ce39d0ce8c06842c564a60081f76463f6495055777428",
+      "bytes": 3361
+    },
+    {
+      "path": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "ee0dc0ea22a9497050f3a4bfe087ce21b262c5b5",
+      "sha256": "46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "bytes": 4271
+    },
+    {
+      "path": "lab/results/development/nsc-conformal-local-response-feasibility-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "048f690826e850d8f1d8be7fa42f2c8b21636b15",
+      "sha256": "0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289",
+      "bytes": 3274
+    },
+    {
+      "path": "lab/results/development/nsc-conformal-local-response-v2.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "78a216f2dd0b10db14d4aee1397391b1485898e7",
+      "sha256": "2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "bytes": 19088
+    },
+    {
+      "path": "lab/results/development/nsc-conformal-local-response-v2.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "c65d9393dcfc21533011d31944ffb69733cb3a65",
+      "sha256": "32c9dce390c06fb03ea9938c6c8c41e2be638463556c851f303da70eb61713bf",
+      "bytes": 15006
+    },
+    {
+      "path": "lab/results/development/nsc-conformal-memory-control-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "58b6c6069858533f655e95196aba232d5c4eaac4",
+      "sha256": "3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "bytes": 2675
+    },
+    {
+      "path": "lab/results/development/nsc-conformal-memory-control-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "0a919e23123fbfece93b15fab60df836c901d8f4",
+      "sha256": "402917f0c84292cb9f2f5943393c4f76c7ae2739637f36e1fbe7e3db4018cf74",
+      "bytes": 2075
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-clock-v2.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "605770b5fe4a077535d00bf2ce31b1e9ea2e6cf1",
+      "sha256": "ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+      "bytes": 4218
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-curvature-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "5b8611c333d2328fee13d0451a6676dcc3130c8c",
+      "sha256": "bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "bytes": 149173
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-curvature-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "41f69cdf32f8b1cab0b5d7524d8bd3cb2536c188",
+      "sha256": "6a6618b5543716edfd5d30f70302ba2e14c14f73821f84aa18a924fba5f42189",
+      "bytes": 519395
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-episode-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d632eaee289479e7b1985c18c922fdff85e572e3",
+      "sha256": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "bytes": 462594
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-episode-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "0ca9ed8f51e6d359bf3c1c80a0b6dbde5f06b624",
+      "sha256": "5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "bytes": 3607684
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-episode-v2.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "7fd766a9db637b130c125678aa432bffa783a8cc",
+      "sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "bytes": 3775135
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-episode-v2.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "196c9e2e018e6f9c95c8fce28ea42ef8c98246e9",
+      "sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "bytes": 53100722
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-frames-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b4d97e2302d07de8f2535f7d015babb5a11eceec",
+      "sha256": "10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "bytes": 389341
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-frames-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "69e5d3805cda8091a3becc34edda27cd90284034",
+      "sha256": "5df12e0441164bf96e5379fa577007e8bc85889eb805807b2400a110c1cfa81a",
+      "bytes": 3977220
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "932c9c2d8f3e5dc0106556e2365a9176725f566e",
+      "sha256": "9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "bytes": 142659
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-source-controls-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "bf4a707c1b520609a2129c5d87d0c8dc7a2a7df9",
+      "sha256": "34d12c89895ff47269c0e126327d66ee4cf6d1b580d5b06b572d4714acfe2fa2",
+      "bytes": 782435
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-conformal-transport-v2.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "e931aaf89b3e2bb5ae6ac197b2bf85baa21afaab",
+      "sha256": "fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "bytes": 31160
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-coupling-control-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b85125ef459c5b94b2e0949333a192829961f0c6",
+      "sha256": "88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+      "bytes": 46814
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-coupling-control-v2.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d6dc8bc86c29f3f574cb977afbd5ce2ac9e6d6ab",
+      "sha256": "26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+      "bytes": 67601
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-coupling-refinement-v3.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "1aca92336678fa75d26a8b6af8c850761512b81a",
+      "sha256": "5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "bytes": 7574
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-coupling-refinement-v4.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "276521f7d02e045d60fcf310c96b402391179f2e",
+      "sha256": "6153075b68a822078a1016c0484dacf87c9083117076fcdba2b1aca9ab645739",
+      "bytes": 10548
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-coupling-refinement-v5.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "fadccf8024124cfd51028e600041d724bf286c6b",
+      "sha256": "1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "bytes": 81034
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "459b851b22cb68f822df9bc86d2aa3c092cd97fd",
+      "sha256": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "bytes": 81451
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-feedback-episode-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "e8737746b3698f322f64df6239d9a7e96bfb2bd6",
+      "sha256": "9fc9f460aa076db5eb67a3136d3e53797160f2885e124b62e6fb61ee247d9954",
+      "bytes": 491403
+    },
+    {
+      "path": "lab/results/development/nsc-spherical-feedback-episode-v1.npz",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "18a09f58e80e25d5e084a45c9becf5db0e795bf9",
+      "sha256": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77",
+      "bytes": 6477765
+    },
+    {
+      "path": "lab/results/development/nsc-subgap-history-response.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d16f6586d01bfdd82e391fb2559e818a20bc5431",
+      "sha256": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "bytes": 14857
+    },
+    {
+      "path": "lab/scripts/check_nsc_nested_qualities.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "cfe88b0df2587e6b96cbbadde8134bf5b107754e",
+      "sha256": "24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec",
+      "bytes": 2010
+    },
+    {
+      "path": "lab/scripts/derive_nsc_local_observer_correspondence.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "9578b4e6225e9bd8272a5c1d4e6c468bcad50f2f",
+      "sha256": "53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a",
+      "bytes": 1875
+    },
+    {
+      "path": "lab/scripts/derive_nsc_pg_retarded_threshold.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "70915780ded7b847eebf71f384a6a635181f355b",
+      "sha256": "cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "bytes": 9151
+    },
+    {
+      "path": "lab/scripts/derive_nsc_pg_threshold_projection.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "7d1c565706c38566b9f731c5ce9f4080f2eb664e",
+      "sha256": "40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "bytes": 7507
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_clock.py",
+      "commit": "c2d5fb6f02722d9f69ec70a7145ea3f2287266df",
+      "git_blob": "ff096633b8fbdf539d997259237016d815e2d7f6",
+      "sha256": "a2b527ba47ee4820cbbe96cc46f566fe9251dfbad35d90f4f6f0626bd754474c",
+      "bytes": 4530
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_continuation.py",
+      "commit": "c2d5fb6f02722d9f69ec70a7145ea3f2287266df",
+      "git_blob": "3a9382f9dadb5eddc325d5f54189e1aa5a4387ba",
+      "sha256": "cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "bytes": 19305
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_continuation.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "4e4c6410e8ff6add400cdd67fb69b09c4cb854ea",
+      "sha256": "d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "bytes": 22464
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_curvature.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "89d37430793d4f6a257dd185101fbd24e2fd11c1",
+      "sha256": "97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "bytes": 8102
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_episode.py",
+      "commit": "c2d5fb6f02722d9f69ec70a7145ea3f2287266df",
+      "git_blob": "6aaeda58775a17e7db052d0f5b14f32bde4da1ce",
+      "sha256": "22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "bytes": 19622
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_episode.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "84847ce09a2bdc8acb848b0c3052d9a6d6df354f",
+      "sha256": "7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "bytes": 24079
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_frames.py",
+      "commit": "c2d5fb6f02722d9f69ec70a7145ea3f2287266df",
+      "git_blob": "a119de334287f66a97f3a2868d537da3beb23ce4",
+      "sha256": "d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "bytes": 15425
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_frames.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "adf8b765734d29861c861ec9a9ceb7146b1f7b9c",
+      "sha256": "e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "bytes": 17652
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "1668cf0257a94abbc86fdc1e426040e4fceb2ba2",
+      "sha256": "ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "bytes": 14206
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_conformal_transport.py",
+      "commit": "c2d5fb6f02722d9f69ec70a7145ea3f2287266df",
+      "git_blob": "734e20edb1847c2bf089cd41a3af219717132012",
+      "sha256": "77cf27b83a3f809fbd317efc6e0af875dd0f5020fd0dfd7d1b0fd9b7e99d9f49",
+      "bytes": 6820
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_feedback_episode.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "33f1a4a5ecc3bf461825e428aa8fbc1c7bf6678b",
+      "sha256": "efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "bytes": 79850
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "370593cf9dd48d9761888dfc9b11005effbdddea",
+      "sha256": "2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+      "bytes": 30199
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v4.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "5a9bcbb133648ad7c8a9b3a56e5d68fbbb595912",
+      "sha256": "450f9ed468303f42cd62d812848eff83261b7a5256e642f7c291cb95f35703f5",
+      "bytes": 12557
+    },
+    {
+      "path": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "17ca5d0364063d1132dedc90dcf45bd019093d5f",
+      "sha256": "1ff6d0a84161646f7cf3f4f03a5beadff811df24d1ef3187b228e29993ff3521",
+      "bytes": 44117
+    },
+    {
+      "path": "lab/scripts/derive_nsc_subgap_history_response.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "58e2987d1a88bc4979b9284e7af1b4428a02d337",
+      "sha256": "e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "bytes": 15055
+    },
+    {
+      "path": "lab/src/recursive_horizons/evidence_io.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "df35441d9635ed3b264e7a36ae2533bef32696b5",
+      "sha256": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+      "bytes": 56604
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_adm_source.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "4a18b10dc4d1ee77687a2a5f5c4e63f1294b7bf3",
+      "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+      "bytes": 5881
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_angular_stress.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "08e1eb5b28e337a56723961af4a080d33d3d2b56",
+      "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+      "bytes": 14612
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_boundary_state.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "f4beabb8d589fa343c20013b01ea14da30691eab",
+      "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+      "bytes": 5933
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_causal_common.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "8e369c8d85111e9668224c6175a63c64eaf92066",
+      "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+      "bytes": 11855
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_charged_ctp_neck.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "04944ee6a8ee441efc6dce33bb1869d5e8a325c4",
+      "sha256": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+      "bytes": 16827
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b6310ad7113de9477da0417e3794f8be014515a0",
+      "sha256": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "bytes": 5258
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_compact_ctp_neck.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "5e33cd583f88c40b96ce048e8735926d50079760",
+      "sha256": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+      "bytes": 17390
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "cc345c6f97643b82529b66580cb0f598b0095a02",
+      "sha256": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "bytes": 17830
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_conformal_adm_source.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "09f5bba76dbe97badeee6afdac33c32ee1ad1e1e",
+      "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "bytes": 23728
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_conformal_local_response.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "47f5c38737a46828a232e1754d38ef9b3029a2b9",
+      "sha256": "b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "bytes": 27167
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "bd582a12b7023eb32a575b2dd19e7c0e6e1f05af",
+      "sha256": "925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "bytes": 29982
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_conformal_memory_control.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "0e388b0e51316f8eeb0a2a055ddd7c2ec8b2d2ce",
+      "sha256": "91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07",
+      "bytes": 5454
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_coupled_local_response.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "9f6833e44f25ac76dd3d4a2b5b88ef9ee50fa2ec",
+      "sha256": "a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "bytes": 135590
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_covariant_operator.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "75d45101dba6f41042fe6963fc7b4ff0bd35c300",
+      "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "bytes": 17589
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_energy_transfer.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "2994e8ea75e5c9932b29e8d8f5b89ad3a9669057",
+      "sha256": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+      "bytes": 5654
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_evolving_reduction.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "6c61357f4a7b9a730b569aa488ac2976c36c17ee",
+      "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+      "bytes": 48154
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_finite_terms.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "25775559e282a270da20984eb7053ac7424b90d9",
+      "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+      "bytes": 15339
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_finite_window_embedding.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "7f50db87987046d939a379103b9c8a2d605bbbf6",
+      "sha256": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+      "bytes": 22673
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_gauge_source.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "668bb10c902937019a80f122b0a8d103b5acee95",
+      "sha256": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+      "bytes": 7648
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_horizon_source.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "65b4457ef2a0334f91c8f13d0de21ffed6f5bcd0",
+      "sha256": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+      "bytes": 3577
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_influence.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "576330398206e4b84ca25df7ec9bfcd4e05bfa17",
+      "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "bytes": 10903
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "ec1087050dcfef9f8651251835ddd54444e075a2",
+      "sha256": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "bytes": 8168
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "c9a213f8b9d1fa4b1457fcf8163bc956be3e1b27",
+      "sha256": "26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "bytes": 30104
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_lorentzian.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "8c499a70be8dbd135de8610e44dbe550e97c5f41",
+      "sha256": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "bytes": 7554
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "40f12a9fb0608dcd7cc0d1bb519e5aa2c54ff711",
+      "sha256": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "bytes": 21214
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_nested_qualities.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "84b32c207ba7111352e1e3b815a72bade282cc45",
+      "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "bytes": 3126
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "300ac26b2f726304d328867a45de14b1d6ec009e",
+      "sha256": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "bytes": 10314
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_adaptive_threshold.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "17fdaa48334ca89ae76a484c20f880d0f5b9cf6a",
+      "sha256": "f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7",
+      "bytes": 2247
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "cfd97686ef55ce08bf0d87b314d375ca480b2eec",
+      "sha256": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "bytes": 7855
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "40a554ae8ef4744b02126501d2ee7e99d699056c",
+      "sha256": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "bytes": 5774
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "601700d169b9741a8da8d1a0dcfe74852be9212f",
+      "sha256": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "bytes": 11063
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_massive_modes.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "21ed6ee143daac74e18ce021fe165dbb04db69f1",
+      "sha256": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "bytes": 15356
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_packet_modes.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "57f4921fedeef53d8d5161e06693a7ef0f4efcf7",
+      "sha256": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "bytes": 5709
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "ecbdec611507042acd9fb46c3d72ef87d98018ed",
+      "sha256": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "bytes": 6713
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_retarded_threshold.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "71b586854855bac235ba8632fb53846dd0bc2eb4",
+      "sha256": "1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681",
+      "bytes": 2614
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_pg_threshold_projection.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "4198a680075bb31b60d284b4452a5602abd221b4",
+      "sha256": "56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f",
+      "bytes": 3659
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_regeneration_controls.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "bcf10d2156ed45149996b661c822d878bf7315b6",
+      "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "bytes": 38434
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "247dfc63cac03e454db6ec1b8938f2484f6db5b3",
+      "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "bytes": 45471
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_regulated.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "bd5e08e7f275ad7c2bef91abdffa46eb03eb65e4",
+      "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "bytes": 9463
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_shape_response.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b4b3ec9d08083f565486d15ffe6b590b9aa576bb",
+      "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+      "bytes": 11005
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "1be976be1270311d64e5ab85c40b2383c81eb6fb",
+      "sha256": "067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "bytes": 30048
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_coupling.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "5093f973a637cb59bdda0e11c4c1d027e56164d5",
+      "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "bytes": 58981
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "0ce3ea51de815ad1e3d38d02e8ae85b762703039",
+      "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "bytes": 60250
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "1e48ef324a2fc2d1da6257e7c5b264ca34015946",
+      "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "bytes": 37269
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+      "commit": "fa6855d60655bdfa7eee9ed7ad8d9193639a0aa8",
+      "git_blob": "5d2b06e2c471ac7861a049d98948ecdf57d0d399",
+      "sha256": "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "bytes": 52028
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "11aa2d0c90f0a5bbae6598aedcd7fd85e2bea127",
+      "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "bytes": 61141
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "76a086153a7d5f87477d058a9ab3e0a79964c724",
+      "sha256": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+      "bytes": 48540
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_spinor_bridge.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "8f46d207f0a3c87f916c4bf23789be5d8b71b581",
+      "sha256": "a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19",
+      "bytes": 7793
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_subgap_history_response.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b3110c8597c81484531fa5e590a49fda2b270605",
+      "sha256": "3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "bytes": 9964
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_transmitting_boundary_history.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "287d9652c0aa3d79e1b9850cd1aa96a31d733180",
+      "sha256": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+      "bytes": 11758
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_transmitting_ctp_variation.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "21bcd9876dbfa5639e52ed398c9accfc446830f5",
+      "sha256": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+      "bytes": 6219
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "3918c59ac4cc06d831c1ac032d348d26108056d5",
+      "sha256": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "bytes": 6656
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "36bff00a33b57fee4e07ad482aa5d29f2198e71f",
+      "sha256": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "bytes": 11608
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d41bf1d2dbeaae40f3fad4c5e0e2a23557bcba4a",
+      "sha256": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "bytes": 12836
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "89bbe83504be77b0b687eadb548b783285089121",
+      "sha256": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "bytes": 7243
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_unruh_state.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "2a0bcc718a8e8fccc538d3c07efec3d3a5fbcd98",
+      "sha256": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "bytes": 21921
+    },
+    {
+      "path": "lab/src/recursive_horizons/provenance.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "54b954fa95f262e0e6b0b0bb42e281448b2273d8",
+      "sha256": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+      "bytes": 3483
+    },
+    {
+      "path": "lab/tests/test_nsc_local_observer_correspondence.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "c61e486cf9c4d6768ad6ba84f9efd456d676c30d",
+      "sha256": "f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "bytes": 9408
+    },
+    {
+      "path": "lab/tests/test_nsc_nested_qualities.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "3efc6343d87a510b645bc2193f5135684be5163b",
+      "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b",
+      "bytes": 1697
+    },
+    {
+      "path": "lab/tests/test_nsc_spherical_galerkin_coupling.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "954dfe0699d79283bf8008f7f8f8b159647f72ca",
+      "sha256": "e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "bytes": 8326
+    },
+    {
+      "path": "lab/tests/test_nsc_subgap_history_response.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "bfee795074e0ccca58fb6b0ae6f19b4cecd12f52",
+      "sha256": "7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e",
+      "bytes": 2222
+    },
+    {
+      "path": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "d765ba39c1e09664e557b2e7ac90e3fa07bc49df",
+      "sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
+      "bytes": 7619
+    },
+    {
+      "path": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b74bc22f9a9c18eef94fac0e17e1121ff4701075",
+      "sha256": "1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+      "bytes": 15610
+    },
+    {
+      "path": "paper/nested-quality-evidence/results/development/nsc-nested-qualities-v1.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "f444b39a64a004bc318621bcfbce615fd408d077",
+      "sha256": "99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033",
+      "bytes": 1706
+    },
+    {
+      "path": "paper/nested-quality-evidence/results/nsc-3-regulated-recursion.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "1cc7506757d120d9a2a3eff8a477fcbf09f5e180",
+      "sha256": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+      "bytes": 14802
+    },
+    {
+      "path": "paper/nested-quality-evidence/scripts/check_nsc_nested_qualities.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "cfe88b0df2587e6b96cbbadde8134bf5b107754e",
+      "sha256": "24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec",
+      "bytes": 2010
+    },
+    {
+      "path": "paper/nested-quality-evidence/snapshot.json",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "b3770d5afc9e187c380679f533a8633901fc4c00",
+      "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f",
+      "bytes": 2007
+    },
+    {
+      "path": "paper/nested-quality-evidence/src/recursive_horizons/nsc_nested_qualities.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "84b32c207ba7111352e1e3b815a72bade282cc45",
+      "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "bytes": 3126
+    },
+    {
+      "path": "paper/nested-quality-evidence/tests/test_nsc_nested_qualities.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "3efc6343d87a510b645bc2193f5135684be5163b",
+      "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b",
+      "bytes": 1697
+    },
+    {
+      "path": "scripts/check_nsc_regulated_recursion.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "5566aa15098a2d43d43ba60a51cee09a98566632",
+      "sha256": "c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+      "bytes": 10741
+    },
+    {
+      "path": "src/recursive_horizons/evidence_io.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "df35441d9635ed3b264e7a36ae2533bef32696b5",
+      "sha256": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+      "bytes": 56604
+    },
+    {
+      "path": "src/recursive_horizons/nsc_regulated.py",
+      "commit": "8a52257fc2829c73d485c7b4c6e310baadfe3c38",
+      "git_blob": "bd5e08e7f275ad7c2bef91abdffa46eb03eb65e4",
+      "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "bytes": 9463
+    }
+  ],
+  "edges": [
+    {
+      "from": "lab/archive/probes/nf256_compensate_probe.py@3fa92afdcb292a81ac3ccd8b340ab4f3bb390e7e7e6e42e5ab787dfbe0e7f5b0",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/archive/probes/nf256_compensate_probe.py@3fa92afdcb292a81ac3ccd8b340ab4f3bb390e7e7e6e42e5ab787dfbe0e7f5b0",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/archive/probes/nf256_seed_probe.py@24957658ca54fdb97c791e1690c55d6b0eba544b044bd1a1d9183eaaa0e76dd7",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "to": "lab/results/development/nsc-conformal-local-response-feasibility-v1.npz@0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v1.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v1.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "source_bindings:nsc-spherical-coupling-refinement-v5.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "to": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "role": "source_code_sha256"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "role": "source_bindings:nsc-conformal-local-response-feasibility-v1.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-conformal-local-response-feasibility-v1.npz@0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289",
+      "role": "source_bindings:nsc-conformal-local-response-feasibility-v1.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-conformal-local-response-v2.npz@32c9dce390c06fb03ea9938c6c8c41e2be638463556c851f303da70eb61713bf",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v1.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v1.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v2.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v2.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "role": "source_bindings:nsc-spherical-conformal-transport-v2.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "source_bindings:nsc-spherical-coupling-refinement-v5.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "role": "frozen_feasibility_module_sha256"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py@925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "role": "source_code_sha256"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "role": "consumer_helpers_sha256"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "to": "lab/src/recursive_horizons/nsc_evolving_reduction.py@17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+      "role": "reducer_sha256"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-conformal-local-response-feasibility-v1.json@46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+      "role": "source_bindings:nsc-conformal-local-response-feasibility-v1.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-conformal-local-response-feasibility-v1.npz@0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289",
+      "role": "source_bindings:nsc-conformal-local-response-feasibility-v1.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-conformal-local-response-v2.json@2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+      "role": "production_bindings:nsc-conformal-local-response-v2.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-conformal-local-response-v2.npz@32c9dce390c06fb03ea9938c6c8c41e2be638463556c851f303da70eb61713bf",
+      "role": "production_bindings:nsc-conformal-local-response-v2.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-conformal-memory-control-v1.npz@402917f0c84292cb9f2f5943393c4f76c7ae2739637f36e1fbe7e3db4018cf74",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v1.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v1.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v2.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings:nsc-spherical-conformal-episode-v2.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "role": "source_bindings:nsc-spherical-conformal-transport-v2.json"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "source_bindings:nsc-spherical-coupling-refinement-v5.npz"
+    },
+    {
+      "from": "lab/results/development/nsc-conformal-memory-control-v1.json@3e2d07a06105de2c41a52743b360dd3713a3939d89644043ba789e624c45dd4d",
+      "to": "lab/src/recursive_horizons/nsc_conformal_memory_control.py@91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07",
+      "role": "source_code_sha256"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-clock-v2.json@ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_bindings:episode_v1"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-clock-v2.json@ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings:episode_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-clock-v2.json@ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings:payload_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-clock-v2.json@ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_clock.py@a2b527ba47ee4820cbbe96cc46f566fe9251dfbad35d90f4f6f0626bd754474c",
+      "role": "source_bindings:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-clock-v2.json@ff82accbf4adc39cbf059304daacbebb1d2d8a097d23cf35b988d2f9f269d56e",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "source_bindings:analytic_frozen_producer"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/results/development/nsc-spherical-conformal-curvature-v1.npz@6a6618b5543716edfd5d30f70302ba2e14c14f73821f84aa18a924fba5f42189",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings:episode_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings:payload_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "role": "source_bindings:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "role": "source_bindings:metric_helper"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "source_bindings:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-curvature-v1.json@bff953a0f786a9981905c8c110bd601073de8947484f86fbf291206b58b00459",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "source_bindings:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/docs/nsc-spherical-conformal-gauge.md@dd42ce3c79d5bf55fe36fe19ebc980734f66dce83aad0659d85b6538291349e2",
+      "role": "source_hashes_after:proof_note"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/docs/nsc-spherical-conformal-gauge.md@dd42ce3c79d5bf55fe36fe19ebc980734f66dce83aad0659d85b6538291349e2",
+      "role": "source_hashes_before:proof_note"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "role": "source_hashes_after:v5_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "role": "source_hashes_before:v5_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "source_hashes_after:v5_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "source_hashes_before:v5_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-feedback-episode-v1.json@9fc9f460aa076db5eb67a3136d3e53797160f2885e124b62e6fb61ee247d9954",
+      "role": "preservation:source_hashes_after:legacy_episode_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-feedback-episode-v1.json@9fc9f460aa076db5eb67a3136d3e53797160f2885e124b62e6fb61ee247d9954",
+      "role": "preservation:source_hashes_before:legacy_episode_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-feedback-episode-v1.npz@2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77",
+      "role": "preservation:source_hashes_after:legacy_episode_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/results/development/nsc-spherical-feedback-episode-v1.npz@2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77",
+      "role": "preservation:source_hashes_before:legacy_episode_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "source_hashes_after:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "source_hashes_before:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "source_hashes_after:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "source_hashes_before:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "source_hashes_after:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "source_hashes_before:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "source_hashes_after:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "source_hashes_before:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "source_hashes_after:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "source_hashes_before:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "predecessor_hashes:v1_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_hashes_after:v1_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "predecessor_hashes:v1_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_hashes_after:v1_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "role": "predecessor_hashes:v1_frames_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "role": "source_hashes_after:v1_frames_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-frames-v1.npz@5df12e0441164bf96e5379fa577007e8bc85889eb805807b2400a110c1cfa81a",
+      "role": "predecessor_hashes:v1_frames_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-conformal-frames-v1.npz@5df12e0441164bf96e5379fa577007e8bc85889eb805807b2400a110c1cfa81a",
+      "role": "source_hashes_after:v1_frames_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "role": "predecessor_hashes:v5_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "role": "source_hashes_after:v5_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "predecessor_hashes:v5_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "source_hashes_after:v5_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "role": "predecessor_hashes:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "role": "source_hashes_after:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "predecessor_hashes:v1_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "source_hashes_after:v1_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "role": "predecessor_hashes:frames_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "role": "source_hashes_after:frames_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "predecessor_hashes:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "source_hashes_after:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "predecessor_hashes:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "source_hashes_after:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "predecessor_hashes:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "source_hashes_after:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "predecessor_hashes:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "source_hashes_after:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_trajectory_hashes:episode_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_trajectory_hashes:episode_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "to": "lab/results/development/nsc-spherical-conformal-frames-v1.npz@5df12e0441164bf96e5379fa577007e8bc85889eb805807b2400a110c1cfa81a",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "role": "bound_sources:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "to": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "role": "bound_sources:regional"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-frames-v1.json@10d964a1b8b16f1af69e67e946bdc3a503b60ceff72b509e2b175e5ac19d5070",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "bound_sources:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_bindings_after:v1_source_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.json@780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+      "role": "source_bindings_before:v1_source_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_bindings_after:v1_source_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v1.npz@5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+      "role": "source_bindings_before:v1_source_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings_after:v2_source_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings_before:v2_source_json"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings_after:v2_source_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings_before:v2_source_npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/results/development/nsc-spherical-conformal-source-controls-v1.npz@34d12c89895ff47269c0e126327d66ee4cf6d1b580d5b06b572d4714acfe2fa2",
+      "role": "numerical-payload"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "role": "source_bindings_after:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "role": "source_bindings_before:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "source_bindings_after:conformal_source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "source_bindings_before:conformal_source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "role": "source_bindings_after:source_constructor"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "role": "source_bindings_before:source_constructor"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "source_bindings_after:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "source_bindings_before:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "source_bindings_after:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "source_bindings_before:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "source_bindings_after:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-source-controls-v1.json@9be462c5a6143485faf2fd4f5ca2142a424e37bfe53bcaab168fdcb6033c8e5e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "source_bindings_before:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.json@f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "role": "source_bindings:episode_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "to": "lab/results/development/nsc-spherical-conformal-episode-v2.npz@40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "role": "source_bindings:payload_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "role": "source_bindings:producer_v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-conformal-transport-v2.json@fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_transport.py@77cf27b83a3f809fbd317efc6e0af875dd0f5020fd0dfd7d1b0fd9b7e99d9f49",
+      "role": "source_bindings:surface_producer"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v1.json@88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+      "role": "hashes_after:v1"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v1.json@88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+      "role": "hashes_before:v1"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v2.json@26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+      "role": "hashes_after:v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v2.json@26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+      "role": "hashes_before:v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py@2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+      "role": "hashes_after:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py@2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+      "role": "hashes_before:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "hashes_after:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "hashes_before:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "hashes_after:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "hashes_before:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "hashes_after:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "hashes_before:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "role": "hashes_after:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "role": "hashes_before:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/tests/test_nsc_spherical_galerkin_coupling.py@e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "role": "hashes_after:tests"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "to": "lab/tests/test_nsc_spherical_galerkin_coupling.py@e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "role": "hashes_before:tests"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/archive/probes/nf256_compensate_probe.py@3fa92afdcb292a81ac3ccd8b340ab4f3bb390e7e7e6e42e5ab787dfbe0e7f5b0",
+      "role": "hashes_after:compensate_probe"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/archive/probes/nf256_compensate_probe.py@3fa92afdcb292a81ac3ccd8b340ab4f3bb390e7e7e6e42e5ab787dfbe0e7f5b0",
+      "role": "hashes_before:compensate_probe"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/archive/probes/nf256_seed_probe.py@24957658ca54fdb97c791e1690c55d6b0eba544b044bd1a1d9183eaaa0e76dd7",
+      "role": "hashes_after:seed_probe"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/archive/probes/nf256_seed_probe.py@24957658ca54fdb97c791e1690c55d6b0eba544b044bd1a1d9183eaaa0e76dd7",
+      "role": "hashes_before:seed_probe"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v1.json@88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+      "role": "hashes_after:v1"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v1.json@88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+      "role": "hashes_before:v1"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v2.json@26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+      "role": "hashes_after:v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-control-v2.json@26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+      "role": "hashes_before:v2"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "role": "hashes_after:v3_record"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v3.json@5f324e51f87ccc54781e6d4142cb394fb4f32a5bc4505b8791900dcc5de27a97",
+      "role": "hashes_before:v3_record"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v4.json@6153075b68a822078a1016c0484dacf87c9083117076fcdba2b1aca9ab645739",
+      "role": "hashes_after:v4_record"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v4.json@6153075b68a822078a1016c0484dacf87c9083117076fcdba2b1aca9ab645739",
+      "role": "hashes_before:v4_record"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-spherical-coupling-refinement-v5.npz@0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+      "role": "hashes_after:npz"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-subgap-history-response.json@5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "role": "hashes_after:locked_record"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/results/development/nsc-subgap-history-response.json@5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "role": "hashes_before:locked_record"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py@2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+      "role": "hashes_after:v3_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py@2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+      "role": "hashes_before:v3_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v4.py@450f9ed468303f42cd62d812848eff83261b7a5256e642f7c291cb95f35703f5",
+      "role": "hashes_after:v4_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v4.py@450f9ed468303f42cd62d812848eff83261b7a5256e642f7c291cb95f35703f5",
+      "role": "hashes_before:v4_driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py@1ff6d0a84161646f7cf3f4f03a5beadff811df24d1ef3187b228e29993ff3521",
+      "role": "hashes_after:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py@1ff6d0a84161646f7cf3f4f03a5beadff811df24d1ef3187b228e29993ff3521",
+      "role": "hashes_before:driver"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "hashes_after:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "hashes_before:source"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "hashes_after:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "hashes_before:coupling"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "hashes_after:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "hashes_before:action"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "role": "hashes_after:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "role": "hashes_before:galerkin"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/tests/test_nsc_spherical_galerkin_coupling.py@e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "role": "hashes_after:tests"
+    },
+    {
+      "from": "lab/results/development/nsc-spherical-coupling-refinement-v5.json@1176c5a10eab4fe61a7571ecf0a7708a6fc74b6f0ef20c54cdab53409a0e0efc",
+      "to": "lab/tests/test_nsc_spherical_galerkin_coupling.py@e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "role": "hashes_before:tests"
+    },
+    {
+      "from": "lab/results/development/nsc-subgap-history-response.json@5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "to": "lab/docs/nsc-subgap-history-response.md@8acc50b42e01a45bea8ce39d0ce8c06842c564a60081f76463f6495055777428",
+      "role": "source_hashes:docs/nsc-subgap-history-response.md"
+    },
+    {
+      "from": "lab/results/development/nsc-subgap-history-response.json@5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "to": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "role": "source_hashes:scripts/derive_nsc_subgap_history_response.py"
+    },
+    {
+      "from": "lab/results/development/nsc-subgap-history-response.json@5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "to": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "role": "source_hashes:src/recursive_horizons/nsc_subgap_history_response.py"
+    },
+    {
+      "from": "lab/results/development/nsc-subgap-history-response.json@5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+      "to": "lab/tests/test_nsc_subgap_history_response.py@7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e",
+      "role": "source_hashes:tests/test_nsc_subgap_history_response.py"
+    },
+    {
+      "from": "lab/scripts/check_nsc_nested_qualities.py@24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec",
+      "to": "lab/src/recursive_horizons/nsc_nested_qualities.py@02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_local_observer_correspondence.py@53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a",
+      "to": "lab/src/recursive_horizons/evidence_io.py@0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_local_observer_correspondence.py@53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a",
+      "to": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_pg_adaptive_threshold.py@f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "to": "lab/src/recursive_horizons/nsc_pg_retarded_threshold.py@1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "to": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "to": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "to": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "to": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "to": "lab/src/recursive_horizons/nsc_pg_threshold_projection.py@56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_clock.py@a2b527ba47ee4820cbbe96cc46f566fe9251dfbad35d90f4f6f0626bd754474c",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_clock.py@a2b527ba47ee4820cbbe96cc46f566fe9251dfbad35d90f4f6f0626bd754474c",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_frames.py@e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "to": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_curvature.py@97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "to": "lab/scripts/derive_nsc_spherical_feedback_episode.py@efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "to": "lab/scripts/derive_nsc_spherical_feedback_episode.py@efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "to": "lab/src/recursive_horizons/provenance.py@cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "to": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@d68524629b086e627e977cfd198eb035311378383a07d225ab0795ed36ea49bc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "to": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_frames.py@e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_frames.py@e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "to": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_source_controls.py@ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_transport.py@77cf27b83a3f809fbd317efc6e0af875dd0f5020fd0dfd7d1b0fd9b7e99d9f49",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_continuation.py@cce313a09cd8675dad669ea526734f6601a0afaa369d1f3b049ad1bad8481075",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_conformal_transport.py@77cf27b83a3f809fbd317efc6e0af875dd0f5020fd0dfd7d1b0fd9b7e99d9f49",
+      "to": "lab/scripts/derive_nsc_spherical_conformal_episode.py@22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_feedback_episode.py@efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "to": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_feedback_episode.py@efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_feedback_episode.py@efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_feedback_episode.py@efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_galerkin_refinement.py@2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py@1ff6d0a84161646f7cf3f4f03a5beadff811df24d1ef3187b228e29993ff3521",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/scripts/derive_nsc_pg_retarded_threshold.py@cbb32dd9bb704afab593c17322ab34aca035bc5a870442981a1ef3308c97f47d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/scripts/derive_nsc_pg_threshold_projection.py@40c55fe0252f5bb3f38271382949e122ac37e2bb2d5fc194b587c8163ae251a6",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/scripts/derive_nsc_subgap_history_response.py@e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_adm_source.py@0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+      "to": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_adm_source.py@0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_adm_source.py@0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+      "to": "lab/src/recursive_horizons/nsc_regulated.py@48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_boundary_state.py@34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_causal_common.py@2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+      "to": "lab/src/recursive_horizons/nsc_boundary_state.py@34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_causal_common.py@2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_charged_ctp_neck.py@1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+      "to": "lab/src/recursive_horizons/nsc_angular_stress.py@7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_charged_ctp_neck.py@1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+      "to": "lab/src/recursive_horizons/nsc_horizon_source.py@fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_charged_ctp_neck.py@1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+      "to": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_compact_ctp_neck.py@3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+      "to": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "to": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "to": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "to": "lab/src/recursive_horizons/nsc_adm_source.py@0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "to": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "to": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py@925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "to": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py@925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "to": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py@925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py@925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_memory_control.py@91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07",
+      "to": "lab/src/recursive_horizons/nsc_conformal_local_response.py@b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_memory_control.py@91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07",
+      "to": "lab/src/recursive_horizons/nsc_conformal_local_response_successor.py@925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_conformal_memory_control.py@91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07",
+      "to": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "to": "lab/src/recursive_horizons/nsc_evolving_reduction.py@17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_coupled_local_response.py@a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_finite_terms.py@532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_finite_terms.py@532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_finite_terms.py@532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_regulated.py@48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_shape_response.py@4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_shape_response.py@4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "to": "lab/src/recursive_horizons/nsc_shape_response.py@4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_energy_transfer.py@baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+      "to": "lab/src/recursive_horizons/nsc_shape_response.py@4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_evolving_reduction.py@17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_evolving_reduction.py@17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+      "to": "lab/src/recursive_horizons/nsc_nested_qualities.py@02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_finite_terms.py@532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+      "to": "lab/src/recursive_horizons/nsc_shape_response.py@4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_finite_window_embedding.py@8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+      "to": "lab/src/recursive_horizons/nsc_nested_qualities.py@02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_finite_window_embedding.py@8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_gauge_source.py@a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "to": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "to": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "to": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "to": "lab/src/recursive_horizons/nsc_causal_common.py@2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "to": "lab/src/recursive_horizons/nsc_energy_transfer.py@baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "to": "lab/src/recursive_horizons/nsc_regulated.py@48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "to": "lab/src/recursive_horizons/nsc_spinor_bridge.py@a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "to": "lab/src/recursive_horizons/nsc_angular_stress.py@7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "to": "lab/src/recursive_horizons/nsc_charged_ctp_neck.py@1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "to": "lab/src/recursive_horizons/nsc_compact_ctp_neck.py@3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "to": "lab/src/recursive_horizons/nsc_horizon_source.py@fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_mode_resolved_cauchy_state.py@9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+      "to": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "to": "lab/src/recursive_horizons/nsc_compact_ctp_neck.py@3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "to": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_adaptive_threshold.py@f4cf9fee5f1483bf79ae03c0181ebde333df2565fc2c4660c47c8d53bae954c7",
+      "to": "lab/src/recursive_horizons/nsc_pg_retarded_threshold.py@1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_ctp_variation.py@8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "to": "lab/src/recursive_horizons/nsc_pg_ctp_mode_jets.py@12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py@4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py@4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py@4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "to": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "to": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "to": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py@4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "to": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "to": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py@4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_pg_lll_preparation.py@4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_pg_packet_modes.py@4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_packets.py@37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_pg_retarded_threshold.py@1048ca5a0629b6e12b0b5cdcbb6729f940ca22cd456b764d1f734f48ab294681",
+      "to": "lab/src/recursive_horizons/nsc_pg_threshold_projection.py@56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "to": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py@9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_finite_window_embedding.py@8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_finite_window_embedding.py@8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py@067e94facaa2ebfb8d5ad4b509ae0efada8416f4ecbfa4e21825bab3b766aee3",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "to": "lab/src/recursive_horizons/nsc_covariant_operator.py@0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "to": "lab/src/recursive_horizons/nsc_nested_qualities.py@02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "to": "lab/src/recursive_horizons/nsc_regeneration_controls.py@ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py@eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "to": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py@18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "to": "lab/src/recursive_horizons/nsc_conformal_adm_source.py@7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "to": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py@708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py@18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py@18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+      "to": "lab/src/recursive_horizons/provenance.py@cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "to": "lab/src/recursive_horizons/nsc_complex_horizon_modes.py@f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "to": "lab/src/recursive_horizons/nsc_pg_massive_modes.py@345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_ctp_variation.py@8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+      "to": "lab/src/recursive_horizons/nsc_influence.py@0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_ctp_variation.py@8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_boundary_history.py@25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "to": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "to": "lab/src/recursive_horizons/nsc_pg_ks_metric_pullback.py@54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_ctp_variation.py@8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "to": "lab/src/recursive_horizons/nsc_ks_spacetime_variation.py@3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_history_modes.py@b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "to": "lab/src/recursive_horizons/nsc_common_time_bulk_split.py@bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "to": "lab/src/recursive_horizons/nsc_lorentzian.py@65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_transmitting_resolvent.py@3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_dirac_domain.py@d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "to": "lab/src/recursive_horizons/nsc_angular_stress.py@7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "to": "lab/src/recursive_horizons/nsc_angular_stress.py@7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "to": "lab/src/recursive_horizons/nsc_angular_stress.py@7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/src/recursive_horizons/nsc_unruh_state.py@a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+      "to": "lab/src/recursive_horizons/nsc_gauge_source.py@a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_local_observer_correspondence.py@f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "to": "lab/scripts/derive_nsc_local_observer_correspondence.py@53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_local_observer_correspondence.py@f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "to": "lab/src/recursive_horizons/nsc_energy_transfer.py@baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_local_observer_correspondence.py@f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "to": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_local_observer_correspondence.py@f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "to": "lab/src/recursive_horizons/nsc_regulated.py@48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_local_observer_correspondence.py@f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "to": "lab/src/recursive_horizons/nsc_spinor_bridge.py@a44617545328774345f70f0ecdefca434c76ff6d5c5548f6715f02cd3015da19",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_nested_qualities.py@89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b",
+      "to": "lab/src/recursive_horizons/nsc_nested_qualities.py@02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_spherical_galerkin_coupling.py@e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "to": "lab/src/recursive_horizons/nsc_spherical_coupling.py@64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_spherical_galerkin_coupling.py@e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+      "to": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py@aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_subgap_history_response.py@7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e",
+      "to": "lab/src/recursive_horizons/nsc_paired_horizon_preparation.py@193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_subgap_history_response.py@7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e",
+      "to": "lab/src/recursive_horizons/nsc_subgap_history_response.py@3cd95f51aa017eda187061c2d29b3d779ea3e155bd78ae4fe874cbf5708b8971",
+      "role": "local-import"
+    },
+    {
+      "from": "lab/tests/test_nsc_subgap_history_response.py@7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e",
+      "to": "lab/src/recursive_horizons/nsc_transmitting_history_jets.py@f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+      "role": "local-import"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json@1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+      "to": "docs/nsc-local-observer-correspondence.md@4345b0ef91703c53ec879bfa9d3eeea4b07ee31209ad8a701f3fe17d5039f477",
+      "role": "source_hashes:docs/nsc-local-observer-correspondence.md"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json@1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+      "to": "lab/scripts/derive_nsc_local_observer_correspondence.py@53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a",
+      "role": "source_hashes:scripts/derive_nsc_local_observer_correspondence.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json@1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+      "to": "lab/src/recursive_horizons/nsc_local_observer_correspondence.py@26e8950d44376c5825f4193de8ee281664b725cdf3bd388b841ce5a37ca38b1e",
+      "role": "source_hashes:src/recursive_horizons/nsc_local_observer_correspondence.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json@1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+      "to": "lab/tests/test_nsc_local_observer_correspondence.py@f4e139c111eb6312c957be1b5ea9290423b9802adc5aa6b2287ea185ea32ee56",
+      "role": "source_hashes:tests/test_nsc_local_observer_correspondence.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-local-observer-correspondence.json@1c7e327a22bc3371a15998f3b67ac8cca3527d89747f96a9605f0f7b1b84b5d8",
+      "to": "src/recursive_horizons/evidence_io.py@0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+      "role": "source_hashes:src/recursive_horizons/evidence_io.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-nested-qualities-v1.json@99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033",
+      "to": "docs/nsc-nested-qualities.md@1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
+      "role": "source_hashes:docs/nsc-nested-qualities.md"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-nested-qualities-v1.json@99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033",
+      "to": "lab/scripts/check_nsc_nested_qualities.py@24038d81ee760266cc3214b4c05931fe76d392c0b200d750b658b8a2f72101ec",
+      "role": "source_hashes:scripts/check_nsc_nested_qualities.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-nested-qualities-v1.json@99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033",
+      "to": "lab/src/recursive_horizons/nsc_nested_qualities.py@02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+      "role": "source_hashes:src/recursive_horizons/nsc_nested_qualities.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/development/nsc-nested-qualities-v1.json@99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033",
+      "to": "lab/tests/test_nsc_nested_qualities.py@89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b",
+      "role": "source_hashes:tests/test_nsc_nested_qualities.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/nsc-3-regulated-recursion.json@e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+      "to": "scripts/check_nsc_regulated_recursion.py@c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+      "role": "source_hashes:scripts/check_nsc_regulated_recursion.py"
+    },
+    {
+      "from": "paper/nested-quality-evidence/results/nsc-3-regulated-recursion.json@e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+      "to": "src/recursive_horizons/nsc_regulated.py@48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "role": "source_hashes:src/recursive_horizons/nsc_regulated.py"
+    },
+    {
+      "from": "scripts/check_nsc_regulated_recursion.py@c172d93de42619bc3ee2e8e6562851a1ed5bb58fc82396097ca763f5205903c6",
+      "to": "src/recursive_horizons/nsc_regulated.py@48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+      "role": "local-import"
+    }
+  ]
+}
