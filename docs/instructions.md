@@ -132,7 +132,7 @@ The active action is \(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus
 the same-spectrum local induced term, counted once. The vacuum-matched CTP
 branch remains a separate historical choice.
 
-The current saved continuation is
+The saved prescribed-gauge continuation is
 [the regeneration episode](../lab/docs/nsc-regeneration-episode.md),
 $T=0.05$ to $T=0.085$, starting with the predecessor's exact Cauchy
 arrays. Its four space and time refinements meet one percent on the
@@ -169,6 +169,15 @@ state forces already come from the same action. An extra invented rule for
 the radius as a function of energy is unnecessary. The historical hand-set
 \(H\) and \(B\) fractions, and the historical strong tolerance \(10^{-8}\),
 do not set the objective.
+
+The conformal successor now records the accepted finite chain through
+$T=0.3$: source-dependent regional transfer, generated metric response,
+maintained structure, and a local reduction on the same trajectory.
+The [owning note](../lab/docs/nsc-spherical-conformal-continuation.md) routes
+its actual metric jets, clock correction, source controls, surface ledger,
+and local omission errors. Numerical movements use one percent of their
+own effects. A total propagated or continuum certificate is a stronger
+claim, rather than an added prerequisite for this measured finite result.
 
 Construction stays flexible. Identify the shared structure, propose one
 finite realization, and check feasibility, CPU, and the scale of the effect

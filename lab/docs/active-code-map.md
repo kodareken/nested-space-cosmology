@@ -15,6 +15,36 @@ or an older cursor. It does not resume the campaign. Do not drop recorded
 error gaps. The [archived candidate notes](#archived-candidate-notes) at the
 end of this file are not the active queue.
 
+## Current finite conformal realization, 2026-10-01
+
+The [owning note](nsc-spherical-conformal-continuation.md) joins the finite
+chain through $T=0.3$ and the local segment $[0.2,0.3]$. Its owners,
+relative to the laboratory, are:
+
+| Piece | Owner |
+|---|---|
+| Same-action conformal rates | src/recursive_horizons/nsc_spherical_galerkin_coupling.py; [proof](nsc-spherical-conformal-gauge.md) |
+| Initial episode and frame ledger | scripts/derive_nsc_spherical_conformal_episode.py; scripts/derive_nsc_spherical_conformal_frames.py; corresponding v1 JSON/NPZ |
+| Bitwise continuation | scripts/derive_nsc_spherical_conformal_continuation.py; results/development/nsc-spherical-conformal-episode-v2.json and .npz |
+| Entry/exit assessment | scripts/derive_nsc_spherical_conformal_transport.py; results/development/nsc-spherical-conformal-transport-v2.json |
+| Analytic matched clock | scripts/derive_nsc_spherical_conformal_clock.py; results/development/nsc-spherical-conformal-clock-v2.json |
+| Source perturbations | scripts/derive_nsc_spherical_conformal_source_controls.py; [note](nsc-spherical-conformal-source-controls.md) |
+| Actual metric jets | scripts/derive_nsc_spherical_conformal_curvature.py; [note](nsc-spherical-conformal-curvature.md) |
+| Same-realization local response | src/recursive_horizons/nsc_conformal_local_response_successor.py; scripts/derive_nsc_conformal_local_response_successor.py; [note](nsc-conformal-local-response-successor.md) |
+| Independent memory control | src/recursive_horizons/nsc_conformal_memory_control.py; results/development/nsc-conformal-memory-control-v1.json |
+| Read-only preservation | tests/test_nsc_spherical_conformal_preservation.py; the completed thin producers' explicit --check entry points |
+
+All four baseline cases reach $T=0.3$, and the original observer/source are
+preserved. Surface flow at $x=0,2,4$ resolves; $x=6$ keeps its unresolved
+domain. The leader persists, source controls change signed flow, actual
+metric curvature is computed, and local memory/drive/cross omissions are
+resolved against their own comparisons. This completes the accepted finite
+measurement chain. Renewal is false. Propagated unknown-path and continuum
+certificates remain stronger claims. The completed writers refuse existing
+outputs; historical source checks explicitly name checkpoint c2d5fb6f.
+
+The sections below retain earlier prescribed-gauge and historical domains.
+
 v5, `scripts/derive_nsc_spherical_galerkin_refinement_v5.py`, is the
 self-contained saved diagnostic and preparation. It is not a permanent
 production-driver requirement. The episode driver

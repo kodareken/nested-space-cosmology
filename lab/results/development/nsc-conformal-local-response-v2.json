@@ -1,0 +1,549 @@
+{
+  "schema": "NSC-CONFORMAL-LOCAL-RESPONSE-v2",
+  "status": "MEASURED_SAME_REALIZATION_LOCAL_RESPONSE",
+  "case": "nf512_dt_0.0005",
+  "gauge": "conformal",
+  "time_window": [
+    0.2,
+    0.3
+  ],
+  "source_bindings": {
+    "nsc-spherical-conformal-episode-v2.json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "nsc-spherical-conformal-episode-v2.npz": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+    "nsc-spherical-conformal-episode-v1.json": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "nsc-spherical-conformal-episode-v1.npz": "5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+    "nsc-spherical-conformal-transport-v2.json": "fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+    "nsc-spherical-coupling-refinement-v5.npz": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+    "nsc-conformal-local-response-feasibility-v1.json": "46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+    "nsc-conformal-local-response-feasibility-v1.npz": "0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289"
+  },
+  "initial_blocks": {
+    "C_AA_real": [
+      [
+        0.10557447719690981,
+        -0.0002179049520289753
+      ],
+      [
+        -0.0002179049520289753,
+        0.10557463752522364
+      ]
+    ],
+    "C_AA_imag": [
+      [
+        0.0,
+        0.002331550381436528
+      ],
+      [
+        -0.002331550381436528,
+        0.0
+      ]
+    ],
+    "C_AA_eigenvalues": [
+      0.10323284650023827,
+      0.10791626822189515
+    ],
+    "C_AE_frobenius": 0.338636575692358,
+    "exterior_column_norm": 2.3793787864551135,
+    "covariance_eigenvalues": [
+      0.24999999999997255,
+      0.2499999999999726,
+      0.4999999999999455,
+      0.4999999999999457,
+      0.7499999999999183,
+      0.7499999999999185
+    ],
+    "covariance_admissible": true,
+    "observer_gram_gap": 2.220446049250313e-16
+  },
+  "observer": "original T0 columns 0 and 1, no QR or phase reset",
+  "weights": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "initial_state": "actual Phi(0.2) on the bitwise continued conformal episode",
+  "observer_id": "bba69e38ced833e60f22eeab1ce14eee5e3f987565d2abe53375dd89aa8d6c22",
+  "initial_state_id": "b1921155833e7fcc0399cb5b0f52552a82687697890b7a124667da77f7ec7606",
+  "geometry_id": "e99e337217719034f89b66cb9500a0af077727f4c5be5a4099803ad0bd95366f",
+  "operator": "sigma2 P+kappa Q sigma1; original representative block, no isotropic copy factor",
+  "geometry": "stored coarse Q prolonged to original quadrature; piecewise linear between stored frames",
+  "operator_action_relative": [
+    4.1669155331887894e-13,
+    4.358540521765698e-13
+  ],
+  "pilot_superposition_max_abs": 3.6743392481035993e-16,
+  "pilot_cpu_seconds": 1.897327,
+  "baseline_forecast_seconds": 189.7327,
+  "full_plan_forecast_seconds": 270.5588302,
+  "pilot_cpu_ceiling": 300.0,
+  "confirmation_cpu_ceiling": 1800.0,
+  "confirmation_admitted_by_forecast": false,
+  "occupation_effect": 0.07342951961159094,
+  "coherence_effect": 0.0023742079275808343,
+  "physical_scope": {
+    "surfaces": [
+      {
+        "x": 0,
+        "quantity": "time-integrated absolute normal energy flux",
+        "effect": 0.038484363186333706,
+        "indicators": {
+          "time": {
+            "movement": 1.439312766193801e-10,
+            "effect": 0.038484363186333706,
+            "fraction": 3.739993719591856e-09,
+            "within_one_percent": true
+          },
+          "space": {
+            "movement": 1.0612196297277166e-06,
+            "effect": 0.038484363186333706,
+            "fraction": 2.7575345981158636e-05,
+            "within_one_percent": true
+          },
+          "frames": {
+            "movement": 3.2513826668592594e-05,
+            "effect": 0.038484363186333706,
+            "fraction": 0.0008448581183782891,
+            "within_one_percent": true
+          }
+        },
+        "per_case": {
+          "nf256_dt_0.0010": {
+            "absolute_integral": 0.03848330180233619,
+            "simpson_indicator": 3.2538751307875646e-05
+          },
+          "nf256_dt_0.0005": {
+            "absolute_integral": 0.03848330196670398,
+            "simpson_indicator": 3.2538750948996054e-05
+          },
+          "nf512_dt_0.0010": {
+            "absolute_integral": 0.03848436304240243,
+            "simpson_indicator": 3.251382669949843e-05
+          },
+          "nf512_dt_0.0005": {
+            "absolute_integral": 0.038484363186333706,
+            "simpson_indicator": 3.2513826668592594e-05
+          }
+        },
+        "certified": false
+      },
+      {
+        "x": 2,
+        "quantity": "time-integrated absolute normal energy flux",
+        "effect": 0.06757847920532943,
+        "indicators": {
+          "time": {
+            "movement": 2.661259684844097e-10,
+            "effect": 0.06757847920532943,
+            "fraction": 3.938028372550625e-09,
+            "within_one_percent": true
+          },
+          "space": {
+            "movement": 6.158173999848415e-06,
+            "effect": 0.06757847920532943,
+            "fraction": 9.112625901416799e-05,
+            "within_one_percent": true
+          },
+          "frames": {
+            "movement": 1.8239927701946268e-05,
+            "effect": 0.06757847920532943,
+            "fraction": 0.0002699073420478485,
+            "within_one_percent": true
+          }
+        },
+        "per_case": {
+          "nf256_dt_0.0010": {
+            "absolute_integral": 0.06757232069769448,
+            "simpson_indicator": 1.8372968274352197e-05
+          },
+          "nf256_dt_0.0005": {
+            "absolute_integral": 0.06757232103132958,
+            "simpson_indicator": 1.8372967402577323e-05
+          },
+          "nf512_dt_0.0010": {
+            "absolute_integral": 0.06757847893920346,
+            "simpson_indicator": 1.823992756430637e-05
+          },
+          "nf512_dt_0.0005": {
+            "absolute_integral": 0.06757847920532943,
+            "simpson_indicator": 1.8239927701946268e-05
+          }
+        },
+        "certified": false
+      },
+      {
+        "x": 4,
+        "quantity": "time-integrated absolute normal energy flux",
+        "effect": 0.060887369296944736,
+        "indicators": {
+          "time": {
+            "movement": 2.4514220514637586e-10,
+            "effect": 0.060887369296944736,
+            "fraction": 4.0261585937607066e-09,
+            "within_one_percent": true
+          },
+          "space": {
+            "movement": 1.220717815504646e-06,
+            "effect": 0.060887369296944736,
+            "fraction": 2.0048785644708424e-05,
+            "within_one_percent": true
+          },
+          "frames": {
+            "movement": 8.701680717003446e-06,
+            "effect": 0.060887369296944736,
+            "fraction": 0.0001429143813812315,
+            "within_one_percent": true
+          }
+        },
+        "per_case": {
+          "nf256_dt_0.0010": {
+            "absolute_integral": 0.06088614829892121,
+            "simpson_indicator": 8.728711405649181e-06
+          },
+          "nf256_dt_0.0005": {
+            "absolute_integral": 0.06088614857912923,
+            "simpson_indicator": 8.728710629304914e-06
+          },
+          "nf512_dt_0.0010": {
+            "absolute_integral": 0.06088736905180253,
+            "simpson_indicator": 8.701680842645998e-06
+          },
+          "nf512_dt_0.0005": {
+            "absolute_integral": 0.060887369296944736,
+            "simpson_indicator": 8.701680717003446e-06
+          }
+        },
+        "certified": false
+      }
+    ],
+    "leader_region": 0,
+    "leader_unchanged": true,
+    "shell_leader_share_min": 0.6509785261434402,
+    "probability_leader_share_min": 0.6558454531429172,
+    "proper_clock_start": 0.24120933558087854,
+    "proper_clock_end": 0.361611405711853,
+    "normal_clock_protocol": "continuous T0 normal worldline x=1; d tau=r Q dt; occupation is a separate fixed two-mode measurement",
+    "flux_normalization": "source physical_series divides flux_nodal by the quadrature dx; energy flow is not occupation"
+  },
+  "production_geometry_rerun": false,
+  "source_code_sha256": "925b2e1d492c43075c4980c6a3af350f581d1b8ba556484de29dff45b0bb9284",
+  "frozen_feasibility_module_sha256": "b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+  "reducer_sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+  "consumer_helpers_sha256": "a278090550e5bc2414f5c13d83422e5a06248dc7ca1f63f295fcaa2956b48fd2",
+  "continuum_constraint_certified": false,
+  "state_error_certified": false,
+  "stress_claimed": false,
+  "renewal_claimed": false,
+  "state_dependent_duhamel": "e<=e0+integral||delta H Phi W^1/2||F; fixed-observer covariance error<=2a e+e^2; unknown geometric defect not bounded here",
+  "refinement_trials": [
+    {
+      "output_steps": 20,
+      "shared_solve_cpu_seconds": 54.703798,
+      "metrics": {
+        "reduction_occupation": {
+          "movement": 6.3508141397161655e-06,
+          "effect": 0.07342951961159094,
+          "fraction": 8.64885699008942e-05,
+          "within_one_percent": true
+        },
+        "reduction_coherence": {
+          "movement": 8.478723274307841e-07,
+          "effect": 0.0023742079275808343,
+          "fraction": 0.0003571179750438756,
+          "within_one_percent": true
+        },
+        "conditional_versus_autonomous_occupation": {
+          "movement": 2.2951084088784768e-10,
+          "effect": 0.07342951961159094,
+          "fraction": 3.1255936590877425e-09,
+          "within_one_percent": true
+        },
+        "conditional_versus_autonomous_coherence": {
+          "movement": 6.519964820444902e-10,
+          "effect": 0.0023742079275808343,
+          "fraction": 2.7461642026814087e-07,
+          "within_one_percent": true
+        },
+        "drive_off_against_independent_full": {
+          "movement": 1.66255239472321e-05,
+          "effect": 0.048541204982542864,
+          "fraction": 0.00034250332172864744,
+          "within_one_percent": true
+        },
+        "cross_against_independent_full": {
+          "movement": 1.2282200189728254e-05,
+          "effect": 0.09206143279175863,
+          "fraction": 0.00013341308968664847,
+          "within_one_percent": true
+        },
+        "cross_matrix_against_independent_full": {
+          "movement": 1.709921623148559e-05,
+          "effect": 0.13011977207833153,
+          "fraction": 0.0001314113601520293,
+          "within_one_percent": true
+        },
+        "memory_off_temporal_indicator": {
+          "movement": 1.650868287690621e-06,
+          "effect": 0.016818538289934015,
+          "fraction": 9.815765551270734e-05,
+          "within_one_percent": true
+        },
+        "full_midpoint_refinement_occupation": {
+          "movement": 1.9253487693049465e-11,
+          "effect": 0.07342951961159094,
+          "fraction": 2.6220364500396756e-10,
+          "within_one_percent": true
+        },
+        "full_midpoint_refinement_coherence": {
+          "movement": 4.7478369449005135e-11,
+          "effect": 0.0023742079275808343,
+          "fraction": 1.999756166991766e-08,
+          "within_one_percent": true
+        },
+        "rate_Hermite_occupation": {
+          "movement": 2.2907768737479017e-10,
+          "effect": 0.07342951961159094,
+          "fraction": 3.1196947574559644e-09,
+          "within_one_percent": true
+        },
+        "rate_Hermite_coherence": {
+          "movement": 6.988527241886756e-10,
+          "effect": 0.0023742079275808343,
+          "fraction": 2.943519462091771e-07,
+          "within_one_percent": true
+        }
+      },
+      "all_within_one_percent": true
+    }
+  ],
+  "payload_sha256": "32c9dce390c06fb03ea9938c6c8c41e2be638463556c851f303da70eb61713bf",
+  "payload_bytes": 34094,
+  "occupation_error": {
+    "max_abs": 6.3508141397161655e-06,
+    "signal_max_abs": 0.10557463752522356,
+    "relative_to_signal": 6.015473307401931e-05,
+    "change_from_initial_max_abs": 0.07342951982847241,
+    "relative_to_change": 8.648856964544152e-05
+  },
+  "coherence_error": {
+    "max_abs": 8.478723274307841e-07,
+    "signal_max_abs": 0.002341710859456226,
+    "relative_to_signal": 0.0003620738760325305,
+    "change_from_initial_max_abs": 0.002374207907174395,
+    "relative_to_change": 0.000357117978113323
+  },
+  "phase_error": {
+    "defined": true,
+    "max_abs_radians": 0.0006050476924805536,
+    "samples": 21,
+    "reference_peak_abs": 0.002341710859456226
+  },
+  "conditional_versus_autonomous": {
+    "max_abs": 2.2951084088784768e-10,
+    "signal_max_abs": 0.10557463752522356,
+    "relative_to_signal": 2.1739202356533186e-09,
+    "change_from_initial_max_abs": 0.07342951961159094,
+    "relative_to_change": 3.1255936590877425e-09
+  },
+  "numerical_controls": {
+    "reduction_occupation": {
+      "movement": 6.3508141397161655e-06,
+      "effect": 0.07342951961159094,
+      "fraction": 8.64885699008942e-05,
+      "within_one_percent": true
+    },
+    "reduction_coherence": {
+      "movement": 8.478723274307841e-07,
+      "effect": 0.0023742079275808343,
+      "fraction": 0.0003571179750438756,
+      "within_one_percent": true
+    },
+    "conditional_versus_autonomous_occupation": {
+      "movement": 2.2951084088784768e-10,
+      "effect": 0.07342951961159094,
+      "fraction": 3.1255936590877425e-09,
+      "within_one_percent": true
+    },
+    "conditional_versus_autonomous_coherence": {
+      "movement": 6.519964820444902e-10,
+      "effect": 0.0023742079275808343,
+      "fraction": 2.7461642026814087e-07,
+      "within_one_percent": true
+    },
+    "drive_off_against_independent_full": {
+      "movement": 1.66255239472321e-05,
+      "effect": 0.048541204982542864,
+      "fraction": 0.00034250332172864744,
+      "within_one_percent": true
+    },
+    "cross_against_independent_full": {
+      "movement": 1.2282200189728254e-05,
+      "effect": 0.09206143279175863,
+      "fraction": 0.00013341308968664847,
+      "within_one_percent": true
+    },
+    "cross_matrix_against_independent_full": {
+      "movement": 1.709921623148559e-05,
+      "effect": 0.13011977207833153,
+      "fraction": 0.0001314113601520293,
+      "within_one_percent": true
+    },
+    "memory_off_temporal_indicator": {
+      "movement": 1.650868287690621e-06,
+      "effect": 0.016818538289934015,
+      "fraction": 9.815765551270734e-05,
+      "within_one_percent": true
+    },
+    "full_midpoint_refinement_occupation": {
+      "movement": 1.9253487693049465e-11,
+      "effect": 0.07342951961159094,
+      "fraction": 2.6220364500396756e-10,
+      "within_one_percent": true
+    },
+    "full_midpoint_refinement_coherence": {
+      "movement": 4.7478369449005135e-11,
+      "effect": 0.0023742079275808343,
+      "fraction": 1.999756166991766e-08,
+      "within_one_percent": true
+    },
+    "rate_Hermite_occupation": {
+      "movement": 2.2907768737479017e-10,
+      "effect": 0.07342951961159094,
+      "fraction": 3.1196947574559644e-09,
+      "within_one_percent": true
+    },
+    "rate_Hermite_coherence": {
+      "movement": 6.988527241886756e-10,
+      "effect": 0.0023742079275808343,
+      "fraction": 2.943519462091771e-07,
+      "within_one_percent": true
+    }
+  },
+  "controls": {
+    "memory": {
+      "occupation_movement": 0.016818538289934015,
+      "history_norm": 0.0
+    },
+    "outside_drive": {
+      "occupation_movement": 0.048541204982542864,
+      "initial_exterior_norm": 2.3793787864551135
+    },
+    "initial_cross": {
+      "occupation_movement": 0.09206143279175863,
+      "matrix_frobenius_movement": 0.13011977207833153,
+      "actual_initial_C_AE": 0.338636575692358,
+      "synthetic_cross_substituted": false
+    }
+  },
+  "allocation": {
+    "backend": "streamed",
+    "time_indexed_exterior_propagator_bytes": 0,
+    "stores_dense_exterior_propagator": false,
+    "history_shape": [
+      21,
+      1022,
+      12
+    ],
+    "history_bytes": 4120704,
+    "frame_bytes": 16777216,
+    "frame_completion": "dense-null-space-once",
+    "current_exterior_block_bytes": 16711744,
+    "peak_column_workspace_bytes": 425152,
+    "avoided_dense_propagator_bytes": 350946624,
+    "propagator_storage": "none",
+    "output_times": 21,
+    "exterior_dimension": 1022,
+    "retained_dimension": 2
+  },
+  "original_six_column_history_shape": [
+    21,
+    1022,
+    6
+  ],
+  "original_six_column_history_norm": 0.8388431452283958,
+  "trapezoid_residual_max": 1.911774037332231e-16,
+  "cpu_seconds": 84.442888,
+  "geometry_comparisons": {
+    "time": {
+      "case": "nf512_dt_0.0010",
+      "Q_gap_on_common_quadrature": 8.398837181289309e-14,
+      "occupation": {
+        "movement": 7.632783294297951e-17,
+        "effect": 0.07342951961159094,
+        "fraction": 1.039470683544157e-15,
+        "within_one_percent": true
+      },
+      "coherence": {
+        "movement": 1.8064178036967532e-16,
+        "effect": 0.0023742079275808343,
+        "fraction": 7.608507168693422e-14,
+        "within_one_percent": true
+      },
+      "initial_state_and_observer": "same primary Phi(0.2) and T0 observer; only geometry schedule differs"
+    },
+    "space": {
+      "case": "nf256_dt_0.0005",
+      "Q_gap_on_common_quadrature": 4.417577414983498e-13,
+      "occupation": {
+        "movement": 1.249000902703301e-16,
+        "effect": 0.07342951961159094,
+        "fraction": 1.7009520276177113e-15,
+        "within_one_percent": true
+      },
+      "coherence": {
+        "movement": 3.9754464876252785e-16,
+        "effect": 0.0023742079275808343,
+        "fraction": 1.6744306349258987e-13,
+        "within_one_percent": true
+      },
+      "initial_state_and_observer": "same primary Phi(0.2) and T0 observer; only geometry schedule differs"
+    }
+  },
+  "autonomous_refinement_comparisons": {
+    "time": {
+      "occupation": {
+        "movement": 2.3241464308654258e-11,
+        "effect": 0.07342951961159094,
+        "fraction": 3.1651390927778263e-10,
+        "within_one_percent": true
+      },
+      "coherence": {
+        "movement": 1.3307124925333885e-12,
+        "effect": 0.0023742079275808343,
+        "fraction": 5.604869215853808e-10,
+        "within_one_percent": true
+      }
+    },
+    "space": {
+      "occupation": {
+        "movement": 1.3316879418634464e-08,
+        "effect": 0.07342951961159094,
+        "fraction": 1.8135593817138874e-07,
+        "within_one_percent": true
+      },
+      "coherence": {
+        "movement": 3.25665194148582e-10,
+        "effect": 0.0023742079275808343,
+        "fraction": 1.3716793308849488e-07,
+        "within_one_percent": true
+      }
+    }
+  },
+  "all_numerical_movements_within_one_percent": true,
+  "scope": "maintained region-0 structure and resolved energy surfaces on the same saved realization; conditional fixed-observer occupation and causal omissions; no unknown-geometry state-error certificate",
+  "occupation_initial": [
+    0.10557447719690986,
+    0.10557463752522356
+  ],
+  "occupation_final": [
+    0.03214495758531893,
+    0.03226899862128299
+  ],
+  "cache": {
+    "dense_H_cache_limit": 2,
+    "builds": 804,
+    "hits": 52
+  }
+}

@@ -9,6 +9,7 @@ it is not an observable-error certificate or a continuum transport proof.
 from __future__ import annotations
 import json
 from pathlib import Path
+import sys
 import numpy as np
 
 import derive_nsc_spherical_conformal_episode as episode
@@ -68,6 +69,7 @@ def assess_surfaces(physical_series):
 
 
 def run():
+    episode.refuse_existing_outputs(OUT)
     raw = json.loads(continuation.OUT.read_text())
     if raw["gauge"] != "conformal" or not raw["all_target_reached"]:
         raise ValueError("completed same-source conformal successor required")
@@ -99,5 +101,27 @@ def run():
     return record
 
 
+def verify_saved(*, source_ref=None):
+    before = episode.sha256(OUT)
+    record = json.loads(OUT.read_text())
+    if record.get("schema") != "NSC-SPHERICAL-CONFORMAL-TRANSPORT-v2":
+        raise ValueError("transport schema differs")
+    episode.check_recorded_sources(record.get("source_bindings"),
+        {"episode_v2": continuation.OUT, "payload_v2": continuation.NPZ,
+         "producer_v2": continuation.DRIVER, "surface_producer": DRIVER}, source_ref=source_ref)
+    raw = json.loads(continuation.OUT.read_text())
+    episode.check_saved_values(assess_surfaces(raw["physical_series"]), record["surface_assessments"], "surface assessment")
+    if record.get("net_zero_is_a_veto") is not False or record.get("observable_error_certified") is not False:
+        raise ValueError("transport claim domain differs")
+    if episode.sha256(OUT) != before:
+        raise RuntimeError("read-only check changed transport bytes")
+    return {"status": record["verdict"], "wrote": False, "source_ref": source_ref}
+
+
 if __name__ == "__main__":
-    run()
+    if sys.argv[1:] == ["--check"]:
+        print(json.dumps(verify_saved(source_ref=episode.SEALED_SOURCE_REF)))
+    elif len(sys.argv) == 1:
+        run()
+    else:
+        raise SystemExit("Use --check for sealed evidence, or no arguments to create new outputs")

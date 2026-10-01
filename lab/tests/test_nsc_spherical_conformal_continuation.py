@@ -27,7 +27,9 @@ def test_saved_successor_handoff_and_original_observer_are_bitwise_unchanged():
     assert record["source_changed"] is False
     assert record["sealed_sources_unchanged_during_run"] is True
     assert record["predecessor_hashes"]["v1_npz"] == episode.sha256(episode.NPZ)
-    assert record["predecessor_hashes"]["v1_driver"] == episode.sha256(episode.DRIVER)
+    episode.check_recorded_sources(
+        {"v1_driver": record["predecessor_hashes"]["v1_driver"]},
+        {"v1_driver": episode.DRIVER}, source_ref=episode.SEALED_SOURCE_REF)
     with np.load(episode.NPZ, allow_pickle=False) as predecessor, np.load(continuation.NPZ, allow_pickle=False) as successor:
         for spec in episode.RUN_PLAN:
             label = spec["name"]

@@ -9,6 +9,7 @@ interpolated result as a measured temporal indicator.
 """
 import json
 from pathlib import Path
+import sys
 
 import numpy as np
 
@@ -21,6 +22,7 @@ DRIVER = Path(__file__).resolve()
 
 
 def run():
+    episode.refuse_existing_outputs(OUT)
     core = json.loads(continuation.OUT.read_text())
     v1 = json.loads(episode.OUT.read_text())
     if not core["all_target_reached"]:
@@ -64,5 +66,51 @@ def run():
     return record
 
 
+def verify_saved(*, source_ref=None):
+    before = episode.sha256(OUT)
+    record = json.loads(OUT.read_text())
+    if record.get("schema") != "NSC-SPHERICAL-CONFORMAL-CLOCK-v2":
+        raise ValueError("clock schema differs")
+    episode.check_recorded_sources(record.get("source_bindings"),
+        {"episode_v2": continuation.OUT, "payload_v2": continuation.NPZ,
+         "episode_v1": episode.OUT, "analytic_frozen_producer": episode.DRIVER,
+         "driver": DRIVER}, source_ref=source_ref)
+    core = json.loads(continuation.OUT.read_text())
+    v1 = json.loads(episode.OUT.read_text())
+    differences = {}
+    with np.load(continuation.NPZ, allow_pickle=False) as saved:
+        for spec in episode.RUN_PLAN:
+            name = spec["name"]
+            original = episode.CauchyState(**{field: saved[f"nf{spec['nf']}_original_T0_{field}"] for field in episode.STATE_NAMES})
+            observer = np.vstack((original.phi0, original.phi1))[:, :2]
+            clock = core["results"][name]["final"]["proper_clock"]
+            rate = v1["results"][name]["initial"]["clock_rate"]
+            frozen_time = clock / rate
+            frozen0, frozen1 = episode.frozen_columns(original, episode.galerkin.PERIOD, episode.galerkin.KAPPA, frozen_time)
+            coupled = episode.occupation(observer, saved[name + "_final_phi0"], saved[name + "_final_phi1"], episode.galerkin.OCCUPATIONS)
+            frozen = episode.occupation(observer, frozen0, frozen1, episode.galerkin.OCCUPATIONS)
+            row = record["results"][name]
+            for key, value in (("proper_clock", clock), ("original_clock_rate", rate),
+                               ("frozen_coordinate_time", frozen_time), ("coupled_occupation", coupled),
+                               ("frozen_occupation", frozen), ("difference", coupled - frozen)):
+                episode.check_saved_values(value, row[key], name + "." + key)
+            differences[name] = coupled - frozen
+    primary = differences["nf512_dt_0.0005"]
+    for key, value in (("time_indicator", abs(primary - differences["nf512_dt_0.0010"])),
+                       ("space_indicator", abs(primary - differences["nf256_dt_0.0005"]))):
+        episode.check_saved_values(value, record[key], key)
+        episode.check_saved_values(value / abs(primary), record[key.replace("indicator", "fraction_of_effect")], key + ".fraction")
+    if record.get("frozen_time_interpolation_used") is not False or record.get("coupled_time_interpolation_used") is not False:
+        raise ValueError("clock interpolation domain differs")
+    if episode.sha256(OUT) != before:
+        raise RuntimeError("read-only check changed clock bytes")
+    return {"status": "VERIFIED_EXACT_FROZEN_CLOCK_COMPARISON", "wrote": False, "source_ref": source_ref}
+
+
 if __name__ == "__main__":
-    run()
+    if sys.argv[1:] == ["--check"]:
+        print(json.dumps(verify_saved(source_ref=episode.SEALED_SOURCE_REF)))
+    elif len(sys.argv) == 1:
+        run()
+    else:
+        raise SystemExit("Use --check for sealed evidence, or no arguments to create new outputs")

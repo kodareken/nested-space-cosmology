@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import sys
 import time
 
 for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
@@ -164,6 +165,7 @@ def summarize(rows):
 
 
 def run():
+    episode.refuse_existing_outputs(OUT, NPZ)
     start_cpu = time.process_time()
     core = json.loads(episode.OUT.read_text())
     original_hashes = {"episode_json": episode.sha256(episode.OUT), "episode_npz": episode.sha256(episode.NPZ)}
@@ -214,5 +216,39 @@ def run():
     return record
 
 
+def verify_saved(*, source_ref=None):
+    before = {path: episode.sha256(path) for path in (OUT, NPZ)}
+    record = json.loads(OUT.read_text())
+    if record.get("schema") != "NSC-SPHERICAL-CONFORMAL-FRAMES-v1" or record.get("payload_sha256") != episode.sha256(NPZ):
+        raise ValueError("frame schema or payload differs")
+    episode.check_recorded_sources(record.get("source_trajectory_hashes"),
+        {"episode_json": episode.OUT, "episode_npz": episode.NPZ})
+    episode.check_recorded_sources(record.get("bound_sources"),
+        {"driver": DRIVER, "regional": regional._MODULE_PATH, "galerkin": galerkin._MODULE_PATH}, source_ref=source_ref)
+    with np.load(NPZ, allow_pickle=False) as payload:
+        for spec in episode.RUN_PLAN:
+            name = spec["name"]
+            rows = record["series"][name]
+            episode.check_saved_values(summarize(rows), record["results"][name], name)
+            normal = payload[name + "_normal_energy_nodal"]
+            flux = payload[name + "_normal_flux_nodal"]
+            for index, (start, end) in enumerate(zip(BOUNDS[:-1], BOUNDS[1:])):
+                weight = interval_weights(normal.shape[1], 8., start, end)
+                episode.check_saved_values(normal @ weight,
+                    [row["windows"][index]["normal_shell"] for row in rows], name + ".shell")
+                left, right = index * normal.shape[1] // 4, ((index + 1) * normal.shape[1] // 4) % normal.shape[1]
+                net = (flux[:, left] - flux[:, right]) / (8. / normal.shape[1])
+                episode.check_saved_values(net,
+                    [row["windows"][index]["normal_boundary_flux"] for row in rows], name + ".boundary")
+    if before != {path: episode.sha256(path) for path in before}:
+        raise RuntimeError("read-only check changed frame bytes")
+    return {"status": "VERIFIED_STORED_CONFORMAL_FRAMES", "wrote": False, "source_ref": source_ref}
+
+
 if __name__ == "__main__":
-    run()
+    if sys.argv[1:] == ["--check"]:
+        print(json.dumps(verify_saved(source_ref=episode.SEALED_SOURCE_REF)))
+    elif len(sys.argv) == 1:
+        run()
+    else:
+        raise SystemExit("Use --check for sealed evidence, or no arguments to create new outputs")

@@ -13,6 +13,7 @@ import json
 import math
 import os
 from pathlib import Path
+import sys
 import time
 
 for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
@@ -144,6 +145,7 @@ def save(record, arrays):
 
 
 def run():
+    episode.refuse_existing_outputs(OUT, NPZ)
     core = json.loads(episode.OUT.read_text())
     if not core["full_target_reached"] or core["gauge"] != "conformal":
         raise ValueError("sealed conformal v1 episode required")
@@ -299,5 +301,46 @@ def run():
     return record
 
 
+def verify_saved(*, source_ref=None):
+    before = {path: episode.sha256(path) for path in (OUT, NPZ)}
+    record = json.loads(OUT.read_text())
+    if record.get("schema") != "NSC-SPHERICAL-CONFORMAL-EPISODE-v2" or record.get("payload_sha256") != episode.sha256(NPZ):
+        raise ValueError("continuation schema or payload differs")
+    paths = {"v1_json": episode.OUT, "v1_npz": episode.NPZ, "v1_frames_json": frames.OUT, "v1_frames_npz": frames.NPZ,
+             "v5_json": episode.legacy.V5_JSON, "v5_npz": episode.legacy.V5_NPZ,
+             "v1_driver": episode.DRIVER, "frames_driver": frames.DRIVER, "driver": DRIVER,
+             "galerkin": galerkin._MODULE_PATH, "coupling": galerkin._COUPLING_PATH,
+             "action": galerkin._ACTION_PATH, "source": galerkin._SOURCE_PATH}
+    episode.check_recorded_sources(record.get("predecessor_hashes"), paths, source_ref=source_ref)
+    episode.check_saved_values(record["predecessor_hashes"], record["source_hashes_after"], "source hashes")
+    v1 = json.loads(episode.OUT.read_text())
+    with np.load(NPZ, allow_pickle=False) as payload, np.load(episode.NPZ, allow_pickle=False) as predecessor:
+        for spec in episode.RUN_PLAN:
+            name = spec["name"]
+            for field in STATE_NAMES:
+                if not np.array_equal(payload[name + "_frames_" + field][0], predecessor[name + "_final_" + field]):
+                    raise ValueError("Cauchy handoff differs: " + name + "." + field)
+                if not np.array_equal(payload[name + "_frames_" + field][-1], payload[name + "_final_" + field]):
+                    raise ValueError("final Cauchy frame differs: " + name)
+                origin = f"nf{spec['nf']}_original_T0_" + field
+                if not np.array_equal(payload[origin], predecessor[f"nf{spec['nf']}_initial_" + field]):
+                    raise ValueError("original preparation differs: " + origin)
+            if not np.array_equal(payload[name + "_frames_L_dot"], payload[name + "_frames_rate_Q"]):
+                raise ValueError("dynamic lapse rate differs: " + name)
+            fresh = sample_summary(record["series"][name], v1["results"][name], spec["dt"], record["results"][name]["stop_reason"])
+            for key in fresh:
+                episode.check_saved_values(fresh[key], record["results"][name][key], name + "." + key)
+            episode.check_saved_values(frames.summarize(record["physical_series"][name]), record["physical_results"][name], name + ".physical")
+    episode.check_saved_values(boundary_assessment(record["physical_results"]), record["boundary_assessment"], "boundary assessment")
+    if before != {path: episode.sha256(path) for path in before}:
+        raise RuntimeError("read-only check changed continuation bytes")
+    return {"status": record["verdict"], "wrote": False, "source_ref": source_ref}
+
+
 if __name__ == "__main__":
-    run()
+    if sys.argv[1:] == ["--check"]:
+        print(json.dumps(verify_saved(source_ref=episode.SEALED_SOURCE_REF)))
+    elif len(sys.argv) == 1:
+        run()
+    else:
+        raise SystemExit("Use --check for sealed evidence, or no arguments to create new outputs")

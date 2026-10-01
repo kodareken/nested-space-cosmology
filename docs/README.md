@@ -9,6 +9,9 @@ constrained calculation into a settled theory.
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
 | Same-action conformal gauge and episode | [Proof and scope](../lab/docs/nsc-spherical-conformal-gauge.md), [record](../lab/results/development/nsc-spherical-conformal-episode-v1.json) |
+| Finite conformal chain through $T=0.3$ | [Note](../lab/docs/nsc-spherical-conformal-continuation.md), [continuation](../lab/results/development/nsc-spherical-conformal-episode-v2.json), [surface flow](../lab/results/development/nsc-spherical-conformal-transport-v2.json) |
+| Same-realization conformal local response | [Note](../lab/docs/nsc-conformal-local-response-successor.md), [record](../lab/results/development/nsc-conformal-local-response-v2.json) |
+| Source controls and actual metric curvature | [Source controls](../lab/docs/nsc-spherical-conformal-source-controls.md), [curvature](../lab/docs/nsc-spherical-conformal-curvature.md) |
 | Maintained continuation to $T=0.085$ | [Note](../lab/docs/nsc-regeneration-episode.md), [record](../lab/results/development/nsc-regeneration-episode-v1.json) |
 | Saved episode assessment and independent audit | [Assessment](../lab/docs/nsc-spherical-episode-assessment.md), [audit](../lab/docs/nsc-regeneration-realization-audit.md) |
 | Regeneration controls on the saved episode | [Note](../lab/docs/nsc-regeneration-controls.md), [record](../lab/results/development/nsc-regeneration-controls-v1.json) |

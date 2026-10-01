@@ -19,14 +19,15 @@ remains a separate historical choice.
 
 ## Present spherical loop
 
-The saved finite chain now runs from the initial regional difference through
-two connected transfer episodes to a changed local measurement. Its
-[continuation](#regeneration-episode-1-october-2026) maintains localization
-with throughflow until $T=0.085$; renewal is false. The
-[same-trajectory local response](#same-trajectory-local-response-successor-1-october-2026)
-resolves memory, exterior drive, and actual initial cross correlations.
-The initial-radius certificate and nearby-state proof are separate from
-the still-open evolved error estimate at the scale of those observables.
+The conformal realization now measures the finite chain through $T=0.3$:
+source differences, surface exchange, geometric response, maintained
+localization, and a local response on the same generated trajectory.
+The [owning note](../lab/docs/nsc-spherical-conformal-continuation.md) connects
+the source controls, actual metric curvature, matched clock, and local
+reduction. Reported numerical movements meet one percent of their own
+claimed effects. They are refinement indicators, while stronger propagated
+state-error and continuum certificates remain separate claims. Renewal is
+false. The earlier prescribed-gauge records below keep their original domains.
 
 The code owner is
 [nsc_spherical_galerkin_coupling.py](../lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py).
@@ -90,6 +91,43 @@ percent under timestep halving, and the largest spatial movement of the
 compared radius/velocity changes is about $0.0287$ percent. The chart and
 Gram stay admissible. Renewal remains false; the regional ledger and
 constraint budget keep their own measurement domains.
+
+### Finite conformal chain through $T=0.3$, 1 October 2026
+
+The [continuation](../lab/results/development/nsc-spherical-conformal-episode-v2.json)
+reuses each exact $T=0.05$ final and reaches $T=0.3$ on all four cases.
+The [surface assessment](../lab/results/development/nsc-spherical-conformal-transport-v2.json)
+resolves absolute integrated flows $0.03937795$, $0.07025487$, and
+$0.06351828$ at $x=0,2,4$; their largest frame indicator is $0.095\%$.
+Flow at $x=6$ remains unresolved in its own domain. Entry and exit remain
+separate from their net contribution. Region 0 keeps shell and probability
+shares above $0.65098$ and $0.65585$. Boundary flux, pressure and lapse work
+explain its shell change, with a $0.1641\%$ trapezoid indicator.
+
+The [source controls](../lab/docs/nsc-spherical-conformal-source-controls.md)
+prepare each changed occupation source through the owned radius/shift solve.
+Reversal reverses signed $x=2$ flow and moves the maintained shell leader;
+$\pm5\%$ imbalance changes it by approximately $\pm5.04\%$. Their
+exploratory coarse and frame-comparison domains remain stated. The
+[metric measurement](../lab/docs/nsc-spherical-conformal-curvature.md)
+uses the actual projected rate Jacobian, independently checked, yielding
+maximum Weyl invariant about $0.11331608$ at $T=0.3$. The
+[analytic clock comparison](../lab/results/development/nsc-spherical-conformal-clock-v2.json)
+removes the old frozen-control interpolation: its small occupation separation
+has timestep movement below $0.00079\%$ of the effect.
+
+The [local production](../lab/docs/nsc-conformal-local-response-successor.md)
+uses actual $\Phi(0.2)$ and the original $T=0$ observer on $[0.2,0.3]$.
+Its occupation changes by $0.07342952$. Streamed/full discrepancy is
+$6.3508\times10^{-6}$, or $0.00865\%$ of that effect. Memory, drive, and
+actual cross omission move occupation by $0.01681854$, $0.04854120$, and
+$0.09206143$, each tested against its own numerical comparison. No dense
+exterior propagator is stored. Source dependence, transport, geometry,
+maintained structure, and local response therefore coexist in one finite
+realization. The [note](../lab/docs/nsc-spherical-conformal-continuation.md)
+owns its domains and read-only replays. The tracked finite forcing budget
+and initial-source bounds are reported; a certificate for an unknown
+continuum or geometric path is a stronger claim, not the finite finish line.
 
 ### Recorded $n_f=512$, $T=0.005$ diagnostic
 

@@ -1,0 +1,47 @@
+{
+  "schema": "NSC-CONFORMAL-MEMORY-CONTROL-v1",
+  "status": "MEASURED_INDEPENDENT_MEMORY_REFERENCE",
+  "case": "nf512_dt_0.0005",
+  "time_window": [
+    0.2,
+    0.3
+  ],
+  "generator": "H-(I-V Vdagger) H V Vdagger",
+  "negative_control": true,
+  "physical_Hermitian_model_claimed": false,
+  "geometry_rerun": false,
+  "initial_state": "same actual Phi(0.2), all six original columns and Gaussian weights",
+  "observer": "same fixed original T0 pair, no reset or phase change",
+  "active_initial_C_AE": 0.338636575692358,
+  "memory_effect": 0.016818538289934015,
+  "streamed_memory_off_error_against_independent_reference": 2.20112157194724e-06,
+  "error_fraction_of_memory_effect": 0.00013087472490190321,
+  "reference_substeps_2_to_4_indicator": 3.153471234140781e-11,
+  "reference_indicator_fraction_of_memory_effect": 1.8749972083056413e-09,
+  "error_within_one_percent": true,
+  "reference_indicator_within_one_percent": true,
+  "lower_exterior_from_retained_block_max_abs": 3.2877472246012714e-15,
+  "retained_rows_unchanged_max_abs": 1.9725756705257113e-15,
+  "nonHermitian_frobenius": 14.292933567458313,
+  "dense_propagator_history_bytes": 0,
+  "source_bindings": {
+    "nsc-spherical-conformal-episode-v2.json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "nsc-spherical-conformal-episode-v2.npz": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+    "nsc-spherical-conformal-episode-v1.json": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "nsc-spherical-conformal-episode-v1.npz": "5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+    "nsc-spherical-conformal-transport-v2.json": "fba501c8bdcfe0620eaf0be47b6b95b9a0309fb37aace70757c7b5cc28b8aee9",
+    "nsc-spherical-coupling-refinement-v5.npz": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+    "nsc-conformal-local-response-feasibility-v1.json": "46b1ee1d393c320e893d8aecf91315bb18c1787dd3cf2a5e65bffa689c556895",
+    "nsc-conformal-local-response-feasibility-v1.npz": "0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289"
+  },
+  "production_bindings": {
+    "nsc-conformal-local-response-v2.json": "2450a57eaf25011ef5aee79d6f947f531c553236c2f05b62a667048ac004c704",
+    "nsc-conformal-local-response-v2.npz": "32c9dce390c06fb03ea9938c6c8c41e2be638463556c851f303da70eb61713bf"
+  },
+  "cpu_seconds": 3.638052,
+  "cpu_budget_seconds": 30.0,
+  "source_code_sha256": "91913555235026b76ad4dbc9e68995588decff5664c025661a548fa2d0e9cd07",
+  "time_path_enclosure_claimed": false,
+  "payload_sha256": "402917f0c84292cb9f2f5943393c4f76c7ae2739637f36e1fbe7e3db4018cf74",
+  "payload_bytes": 4750
+}

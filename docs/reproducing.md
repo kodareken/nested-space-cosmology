@@ -16,6 +16,22 @@ python scripts/lab.py -m pytest tests/test_provenance.py tests/test_nsc_spherica
 python scripts/lab.py -m pytest tests/test_nsc_spherical_conformal_episode.py -q
 ```
 
+For the completed conformal chain, use its read-only checks:
+
+~~~sh
+python scripts/lab.py scripts/derive_nsc_spherical_conformal_continuation.py --check
+python scripts/lab.py scripts/derive_nsc_spherical_conformal_transport.py --check
+python scripts/lab.py scripts/derive_nsc_spherical_conformal_clock.py --check
+python scripts/lab.py scripts/derive_nsc_conformal_local_response_successor.py --check
+~~~
+
+The thin conformal producers refuse existing output before compute. Their
+historical source verification explicitly names full checkpoint
+c2d5fb6f02722d9f69ec70a7145ea3f2287266df, authenticates resident numerical
+inputs, and recomputes saved derived fields without a new trajectory.
+Scientific owners and comparison domains are in
+[the continuation note](../lab/docs/nsc-spherical-conformal-continuation.md).
+
 The weak and null-expansion replays explicitly name the sealed formula
 domain at full commit `5f10ecd365843d1616e50eb16a20d7acd8377e2c`. Their
 current/new-request binding paths remain strict. Sealed numerical payloads

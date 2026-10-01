@@ -21,6 +21,7 @@ for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUM
     os.environ[_name] = "1"
 
 import numpy as np
+from recursive_horizons.provenance import resolve_pinned_source_bytes
 
 import derive_nsc_spherical_feedback_episode as legacy
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
@@ -40,6 +41,60 @@ FORECAST_SAFETY = 1.25
 RUN_PLAN = tuple({"name": f"nf{nf}_dt_{dt:.4f}", "nf": nf, "dt": dt, "gauge": "conformal"}
                  for nf in (256, 512) for dt in (.001, .0005))
 STATE_NAMES = ("Q", "r", "chi", "p_Q", "p_r", "p_chi", "phi0", "phi1")
+SEALED_SOURCE_REF = "c2d5fb6f02722d9f69ec70a7145ea3f2287266df"
+
+
+def refuse_existing_outputs(*paths):
+    if any(Path(path).exists() for path in paths):
+        raise FileExistsError("sealed conformal output exists; use --check or a separately named successor")
+
+
+def check_recorded_sources(declared, paths, *, source_ref=None):
+    """Strict current inputs, or explicitly authenticated historical sources.
+
+    Numerical records/payloads always use resident bytes. A named full source
+    reference authenticates source files only; current request checks never
+    fall back implicitly. No original producer is executed here.
+    """
+    if not isinstance(declared, dict) or set(declared) != set(paths):
+        raise ValueError("recorded source inventory differs")
+    for name, path in paths.items():
+        path = Path(path)
+        expected = declared[name]
+        if source_ref is not None and path.suffix in {".py", ".md"}:
+            resolve_pinned_source_bytes(
+                LAB.parent, path.relative_to(LAB.parent).as_posix(), expected,
+                commit=source_ref)
+        elif sha256(path) != expected:
+            raise ValueError("recorded source changed: " + name)
+
+
+def check_saved_values(actual, saved, label):
+    """Numerical replay comparison; this tolerance is not a physical error bound."""
+    actual, saved = jsonable(actual), jsonable(saved)
+    if isinstance(actual, dict):
+        if not isinstance(saved, dict) or set(actual) != set(saved):
+            raise ValueError("saved fields differ: " + label)
+        for key in actual:
+            check_saved_values(actual[key], saved[key], label + "." + key)
+    elif isinstance(actual, list):
+        if not isinstance(saved, list) or len(actual) != len(saved):
+            raise ValueError("saved dimensions differ: " + label)
+        for index, (left, right) in enumerate(zip(actual, saved)):
+            check_saved_values(left, right, label + "." + str(index))
+    elif isinstance(actual, bool) or actual is None or isinstance(actual, str):
+        if actual != saved:
+            raise ValueError("saved value differs: " + label)
+    elif not isinstance(saved, (int, float)) or not np.isclose(actual, saved, rtol=1e-12, atol=1e-14):
+        raise ValueError("saved numerical value differs: " + label)
+
+
+def source_paths():
+    return {"v5_json": legacy.V5_JSON, "v5_npz": legacy.V5_NPZ,
+            "legacy_episode_json": legacy.OUT, "legacy_episode_npz": legacy.NPZ,
+            "driver": DRIVER, "galerkin": galerkin._MODULE_PATH,
+            "coupling": galerkin._COUPLING_PATH, "action": galerkin._ACTION_PATH,
+            "source": galerkin._SOURCE_PATH, "proof_note": NOTE}
 
 
 def sha256(path):
@@ -214,12 +269,9 @@ def save(record, arrays):
 
 
 def run():
+    refuse_existing_outputs(OUT, NPZ)
     started = time.process_time()
-    bound_paths = {"v5_json": legacy.V5_JSON, "v5_npz": legacy.V5_NPZ,
-                   "legacy_episode_json": legacy.OUT, "legacy_episode_npz": legacy.NPZ,
-                   "driver": DRIVER, "galerkin": galerkin._MODULE_PATH,
-                   "coupling": galerkin._COUPLING_PATH, "action": galerkin._ACTION_PATH,
-                   "source": galerkin._SOURCE_PATH, "proof_note": NOTE}
+    bound_paths = source_paths()
     before = {name: sha256(path) for name, path in bound_paths.items()}
     arrays, loaded, costs = {}, {}, {}
     record = {"schema": SCHEMA, "gauge": "conformal", "run_plan": RUN_PLAN,
@@ -326,7 +378,41 @@ def run():
     return record
 
 
+def verify_saved(*, source_ref=None):
+    before = {path: sha256(path) for path in (OUT, NPZ)}
+    record = json.loads(OUT.read_text())
+    if record.get("schema") != SCHEMA or record.get("payload_sha256") != sha256(NPZ):
+        raise ValueError("episode schema or payload differs")
+    check_recorded_sources(record.get("source_hashes_before"), source_paths(), source_ref=source_ref)
+    check_saved_values(record["source_hashes_before"], record["source_hashes_after"], "source hashes")
+    with np.load(NPZ, allow_pickle=False) as payload, np.load(legacy.V5_NPZ, allow_pickle=False) as original:
+        for nf in (256, 512):
+            prefix = "" if nf == 256 else "nf512_"
+            for name in STATE_NAMES:
+                key = ("columns_" if name.startswith("phi") else "geometry_") + name
+                if not np.array_equal(payload[f"nf{nf}_initial_{name}"], original[prefix + key]):
+                    raise ValueError("initial Cauchy data changed: " + name)
+        for spec in RUN_PLAN:
+            name = spec["name"]
+            saved = record["results"][name]
+            rows = [{**row, "occupation": np.asarray(row["occupation"]),
+                     "frozen_occupation": np.asarray(row["frozen_occupation"])}
+                    for row in record["series"][name]]
+            fresh = summarize(rows, spec["dt"], saved["completed"])
+            for key in fresh:
+                check_saved_values(fresh[key], saved[key], name + "." + key)
+            for field in STATE_NAMES:
+                if not np.array_equal(payload[name + "_frames_" + field][-1], payload[name + "_final_" + field]):
+                    raise ValueError("final Cauchy frame differs: " + name)
+    if before != {path: sha256(path) for path in before}:
+        raise RuntimeError("read-only check changed episode bytes")
+    return {"status": record["verdict"], "wrote": False, "source_ref": source_ref}
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 1:
-        raise SystemExit("No arguments: writes only the named new v1 diagnostic outputs")
-    run()
+    if sys.argv[1:] == ["--check"]:
+        print(json.dumps(verify_saved(source_ref=SEALED_SOURCE_REF)))
+    elif len(sys.argv) == 1:
+        run()
+    else:
+        raise SystemExit("Use --check for sealed evidence, or no arguments to create new outputs")
