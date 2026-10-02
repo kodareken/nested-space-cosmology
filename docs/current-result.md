@@ -323,6 +323,31 @@ are measured separately from the growing auxiliary field. These outcomes
 stop this preparation-tuning route; they neither establish a singularity
 nor exclude other action branches or nested constructions.
 
+### Action-domain finding and the next coupled comparison
+
+The [constrained curvature assessment](../lab/results/development/nsc-discovery-curvature-sector-v1.json)
+derives a nongauge extra mode from the owned local action, including both
+linearized constraints. On the proper-flat patch its dispersion is
+$\omega^2=k^2-m_*^2$, where $m_*^2=-A/(2C_W)=26.6667$.
+Its extra pole has the opposite residue from the Einstein pole. The
+implementation and declared Lorentzian action agree; this is not a sign
+bug or an all-source instability theorem.
+
+The [existing curvature-EFT branch](../lab/docs/nsc-curvature-eft.md)
+uses a perturbative local expansion without those extra initial data.
+Treating the local four-derivative truncation as an exact Cauchy theory
+therefore tests a different branch. Late tidal scales also leave the small
+curvature regime; raw two-dimensional $R_h$ must not be used as physical
+four-dimensional curvature in that check.
+
+The next finite comparison reuses the leading common action, unchanged
+Dirac preparation, proper clocks and field–geometry feedback. It owns the
+four leading canonical variables rather than deleting fields from the
+singular auxiliary chart. The first-order Weyl contact for this Gaussian
+Dirac source remains a separate derivation; the scalar specialization is
+not copied into it. Earlier exact-branch measurements remain preserved in
+their declared numerical domain.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)

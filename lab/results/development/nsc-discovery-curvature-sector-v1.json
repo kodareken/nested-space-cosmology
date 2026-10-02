@@ -1,0 +1,121 @@
+{
+  "schema": "NSC-DISCOVERY-CURVATURE-SECTOR-v1",
+  "status": "CONSTRAINED_FLAT_EXTRA_POLE_CONFIRMED",
+  "equations": {
+    "patch": "r=x>0; Q=L=1/x; beta=chi=p_Q=p_r=p_chi=Phi=flux=0",
+    "metric": "ds^2=dt^2-dx^2-x^2 dOmega^2; N=rQ=1",
+    "perturbations": "a=delta r; q=delta logQ; c=delta chi; g=8pi A; f=2alpha",
+    "momenta": [
+      "delta p_chi=2f q_t",
+      "delta p_r=-6g a_t-2gx q_t",
+      "delta p_Q=2fx c_t-2gx^2 a_t"
+    ],
+    "radial": "Box a=c/(6x)",
+    "auxiliary": "Box q=-(c+4q)/(2x^2)",
+    "metric_equation": "Box c=(gx/f)Box a+(2g/f)(q+a/x-a_x)-2c/x^2",
+    "b": "b=a_x-a/x-q; T_c=c_x/x+c/x^2",
+    "lapse": "delta C/(2gx^2)=b_x+b/x+(f/g)(c/x^3-c_x/x^2-c_xx/x)",
+    "shift": "delta D/(2gx)=partial_t[b-(f/g)T_c]",
+    "constraint_solution": "b=(f/g)T_c+K/x; partial_t K=partial_x K=0",
+    "constrained_chi": "Box c+2c_x/x+4c/x^2-m_star^2 c=-2gK/(fx)",
+    "mass": "m_star^2=g/(6f)=2pi A/(3alpha)=-A/(2C_W)",
+    "Einstein_Coulomb": "c_E=12K/x; K=-delta Schwarzschild_mass",
+    "physical_variable": "psi=(c-c_E)/x",
+    "physical_equation": "psi_tt-psi_xx+(6/x^2-m_star^2)psi=0",
+    "large_R_symbol_variables": [
+      "q",
+      "a/R",
+      "c/R^2",
+      "p_Q/R^3",
+      "p_r/R",
+      "p_chi"
+    ],
+    "large_R_characteristic": "(lambda^2+k^2)^2 (lambda^2+k^2-m_star^2)",
+    "physical_eigenvector": "(q,a/R,c/R^2,p_Q/R^3,p_r/R,p_chi)=(-3f cbar/g,f cbar/g,cbar,0,0,-6f^2 lambda cbar/g)",
+    "proper_dispersion": "omega_proper^2=k_proper^2-m_star^2; d_tau=dt; d_ell=dx",
+    "four_dimensional_action": "S_bulk=integral sqrt|g| [-A R-C_W C^2] modulo the recorded boundary terms",
+    "TT_factor": "Box (Box+A/(2C_W)) = Box (Box-m_star^2)",
+    "Ricci_Weyl_identity": "C^2=E4+2(Ricci^2-R^2/3)"
+  },
+  "checks": {
+    "flat_Euler_background": true,
+    "radial_Euler_linearization": true,
+    "auxiliary_Euler_linearization": true,
+    "metric_Euler_linearization": true,
+    "canonical_p_Q": true,
+    "canonical_p_r": true,
+    "canonical_p_chi": true,
+    "flat_constraint_background": true,
+    "lapse_constraint_linearization": true,
+    "shift_constraint_linearization": true,
+    "constraint_reduced_chi_equation": true,
+    "Coulomb_constraint_solution": true,
+    "physical_radial_equation": true,
+    "Einstein_Coulomb_separation": true,
+    "auxiliary_equation_constraint_compatibility": true,
+    "large_R_characteristic_factorization": true,
+    "constrained_massive_symbol_eigenvector": true,
+    "nongauge_chi_background": true,
+    "Lorentz_Weyl_coefficient_map": true
+  },
+  "proper_scales": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "alpha": 0.003535812409724144,
+    "f": 0.007071624819448288,
+    "actual_Lorentz_Weyl_coefficient": 0.0008441130342798952,
+    "m_star_square": 26.66666666666671,
+    "physical_spin2_pole_mass_square": -26.66666666666671,
+    "long_wavelength_growth_rate": 5.163977794943227,
+    "long_wavelength_growth_time": 0.19364916731037068,
+    "tachyonic_extra_pole": true,
+    "opposite_Einstein_pole_residue": true,
+    "proper_clock": "d_tau=dt because N=rQ=1 in this exact patch",
+    "proper_radial_distance": "d_ell=dx in this exact patch",
+    "units": "locked local-action proper units; no external clock calibration asserted"
+  },
+  "convention": {
+    "signature": "(+---)",
+    "Riemann": "R^a_bcd=d_c Gamma^a_db-d_d Gamma^a_cb+Gamma^a_ce Gamma^e_db-Gamma^a_de Gamma^e_cb",
+    "Ricci": "Ricci_bd=R^a_bad",
+    "physical_extra_mass_square": "mu2=A/(2C_W)",
+    "ghost_scope": "opposite residue relative to the healthy Einstein pole in this local truncation"
+  },
+  "scope": {
+    "local_truncated_action_treated_as_exact": true,
+    "analytic_nonperiodic_flat_patch": true,
+    "periodic_whole_domain_initial_data": false,
+    "source_and_flux_zero_in_patch": true,
+    "code_declared_action_sign_mismatch_found": false,
+    "all_source_instability_proved": false,
+    "full_nonlocal_spectral_action_mode_health_assessed": false,
+    "EFT_pole_validity_established": false,
+    "order_reduction_implemented": false,
+    "NSC_verdict": false,
+    "trajectory_performed": false
+  },
+  "EFT_connection": {
+    "owner": "lab/docs/nsc-curvature-eft.md",
+    "meaning": "that first-order perturbative branch retains leading initial data rather than the extra modes of a resummed fourth-order truncation",
+    "not_a_proof_of_full_spectral_mode_health": true
+  },
+  "source_hashes": {
+    "lab/src/recursive_horizons/nsc_discovery_curvature_sector.py": "1b1da243ea75713bc22749e5fd1283f9712d9b82bb7bfc1d9ce5dcf8dc05d91b",
+    "lab/scripts/assess_nsc_discovery_curvature_sector.py": "7817a736bc1e9a5986f2f09adc3eb65d7e006c58192ad9619c63745f6757660d",
+    "lab/tests/test_nsc_discovery_curvature_sector.py": "9ca8c499ee2a5984e365a61441b11fc10cd08c268237946d2bcaf77e0956f286",
+    "lab/docs/nsc-discovery-curvature-sector.md": "302d5d8a0ec0bea580002843b184cf06d38bb96ff94943ee9779bc6b121d940d",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/docs/nsc-spherical-feedback-action.md": "cfb3c02b0e5c683d6319e35b6910a4d7ad5abb03e6fe42435e02461dac52fce2",
+    "lab/docs/nsc-spherical-conformal-gauge.md": "dd42ce3c79d5bf55fe36fe19ebc980734f66dce83aad0659d85b6538291349e2",
+    "lab/docs/nsc-spherical-action.md": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292",
+    "lab/docs/nsc-curvature-eft.md": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e"
+  },
+  "input_hashes": {
+    "lab/results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f"
+  },
+  "producing_commit": "b541d4ee71e0fcd8a29808bba9fdb8da83025931",
+  "sympy_version": "1.14.0",
+  "cpu_seconds": 0.5092570000000001,
+  "evidence_written": true
+}
