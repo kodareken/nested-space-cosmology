@@ -340,6 +340,28 @@ therefore tests a different branch. Late tidal scales also leave the small
 curvature regime; raw two-dimensional $R_h$ must not be used as physical
 four-dimensional curvature in that check.
 
+The [physical-unit assessment](../lab/results/development/nsc-discovery-eft-domain-v1.json)
+remeasures 24 saved checkpoints. For the uniform preparation,
+$|C_W|/A$ times the normal tidal scale rises from 0.00249 initially to
+0.4295 at $T=1$ and $4.05\times10^6$ at $T=3$. Patterned and coherent
+sources show the same loss of scale separation. The conditional balanced
+preparation delays that growth, but does not retain small curvature at
+$T=3$. Proper generator levels and the actual source-rate scale are reported
+separately; high retained field energies are not treated as a sharp cutoff
+failure by themselves.
+
+The [independent work control](../lab/results/development/nsc-discovery-spectral-work-v1/measurement.json)
+seals an analytic forecast before imposing one uniform geometric pulse.
+The prepared full finite CAR state gives up $2.2678\times10^{-5}$ of
+energy, within 0.085 percent of the forecast. Transition-probability work
+and direct integrated work agree to $3.9\times10^{-18}$; preparation,
+forecast and measurement together use 0.664 CPU seconds. The pulse is
+prescribed, so this is a work-response control rather than autonomous
+regeneration. A mathematical filled-negative reference absorbs energy.
+Reference subtraction agrees for the mean, but the Gaussian characteristic
+ratio and connected noise differ. Physical vacuum/influence matching is
+not inferred from the equal mean.
+
 The next finite comparison reuses the leading common action, unchanged
 Dirac preparation, proper clocks and field–geometry feedback. It owns the
 four leading canonical variables rather than deleting fields from the

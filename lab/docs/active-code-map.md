@@ -48,6 +48,8 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Static-query noncompact limit and arithmetic assessment | [Limit](nsc-discovery-stationary-limit.md); `scripts/assess_nsc_discovery_stationary_limit.py`; `tests/test_nsc_discovery_stationary_limit.py` |
 | Source-consistent initial geometric rate and curvature | [Initial sectors](nsc-discovery-initial-sector.md); `src/recursive_horizons/nsc_discovery_initial_sector.py`; `scripts/derive_nsc_discovery_initial_sector.py` |
 | Constrained proper-flat curvature pole and action-domain distinction | [Curvature sector](nsc-discovery-curvature-sector.md); `src/recursive_horizons/nsc_discovery_curvature_sector.py`; `scripts/assess_nsc_discovery_curvature_sector.py` |
+| Actual-unit curvature approximation assessment | [Domain](nsc-discovery-eft-domain.md); `scripts/assess_nsc_discovery_eft_domain.py` |
+| Locked work forecast and prescribed finite pulse | [Spectral work](nsc-discovery-spectral-work.md); `src/recursive_horizons/nsc_discovery_spectral_work.py`; `scripts/derive_nsc_discovery_spectral_work.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before
