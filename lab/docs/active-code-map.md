@@ -30,6 +30,11 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Coupled prediction at actual equal proper time | [Prediction](nsc-discovery-prediction.md); `src/recursive_horizons/nsc_discovery_prediction.py`; `scripts/derive_nsc_discovery_prediction.py` |
 | Prepared-source retention and moving gradient cuts | [Regions](nsc-discovery-regions.md); `src/recursive_horizons/nsc_discovery_regions.py`; `scripts/derive_nsc_discovery_regions.py` |
 | Initial source-selected scale | [Scale relation](nsc-discovery-scale.md); `src/recursive_horizons/nsc_discovery_scale.py` |
+| Physical continuation assessment | [Assessment](nsc-discovery-episode-assessment.md); `scripts/assess_nsc_discovery_episode.py` |
+| Actual four-metric tides and invariants | [Tidal note](nsc-discovery-tidal.md); `src/recursive_horizons/nsc_discovery_tidal.py`; `scripts/derive_nsc_discovery_tidal.py` |
+| Coupled causal reduction and source forces | [Memory note](nsc-discovery-coupled-memory.md); `src/recursive_horizons/nsc_discovery_coupled_memory.py`; `scripts/derive_nsc_discovery_coupled_memory.py` |
+| Source-consistent regime family | [Family](nsc-discovery-family.md); `src/recursive_horizons/nsc_discovery_family.py`; `scripts/derive_nsc_discovery_family.py` |
+| Disjoint normal-energy and coordinate-work ledger | [Balance](nsc-discovery-balance.md); `src/recursive_horizons/nsc_discovery_balance.py`; `scripts/derive_nsc_discovery_balance.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before

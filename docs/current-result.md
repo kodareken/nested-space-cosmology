@@ -67,10 +67,31 @@ curvature is more sensitive: at $T=3$, $128\to256$ changes the Weyl invariant
 by about 28 percent, whereas the child length changes by about 0.046 percent.
 An independent full-rate analytic acceleration agrees with the existing
 curvature helper; the discrepancy amplifies finite-band jet differences
-when $Q$ becomes small. Selected $n_f=512$ confirmation and four-metric
-tidal measurements address the remaining physical question. The frozen
+when $Q$ becomes small. The selected
+[$n_f=512$ confirmation](../lab/results/development/nsc-discovery-confirmation-v1/manifest.json)
+also reaches $T=3$; its Weyl maximum differs from $256$ by about 0.08 percent.
+Four-metric tidal measurements provide the observer-defined readout of this
+growth. The frozen
 control holds geometry at its $T=0.3$ value; coordinate-time comparisons
 are not equal-proper-time comparisons.
+
+### Withheld exterior-source prediction
+
+The [prediction record](../lab/results/development/nsc-discovery-prediction-v1/prediction-run.json)
+propagates the full state–geometry tangent from the same source-consistent
+initial preparation and compares independent nonlinear cases at equal
+proper time. The middle occupations remain $0.5,0.5$; exterior occupations
+change from $0.75,0.75,0.25,0.25$ to $0.76,0.76,0.24,0.24$.
+At $n_f=256$, the predicted child-content change is $-0.0009409095$ and the
+withheld measurement is $-0.0009366253$. Their difference is 0.455 percent of
+the predicted effect. Two smaller centred perturbations check the derivative;
+the $128\to256$ movement of the measured change is about 0.52 percent.
+This is a quantitative conditional response prediction on the declared
+finite construction. The secondary mean-radius linear prediction differs
+from the withheld result by about 2.1 percent; its finite nonlinearity is
+retained. The proper clock is integrated through RK4 stages and the
+nonlinear cases reach its target by bracketed steps, rather than by applying
+the prediction's linear clock correction to the measured value.
 
 ## Completed finite parent–child pair, 2 October 2026
 

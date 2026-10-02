@@ -1,0 +1,862 @@
+{
+  "schema": "NSC-DISCOVERY-REGIONS-v1",
+  "case_id": "nf256_coupled_dt0.0005",
+  "stations": [
+    {
+      "ordinal": 1,
+      "snapshot_kind": "station",
+      "coordinate_time": 1.0,
+      "chunk_sha256": {
+        "npz": "12cf7f8c98353018dce68dfae1b2e92f810754e17bda7e3000b9a75f15f49c2c",
+        "json": "09e075f60149c94dcb596b4b44b6617ce353e45d5f03f28e0b2ca24fa246d215"
+      },
+      "source_reset": false,
+      "initial_state_called": false,
+      "historical_rewrite": false,
+      "state_equals_prepared_source": false,
+      "regions": {
+        "api_version": "nsc-discovery-regions-v1",
+        "time": 1.0,
+        "control_mode": "coupled",
+        "settings": {
+          "api_version": "nsc-discovery-regions-v1",
+          "contour_fractions": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "shallow_slope_fraction": 0.001,
+          "dominant_peak_fraction": 0.5,
+          "flat_contrast": 0.0001,
+          "resolution_mode_keep": 0.25,
+          "child_source_columns": [
+            2,
+            3
+          ],
+          "child_interval": [
+            1.0,
+            3.0
+          ],
+          "parent_interval": [
+            0.0,
+            4.0
+          ],
+          "carrier_length": 8.0,
+          "dx_convention": "divide each nodal summand by dx once",
+          "derivative": "owned periodic Fourier derivative; Nyquist symbol is zero",
+          "evaluation": "Fourier interpolant through the nodes",
+          "normal_energy_slope": "analytic polarization of F_L/r",
+          "piston_work_on_measurement_cut": false,
+          "renewal_asserted": false,
+          "continuum_certified": false,
+          "contour_certified": false
+        },
+        "domain_limits": {
+          "evolves_state": false,
+          "calls_initial_state": false,
+          "rebuilds_geometry_map": false,
+          "resets_source_columns": false,
+          "rewrites_station_chunks": false,
+          "rewrites_sealed_inputs": false,
+          "loads_production_trajectories_in_check": false,
+          "measurement_cut_is_physical_wall": false,
+          "piston_work_included": false,
+          "independent_energy_parcel": false,
+          "modal_complement_is_spatial_exterior": false,
+          "ancestry_tags_are_computational_labels": true,
+          "contour_certified": false,
+          "continuum_certified": false,
+          "renewal_asserted": false,
+          "imposed_contour_is_regeneration_evidence": false,
+          "output_policy": "creation_only",
+          "reader": "station chunks from nsc_discovery_episode"
+        },
+        "renewal_classification_requires": [
+          "Saved station states at the handoff and at the later stations under comparison, for the coupled cases and the frozen-geometry controls, at each prepared resolution. This consumer reads chunks it is given and does not generate those trajectories.",
+          "Contour endpoints and implicit velocities at one quarter, one half, and three quarters of the dominant peak on each of those stations, together with the resolution-comparison gaps from this row. A classification needs a pre-registered tolerance for those gaps.",
+          "A pre-registered distinction between a maintained packet and a regenerated boundary. A gradient cut is a measurement surface and carries no wall traction.",
+          "The stage-1 null characteristic tracks compared with the measured contour velocities at the same stations. This row does not turn that comparison into a verdict.",
+          "The inherited local response of the realized source inside the measured contour. That response is a later stage and is not a region integral.",
+          "A continuum or refinement certificate. contour_certified, continuum_certified, and renewal_asserted stay false, and this row does not estimate a state-error bound."
+        ],
+        "renewal_asserted": false,
+        "continuum_certified": false,
+        "contour_certified": false,
+        "source_reset": false,
+        "initial_state_called": false,
+        "historical_rewrite": false,
+        "state_token_unchanged": true,
+        "positive_probability": true,
+        "probability": {
+          "total": 2.9999999999356026,
+          "per_proper_length_peak": 4.09031046782526,
+          "per_proper_length_peak_x": 1.671875,
+          "per_proper_length_minimum": 1.241115113847787e-15,
+          "child": 1.4999397777591494,
+          "parent": 2.001318619082661,
+          "child_per_proper_length": 1.0074113306967443,
+          "parent_per_proper_length": 0.6698186760663023
+        },
+        "localization": {
+          "six_column_content": 2.9999999999356026,
+          "six_column_total_width": 1.2031450343171834,
+          "column_pairs": [
+            {
+              "columns": [
+                0,
+                1
+              ],
+              "ancestry": "outer_left_preparation",
+              "ancestry_is_computational_label": true,
+              "independent_energy_parcel": false,
+              "support": [
+                0.0,
+                1.0
+              ],
+              "content": 1.499999999952109,
+              "proper_width": 0.8108316613585885,
+              "resultant": 0.7028808698435695,
+              "retained_fraction": 0.0015855511129846732
+            },
+            {
+              "columns": [
+                2,
+                3
+              ],
+              "ancestry": "originally_child_prepared_source_pair",
+              "ancestry_is_computational_label": true,
+              "independent_energy_parcel": false,
+              "support": [
+                1.0,
+                3.0
+              ],
+              "content": 0.9999999999994562,
+              "proper_width": 0.8782372534989594,
+              "resultant": 0.6612499726351216,
+              "retained_fraction": 0.501808447118654
+            },
+            {
+              "columns": [
+                4,
+                5
+              ],
+              "ancestry": "outer_right_preparation",
+              "ancestry_is_computational_label": true,
+              "independent_energy_parcel": false,
+              "support": [
+                3.0,
+                4.0
+              ],
+              "content": 0.49999999998403755,
+              "proper_width": 0.8294747489502853,
+              "resultant": 0.6914481468074939,
+              "retained_fraction": 0.00161792274740792
+            }
+          ],
+          "originally_child_prepared_pair": {
+            "columns": [
+              2,
+              3
+            ],
+            "ancestry": "originally_child_prepared_source_pair",
+            "ancestry_is_computational_label": true,
+            "independent_energy_parcel": false,
+            "support": [
+              1.0,
+              3.0
+            ],
+            "content": 0.9999999999994562,
+            "proper_width": 0.8782372534989594,
+            "resultant": 0.6612499726351216,
+            "retained_fraction": 0.501808447118654
+          },
+          "spatial_exterior_probability": 0.5013788413235116,
+          "modal_child_content": 0.9999999999994561,
+          "modal_complement_content": 1.9999999999361466,
+          "modal_complement_is_spatial_exterior": false,
+          "q_multiplied_into_measure": false,
+          "width_is_dispersal_time": false
+        },
+        "contours": {
+          "peak_x": 1.671875,
+          "peak_value": 4.09031046782526,
+          "contrast": 0.9999999999999998,
+          "flags": {
+            "flat": false,
+            "merge": false,
+            "split": true,
+            "multiple_dominant_peaks": true
+          },
+          "dominant_peak_count": 6,
+          "levels": [
+            {
+              "level": 1.022577616956315,
+              "filled": false,
+              "empty": false,
+              "component_count": 11,
+              "wrapped": false,
+              "backward": 1.600096111575295,
+              "forward": 1.731060752503685,
+              "velocity_backward": {
+                "time_rate": -12.615704197569254,
+                "space_slope": 33.369316006755845,
+                "threshold": 0.5235597398816333,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.37806301438768236,
+                "division": true
+              },
+              "velocity_forward": {
+                "time_rate": 34.35794397083333,
+                "space_slope": -50.74601130116207,
+                "threshold": 0.5235597398816333,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.6770570354176101,
+                "division": true
+              },
+              "resolution_gap_backward": 7.256417688950023e-13,
+              "resolution_gap_forward": 1.9584334154387761e-13,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.25
+            },
+            {
+              "level": 2.04515523391263,
+              "filled": false,
+              "empty": false,
+              "component_count": 6,
+              "wrapped": false,
+              "backward": 1.622017634823521,
+              "forward": 1.7144817368829939,
+              "velocity_backward": {
+                "time_rate": -40.22822070523662,
+                "space_slope": 57.94201016846404,
+                "threshold": 0.5235597398816333,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.6942841746131124,
+                "division": true
+              },
+              "velocity_forward": {
+                "time_rate": 55.81015669631131,
+                "space_slope": -68.66913938707926,
+                "threshold": 0.5235597398816333,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.8127400051093769,
+                "division": true
+              },
+              "resolution_gap_backward": 1.0769163338864018e-12,
+              "resolution_gap_forward": 4.884981308350689e-13,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.5
+            },
+            {
+              "level": 3.067732850868945,
+              "filled": false,
+              "empty": false,
+              "component_count": 4,
+              "wrapped": false,
+              "backward": 1.6390682632491673,
+              "forward": 1.699303227087428,
+              "velocity_backward": {
+                "time_rate": -43.799057739763796,
+                "space_slope": 57.81457058918522,
+                "threshold": 0.5235597398816333,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.7575781899512514,
+                "division": true
+              },
+              "velocity_forward": {
+                "time_rate": 54.62237941367043,
+                "space_slope": -62.30590235315397,
+                "threshold": 0.5235597398816333,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.8766806570598589,
+                "division": true
+              },
+              "resolution_gap_backward": 3.588240815588506e-13,
+              "resolution_gap_forward": 2.1316282072803006e-14,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.75
+            }
+          ],
+          "contour_certified": false,
+          "physical_wall": false,
+          "convention": "nodal samples, Fourier interpolant, zero-Nyquist derivative"
+        },
+        "normal_energy": {
+          "child_fixed": {
+            "interval": [
+              1.0,
+              3.0
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "reynolds": 0.0,
+            "fixed_boundary_flux": 0.0018142187444132496,
+            "pressure": 16.541608178659246,
+            "lapse": -0.0541982706303787,
+            "pointwise_projection_defect": -5.627000520379674e-08,
+            "endpoint_identity_gap": 4.7488055154865094e-14,
+            "finite_projection_defect": -5.6269957715741586e-08,
+            "slope_integral": 16.489224070503315,
+            "rate": 16.489224070503322,
+            "leibniz_from_slope": 16.489224070503315,
+            "closure_residual": 7.105427357601002e-15,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut"
+          },
+          "parent_fixed": {
+            "interval": [
+              0.0,
+              4.0
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "reynolds": -0.0,
+            "fixed_boundary_flux": -0.0032836617768564175,
+            "pressure": 21.642725586355983,
+            "lapse": -0.12532042824853706,
+            "pointwise_projection_defect": -4.814964042134705e-08,
+            "endpoint_identity_gap": -1.7314535222245908e-13,
+            "finite_projection_defect": -4.8149813566699275e-08,
+            "slope_integral": 21.514121448180774,
+            "rate": 21.514121448180777,
+            "leibniz_from_slope": 21.514121448180774,
+            "closure_residual": 3.552713678800501e-15,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut"
+          },
+          "dominant_half_maximum_cut": {
+            "interval": [
+              1.622017634823521,
+              1.7144817368829939
+            ],
+            "boundary_velocity": [
+              0.6942841746131124,
+              0.8127400051093769
+            ],
+            "wrapped": false,
+            "reynolds": 1.1035533064640344,
+            "fixed_boundary_flux": -1.1632425396221524,
+            "pressure": 2.553332225743894,
+            "lapse": -0.009794179798647017,
+            "pointwise_projection_defect": -3.253061360654418e-08,
+            "endpoint_identity_gap": -8.504308368628699e-14,
+            "finite_projection_defect": -3.253069864962787e-08,
+            "slope_integral": 1.380295473792395,
+            "rate": 2.48384878025643,
+            "leibniz_from_slope": 2.4838487802564293,
+            "closure_residual": 8.881784197001252e-16,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "formula": "reynolds + fixed_boundary_flux + pressure + lapse + finite_projection_defect",
+          "analytical_continuity_closure_residual_max": 7.105427357601002e-15
+        },
+        "rates": {
+          "Q_dot_max": 0.36995491876692077,
+          "r_dot_max": 4.919905447519711,
+          "field_column_rate_max": 2.150554396226338,
+          "field_source_kernel_rate_max": 0.3809070736870656,
+          "geometry_jets_zero": false
+        }
+      }
+    },
+    {
+      "ordinal": 2,
+      "snapshot_kind": "station",
+      "coordinate_time": 3.0,
+      "chunk_sha256": {
+        "npz": "6c147a43d266aa4bc42afd83f3f0d11a304c9222ec75fe9d36beb5ccdd09ff1c",
+        "json": "9aa4dcbc9c2b8903e0a9e742357cec66e93005993ea122c158117b289e03d503"
+      },
+      "source_reset": false,
+      "initial_state_called": false,
+      "historical_rewrite": false,
+      "state_equals_prepared_source": false,
+      "regions": {
+        "api_version": "nsc-discovery-regions-v1",
+        "time": 3.0,
+        "control_mode": "coupled",
+        "settings": {
+          "api_version": "nsc-discovery-regions-v1",
+          "contour_fractions": [
+            0.25,
+            0.5,
+            0.75
+          ],
+          "shallow_slope_fraction": 0.001,
+          "dominant_peak_fraction": 0.5,
+          "flat_contrast": 0.0001,
+          "resolution_mode_keep": 0.25,
+          "child_source_columns": [
+            2,
+            3
+          ],
+          "child_interval": [
+            1.0,
+            3.0
+          ],
+          "parent_interval": [
+            0.0,
+            4.0
+          ],
+          "carrier_length": 8.0,
+          "dx_convention": "divide each nodal summand by dx once",
+          "derivative": "owned periodic Fourier derivative; Nyquist symbol is zero",
+          "evaluation": "Fourier interpolant through the nodes",
+          "normal_energy_slope": "analytic polarization of F_L/r",
+          "piston_work_on_measurement_cut": false,
+          "renewal_asserted": false,
+          "continuum_certified": false,
+          "contour_certified": false
+        },
+        "domain_limits": {
+          "evolves_state": false,
+          "calls_initial_state": false,
+          "rebuilds_geometry_map": false,
+          "resets_source_columns": false,
+          "rewrites_station_chunks": false,
+          "rewrites_sealed_inputs": false,
+          "loads_production_trajectories_in_check": false,
+          "measurement_cut_is_physical_wall": false,
+          "piston_work_included": false,
+          "independent_energy_parcel": false,
+          "modal_complement_is_spatial_exterior": false,
+          "ancestry_tags_are_computational_labels": true,
+          "contour_certified": false,
+          "continuum_certified": false,
+          "renewal_asserted": false,
+          "imposed_contour_is_regeneration_evidence": false,
+          "output_policy": "creation_only",
+          "reader": "station chunks from nsc_discovery_episode"
+        },
+        "renewal_classification_requires": [
+          "Saved station states at the handoff and at the later stations under comparison, for the coupled cases and the frozen-geometry controls, at each prepared resolution. This consumer reads chunks it is given and does not generate those trajectories.",
+          "Contour endpoints and implicit velocities at one quarter, one half, and three quarters of the dominant peak on each of those stations, together with the resolution-comparison gaps from this row. A classification needs a pre-registered tolerance for those gaps.",
+          "A pre-registered distinction between a maintained packet and a regenerated boundary. A gradient cut is a measurement surface and carries no wall traction.",
+          "The stage-1 null characteristic tracks compared with the measured contour velocities at the same stations. This row does not turn that comparison into a verdict.",
+          "The inherited local response of the realized source inside the measured contour. That response is a later stage and is not a region integral.",
+          "A continuum or refinement certificate. contour_certified, continuum_certified, and renewal_asserted stay false, and this row does not estimate a state-error bound."
+        ],
+        "renewal_asserted": false,
+        "continuum_certified": false,
+        "contour_certified": false,
+        "source_reset": false,
+        "initial_state_called": false,
+        "historical_rewrite": false,
+        "state_token_unchanged": true,
+        "positive_probability": true,
+        "probability": {
+          "total": 2.999999999806837,
+          "per_proper_length_peak": 4428.6883497909375,
+          "per_proper_length_peak_x": 3.25,
+          "per_proper_length_minimum": 0.5198900737198291,
+          "child": 0.003009197629238347,
+          "parent": 1.0024517495947864,
+          "child_per_proper_length": 2.9489283907433,
+          "parent_per_proper_length": 464.8653269263015
+        },
+        "localization": {
+          "six_column_content": 2.999999999806837,
+          "six_column_total_width": 0.001166439056328518,
+          "column_pairs": [
+            {
+              "columns": [
+                0,
+                1
+              ],
+              "ancestry": "outer_left_preparation",
+              "ancestry_is_computational_label": true,
+              "independent_energy_parcel": false,
+              "support": [
+                0.0,
+                1.0
+              ],
+              "content": 1.4999999998563498,
+              "proper_width": 0.0007952071666881103,
+              "resultant": 0.5980725181750721,
+              "retained_fraction": 4.507387135326061e-05
+            },
+            {
+              "columns": [
+                2,
+                3
+              ],
+              "ancestry": "originally_child_prepared_source_pair",
+              "ancestry_is_computational_label": true,
+              "independent_energy_parcel": false,
+              "support": [
+                1.0,
+                3.0
+              ],
+              "content": 0.9999999999983703,
+              "proper_width": 0.0008682543922280233,
+              "resultant": 0.5418206637243547,
+              "retained_fraction": 0.000593078941794329
+            },
+            {
+              "columns": [
+                4,
+                5
+              ],
+              "ancestry": "outer_right_preparation",
+              "ancestry_is_computational_label": true,
+              "independent_energy_parcel": false,
+              "support": [
+                3.0,
+                4.0
+              ],
+              "content": 0.49999999995211686,
+              "proper_width": 0.000655114276684556,
+              "resultant": 0.7054793940570063,
+              "retained_fraction": 3.7110370288516255e-05
+            }
+          ],
+          "originally_child_prepared_pair": {
+            "columns": [
+              2,
+              3
+            ],
+            "ancestry": "originally_child_prepared_source_pair",
+            "ancestry_is_computational_label": true,
+            "independent_energy_parcel": false,
+            "support": [
+              1.0,
+              3.0
+            ],
+            "content": 0.9999999999983703,
+            "proper_width": 0.0008682543922280233,
+            "resultant": 0.5418206637243547,
+            "retained_fraction": 0.000593078941794329
+          },
+          "spatial_exterior_probability": 0.9994425519655481,
+          "modal_child_content": 0.9999999999983702,
+          "modal_complement_content": 1.999999999808467,
+          "modal_complement_is_spatial_exterior": false,
+          "q_multiplied_into_measure": false,
+          "width_is_dispersal_time": false
+        },
+        "contours": {
+          "peak_x": 3.25,
+          "peak_value": 4428.6883497909375,
+          "contrast": 0.9998826085665422,
+          "flags": {
+            "flat": false,
+            "merge": false,
+            "split": true,
+            "multiple_dominant_peaks": true
+          },
+          "dominant_peak_count": 6,
+          "levels": [
+            {
+              "level": 1107.1720874477344,
+              "filled": false,
+              "empty": false,
+              "component_count": 16,
+              "wrapped": false,
+              "backward": 3.153647428379621,
+              "forward": 3.3456866090378288,
+              "velocity_backward": {
+                "time_rate": -33392.11114424479,
+                "space_slope": 37662.11044121221,
+                "threshold": 566.87210877324,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.8866234725844008,
+                "division": true
+              },
+              "velocity_forward": {
+                "time_rate": 41472.71200866834,
+                "space_slope": -37199.143263847836,
+                "threshold": 566.87210877324,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 1.114883526066951,
+                "division": true
+              },
+              "resolution_gap_backward": 2.7622348852673895e-13,
+              "resolution_gap_forward": 3.108624468950438e-14,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.25
+            },
+            {
+              "level": 2214.3441748954688,
+              "filled": false,
+              "empty": false,
+              "component_count": 6,
+              "wrapped": false,
+              "backward": 3.179012180792224,
+              "forward": 3.32008512526152,
+              "velocity_backward": {
+                "time_rate": -38909.72637998202,
+                "space_slope": 47450.49689508837,
+                "threshold": 566.87210877324,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.8200067212364553,
+                "division": true
+              },
+              "velocity_forward": {
+                "time_rate": 55760.50956001471,
+                "space_slope": -47214.56998688842,
+                "threshold": 566.87210877324,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 1.1810021689385186,
+                "division": true
+              },
+              "resolution_gap_backward": 1.199040866595169e-13,
+              "resolution_gap_forward": 4.2543746303636e-13,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.5
+            },
+            {
+              "level": 3321.5162623432034,
+              "filled": false,
+              "empty": false,
+              "component_count": 5,
+              "wrapped": false,
+              "backward": 3.2029502997804435,
+              "forward": 3.2960657502765507,
+              "velocity_backward": {
+                "time_rate": -29810.491012718347,
+                "space_slope": 42622.71288501753,
+                "threshold": 566.87210877324,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.699403885743677,
+                "division": true
+              },
+              "velocity_forward": {
+                "time_rate": 55256.36281389756,
+                "space_slope": -42439.05264396008,
+                "threshold": 566.87210877324,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 1.302016877649639,
+                "division": true
+              },
+              "resolution_gap_backward": 6.181721801112872e-13,
+              "resolution_gap_forward": 5.737632591262809e-13,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.75
+            }
+          ],
+          "contour_certified": false,
+          "physical_wall": false,
+          "convention": "nodal samples, Fourier interpolant, zero-Nyquist derivative"
+        },
+        "normal_energy": {
+          "child_fixed": {
+            "interval": [
+              1.0,
+              3.0
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "reynolds": 0.0,
+            "fixed_boundary_flux": -1.4119552003807017,
+            "pressure": -4.452913435430673,
+            "lapse": 0.02925386228582738,
+            "pointwise_projection_defect": 1.785378704306176e-08,
+            "endpoint_identity_gap": 9.275025192323483e-12,
+            "finite_projection_defect": 1.7863062068254083e-08,
+            "slope_integral": -5.835614755669667,
+            "rate": -5.835614755662485,
+            "leibniz_from_slope": -5.835614755669667,
+            "closure_residual": 7.181810701695213e-12,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut"
+          },
+          "parent_fixed": {
+            "interval": [
+              0.0,
+              4.0
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "reynolds": 0.0,
+            "fixed_boundary_flux": 2.4791165262734673,
+            "pressure": 27484.296280685456,
+            "lapse": -1123.1342701394985,
+            "pointwise_projection_defect": -2.678560762664388e-09,
+            "endpoint_identity_gap": -1.0343148559854853e-10,
+            "finite_projection_defect": -2.7819922482629366e-09,
+            "slope_integral": 26363.641127069448,
+            "rate": 26363.641127069448,
+            "leibniz_from_slope": 26363.641127069448,
+            "closure_residual": 0.0,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut"
+          },
+          "dominant_half_maximum_cut": {
+            "interval": [
+              3.179012180792224,
+              3.32008512526152
+            ],
+            "boundary_velocity": [
+              0.8200067212364553,
+              1.1810021689385186
+            ],
+            "wrapped": false,
+            "reynolds": 3056.587493800769,
+            "fixed_boundary_flux": 147.95278105996658,
+            "pressure": 8273.319368051496,
+            "lapse": -395.86758900723896,
+            "pointwise_projection_defect": 3.5843985387658484e-09,
+            "endpoint_identity_gap": -4.416733645484783e-11,
+            "finite_projection_defect": 3.5402312023110006e-09,
+            "slope_integral": 8025.404560107756,
+            "rate": 11081.992053908532,
+            "leibniz_from_slope": 11081.992053908525,
+            "closure_residual": 7.275957614183426e-12,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "formula": "reynolds + fixed_boundary_flux + pressure + lapse + finite_projection_defect",
+          "analytical_continuity_closure_residual_max": 7.275957614183426e-12
+        },
+        "rates": {
+          "Q_dot_max": 0.0001735044334922235,
+          "r_dot_max": 8.638052129335087,
+          "field_column_rate_max": 2.149630713108136,
+          "field_source_kernel_rate_max": 0.3910985629936864,
+          "geometry_jets_zero": false
+        }
+      }
+    }
+  ],
+  "settings": {
+    "api_version": "nsc-discovery-regions-v1",
+    "contour_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "shallow_slope_fraction": 0.001,
+    "dominant_peak_fraction": 0.5,
+    "flat_contrast": 0.0001,
+    "resolution_mode_keep": 0.25,
+    "child_source_columns": [
+      2,
+      3
+    ],
+    "child_interval": [
+      1.0,
+      3.0
+    ],
+    "parent_interval": [
+      0.0,
+      4.0
+    ],
+    "carrier_length": 8.0,
+    "dx_convention": "divide each nodal summand by dx once",
+    "derivative": "owned periodic Fourier derivative; Nyquist symbol is zero",
+    "evaluation": "Fourier interpolant through the nodes",
+    "normal_energy_slope": "analytic polarization of F_L/r",
+    "piston_work_on_measurement_cut": false,
+    "renewal_asserted": false,
+    "continuum_certified": false,
+    "contour_certified": false
+  },
+  "domain_limits": {
+    "evolves_state": false,
+    "calls_initial_state": false,
+    "rebuilds_geometry_map": false,
+    "resets_source_columns": false,
+    "rewrites_station_chunks": false,
+    "rewrites_sealed_inputs": false,
+    "loads_production_trajectories_in_check": false,
+    "measurement_cut_is_physical_wall": false,
+    "piston_work_included": false,
+    "independent_energy_parcel": false,
+    "modal_complement_is_spatial_exterior": false,
+    "ancestry_tags_are_computational_labels": true,
+    "contour_certified": false,
+    "continuum_certified": false,
+    "renewal_asserted": false,
+    "imposed_contour_is_regeneration_evidence": false,
+    "output_policy": "creation_only",
+    "reader": "station chunks from nsc_discovery_episode"
+  },
+  "renewal_classification_requires": [
+    "Saved station states at the handoff and at the later stations under comparison, for the coupled cases and the frozen-geometry controls, at each prepared resolution. This consumer reads chunks it is given and does not generate those trajectories.",
+    "Contour endpoints and implicit velocities at one quarter, one half, and three quarters of the dominant peak on each of those stations, together with the resolution-comparison gaps from this row. A classification needs a pre-registered tolerance for those gaps.",
+    "A pre-registered distinction between a maintained packet and a regenerated boundary. A gradient cut is a measurement surface and carries no wall traction.",
+    "The stage-1 null characteristic tracks compared with the measured contour velocities at the same stations. This row does not turn that comparison into a verdict.",
+    "The inherited local response of the realized source inside the measured contour. That response is a later stage and is not a region integral.",
+    "A continuum or refinement certificate. contour_certified, continuum_certified, and renewal_asserted stay false, and this row does not estimate a state-error bound."
+  ],
+  "producer_hashes": {
+    "src/recursive_horizons/nsc_discovery_regions.py": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+    "scripts/derive_nsc_discovery_regions.py": "334a850cbd9104b2b816952585b1d06b202a42cb47c37510f9090b3b8c49c801",
+    "src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "scripts/derive_nsc_nested_parent_child.py": "6e8587ddec3a236db01c70bfdfb2d1fb88a8728f77fd4b9db050c8e4d695f05b"
+  },
+  "sealed_preparations_parsed": false,
+  "evolved": false,
+  "source_reset": false,
+  "historical_rewrite": false,
+  "output_written": true
+}

@@ -1,0 +1,187 @@
+{
+  "schema": "NSC-DISCOVERY-EPISODE-v1",
+  "stage": 2,
+  "status": "STATION_REACHED",
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "cases": [
+    {
+      "case_id": "nf512_coupled_dt0.001",
+      "ordinal": 0,
+      "npz": "nf512_coupled_dt0.001-000000.npz",
+      "json": "nf512_coupled_dt0.001-000000.json",
+      "arrays_sha256": "51f262a02d523d8eba81ddf83166e4c3056ec025c3911643937828199647dc28",
+      "parent_case": "nf512_baseline_dt0.0005",
+      "nf": 512,
+      "control": "coupled",
+      "control_mode": "coupled",
+      "geometry": "evolving",
+      "step_cap": 0.001,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf512_coupled_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf512_coupled_dt0.0005-000000.npz",
+      "json": "nf512_coupled_dt0.0005-000000.json",
+      "arrays_sha256": "51f262a02d523d8eba81ddf83166e4c3056ec025c3911643937828199647dc28",
+      "parent_case": "nf512_baseline_dt0.0005",
+      "nf": 512,
+      "control": "coupled",
+      "control_mode": "coupled",
+      "geometry": "evolving",
+      "step_cap": 0.0005,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf512_frozen_geometry_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf512_frozen_geometry_dt0.0005-000000.npz",
+      "json": "nf512_frozen_geometry_dt0.0005-000000.json",
+      "arrays_sha256": "51f262a02d523d8eba81ddf83166e4c3056ec025c3911643937828199647dc28",
+      "parent_case": "nf512_baseline_dt0.0005",
+      "nf": 512,
+      "control": "frozen_geometry",
+      "control_mode": "frozen_geometry",
+      "geometry": "frozen",
+      "step_cap": 0.0005,
+      "coordinate_time": 0.3,
+      "steps": 0
+    }
+  ],
+  "workers": 3,
+  "cpu_budget_seconds": 21600.0,
+  "cpu_accounting": "sum_of_child_process_time",
+  "forecast_factor": 1.5,
+  "memory_limit_bytes": 8589934592,
+  "chunk_limit_bytes": 67108864,
+  "evolution_backend": "dense_galerkin",
+  "reduction_backend": "dense",
+  "reduction_backend_used": false,
+  "streamed_reduction_selected": false,
+  "dense_exterior_propagator_stored": false,
+  "initial_state_called": false,
+  "evolved": true,
+  "stability_certificate": false,
+  "zero_residual_gate": false,
+  "max_T_forced": false,
+  "child_cpu_seconds": 308.670959,
+  "campaign": "nsc-discovery-confirmation-v1",
+  "source_record": "nsc-nested-parent-child-confirmation-v2",
+  "cost_forecast": {
+    "method": "stored_nf512_pilot_step_and_frame_times_forecast_factor",
+    "new_trajectory_measured": false,
+    "fft_speedup_assumed": false,
+    "pilot_step_cpu_seconds": 0.3410329999999959,
+    "pilot_frame_cpu_seconds": 1.329974,
+    "forecast_factor": 1.5,
+    "stations": [
+      1.0,
+      3.0
+    ],
+    "cases": [
+      {
+        "case_id": "nf512_coupled_dt0.001",
+        "step_cap": 0.001,
+        "estimated_steps": 2700,
+        "observation_samples": 55,
+        "raw_cpu_seconds": 993.9376699999891,
+        "forecast_cpu_seconds": 1490.9065049999836
+      },
+      {
+        "case_id": "nf512_coupled_dt0.0005",
+        "step_cap": 0.0005,
+        "estimated_steps": 5400,
+        "observation_samples": 55,
+        "raw_cpu_seconds": 1914.7267699999782,
+        "forecast_cpu_seconds": 2872.090154999967
+      },
+      {
+        "case_id": "nf512_frozen_geometry_dt0.0005",
+        "step_cap": 0.0005,
+        "estimated_steps": 5400,
+        "observation_samples": 55,
+        "raw_cpu_seconds": 1914.7267699999782,
+        "forecast_cpu_seconds": 2872.090154999967
+      }
+    ],
+    "forecast_cpu_seconds": 7235.086814999918,
+    "within_default_budget": true
+  },
+  "results": [
+    {
+      "case_id": "nf512_coupled_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 64.526921,
+      "coordinate_time": 3.0,
+      "steps": 2700,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf512_coupled_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 83.37748050000098
+    },
+    {
+      "case_id": "nf512_coupled_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 119.284862,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf512_coupled_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 174.2511149999989
+    },
+    {
+      "case_id": "nf512_frozen_geometry_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 124.85917599999999,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf512_frozen_geometry_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 367.22857050000084
+    }
+  ],
+  "executor_pools": 1
+}
