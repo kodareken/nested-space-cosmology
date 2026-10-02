@@ -208,10 +208,17 @@ The [action-balance selector](../lab/results/development/nsc-discovery-stationar
 finds three curvature/source/flux-balanced shapes from 33 evaluations using
 2.16 CPU seconds. Harmonics 8, 10 and 12 select cosine amplitudes 0.16416,
 0.28722 and 0.34671. The local force and lapse equations remain unsatisfied.
-The next query eliminates radial and auxiliary critical equations with their
-actual discrete operators and solves the remaining shape force on a named,
-CAR-admissible occupation branch. It does not infer holding from the integrated
-balance alone. [Saved-array diagnostic](../lab/results/development/nsc-discovery-stationary-v2.json).
+The [local-critical query](../lab/results/development/nsc-discovery-stationary-critical-v3.json)
+then eliminates radial and auxiliary critical equations and tests the remaining
+shape force on a named CAR-admissible occupation branch. Its 600 evaluations
+use 31.26 CPU seconds and do not find a local critical state. The selected
+shape approaches uniformity: mean $Q$ falls to $0.0009454$, while mean areal
+radius grows to 1287.0. The normal-radius denominator approaches zero, yet
+the retained $p_Q$ force remains 32.96 and the full lapse residual 35.07.
+This is a noncompact, poorly conditioned search tendency, not a proof that
+all stationary or regenerative states are absent. That search stops here;
+a dynamic preparation must satisfy the initial constraints without also
+being a stationary solution. [Saved-array diagnostic](../lab/results/development/nsc-discovery-stationary-v2.json).
 
 ### Coupled reduction with the same generated geometry
 
