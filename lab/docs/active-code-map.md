@@ -35,6 +35,9 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Coupled causal reduction and source forces | [Memory note](nsc-discovery-coupled-memory.md); `src/recursive_horizons/nsc_discovery_coupled_memory.py`; `scripts/derive_nsc_discovery_coupled_memory.py` |
 | Source-consistent regime family | [Family](nsc-discovery-family.md); `src/recursive_horizons/nsc_discovery_family.py`; `scripts/derive_nsc_discovery_family.py` |
 | Disjoint normal-energy and coordinate-work ledger | [Balance](nsc-discovery-balance.md); `src/recursive_horizons/nsc_discovery_balance.py`; `scripts/derive_nsc_discovery_balance.py` |
+| Source-compatible static balance | [Stationary control](nsc-discovery-stationary.md); `src/recursive_horizons/nsc_discovery_stationary.py`; `scripts/derive_nsc_discovery_stationary.py` |
+| Exact source-free metric control | [Vacuum control](nsc-discovery-vacuum-control.md); `src/recursive_horizons/nsc_discovery_vacuum_control.py`; `scripts/derive_nsc_discovery_vacuum_control.py` |
+| Whole-state seam translation | [Translation](nsc-discovery-translation.md); `src/recursive_horizons/nsc_discovery_translation.py`; `scripts/derive_nsc_discovery_translation.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before

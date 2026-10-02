@@ -1,0 +1,3474 @@
+{
+  "schema": "NSC-DISCOVERY-SOURCE-FAMILY-v1",
+  "question": "Does varying regional source shape or imbalance change contraction, dispersion, or retention beyond the baseline?",
+  "imbalances": [
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0
+  ],
+  "width_scales": [
+    0.8,
+    1.0,
+    1.2
+  ],
+  "baseline_imbalance": 1.0,
+  "baseline_width_scale": 1.0,
+  "occupation_trace": 3.0,
+  "exploration_nf": 128,
+  "confirmation_nf": 256,
+  "exploration_cases": 6,
+  "threads_per_case": 1,
+  "workers": 6,
+  "coordinator_pools": 1,
+  "aggregate_cpu_budget_seconds": 21600.0,
+  "budget_covers": "initial_solves_handoff_measurements_and_continuation_child_cpu",
+  "chunk_limit_bytes": 67108864,
+  "forecast_factor": 1.5,
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "handoff_time": 0.3,
+  "step_cap": 0.0005,
+  "nonproduction_duration": 0.01,
+  "constructor": "nsc_nested_parent_child.initial_state",
+  "evolution": "nsc_discovery_prediction.propagate_baseline",
+  "continuation": "nsc_discovery_episode.run",
+  "scalar_fate_percent_gate": null,
+  "universal_one_percent_gate": false,
+  "forced_regeneration": false,
+  "saved_t03_radius_copied": false,
+  "third_dynamical_framework": false,
+  "output": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-family-v2",
+  "exploration_directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-family-v1",
+  "stage": "continued",
+  "materialized": true,
+  "evolved": true,
+  "nf": 256,
+  "cases": [
+    "nf256_a1_w0p8",
+    "nf256_a1_w0p8_frozen_geometry",
+    "nf256_a1_w1",
+    "nf256_a1_w1_frozen_geometry",
+    "nf256_a1_w1p2",
+    "nf256_a1_w1p2_frozen_geometry",
+    "nf256_a0_w1",
+    "nf256_am1_w1p2"
+  ],
+  "selected": {
+    "nf": 256,
+    "cases": [
+      {
+        "imbalance": 1.0,
+        "width_scale": 0.8,
+        "parent_case": "nf128_a1_w0p8",
+        "nf": 256,
+        "fate": "same_physical_signs",
+        "selection_reasons": [
+          "predeclared_quantitative_width_sensitivity"
+        ],
+        "forced": false,
+        "physical_conclusion_forced": false,
+        "initial_preparation_error": null
+      },
+      {
+        "imbalance": 1.0,
+        "width_scale": 1.0,
+        "parent_case": "nf128_a1_w1",
+        "nf": 256,
+        "fate": "baseline",
+        "selection_reasons": [
+          "baseline_comparator",
+          "predeclared_quantitative_width_sensitivity"
+        ],
+        "forced": false,
+        "physical_conclusion_forced": false,
+        "initial_preparation_error": null
+      },
+      {
+        "imbalance": 1.0,
+        "width_scale": 1.2,
+        "parent_case": "nf128_a1_w1p2",
+        "nf": 256,
+        "fate": "same_physical_signs",
+        "selection_reasons": [
+          "predeclared_quantitative_width_sensitivity"
+        ],
+        "forced": false,
+        "physical_conclusion_forced": false,
+        "initial_preparation_error": null
+      },
+      {
+        "imbalance": 0.0,
+        "width_scale": 1.0,
+        "parent_case": "nf128_a0_w1",
+        "nf": 256,
+        "fate": "same_physical_signs",
+        "selection_reasons": [
+          "predeclared_uniform_imbalance_control"
+        ],
+        "forced": false,
+        "physical_conclusion_forced": false,
+        "initial_preparation_error": null
+      },
+      {
+        "imbalance": -1.0,
+        "width_scale": 1.2,
+        "parent_case": "nf128_am1_w1p2",
+        "nf": 256,
+        "fate": "unresolved",
+        "selection_reasons": [
+          "predeclared_nf256_initial_preparation_retry",
+          "unresolved_initial_preparation_retry"
+        ],
+        "forced": false,
+        "physical_conclusion_forced": false,
+        "initial_preparation_error": "ValueError: initial source-derived geometry failed: positive homotopy stalled above measured radius-correction floor"
+      }
+    ],
+    "forced_regeneration": false,
+    "reason": "predeclared bounded confirmation experiments",
+    "candidate_cap": 6,
+    "qualitative_sign_difference_required": false,
+    "physical_conclusion_forced": false
+  },
+  "frozen_width_controls": true,
+  "producer_identity": {
+    "implementation_revision": "source-family-confirmation-v2",
+    "files": [
+      {
+        "path": "lab/scripts/derive_nsc_discovery_family.py",
+        "sha256": "0c0bd580d3ddfdc7d880c129df29f59fd1637b19bcfd93c7ffea6127322b357b",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_adm_source.py",
+        "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_boundary_state.py",
+        "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_causal_common.py",
+        "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_conformal_adm_source.py",
+        "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_covariant_operator.py",
+        "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_backend.py",
+        "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_episode.py",
+        "sha256": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_family.py",
+        "sha256": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_observables.py",
+        "sha256": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_prediction.py",
+        "sha256": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_regions.py",
+        "sha256": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_response.py",
+        "sha256": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_tidal.py",
+        "sha256": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_evolving_reduction.py",
+        "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_finite_terms.py",
+        "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_finite_window_embedding.py",
+        "sha256": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_influence.py",
+        "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_nested_parent_child.py",
+        "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_nested_qualities.py",
+        "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regeneration_controls.py",
+        "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py",
+        "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regulated.py",
+        "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_shape_response.py",
+        "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py",
+        "sha256": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_coupling.py",
+        "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py",
+        "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py",
+        "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+        "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py",
+        "sha256": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      },
+      {
+        "path": "lab/src/recursive_horizons/provenance.py",
+        "sha256": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+        "commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68"
+      }
+    ],
+    "working_tree_commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68",
+    "all_sources_commit_pinned": true
+  },
+  "parent_record_sha256": "3029d33eccb0cb8c881a35ac97f69bb7b3c12fa11ed6c52d45e5316a13e775d5",
+  "forecast": {
+    "n_cases": 5,
+    "continuation_cases": 8,
+    "nf": 256,
+    "step_cap": 0.0005,
+    "dense_initial_solves": 5,
+    "dense_initial_solves_in_rate_sample": false,
+    "propagate_baseline_cpu_seconds": 37.0,
+    "continuation_raw_cpu_seconds": 532.8,
+    "continuation_forecast_cpu_seconds": 799.1999999999999,
+    "forecast_cpu_seconds_without_inits": 836.1999999999999,
+    "aggregate_budget_seconds": 21600.0,
+    "budget_covers": "initial_solves_handoff_measurements_and_continuation_child_cpu",
+    "within_budget_ignoring_unsampled_inits": true,
+    "hard_gate": false,
+    "chunk_limit_bytes": 67108864,
+    "threads_per_case": 1,
+    "workers": 6,
+    "coordinator_pools": 1
+  },
+  "regimes": [
+    {
+      "case_id": "nf256_a1_w0p8",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a1_w0p8",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.11744446380426252,
+          0.999999999784833,
+          0.03172055161800396
+        ],
+        "child_source_common_window_retained_fraction": 0.999999999784833,
+        "retention_windows": {
+          "own_preparation": [
+            1.2,
+            2.8
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3962804219498173,
+        "child_areal_radius": 4.768192592751181,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999999851371048,
+            1.0738094931757784e-08,
+            2.9233878281094903e-10
+          ],
+          [
+            7.476880226064965e-11,
+            0.9999999997076372,
+            1.4490733613037324e-10
+          ],
+          [
+            2.0916232634782272e-10,
+            1.2703506857558728e-09,
+            0.9999999922282256
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.172293116992508e-10,
+          "radial_tide_l2": 0.13560261213153021,
+          "angular_tide_l2": 0.1271765012969138,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999999851371048,
+          0.9999999997076372,
+          0.9999999922282256
+        ],
+        "child_retained_fraction": 0.9999999997076372,
+        "packet_width": 1.359204737615248,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.0014312948504067915,
+          0.0003878951959900185,
+          0.0009862270348485597
+        ],
+        "child_source_common_window_retained_fraction": 0.0003878951959900185,
+        "retention_windows": {
+          "own_preparation": [
+            1.2,
+            2.8
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 0.0010344323841768829,
+        "child_areal_radius": 21.466718181172823,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            9.142478961500122e-05,
+            0.0011802025434179614,
+            0.44024160376808097
+          ],
+          [
+            0.0004986464935774145,
+            0.0002351820498926823,
+            0.001167192428626774
+          ],
+          [
+            0.48346067598643444,
+            0.0007758638770225123,
+            7.198517391509757e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.10330200008880726,
+          "radial_tide_l2": 1163675.0795143908,
+          "angular_tide_l2": 12134751.206841018,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          9.142478961500122e-05,
+          0.0002351820498926823,
+          7.198517391509757e-05
+        ],
+        "child_retained_fraction": 0.0002351820498926823,
+        "packet_width": 0.0011646481072337862,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0002351820498926823,
+        "length_change": -2.3952459895656406,
+        "width_change": -1.3580400895080142,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.698525588421642,
+        "packet_transfer_change": [
+          [
+            -0.9999085603474898,
+            0.0011801918053230298,
+            0.4402416034757422
+          ],
+          [
+            0.0004986464188086122,
+            -0.9997648176577445,
+            0.001167192283719438
+          ],
+          [
+            0.4834606757772721,
+            0.0007758626066718266,
+            -0.9999280070543105
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 0.10330199917157795,
+          "radial_tide_l2": 1163674.9439117787,
+          "angular_tide_l2": 12134751.079664517
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0002351820498926823,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      },
+      "quantitative_minus_baseline": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": 1.3994709703637467e-05,
+          "packet_width": -1.7909490947238139e-06,
+          "child_areal_radius": -0.06129991682771774,
+          "child_retained_fraction": -0.00035789689190142534,
+          "child_source_common_window_retained_fraction": -0.00020518374580408917,
+          "R4_l2": 0.06058297646398062,
+          "radial_tide_l2": -54951.676482164534,
+          "angular_tide_l2": -586157.2462174371
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w0p8_frozen_geometry",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "fate": "frozen_geometry_control",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "frozen_geometry",
+      "parent_case": "nf256_a1_w0p8",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.3,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.2498191018454661,
+          0.999997150107679,
+          0.24974549102065996
+        ],
+        "child_source_common_window_retained_fraction": 0.999997150107679,
+        "retention_windows": {
+          "own_preparation": [
+            1.2,
+            2.8
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.383358540804383,
+        "child_areal_radius": 4.768232381666952,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.7502716731176211,
+            0.1248671814986399,
+            2.9993143154390576e-10
+          ],
+          [
+            0.03297743319972136,
+            0.8776638563791321,
+            0.08935871034566574
+          ],
+          [
+            2.1374410574885585e-10,
+            0.12486113206465461,
+            0.7502708143888482
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6672314272511315,
+          "radial_tide_l2": 0.10685737712981279,
+          "angular_tide_l2": 0.0035083001106946954,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.7502716731176211,
+          0.8776638563791321,
+          0.7502708143888482
+        ],
+        "child_retained_fraction": 0.8776638563791321,
+        "packet_width": 1.3966690912038944,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.00423742914905506,
+          0.004586338876673895,
+          0.003991280706085327
+        ],
+        "child_source_common_window_retained_fraction": 0.004586338876673895,
+        "retention_windows": {
+          "own_preparation": [
+            1.2,
+            2.8
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.383358540804383,
+        "child_areal_radius": 4.768232381666952,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.0022304473595395453,
+            0.0033683640309369193,
+            0.43683444059514764
+          ],
+          [
+            0.002849274802646902,
+            0.0036483956613328553,
+            0.0031179993689690183
+          ],
+          [
+            0.4804020977613083,
+            0.003174128966716355,
+            0.0022304313472283448
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6672314272511315,
+          "radial_tide_l2": 0.10685737712981279,
+          "angular_tide_l2": 0.0035083001106946954,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.0022304473595395453,
+          0.0036483956613328553,
+          0.0022304313472283448
+        ],
+        "child_retained_fraction": 0.0036483956613328553,
+        "packet_width": 1.709994946260234,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 0,
+        "dispersion_sign": 1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0036483956613328553,
+        "length_change": 0.0,
+        "width_change": 0.3133258550563396,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 0.0,
+        "packet_transfer_change": [
+          [
+            -0.7480412257580815,
+            -0.12149881746770298,
+            0.43683444029521623
+          ],
+          [
+            -0.030128158397074455,
+            -0.8740154607177992,
+            -0.08624071097669672
+          ],
+          [
+            0.4804020975475642,
+            -0.12168700309793826,
+            -0.7480403830416199
+          ]
+        ],
+        "packet_transfer_signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "areal_radius_sign": 0,
+        "actual_geometry_growth": {
+          "R4_l2": 0.0,
+          "radial_tide_l2": 0.0,
+          "angular_tide_l2": 0.0
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 0,
+          "radial_tide_l2": 0,
+          "angular_tide_l2": 0
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "frozen_minus_own_coupled": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": 2.3823241084202063,
+          "packet_width": 1.7088302981530001,
+          "child_areal_radius": -16.69848579950587,
+          "child_retained_fraction": 0.003413213611440173,
+          "child_source_common_window_retained_fraction": 0.004198443680683876,
+          "R4_l2": 0.5639294271623242,
+          "radial_tide_l2": -1163674.9726570137,
+          "angular_tide_l2": -12134751.203332718
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w1",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "fate": "baseline",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a1_w1",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          6.96558535295821e-08,
+          0.9999999999941624,
+          1.6220883525264166e-09
+        ],
+        "child_source_common_window_retained_fraction": 0.9999999999941624,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3871691623602027,
+        "child_areal_radius": 4.7499640174305355,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999999283483308,
+            6.96558535295821e-08,
+            1.363641051928728e-10
+          ],
+          [
+            2.8557711750920594e-13,
+            0.9999999999941624,
+            5.0492388048439815e-12
+          ],
+          [
+            1.2836025298224014e-10,
+            1.6220883525264166e-09,
+            0.9999999283483306
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.463013196913564e-10,
+          "radial_tide_l2": 0.13499296735135893,
+          "angular_tide_l2": 0.13443692734400683,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999999283483308,
+          0.9999999999941624,
+          0.9999999283483306
+        ],
+        "child_retained_fraction": 0.9999999999941624,
+        "packet_width": 1.461448112303635,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.001281146367606649,
+          0.0005930789417941077,
+          0.0009887982725332789
+        ],
+        "child_source_common_window_retained_fraction": 0.0005930789417941077,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 0.0010204376744732454,
+        "child_areal_radius": 21.52801809800054,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            4.5073871353167964e-05,
+            0.001281146367606649,
+            0.498750866366831
+          ],
+          [
+            0.00039849705609143243,
+            0.0005930789417941077,
+            0.0012981194597048518
+          ],
+          [
+            0.4990669400057695,
+            0.0009887982725332789,
+            3.711037028844689e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.04271902362482664,
+          "radial_tide_l2": 1218626.7559965553,
+          "angular_tide_l2": 12720908.453058455,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          4.5073871353167964e-05,
+          0.0005930789417941077,
+          3.711037028844689e-05
+        ],
+        "child_retained_fraction": 0.0005930789417941077,
+        "packet_width": 0.00116643905632851,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0005930789417941077,
+        "length_change": -2.3861487246857296,
+        "width_change": -1.4602816732473065,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.778054080570005,
+        "packet_transfer_change": [
+          [
+            -0.9999548544769776,
+            0.0012810767117531195,
+            0.49875086623046694
+          ],
+          [
+            0.0003984970558058553,
+            -0.9994069210523684,
+            0.001298119454655613
+          ],
+          [
+            0.49906693987740924,
+            0.0009887966504449263,
+            -0.9999628179780422
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 0.042719022678525315,
+          "radial_tide_l2": 1218626.621003588,
+          "angular_tide_l2": 12720908.318621527
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0005930789417941077,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      },
+      "quantitative_minus_baseline": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": 0.0,
+          "packet_width": 0.0,
+          "child_areal_radius": 0.0,
+          "child_retained_fraction": 0.0,
+          "child_source_common_window_retained_fraction": 0.0,
+          "R4_l2": 0.0,
+          "radial_tide_l2": 0.0,
+          "angular_tide_l2": 0.0
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w1_frozen_geometry",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "fate": "frozen_geometry_control",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "frozen_geometry",
+      "parent_case": "nf256_a1_w1",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.3,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.14527594233696828,
+          0.9575550882424734,
+          0.20264489886705675
+        ],
+        "child_source_common_window_retained_fraction": 0.9575550882424734,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3752181433685506,
+        "child_areal_radius": 4.751796306743699,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.652079163376401,
+            0.14527594233696828,
+            1.4111622981396169e-10
+          ],
+          [
+            0.0074939570863371135,
+            0.9575550882424734,
+            0.03495095467061631
+          ],
+          [
+            1.3172322954739396e-10,
+            0.20264489886705675,
+            0.652079161323339
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6908544014773607,
+          "radial_tide_l2": 0.1104787249243099,
+          "angular_tide_l2": 0.0032462049087952373,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.652079163376401,
+          0.9575550882424734,
+          0.652079161323339
+        ],
+        "child_retained_fraction": 0.9575550882424734,
+        "packet_width": 1.495500886746171,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.0036887758420607406,
+          0.005146865837841707,
+          0.0035077497881842177
+        ],
+        "child_source_common_window_retained_fraction": 0.005146865837841707,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3752181433685506,
+        "child_areal_radius": 4.751796306743699,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.0016015265510425293,
+            0.0036887758420607406,
+            0.4952152347085799
+          ],
+          [
+            0.0026249610956432224,
+            0.005146865837841707,
+            0.0030229423362513282
+          ],
+          [
+            0.49598976148801494,
+            0.0035077497881842177,
+            0.001601545299165864
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6908544014773607,
+          "radial_tide_l2": 0.1104787249243099,
+          "angular_tide_l2": 0.0032462049087952373,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.0016015265510425293,
+          0.005146865837841707,
+          0.001601545299165864
+        ],
+        "child_retained_fraction": 0.005146865837841707,
+        "packet_width": 1.7923156085388614,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 0,
+        "dispersion_sign": 1,
+        "retention_order": [
+          1,
+          2,
+          0
+        ],
+        "child_retained_fraction": 0.005146865837841707,
+        "length_change": 0.0,
+        "width_change": 0.2968147217926904,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 0.0,
+        "packet_transfer_change": [
+          [
+            -0.6504776368253585,
+            -0.14158716649490755,
+            0.4952152345674637
+          ],
+          [
+            -0.004868995990693891,
+            -0.9524082224046316,
+            -0.031928012334364986
+          ],
+          [
+            0.4959897613562917,
+            -0.19913714907887253,
+            -0.6504776160241731
+          ]
+        ],
+        "packet_transfer_signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "areal_radius_sign": 0,
+        "actual_geometry_growth": {
+          "R4_l2": 0.0,
+          "radial_tide_l2": 0.0,
+          "angular_tide_l2": 0.0
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 0,
+          "radial_tide_l2": 0,
+          "angular_tide_l2": 0
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "frozen_minus_own_coupled": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": 2.3741977056940775,
+          "packet_width": 1.791149169482533,
+          "child_areal_radius": -16.77622179125684,
+          "child_retained_fraction": 0.0045537868960476,
+          "child_source_common_window_retained_fraction": 0.0045537868960476,
+          "R4_l2": 0.6481353778525341,
+          "radial_tide_l2": -1218626.6455178305,
+          "angular_tide_l2": -12720908.44981225
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w1p2",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a1_w1p2",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          3.04637187327946e-07,
+          0.9996032387005792,
+          1.9837394385491245e-07
+        ],
+        "child_source_common_window_retained_fraction": 0.9996032387005792,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3767920954476085,
+        "child_areal_radius": 4.729244999194329,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999980863321887,
+            1.2663245775682936e-06,
+            2.2651995649584464e-08
+          ],
+          [
+            9.339751194659131e-15,
+            0.9999999999993812,
+            5.19764786766075e-13
+          ],
+          [
+            2.8323545953057285e-08,
+            3.291811702665901e-07,
+            0.9999970615141747
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.382588411729233e-10,
+          "radial_tide_l2": 0.13448339265528073,
+          "angular_tide_l2": 0.14691964888140102,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999980863321887,
+          0.9999999999993812,
+          0.9999970615141747
+        ],
+        "child_retained_fraction": 0.9999999999993812,
+        "packet_width": 1.5685148896558694,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.001099280756864601,
+          0.0008781047633858121,
+          0.0009261922776569138
+        ],
+        "child_source_common_window_retained_fraction": 0.0008781047633858121,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 0.0010126825050764943,
+        "child_areal_radius": 21.564524928245362,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            2.0477687830009293e-05,
+            0.12530832197673974,
+            0.37472830867953727
+          ],
+          [
+            0.00044633330758862973,
+            0.0012012600914955251,
+            0.0013019497035278134
+          ],
+          [
+            0.3747341568583817,
+            0.12530997253046988,
+            1.7988509657877853e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.774817494729486,
+          "radial_tide_l2": 1264998.6829831197,
+          "angular_tide_l2": 13210684.325037815,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          2.0477687830009293e-05,
+          0.0012012600914955251,
+          1.7988509657877853e-05
+        ],
+        "child_retained_fraction": 0.0012012600914955251,
+        "packet_width": 0.0011767115787897344,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0012012600914955251,
+        "length_change": -2.375779412942532,
+        "width_change": -1.5673381780770796,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.835279929051033,
+        "packet_transfer_change": [
+          [
+            -0.9999776086443587,
+            0.12530705565216219,
+            0.3747282860275416
+          ],
+          [
+            0.00044633330757929,
+            -0.9987987399078856,
+            0.0013019497030080486
+          ],
+          [
+            0.37473412853483573,
+            0.12530964334929962,
+            -0.9999790730045168
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 0.7748174937912272,
+          "radial_tide_l2": 1264998.5484997272,
+          "angular_tide_l2": 13210684.178118166
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0012012600914955251,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      },
+      "quantitative_minus_baseline": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": -7.755169396751098e-06,
+          "packet_width": 1.027252246122443e-05,
+          "child_areal_radius": 0.03650683024482149,
+          "child_retained_fraction": 0.0006081811497014175,
+          "child_source_common_window_retained_fraction": 0.00028502582159170445,
+          "R4_l2": 0.7320984711046594,
+          "radial_tide_l2": 46371.92698656442,
+          "angular_tide_l2": 489775.87197935954
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w1p2_frozen_geometry",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "fate": "frozen_geometry_control",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "frozen_geometry",
+      "parent_case": "nf256_a1_w1p2",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.3,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.010511667608430704,
+          0.8297114161758469,
+          0.001638734973182446
+        ],
+        "child_source_common_window_retained_fraction": 0.8297114161758469,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3651753677979306,
+        "child_areal_radius": 4.7315321785945965,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.5124006557691259,
+            0.23954273280619312,
+            2.2926926894845655e-08
+          ],
+          [
+            0.0016467967449983697,
+            0.9878090038235822,
+            0.010544199431314996
+          ],
+          [
+            2.8570091279934125e-08,
+            0.2480438230444845,
+            0.5125221201164554
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6637297799455529,
+          "radial_tide_l2": 0.10526397492702157,
+          "angular_tide_l2": 0.003003531377838686,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.5124006557691259,
+          0.9878090038235822,
+          0.5125221201164554
+        ],
+        "child_retained_fraction": 0.9878090038235822,
+        "packet_width": 1.5995353095521136,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.0030663717663851116,
+          0.005470008230239087,
+          0.002946642148074248
+        ],
+        "child_source_common_window_retained_fraction": 0.005470008230239087,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3651753677979306,
+        "child_areal_radius": 4.7315321785945965,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.0010533508310762178,
+            0.12530430989243552,
+            0.3739841689659279
+          ],
+          [
+            0.0023363246452813447,
+            0.006610210803112432,
+            0.002666868452805582
+          ],
+          [
+            0.3740052390809287,
+            0.125654801554871,
+            0.0010539191600463069
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6637297799455529,
+          "radial_tide_l2": 0.10526397492702157,
+          "angular_tide_l2": 0.003003531377838686,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.0010533508310762178,
+          0.006610210803112432,
+          0.0010539191600463069
+        ],
+        "child_retained_fraction": 0.006610210803112432,
+        "packet_width": 1.8822970780977415,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 0,
+        "dispersion_sign": 1,
+        "retention_order": [
+          1,
+          2,
+          0
+        ],
+        "child_retained_fraction": 0.006610210803112432,
+        "length_change": 0.0,
+        "width_change": 0.28276176854562785,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 0.0,
+        "packet_transfer_change": [
+          [
+            -0.5113473049380496,
+            -0.1142384229137576,
+            0.373984146039001
+          ],
+          [
+            0.000689527900282975,
+            -0.9811987930204698,
+            -0.007877330978509414
+          ],
+          [
+            0.3740052105108374,
+            -0.1223890214896135,
+            -0.5114682009564091
+          ]
+        ],
+        "packet_transfer_signs": [
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "areal_radius_sign": 0,
+        "actual_geometry_growth": {
+          "R4_l2": 0.0,
+          "radial_tide_l2": 0.0,
+          "angular_tide_l2": 0.0
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 0,
+          "radial_tide_l2": 0,
+          "angular_tide_l2": 0
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "frozen_minus_own_coupled": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": 2.364162685292854,
+          "packet_width": 1.8811203665189518,
+          "child_areal_radius": -16.832992749650764,
+          "child_retained_fraction": 0.005408950711616907,
+          "child_source_common_window_retained_fraction": 0.004591903466853274,
+          "R4_l2": -0.11108771478393309,
+          "radial_tide_l2": -1264998.5777191448,
+          "angular_tide_l2": -13210684.322034283
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_a0_w1",
+      "imbalance": 0.0,
+      "width_scale": 1.0,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a0_w1",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          6.96558536406044e-08,
+          0.9999999999941624,
+          1.6220883525264166e-09
+        ],
+        "child_source_common_window_retained_fraction": 0.9999999999941624,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.401865179985703,
+        "child_areal_radius": 4.778420264854265,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999999283483307,
+            6.96558536406044e-08,
+            1.3636392015570199e-10
+          ],
+          [
+            2.8557711750920594e-13,
+            0.9999999999941624,
+            5.0492388048439815e-12
+          ],
+          [
+            1.2836025298224014e-10,
+            1.6220883525264166e-09,
+            0.9999999283483306
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.429564875319506e-10,
+          "radial_tide_l2": 0.1334978248049398,
+          "angular_tide_l2": 0.12634900123258605,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999999283483307,
+          0.9999999999941624,
+          0.9999999283483306
+        ],
+        "child_retained_fraction": 0.9999999999941624,
+        "packet_width": 1.6648538294120732,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.0012885788994185805,
+          0.0006171981902073982,
+          0.0009613354322999782
+        ],
+        "child_source_common_window_retained_fraction": 0.0006171981902073982,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 0.0009562499515807404,
+        "child_areal_radius": 21.812182700423737,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            4.5764937272621654e-05,
+            0.0012885788994185805,
+            0.4987400353561259
+          ],
+          [
+            0.0003784728904989498,
+            0.0006171981902073982,
+            0.0013004227854743176
+          ],
+          [
+            0.499085353490648,
+            0.0009613354322999782,
+            3.406392187693759e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.012666401571963219,
+          "radial_tide_l2": 1376356.169913357,
+          "angular_tide_l2": 14433942.526524652,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          4.5764937272621654e-05,
+          0.0006171981902073982,
+          3.406392187693759e-05
+        ],
+        "child_retained_fraction": 0.0006171981902073982,
+        "packet_width": 0.0011498270265313155,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0006171981902073982,
+        "length_change": -2.4009089300341224,
+        "width_change": -1.6637040023855418,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 17.03376243556947,
+        "packet_transfer_change": [
+          [
+            -0.9999541634110581,
+            0.0012885092435649399,
+            0.49874003521976196
+          ],
+          [
+            0.00037847289021337267,
+            -0.999382801803955,
+            0.0013004227804250788
+          ],
+          [
+            0.4990853533622877,
+            0.0009613338102116256,
+            -0.9999658644264536
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 0.012666400629006732,
+          "radial_tide_l2": 1376356.036415532,
+          "angular_tide_l2": 14433942.40017565
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0006171981902073982,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      },
+      "quantitative_minus_baseline": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": -6.418772289250503e-05,
+          "packet_width": -1.6612029797194493e-05,
+          "child_areal_radius": 0.2841646024231963,
+          "child_retained_fraction": 2.4119248413290552e-05,
+          "child_source_common_window_retained_fraction": 2.4119248413290552e-05,
+          "R4_l2": -0.030052622052863416,
+          "radial_tide_l2": 157729.41391680157,
+          "angular_tide_l2": 1713034.0734661967
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    },
+    {
+      "case_id": "nf256_am1_w1p2",
+      "imbalance": -1.0,
+      "width_scale": 1.2,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "control_mode": "coupled",
+      "parent_case": "nf256_am1_w1p2",
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          3.046371873371979e-07,
+          0.9996032387005792,
+          1.9837394367912712e-07
+        ],
+        "child_source_common_window_retained_fraction": 0.9996032387005792,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3767676538995683,
+        "child_areal_radius": 4.729137213630086,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999980863321889,
+            1.266324577753331e-06,
+            2.2651995529310305e-08
+          ],
+          [
+            9.339751194659131e-15,
+            0.9999999999993812,
+            5.19764786766075e-13
+          ],
+          [
+            2.832354611959074e-08,
+            3.291811699520269e-07,
+            0.9999970615141747
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.231056439971486e-10,
+          "radial_tide_l2": 0.13448426756111145,
+          "angular_tide_l2": 0.1468215288250527,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999980863321889,
+          0.9999999999993812,
+          0.9999970615141747
+        ],
+        "child_retained_fraction": 0.9999999999993812,
+        "packet_width": 1.5702155252706536,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.001121003426547504,
+          0.0009783001079056398,
+          0.0008956066926601494
+        ],
+        "child_source_common_window_retained_fraction": 0.0009783001079056398,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 0.001012916005673299,
+        "child_areal_radius": 21.563537428456154,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            2.358782244991588e-05,
+            0.12530804773090384,
+            0.37472145951326385
+          ],
+          [
+            0.00043218304279251567,
+            0.001305513690069273,
+            0.0012978491495956124
+          ],
+          [
+            0.374734013117617,
+            0.12529861329469769,
+            1.6352329655399738e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.0902046664250147,
+          "radial_tide_l2": 1264490.9444535756,
+          "angular_tide_l2": 13204921.204851234,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          2.358782244991588e-05,
+          0.001305513690069273,
+          1.6352329655399738e-05
+        ],
+        "child_retained_fraction": 0.001305513690069273,
+        "packet_width": 0.0011764008015802386,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.001305513690069273,
+        "length_change": -2.375754737893895,
+        "width_change": -1.5690391244690733,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.83440021482607,
+        "packet_transfer_change": [
+          [
+            -0.999974498509739,
+            0.1253067814063261,
+            0.3747214368612683
+          ],
+          [
+            0.0004321830427831759,
+            -0.9986944863093119,
+            0.0012978491490758476
+          ],
+          [
+            0.3747339847940709,
+            0.12529828411352772,
+            -0.9999807091845193
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 1.090204665501909,
+          "radial_tide_l2": 1264490.809969308,
+          "angular_tide_l2": 13204921.058029706
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.001305513690069273,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      },
+      "quantitative_minus_baseline": {
+        "available": true,
+        "coordinate_time": 3.0,
+        "sample_minus_reference": {
+          "child_proper_length": -7.52166879994633e-06,
+          "packet_width": 9.961745251728556e-06,
+          "child_areal_radius": 0.03551933045561384,
+          "child_retained_fraction": 0.0007124347482751654,
+          "child_source_common_window_retained_fraction": 0.0003852211661115321,
+          "R4_l2": 1.047485642800188,
+          "radial_tide_l2": 45864.188457020326,
+          "angular_tide_l2": 484012.7517927792
+        },
+        "percent_gate": null,
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "physical_conclusion_forced": false
+      }
+    }
+  ],
+  "question_status": {
+    "answered": true,
+    "changes_beyond_baseline": false,
+    "distinct_cases": [],
+    "percent_gate": null
+  },
+  "initial_cpu_seconds": 9.85876,
+  "child_cpu_seconds": 570.184177,
+  "executor_pools": 1,
+  "preparation_failures": [],
+  "initial_data": [
+    {
+      "case_id": "nf256_a1_w0p8",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 256,
+      "role": "narrow_shape",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 8.881784197001252e-16,
+      "tails": [
+        1.5238414276003522e-08,
+        1.5238414276004015e-08,
+        2.9190544334543793e-10,
+        2.919054433455293e-10,
+        7.799584218859963e-09,
+        7.799584218860592e-09
+      ],
+      "tail_max": 1.5238414276004015e-08,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": 2.0400018697038995e-14,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -4.44089209850063e-16,
+      "eigenvalue_max": 0.7499999999999996,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 2.0400018697038995e-14,
+      "shift_residual_max": 5.61151126361667e-12,
+      "shift_residual_rms": 5.392008132205686e-13,
+      "source_current_mean": 2.0400018697038995e-14,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 0.08700345991998404,
+      "held_out_hamilton_max": 0.08700345998021466,
+      "projected_hamilton_max": 1.4991163923753235e-09,
+      "r_min": -0.015476435561010415,
+      "r_max": 72.55559217184273,
+      "state_sha256": "ae892cb7298fb6186fbf3938a9e91a8489200703a5c889dae3726e5b0fc99e99",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 2.0308029999999997,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.11744446380426252,
+          0.999999999784833,
+          0.03172055161800396
+        ],
+        "child_source_common_window_retained_fraction": 0.999999999784833,
+        "retention_windows": {
+          "own_preparation": [
+            1.2,
+            2.8
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3962804219498173,
+        "child_areal_radius": 4.768192592751181,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999999851371048,
+            1.0738094931757784e-08,
+            2.9233878281094903e-10
+          ],
+          [
+            7.476880226064965e-11,
+            0.9999999997076372,
+            1.4490733613037324e-10
+          ],
+          [
+            2.0916232634782272e-10,
+            1.2703506857558728e-09,
+            0.9999999922282256
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.172293116992508e-10,
+          "radial_tide_l2": 0.13560261213153021,
+          "angular_tide_l2": 0.1271765012969138,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999999851371048,
+          0.9999999997076372,
+          0.9999999922282256
+        ],
+        "child_retained_fraction": 0.9999999997076372,
+        "packet_width": 1.359204737615248,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w0p8_frozen_geometry",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 256,
+      "role": "narrow_shape",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 8.881784197001252e-16,
+      "tails": [
+        1.5238414276003522e-08,
+        1.5238414276004015e-08,
+        2.9190544334543793e-10,
+        2.919054433455293e-10,
+        7.799584218859963e-09,
+        7.799584218860592e-09
+      ],
+      "tail_max": 1.5238414276004015e-08,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": 2.0400018697038995e-14,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -4.44089209850063e-16,
+      "eigenvalue_max": 0.7499999999999996,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 2.0400018697038995e-14,
+      "shift_residual_max": 5.61151126361667e-12,
+      "shift_residual_rms": 5.392008132205686e-13,
+      "source_current_mean": 2.0400018697038995e-14,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 0.08700345991998404,
+      "held_out_hamilton_max": 0.08700345998021466,
+      "projected_hamilton_max": 1.4991163923753235e-09,
+      "r_min": -0.015476435561010415,
+      "r_max": 72.55559217184273,
+      "state_sha256": "9722a87b41e2e36d7895393432145e81154300015ecd8c1213103cd528313a2f",
+      "phi_equals_prepared_columns": false,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.0,
+      "constructor": "unchanged own-source handoff branch; no new initial solve",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.3,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.2498191018454661,
+          0.999997150107679,
+          0.24974549102065996
+        ],
+        "child_source_common_window_retained_fraction": 0.999997150107679,
+        "retention_windows": {
+          "own_preparation": [
+            1.2,
+            2.8
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.383358540804383,
+        "child_areal_radius": 4.768232381666952,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.7502716731176211,
+            0.1248671814986399,
+            2.9993143154390576e-10
+          ],
+          [
+            0.03297743319972136,
+            0.8776638563791321,
+            0.08935871034566574
+          ],
+          [
+            2.1374410574885585e-10,
+            0.12486113206465461,
+            0.7502708143888482
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6672314272511315,
+          "radial_tide_l2": 0.10685737712981279,
+          "angular_tide_l2": 0.0035083001106946954,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.7502716731176211,
+          0.8776638563791321,
+          0.7502708143888482
+        ],
+        "child_retained_fraction": 0.8776638563791321,
+        "packet_width": 1.3966690912038944,
+        "blockers": [],
+        "source_reset": false
+      },
+      "control_mode": "frozen_geometry",
+      "initial_slice": "own source's propagated handoff",
+      "initial_coordinate_time": 0.3
+    },
+    {
+      "case_id": "nf256_a1_w1",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 256,
+      "role": "baseline",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 2.220446049250313e-16,
+      "tails": [
+        7.160285932717789e-08,
+        7.16028593271764e-08,
+        5.838031386363107e-12,
+        5.838031386367855e-12,
+        7.160285932740992e-08,
+        7.160285932740613e-08
+      ],
+      "tail_max": 7.160285932740992e-08,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 1.6544357261084327e-14,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -3.1073416735753415e-16,
+      "eigenvalue_max": 0.7500000000000002,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 1.6544357261084327e-14,
+      "shift_residual_max": 5.859313023485345e-12,
+      "shift_residual_rms": 5.672578662293049e-13,
+      "source_current_mean": 1.6544357261084327e-14,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 0.08013678118047807,
+      "held_out_hamilton_max": 0.08013678191218492,
+      "projected_hamilton_max": 1.347216818910588e-09,
+      "r_min": -0.02231703560508369,
+      "r_max": 72.73603277197671,
+      "state_sha256": "2166293e9298b6af30a9f2f6180d5be1e18bb6d0f483880be5a78a29ab376a95",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 1.9709000000000003,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          6.96558535295821e-08,
+          0.9999999999941624,
+          1.6220883525264166e-09
+        ],
+        "child_source_common_window_retained_fraction": 0.9999999999941624,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3871691623602027,
+        "child_areal_radius": 4.7499640174305355,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999999283483308,
+            6.96558535295821e-08,
+            1.363641051928728e-10
+          ],
+          [
+            2.8557711750920594e-13,
+            0.9999999999941624,
+            5.0492388048439815e-12
+          ],
+          [
+            1.2836025298224014e-10,
+            1.6220883525264166e-09,
+            0.9999999283483306
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.463013196913564e-10,
+          "radial_tide_l2": 0.13499296735135893,
+          "angular_tide_l2": 0.13443692734400683,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999999283483308,
+          0.9999999999941624,
+          0.9999999283483306
+        ],
+        "child_retained_fraction": 0.9999999999941624,
+        "packet_width": 1.461448112303635,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w1_frozen_geometry",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 256,
+      "role": "baseline",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 2.220446049250313e-16,
+      "tails": [
+        7.160285932717789e-08,
+        7.16028593271764e-08,
+        5.838031386363107e-12,
+        5.838031386367855e-12,
+        7.160285932740992e-08,
+        7.160285932740613e-08
+      ],
+      "tail_max": 7.160285932740992e-08,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 1.6544357261084327e-14,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -3.1073416735753415e-16,
+      "eigenvalue_max": 0.7500000000000002,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 1.6544357261084327e-14,
+      "shift_residual_max": 5.859313023485345e-12,
+      "shift_residual_rms": 5.672578662293049e-13,
+      "source_current_mean": 1.6544357261084327e-14,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 0.08013678118047807,
+      "held_out_hamilton_max": 0.08013678191218492,
+      "projected_hamilton_max": 1.347216818910588e-09,
+      "r_min": -0.02231703560508369,
+      "r_max": 72.73603277197671,
+      "state_sha256": "8c7dd491b48bf58afaa29419bed380843b3ff532ea5032914a3a7def886df444",
+      "phi_equals_prepared_columns": false,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.0,
+      "constructor": "unchanged own-source handoff branch; no new initial solve",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.3,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.14527594233696828,
+          0.9575550882424734,
+          0.20264489886705675
+        ],
+        "child_source_common_window_retained_fraction": 0.9575550882424734,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3752181433685506,
+        "child_areal_radius": 4.751796306743699,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.652079163376401,
+            0.14527594233696828,
+            1.4111622981396169e-10
+          ],
+          [
+            0.0074939570863371135,
+            0.9575550882424734,
+            0.03495095467061631
+          ],
+          [
+            1.3172322954739396e-10,
+            0.20264489886705675,
+            0.652079161323339
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6908544014773607,
+          "radial_tide_l2": 0.1104787249243099,
+          "angular_tide_l2": 0.0032462049087952373,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.652079163376401,
+          0.9575550882424734,
+          0.652079161323339
+        ],
+        "child_retained_fraction": 0.9575550882424734,
+        "packet_width": 1.495500886746171,
+        "blockers": [],
+        "source_reset": false
+      },
+      "control_mode": "frozen_geometry",
+      "initial_slice": "own source's propagated handoff",
+      "initial_coordinate_time": 0.3
+    },
+    {
+      "case_id": "nf256_a1_w1p2",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 256,
+      "role": "wide_shape",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 1.5543122344752192e-15,
+      "tails": [
+        1.8645349445064378e-06,
+        1.8645349445064309e-06,
+        6.214097212674277e-13,
+        6.214097212694331e-13,
+        2.9342310727232512e-06,
+        2.934231072723245e-06
+      ],
+      "tail_max": 2.9342310727232512e-06,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -5.037645256477393e-15,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -3.1955578910519594e-16,
+      "eigenvalue_max": 0.7499999999999991,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -5.037645256477393e-15,
+      "shift_residual_max": 7.279510518770936e-12,
+      "shift_residual_rms": 5.955555585118301e-13,
+      "source_current_mean": -5.037645256477393e-15,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 1.4279841863316136,
+      "held_out_hamilton_max": 1.4279841860183482,
+      "projected_hamilton_max": 7.033017178758147e-10,
+      "r_min": -0.028960268372657083,
+      "r_max": 72.88440040453983,
+      "state_sha256": "c5dfccac279594e39d0436c7ec5c81e32e506246368eb4d8a6bc93cde94d081c",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 1.9176059999999993,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          3.04637187327946e-07,
+          0.9996032387005792,
+          1.9837394385491245e-07
+        ],
+        "child_source_common_window_retained_fraction": 0.9996032387005792,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3767920954476085,
+        "child_areal_radius": 4.729244999194329,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999980863321887,
+            1.2663245775682936e-06,
+            2.2651995649584464e-08
+          ],
+          [
+            9.339751194659131e-15,
+            0.9999999999993812,
+            5.19764786766075e-13
+          ],
+          [
+            2.8323545953057285e-08,
+            3.291811702665901e-07,
+            0.9999970615141747
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.382588411729233e-10,
+          "radial_tide_l2": 0.13448339265528073,
+          "angular_tide_l2": 0.14691964888140102,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999980863321887,
+          0.9999999999993812,
+          0.9999970615141747
+        ],
+        "child_retained_fraction": 0.9999999999993812,
+        "packet_width": 1.5685148896558694,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf256_a1_w1p2_frozen_geometry",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 256,
+      "role": "wide_shape",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 1.5543122344752192e-15,
+      "tails": [
+        1.8645349445064378e-06,
+        1.8645349445064309e-06,
+        6.214097212674277e-13,
+        6.214097212694331e-13,
+        2.9342310727232512e-06,
+        2.934231072723245e-06
+      ],
+      "tail_max": 2.9342310727232512e-06,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -5.037645256477393e-15,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -3.1955578910519594e-16,
+      "eigenvalue_max": 0.7499999999999991,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -5.037645256477393e-15,
+      "shift_residual_max": 7.279510518770936e-12,
+      "shift_residual_rms": 5.955555585118301e-13,
+      "source_current_mean": -5.037645256477393e-15,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 1.4279841863316136,
+      "held_out_hamilton_max": 1.4279841860183482,
+      "projected_hamilton_max": 7.033017178758147e-10,
+      "r_min": -0.028960268372657083,
+      "r_max": 72.88440040453983,
+      "state_sha256": "7536bfdd9fbc99bd59ba4b47627b9916b09619613445f9463ad32de68c07e224",
+      "phi_equals_prepared_columns": false,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.0,
+      "constructor": "unchanged own-source handoff branch; no new initial solve",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.3,
+        "control_mode": "frozen_geometry",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          0.010511667608430704,
+          0.8297114161758469,
+          0.001638734973182446
+        ],
+        "child_source_common_window_retained_fraction": 0.8297114161758469,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3651753677979306,
+        "child_areal_radius": 4.7315321785945965,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.5124006557691259,
+            0.23954273280619312,
+            2.2926926894845655e-08
+          ],
+          [
+            0.0016467967449983697,
+            0.9878090038235822,
+            0.010544199431314996
+          ],
+          [
+            2.8570091279934125e-08,
+            0.2480438230444845,
+            0.5125221201164554
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 0.6637297799455529,
+          "radial_tide_l2": 0.10526397492702157,
+          "angular_tide_l2": 0.003003531377838686,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.5124006557691259,
+          0.9878090038235822,
+          0.5125221201164554
+        ],
+        "child_retained_fraction": 0.9878090038235822,
+        "packet_width": 1.5995353095521136,
+        "blockers": [],
+        "source_reset": false
+      },
+      "control_mode": "frozen_geometry",
+      "initial_slice": "own source's propagated handoff",
+      "initial_coordinate_time": 0.3
+    },
+    {
+      "case_id": "nf256_a0_w1",
+      "imbalance": 0.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 256,
+      "role": "uniform_imbalance",
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 2.220446049250313e-16,
+      "tails": [
+        7.160285932717789e-08,
+        7.16028593271764e-08,
+        5.838031386363107e-12,
+        5.838031386367855e-12,
+        7.160285932740992e-08,
+        7.160285932740613e-08
+      ],
+      "tail_max": 7.160285932740992e-08,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 1.6610703791398687e-14,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -4.440975230684907e-16,
+      "eigenvalue_max": 0.5000000000000004,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 1.6610703791398687e-14,
+      "shift_residual_max": 3.9399594697897555e-12,
+      "shift_residual_rms": 5.01915086411052e-13,
+      "source_current_mean": 1.6610703791398687e-14,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 0.053024334161548836,
+      "held_out_hamilton_max": 0.05302433383058414,
+      "projected_hamilton_max": 1.3387365490619813e-09,
+      "r_min": -0.031367796237264045,
+      "r_max": 73.20132211376742,
+      "state_sha256": "8f12dbeb28ae37f50cf9c8f72226e7572e137cfb3848c9351d31a15e159b31af",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 2.023470999999997,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          6.96558536406044e-08,
+          0.9999999999941624,
+          1.6220883525264166e-09
+        ],
+        "child_source_common_window_retained_fraction": 0.9999999999941624,
+        "retention_windows": {
+          "own_preparation": [
+            1.0,
+            3.0
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.401865179985703,
+        "child_areal_radius": 4.778420264854265,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999999283483307,
+            6.96558536406044e-08,
+            1.3636392015570199e-10
+          ],
+          [
+            2.8557711750920594e-13,
+            0.9999999999941624,
+            5.0492388048439815e-12
+          ],
+          [
+            1.2836025298224014e-10,
+            1.6220883525264166e-09,
+            0.9999999283483306
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.429564875319506e-10,
+          "radial_tide_l2": 0.1334978248049398,
+          "angular_tide_l2": 0.12634900123258605,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999999283483307,
+          0.9999999999941624,
+          0.9999999283483306
+        ],
+        "child_retained_fraction": 0.9999999999941624,
+        "packet_width": 1.6648538294120732,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf256_am1_w1p2",
+      "imbalance": -1.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 256,
+      "role": "catalog_only",
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -1.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 1.5543122344752192e-15,
+      "tails": [
+        1.8645349445064378e-06,
+        1.8645349445064309e-06,
+        6.214097212674277e-13,
+        6.214097212694331e-13,
+        2.9342310727232512e-06,
+        2.934231072723245e-06
+      ],
+      "tail_max": 2.9342310727232512e-06,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": 9.092257190633898e-15,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.7563355977526704e-16,
+      "eigenvalue_max": 0.7500000000000008,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 9.092257190633898e-15,
+      "shift_residual_max": 5.595524044110789e-12,
+      "shift_residual_rms": 5.746992211245209e-13,
+      "source_current_mean": 9.092257190633898e-15,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 1.4826538955217847,
+      "held_out_hamilton_max": 1.4826538954047201,
+      "projected_hamilton_max": 1.0134762996562586e-09,
+      "r_min": -1.4074221300547674,
+      "r_max": 72.88301266608616,
+      "state_sha256": "c8d63434fd60e897a3fc4beb2d6a554a8029a3f94deae16602b370b40ac36d06",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 1.9159800000000047,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "control_mode": "coupled",
+        "common_child_window": [
+          1.0,
+          3.0
+        ],
+        "common_child_window_packet_retention": [
+          3.046371873371979e-07,
+          0.9996032387005792,
+          1.9837394367912712e-07
+        ],
+        "child_source_common_window_retained_fraction": 0.9996032387005792,
+        "retention_windows": {
+          "own_preparation": [
+            0.8,
+            3.2
+          ],
+          "common_spatial_child": [
+            1.0,
+            3.0
+          ],
+          "tagged_source_columns": [
+            2,
+            3
+          ],
+          "denominator": "total probability of the tagged child source pair"
+        },
+        "child_proper_length": 2.3767676538995683,
+        "child_areal_radius": 4.729137213630086,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999980863321889,
+            1.266324577753331e-06,
+            2.2651995529310305e-08
+          ],
+          [
+            9.339751194659131e-15,
+            0.9999999999993812,
+            5.19764786766075e-13
+          ],
+          [
+            2.832354611959074e-08,
+            3.291811699520269e-07,
+            0.9999970615141747
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 9.231056439971486e-10,
+          "radial_tide_l2": 0.13448426756111145,
+          "angular_tide_l2": 0.1468215288250527,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999980863321889,
+          0.9999999999993812,
+          0.9999970615141747
+        ],
+        "child_retained_fraction": 0.9999999999993812,
+        "packet_width": 1.5702155252706536,
+        "blockers": [],
+        "source_reset": false
+      }
+    }
+  ],
+  "prepared_cases": [
+    "nf256_a1_w0p8",
+    "nf256_a1_w0p8_frozen_geometry",
+    "nf256_a1_w1",
+    "nf256_a1_w1_frozen_geometry",
+    "nf256_a1_w1p2",
+    "nf256_a1_w1p2_frozen_geometry",
+    "nf256_a0_w1",
+    "nf256_am1_w1p2"
+  ],
+  "preparation_cpu_seconds": 48.761810999999994,
+  "handoff_cpu_seconds": 37.638666,
+  "continuation_budget_seconds": 21551.238189,
+  "aggregate_cpu_seconds": 620.1067539999999,
+  "assessment_cpu_seconds": 1.160766
+}

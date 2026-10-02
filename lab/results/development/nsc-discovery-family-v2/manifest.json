@@ -1,0 +1,318 @@
+{
+  "schema": "NSC-DISCOVERY-EPISODE-v1",
+  "stage": 2,
+  "status": "STATION_REACHED",
+  "campaign": "nsc-discovery-source-family",
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "cases": [
+    {
+      "case_id": "nf256_a1_w0p8",
+      "ordinal": 0,
+      "npz": "nf256_a1_w0p8-000000.npz",
+      "json": "nf256_a1_w0p8-000000.json",
+      "arrays_sha256": "95619914352b2ed06ed8ec7ac76c326a1169f37817ae7741e157dcaefb00256c",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a1_w0p8"
+    },
+    {
+      "case_id": "nf256_a1_w0p8_frozen_geometry",
+      "ordinal": 0,
+      "npz": "nf256_a1_w0p8_frozen_geometry-000000.npz",
+      "json": "nf256_a1_w0p8_frozen_geometry-000000.json",
+      "arrays_sha256": "95619914352b2ed06ed8ec7ac76c326a1169f37817ae7741e157dcaefb00256c",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "frozen_geometry",
+      "parent_case": "nf256_a1_w0p8"
+    },
+    {
+      "case_id": "nf256_a1_w1",
+      "ordinal": 0,
+      "npz": "nf256_a1_w1-000000.npz",
+      "json": "nf256_a1_w1-000000.json",
+      "arrays_sha256": "3a01ff6f168bb3f9c3db7d31b75de697197a400a740f1e40bea4db41177baa26",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a1_w1"
+    },
+    {
+      "case_id": "nf256_a1_w1_frozen_geometry",
+      "ordinal": 0,
+      "npz": "nf256_a1_w1_frozen_geometry-000000.npz",
+      "json": "nf256_a1_w1_frozen_geometry-000000.json",
+      "arrays_sha256": "3a01ff6f168bb3f9c3db7d31b75de697197a400a740f1e40bea4db41177baa26",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "frozen_geometry",
+      "parent_case": "nf256_a1_w1"
+    },
+    {
+      "case_id": "nf256_a1_w1p2",
+      "ordinal": 0,
+      "npz": "nf256_a1_w1p2-000000.npz",
+      "json": "nf256_a1_w1p2-000000.json",
+      "arrays_sha256": "45856e94d03d215e9c421fa63157fdb2fa75dd10ccc1fb8a3b744cb455bd89ea",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a1_w1p2"
+    },
+    {
+      "case_id": "nf256_a1_w1p2_frozen_geometry",
+      "ordinal": 0,
+      "npz": "nf256_a1_w1p2_frozen_geometry-000000.npz",
+      "json": "nf256_a1_w1p2_frozen_geometry-000000.json",
+      "arrays_sha256": "45856e94d03d215e9c421fa63157fdb2fa75dd10ccc1fb8a3b744cb455bd89ea",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "frozen_geometry",
+      "parent_case": "nf256_a1_w1p2"
+    },
+    {
+      "case_id": "nf256_a0_w1",
+      "ordinal": 0,
+      "npz": "nf256_a0_w1-000000.npz",
+      "json": "nf256_a0_w1-000000.json",
+      "arrays_sha256": "275d0385afe0f42b97e48ea78de4e4e4ccf5b0dcabf242590967d906760fe9ce",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "parent_case": "nf256_a0_w1"
+    },
+    {
+      "case_id": "nf256_am1_w1p2",
+      "ordinal": 0,
+      "npz": "nf256_am1_w1p2-000000.npz",
+      "json": "nf256_am1_w1p2-000000.json",
+      "arrays_sha256": "8ea8392ad791355d7dab80925470525a2afbbfde741e92fa5d641017eb59c60c",
+      "nf": 256,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "parent_case": "nf256_am1_w1p2"
+    }
+  ],
+  "workers": 6,
+  "cpu_budget_seconds": 21551.238189,
+  "aggregate_cpu_budget_seconds": 21600.0,
+  "initial_cpu_seconds": 9.85876,
+  "handoff_cpu_seconds": 37.638666,
+  "preparation_cpu_seconds": 48.761810999999994,
+  "preparation_failures": [],
+  "cpu_accounting": "sum_of_child_process_time",
+  "forecast_factor": 1.5,
+  "chunk_limit_bytes": 67108864,
+  "threads_per_case": 1,
+  "initial_state_called_during_continuation": false,
+  "evolved": true,
+  "stability_certificate": false,
+  "zero_residual_gate": false,
+  "max_T_forced": false,
+  "child_cpu_seconds": 570.184177,
+  "executor_pools": 1,
+  "saved_t03_radius_copied": false,
+  "results": [
+    {
+      "case_id": "nf256_a1_w0p8_frozen_geometry",
+      "status": "station_reached",
+      "child_cpu_seconds": 68.215064,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a1_w0p8_frozen_geometry-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 68.84716949999972
+    },
+    {
+      "case_id": "nf256_a1_w1p2_frozen_geometry",
+      "status": "station_reached",
+      "child_cpu_seconds": 70.149228,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a1_w1p2_frozen_geometry-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 92.41138800000013
+    },
+    {
+      "case_id": "nf256_a1_w1p2",
+      "status": "station_reached",
+      "child_cpu_seconds": 72.75883400000001,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a1_w1p2-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 76.16731049999996
+    },
+    {
+      "case_id": "nf256_a1_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 78.82116299999998,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a1_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 110.27618100000024
+    },
+    {
+      "case_id": "nf256_a1_w1_frozen_geometry",
+      "status": "station_reached",
+      "child_cpu_seconds": 79.26085,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a1_w1_frozen_geometry-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 97.64220150000017
+    },
+    {
+      "case_id": "nf256_a1_w0p8",
+      "status": "station_reached",
+      "child_cpu_seconds": 84.07614899999999,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a1_w0p8-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 114.27313050000075
+    },
+    {
+      "case_id": "nf256_a0_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 58.053698,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_a0_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 74.71176299992098
+    },
+    {
+      "case_id": "nf256_am1_w1p2",
+      "status": "station_reached",
+      "child_cpu_seconds": 58.849191000000005,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_am1_w1p2-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 82.48000950001284
+    }
+  ],
+  "memory_limit_bytes": 8589934592,
+  "cumulative_child_cpu_seconds": 570.184177,
+  "assessment_cpu_seconds": 1.160766,
+  "cumulative_coordinator_cpu_seconds": 1.160766,
+  "aggregate_cpu_seconds": 620.1067539999999
+}

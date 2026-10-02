@@ -114,6 +114,28 @@ controls. The [external run binding](../lab/results/development/nsc-discovery-fa
 authenticates the frozen `c4a22e5` producer and completed artifacts without
 rewriting their original records. Total measured family CPU is 732.65 seconds.
 
+The [finer successor](../lab/results/development/nsc-discovery-family-v2/source-family.json)
+solves all five selected sources, including that formerly unresolved member,
+and evolves them with three own-source frozen controls to $T=3$. Its total
+measured CPU is 620.11 seconds. All selected coupled preparations share the
+same qualitative fate. In the common fixed $(1,3)$ child window, the original
+child pair retains 0.0388, 0.0593 and 0.0878 percent for narrow, nominal and
+wide sources. The corresponding frozen controls retain 0.459, 0.515 and
+0.547 percent. These are comparisons at the same coordinate time; their
+proper clocks differ. Source width has a quantitative effect, but none of
+these packets establishes a holding mechanism. The predecessor's preparation
+failure remains preserved in its original record.
+
+The next balance query uses the actual retained spectrum to prepare a
+stationary source while leaving the geometric means free.
+[Static source-selected control](../lab/docs/nsc-discovery-stationary.md).
+The [source-free control](../lab/docs/nsc-discovery-vacuum-control.md) provides
+an exact same-action comparison with constant areal radius and tidal curvature
+despite contracting radial proper lengths. The
+[translation control](../lab/docs/nsc-discovery-translation.md) moves the
+complete state, geometry, observers and clocks across the periodic seam;
+it does not replace a future ambient-extent comparison.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
