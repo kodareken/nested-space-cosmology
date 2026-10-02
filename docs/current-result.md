@@ -157,6 +157,35 @@ details and the ambient response, and locks a forecast before generating
 the withheld future local measurement. Its physical regional readout is
 separate from its modal observer covariance.
 
+### First carrier circuit and the choice of the next local measurement
+
+All six unchanged [continuations](../lab/results/development/nsc-discovery-crossing-v1/manifest.json)
+reach $T=8$ using 431.73 aggregate child CPU seconds. The fine half-step child
+probability returns to 0.999687; its frozen control reaches 0.994718.
+The coupled child proper length is $9.14\times10^{-13}$, while the frozen
+length stays 2.3752. This is a carrier-period return candidate with severe
+geometric contraction, not a maintained physical region. An ambient-extent
+comparison will distinguish the carrier dependence, retaining the changed
+initial constraint preparation on a longer domain.
+
+Actual radial and angular tidal components survive the spatial and timestep
+comparisons; cancellation-sensitive $R_h$ and contracted Weyl channels do
+not. The [crossing assessment](../lab/scripts/assess_nsc_discovery_crossing.py)
+keeps those verdicts separate and records the cadence gap after $T=5.8$.
+The clock at $x=2$ reaches 1.3521155, advancing only about $1.27\times10^{-4}$
+between coordinate times three and eight.
+
+The [short grandchild record](../lab/results/development/nsc-discovery-grandchild-v1/nf256/measurement.json)
+preserves a locked forecast followed by an independent continuation. Its
+regional-content change is only $-1.68\times10^{-11}$; the linear prediction
+differs by about 5.12 percent of that tiny effect. This interval supplies
+too little regional response for a headline prediction. The successor moves
+the readout to $\Delta\tau=0.75$, near coordinate time one, rather than
+refining the early tail. The separate
+[width response](../lab/docs/nsc-discovery-width-response.md) changes the
+physical preparation on the same chart and predicts a withheld width;
+it is not a coordinate rescaling or an assumed universal power law.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)

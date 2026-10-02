@@ -9,8 +9,8 @@ successor is developed. [Execution status](docs/current-result.md#active-discove
 The longer continuation reaches $T=3$: the fixed child collar gains then
 loses field probability, while its proper radial length contracts and areal
 radius grows. Fine confirmation resolves this behavior and strong tidal
-growth. Fourteen evolved source-family preparations share the loss of
-initial child localization; one preparation remains unresolved. Coupled
+growth. The source-family preparations share the loss of initial child
+localization; a finer retry resolves the earlier constructor failure. Coupled
 causal reduction reproduces the field forces and generated geometry, and a
 withheld exterior-source change predicts a local measurement. The next
 investigation removes the supplied initial geometry assumption to test a
