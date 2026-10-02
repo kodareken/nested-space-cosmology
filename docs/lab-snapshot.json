@@ -12771,11 +12771,11 @@
       "sha256": "6e41966574e87549d6019df8d5a2610375a326aaae2f66f89c10c9d8a5630a4e"
     },
     {
-      "bytes": 3998,
+      "bytes": 10340,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "697efe0155cdbf796c0174468c90a4c368bb7dbe",
+      "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
       "path": "lab/docs/nsc-discovery-dynamic-preparation.md",
-      "sha256": "928caf07bfbd7b6cad4518d496577617404c12c189ee1710a2e53d789235cd2d"
+      "sha256": "2b1a8e1a6382cb147287c0fb9e817dc77b2f00f46cefafe2949cc064103ed617"
     },
     {
       "bytes": 6690,
@@ -82313,11 +82313,11 @@
       "sha256": "c1e5d1e0597889eeab2fd2fc30f695f1e86d5b7814a7e34839a551f06f91078c"
     },
     {
-      "bytes": 1686,
+      "bytes": 4460,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "697efe0155cdbf796c0174468c90a4c368bb7dbe",
+      "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
       "path": "lab/scripts/derive_nsc_discovery_dynamic_preparation.py",
-      "sha256": "bc0e37dccb31a2094981f0e04aec78e424ee1d6fc1ca1463dba7c2220c03a2de"
+      "sha256": "4cba0bf15e4e54db023ddb20182dffe5d2bc807429b940ef5f30a2369e7f4931"
     },
     {
       "bytes": 4615,
@@ -85043,11 +85043,11 @@
       "sha256": "442da2767e172f3032b36908cb6b93128231072f69778bb0c885fce739935f60"
     },
     {
-      "bytes": 17492,
+      "bytes": 48899,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "697efe0155cdbf796c0174468c90a4c368bb7dbe",
+      "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
       "path": "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py",
-      "sha256": "9b755da2eaf9b42202fd3e2aee60d03610dc1fd56ce53d5577d6881d84c0cbe5"
+      "sha256": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1"
     },
     {
       "bytes": 102165,
@@ -87299,11 +87299,11 @@
       "sha256": "71a83f879b9774b4d765e1b0af27f1b2dfe1c22827945fbc1e833b5328e2f1db"
     },
     {
-      "bytes": 3863,
+      "bytes": 11192,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "697efe0155cdbf796c0174468c90a4c368bb7dbe",
+      "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
       "path": "lab/tests/test_nsc_discovery_dynamic_preparation.py",
-      "sha256": "4a83aa8e994155e760e5eef83e15f14227a835fc58c1addd9407416efb6614df"
+      "sha256": "8b953eb0d2059505edd07510ee876ca27aed0a80d876a884b3aad270e546271d"
     },
     {
       "bytes": 35102,

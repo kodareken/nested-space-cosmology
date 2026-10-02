@@ -74,7 +74,7 @@ hashes and replays the owned source and constraints without a solve or write.
 .venv/validation/bin/python scripts/lab.py \
   scripts/derive_nsc_discovery_dynamic_preparation.py
 .venv/validation/bin/python scripts/lab.py \
-  scripts/derive_nsc_discovery_dynamic_preparation.py --prepare \
+  scripts/derive_nsc_discovery_dynamic_preparation.py --prepare --producer-commit HEAD \
   --write results/development/nsc-discovery-dynamic-preparation-v1
 .venv/validation/bin/python scripts/lab.py \
   scripts/derive_nsc_discovery_dynamic_preparation.py \
@@ -84,3 +84,112 @@ hashes and replays the owned source and constraints without a solve or write.
 The focused [tests](../tests/test_nsc_discovery_dynamic_preparation.py) use
 explicit smaller-resolution/harmonic test preparations and temporary
 checkpoints only. Root owns frozen NF128 execution and any later episode.
+
+## Frozen controls and one coherent successor
+
+The immutable v1 checkpoint was produced at `2dab719`. Its original JSON has
+eight source hashes but no `producing_commit`. Extending this owner does not
+change that checkpoint or repair its header. A separately supplied observed
+binding names the exact JSON and payload SHA256 plus `producing_commit`.
+Authentication checks the old hashes against immutable Git blobs and labels
+this as a post-run external observation. Numerical replay additionally
+requires the live physical owners to match their historical bytes.
+
+The successor copies both uniform and patterned controls by value. Its one
+additional source rotates the **stored** real eigenframe columns 0 and 4 by
+$\theta=\pi/6$ before solving its own chi=0 constraint. The old frame's order,
+signs and hash are retained. The rotation preserves Gram, CAR eigenvalues,
+occupations and trace 3, while changing the physical covariance because the
+two occupations differ. The covariance Frobenius difference is
+$\sqrt2/4$. Its nonzero Hamiltonian commutator is expected physical coherence,
+not a rejected spectral preparation. It is not charge conjugation.
+
+Source density differences are measured at the same Q. The new radius solves
+the source of the rotated frame; no old radius is rebound as a solution.
+Both timestep caps fork this same stored state. No independent degenerate
+eigenframe is chosen for a timestep comparator. Spatial convergence is not
+claimed; any later spatial confirmation must preserve a compatible physical
+source frame and phase, then solve that source's radius.
+
+## Thin diagnostic episode
+
+`prepare_episode` freezes six cases: the three preparations at NF128, each at
+caps 0.001 and 0.0005. Stations are coordinate times 0.3, 1 and 3. The saved
+native geometry frame, canonical momenta, full field columns, actual clocks,
+source columns and fixed reference are retained in the existing episode
+checkpoint format. Initial owned lapse and shift constraints must be solved
+within the explicitly declared resolved error, default $10^{-6}$ in their
+owned density units. Static critical forces are not an admission condition.
+
+`run_episode` delegates the existing episode pool worker, coupled RK4,
+principal step restriction, checkpoint publication and locked aggregate CPU
+ledger. At most four workers share one pool. Default budget is 300 CPU
+seconds, including preparation and observations; an explicitly accepted
+six-hour budget is the upper limit. Last admissible states, finite budget
+stops and immutable chunks of at most 64 MiB are preserved. Resume uses the
+stored state and cumulative ledger, without source reselection, constraint
+reset, or another initial solve.
+
+The scoped adapter adds station 0.3 and redirects diagnostics to the frozen
+period-aware extent consumer (`real-periodic-rfft-v2`, source SHA256
+`0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170`,
+committed by root at `6562313`). Real clock samples still implement the same
+$d\tau=rQ\,dT$ and owned endpoint trapezoid per RK4 step. Rows use the actual
+returned runner clocks. No old atlas implementation is selected dynamically.
+
+Primary localization uses **all columns**: positive probability per proper
+length, its contrast and peak (flat profiles have no assigned peak), the
+effective proper participation width and fixed spatial contents. Columns 2
+and 3 are only selected spectral labels, with no prepared-child ancestry.
+The observer retains actual metric tides, the constraint pair $h_c=QC$ and
+$D$ separately from raw C, actual rates and source forces, fixed-window
+normal energies, disjoint pressure/lapse/flux accounting and trapezoid work.
+No moving boundary or physical wall is introduced.
+
+A first sampled sign change of an initially positive local lapse-source
+density is saved as an event and evolution continues. CAR positivity does
+not imply local Dirac energy-density positivity later. That event is neither
+an instability nor a sector failure. Stops are chart failure, nonfinite or
+diagnostic admissibility failure, numerical restriction and budget stops.
+Startup force alone is not evidence of holding. Each returned state retains
+the finite observed effect or its named blocker; no continuum or propagated
+observable error certificate is claimed.
+
+The returned assessment reports changes in child proper length, areal radius,
+all-column probability, normal energy, source contrast and proper participation
+width, together with actual tides and the last constraint pair. Timestep
+comparisons join equal timestamps and verify their identical initial-state
+pins. They remain finite timestep indicators, with no spatial convergence or
+holding inference. A case with only a startup row returns its recorded stop or
+the explicit blocker `no evolved physical observation`.
+
+Every new production checkpoint requires a frozen producing commit and the
+complete observed local dependency closure. The parent freezes source bytes
+before these explicit commands; the preserved v1 binding remains external:
+
+```sh
+.venv/validation/bin/python scripts/lab.py \
+  scripts/derive_nsc_discovery_dynamic_preparation.py \
+  --check results/development/nsc-discovery-dynamic-preparation-v1 \
+  --observed-binding /path/to/v1-observed-binding.json
+.venv/validation/bin/python scripts/lab.py \
+  scripts/derive_nsc_discovery_dynamic_preparation.py \
+  --coherent results/development/nsc-discovery-dynamic-preparation-v1 \
+  --observed-binding /path/to/v1-observed-binding.json \
+  --execute --producer-commit HEAD \
+  --write results/development/nsc-discovery-dynamic-preparation-v2
+.venv/validation/bin/python scripts/lab.py \
+  scripts/derive_nsc_discovery_dynamic_preparation.py \
+  --episode results/development/nsc-discovery-dynamic-preparation-v2 \
+  --execute --producer-commit HEAD \
+  --write results/development/nsc-discovery-dynamic-episode-v1
+.venv/validation/bin/python scripts/lab.py \
+  scripts/derive_nsc_discovery_dynamic_preparation.py \
+  --run-episode results/development/nsc-discovery-dynamic-episode-v1 \
+  --workers 4 --episode-cpu 300
+```
+
+The observed-binding JSON has `producing_commit`, `record_sha256` and
+`payload_sha256`. Its assertion is checked, not copied into the old record.
+Tests use temporary checkpoints and one owned RK4 step; scientific production
+remains root-owned.
