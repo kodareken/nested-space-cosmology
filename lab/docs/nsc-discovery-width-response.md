@@ -159,3 +159,86 @@ resolutions. Focused tests use short preview evolutions only:
 ```sh
 .venv/validation/bin/python scripts/lab.py -m pytest tests/test_nsc_discovery_width_response.py -q
 ```
+
+## Nonlinear successor after the measured linear scope limit
+
+The preserved NF256 linear-v1 measurement at width 1.05 has observed change
+`-0.08956414058` against linear change `-0.10596753609`, with signed remainder
+about `+0.0164034` (18.31% of the observed effect). Its derivative-step indicator
+is only about `3.37e-6`. This is a nonlinear response scope limit; it is not
+explained by the measured frame-step precision indicator and is not a theory
+failure. The original JSON/NPZ and producing identity at commit `2b37f3e` remain
+unchanged. The width-1.05 measurement is not training data for the successor.
+
+The nonlinear-v2 experiment predeclares **width 1.03** before any new holdout
+construction. Its proper-clock target is the original fine baseline's absolute
+`tau*=0.3578554631682531`. Four independently prepared neighboring baselines
+`w=1±h`, for outer h `0.001` and `0.0005`, each solve their own initial radius.
+Each transports one complete first width direction. The inner source-frame
+increment is held at `eta=0.0005` across the four neighbors; each initializer
+also compares its frame direction with `eta=0.001`. This separates outer stencil
+convergence from changing the initializer's differentiation increment.
+
+Every neighboring direction includes normalized packet construction, outer
+Löwdin differentiation, the implicit initial radius response and the full
+retarded state Jv. State, tangent, tau and delta-tau are advanced on the same
+existing coupled RK4 stages. When the neighbor crosses the common target, a
+bracketed decreasing-step event adapter advances **both state and tangent on
+the same trial step**. It never substitutes that neighbor's own T=0.3 clock.
+At the actual rooted event the first coefficient is
+
+\[
+D(w,\tau_*)=\partial_wO|_t-\dot O\,\partial_w\tau/\dot\tau.
+\]
+
+The second coefficient is the centered difference of these complete first
+retarded coefficients:
+
+\[
+C_h(\tau_*)=\frac{D(1+h,\tau_*)-D(1-h,\tau_*)}{2h}.
+\]
+
+No Hessian equation, new force, particle or restoring mechanism is introduced.
+The two curvature estimates and their forecast difference are reported. The
+quadratic forecast is
+
+\[
+\widehat O(1.03,\tau_*)=O(1,\tau_*)+0.03D(1,\tau_*)
+ +\tfrac12(0.03)^2C_h(\tau_*).
+\]
+
+Only the nominal baseline preparation/prediction are read from linear-v1. Their
+hashes and committed producer bytes are authenticated. The old held-out
+measurement is not read for fitting. `--redo-baseline` can replace this cache
+with a fresh own-source nominal preparation and common-clock response when
+needed, retaining the same production absolute target.
+
+New `curvature-prepare.json/.npz` and `curvature-prediction.json/.npz` seal the
+neighbor preparations, rooted states/tangents, coefficients and quadratic
+forecast before `--measure-curvature` creates the width-1.03 source. That held
+arm gets its own dense radius and nonlinear actual-clock event. Linear and
+quadratic signed remainders, effect sizes and available h/event indicators stay
+raw; no all-green threshold is installed. These indicators do not certify the
+unmeasured spatial/time evolution error. The fresh batch keeps the aggregate
+300 CPU-second limit and factor-1.5 forecast, creation-only stages and 64 MiB
+chunks. Stops remain retained outcomes, not non-existence conclusions.
+
+After root freezes and commits the updated producer, use:
+
+```sh
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --preflight --nonlinear --baseline results/development/nsc-discovery-width-response-v1
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --prepare-curvature --nonlinear --nf 256 --production --duration 0.3 \
+  --baseline results/development/nsc-discovery-width-response-v1 \
+  --output results/development/nsc-discovery-width-response-nonlinear-v2
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --predict-curvature --output results/development/nsc-discovery-width-response-nonlinear-v2
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --measure-curvature --output results/development/nsc-discovery-width-response-nonlinear-v2
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --check --nonlinear --output results/development/nsc-discovery-width-response-nonlinear-v2
+```
+
+`--run --nonlinear` executes the same immutable sequence. The explicit stage
+commands make the forecast inspectable before the new independent measurement.

@@ -235,3 +235,105 @@ def test_failed_jv_keeps_last_finite_baseline_and_direction(tmp_path, monkeypatc
     assert np.array_equal(arrays["baseline_r"], arrays["initial_r"])
     assert np.isfinite(arrays["d0_r"]).all()
     assert width.check(directory)["ok"]
+
+
+def test_retarded_clock_root_carries_tangent_on_the_same_manufactured_step():
+    alpha = .25; w = 1.1; target = .0015
+    def stepper(parameter, state, tangent, dt):
+        return {"state": state+parameter*dt, "tangent": tangent+dt,
+                "tau": (1+alpha*parameter)*dt, "delta_tau": alpha*dt}
+    bracket = {"state": np.array([w*w]), "tangent": np.array([2*w]),
+               "time": 0., "tau": 0., "delta_tau": 0., "dt_hi": .003}
+    event = width.root_retarded_event(w, bracket, target, stepper=stepper)
+    assert event["tangent_carried_on_same_rooted_step"]
+    assert event["uses_linear_clock_correction_as_event"] is False
+    assert abs(event["tau"]-target) < 1e-8
+    assert event["state"][0] == pytest.approx(w*w+w*event["time"], abs=1e-14)
+    assert event["tangent"][0] == pytest.approx(2*w+event["time"], abs=1e-14)
+    assert event["delta_tau"] == pytest.approx(alpha*event["time"], abs=1e-14)
+    retarded = event["tangent"][0]-w*event["delta_tau"]/(1+alpha*w)
+    exact = 2*w+target/(1+alpha*w)**2
+    assert retarded == pytest.approx(exact, abs=1e-8)
+    assert abs(retarded-event["tangent"][0]) > 1e-5
+
+
+def test_manufactured_curvature_is_difference_of_common_clock_slopes():
+    alpha, target = .4, .002
+    # y(w,t)=w^2+w*t and tau=(1+alpha*w)*t.
+    def slope(w):
+        return 2*w+target/(1+alpha*w)**2
+    exact_second = 2-2*alpha*target/(1+alpha)**3
+    second = []
+    for h in width.DERIVATIVE_H:
+        second.append(width.curvature_from_slopes([slope(1-h), slope(1+h)], h))
+    assert second[-1] == pytest.approx(exact_second, abs=1e-9)
+    assert abs(second[1]-exact_second) <= abs(second[0]-exact_second)
+    delta = width.NONLINEAR_HELD_OUT_WIDTH-1
+    assert 1.03 == width.NONLINEAR_HELD_OUT_WIDTH
+    quadratic = 1+target/(1+alpha)+delta*slope(1)+.5*delta**2*second[-1]
+    actual = (1+delta)**2+(1+delta)*target/(1+alpha*(1+delta))
+    assert abs(actual-quadratic) < 1e-8
+
+
+def test_nonlinear_common_clock_forecast_precedes_new_holdout_and_preserves_old(tmp_path, monkeypatch):
+    old = tmp_path/"linear-history"; new = tmp_path/"nonlinear-successor"
+    width.prepare(old, nf=128, duration=.002, step_cap=.002)
+    width.predict(old)
+    old_hashes = {path.name: width.episode.file_sha256(path) for path in old.iterdir()}
+    actual_load = width.load; loaded = []
+    def load(output, stage):
+        loaded.append((str(output), stage))
+        return actual_load(output, stage)
+    monkeypatch.setattr(width, "load", load)
+    record = width.prepare_curvature(new, baseline=old, nf=128, duration=.002, step_cap=.002)
+    assert record["status"] == "prepared" and len(record["branches"]) == 4
+    assert record["inputs"]["held_out_width"] == 1.03
+    assert record["nominal"]["old_measurement_read"] is False
+    assert record["old_width1p05_used_for_fit"] is False
+    assert all(branch["initial_direction"]["base_width"] == branch["width"] for branch in record["branches"])
+    forecast = width.predict_curvature(new)
+    assert forecast["status"] == "predicted"
+    assert len(forecast["curvature_coefficients"]) == 2
+    assert all(row["target_tau"] == forecast["target_tau"] for row in forecast["neighbors"])
+    assert all(abs(row["tau"]-forecast["target_tau"]) < 1e-8 for row in forecast["neighbors"])
+    assert all(row["event"]["tangent_carried_on_same_rooted_step"] for row in forecast["neighbors"])
+    assert any(abs(row["time"]-.002) > 1e-10 for row in forecast["neighbors"])
+    assert all(row["time"] <= .01 for row in forecast["neighbors"])
+    sealed_hash = width.episode.file_sha256(new/"curvature-prediction.json")
+    actual_pair = width.pair_at_width; constructed = []
+    def held_pair(pair, center):
+        if center == 1.03:
+            assert width.episode.file_sha256(new/"curvature-prediction.json") == sealed_hash
+            constructed.append(center)
+        return actual_pair(pair, center)
+    monkeypatch.setattr(width, "pair_at_width", held_pair)
+    result = width.measure_curvature(new)
+    assert constructed == [1.03]
+    assert result["status"] == "measured_at_common_absolute_tau"
+    assert result["quadratic_signed_remainder"] is not None
+    assert result["all_green_threshold"] is None
+    assert result["W_unchanged"] and result["observer_unchanged"]
+    assert result["coordinate_time"] <= .01
+    assert result["aggregate_cpu_seconds"] < 300
+    assert width.check(new)["ok"]
+    assert width.episode.file_sha256(new/"curvature-prediction.json") == sealed_hash
+    assert {path.name: width.episode.file_sha256(path) for path in old.iterdir()} == old_hashes
+    assert not any(output == str(old) and stage == "measurement" for output,stage in loaded)
+
+
+def test_nonlinear_refuses_old_evidence_destination():
+    with pytest.raises(PermissionError, match="immutable"):
+        width._nonlinear_output(width.LEGACY_LINEAR_OUTPUT)
+
+
+def test_nonlinear_redo_nominal_uses_one_shared_actual_clock_target(tmp_path):
+    directory = tmp_path/"redo-nonlinear"
+    prepared = width.prepare_curvature(directory, nf=128, duration=.001, step_cap=.001, redo_baseline=True)
+    assert prepared["nominal"]["cached"] is False
+    forecast = width.predict_curvature(directory)
+    assert forecast["status"] == "predicted"
+    assert forecast["target_tau"] > 0
+    assert forecast["nominal"]["status"] == "coordinate_baseline_reached"
+    assert all(row["target_tau"] == forecast["target_tau"] for row in forecast["neighbors"])
+    assert all(row["time"] <= .01 for row in forecast["neighbors"])
+    assert width.check(directory)["ok"]
