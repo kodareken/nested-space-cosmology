@@ -6,8 +6,19 @@ arm from `nsc-discovery-prediction-v1`. It extends that finite realization
 without reinitializing the source, geometry or constraints. The
 [CLI](../scripts/derive_nsc_discovery_grandchild.py) previews by default;
 [tests](../tests/test_nsc_discovery_grandchild.py) use a short future interval.
-The production experiment is a newly measured grandchild content forecast
-at another $\Delta\tau=0.05$ of the existing normal clock at $x=2$.
+The future increment is declared explicitly on the existing normal clock at
+$x=2$. The original $\Delta\tau=0.05$ record remains sealed. Its primary
+predicted change is $-1.59545\times10^{-11}$ and measured change
+$-1.68151\times10^{-11}$, with error about $5.12\%$ of that tiny effect.
+This is a readout/timing blocker: regional content is insensitive before
+the exterior front arrives. It is not prediction success and does not call
+for more precision on that early tail.
+
+A new successor declares $\Delta\tau=0.75$, with absolute target
+$\tau_*=1.1078554632$ near baseline coordinate time $T=1$, where exterior
+transport can enter the grandchild region. The baseline forecast must again
+be locked before measuring the new held-out future. The interval change
+does not change the operator, full tangent, source or opening geometry.
 
 ## Observer and physical content
 
@@ -22,6 +33,9 @@ No observer is selected again during evolution.
 The record reports the dilated seed's unresolved projection tail and each
 observer's actual interpolant mass outside its assigned spatial interval.
 Finite Fourier observers have tails; exact compact support is unclaimed.
+The large nf128 dilated-seed projection tail leaves modal-basis comparisons
+unresolved there. A coarse spatial $N_G$ readout can still be reported;
+neither the basis nor the readout receives an acceptance label from QR.
 The primary readout is
 
 $$N_G=\int_{I_G}\sum_k c_k(|\phi_{0k}|^2+|\phi_{1k}|^2)\,dx.$$
@@ -51,7 +65,7 @@ preserving the occupation direction $(1,1,0,0,-1,-1)$. The new segment's
 clock tangent starts at zero. All future clock increments and their tangents
 use the existing RK4 stage clock routines and analytic full-state Jv.
 
-The future absolute target is `case.tau_target + 0.05`. The held-out arm's
+The future absolute target is `case.tau_target + proper_increment`. The held-out arm's
 local increment subtracts its **actual saved rooted clock**, including its
 small opening residual. A fresh bracketed decreasing-step event produces
 the nonlinear endpoint; a Taylor clock correction is not the measurement.
@@ -86,19 +100,28 @@ normal-energy closure is not asserted from those stocks.
 ```sh
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_grandchild.py
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_grandchild.py \
-  --prepare --nf 256 --output results/development/nsc-discovery-grandchild-v1/nf256
+  --prepare --nf 256 --proper-increment .75 \
+  --output results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_grandchild.py \
-  --run --output results/development/nsc-discovery-grandchild-v1/nf256
+  --run --output results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_grandchild.py \
-  --check --output results/development/nsc-discovery-grandchild-v1/nf256
+  --check --output results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75
 .venv/validation/bin/python scripts/lab.py -m pytest tests/test_nsc_discovery_grandchild.py -q
 ```
 
 `--prepare` probes baseline steps, admits a CPU forecast, evolves only the
 baseline plus analytic tangent, and creates immutable `forecast.json/npz`.
 It locks predicted $N_G$ before generating any new held-out future state.
-The primary cap is $0.0005$; cap $0.00025$ is included if the aggregate
-forecast fits. `--no-matched-step` requests only the primary cap.
+`--proper-increment` accepts finite values in $(0,1]$; the default remains
+$0.05$. Set the new increment during preview or preparation, never during
+measurement or replay of an existing locked forecast. The primary cap is
+$0.0005$. After that forecast has actually finished, its measured step count
+and elapsed CPU determine the reserved held-out cost and whether a
+$0.00025$ baseline/measurement pair still fits. Otherwise the record declares
+that later step confirmation is required. `--no-matched-step` requests only
+the primary cap. The sealed short-run probes give a historical planning
+estimate of $184.23$ CPU seconds for the new primary interval; fresh measured
+probes and the aggregate runtime guard own actual admission.
 
 `--run` first replays the locked forecast, then advances the independently
 saved nonlinear arm and both causal routes to the proper-clock event.
@@ -107,10 +130,18 @@ A half-step measurement can be deferred if the remaining aggregate budget
 is insufficient. Probes, preparation and measurement share a 300 CPU-second
 budget; each JSON/NPZ pair is capped at 64 MiB. Existing prefixes are refused.
 
-`--check` binds current producer bytes and old input hashes, replays the
+`--check` binds producer bytes and old input hashes, replays the
 forecast from saved full state/tangent, recomputes measured $N_G$ from its
 endpoint, and reconstructs both causal-route endpoints. It takes no steps
-and never heals historical JSON. Source changes fail strict replay.
+and never heals historical JSON. New measurement requires its current
+premeasurement producer hashes. Historical replay after a source edit
+requires `observed-run-binding.json`: both immutable artifact hashes and
+every recorded producer are authenticated against that record's local Git
+commit. It reports the historical producer commit and explicitly states
+that readout replay uses current code without recomputing old trajectories.
+Preparation records the producing commit only when all declared source
+hashes match that commit's blobs; tests or uncommitted source changes retain
+explicit working-tree hashes without assigning a false producer commit.
 
 The exact composition identity and the new held-out prediction error are
 separate evidence. A successful physical prediction is conditional on this

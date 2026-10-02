@@ -39,6 +39,8 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Exact source-free metric control | [Vacuum control](nsc-discovery-vacuum-control.md); `src/recursive_horizons/nsc_discovery_vacuum_control.py`; `scripts/derive_nsc_discovery_vacuum_control.py` |
 | Whole-state seam translation | [Translation](nsc-discovery-translation.md); `src/recursive_horizons/nsc_discovery_translation.py`; `scripts/derive_nsc_discovery_translation.py` |
 | Inherited grandchild hand-off and withheld future content | [Grandchild](nsc-discovery-grandchild.md); `src/recursive_horizons/nsc_discovery_grandchild.py`; `scripts/derive_nsc_discovery_grandchild.py` |
+| Physical source-width tangent and held-out content | [Width response](nsc-discovery-width-response.md); `src/recursive_horizons/nsc_discovery_width_response.py`; `scripts/derive_nsc_discovery_width_response.py` |
+| First carrier circuit, actual tides and return assessment | [Tidal owner](nsc-discovery-tidal.md); `scripts/assess_nsc_discovery_crossing.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before

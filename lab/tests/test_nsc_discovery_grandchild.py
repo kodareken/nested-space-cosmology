@@ -9,6 +9,7 @@ from recursive_horizons import nsc_discovery_grandchild as grand
 from recursive_horizons import nsc_discovery_prediction as prediction
 from recursive_horizons import nsc_discovery_response as response
 from recursive_horizons import nsc_nested_parent_child as model
+import derive_nsc_discovery_grandchild as cli
 
 
 def test_sequential_detail_requires_outer_drive_and_memory():
@@ -96,6 +97,8 @@ def test_locked_forecast_then_new_equal_tau_measurement_and_immutable_replay(tmp
     assert forecast['forecast_locked_before_measurement'] is True
     assert forecast['new_heldout_future_measured'] is False
     assert forecast['forecast_admission']['probes_use_baseline_only'] is True
+    assert forecast['forecast_admission']['actual_baseline_steps'] == [item['steps'] for item in forecast['forecasts']]
+    assert all(value>0. for value in forecast['forecast_admission']['heldout_forecast_CPU_by_cap'].values())
     assert not (destination/'measurement.json').exists()
     before=(destination/'forecast.json').read_bytes()
     held_target=forecast['absolute_future_tau_target']-forecast['held_tau_opening']
@@ -121,3 +124,46 @@ def test_locked_forecast_then_new_equal_tau_measurement_and_immutable_replay(tmp
     payload.chmod(0o644)
     payload.write_bytes(payload.read_bytes()+b'x')
     with pytest.raises(ValueError,match='payload binding'):grand.check(destination)
+
+
+def test_later_increment_is_explicit_bounded_and_locked_at_prepare(tmp_path,monkeypatch,capsys):
+    calls=[]
+    monkeypatch.setattr(grand,'OUTPUT',tmp_path)
+    def fake_prepare(directory,nf,**kwargs):
+        calls.append((directory,nf,kwargs))
+        return {'mode':'locked_forecast'}
+    monkeypatch.setattr(grand,'prepare',fake_prepare)
+    assert cli.main(['--prepare','--proper-increment','.75','--output',str(tmp_path/'new-later-prefix')])==0
+    assert calls[0][2]['proper_increment']==.75
+    assert calls[0][2]['matched'] is True
+    assert cli.main(['--prepare','--output',str(tmp_path/'default-prefix')])==0
+    assert calls[1][2]['proper_increment']==.05
+    for value in (0.,-1.,1.01,float('nan'),float('inf')):
+        with pytest.raises(ValueError,match=r'\(0,1\]'):grand.validate_proper_increment(value)
+    with pytest.raises(SystemExit):cli.main(['--run','--proper-increment','.75','--output',str(tmp_path/'new-later-prefix')])
+    with pytest.raises(SystemExit):cli.main(['--check','--proper-increment','.75','--output',str(tmp_path/'new-later-prefix')])
+
+
+def test_historical_short_record_binding_and_inputs_remain_unchanged():
+    directory=grand.OUTPUT/'nf256'
+    if not (directory/'observed-run-binding.json').is_file():
+        pytest.skip('sealed short-run historical binding is not present')
+    paths=[directory/name for name in ('forecast.json','forecast.npz','measurement.json','measurement.npz','observed-run-binding.json')]
+    before={str(path):grand.episode.file_sha256(path) for path in paths}
+    checked=grand.check(directory)
+    assert checked['ok'] is True
+    assert checked['historical_producing_commit']=='b7f0dab8de62d9a3472ac4e7b33351ab65d25847'
+    assert checked['historical_trajectory_recomputed'] is False
+    assert checked['replay_uses_current_readout_code'] is True
+    assert {str(path):grand.episode.file_sha256(path) for path in paths}==before
+
+
+def test_historical_binding_does_not_accept_unbound_producer_digest(tmp_path,monkeypatch):
+    directory=grand.OUTPUT/'nf256'
+    if not (directory/'observed-run-binding.json').is_file():
+        pytest.skip('sealed short-run historical binding is not present')
+    record=json.loads((directory/'forecast.json').read_text())
+    path=next(iter(record['producers']))
+    record['producers'][path]='0'*64
+    with pytest.raises(ValueError,match='frozen Git blob'):
+        grand._authenticate_historical_producers(directory,'forecast',record)

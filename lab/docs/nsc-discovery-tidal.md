@@ -143,3 +143,73 @@ Checking only reads the record and its bound files. The library flag
 an explicit CLI creation writes the requested consumer record. Focused
 validation completed in about eight seconds, and the measured consumer
 CPU time stayed below the assigned thirty-second budget.
+
+## T8 crossing assessment
+
+The successor consumer is
+[assess_nsc_discovery_crossing.py](../scripts/assess_nsc_discovery_crossing.py),
+with focused [authentication/replay tests](../tests/test_nsc_discovery_crossing.py).
+It reuses this note's existing numerical owner without changing its v1 source
+pins. Creation writes only the new crossing-assessment-v1 JSON owner. Checking
+authenticates its repository-relative source/input hashes and recomputes actual
+metric jets, with no evolution step, solve, or checkpoint reset. Both operations
+retain a thirty CPU-second budget and one numerical thread.
+
+The crossing campaign's observed-run-binding names producing commit
+b7f0dab8de62d9a3472ac4e7b33351ab65d25847. It is a **post-run authenticated
+coordinator observation**, not a pre-run signed attestation. The consumer checks
+its artifact and producer hashes, separately verifies the original 1c9e770
+physics envelope, and authenticates the exact T3 predecessor payloads and complete
+per-array hash dictionaries. State, momenta, clocks, and basis are carried into
+the crossing without a geometry or memory reset.
+
+At T8, the available nf128→256 comparisons give maximum profile differences
+of about 0.30% for the radial tide, 0.51% for the angular tide, and 0.99% for
+Ricci square and Kretschmann. The two saved timestep caps change the tidal
+profiles by less than \(4.4\times10^{-8}\) relative. At \(x=2\), nf256 half-step
+gives radial tide \(-9.665013073\times10^{22}\) and angular tide
+\(3.067404935\times10^{24}\). The angular component is well conditioned;
+the radial condition is about 2111 and its tested refinement agreement survives
+that moderate cancellation. Independent full analytic Jv accelerations agree
+with the existing metric-jet consumer. These are measurements of the finite
+discrete realization; they do not supply a continuum certificate or a
+singularity claim.
+
+The chart remains positive, with \(r\) about 61.9–62.3 and \(Q\) about
+\(6.6\)–\(7.6\times10^{-15}\). Normal clock rates are about
+\(4.1\)–\(4.7\times10^{-13}\). The occupied covariance spectrum remains within
+its CAR range, with the nf256 half-step Gram gap about \(2.6\times10^{-10}\).
+Returning child probability about 0.999687 coexists with child proper length
+about \(9.14\times10^{-13}\); it does not demonstrate maintained physical size.
+Frozen geometry also returns, to child probability about 0.994718 at proper
+length 2.3752. The warranted label is **carrier-period return candidate**.
+Ambient extent and an exterior echo are not established. Regional probability
+and normal-energy stocks remain measurements, not a closed transport ledger.
+
+\(R_4,R_h\), and Weyl remain unresolved cancellation diagnostics. They are kept
+separate from the actual normal tidal agreement. The first retained
+auxiliary-gap/\(R_h\)-maximum ratios above illustrative 0.1%, 1%, and 10% occur
+at T2.40/2.70/2.95 for nf128 and T3.20/3.60/3.95 for nf256. Those markers describe
+loss of shell agreement; they are not scientific acceptance thresholds or
+physical curvature breakpoints.
+
+Observation joins use timestamps, never row positions. The half-step and frozen
+crossing ledgers retain cadence rows through T5.8 and then the T8 endpoint,
+with no intervening cadence rows. The cap .001 coupled ledgers retain the full
+cadence. The assessment reports these gaps and the unmatched timestamps
+explicitly. A numerical replay tolerance applies to the stable endpoint
+quantities; replay of cancellation-sensitive scalars is not promoted to a
+physical certificate.
+
+From the repository root, after freezing the new consumer:
+
+~~~sh
+.venv/validation/bin/python scripts/lab.py scripts/assess_nsc_discovery_crossing.py --write
+.venv/validation/bin/python scripts/lab.py scripts/assess_nsc_discovery_crossing.py --check
+.venv/validation/bin/python scripts/lab.py -m pytest tests/test_nsc_discovery_crossing.py -q
+~~~
+
+The immutable output owner is
+lab/results/development/nsc-discovery-crossing-assessment-v1.json.
+Default invocation previews without writing. The existing tidal-v1 record and
+its numerical source bindings remain preserved.

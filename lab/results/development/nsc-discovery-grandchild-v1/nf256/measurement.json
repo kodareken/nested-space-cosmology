@@ -1,0 +1,247 @@
+{
+  "CPU_budget_seconds": 300.0,
+  "aggregate_CPU_seconds": 31.042867,
+  "array_sha256": {
+    "direct_0_a": "b77e98750865046d5f0ea3afed9757423c85c6e3256097003ef93a5361505346",
+    "direct_0_drive": "b9195e02b14afa22f518e55b7bedfae0e8222c5e61279f987d74da998ff62418",
+    "direct_0_memory": "f26c170f4ad48fd2dc81d4cc56bc5d57a57bcbfa555eed5138d3d32def3e1356",
+    "direct_1_a": "c6307be323dfd0870dac64c472dd8e5d8c586f40b7a360883b8d883a8f508604",
+    "direct_1_drive": "61ce31e5d3c064d27b9fd8328d73dab2a34d66308f49ac1bedfb3886b3027392",
+    "direct_1_memory": "ec7a70313805f0927d12639c04c5dc43f31eea830bc6ad5f5b870f1614b7b976",
+    "heldout_0_Q": "48e25d2126b8b42ab511bd522e4d3d1be2dbc8d5b23596eae7e91a1b150c8c39",
+    "heldout_0_chi": "bee4882dc18ae83cea89cea4a1235326116b80481fb49909ed4122b0e0643eff",
+    "heldout_0_p_Q": "4de43e6d69b90812e936c7213a17a3be97b7f8343f458b3d7319701e0c88693a",
+    "heldout_0_p_chi": "6bfec09303c1425118cb0d8fa7c9e4f413423933b040022867ded2708ae607eb",
+    "heldout_0_p_r": "9f5ae0ee97d50cef42cb141f4503ed60d6a7826763cee42b26149d9ed3cc0a5d",
+    "heldout_0_phi0": "237bf7b39b563fedc4db2d0b0f320ea0a126ef4f5ec94ea71e08237be4249289",
+    "heldout_0_phi1": "ab43a65ad3c3a72a1d4a0e034c06649c6f62a9403a79ada1aec713f0094e9efd",
+    "heldout_0_r": "08567d4dca999357d37ccf42f06beb3562d6ac89d4c46523b0a90602d7c539de",
+    "heldout_1_Q": "3adc7249ca538b3162950f6625805892f134b9ff82061deb9242bc0ad1f51415",
+    "heldout_1_chi": "a8b69d8fc346bd9dfc84330a1044f36411f42a6087ad4207958cdb3817a3bfb0",
+    "heldout_1_p_Q": "a5d4c1183d5f5d64536038762b6d497f366799898875e669ccbf8140ab749749",
+    "heldout_1_p_chi": "f6535296b436533528261b45dfb99dc733ccf1a2713f63736659e29cee621d0d",
+    "heldout_1_p_r": "c1c8fb98dba7d5517c041eb2f6499e85b0bb2209e62f39e2693b4578e9d7c61c",
+    "heldout_1_phi0": "de4945332b53d07031ea4042b5c4a3c8bd217388bcd11981c0fa8b7615994428",
+    "heldout_1_phi1": "9e3c7fa076d0b5c289013b55e641bf3f258c56d3c21122ab24135854f4685b86",
+    "heldout_1_r": "4cf0c28e858edbde9beb347f5887281bfd8a3f8d85dfbb3d66932cc932f6153f",
+    "sequential_0_a": "f7aa624dc5861e5777b4810a881ebfc27c5331c3e96ebda9921d27a52e7314ce",
+    "sequential_0_d_drive": "7c1727f65bf11c05c24fe0b882f8855e7a869f4ca7cab54ac5d8101dadbf65f6",
+    "sequential_0_d_memory": "571947537a2e1587a5d0e957c8feed8776bbd5137e6938e4800b977ce059d104",
+    "sequential_0_drive": "d4049dcf9228d6387702a541fdd92619a30c72157037c41dfc5509012ca987f9",
+    "sequential_0_f_drive": "364cd3a2ecdd1b29b4d025035239c0e550c65859bb4ee47ea5fc090869c2c874",
+    "sequential_0_f_memory": "c7dffc9add2cee5ba4bf3bdf8ee303f52ed41633030a5399033fa9328561aedd",
+    "sequential_0_memory": "4cc7c6494d7e127d411ce52061f3b4cbf643f977eb81456a1e583c616098032a",
+    "sequential_1_a": "acfa55894df48d6c5c6088fd8b8de2e36554a00730d3a1ba6b3db18111b1ecbb",
+    "sequential_1_d_drive": "781351e1489ffdfd8e34e6ba266fe0145d42a90f4db37fdf941df15e9bb40c5e",
+    "sequential_1_d_memory": "e7e2bdd7a356cd9708e364d587e8bc785d7945c80aea623e6e5b0da0520cbe92",
+    "sequential_1_drive": "6cc3683ae25c687e72b92e26fab52ea2bd483343ac5519de716c0d1f8b89b1ff",
+    "sequential_1_f_drive": "f0c6d2c0471a5f699f8129fe8ec6852220b6733074a7b07476dd0180c6d6e1cc",
+    "sequential_1_f_memory": "be8cd2d35c9b72bc1954bae06aff9c66f230cce4060e9503db249b616725a769",
+    "sequential_1_memory": "6020e10a831648f4b3a7b2a6f9ce61af1927c8e6680a3ac3ba69ac1e20fae797"
+  },
+  "composition_identity_is_separate_from_prediction": true,
+  "conditional_finite_handoff_only": true,
+  "continuous_error_bound": null,
+  "dense_ambient_covariance_stored": false,
+  "dense_exterior_propagators_stored": false,
+  "forecast_json_sha256": "c047a8577d62255002c1cb64b50b11e110ed92fd0af031a01f6228dae15b3903",
+  "forecast_payload_sha256": "df587a1a170fabcd9736c96dd491c9a046c8bed4cce4fb3e73c49fbdcdc6c319",
+  "forecast_preceded_future_measurement": true,
+  "initializer_called": false,
+  "input_hashes": {
+    "results/development/nsc-discovery-prediction-v1/prediction-run.json": "0dcec3ab514fea8828decc7ae15b2459a0d1878c4005960b7c329f4eb3a067be",
+    "results/development/nsc-discovery-prediction-v1/prediction-run.npz": "58a1374a7c4faa98d50f985e5fa7bc72cf17ab4433c51bc042ba21c269c22470",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.json": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.npz": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "results/development/nsc-nested-parent-child-v1.json": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "results/development/nsc-nested-parent-child-v1.npz": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead"
+  },
+  "matched_step": {
+    "NG_gap": 1.2101430968414206e-14,
+    "fine_primary_effect": -1.6815104864065233e-11,
+    "prediction_error_gap": 0.0
+  },
+  "mode": "heldout_measurement",
+  "new_future_NG_measurement": true,
+  "nf": 256,
+  "normal_energy_closure_claimed": false,
+  "payload_bytes": 511117,
+  "payload_sha256": "bc0dd78f29594c0e2f3dd26d66e487d4490e36c435cdf8ad43b4bb61a80ebe2d",
+  "producers": {
+    "scripts/derive_nsc_discovery_grandchild.py": "e0c755f44b02ccf0f5b720c4e6800f5785844b4f9cce12d2a259809144ed8b13",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_discovery_grandchild.py": "1dba304e17417c453bc5d73e8b54fc765db9cc073f58a43b6f9428e42f4e3b68",
+    "src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+  },
+  "results": [
+    {
+      "absolute_future_tau": 0.4078554634472474,
+      "baseline_NG": 0.5000000070580608,
+      "error_over_measured_effect": 0.05117624144146524,
+      "event": {
+        "coordinate_duration": 0.04207960796356204,
+        "max_reconstruction_gap": 3.2487068343022356e-16,
+        "max_stage_force_gap": 1.9817480989559044e-14,
+        "proper_increment": 0.05000000003136547,
+        "root_bisections": 20,
+        "steps": 85,
+        "tau_residual": 2.7899428600708376e-10,
+        "uses_linear_clock_correction": false
+      },
+      "measured_change": -1.6815104864065233e-11,
+      "measurement": {
+        "NG": 0.5000000070412457,
+        "clock_rate": 1.1870046973666821,
+        "cross_force_max": {
+          "force_L": 0.21110533551320376,
+          "force_Q": 0.211638209298622,
+          "force_beta": 0.049486282636518344
+        },
+        "direct_NG": 0.5000000070412458,
+        "direct_clock_rate": 1.1870046973666821,
+        "direct_sequential_Phi_gap": 2.3633021048361517e-16,
+        "disjoint_normal_energies": {
+          "ambient": 1.5999850076258215,
+          "child_left": 1.7993022896187214,
+          "child_right": 1.0317662363152729,
+          "grandchild": 1.6859690088177206,
+          "left": 2.8864873606191166,
+          "right": 1.1715890870820367
+        },
+        "forces_use_full_reconstructed_source_with_cross": true,
+        "geometry_shared_between_routes": true,
+        "grand_covariance_composition_gap": 1.3877787807814457e-17,
+        "grand_covariance_imag": [
+          [
+            0.0,
+            0.0012435253418940184
+          ],
+          [
+            -0.0012435253418940184,
+            0.0
+          ]
+        ],
+        "grand_covariance_real": [
+          [
+            0.06551860612317306,
+            0.0008364842474847349
+          ],
+          [
+            0.0008364842474847349,
+            0.01475604730735186
+          ]
+        ],
+        "grand_exterior_cross_frobenius": 0.1887389888508739,
+        "modal_trace_is_secondary": 0.08027465343052492,
+        "normal_energy_closure_claimed": false,
+        "outer_detail_drive_included": true,
+        "sequential_NG": 0.5000000070412458,
+        "sequential_clock_rate": 1.1870046973666821,
+        "source_CAR_admissible": true,
+        "source_CAR_eigenvalues": [
+          0.23999999999737898,
+          0.23999999999737986,
+          0.49999999999990524,
+          0.49999999999990713,
+          0.7599999999917004,
+          0.7599999999917028
+        ],
+        "source_gram_gap": 1.092059775942289e-11
+      },
+      "predicted_NG": 0.5000000070421062,
+      "predicted_change": -1.5954518213144773e-11,
+      "prediction_error": -8.605338663869588e-13,
+      "status": "heldout_future_measured",
+      "step_cap": 0.0005
+    },
+    {
+      "absolute_future_tau": 0.4078554634472472,
+      "baseline_NG": 0.5000000070580729,
+      "error_over_measured_effect": 0.05117624144146524,
+      "event": {
+        "coordinate_duration": 0.04207960796356204,
+        "max_reconstruction_gap": 4.719794943004934e-16,
+        "max_stage_force_gap": 2.7922109069322687e-14,
+        "proper_increment": 0.05000000003136529,
+        "root_bisections": 20,
+        "steps": 169,
+        "tau_residual": 2.7899410559584226e-10,
+        "uses_linear_clock_correction": false
+      },
+      "measured_change": -1.6815104864065233e-11,
+      "measurement": {
+        "NG": 0.5000000070412578,
+        "clock_rate": 1.18700469736668,
+        "cross_force_max": {
+          "force_L": 0.2111053355118427,
+          "force_Q": 0.21163820929726215,
+          "force_beta": 0.04948628263616284
+        },
+        "direct_NG": 0.5000000070412577,
+        "direct_clock_rate": 1.18700469736668,
+        "direct_sequential_Phi_gap": 3.1646225226420963e-16,
+        "disjoint_normal_energies": {
+          "ambient": 1.5999850078175344,
+          "child_left": 1.7993022900105526,
+          "child_right": 1.0317662363254145,
+          "grandchild": 1.6859690088178323,
+          "left": 2.886487360221782,
+          "right": 1.1715890869521677
+        },
+        "forces_use_full_reconstructed_source_with_cross": true,
+        "geometry_shared_between_routes": true,
+        "grand_covariance_composition_gap": 1.3877787807814457e-17,
+        "grand_covariance_imag": [
+          [
+            0.0,
+            0.0012435253418889816
+          ],
+          [
+            -0.0012435253418889816,
+            0.0
+          ]
+        ],
+        "grand_covariance_real": [
+          [
+            0.06551860612338826,
+            0.0008364842474974562
+          ],
+          [
+            0.0008364842474974562,
+            0.01475604730740256
+          ]
+        ],
+        "grand_exterior_cross_frobenius": 0.1887389888511497,
+        "modal_trace_is_secondary": 0.08027465343079082,
+        "normal_energy_closure_claimed": false,
+        "outer_detail_drive_included": true,
+        "sequential_NG": 0.5000000070412577,
+        "sequential_clock_rate": 1.18700469736668,
+        "source_CAR_admissible": true,
+        "source_CAR_eigenvalues": [
+          0.23999999999769098,
+          0.23999999999769145,
+          0.49999999999991684,
+          0.4999999999999179,
+          0.7599999999926883,
+          0.7599999999926894
+        ],
+        "source_gram_gap": 9.621192731401607e-12
+      },
+      "predicted_NG": 0.5000000070421183,
+      "predicted_change": -1.5954525743576465e-11,
+      "prediction_error": -8.605338663869588e-13,
+      "status": "heldout_future_measured",
+      "step_cap": 0.00025
+    }
+  ],
+  "schema": "NSC-DISCOVERY-GRANDCHILD-v1",
+  "universal_Omega_scaling_claimed": false
+}

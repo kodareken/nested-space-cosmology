@@ -1,0 +1,231 @@
+{
+  "schema": "NSC-DISCOVERY-EPISODE-v1",
+  "stage": 2,
+  "status": "STATION_REACHED",
+  "campaign": "station-resume",
+  "stations": [
+    1.0,
+    3.0,
+    8.0
+  ],
+  "cases": [
+    {
+      "case_id": "nf128_coupled_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_coupled_dt0.001-000000.npz",
+      "json": "nf128_coupled_dt0.001-000000.json",
+      "arrays_sha256": "1fff0df37735ab02be3112bfdc999d80e797a9547fb6ac8f34bf8ab1f09545da",
+      "coordinate_time": 3.0,
+      "steps": 2700
+    },
+    {
+      "case_id": "nf128_coupled_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_coupled_dt0.0005-000000.npz",
+      "json": "nf128_coupled_dt0.0005-000000.json",
+      "arrays_sha256": "19c3effda59c94fc4d2a2c7870e53f78037315a5bc5d74400d6c2896b0b41d30",
+      "coordinate_time": 3.0,
+      "steps": 5400
+    },
+    {
+      "case_id": "nf128_frozen_geometry_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_frozen_geometry_dt0.0005-000000.npz",
+      "json": "nf128_frozen_geometry_dt0.0005-000000.json",
+      "arrays_sha256": "f065275c620ff98e67be20ea8a63894068fb663f60cdd0e512c1151a23e22eda",
+      "coordinate_time": 3.0,
+      "steps": 5400
+    },
+    {
+      "case_id": "nf256_coupled_dt0.001",
+      "ordinal": 0,
+      "npz": "nf256_coupled_dt0.001-000000.npz",
+      "json": "nf256_coupled_dt0.001-000000.json",
+      "arrays_sha256": "3febc2fa2c087fd4333467223718e21b41bf0b1646572c06f202d87d483a1c20",
+      "coordinate_time": 3.0,
+      "steps": 2700
+    },
+    {
+      "case_id": "nf256_coupled_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf256_coupled_dt0.0005-000000.npz",
+      "json": "nf256_coupled_dt0.0005-000000.json",
+      "arrays_sha256": "6c147a43d266aa4bc42afd83f3f0d11a304c9222ec75fe9d36beb5ccdd09ff1c",
+      "coordinate_time": 3.0,
+      "steps": 5400
+    },
+    {
+      "case_id": "nf256_frozen_geometry_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf256_frozen_geometry_dt0.0005-000000.npz",
+      "json": "nf256_frozen_geometry_dt0.0005-000000.json",
+      "arrays_sha256": "73f84acdc06caadb14f7cf77f3d0d67613fbe4ca32b0f9016ba8d80b401216df",
+      "coordinate_time": 3.0,
+      "steps": 5400
+    }
+  ],
+  "workers": 4,
+  "cpu_budget_seconds": 21600.0,
+  "cpu_accounting": "sum_of_child_process_time",
+  "forecast_factor": 1.5,
+  "predecessor_directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-episode-v1",
+  "predecessor_manifest_sha256": "c49c29caeab331f57ec6d1b0a18844ad23f2aeb1e730bd09a1df370ea550d575",
+  "cost_forecast": {
+    "method": "linear_extrapolation_of_recorded_child_cpu",
+    "new_trajectory_measured": false,
+    "forecast_factor": 1.5,
+    "predecessor_cpu_seconds": 277.185634,
+    "time_completed": 3.0,
+    "station": 8.0,
+    "forecast_cpu_seconds": 769.9600944444444
+  },
+  "evolved": true,
+  "initial_state_called": false,
+  "stability_certificate": false,
+  "dense_propagator_stored": false,
+  "child_cpu_seconds": 431.73323400000004,
+  "results": [
+    {
+      "case_id": "nf128_coupled_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 33.541739,
+      "coordinate_time": 8.0,
+      "steps": 7700,
+      "stations_reached": [
+        8.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0,
+          8.0
+        ]
+      },
+      "chunk": "nf128_coupled_dt0.001-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 101.02798800000036
+    },
+    {
+      "case_id": "nf256_coupled_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 55.412178000000004,
+      "coordinate_time": 8.0,
+      "steps": 7700,
+      "stations_reached": [
+        8.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0,
+          8.0
+        ]
+      },
+      "chunk": "nf256_coupled_dt0.001-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 78.26107200000057
+    },
+    {
+      "case_id": "nf128_frozen_geometry_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 64.65066300000001,
+      "coordinate_time": 8.0,
+      "steps": 15401,
+      "stations_reached": [
+        8.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0,
+          8.0
+        ]
+      },
+      "chunk": "nf128_frozen_geometry_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 81.42340199999974
+    },
+    {
+      "case_id": "nf128_coupled_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 66.80569299999999,
+      "coordinate_time": 8.0,
+      "steps": 15401,
+      "stations_reached": [
+        8.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0,
+          8.0
+        ]
+      },
+      "chunk": "nf128_coupled_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 80.25041400000039
+    },
+    {
+      "case_id": "nf256_coupled_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 101.63559000000001,
+      "coordinate_time": 8.0,
+      "steps": 15401,
+      "stations_reached": [
+        8.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0,
+          8.0
+        ]
+      },
+      "chunk": "nf256_coupled_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 160.01884800005956
+    },
+    {
+      "case_id": "nf256_frozen_geometry_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 109.68737100000001,
+      "coordinate_time": 8.0,
+      "steps": 15401,
+      "stations_reached": [
+        8.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0,
+          8.0
+        ]
+      },
+      "chunk": "nf256_frozen_geometry_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 129.95783399992337
+    }
+  ],
+  "memory_limit_bytes": 8589934592,
+  "executor_pools": 1,
+  "max_T_forced": false,
+  "zero_residual_gate": false
+}

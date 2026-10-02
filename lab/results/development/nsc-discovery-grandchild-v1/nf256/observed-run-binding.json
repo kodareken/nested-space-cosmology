@@ -1,0 +1,178 @@
+{
+  "artifact_paths": {
+    "lab/results/development/nsc-discovery-grandchild-v1/nf256/forecast.json": {
+      "bytes": 13806,
+      "sha256": "c047a8577d62255002c1cb64b50b11e110ed92fd0af031a01f6228dae15b3903"
+    },
+    "lab/results/development/nsc-discovery-grandchild-v1/nf256/forecast.npz": {
+      "bytes": 492468,
+      "sha256": "df587a1a170fabcd9736c96dd491c9a046c8bed4cce4fb3e73c49fbdcdc6c319"
+    },
+    "lab/results/development/nsc-discovery-grandchild-v1/nf256/measurement.json": {
+      "bytes": 12144,
+      "sha256": "f273603f2330f890635720d45678afad314bb476aa30856842a79b94614710fa"
+    },
+    "lab/results/development/nsc-discovery-grandchild-v1/nf256/measurement.npz": {
+      "bytes": 511117,
+      "sha256": "bc0dd78f29594c0e2f3dd26d66e487d4490e36c435cdf8ad43b4bb61a80ebe2d"
+    }
+  },
+  "binding_timing": "post-run authenticated coordinator observation; not a pre-run signed attestation",
+  "coordinator_observation": "Root executed the completed batch from frozen b7f0dab; scientific producer edits began only after its processes returned.",
+  "limits": [
+    "Runtime dynamic imports outside the explicit closure are not certified by this metadata; original upstream preparation and state pins are retained."
+  ],
+  "numerical_runs_repeated": false,
+  "producer_closure_method": "recursive explicit local Python imports from pinned Git blobs",
+  "producer_paths": {
+    "lab/scripts/derive_nsc_discovery_grandchild.py": {
+      "bytes": 2003,
+      "git_blob_authenticated": true,
+      "sha256": "e0c755f44b02ccf0f5b720c4e6800f5785844b4f9cce12d2a259809144ed8b13"
+    },
+    "lab/src/recursive_horizons/__init__.py": {
+      "bytes": 245,
+      "git_blob_authenticated": true,
+      "sha256": "9e0819d34a855a852a9178e307b56f5c372d4778a8ea54c2afa83a556356e675"
+    },
+    "lab/src/recursive_horizons/nsc_adm_source.py": {
+      "bytes": 5881,
+      "git_blob_authenticated": true,
+      "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
+    },
+    "lab/src/recursive_horizons/nsc_boundary_state.py": {
+      "bytes": 5933,
+      "git_blob_authenticated": true,
+      "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646"
+    },
+    "lab/src/recursive_horizons/nsc_causal_common.py": {
+      "bytes": 11855,
+      "git_blob_authenticated": true,
+      "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90"
+    },
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": {
+      "bytes": 23728,
+      "git_blob_authenticated": true,
+      "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+    },
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": {
+      "bytes": 17589,
+      "git_blob_authenticated": true,
+      "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": {
+      "bytes": 31399,
+      "git_blob_authenticated": true,
+      "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": {
+      "bytes": 102165,
+      "git_blob_authenticated": true,
+      "sha256": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_grandchild.py": {
+      "bytes": 31498,
+      "git_blob_authenticated": true,
+      "sha256": "1dba304e17417c453bc5d73e8b54fc765db9cc073f58a43b6f9428e42f4e3b68"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_prediction.py": {
+      "bytes": 85617,
+      "git_blob_authenticated": true,
+      "sha256": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_response.py": {
+      "bytes": 36657,
+      "git_blob_authenticated": true,
+      "sha256": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586"
+    },
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": {
+      "bytes": 48154,
+      "git_blob_authenticated": true,
+      "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d"
+    },
+    "lab/src/recursive_horizons/nsc_finite_terms.py": {
+      "bytes": 15339,
+      "git_blob_authenticated": true,
+      "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
+    },
+    "lab/src/recursive_horizons/nsc_finite_window_embedding.py": {
+      "bytes": 22673,
+      "git_blob_authenticated": true,
+      "sha256": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62"
+    },
+    "lab/src/recursive_horizons/nsc_influence.py": {
+      "bytes": 10903,
+      "git_blob_authenticated": true,
+      "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8"
+    },
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": {
+      "bytes": 37305,
+      "git_blob_authenticated": true,
+      "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b"
+    },
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": {
+      "bytes": 3126,
+      "git_blob_authenticated": true,
+      "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1"
+    },
+    "lab/src/recursive_horizons/nsc_regeneration_controls.py": {
+      "bytes": 38434,
+      "git_blob_authenticated": true,
+      "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc"
+    },
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": {
+      "bytes": 45471,
+      "git_blob_authenticated": true,
+      "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7"
+    },
+    "lab/src/recursive_horizons/nsc_regulated.py": {
+      "bytes": 9463,
+      "git_blob_authenticated": true,
+      "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+    },
+    "lab/src/recursive_horizons/nsc_shape_response.py": {
+      "bytes": 11005,
+      "git_blob_authenticated": true,
+      "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py": {
+      "bytes": 32267,
+      "git_blob_authenticated": true,
+      "sha256": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": {
+      "bytes": 58981,
+      "git_blob_authenticated": true,
+      "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": {
+      "bytes": 60250,
+      "git_blob_authenticated": true,
+      "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": {
+      "bytes": 37269,
+      "git_blob_authenticated": true,
+      "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": {
+      "bytes": 61141,
+      "git_blob_authenticated": true,
+      "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_null_expansion.py": {
+      "bytes": 48540,
+      "git_blob_authenticated": true,
+      "sha256": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797"
+    },
+    "lab/src/recursive_horizons/provenance.py": {
+      "bytes": 3483,
+      "git_blob_authenticated": true,
+      "sha256": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4"
+    }
+  },
+  "producing_commit": "b7f0dab8de62d9a3472ac4e7b33351ab65d25847",
+  "schema": "NSC-DISCOVERY-OBSERVED-RUN-BINDING-v1",
+  "scientific_records_rewritten": false,
+  "unresolved_declared_local_imports": []
+}

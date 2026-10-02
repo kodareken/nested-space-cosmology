@@ -11,6 +11,8 @@ import io
 import json
 import os
 from pathlib import Path
+import re
+import subprocess
 import time
 
 import numpy as np
@@ -28,6 +30,7 @@ INPUT = LAB / 'results/development/nsc-discovery-prediction-v1'
 OUTPUT = LAB / 'results/development/nsc-discovery-grandchild-v1'
 SCHEMA = 'NSC-DISCOVERY-GRANDCHILD-v1'
 DELTA_TAU = .05
+MAX_PROPER_INCREMENT = 1.
 ALPHA = .01
 CPU_BUDGET = 300.
 CHUNK_CAP = 64 * 1024 * 1024
@@ -44,6 +47,56 @@ def producers():
     paths = [Path(module.__file__) for module in modules] + [Path(__file__), LAB/'scripts/derive_nsc_discovery_grandchild.py',
              LAB/'src/recursive_horizons/nsc_spherical_feedback_action.py', LAB/'src/recursive_horizons/nsc_conformal_adm_source.py']
     return {str(path.relative_to(LAB)): episode.file_sha256(path) for path in paths}
+
+
+def _git_blob_sha(commit,path):
+    """Read a frozen local Git blob; no checkout or repository mutation."""
+    if not re.fullmatch(r'[0-9a-f]{40}',str(commit)):
+        raise ValueError('historical producing commit must be a full hexadecimal SHA')
+    relative=Path(path)
+    if relative.is_absolute() or '..' in relative.parts:
+        raise ValueError('producer path must stay relative to lab')
+    result=subprocess.run(['git','cat-file','blob',f'{commit}:lab/{relative.as_posix()}'],
+                          cwd=LAB.parent,capture_output=True,check=True,timeout=5)
+    return hashlib.sha256(result.stdout).hexdigest()
+
+
+def _current_producing_commit(pins):
+    """Only call HEAD the producer when every recorded file matches its blob."""
+    try:
+        result=subprocess.run(['git','rev-parse','HEAD'],cwd=LAB.parent,capture_output=True,check=True,timeout=5)
+        commit=result.stdout.decode().strip()
+        if all(_git_blob_sha(commit,path)==digest for path,digest in pins.items()):return commit
+    except (OSError,subprocess.SubprocessError,ValueError):
+        pass
+    return None
+
+
+def _authenticate_historical_producers(directory,prefix,record):
+    binding_path=Path(directory)/'observed-run-binding.json'
+    if not binding_path.is_file():raise ValueError('historical producer mismatch has no observed run binding')
+    binding=json.loads(binding_path.read_text())
+    if binding.get('schema')!='NSC-DISCOVERY-OBSERVED-RUN-BINDING-v1':raise ValueError('unsupported historical run binding')
+    for extension in ('.json','.npz'):
+        path=Path(directory)/(prefix+extension)
+        key=str(path.resolve().relative_to(LAB.parent))
+        entry=binding.get('artifact_paths',{}).get(key)
+        if not entry or episode.file_sha256(path)!=entry['sha256'] or path.stat().st_size!=entry['bytes']:
+            raise ValueError('historical grandchild artifact differs from its observed run binding')
+    commit=binding['producing_commit']
+    try:
+        for path,digest in record['producers'].items():
+            if _git_blob_sha(commit,path)!=digest:raise ValueError('historical producer differs from its frozen Git blob: '+path)
+    except (OSError,subprocess.SubprocessError) as error:
+        raise ValueError('historical producing Git blobs are unavailable') from error
+    return commit
+
+
+def validate_proper_increment(value):
+    value=float(value)
+    if not np.isfinite(value) or not 0.<value<=MAX_PROPER_INCREMENT:
+        raise ValueError('finite future proper increment must lie in (0,1]')
+    return value
 
 
 def _guard(started, used=0.):
@@ -358,30 +411,35 @@ def _write(directory,prefix,record,arrays):
     return record
 
 
-def _read(directory,prefix):
+def _read(directory,prefix,*,allow_historical=False):
     directory=Path(directory);record=json.loads((directory/(prefix+'.json')).read_text())
     npath=directory/(prefix+'.npz')
     if episode.file_sha256(npath)!=record['payload_sha256']:raise ValueError('grandchild payload binding failed')
     with np.load(npath,allow_pickle=False) as stored:arrays={key:stored[key].copy() for key in stored.files}
     if any(episode.array_sha256(arrays[key])!=digest for key,digest in record['array_sha256'].items()):raise ValueError('grandchild array binding failed')
     _check_bindings(record['input_hashes'])
-    if record['producers']!=producers():raise ValueError('grandchild producer sources differ from the frozen record')
+    if record['producers']!=producers():
+        if not allow_historical:raise ValueError('grandchild producer sources differ from the frozen record')
+        record=dict(record,historical_producing_commit=_authenticate_historical_producers(directory,prefix,record),
+                    producer_binding_method='observed immutable artifacts and frozen local Git blobs')
     return record,arrays
 
 
-def preview(nf=256):
+def preview(nf=256,*,proper_increment=DELTA_TAU):
+    proper_increment=validate_proper_increment(proper_increment)
     opening=load_opening(nf);basis,basis_report=observer_basis(opening['pair'])
     return {'schema':SCHEMA,'mode':'preview','nf':nf,'opening_clock_alignment':opening['clock_alignment'],'basis':basis_report,
             'opening':endpoint_diagnostics(opening['pair'],opening['state'],basis),'heldout_opening':endpoint_diagnostics(opening['held_pair'],opening['held'],basis),
-            'future_proper_increment':DELTA_TAU,'absolute_future_tau_target':opening['tau_opening']+DELTA_TAU,'evolved':False,
+            'future_proper_increment':proper_increment,'absolute_future_tau_target':opening['tau_opening']+proper_increment,'evolved':False,
             'physical_claim_from_composition_identity':False,'CPU_budget_seconds':CPU_BUDGET}
 
 
 def prepare(directory,nf=256,*,proper_increment=DELTA_TAU,matched=True):
     directory=Path(directory)
     if (directory/'forecast.json').exists() or (directory/'forecast.npz').exists():raise FileExistsError('forecast prefix already exists')
-    if not 0.<proper_increment<=DELTA_TAU:raise ValueError('finite future proper increment must lie in (0,.05]')
+    proper_increment=validate_proper_increment(proper_increment)
     started=time.process_time();pins=producers();opening=load_opening(nf)
+    producing_commit=_current_producing_commit(pins)
     pair,state,tangent=opening['pair'],opening['state'],opening['tangent']
     basis,basis_report=observer_basis(pair)
     cap=.0005
@@ -394,24 +452,39 @@ def prepare(directory,nf=256,*,proper_increment=DELTA_TAU,matched=True):
     estimate_steps=int(np.ceil(proper_increment/max(tau_dot,1e-8)/cap))
     forecast_one=1.75*((estimate_steps+22)*analytic_cpu+(estimate_steps+22)*routed_cpu)
     remaining=CPU_BUDGET-(time.process_time()-started)
-    caps=[cap]
-    if matched and 3.*forecast_one<remaining:caps.append(cap/2.)
     if forecast_one>remaining:raise RuntimeError('grandchild continuation not admitted under 300 CPU seconds')
     arrays={'basis':basis}
     _pack_state(arrays,'opening_analytic',state);_pack_direction(arrays,'opening_aligned_tangent',tangent);_pack_state(arrays,'opening_heldout',opening['held'])
     forecasts=[]
+    heldout_costs={}
+    caps=[cap]
+    matched_status='not_requested' if not matched else 'deferred_budget_requires_later_confirmation'
     for index,step_cap in enumerate(caps):
         future,direction,forecast=march_analytic(pair,state,tangent,proper_increment,step_cap,started)
         _pack_state(arrays,f'future_{index}',future);_pack_direction(arrays,f'future_tangent_{index}',direction)
         forecasts.append(dict(forecast,step_cap=step_cap,prefix=f'future_{index}'))
+        heldout_costs[f'{step_cap:g}']=1.5*(forecast['steps']+22)*routed_cpu
+        elapsed=time.process_time()-started
+        if elapsed+sum(heldout_costs.values())>CPU_BUDGET:
+            raise RuntimeError('actual baseline forecast leaves insufficient CPU for the primary heldout measurement')
+        if index==0 and matched:
+            fine_steps=2*forecast['steps']+22
+            fine_reserve=1.5*fine_steps*(analytic_cpu+routed_cpu)
+            if elapsed+sum(heldout_costs.values())+fine_reserve<CPU_BUDGET:
+                caps.append(cap/2.);matched_status='admitted_after_actual_primary_forecast'
     _guard(started);_check_bindings(opening['input_hashes'])
     if pins!=producers():raise ValueError('producer sources changed while preparing the forecast')
     record={'schema':SCHEMA,'mode':'locked_forecast','nf':nf,'alpha':ALPHA,'IG':list(IG),'IC':list(IC),'IP':list(IP),
         'basis':basis_report,'opening_clock_alignment':opening['clock_alignment'],'tau_opening':opening['tau_opening'],
         'held_tau_opening':opening['held_tau_opening'],'absolute_future_tau_target':opening['tau_opening']+proper_increment,
         'proper_increment':proper_increment,'forecasts':forecasts,'input_hashes':opening['input_hashes'],'producers':pins,
+        'producing_commit':producing_commit,'producing_commit_matches_declared_files':producing_commit is not None,
         'forecast_admission':{'probe_analytic_step_CPU':analytic_cpu,'probe_routed_step_CPU':routed_cpu,'primary_full_run_forecast_CPU':forecast_one,
                              'probes_use_baseline_only':True,
+                             'heldout_forecast_CPU_by_cap':heldout_costs,
+                             'matched_step_status':matched_status,
+                             'later_step_confirmation_required':matched and len(caps)==1,
+                             'actual_baseline_steps':[item['steps'] for item in forecasts],
                              'matched_step_admitted':len(caps)==2,'CPU_budget_seconds':CPU_BUDGET,'checkpoint_cap_bytes':CHUNK_CAP},
         'CPU_used_before_measurement':time.process_time()-started,'new_heldout_future_measured':False,
         'forecast_locked_before_measurement':True,'initializer_called':False,'source_reset':False,'geometry_reset':False,
@@ -429,7 +502,7 @@ def run(directory):
     target=forecast['absolute_future_tau_target']-forecast['held_tau_opening']
     results=[];endpoints={}
     for index,locked in enumerate(forecast['forecasts']):
-        estimated=forecast['forecast_admission']['primary_full_run_forecast_CPU']*(2 if index else 1)
+        estimated=forecast['forecast_admission'].get('heldout_forecast_CPU_by_cap',{}).get(f"{locked['step_cap']:g}",forecast['forecast_admission']['primary_full_run_forecast_CPU']*(2 if index else 1))
         if index and used+time.process_time()-started+estimated>CPU_BUDGET:
             results.append({'step_cap':locked['step_cap'],'status':'matched_measurement_deferred_by_budget'});break
         final,direct,sequential,event=march_held(pair,state,basis,target,locked['step_cap'],started,used)
@@ -454,6 +527,8 @@ def run(directory):
     record={'schema':SCHEMA,'mode':'heldout_measurement','nf':forecast['nf'],'input_hashes':forecast['input_hashes'],'producers':forecast['producers'],
         'forecast_json_sha256':episode.file_sha256(directory/'forecast.json'),'forecast_payload_sha256':forecast['payload_sha256'],
         'results':results,'matched_step':comparison,'aggregate_CPU_seconds':used+time.process_time()-started,'CPU_budget_seconds':CPU_BUDGET,
+        'producing_commit':forecast.get('producing_commit'),
+        'later_step_confirmation_required':forecast['forecast_admission'].get('later_step_confirmation_required',False) or any(item['status']=='matched_measurement_deferred_by_budget' for item in results),
         'forecast_preceded_future_measurement':True,'new_future_NG_measurement':True,
         'composition_identity_is_separate_from_prediction':True,'conditional_finite_handoff_only':True,
         'universal_Omega_scaling_claimed':False,'normal_energy_closure_claimed':False,'continuous_error_bound':None,
@@ -462,7 +537,7 @@ def run(directory):
 
 
 def check(directory):
-    forecast,arrays=_read(directory,'forecast')
+    forecast,arrays=_read(directory,'forecast',allow_historical=True)
     opening=load_opening(forecast['nf']);basis=arrays['basis'];G=basis[:,:2]
     if np.max(np.abs(basis.conj().T@basis-np.eye(8)))>1e-10:raise ValueError('frozen nested observer is not orthonormal')
     for index,locked in enumerate(forecast['forecasts']):
@@ -476,7 +551,7 @@ def check(directory):
     reconstructed=[]
     path=Path(directory)/'measurement.json'
     if path.exists():
-        measured,states=_read(directory,'measurement')
+        measured,states=_read(directory,'measurement',allow_historical=True)
         if measured['forecast_json_sha256']!=episode.file_sha256(Path(directory)/'forecast.json'):raise ValueError('measurement forecast binding failed')
         for index,result in enumerate(measured['results']):
             if result['status']!='heldout_future_measured':continue
@@ -491,4 +566,7 @@ def check(directory):
             if max(np.max(np.abs(route-columns(state))) for route in routes)>1e-8:raise ValueError('nested endpoint reconstruction replay failed')
             reconstructed.append(value)
     return {'schema':SCHEMA,'ok':True,'mode':'read_only_replay','future_measurement_replayed':bool(reconstructed),'NG':reconstructed,
-            'evolved':False,'producer_and_input_hashes_match':True,'composition_only_is_not_a_physical_claim':True}
+            'evolved':False,'producer_and_input_hashes_match':True,'composition_only_is_not_a_physical_claim':True,
+            'historical_producing_commit':forecast.get('historical_producing_commit'),
+            'producer_binding_method':forecast.get('producer_binding_method','current frozen producer bytes'),
+            'replay_uses_current_readout_code':True,'historical_trajectory_recomputed':False}

@@ -28,13 +28,17 @@ def main(argv=None):
     parser.add_argument('--nf',type=int,choices=(128,256),default=256)
     parser.add_argument('--output',type=Path,help='new record prefix directory; default grandchild-v1/nf256')
     parser.add_argument('--no-matched-step',action='store_true',help='prepare only cap .0005')
+    parser.add_argument('--proper-increment',type=float,default=None,help='future normal-clock increment in (0,1]; default .05; use .75 in a new successor prefix')
     args=parser.parse_args(argv)
+    if args.proper_increment is not None and (args.run or args.check):
+        parser.error('--run/--check use the already locked proper increment; set --proper-increment during --prepare or preview')
+    increment=grandchild.validate_proper_increment(grandchild.DELTA_TAU if args.proper_increment is None else args.proper_increment)
     if args.prepare or args.run or args.check:
         destination=output_path(args.output or grandchild.OUTPUT/f'nf{args.nf}')
-        if args.prepare:report=grandchild.prepare(destination,args.nf,matched=not args.no_matched_step)
+        if args.prepare:report=grandchild.prepare(destination,args.nf,proper_increment=increment,matched=not args.no_matched_step)
         elif args.run:report=grandchild.run(destination)
         else:report=grandchild.check(destination)
-    else:report=grandchild.preview(args.nf)
+    else:report=grandchild.preview(args.nf,proper_increment=increment)
     print(json.dumps(report,sort_keys=True,indent=2,allow_nan=False))
     return 0
 

@@ -172,3 +172,173 @@ def test_radial_identity_is_euler_variation_of_the_owned_action():
     assert sp.simplify(Er + 16 * sp.pi * A * r * static_relation) == 0
     R4 = 2 * static_relation / r**2
     assert sp.simplify(Er + 8 * sp.pi * A * r**3 * R4) == 0
+
+
+def test_exact_discrete_virial_with_noncritical_geometry():
+    pair = stationary.make_pair()
+    x, _ = stationary.initial_unknown(pair)
+    ng = pair.grid.ng
+    angle = 2 * np.pi * pair.grid.xi_g / pair.grid.length
+    x[ng:2*ng] += .07 * np.cos(2 * angle)
+    x[2*ng:] += .4 * np.sin(3 * angle)
+    state, spec, raw, _, bundle, constraints = stationary.evaluate(pair, x)
+    virial = stationary.virial_diagnostic(pair, state, raw, bundle, constraints, spec)
+    assert abs(virial['gap']) > 1
+    assert abs(virial['fine_identity_defect']) < 1e-10
+    assert abs(virial['coarse_identity_defect']) < 1e-10
+    assert abs(virial['adjoint_pairing_defect']) < 1e-10
+    assert abs(virial['source_owned_field_energy_gap']) < 1e-11
+    assert abs(virial['source_spectral_field_energy_gap']) < 1e-10
+    assert virial['necessary_only'] and not virial['stationary_balance_claimed']
+    state.p_Q[0] = .1
+    with pytest.raises(ValueError, match='zero momenta'):
+        stationary.virial_diagnostic(pair, state, raw, bundle, constraints, spec)
+
+
+def test_finite_radius_affinity_and_unchanged_source():
+    pair = stationary.make_pair()
+    x, _ = stationary.initial_unknown(pair)
+    state, spectral, *_ = stationary.evaluate(pair, x)
+    original = state.copy()
+    report, arrays = stationary.select_radius_affine(pair, state, spectral)
+    assert report['finite_affinity_defect_max'] < 1e-10
+    assert report['source_change_max'] == 0
+    predicted = arrays['radius_pQ_remainder'] + 2.25 * arrays['radius_pQ_coefficient']
+    np.testing.assert_allclose(arrays['radius_third_pQ'], predicted, atol=1e-10)
+    for name in stationary.nested.STATE_NAMES:
+        np.testing.assert_array_equal(getattr(state, name), getattr(original, name))
+    assert not report['stationary_balance_claimed']
+    if report['least_squares_amplitude_square'] <= 0:
+        assert report['branch'] == 'nonpositive_radius_square_branch_mismatch'
+        assert 'radius_selected_r' not in arrays
+    else:
+        assert report['branch'] == 'positive_conditional_radius'
+        assert report['radius_amplitude']**2 == pytest.approx(report['least_squares_amplitude_square'])
+        assert set(report['raw_residual_max']) == set(stationary.BLOCKS)
+
+
+def test_higher_harmonic_trial_uses_actual_fine_virial():
+    # One small-band unit query exercises the same trial helper. It does not
+    # execute the production NF128 family or a joint geometry solve.
+    pair = stationary.make_pair()
+    report, arrays = stationary.balance_trial(pair, harmonic=3, amplitude=.35)
+    Q, chi = arrays['fine_Q'], arrays['fine_chi']
+    system = pair.grid.fine
+    expected = (float(coupling.alpha_of(system.C_W)) * pair.grid.dx_q * np.sum(Q**2 * chi**2)
+                - pair.grid.dx_q * np.dot(Q, arrays['fine_rho'])
+                - 2*np.pi*system.C_F*system.flux**2*pair.grid.dx_q*np.sum(Q**2))
+    assert report['virial_gap'] == pytest.approx(expected, abs=1e-11)
+    assert report['seed']['harmonic'] == 3
+    assert report['measurements']['fine_chi_seed_relation_defect_max'] >= 0
+    assert abs(report['measurements']['virial']['fine_identity_defect']) < 1e-10
+    assert set(report['measurements']['fine_momentum_residual_max']) == set(stationary.BLOCKS[:3])
+    assert not report['measurements']['hellmann_feynman']['performed']
+
+
+def test_balance_brackets_never_skip_failed_endpoint():
+    measured = lambda amp, gap: {'harmonic':6, 'amplitude':amp, 'status':'MEASURED', 'virial_gap':gap}
+    first, last = measured(.025, -1.), measured(.35, 1.)
+    failed = {'harmonic':6, 'amplitude':.1, 'status':'FAILED'}
+    assert stationary.sign_change_brackets([first, failed, last]) == []
+    middle = measured(.1, .2)
+    assert stationary.sign_change_brackets([first, middle, last]) == [(first, middle)]
+
+
+def test_balance_preflight_runs_no_numerical_trials(monkeypatch):
+    def forbidden(*args, **kwargs):
+        raise AssertionError('preflight must not construct matrices or execute trials')
+    monkeypatch.setattr(stationary, 'make_pair', forbidden)
+    monkeypatch.setattr(stationary, 'balance_trial', forbidden)
+    report, arrays = stationary.run_balance_seed()
+    assert report['status'] == 'BALANCE_SEED_PREFLIGHT'
+    assert report['nf'] == 128 and report['preflight']['endpoint_trials'] == 16
+    assert report['preflight']['harmonics'] == [6,8,10,12]
+    assert report['preflight']['endpoint_amplitudes'] == [.025,.1,.35,.65]
+    assert report['actual_trials'] == 0 and arrays == {}
+
+
+def test_balance_execution_cache_and_brent_admission_without_campaign(monkeypatch):
+    # Synthetic scalar trial oracle tests scheduling/caching only. No model
+    # state or scientific record is created from this oracle.
+    calls = []
+    monkeypatch.setattr(stationary, 'make_pair', lambda nf: object())
+    def scalar_trial(pair, harmonic, amplitude):
+        calls.append((harmonic, amplitude))
+        gap = amplitude-.3 if harmonic == 6 else 1+amplitude
+        return {'harmonic':harmonic, 'amplitude':amplitude, 'status':'MEASURED',
+                'virial_gap':gap, 'measurements':{'virial':{'gap':gap}}}, {'test_array':np.ones(1)}
+    monkeypatch.setattr(stationary, 'balance_trial', scalar_trial)
+    monkeypatch.setattr(stationary, 'least_squares', lambda *args, **kwargs: pytest.fail('joint solve forbidden'))
+    report, _ = stationary.run_balance_seed(execute=True)
+    assert len(calls) == len(set(calls))
+    assert len(report['endpoint_assessment']) == 16
+    assert len(report['brackets']) == 1
+    root = report['roots'][0]
+    assert root['status'] == 'VIRIAL_SELECTED_SHAPE' and root['amplitude'] == pytest.approx(.3)
+    assert report['status'] == 'VIRIAL_SELECTED_SHAPE_ONLY'
+    assert not report['scope']['stationary_balance_claimed']
+    assert report['actual_trials'] <= stationary.MAX_BALANCE_TRIALS
+
+
+def test_balance_cost_forecast_preserves_unadmitted_and_failed_trials(monkeypatch):
+    clock = [0.]
+    monkeypatch.setattr(stationary.time, 'process_time', lambda: clock[0])
+    monkeypatch.setattr(stationary, 'make_pair', lambda nf: object())
+    def costly_scalar_trial(pair, harmonic, amplitude):
+        clock[0] += .25
+        if amplitude == .1:
+            raise ValueError('synthetic failed endpoint')
+        return {'harmonic':harmonic, 'amplitude':amplitude, 'status':'MEASURED',
+                'virial_gap':1., 'measurements':{'virial':{'gap':1.}}}, {'test_array':np.ones(1)}
+    monkeypatch.setattr(stationary, 'balance_trial', costly_scalar_trial)
+    report, _ = stationary.run_balance_seed(execute=True, cpu_limit=1.)
+    assert len(report['endpoint_assessment']) == 16
+    assert report['actual_trials'] == 3
+    assert report['trials'][1]['status'] == 'FAILED'
+    assert any(row['status'] == 'NOT_ADMITTED' for row in report['endpoint_assessment'])
+    assert report['preflight']['forecast_endpoint_cpu_seconds'] == 4.
+    assert report['cpu_seconds'] == .75 and not report['cpu_budget_exceeded']
+    assert report['status'] == 'NO_COMPLETED_VIRIAL_BRACKET'
+
+
+def test_sealed_v1_authenticates_historical_bytes_and_diagnoses_without_solve(monkeypatch):
+    def forbidden(*args, **kwargs):
+        raise AssertionError('saved diagnosis must not optimize or select a new eigensource')
+    monkeypatch.setattr(stationary, 'least_squares', forbidden)
+    monkeypatch.setattr(stationary, 'spectral_source', forbidden)
+    check = stationary.check_record(stationary.LEGACY_OUTPUT)
+    assert check['ok'] and check['schema'] == stationary.LEGACY_SCHEMA
+    assert check['source_authentication'] == 'immutable_producing_commit'
+    report, arrays = stationary.run_saved_diagnostic()
+    measurements = report['measurements']
+    assert report['status'] == 'SAVED_STATIONARY_DIAGNOSTIC'
+    assert not report['optimizer']['executed_now']
+    assert measurements['virial']['gap'] == pytest.approx(-12.9592469545, abs=1e-8)
+    assert measurements['fine_momentum_residual_max']['p_r'] == pytest.approx(.45172235, abs=1e-7)
+    assert measurements['fine_momentum_residual_max']['p_chi'] == pytest.approx(.00296554, abs=1e-7)
+    assert abs(measurements['virial']['coarse_identity_defect']) < 1e-10
+    assert 'fine_p_r' in arrays and 'fine_p_chi' in arrays
+
+
+def test_successor_paths_remain_creation_only(tmp_path):
+    successor = stationary.LAB / 'results/development/nsc-discovery-stationary-balance-seed-v2'
+    assert stationary.output_paths(successor)[0].name == 'nsc-discovery-stationary-balance-seed-v2.json'
+    assert stationary.output_paths('lab/results/development/nsc-discovery-stationary-v1')[0] == stationary.LEGACY_OUTPUT.with_suffix('.json')
+    with pytest.raises(FileExistsError):
+        stationary.validate_new_output(stationary.LEGACY_OUTPUT)
+
+
+def test_saved_diagnostic_successor_round_trip(tmp_path):
+    report, arrays = stationary.run_saved_diagnostic()
+    stem = tmp_path / 'sealed-diagnostic-v2'
+    stationary.write_record(report, arrays, stem)
+    check = stationary.check_record(stem)
+    assert check['ok'] and check['schema'] == stationary.SCHEMA
+    assert check['status'] == 'SAVED_STATIONARY_DIAGNOSTIC'
+
+
+def test_balance_preflight_round_trip(tmp_path):
+    report, arrays = stationary.run_balance_seed()
+    stem = tmp_path / 'balance-preflight-v2'
+    stationary.write_record(report, arrays, stem)
+    assert stationary.check_record(stem)['status'] == 'BALANCE_SEED_PREFLIGHT'

@@ -1,0 +1,269 @@
+{
+  "artifact_paths": {
+    "lab/results/development/nsc-discovery-crossing-v1/cpu-ledger.json": {
+      "bytes": 137,
+      "sha256": "948795063661682fc9a7aa9070a6917d6f6ea6bdf44e0a6d3ef32e212d79d347"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/cpu-ledger.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/manifest.json": {
+      "bytes": 6656,
+      "sha256": "7c192f08deed5a9a1abd3e92897c380d407f4b4d9298f6be8937a437e5cb58ec"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.0005-000000.json": {
+      "bytes": 12929,
+      "sha256": "ff794e9c14521ad39c55a57b467235952ca8ee1c4de22b05bfaf04c53f550aa6"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.0005-000000.npz": {
+      "bytes": 212662,
+      "sha256": "19c3effda59c94fc4d2a2c7870e53f78037315a5bc5d74400d6c2896b0b41d30"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.0005-000001.json": {
+      "bytes": 12987,
+      "sha256": "2294488f4381524913f9d1561e15bad796c0645894043bb32990a649e9c31049"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.0005-000001.npz": {
+      "bytes": 212662,
+      "sha256": "9072e485c2ae5568cca143a0fba4f5bf37565992c9d2a2fd691c432fc82a44d1"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.0005-observations.jsonl": {
+      "bytes": 61893,
+      "sha256": "b1f13d12182d15dd29579ab42bf15863e75d27793e0aae6448b996883b7e5614"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.001-000000.json": {
+      "bytes": 12928,
+      "sha256": "8594a90bb23f78540cfb85684a061c4de949895fcc14063d93afe4a063296913"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.001-000000.npz": {
+      "bytes": 212662,
+      "sha256": "1fff0df37735ab02be3112bfdc999d80e797a9547fb6ac8f34bf8ab1f09545da"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.001-000001.json": {
+      "bytes": 12973,
+      "sha256": "3d3b92bb05a6ca27e99ba24a282411a633d52bdf032147a13723a4af9b22bab2"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.001-000001.npz": {
+      "bytes": 212662,
+      "sha256": "cb345100b729141003ff612c6d818c156b778c4e2d52f8dbabf42745b633062f"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_coupled_dt0.001-observations.jsonl": {
+      "bytes": 108520,
+      "sha256": "bc2707bee0de860f5061627ba3ac7c89fb5354e432153b64efed1e8d970cd090"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_frozen_geometry_dt0.0005-000000.json": {
+      "bytes": 12946,
+      "sha256": "7d45100788f21da57cef61adb4d196ed3b9b4719cb62408fe0056dccb101efe9"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_frozen_geometry_dt0.0005-000000.npz": {
+      "bytes": 212662,
+      "sha256": "f065275c620ff98e67be20ea8a63894068fb663f60cdd0e512c1151a23e22eda"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_frozen_geometry_dt0.0005-000001.json": {
+      "bytes": 12922,
+      "sha256": "6fffcb8f734bb5fd92a5492de0f72b9a42eaedea9033da6782335d9f8f1dbbeb"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_frozen_geometry_dt0.0005-000001.npz": {
+      "bytes": 212662,
+      "sha256": "4365469fab19ba80ba8acccf77b81813614382de099461b3a5907b8f121ffe98"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf128_frozen_geometry_dt0.0005-observations.jsonl": {
+      "bytes": 62684,
+      "sha256": "60c7a680680b51e88f81edb09858fb5521d5f96c5cfecbbefcb04755daeb31e5"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.0005-000000.json": {
+      "bytes": 14092,
+      "sha256": "0b5dc43eee3b799fd70f5b615cb95fe6ab7322fc561f7ae08f45f7083ceda445"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.0005-000000.npz": {
+      "bytes": 683702,
+      "sha256": "6c147a43d266aa4bc42afd83f3f0d11a304c9222ec75fe9d36beb5ccdd09ff1c"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.0005-000001.json": {
+      "bytes": 14147,
+      "sha256": "cef65ab3cbe5255dfb25269fb8db21a7dab4add19d3187793bebf8fe5ddb2bf4"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.0005-000001.npz": {
+      "bytes": 683702,
+      "sha256": "a934652b774a6d820cd8081b956766de3a8277992d17fc73e9cd9e845f6e3482"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.0005-observations.jsonl": {
+      "bytes": 61791,
+      "sha256": "3bce9ae4081d954a4b0a919a8cc47bca2b3f9abec9556abfca9417da23cd36dc"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.001-000000.json": {
+      "bytes": 14096,
+      "sha256": "d49777af8d901efa10cc0c7f89dd01f11b0058f0e1a6474f4b549e2248021a1a"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.001-000000.npz": {
+      "bytes": 683702,
+      "sha256": "3febc2fa2c087fd4333467223718e21b41bf0b1646572c06f202d87d483a1c20"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.001-000001.json": {
+      "bytes": 14140,
+      "sha256": "252cfa7ecc1440513d7cb4a9cd9fab7d2ecd3cf762f2d0bfaf1c94a9f2e7d403"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.001-000001.npz": {
+      "bytes": 683702,
+      "sha256": "980f4760c897934ac1006e568aeb29ac958842462f5f91f07cdecc2fc354b481"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_coupled_dt0.001-observations.jsonl": {
+      "bytes": 108376,
+      "sha256": "070326074cc4b6fc7820e48106a4f41f40411e3f526a6f559e6231a6c88150ab"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_frozen_geometry_dt0.0005-000000.json": {
+      "bytes": 14095,
+      "sha256": "02cfa3777680507ec83cc870c7f4e990d9774c85baa188c5d7e7ce3e770c9df1"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_frozen_geometry_dt0.0005-000000.npz": {
+      "bytes": 683702,
+      "sha256": "73f84acdc06caadb14f7cf77f3d0d67613fbe4ca32b0f9016ba8d80b401216df"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_frozen_geometry_dt0.0005-000001.json": {
+      "bytes": 14095,
+      "sha256": "32f41f2348b29e51a7072181a156dd384bfca43b2b26459c55a1692ec4df4f45"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_frozen_geometry_dt0.0005-000001.npz": {
+      "bytes": 683702,
+      "sha256": "bc4a745b84e944b953f81bf38d5ebf1fdd3aff07824a49bc43bfce470637b7c5"
+    },
+    "lab/results/development/nsc-discovery-crossing-v1/nf256_frozen_geometry_dt0.0005-observations.jsonl": {
+      "bytes": 62694,
+      "sha256": "1cc53fa4329c4b2913e694341f7c3170f40ccb066a9a488b29e818740cfc2451"
+    }
+  },
+  "binding_timing": "post-run authenticated coordinator observation; not a pre-run signed attestation",
+  "coordinator_observation": "Root executed the completed batch from frozen b7f0dab; scientific producer edits began only after its processes returned.",
+  "limits": [
+    "Runtime dynamic imports outside the explicit closure are not certified by this metadata; original upstream preparation and state pins are retained."
+  ],
+  "numerical_runs_repeated": false,
+  "producer_closure_method": "recursive explicit local Python imports from pinned Git blobs",
+  "producer_paths": {
+    "lab/scripts/derive_nsc_discovery_episode.py": {
+      "bytes": 4615,
+      "git_blob_authenticated": true,
+      "sha256": "8f3d7dc44594ba974eb9977b5842a2db5333e12a00e955cac51c65d58bfb9622"
+    },
+    "lab/src/recursive_horizons/__init__.py": {
+      "bytes": 245,
+      "git_blob_authenticated": true,
+      "sha256": "9e0819d34a855a852a9178e307b56f5c372d4778a8ea54c2afa83a556356e675"
+    },
+    "lab/src/recursive_horizons/nsc_adm_source.py": {
+      "bytes": 5881,
+      "git_blob_authenticated": true,
+      "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
+    },
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": {
+      "bytes": 23728,
+      "git_blob_authenticated": true,
+      "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+    },
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": {
+      "bytes": 17589,
+      "git_blob_authenticated": true,
+      "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": {
+      "bytes": 31399,
+      "git_blob_authenticated": true,
+      "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa"
+    },
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": {
+      "bytes": 102165,
+      "git_blob_authenticated": true,
+      "sha256": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00"
+    },
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": {
+      "bytes": 48154,
+      "git_blob_authenticated": true,
+      "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d"
+    },
+    "lab/src/recursive_horizons/nsc_finite_terms.py": {
+      "bytes": 15339,
+      "git_blob_authenticated": true,
+      "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c"
+    },
+    "lab/src/recursive_horizons/nsc_finite_window_embedding.py": {
+      "bytes": 22673,
+      "git_blob_authenticated": true,
+      "sha256": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62"
+    },
+    "lab/src/recursive_horizons/nsc_influence.py": {
+      "bytes": 10903,
+      "git_blob_authenticated": true,
+      "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8"
+    },
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": {
+      "bytes": 37305,
+      "git_blob_authenticated": true,
+      "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b"
+    },
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": {
+      "bytes": 3126,
+      "git_blob_authenticated": true,
+      "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1"
+    },
+    "lab/src/recursive_horizons/nsc_regeneration_controls.py": {
+      "bytes": 38434,
+      "git_blob_authenticated": true,
+      "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc"
+    },
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": {
+      "bytes": 45471,
+      "git_blob_authenticated": true,
+      "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7"
+    },
+    "lab/src/recursive_horizons/nsc_regulated.py": {
+      "bytes": 9463,
+      "git_blob_authenticated": true,
+      "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1"
+    },
+    "lab/src/recursive_horizons/nsc_shape_response.py": {
+      "bytes": 11005,
+      "git_blob_authenticated": true,
+      "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py": {
+      "bytes": 32267,
+      "git_blob_authenticated": true,
+      "sha256": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": {
+      "bytes": 58981,
+      "git_blob_authenticated": true,
+      "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": {
+      "bytes": 60250,
+      "git_blob_authenticated": true,
+      "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": {
+      "bytes": 37269,
+      "git_blob_authenticated": true,
+      "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": {
+      "bytes": 61141,
+      "git_blob_authenticated": true,
+      "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+    },
+    "lab/src/recursive_horizons/nsc_spherical_null_expansion.py": {
+      "bytes": 48540,
+      "git_blob_authenticated": true,
+      "sha256": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797"
+    },
+    "lab/src/recursive_horizons/provenance.py": {
+      "bytes": 3483,
+      "git_blob_authenticated": true,
+      "sha256": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4"
+    }
+  },
+  "producing_commit": "b7f0dab8de62d9a3472ac4e7b33351ab65d25847",
+  "schema": "NSC-DISCOVERY-OBSERVED-RUN-BINDING-v1",
+  "scientific_records_rewritten": false,
+  "unresolved_declared_local_imports": []
+}
