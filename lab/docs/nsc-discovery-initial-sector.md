@@ -206,3 +206,21 @@ After root pins the NEW source commit (not caf), execute explicitly:
 The baseline criterion is initial chi-ddot=0; nearby chi values do not satisfy
 that criterion. Subsequent growth remains an observed outcome of the same
 action, not evidence that a reset or another source force should be inserted.
+
+## Recorded outcome of the bounded comparison
+
+The balanced successor is produced by `65ebad8634c2c486e67761c2161346e9030d5748`.
+All six cases are retained in
+`results/development/nsc-discovery-initial-sector-balanced-v2/manifest.json`.
+Aggregate charged CPU is 137.43 seconds. The conditional candidate reaches
+T=3 with child proper length 0.0023929, down from 2.5497, and mean areal
+radius 9.8771. The upper-curvature control also contracts; the lower control
+reaches the positive-radius chart edge near T=1.482. Its two step caps bracket
+the same event within 0.001 and 0.0005 respectively and retain their last
+admissible states. No variable is clamped and no source is reset.
+
+These finite outcomes trigger the declared route stop. More curvature jets,
+coefficient tuning or a finer root search will not be used to turn this
+preparation into a holding claim. The action approximation and its additional
+curvature sector require a separate assessment; the earlier transfer and
+reduction results remain valid in their stated numerical domains.

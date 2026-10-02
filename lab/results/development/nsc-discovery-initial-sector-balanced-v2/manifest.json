@@ -1,0 +1,4154 @@
+{
+  "schema": "NSC-DISCOVERY-INITIAL-SECTOR-EPISODE-balanced-v2",
+  "status": "CHART_EXIT",
+  "cases": [
+    {
+      "case_id": "nf128_chi_balanced_dt0.001",
+      "nf": 128,
+      "npz": "nf128_chi_balanced_dt0.001-000000.npz",
+      "json": "nf128_chi_balanced_dt0.001-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_chi_balanced_dt0.0005",
+      "nf": 128,
+      "npz": "nf128_chi_balanced_dt0.0005-000000.npz",
+      "json": "nf128_chi_balanced_dt0.0005-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_chi_lower_dt0.001",
+      "nf": 128,
+      "npz": "nf128_chi_lower_dt0.001-000000.npz",
+      "json": "nf128_chi_lower_dt0.001-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_chi_lower_dt0.0005",
+      "nf": 128,
+      "npz": "nf128_chi_lower_dt0.0005-000000.npz",
+      "json": "nf128_chi_lower_dt0.0005-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_chi_upper_dt0.001",
+      "nf": 128,
+      "npz": "nf128_chi_upper_dt0.001-000000.npz",
+      "json": "nf128_chi_upper_dt0.001-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_chi_upper_dt0.0005",
+      "nf": 128,
+      "npz": "nf128_chi_upper_dt0.0005-000000.npz",
+      "json": "nf128_chi_upper_dt0.0005-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    }
+  ],
+  "source_hashes": {
+    "lab/docs/nsc-discovery-dynamic-preparation.md": "2b1a8e1a6382cb147287c0fb9e817dc77b2f00f46cefafe2949cc064103ed617",
+    "lab/docs/nsc-discovery-initial-sector.md": "0a110ef10f235b17e6216ca35242ba17fa83e35fad6601a83684f75a34037358",
+    "lab/scripts/derive_nsc_discovery_dynamic_preparation.py": "4cba0bf15e4e54db023ddb20182dffe5d2bc807429b940ef5f30a2369e7f4931",
+    "lab/scripts/derive_nsc_discovery_initial_sector.py": "1250685c7a9a1aaf908e34bf6c38cf4e573572da3572b0f45313cd0c2fb51f18",
+    "lab/src/recursive_horizons/__init__.py": "9e0819d34a855a852a9178e307b56f5c372d4778a8ea54c2afa83a556356e675",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "lab/src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_family.py": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+    "lab/src/recursive_horizons/nsc_discovery_initial_sector.py": "82208df2f35d55c629f17c5d14281337feb28d435989577ee31e46fa12448f3a",
+    "lab/src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+    "lab/src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "lab/src/recursive_horizons/nsc_discovery_regions.py": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+    "lab/src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_discovery_translation.py": "7e17a7afef9618266ab5c14189e494ae65467c0bc02ebf22bbf4b8c77fd375aa",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_dynamic_preparation.py": "8b953eb0d2059505edd07510ee876ca27aed0a80d876a884b3aad270e546271d",
+    "lab/tests/test_nsc_discovery_initial_sector.py": "d4da25ad0f4f3edf4b4a3381630f7aacff2fa1e5f3078c7459c32494ad31a036"
+  },
+  "initial_record": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-initial-sector-preparation-balanced-v2.json",
+  "initial_binding": {
+    "record_sha256": "b7df8554adbd95d423dc0eb555c9a8b40cddf2bd5a83a2c2ab7b04ddc266a100",
+    "payload_sha256": "766cac358908831bf2cb8bf653d0fddbc049b3bfe9e53e8df9fa8c2fb3ba3e94"
+  },
+  "old_comparison": {
+    "directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1",
+    "cases": [
+      {
+        "case_id": "nf128_uniform_dt0.001",
+        "initial_state_sha256": "faf0d863fcd1617d13a6bc3eb2a6e32c0ef45b7e61b28b03f448474efa734793",
+        "last_time": 3.0,
+        "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0"
+      },
+      {
+        "case_id": "nf128_uniform_dt0.0005",
+        "initial_state_sha256": "faf0d863fcd1617d13a6bc3eb2a6e32c0ef45b7e61b28b03f448474efa734793",
+        "last_time": 3.0,
+        "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0"
+      }
+    ],
+    "hashes": {
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/manifest.json": "9964398a88af7e9a0d63068c4cd4bafb542e29b35edd40b35583c86547064ca1",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000000.json": "4f3cf22aa17ea5a5de68b34143f2055ae5922a0f322537364e5666e8a5f33931",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000000.npz": "44d7f0468b135cda662d2ae0072d735de667b3e89bdfe6cd91f9f487571438a8",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000001.json": "9e444ca98f1b03d6f3d91924e1c28b36b401b89feac055957a73e0abef9c6a0b",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000001.npz": "bbc7129fa44c6058eefd6604847e8cef7fca00dd0f0051d4a42a17efc71b650b",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000002.json": "0efedc49c447f02b5abde883df320611c45ae32a7e0bb8b323b8ab5f41198820",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000002.npz": "76f61357eef4fe259640c8a1ee65182eb457ff138b5fb0d62f50395b090ba770",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000003.json": "17dead524efa30732d89a85ea94c4dcfc3e190825787fba6fa90d49f10c02848",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-000003.npz": "c9256c67a1b5279665b105e1304fa5a5f6477357f004e1f804847afe77058e07",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.001-observations.jsonl": "a05322476828b94b42a2b76fb78b04da04293eebb3e08d29a62aed816a55bd7e",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000000.json": "0a4334dd90875d36dd1f2ffdcc016fa247f6319cf80d63201c913831eba454e4",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000000.npz": "44d7f0468b135cda662d2ae0072d735de667b3e89bdfe6cd91f9f487571438a8",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000001.json": "224c1c9e4b98bb896f0e69bf74084b9b4c64a260182670619228e4fbb2ccaa00",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000001.npz": "048db492625bed40832ece0838f387602a3dcb8039f2a8e0bb75c8a3356c13c1",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000002.json": "ceb8b203a8971a2ffc7b6abc2a13ccc788f1265dd3f13f3d9747a97a89da8d60",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000002.npz": "e8554193134bb90dc270b98a2ef83ea25eeb96744cbccc67b5ad24a266b00f70",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000003.json": "0914fa20103c63b9f09f271f6278b0ef2703bfb509b7067756d491363ff97b34",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-000003.npz": "ecd1aa21ac23ce77ddc4423c289d65c433df9c390c4bac74148362b145944c22",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-episode-v1/nf128_uniform_dt0.0005-observations.jsonl": "9d82181a342da3d21d4727e4a3dfcd9ac181248f976e348ab097465e692776c7"
+    },
+    "rerun": false,
+    "sector": {
+      "h": 0.0,
+      "chi": 0.0
+    },
+    "producer_preserved": true
+  },
+  "sectors": [
+    "chi_balanced",
+    "chi_lower",
+    "chi_upper"
+  ],
+  "stations": [
+    0.3,
+    1.0,
+    3.0
+  ],
+  "workers_maximum": 4,
+  "cpu_budget_seconds": 300.0,
+  "forecast_factor": 1.5,
+  "initial_constraints_resolved_error": 1e-06,
+  "evolved": true,
+  "future_rates_fixed": false,
+  "source_reset": false,
+  "observer_reset": false,
+  "curvature_criterion": {
+    "criterion": "uniform initial chi_ddot=0 with zero momenta; fixed Q and Gaussian source",
+    "cubic_law": "alpha*Q*chi^3+4*alpha*Q*chi^2+(rho+mag*Q)*chi+6*rho-3*M*kappa*S=0",
+    "cubic_coefficients": [
+      0.0016404214787116996,
+      0.006561685914846798,
+      3.9592718140366165,
+      18.166547250882896
+    ],
+    "chi_star": -4.58327910764894,
+    "cubic_residual": 0.0,
+    "global_derivative_lower_bound": 3.9505228994834876,
+    "derivative_identity": "3*alpha*Q*(chi+4/3)^2+rho+Q*(mag-16*alpha/3)",
+    "unique_real_root": true,
+    "Q": 0.46394471443118257,
+    "rho": 3.4343369408488726,
+    "S": 0.20328953285086168,
+    "alpha": 0.003535812409724144,
+    "f": 0.007071624819448288,
+    "mag": 1.1314599711117261,
+    "M": 4,
+    "kappa": 1,
+    "rho_nonuniform_max": 6.275424624391235e-12,
+    "spin_nonuniform_max": 7.216449660063518e-15,
+    "constraint_radius_square": 7.550759924699899,
+    "positive_radius": true,
+    "conditional_preparation": true,
+    "fully_dynamic_source_selection": false,
+    "higher_adiabatic_jets_matched": false,
+    "holding_claim": false,
+    "perturbation_fraction": 0.01,
+    "source_eta_changed": false
+  },
+  "route_policy": "if all three show curvature growth or chart loss, stop this initial-sector route; no higher-jet or alpha tuning",
+  "conditional_initial_curvature_criterion_only": true,
+  "higher_adiabatic_jets_matched": false,
+  "producing_commit": "65ebad8634c2c486e67761c2161346e9030d5748",
+  "stage": 2,
+  "workers": 4,
+  "chunk_limit_bytes": 67108864,
+  "child_cpu_seconds": 136.832685,
+  "cumulative_cpu_seconds": 137.432684,
+  "adapter_preparation_cpu_seconds": 0.300395,
+  "observer_sha256": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+  "memory_limit_bytes": 8589934592,
+  "results": [
+    {
+      "case_id": "nf128_chi_lower_dt0.001",
+      "status": "chart_exit",
+      "child_cpu_seconds": 9.671633,
+      "coordinate_time": 1.481999999999947,
+      "steps": 1482,
+      "stations_reached": [
+        0.3,
+        1.0
+      ],
+      "stop": {
+        "stop_class": "chart_exit",
+        "reason": "r_left_positive_chart",
+        "last_admissible_time": 1.481999999999947,
+        "event_bracket": [
+          1.481999999999947,
+          1.4829999999999468
+        ],
+        "state_clamped": false,
+        "physical_instability_claimed": false,
+        "failed_state_retained": false,
+        "stability_certificate": false
+      },
+      "chunk": "nf128_chi_lower_dt0.001-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 22.473743999999947
+    },
+    {
+      "case_id": "nf128_chi_lower_dt0.0005",
+      "status": "chart_exit",
+      "child_cpu_seconds": 17.474794,
+      "coordinate_time": 1.481999999999947,
+      "steps": 2964,
+      "stations_reached": [
+        0.3,
+        1.0
+      ],
+      "stop": {
+        "stop_class": "chart_exit",
+        "reason": "r_left_positive_chart",
+        "last_admissible_time": 1.481999999999947,
+        "event_bracket": [
+          1.481999999999947,
+          1.4824999999999469
+        ],
+        "state_clamped": false,
+        "physical_instability_claimed": false,
+        "failed_state_retained": false,
+        "stability_certificate": false
+      },
+      "chunk": "nf128_chi_lower_dt0.0005-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 49.702835999999934
+    },
+    {
+      "case_id": "nf128_chi_balanced_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 17.97682,
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_chi_balanced_dt0.001-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 56.61261000000005
+    },
+    {
+      "case_id": "nf128_chi_upper_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 21.229147,
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_chi_upper_dt0.001-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 24.50235599999673
+    },
+    {
+      "case_id": "nf128_chi_balanced_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 35.31046,
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_chi_balanced_dt0.0005-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 55.75420200000001
+    },
+    {
+      "case_id": "nf128_chi_upper_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 35.169831,
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_chi_upper_dt0.0005-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 53.06969399998484
+    }
+  ],
+  "cpu_accounting": "sum_of_child_process_time",
+  "executor_pools": 1,
+  "stability_certificate": false,
+  "max_T_forced": false,
+  "zero_residual_gate": false,
+  "assessment": {
+    "cases": {
+      "nf128_chi_balanced_dt0.001": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.5497145252202165,
+          "child_areal_radius": 2.7478646117849244,
+          "child_Q": 0.4639447144311823,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.499640576264083,
+          "proper_probability_width": 10.198858100880873,
+          "probability_contrast": 1.0115219665711241e-13,
+          "radial_tide_rms": 0.0698949122754185,
+          "angular_tide_rms": 0.10116595665769125
+        },
+        "last": {
+          "child_proper_length": 0.002392898861837421,
+          "child_areal_radius": 9.877067116516178,
+          "child_Q": 0.00012113407925699308,
+          "child_probability": 0.7500000000000002,
+          "child_normal_energy": 2027.3380729838875,
+          "proper_probability_width": 0.009571595447349823,
+          "probability_contrast": 1.2477618663859249e-13,
+          "radial_tide_rms": 179535.2425662223,
+          "angular_tide_rms": 1763110.2737688574
+        },
+        "changes": {
+          "radial_tide_rms": 179535.17267131002,
+          "child_proper_length": -2.547321626358379,
+          "child_normal_energy": 2024.8384324076235,
+          "child_probability": 1.5543122344752192e-15,
+          "angular_tide_rms": 1763110.1726029008,
+          "proper_probability_width": -10.189286505433524,
+          "child_Q": -0.4638235803519253,
+          "child_areal_radius": 7.1292025047312535,
+          "probability_contrast": 2.3623989981480076e-14
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -7.5311381806386635e-06,
+            "max": 1.2648635674850084e-05,
+            "max_abs": 1.2648635674850084e-05,
+            "rms": 4.400321400129997e-06
+          },
+          "h_c": {
+            "min": -9.122774892688611e-10,
+            "max": 1.532180836330233e-09,
+            "max_abs": 1.532180836330233e-09,
+            "rms": 5.330288812396014e-10
+          },
+          "D": {
+            "min": -2.10530928428246e-10,
+            "max": 2.2151707817750813e-10,
+            "max_abs": 2.2151707817750813e-10,
+            "rms": 6.785700789596645e-11
+          },
+          "projected_h_c": {
+            "min": 2.0934814878265195e-10,
+            "max": 4.979115627376673e-10,
+            "max_abs": 4.979115627376673e-10,
+            "rms": 3.60393332609782e-10
+          },
+          "held_out_h_c": {
+            "min": -1.2804823354281066e-09,
+            "max": 1.1990298433821302e-09,
+            "max_abs": 1.2804823354281066e-09,
+            "rms": 3.9272946674009094e-10
+          },
+          "source_Q_rho": {
+            "min": 1.2128037418502724,
+            "max": 1.2128037418511133,
+            "max_abs": 1.2128037418511133,
+            "rms": 1.2128037418507
+          },
+          "source_current": {
+            "min": -5.124910912313041e-13,
+            "max": 4.921323765172403e-13,
+            "max_abs": 5.124910912313041e-13,
+            "rms": 1.728772900858036e-13
+          },
+          "h_c_over_source_scale": 1.263337820834599e-09,
+          "D_over_source_scale": 432.23595876621823,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_chi_balanced_dt0.0005": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.5497145252202165,
+          "child_areal_radius": 2.7478646117849244,
+          "child_Q": 0.4639447144311823,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.499640576264083,
+          "proper_probability_width": 10.198858100880873,
+          "probability_contrast": 1.0115219665711241e-13,
+          "radial_tide_rms": 0.0698949122754185,
+          "angular_tide_rms": 0.10116595665769125
+        },
+        "last": {
+          "child_proper_length": 0.0023928988618026462,
+          "child_areal_radius": 9.877067116508815,
+          "child_Q": 0.00012113407925532294,
+          "child_probability": 0.7500000000000004,
+          "child_normal_energy": 2027.3380730150398,
+          "proper_probability_width": 0.009571595447210717,
+          "probability_contrast": 1.1806583939032436e-13,
+          "radial_tide_rms": 179535.24256988516,
+          "angular_tide_rms": 1763110.2737966443
+        },
+        "changes": {
+          "radial_tide_rms": 179535.17267497288,
+          "child_proper_length": -2.5473216263584137,
+          "child_normal_energy": 2024.8384324387757,
+          "child_probability": 1.7763568394002505e-15,
+          "angular_tide_rms": 1763110.1726306877,
+          "proper_probability_width": -10.189286505433662,
+          "child_Q": -0.46382358035192695,
+          "child_areal_radius": 7.1292025047238905,
+          "probability_contrast": 1.6913642733211945e-14
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -1.2350179531495087e-05,
+            "max": 1.2785305443685502e-05,
+            "max_abs": 1.2785305443685502e-05,
+            "rms": 3.7958179028514647e-06
+          },
+          "h_c": {
+            "min": -1.4960276261856138e-09,
+            "max": 1.5487362029189328e-09,
+            "max_abs": 1.5487362029189328e-09,
+            "rms": 4.5980290668279134e-10
+          },
+          "D": {
+            "min": -1.3950567462408005e-10,
+            "max": 1.653262209585828e-10,
+            "max_abs": 1.653262209585828e-10,
+            "rms": 5.3099467918202325e-11
+          },
+          "projected_h_c": {
+            "min": -2.1915382865341488e-10,
+            "max": 2.663787640281631e-10,
+            "max_abs": 2.663787640281631e-10,
+            "rms": 8.792453578878987e-11
+          },
+          "held_out_h_c": {
+            "min": -1.443386220984511e-09,
+            "max": 1.4650404497295375e-09,
+            "max_abs": 1.4650404497295375e-09,
+            "rms": 4.513180574719667e-10
+          },
+          "source_Q_rho": {
+            "min": 1.2128037418512936,
+            "max": 1.2128037418521096,
+            "max_abs": 1.2128037418521096,
+            "rms": 1.2128037418517124
+          },
+          "source_current": {
+            "min": -5.041331935240478e-13,
+            "max": 5.322391832818241e-13,
+            "max_abs": 5.322391832818241e-13,
+            "rms": 1.789406193845591e-13
+          },
+          "h_c_over_source_scale": 1.2769883118548188e-09,
+          "D_over_source_scale": 310.6239190041773,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_chi_lower_dt0.001": {
+        "initial_time": 0.0,
+        "last_time": 1.481999999999947,
+        "initial": {
+          "child_proper_length": 2.5498405695982154,
+          "child_areal_radius": 2.7480004516534238,
+          "child_Q": 0.46394471443118224,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.499517013385128,
+          "proper_probability_width": 10.199362278392867,
+          "probability_contrast": 1.0115719708582111e-13,
+          "radial_tide_rms": 0.0719111214231062,
+          "angular_tide_rms": 0.10216751473328166
+        },
+        "last": {
+          "child_proper_length": 36.48379176278023,
+          "child_areal_radius": 0.25142313313339565,
+          "child_Q": 72.55456430777856,
+          "child_probability": 0.749979530128309,
+          "child_normal_energy": 7.63178646434983,
+          "proper_probability_width": 145.93516705342438,
+          "probability_contrast": 9.114345334344719e-11,
+          "radial_tide_rms": 15890.489145749892,
+          "angular_tide_rms": 4705.319293606649
+        },
+        "changes": {
+          "radial_tide_rms": 15890.417234628469,
+          "child_proper_length": 33.93395119318201,
+          "child_normal_energy": 5.132269450964701,
+          "child_probability": -2.0469871689687835e-05,
+          "angular_tide_rms": 4705.217126091916,
+          "proper_probability_width": 135.7358047750315,
+          "child_Q": 72.09061959334738,
+          "child_areal_radius": -2.496577318520028,
+          "probability_contrast": 9.104229614636137e-11
+        },
+        "geometry_signs": {
+          "child_proper_length": 1,
+          "child_areal_radius": -1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -560789.7009206616,
+            "max": -560789.7004430284,
+            "max_abs": 560789.7009206616,
+            "rms": 560789.7006646764
+          },
+          "h_c": {
+            "min": -40687852.4244505,
+            "max": -40687852.381529145,
+            "max_abs": 40687852.4244505,
+            "rms": 40687852.40144696
+          },
+          "D": {
+            "min": -3.871395049741618e-06,
+            "max": 4.3085269205830295e-06,
+            "max_abs": 4.3085269205830295e-06,
+            "rms": 2.029999198054259e-06
+          },
+          "projected_h_c": {
+            "min": -40687852.42444763,
+            "max": -40687852.381533414,
+            "max_abs": 40687852.42444763,
+            "rms": 40687852.40144695
+          },
+          "held_out_h_c": {
+            "min": -3.501772880554199e-07,
+            "max": 3.948807716369629e-07,
+            "max_abs": 3.948807716369629e-07,
+            "rms": 1.1509042688891485e-07
+          },
+          "source_Q_rho": {
+            "min": 69.60912703177995,
+            "max": 69.6091270457236,
+            "max_abs": 69.6091270457236,
+            "rms": 69.60912703825112
+          },
+          "source_current": {
+            "min": -4.455207036624387e-12,
+            "max": 4.890041496730113e-12,
+            "max_abs": 4.890041496730113e-12,
+            "rms": 2.2874094105596188e-12
+          },
+          "h_c_over_source_scale": 584518.9295036582,
+          "D_over_source_scale": 881081.8729174522,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "chart_exit",
+          "reason": "r_left_positive_chart",
+          "last_admissible_time": 1.481999999999947,
+          "event_bracket": [
+            1.481999999999947,
+            1.4829999999999468
+          ],
+          "state_clamped": false,
+          "physical_instability_claimed": false,
+          "failed_state_retained": false,
+          "stability_certificate": false
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_chi_lower_dt0.0005": {
+        "initial_time": 0.0,
+        "last_time": 1.481999999999947,
+        "initial": {
+          "child_proper_length": 2.5498405695982154,
+          "child_areal_radius": 2.7480004516534238,
+          "child_Q": 0.46394471443118224,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.499517013385128,
+          "proper_probability_width": 10.199362278392867,
+          "probability_contrast": 1.0115719708582111e-13,
+          "radial_tide_rms": 0.0719111214231062,
+          "angular_tide_rms": 0.10216751473328166
+        },
+        "last": {
+          "child_proper_length": 38.858535275294614,
+          "child_areal_radius": 0.23633698449577453,
+          "child_Q": 82.21001752687879,
+          "child_probability": 0.7499931990554907,
+          "child_normal_energy": 8.105531758571248,
+          "proper_probability_width": 155.43414110425206,
+          "probability_contrast": 1.2191291049264464e-10,
+          "radial_tide_rms": 19456.24719175268,
+          "angular_tide_rms": 6057.0616979192855
+        },
+        "changes": {
+          "radial_tide_rms": 19456.175280631254,
+          "child_proper_length": 36.3086947056964,
+          "child_normal_energy": 5.606014745186119,
+          "child_probability": -6.800944508000839e-06,
+          "angular_tide_rms": 6056.959530404552,
+          "proper_probability_width": 145.2347788258592,
+          "child_Q": 81.74607281244761,
+          "child_areal_radius": -2.5116634671576494,
+          "probability_contrast": 1.218117532955588e-10
+        },
+        "geometry_signs": {
+          "child_proper_length": 1,
+          "child_areal_radius": -1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -321113.69323733123,
+            "max": -321113.6928308847,
+            "max_abs": 321113.69323733123,
+            "rms": 321113.6930168373
+          },
+          "h_c": {
+            "min": -26398762.35407428,
+            "max": -26398762.313689344,
+            "max_abs": 26398762.35407428,
+            "rms": 26398762.332165834
+          },
+          "D": {
+            "min": -3.3528707281007912e-06,
+            "max": 3.570076008805635e-06,
+            "max_abs": 3.570076008805635e-06,
+            "rms": 1.734661091312664e-06
+          },
+          "projected_h_c": {
+            "min": -26398762.354072582,
+            "max": -26398762.31368598,
+            "max_abs": 26398762.354072582,
+            "rms": 26398762.332165837
+          },
+          "held_out_h_c": {
+            "min": -5.438923835754395e-07,
+            "max": 4.507601261138916e-07,
+            "max_abs": 5.438923835754395e-07,
+            "rms": 1.682032609855474e-07
+          },
+          "source_Q_rho": {
+            "min": 78.7422729353012,
+            "max": 78.74227295583583,
+            "max_abs": 78.74227295583583,
+            "rms": 78.74227294469677
+          },
+          "source_current": {
+            "min": -5.313386883254445e-12,
+            "max": 5.769941816002877e-12,
+            "max_abs": 5.769941816002877e-12,
+            "rms": 2.693815551127816e-12
+          },
+          "h_c_over_source_scale": 335255.2747477908,
+          "D_over_source_scale": 618736.9167058261,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "chart_exit",
+          "reason": "r_left_positive_chart",
+          "last_admissible_time": 1.481999999999947,
+          "event_bracket": [
+            1.481999999999947,
+            1.4824999999999469
+          ],
+          "state_clamped": false,
+          "physical_instability_claimed": false,
+          "failed_state_retained": false,
+          "stability_certificate": false
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_chi_upper_dt0.001": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.54959069140225,
+          "child_areal_radius": 2.747731154269282,
+          "child_Q": 0.46394471443118235,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.499761984001076,
+          "proper_probability_width": 10.198362765609007,
+          "probability_contrast": 1.0133599154493805e-13,
+          "radial_tide_rms": 0.0678781863594814,
+          "angular_tide_rms": 0.10016402633136555
+        },
+        "last": {
+          "child_proper_length": 0.0015501995842568195,
+          "child_areal_radius": 10.778285875611314,
+          "child_Q": 7.191308535267888e-05,
+          "child_probability": 0.7499999999999996,
+          "child_normal_energy": 3159.599919346115,
+          "proper_probability_width": 0.006200798337027312,
+          "probability_contrast": 8.553383072004569e-14,
+          "radial_tide_rms": 374485.0737983382,
+          "angular_tide_rms": 3841347.798179507
+        },
+        "changes": {
+          "radial_tide_rms": 374485.00592015183,
+          "child_proper_length": -2.5480404918179933,
+          "child_normal_energy": 3157.100157362114,
+          "child_probability": 8.881784197001252e-16,
+          "angular_tide_rms": 3841347.6980154803,
+          "proper_probability_width": -10.19216196727198,
+          "child_Q": -0.46387280134582964,
+          "child_areal_radius": 8.030554721342032,
+          "probability_contrast": -1.580216082489237e-14
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -1.8128728697774932e-05,
+            "max": 2.8322207072051242e-05,
+            "max_abs": 2.8322207072051242e-05,
+            "rms": 8.271509361295883e-06
+          },
+          "h_c": {
+            "min": -1.3036928141786333e-09,
+            "max": 2.036737294548644e-09,
+            "max_abs": 2.036737294548644e-09,
+            "rms": 5.948297586943574e-10
+          },
+          "D": {
+            "min": -2.1203461079071433e-10,
+            "max": 2.0569959770227465e-10,
+            "max_abs": 2.1203461079071433e-10,
+            "rms": 7.33600179425771e-11
+          },
+          "projected_h_c": {
+            "min": 1.3275019848247944e-10,
+            "max": 5.169569261260435e-10,
+            "max_abs": 5.169569261260435e-10,
+            "rms": 3.443552615930135e-10
+          },
+          "held_out_h_c": {
+            "min": -1.6351662603570357e-09,
+            "max": 1.6284513196334655e-09,
+            "max_abs": 1.6351662603570357e-09,
+            "rms": 4.850174178744456e-10
+          },
+          "source_Q_rho": {
+            "min": 1.2245026203466824,
+            "max": 1.2245026203474372,
+            "max_abs": 1.2245026203474372,
+            "rms": 1.2245026203470573
+          },
+          "source_current": {
+            "min": -5.153531681262313e-13,
+            "max": 4.728897395195331e-13,
+            "max_abs": 5.153531681262313e-13,
+            "rms": 1.708105720788961e-13
+          },
+          "h_c_over_source_scale": 1.663318036812976e-09,
+          "D_over_source_scale": 411.43554343839463,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_chi_upper_dt0.0005": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.54959069140225,
+          "child_areal_radius": 2.747731154269282,
+          "child_Q": 0.46394471443118235,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.499761984001076,
+          "proper_probability_width": 10.198362765609007,
+          "probability_contrast": 1.0133599154493805e-13,
+          "radial_tide_rms": 0.0678781863594814,
+          "angular_tide_rms": 0.10016402633136555
+        },
+        "last": {
+          "child_proper_length": 0.0015501995842095383,
+          "child_areal_radius": 10.778285875635067,
+          "child_Q": 7.191308535032707e-05,
+          "child_probability": 0.7500000000000004,
+          "child_normal_energy": 3159.599919445428,
+          "proper_probability_width": 0.006200798336838185,
+          "probability_contrast": 8.435891546032917e-14,
+          "radial_tide_rms": 374485.0738164896,
+          "angular_tide_rms": 3841347.798355777
+        },
+        "changes": {
+          "radial_tide_rms": 374485.00593830325,
+          "child_proper_length": -2.5480404918180404,
+          "child_normal_energy": 3157.100157461427,
+          "child_probability": 1.7763568394002505e-15,
+          "angular_tide_rms": 3841347.6981917503,
+          "proper_probability_width": -10.192161967272169,
+          "child_Q": -0.46387280134583203,
+          "child_areal_radius": 8.030554721365785,
+          "probability_contrast": -1.6977076084608882e-14
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -1.723777677398175e-05,
+            "max": 1.799488381948322e-05,
+            "max_abs": 1.799488381948322e-05,
+            "rms": 6.345948667411466e-06
+          },
+          "h_c": {
+            "min": -1.2396217123972197e-09,
+            "max": 1.2940676159797078e-09,
+            "max_abs": 1.2940676159797078e-09,
+            "rms": 4.563567481483573e-10
+          },
+          "D": {
+            "min": -2.0890423020670307e-10,
+            "max": 1.9774620386815133e-10,
+            "max_abs": 2.0890423020670307e-10,
+            "rms": 6.876594967965121e-11
+          },
+          "projected_h_c": {
+            "min": -2.5731061940865115e-10,
+            "max": 2.833103680131709e-10,
+            "max_abs": 2.833103680131709e-10,
+            "rms": 1.016288497213143e-10
+          },
+          "held_out_h_c": {
+            "min": -1.3290749678948823e-09,
+            "max": 1.3129287856411715e-09,
+            "max_abs": 1.3290749678948823e-09,
+            "rms": 4.448966829330892e-10
+          },
+          "source_Q_rho": {
+            "min": 1.2245026203478062,
+            "max": 1.2245026203486045,
+            "max_abs": 1.2245026203486045,
+            "rms": 1.2245026203482
+          },
+          "source_current": {
+            "min": -5.065824062316926e-13,
+            "max": 4.3516232284268597e-13,
+            "max_abs": 5.065824062316926e-13,
+            "rms": 1.6791928566814133e-13
+          },
+          "h_c_over_source_scale": 1.0568108181028628e-09,
+          "D_over_source_scale": 412.37956083132855,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      }
+    },
+    "matched_step_comparisons": [
+      {
+        "sector": "chi_balanced",
+        "time": 0.05,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 8.881784197001252e-15,
+          "child_r_proper_mean": -4.440892098500626e-16,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -6.217248937900877e-15,
+          "proper_probability_width": 3.375077994860476e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.1,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -8.881784197001252e-16,
+          "child_r_proper_mean": -6.217248937900877e-15,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": 1.3322676295501878e-15,
+          "proper_probability_width": 0.0
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.15000000000000002,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.6645352591003757e-15,
+          "child_r_proper_mean": -7.549516567451064e-15,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": 4.884981308350689e-15,
+          "proper_probability_width": -1.0658141036401503e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.2,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.7763568394002505e-15,
+          "child_r_proper_mean": -5.773159728050814e-15,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -4.440892098500626e-16,
+          "proper_probability_width": 7.105427357601002e-15
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.25,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.0658141036401503e-14,
+          "child_r_proper_mean": -1.1102230246251565e-14,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -4.884981308350689e-15,
+          "proper_probability_width": 3.730349362740526e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.3,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.3322676295501878e-14,
+          "child_r_proper_mean": -8.43769498715119e-15,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -8.43769498715119e-15,
+          "proper_probability_width": 5.1514348342607263e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.35000000000000003,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 2.220446049250313e-14,
+          "child_r_proper_mean": -4.884981308350689e-15,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -1.554312234475219e-14,
+          "proper_probability_width": 9.237055564881302e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.4,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 2.3092638912203256e-14,
+          "child_r_proper_mean": -1.5987211554602254e-14,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -1.4654943925052066e-14,
+          "proper_probability_width": 8.881784197001252e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.45,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 2.842170943040401e-14,
+          "child_r_proper_mean": -2.220446049250313e-14,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -1.8207657603852567e-14,
+          "proper_probability_width": 1.1546319456101628e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.5,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 4.218847493575595e-14,
+          "child_r_proper_mean": -1.9539925233402755e-14,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -2.5757174171303632e-14,
+          "proper_probability_width": 1.723066134218243e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.0,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.3775647289548942e-12,
+          "child_r_proper_mean": 6.94999613415348e-13,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": 7.616129948928574e-13,
+          "proper_probability_width": -5.510258915819577e-12
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.0499999999999945,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.3563373474644322e-12,
+          "child_r_proper_mean": 1.1763923168928159e-12,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": 1.3029577417000837e-12,
+          "proper_probability_width": -9.423573033018329e-12
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.099999999999989,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -3.855582519918244e-12,
+          "child_r_proper_mean": 1.887379141862766e-12,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": 2.156053113822054e-12,
+          "proper_probability_width": -1.5422330079672975e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.1499999999999835,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -6.051603662626803e-12,
+          "child_r_proper_mean": 2.9030111647898593e-12,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": 3.468336728928989e-12,
+          "proper_probability_width": -2.4202861936828413e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.199999999999978,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -9.054090810423077e-12,
+          "child_r_proper_mean": 4.307221246335757e-12,
+          "all_source_child_probability": 5.551115123125783e-16,
+          "child_matter_normal_energy": 5.378364420494108e-12,
+          "proper_probability_width": -3.6218139598531707e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.2499999999999725,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.290834106271177e-11,
+          "child_r_proper_mean": 6.1164406872649124e-12,
+          "all_source_child_probability": 1.5543122344752192e-15,
+          "child_matter_normal_energy": 8.124168004997046e-12,
+          "proper_probability_width": -5.164046967820468e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.299999999999967,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.7365220372767e-11,
+          "child_r_proper_mean": 8.343992163872826e-12,
+          "all_source_child_probability": 3.6637359812630166e-15,
+          "child_matter_normal_energy": 1.1871836846921724e-11,
+          "proper_probability_width": -6.94626578479074e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.3499999999999615,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.1876722655633785e-11,
+          "child_r_proper_mean": 1.0930811811249441e-11,
+          "all_source_child_probability": 6.8833827526759706e-15,
+          "child_matter_normal_energy": 1.6754597709223162e-11,
+          "proper_probability_width": -8.751221969305334e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.399999999999956,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.5646595958050966e-11,
+          "child_r_proper_mean": 1.3779644092437593e-11,
+          "all_source_child_probability": 1.0436096431476471e-14,
+          "child_matter_normal_energy": 2.2814639066837117e-11,
+          "proper_probability_width": -1.0259526561640087e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.4499999999999504,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.791300524052076e-11,
+          "child_r_proper_mean": 1.6723955553743508e-11,
+          "all_source_child_probability": 1.3877787807814457e-14,
+          "child_matter_normal_energy": 3.0031088726900634e-11,
+          "proper_probability_width": -1.1165912638944064e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.499999999999945,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.8298030585460765e-11,
+          "child_r_proper_mean": 1.951150352397235e-11,
+          "all_source_child_probability": 1.5432100042289676e-14,
+          "child_matter_normal_energy": 3.842792750674562e-11,
+          "proper_probability_width": -1.1320189230445976e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.5499999999999394,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.695665912710865e-11,
+          "child_r_proper_mean": 2.1825652396501027e-11,
+          "all_source_child_probability": 1.4765966227514582e-14,
+          "child_matter_normal_energy": 4.8186787893200744e-11,
+          "proper_probability_width": -1.078346301142119e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.599999999999934,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.4421797917284493e-11,
+          "child_r_proper_mean": 2.3438140317466605e-11,
+          "all_source_child_probability": 1.2323475573339238e-14,
+          "child_matter_normal_energy": 5.969269523120602e-11,
+          "proper_probability_width": -9.769696163175468e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.6499999999999284,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.1324497723185232e-11,
+          "child_r_proper_mean": 2.426192580173847e-11,
+          "all_source_child_probability": 9.43689570931383e-15,
+          "child_matter_normal_energy": 7.360423381896908e-11,
+          "proper_probability_width": -8.530509632009853e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.699999999999923,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.8143708757634158e-11,
+          "child_r_proper_mean": 2.439826118916244e-11,
+          "all_source_child_probability": 6.772360450213455e-15,
+          "child_matter_normal_energy": 9.07371955349845e-11,
+          "proper_probability_width": -7.258282863631393e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.7499999999999174,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.5170309453083064e-11,
+          "child_r_proper_mean": 2.4023449896048987e-11,
+          "all_source_child_probability": 4.551914400963142e-15,
+          "child_matter_normal_energy": 1.1215739448289241e-10,
+          "proper_probability_width": -6.068656688285046e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.799999999999912,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.2530643189734292e-11,
+          "child_r_proper_mean": 2.3303137197672186e-11,
+          "all_source_child_probability": 2.886579864025407e-15,
+          "child_matter_normal_energy": 1.390958459523972e-10,
+          "proper_probability_width": -5.012745774024552e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.8499999999999064,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.0259015859048759e-11,
+          "child_r_proper_mean": 2.2370549856987054e-11,
+          "all_source_child_probability": 1.9984014443252818e-15,
+          "child_matter_normal_energy": 1.730526832943724e-10,
+          "proper_probability_width": -4.1040504328293537e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.8999999999999009,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -8.340328427891563e-12,
+          "child_r_proper_mean": 2.1300294861248403e-11,
+          "all_source_child_probability": 1.1102230246251565e-15,
+          "child_matter_normal_energy": 2.1589485754702764e-10,
+          "proper_probability_width": -3.3364422336035204e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.9499999999998954,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -6.739608870987013e-12,
+          "child_r_proper_mean": 2.0163426484032243e-11,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": 2.6984814383013145e-10,
+          "proper_probability_width": -2.6960877974602226e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.9999999999998899,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -5.418721027439233e-12,
+          "child_r_proper_mean": 1.8964385617437074e-11,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": 3.3783109643081843e-10,
+          "proper_probability_width": -2.1677326600411106e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 3.0,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -3.477470048030007e-14,
+          "child_r_proper_mean": -7.362999099314038e-12,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": 3.115223989880178e-08,
+          "proper_probability_width": -1.3910574081510418e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.05,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 0.0,
+          "child_r_proper_mean": 1.3322676295501878e-15,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -4.440892098500626e-16,
+          "proper_probability_width": -1.7763568394002505e-15
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.1,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 3.1086244689504383e-15,
+          "child_r_proper_mean": 0.0,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1.3322676295501878e-15,
+          "proper_probability_width": 1.7763568394002505e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.15000000000000002,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 3.552713678800501e-15,
+          "child_r_proper_mean": -2.220446049250313e-15,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -1.7763568394002505e-15,
+          "proper_probability_width": 1.7763568394002505e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.2,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 9.769962616701378e-15,
+          "child_r_proper_mean": -5.773159728050814e-15,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -4.884981308350689e-15,
+          "proper_probability_width": 3.552713678800501e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.25,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 2.3092638912203256e-14,
+          "child_r_proper_mean": -3.9968028886505635e-15,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": -1.509903313490213e-14,
+          "proper_probability_width": 8.881784197001252e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.3,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 3.6415315207705135e-14,
+          "child_r_proper_mean": -1.865174681370263e-14,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -2.220446049250313e-14,
+          "proper_probability_width": 1.4566126083082054e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.35000000000000003,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 5.1514348342607263e-14,
+          "child_r_proper_mean": -2.708944180085382e-14,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -3.197442310920451e-14,
+          "proper_probability_width": 2.0605739337042905e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.4,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 7.105427357601002e-14,
+          "child_r_proper_mean": -5.10702591327572e-14,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -4.085620730620576e-14,
+          "proper_probability_width": 2.8066438062523957e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.45,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.2878587085651816e-13,
+          "child_r_proper_mean": -6.483702463810914e-14,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -7.904787935331115e-14,
+          "proper_probability_width": 5.098144129078719e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.5,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.887379141862766e-13,
+          "child_r_proper_mean": -9.814371537686384e-14,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": -1.127986593019159e-13,
+          "proper_probability_width": 7.567280135845067e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.0,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 9.176659432341694e-12,
+          "child_r_proper_mean": -4.543476705975991e-12,
+          "all_source_child_probability": 1.4432899320127035e-15,
+          "child_matter_normal_energy": -4.646061313451355e-12,
+          "proper_probability_width": 3.6710190443045576e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.0499999999999945,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.3912426766182762e-11,
+          "child_r_proper_mean": -6.775024985472555e-12,
+          "all_source_child_probability": 1.6653345369377348e-15,
+          "child_matter_normal_energy": -6.778577699151356e-12,
+          "proper_probability_width": 5.5646154351052246e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.099999999999989,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 2.1371349134824413e-11,
+          "child_r_proper_mean": -1.0206058220774139e-11,
+          "all_source_child_probability": 2.6645352591003757e-15,
+          "child_matter_normal_energy": -9.9245056617292e-12,
+          "proper_probability_width": 8.548006746877945e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.1499999999999835,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 3.3445246572227916e-11,
+          "child_r_proper_mean": -1.5624834759364603e-11,
+          "all_source_child_probability": 4.3298697960381105e-15,
+          "child_matter_normal_energy": -1.4577672402538155e-11,
+          "proper_probability_width": 1.3377565721839346e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.199999999999978,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 5.382627676908669e-11,
+          "child_r_proper_mean": -2.4483082228243802e-11,
+          "all_source_child_probability": 8.215650382226158e-15,
+          "child_matter_normal_energy": -2.1521895376963585e-11,
+          "proper_probability_width": 2.1529267257847096e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.2499999999999725,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 9.04303298909781e-11,
+          "child_r_proper_mean": -3.9885428293473524e-11,
+          "all_source_child_probability": 1.7541523789077473e-14,
+          "child_matter_normal_energy": -3.189493114064135e-11,
+          "proper_probability_width": 3.617088850660366e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.299999999999967,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.6315260253918495e-10,
+          "child_r_proper_mean": -6.977618483006154e-11,
+          "all_source_child_probability": 4.529709940470639e-14,
+          "child_matter_normal_energy": -4.702593869865268e-11,
+          "proper_probability_width": 6.525926465883458e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.3499999999999615,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 3.362776723747629e-10,
+          "child_r_proper_mean": -1.4239187606790438e-10,
+          "all_source_child_probability": 1.5509815654013437e-13,
+          "child_matter_normal_energy": -6.490274984116695e-11,
+          "proper_probability_width": 1.3450787150759425e-09
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.399999999999956,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 9.479057538896996e-10,
+          "child_r_proper_mean": -4.485813942523009e-10,
+          "all_source_child_probability": 9.104939024950909e-13,
+          "child_matter_normal_energy": -1.816591321812666e-11,
+          "proper_probability_width": 3.791544855857865e-09
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.4499999999999504,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.1114725140259907e-08,
+          "child_r_proper_mean": -8.468047818510627e-09,
+          "all_source_child_probability": 2.639566343276556e-11,
+          "child_matter_normal_energy": 6.175953526366129e-09,
+          "proper_probability_width": 4.445855950052646e-08
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.05,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 1.7763568394002505e-15,
+          "child_r_proper_mean": -4.440892098500626e-16,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -1.7763568394002505e-15,
+          "proper_probability_width": 3.552713678800501e-15
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.1,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 7.549516567451064e-15,
+          "child_r_proper_mean": 4.884981308350689e-15,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -6.217248937900877e-15,
+          "proper_probability_width": 3.019806626980426e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.15000000000000002,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 4.440892098500626e-16,
+          "child_r_proper_mean": -1.3322676295501878e-15,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": 0.0,
+          "proper_probability_width": -3.552713678800501e-15
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.2,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -8.881784197001252e-16,
+          "child_r_proper_mean": -4.440892098500626e-16,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": 8.881784197001252e-16,
+          "proper_probability_width": -1.7763568394002505e-15
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.25,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -7.993605777301127e-15,
+          "child_r_proper_mean": 1.7763568394002505e-15,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": 6.217248937900877e-15,
+          "proper_probability_width": -3.375077994860476e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.3,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": 3.552713678800501e-15,
+          "child_r_proper_mean": 1.0658141036401503e-14,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -3.9968028886505635e-15,
+          "proper_probability_width": 1.7763568394002505e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.35000000000000003,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -7.105427357601002e-15,
+          "child_r_proper_mean": 1.3766765505351941e-14,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": 1.7763568394002505e-15,
+          "proper_probability_width": -3.197442310920451e-14
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.4,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.930988785010413e-14,
+          "child_r_proper_mean": 1.9984014443252818e-14,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": 1.6431300764452317e-14,
+          "proper_probability_width": -1.1901590823981678e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.45,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -5.861977570020827e-14,
+          "child_r_proper_mean": 3.108624468950438e-14,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": 3.6415315207705135e-14,
+          "proper_probability_width": -2.3447910280083306e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.5,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -9.14823772291129e-14,
+          "child_r_proper_mean": 5.906386491005833e-14,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": 5.3734794391857577e-14,
+          "proper_probability_width": -3.6415315207705135e-13
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.0,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -9.389822253069724e-12,
+          "child_r_proper_mean": 4.809042053466328e-12,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": 5.6417093219351955e-12,
+          "proper_probability_width": -3.7562841725957696e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.0499999999999945,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.3437695400853045e-11,
+          "child_r_proper_mean": 6.8829386634661205e-12,
+          "all_source_child_probability": 8.881784197001252e-16,
+          "child_matter_normal_energy": 8.331113576787175e-12,
+          "proper_probability_width": -5.375078160341218e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.099999999999989,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.8629542353210127e-11,
+          "child_r_proper_mean": 9.609646411945505e-12,
+          "all_source_child_probability": 1.5543122344752192e-15,
+          "child_matter_normal_energy": 1.213340539152341e-11,
+          "proper_probability_width": -7.451994576967991e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.1499999999999835,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.4837021328494302e-11,
+          "child_r_proper_mean": 1.304867325302439e-11,
+          "all_source_child_probability": 3.1086244689504383e-15,
+          "child_matter_normal_energy": 1.73812075843216e-11,
+          "proper_probability_width": -9.934986167081661e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.199999999999978,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -3.155964378720455e-11,
+          "child_r_proper_mean": 1.7200463275912625e-11,
+          "all_source_child_probability": 5.218048215738236e-15,
+          "child_matter_normal_energy": 2.438760304812604e-11,
+          "proper_probability_width": -1.262385751488182e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.2499999999999725,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -3.79549724982553e-11,
+          "child_r_proper_mean": 2.1962431873134847e-11,
+          "all_source_child_probability": 7.993605777301127e-15,
+          "child_matter_normal_energy": 3.347455646007802e-11,
+          "proper_probability_width": -1.51814560922503e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.299999999999967,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -4.298295053217771e-11,
+          "child_r_proper_mean": 2.7143620684455527e-11,
+          "all_source_child_probability": 1.0880185641326534e-14,
+          "child_matter_normal_energy": 4.490141591872998e-11,
+          "proper_probability_width": -1.7193002577187144e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.3499999999999615,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -4.5812020843527534e-11,
+          "child_r_proper_mean": 3.241629187300532e-11,
+          "all_source_child_probability": 1.27675647831893e-14,
+          "child_matter_normal_energy": 5.896572119468146e-11,
+          "proper_probability_width": -1.8324630701727074e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.399999999999956,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -4.6094461580992174e-11,
+          "child_r_proper_mean": 3.737499199019112e-11,
+          "all_source_child_probability": 1.3211653993039363e-14,
+          "child_matter_normal_energy": 7.604938900840352e-11,
+          "proper_probability_width": -1.843760699671293e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.4499999999999504,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -4.409961285034569e-11,
+          "child_r_proper_mean": 4.161249123058042e-11,
+          "all_source_child_probability": 1.1657341758564144e-14,
+          "child_matter_normal_energy": 9.67728119860567e-11,
+          "proper_probability_width": -1.7639756322296307e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.499999999999945,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -4.0461856087858905e-11,
+          "child_r_proper_mean": 4.489031368848373e-11,
+          "all_source_child_probability": 9.769962616701378e-15,
+          "child_matter_normal_energy": 1.219788714479364e-10,
+          "proper_probability_width": -1.6184831252985532e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.5499999999999394,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -3.5923708452401115e-11,
+          "child_r_proper_mean": 4.716138590765695e-11,
+          "all_source_child_probability": 7.105427357601002e-15,
+          "child_matter_normal_energy": 1.5283951881883695e-10,
+          "proper_probability_width": -1.4369216927434536e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.599999999999934,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -3.11018988341516e-11,
+          "child_r_proper_mean": 4.8540282904241394e-11,
+          "all_source_child_probability": 5.10702591327572e-15,
+          "child_matter_normal_energy": 1.9088286506985241e-10,
+          "proper_probability_width": -1.244067071581867e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.6499999999999284,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.6419644250097463e-11,
+          "child_r_proper_mean": 4.920464036217709e-11,
+          "all_source_child_probability": 3.552713678800501e-15,
+          "child_matter_normal_energy": 2.3799273662916676e-10,
+          "proper_probability_width": -1.0567813291118e-10
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.699999999999923,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -2.2114976516718343e-11,
+          "child_r_proper_mean": 4.935785113957536e-11,
+          "all_source_child_probability": 2.4424906541753444e-15,
+          "child_matter_normal_energy": 2.96470403782223e-10,
+          "proper_probability_width": -8.845990606687337e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.7499999999999174,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.8303691895482643e-11,
+          "child_r_proper_mean": 4.914291196200793e-11,
+          "all_source_child_probability": 1.887379141862766e-15,
+          "child_matter_normal_energy": 3.6925307256296946e-10,
+          "proper_probability_width": -7.32149896265355e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.799999999999912,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.5014045562367073e-11,
+          "child_r_proper_mean": 4.867306557798656e-11,
+          "all_source_child_probability": 1.3322676295501878e-15,
+          "child_matter_normal_energy": 4.5990589114808245e-10,
+          "proper_probability_width": -6.005596020486337e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.8499999999999064,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -1.222827394897763e-11,
+          "child_r_proper_mean": 4.801314901214937e-11,
+          "all_source_child_probability": 1.1102230246251565e-15,
+          "child_matter_normal_energy": 5.730331764652874e-10,
+          "proper_probability_width": -4.891309579591052e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.8999999999999009,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -9.899747688280058e-12,
+          "child_r_proper_mean": 4.723865743017086e-11,
+          "all_source_child_probability": 1.2212453270876722e-15,
+          "child_matter_normal_energy": 7.142197944176587e-10,
+          "proper_probability_width": -3.959921279772516e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.9499999999998954,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -7.974815252609346e-12,
+          "child_r_proper_mean": 4.637534800622234e-11,
+          "all_source_child_probability": 8.881784197001252e-16,
+          "child_matter_normal_energy": 8.906013704290672e-10,
+          "proper_probability_width": -3.189914998813492e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.9999999999998899,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -6.397271601343846e-12,
+          "child_r_proper_mean": 4.544453702237661e-11,
+          "all_source_child_probability": 5.551115123125783e-16,
+          "child_matter_normal_energy": 1.111139624754287e-09,
+          "proper_probability_width": -2.5589197427677846e-11
+        },
+        "finite_timestep_indicator_only": true
+      },
+      {
+        "sector": "chi_upper",
+        "time": 3.0,
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_proper_length": -4.728118938035486e-14,
+          "child_r_proper_mean": 2.375344365646015e-11,
+          "all_source_child_probability": 8.881784197001252e-16,
+          "child_matter_normal_energy": 9.931318345479667e-08,
+          "proper_probability_width": -1.8912649224489542e-13
+        },
+        "finite_timestep_indicator_only": true
+      }
+    ],
+    "source_frame_matched_between_caps": true,
+    "startup_force_is_holding": false,
+    "finite_observed_domain_only": true,
+    "saved_baseline_control_effects": [
+      {
+        "sector": "chi_balanced",
+        "time": 0.05,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0010570516512342643,
+          "child_r_proper_mean": -0.0005699180199378873,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.0006688280009652381,
+          "proper_probability_width": 0.004228206604933504
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.1,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.004341927517037547,
+          "child_r_proper_mean": -0.002342394944868431,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.0027481052633011593,
+          "proper_probability_width": 0.01736771006815019
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.15000000000000002,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.01020590563411794,
+          "child_r_proper_mean": -0.005511716162962976,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.006464043733560132,
+          "proper_probability_width": 0.04082362253646643
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.2,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.019267974299349344,
+          "child_r_proper_mean": -0.010422315402438986,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.012220521804751971,
+          "proper_probability_width": 0.07707189719739205
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.25,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.03246389886839518,
+          "child_r_proper_mean": -0.01760037434439221,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.020642021161966895,
+          "proper_probability_width": 0.12985559547357717
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.3,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.05111035628406002,
+          "child_r_proper_mean": -0.027798738664976952,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -0.03263908099669921,
+          "proper_probability_width": 0.20444142513623653
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.35000000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.07697415483602299,
+          "child_r_proper_mean": -0.04205407674313344,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -0.049501606112234864,
+          "proper_probability_width": 0.3078966193440902
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.4,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.11232512083955504,
+          "child_r_proper_mean": -0.061751847763695356,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.07302655612986175,
+          "proper_probability_width": 0.44930048335821837
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.45,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.15993341730970245,
+          "child_r_proper_mean": -0.08868831202769112,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.1056868077265607,
+          "proper_probability_width": 0.6397336692388098
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.5,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.2229505288628375,
+          "child_r_proper_mean": -0.12510900130636893,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.1508462289561865,
+          "proper_probability_width": 0.89180211545135
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.5499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.30459953332258927,
+          "child_r_proper_mean": -0.1736912703533009,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.21302072277199624,
+          "proper_probability_width": 1.2183981332903517
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.599999999999989,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.4076195330523249,
+          "child_r_proper_mean": -0.23743059146514378,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.2981750445357392,
+          "proper_probability_width": 1.6304781322093014
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.6499999999999835,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.5334922022735613,
+          "child_r_proper_mean": -0.3193974320100712,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.4140320013534051,
+          "proper_probability_width": 2.1339688090942452
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.699999999999978,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.6816290509284337,
+          "child_r_proper_mean": -0.422365978006781,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.5703614108239807,
+          "proper_probability_width": 2.7265162037137385
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.7499999999999725,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.8488440473700709,
+          "child_r_proper_mean": -0.5483765710632675,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.7792243486221544,
+          "proper_probability_width": 3.395376189480288
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.799999999999967,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.0294340432806626,
+          "child_r_proper_mean": -0.6983517933353771,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -1.0551844908117745,
+          "proper_probability_width": 4.117736173122649
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.8499999999999615,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.2159502318114555,
+          "child_r_proper_mean": -0.8718944532277084,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -1.4155541749841243,
+          "proper_probability_width": 4.8638009272458245
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.899999999999956,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.4003862503863103,
+          "child_r_proper_mean": -1.0673307527895637,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -1.8807858692294168,
+          "proper_probability_width": 5.601545001545246
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 0.9499999999999504,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.575300989114443,
+          "child_r_proper_mean": -1.281958063601616,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -2.475119632224021,
+          "proper_probability_width": 6.30120395645778
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.0,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.734485201548265,
+          "child_r_proper_mean": -1.5123815551461894,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -3.227557861559167,
+          "proper_probability_width": 6.937940806193073
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.0499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.8730574974824679,
+          "child_r_proper_mean": -1.7548165234942057,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -4.173195236731703,
+          "proper_probability_width": 7.492229989929891
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.099999999999989,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.9871213933993797,
+          "child_r_proper_mean": -2.0052790951047297,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -5.354915385491994,
+          "proper_probability_width": 7.948485573597544
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.1499999999999835,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.0732254839837254,
+          "child_r_proper_mean": -2.2596483642663627,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -6.825481541462144,
+          "proper_probability_width": 8.292901935934943
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.199999999999978,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.127878910590912,
+          "child_r_proper_mean": -2.5136323741793127,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -8.650084052497652,
+          "proper_probability_width": 8.511515642363708
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.2499999999999725,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.147359054940239,
+          "child_r_proper_mean": -2.762705070085816,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -10.909451941614062,
+          "proper_probability_width": 8.589436219761032
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.299999999999967,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.128029479553104,
+          "child_r_proper_mean": -3.0021057574520076,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -13.703688083422406,
+          "proper_probability_width": 8.512117918212521
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.3499999999999615,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.067298663597332,
+          "child_r_proper_mean": -3.2270004281874285,
+          "all_source_child_probability": -7.771561172376096e-16,
+          "child_matter_normal_energy": -17.15705587675392,
+          "proper_probability_width": 8.269194654389455
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.399999999999956,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.9650847336785637,
+          "child_r_proper_mean": -3.4328704770455207,
+          "all_source_child_probability": -9.992007221626409e-16,
+          "child_matter_normal_energy": -21.424036213030906,
+          "proper_probability_width": 7.860338934714404
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.4499999999999504,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.8252123942548626,
+          "child_r_proper_mean": -3.616093420214582,
+          "all_source_child_probability": -1.2212453270876722e-15,
+          "child_matter_normal_energy": -26.6970750011168,
+          "proper_probability_width": 7.30084957701962
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.655863542617397,
+          "child_r_proper_mean": -3.7745369471670562,
+          "all_source_child_probability": -1.3322676295501878e-15,
+          "child_matter_normal_energy": -33.21651354403419,
+          "proper_probability_width": 6.623454170469764
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.5499999999999394,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.4685008172839082,
+          "child_r_proper_mean": -3.907906085265094,
+          "all_source_child_probability": -1.3322676295501878e-15,
+          "child_matter_normal_energy": -41.28320460609686,
+          "proper_probability_width": 5.874003269135813
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.599999999999934,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.2755847247030705,
+          "child_r_proper_mean": -4.0176674035346664,
+          "all_source_child_probability": -1.3322676295501878e-15,
+          "child_matter_normal_energy": -51.27431345778371,
+          "proper_probability_width": 5.102338898812452
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.6499999999999284,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.0881608862000498,
+          "child_r_proper_mean": -4.106587824901961,
+          "all_source_child_probability": -8.881784197001252e-16,
+          "child_matter_normal_energy": -63.662907065524344,
+          "proper_probability_width": 4.3526435448003555
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.699999999999923,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.9143163701557271,
+          "child_r_proper_mean": -4.17810012019941,
+          "all_source_child_probability": -9.992007221626409e-16,
+          "child_matter_normal_energy": -79.04221282279438,
+          "proper_probability_width": 3.6572654806230442
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.7499999999999174,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.7588025117659765,
+          "child_r_proper_mean": -4.2357246284526395,
+          "all_source_child_probability": -8.881784197001252e-16,
+          "child_matter_normal_energy": -98.15581834124825,
+          "proper_probability_width": 3.0352100470640213
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.799999999999912,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.623503950009856,
+          "child_r_proper_mean": -4.282675109237724,
+          "all_source_child_probability": -8.881784197001252e-16,
+          "child_matter_normal_energy": -121.93549200647087,
+          "proper_probability_width": 2.49401580003952
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.8499999999999064,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.5082561714958573,
+          "child_r_proper_mean": -4.321663019774972,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -151.54871785874388,
+          "proper_probability_width": 2.0330246859835057
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.8999999999999009,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.4116480506858595,
+          "child_r_proper_mean": -4.354851328380629,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -188.4585177252455,
+          "proper_probability_width": 1.646592202743502
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.9499999999998954,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.33164583922720725,
+          "child_r_proper_mean": -4.383896080341019,
+          "all_source_child_probability": -7.771561172376096e-16,
+          "child_matter_normal_energy": -234.49874753812495,
+          "proper_probability_width": 1.3265833569088787
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 1.9999999999998899,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.2660127819329885,
+          "child_r_proper_mean": -4.4100267211587045,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -291.96885477326845,
+          "proper_probability_width": 1.064051127731993
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.0499999999999066,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.2125602410973415,
+          "child_r_proper_mean": -4.434134584860475,
+          "all_source_child_probability": -7.771561172376096e-16,
+          "child_matter_normal_energy": -363.75311274406215,
+          "proper_probability_width": 0.8502409643893944
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.0999999999999233,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.1692801294698829,
+          "child_r_proper_mean": -4.45685387572726,
+          "all_source_child_probability": -5.551115123125783e-16,
+          "child_matter_normal_energy": -453.47065483574625,
+          "proper_probability_width": 0.6771205178795547
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.14999999999994,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.13440172836601283,
+          "child_r_proper_mean": -4.4786290373549935,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -565.6642836441297,
+          "proper_probability_width": 0.5376069134640673
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.1999999999999567,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.1064040540420943,
+          "child_r_proper_mean": -4.499767622553371,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -706.0381133676879,
+          "proper_probability_width": 0.42561621616838785
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.2499999999999734,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.08400420520298546,
+          "child_r_proper_mean": -4.520480185495037,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -881.756730751757,
+          "proper_probability_width": 0.3360168208119507
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.29999999999999,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.06613423550637432,
+          "child_r_proper_mean": -4.540909541059364,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1101.821872875742,
+          "proper_probability_width": 0.2645369420255026
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.35,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.051913849808138846,
+          "child_r_proper_mean": -4.561151769111245,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -1377.546799330115,
+          "proper_probability_width": 0.20765539923255893
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.4000000000000004,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.040622939564919136,
+          "child_r_proper_mean": -4.5812710386173965,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1723.1538094582747,
+          "proper_probability_width": 0.16249175825967832
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.45,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.031676001356789385,
+          "child_r_proper_mean": -4.601309925512325,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -2156.52700971413,
+          "proper_probability_width": 0.12670400542715754
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.5,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.02459933873784559,
+          "child_r_proper_mean": -4.621296510619153,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -2700.1608346693147,
+          "proper_probability_width": 0.09839735495138235
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.5500000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.019011307552025514,
+          "child_r_proper_mean": -4.6412492136278924,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -3382.3554260167293,
+          "proper_probability_width": 0.07604523020810028
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.6,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.014605523755580663,
+          "child_r_proper_mean": -4.661180056390746,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -4238.723355752726,
+          "proper_probability_width": 0.058422095022320875
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.6500000000000004,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.011136785592943621,
+          "child_r_proper_mean": -4.681096848755821,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -5314.089073475711,
+          "proper_probability_width": 0.04454714237177271
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.7,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.008409393793603392,
+          "child_r_proper_mean": -4.701004642474935,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -6664.883786563782,
+          "proper_probability_width": 0.03363757517441002
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.75,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.006267540030212793,
+          "child_r_proper_mean": -4.720906692162712,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -8362.165411911144,
+          "proper_probability_width": 0.025070160120849394
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.8000000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0045874492889868,
+          "child_r_proper_mean": -4.740805086786866,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -10495.427241721565,
+          "proper_probability_width": 0.018349797155943648
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.85,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.003270991035825954,
+          "child_r_proper_mean": -4.7607011624611495,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -13177.40190389939,
+          "proper_probability_width": 0.013083964143300264
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.9000000000000004,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0022405085453396367,
+          "child_r_proper_mean": -4.780595770970022,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -16550.121419655792,
+          "proper_probability_width": 0.008962034181354994
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 2.95,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0014346507335374348,
+          "child_r_proper_mean": -4.800489453661978,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -20792.562635130973,
+          "proper_probability_width": 0.005738602934146186
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_balanced",
+        "time": 3.0,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0008050237839061225,
+          "child_r_proper_mean": -4.820382553592015,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -26130.293779065087,
+          "proper_probability_width": 0.0032200951356209373
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.05,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0010676494763659505,
+          "child_r_proper_mean": -0.0005756469505078243,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.0006755055689926515,
+          "proper_probability_width": 0.0042705979054655785
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.1,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.004385522396408437,
+          "child_r_proper_mean": -0.002365958177821259,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.002775541816494087,
+          "proper_probability_width": 0.017542089585640852
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.15000000000000002,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.010308650800456842,
+          "child_r_proper_mean": -0.005567236153046107,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.006528580528974093,
+          "proper_probability_width": 0.041234603201829145
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.2,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.019462775479909933,
+          "child_r_proper_mean": -0.01052753392035699,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.01234254590111794,
+          "proper_probability_width": 0.0778511019196344
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.25,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.03279422295980128,
+          "child_r_proper_mean": -0.017778673664651468,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -0.020848204580657725,
+          "proper_probability_width": 0.1311768918392051
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.3,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.05163531665359988,
+          "child_r_proper_mean": -0.02808181900862028,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.03296532684709952,
+          "proper_probability_width": 0.20654126661439953
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.35000000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.07777550559947866,
+          "child_r_proper_mean": -0.04248560773664556,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.049997038516108816,
+          "proper_probability_width": 0.31110202239791107
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.4,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.11351704336357438,
+          "child_r_proper_mean": -0.06239253214336404,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -0.07375901423877762,
+          "proper_probability_width": 0.45406817345429396
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.45,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.16167635387807922,
+          "child_r_proper_mean": -0.08962297624137205,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -0.10675048338508342,
+          "proper_probability_width": 0.6467054155123133
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.5,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.22547086461296573,
+          "child_r_proper_mean": -0.1264565836420699,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.15237234518271547,
+          "proper_probability_width": 0.9018834584518629
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.5499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.3082177280086431,
+          "child_r_proper_mean": -0.17561894735472006,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -0.2151925189199111,
+          "proper_probability_width": 1.232870912034576
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.599999999999989,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.4127904771014106,
+          "child_r_proper_mean": -0.24017381818623207,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": -0.3012488609913744,
+          "proper_probability_width": 1.6511619084056477
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.6499999999999835,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.540863291492105,
+          "child_r_proper_mean": -0.32328844466421947,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": -0.41836701001524235,
+          "proper_probability_width": 2.16345316596842
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.699999999999978,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.6921239980193199,
+          "child_r_proper_mean": -0.4278744256310767,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -0.5764616154887201,
+          "proper_probability_width": 2.7684959920772814
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.7499999999999725,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.8637841527115142,
+          "child_r_proper_mean": -0.5561675606413559,
+          "all_source_child_probability": 6.661338147750939e-16,
+          "child_matter_normal_energy": -0.7877980230447186,
+          "proper_probability_width": 3.4551366108460577
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.799999999999967,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.0507140807454889,
+          "child_r_proper_mean": -0.7093689732666237,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -1.067228434834112,
+          "proper_probability_width": 4.202856322981958
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.8499999999999615,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.2462940613211086,
+          "child_r_proper_mean": -0.8874791420500472,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -1.4324733424892262,
+          "proper_probability_width": 4.985176245284441
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.899999999999956,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.4437188913324286,
+          "child_r_proper_mean": -1.0893929970775211,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1.9045634728397016,
+          "proper_probability_width": 5.77487556532972
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 0.9499999999999504,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.637290847030146,
+          "child_r_proper_mean": -1.313222524673284,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -2.5085593498780394,
+          "proper_probability_width": 6.5491633881205935
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.0,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.823335012361715,
+          "child_r_proper_mean": -1.5567412103572629,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -3.274629083045647,
+          "proper_probability_width": 7.2933400494468765
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.0499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.0006599302244403,
+          "child_r_proper_mean": -1.8178417753041445,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -4.23952549656385,
+          "proper_probability_width": 8.002639720897783
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.099999999999989,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.170755385148734,
+          "child_r_proper_mean": -2.094951673883022,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -5.448492559956193,
+          "proper_probability_width": 8.683021540594966
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.1499999999999835,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.338080662438802,
+          "child_r_proper_mean": -2.3874245667615352,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -6.957653107717354,
+          "proper_probability_width": 9.352322649755259
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.199999999999978,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.510947450194672,
+          "child_r_proper_mean": -2.696006189883038,
+          "all_source_child_probability": -8.881784197001252e-16,
+          "child_matter_normal_energy": -8.83697033213217,
+          "proper_probability_width": 10.043789800778764
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.2499999999999725,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.703930693283997,
+          "child_r_proper_mean": -3.0235943495973294,
+          "all_source_child_probability": -1.5543122344752192e-15,
+          "child_matter_normal_energy": -11.173911785262025,
+          "proper_probability_width": 10.815722773136114
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.299999999999967,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 2.944283428982001,
+          "child_r_proper_mean": -3.3768169697989454,
+          "all_source_child_probability": -3.4416913763379853e-15,
+          "child_matter_normal_energy": -14.077921804281466,
+          "proper_probability_width": 11.777133715928214
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.3499999999999615,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 3.291141179027924,
+          "child_r_proper_mean": -3.770000816442126,
+          "all_source_child_probability": -1.0658141036401503e-14,
+          "child_matter_normal_energy": -17.685432173431515,
+          "proper_probability_width": 13.164564716112091
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.399999999999956,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 3.911554997772952,
+          "child_r_proper_mean": -4.238019415843665,
+          "all_source_child_probability": -6.161737786669619e-14,
+          "child_matter_normal_energy": -22.162004082913057,
+          "proper_probability_width": 15.646219991092702
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_lower",
+        "time": 1.4499999999999504,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 5.655801123669864,
+          "child_r_proper_mean": -4.905894770294304,
+          "all_source_child_probability": -1.794342452399178e-12,
+          "child_matter_normal_energy": -27.651362842120378,
+          "proper_probability_width": 22.62320449468321
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.05,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0010464552930606885,
+          "child_r_proper_mean": -0.0005641901766568758,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.0006621496569110263,
+          "proper_probability_width": 0.004185821172237425
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.1,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.004298340130612033,
+          "child_r_proper_mean": -0.0023188366288202644,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.0027206656388938377,
+          "proper_probability_width": 0.017193360522446355
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.15000000000000002,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.010103184343431604,
+          "child_r_proper_mean": -0.00545620966789695,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -0.006399500225151122,
+          "proper_probability_width": 0.04041273737371931
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.2,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.019073236933964566,
+          "child_r_proper_mean": -0.010317128209279325,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.01209848658266699,
+          "proper_probability_width": 0.07629294773585293
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.25,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.032133729845253534,
+          "child_r_proper_mean": -0.01742214276464571,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.02043582301133906,
+          "proper_probability_width": 0.12853491938101058
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.3,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.050585750514470895,
+          "child_r_proper_mean": -0.027515799984135114,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.032312821447359585,
+          "proper_probability_width": 0.20234300205788536
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.35000000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.07617358211339686,
+          "child_r_proper_mean": -0.04162283684997492,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.049006174324525364,
+          "proper_probability_width": 0.30469432845358213
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.4,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.11113485696921455,
+          "child_r_proper_mean": -0.06111175543243208,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.07229414482412766,
+          "proper_probability_width": 0.4445394278768564
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.45,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.15819394605851134,
+          "child_r_proper_mean": -0.08775484385584686,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.1046232957033566,
+          "proper_probability_width": 0.6327757842340453
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.5,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.22043733191952164,
+          "child_r_proper_mean": -0.12376382378370376,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.1493205430730531,
+          "proper_probability_width": 0.8817493276780883
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.5499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.3009959043069239,
+          "child_r_proper_mean": -0.17176841222461636,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -0.2108499332170477,
+          "proper_probability_width": 1.2039836172276956
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.599999999999989,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.4024781191621587,
+          "child_r_proper_mean": -0.2346969983353504,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -0.2951034391386522,
+          "proper_probability_width": 1.6099124766486383
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.6499999999999835,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.5261807423861353,
+          "child_r_proper_mean": -0.3155256493170655,
+          "all_source_child_probability": 3.3306690738754696e-16,
+          "child_matter_normal_energy": -0.4097016681833958,
+          "proper_probability_width": 2.1047229695445395
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.699999999999978,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.6712542335618104,
+          "child_r_proper_mean": -0.4168958848670923,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -0.5642708524303321,
+          "proper_probability_width": 2.6850169342472414
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.7499999999999725,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.834145676433675,
+          "child_r_proper_mean": -0.5406620579463972,
+          "all_source_child_probability": 4.440892098500626e-16,
+          "child_matter_normal_energy": -0.7706702479809753,
+          "proper_probability_width": 3.336582705734699
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.799999999999967,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.0086402077022834,
+          "child_r_proper_mean": -0.6874871072883582,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -1.0431798099609821,
+          "proper_probability_width": 4.0345608308091325
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.8499999999999615,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.1865840356202135,
+          "child_r_proper_mean": -0.856613868436404,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1.3987131273468916,
+          "proper_probability_width": 4.74633614248086
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.899999999999956,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.3590182957445471,
+          "child_r_proper_mean": -1.04587487491606,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1.8571627972060263,
+          "proper_probability_width": 5.436073182978192
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 0.9499999999999504,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.5172538997681915,
+          "child_r_proper_mean": -1.2519017506604948,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -2.4419843425204593,
+          "proper_probability_width": 6.069015599072781
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.0,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.6535248624440908,
+          "child_r_proper_mean": -1.4704245693526068,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -3.1810846732160627,
+          "proper_probability_width": 6.614099449776373
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.0499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.7611606309724914,
+          "child_r_proper_mean": -1.6965524632938296,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -4.108037701901615,
+          "proper_probability_width": 7.0446425238899835
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.099999999999989,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.8344969151888433,
+          "child_r_proper_mean": -1.9249854345874993,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -5.263635671906007,
+          "proper_probability_width": 7.3379876607553935
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.1499999999999835,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.8688715581528492,
+          "child_r_proper_mean": -2.150182231833334,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -6.697807899611844,
+          "proper_probability_width": 7.475486232611429
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.199999999999978,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.8610074719063587,
+          "child_r_proper_mean": -2.3665633911488477,
+          "all_source_child_probability": -7.771561172376096e-16,
+          "child_matter_normal_energy": -8.471990178283413,
+          "proper_probability_width": 7.444029887625479
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.2499999999999725,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.8098690970418372,
+          "child_r_proper_mean": -2.568835782828002,
+          "all_source_child_probability": -9.992007221626409e-16,
+          "child_matter_normal_energy": -10.66209699238886,
+          "proper_probability_width": 7.2394763881674
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.299999999999967,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.7177127615866872,
+          "child_r_proper_mean": -2.7524670053273135,
+          "all_source_child_probability": -1.1102230246251565e-15,
+          "child_matter_normal_energy": -13.36232100951962,
+          "proper_probability_width": 6.870851046346809
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.3499999999999615,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.5907001491559336,
+          "child_r_proper_mean": -2.914223631946964,
+          "all_source_child_probability": -1.1102230246251565e-15,
+          "child_matter_normal_energy": -16.69003379962257,
+          "proper_probability_width": 6.3628005966238
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.399999999999956,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.4384459682818838,
+          "child_r_proper_mean": -3.0525820363771916,
+          "all_source_child_probability": -1.1102230246251565e-15,
+          "child_matter_normal_energy": -20.792060469696747,
+          "proper_probability_width": 5.7537838731276025
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.4499999999999504,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.2724106992861186,
+          "child_r_proper_mean": -3.167821551469063,
+          "all_source_child_probability": -1.2212453270876722e-15,
+          "child_matter_normal_energy": -25.852562730639168,
+          "proper_probability_width": 5.08964279714454
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.499999999999945,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 1.103770903201251,
+          "child_r_proper_mean": -3.261745943047164,
+          "all_source_child_probability": -8.881784197001252e-16,
+          "child_matter_normal_energy": -32.102766748292524,
+          "proper_probability_width": 4.415083612805064
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.5499999999999394,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.9416674013929942,
+          "child_r_proper_mean": -3.3371534760098602,
+          "all_source_child_probability": -1.1102230246251565e-15,
+          "child_matter_normal_energy": -39.832888413924614,
+          "proper_probability_width": 3.766669605572032
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.599999999999934,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.792367846215934,
+          "child_r_proper_mean": -3.3972581704246183,
+          "all_source_child_probability": -8.881784197001252e-16,
+          "child_matter_normal_energy": -49.406827125149604,
+          "proper_probability_width": 3.1694713848637814
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.6499999999999284,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.6593102463247074,
+          "child_r_proper_mean": -3.445223483785131,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -61.28044426311749,
+          "proper_probability_width": 2.6372409852988703
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.699999999999923,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.5436665119393185,
+          "child_r_proper_mean": -3.4838723930493587,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -76.02446931143066,
+          "proper_probability_width": 2.174666047757306
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.7499999999999174,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.4450556384735713,
+          "child_r_proper_mean": -3.5155591039371292,
+          "all_source_child_probability": -5.551115123125783e-16,
+          "child_matter_normal_energy": -94.35330490532614,
+          "proper_probability_width": 1.7802225538943102
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.799999999999912,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.362179501990993,
+          "child_r_proper_mean": -3.5421533307811983,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -117.16127980469028,
+          "proper_probability_width": 1.4487180079639916
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.8499999999999064,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.29329675766949714,
+          "child_r_proper_mean": -3.5650871468374272,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -145.5682652559158,
+          "proper_probability_width": 1.1731870306780046
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.8999999999999009,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.23653544462714482,
+          "child_r_proper_mean": -3.58542757481,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -180.9770514960819,
+          "proper_probability_width": 0.9461417785085917
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.9499999999998954,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.19007860781777985,
+          "child_r_proper_mean": -3.603952711982292,
+          "all_source_child_probability": -5.551115123125783e-16,
+          "child_matter_normal_energy": -225.14550022353384,
+          "proper_probability_width": 0.7603144312711283
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 1.9999999999998899,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.15226190739595147,
+          "child_r_proper_mean": -3.6212202799797235,
+          "all_source_child_probability": -7.771561172376096e-16,
+          "child_matter_normal_energy": -280.2772746211093,
+          "proper_probability_width": 0.6090476295838112
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.0499999999999066,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.12161528774765529,
+          "child_r_proper_mean": -3.6376244407097933,
+          "all_source_child_probability": -6.661338147750939e-16,
+          "child_matter_normal_energy": -349.1359403094922,
+          "proper_probability_width": 0.4864611509906247
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.0999999999999233,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.09687158204300816,
+          "child_r_proper_mean": -3.653440488009118,
+          "all_source_child_probability": -5.551115123125783e-16,
+          "child_matter_normal_energy": -435.1884804872777,
+          "proper_probability_width": 0.3874863281720362
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.14999999999994,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.07695705780398443,
+          "child_r_proper_mean": -3.6688587596686513,
+          "all_source_child_probability": -4.440892098500626e-16,
+          "child_matter_normal_energy": -542.7858435180228,
+          "proper_probability_width": 0.3078282312159395
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.1999999999999567,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.06097318973649468,
+          "child_r_proper_mean": -3.684009700894618,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -677.3901265270962,
+          "proper_probability_width": 0.24389275894597873
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.2499999999999734,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.048175133334420916,
+          "child_r_proper_mean": -3.6989820171788814,
+          "all_source_child_probability": -2.220446049250313e-16,
+          "child_matter_normal_energy": -845.8605018555213,
+          "proper_probability_width": 0.1927005333376819
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.29999999999999,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.03794996303763831,
+          "child_r_proper_mean": -3.713835611526605,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -1056.8131504341602,
+          "proper_probability_width": 0.15179985215055147
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.35,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.029796271941701757,
+          "child_r_proper_mean": -3.7286106828644225,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1321.0744488954915,
+          "proper_probability_width": 0.11918508776680525
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.4000000000000004,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.023305864777821927,
+          "child_r_proper_mean": -3.7433340532553956,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -1652.2516821721692,
+          "proper_probability_width": 0.09322345911128593
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.45,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.018147781871724167,
+          "child_r_proper_mean": -3.7580235255479,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -2067.4518939766444,
+          "proper_probability_width": 0.07259112748689489
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.5,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.014054621766972808,
+          "child_r_proper_mean": -3.772690859159587,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -2588.1874893333356,
+          "proper_probability_width": 0.05621848706788768
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.5500000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.010810992835428745,
+          "child_r_proper_mean": -3.7873437869134,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -3241.5173024810056,
+          "proper_probability_width": 0.04324397134171143
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.6,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.008243863927541284,
+          "child_r_proper_mean": -3.801987372707119,
+          "all_source_child_probability": -3.3306690738754696e-16,
+          "child_matter_normal_energy": -4061.484590947527,
+          "proper_probability_width": 0.03297545571016158
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.6500000000000004,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.006214567531126924,
+          "child_r_proper_mean": -3.816624919855313,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -5090.929508357879,
+          "proper_probability_width": 0.024858270124504145
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.7,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.004612216097724886,
+          "child_r_proper_mean": -3.83125857541706,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -6383.77392363933,
+          "proper_probability_width": 0.01844886439089599
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.75,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0033483113953329813,
+          "child_r_proper_mean": -3.8458897302000583,
+          "all_source_child_probability": -1.1102230246251565e-16,
+          "child_matter_normal_energy": -8007.90210320249,
+          "proper_probability_width": 0.013393245581328372
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.8000000000000003,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.002352351088967808,
+          "child_r_proper_mean": -3.8605192822734775,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -10048.793158224282,
+          "proper_probability_width": 0.009409404355867679
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.85,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.001568262313379698,
+          "child_r_proper_mean": -3.8751478098062684,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -12614.102053538973,
+          "proper_probability_width": 0.006273049253515239
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.9000000000000004,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0009515166297844324,
+          "child_r_proper_mean": -3.8897756839721342,
+          "all_source_child_probability": 1.1102230246251565e-16,
+          "child_matter_normal_energy": -15839.437616779322,
+          "proper_probability_width": 0.003806066519134177
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 2.95,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 0.0004668033527943649,
+          "child_r_proper_mean": -3.9044031424255845,
+          "all_source_child_probability": 0.0,
+          "child_matter_normal_energy": -19895.651204926984,
+          "proper_probability_width": 0.001867213411173907
+        },
+        "proper_clocks_matched": false
+      },
+      {
+        "sector": "chi_upper",
+        "time": 3.0,
+        "initial_offset_removed": true,
+        "effects_vs_saved_chi0_h0": {
+          "child_proper_length": 8.615832427949499e-05,
+          "child_r_proper_mean": -3.9190303369501205,
+          "all_source_child_probability": 2.220446049250313e-16,
+          "child_matter_normal_energy": -24998.032054042436,
+          "proper_probability_width": 0.00034463329711442725
+        },
+        "proper_clocks_matched": false
+      }
+    ],
+    "old_baseline_rerun": false,
+    "physical_h_selection_claim": false,
+    "holding_claim": false,
+    "conditional_curvature_route": {
+      "evidence": {
+        "chi_balanced": {
+          "retained_stations": [
+            {
+              "time": 0.0,
+              "chi_excursion_max": 1.2434497875801753e-14,
+              "status": "prepared"
+            },
+            {
+              "time": 0.3,
+              "chi_excursion_max": 0.020291525444473102,
+              "status": "station_retained"
+            },
+            {
+              "time": 1.0,
+              "chi_excursion_max": 10.099669917426489,
+              "status": "station_retained"
+            },
+            {
+              "time": 3.0,
+              "chi_excursion_max": 6008.334865237942,
+              "status": "station_reached"
+            }
+          ],
+          "growing_retained_chi_departure": true,
+          "chart_loss": false,
+          "physical_instability_proved": false
+        },
+        "chi_lower": {
+          "retained_stations": [
+            {
+              "time": 0.0,
+              "chi_excursion_max": 1.3322676295501878e-14,
+              "status": "prepared"
+            },
+            {
+              "time": 0.3,
+              "chi_excursion_max": 0.10365610544719317,
+              "status": "station_retained"
+            },
+            {
+              "time": 1.0,
+              "chi_excursion_max": 7.717203838660521,
+              "status": "station_retained"
+            },
+            {
+              "time": 1.481999999999947,
+              "chi_excursion_max": 4812.083599435077,
+              "status": "chart_exit"
+            }
+          ],
+          "growing_retained_chi_departure": true,
+          "chart_loss": true,
+          "physical_instability_proved": false
+        },
+        "chi_upper": {
+          "retained_stations": [
+            {
+              "time": 0.0,
+              "chi_excursion_max": 1.0658141036401503e-14,
+              "status": "prepared"
+            },
+            {
+              "time": 0.3,
+              "chi_excursion_max": 0.14414679798543872,
+              "status": "station_retained"
+            },
+            {
+              "time": 1.0,
+              "chi_excursion_max": 26.81027914692232,
+              "status": "station_retained"
+            },
+            {
+              "time": 3.0,
+              "chi_excursion_max": 7214.530300580225,
+              "status": "station_reached"
+            }
+          ],
+          "growing_retained_chi_departure": true,
+          "chart_loss": false,
+          "physical_instability_proved": false
+        }
+      },
+      "initial_criterion_only": true,
+      "sector_limitation_observed": true,
+      "stop_this_route_without_higher_jet_or_alpha_tuning": true,
+      "growth_definition": "strictly increasing |chi-chi_initial| maxima at retained positive-time stations",
+      "holding_or_infinite_future_claim": false,
+      "scope": "finite conditional initial-sector family; route policy is not a broad theory verdict"
+    }
+  }
+}

@@ -214,8 +214,12 @@ neighboring preparations, without fitting the earlier width-1.05 result.
 For its new withheld width 1.03, the measured content change is
 $-0.0579681$. The linear discrepancy is 9.68 percent of that effect;
 the quadratic discrepancy is 2.27 percent. It uses 88.50 CPU seconds and
-preserves the earlier result. Spatial and timestep controls of this new
-measurement remain a separate comparison.
+preserves the earlier result. The subsequent
+[confirmation](../lab/results/development/nsc-discovery-width-response-confirmation-v1/confirmation-measurement.json)
+uses 53.16 CPU seconds. Timestep halving moves the effect by
+$3.83\times10^{-10}$; the spatial comparison moves it by about 0.992
+percent. The quadratic prediction remainder is about 2.27 percent; these
+comparisons remain indicators rather than a continuum bound.
 
 ### Carrier dependence and an admissible dynamic preparation
 
@@ -299,6 +303,25 @@ An admissible initial expansion/contraction rate changes extrinsic data;
 $\chi=-2$ instead changes the initial invariant curvature. These controls
 retain the same action, field source and observers and impose no rate after
 initial preparation.
+
+The [six initial-sector continuations](../lab/results/development/nsc-discovery-initial-sector-v1/manifest.json)
+reach $T=3$ using 178.86 CPU seconds. Initial radial expansion, initial
+contraction and the $\chi=-2$ control all end with smaller proper radial
+lengths and larger areal radii. The same uniform source stays uniform;
+these controls do not demonstrate a localized holding region.
+
+The source also fixes a unique initial curvature when its initial auxiliary
+acceleration is required to vanish. This is a conditional preparation
+criterion, not a stationary-state or universal scale-selection law. The
+[balanced successor](../lab/results/development/nsc-discovery-initial-sector-balanced-v2/manifest.json)
+tests that value and fixed $\pm1$ percent controls using 137.43 CPU seconds.
+The candidate contracts from child length 2.5497 to 0.0023929 by $T=3$.
+The lower-curvature control reaches the positive-radius chart edge near
+$T=1.482$; both timesteps retain the last admissible state and bracket the
+event without clamping. The upper control contracts as well. Actual tides
+are measured separately from the growing auxiliary field. These outcomes
+stop this preparation-tuning route; they neither establish a singularity
+nor exclude other action branches or nested constructions.
 
 ### Coupled reduction with the same generated geometry
 
