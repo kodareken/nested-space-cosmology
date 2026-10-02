@@ -15,18 +15,30 @@ or an older cursor. It does not resume the campaign. Do not drop recorded
 error gaps. The [archived candidate notes](#archived-candidate-notes) at the
 end of this file are not the active queue.
 
-## Active finite parent–child pair, 2026-10-02
+## Completed finite parent–child pair, 2026-10-02
 
-The [owning note](nsc-nested-parent-child.md) defines the new finite goal.
-`src/recursive_horizons/nsc_nested_parent_child.py` owns the common-action
-canonical hierarchy, separated source, initial geometry and live operator.
-`src/recursive_horizons/nsc_nested_parent_child_response.py` owns nested
-blocks, source/energy accounting and the full-versus-reduced comparison.
-`scripts/derive_nsc_nested_parent_child.py` is the sole scientific driver;
-`results/development/nsc-nested-parent-child-v1.json` and its NPZ preserve
-the first twelve trajectories and the two named remaining checks.
-The corresponding three `test_nsc_nested_parent_child*.py` files own direct,
-response and independent controls. This successor does not alter either paper.
+The [owning note](nsc-nested-parent-child.md) defines the finite nested
+collars under one metric and common action. Status is
+`MEASURED_CONFIRMED_NESTED_PAIR`: four reciprocal physical effects meet their
+one-percent movement criterion, and the same-trajectory local reduction
+retains the actual source, fixed observers, and all ambient/cross components.
+The inherited statement concerns the functional law, not identical spectra
+for differing instantaneous geometries. Owners relative to the laboratory:
+
+| Piece | Owner |
+|---|---|
+| Canonical geometry hierarchy, separated source and live operator | [nsc_nested_parent_child.py](../src/recursive_horizons/nsc_nested_parent_child.py) |
+| Nested blocks, source/link accounting, Schur and streamed response | [nsc_nested_parent_child_response.py](../src/recursive_horizons/nsc_nested_parent_child_response.py) |
+| Preserved first twelve trajectories and incomplete assessment | [v1 driver](../scripts/derive_nsc_nested_parent_child.py), [v1 JSON/NPZ](../results/development/nsc-nested-parent-child-v1.json) |
+| Cached exact linear-Q response and nf512 space confirmation | [confirmation driver](../scripts/derive_nsc_nested_parent_child_confirmation.py), [v2 JSON/NPZ](../results/development/nsc-nested-parent-child-confirmation-v2.json) |
+| Portable recorded basis and independent saved-data replay | [basis supplement](../results/development/nsc-nested-parent-child-replay-basis-v1.json), [consumer](../scripts/check_nsc_nested_parent_child_confirmation.py) |
+| Physical/mode response visualization | [figure](../results/development/nsc-nested-parent-child-figure.png), [figure data](../results/development/nsc-nested-parent-child-figure.json) |
+
+The corresponding `test_nsc_nested_parent_child*.py` files own direct,
+response, confirmation and independent controls. The completed finite
+construction preserves v1's `INCOMPLETE` verdict and both papers. Numerical
+movements remain refinement indicators; no continuum state-error certificate
+or new spacetime manifold is asserted.
 
 ## Completed finite conformal realization, 2026-10-01
 

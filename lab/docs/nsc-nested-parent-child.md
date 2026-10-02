@@ -272,3 +272,126 @@ they do not replace those physical regional effects. Source-control
 increments are compared at the same global coordinate time, with each
 continuous proper clock recorded. Equal proper-time endpoints are not
 claimed for these comparisons.
+
+## Recorded pilot v1: measured pair, incomplete precision and reduction
+
+The [v1 record](../results/development/nsc-nested-parent-child-v1.json) and
+[payload](../results/development/nsc-nested-parent-child-v1.npz) preserve
+twelve trajectories: baseline, exterior-parent intervention, and
+child-source intervention at $n_f=128,256$ and step caps $0.001,0.0005$.
+All reach $T=0.3$. CPU is $401.36$ s and payload is about $15.85$ MB.
+The record status is `INCOMPLETE`; reaching the target does not by itself
+complete the finite pair objective.
+
+The primary effects compare source-control increments from each initial
+slice against baseline increments at common coordinate time. The fine
+half-step measurements and their spatial indicators are:
+
+| Primary physical response | Effect | Spatial movement / effect |
+|---|---:|---:|
+| Parent source to child probability | $0.01150685$ | $1.53375\%$ — unresolved |
+| Child source to parent-annulus probability | $0.00848896$ | $0.02622\%$ |
+| Parent source to child mean radius | $0.0001759865$ | $0.22315\%$ |
+| Child source to parent-annulus mean radius | $0.001109926$ | $0.01600\%$ |
+
+Timestep movements are below one percent for all four. The additional
+parent-to-child modal occupation effect is $6.5150\times10^{-6}$, with
+$3.62\%$ spatial movement, and is separately unresolved. These are
+observed refinement indicators, not total continuum state-error bounds.
+
+The saved initial parent intervention preserves the child covariance
+exactly while redistributing the exterior source weights at total
+occupation three. The child intervention changes its initial covariance
+by $0.1I_2$ and declares total occupation $3.2$. Fine exterior source
+support leakage is about $7.16\times10^{-8}$ in power. Geometry stays
+positive and covariance remains admissible; fine half-step column Gram gaps stay
+below $9.6\times10^{-12}$. Both canonical geometry groups evolve.
+
+On the fine baseline, the measured proper-length ratio changes from
+$1.9842168$ to $1.9827345$. Child mean radius increases while the
+parent-annulus mean decreases. The full sampled constraint norm changes
+from about $0.008999$ to $0.009003$, within its sampled forcing budget;
+the full initial Hamilton maximum is about $0.08014$. These quantities
+retain the finite projected/held-out and arithmetic domains of the
+initializer. They are not silently replaced by its solved projected
+residual or by an exact continuum constraint claim.
+
+The child normal shell increases by $0.94679485$. Boundary inflow
+$0.92339858$, pressure work $0.02083885$, and lapse-gradient work
+$0.00254640$ explain it to $1.10\times10^{-5}$, or $0.001164\%$;
+the frame quadrature indicator is $0.0720\%$ of the shell change.
+Parent/child/annulus probability allocation closes to
+$1.33\times10^{-15}$ and complete field cross/link accounting to
+$2.84\times10^{-14}$. Coordinate field exchange is
+$1.67652\times10^{-5}$; total-energy drift is
+$-5.34\times10^{-10}$, with full metric work including the dynamic lapse.
+
+The attempted local reduction exceeded its admitted CPU ceiling and
+returned no local result. Its intended start state at $T=0.1$ is saved,
+with actual $\|C_{AE}\|_F=0.3478745$; the corresponding initial $T=0$
+cross is roundoff zero. The remaining evidence is therefore specific:
+resolve the parent-to-child physical state effect under finer space
+comparison, and complete the same-trajectory local reduction with its
+individual control discrepancies. Reusing the exact linear-$Q$ conformal
+operator schedule can remove repeated dense operator construction without
+changing that physical schedule. The sealed v1 states and source remain
+the comparison domain for the confirmation.
+
+## Confirmation v2: the declared finite pair is complete
+
+The [confirmation](../results/development/nsc-nested-parent-child-confirmation-v2.json)
+and its [payload](../results/development/nsc-nested-parent-child-confirmation-v2.npz)
+record `MEASURED_CONFIRMED_NESTED_PAIR`. They preserve the v1 witness and
+add only the two $n_f=512$ baseline/parent-source trajectories needed for
+the finer spatial comparison, plus the local response on the saved witness.
+The confirmation uses $559.82$ CPU seconds; the two campaigns together use
+about $961.19$ CPU seconds. No source reset or imposed geometry is introduced.
+
+The parent-to-child probability response is $0.01150720$, with
+$0.01348\%$ spatial movement at $256\to512$. The same comparison resolves
+its modal response at $0.02578\%$ and improves the child mean-radius
+indicator to $0.00033864\%$. The three other primary v1 physical effects
+already meet the one-percent target and retain their original comparisons.
+All four physical responses therefore resolve within the declared finite
+numerical policy. Comparisons use initial-subtracted increments at common
+coordinate time; the recorded proper clocks are not matched endpoints.
+
+On the same generated geometry over $[0.1,0.3]$, the fixed child's
+occupation changes by $0.294235$. The streamed/full discrepancy is
+$0.04779\%$ of that change. Exterior-drive and exterior-cross omissions
+change occupation by $0.136885$ and $0.176829$; parent-detail-drive and
+child/detail-cross omissions change it by $0.0331275$ and $0.0509377$.
+Each omission's own comparison discrepancy is below $0.203\%$ of its
+effect. The cross-pair omission is an algebraic diagnostic, while pinching
+all child/exterior cross correlations is an admissible covariance control.
+The effects are not additive. The exact live Schur reduction retains the
+ambient region and its causal response; no memory-off series is claimed
+for this successor.
+
+Independent saved-array checks reproduce the physical curves, local
+covariances, control discrepancies, source invariances, energy accounts
+and direct Schur responses. The
+[portable basis](../results/development/nsc-nested-parent-child-replay-basis-v1.json)
+freezes the actual canonical frames and source/observer columns at all
+three bands. It reconstructs all 434 saved geometry frames with zero
+metric discrepancy on the recorded host, including clocks and endpoint
+energies. Its [producer](../scripts/derive_nsc_nested_parent_child_replay_basis.py)
+does not re-evolve any trajectory. The
+[independent consumer](../scripts/check_nsc_nested_parent_child_confirmation.py)
+also rejects mismatched coordinate clocks across comparison bands.
+
+Read-only completion replay from the repository root:
+
+```sh
+python scripts/lab.py scripts/check_nsc_nested_parent_child_confirmation.py
+python scripts/lab.py scripts/derive_nsc_nested_parent_child_confirmation.py --check
+python scripts/lab.py scripts/plot_nsc_nested_parent_child.py --check
+```
+
+The [four-panel figure](../results/development/nsc-nested-parent-child-figure.png)
+and its [data manifest](../results/development/nsc-nested-parent-child-figure.json)
+replay the actual source, reciprocal physical responses, length ratio and
+proper clocks. The result is one finite nested pair under one evolving
+metric and the common inherited functional law. Its refinement indicators
+do not become continuum state-error certificates. The existing manuscripts
+and release remain unchanged.

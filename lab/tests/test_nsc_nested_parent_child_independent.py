@@ -4,7 +4,11 @@ Generic admissible data exercise nonzero reciprocal source forces. Compact
 SOURCE supports and overlapping OBSERVER links are deliberately distinct.
 """
 import importlib.util
+import hashlib
+import json
 from pathlib import Path
+import sys
+from unittest.mock import patch
 
 import numpy as np
 import pytest
@@ -12,6 +16,17 @@ import pytest
 from recursive_horizons import nsc_nested_parent_child as nested
 from recursive_horizons import nsc_spherical_coupling as coupling
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
+from recursive_horizons.provenance import resolve_pinned_source_bytes
+
+
+PILOT_SOURCE_REF = "ec0cd25edbab19f7e1a8245f4713648640748222"
+
+
+@pytest.fixture(scope="module")
+def saved_pilot():
+    root = Path(__file__).resolve().parents[2]
+    path = root / "lab/results/development/nsc-nested-parent-child-v1.json"
+    return root, json.loads(path.read_text()), path.with_suffix(".npz")
 
 
 @pytest.fixture(scope="module")
@@ -25,6 +40,16 @@ def driver():
     spec = importlib.util.spec_from_file_location("nested_pair_independent_driver", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
+    return module
+
+
+@pytest.fixture(scope="module")
+def confirmation(driver):
+    path = Path(__file__).resolve().parents[1] / "scripts/derive_nsc_nested_parent_child_confirmation.py"
+    spec = importlib.util.spec_from_file_location("nested_pair_confirmation_independent", path)
+    module = importlib.util.module_from_spec(spec)
+    with patch.dict(sys.modules, {"derive_nsc_nested_parent_child": driver}):
+        spec.loader.exec_module(module)
     return module
 
 
@@ -301,6 +326,191 @@ def test_successor_initial_preparation_reports_actual_returned_source_and_correc
     assert np.linalg.norm(numerical - expected) / np.linalg.norm(expected) < 2e-6
 
 
+def test_saved_pilot_partial_verdict_and_named_physical_effects(saved_pilot):
+    root, record, payload = saved_pilot
+    assert record["status"] == "INCOMPLETE"
+    assert record["stop_reason"] == "nested response exceeded its admitted CPU ceiling"
+    assert "local_response" not in record
+    assert len(record["results"]) == 12
+    assert hashlib.sha256(payload.read_bytes()).hexdigest() == record["payload_sha256"]
+    for path, expected in record["source_bindings"].items():
+        # Explicit recorded context; sealed evidence is not rebound to a later
+        # optimization, and historical authentication does not execute code.
+        raw = resolve_pinned_source_bytes(root, "lab/" + path, expected, commit=PILOT_SOURCE_REF)
+        assert hashlib.sha256(raw).hexdigest() == expected
+    definitions = {
+        "parent_to_child_state": ("parent_only", "child_probability"),
+        "child_to_parent_state": ("child_only", "parent_annulus_probability"),
+        "parent_to_child_geometry": ("parent_only", "child_r_proper_mean"),
+        "child_to_parent_annulus_geometry": ("child_only", "parent_annulus_r_proper_mean"),
+    }
+    def increments(nf, cap, control, observable):
+        rows = record["results"][f"nf{nf}_{control}_dt{cap:g}"]["rows"]
+        if observable == "child_probability":
+            values = np.array([row["windows"]["child"]["probability"] for row in rows])
+        elif observable == "parent_annulus_probability":
+            values = np.array([sum(row["windows"][name]["probability"] for name in
+                                   ("left_annulus", "right_annulus")) for row in rows])
+        else:
+            values = np.array([row["metrics"][observable] for row in rows])
+        return values - values[0]
+    for name, (control, observable) in definitions.items():
+        effects = {(nf, cap): increments(nf, cap, control, observable) -
+                             increments(nf, cap, "baseline", observable)
+                   for nf in (128, 256) for cap in (.001, .0005)}
+        magnitude = float(np.max(abs(effects[(256, .0005)])))
+        space = float(np.max(abs(effects[(128, .0005)] - effects[(256, .0005)])))
+        temporal = float(np.max(abs(effects[(256, .001)] - effects[(256, .0005)])))
+        result = record["two_way_effects"][name]
+        assert result["effect_max"] == pytest.approx(magnitude, abs=1e-15)
+        assert result["space_fraction"] == pytest.approx(space / magnitude, abs=1e-13)
+        assert result["time_fraction"] == pytest.approx(temporal / magnitude, abs=1e-13)
+        assert result["resolved_at_one_percent"] is (max(space, temporal) < .01 * magnitude)
+        assert result["initial_offset_removed"] is True
+        assert result["matched_proper_time_claimed"] is False
+    assert record["two_way_effects"]["parent_to_child_state"]["resolved_at_one_percent"] is False
+    assert 0.01 < record["two_way_effects"]["parent_to_child_state"]["space_fraction"] < 0.02
+
+
+def test_saved_pilot_actual_source_covariance_geometry_and_accounting(saved_pilot):
+    _root, record, payload = saved_pilot
+    with np.load(payload, allow_pickle=False) as stored:
+        for nf in (128, 256):
+            pair = nested.build_pair(nf)
+            base = f"nf{nf}_baseline_dt0.0005"
+            reference = stored[base + "_reference_columns"]
+            child = reference[:, [2, 3]]
+            local = {}
+            for control in ("baseline", "parent_only", "child_only"):
+                name = f"nf{nf}_{control}_dt0.0005"
+                phi0, phi1 = stored[name + "_phi0"], stored[name + "_phi1"]
+                assert np.array_equal(phi0[0], stored[base + "_phi0"][0])
+                assert np.array_equal(phi1[0], stored[base + "_phi1"][0])
+                assert np.array_equal(reference, stored[name + "_reference_columns"])
+                columns = np.concatenate((phi0, phi1), axis=1)
+                weights = np.array(record["results"][name]["source"]["occupations"])
+                amplitudes = child.conj().T @ columns[0]
+                local[control] = (amplitudes * weights) @ amplitudes.conj().T
+                gram = np.einsum("tik,til->tkl", columns.conj(), columns)
+                eigenvalues = np.linalg.eigvalsh(np.sqrt(weights)[None, :, None] *
+                                                gram * np.sqrt(weights)[None, None, :])
+                assert eigenvalues.min() > 0 and eigenvalues.max() < 1 + 1e-9
+                summary = record["results"][name]["summary"]
+                for field in ("r", "Q"):
+                    fine = pair.grid.A_g @ (pair.geometry_map @ stored[name + "_" + field].T)
+                    assert np.min(fine) > 0
+                    assert summary["minimum_" + field] == pytest.approx(np.min(fine), abs=2e-12)
+                clocks = np.array(summary["normal_clocks"])
+                assert np.array_equal(clocks[0], np.zeros(3))
+                assert np.min(np.diff(clocks, axis=0)) > 0
+                assert summary["maximum_field_energy_closure"] < 5e-13
+                assert summary["sampled_constraint_end_margin"] > 0
+            assert np.array_equal(local["baseline"], local["parent_only"])
+            np.testing.assert_allclose(local["child_only"] - local["baseline"],
+                                       .1 * np.eye(2), rtol=0., atol=1e-14)
+        # Actual segment-start cross is measured, not supplied synthetically.
+        columns = np.concatenate((stored[base + "_phi0"], stored[base + "_phi1"]), axis=1)
+        weights = np.array(record["results"][base]["source"]["occupations"])
+        active = columns[10]
+        amplitudes = child.conj().T @ active
+        exterior = active - child @ amplitudes
+        cross = (amplitudes * weights) @ exterior.conj().T
+        assert np.linalg.norm(cross) == pytest.approx(.3478745294020121, abs=2e-13)
+
+
+def test_confirmation_cached_operator_is_exact_direct_action_on_interpolated_geometry(pair, confirmation):
+    first = _state(pair)
+    second, third = first.copy(), first.copy()
+    second.Q[pair.geometry_parent_indices[0]] += .03
+    second.Q[pair.geometry_child_indices[0]] += .005
+    third.Q[pair.geometry_parent_indices[0]] -= .02
+    third.Q[pair.geometry_child_indices[1]] += .004
+    second.r[pair.geometry_parent_indices[0]] += .1
+    third.p_Q[pair.geometry_child_indices[0]] += .2
+    states, times = [first, second, third], np.array([.1, .2, .3])
+    cache = confirmation.CachedLinearHamiltonian(pair, states, times)
+    rng = np.random.default_rng(9842)
+    probes = rng.normal(size=(2 * pair.grid.nf, 3)) + 1j * rng.normal(size=(2 * pair.grid.nf, 3))
+    for mark in (.1, .135, .24, .3):
+        lower = 0 if mark <= .2 else 1
+        weight = (mark - times[lower]) / (times[lower + 1] - times[lower])
+        actual = nested.NestedState(*(getattr(states[lower], name) * (1 - weight) +
+                                     getattr(states[lower + 1], name) * weight for name in nested.STATE_NAMES))
+        np.testing.assert_allclose(cache(mark) @ probes,
+                                   nested.apply_hamiltonian(pair, actual, probes),
+                                   rtol=2e-12, atol=2e-12)
+    assert np.linalg.norm(cache(.1) - cache(.2)) > .01
+    identity = cache.validate_midpoints()
+    assert identity["same_linear_Q_schedule"] is True
+    assert identity["relative_max"] < 1e-12
+    assert identity["cached_matrices_saved_in_payload"] is False
+    for mark in (.09, .31):
+        with pytest.raises(ValueError, match="trajectory"):
+            cache(mark)
+
+
+def test_confirmation_loads_actual_saved_segment_source_and_fixed_observer(saved_pilot, confirmation):
+    _root, record, payload = saved_pilot
+    witness, pair, states, times = confirmation.load_witness()
+    assert witness["payload_sha256"] == record["payload_sha256"]
+    base = confirmation.PRIMARY_CASE
+    with np.load(payload, allow_pickle=False) as stored:
+        assert np.array_equal(times, stored[base + "_times"])
+        assert np.array_equal(pair.reference_columns, stored[base + "_reference_columns"])
+        for index in (0, 10, -1):
+            for name in nested.STATE_NAMES:
+                assert np.array_equal(getattr(states[index], name), stored[base + "_" + name][index])
+    assert times[10] == pytest.approx(.1)
+    assert not np.array_equal(_columns(states[10]), pair.source_columns)
+    assert pair.weights.tolist() == record["results"][base]["source"]["occupations"]
+
+
+def test_confirmation_uses_own_finer_effect_and_preserves_coordinate_clock_domain(confirmation):
+    times = [0., .15, .3]
+    def case(effect, offset=0.):
+        return {"rows": [{"time": mark,
+                          "windows": {"child": {"probability": 1 + offset + effect * mark / .3}},
+                          "child_occupation": [1 + offset + effect * mark / .3] * 2,
+                          "metrics": {"child_r_proper_mean": 4 + offset + effect * mark / .3}}
+                         for mark in times]}
+    witness = {"results": {confirmation.PRIMARY_CASE: case(0.),
+                            "nf256_parent_only_dt0.0005": case(.01, 2.)},
+               "two_way_effects": {name: {"time_indicator": 1e-8} for name in
+                                   ("parent_to_child_state", "parent_to_child_modal_state",
+                                    "parent_to_child_geometry")}}
+    fine = {"nf512_baseline_dt0.0005": case(0.), "nf512_parent_only_dt0.0005": case(.01005, 10.)}
+    comparisons = confirmation.confirmation_comparisons(witness, fine)
+    for row in comparisons.values():
+        assert row["space_fraction"] == pytest.approx(.00005 / .01005, abs=2e-13)
+        assert row["fraction_of_primary_v1_effect"] == pytest.approx(.005, abs=2e-13)
+        assert row["resolved_at_one_percent"] is True
+        assert row["time_confirmation_claimed"] is False
+        assert row["matched_proper_time_claimed"] is False
+    fine["nf512_parent_only_dt0.0005"]["rows"][1]["time"] += .01
+    with pytest.raises(ValueError, match="clocks"):
+        confirmation.confirmation_comparisons(witness, fine)
+
+
+def test_confirmation_requires_each_active_local_controls_own_error(confirmation):
+    good = lambda effect: {"effect": effect, "fraction": .005}
+    result = {"child": {"occupation_full": np.array([[.5, .5], [.3, .3]]),
+                         "reduction_error": good(.2), "full_midpoint_indicator": good(.2),
+                         "conditional_versus_autonomous": good(.2),
+                         "coherence_error": {"effect": 0., "fraction": None},
+                         "controls": {"outside_drive_off": {"occupation_movement": .00002,
+                                      "coherence_movement": 0., "own_reference_error": good(.00002),
+                                      "reference_midpoint_indicator": good(.00002)}}},
+              "parent": {"reduction_error": good(.1), "full_midpoint_indicator": good(.1)},
+              "observer_preserved": True, "all_source_components_retained": True,
+              "allocation": {"child": {"time_indexed_exterior_propagator_bytes": 0}}}
+    assert confirmation.local_quality(result)["all_within_one_percent"] is True
+    result["child"]["controls"]["outside_drive_off"]["own_reference_error"]["fraction"] = .02
+    quality = confirmation.local_quality(result)
+    assert bool(quality["active_controls"]["outside_drive_off"]) is True
+    assert quality["checks"]["outside_drive_off_own_error"] is False
+    assert quality["all_within_one_percent"] is False
+
+
 def _density(j):
     A, f, Z, CF = .04, -8 * np.pi * -.001 / 3, -24 * np.pi * .04, .01
     Fr = -8 * np.pi * A * j["r"]
@@ -346,3 +556,26 @@ def test_affine_pullback_action_spinor_generator_symplectic_form_and_clock(scale
     assert np.linalg.norm(_dirac_action(wrong) - scale ** 1.5 * _dirac_action(jets)) > .1
     wrong = dict(mapped, r=scale * jets["r"])
     assert abs(_density(wrong) - scale ** 2 * _density(jets)) > .1
+
+
+def test_confirmation_consumer_rejects_shifted_cross_band_clocks():
+    from check_nsc_nested_parent_child_confirmation import matched_times
+    first = {"rows": [{"time": t} for t in (0., .1, .2)]}
+    second = {"rows": [{"time": t} for t in (0., .1, .2)]}
+    matched_times([first, second])
+    second["rows"][1]["time"] += .001
+    with pytest.raises(ValueError, match="mismatched coordinate clocks"):
+        matched_times([first, second])
+
+
+def test_frozen_replay_rejects_an_orthogonal_but_wrong_canonical_basis():
+    import derive_nsc_nested_parent_child_replay_basis as basis
+    record = json.loads(basis.OUT.read_text())
+    with np.load(basis.PAYLOAD, allow_pickle=False) as stored:
+        arrays = {key: stored[key].copy() for key in stored.files}
+    # Flip a nonconstant coordinate, leaving the positive mean chart intact.
+    arrays["nf256_W"][:, 1] *= -1
+    W = arrays["nf256_W"]
+    np.testing.assert_allclose(W.T @ W, np.eye(255), atol=1e-10)
+    with pytest.raises(ValueError, match="saved full geometry"):
+        basis.validate(arrays, record["bases"])

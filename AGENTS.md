@@ -33,7 +33,8 @@ AGENTS.md                 this index
 | Where a document lives, and which copies match | [Docs route](docs/README.md) |
 | Task authority and scientific status | Latest user instruction, which overrides a stale plan; [scope](docs/instructions.md#scientific-framing-and-authority), [status](docs/current-result.md), [code map](lab/docs/active-code-map.md) |
 | Existing mathematics, assumptions, and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
-| Active finite parent–child pair | [Owning note](lab/docs/nsc-nested-parent-child.md), [model](lab/src/recursive_horizons/nsc_nested_parent_child.py), [response](lab/src/recursive_horizons/nsc_nested_parent_child_response.py), [driver](lab/scripts/derive_nsc_nested_parent_child.py), [first evidence](lab/results/development/nsc-nested-parent-child-v1.json) |
+| Completed finite parent–child pair | [Owning note](lab/docs/nsc-nested-parent-child.md), [model](lab/src/recursive_horizons/nsc_nested_parent_child.py), [response](lab/src/recursive_horizons/nsc_nested_parent_child_response.py), [confirmation driver](lab/scripts/derive_nsc_nested_parent_child_confirmation.py), [v2 evidence](lab/results/development/nsc-nested-parent-child-confirmation-v2.json), [preserved v1](lab/results/development/nsc-nested-parent-child-v1.json) |
+| Parent–child replay and figure | [Portable basis](lab/results/development/nsc-nested-parent-child-replay-basis-v1.json), [independent consumer](lab/scripts/check_nsc_nested_parent_child_confirmation.py), [figure](lab/results/development/nsc-nested-parent-child-figure.png) |
 | Present regeneration loop | [Status](docs/current-result.md#present-spherical-loop), [code owner](lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py), [saved v5 diagnostic](lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py) |
 | Same-action conformal gauge and episode | [Status](docs/current-result.md#same-action-conformal-episode-1-october-2026), [proof](lab/docs/nsc-spherical-conformal-gauge.md), [driver](lab/scripts/derive_nsc_spherical_conformal_episode.py), [record](lab/results/development/nsc-spherical-conformal-episode-v1.json), [payload](lab/results/development/nsc-spherical-conformal-episode-v1.npz), [gauge tests](lab/tests/test_nsc_spherical_conformal_gauge.py), [episode tests](lab/tests/test_nsc_spherical_conformal_episode.py) |
 | Finite conformal chain through $T=0.3$ | [Owning note](lab/docs/nsc-spherical-conformal-continuation.md), [continuation](lab/results/development/nsc-spherical-conformal-episode-v2.json), [surface flow](lab/results/development/nsc-spherical-conformal-transport-v2.json), [clock](lab/results/development/nsc-spherical-conformal-clock-v2.json), [tests](lab/tests/test_nsc_spherical_conformal_continuation.py), [preservation tests](lab/tests/test_nsc_spherical_conformal_preservation.py) |
@@ -74,9 +75,10 @@ AGENTS.md                 this index
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 
-Documentation maintenance uses `agents/work`; preserve existing scientific
-branches and publication history. Follow the active request for integration
-and publication. Scientific Python uses `lab/` through root `scripts/lab.py`;
+Work on `codex/work-branch` and integrate verified changes into `main`;
+preserve existing scientific branches and publication history. Follow the
+active request for integration and publication. Scientific Python uses `lab/`
+through root `scripts/lab.py`;
 root `src/`, `scripts/` and `tests/` own the curated publication chain.
 
 Verdicts and the working diagnostic are in

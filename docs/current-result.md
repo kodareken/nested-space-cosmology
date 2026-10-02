@@ -17,16 +17,58 @@ The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
 same-spectrum local induced term, counted once. The vacuum-matched CTP branch
 remains a separate historical choice.
 
-## Active parent–child pair, 2 October 2026
+## Completed finite parent–child pair, 2 October 2026
 
-The active goal is one finite parent–child pair whose states and geometries
-interact under the inherited law. The [owning note](../lab/docs/nsc-nested-parent-child.md)
-defines a child collar inside a parent collar, independent canonical geometry
-components of one full metric, and one common action. The first
-[record](../lab/results/development/nsc-nested-parent-child-v1.json) preserves
-twelve source-controlled trajectories through $T=0.3$. It remains incomplete:
-one physical response needs a finer spatial comparison, and the local reduction
-reached its declared CPU cap. The completed article below stays unchanged.
+The [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json)
+records `MEASURED_CONFIRMED_NESTED_PAIR`. A child collar $I_C=(1,3)$ lies
+inside $I_P=(0,4)$; independent parent and child canonical geometry components
+evolve as parts of one full metric under the same action. The inherited
+statement is the common functional law under the declared coordinate/clock
+pullbacks. Differing evolving profiles need not have identical instantaneous
+normalized spectra. [Method and domain](../lab/docs/nsc-nested-parent-child.md).
+
+All four reciprocal physical responses meet their one-percent numerical
+movement criterion through $T=0.3$:
+
+| Physical response | Effect | Spatial movement / effect |
+|---|---:|---:|
+| Parent source to child probability | $0.01150720$ | $0.01348\%$ |
+| Child source to parent-annulus probability | $0.00848896$ | $0.02622\%$ |
+| Parent source to child mean radius | $0.0001759865$ | $0.22315\%$ |
+| Child source to parent-annulus mean radius | $0.001109926$ | $0.01600\%$ |
+
+These compare each control's change from its own initial slice with the
+baseline change at common coordinate time. The first row uses the new
+$n_f=256\to512$ confirmation and its finer effect denominator; the other
+three retain the recorded $128\to256$ comparisons. V1's matched timestep
+indicators also meet one percent. Reconstructed geometry stays positive, the Gaussian
+covariance remains admissible, and the full source/link energy accounting
+closes in the recorded numerical domain.
+
+V2 also confirms the parent-to-child mean-radius curve at $256\to512$ with
+movement $0.00033864\%$ of its finer effect. The figure uses that additional
+comparison; the table retains the primary record's $0.22315\%$ indicator.
+
+The same-trajectory reduction uses actual $\Phi(0.1)$ and fixed T0 observers
+on $[0.1,0.3]$, retaining child, parent detail, and ambient source components.
+The child occupation changes by $0.294235$; streamed/full discrepancy is
+$0.04779\%$ of that change. Parent-detail drive and child/detail cross
+omissions move occupation by $0.0331275$ and $0.0509377$, with their own
+comparison discrepancies $0.20242\%$ and $0.16284\%$. All active control,
+coherence, midpoint, and conditional/autonomous comparisons meet one percent.
+These omissions are conditional diagnostics, not additive shares of a
+physical cause. The exact cached linear-$Q$ operator changes neither the
+source nor the generated geometry schedule.
+
+This completes the declared finite construction; numerical movements are
+refinement indicators, not continuum or total propagated state-error bounds.
+The sealed [v1 record](../lab/results/development/nsc-nested-parent-child-v1.json)
+keeps its original `INCOMPLETE` status and twelve trajectories. V2 closes its
+two named gaps without rewriting it. [Confirmation driver](../lab/scripts/derive_nsc_nested_parent_child_confirmation.py),
+[portable basis](../lab/results/development/nsc-nested-parent-child-replay-basis-v1.json),
+[independent replay](../lab/scripts/check_nsc_nested_parent_child_confirmation.py),
+and [figure](../lab/results/development/nsc-nested-parent-child-figure.png).
+The completed article and release scopes below stay unchanged.
 
 ## Present spherical loop
 
