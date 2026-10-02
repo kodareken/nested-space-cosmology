@@ -26,6 +26,7 @@ and not a handover.
 
 | Piece | Status | Where it lives |
 |---|---|---|
+| Finite parent–child pair | Common-action model and twelve source-controlled trajectories saved. Three primary effects meet their one-percent comparison target; parent-to-child probability needs finer spatial comparison and local reduction stopped at its CPU cap. Goal remains active. | [Owner](nsc-nested-parent-child.md), [first evidence](../results/development/nsc-nested-parent-child-v1.json) |
 | Finite conformal realization | Measured chain through $T=0.3$: source differences, resolved surface flow, actual geometric response, maintained localization, and same-realization local response. Finite numerical comparisons meet their one-percent effect criterion. Renewal false. | [Owner](nsc-spherical-conformal-continuation.md), [continuation](../results/development/nsc-spherical-conformal-episode-v2.json), [local response](nsc-conformal-local-response-successor.md) |
 | Same-action source and metric controls | Source reversal reverses $x=2$ flow; $\pm5\%$ imbalance changes it by about $\pm5.04\%$ in the recorded coarse domain. Actual metric curvature uses projected rate Jacobians, rather than auxiliary substitution. | [Source controls](nsc-spherical-conformal-source-controls.md), [metric](nsc-spherical-conformal-curvature.md) |
 | Incoherent imbalance mean flow | Complete on the frozen depth-3 window. Geometry there is an input. | [Note](nsc-imbalance-turnover.md), [record](../results/development/nsc-imbalance-turnover-v1.json) |

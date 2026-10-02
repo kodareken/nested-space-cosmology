@@ -15,7 +15,20 @@ or an older cursor. It does not resume the campaign. Do not drop recorded
 error gaps. The [archived candidate notes](#archived-candidate-notes) at the
 end of this file are not the active queue.
 
-## Current finite conformal realization, 2026-10-01
+## Active finite parent–child pair, 2026-10-02
+
+The [owning note](nsc-nested-parent-child.md) defines the new finite goal.
+`src/recursive_horizons/nsc_nested_parent_child.py` owns the common-action
+canonical hierarchy, separated source, initial geometry and live operator.
+`src/recursive_horizons/nsc_nested_parent_child_response.py` owns nested
+blocks, source/energy accounting and the full-versus-reduced comparison.
+`scripts/derive_nsc_nested_parent_child.py` is the sole scientific driver;
+`results/development/nsc-nested-parent-child-v1.json` and its NPZ preserve
+the first twelve trajectories and the two named remaining checks.
+The corresponding three `test_nsc_nested_parent_child*.py` files own direct,
+response and independent controls. This successor does not alter either paper.
+
+## Completed finite conformal realization, 2026-10-01
 
 The [owning note](nsc-spherical-conformal-continuation.md) joins the finite
 chain through $T=0.3$ and the local segment $[0.2,0.3]$. Its owners,
