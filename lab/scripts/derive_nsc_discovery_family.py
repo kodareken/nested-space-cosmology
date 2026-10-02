@@ -6,7 +6,7 @@ It does not solve. ``--materialize`` runs the dense initial solve and
 ``propagate_baseline``. Duration ``0.3`` requires ``--production`` and is
 the root executor's call. ``--run`` opens one episode pool on the
 propagated handoff. ``--confirm`` writes a separate directory and does
-not regenerate members whose physical signs were not distinct.
+admit quantitative width controls and unresolved dense-preparation retries.
 """
 from __future__ import annotations
 
@@ -54,6 +54,7 @@ def main(argv=None):
     mode.add_argument("--run", action="store_true")
     mode.add_argument("--check", action="store_true")
     parser.add_argument("--output", default=None)
+    parser.add_argument("--frozen-width-controls", action="store_true", help="branch a=1 widths from each own handoff in the same pool")
     parser.add_argument("--all-members", action="store_true", help="prepare all 15 members in the same six-worker pool")
     parser.add_argument("--exploration", default=None, help="read-only exploration directory for --confirm")
     parser.add_argument("--nf", type=int, default=EXPLORATION_NF)
@@ -94,13 +95,13 @@ def _dispatch(parser, args):
     if not args.output:
         parser.error("--output is required")
     if args.prepare:
-        record = prepare_specification(args.output, nf=args.nf, all_members=args.all_members)
+        record = prepare_specification(args.output, nf=args.nf, all_members=args.all_members, frozen_width_controls=args.frozen_width_controls)
         print(record["stage"], "cases", len(record["cases"]), "materialized", record["materialized"], flush=True)
         return 0
     if args.confirm:
         if not args.exploration:
             parser.error("--confirm requires --exploration")
-        record = prepare_confirmation(args.output, args.exploration)
+        record = prepare_confirmation(args.output, args.exploration, frozen_width_controls=args.frozen_width_controls)
         print(
             record["stage"],
             "selected", len(record["selected"]["cases"]),
@@ -125,7 +126,10 @@ def _dispatch(parser, args):
         return 0
     if args.check:
         report = check(args.output)
-        print(report["schema"], "ok", report["ok"], "materialized", report["materialized"], flush=True)
+        print(report["schema"], "ok", report["ok"], "materialized", report["materialized"], "producer", report["producer_identity"]["status"], flush=True)
+        if report.get("external_observed_run_binding"):
+            binding = report["external_observed_run_binding"]
+            print("historical_binding", binding["producing_commit"], "authenticated", binding["authenticated"], flush=True)
         return 0 if report["ok"] else 2
     result = run(
         args.output,

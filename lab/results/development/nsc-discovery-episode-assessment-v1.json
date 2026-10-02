@@ -1,0 +1,4687 @@
+{
+  "atlas_handoff": {
+    "Q_ddot_max": 0.12023031546367896,
+    "Q_dot_max": 0.014234401406801286,
+    "R_h_max": 15.523378130140282,
+    "chi_shell_gap_max": 6.951855979764332e-09,
+    "child_balance_residual_without_recorded_defect": 0.011538817113910853,
+    "child_boundary_flux": 4.570092923337602,
+    "child_normal_energy": 4.294494497105666,
+    "episode_R_h_max_absolute_difference": 1.2754686196103648e-09,
+    "episode_child_normal_energy_absolute_difference": 1.509903313490213e-14,
+    "frozen_Q_ddot_max": 0.0,
+    "normal_energy_projection_defect": null,
+    "shell_closure_claimed": false,
+    "time": 0.3
+  },
+  "balance": {
+    "atlas_child_balance_residual_without_recorded_defect": 0.011538817113910853,
+    "constraint_projection_forcing_is_a_different_ledger": true,
+    "episode_boundary_samples": "net",
+    "incoming_outgoing_split": "needed",
+    "max_work_integral_abs_discrepancy": 0.0,
+    "normal_energy_closure_claimed": false,
+    "normal_energy_projection_defect": null,
+    "sample_trapezoid_matches_coordinate_work_ledger": true,
+    "shell_closure_claimed": false
+  },
+  "cases": {
+    "nf128_coupled_dt0.0005": {
+      "control_mode": "coupled",
+      "coordinate_work_integrals": {
+        "boundary_child": -1614.2580939378283,
+        "boundary_parent": -546.0193593246435,
+        "coordinate_fieldwork": -0.010236720680731967,
+        "lapse_work": -360.61533883511726,
+        "pressure_work": 9337.369489732346
+      },
+      "nf": 128,
+      "normal_energy_projection_defect": null,
+      "observation_count": 55,
+      "observation_file_order_is_chronological": true,
+      "stability_certificate": false,
+      "stations": {
+        "0.3": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 15.521570448782233,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 4.712599785172811,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -8.230793396072917,
+          "chart_Q_min": 0.2499356200669422,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.305648925923361,
+          "chi_coefficient_abs_max": 128.21033483228376,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 4.297900717895575,
+          "child_probability": 1.2776057615737608,
+          "child_probability_over_trace": 0.42586858719324755,
+          "child_probability_per_proper_length": 0.5379131259517099,
+          "child_proper_length": 2.3751154227986904,
+          "clock_rates": [
+            1.2086625800298723,
+            1.1898519623878971,
+            1.157983980725991
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.00019688174587954068,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.998702253524538,
+            "energy_gravity": -11.998702253908418,
+            "energy_r": null,
+            "energy_total": -3.8387959477859113e-10
+          },
+          "exterior_probability_over_trace": 0.1257857472054552,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.2499356200669422,
+            "child_probability": 1.2776057615737604,
+            "child_proper_length": 2.3751154227986904,
+            "clock_rates": [
+              1.2086625800298698,
+              1.1898519623878896,
+              1.1579839807259664
+            ],
+            "parent_probability": 2.622642758371356,
+            "parent_proper_length": 4.709207093224343,
+            "r_min": 4.305648925923361
+          },
+          "lapse_work_rate": 0.03229782124761757,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 0.53125,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.3032255369574721,
+          "nodal_exterior_probability": 0.3314589224419535,
+          "nodal_minus_observer_child": 0.025619775383711296,
+          "nodal_parent_probability": 2.6685410775440004,
+          "normal_clocks": [
+            0.3640204627270903,
+            0.35784007084171243,
+            0.34838396078245215
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.999999999985954,
+          "parent_annulus_proper_length": 2.3340916704256527,
+          "parent_normal_energy": 8.839175456554695,
+          "parent_probability": 2.622642758371355,
+          "parent_probability_over_trace": 0.8742142527945448,
+          "parent_proper_length": 4.709207093224343,
+          "pi_Q_abs_max": 2.388789814840057,
+          "pressure_work_rate": 0.6727542150340744,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "start",
+          "stability_certificate": null,
+          "time": 0.3,
+          "weyl_C2_max": 0.11211295531281074,
+          "weyl_minmax_l2": null
+        },
+        "1.0": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 907.3172337895378,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": -0.01190420554191404,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 0.027789456589947324,
+          "chart_Q_min": 0.12514378872544105,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 5.070426578019121,
+          "chi_coefficient_abs_max": 7963.933802286321,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 8.072477531365392,
+          "child_probability": 1.4999278885704077,
+          "child_probability_over_trace": 0.4999759628646061,
+          "child_probability_per_proper_length": 1.0073877234230344,
+          "child_proper_length": 1.488928099573971,
+          "clock_rates": [
+            0.7311780563569754,
+            0.7448618262226528,
+            0.7540877899390066
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": -0.017418512209052252,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.99454951878032,
+            "energy_gravity": -11.994549519883186,
+            "energy_r": null,
+            "energy_total": -1.1028671309532e-09
+          },
+          "exterior_probability_over_trace": 0.3328848932767784,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.12514378872544105,
+            "child_probability": 1.4999278885704073,
+            "child_proper_length": 1.488928099573972,
+            "clock_rates": [
+              0.7311780563569762,
+              0.7448618262226536,
+              0.7540877899390078
+            ],
+            "parent_probability": 2.0013453201384284,
+            "parent_proper_length": 2.987901476309158,
+            "r_min": 5.070426578019121
+          },
+          "lapse_work_rate": -0.17943909889765336,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 1.671875,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.5000761323186527,
+          "nodal_exterior_probability": 0.9986284884226335,
+          "nodal_minus_observer_child": 0.00014824374824495834,
+          "nodal_parent_probability": 2.001371511530543,
+          "normal_clocks": [
+            1.1123310015500916,
+            1.1025090562895725,
+            1.0789051165828316
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999999531766,
+          "parent_annulus_proper_length": 1.498973376735185,
+          "parent_normal_energy": 10.743716134194543,
+          "parent_probability": 2.0013453201384284,
+          "parent_probability_over_trace": 0.6671151067232216,
+          "parent_proper_length": 2.987901476309156,
+          "pi_Q_abs_max": 45.76135685858715,
+          "pressure_work_rate": 38.17523935676422,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "station",
+          "stability_certificate": null,
+          "time": 1.0,
+          "weyl_C2_max": 232.1422586513937,
+          "weyl_minmax_l2": null
+        },
+        "3.0": {
+          "L_dot_max": 0.00017359125308862868,
+          "Q_ddot_max": null,
+          "Q_dot_max": 0.00017359125308862868,
+          "R_h_max": 34240.3916208148,
+          "R_h_minmax_l2": {
+            "l2": 27247.029992246535,
+            "max": 34240.3916208148,
+            "min": 22815.7940993011
+          },
+          "R_h_minus_chi_minus_2": {
+            "l2": 2683.8572777651043,
+            "max": 5229.212123591369,
+            "min": -5222.3370518010925
+          },
+          "actual_minus_proxy": {
+            "l2": 246.3472316959634,
+            "max": 502.39150777883447,
+            "min": -418.8785810763102
+          },
+          "boundary_child_net": 21.288238648907686,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 1.4883829681833356,
+          "chart_Q_min": 2.2891077772563622e-05,
+          "chart_admissible": true,
+          "chart_clamped": false,
+          "chart_r_min": 20.16863835434543,
+          "chi_coefficient_abs_max": 305111.25503156125,
+          "chi_proxy": {
+            "l2": 1269.252422869517,
+            "max": 1278.3155928816134,
+            "min": 1258.09738325206
+          },
+          "chi_substituted": false,
+          "child_normal_energy": -1.023752045241256,
+          "child_probability": 0.0030215357671849186,
+          "child_probability_over_trace": 0.001007178589108791,
+          "child_probability_per_proper_length": 2.9596529313339848,
+          "child_proper_length": 0.0010209088150829368,
+          "clock_rates": [
+            0.0005011706955342838,
+            0.0005018153623629739,
+            0.0005573371499603372
+          ],
+          "constraint_norm": 0.6930919604154867,
+          "continuum_curvature_certified": false,
+          "coordinate_fieldwork_rate": -1.1609486628610599e-08,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.98846434776857,
+            "energy_gravity": -11.988464351387666,
+            "energy_r": null,
+            "energy_total": -3.6190961338888883e-09
+          },
+          "exterior_probability_over_trace": 0.6658598860138722,
+          "field_closure_error": -3.552713678800501e-15,
+          "independent_metric_content": {
+            "Q_min": 2.2891077772563625e-05,
+            "child_probability": 0.003021535767185002,
+            "child_proper_length": 0.0010209088150829365,
+            "clock_rates": [
+              0.0005011706955342842,
+              0.0005018153623629739,
+              0.0005573371499603373
+            ],
+            "parent_probability": 1.0024203419114552,
+            "parent_proper_length": 0.0021574206138111783,
+            "r_min": 20.168638354345433
+          },
+          "lapse_work_rate": -1122.2082442361323,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 3.25,
+          "metric_coordinate_work": -1.1609486628610597e-08,
+          "nodal_child_probability": 0.002956177219237895,
+          "nodal_exterior_probability": 1.9975619452259423,
+          "nodal_minus_observer_child": -6.535854794702343e-05,
+          "nodal_parent_probability": 1.0024380546336118,
+          "normal_clocks": [
+            1.3553136231666558,
+            1.351972640994554,
+            1.3433995757589563
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": 282.94323450512917,
+          "occupation_trace": 2.999999999859554,
+          "parent_annulus_proper_length": 0.0011365117987282415,
+          "parent_normal_energy": 6809.233063771322,
+          "parent_probability": 1.0024203419114548,
+          "parent_probability_over_trace": 0.3341401139861278,
+          "parent_proper_length": 0.0021574206138111783,
+          "pi_Q_abs_max": 1272462.8659296976,
+          "pressure_work_rate": 27460.874318020673,
+          "projection_forcing_norm": 2.7728137326898272,
+          "quadrature_forcing_norm": 2.2534936517491377e-08,
+          "sample_kind": "station",
+          "stability_certificate": false,
+          "time": 3.0,
+          "weyl_C2_max": 1780.6923314983937,
+          "weyl_minmax_l2": {
+            "l2": 1304.5692829588013,
+            "max": 1780.6923314983937,
+            "min": 859.391060468464
+          }
+        }
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "step_cap": 0.0005,
+      "work_integral_abs_discrepancy": {
+        "boundary_child": 0.0,
+        "boundary_parent": 0.0,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.0,
+        "pressure_work": 0.0
+      },
+      "work_ledger": {
+        "boundary_child": -1614.2580939378283,
+        "boundary_parent": -546.0193593246435,
+        "coordinate_fieldwork": -0.010236720680731967,
+        "lapse_work": -360.61533883511726,
+        "pressure_work": 9337.369489732346
+      }
+    },
+    "nf128_coupled_dt0.001": {
+      "control_mode": "coupled",
+      "coordinate_work_integrals": {
+        "boundary_child": -1614.2582870546398,
+        "boundary_parent": -546.0193551287388,
+        "coordinate_fieldwork": -0.010236720679778825,
+        "lapse_work": -360.61534152847196,
+        "pressure_work": 9337.369644711063
+      },
+      "nf": 128,
+      "normal_energy_projection_defect": null,
+      "observation_count": 55,
+      "observation_file_order_is_chronological": true,
+      "stability_certificate": false,
+      "stations": {
+        "0.3": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 15.521570448782233,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 4.712599785172811,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -8.230793396072917,
+          "chart_Q_min": 0.2499356200669422,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.305648925923361,
+          "chi_coefficient_abs_max": 128.21033483228376,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 4.297900717895575,
+          "child_probability": 1.2776057615737608,
+          "child_probability_over_trace": 0.42586858719324755,
+          "child_probability_per_proper_length": 0.5379131259517099,
+          "child_proper_length": 2.3751154227986904,
+          "clock_rates": [
+            1.2086625800298723,
+            1.1898519623878971,
+            1.157983980725991
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.00019688174587954068,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.998702253524538,
+            "energy_gravity": -11.998702253908418,
+            "energy_r": null,
+            "energy_total": -3.8387959477859113e-10
+          },
+          "exterior_probability_over_trace": 0.1257857472054552,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.2499356200669422,
+            "child_probability": 1.2776057615737604,
+            "child_proper_length": 2.3751154227986904,
+            "clock_rates": [
+              1.2086625800298698,
+              1.1898519623878896,
+              1.1579839807259664
+            ],
+            "parent_probability": 2.622642758371356,
+            "parent_proper_length": 4.709207093224343,
+            "r_min": 4.305648925923361
+          },
+          "lapse_work_rate": 0.03229782124761757,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 0.53125,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.3032255369574721,
+          "nodal_exterior_probability": 0.3314589224419535,
+          "nodal_minus_observer_child": 0.025619775383711296,
+          "nodal_parent_probability": 2.6685410775440004,
+          "normal_clocks": [
+            0.3640204627270903,
+            0.35784007084171243,
+            0.34838396078245215
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.999999999985954,
+          "parent_annulus_proper_length": 2.3340916704256527,
+          "parent_normal_energy": 8.839175456554695,
+          "parent_probability": 2.622642758371355,
+          "parent_probability_over_trace": 0.8742142527945448,
+          "parent_proper_length": 4.709207093224343,
+          "pi_Q_abs_max": 2.388789814840057,
+          "pressure_work_rate": 0.6727542150340744,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "start",
+          "stability_certificate": null,
+          "time": 0.3,
+          "weyl_C2_max": 0.11211295531281074,
+          "weyl_minmax_l2": null
+        },
+        "1.0": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 907.3172337845403,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": -0.011904194390166541,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 0.027789428443516048,
+          "chart_Q_min": 0.1251437887265293,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 5.070426578012013,
+          "chi_coefficient_abs_max": 7963.933802213749,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 8.072477512256246,
+          "child_probability": 1.4999278880446758,
+          "child_probability_over_trace": 0.4999759628586808,
+          "child_probability_per_proper_length": 1.0073877230638735,
+          "child_proper_length": 1.4889280995829377,
+          "clock_rates": [
+            0.7311780563629638,
+            0.7448618262239763,
+            0.7540877899438736
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": -0.017418512207280377,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.994549491006627,
+            "energy_gravity": -11.994549517214082,
+            "energy_r": null,
+            "energy_total": -2.6207455761095844e-08
+          },
+          "exterior_probability_over_trace": 0.3328848932014973,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.1251437887265293,
+            "child_probability": 1.4999278880446751,
+            "child_proper_length": 1.488928099582937,
+            "clock_rates": [
+              0.7311780563629637,
+              0.7448618262239758,
+              0.7540877899438738
+            ],
+            "parent_probability": 2.001345319686509,
+            "parent_proper_length": 2.987901476326436,
+            "r_min": 5.070426578012013
+          },
+          "lapse_work_rate": -0.1794391029948358,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 1.671875,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.5000761318093367,
+          "nodal_exterior_probability": 0.9986284879229577,
+          "nodal_minus_observer_child": 0.00014824376466093803,
+          "nodal_parent_probability": 2.0013715110142583,
+          "normal_clocks": [
+            1.11233090876693,
+            1.1025089644112127,
+            1.0789050314328272
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.999999998937216,
+          "parent_annulus_proper_length": 1.4989733767434992,
+          "parent_normal_energy": 10.743716118281782,
+          "parent_probability": 2.001345319686509,
+          "parent_probability_over_trace": 0.6671151067985027,
+          "parent_proper_length": 2.987901476326437,
+          "pi_Q_abs_max": 45.76135685759073,
+          "pressure_work_rate": 38.17523929359488,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "station",
+          "stability_certificate": null,
+          "time": 1.0,
+          "weyl_C2_max": 232.14225864802816,
+          "weyl_minmax_l2": null
+        },
+        "3.0": {
+          "L_dot_max": 0.0001735912530892315,
+          "Q_ddot_max": null,
+          "Q_dot_max": 0.0001735912530892315,
+          "R_h_max": 34240.40928477049,
+          "R_h_minmax_l2": {
+            "l2": 27247.02968679497,
+            "max": 34240.40928477049,
+            "min": 22815.79965722561
+          },
+          "R_h_minus_chi_minus_2": {
+            "l2": 2683.8546204808417,
+            "max": 5229.2297874280885,
+            "min": -5222.349659562777
+          },
+          "actual_minus_proxy": {
+            "l2": 246.34697584671622,
+            "max": 502.3933451238663,
+            "min": -418.87949228258833
+          },
+          "boundary_child_net": 21.288196702312387,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 1.4886314311244058,
+          "chart_Q_min": 2.289107777254732e-05,
+          "chart_admissible": true,
+          "chart_clamped": false,
+          "chart_r_min": 20.16863835436229,
+          "chi_coefficient_abs_max": 305111.2550330383,
+          "chi_proxy": {
+            "l2": 1269.2524228743089,
+            "max": 1278.3155928853944,
+            "min": 1258.0973832606512
+          },
+          "chi_substituted": false,
+          "child_normal_energy": -1.0237465957478662,
+          "child_probability": 0.0030215358335074294,
+          "child_probability_over_trace": 0.0010071786125316635,
+          "child_probability_per_proper_length": 2.959652996293036,
+          "child_proper_length": 0.0010209088150847081,
+          "clock_rates": [
+            0.0005011706955358453,
+            0.0005018153623639988,
+            0.0005573371499630333
+          ],
+          "constraint_norm": 0.6930913077991099,
+          "continuum_curvature_certified": false,
+          "coordinate_fieldwork_rate": -1.1609486225655956e-08,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.988464240656654,
+            "energy_gravity": -11.988464348426007,
+            "energy_r": null,
+            "energy_total": -1.0776935255307762e-07
+          },
+          "exterior_probability_over_trace": 0.6658598861239324,
+          "field_closure_error": 3.552713678800501e-15,
+          "independent_metric_content": {
+            "Q_min": 2.289107777254731e-05,
+            "child_probability": 0.003021535833507283,
+            "child_proper_length": 0.0010209088150847086,
+            "clock_rates": [
+              0.0005011706955358456,
+              0.0005018153623639988,
+              0.0005573371499630337
+            ],
+            "parent_probability": 1.0024203402721192,
+            "parent_proper_length": 0.0021574206138161947,
+            "r_min": 20.168638354362287
+          },
+          "lapse_work_rate": -1122.20824282039,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 3.25,
+          "metric_coordinate_work": -1.1609486225655954e-08,
+          "nodal_child_probability": 0.0029561772241955475,
+          "nodal_exterior_probability": 1.9975619432450675,
+          "nodal_minus_observer_child": -6.535860931188194e-05,
+          "nodal_parent_probability": 1.002438052696505,
+          "normal_clocks": [
+            1.3553136269937474,
+            1.3519726436463584,
+            1.3433995787658952
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": 282.9432755971727,
+          "occupation_trace": 2.9999999959415726,
+          "parent_annulus_proper_length": 0.0011365117987314857,
+          "parent_normal_energy": 6809.233035944891,
+          "parent_probability": 1.0024203402721195,
+          "parent_probability_over_trace": 0.3341401138760676,
+          "parent_proper_length": 0.002157420613816194,
+          "pi_Q_abs_max": 1272462.8659325414,
+          "pressure_work_rate": 27460.87422333765,
+          "projection_forcing_norm": 2.7728115087481133,
+          "quadrature_forcing_norm": 9.947448664171433e-09,
+          "sample_kind": "station",
+          "stability_certificate": false,
+          "time": 3.0,
+          "weyl_C2_max": 1780.694168849498,
+          "weyl_minmax_l2": {
+            "l2": 1304.569206696292,
+            "max": 1780.694168849498,
+            "min": 859.3901492658823
+          }
+        }
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "step_cap": 0.001,
+      "work_integral_abs_discrepancy": {
+        "boundary_child": 0.0,
+        "boundary_parent": 0.0,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.0,
+        "pressure_work": 0.0
+      },
+      "work_ledger": {
+        "boundary_child": -1614.2582870546398,
+        "boundary_parent": -546.0193551287388,
+        "coordinate_fieldwork": -0.010236720679778825,
+        "lapse_work": -360.61534152847196,
+        "pressure_work": 9337.369644711063
+      }
+    },
+    "nf128_frozen_geometry_dt0.0005": {
+      "control_mode": "frozen_geometry",
+      "coordinate_work_integrals": {
+        "boundary_child": -4.402149933641616,
+        "boundary_parent": -5.653313847383494,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.36545210675641593,
+        "pressure_work": 0.0
+      },
+      "nf": 128,
+      "normal_energy_projection_defect": null,
+      "observation_count": 55,
+      "observation_file_order_is_chronological": true,
+      "stability_certificate": false,
+      "stations": {
+        "0.3": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 0.06800729764643719,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 4.712599785172811,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -8.230793396072917,
+          "chart_Q_min": 0.2499356200669422,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.305648925923361,
+          "chi_coefficient_abs_max": 128.21033483228376,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 4.297900717895575,
+          "child_probability": 1.2776057615737608,
+          "child_probability_over_trace": 0.42586858719324755,
+          "child_probability_per_proper_length": 0.5379131259517099,
+          "child_proper_length": 2.3751154227986904,
+          "clock_rates": [
+            1.2086625800298723,
+            1.1898519623878971,
+            1.157983980725991
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.0,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.998702253524538,
+            "energy_gravity": -11.998702253908418,
+            "energy_r": null,
+            "energy_total": -3.8387959477859113e-10
+          },
+          "exterior_probability_over_trace": 0.1257857472054552,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.2499356200669422,
+            "child_probability": 1.2776057615737604,
+            "child_proper_length": 2.3751154227986904,
+            "clock_rates": [
+              1.2086625800298698,
+              1.1898519623878896,
+              1.1579839807259664
+            ],
+            "parent_probability": 2.622642758371356,
+            "parent_proper_length": 4.709207093224343,
+            "r_min": 4.305648925923361
+          },
+          "lapse_work_rate": 0.03229782124761757,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 0.53125,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.3032255369574721,
+          "nodal_exterior_probability": 0.3314589224419535,
+          "nodal_minus_observer_child": 0.025619775383711296,
+          "nodal_parent_probability": 2.6685410775440004,
+          "normal_clocks": [
+            0.3640204627270903,
+            0.35784007084171243,
+            0.34838396078245215
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.999999999985954,
+          "parent_annulus_proper_length": 2.3340916704256527,
+          "parent_normal_energy": 8.839175456554695,
+          "parent_probability": 2.622642758371355,
+          "parent_probability_over_trace": 0.8742142527945448,
+          "parent_proper_length": 4.709207093224343,
+          "pi_Q_abs_max": 2.388789814840057,
+          "pressure_work_rate": 0.0,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "start",
+          "stability_certificate": null,
+          "time": 0.3,
+          "weyl_C2_max": 0.0038896781551088114,
+          "weyl_minmax_l2": null
+        },
+        "1.0": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 0.06800729764643719,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": -0.009459773423597231,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 0.021774646027878184,
+          "chart_Q_min": 0.2499356200669422,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.305648925923361,
+          "chi_coefficient_abs_max": 128.21033483228376,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 5.03287654164909,
+          "child_probability": 1.4998279285028109,
+          "child_probability_over_trace": 0.4999426428420735,
+          "child_probability_per_proper_length": 0.6314758070727803,
+          "child_proper_length": 2.3751154227986904,
+          "clock_rates": [
+            1.2086625800298703,
+            1.1898519623878892,
+            1.1579839807259649
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.0,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.998702252628451,
+            "energy_gravity": -11.998702253908418,
+            "energy_r": null,
+            "energy_total": -1.2799663551277263e-09
+          },
+          "exterior_probability_over_trace": 0.33283126310327216,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.2499356200669422,
+            "child_probability": 1.4998279285028113,
+            "child_proper_length": 2.3751154227986904,
+            "clock_rates": [
+              1.2086625800298698,
+              1.1898519623878896,
+              1.1579839807259664
+            ],
+            "parent_probability": 2.0015062106589427,
+            "parent_proper_length": 4.709207093224343,
+            "r_min": 4.305648925923361
+          },
+          "lapse_work_rate": 0.11631450169686305,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 1.671875,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.5000143016314758,
+          "nodal_exterior_probability": 0.9984632251360823,
+          "nodal_minus_observer_child": 0.000186373128664874,
+          "nodal_parent_probability": 2.001536774817093,
+          "normal_clocks": [
+            1.2100842687480091,
+            1.1907364445132114,
+            1.1589727472905706
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999999531752,
+          "parent_annulus_proper_length": 2.3340916704256527,
+          "parent_normal_energy": 6.745332261619296,
+          "parent_probability": 2.0015062106589436,
+          "parent_probability_over_trace": 0.6671687368967278,
+          "parent_proper_length": 4.709207093224343,
+          "pi_Q_abs_max": 2.388789814840057,
+          "pressure_work_rate": 0.0,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "station",
+          "stability_certificate": null,
+          "time": 1.0,
+          "weyl_C2_max": 0.0038896781551088114,
+          "weyl_minmax_l2": null
+        },
+        "3.0": {
+          "L_dot_max": 0.0,
+          "Q_ddot_max": 0.0,
+          "Q_dot_max": 0.0,
+          "R_h_max": 0.06800729764643719,
+          "R_h_minmax_l2": {
+            "l2": 0.020165471970819335,
+            "max": 0.06800729764643719,
+            "min": -0.10293364495110219
+          },
+          "R_h_minus_chi_minus_2": {
+            "l2": 13.433893607418296,
+            "max": -11.959060941091451,
+            "min": -15.502989149623149
+          },
+          "actual_minus_proxy": {
+            "l2": 0.09640347353071299,
+            "max": -0.08716085098447704,
+            "min": -0.10975174594522635
+          },
+          "boundary_child_net": 0.03663520295831829,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -0.0022406442425306605,
+          "chart_Q_min": 0.24993562006694225,
+          "chart_admissible": true,
+          "chart_clamped": false,
+          "chart_r_min": 4.305648925923359,
+          "chi_coefficient_abs_max": 128.21033483228376,
+          "chi_proxy": {
+            "l2": 0.09951143498685165,
+            "max": 0.11211295408065561,
+            "min": 0.09002307509689939
+          },
+          "chi_substituted": false,
+          "child_normal_energy": -5.994075534527035e-05,
+          "child_probability": 0.012441180761595286,
+          "child_probability_over_trace": 0.004147060254059279,
+          "child_probability_per_proper_length": 0.005238137330999839,
+          "child_proper_length": 2.3751154227986904,
+          "clock_rates": [
+            1.2086625800298703,
+            1.1898519623878892,
+            1.1579839807259649
+          ],
+          "constraint_norm": 14.96703863231706,
+          "continuum_curvature_certified": false,
+          "coordinate_fieldwork_rate": 0.0,
+          "coupled_stability_classification": false,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.99870225006828,
+            "energy_gravity": -11.998702253908418,
+            "energy_r": null,
+            "energy_total": -3.8401370971996585e-09
+          },
+          "exterior_probability_over_trace": 0.6626427727556794,
+          "field_closure_error": 1.7763568394002505e-15,
+          "independent_metric_content": {
+            "Q_min": 0.2499356200669422,
+            "child_probability": 0.012441180761595172,
+            "child_proper_length": 2.3751154227986904,
+            "clock_rates": [
+              1.2086625800298698,
+              1.1898519623878896,
+              1.1579839807259664
+            ],
+            "parent_probability": 1.0120716816855722,
+            "parent_proper_length": 4.709207093224343,
+            "r_min": 4.305648925923361
+          },
+          "lapse_work_rate": 0.12475374075430777,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 5.671875,
+          "metric_coordinate_work": 0.0,
+          "nodal_child_probability": 0.012410890644603264,
+          "nodal_exterior_probability": 1.9878642158066457,
+          "nodal_minus_observer_child": -3.0290116992022498e-05,
+          "nodal_parent_probability": 1.0121357840528813,
+          "normal_clocks": [
+            3.627409428807842,
+            3.5704403692886575,
+            3.474940708742603
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": 0.1760598803173293,
+          "occupation_trace": 2.999999999859527,
+          "parent_annulus_proper_length": 2.3340916704256527,
+          "parent_normal_energy": 3.474555428733684,
+          "parent_probability": 1.0120716816855724,
+          "parent_probability_over_trace": 0.33735722724432066,
+          "parent_proper_length": 4.709207093224343,
+          "pi_Q_abs_max": 2.388789814840057,
+          "pressure_work_rate": 0.0,
+          "projection_forcing_norm": 170.5088397533819,
+          "quadrature_forcing_norm": 2.0544158603041473e-11,
+          "sample_kind": "station",
+          "stability_certificate": false,
+          "time": 3.0,
+          "weyl_C2_max": 0.0038896781551088114,
+          "weyl_minmax_l2": {
+            "l2": 0.0031857851593266443,
+            "max": 0.0038896781551088114,
+            "min": 0.002339584447841682
+          }
+        }
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "step_cap": 0.0005,
+      "work_integral_abs_discrepancy": {
+        "boundary_child": 0.0,
+        "boundary_parent": 0.0,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.0,
+        "pressure_work": 0.0
+      },
+      "work_ledger": {
+        "boundary_child": -4.402149933641616,
+        "boundary_parent": -5.653313847383494,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.36545210675641593,
+        "pressure_work": 0.0
+      }
+    },
+    "nf256_coupled_dt0.0005": {
+      "control_mode": "coupled",
+      "coordinate_work_integrals": {
+        "boundary_child": -1613.8357074878272,
+        "boundary_parent": -546.1244030043014,
+        "coordinate_fieldwork": -0.010248382426090517,
+        "lapse_work": -360.85534893006337,
+        "pressure_work": 9342.171467142798
+      },
+      "nf": 256,
+      "normal_energy_projection_defect": null,
+      "observation_count": 55,
+      "observation_file_order_is_chronological": true,
+      "stability_certificate": false,
+      "stations": {
+        "0.3": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 15.523378128864813,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 4.570092923340823,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -8.229056578171878,
+          "chart_Q_min": 0.24993554265585005,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.30585158338397,
+          "chi_coefficient_abs_max": 181.69574992088596,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 4.294494497105681,
+          "child_probability": 1.2767914511782394,
+          "child_probability_over_trace": 0.4255971503954873,
+          "child_probability_per_proper_length": 0.5375470268880166,
+          "child_proper_length": 2.375218143368551,
+          "clock_rates": [
+            1.2087245168571483,
+            1.1899023938077211,
+            1.1580370216755926
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.0001971866446717238,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 12.000015649564773,
+            "energy_gravity": -12.000015650098245,
+            "energy_r": null,
+            "energy_total": -5.334719332950044e-10
+          },
+          "exterior_probability_over_trace": 0.1255351036855349,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.24993554265585005,
+            "child_probability": 1.2767914511782399,
+            "child_proper_length": 2.375218143368551,
+            "clock_rates": [
+              1.208724516857102,
+              1.1899023938076698,
+              1.1580370216755123
+            ],
+            "parent_probability": 2.623394688926501,
+            "parent_proper_length": 4.709426854483263,
+            "r_min": 4.30585158338397
+          },
+          "lapse_work_rate": 0.03263160425657485,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 0.53125,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.2869596322664307,
+          "nodal_exterior_probability": 0.3549423202093758,
+          "nodal_minus_observer_child": 0.010168181088191286,
+          "nodal_parent_probability": 2.6450576797713046,
+          "normal_clocks": [
+            0.3640376801697352,
+            0.35785509393362364,
+            0.34839966501412295
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999999806803,
+          "parent_annulus_proper_length": 2.3342087111147123,
+          "parent_normal_energy": 8.844889364943263,
+          "parent_probability": 2.623394688926501,
+          "parent_probability_over_trace": 0.8744648963144651,
+          "parent_proper_length": 4.709426854483263,
+          "pi_Q_abs_max": 1.685983656000915,
+          "pressure_work_rate": 0.6728961674498801,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "start",
+          "stability_certificate": null,
+          "time": 0.3,
+          "weyl_C2_max": 0.11212460507184759,
+          "weyl_minmax_l2": null
+        },
+        "1.0": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 907.5282431080052,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 0.0018142187444013217,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -0.003283661776811834,
+          "chart_Q_min": 0.12513132305737087,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 5.07077550531405,
+          "chi_coefficient_abs_max": 11287.468180009151,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 8.073553885797626,
+          "child_probability": 1.499939777759149,
+          "child_probability_over_trace": 0.49997992593044904,
+          "child_probability_per_proper_length": 1.0074113306967438,
+          "child_proper_length": 1.488905010351396,
+          "clock_rates": [
+            0.7311611647899333,
+            0.7448482899439243,
+            0.7540747796134362
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": -0.017438155928812895,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.995856444899733,
+            "energy_gravity": -11.995856446500056,
+            "energy_r": null,
+            "energy_total": -1.6003234293293644e-09
+          },
+          "exterior_probability_over_trace": 0.3328937936247929,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.12513132305737087,
+            "child_probability": 1.4999397777591488,
+            "child_proper_length": 1.4889050103513963,
+            "clock_rates": [
+              0.7311611647899336,
+              0.7448482899439244,
+              0.7540747796134365
+            ],
+            "parent_probability": 2.0013186190826606,
+            "parent_proper_length": 2.9878513254302868,
+            "r_min": 5.07077550531405
+          },
+          "lapse_work_rate": -0.17951869887854974,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 1.671875,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.500008822593867,
+          "nodal_exterior_probability": 0.9986551683345963,
+          "nodal_minus_observer_child": 6.904483471803502e-05,
+          "nodal_parent_probability": 2.001344831601005,
+          "normal_clocks": [
+            1.1123740058190583,
+            1.1025463020131778,
+            1.0789443878147331
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999999356013,
+          "parent_annulus_proper_length": 1.4989463150788906,
+          "parent_normal_energy": 10.744584678122159,
+          "parent_probability": 2.0013186190826606,
+          "parent_probability_over_trace": 0.6671062063752071,
+          "parent_proper_length": 2.9878513254302868,
+          "pi_Q_abs_max": 32.31060849159876,
+          "pressure_work_rate": 38.18433376501536,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "station",
+          "stability_certificate": null,
+          "time": 1.0,
+          "weyl_C2_max": 232.18065106235974,
+          "weyl_minmax_l2": null
+        },
+        "3.0": {
+          "L_dot_max": 0.00017350443349222475,
+          "Q_ddot_max": null,
+          "Q_dot_max": 0.00017350443349222475,
+          "R_h_max": 29030.988792300224,
+          "R_h_minmax_l2": {
+            "l2": 27120.219620916123,
+            "max": 29030.988792300224,
+            "min": 24994.802163809538
+          },
+          "R_h_minus_chi_minus_2": {
+            "l2": 6.026439700086913,
+            "max": 12.505643497846904,
+            "min": -12.52593802193951
+          },
+          "actual_minus_proxy": {
+            "l2": 0.5492673536078666,
+            "max": 1.1026822941137198,
+            "min": -1.104197614142322
+          },
+          "boundary_child_net": -1.4119552004359177,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 2.4791165262506105,
+          "chart_Q_min": 2.287805170599047e-05,
+          "chart_admissible": true,
+          "chart_clamped": false,
+          "chart_r_min": 20.170607955843877,
+          "chi_coefficient_abs_max": 432431.7741523645,
+          "chi_proxy": {
+            "l2": 1269.2828940180711,
+            "max": 1278.3456915014365,
+            "min": 1258.128879914404
+          },
+          "chi_substituted": false,
+          "child_normal_energy": -1.1286769714375815,
+          "child_probability": 0.0030091976292384495,
+          "child_probability_over_trace": 0.0010030658764774018,
+          "child_probability_per_proper_length": 2.9489283907434003,
+          "child_proper_length": 0.0010204376744732875,
+          "clock_rates": [
+            0.0005009325774933355,
+            0.000501583641710332,
+            0.000557088532312387
+          ],
+          "constraint_norm": 0.009472744757414862,
+          "continuum_curvature_certified": false,
+          "coordinate_fieldwork_rate": -1.1623020560621504e-08,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.989766083058845,
+            "energy_gravity": -11.989766088139096,
+            "energy_r": null,
+            "energy_total": -5.08025088663544e-09
+          },
+          "exterior_probability_over_trace": 0.6658494167802229,
+          "field_closure_error": -3.552713678800501e-15,
+          "independent_metric_content": {
+            "Q_min": 2.287805170599047e-05,
+            "child_probability": 0.003009197629238125,
+            "child_proper_length": 0.0010204376744732875,
+            "clock_rates": [
+              0.0005009325774933359,
+              0.0005015836417103321,
+              0.000557088532312387
+            ],
+            "parent_probability": 1.0024517495947856,
+            "parent_proper_length": 0.002156434759767989,
+            "r_min": 20.17060795584388
+          },
+          "lapse_work_rate": -1123.1050162769748,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 3.25,
+          "metric_coordinate_work": -1.1623020560621505e-08,
+          "nodal_child_probability": 0.0029815361393476106,
+          "nodal_exterior_probability": 1.9975553478336086,
+          "nodal_minus_observer_child": -2.7661489890838838e-05,
+          "nodal_parent_probability": 1.0024446519732277,
+          "normal_clocks": [
+            1.3553321541816143,
+            1.351988406678805,
+            1.3434155256616058
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": 138.4385898105098,
+          "occupation_trace": 2.9999999998068363,
+          "parent_annulus_proper_length": 0.0011359970852947011,
+          "parent_normal_energy": 6813.671474223547,
+          "parent_probability": 1.0024517495947856,
+          "parent_probability_over_trace": 0.3341505832197771,
+          "parent_proper_length": 0.0021564347597679886,
+          "pi_Q_abs_max": 898634.1789743388,
+          "pressure_work_rate": 27479.843367250312,
+          "projection_forcing_norm": 0.02711497867359626,
+          "quadrature_forcing_norm": 7.989072916832693e-08,
+          "sample_kind": "station",
+          "stability_certificate": false,
+          "time": 3.0,
+          "weyl_C2_max": 1279.4424078537731,
+          "weyl_minmax_l2": {
+            "l2": 1269.2830710217304,
+            "max": 1279.4424078537731,
+            "min": 1257.706647005839
+          }
+        }
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "step_cap": 0.0005,
+      "work_integral_abs_discrepancy": {
+        "boundary_child": 0.0,
+        "boundary_parent": 0.0,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.0,
+        "pressure_work": 0.0
+      },
+      "work_ledger": {
+        "boundary_child": -1613.8357074878272,
+        "boundary_parent": -546.1244030043014,
+        "coordinate_fieldwork": -0.010248382426090517,
+        "lapse_work": -360.85534893006337,
+        "pressure_work": 9342.171467142798
+      }
+    },
+    "nf256_coupled_dt0.001": {
+      "control_mode": "coupled",
+      "coordinate_work_integrals": {
+        "boundary_child": -1613.835960266762,
+        "boundary_parent": -546.1244099054785,
+        "coordinate_fieldwork": -0.010248382425061797,
+        "lapse_work": -360.8553505120406,
+        "pressure_work": 9342.171600709316
+      },
+      "nf": 256,
+      "normal_energy_projection_defect": null,
+      "observation_count": 55,
+      "observation_file_order_is_chronological": true,
+      "stability_certificate": false,
+      "stations": {
+        "0.3": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 15.523378128864813,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 4.570092923340823,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -8.229056578171878,
+          "chart_Q_min": 0.24993554265585005,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.30585158338397,
+          "chi_coefficient_abs_max": 181.69574992088596,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 4.294494497105681,
+          "child_probability": 1.2767914511782394,
+          "child_probability_over_trace": 0.4255971503954873,
+          "child_probability_per_proper_length": 0.5375470268880166,
+          "child_proper_length": 2.375218143368551,
+          "clock_rates": [
+            1.2087245168571483,
+            1.1899023938077211,
+            1.1580370216755926
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.0001971866446717238,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 12.000015649564773,
+            "energy_gravity": -12.000015650098245,
+            "energy_r": null,
+            "energy_total": -5.334719332950044e-10
+          },
+          "exterior_probability_over_trace": 0.1255351036855349,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.24993554265585005,
+            "child_probability": 1.2767914511782399,
+            "child_proper_length": 2.375218143368551,
+            "clock_rates": [
+              1.208724516857102,
+              1.1899023938076698,
+              1.1580370216755123
+            ],
+            "parent_probability": 2.623394688926501,
+            "parent_proper_length": 4.709426854483263,
+            "r_min": 4.30585158338397
+          },
+          "lapse_work_rate": 0.03263160425657485,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 0.53125,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.2869596322664307,
+          "nodal_exterior_probability": 0.3549423202093758,
+          "nodal_minus_observer_child": 0.010168181088191286,
+          "nodal_parent_probability": 2.6450576797713046,
+          "normal_clocks": [
+            0.3640376801697352,
+            0.35785509393362364,
+            0.34839966501412295
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999999806803,
+          "parent_annulus_proper_length": 2.3342087111147123,
+          "parent_normal_energy": 8.844889364943263,
+          "parent_probability": 2.623394688926501,
+          "parent_probability_over_trace": 0.8744648963144651,
+          "parent_proper_length": 4.709426854483263,
+          "pi_Q_abs_max": 1.685983656000915,
+          "pressure_work_rate": 0.6728961674498801,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "start",
+          "stability_certificate": null,
+          "time": 0.3,
+          "weyl_C2_max": 0.11212460507184759,
+          "weyl_minmax_l2": null
+        },
+        "1.0": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 907.5282431042932,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 0.001814279357606207,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -0.003283792240998885,
+          "chart_Q_min": 0.12513132305846839,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 5.070775505307105,
+          "chi_coefficient_abs_max": 11287.468179906324,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 8.073553859961272,
+          "child_probability": 1.4999397770558085,
+          "child_probability_over_trace": 0.499979925928858,
+          "child_probability_per_proper_length": 1.0074113302182839,
+          "child_proper_length": 1.4889050103603705,
+          "clock_rates": [
+            0.7311611647946562,
+            0.7448482899485482,
+            0.7540747796173998
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": -0.017438155926888244,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.995856406305078,
+            "energy_gravity": -11.995856443829654,
+            "energy_r": null,
+            "energy_total": -3.7524575446923336e-08
+          },
+          "exterior_probability_over_trace": 0.33289379354603477,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.12513132305846839,
+            "child_probability": 1.499939777055809,
+            "child_proper_length": 1.488905010360371,
+            "clock_rates": [
+              0.7311611647946569,
+              0.7448482899485491,
+              0.7540747796174
+            ],
+            "parent_probability": 2.0013186183868603,
+            "parent_proper_length": 2.987851325447532,
+            "r_min": 5.070775505307105
+          },
+          "lapse_work_rate": -0.1795187029584277,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 1.671875,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.5000088218978698,
+          "nodal_exterior_probability": 0.9986551676513264,
+          "nodal_minus_observer_child": 6.904484206127215e-05,
+          "nodal_parent_probability": 2.001344830887084,
+          "normal_clocks": [
+            1.1123739130196582,
+            1.1025462101193688,
+            1.0789443026504943
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999985384105,
+          "parent_annulus_proper_length": 1.4989463150871607,
+          "parent_normal_energy": 10.744584653778839,
+          "parent_probability": 2.0013186183868603,
+          "parent_probability_over_trace": 0.6671062064539652,
+          "parent_proper_length": 2.987851325447531,
+          "pi_Q_abs_max": 32.310608490895476,
+          "pressure_work_rate": 38.18433367139686,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "station",
+          "stability_certificate": null,
+          "time": 1.0,
+          "weyl_C2_max": 232.1806510588811,
+          "weyl_minmax_l2": null
+        },
+        "3.0": {
+          "L_dot_max": 0.00017350443349236895,
+          "Q_ddot_max": null,
+          "Q_dot_max": 0.00017350443349236895,
+          "R_h_max": 29031.015162467957,
+          "R_h_minmax_l2": {
+            "l2": 27120.219639604067,
+            "max": 29031.015162467957,
+            "min": 24994.808131694794
+          },
+          "R_h_minus_chi_minus_2": {
+            "l2": 6.0255998650214,
+            "max": 12.480744759865047,
+            "min": -12.490839502374001
+          },
+          "actual_minus_proxy": {
+            "l2": 0.5491927356263611,
+            "max": 1.100768790411621,
+            "min": -1.1015975132838776
+          },
+          "boundary_child_net": -1.4123551521523092,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": 2.479133412615671,
+          "chart_Q_min": 2.2878051705975347e-05,
+          "chart_admissible": true,
+          "chart_clamped": false,
+          "chart_r_min": 20.170607955881035,
+          "chi_coefficient_abs_max": 432431.77415445785,
+          "chi_proxy": {
+            "l2": 1269.282894022876,
+            "max": 1278.345691506296,
+            "min": 1258.1288799211084
+          },
+          "chi_substituted": false,
+          "child_normal_energy": -1.1286736760758966,
+          "child_probability": 0.003009197649237963,
+          "child_probability_over_trace": 0.00100306588494554,
+          "child_probability_per_proper_length": 2.948928410337265,
+          "child_proper_length": 0.0010204376744750493,
+          "clock_rates": [
+            0.0005009325774938357,
+            0.0005015836417110093,
+            0.0005570885323143619
+          ],
+          "constraint_norm": 0.009472532134464588,
+          "continuum_curvature_certified": false,
+          "coordinate_fieldwork_rate": -1.1623021114084021e-08,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 11.989765934210189,
+            "energy_gravity": -11.989766085205314,
+            "energy_r": null,
+            "energy_total": -1.5099512573613083e-07
+          },
+          "exterior_probability_over_trace": 0.6658494170660976,
+          "field_closure_error": 1.7763568394002505e-15,
+          "independent_metric_content": {
+            "Q_min": 2.2878051705975344e-05,
+            "child_probability": 0.0030091976492380157,
+            "child_proper_length": 0.0010204376744750495,
+            "clock_rates": [
+              0.0005009325774938364,
+              0.0005015836417110098,
+              0.000557088532314362
+            ],
+            "parent_probability": 1.0024517469366305,
+            "parent_proper_length": 0.0021564347597729638,
+            "r_min": 20.170607955881035
+          },
+          "lapse_work_rate": -1123.1050079908664,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 3.25,
+          "metric_coordinate_work": -1.1623021114084023e-08,
+          "nodal_child_probability": 0.0029815361271483248,
+          "nodal_exterior_probability": 1.9975553451166657,
+          "nodal_minus_observer_child": -2.766152208963802e-05,
+          "nodal_parent_probability": 1.0024446493017893,
+          "normal_clocks": [
+            1.3553321580008038,
+            1.3519884093281482,
+            1.3434155286633802
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": 138.43857010501304,
+          "occupation_trace": 2.999999994418455,
+          "parent_annulus_proper_length": 0.0011359970852979145,
+          "parent_normal_energy": 6813.67140401337,
+          "parent_probability": 1.002451746936631,
+          "parent_probability_over_trace": 0.3341505829339025,
+          "parent_proper_length": 0.0021564347597729638,
+          "pi_Q_abs_max": 898634.1789763396,
+          "pressure_work_rate": 27479.84309204303,
+          "projection_forcing_norm": 0.027114120561827184,
+          "quadrature_forcing_norm": 6.753299181996137e-08,
+          "sample_kind": "station",
+          "stability_certificate": false,
+          "time": 3.0,
+          "weyl_C2_max": 1279.4396297756257,
+          "weyl_minmax_l2": {
+            "l2": 1269.2830726947077,
+            "max": 1279.4396297756257,
+            "min": 1257.7072770610139
+          }
+        }
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "step_cap": 0.001,
+      "work_integral_abs_discrepancy": {
+        "boundary_child": 0.0,
+        "boundary_parent": 0.0,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.0,
+        "pressure_work": 0.0
+      },
+      "work_ledger": {
+        "boundary_child": -1613.835960266762,
+        "boundary_parent": -546.1244099054785,
+        "coordinate_fieldwork": -0.010248382425061797,
+        "lapse_work": -360.8553505120406,
+        "pressure_work": 9342.171600709316
+      }
+    },
+    "nf256_frozen_geometry_dt0.0005": {
+      "control_mode": "frozen_geometry",
+      "coordinate_work_integrals": {
+        "boundary_child": -4.398595404996129,
+        "boundary_parent": -5.656059730846825,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.365451091814506,
+        "pressure_work": 0.0
+      },
+      "nf": 256,
+      "normal_energy_projection_defect": null,
+      "observation_count": 55,
+      "observation_file_order_is_chronological": true,
+      "stability_certificate": false,
+      "stations": {
+        "0.3": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 0.06877947517293982,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 4.570092923340823,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -8.229056578171878,
+          "chart_Q_min": 0.24993554265585005,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.30585158338397,
+          "chi_coefficient_abs_max": 181.69574992088596,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 4.294494497105681,
+          "child_probability": 1.2767914511782394,
+          "child_probability_over_trace": 0.4255971503954873,
+          "child_probability_per_proper_length": 0.5375470268880166,
+          "child_proper_length": 2.375218143368551,
+          "clock_rates": [
+            1.2087245168571483,
+            1.1899023938077211,
+            1.1580370216755926
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.0,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 12.000015649564773,
+            "energy_gravity": -12.000015650098245,
+            "energy_r": null,
+            "energy_total": -5.334719332950044e-10
+          },
+          "exterior_probability_over_trace": 0.1255351036855349,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.24993554265585005,
+            "child_probability": 1.2767914511782399,
+            "child_proper_length": 2.375218143368551,
+            "clock_rates": [
+              1.208724516857102,
+              1.1899023938076698,
+              1.1580370216755123
+            ],
+            "parent_probability": 2.623394688926501,
+            "parent_proper_length": 4.709426854483263,
+            "r_min": 4.30585158338397
+          },
+          "lapse_work_rate": 0.03263160425657485,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 0.53125,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.2869596322664307,
+          "nodal_exterior_probability": 0.3549423202093758,
+          "nodal_minus_observer_child": 0.010168181088191286,
+          "nodal_parent_probability": 2.6450576797713046,
+          "normal_clocks": [
+            0.3640376801697352,
+            0.35785509393362364,
+            0.34839966501412295
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.9999999999806803,
+          "parent_annulus_proper_length": 2.3342087111147123,
+          "parent_normal_energy": 8.844889364943263,
+          "parent_probability": 2.623394688926501,
+          "parent_probability_over_trace": 0.8744648963144651,
+          "parent_proper_length": 4.709426854483263,
+          "pi_Q_abs_max": 1.685983656000915,
+          "pressure_work_rate": 0.0,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "start",
+          "stability_certificate": null,
+          "time": 0.3,
+          "weyl_C2_max": 0.003888768966941025,
+          "weyl_minmax_l2": null
+        },
+        "1.0": {
+          "L_dot_max": null,
+          "Q_ddot_max": null,
+          "Q_dot_max": null,
+          "R_h_max": 0.06877947517293982,
+          "R_h_minmax_l2": null,
+          "R_h_minus_chi_minus_2": null,
+          "actual_minus_proxy": null,
+          "boundary_child_net": 0.0008970506991986299,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -0.0021033495256252825,
+          "chart_Q_min": 0.24993554265585005,
+          "chart_admissible": null,
+          "chart_clamped": null,
+          "chart_r_min": 4.30585158338397,
+          "chi_coefficient_abs_max": 181.69574992088596,
+          "chi_proxy": null,
+          "chi_substituted": null,
+          "child_normal_energy": 5.033253409727043,
+          "child_probability": 1.4998394532304082,
+          "child_probability_over_trace": 0.4999464844208686,
+          "child_probability_per_proper_length": 0.6314533498398279,
+          "child_proper_length": 2.375218143368551,
+          "clock_rates": [
+            1.208724516857102,
+            1.1899023938076683,
+            1.158037021675512
+          ],
+          "constraint_norm": null,
+          "continuum_curvature_certified": null,
+          "coordinate_fieldwork_rate": 0.0,
+          "coupled_stability_classification": null,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 12.000015648319511,
+            "energy_gravity": -12.000015650098245,
+            "energy_r": null,
+            "energy_total": -1.778733604851368e-09
+          },
+          "exterior_probability_over_trace": 0.3328397462197532,
+          "field_closure_error": null,
+          "independent_metric_content": {
+            "Q_min": 0.24993554265585005,
+            "child_probability": 1.499839453230407,
+            "child_proper_length": 2.375218143368551,
+            "clock_rates": [
+              1.208724516857102,
+              1.1899023938076698,
+              1.1580370216755123
+            ],
+            "parent_probability": 2.0014807612977736,
+            "parent_proper_length": 4.709426854483263,
+            "r_min": 4.30585158338397
+          },
+          "lapse_work_rate": 0.11637781596551636,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 1.671875,
+          "metric_coordinate_work": null,
+          "nodal_child_probability": 1.499927790466879,
+          "nodal_exterior_probability": 0.9984914347116653,
+          "nodal_minus_observer_child": 8.83372364708368e-05,
+          "nodal_parent_probability": 2.001508565223933,
+          "normal_clocks": [
+            1.2101448419697098,
+            1.1907867695989662,
+            1.1590255801870002
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": null,
+          "occupation_trace": 2.999999999935598,
+          "parent_annulus_proper_length": 2.3342087111147123,
+          "parent_normal_energy": 6.745445329341729,
+          "parent_probability": 2.001480761297774,
+          "parent_probability_over_trace": 0.6671602537802468,
+          "parent_proper_length": 4.709426854483263,
+          "pi_Q_abs_max": 1.685983656000915,
+          "pressure_work_rate": 0.0,
+          "projection_forcing_norm": null,
+          "quadrature_forcing_norm": null,
+          "sample_kind": "station",
+          "stability_certificate": null,
+          "time": 1.0,
+          "weyl_C2_max": 0.003888768966941025,
+          "weyl_minmax_l2": null
+        },
+        "3.0": {
+          "L_dot_max": 0.0,
+          "Q_ddot_max": 0.0,
+          "Q_dot_max": 0.0,
+          "R_h_max": 0.06877947517293982,
+          "R_h_minmax_l2": {
+            "l2": 0.020177978033425137,
+            "max": 0.06877947517293982,
+            "min": -0.10259974147805893
+          },
+          "R_h_minus_chi_minus_2": {
+            "l2": 13.435303830738542,
+            "max": -11.960272565150703,
+            "min": -15.504917067804675
+          },
+          "actual_minus_proxy": {
+            "l2": 0.09640949797747586,
+            "max": -0.08715969394937596,
+            "min": -0.10976549202900036
+          },
+          "boundary_child_net": -0.003650909601302184,
+          "boundary_incoming": null,
+          "boundary_outgoing": null,
+          "boundary_parent_net": -9.491912497623736e-05,
+          "chart_Q_min": 0.24993554265585005,
+          "chart_admissible": true,
+          "chart_clamped": false,
+          "chart_r_min": 4.305851583383969,
+          "chi_coefficient_abs_max": 181.69574992088596,
+          "chi_proxy": {
+            "l2": 0.0995168611010977,
+            "max": 0.11212460507584335,
+            "min": 0.09002082153029504
+          },
+          "chi_substituted": false,
+          "child_normal_energy": -0.00010950054131640425,
+          "child_probability": 0.01243390449431842,
+          "child_probability_over_trace": 0.004144634831706385,
+          "child_probability_per_proper_length": 0.005234847388242231,
+          "child_proper_length": 2.375218143368551,
+          "clock_rates": [
+            1.208724516857102,
+            1.1899023938076683,
+            1.158037021675512
+          ],
+          "constraint_norm": 15.031237410027224,
+          "continuum_curvature_certified": false,
+          "coordinate_fieldwork_rate": 0.0,
+          "coupled_stability_classification": false,
+          "energy_accounts": {
+            "energy_Q": null,
+            "energy_by_source_column": null,
+            "energy_chi": null,
+            "energy_field": 12.000015644761612,
+            "energy_gravity": -12.000015650098245,
+            "energy_r": null,
+            "energy_total": -5.336632469266078e-09
+          },
+          "exterior_probability_over_trace": 0.6626324656069348,
+          "field_closure_error": 3.552713678800501e-15,
+          "independent_metric_content": {
+            "Q_min": 0.24993554265585005,
+            "child_probability": 0.01243390449431847,
+            "child_proper_length": 2.375218143368551,
+            "clock_rates": [
+              1.208724516857102,
+              1.1899023938076698,
+              1.1580370216755123
+            ],
+            "parent_probability": 1.0121026031140177,
+            "parent_proper_length": 4.709426854483263,
+            "r_min": 4.30585158338397
+          },
+          "lapse_work_rate": 0.12476803723126693,
+          "length_sum_matches_parent": true,
+          "localization_peak_x": 5.671875,
+          "metric_coordinate_work": 0.0,
+          "nodal_child_probability": 0.01241974562368797,
+          "nodal_exterior_probability": 1.9878811407059065,
+          "nodal_minus_observer_child": -1.4158870630449905e-05,
+          "nodal_parent_probability": 1.0121188591008956,
+          "normal_clocks": [
+            3.6275938756839876,
+            3.5705915572142697,
+            3.4750996235381755
+          ],
+          "normal_energy_projection_defect": null,
+          "normal_shell_max": 0.08863922741071492,
+          "occupation_trace": 2.999999999806802,
+          "parent_annulus_proper_length": 2.3342087111147123,
+          "parent_normal_energy": 3.4750840109318757,
+          "parent_probability": 1.012102603114017,
+          "parent_probability_over_trace": 0.3373675343930652,
+          "parent_proper_length": 4.709426854483263,
+          "pi_Q_abs_max": 1.685983656000915,
+          "pressure_work_rate": 0.0,
+          "projection_forcing_norm": 175.51264547400405,
+          "quadrature_forcing_norm": 6.702699645680992e-11,
+          "sample_kind": "station",
+          "stability_certificate": false,
+          "time": 3.0,
+          "weyl_C2_max": 0.003888768966941025,
+          "weyl_minmax_l2": {
+            "l2": 0.003185173829085273,
+            "max": 0.003888768966941025,
+            "min": 0.0023367904375061555
+          }
+        }
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "step_cap": 0.0005,
+      "work_integral_abs_discrepancy": {
+        "boundary_child": 0.0,
+        "boundary_parent": 0.0,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.0,
+        "pressure_work": 0.0
+      },
+      "work_ledger": {
+        "boundary_child": -4.398595404996129,
+        "boundary_parent": -5.656059730846825,
+        "coordinate_fieldwork": 0.0,
+        "lapse_work": 0.365451091814506,
+        "pressure_work": 0.0
+      }
+    }
+  },
+  "claims": {
+    "analytic_qddot_closes_T3_spatial_gap": false,
+    "continuous_evolution_error_bound": null,
+    "continuum_curvature_certified": false,
+    "coordinate_station_is_common_proper_time": false,
+    "defect_filled_with_zero": false,
+    "incoming_outgoing_separated": false,
+    "incoming_outgoing_split": "needed",
+    "normal_energy_closure_claimed": false,
+    "normal_energy_projection_defect": null,
+    "one_percent_gate_installed": false,
+    "regeneration_claimed": false,
+    "shell_closure_claimed": false,
+    "stability_theorem": false,
+    "tidal_response_computed_by_this_consumer": false
+  },
+  "clocks": {
+    "nf128_coupled_dt0.0005": {
+      "0.3->1.0": {
+        "clock_rates_end": [
+          0.7311780563569754,
+          0.7448618262226528,
+          0.7540877899390066
+        ],
+        "coordinate_dt": 0.7,
+        "coordinate_time_end": 1.0,
+        "normal_clocks_end": [
+          1.1123310015500916,
+          1.1025090562895725,
+          1.0789051165828316
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          0.7483105388230012,
+          0.7446689854478601,
+          0.7305211558003795
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      },
+      "1.0->3.0": {
+        "clock_rates_end": [
+          0.0005011706955342838,
+          0.0005018153623629739,
+          0.0005573371499603372
+        ],
+        "coordinate_dt": 2.0,
+        "coordinate_time_end": 3.0,
+        "normal_clocks_end": [
+          1.3553136231666558,
+          1.351972640994554,
+          1.3433995757589563
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          0.24298262161656425,
+          0.24946358470498153,
+          0.2644944591761247
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      }
+    },
+    "nf128_frozen_geometry_dt0.0005": {
+      "0.3->1.0": {
+        "clock_rates_end": [
+          1.2086625800298703,
+          1.1898519623878892,
+          1.1579839807259649
+        ],
+        "coordinate_dt": 0.7,
+        "coordinate_time_end": 1.0,
+        "normal_clocks_end": [
+          1.2100842687480091,
+          1.1907364445132114,
+          1.1589727472905706
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          0.8460638060209188,
+          0.8328963736714989,
+          0.8105887865081185
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      },
+      "1.0->3.0": {
+        "clock_rates_end": [
+          1.2086625800298703,
+          1.1898519623878892,
+          1.1579839807259649
+        ],
+        "coordinate_dt": 2.0,
+        "coordinate_time_end": 3.0,
+        "normal_clocks_end": [
+          3.627409428807842,
+          3.5704403692886575,
+          3.474940708742603
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          2.417325160059833,
+          2.379703924775446,
+          2.3159679614520323
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      }
+    },
+    "nf256_coupled_dt0.0005": {
+      "0.3->1.0": {
+        "clock_rates_end": [
+          0.7311611647899333,
+          0.7448482899439243,
+          0.7540747796134362
+        ],
+        "coordinate_dt": 0.7,
+        "coordinate_time_end": 1.0,
+        "normal_clocks_end": [
+          1.1123740058190583,
+          1.1025463020131778,
+          1.0789443878147331
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          0.7483363256493232,
+          0.7446912080795542,
+          0.7305447228006101
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      },
+      "1.0->3.0": {
+        "clock_rates_end": [
+          0.0005009325774933355,
+          0.000501583641710332,
+          0.000557088532312387
+        ],
+        "coordinate_dt": 2.0,
+        "coordinate_time_end": 3.0,
+        "normal_clocks_end": [
+          1.3553321541816143,
+          1.351988406678805,
+          1.3434155256616058
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          0.24295814836255603,
+          0.24944210466562722,
+          0.2644711378468727
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      }
+    },
+    "nf256_frozen_geometry_dt0.0005": {
+      "0.3->1.0": {
+        "clock_rates_end": [
+          1.208724516857102,
+          1.1899023938076683,
+          1.158037021675512
+        ],
+        "coordinate_dt": 0.7,
+        "coordinate_time_end": 1.0,
+        "normal_clocks_end": [
+          1.2101448419697098,
+          1.1907867695989662,
+          1.1590255801870002
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          0.8461071617999747,
+          0.8329316756653427,
+          0.8106259151728772
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      },
+      "1.0->3.0": {
+        "clock_rates_end": [
+          1.208724516857102,
+          1.1899023938076683,
+          1.158037021675512
+        ],
+        "coordinate_dt": 2.0,
+        "coordinate_time_end": 3.0,
+        "normal_clocks_end": [
+          3.6275938756839876,
+          3.5705915572142697,
+          3.4750996235381755
+        ],
+        "observer_coordinates": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "proper_dt": [
+          2.417449033714278,
+          2.3798047876153037,
+          2.3160740433511755
+        ],
+        "scope": "normal clocks at fixed coordinate observers; coordinate stations are not matched proper times"
+      }
+    }
+  },
+  "consumer_sha256": "a93c86c834fb4b353ca55e92783333dac88b9c40f23277cb8f18f2c303e5cb24",
+  "coupled_vs_frozen": {
+    "comparison_scope": "matched coordinate stations; differences are not evaluated at matched proper clocks",
+    "space_refinement_of_initial_subtracted_effect": {
+      "1.0": {
+        "R_h_max": {
+          "coarse_effect": 891.7956633407556,
+          "fine_effect": 892.0048649791404,
+          "relative_gap": 0.00023452970560837677
+        },
+        "chart_Q_min": {
+          "coarse_effect": -0.12479183134150115,
+          "fine_effect": -0.12480421959847918,
+          "relative_gap": 9.926152351162347e-05
+        },
+        "chart_r_min": {
+          "coarse_effect": 0.7647776520957601,
+          "fine_effect": 0.7649239219300803,
+          "relative_gap": 0.00019122141447887786
+        },
+        "child_normal_energy": {
+          "coarse_effect": 3.039600989716302,
+          "fine_effect": 3.040300476070583,
+          "relative_gap": 0.00023007145503767593
+        },
+        "child_probability": {
+          "coarse_effect": 9.996006759682707e-05,
+          "fine_effect": 0.00010032452874075837,
+          "relative_gap": 0.0036328218881852173
+        },
+        "child_probability_over_trace": {
+          "coarse_effect": 3.3320022532590254e-05,
+          "fine_effect": 3.344150958045633e-05,
+          "relative_gap": 0.0036328218848432113
+        },
+        "child_probability_per_proper_length": {
+          "coarse_effect": 0.3759119163502541,
+          "fine_effect": 0.3759579808569159,
+          "relative_gap": 0.0001225256784196633
+        },
+        "child_proper_length": {
+          "coarse_effect": -0.8861873232247193,
+          "fine_effect": -0.886313133017155,
+          "relative_gap": 0.0001419473408990655
+        },
+        "exterior_probability_over_trace": {
+          "coarse_effect": 5.363017350623611e-05,
+          "fine_effect": 5.404740503966998e-05,
+          "relative_gap": 0.007719732947911724
+        },
+        "parent_normal_energy": {
+          "coarse_effect": 3.9983838725752463,
+          "fine_effect": 3.99913934878043,
+          "relative_gap": 0.0001889096976363072
+        },
+        "parent_probability": {
+          "coarse_effect": -0.00016089052051526664,
+          "fine_effect": -0.00016214221511345883,
+          "relative_gap": 0.007719732935166305
+        },
+        "parent_probability_over_trace": {
+          "coarse_effect": -5.363017350623611e-05,
+          "fine_effect": -5.404740503966998e-05,
+          "relative_gap": 0.007719732947911724
+        },
+        "parent_proper_length": {
+          "coarse_effect": -1.721305616915187,
+          "fine_effect": -1.7215755290529766,
+          "relative_gap": 0.00015678204832411425
+        },
+        "weyl_C2_max": {
+          "coarse_effect": 232.03014569608087,
+          "fine_effect": 232.0685264572879,
+          "relative_gap": 0.0001653854652026715
+        }
+      },
+      "3.0": {
+        "R_h_max": {
+          "coarse_effect": 34224.870050366015,
+          "fine_effect": 29015.465414171358,
+          "relative_gap": 0.15221108593044738
+        },
+        "chart_Q_min": {
+          "coarse_effect": -0.2499127289891697,
+          "fine_effect": -0.24991266460414407,
+          "relative_gap": 2.5763003700125566e-07
+        },
+        "chart_r_min": {
+          "coarse_effect": 15.86298942842207,
+          "fine_effect": 15.864756372459908,
+          "relative_gap": 0.00011137542842481641
+        },
+        "child_normal_energy": {
+          "coarse_effect": -1.023692104485911,
+          "fine_effect": -1.1285674708962654,
+          "relative_gap": 0.09292786573678781
+        },
+        "child_probability": {
+          "coarse_effect": -0.009419644994410392,
+          "fine_effect": -0.009424706865080124,
+          "relative_gap": 0.0005370852104150161
+        },
+        "child_probability_over_trace": {
+          "coarse_effect": -0.003139881664950439,
+          "fine_effect": -0.0031415689552289905,
+          "relative_gap": 0.0005370852279855257
+        },
+        "child_probability_per_proper_length": {
+          "coarse_effect": 2.954414794002985,
+          "fine_effect": 2.943693543355158,
+          "relative_gap": 0.0036288914710248736
+        },
+        "child_proper_length": {
+          "coarse_effect": -2.3740945139836076,
+          "fine_effect": -2.374197705694078,
+          "relative_gap": 4.346382368362386e-05
+        },
+        "exterior_probability_over_trace": {
+          "coarse_effect": 0.0032171132581928497,
+          "fine_effect": 0.0032169511732881295,
+          "relative_gap": 5.038209466432865e-05
+        },
+        "parent_normal_energy": {
+          "coarse_effect": 6805.758508342588,
+          "fine_effect": 6810.196390212615,
+          "relative_gap": 0.0006516525538683418
+        },
+        "parent_probability": {
+          "coarse_effect": -0.009651339774117584,
+          "fine_effect": -0.00965085351923145,
+          "relative_gap": 5.0382112485354005e-05
+        },
+        "parent_probability_over_trace": {
+          "coarse_effect": -0.0032171132581928497,
+          "fine_effect": -0.0032169511732881295,
+          "relative_gap": 5.038209466432865e-05
+        },
+        "parent_proper_length": {
+          "coarse_effect": -4.707049672610532,
+          "fine_effect": -4.707270419723495,
+          "relative_gap": 4.689492917981258e-05
+        },
+        "weyl_C2_max": {
+          "coarse_effect": 1780.580218543081,
+          "fine_effect": 1279.3302832487013,
+          "relative_gap": 0.2815093249236004
+        }
+      }
+    },
+    "stations": {
+      "128": {
+        "1.0": {
+          "R_h_max": {
+            "coupled_change": 891.7956633407556,
+            "coupled_final": 907.3172337895378,
+            "coupled_initial": 15.521570448782233,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.06800729764643719,
+            "frozen_initial": 0.06800729764643719,
+            "initial_subtracted_effect": 891.7956633407556
+          },
+          "chart_Q_min": {
+            "coupled_change": -0.12479183134150115,
+            "coupled_final": 0.12514378872544105,
+            "coupled_initial": 0.2499356200669422,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.2499356200669422,
+            "frozen_initial": 0.2499356200669422,
+            "initial_subtracted_effect": -0.12479183134150115
+          },
+          "chart_r_min": {
+            "coupled_change": 0.7647776520957601,
+            "coupled_final": 5.070426578019121,
+            "coupled_initial": 4.305648925923361,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 4.305648925923361,
+            "frozen_initial": 4.305648925923361,
+            "initial_subtracted_effect": 0.7647776520957601
+          },
+          "child_normal_energy": {
+            "coupled_change": 3.7745768134698165,
+            "coupled_final": 8.072477531365392,
+            "coupled_initial": 4.297900717895575,
+            "effect_over_larger_movement": 0.8052825892612102,
+            "frozen_change": 0.7349758237535147,
+            "frozen_final": 5.03287654164909,
+            "frozen_initial": 4.297900717895575,
+            "initial_subtracted_effect": 3.039600989716302
+          },
+          "child_probability": {
+            "coupled_change": 0.22232212699664688,
+            "coupled_final": 1.4999278885704077,
+            "coupled_initial": 1.2776057615737608,
+            "effect_over_larger_movement": 0.00044961816867798634,
+            "frozen_change": 0.22222216692905006,
+            "frozen_final": 1.4998279285028109,
+            "frozen_initial": 1.2776057615737608,
+            "initial_subtracted_effect": 9.996006759682707e-05
+          },
+          "child_probability_over_trace": {
+            "coupled_change": 0.07410737567135856,
+            "coupled_final": 0.4999759628646061,
+            "coupled_initial": 0.42586858719324755,
+            "effect_over_larger_movement": 0.0004496181686469835,
+            "frozen_change": 0.07407405564882596,
+            "frozen_final": 0.4999426428420735,
+            "frozen_initial": 0.42586858719324755,
+            "initial_subtracted_effect": 3.3320022532590254e-05
+          },
+          "child_probability_per_proper_length": {
+            "coupled_change": 0.4694745974713245,
+            "coupled_final": 1.0073877234230344,
+            "coupled_initial": 0.5379131259517099,
+            "effect_over_larger_movement": 0.8007076812568433,
+            "frozen_change": 0.09356268112107036,
+            "frozen_final": 0.6314758070727803,
+            "frozen_initial": 0.5379131259517099,
+            "initial_subtracted_effect": 0.3759119163502541
+          },
+          "child_proper_length": {
+            "coupled_change": -0.8861873232247193,
+            "coupled_final": 1.488928099573971,
+            "coupled_initial": 2.3751154227986904,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 2.3751154227986904,
+            "frozen_initial": 2.3751154227986904,
+            "initial_subtracted_effect": -0.8861873232247193
+          },
+          "exterior_probability_over_trace": {
+            "coupled_change": 0.20709914607132318,
+            "coupled_final": 0.3328848932767784,
+            "coupled_initial": 0.1257857472054552,
+            "effect_over_larger_movement": 0.0002589589311380663,
+            "frozen_change": 0.20704551589781695,
+            "frozen_final": 0.33283126310327216,
+            "frozen_initial": 0.1257857472054552,
+            "initial_subtracted_effect": 5.363017350623611e-05
+          },
+          "parent_normal_energy": {
+            "coupled_change": 1.9045406776398472,
+            "coupled_final": 10.743716134194543,
+            "coupled_initial": 8.839175456554695,
+            "effect_over_larger_movement": 1.909590881612607,
+            "frozen_change": -2.093843194935399,
+            "frozen_final": 6.745332261619296,
+            "frozen_initial": 8.839175456554695,
+            "initial_subtracted_effect": 3.9983838725752463
+          },
+          "parent_probability": {
+            "coupled_change": -0.6212974382329266,
+            "coupled_final": 2.0013453201384284,
+            "coupled_initial": 2.622642758371355,
+            "effect_over_larger_movement": -0.0002589589311246254,
+            "frozen_change": -0.6211365477124113,
+            "frozen_final": 2.0015062106589436,
+            "frozen_initial": 2.622642758371355,
+            "initial_subtracted_effect": -0.00016089052051526664
+          },
+          "parent_probability_over_trace": {
+            "coupled_change": -0.20709914607132318,
+            "coupled_final": 0.6671151067232216,
+            "coupled_initial": 0.8742142527945448,
+            "effect_over_larger_movement": -0.0002589589311380663,
+            "frozen_change": -0.20704551589781695,
+            "frozen_final": 0.6671687368967278,
+            "frozen_initial": 0.8742142527945448,
+            "initial_subtracted_effect": -5.363017350623611e-05
+          },
+          "parent_proper_length": {
+            "coupled_change": -1.721305616915187,
+            "coupled_final": 2.987901476309156,
+            "coupled_initial": 4.709207093224343,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 4.709207093224343,
+            "frozen_initial": 4.709207093224343,
+            "initial_subtracted_effect": -1.721305616915187
+          },
+          "weyl_C2_max": {
+            "coupled_change": 232.03014569608087,
+            "coupled_final": 232.1422586513937,
+            "coupled_initial": 0.11211295531281074,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.0038896781551088114,
+            "frozen_initial": 0.0038896781551088114,
+            "initial_subtracted_effect": 232.03014569608087
+          }
+        },
+        "3.0": {
+          "R_h_max": {
+            "coupled_change": 34224.870050366015,
+            "coupled_final": 34240.3916208148,
+            "coupled_initial": 15.521570448782233,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.06800729764643719,
+            "frozen_initial": 0.06800729764643719,
+            "initial_subtracted_effect": 34224.870050366015
+          },
+          "chart_Q_min": {
+            "coupled_change": -0.24991272898916964,
+            "coupled_final": 2.2891077772563622e-05,
+            "coupled_initial": 0.2499356200669422,
+            "effect_over_larger_movement": -1.0000000000000002,
+            "frozen_change": 5.551115123125783e-17,
+            "frozen_final": 0.24993562006694225,
+            "frozen_initial": 0.2499356200669422,
+            "initial_subtracted_effect": -0.2499127289891697
+          },
+          "chart_r_min": {
+            "coupled_change": 15.862989428422068,
+            "coupled_final": 20.16863835434543,
+            "coupled_initial": 4.305648925923361,
+            "effect_over_larger_movement": 1.0000000000000002,
+            "frozen_change": -1.7763568394002505e-15,
+            "frozen_final": 4.305648925923359,
+            "frozen_initial": 4.305648925923361,
+            "initial_subtracted_effect": 15.86298942842207
+          },
+          "child_normal_energy": {
+            "coupled_change": -5.321652763136831,
+            "coupled_final": -1.023752045241256,
+            "coupled_initial": 4.297900717895575,
+            "effect_over_larger_movement": -0.19236356636739654,
+            "frozen_change": -4.29796065865092,
+            "frozen_final": -5.994075534527035e-05,
+            "frozen_initial": 4.297900717895575,
+            "initial_subtracted_effect": -1.023692104485911
+          },
+          "child_probability": {
+            "coupled_change": -1.2745842258065758,
+            "coupled_final": 0.0030215357671849186,
+            "coupled_initial": 1.2776057615737608,
+            "effect_over_larger_movement": -0.007390366837820781,
+            "frozen_change": -1.2651645808121654,
+            "frozen_final": 0.012441180761595286,
+            "frozen_initial": 1.2776057615737608,
+            "initial_subtracted_effect": -0.009419644994410392
+          },
+          "child_probability_over_trace": {
+            "coupled_change": -0.42486140860413873,
+            "coupled_final": 0.001007178589108791,
+            "coupled_initial": 0.42586858719324755,
+            "effect_over_larger_movement": -0.007390366838132854,
+            "frozen_change": -0.4217215269391883,
+            "frozen_final": 0.004147060254059279,
+            "frozen_initial": 0.42586858719324755,
+            "initial_subtracted_effect": -0.003139881664950439
+          },
+          "child_probability_per_proper_length": {
+            "coupled_change": 2.4217398053822747,
+            "coupled_final": 2.9596529313339848,
+            "coupled_initial": 0.5379131259517099,
+            "effect_over_larger_movement": 1.2199554995284172,
+            "frozen_change": -0.53267498862071,
+            "frozen_final": 0.005238137330999839,
+            "frozen_initial": 0.5379131259517099,
+            "initial_subtracted_effect": 2.954414794002985
+          },
+          "child_proper_length": {
+            "coupled_change": -2.3740945139836076,
+            "coupled_final": 0.0010209088150829368,
+            "coupled_initial": 2.3751154227986904,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 2.3751154227986904,
+            "frozen_initial": 2.3751154227986904,
+            "initial_subtracted_effect": -2.3740945139836076
+          },
+          "exterior_probability_over_trace": {
+            "coupled_change": 0.540074138808417,
+            "coupled_final": 0.6658598860138722,
+            "coupled_initial": 0.1257857472054552,
+            "effect_over_larger_movement": 0.005956799311462812,
+            "frozen_change": 0.5368570255502242,
+            "frozen_final": 0.6626427727556794,
+            "frozen_initial": 0.1257857472054552,
+            "initial_subtracted_effect": 0.0032171132581928497
+          },
+          "parent_normal_energy": {
+            "coupled_change": 6800.3938883147675,
+            "coupled_final": 6809.233063771322,
+            "coupled_initial": 8.839175456554695,
+            "effect_over_larger_movement": 1.0007888690149314,
+            "frozen_change": -5.364620027821012,
+            "frozen_final": 3.474555428733684,
+            "frozen_initial": 8.839175456554695,
+            "initial_subtracted_effect": 6805.758508342588
+          },
+          "parent_probability": {
+            "coupled_change": -1.6202224164599002,
+            "coupled_final": 1.0024203419114548,
+            "coupled_initial": 2.622642758371355,
+            "effect_over_larger_movement": -0.005956799311050916,
+            "frozen_change": -1.6105710766857826,
+            "frozen_final": 1.0120716816855724,
+            "frozen_initial": 2.622642758371355,
+            "initial_subtracted_effect": -0.009651339774117584
+          },
+          "parent_probability_over_trace": {
+            "coupled_change": -0.5400741388084169,
+            "coupled_final": 0.3341401139861278,
+            "coupled_initial": 0.8742142527945448,
+            "effect_over_larger_movement": -0.005956799311462813,
+            "frozen_change": -0.5368570255502241,
+            "frozen_final": 0.33735722724432066,
+            "frozen_initial": 0.8742142527945448,
+            "initial_subtracted_effect": -0.0032171132581928497
+          },
+          "parent_proper_length": {
+            "coupled_change": -4.707049672610532,
+            "coupled_final": 0.0021574206138111783,
+            "coupled_initial": 4.709207093224343,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 4.709207093224343,
+            "frozen_initial": 4.709207093224343,
+            "initial_subtracted_effect": -4.707049672610532
+          },
+          "weyl_C2_max": {
+            "coupled_change": 1780.580218543081,
+            "coupled_final": 1780.6923314983937,
+            "coupled_initial": 0.11211295531281074,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.0038896781551088114,
+            "frozen_initial": 0.0038896781551088114,
+            "initial_subtracted_effect": 1780.580218543081
+          }
+        }
+      },
+      "256": {
+        "1.0": {
+          "R_h_max": {
+            "coupled_change": 892.0048649791404,
+            "coupled_final": 907.5282431080052,
+            "coupled_initial": 15.523378128864813,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.06877947517293982,
+            "frozen_initial": 0.06877947517293982,
+            "initial_subtracted_effect": 892.0048649791404
+          },
+          "chart_Q_min": {
+            "coupled_change": -0.12480421959847918,
+            "coupled_final": 0.12513132305737087,
+            "coupled_initial": 0.24993554265585005,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.24993554265585005,
+            "frozen_initial": 0.24993554265585005,
+            "initial_subtracted_effect": -0.12480421959847918
+          },
+          "chart_r_min": {
+            "coupled_change": 0.7649239219300803,
+            "coupled_final": 5.07077550531405,
+            "coupled_initial": 4.30585158338397,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 4.30585158338397,
+            "frozen_initial": 4.30585158338397,
+            "initial_subtracted_effect": 0.7649239219300803
+          },
+          "child_normal_energy": {
+            "coupled_change": 3.7790593886919446,
+            "coupled_final": 8.073553885797626,
+            "coupled_initial": 4.294494497105681,
+            "effect_over_larger_movement": 0.8045124893162714,
+            "frozen_change": 0.7387589126213614,
+            "frozen_final": 5.033253409727043,
+            "frozen_initial": 4.294494497105681,
+            "initial_subtracted_effect": 3.040300476070583
+          },
+          "child_probability": {
+            "coupled_change": 0.22314832658090955,
+            "coupled_final": 1.499939777759149,
+            "coupled_initial": 1.2767914511782394,
+            "effect_over_larger_movement": 0.0004495867402545029,
+            "frozen_change": 0.2230480020521688,
+            "frozen_final": 1.4998394532304082,
+            "frozen_initial": 1.2767914511782394,
+            "initial_subtracted_effect": 0.00010032452874075837
+          },
+          "child_probability_over_trace": {
+            "coupled_change": 0.07438277553496175,
+            "coupled_final": 0.49997992593044904,
+            "coupled_initial": 0.4255971503954873,
+            "effect_over_larger_movement": 0.0004495867402089344,
+            "frozen_change": 0.0743493340253813,
+            "frozen_final": 0.4999464844208686,
+            "frozen_initial": 0.4255971503954873,
+            "initial_subtracted_effect": 3.344150958045633e-05
+          },
+          "child_probability_per_proper_length": {
+            "coupled_change": 0.46986430380872724,
+            "coupled_final": 1.0074113306967438,
+            "coupled_initial": 0.5375470268880166,
+            "effect_over_larger_movement": 0.8001416106935444,
+            "frozen_change": 0.09390632295181134,
+            "frozen_final": 0.6314533498398279,
+            "frozen_initial": 0.5375470268880166,
+            "initial_subtracted_effect": 0.3759579808569159
+          },
+          "child_proper_length": {
+            "coupled_change": -0.886313133017155,
+            "coupled_final": 1.488905010351396,
+            "coupled_initial": 2.375218143368551,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 2.375218143368551,
+            "frozen_initial": 2.375218143368551,
+            "initial_subtracted_effect": -0.886313133017155
+          },
+          "exterior_probability_over_trace": {
+            "coupled_change": 0.207358689939258,
+            "coupled_final": 0.3328937936247929,
+            "coupled_initial": 0.1255351036855349,
+            "effect_over_larger_movement": 0.00026064692565092013,
+            "frozen_change": 0.20730464253421832,
+            "frozen_final": 0.3328397462197532,
+            "frozen_initial": 0.1255351036855349,
+            "initial_subtracted_effect": 5.404740503966998e-05
+          },
+          "parent_normal_energy": {
+            "coupled_change": 1.8996953131788956,
+            "coupled_final": 10.744584678122159,
+            "coupled_initial": 8.844889364943263,
+            "effect_over_larger_movement": 1.9048563719559182,
+            "frozen_change": -2.0994440356015343,
+            "frozen_final": 6.745445329341729,
+            "frozen_initial": 8.844889364943263,
+            "initial_subtracted_effect": 3.99913934878043
+          },
+          "parent_probability": {
+            "coupled_change": -0.6220760698438403,
+            "coupled_final": 2.0013186190826606,
+            "coupled_initial": 2.623394688926501,
+            "effect_over_larger_movement": -0.00026064692563107495,
+            "frozen_change": -0.6219139276287269,
+            "frozen_final": 2.001480761297774,
+            "frozen_initial": 2.623394688926501,
+            "initial_subtracted_effect": -0.00016214221511345883
+          },
+          "parent_probability_over_trace": {
+            "coupled_change": -0.207358689939258,
+            "coupled_final": 0.6671062063752071,
+            "coupled_initial": 0.8744648963144651,
+            "effect_over_larger_movement": -0.00026064692565092013,
+            "frozen_change": -0.20730464253421832,
+            "frozen_final": 0.6671602537802468,
+            "frozen_initial": 0.8744648963144651,
+            "initial_subtracted_effect": -5.404740503966998e-05
+          },
+          "parent_proper_length": {
+            "coupled_change": -1.7215755290529766,
+            "coupled_final": 2.9878513254302868,
+            "coupled_initial": 4.709426854483263,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 4.709426854483263,
+            "frozen_initial": 4.709426854483263,
+            "initial_subtracted_effect": -1.7215755290529766
+          },
+          "weyl_C2_max": {
+            "coupled_change": 232.0685264572879,
+            "coupled_final": 232.18065106235974,
+            "coupled_initial": 0.11212460507184759,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.003888768966941025,
+            "frozen_initial": 0.003888768966941025,
+            "initial_subtracted_effect": 232.0685264572879
+          }
+        },
+        "3.0": {
+          "R_h_max": {
+            "coupled_change": 29015.465414171358,
+            "coupled_final": 29030.988792300224,
+            "coupled_initial": 15.523378128864813,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.06877947517293982,
+            "frozen_initial": 0.06877947517293982,
+            "initial_subtracted_effect": 29015.465414171358
+          },
+          "chart_Q_min": {
+            "coupled_change": -0.24991266460414407,
+            "coupled_final": 2.287805170599047e-05,
+            "coupled_initial": 0.24993554265585005,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.24993554265585005,
+            "frozen_initial": 0.24993554265585005,
+            "initial_subtracted_effect": -0.24991266460414407
+          },
+          "chart_r_min": {
+            "coupled_change": 15.864756372459908,
+            "coupled_final": 20.170607955843877,
+            "coupled_initial": 4.30585158338397,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": -8.881784197001252e-16,
+            "frozen_final": 4.305851583383969,
+            "frozen_initial": 4.30585158338397,
+            "initial_subtracted_effect": 15.864756372459908
+          },
+          "child_normal_energy": {
+            "coupled_change": -5.423171468543263,
+            "coupled_final": -1.1286769714375815,
+            "coupled_initial": 4.294494497105681,
+            "effect_over_larger_movement": -0.20810101200790795,
+            "frozen_change": -4.294603997646997,
+            "frozen_final": -0.00010950054131640425,
+            "frozen_initial": 4.294494497105681,
+            "initial_subtracted_effect": -1.1285674708962654
+          },
+          "child_probability": {
+            "coupled_change": -1.273782253549001,
+            "coupled_final": 0.0030091976292384495,
+            "coupled_initial": 1.2767914511782394,
+            "effect_over_larger_movement": -0.00739899369678066,
+            "frozen_change": -1.264357546683921,
+            "frozen_final": 0.01243390449431842,
+            "frozen_initial": 1.2767914511782394,
+            "initial_subtracted_effect": -0.009424706865080124
+          },
+          "child_probability_over_trace": {
+            "coupled_change": -0.4245940845190099,
+            "coupled_final": 0.0010030658764774018,
+            "coupled_initial": 0.4255971503954873,
+            "effect_over_larger_movement": -0.007398993697210439,
+            "frozen_change": -0.4214525155637809,
+            "frozen_final": 0.004144634831706385,
+            "frozen_initial": 0.4255971503954873,
+            "initial_subtracted_effect": -0.0031415689552289905
+          },
+          "child_probability_per_proper_length": {
+            "coupled_change": 2.4113813638553836,
+            "coupled_final": 2.9489283907434003,
+            "coupled_initial": 0.5375470268880166,
+            "effect_over_larger_movement": 1.2207498935998655,
+            "frozen_change": -0.5323121794997744,
+            "frozen_final": 0.005234847388242231,
+            "frozen_initial": 0.5375470268880166,
+            "initial_subtracted_effect": 2.943693543355158
+          },
+          "child_proper_length": {
+            "coupled_change": -2.374197705694078,
+            "coupled_final": 0.0010204376744732875,
+            "coupled_initial": 2.375218143368551,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 2.375218143368551,
+            "frozen_initial": 2.375218143368551,
+            "initial_subtracted_effect": -2.374197705694078
+          },
+          "exterior_probability_over_trace": {
+            "coupled_change": 0.540314313094688,
+            "coupled_final": 0.6658494167802229,
+            "coupled_initial": 0.1255351036855349,
+            "effect_over_larger_movement": 0.005953851481118123,
+            "frozen_change": 0.5370973619213999,
+            "frozen_final": 0.6626324656069348,
+            "frozen_initial": 0.1255351036855349,
+            "initial_subtracted_effect": 0.0032169511732881295
+          },
+          "parent_normal_energy": {
+            "coupled_change": 6804.826584858604,
+            "coupled_final": 6813.671474223547,
+            "coupled_initial": 8.844889364943263,
+            "effect_over_larger_movement": 1.0007891171489893,
+            "frozen_change": -5.369805354011388,
+            "frozen_final": 3.4750840109318757,
+            "frozen_initial": 8.844889364943263,
+            "initial_subtracted_effect": 6810.196390212615
+          },
+          "parent_probability": {
+            "coupled_change": -1.6209429393317154,
+            "coupled_final": 1.0024517495947856,
+            "coupled_initial": 2.623394688926501,
+            "effect_over_larger_movement": -0.005953851480552621,
+            "frozen_change": -1.611292085812484,
+            "frozen_final": 1.012102603114017,
+            "frozen_initial": 2.623394688926501,
+            "initial_subtracted_effect": -0.00965085351923145
+          },
+          "parent_probability_over_trace": {
+            "coupled_change": -0.540314313094688,
+            "coupled_final": 0.3341505832197771,
+            "coupled_initial": 0.8744648963144651,
+            "effect_over_larger_movement": -0.005953851481118123,
+            "frozen_change": -0.5370973619213999,
+            "frozen_final": 0.3373675343930652,
+            "frozen_initial": 0.8744648963144651,
+            "initial_subtracted_effect": -0.0032169511732881295
+          },
+          "parent_proper_length": {
+            "coupled_change": -4.707270419723495,
+            "coupled_final": 0.0021564347597679886,
+            "coupled_initial": 4.709426854483263,
+            "effect_over_larger_movement": -1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 4.709426854483263,
+            "frozen_initial": 4.709426854483263,
+            "initial_subtracted_effect": -4.707270419723495
+          },
+          "weyl_C2_max": {
+            "coupled_change": 1279.3302832487013,
+            "coupled_final": 1279.4424078537731,
+            "coupled_initial": 0.11212460507184759,
+            "effect_over_larger_movement": 1.0,
+            "frozen_change": 0.0,
+            "frozen_final": 0.003888768966941025,
+            "frozen_initial": 0.003888768966941025,
+            "initial_subtracted_effect": 1279.3302832487013
+          }
+        }
+      }
+    }
+  },
+  "cpu_accounting": "sum_of_child_process_time",
+  "cpu_seconds": 277.185634,
+  "curvature_scales_T3": {
+    "atlas_handoff_Q_ddot_max": 0.12023031546367896,
+    "coupled_Q_ddot_max": null,
+    "frozen_Q_ddot_max": 0.0,
+    "frozen_R_h_max": 0.06877947517293982,
+    "nf128_coupled": {
+      "available": true,
+      "bracket_if_R_h_max_sat_at_Q_min": 8.97100728494896e-06,
+      "chi_coefficient_abs_max": 305111.25503156125,
+      "colocated": false,
+      "meaning": "2/Q_min^2 and the parenthesis that would yield R_h_max at that same Q_min. The chart minimum and the curvature maximum are not a stored common node.",
+      "pi_Q_abs_max": 1272462.8659296976,
+      "prefactor_2_over_Q_min_squared": 3816783392.6811495
+    },
+    "nf256_coupled": {
+      "available": true,
+      "bracket_if_R_h_max_sat_at_Q_min": 7.5974859712870245e-06,
+      "chi_coefficient_abs_max": 432431.7741523645,
+      "colocated": false,
+      "meaning": "2/Q_min^2 and the parenthesis that would yield R_h_max at that same Q_min. The chart minimum and the curvature maximum are not a stored common node.",
+      "pi_Q_abs_max": 898634.1789743388,
+      "prefactor_2_over_Q_min_squared": 3821130950.68767
+    }
+  },
+  "definitions": {
+    "curvature_scale": "prefactor and bracket are not a co-located jet evaluation",
+    "gap_over_fine_step": "spatial |coarse-fine| divided by the fine case change over the previous 0.05 cadence step",
+    "initial_subtracted_control_effect": "(coupled(T)-coupled(0.3))-(frozen(T)-frozen(0.3)), at matched coordinate time",
+    "nodal_window": "period-8 box sum on x_i=i*8/n_f; the stored child and parent probabilities remain the observer integrals",
+    "normal_energy_projection_defect": "null when the sample row has no defect field",
+    "occupation_trace": "sum of stored source weights times nodal |phi0|^2+|phi1|^2",
+    "pressure_lapse_scope": "stored rate sums child [1,3] and parent [0,4], overlapping windows; not per-child or a global disjoint energy ledger",
+    "relative_gap": "|a-b|/max(|a|,|b|)"
+  },
+  "hashes_unchanged": true,
+  "n_cases": 6,
+  "n_chunks": 18,
+  "next_experiment": "Combine this coordinate-station assessment with the separately computed native-Jv radial/angular tidal response, then choose matched proper-clock comparisons and a finite-projection-defect normal-energy ledger before extending numerical trajectories.",
+  "ok": true,
+  "physical_outcome": {
+    "T1_R_h_max_space_relative_gap": 0.00023250991918969066,
+    "T3_Q_min_space_relative_gap": 0.0005690455776077915,
+    "T3_R_h_l2_space_relative_gap": 0.004654098863857717,
+    "T3_R_h_max_space_relative_gap": 0.15214203406913634,
+    "T3_R_h_max_time_relative_gap": 9.083446646513002e-07,
+    "T3_child_length_space_relative_gap": 0.00046149137189203167,
+    "T3_r_min_space_relative_gap": 9.764710626273575e-05,
+    "T3_weyl_max_space_relative_gap": 0.2814915944647413,
+    "areal_expansion_factor_r_min": 4.684464284296532,
+    "areal_r_min_coupled_T3": 20.170607955843877,
+    "areal_r_min_frozen_T3": 4.305851583383969,
+    "chart_Q_min_coupled_T3": 2.287805170599047e-05,
+    "chart_Q_min_frozen_T3": 0.24993554265585005,
+    "interpretation": "Coupled evolution through T=3 contracts the coordinate-window proper lengths, raises the areal-radius floor, and moves probability out of the child window. Late R_h and Weyl maxima have substantial spatial sensitivity; these scalars alone do not classify tidal response. This is not a regeneration or stability theorem.",
+    "late_R_h_gap_exceeds_fine_step_at": 2.9000000000000004,
+    "late_weyl_gap_exceeds_fine_step_at": 2.6500000000000004,
+    "nf256_coupled_child_probability": {
+      "0.3": 1.2767914511782394,
+      "1.0": 1.499939777759149,
+      "3.0": 0.0030091976292384495
+    },
+    "nf256_coupled_child_probability_over_trace": {
+      "0.3": 0.4255971503954873,
+      "1.0": 0.49997992593044904,
+      "3.0": 0.0010030658764774018
+    },
+    "nf256_coupled_child_proper_length": {
+      "0.3": 2.375218143368551,
+      "1.0": 1.488905010351396,
+      "3.0": 0.0010204376744732875
+    },
+    "nf256_coupled_localization_peak_x": {
+      "0.3": 0.53125,
+      "1.0": 1.671875,
+      "3.0": 3.25
+    },
+    "nf256_coupled_parent_proper_length": {
+      "0.3": 4.709426854483263,
+      "1.0": 2.9878513254302868,
+      "3.0": 0.0021564347597679886
+    },
+    "occupation_trace_nf256_coupled_T3": 2.9999999998068363,
+    "proper_length_contraction_factor": 0.0004296185078083378,
+    "stability_certificate": false
+  },
+  "problems": [],
+  "producing_commit": "1c9e7705c53e123497ffd40f94fb365e250e8e79",
+  "producing_commit_abbreviation": "1c9e770",
+  "read_hashes": {
+    "lab/results/development/nsc-discovery-atlas-v1.json": "d206226dc831074f6435645e7bab5a8922064750b8a69d1f0776fde13c8fc8c4",
+    "lab/results/development/nsc-discovery-atlas-v1.npz": "bdc6d77636fa05f3a8e87801a2a74fc29a55760cf2b34a2666b2bd5797f6606c",
+    "lab/results/development/nsc-discovery-episode-v1/authenticated-closure.json": "7c1f93ffe2cb1cb0b0453537d2046281e9bc51dada377c613a826c7a99c860af",
+    "lab/results/development/nsc-discovery-episode-v1/cpu-ledger.json": "d2e9b1a7af23f5f6222ca4b55bcdb2dec763011f651edaf0c73f548a4ee359a5",
+    "lab/results/development/nsc-discovery-episode-v1/manifest.json": "c49c29caeab331f57ec6d1b0a18844ad23f2aeb1e730bd09a1df370ea550d575",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000000.json": "5eb0648f9fdebceb8dc4a7a14a935b2c2fd84c4272383dab4947ba167b63402c",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000000.npz": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000001.json": "2797f4c85183df77d38f9e2bd94f860da4558317746cb2273e13d7a90ae24a8b",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000001.npz": "9de034a4524345513eb408386344ff46c9ec303ae4b28b76e73227b87815f3ea",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000002.json": "78e68de2ed6d5a8912d77df37481398ec1d931c41c1b76240348ca957abdcf20",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000002.npz": "19c3effda59c94fc4d2a2c7870e53f78037315a5bc5d74400d6c2896b0b41d30",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-observations.jsonl": "f7ec17c325cb7ddd508e70514ca9f9c1fb0b27ee141e34afcb6de6c02f2f768a",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-000000.json": "66e06c8bf84eeeee4ae5f36aa4750ef568a9c13b0b022ddedd22d03be1c40a4e",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-000000.npz": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-000001.json": "4f3a652034b11a2149088c7136041f71242f4a4189d5fa604c6c400cd17ad66d",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-000001.npz": "f7b56337009ec4409069a9d1e2fcc39ade14b6ae0d0421b75d4f285bd3c27355",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-000002.json": "495fdbb0d1bb49555daac1b1866689328ad2c3b055b40ae55ab889adbbc0196f",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-000002.npz": "1fff0df37735ab02be3112bfdc999d80e797a9547fb6ac8f34bf8ab1f09545da",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.001-observations.jsonl": "9f2a10326b28508b23dcd38d7ffb51ec6bb785d08870e64ee2abfa93488f2e13",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-000000.json": "8672358f28cc629baebc90f71c59e251cbe5796bd52f6adaf3c52712aa593184",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-000000.npz": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-000001.json": "a5e8197560fd397a7d36750c0a89d29ebd1a6d089c3c0b0b100a35907858ffa2",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-000001.npz": "e1c9644e7c9236706bc5aa5b20d979da3493704d432f605d54d7d8b718f1bb76",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-000002.json": "69e573febe7af98d1d2b46c503e380ff398415a31344eee0511a371b743585c5",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-000002.npz": "f065275c620ff98e67be20ea8a63894068fb663f60cdd0e512c1151a23e22eda",
+    "lab/results/development/nsc-discovery-episode-v1/nf128_frozen_geometry_dt0.0005-observations.jsonl": "7e15853bb06223577fa0de3378356051d1129bb2c149715cecba018891a31284",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000000.json": "72848cb5dfb8dad8d88456066c415f0c4b1076cb45ec79fd6081a3ecfb7a37c5",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000000.npz": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000001.json": "09e075f60149c94dcb596b4b44b6617ce353e45d5f03f28e0b2ca24fa246d215",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000001.npz": "12cf7f8c98353018dce68dfae1b2e92f810754e17bda7e3000b9a75f15f49c2c",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000002.json": "9aa4dcbc9c2b8903e0a9e742357cec66e93005993ea122c158117b289e03d503",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000002.npz": "6c147a43d266aa4bc42afd83f3f0d11a304c9222ec75fe9d36beb5ccdd09ff1c",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-observations.jsonl": "c5775eec809a833a1eeb0b627959b669769b2d77af8677ad61c710c0783378db",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-000000.json": "9dd7855a7303792a154951e202cc8bf42a6d916d2ade9e49f37bfddf13d133d7",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-000000.npz": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-000001.json": "6ecb6b51f2bfb1ce67726f87f9191b3de595d839ea038ba64a72c70e89e1afe7",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-000001.npz": "765eaf62e7b9203b7ffef9fd20b2c2494d2d15e0a8562a11583d4c7b54376a0f",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-000002.json": "6e039f8dff6ce8368919d21b7a5e7ad10d1d413572acabee3154ea86d966c0d4",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-000002.npz": "3febc2fa2c087fd4333467223718e21b41bf0b1646572c06f202d87d483a1c20",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.001-observations.jsonl": "6889a521a8678c614b383c73b1e18ee420bdadf7d2884849f1d14c1714dfbea5",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-000000.json": "2bebecc06ad109b705b4bc1ccf509019cf3eafb65aec7a634e5e84bbc3b0710f",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-000000.npz": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-000001.json": "f36017cd37ab96e6e5ab4c5972035f7398eb36dadc19f0c200b798d1aaf42466",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-000001.npz": "a1f2fd1071a431cef1004d22f590c71b1f88194d6999c384f849db4c0aabe8b0",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-000002.json": "7eaa78a72f4c4f43759303e7c40bd39c0a7585042b1d97c35081240d05f689bc",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-000002.npz": "73f84acdc06caadb14f7cf77f3d0d67613fbe4ca32b0f9016ba8d80b401216df",
+    "lab/results/development/nsc-discovery-episode-v1/nf256_frozen_geometry_dt0.0005-observations.jsonl": "0b5eb6aa151e410af031d88931a267b96b8fdeb17dea4726d32c7a89f9b63a97",
+    "lab/results/development/nsc-discovery-episode-v1/run-binding-envelope.json": "e978cca1a31bb3f8e4afff319bb68c0e3a7b6488ace116a949a15157e1b4f8ba"
+  },
+  "schema": "NSC-DISCOVERY-EPISODE-ASSESSMENT-v1",
+  "sealed_bytes_rewritten": false,
+  "space_refinement": {
+    "cadence": {
+      "first_time_R_h_gap_exceeds_fine_step": 2.9000000000000004,
+      "first_time_R_h_relative_gap_increases": 0.35000000000000003,
+      "first_time_weyl_gap_exceeds_fine_step": 2.6500000000000004,
+      "first_time_weyl_relative_gap_increases": 0.4,
+      "samples": [
+        {
+          "R_h_gap": 0.001807680082579921,
+          "R_h_gap_over_fine_step": null,
+          "R_h_relative_gap": 0.00011644888551794315,
+          "child_length_relative_gap": 4.3246794046055795e-05,
+          "child_probability_relative_gap": 0.0006373722004183096,
+          "fine_R_h_max": 15.523378128864813,
+          "fine_R_h_step": null,
+          "fine_child_probability": 1.2767914511782394,
+          "fine_child_proper_length": 2.375218143368551,
+          "fine_weyl_C2_max": 0.11212460507184759,
+          "fine_weyl_step": null,
+          "time": 0.3,
+          "weyl_gap": 1.1649759036849727e-05,
+          "weyl_gap_over_fine_step": null,
+          "weyl_relative_gap": 0.00010390011210639051
+        },
+        {
+          "R_h_gap": 0.002757681120357347,
+          "R_h_gap_over_fine_step": 0.00040898473333996806,
+          "R_h_relative_gap": 0.0001238509593342451,
+          "child_length_relative_gap": 4.338717005746044e-05,
+          "child_probability_relative_gap": 0.0004864509738963788,
+          "fine_R_h_max": 22.266126440853828,
+          "fine_R_h_step": 6.742748311989015,
+          "fine_child_probability": 1.3505580462275533,
+          "fine_child_proper_length": 2.368520647622081,
+          "fine_weyl_C2_max": 0.2516814244886674,
+          "fine_weyl_step": 0.13955681941681986,
+          "time": 0.35000000000000003,
+          "weyl_gap": 2.1889004447939175e-05,
+          "weyl_gap_over_fine_step": 0.00015684654135433127,
+          "weyl_relative_gap": 8.697107659975431e-05
+        },
+        {
+          "R_h_gap": 0.0043322381771915275,
+          "R_h_gap_over_fine_step": 0.000469538534490015,
+          "R_h_relative_gap": 0.00013756319136935664,
+          "child_length_relative_gap": 4.3346270469313966e-05,
+          "child_probability_relative_gap": 0.0006408311332590534,
+          "fine_R_h_max": 31.49271352363064,
+          "fine_R_h_step": 9.226587082776813,
+          "fine_child_probability": 1.3459973744110991,
+          "fine_child_proper_length": 2.3589906892475483,
+          "fine_weyl_C2_max": 0.5313580816737771,
+          "fine_weyl_step": 0.27967665718510965,
+          "time": 0.4,
+          "weyl_gap": 6.241175467025517e-05,
+          "weyl_gap_over_fine_step": 0.00022315682437861338,
+          "weyl_relative_gap": 0.0001174570535817546
+        },
+        {
+          "R_h_gap": 0.006518310939469529,
+          "R_h_gap_over_fine_step": 0.0005199072429755838,
+          "R_h_relative_gap": 0.00014804194336622456,
+          "child_length_relative_gap": 4.314899110839522e-05,
+          "child_probability_relative_gap": 8.572310702674962e-05,
+          "fine_R_h_max": 44.03016328517521,
+          "fine_R_h_step": 12.537449761544572,
+          "fine_child_probability": 1.2952989791186265,
+          "fine_child_proper_length": 2.345645064961687,
+          "fine_weyl_C2_max": 1.0723358806101604,
+          "fine_weyl_step": 0.5409777989363833,
+          "time": 0.45,
+          "weyl_gap": 0.00014933166374087037,
+          "weyl_gap_over_fine_step": 0.00027604028119910173,
+          "weyl_relative_gap": 0.00013925829251922492
+        },
+        {
+          "R_h_gap": 0.01016565099394029,
+          "R_h_gap_over_fine_step": 0.0006006732066208051,
+          "R_h_relative_gap": 0.00016677598330732123,
+          "child_length_relative_gap": 4.260798820963503e-05,
+          "child_probability_relative_gap": 9.8837699218208e-06,
+          "fine_R_h_max": 60.95392629289947,
+          "fine_R_h_step": 16.923763007724254,
+          "fine_child_probability": 1.250490878673624,
+          "fine_child_proper_length": 2.327228396858049,
+          "fine_weyl_C2_max": 2.088366280895841,
+          "fine_weyl_step": 1.0160304002856806,
+          "time": 0.5,
+          "weyl_gap": 0.00031147954249144405,
+          "weyl_gap_over_fine_step": 0.0003065651799433012,
+          "weyl_relative_gap": 0.00014914986194750735
+        },
+        {
+          "R_h_gap": 0.014879092084427725,
+          "R_h_gap_over_fine_step": 0.0006558952260315661,
+          "R_h_relative_gap": 0.00017789638404286495,
+          "child_length_relative_gap": 4.1694861596871795e-05,
+          "child_probability_relative_gap": 4.814316353107256e-05,
+          "fine_R_h_max": 83.6390922979218,
+          "fine_R_h_step": 22.68516600502234,
+          "fine_child_probability": 1.205660151758956,
+          "fine_child_proper_length": 2.3021655396595153,
+          "fine_weyl_C2_max": 3.9451313711286913,
+          "fine_weyl_step": 1.8567650902328503,
+          "time": 0.5499999999999945,
+          "weyl_gap": 0.0006474875562498816,
+          "weyl_gap_over_fine_step": 0.00034871807944680957,
+          "weyl_relative_gap": 0.00016412319269982567
+        },
+        {
+          "R_h_gap": 0.02134058034988584,
+          "R_h_gap_over_fine_step": 0.0007074561278953623,
+          "R_h_relative_gap": 0.00018751993756872313,
+          "child_length_relative_gap": 4.023888517852877e-05,
+          "child_probability_relative_gap": 0.0003706418493006829,
+          "fine_R_h_max": 113.80432729754324,
+          "fine_R_h_step": 30.165234999621433,
+          "fine_child_probability": 1.1536846234934004,
+          "fine_child_proper_length": 2.2685535649272444,
+          "fine_weyl_C2_max": 7.240184407740319,
+          "fine_weyl_step": 3.2950530366116277,
+          "time": 0.599999999999989,
+          "weyl_gap": 0.0012244874845261933,
+          "weyl_gap_over_fine_step": 0.00037161389237769585,
+          "weyl_relative_gap": 0.00016912379789900395
+        },
+        {
+          "R_h_gap": 0.031242081248592513,
+          "R_h_gap_over_fine_step": 0.0007865559115436387,
+          "R_h_relative_gap": 0.00020349908699440712,
+          "child_length_relative_gap": 3.80225264205512e-05,
+          "child_probability_relative_gap": 0.00021197730122657352,
+          "fine_R_h_max": 153.52442956882237,
+          "fine_R_h_step": 39.72010227127913,
+          "fine_child_probability": 1.1231152045716175,
+          "fine_child_proper_length": 2.2242121207553276,
+          "fine_weyl_C2_max": 12.890504663425522,
+          "fine_weyl_step": 5.6503202556852035,
+          "time": 0.6499999999999835,
+          "weyl_gap": 0.002342134373302329,
+          "weyl_gap_over_fine_step": 0.0004145135615889622,
+          "weyl_relative_gap": 0.0001816945445082311
+        },
+        {
+          "R_h_gap": 0.043188034228393235,
+          "R_h_gap_over_fine_step": 0.0008360018525046846,
+          "R_h_relative_gap": 0.00021048375537262794,
+          "child_length_relative_gap": 3.487073882398495e-05,
+          "child_probability_relative_gap": 0.0006330633509400553,
+          "fine_R_h_max": 205.18464311858986,
+          "fine_R_h_step": 51.66021354976749,
+          "fine_child_probability": 1.1669730212257328,
+          "fine_child_proper_length": 2.166821648165517,
+          "fine_weyl_C2_max": 22.217875228489717,
+          "fine_weyl_step": 9.327370565064195,
+          "time": 0.699999999999978,
+          "weyl_gap": 0.004506018150642888,
+          "weyl_gap_over_fine_step": 0.000483096293774394,
+          "weyl_relative_gap": 0.00020281048949563252
+        },
+        {
+          "R_h_gap": 0.05769566771374457,
+          "R_h_gap_over_fine_step": 0.0008712808555062705,
+          "R_h_relative_gap": 0.00021258222179074764,
+          "child_length_relative_gap": 3.0305620289624422e-05,
+          "child_probability_relative_gap": 0.00028984233644381265,
+          "fine_R_h_max": 271.4040112467001,
+          "fine_R_h_step": 66.21936812811026,
+          "fine_child_probability": 1.2636106070417295,
+          "fine_child_proper_length": 2.094189575363044,
+          "fine_weyl_C2_max": 36.895406452780094,
+          "fine_weyl_step": 14.677531224290377,
+          "time": 0.7499999999999725,
+          "weyl_gap": 0.007737900759423155,
+          "weyl_gap_over_fine_step": 0.0005271936159548019,
+          "weyl_relative_gap": 0.00020972531551661762
+        },
+        {
+          "R_h_gap": 0.07774197416193829,
+          "R_h_gap_over_fine_step": 0.0009311690872192911,
+          "R_h_relative_gap": 0.0002190577616707488,
+          "child_length_relative_gap": 2.4333675321190783e-05,
+          "child_probability_relative_gap": 0.0001662473537518868,
+          "fine_R_h_max": 354.8925797880976,
+          "fine_R_h_step": 83.48856854139746,
+          "fine_child_probability": 1.379572787904532,
+          "fine_child_proper_length": 2.004666506547553,
+          "fine_weyl_C2_max": 58.72876365558466,
+          "fine_weyl_step": 21.833357202804564,
+          "time": 0.799999999999967,
+          "weyl_gap": 0.01264298856662549,
+          "weyl_gap_over_fine_step": 0.0005790675455537116,
+          "weyl_relative_gap": 0.00021527762172502738
+        },
+        {
+          "R_h_gap": 0.10831129003912565,
+          "R_h_gap_over_fine_step": 0.0010480848263830812,
+          "R_h_relative_gap": 0.0002363664168532933,
+          "child_length_relative_gap": 1.6793822048096606e-05,
+          "child_probability_relative_gap": 0.0001727910829241059,
+          "fine_R_h_max": 458.2346827483185,
+          "fine_R_h_step": 103.34210296022093,
+          "fine_child_probability": 1.4716524952736365,
+          "fine_child_proper_length": 1.8976481118751405,
+          "fine_weyl_C2_max": 89.21693631832163,
+          "fine_weyl_step": 30.48817266273697,
+          "time": 0.8499999999999615,
+          "weyl_gap": 0.01870666662701126,
+          "weyl_gap_over_fine_step": 0.0006135712636485683,
+          "weyl_relative_gap": 0.0002096761825609747
+        },
+        {
+          "R_h_gap": 0.13404808202494678,
+          "R_h_gap_over_fine_step": 0.001068588413512462,
+          "R_h_relative_gap": 0.00022966071816721498,
+          "child_length_relative_gap": 7.4871653930518556e-06,
+          "child_probability_relative_gap": 0.00021175102471290017,
+          "fine_R_h_max": 583.6787548811327,
+          "fine_R_h_step": 125.4440721328142,
+          "fine_child_probability": 1.4989987690687738,
+          "fine_child_proper_length": 1.7740262965514135,
+          "fine_weyl_C2_max": 128.9792513464898,
+          "fine_weyl_step": 39.762315028168175,
+          "time": 0.899999999999956,
+          "weyl_gap": 0.0268890206126855,
+          "weyl_gap_over_fine_step": 0.0006762438402702897,
+          "weyl_relative_gap": 0.00020847555193548802
+        },
+        {
+          "R_h_gap": 0.1695449631648671,
+          "R_h_gap_over_fine_step": 0.0011353779028018581,
+          "R_h_relative_gap": 0.00023130033528235885,
+          "child_length_relative_gap": 3.354739670275983e-06,
+          "child_probability_relative_gap": 3.1886838675403945e-05,
+          "fine_R_h_max": 733.0078573292851,
+          "fine_R_h_step": 149.3291024481524,
+          "fine_child_probability": 1.4999314972538926,
+          "fine_child_proper_length": 1.6364016502171932,
+          "fine_weyl_C2_max": 177.31449025256956,
+          "fine_weyl_step": 48.33523890607975,
+          "time": 0.9499999999999504,
+          "weyl_gap": 0.03372026702504627,
+          "weyl_gap_over_fine_step": 0.0006976331924327125,
+          "weyl_relative_gap": 0.00019017208902112053
+        },
+        {
+          "R_h_gap": 0.21100931846740423,
+          "R_h_gap_over_fine_step": 0.0012090812057621142,
+          "R_h_relative_gap": 0.00023250991918969066,
+          "child_length_relative_gap": 1.5507278411628257e-05,
+          "child_probability_relative_gap": 7.926444059673854e-06,
+          "fine_R_h_max": 907.5282431080052,
+          "fine_R_h_step": 174.52038577872008,
+          "fine_child_probability": 1.499939777759149,
+          "fine_child_proper_length": 1.488905010351396,
+          "fine_weyl_C2_max": 232.18065106235974,
+          "fine_weyl_step": 54.86616080979019,
+          "time": 1.0,
+          "weyl_gap": 0.03839241096605406,
+          "weyl_gap_over_fine_step": 0.0006997466270540184,
+          "weyl_relative_gap": 0.000165355772715714
+        },
+        {
+          "R_h_gap": 0.26317128307277926,
+          "R_h_gap_over_fine_step": 0.0013126291191663093,
+          "R_h_relative_gap": 0.00023751492702100898,
+          "child_length_relative_gap": 2.849901095351554e-05,
+          "child_probability_relative_gap": 6.235040340429391e-06,
+          "fine_R_h_max": 1108.0199732015196,
+          "fine_R_h_step": 200.49173009351443,
+          "fine_child_probability": 1.4999480022728413,
+          "fine_child_proper_length": 1.336638332141211,
+          "fine_weyl_C2_max": 290.67910227532764,
+          "fine_weyl_step": 58.49845121296789,
+          "time": 1.0499999999999945,
+          "weyl_gap": 0.041152634116031095,
+          "weyl_gap_over_fine_step": 0.0007034824557356556,
+          "weyl_relative_gap": 0.0001415741062701227
+        },
+        {
+          "R_h_gap": 0.322562813993045,
+          "R_h_gap_over_fine_step": 0.001424007775830032,
+          "R_h_relative_gap": 0.00024170380971546467,
+          "child_length_relative_gap": 4.2012495659309905e-05,
+          "child_probability_relative_gap": 4.477729446337209e-06,
+          "fine_R_h_max": 1334.5375663410853,
+          "fine_R_h_step": 226.51759313956563,
+          "fine_child_probability": 1.499955390190593,
+          "fine_child_proper_length": 1.1849026777933258,
+          "fine_weyl_C2_max": 349.80712159123635,
+          "fine_weyl_step": 59.128019315908716,
+          "time": 1.099999999999989,
+          "weyl_gap": 0.043548060590694604,
+          "weyl_gap_over_fine_step": 0.0007365046401778887,
+          "weyl_relative_gap": 0.000124491635254877
+        },
+        {
+          "R_h_gap": 0.37625601999548053,
+          "R_h_gap_over_fine_step": 0.001489790772768871,
+          "R_h_relative_gap": 0.00023707231941911118,
+          "child_length_relative_gap": 5.566696024042191e-05,
+          "child_probability_relative_gap": 4.849621701260868e-06,
+          "fine_R_h_max": 1587.0938493258327,
+          "fine_R_h_step": 252.55628298474744,
+          "fine_child_probability": 1.4999003602631584,
+          "fine_child_proper_length": 1.0384597428127793,
+          "fine_weyl_C2_max": 407.1240159737175,
+          "fine_weyl_step": 57.316894382481166,
+          "time": 1.1499999999999835,
+          "weyl_gap": 0.044333583307661684,
+          "weyl_gap_over_fine_step": 0.0007734819512693658,
+          "weyl_relative_gap": 0.0001088945421252764
+        },
+        {
+          "R_h_gap": 0.4315088605744677,
+          "R_h_gap_over_fine_step": 0.0015466737156400038,
+          "R_h_relative_gap": 0.00023123746974102743,
+          "child_length_relative_gap": 6.91857506419479e-05,
+          "child_probability_relative_gap": 8.089017988762264e-06,
+          "fine_R_h_max": 1866.085375599952,
+          "fine_R_h_step": 278.9915262741192,
+          "fine_child_probability": 1.49825561210316,
+          "fine_child_proper_length": 0.9010281648819357,
+          "fine_weyl_C2_max": 461.0957502045126,
+          "fine_weyl_step": 53.97173423079511,
+          "time": 1.199999999999978,
+          "weyl_gap": 0.04333287050354784,
+          "weyl_gap_over_fine_step": 0.0008028808249563906,
+          "weyl_relative_gap": 9.397803055944052e-05
+        },
+        {
+          "R_h_gap": 0.5018633967697497,
+          "R_h_gap_over_fine_step": 0.0016425416022553723,
+          "R_h_relative_gap": 0.0002311002756558998,
+          "child_length_relative_gap": 8.244964913119668e-05,
+          "child_probability_relative_gap": 6.479075369767774e-06,
+          "fine_R_h_max": 2171.6261278589154,
+          "fine_R_h_step": 305.5407522589635,
+          "fine_child_probability": 1.4874758445496665,
+          "fine_child_proper_length": 0.7750858832130149,
+          "fine_weyl_C2_max": 511.07286360970096,
+          "fine_weyl_step": 49.977113405188334,
+          "time": 1.2499999999999725,
+          "weyl_gap": 0.043074065536529815,
+          "weyl_gap_over_fine_step": 0.0008618758187834457,
+          "weyl_relative_gap": 8.428165258530506e-05
+        },
+        {
+          "R_h_gap": 0.5748222378670107,
+          "R_h_gap_over_fine_step": 0.0017319061230894927,
+          "R_h_relative_gap": 0.00022960491099365988,
+          "child_length_relative_gap": 9.53084424891917e-05,
+          "child_probability_relative_gap": 1.0577618931138324e-05,
+          "fine_R_h_max": 2503.527626562323,
+          "fine_R_h_step": 331.90149870340747,
+          "fine_child_probability": 1.4569503033757756,
+          "fine_child_proper_length": 0.6619298824719511,
+          "fine_weyl_C2_max": 556.8912035771867,
+          "fine_weyl_step": 45.81833996748577,
+          "time": 1.299999999999967,
+          "weyl_gap": 0.039716585237442814,
+          "weyl_gap_over_fine_step": 0.0008668272413541615,
+          "weyl_relative_gap": 7.131839214252911e-05
+        },
+        {
+          "R_h_gap": 0.6579123981887278,
+          "R_h_gap_over_fine_step": 0.0018361384714903517,
+          "R_h_relative_gap": 0.00022989134258642692,
+          "child_length_relative_gap": 0.00010780228551362356,
+          "child_probability_relative_gap": 1.0178418457232385e-06,
+          "fine_R_h_max": 2861.840688678338,
+          "fine_R_h_step": 358.3130621160153,
+          "fine_child_probability": 1.4061386135949303,
+          "fine_child_proper_length": 0.5618884924570127,
+          "fine_weyl_C2_max": 598.7735642722339,
+          "fine_weyl_step": 41.88236069504717,
+          "time": 1.3499999999999615,
+          "weyl_gap": 0.03818788635260262,
+          "weyl_gap_over_fine_step": 0.0009117892525365352,
+          "weyl_relative_gap": 6.377684091484105e-05
+        },
+        {
+          "R_h_gap": 0.7483012461375438,
+          "R_h_gap_over_fine_step": 0.0019436542117618571,
+          "R_h_relative_gap": 0.00023047078219245835,
+          "child_length_relative_gap": 0.00011991564027194903,
+          "child_probability_relative_gap": 1.3727738482947177e-07,
+          "fine_R_h_max": 3246.837794443995,
+          "fine_R_h_step": 384.99710576565667,
+          "fine_child_probability": 1.3475137795082497,
+          "fine_child_proper_length": 0.4745857596044186,
+          "fine_weyl_C2_max": 637.2246084655596,
+          "fine_weyl_step": 38.45104419332574,
+          "time": 1.399999999999956,
+          "weyl_gap": 0.03649114869915593,
+          "weyl_gap_over_fine_step": 0.0009490288096126656,
+          "weyl_relative_gap": 5.7265755613278674e-05
+        },
+        {
+          "R_h_gap": 0.8315081577529781,
+          "R_h_gap_over_fine_step": 0.0020180838542473508,
+          "R_h_relative_gap": 0.0002272584129088458,
+          "child_length_relative_gap": 0.00013169074812760471,
+          "child_probability_relative_gap": 7.873215022228981e-06,
+          "fine_R_h_max": 3658.866341227593,
+          "fine_R_h_step": 412.0285467835979,
+          "fine_child_probability": 1.294552698911771,
+          "fine_child_proper_length": 0.3991910914875855,
+          "fine_weyl_C2_max": 672.8252865818433,
+          "fine_weyl_step": 35.60067811628369,
+          "time": 1.4499999999999504,
+          "weyl_gap": 0.03349890695596969,
+          "weyl_gap_over_fine_step": 0.0009409626088174805,
+          "weyl_relative_gap": 4.978841851523492e-05
+        },
+        {
+          "R_h_gap": 0.9210276148005505,
+          "R_h_gap_over_fine_step": 0.002096869613176333,
+          "R_h_relative_gap": 0.00022474472049566617,
+          "child_length_relative_gap": 0.00014321031820024513,
+          "child_probability_relative_gap": 8.826488382094682e-08,
+          "fine_R_h_max": 4098.105676383669,
+          "fine_R_h_step": 439.23933515607587,
+          "fine_child_probability": 1.249823646170727,
+          "fine_child_proper_length": 0.33462235770621584,
+          "fine_weyl_C2_max": 706.0262099847234,
+          "fine_weyl_step": 33.20092340288011,
+          "time": 1.499999999999945,
+          "weyl_gap": 0.03248595179991298,
+          "weyl_gap_over_fine_step": 0.0009784653097056602,
+          "weyl_relative_gap": 4.601238784126144e-05
+        },
+        {
+          "R_h_gap": 1.0288335730538165,
+          "R_h_gap_over_fine_step": 0.0022052435996118063,
+          "R_h_relative_gap": 0.00022539178838792306,
+          "child_length_relative_gap": 0.00015447304849723511,
+          "child_probability_relative_gap": 3.464149303619482e-06,
+          "fine_R_h_max": 4564.645324536337,
+          "fine_R_h_step": 466.53964815266863,
+          "fine_child_probability": 1.2051299731118958,
+          "fine_child_proper_length": 0.279694830884338,
+          "fine_weyl_C2_max": 737.1898610726604,
+          "fine_weyl_step": 31.163651087936955,
+          "time": 1.5499999999999394,
+          "weyl_gap": 0.036670555784780845,
+          "weyl_gap_over_fine_step": 0.001176709227083329,
+          "weyl_relative_gap": 4.974370609414343e-05
+        },
+        {
+          "R_h_gap": 1.1295540080591309,
+          "R_h_gap_over_fine_step": 0.0022870714935451955,
+          "R_h_relative_gap": 0.00022329680243178508,
+          "child_length_relative_gap": 0.00016557773338809025,
+          "child_probability_relative_gap": 5.388805071348194e-06,
+          "fine_R_h_max": 5058.531943842761,
+          "fine_R_h_step": 493.8866193064241,
+          "fine_child_probability": 1.1523220873287163,
+          "fine_child_proper_length": 0.23322125943578328,
+          "fine_weyl_C2_max": 766.6422579490262,
+          "fine_weyl_step": 29.45239687636581,
+          "time": 1.599999999999934,
+          "weyl_gap": 0.03483761142729236,
+          "weyl_gap_over_fine_step": 0.00118284469591838,
+          "weyl_relative_gap": 4.544180948294231e-05
+        },
+        {
+          "R_h_gap": 1.275107695951192,
+          "R_h_gap_over_fine_step": 0.002446591032577235,
+          "R_h_relative_gap": 0.00022852583197525552,
+          "child_length_relative_gap": 0.0001765289400994981,
+          "child_probability_relative_gap": 4.30526687428004e-06,
+          "fine_R_h_max": 5579.709238687988,
+          "fine_R_h_step": 521.1772948452262,
+          "fine_child_probability": 1.0940458309786285,
+          "fine_child_proper_length": 0.19407335963625005,
+          "fine_weyl_C2_max": 794.6487206903364,
+          "fine_weyl_step": 28.0064627413102,
+          "time": 1.6499999999999284,
+          "weyl_gap": 0.036545523562836024,
+          "weyl_gap_over_fine_step": 0.0013048960841788315,
+          "weyl_relative_gap": 4.598953299904362e-05
+        },
+        {
+          "R_h_gap": 1.3237696139913169,
+          "R_h_gap_over_fine_step": 0.0024159836424532846,
+          "R_h_relative_gap": 0.00021603285994877924,
+          "child_length_relative_gap": 0.00018736767225252692,
+          "child_probability_relative_gap": 2.1586070704272358e-06,
+          "fine_R_h_max": 6127.63083498121,
+          "fine_R_h_step": 547.9215962932221,
+          "fine_child_probability": 1.0437590576889888,
+          "fine_child_proper_length": 0.16121548818325349,
+          "fine_weyl_C2_max": 821.4148185265448,
+          "fine_weyl_step": 26.76609783620836,
+          "time": 1.699999999999923,
+          "weyl_gap": 0.016552797452391133,
+          "weyl_gap_over_fine_step": 0.0006184240061320786,
+          "weyl_relative_gap": 2.0151569072108495e-05
+        },
+        {
+          "R_h_gap": 1.5809724771570473,
+          "R_h_gap_over_fine_step": 0.002754664281126353,
+          "R_h_relative_gap": 0.00023591123668588928,
+          "child_length_relative_gap": 0.000198143929908896,
+          "child_probability_relative_gap": 1.6153288532647247e-05,
+          "fine_R_h_max": 6701.55648101696,
+          "fine_R_h_step": 573.9256460357501,
+          "fine_child_probability": 1.013768976668009,
+          "fine_child_proper_length": 0.13371962151702582,
+          "fine_weyl_C2_max": 847.098806914084,
+          "fine_weyl_step": 25.683988387539216,
+          "time": 1.7499999999999174,
+          "weyl_gap": 0.007285623912480332,
+          "weyl_gap_over_fine_step": 0.000283664040122951,
+          "weyl_relative_gap": 8.600677811153225e-06
+        },
+        {
+          "R_h_gap": 1.5353005899851269,
+          "R_h_gap_over_fine_step": 0.002560872299874657,
+          "R_h_relative_gap": 0.00021028406784724178,
+          "child_length_relative_gap": 0.00020883342050897528,
+          "child_probability_relative_gap": 1.352834330413548e-07,
+          "fine_R_h_max": 7301.078991397611,
+          "fine_R_h_step": 599.5225103806515,
+          "fine_child_probability": 1.0033348805102849,
+          "fine_child_proper_length": 0.11076849918401506,
+          "fine_weyl_C2_max": 871.8258229445852,
+          "fine_weyl_step": 24.727016030501204,
+          "time": 1.799999999999912,
+          "weyl_gap": 0.02276687164771829,
+          "weyl_gap_over_fine_step": 0.0009207286321825066,
+          "weyl_relative_gap": 2.611401388734203e-05
+        },
+        {
+          "R_h_gap": 1.7428218746572384,
+          "R_h_gap_over_fine_step": 0.0027880716202128234,
+          "R_h_relative_gap": 0.0002198817374974845,
+          "child_length_relative_gap": 0.00021950889820880113,
+          "child_probability_relative_gap": 6.406015158232411e-06,
+          "fine_R_h_max": 7926.178383401108,
+          "fine_R_h_step": 625.0993920034962,
+          "fine_child_probability": 1.001790134774669,
+          "fine_child_proper_length": 0.09165167547917631,
+          "fine_weyl_C2_max": 895.6744601717446,
+          "fine_weyl_step": 23.84863722715943,
+          "time": 1.8499999999999064,
+          "weyl_gap": 0.04160602389140422,
+          "weyl_gap_over_fine_step": 0.001744587059424185,
+          "weyl_relative_gap": 4.6452171789543164e-05
+        },
+        {
+          "R_h_gap": 2.034297904872801,
+          "R_h_gap_over_fine_step": 0.003125521566462301,
+          "R_h_relative_gap": 0.0002371793415225781,
+          "child_length_relative_gap": 0.00023013523249282782,
+          "child_probability_relative_gap": 1.0185879805171335e-05,
+          "fine_R_h_max": 8577.04508248307,
+          "fine_R_h_step": 650.866699081962,
+          "fine_child_probability": 1.0017021445312322,
+          "fine_child_proper_length": 0.07575761445719251,
+          "fine_weyl_C2_max": 918.6920062527196,
+          "fine_weyl_step": 23.017546080974967,
+          "time": 1.8999999999999009,
+          "weyl_gap": 0.0032471222684762324,
+          "weyl_gap_over_fine_step": 0.00014107160933024587,
+          "weyl_relative_gap": 3.534505847853207e-06
+        },
+        {
+          "R_h_gap": 1.5553093784837984,
+          "R_h_gap_over_fine_step": 0.00229847931192425,
+          "R_h_relative_gap": 0.00016807407144307467,
+          "child_length_relative_gap": 0.00024074790649572547,
+          "child_probability_relative_gap": 1.5329259122309376e-05,
+          "fine_R_h_max": 9253.7139436797,
+          "fine_R_h_step": 676.668861196631,
+          "fine_child_probability": 1.0016531647237397,
+          "fine_child_proper_length": 0.06256389281381888,
+          "fine_weyl_C2_max": 940.928706220315,
+          "fine_weyl_step": 22.236699967595428,
+          "time": 1.9499999999998954,
+          "weyl_gap": 0.10424735009110009,
+          "weyl_gap_over_fine_step": 0.004688076479109544,
+          "weyl_relative_gap": 0.00011077970191752751
+        },
+        {
+          "R_h_gap": 1.156596012180671,
+          "R_h_gap_over_fine_step": 0.0016468202872543605,
+          "R_h_relative_gap": 0.00011617034804388148,
+          "child_length_relative_gap": 0.0002513635979164371,
+          "child_probability_relative_gap": 3.389328900686661e-05,
+          "fine_R_h_max": 9956.034665091865,
+          "fine_R_h_step": 702.3207214121649,
+          "fine_child_probability": 1.001604621567035,
+          "fine_child_proper_length": 0.051626857665557566,
+          "fine_weyl_C2_max": 962.4330454431688,
+          "fine_weyl_step": 21.504339222853787,
+          "time": 1.9999999999998899,
+          "weyl_gap": 0.17861597721730504,
+          "weyl_gap_over_fine_step": 0.00830604350899936,
+          "weyl_relative_gap": 0.00018555351485535445
+        },
+        {
+          "R_h_gap": 2.1841156087466516,
+          "R_h_gap_over_fine_step": 0.0030009489711729964,
+          "R_h_relative_gap": 0.00020443164628887708,
+          "child_length_relative_gap": 0.0002619470170728393,
+          "child_probability_relative_gap": 0.00011019860845839827,
+          "fine_R_h_max": 10683.842978304514,
+          "fine_R_h_step": 727.8083132126485,
+          "fine_child_probability": 1.0015566552553627,
+          "fine_child_proper_length": 0.04257154377539815,
+          "fine_weyl_C2_max": 983.2436840287825,
+          "fine_weyl_step": 20.810638585613674,
+          "time": 2.0499999999999066,
+          "weyl_gap": 0.17127044317339823,
+          "weyl_gap_over_fine_step": 0.008229946547233632,
+          "weyl_relative_gap": 0.0001741588760619995
+        },
+        {
+          "R_h_gap": 1.8742058388888836,
+          "R_h_gap_over_fine_step": 0.0024895589933247053,
+          "R_h_relative_gap": 0.00016387689195378226,
+          "child_length_relative_gap": 0.000272572067545168,
+          "child_probability_relative_gap": 0.0008168349037838007,
+          "fine_R_h_max": 11436.669420222228,
+          "fine_R_h_step": 752.826441917714,
+          "fine_child_probability": 0.9992512900644747,
+          "fine_child_proper_length": 0.03508227649605782,
+          "fine_weyl_C2_max": 1003.4009447746676,
+          "fine_weyl_step": 20.157260745885083,
+          "time": 2.0999999999999233,
+          "weyl_gap": 0.07473702792105996,
+          "weyl_gap_over_fine_step": 0.0037076976313022507,
+          "weyl_relative_gap": 7.447816551648413e-05
+        },
+        {
+          "R_h_gap": 0.7817017812049016,
+          "R_h_gap_over_fine_step": 0.0010060763278961198,
+          "R_h_relative_gap": 6.400230728732308e-05,
+          "child_length_relative_gap": 0.00028319798405902026,
+          "child_probability_relative_gap": 0.0006917687114279765,
+          "fine_R_h_max": 12213.650012579048,
+          "fine_R_h_step": 776.9805923568201,
+          "fine_child_probability": 0.9453178885635032,
+          "fine_child_proper_length": 0.02889416687088903,
+          "fine_weyl_C2_max": 1022.9196282911867,
+          "fine_weyl_step": 19.518683516519104,
+          "time": 2.14999999999994,
+          "weyl_gap": 0.39825753135664854,
+          "weyl_gap_over_fine_step": 0.020403913564129166,
+          "weyl_relative_gap": 0.0003891826155628356
+        },
+        {
+          "R_h_gap": 3.13497481867671,
+          "R_h_gap_over_fine_step": 0.003913999984635176,
+          "R_h_relative_gap": 0.0002408231035150899,
+          "child_length_relative_gap": 0.00029389152989467226,
+          "child_probability_relative_gap": 0.0007667446970832229,
+          "fine_R_h_max": 13014.614455855335,
+          "fine_R_h_step": 800.964443276287,
+          "fine_child_probability": 0.8213315219881954,
+          "fine_child_proper_length": 0.02378558032112466,
+          "fine_weyl_C2_max": 1041.8262039258616,
+          "fine_weyl_step": 18.906575634674937,
+          "time": 2.1999999999999567,
+          "weyl_gap": 1.0010717962250055,
+          "weyl_gap_over_fine_step": 0.05294834006794045,
+          "weyl_relative_gap": 0.0009599593523595091
+        },
+        {
+          "R_h_gap": 7.282727090874687,
+          "R_h_gap_over_fine_step": 0.008825010435132306,
+          "R_h_relative_gap": 0.0005259374884492687,
+          "child_length_relative_gap": 0.0003045338606147444,
+          "child_probability_relative_gap": 0.0001657847654273033,
+          "fine_R_h_max": 13839.851677318802,
+          "fine_R_h_step": 825.237221463467,
+          "fine_child_probability": 0.7522570680958618,
+          "fine_child_proper_length": 0.019571476632687053,
+          "fine_weyl_C2_max": 1060.1420514600911,
+          "fine_weyl_step": 18.315847534229533,
+          "time": 2.2499999999999734,
+          "weyl_gap": 1.6050479710322634,
+          "weyl_gap_over_fine_step": 0.08763165166300237,
+          "weyl_relative_gap": 0.0015117045969725153
+        },
+        {
+          "R_h_gap": 8.914289911976084,
+          "R_h_gap_over_fine_step": 0.010498213058121961,
+          "R_h_relative_gap": 0.0006065013160875127,
+          "child_length_relative_gap": 0.00031513762862024305,
+          "child_probability_relative_gap": 0.001201030938894904,
+          "fine_R_h_max": 14688.976177138276,
+          "fine_R_h_step": 849.1244998194743,
+          "fine_child_probability": 0.6827598710023977,
+          "fine_child_proper_length": 0.016097619656656473,
+          "fine_weyl_C2_max": 1077.890633140692,
+          "fine_weyl_step": 17.748581680600864,
+          "time": 2.29999999999999,
+          "weyl_gap": 1.7609431958433106,
+          "weyl_gap_over_fine_step": 0.09921599525713173,
+          "weyl_relative_gap": 0.0016310291527740165
+        },
+        {
+          "R_h_gap": 2.2017342541366816,
+          "R_h_gap_over_fine_step": 0.0025235669451931604,
+          "R_h_relative_gap": 0.00014146647302210424,
+          "child_length_relative_gap": 0.0003257772529942331,
+          "child_probability_relative_gap": 0.001178192657146448,
+          "fine_R_h_max": 15561.445305936504,
+          "fine_R_h_step": 872.4691287982278,
+          "fine_child_probability": 0.5582768895422827,
+          "fine_child_proper_length": 0.013235725563258503,
+          "fine_weyl_C2_max": 1095.1044101103291,
+          "fine_weyl_step": 17.213776969637138,
+          "time": 2.35,
+          "weyl_gap": 0.9291948582122131,
+          "weyl_gap_over_fine_step": 0.05397971984017174,
+          "weyl_relative_gap": 0.0008477795334011526
+        },
+        {
+          "R_h_gap": 16.275834628380835,
+          "R_h_gap_over_fine_step": 0.018170650010545207,
+          "R_h_relative_gap": 0.00098800447350243,
+          "child_length_relative_gap": 0.00033637392825208577,
+          "child_probability_relative_gap": 0.0017133499272961336,
+          "fine_R_h_max": 16457.166406664066,
+          "fine_R_h_step": 895.7211007275619,
+          "fine_child_probability": 0.5042905780438304,
+          "fine_child_proper_length": 0.01087928045970623,
+          "fine_weyl_C2_max": 1111.7876911306414,
+          "fine_weyl_step": 16.68328102031228,
+          "time": 2.4000000000000004,
+          "weyl_gap": 2.849588056259563,
+          "weyl_gap_over_fine_step": 0.17080501448067223,
+          "weyl_relative_gap": 0.002556516015988864
+        },
+        {
+          "R_h_gap": 50.41533197276294,
+          "R_h_gap_over_fine_step": 0.05484072377077835,
+          "R_h_relative_gap": 0.0028929626824610753,
+          "child_length_relative_gap": 0.00034696326606565355,
+          "child_probability_relative_gap": 0.00022683254617921245,
+          "fine_R_h_max": 17376.471049387008,
+          "fine_R_h_step": 919.3046427229419,
+          "fine_child_probability": 0.5019763994209978,
+          "fine_child_proper_length": 0.008939940211057049,
+          "fine_weyl_C2_max": 1127.9887052228005,
+          "fine_weyl_step": 16.201014092159085,
+          "time": 2.45,
+          "weyl_gap": 7.313100834065381,
+          "weyl_gap_over_fine_step": 0.4513977206898889,
+          "weyl_relative_gap": 0.006441547784958845
+        },
+        {
+          "R_h_gap": 92.33364931214601,
+          "R_h_gap_over_fine_step": 0.09793744038822365,
+          "R_h_relative_gap": 0.0050149751437359984,
+          "child_length_relative_gap": 0.0003575039074353626,
+          "child_probability_relative_gap": 1.394195254426137e-05,
+          "fine_R_h_max": 18319.25298187509,
+          "fine_R_h_step": 942.7819324880838,
+          "fine_child_probability": 0.5019047415828091,
+          "fine_child_proper_length": 0.007344540357593904,
+          "fine_weyl_C2_max": 1143.7134567182536,
+          "fine_weyl_step": 15.72475149545312,
+          "time": 2.5,
+          "weyl_gap": 11.984773854287823,
+          "weyl_gap_over_fine_step": 0.7621598254034904,
+          "weyl_relative_gap": 0.010370158521702052
+        },
+        {
+          "R_h_gap": 103.54733075387776,
+          "R_h_gap_over_fine_step": 0.10715337161595541,
+          "R_h_relative_gap": 0.005340478851663178,
+          "child_length_relative_gap": 0.00036803840836894305,
+          "child_probability_relative_gap": 9.593341001912124e-05,
+          "fine_R_h_max": 19285.59990304336,
+          "fine_R_h_step": 966.3469211682677,
+          "fine_child_probability": 0.501832437560267,
+          "fine_child_proper_length": 0.006032571307089842,
+          "fine_weyl_C2_max": 1158.9594381180843,
+          "fine_weyl_step": 15.245981399830725,
+          "time": 2.5500000000000003,
+          "weyl_gap": 13.076055558767393,
+          "weyl_gap_over_fine_step": 0.8576722754569657,
+          "weyl_relative_gap": 0.011156706114544227
+        },
+        {
+          "R_h_gap": 49.2053946480155,
+          "R_h_gap_over_fine_step": 0.049697959094100554,
+          "R_h_relative_gap": 0.002420942235454514,
+          "child_length_relative_gap": 0.00037854914005015783,
+          "child_probability_relative_gap": 0.0008605626511339103,
+          "fine_R_h_max": 20275.688742604107,
+          "fine_R_h_step": 990.0888395607471,
+          "fine_child_probability": 0.500740767429444,
+          "fine_child_proper_length": 0.004954038397640831,
+          "fine_weyl_C2_max": 1173.83020295428,
+          "fine_weyl_step": 14.870764836195576,
+          "time": 2.6,
+          "weyl_gap": 6.5955311211257595,
+          "weyl_gap_over_fine_step": 0.4435233287444757,
+          "weyl_relative_gap": 0.005587417260342815
+        },
+        {
+          "R_h_gap": 154.28046122565866,
+          "R_h_gap_over_fine_step": 0.1523522320636998,
+          "R_h_relative_gap": 0.007195035913651573,
+          "child_length_relative_gap": 0.0003890356256350119,
+          "child_probability_relative_gap": 0.000508882364584409,
+          "fine_R_h_max": 21288.345131918788,
+          "fine_R_h_step": 1012.6563893146813,
+          "fine_child_probability": 0.47270417766666506,
+          "fine_child_proper_length": 0.004067669587521861,
+          "fine_weyl_C2_max": 1188.1959246155407,
+          "fine_weyl_step": 14.36572166126075,
+          "time": 2.6500000000000004,
+          "weyl_gap": 18.790490394338576,
+          "weyl_gap_over_fine_step": 1.308008802997336,
+          "weyl_relative_gap": 0.0155681042973336
+        },
+        {
+          "R_h_gap": 444.0387677177787,
+          "R_h_gap_over_fine_step": 0.42825283148641086,
+          "R_h_relative_gap": 0.019501690316441216,
+          "child_length_relative_gap": 0.00039950925819676365,
+          "child_probability_relative_gap": 0.0019805160133923735,
+          "fine_R_h_max": 22325.20638553053,
+          "fine_R_h_step": 1036.8612536117435,
+          "fine_child_probability": 0.37828398484082976,
+          "fine_child_proper_length": 0.0033394208147293526,
+          "fine_weyl_C2_max": 1202.2556347220134,
+          "fine_weyl_step": 14.059710106472721,
+          "time": 2.7,
+          "weyl_gap": 49.561260579311465,
+          "weyl_gap_over_fine_step": 3.525055652213964,
+          "weyl_relative_gap": 0.03959146163096127
+        },
+        {
+          "R_h_gap": 748.0567708462477,
+          "R_h_gap_over_fine_step": 0.7058925285805767,
+          "R_h_relative_gap": 0.030997262118465607,
+          "child_length_relative_gap": 0.00040990492186758075,
+          "child_probability_relative_gap": 0.0015110778050425268,
+          "fine_R_h_max": 23384.938201010227,
+          "fine_R_h_step": 1059.7318154796958,
+          "fine_child_probability": 0.25155726132808726,
+          "fine_child_proper_length": 0.002741228415481133,
+          "fine_weyl_C2_max": 1215.9263930384618,
+          "fine_weyl_step": 13.670758316448428,
+          "time": 2.75,
+          "weyl_gap": 79.980862377922,
+          "weyl_gap_over_fine_step": 5.8505066453914525,
+          "weyl_relative_gap": 0.061718045055796526
+        },
+        {
+          "R_h_gap": 815.1549248248339,
+          "R_h_gap_over_fine_step": 0.7539803678048002,
+          "R_h_relative_gap": 0.03224348537885555,
+          "child_length_relative_gap": 0.00042029728068492726,
+          "child_probability_relative_gap": 0.0017716372730668655,
+          "fine_R_h_max": 24466.073678314686,
+          "fine_R_h_step": 1081.1354773044586,
+          "fine_child_probability": 0.12520511774881096,
+          "fine_child_proper_length": 0.002249968236497914,
+          "fine_weyl_C2_max": 1229.0527385736882,
+          "fine_weyl_step": 13.126345535226392,
+          "time": 2.8000000000000003,
+          "weyl_gap": 84.30935022876793,
+          "weyl_gap_over_fine_step": 6.422911083858942,
+          "weyl_relative_gap": 0.0641935312032971
+        },
+        {
+          "R_h_gap": 376.3525934815407,
+          "R_h_gap_over_fine_step": 0.33961637642388126,
+          "R_h_relative_gap": 0.014502657019070697,
+          "child_length_relative_gap": 0.00043066934342569436,
+          "child_probability_relative_gap": 0.008037818378672096,
+          "fine_R_h_max": 25574.243423968554,
+          "fine_R_h_step": 1108.1697456538677,
+          "fine_child_probability": 0.031650014622023416,
+          "fine_child_proper_length": 0.0018465950851857887,
+          "fine_weyl_C2_max": 1242.249701492045,
+          "fine_weyl_step": 13.196962918356803,
+          "time": 2.85,
+          "weyl_gap": 46.63872846838626,
+          "weyl_gap_over_fine_step": 3.534050126299317,
+          "weyl_relative_gap": 0.03618523324770482
+        },
+        {
+          "R_h_gap": 1164.3664629161358,
+          "R_h_gap_over_fine_step": 1.0343280269177224,
+          "R_h_relative_gap": 0.04178698565146834,
+          "child_length_relative_gap": 0.000440977187920215,
+          "child_probability_relative_gap": 0.07030148262876199,
+          "fine_R_h_max": 26699.96605026722,
+          "fine_R_h_step": 1125.722626298666,
+          "fine_child_probability": 0.004207066554961069,
+          "fine_child_proper_length": 0.0015154315558248005,
+          "fine_weyl_C2_max": 1254.604406641408,
+          "fine_weyl_step": 12.354705149363099,
+          "time": 2.9000000000000004,
+          "weyl_gap": 132.53184911574021,
+          "weyl_gap_over_fine_step": 10.727236912049852,
+          "weyl_relative_gap": 0.09554349730654225
+        },
+        {
+          "R_h_gap": 3238.622851073742,
+          "R_h_gap_over_fine_step": 2.8076193984917195,
+          "R_h_relative_gap": 0.1041622389732743,
+          "child_length_relative_gap": 0.00045125496634860584,
+          "child_probability_relative_gap": 0.015339535823286923,
+          "fine_R_h_max": 27853.47811561823,
+          "fine_R_h_step": 1153.5120653510094,
+          "fine_child_probability": 0.00315001762177022,
+          "fine_child_proper_length": 0.0012435802335844953,
+          "fine_weyl_C2_max": 1267.1175062250918,
+          "fine_weyl_step": 12.513099583683697,
+          "time": 2.95,
+          "weyl_gap": 314.57779977051473,
+          "weyl_gap_over_fine_step": 25.139878226551044,
+          "weyl_relative_gap": 0.19888647236801532
+        },
+        {
+          "R_h_gap": 5209.402828514576,
+          "R_h_gap_over_fine_step": 4.42408118386977,
+          "R_h_relative_gap": 0.15214203406913634,
+          "child_length_relative_gap": 0.00046149137189203167,
+          "child_probability_relative_gap": 0.004083399601112189,
+          "fine_R_h_max": 29030.988792300224,
+          "fine_R_h_step": 1177.5106766819954,
+          "fine_child_probability": 0.0030091976292384495,
+          "fine_child_proper_length": 0.0010204376744732875,
+          "fine_weyl_C2_max": 1279.4424078537731,
+          "fine_weyl_step": 12.324901628681346,
+          "time": 3.0,
+          "weyl_gap": 501.2499236446206,
+          "weyl_gap_over_fine_step": 40.66968960451248,
+          "weyl_relative_gap": 0.2814915944647413
+        }
+      ]
+    },
+    "coarse": "nf128_coupled_dt0.0005",
+    "fine": "nf256_coupled_dt0.0005",
+    "stations": {
+      "0.3": {
+        "Q_ddot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "Q_dot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "R_h_max": {
+          "absolute_gap": 0.001807680082579921,
+          "coarse": 15.521570448782233,
+          "fine": 15.523378128864813,
+          "relative_gap": 0.00011644888551794315
+        },
+        "chart_Q_min": {
+          "absolute_gap": 7.741109214753905e-08,
+          "coarse": 0.2499356200669422,
+          "fine": 0.24993554265585005,
+          "relative_gap": 3.097241286648355e-07
+        },
+        "chart_r_min": {
+          "absolute_gap": 0.00020265746060932344,
+          "coarse": 4.305648925923361,
+          "fine": 4.30585158338397,
+          "relative_gap": 4.7065593573026706e-05
+        },
+        "child_normal_energy": {
+          "absolute_gap": 0.0034062207898939434,
+          "coarse": 4.297900717895575,
+          "fine": 4.294494497105681,
+          "relative_gap": 0.0007925312875914374
+        },
+        "child_probability": {
+          "absolute_gap": 0.0008143103955213782,
+          "coarse": 1.2776057615737608,
+          "fine": 1.2767914511782394,
+          "relative_gap": 0.0006373722004183096
+        },
+        "child_probability_over_trace": {
+          "absolute_gap": 0.00027143679776026053,
+          "coarse": 0.42586858719324755,
+          "fine": 0.4255971503954873,
+          "relative_gap": 0.0006373721986615789
+        },
+        "child_probability_per_proper_length": {
+          "absolute_gap": 0.000366099063693337,
+          "coarse": 0.5379131259517099,
+          "fine": 0.5375470268880166,
+          "relative_gap": 0.0006805914301600493
+        },
+        "child_proper_length": {
+          "absolute_gap": 0.00010272056986071476,
+          "coarse": 2.3751154227986904,
+          "fine": 2.375218143368551,
+          "relative_gap": 4.3246794046055795e-05
+        },
+        "exterior_probability_over_trace": {
+          "absolute_gap": 0.00025064351992032385,
+          "coarse": 0.1257857472054552,
+          "fine": 0.1255351036855349,
+          "relative_gap": 0.001992622578382662
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 0.005713908388568001,
+          "coarse": 8.839175456554695,
+          "fine": 8.844889364943263,
+          "relative_gap": 0.000646012420597943
+        },
+        "parent_probability": {
+          "absolute_gap": 0.0007519305551459965,
+          "coarse": 2.622642758371355,
+          "fine": 2.623394688926501,
+          "relative_gap": 0.00028662501998648484
+        },
+        "parent_probability_over_trace": {
+          "absolute_gap": 0.00025064351992032385,
+          "coarse": 0.8742142527945448,
+          "fine": 0.8744648963144651,
+          "relative_gap": 0.00028662502174380054
+        },
+        "parent_proper_length": {
+          "absolute_gap": 0.00021976125892031462,
+          "coarse": 4.709207093224343,
+          "fine": 4.709426854483263,
+          "relative_gap": 4.666411979859228e-05
+        },
+        "weyl_C2_max": {
+          "absolute_gap": 1.1649759036849727e-05,
+          "coarse": 0.11211295531281074,
+          "fine": 0.11212460507184759,
+          "relative_gap": 0.00010390011210639051
+        }
+      },
+      "1.0": {
+        "Q_ddot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "Q_dot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "R_h_max": {
+          "absolute_gap": 0.21100931846740423,
+          "coarse": 907.3172337895378,
+          "fine": 907.5282431080052,
+          "relative_gap": 0.00023250991918969066
+        },
+        "chart_Q_min": {
+          "absolute_gap": 1.2465668070171798e-05,
+          "coarse": 0.12514378872544105,
+          "fine": 0.12513132305737087,
+          "relative_gap": 9.961076132608406e-05
+        },
+        "chart_r_min": {
+          "absolute_gap": 0.0003489272949295241,
+          "coarse": 5.070426578019121,
+          "fine": 5.07077550531405,
+          "relative_gap": 6.881142629245896e-05
+        },
+        "child_normal_energy": {
+          "absolute_gap": 0.0010763544322340834,
+          "coarse": 8.072477531365392,
+          "fine": 8.073553885797626,
+          "relative_gap": 0.00013331854192829792
+        },
+        "child_probability": {
+          "absolute_gap": 1.1889188741287526e-05,
+          "coarse": 1.4999278885704077,
+          "fine": 1.499939777759149,
+          "relative_gap": 7.926444059673854e-06
+        },
+        "child_probability_over_trace": {
+          "absolute_gap": 3.9630658429379295e-06,
+          "coarse": 0.4999759628646061,
+          "fine": 0.49997992593044904,
+          "relative_gap": 7.926449918089755e-06
+        },
+        "child_probability_per_proper_length": {
+          "absolute_gap": 2.360727370942506e-05,
+          "coarse": 1.0073877234230344,
+          "fine": 1.0074113306967438,
+          "relative_gap": 2.343359955371739e-05
+        },
+        "child_proper_length": {
+          "absolute_gap": 2.308922257499013e-05,
+          "coarse": 1.488928099573971,
+          "fine": 1.488905010351396,
+          "relative_gap": 1.5507278411628257e-05
+        },
+        "exterior_probability_over_trace": {
+          "absolute_gap": 8.900348014484472e-06,
+          "coarse": 0.3328848932767784,
+          "fine": 0.3328937936247929,
+          "relative_gap": 2.6736299038714194e-05
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 0.000868543927616372,
+          "coarse": 10.743716134194543,
+          "fine": 10.744584678122159,
+          "relative_gap": 8.083550492043479e-05
+        },
+        "parent_probability": {
+          "absolute_gap": 2.670105576774162e-05,
+          "coarse": 2.0013453201384284,
+          "fine": 2.0013186190826606,
+          "relative_gap": 1.3341553553534065e-05
+        },
+        "parent_probability_over_trace": {
+          "absolute_gap": 8.900348014484472e-06,
+          "coarse": 0.6671151067232216,
+          "fine": 0.6671062063752071,
+          "relative_gap": 1.334154769512231e-05
+        },
+        "parent_proper_length": {
+          "absolute_gap": 5.015087886928171e-05,
+          "coarse": 2.987901476309156,
+          "fine": 2.9878513254302868,
+          "relative_gap": 1.6784649449429382e-05
+        },
+        "weyl_C2_max": {
+          "absolute_gap": 0.03839241096605406,
+          "coarse": 232.1422586513937,
+          "fine": 232.18065106235974,
+          "relative_gap": 0.000165355772715714
+        }
+      },
+      "3.0": {
+        "Q_ddot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "Q_dot_max": {
+          "absolute_gap": 8.681959640392724e-08,
+          "coarse": 0.00017359125308862868,
+          "fine": 0.00017350443349222475,
+          "relative_gap": 0.0005001380821855158
+        },
+        "R_h_max": {
+          "absolute_gap": 5209.402828514576,
+          "coarse": 34240.3916208148,
+          "fine": 29030.988792300224,
+          "relative_gap": 0.15214203406913634
+        },
+        "R_h_minmax_l2": {
+          "l2": {
+            "coarse": 27247.029992246535,
+            "fine": 27120.219620916123,
+            "relative_gap": 0.004654098863857717
+          },
+          "max": {
+            "coarse": 34240.3916208148,
+            "fine": 29030.988792300224,
+            "relative_gap": 0.15214203406913634
+          },
+          "min": {
+            "coarse": 22815.7940993011,
+            "fine": 24994.802163809538,
+            "relative_gap": 0.08717844815205085
+          }
+        },
+        "chart_Q_min": {
+          "absolute_gap": 1.3026066573153342e-08,
+          "coarse": 2.2891077772563622e-05,
+          "fine": 2.287805170599047e-05,
+          "relative_gap": 0.0005690455776077915
+        },
+        "chart_r_min": {
+          "absolute_gap": 0.00196960149844827,
+          "coarse": 20.16863835434543,
+          "fine": 20.170607955843877,
+          "relative_gap": 9.764710626273575e-05
+        },
+        "chi_proxy": {
+          "l2": {
+            "coarse": 1269.252422869517,
+            "fine": 1269.2828940180711,
+            "relative_gap": 2.400658568533138e-05
+          },
+          "max": {
+            "coarse": 1278.3155928816134,
+            "fine": 1278.3456915014365,
+            "relative_gap": 2.3544976936357288e-05
+          },
+          "min": {
+            "coarse": 1258.09738325206,
+            "fine": 1258.128879914404,
+            "relative_gap": 2.503452773953327e-05
+          }
+        },
+        "child_normal_energy": {
+          "absolute_gap": 0.10492492619632543,
+          "coarse": -1.023752045241256,
+          "fine": -1.1286769714375815,
+          "relative_gap": 0.09296275980778086
+        },
+        "child_probability": {
+          "absolute_gap": 1.233813794646911e-05,
+          "coarse": 0.0030215357671849186,
+          "fine": 0.0030091976292384495,
+          "relative_gap": 0.004083399601112189
+        },
+        "child_probability_over_trace": {
+          "absolute_gap": 4.112712631389138e-06,
+          "coarse": 0.001007178589108791,
+          "fine": 0.0010030658764774018,
+          "relative_gap": 0.004083399583611385
+        },
+        "child_probability_per_proper_length": {
+          "absolute_gap": 0.010724540590584475,
+          "coarse": 2.9596529313339848,
+          "fine": 2.9489283907434003,
+          "relative_gap": 0.003623580480347293
+        },
+        "child_proper_length": {
+          "absolute_gap": 4.7114060964929295e-07,
+          "coarse": 0.0010209088150829368,
+          "fine": 0.0010204376744732875,
+          "relative_gap": 0.00046149137189203167
+        },
+        "exterior_probability_over_trace": {
+          "absolute_gap": 1.0469233649335052e-05,
+          "coarse": 0.6658598860138722,
+          "fine": 0.6658494167802229,
+          "relative_gap": 1.572287784447934e-05
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 4.438410452225071,
+          "coarse": 6809.233063771322,
+          "fine": 6813.671474223547,
+          "relative_gap": 0.0006513977771038412
+        },
+        "parent_probability": {
+          "absolute_gap": 3.140768333076416e-05,
+          "coarse": 1.0024203419114548,
+          "fine": 1.0024517495947856,
+          "relative_gap": 3.133086788811519e-05
+        },
+        "parent_probability_over_trace": {
+          "absolute_gap": 1.0469233649279541e-05,
+          "coarse": 0.3341401139861278,
+          "fine": 0.3341505832197771,
+          "relative_gap": 3.133088546008531e-05
+        },
+        "parent_proper_length": {
+          "absolute_gap": 9.858540431896892e-07,
+          "coarse": 0.0021574206138111783,
+          "fine": 0.0021564347597679886,
+          "relative_gap": 0.00045695959187491713
+        },
+        "weyl_C2_max": {
+          "absolute_gap": 501.2499236446206,
+          "coarse": 1780.6923314983937,
+          "fine": 1279.4424078537731,
+          "relative_gap": 0.2814915944647413
+        },
+        "weyl_minmax_l2": {
+          "l2": {
+            "coarse": 1304.5692829588013,
+            "fine": 1269.2830710217304,
+            "relative_gap": 0.027048170149339055
+          },
+          "max": {
+            "coarse": 1780.6923314983937,
+            "fine": 1279.4424078537731,
+            "relative_gap": 0.2814915944647413
+          },
+          "min": {
+            "coarse": 859.391060468464,
+            "fine": 1257.706647005839,
+            "relative_gap": 0.3166999136767111
+          }
+        }
+      }
+    }
+  },
+  "time_refinement": {
+    "larger_step": "nf256_coupled_dt0.001",
+    "smaller_step": "nf256_coupled_dt0.0005",
+    "stations": {
+      "0.3": {
+        "Q_ddot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "Q_dot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "R_h_max": {
+          "absolute_gap": 0.0,
+          "coarse": 15.523378128864813,
+          "fine": 15.523378128864813,
+          "relative_gap": 0.0
+        },
+        "chart_Q_min": {
+          "absolute_gap": 0.0,
+          "coarse": 0.24993554265585005,
+          "fine": 0.24993554265585005,
+          "relative_gap": 0.0
+        },
+        "chart_r_min": {
+          "absolute_gap": 0.0,
+          "coarse": 4.30585158338397,
+          "fine": 4.30585158338397,
+          "relative_gap": 0.0
+        },
+        "child_normal_energy": {
+          "absolute_gap": 0.0,
+          "coarse": 4.294494497105681,
+          "fine": 4.294494497105681,
+          "relative_gap": 0.0
+        },
+        "child_probability": {
+          "absolute_gap": 0.0,
+          "coarse": 1.2767914511782394,
+          "fine": 1.2767914511782394,
+          "relative_gap": 0.0
+        },
+        "child_probability_over_trace": {
+          "absolute_gap": 0.0,
+          "coarse": 0.4255971503954873,
+          "fine": 0.4255971503954873,
+          "relative_gap": 0.0
+        },
+        "child_probability_per_proper_length": {
+          "absolute_gap": 0.0,
+          "coarse": 0.5375470268880166,
+          "fine": 0.5375470268880166,
+          "relative_gap": 0.0
+        },
+        "child_proper_length": {
+          "absolute_gap": 0.0,
+          "coarse": 2.375218143368551,
+          "fine": 2.375218143368551,
+          "relative_gap": 0.0
+        },
+        "exterior_probability_over_trace": {
+          "absolute_gap": 0.0,
+          "coarse": 0.1255351036855349,
+          "fine": 0.1255351036855349,
+          "relative_gap": 0.0
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 0.0,
+          "coarse": 8.844889364943263,
+          "fine": 8.844889364943263,
+          "relative_gap": 0.0
+        },
+        "parent_probability": {
+          "absolute_gap": 0.0,
+          "coarse": 2.623394688926501,
+          "fine": 2.623394688926501,
+          "relative_gap": 0.0
+        },
+        "parent_probability_over_trace": {
+          "absolute_gap": 0.0,
+          "coarse": 0.8744648963144651,
+          "fine": 0.8744648963144651,
+          "relative_gap": 0.0
+        },
+        "parent_proper_length": {
+          "absolute_gap": 0.0,
+          "coarse": 4.709426854483263,
+          "fine": 4.709426854483263,
+          "relative_gap": 0.0
+        },
+        "weyl_C2_max": {
+          "absolute_gap": 0.0,
+          "coarse": 0.11212460507184759,
+          "fine": 0.11212460507184759,
+          "relative_gap": 0.0
+        }
+      },
+      "1.0": {
+        "Q_ddot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "Q_dot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "R_h_max": {
+          "absolute_gap": 3.711988938448485e-09,
+          "coarse": 907.5282431042932,
+          "fine": 907.5282431080052,
+          "relative_gap": 4.090218642381932e-12
+        },
+        "chart_Q_min": {
+          "absolute_gap": 1.0975109709931985e-12,
+          "coarse": 0.12513132305846839,
+          "fine": 0.12513132305737087,
+          "relative_gap": 8.77087322476707e-12
+        },
+        "chart_r_min": {
+          "absolute_gap": 6.945555242054979e-12,
+          "coarse": 5.070775505307105,
+          "fine": 5.07077550531405,
+          "relative_gap": 1.3697224881630442e-12
+        },
+        "child_normal_energy": {
+          "absolute_gap": 2.583635350106306e-08,
+          "coarse": 8.073553859961272,
+          "fine": 8.073553885797626,
+          "relative_gap": 3.2001215160664725e-09
+        },
+        "child_probability": {
+          "absolute_gap": 7.033404969547519e-10,
+          "coarse": 1.4999397770558085,
+          "fine": 1.499939777759149,
+          "relative_gap": 4.689124906104663e-10
+        },
+        "child_probability_over_trace": {
+          "absolute_gap": 1.5910606165903118e-12,
+          "coarse": 0.499979925928858,
+          "fine": 0.49997992593044904,
+          "relative_gap": 3.182248994555914e-12
+        },
+        "child_probability_per_proper_length": {
+          "absolute_gap": 4.784599383356181e-10,
+          "coarse": 1.0074113302182839,
+          "fine": 1.0074113306967438,
+          "relative_gap": 4.749400009276316e-10
+        },
+        "child_proper_length": {
+          "absolute_gap": 8.97437679725499e-12,
+          "coarse": 1.4889050103603705,
+          "fine": 1.488905010351396,
+          "relative_gap": 6.0275012407157234e-12
+        },
+        "exterior_probability_over_trace": {
+          "absolute_gap": 7.875811114388398e-11,
+          "coarse": 0.33289379354603477,
+          "fine": 0.3328937936247929,
+          "relative_gap": 2.365863006525524e-10
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 2.434332024847663e-08,
+          "coarse": 10.744584653778839,
+          "fine": 10.744584678122159,
+          "relative_gap": 2.2656362230588454e-09
+        },
+        "parent_probability": {
+          "absolute_gap": 6.958003062607077e-10,
+          "coarse": 2.0013186183868603,
+          "fine": 2.0013186190826606,
+          "relative_gap": 3.4767093036871856e-10
+        },
+        "parent_probability_over_trace": {
+          "absolute_gap": 7.875811114388398e-11,
+          "coarse": 0.6671062064539652,
+          "fine": 0.6671062063752071,
+          "relative_gap": 1.1805932905725232e-10
+        },
+        "parent_proper_length": {
+          "absolute_gap": 1.724442810768778e-11,
+          "coarse": 2.987851325447531,
+          "fine": 2.9878513254302868,
+          "relative_gap": 5.771514787505315e-12
+        },
+        "weyl_C2_max": {
+          "absolute_gap": 3.478646704024868e-09,
+          "coarse": 232.1806510588811,
+          "fine": 232.18065106235974,
+          "relative_gap": 1.498250042847267e-11
+        }
+      },
+      "3.0": {
+        "Q_ddot_max": {
+          "absolute_gap": null,
+          "coarse": null,
+          "fine": null,
+          "relative_gap": null
+        },
+        "Q_dot_max": {
+          "absolute_gap": 1.441988889405721e-16,
+          "coarse": 0.00017350443349236895,
+          "fine": 0.00017350443349222475,
+          "relative_gap": 8.310962782799105e-13
+        },
+        "R_h_max": {
+          "absolute_gap": 0.02637016773223877,
+          "coarse": 29031.015162467957,
+          "fine": 29030.988792300224,
+          "relative_gap": 9.083446646513002e-07
+        },
+        "R_h_minmax_l2": {
+          "l2": {
+            "coarse": 27120.219639604067,
+            "fine": 27120.219620916123,
+            "relative_gap": 6.89077909265733e-10
+          },
+          "max": {
+            "coarse": 29031.015162467957,
+            "fine": 29030.988792300224,
+            "relative_gap": 9.083446646513002e-07
+          },
+          "min": {
+            "coarse": 24994.808131694794,
+            "fine": 24994.802163809538,
+            "relative_gap": 2.387649956890844e-07
+          }
+        },
+        "chart_Q_min": {
+          "absolute_gap": 1.512123217438377e-17,
+          "coarse": 2.2878051705975347e-05,
+          "fine": 2.287805170599047e-05,
+          "relative_gap": 6.609492962385593e-13
+        },
+        "chart_r_min": {
+          "absolute_gap": 3.715783236657444e-11,
+          "coarse": 20.170607955881035,
+          "fine": 20.170607955843877,
+          "relative_gap": 1.8421771147329515e-12
+        },
+        "chi_proxy": {
+          "l2": {
+            "coarse": 1269.282894022876,
+            "fine": 1269.2828940180711,
+            "relative_gap": 3.785492211462658e-12
+          },
+          "max": {
+            "coarse": 1278.345691506296,
+            "fine": 1278.3456915014365,
+            "relative_gap": 3.8013428009811715e-12
+          },
+          "min": {
+            "coarse": 1258.1288799211084,
+            "fine": 1258.128879914404,
+            "relative_gap": 5.328818296055281e-12
+          }
+        },
+        "child_normal_energy": {
+          "absolute_gap": 3.2953616848629963e-06,
+          "coarse": -1.1286736760758966,
+          "fine": -1.1286769714375815,
+          "relative_gap": 2.919667689033946e-06
+        },
+        "child_probability": {
+          "absolute_gap": 1.9999513330148933e-11,
+          "coarse": 0.003009197649237963,
+          "fine": 0.0030091976292384495,
+          "relative_gap": 6.646128191417912e-09
+        },
+        "child_probability_over_trace": {
+          "absolute_gap": 8.46813829995241e-12,
+          "coarse": 0.00100306588494554,
+          "fine": 0.0010030658764774018,
+          "relative_gap": 8.442255316471236e-09
+        },
+        "child_probability_per_proper_length": {
+          "absolute_gap": 1.9593864752920354e-08,
+          "coarse": 2.948928410337265,
+          "fine": 2.9489283907434003,
+          "relative_gap": 6.644401635602754e-09
+        },
+        "child_proper_length": {
+          "absolute_gap": 1.7618285302889447e-15,
+          "coarse": 0.0010204376744750493,
+          "fine": 0.0010204376744732875,
+          "relative_gap": 1.7265420263861721e-12
+        },
+        "exterior_probability_over_trace": {
+          "absolute_gap": 2.8587465727980543e-10,
+          "coarse": 0.6658494170660976,
+          "fine": 0.6658494167802229,
+          "relative_gap": 4.293383007519059e-10
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 7.021017700026277e-05,
+          "coarse": 6813.67140401337,
+          "fine": 6813.671474223547,
+          "relative_gap": 1.0304309103523895e-08
+        },
+        "parent_probability": {
+          "absolute_gap": 2.65815458533325e-09,
+          "coarse": 1.002451746936631,
+          "fine": 1.0024517495947856,
+          "relative_gap": 2.651653395196066e-09
+        },
+        "parent_probability_over_trace": {
+          "absolute_gap": 2.858746017686542e-10,
+          "coarse": 0.3341505829339025,
+          "fine": 0.3341505832197771,
+          "relative_gap": 8.555262690672281e-10
+        },
+        "parent_proper_length": {
+          "absolute_gap": 4.975186929101483e-15,
+          "coarse": 0.0021564347597729638,
+          "fine": 0.0021564347597679886,
+          "relative_gap": 2.307135380077664e-12
+        },
+        "weyl_C2_max": {
+          "absolute_gap": 0.0027780781474575633,
+          "coarse": 1279.4396297756257,
+          "fine": 1279.4424078537731,
+          "relative_gap": 2.171319420401038e-06
+        },
+        "weyl_minmax_l2": {
+          "l2": {
+            "coarse": 1269.2830726947077,
+            "fine": 1269.2830710217304,
+            "relative_gap": 1.3180490161127495e-09
+          },
+          "max": {
+            "coarse": 1279.4396297756257,
+            "fine": 1279.4424078537731,
+            "relative_gap": 2.171319420401038e-06
+          },
+          "min": {
+            "coarse": 1257.7072770610139,
+            "fine": 1257.706647005839,
+            "relative_gap": 5.009553386891024e-07
+          }
+        }
+      }
+    }
+  }
+}

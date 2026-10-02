@@ -132,14 +132,15 @@ def test_regime_class_uses_physical_signs_and_one_discriminating_gap():
         length_change=-0.2, width_change=None, retained_fraction=0.9, packet_retention=(0.2, 0.9, 0.4),
     )
     assert family.fate_class(missing, baseline) == "unresolved"
-    assert family.select_confirmation([
+    selected = family.select_confirmation([
         {"case_id": "baseline", "imbalance": 1.0, "width_scale": 1.0, "fate": "baseline"},
         {"case_id": "open", "imbalance": 0.0, "width_scale": 1.0, "fate": "unresolved"},
         {"case_id": "moved", "imbalance": -1.0, "width_scale": 1.2, "fate": "distinct_physical_signs"},
-    ])["cases"] == [{
-        "imbalance": -1.0, "width_scale": 1.2, "parent_case": "moved", "nf": 256,
-        "fate": "distinct_physical_signs", "forced": False,
-    }]
+    ])
+    assert len(selected["cases"]) == 5
+    moved = next(item for item in selected["cases"] if item["parent_case"] == "moved")
+    assert "distinct_physical_signs" in moved["selection_reasons"]
+    assert moved["physical_conclusion_forced"] is False
 
 
 def test_stalled_corner_is_the_owned_homotopy_blocker_and_not_a_copied_radius():
@@ -264,8 +265,8 @@ def test_one_pool_budget_and_separate_output_directories(tmp_path):
     assert left["forecast"]["dense_initial_solves"] == 6
     assert left["forecast"]["dense_initial_solves_in_rate_sample"] is False
     assert right["forced_regeneration"] is False
-    assert right["selected"]["cases"] == []
-    assert right["selected"]["reason"] == "no distinct physical regime to confirm"
+    assert len(right["selected"]["cases"]) == 5
+    assert right["selected"]["reason"] == "predeclared bounded confirmation experiments"
     assert not (confirm / "manifest.json").exists()
     directory = tmp_path / "pool"
     directory.mkdir()
@@ -400,9 +401,11 @@ def test_confirmation_includes_matching_resolution_baseline(tmp_path):
                            "width_scale": 0.8, "fate": "distinct_physical_signs"}]
     path.write_text(json.dumps(record))
     result = family.prepare_confirmation(tmp_path / "confirmation", exploration)
-    assert result["selected"]["cases"][0]["fate"] == "baseline_comparator"
-    assert result["cases"] == [family.case_id(1, 1, 256), family.case_id(-1, 0.8, 256)]
-    assert result["selected"]["cases"][1]["parent_case"] == family.case_id(-1, 0.8, 128)
+    assert result["cases"].count(family.case_id(1, 1, 256)) == 1
+    assert len(result["cases"]) == 6
+    baseline = next(item for item in result["selected"]["cases"] if item["width_scale"] == 1 and item["imbalance"] == 1)
+    assert "baseline_comparator" in baseline["selection_reasons"]
+    assert result["selected"]["cases"][-1]["parent_case"] == family.case_id(-1, 0.8, 128)
 
 
 def test_classifier_rejects_nonfinite_retention_and_invalid_budget():
@@ -411,3 +414,154 @@ def test_classifier_rejects_nonfinite_retention_and_invalid_budget():
     assert signals["unresolved"]
     with pytest.raises(ValueError):
         family.remaining_budget(float("nan"), 0)
+
+
+def test_confirmation_admits_quantitative_same_signs_and_unresolved_retry_deduplicated():
+    rows = [
+        {"case_id": family.case_id(1, width, 128), "imbalance": 1, "width_scale": width,
+         "fate": "same_physical_signs", "final_sample": {"packet_width": width}}
+        for width in family.WIDTH_SCALES
+    ]
+    rows.extend([
+        {"case_id": family.case_id(-1, 1.2, 128), "imbalance": -1, "width_scale": 1.2,
+         "fate": "unresolved", "status": "preparation_failed", "error": "owned homotopy stalled"},
+        dict(rows[1]),
+        {"case_id": "extra1", "imbalance": -0.5, "width_scale": 0.8, "fate": "distinct_physical_signs"},
+        {"case_id": "extra2", "imbalance": 0.5, "width_scale": 0.8, "fate": "distinct_physical_signs"},
+    ])
+    selected = family.select_confirmation(rows)
+    keys = [(item["imbalance"], item["width_scale"]) for item in selected["cases"]]
+    assert len(keys) == len(set(keys)) == 6
+    assert keys.count((1, 1)) == 1
+    assert set(family.CONFIRMATION_CANDIDATES).issubset(keys)
+    retry = next(item for item in selected["cases"] if (item["imbalance"], item["width_scale"]) == (-1, 1.2))
+    assert "unresolved_initial_preparation_retry" in retry["selection_reasons"]
+    assert retry["initial_preparation_error"] == "owned homotopy stalled"
+    narrow = next(item for item in selected["cases"] if (item["imbalance"], item["width_scale"]) == (1, 0.8))
+    assert narrow["fate"] == "same_physical_signs"
+    assert "predeclared_quantitative_width_sensitivity" in narrow["selection_reasons"]
+    assert all(item["physical_conclusion_forced"] is False for item in selected["cases"])
+
+
+def test_common_child_window_tagged_readout_uses_same_window_for_different_widths(prepared_geometries):
+    baseline, _weights, narrow = prepared_geometries
+    for prepared in (baseline, narrow):
+        measured = family.measure_consumers(prepared["pair"], prepared["state"], [0, 0, 0], 0)
+        fine, system = model._active(prepared["pair"], prepared["state"])
+        masses = family.regions._column_mass(fine, system)
+        child_mass = np.sum(masses[:, [2, 3]], axis=1)
+        expected = family.regions._window_probability(prepared["pair"].grid, child_mass, (1, 3)) / np.sum(child_mass)
+        assert measured["common_child_window"] == [1, 3]
+        assert measured["retention_windows"]["tagged_source_columns"] == [2, 3]
+        assert measured["child_source_common_window_retained_fraction"] == pytest.approx(expected)
+    narrow_sample = family.measure_consumers(narrow["pair"], narrow["state"], [0, 0, 0], 0)
+    assert narrow_sample["retention_windows"]["own_preparation"] == (1.2, 2.8)
+    assert narrow_sample["retention_windows"]["common_spatial_child"] == [1, 3]
+
+
+def test_frozen_control_branches_each_own_changed_source_handoff(tmp_path, prepared_geometries):
+    baseline, _weights, narrow = prepared_geometries
+    items = []
+    for prepared in (baseline, narrow):
+        propagated, clocks, identity = family.evolve_to_handoff(
+            prepared["pair"], prepared["state"], duration=0.003, step_cap=0.003, production=False)
+        item = dict(pair=prepared["pair"], initial=prepared["initial"], basis_pins=prepared["basis_pins"],
+                    propagated=propagated, clocks=clocks, identity=identity, step_cap=0.003)
+        frozen = family.frozen_handoff_branch(item)
+        assert frozen["propagated"]["state"] is propagated["state"]
+        assert frozen["identity"]["state_sha256"] == identity["state_sha256"]
+        assert frozen["identity"]["branch_from_own_source"]
+        assert frozen["pair"] is prepared["pair"]
+        items.extend([item, frozen])
+    directory = tmp_path / "width-controls"
+    manifest = family.commit_campaign(directory, items)
+    assert len(manifest["cases"]) == 4
+    ids = [case["case_id"] for case in manifest["cases"]]
+    assert len(set(ids)) == 4
+    source_ids = [baseline["initial"]["case_id"], narrow["initial"]["case_id"]]
+    for identifier in source_ids:
+        coupled_record, coupled = episode.load_checkpoint(directory, identifier, 0)
+        frozen_record, frozen = episode.load_checkpoint(directory, identifier + "_frozen_geometry", 0)
+        assert frozen_record["control_mode"] == "frozen_geometry"
+        assert frozen_record["parent_case"] == identifier
+        assert frozen_record["source_pins"] == coupled_record["source_pins"]
+        for key in coupled:
+            assert np.array_equal(coupled[key], frozen[key])
+    frozen_id = narrow["initial"]["case_id"] + "_frozen_geometry"
+    episode.execute_case(directory, frozen_id, cpu_allowance=1e9, max_steps=1, backend="dense")
+    _before, initial = episode.load_checkpoint(directory, frozen_id, 0)
+    _after, final = episode.load_checkpoint(directory, frozen_id)
+    for name in ("Q", "r", "chi", "pi_Q", "pi_r", "pi_chi"):
+        assert np.array_equal(initial[name], final[name])
+    assert not np.array_equal(initial["phi0"], final["phi0"])
+    _nominal, nominal = episode.load_checkpoint(directory, source_ids[0], 0)
+    assert not np.array_equal(initial["source_phi0"], nominal["source_phi0"])
+
+
+def test_historical_producer_authentication_does_not_demand_current_hash(monkeypatch):
+    seen = []
+    commit = "a" * 40
+    historical = {"producer_identity": {"files": [{"path": "lab/src/recursive_horizons/nsc_discovery_family.py",
+                                                   "sha256": "b" * 64, "commit": commit}]}}
+    def authenticate(root, path, digest, *, commit):
+        seen.append((path, digest, commit))
+        return b"historical producer source"
+    monkeypatch.setattr(family, "resolve_pinned_source_bytes", authenticate)
+    result = family.authenticate_producer(historical)
+    assert result["authenticated"]
+    assert result["status"] == "historical_commit_pins_authenticated"
+    assert seen == [("lab/src/recursive_horizons/nsc_discovery_family.py", "b" * 64, commit)]
+    assert family.authenticate_producer({})["status"] == "legacy_record_without_producer_pins"
+    with pytest.raises(PermissionError, match="immutable"):
+        family._mutable_campaign_output(family.LEGACY_DIRECTORY)
+
+
+def test_cli_successor_confirmation_forecasts_optional_controls_in_same_pool(tmp_path):
+    exploration = tmp_path / "old-exploration"
+    family.prepare_specification(exploration)
+    destination = tmp_path / "successor"
+    assert cli_main(["--confirm", "--output", str(destination), "--exploration", str(exploration),
+                     "--frozen-width-controls"]) == 0
+    record = json.loads((destination / family.FAMILY_RECORD).read_text())
+    assert record["frozen_width_controls"]
+    assert len(record["selected"]["cases"]) == 5
+    assert record["forecast"]["dense_initial_solves"] == 5
+    assert record["forecast"]["continuation_cases"] == 8
+    assert record["forecast"]["workers"] == 6
+    assert record["forecast"]["coordinator_pools"] == 1
+    assert len(record["producer_identity"]["files"]) >= 30
+    assert family.check(destination)["ok"]
+
+
+def test_materialize_optional_controls_commits_own_branches_without_extra_solves(tmp_path, monkeypatch):
+    directory = tmp_path / "source-width-successor"
+    family.prepare_specification(directory, nf=64, frozen_width_controls=True)
+    path = directory / family.FAMILY_RECORD
+    record = json.loads(path.read_text())
+    record["cases"] = [family.case_id(1, 1, 64), family.case_id(1, 0.8, 64)]
+    path.write_text(json.dumps(record))
+    real_prepare = family.prepare_member
+    called = []
+    def prepare(imbalance, width, **kwargs):
+        called.append((imbalance, width))
+        return real_prepare(imbalance, width, **kwargs)
+    monkeypatch.setattr(family, "prepare_member", prepare)
+    manifest = family.materialize_directory(directory, duration=0.003, step_cap=0.003)
+    assert called == [(1, 1), (1, 0.8)]
+    assert len(manifest["cases"]) == 4
+    assert sum(case["control_mode"] == "frozen_geometry" for case in manifest["cases"]) == 2
+    assert manifest["executor_pools"] == 0
+    assert family.check(directory)["ok"]
+
+
+def test_quantitative_common_window_difference_is_reported_even_with_equal_signs():
+    baseline = {"coordinate_time": 3, "child_source_common_window_retained_fraction": 0.3,
+                "child_retained_fraction": 0.3, "packet_width": 1.2}
+    narrow = {"coordinate_time": 3, "child_source_common_window_retained_fraction": 0.4,
+              "child_retained_fraction": 0.2, "packet_width": 1.1}
+    result = family.quantitative_comparison(narrow, baseline)
+    assert result["sample_minus_reference"]["child_source_common_window_retained_fraction"] == pytest.approx(0.1)
+    assert result["sample_minus_reference"]["child_retained_fraction"] == pytest.approx(-0.1)
+    assert result["common_child_window"] == [1, 3]
+    assert result["physical_conclusion_forced"] is False
+    assert not family.quantitative_comparison(dict(narrow, coordinate_time=1), baseline)["available"]

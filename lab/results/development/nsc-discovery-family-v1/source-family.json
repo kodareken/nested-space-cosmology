@@ -1,0 +1,4762 @@
+{
+  "schema": "NSC-DISCOVERY-SOURCE-FAMILY-v1",
+  "question": "Does varying regional source shape or imbalance change contraction, dispersion, or retention beyond the baseline?",
+  "imbalances": [
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0
+  ],
+  "width_scales": [
+    0.8,
+    1.0,
+    1.2
+  ],
+  "baseline_imbalance": 1.0,
+  "baseline_width_scale": 1.0,
+  "occupation_trace": 3.0,
+  "exploration_nf": 128,
+  "confirmation_nf": 256,
+  "exploration_cases": 6,
+  "threads_per_case": 1,
+  "workers": 6,
+  "coordinator_pools": 1,
+  "aggregate_cpu_budget_seconds": 21600.0,
+  "budget_covers": "initial_solves_handoff_measurements_and_continuation_child_cpu",
+  "chunk_limit_bytes": 67108864,
+  "forecast_factor": 1.5,
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "handoff_time": 0.3,
+  "step_cap": 0.0005,
+  "nonproduction_duration": 0.01,
+  "constructor": "nsc_nested_parent_child.initial_state",
+  "evolution": "nsc_discovery_prediction.propagate_baseline",
+  "continuation": "nsc_discovery_episode.run",
+  "scalar_fate_percent_gate": null,
+  "universal_one_percent_gate": false,
+  "forced_regeneration": false,
+  "saved_t03_radius_copied": false,
+  "third_dynamical_framework": false,
+  "output": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-family-v1",
+  "stage": "continued",
+  "materialized": true,
+  "evolved": true,
+  "nf": 128,
+  "family": [
+    {
+      "case_id": "nf128_am1_w0p8",
+      "imbalance": -1.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -1.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "role": "crossed_endpoint_and_narrow",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_am1_w1",
+      "imbalance": -1.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -1.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "role": "endpoint_imbalance",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_am1_w1p2",
+      "imbalance": -1.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -1.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_am0p5_w0p8",
+      "imbalance": -0.5,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "weights": [
+        0.375,
+        0.375,
+        0.5,
+        0.5,
+        0.625,
+        0.625
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -0.5,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_am0p5_w1",
+      "imbalance": -0.5,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "weights": [
+        0.375,
+        0.375,
+        0.5,
+        0.5,
+        0.625,
+        0.625
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -0.5,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_am0p5_w1p2",
+      "imbalance": -0.5,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "weights": [
+        0.375,
+        0.375,
+        0.5,
+        0.5,
+        0.625,
+        0.625
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -0.5,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a0_w0p8",
+      "imbalance": 0.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a0_w1",
+      "imbalance": 0.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "role": "uniform_imbalance",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a0_w1p2",
+      "imbalance": 0.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a0p5_w0p8",
+      "imbalance": 0.5,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "weights": [
+        0.625,
+        0.625,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.5,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a0p5_w1",
+      "imbalance": 0.5,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "weights": [
+        0.625,
+        0.625,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.5,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a0p5_w1p2",
+      "imbalance": 0.5,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "weights": [
+        0.625,
+        0.625,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.5,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "role": "catalog_only",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a1_w0p8",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "role": "narrow_shape",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a1_w1",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "role": "baseline",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    },
+    {
+      "case_id": "nf128_a1_w1p2",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "role": "wide_shape",
+      "nf": 128,
+      "solved": false,
+      "saved_t03_radius_copied": false,
+      "weights_in_open_unit_interval": true
+    }
+  ],
+  "cases": [
+    "nf128_am1_w0p8",
+    "nf128_am1_w1",
+    "nf128_am0p5_w0p8",
+    "nf128_am0p5_w1",
+    "nf128_am0p5_w1p2",
+    "nf128_a0_w0p8",
+    "nf128_a0_w1",
+    "nf128_a0_w1p2",
+    "nf128_a0p5_w0p8",
+    "nf128_a0p5_w1",
+    "nf128_a0p5_w1p2",
+    "nf128_a1_w0p8",
+    "nf128_a1_w1",
+    "nf128_a1_w1p2"
+  ],
+  "forecast": {
+    "n_cases": 15,
+    "nf": 128,
+    "step_cap": 0.0005,
+    "dense_initial_solves": 15,
+    "dense_initial_solves_in_rate_sample": false,
+    "propagate_baseline_cpu_seconds": 48.5625,
+    "continuation_raw_cpu_seconds": 437.0625,
+    "continuation_forecast_cpu_seconds": 655.59375,
+    "forecast_cpu_seconds_without_inits": 704.15625,
+    "aggregate_budget_seconds": 21600.0,
+    "budget_covers": "initial_solves_handoff_measurements_and_continuation_child_cpu",
+    "within_budget_ignoring_unsampled_inits": true,
+    "hard_gate": false,
+    "chunk_limit_bytes": 67108864,
+    "threads_per_case": 1,
+    "workers": 6,
+    "coordinator_pools": 1
+  },
+  "all_members": true,
+  "regimes": [
+    {
+      "case_id": "nf128_am1_w0p8",
+      "imbalance": -1.0,
+      "width_scale": 0.8,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.395643554320801,
+        "child_areal_radius": 4.766908761463464,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178377834e-05,
+            1.0732305581739885e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.8625320978684025e-07,
+            1.8693559568442745e-06,
+            0.9999944471577664
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.453597971121765e-10,
+          "radial_tide_l2": 0.1356710251298714,
+          "angular_tide_l2": 0.1283750496608472,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577664
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.3588425982266321,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.001037019863664374,
+        "child_areal_radius": 21.455257015628582,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.00010288806817469192,
+            0.0012102309635130446,
+            0.4406928988045585
+          ],
+          [
+            0.0004698947130263336,
+            0.0002735280050783731,
+            0.0011908730954701744
+          ],
+          [
+            0.4834827833992769,
+            0.0007313365136446604,
+            7.085621092238813e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 6.438043970361183,
+          "radial_tide_l2": 1158009.524137491,
+          "angular_tide_l2": 12072095.312595872,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.00010288806817469192,
+          0.0002735280050783731,
+          7.085621092238813e-05
+        ],
+        "child_retained_fraction": 0.0002735280050783731,
+        "packet_width": 0.0011673657760018325,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0002735280050783731,
+        "length_change": -2.394606534457137,
+        "width_change": -1.3576752324506303,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.68834825416512,
+        "packet_transfer_change": [
+          [
+            -0.9998677745815908,
+            0.0011903750013346668,
+            0.4406918255740003
+          ],
+          [
+            0.0004695160632755018,
+            -0.999723437503038,
+            0.001188632218071978
+          ],
+          [
+            0.4834823971460671,
+            0.0007294671576878162,
+            -0.999923590946844
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 6.438043970215823,
+          "radial_tide_l2": 1158009.3884664658,
+          "angular_tide_l2": 12072095.184220823
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0002735280050783731,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_am1_w1",
+      "imbalance": -1.0,
+      "width_scale": 1.0,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.387039031240056,
+        "child_areal_radius": 4.749669799931591,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453967,
+            4.2801005282144804e-05,
+            2.484958001036652e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.619866773153246e-07,
+            2.244206719977561e-06,
+            0.9999542322453964
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4415051778262085e-10,
+          "radial_tide_l2": 0.1350041361729094,
+          "angular_tide_l2": 0.13364945994305846,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453967,
+          0.9999999151046722,
+          0.9999542322453964
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.462050702753836,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.001020963053183816,
+        "child_areal_radius": 21.525687634637332,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            5.144007651189882e-05,
+            0.0013105655807494458,
+            0.4986893040399834
+          ],
+          [
+            0.00037680671011505745,
+            0.0006651573911722319,
+            0.0013038800319982976
+          ],
+          [
+            0.4990681081946672,
+            0.0009664231591481168,
+            3.523918719156436e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 19.952823216534178,
+          "radial_tide_l2": 1217467.6615895443,
+          "angular_tide_l2": 12707958.5508327,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          5.144007651189882e-05,
+          0.0006651573911722319,
+          3.523918719156436e-05
+        ],
+        "child_retained_fraction": 0.0006651573911722319,
+        "packet_width": 0.001166659191419158,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0006651573911722319,
+        "length_change": -2.386018068186872,
+        "width_change": -1.4608840435624169,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.77601783470574,
+        "packet_transfer_change": [
+          [
+            -0.9999027921688848,
+            0.001267764575467301,
+            0.4986890555441833
+          ],
+          [
+            0.00037680464706792155,
+            -0.9993347577135,
+            0.001303802074658589
+          ],
+          [
+            0.4990678462079899,
+            0.0009641789524281392,
+            -0.9999189930582048
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 19.952823216390026,
+          "radial_tide_l2": 1217467.526585408,
+          "angular_tide_l2": 12707958.41718324
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0006651573911722319,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_am0p5_w0p8",
+      "imbalance": -0.5,
+      "width_scale": 0.8,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.4060721300886354,
+        "child_areal_radius": 4.787023147614335,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178350075e-05,
+            1.073230558127729e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.8625320970542386e-07,
+            1.8693559568960846e-06,
+            0.9999944471577665
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4671647148107059e-10,
+          "radial_tide_l2": 0.13461471367419722,
+          "angular_tide_l2": 0.12261018217371808,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577665
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.4851483389198596,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009906745931852717,
+        "child_areal_radius": 21.65482947687254,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            9.743300672479058e-05,
+            0.0011994851802817753,
+            0.44070975141310975
+          ],
+          [
+            0.00047052971991810063,
+            0.00025826567492910775,
+            0.0011821818129708977
+          ],
+          [
+            0.483485905795688,
+            0.0007374417650329017,
+            6.87989209674462e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 6.196151638953849,
+          "radial_tide_l2": 1261750.9283120884,
+          "angular_tide_l2": 13197755.090987787,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          9.743300672479058e-05,
+          0.00025826567492910775,
+          6.87989209674462e-05
+        ],
+        "child_retained_fraction": 0.00025826567492910775,
+        "packet_width": 0.0011499569345851518,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.00025826567492910775,
+        "length_change": -2.4050814554954503,
+        "width_change": -1.4839983819852745,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.867806329258205,
+        "packet_transfer_change": [
+          [
+            -0.9998732296430407,
+            0.0011796292181034253,
+            0.4407086781825516
+          ],
+          [
+            0.00047015107016726884,
+            -0.9997386998331873,
+            0.0011799409355727013
+          ],
+          [
+            0.4834855195424783,
+            0.0007355724090760057,
+            -0.9999256482367991
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 6.196151638807133,
+          "radial_tide_l2": 1261750.7936973746,
+          "angular_tide_l2": 13197754.968377605
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.00025826567492910775,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_am0p5_w1",
+      "imbalance": -0.5,
+      "width_scale": 1.0,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3981178362831166,
+        "child_areal_radius": 4.771144440192501,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453965,
+            4.280100528223731e-05,
+            2.484958000111465e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.6198667746335444e-07,
+            2.2442067200145692e-06,
+            0.9999542322453967
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5860226614421287e-10,
+          "radial_tide_l2": 0.13387754926353296,
+          "angular_tide_l2": 0.12762467837571065,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453965,
+          0.9999999151046722,
+          0.9999542322453967
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.6109386659436515,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009721974911426997,
+        "child_areal_radius": 21.739592072549275,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            4.8105265928031604e-05,
+            0.001299066500701595,
+            0.4987051731291476
+          ],
+          [
+            0.0003755347867466619,
+            0.0006379600804927543,
+            0.0013020560934952964
+          ],
+          [
+            0.4990693169364947,
+            0.0009711399357725075,
+            3.4305870350276846e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 15.157209246964445,
+          "radial_tide_l2": 1334362.1360999465,
+          "angular_tide_l2": 13976908.982703904,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          4.8105265928031604e-05,
+          0.0006379600804927543,
+          3.4305870350276846e-05
+        ],
+        "child_retained_fraction": 0.0006379600804927543,
+        "packet_width": 0.0011531179920263182,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0006379600804927543,
+        "length_change": -2.397145638791974,
+        "width_change": -1.6097855479516252,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.968447632356774,
+        "packet_transfer_change": [
+          [
+            -0.9999061269794685,
+            0.0012562654954193576,
+            0.4987049246333476
+          ],
+          [
+            0.000375532723699526,
+            -0.9993619550241795,
+            0.0013019781361555877
+          ],
+          [
+            0.49906905494981724,
+            0.000968895729052493,
+            -0.9999199263750465
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 15.157209246805843,
+          "radial_tide_l2": 1334362.0022223971,
+          "angular_tide_l2": 13976908.855079226
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0006379600804927543,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_am0p5_w1p2",
+      "imbalance": -0.5,
+      "width_scale": 1.2,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3880701472769745,
+        "child_areal_radius": 4.751120312505372,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302686,
+            0.00016039452339829572,
+            5.973374237836871e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700104465032e-07,
+            3.1335607234250795e-05,
+            0.9997290814380209
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5463107112102e-10,
+          "radial_tide_l2": 0.13333218056203658,
+          "angular_tide_l2": 0.13700092001495198,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302686,
+          0.9999999932167192,
+          0.9997290814380209
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.746770482313649,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009631231920296089,
+        "child_areal_radius": 21.783770428961205,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            2.227924441385495e-05,
+            0.1251046939574416,
+            0.3749196057731498
+          ],
+          [
+            0.0004312189669517711,
+            0.0012678713706791734,
+            0.0013006969813675806
+          ],
+          [
+            0.37029564637740253,
+            0.12973665471915183,
+            1.645001576047758e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 36.320948533605936,
+          "radial_tide_l2": 1389483.7057310757,
+          "angular_tide_l2": 14560573.24708897,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          2.227924441385495e-05,
+          0.0012678713706791734,
+          1.645001576047758e-05
+        ],
+        "child_retained_fraction": 0.0012678713706791734,
+        "packet_width": 0.00117052857798808,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0012678713706791734,
+        "length_change": -2.387107024084945,
+        "width_change": -1.7455999537356608,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 17.032650116455834,
+        "packet_transfer_change": [
+          [
+            -0.9997551172858548,
+            0.1249442994340433,
+            0.374919008435726
+          ],
+          [
+            0.00043121807426903784,
+            -0.99873212184604,
+            0.0013006933272396498
+          ],
+          [
+            0.3702950592073921,
+            0.12970531911191757,
+            -0.9997126314222604
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 36.32094853345131,
+          "radial_tide_l2": 1389483.5723988952,
+          "angular_tide_l2": 14560573.11008805
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0012678713706791734,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a0_w0p8",
+      "imbalance": 0.0,
+      "width_scale": 0.8,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.4094399079650057,
+        "child_areal_radius": 4.793518347039996,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178377834e-05,
+            1.0732305581739885e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.862532098608551e-07,
+            1.8693559568350224e-06,
+            0.9999944471577663
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.685892056000488e-10,
+          "radial_tide_l2": 0.134277596830188,
+          "angular_tide_l2": 0.12090882392192079,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577663
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.5297675911524393,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009761620371726114,
+        "child_areal_radius": 21.71935975177547,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            9.403048327199736e-05,
+            0.00119159819317479,
+            0.4407221816384456
+          ],
+          [
+            0.00047548066338926834,
+            0.00024716287787227475,
+            0.0011753673396381846
+          ],
+          [
+            0.4834844811950915,
+            0.0007471337553238552,
+            6.840881184614406e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 6.489324018846055,
+          "radial_tide_l2": 1297117.0770649244,
+          "angular_tide_l2": 13582026.271376425,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          9.403048327199736e-05,
+          0.00024716287787227475,
+          6.840881184614406e-05
+        ],
+        "child_retained_fraction": 0.00024716287787227475,
+        "packet_width": 0.001145600481410868,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.00024716287787227475,
+        "length_change": -2.408463745927833,
+        "width_change": -1.5286219906710286,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.925841404735475,
+        "packet_transfer_change": [
+          [
+            -0.9998766321664936,
+            0.0011717422309964122,
+            0.4407211084078874
+          ],
+          [
+            0.00047510201363843655,
+            -0.9997498026302442,
+            0.0011731264622399883
+          ],
+          [
+            0.48348409494188166,
+            0.0007452643993670202,
+            -0.9999260383459202
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 6.489324018677466,
+          "radial_tide_l2": 1297116.9427873276,
+          "angular_tide_l2": 13582026.1504676
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.00024716287787227475,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a0_w1",
+      "imbalance": 0.0,
+      "width_scale": 1.0,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.401755666417943,
+        "child_areal_radius": 4.778202403302188,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453967,
+            4.2801005282144804e-05,
+            2.484958001036652e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.6198667749110996e-07,
+            2.2442067199590577e-06,
+            0.9999542322453965
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4371858031126706e-10,
+          "radial_tide_l2": 0.13351106202418472,
+          "angular_tide_l2": 0.12573043729240987,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453967,
+          0.9999999151046722,
+          0.9999542322453965
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.6647851360937347,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009567058356194124,
+        "child_areal_radius": 21.80999299179623,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            4.607514352755072e-05,
+            0.0012907678606963412,
+            0.49871661763485
+          ],
+          [
+            0.00037862589300916266,
+            0.0006172731985155721,
+            0.0013004672719506187
+          ],
+          [
+            0.499066384116304,
+            0.0009793559712350192,
+            3.434608414882899e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 13.177747204845888,
+          "radial_tide_l2": 1375074.7974916245,
+          "angular_tide_l2": 14419702.686737161,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          4.607514352755072e-05,
+          0.0006172731985155721,
+          3.434608414882899e-05
+        ],
+        "child_retained_fraction": 0.0006172731985155721,
+        "packet_width": 0.0011503605165108404,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0006172731985155721,
+        "length_change": -2.400798960582324,
+        "width_change": -1.6636347755772238,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 17.03179058849404,
+        "packet_transfer_change": [
+          [
+            -0.9999081571018692,
+            0.0012479668554141964,
+            0.4987163691390499
+          ],
+          [
+            0.00037862382996202675,
+            -0.9993826419061567,
+            0.0013003893146109101
+          ],
+          [
+            0.49906612212962653,
+            0.00097711176451506,
+            -0.9999198861612476
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 13.17774720470217,
+          "radial_tide_l2": 1375074.6639805625,
+          "angular_tide_l2": 14419702.561006723
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0006172731985155721,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a0_w1p2",
+      "imbalance": 0.0,
+      "width_scale": 1.2,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.391853249534658,
+        "child_areal_radius": 4.758492832362194,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302688,
+            0.00016039452339833274,
+            5.973374239132131e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700106824253e-07,
+            3.133560723400654e-05,
+            0.9997290814380205
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.3927235648808882e-10,
+          "radial_tide_l2": 0.1329519130340226,
+          "angular_tide_l2": 0.13513940344319075,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302688,
+          0.9999999932167192,
+          0.9997290814380205
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.8123261529374572,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009470947154354565,
+        "child_areal_radius": 21.8573228929761,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            2.1237728448852566e-05,
+            0.12510458802991287,
+            0.37492169031395484
+          ],
+          [
+            0.000432700571610662,
+            0.0012383697152471276,
+            0.0013022692749243908
+          ],
+          [
+            0.3702961806540519,
+            0.1297391355580346,
+            1.65763960591109e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 32.792936301867265,
+          "radial_tide_l2": 1433639.9238405135,
+          "angular_tide_l2": 15040557.074855976,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          2.1237728448852566e-05,
+          0.0012383697152471276,
+          1.65763960591109e-05
+        ],
+        "child_retained_fraction": 0.0012383697152471276,
+        "packet_width": 0.0011708900439608904,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0012383697152471276,
+        "length_change": -2.3909061548192225,
+        "width_change": -1.8111552628934964,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 17.098830060613906,
+        "packet_transfer_change": [
+          [
+            -0.9997561588018199,
+            0.12494419350651453,
+            0.3749210929765309
+          ],
+          [
+            0.00043269967892792873,
+            -0.998761623501472,
+            0.00130226562079646
+          ],
+          [
+            0.37029559348404123,
+            0.1297077999508006,
+            -0.9997125050419614
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 32.79293630172799,
+          "radial_tide_l2": 1433639.7908886005,
+          "angular_tide_l2": 15040556.939716572
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0012383697152471276,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a0p5_w0p8",
+      "imbalance": 0.5,
+      "width_scale": 0.8,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.4059051357752343,
+        "child_areal_radius": 4.786698014947686,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.985596217826126e-05,
+            1.0732305580241083e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.8625320978684025e-07,
+            1.8693559568442745e-06,
+            0.9999944471577664
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5644087843670694e-10,
+          "radial_tide_l2": 0.134636606877508,
+          "angular_tide_l2": 0.12306485704076009,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577664
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.4851044207361608,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009914325404548723,
+        "child_areal_radius": 21.6513083451752,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            9.24562131343124e-05,
+            0.001186460253427577,
+            0.44073059030273537
+          ],
+          [
+            0.00048489819515260875,
+            0.0002397287034198607,
+            0.0011703918093824372
+          ],
+          [
+            0.483478636715583,
+            0.0007604980091012187,
+            6.961528250532624e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 7.403919046992331,
+          "radial_tide_l2": 1259833.7568938523,
+          "angular_tide_l2": 13176485.901628982,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          9.24562131343124e-05,
+          0.0002397287034198607,
+          6.961528250532624e-05
+        ],
+        "child_retained_fraction": 0.0002397287034198607,
+        "packet_width": 0.0011508330605913097,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0002397287034198607,
+        "length_change": -2.4049137032347794,
+        "width_change": -1.4839535876755694,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.864610330227514,
+        "packet_transfer_change": [
+          [
+            -0.9998782064366312,
+            0.0011666042912493158,
+            0.44072951707217733
+          ],
+          [
+            0.00048451954540177695,
+            -0.9997572368046966,
+            0.0011681509319842408
+          ],
+          [
+            0.4834782504623732,
+            0.0007586286531443744,
+            -0.999924831875261
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 7.40391904683589,
+          "radial_tide_l2": 1259833.6222572455,
+          "angular_tide_l2": 13176485.778564125
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0002397287034198607,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a0p5_w1",
+      "imbalance": 0.5,
+      "width_scale": 1.0,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3981310051483007,
+        "child_areal_radius": 4.771188087854925,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453966,
+            4.280100528211149e-05,
+            2.484957999815406e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.619866773153246e-07,
+            2.244206719977561e-06,
+            0.9999542322453964
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4567620536410361e-10,
+          "radial_tide_l2": 0.13387866981721508,
+          "angular_tide_l2": 0.12772824526353627,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453966,
+          0.9999999151046722,
+          0.9999542322453964
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.610643507962207,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009721774617930383,
+        "child_areal_radius": 21.73967496927127,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            4.517898385934571e-05,
+            0.0012855214320901462,
+            0.4987240175132946
+          ],
+          [
+            0.00038617524676847034,
+            0.0006024216374729103,
+            0.0012991498623276573
+          ],
+          [
+            0.49905937984055737,
+            0.000991128009035723,
+            3.533954919816566e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 14.22995024848055,
+          "radial_tide_l2": 1334372.9366598076,
+          "angular_tide_l2": 13977101.092967357,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          4.517898385934571e-05,
+          0.0006024216374729103,
+          3.533954919816566e-05
+        ],
+        "child_retained_fraction": 0.0006024216374729103,
+        "packet_width": 0.0011533067450332766,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0006024216374729103,
+        "length_change": -2.3971588276865075,
+        "width_change": -1.6094902012171737,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.968486881416347,
+        "packet_transfer_change": [
+          [
+            -0.9999090532615372,
+            0.0012427204268080348,
+            0.4987237690174946
+          ],
+          [
+            0.00038617318372133444,
+            -0.9993974934671993,
+            0.0012990719049879487
+          ],
+          [
+            0.4990591178538801,
+            0.0009888838023157456,
+            -0.9999188926961982
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 14.229950248334875,
+          "radial_tide_l2": 1334372.8027811379,
+          "angular_tide_l2": 13977100.965239111
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0006024216374729103,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a0p5_w1p2",
+      "imbalance": 0.5,
+      "width_scale": 1.2,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3880840052505423,
+        "child_areal_radius": 4.751178169530939,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302684,
+            0.00016039452339824392,
+            5.973374237799864e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700106315402e-07,
+            3.1335607234080555e-05,
+            0.9997290814380206
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5444636225547507e-10,
+          "radial_tide_l2": 0.13333868042606054,
+          "angular_tide_l2": 0.13724528847290376,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302684,
+          0.9999999932167192,
+          0.9997290814380206
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.7454916337244932,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0009631898196729221,
+        "child_areal_radius": 21.783371562593622,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            2.0808519286444853e-05,
+            0.125104821631009,
+            0.374922936705359
+          ],
+          [
+            0.0004380962695389269,
+            0.0012163802139358443,
+            0.0013027083970319551
+          ],
+          [
+            0.3702957634961656,
+            0.1297423159903845,
+            1.7216402259962393e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 36.16615776348209,
+          "radial_tide_l2": 1389076.188130792,
+          "angular_tide_l2": 14556186.435961384,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          2.0808519286444853e-05,
+          0.0012163802139358443,
+          1.7216402259962393e-05
+        ],
+        "child_retained_fraction": 0.0012163802139358443,
+        "packet_width": 0.001170888936023045,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0012163802139358443,
+        "length_change": -2.3871208154308694,
+        "width_change": -1.74432074478847,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 17.032193393062684,
+        "packet_transfer_change": [
+          [
+            -0.999756588010982,
+            0.12494442710761075,
+            0.3749223393679352
+          ],
+          [
+            0.0004380953768561936,
+            -0.9987836130027833,
+            0.0013027047429040243
+          ],
+          [
+            0.370295176326155,
+            0.1297109803831504,
+            -0.9997118650357607
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 36.16615776332765,
+          "radial_tide_l2": 1389076.0547921115,
+          "angular_tide_l2": 14556186.298716096
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0012163802139358443,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a1_w0p8",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3953074199148103,
+        "child_areal_radius": 4.766254785972005,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178350075e-05,
+            1.073230558127729e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.862532098608551e-07,
+            1.8693559568350224e-06,
+            0.9999944471577663
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5272553770525256e-10,
+          "radial_tide_l2": 0.13571558623548688,
+          "angular_tide_l2": 0.12924410320159369,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577663
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.358722218103467,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.001038613100307467,
+        "child_areal_radius": 21.448212944709166,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            9.267005573172623e-05,
+            0.00118408951555143,
+            0.4407350953124368
+          ],
+          [
+            0.000499267691124389,
+            0.00023577279386704296,
+            0.0011673050211016593
+          ],
+          [
+            0.4834681824213845,
+            0.0007778332478641176,
+            7.25368818598424e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 8.89610230126821,
+          "radial_tide_l2": 1154478.6731123917,
+          "angular_tide_l2": 12033044.384037161,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          9.267005573172623e-05,
+          0.00023577279386704296,
+          7.25368818598424e-05
+        ],
+        "child_retained_fraction": 0.00023577279386704296,
+        "packet_width": 0.0011691155814594774,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.00023577279386704296,
+        "length_change": -2.394268806814503,
+        "width_change": -1.3575531025220076,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.68195815873716,
+        "packet_transfer_change": [
+          [
+            -0.9998779925940338,
+            0.00116423355337308,
+            0.4407340220818787
+          ],
+          [
+            0.0004988890413735572,
+            -0.9997611927142495,
+            0.001165064143703463
+          ],
+          [
+            0.48346779616817465,
+            0.0007759638919072826,
+            -0.9999219102759065
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 8.896102301115484,
+          "radial_tide_l2": 1154478.5373968056,
+          "angular_tide_l2": 12033044.254793057
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.00023577279386704296,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a1_w1",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "fate": "baseline",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3870675161954833,
+        "child_areal_radius": 4.749761848661758,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453965,
+            4.280100528223731e-05,
+            2.484958000111465e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.6198667749110996e-07,
+            2.2442067199590577e-06,
+            0.9999542322453965
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4279274067985805e-10,
+          "radial_tide_l2": 0.1350062275186232,
+          "angular_tide_l2": 0.13383856154475543,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453965,
+          0.9999999151046722,
+          0.9999542322453965
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.4614895418500577,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.0010209088150829669,
+        "child_areal_radius": 21.525901869630086,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            4.538178151492467e-05,
+            0.0012833429088102985,
+            0.4987274570038611
+          ],
+          [
+            0.0003986487395438649,
+            0.0005931543952413476,
+            0.0012981644381407657
+          ],
+          [
+            0.4990480754092823,
+            0.0010067340177956172,
+            3.739430631101554e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 19.226229399360708,
+          "radial_tide_l2": 1217511.7230981092,
+          "angular_tide_l2": 12708568.002263859,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          4.538178151492467e-05,
+          0.0005931543952413476,
+          3.739430631101554e-05
+        ],
+        "child_retained_fraction": 0.0005931543952413476,
+        "packet_width": 0.0011669365701265466,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0005931543952413476,
+        "length_change": -2.3860466073804005,
+        "width_change": -1.4603226052799312,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.776140020968327,
+        "packet_transfer_change": [
+          [
+            -0.9999088504638816,
+            0.0012405419035280611,
+            0.4987272085080611
+          ],
+          [
+            0.000398646676496729,
+            -0.9994067607094309,
+            0.0012980864808010571
+          ],
+          [
+            0.49904781342260485,
+            0.0010044898110756581,
+            -0.9999168379390855
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 19.226229399217914,
+          "radial_tide_l2": 1217511.5880918817,
+          "angular_tide_l2": 12708567.868425297
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0005931543952413476,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_a1_w1p2",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "fate": "same_physical_signs",
+      "renewal_asserted": false,
+      "non_existence_claimed": false,
+      "coordinate_time": 3.0,
+      "initial_sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.376569404965825,
+        "child_areal_radius": 4.728803037191854,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302686,
+            0.00016039452339829572,
+            5.973374237836871e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700106824253e-07,
+            3.133560723400654e-05,
+            0.9997290814380205
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4221665485665543e-10,
+          "radial_tide_l2": 0.1345207234726329,
+          "angular_tide_l2": 0.1435823446647129,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302686,
+          0.9999999932167192,
+          0.9997290814380205
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.5685026176575452,
+        "blockers": [],
+        "source_reset": false
+      },
+      "final_sample": {
+        "coordinate_time": 3.0,
+        "child_proper_length": 0.001013915847892531,
+        "child_areal_radius": 21.558898005591185,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            2.096947734313064e-05,
+            0.12510546398362274,
+            0.3749233530678684
+          ],
+          [
+            0.00044778618085827886,
+            0.0012015890179107923,
+            0.0013020274537174142
+          ],
+          [
+            0.3702943713250713,
+            0.12974623626165757,
+            1.8447854377608207e-05
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 45.963547620993374,
+          "radial_tide_l2": 1261803.3930509584,
+          "angular_tide_l2": 13175344.858363371,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          2.096947734313064e-05,
+          0.0012015890179107923,
+          1.8447854377608207e-05
+        ],
+        "child_retained_fraction": 0.0012015890179107923,
+        "packet_width": 0.0011782068360382382,
+        "blockers": [],
+        "source_reset": false
+      },
+      "signals": {
+        "contraction_sign": 1,
+        "dispersion_sign": -1,
+        "retention_order": [
+          1,
+          0,
+          2
+        ],
+        "child_retained_fraction": 0.0012015890179107923,
+        "length_change": -2.3755554891179322,
+        "width_change": -1.567324410821507,
+        "unresolved": false,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "areal_radius_change": 16.83009496839933,
+        "packet_transfer_change": [
+          [
+            -0.9997564270529256,
+            0.12494506946022445,
+            0.3749227557304446
+          ],
+          [
+            0.00044778528817554557,
+            -0.9987984041988084,
+            0.0013020237995894834
+          ],
+          [
+            0.37029378415506065,
+            0.12971490065442356,
+            -0.9997106335836429
+          ]
+        ],
+        "packet_transfer_signs": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "areal_radius_sign": 1,
+        "actual_geometry_growth": {
+          "R4_l2": 45.96354762085116,
+          "radial_tide_l2": 1261803.258530235,
+          "angular_tide_l2": 13175344.714781027
+        },
+        "geometry_growth_signs": {
+          "R4_l2": 1,
+          "radial_tide_l2": 1,
+          "angular_tide_l2": 1
+        }
+      },
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "observable": {
+        "name": "child_source_retained_fraction",
+        "value": 0.0012015890179107923,
+        "percent_gate": null,
+        "universal_one_percent_gate": false,
+        "discriminates_by": "retained fraction and the sign pattern of contraction, dispersion, retention rank"
+      }
+    },
+    {
+      "case_id": "nf128_am1_w1p2",
+      "imbalance": -1.0,
+      "width_scale": 1.2,
+      "status": "preparation_failed",
+      "fate": "unresolved",
+      "error": "ValueError: initial source-derived geometry failed: positive homotopy stalled above measured radius-correction floor",
+      "cpu_seconds": 0.1753859999999996,
+      "physical_instability_claimed": false,
+      "non_existence_claimed": false
+    }
+  ],
+  "question_status": {
+    "answered": false,
+    "changes_beyond_baseline": null,
+    "unresolved_cases": [
+      "nf128_am1_w1p2"
+    ],
+    "reason": "physical signals unresolved; confirmation was not forced",
+    "percent_gate": null
+  },
+  "confirmation": null,
+  "initial_cpu_seconds": 3.681985000000007,
+  "child_cpu_seconds": 666.831696,
+  "executor_pools": 1,
+  "preparation_failures": [
+    {
+      "case_id": "nf128_am1_w1p2",
+      "imbalance": -1.0,
+      "width_scale": 1.2,
+      "status": "preparation_failed",
+      "fate": "unresolved",
+      "error": "ValueError: initial source-derived geometry failed: positive homotopy stalled above measured radius-correction floor",
+      "cpu_seconds": 0.1753859999999996,
+      "physical_instability_claimed": false,
+      "non_existence_claimed": false
+    }
+  ],
+  "initial_data": [
+    {
+      "case_id": "nf128_am1_w0p8",
+      "imbalance": -1.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 128,
+      "role": "crossed_endpoint_and_narrow",
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -1.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 7.771561172376096e-16,
+      "tails": [
+        2.9991655727705788e-05,
+        2.9991655727705795e-05,
+        2.9713027716008037e-06,
+        2.9713027716007825e-06,
+        5.553388415756183e-06,
+        5.553388415756187e-06
+      ],
+      "tail_max": 2.9991655727705795e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -5.759748245053983e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -1.9456108434250934e-16,
+      "eigenvalue_max": 0.7500000000000004,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -5.759748245053983e-16,
+      "shift_residual_max": 2.4868995751603507e-13,
+      "shift_residual_rms": 2.5588585744435506e-14,
+      "source_current_mean": -5.759748245053983e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 2.4595355611166063,
+      "held_out_hamilton_max": 2.4595355611257714,
+      "projected_hamilton_max": 2.096583410354791e-10,
+      "r_min": -0.9299101527705711,
+      "r_max": 51.19072800928532,
+      "state_sha256": "49ef57694d9045a32c35264e3d79f8e0b0a2ed2632e9f6548cdf5c0997c5c104",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.263955,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.395643554320801,
+        "child_areal_radius": 4.766908761463464,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178377834e-05,
+            1.0732305581739885e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.8625320978684025e-07,
+            1.8693559568442745e-06,
+            0.9999944471577664
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.453597971121765e-10,
+          "radial_tide_l2": 0.1356710251298714,
+          "angular_tide_l2": 0.1283750496608472,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577664
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.3588425982266321,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_am1_w1",
+      "imbalance": -1.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 128,
+      "role": "endpoint_imbalance",
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -1.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 1.7554167342883506e-16,
+      "tails": [
+        4.5711982468610674e-05,
+        4.571198246861088e-05,
+        8.484540351882077e-08,
+        8.484540351881911e-08,
+        4.571198246861978e-05,
+        4.57119824686199e-05
+      ],
+      "tail_max": 4.57119824686199e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 6.429892976638609e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.2204488077964757e-16,
+      "eigenvalue_max": 0.7499999999999999,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 6.429892976638609e-16,
+      "shift_residual_max": 2.0250467969162855e-13,
+      "shift_residual_rms": 2.4243232584369294e-14,
+      "source_current_mean": 6.429892976638609e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 3.8131897250328137,
+      "held_out_hamilton_max": 3.813189724970707,
+      "projected_hamilton_max": 1.1741285721456052e-10,
+      "r_min": -0.9654123438122515,
+      "r_max": 51.32867047457974,
+      "state_sha256": "ed667e264f6d17cd7f64498d5bc6fa347c77759287916387bb6f6d90898d18f6",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2797660000000004,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.387039031240056,
+        "child_areal_radius": 4.749669799931591,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453967,
+            4.2801005282144804e-05,
+            2.484958001036652e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.619866773153246e-07,
+            2.244206719977561e-06,
+            0.9999542322453964
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4415051778262085e-10,
+          "radial_tide_l2": 0.1350041361729094,
+          "angular_tide_l2": 0.13364945994305846,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453967,
+          0.9999999151046722,
+          0.9999542322453964
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.462050702753836,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_am0p5_w0p8",
+      "imbalance": -0.5,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.375,
+        0.375,
+        0.5,
+        0.5,
+        0.625,
+        0.625
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -0.5,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 7.771561172376096e-16,
+      "tails": [
+        2.9991655727705788e-05,
+        2.9991655727705795e-05,
+        2.9713027716008037e-06,
+        2.9713027716007825e-06,
+        5.553388415756183e-06,
+        5.553388415756187e-06
+      ],
+      "tail_max": 2.9991655727705795e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -5.882261228023685e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.501028370179672e-16,
+      "eigenvalue_max": 0.6249999999999998,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -5.882261228023685e-16,
+      "shift_residual_max": 2.078337502098293e-13,
+      "shift_residual_rms": 2.473046627690956e-14,
+      "source_current_mean": -5.882261228023685e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 2.034128013925546,
+      "held_out_hamilton_max": 2.034128013908987,
+      "projected_hamilton_max": 1.4289036338703542e-10,
+      "r_min": -0.4630129682330074,
+      "r_max": 51.421734911045746,
+      "state_sha256": "4a3cf9f3af3dfb37919d61caf53cf88bd22f5b49c8c5569c7897cf7d286af3ce",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.26880900000000096,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.4060721300886354,
+        "child_areal_radius": 4.787023147614335,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178350075e-05,
+            1.073230558127729e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.8625320970542386e-07,
+            1.8693559568960846e-06,
+            0.9999944471577665
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4671647148107059e-10,
+          "radial_tide_l2": 0.13461471367419722,
+          "angular_tide_l2": 0.12261018217371808,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577665
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.4851483389198596,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_am0p5_w1",
+      "imbalance": -0.5,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.375,
+        0.375,
+        0.5,
+        0.5,
+        0.625,
+        0.625
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -0.5,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 1.7554167342883506e-16,
+      "tails": [
+        4.5711982468610674e-05,
+        4.571198246861088e-05,
+        8.484540351882077e-08,
+        8.484540351881911e-08,
+        4.571198246861978e-05,
+        4.57119824686199e-05
+      ],
+      "tail_max": 4.57119824686199e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 4.506780181705119e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -1.876526578020861e-16,
+      "eigenvalue_max": 0.6250000000000001,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 4.506780181705119e-16,
+      "shift_residual_max": 1.687538997430238e-13,
+      "shift_residual_rms": 2.3302840048842956e-14,
+      "source_current_mean": 4.506780181705119e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 3.2412323478210148,
+      "held_out_hamilton_max": 3.2412323479002607,
+      "projected_hamilton_max": 1.776212094073415e-10,
+      "r_min": -0.47992596426615197,
+      "r_max": 51.57596347729951,
+      "state_sha256": "b8618f4ffb8bc27a4f956d0c87463a70f093cdf8dff081ee5da6df0d0fe17356",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2469070000000002,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3981178362831166,
+        "child_areal_radius": 4.771144440192501,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453965,
+            4.280100528223731e-05,
+            2.484958000111465e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.6198667746335444e-07,
+            2.2442067200145692e-06,
+            0.9999542322453967
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5860226614421287e-10,
+          "radial_tide_l2": 0.13387754926353296,
+          "angular_tide_l2": 0.12762467837571065,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453965,
+          0.9999999151046722,
+          0.9999542322453967
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.6109386659436515,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_am0p5_w1p2",
+      "imbalance": -0.5,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.375,
+        0.375,
+        0.5,
+        0.5,
+        0.625,
+        0.625
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": -0.5,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 4.440892098500626e-16,
+      "tails": [
+        0.00021091614719542196,
+        0.0002109161471954218,
+        6.945276188810359e-09,
+        6.945276188811173e-09,
+        0.00026924532614161636,
+        0.00026924532614161603
+      ],
+      "tail_max": 0.00026924532614161636,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -9.563007286746117e-17,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -1.8593839113789563e-16,
+      "eigenvalue_max": 0.6250000000000004,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -9.563007286746117e-17,
+      "shift_residual_max": 1.8118839761882555e-13,
+      "shift_residual_rms": 2.3510535969986822e-14,
+      "source_current_mean": -9.563007286746117e-17,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 18.391682253004774,
+      "held_out_hamilton_max": 18.391682253027632,
+      "projected_hamilton_max": 1.8441037585859021e-10,
+      "r_min": -0.4940840419359622,
+      "r_max": 51.689615238153905,
+      "state_sha256": "a5169b3aa6c1cb965c89d612d882c3bc3f66ca19e92cea2fb9564a4ae69b17ac",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.26142099999999857,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3880701472769745,
+        "child_areal_radius": 4.751120312505372,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302686,
+            0.00016039452339829572,
+            5.973374237836871e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700104465032e-07,
+            3.1335607234250795e-05,
+            0.9997290814380209
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5463107112102e-10,
+          "radial_tide_l2": 0.13333218056203658,
+          "angular_tide_l2": 0.13700092001495198,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302686,
+          0.9999999932167192,
+          0.9997290814380209
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.746770482313649,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a0_w0p8",
+      "imbalance": 0.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 7.771561172376096e-16,
+      "tails": [
+        2.9991655727705788e-05,
+        2.9991655727705795e-05,
+        2.9713027716008037e-06,
+        2.9713027716007825e-06,
+        5.553388415756183e-06,
+        5.553388415756187e-06
+      ],
+      "tail_max": 2.9991655727705795e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -6.15659967675443e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.2438651342725686e-16,
+      "eigenvalue_max": 0.5,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -6.15659967675443e-16,
+      "shift_residual_max": 1.7852649196756986e-13,
+      "shift_residual_rms": 2.4884701951809295e-14,
+      "source_current_mean": -6.15659967675443e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 2.0356662971044734,
+      "held_out_hamilton_max": 2.0356662972903306,
+      "projected_hamilton_max": 1.9622009572728416e-10,
+      "r_min": -0.02629966284123908,
+      "r_max": 51.49620094588124,
+      "state_sha256": "561a81cd084316c0f402cf000557de24a90e59dbeb8f4185f9c0ec824c9294f2",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.24878400000000056,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.4094399079650057,
+        "child_areal_radius": 4.793518347039996,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178377834e-05,
+            1.0732305581739885e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.862532098608551e-07,
+            1.8693559568350224e-06,
+            0.9999944471577663
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.685892056000488e-10,
+          "radial_tide_l2": 0.134277596830188,
+          "angular_tide_l2": 0.12090882392192079,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577663
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.5297675911524393,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a0_w1",
+      "imbalance": 0.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 128,
+      "role": "uniform_imbalance",
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 1.7554167342883506e-16,
+      "tails": [
+        4.5711982468610674e-05,
+        4.571198246861088e-05,
+        8.484540351882077e-08,
+        8.484540351881911e-08,
+        4.571198246861978e-05,
+        4.57119824686199e-05
+      ],
+      "tail_max": 4.57119824686199e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 2.7966948726523126e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -1.8100095563414416e-16,
+      "eigenvalue_max": 0.5000000000000002,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 2.7966948726523126e-16,
+      "shift_residual_max": 2.042816107399577e-13,
+      "shift_residual_rms": 2.340525475209189e-14,
+      "source_current_mean": 2.7966948726523126e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 2.6683855519645903,
+      "held_out_hamilton_max": 2.6683855520745996,
+      "projected_hamilton_max": 2.2568473478923323e-10,
+      "r_min": -0.030385585477994415,
+      "r_max": 51.65705602189185,
+      "state_sha256": "5161899374300c7b9db6dcb82e2b886c5819a14b3638fb30aaa5b018dd0dc898",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2777220000000007,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.401755666417943,
+        "child_areal_radius": 4.778202403302188,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453967,
+            4.2801005282144804e-05,
+            2.484958001036652e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.6198667749110996e-07,
+            2.2442067199590577e-06,
+            0.9999542322453965
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4371858031126706e-10,
+          "radial_tide_l2": 0.13351106202418472,
+          "angular_tide_l2": 0.12573043729240987,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453967,
+          0.9999999151046722,
+          0.9999542322453965
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.6647851360937347,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a0_w1p2",
+      "imbalance": 0.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 4.440892098500626e-16,
+      "tails": [
+        0.00021091614719542196,
+        0.0002109161471954218,
+        6.945276188810359e-09,
+        6.945276188811173e-09,
+        0.00026924532614161636,
+        0.00026924532614161603
+      ],
+      "tail_max": 0.00026924532614161636,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -3.505807780604019e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -1.87065386582379e-16,
+      "eigenvalue_max": 0.5000000000000001,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -3.505807780604019e-16,
+      "shift_residual_max": 1.598714831748297e-13,
+      "shift_residual_rms": 2.4077956585283956e-14,
+      "source_current_mean": -3.505807780604019e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 14.588431909098512,
+      "held_out_hamilton_max": 14.588431909140134,
+      "projected_hamilton_max": 2.2142042019335229e-10,
+      "r_min": -0.03606890746179392,
+      "r_max": 51.77416255463781,
+      "state_sha256": "d2e82bd17f9641cd8ee9b637e455b14aadea7e9977fad579fe6e3ab1b2fd9a7e",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2775740000000013,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.391853249534658,
+        "child_areal_radius": 4.758492832362194,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302688,
+            0.00016039452339833274,
+            5.973374239132131e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700106824253e-07,
+            3.133560723400654e-05,
+            0.9997290814380205
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.3927235648808882e-10,
+          "radial_tide_l2": 0.1329519130340226,
+          "angular_tide_l2": 0.13513940344319075,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302688,
+          0.9999999932167192,
+          0.9997290814380205
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.8123261529374572,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a0p5_w0p8",
+      "imbalance": 0.5,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.625,
+        0.625,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.5,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 7.771561172376096e-16,
+      "tails": [
+        2.9991655727705788e-05,
+        2.9991655727705795e-05,
+        2.9713027716008037e-06,
+        2.9713027716007825e-06,
+        5.553388415756183e-06,
+        5.553388415756187e-06
+      ],
+      "tail_max": 2.9991655727705795e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -6.406513770441834e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.865846106264286e-16,
+      "eigenvalue_max": 0.6249999999999999,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -6.406513770441834e-16,
+      "shift_residual_max": 2.2293505182590962e-13,
+      "shift_residual_rms": 2.6026455134229597e-14,
+      "source_current_mean": -6.406513770441834e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 2.5787744661711933,
+      "held_out_hamilton_max": 2.578774466061084,
+      "projected_hamilton_max": 2.0564464237385338e-10,
+      "r_min": -0.02075745019820996,
+      "r_max": 51.417661899114385,
+      "state_sha256": "8d5dce7791394d8464e95da5682841a461dfc4de18789e244a9bfa7a67377926",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2535090000000011,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.4059051357752343,
+        "child_areal_radius": 4.786698014947686,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.985596217826126e-05,
+            1.0732305580241083e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.8625320978684025e-07,
+            1.8693559568442745e-06,
+            0.9999944471577664
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5644087843670694e-10,
+          "radial_tide_l2": 0.134636606877508,
+          "angular_tide_l2": 0.12306485704076009,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577664
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.4851044207361608,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a0p5_w1",
+      "imbalance": 0.5,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.625,
+        0.625,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.5,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 1.7554167342883506e-16,
+      "tails": [
+        4.5711982468610674e-05,
+        4.571198246861088e-05,
+        8.484540351882077e-08,
+        8.484540351881911e-08,
+        4.571198246861978e-05,
+        4.57119824686199e-05
+      ],
+      "tail_max": 4.57119824686199e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": 9.887383244804131e-17,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.093425994863823e-16,
+      "eigenvalue_max": 0.6250000000000001,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": 9.887383244804131e-17,
+      "shift_residual_max": 2.557958732675395e-13,
+      "shift_residual_rms": 2.4604058727082496e-14,
+      "source_current_mean": 9.887383244804131e-17,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 3.2419210533206666,
+      "held_out_hamilton_max": 3.2419210532057057,
+      "projected_hamilton_max": 1.3507287649483501e-10,
+      "r_min": -0.025238615374689743,
+      "r_max": 51.575966482715536,
+      "state_sha256": "6b0a0966f2253381b319696748404fe2798e8f822ee44a64d96a8bc4b669d406",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2604520000000008,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3981310051483007,
+        "child_areal_radius": 4.771188087854925,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453966,
+            4.280100528211149e-05,
+            2.484957999815406e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.619866773153246e-07,
+            2.244206719977561e-06,
+            0.9999542322453964
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4567620536410361e-10,
+          "radial_tide_l2": 0.13387866981721508,
+          "angular_tide_l2": 0.12772824526353627,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453966,
+          0.9999999151046722,
+          0.9999542322453964
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.610643507962207,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a0p5_w1p2",
+      "imbalance": 0.5,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 128,
+      "role": "catalog_only",
+      "weights": [
+        0.625,
+        0.625,
+        0.5,
+        0.5,
+        0.375,
+        0.375
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 0.5,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 4.440892098500626e-16,
+      "tails": [
+        0.00021091614719542196,
+        0.0002109161471954218,
+        6.945276188810359e-09,
+        6.945276188811173e-09,
+        0.00026924532614161636,
+        0.00026924532614161603
+      ],
+      "tail_max": 0.00026924532614161636,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -6.092254168905809e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.786997155649758e-16,
+      "eigenvalue_max": 0.6250000000000002,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -6.092254168905809e-16,
+      "shift_residual_max": 2.0072787578037988e-13,
+      "shift_residual_rms": 2.5632008451902385e-14,
+      "source_current_mean": -6.092254168905809e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 15.473265976860056,
+      "held_out_hamilton_max": 15.473265976790877,
+      "projected_hamilton_max": 1.3911569118896239e-10,
+      "r_min": -0.03014267987515673,
+      "r_max": 51.68877127043063,
+      "state_sha256": "53161e4d4ba2f51a1b1975d801701b4276bf67c6ab53b8018b4b8788c1d9e7be",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.24952000000000396,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3880840052505423,
+        "child_areal_radius": 4.751178169530939,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302684,
+            0.00016039452339824392,
+            5.973374237799864e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700106315402e-07,
+            3.1335607234080555e-05,
+            0.9997290814380206
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5444636225547507e-10,
+          "radial_tide_l2": 0.13333868042606054,
+          "angular_tide_l2": 0.13724528847290376,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302684,
+          0.9999999932167192,
+          0.9997290814380206
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.7454916337244932,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a1_w0p8",
+      "imbalance": 1.0,
+      "width_scale": 0.8,
+      "half_width": 0.8,
+      "nf": 128,
+      "role": "narrow_shape",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.2
+        ],
+        [
+          1.2,
+          2.8
+        ],
+        [
+          2.8,
+          4.0
+        ]
+      ],
+      "gram_max": 7.771561172376096e-16,
+      "tails": [
+        2.9991655727705788e-05,
+        2.9991655727705795e-05,
+        2.9713027716008037e-06,
+        2.9713027716007825e-06,
+        5.553388415756183e-06,
+        5.553388415756187e-06
+      ],
+      "tail_max": 2.9991655727705795e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -6.63288897214895e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.0975541681312394e-16,
+      "eigenvalue_max": 0.7499999999999999,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -6.63288897214895e-16,
+      "shift_residual_max": 2.682317901039495e-13,
+      "shift_residual_rms": 2.804603640826341e-14,
+      "source_current_mean": -6.63288897214895e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 3.121809591253502,
+      "held_out_hamilton_max": 3.1218095912541055,
+      "projected_hamilton_max": 1.864066401235931e-10,
+      "r_min": -0.014974729959050137,
+      "r_max": 51.182541067326355,
+      "state_sha256": "74db38dd1f3d557db9e3155a421d58b63c9feead462d2d43b83eef9b2a095fd9",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.2544249999999977,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3953074199148103,
+        "child_areal_radius": 4.766254785972005,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999706626497655,
+            1.9855962178350075e-05,
+            1.073230558127729e-06
+          ],
+          [
+            3.7864975083179447e-07,
+            0.9999969655081165,
+            2.24087739819634e-06
+          ],
+          [
+            3.862532098608551e-07,
+            1.8693559568350224e-06,
+            0.9999944471577663
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.5272553770525256e-10,
+          "radial_tide_l2": 0.13571558623548688,
+          "angular_tide_l2": 0.12924410320159369,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999706626497655,
+          0.9999969655081165,
+          0.9999944471577663
+        ],
+        "child_retained_fraction": 0.9999969655081165,
+        "packet_width": 1.358722218103467,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a1_w1",
+      "imbalance": 1.0,
+      "width_scale": 1.0,
+      "half_width": 1.0,
+      "nf": 128,
+      "role": "baseline",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "gram_max": 1.7554167342883506e-16,
+      "tails": [
+        4.5711982468610674e-05,
+        4.571198246861088e-05,
+        8.484540351882077e-08,
+        8.484540351881911e-08,
+        4.571198246861978e-05,
+        4.57119824686199e-05
+      ],
+      "tail_max": 4.57119824686199e-05,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "owned_original_middle",
+      "child_frame_altered": false,
+      "mean_current": -7.861593997894617e-17,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.2635545164113176e-16,
+      "eigenvalue_max": 0.7500000000000001,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -7.861593997894617e-17,
+      "shift_residual_max": 3.0553377895572104e-13,
+      "shift_residual_rms": 2.6718247005444275e-14,
+      "source_current_mean": -7.861593997894617e-17,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 3.8122219130655957,
+      "held_out_hamilton_max": 3.812221913160251,
+      "projected_hamilton_max": 1.9185182869446704e-10,
+      "r_min": -0.020853975418351656,
+      "r_max": 51.32873246194407,
+      "state_sha256": "5b6c6ad6c436cea2bdedaa96be232de2c4585d2fd6df8794f413cfb63ed31e16",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.28626799999999974,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.3870675161954833,
+        "child_areal_radius": 4.749761848661758,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9999542322453965,
+            4.280100528223731e-05,
+            2.484958000111465e-07
+          ],
+          [
+            2.0630471359028837e-09,
+            0.9999999151046722,
+            7.795733970861192e-08
+          ],
+          [
+            2.6198667749110996e-07,
+            2.2442067199590577e-06,
+            0.9999542322453965
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4279274067985805e-10,
+          "radial_tide_l2": 0.1350062275186232,
+          "angular_tide_l2": 0.13383856154475543,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9999542322453965,
+          0.9999999151046722,
+          0.9999542322453965
+        ],
+        "child_retained_fraction": 0.9999999151046722,
+        "packet_width": 1.4614895418500577,
+        "blockers": [],
+        "source_reset": false
+      }
+    },
+    {
+      "case_id": "nf128_a1_w1p2",
+      "imbalance": 1.0,
+      "width_scale": 1.2,
+      "half_width": 1.2,
+      "nf": 128,
+      "role": "wide_shape",
+      "weights": [
+        0.75,
+        0.75,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "occupation_trace": 3.0,
+      "regional_occupation_gap": 1.0,
+      "supports": [
+        [
+          0.0,
+          0.8
+        ],
+        [
+          0.8,
+          3.2
+        ],
+        [
+          3.2,
+          4.0
+        ]
+      ],
+      "gram_max": 4.440892098500626e-16,
+      "tails": [
+        0.00021091614719542196,
+        0.0002109161471954218,
+        6.945276188810359e-09,
+        6.945276188811173e-09,
+        0.00026924532614161636,
+        0.00026924532614161603
+      ],
+      "tail_max": 0.00026924532614161636,
+      "overlap_before_max": 0.0,
+      "overlap_after_max": 0.0,
+      "explicit_orthogonalization": "outer_projected_against_child_then_lowdin",
+      "child_frame_origin": "declared_width_scaled_lobes",
+      "child_frame_altered": false,
+      "mean_current": -8.44622214605116e-16,
+      "mean_current_deleted": false,
+      "eigenvalue_min": -2.3082237919180085e-16,
+      "eigenvalue_max": 0.75,
+      "converged": true,
+      "method": "source homotopy / radius correction",
+      "shift_method": "retained full source and residual; mean current not deleted",
+      "shift_residual_mean": -8.44622214605116e-16,
+      "shift_residual_max": 2.398079115465298e-13,
+      "shift_residual_rms": 2.79353115475041e-14,
+      "source_current_mean": -8.44622214605116e-16,
+      "imposed_radius": false,
+      "filtered_v1_radius": false,
+      "saved_t03_radius_copied": false,
+      "full_hamilton_max": 18.562461019550298,
+      "held_out_hamilton_max": 18.562461019455256,
+      "projected_hamilton_max": 2.068406557143021e-10,
+      "r_min": -0.028113258090074034,
+      "r_max": 51.42906584455835,
+      "state_sha256": "ca5eb426318999e4c5ae135d4730d2c203d5912871dcbfead267bc20a332a5fe",
+      "phi_equals_prepared_columns": true,
+      "phi_is_alias": false,
+      "audited": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "flux": 4.0,
+        "kappa": 1
+      },
+      "basis": "frozen_portable_baseline",
+      "initial_cpu_seconds": 0.252873000000001,
+      "constructor": "nsc_nested_parent_child.initial_state",
+      "basis_pins": {
+        "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+        "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+        "frozen_basis_authenticated": true,
+        "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5"
+      },
+      "sample": {
+        "coordinate_time": 0.0,
+        "child_proper_length": 2.376569404965825,
+        "child_areal_radius": 4.728803037191854,
+        "metric_positive": true,
+        "probability_positive": true,
+        "source_packet_window_fractions": [
+          [
+            0.9997773965302686,
+            0.00016039452339829572,
+            5.973374237836871e-07
+          ],
+          [
+            8.926827332889078e-10,
+            0.9999999932167192,
+            3.65412793079667e-09
+          ],
+          [
+            5.871700106824253e-07,
+            3.133560723400654e-05,
+            0.9997290814380205
+          ]
+        ],
+        "source_packet_window_fraction_convention": "rows are source pairs; columns are left, child, right windows",
+        "actual_geometry": {
+          "finite": true,
+          "R4_l2": 1.4221665485665543e-10,
+          "radial_tide_l2": 0.1345207234726329,
+          "angular_tide_l2": 0.1435823446647129,
+          "chi_substituted_for_curvature": false
+        },
+        "regions_ready": true,
+        "tidal_ready": true,
+        "packet_retention": [
+          0.9997773965302686,
+          0.9999999932167192,
+          0.9997290814380205
+        ],
+        "child_retained_fraction": 0.9999999932167192,
+        "packet_width": 1.5685026176575452,
+        "blockers": [],
+        "source_reset": false
+      }
+    }
+  ],
+  "prepared_cases": [
+    "nf128_am1_w0p8",
+    "nf128_am1_w1",
+    "nf128_am0p5_w0p8",
+    "nf128_am0p5_w1",
+    "nf128_am0p5_w1p2",
+    "nf128_a0_w0p8",
+    "nf128_a0_w1",
+    "nf128_a0_w1p2",
+    "nf128_a0p5_w0p8",
+    "nf128_a0p5_w1",
+    "nf128_a0p5_w1p2",
+    "nf128_a1_w0p8",
+    "nf128_a1_w1",
+    "nf128_a1_w1p2"
+  ],
+  "preparation_cpu_seconds": 65.228702,
+  "handoff_cpu_seconds": 60.42569400000001,
+  "continuation_budget_seconds": 21534.771298,
+  "aggregate_cpu_seconds": 732.6505,
+  "assessment_cpu_seconds": 0.590102
+}

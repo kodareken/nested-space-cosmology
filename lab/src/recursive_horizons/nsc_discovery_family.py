@@ -18,9 +18,11 @@ from __future__ import annotations
 
 from dataclasses import replace
 import json
+import ast
 import math
 from pathlib import Path
 import time
+import subprocess
 
 import numpy as np
 
@@ -31,6 +33,7 @@ from . import nsc_discovery_tidal as tidal
 from . import nsc_nested_parent_child as model
 from . import nsc_spherical_coupling as coupling
 from . import nsc_spherical_galerkin_coupling as galerkin
+from .provenance import resolve_pinned_source_bytes
 
 
 SCHEMA = "NSC-DISCOVERY-SOURCE-FAMILY-v1"
@@ -57,6 +60,11 @@ EXPLORATION_MEMBERS = (
 # The owned positive homotopy stalls on this corner at nf=64 and nf=128.
 # The column family still lists it. No substitute radius is constructed.
 STALLED_MEMBER = (-1.0, 1.2)
+CONFIRMATION_CANDIDATES = ((1.0, 0.8), (1.0, 1.0), (1.0, 1.2), (0.0, 1.0), (-1.0, 1.2))
+COMMON_CHILD_INTERVAL = (1.0, 3.0)
+FROZEN_WIDTH_MEMBERS = ((1.0, 0.8), (1.0, 1.0), (1.0, 1.2))
+IMPLEMENTATION_REVISION = "source-family-confirmation-v2"
+LEGACY_DIRECTORY = episode.LAB / "results" / "development" / "nsc-discovery-family-v1"
 CASE_COUNT = 6
 THREADS_PER_CASE = 1
 HANDOFF_TIME = float(episode.HANDOFF_TIME)
@@ -723,17 +731,17 @@ def regime_observable(signals):
     }
 
 
-def measure_consumers(pair, state, clocks, time_value):
+def measure_consumers(pair, state, clocks, time_value, *, control_mode="coupled"):
     """Regions and tidal read the state. A failure is recorded exactly and is not replaced."""
     blockers = []
     region_row = None
     tidal_row = None
     try:
-        region_row = regions.analyze(pair, state, float(time_value), control_mode="coupled")
+        region_row = regions.analyze(pair, state, float(time_value), control_mode=control_mode)
     except Exception as error:
         blockers.append({"consumer": "regions", "error": type(error).__name__ + ": " + str(error)})
     try:
-        jets = tidal.analytic_accelerations(pair, state, "coupled")
+        jets = tidal.analytic_accelerations(pair, state, control_mode)
         tidal_row = tidal.station_observables(pair, jets, clocks)
     except Exception as error:
         blockers.append({"consumer": "tidal", "error": type(error).__name__ + ": " + str(error)})
@@ -747,19 +755,33 @@ def measure_consumers(pair, state, clocks, time_value):
             width = region_row["localization"]["originally_child_prepared_pair"].get("proper_width")
     measured = model.metrics(pair, state)
     transfer = None
+    common_retention = None
     if region_row is not None:
         fine, system = model._active(pair, state)
         masses = regions._column_mass(fine, system)
         transfer = []
+        common_retention = []
         for columns in regions.COLUMN_PAIRS:
             mass = np.sum(masses[:, list(columns)], axis=1)
             content = float(np.sum(mass))
+            common_retention.append(None if content <= 0.0 else
+                regions._window_probability(pair.grid, mass, COMMON_CHILD_INTERVAL) / content)
             transfer.append([
                 None if content <= 0.0 else regions._window_probability(pair.grid, mass, support) / content
                 for support in source_supports(pair.source_metadata["width_scale"])
             ])
     return {
         "coordinate_time": float(time_value),
+        "control_mode": control_mode,
+        "common_child_window": list(COMMON_CHILD_INTERVAL),
+        "common_child_window_packet_retention": common_retention,
+        "child_source_common_window_retained_fraction": None if common_retention is None else common_retention[1],
+        "retention_windows": {
+            "own_preparation": source_supports(pair.source_metadata["width_scale"])[1],
+            "common_spatial_child": list(COMMON_CHILD_INTERVAL),
+            "tagged_source_columns": [2, 3],
+            "denominator": "total probability of the tagged child source pair",
+        },
         "child_proper_length": measured["child_proper_length"],
         "child_areal_radius": measured["child_r_proper_mean"],
         "metric_positive": measured["Q_min"] > 0.0 and measured["r_min"] > 0.0,
@@ -818,27 +840,51 @@ def signals_from_samples(earlier, later):
 
 
 def select_confirmation(rows):
-    """nf=256 copies of members whose physical signs differ. Unresolved rows are not regenerated."""
-    selected = []
+    """Predeclared width sensitivity, uniform control and unresolved NF256 retry.
+
+    Selection is admission to an experiment, never a physical verdict. Five
+    declared candidates leave one slot for another measured or failed member.
+    """
+    by_member = {}
     for row in rows or []:
-        if row.get("fate") != "distinct_physical_signs":
+        if row.get("control_mode", "coupled") != "coupled":
             continue
+        if row.get("imbalance") is None or row.get("width_scale") is None:
+            continue
+        key = (canonical_imbalance(row["imbalance"]), canonical_width_scale(row["width_scale"]))
+        by_member[key] = row
+    keys = list(CONFIRMATION_CANDIDATES)
+    extras = [key for key, row in by_member.items() if key not in keys and
+              (row.get("fate") == "distinct_physical_signs" or row.get("status") == "preparation_failed")]
+    keys.extend(extras[:max(0, CASE_COUNT-len(keys))])
+    selected = []
+    for imbalance, width in keys:
+        row = by_member.get((imbalance, width), {})
+        reasons = []
+        if (imbalance, width) == (1.0, 1.0):
+            reasons.append("baseline_comparator")
+        if (imbalance, width) in FROZEN_WIDTH_MEMBERS:
+            reasons.append("predeclared_quantitative_width_sensitivity")
+        if (imbalance, width) == (0.0, 1.0):
+            reasons.append("predeclared_uniform_imbalance_control")
+        if (imbalance, width) == STALLED_MEMBER:
+            reasons.append("predeclared_nf256_initial_preparation_retry")
+        if row.get("status") == "preparation_failed":
+            reasons.append("unresolved_initial_preparation_retry")
+        if row.get("fate") == "distinct_physical_signs":
+            reasons.append("distinct_physical_signs")
         selected.append({
-            "imbalance": row["imbalance"],
-            "width_scale": row["width_scale"],
-            "parent_case": row["case_id"],
-            "nf": CONFIRMATION_NF,
-            "fate": row["fate"],
-            "forced": False,
+            "imbalance": imbalance, "width_scale": width,
+            "parent_case": row.get("case_id", case_id(imbalance, width, EXPLORATION_NF)),
+            "nf": CONFIRMATION_NF, "fate": row.get("fate", "unmeasured"),
+            "selection_reasons": reasons, "forced": False,
+            "physical_conclusion_forced": False,
+            "initial_preparation_error": row.get("error") if row.get("status") == "preparation_failed" else None,
         })
-        if len(selected) == CASE_COUNT:
-            break
-    return {
-        "nf": CONFIRMATION_NF,
-        "cases": selected,
-        "forced_regeneration": False,
-        "reason": None if selected else "no distinct physical regime to confirm",
-    }
+    return {"nf": CONFIRMATION_NF, "cases": selected,
+            "forced_regeneration": False, "reason": "predeclared bounded confirmation experiments",
+            "candidate_cap": CASE_COUNT, "qualitative_sign_difference_required": False,
+            "physical_conclusion_forced": False}
 
 
 def answer_question(rows):
@@ -864,7 +910,7 @@ def answer_question(rows):
     return {"answered": True, "changes_beyond_baseline": False, "distinct_cases": [], "percent_gate": None}
 
 
-def campaign_forecast(n_cases=CASE_COUNT, nf=EXPLORATION_NF, step_cap=STEP_CAP):
+def campaign_forecast(n_cases=CASE_COUNT, nf=EXPLORATION_NF, step_cap=STEP_CAP, *, continuation_cases=None):
     """Rate-sample forecast. Dense initial solves are counted and are not inside that sample."""
     n_cases = int(n_cases)
     nf = int(nf)
@@ -875,10 +921,12 @@ def campaign_forecast(n_cases=CASE_COUNT, nf=EXPLORATION_NF, step_cap=STEP_CAP):
     continue_steps = int(math.ceil((STATIONS[-1] - HANDOFF_TIME) / step_cap - 1e-12))
     seconds_per_rate = (0.037 / 12.0) * (nf / 256.0) * (math.log2(nf) / math.log2(256.0))
     evolve = n_cases * handoff_steps * 4 * seconds_per_rate
-    child = n_cases * continue_steps * 4 * seconds_per_rate
+    continuation_cases = n_cases if continuation_cases is None else int(continuation_cases)
+    child = continuation_cases * continue_steps * 4 * seconds_per_rate
     forecast_child = FORECAST_FACTOR * child
     return {
         "n_cases": n_cases,
+        "continuation_cases": continuation_cases,
         "nf": nf,
         "step_cap": step_cap,
         "dense_initial_solves": n_cases,
@@ -893,7 +941,7 @@ def campaign_forecast(n_cases=CASE_COUNT, nf=EXPLORATION_NF, step_cap=STEP_CAP):
         "hard_gate": False,
         "chunk_limit_bytes": CHUNK_LIMIT_BYTES,
         "threads_per_case": THREADS_PER_CASE,
-        "workers": min(WORKERS, n_cases),
+        "workers": min(WORKERS, continuation_cases),
         "coordinator_pools": 1,
     }
 
@@ -943,9 +991,92 @@ def _read_family(directory):
     return json.loads(path.read_text())
 
 
-def prepare_specification(output, *, nf=EXPLORATION_NF, all_members=False):
-    """Write the family and the six-case admission list. Do not solve."""
+def _mutable_campaign_output(output):
     directory = episode.assert_campaign_output(output)
+    if directory == LEGACY_DIRECTORY.resolve() or LEGACY_DIRECTORY.resolve() in directory.parents:
+        raise PermissionError("family-v1 evidence is immutable; use a new successor output")
+    return directory
+
+
+def producer_identity():
+    """Record current producer bytes; attach Git identity only to matching blobs."""
+    paths = [Path(module.__file__).resolve() for module in
+             (episode, prediction, regions, tidal, model, coupling, galerkin)]
+    paths.extend([Path(__file__).resolve(), episode.LAB / "scripts" / "derive_nsc_discovery_family.py",
+                  episode.LAB / "src" / "recursive_horizons" / "nsc_discovery_backend.py"] )
+    try:
+        commit = subprocess.check_output(["git", "-C", str(episode.REPO), "rev-parse", "HEAD"],
+                                         text=True, stderr=subprocess.PIPE, timeout=5).strip()
+    except (OSError, subprocess.SubprocessError):
+        commit = None
+    # Resolve the local Python import closure so FFT and action dependencies
+    # receive the same identity treatment as the coordinating producer.
+    package = episode.LAB / "src" / "recursive_horizons"
+    pending = list(paths)
+    closure = set()
+    while pending:
+        path = pending.pop().resolve()
+        if path in closure:
+            continue
+        closure.add(path)
+        for node in ast.walk(ast.parse(path.read_text())):
+            modules = []
+            if isinstance(node, ast.ImportFrom):
+                module = node.module or ""
+                if node.level and path.parent == package:
+                    modules = [module.split(".")[0]] if module else [alias.name for alias in node.names]
+                elif module == "recursive_horizons":
+                    modules = [alias.name for alias in node.names]
+                elif module.startswith("recursive_horizons."):
+                    modules = [module.split(".")[1]]
+            elif isinstance(node, ast.Import):
+                modules = [alias.name.split(".")[1] for alias in node.names
+                           if alias.name.startswith("recursive_horizons.")]
+            for module in modules:
+                candidate = package / (module + ".py")
+                if candidate.is_file():
+                    pending.append(candidate)
+    pins = []
+    for path in sorted(closure):
+        relative = path.relative_to(episode.REPO).as_posix()
+        digest = episode.file_sha256(path)
+        authenticated_commit = None
+        if commit:
+            try:
+                resolve_pinned_source_bytes(episode.REPO, relative, digest, commit=commit)
+                authenticated_commit = commit
+            except (RuntimeError, ValueError):
+                pass
+        pins.append({"path": relative, "sha256": digest, "commit": authenticated_commit})
+    return {"implementation_revision": IMPLEMENTATION_REVISION, "files": pins,
+            "working_tree_commit": commit,
+            "all_sources_commit_pinned": all(item["commit"] is not None for item in pins)}
+
+
+def authenticate_producer(family):
+    identity = family.get("producer_identity")
+    if not identity:
+        return {"status": "legacy_record_without_producer_pins", "authenticated": False,
+                "current_code_is_producer": None}
+    authenticated = []
+    unpinned = []
+    for pin in identity["files"]:
+        if pin.get("commit"):
+            resolve_pinned_source_bytes(episode.REPO, pin["path"], pin["sha256"], commit=pin["commit"])
+            authenticated.append(pin["path"])
+        else:
+            # This is explicitly a working-tree identity, not historical provenance.
+            if episode.file_sha256(episode.REPO / pin["path"]) != pin["sha256"]:
+                raise ValueError("uncommitted producer bytes are unavailable: " + pin["path"])
+            unpinned.append(pin["path"])
+    return {"status": "historical_commit_pins_authenticated" if not unpinned else "working_tree_pins_only",
+            "authenticated": not unpinned, "authenticated_files": authenticated,
+            "uncommitted_files": unpinned, "identity": identity}
+
+
+def prepare_specification(output, *, nf=EXPLORATION_NF, all_members=False, frozen_width_controls=False):
+    """Write the family and the six-case admission list. Do not solve."""
+    directory = _mutable_campaign_output(output)
     if _family_path(directory).exists() or (directory / "manifest.json").exists():
         raise FileExistsError("source-family output already exists; refusing to overwrite")
     directory.mkdir(parents=True, exist_ok=True)
@@ -961,8 +1092,10 @@ def prepare_specification(output, *, nf=EXPLORATION_NF, all_members=False):
         nf=int(nf),
         family=members,
         cases=exploration,
-        forecast=campaign_forecast(len(exploration), int(nf), STEP_CAP),
+        forecast=campaign_forecast(len(exploration), int(nf), STEP_CAP, continuation_cases=len(exploration) + (3 if frozen_width_controls else 0)),
         all_members=bool(all_members),
+        frozen_width_controls=bool(frozen_width_controls),
+        producer_identity=producer_identity(),
         regimes=[],
         question_status=answer_question([]),
         confirmation=None,
@@ -974,23 +1107,16 @@ def prepare_specification(output, *, nf=EXPLORATION_NF, all_members=False):
     return record
 
 
-def prepare_confirmation(output, exploration):
+def prepare_confirmation(output, exploration, *, frozen_width_controls=False):
     """A separate directory. Selected nf=256 members only. No forced regeneration."""
-    destination = episode.assert_campaign_output(output)
+    destination = _mutable_campaign_output(output)
     source = Path(exploration).expanduser().resolve()
     if destination == source or source in destination.parents or destination in source.parents:
         raise PermissionError("confirmation output must be a different directory from the exploration")
     if _family_path(destination).exists():
         raise FileExistsError("confirmation output already exists; refusing to overwrite")
     report = _read_family(source)
-    selected = select_confirmation(report.get("regimes") or [])
-    if selected["cases"]:
-        selected["cases"] = selected["cases"][:CASE_COUNT - 1]
-        selected["cases"].insert(0, {
-            "imbalance": BASELINE_IMBALANCE, "width_scale": BASELINE_WIDTH_SCALE,
-            "parent_case": case_id(BASELINE_IMBALANCE, BASELINE_WIDTH_SCALE, EXPLORATION_NF),
-            "nf": CONFIRMATION_NF, "fate": "baseline_comparator", "forced": False,
-        })
+    selected = select_confirmation((report.get("regimes") or []) + (report.get("preparation_failures") or []))
     destination.mkdir(parents=True, exist_ok=True)
     record = dict(specification())
     record.update(
@@ -1002,8 +1128,11 @@ def prepare_confirmation(output, exploration):
         nf=CONFIRMATION_NF,
         cases=[case_id(item["imbalance"], item["width_scale"], CONFIRMATION_NF) for item in selected["cases"]],
         selected=selected,
+        frozen_width_controls=bool(frozen_width_controls),
+        producer_identity=producer_identity(),
+        parent_record_sha256=episode.file_sha256(_family_path(source)),
         forced_regeneration=False,
-        forecast=campaign_forecast(max(1, len(selected["cases"])), CONFIRMATION_NF, STEP_CAP) if selected["cases"] else None,
+        forecast=campaign_forecast(len(selected["cases"]), CONFIRMATION_NF, STEP_CAP, continuation_cases=len(selected["cases"]) + (3 if frozen_width_controls else 0)),
         regimes=[],
         question_status=report.get("question_status"),
         initial_cpu_seconds=0.0,
@@ -1035,11 +1164,11 @@ def _handoff_record(item, stations):
         )
     return {
         "case_id": initial["case_id"],
-        "parent_case": initial["case_id"],
+        "parent_case": item.get("parent_case", initial["case_id"]),
         "nf": int(pair.grid.nf),
-        "control": "coupled",
-        "control_mode": "coupled",
-        "geometry": "evolving",
+        "control": item.get("control_mode", "coupled"),
+        "control_mode": item.get("control_mode", "coupled"),
+        "geometry": "frozen" if item.get("control_mode") == "frozen_geometry" else "evolving",
         "step_cap": float(item["step_cap"]),
         "stations": list(stations),
         "coordinate_time": float(identity["coordinate_time"]),
@@ -1068,7 +1197,7 @@ def _handoff_record(item, stations):
         "stability_certificate": False,
         "stage": 0,
         "snapshot_kind": "handoff",
-        "work_ledger": episode.empty_work_ledger("coupled"),
+        "work_ledger": episode.empty_work_ledger(item.get("control_mode", "coupled")),
         "dense_propagator_stored": False,
         "imbalance": initial["imbalance"],
         "width_scale": initial["width_scale"],
@@ -1080,7 +1209,7 @@ def materialize_directory(output, *, duration, step_cap=STEP_CAP, production=Fal
 
     Duration above ``0.01`` requires ``production=True`` and is the root executor's call.
     """
-    directory = episode.assert_campaign_output(output)
+    directory = _mutable_campaign_output(output)
     family = _read_family(directory)
     if family.get("materialized"):
         raise FileExistsError("source family is already materialized")
@@ -1089,7 +1218,7 @@ def materialize_directory(output, *, duration, step_cap=STEP_CAP, production=Fal
     if family.get("stage") == "confirmation_specification":
         selected = family.get("selected", {}).get("cases") or []
         if not selected:
-            raise ValueError("no distinct physical regime was selected; refusing to regenerate the family")
+            raise ValueError("confirmation has no admitted candidates")
         members = [(item["imbalance"], item["width_scale"]) for item in selected]
         nf = CONFIRMATION_NF
     else:
@@ -1128,6 +1257,10 @@ def materialize_directory(output, *, duration, step_cap=STEP_CAP, production=Fal
             # Preserve each completed handoff before attempting another source.
             item["committed_handoff"] = _commit_handoff(directory, item, STATIONS)
             items.append(item)
+            if family.get("frozen_width_controls") and (imbalance, scale) in FROZEN_WIDTH_MEMBERS:
+                frozen = frozen_handoff_branch(item)
+                frozen["committed_handoff"] = _commit_handoff(directory, frozen, STATIONS)
+                items.append(frozen)
         except (ValueError, RuntimeError, FloatingPointError, np.linalg.LinAlgError) as error:
             failures.append({"case_id": identifier, "imbalance": imbalance, "width_scale": scale,
                              "status": "preparation_failed", "fate": "unresolved",
@@ -1141,6 +1274,29 @@ def materialize_directory(output, *, duration, step_cap=STEP_CAP, production=Fal
         _write_json(_family_path(directory), family)
     return commit_campaign(directory, items, preparation_failures=failures,
                            preparation_cpu_seconds=float(time.process_time() - started))
+
+
+def frozen_handoff_branch(item):
+    """Branch from this source's exact propagated state, without a solve/reset."""
+    initial = dict(item["initial"])
+    identifier = initial["case_id"]
+    initial["case_id"] = identifier + "_frozen_geometry"
+    initial["control_mode"] = "frozen_geometry"
+    initial["initial_cpu_seconds"] = 0.0
+    initial["initial_slice"] = "own source's propagated handoff"
+    initial["initial_coordinate_time"] = float(item["identity"]["coordinate_time"])
+    initial["state_sha256"] = item["identity"]["state_sha256"]
+    initial["phi_equals_prepared_columns"] = False
+    initial["constructor"] = "unchanged own-source handoff branch; no new initial solve"
+    initial["sample"] = measure_consumers(
+        item["propagated"]["pair"], item["propagated"]["state"],
+        item["clocks"]["normal_clocks"], item["identity"]["coordinate_time"],
+        control_mode="frozen_geometry")
+    identity = dict(item["identity"], handoff_cpu_seconds=0.0,
+                    branch_from_own_source=True, branch_parent_case=identifier)
+    return dict(pair=item["pair"], initial=initial, basis_pins=item["basis_pins"],
+                propagated=item["propagated"], clocks=item["clocks"], identity=identity,
+                step_cap=item["step_cap"], control_mode="frozen_geometry", parent_case=identifier)
 
 
 def _commit_handoff(directory, item, stations):
@@ -1160,7 +1316,7 @@ def _commit_handoff(directory, item, stations):
 def commit_campaign(directory, items, *, stations=STATIONS, cpu_budget_seconds=AGGREGATE_CPU_BUDGET_SECONDS,
                     preparation_failures=(), preparation_cpu_seconds=None):
     """Write episode handoff chunks from propagated states. One directory, no second framework."""
-    directory = episode.assert_campaign_output(directory)
+    directory = _mutable_campaign_output(directory)
     manifest_path = directory / "manifest.json"
     if manifest_path.exists():
         raise FileExistsError("continuation manifest already exists; refusing to overwrite")
@@ -1184,6 +1340,8 @@ def commit_campaign(directory, items, *, stations=STATIONS, cpu_budget_seconds=A
             "nf": committed["nf"],
             "coordinate_time": committed["coordinate_time"],
             "step_cap": committed["step_cap"],
+            "control_mode": committed["control_mode"],
+            "parent_case": committed["parent_case"],
         })
         initial_cpu += float(item["initial"]["initial_cpu_seconds"] or 0.0)
         initials.append(item["initial"])
@@ -1254,7 +1412,7 @@ def run(output, *, workers=WORKERS, cpu_budget_seconds=AGGREGATE_CPU_BUDGET_SECO
         forecast_factor=FORECAST_FACTOR, memory_limit_bytes=episode.DEFAULT_MEMORY_BYTES,
         max_steps=None, backend="auto", executor=None):
     """One episode pool. The budget that remains after the initial solves is the child allowance."""
-    directory = episode.assert_campaign_output(output)
+    directory = _mutable_campaign_output(output)
     if not (directory / "manifest.json").is_file():
         raise FileNotFoundError(
             "continuation manifest is missing. Materialize the propagate_baseline handoff before run. "
@@ -1263,8 +1421,8 @@ def run(output, *, workers=WORKERS, cpu_budget_seconds=AGGREGATE_CPU_BUDGET_SECO
     manifest = episode.read_manifest(directory)
     if len(manifest.get("cases") or []) < 1:
         raise ValueError("no continuation cases; confirmation was not selected")
-    if len(manifest["cases"]) > len(IMBALANCES) * len(WIDTH_SCALES):
-        raise ValueError("campaign exceeds the 15-member family")
+    if len(manifest["cases"]) > len(IMBALANCES) * len(WIDTH_SCALES) + len(FROZEN_WIDTH_MEMBERS):
+        raise ValueError("campaign exceeds 15 sources and three frozen controls")
     if manifest.get("status") == "STATION_REACHED" and max_steps is None:
         return dict(manifest, coordinator_pools=1)
     initial_cpu = float(manifest.get("initial_cpu_seconds") or 0.0)
@@ -1318,6 +1476,21 @@ def run(output, *, workers=WORKERS, cpu_budget_seconds=AGGREGATE_CPU_BUDGET_SECO
     return result
 
 
+def quantitative_comparison(sample, reference):
+    if abs(float(sample["coordinate_time"]) - float(reference["coordinate_time"])) > 1e-10:
+        return {"available": False, "reason": "coordinate times differ"}
+    names = ("child_proper_length", "packet_width", "child_areal_radius",
+             "child_retained_fraction", "child_source_common_window_retained_fraction")
+    differences = {name: None if sample.get(name) is None or reference.get(name) is None
+                   else float(sample[name]) - float(reference[name]) for name in names}
+    for name in ("R4_l2", "radial_tide_l2", "angular_tide_l2"):
+        left, right = (sample.get("actual_geometry") or {}).get(name), (reference.get("actual_geometry") or {}).get(name)
+        differences[name] = None if left is None or right is None else float(left) - float(right)
+    return {"available": True, "coordinate_time": float(sample["coordinate_time"]),
+            "sample_minus_reference": differences, "percent_gate": None,
+            "common_child_window": list(COMMON_CHILD_INTERVAL), "physical_conclusion_forced": False}
+
+
 def assess_regimes(directory, family, manifest):
     rows = []
     initial_by_id = {item["case_id"]: item for item in family.get("initial_data", [])}
@@ -1333,7 +1506,10 @@ def assess_regimes(directory, family, manifest):
             pair = episode.pair_from_arrays(arrays, record)
             state = episode.state_from_arrays(arrays, episode.CANONICAL_PI)
             pair, state, _info = episode.resolve_pair(pair, state, backend="fft")
-            sample = measure_consumers(pair, state, arrays["normal_clocks"], record["coordinate_time"])
+            mode = record.get("control_mode", "coupled")
+            row["control_mode"] = mode
+            row["parent_case"] = record.get("parent_case", identifier)
+            sample = measure_consumers(pair, state, arrays["normal_clocks"], record["coordinate_time"], control_mode=mode)
             earlier = initial.get("sample", {})
             signals = signals_from_samples(earlier, sample)
             if (sample["actual_geometry"] is None or earlier.get("actual_geometry") is None
@@ -1348,13 +1524,22 @@ def assess_regimes(directory, family, manifest):
             row["error"] = type(error).__name__ + ": " + str(error)
         rows.append(row)
     baseline = next((row for row in rows if row["imbalance"] == BASELINE_IMBALANCE
-                     and row["width_scale"] == BASELINE_WIDTH_SCALE), None)
+                     and row["width_scale"] == BASELINE_WIDTH_SCALE
+                     and row.get("control_mode", "coupled") == "coupled"), None)
+    by_id = {row["case_id"]: row for row in rows}
     for row in rows:
+        if row.get("control_mode") == "frozen_geometry":
+            parent = by_id.get(row.get("parent_case"))
+            if parent and row.get("final_sample") and parent.get("final_sample"):
+                row["frozen_minus_own_coupled"] = quantitative_comparison(row["final_sample"], parent["final_sample"])
+            row["fate"] = "frozen_geometry_control"
+            continue
         # A shortened or failed case does not share the baseline observation time.
         if baseline and row.get("signals") and baseline.get("signals"):
             if abs(row["coordinate_time"] - baseline["coordinate_time"]) <= 1e-10:
                 row["fate"] = fate_class(row["signals"], baseline["signals"], is_baseline=row is baseline)
                 row["observable"] = regime_observable(row["signals"])
+                row["quantitative_minus_baseline"] = quantitative_comparison(row["final_sample"], baseline["final_sample"])
         elif family.get("stage") == "confirmation_specification":
             row["comparison_requires_coarse_baseline"] = True
     rows.extend(dict(item, fate="unresolved") for item in family.get("preparation_failures", []))
@@ -1383,9 +1568,32 @@ def check(output):
         manifest = episode.read_manifest(directory)
         if int(manifest.get("chunk_limit_bytes") or CHUNK_LIMIT_BYTES) != CHUNK_LIMIT_BYTES:
             problems.append("chunk limit is not 64 MiB")
-        if len(manifest.get("cases") or []) > len(IMBALANCES) * len(WIDTH_SCALES):
-            problems.append("more than 15 family continuation cases")
+        if len(manifest.get("cases") or []) > len(IMBALANCES) * len(WIDTH_SCALES) + len(FROZEN_WIDTH_MEMBERS):
+            problems.append("more than 15 source cases and three frozen controls")
+    historical = authenticate_producer(family)
+    envelope_path = directory / "observed-run-binding.json"
+    external_binding = None
+    if envelope_path.is_file():
+        binding = json.loads(envelope_path.read_text())
+        for path, pin in binding["producer_paths"].items():
+            raw = resolve_pinned_source_bytes(episode.REPO, path, pin["sha256"], commit=binding["producing_commit"])
+            if len(raw) != pin["bytes"]:
+                raise ValueError("historical producer size mismatch: " + path)
+        for path, pin in binding["artifact_paths"].items():
+            resolved = (episode.REPO / path).resolve()
+            if not resolved.is_relative_to(directory) or episode.file_sha256(resolved) != pin["sha256"]:
+                raise ValueError("observed-run artifact identity mismatch: " + path)
+        external_binding = {
+            "path": str(envelope_path), "sha256": episode.file_sha256(envelope_path),
+            "producing_commit": binding["producing_commit"], "authenticated": True,
+            "producer_files": len(binding["producer_paths"]), "artifacts": len(binding["artifact_paths"]),
+            "binding_timing": binding.get("binding_timing"),
+            "identity_scope": "post-run coordinator observation; legacy record itself has no producer pins",
+        }
     report = {
+        "producer_identity": historical,
+        "external_observed_run_binding": external_binding,
+        "current_verifier_identity": {"path": str(Path(__file__).resolve()), "sha256": episode.file_sha256(__file__)},
         "schema": SCHEMA,
         "ok": not problems and (episode_report is None or episode_report["ok"]),
         "materialized": bool(family.get("materialized")),

@@ -1,0 +1,512 @@
+{
+  "schema": "NSC-DISCOVERY-EPISODE-v1",
+  "stage": 2,
+  "status": "STATION_REACHED",
+  "campaign": "nsc-discovery-source-family",
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "cases": [
+    {
+      "case_id": "nf128_am1_w0p8",
+      "ordinal": 0,
+      "npz": "nf128_am1_w0p8-000000.npz",
+      "json": "nf128_am1_w0p8-000000.json",
+      "arrays_sha256": "053ee7ceb37342542cdeb75e694695bb0e8c76a3021288ab4bdc69918d074183",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_am1_w1",
+      "ordinal": 0,
+      "npz": "nf128_am1_w1-000000.npz",
+      "json": "nf128_am1_w1-000000.json",
+      "arrays_sha256": "82503a29fddbcfab6ad2301c993d4d5b640859c55f3be180beaa6ea2010648cd",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_am0p5_w0p8",
+      "ordinal": 0,
+      "npz": "nf128_am0p5_w0p8-000000.npz",
+      "json": "nf128_am0p5_w0p8-000000.json",
+      "arrays_sha256": "6efe67d90c5b08bd934c0a632217d5157a7f794e6a99edd024d90a214770c97c",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_am0p5_w1",
+      "ordinal": 0,
+      "npz": "nf128_am0p5_w1-000000.npz",
+      "json": "nf128_am0p5_w1-000000.json",
+      "arrays_sha256": "1a5b629f8053678a904673731d8fa681a51a35ced05bb43d166db1b2b0938706",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_am0p5_w1p2",
+      "ordinal": 0,
+      "npz": "nf128_am0p5_w1p2-000000.npz",
+      "json": "nf128_am0p5_w1p2-000000.json",
+      "arrays_sha256": "b40c6d99088d03155e8d1a55b42fda419f32da900c590f01f93a704bb001f30f",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a0_w0p8",
+      "ordinal": 0,
+      "npz": "nf128_a0_w0p8-000000.npz",
+      "json": "nf128_a0_w0p8-000000.json",
+      "arrays_sha256": "9401f92fa3d8699f4ba5b2e7202e9bd105bf42822afdedbf2ea6281009b4be4a",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a0_w1",
+      "ordinal": 0,
+      "npz": "nf128_a0_w1-000000.npz",
+      "json": "nf128_a0_w1-000000.json",
+      "arrays_sha256": "ccf766f0da687135578166202d64cbbca40f289caa18eb87981fad4abc8afb09",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a0_w1p2",
+      "ordinal": 0,
+      "npz": "nf128_a0_w1p2-000000.npz",
+      "json": "nf128_a0_w1p2-000000.json",
+      "arrays_sha256": "15e3ba9c406329e733af3a3ee3d34a487eaf18830c31e9a80eb7bec4a73c8e5f",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a0p5_w0p8",
+      "ordinal": 0,
+      "npz": "nf128_a0p5_w0p8-000000.npz",
+      "json": "nf128_a0p5_w0p8-000000.json",
+      "arrays_sha256": "a26b9255e4c5211571fd9a7085f1923205f0b48c0f24a31d70dc14f6d842c2d6",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a0p5_w1",
+      "ordinal": 0,
+      "npz": "nf128_a0p5_w1-000000.npz",
+      "json": "nf128_a0p5_w1-000000.json",
+      "arrays_sha256": "978e8a1eeea4ceb219c2185a2b60d2b8b09142bb41fa8fe366968737041d182f",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a0p5_w1p2",
+      "ordinal": 0,
+      "npz": "nf128_a0p5_w1p2-000000.npz",
+      "json": "nf128_a0p5_w1p2-000000.json",
+      "arrays_sha256": "9cacf2d88ecd0d0f2406da864ce497edef844fbe973d86213c9fa0d43e744599",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a1_w0p8",
+      "ordinal": 0,
+      "npz": "nf128_a1_w0p8-000000.npz",
+      "json": "nf128_a1_w0p8-000000.json",
+      "arrays_sha256": "62059cbb662a484d22c296fa4c9b3f4557203c18355ce59aa1fdcc2647c4a3dd",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a1_w1",
+      "ordinal": 0,
+      "npz": "nf128_a1_w1-000000.npz",
+      "json": "nf128_a1_w1-000000.json",
+      "arrays_sha256": "e6718f0c8f7b2eda5972be093e0859785f9577fb8f60f8ef264eb092078d9709",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    },
+    {
+      "case_id": "nf128_a1_w1p2",
+      "ordinal": 0,
+      "npz": "nf128_a1_w1p2-000000.npz",
+      "json": "nf128_a1_w1p2-000000.json",
+      "arrays_sha256": "2abdeeedaf5199790f75ff8322a256fa4bbd6864d8a63de7dc849b30eac8d38d",
+      "nf": 128,
+      "coordinate_time": 0.3,
+      "step_cap": 0.0005
+    }
+  ],
+  "workers": 5,
+  "cpu_budget_seconds": 21534.771298,
+  "aggregate_cpu_budget_seconds": 21600.0,
+  "initial_cpu_seconds": 3.681985000000007,
+  "handoff_cpu_seconds": 60.42569400000001,
+  "preparation_cpu_seconds": 65.228702,
+  "preparation_failures": [
+    {
+      "case_id": "nf128_am1_w1p2",
+      "imbalance": -1.0,
+      "width_scale": 1.2,
+      "status": "preparation_failed",
+      "fate": "unresolved",
+      "error": "ValueError: initial source-derived geometry failed: positive homotopy stalled above measured radius-correction floor",
+      "cpu_seconds": 0.1753859999999996,
+      "physical_instability_claimed": false,
+      "non_existence_claimed": false
+    }
+  ],
+  "cpu_accounting": "sum_of_child_process_time",
+  "forecast_factor": 1.5,
+  "chunk_limit_bytes": 67108864,
+  "threads_per_case": 1,
+  "initial_state_called_during_continuation": false,
+  "evolved": true,
+  "stability_certificate": false,
+  "zero_residual_gate": false,
+  "max_T_forced": false,
+  "child_cpu_seconds": 666.831696,
+  "executor_pools": 1,
+  "saved_t03_radius_copied": false,
+  "results": [
+    {
+      "case_id": "nf128_am0p5_w0p8",
+      "status": "station_reached",
+      "child_cpu_seconds": 44.191767,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_am0p5_w0p8-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 75.06747000000006
+    },
+    {
+      "case_id": "nf128_am1_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 45.319539,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_am1_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 58.134739499999725
+    },
+    {
+      "case_id": "nf128_am0p5_w1p2",
+      "status": "station_reached",
+      "child_cpu_seconds": 45.761975,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_am0p5_w1p2-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 44.23532399999983
+    },
+    {
+      "case_id": "nf128_am0p5_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 46.583128,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_am0p5_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 54.85707899999987
+    },
+    {
+      "case_id": "nf128_am1_w0p8",
+      "status": "station_reached",
+      "child_cpu_seconds": 48.057026,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_am1_w0p8-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 112.80014549999991
+    },
+    {
+      "case_id": "nf128_a0p5_w0p8",
+      "status": "station_reached",
+      "child_cpu_seconds": 47.91539600000001,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a0p5_w0p8-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 55.89525149998413
+    },
+    {
+      "case_id": "nf128_a0_w1p2",
+      "status": "station_reached",
+      "child_cpu_seconds": 48.58629500000001,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a0_w1p2-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 57.006360000002545
+    },
+    {
+      "case_id": "nf128_a0_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 52.934701999999994,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a0_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 75.35762550003348
+    },
+    {
+      "case_id": "nf128_a0_w0p8",
+      "status": "station_reached",
+      "child_cpu_seconds": 57.69556399999999,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a0_w0p8-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 93.40767449995776
+    },
+    {
+      "case_id": "nf128_a0p5_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 54.047391,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a0p5_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 52.25156999997823
+    },
+    {
+      "case_id": "nf128_a0p5_w1p2",
+      "status": "station_reached",
+      "child_cpu_seconds": 44.602478000000005,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a0p5_w1p2-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 101.59681950000545
+    },
+    {
+      "case_id": "nf128_a1_w0p8",
+      "status": "station_reached",
+      "child_cpu_seconds": 44.880759999999995,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a1_w0p8-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 59.341526999983294
+    },
+    {
+      "case_id": "nf128_a1_w1",
+      "status": "station_reached",
+      "child_cpu_seconds": 43.909367,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a1_w1-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 54.769837500006595
+    },
+    {
+      "case_id": "nf128_a1_w1p2",
+      "status": "station_reached",
+      "child_cpu_seconds": 42.34630799999999,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_a1_w1p2-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 95.78113650002933
+    }
+  ],
+  "memory_limit_bytes": 8589934592,
+  "cumulative_child_cpu_seconds": 666.831696,
+  "assessment_cpu_seconds": 0.590102,
+  "cumulative_coordinator_cpu_seconds": 0.590102,
+  "aggregate_cpu_seconds": 732.6505
+}

@@ -93,6 +93,61 @@ retained. The proper clock is integrated through RK4 stages and the
 nonlinear cases reach its target by bracketed steps, rather than by applying
 the prediction's linear clock correction to the measured value.
 
+### Source-family outcome and the remaining preparation assumption
+
+The [15-member source study](../lab/results/development/nsc-discovery-family-v1/source-family.json)
+varies five occupation imbalances and three packet widths, solving each
+member's own initial radius. Fourteen members reach $T=3$; all show radial
+contraction, areal expansion, and loss of the original child packet from
+its prepared window. Final packet retention ranges from about 0.024 to
+0.127 percent. Less than 0.30 percent remains inside the parent collar.
+The reversed-imbalance, widest-packet member fails during the positive
+initial-radius homotopy and remains unresolved. This is a preparation
+failure, not an exclusion of that source.
+
+These runs retain the supplied initial $Q_0$, auxiliary field and geometric
+momenta. They test a family of instantaneous constraint-adjusted slices,
+not source-selected holding geometries. Width comparisons also change the
+prepared measurement window. Confirmation therefore includes a common
+fixed child window, selected finer cases and their own frozen-geometry
+controls. The [external run binding](../lab/results/development/nsc-discovery-family-v1/observed-run-binding.json)
+authenticates the frozen `c4a22e5` producer and completed artifacts without
+rewriting their original records. Total measured family CPU is 732.65 seconds.
+
+### Coupled reduction with the same generated geometry
+
+The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
+continues the exact saved $T=0.3$ state to $T=1$. Its retained, exterior-drive
+and memory columns reconstruct the full field, including their cross terms,
+and supply the force that evolves the geometry. Independent full evolution
+agrees within $1.6\times10^{-15}$ in field columns,
+$6.1\times10^{-14}$ in source forces and $6.9\times10^{-13}$ in geometric
+state components. The clocks follow the evolving metric in both descriptions.
+This verifies coupled full-to-reduced force and geometry response on the
+declared finite segment; the geometry is not prescribed to the reducer.
+
+### Disjoint energy accounting and actual tidal growth
+
+The [stage-integrated ledger](../lab/results/development/nsc-discovery-balance-v1/coupled-T3.json)
+uses disjoint spatial regions and the actual four RK4 stages. At $n_f=512$
+on $[0.3,3]$, the child normal-energy change is $-5.42376$, comprising
+boundary transport $-1614.30749$, pressure work $+1665.94192$ and
+lapse-gradient work $-57.05819$. Its numerical accounting remainder is
+$1.46\times10^{-6}$. The whole-carrier remainder is $7.12\times10^{-6}$;
+halving the timestep reduces these remainders by roughly a factor of fifteen.
+The measured projection contribution is retained separately. Normal energy
+is signed in this sector; covariance admissibility does not establish a
+positive local-energy theorem.
+
+The [four-metric consumer](../lab/results/development/nsc-discovery-tidal-v1.json)
+computes tidal components from the evolved metric and its actual projected
+jets. At $x=2,T=3$, the radial and angular components are approximately
+$-5.24\times10^5$ and $5.63\times10^6$. The angular component changes by
+about $0.00012$ percent from $n_f=256$ to $512$. This resolves strong finite
+tidal growth without relying on cancellation-sensitive scalar traces or
+substituting the auxiliary field for curvature. It establishes neither a
+future singularity nor a regenerative return.
+
 ## Completed finite parent–child pair, 2 October 2026
 
 The [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json)

@@ -93,15 +93,41 @@ are retained with their original blocker, elapsed CPU and an unresolved fate.
 At the short test resolution, other shapes can also fail the homotopy; a
 constructor failure does not imply non-existence. Each successful handoff is
 committed before the next source is attempted. Confirmation is a separate directory at \(n_f=256\).
-It admits up to five members whose measured sign pattern differs from the
-baseline, together with an independently prepared baseline comparator at the
-same confirmation resolution. An unresolved pattern is not regenerated.
+Its successor confirmation admits the five predeclared candidates below,
+even when their qualitative signs agree. Up to one additional distinct-sign
+or failed-preparation member can fill the sixth source slot. Candidates are
+deduplicated by imbalance and width; the baseline appears once.
+
+| Imbalance | Width | Admission purpose |
+|---:|---:|---|
+| +1 | 0.8 | quantitative narrow-width sensitivity |
+| +1 | 1 | nominal width and baseline comparator |
+| +1 | 1.2 | quantitative wide-width sensitivity |
+| 0 | 1 | uniform-imbalance control |
+| -1 | 1.2 | NF256 retry of unresolved initial preparation |
+
+Each selection retains the predecessor case, reported fate, original
+preparation blocker when present, and selection reasons. Admission schedules
+an experiment; it does not force a physical conclusion or assert that the
+higher-resolution solve will succeed. The bounded default is five independent
+source preparations at NF256, not a demand for different qualitative signs.
+
+`--frozen-width-controls` optionally adds frozen-geometry branches for the
+three +1 width cases. Each branch copies its own source's unchanged propagated
+handoff, including source weights, field, metric, momenta and clocks. It does
+not borrow the nominal-width metric, solve again, or reset the field. IDs end
+in `_frozen_geometry` and retain the coupled parent ID. These are three control
+branches in addition to the source-candidate cap of six; the default therefore
+has five sources and at most eight continuation cases. All cases share one
+six-worker episode executor and the aggregate budget. A failed source has no
+frozen substitute branch.
 
 The aggregate CPU budget is \(21600\) seconds. Measured preparation
 CPU is subtracted before the continuation pool opens. Preparation includes the
 dense solves, failed attempts, measurement consumers and the serial handoff
 evolution. The record separately reports initial-solve and handoff CPU.
-Continuation counts accumulated child CPU across resumed calls. The six-hour
+Continuation counts accumulated child CPU and coordinator assessment CPU
+across resumed calls. The six-hour
 cap covers preparation and the child CPU together. The serial prefix checks
 the budget between members; it cannot interrupt an individual dense solve or
 `propagate_baseline` call mid-flight. Intermediate prefix states are not
@@ -116,7 +142,12 @@ Classification reads actual checkpoints, with each member's own initial sample.
 It stores child proper-length change, packet-width change, retained fractions
 and their rank, and a 3-by-3 source-packet/window probability matrix. Rows of
 that matrix are the left, child and right source pairs; columns are their
-three declared coordinate support windows. Differences give measured packet
+three declared coordinate support windows. The same tagged child columns
+2 and 3 also report retention inside the fixed spatial child window `(1,3)`,
+with the same total tagged-pair probability denominator. Own preparation-window
+retention is retained under a separate window label. This prevents a changed
+width and a changed measurement window from being mistaken for the same effect.
+Differences give measured packet
 transfer without treating computational ancestry as independent energy parcels.
 
 The metric supplies areal-radius change. The tidal consumer supplies actual
@@ -127,7 +158,11 @@ positivity are retained. Cases ending at different coordinate times from the
 baseline remain unresolved. If a consumer raises, the record retains its
 exception text and missing measurements. A missing curvature consumer or
 nonfinite geometry also leaves the pattern unresolved. These finite-grid
-sign comparisons carry no continuum or renewal certificate.
+sign comparisons carry no continuum or renewal certificate. Raw quantitative
+differences in proper length, packet width, both retention readouts, areal radius
+and actual curvature norms are also reported against the baseline at the same
+coordinate time. Frozen branches additionally report differences against their
+own coupled parent, without applying a universal percentage gate.
 
 A scalar fate class does not apply a universal \(1\%\) gate. A small
 change and a large change with the same signs are the same class. The
@@ -141,23 +176,39 @@ equals \(a\) for this weight formula.
 .venv/validation/bin/python scripts/lab.py -m pytest tests/test_nsc_discovery_family.py -q
 ```
 
-The tests stay at or below coordinate time `0.01`. After freeze, the
-root executor materializes the handoff and continues it:
+The tests stay at or below coordinate time `0.01`. Confirmation preparation
+reads the immutable predecessor and creates a new successor. Run these from
+the repository root; `scripts/lab.py` changes the scientific working directory
+to `lab`, so relative evidence paths below start with `results/`:
 
 ```sh
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_family.py \
-  --prepare --output lab/results/development/nsc-discovery-family-v1
+  --confirm --exploration results/development/nsc-discovery-family-v1 \
+  --output results/development/nsc-discovery-family-v2 --frozen-width-controls
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_family.py \
-  --materialize --output lab/results/development/nsc-discovery-family-v1 --production --duration 0.3
+  --materialize --output results/development/nsc-discovery-family-v2 \
+  --production --duration 0.3
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_family.py \
-  --run --output lab/results/development/nsc-discovery-family-v1
+  --run --output results/development/nsc-discovery-family-v2 --workers 6 --backend fft
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_family.py \
+  --check --output results/development/nsc-discovery-family-v2
 ```
 
-`--confirm --output <confirmation> --exploration <exploration>` writes
-the selected \(n_f=256\) list in a different directory. It does not
-evolve those members until a later `--materialize --production`.
+For a fresh NF128 exploration, `--prepare --output <new successor>` remains
+available; it accepts `--all-members` and `--frozen-width-controls`.
+Materialization and continuation reject writes to the immutable family-v1
+path. Read-only `--check` can still verify that predecessor.
 
-`--check --output lab/results/development/nsc-discovery-family-v1` validates
-the specification and immutable episode chunks. These commands create a new
-successor; existing committed chunks are preserved. The implementation tests
-do not create repository evidence or run a production trajectory.
+Successors store producer hashes for the local Python import closure. A file
+gets a historical commit pin only when the immutable Git blob authenticates
+its exact bytes. Uncommitted producer bytes are explicitly marked as working
+tree pins. Commit the frozen producer before production to obtain historical
+replay identity. The checker authenticates committed historical bytes through
+Git or the existing source-history resolver, independently of current verifier
+hashes; it never heals a scientific JSON record.
+
+Family-v1 itself has no producer identity envelope. The checker says so. When
+`observed-run-binding.json` is present, it separately authenticates that
+external envelope's historical producer blobs and artifact hashes. That
+binding remains a post-run coordinator observation, not a retroactive pre-run
+attestation. The current verifier's identity is reported separately.
