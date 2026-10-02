@@ -38,6 +38,7 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Source-compatible static balance | [Stationary control](nsc-discovery-stationary.md); `src/recursive_horizons/nsc_discovery_stationary.py`; `scripts/derive_nsc_discovery_stationary.py` |
 | Exact source-free metric control | [Vacuum control](nsc-discovery-vacuum-control.md); `src/recursive_horizons/nsc_discovery_vacuum_control.py`; `scripts/derive_nsc_discovery_vacuum_control.py` |
 | Whole-state seam translation | [Translation](nsc-discovery-translation.md); `src/recursive_horizons/nsc_discovery_translation.py`; `scripts/derive_nsc_discovery_translation.py` |
+| Inherited grandchild hand-off and withheld future content | [Grandchild](nsc-discovery-grandchild.md); `src/recursive_horizons/nsc_discovery_grandchild.py`; `scripts/derive_nsc_discovery_grandchild.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before

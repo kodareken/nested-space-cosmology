@@ -136,6 +136,27 @@ despite contracting radial proper lengths. The
 complete state, geometry, observers and clocks across the periodic seam;
 it does not replace a future ambient-extent comparison.
 
+The [exact source-free record](../lab/results/development/nsc-discovery-vacuum-control-v1/record.json)
+reproduces constant areal radius and bounded tidal invariants while $Q$ and
+proper lengths contract. The
+[seam translation record](../lab/results/development/nsc-discovery-translation-v1/translation-shift5.5.json)
+passes after moving the complete field, geometry and observer across the seam.
+Both are finite controls of the implemented action.
+
+The [first static spectral-source attempt](../lab/results/development/nsc-discovery-stationary-v1.json)
+preserves its best finite iterate after 1,000 optimizer evaluations and
+101.68 CPU seconds. The radial seed satisfies its own equation, but the
+remaining $\dot p_Q$ and lapse residual maxima are 3.87 and 5.79.
+The unsatisfied coupled balance is retained; the optimizer stop does not
+exclude the declared static class. Subsequent seed selection uses an
+integrated action balance rather than repeating that Jacobian search.
+
+The next [grandchild experiment](../lab/docs/nsc-discovery-grandchild.md)
+starts from the transported equal-proper-time state, retains nested observer
+details and the ambient response, and locks a forecast before generating
+the withheld future local measurement. Its physical regional readout is
+separate from its modal observer covariance.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
