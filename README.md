@@ -6,15 +6,15 @@ physical regime classification and a predictive local response. The target
 is one unified article. Existing papers below are preserved while this
 successor is developed. [Execution status](docs/current-result.md#active-discovery-programme-2-october-2026).
 
-The longer continuation reaches $T=3$: the fixed child collar gains then
-loses field probability, while its proper radial length contracts and areal
-radius grows. Fine confirmation resolves this behavior and strong tidal
-growth. The source-family preparations share the loss of initial child
-localization; a finer retry resolves the earlier constructor failure. Coupled
-causal reduction reproduces the field forces and generated geometry, and a
-withheld exterior-source change predicts a local measurement. The next
-investigation removes the supplied initial geometry assumption to test a
-source-compatible holding balance. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
+The longer continuation reaches $T=8$. Child probability leaves and returns
+near the carrier circuit, while its proper radial length contracts severely
+and actual tidal components grow. An ambient-size comparison is testing the
+return's boundary dependence. Source-family controls confirm the earlier
+loss of localization. Coupled causal reduction reproduces field forces and
+generated geometry, and locked forecasts predict withheld local responses.
+The static holding search approaches a noncompact limit without satisfying
+its local forces; the next preparation tests dynamic behavior under the same
+action and constraints. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
 
 **Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
 presents the measured finite spherical realization, source controls, actual

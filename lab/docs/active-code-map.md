@@ -42,6 +42,7 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Physical source-width tangent and held-out content | [Width response](nsc-discovery-width-response.md); `src/recursive_horizons/nsc_discovery_width_response.py`; `scripts/derive_nsc_discovery_width_response.py` |
 | First carrier circuit, actual tides and return assessment | [Tidal owner](nsc-discovery-tidal.md); `scripts/assess_nsc_discovery_crossing.py` |
 | Independent carrier extents and matched source preparation | [Extent](nsc-discovery-extent.md); `src/recursive_horizons/nsc_discovery_extent.py`; `scripts/derive_nsc_discovery_extent.py` |
+| General-Q chi-zero positive Cauchy radius | [Dynamic preparation](nsc-discovery-dynamic-preparation.md); `src/recursive_horizons/nsc_discovery_dynamic_preparation.py`; `scripts/derive_nsc_discovery_dynamic_preparation.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before

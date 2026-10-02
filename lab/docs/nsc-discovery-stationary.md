@@ -351,6 +351,21 @@ immutable historical producer checks remain preserved.
 
 ## Commands and provenance
 
+### Executed local-critical query
+
+The [v3 record](../results/development/nsc-discovery-stationary-critical-v3.json)
+is produced by `697efe0` and preserves all 600 evaluations, using 31.26 CPU
+seconds. Its verdict is `UNSATISFIED_LOCAL_CRITICAL_RELATIONS`. The selected
+trial 579 has mean $Q=0.00094539$, mean areal radius 1287.02 and occupation
+scale $\eta=1.21871$, within the CAR domain. The shape approaches uniformity
+and the normal radius denominator falls from 3.2103 to
+$1.6180\times10^{-5}$. Retained $p_Q$ remains 32.96 and the full lapse maximum
+35.07. A small reduced shape gradient therefore does not establish local
+criticality. The areal-radius growth is physical, rather than merely a clock
+normalization. This noncompact tendency ends the present static search;
+additional iterations are not justified by these results. It is not a
+class-wide obstruction or a dynamical stability test.
+
 Default execution only measures the NF32 radial seed. Root freezes the exact
 producer bytes before executing a scientific selector. These commands run from
 the repository root with the existing validation interpreter:
