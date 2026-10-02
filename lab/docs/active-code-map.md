@@ -45,6 +45,7 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | General-Q chi-zero positive Cauchy radius | [Dynamic preparation](nsc-discovery-dynamic-preparation.md); `src/recursive_horizons/nsc_discovery_dynamic_preparation.py`; `scripts/derive_nsc_discovery_dynamic_preparation.py` |
 | Saved-field free carrier comparison | [Free return](nsc-discovery-free-return.md); `src/recursive_horizons/nsc_discovery_free_return.py`; `scripts/derive_nsc_discovery_free_return.py` |
 | Connected geometric bilinear response and occupied/empty cut | [Geometric vertices](nsc-discovery-geometric-vertices.md); `src/recursive_horizons/nsc_discovery_geometric_vertices.py`; `scripts/derive_nsc_discovery_geometric_vertices.py` |
+| Static-query noncompact limit and arithmetic assessment | [Limit](nsc-discovery-stationary-limit.md); `scripts/assess_nsc_discovery_stationary_limit.py`; `tests/test_nsc_discovery_stationary_limit.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before
