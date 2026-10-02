@@ -1,6 +1,8 @@
 """Initial data for a nonzero shift current. No evolution."""
+import hashlib
 import json
 import os
+from pathlib import Path
 
 for _thread_var in (
     "OMP_NUM_THREADS",
@@ -12,12 +14,26 @@ for _thread_var in (
     os.environ.setdefault(_thread_var, "1")
 
 import numpy as np
+import pytest
 
 from recursive_horizons.nsc_spherical_cauchy_data import (
     RECORD_PATH,
     build_record,
+    main,
     shift_momentum,
     shift_residual,
+    write_record,
+)
+
+SEALED_RECORD_SHA256 = "2c6a9ede084e3a56ae7798e44ac017d1086e591f4a2165d26e75a71ff98150f7"
+HISTORICAL_GALERKIN_SHA256 = (
+    "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab"
+)
+_GALERKIN = (
+    Path(__file__).resolve().parents[1]
+    / "src"
+    / "recursive_horizons"
+    / "nsc_spherical_galerkin_coupling.py"
 )
 from recursive_horizons.nsc_spherical_coupling import TOL_INITIAL_CONSTRAINT
 from recursive_horizons.nsc_spherical_galerkin_coupling import build_grid
@@ -56,9 +72,21 @@ def test_constant_current_has_no_periodic_momentum():
 
 
 def test_record_controls_rank6_packet_and_embedding_source():
+    sealed_bytes = RECORD_PATH.read_bytes()
+    assert hashlib.sha256(sealed_bytes).hexdigest() == SEALED_RECORD_SHA256
     record = build_record(64)
-    assert RECORD_PATH.is_file()
-    saved = json.loads(RECORD_PATH.read_text())
+    assert hashlib.sha256(RECORD_PATH.read_bytes()).hexdigest() == SEALED_RECORD_SHA256
+    saved = json.loads(sealed_bytes)
+    fresh = dict(record)
+    sealed = dict(saved)
+    fresh.pop("source_hashes")
+    sealed.pop("source_hashes")
+    assert fresh == sealed
+    galerkin_key = "src/recursive_horizons/nsc_spherical_galerkin_coupling.py"
+    assert saved["source_hashes"][galerkin_key] == HISTORICAL_GALERKIN_SHA256
+    live_galerkin = hashlib.sha256(_GALERKIN.read_bytes()).hexdigest()
+    assert record["source_hashes"][galerkin_key] == live_galerkin
+    assert live_galerkin != HISTORICAL_GALERKIN_SHA256
     assert saved["schema"] == record["schema"]
     assert saved["action_changed"] is False
     assert saved["coefficients_changed"] is False
@@ -153,3 +181,45 @@ def test_record_controls_rank6_packet_and_embedding_source():
     assert finer["projected_shift_beyond_mean_max"] <= TOL_INITIAL_CONSTRAINT
     assert finer["full_momentum_max"] > 0.1
     assert finer["p_Q_max"] > 1.0
+
+
+def test_explicit_writer_creates_tmp_path_and_refuses_sealed_overwrite(tmp_path, monkeypatch):
+    sealed_bytes = RECORD_PATH.read_bytes()
+    assert hashlib.sha256(sealed_bytes).hexdigest() == SEALED_RECORD_SHA256
+    payload = {"schema": "NSC-SPHERICAL-CAUCHY-DATA-v1", "probe": 1}
+    created = tmp_path / "cauchy-created.json"
+    written = write_record(payload, created)
+    assert written == created
+    assert json.loads(created.read_text()) == payload
+    assert [path.name for path in tmp_path.iterdir()] == ["cauchy-created.json"]
+    with pytest.raises(FileExistsError, match="overwrite"):
+        write_record(payload, created)
+    assert created.read_text() == json.dumps(payload, indent=2) + "\n"
+    with pytest.raises(FileExistsError, match="sealed"):
+        write_record(payload, RECORD_PATH)
+    with pytest.raises(FileExistsError, match="sealed"):
+        write_record(payload, str(RECORD_PATH))
+    link = tmp_path / "linked.json"
+    link.symlink_to(created)
+    with pytest.raises(FileExistsError, match="symlink"):
+        write_record(payload, link)
+    with pytest.raises(ValueError, match="explicit output"):
+        write_record(payload, "")
+    with pytest.raises(SystemExit) as missing:
+        main([])
+    assert missing.value.code == 2
+    with pytest.raises(FileExistsError, match="sealed"):
+        main(["--record", str(RECORD_PATH)])
+    with pytest.raises(FileExistsError, match="sealed"):
+        main(["--output", str(RECORD_PATH)])
+    monkeypatch.setattr(
+        "recursive_horizons.nsc_spherical_cauchy_data.build_record",
+        lambda fermions=64: {"schema": "NSC-SPHERICAL-CAUCHY-DATA-v1", "fermions": fermions},
+    )
+    destination = tmp_path / "from-cli.json"
+    assert main(["--output", str(destination), "--fermions", "32"]) == 0
+    assert json.loads(destination.read_text())["fermions"] == 32
+    with pytest.raises(FileExistsError, match="overwrite"):
+        main(["--record", str(destination)])
+    assert hashlib.sha256(RECORD_PATH.read_bytes()).hexdigest() == SEALED_RECORD_SHA256
+    assert not list(RECORD_PATH.parent.glob(".nsc-spherical-cauchy-data-v1.json.*.tmp"))

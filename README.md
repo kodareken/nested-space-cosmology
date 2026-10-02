@@ -1,5 +1,11 @@
 # Nested-Space Cosmology
 
+**Active research:** the accepted discovery programme extends the completed
+parent–child example toward source-selected boundaries, repeated transfer,
+physical regime classification and a predictive local response. The target
+is one unified article. Existing papers below are preserved while this
+successor is developed. [Execution status](docs/current-result.md#active-discovery-programme-2-october-2026).
+
 **Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
 presents the measured finite spherical realization, source controls, actual
 metric curvature, and a local response on the same generated trajectory.
@@ -53,13 +59,14 @@ carries inflow into the region-0 plus mode from the region-1 plus mode.
 The geometry of that witness stays an input. The incoming gate remains
 OPEN and its campaign remains paused. It is not a prerequisite.
 
-## One research programme, two complementary papers
+## Existing papers and the unified successor
 
-The original manuscript remains the foundation of this project. The focused
-article now connects the inherited finite construction to measured transfer,
-geometry, maintained structure, and local memory. Its scope is the declared
-finite realization. The historical incoming-gate application remains OPEN
-and paused separately.
+The original manuscript remains the foundation of this project. The current
+focused article connects the inherited finite construction to measured
+transfer, geometry, maintained structure, and local memory. The discovery
+programme will extend the existing focused source into one unified successor
+when its central findings are ready. The papers below retain their dated
+scientific scope.
 
 | Read | Purpose | Status |
 |---|---|---|

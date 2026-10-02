@@ -51,8 +51,18 @@ The lobe slice uses the completed embedding profiles, sampled with the existing 
 
 \(Q=b_0/a_0\) stays `0.251324933269135`. Embedding \(r\) runs from `4.2042616346503445` to `4.842654377102552`. The Hamilton residual is unchanged by this \(p_Q\). The initial \(\dot\chi\) reaches `84.14095068867056` and matches \(L p_Q/(2F_\chi)\) with gap `0`. \(\chi\), \(p_r\) and \(p_\chi\) remain `0`. The chart proper velocity is `0`; the lifted proper velocity is `0.00012467329606885563`.
 
+`build_record` calculates that record and returns it. `write_record` stores a payload only by exclusive atomic creation at an explicit new path. An existing file, a symlink, and the sealed development record are refused. The module command requires `--record` or `--output` and has no default destination:
+
 ```sh
-python scripts/lab.py -m pytest tests/test_nsc_spherical_cauchy_data.py -q
+python scripts/lab.py -m recursive_horizons.nsc_spherical_cauchy_data --record path/to/new.json
 ```
 
-Three tests passed in 0.37 s.
+The sealed file remains `lab/results/development/nsc-spherical-cauchy-data-v1.json`, SHA-256 `2c6a9ede084e3a56ae7798e44ac017d1086e591f4a2165d26e75a71ff98150f7`. Its Galerkin source pin is `85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab`. The working-tree file `lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py` is `aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911`.
+
+`scripts/derive_nsc_spherical_feedback_episode.py` `verify_saved` compares the episode's frozen hashes with that working-tree pin and stops on `galerkin`. The producer, `results/development/nsc-spherical-feedback-episode-v1.json`, and `results/development/nsc-spherical-feedback-episode-v1.npz` stay the saved bytes. `scripts/check_nsc_spherical_feedback_episode_historical.py` reads them. It recovers the Galerkin source from commit `5f10ecd365843d1616e50eb16a20d7acd8377e2c` through `provenance.resolve_pinned_source_bytes`, checks the episode's full frozen dependency hashes, and checks the saved arrays against the v5 payload and the stored replay series. It parses the pinned import graph before any load. The historical Galerkin module imports the pinned coupling and conformal-source modules; those modules import `nsc_adm_source`, `nsc_covariant_operator`, `nsc_influence`, and `nsc_nested_qualities`, which are outside the frozen set. The historical module stays unloaded, and `run_episode` is not called. The working-tree module also imports `nsc_spherical_feedback_action` directly and is a different pin, so a current-code step is not a replay of the historical producer.
+
+```sh
+python scripts/lab.py -m pytest tests/test_nsc_spherical_cauchy_data.py tests/test_nsc_spherical_feedback_episode_historical.py tests/test_nsc_spherical_feedback_episode.py -q
+```
+
+Eleven tests passed in 4.99 s. Those runs left the sealed Cauchy JSON, the feedback JSON and NPZ, and the manuscript files at their recorded bytes.

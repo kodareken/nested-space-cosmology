@@ -15,6 +15,25 @@ or an older cursor. It does not resume the campaign. Do not drop recorded
 error gaps. The [archived candidate notes](#archived-candidate-notes) at the
 end of this file are not the active queue.
 
+## Active discovery implementation, 2026-10-02
+
+The accepted conversation programme starts at `ea6c699`; it continues
+past the short episode to source-selected regions and a predictive local
+response. The incoming-gate campaign stays paused. Initial owners:
+
+| Responsibility | Owner |
+|---|---|
+| FFT operators and reference comparisons | `src/recursive_horizons/nsc_discovery_backend.py`; `scripts/benchmark_nsc_discovery_backend.py` |
+| Exact hand-off, episode/checkpoints and process pool | [Episode note](nsc-discovery-episode.md); `src/recursive_horizons/nsc_discovery_episode.py`; `scripts/derive_nsc_discovery_episode.py` |
+| Regional diagnostics and saved-data atlas | [Observer note](nsc-discovery-observables.md); `src/recursive_horizons/nsc_discovery_observables.py`; `scripts/derive_nsc_discovery_atlas.py` |
+| Analytic full-state directional response | [Response note](nsc-discovery-response.md); `src/recursive_horizons/nsc_discovery_response.py` |
+| Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
+
+The first wave has passed integration checks. Numerical inputs freeze before
+science runs; source weights, observer frames and complete Cauchy outputs
+must survive each hand-off. Current evidence status is in the root status
+page. A new helper or passed unit test does not establish a longer-time regime.
+
 ## Completed finite parent–child pair, 2026-10-02
 
 The [owning note](nsc-nested-parent-child.md) defines the finite nested

@@ -15,6 +15,7 @@ state, or change the action.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import os
@@ -566,8 +567,46 @@ def _without_grid(report):
     return copied
 
 
+def _source_hashes():
+    return {
+        "src/recursive_horizons/nsc_spherical_cauchy_data.py": _sha256(Path(__file__)),
+        "tests/test_nsc_spherical_cauchy_data.py": _sha256(
+            _LAB_ROOT / "tests" / "test_nsc_spherical_cauchy_data.py"
+        ),
+        "src/recursive_horizons/nsc_spherical_coupling.py": _sha256(
+            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_coupling.py"
+        ),
+        "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": _sha256(
+            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_galerkin_coupling.py"
+        ),
+        "src/recursive_horizons/nsc_spherical_feedback_action.py": _sha256(
+            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_feedback_action.py"
+        ),
+        "src/recursive_horizons/nsc_finite_window_embedding.py": _sha256(
+            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_finite_window_embedding.py"
+        ),
+    }
+
+
+def _creation_destination(path):
+    """Resolve an explicit new path. The sealed record and any existing file are refused."""
+    if path is None or (isinstance(path, str) and path.strip() == ""):
+        raise ValueError("explicit output path required")
+    destination = Path(path)
+    if destination.is_symlink():
+        raise FileExistsError("refusing to replace a symlink")
+    if destination.resolve() == RECORD_PATH.resolve():
+        raise FileExistsError("the sealed Cauchy record is not a creation target")
+    if destination.exists():
+        raise FileExistsError(f"refusing to overwrite {destination}")
+    return destination
+
+
 def build_record(fermions=64):
-    """Exact shift controls plus rank6 and completed-embedding initial slices."""
+    """Exact shift controls plus rank6 and completed-embedding initial slices.
+
+    Calculation only. This does not create or replace a record file.
+    """
     control_grid = build_grid(32)
     controls = _closed_form_controls(control_grid)
     carrier_grid = build_grid(32)
@@ -656,28 +695,52 @@ def build_record(fermions=64):
         "coefficients_changed": False,
     }
     payload = _jsonable(record)
-    RECORD_PATH.parent.mkdir(parents=True, exist_ok=True)
-    RECORD_PATH.write_text(json.dumps(payload, indent=2) + "\n")
-    payload["source_hashes"] = {
-        "src/recursive_horizons/nsc_spherical_cauchy_data.py": _sha256(Path(__file__)),
-        "tests/test_nsc_spherical_cauchy_data.py": _sha256(
-            _LAB_ROOT / "tests" / "test_nsc_spherical_cauchy_data.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_coupling.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_coupling.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_galerkin_coupling.py"
-        ),
-        "src/recursive_horizons/nsc_spherical_feedback_action.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_spherical_feedback_action.py"
-        ),
-        "src/recursive_horizons/nsc_finite_window_embedding.py": _sha256(
-            _LAB_ROOT / "src" / "recursive_horizons" / "nsc_finite_window_embedding.py"
-        ),
-    }
-    RECORD_PATH.write_text(json.dumps(payload, indent=2) + "\n")
+    payload["source_hashes"] = _source_hashes()
     return payload
+
+
+def write_record(payload, path):
+    """Atomically create a new JSON file. Existing paths are left untouched."""
+    destination = _creation_destination(path)
+    raw = (json.dumps(_jsonable(payload), indent=2) + "\n").encode("utf-8")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    temporary = destination.with_name(f".{destination.name}.{os.getpid()}.tmp")
+    created = False
+    try:
+        descriptor = os.open(str(temporary), os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o644)
+        created = True
+        with os.fdopen(descriptor, "wb") as stream:
+            stream.write(raw)
+            stream.flush()
+            os.fsync(stream.fileno())
+        try:
+            os.link(temporary, destination)
+        except FileExistsError as exc:
+            raise FileExistsError(f"refusing to overwrite {destination}") from exc
+    finally:
+        if created and temporary.exists():
+            temporary.unlink()
+    return destination
+
+
+def main(argv=None):
+    """Create one new record. --record or --output is required."""
+    parser = argparse.ArgumentParser(
+        description="Calculate spherical Cauchy data and create a new JSON record."
+    )
+    parser.add_argument(
+        "--record",
+        "--output",
+        dest="output",
+        required=True,
+        help="explicit new JSON path; existing files and the sealed record are refused",
+    )
+    parser.add_argument("--fermions", type=int, default=64)
+    args = parser.parse_args(argv)
+    _creation_destination(args.output)
+    written = write_record(build_record(args.fermions), args.output)
+    print(written)
+    return 0
 
 
 def _jsonable(value):
@@ -695,4 +758,4 @@ def _jsonable(value):
 
 
 if __name__ == "__main__":
-    build_record()
+    raise SystemExit(main())

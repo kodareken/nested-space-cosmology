@@ -6,6 +6,8 @@ production episode and do not retune its floors.
 import json
 import os
 
+import pytest
+
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["OPENBLAS_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -14,6 +16,7 @@ os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
 
 import numpy as np
 
+import check_nsc_spherical_feedback_episode_historical as historical
 import derive_nsc_spherical_feedback_episode as episode
 from recursive_horizons import nsc_regional_energy_exchange as regional
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
@@ -198,7 +201,29 @@ def test_resolution_rule_preserves_unresolved_and_incomplete_runs():
 
 
 def test_saved_episode_replays_and_keeps_the_declared_rule():
-    record = episode.verify_saved(replay=True)
+    """Current verify_saved stops on the working-tree Galerkin pin.
+
+    The saved rule and arrays are authenticated by the historical consumer.
+    That consumer does not import the producer module from the pinned commit
+    and does not replace the current-code refusal with a replay pass.
+    """
+    sealed_json = episode.OUT.read_bytes()
+    sealed_npz = episode.NPZ.read_bytes()
+    with pytest.raises(AssertionError, match="frozen hash drifted after the run: galerkin"):
+        episode.verify_saved(replay=True)
+    report = historical.authenticate()
+    assert report["current_code_compatible"] is False
+    assert report["current_galerkin_sha256"] == historical.CURRENT_GALERKIN_SHA256
+    assert report["historical_galerkin_sha256"] == historical.HISTORICAL_GALERKIN_SHA256
+    assert report["historical_commit"] == historical.HISTORICAL_COMMIT
+    assert report["historical_source_imported"] is False
+    assert report["generation_invoked"] is False
+    assert report["saved_arrays_authenticated"] is True
+    assert report["dependency_inspection"]["inspected_before_import"] is True
+    assert report["dependency_inspection"]["import_allowed"] is False
+    assert episode.OUT.read_bytes() == sealed_json
+    assert episode.NPZ.read_bytes() == sealed_npz
+    record = json.loads(sealed_json)
     assert record["renewal"] is False
     assert record["effect_resolved"] in (True, False)
     assert record["incoming_gate_prerequisite"] is False

@@ -90,6 +90,23 @@ claim, name the region, scale, observer, state, and compared quantity.
 
 ## Present regeneration programme
 
+Douglas's accepted **NSC Discovery Programme: Source-Selected Regions,
+Regeneration and Inherited Local Response** starts from `ea6c699`. It
+continues past the short episode toward physical regime classification,
+source-selected boundaries and scales, repeated transfer, coupled local
+response and a held-out prediction. A completed identity is a building
+block, not the programme's publication checkpoint. Regular black-hole
+interiors are prior foundations; do not start a bounce-rediscovery campaign.
+
+Use six Mac Grok workers initially with non-overlapping ownership, one Git
+integration owner and one scientific campaign executor. The aggregate
+numerical budget is six CPU-hours per batch, with checkpointing and a named
+next experiment before spending again. Independent cases use the Mac's
+cores; never launch duplicate campaigns. Freeze numerical inputs before
+production. Keep the accepted plan in the task, not another repository plan
+or handover. One unified article is the publication target; preserve earlier
+manuscripts and releases while the new findings are developed.
+
 The [finite parent–child construction](../lab/docs/nsc-nested-parent-child.md),
 confirmed on 2 October 2026, completes its declared reciprocal state/geometry
 and local-response measurements under one metric/common action. Its
@@ -98,11 +115,11 @@ and portable replay retain their numerical domains; the incomplete v1 and
 the published papers remain preserved. This successor does not resume the
 incoming-gate campaign.
 
-The current programme is finite nested regeneration under those local laws.
-The active question is a finite chain: a regional difference, exchange,
-feedback between the state and the geometry, maintained or renewed
-structure, and a local measurement. Starting checkpoint `9a9090a`. The
-executed loop, and the code owner, is
+The earlier finite-regeneration investigation started at `9a9090a` and
+established the short coupled loop. Its chain was a regional difference,
+exchange, state–geometry feedback, maintained structure, and a local
+measurement. Those results are inputs to the active discovery programme
+above, which starts at `ea6c699`. The code owner is
 `lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py`.
 The v5 replay,
 `lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py`,
