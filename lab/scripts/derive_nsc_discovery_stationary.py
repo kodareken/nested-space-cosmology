@@ -19,6 +19,8 @@ def main(argv=None):
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--solve", action="store_true", help="explicit historical NF32 stationary-critical attempt")
     modes.add_argument("--balance-seed", action="store_true", help="explicit bounded NF128 harmonic virial selection")
+    modes.add_argument("--critical-shape", action="store_true", help="seven-coordinate critical query; preflight by default")
+    parser.add_argument("--execute-critical", action="store_true", help="explicit bounded execution of --critical-shape")
     modes.add_argument("--diagnose", action="store_true", help="measure virial/fine residuals on sealed stationary arrays")
     parser.add_argument("--preflight-only", action="store_true", help="forecast balance mode without numerical trials")
     parser.add_argument("--radius-select", action="store_true", help="optional finite action-affine radius fit after balance selection")
@@ -31,16 +33,27 @@ def main(argv=None):
     parser.add_argument("--amplitude", type=float, default=.35, help="nonconstant cosine radial seed amplitude")
     parser.add_argument("--producer-commit", help="optional commit, accepted only for exact current producer bytes")
     args = parser.parse_args(argv)
-    if (args.preflight_only or args.radius_select) and not args.balance_seed:
-        parser.error("--preflight-only and --radius-select require --balance-seed")
+    if args.preflight_only and not (args.balance_seed or args.critical_shape):
+        parser.error("--preflight-only requires --balance-seed or --critical-shape")
+    if args.radius_select and not args.balance_seed:
+        parser.error("--radius-select requires --balance-seed")
+    if args.execute_critical and not args.critical_shape:
+        parser.error("--execute-critical requires --critical-shape")
+    if args.execute_critical and args.preflight_only:
+        parser.error("choose critical execution or preflight")
     if args.check:
-        if args.solve or args.balance_seed or args.diagnose or args.write is not None or args.producer_commit:
+        if args.solve or args.balance_seed or args.critical_shape or args.diagnose or args.write is not None or args.producer_commit:
             parser.error("--check cannot solve, write, or change a producer pin")
         report = stationary.check_record(args.record)
     else:
+        if args.critical_shape and args.write == stationary.OUTPUT:
+            args.write = stationary.CRITICAL_OUTPUT
         if args.write is not None:
             stationary.validate_new_output(args.write)
-        if args.balance_seed:
+        if args.critical_shape:
+            report, arrays = stationary.run_critical_shape(execute=args.execute_critical,
+                                                          cpu_limit=args.cpu_limit, producer_commit=args.producer_commit)
+        elif args.balance_seed:
             report, arrays = stationary.run_balance_seed(execute=not args.preflight_only,
                                                          cpu_limit=args.cpu_limit, radius_select=args.radius_select,
                                                          producer_commit=args.producer_commit)

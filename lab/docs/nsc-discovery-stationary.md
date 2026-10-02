@@ -228,6 +228,127 @@ The fitted coarse/fine $\dot p_Q$, other momentum rates, full lapse/shift,
 unchanged field eigen-tail and virial are recorded. This auxiliary fit can be
 omitted by budget or fail without erasing the primary shape-selection result.
 
+## Seven-coordinate local-critical successor
+
+The preserved [v2 selector](../results/development/nsc-discovery-stationary-balance-seed-v2.json)
+found virial roots for harmonics 8, 10 and 12, at amplitudes approximately
+$.1641573$, $.2872187$ and $.3467144$. The first selected shape still had a
+large local force: selecting only its radius amplitude left a lapse residual
+about $72.55$. Necessary integrated balance is therefore an input to the next
+query, not its objective.
+
+The v3 query uses the actual NF128 common action and seven shape coordinates,
+
+$$
+Q=sS,\qquad S=1+\sum_{j=1}^7a_j\cos(8j\,2\pi x/8).
+$$
+
+All seven modes lie inside the retained geometry band. Its starting coefficients
+are the truncated exponential coefficients
+$2I_j(b)/I_0(b)$ at the v2 harmonic-eight root
+$b=.16415733483383863$. This literal seed is part of the pinned producer. The
+trigonometric polynomial retains exact cell symmetry without introducing
+non-cell alias modes from exponentiating a coarse nodal field. Actual fine
+$S,Q,R$ positivity is checked; no failed value is clipped into the branch.
+
+The radial and auxiliary envelopes now use exact finite reductions. With $D$
+the owned fine derivative and $U_g$ its geometry interpolation,
+
+$$
+L_Q=-3D^2+\operatorname{diag}\{Q^2-D(DQ/Q)\},\qquad
+\dot p_r=16\pi A L_Qr.
+$$
+
+The operator is pulled back with the actual geometry adjoint. Since
+$D(DQ/Q)=D(DS/S)$ is independent of $s$, the lowest eigenvalue zero selects
+$s$; its positive ground state $R$ is normalized to mean one. The projected
+auxiliary critical equation is the SPD system
+
+$$
+\operatorname{pull}[Q^2U_g\chi]
+=2\operatorname{pull}[D(DQ/Q)]-2\operatorname{pull}[Q^2].
+$$
+
+No continuum $D^2\log Q$ product-rule substitution enters either solve.
+Their arithmetic residuals are recorded.
+
+This query declares a new **source preparation branch**. Let
+$E_{\mathrm{base}}=M\sum_an_a^{\mathrm{base}}\epsilon_a$ and
+$\mathcal W=\alpha\langle Q^2\chi^2\rangle$. Select
+
+$$
+\eta=(\mathcal W-H_{\mathrm{mag}})/E_{\mathrm{base}},\qquad
+c=\eta c_{\mathrm{base}},\qquad 0<\eta\le4/3.
+$$
+
+The resulting six occupations and total trace $3\eta$ are explicit.
+The upper bound is the CAR bound for the largest base occupation $.75$.
+This selects a different initial covariance when $\eta\ne1$, with all action
+coefficients unchanged. It is not a source pump, reset, or new evolution law.
+Every physical force and Hellmann--Feynman variation **holds its selected
+$\eta$ fixed**. Differentiating the preparation function $\eta(a)$ is a
+separate reduced calculation.
+
+Obtain $P_R$ and the remainder from actual $\dot p_Q$ rates at $R$ and $2R$,
+with this selected source. The finite normal identity is
+
+$$
+\langle Q,P_R\rangle=16\pi A\langle Q^2R^2\rangle>0.
+$$
+
+For $\delta S_j=\cos(8j\,2\pi x/8)$, define
+
+$$
+\delta Q_{0,j}=s\delta S_j,\qquad
+\mu_j=\langle\delta Q_{0,j},P_R\rangle/\langle Q,P_R\rangle,
+\qquad \delta Q_j=\delta Q_{0,j}-\mu_jQ.
+$$
+
+These variations are tangent to the radial-critical envelope. The auxiliary
+critical variation and the fixed-weight spectral Hellmann--Feynman identity
+give the analytic reduced gradient and normal radius scale,
+
+$$
+\partial_{a_j}\eta=\langle\delta Q_j,\mathrm{remainder}\rangle/E_{\mathrm{base}},
+\qquad r^2_{\mathrm{amplitude}}
+=-\langle Q,\mathrm{remainder}\rangle/\langle Q,P_R\rangle.
+$$
+
+The implementation checks the normal identity, tangent pairings, radius-source
+independence, and affinity at an independent $1.5R$. It compares the analytic
+$\eta$ gradient with central differences at two step sizes. Reduced NF64 tests
+also independently check the spectral energy variation with $\eta$ held fixed.
+
+The optional execution solves the seven analytic gradients using a small
+Newton/LM loop. Finite differences form the seven-by-seven gradient Jacobian;
+there is no full geometry finite-difference Jacobian. Backtracking rejects and
+records nonpositive fine shapes/ground states, nonpositive normal radius squares
+and source preparations outside the CAR interval. It never clips those values.
+The loop permits at most 40 iterations and 600 actual trials, with the same
+120 aggregate CPU-second ceiling, measured-cost admission and completion
+reserve. A bounded cache keeps sixteen full trial states. Every trial retains
+its coefficients, preparation, gradient and raw residual summaries; the initial
+and best full states, all their raw fine/coarse residuals, and source carriers
+are saved in the payload. Budget or line-search termination preserves the best
+admissible finite result and does not imply nonexistence.
+
+Covariance cell-translation and Dirac-reflection gaps are measured directly.
+No group average is applied to the covariance or force. Reflection uses the
+antiperiodic spatial reflection together with $\sigma_1$, which preserves the
+even static Dirac operator. Even if seven gradients and the normal pairing
+vanish, the full retained $\dot p_Q,\dot p_r,\dot p_\chi$, lapse and shift
+residuals are measured, as are all fine residuals and the fine field eigen-tail.
+The label `CRITICAL_RETAINED_CANDIDATE` requires both the seven-gradient and full
+retained numerical residual criteria, with a resolved unequal-occupation branch.
+It is a conditional finite-domain label, not holding, stability or a continuum
+stationary solution. A restriction to seven cosines alone does not certify
+unmeasured force directions.
+
+`--critical-shape` defaults to preflight with zero numerical trials.
+`--execute-critical` explicitly enables the bounded query. Its fresh default
+stem is `nsc-discovery-stationary-critical-v3`. Earlier v1/v2 evidence and their
+immutable historical producer checks remain preserved.
+
 ## Commands and provenance
 
 Default execution only measures the NF32 radial seed. Root freezes the exact
@@ -260,6 +381,16 @@ OPENBLAS_NUM_THREADS=1 .venv/validation/bin/python scripts/lab.py \
   --cpu-limit 120 --producer-commit HEAD \
   --write lab/results/development/nsc-discovery-stationary-balance-seed-v2
 
+# New critical query: preflight only, no numerical state evaluation.
+OPENBLAS_NUM_THREADS=1 .venv/validation/bin/python scripts/lab.py \
+  scripts/derive_nsc_discovery_stationary.py --critical-shape --preflight-only
+
+# After root's producer freeze: seven-coordinate local-critical execution.
+OPENBLAS_NUM_THREADS=1 .venv/validation/bin/python scripts/lab.py \
+  scripts/derive_nsc_discovery_stationary.py --critical-shape --execute-critical \
+  --cpu-limit 120 --producer-commit HEAD \
+  --write lab/results/development/nsc-discovery-stationary-critical-v3
+
 OPENBLAS_NUM_THREADS=1 .venv/validation/bin/python scripts/lab.py -m pytest \
   tests/test_nsc_discovery_stationary.py -q
 ```
@@ -282,7 +413,7 @@ raw residual summaries, virial pairings and selected roots without solving.
 It reports which producer authentication was used.
 
 The historical `--solve` option remains available for the original NF32 joint
-query, but is not invoked by diagnosis or balance selection. Its logarithmic
+query, but is not invoked by diagnosis, balance selection or the critical query. Its logarithmic
 box remains $[-8,4]$ for $Q,r$, with $\chi\in[-10^4,10^4]$;
 its normalized $10^{-7}$ label is a finite optimizer criterion only. The new
 balance selector adds no physical precision gate. No dynamical holding claim,

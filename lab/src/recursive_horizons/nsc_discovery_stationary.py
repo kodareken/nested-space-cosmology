@@ -6,6 +6,8 @@ rank-six covariance commutes with the actual retained Dirac Hamiltonian.
 """
 from __future__ import annotations
 
+from collections import OrderedDict
+from dataclasses import replace
 from functools import lru_cache
 import hashlib
 import io
@@ -17,8 +19,9 @@ import time
 
 import numpy as np
 import scipy
-from scipy.linalg import eigh
+from scipy.linalg import eigh, solve
 from scipy.optimize import brentq, least_squares
+from scipy.special import iv
 from threadpoolctl import threadpool_limits
 
 from . import nsc_nested_parent_child as nested
@@ -31,6 +34,13 @@ OUTPUT = LAB / "results/development/nsc-discovery-stationary-v2"
 LEGACY_OUTPUT = LAB / "results/development/nsc-discovery-stationary-v1"
 SCHEMA = "NSC-DISCOVERY-STATIONARY-v2"
 LEGACY_SCHEMA = "NSC-DISCOVERY-STATIONARY-v1"
+CRITICAL_SCHEMA = "NSC-DISCOVERY-STATIONARY-CRITICAL-v3"
+CRITICAL_OUTPUT = LAB / "results/development/nsc-discovery-stationary-critical-v3"
+CRITICAL_HARMONIC = 8
+CRITICAL_COORDINATES = 7
+CRITICAL_SEED_AMPLITUDE = .16415733483383863
+CRITICAL_MAX_ITERATIONS = 40
+CRITICAL_MAX_TRIALS = 600
 BALANCE_NF = 128
 BALANCE_HARMONICS = (6, 8, 10, 12)
 BALANCE_AMPLITUDES = (.025, .1, .35, .65)
@@ -126,8 +136,8 @@ def maximum(values):
 
 def make_pair(nf=NF):
     """Full geometry frame; placeholders never supply a measured source."""
-    if nf not in (NF, BALANCE_NF):
-        raise ValueError("stationary controls admit nf=32 or nf=128 only")
+    if nf not in (NF, 64, BALANCE_NF):
+        raise ValueError("stationary controls admit nf=32,64,128 only; nf64 is a reduced test domain")
     columns = (np.eye(nf, 6, dtype=complex), np.zeros((nf, 6), dtype=complex))
     return nested.build_pair(nf, coarse_modes=1, child_details=2, source_layout="override",
                              columns_override=columns, occupations=WEIGHTS)
@@ -166,7 +176,8 @@ def spectral_source(pair, state):
     columns = vectors[:, ids].astype(complex)
     state.phi0, state.phi1 = columns[:pair.grid.nf], columns[pair.grid.nf:]
     levels = values[ids]
-    covariance = (columns * WEIGHTS) @ columns.conj().T
+    weights = pair.grid.fine.occupations
+    covariance = (columns * weights) @ columns.conj().T
     separation = np.diff(values[positive[:7]])
     unequal = np.array([False, True, False, True, False, True])
     gap = float(np.min(separation[unequal]))
@@ -243,7 +254,7 @@ def virial_diagnostic(pair, state, raw, bundle, constraints, spectral=None):
         "lapse": float(-grid.dx_g * np.dot(state.Q, raw["lapse"]))}
     fine_rhs, coarse_rhs = sum(fine_terms.values()), sum(coarse_terms.values())
     owned_energy = float(coupling.field_energy(system, fine))
-    eigen_energy = None if spectral is None else float(system.multiplicity * np.dot(WEIGHTS, spectral["eigenvalues"]))
+    eigen_energy = None if spectral is None else float(system.multiplicity * np.dot(system.occupations, spectral["eigenvalues"]))
     return {"auxiliary_term": auxiliary, "source_term": source, "magnetic_term": magnetic,
             "gap": gap, "fine_rhs_terms": fine_terms, "coarse_rhs_terms": coarse_terms,
             "fine_rhs": fine_rhs, "coarse_rhs": coarse_rhs,
@@ -320,11 +331,12 @@ def diagnostics(pair, unknown, evaluated=None, *, hellmann_feynman=True):
     state, spectral, raw, rate, bundle, constraints = evaluate(pair, unknown) if evaluated is None else evaluated
     grid, fine, system, source = pair.grid, bundle["fine_state"], bundle["fine_system"], bundle["source"]
     levels = spectral["eigenvalues"]
+    weights = system.occupations
     images = np.vstack((source["image0"], source["image1"]))
     lifted_columns = np.vstack((fine.phi0, fine.phi1))
     tail = images - lifted_columns * levels
     density = (np.abs(fine.phi0)**2 + np.abs(fine.phi1)**2) / grid.dx_q
-    positive_carrier = system.multiplicity * np.sum(density * (WEIGHTS * levels), axis=1) / fine.Q
+    positive_carrier = system.multiplicity * np.sum(density * (weights * levels), axis=1) / fine.Q
     source_tail = constraints["rho"] - positive_carrier
     # Hellmann--Feynman check uses the fixed occupation weights on nearby
     # eigensystems, with no extra multiplicity in the representative H.
@@ -335,7 +347,7 @@ def diagnostics(pair, unknown, evaluated=None, *, hellmann_feynman=True):
         varied.Q = state.Q + delta * direction
         H = nested.hamiltonian(pair, nested.encode_state(pair, varied))
         eigen = eigh((H.real + H.real.T) / 2, eigvals_only=True)
-        return float(system.multiplicity * np.dot(WEIGHTS, eigen[eigen > 0][:6]))
+        return float(system.multiplicity * np.dot(weights, eigen[eigen > 0][:6]))
     owned = float(np.dot(source["force_Q"] + source["force_L"], grid.A_g @ direction))
     hf = {"step": eps, "owned_source_gradient": owned,
           "unequal_weight_branch_resolved": not spectral["unequal_occupation_degeneracy"]}
@@ -374,7 +386,7 @@ def diagnostics(pair, unknown, evaluated=None, *, hellmann_feynman=True):
               "spectral": {key: value for key, value in spectral.items() if not isinstance(value, np.ndarray)},
               "occupied_positive_eigenvalues": levels.tolist(),
               "hellmann_feynman": hf,
-              "field_eigen_energy": float(system.multiplicity * np.dot(WEIGHTS, levels)),
+              "field_eigen_energy": float(system.multiplicity * np.dot(weights, levels)),
               "owned_field_energy": float(coupling.field_energy(system, fine))}
     arrays = {"unknown": unknown.copy(), "eigenvalues": levels.copy(),
               "all_eigenvalues": spectral["all_eigenvalues"].copy(), "H": spectral["H"].copy(),
@@ -531,8 +543,8 @@ def run_saved_diagnostic(path=LEGACY_OUTPUT, *, producer_commit=None):
     authenticated = check_record(path)
     json_path, npz_path = output_paths(path)
     old = json.loads(json_path.read_text())
-    if old.get("mode") == "balance_seed":
-        raise ValueError("saved stationary diagnosis requires a single stationary iterate")
+    if old.get("mode") in ("balance_seed", "critical_shape"):
+        raise ValueError("saved stationary diagnosis requires a single NF32 stationary iterate")
     before = source_hashes()
     commit = producer_commit_binding(producer_commit, before)
     owned = {"lab/src/recursive_horizons/nsc_discovery_stationary.py",
@@ -797,6 +809,406 @@ def run_balance_seed(*, execute=False, cpu_limit=CPU_LIMIT, radius_select=False,
     return report, payload
 
 
+class NonAdmissible(ValueError):
+    """A measured trial left the stated source/positive-geometry branch."""
+    def __init__(self, reason, **details):
+        super().__init__(reason)
+        self.details = details
+
+
+def critical_seed_coefficients(count=CRITICAL_COORDINATES, amplitude=CRITICAL_SEED_AMPLITUDE):
+    """Truncated exp(b cos) / I0(b), with its mean exactly one."""
+    return 2 * iv(np.arange(1, count+1), amplitude) / iv(0, amplitude)
+
+
+def critical_context(nf=BALANCE_NF, harmonic=CRITICAL_HARMONIC, count=CRITICAL_COORDINATES):
+    """Original fine operators and their exact projected radial kinetic term."""
+    pair = make_pair(nf)
+    grid = pair.grid
+    if not 1 <= harmonic or int(harmonic) != harmonic or harmonic * count > grid.ng // 2:
+        raise ValueError("all critical cosine coordinates must fit the odd geometry band")
+    cosine = np.cos(2*np.pi*grid.xi_g[:, None]/grid.length * harmonic * np.arange(1, count+1))
+    D, U = grid.fine.derivative, grid.A_g
+    kinetic = -3 * galerkin.pull_geometry(grid, D @ (D @ U))
+    return {"pair": pair, "cosine": cosine, "kinetic": (kinetic+kinetic.T)/2,
+            "harmonic": int(harmonic), "count": int(count)}
+
+
+def critical_shape_evaluate(context, coefficients):
+    """Exact finite envelopes and analytic eta gradient; physical eta is fixed.
+
+    The preparation eta changes between candidates, not inside the action
+    force. Its gradient is derived from those fixed-eta forces only after
+    eliminating the radial eigenvalue and auxiliary critical equations.
+    """
+    base_pair = context["pair"]
+    grid, count = base_pair.grid, context["count"]
+    coefficients = np.asarray(coefficients, dtype=float)
+    if coefficients.shape != (count,) or not np.isfinite(coefficients).all():
+        raise NonAdmissible("critical shape coordinates are not finite")
+    S = 1 + context["cosine"] @ coefficients
+    fineS = galerkin.prolong_geometry(grid, S)
+    if np.min(fineS) <= 0 or np.min(S) <= 0:
+        raise NonAdmissible("shape left the actual fine positive chart", fine_S_min=float(np.min(fineS)))
+    D, U = grid.fine.derivative, grid.A_g
+    logarithmic_jet = D @ ((D @ fineS) / fineS)
+    shape_mass = galerkin.pull_geometry(grid, fineS[:, None]**2 * U)
+    base_operator = context["kinetic"] - galerkin.pull_geometry(grid, logarithmic_jet[:, None] * U)
+    base_operator, shape_mass = (base_operator+base_operator.T)/2, (shape_mass+shape_mass.T)/2
+    lowest = lambda scale: float(eigh(base_operator+scale**2*shape_mass,
+                                     subset_by_index=(0,0), eigvals_only=True)[0])
+    low = lowest(0.)
+    if low >= 0:
+        raise NonAdmissible("no resolved negative radial eigenvalue at zero scale", lambda_at_zero=low)
+    high = 1.
+    while lowest(high) <= 0:
+        high *= 2
+        if high > 64:
+            raise NonAdmissible("radial scale bracket exceeded its bounded search")
+    scale = brentq(lowest, 0., high, xtol=2e-13)
+    operator = base_operator + scale**2 * shape_mass
+    eigenvalues, eigenvectors = eigh(operator, subset_by_index=(0,0))
+    R = eigenvectors[:, 0]
+    if np.mean(R) < 0:
+        R = -R
+    R /= np.mean(R)
+    fineR = galerkin.prolong_geometry(grid, R)
+    if np.min(R) <= 0 or np.min(fineR) <= 0:
+        raise NonAdmissible("radial ground state is not positive on the fine carrier", fine_R_min=float(np.min(fineR)))
+    Q, fineQ = scale*S, scale*fineS
+    chi_matrix = scale**2 * shape_mass
+    chi_rhs = 2 * galerkin.pull_geometry(grid, logarithmic_jet) - 2 * galerkin.pull_geometry(grid, fineQ**2)
+    chi = solve(chi_matrix, chi_rhs, assume_a="pos")
+    finechi = galerkin.prolong_geometry(grid, chi)
+    zeros, columns = np.zeros(grid.ng), np.zeros((grid.nf,6), dtype=complex)
+    state = coupling.CauchyState(Q.copy(), R.copy(), chi.copy(), zeros.copy(), zeros.copy(), zeros.copy(), columns.copy(), columns.copy())
+    state, base_spectral = spectral_source(base_pair, state)
+    base_energy = float(grid.fine.multiplicity * np.dot(WEIGHTS, base_spectral["eigenvalues"]))
+    auxiliary = float(coupling.alpha_of(grid.fine.C_W) * grid.dx_q * np.sum(fineQ**2 * finechi**2))
+    magnetic = float(2*np.pi*grid.fine.C_F*grid.fine.flux**2 * grid.dx_q * np.sum(fineQ**2))
+    eta = (auxiliary-magnetic) / base_energy
+    if not 0 < eta <= 4/3:
+        raise NonAdmissible("selected source eta is outside the CAR preparation branch",
+                            eta=float(eta), auxiliary_term=auxiliary, magnetic_term=magnetic, base_source_energy=base_energy)
+    occupations = eta * WEIGHTS
+    fine_system = replace(grid.fine, occupations=occupations)
+    pair = replace(base_pair, grid=replace(grid, fine=fine_system), weights=occupations)
+    # Reuse the actual eigenvectors; changing weights does not change H(Q).
+    spectral = dict(base_spectral, covariance=eta*base_spectral["covariance"],
+                    commutator_gap=eta*base_spectral["commutator_gap"])
+    first_rate, first_bundle = galerkin.compose_fine_hamiltonian(pair.grid, state)
+    double = state.copy()
+    double.r *= 2
+    double_rate, double_bundle = galerkin.compose_fine_hamiltonian(pair.grid, double)
+    PR = (double_rate.p_Q-first_rate.p_Q)/3
+    remainder = first_rate.p_Q-PR
+    pairing = lambda first, second: float(grid.dx_g * np.dot(first, second))
+    denominator = pairing(Q, PR)
+    denominator_identity = float(16*np.pi*grid.fine.A*grid.dx_q*np.sum(fineQ**2*fineR**2))
+    if denominator <= 0:
+        raise NonAdmissible("normal radius denominator is nonpositive", denominator=denominator)
+    amplitude_square = -pairing(Q, remainder)/denominator
+    dQ0 = scale * context["cosine"]
+    mu = grid.dx_g * (dQ0.T @ PR) / denominator
+    tangents = dQ0 - Q[:, None] * mu[None, :]
+    gradient = grid.dx_g * (tangents.T @ remainder) / base_energy
+    if amplitude_square <= 0:
+        raise NonAdmissible("normal radius scale has no positive square", eta=float(eta),
+                            radius_amplitude_square=float(amplitude_square), gradient=gradient.tolist())
+    state.r *= np.sqrt(amplitude_square)
+    rate, bundle = galerkin.compose_fine_hamiltonian(pair.grid, state)
+    constraints = coupling.constraint_residuals(bundle["fine_system"], bundle["fine_state"], bundle["source"])
+    raw = {name: np.array(getattr(rate, name), copy=True) for name in BLOCKS[:3]}
+    raw.update(lapse=galerkin.pull_geometry(grid, constraints["hamilton"]),
+               shift=galerkin.pull_geometry(grid, constraints["momentum"]))
+    unknown = np.r_[np.log(state.Q), np.log(state.r), state.chi]
+    source_change = max(maximum(double_bundle["source"][name]-first_bundle["source"][name])
+                        for name in ("force_L", "force_Q", "force_beta"))
+    return {"coefficients": coefficients.copy(), "eta": float(eta), "gradient": gradient,
+            "pair": pair, "state": state, "spectral": spectral, "raw": raw, "rate": rate,
+            "bundle": bundle, "constraints": constraints, "unknown": unknown,
+            "PR": PR, "remainder": remainder, "tangents": tangents, "mu": mu,
+            "R": R.copy(), "scale": float(scale), "radius_amplitude_square": float(amplitude_square),
+            "reduction": {"lambda_at_zero": low, "selected_lambda": float(eigenvalues[0]),
+                          "radial_operator_residual_max": maximum(operator @ R),
+                          "auxiliary_projected_linear_residual_max": maximum(chi_matrix @ chi-chi_rhs),
+                          "normal_radius_denominator": denominator,
+                          "normal_radius_denominator_identity": denominator_identity,
+                          "normal_radius_denominator_defect": denominator-denominator_identity,
+                          "tangent_radial_pairing_max": maximum(grid.dx_g * tangents.T @ PR),
+                          "normal_Q_force_pairing": pairing(Q, raw["p_Q"]),
+                          "fixed_eta_source_change_under_radius_scaling": source_change,
+                          "base_source_energy": base_energy, "auxiliary_term": auxiliary,
+                          "magnetic_term": magnetic, "fine_S_min": float(np.min(fineS)),
+                          "fine_R_min": float(np.min(fineR)), "physical_force_eta_held_fixed": True}}
+
+
+def critical_gradient_check(context, coefficients, *, evaluator=None, steps=(1e-5, 5e-6)):
+    """Two-step finite differences of selected eta, separate from physical forces."""
+    evaluate_point = critical_shape_evaluate if evaluator is None else evaluator
+    center = evaluate_point(context, coefficients)
+    rows = []
+    for step in steps:
+        finite_difference = []
+        for column in range(context["count"]):
+            delta = np.zeros(context["count"])
+            delta[column] = step
+            plus = evaluate_point(context, np.asarray(coefficients)+delta)
+            minus = evaluate_point(context, np.asarray(coefficients)-delta)
+            finite_difference.append((plus["eta"]-minus["eta"])/(2*step))
+        fd = np.asarray(finite_difference)
+        rows.append({"step": step, "finite_difference": fd.tolist(),
+                     "absolute_gap_max": maximum(fd-center["gradient"])})
+    return {"analytic_gradient": center["gradient"].tolist(), "steps": rows,
+            "physical_force_eta_held_fixed": True, "eta_differentiated_only_for_preparation_function": True}
+
+
+def critical_symmetry_diagnostics(core, harmonic):
+    """Measure cell translation and sigma1 reflection, without averaging a force."""
+    grid, spectral = core["pair"].grid, core["spectral"]
+    modes = grid.modes_f
+    V = np.exp(2j*np.pi*grid.xi_f[:, None]*modes/grid.length)/np.sqrt(grid.nf)
+    T = (V * np.exp(-2j*np.pi*modes/harmonic)) @ V.conj().T
+    reflection = V[:, ::-1] @ V.conj().T
+    zero = np.zeros_like(T)
+    translation = np.block([[T,zero],[zero,T]])
+    reflected = np.block([[zero,reflection],[reflection,zero]])
+    H, C = spectral["H"], spectral["covariance"]
+    return {"cell_translation_covariance_gap": maximum(translation@C@translation.conj().T-C),
+            "cell_translation_hamiltonian_gap": maximum(translation@H@translation.conj().T-H),
+            "dirac_reflection_covariance_gap": maximum(reflected@C@reflected.conj().T-C),
+            "dirac_reflection_hamiltonian_gap": maximum(reflected@H@reflected.conj().T-H),
+            "group_average_applied_to_state_or_force": False}
+
+
+def critical_preflight(cpu_limit=CPU_LIMIT):
+    if not 0 < cpu_limit <= CPU_LIMIT:
+        raise ValueError("critical query CPU limit must be in (0,120]")
+    return {"nf": BALANCE_NF, "ng": BALANCE_NF-1, "nq": 4*BALANCE_NF,
+            "harmonic": CRITICAL_HARMONIC, "shape_coordinates": CRITICAL_COORDINATES,
+            "initial_coefficients": critical_seed_coefficients().tolist(),
+            "seed_parent_amplitude": CRITICAL_SEED_AMPLITUDE,
+            "maximum_iterations": CRITICAL_MAX_ITERATIONS, "maximum_actual_trials": CRITICAL_MAX_TRIALS,
+            "cpu_limit_seconds": cpu_limit, "reserve_cpu_seconds": min(5., .1*cpu_limit),
+            "source_preparation": "c=eta c_base; eta=(W-magnetic)/E_base, 0<eta<=4/3; trace=3 eta",
+            "solver": "seven analytic eta gradients; finite differences of these gradients for damped Newton/LM",
+            "physical_source_variation": "hold eta fixed in every original common-action force",
+            "default_execution": "preflight only; explicit execute-critical required"}
+
+
+def critical_newton(evaluator, initial, *, maximum_iterations=CRITICAL_MAX_ITERATIONS,
+                    target=NUMERICAL_TARGET):
+    """Small gradient-root Newton/LM with measured admissibility backtracking."""
+    core = evaluator(np.asarray(initial, dtype=float), "initial")
+    history = []
+    termination = "maximum seven-coordinate iterations reached"
+    for iteration in range(maximum_iterations):
+        gradient = core["gradient"]
+        if maximum(gradient) <= target:
+            termination = "seven analytic gradients meet the numerical solver target"
+            break
+        coefficients = core["coefficients"]
+        jacobian = np.empty((gradient.size, gradient.size))
+        for column in range(gradient.size):
+            delta = np.zeros(gradient.size)
+            step = 1e-5 * max(1., abs(coefficients[column]))
+            plus = minus = None
+            for _ in range(4):
+                delta[column] = step
+                try:
+                    plus = evaluator(coefficients+delta, "gradient_jacobian_plus")
+                except NonAdmissible:
+                    plus = None
+                try:
+                    minus = evaluator(coefficients-delta, "gradient_jacobian_minus")
+                except NonAdmissible:
+                    minus = None
+                if plus is not None or minus is not None:
+                    break
+                step *= .5
+            if plus is not None and minus is not None:
+                jacobian[:, column] = (plus["gradient"]-minus["gradient"])/(2*step)
+            elif plus is not None:
+                jacobian[:, column] = (plus["gradient"]-gradient)/step
+            elif minus is not None:
+                jacobian[:, column] = (gradient-minus["gradient"])/step
+            else:
+                return core, {"termination": "no admitted local gradient derivative", "iterations": history,
+                              "unresolved_coordinate": column, "success": False}
+        step, *_ = np.linalg.lstsq(jacobian, -gradient, rcond=None)
+        norm = float(np.linalg.norm(step))
+        if not np.isfinite(step).all():
+            return core, {"termination": "nonfinite seven-coordinate Newton step", "iterations": history, "success": False}
+        if norm > 1:
+            step /= norm  # Numerical trust step, never clipping Q, eta or a^2.
+        baseline = float(np.dot(gradient, gradient))
+        accepted = None
+        used = None
+        method = "Newton"
+        for phase in ("Newton", "LM"):
+            if phase == "LM":
+                method = phase
+                damping = 1e-6 * max(1., float(np.linalg.norm(jacobian, 2))**2)
+                step = np.linalg.solve(jacobian.T@jacobian+damping*np.eye(gradient.size), -jacobian.T@gradient)
+                if np.linalg.norm(step) > 1:
+                    step /= np.linalg.norm(step)
+            for backtrack in range(12):
+                fraction = 2.**(-backtrack)
+                try:
+                    candidate = evaluator(coefficients+fraction*step, "backtrack_"+phase)
+                except NonAdmissible:
+                    continue
+                if float(np.dot(candidate["gradient"], candidate["gradient"])) < baseline:
+                    accepted, used = candidate, fraction
+                    break
+            if accepted is not None:
+                break
+        history.append({"iteration": iteration, "gradient_max": maximum(gradient),
+                        "gradient_jacobian_symmetry_defect": maximum(jacobian-jacobian.T),
+                        "method": method, "accepted_fraction": used})
+        if accepted is None:
+            termination = "no admitted step decreases the seven-gradient residual"
+            break
+        core = accepted
+    return core, {"termination": termination, "iterations": history,
+                  "success": maximum(core["gradient"]) <= target}
+
+
+def _critical_snapshot(core):
+    measured, arrays = diagnostics(core["pair"], core["unknown"],
+                                   (core["state"],core["spectral"],core["raw"],core["rate"],
+                                    core["bundle"],core["constraints"]), hellmann_feynman=False)
+    arrays.update(shape_coefficients=core["coefficients"], eta_gradient=core["gradient"],
+                  radial_shape=core["R"], radius_pQ_coefficient=core["PR"],
+                  radius_pQ_remainder=core["remainder"], radial_shape_tangents=core["tangents"],
+                  radial_shape_mu=core["mu"])
+    return measured, arrays
+
+
+def run_critical_shape(*, execute=False, cpu_limit=CPU_LIMIT, producer_commit=None):
+    """True local retained critical query; no NF128 execution by default."""
+    plan = critical_preflight(cpu_limit)
+    started = time.process_time()
+    before = source_hashes()
+    commit = producer_commit_binding(producer_commit, before)
+    inputs = {str(coupling.LOCKED_RECORD.relative_to(ROOT)): sha256(coupling.LOCKED_RECORD)}
+    report = {"schema": CRITICAL_SCHEMA, "mode": "critical_shape", "status": "CRITICAL_SHAPE_PREFLIGHT",
+              "nf": BALANCE_NF, "ng": BALANCE_NF-1, "nq": 4*BALANCE_NF,
+              "period": coupling.PERIOD, "gauge": "conformal", "preflight": plan,
+              "base_occupations": WEIGHTS.tolist(), "occupations": None,
+              "source_eta": None, "total_source_trace": None,
+              "source_preparation_branch": "eta-scaled standing Gaussian; changed initial covariance selected by static action balance",
+              "multiplicity": 4*coupling.KAPPA, "locked_coefficients": coupling.locked_coefficients(),
+              "source_hashes": before, "input_hashes": inputs, "producing_commit": commit,
+              "numpy_version": np.__version__, "scipy_version": scipy.__version__,
+              "trials": [], "actual_trials": 0, "numerical_critical_query_executed": bool(execute),
+              "solver": {"performed": False, "termination": "preflight only"},
+              "scope": {"finite_retained_common_action_domain": True, "source_preparation_changes_between_candidates": True,
+                        "eta_held_fixed_in_physical_force": True, "coefficients_changed": False,
+                        "source_pump_or_reset_during_dynamics": False, "dynamics_performed": False,
+                        "holding_claim": False, "stability_assessed": False, "continuum_solution_certified": False,
+                        "nonexistence_inferred_from_optimizer": False}}
+    if not execute:
+        report.update(cpu_seconds=time.process_time()-started, cpu_budget_exceeded=False)
+        return report, {}
+    best = None
+    initial_core = None
+    cache = OrderedDict()
+    largest_trial_cost = 0.
+    cutoff = cpu_limit-plan["reserve_cpu_seconds"]
+    def oracle(coefficients, kind):
+        nonlocal best, largest_trial_cost
+        key = tuple(float(value) for value in coefficients)
+        if key in cache:
+            cache.move_to_end(key)
+            return cache[key]
+        if len(report["trials"]) >= CRITICAL_MAX_TRIALS:
+            raise BudgetReached("critical query reached its finite trial admission cap")
+        remaining = cutoff-(time.process_time()-started)
+        if remaining <= largest_trial_cost:
+            raise BudgetReached("critical query reached aggregate CPU admission allowance")
+        began = time.process_time()
+        row = {"index": len(report["trials"]), "kind": kind, "coefficients": list(key)}
+        try:
+            core = critical_shape_evaluate(context, np.asarray(coefficients))
+        except (NonAdmissible, np.linalg.LinAlgError, coupling.PositiveChartExit) as error:
+            row.update(status="NONADMISSIBLE", reason=str(error), details=getattr(error,"details",{}))
+            core = None
+        cost = time.process_time()-began
+        largest_trial_cost = max(largest_trial_cost,cost)
+        row["cpu_seconds"] = cost
+        if core is not None:
+            score = float(np.dot(core["gradient"],core["gradient"]))
+            row.update(status="MEASURED", source_eta=core["eta"], total_source_trace=3*core["eta"],
+                       gradient=core["gradient"].tolist(), gradient_max=maximum(core["gradient"]),
+                       radius_amplitude_square=core["radius_amplitude_square"],
+                       raw_residual_max={name:maximum(core["raw"][name]) for name in BLOCKS},
+                       reduction=core["reduction"])
+            core["trial_index"] = row["index"]
+            if best is None or score < float(np.dot(best["gradient"],best["gradient"])):
+                best = core
+            cache[key] = core
+            if len(cache) > 16:
+                cache.popitem(last=False)
+        report["trials"].append(row)
+        if core is None:
+            raise NonAdmissible(row["reason"], **row["details"])
+        return core
+    with threadpool_limits(limits=1):
+        context = critical_context()
+        report["preflight"]["matrix_and_frame_cpu_seconds"] = time.process_time()-started
+        initial = critical_seed_coefficients()
+        try:
+            initial_core = oracle(initial,"initial")
+            try:
+                check = critical_gradient_check(context, initial,
+                    evaluator=lambda unused, coefficients: oracle(coefficients,"initial_eta_gradient_check"))
+                report["eta_gradient_finite_difference_check"] = dict(check, performed=True)
+            except (BudgetReached, NonAdmissible) as error:
+                report["eta_gradient_finite_difference_check"] = {"performed":False,"reason":str(error)}
+            _, solver = critical_newton(oracle, initial)
+            report["solver"] = dict(solver, performed=True)
+        except (BudgetReached, NonAdmissible) as error:
+            report["solver"] = {"performed":True,"termination":str(error),"success":False}
+        if best is None:
+            report["status"] = "NO_ADMISSIBLE_CRITICAL_SEED"
+            arrays = {}
+        else:
+            measured, arrays = _critical_snapshot(best)
+            report.update(measurements=measured, source_eta=best["eta"], total_source_trace=3*best["eta"],
+                          occupations=(best["eta"]*WEIGHTS).tolist(), selected_trial_index=best["trial_index"],
+                          analytic_eta_gradient=best["gradient"].tolist(), eta_gradient_max=maximum(best["gradient"]),
+                          radius_amplitude_square=best["radius_amplitude_square"], radial_scale=best["scale"],
+                          reduction=best["reduction"], symmetry=critical_symmetry_diagnostics(best,CRITICAL_HARMONIC))
+            # Verify affinity at an independent radius while eta stays fixed.
+            third = best["state"].copy()
+            third.r = 1.5*best["R"]
+            third_rate, _ = galerkin.compose_fine_hamiltonian(best["pair"].grid,third)
+            report["finite_radius_affinity_defect_max"] = maximum(third_rate.p_Q-(2.25*best["PR"]+best["remainder"]))
+            arrays["radius_third_pQ"] = third_rate.p_Q.copy()
+            reference = initial_core if initial_core is not None else best
+            scales = residual_scales(reference["raw"])
+            normalized = np.concatenate([best["raw"][name]/scales[name] for name in BLOCKS])
+            arrays["normalized_retained_residual"] = normalized
+            report.update(residual_scales=scales, normalized_retained_residual_max=maximum(normalized),
+                          numerical_solver_target=NUMERICAL_TARGET,
+                          initial_source_eta=reference["eta"], initial_eta_gradient=reference["gradient"].tolist())
+            initial_measured, initial_arrays = _critical_snapshot(reference)
+            report["initial_measurements"] = initial_measured
+            arrays.update({"initial_"+name:value for name,value in initial_arrays.items()})
+            satisfied = (maximum(best["gradient"]) <= NUMERICAL_TARGET and maximum(normalized) <= NUMERICAL_TARGET
+                         and not measured["spectral"]["unequal_occupation_degeneracy"])
+            report["status"] = "CRITICAL_RETAINED_CANDIDATE" if satisfied else "UNSATISFIED_LOCAL_CRITICAL_RELATIONS"
+    after = source_hashes()
+    if after != before or any(sha256(ROOT/path)!=digest for path,digest in inputs.items()):
+        raise RuntimeError("critical producer bytes or locked inputs changed during measurement")
+    elapsed = time.process_time()-started
+    report.update(actual_trials=len(report["trials"]), cpu_seconds=elapsed, cpu_limit_seconds=cpu_limit,
+                  cpu_budget_exceeded=bool(elapsed>cpu_limit), largest_measured_trial_cpu_seconds=largest_trial_cost,
+                  best_candidate_preserved=best is not None)
+    return report, arrays
+
+
 def output_paths(path=OUTPUT):
     supplied = Path(path).expanduser()
     # scripts/lab.py changes cwd to lab; preserve explicit root-relative
@@ -849,7 +1261,7 @@ def write_record(report, arrays, path=OUTPUT):
     return record
 
 
-def _check_saved_measurements(saved, measurements, *, nf, period):
+def _check_saved_measurements(saved, measurements, *, nf, period, weights=WEIGHTS):
     """Algebraic replay shared by a stationary iterate and balance trials."""
     ng, nq = nf - 1, 4 * nf
     u, v, chi = np.split(saved("unknown"), 3)
@@ -889,7 +1301,7 @@ def _check_saved_measurements(saved, measurements, *, nf, period):
                             ("gap", auxiliary-source-magnetic), ("fine_rhs", fine_rhs), ("coarse_rhs", coarse_rhs)):
             if abs(value - virial[name]) > 1e-11 * max(1., abs(value)):
                 raise ValueError("saved virial summary disagrees: " + name)
-        energy = float(4 * coupling.KAPPA * np.dot(WEIGHTS, levels))
+        energy = float(4 * coupling.KAPPA * np.dot(weights, levels))
         if abs(energy - measurements["field_eigen_energy"]) > 1e-12 * max(1., abs(energy)):
             raise ValueError("saved spectral source energy summary disagrees")
 
@@ -904,11 +1316,23 @@ def check_record(path=OUTPUT):
     json_path, npz_path = output_paths(path)
     record = json.loads(json_path.read_text())
     balance = record.get("mode") == "balance_seed"
-    nf = BALANCE_NF if balance else NF
-    if (record.get("schema") not in (LEGACY_SCHEMA, SCHEMA) or record.get("nf") != nf
+    critical = record.get("mode") == "critical_shape"
+    nf = BALANCE_NF if balance or critical else NF
+    if critical:
+        eta = record.get("source_eta")
+        occupations_valid = record.get("base_occupations") == WEIGHTS.tolist()
+        if eta is None:
+            occupations_valid = occupations_valid and record.get("occupations") is None
+        else:
+            occupations_valid = (occupations_valid and 0 < eta <= 4/3
+                                 and record.get("occupations") == (eta*WEIGHTS).tolist()
+                                 and abs(record.get("total_source_trace",0)-3*eta) <= 1e-12)
+    else:
+        occupations_valid = record.get("occupations") == WEIGHTS.tolist()
+    if (record.get("schema") not in (LEGACY_SCHEMA, SCHEMA, CRITICAL_SCHEMA) or record.get("nf") != nf
             or record.get("ng") != nf - 1 or record.get("nq") != 4 * nf
             or record.get("period") != coupling.PERIOD or record.get("gauge") != "conformal"
-            or record.get("occupations") != WEIGHTS.tolist()
+            or not occupations_valid
             or record.get("locked_coefficients") != coupling.locked_coefficients()):
         raise ValueError("stationary record domain does not match")
     if set(record.get("source_hashes", {})) != set(source_hashes()):
@@ -949,7 +1373,41 @@ def check_record(path=OUTPUT):
         for name in arrays.files:
             if not np.isfinite(arrays[name]).all():
                 raise ValueError("nonfinite stationary array: " + name)
-        if balance:
+        if critical:
+            if record.get("source_eta") is not None:
+                weights = np.asarray(record["occupations"])
+                saved = lambda name: arrays[name]
+                _check_saved_measurements(saved,record["measurements"],nf=nf,period=record["period"],weights=weights)
+                columns = np.vstack((arrays["phi0"],arrays["phi1"]))
+                covariance = (columns*weights)@columns.conj().T
+                if maximum(covariance-arrays["covariance"]) > 1e-11:
+                    raise ValueError("critical eta covariance disagrees")
+                if maximum(arrays["H"]@columns-columns*arrays["eigenvalues"]) > 1e-8:
+                    raise ValueError("critical retained eigenmodes disagree")
+                if maximum(arrays["eta_gradient"]-record["analytic_eta_gradient"]) > 1e-12:
+                    raise ValueError("critical gradient summary disagrees")
+                Ebase = record["reduction"]["base_source_energy"]
+                gradient = record["period"]/(nf-1) * arrays["radial_shape_tangents"].T@arrays["radius_pQ_remainder"]/Ebase
+                if maximum(gradient-arrays["eta_gradient"]) > 1e-11:
+                    raise ValueError("critical analytic gradient and fixed-eta force disagree")
+                if maximum(arrays["r"]-np.sqrt(record["radius_amplitude_square"])*arrays["radial_shape"]) > 1e-11:
+                    raise ValueError("critical normal radius scale disagrees")
+                if maximum(arrays["radius_third_pQ"]-(2.25*arrays["radius_pQ_coefficient"]+arrays["radius_pQ_remainder"])) > 1e-8:
+                    raise ValueError("critical finite radius affinity disagrees")
+                normalized = np.concatenate([arrays["residual_"+name]/record["residual_scales"][name] for name in BLOCKS])
+                if maximum(normalized-arrays["normalized_retained_residual"]) > 1e-12:
+                    raise ValueError("critical full retained residual blocks disagree")
+                if maximum(normalized) != record["normalized_retained_residual_max"]:
+                    raise ValueError("critical retained residual summary disagrees")
+                initial_saved = lambda name: arrays["initial_"+name]
+                _check_saved_measurements(initial_saved,record["initial_measurements"],nf=nf,period=record["period"],
+                                          weights=record["initial_source_eta"]*WEIGHTS)
+                selected = record["trials"][record["selected_trial_index"]]
+                if maximum(arrays["shape_coefficients"]-selected["coefficients"]) > 1e-12 or selected["source_eta"] != eta:
+                    raise ValueError("critical selected trial disagrees")
+            elif len(arrays.files) != 0:
+                raise ValueError("critical preflight/nonadmitted seed has unexpected payload")
+        elif balance:
             for row in record["trials"]:
                 if row["status"] != "MEASURED":
                     continue

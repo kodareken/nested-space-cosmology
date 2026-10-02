@@ -1,0 +1,147 @@
+{
+  "CPU_budget_seconds": 300.0,
+  "aggregate_CPU_seconds": 131.77343100000002,
+  "array_sha256": {
+    "direct_0_a": "e689763b30d58d95c6e04b1870cc6e9e580a7afc79f3a7ebb51daeaed2fe5595",
+    "direct_0_drive": "8319121313fd0a388c9e7f67510bc012dcc121617816fa4731fe36ecd8356657",
+    "direct_0_memory": "53f355edf88f6e707b0aadde83fe3622213d31c68e11aa07911e1480e7aa3a28",
+    "heldout_0_Q": "8f06fae409b2481deff41e517aee1980620fceb6f53830eb18f03f795d094b5a",
+    "heldout_0_chi": "6220d5a2a3214a3ac0079cc22615baec5ebccc844e59495a13d39b7e2b40bd29",
+    "heldout_0_p_Q": "9db14560fe3aba0704a9307d56abd2b3d70e3f8bdb109716eded3a60e565efb2",
+    "heldout_0_p_chi": "c83d804e08694a6ed00b3196734b861ea7f4e2d28b99d96975239813872ef3d3",
+    "heldout_0_p_r": "cc576509df29a2b39791a17ee8189deb0895c3bdf35abbc1aaede8aa9c84105c",
+    "heldout_0_phi0": "2d68165d2d50051af6f73d0a14c3b0b732f4a67387e5c0937b04f8215821e934",
+    "heldout_0_phi1": "355584033410c8a2ba7af7d5014a47666d2433d5ac3b6ef3cb4a1bfe1cc24fe1",
+    "heldout_0_r": "915b98f0402b88d5dc4aab745fcc02445414a623b0bf6ba448bda7014b120b21",
+    "sequential_0_a": "772bd776516f18863f3d0bfe93bc8a7aba09a888f3750cc78afcad56e8fa42df",
+    "sequential_0_d_drive": "aca02fd37769b94d044b74fe5552d3e7ffb764b949b6762445af8b9309c1778c",
+    "sequential_0_d_memory": "7e53d36766dffcf492c905287b7f62f23be6549e0a7bcae9460c29b4d1064f0f",
+    "sequential_0_drive": "cf8f94c4ff36b9270f2412869ae7f26e0878092537906f2214205001b6ab86cd",
+    "sequential_0_f_drive": "b31f55723486cbe2ac1377c4deda06894e613208127fde4944362c74d9fafc78",
+    "sequential_0_f_memory": "d7bfa6aa5d45ebd7f08d1603cc2f0aee950ca39fe77a668aa47cc9d997395d9f",
+    "sequential_0_memory": "159cc26af0876e30cacb4192777464c65318ed274299594039c70eb3bcf0bd40"
+  },
+  "composition_identity_is_separate_from_prediction": true,
+  "conditional_finite_handoff_only": true,
+  "continuous_error_bound": null,
+  "dense_ambient_covariance_stored": false,
+  "dense_exterior_propagators_stored": false,
+  "forecast_json_sha256": "d3514090c34ee46a30b0b15d7137d769e5f9bb9bb179ebf55d80ec9364c13ff1",
+  "forecast_payload_sha256": "26c7be23c6e1a17eb0e4781b27c48fbaa913196e6745f670da5c454a1edf2827",
+  "forecast_preceded_future_measurement": true,
+  "initializer_called": false,
+  "input_hashes": {
+    "results/development/nsc-discovery-prediction-v1/prediction-run.json": "0dcec3ab514fea8828decc7ae15b2459a0d1878c4005960b7c329f4eb3a067be",
+    "results/development/nsc-discovery-prediction-v1/prediction-run.npz": "58a1374a7c4faa98d50f985e5fa7bc72cf17ab4433c51bc042ba21c269c22470",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.json": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.npz": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "results/development/nsc-nested-parent-child-v1.json": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "results/development/nsc-nested-parent-child-v1.npz": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead"
+  },
+  "later_step_confirmation_required": true,
+  "matched_step": null,
+  "mode": "heldout_measurement",
+  "new_future_NG_measurement": true,
+  "nf": 256,
+  "normal_energy_closure_claimed": false,
+  "payload_bytes": 255415,
+  "payload_sha256": "1d74d25c694750934adeb42467ba452053af49d1c50d320b583ce55406079fe7",
+  "producers": {
+    "scripts/derive_nsc_discovery_grandchild.py": "732a9b504e60a443a462304e7c298a7b6d87c6ea30d644b1a58b2b786dc215d5",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_discovery_grandchild.py": "4f225bcd783b619579949ad800c0621e6381414ca8ff1a6ff8bddcaa051dc8a6",
+    "src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+  },
+  "producing_commit": "2b37f3e308a20aba3f60353cfac56f6c02b47c99",
+  "results": [
+    {
+      "absolute_future_tau": 1.1078554633785553,
+      "baseline_NG": 0.7432944357819389,
+      "error_over_measured_effect": 0.022883856974466668,
+      "event": {
+        "coordinate_duration": 0.7075801100730671,
+        "max_reconstruction_gap": 9.473559806558736e-16,
+        "max_stage_force_gap": 1.0502709812953981e-13,
+        "proper_increment": 0.7499999999626733,
+        "root_bisections": 20,
+        "steps": 1416,
+        "tau_residual": 2.1030210906047841e-10,
+        "uses_linear_clock_correction": false
+      },
+      "measured_change": -0.0004507680624269428,
+      "measurement": {
+        "NG": 0.7428436677195119,
+        "clock_rate": 0.7334308118120555,
+        "cross_force_max": {
+          "force_L": 0.4241754877170604,
+          "force_Q": 0.42243008554059824,
+          "force_beta": 0.031063740162968756
+        },
+        "direct_NG": 0.7428436677195129,
+        "direct_clock_rate": 0.7334308118120555,
+        "direct_sequential_Phi_gap": 7.786996934238134e-16,
+        "disjoint_normal_energies": {
+          "ambient": 5.2684950492771225,
+          "child_left": 2.7939479925447266,
+          "child_right": 1.3569967533521858,
+          "grandchild": 4.050821981248321,
+          "left": 1.3777438294137745,
+          "right": 1.3324209894917276
+        },
+        "forces_use_full_reconstructed_source_with_cross": true,
+        "geometry_shared_between_routes": true,
+        "grand_covariance_composition_gap": 3.8163916471489756e-17,
+        "grand_covariance_imag": [
+          [
+            0.0,
+            -0.000932406609181745
+          ],
+          [
+            0.000932406609181745,
+            0.0
+          ]
+        ],
+        "grand_covariance_real": [
+          [
+            0.009940089942323063,
+            0.0024102818763717575
+          ],
+          [
+            0.0024102818763717575,
+            0.03103603990093261
+          ]
+        ],
+        "grand_exterior_cross_frobenius": 0.1403617391864738,
+        "modal_trace_is_secondary": 0.040976129843255674,
+        "normal_energy_closure_claimed": false,
+        "outer_detail_drive_included": true,
+        "sequential_NG": 0.7428436677195123,
+        "sequential_clock_rate": 0.7334308118120555,
+        "source_CAR_admissible": true,
+        "source_CAR_eigenvalues": [
+          0.23999999999227992,
+          0.23999999999228044,
+          0.49999999999972555,
+          0.4999999999997262,
+          0.7599999999755533,
+          0.7599999999755549
+        ],
+        "source_gram_gap": 3.216693578167451e-11
+      },
+      "predicted_NG": 0.7428539830313812,
+      "predicted_change": -0.0004404527505576664,
+      "prediction_error": -1.0315311869235622e-05,
+      "status": "heldout_future_measured",
+      "step_cap": 0.0005
+    }
+  ],
+  "schema": "NSC-DISCOVERY-GRANDCHILD-v1",
+  "universal_Omega_scaling_claimed": false
+}

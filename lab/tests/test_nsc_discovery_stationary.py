@@ -342,3 +342,152 @@ def test_balance_preflight_round_trip(tmp_path):
     stem = tmp_path / 'balance-preflight-v2'
     stationary.write_record(report, arrays, stem)
     assert stationary.check_record(stem)['status'] == 'BALANCE_SEED_PREFLIGHT'
+
+
+@pytest.fixture(scope="module")
+def reduced_critical_context():
+    return stationary.critical_context(nf=64, harmonic=4, count=7)
+
+
+def test_exact_finite_critical_envelopes_and_car_branch(reduced_critical_context):
+    context = reduced_critical_context
+    core = stationary.critical_shape_evaluate(context, stationary.critical_seed_coefficients())
+    reduction = core['reduction']
+    assert reduction['radial_operator_residual_max'] < 1e-9
+    assert reduction['auxiliary_projected_linear_residual_max'] < 1e-9
+    assert abs(reduction['normal_radius_denominator_defect']) < 1e-9
+    assert reduction['tangent_radial_pairing_max'] < 1e-9
+    assert abs(reduction['normal_Q_force_pairing']) < 1e-9
+    assert core['eta'] > 0 and core['eta'] <= 4/3
+    assert np.max(core['pair'].grid.fine.occupations) <= 1
+    assert np.trace(core['spectral']['covariance']).real == pytest.approx(3*core['eta'])
+    assert core['radius_amplitude_square'] > 0
+    assert core['spectral']['commutator_gap'] < 1e-10
+    assert maximum_for_test(core['raw']['p_r']) < 1e-8
+    assert maximum_for_test(core['raw']['p_chi']) < 1e-8
+    assert reduction['fixed_eta_source_change_under_radius_scaling'] == 0
+
+
+def maximum_for_test(values):
+    return float(np.max(np.abs(values)))
+
+
+def test_analytic_eta_gradient_matches_two_step_fd(reduced_critical_context):
+    check = stationary.critical_gradient_check(reduced_critical_context, stationary.critical_seed_coefficients())
+    assert len(check['analytic_gradient']) == 7
+    assert check['physical_force_eta_held_fixed']
+    for row in check['steps']:
+        assert row['absolute_gap_max'] < 2e-5
+
+
+def test_cell_and_dirac_reflection_covariance_are_measured_not_forced(reduced_critical_context):
+    core = stationary.critical_shape_evaluate(reduced_critical_context, stationary.critical_seed_coefficients())
+    symmetry = stationary.critical_symmetry_diagnostics(core, harmonic=4)
+    assert symmetry['cell_translation_covariance_gap'] < 1e-9
+    assert symmetry['dirac_reflection_covariance_gap'] < 1e-9
+    assert symmetry['cell_translation_hamiltonian_gap'] < 1e-9
+    assert symmetry['dirac_reflection_hamiltonian_gap'] < 1e-9
+    assert not symmetry['group_average_applied_to_state_or_force']
+
+
+def test_nonadmissible_shape_is_reported_without_clipping(reduced_critical_context):
+    bad = np.array([2.,0,0,0,0,0,0])
+    before = bad.copy()
+    with pytest.raises(stationary.NonAdmissible, match='positive chart') as failure:
+        stationary.critical_shape_evaluate(reduced_critical_context, bad)
+    assert failure.value.details['fine_S_min'] < 0
+    np.testing.assert_array_equal(bad, before)
+
+
+def test_eta_scaled_source_snapshot_uses_actual_weights(reduced_critical_context):
+    core = stationary.critical_shape_evaluate(reduced_critical_context, stationary.critical_seed_coefficients())
+    measured, arrays = stationary._critical_snapshot(core)
+    weights = core['eta'] * stationary.WEIGHTS
+    columns = np.vstack((arrays['phi0'], arrays['phi1']))
+    np.testing.assert_allclose(arrays['covariance'], (columns*weights)@columns.conj().T, atol=1e-12)
+    assert measured['field_eigen_energy'] == pytest.approx(core['eta'] * core['reduction']['base_source_energy'])
+    assert abs(measured['virial']['gap']) < 1e-9
+    assert measured['raw_residual_max']['p_Q'] > 1e-3
+    assert measured['full_lapse_residual_max'] > 1e-3
+    # Independent spectral energy variation holds selected eta fixed, as do
+    # the actual original forces; it never differentiates eta into the force.
+    ev = core['state'], core['spectral'], core['raw'], core['rate'], core['bundle'], core['constraints']
+    hf, _ = stationary.diagnostics(core['pair'], core['unknown'], ev, hellmann_feynman=True)
+    assert hf['hellmann_feynman']['absolute_gap'] < 1e-7
+
+
+def test_seven_coordinate_newton_solves_gradient_root_without_full_state_fd():
+    target = np.linspace(.01,.07,7)
+    matrix = np.diag(np.arange(1,8,dtype=float))
+    calls = []
+    def gradient_oracle(coefficients, kind):
+        calls.append((len(coefficients), kind))
+        return {'coefficients':coefficients.copy(), 'gradient':matrix@(coefficients-target)}
+    core, solver = stationary.critical_newton(gradient_oracle, np.zeros(7))
+    np.testing.assert_allclose(core['coefficients'], target, atol=1e-10)
+    assert solver['success']
+    assert all(count == 7 for count, _ in calls)
+    assert any(kind == 'gradient_jacobian_plus' for _,kind in calls)
+
+
+def test_newton_backtracks_nonadmissible_source_branch_without_clipping():
+    attempted = []
+    def restricted_oracle(coefficients, kind):
+        attempted.append(coefficients.copy())
+        if coefficients[0] > .1:
+            raise stationary.NonAdmissible('synthetic eta CAR boundary', eta=1.5)
+        return {'coefficients':coefficients.copy(), 'gradient':coefficients-.8}
+    core, solver = stationary.critical_newton(restricted_oracle, np.zeros(1), maximum_iterations=2)
+    assert any(value[0] > .1 for value in attempted)
+    assert core['coefficients'][0] <= .1
+    assert not solver['success']
+    assert solver['termination'] in ('maximum seven-coordinate iterations reached',
+                                     'no admitted step decreases the seven-gradient residual')
+
+
+def test_critical_preflight_does_not_execute_numerics(monkeypatch, tmp_path):
+    def forbidden(*args, **kwargs):
+        raise AssertionError('critical preflight cannot evaluate geometry or source')
+    monkeypatch.setattr(stationary, 'critical_context', forbidden)
+    monkeypatch.setattr(stationary, 'critical_shape_evaluate', forbidden)
+    report, arrays = stationary.run_critical_shape()
+    assert report['schema'] == stationary.CRITICAL_SCHEMA
+    assert report['status'] == 'CRITICAL_SHAPE_PREFLIGHT'
+    assert report['actual_trials'] == 0 and arrays == {}
+    assert not report['numerical_critical_query_executed']
+    assert report['preflight']['shape_coordinates'] == 7
+    assert report['preflight']['source_preparation'].endswith('trace=3 eta')
+    stem = tmp_path/'critical-preflight-v3'
+    stationary.write_record(report, arrays, stem)
+    assert stationary.check_record(stem)['status'] == 'CRITICAL_SHAPE_PREFLIGHT'
+
+
+def test_v2_evidence_keeps_immutable_producer_authentication():
+    stem = stationary.LAB/'results/development/nsc-discovery-stationary-balance-seed-v2'
+    result = stationary.check_record(stem)
+    assert result['ok'] and result['source_authentication'] == 'immutable_producing_commit'
+
+
+def test_critical_budget_checkpoint_and_saved_weight_consistency(reduced_critical_context, monkeypatch, tmp_path):
+    # Exercise the production orchestration on the explicitly manufactured
+    # NF64/h4 validation domain. No NF128 query or Newton campaign is run.
+    monkeypatch.setattr(stationary, 'BALANCE_NF', 64)
+    monkeypatch.setattr(stationary, 'CRITICAL_HARMONIC', 4)
+    monkeypatch.setattr(stationary, 'critical_context', lambda: reduced_critical_context)
+    def bounded_stop(*args, **kwargs):
+        raise stationary.BudgetReached('manufactured bounded checkpoint')
+    monkeypatch.setattr(stationary, 'critical_newton', bounded_stop)
+    report, arrays = stationary.run_critical_shape(execute=True)
+    assert report['best_candidate_preserved']
+    assert report['solver']['termination'] == 'manufactured bounded checkpoint'
+    assert report['status'] == 'UNSATISFIED_LOCAL_CRITICAL_RELATIONS'
+    assert 0 < report['source_eta'] <= 4/3
+    np.testing.assert_allclose(report['occupations'], report['source_eta']*stationary.WEIGHTS)
+    assert report['total_source_trace'] == pytest.approx(3*report['source_eta'])
+    assert report['scope']['eta_held_fixed_in_physical_force']
+    assert not report['scope']['holding_claim']
+    assert not report['scope']['nonexistence_inferred_from_optimizer']
+    assert 'fine_p_Q' in arrays and 'initial_fine_p_Q' in arrays
+    stem = tmp_path/'manufactured-critical-checkpoint-v3'
+    stationary.write_record(report, arrays, stem)
+    assert stationary.check_record(stem)['ok']
