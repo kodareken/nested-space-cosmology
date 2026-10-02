@@ -17,6 +17,17 @@ The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
 same-spectrum local induced term, counted once. The vacuum-matched CTP branch
 remains a separate historical choice.
 
+## Active parent–child pair, 2 October 2026
+
+The active goal is one finite parent–child pair whose states and geometries
+interact under the inherited law. The [owning note](../lab/docs/nsc-nested-parent-child.md)
+defines a child collar inside a parent collar, independent canonical geometry
+components of one full metric, and one common action. The first
+[record](../lab/results/development/nsc-nested-parent-child-v1.json) preserves
+twelve source-controlled trajectories through $T=0.3$. It remains incomplete:
+one physical response needs a finer spatial comparison, and the local reduction
+reached its declared CPU cap. The completed article below stays unchanged.
+
 ## Present spherical loop
 
 The conformal realization now measures the finite chain through $T=0.3$:
