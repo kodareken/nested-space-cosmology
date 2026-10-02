@@ -4,6 +4,9 @@ Owner: [module](../src/recursive_horizons/nsc_discovery_initial_sector.py),
 [thin driver](../scripts/derive_nsc_discovery_initial_sector.py), and
 [tests](../tests/test_nsc_discovery_initial_sector.py).
 No new scientific trajectory is produced by the implementation or its tests.
+The sealed v1 production has reached T=3 for all six cases; root owns those
+observations. Its producer `cafb976cc2bbb3190ae8e258c481982a437d1d46`
+and all v1 preparation/episode bytes remain unchanged by the successor below.
 
 ## Question and inherited action
 
@@ -113,3 +116,93 @@ input producer, not the new initial-sector producer.
 
 No production execution is authorized by importing the module or reading this
 note. The root coordinates scientific execution after the source freeze.
+
+## Conditional source-balanced curvature, balanced-v2
+
+The authorized successor is one source-conditioned initial curvature choice,
+not another arbitrary h/chi scan. It uses the SAME frozen uniform Q, actual
+field columns, six occupations, observer, native geometry map and coefficients.
+All initial momenta remain zero. The other two cases offset chi-star by exactly
+plus/minus one percent of its magnitude; they are robustness comparisons and
+are not called balanced preparations. Each source/chi choice has its own
+constraint-selected positive radius and actual finite constraint trace.
+
+For the uniform initial slice, with S the weighted canonical spin density
+and rho=M(K/Q+kappa S), differentiating the owned chi rate gives
+
+\[
+\ddot\chi=\frac{2Q\rho-M\kappa QS+(8\pi A/3)r^2Q^2\chi}{4\alpha}.
+\]
+
+Substitution of the owned lapse constraint reduces chi-ddot=0 to
+
+\[
+P(\chi)=\alpha Q\chi^3+4\alpha Q\chi^2
+ +(\rho+\mathrm{mag}Q)\chi+6\rho-3M\kappa S=0.
+\]
+
+The locked alpha is positive and mag>16alpha/3, so
+
+\[
+P'(\chi)=3\alpha Q(\chi+4/3)^2+
+ \rho+Q(\mathrm{mag}-16\alpha/3)>0.
+\]
+
+This proves uniqueness under the measured positive-source hypotheses. The
+vacuum limit rho=S=0 recovers chi=0. On the cached uniform source,
+Q=0.463944714431183, rho=3.43433694084887 and S=0.203289532850862,
+the unique chi-star is approximately -4.58327910764894, with radius
+2.74786461178492. These are conditional preparation values, not a fitted
+fundamental law. Q and zero initial momenta remain declared inputs.
+
+The chi-zero matter preparation instead has initial chi-ddot approximately
+198.6406658465. That was valid initial data with the vacuum auxiliary value,
+not a demonstrated matter-selected curvature. The balanced-v2 rule cancels
+ONE initial acceleration. It does not impose later curvature, match higher
+adiabatic jets, select an entire dynamical solution, or establish holding.
+No mass, source occupation, eta, action term, restoring force, or pump is added.
+
+Every new case records the polynomial and coefficients, global positive
+derivative lower bound, actual rho/S/M/kappa factors, its radius/constraint
+correction, actual chi acceleration from the full analytic rate Jv, independent
+metric tides/curvature, CAR, source trace, kinetic budget, canonical momenta and
+normal clocks. The perturbation cases keep their measured nonzero initial
+chi acceleration. Source selection and phase/order are not repeated after
+handoff. Both caps fork exactly the same state in each case.
+
+The v1 checker authenticates its recorded producer and executes the matching
+Git module bytes when the live module has advanced. It checks that the
+physical dependencies are still unchanged; it does not heal a v1 source
+binding, rewrite a payload, or relabel v1 data with the successor producer.
+
+The new immutable stems are
+`nsc-discovery-initial-sector-preparation-balanced-v2` and
+`nsc-discovery-initial-sector-balanced-v2`. One pool, at most four workers,
+fresh 300 CPU seconds, forecast factor 1.5, caps 0.001/0.0005 and stations
+T=0.3,1,3 are inherited without another runner. No production is performed
+during development.
+
+If all three cases show curvature departure growth or lose the positive chart,
+report a limitation of this finite conditional initial-sector family and stop
+this route. Do not pursue higher-jet matching, a ghost stable manifold, alpha
+thresholds, or fine tuning. The consumer reports the actual retained chi
+departure maxima and chart stops; a strictly increasing departure across
+retained positive-time stations is a finite trend, not an infinite instability
+proof. This route policy does not veto physical growth or make a broad theory
+claim. Uniform-source comparisons do not themselves establish a localized
+structure, a black-hole bounce, or an eternal engine.
+
+After root pins the NEW source commit (not caf), execute explicitly:
+
+```sh
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_initial_sector.py --balanced
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_initial_sector.py --balanced --prepare --producer-commit SCIENCE_SHA --write results/development/nsc-discovery-initial-sector-preparation-balanced-v2
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_initial_sector.py --check results/development/nsc-discovery-initial-sector-preparation-balanced-v2.json
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_initial_sector.py --episode results/development/nsc-discovery-initial-sector-preparation-balanced-v2.json --execute --producer-commit SCIENCE_SHA --write results/development/nsc-discovery-initial-sector-balanced-v2
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_initial_sector.py --run-episode results/development/nsc-discovery-initial-sector-balanced-v2 --workers 4 --episode-cpu 300
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_initial_sector.py --assess-episode results/development/nsc-discovery-initial-sector-balanced-v2
+```
+
+The baseline criterion is initial chi-ddot=0; nearby chi values do not satisfy
+that criterion. Subsequent growth remains an observed outcome of the same
+action, not evidence that a reset or another source force should be inserted.

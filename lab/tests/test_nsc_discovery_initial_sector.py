@@ -200,3 +200,114 @@ def test_existing_worker_one_step_keeps_initial_h_free_and_retains_pins(prepared
         assert np.array_equal(after["source_phi0"], before["source_phi0"])
         assert last["source_pins"]["initial_state_sha256"] == first["source_pins"]["initial_state_sha256"]
         assert last["future_rates_fixed"] is False
+
+
+@pytest.fixture(scope="module")
+def balanced():
+    patch = pytest.MonkeyPatch()
+    patch.setattr(prep, "_git_hashes", lambda commit, hashes: commit)
+    with threadpool_limits(limits=1):
+        result = sector.build_record(execute=True, producer_commit="unit-balanced-producer", balanced=True)
+    yield result
+    patch.undo()
+
+
+def test_conditional_cubic_is_unique_and_uses_actual_fixed_source(balanced):
+    report, arrays = balanced
+    assert report["schema"] == sector.BALANCED_SCHEMA
+    assert set(report["cases"]) == set(sector.BALANCED_NAMES)
+    law = report["curvature_criterion"]
+    assert law["chi_star"] == pytest.approx(-4.58327910764894, abs=2e-11)
+    assert law["global_derivative_lower_bound"] > 3.9
+    roots = np.roots(law["cubic_coefficients"])
+    assert np.count_nonzero(abs(roots.imag) < 1e-10) == 1
+    assert abs(np.polyval(law["cubic_coefficients"], law["chi_star"])) < 2e-13
+    assert law["M"] == 4 and law["kappa"] == 1
+    assert law["rho"] == pytest.approx(3.43433694084887, abs=2e-11)
+    assert law["S"] == pytest.approx(.203289532850862, abs=2e-12)
+    assert law["conditional_preparation"] and not law["fully_dynamic_source_selection"]
+    assert not law["higher_adiabatic_jets_matched"]
+    # Vacuum limit of the SAME polynomial, not an extra physical case.
+    vacuum = [law["alpha"] * law["Q"], 4 * law["alpha"] * law["Q"], law["mag"] * law["Q"], 0.]
+    real_roots = np.roots(vacuum)
+    real_roots = real_roots[abs(real_roots.imag) < 1e-10].real
+    np.testing.assert_allclose(real_roots, [0.], atol=1e-12)
+    pair, old, _ = prep.load_case(sector.PREPARED, "uniform")
+    for name in sector.BALANCED_NAMES:
+        np.testing.assert_array_equal(arrays[name + "_phi0"], old.phi0)
+        np.testing.assert_array_equal(arrays[name + "_phi1"], old.phi1)
+    np.testing.assert_array_equal(arrays["observer_columns"], pair.reference_columns)
+
+
+def test_balanced_native_acceleration_and_fixed_one_percent_controls(balanced):
+    report, arrays = balanced
+    selected = report["curvature_criterion"]["chi_star"]
+    lower = report["controls"]["chi_lower"]["chi"]
+    upper = report["controls"]["chi_upper"]["chi"]
+    assert lower == selected - .01 * abs(selected)
+    assert upper == selected + .01 * abs(selected)
+    main = report["cases"]["chi_balanced"]
+    assert main["actual_chi_ddot"]["max_abs"] < 1e-7
+    assert abs(main["actual_chi_ddot"]["mean"]) < 1e-9
+    assert report["cases"]["chi_lower"]["actual_chi_ddot"]["mean"] < -1
+    assert report["cases"]["chi_upper"]["actual_chi_ddot"]["mean"] > 1
+    assert report["baseline_initial_measurement"]["actual_chi_ddot"]["mean"] > 190
+    radii = []
+    for name in sector.BALANCED_NAMES:
+        measured = report["cases"][name]
+        for momentum in nested.MOMENTUM_NAMES:
+            assert np.all(arrays[name + "_" + momentum] == 0)
+        assert measured["radius_preparation"]["performed"]
+        assert not measured["radius_preparation"]["old_radius_copied"]
+        assert measured["full_lapse_max"] < 1e-6 and measured["full_shift_max"] < 1e-6
+        assert measured["CAR_max"] <= 1 + 1e-12
+        assert measured["source_trace"] == pytest.approx(3., abs=1e-12)
+        assert measured["source_coordinate_energy"] == pytest.approx(main["source_coordinate_energy"], abs=1e-10)
+        assert measured["actual_metric_curvature"]["R_h"]["min"] == pytest.approx(
+            report["controls"][name]["chi"] + 2, abs=2e-7)
+        assert measured["actual_metric_curvature"]["owned_W"]["max_abs"] > .1
+        assert not measured["chi_substituted_for_curvature"]
+        assert not measured["future_rates_fixed"]
+        radii.append(np.mean(arrays[name + "_nodal_r"]))
+    assert len(set(radii)) == 3
+    assert main["curvature_preparation"]["criterion_satisfied_by_declaration"]
+    assert not report["cases"]["chi_lower"]["curvature_preparation"]["criterion_satisfied_by_declaration"]
+    assert not report["cases"]["chi_upper"]["curvature_preparation"]["criterion_satisfied_by_declaration"]
+
+
+def test_balanced_creation_and_caps_are_exact_without_new_stepper(balanced):
+    report, arrays = balanced
+    with tempfile.TemporaryDirectory(dir="/tmp", prefix="nsc-balanced-sector-") as directory:
+        path = Path(directory) / "balanced-v2"
+        output = Path(directory) / "balanced-episode-v2"
+        sector.write_record(report, arrays, path)
+        assert sector.check_record(path)["ok"]
+        manifest = sector.prepare_episode(path, output, execute=True, producer_commit="unit-balanced-producer")
+        assert manifest["schema"] == sector.BALANCED_EPISODE_SCHEMA
+        assert len(manifest["cases"]) == 6
+        assert manifest["forecast_factor"] == 1.5 and manifest["cpu_budget_seconds"] == 300.
+        for name in sector.BALANCED_NAMES:
+            left, a = episode.load_checkpoint(output, f"nf128_{name}_dt0.001")
+            right, b = episode.load_checkpoint(output, f"nf128_{name}_dt0.0005")
+            assert left["source_pins"]["initial_state_sha256"] == right["source_pins"]["initial_state_sha256"]
+            for key in a:
+                np.testing.assert_array_equal(a[key], b[key])
+        pair, state, _ = sector.load_sector(path, "chi_balanced")
+        with threadpool_limits(limits=1):
+            later = nested.rk4_step(pair, state, .001)
+        assert np.linalg.norm(later.p_chi - state.p_chi) > 1e-8
+        assert not np.array_equal(later.Q, state.Q)
+        assert not np.array_equal(later.phi0, state.phi0)
+        assert not manifest["higher_adiabatic_jets_matched"]
+
+
+def test_sealed_v1_checker_executes_caf_git_source_without_healing_data():
+    path = sector.LAB / "results/development/nsc-discovery-initial-sector-preparation-v1.json"
+    payload = path.with_suffix(".npz")
+    before = (sector.sha256(path), sector.sha256(payload))
+    with threadpool_limits(limits=1):
+        checked = sector.check_record(path)
+    assert checked["ok"] and checked["historical_producer_source_loaded"]
+    assert checked["historical_source_commit"] == "cafb976cc2bbb3190ae8e258c481982a437d1d46"
+    assert checked["live_checker_source_used"] is False
+    assert before == (sector.sha256(path), sector.sha256(payload))

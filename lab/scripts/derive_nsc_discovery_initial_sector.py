@@ -20,6 +20,7 @@ def main(argv=None):
     modes.add_argument("--check", type=Path, help="read-only prepared-record replay")
     modes.add_argument("--assess-episode", type=Path, help="read saved episode rows; no evolution")
     parser.add_argument("--initial", type=Path, default=sector.PREPARED)
+    parser.add_argument("--balanced", action="store_true", help="conditional cubic chi-star and fixed +/-1 percent balanced-v2 controls")
     parser.add_argument("--comparison", type=Path, default=sector.COMPARISON)
     parser.add_argument("--producer-commit", help="frozen revision containing the complete new source closure")
     parser.add_argument("--execute", action="store_true", help="write episode preparation rather than preflight")
@@ -45,7 +46,7 @@ def main(argv=None):
     elif args.episode:
         if args.execute and args.write is None:
             parser.error("episode creation requires a new output directory")
-        report = sector.prepare_episode(args.episode, args.write or sector.DEFAULT_EPISODE,
+        report = sector.prepare_episode(args.episode, args.write,
                                         execute=args.execute, producer_commit=args.producer_commit)
     else:
         if args.write and not args.prepare:
@@ -53,7 +54,8 @@ def main(argv=None):
         if args.prepare and not args.producer_commit:
             parser.error("production preparation requires its frozen producing commit")
         report, arrays = sector.build_record(args.initial, execute=args.prepare,
-            cpu_limit=args.cpu_limit, producer_commit=args.producer_commit, comparison=args.comparison)
+            cpu_limit=args.cpu_limit, producer_commit=args.producer_commit, comparison=args.comparison,
+            balanced=args.balanced)
         if args.write:
             report = sector.write_record(report, arrays, args.write)
     print(json.dumps(episode_jsonable(report), indent=2, allow_nan=False))
