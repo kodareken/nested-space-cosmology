@@ -4,6 +4,8 @@ for name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "VECL
     os.environ.setdefault(name, "1")
 from concurrent.futures import Future
 import json
+from pathlib import Path
+from types import SimpleNamespace
 import numpy as np
 import pytest
 from derive_nsc_discovery_extent import main as cli_main
@@ -214,3 +216,111 @@ def test_readonly_legacy_audit_compares_actual_controller_rates_and_time(tmp_pat
     wrong_time = extent.audit_existing_period8(directory, "legacy_frozen", pairs[8.], candidate, candidate_time=.004)
     assert not wrong_time["admissible"]
     assert extent.episode.file_sha256(directory/committed["npz"]) == before
+
+
+def test_real_periodic_nyquist_cosine_integral_and_off_grid_values():
+    grid = SimpleNamespace(nq=16, length=8.)
+    x = np.arange(grid.nq)*grid.length/grid.nq
+    values = (-1.)**np.arange(grid.nq)
+    left, right = .125, .875
+    omega = np.pi*grid.nq/grid.length
+    expected = (np.sin(omega*right)-np.sin(omega*left))/omega
+    result, indicator = extent.real_interval_integral(grid, values, (left, right), return_indicator=True)
+    assert result == pytest.approx(expected, abs=1e-14)
+    points = np.array([.125, .25, .75, 8.125])
+    assert np.max(abs(extent.real_periodic_values(grid, values, points)-np.cos(omega*points))) < 1e-13
+    assert extent.real_interval_integral(grid, values, (0., 8.)) == pytest.approx(0., abs=1e-14)
+    assert indicator["nyquist_convention"].startswith("real cosine")
+    with pytest.raises(ValueError, match="complex samples"):
+        extent.real_interval_integral(grid, values.astype(complex)+1e-12j, (left, right))
+    with pytest.raises(ValueError, match="finite nq-vector"):
+        extent.real_interval_integral(grid, np.full(grid.nq, np.nan), (left, right))
+
+
+def test_real_periodic_manufactured_modes_and_cancelled_window():
+    grid = SimpleNamespace(nq=128, length=8.)
+    x = np.arange(grid.nq)*grid.length/grid.nq
+    wave = 2*np.pi/grid.length
+    values = 3.+2*np.cos(3*wave*x)-.7*np.sin(2*wave*x)
+    a, b = .3, 2.7
+    expected = 3*(b-a)+2*(np.sin(3*wave*b)-np.sin(3*wave*a))/(3*wave) + \
+        .7*(np.cos(2*wave*b)-np.cos(2*wave*a))/(2*wave)
+    assert extent.real_interval_integral(grid, values, (a, b)) == pytest.approx(expected, abs=1e-13)
+    # The constant and cosine integral almost cancel; output reality must not use the tiny result as its scale.
+    cosine_integral = (np.sin(wave*b)-np.sin(wave*a))/wave
+    constant = -1e9*cosine_integral/(b-a)+.125
+    density = constant+1e9*np.cos(wave*x)
+    value, indicator = extent.real_interval_integral(grid, density, (a, b), return_indicator=True)
+    assert value == pytest.approx(.125*(b-a), abs=1e-6)
+    assert indicator["cancellation_factor"] > 1e8
+    assert indicator["floating_sum_indicator"] > 0
+    assert indicator["indicator_is_error_bound"] is False
+
+
+@pytest.fixture(scope="module")
+def historical_stop():
+    directory = extent.episode.LAB/"results/development/nsc-discovery-extent-v1"
+    if not (directory/"run.json").exists():
+        pytest.skip("local frozen production evidence is unavailable")
+    return extent.resume_handoff(directory)
+
+
+def test_historical_git_bytes_and_readonly_cancelled_observation(historical_stop):
+    saved = historical_stop
+    bindings = saved["binding"]["reference_files"]
+    checked = saved["historical_check"]["producer_authentication"]
+    assert checked and all(item["authenticated"] for item in checked)
+    assert all(item["working_tree_commit"] == extent.HISTORICAL_COMMIT for item in checked)
+    assert any(not item["current_code_is_historical_producer"] for item in checked)
+    pair, state, _ = extent.episode.resolve_pair(saved["pair"], extent.state_from(saved["arrays"]), backend="fft")
+    token = extent.episode.state_sha256(state)
+    row, _ = extent.observe(pair, state, saved["record"]["time"], saved["arrays"]["normal_clocks"])
+    assert row["child_matter_normal_energy"] == pytest.approx(-.2212547, abs=2e-7)
+    assert row["child_normal_energy_integral_indicator"]["cancellation_factor"] > 1e9
+    assert row["constraint_pair"]["h_c"]["max_abs"] < row["constraint_pair"]["raw_C"]["max_abs"]
+    assert row["constraint_pair"]["observable_error_bound"] is None
+    assert row["actual_tides_finite"] and row["Q"]["min"] > 0 and row["r"]["min"] > 0
+    assert extent.episode.state_sha256(state) == token
+    root = Path(saved["binding"]["reference_directory"])
+    assert all(extent.episode.file_sha256(root/name) == digest for name, digest in bindings.items())
+
+
+def test_exact_creation_only_resume_and_one_case_without_evolution(tmp_path, historical_stop, monkeypatch):
+    def forbidden(*args, **kwargs):
+        raise AssertionError("this handoff test must not solve or evolve a production state")
+    monkeypatch.setattr(extent.family, "solve_prepared", forbidden)
+    monkeypatch.setattr(extent.model, "initial_state", forbidden)
+    monkeypatch.setattr(extent.episode, "evolving_step", forbidden)
+    output = tmp_path/"nsc-discovery-extent-resume-test"
+    reference = historical_stop["binding"]["reference_directory"]
+    prepared = extent.prepare_resume(output, reference)
+    assert prepared["evolved"] is False
+    record, arrays = extent.load(output, "L12_coupled", 0)
+    assert record["time"] == historical_stop["record"]["time"]
+    assert record["steps"] == historical_stop["record"]["steps"]
+    assert record["array_sha256"] == historical_stop["record"]["array_sha256"]
+    for name, original in historical_stop["arrays"].items():
+        assert np.array_equal(arrays[name], original), name
+    assert record["prefix_reset"] is False and record["source_state_clocks_changed"] is False
+    with pytest.raises(FileExistsError, match="exact output"):
+        extent.prepare_resume(output, reference)
+    with pytest.raises(PermissionError, match="separate exact"):
+        extent.prepare_resume(reference, reference)
+    class Pool:
+        def __init__(self, max_workers):
+            assert max_workers == 1
+        def __enter__(self): return self
+        def __exit__(self, *args): return False
+        def submit(self, fn, payload):
+            assert payload["case_id"] == "L12_coupled" and payload["max_steps"] == 0
+            future = Future(); future.set_result(fn(payload)); return future
+    result = extent.run(output, production=True, workers=1, max_steps=0, executor=Pool)
+    assert [item["case_id"] for item in result["results"]] == ["L12_coupled"]
+    assert result["results"][0]["status"] == "step_limit"
+    assert {item["case_id"] for item in result["old_summary_references"]} == {
+        "L8_coupled", "L8_frozen_geometry", "L12_frozen_geometry"}
+    assert all(item["rerun"] is False for item in result["old_summary_references"])
+    assert extent.check(output)["ok"]
+    last, last_arrays = extent.load(output, "L12_coupled")
+    assert last["time"] == record["time"] and last["steps"] == record["steps"]
+    assert all(np.array_equal(last_arrays[k], v) for k, v in arrays.items())

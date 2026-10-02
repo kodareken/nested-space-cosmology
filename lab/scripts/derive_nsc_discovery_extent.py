@@ -13,9 +13,10 @@ from recursive_horizons import nsc_discovery_extent as extent
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group()
-    for name in ("prepare", "materialize", "run", "check"):
+    for name in ("prepare", "materialize", "run", "check", "prepare-resume"):
         mode.add_argument("--"+name, action="store_true")
     parser.add_argument("--output")
+    parser.add_argument("--reference", help="immutable extent-v1 directory, only for --prepare-resume")
     parser.add_argument("--production", action="store_true")
     parser.add_argument("--periods", type=float, nargs="+", default=[8., 12.])
     parser.add_argument("--points-per-unit", type=int, default=32)
@@ -33,13 +34,17 @@ def main(argv=None):
         config = dict(periods=args.periods, points_per_unit=args.points_per_unit, prefix=args.prefix,
                       stations=args.stations, step_cap=args.step_cap, cadence=args.cadence,
                       cpu_budget=args.cpu_budget, period16_admission=admission)
-        if not any((args.prepare, args.materialize, args.run, args.check)):
+        if not any((args.prepare, args.materialize, args.run, args.check, args.prepare_resume)):
             result = extent.settings(**config)
             print(extent.SCHEMA, "preview", [(L, int(L*args.points_per_unit)) for L in result["periods"]], flush=True)
             return 0
         if not args.output:
             parser.error("--output is required for a stage")
-        if args.prepare:
+        if args.prepare_resume:
+            if not args.reference:
+                parser.error("--reference is required for --prepare-resume")
+            result = extent.prepare_resume(args.output, args.reference)
+        elif args.prepare:
             result = extent.prepare(args.output, **config)
         elif args.materialize:
             result = extent.materialize(args.output, production=args.production)

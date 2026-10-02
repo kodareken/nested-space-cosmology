@@ -147,3 +147,95 @@ The focused tests use smaller matched grids and coordinate times at most 0.01:
 ```sh
 .venv/validation/bin/python scripts/lab.py -m pytest tests/test_nsc_discovery_extent.py -q
 ```
+
+## Real periodic observation successor
+
+The frozen v1 batch was produced by commit
+`697efe0155cdbf796c0174468c90a4c368bb7dbe`. L8 coupled and both frozen branches
+reached T12. L12 coupled retained its exact last state at
+`T=6.699999999999557` after the normal-energy observation raised
+`interval integral did not preserve a real density`. This was an observation
+failure, not a chart-exit classification. All original v1 manifests and chunks
+remain immutable. `--check` authenticates their historical producer Git blobs;
+it does not require today's observer to have the old producer's bytes.
+
+The offending normal-energy density had maximum magnitude about `4.12e8`.
+Contributions with absolute sum about `2.34e8` cancelled to a child integral
+near `-0.221255`; a complex FFT sum left an imaginary rounding remainder about
+`1.92e-8`. The cut endpoints are even grid nodes, so the lone Nyquist mode's
+imaginary contribution was negligible in this specific failure. This does not
+justify relaxing an imaginary-output threshold. It calls for the explicitly
+real interpolant of real nodal data.
+
+`real_interval_integral(grid, values, interval, return_indicator=False)` and
+`real_periodic_values(grid, values, coordinates)` now form the real conjugate
+pairs and the even-N Nyquist cosine. If `c=RFFT(values)/N`, `omega_k=2*pi*k/L`,
+the integral is
+
+\[
+c_0(b-a)+2\operatorname{Re}\sum_{k=1}^{N/2-1}
+c_k\frac{e^{i\omega_kb}-e^{i\omega_ka}}{i\omega_k}
++c_{N/2}\frac{\sin(\omega_{N/2}b)-\sin(\omega_{N/2}a)}{\omega_{N/2}}.
+\]
+
+Inputs must be finite real nq-vectors. A conjugacy check uses coefficient-scale
+roundoff rather than a tiny cancelled integral as its scale. Integration uses
+the sinc form of the primitive and compensated real summation. No mode is
+discarded and the owning derivative's zero Nyquist symbol remains unchanged.
+Point evaluation uses that same cosine convention. The integral indicator
+retains the conjugacy gap/tolerance, absolute term sum, cancellation factor and
+`eps*absolute_term_sum`. That last number is a sensitivity indicator, not a
+Fourier interpolation, propagated-state, or total arithmetic error enclosure.
+The extent's physical metric lengths and clock-rate observations use these
+real primitives; Hamiltonian rates and RK4 are unchanged.
+
+The observer also retains the constraint pair
+`h_c=Q*(C_g+rho)` and `D=D_g+current`, alongside raw `C_g+rho`, projected and
+held-out h_c, and the like-unit source scales `Q*rho` and `current`. A large raw
+C when Q is tiny is not by itself a chart failure or proof of physical
+instability. Ratios to the corresponding source density are descriptive; no
+bound maps the sampled constraint pair or RK-stage residual into the claimed
+tagged probability or proper-length effect. `observable_error_bound` and the
+stage constraint bound remain null. The assessment explicitly leaves
+constraint propagation and late curvature resolution unresolved.
+
+## Exact L12-only recovery
+
+`prepare_resume(output, reference)` is creation-only and refuses an existing
+exact output directory or an output inside its reference. It accepts only the
+completed frozen v1 batch and its latest named L12 coupled T6.7 observation
+stop. It authenticates historical Git producer bytes, every reference JSON/NPZ,
+the initial solver, prefix-state hash, source/W/observer/weights, physical L/nq,
+windows, and saved continuous clocks. Current dynamical/source owners must
+still match the frozen producer; only this observer adapter and its driver may
+have changed. The new handoff contains every old array byte-for-byte, including
+canonical momenta, spinors and clocks. It calls no initial solve and resets no
+prefix, physical time, or step count.
+
+The prepared successor has one runnable case, `L12_coupled`, with stations 8 and
+12. Its run uses the existing RK4, controls, restrictions and aggregate budget,
+with one executor worker. Historical aggregate CPU and the saved case's CPU
+are counted once. Original L8 coupled and both frozen branches are authenticated
+summary references and are never resubmitted. Assessment merges those old
+observations with the new L12 continuation. Period16 is not admitted by this
+recovery: the observed frozen return shifts from eight to twelve already, while
+the roughly twenty-percent protected initial-radius mismatch remains an
+attribution limitation.
+
+After root freezes and commits the corrected producer, choose the exact new
+directory and run:
+
+```sh
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_extent.py \
+  --check --output results/development/nsc-discovery-extent-v1
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_extent.py \
+  --prepare-resume --reference results/development/nsc-discovery-extent-v1 \
+  --output results/development/nsc-discovery-extent-v2
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_extent.py \
+  --run --production --workers 1 --output results/development/nsc-discovery-extent-v2
+```
+
+Development tests authenticate and observe the frozen state, check manufactured
+Nyquist/cancellation cases, and prove exact array handoff. The recovery test
+uses `max_steps=0` and forbids the production stepper and initializer; it creates
+no new production trajectory.

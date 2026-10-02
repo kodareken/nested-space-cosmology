@@ -9,6 +9,7 @@ from dataclasses import replace
 import hashlib
 import io
 import json
+import math
 from pathlib import Path
 import time
 
@@ -37,6 +38,10 @@ FORECAST_FACTOR = 1.5
 CHUNK_LIMIT = 64*1024**2
 CADENCE = 0.1
 FIELDS = model.STATE_NAMES
+HISTORICAL_COMMIT = "697efe0155cdbf796c0174468c90a4c368bb7dbe"
+OBSERVER_REVISION = "real-periodic-rfft-v2"
+OBSERVER_ONLY_PATHS = frozenset(("lab/src/recursive_horizons/nsc_discovery_extent.py",
+                               "lab/scripts/derive_nsc_discovery_extent.py"))
 
 
 def _json(value):
@@ -206,6 +211,121 @@ def _summary(value):
     return {"min": float(np.min(value)), "max": float(np.max(value)), "max_abs": scale, "rms": rms}
 
 
+def _real_spectrum(grid, values):
+    """Real input with a scale-aware FFT conjugacy check, independent of an integral's cancellation."""
+    values = np.asarray(values)
+    if values.shape != (grid.nq,) or not np.isfinite(values).all():
+        raise ValueError("real periodic density must be a finite nq-vector")
+    if np.iscomplexobj(values) and np.any(values.imag != 0):
+        raise ValueError("real periodic density cannot have complex samples")
+    samples = np.asarray(values.real, dtype=float)
+    full = np.fft.fft(samples) / grid.nq
+    opposite = np.conjugate(full[(-np.arange(grid.nq)) % grid.nq])
+    gap = float(np.max(np.abs(full-opposite)))
+    scale = max(1., float(np.max(np.abs(full))))
+    tolerance = 64*np.finfo(float).eps*scale
+    if gap > tolerance:
+        raise ValueError("FFT conjugacy defect exceeds its coefficient-scale roundoff tolerance")
+    return np.fft.rfft(samples)/grid.nq, {
+        "input_real": True, "conjugacy_gap": gap, "conjugacy_tolerance": tolerance,
+        "coefficient_scale": scale, "nyquist_convention": "real cosine; derivative symbol remains zero",
+    }
+
+
+def real_interval_integral(grid, values, interval, *, return_indicator=False):
+    """Integral of the real periodic interpolant, including its even-N Nyquist cosine.
+
+    The FFT's lone negative Nyquist exponential is not a real off-grid extension.
+    All conjugate pairs are formed explicitly; a cancelled window never supplies
+    the scale for an imaginary-output test. No derivative or sampled field changes.
+    """
+    left, right = (float(x) for x in interval)
+    if not 0 <= left < right <= grid.length:
+        raise ValueError("interval must be ordered within the periodic carrier")
+    spectrum, indicator = _real_spectrum(grid, values)
+    even = grid.nq % 2 == 0
+    upper = len(spectrum)-int(even)
+    wave = 2*np.pi*np.arange(1, upper)/grid.length
+    width = right-left
+    # Sinc form avoids subtracting nearby exponentials. Full-period nonzero modes vanish exactly.
+    primitive = (np.zeros(wave.shape, complex) if width == grid.length else
+                 width*np.sinc(wave*width/(2*np.pi))*np.exp(1j*wave*(left+right)/2))
+    terms = [float(spectrum[0].real*width)]
+    terms.extend(float(x) for x in 2*np.real(spectrum[1:upper]*primitive))
+    nyquist = 0.
+    if even:
+        omega = np.pi*grid.nq/grid.length
+        if width != grid.length:
+            nyquist = float(spectrum[-1].real*(np.sin(omega*right)-np.sin(omega*left))/omega)
+        terms.append(nyquist)
+    result = math.fsum(terms)
+    absolute_sum = math.fsum(abs(x) for x in terms)
+    indicator.update(term_absolute_sum=absolute_sum, nyquist_integral=nyquist,
+                     cancellation_factor=None if result == 0 else absolute_sum/abs(result),
+                     zero_result_with_nonzero_terms=result == 0 and absolute_sum > 0,
+                     floating_sum_indicator=float(np.finfo(float).eps*absolute_sum),
+                     indicator_is_error_bound=False, observer_revision=OBSERVER_REVISION)
+    return (result, indicator) if return_indicator else result
+
+
+def real_periodic_values(grid, values, coordinates):
+    """Real Fourier point evaluation with the same Nyquist cosine convention."""
+    spectrum, _indicator = _real_spectrum(grid, values)
+    coordinates = np.atleast_1d(np.asarray(coordinates, dtype=float))
+    if coordinates.ndim != 1 or not np.isfinite(coordinates).all():
+        raise ValueError("periodic evaluation coordinates must be a finite vector")
+    coordinates = np.mod(coordinates, grid.length)
+    even = grid.nq % 2 == 0
+    upper = len(spectrum)-int(even)
+    phase = np.exp(2j*np.pi*coordinates[:, None]*np.arange(1, upper)[None, :]/grid.length)
+    result = spectrum[0].real + 2*np.real(phase@spectrum[1:upper])
+    if even:
+        result += spectrum[-1].real*np.cos(np.pi*grid.nq*coordinates/grid.length)
+    return result
+
+
+def real_metrics(pair, state, *, fine=None):
+    """Physical regional readout through the corrected real interpolant; no state modification."""
+    if fine is None:
+        fine, _system = model._active(pair, state)
+    radial = fine.r*fine.Q
+    parent = real_interval_integral(pair.grid, radial, pair.parent_interval)
+    child = real_interval_integral(pair.grid, radial, pair.child_interval)
+    if min(parent, child, parent-child) <= 0:
+        raise ValueError("full metric has invalid nested proper lengths")
+    result = {"parent_proper_length": parent, "child_proper_length": child,
+              "clock_rates": real_periodic_values(pair.grid, radial, pair.clock_locations).tolist()}
+    for name in ("r", "Q"):
+        result["child_"+name+"_proper_mean"] = real_interval_integral(
+            pair.grid, radial*getattr(fine, name), pair.child_interval)/child
+    return result
+
+
+def constraint_pair(grid, fine, system, source):
+    """Coordinate constraint densities and like-unit source scales; not an evolved error certificate."""
+    rho = source["force_L"]/grid.dx_q
+    current = source["force_beta"]/grid.dx_q
+    raw_c = coupling.hamilton_constraint(system, fine)+rho
+    d = coupling.shift_constraint(system, fine)+current
+    hc = fine.Q*raw_c
+    source_hc = fine.Q*rho
+    projected = galerkin.pull_geometry(grid, hc)
+    held = hc-galerkin.prolong_geometry(grid, projected)
+    hc_summary, source_summary = _summary(hc), _summary(source_hc)
+    d_summary, current_summary = _summary(d), _summary(current)
+    return {"raw_C": _summary(raw_c), "h_c": hc_summary, "D": d_summary,
+            "projected_h_c": _summary(projected), "held_out_h_c": _summary(held),
+            "source_Q_rho": source_summary, "source_current": current_summary,
+            "h_c_over_source_scale": None if source_summary["max_abs"] == 0 else
+                hc_summary["max_abs"]/source_summary["max_abs"],
+            "D_over_source_scale": None if current_summary["max_abs"] == 0 else
+                d_summary["max_abs"]/current_summary["max_abs"],
+            "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+            "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+            "observable_error_bound": None, "physical_instability_inferred": False,
+            "continuum_constraint_certified": False}
+
+
 def observe(pair, state, coordinate_time, clocks, mode="coupled", *, protected=False):
     """Underlying period-aware energy, tidal and integral owners, no old atlas."""
     jets = tidal.analytic_accelerations(pair, state, mode)
@@ -215,17 +335,21 @@ def observe(pair, state, coordinate_time, clocks, mode="coupled", *, protected=F
         if not np.isfinite(profile["tides"][name]).all():
             raise ValueError("actual tidal diagnostic is nonfinite: " + name)
     ledger = regional.matter_ledger(system, fine)
-    metric = model.metrics(pair, state)
+    metric = real_metrics(pair, state, fine=fine)
     mass_columns = (np.abs(fine.phi0)**2+np.abs(fine.phi1)**2)*pair.weights[None, :]
     tagged = np.sum(mass_columns[:, [2, 3]], axis=1)
     density = np.sum(mass_columns, axis=1)/pair.grid.dx_q
     tagged_total = float(np.sum(tagged))
-    tagged_child = model.interval_integral(pair.grid, tagged/pair.grid.dx_q, pair.child_interval)
+    tagged_child = real_interval_integral(pair.grid, tagged/pair.grid.dx_q, pair.child_interval)
     constraints = galerkin.constraint_diagnostics(pair.grid, jets["nodal"], source=source, fine_state=fine)
     columns = np.vstack((state.phi0, state.phi1))
     gram = columns.conj().T@columns
-    car = galerkin.occupation_eigenvalues(state.phi0, state.phi1, pair.weights)
-    window = lambda values, interval: model.interval_integral(pair.grid, np.asarray(values, dtype=float), interval)
+    roots = np.sqrt(pair.weights)
+    car = np.linalg.eigvalsh(roots[:, None]*gram*roots[None, :])
+    # The remaining ambient covariance eigenvalues are zero. No full ambient matrix is needed.
+    window = lambda values, interval: real_interval_integral(pair.grid, values, interval)
+    normal_energy, integral_indicator = real_interval_integral(
+        pair.grid, ledger["normal_energy_nodal"]/pair.grid.dx_q, pair.child_interval, return_indicator=True)
     energies = {"total": float(coupling.gravity_energy(system, fine)+coupling.field_energy(system, fine)),
                 "field": float(coupling.field_energy(system, fine)), "gravity": float(coupling.gravity_energy(system, fine))}
     worldline = int(np.argmin(np.abs(pair.grid.xi_q-pair.clock_locations[1])))
@@ -233,7 +357,7 @@ def observe(pair, state, coordinate_time, clocks, mode="coupled", *, protected=F
     row = {"time": float(coordinate_time), "length": float(pair.grid.length), "mode": mode,
            "carrier_circuit_coordinate_time": float(pair.grid.length), "physical_principal_speed": 1.,
            "parent_interval": list(pair.parent_interval), "child_interval": list(pair.child_interval),
-           "ambient_intervals": [[0., PARENT[0]], [PARENT[1], pair.grid.length]],
+           "ambient_intervals": [[0., pair.parent_interval[0]], [pair.parent_interval[1], pair.grid.length]],
            "normal_clocks": np.asarray(clocks).tolist(), "clock_rates": metric["clock_rates"],
            "clock_locations": list(pair.clock_locations), "clock_quadrature": "endpoint_trapezoid_per_owned_RK4_step",
            "child_proper_length": metric["child_proper_length"], "parent_proper_length": metric["parent_proper_length"],
@@ -245,13 +369,16 @@ def observe(pair, state, coordinate_time, clocks, mode="coupled", *, protected=F
            "total_probability": float(np.sum(mass_columns)),
            "all_source_child_probability": window(density, pair.child_interval),
            "gram_max": float(np.max(np.abs(gram-np.eye(6)))),
-           "CAR_min": float(np.min(car)), "CAR_max": float(np.max(car)), "constraints": constraints,
+           "CAR_min": float(min(0., np.min(car))), "CAR_max": float(max(0., np.max(car))), "constraints": constraints,
+           "constraint_pair": constraint_pair(pair.grid, fine, system, source),
+           "observer_revision": OBSERVER_REVISION,
            "source_rho": _summary(source["force_L"]/pair.grid.dx_q),
            "source_current": _summary(source["Pmom"]/pair.grid.dx_q),
            "shift_residual_mean": float(np.mean(coupling.shift_constraint(system, fine)+source["force_beta"]/pair.grid.dx_q)),
            "current_mean_deleted": False, "total_energy": energies,
-           "child_matter_normal_energy": window(ledger["normal_energy_nodal"]/pair.grid.dx_q, pair.child_interval),
-           "child_boundary_noether_flux": model._periodic_values(pair.grid, ledger["flux"]/pair.grid.dx_q, pair.child_interval).tolist(),
+           "child_matter_normal_energy": normal_energy,
+           "child_normal_energy_integral_indicator": integral_indicator,
+           "child_boundary_noether_flux": real_periodic_values(pair.grid, ledger["flux"]/pair.grid.dx_q, pair.child_interval).tolist(),
            "noether_flux": _summary(ledger["flux"]/pair.grid.dx_q),
            "actual_tides": {name: _summary(profile["tides"][name]) for name in tide_names},
            "worldline_actual_tides": {name: float(profile["tides"][name][worldline]) for name in tide_names},
@@ -417,7 +544,7 @@ def advance(pair, state, *, current_time, target, step_cap, cadence, clocks, mod
     mark = float(current_time); clocks = np.array(clocks, copy=True); start = time.process_time()
     observations = []; steps = 0; cost = 0.; diag_cost = 0.; status = "target_reached"; stop = None
     stepper = episode.evolving_step if mode == "coupled" else episode.frozen_geometry_step
-    rates = np.asarray(model.metrics(pair, state)["clock_rates"])
+    rates = np.asarray(real_metrics(pair, state)["clock_rates"])
     next_diagnostic = min(target, episode.next_observation_time(mark, cadence))
     while mark < target-1e-12:
         if max_steps is not None and steps >= max_steps:
@@ -437,7 +564,7 @@ def advance(pair, state, *, current_time, target, step_cap, cadence, clocks, mod
                 updated = stepper(pair, state, dt)
             if any(not np.isfinite(getattr(updated, name)).all() for name in FIELDS):
                 raise FloatingPointError("nonfinite owned RK4 output")
-            new_rates = np.asarray(model.metrics(pair, updated)["clock_rates"])
+            new_rates = np.asarray(real_metrics(pair, updated)["clock_rates"])
         except (coupling.PositiveChartExit, ValueError, FloatingPointError) as error:
             status, stop = "chart_or_numerical_stop", {"error": type(error).__name__+": "+str(error),
                 "last_admissible_time": mark, "event_bracket": [mark, mark+dt], "physical_instability_claimed": False}; break
@@ -541,9 +668,16 @@ def run(output, *, production=False, workers=6, max_steps=None, executor=None):
     if (directory/"run.json").exists():
         raise FileExistsError("extent run already exists; use a new successor or a separately reviewed continuation")
     prefix = json.loads((directory/"prefix.json").read_text()); config = prefix["inputs"]
+    if prefix.get("resume_binding"):
+        authenticate_resume_binding(prefix["resume_binding"])
+        if [case["case_id"] for case in prefix["cases"]] != ["L12_coupled"]:
+            raise ValueError("the observation successor may resume only L12_coupled")
     if max(config["stations"]) > 0.01 and not production:
         raise PermissionError("extent stations 8/12 are root production execution")
     family.authenticate_producer({"producer_identity": prefix["producer_identity"]})
+    if any(episode.file_sha256(episode.REPO/pin["path"]) != pin["sha256"]
+           for pin in prefix["producer_identity"]["files"]):
+        raise ValueError("running extent producer differs from its prepared identity")
     cases = prefix["cases"]
     if not cases:
         raise ValueError("no admissible own-source handoffs")
@@ -572,6 +706,9 @@ def run(output, *, production=False, workers=6, max_steps=None, executor=None):
               "return_alone_is_holding": False, "echo_proof": False, "continuum_certified": False,
               "period16_automatically_authorized": False}
     result["assessment"] = assess(directory, results, result["initial_matching"], result["handoff_matching"])
+    if prefix.get("resume_binding"):
+        result["resume_binding"] = prefix["resume_binding"]
+        result["old_summary_references"] = prefix["old_summary_references"]
     result["aggregate_cpu_seconds"] = (prefix["aggregate_cpu_seconds"]+prior_child_cpu+sum(x["cpu_seconds"] for x in results)
                                        +time.process_time()-start)
     _write(directory/"run.json", result); return result
@@ -580,11 +717,26 @@ def run(output, *, production=False, workers=6, max_steps=None, executor=None):
 def assess(directory, results, initial_matching=None, handoff_matching=None):
     """Measured timing/geometry comparisons, never an echo or holding proof."""
     profiles = {}; candidates = {}
-    for result in results:
+    directory = Path(directory)
+    prefix_path = directory/"prefix.json"
+    prefix = json.loads(prefix_path.read_text()) if prefix_path.exists() else {}
+    references = prefix.get("old_summary_references", [])
+    work = [(result, directory) for result in results]
+    if prefix.get("resume_binding"):
+        authenticate_resume_binding(prefix["resume_binding"])
+        reference_directory = Path(prefix["resume_binding"]["reference_directory"])
+        work.extend(({"case_id": identifier}, reference_directory) for identifier in
+                    ("L8_coupled", "L8_frozen_geometry", "L12_frozen_geometry"))
+    for result, record_directory in work:
         identifier = result["case_id"]
         rows = []
-        for ordinal in range(episode._next_ordinal(directory, identifier)):
-            record, _arrays = load(directory, identifier, ordinal)
+        if prefix.get("resume_binding") and identifier == "L12_coupled":
+            historical = Path(prefix["resume_binding"]["reference_directory"])
+            for ordinal in range(episode._next_ordinal(historical, identifier)):
+                record, _arrays = load(historical, identifier, ordinal)
+                rows.extend(record.get("observations", []))
+        for ordinal in range(episode._next_ordinal(record_directory, identifier)):
+            record, _arrays = load(record_directory, identifier, ordinal)
             rows.extend(record.get("observations", []))
         rows = list({float(row["time"]): row for row in rows}.values())
         rows.sort(key=lambda row: row["time"])
@@ -608,6 +760,17 @@ def assess(directory, results, initial_matching=None, handoff_matching=None):
             "holding_inferred": False,
             "circuit_time_hypothesis": None if not rows else rows[0]["length"],
             "diagnostic_spacing_is_timing_indicator_not_continuum_bound": True}
+        pair_rows = [row["constraint_pair"] for row in rows if "constraint_pair" in row]
+        candidates[identifier]["constraint_assessment"] = {
+            "maximum_observed_h_c": max((row["h_c"]["max_abs"] for row in pair_rows), default=None),
+            "maximum_observed_raw_C": max((row["raw_C"]["max_abs"] for row in pair_rows), default=None),
+            "maximum_observed_D": max((row["D"]["max_abs"] for row in pair_rows), default=None),
+            "maximum_h_c_over_source_scale": max((row["h_c_over_source_scale"] for row in pair_rows
+                                                   if row["h_c_over_source_scale"] is not None), default=None),
+            "observed_rows_with_pair": len(pair_rows),
+            "observable_error_bound": None, "physical_instability_inferred": False,
+            "constraint_and_late_curvature_resolution": "unresolved; sampled residuals are not observable error bounds",
+            "stage_constraint_bound_for_claimed_probability_or_length_effect": None}
     comparisons = []
     for mode in ("coupled", "frozen_geometry"):
         left, right = profiles.get("L8_"+mode, []), profiles.get("L12_"+mode, [])
@@ -632,6 +795,7 @@ def assess(directory, results, initial_matching=None, handoff_matching=None):
             "same_extent_feedback_comparisons": feedback, "initial_matching": initial_matching,
             "handoff_matching": handoff_matching, "pure_causal_echo_proof": False,
             "extent_discriminates": None, "period16_requires_root_review": True,
+            "old_summary_references": references,
             "physical_return_or_holding_conclusion_forced": False}
 
 
@@ -674,8 +838,126 @@ def audit_existing_period8(directory, case_id, candidate_pair, candidate_state, 
             "candidate_time_requires_external_check": candidate_time is None, "old_record_rewritten": False}
 
 
+def authenticate_resume_binding(binding):
+    """Authenticate frozen reference bytes and unchanged dynamical owners, without replaying a trajectory."""
+    if binding.get("historical_commit") != HISTORICAL_COMMIT or binding.get("case_id") != "L12_coupled":
+        raise ValueError("resume binding is not the declared historical L12 observation stop")
+    directory = _output(binding["reference_directory"])
+    for name, digest in binding["reference_files"].items():
+        if Path(name).name != name:
+            raise ValueError("resume reference must name files inside its frozen directory")
+        path = directory/name
+        if path.stat().st_mode & 0o222 or episode.file_sha256(path) != digest:
+            raise ValueError("immutable extent reference changed: "+name)
+    authentication = family.authenticate_producer({"producer_identity": binding["historical_producer"]})
+    if not authentication["authenticated"]:
+        raise ValueError("resume reference producer is not authenticated from historical Git bytes")
+    for pin in binding["historical_producer"]["files"]:
+        if pin["path"] not in OBSERVER_ONLY_PATHS and episode.file_sha256(episode.REPO/pin["path"]) != pin["sha256"]:
+            raise ValueError("resume would change a frozen dynamical/source owner: "+pin["path"])
+    return {"authenticated": True, "historical_commit": HISTORICAL_COMMIT,
+            "reference_files": len(binding["reference_files"]), "dynamics_changed": False}
+
+
+def resume_handoff(reference):
+    """Read the exact latest L12 T=6.7 arrays and their initial/handoff provenance. No solve or stepping."""
+    directory = _output(reference)
+    historical_check = check(directory)
+    original = json.loads((directory/"run.json").read_text())
+    prefix = json.loads((directory/"prefix.json").read_text())
+    config = original["inputs"]
+    if config["stations"] != [8., 12.] or config["periods"] != [8., 12.] or config["points_per_unit"] != 32:
+        raise ValueError("resume reference is not the completed period8/12 production batch")
+    identity = original["producer_identity"]
+    if any(pin.get("commit") != HISTORICAL_COMMIT for pin in identity["files"]):
+        raise ValueError("resume reference must retain the frozen 697efe0 producer")
+    record, arrays = load(directory, "L12_coupled")
+    if record["status"] != "diagnostic_unavailable" or abs(record["time"]-6.7) > 1e-9 or \
+            record.get("stop", {}).get("error") != "ValueError: interval integral did not preserve a real density":
+        raise ValueError("resume is restricted to the named L12 T=6.7 real-integral observation stop")
+    initial, initial_arrays = load(directory, "L12_initial", 0)
+    handoff, handoff_arrays = load(directory, "L12_coupled", 0)
+    if (record["source_pins"] != initial["source_pins"] or record["source_pins"] != handoff["source_pins"] or
+            record["solver"] != initial["solver"] or not record["solver"].get("converged") or
+            record.get("copied_radius") or record.get("source_current_deleted") or
+            record["prefix_state_sha256"] != episode.state_sha256(state_from(handoff_arrays)) or
+            abs(handoff["time"]-config["prefix"]) > 1e-12):
+        raise ValueError("resume initial solver, source or own handoff provenance differs")
+    if (record["length"], record["nf"], record["nq"], record["mode"]) != (12., 384, 1536, "coupled"):
+        raise ValueError("resume changed its declared grid or control")
+    pair = pair_from_arrays(arrays, record)
+    if pair.clock_locations != CLOCKS or arrays["normal_clocks"].shape != (3,) or \
+            not np.isfinite(arrays["normal_clocks"]).all() or np.min(arrays["normal_clocks"]) < 0:
+        raise ValueError("resume clocks are not the saved continuous normal clocks")
+    names = [path.name for pattern in ("*.json", "*.npz") for path in sorted(directory.glob(pattern))]
+    binding = {"reference_directory": str(directory), "historical_commit": HISTORICAL_COMMIT,
+               "case_id": "L12_coupled", "ordinal": record["ordinal"], "time": record["time"],
+               "checkpoint_json": record["json"], "checkpoint_payload": record["npz"],
+               "state_sha256": episode.state_sha256(state_from(arrays)),
+               "array_sha256": record["array_sha256"], "source_pins": record["source_pins"],
+               "historical_producer": identity,
+               "reference_files": {name: episode.file_sha256(directory/name) for name in names}}
+    authenticate_resume_binding(binding)
+    return {"record": record, "arrays": arrays, "pair": pair, "binding": binding,
+            "original_run": original, "original_prefix": prefix, "historical_check": historical_check,
+            "initial_state_called": False, "prefix_reset": False, "evolved": False}
+
+
+def prepare_resume(output, reference):
+    """Creation-only successor for one exact frozen L12 state; never rerun the other three branches."""
+    directory = _output(output)
+    reference_directory = _output(reference)
+    if directory == reference_directory or reference_directory in directory.parents:
+        raise PermissionError("resume output must be a separate exact successor directory")
+    if directory.exists():
+        raise FileExistsError("resume output already exists; refusing to overwrite exact output")
+    started = time.process_time()
+    saved = resume_handoff(reference_directory)
+    record, arrays, pair = saved["record"], saved["arrays"], saved["pair"]
+    state = state_from(arrays)
+    pair, state, resolution = episode.resolve_pair(pair, state, backend="fft")
+    with backend.fft_thread_limit(1):
+        row, _samples = observe(pair, state, record["time"], arrays["normal_clocks"], "coupled")
+    if episode.state_sha256(state) != saved["binding"]["state_sha256"]:
+        raise ValueError("resume diagnostic changed the Cauchy arrays")
+    producer = _identity()
+    updated = dict(record, status="resume_handoff", stop=None, observations=[row], producer_identity=producer,
+                   resume_binding=saved["binding"], predecessor_stop=record["stop"],
+                   observer_revision=OBSERVER_REVISION, initial_state_called_during_continuation=False,
+                   source_state_clocks_changed=False, prefix_reset=False, resolve_pair=resolution)
+    committed = commit(directory, updated, arrays)
+    if committed["array_sha256"] != record["array_sha256"]:
+        raise ValueError("resume checkpoint did not preserve every frozen array exactly")
+    original = saved["original_run"]
+    old_references = [{"case_id": identifier, "directory": str(reference_directory),
+                       "run_json_sha256": saved["binding"]["reference_files"]["run.json"],
+                       "rerun": False} for identifier in
+                      ("L8_coupled", "L8_frozen_geometry", "L12_frozen_geometry")]
+    historical_cpu = float(original["aggregate_cpu_seconds"])
+    consumed_case_cpu = float(record["cumulative_child_cpu_seconds"])
+    preparation_cpu = time.process_time()-started
+    prepared = {"schema": SCHEMA, "stage": "prepare_resume", "inputs": original["inputs"],
+                "producer_identity": producer, "resume_binding": saved["binding"],
+                "initial_protected_matching": original["initial_matching"], "cases": [committed],
+                "old_summary_references": old_references, "evolved": False,
+                "aggregate_cpu_seconds": historical_cpu+preparation_cpu,
+                "historical_aggregate_cpu_seconds": historical_cpu, "resume_preparation_cpu_seconds": preparation_cpu}
+    _write(directory/"prepare.json", prepared)
+    prefix = {"schema": SCHEMA, "stage": "resume_prefix", "inputs": original["inputs"],
+              "cases": [committed], "failures": [], "producer_identity": producer,
+              "resume_binding": saved["binding"], "old_summary_references": old_references,
+              "handoff_protected_matching": original["handoff_matching"],
+              "prepare_json_sha256": episode.file_sha256(directory/"prepare.json"),
+              # run() adds the saved cumulative case CPU once; old aggregate already contains it.
+              "aggregate_cpu_seconds": historical_cpu-consumed_case_cpu+preparation_cpu,
+              "initial_state_called": False, "prefix_reset": False, "evolved": False,
+              "resume_time": record["time"], "observer_revision": OBSERVER_REVISION}
+    _write(directory/"prefix.json", prefix)
+    return prepared
+
+
 def check(output):
-    directory = _output(output); stages = []; config = None; cases = []
+    directory = _output(output); stages = []; config = None; cases = []; authentications = {}
     for name in ("prepare", "prefix", "run"):
         path = directory/(name+".json")
         if not path.exists():
@@ -691,7 +973,16 @@ def check(output):
         if config is not None and config != current:
             raise ValueError("extent stage changed numerical inputs")
         config = current
-        family.authenticate_producer({"producer_identity": record["producer_identity"]})
+        key = _hash(record["producer_identity"])
+        if key not in authentications:
+            authenticated = family.authenticate_producer({"producer_identity": record["producer_identity"]})
+            authentications[key] = {"status": authenticated["status"], "authenticated": authenticated["authenticated"],
+                "working_tree_commit": record["producer_identity"].get("working_tree_commit"),
+                "current_code_is_historical_producer": all(
+                    episode.file_sha256(episode.REPO/pin["path"]) == pin["sha256"]
+                    for pin in record["producer_identity"]["files"])}
+        if record.get("resume_binding"):
+            authenticate_resume_binding(record["resume_binding"])
         if name == "prefix" and record["prepare_json_sha256"] != episode.file_sha256(directory/"prepare.json"):
             raise ValueError("extent predecessor changed")
         if name == "run" and record["prefix_json_sha256"] != episode.file_sha256(directory/"prefix.json"):
@@ -719,4 +1010,5 @@ def check(output):
     if not stages:
         raise FileNotFoundError("no extent stages")
     return {"schema": SCHEMA, "ok": True, "stages": stages, "checked": cases,
+            "producer_authentication": list(authentications.values()),
             "repaired": False, "evolved": False}
