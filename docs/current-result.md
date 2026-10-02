@@ -274,6 +274,32 @@ all stationary or regenerative states are absent. That search stops here;
 a dynamic preparation must satisfy the initial constraints without also
 being a stationary solution. [Saved-array diagnostic](../lab/results/development/nsc-discovery-stationary-v2.json).
 
+The [independent limit assessment](../lab/results/development/nsc-discovery-stationary-limit-v1.json)
+derives the escape analytically: the mean conformal scale is proportional to
+the vanishing shape amplitude, the areal radius is inversely proportional,
+and their product tends to 1.216734. The predicted occupation limit 1.218715
+matches the saved 1.218714. The old checker rejects a reordered gradient
+identity at its absolute tolerance; that failure is retained. A stable
+Einstein coefficient improves the affine arithmetic, while the actual local
+force remains unsatisfied. Neither numerical conditioning nor this limit
+is treated as a physical no-existence result.
+
+The [source-consistent wave episode](../lab/results/development/nsc-discovery-dynamic-episode-v1/manifest.json)
+reaches $T=3$ for all six matched cases using 159.25 CPU seconds. The coherent
+source changes child probability by 0.100012; the timestep comparison differs
+by $3.34\times10^{-14}$. Uniform and patterned stationary field preparations
+retain their quarter-domain content. All three geometries contract radially
+and expand in areal radius in this initial sector; spatial confirmation has
+not been run.
+
+The [initial-sector control](../lab/docs/nsc-discovery-initial-sector.md)
+tests a consequential preparation choice. Constant $Q$, $\chi=0$ and zero
+momenta force $\dot Q(0)=0$, $\ddot Q(0)=-Q^3$, regardless of the field source.
+An admissible initial expansion/contraction rate changes extrinsic data;
+$\chi=-2$ instead changes the initial invariant curvature. These controls
+retain the same action, field source and observers and impose no rate after
+initial preparation.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
