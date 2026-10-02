@@ -10,7 +10,7 @@ and further-gradient readings stay open research.
 
 The inheritance relation $\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta$
 is reused inside its stated domain. It is not recomputed as an infinite nest.
-The current finite realization is the conformal spherical Galerkin loop
+The published finite realization is the conformal spherical Galerkin loop
 through $T=0.3$ in [the current result](docs/current-result.md#present-spherical-loop).
 It measures source-dependent regional transfer, generated geometry, maintained
 localization, and a local response on that same trajectory. The same-action

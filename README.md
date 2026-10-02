@@ -14,8 +14,9 @@ transport reproduces the coupled field return. Source-family controls confirm th
 loss of localization. Coupled causal reduction reproduces field forces and
 generated geometry, and locked forecasts predict withheld local responses.
 The static holding search approaches a noncompact limit without satisfying
-its local forces; the next preparation tests dynamic behavior under the same
-action and constraints. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
+its local forces. Source-consistent wave and initial-curvature controls now
+expose a limitation of the exact higher-derivative branch; the next comparison
+uses the existing curvature-EFT approximation with the same feedback mechanism. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
 
 **Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
 presents the measured finite spherical realization, source controls, actual
@@ -55,8 +56,8 @@ On the [same realization](lab/docs/nsc-conformal-local-response-successor.md),
 the original observer's occupation changes by $0.07343$. Reduction error is
 $0.00865\%$ of that change. Memory, exterior drive, and the actual initial
 cross correlations each change the response beyond their own measured errors.
-These are finite measurements with refinement indicators. Renewal is false;
-stronger continuum and propagated state-error certificates remain separate
+These are finite measurements with refinement indicators. Renewal was not demonstrated on that interval.
+Stronger continuum and propagated state-error certificates remain separate
 claims. The older [prescribed-gauge continuation](lab/docs/nsc-regeneration-episode.md)
 and the finite mathematical theorem retain their recorded domains.
 [Owners and current evidence](docs/current-result.md#present-spherical-loop).

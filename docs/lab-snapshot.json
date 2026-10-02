@@ -12338,22 +12338,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 168797,
+      "bytes": 169038,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "5688d79b6adebcb8629eceef6d61ef828ace2a2b",
+      "changed_from_commit": "44496baa8cfd3fd55f0524f4ee96935d4bb3fd05",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "378a62aa102d5230124548d32b9c8f47cf01eca26cf2e589016c351b91657f27"
+      "sha256": "1fd53d658dad5af7e5bfb070fc2e68d9046f0288f8aaa81cf8db9484d54ab3cb"
     },
     {
-      "bytes": 90542,
+      "bytes": 90977,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "5f86da5c51ab94a014e0be5f303b0c586e1af78b",
+      "changed_from_commit": "44496baa8cfd3fd55f0524f4ee96935d4bb3fd05",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "00e3fae9ec5f8e98ee49925ca252f388950054ae3aeadbb14268d2083c6e48c9"
+      "sha256": "9b59349bcee3a5d26f8eea22053326028819b85a7b546b7f5d3af1e07e130a4e"
     },
     {
       "bytes": 16589,
@@ -12769,6 +12769,13 @@
       "changed_from_commit": "528efc700ded6e9bce0d80f78d6d537fba75f627",
       "path": "lab/docs/nsc-discovery-coupled-memory.md",
       "sha256": "6e41966574e87549d6019df8d5a2610375a326aaae2f66f89c10c9d8a5630a4e"
+    },
+    {
+      "bytes": 6683,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "44496baa8cfd3fd55f0524f4ee96935d4bb3fd05",
+      "path": "lab/docs/nsc-discovery-curvature-sector.md",
+      "sha256": "302d5d8a0ec0bea580002843b184cf06d38bb96ff94943ee9779bc6b121d940d"
     },
     {
       "bytes": 10340,
@@ -82950,6 +82957,13 @@
       "sha256": "16bf6135752f1e4f1ccae49b38b97e957cdda0b29255c81b7eb4359a0b63feb6"
     },
     {
+      "bytes": 1439,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "44496baa8cfd3fd55f0524f4ee96935d4bb3fd05",
+      "path": "lab/scripts/assess_nsc_discovery_curvature_sector.py",
+      "sha256": "7817a736bc1e9a5986f2f09adc3eb65d7e006c58192ad9619c63745f6757660d"
+    },
+    {
       "bytes": 42855,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "528efc700ded6e9bce0d80f78d6d537fba75f627",
@@ -86345,6 +86359,13 @@
       "sha256": "442da2767e172f3032b36908cb6b93128231072f69778bb0c885fce739935f60"
     },
     {
+      "bytes": 13758,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "44496baa8cfd3fd55f0524f4ee96935d4bb3fd05",
+      "path": "lab/src/recursive_horizons/nsc_discovery_curvature_sector.py",
+      "sha256": "1b1da243ea75713bc22749e5fd1283f9712d9b82bb7bfc1d9ce5dcf8dc05d91b"
+    },
+    {
       "bytes": 48899,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
@@ -88606,6 +88627,13 @@
       "changed_from_commit": "b7f0dab8de62d9a3472ac4e7b33351ab65d25847",
       "path": "lab/tests/test_nsc_discovery_crossing.py",
       "sha256": "71a83f879b9774b4d765e1b0af27f1b2dfe1c22827945fbc1e833b5328e2f1db"
+    },
+    {
+      "bytes": 3373,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "44496baa8cfd3fd55f0524f4ee96935d4bb3fd05",
+      "path": "lab/tests/test_nsc_discovery_curvature_sector.py",
+      "sha256": "9ca8c499ee2a5984e365a61441b11fc10cd08c268237946d2bcaf77e0956f286"
     },
     {
       "bytes": 11192,
