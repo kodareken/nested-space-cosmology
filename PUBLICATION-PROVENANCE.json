@@ -43,9 +43,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 18003,
+      "bytes": 18259,
       "path": "AGENTS.md",
-      "sha256": "de567791c418c30068a46b0ba70a43eab8fab06fc0610674ec6d541b594beec0"
+      "sha256": "bb2fc9231c4e7819a153aeb950ab774dd70c8d97e238f401a7c40d9c359be233"
     },
     {
       "bytes": 1073,
@@ -73,9 +73,9 @@
       "sha256": "91da8804befe8a2cd31c40f511a43114cbdaa4e46283b474b98786663a06d246"
     },
     {
-      "bytes": 25221,
+      "bytes": 25384,
       "path": "README.md",
-      "sha256": "d773f01b943689663b92595bc871a28e76669538b50a2a4dfe6e8aa60c62ef6c"
+      "sha256": "01834138272b9f6626148cd85dce88a1083bae75423b67c6eed1a4259b18e54b"
     },
     {
       "bytes": 629,
@@ -83,9 +83,9 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 24543,
+      "bytes": 24545,
       "path": "THEORY.md",
-      "sha256": "0106645f2eb39eb13e2996f4def1add694bf5f459f17f57352a339d670a57f13"
+      "sha256": "176d66d65a66871e548ec148d6787ed1574c206d6cc9f5cd537e4da282d7b9bb"
     },
     {
       "bytes": 16135,
@@ -113,9 +113,9 @@
       "sha256": "3b7790ea6c33cbffdb39fa74f56d2a5277fa62f512d29be993acea38e37393c2"
     },
     {
-      "bytes": 5110513,
+      "bytes": 5111916,
       "path": "docs/lab-snapshot.json",
-      "sha256": "702ebccfc7bc36a869e36b5e34e3fca0e336d7d5a8c476f721131d4afbeb34c2"
+      "sha256": "4251320681c43558d87bc202f31381b24486cc4e1db3f53cb2b91993067035c3"
     },
     {
       "bytes": 5006,
@@ -3463,7 +3463,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "702ebccfc7bc36a869e36b5e34e3fca0e336d7d5a8c476f721131d4afbeb34c2",
+  "lab_snapshot_sha256": "4251320681c43558d87bc202f31381b24486cc4e1db3f53cb2b91993067035c3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",
