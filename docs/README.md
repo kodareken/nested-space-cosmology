@@ -8,7 +8,8 @@ constrained calculation into a settled theory.
 |---|---|
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
-| Active finite parent–child pair | [Owning note](../lab/docs/nsc-nested-parent-child.md), [first evidence](../lab/results/development/nsc-nested-parent-child-v1.json) |
+| Completed finite parent–child pair | [Owning note](../lab/docs/nsc-nested-parent-child.md), [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json), [driver](../lab/scripts/derive_nsc_nested_parent_child_confirmation.py), [preserved v1](../lab/results/development/nsc-nested-parent-child-v1.json) |
+| Parent–child replay and figure | [Portable basis](../lab/results/development/nsc-nested-parent-child-replay-basis-v1.json), [independent consumer](../lab/scripts/check_nsc_nested_parent_child_confirmation.py), [figure](../lab/results/development/nsc-nested-parent-child-figure.png) |
 | Same-action conformal gauge and episode | [Proof and scope](../lab/docs/nsc-spherical-conformal-gauge.md), [record](../lab/results/development/nsc-spherical-conformal-episode-v1.json) |
 | Finite conformal chain through $T=0.3$ | [Note](../lab/docs/nsc-spherical-conformal-continuation.md), [continuation](../lab/results/development/nsc-spherical-conformal-episode-v2.json), [surface flow](../lab/results/development/nsc-spherical-conformal-transport-v2.json) |
 | Same-realization conformal local response | [Note](../lab/docs/nsc-conformal-local-response-successor.md), [record](../lab/results/development/nsc-conformal-local-response-v2.json) |

@@ -12,6 +12,18 @@ Author review and the actual arXiv processor remain pending. The
 The [historical 5-page companion](paper/local-incoming-gate-draft.pdf)
 preserves the finite operator construction and OPEN application checkpoint.
 
+**New laboratory result, 2 October 2026:** the
+[finite parent–child construction](lab/docs/nsc-nested-parent-child.md) is
+complete in its declared numerical domain. Nested collars share one evolving
+metric and common action; four reciprocal state/geometry effects and the
+same-trajectory local reduction meet their one-percent comparison targets.
+[V2 confirmation](lab/results/development/nsc-nested-parent-child-confirmation-v2.json) ·
+[portable replay basis](lab/results/development/nsc-nested-parent-child-replay-basis-v1.json) ·
+[figure](lab/results/development/nsc-nested-parent-child-figure.png).
+The [v1 pilot](lab/results/development/nsc-nested-parent-child-v1.json) retains
+its incomplete historical status. This laboratory successor does not revise
+the papers or release claims above.
+
 **Measured finite realization:** regional source differences produce transfer,
 the same action couples the state and geometry, a localized structure persists
 with surface flow, and its unresolved surroundings change a fixed observer's

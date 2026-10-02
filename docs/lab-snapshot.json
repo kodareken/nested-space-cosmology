@@ -12338,22 +12338,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 162361,
+      "bytes": 163652,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "0b44179a673f34b0d197c25dd3df9a37bed8f503",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "0a5417064f606f1041c8bba9c6102a0513e032f9ac75a0d3424174257b5adcb7"
+      "sha256": "6c79f7e611687bc24af771fc56f0d1704be4069d977aabc00f6edaff5fa94f51"
     },
     {
-      "bytes": 84523,
+      "bytes": 84756,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "0b44179a673f34b0d197c25dd3df9a37bed8f503",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "e92c3ffc8b9e562b2363ba4faa4236f4160300a9ed42e852cff0e03337f73170"
+      "sha256": "79b05aa084f0806e4c9b97682cb76b31ae8e31228362248026e1373588bbcc88"
     },
     {
       "bytes": 16589,
@@ -14836,11 +14836,11 @@
       "sha256": "8c2d4692e183f054115105335504514dd149ba1ca5d3b14b4984f04df476ec44"
     },
     {
-      "bytes": 13639,
+      "bytes": 20768,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "0b44179a673f34b0d197c25dd3df9a37bed8f503",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
       "path": "lab/docs/nsc-nested-parent-child.md",
-      "sha256": "2961829708e4db2fe0e28be75f17350e2c357950ba49b01bcc0409699fd60b73"
+      "sha256": "b09ef32e295e94452794f29b2bbb0683a8b79a8bbdb19d846f20f13be49a9b26"
     },
     {
       "bytes": 7619,
@@ -76972,6 +76972,48 @@
       "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
     },
     {
+      "bytes": 457809,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/results/development/nsc-nested-parent-child-confirmation-v2.json",
+      "sha256": "6a09a16a52f637e6ca962cb0e1d6a9d51ba98a579287fb8090b0c90c67f62b6c"
+    },
+    {
+      "bytes": 7258005,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/results/development/nsc-nested-parent-child-confirmation-v2.npz",
+      "sha256": "2d0c66007cc931fe9c9386ae155f638047ea076a7b2be36775df1049ec886f8d"
+    },
+    {
+      "bytes": 169331,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/results/development/nsc-nested-parent-child-figure.json",
+      "sha256": "2e5d04817e9169c26f40e86f3c2df985d87e67d85ecce7c5535cc52e77573061"
+    },
+    {
+      "bytes": 338872,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/results/development/nsc-nested-parent-child-figure.png",
+      "sha256": "3b8e44edf79f2904c4c0a6749ef7deae2ca486837c4c2958019fbf15eba0538b"
+    },
+    {
+      "bytes": 20168,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/results/development/nsc-nested-parent-child-replay-basis-v1.json",
+      "sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c"
+    },
+    {
+      "bytes": 2660912,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/results/development/nsc-nested-parent-child-replay-basis-v1.npz",
+      "sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc"
+    },
+    {
       "bytes": 2513866,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "0b44179a673f34b0d197c25dd3df9a37bed8f503",
@@ -78986,6 +79028,13 @@
       "original_sha256": "31c9bccba28d39d32f5a1084f575780902b11dc9eafc1c5e728322ba803755ee",
       "path": "lab/scripts/check_nsc_measure_normalization.py",
       "sha256": "31c9bccba28d39d32f5a1084f575780902b11dc9eafc1c5e728322ba803755ee"
+    },
+    {
+      "bytes": 3737,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/scripts/check_nsc_nested_parent_child_confirmation.py",
+      "sha256": "79fa673d2b0ab42da424f9d5bc69a62881efc7e0932354572c789759c912c215"
     },
     {
       "bytes": 2010,
@@ -81039,6 +81088,20 @@
       "sha256": "6e8587ddec3a236db01c70bfdfb2d1fb88a8728f77fd4b9db050c8e4d695f05b"
     },
     {
+      "bytes": 32034,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/scripts/derive_nsc_nested_parent_child_confirmation.py",
+      "sha256": "85a8c2509001cf844da77ae042fce67920b05de7113b10be5aed0e16398ff911"
+    },
+    {
+      "bytes": 7558,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/scripts/derive_nsc_nested_parent_child_replay_basis.py",
+      "sha256": "c9fc646edcf922ac315282709399d14a647b26e41e7725a73fc76f8666536d72"
+    },
+    {
       "bytes": 11395,
       "original_git_blob": "d69fcf865f3ae3253b3ea5699c816e52e147967a",
       "original_sha256": "f9310a2b07de5f90d6e75f0346fce51bf4835ecb7e0590741a98698b6c9dd975",
@@ -81576,6 +81639,13 @@
       "changed_from_commit": "d8ccbf596dc0ce682d6793c4bfacb6ffd7796bcf",
       "path": "lab/scripts/pilot_nsc_vacuum_correction_range.py",
       "sha256": "dda514c3e82ddbc4a6bc9e535861a586bffd616fd51fa61866467e59a948b2c4"
+    },
+    {
+      "bytes": 13961,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/scripts/plot_nsc_nested_parent_child.py",
+      "sha256": "cecf6e5b9f0558c440d679515a17c4785c824c1d7131b76b9d38782183e21675"
     },
     {
       "bytes": 11695,
@@ -85430,11 +85500,18 @@
       "sha256": "cd636fe7eeacff5b3f5a3cf1a72c418353ca7a4654d0f3e2e99585c24bbba1f7"
     },
     {
-      "bytes": 18827,
+      "bytes": 11003,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "0b44179a673f34b0d197c25dd3df9a37bed8f503",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
+      "path": "lab/tests/test_nsc_nested_parent_child_confirmation.py",
+      "sha256": "3429ad297b4f6d48ba029f7cf17a123abf4f017026a22ce9d9d065ed07021a12"
+    },
+    {
+      "bytes": 32241,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ec0cd25edbab19f7e1a8245f4713648640748222",
       "path": "lab/tests/test_nsc_nested_parent_child_independent.py",
-      "sha256": "51e79e9da1248652e57f4831e289c5d52b42fda5d1cfd72963b6601879f0de26"
+      "sha256": "2f293c6557fcf31e4bd5b45111c5abd37d32ce5934f7eccd17843940f78ea048"
     },
     {
       "bytes": 10158,

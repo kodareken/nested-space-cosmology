@@ -90,6 +90,14 @@ claim, name the region, scale, observer, state, and compared quantity.
 
 ## Present regeneration programme
 
+The [finite parent–child construction](../lab/docs/nsc-nested-parent-child.md),
+confirmed on 2 October 2026, completes its declared reciprocal state/geometry
+and local-response measurements under one metric/common action. Its
+[v2 record](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json)
+and portable replay retain their numerical domains; the incomplete v1 and
+the published papers remain preserved. This successor does not resume the
+incoming-gate campaign.
+
 The current programme is finite nested regeneration under those local laws.
 The active question is a finite chain: a regional difference, exchange,
 feedback between the state and the geometry, maintained or renewed
