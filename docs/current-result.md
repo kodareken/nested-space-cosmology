@@ -186,6 +186,33 @@ refining the early tail. The separate
 physical preparation on the same chart and predicts a withheld width;
 it is not a coordinate rescaling or an assumed universal power law.
 
+The [later grandchild measurement](../lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.json)
+reaches the declared proper clock 1.10785546 from the transported opening
+state. Its locked linear prediction is $-0.000440453$ and the measured
+regional-content change is $-0.000450768$, a 2.29 percent remainder relative
+to the measured effect. Direct and sequential causal routes reconstruct the
+same field and covariance at numerical precision, on one shared generated
+geometry. This deeper hand-off result retains its deferred timestep
+confirmation; it is not a universal scaling law.
+
+The [physical width experiment](../lab/results/development/nsc-discovery-width-response-v1/measurement.json)
+changes the source width from 1 to 1.05 with its own source-consistent radius
+and evaluates at the same proper clock. The measured change is $-0.0895641$,
+compared with the first-order forecast $-0.105968$. Their difference is about
+18.3 percent of the measured effect, far above the available frame and event
+indicators. The finite-width response needs a nonlinear prediction. The
+existing record remains a completed effect measurement and a limit of the
+linear approximation; spatial and timestep refinement remain unmeasured.
+
+The [action-balance selector](../lab/results/development/nsc-discovery-stationary-balance-seed-v2.json)
+finds three curvature/source/flux-balanced shapes from 33 evaluations using
+2.16 CPU seconds. Harmonics 8, 10 and 12 select cosine amplitudes 0.16416,
+0.28722 and 0.34671. The local force and lapse equations remain unsatisfied.
+The next query eliminates radial and auxiliary critical equations with their
+actual discrete operators and solves the remaining shape force on a named,
+CAR-admissible occupation branch. It does not infer holding from the integrated
+balance alone. [Saved-array diagnostic](../lab/results/development/nsc-discovery-stationary-v2.json).
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
