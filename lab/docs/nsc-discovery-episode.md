@@ -148,6 +148,36 @@ Read these records with `read_observations`, `read_station_states`,
 `read_case_ledger`, and `read_physical_audit`. The audit reports the
 observation and step process times.
 
+## nf512 confirmation and station 8 resume
+
+`load_confirmation_handoff` reads the stored `nf512_baseline_dt0.0005`
+final frame in `nsc-nested-parent-child-confirmation-v2` and `nf512_W`
+from the frozen replay basis. It does not call `initial_state` or rebuild
+\(W\). Pins name that confirmation record and the basis. They do not reuse
+the v1 record name.
+
+`--prepare-confirmation` writes three cases, `nf512_coupled_dt0.001`,
+`nf512_coupled_dt0.0005`, and `nf512_frozen_geometry_dt0.0005`, at stations
+1 and 3. The intended directory is
+`results/development/nsc-discovery-confirmation-v1`. The CPU bound multiplies
+the stored nf512 pilot step and frame times by the step and sample counts
+and by the forecast factor 1.5. It does not assume the FFT speedup and it
+does not take a new step.
+
+`--prepare-resume --predecessor <old> --station 8` copies each latest
+authenticated chunk into a new directory. The old manifest and chunks stay
+byte-for-byte. The carried state, clocks, and work ledger are those bytes.
+The successor manifest records the new budget and a linear CPU bound from
+the predecessor's recorded child CPU. Station 8 is the accepted next
+station after the T=3 batch. The nf512 confirmation is the check on the
+late-time curvature difference before that extension. The curvature helper
+is unchanged while its analytic acceleration is under review.
+
+```sh
+python scripts/lab.py scripts/derive_nsc_discovery_episode.py --prepare-confirmation --output results/development/nsc-discovery-confirmation-v1
+python scripts/lab.py scripts/derive_nsc_discovery_episode.py --prepare-resume --predecessor results/development/nsc-discovery-episode-v1 --output results/development/nsc-discovery-station8-v1 --station 8
+```
+
 ## Not claimed
 
 The v1 record's own status is unchanged. Reaching a station is not a

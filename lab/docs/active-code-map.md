@@ -27,6 +27,9 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Exact hand-off, episode/checkpoints and process pool | [Episode note](nsc-discovery-episode.md); `src/recursive_horizons/nsc_discovery_episode.py`; `scripts/derive_nsc_discovery_episode.py` |
 | Regional diagnostics and saved-data atlas | [Observer note](nsc-discovery-observables.md); `src/recursive_horizons/nsc_discovery_observables.py`; `scripts/derive_nsc_discovery_atlas.py` |
 | Analytic full-state directional response | [Response note](nsc-discovery-response.md); `src/recursive_horizons/nsc_discovery_response.py` |
+| Coupled prediction at actual equal proper time | [Prediction](nsc-discovery-prediction.md); `src/recursive_horizons/nsc_discovery_prediction.py`; `scripts/derive_nsc_discovery_prediction.py` |
+| Prepared-source retention and moving gradient cuts | [Regions](nsc-discovery-regions.md); `src/recursive_horizons/nsc_discovery_regions.py`; `scripts/derive_nsc_discovery_regions.py` |
+| Initial source-selected scale | [Scale relation](nsc-discovery-scale.md); `src/recursive_horizons/nsc_discovery_scale.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before

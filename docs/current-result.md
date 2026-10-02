@@ -25,8 +25,8 @@ The accepted plan in the conversation is the task authority. The first
 implementation wave repairs evidence-writing, supplies an equivalent FFT
 backend and resumable episode runner, and adds regional observables,
 stability diagnostics and a coupled-response specification. Its first
-scientific batch continues the saved $T=0.3$ states toward $T=1,3$ with
-matched controls. No longer-time outcome has been measured yet.
+scientific batch continued the saved $T=0.3$ states through $T=1,3$ with
+matched controls. Its measured outcome is recorded below.
 
 Implementation owners are the [episode runner](../lab/docs/nsc-discovery-episode.md),
 [physical observer](../lab/docs/nsc-discovery-observables.md),
@@ -38,7 +38,7 @@ analytic directional-response checks pass. The pinned one-thread FFT
 benchmark is 12.95 times faster end to end at $n_f=256$.
 Intermediate states and regular scalar observations are retained; restart
 continues the saved clocks and accumulated work/transport channels.
-The first continuation batch is ready to run from a pinned checkpoint.
+The first continuation batch ran from numerical checkpoint `1c9e770`.
 
 Scientific batches use a six CPU-hour aggregate budget. Independent cases
 run in parallel on the Mac; Codex owns integration and one campaign
@@ -46,6 +46,31 @@ executor owns scientific launches. Regular-interior results are imported
 foundations, not a bounce-rediscovery campaign. The incoming gate stays
 paused. The publication target is one unified article after the central
 discovery chain; the existing papers and release remain preserved.
+
+### First discovery continuation
+
+All six cases reached $T=3$, using 277.186 aggregate child CPU seconds.
+The [campaign](../lab/results/development/nsc-discovery-episode-v1/manifest.json)
+retains immutable station states and the exact $T=0.3$ hand-off. At
+$n_f=256$, half-step coupled evolution gives:
+
+| Measurement | $T=0.3$ | $T=1$ | $T=3$ |
+|---|---:|---:|---:|
+| Child proper radial length | 2.375218 | 1.488905 | 0.00102044 |
+| Probability inside the fixed child collar | 1.276791 | 1.499940 | 0.00300920 |
+| Normal clock at $x=2$ | saved upstream clock | 1.102546 | 1.351988 |
+
+Radial contraction accompanies growing areal radius and field transport.
+This is not a demonstrated regenerative regime. Spatial and timestep
+comparisons resolve these large geometric and probability changes. Late
+curvature is more sensitive: at $T=3$, $128\to256$ changes the Weyl invariant
+by about 28 percent, whereas the child length changes by about 0.046 percent.
+An independent full-rate analytic acceleration agrees with the existing
+curvature helper; the discrepancy amplifies finite-band jet differences
+when $Q$ becomes small. Selected $n_f=512$ confirmation and four-metric
+tidal measurements address the remaining physical question. The frozen
+control holds geometry at its $T=0.3$ value; coordinate-time comparisons
+are not equal-proper-time comparisons.
 
 ## Completed finite parent–child pair, 2 October 2026
 

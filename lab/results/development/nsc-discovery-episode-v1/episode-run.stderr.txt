@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/derive_nsc_discovery_episode.py", line 71, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/derive_nsc_discovery_episode.py", line 62, in main
+    manifest = run(args.output, workers=args.workers, cpu_budget_seconds=args.cpu_budget,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_episode.py", line 1703, in run
+    with factory(int(workers)) as pool:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_episode.py", line 1701, in factory
+    return pool_factory(max_workers=max_workers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/concurrent/futures/process.py", line 747, in __init__
+    self._call_queue = _SafeQueue(
+                       ^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/concurrent/futures/process.py", line 177, in __init__
+    super().__init__(max_size, ctx=ctx)
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/multiprocessing/queues.py", line 43, in __init__
+    self._rlock = ctx.Lock()
+                  ^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/multiprocessing/context.py", line 68, in Lock
+    return Lock(ctx=self.get_context())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/multiprocessing/synchronize.py", line 169, in __init__
+    SemLock.__init__(self, SEMAPHORE, 1, 1, ctx=ctx)
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.12/multiprocessing/synchronize.py", line 57, in __init__
+    sl = self._semlock = _multiprocessing.SemLock(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+        0.37 real         0.29 user         0.07 sys
+           107167744  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               15360  page reclaims
+                 150  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  10  voluntary context switches
+                  30  involuntary context switches
+           178836448  instructions retired
+            74140121  cycles elapsed
+             8864248  peak memory footprint
+EXIT:1

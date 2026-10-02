@@ -1,0 +1,254 @@
+{
+  "ambient_unbound": {
+    "lab/src/recursive_horizons/nsc_discovery_prediction.py": {
+      "bound_numerical_dependency": false,
+      "bytes": 45741,
+      "loaded_by_this_process": false,
+      "sha256": "3ffcf307358b3efe209b4873fd134b894806cc065ecb615d73302865054bb6f1"
+    }
+  },
+  "atlas_declared_dependencies_sha256": {
+    "backend": {
+      "scripts/derive_nsc_spherical_conformal_curvature.py": "97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+      "src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+      "src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+      "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+    },
+    "consumer": {
+      "scripts/derive_nsc_spherical_conformal_frames.py": "e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f"
+    },
+    "core": {
+      "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+      "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+      "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+      "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+    },
+    "observer": {
+      "src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea"
+    },
+    "producer": {
+      "scripts/derive_nsc_discovery_atlas.py": "7713d1f64947f88d06305ced587c7db9cd798b9dc9e9f493a9f1f46e4f85848f"
+    }
+  },
+  "backend_auto_selection": "fft",
+  "bytes_of_sealed_inputs_rewritten": false,
+  "commit_subject": "Prepare discovery evolution with FFT, exact handoffs and coupled response",
+  "covers": "Every immutable checkpoint later committed in this directory by derive_nsc_discovery_episode.py. Those chunk records do not store producing_commit; this envelope is their commit binding.",
+  "drivers_imported": [
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/derive_nsc_discovery_atlas.py",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/derive_nsc_discovery_episode.py",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_episode.py"
+  ],
+  "evolution_performed": false,
+  "frames_consumer_sha256": "e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+  "head": "1c9e7705c53e123497ffd40f94fb365e250e8e79",
+  "head_is_requested_checkpoint": true,
+  "import_closure_sha256": {
+    "lab/scripts/derive_nsc_discovery_atlas.py": "7713d1f64947f88d06305ced587c7db9cd798b9dc9e9f493a9f1f46e4f85848f",
+    "lab/scripts/derive_nsc_discovery_episode.py": "841a898849d4f432f462faf226f9bf7f05bbf46943bf17d51b0b3b4e609778c1",
+    "lab/scripts/derive_nsc_spherical_conformal_continuation.py": "d59cd45bf43a57f502faeabf2ec57262bc1315e777c87da980bfc803d3e61111",
+    "lab/scripts/derive_nsc_spherical_conformal_curvature.py": "97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b",
+    "lab/scripts/derive_nsc_spherical_conformal_episode.py": "7bfb0be78421466135a839ada90ad22795acc329bed83afd86f910a988d4f03e",
+    "lab/scripts/derive_nsc_spherical_conformal_frames.py": "e9cdeabc5aeab7cfb8042d58b1485fea0a7a20c1c8dee1af9ccd1363cb6b3f7f",
+    "lab/scripts/derive_nsc_spherical_feedback_episode.py": "efd72cc21bf71058599a64303889deba01c6017798f2dfb44cef51f380c2511a",
+    "lab/src/recursive_horizons/__init__.py": "9e0819d34a855a852a9178e307b56f5c372d4778a8ea54c2afa83a556356e675",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "595fe4779e22a5c174b04097e1cb8e3bdb4bc3d599d183717de3e93f86b7c696",
+    "lab/src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4"
+  },
+  "interpreter": {
+    "executable": "/Users/admin/Documents/BlackHoles-Infinity/.venv/validation/bin/python",
+    "numpy": "2.5.1",
+    "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:38:15) [Clang 20.1.8 ]",
+    "scipy": "1.17.1"
+  },
+  "lazy_import_errors": {},
+  "modules_loaded_for_binding": [
+    "derive_nsc_discovery_atlas",
+    "derive_nsc_discovery_episode",
+    "derive_nsc_spherical_conformal_continuation",
+    "derive_nsc_spherical_conformal_curvature",
+    "derive_nsc_spherical_conformal_episode",
+    "derive_nsc_spherical_conformal_frames",
+    "derive_nsc_spherical_feedback_episode",
+    "recursive_horizons",
+    "recursive_horizons.nsc_adm_source",
+    "recursive_horizons.nsc_conformal_adm_source",
+    "recursive_horizons.nsc_covariant_operator",
+    "recursive_horizons.nsc_discovery_backend",
+    "recursive_horizons.nsc_discovery_episode",
+    "recursive_horizons.nsc_discovery_observables",
+    "recursive_horizons.nsc_evolving_reduction",
+    "recursive_horizons.nsc_influence",
+    "recursive_horizons.nsc_nested_parent_child",
+    "recursive_horizons.nsc_nested_qualities",
+    "recursive_horizons.nsc_regional_energy_exchange",
+    "recursive_horizons.nsc_regulated",
+    "recursive_horizons.nsc_spherical_coupling",
+    "recursive_horizons.nsc_spherical_episode_assessment",
+    "recursive_horizons.nsc_spherical_feedback_action",
+    "recursive_horizons.nsc_spherical_galerkin_coupling",
+    "recursive_horizons.provenance"
+  ],
+  "numerical_thread_count": 1,
+  "observer_resolution": {
+    "function_bound": true,
+    "module": "recursive_horizons.nsc_discovery_observables",
+    "notes": []
+  },
+  "producers": {
+    "action": {
+      "src/recursive_horizons/nsc_spherical_feedback_action.py": {
+        "bytes": 37269,
+        "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+      }
+    },
+    "backend": {
+      "src/recursive_horizons/nsc_discovery_backend.py": {
+        "bytes": 31399,
+        "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa"
+      },
+      "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": {
+        "bytes": 61141,
+        "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+      }
+    },
+    "basis": {
+      "scripts/derive_nsc_nested_parent_child_replay_basis.py": {
+        "bytes": 7558,
+        "sha256": "c9fc646edcf922ac315282709399d14a647b26e41e7725a73fc76f8666536d72"
+      }
+    },
+    "core": {
+      "src/recursive_horizons/nsc_conformal_adm_source.py": {
+        "bytes": 23728,
+        "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+      },
+      "src/recursive_horizons/nsc_covariant_operator.py": {
+        "bytes": 17589,
+        "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
+      },
+      "src/recursive_horizons/nsc_evolving_reduction.py": {
+        "bytes": 48154,
+        "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d"
+      },
+      "src/recursive_horizons/nsc_nested_parent_child.py": {
+        "bytes": 37305,
+        "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b"
+      },
+      "src/recursive_horizons/nsc_nested_qualities.py": {
+        "bytes": 3126,
+        "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1"
+      },
+      "src/recursive_horizons/nsc_spherical_coupling.py": {
+        "bytes": 58981,
+        "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5"
+      }
+    },
+    "curvature": {
+      "scripts/derive_nsc_spherical_conformal_curvature.py": {
+        "bytes": 8102,
+        "sha256": "97d5dae9f58c9896bf9878bd6a9366f84800d0e23a178952a0d957e93023398b"
+      },
+      "src/recursive_horizons/nsc_spherical_episode_assessment.py": {
+        "bytes": 60250,
+        "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1"
+      }
+    },
+    "discovery": {
+      "scripts/derive_nsc_discovery_atlas.py": {
+        "bytes": 29855,
+        "sha256": "7713d1f64947f88d06305ced587c7db9cd798b9dc9e9f493a9f1f46e4f85848f"
+      },
+      "scripts/derive_nsc_discovery_episode.py": {
+        "bytes": 3242,
+        "sha256": "841a898849d4f432f462faf226f9bf7f05bbf46943bf17d51b0b3b4e609778c1"
+      },
+      "src/recursive_horizons/nsc_discovery_episode.py": {
+        "bytes": 89075,
+        "sha256": "595fe4779e22a5c174b04097e1cb8e3bdb4bc3d599d183717de3e93f86b7c696"
+      }
+    },
+    "observer": {
+      "src/recursive_horizons/nsc_discovery_observables.py": {
+        "bytes": 38906,
+        "sha256": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea"
+      }
+    },
+    "regional": {
+      "src/recursive_horizons/nsc_regional_energy_exchange.py": {
+        "bytes": 45471,
+        "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7"
+      }
+    }
+  },
+  "producing_commit": "1c9e7705c53e123497ffd40f94fb365e250e8e79",
+  "producing_commit_abbreviation": "1c9e770",
+  "production_beyond_T3": false,
+  "purpose": "immutable binding for the stage-1 atlas and stage-2 episode chunks",
+  "runner_chunks_omit_producing_commit": true,
+  "saved_inputs": {
+    "results/development/nsc-nested-parent-child-confirmation-v2.json": {
+      "bytes": 457809,
+      "sha256": "6a09a16a52f637e6ca962cb0e1d6a9d51ba98a579287fb8090b0c90c67f62b6c"
+    },
+    "results/development/nsc-nested-parent-child-confirmation-v2.npz": {
+      "bytes": 7258005,
+      "sha256": "2d0c66007cc931fe9c9386ae155f638047ea076a7b2be36775df1049ec886f8d"
+    },
+    "results/development/nsc-nested-parent-child-replay-basis-v1.json": {
+      "bytes": 20168,
+      "sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c"
+    },
+    "results/development/nsc-nested-parent-child-replay-basis-v1.npz": {
+      "bytes": 2660912,
+      "sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc"
+    },
+    "results/development/nsc-nested-parent-child-v1.json": {
+      "bytes": 2513866,
+      "sha256": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac"
+    },
+    "results/development/nsc-nested-parent-child-v1.npz": {
+      "bytes": 15854677,
+      "sha256": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead"
+    },
+    "results/development/nsc-spherical-conformal-episode-v2.json": {
+      "bytes": 3775135,
+      "sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d"
+    },
+    "results/development/nsc-spherical-conformal-episode-v2.npz": {
+      "bytes": 53100722,
+      "sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877"
+    }
+  },
+  "schema": "NSC-DISCOVERY-RUN-BINDING-v1",
+  "stations_this_wave": [
+    1.0,
+    3.0
+  ],
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "watched_producer_and_input_porcelain": [],
+  "worktree_porcelain": [
+    "?? lab/src/recursive_horizons/nsc_discovery_prediction.py"
+  ]
+}

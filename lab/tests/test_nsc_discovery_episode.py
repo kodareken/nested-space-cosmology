@@ -496,6 +496,92 @@ def test_station_midpoint_retention_and_ledger_restart(tmp_path, manufactured):
                                 "observation_over_step": observation_cpu / step_cpu})
 
 
+def test_nf512_confirmation_handoff_is_exact_and_forecast_is_bounded(tmp_path, monkeypatch):
+    def forbid(*_args, **_kwargs):
+        raise AssertionError("confirmation handoff started a new solve or a new basis")
+
+    monkeypatch.setattr(model, "initial_state", forbid)
+    monkeypatch.setattr(model, "build_pair", forbid)
+    monkeypatch.setattr(model, "solve_initial_radius_successor", forbid)
+    monkeypatch.setattr(model, "rk4_step", forbid)
+    handoff = episode.load_confirmation_handoff()
+    assert handoff["initial_state_called"] is False
+    assert handoff["build_pair_called"] is False
+    assert handoff["nf"] == 512
+    pins = handoff["pins"]
+    assert pins["source_record"] == episode.CONFIRMATION_RECORD
+    assert "v1_json_sha256" not in pins and "v1_npz_sha256" not in pins
+    with np.load(episode.CONFIRMATION_NPZ, allow_pickle=False) as saved, np.load(episode.BASIS_NPZ, allow_pickle=False) as basis:
+        for name in ("Q", "r", "chi", "phi0", "phi1"):
+            assert np.array_equal(getattr(handoff["state"], name), saved["nf512_baseline_dt0.0005_" + name][-1])
+        assert np.array_equal(handoff["state"].p_Q, saved["nf512_baseline_dt0.0005_p_Q"][-1])
+        assert np.array_equal(handoff["W"], basis["nf512_W"])
+        assert np.array_equal(handoff["observer_columns"], basis["nf512_reference_columns"])
+        assert not np.array_equal(handoff["state"].phi0, saved["nf512_baseline_dt0.0005_phi0"][0])
+    assert episode.state_sha256(handoff["state"]) == pins["final_state_sha256"]
+    forecast = episode.confirmation_cost_forecast()
+    assert forecast["new_trajectory_measured"] is False
+    assert forecast["fft_speedup_assumed"] is False
+    assert 0.0 < forecast["forecast_cpu_seconds"] <= episode.DEFAULT_CPU_BUDGET_SECONDS
+    assert [item["case_id"] for item in forecast["cases"]] == [spec["case_id"] for spec in episode.confirmation_specs()]
+    directory = tmp_path / "confirmation"
+    manifest = episode.prepare_confirmation(directory)
+    assert manifest["campaign"] == episode.CONFIRMATION_OUTPUT_NAME
+    assert manifest["source_record"] == episode.CONFIRMATION_RECORD
+    assert manifest["evolved"] is False
+    assert manifest["stations"] == [1.0, 3.0]
+    assert [case["case_id"] for case in manifest["cases"]] == [
+        "nf512_coupled_dt0.001", "nf512_coupled_dt0.0005", "nf512_frozen_geometry_dt0.0005",
+    ]
+    record, arrays = episode.load_checkpoint(directory, "nf512_coupled_dt0.001")
+    assert record["step_cap"] == pytest.approx(0.001)
+    assert record["parent_case"] == "nf512_baseline_dt0.0005"
+    assert np.array_equal(arrays["phi0"], handoff["state"].phi0)
+    assert np.array_equal(arrays["W"], handoff["W"])
+    report = episode.check(directory)
+    assert report["ok"] is True and report["evolved"] is False
+
+
+def test_station_resume_carries_last_chunk_and_does_not_edit_it(tmp_path, manufactured):
+    pair, state = manufactured
+    source = tmp_path / "predecessor"
+    _write_case(source, pair, state)
+    record, arrays = episode.load_checkpoint(source, "manufactured")
+    record = dict(record)
+    record.update(coordinate_time=3.0, steps=4, stations_reached=[1.0, 3.0], snapshot_kind="station",
+                  work_ledger={"coordinate_fieldwork": 1.25, "pressure_work": 0.5, "lapse_work": -0.25,
+                               "boundary_child": 0.125, "boundary_parent": -0.0625,
+                               "quadrature": "trapezoid_coordinate_time", "control_mode": "coupled",
+                               "dense_propagator_stored": False})
+    arrays = dict(arrays)
+    arrays["normal_clocks"] = np.array([0.2, 0.4, 0.8])
+    arrays["clock_rates"] = np.array([1.5, 1.25, 1.125])
+    episode.commit_checkpoint(source, record, arrays)
+    manifest = json.loads((source / "manifest.json").read_text())
+    manifest["child_cpu_seconds"] = 277.0
+    (source / "manifest.json").write_text(json.dumps(manifest))
+    before = {path.name: path.read_bytes() for path in source.iterdir() if path.is_file()}
+    successor = episode.prepare_station_resume(source, tmp_path / "station8", station=8.0, cpu_budget_seconds=100.0)
+    after = {path.name: path.read_bytes() for path in source.iterdir() if path.is_file()}
+    assert before == after
+    assert successor["cpu_budget_seconds"] == 100.0
+    assert successor["stations"] == [1.0, 3.0, 8.0]
+    assert successor["evolved"] is False
+    assert successor["cost_forecast"]["new_trajectory_measured"] is False
+    assert successor["cost_forecast"]["forecast_cpu_seconds"] == pytest.approx(1.5 * 277.0 * 5.0 / 2.7)
+    loaded, copied = episode.load_checkpoint(tmp_path / "station8", "manufactured")
+    assert loaded["coordinate_time"] == pytest.approx(3.0)
+    assert loaded["stations"] == [1.0, 3.0, 8.0]
+    assert loaded["work_ledger"]["coordinate_fieldwork"] == pytest.approx(1.25)
+    assert loaded["predecessor_chunk"]["coordinate_time"] == pytest.approx(3.0)
+    assert np.array_equal(copied["Q"], arrays["Q"])
+    assert np.array_equal(copied["normal_clocks"], arrays["normal_clocks"])
+    assert np.array_equal(copied["clock_rates"], arrays["clock_rates"])
+    assert np.array_equal(copied["phi0"], arrays["phi0"])
+    with pytest.raises(PermissionError):
+        episode.prepare_station_resume(source, source, station=8.0)
+
+
 def test_saved_state_two_steps_frozen_jets_and_auto_backend(tmp_path, monkeypatch):
     def forbid(*_args, **_kwargs):
         raise AssertionError("handoff or restart started a new solve")

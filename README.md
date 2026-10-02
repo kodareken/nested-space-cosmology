@@ -6,6 +6,11 @@ physical regime classification and a predictive local response. The target
 is one unified article. Existing papers below are preserved while this
 successor is developed. [Execution status](docs/current-result.md#active-discovery-programme-2-october-2026).
 
+The first longer continuation reaches $T=3$: the fixed child collar gains
+then loses field probability, while its proper radial length contracts and
+areal radius grows. Late curvature needs the selected confirmation described
+in the [current result](docs/current-result.md#first-discovery-continuation).
+
 **Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
 presents the measured finite spherical realization, source controls, actual
 metric curvature, and a local response on the same generated trajectory.

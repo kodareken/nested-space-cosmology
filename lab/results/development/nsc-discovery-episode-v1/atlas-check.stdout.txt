@@ -1,0 +1,249 @@
+{
+  "schema": "NSC-DISCOVERY-ATLAS-CHECK-v1",
+  "api_version": "nsc-discovery-observe-v1",
+  "writer_executed": false,
+  "evolution_performed": false,
+  "trajectories_loaded": false,
+  "npz_arrays_opened": false,
+  "observe_called": false,
+  "metadata_distinct": true,
+  "output": "results/development/nsc-discovery-atlas-v1.json",
+  "output_exists": true,
+  "preparations": [
+    {
+      "name": "original_conformal_v2",
+      "schema": "NSC-SPHERICAL-CONFORMAL-EPISODE-v2",
+      "gauge": "conformal",
+      "source_layout": null,
+      "status": null,
+      "parent_interval": null,
+      "child_interval": null,
+      "json": "results/development/nsc-spherical-conformal-episode-v2.json",
+      "npz": "results/development/nsc-spherical-conformal-episode-v2.npz",
+      "json_sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+      "npz_sha256": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+      "payload_sha256_matches": true,
+      "fingerprint": [
+        "\"NSC-SPHERICAL-CONFORMAL-EPISODE-v2\"",
+        "\"conformal\"",
+        "null",
+        "null",
+        "null",
+        "null"
+      ],
+      "frozen_geometry_comparison": {
+        "status": "missing",
+        "control": null,
+        "reason": "the original conformal episode is not a nested pair and has no frozen W control",
+        "saved_control_applied": false,
+        "svd_reconstructed": false,
+        "saved_validation_svd_reconstructed": null,
+        "saved_maximum_metric_gap": null,
+        "hash_matches_saved_control": null
+      },
+      "trajectory_arrays_copied": false
+    },
+    {
+      "name": "separated_pair_v1",
+      "schema": "NSC-NESTED-PARENT-CHILD-v1",
+      "gauge": null,
+      "source_layout": "separated",
+      "status": "INCOMPLETE",
+      "parent_interval": [
+        0.0,
+        4.0
+      ],
+      "child_interval": [
+        1.0,
+        3.0
+      ],
+      "json": "results/development/nsc-nested-parent-child-v1.json",
+      "npz": "results/development/nsc-nested-parent-child-v1.npz",
+      "json_sha256": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+      "npz_sha256": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead",
+      "payload_sha256_matches": true,
+      "fingerprint": [
+        "\"NSC-NESTED-PARENT-CHILD-v1\"",
+        "null",
+        "\"separated\"",
+        "\"INCOMPLETE\"",
+        "[0.0, 4.0]",
+        "[1.0, 3.0]"
+      ],
+      "frozen_geometry_comparison": {
+        "status": "saved_control",
+        "control": "nsc-nested-parent-child-replay-basis-v1",
+        "reason": "compare this sealed nested-pair record only through the saved replay basis",
+        "saved_control_applied": true,
+        "svd_reconstructed": false,
+        "saved_validation_svd_reconstructed": false,
+        "saved_maximum_metric_gap": 0.0,
+        "hash_matches_saved_control": true
+      },
+      "trajectory_arrays_copied": false
+    },
+    {
+      "name": "separated_pair_v2",
+      "schema": "NSC-NESTED-PARENT-CHILD-CONFIRMATION-v2",
+      "gauge": null,
+      "source_layout": null,
+      "status": "MEASURED_CONFIRMED_NESTED_PAIR",
+      "parent_interval": null,
+      "child_interval": null,
+      "json": "results/development/nsc-nested-parent-child-confirmation-v2.json",
+      "npz": "results/development/nsc-nested-parent-child-confirmation-v2.npz",
+      "json_sha256": "6a09a16a52f637e6ca962cb0e1d6a9d51ba98a579287fb8090b0c90c67f62b6c",
+      "npz_sha256": "2d0c66007cc931fe9c9386ae155f638047ea076a7b2be36775df1049ec886f8d",
+      "payload_sha256_matches": true,
+      "fingerprint": [
+        "\"NSC-NESTED-PARENT-CHILD-CONFIRMATION-v2\"",
+        "null",
+        "null",
+        "\"MEASURED_CONFIRMED_NESTED_PAIR\"",
+        "null",
+        "null"
+      ],
+      "frozen_geometry_comparison": {
+        "status": "saved_control",
+        "control": "nsc-nested-parent-child-replay-basis-v1",
+        "reason": "compare this sealed nested-pair record only through the saved replay basis",
+        "saved_control_applied": true,
+        "svd_reconstructed": false,
+        "saved_validation_svd_reconstructed": false,
+        "saved_maximum_metric_gap": 0.0,
+        "hash_matches_saved_control": true
+      },
+      "trajectory_arrays_copied": false
+    },
+    {
+      "name": "frozen_basis",
+      "schema": "NSC-NESTED-PARENT-CHILD-REPLAY-BASIS-v1",
+      "gauge": null,
+      "source_layout": null,
+      "status": null,
+      "parent_interval": null,
+      "child_interval": null,
+      "json": "results/development/nsc-nested-parent-child-replay-basis-v1.json",
+      "npz": "results/development/nsc-nested-parent-child-replay-basis-v1.npz",
+      "json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+      "npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+      "payload_sha256_matches": true,
+      "fingerprint": [
+        "\"NSC-NESTED-PARENT-CHILD-REPLAY-BASIS-v1\"",
+        "null",
+        "null",
+        "null",
+        "null",
+        "null"
+      ],
+      "frozen_geometry_comparison": {
+        "status": "saved_control",
+        "control": "nsc-nested-parent-child-replay-basis-v1",
+        "reason": "this record is the saved geometry control",
+        "saved_control_applied": true,
+        "svd_reconstructed": false,
+        "saved_validation_svd_reconstructed": false,
+        "saved_maximum_metric_gap": 0.0,
+        "hash_matches_saved_control": true
+      },
+      "trajectory_arrays_copied": false
+    },
+    {
+      "name": "new_pair",
+      "schema": null,
+      "input_record": false,
+      "frozen_geometry_comparison": {
+        "status": "missing",
+        "control": null,
+        "reason": "a newly built pair has no saved frozen-geometry control",
+        "saved_control_applied": false,
+        "svd_reconstructed": false
+      },
+      "trajectory_arrays_copied": false
+    }
+  ],
+  "baseline_shapes": {
+    "original_conformal_v2:nf256_dt_0.0005": {
+      "frames": 51,
+      "final_time": 0.3,
+      "phi": [
+        51,
+        256,
+        6
+      ]
+    },
+    "original_conformal_v2:nf512_dt_0.0005": {
+      "frames": 51,
+      "final_time": 0.3,
+      "phi": [
+        51,
+        512,
+        6
+      ]
+    },
+    "separated_pair_v1:nf256_baseline_dt0.0005": {
+      "frames": 31,
+      "final_time": 0.3,
+      "phi": [
+        31,
+        256,
+        6
+      ]
+    },
+    "separated_pair_v2:nf512_baseline_dt0.0005": {
+      "frames": 31,
+      "final_time": 0.3,
+      "phi": [
+        31,
+        512,
+        6
+      ]
+    }
+  },
+  "saved_frame": {
+    "time": 0.3,
+    "count": 1024,
+    "channels": {
+      "normal_energy": {
+        "raw_sum": 10.107492118877243,
+        "reference_window": 10.107492118877243,
+        "reported": 10.107492118877243
+      },
+      "coordinate_metric_work": {
+        "raw_sum": 8.939674986461098e-05,
+        "reference_window": 8.939674986461093e-05,
+        "reported": 8.939674986461093e-05
+      },
+      "flux_shift": {
+        "raw_sum": 0.0,
+        "reference_window": 0.0,
+        "reported": 0.0
+      },
+      "flux_proper": {
+        "raw_sum": 3.0493592522579105e-07,
+        "reference_window": 3.0493592579118644e-07,
+        "reported": 3.0493592579118644e-07
+      },
+      "flux_shift_pressure": {
+        "raw_sum": 0.0,
+        "reference_window": 0.0,
+        "reported": 0.0
+      }
+    },
+    "momentum_conversion_gap": 0.0,
+    "frozen_Q_dot_max": 0.0,
+    "frozen_coordinate_metric_work_total": 0.0,
+    "frozen_child_lapse_work": 0.06001596961137798,
+    "coupled_child_lapse_work": 0.06001596961137798,
+    "coupled_child_r_mean": 4.792965466883162,
+    "frozen_child_r_mean": 4.792965466883162,
+    "coupled_Q_dot_max": 0.014346522451203244
+  },
+  "successor": {
+    "authenticated": true,
+    "series": 4,
+    "producing_commit": "1c9e7705c53e123497ffd40f94fb365e250e8e79",
+    "dirty_files": {},
+    "rewritten": false
+  }
+}

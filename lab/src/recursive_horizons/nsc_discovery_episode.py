@@ -75,8 +75,14 @@ LAB = _MODULE.parents[2]
 REPO = _MODULE.parents[3]
 V1_JSON = LAB / "results/development/nsc-nested-parent-child-v1.json"
 V1_NPZ = LAB / "results/development/nsc-nested-parent-child-v1.npz"
+CONFIRMATION_JSON = LAB / "results/development/nsc-nested-parent-child-confirmation-v2.json"
+CONFIRMATION_NPZ = LAB / "results/development/nsc-nested-parent-child-confirmation-v2.npz"
 BASIS_JSON = LAB / "results/development/nsc-nested-parent-child-replay-basis-v1.json"
 BASIS_NPZ = LAB / "results/development/nsc-nested-parent-child-replay-basis-v1.npz"
+V1_RECORD = "nsc-nested-parent-child-v1"
+CONFIRMATION_RECORD = "nsc-nested-parent-child-confirmation-v2"
+CONFIRMATION_CASE = "nf512_baseline_dt0.0005"
+CONFIRMATION_OUTPUT_NAME = "nsc-discovery-confirmation-v1"
 BASELINE_CASES = (
     "nf128_baseline_dt0.001",
     "nf128_baseline_dt0.0005",
@@ -120,6 +126,24 @@ def baseline_case_ids(include_frozen=True):
     return tuple(spec["case_id"] for spec in first_batch_specs(include_frozen=include_frozen))
 
 
+def confirmation_specs():
+    """Three nf512 cases from the one stored dt=0.0005 T=0.3 confirmation state."""
+    parent = CONFIRMATION_CASE
+    specs = []
+    for cap in (STEP_CAP, MATCHED_STEP_CAP):
+        specs.append({
+            "case_id": f"nf512_coupled_dt{_cap_token(cap)}",
+            "parent_case": parent, "nf": 512, "control_mode": "coupled",
+            "geometry": "evolving", "step_cap": cap,
+        })
+    specs.append({
+        "case_id": "nf512_frozen_geometry_dt0.0005",
+        "parent_case": parent, "nf": 512, "control_mode": "frozen_geometry",
+        "geometry": "frozen", "step_cap": MATCHED_STEP_CAP,
+    })
+    return tuple(specs)
+
+
 def normalize_stations(stations=None):
     if stations is None:
         values = DEFAULT_STATIONS
@@ -142,7 +166,10 @@ def assert_campaign_output(path):
     ban is not the rule. Chunk publication still uses exclusive creates.
     """
     resolved = Path(path).expanduser().resolve()
-    sealed = {V1_JSON.resolve(), V1_NPZ.resolve(), BASIS_JSON.resolve(), BASIS_NPZ.resolve()}
+    sealed = {
+        V1_JSON.resolve(), V1_NPZ.resolve(), CONFIRMATION_JSON.resolve(),
+        CONFIRMATION_NPZ.resolve(), BASIS_JSON.resolve(), BASIS_NPZ.resolve(),
+    }
     if resolved in sealed or any(parent in sealed for parent in resolved.parents):
         raise PermissionError("refusing to write a sealed scientific record: " + str(resolved))
     if resolved.is_file():
@@ -1341,8 +1368,11 @@ def load_saved_handoff(case_name):
         "protocol": case["summary"]["clock_protocol"],
     }
     pins = {
+        "source_record": V1_RECORD,
         "v1_json_sha256": file_sha256(V1_JSON),
         "v1_npz_sha256": v1["payload_sha256"],
+        "record_json_sha256": file_sha256(V1_JSON),
+        "record_npz_sha256": v1["payload_sha256"],
         "basis_json_sha256": file_sha256(BASIS_JSON),
         "basis_npz_sha256": basis["payload_sha256"],
         "final_state_sha256": case["summary"]["final_state_sha256"],
@@ -1360,6 +1390,125 @@ def load_saved_handoff(case_name):
             "geometry_metadata": entry["geometry"], "pins": pins,
             "initial_state_called": False, "build_pair_called": False,
             "momentum_representation": CANONICAL_PI}
+
+
+def load_confirmation_handoff(case_name=CONFIRMATION_CASE):
+    """Exact nf512 T=0.3 state from confirmation v2 and frozen W. No new solve."""
+    if case_name != CONFIRMATION_CASE:
+        raise ValueError("the confirmation handoff is the stored nf512 baseline dt=0.0005")
+    record = json.loads(CONFIRMATION_JSON.read_text())
+    basis = json.loads(BASIS_JSON.read_text())
+    payload_sha = file_sha256(CONFIRMATION_NPZ)
+    if payload_sha != record["payload_sha256"]:
+        raise ValueError("confirmation payload does not match its record")
+    if file_sha256(BASIS_NPZ) != basis["payload_sha256"]:
+        raise ValueError("frozen replay basis payload does not match its record")
+    case = record["results"][case_name]
+    if int(case["nf"]) != 512 or abs(float(case["summary"]["final"]["time"]) - HANDOFF_TIME) > 1e-12:
+        raise ValueError("stored confirmation baseline is not nf512 at T=0.3")
+    entry = basis["bases"]["512"]
+    with np.load(CONFIRMATION_NPZ, allow_pickle=False) as episode, np.load(BASIS_NPZ, allow_pickle=False) as frozen:
+        fields = {name: np.array(episode[case_name + "_" + name][-1], copy=True) for name in model.STATE_NAMES}
+        times = np.array(episode[case_name + "_times"], copy=True)
+        observer = np.array(episode[case_name + "_reference_columns"], copy=True)
+        basis_w = np.array(frozen["nf512_W"], copy=True)
+        basis_observer = np.array(frozen["nf512_reference_columns"], copy=True)
+        basis_source = np.array(frozen["nf512_source_columns"], copy=True)
+    if abs(float(times[-1]) - HANDOFF_TIME) > 1e-12:
+        raise ValueError("confirmation time array does not end at T=0.3")
+    if not np.array_equal(observer, basis_observer):
+        raise ValueError("confirmation observer and frozen nf512 basis observer differ")
+    state = model.NestedState(*(fields[name] for name in model.STATE_NAMES))
+    if state_sha256(state) != case["summary"]["final_state_sha256"]:
+        raise ValueError("confirmation final state does not match its pin")
+    weights = np.array(case["source"]["occupations"], dtype=float)
+    clocks = {
+        "locations": list(case["summary"]["final"]["metrics"]["clock_locations"]),
+        "rates": list(case["summary"]["final"]["metrics"]["clock_rates"]),
+        "normal_clocks": list(case["summary"]["normal_clocks"][-1]),
+        "protocol": case["summary"]["clock_protocol"],
+    }
+    pins = {
+        "source_record": CONFIRMATION_RECORD,
+        "record_json_sha256": file_sha256(CONFIRMATION_JSON),
+        "record_npz_sha256": payload_sha,
+        "basis_json_sha256": file_sha256(BASIS_JSON),
+        "basis_npz_sha256": basis["payload_sha256"],
+        "final_state_sha256": case["summary"]["final_state_sha256"],
+        "source_columns_sha256": array_sha256(basis_source),
+        "observer_columns_sha256": array_sha256(basis_observer),
+        "W_sha256": array_sha256(basis_w),
+        "weights_sha256": array_sha256(weights),
+        "phi_sha256": array_sha256(np.vstack((state.phi0, state.phi1))),
+    }
+    return {"case_name": case_name, "nf": 512, "step_cap": _canonical_cap(case["step_cap"]),
+            "state": state, "W": basis_w, "observer_columns": basis_observer,
+            "source_columns": basis_source, "weights": weights, "clocks": clocks,
+            "coarse_indices": entry["coarse_indices"], "child_indices": entry["child_indices"],
+            "parent_indices": entry["parent_indices"], "source_metadata": entry["source"],
+            "geometry_metadata": entry["geometry"], "pins": pins,
+            "initial_state_called": False, "build_pair_called": False,
+            "momentum_representation": CANONICAL_PI}
+
+
+def confirmation_cost_forecast(stations=None, *, forecast_factor=DEFAULT_FORECAST_FACTOR,
+                               observation_cadence=OBSERVATION_CADENCE):
+    """CPU bound for the three nf512 cases. Uses the stored pilot, not a new step.
+
+    The confirmation record measured one nf512 baseline RK4 step and one frame.
+    FFT speedup is not assumed. The factor is the campaign forecast factor.
+    """
+    selected = normalize_stations(DEFAULT_STATIONS if stations is None else stations)
+    record = json.loads(CONFIRMATION_JSON.read_text())
+    pilot = record["forecasts"][CONFIRMATION_CASE]
+    step_cpu = float(pilot["step_cpu_seconds"])
+    frame_cpu = float(pilot["frame_cpu_seconds"])
+    if step_cpu <= 0.0 or frame_cpu <= 0.0:
+        raise ValueError("stored nf512 pilot has no positive CPU sample")
+    span = float(selected[-1] - HANDOFF_TIME)
+    samples = int(math.floor(span / float(observation_cadence) + 1e-12)) + 1
+    cases = []
+    for spec in confirmation_specs():
+        steps = int(math.ceil(span / float(spec["step_cap"]) - 1e-12))
+        raw = steps * step_cpu + samples * frame_cpu
+        cases.append({
+            "case_id": spec["case_id"], "step_cap": spec["step_cap"], "estimated_steps": steps,
+            "observation_samples": samples, "raw_cpu_seconds": raw,
+            "forecast_cpu_seconds": float(forecast_factor) * raw,
+        })
+    total = float(sum(item["forecast_cpu_seconds"] for item in cases))
+    return {
+        "method": "stored_nf512_pilot_step_and_frame_times_forecast_factor",
+        "new_trajectory_measured": False,
+        "fft_speedup_assumed": False,
+        "pilot_step_cpu_seconds": step_cpu,
+        "pilot_frame_cpu_seconds": frame_cpu,
+        "forecast_factor": float(forecast_factor),
+        "stations": list(selected),
+        "cases": cases,
+        "forecast_cpu_seconds": total,
+        "within_default_budget": bool(total <= DEFAULT_CPU_BUDGET_SECONDS),
+    }
+
+
+def resume_cost_forecast(predecessor_cpu_seconds, time_completed, station, *,
+                         forecast_factor=DEFAULT_FORECAST_FACTOR, handoff_time=HANDOFF_TIME):
+    """Linear bound from recorded child CPU. It does not run a new step."""
+    done = float(time_completed) - float(handoff_time)
+    ahead = float(station) - float(time_completed)
+    cpu = float(predecessor_cpu_seconds)
+    if done <= 0.0 or ahead <= 0.0 or cpu < 0.0:
+        raise ValueError("resume forecast needs recorded CPU and a later station")
+    raw = cpu * ahead / done
+    return {
+        "method": "linear_extrapolation_of_recorded_child_cpu",
+        "new_trajectory_measured": False,
+        "forecast_factor": float(forecast_factor),
+        "predecessor_cpu_seconds": cpu,
+        "time_completed": float(time_completed),
+        "station": float(station),
+        "forecast_cpu_seconds": float(forecast_factor) * raw,
+    }
 
 
 def _case_record(handoff, *, case_id, control_mode, step_cap, stations):
@@ -1398,8 +1547,8 @@ def _arrays_for_handoff(handoff):
     }, clocks={"rates": handoff["clocks"]["rates"], "normal_clocks": handoff["clocks"]["normal_clocks"]})
 
 
-def prepare(output, *, stations=None, include_frozen=True):
-    """Stage 0. Write exact handoff chunks. Do not evolve."""
+def _prepare_campaign(output, specs, loader, stations, manifest_extra=None):
+    """Write handoff chunks for an existing spec list. Do not evolve."""
     directory = assert_campaign_output(output)
     if _manifest_path(directory).exists():
         raise FileExistsError("campaign output already exists; refusing to overwrite")
@@ -1407,9 +1556,9 @@ def prepare(output, *, stations=None, include_frozen=True):
     selected = normalize_stations(stations)
     cases = []
     handoffs = {}
-    for spec in first_batch_specs(include_frozen=include_frozen):
+    for spec in specs:
         if spec["parent_case"] not in handoffs:
-            handoffs[spec["parent_case"]] = load_saved_handoff(spec["parent_case"])
+            handoffs[spec["parent_case"]] = loader(spec["parent_case"])
         handoff = handoffs[spec["parent_case"]]
         record = _case_record(
             handoff, case_id=spec["case_id"], control_mode=spec["control_mode"],
@@ -1430,7 +1579,93 @@ def prepare(output, *, stations=None, include_frozen=True):
                 "initial_state_called": False, "evolved": False, "stability_certificate": False,
                 "zero_residual_gate": False, "max_T_forced": False,
                 "child_cpu_seconds": 0.0}
+    if manifest_extra:
+        manifest.update(manifest_extra)
     _write_json(_manifest_path(directory), manifest)
+    return manifest
+
+
+def prepare(output, *, stations=None, include_frozen=True):
+    """Stage 0 for the nf128/nf256 v1 baselines. Write exact handoff chunks. Do not evolve."""
+    return _prepare_campaign(
+        output, first_batch_specs(include_frozen=include_frozen), load_saved_handoff,
+        DEFAULT_STATIONS if stations is None else stations,
+        {"campaign": "nsc-discovery-episode-v1", "source_record": V1_RECORD},
+    )
+
+
+def prepare_confirmation(output, *, stations=None):
+    """Stage 0 for nf512 from confirmation v2. Stations stay 1 and 3. Do not evolve."""
+    selected = DEFAULT_STATIONS if stations is None else stations
+    forecast = confirmation_cost_forecast(selected)
+    return _prepare_campaign(
+        output, confirmation_specs(), load_confirmation_handoff, selected,
+        {"campaign": CONFIRMATION_OUTPUT_NAME, "source_record": CONFIRMATION_RECORD,
+         "cost_forecast": forecast},
+    )
+
+
+def prepare_station_resume(source, output, *, station=8.0, cpu_budget_seconds=DEFAULT_CPU_BUDGET_SECONDS):
+    """Copy the latest authenticated chunks into one new campaign that may continue to ``station``.
+
+    The predecessor directory is read only. Its manifest and chunks are not rewritten.
+    Clocks, state, and the work ledger are the predecessor bytes. The new budget
+    is recorded only on the successor manifest.
+    """
+    predecessor = Path(source).expanduser().resolve()
+    destination = assert_campaign_output(output)
+    if destination == predecessor or predecessor in destination.parents or destination in predecessor.parents:
+        raise PermissionError("the station successor must be a different directory from the predecessor")
+    if _manifest_path(destination).exists():
+        raise FileExistsError("successor output already exists; refusing to overwrite")
+    old = read_manifest(predecessor)
+    if not old.get("cases"):
+        raise ValueError("predecessor campaign has no cases")
+    target = float(station)
+    if target not in ALLOWED_STATIONS:
+        raise ValueError("resume station must be one of 1, 3, 8, 16, 24")
+    destination.mkdir(parents=True, exist_ok=True)
+    cases = []
+    carried_time = None
+    for case in old["cases"]:
+        record, arrays = load_checkpoint(predecessor, case["case_id"])
+        npz_path = predecessor / f"{case['case_id']}-{int(record['ordinal']):06d}.npz"
+        if file_sha256(npz_path) != record["arrays_sha256"]:
+            raise ValueError("predecessor chunk failed authentication: " + case["case_id"])
+        if float(record["coordinate_time"]) >= target:
+            raise ValueError("predecessor is already at or beyond the resume station")
+        extended = tuple(sorted(set(float(value) for value in record["stations"]) | {target}))
+        stations = normalize_stations(extended)
+        successor = dict(record)
+        successor.update(
+            stations=list(stations), snapshot_kind="resume_handoff", stage=0, status="PREPARED",
+            evolved=False, ordinal=0,
+            predecessor_chunk={
+                "case_id": case["case_id"], "ordinal": record.get("ordinal"),
+                "arrays_sha256": record["arrays_sha256"],
+                "coordinate_time": record["coordinate_time"],
+            },
+        )
+        copied = {name: np.array(arrays[name], copy=True) for name in arrays}
+        committed = commit_checkpoint(destination, successor, copied)
+        cases.append({key: committed[key] for key in (
+            "case_id", "ordinal", "npz", "json", "arrays_sha256", "coordinate_time", "steps")
+            if key in committed})
+        carried_time = float(record["coordinate_time"])
+    forecast = None
+    if carried_time is not None and float(old.get("child_cpu_seconds") or 0.0) > 0.0:
+        forecast = resume_cost_forecast(old["child_cpu_seconds"], carried_time, target)
+    manifest = {"schema": SCHEMA, "stage": 0, "status": "RESUME_PREPARED", "campaign": "station-resume",
+                "stations": list(stations), "cases": cases, "workers": DEFAULT_WORKERS,
+                "cpu_budget_seconds": float(cpu_budget_seconds),
+                "cpu_accounting": "sum_of_child_process_time",
+                "forecast_factor": DEFAULT_FORECAST_FACTOR,
+                "predecessor_directory": str(predecessor),
+                "predecessor_manifest_sha256": file_sha256(_manifest_path(predecessor)),
+                "cost_forecast": forecast, "evolved": False, "initial_state_called": False,
+                "stability_certificate": False, "dense_propagator_stored": False,
+                "child_cpu_seconds": 0.0}
+    _write_json(_manifest_path(destination), manifest)
     return manifest
 
 
@@ -1438,10 +1673,20 @@ def _verify_external_pins(record):
     if not record.get("verify_external_pins"):
         return
     pins = record["source_pins"]
-    if file_sha256(V1_JSON) != pins["v1_json_sha256"] or file_sha256(V1_NPZ) != pins["v1_npz_sha256"]:
-        raise ValueError("saved separated-pair pin changed")
-    if file_sha256(BASIS_JSON) != pins["basis_json_sha256"] or file_sha256(BASIS_NPZ) != pins["basis_npz_sha256"]:
-        raise ValueError("frozen basis pin changed")
+    label = pins.get("source_record")
+    if label == CONFIRMATION_RECORD:
+        if "v1_json_sha256" in pins or "v1_npz_sha256" in pins:
+            raise ValueError("confirmation pins must not be labeled as the v1 record")
+        if file_sha256(CONFIRMATION_JSON) != pins["record_json_sha256"]:
+            raise ValueError("confirmation record pin changed")
+        if file_sha256(CONFIRMATION_NPZ) != pins["record_npz_sha256"]:
+            raise ValueError("confirmation payload pin changed")
+    elif "v1_json_sha256" in pins:
+        if file_sha256(V1_JSON) != pins["v1_json_sha256"] or file_sha256(V1_NPZ) != pins["v1_npz_sha256"]:
+            raise ValueError("saved separated-pair pin changed")
+    if "basis_json_sha256" in pins or "basis_npz_sha256" in pins:
+        if file_sha256(BASIS_JSON) != pins["basis_json_sha256"] or file_sha256(BASIS_NPZ) != pins["basis_npz_sha256"]:
+            raise ValueError("frozen basis pin changed")
 
 
 def _live_pins(arrays, state):
