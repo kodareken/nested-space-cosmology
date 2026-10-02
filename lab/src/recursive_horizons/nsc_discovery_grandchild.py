@@ -74,16 +74,19 @@ def _current_producing_commit(pins):
 
 def _authenticate_historical_producers(directory,prefix,record):
     binding_path=Path(directory)/'observed-run-binding.json'
-    if not binding_path.is_file():raise ValueError('historical producer mismatch has no observed run binding')
-    binding=json.loads(binding_path.read_text())
-    if binding.get('schema')!='NSC-DISCOVERY-OBSERVED-RUN-BINDING-v1':raise ValueError('unsupported historical run binding')
-    for extension in ('.json','.npz'):
-        path=Path(directory)/(prefix+extension)
-        key=str(path.resolve().relative_to(LAB.parent))
-        entry=binding.get('artifact_paths',{}).get(key)
-        if not entry or episode.file_sha256(path)!=entry['sha256'] or path.stat().st_size!=entry['bytes']:
-            raise ValueError('historical grandchild artifact differs from its observed run binding')
-    commit=binding['producing_commit']
+    if binding_path.is_file():
+        binding=json.loads(binding_path.read_text())
+        if binding.get('schema')!='NSC-DISCOVERY-OBSERVED-RUN-BINDING-v1':raise ValueError('unsupported historical run binding')
+        for extension in ('.json','.npz'):
+            path=Path(directory)/(prefix+extension)
+            key=str(path.resolve().relative_to(LAB.parent))
+            entry=binding.get('artifact_paths',{}).get(key)
+            if not entry or episode.file_sha256(path)!=entry['sha256'] or path.stat().st_size!=entry['bytes']:
+                raise ValueError('historical grandchild artifact differs from its observed run binding')
+        commit=binding['producing_commit']
+    else:
+        commit=record.get('producing_commit')
+        if not commit:raise ValueError('historical producer mismatch has neither a declared producing commit nor an observed run binding')
     try:
         for path,digest in record['producers'].items():
             if _git_blob_sha(commit,path)!=digest:raise ValueError('historical producer differs from its frozen Git blob: '+path)
@@ -421,7 +424,8 @@ def _read(directory,prefix,*,allow_historical=False):
     if record['producers']!=producers():
         if not allow_historical:raise ValueError('grandchild producer sources differ from the frozen record')
         record=dict(record,historical_producing_commit=_authenticate_historical_producers(directory,prefix,record),
-                    producer_binding_method='observed immutable artifacts and frozen local Git blobs')
+                    producer_binding_method=('observed immutable artifacts and frozen local Git blobs' if (directory/'observed-run-binding.json').is_file()
+                                             else 'declared producing commit authenticated against frozen local Git blobs'))
     return record,arrays
 
 
@@ -537,6 +541,8 @@ def run(directory):
 
 
 def check(directory):
+    if (Path(directory)/'confirmation-lock.json').is_file():
+        return check_confirmation(directory)
     forecast,arrays=_read(directory,'forecast',allow_historical=True)
     opening=load_opening(forecast['nf']);basis=arrays['basis'];G=basis[:,:2]
     if np.max(np.abs(basis.conj().T@basis-np.eye(8)))>1e-10:raise ValueError('frozen nested observer is not orthonormal')
@@ -570,3 +576,267 @@ def check(directory):
             'historical_producing_commit':forecast.get('historical_producing_commit'),
             'producer_binding_method':forecast.get('producer_binding_method','current frozen producer bytes'),
             'replay_uses_current_readout_code':True,'historical_trajectory_recomputed':False}
+
+
+def _direction_from_prefix(arrays,prefix):
+    return response.StateTangent(*(arrays[f'{prefix}_{name}'].copy() for name in (*model.STATE_NAMES,'occupations')))
+
+
+def _reference_hashes(directory):
+    directory=Path(directory).resolve()
+    paths=[directory/name for name in ('forecast.json','forecast.npz','measurement.json','measurement.npz')]
+    if (directory/'observed-run-binding.json').is_file():paths.append(directory/'observed-run-binding.json')
+    return {str(path):episode.file_sha256(path) for path in paths}
+
+
+def _confirm_march(pair,state,target,cap,started,*,tangent=None,first_step=None):
+    """Same owned steps and clock root; retain a finite endpoint on CPU deferral."""
+    current=state.copy();direction=tangent;tau=0.;delta_tau=0.;mark=0.;steps=0;event=None
+    coupled=tangent is not None
+    while tau<target:
+        # Reserve time for the root and for writing the finite checkpoint.
+        if time.process_time()-started>=CPU_BUDGET-.5:
+            break
+        dt=float(first_step['dt']) if steps==0 and first_step is not None else model.stable_timestep(pair,current,cap)[0]
+        old=current.copy();old_direction=direction;old_tau=tau;old_delta=delta_tau;old_mark=mark
+        if steps==0 and first_step is not None:
+            advanced=first_step
+        elif coupled:
+            advanced=prediction.coupled_rk4_step(pair,current,direction,dt)
+        else:
+            advanced=prediction.nonlinear_rk4_step(pair,current,dt)
+        if tau+advanced['tau']>=target:
+            if abs(tau+advanced['tau']-target)<=1e-15:
+                event={'dt':dt,'time':old_mark+dt,'bisections':0}
+            else:
+                event=prediction._root_step_to_tau(pair,{'state':old,'tau':old_tau,'time':old_mark,'dt_hi':dt},target)
+                dt=event['dt']
+                advanced=(prediction.coupled_rk4_step(pair,old,old_direction,dt) if coupled
+                          else prediction.nonlinear_rk4_step(pair,old,dt))
+        current=advanced['state'];tau+=advanced['tau'];mark+=dt;steps+=1
+        if coupled:
+            direction=advanced['tangent'];delta_tau+=advanced['delta_tau']
+        if event is not None:break
+    return {'state':current,'tangent':direction,'reached':event is not None,'proper_increment':tau,
+            'delta_tau':delta_tau,'coordinate_duration':mark,'steps':steps,
+            'tau_residual':None if event is None else tau-target,
+            'root_bisections':0 if event is None else event['bisections'],
+            'status':'rooted_event' if event is not None else 'finite_checkpoint_deferred_by_CPU_budget'}
+
+
+def _confirmation_opening(nf,reference,arrays):
+    opening=load_opening(nf)
+    if nf==256:
+        state=prediction._state_from_prefix(arrays,'opening_analytic')
+        tangent=_direction_from_prefix(arrays,'opening_aligned_tangent')
+        held=prediction._state_from_prefix(arrays,'opening_heldout')
+        if episode.state_sha256(state)!=episode.state_sha256(opening['state']) or episode.state_sha256(held)!=episode.state_sha256(opening['held']):
+            raise ValueError('reference opening state differs from the authenticated saved prediction')
+        for name in (*model.STATE_NAMES,'occupations'):
+            if not np.array_equal(getattr(tangent,name),getattr(opening['tangent'],name)):
+                raise ValueError('reference aligned tangent differs from its authenticated opening')
+        opening.update(state=state,tangent=tangent,held=held)
+        basis=arrays['basis'].copy();basis_report=reference['basis']
+    else:
+        # This observer report does not determine the primary spatial content.
+        basis,basis_report=observer_basis(opening['pair'])
+    opening.update(basis=basis,basis_report=basis_report)
+    return opening
+
+
+def _opening_bindings(opening):
+    return {'analytic_state_sha256':episode.state_sha256(opening['state']),
+            'heldout_state_sha256':episode.state_sha256(opening['held']),
+            'aligned_tangent_sha256':{name:episode.array_sha256(getattr(opening['tangent'],name)) for name in (*model.STATE_NAMES,'occupations')},
+            'W_sha256':episode.array_sha256(opening['pair'].geometry_map),
+            'source_columns_sha256':episode.array_sha256(opening['pair'].source_columns),
+            'baseline_weights_sha256':episode.array_sha256(opening['pair'].weights),
+            'heldout_weights_sha256':episode.array_sha256(opening['held_pair'].weights),
+            'tau_opening':opening['tau_opening'],'held_tau_opening':opening['held_tau_opening'],
+            'clock_alignment':opening['clock_alignment']}
+
+
+def _confirmation_indicators(candidate,reference):
+    keys=('baseline_NG','heldout_NG','predicted_change','measured_change','prediction_error')
+    scale=max(abs(candidate['measured_change']),abs(reference['measured_change']))
+    return {'differences':{key:candidate[key]-reference[key] for key in keys},
+            'effect_scale':scale,
+            'measured_effect_gap_over_effect':None if scale==0. else abs(candidate['measured_change']-reference['measured_change'])/scale,
+            'residual_gap_over_effect':None if scale==0. else abs(candidate['prediction_error']-reference['prediction_error'])/scale,
+            'indicator_is_not_a_total_error_bound':True}
+
+
+def confirm(reference_directory,directory,*,spatial=False):
+    """One half-step pair, optionally one spatial pair, under a fresh 300 CPU budget."""
+    reference_directory=Path(reference_directory).resolve();directory=Path(directory).resolve()
+    if reference_directory==directory or reference_directory in directory.parents:
+        raise PermissionError('confirmation must use a new sibling prefix outside the reference')
+    if (directory/'confirmation-lock.json').exists() or (directory/'confirmation.json').exists():
+        raise FileExistsError('immutable confirmation prefix already exists')
+    started=time.process_time();pins=producers();commit=_current_producing_commit(pins)
+    reference,ref_arrays=_read(reference_directory,'forecast',allow_historical=True)
+    measured,_ref_endpoints=_read(reference_directory,'measurement',allow_historical=True)
+    if reference['nf']!=256 or reference['alpha']!=ALPHA:
+        raise ValueError('confirmation reference must be the nf256 alpha=.01 forecast')
+    if measured['forecast_json_sha256']!=episode.file_sha256(reference_directory/'forecast.json'):
+        raise ValueError('reference measurement does not bind the original forecast')
+    check(reference_directory)
+    consumer_paths={'src/recursive_horizons/nsc_discovery_grandchild.py','scripts/derive_nsc_discovery_grandchild.py'}
+    for path,digest in reference['producers'].items():
+        if path not in consumer_paths and pins.get(path)!=digest:
+            raise ValueError('numerical confirmation cannot change the physical operator/tangent source: '+path)
+    target=float(reference['absolute_future_tau_target'])
+    locked_prediction=next(item for item in reference['forecasts'] if item['step_cap']==.0005)
+    original=next(item for item in measured['results'] if item['step_cap']==.0005 and item['status']=='heldout_future_measured')
+    measured_NG=original['measurement']['NG']
+    if abs(measured_NG-locked_prediction['baseline_NG']-original['measured_change'])>1e-10 or abs(measured_NG-locked_prediction['predicted_heldout_NG']-original['prediction_error'])>1e-10:
+        raise ValueError('reference effect/residual does not match its immutable endpoint readouts')
+    reference_values={'baseline_NG':locked_prediction['baseline_NG'],'heldout_NG':original['measurement']['NG'],
+                      'predicted_change':locked_prediction['predicted_change'],'measured_change':original['measured_change'],
+                      'prediction_error':original['prediction_error'],'locked_predicted_NG':locked_prediction['predicted_heldout_NG']}
+    planned=[(256,.00025,'nf256-halfstep')]+([(128,.0005,'nf128-spatial')] if spatial else [])
+    openings={};lock_arrays={};hashes=dict(reference['input_hashes']);hashes.update(_reference_hashes(reference_directory))
+    for nf,cap,label in planned:
+        opening=_confirmation_opening(nf,reference,ref_arrays);openings[nf]=opening
+        hashes.update(opening['input_hashes'])
+        _pack_state(lock_arrays,label+'_opening',opening['state']);_pack_direction(lock_arrays,label+'_direction',opening['tangent'])
+        _pack_state(lock_arrays,label+'_held_opening',opening['held']);lock_arrays[label+'_basis']=opening['basis']
+    lock={'schema':SCHEMA,'mode':'confirmation_reference_locked','producers':pins,'producing_commit':commit,
+          'input_hashes':hashes,'reference_directory':str(reference_directory),'reference_producing_commit':reference.get('producing_commit') or reference.get('historical_producing_commit'),
+          'reference_values':reference_values,'absolute_future_tau_target':target,'alpha':ALPHA,
+          'planned_cases':[{'nf':nf,'step_cap':cap,'label':label,'opening_bindings':_opening_bindings(openings[nf])} for nf,cap,label in planned],
+          'reference_locked_before_confirmation_evolution':True,'original_forecast_rewritten':False,
+          'CPU_budget_seconds':CPU_BUDGET,'measured_admission_factor':1.5,
+          'opening_prefix_error_bound':None,'opening_refinement_performed':False,
+          'one_matched_halfstep_pair_only':True,'no_precision_success_threshold':True}
+    _write(directory,'confirmation-lock',lock,lock_arrays)
+    results=[];endpoints={};admissions=[];checkpoint_prefixes=[]
+    common={'schema':SCHEMA,'input_hashes':hashes,'producers':pins,'producing_commit':commit,
+            'confirmation_lock_sha256':episode.file_sha256(directory/'confirmation-lock.json')}
+    for nf,cap,label in planned:
+        opening=openings[nf];pair=opening['pair'];held_pair=opening['held_pair']
+        base_target=target-opening['tau_opening'];held_target=target-opening['held_tau_opening']
+        if min(base_target,held_target)<=0.:raise ValueError('absolute target must be later than each original opening clock')
+        remaining=CPU_BUDGET-(time.process_time()-started)
+        if remaining<.5:
+            results.append({'nf':nf,'step_cap':cap,'label':label,'status':'deferred_before_probe_by_CPU_budget'});break
+        baseline_first_dt=model.stable_timestep(pair,opening['state'],cap)[0]
+        held_first_dt=model.stable_timestep(held_pair,opening['held'],cap)[0]
+        probe_started=time.process_time();baseline_first=prediction.coupled_rk4_step(pair,opening['state'],opening['tangent'],baseline_first_dt)
+        baseline_step_CPU=time.process_time()-probe_started
+        probe_started=time.process_time();held_first=prediction.nonlinear_rk4_step(held_pair,opening['held'],held_first_dt)
+        held_step_CPU=time.process_time()-probe_started
+        baseline_steps=int(np.ceil(locked_prediction['coordinate_duration']/cap))+22
+        held_steps=int(np.ceil(original['event']['coordinate_duration']/cap))+22
+        cost=1.5*(baseline_steps*baseline_step_CPU+held_steps*held_step_CPU)
+        admitted=cost<CPU_BUDGET-(time.process_time()-started)
+        admission={'nf':nf,'step_cap':cap,'baseline_probe_CPU':baseline_step_CPU,'held_probe_CPU':held_step_CPU,
+                   'baseline_estimated_steps':baseline_steps,'held_estimated_steps':held_steps,'factor':1.5,
+                   'pair_forecast_CPU':cost,'admitted':admitted,'remaining_CPU':CPU_BUDGET-(time.process_time()-started)}
+        admission['first_steps_reused_in_continuation']=True
+        admissions.append(admission)
+        if not admitted:
+            # These two accepted first steps supply admission timing and are
+            # retained as finite checkpoints, rather than discarded pilots.
+            first_arrays={};_pack_state(first_arrays,'state',baseline_first['state']);_pack_direction(first_arrays,'direction',baseline_first['tangent'])
+            _write(directory,label+'-first-baseline',dict(common,mode='finite_first_step_checkpoint',nf=nf,step_cap=cap,
+                   proper_increment=baseline_first['tau'],delta_tau=baseline_first['delta_tau'],coordinate_duration=baseline_first_dt),first_arrays)
+            first_arrays={};_pack_state(first_arrays,'state',held_first['state'])
+            _write(directory,label+'-first-held',dict(common,mode='finite_first_step_checkpoint',nf=nf,step_cap=cap,
+                   proper_increment=held_first['tau'],coordinate_duration=held_first_dt),first_arrays)
+            checkpoint_prefixes.extend((label+'-first-baseline',label+'-first-held'))
+            results.append({'nf':nf,'step_cap':cap,'label':label,'status':'deferred_by_measured_pair_admission',
+                            'finite_opening_checkpoint':'confirmation-lock.npz'})
+            if nf==256:break
+            continue
+        baseline=_confirm_march(pair,opening['state'],base_target,cap,started,tangent=opening['tangent'],first_step=baseline_first)
+        checkpoint={};_pack_state(checkpoint,'state',baseline['state']);_pack_direction(checkpoint,'direction',baseline['tangent'])
+        public={key:value for key,value in baseline.items() if key not in ('state','tangent')}
+        _write(directory,label+'-baseline',dict(common,mode='finite_baseline_checkpoint',nf=nf,step_cap=cap,event=public,
+                                               absolute_tau=opening['tau_opening']+baseline['proper_increment']),checkpoint)
+        checkpoint_prefixes.append(label+'-baseline')
+        if not baseline['reached']:
+            results.append({'nf':nf,'step_cap':cap,'label':label,'status':'baseline_deferred_with_finite_checkpoint'});break
+        reserve=1.5*held_steps*held_step_CPU
+        if reserve>CPU_BUDGET-(time.process_time()-started):
+            results.append({'nf':nf,'step_cap':cap,'label':label,'status':'held_arm_deferred_after_baseline',
+                            'finite_baseline_checkpoint':label+'-baseline.npz'})
+            if nf==256:break
+            continue
+        held=_confirm_march(held_pair,opening['held'],held_target,cap,started,first_step=held_first)
+        checkpoint={};_pack_state(checkpoint,'state',held['state'])
+        held_public={key:value for key,value in held.items() if key not in ('state','tangent')}
+        _write(directory,label+'-held',dict(common,mode='finite_held_checkpoint',nf=nf,step_cap=cap,event=held_public,
+                                           absolute_tau=opening['held_tau_opening']+held['proper_increment']),checkpoint)
+        checkpoint_prefixes.append(label+'-held')
+        if not held['reached']:
+            results.append({'nf':nf,'step_cap':cap,'label':label,'status':'held_arm_deferred_with_finite_checkpoint'});break
+        baseline_NG,raw=content(pair,baseline['state'],baseline['tangent'])
+        tau_dot=prediction.clock_rates(pair,baseline['state'],baseline['tangent'])[0]
+        derivative=raw-content_velocity(pair,baseline['state'])*baseline['delta_tau']/tau_dot
+        predicted_change=ALPHA*derivative;predicted_NG=baseline_NG+predicted_change
+        held_NG=content(held_pair,held['state']);effect=held_NG-baseline_NG;residual=held_NG-predicted_NG
+        item={'nf':nf,'step_cap':cap,'label':label,'status':'completed_matched_clock_pair',
+              'baseline_NG':baseline_NG,'heldout_NG':held_NG,'derivative_NG_tau':derivative,
+              'predicted_NG_at_confirmation_step':predicted_NG,'predicted_change':predicted_change,'measured_change':effect,
+              'prediction_error':residual,'residual_over_measured_effect':None if effect==0. else abs(residual/effect),
+              'residual_against_original_locked_prediction':held_NG-reference_values['locked_predicted_NG'],
+              'baseline_absolute_tau':opening['tau_opening']+baseline['proper_increment'],
+              'held_absolute_tau':opening['held_tau_opening']+held['proper_increment'],
+              'baseline_event':public,'held_event':held_public,'opening_clock_alignment':opening['clock_alignment'],
+              'modal_basis_report':opening['basis_report'],'modal_nf128_spatial_resolution_unresolved':nf==128,
+              'primary_spatial_NG_not_vetoed_by_modal_tail':True,'opening_prefix_error_bound':None}
+        item['composition_identity']={'scope':'cited original long-run reconstruction on shared generated geometry',
+                                      'reference_force_gap':original['event']['max_stage_force_gap'],
+                                      'reference_reconstruction_gap':original['event']['max_reconstruction_gap'],
+                                      'recomputed_here':False,'not_the_numerical_confirmation':True}
+        results.append(item)
+        _pack_state(endpoints,label+'_baseline',baseline['state']);_pack_direction(endpoints,label+'_direction',baseline['tangent'])
+        _pack_state(endpoints,label+'_held',held['state'])
+    _check_bindings(hashes)
+    if pins!=producers():raise ValueError('confirmation producer sources changed during execution')
+    fine=next((item for item in results if item['nf']==256 and item['status']=='completed_matched_clock_pair'),None)
+    coarse=next((item for item in results if item['nf']==128 and item['status']=='completed_matched_clock_pair'),None)
+    record=dict(common,mode='numerical_confirmation',reference_directory=str(reference_directory),absolute_future_tau_target=target,
+                reference_values=reference_values,results=results,admissions=admissions,
+                finite_checkpoint_prefixes=checkpoint_prefixes,
+                step_indicator=None if fine is None else _confirmation_indicators(fine,reference_values),
+                spatial_indicator=None if fine is None or coarse is None else _confirmation_indicators(coarse,fine),
+                status='completed' if fine is not None else 'deferred_with_finite_checkpoints',
+                aggregate_CPU_seconds=time.process_time()-started,CPU_budget_seconds=CPU_BUDGET,
+                reference_forecast_unchanged=True,opening_prefix_error_bound=None,opening_refinement_performed=False,
+                finite_alpha_truncation_not_isolated_by_halfstep=True,continuous_error_bound=None,
+                one_halfstep_pair_only=True,no_one_percent_success_gate=True,
+                modal_basis_and_primary_spatial_probability_are_distinct=True)
+    return _write(directory,'confirmation',record,endpoints)
+
+
+def check_confirmation(directory):
+    lock,arrays=_read(directory,'confirmation-lock',allow_historical=True)
+    reference=Path(lock['reference_directory']);_check_bindings(lock['input_hashes'])
+    check(reference)
+    if not (Path(directory)/'confirmation.json').is_file():
+        return {'schema':SCHEMA,'mode':'confirmation_replay','ok':True,'status':'reference_locked_only','evolved':False}
+    record,endpoints=_read(directory,'confirmation',allow_historical=True)
+    if record['confirmation_lock_sha256']!=episode.file_sha256(Path(directory)/'confirmation-lock.json'):
+        raise ValueError('confirmation reference lock differs from the recorded binding')
+    for prefix in record.get('finite_checkpoint_prefixes',[]):
+        checkpoint,_arrays=_read(directory,prefix,allow_historical=True)
+        if checkpoint['confirmation_lock_sha256']!=record['confirmation_lock_sha256']:
+            raise ValueError('finite checkpoint does not bind the confirmation lock')
+    replay=[]
+    for item in record['results']:
+        if item['status']!='completed_matched_clock_pair':continue
+        opening=load_opening(item['nf']);label=item['label']
+        base=prediction._state_from_prefix(endpoints,label+'_baseline');held=prediction._state_from_prefix(endpoints,label+'_held')
+        direction=_direction_from_prefix(endpoints,label+'_direction')
+        base_NG,raw=content(opening['pair'],base,direction);held_NG=content(opening['held_pair'],held)
+        tau_dot=prediction.clock_rates(opening['pair'],base,direction)[0]
+        derivative=raw-content_velocity(opening['pair'],base)*item['baseline_event']['delta_tau']/tau_dot
+        residual=held_NG-base_NG-ALPHA*derivative
+        if max(abs(base_NG-item['baseline_NG']),abs(held_NG-item['heldout_NG']),abs(residual-item['prediction_error']))>1e-10:
+            raise ValueError('confirmation endpoint readout replay differs')
+        replay.append({'nf':item['nf'],'step_cap':item['step_cap'],'NG':held_NG,'prediction_error':residual})
+    return {'schema':SCHEMA,'mode':'confirmation_replay','ok':True,'evolved':False,'status':record['status'],
+            'replayed':replay,'reference_forecast_unchanged':True,'opening_prefix_error_bound':None,
+            'historical_producing_commit':record.get('historical_producing_commit'),'no_success_threshold_applied':True}

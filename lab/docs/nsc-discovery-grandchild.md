@@ -147,3 +147,73 @@ The exact composition identity and the new held-out prediction error are
 separate evidence. A successful physical prediction is conditional on this
 finite inherited state, observer and clock. It establishes neither universal
 $\Omega$ scaling nor continuum certification, recurrence or renewal.
+
+## One numerical confirmation of the later prediction
+
+The completed nf256 $\Delta\tau=0.75$ record at
+`nsc-discovery-grandchild-v1/nf256-dtau0p75` retains its original forecast.
+At cap $0.0005$ it predicts change $-0.000440452751$, measures
+$-0.000450768062$, and has residual $-1.03153119\times10^{-5}$, or about
+$2.288\%$ of the effect. One matched half-step pair can determine whether
+that discrepancy moves with the numerical step. It cannot by itself
+isolate finite-$\alpha$ truncation or certify the inherited opening prefix.
+
+`--confirm` authenticates the original producer files against their declared
+local Git commit, or their external observed-run binding where one exists.
+It creates immutable `confirmation-lock.json/npz` before any confirmation
+advance, binding the reference forecast, measurement, old inputs, opening
+full states, aligned tangent, source weights and clock conventions. It
+never edits or heals the original scientific records.
+
+The priority pair is nf256 at cap $0.00025$, starting from **exactly the
+reference opening payload**, at the unchanged absolute proper-clock target
+$1.1078554631682531$. Both baseline/full tangent and the nonlinear held arm
+are regenerated using the owned stepping and clock-root APIs. The original
+locked forecast remains a judge: the record reports both the confirmation
+pair's residual and its held content minus the original predicted content.
+The held arm uses full nonlinear RK4 without a tangent or a repeated
+source preparation. No source, derivative or calibration is changed.
+
+`--spatial` optionally adds nf128 at cap $0.0005$ if a fresh measured
+admission fits after the priority pair. That case starts from its own
+authenticated original preparation, aligns its own opening tangent and
+subtracts its own actual opening clocks from the **same absolute target**.
+The larger nf128 modal-seed projection tail stays unresolved and explicit;
+it does not veto primary spatial $N_G$.
+
+Each pair's forecast uses measured CPU from its first accepted baseline
+and held steps, historical coordinate durations for step counts, root
+allowances and factor $1.5$. Those first steps are reused in continuation;
+there are no discarded pilot advances. The new confirmation's aggregate
+budget is 300 CPU seconds. The original long-run composition identity on
+shared geometry is cited separately, without recomputing it or repeating
+streaming split histories.
+Completed baseline and held events have immutable checkpoint prefixes.
+If admission or runtime CPU prevents completion, the lock/opening or last
+finite evolved checkpoint is retained and the result states its deferral.
+Existing confirmation prefixes are refused; there is no automatic retry or
+additional precision campaign.
+
+The record separates temporal differences against the original nf256
+result from the optional spatial differences against the confirmed nf256
+result. Baseline and held content, predicted/measured changes, residuals,
+clock residuals and effect-scaled indicators remain separate. The inherited
+opening-prefix error bound and continuum bound remain null. No one-percent
+success gate is installed.
+
+```sh
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_grandchild.py \
+  --confirm \
+  --reference results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75 \
+  --output results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75-confirm-v1 \
+  --spatial
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_grandchild.py \
+  --check --output results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75-confirm-v1
+```
+
+Omit `--spatial` to request exactly the nf256 half-step pair. `--confirm`
+requires explicit reference/output and forbids overriding the target.
+Read-only replay authenticates the reference and checkpoint payloads and
+recomputes endpoint contents, tangent forecast and residual without stepping.
+The implementation tests use only a short $\Delta\tau=0.001$ temporary
+reference and confirmation; the production confirmation remains root work.

@@ -167,3 +167,79 @@ def test_historical_binding_does_not_accept_unbound_producer_digest(tmp_path,mon
     record['producers'][path]='0'*64
     with pytest.raises(ValueError,match='frozen Git blob'):
         grand._authenticate_historical_producers(directory,'forecast',record)
+
+
+def test_one_halfstep_confirmation_seals_reference_and_uses_common_absolute_clock(tmp_path,monkeypatch):
+    monkeypatch.setattr(model,'initial_state',lambda *args,**kwargs:pytest.fail('confirmation recalibrated the inherited source'))
+    reference=tmp_path/'reference'
+    grand.prepare(reference,256,proper_increment=.001,matched=False)
+    grand.run(reference)
+    hashes=grand._reference_hashes(reference)
+    directory=tmp_path/'confirmation'
+    observed_lock=[]
+    original=grand._confirm_march
+    def verify_lock(*args,**kwargs):
+        assert (directory/'confirmation-lock.json').is_file()
+        observed_lock.append(True)
+        return original(*args,**kwargs)
+    monkeypatch.setattr(grand,'_confirm_march',verify_lock)
+    record=grand.confirm(reference,directory,spatial=True)
+    lock=json.loads((directory/'confirmation-lock.json').read_text())
+    assert lock['reference_locked_before_confirmation_evolution'] is True
+    assert len(observed_lock)==4
+    assert grand._reference_hashes(reference)==hashes
+    assert [(item['nf'],item['step_cap']) for item in record['results']]==[(256,.00025),(128,.0005)]
+    target=lock['absolute_future_tau_target']
+    for item in record['results']:
+        assert item['status']=='completed_matched_clock_pair'
+        assert item['baseline_absolute_tau']==pytest.approx(target,abs=1e-9)
+        assert item['held_absolute_tau']==pytest.approx(target,abs=1e-9)
+        assert item['opening_prefix_error_bound'] is None
+        assert item['primary_spatial_NG_not_vetoed_by_modal_tail'] is True
+        assert item['composition_identity']['not_the_numerical_confirmation'] is True
+    coarse=record['results'][1]
+    assert coarse['modal_nf128_spatial_resolution_unresolved'] is True
+    assert record['step_indicator']['indicator_is_not_a_total_error_bound'] is True
+    assert record['spatial_indicator']['indicator_is_not_a_total_error_bound'] is True
+    assert record['finite_alpha_truncation_not_isolated_by_halfstep'] is True
+    assert len(record['finite_checkpoint_prefixes'])==4
+    assert all(item['factor']==1.5 for item in record['admissions'])
+    assert all(item['first_steps_reused_in_continuation'] for item in record['admissions'])
+    assert all(item['composition_identity']['recomputed_here'] is False for item in record['results'])
+    assert grand.check(directory)['ok'] is True
+    with pytest.raises(FileExistsError):grand.confirm(reference,directory)
+
+
+def test_confirmation_budget_deferral_retains_immutable_opening_checkpoint(tmp_path,monkeypatch):
+    reference=tmp_path/'reference'
+    grand.prepare(reference,256,proper_increment=.001,matched=False);grand.run(reference)
+    directory=tmp_path/'deferred'
+    monkeypatch.setattr(grand,'CPU_BUDGET',.01)
+    record=grand.confirm(reference,directory,spatial=True)
+    assert record['status']=='deferred_with_finite_checkpoints'
+    assert (directory/'confirmation-lock.npz').is_file()
+    assert record['step_indicator'] is None
+    assert grand.check(directory)['ok'] is True
+
+
+def test_confirmation_CLI_requires_reference_and_forbids_new_target(tmp_path,monkeypatch,capsys):
+    monkeypatch.setattr(grand,'OUTPUT',tmp_path)
+    calls=[]
+    monkeypatch.setattr(grand,'confirm',lambda reference,directory,**kwargs:calls.append((reference,directory,kwargs)) or {'mode':'numerical_confirmation'})
+    assert cli.main(['--confirm','--reference',str(tmp_path/'reference'),'--output',str(tmp_path/'new'),'--spatial'])==0
+    assert calls[0][2]['spatial'] is True
+    with pytest.raises(SystemExit):cli.main(['--confirm','--output',str(tmp_path/'new')])
+    with pytest.raises(SystemExit):cli.main(['--confirm','--reference',str(tmp_path/'reference'),'--output',str(tmp_path/'new'),'--proper-increment','.75'])
+
+
+def test_confirmation_reuses_accepted_first_step_at_exact_clock_event(opening,monkeypatch):
+    import time
+    pair=opening['pair'];state=opening['state'];direction=opening['tangent']
+    first=prediction.coupled_rk4_step(pair,state,direction,.00025)
+    monkeypatch.setattr(prediction,'coupled_rk4_step',lambda *args,**kwargs:pytest.fail('admission step was recomputed'))
+    marched=grand._confirm_march(pair,state,first['tau'],.00025,time.process_time(),tangent=direction,first_step=first)
+    assert marched['reached'] is True
+    assert marched['steps']==1
+    assert marched['tau_residual']==0.
+    assert marched['root_bisections']==0
+    assert grand.episode.state_sha256(marched['state'])==grand.episode.state_sha256(first['state'])
