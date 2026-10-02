@@ -17,6 +17,36 @@ The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
 same-spectrum local induced term, counted once. The vacuum-matched CTP branch
 remains a separate historical choice.
 
+## Active discovery programme, 2 October 2026
+
+Douglas approved the **NSC Discovery Programme: Source-Selected Regions,
+Regeneration and Inherited Local Response**, starting from `ea6c699`.
+The accepted plan in the conversation is the task authority. The first
+implementation wave repairs evidence-writing, supplies an equivalent FFT
+backend and resumable episode runner, and adds regional observables,
+stability diagnostics and a coupled-response specification. Its first
+scientific batch continues the saved $T=0.3$ states toward $T=1,3$ with
+matched controls. No longer-time outcome has been measured yet.
+
+Implementation owners are the [episode runner](../lab/docs/nsc-discovery-episode.md),
+[physical observer](../lab/docs/nsc-discovery-observables.md),
+[coupled response](../lab/docs/nsc-discovery-response.md), and
+[FFT adapter](../lab/src/recursive_horizons/nsc_discovery_backend.py).
+The integration review corrected work/flux measure and frozen-control
+jet defects in the new observer. Dense/FFT, ledger, frozen-control and
+analytic directional-response checks pass. The pinned one-thread FFT
+benchmark is 12.95 times faster end to end at $n_f=256$.
+Intermediate states and regular scalar observations are retained; restart
+continues the saved clocks and accumulated work/transport channels.
+The first continuation batch is ready to run from a pinned checkpoint.
+
+Scientific batches use a six CPU-hour aggregate budget. Independent cases
+run in parallel on the Mac; Codex owns integration and one campaign
+executor owns scientific launches. Regular-interior results are imported
+foundations, not a bounce-rediscovery campaign. The incoming gate stays
+paused. The publication target is one unified article after the central
+discovery chain; the existing papers and release remain preserved.
+
 ## Completed finite parent–child pair, 2 October 2026
 
 The [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json)
@@ -255,6 +285,15 @@ Owned tests are
 [test_nsc_spherical_feedback_episode.py](../lab/tests/test_nsc_spherical_feedback_episode.py).
 Independent tests are
 [test_nsc_spherical_feedback_episode_independent.py](../lab/tests/test_nsc_spherical_feedback_episode_independent.py).
+
+The historical episode's stored Galerkin pin differs from the current file.
+The current producer's strict `verify_saved` therefore refuses that replay.
+The [historical reader](../lab/scripts/check_nsc_spherical_feedback_episode_historical.py)
+authenticates the archived source bytes, frozen inputs and saved arrays;
+it does not import or re-evolve the old module because four transitive
+imports were not part of the recorded frozen set. The scientific numbers
+above retain their historical domain. This authentication is distinct from
+a numerical replay under a complete historical execution context.
 
 <a id="regeneration-episode-1-october-2026"></a>
 

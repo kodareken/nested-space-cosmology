@@ -8,6 +8,7 @@ constrained calculation into a settled theory.
 |---|---|
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
+| Active discovery programme | Accepted conversation plan; [execution status](current-result.md#active-discovery-programme-2-october-2026), [episode](../lab/docs/nsc-discovery-episode.md), [observer](../lab/docs/nsc-discovery-observables.md), [response](../lab/docs/nsc-discovery-response.md) |
 | Completed finite parent–child pair | [Owning note](../lab/docs/nsc-nested-parent-child.md), [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json), [driver](../lab/scripts/derive_nsc_nested_parent_child_confirmation.py), [preserved v1](../lab/results/development/nsc-nested-parent-child-v1.json) |
 | Parent–child replay and figure | [Portable basis](../lab/results/development/nsc-nested-parent-child-replay-basis-v1.json), [independent consumer](../lab/scripts/check_nsc_nested_parent_child_confirmation.py), [figure](../lab/results/development/nsc-nested-parent-child-figure.png) |
 | Same-action conformal gauge and episode | [Proof and scope](../lab/docs/nsc-spherical-conformal-gauge.md), [record](../lab/results/development/nsc-spherical-conformal-episode-v1.json) |

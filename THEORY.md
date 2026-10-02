@@ -21,6 +21,14 @@ The [focused article](paper/finite-regeneration.pdf) presents this result;
 human author review and the actual arXiv processor check remain pending.
 Earlier prescribed-gauge diagnostics keep their dated evidence below.
 
+The active [discovery programme](docs/current-result.md#active-discovery-programme-2-october-2026)
+continues the confirmed parent–child preparation beyond this short interval.
+It asks whether the coupled process selects regional boundaries and scales,
+supports repeated transfer, and predicts a withheld local response. The
+finite spectral theorem, coordinate pullback and a physical scaling law
+are distinct statements. Their relationship is investigated through the
+same constructed dynamics. One unified successor article is the target.
+
 The sphere's inside and surrounding region are the organizing motivation:
 consider their coupled fields, stresses and geometry together. The present model
 uses spherical symmetry as one finite realization. Extending that motif across
