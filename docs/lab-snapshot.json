@@ -12338,13 +12338,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 168131,
+      "bytes": 168372,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "f81fa23d461c46bb976f277d9e29e61e2de02f66",
+      "changed_from_commit": "65623138f0c10d90a47ee47ac00570dcf071f10d",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "7a30c58fb0cfa13ee34dfa10e37e9a748db57904695ff39eb8c96666b46d7b49"
+      "sha256": "d83faef1f75c582c0edda7b1ea8a88b2b71e6034d460388b57f3c25a22ad35c6"
     },
     {
       "bytes": 88419,
@@ -12811,6 +12811,13 @@
       "changed_from_commit": "f81fa23d461c46bb976f277d9e29e61e2de02f66",
       "path": "lab/docs/nsc-discovery-free-return.md",
       "sha256": "fa34c80b223c3cd27542fa4f43eb1a8c317c7997666b49489b4b1e853b90b0d5"
+    },
+    {
+      "bytes": 6619,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "65623138f0c10d90a47ee47ac00570dcf071f10d",
+      "path": "lab/docs/nsc-discovery-geometric-vertices.md",
+      "sha256": "d4f4d045449be83d595b6767a28abfbe715089567b888bf2f6799debbe873da2"
     },
     {
       "bytes": 12507,
@@ -81914,6 +81921,13 @@
       "sha256": "ea233525090c69bcd0149b7a2746e46cb493adbb419c2a68c237566031575451"
     },
     {
+      "bytes": 1304,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "65623138f0c10d90a47ee47ac00570dcf071f10d",
+      "path": "lab/scripts/derive_nsc_discovery_geometric_vertices.py",
+      "sha256": "69fb9a1028403f622176393616a1186d382fd4c77aff0b49b4ee25a27ae0b977"
+    },
+    {
       "bytes": 3579,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "bf1a462228983aa697265eee2de7a1a80265f2f6",
@@ -84637,6 +84651,13 @@
       "sha256": "4b33b9412db9897697aae601dfeef59deaaf2f9e07d9d73f7b05c247504df16d"
     },
     {
+      "bytes": 18706,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "65623138f0c10d90a47ee47ac00570dcf071f10d",
+      "path": "lab/src/recursive_horizons/nsc_discovery_geometric_vertices.py",
+      "sha256": "206880ab8d1bf0957a8e0ec80b56a37ff32657346165209264bc659bf2cf08c6"
+    },
+    {
       "bytes": 57327,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "bf1a462228983aa697265eee2de7a1a80265f2f6",
@@ -86891,6 +86912,13 @@
       "changed_from_commit": "f81fa23d461c46bb976f277d9e29e61e2de02f66",
       "path": "lab/tests/test_nsc_discovery_free_return.py",
       "sha256": "e0aa5759a446cb5aa8e2c3a7b1d85cd5c1f537db3913fa9a58f80b78b70a3a79"
+    },
+    {
+      "bytes": 7271,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "65623138f0c10d90a47ee47ac00570dcf071f10d",
+      "path": "lab/tests/test_nsc_discovery_geometric_vertices.py",
+      "sha256": "0e3b43010c8dd56387eb100bfeaae2cc6a4c305eb2ebaec3f6b6e1e16109e353"
     },
     {
       "bytes": 14138,
