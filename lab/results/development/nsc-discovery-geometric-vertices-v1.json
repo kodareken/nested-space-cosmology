@@ -1,0 +1,426 @@
+{
+  "schema": "NSC-DISCOVERY-GEOMETRIC-VERTICES-v1",
+  "status": "MEASURED_FINITE_GEOMETRIC_INFLUENCE_VERTEX",
+  "case": "nf128_baseline_dt0.0005",
+  "nf": 128,
+  "coordinate_time": 0.3,
+  "source_pins": {
+    "source_record": "nsc-nested-parent-child-v1",
+    "v1_json_sha256": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "v1_npz_sha256": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead",
+    "record_json_sha256": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "record_npz_sha256": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead",
+    "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "final_state_sha256": "f6878d5858e7e9d78bc12d028a8c61bb87e3e2c3b51bb690e8c6a930a418027e",
+    "source_columns_sha256": "9b8b85bbdb7ee469f1f6b62cb02fa00a27e5ca1e995ed6bd81883503174a6e7d",
+    "observer_columns_sha256": "93d43a83e6cade0786341b1270e0b0a9fd3c1d7b516ff64fc9cc0247f92d5136",
+    "W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5",
+    "weights_sha256": "eb4960edaae7ae995c0057debd078b8f119a50222b82cd858f2b7d6a408b086e",
+    "phi_sha256": "a393fba708f0730dbf989178f9753fa6af7480357d8ee706542c47dc0efd4f80"
+  },
+  "state_sha256": "f6878d5858e7e9d78bc12d028a8c61bb87e3e2c3b51bb690e8c6a930a418027e",
+  "hamiltonian_sha256": "c926a7c9e001cfc8d72d987528e682403c510774e4607e55c75a6dd0d1dbb8d5",
+  "source_covariance_sha256": "0a8df784fdc3065043013f6a74c3f0adda2568e563ea1a796bbbddbec8e4a0b8",
+  "basis_W_sha256": "ea32bc3d006fcdece0d3a24718a8313dbe022cb59eabe524e65d95ef9a47dae5",
+  "weights": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "covariance_nonzero_eigenvalues": [
+    0.24999999999826375,
+    0.24999999999826403,
+    0.4999999999999207,
+    0.49999999999992106,
+    0.7499999999947922,
+    0.7499999999947926
+  ],
+  "CAR_admissible": true,
+  "column_gram_gap": 6.944889108240204e-12,
+  "source_rank": 6,
+  "operator_dimension": 256,
+  "full_ambient_band_retained": true,
+  "covariance_stationarity_gap": 23.53130211599926,
+  "vertices": {
+    "0": {
+      "physical_operator": {
+        "canonical_Q_index": 0,
+        "geometry_group": "parent_coarse",
+        "direction_convention": "unit increment of a_Qj; nodal direction W[:,j]",
+        "mixed_coupling": "delta a_Qj * phi_dagger G_j phi",
+        "profile_sha256": "b3bd9d69aa10a7ef493ca030b0245c15a4b19ae92f2498818352b2a11bb8a765",
+        "profile_min": 0.08873565094161143,
+        "profile_max": 0.08873565094161147,
+        "profile_squared_power": 4.031496062992133,
+        "sampled_profile_power_outside_child_fraction": 0.7480468749999998,
+        "parent_interval": [
+          0.0,
+          4.0
+        ],
+        "child_interval": [
+          1.0,
+          3.0
+        ],
+        "exact_compact_support_claimed": false,
+        "representative_vertex_has_M": false,
+        "kappa": 1,
+        "operator_dimension": 256,
+        "vertex_sha256": "f35802ea9da6c52d83f956305456927f5459d673a15110cc12568f343a32b938"
+      },
+      "representative_channel": {
+        "kappa1": -0.00033553569660369327,
+        "kappa2": 0.02234007914239,
+        "kappa3": 1.4402054864383971e-06,
+        "kappa3_imaginary_residual": 4.98764549574371e-20,
+        "kappa3_trace_terms": [
+          {
+            "real": -2.6420133590841935e-06,
+            "imag": 2.0328790734103208e-20
+          },
+          {
+            "real": 4.8267255857318075e-06,
+            "imag": 2.1077334750790885e-20
+          },
+          {
+            "real": -7.445067402092167e-07,
+            "imag": 8.470329472543003e-21
+          }
+        ],
+        "elementary_fermion_state_is_Gaussian": true,
+        "bilinear_force_is_not_assumed_Gaussian": true
+      },
+      "counting_field_check": {
+        "characteristic": "det(I-C+C exp(-i lambda G))",
+        "independent_method": "finite counting-field logdet derivative; full-band exponential on thin source",
+        "derivative_steps": [
+          {
+            "h": 0.04,
+            "third_derivative": 1.4402186330564252e-06,
+            "gap_from_trace_kappa3": 1.3146618028102273e-11
+          },
+          {
+            "h": 0.02,
+            "third_derivative": 1.4402021750474414e-06,
+            "gap_from_trace_kappa3": 3.311390955726393e-12
+          }
+        ],
+        "held_out_lambda": 0.03,
+        "held_out_not_a_derivative_step": true,
+        "held_out_odd_phase_after_linear_mean": 6.4810133967835954e-12,
+        "predicted_cubic_odd_phase": 6.4809246889727855e-12,
+        "held_out_gap": 8.870781080995841e-17,
+        "held_out_gap_over_cubic_effect": 1.3687523782045126e-05,
+        "odd_remainder_order": "O(lambda^5); no dynamical force term is installed",
+        "principal_branch_operator_norm_times_largest_lambda": 0.007098852075328931,
+        "elementary_nongaussian_interaction_added": false
+      },
+      "mean_force_gradient": -0.0013421427864147577,
+      "mean_M_trace_CG": -0.001342142786414773,
+      "mean_force_mapping_gap": 1.5395670849294163e-17
+    },
+    "5": {
+      "physical_operator": {
+        "canonical_Q_index": 5,
+        "geometry_group": "child_detail",
+        "direction_convention": "unit increment of a_Qj; nodal direction W[:,j]",
+        "mixed_coupling": "delta a_Qj * phi_dagger G_j phi",
+        "profile_sha256": "dab938d59cd3c2b0ac81b493cbd2af66b3eeb53e44305520540d08d047280883",
+        "profile_min": -0.4037167247351178,
+        "profile_max": 0.4037084109591212,
+        "profile_squared_power": 4.031496062992128,
+        "sampled_profile_power_outside_child_fraction": 1.6943549154646868e-09,
+        "parent_interval": [
+          0.0,
+          4.0
+        ],
+        "child_interval": [
+          1.0,
+          3.0
+        ],
+        "exact_compact_support_claimed": false,
+        "representative_vertex_has_M": false,
+        "kappa": 1,
+        "operator_dimension": 256,
+        "vertex_sha256": "f73404f7fb06a0158336af5509cbf4726b0d34676eaaef494c77f7f3024ed1ee"
+      },
+      "representative_channel": {
+        "kappa1": 0.0004783521448551019,
+        "kappa2": 0.03136508324958603,
+        "kappa3": 1.1191590224180087e-06,
+        "kappa3_imaginary_residual": 1.3043905348857956e-19,
+        "kappa3_trace_terms": [
+          {
+            "real": 3.186047366388069e-05,
+            "imag": 4.336808689942018e-19
+          },
+          {
+            "real": -3.0838887579220745e-05,
+            "imag": -3.074769802418937e-19
+          },
+          {
+            "real": 9.757293775806289e-08,
+            "imag": 4.235164736271502e-21
+          }
+        ],
+        "elementary_fermion_state_is_Gaussian": true,
+        "bilinear_force_is_not_assumed_Gaussian": true
+      },
+      "counting_field_check": {
+        "characteristic": "det(I-C+C exp(-i lambda G))",
+        "independent_method": "finite counting-field logdet derivative; full-band exponential on thin source",
+        "derivative_steps": [
+          {
+            "h": 0.04,
+            "third_derivative": 1.1209174021545578e-06,
+            "gap_from_trace_kappa3": 1.758379736549179e-09
+          },
+          {
+            "h": 0.02,
+            "third_derivative": 1.1195990487352322e-06,
+            "gap_from_trace_kappa3": 4.400263172235376e-10
+          }
+        ],
+        "held_out_lambda": 0.03,
+        "held_out_not_a_derivative_step": true,
+        "held_out_odd_phase_after_linear_mean": 5.037095195022925e-12,
+        "predicted_cubic_odd_phase": 5.036215600881038e-12,
+        "held_out_gap": 8.795941418871752e-16,
+        "held_out_gap_over_cubic_effect": 0.0001746537899873267,
+        "odd_remainder_order": "O(lambda^5); no dynamical force term is installed",
+        "principal_branch_operator_norm_times_largest_lambda": 0.030690157606173735,
+        "elementary_nongaussian_interaction_added": false
+      },
+      "mean_force_gradient": 0.001913408579420349,
+      "mean_M_trace_CG": 0.0019134085794204076,
+      "mean_force_mapping_gap": 5.854691731421724e-17
+    },
+    "6": {
+      "physical_operator": {
+        "canonical_Q_index": 6,
+        "geometry_group": "child_detail",
+        "direction_convention": "unit increment of a_Qj; nodal direction W[:,j]",
+        "mixed_coupling": "delta a_Qj * phi_dagger G_j phi",
+        "profile_sha256": "182c586edea7811e08e3c1b8a5304dbe131751ae28c94460d51d76944ec11dfc",
+        "profile_min": -0.3567929266341417,
+        "profile_max": 0.42814847627174146,
+        "profile_squared_power": 4.031496062992126,
+        "sampled_profile_power_outside_child_fraction": 9.780588483671648e-09,
+        "parent_interval": [
+          0.0,
+          4.0
+        ],
+        "child_interval": [
+          1.0,
+          3.0
+        ],
+        "exact_compact_support_claimed": false,
+        "representative_vertex_has_M": false,
+        "kappa": 1,
+        "operator_dimension": 256,
+        "vertex_sha256": "c5b2d9bd0d91e7c2dfe31881d0204aaffabe230fa20093cac4d660b2422e1295"
+      },
+      "representative_channel": {
+        "kappa1": -0.0004735726061318084,
+        "kappa2": 0.034486712150547494,
+        "kappa3": 1.1498940792281297e-05,
+        "kappa3_imaginary_residual": 7.3712022799324e-19,
+        "kappa3_trace_terms": [
+          {
+            "real": -5.4695737120368586e-05,
+            "imag": 8.673617379884035e-19
+          },
+          {
+            "real": 6.728567987496725e-05,
+            "imag": -1.3362964178418074e-19
+          },
+          {
+            "real": -1.0910019623173715e-06,
+            "imag": 3.3881317890172014e-21
+          }
+        ],
+        "elementary_fermion_state_is_Gaussian": true,
+        "bilinear_force_is_not_assumed_Gaussian": true
+      },
+      "counting_field_check": {
+        "characteristic": "det(I-C+C exp(-i lambda G))",
+        "independent_method": "finite counting-field logdet derivative; full-band exponential on thin source",
+        "derivative_steps": [
+          {
+            "h": 0.04,
+            "third_derivative": 1.1494095604269158e-05,
+            "gap_from_trace_kappa3": 4.845188012139208e-09
+          },
+          {
+            "h": 0.02,
+            "third_derivative": 1.1497730513495764e-05,
+            "gap_from_trace_kappa3": 1.210278785532742e-09
+          }
+        ],
+        "held_out_lambda": 0.03,
+        "held_out_not_a_derivative_step": true,
+        "held_out_odd_phase_after_linear_mean": 5.1742781410627956e-11,
+        "predicted_cubic_odd_phase": 5.1745233565265824e-11,
+        "held_out_gap": 2.4521546378678874e-15,
+        "held_out_gap_over_cubic_effect": 4.7388995447764394e-05,
+        "odd_remainder_order": "O(lambda^5); no dynamical force term is installed",
+        "principal_branch_operator_norm_times_largest_lambda": 0.03222008105493545,
+        "elementary_nongaussian_interaction_added": false
+      },
+      "mean_force_gradient": -0.0018942904245272377,
+      "mean_M_trace_CG": -0.0018942904245272335,
+      "mean_force_mapping_gap": 4.119968255444917e-18
+    }
+  },
+  "occupied_empty_cut": {
+    "A": "i[H_G,G_child5]",
+    "B": "G_parent0",
+    "greater": {
+      "real": 0.0013875784299394358,
+      "imag": -0.007545703416765427
+    },
+    "lesser": {
+      "real": 0.0013875784299394178,
+      "imag": 0.007545703416765446
+    },
+    "commutator": {
+      "real": 3.0140820395097023e-17,
+      "imag": -0.015091406833530857
+    },
+    "factorization_identity": "Tr(C A (I-C) B)-Tr(C B (I-C) A)=Tr(C[A,B])",
+    "cut_identity_gap": 1.9778890766513102e-17,
+    "instantaneous_retarded_cross_slope": -0.015091406833530857,
+    "retarded_convention": "H_int=+J B; chi_AB=-i theta <[A(t),B(s)]>",
+    "stationarity_assumed": false,
+    "physical_pole_claimed": false,
+    "new_geometric_force_added": false
+  },
+  "multiplicity_scope": {
+    "M": 4,
+    "mean": "M Tr(C G), verified against the existing source gradient",
+    "derived_cumulants": "one representative channel of the existing Gaussian determinant",
+    "scaled_observable_assumption": "if f_scaled=M f on that same channel, kappa3(f_scaled)=M^3 kappa3(f)",
+    "independent_angular_copy_assumption": "if rho_total is a product of M identical channel states, kappa3(sum f_s)=M kappa3(f)",
+    "angular_product_state_derived_here": false,
+    "total_stress_noise_mapping": null
+  },
+  "evolution_ran": false,
+  "initial_state_called": false,
+  "new_dynamics": false,
+  "physical_frequency_pole_claimed": false,
+  "cosmohedron_equivalence_claimed": false,
+  "scope": "finite geometric bilinear influence cumulants and an instantaneous causal cut on the actual saved slice",
+  "source_bindings_before": {
+    "lab/pyproject.toml": "b792a7edcb8b5e920b99751dd55827860060b846cdd36464e8572244b9ffd3b5",
+    "lab/results/development/nsc-nested-parent-child-replay-basis-v1.json": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "lab/results/development/nsc-nested-parent-child-replay-basis-v1.npz": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "lab/results/development/nsc-nested-parent-child-v1.json": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "lab/results/development/nsc-nested-parent-child-v1.npz": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead",
+    "lab/results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+    "lab/scripts/derive_nsc_discovery_geometric_vertices.py": "69fb9a1028403f622176393616a1186d382fd4c77aff0b49b4ee25a27ae0b977",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_coupled_memory.py": "442da2767e172f3032b36908cb6b93128231072f69778bb0c885fce739935f60",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_geometric_vertices.py": "206880ab8d1bf0957a8e0ec80b56a37ff32657346165209264bc659bf2cf08c6",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "lab/src/recursive_horizons/nsc_finite_window_embedding.py": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regeneration_controls.py": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_null_expansion.py": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4"
+  },
+  "source_bindings_after": {
+    "lab/pyproject.toml": "b792a7edcb8b5e920b99751dd55827860060b846cdd36464e8572244b9ffd3b5",
+    "lab/results/development/nsc-nested-parent-child-replay-basis-v1.json": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "lab/results/development/nsc-nested-parent-child-replay-basis-v1.npz": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "lab/results/development/nsc-nested-parent-child-v1.json": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "lab/results/development/nsc-nested-parent-child-v1.npz": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead",
+    "lab/results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+    "lab/scripts/derive_nsc_discovery_geometric_vertices.py": "69fb9a1028403f622176393616a1186d382fd4c77aff0b49b4ee25a27ae0b977",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_coupled_memory.py": "442da2767e172f3032b36908cb6b93128231072f69778bb0c885fce739935f60",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_geometric_vertices.py": "206880ab8d1bf0957a8e0ec80b56a37ff32657346165209264bc659bf2cf08c6",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "lab/src/recursive_horizons/nsc_finite_window_embedding.py": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regeneration_controls.py": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_null_expansion.py": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.1",
+    "scipy": "1.17.1"
+  },
+  "cpu_seconds": 0.39399799999999996,
+  "cpu_limit_seconds": 10.0,
+  "frozen_git": {
+    "commit": "5f86da5c51ab94a014e0be5f303b0c586e1af78b",
+    "all_declared_bytes_authenticated": true,
+    "blob_ids": {
+      "lab/pyproject.toml": "4a366217cd1314b0c0cf18921d4e3ea2a30a2e9e",
+      "lab/results/development/nsc-nested-parent-child-replay-basis-v1.json": "7b38f760c9f419e1d22101b7af6d5ab9f8c4abdb",
+      "lab/results/development/nsc-nested-parent-child-replay-basis-v1.npz": "82aebca96de5eca92dea2c8ad464fde781d241fc",
+      "lab/results/development/nsc-nested-parent-child-v1.json": "20cd5031690c5980afdf3d3c7a927269fac64b61",
+      "lab/results/development/nsc-nested-parent-child-v1.npz": "78d6aa944c54c09d379674a3e6507bfa36ebf204",
+      "lab/results/development/nsc-subgap-history-response.json": "d16f6586d01bfdd82e391fb2559e818a20bc5431",
+      "lab/scripts/derive_nsc_discovery_geometric_vertices.py": "5dd6866136f8fb0864be1318079703e01a7f6c1c",
+      "lab/src/recursive_horizons/nsc_adm_source.py": "4a18b10dc4d1ee77687a2a5f5c4e63f1294b7bf3",
+      "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "09f5bba76dbe97badeee6afdac33c32ee1ad1e1e",
+      "lab/src/recursive_horizons/nsc_covariant_operator.py": "75d45101dba6f41042fe6963fc7b4ff0bd35c300",
+      "lab/src/recursive_horizons/nsc_discovery_backend.py": "3779c63fb5b43c42f00227e6a90e475a7053e711",
+      "lab/src/recursive_horizons/nsc_discovery_coupled_memory.py": "fe4e2a2d70ea79f6ec1303dfdc23dc7c7bdf8fe6",
+      "lab/src/recursive_horizons/nsc_discovery_episode.py": "267633af195698a65c1038598db22eb6880b0888",
+      "lab/src/recursive_horizons/nsc_discovery_geometric_vertices.py": "a0a41b803cb4604d2465e43639a0014c4484cfef",
+      "lab/src/recursive_horizons/nsc_evolving_reduction.py": "6c61357f4a7b9a730b569aa488ac2976c36c17ee",
+      "lab/src/recursive_horizons/nsc_finite_terms.py": "25775559e282a270da20984eb7053ac7424b90d9",
+      "lab/src/recursive_horizons/nsc_finite_window_embedding.py": "7f50db87987046d939a379103b9c8a2d605bbbf6",
+      "lab/src/recursive_horizons/nsc_influence.py": "576330398206e4b84ca25df7ec9bfcd4e05bfa17",
+      "lab/src/recursive_horizons/nsc_nested_parent_child.py": "24b81f7beb5c40d3a2068a4cf0f1e0990cb26f00",
+      "lab/src/recursive_horizons/nsc_nested_qualities.py": "84b32c207ba7111352e1e3b815a72bade282cc45",
+      "lab/src/recursive_horizons/nsc_regeneration_controls.py": "bcf10d2156ed45149996b661c822d878bf7315b6",
+      "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "247dfc63cac03e454db6ec1b8938f2484f6db5b3",
+      "lab/src/recursive_horizons/nsc_regulated.py": "bd5e08e7f275ad7c2bef91abdffa46eb03eb65e4",
+      "lab/src/recursive_horizons/nsc_shape_response.py": "b4b3ec9d08083f565486d15ffe6b590b9aa576bb",
+      "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py": "d807c9135a23899288f1f5bd60f8c0dc44f111a5",
+      "lab/src/recursive_horizons/nsc_spherical_coupling.py": "5093f973a637cb59bdda0e11c4c1d027e56164d5",
+      "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "0ce3ea51de815ad1e3d38d02e8ae85b762703039",
+      "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "1e48ef324a2fc2d1da6257e7c5b264ca34015946",
+      "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "11aa2d0c90f0a5bbae6598aedcd7fd85e2bea127",
+      "lab/src/recursive_horizons/nsc_spherical_null_expansion.py": "76a086153a7d5f87477d058a9ab3e0a79964c724",
+      "lab/src/recursive_horizons/provenance.py": "54b954fa95f262e0e6b0b0bb42e281448b2273d8"
+    }
+  }
+}

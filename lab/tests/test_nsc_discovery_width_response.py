@@ -337,3 +337,79 @@ def test_nonlinear_redo_nominal_uses_one_shared_actual_clock_target(tmp_path):
     assert all(row["target_tau"] == forecast["target_tau"] for row in forecast["neighbors"])
     assert all(row["time"] <= .01 for row in forecast["neighbors"])
     assert width.check(directory)["ok"]
+
+
+def _manufactured_confirmation_reference(directory):
+    # An ordinary short nominal run supplies a real clock/state; curvature
+    # numbers are intentionally manufactured to test immutability, not fitting.
+    linear = directory/"linear"
+    width.prepare(linear, nf=128, duration=.001, step_cap=.001)
+    width.predict(linear)
+    old, saved = width.load(linear, "prediction")
+    reference = directory/"manufactured-reference"
+    config = dict(old["inputs"], experiment="nonlinear-v2", held_out_width=1.03, old_width1p05_used_for_fit=False)
+    config["inputs_sha256"] = width._digest({k:v for k,v in config.items() if k != "inputs_sha256"})
+    nominal = old["coefficients"][-1]
+    record = {"schema": width.NONLINEAR_SCHEMA, "inputs": config, "status": "predicted",
+              "producer_identity": width._pin_identity(), "target_tau": old["target_tau"],
+              "nominal": {"readout": nominal["readout"], "first_coefficient": nominal["coefficient_at_equal_tau"]},
+              "curvature_coefficients": [{"second_proper_clock_coefficient": 9.55,
+                  "linear_forecast": 1.234, "quadratic_forecast": 1.238}],
+              "quadratic_forecast_h_indicator": .0000025}
+    width.seal(reference, width.CURVATURE_STAGES[1], record, saved)
+    measured = {"schema": width.NONLINEAR_SCHEMA, "inputs": config,
+                "status": "measured_at_common_absolute_tau", "producer_identity": width._pin_identity(),
+                "prediction_curvature_json_sha256": width.episode.file_sha256(reference/"curvature-prediction.json"),
+                "observed_effect": -.057968}
+    width.seal(reference, width.CURVATURE_STAGES[2], measured, {"manufactured": np.array([1.])})
+    return reference
+
+
+def test_one_confirmation_locks_coefficients_and_uses_only_four_state_arms(tmp_path, monkeypatch):
+    reference = _manufactured_confirmation_reference(tmp_path)
+    hashes = {path.name: width.episode.file_sha256(path) for path in reference.iterdir()}
+    output = tmp_path/"numerical-confirmation"
+    locked = width.lock_curvature_confirmation(output, reference)
+    assert locked["own_control_sources_constructed"] is False
+    assert locked["locked_original_forecast"]["second_coefficient"] == 9.55
+    assert locked["inputs"]["cases"] == width.confirmation_cases()
+    assert locked["inputs"]["cpu_budget_seconds"] == 120
+    digest = width.episode.file_sha256(output/"confirmation-lock.json")
+    actual = width.family.solve_prepared; calls = []
+    def solve(pair):
+        assert width.episode.file_sha256(output/"confirmation-lock.json") == digest
+        calls.append((pair.grid.nf, pair.source_metadata["width_scale"]))
+        return actual(pair)
+    def forbidden(*args, **kwargs):
+        raise AssertionError("confirmation reran neighbor tangents")
+    monkeypatch.setattr(width.family, "solve_prepared", solve)
+    monkeypatch.setattr(width.prediction, "coupled_rk4_step", forbidden)
+    result = width.measure_confirmation(output)
+    assert calls == [(256, 1.), (256, 1.03), (128, 1.), (128, 1.03)]
+    assert result["status"] == "confirmation_completed"
+    assert len(result["arms"]) == 4 and len(result["resolution_effects"]) == 2
+    assert all(arm["time"] <= .01 and arm["target_tau"] == locked["inputs"]["common_absolute_tau_target"] for arm in result["arms"])
+    assert all(arm["own_initial_solver"]["converged"] and not arm["initial_radius_copied"] for arm in result["arms"])
+    assert result["locked_original_forecast"] == locked["locked_original_forecast"]
+    assert result["original_forecast_recalibrated"] is False
+    assert result["new_response_coefficients_computed"] is False
+    assert result["numerical_indicators"]["additional_refinement_automatically_requested"] is False
+    assert result["numerical_indicators"]["space_effect_indicator"] == pytest.approx(abs(result["reference_observed_effect"]-result["resolution_effects"][1]["measured_effect"]))
+    assert width.check(output)["ok"]
+    assert width.episode.file_sha256(output/"confirmation-lock.json") == digest
+    assert {path.name: width.episode.file_sha256(path) for path in reference.iterdir()} == hashes
+    with pytest.raises(FileExistsError):
+        width.confirm_curvature(output, reference)
+
+
+def test_confirmation_budget_stop_retains_checkpoint_without_coefficients_update(tmp_path, monkeypatch):
+    reference = _manufactured_confirmation_reference(tmp_path)
+    output = tmp_path/"stopped-confirmation"
+    locked = width.lock_curvature_confirmation(output, reference)
+    monkeypatch.setattr(width, "_budget", lambda *args, **kwargs: (True, 120., 121.))
+    result = width.measure_confirmation(output)
+    assert result["status"] == "budget_stop"
+    assert not result["arms"]
+    assert result["locked_original_forecast"] == locked["locked_original_forecast"]
+    assert result["failures"]
+    assert width.check(output)["ok"]

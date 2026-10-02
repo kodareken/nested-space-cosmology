@@ -14,10 +14,11 @@ from recursive_horizons import nsc_discovery_width_response as width
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     modes = parser.add_mutually_exclusive_group(required=True)
-    for mode in ("prepare", "predict", "measure", "run", "check", "prepare-curvature", "predict-curvature", "measure-curvature", "preflight"):
+    for mode in ("prepare", "predict", "measure", "run", "check", "prepare-curvature", "predict-curvature", "measure-curvature", "preflight", "confirm-curvature"):
         modes.add_argument("--"+mode, action="store_true")
     parser.add_argument("--output")
     parser.add_argument("--nonlinear", action="store_true")
+    parser.add_argument("--reference", help="immutable nonlinear-v2 forecast and measurement for one numerical confirmation")
     parser.add_argument("--baseline", help="read-only nominal linear preparation/prediction; held-out data are not training")
     parser.add_argument("--redo-baseline", action="store_true")
     parser.add_argument("--nf", type=int, default=128)
@@ -35,6 +36,13 @@ def main(argv=None):
             return 0
         if not args.output:
             parser.error("--output is required for an execution stage")
+        if args.confirm_curvature:
+            if not args.reference:
+                parser.error("--confirm-curvature requires --reference")
+            result = width.confirm_curvature(args.output, args.reference, production=args.production,
+                                             cpu_budget=min(args.cpu_budget, width.CONFIRMATION_CPU_CAP))
+            print(width.CONFIRMATION_SCHEMA, result["status"], "cpu", result["aggregate_cpu_seconds"], flush=True)
+            return 0
         nonlinear = args.nonlinear or args.prepare_curvature or args.predict_curvature or args.measure_curvature
         if nonlinear:
             if args.prepare_curvature or args.prepare or args.run:

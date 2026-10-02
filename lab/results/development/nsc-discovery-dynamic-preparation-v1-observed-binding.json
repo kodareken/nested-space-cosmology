@@ -1,0 +1,23 @@
+{
+  "binding_kind": "external_post_run_observation",
+  "binding_recorded_before_execution": false,
+  "input_hashes": {
+    "lab/results/development/nsc-discovery-stationary-balance-seed-v2.json": "ab2ecc1b3b73af731fc8effad16f73f10e16fefb28dc462cabf1a7ca5dea83fc",
+    "lab/results/development/nsc-discovery-stationary-balance-seed-v2.npz": "552374a598b3a4fd5ec1dff1f1659f44cef1301cf418821439ce587ebddae3f0"
+  },
+  "old_record_modified": false,
+  "payload_sha256": "b949f12c4f0c5b3dd4d1ba2618a915a81d56ccff9a4cd25c8d9196525084214d",
+  "producing_commit": "2dab7191c50dc1787874311ae11a8aa9240dc673",
+  "record_sha256": "f1c777c1a26934600a8173b4d62831e08ee01fbfa3a220dfabb0a5be978d9ce3",
+  "schema": "NSC-DISCOVERY-DYNAMIC-PREPARATION-OBSERVED-BINDING-v1",
+  "source_hashes": {
+    "lab/docs/nsc-discovery-dynamic-preparation.md": "928caf07bfbd7b6cad4518d496577617404c12c189ee1710a2e53d789235cd2d",
+    "lab/scripts/derive_nsc_discovery_dynamic_preparation.py": "bc0e37dccb31a2094981f0e04aec78e424ee1d6fc1ca1463dba7c2220c03a2de",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "9b755da2eaf9b42202fd3e2aee60d03610dc1fd56ce53d5577d6881d84c0cbe5",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/tests/test_nsc_discovery_dynamic_preparation.py": "4a83aa8e994155e760e5eef83e15f14227a835fc58c1addd9407416efb6614df"
+  }
+}

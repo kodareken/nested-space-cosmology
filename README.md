@@ -8,8 +8,9 @@ successor is developed. [Execution status](docs/current-result.md#active-discove
 
 The longer continuation reaches $T=8$. Child probability leaves and returns
 near the carrier circuit, while its proper radial length contracts severely
-and actual tidal components grow. An ambient-size comparison is testing the
-return's boundary dependence. Source-family controls confirm the earlier
+and actual tidal components grow. The ambient-size comparison shifts the
+return from the eight-unit to the twelve-unit circuit, and exact free
+transport reproduces the coupled field return. Source-family controls confirm the earlier
 loss of localization. Coupled causal reduction reproduces field forces and
 generated geometry, and locked forecasts predict withheld local responses.
 The static holding search approaches a noncompact limit without satisfying

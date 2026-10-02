@@ -1,0 +1,228 @@
+{
+  "schema": "NSC-DISCOVERY-DYNAMIC-PREPARATION-v1",
+  "status": "FINITE_INITIAL_DATA",
+  "nf": 128,
+  "harmonic": 8,
+  "lift": 1.1,
+  "cpu_limit_seconds": 30.0,
+  "evidence_written": true,
+  "cases": {
+    "uniform": {
+      "converged": true,
+      "blocker": null,
+      "convex_seed": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 7.145804841911074e-10,
+            "correction_max": 6.029459845051706e-14,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "exact_correction": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 1.8742461693785486e-09,
+            "correction_max": 1.0611085942881567e-13,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "cpu_seconds": 0.04023300000000002,
+      "rho_min": 3.434336940843256,
+      "convex_forcing_min": 3.499259288988185,
+      "Q_min": 0.4639447144311637,
+      "r_min": 2.746344072669473,
+      "r_mean": 2.746344072669583,
+      "retained_lapse_max": 1.8742461693785486e-09,
+      "full_lapse_max": 1.8356552278220306e-08,
+      "unresolved_lapse_max": 1.8242975428347356e-08,
+      "full_shift_max": 3.238681947784675e-14,
+      "source_current_mean": -3.91006701524807e-16,
+      "fine_eigen_tail_max": 2.303873472223965e-13,
+      "pointwise_source_tail_max": 6.328271240363392e-12,
+      "source_current_deleted": false,
+      "spectral": {
+        "gram_max": 1.1102230246251565e-15,
+        "commutator_max": 2.471139108475896e-15,
+        "eigen_residual_max": 1.8041547825870318e-14,
+        "unequal_weight_gap": 0.6583287201519596,
+        "CAR_max": 0.75,
+        "source_trace": 3.0
+      },
+      "actual_dynamic_force_max": {
+        "p_Q": 6.0555157683666225,
+        "p_r": 1.3376934686225268,
+        "p_chi": 0.003044259511668393
+      },
+      "continuum_initial_data_certified": false,
+      "holding_claim": false,
+      "evolution_performed": false,
+      "declaration": {
+        "mean_Q": 0.4639447144311824,
+        "harmonic": 8,
+        "lift": 1.1,
+        "pattern_fraction": 0.0,
+        "cosine_coefficients": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Q_is_declared_initial_input": true,
+        "saved_geometry_is_holding_evidence": false
+      },
+      "checkpoint_available": true
+    },
+    "pattern": {
+      "converged": true,
+      "blocker": null,
+      "convex_seed": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 0.2396921477440157,
+            "correction_max": 0.010620551027200806,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 1,
+            "residual_max": 0.00016351478601150406,
+            "correction_max": 8.70400808117602e-05,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 2,
+            "residual_max": 1.4310626351990207e-08,
+            "correction_max": 6.835785021842837e-09,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 3,
+            "residual_max": 1.2413100607519613e-11,
+            "correction_max": 8.44859790997683e-15,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "exact_correction": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 1.8844703387263223e-09,
+            "correction_max": 1.1072243607402739e-13,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "cpu_seconds": 0.04225100000000004,
+      "rho_min": 2.9195731929717823,
+      "convex_forcing_min": 3.1234069272909464,
+      "Q_min": 0.3910683939750891,
+      "r_min": 2.7603504568994017,
+      "r_mean": 2.762592507983949,
+      "retained_lapse_max": 1.8844703387263223e-09,
+      "full_lapse_max": 2.0164161451674545e-08,
+      "unresolved_lapse_max": 1.946568381526917e-08,
+      "full_shift_max": 3.2307718970369776e-14,
+      "source_current_mean": -3.8946017752306894e-16,
+      "fine_eigen_tail_max": 2.2869295961555224e-13,
+      "pointwise_source_tail_max": 6.618705583605333e-12,
+      "source_current_deleted": false,
+      "spectral": {
+        "gram_max": 1.4432899320127035e-15,
+        "commutator_max": 2.6385265671296895e-15,
+        "eigen_residual_max": 1.9540061687108712e-14,
+        "unequal_weight_gap": 0.6582038017293944,
+        "CAR_max": 0.75,
+        "source_trace": 3.0
+      },
+      "actual_dynamic_force_max": {
+        "p_Q": 6.289855390301881,
+        "p_r": 41.6459166866553,
+        "p_chi": 0.09582861481931342
+      },
+      "continuum_initial_data_certified": false,
+      "holding_claim": false,
+      "evolution_performed": false,
+      "declaration": {
+        "mean_Q": 0.4639447144311824,
+        "harmonic": 8,
+        "lift": 1.1,
+        "pattern_fraction": 1.0,
+        "cosine_coefficients": [
+          0.1636068504600635,
+          0.00670678985294706,
+          0.00018339186807988598,
+          3.76187315159829e-06,
+          6.174004475009472e-08,
+          8.444546874455759e-10,
+          9.900461206936248e-12
+        ],
+        "Q_is_declared_initial_input": true,
+        "saved_geometry_is_holding_evidence": false
+      },
+      "checkpoint_available": true
+    }
+  },
+  "source_hashes": {
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "9b755da2eaf9b42202fd3e2aee60d03610dc1fd56ce53d5577d6881d84c0cbe5",
+    "lab/scripts/derive_nsc_discovery_dynamic_preparation.py": "bc0e37dccb31a2094981f0e04aec78e424ee1d6fc1ca1463dba7c2220c03a2de",
+    "lab/tests/test_nsc_discovery_dynamic_preparation.py": "4a83aa8e994155e760e5eef83e15f14227a835fc58c1addd9407416efb6614df",
+    "lab/docs/nsc-discovery-dynamic-preparation.md": "928caf07bfbd7b6cad4518d496577617404c12c189ee1710a2e53d789235cd2d",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f"
+  },
+  "input_hashes": {
+    "lab/results/development/nsc-discovery-stationary-balance-seed-v2.json": "ab2ecc1b3b73af731fc8effad16f73f10e16fefb28dc462cabf1a7ca5dea83fc",
+    "lab/results/development/nsc-discovery-stationary-balance-seed-v2.npz": "552374a598b3a4fd5ec1dff1f1659f44cef1301cf418821439ce587ebddae3f0"
+  },
+  "scope": {
+    "initial_constraint_preparation_only": true,
+    "static_criticality_required": false,
+    "evolution_performed": false,
+    "continuum_initial_data_certified": false
+  },
+  "ng": 127,
+  "nq": 512,
+  "period": 8.0,
+  "gauge": "conformal",
+  "occupations": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "source_eta": 1.0,
+  "source_trace": 3.0,
+  "multiplicity": 4,
+  "locked_coefficients": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "C_F": 0.01125484045706527,
+    "C_E": 0.0005158468542821582,
+    "C_box": -0.0005627420228532635,
+    "flux": 4.0,
+    "V_rel": 0.0
+  },
+  "cpu_seconds": 0.13851799999999997,
+  "payload": "nsc-discovery-dynamic-preparation-v1.npz",
+  "payload_sha256": "b949f12c4f0c5b3dd4d1ba2618a915a81d56ccff9a4cd25c8d9196525084214d"
+}

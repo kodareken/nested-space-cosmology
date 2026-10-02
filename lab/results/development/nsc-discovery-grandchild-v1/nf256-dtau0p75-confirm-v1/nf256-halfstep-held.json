@@ -1,0 +1,56 @@
+{
+  "absolute_tau": 1.1078554632035884,
+  "array_sha256": {
+    "state_Q": "63f041f2ce51f501c052c55e879fc271c7b084d8d383eca73e9cd6237b1e24d2",
+    "state_chi": "d2167cda94051bead53d536d4e2295976cacd69e4a03a2cb0106bf7fce84e55a",
+    "state_p_Q": "0954a89d7a0f7460bcdc28264691143acc73517f30117da51ae695ee6dd556bf",
+    "state_p_chi": "8ebff08e2bb99c7c08627aab7c282ec7058597c4c688ede917fa6919e15c4f75",
+    "state_p_r": "a02ca15ea69f5fbcf80a99ea3cc1310da1658b42ec32f0e8e092555c159d99a1",
+    "state_phi0": "d9c9cb6ad045cd19e68d9805fad56045af841ad5e40258cfe6312e70fd9b2225",
+    "state_phi1": "0962e83151c762e7f72ecd5bef6693bcc44c09ab0e6169f74f0d32ec1592f6cf",
+    "state_r": "6ef8fea80a32934170755e113693c879c28c344d0662e872d640aa98c8b5618d"
+  },
+  "confirmation_lock_sha256": "47133975355e2b74417e780e54bc61a1d1d48fc7d05ec6945b0420b57f1ddef9",
+  "event": {
+    "coordinate_duration": 0.7075801098346208,
+    "delta_tau": 0.0,
+    "proper_increment": 0.7499999997877065,
+    "reached": true,
+    "root_bisections": 20,
+    "status": "rooted_event",
+    "steps": 2831,
+    "tau_residual": 3.533529024934978e-11
+  },
+  "input_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/forecast.json": "d3514090c34ee46a30b0b15d7137d769e5f9bb9bb179ebf55d80ec9364c13ff1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/forecast.npz": "26c7be23c6e1a17eb0e4781b27c48fbaa913196e6745f670da5c454a1edf2827",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.json": "d6ac8e5be1886e486ffab041854da1217f4d33ea34a57dbee245d72df9305166",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.npz": "1d74d25c694750934adeb42467ba452053af49d1c50d320b583ce55406079fe7",
+    "results/development/nsc-discovery-prediction-v1/prediction-run.json": "0dcec3ab514fea8828decc7ae15b2459a0d1878c4005960b7c329f4eb3a067be",
+    "results/development/nsc-discovery-prediction-v1/prediction-run.npz": "58a1374a7c4faa98d50f985e5fa7bc72cf17ab4433c51bc042ba21c269c22470",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.json": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.npz": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "results/development/nsc-nested-parent-child-v1.json": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "results/development/nsc-nested-parent-child-v1.npz": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead"
+  },
+  "mode": "finite_held_checkpoint",
+  "nf": 256,
+  "payload_bytes": 61233,
+  "payload_sha256": "7ac7fa5f620d00559662139d6d90d19ed5aa4bc4d5a9f7d8628e4a8b4f2dd585",
+  "producers": {
+    "scripts/derive_nsc_discovery_grandchild.py": "592d6701f8a6251af4bbf19de664b0240c02b12fd00e8dca0ce6bca7c3513b23",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_discovery_grandchild.py": "c4c42f5dfe78eec0f08c3473654f0f440b44c1d5822c436ae7a6a7f9fd50f0b3",
+    "src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+  },
+  "producing_commit": "f81fa23d461c46bb976f277d9e29e61e2de02f66",
+  "schema": "NSC-DISCOVERY-GRANDCHILD-v1",
+  "step_cap": 0.00025
+}

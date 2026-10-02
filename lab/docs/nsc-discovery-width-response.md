@@ -242,3 +242,59 @@ After root freezes and commits the updated producer, use:
 
 `--run --nonlinear` executes the same immutable sequence. The explicit stage
 commands make the forecast inspectable before the new independent measurement.
+
+## One numerical confirmation of the quadratic gap
+
+The preserved nonlinear-v2 batch, produced at `bf1a462`, completed in
+**88.503 CPU seconds**. At width **1.03** its measured effect is
+`-0.05796808377`; the quadratic signed remainder is `+0.00131489441`, or
+**2.2683% of the measured effect**. The fine second coefficient is
+`9.5500966156` (the coarser estimate is approximately `9.54870894`), while the
+available h/event indicator is about `2.5066e-6`. These observations do not
+install a 1% target or call for more coefficient derivatives.
+
+The single confirmation freezes the **original** nominal value, first and
+second coefficients, linear/quadratic forecasts and original forecast digest
+before constructing any control source. No fit or recalibration occurs.
+The exact four state-only arms are:
+
+| Resolution | RK4 cap | Widths | Purpose |
+|---:|---:|---|---|
+| NF256 | 0.00025 | 1 and 1.03 | one timestep indicator |
+| NF128 | 0.0005 | 1 and 1.03 | one spatial indicator |
+
+Every arm uses its own normalized source, own source-consistent initial radius,
+resolution's frozen W and fixed physical observer `(1,3)`. It starts at its own
+T0 and reaches the same **absolute** proper time `0.3578554631682531` using the
+existing nonlinear RK4 and rooted clock event. No neighboring tangent or new
+response coefficient is rerun. Source CAR, full current/shift and lapse-solve
+diagnostics, actual proper initial geometry and terminal geometry remain in the
+record. The newly measured width-1 control is a numerical baseline; it is not
+renamed as a new sealed forecast.
+
+Raw absolute contents, paired measured effects and discrepancies from the
+unchanged original forecast are retained. The timestep indicator compares the
+new NF256 cap-0.00025 effect with the original NF256 cap-0.0005 effect. The spatial
+indicator compares NF128 cap-0.0005 with that same original NF256 cap-0.0005
+effect, avoiding a timestep/spatial confound. The old observations are read only
+after the confirmation forecast lock, solely as numerical comparators. No
+additional refinement or all-green threshold is scheduled.
+
+The fresh aggregate CPU cap is **120 seconds**, with forecast factor 1.5.
+`confirmation-lock.json/.npz` and `confirmation-measurement.json/.npz` are
+creation-only immutable chunks at most 64 MiB. Budget stops preserve their
+partial finite data and locked coefficients. Historical producer pins still
+authenticate the old v1/nonlinear-v2 files independently of the updated verifier.
+A confirmation can indicate whether the 2.27% gap exceeds these two numerical
+movements; it does not manufacture a rigorous error bound or a universal law.
+
+After root freezes and commits the current producer:
+
+```sh
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --confirm-curvature --production --cpu-budget 120 \
+  --reference results/development/nsc-discovery-width-response-nonlinear-v2 \
+  --output results/development/nsc-discovery-width-response-confirmation-v1
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_width_response.py \
+  --check --output results/development/nsc-discovery-width-response-confirmation-v1
+```

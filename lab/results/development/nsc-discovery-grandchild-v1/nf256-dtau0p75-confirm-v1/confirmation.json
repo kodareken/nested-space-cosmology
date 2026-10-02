@@ -1,0 +1,406 @@
+{
+  "CPU_budget_seconds": 300.0,
+  "absolute_future_tau_target": 1.1078554631682531,
+  "admissions": [
+    {
+      "admitted": true,
+      "baseline_estimated_steps": 2851,
+      "baseline_probe_CPU": 0.03222999999999998,
+      "factor": 1.5,
+      "first_steps_reused_in_continuation": true,
+      "held_estimated_steps": 2853,
+      "held_probe_CPU": 0.010347999999999913,
+      "nf": 256,
+      "pair_forecast_CPU": 182.11586099999954,
+      "remaining_CPU": 299.365271,
+      "step_cap": 0.00025
+    },
+    {
+      "admitted": true,
+      "baseline_estimated_steps": 1437,
+      "baseline_probe_CPU": 0.018223000000006095,
+      "factor": 1.5,
+      "first_steps_reused_in_continuation": true,
+      "held_estimated_steps": 1438,
+      "held_probe_CPU": 0.005966999999998279,
+      "nf": 128,
+      "pair_forecast_CPU": 52.15049550000943,
+      "remaining_CPU": 169.978675,
+      "step_cap": 0.0005
+    }
+  ],
+  "aggregate_CPU_seconds": 169.555447,
+  "array_sha256": {
+    "nf128-spatial_baseline_Q": "321d6e472fe1b4bdd09c3a62fcec0ab2511fbe6f82ce0ef5e53ac0bec11d1ac3",
+    "nf128-spatial_baseline_chi": "3c32f679bd68789062932d40e287b8bd1d64baba5e3446e3b4ebf8011ee389a0",
+    "nf128-spatial_baseline_p_Q": "f098b1e5755ae4873f0795a881c678da9e9a682361716f13da1400041a9f98c9",
+    "nf128-spatial_baseline_p_chi": "441ed5a1a222fa73592f504713f4dfb1f79951db13f0c2ccde66304de24b9074",
+    "nf128-spatial_baseline_p_r": "0e9790f9a434e80b72b7f55a3f239c691db1fed2c518568af7383f30973508ce",
+    "nf128-spatial_baseline_phi0": "d571fe3646a77c0dbc11ad66593a9fdd827cc9056f63d675083916e7ae340041",
+    "nf128-spatial_baseline_phi1": "5d047428ced669ab5e8de4d329660d181ba28db6a0743e5328311426b9a8ac59",
+    "nf128-spatial_baseline_r": "85d0f75b55ad65b2774e8ac7b02e93edc1b554f4adedce73389ec4de96059dfb",
+    "nf128-spatial_direction_Q": "39f24c071438cdd8b1f593b116297aba4d2e66a0a8f6b397a9264ef1b84b577b",
+    "nf128-spatial_direction_chi": "93545704a34efe6ceaf515910e1b59a191e5d370b798c52091c52d0a1843ffcb",
+    "nf128-spatial_direction_occupations": "5f805ffcd205b005f42b96f7d13fab251985298313baaf23cc0127d9d6112785",
+    "nf128-spatial_direction_p_Q": "428e8a6cf993f89d6910fc86e467f4ac9d8ffc0be7f188884e7d9b99325f89ed",
+    "nf128-spatial_direction_p_chi": "9e083e482d37ac30f96d0e2c1302bfc7fde335dd35b384d5f39587b42c81ba4b",
+    "nf128-spatial_direction_p_r": "975c41c249868f3563f203517526bc6ece33c63c6d40d037c673848744a60731",
+    "nf128-spatial_direction_phi0": "1a51a94fe0793830e32d1a50ae92dffa6762a41fadc84a64dc90070b7faa2f89",
+    "nf128-spatial_direction_phi1": "f7b781193de6007f9ee83feed12f425e299aa733f9f2d8a2fbeee7a2b06eecfd",
+    "nf128-spatial_direction_r": "207821005a70e7e991d6ae9e7d9c43e07b99f088012b80eb2960467c953f7f3f",
+    "nf128-spatial_held_Q": "2ddb7267f4be5f301296e44d261c92cf7ddad236ce7651203af6f95244567a56",
+    "nf128-spatial_held_chi": "0819ca7c341a05698d22fcd74a6b9e8dab49563fa5a3c763bad54fa08e9d8a17",
+    "nf128-spatial_held_p_Q": "f599b197b0f7d9cb2aa09690a3af45d49d61bcbb414767ff7f11498be96cfa24",
+    "nf128-spatial_held_p_chi": "ed8de571544857a78e2887a6bbe6551dde43ae793e0af97e5ffa95a5020d18b3",
+    "nf128-spatial_held_p_r": "3fc12a8b6f75662d57c0a764b383b4406796b1fbc8e981fbada8f1634b6807c7",
+    "nf128-spatial_held_phi0": "7fdd86a8591e2104cf5561551fd0cefebabc0a943ad27b620607defa7190e990",
+    "nf128-spatial_held_phi1": "97a0789e132f8cdc7ff244f5ba0b517771de8ef8b4ce8a0dd03da944bad03e46",
+    "nf128-spatial_held_r": "411f3b3827495db2a902f92b3b9e3c14a963fae191132c896214d4f503206cd0",
+    "nf256-halfstep_baseline_Q": "87c852ce1c0aca6a56621f6200fc960928428fce316ecd5103d94a3652d8b38c",
+    "nf256-halfstep_baseline_chi": "d5b28d7a46cf02cdea9a55fda06bc2149555aadefb27b245e96e25f91aa76e76",
+    "nf256-halfstep_baseline_p_Q": "e65ed57317e5f64c9f649eea38961108ae7b5e117d997672a4b5bcbe01088f0c",
+    "nf256-halfstep_baseline_p_chi": "4c5a388886b67649cdf6a7442c48db152fd35021732693d0aa140c3976dc74f1",
+    "nf256-halfstep_baseline_p_r": "3da9d5d7c499f44c1d0c1a1de023f73353fa12da61a6a0834299bcf4b8f099e5",
+    "nf256-halfstep_baseline_phi0": "96303bb82b290977ce2cca92209aaa26870f59691cffee1a2679ee5e04d0f4fe",
+    "nf256-halfstep_baseline_phi1": "35eb53deb2fac03243470445442f7b6d5d7873790fe67879c4fd9101d0200de6",
+    "nf256-halfstep_baseline_r": "eefcc405afae18bae6adebec4417f636f5add77ab8ddd01baeecc72b50aa3369",
+    "nf256-halfstep_direction_Q": "9ae7081a322774736e335b5582e1142db9ac0e6d00475315ba54843eb517df76",
+    "nf256-halfstep_direction_chi": "23fd3e3869a33c96846df86ace0638a1eda63f06a19df22876d808f18f66ead0",
+    "nf256-halfstep_direction_occupations": "5f805ffcd205b005f42b96f7d13fab251985298313baaf23cc0127d9d6112785",
+    "nf256-halfstep_direction_p_Q": "df9869445ee40f6546741cb70db0b3528df05c657dd6107ecc3df495cb269a38",
+    "nf256-halfstep_direction_p_chi": "0dd1547b99fe4312b59a6fa3f4a55f08fdf4cdc5a379aa64e5a09551f39f1773",
+    "nf256-halfstep_direction_p_r": "4b88430cd6967d0efc308649ca3cfef32967409b3bc4e63dfcfcc7cf1b10787b",
+    "nf256-halfstep_direction_phi0": "787a4326fc83ec35179abd01bd491677b4724bee5cb2eb10900c7932c198addb",
+    "nf256-halfstep_direction_phi1": "7b4fe93b8967ce04c980b06bccece18c743eb247f9b837c68ef40e39cb21e469",
+    "nf256-halfstep_direction_r": "d688ad316b262333740a23438b77998d6d3fb1587df230443e1c955ff8573872",
+    "nf256-halfstep_held_Q": "63f041f2ce51f501c052c55e879fc271c7b084d8d383eca73e9cd6237b1e24d2",
+    "nf256-halfstep_held_chi": "d2167cda94051bead53d536d4e2295976cacd69e4a03a2cb0106bf7fce84e55a",
+    "nf256-halfstep_held_p_Q": "0954a89d7a0f7460bcdc28264691143acc73517f30117da51ae695ee6dd556bf",
+    "nf256-halfstep_held_p_chi": "8ebff08e2bb99c7c08627aab7c282ec7058597c4c688ede917fa6919e15c4f75",
+    "nf256-halfstep_held_p_r": "a02ca15ea69f5fbcf80a99ea3cc1310da1658b42ec32f0e8e092555c159d99a1",
+    "nf256-halfstep_held_phi0": "d9c9cb6ad045cd19e68d9805fad56045af841ad5e40258cfe6312e70fd9b2225",
+    "nf256-halfstep_held_phi1": "0962e83151c762e7f72ecd5bef6693bcc44c09ab0e6169f74f0d32ec1592f6cf",
+    "nf256-halfstep_held_r": "6ef8fea80a32934170755e113693c879c28c344d0662e872d640aa98c8b5618d"
+  },
+  "confirmation_lock_sha256": "47133975355e2b74417e780e54bc61a1d1d48fc7d05ec6945b0420b57f1ddef9",
+  "continuous_error_bound": null,
+  "finite_alpha_truncation_not_isolated_by_halfstep": true,
+  "finite_checkpoint_prefixes": [
+    "nf256-halfstep-baseline",
+    "nf256-halfstep-held",
+    "nf128-spatial-baseline",
+    "nf128-spatial-held"
+  ],
+  "input_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/forecast.json": "d3514090c34ee46a30b0b15d7137d769e5f9bb9bb179ebf55d80ec9364c13ff1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/forecast.npz": "26c7be23c6e1a17eb0e4781b27c48fbaa913196e6745f670da5c454a1edf2827",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.json": "d6ac8e5be1886e486ffab041854da1217f4d33ea34a57dbee245d72df9305166",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.npz": "1d74d25c694750934adeb42467ba452053af49d1c50d320b583ce55406079fe7",
+    "results/development/nsc-discovery-prediction-v1/prediction-run.json": "0dcec3ab514fea8828decc7ae15b2459a0d1878c4005960b7c329f4eb3a067be",
+    "results/development/nsc-discovery-prediction-v1/prediction-run.npz": "58a1374a7c4faa98d50f985e5fa7bc72cf17ab4433c51bc042ba21c269c22470",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.json": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
+    "results/development/nsc-nested-parent-child-replay-basis-v1.npz": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
+    "results/development/nsc-nested-parent-child-v1.json": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
+    "results/development/nsc-nested-parent-child-v1.npz": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead"
+  },
+  "modal_basis_and_primary_spatial_probability_are_distinct": true,
+  "mode": "numerical_confirmation",
+  "no_one_percent_success_gate": true,
+  "one_halfstep_pair_only": true,
+  "opening_prefix_error_bound": null,
+  "opening_refinement_performed": false,
+  "payload_bytes": 280737,
+  "payload_sha256": "ef4f9001664eda5601032afc64d3a3fda17306589d2c5e3938a0da56e22317f6",
+  "producers": {
+    "scripts/derive_nsc_discovery_grandchild.py": "592d6701f8a6251af4bbf19de664b0240c02b12fd00e8dca0ce6bca7c3513b23",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_discovery_grandchild.py": "c4c42f5dfe78eec0f08c3473654f0f440b44c1d5822c436ae7a6a7f9fd50f0b3",
+    "src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+  },
+  "producing_commit": "f81fa23d461c46bb976f277d9e29e61e2de02f66",
+  "reference_directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75",
+  "reference_forecast_unchanged": true,
+  "reference_values": {
+    "baseline_NG": 0.7432944357819389,
+    "heldout_NG": 0.7428436677195119,
+    "locked_predicted_NG": 0.7428539830313812,
+    "measured_change": -0.0004507680624269428,
+    "predicted_change": -0.0004404527505576664,
+    "prediction_error": -1.0315311869235622e-05
+  },
+  "results": [
+    {
+      "baseline_NG": 0.7432944357912847,
+      "baseline_absolute_tau": 1.1078554633124738,
+      "baseline_event": {
+        "coordinate_duration": 0.7071797928809619,
+        "delta_tau": -0.028750894393415393,
+        "proper_increment": 0.7500000001442206,
+        "reached": true,
+        "root_bisections": 20,
+        "status": "rooted_event",
+        "steps": 2829,
+        "tau_residual": 1.4422063543406693e-10
+      },
+      "composition_identity": {
+        "not_the_numerical_confirmation": true,
+        "recomputed_here": false,
+        "reference_force_gap": 1.0502709812953981e-13,
+        "reference_reconstruction_gap": 9.473559806558736e-16,
+        "scope": "cited original long-run reconstruction on shared generated geometry"
+      },
+      "derivative_NG_tau": -0.0440452750361846,
+      "held_absolute_tau": 1.1078554632035884,
+      "held_event": {
+        "coordinate_duration": 0.7075801098346208,
+        "delta_tau": 0.0,
+        "proper_increment": 0.7499999997877065,
+        "reached": true,
+        "root_bisections": 20,
+        "status": "rooted_event",
+        "steps": 2831,
+        "tau_residual": 3.533529024934978e-11
+      },
+      "heldout_NG": 0.7428436679343753,
+      "label": "nf256-halfstep",
+      "measured_change": -0.00045076785690945087,
+      "modal_basis_report": {
+        "dilated_seed_projection_tail": 0.000749300769707745,
+        "dilation_factor": 2.0,
+        "gram_gap": 1.9984014443252818e-15,
+        "primary_is_spatial_content_not_projector_trace": true,
+        "ranks": [
+          2,
+          4,
+          8
+        ],
+        "single_opening_QR": true,
+        "spatial_tails": {
+          "child": {
+            "exact_compact_support_claimed": false,
+            "inside_mass": [
+              0.9999999657679154,
+              0.9999999657679126,
+              0.9999999995769484,
+              0.9999999995769479
+            ],
+            "outside_mass": [
+              3.4232084611396374e-08,
+              3.4232087386953935e-08,
+              4.230515937564405e-10,
+              4.2305214886795284e-10
+            ]
+          },
+          "grandchild": {
+            "exact_compact_support_claimed": false,
+            "inside_mass": [
+              0.9999998703675563,
+              0.9999998703675536
+            ],
+            "outside_mass": [
+              1.2963244366837046e-07,
+              1.2963244644392802e-07
+            ]
+          },
+          "parent": {
+            "exact_compact_support_claimed": false,
+            "inside_mass": [
+              0.9999999867668166,
+              0.9999999867668139,
+              0.9999999998402089,
+              0.9999999998402085,
+              0.9999999990021053,
+              0.9999999990021036,
+              0.9999999997189866,
+              0.9999999997189878
+            ],
+            "outside_mass": [
+              1.3233183437932894e-08,
+              1.3233186102468153e-08,
+              1.597910692652249e-10,
+              1.5979151335443476e-10,
+              9.978946557964719e-10,
+              9.978964321533113e-10,
+              2.810134347441817e-10,
+              2.8101221349885463e-10
+            ]
+          }
+        }
+      },
+      "modal_nf128_spatial_resolution_unresolved": false,
+      "nf": 256,
+      "opening_clock_alignment": {
+        "cross_check_gap": 2.463307335887066e-16,
+        "delta_tau_primary": -0.01781249372010178,
+        "delta_tau_secondary": -0.017812493720102025,
+        "formula": "delta_y_tau = delta_y_t - F delta_tau / tau_dot",
+        "new_segment_delta_tau": 0.0,
+        "occupation_direction_preserved": true,
+        "tau_dot": 1.1899023938076874
+      },
+      "opening_prefix_error_bound": null,
+      "predicted_NG_at_confirmation_step": 0.7428539830409229,
+      "predicted_change": -0.000440452750361846,
+      "prediction_error": -1.031510654758705e-05,
+      "primary_spatial_NG_not_vetoed_by_modal_tail": true,
+      "residual_against_original_locked_prediction": -1.0315097005886287e-05,
+      "residual_over_measured_effect": 0.022883411914747777,
+      "status": "completed_matched_clock_pair",
+      "step_cap": 0.00025
+    },
+    {
+      "baseline_NG": 0.7432463426058661,
+      "baseline_absolute_tau": 1.1078554632208586,
+      "baseline_event": {
+        "coordinate_duration": 0.7072304015159382,
+        "delta_tau": -0.02873808883890368,
+        "proper_increment": 0.7500150228080172,
+        "reached": true,
+        "root_bisections": 20,
+        "status": "rooted_event",
+        "steps": 1415,
+        "tau_residual": 5.260558655351133e-11
+      },
+      "composition_identity": {
+        "not_the_numerical_confirmation": true,
+        "recomputed_here": false,
+        "reference_force_gap": 1.0502709812953981e-13,
+        "reference_reconstruction_gap": 9.473559806558736e-16,
+        "scope": "cited original long-run reconstruction on shared generated geometry"
+      },
+      "derivative_NG_tau": -0.04408129964942521,
+      "held_absolute_tau": 1.1078554633675377,
+      "held_event": {
+        "coordinate_duration": 0.7076305751800311,
+        "delta_tau": 0.0,
+        "proper_increment": 0.7500150226051985,
+        "reached": true,
+        "root_bisections": 20,
+        "status": "rooted_event",
+        "steps": 1416,
+        "tau_residual": 1.9928458883100575e-10
+      },
+      "heldout_NG": 0.7427952261347435,
+      "label": "nf128-spatial",
+      "measured_change": -0.00045111647112261455,
+      "modal_basis_report": {
+        "dilated_seed_projection_tail": 0.018603940639968,
+        "dilation_factor": 2.0,
+        "gram_gap": 8.881784197001252e-16,
+        "primary_is_spatial_content_not_projector_trace": true,
+        "ranks": [
+          2,
+          4,
+          8
+        ],
+        "single_opening_QR": true,
+        "spatial_tails": {
+          "child": {
+            "exact_compact_support_claimed": false,
+            "inside_mass": [
+              0.9999680759458522,
+              0.9999680759458527,
+              0.9999995757579294,
+              0.9999995757579281
+            ],
+            "outside_mass": [
+              3.192405414775834e-05,
+              3.192405414731425e-05,
+              4.2424207058466834e-07,
+              4.2424207191693597e-07
+            ]
+          },
+          "grandchild": {
+            "exact_compact_support_claimed": false,
+            "inside_mass": [
+              0.9999006540689036,
+              0.9999006540689039
+            ],
+            "outside_mass": [
+              9.934593109639511e-05,
+              9.934593109606205e-05
+            ]
+          },
+          "parent": {
+            "exact_compact_support_claimed": false,
+            "inside_mass": [
+              0.9999875323370135,
+              0.9999875323370138,
+              0.9999998530716104,
+              0.9999998530716092,
+              0.9999990411901432,
+              0.9999990411901432,
+              0.9999996122210969,
+              0.999999612221096
+            ],
+            "outside_mass": [
+              1.2467662986459516e-05,
+              1.2467662986237471e-05,
+              1.4692838956609222e-07,
+              1.4692839078733755e-07,
+              9.58809856843601e-07,
+              9.58809856843601e-07,
+              3.877789030992673e-07,
+              3.8777890398744574e-07
+            ]
+          }
+        }
+      },
+      "modal_nf128_spatial_resolution_unresolved": true,
+      "nf": 128,
+      "opening_clock_alignment": {
+        "cross_check_gap": 8.326672684688674e-17,
+        "delta_tau_primary": -0.01780492321003738,
+        "delta_tau_secondary": -0.017804923210037463,
+        "formula": "delta_y_tau = delta_y_t - F delta_tau / tau_dot",
+        "new_segment_delta_tau": 0.0,
+        "occupation_direction_preserved": true,
+        "tau_dot": 1.1898519623879218
+      },
+      "opening_prefix_error_bound": null,
+      "predicted_NG_at_confirmation_step": 0.7428055296093719,
+      "predicted_change": -0.00044081299649425214,
+      "prediction_error": -1.0303474628381437e-05,
+      "primary_spatial_NG_not_vetoed_by_modal_tail": true,
+      "residual_against_original_locked_prediction": -5.875689663770167e-05,
+      "residual_over_measured_effect": 0.022839943313843064,
+      "status": "completed_matched_clock_pair",
+      "step_cap": 0.0005
+    }
+  ],
+  "schema": "NSC-DISCOVERY-GRANDCHILD-v1",
+  "spatial_indicator": {
+    "differences": {
+      "baseline_NG": -4.809318541865171e-05,
+      "heldout_NG": -4.8441799631815385e-05,
+      "measured_change": -3.4861421316367824e-07,
+      "predicted_change": -3.602461324061536e-07,
+      "prediction_error": 1.1631919205612462e-08
+    },
+    "effect_scale": 0.00045111647112261455,
+    "indicator_is_not_a_total_error_bound": true,
+    "measured_effect_gap_over_effect": 0.0007727809456749453,
+    "residual_gap_over_effect": 2.5784736204967515e-05
+  },
+  "status": "completed",
+  "step_indicator": {
+    "differences": {
+      "baseline_NG": 9.345857421294568e-12,
+      "heldout_NG": 2.148633493348484e-10,
+      "measured_change": 2.0551749191355384e-10,
+      "predicted_change": 1.9582041066792955e-13,
+      "prediction_error": 2.0532164857200996e-10
+    },
+    "effect_scale": 0.0004507680624269428,
+    "indicator_is_not_a_total_error_bound": true,
+    "measured_effect_gap_over_effect": 4.5592735831159873e-07,
+    "residual_gap_over_effect": 4.554928924346476e-07
+  }
+}

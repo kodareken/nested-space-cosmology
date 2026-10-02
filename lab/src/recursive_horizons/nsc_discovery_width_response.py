@@ -28,6 +28,9 @@ NONLINEAR_SCHEMA = "NSC-DISCOVERY-WIDTH-RESPONSE-NONLINEAR-v2"
 NONLINEAR_HELD_OUT_WIDTH = 1.03
 ABSOLUTE_TAU_TARGET = 0.3578554631682531
 CURVATURE_STAGES = ("curvature-prepare", "curvature-prediction", "curvature-measurement")
+CONFIRMATION_SCHEMA = "NSC-DISCOVERY-WIDTH-NUMERICAL-CONFIRMATION-v1"
+CONFIRMATION_STAGES = ("confirmation-lock", "confirmation-measurement")
+CONFIRMATION_CPU_CAP = 120.0
 LEGACY_LINEAR_OUTPUT = episode.LAB / "results" / "development" / "nsc-discovery-width-response-v1"
 BASE_WIDTH = 1.0
 HELD_OUT_WIDTH = 1.05
@@ -306,7 +309,8 @@ def load(output, stage):
     path = directory/(stage+".json")
     record = json.loads(path.read_text())
     payload_path = directory/record["npz"]
-    expected_schema = NONLINEAR_SCHEMA if stage in CURVATURE_STAGES else SCHEMA
+    expected_schema = (CONFIRMATION_SCHEMA if stage in CONFIRMATION_STAGES else
+                       NONLINEAR_SCHEMA if stage in CURVATURE_STAGES else SCHEMA)
     if payload_path != directory/(stage+".npz") or record["schema"] != expected_schema or record["stage"] != stage:
         raise ValueError("unexpected stage identity")
     if episode.file_sha256(payload_path) != record["payload_sha256"]:
@@ -588,6 +592,8 @@ def measure(output):
 
 def check(output):
     directory = _output(output)
+    if any((directory/(stage+".json")).exists() for stage in CONFIRMATION_STAGES):
+        return check_confirmation(directory)
     if any((directory/(stage+".json")).exists() for stage in CURVATURE_STAGES):
         return check_curvature(directory)
     checked = []; previous = None; reports = {}
@@ -1059,3 +1065,195 @@ def check_curvature(output):
     if not checked:
         raise FileNotFoundError("no nonlinear width stages")
     return {"schema": NONLINEAR_SCHEMA, "ok": True, "checked": checked, "repaired": False, "evolved": False}
+
+
+def _confirmation_output(output):
+    directory = _output(output)
+    if directory.is_relative_to(episode.REPO) and not any(part.startswith("nsc-discovery-width-response-confirmation-") for part in directory.parts):
+        raise PermissionError("numerical confirmation needs a new nsc-discovery-width-response-confirmation- output")
+    return directory
+
+
+def confirmation_cases():
+    return [{"nf": nf, "step_cap": cap, "width": w}
+            for nf, cap in ((256, .00025), (128, .0005))
+            for w in (BASE_WIDTH, NONLINEAR_HELD_OUT_WIDTH)]
+
+
+def lock_curvature_confirmation(output, reference, *, production=False, cpu_budget=CONFIRMATION_CPU_CAP):
+    directory = _confirmation_output(output)
+    if directory == Path(reference).resolve() or Path(reference).resolve() in directory.parents:
+        raise PermissionError("confirmation output cannot extend the reference evidence")
+    _new_stage(directory, CONFIRMATION_STAGES[0])
+    _new_stage(directory, CONFIRMATION_STAGES[1])
+    start = time.process_time(); forecast, saved = load(reference, CURVATURE_STAGES[1])
+    family.authenticate_producer({"producer_identity": forecast["producer_identity"]})
+    if forecast["status"] != "predicted":
+        raise ValueError("reference quadratic forecast is incomplete")
+    if forecast["inputs"]["production"] and not production:
+        raise PermissionError("numerical confirmation is a root production batch")
+    if not np.isfinite(cpu_budget) or not 0 < cpu_budget <= CONFIRMATION_CPU_CAP:
+        raise ValueError("confirmation aggregate allowance must lie in (0,120]")
+    config = inputs(256, forecast["inputs"]["duration"], .00025, production, cpu_budget)
+    config.update(experiment="single_numerical_confirmation", held_out_width=NONLINEAR_HELD_OUT_WIDTH,
+                  cases=confirmation_cases(), common_absolute_tau_target=forecast["target_tau"],
+                  no_new_response_coefficients=True, original_forecast_recalibrated=False,
+                  maximum_confirmation_batches=1)
+    config["float_hex"]["held_out_width"] = NONLINEAR_HELD_OUT_WIDTH.hex()
+    config["inputs_sha256"] = _digest({k:v for k,v in config.items() if k != "inputs_sha256"})
+    if config["production"] and forecast["target_tau"] != ABSOLUTE_TAU_TARGET:
+        raise ValueError("reference proper-clock target differs from the original fine target")
+    original = forecast["curvature_coefficients"][-1]
+    locked = {"nominal_content": forecast["nominal"]["readout"]["child_regional_content"],
+              "first_coefficient": forecast["nominal"]["first_coefficient"],
+              "second_coefficient": original["second_proper_clock_coefficient"],
+              "linear_forecast": original["linear_forecast"], "quadratic_forecast": original["quadratic_forecast"],
+              "curvature_h_indicator": forecast["quadratic_forecast_h_indicator"],
+              "all_green_threshold": None}
+    record = {"schema": CONFIRMATION_SCHEMA, "inputs": config, "status": "forecast_locked",
+              "reference_directory": str(Path(reference).resolve()),
+              "reference_prediction_json_sha256": episode.file_sha256(Path(reference)/(CURVATURE_STAGES[1]+".json")),
+              "reference_prediction_npz_sha256": forecast["payload_sha256"],
+              "reference_producer_identity": forecast["producer_identity"],
+              "locked_original_forecast": locked, "locked_forecast_sha256": _digest(locked),
+              "producer_identity": _pin_identity(), "own_control_sources_constructed": False,
+              "aggregate_cpu_seconds": float(time.process_time()-start)}
+    arrays = {name: saved[name] for name in ("W", "observer_columns", "source_weights")}
+    record["producing_commit"] = record["producer_identity"]["working_tree_commit"]
+    record["producing_commit_authenticated"] = record["producer_identity"]["all_sources_commit_pinned"]
+    return seal(directory, CONFIRMATION_STAGES[0], record, arrays)
+
+
+def measure_confirmation(output):
+    directory = _confirmation_output(output); _new_stage(directory, CONFIRMATION_STAGES[1]); start = time.process_time()
+    locked, _saved = load(directory, CONFIRMATION_STAGES[0])
+    family.authenticate_producer({"producer_identity": locked["producer_identity"]})
+    if _digest(locked["locked_original_forecast"]) != locked["locked_forecast_sha256"]:
+        raise ValueError("locked original coefficients changed")
+    config = locked["inputs"]; rows = []; arrays = {}; failures = []
+    for index, case in enumerate(config["cases"]):
+        prefix = f"a{index}_"
+        try:
+            if _budget(config, _spent(locked), start)[0]:
+                raise TimeoutError("confirmation aggregate allowance exhausted")
+            pair, _pins = family.assemble_pair(case["nf"], 1., 1.)
+            changed = pair_at_width(pair, case["width"])
+            state, solver = family.solve_prepared(changed)
+            initial = state.copy()
+            arm_config = dict(config, nf=case["nf"], step_cap=case["step_cap"])
+            result = march_retarded(changed, state, response.zero_tangent(changed.grid), arm_config,
+                target_tau=config["common_absolute_tau_target"], prior_cpu=_spent(locked), stage_start=start,
+                with_tangent=False)
+            arrays.update({prefix+name: value for name,value in _pair_arrays(changed).items()})
+            arrays.update(_state_arrays(initial, prefix+"initial_")); arrays.update(_state_arrays(result["state"], prefix+"event_"))
+            content = result["readout"]["child_regional_content"]
+            event = result["event"]
+            clock_indicator = None if event is None else abs(result["readout"]["child_regional_content_dot"]*event["tau_residual"]/result["readout"]["tau_dot"])
+            row = {"index": index, **case, "pair": _pair_record(changed), "status": result["status"],
+                   "stop": result["stop"], "time": result["time"], "proper_time": result["tau"],
+                   "target_tau": config["common_absolute_tau_target"], "absolute_child_content": content,
+                   "absolute_discrepancy_from_original_forecast": content-(locked["locked_original_forecast"]["nominal_content"]
+                        if case["width"] == BASE_WIDTH else locked["locked_original_forecast"]["quadratic_forecast"]),
+                   "clock_event_indicator": clock_indicator,
+                   "event": None if event is None else {k:v for k,v in event.items() if k not in ("state", "tangent")},
+                   "own_initial_solver": solver, "initial_radius_copied": False, "source_field_reset": False,
+                   "initial_geometry": proper_geometry(changed, initial, case["width"]),
+                   "event_geometry": proper_geometry(result["pair"], result["state"], case["width"]),
+                   "gaussian_state": gaussian_report(result["pair"], result["state"]),
+                   "control_baseline_is_a_new_sealed_forecast": False}
+            rows.append(row)
+            if result["status"] != "event_reached":
+                break
+        except (ValueError, RuntimeError, TimeoutError) as error:
+            failures.append({"index": index, **case, "error": type(error).__name__+": "+str(error),
+                             "non_existence_claimed": False}); break
+    groups = []
+    original_effect = locked["locked_original_forecast"]["quadratic_forecast"]-locked["locked_original_forecast"]["nominal_content"]
+    for nf in (256, 128):
+        pair_rows = [row for row in rows if row["nf"] == nf and row["status"] == "event_reached"]
+        if len(pair_rows) == 2:
+            baseline, held = sorted(pair_rows, key=lambda row: row["width"])
+            effect = held["absolute_child_content"]-baseline["absolute_child_content"]
+            groups.append({"nf": nf, "step_cap": baseline["step_cap"], "measured_effect": effect,
+                           "baseline_absolute_content": baseline["absolute_child_content"],
+                           "held_absolute_content": held["absolute_child_content"],
+                           "original_locked_predicted_effect": original_effect,
+                           "effect_discrepancy_from_original_forecast": effect-original_effect,
+                           "baseline_not_used_to_recalibrate_forecast": True})
+    # Only after the original forecast lock and controls: read old observations as a numerical comparator.
+    reference_measurement, _reference_arrays = load(locked["reference_directory"], CURVATURE_STAGES[2])
+    family.authenticate_producer({"producer_identity": reference_measurement["producer_identity"]})
+    if reference_measurement["prediction_curvature_json_sha256"] != locked["reference_prediction_json_sha256"]:
+        raise ValueError("reference measurement used another forecast")
+    reference_effect = reference_measurement.get("observed_effect")
+    fine = next((row for row in groups if row["nf"] == 256), None)
+    coarse = next((row for row in groups if row["nf"] == 128), None)
+    indicators = {"time_effect_indicator": None if fine is None or reference_effect is None else abs(fine["measured_effect"]-reference_effect),
+                  "space_effect_indicator": None if fine is None or coarse is None else abs(reference_effect-coarse["measured_effect"]) if reference_effect is not None else None,
+                  "time_comparison": "NF256 cap0.00025 controls minus original NF256 cap0.0005 effect",
+                  "space_comparison": "NF128 cap0.0005 controls minus original NF256 cap0.0005 effect",
+                  "not_a_certified_error_bound": True, "additional_refinement_automatically_requested": False}
+    original_gap = None if reference_effect is None else reference_effect-original_effect
+    movements = (None if any(indicators[name] is None for name in ("time_effect_indicator", "space_effect_indicator"))
+                 else indicators["time_effect_indicator"]+indicators["space_effect_indicator"])
+    record = {"schema": CONFIRMATION_SCHEMA, "inputs": config, "status": "confirmation_completed" if len(groups) == 2 else "confirmation_incomplete",
+              "confirmation_lock_json_sha256": episode.file_sha256(directory/(CONFIRMATION_STAGES[0]+".json")),
+              "locked_forecast_sha256": locked["locked_forecast_sha256"],
+              "locked_original_forecast": locked["locked_original_forecast"], "producer_identity": locked["producer_identity"],
+              "arms": rows, "failures": failures, "resolution_effects": groups,
+              "reference_measurement_json_sha256": episode.file_sha256(Path(locked["reference_directory"])/(CURVATURE_STAGES[2]+".json")),
+              "reference_observed_effect": reference_effect, "numerical_indicators": indicators,
+              "original_effect_forecast_gap": original_gap, "time_plus_space_movement_indicator": movements,
+              "original_gap_exceeds_measured_numerical_movements": None if original_gap is None or movements is None else abs(original_gap)>movements,
+              "gap_attribution": "compare raw gap with this one time and spatial indicator; no forced conclusion",
+              "original_forecast_recalibrated": False, "new_response_coefficients_computed": False,
+              "all_green_threshold": None, "aggregate_cpu_seconds": _spent(locked)+float(time.process_time()-start)}
+    if (record["aggregate_cpu_seconds"] >= config["cpu_budget_seconds"]
+        or any(row["status"] == "budget_stop" for row in rows)
+        or any("TimeoutError" in item["error"] for item in failures)):
+        record["status"] = "budget_stop"
+    return seal(directory, CONFIRMATION_STAGES[1], record, arrays)
+
+
+def confirm_curvature(output, reference, *, production=False, cpu_budget=CONFIRMATION_CPU_CAP):
+    lock_curvature_confirmation(output, reference, production=production, cpu_budget=cpu_budget)
+    return measure_confirmation(output)
+
+
+def check_confirmation(output):
+    directory = _confirmation_output(output); checked = []; locked = None
+    for stage in CONFIRMATION_STAGES:
+        if not (directory/(stage+".json")).exists():
+            continue
+        record, arrays = load(directory, stage)
+        family.authenticate_producer({"producer_identity": record["producer_identity"]})
+        if _digest(record["locked_original_forecast"]) != record["locked_forecast_sha256"]:
+            raise ValueError("original locked forecast changed")
+        if record.get("aggregate_cpu_seconds", 0.) > record["inputs"]["cpu_budget_seconds"] and record["status"] != "budget_stop":
+            raise ValueError("completed confirmation exceeded its CPU allowance")
+        if record["inputs"]["cases"] != confirmation_cases() or record["inputs"]["cpu_budget_seconds"] > CONFIRMATION_CPU_CAP:
+            raise ValueError("numerical confirmation case or allowance contract changed")
+        if stage == CONFIRMATION_STAGES[0]:
+            locked = record
+            reference, _source = load(record["reference_directory"], CURVATURE_STAGES[1])
+            family.authenticate_producer({"producer_identity": reference["producer_identity"]})
+            if reference["payload_sha256"] != record["reference_prediction_npz_sha256"] or episode.file_sha256(Path(record["reference_directory"])/(CURVATURE_STAGES[1]+".json")) != record["reference_prediction_json_sha256"]:
+                raise ValueError("locked historical forecast identity changed")
+        else:
+            if locked is None or record["locked_original_forecast"] != locked["locked_original_forecast"]:
+                raise ValueError("confirmation recalibrated original coefficients")
+            if record["confirmation_lock_json_sha256"] != episode.file_sha256(directory/(CONFIRMATION_STAGES[0]+".json")):
+                raise ValueError("confirmation lock predecessor changed")
+            for arm in record["arms"]:
+                prefix = f"a{arm['index']}_"
+                if not np.array_equal(arrays[prefix+"W"], family.load_frozen_basis(arm["nf"])["W"]):
+                    raise ValueError("control used another domain W")
+                for component in ("phi0", "phi1"):
+                    if not np.array_equal(arrays[prefix+"initial_"+component], arrays[prefix+"source_"+component]):
+                        raise ValueError("control initial field differs from own source")
+                if arm["target_tau"] != record["inputs"]["common_absolute_tau_target"]:
+                    raise ValueError("control clock target changed")
+        checked.append({"stage": stage, "status": record["status"]})
+    if not checked:
+        raise FileNotFoundError("no numerical confirmation stages")
+    return {"schema": CONFIRMATION_SCHEMA, "ok": True, "checked": checked, "repaired": False, "evolved": False}
