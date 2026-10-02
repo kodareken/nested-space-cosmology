@@ -1,0 +1,374 @@
+{
+  "schema": "NSC-DISCOVERY-DYNAMIC-PREPARATION-v1",
+  "status": "FINITE_INITIAL_DATA",
+  "nf": 128,
+  "harmonic": 8,
+  "lift": 1.1,
+  "cpu_limit_seconds": 30.0,
+  "evidence_written": true,
+  "cases": {
+    "uniform": {
+      "converged": true,
+      "blocker": null,
+      "convex_seed": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 7.145804841911074e-10,
+            "correction_max": 6.029459845051706e-14,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "exact_correction": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 1.8742461693785486e-09,
+            "correction_max": 1.0611085942881567e-13,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "cpu_seconds": 0.04023300000000002,
+      "rho_min": 3.434336940843256,
+      "convex_forcing_min": 3.499259288988185,
+      "Q_min": 0.4639447144311637,
+      "r_min": 2.746344072669473,
+      "r_mean": 2.746344072669583,
+      "retained_lapse_max": 1.8742461693785486e-09,
+      "full_lapse_max": 1.8356552278220306e-08,
+      "unresolved_lapse_max": 1.8242975428347356e-08,
+      "full_shift_max": 3.238681947784675e-14,
+      "source_current_mean": -3.91006701524807e-16,
+      "fine_eigen_tail_max": 2.303873472223965e-13,
+      "pointwise_source_tail_max": 6.328271240363392e-12,
+      "source_current_deleted": false,
+      "spectral": {
+        "gram_max": 1.1102230246251565e-15,
+        "commutator_max": 2.471139108475896e-15,
+        "eigen_residual_max": 1.8041547825870318e-14,
+        "unequal_weight_gap": 0.6583287201519596,
+        "CAR_max": 0.75,
+        "source_trace": 3.0
+      },
+      "actual_dynamic_force_max": {
+        "p_Q": 6.0555157683666225,
+        "p_r": 1.3376934686225268,
+        "p_chi": 0.003044259511668393
+      },
+      "continuum_initial_data_certified": false,
+      "holding_claim": false,
+      "evolution_performed": false,
+      "declaration": {
+        "mean_Q": 0.4639447144311824,
+        "harmonic": 8,
+        "lift": 1.1,
+        "pattern_fraction": 0.0,
+        "cosine_coefficients": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Q_is_declared_initial_input": true,
+        "saved_geometry_is_holding_evidence": false
+      },
+      "checkpoint_available": true,
+      "frozen_control_copied": true
+    },
+    "pattern": {
+      "converged": true,
+      "blocker": null,
+      "convex_seed": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 0.2396921477440157,
+            "correction_max": 0.010620551027200806,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 1,
+            "residual_max": 0.00016351478601150406,
+            "correction_max": 8.70400808117602e-05,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 2,
+            "residual_max": 1.4310626351990207e-08,
+            "correction_max": 6.835785021842837e-09,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 3,
+            "residual_max": 1.2413100607519613e-11,
+            "correction_max": 8.44859790997683e-15,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "exact_correction": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 1.8844703387263223e-09,
+            "correction_max": 1.1072243607402739e-13,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "cpu_seconds": 0.04225100000000004,
+      "rho_min": 2.9195731929717823,
+      "convex_forcing_min": 3.1234069272909464,
+      "Q_min": 0.3910683939750891,
+      "r_min": 2.7603504568994017,
+      "r_mean": 2.762592507983949,
+      "retained_lapse_max": 1.8844703387263223e-09,
+      "full_lapse_max": 2.0164161451674545e-08,
+      "unresolved_lapse_max": 1.946568381526917e-08,
+      "full_shift_max": 3.2307718970369776e-14,
+      "source_current_mean": -3.8946017752306894e-16,
+      "fine_eigen_tail_max": 2.2869295961555224e-13,
+      "pointwise_source_tail_max": 6.618705583605333e-12,
+      "source_current_deleted": false,
+      "spectral": {
+        "gram_max": 1.4432899320127035e-15,
+        "commutator_max": 2.6385265671296895e-15,
+        "eigen_residual_max": 1.9540061687108712e-14,
+        "unequal_weight_gap": 0.6582038017293944,
+        "CAR_max": 0.75,
+        "source_trace": 3.0
+      },
+      "actual_dynamic_force_max": {
+        "p_Q": 6.289855390301881,
+        "p_r": 41.6459166866553,
+        "p_chi": 0.09582861481931342
+      },
+      "continuum_initial_data_certified": false,
+      "holding_claim": false,
+      "evolution_performed": false,
+      "declaration": {
+        "mean_Q": 0.4639447144311824,
+        "harmonic": 8,
+        "lift": 1.1,
+        "pattern_fraction": 1.0,
+        "cosine_coefficients": [
+          0.1636068504600635,
+          0.00670678985294706,
+          0.00018339186807988598,
+          3.76187315159829e-06,
+          6.174004475009472e-08,
+          8.444546874455759e-10,
+          9.900461206936248e-12
+        ],
+        "Q_is_declared_initial_input": true,
+        "saved_geometry_is_holding_evidence": false
+      },
+      "checkpoint_available": true,
+      "frozen_control_copied": true
+    },
+    "coherent": {
+      "converged": true,
+      "blocker": null,
+      "convex_seed": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 0.3731802787191299,
+            "correction_max": 0.018031101900199263,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 1,
+            "residual_max": 0.00039161620215920925,
+            "correction_max": 0.00011411329328573781,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 2,
+            "residual_max": 2.194993021535688e-08,
+            "correction_max": 9.20154963078756e-09,
+            "correction_floor": 1e-10
+          },
+          {
+            "iteration": 3,
+            "residual_max": 1.7915130375789284e-11,
+            "correction_max": 7.0572458239605756e-15,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "exact_correction": {
+        "converged": true,
+        "blocker": null,
+        "history": [
+          {
+            "iteration": 0,
+            "residual_max": 1.9463290177030286e-09,
+            "correction_max": 1.2015271095156035e-13,
+            "correction_floor": 1e-10
+          }
+        ]
+      },
+      "cpu_seconds": 0.057182000000000066,
+      "rho_min": 2.370728684415737,
+      "convex_forcing_min": 2.6379014566442014,
+      "Q_min": 0.39106839397508925,
+      "r_min": 2.8017369828598175,
+      "r_mean": 2.8272413293510494,
+      "retained_lapse_max": 1.9463290177030286e-09,
+      "full_lapse_max": 2.0551061297169326e-08,
+      "unresolved_lapse_max": 1.9778485595278062e-08,
+      "full_shift_max": 3.508522738827334e-14,
+      "source_current_mean": -4.783451092356368e-16,
+      "fine_eigen_tail_max": null,
+      "physical_column_stationarity_defect_max": 0.031746679133730527,
+      "pointwise_source_tail_max": null,
+      "source_current_deleted": false,
+      "spectral": {
+        "gram_max": 5.408532803707806e-14,
+        "commutator_max": 0.004624501013302072,
+        "eigen_residual_max": 1.7640748378649876e-14,
+        "unequal_weight_gap": 0.6582038017294394,
+        "CAR_max": 0.75,
+        "source_trace": 3.0,
+        "rotation_reference_frame_sha256": "c7631e0d0e00543f182ef6b4d98915e03c6c624b60665252b030fb7eebb3bd82",
+        "source_covariance_change_frobenius": 0.35355339059327384,
+        "frozen_reference_order_and_sign_preserved": true
+      },
+      "rotation_angle": 0.5235987755982988,
+      "stationary_spectral_control": false,
+      "rotation_is_charge_conjugation": false,
+      "actual_dynamic_force_max": {
+        "p_Q": 7.5121555112947425,
+        "p_r": 43.181909890804256,
+        "p_chi": 0.09582861481928728
+      },
+      "continuum_initial_data_certified": false,
+      "holding_claim": false,
+      "evolution_performed": false,
+      "checkpoint_available": true,
+      "declaration": {
+        "mean_Q": 0.4639447144311824,
+        "harmonic": 8,
+        "lift": 1.1,
+        "pattern_fraction": 1.0,
+        "cosine_coefficients": [
+          0.1636068504600635,
+          0.00670678985294706,
+          0.00018339186807988598,
+          3.76187315159829e-06,
+          6.174004475009472e-08,
+          8.444546874455759e-10,
+          9.900461206936248e-12
+        ],
+        "Q_is_declared_initial_input": true,
+        "saved_geometry_is_holding_evidence": false,
+        "coherence_rotation_columns": [
+          0,
+          4
+        ],
+        "coherence_angle": 0.5235987755982988
+      },
+      "source_density_difference": {
+        "maximum": 1.1517963685974002,
+        "relative_contrast": 0.7708125719698795,
+        "source_covariance_changed": true,
+        "charge_conjugation": false
+      }
+    }
+  },
+  "source_hashes": {
+    "lab/docs/nsc-discovery-dynamic-preparation.md": "2b1a8e1a6382cb147287c0fb9e817dc77b2f00f46cefafe2949cc064103ed617",
+    "lab/scripts/derive_nsc_discovery_dynamic_preparation.py": "4cba0bf15e4e54db023ddb20182dffe5d2bc807429b940ef5f30a2369e7f4931",
+    "lab/src/recursive_horizons/__init__.py": "9e0819d34a855a852a9178e307b56f5c372d4778a8ea54c2afa83a556356e675",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "lab/src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_family.py": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+    "lab/src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+    "lab/src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "lab/src/recursive_horizons/nsc_discovery_regions.py": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+    "lab/src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_discovery_translation.py": "7e17a7afef9618266ab5c14189e494ae65467c0bc02ebf22bbf4b8c77fd375aa",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_dynamic_preparation.py": "8b953eb0d2059505edd07510ee876ca27aed0a80d876a884b3aad270e546271d"
+  },
+  "input_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v1.json": "f1c777c1a26934600a8173b4d62831e08ee01fbfa3a220dfabb0a5be978d9ce3",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v1.npz": "b949f12c4f0c5b3dd4d1ba2618a915a81d56ccff9a4cd25c8d9196525084214d"
+  },
+  "scope": {
+    "initial_constraint_preparation_only": true,
+    "static_criticality_required": false,
+    "evolution_performed": false,
+    "continuum_initial_data_certified": false
+  },
+  "ng": 127,
+  "nq": 512,
+  "period": 8.0,
+  "gauge": "conformal",
+  "occupations": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "source_eta": 1.0,
+  "source_trace": 3.0,
+  "multiplicity": 4,
+  "locked_coefficients": {
+    "A": 0.04501936182826115,
+    "C_W": -0.0008441130342798952,
+    "C_F": 0.01125484045706527,
+    "C_E": 0.0005158468542821582,
+    "C_box": -0.0005627420228532635,
+    "flux": 4.0,
+    "V_rel": 0.0
+  },
+  "cpu_seconds": 0.10252100000000003,
+  "predecessor_binding": {
+    "record_sha256": "f1c777c1a26934600a8173b4d62831e08ee01fbfa3a220dfabb0a5be978d9ce3",
+    "payload_sha256": "b949f12c4f0c5b3dd4d1ba2618a915a81d56ccff9a4cd25c8d9196525084214d",
+    "producing_commit": "2dab7191c50dc1787874311ae11a8aa9240dc673",
+    "external_post_run_observation": true,
+    "old_record_modified": false
+  },
+  "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+  "predecessor_preparation_cpu_seconds": 0.13851799999999997,
+  "payload": "nsc-discovery-dynamic-preparation-v2.npz",
+  "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81"
+}

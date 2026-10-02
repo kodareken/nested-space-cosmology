@@ -1,0 +1,457 @@
+{
+  "schema": "NSC-DISCOVERY-WIDTH-NUMERICAL-CONFIRMATION-v1",
+  "inputs": {
+    "nf": 256,
+    "duration": 0.3,
+    "step_cap": 0.00025,
+    "production": true,
+    "cpu_budget_seconds": 120.0,
+    "forecast_factor": 1.5,
+    "base_width": 1.0,
+    "held_out_width": 1.03,
+    "derivative_h": [
+      0.001,
+      0.0005
+    ],
+    "weights": [
+      0.75,
+      0.75,
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ],
+    "float_hex": {
+      "duration": "0x1.3333333333333p-2",
+      "step_cap": "0x1.0624dd2f1a9fcp-12",
+      "held_out_width": "0x1.07ae147ae147bp+0",
+      "derivative_h": [
+        "0x1.0624dd2f1a9fcp-10",
+        "0x1.0624dd2f1a9fcp-11"
+      ]
+    },
+    "primary": "all-six-column probability in the fixed child (1,3)",
+    "observer_reference_varied": false,
+    "W_varied": false,
+    "Q0_varied": false,
+    "angular_inputs_varied": false,
+    "momentum_representation": "canonical_pi",
+    "coordinate_pullback": false,
+    "universal_scale_power": null,
+    "fixed_inputs": {
+      "locked_coefficients": {
+        "A": 0.04501936182826115,
+        "C_W": -0.0008441130342798952,
+        "C_F": 0.01125484045706527,
+        "C_E": 0.0005158468542821582,
+        "C_box": -0.0005627420228532635,
+        "flux": 4.0,
+        "V_rel": 0.0
+      },
+      "kappa": 1,
+      "multiplicity": 4,
+      "carrier_k": 1.0,
+      "Q0": 0.25132493326913924
+    },
+    "inputs_sha256": "bb96e6d2043a88c655c8e5c5fee71bfa25248c657370f938e33eb76d5280f938",
+    "experiment": "single_numerical_confirmation",
+    "cases": [
+      {
+        "nf": 256,
+        "step_cap": 0.00025,
+        "width": 1.0
+      },
+      {
+        "nf": 256,
+        "step_cap": 0.00025,
+        "width": 1.03
+      },
+      {
+        "nf": 128,
+        "step_cap": 0.0005,
+        "width": 1.0
+      },
+      {
+        "nf": 128,
+        "step_cap": 0.0005,
+        "width": 1.03
+      }
+    ],
+    "common_absolute_tau_target": 0.3578554631682531,
+    "no_new_response_coefficients": true,
+    "original_forecast_recalibrated": false,
+    "maximum_confirmation_batches": 1
+  },
+  "status": "forecast_locked",
+  "reference_directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-width-response-nonlinear-v2",
+  "reference_prediction_json_sha256": "271aefb15cfe3bc5f92229d2a3913c324b39c0c70f92dd5a911c61b2d0a8aef2",
+  "reference_prediction_npz_sha256": "9b6acd22e6bf968fd07b3eabdf355b6d6b6fa1bceb21b8064805ed435224a0b7",
+  "reference_producer_identity": {
+    "implementation_revision": "NSC-DISCOVERY-WIDTH-RESPONSE-v1",
+    "files": [
+      {
+        "path": "lab/scripts/derive_nsc_discovery_family.py",
+        "sha256": "0c0bd580d3ddfdc7d880c129df29f59fd1637b19bcfd93c7ffea6127322b357b",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_adm_source.py",
+        "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_boundary_state.py",
+        "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_causal_common.py",
+        "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_conformal_adm_source.py",
+        "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_covariant_operator.py",
+        "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_backend.py",
+        "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_episode.py",
+        "sha256": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_family.py",
+        "sha256": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_observables.py",
+        "sha256": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_prediction.py",
+        "sha256": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_regions.py",
+        "sha256": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_response.py",
+        "sha256": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_tidal.py",
+        "sha256": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_evolving_reduction.py",
+        "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_finite_terms.py",
+        "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_finite_window_embedding.py",
+        "sha256": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_influence.py",
+        "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_nested_parent_child.py",
+        "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_nested_qualities.py",
+        "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regeneration_controls.py",
+        "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py",
+        "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regulated.py",
+        "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_shape_response.py",
+        "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py",
+        "sha256": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_coupling.py",
+        "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py",
+        "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py",
+        "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+        "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py",
+        "sha256": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/provenance.py",
+        "sha256": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_width_response.py",
+        "sha256": "53106f13f9506f694cb715d48916b0bfab7ab236412288880450753d7b3e75be",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      },
+      {
+        "path": "lab/scripts/derive_nsc_discovery_width_response.py",
+        "sha256": "802fcfa6f7b44491c2c31a91e2463fd653d2883cf3a67fce7f7a35c99f772501",
+        "commit": "bf1a462228983aa697265eee2de7a1a80265f2f6"
+      }
+    ],
+    "working_tree_commit": "bf1a462228983aa697265eee2de7a1a80265f2f6",
+    "all_sources_commit_pinned": true
+  },
+  "locked_original_forecast": {
+    "nominal_content": 1.2767914511782403,
+    "first_coefficient": -2.1193507218807386,
+    "second_coefficient": 9.550096615637216,
+    "linear_forecast": 1.213210929521818,
+    "quadratic_forecast": 1.2175084729988548,
+    "curvature_h_indicator": 6.244535046828759e-07,
+    "all_green_threshold": null
+  },
+  "locked_forecast_sha256": "3d5f0ebfd6ed613dc03d29343f412dc6e7ac296c5e859a35da3e42fa8692e437",
+  "producer_identity": {
+    "implementation_revision": "NSC-DISCOVERY-WIDTH-RESPONSE-v1",
+    "files": [
+      {
+        "path": "lab/scripts/derive_nsc_discovery_family.py",
+        "sha256": "0c0bd580d3ddfdc7d880c129df29f59fd1637b19bcfd93c7ffea6127322b357b",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_adm_source.py",
+        "sha256": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_boundary_state.py",
+        "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_causal_common.py",
+        "sha256": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_conformal_adm_source.py",
+        "sha256": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_covariant_operator.py",
+        "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_backend.py",
+        "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_episode.py",
+        "sha256": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_family.py",
+        "sha256": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_observables.py",
+        "sha256": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_prediction.py",
+        "sha256": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_regions.py",
+        "sha256": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_response.py",
+        "sha256": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_tidal.py",
+        "sha256": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_evolving_reduction.py",
+        "sha256": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_finite_terms.py",
+        "sha256": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_finite_window_embedding.py",
+        "sha256": "8b44835a3170e3323308c6ee9d8bac310257e1d9d0c3714c8e268f8d0dddcb62",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_influence.py",
+        "sha256": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_nested_parent_child.py",
+        "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_nested_qualities.py",
+        "sha256": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regeneration_controls.py",
+        "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regional_energy_exchange.py",
+        "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_regulated.py",
+        "sha256": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_shape_response.py",
+        "sha256": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_cauchy_data.py",
+        "sha256": "c991a3e8c611918f5c35a7b5a93a39819ee4d9aead51fc3e32df6b9fa1294357",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_coupling.py",
+        "sha256": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py",
+        "sha256": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_feedback_action.py",
+        "sha256": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
+        "sha256": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py",
+        "sha256": "18cc8a1f783b8d5885b7f5aa00fd4794780f7552d5ae610fc478f4dbf3893797",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/provenance.py",
+        "sha256": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/src/recursive_horizons/nsc_discovery_width_response.py",
+        "sha256": "8ead983c08b2d80b4b53bab03d81b09b8d8a2c93f46a111326b29a781d61f24f",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      },
+      {
+        "path": "lab/scripts/derive_nsc_discovery_width_response.py",
+        "sha256": "50efd99c67fa9c269387f91fba34459af1bb9565c6a46ea2984773d6128f8c7f",
+        "commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c"
+      }
+    ],
+    "working_tree_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
+    "all_sources_commit_pinned": true
+  },
+  "own_control_sources_constructed": false,
+  "aggregate_cpu_seconds": 0.24681100000000006,
+  "producing_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
+  "producing_commit_authenticated": true,
+  "stage": "confirmation-lock",
+  "npz": "confirmation-lock.npz",
+  "payload_sha256": "2d57ccc6b89bf08c9153e65f10a6bb2287b561703c94eb1af92431a1f2b1142a",
+  "array_sha256": {
+    "W": "6f86c682f4f45fc9bd58d0b5f0b42d680a3060ba9613fab44a1232670e6e1e24",
+    "observer_columns": "082af00532d049923971227bdbdd76df63b23e3d1ec49798b39975082bfdaeb9",
+    "source_weights": "eb4960edaae7ae995c0057debd078b8f119a50222b82cd858f2b7d6a408b086e"
+  },
+  "immutable": true,
+  "chunk_limit_bytes": 67108864
+}

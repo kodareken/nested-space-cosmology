@@ -1,0 +1,4881 @@
+{
+  "schema": "NSC-DISCOVERY-DYNAMIC-EPISODE-v1",
+  "status": "STATION_REACHED",
+  "stations": [
+    0.3,
+    1.0,
+    3.0
+  ],
+  "source_hashes": {
+    "lab/docs/nsc-discovery-dynamic-preparation.md": "2b1a8e1a6382cb147287c0fb9e817dc77b2f00f46cefafe2949cc064103ed617",
+    "lab/scripts/derive_nsc_discovery_dynamic_preparation.py": "4cba0bf15e4e54db023ddb20182dffe5d2bc807429b940ef5f30a2369e7f4931",
+    "lab/src/recursive_horizons/__init__.py": "9e0819d34a855a852a9178e307b56f5c372d4778a8ea54c2afa83a556356e675",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "lab/src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_family.py": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+    "lab/src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+    "lab/src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "lab/src/recursive_horizons/nsc_discovery_regions.py": "414d58abadf8d574a6deef893968c3ebda4c5af36367ab20fb87c887a6c73233",
+    "lab/src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_discovery_translation.py": "7e17a7afef9618266ab5c14189e494ae65467c0bc02ebf22bbf4b8c77fd375aa",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_dynamic_preparation.py": "8b953eb0d2059505edd07510ee876ca27aed0a80d876a884b3aad270e546271d"
+  },
+  "initial_binding": {
+    "record_sha256": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+    "external_post_run_observation": false,
+    "old_record_modified": false
+  },
+  "workers_maximum": 4,
+  "cpu_budget_seconds": 300.0,
+  "cases": [
+    {
+      "case_id": "nf128_uniform_dt0.001",
+      "nf": 128,
+      "npz": "nf128_uniform_dt0.001-000000.npz",
+      "json": "nf128_uniform_dt0.001-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_uniform_dt0.0005",
+      "nf": 128,
+      "npz": "nf128_uniform_dt0.0005-000000.npz",
+      "json": "nf128_uniform_dt0.0005-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_pattern_dt0.001",
+      "nf": 128,
+      "npz": "nf128_pattern_dt0.001-000000.npz",
+      "json": "nf128_pattern_dt0.001-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_pattern_dt0.0005",
+      "nf": 128,
+      "npz": "nf128_pattern_dt0.0005-000000.npz",
+      "json": "nf128_pattern_dt0.0005-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_coherent_dt0.001",
+      "nf": 128,
+      "npz": "nf128_coherent_dt0.001-000000.npz",
+      "json": "nf128_coherent_dt0.001-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_coherent_dt0.0005",
+      "nf": 128,
+      "npz": "nf128_coherent_dt0.0005-000000.npz",
+      "json": "nf128_coherent_dt0.0005-000000.json",
+      "ordinal": 0,
+      "coordinate_time": 0.0,
+      "steps": 0
+    }
+  ],
+  "evolved": true,
+  "initial_constraints_resolved_error": 1e-06,
+  "initial_record": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.json",
+  "physical_event_policy": "record first finite source sign change; continue without positivity clipping or a sector veto",
+  "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+  "stage": 2,
+  "workers": 1,
+  "chunk_limit_bytes": 67108864,
+  "child_cpu_seconds": 30.803308,
+  "memory_limit_bytes": 8589934592,
+  "forecast_factor": 1.5,
+  "initial_preparation_cpu_seconds": 0.241039,
+  "adapter_preparation_cpu_seconds": 0.269682,
+  "observer_sha256": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+  "clock_sampler": "frozen extent.real_metrics; same rQ normal clock",
+  "cumulative_cpu_seconds": 159.24588900000003,
+  "results": [
+    {
+      "case_id": "nf128_uniform_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_uniform_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_pattern_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_pattern_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_coherent_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_coherent_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 30.803308,
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_coherent_dt0.0005-000003.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 42.55141200000001
+    }
+  ],
+  "cpu_accounting": "sum_of_child_process_time",
+  "executor_pools": 1,
+  "stability_certificate": false,
+  "max_T_forced": false,
+  "zero_residual_gate": false,
+  "physical_outcome": "finite checkpointed measurements or recorded blocker; startup force is not holding",
+  "assessment": {
+    "cases": {
+      "nf128_uniform_dt0.001": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.5483036330489215,
+          "child_areal_radius": 2.7463440726695834,
+          "child_Q": 0.46394471443118224,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.50102452567826,
+          "proper_probability_width": 10.19321453219569,
+          "probability_contrast": 1.0034177435480818e-13,
+          "radial_tide_rms": 0.13258369160882508,
+          "angular_tide_rms": 2.675286549184175e-13
+        },
+        "last": {
+          "child_proper_length": 0.00017698290660405852,
+          "child_areal_radius": 14.695929131005986,
+          "child_Q": 6.0214942868312355e-06,
+          "child_probability": 0.7499999999999999,
+          "child_normal_energy": 28157.6332356294,
+          "proper_probability_width": 0.0007079316264162343,
+          "probability_contrast": 7.533162742283771e-14,
+          "radial_tide_rms": 17272797.394538745,
+          "angular_tide_rms": 216140626.31416023
+        },
+        "changes": {
+          "child_Q": -0.4639386929368954,
+          "proper_probability_width": -10.192506600569274,
+          "child_probability": 1.2212453270876722e-15,
+          "radial_tide_rms": 17272797.261955053,
+          "child_normal_energy": 28155.132211103723,
+          "angular_tide_rms": 216140626.31416023,
+          "probability_contrast": -2.501014693197047e-14,
+          "child_proper_length": -2.5481266501423177,
+          "child_areal_radius": 11.949585058336403
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -0.00028436139109544456,
+            "max": 0.0003328828024677932,
+            "max_abs": 0.0003328828024677932,
+            "rms": 0.00012099515406489152
+          },
+          "h_c": {
+            "min": -1.7122804918766039e-09,
+            "max": 2.0044518932441887e-09,
+            "max_abs": 2.0044518932441887e-09,
+            "rms": 7.285716289360097e-10
+          },
+          "D": {
+            "min": -2.619577908480981e-10,
+            "max": 2.4134933328046804e-10,
+            "max_abs": 2.619577908480981e-10,
+            "rms": 9.641922349902475e-11
+          },
+          "projected_h_c": {
+            "min": 3.416074582142407e-11,
+            "max": 5.31379772648698e-10,
+            "max_abs": 5.31379772648698e-10,
+            "rms": 3.0019859784058047e-10
+          },
+          "held_out_h_c": {
+            "min": -1.8855751311351797e-09,
+            "max": 1.77669284759932e-09,
+            "max_abs": 1.8855751311351797e-09,
+            "rms": 6.638504502860717e-10
+          },
+          "source_Q_rho": {
+            "min": 1.2458549432828243,
+            "max": 1.245854943283553,
+            "max_abs": 1.245854943283553,
+            "rms": 1.2458549432831851
+          },
+          "source_current": {
+            "min": -4.630219818668735e-13,
+            "max": 3.2803447458373824e-13,
+            "max_abs": 4.630219818668735e-13,
+            "rms": 1.4219835855888306e-13
+          },
+          "h_c_over_source_scale": 1.608896689016854e-09,
+          "D_over_source_scale": 565.756705096164,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_uniform_dt0.0005": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.5483036330489215,
+          "child_areal_radius": 2.7463440726695834,
+          "child_Q": 0.46394471443118224,
+          "child_probability": 0.7499999999999987,
+          "child_normal_energy": 2.50102452567826,
+          "proper_probability_width": 10.19321453219569,
+          "probability_contrast": 1.0034177435480818e-13,
+          "radial_tide_rms": 0.13258369160882508,
+          "angular_tide_rms": 2.675286549184175e-13
+        },
+        "last": {
+          "child_proper_length": 0.00017698290660158453,
+          "child_areal_radius": 14.695929130985489,
+          "child_Q": 6.0214942867554624e-06,
+          "child_probability": 0.7500000000000002,
+          "child_normal_energy": 28157.633236029542,
+          "proper_probability_width": 0.0007079316264063386,
+          "probability_contrast": 7.297080718919308e-14,
+          "radial_tide_rms": 17272797.394925468,
+          "angular_tide_rms": 216140626.31834683
+        },
+        "changes": {
+          "child_Q": -0.4639386929368955,
+          "proper_probability_width": -10.192506600569283,
+          "child_probability": 1.5543122344752192e-15,
+          "radial_tide_rms": 17272797.262341775,
+          "child_normal_energy": 28155.132211503864,
+          "angular_tide_rms": 216140626.31834683,
+          "probability_contrast": -2.7370967165615097e-14,
+          "child_proper_length": -2.54812665014232,
+          "child_areal_radius": 11.949585058315906
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": true,
+        "source_flat_last": true,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -0.00040505200740881264,
+            "max": 0.00035776689765043557,
+            "max_abs": 0.00040505200740881264,
+            "rms": 0.00010219126943093848
+          },
+          "h_c": {
+            "min": -2.4390183484510067e-09,
+            "max": 2.1542913301923327e-09,
+            "max_abs": 2.4390183484510067e-09,
+            "rms": 6.15344145034685e-10
+          },
+          "D": {
+            "min": -2.8440441185884655e-10,
+            "max": 2.7997377314602177e-10,
+            "max_abs": 2.8440441185884655e-10,
+            "rms": 1.0176391160697382e-10
+          },
+          "projected_h_c": {
+            "min": -4.1235786356950426e-10,
+            "max": 4.0263723230391306e-10,
+            "max_abs": 4.1235786356950426e-10,
+            "rms": 1.5133191800865184e-10
+          },
+          "held_out_h_c": {
+            "min": -2.3103760204467835e-09,
+            "max": 2.1748543169451223e-09,
+            "max_abs": 2.3103760204467835e-09,
+            "rms": 5.964453599620757e-10
+          },
+          "source_Q_rho": {
+            "min": 1.2458549432830373,
+            "max": 1.2458549432838741,
+            "max_abs": 1.2458549432838741,
+            "rms": 1.2458549432834742
+          },
+          "source_current": {
+            "min": -4.859029845150076e-13,
+            "max": 4.234407963155107e-13,
+            "max_abs": 4.859029845150076e-13,
+            "rms": 1.5615590555098828e-13
+          },
+          "h_c_over_source_scale": 1.95770652241596e-09,
+          "D_over_source_scale": 585.3111030851519,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_pattern_dt0.001": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.5632167948756583,
+          "child_areal_radius": 2.762417041635609,
+          "child_Q": 0.47013489696082433,
+          "child_probability": 0.7500000000000002,
+          "child_normal_energy": 2.520284094839673,
+          "proper_probability_width": 10.110236252419284,
+          "probability_contrast": 0.33425703312633603,
+          "radial_tide_rms": 0.13102153379568127,
+          "angular_tide_rms": 0.013634809115740883
+        },
+        "last": {
+          "child_proper_length": 0.0001651041538773071,
+          "child_areal_radius": 14.87712010708561,
+          "child_Q": 5.6239454643925644e-06,
+          "child_probability": 0.7499999999999858,
+          "child_normal_energy": 30741.79243589836,
+          "proper_probability_width": 0.0006522861837486791,
+          "probability_contrast": 0.31447804364344295,
+          "radial_tide_rms": 19848620.31544305,
+          "angular_tide_rms": 249885422.34711087
+        },
+        "changes": {
+          "child_Q": -0.47012927301535995,
+          "proper_probability_width": -10.109583966235535,
+          "child_probability": -1.4432899320127035e-14,
+          "radial_tide_rms": 19848620.184421517,
+          "child_normal_energy": 30739.272151803518,
+          "angular_tide_rms": 249885422.33347607,
+          "probability_contrast": -0.019778989482893083,
+          "child_proper_length": -2.563051690721781,
+          "child_areal_radius": 12.114703065450001
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": false,
+        "source_flat_last": false,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -0.003380507667316124,
+            "max": 0.002753821900114417,
+            "max_abs": 0.003380507667316124,
+            "rms": 0.0017603065279159745
+          },
+          "h_c": {
+            "min": -2.1698889882127007e-08,
+            "max": 1.303256005900987e-08,
+            "max_abs": 2.1698889882127007e-08,
+            "rms": 1.0443555239033873e-08
+          },
+          "D": {
+            "min": -5.389171429948103e-08,
+            "max": 5.348295328833075e-08,
+            "max_abs": 5.389171429948103e-08,
+            "rms": 2.2377154168623145e-08
+          },
+          "projected_h_c": {
+            "min": -2.23027510316351e-08,
+            "max": 1.1144082177362932e-08,
+            "max_abs": 2.23027510316351e-08,
+            "rms": 1.0391998496457324e-08
+          },
+          "held_out_h_c": {
+            "min": -2.85879668313798e-09,
+            "max": 3.2634444394769873e-09,
+            "max_abs": 3.2634444394769873e-09,
+            "rms": 1.0364426083390028e-09
+          },
+          "source_Q_rho": {
+            "min": 1.1789715363627014,
+            "max": 1.3053623228271296,
+            "max_abs": 1.3053623228271296,
+            "rms": 1.2474676477894149
+          },
+          "source_current": {
+            "min": -0.13883008475076158,
+            "max": 0.13883008475086464,
+            "max_abs": 0.13883008475086464,
+            "rms": 0.09803158802898265
+          },
+          "h_c_over_source_scale": 1.662288661368129e-08,
+          "D_over_source_scale": 3.8818469639481647e-07,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_pattern_dt0.0005": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.5632167948756583,
+          "child_areal_radius": 2.762417041635609,
+          "child_Q": 0.47013489696082433,
+          "child_probability": 0.7500000000000002,
+          "child_normal_energy": 2.520284094839673,
+          "proper_probability_width": 10.110236252419284,
+          "probability_contrast": 0.33425703312633603,
+          "radial_tide_rms": 0.13102153379568127,
+          "angular_tide_rms": 0.013634809115740883
+        },
+        "last": {
+          "child_proper_length": 0.0001651041538747872,
+          "child_areal_radius": 14.877120107050716,
+          "child_Q": 5.623945464308453e-06,
+          "child_probability": 0.7499999999999972,
+          "child_normal_energy": 30741.79243640111,
+          "proper_probability_width": 0.0006522861837394476,
+          "probability_contrast": 0.31447804362912957,
+          "radial_tide_rms": 19848620.31597722,
+          "angular_tide_rms": 249885422.35266557
+        },
+        "changes": {
+          "child_Q": -0.47012927301536,
+          "proper_probability_width": -10.109583966235546,
+          "child_probability": -2.9976021664879227e-15,
+          "radial_tide_rms": 19848620.184955686,
+          "child_normal_energy": 30739.27215230627,
+          "angular_tide_rms": 249885422.33903077,
+          "probability_contrast": -0.019778989497206467,
+          "child_proper_length": -2.5630516907217835,
+          "child_areal_radius": 12.114703065415107
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": false,
+        "source_flat_last": false,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -0.0012025768519379199,
+            "max": 0.0013685690937563777,
+            "max_abs": 0.0013685690937563777,
+            "rms": 0.0005799277484017379
+          },
+          "h_c": {
+            "min": -6.221975022404824e-09,
+            "max": 6.476801897885497e-09,
+            "max_abs": 6.476801897885497e-09,
+            "rms": 3.0943072784788195e-09
+          },
+          "D": {
+            "min": -2.833005760538576e-08,
+            "max": 2.7888691495059348e-08,
+            "max_abs": 2.833005760538576e-08,
+            "rms": 1.6386565145625584e-08
+          },
+          "projected_h_c": {
+            "min": -5.619611913976919e-09,
+            "max": 4.427882632839197e-09,
+            "max_abs": 5.619611913976919e-09,
+            "rms": 2.845758841019257e-09
+          },
+          "held_out_h_c": {
+            "min": -3.131189836779734e-09,
+            "max": 3.5617055606388773e-09,
+            "max_abs": 3.5617055606388773e-09,
+            "rms": 1.2150696080503938e-09
+          },
+          "source_Q_rho": {
+            "min": 1.1789715362645112,
+            "max": 1.3053623228310718,
+            "max_abs": 1.3053623228310718,
+            "rms": 1.2474676477907536
+          },
+          "source_current": {
+            "min": -0.13883008473959663,
+            "max": 0.13883008473971256,
+            "max_abs": 0.13883008473971256,
+            "rms": 0.09803158801783844
+          },
+          "h_c_over_source_scale": 4.961689015076365e-09,
+          "D_over_source_scale": 2.0406281288742816e-07,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_coherent_dt0.001": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.6089609734833723,
+          "child_areal_radius": 2.811733962642121,
+          "child_Q": 0.4701639947617059,
+          "child_probability": 0.652294922809134,
+          "child_normal_energy": 2.242703460841363,
+          "proper_probability_width": 10.224392484257024,
+          "probability_contrast": 0.6866664622742552,
+          "radial_tide_rms": 0.1250827454165882,
+          "angular_tide_rms": 0.014871096432176002
+        },
+        "last": {
+          "child_proper_length": 0.00012442390864107387,
+          "child_areal_radius": 15.61581615888469,
+          "child_Q": 4.037880478251042e-06,
+          "child_probability": 0.7523065318612661,
+          "child_normal_energy": 43986.512377671446,
+          "proper_probability_width": 0.0004902124012070955,
+          "probability_contrast": 0.4329005139272862,
+          "radial_tide_rms": 34990654.62410716,
+          "angular_tide_rms": 452065148.97251433
+        },
+        "changes": {
+          "child_Q": -0.47015995688122764,
+          "proper_probability_width": -10.223902271855817,
+          "child_probability": 0.10001160905213202,
+          "radial_tide_rms": 34990654.49902441,
+          "child_normal_energy": 43984.269674210605,
+          "angular_tide_rms": 452065148.9576432,
+          "probability_contrast": -0.25376594834696903,
+          "child_proper_length": -2.608836549574731,
+          "child_areal_radius": 12.80408219624257
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": false,
+        "source_flat_last": false,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -0.006049991527106613,
+            "max": 0.005310102482326329,
+            "max_abs": 0.006049991527106613,
+            "rms": 0.003013475417683361
+          },
+          "h_c": {
+            "min": -2.7897133759520558e-08,
+            "max": 1.7876308071747373e-08,
+            "max_abs": 2.7897133759520558e-08,
+            "rms": 1.279491276742205e-08
+          },
+          "D": {
+            "min": -6.419702741622402e-08,
+            "max": 6.335778346411303e-08,
+            "max_abs": 6.419702741622402e-08,
+            "rms": 2.537306036914952e-08
+          },
+          "projected_h_c": {
+            "min": -2.8172108161599302e-08,
+            "max": 1.557244853789242e-08,
+            "max_abs": 2.8172108161599302e-08,
+            "rms": 1.2738171236695773e-08
+          },
+          "held_out_h_c": {
+            "min": -3.3405993511549266e-09,
+            "max": 3.012507534809805e-09,
+            "max_abs": 3.3405993511549266e-09,
+            "rms": 1.2036553786513069e-09
+          },
+          "source_Q_rho": {
+            "min": 1.2124445061102391,
+            "max": 1.499443489339904,
+            "max_abs": 1.499443489339904,
+            "rms": 1.3530251808625193
+          },
+          "source_current": {
+            "min": -0.364902757663861,
+            "max": 0.37748373366447324,
+            "max_abs": 0.37748373366447324,
+            "rms": 0.19072424894380685
+          },
+          "h_c_over_source_scale": 1.860499175717628e-08,
+          "D_over_source_scale": 1.700656788387221e-07,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      },
+      "nf128_coherent_dt0.0005": {
+        "initial_time": 0.0,
+        "last_time": 3.0,
+        "initial": {
+          "child_proper_length": 2.6089609734833723,
+          "child_areal_radius": 2.811733962642121,
+          "child_Q": 0.4701639947617059,
+          "child_probability": 0.652294922809134,
+          "child_normal_energy": 2.242703460841363,
+          "proper_probability_width": 10.224392484257024,
+          "probability_contrast": 0.6866664622742552,
+          "radial_tide_rms": 0.1250827454165882,
+          "angular_tide_rms": 0.014871096432176002
+        },
+        "last": {
+          "child_proper_length": 0.0001244239086389323,
+          "child_areal_radius": 15.615816158844156,
+          "child_Q": 4.037880478185545e-06,
+          "child_probability": 0.7523065318612326,
+          "child_normal_energy": 43986.51237847583,
+          "proper_probability_width": 0.0004902124011994944,
+          "probability_contrast": 0.4329005139197861,
+          "radial_tide_rms": 34990654.625130475,
+          "angular_tide_rms": 452065148.9830814
+        },
+        "changes": {
+          "child_Q": -0.4701599568812277,
+          "proper_probability_width": -10.223902271855824,
+          "child_probability": 0.1000116090520986,
+          "radial_tide_rms": 34990654.50004773,
+          "child_normal_energy": 43984.26967501499,
+          "angular_tide_rms": 452065148.9682103,
+          "probability_contrast": -0.2537659483544691,
+          "child_proper_length": -2.6088365495747334,
+          "child_areal_radius": 12.804082196202035
+        },
+        "geometry_signs": {
+          "child_proper_length": -1,
+          "child_areal_radius": 1
+        },
+        "source_flat_initial": false,
+        "source_flat_last": false,
+        "first_source_density_sign_change": null,
+        "last_constraint_pair": {
+          "raw_C": {
+            "min": -0.002527018776163459,
+            "max": 0.0029680092120543122,
+            "max_abs": 0.0029680092120543122,
+            "rms": 0.0011575530440584125
+          },
+          "h_c": {
+            "min": -8.954139673442597e-09,
+            "max": 9.987566815814251e-09,
+            "max_abs": 9.987566815814251e-09,
+            "rms": 4.449136228152652e-09
+          },
+          "D": {
+            "min": -3.49174293645671e-08,
+            "max": 3.4655463304611445e-08,
+            "max_abs": 3.49174293645671e-08,
+            "rms": 1.892867327124697e-08
+          },
+          "projected_h_c": {
+            "min": -7.752832569565255e-09,
+            "max": 8.217936502773109e-09,
+            "max_abs": 8.217936502773109e-09,
+            "rms": 4.276356132996738e-09
+          },
+          "held_out_h_c": {
+            "min": -3.182000618865789e-09,
+            "max": 3.0885335266567536e-09,
+            "max_abs": 3.182000618865789e-09,
+            "rms": 1.2278401363539123e-09
+          },
+          "source_Q_rho": {
+            "min": 1.2124445060650488,
+            "max": 1.499443489354838,
+            "max_abs": 1.499443489354838,
+            "rms": 1.3530251808636842
+          },
+          "source_current": {
+            "min": -0.3649027576542702,
+            "max": 0.3774837336534608,
+            "max_abs": 0.3774837336534608,
+            "rms": 0.19072424893841758
+          },
+          "h_c_over_source_scale": 6.660849099495959e-09,
+          "D_over_source_scale": 9.25004874425189e-08,
+          "meaning": "h_c=Q*(C_g+rho), D=D_g+current; source comparisons use the same units",
+          "sampling": "accepted observation state; not a propagated RK-stage or continuum bound",
+          "observable_error_bound": null,
+          "physical_instability_inferred": false,
+          "continuum_constraint_certified": false
+        },
+        "stop": {
+          "stop_class": "station_reached",
+          "stations": [
+            0.3,
+            1.0,
+            3.0
+          ]
+        },
+        "evolved_effect_measured": true,
+        "holding_claim": false,
+        "continuum_error_bound": null
+      }
+    },
+    "matched_step_comparisons": [
+      {
+        "preparation": "uniform",
+        "time": 0.05,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.770761894538737e-15,
+          "proper_probability_width": -9.592326932761353e-14,
+          "child_probability": 0.0,
+          "radial_tide_rms": 3.124445147051347e-13,
+          "child_normal_energy": 1.2878587085651816e-14,
+          "angular_tide_rms": 1.5832127275849928e-13,
+          "probability_contrast": 3.7712183958648046e-16,
+          "child_proper_length": -2.353672812205332e-14,
+          "child_areal_radius": 2.220446049250313e-14
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.1,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.47499806707674e-14,
+          "proper_probability_width": -5.311306949806749e-13,
+          "child_probability": 0.0,
+          "radial_tide_rms": 1.3233303342019553e-12,
+          "child_normal_energy": 8.482103908136196e-14,
+          "angular_tide_rms": 6.692771337135639e-13,
+          "probability_contrast": 9.419910798065287e-16,
+          "child_proper_length": -1.318944953254686e-13,
+          "child_areal_radius": 6.394884621840902e-14
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.15000000000000002,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.559819519859957e-14,
+          "proper_probability_width": -1.2523315717771766e-12,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 3.206934717780996e-12,
+          "child_normal_energy": 2.007283228522283e-13,
+          "angular_tide_rms": 1.6267681646198184e-12,
+          "probability_contrast": 3.7619664500623505e-16,
+          "child_proper_length": -3.12194714524594e-13,
+          "child_areal_radius": 1.6697754290362354e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.2,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.6969758931395518e-13,
+          "proper_probability_width": -2.5277557824665564e-12,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 6.274536445971535e-12,
+          "child_normal_energy": 4.0945025148175773e-13,
+          "angular_tide_rms": 3.1962488211689788e-12,
+          "probability_contrast": -1.6885397852338314e-15,
+          "child_proper_length": -6.328271240363392e-13,
+          "child_areal_radius": 3.2507330161024584e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.25,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.9792834865816076e-13,
+          "proper_probability_width": -4.430233957464225e-12,
+          "child_probability": 1.1102230246251565e-16,
+          "radial_tide_rms": 1.0955236717791195e-11,
+          "child_normal_energy": 7.194245199571014e-13,
+          "angular_tide_rms": 5.61894974993038e-12,
+          "probability_contrast": -2.0556875583261694e-15,
+          "child_proper_length": -1.1075584893660562e-12,
+          "child_areal_radius": 5.804245972740318e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.3,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.898859096158503e-13,
+          "proper_probability_width": -7.270628543665225e-12,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 1.7782109118513745e-11,
+          "child_normal_energy": 1.1972645097557688e-12,
+          "angular_tide_rms": 9.2175156396479e-12,
+          "probability_contrast": -1.8579638433783868e-16,
+          "child_proper_length": -1.8172130467064562e-12,
+          "child_areal_radius": 9.65005853004186e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.35000000000000003,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.653877531765829e-13,
+          "proper_probability_width": -1.142375083418301e-11,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 2.7328916907265466e-11,
+          "child_normal_energy": 1.922018100231071e-12,
+          "angular_tide_rms": 1.439254271318191e-11,
+          "probability_contrast": -1.8423176794837386e-16,
+          "child_proper_length": -2.856825886965453e-12,
+          "child_areal_radius": 1.5192291868970642e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.4,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.141309269314661e-12,
+          "proper_probability_width": -1.7198686919073225e-11,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 4.00590671745249e-11,
+          "child_normal_energy": 2.97939450888407e-12,
+          "angular_tide_rms": 2.1599944055594733e-11,
+          "probability_contrast": -1.0854726055841122e-25,
+          "child_proper_length": -4.299227640558456e-12,
+          "child_areal_radius": 2.283950806258872e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.45,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.6316392681403613e-12,
+          "proper_probability_width": -2.4868995751603507e-11,
+          "child_probability": 8.881784197001252e-16,
+          "radial_tide_rms": 5.608313813354471e-11,
+          "child_normal_energy": 4.489297822374283e-12,
+          "angular_tide_rms": 3.130817827212695e-11,
+          "probability_contrast": -7.158031450437657e-16,
+          "child_proper_length": -6.2168048486910266e-12,
+          "child_areal_radius": 3.327116360196669e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.5,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.231159701437946e-12,
+          "proper_probability_width": -3.4562575024210673e-11,
+          "child_probability": 1.5543122344752192e-15,
+          "radial_tide_rms": 7.499600940263917e-11,
+          "child_normal_energy": 6.5991656583719305e-12,
+          "angular_tide_rms": 4.400058095654913e-11,
+          "probability_contrast": 6.991757428920899e-16,
+          "child_proper_length": -8.640199666842818e-12,
+          "child_areal_radius": 4.671374398412809e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.55,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.901845430614003e-12,
+          "proper_probability_width": -4.5851322738599265e-11,
+          "child_probability": 2.6645352591003757e-15,
+          "radial_tide_rms": 9.566880621036944e-11,
+          "child_normal_energy": 9.42890210353653e-12,
+          "angular_tide_rms": 6.018119336204109e-11,
+          "probability_contrast": -6.772276848711441e-16,
+          "child_proper_length": -1.1462830684649816e-11,
+          "child_areal_radius": 6.338041202980094e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.6000000000000001,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.574029960873304e-12,
+          "proper_probability_width": -5.789146939605416e-11,
+          "child_probability": 3.9968028886505635e-15,
+          "radial_tide_rms": 1.1652101505887913e-10,
+          "child_normal_energy": 1.3113954366872349e-11,
+          "angular_tide_rms": 8.046541211115255e-11,
+          "probability_contrast": -1.622829717087701e-15,
+          "child_proper_length": -1.447197917059384e-11,
+          "child_areal_radius": 8.29736279683857e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.65,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.148681398419285e-12,
+          "proper_probability_width": -6.921752060407016e-11,
+          "child_probability": 5.662137425588298e-15,
+          "radial_tide_rms": 1.3591883174512986e-10,
+          "child_normal_energy": 1.773559077378195e-11,
+          "angular_tide_rms": 1.0563683261466394e-10,
+          "probability_contrast": 1.8432726755546165e-15,
+          "child_proper_length": -1.730482424022739e-11,
+          "child_areal_radius": 1.049738074243578e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.7000000000000001,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.5266568271529195e-12,
+          "proper_probability_width": -7.814282554363672e-11,
+          "child_probability": 7.216449660063518e-15,
+          "radial_tide_rms": 1.525419790482374e-10,
+          "child_normal_energy": 2.3321788944485888e-11,
+          "angular_tide_rms": 1.3642953433645744e-10,
+          "probability_contrast": -2.7228887169727027e-15,
+          "child_proper_length": -1.953526229669933e-11,
+          "child_areal_radius": 1.2862599874097214e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.75,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.639177930698679e-12,
+          "proper_probability_width": -8.334755108307945e-11,
+          "child_probability": 7.993605777301127e-15,
+          "radial_tide_rms": 1.6569323690873716e-10,
+          "child_normal_energy": 2.991784597838887e-11,
+          "angular_tide_rms": 1.7346923897321176e-10,
+          "probability_contrast": -1.447771418263064e-15,
+          "child_proper_length": -2.0835999592350163e-11,
+          "child_areal_radius": 1.5233148076276848e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.8,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.4800552156942786e-12,
+          "proper_probability_width": -8.432721188000869e-11,
+          "child_probability": 8.326672684688674e-15,
+          "radial_tide_rms": 1.751949696426891e-10,
+          "child_normal_energy": 3.7621017412448055e-11,
+          "angular_tide_rms": 2.1737012190214955e-10,
+          "probability_contrast": -9.526662944683445e-25,
+          "child_proper_length": -2.1082247059212023e-11,
+          "child_areal_radius": 1.744071553844151e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.8500000000000001,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.098277273101303e-12,
+          "proper_probability_width": -8.144152019440298e-11,
+          "child_probability": 7.771561172376096e-15,
+          "radial_tide_rms": 1.8165913218126661e-10,
+          "child_normal_energy": 4.661604435796107e-11,
+          "angular_tide_rms": 2.6976110234500084e-10,
+          "probability_contrast": 2.1150137348352706e-16,
+          "child_proper_length": -2.036015800399582e-11,
+          "child_areal_radius": 1.928546211615867e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.9,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.5801084319331267e-12,
+          "proper_probability_width": -7.565859050373547e-11,
+          "child_probability": 6.5503158452884236e-15,
+          "radial_tide_rms": 1.8705925697304338e-10,
+          "child_normal_energy": 5.721556561866237e-11,
+          "angular_tide_rms": 3.346674048998466e-10,
+          "probability_contrast": 1.8528677411188234e-16,
+          "child_proper_length": -1.8915091715143717e-11,
+          "child_areal_radius": 2.063282877884376e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 0.9500000000000001,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.015615535062466e-12,
+          "proper_probability_width": -6.819078635089681e-11,
+          "child_probability": 5.10702591327572e-15,
+          "radial_tide_rms": 1.9419132968323538e-10,
+          "child_normal_energy": 6.988010170516645e-11,
+          "angular_tide_rms": 4.197495684366004e-10,
+          "probability_contrast": -1.1211534516243954e-15,
+          "child_proper_length": -1.7047696587724204e-11,
+          "child_areal_radius": 2.1452617460226975e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.0,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.4713703306034063e-12,
+          "proper_probability_width": -6.005818065091262e-11,
+          "child_probability": 3.885780586188048e-15,
+          "radial_tide_rms": 2.0790480448340531e-10,
+          "child_normal_energy": 8.522338390548612e-11,
+          "angular_tide_rms": 5.376499245812738e-10,
+          "probability_contrast": 4.1056729950921845e-16,
+          "child_proper_length": -1.5014989251938005e-11,
+          "child_areal_radius": 2.177014124526977e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.0499999999999945,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.9860085798129035e-12,
+          "proper_probability_width": -5.198241836978923e-11,
+          "child_probability": 2.6645352591003757e-15,
+          "radial_tide_rms": 2.3302604290620366e-10,
+          "child_normal_energy": 1.0395773131222086e-10,
+          "angular_tide_rms": 7.06521063875698e-10,
+          "probability_contrast": 2.3160489492896304e-16,
+          "child_proper_length": -1.2995826637052232e-11,
+          "child_areal_radius": 2.1683099760139157e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.099999999999989,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.5746431936136673e-12,
+          "proper_probability_width": -4.440803280658656e-11,
+          "child_probability": 1.7763568394002505e-15,
+          "radial_tide_rms": 2.759357187187561e-10,
+          "child_normal_energy": 1.269899740918845e-10,
+          "angular_tide_rms": 9.532925560051808e-10,
+          "probability_contrast": -9.467593040100495e-25,
+          "child_proper_length": -1.1102230246251565e-11,
+          "child_areal_radius": 2.1294077612310502e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.1499999999999835,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.2374615221411034e-12,
+          "proper_probability_width": -3.7565062172006947e-11,
+          "child_probability": 1.1102230246251565e-15,
+          "radial_tide_rms": 3.454942998359911e-10,
+          "child_normal_energy": 1.5543477616120072e-10,
+          "angular_tide_rms": 1.3168275359021209e-09,
+          "probability_contrast": 6.482964397042085e-16,
+          "child_proper_length": -9.390821453791887e-12,
+          "child_areal_radius": 2.0673240896940115e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.199999999999978,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.664213873605831e-13,
+          "proper_probability_width": -3.151123806333089e-11,
+          "child_probability": 9.992007221626409e-16,
+          "radial_tide_rms": 4.5083936583978357e-10,
+          "child_normal_energy": 1.9049650745728286e-10,
+          "angular_tide_rms": 1.8523564904171508e-09,
+          "probability_contrast": -3.090916249888228e-15,
+          "child_proper_length": -7.877587471227798e-12,
+          "child_areal_radius": 1.9908519277578307e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.2499999999999725,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.518499711700599e-13,
+          "proper_probability_width": -2.6264768138162253e-11,
+          "child_probability": 6.661338147750939e-16,
+          "radial_tide_rms": 6.082530035200762e-10,
+          "child_normal_energy": 2.3384494340916717e-10,
+          "angular_tide_rms": 2.643886887199187e-09,
+          "probability_contrast": 1.5529563657567233e-15,
+          "child_proper_length": -6.566303056843026e-12,
+          "child_areal_radius": 1.9025669928396383e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.299999999999967,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.833528105014807e-13,
+          "proper_probability_width": -2.1769475111454994e-11,
+          "child_probability": 6.661338147750939e-16,
+          "radial_tide_rms": 8.382414762309054e-10,
+          "child_normal_energy": 2.873790094781725e-10,
+          "angular_tide_rms": 3.8148755265865475e-09,
+          "probability_contrast": 2.0066811993554883e-15,
+          "child_proper_length": -5.442535311317442e-12,
+          "child_areal_radius": 1.807975991141575e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.3499999999999615,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.518538321285348e-13,
+          "proper_probability_width": -1.7957191289497132e-11,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 1.1720118209268549e-09,
+          "child_normal_energy": 3.5349501104064984e-10,
+          "angular_tide_rms": 5.5482871630374575e-09,
+          "probability_contrast": -3.4391157257668483e-15,
+          "child_proper_length": -4.489353333525514e-12,
+          "child_areal_radius": 1.709388186554861e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.399999999999956,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.4952249428066295e-13,
+          "proper_probability_width": -1.475175537279938e-11,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 1.654825609875843e-09,
+          "child_normal_energy": 4.3521808379409777e-10,
+          "angular_tide_rms": 8.117979177768575e-09,
+          "probability_contrast": 4.88901630500381e-16,
+          "child_proper_length": -3.6880498655023075e-12,
+          "child_areal_radius": 1.6049384043981263e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.4499999999999504,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.701987938946715e-13,
+          "proper_probability_width": -1.2075451749637978e-11,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 2.3497079837397905e-09,
+          "child_normal_energy": 5.363034460970084e-10,
+          "angular_tide_rms": 1.1935071597690694e-08,
+          "probability_contrast": 2.5914586034410183e-15,
+          "child_proper_length": -3.0187796706826475e-12,
+          "child_areal_radius": 1.5001333508735115e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.499999999999945,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.0871152028867357e-13,
+          "proper_probability_width": -9.852341165128564e-12,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 3.3518290365464054e-09,
+          "child_normal_energy": 6.612594916077796e-10,
+          "angular_tide_rms": 1.761691237334162e-08,
+          "probability_contrast": -6.488766719679786e-16,
+          "child_proper_length": -2.4630575357065254e-12,
+          "child_areal_radius": 1.3918644015120663e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.5499999999999394,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.611540761947694e-13,
+          "proper_probability_width": -8.015144103978855e-12,
+          "child_probability": 5.551115123125783e-16,
+          "radial_tide_rms": 4.801506747753592e-09,
+          "child_normal_energy": 8.158309583450318e-10,
+          "angular_tide_rms": 2.608339855214581e-08,
+          "probability_contrast": 3.294089612561114e-15,
+          "child_proper_length": -2.0037999037825216e-12,
+          "child_areal_radius": 1.2821743666791008e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.599999999999934,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.2439008156839293e-13,
+          "proper_probability_width": -6.501743587961073e-12,
+          "child_probability": 5.551115123125783e-16,
+          "radial_tide_rms": 6.895845672261203e-09,
+          "child_normal_energy": 1.006803529435274e-09,
+          "angular_tide_rms": 3.871946319122799e-08,
+          "probability_contrast": 3.6327958139759025e-15,
+          "child_proper_length": -1.6254081414146526e-12,
+          "child_areal_radius": 1.1750600492632657e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.6499999999999284,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.600566869272242e-14,
+          "proper_probability_width": -5.263900426655255e-12,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 9.923724064719863e-09,
+          "child_normal_energy": 1.2437624263839098e-09,
+          "angular_tide_rms": 5.764559318777174e-08,
+          "probability_contrast": -1.3841698868671065e-15,
+          "child_proper_length": -1.3159889844516215e-12,
+          "child_areal_radius": 1.06394892895878e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.699999999999923,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.406878929638872e-14,
+          "proper_probability_width": -4.251293761470265e-12,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 1.4374677448358852e-08,
+          "child_normal_energy": 1.5369323591585271e-09,
+          "angular_tide_rms": 8.597635314799845e-08,
+          "probability_contrast": 2.3782236792074184e-15,
+          "child_proper_length": -1.0628511959431819e-12,
+          "child_areal_radius": 9.541700762838445e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.7499999999999174,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.713918921346206e-14,
+          "proper_probability_width": -3.427286232593474e-12,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 2.0794459487660788e-08,
+          "child_normal_energy": 1.9005170770469704e-09,
+          "angular_tide_rms": 1.2852251529693604e-07,
+          "probability_contrast": -9.037391567443238e-16,
+          "child_proper_length": -8.568215581483685e-13,
+          "child_areal_radius": 8.425260489275388e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.799999999999912,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.4068481502845813e-14,
+          "proper_probability_width": -2.7573499039590388e-12,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 3.0196360967238434e-08,
+          "child_normal_energy": 2.350731165279285e-09,
+          "angular_tide_rms": 1.9249728211434558e-07,
+          "probability_contrast": -4.191279185028634e-15,
+          "child_proper_length": -6.893444148836636e-13,
+          "child_areal_radius": 7.334577389883634e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.8499999999999064,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.3979329766564703e-14,
+          "proper_probability_width": -2.2146451339466466e-12,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 4.394382813188713e-08,
+          "child_normal_energy": 2.90896196020185e-09,
+          "angular_tide_rms": 2.888027665903792e-07,
+          "probability_contrast": -1.0277201107005637e-15,
+          "child_proper_length": -5.536508751458058e-13,
+          "child_areal_radius": 6.208367153703875e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.8999999999999009,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.620148022158819e-14,
+          "proper_probability_width": -1.7759960169172473e-12,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 6.431355359381996e-08,
+          "child_normal_energy": 3.601485332183074e-09,
+          "angular_tide_rms": 4.3406544136814773e-07,
+          "probability_contrast": 4.135777779590583e-15,
+          "child_proper_length": -4.440024736762638e-13,
+          "child_areal_radius": 5.10702591327572e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.9499999999998954,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.0198903313839445e-14,
+          "proper_probability_width": -1.422237327908249e-12,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 9.401037459610961e-08,
+          "child_normal_energy": 4.460957825358491e-09,
+          "angular_tide_rms": 6.535374268423766e-07,
+          "probability_contrast": -4.940688715990136e-15,
+          "child_proper_length": -3.5555239308315834e-13,
+          "child_areal_radius": 3.995026531811163e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 1.9999999999998899,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.5569793718195335e-14,
+          "proper_probability_width": -1.137340222001626e-12,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 1.3785574992652982e-07,
+          "child_normal_energy": 5.528363544726744e-09,
+          "angular_tide_rms": 9.85368387773633e-07,
+          "probability_contrast": -1.679229176251417e-15,
+          "child_proper_length": -2.8433852494735845e-13,
+          "child_areal_radius": 2.879474436667806e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.0499999999998844,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.1999624384417817e-14,
+          "proper_probability_width": -9.082248841885132e-13,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 2.0260813471395522e-07,
+          "child_normal_energy": 6.853326794953318e-09,
+          "angular_tide_rms": 1.4878169167786837e-06,
+          "probability_contrast": 1.3478584582038829e-15,
+          "child_proper_length": -2.270562210471283e-13,
+          "child_areal_radius": 1.7763568394002505e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.099999999999879,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.246726648259873e-15,
+          "proper_probability_width": -7.244413402496264e-13,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 2.98752638627775e-07,
+          "child_normal_energy": 8.49888692755485e-09,
+          "angular_tide_rms": 2.249958924949169e-06,
+          "probability_contrast": -3.734406797900351e-15,
+          "child_proper_length": -1.8111206978588257e-13,
+          "child_areal_radius": 6.696865284538944e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.1499999999998733,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.123099853012516e-15,
+          "proper_probability_width": -5.77198011608715e-13,
+          "child_probability": 1.1102230246251565e-16,
+          "radial_tide_rms": 4.3980617192573845e-07,
+          "child_normal_energy": 1.0544226825004444e-08,
+          "angular_tide_rms": 3.4062250051647425e-06,
+          "probability_contrast": -1.5751636140766402e-16,
+          "child_proper_length": -1.4430123762565472e-13,
+          "child_areal_radius": -4.618527782440651e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.199999999999868,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.487743506144005e-15,
+          "proper_probability_width": -4.593755931203702e-13,
+          "child_probability": 1.1102230246251565e-16,
+          "radial_tide_rms": 6.51965819997713e-07,
+          "child_normal_energy": 1.308569608227117e-08,
+          "angular_tide_rms": 5.165173206478357e-06,
+          "probability_contrast": -1.261455845224571e-15,
+          "child_proper_length": -1.1483956147140262e-13,
+          "child_areal_radius": -1.5614176618328202e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.2499999999998623,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.226707959326115e-15,
+          "proper_probability_width": -3.652494973138687e-13,
+          "child_probability": 1.1102230246251565e-16,
+          "radial_tide_rms": 9.66087100096047e-07,
+          "child_normal_energy": 1.6246076484094374e-08,
+          "angular_tide_rms": 7.841794285923243e-06,
+          "probability_contrast": -4.0381578321325874e-16,
+          "child_proper_length": -9.131410905194315e-14,
+          "child_areal_radius": -2.6982860390489805e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.299999999999857,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.2548562369644207e-15,
+          "proper_probability_width": -2.900631124180819e-13,
+          "child_probability": 0.0,
+          "radial_tide_rms": 1.4289544196799397e-06,
+          "child_normal_energy": 2.017122824327089e-08,
+          "angular_tide_rms": 1.1918717063963413e-05,
+          "probability_contrast": -4.521497540600476e-15,
+          "child_proper_length": -7.251317601930651e-14,
+          "child_areal_radius": -3.787192781601334e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.3499999999998513,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.501335727086995e-15,
+          "proper_probability_width": -2.297780021809359e-13,
+          "child_probability": 0.0,
+          "radial_tide_rms": 2.1303421817719936e-06,
+          "child_normal_energy": 2.5014514903887175e-08,
+          "angular_tide_rms": 1.8097925931215286e-05,
+          "probability_contrast": 2.0651362659203058e-15,
+          "child_proper_length": -5.744450054523398e-14,
+          "child_areal_radius": -4.9258375156568945e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.399999999999846,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.91608339437932e-15,
+          "proper_probability_width": -1.8138962554203886e-13,
+          "child_probability": 0.0,
+          "radial_tide_rms": 3.1510426197201014e-06,
+          "child_normal_energy": 3.094964995398186e-08,
+          "angular_tide_rms": 2.7401838451623917e-05,
+          "probability_contrast": -2.062098645234004e-15,
+          "child_proper_length": -4.5347406385509714e-14,
+          "child_areal_radius": -6.133760166449065e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.4499999999998403,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.4668984343185754e-15,
+          "proper_probability_width": -1.4302795059428774e-13,
+          "child_probability": 1.1102230246251565e-16,
+          "radial_tide_rms": 4.679925041273236e-06,
+          "child_normal_energy": 3.829336492344737e-08,
+          "angular_tide_rms": 4.151742905378342e-05,
+          "probability_contrast": -4.280471374939712e-15,
+          "child_proper_length": -3.5756987648571936e-14,
+          "child_areal_radius": -7.350564601438236e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.499999999999835,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.1228946375160809e-15,
+          "proper_probability_width": -1.1267375921164557e-13,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 6.919028237462044e-06,
+          "child_normal_energy": 4.7386947699123994e-08,
+          "angular_tide_rms": 6.29844143986702e-05,
+          "probability_contrast": 2.627400003845752e-16,
+          "child_proper_length": -2.8167789281607902e-14,
+          "child_areal_radius": -8.533618256478803e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.5499999999998293,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.591421302682478e-16,
+          "proper_probability_width": -8.868166617714834e-14,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 1.0366085916757584e-05,
+          "child_normal_energy": 5.864967533852905e-08,
+          "angular_tide_rms": 9.562121704220772e-05,
+          "probability_contrast": 1.6763842659307224e-15,
+          "child_proper_length": -2.2170633384721583e-14,
+          "child_areal_radius": -9.743317264110374e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.599999999999824,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.5708072663484e-16,
+          "proper_probability_width": -6.972287330819782e-14,
+          "child_probability": 5.551115123125783e-16,
+          "radial_tide_rms": 1.537392381578684e-05,
+          "child_normal_energy": 7.257585821207613e-08,
+          "angular_tide_rms": 0.00014522485435009003,
+          "probability_contrast": -2.3386114671731817e-15,
+          "child_proper_length": -1.743028464618046e-14,
+          "child_areal_radius": -1.091748913495394e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.6499999999998183,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.024260629933608e-16,
+          "proper_probability_width": -5.4782133690478574e-14,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 2.300785854458809e-05,
+          "child_normal_energy": 8.983442967291921e-08,
+          "angular_tide_rms": 0.0002207774668931961,
+          "probability_contrast": 1.5971871094525407e-15,
+          "child_proper_length": -1.3695316582185146e-14,
+          "child_areal_radius": -1.2093437362636905e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.6999999999998128,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.8389904861817203e-16,
+          "proper_probability_width": -4.301030018249996e-14,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 3.430689685046673e-05,
+          "child_normal_energy": 1.112284735427238e-07,
+          "angular_tide_rms": 0.0003355722874403,
+          "probability_contrast": -1.6960769229205724e-15,
+          "child_proper_length": -1.0752466625407742e-14,
+          "child_areal_radius": -1.3351098004932282e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.7499999999998073,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.9331395710700814e-16,
+          "proper_probability_width": -3.373776952253493e-14,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 5.1097478717565536e-05,
+          "child_normal_energy": 1.3768294593319297e-07,
+          "angular_tide_rms": 0.0005106441676616669,
+          "probability_contrast": -1.1814600177748065e-15,
+          "child_proper_length": -8.434442380633733e-15,
+          "child_areal_radius": -1.4527046232615248e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.7999999999998018,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.239724519129821e-16,
+          "proper_probability_width": -2.6437402614321037e-14,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 7.679499685764313e-05,
+          "child_normal_energy": 1.704138412605971e-07,
+          "angular_tide_rms": 0.0007773339748382568,
+          "probability_contrast": 1.746029727147276e-15,
+          "child_proper_length": -6.6094048636888836e-15,
+          "child_areal_radius": -1.5697665389780013e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.8499999999997963,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.709498834807574e-16,
+          "proper_probability_width": -2.0704358366652187e-14,
+          "child_probability": 4.440892098500626e-16,
+          "radial_tide_rms": 0.00011521764099597931,
+          "child_normal_energy": 2.1097184799145907e-07,
+          "angular_tide_rms": 0.0011835619807243347,
+          "probability_contrast": 8.547014210502011e-16,
+          "child_proper_length": -5.175926961337174e-15,
+          "child_areal_radius": -1.6902035326893383e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.8999999999997907,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.3040411036158855e-16,
+          "proper_probability_width": -1.6201233063450893e-14,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 0.00017183925956487656,
+          "child_normal_energy": 2.61166860582307e-07,
+          "angular_tide_rms": 0.0018025189638137817,
+          "probability_contrast": 1.5291446362637246e-15,
+          "child_proper_length": -4.050254055754099e-15,
+          "child_areal_radius": -1.8111734334524954e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 2.9499999999997852,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.942133921692076e-17,
+          "proper_probability_width": -1.266738450245164e-14,
+          "child_probability": 2.220446049250313e-16,
+          "radial_tide_rms": 0.00026055797934532166,
+          "child_normal_energy": 3.23285348713398e-07,
+          "angular_tide_rms": 0.002746760845184326,
+          "probability_contrast": 1.4855663376580061e-15,
+          "child_proper_length": -3.166873230667222e-15,
+          "child_areal_radius": -1.9319656985317124e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "uniform",
+        "time": 3.0,
+        "case_ids": [
+          "nf128_uniform_dt0.001",
+          "nf128_uniform_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.577302636252795e-17,
+          "proper_probability_width": -9.895730068709696e-15,
+          "child_probability": 3.3306690738754696e-16,
+          "radial_tide_rms": 0.0003867223858833313,
+          "child_normal_energy": 4.001412889920175e-07,
+          "angular_tide_rms": 0.00418660044670105,
+          "probability_contrast": -2.360820233644627e-15,
+          "child_proper_length": -2.4739867272860483e-15,
+          "child_areal_radius": -2.049738156983949e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.05,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.3037127760971998e-14,
+          "proper_probability_width": 2.1316282072803006e-13,
+          "child_probability": -1.1102230246251565e-16,
+          "radial_tide_rms": 3.6723402097038615e-13,
+          "child_normal_energy": -3.597122599785507e-14,
+          "angular_tide_rms": 1.198589838491415e-13,
+          "probability_contrast": -3.900213485508175e-13,
+          "child_proper_length": -2.708944180085382e-14,
+          "child_areal_radius": 2.3092638912203256e-14
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.1,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.988054662178001e-14,
+          "proper_probability_width": 6.377121053446899e-13,
+          "child_probability": 6.661338147750939e-16,
+          "radial_tide_rms": 1.5620005289207484e-12,
+          "child_normal_energy": -1.1501910535116622e-13,
+          "angular_tide_rms": 8.113544558430164e-13,
+          "probability_contrast": -1.5009660181419804e-12,
+          "child_proper_length": -1.0347278589506459e-13,
+          "child_areal_radius": 8.43769498715119e-14
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.15000000000000002,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.4166445794216997e-13,
+          "proper_probability_width": 7.194245199571014e-13,
+          "child_probability": 1.2212453270876722e-15,
+          "radial_tide_rms": 3.785943780698631e-12,
+          "child_normal_energy": -1.6120438317557273e-13,
+          "angular_tide_rms": 2.0302648451320238e-12,
+          "probability_contrast": -3.1196156768942274e-12,
+          "child_proper_length": -2.1715962361668062e-13,
+          "child_areal_radius": 1.9628743075372768e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.2,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.882383138251953e-13,
+          "proper_probability_width": -2.3092638912203256e-13,
+          "child_probability": 1.6653345369377348e-15,
+          "radial_tide_rms": 7.33174632117084e-12,
+          "child_normal_energy": -7.016609515630989e-14,
+          "angular_tide_rms": 3.888236954630031e-12,
+          "probability_contrast": -4.8855225420751935e-12,
+          "child_proper_length": -3.8813396940895473e-13,
+          "child_areal_radius": 3.7481129311345285e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.25,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.278177646530821e-13,
+          "proper_probability_width": -2.7107205369247822e-12,
+          "child_probability": 1.7763568394002505e-15,
+          "radial_tide_rms": 1.2584600028731074e-11,
+          "child_normal_energy": 2.6911806116913795e-13,
+          "angular_tide_rms": 6.598249724376615e-12,
+          "probability_contrast": -6.3323669224901735e-12,
+          "child_proper_length": -6.896705428971472e-13,
+          "child_areal_radius": 6.510347816401918e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.3,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.111400026512001e-13,
+          "proper_probability_width": -6.920686246303376e-12,
+          "child_probability": 1.5543122344752192e-15,
+          "radial_tide_rms": 2.00424121743481e-11,
+          "child_normal_energy": 9.672262990534364e-13,
+          "angular_tide_rms": 1.0435929898022778e-11,
+          "probability_contrast": 7.014930303306244e-12,
+          "child_proper_length": -1.2789769243681803e-12,
+          "child_areal_radius": 1.0582645870726992e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.35000000000000003,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.260236690673992e-13,
+          "proper_probability_width": -1.2729373111142195e-11,
+          "child_probability": 1.5543122344752192e-15,
+          "radial_tide_rms": 3.02968761189959e-11,
+          "child_normal_energy": 2.086331107875594e-12,
+          "angular_tide_rms": 1.5810630582535623e-11,
+          "probability_contrast": 6.595557433541899e-12,
+          "child_proper_length": -2.361666417982633e-12,
+          "child_areal_radius": 1.6440182548649318e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.4,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.729994587814872e-13,
+          "proper_probability_width": -1.9912960169676808e-11,
+          "child_probability": 2.220446049250313e-15,
+          "radial_tide_rms": 4.393618802112087e-11,
+          "child_normal_energy": 3.6348701826227625e-12,
+          "angular_tide_rms": 2.3324231435140064e-11,
+          "probability_contrast": 4.907185768843192e-12,
+          "child_proper_length": -4.157119093406436e-12,
+          "child_areal_radius": 2.4789059693830495e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.45,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.705857677336553e-12,
+          "proper_probability_width": -2.8252955530660984e-11,
+          "child_probability": 3.774758283725532e-15,
+          "radial_tide_rms": 6.130673746440607e-11,
+          "child_normal_energy": 5.571987315988736e-12,
+          "angular_tide_rms": 3.379452273577499e-11,
+          "probability_contrast": 1.8920420785661918e-12,
+          "child_proper_length": -6.758593684708103e-12,
+          "child_areal_radius": 3.6357583610424626e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.5,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.6623148130511254e-12,
+          "proper_probability_width": -3.7754688264612923e-11,
+          "child_probability": 6.328271240363392e-15,
+          "radial_tide_rms": 8.220624181376479e-11,
+          "child_normal_energy": 7.87192533380221e-12,
+          "angular_tide_rms": 4.829647792803371e-11,
+          "probability_contrast": -2.3671065108032963e-12,
+          "child_proper_length": -1.0040412945500066e-11,
+          "child_areal_radius": 5.156763904778927e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.55,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.641198453863126e-12,
+          "proper_probability_width": -4.837197309370822e-11,
+          "child_probability": 9.658940314238862e-15,
+          "radial_tide_rms": 1.0564749075570035e-10,
+          "child_normal_energy": 1.0555556428926138e-11,
+          "angular_tide_rms": 6.802181040654887e-11,
+          "probability_contrast": -7.507661159422696e-12,
+          "child_proper_length": -1.3572254431437614e-11,
+          "child_areal_radius": 7.051692563209144e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.6000000000000001,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.387490371016156e-12,
+          "proper_probability_width": -5.987388362882484e-11,
+          "child_probability": 1.2434497875801753e-14,
+          "radial_tide_rms": 1.298108287528521e-10,
+          "child_normal_energy": 1.3789414055054294e-11,
+          "angular_tide_rms": 9.352962848652169e-11,
+          "probability_contrast": -1.2637668689308157e-11,
+          "child_proper_length": -1.6771029009987615e-11,
+          "child_areal_radius": 9.234835118832052e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.65,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.7550852144695455e-12,
+          "proper_probability_width": -7.153744263632689e-11,
+          "child_probability": 1.454392162258955e-14,
+          "radial_tide_rms": 1.5189360880185632e-10,
+          "child_normal_energy": 1.7958967646336532e-11,
+          "angular_tide_rms": 1.2323875253628103e-10,
+          "probability_contrast": -1.6384699152993676e-11,
+          "child_proper_length": -1.9203305612336408e-11,
+          "child_areal_radius": 1.1581846592889633e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.7000000000000001,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.791889107735869e-12,
+          "proper_probability_width": -8.192468925471985e-11,
+          "child_probability": 1.554312234475219e-14,
+          "radial_tide_rms": 1.687956441287497e-10,
+          "child_normal_energy": 2.362021689350513e-11,
+          "angular_tide_rms": 1.531486049088926e-10,
+          "probability_contrast": -1.7418948228264952e-11,
+          "child_proper_length": -2.078826000229128e-11,
+          "child_areal_radius": 1.3942180743242716e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.75,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.664713060265058e-12,
+          "proper_probability_width": -8.900080672447075e-11,
+          "child_probability": 1.609823385706477e-14,
+          "radial_tide_rms": 1.7892887171910843e-10,
+          "child_normal_energy": 3.127853531736946e-11,
+          "angular_tide_rms": 1.801172544446672e-10,
+          "probability_contrast": 1.5137599507220045e-11,
+          "child_proper_length": -2.1695756302619884e-11,
+          "child_areal_radius": 1.624300693947589e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.8,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.511974127652252e-12,
+          "proper_probability_width": -9.092460118154122e-11,
+          "child_probability": 1.6431300764452317e-14,
+          "radial_tide_rms": 1.836824026213435e-10,
+          "child_normal_energy": 4.1026737562788185e-11,
+          "angular_tide_rms": 2.0729995497958953e-10,
+          "probability_contrast": 9.813344581388606e-12,
+          "child_proper_length": -2.205524651799351e-11,
+          "child_areal_radius": 1.8498536036304358e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.8500000000000001,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.35323999070647e-12,
+          "proper_probability_width": -8.72235617066508e-11,
+          "child_probability": 1.687538997430238e-14,
+          "radial_tide_rms": 1.865334553485809e-10,
+          "child_normal_energy": 5.242117850912109e-11,
+          "angular_tide_rms": 2.462190451524293e-10,
+          "probability_contrast": 2.1598833832570108e-12,
+          "child_proper_length": -2.1824320128871477e-11,
+          "child_areal_radius": 2.071498528266602e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.9,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.0994985184283905e-12,
+          "proper_probability_width": -7.925571310352097e-11,
+          "child_probability": 1.6764367671839864e-14,
+          "radial_tide_rms": 1.9099211101547553e-10,
+          "child_normal_energy": 6.473843683352243e-11,
+          "angular_tide_rms": 3.127631487132021e-10,
+          "probability_contrast": -6.890654713487265e-12,
+          "child_proper_length": -2.0863755167965792e-11,
+          "child_areal_radius": 2.269251453412835e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 0.9500000000000001,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.655298286275865e-12,
+          "proper_probability_width": -6.939160357433138e-11,
+          "child_probability": 1.6209256159527285e-14,
+          "radial_tide_rms": 2.0019896851408703e-10,
+          "child_normal_energy": 7.755751596505434e-11,
+          "angular_tide_rms": 4.2248871068295557e-10,
+          "probability_contrast": -1.6091905585824406e-11,
+          "child_proper_length": -1.91411331229574e-11,
+          "child_areal_radius": 2.4019897182370187e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.0,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.031450090951182e-12,
+          "proper_probability_width": -5.977129902134948e-11,
+          "child_probability": 1.5210055437364645e-14,
+          "radial_tide_rms": 2.171027801978198e-10,
+          "child_normal_energy": 9.133938050354118e-11,
+          "angular_tide_rms": 5.894023047403607e-10,
+          "probability_contrast": -2.3830493134369135e-11,
+          "child_proper_length": -1.6852741424600026e-11,
+          "child_areal_radius": 2.4312107882451528e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.0499999999999945,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.3497315204679126e-12,
+          "proper_probability_width": -5.1517456967076214e-11,
+          "child_probability": 1.3877787807814457e-14,
+          "radial_tide_rms": 2.454036973631446e-10,
+          "child_normal_energy": 1.0768186342602348e-10,
+          "angular_tide_rms": 8.225100600611768e-10,
+          "probability_contrast": -2.8684943309542632e-11,
+          "child_proper_length": -1.4351964061631861e-11,
+          "child_areal_radius": 2.3559820760965522e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.099999999999989,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.7413986919123658e-12,
+          "proper_probability_width": -4.472999748372786e-11,
+          "child_probability": 1.2878587085651816e-14,
+          "radial_tide_rms": 2.9026381298535853e-10,
+          "child_normal_energy": 1.2928857984206843e-10,
+          "angular_tide_rms": 1.1170655511705263e-09,
+          "probability_contrast": -3.012540217284254e-11,
+          "child_proper_length": -1.1969869539996125e-11,
+          "child_areal_radius": 2.213340621892712e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.1499999999999835,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.27151761342148e-12,
+          "proper_probability_width": -3.894351507938154e-11,
+          "child_probability": 1.2212453270876722e-14,
+          "radial_tide_rms": 3.5856118074661936e-10,
+          "child_normal_energy": 1.5967316358000971e-10,
+          "angular_tide_rms": 1.4597389963455498e-09,
+          "probability_contrast": -2.8633824478152547e-11,
+          "child_proper_length": -9.897527242230808e-12,
+          "child_areal_radius": 2.0548007739762397e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.199999999999978,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.407127854466069e-13,
+          "proper_probability_width": -3.3622216122353166e-11,
+          "child_probability": 1.1879386363489175e-14,
+          "radial_tide_rms": 4.6286885435620206e-10,
+          "child_normal_energy": 2.0238744014022814e-10,
+          "angular_tide_rms": 1.8765291542877094e-09,
+          "probability_contrast": 2.5123958469208674e-11,
+          "child_proper_length": -8.184564137536654e-12,
+          "child_areal_radius": 1.9237944570704713e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.2499999999999725,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.206457652841891e-13,
+          "proper_probability_width": -2.847833080465989e-11,
+          "child_probability": 1.1879386363489175e-14,
+          "radial_tide_rms": 6.261160478970851e-10,
+          "child_normal_energy": 2.6001600872405106e-10,
+          "angular_tide_rms": 2.5056010599655565e-09,
+          "probability_contrast": 2.0041301951323476e-11,
+          "child_proper_length": -6.800116025829084e-12,
+          "child_areal_radius": 1.8413714997222996e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.299999999999967,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.777357758862678e-13,
+          "proper_probability_width": -2.354427763862077e-11,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 8.780816074249742e-10,
+          "child_normal_energy": 3.3295677326350415e-10,
+          "angular_tide_rms": 3.6115750390308676e-09,
+          "probability_contrast": 1.318017917029124e-11,
+          "child_proper_length": -5.684175352627108e-12,
+          "child_areal_radius": 1.8040680060948944e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.3499999999999615,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.800083941436384e-13,
+          "proper_probability_width": -1.903210922193921e-11,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.2565521956275916e-09,
+          "child_normal_energy": 4.190496838418767e-10,
+          "angular_tide_rms": 5.5090367823140696e-09,
+          "probability_contrast": 4.286071497716648e-12,
+          "child_proper_length": -4.7689907578529755e-12,
+          "child_areal_radius": 1.7818635456023912e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.399999999999956,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.0101949538851045e-13,
+          "proper_probability_width": -1.5147771925683173e-11,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.8123671452485723e-09,
+          "child_normal_energy": 5.144080716945609e-10,
+          "angular_tide_rms": 8.518384220224107e-09,
+          "probability_contrast": -6.154021736648474e-12,
+          "child_proper_length": -3.989225616507497e-12,
+          "child_areal_radius": 1.731415011363424e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.4499999999999504,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.25885152197003e-13,
+          "proper_probability_width": -1.200051169547578e-11,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 2.613973038023687e-09,
+          "child_normal_energy": 6.161897658785165e-10,
+          "angular_tide_rms": 1.3153794498066418e-08,
+          "probability_contrast": -1.669353544286878e-11,
+          "child_proper_length": -3.3023861423231438e-12,
+          "child_areal_radius": 1.6112444711779972e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.499999999999945,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.528914577748509e-13,
+          "proper_probability_width": -9.576894832719063e-12,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 3.741320142580662e-09,
+          "child_normal_energy": 7.26288362784544e-10,
+          "angular_tide_rms": 2.031049461947987e-08,
+          "probability_contrast": -2.554306766100467e-11,
+          "child_proper_length": -2.692485123745314e-12,
+          "child_areal_radius": 1.4090062450122787e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.5499999999999394,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.8744727992014987e-13,
+          "proper_probability_width": -7.771172594317477e-12,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 5.291610705171479e-09,
+          "child_normal_energy": 8.557989872315375e-10,
+          "angular_tide_rms": 3.098966772085987e-08,
+          "probability_contrast": -3.158800998548372e-11,
+          "child_proper_length": -2.1626728186063815e-12,
+          "child_areal_radius": 1.148858785882112e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.599999999999934,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.343109651275043e-13,
+          "proper_probability_width": -6.4273586453111875e-12,
+          "child_probability": 1.1657341758564144e-14,
+          "radial_tide_rms": 7.372989330178825e-09,
+          "child_normal_energy": 1.0279705975335673e-09,
+          "angular_tide_rms": 4.585012902680319e-08,
+          "probability_contrast": -3.48940043526369e-11,
+          "child_proper_length": -1.7182505418489313e-12,
+          "child_areal_radius": 8.755662861403835e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.6499999999999284,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.458232808068345e-14,
+          "proper_probability_width": -5.380029755031046e-12,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.0351016044296557e-08,
+          "child_normal_energy": 1.2780105862475466e-09,
+          "angular_tide_rms": 6.598702384508215e-08,
+          "probability_contrast": -3.6254509810929036e-11,
+          "child_proper_length": -1.3574419366335633e-12,
+          "child_areal_radius": 6.3726801613483985e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.699999999999923,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.687228895629893e-14,
+          "proper_probability_width": -4.498124095420053e-12,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 1.5047476153995376e-08,
+          "child_normal_energy": 1.646171199354285e-09,
+          "angular_tide_rms": 9.580253390595317e-08,
+          "probability_contrast": 3.6071923226188574e-11,
+          "child_proper_length": -1.0727738142257692e-12,
+          "child_areal_radius": 4.686029342337861e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.7499999999999174,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.9034127452829424e-14,
+          "proper_probability_width": -3.710171059267964e-12,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 2.2852759684610646e-08,
+          "child_normal_energy": 2.165080559279886e-09,
+          "angular_tide_rms": 1.4563192962668836e-07,
+          "probability_contrast": 3.362110589932854e-11,
+          "child_proper_length": -8.539557949660548e-13,
+          "child_areal_radius": 3.801403636316536e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.799999999999912,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.8493080251056355e-14,
+          "proper_probability_width": -2.9955760094679817e-12,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 3.531681613822002e-08,
+          "child_normal_energy": 2.841773039108375e-09,
+          "angular_tide_rms": 2.2897984308656305e-07,
+          "probability_contrast": 2.759131811913562e-11,
+          "child_proper_length": -6.883590919493088e-13,
+          "child_areal_radius": 3.552713678800501e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.8499999999999064,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.230337004833661e-14,
+          "proper_probability_width": -2.365191376085818e-12,
+          "child_probability": 1.1324274851176597e-14,
+          "radial_tide_rms": 5.383617462939583e-08,
+          "child_normal_energy": 3.648523261290393e-09,
+          "angular_tide_rms": 3.555978764779866e-07,
+          "probability_contrast": 1.734146160004002e-11,
+          "child_proper_length": -5.619567311487828e-13,
+          "child_areal_radius": 3.47455397786689e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.8999999999999009,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.7731723167834232e-14,
+          "proper_probability_width": -1.834671303768687e-12,
+          "child_probability": 1.1657341758564144e-14,
+          "radial_tide_rms": 8.01087480795104e-08,
+          "child_normal_energy": 4.528061481323675e-09,
+          "angular_tide_rms": 5.334695742931217e-07,
+          "probability_contrast": 3.954780947168501e-12,
+          "child_proper_length": -4.613323612012721e-13,
+          "child_areal_radius": 2.971844992316619e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.9499999999998954,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.3169834106884224e-14,
+          "proper_probability_width": -1.4121065428085444e-12,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.1625206752796657e-07,
+          "child_normal_energy": 5.421327387011843e-09,
+          "angular_tide_rms": 7.894705049693584e-07,
+          "probability_contrast": -1.0060396959943319e-11,
+          "child_proper_length": -3.7676459174740273e-13,
+          "child_areal_radius": 1.55964130499342e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 1.9999999999998899,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.8357169083438318e-14,
+          "proper_probability_width": -1.0932643679240073e-12,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 1.6530157154193148e-07,
+          "child_normal_energy": 6.319282874756027e-09,
+          "angular_tide_rms": 1.1852316674776375e-06,
+          "probability_contrast": -2.2173207714359933e-11,
+          "child_proper_length": -3.03668548640168e-13,
+          "child_areal_radius": -8.526512829121202e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.0499999999998844,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.3760585552968774e-14,
+          "proper_probability_width": -8.633163628424256e-13,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 2.281849447172135e-07,
+          "child_normal_energy": 7.317680683627259e-09,
+          "angular_tide_rms": 1.7967395251616836e-06,
+          "probability_contrast": -3.123717950970217e-11,
+          "child_proper_length": -2.409236005140869e-13,
+          "child_areal_radius": -3.9470648971473565e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.099999999999879,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.826015869018878e-15,
+          "proper_probability_width": -6.99787450209044e-13,
+          "child_probability": 1.1657341758564144e-14,
+          "radial_tide_rms": 3.122349880868569e-07,
+          "child_normal_energy": 8.661004358145874e-09,
+          "angular_tide_rms": 2.6935740606859326e-06,
+          "probability_contrast": -3.779793145142207e-11,
+          "child_proper_length": -1.8837535697979746e-13,
+          "child_areal_radius": -7.108980071279802e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.1499999999998733,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.738424922214659e-15,
+          "proper_probability_width": -5.787106904797668e-13,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 4.420217010192573e-07,
+          "child_normal_energy": 1.0746134648798034e-08,
+          "angular_tide_rms": 4.03192825615406e-06,
+          "probability_contrast": -4.905790877696159e-11,
+          "child_proper_length": -1.4565779138386858e-13,
+          "child_areal_radius": -9.766409903022577e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.199999999999868,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.520960428938681e-15,
+          "proper_probability_width": -4.809416753737139e-13,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 6.759546522516757e-07,
+          "child_normal_energy": 1.4046463547856547e-08,
+          "angular_tide_rms": 6.2907347455620766e-06,
+          "probability_contrast": 4.67586941388376e-11,
+          "child_proper_length": -1.121559442540665e-13,
+          "child_areal_radius": -1.1530332244547026e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.2499999999998623,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.1181383430139986e-15,
+          "proper_probability_width": -3.951214355701893e-13,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.1090232874266803e-06,
+          "child_normal_energy": 1.894500201160554e-08,
+          "angular_tide_rms": 1.0374642442911863e-05,
+          "probability_contrast": 4.732084168956874e-11,
+          "child_proper_length": -8.692525865772183e-14,
+          "child_areal_radius": -1.2292389328649733e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.299999999999857,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.375839325621798e-15,
+          "proper_probability_width": -3.174994989141311e-13,
+          "child_probability": 1.1879386363489175e-14,
+          "radial_tide_rms": 1.8427235772833228e-06,
+          "child_normal_energy": 2.5535882741678506e-08,
+          "angular_tide_rms": 1.7193728126585484e-05,
+          "probability_contrast": 4.22922807885584e-11,
+          "child_proper_length": -6.860831347488272e-14,
+          "child_areal_radius": -1.2285283901292132e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.3499999999998513,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.031713556074899e-15,
+          "proper_probability_width": -2.4810882515158283e-13,
+          "child_probability": 1.1657341758564144e-14,
+          "radial_tide_rms": 2.932501956820488e-06,
+          "child_normal_energy": 3.339550858072471e-08,
+          "angular_tide_rms": 2.687412779778242e-05,
+          "probability_contrast": 3.07426306633829e-11,
+          "child_proper_length": -5.524443749682639e-14,
+          "child_areal_radius": -1.2114753644709708e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.399999999999846,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.8186678291814973e-15,
+          "proper_probability_width": -1.8895128517382176e-13,
+          "child_probability": 1.176836406102666e-14,
+          "radial_tide_rms": 4.420406185090542e-06,
+          "child_normal_energy": 4.1669864003779367e-08,
+          "angular_tide_rms": 3.9051054045557976e-05,
+          "probability_contrast": 1.4411860593810388e-11,
+          "child_proper_length": -4.498354813642358e-14,
+          "child_areal_radius": -1.2599699061865977e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.4499999999998403,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.5802111138704666e-15,
+          "proper_probability_width": -1.4188129837666708e-13,
+          "child_probability": 1.176836406102666e-14,
+          "radial_tide_rms": 6.387534085661173e-06,
+          "child_normal_energy": 4.951289156451821e-08,
+          "angular_tide_rms": 5.504582077264786e-05,
+          "probability_contrast": -3.057276654061525e-12,
+          "child_proper_length": -3.65974611726827e-14,
+          "child_areal_radius": -1.425171092250821e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.499999999999835,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.285606278551843e-15,
+          "proper_probability_width": -1.0678610773418029e-13,
+          "child_probability": 1.1879386363489175e-14,
+          "radial_tide_rms": 8.855597116053104e-06,
+          "child_normal_energy": 5.652600520988926e-08,
+          "angular_tide_rms": 7.918849587440491e-05,
+          "probability_contrast": -1.8376522525898054e-11,
+          "child_proper_length": -2.9386866204350603e-14,
+          "child_areal_radius": -1.709743457922741e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.5499999999998293,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.74989132398324e-16,
+          "proper_probability_width": -8.219553510047106e-14,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.1796539183706045e-05,
+          "child_normal_energy": 6.355094228638336e-08,
+          "angular_tide_rms": 0.00011703185737133026,
+          "probability_contrast": -3.037800566652038e-11,
+          "child_proper_length": -2.3155739478641912e-14,
+          "child_areal_radius": -2.071942617476452e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.599999999999824,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.894373852199542e-16,
+          "proper_probability_width": -6.548581121812447e-14,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 1.5332712791860104e-05,
+          "child_normal_energy": 7.31815816834569e-08,
+          "angular_tide_rms": 0.0001742914319038391,
+          "probability_contrast": -4.0153894098615694e-11,
+          "child_proper_length": -1.7865266557781645e-14,
+          "child_areal_radius": -2.4373392193410837e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.6499999999998183,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.524172377874669e-16,
+          "proper_probability_width": -5.379160658569582e-14,
+          "child_probability": 1.1324274851176597e-14,
+          "radial_tide_rms": 2.1110055968165398e-05,
+          "child_normal_energy": 8.99090082384646e-08,
+          "angular_tide_rms": 0.0002676602452993393,
+          "probability_contrast": -6.207905110106049e-11,
+          "child_proper_length": -1.3519784250459743e-14,
+          "child_areal_radius": -2.7393198820391262e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.6999999999998128,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.768205315580724e-16,
+          "proper_probability_width": -4.468821146463853e-14,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 3.4002820029854774e-05,
+          "child_normal_energy": 1.1908832675544545e-07,
+          "angular_tide_rms": 0.0004466921091079712,
+          "probability_contrast": 5.694382465559755e-11,
+          "child_proper_length": -1.0106065290171884e-14,
+          "child_areal_radius": -2.9316993277461734e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.7499999999998073,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.6841725496846705e-16,
+          "proper_probability_width": -3.675748941334156e-14,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 6.15823082625866e-05,
+          "child_normal_energy": 1.6518606571480632e-07,
+          "angular_tide_rms": 0.0007975995540618896,
+          "probability_contrast": 6.061331991880081e-11,
+          "child_proper_length": -7.586704701967317e-15,
+          "child_areal_radius": -3.005062865213404e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.7999999999998018,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.1903523414354134e-16,
+          "proper_probability_width": -2.947446973988743e-14,
+          "child_probability": 1.1657341758564144e-14,
+          "radial_tide_rms": 0.00011001108214259148,
+          "child_normal_energy": 2.290016709594056e-07,
+          "angular_tide_rms": 0.0013873651623725891,
+          "probability_contrast": 5.672190495076279e-11,
+          "child_proper_length": -5.83701923601021e-15,
+          "child_areal_radius": -2.986766389767581e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.8499999999997963,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.0631279927578174e-16,
+          "proper_probability_width": -2.2867558541195265e-14,
+          "child_probability": 1.1546319456101628e-14,
+          "radial_tide_rms": 0.0001823659986257553,
+          "child_normal_energy": 3.054210537811741e-07,
+          "angular_tide_rms": 0.0021817684173583984,
+          "probability_contrast": 4.4022063772075626e-11,
+          "child_proper_length": -4.648299974097103e-15,
+          "child_areal_radius": -2.9540814239226165e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.8999999999997907,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.0480508062966909e-16,
+          "proper_probability_width": -1.7177665539991338e-14,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 0.0002791527658700943,
+          "child_normal_energy": 3.8391590351238847e-07,
+          "angular_tide_rms": 0.003074333071708679,
+          "probability_contrast": 2.4915569607486532e-11,
+          "child_proper_length": -3.7972554788046065e-15,
+          "child_areal_radius": -2.992806003021542e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 2.9499999999997852,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.847012121715418e-17,
+          "proper_probability_width": -1.2608620744702925e-14,
+          "child_probability": 1.1324274851176597e-14,
+          "radial_tide_rms": 0.0003987196832895279,
+          "child_normal_energy": 4.520225047599524e-07,
+          "angular_tide_rms": 0.004095166921615601,
+          "probability_contrast": 4.107381101903229e-12,
+          "child_proper_length": -3.1149670516594785e-15,
+          "child_areal_radius": -3.169731144225807e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "pattern",
+        "time": 3.0,
+        "case_ids": [
+          "nf128_pattern_dt0.001",
+          "nf128_pattern_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.411121869529928e-17,
+          "proper_probability_width": -9.231547817845076e-15,
+          "child_probability": 1.1435297153639112e-14,
+          "radial_tide_rms": 0.0005341693758964539,
+          "child_normal_energy": 5.027504812460393e-07,
+          "angular_tide_rms": 0.005554705858230591,
+          "probability_contrast": -1.4313383811526137e-11,
+          "child_proper_length": -2.5199026892908094e-15,
+          "child_areal_radius": -3.489297739633912e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.05,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.398081733190338e-14,
+          "proper_probability_width": 1.936228954946273e-13,
+          "child_probability": -1.1102230246251565e-15,
+          "radial_tide_rms": 4.120037644383956e-13,
+          "child_normal_energy": -2.4868995751603507e-14,
+          "angular_tide_rms": 1.2024756190776031e-13,
+          "probability_contrast": -3.7925218521195347e-13,
+          "child_proper_length": -3.375077994860476e-14,
+          "child_areal_radius": 2.042810365310288e-14
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.1,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.459899447643693e-14,
+          "proper_probability_width": 5.684341886080801e-13,
+          "child_probability": -3.774758283725532e-15,
+          "radial_tide_rms": 1.7562340470789195e-12,
+          "child_normal_energy": -7.682743330406083e-14,
+          "angular_tide_rms": 8.76226174950645e-13,
+          "probability_contrast": -1.4767076450539207e-12,
+          "child_proper_length": -1.247890679678676e-13,
+          "child_areal_radius": 9.059419880941277e-14
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.15000000000000002,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.5371037775935292e-13,
+          "proper_probability_width": 5.400124791776761e-13,
+          "child_probability": -6.328271240363392e-15,
+          "radial_tide_rms": 4.2693626411960395e-12,
+          "child_normal_energy": -8.482103908136196e-14,
+          "angular_tide_rms": 2.2557164469638735e-12,
+          "probability_contrast": -3.042233132077854e-12,
+          "child_proper_length": -2.6778579353958776e-13,
+          "child_areal_radius": 2.1760371282653068e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.2,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.1116441928370477e-13,
+          "proper_probability_width": -5.755396159656812e-13,
+          "child_probability": -7.327471962526033e-15,
+          "radial_tide_rms": 8.297862397199651e-12,
+          "child_normal_energy": 4.529709940470639e-14,
+          "angular_tide_rms": 4.372932571605759e-12,
+          "probability_contrast": -4.6555537203119e-12,
+          "child_proper_length": -4.787281682183675e-13,
+          "child_areal_radius": 4.2721381987576024e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.25,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.69562150378988e-13,
+          "proper_probability_width": -3.40527606113028e-12,
+          "child_probability": -6.217248937900877e-15,
+          "radial_tide_rms": 1.4306111850714842e-11,
+          "child_normal_energy": 4.4009240696141205e-13,
+          "angular_tide_rms": 7.485678743535118e-12,
+          "probability_contrast": -1.6514567491299204e-13,
+          "child_proper_length": -8.593126210598712e-13,
+          "child_areal_radius": 7.460698725481052e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.3,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.809175197488912e-13,
+          "proper_probability_width": -8.192557743313955e-12,
+          "child_probability": -2.1094237467877974e-15,
+          "radial_tide_rms": 2.2891466500141178e-11,
+          "child_normal_energy": 1.2034817586936697e-12,
+          "angular_tide_rms": 1.1930290089168238e-11,
+          "probability_contrast": 5.680622638948307e-12,
+          "child_proper_length": -1.5774048733874224e-12,
+          "child_areal_radius": 1.2119194536808209e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.35000000000000003,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.386557949156213e-13,
+          "proper_probability_width": -1.482547418163449e-11,
+          "child_probability": 4.773959005888173e-15,
+          "radial_tide_rms": 3.4747094090903374e-11,
+          "child_normal_energy": 2.397193554770638e-12,
+          "angular_tide_rms": 1.819322470453244e-11,
+          "probability_contrast": 5.65381075290361e-12,
+          "child_proper_length": -2.850608638027552e-12,
+          "child_areal_radius": 1.8962609260597674e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.4,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.1479150963111806e-12,
+          "proper_probability_width": -2.3169022256297467e-11,
+          "child_probability": 1.432187701766452e-14,
+          "radial_tide_rms": 5.055555973854098e-11,
+          "child_normal_energy": 4.0607517348689726e-12,
+          "angular_tide_rms": 2.6974089628595266e-11,
+          "probability_contrast": 4.1806558215284895e-12,
+          "child_proper_length": -4.922284801978094e-12,
+          "child_areal_radius": 2.8683722064215544e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.45,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.9624302183274267e-12,
+          "proper_probability_width": -3.3081093420150864e-11,
+          "child_probability": 2.6756374893466273e-14,
+          "radial_tide_rms": 7.065681373319421e-11,
+          "child_normal_energy": 6.198153101877324e-12,
+          "angular_tide_rms": 3.921274416285314e-11,
+          "probability_contrast": 1.3976597657006096e-12,
+          "child_proper_length": -7.905676113750815e-12,
+          "child_areal_radius": 4.214406601477094e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.5,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.009925642061262e-12,
+          "proper_probability_width": -4.452260782272788e-11,
+          "child_probability": 4.1300296516055823e-14,
+          "radial_tide_rms": 9.467981954003335e-11,
+          "child_normal_energy": 8.835154829966996e-12,
+          "angular_tide_rms": 5.6139537463195666e-11,
+          "probability_contrast": -2.538413923502958e-12,
+          "child_proper_length": -1.1641798636219391e-11,
+          "child_areal_radius": 5.981437567470493e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.55,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.062528091708373e-12,
+          "proper_probability_width": -5.723954643599427e-11,
+          "child_probability": 5.81756864903582e-14,
+          "radial_tide_rms": 1.2132295168498786e-10,
+          "child_normal_energy": 1.205124888770115e-11,
+          "angular_tide_rms": 7.915046396078651e-11,
+          "probability_contrast": -7.364553411548513e-12,
+          "child_proper_length": -1.56141766183282e-11,
+          "child_areal_radius": 8.161915587834301e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.6000000000000001,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.842015677297695e-12,
+          "proper_probability_width": -7.075584562699078e-11,
+          "child_probability": 7.560618797697316e-14,
+          "radial_tide_rms": 1.4835865869144982e-10,
+          "child_normal_energy": 1.610489519521252e-11,
+          "angular_tide_rms": 1.0891021418046876e-10,
+          "probability_contrast": -1.2276457628246362e-11,
+          "child_proper_length": -1.91491267287347e-11,
+          "child_areal_radius": 1.0658585125611353e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.65,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.195788244094501e-12,
+          "proper_probability_width": -8.389733352487383e-11,
+          "child_probability": 9.192646643896296e-14,
+          "radial_tide_rms": 1.7256773787721613e-10,
+          "child_normal_energy": 2.1449952924967874e-11,
+          "angular_tide_rms": 1.4361489775183145e-10,
+          "probability_contrast": -1.5681844711679105e-11,
+          "child_proper_length": -2.1743495892678766e-11,
+          "child_areal_radius": 1.3311129976045777e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.7000000000000001,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.189237928249213e-12,
+          "proper_probability_width": -9.493472674648729e-11,
+          "child_probability": 1.0547118733938987e-13,
+          "radial_tide_rms": 1.9049561927886316e-10,
+          "child_normal_energy": 2.8706370613917898e-11,
+          "angular_tide_rms": 1.787530123920078e-10,
+          "probability_contrast": -1.4034828854647685e-11,
+          "child_proper_length": -2.332312121211544e-11,
+          "child_areal_radius": 1.5935697206259647e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.75,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.004774372707743e-12,
+          "proper_probability_width": -1.0161027574895343e-10,
+          "child_probability": 1.149080830487037e-13,
+          "radial_tide_rms": 2.006750321470463e-10,
+          "child_normal_energy": 3.837996587208181e-11,
+          "angular_tide_rms": 2.1109158865328936e-10,
+          "probability_contrast": 1.4111933843707902e-11,
+          "child_proper_length": -2.407873900267532e-11,
+          "child_areal_radius": 1.8454127115319352e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.8,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.782840790085174e-12,
+          "proper_probability_width": -1.0220624346857221e-10,
+          "child_probability": 1.2023715356690445e-13,
+          "radial_tide_rms": 2.0511947695922572e-10,
+          "child_normal_energy": 5.0529358475159825e-11,
+          "angular_tide_rms": 2.4501289885847655e-10,
+          "probability_contrast": 8.709255538974503e-12,
+          "child_proper_length": -2.4166002532410857e-11,
+          "child_areal_radius": 2.0873525130582493e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.8500000000000001,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.536704345525777e-12,
+          "proper_probability_width": -9.664269384757063e-11,
+          "child_probability": 1.2312373343092986e-13,
+          "radial_tide_rms": 2.0805401845791494e-10,
+          "child_normal_energy": 6.461586821160381e-11,
+          "angular_tide_rms": 2.943512100728185e-10,
+          "probability_contrast": 1.325606291402437e-12,
+          "child_proper_length": -2.3555157824262096e-11,
+          "child_areal_radius": 2.318634173548162e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.9,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.182099111460502e-12,
+          "proper_probability_width": -8.677414342628254e-11,
+          "child_probability": 1.2656542480726785e-13,
+          "radial_tide_rms": 2.1398349758783297e-10,
+          "child_normal_energy": 7.986500349943526e-11,
+          "angular_tide_rms": 3.780264989927673e-10,
+          "probability_contrast": -6.746325720285995e-12,
+          "child_proper_length": -2.2158275214678724e-11,
+          "child_areal_radius": 2.5140778348031745e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 0.9500000000000001,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.646333235352017e-12,
+          "proper_probability_width": -7.528022649694321e-11,
+          "child_probability": 1.3433698597964394e-13,
+          "radial_tide_rms": 2.2650681330560474e-10,
+          "child_normal_energy": 9.587530769294972e-11,
+          "angular_tide_rms": 5.149267678916658e-10,
+          "probability_contrast": -1.5331291791653712e-11,
+          "child_proper_length": -2.0017987267806348e-11,
+          "child_areal_radius": 2.6294522115222208e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.0,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.9655305988640634e-12,
+          "proper_probability_width": -6.436229327277943e-11,
+          "child_probability": 1.4810375148499588e-13,
+          "radial_tide_rms": 2.5006485770973086e-10,
+          "child_normal_energy": 1.1329515103852827e-10,
+          "angular_tide_rms": 7.238547539145657e-10,
+          "probability_contrast": -2.2784218955962388e-11,
+          "child_proper_length": -1.7399637286530378e-11,
+          "child_areal_radius": 2.630251572099951e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.0499999999999945,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.2663954046819867e-12,
+          "proper_probability_width": -5.5071502913506265e-11,
+          "child_probability": 1.6497914145929826e-13,
+          "radial_tide_rms": 2.9034197268629214e-10,
+          "child_normal_energy": 1.3422329914192233e-10,
+          "angular_tide_rms": 1.0204885825260135e-09,
+          "probability_contrast": -2.8572477717148104e-11,
+          "child_proper_length": -1.4680479054618445e-11,
+          "child_areal_radius": 2.5214497156866855e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.099999999999989,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.6660145485403177e-12,
+          "proper_probability_width": -4.7418957649369986e-11,
+          "child_probability": 1.8063328610651297e-13,
+          "radial_tide_rms": 3.539035731137119e-10,
+          "child_normal_energy": 1.6228440813392808e-10,
+          "angular_tide_rms": 1.408857031037769e-09,
+          "probability_contrast": -2.988295721984002e-11,
+          "child_proper_length": -1.2170486840545891e-11,
+          "child_areal_radius": 2.347988470319251e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.1499999999999835,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.2118639425295896e-12,
+          "proper_probability_width": -4.0895731245882416e-11,
+          "child_probability": 1.9106938253798944e-13,
+          "radial_tide_rms": 4.5078252242092276e-10,
+          "child_normal_energy": 2.0230750408245513e-10,
+          "angular_tide_rms": 1.8896884057539864e-09,
+          "probability_contrast": -2.542979715691729e-11,
+          "child_proper_length": -1.0021761198686363e-11,
+          "child_areal_radius": 2.1643131731252652e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.199999999999978,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.94180562927005e-13,
+          "proper_probability_width": -3.4957592376372304e-11,
+          "child_probability": 1.957323192414151e-13,
+          "radial_tide_rms": 5.991935836391349e-10,
+          "child_normal_energy": 2.5928947877673636e-10,
+          "angular_tide_rms": 2.5176234430546174e-09,
+          "probability_contrast": 2.441147284315548e-11,
+          "child_proper_length": -8.252565297794945e-12,
+          "child_areal_radius": 2.015010380773674e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.2499999999999725,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.820273512619934e-13,
+          "proper_probability_width": -2.934030796097886e-11,
+          "child_probability": 1.9584334154387761e-13,
+          "radial_tide_rms": 8.312355248563108e-10,
+          "child_normal_energy": 3.369109435880091e-10,
+          "angular_tide_rms": 3.4854963359975955e-09,
+          "probability_contrast": 1.9475865364881884e-11,
+          "child_proper_length": -6.821432307901887e-12,
+          "child_areal_radius": 1.9191759292880306e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.299999999999967,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.42715178353248e-13,
+          "proper_probability_width": -2.4066526549404443e-11,
+          "child_probability": 1.9340085088970227e-13,
+          "radial_tide_rms": 1.1866632121382281e-09,
+          "child_normal_energy": 4.361631056326587e-10,
+          "angular_tide_rms": 5.135461833560839e-09,
+          "probability_contrast": 1.2272016736147862e-11,
+          "child_proper_length": -5.665523605813405e-12,
+          "child_areal_radius": 1.8706813875724038e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.3499999999999615,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.4644843377739107e-13,
+          "proper_probability_width": -1.9325430145045175e-11,
+          "child_probability": 1.8984813721090177e-13,
+          "radial_tide_rms": 1.7189023537866888e-09,
+          "child_normal_energy": 5.548983494918502e-10,
+          "angular_tide_rms": 7.861160611355444e-09,
+          "probability_contrast": 3.934907955027711e-12,
+          "child_proper_length": -4.717809476417756e-12,
+          "child_areal_radius": 1.837552332517589e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.399999999999956,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.691387473470087e-13,
+          "proper_probability_width": -1.5293100119606606e-11,
+          "child_probability": 1.851852005074761e-13,
+          "radial_tide_rms": 2.4971598122647265e-09,
+          "child_normal_energy": 6.893863258028432e-10,
+          "angular_tide_rms": 1.2082921330147656e-08,
+          "probability_contrast": -5.344724662847966e-12,
+          "child_proper_length": -3.9171443866337086e-12,
+          "child_areal_radius": 1.77244885435357e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.4499999999999504,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.9745823859617104e-13,
+          "proper_probability_width": -1.2046141861787873e-11,
+          "child_probability": 1.7907897387203775e-13,
+          "radial_tide_rms": 3.606970722103142e-09,
+          "child_normal_energy": 8.38213054521475e-10,
+          "angular_tide_rms": 1.8529021872382145e-08,
+          "probability_contrast": -1.4692358440981934e-11,
+          "child_proper_length": -3.221284350374276e-12,
+          "child_areal_radius": 1.6339818387223204e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.499999999999945,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.296357548559058e-13,
+          "proper_probability_width": -9.55158174775761e-12,
+          "child_probability": 1.7108536809473662e-13,
+          "radial_tide_rms": 5.19813170285488e-09,
+          "child_normal_energy": 1.0071872225125844e-09,
+          "angular_tide_rms": 2.8540284802147653e-08,
+          "probability_contrast": -2.293665257724342e-11,
+          "child_proper_length": -2.6134094888163872e-12,
+          "child_areal_radius": 1.4099832412739488e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.5499999999999394,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.6992917489799808e-13,
+          "proper_probability_width": -7.69184715920801e-12,
+          "child_probability": 1.6187051699034782e-13,
+          "radial_tide_rms": 7.397716217383277e-09,
+          "child_normal_energy": 1.2150991324233473e-09,
+          "angular_tide_rms": 4.3809677663375624e-08,
+          "probability_contrast": -2.9054980643650197e-11,
+          "child_proper_length": -2.0922291676939153e-12,
+          "child_areal_radius": 1.1256773291279387e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.599999999999934,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.2189554920993828e-13,
+          "proper_probability_width": -6.306677402534433e-12,
+          "child_probability": 1.5198953207118393e-13,
+          "radial_tide_rms": 1.0461064903211081e-08,
+          "child_normal_energy": 1.4972698636483983e-09,
+          "angular_tide_rms": 6.597247192985378e-08,
+          "probability_contrast": -3.40920069952233e-11,
+          "child_proper_length": -1.6583956430338276e-12,
+          "child_areal_radius": 8.29825097525827e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.6499999999999284,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.597116074593458e-14,
+          "proper_probability_width": -5.231370892033738e-12,
+          "child_probability": 1.4444001550373287e-13,
+          "radial_tide_rms": 1.4959482541598845e-08,
+          "child_normal_energy": 1.902606072690105e-09,
+          "angular_tide_rms": 9.779887477634475e-08,
+          "probability_contrast": -3.6399883107662845e-11,
+          "child_proper_length": -1.3072321003448906e-12,
+          "child_areal_radius": 5.717204487609706e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.699999999999923,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.076085815043264e-14,
+          "proper_probability_width": -4.3374193126055616e-12,
+          "child_probability": 1.4310774787418268e-13,
+          "radial_tide_rms": 2.2253857423493173e-08,
+          "child_normal_energy": 2.484256356183323e-09,
+          "angular_tide_rms": 1.4700253814226016e-07,
+          "probability_contrast": 3.337091714072926e-11,
+          "child_proper_length": -1.029856755430103e-12,
+          "child_areal_radius": 3.879563337250147e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.7499999999999174,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -4.432218481120742e-14,
+          "proper_probability_width": -3.5516034557758758e-12,
+          "child_probability": 1.509903313490213e-13,
+          "radial_tide_rms": 3.438890416873619e-08,
+          "child_normal_energy": 3.281513727415586e-09,
+          "angular_tide_rms": 2.292599674547091e-07,
+          "probability_contrast": 3.294753359028846e-11,
+          "child_proper_length": -8.158751452214119e-13,
+          "child_areal_radius": 2.879474436667806e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.799999999999912,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.4434694679008615e-14,
+          "proper_probability_width": -2.8508029270568613e-12,
+          "child_probability": 1.6864287744056128e-13,
+          "radial_tide_rms": 5.3673375077778473e-08,
+          "child_normal_energy": 4.299380407246645e-09,
+          "angular_tide_rms": 3.6376877687871456e-07,
+          "probability_contrast": 2.951361377512285e-11,
+          "child_proper_length": -6.536299279602531e-13,
+          "child_areal_radius": 2.5561774918969604e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.8499999999999064,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.8521239189838177e-14,
+          "proper_probability_width": -2.239292085093325e-12,
+          "child_probability": 1.9251267247000214e-13,
+          "radial_tide_rms": 8.241477189585567e-08,
+          "child_normal_energy": 5.4973554597381735e-09,
+          "angular_tide_rms": 5.631336534861475e-07,
+          "probability_contrast": 2.15437667705487e-11,
+          "child_proper_length": -5.29850469055404e-13,
+          "child_areal_radius": 2.419398015263141e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.8999999999999009,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.420763242638735e-14,
+          "proper_probability_width": -1.7286727604926e-12,
+          "child_probability": 2.149391775674303e-13,
+          "radial_tide_rms": 1.2269310900592245e-07,
+          "child_normal_energy": 6.803190899518086e-09,
+          "angular_tide_rms": 8.381866791751236e-07,
+          "probability_contrast": 1.0014322704421375e-11,
+          "child_proper_length": -4.3208839284325506e-13,
+          "child_areal_radius": 1.8278711877428577e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.9499999999998954,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.0085929447466455e-14,
+          "proper_probability_width": -1.3237466678361898e-12,
+          "child_probability": 2.274846977456946e-13,
+          "radial_tide_rms": 1.7815364117268473e-07,
+          "child_normal_energy": 8.157883257808862e-09,
+          "angular_tide_rms": 1.2306118151172996e-06,
+          "probability_contrast": -3.3577585156763234e-12,
+          "child_proper_length": -3.511253787724655e-13,
+          "child_areal_radius": 2.5934809855243657e-13
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 1.9999999999998899,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.5886706013212848e-14,
+          "proper_probability_width": -1.0186573806691968e-12,
+          "child_probability": 2.2426505097428162e-13,
+          "radial_tide_rms": 2.53829057328403e-07,
+          "child_normal_energy": 9.584198323864257e-09,
+          "angular_tide_rms": 1.842490746639669e-06,
+          "probability_contrast": -1.6596168883609153e-11,
+          "child_proper_length": -2.8213889557981986e-13,
+          "child_areal_radius": -2.3661073100811336e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.0499999999998844,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.1939342743627623e-14,
+          "proper_probability_width": -7.985279104616438e-13,
+          "child_probability": 2.0461410343841635e-13,
+          "radial_tide_rms": 3.54762960341759e-07,
+          "child_normal_energy": 1.12671614260762e-08,
+          "angular_tide_rms": 2.8178037609905005e-06,
+          "probability_contrast": -2.822986289174878e-11,
+          "child_proper_length": -2.2350697681527976e-13,
+          "child_areal_radius": -5.686118242920202e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.099999999999879,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.567257146763207e-15,
+          "proper_probability_width": -6.41972586201689e-13,
+          "child_probability": 1.7341683644644945e-13,
+          "radial_tide_rms": 4.934045136906207e-07,
+          "child_normal_energy": 1.359785528620705e-08,
+          "angular_tide_rms": 4.329020157456398e-06,
+          "probability_contrast": -3.7930381058259854e-11,
+          "child_proper_length": -1.7460859147444552e-13,
+          "child_areal_radius": -9.100276088247483e-12
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.1499999999998733,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.903751879726693e-15,
+          "proper_probability_width": -5.268042946315887e-13,
+          "child_probability": 1.3733458814613186e-13,
+          "radial_tide_rms": 7.146663847379386e-07,
+          "child_normal_energy": 1.7155002751678694e-08,
+          "angular_tide_rms": 6.733229383826256e-06,
+          "probability_contrast": 3.5547675913960575e-12,
+          "child_proper_length": -1.348938322154325e-13,
+          "child_areal_radius": -1.2006395877506293e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.199999999999868,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.968911787763374e-15,
+          "proper_probability_width": -4.3484313372310623e-13,
+          "child_probability": 1.0236256287043943e-13,
+          "radial_tide_rms": 1.1245720088481903e-06,
+          "child_normal_energy": 2.2580934455618262e-08,
+          "angular_tide_rms": 1.0919349733740091e-05,
+          "probability_contrast": 4.7654102885985594e-11,
+          "child_proper_length": -1.0363758462528239e-13,
+          "child_areal_radius": -1.3955059330328368e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.2499999999998623,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.7261992576604888e-15,
+          "proper_probability_width": -3.554066763111763e-13,
+          "child_probability": 7.238654120556021e-14,
+          "radial_tide_rms": 1.8918290152214468e-06,
+          "child_normal_energy": 3.0384171623154543e-08,
+          "angular_tide_rms": 1.8404098227620125e-05,
+          "probability_contrast": 5.303552041979742e-11,
+          "child_proper_length": -8.000631407378833e-14,
+          "child_areal_radius": -1.4848566820546694e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.299999999999857,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.049629996975222e-15,
+          "proper_probability_width": -2.843506680116903e-13,
+          "child_probability": 4.807265696626928e-14,
+          "radial_tide_rms": 3.148175892420113e-06,
+          "child_normal_energy": 4.0654640542925335e-08,
+          "angular_tide_rms": 3.058742731809616e-05,
+          "probability_contrast": 5.236333588953812e-11,
+          "child_proper_length": -6.27462491686881e-14,
+          "child_areal_radius": -1.49036338825681e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.3499999999998513,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.7208592406961487e-15,
+          "proper_probability_width": -2.214096961328238e-13,
+          "child_probability": 2.942091015256665e-14,
+          "radial_tide_rms": 5.024921847507358e-06,
+          "child_normal_energy": 5.284982762532309e-08,
+          "angular_tide_rms": 4.747067578136921e-05,
+          "probability_contrast": 4.322475710694107e-11,
+          "child_proper_length": -5.015259041396547e-14,
+          "child_areal_radius": -1.483257960899209e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.399999999999846,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.5182083021314519e-15,
+          "proper_probability_width": -1.679611311145024e-13,
+          "child_probability": 1.4988010832439613e-14,
+          "radial_tide_rms": 7.5864954851567745e-06,
+          "child_normal_energy": 6.587242751265876e-08,
+          "angular_tide_rms": 6.826384924352169e-05,
+          "probability_contrast": 2.739264370887895e-11,
+          "child_proper_length": -4.055176333617183e-14,
+          "child_areal_radius": -1.5445422718585178e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.4499999999998403,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.310420955774605e-15,
+          "proper_probability_width": -1.254699469321885e-13,
+          "child_probability": 2.6645352591003757e-15,
+          "radial_tide_rms": 1.0857998859137297e-05,
+          "child_normal_energy": 7.871221896493807e-08,
+          "angular_tide_rms": 9.513925760984421e-05,
+          "probability_contrast": 7.385425604411466e-12,
+          "child_proper_length": -3.2822052367653676e-14,
+          "child_areal_radius": -1.7287504761043238e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.499999999999835,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.0676274317736323e-15,
+          "proper_probability_width": -9.380170251649389e-14,
+          "child_probability": -8.104628079763643e-15,
+          "radial_tide_rms": 1.5147088561207056e-05,
+          "child_normal_energy": 9.105860954150558e-08,
+          "angular_tide_rms": 0.00013614632189273834,
+          "probability_contrast": -1.1057932347569022e-11,
+          "child_proper_length": -2.629211952320798e-14,
+          "child_areal_radius": -2.041922186890588e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.5499999999998293,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.155436504071745e-16,
+          "proper_probability_width": -7.158856840661088e-14,
+          "child_probability": -1.765254609153999e-14,
+          "radial_tide_rms": 2.0286417566239834e-05,
+          "child_normal_energy": 1.0425264918012545e-07,
+          "angular_tide_rms": 0.00020354986190795898,
+          "probability_contrast": -2.627120743170508e-11,
+          "child_proper_length": -2.070999621794911e-14,
+          "child_areal_radius": -2.4350299554498633e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.599999999999824,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -5.825350510128835e-16,
+          "proper_probability_width": -5.652379606035929e-14,
+          "child_probability": -2.6201263381153694e-14,
+          "radial_tide_rms": 2.703932113945484e-05,
+          "child_normal_energy": 1.2199689081171528e-07,
+          "angular_tide_rms": 0.00031378865242004395,
+          "probability_contrast": -4.290429123088302e-11,
+          "child_proper_length": -1.5988078916340243e-14,
+          "child_areal_radius": -2.8343549729470396e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.6499999999998183,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -3.861013342810332e-16,
+          "proper_probability_width": -4.605300515936328e-14,
+          "child_probability": -3.2307490016592055e-14,
+          "radial_tide_rms": 3.8551632314920425e-05,
+          "child_normal_energy": 1.5037585399113595e-07,
+          "angular_tide_rms": 0.000507701188325882,
+          "probability_contrast": -4.250774732206253e-11,
+          "child_proper_length": -1.2097636260810507e-14,
+          "child_areal_radius": -3.1677771517024667e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.6999999999998128,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -2.380365869691925e-16,
+          "proper_probability_width": -3.8027740678625577e-14,
+          "child_probability": -3.552713678800501e-14,
+          "radial_tide_rms": 6.485171616077423e-05,
+          "child_normal_energy": 1.966218405868858e-07,
+          "angular_tide_rms": 0.0008866451680660248,
+          "probability_contrast": 5.96246385597965e-11,
+          "child_proper_length": -9.025224144421085e-15,
+          "child_areal_radius": -3.3875124927362776e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.7499999999998073,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -1.4434457860749983e-16,
+          "proper_probability_width": -3.114327372377712e-14,
+          "child_probability": -3.597122599785507e-14,
+          "radial_tide_rms": 0.00011894199997186661,
+          "child_normal_energy": 2.666565706022084e-07,
+          "angular_tide_rms": 0.0016111284494400024,
+          "probability_contrast": 6.538397601119073e-11,
+          "child_proper_length": -6.739671754713017e-15,
+          "child_areal_radius": -3.480593591120851e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.7999999999998018,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -9.92925902089381e-17,
+          "proper_probability_width": -2.4886342986363275e-14,
+          "child_probability": -3.397282455352979e-14,
+          "radial_tide_rms": 0.00021359510719776154,
+          "child_normal_energy": 3.6154233384877443e-07,
+          "angular_tide_rms": 0.0027924180030822754,
+          "probability_contrast": 6.457306911400451e-11,
+          "child_proper_length": -5.138359356060551e-15,
+          "child_areal_radius": -3.47579742765447e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.8499999999997963,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.519626790073204e-17,
+          "proper_probability_width": -1.9236131784672317e-14,
+          "child_probability": -3.141931159689193e-14,
+          "radial_tide_rms": 0.00035395845770835876,
+          "child_normal_energy": 4.748617357108742e-07,
+          "angular_tide_rms": 0.004340082406997681,
+          "probability_contrast": 5.395928148743678e-11,
+          "child_proper_length": -4.044616204457174e-15,
+          "child_areal_radius": -3.4505731605349865e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.8999999999997907,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -8.182677083655443e-17,
+          "proper_probability_width": -1.4378906051937257e-14,
+          "child_probability": -3.0531133177191805e-14,
+          "radial_tide_rms": 0.000542420893907547,
+          "child_normal_energy": 5.940819391980767e-07,
+          "angular_tide_rms": 0.0060232579708099365,
+          "probability_contrast": 3.556333005860779e-11,
+          "child_proper_length": -3.267351667002316e-15,
+          "child_areal_radius": -3.504041501400934e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 2.9499999999997852,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -7.629988085572012e-17,
+          "proper_probability_width": -1.0480657140765626e-14,
+          "child_probability": -3.175237850427948e-14,
+          "radial_tide_rms": 0.0007646232843399048,
+          "child_normal_energy": 7.055205060169101e-07,
+          "angular_tide_rms": 0.007880628108978271,
+          "probability_contrast": 1.3687828648301092e-11,
+          "child_proper_length": -2.658707672423266e-15,
+          "child_areal_radius": -3.704236917201342e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      },
+      {
+        "preparation": "coherent",
+        "time": 3.0,
+        "case_ids": [
+          "nf128_coherent_dt0.001",
+          "nf128_coherent_dt0.0005"
+        ],
+        "matched_initial_state": true,
+        "second_minus_first": {
+          "child_Q": -6.549766967938603e-17,
+          "proper_probability_width": -7.601124590861374e-15,
+          "child_probability": -3.341771304121721e-14,
+          "radial_tide_rms": 0.001023314893245697,
+          "child_normal_energy": 8.043862180784345e-07,
+          "angular_tide_rms": 0.010567069053649902,
+          "probability_contrast": -7.500056131704014e-12,
+          "child_proper_length": -2.1415703412019926e-15,
+          "child_areal_radius": -4.0534686718274315e-11
+        },
+        "finite_timestep_indicator_only": true,
+        "spatial_convergence_claim": false
+      }
+    ],
+    "source_frame_matched_between_caps": true,
+    "startup_force_is_holding": false,
+    "finite_observed_domain_only": true
+  }
+}
