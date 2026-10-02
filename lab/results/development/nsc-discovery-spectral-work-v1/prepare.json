@@ -1,0 +1,77 @@
+{
+  "CPU_seconds": 0.04670200000000002,
+  "Gaussian_reference_gap": {
+    "Zfull_imag": 0.3063473863829113,
+    "Zfull_real": 0.9051538317072236,
+    "Zreference_over_Zvacuum_imag": 0.33430246625595633,
+    "Zreference_over_Zvacuum_real": 0.9783614846703491,
+    "characteristic_angle": 0.2,
+    "characteristic_ratio_minus_full_abs": 0.07836355621765606,
+    "covariance_interpretation": "full finite CAR versus mathematical filled-negative reference; physical filled-sea Gamma matching unresolved",
+    "full_C_noise": 2.270837089781571,
+    "noise_and_characteristic_scope": "one representative canonical CAR sector; M multiplies the mean/action work outside H",
+    "noise_subtraction_minus_full": -3.930804663582275,
+    "normalized_Gaussian_ratio_is_excitation_Gaussian": false,
+    "reference_minus_vacuum_noise": -1.6599675738007043,
+    "vacuum_reference_noise": 126.24366939397392
+  },
+  "M": 4.0,
+  "N0": 1.2741518165244603,
+  "Q0": 0.4639447144311826,
+  "array_sha256": {
+    "Gblocks": "0e73af65aeeea7e06b99fdeb87fb476c545cffd68b0472ce2bd934fae9b60ee5",
+    "degeneracy": "b6d5153c04182eb76340c93242016c5d97d4335fadbe1687315b58121d749c6e",
+    "energies": "e8d6e9802f37ab37aa685ec2964ac1f15f5291981aec47a5fa84d2e2acba6eed",
+    "momenta": "0ca500dd726faf78682ed38a51fdac1f32e66c5f8d1560984770baf393d9f38f",
+    "positive_occupations": "4c94f0261d51198352c3ea7a97ea4ca8826e45e3d2612542e40b96f03b83d48b"
+  },
+  "input_hashes": {
+    "results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81"
+  },
+  "kappa": 1.0,
+  "mode": "frozen_source_operator",
+  "nonlinear_measurement_performed": false,
+  "payload_sha256": "5f09ddbf0b2c9fbc2cfed3ab28f61a188e83167b8b385cc2f9f3dd3279fc3cd1",
+  "preparation_binding": {
+    "external_post_run_observation": false,
+    "old_record_modified": false,
+    "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+    "record_sha256": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056"
+  },
+  "producers": {
+    "scripts/derive_nsc_discovery_spectral_work.py": "038c632c366e075c2a5e9588860530f3939ca43f3412593e13ec5d90a36f3ac4",
+    "src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "src/recursive_horizons/nsc_discovery_spectral_work.py": "38e2c09719fcc597907075b544c8803b10fb4207a4c8cef45a4b89acce7d7a96",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+  },
+  "producing_commit": "63c8c75f2e89434b6b7de5150680ee38422c4c58",
+  "pulse": {
+    "T": 12.921346562842174,
+    "amplitude": 0.001,
+    "analytic_integral_J": 0.0,
+    "coordinate_pulse": true,
+    "endpoint_J": 0.0,
+    "endpoint_Jdot": 0.0,
+    "frequency_ratio": 0.8,
+    "omega": 0.9725279446103703,
+    "shape": "A sin^2(pi t/T) cos(omega t)"
+  },
+  "r0": 2.746344072669582,
+  "schema": "NSC-DISCOVERY-SPECTRAL-WORK-v1",
+  "source_checks": {
+    "Gram_gap": 1.1102230246251565e-15,
+    "block_energy": 12.746739770260728,
+    "cross_momentum_covariance_max": 2.418161708144078e-15,
+    "eigen_equation_max": 1.4073912556669638e-13,
+    "negative_occupation_roundoff": 2.1659292842177873e-28,
+    "source_energy": 12.746739770260719,
+    "spectral_offdiagonal_max": 1.5232492161904568e-15,
+    "uniform_Q_spread": 0.0,
+    "uniform_r_spread": 0.0
+  },
+  "source_operator_frozen_before_prediction": true
+}
