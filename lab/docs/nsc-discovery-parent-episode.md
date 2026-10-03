@@ -155,8 +155,25 @@ producer at its frozen commit and qualifies the result as historical source and
 stored-array structural authentication. It does not replay current dynamics or
 claim current producer compatibility.
 
-The generic station-resume helper remains separate. It copies state, clocks and
-work stocks but creates a fresh ledger and omits the parent manifest's top-level
-source closure. A later root-owned resume must preserve that binding and deduct
-measured prior preparation/episode CPU from the global allowance; a new output
-directory does not renew the global budget.
+`continue_parent` is the thin parent wrapper of the generic station-resume
+helper. It first authenticates the completed predecessor and its historical
+producer, requires unchanged dynamic owner bytes, then copies all cases into a
+new directory. The generic immutable handoff is retained and one additional
+immutable parent handoff records the full current producer/input closure and
+new target binding. All array hashes, including Phi, canonical momenta, W,
+occupations, source/reference columns and proper clocks, equal the predecessor.
+Work stocks and last channel sample/time are identical. No preparation,
+resigning, reset, filtering, or evolution occurs in the copy.
+
+The wrapper requires an explicit remaining global CPU allowance, records the
+ancestor budget and measured spend, and refuses renewal of that allowance.
+The new ledger charges the copy/authentication CPU; run cannot enlarge its
+remaining cap. Other programme CPU must already be deducted by root. New
+targets1.25 and2.25 retain full ancestry snapshots before3. Empty-source and
+frozen controls retain their original stored control and timestep cap.
+
+~~~sh
+python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --continue-from results/development/nsc-discovery-parent-strong-t1-v1 --output results/development/nsc-discovery-parent-strong-t3-v1 --stations 1.25,2.25,3 --cpu-budget <remaining-global-CPU> --producer-commit <current-frozen>
+python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --check --output results/development/nsc-discovery-parent-strong-t3-v1
+python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --run --output results/development/nsc-discovery-parent-strong-t3-v1 --workers 2 --cpu-budget <same-remaining-global-CPU>
+~~~

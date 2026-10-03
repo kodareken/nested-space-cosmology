@@ -1231,6 +1231,123 @@ def cpu_usage():
     return time.process_time() + child.ru_utime + child.ru_stime
 
 
+def continue_parent(source, output, *, stations=(1.25, 2.25, 3.), cpu_budget=None,
+                    producer_commit=None):
+    """Exact full-state successor; generic copy plus immutable parent binding.
+
+    No initial preparation, source filtering, signing or evolution is performed.
+    The caller supplies its remaining global allowance, never a renewed budget.
+    """
+    targets = normalize_stations(stations)
+    if cpu_budget is None or not np.isfinite(float(cpu_budget)) or not 0 < float(cpu_budget) <= CPU_BUDGET_SECONDS:
+        raise ValueError("continuation requires an explicit positive remaining CPU allowance")
+    if not producer_commit:
+        raise ValueError("continuation requires the current frozen producer commit")
+    source, destination = Path(source).resolve(), Path(output).resolve()
+    if destination.exists():
+        raise FileExistsError("parent continuation output must be a new directory")
+    started = cpu_usage()
+    check(source)
+    old = episode.read_manifest(source)
+    ledger_path = episode._ledger_path(source)
+    ledger = json.loads(ledger_path.read_text())
+    if float(ledger.get("reserved",0.)) != 0:
+        raise ValueError("predecessor still has active CPU reservations")
+    spent = float(ledger["spent"])
+    inherited = float(old.get("continuation_ancestor_CPU_spent",0.))
+    if spent+float(cpu_budget) > float(ledger["budget"]) or inherited+spent+float(cpu_budget) > CPU_BUDGET_SECONDS:
+        raise ValueError("continuation remaining allowance would renew the global CPU ceiling")
+    current = source_hashes()
+    commit = leading.preparation._git_hashes(producer_commit,current)
+    # Changes to preparation or this adapter do not reconstruct a new state.
+    # Actual action, operators, RK4, admission, clock and diagnostic owners must
+    # remain byte-identical to the predecessor's authenticated producer.
+    dynamic = [name for name in OWNERS if name.startswith("lab/src/") and name not in (
+        "lab/src/recursive_horizons/nsc_discovery_parent_episode.py",
+        "lab/src/recursive_horizons/nsc_discovery_parent.py")]
+    for name in dynamic:
+        if old.get("source_hashes",{}).get(name) != current[name]:
+            raise ValueError("continuation dynamical owner changed: "+name)
+    inputs = dict(old.get("input_hashes",{}))
+    predecessor = {}
+    for case in old["cases"]:
+        record, arrays = episode.load_checkpoint(source,case["case_id"])
+        if record["status"] != "station_reached" or targets[0] <= float(record["coordinate_time"]):
+            raise ValueError("continuation requires completed checkpoints and strictly later targets")
+        ordinal = int(record["ordinal"])
+        jp = source/f"{case['case_id']}-{ordinal:06d}.json"
+        npz = jp.with_suffix(".npz")
+        inputs[str(jp)] = episode.file_sha256(jp)
+        inputs[str(npz)] = episode.file_sha256(npz)
+        predecessor[case["case_id"]] = (record,arrays,{
+            "directory":str(source),"case_id":case["case_id"],"ordinal":ordinal,
+            "json_sha256":inputs[str(jp)],"arrays_sha256":inputs[str(npz)],
+            "array_sha256":dict(record["array_sha256"]),
+            "coordinate_time":record["coordinate_time"]})
+    inputs[str(episode._manifest_path(source))] = episode.file_sha256(episode._manifest_path(source))
+    inputs[str(ledger_path)] = episode.file_sha256(ledger_path)
+    before = _directory_files(source)
+    cases = []
+    with runtime_adapter():
+        report = episode.prepare_station_resume(source,destination,station=targets[-1],
+                                                cpu_budget_seconds=float(cpu_budget))
+        for case in report["cases"]:
+            old_record, original_arrays, link = predecessor[case["case_id"]]
+            record, arrays = episode.load_checkpoint(destination,case["case_id"])
+            if record["array_sha256"] != old_record["array_sha256"]:
+                raise ValueError("generic continuation changed full-state arrays")
+            selected = normalize_stations(sorted(set(record["stations"])|set(targets)))
+            mode = normalize_control_mode(old_record["control_mode"])
+            cap = float(old_record["step_cap"])
+            record.update(stations=list(selected),snapshot_kind="parent_continuation_handoff",
+                producing_commit=commit, source_hashes=current,input_hashes=inputs,
+                numerical_binding=numerical_binding(selected,control_mode=mode,step_cap=cap),
+                continuation_predecessor=link,predecessor_producing_commit=old_record["producing_commit"],
+                source_reset=False,projector_source_reset=False,initial_state_called=False,
+                prepare_parent_called=False,momenta_resigned=False,
+                common_k=declared_parent_offset(old_record)[0],
+                parent_k=declared_parent_offset(old_record)[0],
+                source_strength=old_record.get("source_strength",old_record.get("source_metadata",{}).get("source_strength")),
+                continuation_remaining_cpu_budget=float(cpu_budget))
+            for key in ("work_ledger","channel_sample","channel_time"):
+                if record.get(key) != old_record.get(key):
+                    raise ValueError("continuation changed clock/work channel stock: "+key)
+            committed = commit_parent_checkpoint(destination,record,arrays)
+            if committed["array_sha256"] != link["array_sha256"]:
+                raise ValueError("parent continuation changed full-state array identity")
+            cases.append({key:committed[key] for key in (
+                "case_id","ordinal","npz","json","coordinate_time","steps")})
+    used = cpu_usage()-started
+    if used > float(cpu_budget):
+        raise RuntimeError("continuation copy exceeded its explicit remaining CPU allowance")
+    report.update(schema=SCHEMA,campaign="parent-continuation",cases=cases,
+        stations=list(selected),numerical_binding=numerical_binding(selected,
+            control_mode=old_record["control_mode"],step_cap=old_record["step_cap"]),
+        source_hashes=current,input_hashes=inputs,producing_commit=commit,
+        predecessor_source_hashes=dict(old["source_hashes"]),
+        predecessor_producing_commit=old["producing_commit"],
+        continuation_remaining_cpu_budget=float(cpu_budget),
+        continuation_ancestor_CPU_spent=inherited+spent,ancestor_CPU_budget=float(ledger["budget"]),
+        predecessor_CPU_spent=spent,preparation_cpu_seconds=used,
+        budget_policy="explicit remaining global allowance; predecessor measured spend retained, not reset",
+        pure=False,bytes_written_scope="new successor files at publication; not cumulative IO",pool_launched=False,
+        source_reset=False,projector_source_reset=False,initial_state_called=False,
+        prepare_parent_called=False,case_selection="all predecessor cases",evolved=False)
+    episode._ledger_update(destination,pilot=used,budget=float(cpu_budget))
+    report["bytes_written"] = 0
+    stored_bytes = sum(item.stat().st_size for item in destination.iterdir()
+                       if item.is_file() and item != episode._manifest_path(destination))
+    while True:
+        total = stored_bytes+len((json.dumps(episode.jsonable(report),indent=2,allow_nan=False)+"\n").encode())
+        if total == report["bytes_written"]:
+            break
+        report["bytes_written"] = total
+    episode._write_json(episode._manifest_path(destination),report)
+    if before != _directory_files(source):
+        raise RuntimeError("continuation altered its predecessor")
+    return report
+
+
 def run(output=OUTPUT, *, workers=MAX_WORKERS, cpu_budget=CPU_BUDGET_SECONDS, max_steps=None):
     """Root campaign launch. One pool, native FFT, checkpoint on budget stop."""
     if not 1 <= int(workers) <= MAX_WORKERS:
@@ -1240,6 +1357,8 @@ def run(output=OUTPUT, *, workers=MAX_WORKERS, cpu_budget=CPU_BUDGET_SECONDS, ma
     manifest = episode.read_manifest(output)
     if manifest.get("schema") != SCHEMA:
         raise ValueError("not a parent episode checkpoint")
+    if float(cpu_budget) > float(manifest.get("continuation_remaining_cpu_budget",CPU_BUDGET_SECONDS)):
+        raise ValueError("run cannot enlarge the recorded continuation remaining allowance")
     if manifest.get("numerical_binding", {}).get("raw_coordinate_norm_used"):
         raise ValueError("parent episode refuses the raw coordinate step norm")
     if manifest.get("evolved") and max_steps is None and manifest.get("status") == "STATION_REACHED":
@@ -1346,7 +1465,21 @@ def check(output=OUTPUT):
                     problems.append(case["case_id"]+" authoritative parent record is not input-bound")
                 if pair.common_k != original_k:
                     problems.append(case["case_id"]+" reconstructed offset differs from authoritative parent.k")
-                if ordinal == 0:
+                resumed_handoff = record.get("snapshot_kind") in ("resume_handoff","parent_continuation_handoff")
+                if resumed_handoff:
+                    link = record.get("continuation_predecessor") or record.get("predecessor_chunk")
+                    ancestor = Path(link.get("directory",manifest["predecessor_directory"]))
+                    prior, prior_arrays = episode.load_checkpoint(ancestor,link["case_id"],int(link["ordinal"]))
+                    if prior["array_sha256"] != record["array_sha256"]:
+                        problems.append(case["case_id"]+" continuation changed predecessor array identity")
+                    for key in ("work_ledger","channel_sample","channel_time"):
+                        if record.get(key) != prior.get(key):
+                            problems.append(case["case_id"]+" continuation changed ledger/channel stock: "+key)
+                    if link.get("json_sha256"):
+                        jp = ancestor/f"{link['case_id']}-{int(link['ordinal']):06d}.json"
+                        if episode.file_sha256(jp) != link["json_sha256"]:
+                            problems.append(case["case_id"]+" predecessor record binding changed")
+                if ordinal == 0 and not resumed_handoff:
                     fields = ("Q","r") if record.get("control_mode") == "source_free" else (
                         "Q","r","pi_Q","pi_r","phi0","phi1")
                     for name in fields:
@@ -1365,7 +1498,8 @@ def check(output=OUTPUT):
                 problems.append(case["case_id"] + " geometry frame is not the full band")
             if not np.array_equal(state.p_Q, arrays["pi_Q"]) or not np.array_equal(state.p_r, arrays["pi_r"]):
                 problems.append(case["case_id"] + " geometry momenta were not restored")
-            if not np.array_equal(arrays["normal_clocks"], np.array(record.get("normal_clocks_initial", arrays["normal_clocks"]), dtype=float)) and ordinal == 0:
+            if (not np.array_equal(arrays["normal_clocks"], np.array(record.get("normal_clocks_initial", arrays["normal_clocks"]), dtype=float))
+                    and ordinal == 0 and record.get("snapshot_kind") not in ("resume_handoff","parent_continuation_handoff")):
                 problems.append(case["case_id"] + " initial clocks differ from the handoff")
             if "work_ledger" not in record:
                 problems.append(case["case_id"] + " is missing ledger stocks")

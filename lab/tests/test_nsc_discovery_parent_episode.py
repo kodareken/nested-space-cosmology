@@ -531,3 +531,55 @@ def test_declared_offset_is_not_fitted_to_general_collar_kinetic_mean():
     fine=leading.fine_state(reconstructed,state)
     assert not np.isclose(float(np.mean(fine.p_Q**2/fine.r**3)),reconstructed.common_k)
     assert parent.declared_parent_offset({"common_k":None,"k_common":.25})==(.25,"k_common")
+
+
+def test_real_completed_parent_continuation_preserves_whole_state_and_stocks(tmp_path,monkeypatch):
+    source=parent.LAB/"results/development/nsc-discovery-parent-strong-t1-v1"
+    before=parent._directory_files(source)
+    old=discovery.read_manifest(source)
+    def forbidden(*args,**kwargs):raise AssertionError("continuation cannot prepare/adopt/resign")
+    monkeypatch.setattr(parent,"adopt_parent_record",forbidden)
+    monkeypatch.setattr(parent,"source_free_reprepare",forbidden)
+    monkeypatch.setattr(prepared_parent,"prepare_parent",forbidden)
+    # Only the new-uncommitted producer gate is an oracle. Actual predecessor
+    # records, producer history, source inputs and array hashes authenticate.
+    monkeypatch.setattr(leading.preparation,"_git_hashes",lambda commit,pins:commit)
+    destination=tmp_path/"continued"
+    report=parent.continue_parent(source,destination,stations=(1.25,2.25,3.),
+                                  cpu_budget=20.,producer_commit="test-future-freeze")
+    assert len(report["cases"])==2 and report["case_selection"]=="all predecessor cases"
+    assert report["stations"]==[.25,.5,1.,1.25,2.25,3.]
+    assert report["source_hashes"]==parent.source_hashes()
+    assert report["numerical_binding"]["step_cap"]==.001
+    assert report["continuation_ancestor_CPU_spent"]==16.0031
+    assert report["ancestor_CPU_budget"]==20500.
+    assert report["continuation_remaining_cpu_budget"]==20.
+    for case in old["cases"]:
+        previous,arrays=discovery.load_checkpoint(source,case["case_id"])
+        saved,copied=discovery.load_checkpoint(destination,case["case_id"])
+        assert saved["array_sha256"]==previous["array_sha256"]
+        for name,value in arrays.items():np.testing.assert_array_equal(copied[name],value)
+        for key in ("work_ledger","channel_sample","channel_time","control_mode","step_cap","parent_k"):
+            assert saved[key]==previous[key]
+        assert saved["coordinate_time"]==1. and saved["steps"]==previous["steps"]
+        assert saved["source_strength"]==previous["source_metadata"]["source_strength"]
+        assert saved["numerical_binding"]["stations"]==report["stations"]
+        assert saved["continuation_predecessor"]["array_sha256"]==previous["array_sha256"]
+        assert not saved["source_reset"] and not saved["prepare_parent_called"] and not saved["momenta_resigned"]
+    assert discovery.read_manifest(destination)["producing_commit"]=="test-future-freeze"
+    checked=parent.check(destination)
+    assert checked["ok"] and checked["bytes_written"]==0
+    with pytest.raises(ValueError,match="enlarge"):
+        parent.run(destination,cpu_budget=21.)
+    assert parent._directory_files(source)==before
+
+
+def test_continuation_requires_explicit_remaining_budget_and_cli_binding(capsys,tmp_path):
+    from derive_nsc_discovery_parent_episode import main
+    with pytest.raises(ValueError,match="explicit positive remaining"):
+        parent.continue_parent(tmp_path,tmp_path/"new",producer_commit="future")
+    with pytest.raises(SystemExit):
+        main(["--continue-from",str(tmp_path),"--output",str(tmp_path/"new")])
+    with pytest.raises(SystemExit):
+        main(["--continue-from",str(tmp_path),"--output",str(tmp_path/"new"),
+              "--cpu-budget","20","--producer-commit","future","--step-cap",".0005"])
