@@ -1,0 +1,308 @@
+{
+  "CPU_limit_seconds": 30.0,
+  "aggregate_CPU_seconds": 1.187633,
+  "budget_exceeded": false,
+  "common_k": 0.002621213673327129,
+  "complete": true,
+  "evolved": false,
+  "global_parent_PASS": false,
+  "k_override": 0.002621213673327129,
+  "k_selection": "declared caller initial-condition override; not a dynamics law",
+  "mode": "bounded_preparation_pilot",
+  "population": 1,
+  "producers": {
+    "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+    "lab/docs/nsc-discovery-parent.md": "5ce5a87e4c09bffb323680d18c3d7d90622e85ef4fe1c3fa1da8c3f9b7516080",
+    "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+    "lab/scripts/derive_nsc_discovery_parent.py": "bd9addeb93b11cc1da8397e76607463143ca89d50b5f28c584eff459ec69344c",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "5289b32909c87f7345a7b1c2f6f2c571be8fe1971ac6b3f814afc9ca178645b2",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/src/recursive_horizons/nsc_discovery_parent_traction.py": "5f00bba69962665d2c3e38e307b21cfb4c7db7fd2695d637ceb471835a3643a5",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40",
+    "lab/tests/test_nsc_discovery_parent.py": "2adaede4c60b67b3f88e5ee2bd92149aa0d0092107a0605a3c918283929ae3e4"
+  },
+  "producing_commit": "4392350e1b3d1420fa356398d38a4122a8a19e09",
+  "profile": {
+    "envelope_zero": 2.8,
+    "exterior_Q": 2.0,
+    "exterior_radius": null,
+    "initial_radius": "magnetic",
+    "k_margin": 0.05,
+    "transition_end": 1.4
+  },
+  "records": [
+    {
+      "CPU_seconds": 0.01652699999999996,
+      "blocker": null,
+      "converged": true,
+      "directory": "nf64",
+      "k": 0.002621213673327129,
+      "kinetic_anchor": 0.0026212136733271257,
+      "kmin": 3.1845439597956473e-20,
+      "nf": 64,
+      "parent_json_sha256": "24c34574b8026828c3e67bdd4bd3091000e8571406f68312e8b96d550baee9aa"
+    },
+    {
+      "CPU_seconds": 0.045030000000000125,
+      "blocker": null,
+      "converged": true,
+      "directory": "nf128",
+      "k": 0.002621213673327129,
+      "kinetic_anchor": 0.0026212136733271265,
+      "kmin": 6.5822627756965355e-18,
+      "nf": 128,
+      "parent_json_sha256": "727a5553ca79553c60b3afec9b54cceff86ef237eb853743f4a332e0a005e0ea"
+    }
+  ],
+  "refinement_scope": "same declared k; actual projected kinetic anchors and source/projection readouts are reported separately",
+  "same_declared_offset": true,
+  "schema": "NSC-DISCOVERY-PARENT-v1-PILOT",
+  "seed_families": {
+    "128": {
+      "CPU_seconds": 0.03707700000000003,
+      "alpha": 0.5,
+      "k": 1.0000000006582263e-08,
+      "kmin": 6.5822627756965355e-18,
+      "kmin_by_population": [
+        6.5822627756965355e-18,
+        4.924518430371193e-18,
+        2.8051131705926738e-18
+      ],
+      "margin": 1e-08,
+      "margin_fraction": 0.05,
+      "populations": [
+        {
+          "J_abs_max": 6.5822627756965355e-18,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "child_weight": 0.002363616564165972,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": 0.49999999999999994,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": 2.7241395169151113e-33,
+          "kmin": 6.5822627756965355e-18,
+          "lowdin_applied": false,
+          "population": 0,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "child_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.5,
+          "trace": 0.002688250301164983,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.002363616564165972,
+            0.00032463373699901087
+          ]
+        },
+        {
+          "J_abs_max": 4.924518430371193e-18,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "child_weight": 0.0017683392335225072,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": -5.337980661710677e-17,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": 2.1070363404484244e-33,
+          "kmin": 4.924518430371193e-18,
+          "lowdin_applied": false,
+          "population": 1,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "balanced",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.0,
+          "trace": 0.002688250301164983,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0017683392335225072,
+            0.0009199110676424754
+          ]
+        },
+        {
+          "J_abs_max": 2.8988983899636674e-18,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "child_weight": 0.0010072846661217216,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": -0.4999999999999999,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": 1.287279392310385e-33,
+          "kmin": 2.8051131705926738e-18,
+          "lowdin_applied": false,
+          "population": 2,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "parent_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": -0.5,
+          "trace": 0.002688250301164983,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0010072846661217216,
+            0.0016809656350432612
+          ]
+        }
+      ],
+      "sign_independent": true,
+      "signs": [
+        1,
+        -1
+      ],
+      "static_not_forced": true,
+      "trace": 0.002688250301164983
+    },
+    "64": {
+      "CPU_seconds": 0.3170280000000001,
+      "alpha": 0.5,
+      "k": 1.0000000000031845e-08,
+      "kmin": 3.1845439597956473e-20,
+      "kmin_by_population": [
+        3.1845439597956473e-20,
+        2.3841862451302994e-20,
+        1.366459103789936e-20
+      ],
+      "margin": 1e-08,
+      "margin_fraction": 0.05,
+      "populations": [
+        {
+          "J_abs_max": 4.378810644556704e-18,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441252394327775,
+          "child_weight": 0.002355829566632937,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8336260068871236,
+            -0.9999999985121231
+          ],
+          "imbalance": 0.5000000000000001,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -4.471959945433008e-19,
+          "kmin": 3.1845439597956473e-20,
+          "lowdin_applied": false,
+          "population": 0,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "child_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.5,
+          "trace": 0.002688250478865555,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.002355829566632937,
+            0.0003324209122326178
+          ]
+        },
+        {
+          "J_abs_max": 3.2682267814521536e-18,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441252394327775,
+          "child_weight": 0.0017583276755761452,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8336260068871236,
+            -0.9999999985121231
+          ],
+          "imbalance": 5.300585938817266e-17,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -3.337750327046079e-19,
+          "kmin": 2.3841862451302994e-20,
+          "lowdin_applied": false,
+          "population": 1,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "balanced",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.0,
+          "trace": 0.002688250478865555,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0017583276755761452,
+            0.0009299228032894096
+          ]
+        },
+        {
+          "J_abs_max": 1.856019065444893e-18,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441252394327775,
+          "child_weight": 0.0009985500406656553,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8336260068871236,
+            -0.9999999985121231
+          ],
+          "imbalance": -0.5,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -1.8955003287630765e-19,
+          "kmin": 1.366459103789936e-20,
+          "lowdin_applied": false,
+          "population": 2,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "parent_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": -0.5,
+          "trace": 0.002688250478865555,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0009985500406656553,
+            0.0016897004381998997
+          ]
+        }
+      ],
+      "sign_independent": true,
+      "signs": [
+        1,
+        -1
+      ],
+      "static_not_forced": true,
+      "trace": 0.002688250478865555
+    }
+  },
+  "sign": 1,
+  "status": "NUMERICAL_PREPARATIONS_RETAINED",
+  "suggested_common_k": 1.0000000006582263e-08,
+  "trajectory": false
+}

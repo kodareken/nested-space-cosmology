@@ -332,3 +332,55 @@ def test_explicit_prepare_requires_a_frozen_producer(tmp_path):
     preflight = parent.prepare(output=tmp_path / "campaign", cpu_budget=parent.CPU_BUDGET_SECONDS)
     assert preflight["status"] == "PREFLIGHT" and preflight["bytes_written"] == 0
     assert not (tmp_path / "campaign").exists()
+
+
+@pytest.mark.parametrize("stations", [(), (0.,1.), (-1.,1.), (1.,float("nan")),
+                                      (1.,float("inf")), (3.,1.), (1.,1.)])
+def test_station_selection_rejects_invalid_configuration(stations):
+    with pytest.raises(ValueError, match="stations"):
+        parent.prepare(stations=stations)
+
+
+def test_selected_stations_are_stored_and_bound_forecast_horizon(tmp_path, monkeypatch):
+    _fixture, pair, state = fixture_case()
+    source=tmp_path/"source";source.mkdir()
+    source_arrays={"Q":state.Q,"r":state.r,"pi_Q":state.p_Q,"pi_r":state.p_r,
+                   "phi0":state.phi0,"phi1":state.phi1,"W":pair.geometry_map,
+                   "weights":pair.weights,"source_columns":pair.source_columns,
+                   "reference_columns":pair.reference_columns}
+    np.savez(source/"parent.npz",**source_arrays)
+    record={"schema":prepared_parent.SCHEMA,"nf":16,"population":1,"sign":1,
+            "k":pair.common_k,"k_common":pair.common_k,"geometry_map":"identity"}
+    (source/"parent.json").write_text(json.dumps(record))
+    # Narrow authenticated-input boundary oracle, not a fabricated frozen
+    # scientific record. Production source authentication is unchanged.
+    monkeypatch.setattr(parent,"load_parent_record",lambda path:(record,source_arrays))
+    monkeypatch.setattr(leading.preparation,"_git_hashes",lambda commit,pins:commit)
+    destination=tmp_path/"campaign"
+    report=parent.prepare(source,destination,execute=True,producer_commit="test-oracle",
+                          cpu_budget=10.,stations=(1.,3.))
+    assert parent.STATIONS==(1.,3.,8.,16.,24.)
+    manifest=discovery.read_manifest(destination)
+    assert report["stations"]==manifest["stations"]==[1.,3.]
+    assert manifest["numerical_binding"]["stations"]==[1.,3.]
+    saved,arrays=discovery.load_checkpoint(destination,report["cases"][0]["case_id"])
+    assert saved["stations"]==saved["numerical_binding"]["stations"]==[1.,3.]
+    np.testing.assert_array_equal(arrays["phi0"],state.phi0)
+    np.testing.assert_array_equal(arrays["pi_Q"],state.p_Q)
+    estimate=parent.estimate_case_cpu(pair,state,step_cap=.001,stations=saved["stations"],
+        current_time=0.,probe_step_cpu=.002,probe_diag_cpu=.001)
+    assert estimate["estimated_steps"]==int(np.ceil(3./estimate["dt"]))
+    assert estimate["estimated_steps"]<int(np.ceil(24./estimate["dt"]))
+    assert parent.plan()["stations"]==[1.,3.,8.,16.,24.]
+
+
+def test_cli_station_selection_is_prepare_config_not_resume_override(capsys):
+    from derive_nsc_discovery_parent_episode import main
+    assert main(["--stations","1,3"])==0
+    report=json.loads(capsys.readouterr().out)
+    assert report["stations"]==[1.,3.]
+    assert all(case["stations"]==[1.,3.] for case in report["cases"])
+    with pytest.raises(SystemExit):
+        main(["--run","--stations","1,3"])
+    with pytest.raises(SystemExit):
+        main(["--stations","3,1"])

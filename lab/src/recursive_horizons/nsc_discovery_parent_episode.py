@@ -155,9 +155,8 @@ def normalize_control_mode(control_mode):
 
 def normalize_stations(stations=None):
     values = STATIONS if stations is None else tuple(float(value) for value in stations)
-    allowed = set(STATIONS)
-    if not values or any(value not in allowed for value in values):
-        raise ValueError("stations must be chosen from 1, 3, 8, 16, 24")
+    if not values or any(not np.isfinite(value) or value <= 0 for value in values):
+        raise ValueError("stations must be a nonempty sequence of positive finite times")
     if list(values) != sorted(values) or len(set(values)) != len(values):
         raise ValueError("stations must be strictly increasing")
     return values
@@ -188,7 +187,7 @@ def full_frame(ng, matrix=None):
     return matrix
 
 
-def numerical_binding():
+def numerical_binding(stations=None):
     return {
         "mode": parent_step.NUMERICAL_MODE,
         "rates": "nsc_discovery_leading_einstein.rates",
@@ -202,7 +201,7 @@ def numerical_binding():
         "memory_limit_bytes": MEMORY_LIMIT_BYTES,
         "chunk_limit_bytes": CHUNK_LIMIT_BYTES,
         "cpu_budget_seconds": CPU_BUDGET_SECONDS,
-        "stations": list(STATIONS),
+        "stations": list(normalize_stations(stations)),
         "source_recomputed_on_every_rk4_stage": True,
         "projector_source_reset": False,
     }
@@ -806,7 +805,8 @@ def episode_observe(pair, state, instant, *, control_mode="coupled"):
     return scalar_observation(pair, state, instant, control_mode)
 
 
-def case_specs(preparation=None, *, confirm=False):
+def case_specs(preparation=None, *, confirm=False, stations=None):
+    selected_stations = normalize_stations(stations)
     if preparation is None:
         common_k = None
         populations = [{"population_id": name} for name in POPULATION_IDS]
@@ -833,18 +833,19 @@ def case_specs(preparation=None, *, confirm=False):
                 "population_id": population["population_id"],
                 "sign_name": sign_name, "momentum_sign": int(sign), "step_cap": float(cap),
                 "control_mode": "coupled", "common_k": common_k, "confirm": bool(confirm),
-                "analytic_fixture": analytic, "stations": list(STATIONS),
+                "analytic_fixture": analytic, "stations": list(selected_stations),
             })
     return specs
 
 
-def plan(preparation=None):
+def plan(preparation=None, *, stations=None):
     """Pure case list. No files, evolution, or process pool."""
+    selected_stations = normalize_stations(stations)
     return {
         "schema": SCHEMA, "status": "PLAN", "pure": True, "evolved": False, "bytes_written": 0,
-        "pool_launched": False, "cases": case_specs(preparation, confirm=False),
-        "confirmation_cases": case_specs(preparation, confirm=True),
-        "stations": list(STATIONS), "numerical_binding": numerical_binding(),
+        "pool_launched": False, "cases": case_specs(preparation, confirm=False, stations=selected_stations),
+        "confirmation_cases": case_specs(preparation, confirm=True, stations=selected_stations),
+        "stations": list(selected_stations), "numerical_binding": numerical_binding(selected_stations),
         "owner1_prepare_parent_importable": discover_prepare_parent() is not None,
         "prepare_parent_api": "prepare_parent(nf, population=0|1|2, sign=+1|-1, k_override=None, profile=None, cpu_limit=30) -> (pair, State, report)",
         "accepted_parent_record": {
@@ -875,13 +876,14 @@ def commit_parent_checkpoint(directory, record, arrays):
 
 
 def build_case_record(spec, pair, state, *, producer_commit, source_binding, input_binding):
+    selected_stations = normalize_stations(spec.get("stations"))
     clocks = np.zeros(len(pair.clock_locations))
     rates = leading.clock_rates(pair, state)
     arrays = arrays_from_parent(pair, state, clocks=clocks, clock_rates=rates)
     record = dict(spec)
     record.update(
         schema=SCHEMA, coordinate_time=0.0, steps=0, ordinal=0, status="PREPARED",
-        stations=list(STATIONS), control_mode=spec.get("control_mode", "coupled"),
+        stations=list(selected_stations), control_mode=spec.get("control_mode", "coupled"),
         momentum_representation=episode.CANONICAL_PI, snapshot_kind="handoff",
         column_rank=int(pair.column_rank), covariance_rank=int(pair.covariance_rank),
         common_k=float(pair.common_k), geometry_frame=pair.geometry_metadata.get("frame"),
@@ -892,7 +894,7 @@ def build_case_record(spec, pair, state, *, producer_commit, source_binding, inp
         source_metadata=dict(pair.source_metadata), geometry_metadata=dict(pair.geometry_metadata),
         work_ledger=initial_ledger(spec.get("control_mode", "coupled")),
         channel_sample=None, channel_time=None, normal_clocks_initial=clocks.tolist(),
-        numerical_binding=numerical_binding(), producing_commit=producer_commit,
+        numerical_binding=numerical_binding(selected_stations), producing_commit=producer_commit,
         source_hashes=source_binding, input_hashes=input_binding,
         projector_source_reset=False, source_reset=False, initial_state_called=False,
         evolved=False, verify_external_pins=False, stability_certificate=False,
@@ -910,10 +912,11 @@ def _directory_files(path):
 
 
 def prepare(source=None, output=OUTPUT, *, execute=False, producer_commit=None,
-            cpu_budget=CPU_BUDGET_SECONDS, confirm=False, preparation=None):
+            cpu_budget=CPU_BUDGET_SECONDS, confirm=False, preparation=None, stations=None):
     if not 0 < float(cpu_budget) <= CPU_BUDGET_SECONDS:
         raise ValueError("parent episode budget must be in (0, 21600] CPU seconds")
-    report = plan(preparation)
+    selected_stations = normalize_stations(stations)
+    report = plan(preparation, stations=selected_stations)
     report.update(status="PREFLIGHT", cpu_budget_seconds=float(cpu_budget), confirm=bool(confirm),
                   output=str(output), execute=False)
     if not execute:
@@ -958,7 +961,7 @@ def prepare(source=None, output=OUTPUT, *, execute=False, producer_commit=None,
                 "sign_name": "plus" if sign == 1 else "minus", "momentum_sign": sign,
                 "step_cap": float(cap), "control_mode": "coupled",
                 "common_k": float(parent_record.get("k_common", parent_record["k"])),
-                "stations": list(STATIONS), "parent_record": str(path),
+                "stations": list(selected_stations), "parent_record": str(path),
                 "momenta_already_signed": True, "field_conjugated": False,
             }
             record, arrays = build_case_record(spec, pair, state, producer_commit=commit,

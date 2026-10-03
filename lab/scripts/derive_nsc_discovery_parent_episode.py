@@ -13,6 +13,13 @@ for name in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS", "VECL
 from recursive_horizons import nsc_discovery_parent_episode as parent
 
 
+def station_list(value):
+    try:
+        return parent.normalize_stations(value.split(","))
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(str(error)) from error
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     modes = parser.add_mutually_exclusive_group()
@@ -26,16 +33,19 @@ def main(argv=None):
     parser.add_argument("--cpu-budget", type=float, default=parent.CPU_BUDGET_SECONDS)
     parser.add_argument("--max-steps", type=int)
     parser.add_argument("--confirm", action="store_true", help="prepare the nf256 dt-cap 0.0005 cases")
+    parser.add_argument("--stations", type=station_list, help="prepare/preview ordered positive times, e.g.1,3; run uses frozen stored targets")
     args = parser.parse_args(argv)
+    if args.stations is not None and (args.run or args.check):
+        parser.error("--stations belongs to --prepare or preview; run/check use the stored campaign targets")
     if args.prepare:
         result = parent.prepare(args.source, args.output, execute=True, producer_commit=args.producer_commit,
-                                cpu_budget=args.cpu_budget, confirm=args.confirm)
+                                cpu_budget=args.cpu_budget, confirm=args.confirm, stations=args.stations)
     elif args.run:
         result = parent.run(args.output, workers=args.workers, cpu_budget=args.cpu_budget, max_steps=args.max_steps)
     elif args.check:
         result = parent.check(args.output)
     else:
-        result = parent.plan()
+        result = parent.plan(stations=args.stations)
     print(json.dumps(result, indent=2, allow_nan=False))
     return 0
 

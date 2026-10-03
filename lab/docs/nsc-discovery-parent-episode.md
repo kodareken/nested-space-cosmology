@@ -53,7 +53,9 @@ the minus case negates both `pi_Q` and `pi_r`. Conjugation is not a sign and
 is not an exchange reversal.
 
 The primary episode cases are \(n_f=128\) with step cap \(0.001\). Confirmation
-is \(n_f=256\) with step cap \(0.0005\). Stations are \(1,3,8,16,24\). A stop
+is \(n_f=256\) with step cap \(0.0005\). The active first batch records stations
+\(1,3\) and runs each case uninterrupted through both before physical review.
+The historical default remains \(1,3,8,16,24\). A stop
 before the next station is kept as an event checkpoint.
 
 ## Numerics
@@ -96,12 +98,25 @@ Analytic fixtures are for tests and cannot be prepared as a campaign.
 
 ~~~sh
 python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py
-python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --prepare --source <owner1-output> --producer-commit <frozen> --cpu-budget 21600
+python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --prepare --stations 1,3 --source <owner1-output> --producer-commit <frozen> --cpu-budget <remaining-global-CPU>
 python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --prepare --confirm --source <owner1-output> --producer-commit <frozen>
-python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --run --workers 6 --cpu-budget 21600
+python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --run --workers 6 --cpu-budget <remaining-global-CPU>
 python scripts/lab.py scripts/derive_nsc_discovery_parent_episode.py --check
 python scripts/lab.py -m pytest tests/test_nsc_discovery_parent_episode.py -q
 ~~~
 
 The default command prints the plan and writes nothing. No regeneration proof,
 stability certificate, or held-out prediction is claimed.
+
+`prepare(..., stations=(1, 3))` and CLI `--stations 1,3` record the same positive,
+finite, strictly increasing targets in the manifest, every case and its
+numerical binding. The last stored target controls the admission cost forecast;
+the active first batch forecasts through3, not24. Run and check read the frozen
+targets and reject a CLI station override. Source preparation and authentication
+are unchanged; there is no global station mutation.
+
+The generic station-resume helper remains separate. It copies state, clocks and
+work stocks but creates a fresh ledger and omits the parent manifest's top-level
+source closure. A later root-owned resume must preserve that binding and deduct
+measured prior preparation/episode CPU from the global allowance; a new output
+directory does not renew the global budget.
