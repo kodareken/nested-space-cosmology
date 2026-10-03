@@ -21,9 +21,12 @@ remains a separate historical choice.
 
 The approved programme starts at `eb4798c`. Primary finite preparation
 of the magnetic branch is achieved, and the frozen, empty-source and
-strong-offset controls below are recorded. The current cursor is an
-coupled exterior-to-cut response after the matched strong-$k$ controls.
-The renewal programme is not complete. The
+strong-offset controls below are recorded. The NF128 exterior-to-cut
+response is measured. The current cursor is one bounded $n_f=256$
+confirmation of that response, then a source-selected inner boundary
+and repeatable hand-off from the actual coupled exterior feedback.
+The renewal programme is not complete. No autonomous renewal is asserted.
+The
 [2 October discovery programme](#active-discovery-programme-2-october-2026)
 remains preserved from `ea6c699`. The incoming gate stays paused.
 
@@ -134,9 +137,30 @@ The [owning comparison note](../lab/docs/nsc-discovery-parent-strong-controls.md
 records the remaining constraint, curvature and interpolation limits.
 
 Checkpoint summaries are repaired for new records at `5ce6bd02`; old
-records stay unchanged. The next construction needs a causal response
-of the exterior field and geometry at the collar cuts. Static traction
-jets alone would prescribe support, rather than derive that response.
+records stay unchanged. The completed exterior-population response is
+the [cut-response batch](../lab/results/development/nsc-discovery-parent-cut-response-v1/prepare.json)
+at producer `7004a791`, assessed in
+[nsc-discovery-parent-cut-assessment-v1.json](../lab/results/development/nsc-discovery-parent-cut-assessment-v1.json)
+and [its note](../lab/docs/nsc-discovery-parent-cut-assessment.md).
+At the matched centre clock $\tau=2.8568786296681035$, with
+$k=0.45388971484879426$, fixed $c_0$ and the authenticated initial
+$Q$, $r$ and $\Phi$, a $+5\%$ parent occupation changes original
+child-column content from $0.0385173686504$ by $0.000429207849261$,
+which is $1.114\%$ of that baseline. The held $\pm5\%$ forecasts for
+that column match within $0.3629\%$ and $0.3709\%$ of the predicted
+effect. Total child content on the $+5\%$ arm moves by
+$0.00284200211428$ against the locked $0.00285160805944$. Renewal is
+not asserted. One bounded $n_f=256$ confirmation is implemented in
+[derive_nsc_discovery_parent_cut_confirmation.py](../lab/scripts/derive_nsc_discovery_parent_cut_confirmation.py);
+root runs that physical confirmation. After it, the actual coupled
+exterior feedback is the input for a source-selected inner boundary
+and a repeatable hand-off and invariant family. The same inheritance
+law covers states whose physical frequencies may differ. A thermal
+compression reading is conditional, and this recorded state is
+non-thermal. The ancestry share $\eta$ is not a new gate. The force
+here remains the full state–geometry force; a fixed-$J$ Schur
+reduction is not substituted for it. Earlier papers and the paused
+incoming gate stay preserved.
 
 Earlier preparations stay in their own records:
 [first pilot](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json),
