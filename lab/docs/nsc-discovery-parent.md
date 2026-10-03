@@ -70,6 +70,17 @@ checks bound trial updates. A small correction is a numerical stationarity
 indicator, not a continuous constraint certificate or a universal `1e-8` gate.
 The two momentum signs preserve field arrays byte for byte; they do not
 complex-conjugate the source or claim complete dynamical time reversal.
+Fallback geometry is bounded by a declared 5% physical preparation-alteration
+budget against the ORIGINAL continuous collar/blend/exterior candidate. The
+budget checks positive `r,Q` throughout the fine carrier, child proper clocks
+at `x=3.5,4,4.5`, and child, collar, parent and whole-carrier proper lengths.
+It is not a universal numerical-error tolerance. Core radius, `Q` and `N`
+movement are reported independently; an allowed change does not mean the
+sealed core is exactly preserved. Finite derivative probes and backtracking
+trials outside this budget are refused before their constraint evaluation.
+Reports retain original targets, actual parameter changes and refused moves.
+An unresolved bounded fallback remains OPEN. Earlier unbounded-fallback
+pilot records remain immutable and are not admitted by this successor.
 
 The stable API is
 `prepare_parent(nf,population=0,sign=1,k_override=None,profile=None,cpu_limit=30)`

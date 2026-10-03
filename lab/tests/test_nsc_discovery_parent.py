@@ -206,3 +206,41 @@ def test_transition_option_is_forwarded_without_new_constructor_run(monkeypatch,
     cli.main(['--pilot','--transition-end','1.4','--output',str(parent.OUTPUT/'unit-unwritten')])
     assert calls[0]['profile']=={'transition_end':1.4}
     assert parent._profile(calls[0]['profile'])['transition_end']<np.pi/2
+
+
+def test_physical_fallback_budget_uses_original_candidate_clock_and_lengths(setup):
+    table,pair,r,Q,col=setup;grid=pair.grid
+    original=dict(table,sigma=np.array([0.,.5,1.,3.]),radius=np.ones(4),Q=np.ones(4),
+                  exterior_radius=1.,profile=dict(table['profile'],exterior_Q=1.))
+    targets=parent._geometry_targets(grid,original)
+    flat=np.ones(grid.ng)
+    baseline=parent._geometry_changes(grid,flat,flat,targets)
+    assert baseline['within_budget'] and baseline['relative_budget']==.05
+    assert baseline['proper_lengths']==pytest.approx({'child':1.,'collar':2.,'parent':6.,'whole':8.})
+    # 6% against the original must fail even if only 3.9% from a changed band seed.
+    assert parent._geometry_changes(grid,flat,flat*1.02,targets)['within_budget']
+    assert not parent._geometry_changes(grid,flat,flat*1.06,targets)['within_budget']
+    compounded=parent._geometry_changes(grid,flat*1.03,flat*1.03,targets)
+    assert compounded['radius_relative_max']<.05 and compounded['Q_relative_max']<.05
+    assert compounded['child_clock_relative_max']>.05 and not compounded['within_budget']
+    huge=parent._geometry_changes(grid,flat,flat*17.,targets)
+    assert not huge['within_budget'] and huge['child_clock_relative_max']>15
+    allowed=parent._geometry_changes(grid,flat*.98,flat*1.04,targets)
+    assert allowed['within_budget'] and allowed['protected_core_N_relative_max']>0
+    assert allowed['protected_core_exactly_preserved'] is False
+
+
+def test_fallback_refuses_large_geometry_moves_and_preserves_source(setup,monkeypatch):
+    with threadpool_limits(limits=1),parent.backend.fft_thread_limit(1):
+        table,pair,r,Q,col=setup;problem,seed,theta=problem_for(setup)
+        targets=parent._geometry_targets(pair.grid,table)
+        before=(col['phi0'].tobytes(),col['phi1'].tobytes(),pair.weights.tobytes())
+        monkeypatch.setattr(parent,'_svd_step',lambda jac,res:(np.array([1e4,0.,0.,0.]),4,np.ones(4)))
+        best,report=parent._fallback(pair,r,Q,col['phi0'],col['phi1'],1,seed['g'],seed['suggested_k'],.05,
+                                     parent._cpu_time()+2.,problem.anchor,targets)
+        assert report['steps']==0 and report['refused_move_count']>=parent.MAX_BACKTRACKS
+        np.testing.assert_allclose(best[0],r,atol=2e-15,rtol=0.)
+        np.testing.assert_allclose(best[1],Q,atol=2e-15,rtol=0.)
+        assert report['actual_parameter_changes']==[0.,0.,0.,0.]
+        assert any(row['kind']=='backtrack' and not row['changes']['within_budget'] for row in report['refused_moves'])
+        assert before==(col['phi0'].tobytes(),col['phi1'].tobytes(),pair.weights.tobytes())

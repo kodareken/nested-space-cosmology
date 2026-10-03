@@ -55,6 +55,7 @@ MAX_BACKTRACKS = 8
 ANCHOR_RELATIVE_TOL = 5e-11
 SIGN_MARGIN_FRACTION = .1
 SIGN_RELATIVE_FLOOR = 1e-10
+GEOMETRY_RELATIVE_BUDGET = .05
 FALLBACK_STEPS = 8
 CPU_LIMIT = 30.0
 CHUNK_LIMIT = 64 * 1024 ** 2
@@ -957,12 +958,64 @@ def even_geometry_update(grid, base_radius, base_lapse, theta):
     return radius, lapse
 
 
-def _fallback(pair, radius, lapse, phi0, phi1, sign, coupling_g, k, margin, deadline, anchor):
+def _geometry_targets(grid,table):
+    """Original continuous input, before band projection or correction."""
+    places=np.array([CENTER-CHILD_RADIUS,CENTER,CENTER+CHILD_RADIUS])
+    sigma=np.abs(signed_distance(places,grid.length));tx=table['sigma']
+    clock_r=np.interp(sigma,tx,table['radius']);clock_Q=np.interp(sigma,tx,table['Q'])
+    lengths={}
+    for name,b in (('child',CHILD_RADIUS),('collar',COLLAR_RADIUS),('parent',PARENT_RADIUS),('whole',grid.length/2)):
+        end=min(b,float(tx[-1]));x=np.unique(np.r_[tx[tx<end],end])
+        r=np.interp(x,tx,table['radius']);Q=np.interp(x,tx,table['Q'])
+        # Exact product integral for the constructor's two linear interpolants.
+        value=np.sum(np.diff(x)/6*(2*r[:-1]*Q[:-1]+r[:-1]*Q[1:]+r[1:]*Q[:-1]+2*r[1:]*Q[1:]))
+        if b>end:value+=(b-end)*table['exterior_radius']*table['profile']['exterior_Q']
+        lengths[name]=float(2*value)
+    return {'radius':_sample_circle(grid,table,'radius'),'Q':_sample_circle(grid,table,'Q'),
+            'child_clock_locations':places,'child_clocks':clock_r*clock_Q,'proper_lengths':lengths,
+            'relative_budget':GEOMETRY_RELATIVE_BUDGET,'reference':'original continuous candidate before band projection or fallback'}
+
+
+def _proper_lengths(grid,density):
+    coefficients=np.fft.fft(density)/grid.nq;modes=np.fft.fftfreq(grid.nq)*grid.nq
+    omega=2*np.pi*modes/grid.length;nonzero=modes!=0;result={}
+    for name,b in (('child',CHILD_RADIUS),('collar',COLLAR_RADIUS),('parent',PARENT_RADIUS),('whole',grid.length/2)):
+        lo=CENTER-b;hi=CENTER+b
+        factors=(np.exp(1j*omega[nonzero]*hi)-np.exp(1j*omega[nonzero]*lo))/(1j*omega[nonzero])
+        result[name]=float((coefficients[0]*(hi-lo)+np.dot(coefficients[nonzero],factors)).real)
+    return result
+
+
+def _geometry_changes(grid,radius,lapse,targets):
+    r=grid.A_g@radius;Q=grid.A_g@lapse;N=r*Q;tr=targets['radius'];tQ=targets['Q'];tN=tr*tQ
+    relative=lambda actual,target:float(np.max(abs(actual-target)/target))
+    clocks=extent.real_periodic_values(grid,N,targets['child_clock_locations'])
+    lengths=_proper_lengths(grid,N);core=np.abs(signed_distance(grid.xi_q,grid.length))<=COLLAR_RADIUS
+    rchange=relative(r,tr);qchange=relative(Q,tQ);clockchange=relative(clocks,targets['child_clocks'])
+    lengthchange=max(abs(lengths[name]-target)/target for name,target in targets['proper_lengths'].items())
+    positive=bool(np.min(r)>0 and np.min(Q)>0);limit=targets['relative_budget']+64*np.finfo(float).eps
+    return {'within_budget':bool(positive and max(rchange,qchange,clockchange,lengthchange)<=limit),
+            'relative_budget':targets['relative_budget'],'positive_geometry':positive,
+            'radius_relative_max':rchange,'Q_relative_max':qchange,'child_clock_relative_max':clockchange,
+            'proper_length_relative_max':float(lengthchange),'child_clocks':np.asarray(clocks).tolist(),
+            'proper_lengths':lengths,'protected_core_radius_relative_max':relative(r[core],tr[core]),
+            'protected_core_Q_relative_max':relative(Q[core],tQ[core]),
+            'protected_core_N_relative_max':relative(N[core],tN[core]),'protected_core_exactly_preserved':False}
+
+
+def _fallback(pair, radius, lapse, phi0, phi1, sign, coupling_g, k, margin, deadline, anchor,targets):
     """One four-parameter even correction. Phi and the weights stay fixed; the source is rebuilt."""
     theta = np.zeros(4)
     best = (np.array(radius, copy=True), np.array(lapse, copy=True), None, None)
     best_norm = None
     steps = 0
+    refused=[];best_parameters=np.zeros(4);initial_changes=_geometry_changes(pair.grid,radius,lapse,targets)
+    def admissible(r,Q,parameters,kind):
+        changes=_geometry_changes(pair.grid,r,Q,targets)
+        if not changes['within_budget']:
+            refused.append({'kind':kind,'parameters':np.asarray(parameters).tolist(),'changes':changes})
+            return False
+        return True
     for _step in range(FALLBACK_STEPS):
         if _cpu_time() > deadline:
             break
@@ -975,9 +1028,10 @@ def _fallback(pair, radius, lapse, phi0, phi1, sign, coupling_g, k, margin, dead
         seeded = _seed_theta(problem, seed, sign,anchor_override=anchor)
         residual = problem.residual(seeded)
         rows=problem.row_scales(seeded);norm = float(np.linalg.norm(residual/rows))
-        if best_norm is None or norm < best_norm:
+        if admissible(current_r,current_Q,theta,'candidate') and (best_norm is None or norm < best_norm):
             best = (current_r, current_Q, seeded, float(problem.anchor))
             best_norm = norm
+            best_parameters=theta.copy()
         columns = []
         base = residual/rows
         for index in range(4):
@@ -988,8 +1042,11 @@ def _fallback(pair, radius, lapse, phi0, phi1, sign, coupling_g, k, margin, dead
             try:
                 bumped_r, bumped_Q = even_geometry_update(pair.grid, radius, lapse, theta + step)
             except ValueError:
+                refused.append({'kind':'derivative_probe','parameters':(theta+step).tolist(),'reason':'positive chart'})
                 columns.append(np.zeros_like(base))
                 continue
+            if not admissible(bumped_r,bumped_Q,theta+step,'derivative_probe'):
+                columns.append(np.zeros_like(base));continue
             bumped = _offset_seed(pair, bumped_r, bumped_Q, phi0, phi1, margin)
             bumped["suggested_k"] = float(k)
             if float(np.min(bumped["J"] + k)) <= 0:
@@ -1012,9 +1069,11 @@ def _fallback(pair, radius, lapse, phi0, phi1, sign, coupling_g, k, margin, dead
             trial = theta + correction * 2.0 ** (-halving)
             try:
                 trial_r, trial_Q = even_geometry_update(pair.grid, radius, lapse, trial)
-                trial_seed = _offset_seed(pair, trial_r, trial_Q, phi0, phi1, margin)
             except ValueError:
+                refused.append({'kind':'backtrack','parameters':trial.tolist(),'reason':'positive chart'})
                 continue
+            if not admissible(trial_r,trial_Q,trial,'backtrack'):continue
+            trial_seed = _offset_seed(pair, trial_r, trial_Q, phi0, phi1, margin)
             trial_seed["suggested_k"] = float(k)
             if float(np.min(trial_seed["J"] + k)) <= 0:
                 continue
@@ -1029,7 +1088,12 @@ def _fallback(pair, radius, lapse, phi0, phi1, sign, coupling_g, k, margin, dead
             break
     return best, {"steps": steps, "max_steps": FALLBACK_STEPS, "parameters": 4,
                   "phi_and_weights_fixed": True, "source_recomputed": True, "best_seed_residual": best_norm,
-                  "original_kinetic_anchor_fixed":anchor,"physical_geometry_metric":True}
+                  "original_kinetic_anchor_fixed":anchor,"physical_geometry_metric":True,
+                  "geometry_budget_reference":targets['reference'],"relative_geometry_budget":targets['relative_budget'],
+                  "initial_changes":initial_changes,"actual_parameter_changes":best_parameters.tolist(),
+                  "final_changes":_geometry_changes(pair.grid,best[0],best[1],targets),
+                  "refused_moves":refused,"refused_move_count":len(refused),
+                  "no_allowed_fallback_candidate":best_norm is None}
 
 
 def _diagnose(pair, state, problem):
@@ -1116,6 +1180,7 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
             raise ValueError("k must be strictly above the common kmin")
         grid = backend.make_fft_grid(galerkin.build_grid(nf, gauge="conformal"))
         radius, lapse = _band_geometry(grid, table)
+        targets=_geometry_targets(grid,table);initial_geometry_changes=_geometry_changes(grid,radius,lapse,targets)
         columns = _source_columns(grid, table)
         gram = columns["phi0"].conj().T @ columns["phi0"] + columns["phi1"].conj().T @ columns["phi1"]
         weights, meta = population_weights(columns["probabilities"], columns["raw_norms"], gram, population)
@@ -1133,7 +1198,7 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         if not correction["converged"] and _cpu_time() < deadline:
             (radius, lapse, seeded, fallback_anchor), fallback = _fallback(
                 pair, radius, lapse, columns["phi0"], columns["phi1"], sign, seed["g"], k,
-                selected["k_margin"], deadline,problem.anchor)
+                selected["k_margin"], deadline,problem.anchor,targets)
             fallback["used"] = True
             problem = _MomentumProblem(pair, radius, lapse, columns["phi0"], columns["phi1"], sign, fallback_anchor or problem.anchor, seed["g"])
             theta = seeded if seeded is not None else theta
@@ -1145,6 +1210,7 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
             correction["fallback_preceded"] = True
         state = _state_from_theta(pair, problem, theta)
         diagnosis = _diagnose(pair, state, problem) if _cpu_time() < hard_deadline else None
+        final_geometry_changes=_geometry_changes(grid,problem.radius,problem.lapse,targets)
     child_target = SEED_WEIGHT * float(columns["raw_child_mass"])
     child_column = float(weights[0] * columns["unit_child_mass"][0])
     child_region = float(np.dot(weights, columns["unit_child_mass"]))
@@ -1169,6 +1235,8 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         "intervals": {"child": list(CHILD_INTERVAL), "collar_radius": COLLAR_RADIUS,
                       "parent": list(PARENT_INTERVAL), "annulus": list(ANNULUS)},
         "clock_locations": list(CLOCK_LOCATIONS), "correction": correction, "fallback": fallback,
+        "profile":selected,"geometry_budget":{"targets":targets,"initial":initial_geometry_changes,"final":final_geometry_changes,
+            "scope":"declared physical preparation alteration budget, not a universal numerical error tolerance"},
         "observer_Gram_gap":columns['observer_Gram_gap'],"observer_is_source_frame":False,
         "source_field_sha256":{"phi0":_sha_array(state.phi0),"phi1":_sha_array(state.phi1)},
         "seed_removal": seed["removal"], "continuum_kmin": seed["kmin"],
@@ -1189,6 +1257,9 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
     if diagnosis is None:
         report["blocker"] = report["blocker"] or "CPU cap before diagnostics"
         report["converged"] = False
+    if not final_geometry_changes['within_budget']:
+        report['converged']=False;report['status']='OPEN_PREPARATION'
+        report['blocker']='declared original-candidate geometry/clock/proper-length budget exceeded'
     plain = _plain(report)
     _CACHE[key] = (cpu_limit, (pair, state, plain))
     return pair, state.copy(), plain
@@ -1397,5 +1468,15 @@ def check(directory):
             if abs(measured[key] - stored[key]) > 1e-8 * max(1.0, abs(stored[key])):
                 raise ValueError("stored constraint summary does not match a read-only replay")
     else:report['finite_checkpoint_diagnostics_recomputed']=True
+    if 'geometry_budget' in record:
+        budget=record['geometry_budget'];targets=dict(budget['targets'])
+        for key in ('radius','Q','child_clock_locations','child_clocks'):targets[key]=np.asarray(targets[key],float)
+        nodal=leading.decode(pair,state);actual=_geometry_changes(grid,nodal.r,nodal.Q,targets)
+        for key in ('radius_relative_max','Q_relative_max','child_clock_relative_max','proper_length_relative_max',
+                    'protected_core_radius_relative_max','protected_core_Q_relative_max','protected_core_N_relative_max'):
+            if abs(actual[key]-budget['final'][key])>1e-12:raise ValueError('geometry physical-budget replay differs')
+        if actual['within_budget']!=budget['final']['within_budget']:raise ValueError('geometry-budget admission replay differs')
+        if record['converged'] and not actual['within_budget']:raise ValueError('convergence claimed outside declared geometry budget')
+        report['geometry_budget_satisfied']=actual['within_budget']
     report.update(numerical_replay=True, converged=record["converged"], blocker=record["blocker"])
     return report
